@@ -1,0 +1,25 @@
+$NetBSD$
+
+Support *BSD.
+
+--- CMakeLists.txt.orig	2024-08-16 21:53:25.000000000 +0000
++++ CMakeLists.txt
+@@ -144,6 +144,18 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwi
+   message("Building for MAC OSX")
+   add_compile_definitions(POSIX MACOSX=1 _USE_OGL_ACTIVE_TEXTURES PRIMARY_HOG=\"d3-osx.hog\")
+   set(PLATFORM_INCLUDES "lib/linux" ${SDL2_INCLUDE_DIR} ${SDL2_INCLUDE_DIRS})
++elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++  message("Building for FreeBSD")
++  add_compile_definitions(POSIX _USE_OGL_ACTIVE_TEXTURES PRIMARY_HOG=\"d3-freebsd.hog\")
++  set(PLATFORM_INCLUDES "lib/linux" ${SDL2_INCLUDE_DIR} ${SDL2_INCLUDE_DIRS})
++elseif(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++  message("Building for NetBSD")
++  add_compile_definitions(POSIX _USE_OGL_ACTIVE_TEXTURES PRIMARY_HOG=\"d3-netbsd.hog\")
++  set(PLATFORM_INCLUDES "lib/linux" ${SDL2_INCLUDE_DIR} ${SDL2_INCLUDE_DIRS})
++elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++  message("Building for OpenBSD")
++  add_compile_definitions(POSIX _USE_OGL_ACTIVE_TEXTURES PRIMARY_HOG=\"d3-openbsd.hog\")
++  set(PLATFORM_INCLUDES "lib/linux" ${SDL2_INCLUDE_DIR} ${SDL2_INCLUDE_DIRS})
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+   # Windows.h defines to avoid as many issues as possible.
+   add_compile_definitions(WIN32_LEAN_AND_MEAN NOMINMAX NODRAWTEXT NOBITMAP NOMCX NOSERVICE PRIMARY_HOG=\"d3-win.hog\"

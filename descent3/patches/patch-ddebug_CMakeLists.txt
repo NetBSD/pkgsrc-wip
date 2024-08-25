@@ -1,0 +1,15 @@
+$NetBSD$
+
+Support *BSD.
+
+--- ddebug/CMakeLists.txt.orig	2024-08-24 18:38:21.358398028 +0000
++++ ddebug/CMakeLists.txt
+@@ -4,7 +4,7 @@ set(HEADERS
+   mono.h)
+ set(CPPS
+   debug.cpp
+-  $<$<PLATFORM_ID:Darwin,Linux>:
++  $<$<PLATFORM_ID:Darwin,Linux,FreeBSD,NetBSD,OpenBSD>:
+     lnxdebug.cpp
+     lnxmono.cpp
+   >

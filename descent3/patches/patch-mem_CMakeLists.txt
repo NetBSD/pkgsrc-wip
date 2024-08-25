@@ -1,0 +1,17 @@
+$NetBSD$
+
+jemalloc(3) provides malloc_usable_size().
+It would be better to find a more portable solution!
+
+--- mem/CMakeLists.txt.orig	2024-08-24 20:57:03.516510445 +0000
++++ mem/CMakeLists.txt
+@@ -7,6 +7,9 @@ target_compile_definitions(mem PUBLIC
+ )
+ target_link_libraries(mem PRIVATE
+   misc
++  $<$<PLATFORM_ID:FreeBSD,NetBSD>:
++    jemalloc
++  >
+ )
+ target_include_directories(mem PUBLIC
+   $<BUILD_INTERFACE:

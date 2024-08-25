@@ -662,6 +662,7 @@ SUBDIR+=	delve
 SUBDIR+=	dendrite
 SUBDIR+=	denise
 SUBDIR+=	depsolver
+SUBDIR+=	descent3
 SUBDIR+=	deskcribe
 SUBDIR+=	desktop-data-model
 SUBDIR+=	desktop-installer

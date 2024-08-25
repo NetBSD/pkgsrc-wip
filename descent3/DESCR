@@ -1,0 +1,5 @@
+This is the Descent 3 open source engine, licensed under GPL-3.0.
+It includes the '1.5' patch written by Kevin Bentley and Jeff
+Slutter several years ago and brought to a stable condition by the
+Descent community.  In order to use this, you must provide your
+own game files.

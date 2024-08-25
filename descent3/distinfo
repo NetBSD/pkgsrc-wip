@@ -1,0 +1,15 @@
+$NetBSD$
+
+BLAKE2s (Descent3-1.5.0-Source.tar.xz) = e95856d7375e4675d74e0ef7cd7e0500b5759644077a833b179496f2ce702c61
+SHA512 (Descent3-1.5.0-Source.tar.xz) = 4beb530c93ee9995149a701c3a1e2ee715b49d6e2ee5cf7bc5da20e839cf5ffc9cda6e10c1347a3922f93d8620df70171ff43e2886ff2a01aabf3a9f3d041513
+Size (Descent3-1.5.0-Source.tar.xz) = 10332432 bytes
+SHA1 (patch-CMakeLists.txt) = 397d7e21520a9f9841beb2c2ff813995ce0f0520
+SHA1 (patch-Descent3_Mission.cpp) = 2732efddba7785f79379b7db71ff6a5f2e48771c
+SHA1 (patch-Descent3_OsirisLoadandBind.cpp) = d62b628a785fdd1ea28eb15015a944b99dd57a68
+SHA1 (patch-ddebug_CMakeLists.txt) = 449571d7c530db770d8df9235938d79af52e7408
+SHA1 (patch-ddio_CMakeLists.txt) = f21dd8f95b4740f9b5ebadaf7f0171382610353c
+SHA1 (patch-ddio_lnxio.cpp) = fc37f00318f887e4ea90a6cc224e00e4ff708108
+SHA1 (patch-mem_CMakeLists.txt) = 0bb6d1a111297a49257586931a7962a03ee6c65a
+SHA1 (patch-mem_mem.cpp) = fe9cdffca866ce75ce6834722d4fba41789b7277
+SHA1 (patch-module_module.cpp) = 7057aef877191fe64f995e20a1e4ee552d1a4dd2
+SHA1 (patch-scripts_CMakeLists.txt) = c90a19eec688dc69fd970220cac69a3c140e162b

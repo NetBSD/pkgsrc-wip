@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/Descent3
+lib/Descent3/netgames/anarchy.d3m
+lib/Descent3/netgames/coop.d3m
+lib/Descent3/netgames/ctf.d3m
+lib/Descent3/netgames/entropy.d3m
+lib/Descent3/netgames/hoard.d3m
+lib/Descent3/netgames/hyperanarchy.d3m
+lib/Descent3/netgames/monsterball.d3m
+lib/Descent3/netgames/roboanarchy.d3m
+lib/Descent3/netgames/tanarchy.d3m
+share/Descent3/d3-linux.hog
+share/Descent3/online/Direct TCP~IP.d3c
+share/Descent3/online/Parallax Online.d3c
+share/doc/Descent3/BUILD.md
+share/doc/Descent3/CHANGELOG.md
+share/doc/Descent3/LICENSE
+share/doc/Descent3/README.md
+share/doc/Descent3/THIRD_PARTY.md
+share/doc/Descent3/USAGE.md
