@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ThirdParty-ASL/2.0.1.tar.gz) = 03adc2f580e4d0bf7710b504b16425f377201c3e42e80530c0bf6bea3e242206
+SHA512 (ThirdParty-ASL/2.0.1.tar.gz) = 37c05677ebc82d56228cd80382c37ae44546fd5681063488bd2cd3c35c2155c2f85e6e8fbcbe41913eeafeb3ac12d2972919893de75affade3016e64f75e034b
+Size (ThirdParty-ASL/2.0.1.tar.gz) = 252385 bytes
