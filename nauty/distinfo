@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:05:14 jihbed Exp $
+$NetBSD$
 
-RMD160 (nauty24r2.tar.gz) = 4d22200a646e453090cd8d31fc3adce6a1e47e69
-SHA512 (nauty24r2.tar.gz) = 19b998e0e385ee2b111b7085f64ab28c8d985337a097407c14dc7d5f1b279e1176e3e708f282d82f8364ef77562c0f978f00b3f965501f528ebedbe9bf7c5545
-Size (nauty24r2.tar.gz) = 720754 bytes
+BLAKE2s (nauty2_8_9.tar.gz) = 33fc222da3aa627a841a90b182adfa2b8e3e8072b7a99daf010282aff34db3ed
+SHA512 (nauty2_8_9.tar.gz) = 4310747ae357d11547f9c9b45329775ffa2cedbff4bb4f9b12fb7b577c9e7c15e3f3c5279d3de145f2a1c3f8c727b1d9507a644093d1cbe58a93eb7b1436d8ee
+Size (nauty2_8_9.tar.gz) = 2629751 bytes

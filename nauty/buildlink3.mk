@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	nauty
+
+.if !defined(NAUTY_BUILDLINK3_MK)
+NAUTY_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.nauty+=	nauty>=2.8.9
+BUILDLINK_PKGSRCDIR.nauty?=	../../wip/nauty
+.endif	# NAUTY_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-nauty

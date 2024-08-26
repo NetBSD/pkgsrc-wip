@@ -1,35 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
-#
+# $NetBSD$
 
-DISTNAME=	nauty24r2
-PKGNAME=	nauty-24r2
+DISTNAME=	nauty2_8_9
+PKGNAME=	nauty-2.8.9
 CATEGORIES=	math
-MASTER_SITES=	http://cs.anu.edu.au/~bdm/nauty/
+MASTER_SITES=	http://users.cecs.anu.edu.au/~bdm/nauty
 
-MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cs.anu.edu.au/~bdm/nauty/
 COMMENT=	Brendan McKay's graph isomorphism tester
 LICENSE=	apache-2.0
 
-MAKE_JOBS_SAFE=	no
-
+WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoconf
 MAKE_FILE=	makefile
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c
-
-PROGFILES=	NRswitchg complg dreadnaut gentourng pickg 		\
-		addedgeg copyg dretog labelg planarg amtog countg 	\
-		genbg listg shortg biplabg deledgeg geng multig showg 	\
-		arg directg genrang newedgeg
-
-INSTALLATION_DIRS=	bin
-
-do-install:
-
-.for progf in ${PROGFILES}
-	${INSTALL_PROGRAM} ${WRKSRC}/${progf} ${DESTDIR}${PREFIX}/bin
-.endfor
-
+USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"
