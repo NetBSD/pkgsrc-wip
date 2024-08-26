@@ -5561,6 +5561,7 @@ SUBDIR+=	trac-plugins-spamfilter-svn
 SUBDIR+=	trackballs
 SUBDIR+=	tracy
 SUBDIR+=	trayion
+SUBDIR+=	tree-sitter-query
 SUBDIR+=	treetool
 SUBDIR+=	trf
 SUBDIR+=	triangle
