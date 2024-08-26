@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (cudd-3.0.0.tar.gz) = fe8bc757a0bcb04a78ef0845fa51b898bf35b73f806007574cea57f2c43764a3
+SHA512 (cudd-3.0.0.tar.gz) = c0cb5fbdc4bb1793712e42c2e1377c3b1ae36f22ffc82bb3dd93a8a51f58bfe192fed9a37239a4c471326ef00a8f5e2f7fc801a2a6841be3db5a7e159e866f21
+Size (cudd-3.0.0.tar.gz) = 1175302 bytes
