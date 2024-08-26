@@ -3,3 +3,6 @@ $NetBSD$
 BLAKE2s (ThirdParty-ASL/2.0.1.tar.gz) = 03adc2f580e4d0bf7710b504b16425f377201c3e42e80530c0bf6bea3e242206
 SHA512 (ThirdParty-ASL/2.0.1.tar.gz) = 37c05677ebc82d56228cd80382c37ae44546fd5681063488bd2cd3c35c2155c2f85e6e8fbcbe41913eeafeb3ac12d2972919893de75affade3016e64f75e034b
 Size (ThirdParty-ASL/2.0.1.tar.gz) = 252385 bytes
+BLAKE2s (ThirdParty-ASL/solvers-64919f75f.tgz) = 8687353cc802d7c5be3648c2b1054b6ea044c945f29471e187ef9679264ec44f
+SHA512 (ThirdParty-ASL/solvers-64919f75f.tgz) = dfb001d1feb4218b3122f4d6fe7a101f03bbb8277e8af0adda6a1ae9295b6eb7fc1ef62550bc6cc724a54754c713e36f526555c66d9f0bcb9a08ed61414bbe26
+Size (ThirdParty-ASL/solvers-64919f75f.tgz) = 360043 bytes

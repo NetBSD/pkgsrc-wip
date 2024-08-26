@@ -21,14 +21,13 @@ USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	coinasl.pc.in
 
-SOLVER_MASTER_SITE=	https://coin-or-tools.github.io/ThirdParty-ASL
 SOLVER_DISTFILE=	solvers-64919f75f.tgz
+DISTFILES=		${DEFAULT_DISTFILES} ${SOLVER_DISTFILE}
 
-# TODO: The SOLVER_DISTFILE needs to be in distinfo, extracted automatically
-# FreeBSD port math/asl creates a soft link to auto-extracted file. How to do that in pkgsrc?
-# Change USE_TOOLS accordingly
+SITES.${SOLVER_DISTFILE}=	https://coin-or-tools.github.io/ThirdParty-ASL/
+
 post-extract:
-	cd ${WRKSRC} && wget --no-check-certificate ${SOLVER_MASTER_SITE}/${SOLVER_DISTFILE} && tar xvzf ${SOLVER_DISTFILE}
+	cd ${WRKSRC} && ${LN} -s ../solvers
 
 
 .include "../../mk/bsd.pkg.mk"
