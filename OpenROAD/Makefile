@@ -13,8 +13,7 @@ COMMENT=	ASIC physical design tool
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison cmake bash gmake
-USE_CMAKE=	yes
+USE_TOOLS+=	bison bash gmake
 
 CXXFLAGS+=	-I${PREFIX}/include/eigen3 \
 
@@ -31,10 +30,10 @@ TOOL_DEPENDS+=  swig4-[0-9]*:../../devel/swig4
 
 SUBST_SED.compiler=	-e 's|g++|'${CXX:Q}'|g'
 
-UNRESOLVED_LIB_DEPS= libortools.so:math/or-tools \
-		libcudd.so:math/cudd \
-		libnauty.so:math/nauty \
+UNRESOLVED_LIB_DEPS= libortools.so:math/or-tools
 
+.include "../../wip/nauty/buildlink3.mk"
+.include "../../wip/cudd/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
@@ -45,4 +44,5 @@ UNRESOLVED_LIB_DEPS= libortools.so:math/or-tools \
 .include "../../math/openblas/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../wip/ThirdParty-ASL/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
