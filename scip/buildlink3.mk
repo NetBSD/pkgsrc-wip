@@ -5,6 +5,8 @@ BUILDLINK_TREE+=	scip
 .if !defined(SCIP_BUILDLINK3_MK)
 SCIP_BUILDLINK3_MK:=
 
+BUILDLINK_FILES.scip+=	bin/scip
+
 BUILDLINK_API_DEPENDS.scip+=	scip>=9.1.0
 BUILDLINK_PKGSRCDIR.scip?=	../../wip/scip
 
