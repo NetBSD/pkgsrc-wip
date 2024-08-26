@@ -1,0 +1,131 @@
+Upgrade candidate.
+
+1. adapt to use LLVM 15
+
+2. fix build:
+
+[100%] Built target MIRTests
+[100%] Built target LLVMExegesisTests
+[100%] Built target GlobalISelTests
+[100%] Linking CXX executable AMDGPUTests
+[100%] Built target AMDGPUTests
+[100%] Linking CXX executable CodeGenTests
+[100%] Linking CXX executable DebugInfoDWARFTests
+[100%] Built target CodeGenTests
+[100%] Built target DebugInfoDWARFTests
+[100%] Built target UnitTests
+[100%] Running lit suite /scratch/devel/py-llvmlite/work/llvm/test/Unit
+/scratch/devel/py-llvmlite/work/llvm-14.0.6.src/utils/lit/lit/formats/googletest.py:57: SyntaxWarning: invalid escape sequence '\('
+  upstream_prefix = re.compile('Running main\(\) from .*gtest_main\.cc')
+/scratch/devel/py-llvmlite/work/llvm-14.0.6.src/utils/lit/lit/TestRunner.py:181: SyntaxWarning: invalid escape sequence '\c'
+  """
+llvm-lit: /scratch/devel/py-llvmlite/work/llvm-14.0.6.src/utils/lit/lit/run.py:126: note: Raised process limit from 1024 to 1044
+-- Testing: 6458 tests, 32 workers --
+Testing:  0.. 10.. 20.. 30.. 40.. 50.. 60.. 70.
+FAIL: LLVM-Unit :: Support/./SupportTests/FileSystemTest.RealPath (5034 of 6458)
+******************** TEST 'LLVM-Unit :: Support/./SupportTests/FileSystemTest.RealPath' FAILED ********************
+Script:
+--
+/scratch/devel/py-llvmlite/work/build/unittests/Support/./SupportTests --gtest_filter=FileSystemTest.RealPath
+--
+Note: Google Test filter = FileSystemTest.RealPath
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FileSystemTest
+[ RUN      ] FileSystemTest.RealPath
+/scratch/devel/py-llvmlite/work/llvm/unittests/Support/Path.cpp:767: Failure
+fs::real_path(HomeDir, Expected): did not return errc::success.
+error number: 2
+error message: No such file or directory
+
+/scratch/devel/py-llvmlite/work/llvm/unittests/Support/Path.cpp:681: Failure
+fs::remove(TestDirectory.str()): did not return errc::success.
+error number: 66
+error message: Directory not empty
+
+[  FAILED  ] FileSystemTest.RealPath (0 ms)
+[----------] 1 test from FileSystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FileSystemTest.RealPath
+
+ 1 FAILED TEST
+Test Directory: /tmp/lit-tmp-r1t29qpx/file-system-test-cdc719
+
+********************
+Testing:  0.. 10.. 20.. 30.. 40.. 50.. 60.. 70..
+FAIL: LLVM-Unit :: Support/./SupportTests/FileSystemTest.permissions (5055 of 6458)
+******************** TEST 'LLVM-Unit :: Support/./SupportTests/FileSystemTest.permissions' FAILED ********************
+Script:
+--
+/scratch/devel/py-llvmlite/work/build/unittests/Support/./SupportTests --gtest_filter=FileSystemTest.permissions
+--
+Note: Google Test filter = FileSystemTest.permissions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FileSystemTest
+[ RUN      ] FileSystemTest.permissions
+/scratch/devel/py-llvmlite/work/llvm/unittests/Support/Path.cpp:2271: Failure
+Expected equality of these values:
+  fs::setPermissions(TempPath, fs::set_gid_on_exe)
+    Which is: generic:1
+  NoError
+    Which is: system:0
+/scratch/devel/py-llvmlite/work/llvm/unittests/Support/Path.cpp:2272: Failure
+Value of: CheckPermissions(fs::set_gid_on_exe)
+  Actual: false
+Expected: true
+/scratch/devel/py-llvmlite/work/llvm/unittests/Support/Path.cpp:2301: Failure
+Expected equality of these values:
+  fs::setPermissions(TempPath, fs::all_perms & ~fs::sticky_bit)
+    Which is: generic:1
+  NoError
+    Which is: system:0
+/scratch/devel/py-llvmlite/work/llvm/unittests/Support/Path.cpp:2303: Failure
+Value of: CheckPermissions(fs::all_perms & ~fs::sticky_bit)
+  Actual: false
+Expected: true
+[  FAILED  ] FileSystemTest.permissions (0 ms)
+[----------] 1 test from FileSystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FileSystemTest.permissions
+
+ 1 FAILED TEST
+Test Directory: /tmp/lit-tmp-r1t29qpx/file-system-test-695917
+
+********************
+Testing:  0.. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90..
+********************
+Failed Tests (2):
+  LLVM-Unit :: Support/./SupportTests/FileSystemTest.RealPath
+  LLVM-Unit :: Support/./SupportTests/FileSystemTest.permissions
+
+
+Testing Time: 6.90s
+  Passed: 6456
+  Failed:    2
+--- test/CMakeFiles/check-llvm-unit ---
+*** [test/CMakeFiles/check-llvm-unit] Error code 1
+
+make[5]: stopped making "test/CMakeFiles/check-llvm-unit.dir/build" in /scratch/devel/py-llvmlite/work/build
+make[5]: 1 error
+
+make[5]: stopped making "test/CMakeFiles/check-llvm-unit.dir/build" in /scratch/devel/py-llvmlite/work/build
+--- test/CMakeFiles/check-llvm-unit.dir/all ---
+*** [test/CMakeFiles/check-llvm-unit.dir/all] Error code 2
+
+make[4]: stopped making "test/CMakeFiles/check-llvm-unit.dir/all" in /scratch/devel/py-llvmlite/work/build
+make[4]: 1 error
+
+make[4]: stopped making "test/CMakeFiles/check-llvm-unit.dir/all" in /scratch/devel/py-llvmlite/work/build
+--- test/CMakeFiles/check-llvm-unit.dir/rule ---
+*** [test/CMakeFiles/check-llvm-unit.dir/rule] Error code 2
+
+make[3]: stopped making "check-llvm-unit" in /scratch/devel/py-llvmlite/work/build
