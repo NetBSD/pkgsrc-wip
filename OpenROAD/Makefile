@@ -31,10 +31,9 @@ TOOL_DEPENDS+=  swig4-[0-9]*:../../devel/swig4
 
 SUBST_SED.compiler=	-e 's|g++|'${CXX:Q}'|g'
 
-UNRESOLVED_LIB_DEPS= libcoinmumps.so:math/coin-or-mumps \
+UNRESOLVED_LIB_DEPS= libortools.so:math/or-tools \
 		libcudd.so:math/cudd \
 		libnauty.so:math/nauty \
-		libortools.so:math/or-tools \
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"
