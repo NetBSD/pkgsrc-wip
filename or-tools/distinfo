@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (or-tools-9.10.tar.gz) = de27738eb91c108965d1e3732065adb83d9145283a495e742acb19c37c58f6c1
+SHA512 (or-tools-9.10.tar.gz) = 7d36715b77d085e1fe96c009380d640ef3c8f357f9884e42d970478ebaa9f3b84990ba4c324993e6ac86ecbe99ab9e0f14cf968ea41bf3defd4480fd54fe4a0b
+Size (or-tools-9.10.tar.gz) = 20465445 bytes
