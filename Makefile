@@ -5563,6 +5563,7 @@ SUBDIR+=	tracy
 SUBDIR+=	trayion
 SUBDIR+=	tree-sitter-query
 SUBDIR+=	tree-sitter-vim
+SUBDIR+=	tree-sitter-vimdoc
 SUBDIR+=	treetool
 SUBDIR+=	trf
 SUBDIR+=	triangle
