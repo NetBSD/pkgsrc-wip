@@ -11,12 +11,16 @@ COMMENT=	Google's Operations Research tools
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake highs
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include "../../wip/ThirdParty-Mumps/buildlink3.mk"
+.include "../../wip/nauty/buildlink3.mk"
 .include "../../wip/ThirdParty-ASL/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../devel/gflags/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
@@ -33,12 +37,16 @@ USE_TOOLS+=	gmake
 # 		OK libopenblas.so:math/openblas \
 # 		OK libprotobuf.so:devel/protobuf \
 # 		OK libre2.so:devel/re2
+# 		OK libnauty.so:math/nauty \
 #
-# 		libnauty.so:math/nauty \
 # 		libCbc.so:math/cbc \
 # 		libCgl.so:math/cgl \
 # 		libCoinUtils.so:math/coinutils \
 # 		libOsi.so:math/osi \
 # 		libOsiClp.so:math/clp \
 #
-# USES=		blaslapack cmake:testing compiler:c++17-lang eigen:3 pkgconfig
+# USES=		OK eigen:3
+#      		blaslapack
+# 		cmake:testing
+# 		compiler:c++17-lang
+# 		pkgconfig
