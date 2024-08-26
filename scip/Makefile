@@ -15,6 +15,8 @@ USE_TOOLS+=	gmake
 
 CMAKE_CONFIGURE_ARGS+=	-DPAPILO=off -DZIMPL=off
 
+CXXFLAGS+=	-fpermissive
+
 .include "../../wip/soplex/buildlink3.mk"
 .include "../../math/ipopt/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
