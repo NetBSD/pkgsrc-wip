@@ -25,6 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-trimesh-[0-9]*:../../wip/py-trimesh
 DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
+DEPENDS+=	${PYPKGPREFIX}-backports.tarfile-[0-9]*:../../wip/py-backports.tarfile # from jaraco/context.py
 
 REPLACE_PYTHON+=	cura_app.py
 
@@ -33,6 +34,8 @@ SUBST_STAGE.fix-version=	pre-configure
 SUBST_MESSAGE.fix-version=	Fixing Cura version.
 SUBST_FILES.fix-version=	CMakeLists.txt
 SUBST_SED.fix-version=		-e "s,\(CURA_VERSION\) \"master\",\1 \"${GITHUB_TAG}\",g"
+
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 PY_PATCHPLIST=	YES
 
