@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# ThirdParty-Mumps
+
+This is an autotools-based build system to build and install
+[MUltifrontal Massively Parallel sparse direct Solver](http://mumps-solver.org/) (MUMPS).
+This installation of MUMPS is used by some other COIN-OR projects.
+
+This version of ThirdParty-Mumps retrieves and builds MUMPS 5.7.1.
+
+## Dependencies
+
+- MUMPS source requires a Fortran 90 compiler.
+
+- MUMPS requires LAPACK to be available. `configure` will look for a Lapack
+  installation, but if that does not succeed, the flags to link with Lapack
+  should be specified with the `--with-lapack-lflags` argument of `configure`.
+
+- MUMPS can make use of METIS. `configure` will look for a METIS library and
+  header, but if that does not succeed, the arguments `--with-metis-lflags`
+  and `--with-metis-cflags` can be specified for `configure`.
+
+...

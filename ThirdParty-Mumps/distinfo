@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ThirdParty-Mumps/3.0.7.tar.gz) = b4cdbe9c287b273e14a887ef28adeb5a646b36f60a056c9744223840b0e3cda5
+SHA512 (ThirdParty-Mumps/3.0.7.tar.gz) = 1eaab0759bee8b8d6d180e4db3391c198ff3afdf2549141b30e171a07c0910a36d8da5ca166d6facb90785ecfd2dd8f5152035973be45f63ab80ed894cc01511
+Size (ThirdParty-Mumps/3.0.7.tar.gz) = 300727 bytes

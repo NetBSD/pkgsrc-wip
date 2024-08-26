@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/coin-or/mumps/dmumps_c.h
+include/coin-or/mumps/mumps_c_types.h
+include/coin-or/mumps/mumps_compat.h
+include/coin-or/mumps/mumps_int_def.h
+include/coin-or/mumps/mumps_mpi.h
+lib/libcoinmumps.la
+lib/pkgconfig/coinmumps.pc
