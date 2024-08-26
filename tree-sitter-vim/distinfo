@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2024/01/28 13:29:46 wiz Exp $
+
+BLAKE2s (tree-sitter-vim-0.4.0.tar.gz) = da36f74913ace920fe9348811fe3e979d754c8c9084166b4f5b1a0d22930156f
+SHA512 (tree-sitter-vim-0.4.0.tar.gz) = 32796cc68227c48ea4d0d2c78640c66710a8f67ab45add1d5a89eec5ade5f74bde6f2fed353a5779f5618ab91567e563449c72b8e134a904d011266303695bda
+Size (tree-sitter-vim-0.4.0.tar.gz) = 356704 bytes
