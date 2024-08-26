@@ -16,20 +16,19 @@ LICENSE=	epl-v1.0
 WRKSRC=		${WRKDIR}/ThirdParty-Mumps-releases-3.0.7
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config wget tar patch
+USE_TOOLS+=	pkg-config patch
 USE_LANGUAGES=	c fortran
 
 PKGCONFIG_OVERRIDE+=	coinmumps.pc.in
 
-MUMPS_MASTER_SITE=	http://coin-or-tools.github.io/ThirdParty-Mumps
-MUMPS_VERSION=		MUMPS_5.7.2
-MUMPS_DISTFILE=		${MUMPS_VERSION}.tar.gz
+MUMPS_VERSION=			MUMPS_5.7.2
+MUMPS_DISTFILE=			${MUMPS_VERSION}.tar.gz
+SITES.${MUMPS_DISTFILE}=	http://coin-or-tools.github.io/ThirdParty-Mumps/
 
-# TODO: The MUMPS_DISTFILE needs to be in distinfo, extracted automatically
-# FreeBSD port math/coin-or-mumps creates a soft link to auto-extracted file. How to do that in pkgsrc?
-# Change USE_TOOLS accordingly
+DISTFILES=	${DEFAULT_DISTFILES} ${MUMPS_DISTFILE}
+
 post-extract:
-	cd ${WRKSRC} && wget --no-check-certificate ${MUMPS_MASTER_SITE}/${MUMPS_DISTFILE} && tar xvzf ${MUMPS_DISTFILE} && ${LN} -s ${MUMPS_VERSION} MUMPS
+	cd ${WRKSRC} && ${LN} -s ../${MUMPS_VERSION} MUMPS
 
 post-patch: # patching from get.Mumps
 	cd ${WRKSRC} && \
