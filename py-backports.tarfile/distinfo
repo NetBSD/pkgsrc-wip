@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (backports_tarfile-1.2.0.tar.gz) = b9d508e51745977d808cd6645d5f264513354e3a895269a26c7446bb41e59c9e
+SHA512 (backports_tarfile-1.2.0.tar.gz) = 8f57526e9aabf7f778e876dab06dd7a476316bb02e9eadd703da3ba74f3b8b0c12338a32fbcb033d477a1a1ff115653a2292b730bfded208c9efb21506bc23d4
+Size (backports_tarfile-1.2.0.tar.gz) = 86406 bytes

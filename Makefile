@@ -3340,6 +3340,7 @@ SUBDIR+=	py-azure-storage-blob
 SUBDIR+=	py-b3j0f.aop
 SUBDIR+=	py-backoff
 SUBDIR+=	py-backports.csv
+SUBDIR+=	py-backports.tarfile
 SUBDIR+=	py-badges
 SUBDIR+=	py-bandicoot
 SUBDIR+=	py-bannock
