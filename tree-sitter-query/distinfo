@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2024/01/28 13:29:46 wiz Exp $
+
+BLAKE2s (tree-sitter-query-0.4.0.tar.gz) = 7fca680ab4490289a56513c9e4f5f36bd7805c86f32a8f71a2afe6482b8627d9
+SHA512 (tree-sitter-query-0.4.0.tar.gz) = e5c771c9e519b2cf3ecf99a5708d2389d63366183d877ad2ddd396ab5cde1b4a2e57837924da3f32fd050bd70f20e2445fbd414b0f82b0a8ce112f8466cbccca
+Size (tree-sitter-query-0.4.0.tar.gz) = 42944 bytes
