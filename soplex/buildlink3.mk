@@ -5,6 +5,8 @@ BUILDLINK_TREE+=	soplex
 .if !defined(SOPLEX_BUILDLINK3_MK)
 SOPLEX_BUILDLINK3_MK:=
 
+BUILDLINK_FILES.soplex+=	bin/soplex
+
 BUILDLINK_API_DEPENDS.soplex+=	soplex>=7.1.0.0
 BUILDLINK_PKGSRCDIR.soplex?=	../../wip/soplex
 
