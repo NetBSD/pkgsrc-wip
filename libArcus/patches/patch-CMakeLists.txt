@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2021-11-26 15:37:16.000000000 +0000
++++ CMakeLists.txt
+@@ -100,12 +100,13 @@ if(BUILD_PYTHON)
+     add_sip_python_module(Arcus python/Socket.sip Arcus)
+ endif()
+ 
++include_directories(${PROTOBUF_INCLUDE_DIR})
++
+ target_include_directories(Arcus PUBLIC
+     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+-    ${PROTOBUF_INCLUDE_DIR}
+ )
+-target_link_libraries(Arcus PUBLIC ${PROTOBUF_LIBRARIES})
++target_link_libraries(Arcus PUBLIC protobuf::libprotobuf)
+ 
+ if(WIN32)
+     add_definitions(-D_WIN32_WINNT=0x0600) # Declare we require Vista or higher, this allows us to use IPv6 functions.

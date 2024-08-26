@@ -3,4 +3,6 @@ $NetBSD$
 BLAKE2s (libArcus/4.13.0.tar.gz) = effa6edbb0f4a10e1957a3f735cbd2e71fd3b3ab0a763e37a0515dbdf52b88db
 SHA512 (libArcus/4.13.0.tar.gz) = a48ab1cb286c13b817363e113707499f2619724c8d2f7672309f9aad78123a89f60e60e92932d8761af87ec5f868f8c319717457532d45e3f2d8e5c3cc010db5
 Size (libArcus/4.13.0.tar.gz) = 32079 bytes
+SHA1 (patch-CMakeLists.txt) = f2d9c078cab1fe741c18d749ad7cac265624335e
+SHA1 (patch-src_MessageTypeStore.cpp) = f8a5b7d07c276167969330ad6a5a2bfd4be3406e
 SHA1 (patch-src_Socket__p.h) = c7933e7fe5e6c7a4ebf913bade8b99fdc3fe1395

@@ -25,6 +25,10 @@ SUBST_SED.sip=		-e 's|\(SIP_EXECUTABLE sip\)|\1${PYVERSSUFFIX}|'
 
 PY_PATCHPLIST=	YES
 
+PYTHON_VERSIONS_ACCEPTED=	311 310
+
+BUILDLINK_DEPMETHOD.py-sip4?=	build
+
 .include "../../lang/python/extension.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../wip/py-sip4/buildlink3.mk"
