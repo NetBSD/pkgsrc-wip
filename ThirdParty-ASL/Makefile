@@ -16,7 +16,6 @@ LICENSE=	epl-v1.0
 WRKSRC=		${WRKDIR}/ThirdParty-ASL-releases-2.0.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	wget tar
 USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	coinasl.pc.in
