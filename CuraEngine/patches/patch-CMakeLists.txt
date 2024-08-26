@@ -1,0 +1,17 @@
+$NetBSD$
+
+Use "stb/stb_image.h" file downloaded by pkgsrc.
+
+--- CMakeLists.txt.orig	2022-01-24 15:11:50.000000000 +0000
++++ CMakeLists.txt
+@@ -28,10 +28,6 @@ if(ENABLE_ARCUS)
+     endif()
+ endif()
+ 
+-#For reading image files.
+-find_package(Stb REQUIRED)
+-include_directories(${Stb_INCLUDE_DIRS})
+-
+ option(USE_SYSTEM_LIBS "Use the system libraries if available" OFF)
+ if(USE_SYSTEM_LIBS)
+     find_package(RapidJSON CONFIG REQUIRED)
