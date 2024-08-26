@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	cudd
+
+.if !defined(CUDD_BUILDLINK3_MK)
+CUDD_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.cudd+=	cudd>=3.0.0
+BUILDLINK_PKGSRCDIR.cudd?=	../../wip/cudd
+.endif	# CUDD_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-cudd
