@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 pre-install:
 	find ${WRKSRC} -type f -name "*.orig" | xargs ${RM}
 
+PYTHON_VERSIONS_ACCEPTED=	311 310
+
 PY_PATCHPLIST=YES
 
 .include "../../devel/cmake/version.mk"
