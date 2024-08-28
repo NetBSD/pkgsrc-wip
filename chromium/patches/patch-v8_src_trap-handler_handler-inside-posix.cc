@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-08-06 19:54:58.786942000 +0000
+--- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-08-21 22:48:50.940083300 +0000
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
  

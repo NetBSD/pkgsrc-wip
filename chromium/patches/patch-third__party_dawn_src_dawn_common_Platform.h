@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/src/dawn/common/Platform.h.orig	2024-08-06 19:53:14.030088200 +0000
+--- third_party/dawn/src/dawn/common/Platform.h.orig	2024-08-21 22:47:51.401977500 +0000
 +++ third_party/dawn/src/dawn/common/Platform.h
 @@ -59,6 +59,11 @@
  #error "Unsupported Windows platform."

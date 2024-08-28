@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/gn/version.h.orig	2024-08-06 20:09:00.966123800 +0000
+--- tools/gn/src/gn/version.h.orig	2024-08-21 23:01:01.096815600 +0000
 +++ tools/gn/src/gn/version.h
 @@ -22,9 +22,9 @@ class Version {
  

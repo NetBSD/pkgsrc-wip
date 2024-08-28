@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2024-08-06 19:52:18.409387400 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2024-08-21 22:46:12.166796200 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
-@@ -49,7 +49,7 @@
+@@ -50,7 +50,7 @@
  #include "printing/backend/cups_connection_pool.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/no_destructor.h"
  #include "ui/linux/linux_ui.h"
  #include "ui/linux/linux_ui_delegate_stub.h"
-@@ -76,7 +76,7 @@ namespace printing {
+@@ -77,7 +77,7 @@ namespace printing {
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD$
  void InstantiateLinuxUiDelegate() {
    // TODO(crbug.com/40561724)  Until a real UI can be used in a utility process,
    // need to use the stub version.
-@@ -85,7 +85,7 @@ void InstantiateLinuxUiDelegate() {
+@@ -86,7 +86,7 @@ void InstantiateLinuxUiDelegate() {
  #endif
  
  scoped_refptr<base::SequencedTaskRunner> GetPrintingTaskRunner() {
@@ -33,7 +33,7 @@ $NetBSD$
    // Use task runner associated with equivalent of UI thread.  Needed for calls
    // made through `PrintDialogLinuxInterface` to properly execute.
    CHECK(base::SequencedTaskRunner::HasCurrentDefault());
-@@ -469,7 +469,7 @@ void PrintBackendServiceImpl::Init(
+@@ -470,7 +470,7 @@ void PrintBackendServiceImpl::Init(
    // `InitCommon()`.
    InitializeProcessForPrinting();
    print_backend_ = PrintBackend::CreateInstance(locale);
@@ -42,7 +42,7 @@ $NetBSD$
    // Test framework already initializes the UI, so this should not go in
    // `InitCommon()`.  Additionally, low-level Linux UI is not needed when tests
    // are using `TestPrintingContext`.
-@@ -690,7 +690,7 @@ void PrintBackendServiceImpl::UpdatePrin
+@@ -691,7 +691,7 @@ void PrintBackendServiceImpl::UpdatePrin
    crash_keys_ = std::make_unique<crash_keys::ScopedPrinterInfo>(
        *printer_name, print_backend_->GetPrinterDriverInfo(*printer_name));
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2024-08-06 19:52:25.145956800 +0000
+--- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2024-08-21 22:46:18.021397000 +0000
 +++ content/browser/file_system_access/file_system_access_local_path_watcher.cc
 @@ -62,7 +62,7 @@ void FileSystemAccessLocalPathWatcher::I
    FilePathWatcher::WatchOptions watch_options{

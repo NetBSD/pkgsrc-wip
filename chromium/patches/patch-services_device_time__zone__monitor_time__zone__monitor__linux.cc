@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-08-06 19:52:31.570499700 +0000
+--- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-08-21 22:46:24.878100900 +0000
 +++ services/device/time_zone_monitor/time_zone_monitor_linux.cc
-@@ -131,7 +131,11 @@ class TimeZoneMonitorLinuxImpl
+@@ -136,7 +136,11 @@ class TimeZoneMonitorLinuxImpl
      // false positives are harmless, assuming the false positive rate is
      // reasonable.
      const char* const kFilesToWatch[] = {

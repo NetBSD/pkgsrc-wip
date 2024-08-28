@@ -12,7 +12,7 @@ NOTE:
  b) FreeBSD uses auto audio backand selector:
     pulse (if running) -> sndio -> alsa -> fake
     and use sndio/audio_manager_sndio.cc instead of linux/audio_manager_linux.cc
- c) NetBSD uses linux/audio_manager_linux.cc as use_sndio is false
+ c) NetBSD uses pulseaudio backend with sndio/audio_manager_sndio.cc (after 128.*)
 
 TODO: port to audioio
 

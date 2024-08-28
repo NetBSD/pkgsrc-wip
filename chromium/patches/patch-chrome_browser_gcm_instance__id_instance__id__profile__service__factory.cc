@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2024-08-06 19:52:15.177114200 +0000
+--- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2024-08-21 22:46:09.083480000 +0000
 +++ chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc
 @@ -16,7 +16,7 @@ namespace instance_id {
  // static
@@ -15,7 +15,7 @@ $NetBSD$
    // On desktop, the guest profile is actually the primary OTR profile of
    // the "regular" guest profile.  The regular guest profile is never used
    // directly by users.  Also, user are not able to create child OTR profiles
-@@ -61,7 +61,7 @@ InstanceIDProfileServiceFactory::~Instan
+@@ -64,7 +64,7 @@ InstanceIDProfileServiceFactory::~Instan
  KeyedService* InstanceIDProfileServiceFactory::BuildServiceInstanceFor(
      content::BrowserContext* context) const {
    Profile* profile = Profile::FromBrowserContext(context);

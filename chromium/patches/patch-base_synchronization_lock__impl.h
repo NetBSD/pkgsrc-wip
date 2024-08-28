@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/synchronization/lock_impl.h.orig	2024-08-06 19:52:10.012677700 +0000
+--- base/synchronization/lock_impl.h.orig	2024-08-21 22:46:04.785038700 +0000
 +++ base/synchronization/lock_impl.h
-@@ -106,6 +106,10 @@ void LockImpl::Unlock() {
+@@ -109,6 +109,10 @@ void LockImpl::Unlock() {
  }
  
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
@@ -17,7 +17,7 @@ $NetBSD$
  
  #if DCHECK_IS_ON()
  BASE_EXPORT void dcheck_trylock_result(int rv);
-@@ -126,6 +130,9 @@ void LockImpl::Unlock() {
+@@ -129,6 +133,9 @@ void LockImpl::Unlock() {
    dcheck_unlock_result(rv);
  #endif
  }

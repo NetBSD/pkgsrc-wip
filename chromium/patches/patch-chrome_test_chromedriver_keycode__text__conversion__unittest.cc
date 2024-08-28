@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/keycode_text_conversion_unittest.cc.orig	2024-08-06 19:52:18.485393800 +0000
+--- chrome/test/chromedriver/keycode_text_conversion_unittest.cc.orig	2024-08-21 22:46:12.262806200 +0000
 +++ chrome/test/chromedriver/keycode_text_conversion_unittest.cc
 @@ -67,7 +67,7 @@ std::string ConvertKeyCodeToTextNoError(
  

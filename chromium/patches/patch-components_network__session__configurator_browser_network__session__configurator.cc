@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/network_session_configurator/browser/network_session_configurator.cc.orig	2024-08-06 19:52:22.573739300 +0000
+--- components/network_session_configurator/browser/network_session_configurator.cc.orig	2024-08-21 22:46:15.531141500 +0000
 +++ components/network_session_configurator/browser/network_session_configurator.cc
 @@ -825,7 +825,7 @@ net::URLRequestContextBuilder::HttpCache
    // backport, having it behave differently than in stable would be a bigger

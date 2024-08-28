@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_util.cc.orig	2024-08-06 19:52:30.562414600 +0000
+--- net/dns/dns_util.cc.orig	2024-08-21 22:46:23.774987700 +0000
 +++ net/dns/dns_util.cc
 @@ -29,6 +29,8 @@
  #include "net/dns/public/util.h"

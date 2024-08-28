@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/native_theme_features.cc.orig	2024-08-06 19:52:57.664705000 +0000
+--- ui/native_theme/native_theme_features.cc.orig	2024-08-21 22:46:46.572327000 +0000
 +++ ui/native_theme/native_theme_features.cc
 @@ -54,7 +54,7 @@ bool IsOverlayScrollbarEnabled() {
  

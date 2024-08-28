@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_network_session.cc.orig	2024-08-06 19:52:30.614419000 +0000
+--- net/http/http_network_session.cc.orig	2024-08-21 22:46:23.823992700 +0000
 +++ net/http/http_network_session.cc
 @@ -19,7 +19,9 @@
  #include "build/build_config.h"

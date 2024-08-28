@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/create_video_capture_device_factory.cc.orig	2024-08-06 19:52:29.054287200 +0000
+--- media/capture/video/create_video_capture_device_factory.cc.orig	2024-08-21 22:46:22.273833500 +0000
 +++ media/capture/video/create_video_capture_device_factory.cc
 @@ -13,7 +13,7 @@
  #include "media/capture/video/fake_video_capture_device_factory.h"

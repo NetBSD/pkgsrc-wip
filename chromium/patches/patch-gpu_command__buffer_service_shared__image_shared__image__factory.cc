@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-08-06 19:52:27.278137000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-08-21 22:46:20.321633000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
-@@ -160,7 +160,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
+@@ -148,7 +148,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
    return gfx::GpuMemoryBufferType::IO_SURFACE_BUFFER;
  #elif BUILDFLAG(IS_ANDROID)
    return gfx::GpuMemoryBufferType::ANDROID_HARDWARE_BUFFER;

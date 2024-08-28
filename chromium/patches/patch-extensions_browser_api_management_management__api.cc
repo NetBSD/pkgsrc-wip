@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/management/management_api.cc.orig	2024-08-06 19:52:26.866102200 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2024-08-21 22:46:19.937593700 +0000
 +++ extensions/browser/api/management/management_api.cc
-@@ -280,7 +280,7 @@ bool PlatformSupportsApprovalFlowForExte
+@@ -285,7 +285,7 @@ bool PlatformSupportsApprovalFlowForExte
  #if BUILDFLAG(IS_CHROMEOS)
    // ChromeOS devices have this feature already shipped.
    return true;

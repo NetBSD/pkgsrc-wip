@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_log.cc.orig	2024-08-06 19:52:22.517734500 +0000
+--- components/metrics/metrics_log.cc.orig	2024-08-21 22:46:15.480136400 +0000
 +++ components/metrics/metrics_log.cc
 @@ -56,7 +56,7 @@
  #include "base/win/current_module.h"

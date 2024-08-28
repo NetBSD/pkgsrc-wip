@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/BUILD.gn.orig	2024-08-06 19:52:24.985943300 +0000
+--- content/browser/BUILD.gn.orig	2024-08-21 22:46:17.870381600 +0000
 +++ content/browser/BUILD.gn
-@@ -2375,6 +2375,14 @@ source_set("browser") {
+@@ -2396,6 +2396,14 @@ source_set("browser") {
      ]
    }
  
@@ -21,7 +21,7 @@ $NetBSD$
    if (is_linux || is_chromeos) {
      sources += [
        "child_process_launcher_helper_linux.cc",
-@@ -2413,6 +2421,15 @@ source_set("browser") {
+@@ -2438,6 +2446,15 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
    }
  

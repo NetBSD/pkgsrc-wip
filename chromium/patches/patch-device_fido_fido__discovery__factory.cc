@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/fido/fido_discovery_factory.cc.orig	2024-08-06 19:52:26.514072400 +0000
+--- device/fido/fido_discovery_factory.cc.orig	2024-08-21 22:46:19.604559700 +0000
 +++ device/fido/fido_discovery_factory.cc
 @@ -127,7 +127,7 @@ std::vector<std::unique_ptr<FidoDiscover
  

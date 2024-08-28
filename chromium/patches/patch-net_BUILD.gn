@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/BUILD.gn.orig	2024-08-06 19:52:30.090374700 +0000
+--- net/BUILD.gn.orig	2024-08-21 22:46:23.508960200 +0000
 +++ net/BUILD.gn
 @@ -123,7 +123,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",
@@ -15,7 +15,7 @@ $NetBSD$
    net_configs += [ "//build/config/linux:libresolv" ]
  }
  
-@@ -1212,6 +1212,19 @@ component("net") {
+@@ -1246,6 +1246,19 @@ component("net") {
      ]
    }
  
@@ -35,7 +35,7 @@ $NetBSD$
    if (is_mac) {
      sources += [
        "base/network_notification_thread_mac.cc",
-@@ -1371,7 +1384,7 @@ component("net") {
+@@ -1407,7 +1420,7 @@ component("net") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
@@ -44,16 +44,16 @@ $NetBSD$
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -2031,7 +2044,7 @@ static_library("test_support") {
-     "url_request/url_request_test_util.h",
-   ]
+@@ -2072,7 +2085,7 @@ static_library("test_support") {
+     ]
+   }
  
 -  if (is_linux || is_chromeos || is_android) {
 +  if ((is_linux || is_chromeos || is_android)  && !is_bsd) {
      sources += [
        "base/address_tracker_linux_test_util.cc",
        "base/address_tracker_linux_test_util.h",
-@@ -2853,14 +2866,14 @@ test("net_unittests") {
+@@ -2876,14 +2889,14 @@ test("net_unittests") {
      ]
    }
  
@@ -70,7 +70,7 @@ $NetBSD$
      sources += [
        "base/address_tracker_linux_unittest.cc",
        "base/network_interfaces_linux_unittest.cc",
-@@ -2948,6 +2961,10 @@ test("net_unittests") {
+@@ -2974,6 +2987,10 @@ test("net_unittests") {
      ]
    }
  
@@ -81,7 +81,7 @@ $NetBSD$
    if (enable_websockets) {
      deps += [ "//net/server:tests" ]
    }
-@@ -3008,7 +3025,7 @@ test("net_unittests") {
+@@ -3034,7 +3051,7 @@ test("net_unittests") {
      ]
    }
  
@@ -90,7 +90,7 @@ $NetBSD$
      sources += [ "tools/quic/quic_simple_server_test.cc" ]
    }
  
-@@ -3147,7 +3164,7 @@ test("net_unittests") {
+@@ -3173,7 +3190,7 @@ test("net_unittests") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.

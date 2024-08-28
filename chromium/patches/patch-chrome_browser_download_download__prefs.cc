@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.cc.orig	2024-08-06 19:52:14.829084900 +0000
+--- chrome/browser/download/download_prefs.cc.orig	2024-08-21 22:46:08.730443500 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -11,6 +11,7 @@
  #include <vector>

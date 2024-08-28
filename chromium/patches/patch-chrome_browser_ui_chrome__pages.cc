@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2024-08-06 19:52:17.161281800 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2024-08-21 22:46:11.045681200 +0000
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -86,7 +86,7 @@
+@@ -87,7 +87,7 @@
  #include "components/signin/public/identity_manager/identity_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/web_applications/web_app_utils.h"
  #endif
  
-@@ -379,7 +379,7 @@ void ShowChromeTips(Browser* browser) {
+@@ -380,7 +380,7 @@ void ShowChromeTips(Browser* browser) {
    ShowSingletonTab(browser, GURL(kChromeTipsURL));
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  void ShowChromeWhatsNew(Browser* browser) {
    ShowSingletonTab(browser, GURL(kChromeUIWhatsNewURL));
  }
-@@ -721,7 +721,7 @@ void ShowShortcutCustomizationApp(Profil
+@@ -722,7 +722,7 @@ void ShowShortcutCustomizationApp(Profil
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/audio_service_util.cc.orig	2024-08-06 19:52:15.277122700 +0000
+--- chrome/browser/media/audio_service_util.cc.orig	2024-08-21 22:46:09.181490000 +0000
 +++ chrome/browser/media/audio_service_util.cc
 @@ -21,7 +21,7 @@
  

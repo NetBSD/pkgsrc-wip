@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/BUILD.gn.orig	2024-08-06 19:52:13.628983500 +0000
+--- chrome/browser/BUILD.gn.orig	2024-08-21 22:46:07.519319300 +0000
 +++ chrome/browser/BUILD.gn
-@@ -6672,6 +6672,13 @@ static_library("browser") {
+@@ -7013,6 +7013,13 @@ static_library("browser") {
      }
    }
  

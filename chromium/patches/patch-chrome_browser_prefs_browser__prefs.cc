@@ -4,9 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-08-06 19:52:15.645153800 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-08-21 22:46:09.569529800 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -489,18 +489,18 @@
+@@ -314,7 +314,7 @@
+ #include "components/user_notes/user_notes_prefs.h"
+ #endif  // BUILDFLAG(IS_ANDROID)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
+ #endif
+ 
+@@ -496,18 +496,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -28,7 +37,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -535,7 +535,7 @@
+@@ -542,7 +542,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -37,16 +46,25 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1953,7 +1953,7 @@ void RegisterLocalState(PrefRegistrySimp
-                                 true);
+@@ -1562,7 +1562,7 @@ void RegisterLocalState(PrefRegistrySimp
+   registry->RegisterIntegerPref(prefs::kLastWhatsNewVersion, 0);
+ #endif  // BUILDFLAG(IS_ANDROID)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   WhatsNewUI::RegisterLocalStatePrefs(registry);
+ #endif
+ 
+@@ -1735,7 +1735,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF)
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2309,12 +2309,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2094,12 +2094,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

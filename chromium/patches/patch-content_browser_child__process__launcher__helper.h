@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_process_launcher_helper.h.orig	2024-08-06 19:52:25.089952000 +0000
+--- content/browser/child_process_launcher_helper.h.orig	2024-08-21 22:46:17.968391700 +0000
 +++ content/browser/child_process_launcher_helper.h
-@@ -297,7 +297,7 @@ class ChildProcessLauncherHelper
+@@ -299,7 +299,7 @@ class ChildProcessLauncherHelper
    std::optional<base::ProcessId> process_id_ = std::nullopt;
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2024-08-06 19:52:17.153281200 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2024-08-21 22:46:11.036680200 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
 @@ -129,7 +129,7 @@
  #include "components/user_manager/user_manager.h"
@@ -60,7 +60,7 @@ $NetBSD$
        if (base::FeatureList::IsEnabled(features::kShortcutsNotApps)) {
          chrome::CreateDesktopShortcutForActiveWebContents(browser_);
        } else {
-@@ -1282,12 +1282,12 @@ void BrowserCommandController::InitComma
+@@ -1272,12 +1272,12 @@ void BrowserCommandController::InitComma
  #endif
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -75,7 +75,7 @@ $NetBSD$
    bool use_system_title_bar = true;
  #if BUILDFLAG(IS_OZONE)
    use_system_title_bar = ui::OzonePlatform::GetInstance()
-@@ -1602,7 +1602,7 @@ void BrowserCommandController::UpdateCom
+@@ -1592,7 +1592,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  

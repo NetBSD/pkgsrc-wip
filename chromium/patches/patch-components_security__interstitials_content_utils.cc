@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/security_interstitials/content/utils.cc.orig	2024-08-06 19:52:23.593825600 +0000
+--- components/security_interstitials/content/utils.cc.orig	2024-08-21 22:46:16.418232700 +0000
 +++ components/security_interstitials/content/utils.cc
 @@ -38,7 +38,7 @@ void LaunchDateAndTimeSettings() {
  #if BUILDFLAG(IS_ANDROID)

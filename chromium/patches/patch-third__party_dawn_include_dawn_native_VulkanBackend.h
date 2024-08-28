@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-08-06 19:53:14.022087600 +0000
+--- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-08-21 22:47:51.393976700 +0000
 +++ third_party/dawn/include/dawn/native/VulkanBackend.h
 @@ -83,7 +83,8 @@ struct ExternalImageExportInfoVk : Exter
  };

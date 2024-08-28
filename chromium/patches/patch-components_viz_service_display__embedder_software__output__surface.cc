@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-08-06 19:52:24.853932100 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-08-21 22:46:17.744368800 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
-@@ -124,7 +124,7 @@ void SoftwareOutputSurface::SwapBuffersC
+@@ -119,7 +119,7 @@ void SoftwareOutputSurface::SwapBuffersC
        now.SnappedToNextTick(refresh_timebase_, refresh_interval_) - now;
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -15,7 +15,7 @@ $NetBSD$
    if (needs_swap_size_notifications_)
      client_->DidSwapWithSize(pixel_size);
  #endif
-@@ -153,7 +153,7 @@ gfx::OverlayTransform SoftwareOutputSurf
+@@ -148,7 +148,7 @@ gfx::OverlayTransform SoftwareOutputSurf
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

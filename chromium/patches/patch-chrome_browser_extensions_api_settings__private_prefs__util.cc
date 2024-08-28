@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-08-06 19:52:15.021101000 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-08-21 22:46:08.911462000 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -202,7 +202,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -205,7 +205,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[tab_groups::prefs::kAutoPinNewTabGroups] =
        settings_api::PrefType::kBoolean;
  
@@ -15,9 +15,9 @@ $NetBSD$
    (*s_allowlist)[::prefs::kUseCustomChromeFrame] =
        settings_api::PrefType::kBoolean;
  #endif
-@@ -213,7 +213,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
-   // Appearance settings.
+@@ -217,7 +217,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kCurrentThemeID] = settings_api::PrefType::kString;
+   (*s_allowlist)[::prefs::kPinnedActions] = settings_api::PrefType::kList;
    (*s_allowlist)[::prefs::kPolicyThemeColor] = settings_api::PrefType::kNumber;
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

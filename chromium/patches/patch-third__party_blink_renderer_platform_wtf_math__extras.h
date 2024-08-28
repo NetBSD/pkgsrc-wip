@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/math_extras.h.orig	2024-08-06 19:52:34.838775900 +0000
+--- third_party/blink/renderer/platform/wtf/math_extras.h.orig	2024-08-21 22:46:28.328455000 +0000
 +++ third_party/blink/renderer/platform/wtf/math_extras.h
 @@ -128,6 +128,10 @@ constexpr float Grad2turn(float g) {
    return g * (1.0f / 400.0f);

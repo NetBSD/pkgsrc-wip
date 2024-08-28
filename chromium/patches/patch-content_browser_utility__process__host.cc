@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host.cc.orig	2024-08-06 19:52:25.529989200 +0000
+--- content/browser/utility_process_host.cc.orig	2024-08-21 22:46:18.604457000 +0000
 +++ content/browser/utility_process_host.cc
 @@ -61,7 +61,7 @@
  #include "content/browser/v8_snapshot_files.h"
@@ -51,7 +51,7 @@ $NetBSD$
    allowed_gpu_ = true;
  #endif
  }
-@@ -349,7 +349,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -348,7 +348,7 @@ bool UtilityProcessHost::StartProcess() 
        switches::kMuteAudio,
        switches::kUseFileForFakeAudioCapture,
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -60,7 +60,7 @@ $NetBSD$
        switches::kAlsaInputDevice,
        switches::kAlsaOutputDevice,
  #endif
-@@ -408,7 +408,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -407,7 +407,7 @@ bool UtilityProcessHost::StartProcess() 
      file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -69,7 +69,7 @@ $NetBSD$
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -419,13 +419,13 @@ bool UtilityProcessHost::StartProcess() 
+@@ -418,13 +418,13 @@ bool UtilityProcessHost::StartProcess() 
      }
  #endif  // BUILDFLAG(IS_LINUX)
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/neterror/resources/neterror.js.orig	2024-08-06 19:52:22.569739000 +0000
+--- components/neterror/resources/neterror.js.orig	2024-08-21 22:46:15.528141300 +0000
 +++ components/neterror/resources/neterror.js
 @@ -142,7 +142,7 @@ function detailsButtonClick() {
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-08-06 19:52:17.433305000 +0000
+--- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-08-21 22:46:11.309708400 +0000
 +++ chrome/browser/ui/views/hung_renderer_view.cc
 @@ -406,7 +406,7 @@ void HungRendererDialogView::ForceCrashH
    content::RenderProcessHost* rph =

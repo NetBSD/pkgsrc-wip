@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/ozone.gni.orig	2024-08-06 19:52:10.240697100 +0000
+--- build/config/ozone.gni.orig	2024-08-21 22:46:05.007061500 +0000
 +++ build/config/ozone.gni
 @@ -84,7 +84,19 @@ declare_args() {
      } else if (is_chromeos_lacros) {

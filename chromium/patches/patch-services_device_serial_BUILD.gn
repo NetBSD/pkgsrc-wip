@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/BUILD.gn.orig	2024-08-06 19:52:31.566499500 +0000
+--- services/device/serial/BUILD.gn.orig	2024-08-21 22:46:24.874100400 +0000
 +++ services/device/serial/BUILD.gn
 @@ -5,7 +5,7 @@
  import("//build/config/chromeos/ui_mode.gni")

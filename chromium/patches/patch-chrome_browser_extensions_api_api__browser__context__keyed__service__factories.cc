@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-08-06 19:52:14.937094000 +0000
+--- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-08-21 22:46:08.820452700 +0000
 +++ chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc
 @@ -44,7 +44,7 @@
  #include "pdf/buildflags.h"

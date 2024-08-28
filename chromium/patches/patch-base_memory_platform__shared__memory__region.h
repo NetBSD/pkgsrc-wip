@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2024-08-06 19:52:09.936671300 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2024-08-21 22:46:04.717031700 +0000
 +++ base/memory/platform_shared_memory_region.h
 @@ -17,7 +17,7 @@
  #include "base/unguessable_token.h"

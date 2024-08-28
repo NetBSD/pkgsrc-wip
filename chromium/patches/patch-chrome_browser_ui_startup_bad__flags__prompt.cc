@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-08-06 19:52:17.277291800 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-08-21 22:46:11.167693600 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
 @@ -107,7 +107,7 @@ const char* const kBadFlags[] = {
  

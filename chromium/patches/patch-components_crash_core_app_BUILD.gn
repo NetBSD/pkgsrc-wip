@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/BUILD.gn.orig	2024-08-06 19:52:21.781672500 +0000
+--- components/crash/core/app/BUILD.gn.orig	2024-08-21 22:46:14.874074000 +0000
 +++ components/crash/core/app/BUILD.gn
 @@ -82,6 +82,10 @@ static_library("app") {
      ]

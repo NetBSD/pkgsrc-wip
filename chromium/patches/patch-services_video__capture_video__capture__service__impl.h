@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_capture/video_capture_service_impl.h.orig	2024-08-06 19:52:31.778517200 +0000
+--- services/video_capture/video_capture_service_impl.h.orig	2024-08-21 22:46:25.222136000 +0000
 +++ services/video_capture/video_capture_service_impl.h
 @@ -27,7 +27,7 @@
  #include "services/video_capture/ash/video_capture_device_factory_ash.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "services/viz/public/cpp/gpu/gpu.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) ||
          // BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -71,7 +71,7 @@ class VideoCaptureServiceImpl : public m
+@@ -75,7 +75,7 @@ class VideoCaptureServiceImpl : public m
  #if BUILDFLAG(IS_WIN)
    void OnGpuInfoUpdate(const CHROME_LUID& luid) override;
  #endif
@@ -24,7 +24,7 @@ $NetBSD$
    void SetVizGpu(std::unique_ptr<viz::Gpu> viz_gpu);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) ||
          // BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -112,7 +112,7 @@ class VideoCaptureServiceImpl : public m
+@@ -120,7 +120,7 @@ class VideoCaptureServiceImpl : public m
        factory_receivers_ash_;
  #endif
  

@@ -4,13 +4,13 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/toolchain.gni.orig	2024-08-06 19:52:10.284700900 +0000
+--- build/toolchain/toolchain.gni.orig	2024-08-21 22:46:05.046065300 +0000
 +++ build/toolchain/toolchain.gni
-@@ -68,7 +68,7 @@ if (host_os == "mac") {
+@@ -72,7 +72,7 @@ if (host_os == "mac") {
    host_shlib_extension = ".dylib"
  } else if (host_os == "win") {
    host_shlib_extension = ".dll"
--} else if (host_os == "linux" || host_os == "aix") {
+-} else if (host_os == "linux" || host_os == "aix" || host_os == "zos") {
 +} else if (is_posix) {
    host_shlib_extension = ".so"
  } else {

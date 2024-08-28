@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util_linux.cc.orig	2024-08-06 19:52:24.185875700 +0000
+--- components/sync_device_info/local_device_info_util_linux.cc.orig	2024-08-21 22:46:16.988291000 +0000
 +++ components/sync_device_info/local_device_info_util_linux.cc
 @@ -9,6 +9,11 @@
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_ipp_helper.cc.orig	2024-08-06 19:52:31.218470000 +0000
+--- printing/backend/cups_ipp_helper.cc.orig	2024-08-21 22:46:24.557067900 +0000
 +++ printing/backend/cups_ipp_helper.cc
 @@ -202,7 +202,7 @@ void ExtractResolutions(const CupsOption
    // Provide a default DPI if no valid DPI is found.

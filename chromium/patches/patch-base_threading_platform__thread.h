@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread.h.orig	2024-08-06 19:52:10.104685500 +0000
+--- base/threading/platform_thread.h.orig	2024-08-21 22:46:04.877048000 +0000
 +++ base/threading/platform_thread.h
 @@ -49,6 +49,8 @@ typedef DWORD PlatformThreadId;
  typedef zx_koid_t PlatformThreadId;

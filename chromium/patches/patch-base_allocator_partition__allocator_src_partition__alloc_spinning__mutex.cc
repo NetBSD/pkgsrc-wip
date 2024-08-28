@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2024-08-06 19:52:09.816661100 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2024-08-21 22:46:04.613021000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -17,7 +17,16 @@
  #endif
@@ -23,7 +23,7 @@ $NetBSD$
  #include <sys/syscall.h>
  #include <unistd.h>
  
-@@ -109,8 +118,19 @@ void SpinningMutex::FutexWait() {
+@@ -106,8 +115,19 @@ void SpinningMutex::FutexWait() {
    // |kLockedContended| anymore. Note that even without spurious wakeups, the
    // value of |state_| is not guaranteed when this returns, as another thread
    // may get the lock before we get to run.
@@ -43,7 +43,7 @@ $NetBSD$
  
    if (err) {
      // These are programming error, check them.
-@@ -122,8 +142,19 @@ void SpinningMutex::FutexWait() {
+@@ -119,8 +139,19 @@ void SpinningMutex::FutexWait() {
  
  void SpinningMutex::FutexWake() {
    int saved_errno = errno;

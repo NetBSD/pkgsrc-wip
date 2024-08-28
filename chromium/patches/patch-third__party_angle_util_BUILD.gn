@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/util/BUILD.gn.orig	2024-08-06 19:53:08.017580000 +0000
+--- third_party/angle/util/BUILD.gn.orig	2024-08-21 22:46:55.859279900 +0000
 +++ third_party/angle/util/BUILD.gn
 @@ -311,7 +311,7 @@ foreach(is_shared_library,
      ]

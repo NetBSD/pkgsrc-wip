@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_unittest.cc.orig	2024-08-06 19:52:09.904668600 +0000
+--- base/files/file_util_unittest.cc.orig	2024-08-21 22:46:04.688028600 +0000
 +++ base/files/file_util_unittest.cc
 @@ -3903,7 +3903,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }

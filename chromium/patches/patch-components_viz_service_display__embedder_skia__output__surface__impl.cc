@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-08-06 19:52:24.853932100 +0000
+--- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-08-21 22:46:17.742368500 +0000
 +++ components/viz/service/display_embedder/skia_output_surface_impl.cc
-@@ -1546,7 +1546,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
+@@ -1663,7 +1663,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
                                              ->GetVulkanPhysicalDevice(),
                                          VK_IMAGE_TILING_OPTIMAL, vk_format,
                                          si_format, yuv_color_space, ycbcr_info);

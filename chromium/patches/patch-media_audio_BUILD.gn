@@ -4,21 +4,24 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/BUILD.gn.orig	2024-08-06 19:52:28.950278300 +0000
+--- media/audio/BUILD.gn.orig	2024-08-21 22:46:22.176823600 +0000
 +++ media/audio/BUILD.gn
-@@ -270,10 +270,21 @@ source_set("audio") {
+@@ -270,10 +270,24 @@ source_set("audio") {
      deps += [ "//media/base/android:media_jni_headers" ]
    }
  
 -  if (is_linux || is_chromeos) {
-+  if ((is_linux || is_chromeos) && !use_sndio) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
      sources += [ "linux/audio_manager_linux.cc" ]
    }
  
++  if (is_bsd) {
++    sources += [ "sndio/audio_manager_sndio.cc" ]
++  }
++
 +  if (use_sndio) {
 +    libs += [ "sndio" ]
 +    sources += [
-+      "sndio/audio_manager_sndio.cc",
 +      "sndio/sndio_input.cc",
 +      "sndio/sndio_input.h",
 +      "sndio/sndio_output.cc",

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_widget_types.h.orig	2024-08-06 19:52:57.576697600 +0000
+--- ui/gfx/native_widget_types.h.orig	2024-08-21 22:46:46.490318500 +0000
 +++ ui/gfx/native_widget_types.h
 @@ -104,7 +104,7 @@ class SkBitmap;
  
@@ -15,7 +15,7 @@ $NetBSD$
  extern "C" {
  struct _AtkObject;
  using AtkObject = struct _AtkObject;
-@@ -220,7 +220,7 @@ using NativeViewAccessible = struct objc
+@@ -219,7 +219,7 @@ using NativeViewAccessible = struct objc
  #endif
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

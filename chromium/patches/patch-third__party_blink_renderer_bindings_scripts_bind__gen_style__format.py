@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py.orig	2024-08-06 19:52:33.118630600 +0000
+--- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py.orig	2024-08-21 22:46:26.612278700 +0000
 +++ third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
 @@ -30,7 +30,7 @@ def init(root_src_dir, enable_style_form
  

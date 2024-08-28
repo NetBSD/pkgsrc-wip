@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.h.orig	2024-08-06 19:52:14.613066700 +0000
+--- chrome/browser/browser_process_impl.h.orig	2024-08-21 22:46:08.522422300 +0000
 +++ chrome/browser/browser_process_impl.h
 @@ -404,7 +404,7 @@ class BrowserProcessImpl : public Browse
  

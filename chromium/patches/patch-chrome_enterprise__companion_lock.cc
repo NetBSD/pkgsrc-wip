@@ -4,23 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/lock.cc.orig	2024-08-06 19:52:18.305378700 +0000
+--- chrome/enterprise_companion/lock.cc.orig	2024-08-21 22:46:12.068786100 +0000
 +++ chrome/enterprise_companion/lock.cc
-@@ -16,7 +16,7 @@
+@@ -17,7 +17,7 @@
  
  namespace {
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- constexpr char kLockName[] = "/ChromeEnterpriseCompanion.lock";
+ constexpr char kLockName[] = "/" PRODUCT_FULLNAME_STRING ".lock";
  #elif BUILDFLAG(IS_MAC)
- constexpr char kLockName[] = "org.chromium.ChromeEnterpriseCompanion.lock";
-@@ -41,7 +41,7 @@ CSecurityDesc GetAdminDaclSecurityDescri
+ constexpr char kLockName[] = MAC_BUNDLE_IDENTIFIER_STRING ".lock";
+@@ -42,7 +42,7 @@ CSecurityDesc GetAdminDaclSecurityDescri
  namespace enterprise_companion {
  
- std::unique_ptr<ScopedLock> CreateScopedLock() {
+ std::unique_ptr<ScopedLock> CreateScopedLock(base::TimeDelta timeout) {
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   return named_system_lock::ScopedLock::Create(kLockName, base::Seconds(0));
+   return named_system_lock::ScopedLock::Create(kLockName, timeout);
  #elif BUILDFLAG(IS_WIN)
    CSecurityAttributes sa =

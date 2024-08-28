@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/BUILD.gn.orig	2024-08-06 19:52:31.594501700 +0000
+--- services/network/BUILD.gn.orig	2024-08-21 22:46:24.898102800 +0000
 +++ services/network/BUILD.gn
-@@ -418,7 +418,6 @@ if (is_linux || is_chromeos) {
+@@ -411,7 +411,6 @@ if (is_linux || is_chromeos) {
      ]
      deps = [
        "//base:base",

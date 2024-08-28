@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-08-06 19:52:25.577993400 +0000
+--- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-08-21 22:46:18.645461000 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.h
 @@ -44,7 +44,7 @@ class CONTENT_EXPORT WebUIMainFrameObser
  

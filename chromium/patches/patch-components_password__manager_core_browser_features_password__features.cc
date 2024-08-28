@@ -4,18 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2024-08-06 19:52:22.785757300 +0000
+--- components/password_manager/core/browser/features/password_features.cc.orig	2024-08-21 22:46:15.720161000 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
-@@ -33,7 +33,7 @@ BASE_FEATURE(kBiometricTouchToFill,
- #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)  // Desktop
- BASE_FEATURE(kButterOnDesktopFollowup,
-              "ButterOnDesktopFollowup",
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT);
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -47,7 +47,7 @@ BASE_FEATURE(kClearUndecryptablePassword
+@@ -41,7 +41,7 @@ BASE_FEATURE(kClearUndecryptablePassword
  BASE_FEATURE(kClearUndecryptablePasswordsOnSync,
               "ClearUndecryptablePasswordsInSync",
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_IOS) || \
@@ -24,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -109,7 +109,7 @@ BASE_FEATURE(kPasswordManualFallbackAvai
+@@ -90,7 +90,7 @@ BASE_FEATURE(kPasswordManualFallbackAvai
               "PasswordManualFallbackAvailable",
               base::FEATURE_DISABLED_BY_DEFAULT);
  

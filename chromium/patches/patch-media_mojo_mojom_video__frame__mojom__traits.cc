@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2024-08-06 19:52:29.254304000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2024-08-21 22:46:22.457852400 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
 @@ -22,7 +22,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"

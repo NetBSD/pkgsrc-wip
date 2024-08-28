@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/messaging/native_process_launcher_posix.cc.orig	2024-08-06 19:52:14.997099000 +0000
-+++ chrome/browser/extensions/api/messaging/native_process_launcher_posix.cc
-@@ -84,7 +84,7 @@ bool NativeProcessLauncher::LaunchNative
+--- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2024-08-21 22:46:08.880458800 +0000
++++ chrome/browser/extensions/api/messaging/launch_context_posix.cc
+@@ -86,7 +86,7 @@ std::optional<LaunchContext::ProcessStat
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

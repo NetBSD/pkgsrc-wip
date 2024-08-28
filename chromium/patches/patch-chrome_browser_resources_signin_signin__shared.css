@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/resources/signin/signin_shared.css.orig	2024-08-06 19:52:16.337212300 +0000
+--- chrome/browser/resources/signin/signin_shared.css.orig	2024-08-21 22:46:10.230597500 +0000
 +++ chrome/browser/resources/signin/signin_shared.css
 @@ -54,7 +54,7 @@ a {
    border-radius: var(--scrollbar-width);

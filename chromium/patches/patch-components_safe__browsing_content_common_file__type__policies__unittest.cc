@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2024-08-06 19:52:23.529820200 +0000
+--- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2024-08-21 22:46:16.360226600 +0000
 +++ components/safe_browsing/content/common/file_type_policies_unittest.cc
 @@ -139,7 +139,7 @@ TEST_F(FileTypePoliciesTest, UnpackResou
    EXPECT_EQ(DownloadFileType::FULL_PING, file_type.ping_setting());

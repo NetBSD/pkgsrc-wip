@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/public/features.h.orig	2024-08-06 19:52:22.929769500 +0000
+--- components/performance_manager/public/features.h.orig	2024-08-21 22:46:15.834172700 +0000
 +++ components/performance_manager/public/features.h
 @@ -21,7 +21,7 @@ BASE_DECLARE_FEATURE(kRunOnMainThreadSyn
  

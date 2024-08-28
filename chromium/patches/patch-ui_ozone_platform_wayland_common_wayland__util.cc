@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2024-08-06 19:52:57.692707500 +0000
+--- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2024-08-21 22:46:46.600329900 +0000
 +++ ui/ozone/platform/wayland/common/wayland_util.cc
 @@ -336,7 +336,7 @@ void TransformToWlArray(
  }

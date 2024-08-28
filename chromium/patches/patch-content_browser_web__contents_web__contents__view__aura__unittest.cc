@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2024-08-06 19:52:25.545990500 +0000
+--- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2024-08-21 22:46:18.615458000 +0000
 +++ content/browser/web_contents/web_contents_view_aura_unittest.cc
 @@ -97,7 +97,7 @@ class TestDragDropClient : public aura::
      drag_drop_data_ = std::move(data);

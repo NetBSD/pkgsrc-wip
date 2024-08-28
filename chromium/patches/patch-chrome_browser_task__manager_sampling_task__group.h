@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2024-08-06 19:52:16.637237500 +0000
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2024-08-21 22:46:10.568632100 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
 @@ -44,7 +44,7 @@ constexpr int kUnsupportedVMRefreshFlags
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |

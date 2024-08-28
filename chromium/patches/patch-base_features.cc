@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/features.cc.orig	2024-08-06 19:52:09.892667500 +0000
+--- base/features.cc.orig	2024-08-21 22:46:04.680027700 +0000
 +++ base/features.cc
 @@ -9,8 +9,10 @@
  #include "base/threading/platform_thread.h"
@@ -18,7 +18,7 @@ $NetBSD$
  #include "base/message_loop/message_pump_libevent.h"
  #endif
  
-@@ -97,10 +99,12 @@ void Init(EmitThreadControllerProfilerMe
+@@ -116,10 +118,12 @@ void Init(EmitThreadControllerProfilerMe
    sequence_manager::internal::ThreadController::InitializeFeatures(
        emit_thread_controller_profiler_metadata);
  

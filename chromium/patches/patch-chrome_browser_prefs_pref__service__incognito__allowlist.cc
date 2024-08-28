@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2024-08-06 19:52:15.649154200 +0000
+--- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2024-08-21 22:46:09.571529900 +0000
 +++ chrome/browser/prefs/pref_service_incognito_allowlist.cc
-@@ -186,7 +186,7 @@ const char* const kPersistentPrefNames[]
+@@ -188,7 +188,7 @@ const char* const kPersistentPrefNames[]
      prefs::kShowFullscreenToolbar,
  #endif
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2024-08-06 19:52:14.921092500 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2024-08-21 22:46:08.804451200 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher.cc
 @@ -10,7 +10,7 @@
  #include "chrome/browser/enterprise/signals/device_info_fetcher_mac.h"

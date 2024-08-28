@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.cc.orig	2024-08-06 19:52:31.306477500 +0000
+--- remoting/host/ipc_constants.cc.orig	2024-08-21 22:46:24.636076000 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -17,7 +17,7 @@ namespace remoting {
  

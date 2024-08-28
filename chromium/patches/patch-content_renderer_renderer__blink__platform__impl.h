@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.h.orig	2024-08-06 19:52:25.786011000 +0000
+--- content/renderer/renderer_blink_platform_impl.h.orig	2024-08-21 22:46:18.836480900 +0000
 +++ content/renderer/renderer_blink_platform_impl.h
-@@ -248,7 +248,7 @@ class CONTENT_EXPORT RendererBlinkPlatfo
+@@ -253,7 +253,7 @@ class CONTENT_EXPORT RendererBlinkPlatfo
    void Collect3DContextInformation(blink::Platform::GraphicsInfo* gl_info,
                                     const gpu::GPUInfo& gpu_info) const;
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-08-06 19:52:29.618334800 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-08-21 22:46:23.079916200 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
-@@ -107,7 +107,7 @@ class GpuMemoryBufferVideoFramePool::Poo
+@@ -106,7 +106,7 @@ class GpuMemoryBufferVideoFramePool::Poo
                  gpu::SHARED_IMAGE_USAGE_RASTER_READ |
                  gpu::SHARED_IMAGE_USAGE_DISPLAY_READ |
                  gpu::SHARED_IMAGE_USAGE_SCANOUT;
@@ -15,7 +15,7 @@ $NetBSD$
      // TODO(crbug.com/40194712): Always add the flag once the
      // OzoneImageBacking is by default turned on.
      if (base::CommandLine::ForCurrentProcess()->HasSwitch(
-@@ -802,7 +802,7 @@ void GpuMemoryBufferVideoFramePool::Pool
+@@ -795,7 +795,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }
  
    bool is_software_backed_video_frame = !video_frame->HasTextures();
@@ -24,7 +24,7 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1347,7 +1347,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+@@ -1340,7 +1340,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
          media::IOSurfaceIsWebGPUCompatible(handle.io_surface.get());
  #endif
  

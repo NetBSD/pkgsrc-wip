@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-08-06 19:52:17.413303100 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-08-21 22:46:11.293706700 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -2240,7 +2240,7 @@ void BrowserView::TabDraggingStatusChang
+@@ -2258,7 +2258,7 @@ void BrowserView::TabDraggingStatusChang
    // CrOS cleanup is done.
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2024-08-06 19:52:57.028651500 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2024-08-21 22:46:46.143283000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_factory.cc
 @@ -7,7 +7,7 @@
  #include "base/notreached.h"

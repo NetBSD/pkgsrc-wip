@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/compiler_specific.h.orig	2024-08-06 19:52:09.872666000 +0000
+--- base/compiler_specific.h.orig	2024-08-21 22:46:04.663026000 +0000
 +++ base/compiler_specific.h
-@@ -316,7 +316,8 @@
+@@ -326,7 +326,8 @@
  //
  // In some cases it's desirable to remove this, e.g. on hot functions, or if
  // we have purposely changed the reference canary.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-08-06 19:52:34.590755000 +0000
+--- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-08-21 22:46:28.081429500 +0000
 +++ third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc
 @@ -9,7 +9,7 @@
  #if BUILDFLAG(IS_ANDROID)

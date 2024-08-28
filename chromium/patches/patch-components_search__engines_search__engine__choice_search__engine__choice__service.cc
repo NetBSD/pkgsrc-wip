@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-08-06 19:52:23.577824400 +0000
+--- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-08-21 22:46:16.403231100 +0000
 +++ components/search_engines/search_engine_choice/search_engine_choice_service.cc
-@@ -580,7 +580,7 @@ void SearchEngineChoiceService::ProcessP
+@@ -610,7 +610,7 @@ void SearchEngineChoiceService::ProcessP
  
  int SearchEngineChoiceService::GetCountryIdInternal() {
    // `country_codes::kCountryIDAtInstall` may not be set yet.

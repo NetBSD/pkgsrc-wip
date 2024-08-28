@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/dummy_text_input_client.h.orig	2024-08-06 19:52:57.044652700 +0000
+--- ui/base/ime/dummy_text_input_client.h.orig	2024-08-21 22:46:46.157284300 +0000
 +++ ui/base/ime/dummy_text_input_client.h
 @@ -65,7 +65,7 @@ class DummyTextInputClient : public Text
    ukm::SourceId GetClientSourceForMetrics() const override;

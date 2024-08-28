@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2024-08-06 19:52:25.425980300 +0000
+--- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2024-08-21 22:46:18.275423300 +0000
 +++ content/browser/renderer_host/render_widget_host_view_event_handler.cc
-@@ -596,7 +596,7 @@ bool RenderWidgetHostViewEventHandler::C
-   if (event->type() == ui::ET_MOUSE_EXITED) {
+@@ -602,7 +602,7 @@ bool RenderWidgetHostViewEventHandler::C
+   if (event->type() == ui::EventType::kMouseExited) {
      if (mouse_locked || selection_popup)
        return false;
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

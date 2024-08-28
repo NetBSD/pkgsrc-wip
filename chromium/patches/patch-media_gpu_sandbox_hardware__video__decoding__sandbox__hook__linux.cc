@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2024-08-06 19:52:29.174297300 +0000
+--- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2024-08-21 22:46:22.385845000 +0000
 +++ media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc
 @@ -16,7 +16,9 @@
  #include "media/gpu/vaapi/vaapi_wrapper.h"
@@ -24,7 +24,7 @@ $NetBSD$
  void AllowAccessToRenderNodes(std::vector<BrokerFilePermission>& permissions,
                                bool include_sys_dev_char,
                                bool read_write) {
-@@ -172,6 +175,7 @@ bool HardwareVideoDecodingPreSandboxHook
+@@ -176,6 +179,7 @@ bool HardwareVideoDecodingPreSandboxHook
    NOTREACHED_NORETURN();
  #endif  // BUILDFLAG(USE_V4L2_CODEC)
  }
@@ -32,7 +32,7 @@ $NetBSD$
  
  }  // namespace
  
-@@ -187,6 +191,7 @@ bool HardwareVideoDecodingPreSandboxHook
+@@ -191,6 +195,7 @@ bool HardwareVideoDecodingPreSandboxHook
  //   (at least).
  bool HardwareVideoDecodingPreSandboxHook(
      sandbox::policy::SandboxLinux::Options options) {
@@ -40,7 +40,7 @@ $NetBSD$
    using HardwareVideoDecodingProcessPolicy =
        sandbox::policy::HardwareVideoDecodingProcessPolicy;
    using PolicyType =
-@@ -232,6 +237,7 @@ bool HardwareVideoDecodingPreSandboxHook
+@@ -236,6 +241,7 @@ bool HardwareVideoDecodingPreSandboxHook
    // |permissions| is empty?
    sandbox::policy::SandboxLinux::GetInstance()->StartBrokerProcess(
        command_set, permissions, options);

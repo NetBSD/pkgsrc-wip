@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2024-08-06 19:52:31.730513300 +0000
+--- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2024-08-21 22:46:25.022115500 +0000
 +++ services/service_manager/public/cpp/service_executable/BUILD.gn
 @@ -22,7 +22,7 @@ source_set("support") {
      "//services/service_manager/public/mojom",

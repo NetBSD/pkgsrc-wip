@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2024-08-06 19:52:29.690340800 +0000
+--- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2024-08-21 22:46:23.140922500 +0000
 +++ mojo/public/cpp/platform/socket_utils_posix.cc
-@@ -29,7 +29,7 @@ bool IsRecoverableError() {
+@@ -34,7 +34,7 @@ bool IsRecoverableError() {
  }
  
  bool GetPeerEuid(base::PlatformFile fd, uid_t* peer_euid) {

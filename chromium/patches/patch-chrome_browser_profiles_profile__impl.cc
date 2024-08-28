@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2024-08-06 19:52:15.709159100 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2024-08-21 22:46:09.640537000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
-@@ -265,6 +265,10 @@
+@@ -266,6 +266,10 @@
  #include "chrome/browser/spellchecker/spellcheck_service.h"
  #endif
  

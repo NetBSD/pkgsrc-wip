@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter_test.cc.orig	2024-08-06 19:52:29.626335400 +0000
+--- media/video/video_encode_accelerator_adapter_test.cc.orig	2024-08-21 22:46:23.082916500 +0000
 +++ media/video/video_encode_accelerator_adapter_test.cc
-@@ -461,7 +461,7 @@ TEST_P(VideoEncodeAcceleratorAdapterTest
+@@ -457,7 +457,7 @@ TEST_P(VideoEncodeAcceleratorAdapterTest
        CreateGreenFrame(large_size, pixel_format, base::Milliseconds(2));
  
    VideoPixelFormat expected_input_format = PIXEL_FORMAT_I420;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2024-08-06 19:52:17.977351000 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2024-08-21 22:46:11.595737700 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards_handler.cc
 @@ -28,7 +28,7 @@
  #include "chrome/browser/ui/webui/password_manager/promo_cards/web_password_manager_promo.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.h"
  #endif
  
-@@ -71,7 +71,7 @@ std::vector<std::unique_ptr<PasswordProm
+@@ -75,7 +75,7 @@ std::vector<std::unique_ptr<PasswordProm
            .get()));
  #endif
  

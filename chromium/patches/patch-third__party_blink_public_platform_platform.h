@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/platform/platform.h.orig	2024-08-06 19:52:33.014621700 +0000
+--- third_party/blink/public/platform/platform.h.orig	2024-08-21 22:46:26.524269800 +0000
 +++ third_party/blink/public/platform/platform.h
-@@ -354,7 +354,7 @@ class BLINK_PLATFORM_EXPORT Platform {
+@@ -368,7 +368,7 @@ class BLINK_PLATFORM_EXPORT Platform {
      return nullptr;
    }
  

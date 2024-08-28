@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2024-08-06 19:52:27.330141300 +0000
+--- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2024-08-21 22:46:20.365637800 +0000
 +++ gpu/ipc/service/gpu_memory_buffer_factory.cc
-@@ -13,7 +13,7 @@
+@@ -14,7 +14,7 @@
  #include "gpu/ipc/service/gpu_memory_buffer_factory_io_surface.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "gpu/ipc/service/gpu_memory_buffer_factory_native_pixmap.h"
  #endif
  
-@@ -36,7 +36,7 @@ GpuMemoryBufferFactory::CreateNativeType
+@@ -37,7 +37,7 @@ GpuMemoryBufferFactory::CreateNativeType
    return std::make_unique<GpuMemoryBufferFactoryIOSurface>();
  #elif BUILDFLAG(IS_ANDROID)
    return std::make_unique<GpuMemoryBufferFactoryAndroidHardwareBuffer>();

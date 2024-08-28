@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/drop_privileges.cc.orig	2024-08-06 19:52:51.484182800 +0000
+--- third_party/crashpad/crashpad/util/posix/drop_privileges.cc.orig	2024-08-21 22:46:41.320788100 +0000
 +++ third_party/crashpad/crashpad/util/posix/drop_privileges.cc
 @@ -25,7 +25,7 @@ void DropPrivileges() {
    gid_t gid = getgid();

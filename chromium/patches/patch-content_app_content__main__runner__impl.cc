@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2024-08-06 19:52:24.981943000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2024-08-21 22:46:17.864381000 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -149,18 +149,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
@@ -40,7 +40,7 @@ $NetBSD$
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -389,7 +395,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -403,7 +409,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +49,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
  // Loads the (native) libraries but does not initialize them (i.e., does not
-@@ -427,7 +433,10 @@ void PreloadLibraryCdms() {
+@@ -441,7 +447,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,7 +60,7 @@ $NetBSD$
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -439,9 +448,16 @@ void PreSandboxInit() {
+@@ -453,9 +462,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
@@ -77,7 +77,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -889,11 +905,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -877,11 +893,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -91,7 +91,7 @@ $NetBSD$
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1041,6 +1056,18 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1058,6 +1073,18 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -110,7 +110,7 @@ $NetBSD$
  #endif
  
    delegate_->SandboxInitialized(process_type);
-@@ -1114,7 +1141,7 @@ int NO_STACK_PROTECTOR ContentMainRunner
+@@ -1133,7 +1160,7 @@ int NO_STACK_PROTECTOR ContentMainRunner
            ->ReconfigureAfterFeatureListInit(process_type);
      }
  
@@ -119,7 +119,7 @@ $NetBSD$
      // If dynamic Mojo Core is being used, ensure that it's loaded very early in
      // the child/zygote process, before any sandbox is initialized. The library
      // is not fully initialized with IPC support until a ChildProcess is later
-@@ -1150,6 +1177,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
+@@ -1169,6 +1196,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
  
    RegisterMainThreadFactories();
  

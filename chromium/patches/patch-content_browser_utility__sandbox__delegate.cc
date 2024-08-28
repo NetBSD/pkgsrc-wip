@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_sandbox_delegate.cc.orig	2024-08-06 19:52:25.529989200 +0000
+--- content/browser/utility_sandbox_delegate.cc.orig	2024-08-21 22:46:18.605457000 +0000
 +++ content/browser/utility_sandbox_delegate.cc
-@@ -67,10 +67,10 @@ UtilitySandboxedProcessLauncherDelegate:
+@@ -76,10 +76,10 @@ UtilitySandboxedProcessLauncherDelegate:
  #if BUILDFLAG(IS_FUCHSIA)
        sandbox_type_ == sandbox::mojom::Sandbox::kVideoCapture ||
  #endif
@@ -19,7 +19,7 @@ $NetBSD$
        sandbox_type_ == sandbox::mojom::Sandbox::kHardwareVideoEncoding ||
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -127,10 +127,10 @@ ZygoteCommunication* UtilitySandboxedPro
+@@ -136,10 +136,10 @@ ZygoteCommunication* UtilitySandboxedPro
    // process upon startup.
    if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork ||
        sandbox_type_ == sandbox::mojom::Sandbox::kOnDeviceModelExecution ||

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2024-08-06 19:52:51.484182800 +0000
+--- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2024-08-21 22:46:41.322788200 +0000
 +++ third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc
-@@ -67,7 +67,7 @@ constexpr const char* kSignalNames[] = {
+@@ -68,7 +68,7 @@ constexpr const char* kSignalNames[] = {
      "INFO",
      "USR1",
      "USR2",
@@ -15,7 +15,7 @@ $NetBSD$
  #if defined(ARCH_CPU_MIPS_FAMILY)
      "HUP",
      "INT",
-@@ -138,7 +138,7 @@ constexpr const char* kSignalNames[] = {
+@@ -139,7 +139,7 @@ constexpr const char* kSignalNames[] = {
  #endif  // defined(ARCH_CPU_MIPS_FAMILY)
  #endif
  };

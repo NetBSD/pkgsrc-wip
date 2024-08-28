@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2024-08-06 19:52:57.692707500 +0000
+--- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2024-08-21 22:46:46.599329700 +0000
 +++ ui/ozone/platform/headless/ozone_platform_headless.cc
 @@ -103,7 +103,7 @@ class OzonePlatformHeadless : public Ozo
    }

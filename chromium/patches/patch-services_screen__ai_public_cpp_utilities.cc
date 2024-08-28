@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/public/cpp/utilities.cc.orig	2024-08-06 19:52:31.722512500 +0000
+--- services/screen_ai/public/cpp/utilities.cc.orig	2024-08-21 22:46:25.018115000 +0000
 +++ services/screen_ai/public/cpp/utilities.cc
-@@ -19,7 +19,7 @@ namespace screen_ai {
+@@ -18,7 +18,7 @@ namespace screen_ai {
  
  namespace {
  
@@ -15,7 +15,7 @@ $NetBSD$
  constexpr char kBinaryPathSwitch[] = "screen-ai-binary";
  #endif
  
-@@ -40,7 +40,7 @@ constexpr char kScreenAIDlcRootPath[] =
+@@ -39,7 +39,7 @@ constexpr char kScreenAIDlcRootPath[] =
  #endif
  
  #if BUILDFLAG(ENABLE_SCREEN_AI_BROWSERTESTS)
@@ -24,7 +24,7 @@ $NetBSD$
  constexpr base::FilePath::CharType kScreenAIResourcePathForTests[] =
      FILE_PATH_LITERAL("third_party/screen-ai/linux/resources");
  #elif BUILDFLAG(IS_MAC)
-@@ -127,7 +127,7 @@ base::FilePath GetComponentBinaryPathFor
+@@ -128,7 +128,7 @@ base::FilePath GetComponentBinaryPathFor
  
  const char* GetBinaryPathSwitch() {
    // This is only used on Linux and ChromeOS.

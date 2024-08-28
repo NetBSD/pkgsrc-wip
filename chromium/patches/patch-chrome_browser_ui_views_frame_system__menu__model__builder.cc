@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-08-06 19:52:17.421304000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-08-21 22:46:11.300707300 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -75,7 +75,7 @@ void SystemMenuModelBuilder::BuildSystem
      ui::SimpleMenuModel* model) {
@@ -24,7 +24,7 @@ $NetBSD$
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    bool supports_server_side_decorations = true;
  #if BUILDFLAG(IS_OZONE) && !BUILDFLAG(IS_CHROMEOS)
-@@ -147,7 +147,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -155,7 +155,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER, IDS_TASK_MANAGER);
    }

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-08-06 19:52:24.857932300 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-08-21 22:46:17.748369000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
-@@ -209,7 +209,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
+@@ -214,7 +214,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
    // See comments on `EvictionHandler`.
    EvictionHandler eviction_handler_;
  

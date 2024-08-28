@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_switches.cc.orig	2024-08-06 19:52:57.636702800 +0000
+--- ui/gl/gl_switches.cc.orig	2024-08-21 22:46:46.544324200 +0000
 +++ ui/gl/gl_switches.cc
 @@ -11,7 +11,7 @@
  #include "base/android/build_info.h"

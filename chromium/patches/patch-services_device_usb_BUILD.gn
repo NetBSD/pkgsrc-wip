@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/BUILD.gn.orig	2024-08-06 19:52:31.570499700 +0000
+--- services/device/usb/BUILD.gn.orig	2024-08-21 22:46:24.878100900 +0000
 +++ services/device/usb/BUILD.gn
 @@ -91,7 +91,7 @@ static_library("usb") {
      deps += [ "//third_party/re2" ]
@@ -29,7 +29,7 @@ $NetBSD$
    if (is_linux || is_chromeos) {
      sources += [
        "usb_device_linux.cc",
-@@ -131,7 +138,7 @@ static_library("usb") {
+@@ -135,7 +142,7 @@ static_library("usb") {
      deps += [ "//device/udev_linux" ]
    }
  

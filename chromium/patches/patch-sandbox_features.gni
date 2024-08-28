@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/features.gni.orig	2024-08-06 19:52:31.438488500 +0000
+--- sandbox/features.gni.orig	2024-08-21 22:46:24.751087700 +0000
 +++ sandbox/features.gni
 @@ -6,7 +6,7 @@
  # currently.

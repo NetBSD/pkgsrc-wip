@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2024-08-06 19:52:29.026284700 +0000
+--- media/base/video_frame.h.orig	2024-08-21 22:46:22.248831000 +0000
 +++ media/base/video_frame.h
 @@ -45,7 +45,7 @@
  #include "base/apple/scoped_cftyperef.h"
@@ -24,7 +24,7 @@ $NetBSD$
      // TODO(mcasas): Consider turning this type into STORAGE_NATIVE
      // based on the idea of using this same enum value for both DMA
      // buffers on Linux and CVPixelBuffers on Mac (which currently use
-@@ -386,7 +386,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -402,7 +402,7 @@ class MEDIA_EXPORT VideoFrame : public b
        ReleaseMailboxAndGpuMemoryBufferCB mailbox_holder_and_gmb_release_cb,
        base::TimeDelta timestamp);
  
@@ -32,8 +32,8 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
-   // VideoFrame.
-@@ -719,7 +719,7 @@ class MEDIA_EXPORT VideoFrame : public b
+   // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
+@@ -721,7 +721,7 @@ class MEDIA_EXPORT VideoFrame : public b
    scoped_refptr<gpu::ClientSharedImage> shared_image(
        size_t texture_index) const;
  
@@ -42,9 +42,9 @@ $NetBSD$
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -950,7 +950,7 @@ class MEDIA_EXPORT VideoFrame : public b
-   // For now it's set to false always until clients starts using it.
-   const bool is_mappable_si_enabled_ = false;
+@@ -963,7 +963,7 @@ class MEDIA_EXPORT VideoFrame : public b
+   // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
+   bool is_mappable_si_enabled_ = false;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

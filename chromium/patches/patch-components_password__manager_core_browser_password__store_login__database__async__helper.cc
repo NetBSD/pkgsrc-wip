@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2024-08-06 19:52:22.829761000 +0000
+--- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2024-08-21 22:46:15.749163900 +0000
 +++ components/password_manager/core/browser/password_store/login_database_async_helper.cc
-@@ -149,7 +149,7 @@ LoginsResultOrError LoginDatabaseAsyncHe
+@@ -152,7 +152,7 @@ LoginsResultOrError LoginDatabaseAsyncHe
      std::vector<PasswordForm> matched_forms;
      if (!login_db_ ||
          !login_db_->GetLogins(form, include_psl, &matched_forms)) {

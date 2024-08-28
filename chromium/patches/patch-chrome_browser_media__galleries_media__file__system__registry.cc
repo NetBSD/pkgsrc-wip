@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2024-08-06 19:52:15.333127500 +0000
+--- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2024-08-21 22:46:09.243496200 +0000
 +++ chrome/browser/media_galleries/media_file_system_registry.cc
-@@ -584,7 +584,12 @@ class MediaFileSystemRegistry::MediaFile
+@@ -585,7 +585,12 @@ class MediaFileSystemRegistry::MediaFile
  // Constructor in 'private' section because depends on private class definition.
  MediaFileSystemRegistry::MediaFileSystemRegistry()
      : file_system_context_(new MediaFileSystemContextImpl) {

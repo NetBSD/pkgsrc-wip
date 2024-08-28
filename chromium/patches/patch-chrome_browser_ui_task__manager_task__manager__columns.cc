@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_columns.cc.orig	2024-08-06 19:52:17.309294500 +0000
+--- chrome/browser/ui/task_manager/task_manager_columns.cc.orig	2024-08-21 22:46:11.196696800 +0000
 +++ chrome/browser/ui/task_manager/task_manager_columns.cc
 @@ -93,7 +93,7 @@ const TableColumnData kColumns[] = {
       std::size("100000") * kCharWidth, -1, true, false, false},

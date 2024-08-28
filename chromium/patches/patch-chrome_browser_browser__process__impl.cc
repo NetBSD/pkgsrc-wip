@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2024-08-06 19:52:14.613066700 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2024-08-21 22:46:08.521422100 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -228,7 +228,7 @@
+@@ -227,7 +227,7 @@
  #include "chrome/browser/ui/profiles/profile_picker.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/error_reporting/chrome_js_error_report_processor.h"  // nogncheck
  #endif
  
-@@ -1282,7 +1282,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1277,7 +1277,7 @@ void BrowserProcessImpl::PreMainMessageL
  
    ApplyMetricsReportingPolicy();
  

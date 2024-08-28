@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2024-08-06 19:52:31.446489300 +0000
+--- sandbox/linux/services/libc_interceptor.cc.orig	2024-08-21 22:46:24.760088700 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
-@@ -12,7 +12,9 @@
+@@ -17,7 +17,9 @@
  #include <stddef.h>
  #include <stdint.h>
  #include <string.h>
@@ -16,7 +16,7 @@ $NetBSD$
  #include <sys/socket.h>
  #include <sys/types.h>
  #include <time.h>
-@@ -168,7 +170,7 @@ bool ReadTimeStruct(base::PickleIterator
+@@ -173,7 +175,7 @@ bool ReadTimeStruct(base::PickleIterator
    } else {
      base::AutoLock lock(g_timezones_lock.Get());
      auto ret_pair = g_timezones.Get().insert(timezone);

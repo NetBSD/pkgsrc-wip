@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-08-06 19:52:17.137280000 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-08-21 22:46:11.018678400 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
 @@ -49,7 +49,7 @@ gfx::Rect GetPopupSizeForVcn3ds() {
  DesktopPaymentsWindowManager::DesktopPaymentsWindowManager(

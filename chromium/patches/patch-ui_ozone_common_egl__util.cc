@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/common/egl_util.cc.orig	2024-08-06 19:52:57.668705500 +0000
+--- ui/ozone/common/egl_util.cc.orig	2024-08-21 22:46:46.576327300 +0000
 +++ ui/ozone/common/egl_util.cc
 @@ -26,9 +26,9 @@ const base::FilePath::CharType kDefaultG
      FILE_PATH_LITERAL("libGLESv2.so");

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2024-08-06 19:52:29.626335400 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2024-08-21 22:46:23.082916500 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -158,7 +158,7 @@ VideoEncodeAccelerator::Config SetUpVeaC
    if (is_rgb)
@@ -15,7 +15,7 @@ $NetBSD$
    if (format != PIXEL_FORMAT_I420 ||
        !VideoFrame::IsStorageTypeMappable(storage_type)) {
      // ChromeOS/Linux hardware video encoders supports I420 on-memory
-@@ -486,7 +486,7 @@ void VideoEncodeAcceleratorAdapter::Init
+@@ -484,7 +484,7 @@ void VideoEncodeAcceleratorAdapter::Init
        SetUpVeaConfig(profile_, options_, format, first_frame->storage_type(),
                       supported_rc_modes_, required_encoder_type_);
  

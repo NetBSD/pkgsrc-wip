@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavcodec/x86/cabac.h.orig	2024-08-06 19:53:10.497789600 +0000
+--- third_party/ffmpeg/libavcodec/x86/cabac.h.orig	2024-08-21 22:47:00.782785000 +0000
 +++ third_party/ffmpeg/libavcodec/x86/cabac.h
 @@ -31,7 +31,8 @@
  

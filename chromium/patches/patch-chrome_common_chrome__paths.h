@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.h.orig	2024-08-06 19:52:18.213370800 +0000
+--- chrome/common/chrome_paths.h.orig	2024-08-21 22:46:11.815760100 +0000
 +++ chrome/common/chrome_paths.h
 @@ -59,7 +59,7 @@ enum {
  #if BUILDFLAG(IS_CHROMEOS_ASH) ||                              \

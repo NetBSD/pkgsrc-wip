@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2024-08-06 19:52:29.166296500 +0000
+--- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2024-08-21 22:46:22.377844000 +0000
 +++ media/gpu/gpu_video_encode_accelerator_factory.cc
 @@ -118,7 +118,7 @@ std::vector<VEAFactoryFunction> GetVEAFa
      return vea_factory_functions;

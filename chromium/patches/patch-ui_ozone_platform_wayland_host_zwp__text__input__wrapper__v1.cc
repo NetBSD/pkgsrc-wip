@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2024-08-06 19:52:57.720709800 +0000
+--- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2024-08-21 22:46:46.624332200 +0000
 +++ ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc
-@@ -226,6 +226,10 @@ void ZWPTextInputWrapperV1::SetSurroundi
+@@ -256,6 +256,10 @@ void ZWPTextInputWrapperV1::SetSurroundi
    // so if it exceeds 16 bits, it may be broken.
    static constexpr size_t kSizeLimit = 60000;
    if (HasAdvancedSurroundingTextSupport() && text.length() > kSizeLimit) {
@@ -17,7 +17,7 @@ $NetBSD$
      base::ScopedFD memfd(memfd_create("surrounding_text", MFD_CLOEXEC));
      if (!memfd.get()) {
        PLOG(ERROR) << "Failed to create memfd";
-@@ -238,6 +242,7 @@ void ZWPTextInputWrapperV1::SetSurroundi
+@@ -268,6 +272,7 @@ void ZWPTextInputWrapperV1::SetSurroundi
      zcr_extended_text_input_v1_set_large_surrounding_text(
          extended_obj_.get(), memfd.get(), text.length(),
          selection_range.start(), selection_range.end());

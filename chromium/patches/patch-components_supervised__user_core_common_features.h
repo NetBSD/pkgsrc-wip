@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2024-08-06 19:52:24.105868800 +0000
+--- components/supervised_user/core/common/features.h.orig	2024-08-21 22:46:16.912283200 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(
  // Applies new informative strings during the parental extension approval flow.
@@ -15,12 +15,26 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop);
  #endif
  
-@@ -53,7 +53,7 @@ bool IsSupervisedUserSkipParentApprovalT
- // Only affects Desktop platforms.
- BASE_DECLARE_FEATURE(kCustomWebSignInInterceptForSupervisedUsers);
+@@ -62,11 +62,11 @@ BASE_DECLARE_FEATURE(kCustomWebSignInInt
+ 
+ // Displays a Family Link kite badge on the supervised user avatar in various
+ // surfaces.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ BASE_DECLARE_FEATURE(kShowKiteForSupervisedUsers);
+ #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  // This hides the following guest mode entry points for supervised users:
  //
  // * In the Profile menu for supervised profiles
+@@ -78,7 +78,7 @@ BASE_DECLARE_FEATURE(kHideGuestModeForSu
+ // unauthenticated (e.g. signed out of the content area) account.
+ BASE_DECLARE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers);
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ // Force re-authentication when an unauthenticated supervised user tries to
+ // access YouTube, so that content restrictions can be applied.
+ BASE_DECLARE_FEATURE(kForceSupervisedUserReauthenticationForYouTube);

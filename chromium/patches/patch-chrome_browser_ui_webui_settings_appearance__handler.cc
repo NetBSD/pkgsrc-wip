@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/appearance_handler.cc.orig	2024-08-06 19:52:17.993352200 +0000
+--- chrome/browser/ui/webui/settings/appearance_handler.cc.orig	2024-08-21 22:46:11.611739200 +0000
 +++ chrome/browser/ui/webui/settings/appearance_handler.cc
-@@ -28,7 +28,7 @@ void AppearanceHandler::RegisterMessages
+@@ -34,7 +34,7 @@ void AppearanceHandler::RegisterMessages
        "useDefaultTheme",
        base::BindRepeating(&AppearanceHandler::HandleUseTheme,
                            base::Unretained(this), ui::SystemTheme::kDefault));

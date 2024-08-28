@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			127.0.6533.119
+VERSION=			128.0.6613.84
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -11,8 +11,8 @@ SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=			${PROFILE_DISTFILE}
 
-MAINTAINER=			ryoon@NetBSD.org
-#MAINTAINER+=			kikadf.01@gmail.com
+#MAINTAINER=			ryoon@NetBSD.org
+MAINTAINER+=			kikadf.01@gmail.com
 HOMEPAGE=			https://www.chromium.org/Home
 COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
@@ -29,7 +29,8 @@ CHECK_PORTABILITY_SKIP+=	third_party/nearby/src/embedded/build.sh
 CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
 CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
-CHECK_PORTABILITY_SKIP+=	third_party/llvm/polly/lib/External/isl/configure
+CHECK_PORTABILITY_SKIP+=	third_party/rust-src/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
+CHECK_PORTABILITY_SKIP+=	third_party/rust-toolchain/lib/rustlib/src/rust/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 
@@ -195,6 +196,7 @@ GN_ARGS+=	proprietary_codecs=true \
 		ffmpeg_branding=\"${FFMPEG_BRAND}\"
 
 GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
+GN_BOOTSTRAP_FLAGS+=	--skip-generate-buildfiles
 
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
@@ -235,8 +237,7 @@ do-configure:
 		--system-libraries ${GN_SYSTEM_LIBS} || ${FALSE}
 
 	cd ${WRKSRC}/tools/gn && \
-		${SETENV} ${MAKE_ENV} ${PYTHONBIN} bootstrap/bootstrap.py \
-		${GN_BOOTSTRAP_FLAGS} --gn-gen-args "${GN_ARGS}"
+		${SETENV} ${MAKE_ENV} ${PYTHONBIN} bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
 
 	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \

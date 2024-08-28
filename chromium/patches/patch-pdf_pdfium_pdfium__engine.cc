@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- pdf/pdfium/pdfium_engine.cc.orig	2024-08-06 19:52:31.082458500 +0000
+--- pdf/pdfium/pdfium_engine.cc.orig	2024-08-21 22:46:24.429054700 +0000
 +++ pdf/pdfium/pdfium_engine.cc
-@@ -92,7 +92,7 @@
+@@ -93,7 +93,7 @@
  #include "gin/public/cppgc.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "pdf/pdfium/pdfium_font_linux.h"
  #endif
  
-@@ -517,7 +517,7 @@ void InitializeSDK(bool enable_v8,
+@@ -524,7 +524,7 @@ void InitializeSDK(bool enable_v8,
  
    FPDF_InitLibraryWithConfig(&config);
  

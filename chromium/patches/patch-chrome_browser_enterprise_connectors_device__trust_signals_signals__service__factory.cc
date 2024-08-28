@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-08-06 19:52:14.901090900 +0000
+--- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-08-21 22:46:08.783449000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/profiles/profile.h"
@@ -14,7 +14,7 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  #include "base/check.h"
  #include "chrome/browser/enterprise/connectors/device_trust/signals/decorators/browser/browser_signals_decorator.h"
- #include "chrome/browser/enterprise/connectors/device_trust/signals/dependency_factory.h"
+ #include "chrome/browser/enterprise/core/dependency_factory_impl.h"
 @@ -58,7 +58,7 @@ std::unique_ptr<SignalsService> CreateSi
        enterprise_signals::ContextInfoFetcher::CreateInstance(
            profile, ConnectorsServiceFactory::GetForBrowserContext(profile))));

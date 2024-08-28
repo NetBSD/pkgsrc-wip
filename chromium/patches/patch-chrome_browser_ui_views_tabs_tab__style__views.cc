@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_style_views.cc.orig	2024-08-06 19:52:17.565316200 +0000
+--- chrome/browser/ui/views/tabs/tab_style_views.cc.orig	2024-08-21 22:46:11.428720500 +0000
 +++ chrome/browser/ui/views/tabs/tab_style_views.cc
-@@ -502,7 +502,7 @@ float GM2TabStyleViews::GetCurrentActive
+@@ -550,7 +550,7 @@ float TabStyleViewsImpl::GetCurrentActiv
    if (!IsHoverAnimationActive()) {
      return base_opacity;
    }
@@ -14,4 +14,4 @@ $NetBSD$
 +  return std::lerp(base_opacity, GetHoverOpacity(), static_cast<float>(GetHoverAnimationValue()));
  }
  
- TabActive GM2TabStyleViews::GetApparentActiveState() const {
+ TabActive TabStyleViewsImpl::GetApparentActiveState() const {

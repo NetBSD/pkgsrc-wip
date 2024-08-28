@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-08-06 19:54:32.380710100 +0000
+--- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-08-21 22:48:21.745089500 +0000
 +++ third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 @@ -20,7 +20,7 @@
  #include "core/fxge/fx_font.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #error "Included on the wrong platform"
  #endif
  
-@@ -172,9 +172,8 @@ class CLinuxPlatform : public CFX_GEModu
+@@ -173,9 +173,8 @@ class CLinuxPlatform : public CFX_GEModu
    std::unique_ptr<SystemFontInfoIface> CreateDefaultSystemFontInfo() override {
      auto pInfo = std::make_unique<CFX_LinuxFontInfo>();
      if (!pInfo->ParseFontCfg(CFX_GEModule::Get()->GetUserFontPaths())) {

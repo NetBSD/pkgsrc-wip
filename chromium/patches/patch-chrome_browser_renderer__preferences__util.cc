@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2024-08-06 19:52:15.765164000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2024-08-21 22:46:09.696542700 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -39,7 +39,7 @@
  #include "ui/views/controls/textfield/textfield.h"

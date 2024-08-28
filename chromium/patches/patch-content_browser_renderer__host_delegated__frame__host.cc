@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/delegated_frame_host.cc.orig	2024-08-06 19:52:25.321971700 +0000
+--- content/browser/renderer_host/delegated_frame_host.cc.orig	2024-08-21 22:46:18.187414200 +0000
 +++ content/browser/renderer_host/delegated_frame_host.cc
 @@ -318,7 +318,7 @@ void DelegatedFrameHost::EmbedSurface(
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/common/features.cc.orig	2024-08-06 19:52:23.557822500 +0000
+--- components/safe_browsing/core/common/features.cc.orig	2024-08-21 22:46:16.384229200 +0000
 +++ components/safe_browsing/core/common/features.cc
-@@ -168,7 +168,7 @@ BASE_FEATURE(kGooglePlayProtectPrompt,
+@@ -186,7 +186,7 @@ BASE_FEATURE(kGooglePlayProtectInApkTele
  BASE_FEATURE(kHashPrefixRealTimeLookups,
               "SafeBrowsingHashPrefixRealTimeLookups",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,12 +15,12 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -253,7 +253,7 @@ constexpr base::FeatureParam<int> kRefer
+@@ -267,7 +267,7 @@ constexpr base::FeatureParam<int> kRefer
  BASE_FEATURE(kSafeBrowsingAsyncRealTimeCheck,
               "SafeBrowsingAsyncRealTimeCheck",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT

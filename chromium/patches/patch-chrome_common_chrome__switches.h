@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2024-08-06 19:52:18.213370800 +0000
+--- chrome/common/chrome_switches.h.orig	2024-08-21 22:46:11.817760500 +0000
 +++ chrome/common/chrome_switches.h
-@@ -274,12 +274,12 @@ extern const char kAllowNaClSocketAPI[];
+@@ -279,12 +279,12 @@ extern const char kAllowNaClSocketAPI[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

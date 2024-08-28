@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/BUILD.gn.orig	2024-08-06 19:52:22.333719000 +0000
+--- components/gwp_asan/BUILD.gn.orig	2024-08-21 22:46:15.304118200 +0000
 +++ components/gwp_asan/BUILD.gn
 @@ -15,7 +15,7 @@ test("gwp_asan_unittests") {
      "//testing/gtest",

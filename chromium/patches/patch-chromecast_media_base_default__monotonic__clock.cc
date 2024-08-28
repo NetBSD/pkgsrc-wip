@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/media/base/default_monotonic_clock.cc.orig	2024-08-06 19:52:20.489563200 +0000
+--- chromecast/media/base/default_monotonic_clock.cc.orig	2024-08-21 22:46:13.798963800 +0000
 +++ chromecast/media/base/default_monotonic_clock.cc
 @@ -11,7 +11,7 @@
  #include "base/time/time.h"

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- apps/ui/views/app_window_frame_view.cc.orig	2024-08-06 19:52:08.032510500 +0000
+--- apps/ui/views/app_window_frame_view.cc.orig	2024-08-21 22:46:03.242880300 +0000
 +++ apps/ui/views/app_window_frame_view.cc
-@@ -148,7 +148,7 @@ gfx::Rect AppWindowFrameView::GetWindowB
+@@ -149,7 +149,7 @@ gfx::Rect AppWindowFrameView::GetWindowB
    gfx::Rect window_bounds = client_bounds;
  // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
  // complete.

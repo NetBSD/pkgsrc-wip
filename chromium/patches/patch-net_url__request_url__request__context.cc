@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context.cc.orig	2024-08-06 19:52:31.046455400 +0000
+--- net/url_request/url_request_context.cc.orig	2024-08-21 22:46:24.397051300 +0000
 +++ net/url_request/url_request_context.cc
 @@ -121,7 +121,7 @@ const HttpNetworkSessionContext* URLRequ
  // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is

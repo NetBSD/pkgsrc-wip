@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/host/host_display_client.h.orig	2024-08-06 19:52:24.813928600 +0000
+--- components/viz/host/host_display_client.h.orig	2024-08-21 22:46:17.708365000 +0000
 +++ components/viz/host/host_display_client.h
 @@ -52,7 +52,7 @@ class VIZ_HOST_EXPORT HostDisplayClient 
    void AddChildWindowToBrowser(gpu::SurfaceHandle child_window) override;

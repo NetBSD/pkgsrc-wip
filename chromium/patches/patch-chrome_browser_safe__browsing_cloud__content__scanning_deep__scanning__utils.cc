@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/cloud_content_scanning/deep_scanning_utils.cc.orig	2024-08-06 19:52:16.369215000 +0000
+--- chrome/browser/safe_browsing/cloud_content_scanning/deep_scanning_utils.cc.orig	2024-08-21 22:46:10.265601200 +0000
 +++ chrome/browser/safe_browsing/cloud_content_scanning/deep_scanning_utils.cc
 @@ -16,7 +16,7 @@
  #include "components/crash/core/common/crash_key.h"

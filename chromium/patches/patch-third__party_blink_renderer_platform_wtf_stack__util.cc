@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-08-06 19:52:34.842776300 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-08-21 22:46:28.330455000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
-@@ -19,6 +19,13 @@
+@@ -23,6 +23,13 @@
  extern "C" void* __libc_stack_end;  // NOLINT
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  namespace WTF {
  
  size_t GetUnderestimatedStackSize() {
-@@ -31,7 +38,8 @@ size_t GetUnderestimatedStackSize() {
+@@ -35,7 +42,8 @@ size_t GetUnderestimatedStackSize() {
  // correctly for the main thread.
  
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -30,7 +30,7 @@ $NetBSD$
    // pthread_getattr_np() can fail if the thread is not invoked by
    // pthread_create() (e.g., the main thread of blink_unittests).
    // If so, a conservative size estimate is returned.
-@@ -52,7 +60,7 @@ size_t GetUnderestimatedStackSize() {
+@@ -56,7 +64,7 @@ size_t GetUnderestimatedStackSize() {
      pthread_attr_destroy(&attr);
      return size;
    }
@@ -39,7 +39,7 @@ $NetBSD$
    pthread_attr_destroy(&attr);
  #endif
  
-@@ -63,6 +71,8 @@ size_t GetUnderestimatedStackSize() {
+@@ -67,6 +75,8 @@ size_t GetUnderestimatedStackSize() {
    //    low as 512k.
    //
    return 512 * 1024;
@@ -48,7 +48,7 @@ $NetBSD$
  #elif BUILDFLAG(IS_APPLE)
    // pthread_get_stacksize_np() returns too low a value for the main thread on
    // OSX 10.9,
-@@ -99,7 +109,7 @@ size_t GetUnderestimatedStackSize() {
+@@ -103,7 +113,7 @@ size_t GetUnderestimatedStackSize() {
  
  void* GetStackStart() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -57,7 +57,7 @@ $NetBSD$
    pthread_attr_t attr;
    int error;
  #if BUILDFLAG(IS_FREEBSD)
-@@ -116,7 +126,7 @@ void* GetStackStart() {
+@@ -120,7 +130,7 @@ void* GetStackStart() {
      pthread_attr_destroy(&attr);
      return reinterpret_cast<uint8_t*>(base) + size;
    }
@@ -66,7 +66,7 @@ $NetBSD$
    pthread_attr_destroy(&attr);
  #endif
  #if defined(__GLIBC__)
-@@ -150,6 +160,13 @@ void* GetStackStart() {
+@@ -154,6 +164,13 @@ void* GetStackStart() {
    ::GetCurrentThreadStackLimits(&lowLimit, &highLimit);
    return reinterpret_cast<void*>(highLimit);
  #endif

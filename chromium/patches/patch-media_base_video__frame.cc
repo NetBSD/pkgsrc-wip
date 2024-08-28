@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2024-08-06 19:52:29.026284700 +0000
+--- media/base/video_frame.cc.orig	2024-08-21 22:46:22.247830900 +0000
 +++ media/base/video_frame.cc
-@@ -81,7 +81,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -83,7 +83,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
      case VideoFrame::STORAGE_SHMEM:
        return "SHMEM";
@@ -15,7 +15,7 @@ $NetBSD$
      case VideoFrame::STORAGE_DMABUFS:
        return "DMABUFS";
  #endif
-@@ -96,7 +96,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -98,7 +98,7 @@ std::string VideoFrame::StorageTypeToStr
  // static
  bool VideoFrame::IsStorageTypeMappable(VideoFrame::StorageType storage_type) {
    return
@@ -24,25 +24,25 @@ $NetBSD$
        // This is not strictly needed but makes explicit that, at VideoFrame
        // level, DmaBufs are not mappable from userspace.
        storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -432,7 +432,7 @@ scoped_refptr<VideoFrame> VideoFrame::Cr
-     planes[i].stride = gpu_memory_buffer->stride(i);
+@@ -396,7 +396,7 @@ VideoFrame::CreateFrameForGpuMemoryBuffe
+                            : shared_image->GetStrideForVideoFrame(i);
    }
    uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   if (gpu_memory_buffer->GetType() == gfx::NATIVE_PIXMAP) {
-     const auto gmb_handle = gpu_memory_buffer->CloneHandle();
-     if (gmb_handle.is_null() ||
-@@ -806,7 +806,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+   bool is_native_buffer =
+       gpu_memory_buffer
+           ? (gpu_memory_buffer->GetType() != gfx::SHARED_MEMORY_BUFFER)
+@@ -817,7 +817,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // static
- scoped_refptr<VideoFrame> VideoFrame::WrapUnownedExternalDmabufs(
+ scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1555,7 +1555,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1528,7 +1528,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
                          : shared_images_[texture_index];
  }
  
@@ -51,12 +51,3 @@ $NetBSD$
  size_t VideoFrame::NumDmabufFds() const {
    if (wrapped_frame_) {
      return wrapped_frame_->NumDmabufFds();
-@@ -1699,7 +1699,7 @@ VideoFrame::~VideoFrame() {
-   // Prevents dangling raw ptr, see https://docs.google.com/document/d/156O7kBZqIhe1dUcqTMcN5T-6YEAcg0yNnj5QlnZu9xU/edit?usp=sharing.
-   shm_region_ = nullptr;
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // Prevents dangling dmabuf fds.
-   dmabuf_fds_.clear();
- #endif

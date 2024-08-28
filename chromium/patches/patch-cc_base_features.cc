@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2024-08-06 19:52:10.312703100 +0000
+--- cc/base/features.cc.orig	2024-08-21 22:46:05.071068000 +0000
 +++ cc/base/features.cc
-@@ -86,7 +86,7 @@ BASE_FEATURE(kNormalPriorityImageDecodin
+@@ -85,7 +85,7 @@ const base::FeatureParam<int> kDeferImpl
  // be using a separate flag to control the launch on GL.
  BASE_FEATURE(kUseDMSAAForTiles,
               "UseDMSAAForTiles",

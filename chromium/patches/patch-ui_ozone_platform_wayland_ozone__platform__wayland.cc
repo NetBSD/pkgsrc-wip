@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-08-06 19:52:57.720709800 +0000
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-08-21 22:46:46.625332400 +0000
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
 @@ -66,13 +66,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"
@@ -49,7 +49,7 @@ $NetBSD$
        // TODO(crbug.com/40800718): Revisit (and maybe remove) once proper
        // support, probably backed by org.freedesktop.portal.Screenshot.PickColor
        // API is implemented. Note: this is restricted to Linux Desktop as Lacros
-@@ -536,7 +536,7 @@ class OzonePlatformWayland : public Ozon
+@@ -538,7 +538,7 @@ class OzonePlatformWayland : public Ozon
    DrmRenderNodePathFinder path_finder_;
  #endif
  

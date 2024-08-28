@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-08-06 19:52:27.338142200 +0000
+--- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-08-21 22:46:20.374638600 +0000
 +++ gpu/vulkan/vulkan_function_pointers.cc
 @@ -1297,7 +1297,7 @@ bool VulkanFunctionPointers::BindDeviceF
      }

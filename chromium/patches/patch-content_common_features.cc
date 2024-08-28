@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2024-08-06 19:52:25.601995200 +0000
+--- content/common/features.cc.orig	2024-08-21 22:46:18.667463300 +0000
 +++ content/common/features.cc
-@@ -173,7 +173,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
+@@ -158,7 +158,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
               base::FEATURE_ENABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               "EnableDevToolsJsErrorReporting",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -294,7 +294,7 @@ BASE_FEATURE(kGroupNIKByJoiningOrigin,
+@@ -308,7 +308,7 @@ BASE_FEATURE(kGroupNIKByJoiningOrigin,
  // process and having browser process handle adjusting thread properties (nice
  // value, c-group, latency sensitivity...) for children which have sandbox
  // restrictions.

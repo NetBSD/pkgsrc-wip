@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/qt/qt.gni.orig	2024-08-06 19:52:57.744711900 +0000
+--- ui/qt/qt.gni.orig	2024-08-21 22:46:46.646334600 +0000
 +++ ui/qt/qt.gni
 @@ -14,7 +14,7 @@ declare_args() {
  
