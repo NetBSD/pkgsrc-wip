@@ -15,6 +15,8 @@ USE_LANGUAGES=	c c++
 
 CXXFLAGS+=	-fpermissive
 
+GCC_REQD+=		12
+
 PKGCONFIG_OVERRIDE+=	highs.pc.in
 
 WRKSRC=		${WRKDIR}/${DISTNAME}

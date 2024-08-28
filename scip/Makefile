@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
+GCC_REQD+=		12
+
 CMAKE_CONFIGURE_ARGS+=	-DPAPILO=off -DZIMPL=off
 
 CXXFLAGS+=	-fpermissive
