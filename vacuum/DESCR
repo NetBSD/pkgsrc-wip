@@ -1,0 +1,4 @@
+An ultra-super-fast, lightweight OpenAPI linter and quality checking
+tool, written in golang and inspired by Spectral.
+
+It's also compatible with existing Spectral rulesets.
