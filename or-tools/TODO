@@ -1,1 +1,8 @@
-- a number of unmet dependencies are listed in Makefile
+HiGHS, google-glog, abseil, protobuf, re2 required to be built with c++20, gcc12
+
+release 9.10 has issues with abseil-cpp making use of VLOG_IS_ON, so we used tag v99bugfix
+
+should switch to 9.11 when it is released
+
+patches are submitted on https://github.com/google/or-tools/issues/4359 and may get incorporated by 9.11
+
