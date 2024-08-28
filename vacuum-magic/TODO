@@ -1,4 +1,7 @@
-Segfaults on NetBSD-5.99.01/amd64:
+- Change PKGNAME to vacuum-magic
+- Install binary and data as vacuum-magic if possible to avoid
+  conflicts with vacuum, the OpenAPI linter
+- Segfaults on NetBSD-5.99.01/amd64:
 
 #0  0x00007f7ffcc1808c in XS_SDL_SurfaceW ()
    from /usr/pkg/lib/perl5/vendor_perl/5.10.0/x86_64-netbsd-thread-multi/auto/SDL_perl/SDL_perl.so
