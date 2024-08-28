@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 
 CXXFLAGS+=	-fpermissive
 
-GCC_REQD+=		12
+GCC_REQD+=	10
 
 PKGCONFIG_OVERRIDE+=	highs.pc.in
 
