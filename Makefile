@@ -5677,6 +5677,7 @@ SUBDIR+=	uzbl
 SUBDIR+=	uzbl-git
 SUBDIR+=	v8
 SUBDIR+=	v8-316
+SUBDIR+=	vacuum
 SUBDIR+=	vacuum-magic
 SUBDIR+=	vala-panel-appmenu
 SUBDIR+=	vale-current
