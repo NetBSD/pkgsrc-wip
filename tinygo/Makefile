@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	tinygo-0.32.0
+DISTNAME=	tinygo-0.33.0
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tinygo-org/}
 
@@ -15,9 +15,10 @@ GITHUB_SUBMODULES+=	tinygo-org stm32-svd e6db8e32d5d42293a528434ec12e7f88479a864
 # musl: handled via distfile
 # binaryen: use devel/binaryen instead
 GITHUB_SUBMODULES+=	mingw-w64 mingw-w64 8526cb618269440a94810b94b77f8bd48c5c3396 lib/mingw-w64
-GITHUB_SUBMODULES+=	aykevl macos-minimal-sdk ebb736fda2bec7cea38dcda807518b835a539525 lib/macos-minimal-sdk
+GITHUB_SUBMODULES+=	aykevl macos-minimal-sdk 91ac2eabd80f10d95cb4255c78999d9d2c45a3be lib/macos-minimal-sdk
 GITHUB_SUBMODULES+=	tinygo-org renesas-svd 03d76880854b9042f5d043f4355cdf8eef522fa5 lib/renesas-svd
-GITHUB_SUBMODULES+=	tinygo-org net a79417481d37e21f29d257c28fecc503df9703e0 src/net
+GITHUB_SUBMODULES+=	tinygo-org net a2370596106a621a9b9dd6ad930f0ec24cfee8d0 src/net
+GITHUB_SUBMODULES+=	WebAssembly wasi-cli 6ae82617096e83e6606047736e84ac397b788631 lib/wasi-cli
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://github.com/tinygo-org/tinygo/
@@ -34,7 +35,7 @@ DEPENDS+=	binaryen-[0-9]*:../../devel/binaryen
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-MAKE_ENV+=	GIT_SHA1=dd6fa89a
+MAKE_ENV+=	GIT_SHA1=ef4f46f1
 MAKE_ENV+=	USE_SYSTEM_BINARYEN=1
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax
