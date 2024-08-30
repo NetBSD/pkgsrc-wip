@@ -1,4 +1,4 @@
-net/py-rns: Add version 0.7.0
+net/py-rns: Add version 0.7.6
 
 Reticulum is the cryptography-based networking stack for building local and wide-area
 networks with readily available hardware. It can operate even with very high latency
@@ -17,4 +17,3 @@ interoperate, associate and disassociate with each other, and require no
 central oversight. Networks for human beings. *Networks for the people*.
 
 This package contains the core reticulum networking code.
-

@@ -119,6 +119,9 @@ ${PYSITELIB}/RNS/Interfaces/PipeInterface.pyo
 ${PYSITELIB}/RNS/Interfaces/RNodeInterface.py
 ${PYSITELIB}/RNS/Interfaces/RNodeInterface.pyc
 ${PYSITELIB}/RNS/Interfaces/RNodeInterface.pyo
+${PYSITELIB}/RNS/Interfaces/RNodeMultiInterface.py
+${PYSITELIB}/RNS/Interfaces/RNodeMultiInterface.pyc
+${PYSITELIB}/RNS/Interfaces/RNodeMultiInterface.pyo
 ${PYSITELIB}/RNS/Interfaces/SerialInterface.py
 ${PYSITELIB}/RNS/Interfaces/SerialInterface.pyc
 ${PYSITELIB}/RNS/Interfaces/SerialInterface.pyo
