@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # Only for Python 3
-
 .include "cargo-depends.mk"
 
 .include "../../lang/python/wheel.mk"
