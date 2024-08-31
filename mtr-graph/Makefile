@@ -2,22 +2,22 @@
 
 CATEGORIES=	net
 PKGBASE=	mtr085
-PKGVERSION=	151
-PKGREVISION=	21
+PKGVERSION=	155
+PKGREVISION=	1
 PKGNAME=	${PKGBASE}-${PKGVERSION}
 DISTNAME=	${PKGBASE}-${GITHUB_HASH}
 MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITHUB_HASH}/
 WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITHUB_HASH}
 
-GITHUB_HASH=	196b040
+GITHUB_HASH=	0c18525
 GITHUB_USER=	yvs2014
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.bitwizard.nl/mtr/
-COMMENT=	Traceroute and ping in a single network diagnostic tool
+COMMENT=	mtr v0.85 fork with IDN, Unicode, extra IP-address info
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS=	mtr-*
+CONFLICTS=	mtr
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf autoreconf automake
@@ -26,6 +26,9 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 .include "options.mk"
 
 SPECIAL_PERMS=	sbin/mtr ${SETUID_ROOT_PERMS}
+
+CONFIGURE_ARGS+=--without-libcap
+CONFIGURE_ARGS+=--enable-suid-last-resort
 
 pre-configure:
 	autoreconf -fi ${WRKSRC}
