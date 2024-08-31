@@ -2,6 +2,35 @@ multimedia/streamlink: update to streamlink-6.8.3
 
 Changelog:
 
+== streamlink 6.9.0 (2024-08-12)
+
+- Added: `streamlink.plugin.api.webbrowser` subpackage with the
+         `aws_waf` module
+- Added: `max_buffer_size` kwarg to `CDPClient.session()`
+- Added: webbrowser `User-Agent` header override in headless mode
+- Changed: default value of `--webbrowser-headless` from `True`
+           to `False`
+- Changed: unicode characters to be unescaped in JSON output,
+           if possible
+- Fixed: potential character encoding issues in Streamlink's logger
+- Updated plugins:
+  - nicolive: updated plugin matcher
+  - okru: fixed validation schema
+  - radionet: removed plugin
+  - sportschau: fixed plugin
+  - tiktok: fixed room ID validation schema
+  - tvp: added support for sport.tvp.pl
+  - twitch: added `--twitch-force-client-integrity`
+  - twitch: fixed broken client-integrity token decoding+parsing
+  - twitch: removed the `headless=False` override
+  - vimeo: removed error messages for unsupported DASH streams
+  - vk: fixed validation schema
+  - vtvgo: resolved AWS Web Application Firewall bot detection
+  - yupptv: fixed plugin, added ad filtering
+- Docs: added webbrowser API metadata to plugin descriptions
+- Docs: updated build-dependencies and the furo theme
+
+
 == streamlink 6.8.3 (2024-07-11)
 
 Patch release:

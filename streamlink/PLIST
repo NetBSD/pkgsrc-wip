@@ -72,6 +72,12 @@ ${PYSITELIB}/streamlink/plugin/api/validate/_validators.pyo
 ${PYSITELIB}/streamlink/plugin/api/websocket.py
 ${PYSITELIB}/streamlink/plugin/api/websocket.pyc
 ${PYSITELIB}/streamlink/plugin/api/websocket.pyo
+${PYSITELIB}/streamlink/plugin/api/webbrowser/__init__.py
+${PYSITELIB}/streamlink/plugin/api/webbrowser/__init__.pyc
+${PYSITELIB}/streamlink/plugin/api/webbrowser/__init__.pyo
+${PYSITELIB}/streamlink/plugin/api/webbrowser/aws_waf.py
+${PYSITELIB}/streamlink/plugin/api/webbrowser/aws_waf.pyc
+${PYSITELIB}/streamlink/plugin/api/webbrowser/aws_waf.pyo
 ${PYSITELIB}/streamlink/plugin/plugin.py
 ${PYSITELIB}/streamlink/plugin/plugin.pyc
 ${PYSITELIB}/streamlink/plugin/plugin.pyo
@@ -361,9 +367,6 @@ ${PYSITELIB}/streamlink/plugins/pluzz.pyo
 ${PYSITELIB}/streamlink/plugins/radiko.py
 ${PYSITELIB}/streamlink/plugins/radiko.pyc
 ${PYSITELIB}/streamlink/plugins/radiko.pyo
-${PYSITELIB}/streamlink/plugins/radionet.py
-${PYSITELIB}/streamlink/plugins/radionet.pyc
-${PYSITELIB}/streamlink/plugins/radionet.pyo
 ${PYSITELIB}/streamlink/plugins/raiplay.py
 ${PYSITELIB}/streamlink/plugins/raiplay.pyc
 ${PYSITELIB}/streamlink/plugins/raiplay.pyo
@@ -541,8 +544,11 @@ ${PYSITELIB}/streamlink/session/__init__.pyc
 ${PYSITELIB}/streamlink/session/__init__.pyo
 ${PYSITELIB}/streamlink/session/http.py
 ${PYSITELIB}/streamlink/session/http.pyc
-${PYSITELIB}/streamlink/session/http.pyo
 ${PYSITELIB}/streamlink/session/http.pyi
+${PYSITELIB}/streamlink/session/http.pyo
+${PYSITELIB}/streamlink/session/http_useragents.py
+${PYSITELIB}/streamlink/session/http_useragents.pyc
+${PYSITELIB}/streamlink/session/http_useragents.pyo
 ${PYSITELIB}/streamlink/session/options.py
 ${PYSITELIB}/streamlink/session/options.pyc
 ${PYSITELIB}/streamlink/session/options.pyo
