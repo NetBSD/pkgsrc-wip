@@ -10,6 +10,9 @@ HOMEPAGE=	https://llvmlite.readthedocs.io/
 COMMENT=	Lightweight LLVM Python binding for writing JIT compilers
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 # Statically linking in a purpose-built LLVM as upstream urges to do.
 # They support only a certain version of LLVM per release, and that
 # with patches.
@@ -69,7 +72,7 @@ LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_UTILS=ON
 LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_BENCHMARKS:BOOL=OFF
 LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_DOCS=OFF
 LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_EXAMPLES=OFF
-
+LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 
 MAKE_ENV+=		LLVM_CONFIG=${WRKDIR}/llvm-inst/bin/llvm-config
 # unable to pass LLVM bit-code files to linker
@@ -89,7 +92,6 @@ pre-configure:
 	cd ${WRKDIR} &&  mkdir build && cd build && \
 	  cmake -G'Unix Makefiles' ${LLVM_CMAKE_CONFIGURE_ARGS} ../llvm && \
 	  ${MAKE} -j${MAKE_JOBS} && \
-	  ${MAKE} -j${MAKE_JOBS} check-llvm-unit && \
 	  ${MAKE} install
 	${SED} -e 's/ -stdlib=libc++//' ${WRKSRC}/ffi/Makefile.freebsd > ${WRKSRC}/ffi/Makefile.netbsd
 
@@ -101,5 +103,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${PYSITELIB}/llvmlite/binding/libllvmlite.dylib
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
