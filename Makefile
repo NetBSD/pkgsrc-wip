@@ -5160,6 +5160,7 @@ SUBDIR+=	sendmailX
 SUBDIR+=	sent
 SUBDIR+=	seqtk
 SUBDIR+=	serendipity
+SUBDIR+=	serie
 SUBDIR+=	serious-engine-tfe-git
 SUBDIR+=	serious-engine-tse-git
 SUBDIR+=	service
