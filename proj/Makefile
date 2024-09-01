@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2024/05/23 13:35:58 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2024/09/01 13:33:50 gdt Exp $
 
 VERSION_BASE=	9.4.1
-# RCs have names like 9.0RC1 and unpack to 9.0.
-#VERSION_RC=	RC1
+# Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
+VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
@@ -54,7 +54,7 @@ TEST_TARGET=		test
 .include "../../devel/googletest/buildlink3.mk"
 #  reported 20240527
 .include "../../textproc/nlohmann-json/buildlink3.mk"
-#  not reported
+#  not yet reported
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
