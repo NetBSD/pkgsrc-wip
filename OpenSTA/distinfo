@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (OpenSTA-2.2.0.tar.gz) = b615d5a1d3294c0d73436b6e663597f8b959f7d02bdb29fc145644e7ead5b510
+SHA512 (OpenSTA-2.2.0.tar.gz) = 130e1933f0a62e74ec64cee0b0aeb7fea4283e9c067b060752e7d27cca11095b0114923979197a5cdaafe98b5d6cc2d03a7a710b14f18ae0a0d79eb7d55eafdb
+Size (OpenSTA-2.2.0.tar.gz) = 4873166 bytes
+SHA1 (patch-CMakeLists.txt) = 03d106e4005ebc8775e954a7a6e2bfeaae250908

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Seeking exact version 3.0 does not work
+
+--- CMakeLists.txt.orig	2024-09-01 05:53:35.626597181 +0000
++++ CMakeLists.txt
+@@ -291,7 +291,7 @@ add_flex_bison_dependency(SdfLex SdfPars
+ 
+ ################################################################
+ 
+-find_package(SWIG REQUIRED 3.0)
++find_package(SWIG REQUIRED)
+ include(UseSWIG)
+ 
+ set(STA_SWIG_FILE app/StaApp.i)
