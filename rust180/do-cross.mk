@@ -10,10 +10,10 @@ SHORT_TARGETS+=		armv6
 SHORT_TARGETS+=		sparc64
 SHORT_TARGETS+=		powerpc
 SHORT_TARGETS+=		arm64
-#SHORT_TARGETS+=	arm64_be
+SHORT_TARGETS+=		arm64_be
 SHORT_TARGETS+=		i386
 SHORT_TARGETS+=		riscv64
-SHORT_TARGETS+=	mipsel	# produces mips32 (not mips1) executables
+SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
 
 # Conditional local overrides of ROOT.* variables:
 .sinclude "local-roots.mk"
