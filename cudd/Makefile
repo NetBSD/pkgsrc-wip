@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
+GCC_REQD+=	10
+
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -fi
 
