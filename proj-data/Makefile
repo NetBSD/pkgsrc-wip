@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/11/26 15:08:20 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/01 22:23:50 gdt Exp $
 
 VERSION_BASE=	1.18
-#VERSION_RC=	RC2
+VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	proj-data-${VERSION}
 CATEGORIES=	geography
