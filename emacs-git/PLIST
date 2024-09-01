@@ -119,7 +119,6 @@ share/emacs/${PKGVERSION}/etc/NEWS.27
 share/emacs/${PKGVERSION}/etc/NEWS.28
 share/emacs/${PKGVERSION}/etc/NEWS.29
 share/emacs/${PKGVERSION}/etc/NEWS.30
-share/emacs/${PKGVERSION}/etc/NEWS.unknown
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORG-NEWS
@@ -1006,6 +1005,7 @@ share/emacs/${PKGVERSION}/etc/srecode/template.srt
 share/emacs/${PKGVERSION}/etc/srecode/test.srt
 share/emacs/${PKGVERSION}/etc/srecode/texi.srt
 share/emacs/${PKGVERSION}/etc/srecode/wisent.srt
+share/emacs/${PKGVERSION}/etc/symbol-releases.eld
 share/emacs/${PKGVERSION}/etc/themes/adwaita-theme.el
 share/emacs/${PKGVERSION}/etc/themes/deeper-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/dichromacy-theme.el
