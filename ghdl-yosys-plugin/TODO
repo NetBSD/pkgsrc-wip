@@ -1,1 +1,1 @@
-- Looking for suggestion on buidlinking of yosys headers, committing if someone wishes to look into
+make fails at build stage as it does not find yosys headers. The workaround is to go to ${WRKSRC} and run gmake and then resume.
