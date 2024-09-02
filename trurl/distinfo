@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (trurl-0.15.tar.gz) = 9d561502d27ca5d99a9600fdf7dc65a7beefa0b6ec3e08828bf81b4607f4942f
+SHA512 (trurl-0.15.tar.gz) = 5d3a5bd659e361b73bc0518d1faf95c38f067fde6206624711018a6e5d8d4de88059ac3ee3c8cfe386535d8c28c1e343ce8182d691483ecdf3457af30485b08a
+Size (trurl-0.15.tar.gz) = 53909 bytes
