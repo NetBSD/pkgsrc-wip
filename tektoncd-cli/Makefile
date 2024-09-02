@@ -20,8 +20,7 @@ GO_VERSION_REQD+=	122
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/tkn ${DESTDIR}${PREFIX}/bin/tkn
+GO_BUILD_PATTERN=	./cmd/tkn
 
 .include "go-modules.mk"
 
