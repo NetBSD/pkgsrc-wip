@@ -5584,6 +5584,7 @@ SUBDIR+=	trigger-rally
 SUBDIR+=	trimadap
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
+SUBDIR+=	trurl
 SUBDIR+=	tscrape-git
 SUBDIR+=	tsh
 SUBDIR+=	tslib
