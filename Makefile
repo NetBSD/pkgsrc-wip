@@ -5426,7 +5426,6 @@ SUBDIR+=	tdlib
 SUBDIR+=	tdlib-purple
 SUBDIR+=	teamspeak
 SUBDIR+=	teco
-SUBDIR+=	tektoncd-cli
 SUBDIR+=	telegraf
 SUBDIR+=	telegram-cli
 SUBDIR+=	telegram-desktop
