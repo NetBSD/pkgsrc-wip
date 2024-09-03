@@ -2218,7 +2218,6 @@ SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
 SUBDIR+=	mark
-SUBDIR+=	markdown-reader
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
 SUBDIR+=	masscan
