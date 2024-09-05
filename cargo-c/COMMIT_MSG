@@ -1,4 +1,10 @@
-devel/cargo-c: update to 0.10.3
+devel/cargo-c: update to 0.10.4
+
+0.10.4
+ - cargo 0.82.0
+ - cbindgen 0.27.0
+ - Support no_std crates
+ - Always print PKG_CONFIG_PATH on cargo build -v
 
 0.10.3
  - cargo-0.81
