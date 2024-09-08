@@ -136,9 +136,6 @@ ${PYSITELIB}/streamlink/plugins/blazetv.pyo
 ${PYSITELIB}/streamlink/plugins/bloomberg.py
 ${PYSITELIB}/streamlink/plugins/bloomberg.pyc
 ${PYSITELIB}/streamlink/plugins/bloomberg.pyo
-${PYSITELIB}/streamlink/plugins/booyah.py
-${PYSITELIB}/streamlink/plugins/booyah.pyc
-${PYSITELIB}/streamlink/plugins/booyah.pyo
 ${PYSITELIB}/streamlink/plugins/brightcove.py
 ${PYSITELIB}/streamlink/plugins/brightcove.pyc
 ${PYSITELIB}/streamlink/plugins/brightcove.pyo
@@ -214,9 +211,6 @@ ${PYSITELIB}/streamlink/plugins/facebook.pyo
 ${PYSITELIB}/streamlink/plugins/filmon.py
 ${PYSITELIB}/streamlink/plugins/filmon.pyc
 ${PYSITELIB}/streamlink/plugins/filmon.pyo
-${PYSITELIB}/streamlink/plugins/galatasaraytv.py
-${PYSITELIB}/streamlink/plugins/galatasaraytv.pyc
-${PYSITELIB}/streamlink/plugins/galatasaraytv.pyo
 ${PYSITELIB}/streamlink/plugins/goltelevision.py
 ${PYSITELIB}/streamlink/plugins/goltelevision.pyc
 ${PYSITELIB}/streamlink/plugins/goltelevision.pyo
@@ -247,9 +241,6 @@ ${PYSITELIB}/streamlink/plugins/huajiao.pyo
 ${PYSITELIB}/streamlink/plugins/huya.py
 ${PYSITELIB}/streamlink/plugins/huya.pyc
 ${PYSITELIB}/streamlink/plugins/huya.pyo
-${PYSITELIB}/streamlink/plugins/idf1.py
-${PYSITELIB}/streamlink/plugins/idf1.pyc
-${PYSITELIB}/streamlink/plugins/idf1.pyo
 ${PYSITELIB}/streamlink/plugins/indihometv.py
 ${PYSITELIB}/streamlink/plugins/indihometv.pyc
 ${PYSITELIB}/streamlink/plugins/indihometv.pyo
@@ -262,9 +253,6 @@ ${PYSITELIB}/streamlink/plugins/kick.pyo
 ${PYSITELIB}/streamlink/plugins/kugou.py
 ${PYSITELIB}/streamlink/plugins/kugou.pyc
 ${PYSITELIB}/streamlink/plugins/kugou.pyo
-${PYSITELIB}/streamlink/plugins/linelive.py
-${PYSITELIB}/streamlink/plugins/linelive.pyc
-${PYSITELIB}/streamlink/plugins/linelive.pyo
 ${PYSITELIB}/streamlink/plugins/livestream.py
 ${PYSITELIB}/streamlink/plugins/livestream.pyc
 ${PYSITELIB}/streamlink/plugins/livestream.pyo
