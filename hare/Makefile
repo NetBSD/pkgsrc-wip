@@ -28,10 +28,16 @@ pre-configure:
 
 # TODO: After NetBSD 10.1, we can remove the time/chrono patch and the
 #       following
+SUBST_CLASSES+=		leapsecs
+SUBST_MESSAGE.leapsecs=	Parameterize path to leap-second data.
+SUBST_STAGE.leapsecs=	post-extract
+SUBST_FILES.leapsecs=	time/chrono/+netbsd.ha
+SUBST_SED.leapsecs=	-e s,/usr/share/zoneinfo/leap-seconds.list,${PREFIX}/share/hare/leap-seconds.list,g
+
 MASTER_SITES+=	https://data.iana.org/time-zones/code/
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	leap-seconds.list
-pre-build:
+post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/hare
 	${INSTALL_DATA} ${WRKDIR}/leap-seconds.list \
 		${DESTDIR}${PREFIX}/share/hare/leap-seconds.list

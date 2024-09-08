@@ -759,7 +759,6 @@ share/hare/stdlib/time/arithm.ha
 share/hare/stdlib/time/chrono/+freebsd.ha
 share/hare/stdlib/time/chrono/+linux.ha
 share/hare/stdlib/time/chrono/+netbsd.ha
-share/hare/stdlib/time/chrono/+netbsd.ha.orig
 share/hare/stdlib/time/chrono/+openbsd.ha
 share/hare/stdlib/time/chrono/README
 share/hare/stdlib/time/chrono/arithmetic.ha
