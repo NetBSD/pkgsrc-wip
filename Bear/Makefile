@@ -3,6 +3,8 @@
 DISTNAME=	Bear-3.1.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rizsotto/}
+# post 3.1.4, contains with fix for fmtlib 11
+GITHUB_TAG=	8afeafe61299c87449023d63336389f159b55808
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rizsotto/Bear
@@ -10,10 +12,7 @@ COMMENT=	Tool to generate compilation database
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,6 +22,7 @@ PLIST_SUBST+=	LIBEXT=dylib
 PLIST_SUBST+=	LIBEXT=so
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/spdlog/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"

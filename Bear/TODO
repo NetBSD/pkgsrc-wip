@@ -1,2 +1,1 @@
-Does not compile with fmtlib 11. Reported upstream at
-https://github.com/rizsotto/Bear/issues/592
+ld: /scratch/wip/Bear/work/.buildlink/lib/libgrpc.so: undefined reference to `grpc_core::MakeDirectoryReader(absl::lts_20240722::string_view)'
