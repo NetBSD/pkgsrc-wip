@@ -1,25 +1,28 @@
 # $NetBSD$
 
-PKGNAME=	harec-0.24.0
-DISTNAME=	${PKGVERSION_NOREV}
+DISTNAME=	0.24.2
+PKGNAME=	harec-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/harec/archive/
+DIST_SUBDIR=	harec
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://harelang.org/
-COMMENT=	Hare language bootstrap compiler
+COMMENT=	Compiler for the Hare language
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/harec-${DISTNAME}
 
-USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+TOOL_DEPENDS+=	binutils>=2.41:../../devel/binutils
+DEPENDS+=	qbe>=1.2:../../lang/qbe
 
-TOOL_DEPENDS+=		qbe>=1.2:../../lang/qbe
+TEST_TARGET=		check
+MAKE_FLAGS+=		LD=gld
+INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	bin
 
-do-configure:
-	${RUN} cp ${FILESDIR}/config.mk ${WRKSRC}/config.mk
+pre-configure:
+	cp ${WRKSRC}/configs/${OPSYS:tl}.mk ${WRKSRC}/config.mk
 
 .include "../../mk/bsd.pkg.mk"
