@@ -1,7 +1,0 @@
-hare TODO:
-
-Build fails on NetBSD/amd64 9.3:
-
-- /bin/sh: Cannot execute ELF binary .bin/hare
-- NOTE: (4 June 2024) NetBSD support has been committed upstream, but a
-  numbered release with it hasn't been created yet

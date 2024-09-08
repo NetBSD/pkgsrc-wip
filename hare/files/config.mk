@@ -1,47 +1,43 @@
-## Install configuration
-
+# install locations
 PREFIX ?= /usr/local
 BINDIR ?= $(PREFIX)/bin
-MANDIR ?= $(PREFIX)/share/man
-SRCDIR ?= $(PREFIX)/src
+MANDIR ?= $(PREFIX)/man
+SRCDIR ?= $(PREFIX)/share/hare
+STDLIB ?= $(SRCDIR)/stdlib
 
-# Where to install the stdlib tree
-STDLIB ?= $(SRCDIR)/hare/stdlib
-
-# Default HAREPATH
-HAREPATH ?= $(SRCDIR)/hare/stdlib:$(SRCDIR)/hare/third-party
-
-## Build configuration
-
-# Platform to build for
-PLATFORM ?= linux
+# variables used during build
+PLATFORM ?= $(OPSYS)
 ARCH ?= x86_64
+HAREFLAGS =
+HARECFLAGS =
+QBEFLAGS =
+ASFLAGS =
+LDLINKFLAGS = --gc-sections -z noexecstack
 
-# External tools and flags
-HAREC ?= harec
-HAREFLAGS ?=
-QBE ?= qbe
-AS ?= as
-LD ?= ld
-AR ?= ar
-SCDOC ?= scdoc
+# commands used by the build script
+HAREC = harec
+QBE = qbe
+AS = as
+LD = ld
+SCDOC = scdoc
 
-# Where to store build artifacts
+# build locations
 HARECACHE = .cache
 BINOUT = .bin
 
-# Cross-compiler toolchains
-AARCH64_AS?=aarch64-as
-AARCH64_AR?=aarch64-ar
-AARCH64_CC?=aarch64-cc
-AARCH64_LD?=aarch64-ld
+# variables that will be embedded in the binary with -D definitions
+HAREPATH ?= $(STDLIB):$(SRCDIR)/third-party
+VERSION=$$(./scripts/version)
 
-RISCV64_AS?=riscv64-as
-RISCV64_AR?=riscv64-ar
-RISCV64_CC?=riscv64-cc
-RISCV64_LD?=riscv64-ld
+# For cross-compilation, modify the variables below
+AARCH64_AS=as
+AARCH64_CC=cc
+AARCH64_LD=ld
 
-X86_64_AS?=as
-X86_64_AR?=ar
-X86_64_CC?=cc
-X86_64_LD?=ld
+RISCV64_AS=as
+RISCV64_CC=cc
+RISCV64_LD=ld
+
+X86_64_AS=as
+X86_64_CC=cc
+X86_64_LD=ld
