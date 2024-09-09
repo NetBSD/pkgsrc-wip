@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pysnmp-4.4.9
+DISTNAME=	pysnmp-6.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysnmp/}
@@ -16,5 +16,5 @@ DEPENDS+=	${PYPKGPREFIX}-smi-[0-9]*:../../wip/py-smi
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
