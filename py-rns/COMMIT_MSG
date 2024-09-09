@@ -1,4 +1,4 @@
-net/py-rns: Add version 0.7.6
+net/py-rns: Add version 0.7.7
 
 Reticulum is the cryptography-based networking stack for building local and wide-area
 networks with readily available hardware. It can operate even with very high latency
