@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (vips-8.15.2.tar.xz) = c40f2aeebfe6b2fbf3087fcd082fd918ff973099d937d9300fff23602158e7f2
-SHA512 (vips-8.15.2.tar.xz) = f746e4590f0105cb40dbb4ee35fe4b177acbf09d7fc4202f623812018030b9cfdfcbe585742724b35f40ef9b68717ebd015243f3db293086621d9eac3d89a5b2
-Size (vips-8.15.2.tar.xz) = 18653840 bytes
+BLAKE2s (vips-8.15.3.tar.xz) = 51e79eddbd6129c79bab37f5bd2457c70e4e7193d4a1cce510a437227ea5e181
+SHA512 (vips-8.15.3.tar.xz) = 7ebeacef00939dff6a03f346e1d7498c9cc6ff84aff3a273dae57ae0b2332cb1da59a94ada1b68d86578af5540c1671badd636f0916e48cc7011b9141f99fc1e
+Size (vips-8.15.3.tar.xz) = 18620888 bytes
