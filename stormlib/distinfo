@@ -1,7 +1,5 @@
 $NetBSD$
 
-SHA1 (stormlib-9.24.tar.gz) = 56f1fa1744ed7efe9cc31fa9059b8acb81d4df2f
-RMD160 (stormlib-9.24.tar.gz) = d38a6eaa321867d9b74c8cafe6d8cae9c7310a10
-SHA512 (stormlib-9.24.tar.gz) = 38694685edfc9c53ff1e303109831b6a791200b9db275043bca8b3bbe7cc928cf0ce9cf554c6758f693da453b85e6385d277ae9add7af867c13488d77432cde5
-Size (stormlib-9.24.tar.gz) = 625374 bytes
-SHA1 (patch-CMakeLists.txt) = 6ed844914f9493a4f9996efa9bd15c24003b0029
+BLAKE2s (stormlib-9.26.tar.gz) = cab7f3862a91bb782558ef03b6144b18d83fe7686b0712de8af2ea589dd5d9a1
+SHA512 (stormlib-9.26.tar.gz) = 5f0ce75019cfbe3a2dfc07ea312825e2babf226dbf8aa77ed60456862ae739ac4689cbe7d4a185cdc148ad9910fd8137d3f11c04ffe6c532bbdacb08838ecfba
+Size (stormlib-9.26.tar.gz) = 610223 bytes

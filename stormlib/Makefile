@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	stormlib-9.24
+DISTNAME=	stormlib-9.26
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ladislav-zezula/}
 GITHUB_PROJECT=	StormLib
@@ -12,11 +12,11 @@ COMMENT=	Blizzard MPQ archive tool
 LICENSE=	mit
 
 EXTRACT_USING=	gtar
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DSTORM_BUILD_TESTS=OFF
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

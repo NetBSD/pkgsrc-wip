@@ -2,3 +2,5 @@
 include/StormLib.h
 include/StormPort.h
 lib/libstorm.a
+share/StormLib/StormLibConfig-noconfig.cmake
+share/StormLib/StormLibConfig.cmake
