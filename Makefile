@@ -975,6 +975,7 @@ SUBDIR+=	fonttosfnt
 SUBDIR+=	foot
 SUBDIR+=	forgejo
 SUBDIR+=	fossil1
+SUBDIR+=	four-bar-rs
 SUBDIR+=	fox
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fpc
