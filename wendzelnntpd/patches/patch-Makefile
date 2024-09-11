@@ -2,65 +2,86 @@ $NetBSD$
 
 Do not set permissions here (handled by pkgsrc).
 Install man pages to "man" instead of "share/man" directory.
-Do not initialize sqlite3 database.
 
---- Makefile.orig	2021-04-17 20:18:01.000000000 +0000
+--- Makefile.orig	2024-09-10 17:15:06.000000000 +0000
 +++ Makefile
-@@ -105,41 +105,42 @@ install : bin/wendzelnntpd bin/wendzelnn
- 	if [ ! -d $(DESTDIR)/share ]; then install -d -m 0755 $(DESTDIR)/share; fi
- 	if [ ! -d $(DESTDIR)/share/doc ]; then install -d -m 0755 $(DESTDIR)/share/doc; fi
- 	if [ ! -d $(DESTDIR)/share/doc/wendzelnntpd ]; then install -d -m 0755 $(DESTDIR)/share/doc/wendzelnntpd; fi
+@@ -105,36 +105,36 @@ wendzelnntpadm : cdpnntpadm.o db_abstrac
+ install : bin/wendzelnntpd bin/wendzelnntpadm
+ 	if [ ! -d $(FAKECDIR) ]; then install -d -m 0755 $(FAKECDIR); fi
+ 	if [ ! -d $(FAKECDIR)/etc ]; then install -d -m 0755 $(FAKECDIR)/etc; fi
+-	if [ ! -d $(DESTDIR)/sbin ]; then install -d -m 0755 $(DESTDIR)/sbin; fi
+-	if [ ! -d $(DESTDIR)/share ]; then install -d -m 0755 $(DESTDIR)/share; fi
+-	if [ ! -d $(DESTDIR)/share/doc ]; then install -d -m 0755 $(DESTDIR)/share/doc; fi
+-	if [ ! -d $(DESTDIR)/share/doc/wendzelnntpd ]; then install -d -m 0755 $(DESTDIR)/share/doc/wendzelnntpd; fi
 -	if [ ! -d $(DESTDIR)/share/man/man8 ]; then install -d -m 0755 $(DESTDIR)/share/man/man8; fi
-+	if [ ! -d $(DESTDIR)/man/man8 ]; then install -d -m 0755 $(DESTDIR)/man/man8; fi
++	if [ ! -d $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin ]; then install -d -m 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin; fi
++	if [ ! -d $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share ]; then install -d -m 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share; fi
++	if [ ! -d $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc ]; then install -d -m 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc; fi
++	if [ ! -d $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd ]; then install -d -m 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd; fi
++	if [ ! -d $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/man/man8 ]; then install -d -m 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/man/man8; fi
  	# binaries
- 	cp bin/wendzelnntpd bin/wendzelnntpadm $(DESTDIR)/sbin/
+-	cp bin/wendzelnntpd bin/wendzelnntpadm $(DESTDIR)/sbin/
 -	chown 0:0 $(DESTDIR)/sbin/wendzelnntpd $(DESTDIR)/sbin/wendzelnntpadm
 -	chmod 0755 $(DESTDIR)/sbin/wendzelnntpd $(DESTDIR)/sbin/wendzelnntpadm
-+	    #chown 0:0 $(DESTDIR)/sbin/wendzelnntpd $(DESTDIR)/sbin/wendzelnntpadm
-+	    #chmod 0755 $(DESTDIR)/sbin/wendzelnntpd $(DESTDIR)/sbin/wendzelnntpadm
++	cp bin/wendzelnntpd bin/wendzelnntpadm $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/
++	#chown 0:0 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpd $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpadm
++	#chmod 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpd $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpadm
  	# documentation and config files
- 	cp $(DOCFILES_TO_INST) $(DESTDIR)/share/doc/wendzelnntpd/
- 	cp -r docs/docs $(DESTDIR)/share/doc/wendzelnntpd/
- 	cp docs/docs.pdf $(DESTDIR)/share/doc/wendzelnntpd/docs.pdf
+-	cp $(DOCFILES_TO_INST) $(DESTDIR)/share/doc/wendzelnntpd/
+-	cp -r docs/docs $(DESTDIR)/share/doc/wendzelnntpd/
+-	cp docs/docs.pdf $(DESTDIR)/share/doc/wendzelnntpd/docs.pdf
 -	chown 0:0 $(DESTDIR)/share/doc/wendzelnntpd/*
 -	chmod 0644 $(DESTDIR)/share/doc/wendzelnntpd/*
-+	    #chown 0:0 $(DESTDIR)/share/doc/wendzelnntpd/*
-+	    #chmod 0644 $(DESTDIR)/share/doc/wendzelnntpd/*
++	cp $(DOCFILES_TO_INST) $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/
++	cp -r docs/docs $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/
++	cp docs/docs.pdf $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/docs.pdf
++	#chown 0:0 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/*
++	#chmod 0644 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/*
  	# manpages
 -	cp $(MANPAGES) $(DESTDIR)/share/man/man8/
 -	chmod 644 $(DESTDIR)/share/man/man8/wendzelnntpd.8
 -	chmod 644 $(DESTDIR)/share/man/man8/wendzelnntpadm.8
-+	cp $(MANPAGES) $(DESTDIR)/man/man8/
-+	    #chmod 644 $(DESTDIR)/man/man8/wendzelnntpd.8
-+	    #chmod 644 $(DESTDIR)/man/man8/wendzelnntpadm.8
++	cp $(MANPAGES) $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/man/man8/
++	#chmod 644 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/man/man8/wendzelnntpd.8
++	#chmod 644 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/man/man8/wendzelnntpadm.8
  	# config
- 	@if [ -f $(FAKECDIR)/wendzelnntpd.conf ]; then cp $(FAKECDIR)/wendzelnntpd.conf $(FAKECDIR)/wendzelnntpd.conf.bkp; chmod 0644 $(FAKECDIR)/wendzelnntpd.conf.bkp; echo "***Your old wendzelnntpd.conf was backuped!***"; fi
- 	cp wendzelnntpd.conf $(FAKECDIR)/
+-	@if [ -f $(FAKECDIR)/wendzelnntpd.conf ]; then cp $(FAKECDIR)/wendzelnntpd.conf $(FAKECDIR)/wendzelnntpd.conf.bkp; chmod 0644 $(FAKECDIR)/wendzelnntpd.conf.bkp; echo "***Your old wendzelnntpd.conf was backuped!***"; fi
++	#@if [ -f $(FAKECDIR)/wendzelnntpd.conf ]; then cp $(FAKECDIR)/wendzelnntpd.conf $(FAKECDIR)/wendzelnntpd.conf.bkp; chmod 0644 $(FAKECDIR)/wendzelnntpd.conf.bkp; echo "***Your old wendzelnntpd.conf was backuped!***"; fi
+ 	cp $(CONFFILE) $(FAKECDIR)/wendzelnntpd.conf
 -	chown 0:0 $(FAKECDIR)/wendzelnntpd.conf
 -	chmod 0644 $(FAKECDIR)/wendzelnntpd.conf
-+	    #chown 0:0 $(FAKECDIR)/wendzelnntpd.conf
-+	    #chmod 0644 $(FAKECDIR)/wendzelnntpd.conf
++	#chown 0:0 $(FAKECDIR)/wendzelnntpd.conf
++	#chmod 0644 $(FAKECDIR)/wendzelnntpd.conf
  	# nextmsgid and database/usenet.db are placed here:
--	mkdir -p /var/spool/news/wendzelnntpd
-+	    #mkdir -p /var/spool/news/wendzelnntpd
+ 	mkdir -p /var/spool/news/wendzelnntpd
  	# og-rwx since the passwords are stored in the database too!
 -	chmod 700 /var/spool/news/wendzelnntpd
-+	    #chmod 700 /var/spool/news/wendzelnntpd
- 	# create a backup of the old usenet database, if needed
- 	@if [ -f $(UDBFILE) ]; then mv $(UDBFILE) $(UDBFILE).`date +"%m-%d-%y-%H:%M"`.bkp; chmod 0600 $(UDBFILE).`date +"%m-%d-%y-%H:%M"`.bkp; echo "***Your old usenet database was backuped!***"; fi
++	#chmod 700 /var/spool/news/wendzelnntpd
+ 	# create a backup of the old usenet database, if needed (only if not dev-mode)
+-	@if [ -f $(UDBFILE) ] && [ $(CONFFILE) != *"dev"* ]; then mv $(UDBFILE) $(UDBFILE).`date +"%m-%d-%y-%H:%M"`.bkp; chmod 0600 $(UDBFILE).`date +"%m-%d-%y-%H:%M"`.bkp; echo "***Your old usenet database was backuped!***"; fi
++	#@if [ -f $(UDBFILE) ] && [ $(CONFFILE) != *"dev"* ]; then mv $(UDBFILE) $(UDBFILE).`date +"%m-%d-%y-%H:%M"`.bkp; chmod 0600 $(UDBFILE).`date +"%m-%d-%y-%H:%M"`.bkp; echo "***Your old usenet database was backuped!***"; fi
+ 			
  	@# create new database, dir already exists due to earlier mkdir call
--	install -d -m 0700 $(CMD_INSTALL_USEROPT) 0 -g 0 /var/spool/news/wendzelnntpd
-+	#    install -d -m 0700 $(CMD_INSTALL_USEROPT) 0 -g 0 /var/spool/news/wendzelnntpd
- 	@#
- 	@# create sqlite initial database if Sqlite3 is used
- 	@# AND
- 	@# create initial newsgroup for sqlite3
- 	@#
--	@if [ "$(SQLITEINST)" != "NO" ]; then echo "Setting up sqlite3 database ..."; cat database/usenet.db_struct | sqlite3 $(UDBFILE) && ( ./bin/wendzelnntpadm addgroup alt.wendzelnntpd.test y || echo "no new newsgroup created." ); else echo "*** NO sqlite3 database setup performed (you use MySQL). Please read the manual (docs/docs.pdf) to learn how to set up the MySQL database within a few minutes. ***"; fi
--	@echo "Installation finished. Please note that your existing wendzelnntpd.conf might have been replaced (a backup should be located in the same folder as your original configuration file)."
-+	    #@if [ "$(SQLITEINST)" != "NO" ]; then echo "Setting up sqlite3 database ..."; cat database/usenet.db_struct | sqlite3 $(UDBFILE) && ( ./bin/wendzelnntpadm addgroup alt.wendzelnntpd.test y || echo "no new newsgroup created." ); else echo "*** NO sqlite3 database setup performed (you use MySQL). Please read the manual (docs/docs.pdf) to learn how to set up the MySQL database within a few minutes. ***"; fi
-+	@echo "Installation finished."
-+	    #"Please note that your existing wendzelnntpd.conf might have been replaced (a backup should be located in the same folder as your original configuration file)."
- 	@echo "Thank you for using this software! Have fun using it!"
+ 	install -d -m 0700 $(CMD_INSTALL_USEROPT) 0 -g 0 /var/spool/news/wendzelnntpd
+@@ -152,14 +152,14 @@ upgrade : bin/wendzelnntpd bin/wendzelnn
+ 	@echo "*** Please only upgrade your WendzelNNTPd if your existing installation is WendzelNNTPd version 2.0.0 or newer. This script replaces only binaries and documentation files. Your databases and configuration files remain untouched. Press RETURN to perform an upgrade or press CTRL+C to abort. ***"
+ 	@read uselessinput
+ 	# binaries
+-	cp bin/wendzelnntpd bin/wendzelnntpadm $(DESTDIR)/sbin/
+-	chown 0:0 $(DESTDIR)/sbin/wendzelnntpd $(DESTDIR)/sbin/wendzelnntpadm
+-	chmod 0755 $(DESTDIR)/sbin/wendzelnntpd $(DESTDIR)/sbin/wendzelnntpadm
++	cp bin/wendzelnntpd bin/wendzelnntpadm $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/
++	#chown 0:0 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpd $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpadm
++	#chmod 0755 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpd $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/sbin/wendzelnntpadm
+ 	# documentation
+-	cp -r docs/docs $(DESTDIR)/share/doc/wendzelnntpd/
+-	cp docs/docs.pdf $(DESTDIR)/share/doc/wendzelnntpd/docs.pdf
+-	chown 0:0 $(DESTDIR)/share/doc/wendzelnntpd/*
+-	chmod 0644 $(DESTDIR)/share/doc/wendzelnntpd/*
++	cp -r docs/docs $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/
++	cp docs/docs.pdf $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/docs.pdf
++	#chown 0:0 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/*
++	#chmod 0644 $(DESTDIR)$(PREFIX)$(PREFIX)$(PREFIX)$(PREFIX)/share/doc/wendzelnntpd/*
+ 	@echo "Upgrade finished. Thank you for upgrading and using this software. Have fun!"
  
- upgrade : bin/wendzelnntpd bin/wendzelnntpadm
+ exec : bin/wendzelnntpd

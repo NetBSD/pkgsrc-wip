@@ -2,12 +2,12 @@
 
 #DISTNAME=		v2.1.3
 #PKGNAME=		wendzelnntpd-${DISTNAME:S/v//}
-DISTNAME=		wendzelnntpd-2.1.4git
+DISTNAME=		wendzelnntpd-2.2.0git
 CATEGORIES=		news
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wendzelnntpd/}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cdpxe/}
 #GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-GITHUB_TAG=		02817771a801e8704171799c92a9ff66efeaacb6
+GITHUB_TAG=		73d8e69871ff09444b6cf5aa089df5ce06112758
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		https://sourceforge.net/projects/wendzelnntpd
@@ -39,7 +39,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/news/wendzelnntpd \
 CONF_FILES_PERMS=	${FAKECDIR}/wendzelnntpd.conf \
 			${PKG_SYSCONFDIR}/wendzelnntpd.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
-WRKSRC=			${WRKDIR}/WendzelNNTPd-02817771a801e8704171799c92a9ff66efeaacb6
+WRKSRC=			${WRKDIR}/WendzelNNTPd-73d8e69871ff09444b6cf5aa089df5ce06112758
 
 CONFIGURE_ENV+=		MYSQL=NO
 CONFIGURE_ENV+=		POSTGRES=NO
