@@ -2175,6 +2175,7 @@ SUBDIR+=	ltp-git
 SUBDIR+=	ltrace
 SUBDIR+=	ltsmin
 SUBDIR+=	lua-MessagePack
+SUBDIR+=	lua-cffi
 SUBDIR+=	lua-htmlparser
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
