@@ -7,3 +7,4 @@ SHA1 (patch-bin_named_include_named_os.h) = d14f7e2e6c45c6a6879a9b7900a9f0348975
 SHA1 (patch-bin_named_os.c) = 9496ffdb0cbc225222161f41e6fcb7d494d430cc
 SHA1 (patch-bin_named_server.c) = 7fa9617cbeb6eaa85a73422311319fdb62c18fe6
 SHA1 (patch-configure.ac) = 0cfceff37b5a1900a85e0e23b80270eb005134e6
+SHA1 (patch-lib_dns_acl.c) = 731f99ad448717aa642c6c1b2f4c0ef0b002cc07
