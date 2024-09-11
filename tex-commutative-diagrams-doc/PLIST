@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/generic/commutative-diagrams/README
+share/texmf-dist/doc/generic/commutative-diagrams/commutative-diagrams-doc.pdf
+share/texmf-dist/doc/generic/commutative-diagrams/commutative-diagrams-doc.tex
