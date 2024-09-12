@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/KmolYuan/four-bar-rs/
 COMMENT=	Simulator and synthesizing tool for four-bar linkage mechanism
 LICENSE=	gnu-agpl-v3
 
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
 .include "cargo-depends.mk"
 
 #RUST_REQ=	1.80.1
