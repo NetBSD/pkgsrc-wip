@@ -8,6 +8,9 @@ OPENSTA_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.OpenSTA+=	OpenSTA>=2.2.0
 BUILDLINK_PKGSRCDIR.OpenSTA?=	../../wip/OpenSTA
 
+BUILDLINK_FILES.or-tools+=	etc/SwigCleanup.tcl
+BUILDLINK_FILES.or-tools+=	etc/TclEncode.tcl
+
 .endif	# OPENSTA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-OpenSTA

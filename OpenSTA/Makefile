@@ -18,7 +18,7 @@ USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS+=	etc
 
-do-install:
+pre-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/etc/
 
 .include "../../wip/cudd/buildlink3.mk"
