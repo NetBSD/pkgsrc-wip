@@ -13,7 +13,7 @@ LICENSE=	boost-license
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 CXXFLAGS+=	-fpermissive
-GCC_REQD+=	10
+GCC_REQD+=	13
 
 REPLACE_SH=	tools/lemon-0.x-to-1.x.sh
 
