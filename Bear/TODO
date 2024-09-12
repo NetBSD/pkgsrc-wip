@@ -1,1 +1,14 @@
-ld: /scratch/wip/Bear/work/.buildlink/lib/libgrpc.so: undefined reference to `grpc_core::MakeDirectoryReader(absl::lts_20240722::string_view)'
+6/7 Test #6: bear::intercept_unit_test ........Subprocess aborted***Exception:   0.13 sec
+    Start 7: bear::citnames_unit_test
+7/7 Test #7: bear::citnames_unit_test .........Subprocess aborted***Exception:   0.13 sec
+
+71% tests passed, 2 tests failed out of 7
+
+Total Test time (real) =   0.28 sec
+
+The following tests FAILED:
+          6 - bear::intercept_unit_test (Subprocess aborted)
+          7 - bear::citnames_unit_test (Subprocess aborted)
+
+Reported upstream:
+https://github.com/rizsotto/Bear/issues/599
