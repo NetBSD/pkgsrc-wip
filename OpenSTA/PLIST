@@ -1,11 +1,9 @@
 @comment $NetBSD$
 bin/sta
-etc/SwigCleanup.tcl
 etc/TclEncode.tcl
 include/sta/ArcDelayCalc.hh
 include/sta/ArrayTable.hh
 include/sta/Bfs.hh
-include/sta/ClkInfo.hh
 include/sta/ClkNetwork.hh
 include/sta/Clock.hh
 include/sta/ClockGatingCheck.hh
@@ -26,7 +24,6 @@ include/sta/DelayNormal1.hh
 include/sta/DelayNormal2.hh
 include/sta/DeratingFactors.hh
 include/sta/DisabledPorts.hh
-include/sta/DisallowCopyAssign.hh
 include/sta/DispatchQueue.hh
 include/sta/EnumNameMap.hh
 include/sta/EquivCells.hh
@@ -39,8 +36,6 @@ include/sta/GraphClass.hh
 include/sta/GraphCmp.hh
 include/sta/GraphDelayCalc.hh
 include/sta/Hash.hh
-include/sta/HashMap.hh
-include/sta/HashSet.hh
 include/sta/HpinDrvrLoad.hh
 include/sta/InputDrive.hh
 include/sta/InternalPower.hh
@@ -48,6 +43,7 @@ include/sta/Iterator.hh
 include/sta/LeakagePower.hh
 include/sta/Liberty.hh
 include/sta/LibertyClass.hh
+include/sta/LibertyWriter.hh
 include/sta/LinearModel.hh
 include/sta/Machine.hh
 include/sta/MakeConcreteNetwork.hh
