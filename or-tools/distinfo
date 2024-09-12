@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (or-tools-99bugfix.tar.gz) = cdd7fd781cc27856c9ff106181dad15f4e9a4f0c1383c568395aca114ca6de4a
-SHA512 (or-tools-99bugfix.tar.gz) = e3c3e9c8cd37b905a8ca7187e0a55f089e7c1bd6179d3b8c0ae7874854a4f921520f2fd6f2a47c32c760e4345224060670bf6df48806d4f81342d8fb46968109
-Size (or-tools-99bugfix.tar.gz) = 20589966 bytes
+BLAKE2s (or-tools-99bugfix.tar.gz) = a0d22eca7e6e67a4c159c5e4d0d1250c97f12b385961ce83701d88978a2707e3
+SHA512 (or-tools-99bugfix.tar.gz) = 086a4695d9a0a5ac051b708d8efc4174acb890399825ba5a0c10efcfb581ba134172a7a9fa01b736dfa32eada8994ff8d4f390df6dc7d7177463a13b7d96d1c9
+Size (or-tools-99bugfix.tar.gz) = 20612873 bytes
 SHA1 (patch-ortools_base_sysinfo.cc) = 23f71598bbe25244c372fe4e4221766bdd830049
 SHA1 (patch-ortools_util_fp__utils.h) = ba51678c4e042d99d08e837ad5879ccfad636d70
 SHA1 (patch-ortools_util_zvector.h) = fbea1e1b3f71a68af01d4269f00c94657956eb67

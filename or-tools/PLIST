@@ -127,6 +127,7 @@ include/ortools/algorithms/radix_sort.h
 include/ortools/algorithms/set_cover.pb.h
 include/ortools/algorithms/set_cover_heuristics.h
 include/ortools/algorithms/set_cover_invariant.h
+include/ortools/algorithms/set_cover_lagrangian.h
 include/ortools/algorithms/set_cover_mip.h
 include/ortools/algorithms/set_cover_model.h
 include/ortools/algorithms/set_cover_reader.h
@@ -538,6 +539,7 @@ include/ortools/routing/parsers/tsptw_parser.h
 include/ortools/sat/2d_orthogonal_packing.h
 include/ortools/sat/2d_orthogonal_packing_testing.h
 include/ortools/sat/2d_packing_brute_force.h
+include/ortools/sat/2d_rectangle_presolve.h
 include/ortools/sat/all_different.h
 include/ortools/sat/boolean_problem.h
 include/ortools/sat/boolean_problem.pb.h
