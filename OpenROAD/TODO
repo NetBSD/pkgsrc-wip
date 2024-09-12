@@ -1,4 +1,3 @@
-This is a work in progress. A number of dependencies are missing and need to be
-built.
+cmake-pkgsrc-build/third-party/abc/CMakeFiles/abc.dir: requires removing -ldl
 
-See UNRESOLVED_LIB_DEPS in Makefile
+The build goes through to 75% going by cmake. There are compilation errors of kind "OpenROAD marked 'override', but does not override" for some OpenSTA headers. Work in progress on this.
