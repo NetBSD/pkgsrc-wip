@@ -16,10 +16,13 @@ GCC_REQD+=	10
 
 USE_LANGUAGES=	c++
 
+USE_TOOLS+= chmod cp
+
 INSTALLATION_DIRS+=	etc
 
-pre-install:
-	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/etc/
+post-install:
+	${CP} -r ${WRKSRC}/etc/ ${DESTDIR}${PREFIX}
+	${CHMOD} +x ${DESTDIR}${PREFIX}/etc/TclEncode.tcl
 
 .include "../../wip/cudd/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
