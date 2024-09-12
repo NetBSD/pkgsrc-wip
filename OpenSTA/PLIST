@@ -1,5 +1,7 @@
 @comment $NetBSD$
 bin/sta
+etc/SwigCleanup.tcl
+etc/TclEncode.tcl
 include/sta/ArcDelayCalc.hh
 include/sta/ArrayTable.hh
 include/sta/Bfs.hh

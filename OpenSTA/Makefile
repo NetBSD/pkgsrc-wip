@@ -16,6 +16,11 @@ GCC_REQD+=	10
 
 USE_LANGUAGES=	c++
 
+INSTALLATION_DIRS+=	etc
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/etc/
+
 .include "../../wip/cudd/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
