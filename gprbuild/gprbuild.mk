@@ -39,7 +39,7 @@ GPRBUILD_ENV?=		${MAKE_ENV}
 GPRINSTALL_ENV?=	${INSTALL_ENV}
 GPRINSTALL_ENV+=	${GPRBUILD_ENV}
 
-GPRBUILD_ARGS?=		-j0 -p
+GPRBUILD_ARGS?=		-j0 -p ${GPRBUILD_OPTIONS}
 GPRINSTALL_ARGS?=	--mode=usage -p --prefix=${DESTDIR}${PREFIX}
 
 GPRBUILD_TOOL=		gprbuild
@@ -69,5 +69,3 @@ gprbuild-install:
 		${GPRINSTALL_TOOL} ${GPRINSTALL_ARGS} ${GPRBUILD_PROJECT_FILE}; \
 	done
 .endif
-
-#.endif

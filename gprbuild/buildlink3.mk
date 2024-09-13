@@ -20,11 +20,21 @@ BUILDLINK_FILES.gprbuild+=	share/gprconfig/*
 BUILDLINK_CONTENTS_FILTER.gprbuild=	\
 	${EGREP} '(bin/gpr.*|libexec/gprbuild/gpr.*|share/gpr/.*\.gpr$$|share/gpr/manifests/.*|share/gprconfig/.*)'
 
+TARGET_LIBDIR.gprbuild=	${PREFIX}/lib
+
 # Buildlinked libraries search path
 GPR_PROJECT_PATH?=	${BUILDLINK_DIR}/share/gpr
+MAKE_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+INSTALL_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
 
-MAKE_ENV+=	GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
-INSTALL_ENV+=	GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+.if defined(LD_RUN_PATH)
+LD_RUN_PATH:=	${TARGET_LIBDIR.gprbuild}:${LD_RUN_PATH}
+.else
+LD_RUN_PATH:=	${TARGET_LIBDIR.gprbuild}
+.endif
+
+GPRBUILD_OPTIONS+=	-R -largs -Wl,-z,origin,-rpath,'$$$$ORIGIN':${LD_RUN_PATH} -gargs
+BUILD_MAKE_FLAGS+=	GPRBUILD_OPTIONS=${GPRBUILD_OPTIONS:Q}
 
 .endif
 
