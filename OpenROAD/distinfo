@@ -1,12 +1,5 @@
 $NetBSD$
 
-BLAKE2s (OpenROAD-24Q3.tar.gz) = 22738849bd1a6018cd931c2459c14151a543ea99c40bd47c7bbb4490e3276f57
-SHA512 (OpenROAD-24Q3.tar.gz) = 63528cf446cf13e3f8df8e73818de1ce9d7b7f49a09ed7ec61fa15ede44e67e51a3d5768371b5dc41c7aab6b8731a17bff5bbb25da1c16bc5b5f8a2bb17ba0cc
-Size (OpenROAD-24Q3.tar.gz) = 282687009 bytes
-BLAKE2s (The-OpenROAD-Project-OpenSTA-v2.2.0.tar.gz) = b615d5a1d3294c0d73436b6e663597f8b959f7d02bdb29fc145644e7ead5b510
-SHA512 (The-OpenROAD-Project-OpenSTA-v2.2.0.tar.gz) = 130e1933f0a62e74ec64cee0b0aeb7fea4283e9c067b060752e7d27cca11095b0114923979197a5cdaafe98b5d6cc2d03a7a710b14f18ae0a0d79eb7d55eafdb
-Size (The-OpenROAD-Project-OpenSTA-v2.2.0.tar.gz) = 4873166 bytes
-BLAKE2s (The-OpenROAD-Project-abc-ef5389d31526003c2ebd7e6d6d6fe3848a20f0a2.tar.gz) = 43310fc362499837c45f47dac76be48c64c7679dc548a404b9d96336c6feb968
-SHA512 (The-OpenROAD-Project-abc-ef5389d31526003c2ebd7e6d6d6fe3848a20f0a2.tar.gz) = ce4129ab1bb965cd0d48491b5cf9ad9f47e1dffa6fcccab4e3d7d8ce76f5fe924d3cc432a0ce50f3fe36f0a2d6e777c555449ae6ba64bae179bcb7e1d4c6b589
-Size (The-OpenROAD-Project-abc-ef5389d31526003c2ebd7e6d6d6fe3848a20f0a2.tar.gz) = 6207247 bytes
-SHA1 (patch-src_sta_CMakeLists.txt) = fed560f3c8f34905e82b7b7ca1905e6b378116c5
+BLAKE2s (24Q3.tar.gz) = 22738849bd1a6018cd931c2459c14151a543ea99c40bd47c7bbb4490e3276f57
+SHA512 (24Q3.tar.gz) = 63528cf446cf13e3f8df8e73818de1ce9d7b7f49a09ed7ec61fa15ede44e67e51a3d5768371b5dc41c7aab6b8731a17bff5bbb25da1c16bc5b5f8a2bb17ba0cc
+Size (24Q3.tar.gz) = 282687009 bytes

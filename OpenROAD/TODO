@@ -1,3 +1,14 @@
-cmake-pkgsrc-build/third-party/abc/CMakeFiles/abc.dir: requires removing -ldl
+cmake progress reaches 100% after which the following error occurs:
 
-The build goes through to 75% going by cmake. There are compilation errors of kind "OpenROAD marked 'override', but does not override" for some OpenSTA headers. Work in progress on this.
+In file included from /usr/pkg/include/boost/stacktrace/safe_dump_to.hpp:221,
+                 from /usr/pkg/include/boost/stacktrace/frame.hpp:18,
+                 from /usr/pkg/include/boost/stacktrace.hpp:15,
+                 from /usr/pkgsrc/work/wip/OpenROAD/work/OpenROAD-24Q3/src/Main.cc:40:
+/usr/pkg/include/boost/stacktrace/detail/collect_unwind.ipp:33:2: error: #error "Boost.Stacktrace requires `_Unwind_Backtrace` function. Define `_GNU_SOURCE` macro or `BOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED` if _Unwind_Backtrace is available without `_GNU_SOURCE`."
+   33 | #error "Boost.Stacktrace requires `_Unwind_Backtrace` function. Define `_GNU_SOURCE` macro or `BOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED` if _Unwind_Backtrace is available without `_GNU_SOURCE`."
+      |  ^~~~~
+gmake[2]: *** [src/CMakeFiles/openroad.dir/build.make:132: src/CMakeFiles/openroad.dir/Main.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:1770: src/CMakeFiles/openroad.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+*** Error code 2
+
