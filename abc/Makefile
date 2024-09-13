@@ -17,10 +17,14 @@ WRKSRC=		${WRKDIR}/abc-ef5389d31526003c2ebd7e6d6d6fe3848a20f0a2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin lib
+
+BUILDDIR=	${WRKSRC}/${CMAKE_BUILD_DIR}
 
 do-install:
-	cd ${WRKSRC}/cmake-pkgsrc-build && ${GMAKE} all && ${INSTALL} abc ${DESTDIR}${PREFIX}/bin
+	${MKDIR} -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/lib
+	${INSTALL} ${BUILDDIR}/abc ${DESTDIR}${PREFIX}/bin
+	${INSTALL} ${BUILDDIR}/libabc.a ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
