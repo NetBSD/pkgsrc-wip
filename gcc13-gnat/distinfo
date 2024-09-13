@@ -4,7 +4,6 @@ BLAKE2s (gcc-13.3.0.tar.xz) = d204b8987b4780b569f28226cbfff34ae27124e529857c36ff
 SHA512 (gcc-13.3.0.tar.xz) = ed5f2f4c6ed2c796fcf2c93707159e9dbd3ddb1ba063d549804dd68cdabbb6d550985ae1c8465ae9a336cfe29274a6eb0f42e21924360574ebd8e5d5c7c9a801
 Size (gcc-13.3.0.tar.xz) = 87909952 bytes
 SHA1 (patch-fixincludes_inclhack.def) = 9ed633ac175b2180f79e10c96dccd39999bfa348
-SHA1 (patch-gcc_Makefile.in) = 38608a96d5c7ad1bbd1306ebbbd225801cd5fc85
 SHA1 (patch-gcc_ada_Makefile.rtl) = ab068e2580ac1c93c8f27e13aa7331c486080ed0
 SHA1 (patch-gcc_ada_adaint.c) = 67cd2ba303924daaaa2896a73f299f257ebd2101
 SHA1 (patch-gcc_ada_adaint.h) = 0956155bac85df664a8761fd03aec3e12fff89a2
