@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_configure,v 1.1 2024/03/08 12:02:34 wiz Exp $
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90143
+
+--- gcc/configure.orig	2024-05-07 09:52:51.000000000 +0300
++++ gcc/configure
+@@ -33640,7 +33640,7 @@
+       gcc_cv_target_dl_iterate_phdr=no
+     fi
+     ;;
+-  *-*-dragonfly* | *-*-freebsd*)
++  *-*-dragonfly* | *-*-freebsd* | *-*-netbsd*)
+     if grep dl_iterate_phdr $target_header_dir/sys/link_elf.h > /dev/null 2>&1; then
+       gcc_cv_target_dl_iterate_phdr=yes
+     else

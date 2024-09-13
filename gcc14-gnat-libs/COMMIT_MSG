@@ -1,0 +1,3 @@
+lang/gcc14-gnat-libs: Add new package 14.2.0nb1
+
+* GNAT 14.2 support libraries - initial package release
