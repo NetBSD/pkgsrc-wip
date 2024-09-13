@@ -1,8 +1,0 @@
-Following comments from Thomas need to be acted on:
-
-This is not according to pkgsrc standards:
-- use ${INSTALL_SCRIPT} instead of the cp and chmod
-- executable scripts should not be in etc but in bin or sbin or libexec
-- if it really is intended as a modifyable and executable script, it
-  should be installed in ${PREFIX}/share/examples/OpenSTA/ and copied
-  into ${PKGSYSCONFDIR} with the CONF_FILES mechanics.

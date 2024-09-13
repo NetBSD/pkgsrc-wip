@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (OpenSTA-2.5.0-2dcf169d9fe8a03aac659f9a214dd6dad6cefecf.tar.gz) = 09d22dd938de4086ec8a16d555979304a5732f51f5ee6dc4d18c89108f599fd1
-SHA512 (OpenSTA-2.5.0-2dcf169d9fe8a03aac659f9a214dd6dad6cefecf.tar.gz) = de1bf7ec6a561698ccbb078bc24f222209cfcdcda2dde82b8c048b48eea9290635dfbec35de897ec3ea25ba4f45c202ed9f60b8a0810621d34c06bb35e2a31c0
-Size (OpenSTA-2.5.0-2dcf169d9fe8a03aac659f9a214dd6dad6cefecf.tar.gz) = 7510689 bytes
+BLAKE2s (OpenSTA-20925bb-20925bb.tar.gz) = a717c47991b17212597195bf1fa55664461d3b703dc1bb1bc25d344b5ea797c7
+SHA512 (OpenSTA-20925bb-20925bb.tar.gz) = 7e6fac1b09f6c7e982ad7967bd7060771eaf33a143f9e7a0ef4ac5ddd47123bed541dc01402ba49a41165b80de66ae7475f8537bc77bbd4e4b31d6cb474a467e
+Size (OpenSTA-20925bb-20925bb.tar.gz) = 13372212 bytes

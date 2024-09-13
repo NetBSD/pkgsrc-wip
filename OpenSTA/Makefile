@@ -1,7 +1,7 @@
 # $NetBSD$
 
-GITHUB_TAG=	2dcf169d9fe8a03aac659f9a214dd6dad6cefecf
-DISTNAME=	OpenSTA-2.5.0
+GITHUB_TAG=	20925bb
+DISTNAME=	OpenSTA-20925bb
 CATEGORIES=	cad devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=The-OpenROAD-Project/}
 
@@ -10,21 +10,27 @@ HOMEPAGE=	https://github.com/The-OpenROAD-Project/OpenSTA/
 COMMENT=	Gate level static timing verifier
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=	${WRKDIR}/OpenSTA-${GITHUB_TAG}
+WRKSRC=	${WRKDIR}/OpenSTA-20925bb00965c1199c45aca0318c2baeb4042c5a
 
 GCC_REQD+=	13
 FORCE_CXX_STD=	c++20
 
 USE_LANGUAGES=	c++
+USE_TOOLS+=	chmod cp bison find pax
 
-USE_TOOLS+= chmod cp bison
-
-INSTALLATION_DIRS+=	etc
+INSTALLDIRS=	etc tcl spice dcalc liberty parasitics power sdf graph network sdf search util sdc
+SHAREDIR=	${DESTDIR}${PREFIX}/share/sta
+INCLUDEDIR=	${DESTDIR}${PREFIX}/include/sta
 
 post-install:
-	${CP} -r ${WRKSRC}/etc/ ${DESTDIR}${PREFIX}
-	${CHMOD} +x ${DESTDIR}${PREFIX}/etc/TclEncode.tcl
+.for idir in ${INSTALLDIRS}
+	cd ${WRKSRC} && ${FIND} ${idir} -name \*.hh -exec ${PAX} -rw {} ${INCLUDEDIR} \;
+	cd ${WRKSRC} && ${FIND} ${idir} -name \*.tcl -exec ${PAX} -rw {} ${SHAREDIR} \;
+	cd ${WRKSRC} && ${FIND} ${idir} -name \*.i -exec ${PAX} -rw {} ${SHAREDIR} \;
+.endfor
 
+
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../devel/swig3/buildlink3.mk"
 .include "../../wip/cudd/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
