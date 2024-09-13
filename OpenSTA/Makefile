@@ -17,7 +17,7 @@ FORCE_CXX_STD=	c++20
 
 USE_LANGUAGES=	c++
 
-USE_TOOLS+= chmod cp
+USE_TOOLS+= chmod cp bison
 
 INSTALLATION_DIRS+=	etc
 
@@ -25,6 +25,7 @@ post-install:
 	${CP} -r ${WRKSRC}/etc/ ${DESTDIR}${PREFIX}
 	${CHMOD} +x ${DESTDIR}${PREFIX}/etc/TclEncode.tcl
 
+.include "../../devel/swig3/buildlink3.mk"
 .include "../../wip/cudd/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
