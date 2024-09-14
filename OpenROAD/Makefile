@@ -30,9 +30,11 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_ABC=ON
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOPENSTA_HOME=${PREFIX}/share/sta
 
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+
 TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
-LDFLAGS+=	-lcudd
+LDFLAGS+=	-lcudd -labc
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

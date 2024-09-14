@@ -1,1 +1,3 @@
-Open issue: -ldl to be avoided on BSD
+Linker warning: could not get libboost to link with .7 by forcing the compiler version to be same as OpenROAD
+
+/usr/bin/ld: warning: libstdc++.so.9, needed by /usr/pkgsrc/work/wip/OpenROAD/work/.buildlink/lib/libboost_serialization.so, may conflict with libstdc++.so.7
