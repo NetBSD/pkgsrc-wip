@@ -1206,3 +1206,4 @@ Size (zerocopy-derive-0.7.35.crate) = 37829 bytes
 BLAKE2s (zeroize-1.8.1.crate) = 5a10298ca4d45f2d0a2cefc2ee481fc2341b0355e78a4b0940c31f776e5b2d38
 SHA512 (zeroize-1.8.1.crate) = dd40ebe98b98fd742608d4066b5ab66caba94b2e679428fcaff9fe547d8cd6ff2360dc85d671ee9183e32fb79cb554d00d6aef9eb8f3d8ad0ec92d0435aa4ebe
 Size (zeroize-1.8.1.crate) = 20029 bytes
+SHA1 (patch-.._vendor_libc-0.2.158_src_unix_bsd_netbsdlike_netbsd_mod.rs) = f8c3dec8130ca28ca863bbdc4cf19086dfbf02d5

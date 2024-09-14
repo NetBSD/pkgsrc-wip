@@ -1,0 +1,30 @@
+   Compiling sysctl v0.5.5
+error[E0433]: failed to resolve: maybe a missing crate `sys`?
+  --> /usr/pkgsrc/wip/aichat/work/vendor/sysctl-0.5.5/src/lib.rs:77:9
+   |
+77 | pub use sys::ctl::*;
+   |         ^^^ maybe a missing crate `sys`?
+   |
+   = help: consider adding `extern crate sys` to use the `sys` crate
+
+error[E0433]: failed to resolve: maybe a missing crate `sys`?
+  --> /usr/pkgsrc/wip/aichat/work/vendor/sysctl-0.5.5/src/lib.rs:78:9
+   |
+78 | pub use sys::ctl_iter::*;
+   |         ^^^ maybe a missing crate `sys`?
+   |
+   = help: consider adding `extern crate sys` to use the `sys` crate
+
+error[E0432]: unresolved imports `sys::ctl::*`, `sys::ctl_iter::*`
+  --> /usr/pkgsrc/wip/aichat/work/vendor/sysctl-0.5.5/src/lib.rs:77:9
+   |
+77 | pub use sys::ctl::*;
+   |         ^^^^^^^^^^^
+78 | pub use sys::ctl_iter::*;
+   |         ^^^^^^^^^^^^^^^^
+
+Some errors have detailed explanations: E0432, E0433.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `sysctl` (lib) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+*** Error code 101
