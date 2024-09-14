@@ -4885,6 +4885,7 @@ SUBDIR+=	qiew
 SUBDIR+=	qimgv
 SUBDIR+=	qira
 SUBDIR+=	qlcplus
+SUBDIR+=	qlipper
 SUBDIR+=	qmc2
 SUBDIR+=	qmediamanager
 SUBDIR+=	qn-x11

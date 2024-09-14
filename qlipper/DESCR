@@ -1,0 +1,9 @@
+Lightweight and cross-platform clipboard history applet.
+
+This application is a part of QtDesktop project so you can download prebuilt
+binary packages from its repository.
+
+It's improved version of original Qlipper which is available only as a download
+from qt-apps.org.
+
+This SW can be used on Linux, BSD, MS Windows, and Mac OS X.
