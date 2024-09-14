@@ -17,12 +17,12 @@ WRKSRC=		${WRKDIR}/abc-ef5389d31526003c2ebd7e6d6d6fe3848a20f0a2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax find
 
+CMAKE_CONFIGURE_ARGS+=	-DABC_USE_NAMESPACE=abc
+
 INSTALLATION_DIRS+=	bin lib include
 
 BUILDDIR=	${WRKSRC}/${CMAKE_BUILD_DIR}
 INCLUDEDIR=	${DESTDIR}${PREFIX}/include/abc
-
-# TODO: We need a subdir for abc under prefix
 
 do-install:
 .for idir in ${INSTALLATION_DIRS}
