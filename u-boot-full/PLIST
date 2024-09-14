@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/u-boot-dumpimage
-bin/u-boot-fdtgrep
-bin/u-boot-mkenvimage
-bin/u-boot-mkimage
-bin/u-boot-netconsole

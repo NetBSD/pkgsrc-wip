@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/03 15:04:54 tnn2 Exp $
-lib/httpd/mod_macro.so
-share/doc/${PKGNAME_NOREV}/CHANGES
-share/doc/${PKGNAME_NOREV}/INSTALL
-share/doc/${PKGNAME_NOREV}/LICENSE
-share/doc/${PKGNAME_NOREV}/README
-share/doc/${PKGNAME_NOREV}/mod_macro.html

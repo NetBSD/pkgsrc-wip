@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
-share/VisionEgg-${PYVERSSUFFIX}/labview/Edit Grating C.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Grating C to A.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Grating C to python.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Grating Control.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Waveclip C to A.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Waveclip C to python.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Waveclip CA to A.vi
-share/VisionEgg-${PYVERSSUFFIX}/labview/Waveclip CA to python.vi

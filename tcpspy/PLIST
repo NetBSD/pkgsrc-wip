@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/06 15:47:19 poppnk Exp $
-man/man8/tcpspy.8
-sbin/tcpspy

@@ -1,7 +1,0 @@
-checking whether CGAL is available in /usr... no
-checking whether CGAL is available in /usr/local... no
-checking whether CGAL is available in /opt... no
-checking whether CGAL is available in /opt/local... no
-configure: error: CGAL library not found.
-*** Error code 1
-

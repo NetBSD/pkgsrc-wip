@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/12 01:35:10 bsadewitz Exp $
-
-RMD160 (ratproxy-1.51.tar.gz) = 7f8c70ad9d51a54e697606216e6a1c74faf60d4f
-Size (ratproxy-1.51.tar.gz) = 168409 bytes
-SHA1 (patch-aa) = f6e3215ad3b4a2d5e59ba348ba534c90d8256b95
-SHA1 (patch-ab) = 371f5778ff3d51f265a8e322caf812f86439623d
-SHA1 (patch-ac) = 8763bed5e16984be7eba873cfd025e66b2383ee7

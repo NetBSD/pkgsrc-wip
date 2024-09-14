@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (bk-7.3.3.src.tar.gz) = eba72e926b0e6188c1c398ecd7abcd29925ab356
-SHA512 (bk-7.3.3.src.tar.gz) = 84f233f43ad8f09674e296f074ae800c3019880b3a591c56c77d9869d9062711904afb04cfd605695e6bb660afd0906004360067695b1dee54601b85d2d563fe
-Size (bk-7.3.3.src.tar.gz) = 20273074 bytes
-SHA1 (patch-Ldoc-install) = f7d8f10d501240f08f7a27d058a700ce5b09a6d6
-SHA1 (patch-src_gui_tcltk_tcl_unix_Makefile.in) = 4811d75e4b37a8be0c2389c6d8265ce7ecae536c
-SHA1 (patch-src_gui_tcltk_tktable_configure) = a77542f18d9065a5c5d1b1130fb5bbe09e1feae3

@@ -1,4 +1,0 @@
-@comment $NetBSD$
-lib/libSDL2_image_compact.so.0.0
-lib/libatomstb.so.0.0
-lib/libfmod_SDL.so.0.0

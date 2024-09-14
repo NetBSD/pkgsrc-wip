@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/13 19:58:10 krytarowski Exp $
-bin/fairymax
-bin/maxqi
-bin/shamax
-man/man6/fairymax.6
-share/games/fairymax/fmax.ini
-share/games/fairymax/qmax.ini

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/02/19 22:41:05 khorben Exp $
-
-RMD160 (suse121/libgpg-error0-1.10-2.1.2.x86_64.rpm) = 0b3c5c9491cc2d7bf686f8968d2a836f79892841
-Size (suse121/libgpg-error0-1.10-2.1.2.x86_64.rpm) = 38704 bytes
-RMD160 (suse121/libgpg-error0-1.10-2.1.2.i586.rpm) = f69bba7c8311b3aca65aaed1a67110de743933b9
-Size (suse121/libgpg-error0-1.10-2.1.2.i586.rpm) = 38520 bytes

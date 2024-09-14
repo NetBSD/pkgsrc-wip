@@ -1,3 +1,0 @@
-This package supplies the shared library files needed to run dynamically
-linked executables  using 'native' X11, compiled under NetBSD 7.0 on a
-later NetBSD.

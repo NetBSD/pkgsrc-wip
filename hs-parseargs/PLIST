@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/06 12:06:44 szptvlfn Exp $
-bin/parseargs-example
-lib/parseargs-${PKGVERSION}/${HASKELL_VERSION}/HSparseargs-${PKGVERSION}.o
-lib/parseargs-${PKGVERSION}/${HASKELL_VERSION}/System/Console/ParseArgs.hi
-lib/parseargs-${PKGVERSION}/${HASKELL_VERSION}/System/Console/ParseArgs.p_hi
-lib/parseargs-${PKGVERSION}/${HASKELL_VERSION}/libHSparseargs-${PKGVERSION}.a
-lib/parseargs-${PKGVERSION}/${HASKELL_VERSION}/libHSparseargs-${PKGVERSION}_p.a
-lib/parseargs-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/parseargs-${PKGVERSION}/COPYING

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/22 09:27:03 jihbed Exp $
-include/kstest/kstest.hh
-lib/libkstest.la
-lib/pkgconfig/kstest.pc

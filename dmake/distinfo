@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (schily-2021-09-18.tar.bz2) = 9ad475b67122f487844162ea2e6e3659ea25579f
-SHA512 (schily-2021-09-18.tar.bz2) = d25765074ac39ca2db63cb9841288dd4457f55588e0389a58ad78da62f745a766b4608d3d137a1908e2ca60511784d5f0af67bab1d1612478dbf120188ed5f31
-Size (schily-2021-09-18.tar.bz2) = 4952788 bytes
-SHA1 (patch-sunpro_Make_bin_make_common_Makefile.def) = 83f2f7ef8d8aa6fc61566fe8a0301e0038a16c88
-SHA1 (patch-sunpro_Make_bin_make_common_read.cc) = 771ba8f63a353f92418cea34f5d8d6c22fbd1416

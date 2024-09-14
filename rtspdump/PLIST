@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/16 14:18:33 thomasklausner Exp $
-bin/rtspdump
-share/rtspdump/bit_io.php
-share/rtspdump/globals.php
-share/rtspdump/mm_io.php
-share/rtspdump/rtp_io.php
-share/rtspdump/rtsp_io.php
-share/rtspdump/rtspdump-lite.php
-share/rtspdump/rtspdump.php

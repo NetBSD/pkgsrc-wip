@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2009/08/29 15:49:06 thomasklausner Exp $
-
-RMD160 (xf86-video-geode-2.11.4.tar.bz2) = 3af7c891a70537fe7f90b9993f3058a4f2adf7ec
-Size (xf86-video-geode-2.11.4.tar.bz2) = 593033 bytes
-SHA1 (patch-aa) = 76733a1758598bdc3add20282c54e4264eeb5c88
-SHA1 (patch-ab) = 14f605e5f24c7536ebfb4b6448c204f3ee6e3027

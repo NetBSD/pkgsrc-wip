@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (v0.5.tar.bz2) = 5751a76399f4d73ab97c12a218928b0c4e61d4ed
-SHA512 (v0.5.tar.bz2) = 143916f2064d18d4101c102556bfc9047572788d591c4f42de771c928f4ca7b0e63dc8b7c5239635c82bfa4e4a68e5c1f5a3d3288e3ba8ba87e0c7fab6663c28
-Size (v0.5.tar.bz2) = 1804080 bytes
-SHA1 (patch-profiler_build_unix_build.mk) = 26f5f6e9ec7ebc1c24fc427531484d593b116bef

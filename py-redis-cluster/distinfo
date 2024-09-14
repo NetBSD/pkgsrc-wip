@@ -1,5 +1,0 @@
-$NetBSD$
-
-RMD160 (redis-py-cluster-1.3.4.tar.gz) = 987d13c2bea329a463e4aa394f933aa5d1b8d0df
-SHA512 (redis-py-cluster-1.3.4.tar.gz) = 4119780da7c7633b30d3ea525de82ca44629470b37eb1cc9f7b000d0cf237cfd0265cd2de0c093f064a350172b82334bea12687c49737d11be46d4c670a3e873
-Size (redis-py-cluster-1.3.4.tar.gz) = 32842 bytes

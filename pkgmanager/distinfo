@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2006/06/11 14:24:54 scode Exp $
-
-RMD160 (pkgmanager-0.8.1.tar.gz) = 73b7d9ed5830d7195f8510832d6c392d6d16eae0
-Size (pkgmanager-0.8.1.tar.gz) = 19846 bytes
-RMD160 (clocc-06-24-05.tgz) = b00b1630d64b2b942d8eeb885bb2e2b4ce0e3051
-Size (clocc-06-24-05.tgz) = 4516087 bytes
-RMD160 (cl-ppcre-1.2.10.tar.gz) = 383427510aedc283a51dac2b26937dab7477eb13
-Size (cl-ppcre-1.2.10.tar.gz) = 166264 bytes

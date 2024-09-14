@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
-include/panda/constants.h
-include/panda/functions.h
-include/panda/legacy.h
-include/panda/objects.h
-lib/libpanda.la
-lib/pkgconfig/panda.pc

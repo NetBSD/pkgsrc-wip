@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (bicon-0.5.zip) = 24577d144a89c636ee0b0acafc4eda7645f941e0
-SHA512 (bicon-0.5.zip) = 5be15916a40a67b02639307744e58c43e07389cab18d7b6a93dbc4c6bfb9b206057472db2ff755b75f0007b0053fc0d4768618dd3db9be6d537c8a79407b4c6c
-Size (bicon-0.5.zip) = 144220 bytes
-SHA1 (patch-bicon_pty__spawn.c) = 59e93fc48ef7dde69729812b75d722dcc2d8544a
-SHA1 (patch-font_Makefile.am) = dcab4f6354e6a57a393fd3e2839e9e4915710ab2
-SHA1 (patch-font_fonts.mk) = 2365873124c3b871233983394a40a306478ab262

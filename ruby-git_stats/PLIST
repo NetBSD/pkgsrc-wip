@@ -1,6 +1,0 @@
-@comment $NetBSD$
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.3.0/gems/git_stats-${PKGVERSION}
-@pkgdir lib/ruby/gems/2.3.0/extensions
-@pkgdir lib/ruby/gems/2.3.0/build_info

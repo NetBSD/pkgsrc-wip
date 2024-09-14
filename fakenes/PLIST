@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:35 thomasklausner Exp $
-bin/fakenes
-share/doc/fakenes/LICENSE
-share/doc/fakenes/README

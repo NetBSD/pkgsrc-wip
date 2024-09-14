@@ -1,3 +1,0 @@
-- Not all Pike modules are packaged (see pike-* packages)
-- To fix: executable flag on .h and other non-executable files
-- Unstable PLIST

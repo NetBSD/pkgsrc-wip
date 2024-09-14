@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/10 11:33:05 ahp-nils Exp $
-bin/asql
-bin/make-cmds
-share/doc/asql/README

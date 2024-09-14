@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
-bin/bmap
-bin/slacker
-man/man2/libbmap.2
-share/doc/bmap/bmap-invoke.sgml
-share/doc/bmap/bmap.sgml
-share/doc/bmap/slacker-invoke.sgml

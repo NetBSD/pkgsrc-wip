@@ -1,6 +1,0 @@
-The GenomeTools genome analysis system is a free collection of
-bioinformatics tools (in the realm of genome informatics) combined
-into a single binary named `gt`. It is based on a C library named
-`libgenometools` which contains a wide variety of classes for
-efficient and convenient implementation of sequence and annotation
-processing software.

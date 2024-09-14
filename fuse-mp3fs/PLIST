@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/26 22:29:32 thomasklausner Exp $
-bin/mp3fs
-man/man1/mp3fs.1
-share/doc/fuse-mp3fs/README.md

@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/apng2flif
-bin/flif
-bin/gif2flif
-lib/libflif.so
-lib/libflif.so.0
-man/man1/flif.1

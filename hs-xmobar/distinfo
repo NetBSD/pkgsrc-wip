@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2014/03/14 12:55:59 szptvlfn Exp $
-
-RMD160 (xmobar-0.20.1.tar.gz) = e0241f59bc0fdf37859ac958aed67b8f9aba7b39
-Size (xmobar-0.20.1.tar.gz) = 83871 bytes
-SHA1 (patch-src_StatFS.hsc) = 480049c3de9182f015373ac0b55606b47052df57

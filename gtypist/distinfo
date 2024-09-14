@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/04/19 10:45:49 leot1990 Exp $
-
-RMD160 (gtypist-2.9.5.tar.gz) = 7abdcc91668e369419635c551cb32a48d4d9eb45
-SHA512 (gtypist-2.9.5.tar.gz) = ea8db72e83a41340a4435e2802134a852fb61eb00f10267733455491fc9ce3356f61887146de21ec589a77ea1169ad5b75a0eba1708566b7327f4801bd6dcb52
-Size (gtypist-2.9.5.tar.gz) = 1556716 bytes

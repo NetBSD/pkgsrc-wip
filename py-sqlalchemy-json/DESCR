@@ -1,6 +1,0 @@
-SQLAlchemy-JSON provides mutation-tracked JSON types to SQLAlchemy
-
-- MutableJson is a straightforward implementation for keeping track
-of top-level changes to JSON objects;
-- NestedMutableJson is an extension of this which tracks changes even
-when these happen in nested objects or arrays (Python dicts and lists)

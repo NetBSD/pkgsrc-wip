@@ -1,2 +1,0 @@
-- don't download maven crap in the build phase
-- fix linux specific things

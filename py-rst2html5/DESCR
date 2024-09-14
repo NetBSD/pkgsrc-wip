@@ -1,3 +1,0 @@
-Generates (X)HTML5 documents from standalone reStructuredText sources.
-It is a complete rewrite of the docutils' rst2html and uses new HTML5
-constructs such as <section> and <aside>.

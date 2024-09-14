@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/02/03 09:41:37 othyro Exp $
-
-RMD160 (libcthreads-experimental-20150101.tar.gz) = 772e2c9260542e087015c429b388fe428ef699b6
-SHA512 (libcthreads-experimental-20150101.tar.gz) = 92f264cdc30a79e8ac8d857674393d7c0436362b5427b017c5614b483369113a2692bd97e23466b951038ce5139e7905f22596375c2a0d183ec9ecc6b5477568
-Size (libcthreads-experimental-20150101.tar.gz) = 483631 bytes

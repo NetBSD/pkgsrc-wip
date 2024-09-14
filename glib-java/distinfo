@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2013/01/10 15:20:11 othyro Exp $
-
-RMD160 (glib-java-0.4.2.tar.gz) = 6d4d0e92c5d86c0c740012e602444ac6850e9116
-Size (glib-java-0.4.2.tar.gz) = 379928 bytes
-SHA1 (patch-aa) = 2484a14fd66fe2abcebc7beb00e201ff1b71d9c5
-SHA1 (patch-ab) = 717ac08b8c39fd87b769757c19d81cd476a2b608
-SHA1 (patch-src_jni_jg__jnu.c) = 86481e516dea24129803b05d528ef1943d9ba06e

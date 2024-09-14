@@ -1,3 +1,0 @@
-if [ ${STAGE} = DEINSTALL -a ${X11BASE} != ${PREFIX} ]; then
-	${RM} ${X11BASE}/lib/libtxc_dxtn.so
-fi

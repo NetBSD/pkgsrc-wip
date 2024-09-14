@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/11/03 14:38:23 rillig Exp $
-
-RMD160 (debian_linux/libc6_2.3.2.ds1-22_i386.deb) = e784e49a0d4dc43091445db8729f22d38de315fa
-Size (debian_linux/libc6_2.3.2.ds1-22_i386.deb) = 4898852 bytes
-RMD160 (debian_linux/zlib1g_1.2.3-6_i386.deb) = e37556ae173d76165ac48de34de0676c7956ef12
-Size (debian_linux/zlib1g_1.2.3-6_i386.deb) = 69562 bytes
-RMD160 (debian_linux/libstdc++5_3.3.6-7_i386.deb) = 1587944573f404bbba0ea5270affa100293c330d
-Size (debian_linux/libstdc++5_3.3.6-7_i386.deb) = 295198 bytes

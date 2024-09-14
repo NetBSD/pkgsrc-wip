@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/clipctl
-bin/clipdel
-bin/clipmenu
-bin/clipmenud
-share/doc/clipmenu/README.md

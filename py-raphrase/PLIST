@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/09 18:17:08 jihbed Exp $
-${PYSITELIB}/pyraphrase/__init__.py
-${PYSITELIB}/pyraphrase/__init__.pyc
-${PYSITELIB}/pyraphrase/__init__.pyo
-${PYSITELIB}/pyraphrase/pyraphrase.py
-${PYSITELIB}/pyraphrase/pyraphrase.pyc
-${PYSITELIB}/pyraphrase/pyraphrase.pyo

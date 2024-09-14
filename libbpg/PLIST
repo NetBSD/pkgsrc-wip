@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/02 13:13:26 thomasklausner Exp $
-bin/bpgdec
-bin/bpgenc
-bin/bpgview

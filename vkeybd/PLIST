@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:24 thomasklausner Exp $
-bin/sftovkb
-bin/vkeybd
-man/man1/vkeybd.1
-share/vkeybd/vkeybd.list
-share/vkeybd/vkeybd.tcl
-share/vkeybd/vkeybdmap
-share/vkeybd/vkeybdmap-german

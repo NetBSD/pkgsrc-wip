@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/12/09 22:47:32 krytarowski Exp $
-
-RMD160 (rpm-5.4.14-0.20131024.src.rpm) = b78030d7bded3f2277db101489c25353d604729f
-Size (rpm-5.4.14-0.20131024.src.rpm) = 13974362 bytes
-SHA1 (patch-poptconfig.c) = 34daa171b7c5b939999da7d093b46a4d2a93207b

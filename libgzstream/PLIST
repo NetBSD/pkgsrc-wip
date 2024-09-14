@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/25 18:20:52 jihbed Exp $
-lib/libgzstream.a

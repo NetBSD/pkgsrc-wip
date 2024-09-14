@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/01 22:06:44 jihbed Exp $
-${PYSITELIB}/_scs_direct.so
-${PYSITELIB}/_scs_indirect.so
-${PYSITELIB}/scs.py
-${PYSITELIB}/scs.pyc
-${PYSITELIB}/scs.pyo

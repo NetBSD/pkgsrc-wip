@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/hasciicam
-man/man1/hasciicam.1
-share/applications/hasciicam.desktop
-share/icons/hasciicam.png
-share/menu/hasciicam

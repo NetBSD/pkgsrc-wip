@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/06 19:13:17 thomasklausner Exp $
-etc/alive.conf
-info/alive.info
-man/man5/alive.conf.5
-man/man8/alive.8
-sbin/alive

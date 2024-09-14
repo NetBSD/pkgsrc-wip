@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
-lib/pidgin/pidgin-rhythmbox.la
-share/pidgin-rhythmbox/AUTHORS
-share/pidgin-rhythmbox/NEWS
-share/pidgin-rhythmbox/README

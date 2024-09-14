@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
-bin/sc_serv
-etc/shoutcast/sc_serv.conf
-share/doc/shoutcast/README.shoutcast
-share/shoutcast/content/scpromo.mp3

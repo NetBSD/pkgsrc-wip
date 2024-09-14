@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/02/14 10:58:25 jihbed Exp $
-
-RMD160 (pafy-0.5.4.tar.gz) = 5680a76704001de9e6ce6fafab4b61c5f586f3bd
-SHA512 (pafy-0.5.4.tar.gz) = 91283ae831ecf50a861e9e6565d34652138b84bbf012f8b77b9fca9fe4eee2dfe358199ba77fd705792ce16173eccbf6f1bc31b88768edef02ba57fbde118011
-Size (pafy-0.5.4.tar.gz) = 27393 bytes

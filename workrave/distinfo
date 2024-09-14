@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/10/01 22:51:22 briandealwis Exp $
-
-RMD160 (workrave-1.10.34.tar.gz) = c018ba5c682cb6a84f2c56c36736f2ab5647db24
-SHA512 (workrave-1.10.34.tar.gz) = 171801a9e88b05af92dac603014aecd20b4afd3343430ae93b33e495f4aed05d0138a93474e06ba9cd39655913dbf5f5e68f31800eba8ff050690e240170496f
-Size (workrave-1.10.34.tar.gz) = 6389736 bytes

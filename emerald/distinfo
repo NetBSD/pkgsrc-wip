@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/11/14 13:49:41 othyro Exp $
-
-RMD160 (emerald-0.8.8.tar.bz2) = a7c7a04f5ef3edb7816a693204872a1274ccab11
-Size (emerald-0.8.8.tar.bz2) = 528715 bytes
-SHA1 (patch-aa) = db3109abf229b7028406a138a25f0ae4770da796

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/17 19:25:04 xtraeme Exp $
-bin/java-frozenbubble
-${JAR_MAIN_PREFIX}/frozenbubble.jar

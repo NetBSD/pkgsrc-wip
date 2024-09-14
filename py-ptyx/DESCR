@@ -1,6 +1,0 @@
-pTyX is a LaTeX precompilator, written in Python.
-pTyX enables to generate LaTeX documents, using custom commands or plain 
-python code. One single pTyX file may generate many latex documents, with 
-different values. I developped and used pTyX to make several different 
-versions of a same test in exams,for my student, to discourage cheating.
-Since it uses sympy library, pTyX has symbolic calculus abilities too.

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/31 08:46:10 ondratu Exp $
-include/dbglog.h
-include/dbglogobject.h
-lib/libdbglog.la

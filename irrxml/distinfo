@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/11/02 23:53:23 othyro Exp $
-
-RMD160 (irrxml-1.2.zip) = edd6134c36e1c9c8cadadf0a3e6a3d7c5a38ca66
-Size (irrxml-1.2.zip) = 86462 bytes
-SHA1 (patch-src_irrXML.cpp) = 4cc14ee4036e88ba0eec379c3fe22f71fcfc70d0

@@ -1,3 +1,0 @@
-dhcpd-snmp is an extension for the Net-SNMP agent and the ISC DHCP server.
-It allows you to monitor and track the address usage
-of your dynamic IP address pools through SNMP.

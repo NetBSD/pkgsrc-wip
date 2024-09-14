@@ -1,2 +1,0 @@
-Provides a parallel backend for the %dopar% function of R-foreach
-package using the parallel library.

@@ -1,5 +1,0 @@
-pyodesys provides a straightforward way of numerically
-integrating systems of ordinary differential equations.
-It unifies the interface of several libraries. It also
-provides a convenience class for representing and
-integrating ODE systems defined by SymPy expressions

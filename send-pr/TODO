@@ -1,7 +1,0 @@
-- maybe remove send-pr from database/gnats and depend on this instead
-  (and get rid of any CONFLICTs)
-
-- send-pr uses LOGNAME to determine the originator of the PR. This is
-  geared towards client-server operation, but not suitable for sending
-  email. When you override LOGNAME in "$HOME/.send-pr.conf", you break
-  (x)emacs locking which appears to get your login from LOGNAME...

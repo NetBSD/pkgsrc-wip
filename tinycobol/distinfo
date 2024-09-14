@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/02/03 18:18:27 tnn2 Exp $
-
-RMD160 (tinycobol-0.61.tar.gz) = 4cdc6ed420cc73ef427f111c382cc76a20a54056
-Size (tinycobol-0.61.tar.gz) = 817294 bytes
-SHA1 (patch-aa) = d2ec72715f25cf82bc3c1c9041efedc30700ee49
-SHA1 (patch-ab) = d3d854fa6bcec23ce4f3ea2648fb8fed257ce455

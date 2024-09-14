@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/23 12:48:36 tqcla Exp $
-bin/admsCheck
-bin/admsXml
-lib/libadmsElement.la
-lib/libadmsPreprocessor.la
-lib/libadmsVeriloga.la

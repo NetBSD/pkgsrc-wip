@@ -1,5 +1,0 @@
-1. Check if there is a solution for this warning:
-
-/usr/pkgsrc/wip/navit/work/navit-0.5.1/navit/endianess.h:49:5: warning:
-"HAVE_BYTESWAP_H" is not defined [-Wundef]
- #if HAVE_BYTESWAP_H

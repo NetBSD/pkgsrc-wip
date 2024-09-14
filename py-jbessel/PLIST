@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/15 20:55:41 jihbed Exp $
-${PYSITELIB}/Bessel.so

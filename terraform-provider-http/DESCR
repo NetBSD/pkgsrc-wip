@@ -1,4 +1,0 @@
-The Terraform HTTP provider is a utility provider for interacting with
-generic HTTP servers as part of a Terraform configuration.
-
-This provider requires no configuration.

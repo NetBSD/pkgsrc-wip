@@ -1,6 +1,0 @@
-MDB Tools library extension (shrext_cmds=".so"?).
-Gettext-lib in a correct way.
-Test ODBC driver and try to build with iODBC as well.
-
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2021-45926, CVE-2021-45927

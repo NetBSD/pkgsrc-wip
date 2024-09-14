@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/12/09 14:26:49 othyro Exp $
-
-RMD160 (snark-0.5.tar.gz) = 4ae21d26461c87e4fef68ff97a646c0dc4e07a59
-Size (snark-0.5.tar.gz) = 58820 bytes
-SHA1 (patch-aa) = 90366280a39322c94cd270245be30b80be8a5829

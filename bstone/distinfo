@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/09/13 20:07:57 yhardy Exp $
-
-RMD160 (bstone-1.2.11.tar.gz) = 4ec648034e6f1e7e377fbce21e3c9f9e6f5851fe
-SHA512 (bstone-1.2.11.tar.gz) = 986907c268ace6dce9bd1f2f4c95a12f8c07b5b1e2abec4224db93a7aabcdbdfc35bfbe33b7817e9e41566ec92b76e83535693f3fad6976cc7e8ec0f0c468887
-Size (bstone-1.2.11.tar.gz) = 1390580 bytes
-SHA1 (patch-src_CMakeLists.txt) = f765fe134b423f1a8ef578bbad000ddadce46fe7
-SHA1 (patch-src_id__sd.cpp) = d3262f6fd8f395cdc817f43c3e5b61d0a85bcf99

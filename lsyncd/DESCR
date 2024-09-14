@@ -1,2 +1,0 @@
-Lsyncd is a light-weight directory mirror daemon that uses
-inotify and rsync.

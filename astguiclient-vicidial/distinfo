@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (astguiclient_2.13rc1.zip) = 3c681920cf0953edd5fc59ccd294921f13d50804
-SHA512 (astguiclient_2.13rc1.zip) = cccf45440a14cf0715fe131fdb36418e1004f8e16daf5d092b0f59dd7bc32bfb33463c6493a77d8d366ec475177fa65b2f23ccb388abc773edf7163a910e2e32
-Size (astguiclient_2.13rc1.zip) = 15661053 bytes
-SHA1 (patch-install.pl) = d169d203d004ef0bd21a07093f325884b495a921

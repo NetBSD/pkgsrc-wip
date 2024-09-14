@@ -1,5 +1,0 @@
-Python/numba package for evaluating and transforming Wigner's
-D matrices, Wigner's 3-j symbols, and spin-weighted (and scalar)
-spherical harmonics. These functions are evaluated directly in terms
-of quaternions, as well as in the more standard forms of spherical
-coordinates and Euler angles

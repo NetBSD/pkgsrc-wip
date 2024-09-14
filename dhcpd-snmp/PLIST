@@ -1,8 +1,0 @@
-@comment $NetBSD$
-man/man8/dhcpd-snmp.8
-sbin/dhcpd-snmp
-share/examples/dhcpd-snmp/cacti/README.txt
-share/examples/dhcpd-snmp/cacti/snmp_queries/dhcp_snmp_leases.xml
-share/examples/dhcpd-snmp/cacti/templates/cacti_graph_template_dhcp_lease_stats.xml
-share/examples/dhcpd-snmp/dhcpd-snmp.conf
-share/snmp/mibs/nettrack-dhcpd-mib.txt

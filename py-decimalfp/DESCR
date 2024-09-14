@@ -1,3 +1,0 @@
-The module decimalfp provides a Decimal number type which can represent
-decimal numbers of arbitrary magnitude and arbitrary precision, i.e. any
-number of fractional digits.

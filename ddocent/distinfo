@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (dDocent-2.5.2.tar.gz) = 7b695470f00c0458a8e774a25f58348a34fe2967
-SHA512 (dDocent-2.5.2.tar.gz) = 8c9c756ce0ce4c2986f99eccf7d8676c588e081b21bf0a5669325ebad13305a5f3b077a449155456a7c761e13a968e39acf056a17b3ed5a94095bd732a2b7ac8
-Size (dDocent-2.5.2.tar.gz) = 341990 bytes
-SHA1 (patch-dDocent) = b553a89f21d47566bdcaae4f110960d14354e4a8
-SHA1 (patch-scripts_ReferenceOpt.sh) = db0282411930c1e150fa100a8e57f4469a0f4c7c
-SHA1 (patch-scripts_remake__reference.sh) = 881fbe2b50e9e557013fd7e1ad4a309f0d9928d0

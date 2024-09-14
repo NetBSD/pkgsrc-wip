@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/18 17:39:48 thorpej Exp $
-bin/aml_encrypt_gxb
-bin/aml_encrypt_gxl
-bin/aml_fip_create
-bin/aml_encrypt_g12b
-bin/aml_encrypt_g12a
-bin/blx_fix_g12a.sh

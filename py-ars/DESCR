@@ -1,7 +1,0 @@
-ARS is a physically-accurate robotics simulator written in Python.
-It's main purpose is to help researchers to develop mobile
-manipulators and, in general, any multi-body system. It
-is open-source, modular, easy to learn and use,
-and can be a valuable tool in the process
-of robot design, in the development of control and reasoning algorithms, as
-well as in teaching and educational activities

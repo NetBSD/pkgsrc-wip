@@ -1,5 +1,0 @@
-This repository holds the development of Software Heritage
-web applications:
-
-swh-web API  enables to query the content of the archive 
-through HTTP requests and get responses in JSON or YAML.

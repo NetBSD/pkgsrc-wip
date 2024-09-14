@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (f3-7.1.tar.gz) = 8a3d09d1772b802a7c27901eff4a7ac5dc9b1b13
-SHA512 (f3-7.1.tar.gz) = d696bb96ebaefab13c50a4479be01c206365d8dcf7d3c3b1d906b68705b654fffabdbeee49ea208047383c117bcac2a85c2c5fb129cace82f8addc16f22d7514
-Size (f3-7.1.tar.gz) = 67934 bytes
-SHA1 (patch-Makefile) = 48a85dd33248b6b506e49dbe5bfc10cd96681500

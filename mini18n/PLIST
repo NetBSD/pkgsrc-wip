@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/17 19:41:06 othyro Exp $
-include/mini18n-multi.h
-include/mini18n.h
-lib/libmini18n.a
-lib/libmini18n.so
-lib/libmini18n.so.1
-lib/libmini18n.so.1.0.1
-man/man3/mini18n.3
-man/man3/mini18n_set_locale.3

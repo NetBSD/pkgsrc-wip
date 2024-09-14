@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/18 07:11:22 thomasklausner Exp $
-bin/p2ktest
-include/p2kmoto.h
-lib/libp2kmoto.la

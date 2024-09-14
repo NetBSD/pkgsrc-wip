@@ -1,6 +1,0 @@
-WGRIB is a program to manipulate, inventory and decode GRIB files.
-GRIB (GRIdded Binary or General Regularly-distributed Information in Binary
-form[1]) is a concise data format commonly used in meteorology to store
-historical and forecast weather data. It is standardized by the World
-Meteorological Organization's Commission for Basic Systems, known under number
-GRIB FM 92-IX, described in WMO Manual on Codes No.306.

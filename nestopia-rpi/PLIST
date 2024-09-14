@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/02 08:36:13 nsloss Exp $
-bin/nst
-share/doc/nestopia/README.Linux
-share/doc/nestopia/readme.html
-share/examples/nestopia/NstDatabase.xml
-share/examples/nestopia/nstcontrols

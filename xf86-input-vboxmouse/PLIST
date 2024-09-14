@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/15 20:56:51 tnn2 Exp $
-lib/xorg/modules/drivers/vboxmouse_drv.la

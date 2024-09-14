@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2014/07/30 13:58:57 fhajny Exp $
-
-RMD160 (libcouchbase-2.5.6.tar.gz) = 7030edaf4bc80b7cd80f1847d7461dc8fc16f778
-SHA512 (libcouchbase-2.5.6.tar.gz) = 79a42440c19cf6ec5a6c4f48bc08eb2eecfa5debe9a3ab2948853f99bf46283a94fadf3540a8a04a5479a9752e7d96d93e242024379557a1f476ac77abb9d281
-Size (libcouchbase-2.5.6.tar.gz) = 1102134 bytes

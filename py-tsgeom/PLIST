@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/06 22:26:12 jihbed Exp $
-${PYSITELIB}/tsgeom/__init__.py
-${PYSITELIB}/tsgeom/__init__.pyc
-${PYSITELIB}/tsgeom/__init__.pyo

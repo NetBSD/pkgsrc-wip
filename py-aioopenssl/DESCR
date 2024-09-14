@@ -1,2 +1,0 @@
-aioopenssl provides a asyncio Transport which uses PyOpenSSL
-instead of the built-in ssl module

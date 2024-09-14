@@ -1,3 +1,0 @@
-Mozhttpd is a simple http webserver written in python, designed expressly
-for use in automated testing scenarios. It is designed to both serve static
-content and provide simple web services

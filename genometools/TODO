@@ -1,6 +1,0 @@
-TODO
-
-- the LICENSE file has many listed for all the external tools; how
-  should this be handled?
-
-- use pkgsrc dependencies instead of bundled software

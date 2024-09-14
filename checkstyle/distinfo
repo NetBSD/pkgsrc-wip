@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/03/14 21:58:25 jihbed Exp $
-
-RMD160 (checkstyle-8.19-all.jar) = add2d036157aed51af795c005deb287346b4ab62
-SHA512 (checkstyle-8.19-all.jar) = 3f5361514cc6fa9dffb08e5d5de56ce8ba219025b50550bb175475401f0337a51369c967f35650205d43f567263326a61a84e937804de5eb53ae446e721af21e
-Size (checkstyle-8.19-all.jar) = 24220855 bytes

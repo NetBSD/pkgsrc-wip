@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:42 thomasklausner Exp $
-bin/haddock
-share/${PKGNAME}/html/haddock-DEBUG.css
-share/${PKGNAME}/html/haddock.css
-share/${PKGNAME}/html/haddock.js
-share/${PKGNAME}/html/haskell_icon.gif
-share/${PKGNAME}/html/minus.gif
-share/${PKGNAME}/html/plus.gif

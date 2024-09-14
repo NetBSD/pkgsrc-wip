@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/07 01:46:26 cetrox Exp $
-lib/httpd/mod_evasive20.so

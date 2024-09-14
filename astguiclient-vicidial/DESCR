@@ -1,7 +1,0 @@
-This is a suite of programs that are designed to interact with
-the Asterisk Open-Source PBX Phone system at a client computer
-level to extend the functionality of your phone and system.
-
-astGUIclient (VICIdial) is also an Asterisk configuration
-utility offering a basic web-based utility to configure phones,
-extensions, carrier trunks and DIDs.

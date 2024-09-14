@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/11 10:26:50 thomasklausner Exp $
-bin/bardecode
-bin/e2mtiff
-bin/econvert
-bin/edentify
-bin/empty-page
-bin/hocr2pdf
-bin/optimize2bw

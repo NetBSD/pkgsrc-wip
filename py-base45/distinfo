@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.77 2021/07/25 20:42:33 leot Exp $
-
-RMD160 (base45-0.4.2.tar.gz) = 600bed1db34b9b4dff255c83ffdf7861161d2b9e
-SHA512 (base45-0.4.2.tar.gz) = 5011898c6febf9341d94a7269e566ba36ab7ca91d998c1f3fd36bc5af25785e25df037482365b8df3153b68ad6f7bdddc27a6b0e5939b96c6318427bf8bc84a1
-Size (base45-0.4.2.tar.gz) = 2880 bytes

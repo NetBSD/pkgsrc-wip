@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (olsrd-0.6.8.1.tar.gz) = bfb4cb19f7c2ed40f010bd444bd5497ac24e9bfc
-SHA512 (olsrd-0.6.8.1.tar.gz) = f56cdd2a1d9d1870174762f9f3f83f208205c9dd1cf36d5103a1683636185e883ee38c79c1d4d8be71c5a0236fab8423f60f00be3c67665fb43380855749b871
-Size (olsrd-0.6.8.1.tar.gz) = 5781797 bytes
-SHA1 (patch-ad) = 4b1689568758116237d038e66f106253244ec0b1
-SHA1 (patch-src_cfgparser_local.mk) = 1c0e2454360a8071ecbbd16a8f0e242d47d1028c

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:23 rillig Exp $
-
-RMD160 (jalview_1.8.tgz) = 11463fcb13f0e3a121499e286174393583690228
-Size (jalview_1.8.tgz) = 478565 bytes
-SHA1 (patch-aa) = 4465ae1b52ac6708d71522e3f8d314964f0b3967

@@ -1,6 +1,0 @@
-@comment $NetBSD$
-include/ucl++.h
-include/ucl.h
-lib/libucl.la
-lib/pkgconfig/libucl.pc
-man/man3/libucl.3

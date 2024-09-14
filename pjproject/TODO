@@ -1,7 +1,0 @@
-Split into PJSUA and PJMEDIA # XXX Why?
-Shared libraries # XXX Does the package support it?
-NetBSD patches, tweak OSS emulation compatibility
-
-This package has known vulnerabilities, please investigate and fix if possible:
- CVE-2017-9359, CVE-2017-9372, CVE-2017-16872, CVE-2017-16875,
- CVE-2018-1000098, CVE-2018-1000099

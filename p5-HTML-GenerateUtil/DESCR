@@ -1,2 +1,0 @@
-HTML::GenerateUtil provides a number of functions that make generating
-HTML output easier and faster. All written in XS for speed.

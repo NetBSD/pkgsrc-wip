@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/12 19:10:29 slitvinov Exp $
-bin/pgdisp
-bin/pgxwin_server
-include/cpgplot.h
-lib/grfont.dat
-lib/libcpgplot.a
-lib/libpgplot.a
-lib/rgb.txt

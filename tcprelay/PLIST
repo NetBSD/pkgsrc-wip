@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/tcprelay
-man/man1/tcprelay.1
-share/doc/tcprelay/README
-share/doc/tcprelay/tcprelay.html

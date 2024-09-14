@@ -1,5 +1,0 @@
-Mozpower provides an interface through which power usage measurements can be done
-on any OS and CPU combination (auto-detected) that has been implemented within
-the module. It provides 2 methods to start and stop the measurement gathering
-as well as methods to get the result that can also be formatted into a perfherder
-data blob

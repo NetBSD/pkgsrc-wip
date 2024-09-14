@@ -1,3 +1,0 @@
-This library is a thin layer on top standard IO modules like System.IO and
-Data.IORef that re-expose these functions under a different type, namely
-SIO.

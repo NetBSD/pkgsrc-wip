@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/01 11:41:44 noud4 Exp $
-bin/${FILTER}
-man/man1/${FILTER}.1
-share/examples/${FILTER}/${FILTER}.conf

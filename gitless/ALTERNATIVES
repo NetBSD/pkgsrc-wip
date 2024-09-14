@@ -1,1 +1,0 @@
-bin/gl @PREFIX@/bin/gl-@PYVERSSUFFIX@

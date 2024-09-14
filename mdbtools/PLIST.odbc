@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.odbc,v 1.2 2013/06/09 12:02:51 noud4 Exp $
-bin/unittest
-include/connectparams.h
-lib/libmdbodbc.la

@@ -1,5 +1,0 @@
-@comment $NetBSD$
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/namedlist.py
-${PYSITELIB}/namedlist.pyc
-${PYSITELIB}/namedlist.pyo

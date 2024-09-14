@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:30 rillig Exp $
-
-RMD160 (mppdec-1.1.tar.bz2) = 2445b00369a9f5a62aaf21a07cc0278c9d603c2a
-Size (mppdec-1.1.tar.bz2) = 134037 bytes
-SHA1 (patch-aa) = 0605d33f9f0fee7f2a462018124a21dae9795fab
-SHA1 (patch-ab) = cd65f78ca4c7d5f4f74466fb3464f4817999766a
-SHA1 (patch-ac) = 58eb6d23d19a882c5f2e96b7ca2f59fd6ac4c880

@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (reone/0.19.0.tar.gz) = e09b44d5511b50f6c1b9a55738860736f379d5ff
-SHA512 (reone/0.19.0.tar.gz) = 56b5895d46268ece508a786d49161d8d686d2a14334919c18b9c83f79e6ce751c023dd8568a4b292f4485d7bd33b6987709760fb9bf07f82238a0e0b1d5ca19a
-Size (reone/0.19.0.tar.gz) = 4742814 bytes
-SHA1 (patch-src_engine_resource_format_lytreader.h) = a1ae69776aec85fa43f8e1409e192e192fdcbe42

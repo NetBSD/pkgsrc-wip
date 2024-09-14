@@ -1,3 +1,0 @@
-* ${PATCHDIR}/patch-ab is only for *BSD
-* This is a "configure" replacement, could be nice to add a new
-  directive as GNU_CONFIGURE for "premake" like: USE_PREMAKE=YES

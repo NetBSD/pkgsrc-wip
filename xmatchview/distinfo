@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (xmatchview/v1.2.5.tar.gz) = 6ebfaac69670e3b574fc55b32686e7625a0e7076
-SHA512 (xmatchview/v1.2.5.tar.gz) = 9eb7b793ba07a29583a1a9efd82d0f93af8933a639359ef695c4327ff7b4c7a9c8b3db10cb1e3c58648c6af5d1077c59672ecc6ef641f4194195ed64247d7a1e
-Size (xmatchview/v1.2.5.tar.gz) = 15709995 bytes
-SHA1 (patch-test_runXMV.sh) = 2bc80ccd496700822ddbe40b24b9dfc053ecb161
-SHA1 (patch-xmatchview-conifer.py) = 6aba8a24d03a82af09cbc41f641cbc3921067468
-SHA1 (patch-xmatchview-hive.py) = 41491423ea3247b120c5eaf5cabadc48ef3ff706

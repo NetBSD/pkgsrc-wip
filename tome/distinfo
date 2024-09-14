@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/17 00:14:51 phonohawk Exp $
-
-RMD160 (tome-300alpha18-src.tar.bz2) = 50e8d892d76d1b19c7595f81496a372e85a8d66f
-Size (tome-300alpha18-src.tar.bz2) = 3976274 bytes
-SHA1 (patch-aa) = 8f24c3e7bceddb7e49d563ce21266b305e9cd8a7

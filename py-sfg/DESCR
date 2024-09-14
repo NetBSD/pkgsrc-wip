@@ -1,6 +1,0 @@
-A Python package for symbolic signal flow graph analysis.
-
-The input reads a text file in a human-friendly coding format to describe the
-signal flow graph. The program is able to calculate the transfer function
-between two nodes. The resulting symbolic expressions are easily interoperatable
-with Sympy and other scientific packages

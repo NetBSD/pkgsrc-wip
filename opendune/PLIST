@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/opendune
-share/doc/opendune/COPYING
-share/doc/opendune/README.txt
-share/doc/opendune/enhancement.txt
-@pkgdir share/opendune

@@ -1,2 +1,0 @@
-o Software seems to have instable threading model.  Tends to dump core on
-  NetBSD because of Pthread errors.  patch-ab attempts to fix.

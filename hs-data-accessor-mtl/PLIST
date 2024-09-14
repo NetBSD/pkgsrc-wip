@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/14 08:53:07 szptvlfn Exp $
-lib/data-accessor-mtl-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Monad/MTL/State.hi
-lib/data-accessor-mtl-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Monad/MTL/State.p_hi
-lib/data-accessor-mtl-${PKGVERSION}/${HASKELL_VERSION}/HSdata-accessor-mtl-${PKGVERSION}.o
-lib/data-accessor-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-accessor-mtl-${PKGVERSION}.a
-lib/data-accessor-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-accessor-mtl-${PKGVERSION}_p.a
-lib/data-accessor-mtl-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/data-accessor-mtl-${PKGVERSION}/LICENSE

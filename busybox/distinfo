@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/01/13 10:36:20 rillig Exp $
-
-RMD160 (busybox-1.3.1.tar.gz) = b9ce77310152b8b9c28692919b67e4436a197ab8
-Size (busybox-1.3.1.tar.gz) = 1767811 bytes
-SHA1 (patch-grp) = 88550bcac3c8ac8fd1285f1c76e93006409de7be

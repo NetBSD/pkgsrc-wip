@@ -1,5 +1,0 @@
-PR#43253
-
-* Need to adjust include/unixconf.h conditionally
-* In addition, Maybe, need to depend on termcap/terminfo/curses conditionally.
-* Not ready to user-destdir.

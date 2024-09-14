@@ -1,7 +1,0 @@
-$NetBSD: patch-bb,v 1.1.1.1 2003/04/29 09:22:28 thomasklausner Exp $
-
---- /dev/null	2003-04-28 12:38:58.000000000 +0100
-+++ src/lib/machines/netbsd/80x86/startup/iso.h	1998-03-16 10:39:19.000000000 +0000
-@@ -0,0 +1,2 @@
-+#include "ansi.h"
-+#define __WRONG_ISO

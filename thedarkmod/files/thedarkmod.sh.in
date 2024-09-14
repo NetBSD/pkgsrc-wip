@@ -1,9 +1,0 @@
-#!/bin/sh -e
-if [ ${XDG_DATA_HOME} ]; then
-	mkdir -p ${XDG_DATA_HOME}/thedarkmod
-	cd ${XDG_DATA_HOME}/thedarkmod
-else
-	mkdir -p ${HOME}/.local/share/thedarkmod
-	cd ${HOME}/.local/share/thedarkmod
-fi
-exec @PREFIX@/libexec/thedarkmod "$@"

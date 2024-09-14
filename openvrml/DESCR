@@ -1,5 +1,0 @@
-OpenVRML is a portable C++ library for reading and displaying VRML97
-files.  This distribution includes lookat, a sample viewer program that
-uses GLUT. OpenVRML aspires to full conformance to the VRML97 specification.
-It isn't there yet, but much of the spec is supported, and OpenVRML will
-continue to get better.

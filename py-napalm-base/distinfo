@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (napalm-base-1.0.0.tar.gz) = a07e67aab3311f41721d9d9d64667e04ff38d788
-SHA512 (napalm-base-1.0.0.tar.gz) = c2d54d9286d9d02251b65f47e6039340900cf973d9a23b84b237f380f477b6731d8584eba48693d4bbf886f2efb79a98851a18ecd411b7c885e3060d67789e25
-Size (napalm-base-1.0.0.tar.gz) = 54365 bytes
-SHA1 (patch-setup.py) = 3c5d97eece80abb94db361cba10df9f6c2e70e0f

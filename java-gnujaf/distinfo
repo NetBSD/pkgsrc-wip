@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2009/10/20 13:15:56 tnn2 Exp $
-
-RMD160 (activation-1.1.1.tar.gz) = 43c0244ffd84216f288b9ea6ab373ae4c6e9c44f
-Size (activation-1.1.1.tar.gz) = 157018 bytes
-SHA1 (patch-aa) = a617c8aa40dec9a1f0b3f5284752464ef54b8ffb
-SHA1 (patch-ab) = 19a8e05e028f1839337ecded0e952d59b8140300

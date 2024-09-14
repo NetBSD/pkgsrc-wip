@@ -1,1 +1,0 @@
-bin/pipdeptree @PREFIX@/bin/pipdeptree-@PYVERSSUFFIX@

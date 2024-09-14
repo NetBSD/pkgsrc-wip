@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/18 12:34:53 jihbed Exp $
-
-RMD160 (jython_installer-2.5.2b1.jar) = 0d5788952c3f5a979b4fa1d291ff97f17a03bd65
-SHA512 (jython_installer-2.5.2b1.jar) = 8d7ec475e9577dad17e9d3978cea46dd23a303e469a591fc050968c4aa191b2f565dd9ed87eb026474995939a714172ceaee0c52d33b7a9b5147175fa032d487
-Size (jython_installer-2.5.2b1.jar) = 18120075 bytes

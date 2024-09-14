@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/21 15:18:23 othyro Exp $
-bin/x86dis
-include/libdis.h
-lib/libdisasm.la
-man/man1/x86dis.1
-man/man3/x86_disasm.3
-man/man3/x86_format_insn.3
-man/man3/x86_init.3
-man/man7/libdisasm.7

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/01/03 21:41:13 jihbed Exp $
-
-RMD160 (pyevent-0.4.3.tar.gz) = 4426a3ee7b120c2f2c5acca99669f1ff94908bae
-SHA512 (pyevent-0.4.3.tar.gz) = e1c343370fe2b3b7e0d4adca179c4de43cbae2e5f7caf4b4d832a68474a86f59d8ca9eb51410fbf026820aa6a8107eacf5666f51e7acdef9bccecddad3512bfb
-Size (pyevent-0.4.3.tar.gz) = 79692 bytes

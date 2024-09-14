@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2012/12/30 00:40:59 othyro Exp $
-
-RMD160 (wmswallow.tar.Z) = 659a4c1dff6c1a06f872cbbcdbaddfadb138d1a4
-Size (wmswallow.tar.Z) = 28567 bytes
-SHA1 (patch-Makefile) = ebe8bdbfefd66d60dbb51fac7b171fcb0c06a5cb

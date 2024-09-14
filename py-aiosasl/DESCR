@@ -1,3 +1,0 @@
-aiosasl provides a generic, asyncio-based SASL library. It can be used
-with any protocol, provided the neccessary interface code is provided
-by the application or protocol implementation.

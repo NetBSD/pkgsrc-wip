@@ -1,2 +1,0 @@
-Integation of python-nose into Django test runner by extending the Django
-management CLI  with nose-related options.

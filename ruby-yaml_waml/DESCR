@@ -1,2 +1,0 @@
-Rails plugin to workaround for fixing output result of 'to_yaml'
-method treats multibyte UTF-8 string(such as japanese) as binary.

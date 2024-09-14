@@ -1,8 +1,0 @@
-Squashfuse lets you mount SquashFS archives in user-space. It supports almost
-all features of the SquashFS format, yet is still fast and memory-efficient. So
-that everyone can use it, squashfuse supports many different operating systems
-and is available under a permissing license.
-
-SquashFS is an efficiently compressed, read-only storage format. Support for it
-has been built into the Linux kernel since 2009. It is very common on Live CDs
-and embedded Linux distributions.

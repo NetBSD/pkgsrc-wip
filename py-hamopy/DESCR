@@ -1,3 +1,0 @@
-Hamopy is a python package for the numerical simulation of one-dimensional
-heat, air and moisture (HAM) transfer in porous materials. Its principle is the
-finite-element resolution of the HAM conservation equations

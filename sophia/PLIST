@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/21 20:43:50 cfkoch Exp $
-include/sophia.h
-lib/libsophia.a
-lib/libsophia.so

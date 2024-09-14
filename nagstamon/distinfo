@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:14 agc Exp $
-
-RMD160 (nagstamon-3.6.0.tar.gz) = 2d5864304cb15be9a7eac5f01b1cb5a24859cade
-SHA512 (nagstamon-3.6.0.tar.gz) = 4da9b20c518129857ff86fa4aa4aa7507fce6c5b43fc917a4b8681d36e69f267045ab35c2f6922bde55536bf55e753f61b4fc184165e2f6d9eb6cb9b00703c69
-Size (nagstamon-3.6.0.tar.gz) = 573998 bytes
-SHA1 (patch-setup.py) = d3425dc665e7904fb6e3d090ad20f7ff74b823a7

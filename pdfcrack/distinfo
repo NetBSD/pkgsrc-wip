@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/03/10 23:33:26 leot1990 Exp $
-
-RMD160 (pdfcrack-0.16.tar.gz) = 31ff6a208f4abfe7a93c9af30a61c07fff085b56
-SHA512 (pdfcrack-0.16.tar.gz) = 460113f28249d1ea1cefc6dac8ff22b33849ccff50f61830144e41eeec47c4b9113845bb955d26757adb0552d8c0dfa43b3f5666c1419afe4063037a1e1c933d
-Size (pdfcrack-0.16.tar.gz) = 34467 bytes

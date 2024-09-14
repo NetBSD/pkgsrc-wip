@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2008/06/19 21:35:07 tonnerre Exp $
-
-RMD160 (Catalyst-Model-LDAP-0.21.tar.gz) = a4fa262437a2904edd5f1300c8c41bfaba43e004
-SHA512 (Catalyst-Model-LDAP-0.21.tar.gz) = 7209860acf6bf9678906636e0abe9a4cf01a71ddd46e74861df0f036e7bb73d19e20dc6b4a5f80795f651d4fc2ccaaccc93515e54d55b7aff73b019245525b9b
-Size (Catalyst-Model-LDAP-0.21.tar.gz) = 18949 bytes

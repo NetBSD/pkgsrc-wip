@@ -1,3 +1,0 @@
-Maypole is a Perl web application framework similar to Java's struts.
-It is essentially completely abstracted, and so doesn't know anything
-about how to talk to the outside world.

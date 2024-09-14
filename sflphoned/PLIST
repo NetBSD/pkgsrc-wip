@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:17 thomasklausner Exp $
-bin/sflphone
-libexec/sflphoned
-share/sflphone/ringtones/konga.ul
-share/sflphone/ringtones/phone.au
-share/sflphone/ringtones/phone2.au

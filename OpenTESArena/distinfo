@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (OpenTESArena/opentesarena-0.13.0.tar.gz) = 93f6eb9222702c408a27ad1791de1076c95def02
-SHA512 (OpenTESArena/opentesarena-0.13.0.tar.gz) = d25bb58c985817355a9d453ee486d6192b08a9f566851105ece0b65e283d3d100b48f4d1d628a0fc506db4d2815924426919852df33be7d0641654f40bf3f681
-Size (OpenTESArena/opentesarena-0.13.0.tar.gz) = 5023056 bytes
-SHA1 (patch-OpenTESArena_src_Interface_ProvinceMapPanel.cpp) = d3507025a945d6bf399999fd397db77a91faf325
-SHA1 (patch-OpenTESArena_src_Interface_TextCinematicPanel.cpp) = 40598c6f15038bcaf785a4ab3fe6c187bd6361c8
-SHA1 (patch-OpenTESArena_src_Utilities_Platform.cpp) = ca299fe19539227e19cdc4285a841c0dcc24739e

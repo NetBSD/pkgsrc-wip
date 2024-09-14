@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/30 22:45:31 shattered Exp $
-man/man8/nos-tun.8
-sbin/nos-tun

@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (sofia-sip-1.12.11-204-g6ff5f3f.tar.gz) = 3c53aaa300c8014dd156b5ad1ddf995d40db836a
-SHA512 (sofia-sip-1.12.11-204-g6ff5f3f.tar.gz) = 2626c814a54e6b71a9f06f7ea5d898a1f4795f36f421d5e1830e8fb8f9d895dbfcfe5075133d38cfe3557efbe8284b718d33074727a1e2400a028d68be58f15f
-Size (sofia-sip-1.12.11-204-g6ff5f3f.tar.gz) = 2523511 bytes
-SHA1 (patch-scripts_lcov-report) = d03d6a3f2472c0497078b9e1f91ed35f86f58d60
-SHA1 (patch-scripts_uncovered) = 6b38b32736e433bc6338968cade86604ae02aa61

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:26 rillig Exp $
-
-RMD160 (libpusb.tar.gz) = 06dc29a0e8a9492c8def56a3756cd9b15d6db73d
-Size (libpusb.tar.gz) = 73605 bytes
-SHA1 (patch-aa) = 4105792efc0338f372140d78e0faa581b078b42a

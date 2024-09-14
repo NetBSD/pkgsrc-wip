@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/fotaq
-${PLIST.floppy}share/games/fotaq/queen.1
-${PLIST.cd}share/games/fotaq/queen.1c

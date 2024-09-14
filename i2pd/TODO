@@ -1,7 +1,0 @@
-* i2pd.conf problem:
-	* https://github.com/PurpleI2P/i2pd/issues/1148
-	* When i2pd is starting as --service, client reads /var/lib/i2pd directory
-	instead path that set in 'datadir' variable of i2pd.conf.
-	* Problem is hardcoded path for 'datadir' variable that placed in 
-	libi2pd/FS.cpp:81
-	* Makefile fixes it by change this path from '/var/lib' to '${PREFIX}/var'

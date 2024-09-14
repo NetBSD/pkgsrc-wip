@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:27 thomasklausner Exp $
-lib/httpd/mod_auth_pam.so
-lib/httpd/mod_auth_sys_group.so
-share/doc/html/mod_auth_pam/configure.html
-share/doc/html/mod_auth_pam/faq.html
-share/examples/mod_auth_pam/httpd.pam

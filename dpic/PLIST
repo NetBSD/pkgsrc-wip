@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
-bin/dpic
-share/doc/dpic/Examples.txt
-share/doc/dpic/dpic_man.txt

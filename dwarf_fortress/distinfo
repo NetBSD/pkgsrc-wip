@@ -1,9 +1,0 @@
-$NetBSD$
-
-RMD160 (df_47_04_linux32.tar.bz2) = d650e8216dab6c031459aa1d40d7785b89e92d9c
-SHA512 (df_47_04_linux32.tar.bz2) = d76286957ed3f1e677519c45b9644463e45c07c226ce3200f2db6a776396e77fc8aa3f5fdd697fdbde5efa49b7d0dce47b98dfe0a880b666e227ccb8b288a6c0
-Size (df_47_04_linux32.tar.bz2) = 13481027 bytes
-RMD160 (df_47_04_linux.tar.bz2) = caf7f76c1fedce5feda731a81b50fc1b83473574
-SHA512 (df_47_04_linux.tar.bz2) = 65f6cd39187afbb7b60ba72d0caf23c39d95674615ab718ad55c25cad23c08e42c1b911cfde7015b05a280325504f3b931f2c7defb34ee2ee6b725101c536cea
-Size (df_47_04_linux.tar.bz2) = 12719630 bytes
-SHA1 (patch-df) = 7e25d6c0145521d2eb6417acdc792f1e496a7828

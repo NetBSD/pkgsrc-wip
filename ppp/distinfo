@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:34 rillig Exp $
-
-RMD160 (ppp-2.4.1.tar.gz) = bb9410467fef9a644ea5a28cf41937ea942148e9
-Size (ppp-2.4.1.tar.gz) = 536746 bytes
-SHA1 (patch-aa) = 3cdc8a7ed59bd94466b80a197baa3bd9f8aba848
-SHA1 (patch-ab) = c262018a5f855f460b17a0e3ccdd90a6891e9e88
-SHA1 (patch-ac) = dca78586d8d2d6d65fce458150cd82a3c5e57708
-SHA1 (patch-ad) = 26e6ec727d75ecf8a8aa112f0a20a3fb81d6150c
-SHA1 (patch-ae) = 948e469a53b8d156ffa2389ad00b624f5473831a

@@ -1,4 +1,0 @@
-Pymodbus is a full Modbus protocol implementation using twisted/torndo/
-asyncio for its asynchronous communications core. It can also be used
-without any third party dependencies (aside from pyserial) if a more 
-lightweight project is needed. Furthermore

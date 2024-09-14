@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/10 15:48:45 mstapelberg Exp $
-man/man1/mxallowd.1
-sbin/mxallowd
-share/doc/mxallowd/samples/mxallowd.conf
-share/examples/rc.d/mxallowd

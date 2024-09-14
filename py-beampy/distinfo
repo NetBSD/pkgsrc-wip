@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2016/09/18 23:36:00 kamil Exp $
-
-RMD160 (beampy-0.4.2-6994aa6e66f77b56e0bf6c1fa4cdd94e106e7b84.tar.gz) = cf2f15cd80d07fe755e7aeface71e93ce9f79d96
-SHA512 (beampy-0.4.2-6994aa6e66f77b56e0bf6c1fa4cdd94e106e7b84.tar.gz) = ac88c2f8b4e1a6253d1ed4bf06faeee00ab940317d9dfd260874ac886f92d10f8a5c54d1cd21d553d08f434a19607a3bfd6119be3c6cdbffe081c95ef8a1c5a4
-Size (beampy-0.4.2-6994aa6e66f77b56e0bf6c1fa4cdd94e106e7b84.tar.gz) = 14203953 bytes

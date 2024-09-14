@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 01:37:48 poppnk Exp $
-bin/gtk-server
-bin/kill-gtk-server.sh
-etc/gtk-server.cfg
-man/man1/gtk-server.1
-man/man1/gtk-server.cfg.1

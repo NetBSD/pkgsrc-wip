@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
-share/xsl/docbook-ko/catalog
-share/xsl/docbook-ko/dbk-common.xsl
-share/xsl/docbook-ko/dbk-fo.xsl
-share/xsl/docbook-ko/dbk-html-chunk.xsl
-share/xsl/docbook-ko/dbk-html-common.xsl
-share/xsl/docbook-ko/dbk-html.xsl
-share/xsl/docbook-ko/dbk-htmlhelp.xsl

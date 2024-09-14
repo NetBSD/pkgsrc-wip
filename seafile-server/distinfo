@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (seafile-server-6.0.9/v6.0.9-server.tar.gz) = fb97c168d2f04c991e7850e5f08a2296edd873a3
-SHA512 (seafile-server-6.0.9/v6.0.9-server.tar.gz) = c4c2821b8779ee6585b379d68001baa14af316fa840bc444f7f018e2314fe9947ceaf32808b735a6739ace56467f6d3068207e01ffd72ce988e77842901142ab
-Size (seafile-server-6.0.9/v6.0.9-server.tar.gz) = 695210 bytes
-SHA1 (patch-lib-utils.h) = 1fe5394ef1ee2132e20c94653ae67141d6ce7c8f
-SHA1 (patch-server_http-server.c) = b1b0de74025859b9896dc8e61b03135376a5ca9c

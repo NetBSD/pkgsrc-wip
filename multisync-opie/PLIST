@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2005/01/09 22:41:46 mreriksson Exp $
-lib/multisync/libopie_sync.la

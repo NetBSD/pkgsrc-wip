@@ -1,6 +1,0 @@
-libexact is a software library for solving combinatorial exact
-covering problems. It implements essentially the backtrack algorithm
-and the dancing links data structure described in "Donald E. Knuth,
-Dancing Links, Millennial Perspectives in Computer Science (J.
-Davies, B. Roscoe, and J. Woodcock, Eds.), Palgrave, Basingstoke,
-England, 2000, pp. 187-214" (preprint).

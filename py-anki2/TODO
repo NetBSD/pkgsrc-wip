@@ -1,6 +1,0 @@
-
-missing dependencies:
- - futexes
- - chromium port
- - wip/qt5-qtwebengine (chromium code)
- - https://www.riverbankcomputing.com/software/pyqtwebengine/download

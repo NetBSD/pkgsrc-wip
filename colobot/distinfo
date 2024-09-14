@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (colobot-gold-0.1.11-alpha.tar.gz) = 5a3b9d775081d912fb2fd9ed8195c68ae5ecd4d7
-SHA512 (colobot-gold-0.1.11-alpha.tar.gz) = fe32bc56b6fae9435c74a73b694b7d2b93667e5d15b1c57a7558e492613f0a5d4cab72ff341ab4c921150137282cc71292a1e31eb1ed06c752de33c50120f20e
-Size (colobot-gold-0.1.11-alpha.tar.gz) = 1430595 bytes
-SHA1 (patch-CMakeLists.txt) = 15d2911718d215bf1955b97c62dc9a86336b7e35
-SHA1 (patch-src_CMakeLists.txt) = 0d960453a4ee124710894cb9bc51ba613ea3ce75
-SHA1 (patch-src_app_app.cpp) = 12d361c8e82382688403bf2135c1d73f06c8f3e2

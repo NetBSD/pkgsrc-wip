@@ -1,8 +1,0 @@
-$NetBSD: patch-ai,v 1.1.1.1 2003/04/29 09:22:28 thomasklausner Exp $
-
---- /dev/null	2003-04-28 11:20:42.000000000 +0100
-+++ src/installers/80x86/netbsd/system_v.h	2003-04-28 11:13:24.000000000 +0100
-@@ -0,0 +1,3 @@
-+/* netbsd/system_v.h */
-+
-+#define target_system "NetBSD"

@@ -1,3 +1,0 @@
-SwingWT is a 100% pure Java library which aims to be a free
-implementation of Swing and AWT. Unlike Swing, it drives native
-peer widgets for your platform from SWT.

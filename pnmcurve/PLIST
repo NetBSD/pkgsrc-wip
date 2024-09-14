@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/05 17:29:48 jh88 Exp $
-bin/pnmcurve
-bin/pnmcurvedit
-man/man1/pnmcurve.1
-man/man1/pnmcurvedit.1

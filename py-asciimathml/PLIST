@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/09 18:31:50 jihbed Exp $
-${PYSITELIB}/asciimathml.py
-${PYSITELIB}/asciimathml.pyc
-${PYSITELIB}/asciimathml.pyo
-${PYSITELIB}/mdx_asciimathml.py
-${PYSITELIB}/mdx_asciimathml.pyc
-${PYSITELIB}/mdx_asciimathml.pyo

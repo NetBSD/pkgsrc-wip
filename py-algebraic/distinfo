@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/29 21:52:39 jihbed Exp $
-
-RMD160 (python-algebraic-0.3.1.dev-20120112.zip) = f103e313d4797b6b8302871bcb964ec18f6a9049
-SHA512 (python-algebraic-0.3.1.dev-20120112.zip) = 67ec467878e2b7ff65727754d227101b8a8d278b1d785f9667d70ea97eea4a59ae69d772123579cc92174b0c573fb2f7d98d2a5450cfb683f7ddae9a97db0823
-Size (python-algebraic-0.3.1.dev-20120112.zip) = 6149 bytes

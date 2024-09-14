@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/07/26 13:14:46 jihbed Exp $
-
-RMD160 (word2vec-0.9.4.tar.gz) = aad598bb3bdecc4fe886e2d7424d929b9df3948a
-SHA512 (word2vec-0.9.4.tar.gz) = 78a0b08544700444f0779dea637429562f72655c96bbc204c2e0c7a22cadc7687c4b65cbcca5c76001f36c4ff5b7229a252b05a54633fa0564af92237cd263b0
-Size (word2vec-0.9.4.tar.gz) = 54434 bytes

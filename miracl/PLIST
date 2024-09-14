@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:57 thomasklausner Exp $
-include/${DISTNAME}/miracl.h
-include/${DISTNAME}/mirdef.h
-lib/libmiracl.a

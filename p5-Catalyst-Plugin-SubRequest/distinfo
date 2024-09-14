@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/04/07 20:55:55 kuli0020 Exp $
-
-RMD160 (Catalyst-Plugin-SubRequest-0.21.tar.gz) = 5a1a136192089d06a081fd70977978c56cb35ee0
-SHA512 (Catalyst-Plugin-SubRequest-0.21.tar.gz) = 7bef662a1e65c46e831bfc32a3840ffc5728b316bfcac9347ab5447b88739f27cf2a4ef7a811f5779f76923e36377c53ab9a34882ba0ff8503284d6edefae46e
-Size (Catalyst-Plugin-SubRequest-0.21.tar.gz) = 22392 bytes

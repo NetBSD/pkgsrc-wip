@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (lfe/lfe-1.2.1.zip) = 9d1a80731783a0473bf173c1328179c01e2a5f0d
-SHA512 (lfe/lfe-1.2.1.zip) = 798bf35cc12be51d8417e121d081e47b1248548eb7c0bd7e97143ee39e339f2404d22149edffe87348bb8eee00f63442440a204df85f71a8d09e66cb9e2cc80c
-Size (lfe/lfe-1.2.1.zip) = 391809 bytes
-SHA1 (patch-Makefile) = 4dbd0ab68a9144c39a6fa5c2abffe9b11178207f

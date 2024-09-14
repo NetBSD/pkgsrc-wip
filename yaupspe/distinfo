@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2012/12/03 22:50:30 othyro Exp $
-
-RMD160 (yaupspe-r38.tar.bz2) = 2eddfdb0d930279b4d241d57c1a5c7f8cbc2c79a
-Size (yaupspe-r38.tar.bz2) = 85290 bytes
-SHA1 (patch-src_Makefile) = 6e435dd5c061abfd03d567ca249b8c9ed313ade0
-SHA1 (patch-src_cpu_int.c) = 2431f7544f0960d69551d9f291d7654d27d06d45
-SHA1 (patch-src_graph_texture.c) = 24a6609f5818dda6448fcca68c5dc1a19ec1021b
-SHA1 (patch-src_memmap.c) = df0c3a3d6ab8733f5fb14a6f344b4ae16a0e4a1a

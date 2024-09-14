@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
-bin/ratproxy
-bin/ratproxy-report
-share/doc/ratproxy/README
-share/ratproxy/keyfile.pem
-share/ratproxy/messages.list
-share/ratproxy/ratproxy-back.png

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/08 22:41:37 othyro Exp $
-include/libcerror.h
-include/libcerror/definitions.h
-include/libcerror/extern.h
-include/libcerror/features.h
-include/libcerror/types.h
-lib/libcerror.la
-lib/pkgconfig/libcerror.pc
-man/man3/libcerror.3

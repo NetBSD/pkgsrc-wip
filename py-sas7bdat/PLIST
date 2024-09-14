@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/01 22:27:19 jihbed Exp $
-bin/sas7bdat_to_csv
-${PYSITELIB}/sas7bdat.py
-${PYSITELIB}/sas7bdat.pyc
-${PYSITELIB}/sas7bdat.pyo

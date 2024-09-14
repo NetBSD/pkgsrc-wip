@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/07 12:48:16 othyro Exp $
-lib/mupen64plus/mupen64plus-rsp-z64.so
-lib/mupen64plus/mupen64plus-video-arachnoid.so
-lib/mupen64plus/mupen64plus-video-glide64.so
-lib/mupen64plus/mupen64plus-video-z64.so
-share/mupen64plus/Glide64.ini

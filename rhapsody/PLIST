@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
-bin/rhapsody
-share/rhapsody/clientcmnds.hlp
-share/rhapsody/irccmnds.hlp
-share/rhapsody/keys.hlp

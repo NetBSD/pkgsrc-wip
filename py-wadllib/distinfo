@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/14 20:28:45 jihbed Exp $
-
-RMD160 (wadllib-1.3.3.tar.gz) = 9e06a3968ad0b506ba9c46a9920e454d8e1b0999
-SHA512 (wadllib-1.3.3.tar.gz) = 8981b67b934c6a979b28bbd963e2245dfb15ca5c00228d4e841b9b02ef0e9a0eeddefc17d647f8de62782e0247303b2c8f8df893a041c1e05017697881f2692d
-Size (wadllib-1.3.3.tar.gz) = 62394 bytes

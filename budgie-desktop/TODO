@@ -1,9 +1,0 @@
-Fix COMMENT.
-
-Create DESCR.
-
-Fix PLIST.
-
-Resolve configure vs build.
-
-Drop v from PKGNAME.

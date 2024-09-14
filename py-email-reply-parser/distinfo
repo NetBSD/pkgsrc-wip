@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (email_reply_parser-0.1.1.tar.gz) = 917527bbe8971e66a0f4a673c5978f0a7e89d311
-SHA512 (email_reply_parser-0.1.1.tar.gz) = dee09a12ad4a4b0e05e0409737a04d2c83f011e3cb7868c2f5913b5b8ad18a6c6488aa1eddc8e82bb09ad449f1816c106fd857bc848eb4b8dbccf7c0853b2dae
-Size (email_reply_parser-0.1.1.tar.gz) = 2765 bytes
-SHA1 (patch-LICENSE) = 8bbab457c0011dee7a88aa80b45d80a1062aefe4
-SHA1 (patch-README.md) = e4047be5769e7e09696b1d1f5b7544d8fcf72d44

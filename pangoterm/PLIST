@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/pangoterm
-share/applications/pangoterm.desktop
-share/pixmaps/pangoterm.svg

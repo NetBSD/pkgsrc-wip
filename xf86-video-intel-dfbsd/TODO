@@ -1,4 +1,0 @@
-Copy port to x11/xf86-video-intel, do not install from wip.
-
-FreeBSD 11-release G45 Intel integrated graphics machine reboots
-when startx of xfce4.

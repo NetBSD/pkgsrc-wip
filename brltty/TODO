@@ -1,3 +1,0 @@
-Tune the initial setup (via options ?) to get a default driver
-
-Get make install to avoid letting ${WRKSRC}/lib belong to root

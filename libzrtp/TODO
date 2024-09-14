@@ -1,7 +1,0 @@
-- Find a workaround to avoid automake warnings in configure phase.
-	Enabling subdir-objects makes the build stage fail.
-	src/* is not included due to automake warnings.
-	third_party/* is explicitly configured in pre-configure phase.
-- This package has only been tested on FreeBSD 11.
-- PKG-VERSION in the ChangeLog file. 
-- Licensing is in the zrtp_legal.c file under src/.

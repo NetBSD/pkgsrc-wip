@@ -1,4 +1,0 @@
-Cameo is a high-level python library developed to aid the strain design
-process in metabolic engineering projects. The library provides a modular
-framework of simulation methods, strain design methods, access to models,
-that targets developers that want custom analysis workflows

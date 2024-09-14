@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/06/10 23:14:45 jihbed Exp $
-
-RMD160 (chemlab-0.3.tar.gz) = 65013eb01111c751ee1baeb58174c475aeb42411
-SHA512 (chemlab-0.3.tar.gz) = f2b797fce0b6c01c699ab8fd926403e692670520e4ba8f75e63935f38cd7438d5cac796584c887f3ab95d21e339eb3039820890897c4e73f853a24677a362105
-Size (chemlab-0.3.tar.gz) = 5242269 bytes
-SHA1 (patch-setup.py) = 8bf9315e653b66df763c61d69d068e4c53f41a24

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/12/27 10:13:22 ryo-on Exp $
-
-RMD160 (groovy-binary-2.0.6.zip) = b684b9e6d92ff63e366228a9e56451442e44fe04
-Size (groovy-binary-2.0.6.zip) = 28427109 bytes
-SHA1 (patch-bin_startGroovy) = 9ab09f98707599f634d13b3f3b2f2c5726f484d2

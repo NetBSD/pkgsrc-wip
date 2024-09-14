@@ -1,5 +1,0 @@
-$Id: TODO,v 1.1.1.1 2004/05/27 10:58:58 mpasternak Exp $
-
-Install scripts in ${PREFIX}/bin with ${PYVERSSUFFIX}
-
-	-- dotz@irc.pl

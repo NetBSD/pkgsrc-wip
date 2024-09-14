@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:30:38 rillig Exp $
-
-RMD160 (tcpspy-1.7.tar.gz) = 60406819e7b18a28bd89ff9243a8af97280dcab2
-Size (tcpspy-1.7.tar.gz) = 14813 bytes
-SHA1 (patch-aa) = 4eb671c9a80dc532e921564bbe864bae5fa19b3a
-SHA1 (patch-ab) = b82ad421cb729a8cacc22a1d037ff388b7285239

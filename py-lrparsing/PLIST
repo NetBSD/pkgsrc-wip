@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/05 20:51:57 jihbed Exp $
-${PYSITELIB}/lrparsing.py
-${PYSITELIB}/lrparsing.pyc
-${PYSITELIB}/lrparsing.pyo

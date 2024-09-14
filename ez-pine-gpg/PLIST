@@ -1,9 +1,0 @@
-@comment $NetBSD$
-bin/ez-pine-gpg-encrypt
-bin/ez-pine-gpg-helper-recipient
-bin/ez-pine-gpg-helper-sender
-bin/ez-pine-gpg-incoming
-bin/ez-pine-gpg-sign
-bin/ez-pine-gpg-sign-and-encrypt
-bin/ez-pine-gpg-symmetric
-share/doc/ez-pine-gpg/README

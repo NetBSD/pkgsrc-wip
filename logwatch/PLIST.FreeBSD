@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2013/07/01 11:37:51 noud4 Exp $
-share/logwatch/dist.conf/services/zz-disk_space.conf

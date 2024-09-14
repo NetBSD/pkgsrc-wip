@@ -1,4 +1,0 @@
-Jettison is a fast and flexible JSON encoder
-for the Go programming language, inspired by
-bet365/jingo, with a richer features set,
-aiming at 100% compatibility with the standard library

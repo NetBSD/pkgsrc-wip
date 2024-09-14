@@ -1,6 +1,0 @@
-$NetBSD: patch-aw,v 1.1.1.1 2003/07/27 06:03:38 bencollver Exp $
-
---- include/linux/kd.h.orig	Sat Jul 26 11:45:25 2003
-+++ include/linux/kd.h
-@@ -0,0 +1 @@
-+#include <dev/wscons/wsconsio.h>

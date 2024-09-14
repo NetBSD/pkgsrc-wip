@@ -1,7 +1,0 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/12/03 00:38:43 dhowland Exp $
-
---- vpr/heapsort.h.orig	2000-03-26 14:34:15.000000000 -0500
-+++ vpr/heapsort.h
-@@ -1 +1 @@
--void heapsort (int *sort_index, float *sort_values, int nelem);
-+void heapsortv (int *sort_index, float *sort_values, int nelem);

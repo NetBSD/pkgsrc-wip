@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (system-config-printer-1.5.11.tar.gz) = 9232f16d486797b93a62f7df628ba3c538e6935f
-SHA512 (system-config-printer-1.5.11.tar.gz) = ea4b62a6f53971f24966cd332fad24797645027b69b3cdee556a32bdb43d743687be8dbed04c7f669e27e548a18783d2f6e7bcf1c6a50de05c26a71181acd464
-Size (system-config-printer-1.5.11.tar.gz) = 1984545 bytes
-SHA1 (patch-configure.ac) = 300cb734708b1e0000842930d834554a9f985ed3

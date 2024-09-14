@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/07 21:23:33 othyro Exp $
-bin/higan
-share/applications/higan.desktop
-share/doc/higan/cheats.bml
-share/icons/higan.ico
-share/icons/higan.png

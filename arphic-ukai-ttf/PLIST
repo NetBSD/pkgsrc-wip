@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/09 19:57:15 ryo-on Exp $
-share/fonts/X11/TTF/ukai.ttc
-share/doc/${PKGBASE}/COPYING

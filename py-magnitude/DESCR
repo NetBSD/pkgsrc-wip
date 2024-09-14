@@ -1,7 +1,0 @@
-A physical quantity is a number with a unit, like 10 km/h. Units can be any of
-the SI units, plus a bunch of non-SI, bits,dollars, and any combination of them.
-They can include the standard SI prefixes. Magnitude can operate with physical
-quantities, parse their units, and print them. You don't have to worry about
-unit consistency or conversions; everything is handled transparently.
-By default output is done in basic SI units, but you can specify any output unit
-as long as it can be reduced to the basic units of the physical quantity

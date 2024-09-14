@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:19 thomasklausner Exp $
-bin/swami
-lib/swami/samplelib_libsndfile.la
-lib/swami/wavetbl_fluidsynth.la
-share/locale/de/LC_MESSAGES/swami.mo

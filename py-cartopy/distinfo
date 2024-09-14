@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/08/05 21:02:58 jihbed Exp $
-
-RMD160 (Cartopy-0.18.0.tar.gz) = 0b644e4be180345ced3f81fdacac92da3195277b
-SHA512 (Cartopy-0.18.0.tar.gz) = b2d1f4b264ce06882aa282743bc69ac888606999432adfd7d2dd427a051a95c7ecf73079cb26259251c181f7d4018dd5897d0bc7b15cf8aa9264acb8ab360298
-Size (Cartopy-0.18.0.tar.gz) = 14414653 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
-
-RMD160 (pngnq-0.3-src.tar.gz) = 55683559949d6c4acc9560e3e1350c31a86fd958
-Size (pngnq-0.3-src.tar.gz) = 14805 bytes
-SHA1 (patch-aa) = eb592dd5309eb649608c70b69b1889beadf69647

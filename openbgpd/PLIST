@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/12 04:28:34 geeohgeegeeoh Exp $
-man/man5/bgpd.conf.5
-man/man8/bgpctl.8
-man/man8/bgpd.8
-sbin/bgpctl
-sbin/bgpd

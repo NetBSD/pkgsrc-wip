@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/detab
-@pkgdir man/man1

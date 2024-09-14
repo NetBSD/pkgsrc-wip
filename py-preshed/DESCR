@@ -1,2 +1,0 @@
-Simple but high performance Cython hash table mapping pre-randomized
-keys to void* values. Inspired by Jeff Preshing.

@@ -1,8 +1,0 @@
-$NetBSD$
-
-RMD160 (pystatsd-0.1.10.tar.gz) = 2f9a9b2d1ecf6a67be9462f8fdd21e28d0e74f98
-SHA512 (pystatsd-0.1.10.tar.gz) = 1702dd1f39b9949fde23e13308542253d6a5e3ad03733282be92f981da44370467de92601fcdf11085fd6221442b2f0145604fc3b49daf66344115bf99e3108d
-Size (pystatsd-0.1.10.tar.gz) = 11884 bytes
-SHA1 (patch-pystatsd_____init____.py) = c26fa22d023f21c8d5f46370dc3aa393d6870b11
-SHA1 (patch-pystatsd_daemon.py) = d5a37086706b1fc3d53689c9a3ae39f0534765c4
-SHA1 (patch-pystatsd_server.py) = 299bd72f0a841cfe62b1d7d2c5aacf2a652a6f70

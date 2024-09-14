@@ -1,9 +1,0 @@
-bin/avocado @PREFIX@/bin/avocado-@PYVERSSUFFIX@
-bin/avocado-runner @PREFIX@/bin/avocado-runner-@PYVERSSUFFIX@
-bin/avocado-runner-avocado-instrumented @PREFIX@/bin/avocado-runner-avocado-instrumented-@PYVERSSUFFIX@
-bin/avocado-runner-exec @PREFIX@/bin/avocado-runner-exec-@PYVERSSUFFIX@
-bin/avocado-runner-exec-test @PREFIX@/bin/avocado-runner-exec-test-@PYVERSSUFFIX@
-bin/avocado-runner-noop @PREFIX@/bin/avocado-runner-noop-@PYVERSSUFFIX@
-bin/avocado-runner-python-unittest @PREFIX@/bin/avocado-runner-python-unittest-@PYVERSSUFFIX@
-bin/avocado-runner-tap @PREFIX@/bin/avocado-runner-tap-@PYVERSSUFFIX@
-bin/avocado-software-manager @PREFIX@/bin/avocado-software-manager-@PYVERSSUFFIX@

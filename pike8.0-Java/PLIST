@@ -1,3 +1,0 @@
-@comment $NetBSD$
-lib/pike8.0/modules/___Java.so
-@pkgdir share/doc/pike8.0-Java

@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/fsom
-include/fsom/convert.h
-include/fsom/fsom.h
-include/fsom/split.h
-lib/libfsom.a

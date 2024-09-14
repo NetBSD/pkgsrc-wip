@@ -1,1 +1,0 @@
-bin/hcl2tojson @PREFIX@/bin/hcl2tojson@PYVERSSUFFIX@

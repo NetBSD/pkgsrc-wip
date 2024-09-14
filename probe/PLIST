@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:06 thomasklausner Exp $
-bin/probe
-share/doc/probe/Licence
-share/doc/probe/README

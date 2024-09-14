@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/02/17 16:37:50 larnor Exp $
-
-RMD160 (typespeed-0.6.4.tar.gz) = b857333a5f9e07e54f49d94eaed66555a17cce0e
-Size (typespeed-0.6.4.tar.gz) = 250596 bytes
-SHA1 (patch-aa) = 8cba5a6384a01e2d043c2c1110c4d7bf432fc17e
-SHA1 (patch-ab) = aaff7a55ff6e166bbd0caec55531c86b03884e36
-SHA1 (patch-ac) = 96be626abc25817cca43867798228a5d656c3484
-SHA1 (patch-ad) = 6705ca8c22a145d1d02c902d52b62f02834404e3

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/12 15:05:50 othyro Exp $
-bin/flimsel
-man/man1/flimsel.1

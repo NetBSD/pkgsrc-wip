@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/01 13:58:39 jihbed Exp $
-
-RMD160 (CythonGSL-0.2.2.tar.gz) = 90155538ff3a5e544f1302439ce7d0b231d4bcb0
-SHA512 (CythonGSL-0.2.2.tar.gz) = 9c1f8a86ebb3f8da828b540d39078bf2c122033f54c2866283b9ea2251fc23b336929f94b0c343c1be45b78845e17c3d6d0df6235f09db8aa145ebe3f45bc0c5
-Size (CythonGSL-0.2.2.tar.gz) = 85364 bytes

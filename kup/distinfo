@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/08/10 11:21:07 thomasklausner Exp $
-
-RMD160 (147465-kup-0.4.2.tar.gz) = 067ca9e5505b7b6b28bc1d8d50fe92e643737163
-Size (147465-kup-0.4.2.tar.gz) = 871857 bytes
-SHA1 (patch-libgit2-0.19.0_src_util.c) = 7bea119c80fc794e3b32196a012030b8d28f5f97

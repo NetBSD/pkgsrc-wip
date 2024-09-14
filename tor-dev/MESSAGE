@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD$
-
-Please note that the only way the Tor Project recommends browsing the
-web through Tor is the Tor Browser, which is packaged as
-security/tor-browser. See security/tor-browser/MESSAGE too.
-
-This version is not a stable Tor release. Expect more bugs than usual.
-===========================================================================

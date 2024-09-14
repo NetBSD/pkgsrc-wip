@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/02/03 17:42:49 tnn2 Exp $
-
-RMD160 (glu-2.1.tar.gz) = 890a84986cebc601c9fb75bf45de85038020242e
-Size (glu-2.1.tar.gz) = 1149097 bytes
-RMD160 (vis-2.1.tar.gz) = 0e4b924eab061a4285b96752307047fc9c3b1c9f
-Size (vis-2.1.tar.gz) = 2203893 bytes
-SHA1 (patch-aa) = ef5afab97e66c7142575b7a1135dee5da4f99b53

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:17:52 agc Exp $
-
-RMD160 (greenbone-security-assistant-6.0.11.tar.gz) = d0cb51103f6e74e04e92d257a0371408324606e5
-SHA512 (greenbone-security-assistant-6.0.11.tar.gz) = 182e338b0de0a7a5793425489dcdb1de8cf0173ade32e1cc49092f8c36268cc380aa0cf74e0b79802a9608403cc6a64a10143ffd3db8f43d02e4f604ddaac847
-Size (greenbone-security-assistant-6.0.11.tar.gz) = 1493006 bytes
-SHA1 (patch-doc_CMakeLists.txt) = d2ebf18f38de0e2707f0783e4f5080792de6adc4

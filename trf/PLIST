@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/trf
-${PLIST.Darwin}bin/trf${PKGVERSION}.mac.exe
-share/doc/trf/README.md

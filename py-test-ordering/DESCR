@@ -1,5 +1,0 @@
-pytest plugin to run your tests in a specific order
-Have you ever wanted to easily run one of your tests before any
-others run? Or run some tests last? Or run this one test before
-that other test? Or make sure that this group of tests runs after
-this other group of tests?

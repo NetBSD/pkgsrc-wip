@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 11:18:13 thomasklausner Exp $
-bin/gconf-cleaner
-share/applications/gconf-cleaner.desktop
-share/locale/de/LC_MESSAGES/gconf-cleaner.mo
-share/locale/fr/LC_MESSAGES/gconf-cleaner.mo
-share/locale/ja/LC_MESSAGES/gconf-cleaner.mo
-share/locale/sv/LC_MESSAGES/gconf-cleaner.mo

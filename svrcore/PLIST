@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/19 16:49:23 udontknow Exp $
-include/svrcore.h
-lib/libsvrcore.la
-lib/pkgconfig/svrcore.pc

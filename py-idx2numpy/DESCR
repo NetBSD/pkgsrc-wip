@@ -1,2 +1,0 @@
-A Python package which provides tools to convert files to and from IDX
-format (described at http://yann.lecun.com/exdb/mnist/) into numpy.ndarray

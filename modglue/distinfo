@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/07/28 18:43:34 jihbed Exp $
-
-RMD160 (modglue-1.19.tar.gz) = 6d97669e9c5741d00b56bdbf692993c638b4a405
-Size (modglue-1.19.tar.gz) = 94435 bytes
-SHA1 (patch-Makefile.in) = c737c1be9f4b656bb9d667090d685eaf5d8e0613

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/16 22:18:13 jihbed Exp $
-
-RMD160 (magnitude-0.9.4.tar.gz) = c5e7c16b781c3d2c75b5d6868e642c53d6b428f3
-SHA512 (magnitude-0.9.4.tar.gz) = 139bbd92a904fa9d6a5c3e3660a496e97c60e89a5f9fa6741cf3c478d822728fea792a6ba386c88c3327645021257ebecb04cfa4333f3dd2bae99e60f9bb60c3
-Size (magnitude-0.9.4.tar.gz) = 11172 bytes

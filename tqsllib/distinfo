@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/11/07 22:38:49 lexort Exp $
-
-RMD160 (tqsllib-2_2_tar.gz) = 3612d1cf1941835a5163baabdd64cbeae19ade17
-Size (tqsllib-2_2_tar.gz) = 616257 bytes
-SHA1 (patch-Makefile.am) = 730b831cfa4010d2172282701f7e6d9bf14ec8e6
-SHA1 (patch-Makefile.in) = e3758802263052ecad609027f25e03975d94934b
-SHA1 (patch-configure) = ac91767ee7d630428ebc7b499ac449b7cac22d22

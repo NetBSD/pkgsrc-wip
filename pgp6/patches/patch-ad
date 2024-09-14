@@ -1,8 +1,0 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/08/15 15:25:50 tvierling Exp $
-
---- libs/pgpcdk/unix/ui/PGPKeyServerDialogs.cpp.orig	Fri Aug 15 10:32:05 2003
-+++ libs/pgpcdk/unix/ui/PGPKeyServerDialogs.cpp
-@@ -6,2 +6,3 @@
- ____________________________________________________________________________*/
-+#include <stdlib.h>
- #include <string.h>

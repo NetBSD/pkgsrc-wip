@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/xcurses-config
-include/xcurses/curses.h
-include/xcurses/panel.h
-lib/libXCurses.la
-share/doc/pdcurses/MANUAL.md
-share/doc/pdcurses/USERS.md

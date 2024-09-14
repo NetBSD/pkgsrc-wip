@@ -1,2 +1,0 @@
-SMBNetFS is a userspace filesystem that allow you to use a Samba/Microsoft
-network as a regular Unix filesystem.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/20 20:29:08 jihbed Exp $
-${PYSITELIB}/dependenpy/__init__.py
-${PYSITELIB}/dependenpy/__init__.pyc
-${PYSITELIB}/dependenpy/__init__.pyo
-${PYSITELIB}/dependenpy/utils.py
-${PYSITELIB}/dependenpy/utils.pyc
-${PYSITELIB}/dependenpy/utils.pyo

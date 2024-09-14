@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 19:29:39 anoncvs_oppn Exp $
-bin/copytape
-man/man1/copytape.1
-man/man5/copytape.5

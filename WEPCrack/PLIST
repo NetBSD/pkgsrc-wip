@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/25 23:28:35 ishit Exp $
-bin/WEPCrack.pl
-bin/WeakIVGen.pl
-bin/pcap-getIV.pl

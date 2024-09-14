@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/04 20:16:59 shattered Exp $
-bin/regular_run
-bin/sendsms
-bin/sms2html
-bin/sms2unicode
-bin/unicode2sms
-sbin/smsd
-share/examples/rc.d/smsd
-share/examples/smstools/smsd.conf

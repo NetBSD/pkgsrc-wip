@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/26 22:40:37 jihbed Exp $
-${PYSITELIB}/jsonpath.py
-${PYSITELIB}/jsonpath.pyc
-${PYSITELIB}/jsonpath.pyo

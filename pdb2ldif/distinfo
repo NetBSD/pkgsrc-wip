@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
-
-RMD160 (pdb2ldif-1.1.tar.gz) = f3905ce1c27bc1022df7bb16601d9d62ba519997
-Size (pdb2ldif-1.1.tar.gz) = 4009 bytes
-SHA1 (patch-aa) = 2fd306b983e63a9dacc180f8d5c3d0e76a152833

@@ -1,3 +1,0 @@
-memgrep is a tool to search, replace, or dump arbitrary memory from
-running applications and core files. Potential applications for memgrep
-include reverse engineering, debugging, and vulnerability assessment.

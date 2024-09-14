@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (pdfjam/v3.03.tar.gz) = ad1212a0fcb123a3e0a94bfdcf3d11c78c7e82b8
-SHA512 (pdfjam/v3.03.tar.gz) = 270ec2c4c06b4b09eb3272254d9c6b87b282c3bb83afea275962cacc0050b539f31fa598e2219c46d166f8c4d6afcedda3b257694a09c752f91d0d5d20a8b0fe
-Size (pdfjam/v3.03.tar.gz) = 124264 bytes
-SHA1 (patch-bin_pdfjam) = fe50d84b74f9338c385be2d618568e28b5bc7957

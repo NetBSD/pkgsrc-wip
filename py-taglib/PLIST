@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/15 05:38:38 netcap Exp $
-lib/libpython_taglib.la
-${PYSITELIB}/TagLib.py
-${PYSITELIB}/TagLib.pyc
-${PYSITELIB}/TagLib.pyo
-${PYSITELIB}/_TagLib.so

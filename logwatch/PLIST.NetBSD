@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2013/07/01 11:37:51 noud4 Exp $
-share/logwatch/dist.conf/logfiles/ftpd-netbsd.conf
-share/logwatch/dist.conf/services/ftpd-messages.conf
-share/logwatch/dist.conf/services/smartd.conf
-share/logwatch/dist.conf/services/zz-disk_space.conf

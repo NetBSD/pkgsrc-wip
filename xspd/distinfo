@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.14 2008/02/03 16:25:42 tnn2 Exp $
-
-RMD160 (xspsrc_051219_tar.tgz) = c1acb9e5abb8d1d94b11dc73f9036d614df9bfd2
-Size (xspsrc_051219_tar.tgz) = 886315 bytes
-SHA1 (patch-aa) = aae90dc27b7619f2f33be4e94b4a7ef16a141bde
-SHA1 (patch-ab) = e5b2f03b876d622141af6df7e3f438f992d52e7c
-SHA1 (patch-ac) = bd90ec7189b4c04f8085801c1b7ed9af0fbba7ea

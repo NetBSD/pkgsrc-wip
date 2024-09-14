@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/salmon
-lib/libsalmon_core.a
-@pkgdir lib/pkgconfig

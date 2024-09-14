@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2009/11/18 06:49:58 bharder Exp $
-lib/TclCurl${PKGVERSION}/libTclCurl${PKGVERSION}.so
-lib/TclCurl${PKGVERSION}/pkgIndex.tcl
-lib/TclCurl${PKGVERSION}/tclcurl.tcl
-man/mann/tclcurl.n
-man/mann/tclcurl_multi.n
-man/mann/tclcurl_share.n

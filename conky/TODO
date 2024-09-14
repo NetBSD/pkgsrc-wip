@@ -1,5 +1,0 @@
-- Fix curses support on NetBSD.
-- Make the NetBSD battery bits not fail
-- Actually upstream the NetBSD stuff if possible
-- Look into default config paths...
-- Build documentation?

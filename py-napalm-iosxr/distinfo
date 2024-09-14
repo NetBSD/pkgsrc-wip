@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (napalm-iosxr-0.4.8.tar.gz) = f2507c1a93d5bae12ef93c02eca09c35217f6361
-SHA512 (napalm-iosxr-0.4.8.tar.gz) = 33463b31705cf15e0055d54d9386bc02185708339a0534075a41d1bb8a34f91d5ee78d9d71364cc50b06b8457863e3efb64b0407704c19913da661a366a31071
-Size (napalm-iosxr-0.4.8.tar.gz) = 418447 bytes
-SHA1 (patch-setup.py) = 4561d22e20ce65d642d9ac96752469d5b60c3e2b

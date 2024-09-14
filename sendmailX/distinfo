@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/11/05 00:25:17 adrian_p Exp $
-
-RMD160 (smX-0.0.0.0.tar.gz) = 75434866aba7cb58e0863f9c538ef7abd518061b
-Size (smX-0.0.0.0.tar.gz) = 3919940 bytes
-SHA1 (patch-ab) = 76e025b9080db4489d070be2d3fd0a9b83820579

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/07 16:40:37 jihbed Exp $
-man/man8/stmpclean.8
-sbin/stmpclean
-share/doc/stmpclean/FAQ

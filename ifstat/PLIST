@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/29 22:14:33 florian-geiges Exp $
-bin/ifstat
-man/man1/ifstat.1

@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (tor-0.4.6.5.tar.gz) = e773423c05ea9557c109a85cdee15b731ce4340b
-SHA512 (tor-0.4.6.5.tar.gz) = 62bcd8d446199cdd397a688d454730a057ef20be4152e6d0632f64df27c993c70be0dbde0a2e7679a8a20850371a503b8daf777296d555760d8aae3286e48050
-Size (tor-0.4.6.5.tar.gz) = 7754823 bytes
-SHA1 (patch-Makefile.in) = c190295f4702bd1e69531cab1ac61dbab451e48b
-SHA1 (patch-src_app_config_config.c) = bac106e382207cdf22c84a52b45c791de2bdf0f8

@@ -1,3 +1,0 @@
-JSONRequester is a wrapper around Httplib2 to interact with JSON APIs.
-It works similarly to Httplib2 but converts request and response data
-to and from JSON.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2013/12/13 19:06:05 gschwarz Exp $
-
-RMD160 (src.tar.gz) = 3339c117eed6465c3eac140fef61234e88f03cd8
-SHA512 (src.tar.gz) = 7c95cc11a5c1e8e649c39a87f2e5d48fc2dd08f61efb19050f030b8c2c1b8443a3a696bb12553b5a12ef0df85fc9252fadbfc03d5f7e66eb5a054f490c75a9a0
-Size (src.tar.gz) = 12268838 bytes
-SHA1 (patch-aa) = 65141c5201c349e0f53b17840e455c4ab66ed8aa

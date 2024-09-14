@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:49 thomasklausner Exp $
-bin/jgloss
-libexec/jgloss/jgloss.jar
-share/doc/jgloss/README.txt
-share/doc/jgloss/jgloss.pdf

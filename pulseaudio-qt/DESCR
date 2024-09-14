@@ -1,4 +1,0 @@
-KF5 PulseAudio Qt Bindings - libpulse bindings for Qt
-
-PulseaudioQt allows programs using the Qt library to control
-volumeand react to changes on systems which use PulseAudio.

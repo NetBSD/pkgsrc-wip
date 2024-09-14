@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.311 2018/04/03 03:10:51 ryoon Exp $
-
-RMD160 (firefox-61.0a1/a8061a09cd70.tar.bz2) = a9c192667862c776b17a092e944fe2ce4d15a607
-SHA512 (firefox-61.0a1/a8061a09cd70.tar.bz2) = 487bc6e3e3b8605e2ba6a832ba5b50536c0d39283197f701e0c018740dd1f5a473cb2c9f01401109e92458aa8908bbdc2acc22bc35cd63420e17a981a73061f1
-Size (firefox-61.0a1/a8061a09cd70.tar.bz2) = 329324179 bytes
-SHA1 (patch-servo_components_style_build__gecko.rs) = fca2260a70b496fc010f165ff4d68788b7e28632
-SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038

@@ -1,3 +1,0 @@
-uilive is a go library for updating terminal output in realtime.
-It provides a buffered io.Writer that is flushed at a timed
-interval. uilive powers uiprogress.

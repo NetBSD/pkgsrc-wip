@@ -1,5 +1,0 @@
-$NetBSD$
-
-RMD160 (go-bindata-4.0.0.tar.gz) = a4ba02b730f8bd1e28da7221423aad7d5c7b4d84
-SHA512 (go-bindata-4.0.0.tar.gz) = c6182dd5ac46e7febe272e8f59c5e5c76658d42584c5db10e7b188577fc56d7a26f1743fea328f149ae5628fa305ca98cb5f27a29cef270cd10ef806e0e149bc
-Size (go-bindata-4.0.0.tar.gz) = 62125 bytes

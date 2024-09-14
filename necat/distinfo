@@ -1,9 +1,0 @@
-$NetBSD$
-
-RMD160 (NECAT/v0.0.1_update20200803.tar.gz) = 0d52e27e37ee309ddbd1434a1d245b089dfd7d24
-SHA512 (NECAT/v0.0.1_update20200803.tar.gz) = 77b5256deb480711132adfdb8763bc1247046592e2bbecacc59934a1188f49af6d8ee678e8278606aa859417fbe5c76364c627dacbdf3e3ec0bdb8a052469690
-Size (NECAT/v0.0.1_update20200803.tar.gz) = 500777 bytes
-SHA1 (patch-src_Makefile) = 56d9f7ee4a006710cee5d9d71d318e216b9f2105
-SHA1 (patch-src_fsa_logger.hpp) = d9fd5e008d4673d66fb0a26b5665e833f5a198ee
-SHA1 (patch-src_main.mk) = eba3ec54061fec4fa3c5ff2f127144851807a155
-SHA1 (patch-src_pipeline_main.mk) = f1d5fd06eaac08f2b196559d49085535a4ffffce

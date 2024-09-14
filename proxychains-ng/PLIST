@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/proxychains4
-lib/libproxychains4.so
-share/examples/proxychains/proxychains.conf

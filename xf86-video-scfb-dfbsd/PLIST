@@ -1,3 +1,0 @@
-@comment $NetBSD$
-lib/xorg/modules/drivers/scfb_drv.la
-man/man4/scfb.4

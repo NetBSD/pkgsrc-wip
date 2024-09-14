@@ -1,5 +1,0 @@
-decode-dimms is a small utility that displays the contents of DIMM memory
-SPD ROMs in human-readable form.
-
-This version of decode-dimms can even directly read the SPD ROM data from
-the sysctl variables created by the spdmem device driver (NetBSD-only).

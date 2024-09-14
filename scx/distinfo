@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:40 rillig Exp $
-
-RMD160 (scx-0.2.tar.gz) = d8655167d81c47a62b32908d8b6cd74404d613cc
-Size (scx-0.2.tar.gz) = 378340 bytes
-SHA1 (patch-aa) = 85c9e0d274510c3dde0f597ac64153ee62ce6363
-SHA1 (patch-ab) = 7700432ace3340b2ff50c8d6a86578e6792d7695

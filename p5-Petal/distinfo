@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2011/10/11 07:46:43 jgoamakf Exp $
-
-RMD160 (Petal-2.26.tar.gz) = d6b3718f7b0ddd82a6aed873834e7713f15e062a
-SHA512 (Petal-2.26.tar.gz) = 558f5fe98fc67d1b19d3a5534eb629a65f0eb62170640356cf642a06af9afe4168ad65d835d1995de2806d36c7db74c7400eba5094f1bf26bf1e622c8e1f618d
-Size (Petal-2.26.tar.gz) = 93537 bytes

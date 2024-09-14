@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/28 23:10:54 jihbed Exp $
-
-RMD160 (xesam-glib-0.5.0.tar.gz) = bb9821045b501316ca224e6687ab5bddf615f988
-Size (xesam-glib-0.5.0.tar.gz) = 607954 bytes
-SHA1 (patch-aa) = b879166c6032a58a861efdd9c3efcd9234063eac

@@ -1,3 +1,0 @@
-Make an exact (local or remote) mirror copy of a file or directory,
-creating and deleting files and directories as necessary.  UTimes,
-hardlinks, softlinks, devices, permissions, and flags are mirrored.

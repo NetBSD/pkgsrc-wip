@@ -1,9 +1,0 @@
-$NetBSD: patch-include_Makefile.am,v 1.1 2013/12/05 21:26:34 thomasklausner Exp $
-
-automake build infrastructure.
-http://sourceforge.net/p/libircclient/patches/6/
-
---- include/Makefile.am.orig	2013-12-05 20:29:46.000000000 +0000
-+++ include/Makefile.am
-@@ -0,0 +1 @@
-+include_HEADERS = libirc_errors.h libirc_events.h libirc_options.h libirc_rfcnumeric.h libircclient.h

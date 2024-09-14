@@ -1,9 +1,0 @@
-@comment $NetBSD$
-bin/c_halsfilt
-bin/cmetrics
-bin/halstead
-bin/kdsi
-bin/mccabe
-bin/stripcom
-bin/stripstr
-share/doc/cmetrics/README

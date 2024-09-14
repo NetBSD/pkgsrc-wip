@@ -1,2 +1,0 @@
-The Python module hostlist.py knows how to expand and collect LLNL hostlists,
-as used by SLURM, pdsh, powerman, and genders, among other projects.

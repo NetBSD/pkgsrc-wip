@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/12 23:53:40 christtrekker Exp $
-
-RMD160 (etoile-0.4.1.tar.gz) = aaaed1d8bb3d3c946de5c23ad1171a78526469ba
-Size (etoile-0.4.1.tar.gz) = 8966178 bytes
-SHA1 (patch-aa) = 2db5ef3a09a8eae2a54cb371245113fc302ee615
-SHA1 (patch-ab) = 843afdee9a30e4f1c2606eb70cd1b107265daf99

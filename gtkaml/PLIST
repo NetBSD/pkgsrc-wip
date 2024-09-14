@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/29 13:51:21 jihbed Exp $
-bin/gtkaml
-bin/gtkamlc
-man/man1/gtkamlc.1
-share/gtkaml/implicits/Clutter.implicits
-share/gtkaml/implicits/Gtk.implicits

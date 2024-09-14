@@ -1,3 +1,0 @@
-The partonevolution library can be used to evolve parton distributions given by
-parameterizations at a scale $Q_0$ to the desired scale $Q$
-according to next-to-leading order evolution kernels

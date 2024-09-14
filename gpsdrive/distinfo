@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/09/23 14:19:10 tnn2 Exp $
-
-RMD160 (gpsdrive-2.10pre4.tar.gz) = 824c71cbad5f0c87f05329332e6fa856ed9f7393
-Size (gpsdrive-2.10pre4.tar.gz) = 4722944 bytes
-SHA1 (patch-aa) = 8a6f1b5ef04ee1a4444f0bbc478f8b7cfa7c0872

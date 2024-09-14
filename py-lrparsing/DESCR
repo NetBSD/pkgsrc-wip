@@ -1,3 +1,0 @@
-Lrparsing provides both an LR(1) parser and a tokeniser. It differs from other
-Python LR(1) parsers in using Python expressions as grammars, and offers
-simple to use disambiguation tools

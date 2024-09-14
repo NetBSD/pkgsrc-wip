@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/03/19 01:10:14 bubuchka Exp $
-
-RMD160 (R/RMySQL_0.10.9.tar.gz) = 19b2d5550a96af39c1aa366769b44b90dc0159ff
-SHA512 (R/RMySQL_0.10.9.tar.gz) = 2ffee0db865a2ddc13cc1a86669ec0c1aa2cfa87df4969c3433a282daa1ce1ba33089c5723efa1cee86493159dfe74d4699e291d02efde9024523b4d3afc9c59
-Size (R/RMySQL_0.10.9.tar.gz) = 54012 bytes

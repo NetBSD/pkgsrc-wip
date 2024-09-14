@@ -1,3 +1,0 @@
-Generic jenkins shared pipeline alternative.
-Hopic project only has a minimal CI driver component written in Groovy with the
-rest written in Python.

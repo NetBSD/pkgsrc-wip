@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (uzbl-v0.9.1.tar.gz) = 77dabda66b65881b0f52931dbcad363e4155f75b
-SHA512 (uzbl-v0.9.1.tar.gz) = 09340e0ba19619ebcd03d2bea076c4f32fdac3bf8dcacc0b665b23624ea565c2d577790d95c780a6a8ba15e97ed997bd5b09cd259f19c947c40c0c76f14f0665
-Size (uzbl-v0.9.1.tar.gz) = 257496 bytes
-SHA1 (patch-examples_config_config) = 56ac5901dc93086ba5bf0167df21e90c4fa995fc

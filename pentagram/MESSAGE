@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD$
-You will need the data files from the original Ultima 8 game.
-Set the path variable to point to the data files in pentagram.ini.
-More information is available in ${PREFIX}/share/doc/pentagram/README.
-
-===========================================================================

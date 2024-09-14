@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2008/10/27 19:13:58 shattered Exp $
-
-RMD160 (oops-1.5.24.tar.gz) = be2776118ad01085ed53949f31d7b168230e1861
-Size (oops-1.5.24.tar.gz) = 479299 bytes
-SHA1 (patch-aa) = 2830822612bd123bad35adbad8088a9ba9becd7b
-SHA1 (patch-ab) = 8f07298d5d5fbfd4f324cad82cad40ff3f4972d1
-SHA1 (patch-ac) = bb038eab3acc9dc3e82fcab3b171af829ba082a8
-SHA1 (patch-ad) = 231492884b2f38c9d4d0c9198dcc30e80ffbfdbf

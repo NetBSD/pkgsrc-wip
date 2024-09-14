@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/09/12 20:18:57 jihbed Exp $
-
-RMD160 (control-0.8.4.tar.gz) = 8bf5cfe280e1c1bc9b8fc53a8b86edd0a91137f7
-SHA512 (control-0.8.4.tar.gz) = 418459632d6de815262c32bc75f99d411caac46b8830d021264a8ec94f88c5db5f0e2c58e32e996b9bc35863c91044065f0deea8d7add7f56116ec1c4c91c011
-Size (control-0.8.4.tar.gz) = 261825 bytes

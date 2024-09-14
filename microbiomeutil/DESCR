@@ -1,5 +1,0 @@
-A set of software utilities for processing and analyzing 16S rRNA genes
-including generating NAST alignments, chimera checking, and assembling paired
-16S rRNA reads according to reference sequence homology.
-
-WWW: http://sourceforge.net/projects/microbiomeutil/

@@ -1,3 +1,0 @@
-Library for storing, validating, and calculating with parameters.
-Designed to work with the Brightway2 life cycle assessment
-framework, but is generic enough to work in other use cases.

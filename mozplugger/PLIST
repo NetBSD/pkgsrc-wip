@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:50:43 thomasklausner Exp $
-bin/mozplugger-controller
-bin/mozplugger-helper
-lib/mozilla/plugins/mozplugger.so
-share/examples/mozplugger/mozpluggerrc

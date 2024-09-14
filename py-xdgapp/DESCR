@@ -1,3 +1,0 @@
-A python library providing access to XDG data, config and cache directories and
-generating file names. Including downloaded url cache. Keeps everything in an
-XDGApplication object.

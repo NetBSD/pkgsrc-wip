@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/07 21:27:38 shattered Exp $
-
-RMD160 (pax-3.4.tar.bz2) = 95ef6da19c53740b8d942c4501e09e3b08d77045
-Size (pax-3.4.tar.bz2) = 160465 bytes
-SHA1 (patch-aa) = c974133f337a3c261c6cfca07bca0a1cba6a5e08

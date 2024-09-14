@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/01/03 03:38:48 othyro Exp $
-
-RMD160 (libxs-1.2.0.tar.gz) = 3358316ceb8ce2fe8b51676d392df068edf880e8
-Size (libxs-1.2.0.tar.gz) = 1955426 bytes
-SHA1 (patch-configure) = 4718e0e114ae51e4c17ed3229efca5998707cf4c

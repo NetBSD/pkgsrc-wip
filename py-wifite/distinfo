@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/05/26 01:53:39 othyro Exp $
-
-RMD160 (wifite-2.0r85.tar.gz) = 6ddeb55df0eaa8bdd3616b0300d4a1c23ac24a4f
-Size (wifite-2.0r85.tar.gz) = 33176 bytes
-SHA1 (patch-wifite.py) = f60c0c65c033c0ba7c3c225deb781ef504e9c0b7

@@ -1,3 +1,0 @@
-@comment $NetBSD$
-${PYSITELIB}/_mlt.so
-${PYSITELIB}/mlt.py

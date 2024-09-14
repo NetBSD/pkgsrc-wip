@@ -1,5 +1,0 @@
-@comment $NetBSD$
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/stringcase.py
-${PYSITELIB}/stringcase.pyc
-${PYSITELIB}/stringcase.pyo

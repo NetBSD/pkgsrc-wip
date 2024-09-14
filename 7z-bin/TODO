@@ -1,4 +1,0 @@
-I think we need to install newer libraries:
-
-7zz: /usr/lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by 7zz)
-7zz: /usr/lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by 7zz)

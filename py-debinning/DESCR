@@ -1,4 +1,0 @@
-Two algorithms to remove the bias inherent when binning data
-into histograms. These algorithms, based only upon the data
-and knowledge of the background shape, are then used to create
-binless and binfull representations of the data.

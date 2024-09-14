@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (ppft-1.6.6.3.zip) = 81508a49d89061dfccdb468eb27e0db1d8184d5c
-SHA512 (ppft-1.6.6.3.zip) = d047473b97a6fb0aac8acf35c884e7b85b1fd199adba7851f9199fbce2d0fb4118cac68438fe8aae3704fbe0db502e036098b7935004d49fe975ef73a2f2e616
-Size (ppft-1.6.6.3.zip) = 106281 bytes
-SHA1 (patch-setup.py) = 69704fa7037253d6f60af0ff3d31143bf8d4a912

@@ -1,9 +1,0 @@
-LTSmin started out as a generic toolset for manipulating labelled transition
-systems. Meanwhile the toolset was extended to a a full (LTL/CTL/mu-calculus)
-model checker, while maintaining its language-independent characteristics.
-
-To obtain its input, LTSmin connects a sizeable number of existing
-(verification) tools: *muCRL*, *mCRL2*, *DiVinE*, *SPIN* (*SpinS*), *UPPAAL*
-(*opaal*), *SCOOP*, *PNML*, *ProB* and *CADP*. Moreover, it allows to reuse
-existing tools with new state space generation techniques by exporting LTSs
-into various formats.

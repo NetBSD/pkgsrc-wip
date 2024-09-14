@@ -1,4 +1,0 @@
-mozlog is a library designed for logging the execution and results of test harnesses.
-The internal data model is a stream of JSON-compatible objects, with one object per
-log entry. The default output format is line-based, with one JSON object serialized
-per line

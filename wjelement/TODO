@@ -1,8 +1,0 @@
-Is this warning OK?
-
-  MACOSX_RPATH is not specified for the following targets:
-
-   wjelement
-   wjreader
-   wjwriter
-   xpl

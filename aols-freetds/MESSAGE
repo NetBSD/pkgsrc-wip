@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/05/18 09:26:17 rillig Exp $
-
-You will have to modify the aolserver configuration file "nsd.tcl" which
-is installed at ${PKGSYSCONFDIR}/nsd.tcl and configure freetds in order to
-use nsfreetds.  See www.aolserver.com and www.freetds.org for more info.
-
-===========================================================================

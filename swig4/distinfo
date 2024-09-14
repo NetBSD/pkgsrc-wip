@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/04/01 05:18:19 adam Exp $
-
-RMD160 (swig-4.0.2.tar.gz) = 1a995ebc0ff1a11d9d1002357673e655f6a0d2b2
-SHA512 (swig-4.0.2.tar.gz) = 05e7da70ce6d9a733b96c0bcfa3c1b82765bd859f48c74759bbf4bb1467acb1809caa310cba5e2b3280cd704fca249eaa0624821dffae1d2a75097c7f55d14ed
-Size (swig-4.0.2.tar.gz) = 8097014 bytes

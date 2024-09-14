@@ -1,5 +1,0 @@
-geoloc
-
-Simple Unix socket which delivers some Geolocalisation's data
-per IP address request. It is API agnostic, hence several backends
-could be supported (for the moment GeoIP and IP2location).

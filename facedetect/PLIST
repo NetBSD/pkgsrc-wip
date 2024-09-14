@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/facedetect
-share/doc/facedetect/COPYING.txt
-share/doc/facedetect/README.rst
-share/doc/facedetect/biggest-best.jpg

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/23 16:00:40 jakllsch Exp $
-${PYSITELIB}/_remctl.so
-${PYSITELIB}/remctl.py
-${PYSITELIB}/remctl.pyc
-${PYSITELIB}/remctl.pyo

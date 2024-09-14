@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/portable-rpcgen
-include/rpc/rpc.h
-include/rpc/types.h
-include/rpc/xdr.h
-lib/libportablexdr.la

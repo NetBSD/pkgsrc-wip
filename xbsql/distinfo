@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
-
-RMD160 (xbsql-0.11.tgz) = ff72a1bf45afb8ee59a7549d6f7734305c394342
-Size (xbsql-0.11.tgz) = 307392 bytes
-SHA1 (patch-aa) = 4add4654fcf6906de30c15f5d52ea955198264db

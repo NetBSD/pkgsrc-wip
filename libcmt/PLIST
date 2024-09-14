@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:52 thomasklausner Exp $
-include/cmt/cmt.h
-include/cmt/gtransaction.h
-lib/libcmt.la
-lib/pkgconfig/libcmt-sharp.pc
-lib/pkgconfig/libcmt.pc

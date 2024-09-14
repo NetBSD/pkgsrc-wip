@@ -1,8 +1,0 @@
-$NetBSD: TODO,v 1.3 2006/03/15 14:41:29 poppnk Exp $
-
-Ready for pkgsrc.
-
-Really? I'm unable to build/install this package on gnu/linux. This package is broken
-
-set -e; for i in dtd/[a-z]*; do  /usr/bin/install -c -o root -g root -m 444 $i /usr/pkg/share/sgml/dtd/sgmltools;  done;
-/usr/bin/install: «dtd/CVS» is a directory.

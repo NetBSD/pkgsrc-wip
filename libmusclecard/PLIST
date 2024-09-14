@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
-include/PCSC/mscdefines.h
-include/PCSC/musclecard.h
-lib/libmusclecard.la
-lib/pkgconfig/libmusclecard.pc
-man/man8/bundleTool.8
-sbin/bundleTool
-share/doc/libmusclecard/muscle-api-1.3.0.pdf

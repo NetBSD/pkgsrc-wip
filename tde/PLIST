@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
-bin/tde
-bin/tdv

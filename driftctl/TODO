@@ -1,3 +1,0 @@
-- Research if it is possible to bundle Terraform providers directly as Go
-  modules instead of fetching them at run time (and possibly failing on platform
-  like NetBSD that do not have any binary providers available).

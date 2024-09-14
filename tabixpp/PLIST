@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/tabix++
-include/tabix.hpp
-lib/libtabix.a
-lib/libtabix.so
-lib/libtabix.so.1

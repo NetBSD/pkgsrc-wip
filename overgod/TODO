@@ -1,3 +1,0 @@
-Writes config and highscore to ${PREFIX}/share/overgod.
-Either find a different solution or make dir group games writeable
-and overgod setgid games.

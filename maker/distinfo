@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (maker-3.01.04.tgz) = faf7a526c74c9812da46100fa006136485f2d86d
-SHA512 (maker-3.01.04.tgz) = dc04bc33bcd5516ac63b4e50bc54d5faf9fdbd67bd597461c1bd8b1ae51feb66522d8a40f4ce7fddc0153cf619ce00d6a79176e99608884936f824db124f2f6c
-Size (maker-3.01.04.tgz) = 13649888 bytes
-SHA1 (patch-src_Build.PL) = d16b62ed93b97eaa9efbba3d9c78d2285f1b6db4

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/05 19:00:52 jihbed Exp $
-bin/toeplitz-runtests2.7
-${PYSITELIB}/toeplitz.so

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/03 22:19:03 jihbed Exp $
-bin/class.x
-bin/cws.x
-bin/nef.x
-bin/poly.x
-share/doc/palp/palp.pdf

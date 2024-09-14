@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/27 22:27:07 jihbed Exp $
-lib/superchicv${PKGVERSION}.f

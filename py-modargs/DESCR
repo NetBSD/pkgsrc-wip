@@ -1,2 +1,0 @@
-modargs is a simple command line argument parsing library that infers
-arguments from functions in a module

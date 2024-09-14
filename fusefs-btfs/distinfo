@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/10/29 11:23:08 shattered Exp $
-
-RMD160 (btfs-0.0.3.tar.gz) = 5be7fb4ed19f30b83fd2ad0eb95deda3f29ecc16
-Size (btfs-0.0.3.tar.gz) = 7509 bytes
-SHA1 (patch-aa) = c8d83024f0defd9a8e17fcb453493360a2d2cbaa

@@ -1,8 +1,0 @@
-@comment $NetBSD$
-bin/ploot-braille
-bin/ploot-farbfeld
-bin/ploot-feed
-bin/ploot-text
-man/man1/ploot-farbfeld.1
-man/man1/ploot-feed.1
-man/man5/ploot-tsv.5

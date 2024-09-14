@@ -1,5 +1,0 @@
-libmixed TODO:
-
-- Get NetBSD support patches accepted upstream
-- Figure out why 'install(TARGETS)' in the CMakeLists doesn't do what I
-  expect

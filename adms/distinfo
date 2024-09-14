@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/06/13 05:36:11 othyro Exp $
-
-RMD160 (adms-2.2.8.tar.gz) = 03367e683ae84c75b83645c7a4973b4e654daf8b
-Size (adms-2.2.8.tar.gz) = 694471 bytes
-SHA1 (patch-aa) = aedea30dc5edfda0680820f62b8c3c2aef3dc37e

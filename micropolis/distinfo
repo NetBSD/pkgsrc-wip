@@ -1,9 +1,0 @@
-$NetBSD$
-
-RMD160 (micropolis-activity-source.tgz) = 0a683d86b1b0b1ae743abf4488293005ad3da87d
-SHA512 (micropolis-activity-source.tgz) = fe65966c43d044e01a63a3cfe3cad48466eb1e5ec8b13c03abb52d582395a8ab527332d4d04454a4f32e85b65e55d72fe5e4d53a3f37b422d90e9208f00d9976
-Size (micropolis-activity-source.tgz) = 7676438 bytes
-RMD160 (micropolis_git-1530263971-cc31822e4ebe54c0109623ac0c5cdf0e3acad755.patch) = 4f39b9e60efb102eb4f265d1545e70037a09e3d8
-SHA512 (micropolis_git-1530263971-cc31822e4ebe54c0109623ac0c5cdf0e3acad755.patch) = c5dc083c90cfaf0bf351de8908ae8582d24776c995a0f81472dece5bcb76f270b8c8347563e3f116bbc691c6d2764b7ef005387a0437d144fc2e096e1dfdf550
-Size (micropolis_git-1530263971-cc31822e4ebe54c0109623ac0c5cdf0e3acad755.patch) = 1137456 bytes
-SHA1 (patch-src_sim_makefile) = 9e9db123cfbed546753f3e8842fb468c67558d4b

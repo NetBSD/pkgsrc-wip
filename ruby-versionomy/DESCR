@@ -1,5 +1,0 @@
-= versionomy: Versionomy is a generalized version number library
-
-Versionomy is a generalized version number library. It provides
-tools to represent, manipulate, parse, and compare version numbers
-in the wide variety of versioning schemes in use.

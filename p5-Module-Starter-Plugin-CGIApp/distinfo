@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/01 23:22:50 ficovh Exp $
-
-RMD160 (Module-Starter-Plugin-CGIApp-0.44.tar.gz) = 99a98fba0408c24abb4d76774ca845aab26cb69f
-SHA512 (Module-Starter-Plugin-CGIApp-0.44.tar.gz) = 8ab8aed4d637164d2ceab66065bb26c236b9f7a5173e6fc199cffdfa0d48cd3d5bfd48204f63515b093e8348fe8709a429933ab97f60859a53cea7dfcf20a21c
-Size (Module-Starter-Plugin-CGIApp-0.44.tar.gz) = 40112 bytes

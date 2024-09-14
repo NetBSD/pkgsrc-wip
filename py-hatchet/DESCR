@@ -1,5 +1,0 @@
-Hatchet is a Python-based library that allows dataframes to be indexed
-by structured tree and graph data. It is intended for analyzing performance
-data that has a hierarchy. Hatchet implements various operations to analyze
-a single hierarchical data set or compare multiple data sets, and its API
-facilitates analyzing such data programmatically.

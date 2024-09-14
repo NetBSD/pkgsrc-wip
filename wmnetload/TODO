@@ -1,3 +1,0 @@
-Patch it so it runs as non-root user.
-
-Tries to access /dev/mem currently so can only be run as root.

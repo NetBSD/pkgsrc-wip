@@ -1,2 +1,0 @@
-This tool uses the workerpool for multithreading and boto
-for access to the Amazon S3 API

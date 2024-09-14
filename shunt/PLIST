@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/30 22:39:15 fgudin Exp $
-bin/exactly
-bin/flyisofs
-bin/shunt

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2012/12/31 23:38:01 othyro Exp $
-
-RMD160 (Songwrite2-0.4.1.tar.gz) = 9b5847acd0266fcdd915c9ebdc3a761e1402177c
-Size (Songwrite2-0.4.1.tar.gz) = 2379230 bytes
-SHA1 (patch-setup.py) = 75a0517a668b212e281b5d1970ac7479d60a438d

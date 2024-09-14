@@ -1,3 +1,0 @@
-PEAR is an ultrafast, memory-efficient and highly accurate pair-end read
-merger. It is fully parallelized and can run with as low as just a few
-kilobytes of memory.

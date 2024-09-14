@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/12/28 03:58:48 christian_gall Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule auth_imap_module lib/httpd/mod_auth_imap.so
-
-===========================================================================

@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (pentagram/e90df6d82b9e8eaf5725a2d4cc117121ce39f5a5-e90df6d82b9e8eaf5725a2d4cc117121ce39f5a5.tar.gz) = 98c158f87c2bd00a5e792e94073db21431bd23a1
-SHA512 (pentagram/e90df6d82b9e8eaf5725a2d4cc117121ce39f5a5-e90df6d82b9e8eaf5725a2d4cc117121ce39f5a5.tar.gz) = 3253f5466fcf45a82fdf84e360eda7c877f1f9818e3517fbb4154c79f2a56322f0cac61c15f8677872046ed0185b58dcad4f3eb86aad50eabda0e8d04a21b9c8
-Size (pentagram/e90df6d82b9e8eaf5725a2d4cc117121ce39f5a5-e90df6d82b9e8eaf5725a2d4cc117121ce39f5a5.tar.gz) = 5864250 bytes
-SHA1 (patch-configure.ac) = 1e20998d480f3776460c868305ebeae347b8d71e
-SHA1 (patch-sudio_midi_FluidSynthMidiDriver.cpp) = f09a792bceaaebb610265a868e1e57e93974b04a

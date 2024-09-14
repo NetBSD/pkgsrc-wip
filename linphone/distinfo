@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.16 2013/06/07 17:37:59 othyro Exp $
-
-RMD160 (linphone-3.9.1.tar.gz) = 14e700cce4ace86df7e298d0f1b01de22ec2a25e
-SHA512 (linphone-3.9.1.tar.gz) = 1824ef0012995985788b2a14dc886c82a05a6ad547d60bed802c6dd12bd4aa289df65a5c8a3caa8cce711977ff37fde54b0e0cc31175c5497f6b30995ed80b3f
-Size (linphone-3.9.1.tar.gz) = 13443595 bytes
-SHA1 (patch-aa) = d27f9fe2c7f86fbf30e9a8a76b8c2c23f001b331
-SHA1 (patch-ab) = fd1174da58b5610b6c92cae784f4623aaa03c71c
-SHA1 (patch-configure) = 47bdab8b59e2b0329963d552c45750cc8a46c9cb

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
-bin/ta-lib-config
-include/ta-lib/ta_abstract.h
-include/ta-lib/ta_common.h
-include/ta-lib/ta_defs.h
-include/ta-lib/ta_func.h
-include/ta-lib/ta_libc.h
-lib/libta_lib.la

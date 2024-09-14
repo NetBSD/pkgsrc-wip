@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:39 thomasklausner Exp $
-include/glkterm/Make.glkterm
-include/glkterm/gi_blorb.h
-include/glkterm/gi_dispa.h
-include/glkterm/glk.h
-include/glkterm/glkstart.h
-lib/libglkterm.la

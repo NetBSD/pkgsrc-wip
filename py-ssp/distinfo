@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/01/14 21:15:08 jihbed Exp $
-
-RMD160 (pyssp-0.1.6.5.tar.gz) = 5105e879e6412d4de62140eb884d7479af675f7c
-SHA512 (pyssp-0.1.6.5.tar.gz) = bd2f29408c4e51585ae9857f9e715422880dc3f6643f306b8229ce5b66a210393a3c6bf72a301b734d65b9808409462739226326ef7737a50befbaf971ceb4af
-Size (pyssp-0.1.6.5.tar.gz) = 8383 bytes

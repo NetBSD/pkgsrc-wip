@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/09/06 22:22:36 thomasklausner Exp $
-
-RMD160 (SuperCollider-3.7.2-Source.tar.bz2) = 439594ff49145eae43f8b63d11699745a361b084
-SHA512 (SuperCollider-3.7.2-Source.tar.bz2) = 8ce249b60ccf0ae05bef5f31ca3705e78ed6f58edafb331bf6f0028b20fa1d3394b6abf665f190b77ace108979afea7b2ece8ef3c8aeed7348a0b45d4b668292
-Size (SuperCollider-3.7.2-Source.tar.bz2) = 10526566 bytes

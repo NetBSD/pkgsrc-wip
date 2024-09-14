@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:46 thomasklausner Exp $
-bin/igowin
-share/${PKGBASE}/grain.bmp
-share/${PKGBASE}/igowin.exe
-share/${PKGBASE}/igowin.hlp
-share/${PKGBASE}/readme.txt
-share/${PKGBASE}/tutor.hlp

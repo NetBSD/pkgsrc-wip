@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/zetacoin-cli
-${PLIST.qt}bin/zetacoin-qt
-sbin/zetacoind
-share/examples/rc.d/zetacoind
-share/examples/zetacoin/zetacoin.conf

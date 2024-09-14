@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/servatrice
-share/applications/servatrice.desktop
-share/icons/hicolor/48x48/apps/servatrice.png
-share/icons/hicolor/scalable/apps/servatrice.svg
-share/servatrice/servatrice.ini.example
-share/servatrice/servatrice.sql

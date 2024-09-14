@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
-
-RMD160 (smtpscan-0.5.tar.gz) = ca203a6054a34cc5faaee2b02a651181c5f309b7
-Size (smtpscan-0.5.tar.gz) = 162643 bytes
-SHA1 (patch-aa) = 353e7966cc221dc8ec62f0e34c5d77f1aa63ba4b
-SHA1 (patch-ab) = ddaf1fff98d29136cb53f6006e0045ac69009a52

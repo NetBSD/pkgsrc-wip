@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
-bin/DBDirect-hdbc-sqlite3
-lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC/SQLite3.hi
-lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC/SQLite3.p_hi
-lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/HShaskelldb-hdbc-sqlite3-${PKGVERSION}.o
-lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHShaskelldb-hdbc-sqlite3-${PKGVERSION}.a
-lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHShaskelldb-hdbc-sqlite3-${PKGVERSION}_p.a
-lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/package-description

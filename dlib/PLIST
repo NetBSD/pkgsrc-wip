@@ -1,9 +1,0 @@
-@comment $NetBSD$
-include/dlib/config.h
-include/dlib/revision.h
-lib/cmake/dlib/dlib-release.cmake
-lib/cmake/dlib/dlib.cmake
-lib/cmake/dlib/dlibConfig.cmake
-lib/cmake/dlib/dlibConfigVersion.cmake
-lib/libdlib.a
-lib/pkgconfig/dlib-1.pc

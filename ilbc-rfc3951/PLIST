@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:46 thomasklausner Exp $
-include/ilbc/iLBC_decode.h
-include/ilbc/iLBC_define.h
-include/ilbc/iLBC_encode.h
-lib/libilbc.la

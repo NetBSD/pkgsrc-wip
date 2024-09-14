@@ -1,4 +1,0 @@
-$NetBSD: TODO,v 1.1 2014/07/03 14:46:21 darcycain Exp $
-
-It builds but needs someone familiar with OpenERP to figure out why it
-doesn't run.

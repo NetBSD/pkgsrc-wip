@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/07 01:00:16 thomaspfaff Exp $
-bin/nbfc
-man/man1/nbfc.1

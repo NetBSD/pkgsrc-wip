@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:42 thomasklausner Exp $
-bin/gwhois
-man/man1/gwhois.1
-share/${PKGBASE}/pattern

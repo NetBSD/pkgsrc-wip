@@ -1,3 +1,0 @@
-- port to *BSD? (uses /proc :/) TCP_ESTABLISHED is not in NetBSD
-- create rc.d script :?
-

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/31 19:02:25 jihbed Exp $
-
-RMD160 (gtg-0.5.tar.gz) = f1847812ea6d9d04d7d801242c46dd63b2c65133
-SHA512 (gtg-0.5.tar.gz) = 631f5343301d7d72211398152fa081c0fa15154babc7ec900f13a39a2677d0edaf4fea534a83284207e8019926c9108dc1d8f25bdbeae85ef0665dfe1c7b768a
-Size (gtg-0.5.tar.gz) = 2229259 bytes

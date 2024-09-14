@@ -1,4 +1,0 @@
-pygtrie is a pure Python implementation of a trie data structure
-compatible with Python 2.x and Python 3.x. Trie data structure
-,also known as radix or prefix tree, is a tree associating keys
-to values where all the descendants of a node have a common prefix

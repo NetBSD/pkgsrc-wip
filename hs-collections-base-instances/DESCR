@@ -1,3 +1,0 @@
-This package provides a common API, through a consistent set of
-classes, to the various standard container types. list, array, set,
-map, bytestring, etc. are supported.

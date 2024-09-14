@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/dmd
-etc/dmd.conf
-man/man1/dumpobj.1
-man/man1/obj2asm.1
-man/man5/dmd.conf.5

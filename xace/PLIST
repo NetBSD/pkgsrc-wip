@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/03 17:20:36 bencollver Exp $
-bin/xace
-share/doc/xace/README
-share/doc/xace/forth.txt
-share/xace/ace.rom

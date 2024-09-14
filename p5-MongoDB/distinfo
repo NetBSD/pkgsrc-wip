@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/14 21:51:11 bubuchka Exp $
-
-RMD160 (MongoDB-v2.2.2.tar.gz) = 9d3c306983ad4f6edc1ee22f44639224aeb39c8e
-SHA512 (MongoDB-v2.2.2.tar.gz) = 8faaece0f125daeecf1f0c63d02611597c1130f37404e618890d135cf1521a7c4c27b042bfbcd8a5881929cbc4c4a9277f48ec68f2a08ffc7d9570c3931092df
-Size (MongoDB-v2.2.2.tar.gz) = 581441 bytes

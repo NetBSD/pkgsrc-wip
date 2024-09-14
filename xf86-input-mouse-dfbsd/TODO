@@ -1,4 +1,0 @@
-Should the
-Jun 7, 2016 upstream patch
-bsd: Don't try to use SIGIO for input ABI >= 23
-apply to NetBSD

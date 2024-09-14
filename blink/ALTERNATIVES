@@ -1,1 +1,0 @@
-bin/blink @PREFIX@/bin/blink@PYPKGPREFIX@

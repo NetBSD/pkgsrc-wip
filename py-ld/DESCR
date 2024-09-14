@@ -1,4 +1,0 @@
-This library is an implementation of the JSON-LD specification in Python.
-
- JSON-LD_ is intended to be a simple publishing method for expressing
- not only Linked Data in JSON, but for adding semantics to existing JSON.

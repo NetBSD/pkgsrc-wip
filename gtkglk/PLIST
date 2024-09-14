@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:41 thomasklausner Exp $
-include/gtkglk/Make.gtkglk
-include/gtkglk/gi_blorb.h
-include/gtkglk/gi_dispa.h
-include/gtkglk/glk.h
-include/gtkglk/glkstart.h
-lib/libgtkglk.la

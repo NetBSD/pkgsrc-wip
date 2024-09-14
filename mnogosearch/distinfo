@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:30 rillig Exp $
-
-RMD160 (mnogosearch-3.1.21.tar.gz) = 0bce0ed5c018ddc66d5ef5c00432394bb563dcd9
-Size (mnogosearch-3.1.21.tar.gz) = 463974 bytes
-SHA1 (patch-aa) = 4df396a45eaec4cd13be9f692d9e005ad7576ad1
-SHA1 (patch-ab) = d646ae2bf270857624097ec14eb951878e2b5c65

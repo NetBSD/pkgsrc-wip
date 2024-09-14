@@ -1,2 +1,0 @@
-This package does not install itself correctly. The PLIST only has bin/zef but
-that's a symlink to a non-existing file.

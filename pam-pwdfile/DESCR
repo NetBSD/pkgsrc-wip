@@ -1,2 +1,0 @@
-This is a module that allows people to login to PAM aware applications
-by authenticating to a flat text password files.

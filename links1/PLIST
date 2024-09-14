@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/18 16:10:20 thomasklausner Exp $
-bin/links1
-man/man1/links1.1

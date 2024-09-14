@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:00 thomasklausner Exp $
-bin/opendchub
-share/doc/opendchub/configfiles
-share/doc/opendchub/general
-share/doc/opendchub/scriptdoc
-share/examples/opendchub/functestbot.plz
-share/examples/opendchub/subtestbot.plz

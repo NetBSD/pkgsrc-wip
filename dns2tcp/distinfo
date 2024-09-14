@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2010/12/20 01:08:44 gschwarz Exp $
-
-RMD160 (v0.5.2.tar.gz) = ede6f666ac2da22d4ecd911aff073f5b69eeb654
-SHA512 (v0.5.2.tar.gz) = 2b8cb84142ed23b62df4d33c8287e9dae0a8df7483661d4a9c3042f5417d010f0da33bf7b0d36f4b8b2ebb0e51aba99dd9aff936d82324fbcc2a2fb5829d1b62
-Size (v0.5.2.tar.gz) = 174787 bytes

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/01 13:21:35 makoto Exp $
-lib/java/skinlf/nativeskin.jar
-lib/java/skinlf/skinlf.jar
-@pkgdir lib/java/flexdock/lib/jmf/lib

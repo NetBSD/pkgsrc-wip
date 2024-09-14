@@ -1,3 +1,0 @@
-The libSquish library compresses images with the DXT standard (also known as
-S3TC). This standard is mainly used by OpenGL and DirectX for the lossy
-compression of RGBA textures.

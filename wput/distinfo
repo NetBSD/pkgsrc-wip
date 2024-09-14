@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2013/04/13 16:03:57 othyro Exp $
-
-RMD160 (wput-0.6.2.tgz) = a3a62556ca258048ff5110ecdec199c98107766f
-Size (wput-0.6.2.tgz) = 368510 bytes
-SHA1 (patch-Makefile.in) = 775865d02c4435cc367c62167ebb78536214eae2
-SHA1 (patch-configure) = f48258a7d82c8e978b9e58d64022cfbee52c8d92

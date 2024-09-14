@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/09 21:18:46 othyro Exp $
-libexec/xmail/CtrlClnt
-libexec/xmail/MkUsers
-libexec/xmail/XMCrypt
-libexec/xmail/XMail
-sbin/sendmail.xmail
-sbin/sendmail.xmail.sh
-share/doc/xmail/Readme.html
-share/doc/xmail/Readme.txt

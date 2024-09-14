@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2012/11/16 05:14:45 schnoebe Exp $
-
-RMD160 (palaver-0.6.tar.gz) = 9e5a34d3c141f8e81713fc176178b2379c14bf7a
-Size (palaver-0.6.tar.gz) = 1564 bytes
-SHA1 (patch-aa) = 2126106d2c28ec8d10a2574246df91d3ea7ee1ea
-SHA1 (patch-ab) = 81152faf0358b1d147827ba2e0bdd579973834de
-SHA1 (patch-ac) = 35c5088c28f16e9777f4c701ac0f311f3b890a04

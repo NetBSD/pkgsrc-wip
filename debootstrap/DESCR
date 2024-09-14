@@ -1,2 +1,0 @@
-debootstrap is a tool which will install a Debian or Ubuntu base system into a
-subdirectory of another, already installed system.

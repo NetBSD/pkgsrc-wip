@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/02/18 08:22:57 ahp-nils Exp $
-
-RMD160 (dhcpd-snmp-20160601.zip) = d06814464ddb018a97fc15773b63d1af35b57509
-SHA512 (dhcpd-snmp-20160601.zip) = 978ecaa7e27476da0d0f31332ecc12d98547718c7d12fccb8e19a4ad0ff26f49e6f287a6b1bbebd3637478cd5aa463e79543fc51e32df3cf498cd6634563a981
-Size (dhcpd-snmp-20160601.zip) = 12895 bytes
-SHA1 (patch-dhcpd-snmp.conf.dist) = a96b586f9db7c6805cbcd9536980979a65287d99

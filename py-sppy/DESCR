@@ -1,2 +1,0 @@
-SpPy is a sparse matrix library based on the C++ library Eigen with a similar
-interface to NumPy.

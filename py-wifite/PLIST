@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/26 01:53:39 othyro Exp $
-bin/wifite.py
-share/doc/${PYVERPREFIX}-wifite/HELP.txt
-share/doc/${PYVERPREFIX}-wifite/README.txt

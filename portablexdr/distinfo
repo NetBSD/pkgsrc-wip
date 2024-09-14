@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (portablexdr-4.9.1.tar.gz) = 59a977098f5c6b6d090021b4aa64bd89db22d70b
-SHA512 (portablexdr-4.9.1.tar.gz) = 47f2402e7ed9f2f518e2a45e76e8ad6c4b1e7ae1bd9408ca4dca3d0883697e755460ee64eef405e23b1840ad3b89ad54555bdf59dc8bae3cd8b67086d6ab3b1f
-Size (portablexdr-4.9.1.tar.gz) = 354321 bytes
-SHA1 (patch-rpc_rpc.h) = 728723b57ae3702ee154136d5af95c06cb277cd6
-SHA1 (patch-rpc_types.h) = 3b0a84a850e16cf57bf59650112e098156340160

@@ -1,4 +1,0 @@
-# -*- sh -*-
-# Mutter needs XCURSOR_PATH set to a valid location of cursor themes
-
-export XCURSOR_PATH=@PREFIX@/share/icons

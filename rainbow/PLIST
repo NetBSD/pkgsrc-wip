@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/ezmsim
-bin/rainbow
-bin/rbasm

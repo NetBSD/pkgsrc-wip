@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2011/09/19 05:01:00 ryo-on Exp $
-
-RMD160 (nodau-0.2.2.tar.bz2) = cc390ca5edc861d6785a12d6ae5e2d83d9cdb00d
-Size (nodau-0.2.2.tar.bz2) = 17722 bytes
-SHA1 (patch-Makefile.inc) = 247fcbaff9903667c3e2a72d6e2d23ae77e89301
-SHA1 (patch-ab) = f82896d00ef3c11ed13afa2fa6950fcf82990b64

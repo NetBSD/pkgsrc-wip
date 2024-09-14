@@ -1,2 +1,0 @@
-nsfreetds is a module allowing direct access to Sybase and MSSQL Server
-databases from aolserver using the freetds library.

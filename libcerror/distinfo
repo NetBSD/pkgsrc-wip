@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2014/02/03 09:10:41 othyro Exp $
-
-RMD160 (libcerror-alpha-20150407.tar.gz) = 3c6ee66ec457e33702ddc03f44f183e27b8b62f9
-SHA512 (libcerror-alpha-20150407.tar.gz) = 09312d1047d9ff0b73291a1f8ab14956ba2a6c455700b6554dc8d7e17a32aaf38694de8166f10ef7c90e453adbae6b505ce1d4785837276df63bc50dce0ced9e
-Size (libcerror-alpha-20150407.tar.gz) = 446461 bytes

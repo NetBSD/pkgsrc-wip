@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:06 thomasklausner Exp $
-bin/${PKGNAME}
-bin/plugger-controller
-lib/plugger.so
-man/man7/plugger.7
-${EGDIR}/pluggerrc

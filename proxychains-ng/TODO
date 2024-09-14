@@ -1,5 +1,0 @@
-$NetBSD$
-
-- This package should probably eventually replace wip/proxychains/
-  which uses a codebase that is apparently no longer maintained.
-- Lacks a manual page.

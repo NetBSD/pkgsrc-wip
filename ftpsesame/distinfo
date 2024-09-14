@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/08/16 12:50:23 jsonn Exp $
-
-RMD160 (ftpsesame-0.95.tar.gz) = d350f94da0080731523b72d346603240a6dfb73a
-Size (ftpsesame-0.95.tar.gz) = 10974 bytes
-SHA1 (patch-aa) = 06a3b851f8c29a3db17774a319c62312f322099c
-SHA1 (patch-ab) = 0b2a9a15ac814eabd091f15fc39851c48a43b142
-SHA1 (patch-ac) = 003ac8c5c54a05eef4142a0fa18dfa8ee369a35b

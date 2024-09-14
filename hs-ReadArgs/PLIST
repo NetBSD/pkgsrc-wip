@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/17 09:03:37 szptvlfn Exp $
-bin/ReadArgsEx
-lib/ReadArgs-${PKGVERSION}/${HASKELL_VERSION}/HSReadArgs-${PKGVERSION}.o
-lib/ReadArgs-${PKGVERSION}/${HASKELL_VERSION}/ReadArgs.hi
-lib/ReadArgs-${PKGVERSION}/${HASKELL_VERSION}/ReadArgs.p_hi
-lib/ReadArgs-${PKGVERSION}/${HASKELL_VERSION}/libHSReadArgs-${PKGVERSION}.a
-lib/ReadArgs-${PKGVERSION}/${HASKELL_VERSION}/libHSReadArgs-${PKGVERSION}_p.a
-lib/ReadArgs-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/ReadArgs-${PKGVERSION}/LICENSE

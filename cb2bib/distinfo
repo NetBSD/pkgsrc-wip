@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2012/06/14 02:27:01 othyro Exp $
-
-RMD160 (cb2bib-0.7.2.tar.gz) = 49a70446a401ebcdf13fef685015633a366295b9
-Size (cb2bib-0.7.2.tar.gz) = 286515 bytes
-SHA1 (patch-aa) = 99ead0b3cb9f1150f60e966de8fd7c540df0b38e

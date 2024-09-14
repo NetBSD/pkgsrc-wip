@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/01 14:50:21 uccwen Exp $
-bin/gpx2shp
-man/man1/gpx2shp.1

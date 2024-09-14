@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
-${PYSITELIB}/jswebkit.so
-${PYSITELIB}/${THIS_EGG_FILE}

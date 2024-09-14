@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/10 22:27:47 yhardy Exp $
-include/txc_dxtn.h
-lib/libtxc_dxtn.la

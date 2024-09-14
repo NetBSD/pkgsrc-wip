@@ -1,7 +1,0 @@
-Package easyjson provides a fast and easy
-way to marshal/unmarshal Go structs to/from
-JSON without the use of reflection. In
-performance tests, easyjson outperforms the
-standard encoding/json package by a factor
-of 4-5x, and other JSON encoding packages
-by a factor of 2-3x.

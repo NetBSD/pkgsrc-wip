@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
-
-RMD160 (News-Newsrc-1.11.tar.gz) = 6cac01d3d0732db135c3e5a6b8a7e300ddc0319a
-SHA512 (News-Newsrc-1.11.tar.gz) = f5df8bc14f9793e0cb670a99feab065e7a392ba84c8b5f93cc14d7c1587f20603a77ee1bc06177737cf8a756fff276ba050d5c27e594d6b6e673c616e4234727
-Size (News-Newsrc-1.11.tar.gz) = 11603 bytes

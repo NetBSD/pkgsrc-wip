@@ -1,5 +1,0 @@
-This is very much work in progress.
-
-- make this compile on NetBSD (NSS code seems fairly different)
-- add PLIST
-- submit needed patches upstream :)

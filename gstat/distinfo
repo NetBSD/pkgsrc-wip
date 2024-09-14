@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/08/22 20:32:28 mchittur Exp $
-
-RMD160 (gstat-2.4.3.tar.gz) = 579d86d1f0fe2a1f9d0eeb1951f87c9c6bd21c37
-Size (gstat-2.4.3.tar.gz) = 1183179 bytes
-SHA1 (patch-aa) = a929a9c2549898741d162788e2d9ed06f8cfb383

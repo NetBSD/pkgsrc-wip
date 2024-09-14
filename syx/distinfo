@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/03 19:38:44 athaba Exp $
-
-RMD160 (syx-0.1.7.tar.gz) = a7eebac5f1e6edceb588feff7b85d92b4e7d307d
-Size (syx-0.1.7.tar.gz) = 896796 bytes
-SHA1 (patch-aa) = 340ce01fd7d2f2f92971d84b5fa0d23b3a5c8f9d

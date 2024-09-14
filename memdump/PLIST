@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/03 15:49:30 poppnk Exp $
-man/man1/memdump.1
-sbin/memdump

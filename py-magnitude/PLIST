@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/mgload${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/magnitude.py
-${PYSITELIB}/magnitude.pyc
-${PYSITELIB}/magnitude.pyo
-share/doc/py-magnitude/README.txt

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
-bin/west
-share/doc/west/background.html
-share/doc/west/command_ref.html
-share/doc/west/index.html
-share/doc/west/scripting.html

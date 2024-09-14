@@ -1,6 +1,0 @@
-* Installation dirs must be changed. There's already a p5-Asterisk
-package with a newer version than the included in this package.
-Nevertheless, as writting this, the VICIdial-astguiclient 2.13
-package only works with this version. Thus, we had to import this
-outdated version. If you have the previously  mentioned package
-installed, please change the install directories of this package.

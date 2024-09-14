@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/27 00:10:12 jihbed Exp $
-bin/superlfv
-lib/java/superlfv.jar

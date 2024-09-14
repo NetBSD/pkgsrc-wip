@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (wpull-2.0.1.tar.gz) = bac73edc70a525165f36a83f2eec6877e43e93d6
-SHA512 (wpull-2.0.1.tar.gz) = 1894bc23c28777706467857dc6132fbf05683a01e95516c4dfc4cb840f456a011295766968814f53632a1cb69c79209aee8de724b3b1f41e6cda882e414ef493
-Size (wpull-2.0.1.tar.gz) = 666789 bytes
-SHA1 (patch-requires.txt) = 068c22da420d52dcc5c9bca201ed56b92d5d07db
-SHA1 (patch-setup.py) = 97efacec033124a04bb8ffeb022f5c3ad1ad7313

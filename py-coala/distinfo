@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (coala-0.11.0.tar.gz) = e2939df65034d302ec768f150b931b2c5d2cdc70
-SHA512 (coala-0.11.0.tar.gz) = 06252bdb1dc1436b9c6a81a7def5c88bf62c11ba75767f4e5e7db41300e4d107bca7a2c8c67e8c757bae2caf9bc591a944122255fb8c9137839afd9f145924a7
-Size (coala-0.11.0.tar.gz) = 687049 bytes
-SHA1 (patch-setup.py) = 0701250e0ad80b5d710c69c36edd9c5ee489c894

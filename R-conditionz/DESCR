@@ -1,3 +1,0 @@
-Provides ability to control how many times in function calls
-conditions are thrown (shown to the user). Includes control of
-warnings and messages.

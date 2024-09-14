@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/03 21:15:03 othyro Exp $
-bin/example_brep
-bin/example_read
-bin/example_roundtrip
-bin/example_userdata
-bin/example_write
-lib/libopenNURBS.a

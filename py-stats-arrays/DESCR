@@ -1,3 +1,0 @@
-The stats_arrays package provides a standard NumPy array interface
-for defining uncertain parameters used in models, and classes for
-Monte Carlo sampling. It also plays well with others.

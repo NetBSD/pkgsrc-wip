@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2014/04/18 09:43:29 asau Exp $
-@comment include/libkms/libkms.h
-@comment lib/libkms.la
-@comment ${PLIST.libkms}lib/libkms.so
-@comment ${PLIST.libkms}lib/libkms.so.1
-@comment ${PLIST.libkms}lib/libkms.so.1.0.0
-@comment lib/pkgconfig/libkms.pc

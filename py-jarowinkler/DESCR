@@ -1,3 +1,0 @@
-The Jaro-Winkler functions compare two strings and return a
-score indicating how closely the strings match. The score
-ranges from 0 (no match) to 1 (perfect match).

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2009/06/05 10:35:05 jihbed Exp $
-
-RMD160 (IronPython-2.0.1-Src.zip) = df66a18255f66a9b7ba81e7c9b9e33fbe1e4fe06
-Size (IronPython-2.0.1-Src.zip) = 2920274 bytes
-SHA1 (patch-aa) = 78ff2118c94c453e84316616823e5aca733f08f7

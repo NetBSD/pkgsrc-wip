@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/14 19:32:56 khorben Exp $
-bin/compare
-bin/fontsel
-bin/progress

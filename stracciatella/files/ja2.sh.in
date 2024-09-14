@@ -1,3 +1,0 @@
-#!/bin/sh
-BIN=$(basename "$0")
-cd "@PREFIX@/share/games/ja2" && exec "@PREFIX@/share/games/ja2/$BIN" "$@"

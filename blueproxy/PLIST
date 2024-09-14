@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/14 15:04:42 poppnk Exp $
-bin/bluelistener
-bin/bluepinger
-bin/blueproxy
-man/man1/blueproxy.1

@@ -1,9 +1,0 @@
-$NetBSD$
-
-RMD160 (zetacoin/v0.9.2.6.tar.gz) = 4fe35296b54ed3c4a260da0e94da66b31e7abd67
-Size (zetacoin/v0.9.2.6.tar.gz) = 4266222 bytes
-SHA1 (patch-src_db.h) = f6879888959d0238a50b1fc6aa916342dcc560d4
-SHA1 (patch-src_leveldb_port_port__posix.h) = 8acbc67265e0af5f5dee45e96801e428ac068a85
-SHA1 (patch-src_netbase.cpp) = 1468373d0a1de416350d417d30d16957683222f1
-SHA1 (patch-src_rpcrawtransaction.cpp) = 9165e79902e084e53976f98ec806a919dbfa10de
-SHA1 (patch-src_walletdb.cpp) = ef2946ed59c187ed6af1a3e538b6321c4929f1c8

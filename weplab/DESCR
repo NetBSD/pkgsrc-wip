@@ -1,6 +1,0 @@
-$NetBSD: DESCR,v 1.1.1.1 2006/10/28 20:27:56 gschwarz Exp $
-
-Weplab is a tool to review the security of WEP encryption in wireless
-networks from an educational point of view. Several attacks are available
-(including the well known FMS statistical attack) so it can be measured the
-efectiveness and minimun requirements of each one.

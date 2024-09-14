@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = bac0fa218e88a15fb907c621f0bb4baeb0a273a4
-SHA512 (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = 93eb130d0d0daa3f3dc57c916e29bf1222e39ffacd1bf033a0b5e53654ec46462e8f18a6a845ce273fafd6b0c778ca61f3211b8709bb2099af79b4a23d814203
-Size (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = 4831399 bytes
-SHA1 (patch-src_linux__cmn.c) = e037c6ff296f0cfc11f459fb0369efa16660611e

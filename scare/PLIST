@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:17 thomasklausner Exp $
-bin/glkscare
-share/doc/scare/DEBUGGER
-share/doc/scare/README
-share/doc/scare/RUNNING

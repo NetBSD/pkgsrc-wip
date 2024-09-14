@@ -1,5 +1,0 @@
-@comment $NetBSD$
-lib/libvulkan.so
-lib/libvulkan.so.1
-lib/libvulkan.so.1.2.162
-lib/pkgconfig/vulkan.pc

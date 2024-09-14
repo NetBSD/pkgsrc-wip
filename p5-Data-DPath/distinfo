@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/11/15 10:31:04 noud4 Exp $
-
-RMD160 (Data-DPath-0.58.tar.gz) = b91b6740b81f9423fee74ab137c9bdb5869f4833
-SHA512 (Data-DPath-0.58.tar.gz) = 0681aaf0a32c028c874dff10fab069d9791f68cb1a01da10dd992de18a8eca9be6f298fd046b109c0dc0982964543174abe905aeba26eaa3842b9d00da54b05a
-Size (Data-DPath-0.58.tar.gz) = 288688 bytes

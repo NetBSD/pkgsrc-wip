@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (napalm-nxos-0.5.2.tar.gz) = ed4304e2bab548ae280680773fe308759bfb3f73
-SHA512 (napalm-nxos-0.5.2.tar.gz) = 1b61af6d3769d8b60b5ba36ac121ffe4f5e5e3d8defdffb9a3f5f57db1b254a3f55916e389ddaa7f32939ded428287159c6f8bc8f66d47855c7839cea4e25bf8
-Size (napalm-nxos-0.5.2.tar.gz) = 41176 bytes
-SHA1 (patch-setup.py) = 1868542ff6ae07a89db534f9539d907c548f92a0

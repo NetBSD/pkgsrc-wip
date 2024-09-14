@@ -1,9 +1,0 @@
-$NetBSD$
-
-RMD160 (witchblast/v0.7.5.tar.gz) = b49f3759feeba5848f6e33081c96611e2183519c
-SHA512 (witchblast/v0.7.5.tar.gz) = bd04ada1f6dee2ab9a7e09fe964f6dabd159f9bff69d189e76938781a7ecf7237a4203a0e4e27146220731152e7e0cef5b814c09d07050020a3fd6d18b67942a
-Size (witchblast/v0.7.5.tar.gz) = 41334398 bytes
-SHA1 (patch-src_Constants.h) = 17fdc3d3c140f10337d1d4ac6355a8932b61d1a3
-SHA1 (patch-src_DungeonMapEntity.cpp) = 61d9416ef13059acac01d63a0514d7818beed1a5
-SHA1 (patch-src_TextMapper.cpp) = c93471feb2d46fea8cbd237765da611a863c2854
-SHA1 (patch-src_WitchBlastGame.cpp) = 13a4e8f8a16a07e0f091270358b0b8e8e8921da1

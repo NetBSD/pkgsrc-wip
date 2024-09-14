@@ -1,4 +1,0 @@
-Policy Sentry is an AWS IAM Least Privilege Policy Generator, auditor,
-and analysis database. It compiles database tables based on the AWS
-IAM Documentation on Actions, Resources, and Condition Keys and
-leverages that data to create least-privilege IAM policies.

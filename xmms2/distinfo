@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2012/11/05 00:37:20 othyro Exp $
-
-RMD160 (xmms2-0.8DrO_o.tar.bz2) = 35513d7eddd5f79146cb8aa5c6c0bb35369619ec
-Size (xmms2-0.8DrO_o.tar.bz2) = 1670726 bytes
-SHA1 (patch-src_plugins_file_browse_fstatat.c) = ede7033e3d6dd773108e6e45a80ccf38f56241e9

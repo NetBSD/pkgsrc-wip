@@ -1,9 +1,0 @@
-Userspace libraries implementing OpenGL ES for the Mali400 GPUs found in
-various Allwinner Technology SoCs (referred to as "sunxi" devices in the
-Linux kernel's source code).
-
-The libraries are binary-only and Linux-only.
-
-This package contains the version for using with programs that run in the
-framebuffer. The framebuffer has somewhat lower overhead than X11, so
-programs run faster.

@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (html-1.16.tar.gz) = 5bf971ae0cee5f9ac1db56baa24f7a5487e433c0
-SHA512 (html-1.16.tar.gz) = fe2329775bc9154aafe2411adb893ce443d3e0875cfa0efa9a722c068578713d3cc123fc62e732215766b3bf7371777a173969100f3025b9f9c99b504482ea39
-Size (html-1.16.tar.gz) = 7639 bytes
-SHA1 (patch-setup.py) = ad8c0e6c792e447cf06e5407d4a9eeb35c572cda

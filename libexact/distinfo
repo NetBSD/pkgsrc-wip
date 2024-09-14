@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (libexact-1.0.tar.gz) = ee3df7a1705e6d33ca2bcbdf3197b9bc7030886e
-SHA512 (libexact-1.0.tar.gz) = dbc2fe71effd04c4f2aa72ea112eb3ff2c8380bdd3a561700f609602da6a984743ec3597974fdca35827725f42c5fdfe796fc0e00a6ff6f3a57956cb5ccb310b
-Size (libexact-1.0.tar.gz) = 245481 bytes
-SHA1 (patch-Makefile) = ea95883395f6090c8a7d0871703d22e2f7e231e2

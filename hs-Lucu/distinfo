@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2013/10/01 14:20:17 phonohawk Exp $
-
-RMD160 (Lucu-0.7.0.3.tar.gz) = bafbde470756b383c8b8f4fa5fb8292474b6c404
-Size (Lucu-0.7.0.3.tar.gz) = 60614 bytes
-SHA1 (patch-Lucu.cabal) = ea81e00bee24a3200995ef2a680e0830be031921
-SHA1 (patch-Network_HTTP_Lucu_Chunk.hs) = f71d8844cda39fa5392383680ab1ce2256b0efbf

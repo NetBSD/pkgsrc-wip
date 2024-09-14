@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/23 16:39:01 ahp-nils Exp $
-share/cacti/plugins/rrdclean/LICENSE
-share/cacti/plugins/rrdclean/README
-share/cacti/plugins/rrdclean/inc_rrdclean_filter_table.php
-share/cacti/plugins/rrdclean/rrdcleaner.php
-share/cacti/plugins/rrdclean/rrdmove.php
-share/cacti/plugins/rrdclean/setup.php

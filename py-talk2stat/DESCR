@@ -1,8 +1,0 @@
-talk2stat allows programs (such as latextopdf, nodejs) to communicate
-with statistical packages. Currently, we connect with R, julia, matlab,
-or python but extending it to other tools like Stata or SAS, is very
-simple. The package contains two main functions: server() talks to the
-client program (e.g latextopdf) via a socket (inet), and to the stats
-package (R, julia, matlab, python) via a bi-directional pipe. The client()
-function is called by the user (e.g. latextopdf) to establish a connection
-with the server and pass code to the statistical package, and get the results.

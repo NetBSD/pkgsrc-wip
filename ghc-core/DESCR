@@ -1,3 +1,0 @@
-A convenient command line wrapper for GHC that displays GHC's
-optimised core and assembly output in a human readable, colourised
-manner, in a pager. Unix systems only, currently.

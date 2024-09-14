@@ -1,4 +1,0 @@
-'Radix trees', or 'tries', are key-value data structures optimised for
-efficient lookups, similar in purpose to hash tables. 'triebeard'
-provides an implementation of 'radix trees' for use in R programming
-and in developing packages with 'Rcpp'.

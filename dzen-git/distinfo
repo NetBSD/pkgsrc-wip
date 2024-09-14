@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (dzen-git-488ab66019f475e35e067646621827c18a879ba1.tar.gz) = 164e24e481f47e4c90ab8a2daf02c37bb995d20f
-SHA512 (dzen-git-488ab66019f475e35e067646621827c18a879ba1.tar.gz) = e750ab9c62dad311bf478d79c15ffdc1ef108fe2c3ed5df82316d879aad000bee785d304048f5daae237468f6fe018f14fc05d0114d68d873f766dbf1dfebbc9
-Size (dzen-git-488ab66019f475e35e067646621827c18a879ba1.tar.gz) = 38181 bytes
-SHA1 (patch-config.mk) = 612d12b5d6efd17ed23f39f6ca34fed92c4bbcbb
-SHA1 (patch-gadgets-config.mk) = 270671eb72c6cb004120ff3c031f08caf0d81ca4

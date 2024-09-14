@@ -1,6 +1,0 @@
-xmatchview, xmatchview-conifer and xmatchview-hive are imaging tools
-for visualizing DNA/RNA sequence synteny. It allows users to align 2
-(or 3) sequences in FASTA format using cross_match, minimap2 or any
-aligners with .paf output capabilities, and displays the alignments in
-a variety of image formats (png, tiff). xmatchview-hive outputs
-xml-scalable vector graphics (svg).

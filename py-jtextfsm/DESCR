@@ -1,7 +1,0 @@
-Python module which implements a template based state machine for
-parsing semi-formatted text. Originally developed to allow programmatic
-access to information returned from the command line interface
-(CLI) of networking devices.
-
-This is a fork of https://code.google.com/p/textfsm which is
-Python v3 compatible.

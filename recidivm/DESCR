@@ -1,2 +1,0 @@
-recidivm estimates the target program's peak virtual memory use by running
-it multiple times with different memory limits.

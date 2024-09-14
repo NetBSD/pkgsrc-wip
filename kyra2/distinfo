@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2013/01/01 01:15:36 othyro Exp $
-
-RMD160 (kyra_src_2_1_3.zip) = 58a4a8cc4912e92d35779cac1a575935c5050918
-SHA512 (kyra_src_2_1_3.zip) = 236cfe1a049b28e6b844c3afee4d1adf94b79b8506f1fede5839834a77dd2d7d08b1be4b2649f679d346389b0e847968acab44fb2cb1c12f5085ef3eae582e08
-Size (kyra_src_2_1_3.zip) = 3595503 bytes
-SHA1 (patch-engine_encoder.h) = 8096447444a0225b969b980edb82c8bfbe1e2e75
-SHA1 (patch-engine_imagetree.h) = 49e03064c40d5515f2f7ec2abed36c1a2284176f
-SHA1 (patch-engine_namefield.cpp) = 4d95d4e0195a69ec00027d0688c233caad6fa5ed
-SHA1 (patch-guiExtended_progress.h) = c262def814e7fdffc524ef8f5c7bdad14cb9a9d3

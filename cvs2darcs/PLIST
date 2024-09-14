@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:32 thomasklausner Exp $
-bin/cvs2darcs
-man/man1/cvs2darcs.1
-share/cvs2darcs/branch_detect.pl
-share/cvs2darcs/cvs_convert.pl

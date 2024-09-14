@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:40 rillig Exp $
-
-RMD160 (r8s1.7.dist.tar.Z) = 6e5ba652fae3fe4cb0c03fb6b46e6635d8eed53c
-Size (r8s1.7.dist.tar.Z) = 1892674 bytes
-SHA1 (patch-aa) = 7d37edc9d5d13e1ca739cccd96521df7f80ae6ef
-SHA1 (patch-ab) = bd84a233408d129b399810189fdd32b9d2bd6ae3
-SHA1 (patch-ac) = 567b519fb56982b798d3d3f3df0cd10bb7240c96

@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (cairo-dock-3.4.1.tar.gz) = c65fa8eb5e1fdd1c846c42f3fd11112b2388e14f
-SHA512 (cairo-dock-3.4.1.tar.gz) = 265026eabfee72f11bef02ae72c965ede230c141af7fd9568278e30ef39f36fa00718cb6f7f7484d92579fe075de9c37772d96f09b079b903f83df89d5207e9d
-Size (cairo-dock-3.4.1.tar.gz) = 2895151 bytes
-SHA1 (patch-src_gldit_cairo-dock-config.c) = c98b658bf734b050db159e93f1f065e23d352b73
-SHA1 (patch-src_gldit_cairo-dock-file-manager.c) = 4a8213481930fba573e6bfb00b8cdb5ed294fd55

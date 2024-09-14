@@ -1,3 +1,0 @@
-wheel-inspect examines Python wheel files & *.dist-info directories and
-outputs various information about their contents as JSON-serializable objects.
-It can be invoked in Python code as

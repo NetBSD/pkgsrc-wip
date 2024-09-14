@@ -1,6 +1,0 @@
-Numberjack is a modelling package written in Python for constraint
-programming and combinatorial optimization. Python benefits from a
-large and active programming community, Numberjack is therefore a
-perfect tool to embed CP technology into larger applications.
-It is designed to support a number of efficient underlying C/C++
-solvers seamlessly and efficiently

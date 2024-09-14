@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/12 22:37:14 samott Exp $
-
-RMD160 (nullpop-0.3.tar.gz) = e614275f2c5bce09eb1f4c7bb66dbba0f739ea09
-SHA512 (nullpop-0.3.tar.gz) = f62e3486b64571db98e919fa3b6b7ce8512251f540188c14f97c88b5832e0f41415a7558128974838dc6d510d8ea016bfa228d5377db88c837aa7bac5e963ac4
-Size (nullpop-0.3.tar.gz) = 83123 bytes

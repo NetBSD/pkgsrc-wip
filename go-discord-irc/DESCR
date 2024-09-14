@@ -1,4 +1,0 @@
-go-discord-irc is Discord and IRC bridge with puppets! An IRC user is
-created for each Discord user, messages from IRC seamlessly appear on
-Discord, and Discord mentions are automagically converted to and from
-IRC.

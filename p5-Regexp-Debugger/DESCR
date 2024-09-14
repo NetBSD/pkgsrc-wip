@@ -1,2 +1,0 @@
-Regexp::Debugger causes any regex in the same lexical scope to be
-visually (and interactively) debugged as it matches.

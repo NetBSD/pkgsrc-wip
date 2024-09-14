@@ -1,1 +1,0 @@
-persist.c does not find libguile.h, which makes the build fail.

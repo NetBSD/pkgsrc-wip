@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/22 15:50:27 othyro Exp $
-bin/rngtest
-man/man1/rngtest.1
-man/man8/rngd.8
-sbin/rngd

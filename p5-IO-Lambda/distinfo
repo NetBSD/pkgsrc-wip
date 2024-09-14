@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/04/03 01:43:52 jgoamakf Exp $
-
-RMD160 (IO-Lambda-1.30.tar.gz) = 54beaf2cefda5685e7162e5d994869f638bd7af8
-SHA512 (IO-Lambda-1.30.tar.gz) = d3da588eb8624555d441528c8a63c94dfce46ec754966f1ee23f62281f697bb1107bd93794fde6799b221be60fc6bf9e4782cf7f9b4e642608ed4871404ba19a
-Size (IO-Lambda-1.30.tar.gz) = 92402 bytes
-SHA1 (patch-aa) = 6636e82dc662c7243382a3be17270b18585b7d3c

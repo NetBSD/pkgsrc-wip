@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 08:15:47 rillig Exp $
-
-RMD160 (memgrep-0.8.0.tar.gz) = a04a43edecd3170ef11092641ae25c5e1921f83b
-Size (memgrep-0.8.0.tar.gz) = 82316 bytes
-SHA1 (patch-aa) = 23eceab2ebe40de9a49cbd18717e4282811d8748

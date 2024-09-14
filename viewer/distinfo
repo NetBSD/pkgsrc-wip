@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
-
-RMD160 (viewer-0.7.3.tar.gz) = c246e281dbab012c08a164a18d6e831b118b1af9
-Size (viewer-0.7.3.tar.gz) = 44622 bytes
-SHA1 (patch-aa) = 60aab69c6d1224545db91c9491c6e611f503f2b9

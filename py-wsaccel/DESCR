@@ -1,2 +1,0 @@
-WSAccell is WebSocket accelerator for AutobahnPython, and ws4py.
-WSAccell replaces per-byte process in them with Cython

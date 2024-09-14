@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2005/01/09 10:07:34 mreriksson Exp $
-lib/multisync/libpalm_sync.la

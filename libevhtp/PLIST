@@ -1,8 +1,0 @@
-@comment $NetBSD$
-include/evhtp.h
-include/evhtp/config.h
-include/evhtp/evhtp.h
-include/evhtp/parser.h
-include/evhtp/thread.h
-lib/libevhtp.a
-lib/pkgconfig/evhtp.pc

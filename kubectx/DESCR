@@ -1,6 +1,0 @@
-This package provides kubectx and kubens to switch between clusters and
-namespaces in kubectl.
-
-kubectx is a utility to manage and switch between kubectl(1) contexts.
-
-kubens is a utility to switch between Kubernetes namespaces.

@@ -1,1 +1,0 @@
-It's looking in the wrong place for wxwidget headers so the build fails.

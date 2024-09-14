@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/03 20:46:28 jihbed Exp $
-${PYSITELIB}/PyZenity.py
-${PYSITELIB}/PyZenity.pyc
-${PYSITELIB}/PyZenity.pyo

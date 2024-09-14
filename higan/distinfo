@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/02/07 21:23:33 othyro Exp $
-
-RMD160 (higan_v092-source.tar.xz) = 3fcd96745271b4e2442eefce2f0a73548049b1ff
-Size (higan_v092-source.tar.xz) = 790136 bytes
-SHA1 (patch-higan_Makefile) = c3ad79ed171559c5b003e538045a08391647062d
-SHA1 (patch-higan_nall_Makefile) = ca599e8253892d1b579d8a39194ae669656b99ec
-SHA1 (patch-higan_nall_file.hpp) = f168bbc27e4431d43742850cc5e22d4ec10bc1c6

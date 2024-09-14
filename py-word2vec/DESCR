@@ -1,2 +1,0 @@
-Python interface to Google word2vec.  Training is done using the
-original C, other functionality is pure python + numpy.

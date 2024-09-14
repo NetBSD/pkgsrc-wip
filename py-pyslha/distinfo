@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/01/18 12:01:29 noud4 Exp $
-
-RMD160 (pyslha-3.2.5.tar.gz) = 84707c63a3ccd0f5727f44065fc6ca90a0342de3
-SHA512 (pyslha-3.2.5.tar.gz) = cf82b80855abf0953750e28716bc7de2244e89114f206ac4e021d99f32ea22d838e2fd3648e474512007d9815e4d17b09448b230c1eedb1b696b3593edb2e99a
-Size (pyslha-3.2.5.tar.gz) = 43722 bytes
-SHA1 (patch-setup.py) = 7894fbee7113ca75e365634415bba699fc4d276a

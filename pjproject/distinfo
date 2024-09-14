@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/06/12 11:31:27 othyro Exp $
-
-RMD160 (pjproject-2.1.tar.bz2) = e373b203029e34dc321a220f803163ac451b8566
-Size (pjproject-2.1.tar.bz2) = 4111835 bytes
-SHA1 (patch-aconfigure) = 5b2c31233b446216e79641cf373757901a9c11ec

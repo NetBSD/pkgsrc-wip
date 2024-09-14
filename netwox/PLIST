@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/17 00:14:46 tnn2 Exp $
-bin/netwox
-bin/netwox535
-man/man1/netwox.1
-man/man1/netwox535.1

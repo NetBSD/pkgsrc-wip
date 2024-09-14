@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
-
-RMD160 (progsreiserfs-0.3.0.4.tar.gz) = 9c66da6ced611589b12ac4a26d9622c713e8fca5
-Size (progsreiserfs-0.3.0.4.tar.gz) = 308247 bytes
-SHA1 (patch-aa) = 97bd6058ccf98bba0270a98639651b0c59febab6

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2014/02/03 09:15:52 othyro Exp $
-
-RMD160 (libclocale-alpha-20150101.tar.gz) = be8d37f9aef6720039d9c9fb337ca085b3b57916
-SHA512 (libclocale-alpha-20150101.tar.gz) = 808a5af082e3a633ba2d05c341f0c65cf5147e7a3643ec0dcb30b8b1b577458ea40b6e266516345eb587ecdcf4e605a343c8d7c6b48bb1f40c5ed40265082aca
-Size (libclocale-alpha-20150101.tar.gz) = 458652 bytes

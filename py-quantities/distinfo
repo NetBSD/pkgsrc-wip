@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/02/09 20:41:05 thomasklausner Exp $
-
-RMD160 (quantities-0.12.4.tar.gz) = bcf9a1410d487de3f12c81a77765135eaca1bcc3
-SHA512 (quantities-0.12.4.tar.gz) = caad7f2b1c7ff362656e9a444f7e7f3a62d6f9941a4e645105216fc7ad7ab1a73f5e3333843e683c838cd84cc2b2fb3413e647dd0ace97451918d3a6f6e77b02
-Size (quantities-0.12.4.tar.gz) = 83912 bytes

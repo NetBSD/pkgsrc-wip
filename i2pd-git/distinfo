@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (i2pd/i2pd-ce8d701ecb92be1563681ec9ce98a9e4d02041fd.tar.gz) = 9ce3aaccddfdef32d58e19427edf8d59bc724ee7
-SHA512 (i2pd/i2pd-ce8d701ecb92be1563681ec9ce98a9e4d02041fd.tar.gz) = 9cf23be13c6ba044d4eaeb51c9560e20f0fe8fef518d458d626e999b68e3dfae2c8f69de8ec2bc08fb85ba8173c01e2a20538ce4e2307f424bd595cfb0f15fc9
-Size (i2pd/i2pd-ce8d701ecb92be1563681ec9ce98a9e4d02041fd.tar.gz) = 1878557 bytes
-SHA1 (patch-CMakeLists.txt) = a1ee29bcef6e69297e31b10f609d376bc30e890d

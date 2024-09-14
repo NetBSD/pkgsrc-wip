@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2012/12/09 20:17:54 othyro Exp $
-
-RMD160 (xinetd-2.3.15.tar.gz) = bedfe3dd4f7117ce42bfe3a8f5cbd11306fc4522
-Size (xinetd-2.3.15.tar.gz) = 309774 bytes
-SHA1 (patch-Makefile.in) = 9d4d6c09588be953fa01cf12be20bacb71b13f63
-SHA1 (patch-aa) = 00b61e108f2b5e79dba6bb4ecc10b3d3a35a1095

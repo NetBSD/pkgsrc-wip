@@ -1,6 +1,0 @@
--*- mode: org;-*-
-
-* currently linking against boost_python-mt
-** under which circumstances is -mt used?
-
- 

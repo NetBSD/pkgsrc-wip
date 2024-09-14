@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:38 thomasklausner Exp $
-bin/gfontview
-share/gfontviewrc
-share/gnome/apps/Utilities/gfontview.desktop
-share/locale/de/LC_MESSAGES/gfontview.mo
-share/locale/es/LC_MESSAGES/gfontview.mo
-share/locale/fr/LC_MESSAGES/gfontview.mo
-share/locale/ru/LC_MESSAGES/gfontview.mo
-share/pixmaps/gfontview.png

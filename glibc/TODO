@@ -1,9 +1,0 @@
-- How to handle installation correctly? Currently everything is installed
-  into /usr/pkg and after ldconfig is run other applications might not
-  run anymore. The solution is to delete the installed files after which
-  everything is okay again.
-
-- Set USE_PKGLOCALEDIR and adapt PLIST.
-
-- Security issues: SA41795, SA42547, SA43976, SA43492, CVE-2015-8982,
-  CVE-2015-8983, CVE-2015-8984, CVE-2015-8985 (and probably others)

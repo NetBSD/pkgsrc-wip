@@ -1,1 +1,0 @@
-bin/ghi @PREFIX@/bin/unicorn@RUBY_SUFFIX@

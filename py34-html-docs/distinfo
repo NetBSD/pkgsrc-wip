@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2018/08/09 12:17:31 leot Exp $
-
-RMD160 (python/python-3.4.10-docs-html.tar.bz2) = 750b3d62ad9cc4bdd772dcfe9040131a7c1681b4
-SHA512 (python/python-3.4.10-docs-html.tar.bz2) = 3670f3c3a875ac0ae43ada43438c2370a2a4e298c8d338f5e2ec760257b74c8a0e371a570bf3025067062d2c50c1988e5146e8b6977558e1acbae342d7f7e353
-Size (python/python-3.4.10-docs-html.tar.bz2) = 5430249 bytes
