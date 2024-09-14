@@ -17,6 +17,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

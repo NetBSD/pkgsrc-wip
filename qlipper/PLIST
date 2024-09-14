@@ -1,4 +1,13 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+bin/qlipper
+share/applications/qlipper.desktop
+share/icons/hicolor/128x128/apps/qlipper.png
+share/qlipper/translations/qlipper_ca.qm
+share/qlipper/translations/qlipper_cs.qm
+share/qlipper/translations/qlipper_de.qm
+share/qlipper/translations/qlipper_es.qm
+share/qlipper/translations/qlipper_it.qm
+share/qlipper/translations/qlipper_lt.qm
+share/qlipper/translations/qlipper_pl.qm
+share/qlipper/translations/qlipper_sr.qm
+share/qlipper/translations/qlipper_zh_CN.qm
