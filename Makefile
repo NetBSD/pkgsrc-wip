@@ -256,6 +256,7 @@ SUBDIR+=	digestif
 SUBDIR+=	dillo-devel
 SUBDIR+=	ding
 SUBDIR+=	discordo
+SUBDIR+=	diskonaut
 SUBDIR+=	distbb-git
 SUBDIR+=	dlib-cpp
 SUBDIR+=	dmd-bin
