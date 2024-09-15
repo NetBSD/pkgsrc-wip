@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (cloudflared-2024.8.3.tar.gz) = 6431880c4d2585f59eb9c61597c33861d2a63afffd37a66cd737faf284357df4
-SHA512 (cloudflared-2024.8.3.tar.gz) = 368bfd0252601f4b19bf14740915a8aa733df7dc28eeb5a5b018639f6daea94ee1627e51d484a5802525326ceca08adccf9269e5fb8cf6a5d06891d439028441
-Size (cloudflared-2024.8.3.tar.gz) = 7057070 bytes
+BLAKE2s (cloudflared-2024.9.1.tar.gz) = 27bbae76a5d9ed07b10454014b3801606990866826736607d1ffd1b4d853834e
+SHA512 (cloudflared-2024.9.1.tar.gz) = 56adef3fae240b2ac7af82cf1f831d1ccb99ec9a6c02e227d8db899fd66468332fd26479d996a866774bf1743742ea653a4f2d8ac7bd5e8c6293cee356d60d91
+Size (cloudflared-2024.9.1.tar.gz) = 7057169 bytes
 BLAKE2s (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 1e3e33c00707a3593021eb034c331e03c391be2a8977de8635ddcdd39b13ded4
 SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 320941bc3b7fb8bc595e6135cbc513a7583d129f0cd92508055291e141191066303cf75148e25198c21f6c6c539a790ea3210f3ecf5de6a2a03b70c753091146
 Size (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 34 bytes
