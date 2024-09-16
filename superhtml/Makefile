@@ -15,5 +15,9 @@ ALLOW_NETWORK_ACCESS=	yes
 
 PKGCONFIG_OVERRIDE+=	tree-sitter-superhtml/bindings/c/tree-sitter-html.pc.in
 
+ZIGPIE=			no
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
+
 .include "../../lang/zig/application.mk"
 .include "../../mk/bsd.pkg.mk"
