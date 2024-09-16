@@ -1427,7 +1427,6 @@ SUBDIR+=	smproxy
 SUBDIR+=	snallygaster-git
 SUBDIR+=	snapraid
 SUBDIR+=	sndio
-SUBDIR+=	soju
 SUBDIR+=	soplex
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
