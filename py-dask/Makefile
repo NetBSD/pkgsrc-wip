@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dask-2024.6.2
+DISTNAME=	dask-2024.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 GITHUB_PROJECT=	dask
@@ -13,8 +13,6 @@ COMMENT=	Flexible parallel computing library for analytics
 LICENSE=	modified-bsd
 
 .include "../../mk/bsd.prefs.mk"
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer

@@ -16,6 +16,9 @@ ${PYSITELIB}/dask/__main__.pyo
 ${PYSITELIB}/dask/_compatibility.py
 ${PYSITELIB}/dask/_compatibility.pyc
 ${PYSITELIB}/dask/_compatibility.pyo
+${PYSITELIB}/dask/_task_spec.py
+${PYSITELIB}/dask/_task_spec.pyc
+${PYSITELIB}/dask/_task_spec.pyo
 ${PYSITELIB}/dask/_version.py
 ${PYSITELIB}/dask/_version.pyc
 ${PYSITELIB}/dask/_version.pyo
@@ -23,6 +26,9 @@ ${PYSITELIB}/dask/array/NUMPY_LICENSE.txt
 ${PYSITELIB}/dask/array/__init__.py
 ${PYSITELIB}/dask/array/__init__.pyc
 ${PYSITELIB}/dask/array/__init__.pyo
+${PYSITELIB}/dask/array/_shuffle.py
+${PYSITELIB}/dask/array/_shuffle.pyc
+${PYSITELIB}/dask/array/_shuffle.pyo
 ${PYSITELIB}/dask/array/backends.py
 ${PYSITELIB}/dask/array/backends.pyc
 ${PYSITELIB}/dask/array/backends.pyo
@@ -113,6 +119,9 @@ ${PYSITELIB}/dask/array/tests/__init__.pyo
 ${PYSITELIB}/dask/array/tests/test_array_core.py
 ${PYSITELIB}/dask/array/tests/test_array_core.pyc
 ${PYSITELIB}/dask/array/tests/test_array_core.pyo
+${PYSITELIB}/dask/array/tests/test_array_expr_incompatible.py
+${PYSITELIB}/dask/array/tests/test_array_expr_incompatible.pyc
+${PYSITELIB}/dask/array/tests/test_array_expr_incompatible.pyo
 ${PYSITELIB}/dask/array/tests/test_array_function.py
 ${PYSITELIB}/dask/array/tests/test_array_function.pyc
 ${PYSITELIB}/dask/array/tests/test_array_function.pyo
@@ -206,6 +215,9 @@ ${PYSITELIB}/dask/array/tests/test_reshape.pyo
 ${PYSITELIB}/dask/array/tests/test_routines.py
 ${PYSITELIB}/dask/array/tests/test_routines.pyc
 ${PYSITELIB}/dask/array/tests/test_routines.pyo
+${PYSITELIB}/dask/array/tests/test_shuffle.py
+${PYSITELIB}/dask/array/tests/test_shuffle.pyc
+${PYSITELIB}/dask/array/tests/test_shuffle.pyo
 ${PYSITELIB}/dask/array/tests/test_slicing.py
 ${PYSITELIB}/dask/array/tests/test_slicing.pyc
 ${PYSITELIB}/dask/array/tests/test_slicing.pyo
@@ -728,6 +740,9 @@ ${PYSITELIB}/dask/tests/test_spark_compat.pyo
 ${PYSITELIB}/dask/tests/test_system.py
 ${PYSITELIB}/dask/tests/test_system.pyc
 ${PYSITELIB}/dask/tests/test_system.pyo
+${PYSITELIB}/dask/tests/test_task_spec.py
+${PYSITELIB}/dask/tests/test_task_spec.pyc
+${PYSITELIB}/dask/tests/test_task_spec.pyo
 ${PYSITELIB}/dask/tests/test_threaded.py
 ${PYSITELIB}/dask/tests/test_threaded.pyc
 ${PYSITELIB}/dask/tests/test_threaded.pyo
@@ -752,6 +767,9 @@ ${PYSITELIB}/dask/tests/warning_aliases.pyo
 ${PYSITELIB}/dask/threaded.py
 ${PYSITELIB}/dask/threaded.pyc
 ${PYSITELIB}/dask/threaded.pyo
+${PYSITELIB}/dask/tokenize.py
+${PYSITELIB}/dask/tokenize.pyc
+${PYSITELIB}/dask/tokenize.pyo
 ${PYSITELIB}/dask/typing.py
 ${PYSITELIB}/dask/typing.pyc
 ${PYSITELIB}/dask/typing.pyo
