@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	altair-5.3.0
+DISTNAME=	altair-5.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altair/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=	https://altair-viz.github.io/
 COMMENT=	Altair: A declarative statistical visualization library for Python
 LICENSE=	2-clause-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-black>=20.8:../../textproc/py-black
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
@@ -21,7 +19,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.3.0:../../devel/py-flake8
 TOOL_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.1:../../devel/py-typing-extensions
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-TOOL_DEPENDS+=	${PYPKGPREFIX}-recommonmark>=0.6.0:../../wip/py-recommonmark
 DEPENDS+=	${PYPKGPREFIX}-entrypoints>=0.3:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema

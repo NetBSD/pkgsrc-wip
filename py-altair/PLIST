@@ -30,6 +30,9 @@ ${PYSITELIB}/altair/jupyter/jupyter_chart.py
 ${PYSITELIB}/altair/jupyter/jupyter_chart.pyc
 ${PYSITELIB}/altair/jupyter/jupyter_chart.pyo
 ${PYSITELIB}/altair/py.typed
+${PYSITELIB}/altair/typing.py
+${PYSITELIB}/altair/typing.pyc
+${PYSITELIB}/altair/typing.pyo
 ${PYSITELIB}/altair/utils/__init__.py
 ${PYSITELIB}/altair/utils/__init__.pyc
 ${PYSITELIB}/altair/utils/__init__.pyo
@@ -123,6 +126,9 @@ ${PYSITELIB}/altair/vegalite/v5/display.pyo
 ${PYSITELIB}/altair/vegalite/v5/schema/__init__.py
 ${PYSITELIB}/altair/vegalite/v5/schema/__init__.pyc
 ${PYSITELIB}/altair/vegalite/v5/schema/__init__.pyo
+${PYSITELIB}/altair/vegalite/v5/schema/_typing.py
+${PYSITELIB}/altair/vegalite/v5/schema/_typing.pyc
+${PYSITELIB}/altair/vegalite/v5/schema/_typing.pyo
 ${PYSITELIB}/altair/vegalite/v5/schema/channels.py
 ${PYSITELIB}/altair/vegalite/v5/schema/channels.pyc
 ${PYSITELIB}/altair/vegalite/v5/schema/channels.pyo
@@ -133,6 +139,7 @@ ${PYSITELIB}/altair/vegalite/v5/schema/mixins.py
 ${PYSITELIB}/altair/vegalite/v5/schema/mixins.pyc
 ${PYSITELIB}/altair/vegalite/v5/schema/mixins.pyo
 ${PYSITELIB}/altair/vegalite/v5/schema/vega-lite-schema.json
+${PYSITELIB}/altair/vegalite/v5/schema/vega-themes.json
 ${PYSITELIB}/altair/vegalite/v5/theme.py
 ${PYSITELIB}/altair/vegalite/v5/theme.pyc
 ${PYSITELIB}/altair/vegalite/v5/theme.pyo
