@@ -1455,6 +1455,7 @@ SUBDIR+=	streamlink
 SUBDIR+=	stringtie
 SUBDIR+=	subsync
 SUBDIR+=	sulley
+SUBDIR+=	superhtml
 SUBDIR+=	surf-git
 SUBDIR+=	suscan
 SUBDIR+=	suse121_32_libbz2

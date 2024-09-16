@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (superhtml-0.5.0.tar.gz) = 1d501c2a2b997230762d256c7eb459ec2a4faf8265256cb3829104c8a54234a1
+SHA512 (superhtml-0.5.0.tar.gz) = a90b612f558b3cee751fb51ee1d6adb93846a6711e154bd569f1688e5022ae52bec0d2ecca4586196fba4f95c6bfaab2f6af686284bc3525d6fcceb619ee9f73
+Size (superhtml-0.5.0.tar.gz) = 2234423 bytes

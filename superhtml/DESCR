@@ -1,0 +1,7 @@
+HTML Language Server and Templating Language Library
+
+The Super CLI Tool offers syntax checking and autoformatting features
+for HTML files.
+
+The tool can be used either directly (for example by running it on
+save), or through a LSP client implementation.

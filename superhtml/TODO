@@ -1,0 +1,24 @@
+- downloads lots of stuff during build
+- Fails build with:
+
+ ===> Building for superhtml-0.5.0
+cd /scratch/wip/superhtml/work/superhtml-0.5.0 && /usr/bin/env USETOOLS=no ZIG_GLOBAL_CACHE_DIR=/scratch/wip/superhtml/work/zig-global-cache ZIG_LOCAL_CACHE_DIR=/scratch/wip/superhtml/work/zig-local-cache CC=gcc CF
+LAGS=-O2\ -g\ -fstack-clash-protection CPPFLAGS=-g CXX=c++ CXXFLAGS=-O2\ -g\ -fstack-clash-protection COMPILER_RPATH_FLAG=-Wl,-R F77=gfortran FC=gfortran FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGE
+S=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-Wl,-zrelro\ -Wl,-znow\ -Wl,-R/usr/pkg/lib LINKER_RPATH_FLAG=-R PATH=/scratch/wip/superhtml/work/.cwrapper/bin:/scratch/wip/superhtml/work/.buildlink/bin:/scratch/wi
+p/superhtml/work/.gcc/bin:/scratch/wip/superhtml/work/.tools/bin:/usr/pkg/bin:/home/wiz/bin:/usr/local/bin:/usr/X11R7/bin:/bin:/usr/bin:/usr/pkg/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/pkg/sbin:/usr/local/sbin:/usr
+/games:/archive/foreign/localsrc/security/advisories:/sbin:/usr/sbin:/usr/pkg/bin:/usr/pkg/bin PREFIX=/usr/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/usr/pkg/etc CXXCPP=cpp HOME=/scratch/wip/superhtml/work/.home
+CWRAPPERS_CONFIG_DIR=/scratch/wip/superhtml/work/.cwrapper/config CPP=cpp LOCALBASE=/usr/pkg X11BASE=/usr/pkg PKGMANDIR=man PKGINFODIR=info PKGGNUDIR=gnu/ MAKECONF=/dev/null OBJECT_FMT=ELF USETOOLS=no BSD_INSTALL_P
+ROGRAM=/usr/bin/install\ -c\ \ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INSTALL_SCRIPT=/usr/bin/install\ -c\ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INSTALL_LIB=/usr/bin/install\ -c\ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INST
+ALL_DATA=/usr/bin/install\ -c\ -o\ pbulk\ -g\ builder\ -m\ 644 BSD_INSTALL_MAN=/usr/bin/install\ -c\ -o\ pbulk\ -g\ builder\ -m\ 644 BSD_INSTALL=/usr/bin/install BSD_INSTALL_PROGRAM_DIR=/usr/bin/install\ -d\ -o\ pb
+ulk\ -g\ builder\ -m\ 755 BSD_INSTALL_SCRIPT_DIR=/usr/bin/install\ -d\ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INSTALL_LIB_DIR=/usr/bin/install\ -d\ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INSTALL_DATA_DIR=/usr/bin/install
+\ -d\ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INSTALL_MAN_DIR=/usr/bin/install\ -d\ -o\ pbulk\ -g\ builder\ -m\ 755 BSD_INSTALL_GAME=/usr/bin/install\ -c\ \ -o\ pbulk\ -g\ builder\ -m\ 2555 BSD_INSTALL_GAME_DATA=/usr/b
+in/install\ -c\ -o\ pbulk\ -g\ builder\ -m\ 664 BSD_INSTALL_GAME_DIR=/usr/bin/install\ -d\ -o\ pbulk\ -g\ builder\ -m\ 775 INSTALL_INFO= MAKEINFO=/scratch/wip/superhtml/work/.tools/bin/makeinfo FLEX= BISON= ITSTOOL
+=/scratch/wip/superhtml/work/.tools/bin/itstool GDBUS_CODEGEN=/scratch/wip/superhtml/work/.tools/bin/gdbus-codegen PKG_CONFIG=/scratch/wip/superhtml/work/.tools/bin/pkg-config PKG_CONFIG_LIBDIR=/scratch/wip/superht
+ml/work/.buildlink/lib/pkgconfig:/scratch/wip/superhtml/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/scratch/wip/superhtml/work/.pkg-config.log PKG_CONFIG_PATH= CWRAPPERS_CONFIG_DIR=/scratch/wip/superhtml/work/.
+cwrapper/config zig build --release=safe -Dcpu=baseline  -Dpie=true --prefix /scratch/wip/superhtml/work/.destdir/usr/pkg
+error: invalid option: -Dpie
+  access the help menu with 'zig build -h'
+error: the following build command failed with exit code 1:
+/scratch/wip/superhtml/work/zig-local-cache/o/294682f81b1213fd563e01e1bcc6806d/build /usr/pkg/bin/zig /scratch/wip/superhtml/work/superhtml-0.5.0 /scratch/wip/superhtml/work/zig-local-cache /scratch/wip/superhtml/w
+ork/zig-global-cache --seed 0xbe35caaf -Z79edcce74921f8f4 --release=safe -Dcpu=baseline -Dpie=true --prefix /scratch/wip/superhtml/work/.destdir/usr/pkg
+*** Error code 1
