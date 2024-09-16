@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/04/14 11:56:20 thomasklausner Exp $
 
-DISTNAME=	blosc2-2.6.2
+DISTNAME=	blosc2-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blosc2/}
