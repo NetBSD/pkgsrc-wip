@@ -1,7 +1,6 @@
 # $NetBSD$
 DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 PKGNAME=	${PYPKGPREFIX}-apache-arrow-${APACHE_ARROW_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
 
@@ -24,18 +23,23 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 #CONFIGURE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 
 DEPENDS+=	apache-arrow>=${APACHE_ARROW_VERSION}:../../wip/apache-arrow
+DEPENDS+=	bash>=5.0:../../shells/bash
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-fixture
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-pandas>=2.0.0:../../math/py-pandas
 USE_TOOLS=	cmake gmake pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
 MAKE_ENV+=	PYARROW_PARALLEL=${MAKE_JOBS}
+MAKE_ENV+=	PYARROW_WITH_ACERO=1
 MAKE_ENV+=	PYARROW_WITH_DATASET=1
+# Running make test aborts with flight enabled
+MAKE_ENV+=  PYARROW_WITH_FLIGHT=0
+MAKE_ENV+=  PYARROW_WITH_PARQUET=1
+MAKE_ENV+=  PYARROW_WITH_PARQUET_ENCRYPTION=1
+MAKE_ENV+=  PYARROW_WITH_SUBSTRAIT=1
+
 
 WHEELFILE?=	${WRKSRC}/python/dist/*whl
 
@@ -46,6 +50,8 @@ SUBST_FILES.origin=	python/CMakeLists.txt
 SUBST_SED.origin=	-e 's|\\$$ORIGIN|${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/pyarrow|g'
 
 MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
+
+REPLACE_BASH=	python/cmake_modules/aws_sdk_cpp_generate_variables.sh
 do-build:
 	${RM} -rf ${WRKSRC}/python/.eggs
 	${RUN} cd ${WRKSRC}/python && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build_ext --build-type=relwithdebinfo bdist_wheel
