@@ -13,17 +13,20 @@ LICENSE=	apache-2.0
 # These packages are built within arrow, and it
 # looks difficult to decouple them
 # They come from ./cpp/thirdparty/versions.txt
-XSIMD=		9.0.1.tar.gz
+XSIMD=		13.0.0.tar.gz
 JEMALLOC=	jemalloc-5.3.0.tar.bz2
+SUBSTRAIT=	v0.44.0.tar.gz
+
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${XSIMD}
 DISTFILES+=		${JEMALLOC}
+DISTFILES+=		${SUBSTRAIT}
 
 SITES.${XSIMD}=		https://github.com/xtensor-stack/xsimd/archive/
+SITES.${SUBSTRAIT}=		https://github.com/substrait-io/substrait/archive/
 SITES.${JEMALLOC}=	${MASTER_SITE_GITHUB:=jemalloc/jemalloc/releases/download/5.3.0/}
 
 .include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 CONFIGURE_DIR=	cpp
 
@@ -43,7 +46,19 @@ CMAKE_CONFIGURE_ARGS+=	-DARROW_BUILD_UTILITIES=ON
 CMAKE_CONFIGURE_ARGS+=	-DARROW_CSV=ON
 CMAKE_CONFIGURE_ARGS+=	-DARROW_ACERO=ON
 CMAKE_CONFIGURE_ARGS+=	-DARROW_DATASET=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_WITH_BROTLI=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_WITH_BZ2=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_USE_GLOG=OFF=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_JSON=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_WITH_LZ4=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_PARQUET=ON
 CMAKE_CONFIGURE_ARGS+=	-DPARQUET_BUILD_EXECUTABLES=ON
+CMAKE_CONFIGURE_ARGS+=	-DPARQUET_REQUIRE_ENCRYPTION=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_SUBSTRAIT=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_FLIGHT=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_WITH_SNAPPY=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_WITH_ZLIB=ON
+CMAKE_CONFIGURE_ARGS+=	-DARROW_WITH_ZSTD=ON
 
 # For finding deps
 CMAKE_CONFIGURE_ARGS+=	-Dxsimd_SOURCE=BUNDLED
@@ -51,6 +66,7 @@ CMAKE_CONFIGURE_ARGS+=	-Dxsimd_SOURCE=BUNDLED
 # Set environment variable to find the extra source packages
 CONFIGURE_ENV+=	ARROW_JEMALLOC_URL=/${DISTDIR}/${JEMALLOC}
 CONFIGURE_ENV+=	ARROW_XSIMD_URL=/${DISTDIR}/${XSIMD}
+CONFIGURE_ENV+=	ARROW_SUBSTRAIT_URL=/${DISTDIR}/${SUBSTRAIT}
 
 # To enable tests, devel/googletest needs -fPIE removed
 CMAKE_CONFIGURE_ARGS+=	-DARROW_BUILD_TESTS=OFF
@@ -61,15 +77,24 @@ post-install:
 
 
 .include "../../wip/apache-arrow/version.mk"
+.include "../../archivers/brotli/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gflags/buildlink3.mk"
-# .include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/google-glog/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+#.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/flatbuffers/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../net/grpc/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
