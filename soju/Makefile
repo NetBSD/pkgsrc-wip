@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	scdoc>=0:../../textproc/scdoc
 
 BUILD_DEFS+=	VARBASE
 
-.include "options.mk"
-
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X codeberg.org/emersion/soju/config.DefaultPath=${PKG_SYSCONFDIR}/config \
 			-X codeberg.org/emersion/soju/config.DefaultUnixAdminPath=${VARBASE}/run/soju/admin'
@@ -30,6 +28,7 @@ GO_BUILD_PATTERN+=	./cmd/soju ./cmd/sojuctl ./cmd/sojudb \
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 DOCDIR=			${PREFIX}/share/doc/soju
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/examples/soju \
