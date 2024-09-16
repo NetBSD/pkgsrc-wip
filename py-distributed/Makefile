@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2024.6.2
+DISTNAME=	distributed-2024.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 GITHUB_PROJECT=	distributed
@@ -11,8 +11,6 @@ MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/dask/distributed/
 COMMENT=	Distributed is the parallel scheduler for dask
 LICENSE=	modified-bsd
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer

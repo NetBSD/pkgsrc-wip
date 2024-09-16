@@ -12,6 +12,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/distributed/__init__.py
 ${PYSITELIB}/distributed/__init__.pyc
 ${PYSITELIB}/distributed/__init__.pyo
+${PYSITELIB}/distributed/_async_taskgroup.py
+${PYSITELIB}/distributed/_async_taskgroup.pyc
+${PYSITELIB}/distributed/_async_taskgroup.pyo
 ${PYSITELIB}/distributed/_asyncio.py
 ${PYSITELIB}/distributed/_asyncio.pyc
 ${PYSITELIB}/distributed/_asyncio.pyo
@@ -39,6 +42,9 @@ ${PYSITELIB}/distributed/batched.pyo
 ${PYSITELIB}/distributed/bokeh.py
 ${PYSITELIB}/distributed/bokeh.pyc
 ${PYSITELIB}/distributed/bokeh.pyo
+${PYSITELIB}/distributed/broker.py
+${PYSITELIB}/distributed/broker.pyc
+${PYSITELIB}/distributed/broker.pyo
 ${PYSITELIB}/distributed/cfexecutor.py
 ${PYSITELIB}/distributed/cfexecutor.pyc
 ${PYSITELIB}/distributed/cfexecutor.pyo
@@ -239,6 +245,9 @@ ${PYSITELIB}/distributed/event.pyo
 ${PYSITELIB}/distributed/exceptions.py
 ${PYSITELIB}/distributed/exceptions.pyc
 ${PYSITELIB}/distributed/exceptions.pyo
+${PYSITELIB}/distributed/gc.py
+${PYSITELIB}/distributed/gc.pyc
+${PYSITELIB}/distributed/gc.pyo
 ${PYSITELIB}/distributed/http/__init__.py
 ${PYSITELIB}/distributed/http/__init__.pyc
 ${PYSITELIB}/distributed/http/__init__.pyo
@@ -528,9 +537,6 @@ ${PYSITELIB}/distributed/utils.pyo
 ${PYSITELIB}/distributed/utils_comm.py
 ${PYSITELIB}/distributed/utils_comm.pyc
 ${PYSITELIB}/distributed/utils_comm.pyo
-${PYSITELIB}/distributed/utils_perf.py
-${PYSITELIB}/distributed/utils_perf.pyc
-${PYSITELIB}/distributed/utils_perf.pyo
 ${PYSITELIB}/distributed/utils_test.py
 ${PYSITELIB}/distributed/utils_test.pyc
 ${PYSITELIB}/distributed/utils_test.pyo
