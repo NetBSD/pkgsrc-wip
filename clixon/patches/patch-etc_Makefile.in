@@ -1,0 +1,25 @@
+$NetBSD$
+
+Don't install / overwrite / un-install config file.
+Config file handling in pkg Makefile.
+
+--- etc/Makefile.in.orig	2024-09-17 12:23:58.628894167 +0000
++++ etc/Makefile.in
+@@ -49,14 +49,14 @@ distclean: clean
+ 	rm -f Makefile *~ .depend clixonrc
+ 
+ install:	 clixonrc
+-	install -m 0755 -d $(DESTDIR)$(sysconfdir)
+-	install -m 0644 clixonrc $(DESTDIR)$(sysconfdir)
++#	install -m 0755 -d $(DESTDIR)$(sysconfdir)
++#	install -m 0644 clixonrc $(DESTDIR)$(sysconfdir)
+ 
+ install-include:	
+ 
+ 
+ uninstall:
+-	rm -f $(DESTDIR)$(sysconfdir)/clixonrc
++#	rm -f $(DESTDIR)$(sysconfdir)/clixonrc
+ 
+ depend:
+ 
