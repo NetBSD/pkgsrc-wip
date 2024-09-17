@@ -2,3 +2,6 @@ ANTLR, ANother Tool for Language Recognition, (formerly PCCTS) is a
 language tool that provides a framework for constructing recognizers,
 compilers, and translators from grammatical descriptions containing
 C++ or Java actions.
+
+NOTE: This version is not maintained upstream anymore and newer versions aren't
+backward compatible. Hence some dependent packages require keeping this alive.
