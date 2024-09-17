@@ -277,7 +277,7 @@ fix-relative-rpath:
 .  endfor
 # Only Linux builds link these binaries against an LLVM library
 .  if ${OPSYS} == "Linux"
-.    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-nm llvm-objcopy \
+.    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-link llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
 	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
