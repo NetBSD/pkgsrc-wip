@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (cligen-7.1.0.tar.gz) = 8e5223c8fb4434efc3406d3ba36667bc5ea33bf918dda085ddba870fec120dad
 SHA512 (cligen-7.1.0.tar.gz) = fe91a57fd3de96fca49f54c2e887b1395cc6712517814ace265a57df397e4354d91f47abb97ee8c66802f35fde4e83d74f85738868fb2f3417f5efef7c92551c
 Size (cligen-7.1.0.tar.gz) = 817152 bytes
-SHA1 (patch-configure.ac) = 0b4333fd0383b55d0b0aca55ab120aaae3054fc2
+SHA1 (patch-configure.ac) = 084e2b9e8aff662bc5ec09424a8de0284b42ba30

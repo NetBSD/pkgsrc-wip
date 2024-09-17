@@ -10,7 +10,7 @@ Also properly handle --with-libxml2=...
     AC_MSG_ERROR(CLIGEN does not find lex or flex.)
  fi
 -if test "$YACC" != "bison -y"; then
-+if test `expr "$YACC" : ".*bison -y"` -eq 0; then
++if test "$YACC" = ${YACC##*bison}; then
     AC_MSG_ERROR(CLIGEN does not find bison.  There are several problems with yacc and byacc. Please install bison.)
     # byacc leaks, may need byacc -P?
  fi
