@@ -189,6 +189,7 @@ SUBDIR+=	cli-git
 SUBDIR+=	cligen
 SUBDIR+=	clisp-hg
 SUBDIR+=	clixon
+SUBDIR+=	clixon-controller
 SUBDIR+=	clixon-pyapi
 SUBDIR+=	clock-signal
 SUBDIR+=	cloudflared
