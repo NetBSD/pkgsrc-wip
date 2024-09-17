@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (antlr-2.7.7.tar.gz) = fcb45a208367b2a903e11dfe44d9bf4bed112dad2dc856347aad08c48783c50e
+SHA512 (antlr-2.7.7.tar.gz) = faa72d2ddcba434ef1233e70c1549e63eba67c00793966322e821cf7f015cccb804448cb92d8fbef0429f59928fad65ec954f8ffbda0acbb8e983de0806d349d
+Size (antlr-2.7.7.tar.gz) = 1816180 bytes
+SHA1 (patch-configure) = 41a7e86c32560eef26d0ba54357c5d58d50be63d
+SHA1 (patch-lib__cpp__antlr__ANTLRException.hpp) = 81761161d3cbff6c30675c8eb75daaef26b9751b
+SHA1 (patch-lib_cpp_antlr_CharScanner.hpp) = 845bacc8698fca5252069471f8bf2c1a6384730a
