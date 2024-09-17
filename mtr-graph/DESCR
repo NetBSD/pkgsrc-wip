@@ -1,3 +1,6 @@
-a fork of net/mtr
+mtr combines functionality of traceroute and ping in a single network tool
 
-Mtr is a network diagnostic tool that combines the functionality of the traceroute and ping programs in a single utility.
+v0.85 fork with whois info, IDN, unicode, etc.
+
+This version is built from https://github.com/yvs2014/mtr085 fork
+Main project location is https://github.com/traviscross/mtr
