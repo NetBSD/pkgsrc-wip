@@ -1,0 +1,38 @@
+$NetBSD$
+
+Don't install/overwrite config files.
+Config files handled by pkg Makefile.
+
+--- src/Makefile.in.orig	2024-07-03 04:45:05.000000000 +0000
++++ src/Makefile.in
+@@ -30,6 +30,8 @@ sysconfdir      = @sysconfdir@
+ localstatedir   = @localstatedir@
+ libdir          = @exec_prefix@/lib
+ version         = @CONTROLLER_VERSION@
++clicon_user	= @CLICON_USER@
++clicon_group	= @CLICON_GROUP@
+ 
+ APPNAME	        = controller
+ 
+@@ -113,8 +115,8 @@ distclean: clean
+ install: $(CLISPECS) $(PLUGINS) $(APPNAME).xml autocli.xml
+ 	install -d -m 0755 $(DESTDIR)$(sysconfdir)/clixon
+ 	install -d -m 0755 $(DESTDIR)$(sysconfdir)/clixon/$(APPNAME)
+-	install -m 0644 $(APPNAME).xml $(DESTDIR)$(sysconfdir)/clixon
+-	install -m 0644 autocli.xml $(DESTDIR)$(sysconfdir)/clixon/$(APPNAME)
++#	install -m 0644 $(APPNAME).xml $(DESTDIR)$(sysconfdir)/clixon
++#	install -m 0644 autocli.xml $(DESTDIR)$(sysconfdir)/clixon/$(APPNAME)
+ 	install -d -m 0755 $(DESTDIR)$(libdir)/$(APPNAME)
+ 	install -d -m 0755 $(DESTDIR)$(libdir)/$(APPNAME)/clispec
+ 	install -d -m 0755 $(DESTDIR)$(libdir)/$(APPNAME)/backend
+@@ -125,8 +127,8 @@ install: $(CLISPECS) $(PLUGINS) $(APPNAM
+ 	install -m 0644 $(INSTALLFLAGS) $(BE_PLUGIN) $(DESTDIR)$(libdir)/$(APPNAME)/backend
+ 	install -m 0644 $(INSTALLFLAGS) $(CLI_PLUGIN) $(DESTDIR)$(libdir)/$(APPNAME)/cli
+ 	install -d -m 0755 $(DESTDIR)$(datarootdir)/clixon/controller/mounts # See YANG_SCHEMA_MOUNT_DIR
+-	install -d -m 0755 -g clicon $(DESTDIR)$(localstatedir)/run # for pidfiles
+-	install -d -m 0755 -o clicon -g clicon $(DESTDIR)$(datarootdir)/clixon/controller/modules/
++	install -d -m 0755 -g $(clicon_group) $(DESTDIR)$(localstatedir)/run # for pidfiles
++	install -d -m 0755 -o $(clicon_user) -g $(clicon_group) $(DESTDIR)$(datarootdir)/clixon/controller/modules/
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)$(sysconfdir)/clixon/$(APPNAME).xml

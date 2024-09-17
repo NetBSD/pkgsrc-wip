@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/clixon_controller_packages.sh
+bin/clixon_controller_service
+bin/clixon_controller_xpath
+lib/controller/backend/controller_backend.so
+lib/controller/cli/controller_cli.so
+lib/controller/clispec/controller_configure.cli
+lib/controller/clispec/controller_operation.cli
+lib/controller/clispec/controller_pipe.cli
+lib/controller/clispec/controller_pipe_show.cli
+lib/controller/clispec/controller_template_vars.cli
+share/clixon/controller/clixon-controller-config@2023-11-01.yang
+share/clixon/controller/main/clixon-controller@2024-04-01.yang
+share/examples/clixon-controller/autocli.xml
+share/examples/clixon-controller/controller.xml
+@pkgdir var/run
+@pkgdir var/controller
+@pkgdir share/clixon/controller/mounts
+@pkgdir share/clixon/controller/modules
+@pkgdir etc/clixon/controller
