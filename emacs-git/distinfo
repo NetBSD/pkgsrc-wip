@@ -1,7 +1,4 @@
 $NetBSD$
 
 SHA1 (patch-configure.ac) = fdf28fb6247c1f7bbdf2002e3af1bb6ec654c4a2
-SHA1 (patch-lib_utimens.c) = 015a9c639a9575ae3df4596fce460ff39c15c016
-SHA1 (patch-lib_utimens.h) = bbfde1ddd66e0e038c181dd1fe7b137c1ccb74db
-SHA1 (patch-m4_utimens.m4) = 5850b7f691c0104e3ec97e0dd031426fe58a8b56
 SHA1 (patch-src_fns.c) = af2921422ec11702393ba91d8628fa9b663867ed
