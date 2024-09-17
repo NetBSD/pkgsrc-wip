@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/09 20:41:05 thomasklausner Exp $
+
+BLAKE2s (quantities-0.16.0.tar.gz) = fdc842b4a5137975e9055b81eb6b50f827fc3c6da3b8753acdec93a189dbcc87
+SHA512 (quantities-0.16.0.tar.gz) = 9d34d161ddf6fc5347854da50645c244fa70916abafc1a03ea36a3493b3ca06d42dd4b95066d0ff0719e162ca3bd91497cf6ff518d54175d7c1e899140e5dc6c
+Size (quantities-0.16.0.tar.gz) = 100698 bytes
