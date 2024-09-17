@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (chempy-0.9.0.tar.gz) = 876c3e017afeb64b06faa9e9a424bcf18367f2da55db1185497d10dd1c0fa9b1
+SHA512 (chempy-0.9.0.tar.gz) = af3805207d31f6ca79473837f6d9d2e4b84671cbcc6e04d0a62b1b66933dbbff62c95b69cede6a403019f95d0504c58c8d20d499886773a25364a7e96aeb3db6
+Size (chempy-0.9.0.tar.gz) = 184714 bytes
