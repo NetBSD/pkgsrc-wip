@@ -1,0 +1,26 @@
+$NetBSD$
+
+Permit YACC being "/usr/pkg/bin/bison -y".
+Also properly handle --with-libxml2=...
+
+--- configure.ac.orig	2024-07-03 06:48:07.000000000 +0000
++++ configure.ac
+@@ -107,7 +107,7 @@ echo "$host_cpu $host_vendor $host_os"
+ if test "$LEX" = ":"; then
+    AC_MSG_ERROR(CLIGEN does not find lex or flex.)
+ fi
+-if test "$YACC" != "bison -y"; then
++if test `expr "$YACC" : ".*bison -y"` -eq 0; then
+    AC_MSG_ERROR(CLIGEN does not find bison.  There are several problems with yacc and byacc. Please install bison.)
+    # byacc leaks, may need byacc -P?
+ fi
+@@ -150,6 +150,9 @@ if test "${with_libxml2}"; then
+    AC_CHECK_LIB(xml2, xmlRegexpCompile,[], AC_MSG_ERROR([libxml2 not found]))
+ 
+    # Libxml2 may hide its include files under /usr/include/libxml2/libxml
++   if test x"$with_libxml2" != x; then
++	CPPFLAGS="$CPPFLAGS -I${with_libxml2}/include/libxml2"
++   fi
+    CPPFLAGS="$CPPFLAGS -I/usr/include/libxml2"
+    AC_CHECK_HEADERS([libxml/xmlregexp.h], [], AC_MSG_ERROR([libxml2 header files not found / install libxml2-dev?]), [#include "libxml/xmlversion.h"])
+ fi

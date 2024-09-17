@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	cligen
+
+.if !defined(CLIGEN_BUILDLINK3_MK)
+CLIGEN_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.cligen+=	cligen>=7.1.0
+BUILDLINK_ABI_DEPENDS.cligen?=	cligen>=7.1.0
+BUILDLINK_PKGSRCDIR.cligen?=	../../wip/cligen
+
+.endif # CLIGEN_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-cligen
