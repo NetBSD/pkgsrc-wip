@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (clixon-7.1.0.tar.gz) = f330d82961e55010206ae020fa093bca891e9b2ed7e783ccd139b1cf035cc1e4
 SHA512 (clixon-7.1.0.tar.gz) = 604d281474a39ccc7c4b16747c465417e346333dc38d138e6ba8a08bc1b5f266c35f75c6e3779e43ef623ac52efe202552f88f9fc17bb595c2163c463a22a05d
 Size (clixon-7.1.0.tar.gz) = 1698601 bytes
-SHA1 (patch-configure.ac) = 110ebae711864a80ca4d44acea1435ef0c28f3da
+SHA1 (patch-configure.ac) = 322c11ac995197f668c812b7c880e537c29f80cd
 SHA1 (patch-etc_Makefile.in) = 70090dc658aa85037e0ec5e34c47b7ddafa5cebc
 SHA1 (patch-lib_clixon_clixon__datastore.h) = 7ca3c2fdcd626f1a2368128f4faedec6528b1a56
 SHA1 (patch-lib_src_clixon__proc.c) = e10bbf7b5c1fdd96f9bde76734c2c75ae94cb910

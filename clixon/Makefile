@@ -30,6 +30,9 @@ PKG_GROUPS_VARS+=	CLIXON_GROUP
 CONFIGURE_ARGS+=	--with-restconf=native
 #CONFIGURE_ARGS+=	--without-restconf
 
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--localstatedir=/var
+
 # Don't pick these from the PATH in the build scaffolding...
 CONFIGURE_ENV+=	GREP=/usr/bin/grep
 CONFIGURE_ENV+=	TAIL_BIN=/usr/bin/tail

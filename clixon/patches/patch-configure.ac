@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix test for bison, allow "/usr/pkg/bin/bison -y"...
+Also fix default location of clixon.xml config file.
 
 --- configure.ac.orig	2024-09-17 11:36:31.323368820 +0000
 +++ configure.ac
@@ -13,3 +14,12 @@ Fix test for bison, allow "/usr/pkg/bin/bison -y"...
     AC_MSG_ERROR(CLIXON does not find bison.  There are several problems with yacc and byacc. Please install bison. YACC="$YACC")
  fi
  # Hardcoded to bison -y, seems to work in all bisons?
+@@ -354,7 +354,7 @@ if test "$enable_netsnmp" = "yes"; then
+ fi 
+ 
+ # Set default config file location
+-CLIXON_DEFAULT_CONFIG=/usr/local/etc/clixon.xml
++CLIXON_DEFAULT_CONFIG=${SYSCONFDIR}/clixon.xml
+ AC_ARG_WITH([configfile],
+ 	    [AS_HELP_STRING([--with-configfile=FILE],[Set default path to config file])],
+ 	    [CLIXON_DEFAULT_CONFIG="$withval"],)
