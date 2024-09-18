@@ -1653,7 +1653,6 @@ SUBDIR+=	xmlada
 SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
 SUBDIR+=	xmms-skins
-SUBDIR+=	xonotic
 SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools
 SUBDIR+=	xorriso
