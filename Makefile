@@ -1344,6 +1344,7 @@ SUBDIR+=	revealjs
 SUBDIR+=	reviewdog
 SUBDIR+=	rexx-regina
 SUBDIR+=	rio
+SUBDIR+=	ripgrep-all
 SUBDIR+=	riscv64-none-elf-binutils
 SUBDIR+=	riscv64-none-elf-gcc
 SUBDIR+=	rna-seq
