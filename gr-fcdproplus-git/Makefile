@@ -27,8 +27,6 @@ SUBST_SED.libusb=	-e 's,@@PREFIX@@,${PREFIX},'
 SUBST_MESSAGE.libusb=	Fix for "libusb.h not found"
 
 .include	"../../wip/mk/git-package.mk"
-# you need place after above line for now.
-#_GIT_FLAGS=		# set empty, --depth 1 seems harmfull
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"

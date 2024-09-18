@@ -11,8 +11,6 @@ HOMEPAGE=	https://www.gnu.org/software/emacs/
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-_GIT_FLAGS?=		--depth 1
-
 WRKSRC=		${WRKDIR}/emacs
 
 GNU_CONFIGURE=	yes

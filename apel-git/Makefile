@@ -10,7 +10,6 @@ COMMENT=	Portable Emacs library
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 GIT_REPO=	http://git.chise.org/git/elisp/apel.git
-#_GIT_FLAGS+=	--quiet --depth 1
 
 INFO_FILES=		yes
 USE_LANGUAGES=		# none

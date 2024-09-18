@@ -31,8 +31,6 @@ post-install:
 	(cd ${DESTDIR}${PREFIX}/share/osmo-sdr ; tar xf - ) )
 
 .include "../../wip/mk/git-package.mk"
-# you need place after above line for now.
-_GIT_FLAGS=		# set empty, --depth 1 seems harmfull
 
 .include	"../../devel/libusb1/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
