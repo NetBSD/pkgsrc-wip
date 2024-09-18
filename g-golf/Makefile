@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DIST_VER=	0.8.0-rc-2
-PKG_VER=	0.8.0rc2
-DISTNAME=	g-golf-${DIST_VER}
-PKGNAME=	g-golf-${PKG_VER}
+VERSION_DIST=	0.8.0-rc6
+VERSION_PKG=	0.8.0rc6
+DISTNAME=	g-golf-${VERSION_DIST}
+PKGNAME=	g-golf-${VERSION_PKG}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=g-golf/}
 
@@ -33,5 +33,5 @@ TEST_DEPENDS+=	gtk3+>=3:../../x11/gtk3
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../lang/guile22/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
