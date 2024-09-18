@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (PyGPSClient-1.4.21.tar.gz) = 9c277888bb6e3e36f9049e0102250b1bfdd10cc0fc19d5d28a8ecc7a93726869
+SHA512 (PyGPSClient-1.4.21.tar.gz) = 1c651e69d6c03894d0d41597ebda17bf685892cc7845ca46753c8b81498f9cbd3ac782deac28aea94adaff26f75666ff920adf259093fc135f87bfd7c6d13e1e
+Size (PyGPSClient-1.4.21.tar.gz) = 16537358 bytes

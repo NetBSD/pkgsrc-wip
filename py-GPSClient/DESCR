@@ -1,0 +1,3 @@
+PyGPSClient is a free, open-source, multi-platform graphical GNSS/GPS
+testing, diagnostic and UBX device configuration application written
+entirely in Python and tkinter.

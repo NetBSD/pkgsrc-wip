@@ -1,0 +1,6 @@
+Fix distname/wrkdir confusion (perhaps in github.mk).
+
+Finish package.
+
+Test.
+
