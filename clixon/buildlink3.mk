@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	clixon
+
+.if !defined(CLIXON_BUILDLINK3_MK)
+CLIXON_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.clixon+=	clixon>=7.1.0
+BUILDLINK_ABI_DEPENDS.clixon?=	clixon>=7.1.0
+BUILDLINK_PKGSRCDIR.clixon?=	../../wip/clixon
+
+.endif # CLIXON_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-clixon
