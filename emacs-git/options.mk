@@ -129,9 +129,9 @@ CONFIGURE_ARGS+=	--without-xaw3d
 ###
 ### Toolkit selection
 ###
-.  if (empty(PKG_OPTIONS:Mxaw) && \
-       empty(PKG_OPTIONS:Mgtk) && \
-       empty(PKG_OPTIONS:Mgtk2))
+.  if empty(PKG_OPTIONS:Mxaw) && \
+      empty(PKG_OPTIONS:Mgtk) && \
+      empty(PKG_OPTIONS:Mgtk2)
 # defaults to gtk3
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk3/buildlink3.mk"
