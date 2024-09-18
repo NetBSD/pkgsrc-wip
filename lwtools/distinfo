@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (lwtools-4.20.tar.gz) = d2aa9c9af50c7b29b99b83456d98428be043696beeb7a62aeadbe0e7818d9383
-SHA512 (lwtools-4.20.tar.gz) = 2ee5aaf4b410586aba1ea72588a6fcf681807b59686e654e6761f31edb13dc05d3be44e1bf359c3a895f7ae588fe759e5d237a70a5aba4f2877d05518c83e5f7
-Size (lwtools-4.20.tar.gz) = 658931 bytes
+BLAKE2s (lwtools-4.23.tar.gz) = 9d46ce29b1dfcb1e0f072101a7e0a9f6b8a121b1022f9fd4e0bb8545f01e5845
+SHA512 (lwtools-4.23.tar.gz) = c62f7c25b3222cd106817efcfe56d88a08c505a7e35db6a84841fce8a5605ad9c0ed871f33539c0eabba3e1dea6ed253b5d5be69f97fd28e27f63baadfb77aaf
+Size (lwtools-4.23.tar.gz) = 663006 bytes
 SHA1 (patch-Makefile) = 79a1c1c92f3765984b0c08ebaea499118d223728

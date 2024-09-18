@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lwtools-4.20
+DISTNAME=	lwtools-4.23
 CATEGORIES=	devel
 MASTER_SITES=	http://www.lwtools.ca/releases/lwtools/
 
@@ -11,5 +11,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
 USE_TOOLS=	gmake
+
+# Enable building of the non-functional "lwcc"
+# INSTALL_TARGET=	install-all
 
 .include "../../mk/bsd.pkg.mk"

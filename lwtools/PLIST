@@ -1,12 +1,6 @@
 @comment $NetBSD$
 bin/lwar
 bin/lwasm
-bin/lwcc
-bin/lwcc-cc
 bin/lwcc-cpp
 bin/lwlink
 bin/lwobjdump
-lib/lwcc/bin/lwcc-cc
-lib/lwcc/bin/lwcc-cpp
-@pkgdir lib/lwcc/lib
-@pkgdir lib/lwcc/include
