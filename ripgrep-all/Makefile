@@ -21,7 +21,7 @@ LICENSE=	gnu-agpl-v3
 # need external programs. I've choosen not to add these by default
 # since, some maybe considered too heavy.
 #
-# ffmpeg: for the ffmpeg adapte
+# ffmpeg: for the ffmpeg adapter
 # graphicsmagick: for the pdfpages adapter
 # pandoc: for the pandoc adapter
 # poppler: for the poppler adapter
