@@ -1039,6 +1039,7 @@ SUBDIR+=	pure
 SUBDIR+=	purple-teams-git
 SUBDIR+=	pwnat
 SUBDIR+=	py-Cura
+SUBDIR+=	py-GPSClient 
 SUBDIR+=	py-HeapDict
 SUBDIR+=	py-PySide2
 SUBDIR+=	py-Soya
