@@ -3226,7 +3226,6 @@ SUBDIR+=	ptpd
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pudb
-SUBDIR+=	pueue
 SUBDIR+=	pulseaudio-git
 SUBDIR+=	pulseaudio-qt
 SUBDIR+=	pure
