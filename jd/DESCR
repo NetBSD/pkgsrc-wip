@@ -1,0 +1,4 @@
+jd is a commandline utility and Go library for diffing and patching
+JSON and YAML values. It supports a native jd format (similar to
+unified format) as well as JSON Merge Patch (RFC 7386) and a subset
+of JSON Patch (RFC 6902).
