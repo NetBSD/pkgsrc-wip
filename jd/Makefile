@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/josephburnett/jd/
 COMMENT=	JSON diff and patch
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+GO_BUILD_PATTERN=	.
 
 .include "go-modules.mk"
 

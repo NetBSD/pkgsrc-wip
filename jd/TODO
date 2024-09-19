@@ -1,4 +1,0 @@
-===> Building for jd-1.9.1
-package github.com/josephburnett/jd/web/ui
-        imports syscall/js: build constraints exclude all Go files in /usr/pkg/go122/src/syscall/js
-*** Error code 1
