@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
+
+--- xpconfig/Makefile.in.orig	Tue May 25 16:07:49 2004
++++ xpconfig/Makefile.in
+@@ -153,7 +153,7 @@ libxpconfig_la_LIBADD = 
+ @XPC_RCFILE_TRUE@@XPC_XML_TRUE@@XPC_REGISTRY_FALSE@sectionlist.lo \
+ @XPC_RCFILE_TRUE@@XPC_XML_TRUE@@XPC_REGISTRY_FALSE@keylist.lo \
+ @XPC_RCFILE_TRUE@@XPC_XML_TRUE@@XPC_REGISTRY_FALSE@tokenlist.lo
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)

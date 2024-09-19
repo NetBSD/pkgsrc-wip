@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 07:43:06 phonohawk Exp $
+lib/pureMD5-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Pure/MD5.hi
+lib/pureMD5-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Pure/MD5.p_hi
+lib/pureMD5-${PKGVERSION}/${HASKELL_VERSION}/HSpureMD5-${PKGVERSION}.o
+lib/pureMD5-${PKGVERSION}/${HASKELL_VERSION}/libHSpureMD5-${PKGVERSION}.a
+lib/pureMD5-${PKGVERSION}/${HASKELL_VERSION}/libHSpureMD5-${PKGVERSION}_p.a
+lib/pureMD5-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/pureMD5-${PKGVERSION}/LICENSE

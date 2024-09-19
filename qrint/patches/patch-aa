@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/22 13:30:49 jihbed Exp $
+
+--- Makefile.orig	2010-11-09 11:44:52.000000000 +0000
++++ Makefile	2010-11-09 11:48:34.000000000 +0000
+@@ -4,29 +4,29 @@
+ all: qrdrv.e
+ 
+ qrdrv.e:qrdrv.o qrint.o user.o shared.o thmeth.o  vmeth.o wmeth.o
+-	f77 $(FFLAGS) -o qrdrv.e qrdrv.o qrint.o user.o shared.o thmeth.o  vmeth.o wmeth.o $(LDFLAGS) 
++	f2c-f77 $(FFLAGS) -o qrdrv.e qrdrv.o qrint.o user.o shared.o thmeth.o  vmeth.o wmeth.o $(LDFLAGS) 
+ 
+ # FOR DRIVERS
+ qrdrv.o:qrdrv.f 
+-	f77 -c $(FFLAGS) qrdrv.f
++	f2c-f77 -c $(FFLAGS) qrdrv.f
+ 
+ qrint.o:qrint.f
+-	f77 -c $(FFLAGS) qrint.f
++	f2c-f77 -c $(FFLAGS) qrint.f
+ 
+ # COMMON CODES
+ user.o : user.f 
+-	f77 -c $(FFLAGS) user.f
++	f2c-f77 -c $(FFLAGS) user.f
+ shared.o : shared.f 
+-	f77 -c $(FFLAGS) shared.f
++	f2c-f77 -c $(FFLAGS) shared.f
+ # THETA CODES
+ thmeth.o : thmeth.f 
+-	f77 -c $(FFLAGS) thmeth.f
++	f2c-f77 -c $(FFLAGS) thmeth.f
+ # V CODES
+ vmeth.o  :vmeth.f 
+-	f77 -c $(FFLAGS) vmeth.f
++	f2c-f77 -c $(FFLAGS) vmeth.f
+ # W CODES
+ wmeth.o : wmeth.f 
+-	f77 -c $(FFLAGS) wmeth.f
++	f2c-f77 -c $(FFLAGS) wmeth.f
+ # CLEAN
+ clean:
+ 	rm -f a.out core *.o *.e

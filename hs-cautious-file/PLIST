@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 15:19:24 phonohawk Exp $
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/HScautious-file-${PKGVERSION}.o
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Cautious.hi
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Cautious.p_hi
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/System/Posix/ByteLevel.hi
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/System/Posix/ByteLevel.p_hi
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/System/Posix/Fsync.hi
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/System/Posix/Fsync.p_hi
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/libHScautious-file-${PKGVERSION}.a
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/libHScautious-file-${PKGVERSION}_p.a
+lib/cautious-file-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/cautious-file-${PKGVERSION}/LICENSE

@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
+
+--- work/scrc-2.1/src/IntRep/Alignment.cc.orig	2006-09-29 02:47:25.000000000 +0900
++++ src/IntRep/Alignment.cc	2010-04-16 09:06:30.000000000 +0900
+@@ -259,14 +259,14 @@
+ {
+ char x1;
+ _specc::buffered<char> x2;
+-BufferStruct::BufferStruct() : x2(event(&clk)) { }
++BufferStruct() : x2(event(&clk)) { }
+ };
+ 
+ struct BufferStruct2
+ {
+ _specc::buffered<char> x2;
+ char x1;
+-BufferStruct2::BufferStruct2() : x2(event(&clk)) { }
++BufferStruct2() : x2(event(&clk)) { }
+ };
+ 
+ int		x;

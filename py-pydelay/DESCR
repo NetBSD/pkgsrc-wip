@@ -1,0 +1,3 @@
+pydelay is a program which translates a system of delay
+differential equations (DDEs) into simulation C-code and compiles and runs
+the code (using scipy weave).

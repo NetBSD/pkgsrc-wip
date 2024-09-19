@@ -1,0 +1,7 @@
+This package provides the iptables tools and libraries which provide
+the userland interface to netfilter.
+
+Netfilter is the firewalling subsystem for Linux 2.4.x or above
+kernels. It provides stateful packet filtering, address translation
+(including dynamic masquerading and port forwarding), and packet
+manipulation.

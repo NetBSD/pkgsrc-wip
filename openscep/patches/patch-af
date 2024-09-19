@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- ldap/Makefile.am	2001-12-17 06:13:22.000000000 -0500
++++ ldap/Makefile.am	2005-05-09 18:40:42.000000000 -0400
+@@ -14,9 +14,11 @@
+ all-local:	openscep.ldif slapd.conf setupldap
+ 
+ install-data-local: openscep.ldif slapd.conf openscep.schema
+-	cp openscep.ldif $(OPENSCEPDIR)
+-	cp slapd.conf $(OPENSCEPDIR)
+-	cp openscep.schema $(OPENSCEPDIR)
++	${INSTALL_DATA_DIR} $(datadir)/examples/
++	${INSTALL_DATA_DIR} $(datadir)/examples/openscep/
++	${INSTALL_DATA} openscep.ldif $(datadir)/examples/openscep/
++	${INSTALL_DATA} slapd.conf $(datadir)/examples/openscep/slapd.conf.example
++	${INSTALL_DATA} openscep.schema $(datadir)/examples/openscep/
+ 
+ openscep.ldif:	../config.sh openscep.ldif.in
+ 	sh ../config.sh <openscep.ldif.in >openscep.ldif

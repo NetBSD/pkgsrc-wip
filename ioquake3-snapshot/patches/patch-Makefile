@@ -1,0 +1,59 @@
+$NetBSD$
+
+Build definitions for NetBSD and some of its architectures.
+
+--- Makefile.orig	2017-04-28 09:13:25.000000000 +0000
++++ Makefile
+@@ -794,11 +794,51 @@ ifeq ($(PLATFORM),netbsd)
+ 
+   BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes
+ 
++  ifeq ($(ARCH),x86_64)
++    OPTIMIZEVM = -O3
++    OPTIMIZE = $(OPTIMIZEVM) -ffast-math
++    HAVE_VM_COMPILED = true
++  else
+   ifeq ($(ARCH),x86)
++    OPTIMIZEVM = -O3 -march=i586
++    OPTIMIZE = $(OPTIMIZEVM) -ffast-math
++    HAVE_VM_COMPILED=true
++  else
++  ifeq ($(ARCH),ppc)
++    BASE_CFLAGS += -maltivec
++    HAVE_VM_COMPILED=true
++  endif
++  ifeq ($(ARCH),ppc64)
++    BASE_CFLAGS += -maltivec
+     HAVE_VM_COMPILED=true
+   endif
++  ifeq ($(ARCH),sparc64)
++    OPTIMIZE += -mtune=ultrasparc3 -mv8plus
++    OPTIMIZEVM += -mtune=ultrasparc3 -mv8plus
++    HAVE_VM_COMPILED=true
++  endif
++  ifeq ($(ARCH),alpha)
++    OPTIMIZE = $(OPTIMIZEVM)
++  endif
++  endif
++  endif
++
++  USE_MUMBLE=0
+ 
+-  BUILD_CLIENT = 0
++  CLIENT_LIBS += $(SDL_LIBS)
++  RENDERER_LIBS = $(SDL_LIBS) -lGL
++
++  ifeq ($(USE_OPENAL),1)
++    ifneq ($(USE_OPENAL_DLOPEN),1)
++      CLIENT_LIBS += $(THREAD_LIBS) $(OPENAL_LIBS)
++    endif
++  endif
++
++  ifeq ($(USE_CURL),1)
++    ifneq ($(USE_CURL_DLOPEN),1)
++      CLIENT_LIBS += $(CURL_LIBS)
++    endif
++  endif
+ else # ifeq netbsd
+ 
+ #############################################################################

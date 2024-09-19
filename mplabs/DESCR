@@ -1,0 +1,6 @@
+MP-LABS is a suite of numerical simulation tools for multiphase flows based on
+the free energy Lattice Boltzmann Method (LBM). The code allows for the
+simulation of quasi-incompressible two-phase flows, and uses multiphase models
+that allow for large density ratios. MP-LABS provides implementations that use
+periodic boundary conditions, but it is written in a way that allows for can be
+analyzed using other Open Source tools such as Gnuplot and Paraview.

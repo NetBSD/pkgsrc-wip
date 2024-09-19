@@ -1,0 +1,8 @@
+flimp is a generic graphical frontend to the many excellent command line
+image manipulation tools available.  It allows you to create pipelines
+of commands that read from standard input and write to standard output.
+One can view and compare the result of each stage of the pipeline.
+flimp leaves the input image file untouched; the pipeline is saved in
+a text file.
+flimp features non-destructive image manipulation, 16bit color depth,
+import of raw images via dcraw, and is easy to extend and customize.

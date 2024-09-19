@@ -1,0 +1,5 @@
+
+this is a NetBSD pkgsrc wrapper for RPSL-OL, the RIPE-NCC RPSL object library.
+
+It includes a perl module which is installed as Net::Whois::RIPE::RPSL so
+it has to depend on p5-Net-Whois-RPSL being installed first.

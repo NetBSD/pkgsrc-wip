@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- run-mailcap.orig	2018-05-30 11:43:15.000000000 +0000
++++ run-mailcap
+@@ -141,9 +141,8 @@ sub TempFile {
+ #   $tmpfile = POSIX::tmpnam($name);
+ #   unlink($tmpfile);
+ 
+-    $cmd  = "tempfile --mode=600";
+-    $cmd .= " --prefix $head" if $head;
+-    $cmd .= " --suffix $tail" if $tail;
++    # XXX: -t doesn't like having directories -- consider not using -t
++    $cmd  = "mktemp -t $tmpfile";
+ 
+     $tmpfile = `$cmd`;
+     chomp($tmpfile);

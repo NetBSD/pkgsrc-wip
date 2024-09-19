@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2008/11/13 19:34:13 shattered Exp $
+bin/cpm
+man/man1/cpm.1
+share/examples/cpm/cpmrc
+share/locale/de/LC_MESSAGES/cpm.mo

@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/05/12 12:20:42 ryo-on Exp $
+
+* Disable test case
+
+--- Makefile.in.orig	2007-04-27 17:56:08.000000000 +0000
++++ Makefile.in
+@@ -179,7 +179,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ EXTRA_DIST = doxyfile doc/images win32 zipios++.spec.in
+-SUBDIRS = zipios++ src tests
++SUBDIRS = zipios++ src
+ DOCTOOL = doxygen
+ DOCCONF = doxyfile
+ all: all-recursive

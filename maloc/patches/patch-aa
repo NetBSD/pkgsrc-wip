@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/25 18:11:59 jihbed Exp $
+
+--- doc/doxygen/Makefile.in.orig	2010-08-12 05:40:10.000000000 +0000
++++ doc/doxygen/Makefile.in	2010-12-22 16:22:51.000000000 +0000
+@@ -178,7 +178,7 @@
+ builddir = @builddir@
+ datadir = @datadir@
+ datarootdir = @datarootdir@
+-docdir = @prefix@/doc/maloc
++docdir = @prefix@/share/doc/maloc
+ dot_path = @dot_path@
+ doxygen_path = @doxygen_path@
+ dvidir = @dvidir@
+@@ -434,8 +434,8 @@
+ 	$(doxygen_path) $(top_srcdir)/doc/doxygen/maloc.dox
+ 
+ install-docDATA:
+-	mkdir -p $(docdir)
+-	cp -r ../api $(docdir)/
++	mkdir -p $(DESTDIR)$(docdir)
++	cp -r ../api $(DESTDIR)$(docdir)/
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

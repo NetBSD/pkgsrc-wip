@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+
+--- cardtools.h.orig	2003-10-03 16:32:35.000000000 -0300
++++ cardtools.h
+@@ -19,7 +19,7 @@
+ #ifndef CARDTOOLS_H
+ #define CARDTOOLS_H
+ 
+-#include <winscard.h>
++#include <PCSC/winscard.h>
+ #include <stdlib.h>
+ 
+ #define VARIABLEEF  0x19

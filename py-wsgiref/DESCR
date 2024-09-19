@@ -1,0 +1,9 @@
+The Web Server Gateway Interface (WSGI) is a standard interface
+between web server software and web applications written in Python.
+Having a standard interface makes it easy to use an application
+that supports WSGI with a number of different web servers
+
+wsgiref is a reference implementation of the WSGI specification that can
+be used to add WSGI support to a web server or framework. It also contains
+some useful utilities for writing applications or middleware that provide
+or implement WSGI

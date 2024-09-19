@@ -1,0 +1,8 @@
+Premake is a build script generator. Write a small Lua
+program describing your project, and then use Premake to
+generate input files for any of these toolsets:
+
+* GNU make
+* MS Visual Studio 6
+* MS Visual Studio 7
+* ...more on the way!

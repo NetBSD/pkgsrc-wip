@@ -1,0 +1,7 @@
+Slate is a prototype-based object-oriented programming language based on
+Self, CLOS, and Smalltalk. Slate syntax is intended to be as familiar as
+possible to a Smalltalker, rather than engaging in divergent experiments in
+that respect. Unlike the Smalltalk family, within Slate, methods can be
+assigned to a signature of objects, instead of being installed on one
+favored receiver. Slate has also many further expansions of the semantics
+which interest advanced users.

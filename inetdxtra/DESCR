@@ -1,0 +1,16 @@
+inetdxtra is a group of additional servers to add new protocols to
+inetd/xinetd. These programs are all tiny, written in C with no
+dependences and use well under 100Kb of RAM each. With them being
+inetd servers, they only run when a request is made or a session
+in progress.
+
+Servers include:
+
+in.www  -       An inetd based webserver with CGI support
+in.proxy -      An inetd based HTTP proxy server
+in.jabberd -    An inetd based jabber server
+in.mvp -        An inetd based version of the mvprelay.c file
+in.dns -        An inetd based authoritative DNS server
+in.dhcp -       An inetd based DHCP server
+in.smtp -       An inetd based SMTP relay
+in.ctcs -       An inetd based CTCS server for enhanced CTorrent clients

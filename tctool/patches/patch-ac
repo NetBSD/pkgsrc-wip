@@ -1,0 +1,37 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/21 22:42:09 gschwarz Exp $
+
+--- pppoe.h.orig	2009-01-13 22:49:27.000000000 +0100
++++ pppoe.h	2009-01-18 21:46:02.000000000 +0100
+@@ -15,6 +15,9 @@
+ *
+ ***********************************************************************/
+ 
++#include <stdio.h>		/* For FILE */
++#include <sys/types.h>		/* For pid_t */
++
+ #include "config.h"
+ 
+ extern int IsSetID;
+@@ -23,12 +26,11 @@
+ #define _POSIX_SOURCE 1 /* For sigaction defines */
+ #endif
+ 
+-#include <stdio.h>		/* For FILE */
+-#include <sys/types.h>		/* For pid_t */
+-
+ /* How do we access raw Ethernet devices? */
++/*
+ #undef USE_LINUX_PACKET
+ #undef USE_BPF
++*/
+ 
+ #if defined(HAVE_NETPACKET_PACKET_H) || defined(HAVE_LINUX_IF_PACKET_H)
+ #define USE_LINUX_PACKET 1
+@@ -73,7 +75,6 @@
+ #endif
+ 
+ #ifdef USE_BPF
+-extern int bpfSize;
+ struct PPPoEPacketStruct;
+ void sessionDiscoveryPacket(struct PPPoEPacketStruct *packet);
+ #define BPF_BUFFER_IS_EMPTY (bpfSize <= 0)

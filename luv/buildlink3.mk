@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	luv
+
+.if !defined(LUV_BUILDLINK3_MK)
+LUV_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.luv+=	luv>=1.32.0
+BUILDLINK_ABI_DEPENDS.luv+=	luv>=1.32.0
+BUILDLINK_PKGSRCDIR.luv?=	../../wip/luv
+
+.endif # LUV_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-luv

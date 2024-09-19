@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+
+--- cardtools.c.orig	2003-10-03 16:32:35.000000000 -0300
++++ cardtools.c
+@@ -17,10 +17,10 @@
+  ********************************************************************/
+ 
+ 
+-#include <winscard.h>
++#include <PCSC/winscard.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <musclecard.h>
++#include <PCSC/musclecard.h>
+ #include "cardtools.h"
+ 
+ 

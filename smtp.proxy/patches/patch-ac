@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/03/18 23:24:43 oht Exp $
+--- ip-lib.c.orig	2006-03-10 07:45:17.000000000 +0100
++++ ip-lib.c	2006-03-10 21:58:00.000000000 +0100
+@@ -35,7 +35,7 @@
+ #include <netinet/in.h>
+ #include <netdb.h>
+ #include <errno.h>
+-
++#include <arpa/inet.h>
+ #include "lib.h"
+ #include "ip-lib.h"
+ 

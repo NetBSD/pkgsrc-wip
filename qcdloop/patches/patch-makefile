@@ -1,0 +1,13 @@
+$NetBSD: patch-makefile,v 1.2 2013/12/03 17:02:35 jihbed Exp $
+
+--- ql/makefile.orig	2013-12-03 17:58:50.000000000 +0100
++++ ql/makefile	2013-12-03 17:59:08.000000000 +0100
+@@ -1,7 +1,7 @@
+ FFLAGS 	= -O 
+ HERE = $(PWD)
+ LIBDIR = $(HERE)/../ff/
+-FC = gfortran
++FC = g95
+ LIBRARY	      = libqcdloop.a
+ 
+ 

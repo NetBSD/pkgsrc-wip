@@ -1,0 +1,2 @@
+dict provides a bidirectional mapping data structure and related utilities:wq!
+(namedbidict, inverted) to naturally model one-to-one relations in Python

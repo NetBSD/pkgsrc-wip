@@ -1,0 +1,4 @@
+Archimedes is the GNU package for the design and simulation of submicron
+semiconductor devices. It is a 2D Fast Monte Carlo simulator which can take
+into account all the relevant quantum effects, thanks to the implementation
+of the Bohm effective potential method.

@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pyneqsys/__init__.py
+${PYSITELIB}/pyneqsys/__init__.pyc
+${PYSITELIB}/pyneqsys/__init__.pyo
+${PYSITELIB}/pyneqsys/_release.py
+${PYSITELIB}/pyneqsys/_release.pyc
+${PYSITELIB}/pyneqsys/_release.pyo
+${PYSITELIB}/pyneqsys/core.py
+${PYSITELIB}/pyneqsys/core.pyc
+${PYSITELIB}/pyneqsys/core.pyo
+${PYSITELIB}/pyneqsys/symbolic.py
+${PYSITELIB}/pyneqsys/symbolic.pyc
+${PYSITELIB}/pyneqsys/symbolic.pyo
+${PYSITELIB}/pyneqsys/tests/__init__.py
+${PYSITELIB}/pyneqsys/tests/__init__.pyc
+${PYSITELIB}/pyneqsys/tests/__init__.pyo
+${PYSITELIB}/pyneqsys/tests/test_core.py
+${PYSITELIB}/pyneqsys/tests/test_core.pyc
+${PYSITELIB}/pyneqsys/tests/test_core.pyo
+${PYSITELIB}/pyneqsys/tests/test_symbolic.py
+${PYSITELIB}/pyneqsys/tests/test_symbolic.pyc
+${PYSITELIB}/pyneqsys/tests/test_symbolic.pyo

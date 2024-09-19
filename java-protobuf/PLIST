@@ -1,0 +1,3 @@
+@comment $NetBSD$
+lib/java/protobuf/protobuf-java-${PKGVERSION}.jar
+lib/java/protobuf/protobuf-java-util-${PKGVERSION}.jar

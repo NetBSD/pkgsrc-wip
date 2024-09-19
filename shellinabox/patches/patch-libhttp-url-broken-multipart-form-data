@@ -1,0 +1,18 @@
+$NetBSD$
+
+Merge https://github.com/shellinabox/shellinabox/pull/446/commits
+commit 7f47efe for CVE-2018-16789: fix for broken multipart/form-data
+to mitigate DoS attack.
+
+--- libhttp/url.c.orig	2019-04-07 08:39:04.352921385 +0200
++++ libhttp/url.c	2019-04-07 08:42:30.746080956 +0200
+@@ -312,6 +312,9 @@
+               }
+             }
+           }
++        } else {
++           warn("[http] broken multipart/form-data!");
++           break;
+         }
+       }
+       if (lastPart) {

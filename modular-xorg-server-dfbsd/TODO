@@ -1,0 +1,27 @@
+Copy port to x11/modular-xorg-server, do not install from wip.
+
+Waiting for devd patches required on latest FreeBSD and DragonFly
+submitted in
+pkg/50200 (x11/modular-xorg-server)
+to be accepted.
+
+Port devd patches for 1.19.6 that have not been merged
+into FreeBSD ports, supports evdev.
+
+Get modular-xorg-xephyr to build again.
+
+Get xf86-video-nv, xf86-video-vmware to build again.
+
+See what needs to be ported for hw/xfree86/common/compiler.h for arm
+on NetBSD
+
+In hw/xfree86/common/xf86AutoConfig.c, does NetBSD or any non-linux
+use fbdev
+
+Can wskbd be used on NetBSD modesetting like it can be for OpenBSD
+
+Does NetBSD still need the old Xpoll.h fixes
+
+Does NetBSD need -noretro options
+
+RRSetChanged in randr/randrstr.h does not seem to need to be exported

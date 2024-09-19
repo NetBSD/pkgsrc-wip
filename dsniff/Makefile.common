@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.12 2017/08/16 20:21:14 wiz Exp $
+#
+# used by wip/dsniff/Makefile
+# used by wip/dsniff-nox11/Makefile
+
+DISTNAME=	dsniff-${VERS}
+VERS=		2.3
+CATEGORIES=	security
+MASTER_SITES+=	https://monkey.org/~dugsong/dsniff/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://monkey.org/~dugsong/dsniff/
+LICENSE=	modified-bsd
+
+GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
+
+PATCHDIR=	${.CURDIR}/../../wip/dsniff/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/dsniff/distinfo
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure
+SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
+SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet10}/include/libnet10|g"
+SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet10}/lib/libnet10|g"
+SUBST_MESSAGE.conf=	Fixing configuration script.
+
+.include "../../devel/libnet10/buildlink3.mk"
+.include "../../net/libnids/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"

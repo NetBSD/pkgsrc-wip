@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/08 09:54:37 thomasklausner Exp $
+bin/vj
+share/doc/vj/INSTALL
+share/doc/vj/README
+share/doc/vj/TODO
+share/doc/vj/WHATSNEW
+share/doc/vj/gpl.txt
+share/examples/vj/vj.cfg

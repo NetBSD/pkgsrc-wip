@@ -1,0 +1,20 @@
+$NetBSD: patch-examples_redirect_Makefile,v 1.1 2013/03/08 12:36:39 makoto Exp $
+
+Libtoolize
+
+--- examples/redirect/Makefile.orig	2003-08-31 09:14:16.000000000 +0900
++++ examples/redirect/Makefile	2013-03-08 21:16:55.000000000 +0900
+@@ -1,9 +1,11 @@
+ CC = gcc
+-FLAGS = -Wall
++CFLAGS = -Wall -I @@PREFIX@@/include 
++LDFLAGS = -L@@PREFIX@@/lib -lcgi -Wl,-rpath=@@PREFIX@@/lib
+ CGIBIN = .
+ 
+ all:
+-	$(CC) $(FLAGS) -lcgi redirect.c -o $(CGIBIN)/redirect.cgi
++        libtool --mode=compile $(CC) $(CFLAGS) -o redirect.o -c redirect.c ; \
++        libtool --mode=link   $(CC) $(LDFLAGS) redirect.o -o $(CGIBIN)/redirect.cgi ;\
+ 
+ 	@echo 
+ 	@echo Example compiled. 

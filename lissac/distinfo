@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/19 23:16:35 jihbed Exp $
+
+RMD160 (lisaac-0.13.1.tar.gz) = 75e0ac553df4d42fa15a2b69194efffd1b81f52b
+Size (lisaac-0.13.1.tar.gz) = 2141871 bytes
+SHA1 (patch-aa) = af1e6e657265ea9ea2f614d93bb8d53f6280dda2

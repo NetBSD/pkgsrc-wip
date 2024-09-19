@@ -1,0 +1,18 @@
+Doesn't run on NetBSD-5.99.15/amd64; segfaults right at the beginning
+with a backtrace of
+(gdb) r
+Starting program: /usr/pkg/bin/moleinvasion
+No joystick support :(
+Video mode set to 800x600 at 16 bpp
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007f7ffcf3667a in _sys___nanosleep50 () from /usr/lib/libc.so.12
+(gdb) bt
+#0  0x00007f7ffcf3667a in _sys___nanosleep50 () from /usr/lib/libc.so.12
+#1  0x00007f7ffdc4b2ce in SDL_Delay () from /usr/pkg/lib/libSDL-1.2.so.0
+#2  0x00007f7ffdc4b301 in RunTimer () from /usr/pkg/lib/libSDL-1.2.so.0
+#3  0x00007f7ffdc11919 in SDL_RunThread () from /usr/pkg/lib/libSDL-1.2.so.0
+#4  0x00007f7ffdc49def in RunThread () from /usr/pkg/lib/libSDL-1.2.so.0
+#5  0x00007f7ffda0a792 in pthread_create () from /usr/lib/libpthread.so.1
+#6  0x00007f7ffcf6d080 in ___lwp_park50 () from /usr/lib/libc.so.12
+Cannot access memory at address 0x7f7ffa600000

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/08 21:06:52 ianharding Exp $
+
+--- Makefile.orig	2003-10-02 13:02:21.000000000 +0000
++++ Makefile
+@@ -55,7 +55,7 @@ ifeq ($(POSTGRES),LSB)
+     PGINC = /usr/include
+ else
+     PGLIB = $(POSTGRES)/lib
+-    PGINC = $(POSTGRES)/include
++    PGINC = $(POSTGRES)/include/pgsql
+ endif
+  
+ #

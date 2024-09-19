@@ -1,0 +1,59 @@
+$NetBSD: patch-bin_startGroovy,v 1.1.1.1 2011/09/22 03:17:10 ryo-on Exp $
+
+* Set JAVAH_HOME and GROOVY_HOME.
+
+--- bin/startGroovy.orig	2011-09-05 12:45:22.000000000 +0000
++++ bin/startGroovy
+@@ -66,24 +66,8 @@ if [ "$1" = "-cp" -o "$1" = "-classpath"
+ fi
+ 
+ # Attempt to set JAVA_HOME if it's not already set.
+-if [ -z "$JAVA_HOME" ] ; then
+-    if $darwin ; then 
+-        [ -z "$JAVA_HOME" -a -d "/Library/Java/Home" ] && export JAVA_HOME="/Library/Java/Home"
+-        [ -z "$JAVA_HOME" -a -d "/System/Library/Frameworks/JavaVM.framework/Home" ] && export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+-    else
+-        javaExecutable="`which javac`"
+-        [ -z "$javaExecutable" -o "`expr \"$javaExecutable\" : '\([^ ]*\)'`" = "no" ] && die "JAVA_HOME not set and cannot find javac to deduce location, please set JAVA_HOME."
+-        # readlink(1) is not available as standard on Solaris 10.
+-        readLink=`which readlink`
+-        [ `expr "$readLink" : '\([^ ]*\)'` = "no" ] && die "JAVA_HOME not set and readlink not available, please set JAVA_HOME."
+-        javaExecutable="`readlink -f \"$javaExecutable\"`"
+-        javaHome="`dirname \"$javaExecutable\"`"
+-        javaHome=`expr "$javaHome" : '\(.*\)/bin'`
+-        JAVA_HOME="$javaHome"
+-        export JAVA_HOME
+-
+-    fi
+-fi
++JAVA_HOME=@JAVA_HOME@
++export JAVA_HOME
+ 
+ # For Cygwin, ensure paths are in UNIX format before anything is touched.
+ if $cygwin ; then
+@@ -104,24 +88,7 @@ then
+ fi
+ 
+ # Attempt to set GROOVY_HOME if it is not already set.
+-if [ -z "$GROOVY_HOME" -o ! -d "$GROOVY_HOME" ] ; then
+-    # Resolve links: $0 may be a link to groovy's home.
+-    PRG="$0"
+-    # Need this for relative symlinks.
+-    while [ -h "$PRG" ] ; do
+-        ls=`ls -ld "$PRG"`
+-        link=`expr "$ls" : '.*-> \(.*\)$'`
+-        if expr "$link" : '/.*' > /dev/null; then
+-            PRG="$link"
+-        else
+-            PRG=`dirname "$PRG"`"/$link"
+-        fi
+-    done
+-    SAVED="`pwd`"
+-    cd "`dirname \"$PRG\"`/.."
+-    GROOVY_HOME="`pwd -P`"
+-    cd "$SAVED"
+-fi
++GROOVY_HOME=@GROOVY_HOME@
+ 
+ # Set the default Groovy config if no specific one is mentioned.
+ if [ -z "$GROOVY_CONF" ] ; then

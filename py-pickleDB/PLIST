@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pickledb.py
+${PYSITELIB}/pickledb.pyc
+${PYSITELIB}/pickledb.pyo

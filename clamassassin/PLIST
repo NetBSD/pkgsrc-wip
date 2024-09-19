@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/02 07:49:29 ura Exp $
+bin/clamassassin

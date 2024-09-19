@@ -1,0 +1,4 @@
+pykit-shared is a collection of python modules which most of my other python
+projects depend on for functionality. As its name suggests, it is shared between
+my other projects and was developed for the sole purpose of containing all of
+the python modules I found myself copying back and forth between projects.

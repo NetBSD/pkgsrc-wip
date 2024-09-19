@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/watermark/__init__.py
+${PYSITELIB}/watermark/__init__.pyc
+${PYSITELIB}/watermark/__init__.pyo
+${PYSITELIB}/watermark/watermark.py
+${PYSITELIB}/watermark/watermark.pyc
+${PYSITELIB}/watermark/watermark.pyo

@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD$
+
+kea needs a basename utility that that can be invoked as:
+
+	$(basename -- /path/to/file)
+
+In order to get a kea compatible basename utility you should put
+either of the following first in your PATH:
+
+	/usr/xpg4/bin
+	/usr/gnu/bin
+
+
+===========================================================================

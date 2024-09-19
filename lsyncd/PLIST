@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/09 08:59:57 slitvinov Exp $
+bin/lsyncd
+man/man1/lsyncd.1
+share/doc/lsyncd/lbash.lua
+share/doc/lsyncd/lecho.lua
+share/doc/lsyncd/lgforce.lua
+share/doc/lsyncd/limagemagic.lua
+share/doc/lsyncd/lpostcmd.lua
+share/doc/lsyncd/lrsync.lua
+share/doc/lsyncd/lrsyncssh.lua

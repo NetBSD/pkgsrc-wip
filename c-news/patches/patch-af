@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2003/09/30 15:39:59 hfath Exp $
+
+--- relay/fileart.c.orig	Fri Apr 28 02:51:36 1995
++++ relay/fileart.c
+@@ -287,7 +287,7 @@
+ 	if (art->a_artf == NULL) {
+ 		nnfree(&art->a_tmpf);
+ 		art->a_tmpf = strsave(SPOOLTMP);
+-		(void) mktemp(art->a_tmpf);
++		(void) mkstemp(art->a_tmpf);
+ 		art->a_unlink = YES;
+ 		art->a_artf = fopenwclex(art->a_tmpf, "w+");
+ 		if (art->a_artf == NULL)

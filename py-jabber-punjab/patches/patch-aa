@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/15 04:09:54 schnoebe Exp $
+
+--- twisted/plugins/punjab.py.orig	2008-09-19 11:00:17.000000000 -0500
++++ twisted/plugins/punjab.py
+@@ -1,7 +1,7 @@
+ 
+-from twisted.scripts.mktap import _tapHelper
++from twisted.application.service import ServiceMaker
+  	
+-Punjab = _tapHelper(
++Punjab = ServiceMaker(
+  	        "Punjab",
+                 "punjab.tap",
+  	        "A HTTP XMPP client interface",

@@ -1,0 +1,11 @@
+Synchronous and Asynchronous exceptions which are explicit in the type
+signature. The first ones are very similar to Either and
+Control.Monad.Error.ErrorT. The second ones are used for
+System.IO.readFile and System.IO.hGetContents. This package is a
+proposal for improved exception handling in Haskell. It strictly
+separates between handling of exceptional situations (file not found,
+invalid user input, see http://www.haskell.org/haskellwiki/Exception)
+and (programming) errors (division by zero, index out of range, see
+http://www.haskell.org/haskellwiki/Error). Handling of the first one
+is called "exception handling", whereas handling of errors is better
+known as "debugging".

@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/02/10 12:09:32 adrian_p Exp $
+
+--- etc/Makefile.in.orig	Tue Feb 10 11:17:02 2004
++++ etc/Makefile.in	Tue Feb 10 11:22:08 2004
+@@ -143,12 +143,12 @@
+ uninstall-info-am:
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/examples/mnogosearch
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(prefix)/share/examples/mnogosearch/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(prefix)/share/examples/mnogosearch/$$f; \
+ 	done
+ 
+ uninstall-sysconfDATA:

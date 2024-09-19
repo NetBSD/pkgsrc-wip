@@ -1,0 +1,5 @@
+This package allows you to snoop on login tty's through another tty-device or
+pseudo-tty. The snoop-tty becomes a 'clone' of the original tty, redirecting
+both input and output from/to it.
+
+This version is designed for kernels 2.6

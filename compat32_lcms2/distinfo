@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.9 2019/01/15 10:54:46 markd Exp $
+
+RMD160 (lcms2-2.9.tar.gz) = 0003ffd3561e6ed787be81b5ed7b7af52211fe19
+SHA512 (lcms2-2.9.tar.gz) = 70b1c51fa8d137d5072425e580745ff1fbf49c6e8bb1da0a8adb0647d3b7c095208793cb02de1e8d1a01363b8575fa60c61bedbff99bbec57a44228239cb00e5
+Size (lcms2-2.9.tar.gz) = 10974649 bytes

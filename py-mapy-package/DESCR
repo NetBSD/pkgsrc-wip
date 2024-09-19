@@ -1,0 +1,3 @@
+Tool to integrate different pre-processor platforms (Abaqus, NASTRAN, SimXpert).
+The models can be loaded in the Python environment and passed from one
+platform to another

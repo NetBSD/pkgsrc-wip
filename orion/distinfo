@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:32 rillig Exp $
+
+RMD160 (orion-0.2.tar.gz) = 2b5380486732359b37cfe85666165597897b1f2b
+Size (orion-0.2.tar.gz) = 40281 bytes
+SHA1 (patch-aa) = f4306c3d142429f0364f18fd36a9cea4fdcc94df

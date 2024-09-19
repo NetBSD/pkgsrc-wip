@@ -1,0 +1,11 @@
+XMLSig is a C++ wrapper around the xmlsec library, providing a simple
+object oriented interface for dynamic languages.  Its main objectives
+are:
+
+1. To be a fully compliant XML Signature implementation.
+
+See http://www.w3.org/TR/xmldsig-core/
+
+2. To have an API resembling Apache TSIK.
+
+See http://incubator.apache.org/tsik/

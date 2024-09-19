@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/multivar_horner/__init__.py
+${PYSITELIB}/multivar_horner/__init__.pyc
+${PYSITELIB}/multivar_horner/__init__.pyo
+${PYSITELIB}/multivar_horner/factorisation_classes.py
+${PYSITELIB}/multivar_horner/factorisation_classes.pyc
+${PYSITELIB}/multivar_horner/factorisation_classes.pyo
+${PYSITELIB}/multivar_horner/global_settings.py
+${PYSITELIB}/multivar_horner/global_settings.pyc
+${PYSITELIB}/multivar_horner/global_settings.pyo
+${PYSITELIB}/multivar_horner/helper_classes.py
+${PYSITELIB}/multivar_horner/helper_classes.pyc
+${PYSITELIB}/multivar_horner/helper_classes.pyo
+${PYSITELIB}/multivar_horner/helper_fcts.py
+${PYSITELIB}/multivar_horner/helper_fcts.pyc
+${PYSITELIB}/multivar_horner/helper_fcts.pyo
+${PYSITELIB}/multivar_horner/helpers_fcts_numba.py
+${PYSITELIB}/multivar_horner/helpers_fcts_numba.pyc
+${PYSITELIB}/multivar_horner/helpers_fcts_numba.pyo
+${PYSITELIB}/multivar_horner/multivar_horner.py
+${PYSITELIB}/multivar_horner/multivar_horner.pyc
+${PYSITELIB}/multivar_horner/multivar_horner.pyo

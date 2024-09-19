@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/27 12:44:09 jihbed Exp $
+bin/monajat-applet
+bin/monajat-mod
+${PYSITELIB}/monajat/__init__.py
+${PYSITELIB}/monajat/__init__.pyc
+${PYSITELIB}/monajat/__init__.pyo
+${PYSITELIB}/monajat/applet.py
+${PYSITELIB}/monajat/applet.pyc
+${PYSITELIB}/monajat/applet.pyo
+${PYSITELIB}/monajat/monajat.py
+${PYSITELIB}/monajat/monajat.pyc
+${PYSITELIB}/monajat/monajat.pyo
+${PYSITELIB}/monajat/sqlGenerator.py
+${PYSITELIB}/monajat/sqlGenerator.pyc
+${PYSITELIB}/monajat/sqlGenerator.pyo
+${PYSITELIB}/monajat/utils.py
+${PYSITELIB}/monajat/utils.pyc
+${PYSITELIB}/monajat/utils.pyo
+share/monajat/data.db
+share/monajat/monajat.svg

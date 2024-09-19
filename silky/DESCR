@@ -1,0 +1,18 @@
+Silky is an easy-to-use graphical SILC client. Key features follow:
+
+ * Easy to use. The user experience is similar as in some popular IRC
+ * clients.
+ * Works in Windows, Linux, OS X, NetBSD, FreeBSD, OpenBSD and possibly in
+   some other systems.
+ * Uses Gtk+ 2. Doesn't require full Gnome2 to be installed.
+ * Uses the SILC Toolkit.
+ * Written in C.
+ * Supports binary MIME-messages.
+ * Open source, GPL licence.
+ * Translated already to 7 languages, including Italian, Finnish, German and
+   Russian.
+
+The aim of this project is to create a simple and easy to use graphical,
+os-independent SILC client. Silky contains, or will eventually contain, all
+necessary features of a SILC client. The user interface will be kept as simple
+and clean as possible.

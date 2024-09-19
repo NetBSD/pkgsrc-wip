@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/12/04 05:53:45 dhowland Exp $
+
+--- sis/io/read_kiss.c.orig	2004-02-07 05:14:28.000000000 -0500
++++ sis/io/read_kiss.c
+@@ -10,7 +10,7 @@
+ #ifdef SIS
+ #include "sis.h"
+ 
+-extern void read_error();
++extern void read_error(char *, ...);
+ extern int read_lineno;
+ extern char *read_filename;
+ 

@@ -1,0 +1,4 @@
+This package is designed for sensor- and source-space analysis of M-EEG data,
+ including frequency-domain and time frequency analyses and non-parametric
+statistics. This package is presently evolving quickly and thanks to the adopted
+open development environment user contributions can be easily incorporated

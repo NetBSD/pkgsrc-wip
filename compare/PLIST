@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/26 14:59:37 poppnk Exp $
+bin/compare
+man/man1/compare.1
+man/man4/makefiles.4
+man/man4/makerules.4

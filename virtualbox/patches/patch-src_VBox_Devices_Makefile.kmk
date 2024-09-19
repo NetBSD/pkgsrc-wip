@@ -1,0 +1,69 @@
+$NetBSD$
+
+--- src/VBox/Devices/Makefile.kmk.orig	2016-03-04 19:27:54.000000000 +0000
++++ src/VBox/Devices/Makefile.kmk
+@@ -185,7 +185,7 @@ if !defined(VBOX_ONLY_EXTPACKS)         
+  ifn1of ($(KBUILD_TARGET), os2)
+   VBoxDD_SOURCES += Storage/DrvHostDVD.cpp
+  endif
+- ifn1of ($(KBUILD_TARGET), darwin freebsd os2 solaris)
++ ifn1of ($(KBUILD_TARGET), darwin freebsd os2 solaris netbsd)
+   VBoxDD_SOURCES += Storage/DrvHostFloppy.cpp
+  endif
+ 
+@@ -350,6 +350,11 @@ if !defined(VBOX_ONLY_EXTPACKS)         
+  	USB/USBProxyDevice.cpp \
+  	USB/freebsd/USBProxyDevice-freebsd.cpp
+ 
++  VBoxDD_DEFS.netbsd   += VUSB_HAVE_USBPROXY_DEVICE
++  VBoxDD_SOURCES.netbsd+= \
++ 	USB/USBProxyDevice.cpp \
++ 	USB/netbsd/USBProxyDevice-netbsd.cpp
++
+   ifdef VBOX_WITH_SCSI
+    VBoxDD_SOURCES       += \
+    	Storage/UsbMsd.cpp
+@@ -575,6 +580,17 @@ if !defined(VBOX_ONLY_EXTPACKS)         
+   endif
+  endif
+ 
++ ifeq ($(KBUILD_TARGET),netbsd)
++  VBoxDD_SOURCES  += \
++   	Audio/DrvHostOSSAudio.cpp
++  ifdef VBOX_WITH_PULSE
++   VBoxDD_DEFS    += VBOX_WITH_PULSE
++   VBoxDD_SOURCES += \
++   Audio/DrvHostPulseAudio.cpp \
++   Audio/pulse_stubs.c
++  endif
++ endif
++
+  ifeq ($(KBUILD_TARGET),solaris)
+   ifdef VBOX_WITH_SOLARIS_OSS
+    VBoxDD_SOURCES += Audio/DrvHostOSSAudio.cpp
+@@ -701,6 +717,11 @@ if !defined(VBOX_ONLY_EXTPACKS)         
+   VBoxDD_SOURCES.freebsd += Network/DrvTAP.cpp
+  endif # freebsd
+ 
++ ifeq ($(KBUILD_TARGET),netbsd)
++  VBoxDD_SOURCES += Serial/DrvHostSerial.cpp
++  VBoxDD_SOURCES.netbsd += Network/DrvTAP.cpp
++ endif # netbsd
++
+  VBoxDD_SOURCES.linux += \
+  	Network/DrvTAP.cpp \
+  	Parallel/DrvHostParallel.cpp \
+@@ -1414,7 +1435,7 @@ if defined(VBOX_WITH_VMSVGA3D) && !defin
+  	Graphics/shaderlib/libWineStub/debug.c
+  VBoxSVGA3D_LIBS        = $(LIB_RUNTIME)
+  VBoxSVGA3D_LIBS.win   += $(PATH_SDK_$(VBOX_WINPSDK)_LIB)/Opengl32.lib
+- if1of ($(KBUILD_TARGET), solaris linux freebsd)
++ if1of ($(KBUILD_TARGET), solaris linux freebsd netbsd)
+   VBoxSVGA3D_LIBS      += GL
+  endif
+  VBoxSVGA3D_LDFLAGS.darwin += \
+@@ -1453,4 +1474,3 @@ if defined(VBOX_WITH_VMSVGA3D) && !defin
+ endif # defined(VBOX_WITH_VMSVGA3D) && !defined(VBOX_ONLY_EXTPACKS)
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

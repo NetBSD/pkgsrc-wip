@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2009/04/19 21:12:34 gschwarz Exp $
+
+--- MCONFIG.in.orig	2009-02-16 23:51:22.000000000 +0100
++++ MCONFIG.in	2009-04-18 18:18:38.000000000 +0200
+@@ -39,7 +39,7 @@
+ X = @EXEEXT@
+ 
+ # Install into alternate root area, e.g. for package generation
+-INSTALLROOT = 
++#INSTALLROOT =
+ 
+ # Link
+ LN_S            = @LN_S@

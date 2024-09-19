@@ -1,0 +1,17 @@
+Or1ksim is a generic OpenRISC 1000 architecture simulator capable of
+emulating OpenRISC based computer systems.
+The goal is to simulate 32-bit and 64-bit OpenRISC CPUs and enough surrounding
+hardware to fake real machines, capable of running real (unmodified) operating
+systems, such as NetBSD, RTEMS, eCos and Linux.
+
+Or1ksim provides several unique features:
+
+    * Free, open source code.
+    * High level, fast architecture simulation that allows early code
+      analysis and system performance evaluation.
+    * All major models of OpenCores peripheral and system controller
+      cores supportedi.
+    * Easy addition of new peripheral models.
+    * Remote debugging through a network socket with the GNU Debugger (GDB).
+    * Support for different environments (memory configurations and sizes,
+      OR1K processor model, configuration of peripheral devices).

@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1 2006/12/10 10:27:47 gschwarz Exp $
+
+--- ldap.c.orig	2001-03-16 14:38:02.000000000 +0100
++++ ldap.c	2006-12-05 20:34:42.000000000 +0100
+@@ -21,7 +21,7 @@
+                or (at your option) any later version.
+  */ 
+ 
+-/*#if defined(LDAP)*/
++#if defined(USE_LDAP)
+ #include <stdio.h>
+ #include <string.h>
+ #include <lber.h>
+@@ -74,4 +74,4 @@
+     }
+ }
+ 
+-/*#endif*/ /* LDAP */
++#endif /* USE_LDAP */

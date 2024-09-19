@@ -1,0 +1,4 @@
+Pypot is a library developed in the Inria FLOWERS team to make it easy
+and fast to control custom robots based on dynamixel motors. This
+framework provides different levels of abstraction corresponding to
+different types of use

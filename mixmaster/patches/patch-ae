@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 2004/07/31 05:34:40 tvierling Exp $
+
+--- Src/crypto.h.orig	2004-07-31 01:19:06.000000000 -0400
++++ Src/crypto.h
+@@ -13,12 +13,13 @@
+ #define _CRYPTO_H
+ #include "mix3.h"
+ 
++#include <libdes.h>
++
+ #ifdef USE_OPENSSL
+ #include <openssl/opensslv.h>
+ #if (OPENSSL_VERSION_NUMBER < 0x0903100)
+ #error "This version of OpenSSL is not supported. Please get a more current version from http://www.openssl.org"
+ #endif /* version check */
+-#include <openssl/des.h>
+ #include <openssl/blowfish.h>
+ #include <openssl/md5.h>
+ #include <openssl/sha.h>

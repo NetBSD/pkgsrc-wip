@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1 2012/06/18 12:28:39 ddeus Exp $
+
+--- src/functions.lisp.orig	2012-06-18 08:09:39.000000000 +0000
++++ src/functions.lisp
+@@ -226,19 +226,21 @@ arguments and does type promotion for th
+ 
+ (defun split-if (test seq &optional (dir :before))
+   (remove-if #'(lambda (x) (equal x (subseq seq 0 0)))
+-             (loop for start fixnum = 0
++             (loop with stop = 0 
++                   for start = 0
+                      then (if (eq dir :before)
+                               stop
+                               (the fixnum (1+ (the fixnum stop))))
+                    while (< start (length seq))
+-                   for stop = (position-if test seq
+-                                           :start (if (eq dir :elide)
+-                                                      start
+-                                                      (the fixnum (1+ start))))
+-                   collect (subseq seq start
+-                                   (if (and stop (eq dir :after))
++                   collect (progn
++                             (setf stop (position-if test seq
++                                                     :start (if (eq dir :elide)
++                                                              start
++                                                              (the fixnum (1+ start)))))
++                             (subseq seq start
++                                     (if (and stop (eq dir :after))
+                                        (the fixnum (1+ (the fixnum stop)))
+-                                       stop))
++                                       stop)))
+                    while stop)))
+ 
+ (defgeneric translate-camelcase-name (name &key upper-initial-p special-words)

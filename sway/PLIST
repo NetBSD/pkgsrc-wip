@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/sway
+bin/swaybar
+bin/swaymsg
+bin/swaynag
+etc/sway/config
+etc/sway/security.d/00-defaults
+share/backgrounds/sway/Sway_Wallpaper_Blue_1136x640.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_1136x640_Portrait.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_1366x768.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_768x1024.png
+share/backgrounds/sway/Sway_Wallpaper_Blue_768x1024_Portrait.png
+share/bash-completion/completions/sway
+share/bash-completion/completions/swaybar
+share/bash-completion/completions/swaymsg
+share/fish/vendor_completions.d/sway.fish
+share/fish/vendor_completions.d/swaymsg.fish
+share/fish/vendor_completions.d/swaynag.fish
+share/wayland-sessions/sway.desktop
+share/zsh/site-functions/_sway
+share/zsh/site-functions/_swaymsg

@@ -1,0 +1,16 @@
+--- bgpd/rde.c.orig	2006-02-11 00:34:40.000000000 +1000
++++ bgpd/rde.c	2007-01-12 09:27:16.000000000 +1000
+@@ -151,8 +151,13 @@
+ 	bgpd_process = PROC_RDE;
+ 
+ 	if (setgroups(1, &pw->pw_gid) ||
++#if defined(__NetBSD__)
++	    setregid(pw->pw_gid, pw->pw_gid) ||
++	    setreuid(pw->pw_uid, pw->pw_uid))
++#else
+ 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
+ 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
++#endif
+ 		fatal("can't drop privileges");
+ 
+ 	signal(SIGTERM, rde_sighdlr);

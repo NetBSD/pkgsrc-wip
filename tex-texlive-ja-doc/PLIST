@@ -1,0 +1,9 @@
+@comment $NetBSD$
+share/texmf-dist/doc/texlive/texlive-ja/Makefile
+share/texmf-dist/doc/texlive/texlive-ja/img/advanced-macos-ja.png
+share/texmf-dist/doc/texlive/texlive-ja/img/basic-macos-ja.png
+share/texmf-dist/doc/texlive/texlive-ja/img/stdcoll-ja.png
+share/texmf-dist/doc/texlive/texlive-ja/img/tlshell-macos-ja.png
+share/texmf-dist/doc/texlive/texlive-ja/texlive-ja.pdf
+share/texmf-dist/doc/texlive/texlive-ja/texlive-ja.sty
+share/texmf-dist/doc/texlive/texlive-ja/texlive-ja.tex

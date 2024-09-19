@@ -1,0 +1,7 @@
+SmtpRC is a program that can be used to scan entire networks for open mail
+relays. It is multithreaded so it runs very fast and it is fully
+configurable so it can be adjusted to suit any need. With more and more
+broadband customers connecting to the internet everyday a great deal of
+them are unknowingly running mail servers that are open to abuse from
+spammers. SmtpRC was written to enable Systems Administrator to easily
+detect those customers and take the appropriate action.

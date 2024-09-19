@@ -1,0 +1,15 @@
+@comment $NetBSD$
+include/qjson-qt5/parser.h
+include/qjson-qt5/parserrunnable.h
+include/qjson-qt5/qjson_export.h
+include/qjson-qt5/qobjecthelper.h
+include/qjson-qt5/serializer.h
+include/qjson-qt5/serializerrunnable.h
+lib/cmake/qjson-qt5/QJSON-qt5Config.cmake
+lib/cmake/qjson-qt5/QJSON-qt5ConfigVersion.cmake
+lib/cmake/qjson-qt5/QJSON-qt5Targets-noconfig.cmake
+lib/cmake/qjson-qt5/QJSON-qt5Targets.cmake
+lib/libqjson-qt5.so
+lib/libqjson-qt5.so.0
+lib/libqjson-qt5.so.${PKGVERSION}
+lib/pkgconfig/QJson-qt5.pc

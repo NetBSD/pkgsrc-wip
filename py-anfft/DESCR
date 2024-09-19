@@ -1,0 +1,13 @@
+ANFFT is an FFT package for Python, based on FFTW.  It provides a
+multi-threaded, self-tuning FFT interface via high-level functions
+similar to the "fft" and "fftn" routines found in NumPy and SciPy.
+
+ANFFT is intended to be used in situations where large numbers of expensive
+FFTs are required, for which the built-in NumPy or SciPy FFTs are not
+acceptable. By default, ANFFT provides immediate results by using
+FFTW's "estimate" mode, which does not require tuning.  However, each
+high-level function provides a keyword named "measure" which will invoke the
+full FFTW planning machinery.  Plans for a given shape and type of array
+are cached for the length of a Python session, and accummulated FFTW "wisdom"
+is stored across Python sessions in a dotfile.  You don't need to know anything
+about FFTW internals to use ANFFT.

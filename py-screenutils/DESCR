@@ -1,0 +1,2 @@
+lib for gnu-screen: creates/close/list/log sessions, injects commands
+screenutils is a set of classes that should help handling gnu-screen windows.

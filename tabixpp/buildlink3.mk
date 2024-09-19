@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	tabixpp
+
+.if !defined(TABIXPP_BUILDLINK3_MK)
+TABIXPP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.tabixpp+=	tabixpp>=1.0.0p20171116
+BUILDLINK_PKGSRCDIR.tabixpp?=	../../wip/tabixpp
+
+.endif	# TABIXPP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-tabixpp

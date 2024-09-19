@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/symcxx/__init__.py
+${PYSITELIB}/symcxx/__init__.pyc
+${PYSITELIB}/symcxx/__init__.pyo
+${PYSITELIB}/symcxx/_release.py
+${PYSITELIB}/symcxx/_release.pyc
+${PYSITELIB}/symcxx/_release.pyo
+${PYSITELIB}/symcxx/_symcxx.so
+${PYSITELIB}/symcxx/tests/test_lambdify.py
+${PYSITELIB}/symcxx/tests/test_lambdify.pyc
+${PYSITELIB}/symcxx/tests/test_lambdify.pyo
+${PYSITELIB}/symcxx/tests/test_symcxx.py
+${PYSITELIB}/symcxx/tests/test_symcxx.pyc
+${PYSITELIB}/symcxx/tests/test_symcxx.pyo

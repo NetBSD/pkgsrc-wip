@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.2 2010/05/14 05:20:30 phonohawk Exp $
+
+RMD160 (haskelldb-hdbc-sqlite3-0.13.tar.gz) = e66968ee17e567bc76ec214ed4e924a7ec6866c7
+Size (haskelldb-hdbc-sqlite3-0.13.tar.gz) = 1335 bytes

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/02 22:38:36 jihbed Exp $
+${PYSITELIB}/griddata/__init__.py
+${PYSITELIB}/griddata/__init__.pyc
+${PYSITELIB}/griddata/__init__.pyo
+${PYSITELIB}/griddata/griddata.py
+${PYSITELIB}/griddata/griddata.pyc
+${PYSITELIB}/griddata/griddata.pyo
+${PYSITELIB}/nnint.so

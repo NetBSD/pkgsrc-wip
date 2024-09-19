@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:25 thomasklausner Exp $
+bin/xsi
+man/man8/xsi.8
+share/doc/xsi/CHANGELOG
+share/doc/xsi/COPYING
+share/doc/xsi/FRONTENDS
+share/doc/xsi/README
+share/doc/xsi/xmlsysinfo-1.0.xsd
+share/doc/xsi/xsi-output.css
+share/doc/xsi/xsi-output.html
+share/doc/xsi/xsi-output.xml

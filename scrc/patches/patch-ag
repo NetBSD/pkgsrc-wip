@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
+
+ -Wl,rpath ${SPECC_SLIB} doesn't seem to work so the work around
+ (so, to be reviewed)
+
+--- scrc-2.1/src/Compiler/Makefile.bak	2004-06-16 05:19:47.000000000 +0900
++++ src/Compiler/Makefile	2010-08-31 10:36:07.000000000 +0900
+@@ -115,7 +115,7 @@
+ 
+ 
+ $(BINFILE):	$(BINARY).o $(OBJECTS) $(LIBDEP)
+-	$(LN) -o $(BINFILE) $(BINARY).o $(OBJECTS) $(LIBS) $(STDLIB)
++	env LD_RUN_PATH=${SPECC_SLIB} $(LN) -o $(BINFILE) $(BINARY).o $(OBJECTS) $(LIBS) $(STDLIB)
+ 
+ $(BINARY)_pure:	$(BINARY).o $(OBJECTS) $(LIBDEP)
+ 	$(LNPURE) -o $(BINARY)_pure $(BINARY).o $(OBJECTS) $(LIBS) $(STDLIB)

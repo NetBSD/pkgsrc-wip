@@ -1,0 +1,16 @@
+spyse is a development framework and platform for building multi-agent systems
+using the Python programming language. A multi-agent system (MAS) combines
+concepts from distributed computing and artificial intelligence. Agents are
+autonomously reasoning software entities that can collaborate (or compete) in
+order to achieve a (common) goal. By cooperating they create emergent behaviour
+in the system (distributed artificial intelligence). The architecture of a MAS
+is specified in the FIPA standard.
+
+Spyse provides multiple means for reasoning (BDI logics, CLIPS expert shell)
+and communicating locally and remotely.Each agent has its own thread of control.
+Agents within and among instances of the platform communicate by
+exchanging messages based on ontologies. Spyse makes use of the Web Ontology
+Language (OWL) defined for the Semantic Web.
+
+Furthermore, spyse is coupled to the Zope web application server in order to
+provide for access to the MAS via a dynamic Web interface.

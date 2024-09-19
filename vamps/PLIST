@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/27 23:05:01 rhialto Exp $
+bin/play_cell
+bin/vamps

@@ -1,0 +1,32 @@
+#!/bin/sh
+# $NetBSD: argouml,v 1.3 2005/03/18 22:39:57 daprice Exp $
+#
+# start script for argouml
+
+if [ "$JAVA_HOME" = "" ]
+then
+	JAVA_HOME=@JAVA_HOME@
+fi
+if [ "$ARGO_HOME" = "" ]
+then
+	ARGO_HOME=@ARGO_HOME@
+fi
+
+$JAVA_HOME/bin/java -jar $ARGO_HOME/argouml.jar "$@"
+
+if [ "x$CLASSPATH" = "x" ]
+then
+    CLASSPATH=@PREFIX@/lib/java/log4j.jar:@PREFIX@/lib/java/xerces.jar
+else
+    CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/log4j.jar:@PREFIX@/lib/java/xerces.jar
+fi
+
+for f in antlrall argouml gef i18n nsuml ocl-argo
+do
+    CLASSPATH=$CLASSPATH:@ARGO_HOME@/${f}.jar
+done
+export CLASSPATH
+
+#java -jar @PREFIX@/lib/java/argouml/argouml.jar
+#$JAVA_HOME/bin/java -jar $ARGO_HOME/argouml.jar "$@"
+$JAVA_HOME/bin/java org.argouml.application.Main

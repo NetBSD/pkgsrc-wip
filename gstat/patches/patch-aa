@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/19 19:23:31 daprice Exp $
+
+--- doc/www/makefile.in.orig	Thu Aug 21 07:51:10 2003
++++ doc/www/makefile.in
+@@ -46,7 +46,7 @@ test:	all
+ 	cp -r *.css *.html html fig /home/httpd/html/gstat
+ 
+ install:	all
+-	cp -r *.css *.html $(DIRS) /home/httpd/html/gstat
++	cp -r *.css *.html $(DIRS) @DOCDIR@
+ 
+ install-www:	all
+ 	scp -rp *.css *\.html $(DIRS) $(RSITE)

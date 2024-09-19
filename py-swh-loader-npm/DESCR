@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+swh-loader-npm
+==============
+
+Software Heritage loader to ingest [`npm`](https://www.npmjs.com/) packages into the archive.
+
+# What does the loader do?
+
+The npm loader visits and loads a npm package [1].
+
+Each visit will result in:
+- 1 snapshot (which targets n revisions ; 1 per package release version)
+- 1 revision (which targets 1 directory ; the package release version uncompressed)
+
+[1] https://docs.npmjs.com/about-packages-and-modules
+
+## First visit
+
+Given a npm package (origin), the loader, for the first visit:
+
+- retrieves information for the given package (notably released versions)
+...

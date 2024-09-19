@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/16 09:45:47 jihbed Exp $
+bin/atompaw
+bin/graphatom
+lib/libatompaw.la
+share/doc/atompaw/doc/atompaw-usersguide.pdf
+share/doc/atompaw/example/C/C.atomicdata
+share/doc/atompaw/example/C/C.atompaw.input
+share/doc/atompaw/example/Cu/Cu.atomicdata
+share/doc/atompaw/example/Cu/Cu.atompaw.input
+share/doc/atompaw/example/F/F.GGA-PBE-paw.UPF.gz
+share/doc/atompaw/example/F/F.GGA-PBE-paw.abinit.gz
+share/doc/atompaw/example/F/F.atomicdata.gz
+share/doc/atompaw/example/F/F.atompaw.input
+share/doc/atompaw/example/Li/Li.GGA-PBE-paw.UPF.gz
+share/doc/atompaw/example/Li/Li.GGA-PBE-paw.abinit.gz
+share/doc/atompaw/example/Li/Li.atomicdata.gz
+share/doc/atompaw/example/Li/Li.atompaw.input

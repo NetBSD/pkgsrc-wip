@@ -1,0 +1,3 @@
+Elixir is a source code cross-referencer inspired by LXR. It's
+written in Python and its main purpose is to index every release
+of the Linux kernel while keeping a minimal footprint.

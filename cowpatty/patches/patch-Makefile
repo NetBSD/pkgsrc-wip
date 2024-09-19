@@ -1,0 +1,43 @@
+$NetBSD: patch-Makefile,v 1.1 2013/05/24 11:40:31 othyro Exp $
+
+Fix install paths.
+
+--- Makefile.orig	2008-03-20 14:58:23.000000000 +0000
++++ Makefile
+@@ -10,21 +10,22 @@
+ LDLIBS		= -lpcap
+ CFLAGS		= -pipe -Wall -DOPENSSL 
+ CFLAGS		+= -O2
+-LDLIBS		+= -lcrypto
++LDLIBS		+= -lssl -lcrypto
+ CFLAGS		+= -g3 -ggdb
+ #CFLAGS		+= -static
+ PROGOBJ		= md5.o sha1.o utils.o cowpatty.o genpmk.o
+ PROG		= cowpatty genpmk
+-BINDIR		= /usr/local/bin
++PREFIX		?= /usr/local
++BINDIR		= $(PREFIX)/bin
+ 
+-all: $(PROGOBJ) $(PROG)
++all: $(PROGOBJ) .WAIT $(PROG)
+ 
+ cowpatty: common.h md5.c md5.h sha1.h cowpatty.c cowpatty.h sha1.c \
+             sha1.h utils.c utils.h
+-	$(CC) $(CFLAGS) cowpatty.c -o cowpatty utils.o md5.o sha1.o $(LDLIBS)
++	$(CC) $(CFLAGS) cowpatty.c -o cowpatty utils.o md5.o sha1.o $(LDLIBS) ${LDFLAGS}
+ 
+ genpmk: genpmk.c cowpatty.h utils.h sha1.h common.h
+-	$(CC) $(CFLAGS) genpmk.c -o genpmk utils.o sha1.o $(LDLIBS)
++	$(CC) $(CFLAGS) genpmk.c -o genpmk utils.o sha1.o $(LDLIBS) ${LDFLAGS}
+ 
+ utils: utils.c utils.h
+ 	$(CC) $(CFLAGS) utils.c -c
+@@ -45,7 +46,7 @@ strip:
+ 
+ install: all
+ 	install -d $(DESTDIR)$(BINDIR)
+-	install -m 755 $(PROG) $(BINDIR)$(DESTDIR)
++	install -m 755 $(PROG) $(DESTDIR)$(BINDIR)
+ 
+ love:
+ 	@echo "Not right now, I have a headache."

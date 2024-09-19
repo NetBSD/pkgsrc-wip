@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/09/15 20:56:03 tnn2 Exp $
+lib/xorg/modules/drivers/vboxvideo_drv.la

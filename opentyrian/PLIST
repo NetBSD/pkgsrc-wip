@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/19 19:36:55 yhardy Exp $
+bin/opentyrian

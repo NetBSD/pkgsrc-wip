@@ -1,0 +1,115 @@
+--- bgpd/parse.y.orig	2007-01-12 09:51:33.000000000 +1000
++++ bgpd/parse.y	2007-01-12 09:53:28.000000000 +1000
+@@ -115,8 +115,8 @@
+ int	 symset(const char *, const char *, int);
+ char	*symget(const char *);
+ int	 atoul(char *, u_long *);
+-int	 getcommunity(char *);
+-int	 parsecommunity(char *, int *, int *);
++unsigned int	 getcommunity(char *);
++int	 parsecommunity(char *, unsigned int *, int *);
+ 
+ typedef struct {
+ 	union {
+@@ -165,7 +165,8 @@
+ %token	IPSEC ESP AH SPI IKE
+ %token	IPV4 IPV6
+ %token	<v.string>		STRING
+-%type	<v.number>		number asnumber optnumber yesno inout espah
++%type   <v.number>              dnumber asnumber
++%type	<v.number>		number optnumber yesno inout espah
+ %type	<v.number>		family
+ %type	<v.string>		string
+ %type	<v.addr>		address
+@@ -194,6 +195,7 @@
+ 		| grammar error '\n'		{ errors++; }
+ 		;
+ 
++
+ number		: STRING			{
+ 			u_long	ulval;
+ 
+@@ -207,13 +209,45 @@
+ 		}
+ 		;
+ 
+-asnumber	: number			{
+-			if ($1 > USHRT_MAX) {
+-				yyerror("AS too big: max %u", USHRT_MAX);
++dnumber		: STRING			{
++                 u_long	ulval, ulval2;
++                 char *dot ;
++
++		 if ((dot = strchr($1,'.')) != NULL) {
++                   *dot = '\0';
++                   ++dot ; 
++                   if (atoul(dot,&ulval2) == -1) {
++				yyerror("\"%s\" is not a number", $1);
++				free($1);
++				YYERROR;
++		                }
++		   else if (atoul($1, &ulval) == -1) {
++				yyerror("\"%s\" is not a number", $1);
++				free($1);
++				YYERROR;
++		                }
++		   else
++                     $$ = (ulval << 16) + ulval2 ;
++		   }
++                 else 
++			if (atoul($1, &ulval) == -1) {
++				yyerror("\"%s\" is not a number", $1);
++				free($1);
+ 				YYERROR;
++			} else
++				$$ = ulval;
++			free($1);
+ 			}
++		;
++
++asnumber	: dnumber {
++			if ($1 > ULONG_MAX) {
++				yyerror("AS too big: max %u", ULONG_MAX);
++				YYERROR;
+ 		}
+ 
++                }
++                ;
+ string		: string STRING				{
+ 			if (asprintf(&$$, "%s %s", $1, $2) == -1)
+ 				fatal("string: asprintf");
+@@ -1445,7 +1479,7 @@
+ 			}
+ 			free($3);
+ 			/* Don't allow setting of any match */
+-			if (!$2 && ($$->action.community.as == COMMUNITY_ANY ||
++			if ((!$2) && ($$->action.community.as == (unsigned int)COMMUNITY_ANY ||
+ 			    $$->action.community.type == COMMUNITY_ANY)) {
+ 				yyerror("'*' is not allowed in set community");
+ 				free($$);
+@@ -2031,7 +2065,7 @@
+ 	return (0);
+ }
+ 
+-int
++unsigned int
+ getcommunity(char *s)
+ {
+ 	u_long	ulval;
+@@ -2052,7 +2086,7 @@
+ }
+ 
+ int
+-parsecommunity(char *s, int *as, int *type)
++parsecommunity(char *s, unsigned int *as, int *type)
+ {
+ 	char *p;
+ 	int i;
+@@ -2114,6 +2148,7 @@
+ 	p->conf.capabilities.mp_v4 = SAFI_UNICAST;
+ 	p->conf.capabilities.mp_v6 = SAFI_NONE;
+ 	p->conf.capabilities.refresh = 1;
++	p->conf.capabilities.as_4bytes = 1;
+ 	p->conf.softreconfig_in = 1;
+ 	p->conf.softreconfig_out = 1;
+ 

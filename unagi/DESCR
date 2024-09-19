@@ -1,0 +1,11 @@
+Unagi is a modular compositing manager which aims to be efficient, lightweight
+and responsive. It is currently written in C programming language and based on
+XCB library client library. Any existing window manager can be used as long as
+it implements properly EWMH and ICCCM specifications (or at least parts of it
+which are needed), which is generally the case nowadays.
+
+This project also aims to provide a functional and stable software to improve
+window manager usability from an end-user point of view (for instance windows
+translucency, application-switcher using live thumbnails instead of plain icons,
+Expose...), therefore it does not intend at all to provide useless eye-candy
+effects.

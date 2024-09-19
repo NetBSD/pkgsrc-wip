@@ -1,0 +1,6 @@
+The Security framework provides a generic mechanism
+to implement security policies on Python objects.
+This introduction provides a tutorial of the framework
+explaining concepts, design, and going through sample
+usage from the perspective of a Python programmer using
+the framework outside of Zope

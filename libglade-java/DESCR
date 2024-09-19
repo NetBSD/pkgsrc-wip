@@ -1,0 +1,7 @@
+Java-Gnome is a set of Java bindings for the GNOME and GTK libraries that
+allow GNOME and GTK applications to be written in Java. The Java-Gnome
+API has been carefully designed to be easy to use, maintaining a good OO
+paridigm, yet still wrapping the entire functionality of the underlying
+libraries.
+
+This package provides GLADE2 bindings for Java

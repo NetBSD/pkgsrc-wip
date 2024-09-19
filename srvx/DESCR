@@ -1,0 +1,4 @@
+srvx IRC services is a ground-up implementation of services for IRC
+networks (supporting IRCu2.10, Bahamut, and other IRC server dialects).
+Features include POSIX threading, generalized proxy detection and all
+the standard services users expect.

@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/eight2
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/eight2/__init__.py
+${PYSITELIB}/eight2/__init__.pyc
+${PYSITELIB}/eight2/__init__.pyo
+${PYSITELIB}/eight2/__main__.py
+${PYSITELIB}/eight2/__main__.pyc
+${PYSITELIB}/eight2/__main__.pyo
+${PYSITELIB}/eight2/const.py
+${PYSITELIB}/eight2/const.pyc
+${PYSITELIB}/eight2/const.pyo
+${PYSITELIB}/eight2/eight2.py
+${PYSITELIB}/eight2/eight2.pyc
+${PYSITELIB}/eight2/eight2.pyo
+${PYSITELIB}/eight2/rulus.py
+${PYSITELIB}/eight2/rulus.pyc
+${PYSITELIB}/eight2/rulus.pyo
+${PYSITELIB}/eight2/tools.py
+${PYSITELIB}/eight2/tools.pyc
+${PYSITELIB}/eight2/tools.pyo

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.2 2014/11/02 09:31:17 makoto Exp $
+
+--- callback.c.orig	2014-11-02 11:49:29.000000000 +0900
++++ callback.c	2014-11-02 11:49:46.000000000 +0900
+@@ -13,6 +13,7 @@
+  * Callback implementation.
+  */
+ #include "callback.h"
++#include <stdio.h>
+ #include <string.h>
+ 
+ #ifndef CALLBACK_NATIVE

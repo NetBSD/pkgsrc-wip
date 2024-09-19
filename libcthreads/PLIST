@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/03 09:41:37 othyro Exp $
+include/libcthreads.h
+include/libcthreads/codepage.h
+include/libcthreads/definitions.h
+include/libcthreads/error.h
+include/libcthreads/extern.h
+include/libcthreads/features.h
+include/libcthreads/types.h
+lib/libcthreads.la
+lib/pkgconfig/libcthreads.pc
+man/man3/libcthreads.3

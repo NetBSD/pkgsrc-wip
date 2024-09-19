@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.2 2007/09/15 00:19:22 thomasklausner Exp $
+
+--- display/setup.py.orig	2007-09-08 15:03:41.000000000 +0000
++++ display/setup.py
+@@ -1,8 +1,18 @@
+ #! /usr/bin/env python
+ 
++import os
++import string
+ from distutils.core import setup
+ from distutils.extension import Extension
+ 
++extra_compile_args = []
++extra_link_args = []
++
++if os.environ.has_key('CFLAGS'):
++    extra_compile_args.extend(string.split(os.environ['CFLAGS']))
++if os.environ.has_key('LDFLAGS'):
++    extra_link_args.extend(string.split(os.environ['LDFLAGS']))
++
+ setup ( name="xshm",
+         version="0.2",
+         description="X window system Shared Memory extension",
+@@ -10,7 +20,9 @@ setup ( name="xshm",
+         author_email="arigo@tunes.org",
+         ext_modules=[Extension(name = 'xshm',
+                                sources = ['xshm.c'],
+-                               include_dirs = ['/usr/X11R6/include'],
+-                               library_dirs = ['/usr/X11R6/lib'],
++                               include_dirs = ['@X11BASE@/include'],
++                               library_dirs = ['@X11BASE@/lib'],
++                               extra_compile_args = extra_compile_args,
++                               extra_link_args = extra_link_args,
+                                libraries = ['X11', 'Xext'])]
+         )

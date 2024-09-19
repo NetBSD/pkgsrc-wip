@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.5 2013/11/06 06:55:50 noud4 Exp $
+bin/grsync
+bin/grsync-batch
+man/man1/grsync-batch.1
+man/man1/grsync.1
+share/applications/grsync.desktop
+share/grsync/grsync.glade
+share/icons/hicolor/48x48/mimetypes/application-x-grsync-session.png
+share/mime/packages/grsync.xml
+share/pixmaps/grsync-busy.png
+share/pixmaps/grsync.png

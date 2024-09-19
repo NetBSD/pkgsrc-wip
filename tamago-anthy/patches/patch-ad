@@ -1,0 +1,36 @@
+$NetBSD: patch-ad,v 1.3 2013/02/12 06:45:09 makoto Exp $
+
+ make-local-hook is used only before emacs-21.
+ last-command-char ->  last-command-event
+
+--- egg/menudiag.el.orig	2013-02-12 15:16:39.000000000 +0900
++++ menudiag.el	2013-02-12 15:16:39.000000000 +0900
+@@ -296,7 +296,7 @@
+ (defun menudiag-goto-item ()
+   (interactive)
+   (menudiag-check-current-menu)
+-  (let ((ch last-command-char)
++  (let ((ch last-command-event)
+ 	(n 0))
+     (setq n (menudiag-char-to-item-num ch))
+     (if (>= n (length menudiag-line))
+@@ -503,7 +503,9 @@
+   (make-local-variable 'inhibit-read-only)
+   (setq buffer-read-only t
+ 	inhibit-read-only nil)
+-  (make-local-hook 'post-command-hook)
++  (if (and (boundp 'emacs-major-version)
++	     (< emacs-major-version 21))
++	(make-local-hook 'post-command-hook))
+   (add-hook 'post-command-hook 'menudiag-selection-align-to-item nil t)
+   (use-local-map menudiag-selection-map)
+   (setq mode-name "Menudiag Selection")
+@@ -619,7 +621,7 @@
+   (unless (eq last-command 'menudiag-selection-goto)
+     (setq menudiag-goto-number-list nil
+ 	  menudiag-original-point (point)))
+-  (setq menudiag-goto-number-list (cons (- last-command-char ?0)
++  (setq menudiag-goto-number-list (cons (- last-command-event ?0)
+ 					menudiag-goto-number-list))
+   (menudiag-selection-goto-internal))
+ 

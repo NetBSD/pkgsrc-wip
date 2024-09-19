@@ -1,0 +1,69 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/05/05 16:04:39 hfath Exp $
+
+--- snmpd/main.c.orig	2006-02-27 10:03:16.000000000 +0000
++++ snmpd/main.c
+@@ -329,7 +329,7 @@ snmp_input_start(const u_char *buf, size
+ 	 */
+ 	TAILQ_FOREACH(comm, &community_list, link)
+ 		if (comm->string != NULL &&
+-		    strcmp(comm->string, pdu->community) == 0)
++		    strcmp((char *)comm->string, pdu->community) == 0)
+ 			break;
+ 
+ 	if (comm == NULL) {
+@@ -1436,7 +1436,19 @@ main(int argc, char *argv[])
+ 	progargs = argv;
+ 	nprogargs = argc;
+ 
+-	srandomdev();
++#if defined(__FreeBSD__)	
++	srandomdev();		/* XXX Have autoconf check for this */
++#else
++	do {
++		struct timeval tval;
++
++		if (!gettimeofday(&tval, NULL))
++			srandom(tval.tv_sec ^ tval.tv_usec);
++		else
++			srandom(time(NULL));
++		
++	} while (0);
++#endif
+ 
+ 	snmp_serial_no = random();
+ 
+@@ -1897,7 +1909,15 @@ comm_define(u_int priv, const char *desc
+ 	}
+ 	c->owner = owner;
+ 	c->value = ncomm;
+-	c->descr = descr;
++/*
++ * This is a mess of pointers to signed and unsigned char, and
++ * gcc being anal about it...
++ */
++#ifndef __UNCONST
++/* Deal with the fallout... */	
++#define __UNCONST(foo)	foo
++#endif
++	c->descr = (unsigned char *)__UNCONST(descr);
+ 	c->string = NULL;
+ 	c->private = priv;
+ 
+@@ -1906,7 +1926,7 @@ comm_define(u_int priv, const char *desc
+ 			free(c);
+ 			return (0);
+ 		}
+-		strcpy(c->string, str);
++		strcpy((char *)c->string, str);
+ 	}
+ 
+ 	/* make index */
+@@ -1939,7 +1959,7 @@ comm_string(u_int ncomm)
+ 
+ 	TAILQ_FOREACH(p, &community_list, link)
+ 		if (p->value == ncomm)
+-			return (p->string);
++			return ((char *)p->string);
+ 	return (NULL);
+ }
+ 

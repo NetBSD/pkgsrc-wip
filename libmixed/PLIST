@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/libmixed.a
+lib/libmixed.so
+lib/libmixed.so.2
+lib/libmixed.so.2.1-0

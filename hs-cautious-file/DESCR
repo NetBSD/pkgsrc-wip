@@ -1,0 +1,2 @@
+On non-Windows systems, posix-specific functions are used to reduce
+the chance of data loss further.

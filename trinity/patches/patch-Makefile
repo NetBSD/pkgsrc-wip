@@ -1,0 +1,14 @@
+$NetBSD$
+
+# Build plugins
+--- Makefile.orig	2018-09-01 14:38:58 UTC
++++ Makefile
+@@ -17,7 +17,7 @@ else
+ endif
+ 
+ 
+-all: inchworm_target chrysalis_target trinity_essentials
++all: inchworm_target chrysalis_target trinity_essentials plugins
+ 	sh ./util/support_scripts/trinity_install_tests.sh
+ 
+ 

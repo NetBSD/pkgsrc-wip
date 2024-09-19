@@ -1,0 +1,3 @@
+Solves convex cone programs via operator splitting. Can solve: linear programs
+(LPs) second-order cone programs (SOCPs), semidefinite programs (SDPs), and
+exponential cone programs (ECPs)

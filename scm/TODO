@@ -1,0 +1,5 @@
+$Id: TODO,v 1.2 2008/05/29 22:20:55 asau Exp $
+
+1. PLISTs.
+2. PREFIX is hardcoded ("/usr/pkg" currently).
+3. Options.

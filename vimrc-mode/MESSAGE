@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/06/06 01:44:07 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (autoload 'vimrc-mode "vimrc-mode"
+            "Major mode for editing `.vimrc', `xxx.vim' and `.exrc' files." t)
+  (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?$" . vimrc-mode))
+
+===========================================================================

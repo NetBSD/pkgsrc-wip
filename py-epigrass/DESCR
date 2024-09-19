@@ -1,0 +1,6 @@
+Epigrass is a software for visualizing, analyzing and simulating of
+epidemic processes on geo-referenced networks
+
+EpiGrass can interact with the GRASS GIS from which it can obtain maps and other
+geo-referenced information. However, EpiGrass does not require an installation
+of the GRASS GIS for most of its features.

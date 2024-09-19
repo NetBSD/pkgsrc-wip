@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- emacs/Makefile.in.orig	2012-10-18 16:44:10.000000000 +0000
++++ emacs/Makefile.in
+@@ -316,7 +316,7 @@ $(am__ELCFILES): elc-stamp
+ 	    test -f elc-stamp; exit $$?; \
+ 	  fi; \
+ 	else : ; fi
+-install-lispLISP: $(lisp_LISP) $(ELCFILES)
++install-lispLISP: $(lisp_LISP)
+ 	@$(NORMAL_INSTALL)
+ 	@if test "$(EMACS)" != no && test -n "$(lispdir)"; then \
+ 	  $(MKDIR_P) "$(DESTDIR)$(lispdir)"; \
+@@ -345,7 +345,7 @@ uninstall-lispLISP:
+ 	cd "$(DESTDIR)$(lispdir)" && rm -f $$filesc
+ 
+ clean-lisp:
+-	-rm -f elc-stamp $(ELCFILES)
++	-rm -f elc-stamp 
+ tags: TAGS
+ TAGS:
+ 
+@@ -385,7 +385,7 @@ distdir: $(DISTFILES)
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LISP) $(ELCFILES)
++all-am: Makefile $(LISP) 
+ installdirs:
+ 	for dir in "$(DESTDIR)$(lispdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \

@@ -1,0 +1,14 @@
+$NetBSD: patch-bh,v 1.1 2005/11/12 16:49:24 aolcarton Exp $
+
+--- lib/encode.c.orig	Fri Nov 11 18:07:37 2005
++++ lib/encode.c
+@@ -282,7 +282,8 @@ signedonly:
+ 	switch (nMessageType) {
+ 	case MSG_CERTREP:
+ 		if (nPkiStatus == PKI_SUCCESS) {
+-			PKCS7_add_certificate(msg->p7, scep->clientcert);
++			PKCS7_add_certificate(msg->p7, scep->clientcert ? \
++				scep->clientcert : scep->selfsignedcert);
+ 			PKCS7_add_certificate(msg->p7, scep->cacert);
+ 		}
+ 		break;

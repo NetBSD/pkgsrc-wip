@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.pcsc-lite,v 1.1.1.1 2005/11/24 13:42:36 udontknow Exp $
+bin/card_eventmgr

@@ -1,0 +1,16 @@
+$NetBSD$
+
+# Respect pkgsrc env
+--- trinity-plugins/scaffold_iworm_contigs/Makefile.orig	2018-08-22 01:25:08 UTC
++++ trinity-plugins/scaffold_iworm_contigs/Makefile
+@@ -1,8 +1,8 @@
+-CXX    = g++
++CXX    ?= g++
+ prefix = ../htslib
+ 
+ ScaffoldIwormContigs:
+-	$(CXX) $(LDFLAGS) -I$(prefix) -L$(prefix) ScaffoldIwormContigs.cpp error_checker.cpp -lhts -o scaffold_iworm_contigs
++	$(CXX) $(LDFLAGS) -I$(LOCALBASE)/include -L$(LOCALBASE)/lib ScaffoldIwormContigs.cpp error_checker.cpp -lhts -o scaffold_iworm_contigs
+ 
+ clean:
+ 	rm -f scaffold_iworm_contigs

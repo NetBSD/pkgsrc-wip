@@ -1,0 +1,13 @@
+
+TGT=noip2
+.if ${OPSYS} == "Linux"
+ARCH=linux
+.elif ${OPSYS} == "SunOS"
+ARCH=sun
+LIBS+=-lsocket -lnsl
+.else
+ARCH=bsd_with_getifaddrs
+.endif
+
+all:
+	${CC} ${CPPFLAGS} -D${ARCH} -DPREFIX=\"${PREFIX}\" ${CFLAGS} ${TGT}.c -o ${TGT} ${LDFLAGS} ${LIBS}

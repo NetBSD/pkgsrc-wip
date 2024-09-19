@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/12/08 09:54:37 thomasklausner Exp $
+
+--- Makefile.orig	2009-12-08 09:38:08.000000000 +0000
++++ Makefile
+@@ -36,7 +36,7 @@ else											# *nix
+ 
+ SYSTYPE    = __GCCUNIX__
+ EXESUFFIX  =
+-GLLIB      = -lGL
++GLLIB      = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lGL
+ ICON       =
+ SDLLIBTYPE = --libs
+ MSG        = generic Unix/Linux

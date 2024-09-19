@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/knnimpute/__init__.py
+${PYSITELIB}/knnimpute/__init__.pyc
+${PYSITELIB}/knnimpute/__init__.pyo
+${PYSITELIB}/knnimpute/argpartition.py
+${PYSITELIB}/knnimpute/argpartition.pyc
+${PYSITELIB}/knnimpute/argpartition.pyo
+${PYSITELIB}/knnimpute/common.py
+${PYSITELIB}/knnimpute/common.pyc
+${PYSITELIB}/knnimpute/common.pyo
+${PYSITELIB}/knnimpute/few_observed_entries.py
+${PYSITELIB}/knnimpute/few_observed_entries.pyc
+${PYSITELIB}/knnimpute/few_observed_entries.pyo
+${PYSITELIB}/knnimpute/normalized_distance.py
+${PYSITELIB}/knnimpute/normalized_distance.pyc
+${PYSITELIB}/knnimpute/normalized_distance.pyo
+${PYSITELIB}/knnimpute/optimistic.py
+${PYSITELIB}/knnimpute/optimistic.pyc
+${PYSITELIB}/knnimpute/optimistic.pyo
+${PYSITELIB}/knnimpute/reference.py
+${PYSITELIB}/knnimpute/reference.pyc
+${PYSITELIB}/knnimpute/reference.pyo

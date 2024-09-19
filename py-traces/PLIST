@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/traces/__init__.py
+${PYSITELIB}/traces/__init__.pyo
+${PYSITELIB}/traces/__init__.pyc
+${PYSITELIB}/traces/decorators.pyo
+${PYSITELIB}/traces/decorators.pyc
+${PYSITELIB}/traces/histogram.pyo
+${PYSITELIB}/traces/histogram.pyc
+${PYSITELIB}/traces/operations.pyo
+${PYSITELIB}/traces/operations.pyc
+${PYSITELIB}/traces/timeseries.pyo
+${PYSITELIB}/traces/timeseries.pyc
+${PYSITELIB}/traces/utils.pyo
+${PYSITELIB}/traces/utils.pyc
+${PYSITELIB}/traces/decorators.py
+${PYSITELIB}/traces/histogram.py
+${PYSITELIB}/traces/operations.py
+${PYSITELIB}/traces/timeseries.py
+${PYSITELIB}/traces/utils.py

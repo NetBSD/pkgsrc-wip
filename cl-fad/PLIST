@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:54:34 ddeus Exp $
+${ECL}${CL_PATH}cl-fad.asd
+${ECL}${CL_PATH}cl-fad.fas
+${ECL}${CL_PATH}libcl-fad.a
+${CL}${CL_PATH}cl-fad/cl-fad.asd
+${CL}${CL_PATH}cl-fad/cl-fad.system
+${CL}${CL_PATH}cl-fad/corman.lisp
+${CL}${CL_PATH}cl-fad/fad.${EXT}
+${CL}${CL_PATH}cl-fad/fad.lisp
+${CL}${CL_PATH}cl-fad/load.lisp
+${CL}${CL_PATH}cl-fad/openmcl.lisp
+${CL}${CL_PATH}cl-fad/packages.${EXT}
+${CL}${CL_PATH}cl-fad/packages.lisp
+${CL}${CL_PATH}cl-fad/test.lisp
+share/doc/${LISP}-fad/CHANGELOG
+share/doc/${LISP}-fad/README
+share/doc/${LISP}-fad/index.html

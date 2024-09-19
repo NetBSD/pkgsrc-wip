@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	usrsctp
+
+.if !defined(USRSCTP_BUILDLINK3_MK)
+USRSCTP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.usrsctp+=	usrsctp>=0.9.5.0
+BUILDLINK_PKGSRCDIR.usrsctp?=	../../wip/usrsctp
+
+BUILDLINK_DEPMETHOD.usrsctp?=	build
+.endif	# USRSCTP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-usrsctp

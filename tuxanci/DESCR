@@ -1,0 +1,5 @@
+Tuxanci are czechoslovak multiplatform action game. In the begining it was
+inspired by czech game Bulanci (which is however only for MS Windows), but
+now it goes its own way. The game is programmed in language C and the rendering
+core is based on SDL library. Man can play two-players game on one computer
+or in network multiplayer.

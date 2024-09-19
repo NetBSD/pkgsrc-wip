@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2005/01/09 10:07:34 mreriksson Exp $
+
+--- configure.in.orig	2005-01-09 10:51:54.000000000 +0100
++++ configure.in
+@@ -29,5 +29,5 @@ AC_SUBST(MULTISYNC_VERSION)
+ AC_OUTPUT([
+ Makefile
+ src/Makefile
+-${MULTISYNC_TOP}/specs/multisync-palm.spec
++../../specs/multisync-palm.spec
+ ])

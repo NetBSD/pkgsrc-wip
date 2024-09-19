@@ -1,0 +1,7 @@
+This package patches the python standard library's mailcap module in order to
+correctly handle windcard entries.
+
+The bug is documented on the Python bug tracker as issue 14977.
+
+Please note that a fix has now been merged into Python 3.6.0.
+This package remains as a backport for previous versions.

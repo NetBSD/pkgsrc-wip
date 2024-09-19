@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
+bin/dumpleases
+sbin/udhcpc
+sbin/udhcpd
+share/man/man1/dumpleases.1
+share/man/man5/udhcpd.conf.5
+share/man/man8/udhcpc.8
+share/man/man8/udhcpd.8
+share/udhcpc/default.bound
+share/udhcpc/default.deconfig
+share/udhcpc/default.renew
+share/udhcpc/default.script

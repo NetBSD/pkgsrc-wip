@@ -1,0 +1,15 @@
+What Is It?
+
+Fluxspace blends Fluxbox's window management with new desktop management
+capabilities. It leverages existing components and the power of Python to help
+build a flexible desktop environment around Fluxbox and other lightweight
+window managers.
+
+What Can It Do Now?
+
+    * Add per-workspace desktop icons and panels to Fluxbox by integrating
+	  tools like Rox Filer and Idesk.
+    * Decorate each workspace with different wallpaper.
+    * Manage your startup applications.
+    * Automatically start and stop applets as you enter and leave workspaces,
+	  allowing each workspace to have its own unique tools and dockapps.

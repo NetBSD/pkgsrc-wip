@@ -1,0 +1,18 @@
+ipsvd is a set of internet protocol service daemons for Unix. It currently
+includes a TCP/IP service daemon and an UDP/IP service daemon.
+
+An internet protocol service (ipsv) daemon waits for incoming connections
+on a local socket; for new connections, it conditionally runs an arbitrary
+program with standard input reading from the socket, and standard output
+writing to the socket (if connected), to handle the connection. Standard
+error is used for logging.
+
+ipsv daemons can be told to read and follow pre-defined instructions on
+how to handle incoming connections; based on the client's IP address
+or hostname, they can run different programs, set a different environment,
+deny a connection, or set a per host concurrency limit.
+
+Normally the ipsv daemons are run by a supervisor process, such as runsv
+from the runit package, or supervise from the daemontools package.
+
+ipsvd can be used to run services normally run by inetd, xinetd, or tcpserver.

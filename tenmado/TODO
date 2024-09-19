@@ -1,0 +1,27 @@
+$Id: TODO,v 1.3 2014/11/11 20:11:31 blef Exp $
+
+From: Soren Jacobsen <snj@pobox.com>
+Date: Sun, 7 Mar 2004 21:20:10 -0800
+To: Michal Pasternak <mpasternak@users.sourceforge.net>
+Subject: Re: CVS commit: wip/tenmado
+
+On 03/07 21:05, Michal Pasternak wrote:
+> TODO:
+> Do we have ${PREFIX}/var/games in mtree?
+
+We just use /var/games right now.  I don't think this is going to change
+in the future.  However, I spoke briefly with Thomas about this, and I
+believe that shortly we'll have a 'games' package that will handle the
+'games' user and group as well as ensuring that /var/games exists and is
+sane.
+
+Stay tuned.
+
+-----------------------
+
+read_high_score: no entry in /usr/pkg/var/games/tenmado/score-total.txt
+show_result: at least one high score file is empty
+bac_save: fopen failed (Permission denied)
+save_high_score: bac_save(0) failed
+show_result: save_high_score failed
+

@@ -1,0 +1,51 @@
+# $NetBSD$
+
+Make the building and installation of the metaserver optional.
+
+--- CMakeLists.txt.orig	2018-09-29 11:47:42.000000000 -0700
++++ CMakeLists.txt	2019-07-06 12:03:25.664440117 -0700
+@@ -627,7 +627,7 @@
+ 	set(CMAKE_FIND_LIBRARY_SUFFIXES ".lib;.a")
+ endif()
+ 
+-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
++set (CMAKE_MODULE_PATH "/usr/pkgsrc/wip/stratagus/work/.buildlink/cmake-Modules" "/usr/pkgsrc/wip/stratagus/work/.buildlink/cmake-Modules" ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+ 
+ find_package(Lua51 REQUIRED)
+ find_package(PNG REQUIRED)
+@@ -698,6 +698,8 @@
+ option(ENABLE_USEGAMEDIR "Place all files created by Stratagus(logs, savegames) in game directory(old behavior), otherwise place everything in user directory(new behavior)" OFF)
+ option(ENABLE_MULTIBUILD "Compile Stratagus on all CPU cores simltaneously in MSVC" ON)
+ 
++option(WANT_METASERVER "Build and install the metaserver" ON)
++
+ if(NOT WITH_RENDERER)
+ 	if(OPENGL_FOUND)
+ 		set(WITH_RENDERER "OpenGL")
+@@ -1121,7 +1123,7 @@
+ 
+ source_group(metaserver FILES ${metaserver_SRCS} ${metaserver_HDRS})
+ 
+-if(SQLITE_FOUND)
++if(SQLITE_FOUND AND WANT_METASERVER)
+ 	add_executable(metaserver ${metaserver_SRCS} ${metaserver_HDRS})
+ 	target_link_libraries(metaserver ${SDL_LIBRARY} ${SQLITE_LIBRARIES})
+ 
+@@ -1207,7 +1209,7 @@
+ if(ENABLE_UPX AND SELF_PACKER_FOR_EXECUTABLE)
+ 	self_packer(stratagus)
+ 	self_packer(png2stratagus)
+-	if(SQLITE_FOUND)
++	if(SQLITE_FOUND AND WANT_METASERVER)
+ 		self_packer(metaserver)
+ 	endif()
+ endif()
+@@ -1244,7 +1246,7 @@
+ install(TARGETS stratagus DESTINATION ${GAMEDIR})
+ install(TARGETS png2stratagus DESTINATION ${BINDIR})
+ 
+-if(SQLITE_FOUND)
++if(SQLITE_FOUND AND WANT_METASERVER)
+ 	install(TARGETS metaserver DESTINATION ${BINDIR} RENAME stratagus-metaserver)
+ endif()
+ 

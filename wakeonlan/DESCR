@@ -1,0 +1,5 @@
+Wake up or turn on one or multiple computers over the network via
+wake-on-LAN (WOL) magic packets. The remote computer(s) must support
+WOL and have it enabled.
+
+This implementation does not require root privileges.

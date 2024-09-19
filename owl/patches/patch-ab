@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.3 2007/11/13 10:04:09 jdwhite Exp $
+
+--- owl.c.orig	2007-11-13 02:20:18.000000000 -0600
++++ owl.c	2007-11-13 02:21:16.000000000 -0600
+@@ -166,14 +166,6 @@
+   tio.c_iflag &= ~ISTRIP;
+   tcsetattr(0, TCSAFLUSH, &tio);
+ 
+-  /* screen init */
+-  if (!getenv("TERMINFO")) {
+-    sprintf(buff, "TERMINFO=%s", TERMINFO);
+-    putenv(buff);
+-    owl_function_debugmsg("startup: setting TERMINFO to %s", TERMINFO);
+-  } else {
+-    owl_function_debugmsg("startup: leaving TERMINFO as %s from envrionment", getenv("TERMINFO"));
+-  }
+   initscr();
+   start_color();
+ #ifdef HAVE_USE_DEFAULT_COLORS

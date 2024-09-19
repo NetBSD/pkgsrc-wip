@@ -1,0 +1,4 @@
+SIP stands for Scilab Image Processing toolbox. SIP intends to
+do imaging tasks such as filtering, blurring, edge detection,
+thresholding, histogram manipulation, segmentation, mathematical
+morphology, color image processing, etc.

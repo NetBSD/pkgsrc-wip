@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/06 22:35:35 thomasklausner Exp $
+
+RMD160 (fuse-zip-0.4.0.tar.gz) = 260a1b23d8a57225b561d74b714ab90f957b7a17
+Size (fuse-zip-0.4.0.tar.gz) = 671498 bytes
+SHA1 (patch-lib_fileNode.cpp) = e62d60d6161dec4a25cd396ee7fbc79bea1356a3

@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2005/08/22 20:50:23 mchittur Exp $
+
+--- src/Makefile.in.orig	2005-01-12 20:00:57.000000000 -0700
++++ src/Makefile.in
+@@ -9,8 +9,9 @@ LIBS  = @LIBS@
+ # if you have some non-standard setup you might want to modify those as well
+ Rincludes = $(Rhome)/include
+ Rlib      = $(Rhome)/bin -L$(Rhome)/lib
++Rexamples = $(Rhome)/examples
+ Rbin      = $(Rhome)/bin
+-linkR     = -lR
++linkR     = -Wl,-R$(Rhome)/lib -L$(Rhome)/lib -lR
+ linkRln   = @LINK_READLINE@
+ 
+ all:	$(XFILES)
+@@ -19,6 +20,8 @@ all:	$(XFILES)
+ 	cp Rserve $(Rbin)
+ 	# .. and put them in inst just in case anyone cares ...
+ 	cp $(XFILES) ../inst
++	mkdir -p $(Rexamples)/Rserve
++	cp client/* $(Rexamples)/Rserve
+ 
+ install:	$(XFILES)
+ 	cp Rserve $(Rbin)

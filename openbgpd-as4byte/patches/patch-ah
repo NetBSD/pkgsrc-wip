@@ -1,0 +1,24 @@
+--- bgpd/session.c.orig	2006-02-08 22:36:29.000000000 +1000
++++ bgpd/session.c	2007-01-12 09:28:01.000000000 +1000
+@@ -211,12 +211,21 @@
+ 	setproctitle("session engine");
+ 	bgpd_process = PROC_SE;
+ 
++/* we don't have PF_KEY implemented in a way OpenBSD has
++
+ 	if (pfkey_init(&sysdep) == -1)
+ 		fatalx("pfkey setup failed");
+ 
++*/
++
+ 	if (setgroups(1, &pw->pw_gid) ||
++#if defined(__NetBSD__)
++	    setregid(pw->pw_gid, pw->pw_gid) ||
++	    setreuid(pw->pw_uid, pw->pw_uid))
++#else
+ 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
+ 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
++#endif
+ 		fatal("can't drop privileges");
+ 
+ 	listener_cnt = 0;

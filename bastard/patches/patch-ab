@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/14 01:32:24 mjasm Exp $
+
+--- src/cli/Makefile.orig	2003-01-07 11:50:23.000000000 -0500
++++ src/cli/Makefile
+@@ -52,7 +52,7 @@ DEFINES  = -I$(INCDIR) -I$(INCDIR)/scrip
+            -DREADLINE_LIBRARY
+ CFLAGS   = -ggdb -rdynamic $(DEFINES) -DBASTARD_VERSION=$(BASTARD_VERSION)
+ LIBS     = -lm $(LIBDL) -lreadline -lbastard $(TERMIO)
+-LDFLAGS  = -L. -L$(LIBDIR) \
++LDFLAGS  = -L. -L$(INSTALL_LIB) -L$(LIBDIR) \
+             -Wl,-rpath . -Wl,-rpath $(LIBDIR) -Wl,-rpath $(INSTALL_LIB) \
+ 	    -Wl,-rpath ./lib
+ 

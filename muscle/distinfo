@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (muscle3.8.31_src.tar.gz) = 18c9cf465f330a77d6a06ff9323c311a6f6be662
+SHA512 (muscle3.8.31_src.tar.gz) = 2baf2aae354ae1e3f529e627be2ace86e89dd15567e1f642a625b63f08ebe3d4bd7315080c7d786d95e3eda8703545ec74af9fe83ad1523d55d00137fb7274ce
+Size (muscle3.8.31_src.tar.gz) = 515267 bytes
+SHA1 (patch-globalslinux.cpp) = f8579d7538eb8b4283be7109964f25406dd812f5

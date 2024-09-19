@@ -1,0 +1,13 @@
+Plain text plotting tools.
+
+ploot contains the following tools:
+
+ - ploot-text: show plain text string using larger font thanks to
+   braille characters
+ - ploot-braille: show graph in the form of braille characters
+ - ploot-farbfeld: reads collectd-style comma separated values (CSV)
+   and produces a plot in the farbfeld image format (pipe it to ff2png).
+   It is an alternative to RRDtool
+ - ploot-feed: reads collectd-style comma separated values (CSV) but
+   produces a plain text continuous waterfall chart for live monitoring
+   in the terminal. it is an alternative to grafana

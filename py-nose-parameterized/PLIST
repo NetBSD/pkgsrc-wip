@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nose_parameterized/__init__.py
+${PYSITELIB}/nose_parameterized/__init__.pyc
+${PYSITELIB}/nose_parameterized/__init__.pyo
+${PYSITELIB}/nose_parameterized/parameterized.py
+${PYSITELIB}/nose_parameterized/parameterized.pyc
+${PYSITELIB}/nose_parameterized/parameterized.pyo
+${PYSITELIB}/nose_parameterized/test.py
+${PYSITELIB}/nose_parameterized/test.pyc
+${PYSITELIB}/nose_parameterized/test.pyo

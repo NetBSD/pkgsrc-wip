@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/12 11:37:45 ryo-on Exp $
+lib/X11/fonts/TTF/wqy-zenhei.ttf
+share/doc/wqy-zenhei/AUTHORS
+share/doc/wqy-zenhei/COPYING
+share/doc/wqy-zenhei/ChangeLog
+share/doc/wqy-zenhei/INSTALL
+share/doc/wqy-zenhei/README
+share/examples/wqy-zenhei/44-wqy-zenhei.conf
+share/examples/wqy-zenhei/66-wqy-zenhei-sharp-no13px.conf
+share/examples/wqy-zenhei/66-wqy-zenhei-sharp.conf

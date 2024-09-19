@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
+${PYSITELIB}/py2play/__init__.pyc
+${PYSITELIB}/py2play/__init__.pyo
+${PYSITELIB}/py2play/action.pyc
+${PYSITELIB}/py2play/action.pyo
+${PYSITELIB}/py2play/character.pyc
+${PYSITELIB}/py2play/character.pyo
+${PYSITELIB}/py2play/demo.pyc
+${PYSITELIB}/py2play/demo.pyo
+${PYSITELIB}/py2play/idler.pyc
+${PYSITELIB}/py2play/idler.pyo
+${PYSITELIB}/py2play/level.pyc
+${PYSITELIB}/py2play/level.pyo
+${PYSITELIB}/py2play/player.pyc
+${PYSITELIB}/py2play/player.pyo

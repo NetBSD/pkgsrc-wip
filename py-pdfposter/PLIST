@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 21:25:07 thomasklausner Exp $
+bin/pdfposter
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/pdftools/i18n.py
+${PYSITELIB}/pdftools/i18n.pyc
+${PYSITELIB}/pdftools/i18n.pyo
+${PYSITELIB}/pdftools/pdfposter/__init__.py
+${PYSITELIB}/pdftools/pdfposter/__init__.pyc
+${PYSITELIB}/pdftools/pdfposter/__init__.pyo
+${PYSITELIB}/pdftools/pdfposter/cmd.py
+${PYSITELIB}/pdftools/pdfposter/cmd.pyc
+${PYSITELIB}/pdftools/pdfposter/cmd.pyo

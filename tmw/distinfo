@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2008/03/03 21:19:05 shattered Exp $
+
+RMD160 (tmw-0.0.22.1.tar.gz) = ff971d53bf6b9069c5f0b50a7f9cbd5d6d1c576e
+Size (tmw-0.0.22.1.tar.gz) = 3563351 bytes
+SHA1 (patch-aa) = 96d229455aabe5e858c8716a8b413c20acec8fef

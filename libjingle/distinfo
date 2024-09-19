@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.9 2011/12/29 20:15:09 mwilhelmy Exp $
+
+RMD160 (libjingle-0.6.6.zip) = 8ba62866b0aa065470f5d5efe8aabf68180c29c1
+Size (libjingle-0.6.6.zip) = 8243577 bytes
+SHA1 (patch-aa) = 83b9ebb13c76cd61b5472ec896d4f3eed7f8871d
+SHA1 (patch-ae) = 7b29479067372e781de09e8f9e36c00961f6cf0c
+SHA1 (patch-af) = 886e2d4cab09de063f4d0a3a6d24fdfd9cf0cd5b
+SHA1 (patch-ag) = d7083430cc79d78f5c9c7e945812be3777f211b5
+SHA1 (patch-ah) = cd4014cfcb11ac7766c77dab7f242f9bbb4496e4
+SHA1 (patch-ai) = 873d012b6f708235c7932b01f31bc68a4a7c63a3
+SHA1 (patch-aj) = 037b03a5b44de69999e5f774508e3ec890d15721
+SHA1 (patch-ak) = 065b0fa32cab888b62716b3c189802861435351c

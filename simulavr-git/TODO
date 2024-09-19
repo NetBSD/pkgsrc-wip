@@ -1,0 +1,30 @@
+- Current build status: 2014-06-18
+  adc.elf etc. are not installed.
+  The reason for that is: in example/python/Makefile,
+  all the related lines are commented out probably due to
+  USE_AVR_CROSS_TRUE='#' set up. See
+     cvs diff -r 1.1  -r 1.2 PLIST |grep \\.elf
+  and it will tell the difference.
+
+  (Also, the chunk starting with following line was some
+  trial to fix above, but it then failed to create simulavr.pdf)
+  ## SUBST_CLASSES+=             python
+
+- Current build status: 2013-10-15
+
+Making all in gtest
+gmake[2]: Entering directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress/gtest'
+Makefile:544: /src/.deps/gtest-death-test.Po: No such file or directory
+Makefile:545: /src/.deps/gtest-filepath.Po: No such file or directory
+Makefile:546: /src/.deps/gtest-port.Po: No such file or directory
+Makefile:547: /src/.deps/gtest-printers.Po: No such file or directory
+Makefile:548: /src/.deps/gtest-test-part.Po: No such file or directory
+Makefile:549: /src/.deps/gtest-typed-test.Po: No such file or directory
+Makefile:550: /src/.deps/gtest.Po: No such file or directory
+gmake[2]: *** No rule to make target `/src/.deps/gtest.Po'.  Stop.
+gmake[2]: Leaving directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress/gtest'
+gmake[1]: *** [all-recursive] Error 1
+gmake[1]: Leaving directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress'
+gmake: *** [all-recursive] Error 1
+*** Error code 2
+

@@ -1,0 +1,43 @@
+$NetBSD$
+
+--- insts/std/MMOVE/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ insts/std/MMOVE/Makefile
+@@ -64,26 +64,26 @@ MBASE.o : $(COMMON_HDRS) MBASE.cpp MBASE
+ install: dso_install
+ 
+ dso_install: all
+-	$(INSTALL) $(CURDIR)/libMPLACE.so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libMMOVE.so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libDMOVE.so $(LIBDESTDIR)
++	$(INSTALL) $(CURDIR)/libMPLACE.so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libMMOVE.so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libDMOVE.so $(DESTDIR)/$(LIBDIR)
+ 
+ standalone_install: standalone
+-	$(INSTALL) $(CURDIR)/MPLACE $(DESTDIR)
+-	$(INSTALL) $(CURDIR)/MMOVE $(DESTDIR)
+-	$(INSTALL) $(CURDIR)/DMOVE $(DESTDIR)
++	$(INSTALL) $(CURDIR)/MPLACE $(DESTDIR)/$(BINDIR)
++	$(INSTALL) $(CURDIR)/MMOVE $(DESTDIR)/$(BINDIR)
++	$(INSTALL) $(CURDIR)/DMOVE $(DESTDIR)/$(BINDIR)
+ 
+ uninstall: dso_uninstall standalone_uninstall
+ 
+ dso_uninstall:
+-	$(RM) $(LIBDESTDIR)/libMPLACE.so
+-	$(RM) $(LIBDESTDIR)/libMMOVE.so
+-	$(RM) $(LIBDESTDIR)/libDMOVE.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libMPLACE.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libMMOVE.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libDMOVE.so
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/MPLACE
+-	$(RM) $(DESTDIR)/MMOVE
+-	$(RM) $(DESTDIR)/DMOVE
++	$(RM) $(DESTDIR)/$(BINDIR)/MPLACE
++	$(RM) $(DESTDIR)/$(BINDIR)/MMOVE
++	$(RM) $(DESTDIR)/$(BINDIR)/DMOVE
+ 
+ clean:
+ 	$(RM) $(POBJS) $(MOBJS) $(DOBJS) $(PROGS) $(TRASH)

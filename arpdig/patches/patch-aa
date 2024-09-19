@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/16 01:36:20 prudhvikrishna Exp $
+--- Makefile.orig	2009-07-15 19:53:14.000000000 -0500
++++ Makefile	2009-07-15 19:53:23.000000000 -0500
+@@ -4,7 +4,7 @@
+ SRCS=	arpdig.c doarp.c
+ LDADD=	-lpcap
+ 
+-WARNS?=	3
++WARNS?=	0	
+ 
+ # is it correct?
+ PREFIX?=	/usr/local

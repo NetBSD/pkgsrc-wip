@@ -1,0 +1,4 @@
+Parole is a modern simple media player based on the GStreamer
+framework and written to fit well in the Xfce desktop. It is designed
+with simplicity, speed and resource usage in mind. This package is
+built using the GStreamer backend.

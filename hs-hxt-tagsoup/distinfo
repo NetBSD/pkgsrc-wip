@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/10/01 03:14:27 phonohawk Exp $
+
+RMD160 (hxt-tagsoup-9.1.1.tar.gz) = e3d95215cf3e1b2812b41fb2499b45d2a3a8b0b0
+Size (hxt-tagsoup-9.1.1.tar.gz) = 8055 bytes
+SHA1 (patch-hxt-tagsoup.cabal) = ffc925b58927f2976b43a28b31903f2c00391ea4
+SHA1 (patch-src_Text_XML_HXT_Parser_TagSoup.hs) = 864c2de2b557a40f305022dbd6034331dd2c45d9

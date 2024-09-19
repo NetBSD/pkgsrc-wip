@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2005/05/08 08:16:46 obache Exp $
+
+--- xbelmark.py.orig	2005-05-08 16:58:10.000000000 +0900
++++ xbelmark.py
+@@ -196,7 +196,7 @@ class MyHandler(handler.ContentHandler):
+ 		return s
+ 		
+ def usage():
+-	print "%s [-e] [-i] [-h] [-t]\n  -e Extract mode (disables HTML headers)\n  -i No index mode\n  -h Help mode\n  -t No top links" % sys.argv[0]
++	print "%s [-e] [-i] [-h] [-t] [file]\n  -e Extract mode (disables HTML headers)\n  -i No index mode\n  -h Help mode\n  -t No top links\n  file defaults to ~/.galeon/bookmarks.xbel" % sys.argv[0]
+ 
+ def main():
+ 	global extractMode, noIndexMode, noTopLinksMode

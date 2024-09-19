@@ -1,0 +1,22 @@
+Arabic Light Stemmer and Segmentor
+
+Tashaphyne : Arabic Light Stemming and segmentor.
+
+
+
+Features
+
+-         Arabic word Light Stemming.
+
+-         Root Extraction.
+
+-         Word Segmentation
+
+-         Word normalization
+
+-         Default Arabic Affixes list.
+
+-         An customizable Light stemmer: possibility of change stemmer options
+and data.
+
+-         Data independent stemmer

@@ -1,0 +1,2 @@
+- Make this work at runtime on NetBSD (some vlan problems...)
+- Add NVMM and HAXM support

@@ -1,0 +1,8 @@
+Fails to build on NetBSD-5.99.27/amd64 with:
+_src/gamemodes.cpp: In member function 'virtual void CGM_ShyGuyTag::think()':
+_src/gamemodes.cpp:1259: warning: unused variable 'playwarning'
+_src/player.h:500: warning: 'MO_SuperFireball' is already a friend of 'CPlayer'
+_src/ai.cpp: In member function 'virtual void CPlayerAI::Think(COutputControl*)':
+_src/ai.cpp:348: error: no match for 'operator=' in 'itr = ((CPlayerAI*)this)->CPlayerAI::attentionObjects.std::map<_Key, _Tp, _Compare, _Alloc>::erase [with _Key = int, _Tp = AttentionObject*, _Compare = std::less<int>, _Alloc = std::allocator<std::pair<const int, AttentionObject*> >](itr)'
+/usr/include/g++/bits/stl_tree.h:152: note: candidates are: std::_Rb_tree_iterator<std::pair<const int, AttentionObject*> >& std::_Rb_tree_iterator<std::pair<const int, AttentionObject*> >::operator=(const std::_Rb_tree_iterator<std::pair<const int, AttentionObject*> >&)
+gmake: *** [build/ai.o] Error 1

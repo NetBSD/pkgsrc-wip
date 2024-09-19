@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1.1.1 2011/10/28 20:18:17 jihbed Exp $
+
+--- configure.orig	2011-04-01 19:07:47.000000000 +0100
++++ configure	2011-04-01 19:08:08.000000000 +0100
+@@ -5248,7 +5248,7 @@
+   ENABLE_DEBUG_FLAG="yes"
+ fi
+ 
+-if [ "x$ENABLE_DEBUG_FLAG" == "xyes" ] ; then
++if [ "x$ENABLE_DEBUG_FLAG" = "xyes" ] ; then
+    CXXFLAGS=${CXXFLAGS}" -g "
+ fi
+ 
+@@ -16814,7 +16814,8 @@
+ if test -n "$CONFIG_FILES"; then
+ 
+ 
+-ac_cr=''
++ac_cr='
++'
+ ac_cs_awk_cr=`$AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null`
+ if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
+   ac_cs_awk_cr='\\r'

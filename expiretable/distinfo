@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/12/21 10:29:25 bartoszkuzma Exp $
+
+RMD160 (expiretable-0.6.tar.gz) = 9b40a81775b4443eefd87246cd7039aa1a8b3f94
+Size (expiretable-0.6.tar.gz) = 5974 bytes
+SHA1 (patch-aa) = 8a059edc659bb031b280e3071f6f68a777ad1f29

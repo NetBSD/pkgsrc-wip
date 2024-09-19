@@ -1,0 +1,8 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/04/13 08:25:30 jmmv Exp $
+
+--- pts.ini.orig	Mon Oct 21 01:04:13 2002
++++ pts.ini	Mon Oct 21 01:04:20 2002
+@@ -9,2 +9,3 @@
+ UsersFromSameIP=0
++Background=1
+ 

@@ -1,0 +1,3 @@
+aspell-python is a Python wrapper for GNU Aspell.
+(Take a look at Python Cookbook, Ryan Kelly have collected links
+to all python bindings for spellers).

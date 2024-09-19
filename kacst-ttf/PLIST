@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/21 21:18:55 jihbed Exp $
+lib/X11/fonts/TTF/KacstArt.ttf
+lib/X11/fonts/TTF/KacstBook.ttf
+lib/X11/fonts/TTF/KacstDecorative.ttf
+lib/X11/fonts/TTF/KacstDigital.ttf
+lib/X11/fonts/TTF/KacstFarsi.ttf
+lib/X11/fonts/TTF/KacstLetter.ttf
+lib/X11/fonts/TTF/KacstNaskh.ttf
+lib/X11/fonts/TTF/KacstOffice.ttf
+lib/X11/fonts/TTF/KacstPen.ttf
+lib/X11/fonts/TTF/KacstPoster.ttf
+lib/X11/fonts/TTF/KacstQurn.ttf
+lib/X11/fonts/TTF/KacstScreen.ttf
+lib/X11/fonts/TTF/KacstTitle.ttf
+lib/X11/fonts/TTF/KacstTitleL.ttf

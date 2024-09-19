@@ -1,0 +1,72 @@
+$NetBSD: patch-ab,v 1.2 2008/11/15 07:29:45 phonohawk Exp $
+
+--- src/makefile.std.orig	2008-05-13 03:44:03.000000000 +0900
++++ src/makefile.std
+@@ -54,18 +54,19 @@
+ # Sysadmins of commercial Unix and/or BSD might prefer this
+ #LIBDIR = /usr/local/lib/tome/
+ # If you like the old default, use this one
+-LIBDIR = ./lib/
++#LIBDIR = ./lib/
+ # Another example: single user installation using absolute path
+ #LIBDIR = /home/myloginname/lib/tome/
+ 
+ 
+ # Where ToME binary goes
+-BINDIR = /usr/local/games
++#BINDIR = /usr/local/games
+ # Another common location
+ #BINDIR = /usr/local/bin
++BINDIR = $(PREFIX)/bin
+ 
+ # The game will run suid to this user
+-OWNER = games
++OWNER = $(GAMEOWN):$(GAMEGRP)
+ 
+ # Ignore this if you're not making a package
+ DESTDIR=
+@@ -125,12 +126,12 @@ CC = gcc
+ # including "USE_GETCH" and "USE_CURS_SET".  Note that "config.h" will
+ # attempt to "guess" at many of these flags based on your system.
+ #
+-COPTS = -Wall -O1 -pipe -g
+-INCLUDES = -I/usr/X11R6/include
+-DEFINES = -DUSE_X11 \
++#COPTS = -Wall -O1 -pipe -g
++#INCLUDES = -I/usr/X11R6/include
++#DEFINES = -DUSE_X11 \
+ 	-DUSE_EGO_GRAPHICS -DUSE_TRANSPARENCY -DSUPPORT_GAMMA \
+ 	-DUSE_PRECISE_CMOVIE -DUSE_UNIXSOCK
+-LIBS = -L/usr/X11R6/lib -lX11
++#LIBS = -L/usr/X11R6/lib -lX11
+ 
+ ##
+ ## Variation -- Only support "main-gtk2.c" (not "main-gcu.c, main-x11.c")
+@@ -183,12 +184,12 @@ LIBS = -L/usr/X11R6/lib -lX11
+ ## "-lncurses", and you may also need to add "-ltermlib" to the end of the
+ ## LIBS on some platforms.
+ #
+-#COPTS = -Wall -O1 -pipe -g
+-#INCLUDES = -I/usr/X11R6/include
+-#DEFINES = -DUSE_X11 -DUSE_GCU -DUSE_TRANSPARENCY -DUSE_EGO_GRAPHICS \
+-#	-DUSE_TRANSPARENCY -DSUPPORT_GAMMA \
+-#	-DUSE_PRECISE_CMOVIE -DUSE_UNIXSOCK
+-#LIBS = -L/usr/X11R6/lib -lX11 -lncurses
++COPTS = -Wall -O1 -pipe -g
++INCLUDES = -I$(PREFIX)/include
++DEFINES = -DUSE_X11 -DUSE_GCU -DUSE_TRANSPARENCY -DUSE_EGO_GRAPHICS \
++	-DUSE_TRANSPARENCY -DSUPPORT_GAMMA \
++	-DUSE_PRECISE_CMOVIE -DUSE_UNIXSOCK -DUSE_NCURSES
++LIBS = -L/usr/X11R6/lib -lX11 -lncurses -ltermcap
+ 
+ 
+ ##
+@@ -473,7 +474,7 @@ install: default
+ 	chown -R $(OWNER) $(DESTDIR)$(LIBDIR)
+ 	cp -f $(TARGET) $(DESTDIR)$(BINDIR)/$(TARGET)
+ 	chown $(OWNER) $(DESTDIR)$(BINDIR)/$(TARGET)
+-	chmod 4755 $(DESTDIR)$(BINDIR)/$(TARGET)
++	chmod 6755 $(DESTDIR)$(BINDIR)/$(TARGET)
+ 
+ # old-install: $(TARGET)
+ #	cp $(TARGET) ..

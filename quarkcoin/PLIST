@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/quark-cli
+sbin/quarkcoind
+share/examples/quarkcoin/quarkcoin.conf
+share/examples/rc.d/quarkcoind

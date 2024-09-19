@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/parser/perl/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/parser/perl/Makefile
+@@ -21,13 +21,13 @@ $(EXT_FILE): $(XS_DIR)/$(XS_FILE) $(XS_D
+ 
+ install: all
+ 	@echo "making install..."	
+-	@$(INSTALL) $(XS_DIR)/$(PM_FILE) $(LIBDESTDIR)
+-	@$(INSTALL) $(EXT_FILE) $(LIBDESTDIR)
++	@$(INSTALL) $(XS_DIR)/$(PM_FILE) $(DESTDIR)/$(LIBDIR)
++	@$(INSTALL) $(EXT_FILE) $(DESTDIR)/$(LIBDIR)
+ 
+ uninstall:
+ 	@echo "making uninstall..."	
+-	$(RM) $(LIBDESTDIR)/$(PM_FILE)
+-	$(RM) $(LIBDESTDIR)/$(EXT_NAME)$(XT_SUFFIX)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(PM_FILE)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(EXT_NAME)$(XT_SUFFIX)
+ 
+ clean:
+ 	@if (test -f $(XS_DIR)/Makefile) then \

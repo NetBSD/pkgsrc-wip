@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/14 08:12:09 phonohawk Exp $
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections.hi
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections.p_hi
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections/Foldable.hi
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections/Foldable.p_hi
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections/Properties.hi
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections/Properties.p_hi
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/HScollections-api-${PKGVERSION}.o
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/libHScollections-api-${PKGVERSION}.a
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/libHScollections-api-${PKGVERSION}_p.a
+lib/collections-api-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/collections-api-${PKGVERSION}/LICENSE

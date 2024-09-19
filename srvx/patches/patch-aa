@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.2 2003/05/17 14:29:33 virtus Exp $
+
+--- Makefile.in.orig	2003-05-17 18:07:37.000000000 +0200
++++ Makefile.in	2003-05-17 18:12:07.000000000 +0200
+@@ -414,11 +414,12 @@
+ 	cp ./src/srvx $(srcdir)/src/*.help .
+ 
+ install-exec-local:
+-	$(INSTALL) -d -m 755 $(prefix)
+-	$(INSTALL) -m 744 ./src/srvx $(prefix)
+-	$(INSTALL) -m 644 $(srcdir)/src/*.help $(prefix)
+-	$(INSTALL) -m 600 $(srcdir)/srvx.conf.example $(prefix)
+-	$(INSTALL) -m 644 $(srcdir)/sockcheck.conf.example $(prefix)
++	$(INSTALL) -d -m 755 $(prefix)/share/srvx
++	$(INSTALL) -d -m 755 $(prefix)/share/examples/srvx
++	$(INSTALL) -m 744 ./src/srvx $(prefix)/bin
++	$(INSTALL) -m 644 $(srcdir)/src/*.help $(prefix)/share/srvx
++	$(INSTALL) -m 600 $(srcdir)/srvx.conf.example $(prefix)/share/examples/srvx
++	$(INSTALL) -m 644 $(srcdir)/sockcheck.conf.example $(prefix)/share/examples/srvx
+ 	@echo
+ 	@echo srvx-$(VERSION) has been installed to $(prefix)
+ 	@echo Remember to edit srvx.conf.example and sockcheck.conf.example

@@ -1,0 +1,5 @@
+chemeq is a chemical equation analyzer. It is a fast lexical and
+syntaxic analyser which helps to find out chemical informations
+embedded in source chemical equations. Data can be output in various
+sophisticated formats, depending on options. 'chemeq' defaults to
+'chemeq -mlcwCn'

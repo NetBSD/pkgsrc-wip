@@ -1,0 +1,18 @@
+The OS Login Guest Environment consists of the following main components:
+
+- Authorized Keys Command which provides SSH keys from the user's OS Login
+  profile to sshd for authenticating users at login.
+- NSS Modules which provide support for making OS Login user and group
+  information available to the system, using NSS (Name Service Switch)
+  functionality.
+- PAM Modules which provide authorization (and authentication if two-factor
+  support is enabled) support allowing the system to use Google Cloud IAM
+  permissions to control the ability to log into an instance or to perform
+  operations as root (via sudo).
+
+In addition to the main components, there are also the following utilities:
+
+- google_oslogin_control is a shell script for activating/deactivating the OS
+  Login components.
+- google_oslogin_nss_cache is a utility for updating the local user and group
+  cache.

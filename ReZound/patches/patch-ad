@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.3 2005/07/25 13:41:54 thomasklausner Exp $
+--- src/backend/settings.cpp.orig	2005-05-01 04:53:40.000000000 +0200
++++ src/backend/settings.cpp
+@@ -72,8 +72,8 @@ unsigned gDesiredOutputBufferSize=2048; 
+ 
+ 
+ #ifdef ENABLE_OSS
+-string gOSSOutputDevice="/dev/dsp";
+-string gOSSInputDevice="/dev/dsp";
++string gOSSOutputDevice=DEVOSSSOUND;
++string gOSSInputDevice=DEVOSSSOUND;
+ #endif
+ #ifdef ENABLE_ALSA
+ string gALSAOutputDevice="hw:0";

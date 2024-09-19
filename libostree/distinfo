@@ -1,0 +1,7 @@
+$NetBSD$
+
+RMD160 (libostree-2021.3.tar.xz) = 137a299640e4c9977d50f250472674c0a887f7a7
+SHA512 (libostree-2021.3.tar.xz) = 0df0d8f9bd82b16562dd5146997eddfb7cb6cffc1886601307d97a1cb1dc926bda7d0c899db26c974ed0dff1012dee11937e47c11c4d03307fa3d2d430adc60e
+Size (libostree-2021.3.tar.xz) = 2089804 bytes
+SHA1 (patch-Makefile.in) = 0627f1335da7b3ec6993c327c4b94ff847918201
+SHA1 (patch-configure) = 6bbb98765f2fb5117afd9bb19f3db5f76d072287

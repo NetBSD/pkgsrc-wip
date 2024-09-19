@@ -1,0 +1,20 @@
+# $NetBSD: INSTALL,v 1.2 2006/06/15 20:40:16 jlam Exp $
+NAME=@NAME@
+PIKE_EXECUTABLE=@PIKE_EXECUTABLE@
+PIKE=${PREFIX}/bin/${PIKE_EXECUTABLE}
+MODULE_DIR=${PREFIX}/lib/${PIKE_EXECUTABLE}
+case ${STAGE} in
+POST-INSTALL)
+      ${ECHO} "Precompiling modules.";
+      cd ${MODULE_DIR} &&
+        {
+           IFS=" "
+	   DIRS="modules"
+           for x in ${DIRS}  ; do
+		cd $x
+                ${ECHO} "Precompiling in $x..."
+			${PIKE} -x dump -v Sql.pmod/sql_util.pmod 2> /dev/null 
+	   done
+	} 
+        ;;
+esac

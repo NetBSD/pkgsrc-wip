@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- include/Makefile.am.orig	2018-05-05 07:42:22.000000000 +0000
++++ include/Makefile.am
+@@ -47,6 +47,9 @@ nobase_pkginclude_HEADERS = \
+ 	pub_tool_xtmemory.h		\
+ 	valgrind.h			\
+ 	vki/vki-linux.h			\
++	vki/vki-netbsd.h		\
++	vki/vki-machine-types-amd64-netbsd.h	\
++	vki/vki-amd64-netbsd.h		\
+ 	vki/vki-darwin.h		\
+ 	vki/vki-solaris.h		\
+ 	vki/vki-solaris-repcache.h	\
+@@ -79,6 +82,7 @@ nobase_pkginclude_HEADERS = \
+ 	vki/vki-scnums-mips64-linux.h	\
+ 	vki/vki-scnums-darwin.h         \
+ 	vki/vki-scnums-solaris.h	\
++	vki/vki-scnums-netbsd.h		\
+ 	vki/vki-xen.h                   \
+ 	vki/vki-xen-domctl.h		\
+ 	vki/vki-xen-evtchn.h		\

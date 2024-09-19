@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	tpl
+
+.if !defined(TPL_BUILDLINK3_MK)
+TPL_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.tpl+=	tpl>=1.6.1
+BUILDLINK_ABI_DEPENDS.tpl+=	tpl>=1.6.1
+BUILDLINK_PKGSRCDIR.tpl?=	../../wip/tpl
+.endif	# TPL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-tpl

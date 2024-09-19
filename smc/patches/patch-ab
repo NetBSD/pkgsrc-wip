@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2006/01/07 23:03:06 h2m Exp $
+
+--- configure.orig	2005-05-30 02:34:50.000000000 +0200
++++ configure
+@@ -1319,7 +1319,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ PACKAGE=smc
+-VERSION=0.96
++VERSION=0.97
+ 
+ 
+ ac_aux_dir=
+@@ -6782,7 +6782,7 @@ _ACEOF
+ 
+ 
+ 
+-                                        ac_config_files="$ac_config_files Makefile src/Makefile data/Makefile docs/Makefile"
++                                        ac_config_files="$ac_config_files Makefile src/Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -7355,8 +7355,6 @@ do
+   # Handling of arguments.
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+   "src/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+-  "data/Makefile" ) CONFIG_FILES="$CONFIG_FILES data/Makefile" ;;
+-  "docs/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/Makefile" ;;
+   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
+   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5

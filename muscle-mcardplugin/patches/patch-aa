@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/28 19:09:50 udontknow Exp $
+
+--- src/musclecardApplet.c.orig	2003-08-27 08:49:28.000000000 -0300
++++ src/musclecardApplet.c
+@@ -15,10 +15,6 @@ $Id: musclecardApplet.c,v 1.41 2003/08/2
+ ********************************************************************/
+ #ifdef WIN32
+ #include "../win32/MCardPlugin.h"
+-#endif
+-
+-#ifndef __APPLE__
+-#include <musclecard.h>
+ #else
+ #include <PCSC/musclecard.h>
+ #endif

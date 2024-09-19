@@ -1,0 +1,4 @@
+P4D, the Perforce Server, manages the Perforce central file repository,
+or depot. P4D handles user requests and tracks development activity
+in the built-in Perforce database. No special hardware is needed,
+other than storage for depot and database files.

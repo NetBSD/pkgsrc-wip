@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:15 thomasklausner Exp $
+lib/tcl/${PKGNAME}/libmysqltcl${PKGVERSION}.so
+lib/tcl/${PKGNAME}/pkgIndex.tcl
+man/mann/mysqltcl.n

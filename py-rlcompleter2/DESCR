@@ -1,0 +1,7 @@
+One of the best features of python is that you can use and learn it
+interactively. rlcompleter2 enhances this interactive experience. It is a
+major improvement over the rlcompleter module in the 2.2 standard lib. I
+recommend that you simply install it and see if you like it. User interface
+is simple: hit <tab> one or more times during typing your python statements.
+If you sometimes use python interactively you will certainly enjoy it. If
+you don't work interactively then you should :-)

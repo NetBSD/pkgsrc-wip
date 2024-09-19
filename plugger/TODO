@@ -1,0 +1,4 @@
+$Id: TODO,v 1.2 2003/06/11 12:26:22 airhead Exp $
+
+- We have to find out which browsers are installed, and install the plugin
+   to those dirs.

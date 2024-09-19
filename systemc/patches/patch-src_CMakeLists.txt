@@ -1,0 +1,42 @@
+$NetBSD$
+* Don't install build generated files and empty dirs.
+* Generate and install pkg-config files.
+--- src/CMakeLists.txt.orig	2018-10-13 08:19:07.000000000 +0000
++++ src/CMakeLists.txt
+@@ -524,8 +524,34 @@ install (FILES systemc tlm
+ install (DIRECTORY ./
+          DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+          COMPONENT dev
+-         FILES_MATCHING PATTERN "*.h")
++         FILES_MATCHING PATTERN "*.h"
++         PATTERN "qt/time" EXCLUDE
++         PATTERN "CMakeFiles" EXCLUDE)
+ install (DIRECTORY ./
+          DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+          COMPONENT dev
+-         FILES_MATCHING PATTERN "*.hpp")
++         FILES_MATCHING PATTERN "*.hpp"
++         PATTERN "qt/time" EXCLUDE
++         PATTERN "CMakeFiles" EXCLUDE)
++
++# setup pkgconfig
++set(PACKAGE "systemc")
++set(PACKAGE_NAME "SystemC")
++set(PACKAGE_VERSION "${SystemCLanguage_VERSION}")
++set(PACKAGE_URL "http://accellera.org/")
++set(TLM_PACKAGE_VERSION "${SystemCTLM_VERSION}")
++set(prefix "${CMAKE_INSTALL_PREFIX}")
++set(exec_prefix "${CMAKE_INSTALL_PREFIX}")
++set(includedir "${CMAKE_INSTALL_FULL_INCLUDEDIR}")
++set(libdir "${CMAKE_INSTALL_FULL_LIBDIR}")
++set(PKGCONFIG_LDPRIV "${CMAKE_THREAD_LIBS_INIT}")
++if (DISABLE_VIRTUAL_BIND)
++   set (PKGCONFIG_DEFINES "-DSC_DISABLE_VIRTUAL_BIND")
++endif (DISABLE_VIRTUAL_BIND)
++if (DEFINED THREADS_HAVE_PTHREAD_ARG)
++   set (PKGCONFIG_CFLAGS "-pthread ")
++endif (DEFINED THREADS_HAVE_PTHREAD_ARG)
++configure_file (systemc.pc.in systemc.pc @ONLY)
++configure_file (tlm.pc.in tlm.pc @ONLY)
++install (FILES systemc.pc tlm.pc 
++         DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig)

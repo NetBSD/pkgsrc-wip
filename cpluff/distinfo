@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (cpluff-0.1.4.tar.gz) = 3c2b2c561f903f3014a1f612486fee5137bab6db
+SHA512 (cpluff-0.1.4.tar.gz) = 5a3f0a1c7f0a92d4aa404a77a48597c7b09d79cf1a5a428e480aa8d2d5b3f3477b1f2297b3938fd6600ebb937c43588eb1ced266df1b186281ab0799a2d764f6
+Size (cpluff-0.1.4.tar.gz) = 908977 bytes
+SHA1 (patch-configure.ac) = 5185f057785e7482fdf3ea107e5486ece347328a

@@ -1,0 +1,12 @@
+Snark is a client for downloading and sharing files distributed with the
+BitTorrent protocol. It is mainly used for exploring the BitTorrent protocol
+and experimenting with the the GNU Compiler for Java (gcj). But it can also
+be used as a regular BitTorrent Client.
+
+Snark can also act as a torrent creator, micro http server for delivering
+metainfo.torrent files and has an integrated Tracker for making sharing of
+files as easy as possible.
+
+When given the option --share Snark will automatically create a .torrent
+file, start a very simple webserver to distribute the metainfo.torrent file
+and a local tracker that other BitTorrent clients can connect to.

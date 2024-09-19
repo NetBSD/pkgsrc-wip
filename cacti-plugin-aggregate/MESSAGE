@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/07/23 16:37:56 ahp-nils Exp $
+
+cacti-plugin-aggregate is now installed.
+You can enable it in the "Plugin Management" category on the web interface.
+
+===========================================================================

@@ -1,0 +1,9 @@
+Nyacc, for Not Yet Another Compiler Compiler, is a set of guile
+modules for generating computer language parsers and lexical
+analyzers. It is an LALR(1) parser generator implemented in
+Guile.
+
+It includes a decent C99 parser that outputs SXML trees.
+
+It includes an application, called the FFI Helper, for automatic
+generation of Scheme FFI code for C libraries, much like SWIG.

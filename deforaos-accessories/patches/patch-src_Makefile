@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile,v 1.1 2012/10/14 19:32:57 khorben Exp $
+
+--- src/Makefile.orig	2012-10-14 16:52:03.000000000 +0000
++++ src/Makefile
+@@ -5,9 +5,9 @@ BINDIR	= $(PREFIX)/bin
+ CC	?= cc
+ CPPFLAGSF?=
+ CPPFLAGS?=
+-CFLAGSF	= -W `pkg-config gtk+-3.0 --cflags`
++CFLAGSF	= -W `pkg-config gtk+-2.0 --cflags`
+ CFLAGS	= -Wall -g -O2 -pedantic
+-LDFLAGSF= `pkg-config gtk+-3.0 --libs`
++LDFLAGSF= `pkg-config gtk+-2.0 --libs`
+ RM	?= rm -f
+ LN	?= ln -f
+ MKDIR	?= mkdir -p

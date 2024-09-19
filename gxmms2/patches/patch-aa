@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.8 2012/11/15 17:54:27 othyro Exp $
+
+Fix INSTALL_*. Use DESTDIR.
+
+--- Makefile.orig	2009-01-04 18:30:38.000000000 +0000
++++ Makefile
+@@ -49,22 +49,20 @@ clean:
+ install: install_gxmms2 install_gkrellxmms2
+ 
+ install_gxmms2:
+-	install -D gxmms2 $(PREFIX)/bin/gxmms2
+-	install -D -m 644 gxmms2src/gxmms2_mini.xpm $(PREFIX)/share/gxmms2/gxmms2_mini.xpm
+-	install -D -m 644 README $(PREFIX)/share/gxmms2/README
+-	install -D -m 644 COPYING $(PREFIX)/share/gxmms2/COPYING
++	${BSD_INSTALL_PROGRAM} gxmms2 ${DESTDIR}$(PREFIX)/bin/gxmms2
++	${BSD_INSTALL_DATA} gxmms2src/gxmms2_mini.xpm ${DESTDIR}$(PREFIX)/share/gxmms2/gxmms2_mini.xpm
++	${BSD_INSTALL_DATA} README ${DESTDIR}$(PREFIX)/share/doc/gxmms2/README
+ 
+ install_gkrellxmms2:
+-	install -D gkrellxmms2.so $(KRELLPREFIX)/lib/gkrellm2/plugins/gkrellxmms2.so
+-	install -D -m 644 README $(KRELLPREFIX)/share/gkrellxmms2/README
+-	install -D -m 644 COPYING $(KRELLPREFIX)/share/gkrellxmms2/COPYING
++	${BSD_INSTALL_LIB} gkrellxmms2.so ${DESTDIR}$(KRELLPREFIX)/lib/gkrellm2/plugins/gkrellxmms2.so
++	${BSD_INSTALL_DATA} README ${DESTDIR}$(KRELLPREFIX)/share/doc/gxmms2/gkrellxmms2/README
+ 
+ uninstall: uninstall_gxmms2 uninstall_gkrellxmms2
+ 
+ uninstall_gxmms2:
+-	-rm $(PREFIX)/bin/gxmms2
+-	-rm -rf $(PREFIX)/share/gxmms2/
++	-rm ${DESTIDR}$(PREFIX)/bin/gxmms2
++	-rm -rf ${DESTDIR}$(PREFIX)/share/gxmms2/
+ 
+ uninstall_gkrellxmms2:
+-	-rm $(KRELLPREFIX)/lib/gkrellm2/plugins/gkrellxmms2.so
+-	-rm -rf $(KRELLPREFIX)/share/gkrellxmms2/
++	-rm ${DESTDIR}$(KRELLPREFIX)/lib/gkrellm2/plugins/gkrellxmms2.so
++	-rm -rf ${DESTDIR}$(KRELLPREFIX)/share/gkrellxmms2/

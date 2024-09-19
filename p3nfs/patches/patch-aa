@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2005/01/02 21:29:03 mreriksson Exp $
+
+--- nfsd/mp_inode.c.orig	2001-09-02 11:47:02.000000000 +0200
++++ nfsd/mp_inode.c
+@@ -1,7 +1,8 @@
+ #include <stdio.h>
+ #include "cnv.h"
+ 
+-#if defined(__SVR4) || defined(__GLIBC__) || defined(__FreeBSD__)
++#if defined(__SVR4) || defined(__GLIBC__) || defined(__FreeBSD__) \
++	|| defined(__NetBSD__)
+ #include <string.h>
+ #include <stdlib.h>
+ #endif

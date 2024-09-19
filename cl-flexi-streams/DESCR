@@ -1,0 +1,12 @@
+FLEXI-STREAMS implements "virtual" bivalent streams that can be layered atop
+real binary or bivalent streams and that can be used to read and write
+character data in various single- or multi-octet encodings which can be changed
+on the fly. It also supplies in-memory binary streams which are similar to
+string streams.
+
+The library needs a Common Lisp implementation that supports Gray streams and
+relies on David Lichteblau's trivial-gray-streams to offer portability between
+different Lisps.
+
+The code comes with a BSD-style license so you can basically do with it
+whatever you want.

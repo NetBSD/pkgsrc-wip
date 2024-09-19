@@ -1,0 +1,21 @@
+Somehow convince this to use pkgsrc sqlite3
+sqlite3 to build threadsafe
+
+Currently fails at:
+	checking for sqlite3.h... yes
+	checking for sqlite3_threadsafe in -lsqlite3... yes
+	checking whether sqlite was compiled thread-safe... no
+	configure: error: sqlite3 is not compiled thread-safe
+	*** Error code 1
+
+- GNOME3: re-enable options once the relevant packages
+  have been updated.
+
+- PLIST variation by options are not fully checked yet.
+- Combination of options may have some constraint, but not
+  checked, for example,
+  gstreamer and playlist may not be set at the same time ?
+
+  PLIST.mplayer
+  PLIST.totem
+  are flagged by pkglint. Need check the logic also

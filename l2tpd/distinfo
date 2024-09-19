@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.7 2006/11/25 16:22:48 shattered Exp $
+
+RMD160 (l2tpd-0.69.tar.gz) = 62c4b787c52822882611f5eb65af4a58be3b0b9d
+SHA512 (l2tpd-0.69.tar.gz) = 15b926d987f135e3af9ae32464437a4ca30a3b333b7cbbb7deff6f7959dd32fceee1f21391e38ba00c145727edac823e77eba0e8f31e9150c682cb81a2083bce
+Size (l2tpd-0.69.tar.gz) = 127693 bytes
+SHA1 (patch-ab) = c930a12945aeb03aaaf340d4e023fd2167b13032
+SHA1 (patch-ac) = c97c8691842093d38a6e9b3fd1ee182762afca80
+SHA1 (patch-ad) = abfa14d648af9cde014af71e25442f4f9ebb6279
+SHA1 (patch-ae) = ad65b770b0997fbddad03d1b6f0244c8f94bb3ba
+SHA1 (patch-af) = db59fcef3a054148d038a9d77bdc47fa33d8ec98
+SHA1 (patch-ag) = 3e3cdc1ece4c1f6f259f6090098b55d3070a9cfd
+SHA1 (patch-ah) = 666c610a5e7227ad005aee82851874dde4eab8f7
+SHA1 (patch-ai) = 6f9056e3606e34e92772b7cfa956bb4419a7a662
+SHA1 (patch-aj) = 7921ecea0015aad029789861d5e4e780a850caf7
+SHA1 (patch-ak) = ab75b6e31b5dbdcf93befd88768b3da228d2105d
+SHA1 (patch-al) = 6a810ad7b4f45998c3174cd3f5654c866bc86738
+SHA1 (patch-am) = d0eaa4754251271e69bfe26b3808b9fe3c88b460
+SHA1 (patch-an) = b0909c8cb66939eccf0e302c84a317747f3f9131
+SHA1 (patch-ao) = 9e1f14c1204c1d975552470472ff53e16f7a7b76
+SHA1 (patch-ap) = 5a0bc99848bbf4143f31e911a8a82e28ea42c91d

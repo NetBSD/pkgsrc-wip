@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.2 2012/11/12 14:32:14 thomasklausner Exp $
+
+--- unix/xc/programs/Xserver/hw/xfree86/parser/scan.c.orig	2003-01-04 15:20:23.000000000 -0500
++++ unix/xc/programs/Xserver/hw/xfree86/parser/scan.c
+@@ -425,7 +425,8 @@ xf86pathIsSafe(const char *path)
+ #ifndef XCONFENV
+ #define XCONFENV	"XF86CONFIG"
+ #endif
+-#ifndef XF86_VERSION_MAJOR
++#define XF86_VERSION_MAJOR 4
++#if 0
+ #ifdef XVERSION
+ #if XVERSION > 40000000
+ #define XF86_VERSION_MAJOR	(XVERSION / 10000000)

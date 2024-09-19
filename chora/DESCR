@@ -1,0 +1,10 @@
+Chora is our tool for viewing code repositories that are managed using the
+CVS source control system. It aims to provide a high degree of integration
+with CVS and the other Horde web-based tools.
+
+Right now, Chora comes close to matching existing CVS-Web scripts feature
+for feature, and provides a solid base for future development. Some exciting
+new features include a visual branch viewing tool, which intelligently
+displays the branch history of a given file. Branches have traditionally
+been a source of confusion when using CVS, and this feature aims to make it
+a bit clearer and easier to use.

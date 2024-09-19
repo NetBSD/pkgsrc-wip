@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins_preauth_pkinit_Makefile.in,v 1.2 2018/06/15 20:46:01 tez Exp $
+
+--- plugins/preauth/pkinit/Makefile.in.orig	2018-05-03 14:34:47.000000000 +0000
++++ plugins/preauth/pkinit/Makefile.in
+@@ -8,8 +8,8 @@ LIBMINOR=0
+ RELDIR=../plugins/preauth/pkinit
+ # Depends on libk5crypto and libkrb5
+ SHLIB_EXPDEPS = \
+-	$(TOPLIBD)/libk5crypto$(SHLIBEXT) \
+-	$(TOPLIBD)/libkrb5$(SHLIBEXT)
++	$(TOPLIBD)/libk5crypto$(DEPLIBEXT) \
++	$(TOPLIBD)/libkrb5$(DEPLIBEXT)
+ SHLIB_EXPLIBS= -lkrb5 -lcom_err -lk5crypto -lcrypto $(DL_LIB) $(SUPPORT_LIB) $(LIBS)
+ 
+ STLIBOBJS= \

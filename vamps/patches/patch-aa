@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/03/27 23:05:01 rhialto Exp $
+
+--- vamps/vamps.c.orig	2006-04-15 14:00:07.000000000 +0200
++++ vamps/vamps.c	2008-03-26 17:06:42.000000000 +0100
+@@ -203,7 +203,7 @@
+ 
+   opterr = 1;
+ 
+-  while ((c = getopt_long_only (argc, argv, "a:s:e:E:vi:pS:",
++  while ((c = getopt_long (argc, argv, "a:s:e:E:vi:pS:",
+ 				long_options, NULL)) >= 0)
+   {
+     switch (c)

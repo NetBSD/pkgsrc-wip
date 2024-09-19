@@ -1,0 +1,17 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/charlock_holmes/charlock_holmes.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/ext/charlock_holmes/common.h
+${GEM_LIBDIR}/ext/charlock_holmes/converter.c
+${GEM_LIBDIR}/ext/charlock_holmes/encoding_detector.c
+${GEM_LIBDIR}/ext/charlock_holmes/ext.c
+${GEM_LIBDIR}/ext/charlock_holmes/extconf.rb
+${GEM_LIBDIR}/ext/charlock_holmes/transliterator.cpp
+${GEM_LIBDIR}/lib/charlock_holmes.rb
+${GEM_LIBDIR}/lib/charlock_holmes/charlock_holmes.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/charlock_holmes/encoding_detector.rb
+${GEM_LIBDIR}/lib/charlock_holmes/string.rb
+${GEM_LIBDIR}/lib/charlock_holmes/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.6.0/build_info

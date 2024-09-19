@@ -1,0 +1,9 @@
+[Desktop Entry]
+GenericName=Java-based interpreter for an extended version of AgentSpeak
+Exec=jason
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Categories=Development;
+Encoding=UTF-8
+StartupNotify=true

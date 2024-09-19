@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2007/04/25 12:13:08 loic-hoguin Exp $
+
+RMD160 (pear/DB_DataObject-1.8.5.tgz) = 24940a32c6db3874d03dbdc756230a95c6da6e89
+Size (pear/DB_DataObject-1.8.5.tgz) = 61135 bytes
+SHA1 (patch-aa) = ee2e242082e7faa7109794d525e4b0816247d49e

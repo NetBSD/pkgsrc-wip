@@ -1,0 +1,97 @@
+checking for x86_64--netbsd-xml2-config... no
+checking for xml2-config... /usr/pkg/bin/xml2-config
+checking for libxml libraries >= 2.6.27... 2.9.9 found
+checking whether shared libraries will be built (required for plugins)... yes
+checking libxml2 module support... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libxslt.pc
+config.status: creating libexslt.pc
+config.status: creating libxslt/Makefile
+config.status: creating libxslt/xsltconfig.h
+config.status: creating libxslt/xsltwin32config.h
+config.status: creating libexslt/Makefile
+config.status: creating libexslt/exsltconfig.h
+config.status: creating xsltproc/Makefile
+config.status: creating python/Makefile
+config.status: creating python/tests/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/docs/Makefile
+config.status: creating tests/REC1/Makefile
+config.status: creating tests/REC2/Makefile
+config.status: creating tests/REC/Makefile
+config.status: creating tests/general/Makefile
+config.status: creating tests/reports/Makefile
+config.status: creating tests/extensions/Makefile
+config.status: creating tests/namespaces/Makefile
+config.status: creating tests/keys/Makefile
+config.status: creating tests/numbers/Makefile
+config.status: creating tests/documents/Makefile
+config.status: creating tests/xmlspec/Makefile
+config.status: creating tests/multiple/Makefile
+config.status: creating tests/xinclude/Makefile
+config.status: creating tests/XSLTMark/Makefile
+config.status: creating tests/docbook/Makefile
+config.status: creating tests/exslt/Makefile
+config.status: creating tests/exslt/common/Makefile
+config.status: creating tests/exslt/functions/Makefile
+config.status: creating tests/exslt/math/Makefile
+config.status: creating tests/exslt/saxon/Makefile
+config.status: creating tests/exslt/sets/Makefile
+config.status: creating tests/exslt/strings/Makefile
+config.status: creating tests/exslt/date/Makefile
+config.status: creating tests/exslt/dynamic/Makefile
+config.status: creating tests/exslt/crypto/Makefile
+config.status: creating tests/plugins/Makefile
+config.status: creating doc/Makefile
+config.status: creating xslt-config
+config.status: creating libxslt.spec
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+rm: libtoolT: No such file or directory
+=> Modifying libtool scripts to use pkgsrc libtool
+=> Modifying libtool scripts to use pkgsrc depcomp
+===> build-message [compat32_libxslt-1.1.33] ===> Building for compat32_libxslt-1.1.33
+/usr/pkg/bin/gmake  all-recursive
+gmake[1]: Entering directory '/usr/pkgsrc/wip/libxslt-32/work/libxslt-1.1.33'
+Making all in libxslt
+gmake[2]: Entering directory '/usr/pkgsrc/wip/libxslt-32/work/libxslt-1.1.33/libxslt'
+  CC       attrvt.lo
+  CC       xslt.lo
+  CC       xsltutils.lo
+  CC       pattern.lo
+  CC       xsltlocale.lo
+  CC       templates.lo
+  CC       variables.lo
+  CC       keys.lo
+  CC       numbers.lo
+  CC       extensions.lo
+  CC       extra.lo
+  CC       functions.lo
+  CC       namespaces.lo
+  CC       imports.lo
+  CC       documents.lo
+  CC       preproc.lo
+  CC       attributes.lo
+  CC       security.lo
+  CC       transform.lo
+  CCLD     libxslt.la
+ld: skipping incompatible /usr/pkgsrc/wip/libxslt-32/work/.buildlink/lib/libxml2.so when searching for -lxml2
+ld: skipping incompatible /usr/pkgsrc/wip/libxslt-32/work/.buildlink/lib/libxml2.a when searching for -lxml2
+ld: cannot find -lxml2
+gmake[2]: *** [Makefile:533: libxslt.la] Error 1
+gmake[2]: Leaving directory '/usr/pkgsrc/wip/libxslt-32/work/libxslt-1.1.33/libxslt'
+gmake[1]: *** [Makefile:614: all-recursive] Error 1
+gmake[1]: Leaving directory '/usr/pkgsrc/wip/libxslt-32/work/libxslt-1.1.33'
+gmake: *** [Makefile:440: all] Error 2
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/libxslt-32
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/libxslt-32
+

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.75 2021/05/09 09:00:32 leot Exp $
+
+RMD160 (cqlsh-6.0.0b4.tar.gz) = bfb10417184e1207fb4a1225a9f6625057b5b7b8
+SHA512 (cqlsh-6.0.0b4.tar.gz) = cff7c4db91a654333ae51bf414b6d67df2982e5ae3d1b50ea01d98e721bb0919d4e5feb6a4cbb14507408ae86d053e59f0c28d59490ad1a70856a2cc3b5ede77
+Size (cqlsh-6.0.0b4.tar.gz) = 94785 bytes
+SHA1 (patch-setup.py) = 38f3cf186d811e0e19046d0c808ea08706af8516

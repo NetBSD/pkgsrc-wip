@@ -1,0 +1,74 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2011/11/08 01:42:14 tnn2 Exp $
+
+--- Makefile.orig	2011-11-03 10:51:22.000000000 +0000
++++ Makefile
+@@ -18,20 +18,20 @@ endif
+ 
+ WHICH_GPP = $(shell which g++)
+ 
+-SHELL=/bin/bash
++#SHELL=/bin/bash
+ 
+-XTREEMFS_JAR_DIR=$(DESTDIR)/usr/share/java
+-XTREEMFS_CONFIG_PARENT_DIR=$(DESTDIR)/etc/xos
++XTREEMFS_JAR_DIR=$(DESTDIR)$(PREFIX)/share/xtreemfs/java/lib
++XTREEMFS_CONFIG_PARENT_DIR=$(DESTDIR)${PREFIX}/share/examples
+ XTREEMFS_CONFIG_DIR=$(XTREEMFS_CONFIG_PARENT_DIR)/xtreemfs
+ XTREEMFS_INIT_DIR=$(DESTDIR)/etc/init.d
+ XTREEMFS_CLIENT_BUILD_DIR=$(shell pwd)/cpp/build
+-BIN_DIR=$(DESTDIR)/usr/bin
+-SBIN_DIR=$(DESTDIR)/sbin
+-MAN_DIR=$(DESTDIR)/usr/share/man/man1
+-DOC_DIR_SERVER=$(DESTDIR)/usr/share/doc/xtreemfs-server
+-DOC_DIR_CLIENT=$(DESTDIR)/usr/share/doc/xtreemfs-client
+-DOC_DIR_TOOLS=$(DESTDIR)/usr/share/doc/xtreemfs-tools
+-CONTRIB_DIR=$(DESTDIR)/usr/share/xtreemfs
++BIN_DIR=$(DESTDIR)$(PREFIX)/bin
++SBIN_DIR=$(DESTDIR)$(PREFIX)/sbin
++MAN_DIR=$(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
++DOC_DIR_SERVER=$(DESTDIR)$(PREFIX)/share/doc/xtreemfs-server
++DOC_DIR_CLIENT=$(DESTDIR)$(PREFIX)/share/doc/xtreemfs-client
++DOC_DIR_TOOLS=$(DESTDIR)$(PREFIX)/share/doc/xtreemfs-tools
++CONTRIB_DIR=$(DESTDIR)$(PREFIX)/share/xtreemfs
+ PLUGIN_DIR=$(CONTRIB_DIR)/server-repl-plugin
+ PLUGIN_CONFIG_DIR=$(XTREEMFS_CONFIG_DIR)/server-repl-plugin
+ 
+@@ -56,6 +56,8 @@ XTFS_BINDIR = $(shell pwd)/bin
+ export XTFS_BINDIR
+ 
+ all: check_server check_client check_test $(TARGETS)
++pkgsrc-xtreemfs-server-build: foundation server
++pkgsrc-xtreemfs-server-install: install-server install-tools
+ 
+ clean: check_server check_client $(patsubst %,%_clean,$(TARGETS))
+ 
+@@ -108,20 +110,20 @@ install-server:
+ 	@cp contrib/server-repl-plugin/config/dir.properties $(PLUGIN_CONFIG_DIR)
+ 	@cp contrib/server-repl-plugin/config/mrc.properties $(PLUGIN_CONFIG_DIR)
+ 	
+-	# delete UUID from config-files
++# delete UUID from config-files
+ 	@grep -v '^uuid\W*=\W*\w\+' etc/xos/xtreemfs/dirconfig.properties > $(XTREEMFS_CONFIG_DIR)/dirconfig.properties
+ 	@grep -v '^uuid\W*=\W*\w\+' etc/xos/xtreemfs/mrcconfig.properties > $(XTREEMFS_CONFIG_DIR)/mrcconfig.properties
+ 	@grep -v '^uuid\W*=\W*\w\+' etc/xos/xtreemfs/osdconfig.properties > $(XTREEMFS_CONFIG_DIR)/osdconfig.properties
+ 
+-	@cp packaging/generate_uuid $(XTREEMFS_CONFIG_DIR)
+-	@cp packaging/postinstall_setup.sh $(XTREEMFS_CONFIG_DIR)
+-	@chmod a+x $(XTREEMFS_CONFIG_DIR)/postinstall_setup.sh
+-
+-	@mkdir -p $(XTREEMFS_INIT_DIR)
+-	@cp etc/init.d/xtreemfs-* $(XTREEMFS_INIT_DIR)
+-	@chmod a+x $(XTREEMFS_INIT_DIR)/xtreemfs-*
++#	@cp packaging/generate_uuid $(XTREEMFS_CONFIG_DIR)
++#	@cp packaging/postinstall_setup.sh $(XTREEMFS_CONFIG_DIR)
++#	@chmod a+x $(XTREEMFS_CONFIG_DIR)/postinstall_setup.sh
++
++#	@mkdir -p $(XTREEMFS_INIT_DIR)
++#	@cp etc/init.d/xtreemfs-* $(XTREEMFS_INIT_DIR)
++#	@chmod a+x $(XTREEMFS_INIT_DIR)/xtreemfs-*
+ 
+-	@echo "to complete the server installation, please execute $(XTREEMFS_CONFIG_DIR)/postinstall_setup.sh" 
++#	@echo "to complete the server installation, please execute $(XTREEMFS_CONFIG_DIR)/postinstall_setup.sh" 
+ 
+ install-tools:
+ 

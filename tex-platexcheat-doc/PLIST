@@ -1,0 +1,11 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/platexcheat/LICENSE
+share/texmf-dist/doc/latex/platexcheat/README.md
+share/texmf-dist/doc/latex/platexcheat/platexsheet-jsclasses.pdf
+share/texmf-dist/doc/latex/platexcheat/platexsheet-jsclasses.tex
+share/texmf-dist/doc/latex/platexcheat/platexsheet.pdf
+share/texmf-dist/doc/latex/platexcheat/platexsheet.tex
+share/texmf-dist/doc/latex/platexcheat/sample-jsclasses.pdf
+share/texmf-dist/doc/latex/platexcheat/sample-jsclasses.tex
+share/texmf-dist/doc/latex/platexcheat/sample.pdf
+share/texmf-dist/doc/latex/platexcheat/sample.tex

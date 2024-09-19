@@ -1,0 +1,12 @@
+OzymanDNS is a suite of tools for experimenting with DNS. It includes a
+number of tools:
+
+   aska.pl - DNS File/Stream Sender
+   geta.pl - DNS File/Stream Receiver
+   nomde.pl - Experimental DNS Server
+   droute.pl - Reliable DNS Transport for standard input/output
+   glance - Represents IP addresses as dates
+
+More information about all of these tools can be found in Dan Kaminsky's
+Black Ops DNS 2003 Chaos Communications Camp slides:
+http://www.ccc.de/congress/2004/fahrplan/files/297-black-ops-of-dns-slides.pdf

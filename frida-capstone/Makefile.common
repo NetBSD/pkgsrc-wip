@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.2 2018/02/23 02:42:06 khorben Exp $
+#
+# used by devel/py-capstone/Makefile
+
+DISTNAME=	capstone-2.1.2
+PKGNAME=	frida-${DISTNAME}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=frida/}
+GITHUB_TAG=	a1a383436ba147767af1887c2015e5a863359669
+
+GITHUB_PROJECT=	capstone
+
+HOMEPAGE=	https://www.capstone-engine.org/
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/frida-capstone/distinfo

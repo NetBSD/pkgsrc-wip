@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/07 20:54:18 khorben Exp $
+
+RMD160 (nodm-0.7.tar.gz) = 5a64a5235f551b69c14273565d71bff65b3bec6e
+Size (nodm-0.7.tar.gz) = 97686 bytes
+SHA1 (patch-configure) = 36ec2d82d3854784117f5d038669b43c1e19337f
+SHA1 (patch-nodm.c) = 9fcc50155b9d32f789051e50047cc776910a87ff

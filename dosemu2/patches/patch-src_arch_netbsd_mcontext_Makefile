@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- src/arch/netbsd/mcontext/Makefile.orig	2017-11-02 06:34:51.949371629 +0000
++++ src/arch/netbsd/mcontext/Makefile
+@@ -0,0 +1,9 @@
++top_builddir=../../../..
++include $(top_builddir)/Makefile.conf
++
++CFILES = context.c
++SFILES = asm.S
++
++all:  lib
++
++include $(REALTOPDIR)/src/Makefile.common

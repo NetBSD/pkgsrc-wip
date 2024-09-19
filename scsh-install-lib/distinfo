@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:40 rillig Exp $
+
+RMD160 (scsh-install-lib-1.2.0.tar.gz) = 366de68b9d4c1e70313ccd464b5f4ce4be3f1156
+Size (scsh-install-lib-1.2.0.tar.gz) = 132656 bytes
+SHA1 (patch-aa) = bdae1a668435bd707bf2d3376d2a89ff19230208

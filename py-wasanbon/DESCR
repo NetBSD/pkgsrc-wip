@@ -1,0 +1,12 @@
+wasanbon is a framework for Robotic Software Developers with Robotic
+Technology Middleware (RT-middleware).
+
+Robotic Technology Middleware is a standard for Robotic Softwares. In RTM,
+each software element (like actuator, sensor, algorithm, and so on) is regarded
+as Robotic Technology Component (RTC). Using RTM, developers can create
+their robot software with constructing of those software components.
+
+Each RTC has ports as data-trasnporting endpoints, and a statemachine.
+To construct RT-system, connection between ports, and state activation is
+indispensable. To launch multiple RTCs also disturbs developers. wasanbon
+automates multiple RTC development in some aspects

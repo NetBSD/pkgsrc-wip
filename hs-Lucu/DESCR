@@ -1,0 +1,6 @@
+Lucu is an HTTP daemonic library. It can be embedded in any Haskell
+program and runs in an independent thread. Lucu is not a replacement
+for Apache. It is intended to be used to create an efficient web-based
+application without messing around FastCGI. It is also intended to be
+run behind a reverse-proxy so it doesn't have some facilities like
+logging, client filtering or such like.

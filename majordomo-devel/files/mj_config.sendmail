@@ -1,0 +1,6 @@
+          'mta' => 'sendmail',
+          'maintain_mtaconfig' => 0,
+          'mta_separator' => '+',
+          'sendmail_maintain_vut' => 0,
+          'sendmail_make_symlinks' => 0,
+        };

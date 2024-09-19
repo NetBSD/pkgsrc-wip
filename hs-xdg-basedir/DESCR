@@ -1,0 +1,4 @@
+On Unix platforms, this should be a very straightforward
+implementation of the XDG Base Directory spec. On Windows, it will
+attempt to do the right thing with regards to choosing appropriate
+directories.

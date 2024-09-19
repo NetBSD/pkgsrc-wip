@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.23 2015/05/06 05:25:00 keckhardt Exp $
+
+RMD160 (gcc-10-20200119.tar.xz) = 74c64cff4c5f3d779d8ab22791435152b3f0a348
+SHA512 (gcc-10-20200119.tar.xz) = 65c3421de88d76c13eb216c99df60ef15935d60056813336cd522add0e39fac403037ecb362bde9b36778d249b35de7ec192aa9900146231974ca3b2caff31aa
+Size (gcc-10-20200119.tar.xz) = 71440592 bytes
+RMD160 (isl-0.16.1.tar.bz2) = 5a99db3fe0d0a1f6bbac1ed4448f2403495c55b2
+SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
+Size (isl-0.16.1.tar.bz2) = 1626446 bytes
+SHA1 (patch-contrib_download__prerequisites) = 86c6c16e0e3e3a0bcb38579a8b4004f603fac1ca
+SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
+SHA1 (patch-gcc_config_arm_arm.h) = ef381dbb70cab2f76f6ad190eaa5519240ae1a02
+SHA1 (patch-gcc_config_netbsd-protos.h) = ff3d5c6602f57ca28d3a9c0636c5224465fa9c17
+SHA1 (patch-gcc_config_x-netbsd) = 9dc75bfab8331b5223efc382aae5f577fb6e1b7b
+SHA1 (patch-gcc_configure) = 15fb7af267b79965f83bc64ce8aad1279b0ea52d
+SHA1 (patch-gcc_d_d-builtins.cc) = 89c48c8e04c1137fdff9e3c548b9fd20add9229c
+SHA1 (patch-gcc_d_dmd_globals.h) = 701a302323e669e2eb703dd35557120f6580c6f9
+SHA1 (patch-gcc_ggc-common.c) = abb87d454a9e1e4e11108a0fc39b2cdb1bc4e950
+SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
+SHA1 (patch-isl_configure) = 36b37778ee13c0b364fb24d5864d6a9e65b29b7d
+SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
+SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 6321dde308579448c27c2b6e1e30633699dd145f
+SHA1 (patch-libgcc_config.host) = bdd4cd27249c8b62793204428d95c977d58f06fb
+SHA1 (patch-libgcc_crtstuff.c) = e3a3b02a26229992851f195b5701cb1b86c29efe
+SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0

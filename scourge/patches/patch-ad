@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+
+--- src/userconfiguration.cpp.orig	Thu May  6 21:25:47 2004
++++ src/userconfiguration.cpp
+@@ -247,9 +247,15 @@ void UserConfiguration::loadConfiguratio
+     while(!configFile->eof()){
+         configFile -> getline(textLine, 255);
+         sLine = textLine;  
++#if __GNUC_PREREQ__(2, 96)
+         sInstruction.clear();      
+         sFirstParam.clear();
+         sSecondParam.clear();
++#else
++        sInstruction.erase(sInstruction.begin(), sInstruction.end());      
++        sFirstParam.erase(sFirstParam.begin(), sFirstParam.end());
++        sSecondParam.erase(sSecondParam.begin(), sSecondParam.end());
++#endif
+                       
+         for(i = 0; i < sLine.length(); i++){
+             sLine[i] = tolower(sLine[i]);                                 
+@@ -631,7 +637,11 @@ int UserConfiguration::getEngineAction(S
+     string s;         
+     int res;         
+     
++#if __GNUC_PREREQ__(2, 96)
+     s.clear();
++#else
++    s.erase(s.begin(), s.end());
++#endif
+     res = -1;
+     if(event->type == SDL_KEYDOWN){                
+         s = SDL_GetKeyName(event->key.keysym.sym);        
+@@ -721,7 +731,11 @@ bool UserConfiguration::isDebugEa(int j)
+ string UserConfiguration::getNextWord(const string theInput, int fromPos, int &endWord){
+     int firstChar, lastStringChar;
+     string sub;
++#if __GNUC_PREREQ__(2, 96)
+     sub.clear();
++#else
++    sub.erase(sub.begin(), sub.end());
++#endif
+        
+     if (theInput.empty() || fromPos==-1) {return sub;}
+ 

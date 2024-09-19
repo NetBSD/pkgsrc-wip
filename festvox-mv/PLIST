@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/30 13:22:59 noud4 Exp $
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/LICENSE
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/README.mv
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/finnish_duration.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/finnish_lex.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/finnish_lts.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/finnish_mv_int.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/finnish_mv_phrase.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/finnish_phones.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/hy_fi_mv_diphone.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/suopuhe.dtd
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/suopuhe_filter.perl
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/festvox/suopuhe_mode.scm
+share/festival/lib/voices/finnish/hy_fi_mv_diphone/group/mvlpc.group

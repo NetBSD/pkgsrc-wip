@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 13:40:06 phonohawk Exp $
+lib/test-framework-quickcheck2-${PKGVERSION}/${HASKELL_VERSION}/HStest-framework-quickcheck2-${PKGVERSION}.o
+lib/test-framework-quickcheck2-${PKGVERSION}/${HASKELL_VERSION}/Test/Framework/Providers/QuickCheck2.hi
+lib/test-framework-quickcheck2-${PKGVERSION}/${HASKELL_VERSION}/Test/Framework/Providers/QuickCheck2.p_hi
+lib/test-framework-quickcheck2-${PKGVERSION}/${HASKELL_VERSION}/libHStest-framework-quickcheck2-${PKGVERSION}.a
+lib/test-framework-quickcheck2-${PKGVERSION}/${HASKELL_VERSION}/libHStest-framework-quickcheck2-${PKGVERSION}_p.a
+lib/test-framework-quickcheck2-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/test-framework-quickcheck2-${PKGVERSION}/LICENSE

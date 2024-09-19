@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/24 14:27:04 gschwarz Exp $
+
+RMD160 (ophcrack-3.8.0.tar.bz2) = ed635704144b5d2613615a4c7e9d720680a281bc
+SHA512 (ophcrack-3.8.0.tar.bz2) = c66276b72299744d3e0c9fc14220c7f568e383bd324c1ede228bda5d51da78db817388421c9f5f8cd2f18687e7e53cfb0c65bcc0354b3d55ac16324c61f62dbd
+Size (ophcrack-3.8.0.tar.bz2) = 293033 bytes

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Make sure the shebang interpreter is right.
+
+--- lib/diameter/src/Makefile.orig	2015-04-02 17:49:24.000000000 +0000
++++ lib/diameter/src/Makefile
+@@ -120,7 +120,7 @@ ERL_COMPILE_FLAGS += \
+ 
+ # erl/hrl from dictionary file.
+ gen/diameter_gen_%.erl gen/diameter_gen_%.hrl: dict/%.dia
+-	$(dia_verbose) \
++	$(dia_verbose) ../../../bootstrap/bin/escript \
+ 	../bin/diameterc -o gen -i $(EBIN) $<
+ 
+ opt: $(TARGET_FILES)

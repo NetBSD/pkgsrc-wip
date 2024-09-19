@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/11 10:08:47 jihbed Exp $
+bin/sympow
+lib/sympow/datafiles/param_data
+lib/sympow/new_data
+lib/sympow/standard1.gp
+lib/sympow/standard2.gp
+lib/sympow/standard3.gp
+share/doc/sympow/COPYING
+share/doc/sympow/README

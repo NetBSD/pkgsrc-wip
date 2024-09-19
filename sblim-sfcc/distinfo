@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (sblim-sfcc-2.2.8.tar.bz2) = 77c0fb44f2a453fb6867d2094b8c075be57dc8bb
+SHA512 (sblim-sfcc-2.2.8.tar.bz2) = b5eb7712aed1e40f19993ba5f5ee2f1f48c01246d28e9f4d89cee53000801ce4fe7c862a82163a55774c71094223b32bf8981a883ad04e820f9c749e746f52fa
+Size (sblim-sfcc-2.2.8.tar.bz2) = 376918 bytes
+SHA1 (patch-backend_cimxml_indicationlistener.c) = ac747b69733ae48662d445fdc884f06ae9c93c12

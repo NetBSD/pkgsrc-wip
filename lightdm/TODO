@@ -1,0 +1,6 @@
+* Debug session loading (liblightdm-gobject/session.c:196: returned value is
+  "sessions-directory")
+* Investigate PAM configuration and try to address if OpenPAM provides enough
+  features for a secure authentication
+* Investigate the dependency tree and try to lighten it by making optional some
+  that could be not compulsory (e.g. accountsservice? upower?)

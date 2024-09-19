@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/28 20:39:28 jihbed Exp $
+${PYSITELIB}/smcp/__init__.py
+${PYSITELIB}/smcp/__init__.pyc
+${PYSITELIB}/smcp/__init__.pyo
+${PYSITELIB}/smcp/analysis.py
+${PYSITELIB}/smcp/analysis.pyc
+${PYSITELIB}/smcp/analysis.pyo
+${PYSITELIB}/smcp/base.py
+${PYSITELIB}/smcp/base.pyc
+${PYSITELIB}/smcp/base.pyo
+${PYSITELIB}/smcp/misc.so
+${PYSITELIB}/smcp/solvers.py
+${PYSITELIB}/smcp/solvers.pyc
+${PYSITELIB}/smcp/solvers.pyo

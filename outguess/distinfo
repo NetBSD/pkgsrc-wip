@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2010/06/23 13:19:54 hfath Exp $
+
+RMD160 (outguess-0.2.tar.gz) = 1411a83ae9e6c059f1d19054f19df65b9438a02e
+Size (outguess-0.2.tar.gz) = 470638 bytes
+SHA1 (patch-aa) = 9f2b7cbb7d1ca00f17a759c547d09c12d4b69878

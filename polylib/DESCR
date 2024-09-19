@@ -1,0 +1,4 @@
+Polylib is a free C library for doing computations on polyhedra. The library is
+operating on objects like vectors, matrices, lattices, polyhedra, Z-polyhedra,
+unions of polyhedra and other intermediary structures. It provides functions
+for all important operations on these structures

@@ -1,0 +1,3 @@
+Google's Libjingle is Google Talk's implementation of Jingle and Jingle-Audio
+(proposed extensions to XMPP) to interoperate with Google Talk's peer-to-peer
+and voice calling capabilities.

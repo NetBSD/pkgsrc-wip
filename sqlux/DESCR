@@ -1,0 +1,2 @@
+sQLux is a Sinclair QL emulator. It is based on uQlx but it uses SDL2 as its
+OS layer. sQLux adds several features over the uQlx base code.

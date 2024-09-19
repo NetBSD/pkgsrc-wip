@@ -1,0 +1,20 @@
+$Id: TODO,v 1.2 2003/11/27 15:43:17 mpasternak Exp $
+
+- this package could be split to parts dependent only on gtk2-engine they
+  use - for example, all GTK2-Smooth-* use gtk2-engines-smooth
+
+- could we use a DIST_SUBDIR?
+  
+- new engines should be added ("industrial", "galaxy") to fully support all
+  themes
+
+- add buildlinks for engines (?)
+
+	-- dotz@irc.pl
+
+Thu Nov 27 16:41:01 CET 2003
+
+patches for LighthouseBlue engine added. We could get a newer engine
+version, so those patches won't be needed anymore.
+
+	-- dotz@irc.pl

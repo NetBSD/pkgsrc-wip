@@ -1,0 +1,30 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Blockenspiel.rdoc
+${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/ImplementingDSLblocks.rdoc
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Version
+${GEM_LIBDIR}/lib/blockenspiel.rb
+${GEM_LIBDIR}/lib/blockenspiel/builder.rb
+${GEM_LIBDIR}/lib/blockenspiel/dsl_setup.rb
+${GEM_LIBDIR}/lib/blockenspiel/errors.rb
+${GEM_LIBDIR}/lib/blockenspiel/impl.rb
+${GEM_LIBDIR}/lib/blockenspiel/unmixer_rubinius.rb
+${GEM_LIBDIR}/lib/blockenspiel/unmixer_unimplemented.rb
+${GEM_LIBDIR}/lib/blockenspiel/version.rb
+${GEM_LIBDIR}/lib/blockenspiel/versionomy.rb
+${GEM_LIBDIR}/lib/blockenspiel_unmixer_jruby.jar
+${GEM_LIBDIR}/test/files/file1.rb
+${GEM_LIBDIR}/test/tc_basic.rb
+${GEM_LIBDIR}/test/tc_behaviors.rb
+${GEM_LIBDIR}/test/tc_dsl_attrs.rb
+${GEM_LIBDIR}/test/tc_dsl_methods.rb
+${GEM_LIBDIR}/test/tc_dynamic.rb
+${GEM_LIBDIR}/test/tc_embedded_block.rb
+${GEM_LIBDIR}/test/tc_mixins.rb
+${GEM_LIBDIR}/test/tc_modules.rb
+${GEM_LIBDIR}/test/tc_version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.4.0/extensions
+@pkgdir lib/ruby/gems/2.4.0/build_info

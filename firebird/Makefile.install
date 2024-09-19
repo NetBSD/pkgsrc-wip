@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.install,v 1.1 2008/08/29 22:41:04 hoka_adam Exp $
+#
+
+INSTALLATION_DIRS+=	bin share/examples/firebird firebird/help \
+			include libexec/firebird libexec/firebird/intl \
+			libexec/firebird/udf share/doc/firebird lib ${PKG_SYSCONFDIR}
+
+BUILDDIR=		${WRKSRC}/gen/firebird
+
+do-install:
+	${INSTALL_PROGRAM} ${BUILDDIR}/bin/* ${DESTDIR}${PREFIX}/bin
+
+	${CP} -R ${BUILDDIR}/examples/*  ${DESTDIR}${EGDIR}/
+
+	#copyIfExists $BuiltFBDir/help/help.gbak $DestDir/${PREFIX}/${FBHOME}/help
+	${INSTALL_DATA} ${BUILDDIR}/help/help.fdb ${DESTDIR}${PREFIX}/${FBHOME}/help
+
+	${INSTALL_DATA} ${BUILDDIR}/firebird.msg ${DESTDIR}${PREFIX}/${FBHOME}/firebird.msg
+	${INSTALL_DATA} ${BUILDDIR}/security2.fdb ${DESTDIR}${PREFIX}/${FBHOME}/security2.fdb.sample
+
+	${INSTALL_DATA} ${BUILDDIR}/include/*.h ${DESTDIR}${PREFIX}/include
+
+	${INSTALL_LIB} ${BUILDDIR}/lib/* ${DESTDIR}${PREFIX}/lib
+
+	${INSTALL_LIB} ${BUILDDIR}/intl/libfbintl.so ${DESTDIR}${PREFIX}/libexec/firebird/intl
+	${INSTALL_LIB} ${BUILDDIR}/UDF/* ${DESTDIR}${PREFIX}/libexec/firebird/udf
+
+	# Copy the sql-declarations into the UDF-directory
+	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/ib_udf.sql ${DESTDIR}${PREFIX}/libexec/firebird/udf
+	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/fbudf/fbudf.sql ${DESTDIR}${PREFIX}/libexec/firebird/udf
+
+	${CP} -R ${BUILDDIR}/../../doc/*  ${DESTDIR}${PREFIX}/share/doc/firebird/
+
+	${INSTALL_DATA} ${WRKSRC}/gen/firebird/misc/*.conf ${DESTDIR}${EGDIR}

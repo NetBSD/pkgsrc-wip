@@ -1,0 +1,18 @@
+$NetBSD$
+
+Use separate vars for -li386 and -lossaudio
+
+--- configure.ac.orig	2019-08-02 19:24:39.000000000 +0000
++++ configure.ac
+@@ -406,9 +406,9 @@ WINE_WARNING_WITH(gettext,[test "$MSGFMT
+ dnl **** Check for some libraries ****
+ 
+ dnl Check for -li386 for NetBSD and OpenBSD
+-AC_CHECK_LIB(i386,i386_set_ldt)
++AC_CHECK_LIB(i386,i386_set_ldt,[AC_SUBST(i386_LIBS, "-li386")])
+ dnl Check for -lossaudio for NetBSD
+-AC_CHECK_LIB(ossaudio,_oss_ioctl)
++AC_CHECK_LIB(ossaudio,_oss_ioctl,[AC_SUBST(OSS4_LIBS,"-lossaudio")])
+ 
+ AC_SUBST(OPENGL_LIBS,"")
+ 

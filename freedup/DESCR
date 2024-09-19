@@ -1,0 +1,12 @@
+F R E E D U P - allows you to reclaim space on your drive. It's simple.
+===============================================================================
+Freedup walks through the file trees (directories) you specify.
+When it finds two identical files on the same device, it hard links them
+together.
+In this case two or more files still exist in their respective directories,
+but only one copy of the data is stored on disk; both directory entries point
+to the same data blocks.
+[FREEDUP IN ACTION]
+If both files reside on different devices, then they are symlinked together.
+Please see the Syntax_page for instructions, how to modify the bahaviour of
+freedup.

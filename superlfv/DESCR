@@ -1,0 +1,10 @@
+Lepton flavor violation (LFV) is forbidden in the standard model (SM)
+given massless neutrinos.  However, this arises from an accidental
+symmetry of the SM.  Hence, extensions beyond the SM, generically
+predict LFV.
+
+SuperLFV is a numerical tool that accepts an SLHA spectrum file as
+input and calculates LFV observables.  The input file may be created
+by an existing SLHA spectrum generator, by personal code, or by hand.
+The current version of SuperLFV supports the MSSM model, as a low
+energy effective theory

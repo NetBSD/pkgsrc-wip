@@ -1,0 +1,10 @@
+Secret Maryo Chronicles is a 2D Jump&Run Game built upon SDL, which has some
+similarity to Super Mario (World). It features the following:
+
+* In-Game Level Editor
+* Multiple Levels
+* Multiple Stages
+* Overworld (to overview the game world)
+* Great Sounds and Music
+* Save and Load
+* Possibility to get Extra Lives

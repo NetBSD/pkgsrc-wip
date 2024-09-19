@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/10 12:09:32 adrian_p Exp $
+
+--- doc/Makefile.in.orig	Tue Feb 10 10:54:41 2004
++++ doc/Makefile.in	Tue Feb 10 10:55:11 2004
+@@ -362,9 +362,9 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc
+-	echo ${INSTALL_DATA} docs $(DESTDIR)$(prefix)/doc/
+-	${INSTALL_DATA} ${txt_DOCS} $(DESTDIR)$(prefix)/doc/
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/mnogosearch
++	echo ${INSTALL_DATA} docs $(DESTDIR)$(prefix)/share/doc/mnogosearch/
++	${INSTALL_DATA} ${txt_DOCS} $(DESTDIR)$(prefix)/share/doc/mnogosearch/
+ 
+ uninstall-local:
+ 	list='${txt_DOCS}'; \

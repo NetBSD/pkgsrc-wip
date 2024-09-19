@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2013/10/01 10:12:25 phonohawk Exp $
+
+RMD160 (time-http-0.1.0.1.tar.gz) = 536b6c25c02cd054600301c92c1eb3ea8f4c477e
+Size (time-http-0.1.0.1.tar.gz) = 7220 bytes
+SHA1 (patch-Data_Time_HTTP_Common.hs) = c55c4d22c8190a5fb3ed809c1af02adaf0b4165a
+SHA1 (patch-time-http.cabal) = d7e59d4609ab84ab727841a451a73e7385290aaf

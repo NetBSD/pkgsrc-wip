@@ -1,0 +1,20 @@
+$NetBSD$
+
+destdir and prefix support
+
+--- makefile.orig	2020-11-09 09:14:31.000000000 +0000
++++ makefile
+@@ -1,5 +1,6 @@
++PREFIX ?= /usr/local
+ CFLAGS := -fPIC -Iinclude -isystem /usr/local/include -Wall -Wextra -Wno-unused-parameter
+-LDFLAGS := /usr/local/lib/libgorilla.a -L/usr/local/lib/ -lopenal -ljansson
++LDFLAGS := -Wl,-R,${PREFIX}/lib -L${PREFIX}/lib -lopenal -ljansson -lgorilla
+ CCLD ?= $(CC)
+ 
+ FMOD_OBJ := src/stub.o src/fmod-studio.o src/fsb-file.o src/maps.o
+@@ -13,4 +14,4 @@ clean:
+ 	rm -f $(FMOD_OBJ) libfmod.so
+ 
+ install: libfmod.so
+-	install libfmod.so /usr/local/lib/
++	install libfmod.so ${DESTDIR}${PREFIX}/lib/

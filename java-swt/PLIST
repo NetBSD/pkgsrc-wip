@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.3 2014/11/02 09:31:17 makoto Exp $
+lib/libswt-atk-gtk-${SHLIB_VERSION}.so
+lib/libswt-awt-gtk-${SHLIB_VERSION}.so
+lib/libswt-cairo-gtk-${SHLIB_VERSION}.so
+lib/libswt-glx-gtk-${SHLIB_VERSION}.so
+lib/libswt-gnome-gtk-${SHLIB_VERSION}.so
+lib/libswt-gtk-${SHLIB_VERSION}.so
+lib/libswt-pi-gtk-${SHLIB_VERSION}.so
+share/classpath/swt-debug.jar
+share/classpath/swt.jar

@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libucl
+
+.if !defined(LIBUCL_BUILDLINK3_MK)
+LIBUCL_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libucl+=	libucl>=0.8.1
+BUILDLINK_PKGSRCDIR.libucl?=	../../wip/libucl
+
+.endif # LIBUCL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libucl

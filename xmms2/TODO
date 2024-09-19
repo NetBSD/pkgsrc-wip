@@ -1,0 +1,11 @@
+- Support every possible plugin (src/plugins).
+	# Done with the exception of neuros-cooler-media and sc68.
+	# TOOL_DEPENDS+=	sc68>=2.3.0:../../wip/sc68
+	# Those need to be packaged.
+- Test coreaudio, mac plugins on Darwin.
+- Test waveout plugin on Interix.
+- Test alsa, valgrind plugins on Linux.
+- Test the gamin, samba plugins.
+- Can't find the sidplay2 headers.
+- Fix: Compiling visualization without shm support! (boost-related)
+- Ensure all PLIST entries are correct.

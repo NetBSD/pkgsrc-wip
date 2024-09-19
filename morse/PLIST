@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/QSO
+bin/morsec
+man/man1/QSO.1
+man/man1/morsec.1

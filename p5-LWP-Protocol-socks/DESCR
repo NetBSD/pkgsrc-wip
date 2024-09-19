@@ -1,0 +1,6 @@
+Use this package when you wish to use a socks proxy for your
+connections.
+
+It provides some essential hooks into the LWP system to implement
+a socks "scheme" similar to http for describing your socks connection,
+and can be used to proxy either http or https connections.

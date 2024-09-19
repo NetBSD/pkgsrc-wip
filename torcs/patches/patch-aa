@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/17 14:04:31 yhardy Exp $
+
+--- src/libs/tgfclient/guifont.cpp.orig	2007-04-02 11:13:20.000000000 +0200
++++ src/libs/tgfclient/guifont.cpp	2007-04-02 11:14:00.000000000 +0200
+@@ -27,6 +27,8 @@
+ #include <windows.h>
+ #elif defined(__FreeBSD__)
+ #include <machine/endian.h>
++#elif defined(__NetBSD__)
++#include <sys/endian.h>
+ #else
+ #include <endian.h>
+ #endif

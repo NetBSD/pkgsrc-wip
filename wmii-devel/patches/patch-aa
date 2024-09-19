@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.7 2009/08/15 16:15:29 thomasklausner Exp $
+
+--- config.mk.orig	2009-07-03 16:27:54.000000000 +0000
++++ config.mk
+@@ -5,21 +5,20 @@ COMPONENTS = \
+ 	libixp_pthread
+ 
+ # Paths
+-PREFIX = /usr/local
+   BIN = $(PREFIX)/bin
+-  MAN = $(PREFIX)/share/man
+-  ETC = $(PREFIX)/etc
+   LIBDIR = $(PREFIX)/lib
+-  INCLUDE = $(PREFIX)/include
++  INCLUDE = $(PREFIX)/lib
++  MAN = $(PREFIX)/${PKGMANDIR}
++  ETC = ${PKG_SYSCONFBASE}
+ 
+ # Includes and libs
+-INCPATH = .:$(ROOT)/include:$(INCLUDE):/usr/include
+-LIBS = -L$(ROOT)/lib -L/usr/lib
++INCPATH = .:$(ROOT)/include:$(INCLUDE):/usr/include:${PREFIX}/include
++LIBS = -L$(ROOT)/lib
+ 
+ # Flags
+ include $(ROOT)/mk/gcc.mk
+-CFLAGS += $(DEBUGCFLAGS) -O0
+-LDFLAGS += -g $(LIBS)
++CFLAGS += -DVERSION=\"${VERSION}\" -DIXPlint
++LDFLAGS += $(LIBS)
+ SOLDFLAGS += $(LDFLAGS)
+ SHARED = -shared -Wl,-soname=$(SONAME)
+ STATIC = -static
+@@ -31,7 +30,7 @@ LD = cc
+ AR = ar crs
+ 
+ AWKPATH = $$(which awk)
+-P9PATHS = ${PLAN9}:"'$${HOME}/plan9'":/usr/local/plan9:/usr/local/9:/opt/plan9:/opt/9:/usr/plan9:/usr/9
++P9PATHS = ${PREFIX}/plan9:${PREFIX}/9
+ # Your make shell. By default, the first found of /bin/dash, /bin/ksh,
+ # /bin/sh. Except with bsdmake, which assumes /bin/sh is sane. bash and zsh
+ # are painfully slow, and should be avoided.
+@@ -40,7 +39,7 @@ P9PATHS = ${PLAN9}:"'$${HOME}/plan9'":/u
+ X11PACKAGES = xft
+ INCX11 = $$(pkg-config --cflags $(X11PACKAGES))
+ LIBICONV = # Leave blank if your libc includes iconv (glibc does)
+-LIBIXP = $(ROOT)/lib/libixp.a
++LIBIXP = $(ROOT)/lib/libixp.a # XXX make this ${PREFIX}
+ 
+ # Operating System Configurations
+ 

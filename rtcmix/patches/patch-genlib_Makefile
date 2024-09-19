@@ -1,0 +1,32 @@
+$NetBSD$
+
+--- genlib/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ genlib/Makefile
+@@ -162,13 +162,15 @@ endif
+ 	$(CXX) -c $(CXXFLAGS) -o $@ $<
+ 	
+ all : $(LIB)
+-	@if test ! -d $(LIBDIR); then mkdir $(LIBDIR); fi;
+-	$(INSTALL) $(LIB) $(LIBDIR)
++	@if test ! -d $(BLIBDIR); then mkdir -p $(BLIBDIR); fi;
++	$(INSTALL) $(LIB) $(BLIBDIR)
+ 
+ install:	all
++	$(INSTALL) $(LIB) $(DESTDIR)/$(LIBDIR)
+ 
+ uninstall:
+-	$(RM) $(LIBDIR)/$(LIB)
++	$(RM) $(BLIBDIR)/$(LIB)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(LIB)
+ 
+ ifeq ($(BUILDTYPE), STANDALONE)
+ $(LIB):	$(OBJECTS) $(OOBJECTS)
+@@ -201,6 +203,5 @@ clean:
+ 
+ cleanall: clean
+ 	$(RM) depend
+-	$(RM) $(LIBDIR)/$(LIB)
+-
+-
++	$(RM) $(BLIBDIR)/$(LIB)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(LIB)

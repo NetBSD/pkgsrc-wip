@@ -1,0 +1,14 @@
+$NetBSD$
+
+Define default rm command.
+
+--- src/Makefile.in.orig	2009-04-15 21:49:28.000000000 +0000
++++ src/Makefile.in
+@@ -121,6 +121,7 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
+ PACKAGE_VERSION = @PACKAGE_VERSION@
+ PATH_SEPARATOR = @PATH_SEPARATOR@
+ PKG_CONFIG = @PKG_CONFIG@
++RM = rm
+ SET_MAKE = @SET_MAKE@
+ SHELL = @SHELL@
+ SITE_URL = @SITE_URL@

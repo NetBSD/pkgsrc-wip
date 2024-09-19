@@ -1,0 +1,4 @@
+smtp-gated is an UNIX program that scans SMTP mail for viruses. Can be
+installed on Linux/BSD NA(P)T router, and scan mail transparently
+using ClamAV daemon & netfilter/ipfilter/pf framework. Can also scan traffic
+to one fixed MTA.

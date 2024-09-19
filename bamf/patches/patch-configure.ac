@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.ac.orig	2020-08-21 13:24:25.319985039 +0000
++++ configure.ac
+@@ -44,7 +44,7 @@ PKG_PROG_PKG_CONFIG
+ #
+ # glib
+ #
+-PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.32.0 gio-2.0 >= 2.30.0 gio-unix-2.0)
++PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.38.0 gio-2.0 >= 2.30.0 gio-unix-2.0)
+ 
+ #
+ # gdbus-codegen

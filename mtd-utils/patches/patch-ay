@@ -1,0 +1,17 @@
+$NetBSD: patch-ay,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- Makefile.orig	2006-04-30 23:27:57.000000000 +0200
++++ Makefile	2007-10-07 13:33:35.000000000 +0200
+@@ -5,8 +5,8 @@
+ 
+-SBINDIR=/usr/sbin
+-MANDIR=/usr/man
+-INCLUDEDIR=/usr/include
++SBINDIR=@PREFIX@/sbin
++MANDIR=@PREFIX@/man
++INCLUDEDIR=@PREFIX@/include
+ #CROSS=arm-linux-
+ CC := $(CROSS)gcc
+-CFLAGS := -I./include -O2 -Wall
++CFLAGS := -I./include -O2 -Wall -D_NETBSD_SOURCE
+ 

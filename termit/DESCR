@@ -1,0 +1,11 @@
+Simple terminal emulator based on vte library,
+extensible via Lua
+
+Features:
+
+    * multiple tabs
+    * switching encodings
+    * sessions
+    * configurable keybindings
+    * embedded Lua
+    * xterm-like dynamic window title

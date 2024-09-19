@@ -1,0 +1,14 @@
+======================================
+========= GeeXboX libvahalla =========
+====== A tiny media scanner API ======
+======================================
+
+Libvalhalla is a library written in C. It is a media scanner, that
+stores various information in an SQLite database and relies on
+FFmpeg (libavformat and libavutil) and libcurl. It features many
+Internet grabbers that allows automatic download of covers, lyrics,
+informations on media files, tags retrival in video and music files
+and so on.
+
+It is a free software - it is licensed under the terms of the
+GNU Lesser General Public License (GNU/LGPL) version 2.1+.

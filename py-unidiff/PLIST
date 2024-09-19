@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/unidiff${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/unidiff/__init__.py
+${PYSITELIB}/unidiff/__init__.pyc
+${PYSITELIB}/unidiff/__init__.pyo
+${PYSITELIB}/unidiff/constants.py
+${PYSITELIB}/unidiff/constants.pyc
+${PYSITELIB}/unidiff/constants.pyo
+${PYSITELIB}/unidiff/errors.py
+${PYSITELIB}/unidiff/errors.pyc
+${PYSITELIB}/unidiff/errors.pyo
+${PYSITELIB}/unidiff/patch.py
+${PYSITELIB}/unidiff/patch.pyc
+${PYSITELIB}/unidiff/patch.pyo

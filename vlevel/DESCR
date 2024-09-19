@@ -1,0 +1,13 @@
+VLevel keeps your music from making you jump out of your seat, and it keeps you
+from having to fiddle with the volume constantly. It's different from other
+dynamic compressors because it looks ahead. You can think of VLevel as someone
+who knows your music by heart, and turns the volume up during quiet passages,
+but smoothly turns it back down when he knows a loud part is coming. It's great
+for making CDs to listen to in your car, or to play background music on your
+computer.
+
+VLevel is currently a LADSPA plugin and a command-line filter. You can use it
+with many Linux audio programs including XMMS, GStreamer, GLAME, GDAM, and
+others, and you can use it in shell scripts to level your music before burning
+a CD. In the future, it may be ported to other audio programs like SOX and
+WinAMP, and it will be made generally easier to use.

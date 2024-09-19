@@ -1,0 +1,29 @@
+$NetBSD$
+
+Remove old hack to deal with -lgcc.  This seems unnnecessary in the
+modern era, and breaks the build on NetBSD.  To be re-evaulated before
+promotion to pkgsrc proper.
+
+--- libs/libzrtp/third_party/bnlib/configure.ac.orig	2017-07-13 12:07:30.000000000 +0000
++++ libs/libzrtp/third_party/bnlib/configure.ac
+@@ -87,18 +87,9 @@ fi
+ rm -f conftest*
+ ])
+   fi
+-
+-  # If we're using GCC, perform some Deep Magic to enable the result to
+-  # link cleanly with code compiled with a compiler that doesn't understand
+-  # GCC's support library (-lgcc).  Do a link, to relocatable object form,
+-  # with just -lgcc.  If it's not GCC, do the normal -c thing.
+-  # These substitutions are used in the Makefile to force that behaviour.
+-  GCCMAGIC1='-Wl,-r -nostdlib'
+-  GCCMAGIC2=-lgcc
+-else
+-  GCCMAGIC1=-c
+-  GCCMAGIC2=
+ fi
++GCCMAGIC1=-c
++GCCMAGIC2=
+ AC_SUBST(GCCMAGIC1)
+ AC_SUBST(GCCMAGIC2)
+ 

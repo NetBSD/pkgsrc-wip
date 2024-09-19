@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2014/12/09 02:39:21 makoto Exp $
+
+RMD160 (felt-3.07.src.tar.gz) = 12a826b44b9725e0753a0f8122403481c6383974
+SHA512 (felt-3.07.src.tar.gz) = dbe6fa61505231188a02377825d94fab741d2812f4af8c7cbb041cf497d78a8e94996d362cafaa1055563e2facccc4586ff1f1f6d9c207c3136f22013d025dab
+Size (felt-3.07.src.tar.gz) = 1016496 bytes
+SHA1 (patch-aa) = 717d9a41312e52bb6780b07e12a7b3c30748d911
+SHA1 (patch-ao) = c34b02d5561f82961396b378a724386efea44c07
+SHA1 (patch-aq) = cb138ed96f3a9ad86132e2ca5c4098ecaf1d322c
+SHA1 (patch-ar) = cf631eef2cea717afa582280ff6d7e41d4fa065d
+SHA1 (patch-as) = 0b39199a6a54c57bbf8bac44174583cd4f6c11de
+SHA1 (patch-src_Burlap_matrixfunc.c) = 9b76e33235220b61b1a23086de120682f53c21f4

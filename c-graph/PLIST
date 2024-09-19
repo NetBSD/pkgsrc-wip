@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/c-graph
+info/c-graph.info
+man/man1/c-graph.1
+share/c-graph/logo/README
+share/c-graph/logo/c-graph.gif
+share/doc/c-graph/AUTHORS
+share/doc/c-graph/COPYING
+share/doc/c-graph/NEWS
+share/doc/c-graph/README
+share/doc/c-graph/TODO
+share/doc/c-graph/c-graph.pdf

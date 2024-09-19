@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/26 13:28:16 jihbed Exp $
+${PYSITELIB}/liblzma.py
+${PYSITELIB}/liblzma.pyc
+${PYSITELIB}/liblzma.pyo
+${PYSITELIB}/lzma.so
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

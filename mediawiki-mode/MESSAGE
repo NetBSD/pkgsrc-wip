@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/07/20 08:35:53 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (require 'mediawiki)
+
+Then do some customization, especially `mediawiki-site-alist':
+
+  M-x customize-group RET mediawiki RET
+
+===========================================================================

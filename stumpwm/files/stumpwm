@@ -1,0 +1,34 @@
+#!/bin/sh
+# Based on script from: http://stumpwm.svkt.org/cgi-bin/wiki.pl/SetUp
+
+clisp_core_temp=""
+path=$HOME/.lisp_comp/images/
+common_cmds="expr_param '(require \"asdf\")' \
+	expr_param \"(setf asdf:*central-registry* '(#p \\\"asdf_path/\\\"))\""
+
+mkdir -p ${path}
+# SBCL process running Stumpwm confuses new SBCL instantions where the default
+# core (interactive shell) is.
+ln -s asdf_path/../sbcl.core ${path} 2>/dev/null
+x="${path}/stumpwm-$(cksum $(which lisp_comp) | cut -d ' ' -f 1).core"
+
+sbcl_save_cmd="\"(save-lisp-and-die \\\"$x\\\" :toplevel 'stumpwm:stumpwm)\""
+clisp_save_cmd="\"(ext:saveinitmem \\\"$x\\\" :init-function 'stumpwm:stumpwm)\""
+
+if [ -e "$x" ] && ( for i in asdf_path/stumpwm/*.lisp
+	do test "$x" -ot "$i" && exit 0
+	done; exit 1 ); then
+	if [ "$1" = "recompile" ]; then
+		eval "sudo lisp_comp lisp_cmd ${common_cmds} expr_param \
+			\"(asdf:operate 'asdf:compile-op 'stumpwm)\"" && rm $x; exit
+	else
+		string="Recompilation required. Please run this script with \
+			\'recompile\' arg."
+		exec xterm -e "echo ${string}; ${SHELL}" && exit
+	fi
+fi
+if [ ! -e "$x" ]; then
+	eval "lisp_comp lisp_cmd ${common_cmds} expr_param \
+		\"(asdf:operate 'asdf:load-op 'stumpwm)\" expr_param ${used_save_cmd}"
+fi
+exec lisp_comp ${clisp_core_temp} mem_param "$x"

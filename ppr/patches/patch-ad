@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- papsrv/Makefile.orig	2004-12-10 21:51:09.000000000 +0100
++++ papsrv/Makefile
+@@ -55,7 +55,7 @@ papsrv$(DOTEXE): \
+ 		../libppr.$(LIBEXT) \
+ 		../libgu.$(LIBEXT) \
+ 		../libpprdb.$(LIBEXT)
+-	$(LD) $(LDFLAGS) -o $@ $^ $(LIB_LEX) $(ATALKLIBS) $(DBLIBS) $(ZLIBLIBS)
++	$(LD) $(LDFLAGS) -o $@ $^ $(LIB_LEX) $(ATALKLIBS) $(DBLIBS) $(ZLIBLIBS) $(INTLLIBS)
+ 	$(CHMOD) 6755 $@
+ 
+ # This one module might need extra flags to find the AppleTalk library 

@@ -1,0 +1,277 @@
+#!/bin/sh
+#
+# standard format startup script for unreal tournament
+#
+# (c) 1999-2002 abfackeln@abfackeln.com
+# last modified 2002-04-24
+######################################################
+
+MYNAME=ucc.init
+
+MYGAME=Botpack.DeathMatchPlus
+MYMAP=DM-Barricade
+MYUSERID=nobody
+MYDIR=/usr/pkg/UnrealTournament
+MYIP=
+MYMODS=
+MYINI=UnrealTournament.ini
+MYUSER=User.ini
+
+MYLOGFILE="$MYDIR/Logs/$MYNAME.log"
+MYLOCKFILE="$MYDIR/System/$MYNAME.lock"
+
+# MAXLOGSIZE is the maximum size allowed (in kB) by the "check"
+# procedure -- if "check" is called and the log size is greater than
+# this value then "logrotate" will be invoked; suggested value: 1024
+# set MAXLOGSIZE to 0 to disable logratate if you are having trouble
+# -- you will still be able to call "logrotate" manually
+MAXLOGSIZE=1024
+
+# MAXLOGFILES is the number of backup log files that will be kept
+# when "logrotate" is called; suggested value: 4
+# warning: if this value is 0 then no backup log files will be kept
+# and the current log will be overwritten if the logs are rotated.
+MAXLOGFILES=4
+
+# MONITORFREQ is the time (in seconds) between each call to "check"
+# by the "infinity" loop; suggested value: 60
+# warning: setting this too low can cause bad things to happen.
+MONITORFREQ=60
+
+# BROKENCPUTIME is the maximum %cpu usage that is allowed if this is
+# exceeded in two successive checks (separated by the amount of time
+# determined by MONITORFREQ) then the server will be restarted.
+# set to 0 to disable, must be below 100; suggested value: 99
+# warning: setting this too low can cause the server to restart a lot
+BROKENCPUTIME=99
+
+# LOGSPAMCHECK is used to detect that the server is in a bad loop
+# this can happen if the same message is output to the log over and over
+# when this happens, we must restart the server -- valid values: 0 or 1
+# set this to 0 if you do not want this check to happen
+LOGSPAMCHECK=1
+
+# NICELEVEL is used to attempt to run ucc at a higher priority than other tasks
+# (this has no effect unless you exec this script as root)
+# you must set the NICELEVEL to a negative value, which will tell the kernel
+# that this process does not play "nice" with other processes and will demand
+# more attention -- valid values 0 to -20
+# suggested value: 0 or -10
+# the "nice" command may not work in some shells, in this case set to 0
+NICELEVEL=0
+
+# CANSUID determines if the command uses "su" when executed by root
+# or if it tries to chown/chmod the ucc-bin command before executing it.
+# set CANSUID to zero if you have trouble -- valid values: 0 or 1
+CANSUID=1
+
+######################################################
+#
+# no user serviceable parts beyond this point.
+#
+# if you find that you need to change anything below here,
+# please contact me because i would like to ensure that this
+# is no longer necessary (for any reason)
+#
+# send feedback to ut@abfackeln.com
+# thank-you
+#
+######################################################
+
+WriteToLog ()
+{
+    TIME=$(date +"%Y-%m-%d %H:%M:%S")
+    $SUID "echo \"[$TIME] $MYNAME: $1\" >> $MYLOGFILE"
+}
+
+if [ ! -d "$MYDIR/System" ]; then
+   echo "ERROR: Can not find System directory in $MYDIR"
+   exit -2
+fi
+
+if [ ! -d "$MYDIR/Logs" ]; then
+   echo "ERROR: Can not find Logs directory in $MYDIR"
+   exit -2
+fi
+
+ulimit -c 0
+
+if [ -z "$MYMODS" ]; then
+   TMP="$MYMAP""\?game=$MYGAME"
+else
+   TMP="$MYMAP""\?game=$MYGAME""\?mutator=$MYMODS"
+fi
+if [ -n "$MYIP" ]; then
+   TMP="$TMP multihome=$MYIP"
+fi
+if [ -n "$MYUSER" ]; then
+   TMP="$TMP userini=$MYUSER"
+fi
+if [ -n "$MYINI" ]; then
+   TMP="$TMP ini=$MYINI"
+fi
+MYEXECMD="./ucc server $TMP --nohomedir log=/dev/null"
+OUTLOG="$MYLOGFILE"
+
+SUID="bash -c"
+if [ `whoami` = "root" ]; then
+   ATTEMPTNICE=
+   if [ $NICELEVEL -ne 0 ]; then
+      ATTEMPTNICE="nice -n $NICELEVEL"
+   fi
+
+   if [ "$CANSUID" = "1" ]; then
+      SUID="$ATTEMPTNICE su $MYUSERID -c"
+   else
+      SUID="$ATTEMPTNICE $SUID"
+      chown $MYUSERID $MYDIR/System/ucc-bin
+      chmod u+s $MYDIR/System/ucc-bin
+   fi
+fi
+
+case "$1" in
+   start)
+      $0 soft-start
+      $0 infinity &
+      ;;
+   stop)
+      if [ -f "$MYLOCKFILE.8" ]; then
+         # break infinity simply by removing the lock file
+         rm -f $MYLOCKFILE.8
+      fi
+
+      $0 soft-stop
+      ;;
+   restart)
+      $0 stop
+      $0 start
+      ;;
+   soft-start)
+      echo -n "Starting Unreal Tournament: "
+      if [ -f $MYLOCKFILE ]; then
+         echo "Process is already running.  Not started."
+      else
+         $0 logrotate >/dev/null
+         cd $MYDIR
+         WriteToLog "soft-start"
+         # the log file must be written with append (">>") or the logrotate
+         # will not work.  also, we must echo the PID to the lock file on the
+         # same command line so that we do not create permission problems
+         # with the lock file if logged in as root
+         $SUID "$MYEXECMD >> $OUTLOG & echo \$! > $MYLOCKFILE"
+         echo "$MYNAME"
+      fi
+      ;;
+   soft-stop)
+      echo -n "Stopping Unreal Tournament: "
+      if [ ! -f $MYLOCKFILE ]; then
+         echo "not found"
+         exit -4
+      fi
+      WriteToLog "soft-stop"
+      kill -TERM $(cat $MYLOCKFILE)
+      rm -f "$MYLOCKFILE"
+      echo "$MYNAME"
+      ;;
+   soft-restart)
+      if [ -f $MYLOCKFILE ]; then
+         $0 soft-stop
+      fi
+      $0 soft-start
+      ;;
+   infinity)
+      # "infinity" -- this command is used to start an
+      # infinite loop to ensure that server is always up without use of cron
+
+      $SUID "echo $$ > $MYLOCKFILE.8"
+
+      # note, overwriting the infinity (.8) lock file will kill any previous
+      # infinity # process because the pid will no longer match -- this is a
+      # good thing and saves us from trying to seek out old processes to kill
+      # them.
+
+      # further note, running "check" will also ensure that we kill any
+      # previous pids (of the non-infinity type) before restarting the server
+      # .. this means that any server process that may still be running
+      # (with a valid lock file) will be killed before restarting the server.
+
+      while [ -f $MYLOCKFILE.8 -a "$$" = "$(cat $MYLOCKFILE.8 2>/dev/null)" ]; do
+         $0 check
+         sleep $MONITORFREQ
+      done
+      ;;
+   check)
+      # check if process is alive
+      PROC=$(cat $MYLOCKFILE 2>/dev/null)
+      if [ -z "$(ps -p $PROC 2>/dev/null | grep ucc)" ]; then
+         WriteToLog "restarting because pid died"
+         $0 soft-restart
+         exit 1
+      fi
+
+      # check if overworking the cpu (condition is usually unrecoverable)
+      if [ $BROKENCPUTIME -gt 0 ]; then
+         # need the zero in front in case the command substitution returns a null
+         CPUTIME=0$(ps auxw | sed -n -e "s/^$MYUSERID\ *$PROC\ *\([0-9]*\).*$/\1/"p)
+         if [ $CPUTIME -ge $BROKENCPUTIME ]; then
+            WriteToLog "cpu time is over $BROKENCPUTIME at $CPUTIME"
+            WriteToLog "Pausing for 60 seconds to see if it is still evil..."
+            sleep 60
+            CPUTIME=0$(ps auxw | sed -n -e "s/^$MYUSERID\ *$PROC\ *\([0-9]*\).*$/\1/"p)
+            WriteToLog "cpu time = $CPUTIME"
+            if [ $CPUTIME -ge $BROKENCPUTIME ]; then
+               $0 soft-restart
+               exit 1
+            fi
+         fi
+      fi
+
+      # check if logrotate is necessary
+      if [ $MAXLOGSIZE -gt 0 ]; then
+         # need the zero in front in case the command substitution returns a null
+         LOGSIZE=0$(ls -sk $MYLOGFILE | sed -n 's/^\([0-9]*\).*$/\1/p')
+         if [ $LOGSIZE -gt $MAXLOGSIZE ]; then
+            if [ $LOGSPAMCHECK = "1" -a $LOGSIZE -gt $(($MAXLOGSIZE + 1024)) ]; then
+               # error -- logs are waaay too big (1MB over MAXLOGSIZE)
+               # something must be wrong -- this may happen if stuck in an
+               # endless loop -- must restart server
+               WriteToLog "restarting because log file is more than 1MB over MAXLOGSIZE"
+               $0 soft-restart
+            else
+               $0 logrotate
+            fi
+         fi
+      fi
+      ;;
+   logrotate)
+      if [ -s "$MYLOGFILE" ]; then
+         if [ $MAXLOGFILES -gt 0 ]; then
+            WriteToLog "Rotating logs..."
+            COUNT=$MAXLOGFILES
+            NEXTLOG="$MYLOGFILE.$COUNT"
+            COUNT=$(($COUNT - 1))
+            PREVLOG="$MYLOGFILE.$COUNT"
+            while [ $COUNT -gt 0 ]; do
+               if [ -f "$PREVLOG" ]; then
+                  $SUID "mv $PREVLOG $NEXTLOG"
+               fi
+               NEXTLOG=$PREVLOG
+               COUNT=$(($COUNT - 1))
+               PREVLOG="$MYLOGFILE.$COUNT"
+            done
+            $SUID "cp $MYLOGFILE $NEXTLOG"
+         else
+            WriteToLog "Rotating logs... -- MAXLOGFILES is not set -- log file not saved!!"
+         fi
+         $SUID "cat /dev/null > $MYLOGFILE"
+      else
+         WriteToLog "Rotating logs... -- MYLOGFILE is empty -- not rotating!"
+      fi
+      ;;
+   *)
+      echo "Usage: $0 {start|stop|restart|check|logrotate}"
+      exit -1
+esac
+
+exit 0
+

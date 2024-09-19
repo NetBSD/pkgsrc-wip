@@ -1,0 +1,4 @@
+Encode::Arabic is a wrapper for various implementations of the encoding systems
+used for the Arabic language and covering even some non-Arabic extensions to
+the Arabic script. The included modules fit in the philosophy of
+Encode::Encoding and can be used directly with the Encode module

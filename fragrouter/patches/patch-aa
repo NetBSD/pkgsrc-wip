@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/16 17:34:32 ishit Exp $
+
+--- Makefile.in.orig	1999-07-27 00:08:50.000000000 +0900
++++ Makefile.in
+@@ -22,15 +22,15 @@ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+ INSTALL_DATA	= @INSTALL_DATA@
+ 
+-PCAPDIR		= $(srcdir)/libpcap-0.4
+-PCAPINCS	= -I$(PCAPDIR)
+-PCAPLIBS	= -L$(PCAPDIR) -lpcap
+-PCAPDEP		= $(PCAPDIR)/pcap.h $(PCAPDIR)/libpcap.a
+-
+-LNETDIR		= $(srcdir)/Libnet-0.99b
+-LNETINCS	= -I$(LNETDIR)/include
+-LNETLIBS	= -L$(LNETDIR)/lib -lnet
+-LNETDEP		= $(LNETDIR)/include/libnet.h $(LNETDIR)/libnet.a
++PCAPDIR		=
++PCAPINCS	= @PCAPINC@
++PCAPLIBS	= @PCAPLIB@
++PCAPDEP		=
++
++LNETDIR		=
++LNETINCS	= @LNETINC@ `$(prefix)/bin/libnet-config --defines`
++LNETLIBS	= @LNETLIB@
++LNETDEP	=
+ 
+ SRCS		= attack.c fragrouter.c ip_frag.c list.c misc.c print.c \
+ 		  send.c sniff.c tcp_seg.c

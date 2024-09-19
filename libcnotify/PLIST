@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/29 10:29:25 othyro Exp $
+include/libcnotify.h
+include/libcnotify/definitions.h
+include/libcnotify/error.h
+include/libcnotify/extern.h
+include/libcnotify/features.h
+include/libcnotify/types.h
+lib/libcnotify.la
+lib/pkgconfig/libcnotify.pc
+man/man3/libcnotify.3

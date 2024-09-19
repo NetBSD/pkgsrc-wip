@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/lib/gh.rb
+${GEM_LIBDIR}/lib/gh/cache.rb
+${GEM_LIBDIR}/lib/gh/case.rb
+${GEM_LIBDIR}/lib/gh/custom_limit.rb
+${GEM_LIBDIR}/lib/gh/error.rb
+${GEM_LIBDIR}/lib/gh/faraday_adapter.rb
+${GEM_LIBDIR}/lib/gh/instrumentation.rb
+${GEM_LIBDIR}/lib/gh/lazy_loader.rb
+${GEM_LIBDIR}/lib/gh/link_follower.rb
+${GEM_LIBDIR}/lib/gh/merge_commit.rb
+${GEM_LIBDIR}/lib/gh/nested_resources.rb
+${GEM_LIBDIR}/lib/gh/normalizer.rb
+${GEM_LIBDIR}/lib/gh/pagination.rb
+${GEM_LIBDIR}/lib/gh/parallel.rb
+${GEM_LIBDIR}/lib/gh/remote.rb
+${GEM_LIBDIR}/lib/gh/response.rb
+${GEM_LIBDIR}/lib/gh/response_wrapper.rb
+${GEM_LIBDIR}/lib/gh/stack.rb
+${GEM_LIBDIR}/lib/gh/token_check.rb
+${GEM_LIBDIR}/lib/gh/version.rb
+${GEM_LIBDIR}/lib/gh/wrapper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

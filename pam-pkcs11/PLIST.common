@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST.common,v 1.3 2012/11/26 00:49:51 lexort Exp $
+bin/card_eventmgr
+bin/pkcs11_eventmgr
+bin/pkcs11_inspect
+bin/pkcs11_inspect
+bin/pkcs11_listcerts
+bin/pkcs11_make_hash_link
+bin/pkcs11_setup
+bin/pklogin_finder
+lib/pam_pkcs11/opensc_mapper.la
+lib/pam_pkcs11/openssh_mapper.la
+lib/security/pam_pkcs11.la
+man/man1/card_eventmgr.1
+man/man1/pkcs11_eventmgr.1
+man/man1/pkcs11_inspect.1
+man/man1/pkcs11_listcerts.1
+man/man1/pkcs11_make_hash_link.1
+man/man1/pkcs11_setup.1
+man/man1/pklogin_finder.1
+man/man8/pam_pkcs11.8
+share/examples/pam-pkcs11/card_eventmgr.conf.example
+share/examples/pam-pkcs11/digest_mapping.example
+share/examples/pam-pkcs11/mail_mapping.example
+share/examples/pam-pkcs11/pam.d_login.example
+share/examples/pam-pkcs11/pam_pkcs11.conf.example
+share/examples/pam-pkcs11/pkcs11_eventmgr.conf.example
+share/examples/pam-pkcs11/subject_mapping.example

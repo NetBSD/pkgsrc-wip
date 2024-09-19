@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.3 2008/03/08 15:24:09 shattered Exp $
+
+--- configure.sh.orig	2006-04-21 00:02:02.000000000 +0200
++++ configure.sh
+@@ -351,21 +351,6 @@ if [ "$USE_MAILWRAPPERS" ]; then
+ [ "$OS_FREEBSD" -o "$OS_DRAGONFLY" ] || AC_CHECK_HEADERS malloc.h
+ 
+ if [ "$USE_MAILWRAPPERS" ]; then
+-    # FreeBSD puts mailer.conf into /etc/mail, NetBSD and OpenBSD put
+-    # mailer.conf into /etc
+-    if [ "$OS_FREEBSD" -o "$OS_DRAGONFLY" ]; then
+-	AC_SUB MAILERCONF /etc/mail/mailer.conf
+-    elif [ "$OS_LINUX" ]; then
+-	# Gentoo Linux uses, or can use, mailwrappers, but the location
+-	# of the mailer.conf file varies.
+-	if [ -r /etc/mail/mailer.conf ]; then
+-	    AC_SUB MAILERCONF /etc/mail/mailer.conf
+-	else
+-	    AC_SUB MAILERCONF /etc/mailer.conf
+-	fi
+-    else
+-	AC_SUB MAILERCONF /etc/mailer.conf
+-    fi
+     AC_SUB WHICH mailfilter
+     AC_SUB MAILWRAPPER /usr/sbin/mailwrapper
+ else

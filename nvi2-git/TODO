@@ -1,0 +1,7 @@
+ - Doesn't build on Linux (or most distros?) because it db1 is required
+   which isn't built into glibc and seemingly hard to find. There's a
+   branch to port nvi2 to db5.3 but no PR yet:
+
+     https://github.com/matijaskala/nvi2/commit/218c6526fa182e15e3f25888fe4b04f53c3afc83
+
+ - Upstream the patch.

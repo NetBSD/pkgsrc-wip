@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:09 rillig Exp $
+
+RMD160 (axe-0.2.0.tar.gz) = d07f8aa92daf18d504403366442971322fd77ffb
+Size (axe-0.2.0.tar.gz) = 14138 bytes
+SHA1 (patch-aa) = a04b79a090f9da3a4ffe9bdd6f681d4df3dc880a
+SHA1 (patch-ab) = c9528d5c117dface7164b88335741d58d02c3790

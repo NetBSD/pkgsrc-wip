@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
+
+--- mppdec.h.orig	Tue Jul 30 22:19:57 2002
++++ mppdec.h
+@@ -129,7 +129,7 @@
+ # elif defined __bsdi__
+ #  include <sys/soundcard.h>
+ # elif defined __FreeBSD__
+-#  include <machine/soundcard.h>
++#  include <sys/soundcard.h>
+ # elif defined __NetBSD__  ||  defined __OpenBSD__
+ #  include <soundcard.h>
+ # else

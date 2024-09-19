@@ -1,0 +1,14 @@
+$NetBSD: patch-bo,v 1.1.1.1 2003/04/29 09:22:28 thomasklausner Exp $
+
+--- src/utilities/tuname/tuname.c	2003/04/28 11:50:32	1.1
++++ src/utilities/tuname/tuname.c	2003/04/28 11:50:56
+@@ -287,6 +287,9 @@
+     } else if ( strcmp ( sysname, "freebsd" ) == 0 ) {
+ 	machine = find_linux_machine ( machine ) ;
+ 
++    } else if ( strcmp ( sysname, "netbsd" ) == 0 ) {
++	machine = find_linux_machine ( machine ) ;
++
+     } else if ( strcmp ( sysname, "hp-ux" ) == 0 ) {
+ 	sysname = "hpux" ;
+ 	machine = find_hpux_machine ( machine ) ;

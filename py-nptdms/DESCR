@@ -1,0 +1,3 @@
+Cross-platform module for reading TDMS files as produced by LabView. Data
+is stored as a numpy array, and is loaded using numpy’s fromfile routine
+so is very fast.

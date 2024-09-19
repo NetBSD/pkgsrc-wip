@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/24 09:01:26 jihbed Exp $
+${PYSITELIB}/pygnm/GNM.py
+${PYSITELIB}/pygnm/GNM.pyc
+${PYSITELIB}/pygnm/GNM.pyo
+${PYSITELIB}/pygnm/__init__.py
+${PYSITELIB}/pygnm/__init__.pyc
+${PYSITELIB}/pygnm/__init__.pyo

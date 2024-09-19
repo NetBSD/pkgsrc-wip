@@ -1,0 +1,11 @@
+--- yescrypt/sysendian.h.orig   2018-07-13 18:05:24.000000000 -0400
++++ yescrypt/sysendian.h        2018-08-16 14:02:11.000000000 -0400
+@@ -29,6 +29,8 @@
+ #ifndef _SYSENDIAN_H_
+ #define _SYSENDIAN_H_
+ 
++#include "cpuminer-config.h"
++
+ /* If we don't have be64enc, the <sys/endian.h> we have isn't usable. */
+ #if !HAVE_DECL_BE64ENC
+ #undef HAVE_SYS_ENDIAN_H

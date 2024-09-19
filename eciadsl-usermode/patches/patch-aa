@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/24 17:23:46 imilh Exp $
+
+--- Makefile.dep.orig	2003-10-15 11:15:35.000000000 +0200
++++ Makefile.dep
+@@ -1,12 +1,11 @@
+ check-hdlc-bug.o: check-hdlc-bug.c
+-eci-eeprom.o: eci-eeprom.c /usr/local/include/pusb.h modem.h config.h
+-eci-load2.o: eci-load2.c /usr/local/include/pusb.h modem.h config.h \
+- util.h semaphore.h
+-pppoeci.o: pppoeci.c util.h /usr/local/include/pusb.h gs7070.h modem.h \
+- config.h
++eci-eeprom.o: eci-eeprom.c /usr/pkg/include/pusb.h modem.h config.h
++eci-load2.o: eci-load2.c /usr/pkg/include/pusb.h modem.h config.h util.h \
++  semaphore.h
++pppoeci.o: pppoeci.c util.h /usr/pkg/include/pusb.h gs7070.h modem.h \
++  config.h
+ util.o: util.c modem.h config.h util.h
+ check-hdlc.o: check-hdlc.c
+-eci-load1.o: eci-load1.c /usr/local/include/pusb.h modem.h config.h \
+- util.h
++eci-load1.o: eci-load1.c /usr/pkg/include/pusb.h modem.h config.h util.h
+ gs7070.o: gs7070.c gs7070.h
+ semaphore.o: semaphore.c semaphore.h

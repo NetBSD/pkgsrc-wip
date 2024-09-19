@@ -1,0 +1,22 @@
+This package provides the region monad transformer. Scarce resources
+like files, memory pointers or USB devices for example can be opened
+in a region. When the region terminates, all opened resources will be
+automatically closed. The main advantage of regions is that the opened
+resources can not be returned from the region which ensures no I/O
+with closed resources is possible.
+
+The primary technique used in this package is called "Lightweight
+monadic regions" which was invented by Oleg Kiselyov and Chung-chieh
+Shan. See:
+
+http://okmij.org/ftp/Haskell/regions.html#light-weight
+
+Also see the regions-monadsfd and regions-monadstf packages which
+provide instances for the classes in the respected monads packages.
+
+For an example on how to use this library see the safer-file-handles,
+usb-safe or regional-pointers packages.
+
+Note that if you want to open your type of scarce resource in a
+region, the only thing you have to do is define an instance for the
+Resource class (which you can find in: Control.Resource).

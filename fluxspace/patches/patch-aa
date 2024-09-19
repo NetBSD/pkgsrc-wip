@@ -1,0 +1,337 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/15 14:02:38 amadeus_z Exp $
+
+--- modules/process.py.orig	Fri Aug  8 21:08:01 2003
++++ modules/process.py
+@@ -1,152 +1,180 @@
+-#####################################################################
+-#####################################################################
+-# fluxspace.process - Fluxspace process management module
+-#####################################################################
+-#####################################################################
+-
+-import os
+-import re
+-import stat
+-import string
+-import signal
+-
+-reps = re.compile('^[ \t]*([0-9]+)[ \t]+([0-9]+)[ \t]+(.+)[ \t\r\n]*$')
+-
+-reNumDir = re.compile('^[0-9]+$')
+-rePPID   = re.compile('^PPid:[ \t]+([0-9]+)[ \t]*$')
+-
+-rootMenuFile = os.environ['HOME'] + '/GNUstep/Defaults/WMRootMenu'
+-
+-def GetProcessPath(pid = 0, file = ''):
+-	path = '/proc'
+-	if pid:
+-		path = path + ( '/%s' % pid )
+-	if file:
+-		path = path + ( '/%s' % file )
+-	return path
+-
+-def GetUserPIDs(matchUser):
+-    pids = []
+-    for subdir in os.listdir(GetProcessPath()):
+-        procdir = GetProcessPath(subdir)
+-        statInfo = os.stat(procdir)
+-        mode  = statInfo[stat.ST_MODE]
+-        isDir = stat.S_ISDIR(mode)
+-        user  = statInfo[stat.ST_UID]
+-        if isDir and reNumDir.search(subdir) != None:
+-            if user == matchUser:
+-                pids.append(int(subdir))
+-    return pids
+-
+-def GetProcessCommand(pid):
+-	cmdlinefile = GetProcessPath(pid, 'cmdline')
+-	cmdline = open(cmdlinefile, 'r').readline()
+-	chunks = string.split(cmdline, '\0')
+-	return chunks
+-
+-def GetProcessUser(pid):
+-    return os.stat(GetProcessPath(pid))[stat.ST_UID]
+-
+-def GetProcessParent(pid):
+-    parent = 0
+-    for line in open(GetProcessPath(pid, 'status')).readlines():
+-        matchPPID = rePPID.match(line)
+-        if matchPPID != None:
+-            parent = int(matchPPID.group(1))
+-    return parent
+-
+-class Process:
+-
+-    def __init__(self, pid):
+-        self.pid      = pid
+-        self.uid      = GetProcessUser(pid)
+-        self.ppid     = GetProcessParent(pid)
+-        self.parent   = None
+-        self.children = []
+-
+-        cmdParts  = self.GetProcessCommand()
+-        args = ""
+-        for i in range(1, len(cmdParts)):
+-            if i > 0:
+-                args = args + " "
+-            args = args + cmdParts[i]
+-
+-        self.command  = cmdParts[0]
+-        self.args     = args
+-        pathParts = string.split(self.command, '/')
+-        self.commandName = pathParts[len(pathParts)-1]
+-
+-        self.GetStatus()
+-
+-    def GetStatus(self):
+-        self.name  = '???'
+-        statusfile = self.GetPath('status')
+-        for line in open(statusfile).readlines():
+-            fields = line.split()
+-            if fields[0].lower() == 'name:':
+-                self.name = fields[1]
+-
+-    def GetProcessCommand(self):
+-        cmdlinefile = self.GetPath('cmdline')
+-        cmdline = open(cmdlinefile, 'r').readline()
+-        chunks = string.split(cmdline, '\0')
+-        return chunks
+-
+-    def GetPath(self, file = ''):
+-        return GetProcessPath(self.pid, file)
+-
+-    def AddChild(self, child):
+-        self.children.append(child)
+-        child.parent = self
+-
+-    def Kill(self, children = 0):
+-        if children:
+-            for child in self.children:
+-                child.Kill(1)
+-        os.kill(self.pid, signal.SIGINT)
+-
+-    def IsCurrent(self):
+-        if self.pid == os.getpid():
+-            return 1
+-        if self.parent is not None:
+-            return self.parent.IsCurrent()
+-        return 0
+-
+-class Processes:
+-    def __init__(self):
+-        self.thisUID = os.getuid()
+-        self.Refresh()
+-
+-    def Refresh(self):
+-        self.byPID   = {}
+-        self.byName  = {}
+-        self.ordered = []
+-        self.tree    = []
+-        # Create the flat list of processes
+-        # Also build the name dictionary
+-        for pid in GetUserPIDs(self.thisUID):
+-            newProcess = Process(pid)
+-            self.byPID[pid] = newProcess
+-            self.ordered.append(newProcess)
+-            if not self.byName.has_key(newProcess.name):
+-                self.byName[newProcess.name] = []
+-            self.byName[newProcess.name].append(newProcess)
+-        # Build the tree structure
+-        for process in self.ordered:
+-            if self.byPID.has_key(process.ppid):
+-                self.byPID[process.ppid].AddChild(process)
+-            else:
+-                 self.tree.append(process)
+-
+-    def Find(self, name):
+-        processes = []
+-        if self.byName.has_key(name):
+-            for process in self.byName[name]:
+-                if not process.IsCurrent():
+-                    processes.append(process)
+-        return processes
+-        
+-    def KillByName(self, name, children = 0):
+-        for process in self.Find(name):
+-            if not process.IsCurrent():
+-                process.Kill(1)
++#####################################################################
++#####################################################################
++# fluxspace.process - Fluxspace process management module
++#####################################################################
++#####################################################################
++
++import os
++import os.path
++import re
++import stat
++import string
++import signal
++
++reps = re.compile('^[ \t]*([0-9]+)[ \t]+([0-9]+)[ \t]+(.+)[ \t\r\n]*$')
++
++reNumDir = re.compile('^[0-9]+$')
++rePPID   = re.compile('^PPid:[ \t]+([0-9]+)[ \t]*$')
++
++rootMenuFile = os.environ['HOME'] + '/GNUstep/Defaults/WMRootMenu'
++
++class ProcFSError(Exception):
++    pass
++
++def GetProcessPath(pid = 0, file = ''):
++    path = '/proc'
++    if pid:
++        path = path + ( '/%s' % pid )
++    if file:
++        path = path + ( '/%s' % file )
++    if not os.path.exists(path):
++        raise ProcFSError
++    return path
++
++def GetUserPIDs(matchUser):
++    pids = []
++    try:
++        for subdir in os.listdir(GetProcessPath()):
++            procdir = GetProcessPath(subdir)
++            statInfo = os.stat(procdir)
++            mode  = statInfo[stat.ST_MODE]
++            isDir = stat.S_ISDIR(mode)
++            user  = statInfo[stat.ST_UID]
++            if isDir and reNumDir.search(subdir) != None:
++                if user == matchUser:
++                    pids.append(int(subdir))
++    except ProcFSError:
++        pass
++    return pids
++
++def GetProcessCommand(pid):
++    chunks = []
++    try:
++        cmdlinefile = GetProcessPath(pid, 'cmdline')
++        cmdline = open(cmdlinefile, 'r').readline()
++        chunks = string.split(cmdline, '\0')
++    except ProcFSError:
++        pass
++    return chunks
++
++def GetProcessUser(pid):
++    user = 0
++    try:
++        user = os.stat(GetProcessPath(pid))[stat.ST_UID]
++    except ProcFSError:
++        pass
++    return user
++
++def GetProcessParent(pid):
++    parent = 0
++    try:
++        for line in open(GetProcessPath(pid, 'status')).readlines():
++            matchPPID = rePPID.match(line)
++            if matchPPID != None:
++                parent = int(matchPPID.group(1))
++    except ProcFSError:
++        pass
++    return parent
++
++class Process:
++
++    def __init__(self, pid):
++        self.pid      = pid
++        self.uid      = GetProcessUser(pid)
++        self.ppid     = GetProcessParent(pid)
++        self.parent   = None
++        self.children = []
++
++        cmdParts  = self.GetProcessCommand()
++        args = ""
++        for i in range(1, len(cmdParts)):
++            if i > 0:
++                args = args + " "
++            args = args + cmdParts[i]
++
++        self.command  = cmdParts[0]
++        self.args     = args
++        pathParts = string.split(self.command, '/')
++        self.commandName = pathParts[len(pathParts)-1]
++
++        self.GetStatus()
++
++    def GetStatus(self):
++        self.name  = '???'
++        try:
++            statusfile = self.GetPath('status')
++            for line in open(statusfile).readlines():
++                fields = line.split()
++                if fields[0].lower() == 'name:':
++                    self.name = fields[1]
++        except ProcFSError:
++            pass
++
++    def GetProcessCommand(self):
++        chunks = []
++        try:
++            cmdlinefile = self.GetPath('cmdline')
++            cmdline = open(cmdlinefile, 'r').readline()
++            chunks = string.split(cmdline, '\0')
++        except ProcFSError:
++            pass
++        return chunks
++
++    def GetPath(self, file = ''):
++        return GetProcessPath(self.pid, file)
++
++    def AddChild(self, child):
++        self.children.append(child)
++        child.parent = self
++
++    def Kill(self, children = 0):
++        if children:
++            for child in self.children:
++                child.Kill(1)
++        os.kill(self.pid, signal.SIGINT)
++
++    def IsCurrent(self):
++        if self.pid == os.getpid():
++            return 1
++        if self.parent is not None:
++            return self.parent.IsCurrent()
++        return 0
++
++class Processes:
++    def __init__(self):
++        self.thisUID = os.getuid()
++        self.Refresh()
++
++    def Refresh(self):
++        self.byPID   = {}
++        self.byName  = {}
++        self.ordered = []
++        self.tree    = []
++        # Create the flat list of processes
++        # Also build the name dictionary
++        for pid in GetUserPIDs(self.thisUID):
++            newProcess = Process(pid)
++            self.byPID[pid] = newProcess
++            self.ordered.append(newProcess)
++            if not self.byName.has_key(newProcess.name):
++                self.byName[newProcess.name] = []
++            self.byName[newProcess.name].append(newProcess)
++        # Build the tree structure
++        for process in self.ordered:
++            if self.byPID.has_key(process.ppid):
++                self.byPID[process.ppid].AddChild(process)
++            else:
++                 self.tree.append(process)
++
++    def Find(self, name):
++        processes = []
++        if self.byName.has_key(name):
++            for process in self.byName[name]:
++                if not process.IsCurrent():
++                    processes.append(process)
++        return processes
++        
++    def KillByName(self, name, children = 0):
++        for process in self.Find(name):
++            if not process.IsCurrent():
++                process.Kill(1)

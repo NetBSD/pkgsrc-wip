@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.4 2006/11/30 06:02:46 schnoebe Exp $
+
+You will need to customize the following file to get pyaimt to work
+with jabber:
+
+	${PKG_SYSCONFDIR}/pyaimt.xml
+
+Quick start for jabberd2:
+
+	Verify and update the following fields in
+	${PKG_SYSCONFDIR}/pyaimt.xml:
+
+	<jid>...</jid>		--  Set to the public name of the service
+				    ex: aim.jabber.example
+	<mainServer>...</mainServer>
+				--  Set to the hostname or IP address
+				    of the main jabber server
+	<mainServerJID>...</mainServerJID>
+				--  Set to the JID (jabber ID)
+				    of the main jabber server
+	<secret>...</secret>	--  should be set to the legacy components
+				    shared secret in jabber2's router.xml
+				    (look for <secret>...</secret> in
+				    router.xml)
+
+===========================================================================

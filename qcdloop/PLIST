@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/03 23:03:22 jihbed Exp $
+lib/libff.a
+lib/libqcdloop.a
+share/doc/qcdloop/man.ps

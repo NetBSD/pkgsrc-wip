@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.2 2008/02/12 18:22:03 h2m Exp $
+
+--- src/misc.c.orig	2007-11-29 22:40:09.000000000 +0100
++++ src/misc.c
+@@ -38,6 +38,7 @@
+ #include <curses.h>
+ #include <ctype.h>
+ #include <errno.h>
++#include <stdarg.h>
+ 
+ #ifdef HAVE_STDLIB_H
+ 	#include <stdlib.h>

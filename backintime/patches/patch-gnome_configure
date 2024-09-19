@@ -1,0 +1,13 @@
+$NetBSD: patch-gnome_configure,v 1.1 2012/12/27 19:52:23 ryo-on Exp $
+
+--- gnome/configure.orig	2011-01-02 14:01:38.000000000 +0000
++++ gnome/configure
+@@ -14,7 +14,7 @@ fi
+ 
+ #check GNOME
+ if [ $CHECK = "--check" ]; then
+-	if [ -z `which gnome-session` ]; then
++	if [ -z `which sh` ]; then
+ 		echo "ERROR: Can't find GNOME !"
+ 		exit 1
+ 	fi

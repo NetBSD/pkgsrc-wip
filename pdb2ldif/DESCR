@@ -1,0 +1,18 @@
+Perl program to convert Palm Address Book (AddressDB.pdb) files
+to .ldif files, which can be easily imported into an LDAP
+directory with the following command:
+
+ cat <file.ldif> | ldapadd -w <passwd> -D <binddn>
+
+or even more easy:
+
+ pdb2ldif --pdb=<address.pdb> | ldapadd -w <passwd> -D <binddn>
+
+The program takes --pdb= as the PDB file and directs output to <STDOUT>.
+If you're very crafty, you can probably do a lot more with unix pipes,
+but this should be acceptable for most people.
+
+Requires p5-Palm libraries (available separately)
+Getopt is also required, but should have been part of your Perl distro.
+
+Y2K issues:  Good until 2038, they you'll need a 64-bit processor :-)

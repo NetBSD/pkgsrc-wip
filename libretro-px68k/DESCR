@@ -1,0 +1,13 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+PX68k (Portable xkeropi PRO-68K) is a portable and fast emulator for
+the Sharp X68000 series of home computers.
+
+The Sharp X68000 was released exclusively in Japan in 1987. It was a
+powerful machine for its time and saw a great number of arcade ports,
+exclusive titles and doujin/indie games developed for it, even years
+after the last model was launched in 1993.

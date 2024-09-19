@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- samples/innshellvars.orig	Fri Dec 12 19:10:20 1997
++++ samples/innshellvars
+@@ -10,6 +10,10 @@
+ ACTIVE=/var/news/etc/active
+ ##  =()<ACTIVETIMES=@<_PATH_ACTIVETIMES>@>()=
+ ACTIVETIMES=/var/news/etc/active.times
++##  =()<ACTIVED=@<_PATH_ACTIVED>@>()=
++ACTIVED=/usr/news/bin/actived
++##  =()<ACTIVEDPID=@<_PATH_ACTIVEDPID>@>()=
++ACTIVEDPID=/var/news/run/actived.pid
+ ##  =()<AWK=@<_PATH_AWK>@>()=
+ AWK=/usr/bin/awk
+ ##  =()<BATCH=@<_PATH_BATCHDIR>@>()=

@@ -1,0 +1,4 @@
+* Tweak autoconf and readahead.c to use readahead if it’s available.
+* Allow custom VARBASE.
+* Try to make makefiles compatible with BSD make.
+* /usr/pkg/var/lib/preload/preload.state and /usr/pkg/var/log/preload.log fail MD5 checksum on pkg_admin check.

@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
+bin/uschedule
+bin/uschedulecmd
+bin/uscheduleconf
+bin/uschedulecp
+bin/uscheduleedit
+bin/uschedulelist
+bin/uschedulerm
+bin/uscheduleruntimelimit
+man/man1/uschedule.1
+man/man1/uschedulecmd.1
+man/man1/uscheduleconf.1
+man/man1/uschedulecp.1
+man/man1/uscheduleedit.1
+man/man1/uschedulelist.1
+man/man1/uschedulerm.1
+man/man1/uscheduleruntimelimit.1
+man/man7/uschedule_intro.7
+man/man8/uscheduled.8
+sbin/uscheduled
+share/doc/uschedule/ChangeLog
+share/doc/uschedule/NEWS
+share/doc/uschedule/SECURITY-BUG

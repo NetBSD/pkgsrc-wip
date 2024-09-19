@@ -1,0 +1,7 @@
+* Update to latest release;
+* Make Qt optional in options.mk;
+* Add quark-qt4 and quark-qt5 packages using qt{4,5} options, respectively;
+* If both Qt4 and Qt5 are installed, package will default to Qt4;
+* Check documentation for other package options;
+* Fix configure/build/install phases for latest version;
+* Make -qt binary build and fix errors in Qt part of build.

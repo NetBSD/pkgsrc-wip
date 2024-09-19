@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.2 2006/08/17 19:43:21 kheinz Exp $
+
+RMD160 (majordomo-20060817.tar.gz) = 39efd58ee76de0019947d58e6a7a6dec55e6ad96
+SHA512 (majordomo-20060817.tar.gz) = b2de68b1875b04c376e996ee25eef6ea2bd215a27cb846f35edb2daaefbf06cb91be7abcf8ee4d3794bf1f2b1e483202c2b72d41bc584bc89304106841712d2c
+Size (majordomo-20060817.tar.gz) = 1365589 bytes
+SHA1 (patch-aa) = 40e6fd546a2560c6ec3b61727866aec323d4626a
+SHA1 (patch-ab) = 89dee656e2e9dc57ae5257d378e47f116547644d
+SHA1 (patch-ac) = 6e993522d3ca9dc844c9936654620eb112a5de42
+SHA1 (patch-ad) = 735b9b1b2f4ffe51c054ba3cb4791960b625fbf2
+SHA1 (patch-ae) = a796cfd2b5c0d856169fbb4e3f126e79ee0b81c0
+SHA1 (patch-af) = cd98a371423a5381e80e524f5c4503c17e14d1a0
+SHA1 (patch-ag) = 221290aab50b44309bd0cea2d70d383b0f874e87
+SHA1 (patch-ah) = 51e2b028e84dcb892561ba5efc6aa930dfdc0a61
+SHA1 (patch-ai) = 9c3b39da42d374840d96e7c57b6199de02bf4100
+SHA1 (patch-aj) = 684c86b7fb7b9734d3840c7301b00e6d8c3923fb
+SHA1 (patch-ak) = 6b0683be60847aa373c9c78d6c2a6ede9bcf27c7
+SHA1 (patch-al) = ce4045ad9407ebfe9aa2928327c27dbeb14f1c41

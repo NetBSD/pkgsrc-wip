@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- otti/Makefile.in.orig	2014-03-28 20:30:26.000000000 +0000
++++ otti/Makefile.in
+@@ -501,7 +501,7 @@ am__leading_dot = @am__leading_dot@
+ am__quote = @am__quote@
+ am__tar = @am__tar@
+ am__untar = @am__untar@
+-bindir = $(exec_prefix)/bin/games
++bindir = $(exec_prefix)/bin
+ build = @build@
+ build_alias = @build_alias@
+ build_cpu = @build_cpu@

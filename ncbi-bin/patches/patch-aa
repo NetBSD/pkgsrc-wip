@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2006/03/29 20:40:38 mchittur Exp $
+
+--- make/makedis.csh.orig	2006-03-28 21:24:29.000000000 +0000
++++ make/makedis.csh
+@@ -227,7 +227,7 @@ case Darwin:
+ case NetBSD:
+ 	set platform=netbsd
+ 	set HAVE_MOTIF=0
+-	foreach i (/usr/X11R6/include /usr/X11R6/include/X11 /usr/include \
++	foreach i (@X11BASE@/include @PREFIX@/include /usr/X11R6/include /usr/X11R6/include/X11 /usr/include \
+ 		/usr/include/X11 )
+ 		if (-d $i/Xm) then
+ 			set HAVE_MOTIF=1

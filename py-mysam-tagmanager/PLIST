@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/mysam/__init__.py
+${PYSITELIB}/mysam/__init__.pyc
+${PYSITELIB}/mysam/__init__.pyo
+${PYSITELIB}/mysam/config/tag.config
+${PYSITELIB}/mysam/tag_const.py
+${PYSITELIB}/mysam/tag_const.pyc
+${PYSITELIB}/mysam/tag_const.pyo
+${PYSITELIB}/mysam/tagconfig.py
+${PYSITELIB}/mysam/tagconfig.pyc
+${PYSITELIB}/mysam/tagconfig.pyo
+${PYSITELIB}/mysam/tagmaker.py
+${PYSITELIB}/mysam/tagmaker.pyc
+${PYSITELIB}/mysam/tagmaker.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

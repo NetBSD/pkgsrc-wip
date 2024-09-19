@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+--- configure.ac.orig	2004-10-23 13:22:27.000000000 +0200
++++ configure.ac	2005-02-28 20:47:40.000000000 +0100
+@@ -168,10 +168,6 @@
+ AC_DEFINE_UNQUOTED(PORT, "$port", [Define this to the HTTP port number.])
+ 
+ 
+-dnl internationalization macros
+-AM_NLS
+-AM_GNU_GETTEXT
+-AM_GNU_GETTEXT_VERSION
+ 
+ dnl XXX - These should be removed ASAP! /Joachim
+ AC_DEFINE(MAXDATASIZE, 4091, [I am a hack, please send patch to remove me.])
+@@ -183,8 +179,6 @@
+ 	Makefile
+ 	alive.lsm
+ 	alive.spec
+-        intl/Makefile
+-        po/Makefile.in
+         m4/Makefile
+ 	lib/Makefile
+ 	src/Makefile

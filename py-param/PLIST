@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/numbergen/__init__.py
+${PYSITELIB}/numbergen/__init__.pyc
+${PYSITELIB}/numbergen/__init__.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/param/.version
+${PYSITELIB}/param/__init__.py
+${PYSITELIB}/param/__init__.pyc
+${PYSITELIB}/param/__init__.pyo
+${PYSITELIB}/param/ipython.py
+${PYSITELIB}/param/ipython.pyc
+${PYSITELIB}/param/ipython.pyo
+${PYSITELIB}/param/parameterized.py
+${PYSITELIB}/param/parameterized.pyc
+${PYSITELIB}/param/parameterized.pyo
+${PYSITELIB}/param/serializer.py
+${PYSITELIB}/param/serializer.pyc
+${PYSITELIB}/param/serializer.pyo
+${PYSITELIB}/param/version.py
+${PYSITELIB}/param/version.pyc
+${PYSITELIB}/param/version.pyo

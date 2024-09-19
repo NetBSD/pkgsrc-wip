@@ -1,0 +1,50 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2010/07/16 12:50:00 tnn2 Exp $
+
+--- Makefile.in.orig	2010-07-01 14:43:22.000000000 +0000
++++ Makefile.in
+@@ -578,29 +578,29 @@ clean	:
+ 
+ install	:
+ 	if test $(resin_home) != `pwd`; then \
+-	  mkdir -p $(resin_home)/bin; \
+-	  mkdir -p $(resin_home)/keys; \
+-	  mkdir -p $(resin_home)/licenses; \
+-	  mkdir -p $(resin_home)/lib; \
+-	  mkdir -p $(resin_home)/$(LIBEXEC); \
+-	  cp lib/*.jar $(resin_home)/lib; \
+-	  cp bin/* $(resin_home)/bin; \
++	  mkdir -p $(DESTDIR)$(resin_home)/bin; \
++	  mkdir -p $(DESTDIR)$(resin_home)/keys; \
++	  mkdir -p $(DESTDIR)$(resin_home)/licenses; \
++	  mkdir -p $(DESTDIR)$(resin_home)/lib; \
++	  mkdir -p $(DESTDIR)$(resin_home)/$(LIBEXEC); \
++	  cp lib/*.jar $(DESTDIR)$(resin_home)/lib; \
++	  cp bin/* $(DESTDIR)$(resin_home)/bin; \
+ 	fi; \
+ 	if test $(resin_root) != `pwd`; then \
+-	  mkdir -p $(resin_root)/webapps; \
+-	  cp -r $(CP_U_FLAG) webapps/* $(resin_root)/webapps; \
+-	  mkdir -p $(resin_root)/doc; \
+-	  cp -r $(CP_U_FLAG) doc/* $(resin_root)/doc; \
+-	  mkdir -p $(resin_log); \
++	  mkdir -p $(DESTDIR)$(resin_root)/webapps; \
++	  cp -r $(CP_U_FLAG) webapps/* $(DESTDIR)$(resin_root)/webapps; \
++	  mkdir -p $(DESTDIR)$(resin_root)/doc; \
++	  cp -r $(CP_U_FLAG) doc/* $(DESTDIR)$(resin_root)/doc; \
++	  mkdir -p $(DESTDIR)$(resin_log); \
+ 	fi; \
+ 	if test $(resin_conf) != `pwd`/conf; then \
+-	  mkdir -p $(resin_conf); \
+-	  cp $(CP_U_FLAG) conf/app-default.xml $(resin_conf)/app-default.xml; \
+-	  cp $(CP_U_FLAG) conf/resin.xml $(resin_conf)/resin.xml; \
++	  mkdir -p $(DESTDIR)$(resin_conf); \
++	  cp $(CP_U_FLAG) conf/app-default.xml $(DESTDIR)$(resin_conf)/app-default.xml; \
++	  cp $(CP_U_FLAG) conf/resin.xml $(DESTDIR)$(resin_conf)/resin.xml; \
+ 	fi; \
+ 	(cd modules/c/src; $(MAKE) install)
+ 	if test -r $(resin_pro)/modules/c/src/Makefile; then \
+-	  pushd $(resin_pro)/modules/c/src; $(MAKE) install; popd; \
++	  (cd $(resin_pro)/modules/c/src && $(MAKE) install) \
+ 	fi; \
+ 	if test -n "${resin_init_d}"; then \
+ 		cd $(abs_builddir); \

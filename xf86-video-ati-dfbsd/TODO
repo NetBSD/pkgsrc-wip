@@ -1,0 +1,5 @@
+Copy port to x11/xf86-video-ati, do not install from wip.
+
+DragonFly and FreeBSD patches to load radeonkms.ko kernel module.
+
+Implements debug option.

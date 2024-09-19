@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libltc
+
+.if !defined(LIBLTC_BUILDLINK3_MK)
+LIBLTC_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libltc+=	libltc>=1.2.0
+BUILDLINK_PKGSRCDIR.libltc?=	../../wip/libltc
+.endif	# LIBLTC_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libltc

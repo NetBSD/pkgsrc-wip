@@ -1,0 +1,13 @@
+GTerm is a C/G telnet client that lets you connect to C64 telnet BBS's with
+the correct colours and the correct font. Also included is a client for 64CHAT
+called CGChat.
+
+Features
+
+    * Open source - runs on Windows, MacOS X, and unix compatibles.
+    * Full C64 screen and keyboard emulation.
+    * File download with Xmodem, Xmodem/CRC, Xmodem-1k, and Punter protocols.
+    * Screen capture to SEQ file, and SEQ file playback.
+    * Keyboard macros.
+    * Fullscreen mode.
+    * and more...

@@ -1,0 +1,21 @@
+$NetBSD$
+
+Add support for Sun/NetBSD audio.
+
+--- configure.ac.orig	2020-12-01 12:16:11.000000000 +0000
++++ configure.ac
+@@ -261,6 +261,14 @@ AC_ARG_WITH(sndio, [  --with-sndio = cho
+   AC_CHECK_LIB([sndio], [sio_open], , AC_MSG_ERROR(SNDIO support requires the sndio library -- libsndio-dev suggested))], )
+ AM_CONDITIONAL([USE_SNDIO], [test "x$REQUESTED_SNDIO" = "x1"])
+ 
++# Look for SUN flag
++AC_ARG_WITH(sun, [  --with-sun = choose SUN/NETBSD API support], [
++  AC_MSG_RESULT(>>Including a SUN/NETBSD back end)
++  REQUESTED_SUN=1
++  AC_DEFINE([CONFIG_SUN], 1, [Needed by the compiler.])
++  AC_CHECK_HEADER([sys/audioio.h], , AC_MSG_ERROR(SUN support requires the sys/audioio.h header))], )
++AM_CONDITIONAL([USE_SUN], [test "x$REQUESTED_SUN" = "x1"])
++
+ # Look for AO flag
+ AC_ARG_WITH(ao, [  --with-ao = choose AO (Audio Output?) API support. N.B. no synchronisation -- so underflow or overflow is inevitable!], [
+   AC_MSG_RESULT(>>Including an AO back end. N.B. no synchronisation -- so underflow or overflow is inevitable!)

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.9 2013/12/19 05:07:52 othyro Exp $
+
+RMD160 (desmume-0.9.10.tar.tar) = 4ca447c8d767ead207d4abf81e63aedbd5f62d50
+Size (desmume-0.9.10.tar.tar) = 4141586 bytes
+SHA1 (patch-po_Makefile.in.in) = 8fe811daefecade4cc516de7886d5637dc8d5290
+SHA1 (patch-src_arm__jit.cpp) = 82cc48d45751628d7c20db6d95f7d7c10ab6d257
+SHA1 (patch-src_armcpu.h) = ae552eca77dd207e1bb8ad30d5f3ebf34e7c72e3
+SHA1 (patch-src_gtk_glx__3Demu.cpp) = 257b72dac55c2f497bbf2ec390e530a4126645df
+SHA1 (patch-src_utils_AsmJit_core_stringbuilder.h) = e3e5d1927a63d3c222f211bf828ee8b78ca19e5c
+SHA1 (patch-src_utils_task.cpp) = a0f7c66b3caeaf7c282b36df6cb853f4ffc0dc8c

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/26 10:16:20 phonohawk Exp $
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/HShinstaller-${PKGVERSION}.o
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/System/Installer.hi
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/System/Installer.p_hi
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/System/Installer/Foreign.hi
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/System/Installer/Foreign.p_hi
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/System/Installer/TH.hi
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/System/Installer/TH.p_hi
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/libHShinstaller-${PKGVERSION}.a
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/libHShinstaller-${PKGVERSION}_p.a
+lib/hinstaller-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hinstaller-${PKGVERSION}/LICENSE

@@ -1,0 +1,14 @@
+$NetBSD$
+
+Use OSS4_LIBS to link wineoss.drv against libossaudio
+
+--- dlls/wineoss.drv/Makefile.in.orig	2019-08-02 19:24:39.000000000 +0000
++++ dlls/wineoss.drv/Makefile.in
+@@ -1,6 +1,7 @@
+ MODULE    = wineoss.drv
+ IMPORTS   = uuid ole32 user32 advapi32
+ DELAYIMPORTS = winmm
++EXTRALIBS = $(OSS4_LIBS)
+ EXTRAINCL = $(OSS4_CFLAGS)
+ 
+ C_SRCS = \

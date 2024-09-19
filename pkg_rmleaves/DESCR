@@ -1,0 +1,3 @@
+pkg_rmleaves finds "leaf" packages, i.e. packages which are not requested
+by any other installed package, and lets you decide for each one whether
+you want to keep it or delete it.

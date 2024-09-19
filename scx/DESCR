@@ -1,0 +1,5 @@
+scx - a GUI library for scsh and Scheme 48
+
+Scx is a graphical user interface library for scsh and Scheme 48.
+Scx already provides a direct binding to Xlib. The next step will be
+a binding to Xt, after this we will turn to a popular widget set.

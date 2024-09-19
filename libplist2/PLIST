@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/plistutil
+include/plist/Array.h
+include/plist/Boolean.h
+include/plist/Data.h
+include/plist/Date.h
+include/plist/Dictionary.h
+include/plist/Integer.h
+include/plist/Key.h
+include/plist/Node.h
+include/plist/Real.h
+include/plist/String.h
+include/plist/Structure.h
+include/plist/Uid.h
+include/plist/cython/plist.pxd
+include/plist/plist++.h
+include/plist/plist.h
+lib/libplist++-2.0.la
+lib/libplist-2.0.la
+lib/pkgconfig/libplist++-2.0.pc
+lib/pkgconfig/libplist-2.0.pc
+${PYSITELIB}/plist.la
+man/man1/plistutil.1

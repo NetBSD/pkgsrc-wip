@@ -1,0 +1,14 @@
+@comment $NetBSD$
+bin/3dsconv
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/3dsconv/3dsconv.py
+${PYSITELIB}/3dsconv/3dsconv.pyc
+${PYSITELIB}/3dsconv/3dsconv.pyo
+${PYSITELIB}/3dsconv/__init__.py
+${PYSITELIB}/3dsconv/__init__.pyc
+${PYSITELIB}/3dsconv/__init__.pyo

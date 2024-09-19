@@ -1,0 +1,59 @@
+$NetBSD: patch-mupen64plus-rsp-z64_projects_unix_Makefile,v 1.1 2013/07/07 12:48:16 othyro Exp $
+
+Add NetBSD support. Fix DL_LIBS and perms for INSTALL_LIB.
+
+--- mupen64plus-rsp-z64/projects/unix/Makefile.orig	2013-07-05 02:20:40.000000000 +0000
++++ mupen64plus-rsp-z64/projects/unix/Makefile
+@@ -50,6 +50,12 @@ ifeq ("$(UNAME)","FreeBSD")
+   SO_EXTENSION = so
+   SHARED = -shared
+ endif
++ifeq ("$(UNAME)","NetBSD")
++  OS = NETBSD
++  SO_EXTENSION = so
++  SHARED = -shared
++  $(warning OS type "$(UNAME)" not officially supported.')
++endif
+ ifeq ("$(UNAME)","OpenBSD")
+   OS = FREEBSD
+   SO_EXTENSION = so
+@@ -119,7 +125,7 @@ endif
+ # base CFLAGS, LDLIBS, and LDFLAGS
+ OPTFLAGS ?= -O3 -flto
+ WARNFLAGS ?= -Wall
+-CFLAGS += $(OPTFLAGS) $(WARNFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src
++CFLAGS += $(OPTFLAGS) $(WARNFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
+ CXXFLAGS += -fvisibility-inlines-hidden
+ LDFLAGS += $(SHARED)
+ 
+@@ -153,7 +159,7 @@ endif
+ ifeq ($(OS), LINUX)
+   # only export api symbols
+   LDFLAGS += -Wl,-version-script,$(SRCDIR)/rsp_api_export.ver
+-  LDLIBS += -ldl
++  LDLIBS += ${DL_LIBS}
+ endif
+ ifeq ($(OS), FREEBSD)
+   LDLIBS += -lc
+@@ -174,10 +180,10 @@ ifeq ($(OS), OSX)
+   ifeq ($(CPU), X86)
+     ifeq ($(ARCH_DETECTED), 64BITS)
+       CFLAGS += -pipe -arch x86_64 -mmacosx-version-min=$(OSX_SDK) -isysroot $(OSX_SYSROOT)/MacOSX$(OSX_SDK).sdk
+-      LDLIBS += -ldl
++      LDLIBS += ${DL_LIBS}
+     else
+       CFLAGS += -pipe -mmmx -msse -fomit-frame-pointer -arch i686 -mmacosx-version-min=$(OSX_SDK) -isysroot $(OSX_SYSROOT)/MacOSX$(OSX_SDK).sdk
+-      LDLIBS += -ldl
++      LDLIBS += ${DL_LIBS}
+     endif
+   endif
+ endif
+@@ -291,7 +297,7 @@ all: $(TARGET)
+ 
+ install: $(TARGET)
+ 	$(INSTALL) -d "$(DESTDIR)$(PLUGINDIR)"
+-	$(INSTALL) -m 0644 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
++	$(INSTALL) -m 0755 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
+ 
+ uninstall:
+ 	$(RM) "$(DESTDIR)$(PLUGINDIR)/$(TARGET)"

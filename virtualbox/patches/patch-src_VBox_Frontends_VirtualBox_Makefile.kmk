@@ -1,0 +1,58 @@
+$NetBSD$
+
+--- src/VBox/Frontends/VirtualBox/Makefile.kmk.orig	2016-03-04 19:29:00.000000000 +0000
++++ src/VBox/Frontends/VirtualBox/Makefile.kmk
+@@ -104,6 +104,7 @@ VirtualBox_DEFS.debug     = VBOX_CHECK_S
+ VirtualBox_DEFS.linux     = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.solaris   = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.freebsd   = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
++VirtualBox_DEFS.netbsd    = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.darwin    = VBOX_WITH_TRANSLUCENT_SEAMLESS # VBOX_WITH_MASKED_SEAMLESS
+ VirtualBox_DEFS.win       = VBOX_WITH_MASKED_SEAMLESS # VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.win       += UNICODE QT_DLL
+@@ -118,6 +119,7 @@ VirtualBox_DEFS          += \
+ 	$(if $(VBOX_WITH_SOLARIS_OSS),VBOX_WITH_SOLARIS_OSS) \
+ 	$(if $(VBOX_WITH_E1000),VBOX_WITH_E1000) \
+ 	$(if $(VBOX_WITH_NETFLT)$(eq $(KBUILD_TARGET),freebsd),VBOX_WITH_NETFLT) \
++	$(if $(VBOX_WITH_NETFLT)$(eq $(KBUILD_TARGET),netbsd),VBOX_WITH_NETFLT) \
+ 	$(if $(VBOX_WITH_VDE),VBOX_WITH_VDE) \
+ 	$(if $(VBOX_WITH_UDPTUNNEL),VBOX_WITH_UDPTUNNEL) \
+ 	$(if $(VBOX_WITH_EXTPACK),VBOX_WITH_EXTPACK) \
+@@ -219,6 +221,7 @@ endif
+ VirtualBox_LIBS.linux   += Xinerama
+ VirtualBox_LIBS.solaris += Xinerama
+ VirtualBox_LIBS.freebsd += Xinerama
++VirtualBox_LIBS.netbsd  += Xinerama
+ 
+ ifneq ($(KBUILD_TARGET),win)
+ VirtualBox_CXXFLAGS += -Wno-switch
+@@ -260,6 +263,7 @@ if defined(VBOX_WITH_VIDEOHWACCEL) || de
+  VirtualBox_LIBS.solaris   += GL
+  VirtualBox_LIBS.linux     += GL
+  VirtualBox_LIBS.freebsd   += GL
++ VirtualBox_LIBS.netbsd    += GL
+  VirtualBox_LDFLAGS.darwin += -framework OpenGL
+ endif
+ ifdef VBOX_WITH_CROGL
+@@ -988,6 +992,7 @@ endif
+  VirtualBoxPch_SOURCES.darwin  = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.solaris = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.freebsd = $(NO_SUCH_VARIABLE)
++ VirtualBoxPch_SOURCES.netbsd  = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.linux   = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.win     = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_QT_MODULES      = $(VirtualBox_QT_MODULES) # "bug" - not inherited.
+@@ -1118,7 +1123,7 @@ endif # darwin
+ # App for testing GL support
+ #
+ if defined(VBOX_WITH_VIDEOHWACCEL)
+- if1of ($(KBUILD_TARGET), win linux freebsd)
++ if1of ($(KBUILD_TARGET), win linux freebsd netbsd)
+   LIBRARIES += VBoxOGL2D
+   VBoxOGL2D_TEMPLATE = $(if $(VBOX_WITH_VIDEOHWACCEL),$(if $(VBOX_WITH_HARDENING),VBOXQT4GUI,VBOXQT4GUIEXE),VBOXMAINEXE)
+   VBoxOGL2D_DEFS = QT_NO_DEBUG QT_THREAD_SUPPORT QT_SHARED HAVE_CONFIG_H VBOX_WITH_VIDEOHWACCEL VBOX_GUI_USE_QGL
+@@ -1253,4 +1258,3 @@ nls/VirtualBox_en.ts: \
+ 	$(QUIET)$(SED) -n -i -e \
+ 		'/<context>/,/<\/context>/!p;/<context>/h;/<name>/H;/<message numerus="yes">/,/<\/message>/H;/<\/context>/{H;x;/<message/p}' \
+ 	$@
+-

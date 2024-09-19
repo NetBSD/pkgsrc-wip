@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2010/02/21 00:08:26 pettai Exp $
+
+--- Makefile.orig	2010-02-21 00:08:20.000000000 +0100
++++ Makefile	2010-02-21 00:11:57.000000000 +0100
+@@ -12,10 +12,7 @@
+ 	@echo [*] Compiling MakeSalt for Encryption..
+ 	@$(CC) -I. -o makesalt tools/makesalt.c
+ 	@./makesalt
+-	@echo [*] Compiling Bouncer..
+-	@make -f makefile.out
+-	@ls -al psybnc
+-	@echo done.
++	@echo [*] Ready for Compiling Bouncer..
+ 
+ menuconfig:
+ 	@echo Initializing Menu-Configuration

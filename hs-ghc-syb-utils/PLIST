@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/11 08:38:37 phonohawk Exp $
+lib/ghc-syb-utils-${PKGVERSION}/${HASKELL_VERSION}/GHC/SYB/Utils.hi
+lib/ghc-syb-utils-${PKGVERSION}/${HASKELL_VERSION}/GHC/SYB/Utils.p_hi
+lib/ghc-syb-utils-${PKGVERSION}/${HASKELL_VERSION}/HSghc-syb-utils-${PKGVERSION}.o
+lib/ghc-syb-utils-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-syb-utils-${PKGVERSION}.a
+lib/ghc-syb-utils-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-syb-utils-${PKGVERSION}_p.a
+lib/ghc-syb-utils-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ghc-syb-utils-${PKGVERSION}/LICENSE

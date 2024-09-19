@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/smtprc
+man/man1/smtprc.1
+share/doc/smtprc/FAQ
+share/doc/smtprc/README
+share/examples/smtprc/auto.conf
+share/examples/smtprc/email.tmpl
+share/examples/smtprc/rcheck.conf

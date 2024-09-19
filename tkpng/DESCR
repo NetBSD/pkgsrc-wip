@@ -1,0 +1,9 @@
+TkPNG is an open source binary package that adds PNG photo image support to
+Tcl/Tk. Although other extensions such as Img  also add support for PNG images,
+this package was designed to be lightweight, not depending on libpng nor
+implementing other image formats, and suitable for inclusion in the Tk core. Tk
+does not currently have native support for any image formats that allow for
+alpha (partial-transparency) channels, although it does have support for alpha
+blending internally. Using alpha channels for smooth blending and anti-aliasing
+is a great way to improve the appearance of GUI applications built with Tcl/Tk,
+especially when combined with Tile.

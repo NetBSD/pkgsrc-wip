@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.6 2009/08/15 16:15:28 thomasklausner Exp $
+bin/wihack
+bin/wimenu
+bin/wmii
+bin/wmii.rc
+bin/wmii.sh
+bin/wmii9menu
+bin/wmii9rc
+bin/wmiir
+bin/wmiistartrc
+lib/libwmii_hack.so
+man/man1/wimenu.1
+man/man1/wmii.1
+man/man1/wmiir.1
+share/examples/wmii-hg/rc.wmii
+share/examples/wmii-hg/welcome
+share/examples/wmii-hg/wmiirc

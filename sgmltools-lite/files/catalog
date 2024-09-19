@@ -1,0 +1,15 @@
+# $NetBSD#
+
+CATALOG "@PREFIX@/share/sgml/docbook/2.4.1/catalog"
+CATALOG "@PREFIX@/share/sgml/docbook/3.0/catalog"
+CATALOG "@PREFIX@/share/sgml/docbook/3.1/catalog"
+CATALOG "@PREFIX@/share/sgml/docbook/4.0/catalog"
+CATALOG "@PREFIX@/share/sgml/docbook/4.1/catalog"
+CATALOG "@PREFIX@/share/sgml/docbook/4.2/catalog"
+CATALOG "@PREFIX@/share/sgml/docbook/dsssl/modular/catalog"
+CATALOG "@PREFIX@/share/sgml/iso8879/catalog"
+CATALOG "@PREFIX@/share/sgml/iso12083/catalog"
+CATALOG "@PREFIX@/share/sgml/jade/catalog"
+CATALOG "@PREFIX@/share/sgml/html/catalog"
+CATALOG "@PREFIX@/share/sgml/stylesheets/sgmltools/sgmltools.cat"
+CATALOG "@PREFIX@/share/sgml/dtd/sgmltools/catalog"

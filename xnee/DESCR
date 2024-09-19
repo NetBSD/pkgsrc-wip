@@ -1,0 +1,9 @@
+Xnee is a suite of programs that can record, replay, and distribute
+user actions under the X11 environment. Think of it as a robot that
+can imitate the job you just did. Xnee can be used to:
+
+* Automate tests
+* Demonstrate programs
+* Distribute actions
+* Record and replay 'macro'
+* Retype a file

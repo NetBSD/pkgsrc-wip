@@ -1,0 +1,6 @@
+This is missing a number of Perl dependencies.
+
+During installation, this happens:
+
+make: don't know how to make |. Stop
+

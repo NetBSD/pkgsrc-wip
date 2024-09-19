@@ -1,0 +1,6 @@
+  The Tamago(egg) is famous CJK input system for Emacs.  It
+works with KANA-Kanji converson engine as FreeWnn, Canna, Sj3.
+We have another version of kana-Kanji conversion engine:
+Anthy.  Anthy has its anthy.el for bridge, but this is yet
+another Tamago(egg) like input bridge to connect Emacs and
+Anthy engine, and this can be replacement of Original Tamago.

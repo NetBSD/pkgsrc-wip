@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2004/02/28 00:29:13 rillig Exp $
+
+--- work/LighthouseIDEA/gtk-2.0/gtkrc	Sun Feb 16 01:47:05 2003
++++ LighthouseIDEA/gtk-2.0/gtkrc	Thu Nov 27 16:37:08 2003
+@@ -47,8 +47,8 @@
+   engine "lighthouseblue"
+   {
+     has_notebook_patch = FALSE
+-    make_tab_labels_bold = TRUE
+-    make_frame_labels_bold = TRUE
++#    make_tab_labels_bold = TRUE
++#    make_frame_labels_bold = TRUE
+   }
+ }

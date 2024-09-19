@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2011/05/21 19:14:41 marko_schuetz Exp $
+bin/alt-ergo
+lib/alt-ergo/smt_prelude.mlw
+man/man1/alt-ergo.1

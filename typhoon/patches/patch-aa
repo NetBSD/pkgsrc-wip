@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/14 01:28:30 mjasm Exp $
+
+--- Makefile.orig	1999-10-01 23:37:32.000000000 -0400
++++ Makefile
+@@ -1,20 +1,24 @@
+ # Makefile for:  typhoon - top level makefile
+ 
+ MANEXT		= l
+-PREFIX		= /usr/local
+ DESTMAN		= $(PREFIX)/man/man$(MANEXT)
+ DESTCAT		= $(PREFIX)/man/cat$(MANEXT)
+ DESTOWN		= root
+-DESTGRP		= local
++DESTGRP		= wheel
+ SHELL		= /bin/sh
+ MAKE		= make
+ 
+ .PHONY:		all install uninstall clean distclean
+ 
+-all install uninstall: include/ansi.h include/environ.h
++all: include/ansi.h include/environ.h
++	cd src; $(MAKE) $@
++	cd util; $(MAKE) $@
++	cd examples; $(MAKE) $@
++
++
++install uninstall: include/ansi.h include/environ.h
+ 		cd src; $(MAKE) $@
+ 		cd util; $(MAKE) $@
+-		cd examples; $(MAKE) $@
+ 		cd man; $(MAKE) $@
+ 
+ include/ansi.h include/environ.h:

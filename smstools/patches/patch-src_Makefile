@@ -1,0 +1,35 @@
+$NetBSD$
+
+Fix Makefile syntax and SunOS support..
+
+--- src/Makefile.orig	2010-09-21 11:29:14.000000000 +0000
++++ src/Makefile
+@@ -1,7 +1,7 @@
+ # In case of windows, use os_cygwin=yes setting in the configuration file (smsd.conf).
+ 
+ # Select your setup size:
+-CFLAGS = -D NUMBER_OF_MODEMS=64
++CFLAGS += -D NUMBER_OF_MODEMS=64
+ 
+ # Uncomment for Solaris
+ # CFLAGS += -D SOLARIS
+@@ -40,17 +40,10 @@ CFLAGS += -D_FILE_OFFSET_BITS=64
+ all: smsd 
+ 
+ smsd: smsd.c extras.o locking.o cfgfile.o logging.o alarm.o smsd_cfg.o charset.o stats.o blacklist.o whitelist.o modeminit.o pdu.o
+-
+-ifneq (,$(findstring SOLARIS,$(CFLAGS)))
+-ifeq (,$(findstring DISABLE_INET_SOCKET,$(CFLAGS)))
+-override LFLAGS += -lsocket -lnsl
+-endif
+-endif
+-
+ ifneq (,$(findstring NOSTATS,$(CFLAGS)))
+-	$(CC) $(CFLAGS) -o $@ $^ $(LFLAGS)
++	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+ else 
+-	$(CC) `mm-config --cflags` $(CFLAGS) -o $@ $^ `mm-config --ldflags --libs` $(LFLAGS)
++	$(CC) `mm-config --cflags` $(CFLAGS) -o $@ $^ `mm-config --ldflags --libs` $(LDFLAGS)
+ endif
+ 
+ clean:

@@ -1,0 +1,3 @@
+Distob will take your existing python objects, or a sequence of objects
+and scatter them onto many IPython parallel engines, which may be
+running on a single computer or on a cluster.

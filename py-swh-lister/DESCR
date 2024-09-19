@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+swh-lister
+==========
+
+This component from the Software Heritage stack aims to produce listings
+of software origins and their urls hosted on various public developer platforms
+or package managers. As these operations are quite similar, it provides a set of
+Python modules abstracting common software origins listing behaviors.
+
+It also provides several lister implementations, contained in the
+following Python modules:
+
+- `swh.lister.bitbucket`
+- `swh.lister.cgit`
+- `swh.lister.cran`
+- `swh.lister.debian`
+- `swh.lister.gitea`
+- `swh.lister.github`
+- `swh.lister.gitlab`
+- `swh.lister.gnu`
+- `swh.lister.launchpad`
+...

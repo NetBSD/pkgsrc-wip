@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/29 21:34:21 lrfurtado Exp $
+
+--- lib/Makefile.in.orig	2003-09-11 01:08:07.000000000 -0300
++++ lib/Makefile.in
+@@ -28,7 +28,7 @@ LNK  = ln -sf
+ GREP = grep -v
+ 
+ MAKEDEPEND=@MAKEDEPEND@
+-LIBS=-ldl @htg_ld_args_m@ @htg_ld_args_db@ -lncurses
++LIBS=@htg_ld_args_m@ @htg_ld_args_db@ -lncurses
+ #
+ # Default install directory is set in htconfig.h
+ #

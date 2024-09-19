@@ -1,0 +1,13 @@
+We all like python for scripting, because it's so much more powerful
+than a shell. But sometimes we really need to call a shell command
+because it's so much easier than writing yet another library in
+python or adding a dependency:
+
+    from whelk import shell
+    shell.zgrep("-r", "downloads", "/var/log/httpd")
+    # Here goes code to process the log
+
+You can even pipe commands together:
+
+    from whelk import pipe
+    pipe(pipe.getent("group") | pipe.grep(":1...:"))

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/26 15:30:34 yhardy Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/delegate_it.gemspec
+${GEM_LIBDIR}/lib/delegate_it.rb
+${GEM_LIBDIR}/lib/delegate_it/main.rb
+${GEM_LIBDIR}/lib/delegate_it/version.rb
+${GEM_LIBDIR}/spec/delegate_it/main_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info

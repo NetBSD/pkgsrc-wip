@@ -1,0 +1,5 @@
+With this package you can define record field accessors which allow
+setting, getting and modifying values easily. The package clearly
+demonstrates the power of the functional approach: You can combine
+accessors of a record and sub-records, to make the access look like
+the fields of the sub-record belong to the main record.

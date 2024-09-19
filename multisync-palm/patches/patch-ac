@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.1 2010/12/13 18:07:14 noud4 Exp $
+
+--- src/palm_sync.c.orig	2010-11-12 18:09:13.000000000 +0000
++++ src/palm_sync.c	2010-11-12 18:14:43.000000000 +0000
+@@ -152,7 +152,7 @@
+ 
+ 	strcpy (addr.pi_device, conn->sockaddr);
+ 
+-	if (pi_bind (listen_sd, (struct sockaddr*)&addr, sizeof (addr)) == -1) {
++	if (pi_bind (listen_sd, (struct sockaddr*)&addr)) {
+ 		palm_debug(conn, 0, "Unable to bind to pilot");
+ 		pi_close(listen_sd);
+ 		return -2;
+@@ -582,7 +582,7 @@
+ 
+ 		//Now we choose if we want everything or just the modified stuff
+ 		if (newdbs & type) {
+-			for (n = 0; dlp_ReadRecordByIndex(conn->socket, conn->database, n, buffer, &id, &size, &attr, &category) >= 0; n++) {
++			for (n = 0; dlp_ReadRecordByIndex(conn->socket, conn->database, n, buffer, &id, &attr, &category) >= 0; n++) {
+ 				//we have a record
+ 				unpackEntry(&entry, buffer, l, type);
+ 				entry.category = get_category_name_from_id(conn, category);
+@@ -592,7 +592,7 @@
+ 			}
+ 		} else {
+ 			while(1) {
+-				ret = dlp_ReadNextModifiedRec(conn->socket, conn->database, buffer, &id, &index, &size, &attr, &category);
++				ret = dlp_ReadNextModifiedRec(conn->socket, conn->database, buffer, &id, &index, &attr, &category);
+ 				if (ret < 0 ) {
+ 					break;
+ 				}
+@@ -741,7 +741,7 @@
+ 		//Modify a entry
+ 		palm_debug(conn, 2, "Modifying: %s", uid);
+ 		sscanf(uid, "uid-%[^-]-%ld", database, &id);
+-		if (dlp_ReadRecordById(conn->socket, conn->database, id, NULL, NULL, NULL, &attr, &category) < 0) {
++		if (dlp_ReadRecordById(conn->socket, conn->database, id, NULL, NULL, &attr, &category) < 0) {
+ 			palm_debug(conn, 1, "Unable to find entry i want to modify");
+ 			sync_set_requestfailed(conn->handle);
+ 			//Unlock our Mutex

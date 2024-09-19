@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:15 thomasklausner Exp $
+bin/mzclient
+lib/mono-zeroconf/MZClient.exe
+lib/mono-zeroconf/MZClient.exe.mdb
+lib/mono/gac/Mono.Zeroconf/4.0.0.90__e60c4f4a95e1099e/Mono.Zeroconf.dll
+lib/mono/gac/Mono.Zeroconf/4.0.0.90__e60c4f4a95e1099e/Mono.Zeroconf.dll.mdb
+lib/mono/gac/policy.1.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.1.0.Mono.Zeroconf.dll
+lib/mono/gac/policy.1.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.1.0.config
+lib/mono/gac/policy.2.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.2.0.Mono.Zeroconf.dll
+lib/mono/gac/policy.2.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.2.0.config
+lib/mono/gac/policy.3.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.3.0.Mono.Zeroconf.dll
+lib/mono/gac/policy.3.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.3.0.config
+lib/mono/gac/policy.4.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.4.0.Mono.Zeroconf.dll
+lib/mono/gac/policy.4.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.4.0.config
+lib/mono/mono-zeroconf/Mono.Zeroconf.dll
+lib/monodoc/sources/mono-zeroconf-docs.source
+lib/monodoc/sources/mono-zeroconf-docs.tree
+lib/monodoc/sources/mono-zeroconf-docs.zip
+lib/pkgconfig/mono-zeroconf.pc

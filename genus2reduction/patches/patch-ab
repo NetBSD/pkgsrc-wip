@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/05/09 20:20:10 jihbed Exp $
+
+--- Makefile.orig	1998-10-08 10:00:36.000000000 +0000
++++ Makefile	2010-11-20 16:33:34.000000000 +0000
+@@ -1,6 +1,6 @@
+ CC = gcc -O2
+-CFLAGS = -I/usr/local/include/pari
+-LFLAGS = -lpari -lm 
++CFLAGS = -I/usr/pkg/include/pari
++LFLAGS = -lpari-gmp -lm -lgmp
+ 
+ SRC=	genus2reduction.c
+ 

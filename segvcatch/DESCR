@@ -1,0 +1,5 @@
+This is a crossplatform C++ library designed to convert a hardware exceptions,
+such as segmentation fault, or floating point errors, into a software language
+exceptions, which can be handled later with a try/catch construction.
+
+Other words, it's a crossplatform structured exception handling (SEH).

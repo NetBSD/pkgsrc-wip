@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/16 00:06:13 kethzer-08 Exp $
+${PYSITELIB}/clickatell-${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/clickatell-${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/clickatell-${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/clickatell-${EGG_INFODIR}/requires.txt
+${PYSITELIB}/clickatell-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/clickatell/__init__.py
+${PYSITELIB}/clickatell/__init__.pyc
+${PYSITELIB}/clickatell/__init__.pyo
+${PYSITELIB}/clickatell/exception.py
+${PYSITELIB}/clickatell/exception.pyc
+${PYSITELIB}/clickatell/exception.pyo
+${PYSITELIB}/clickatell/http/__init__.py
+${PYSITELIB}/clickatell/http/__init__.pyc
+${PYSITELIB}/clickatell/http/__init__.pyo
+${PYSITELIB}/clickatell/rest/__init__.py
+${PYSITELIB}/clickatell/rest/__init__.pyc
+${PYSITELIB}/clickatell/rest/__init__.pyo

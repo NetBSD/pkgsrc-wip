@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/02 22:19:29 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/emlib/__init__.py
+${PYSITELIB}/emlib/__init__.pyc
+${PYSITELIB}/emlib/__init__.pyo
+${PYSITELIB}/emlib/emlib.py
+${PYSITELIB}/emlib/emlib.pyc
+${PYSITELIB}/emlib/emlib.pyo

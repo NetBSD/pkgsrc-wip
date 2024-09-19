@@ -1,0 +1,7 @@
+This is a QT Wrapper for OpenZWave and contains ozwdaemon --- a
+service that allows you to remotely manage a Z-Wave Network via
+ozw-admin or connect to a MQTT Broker.
+
+(The upstream README is hard to understand; for now this package
+should be expected to contain ozwdaemon, which is a bridge to MQTT to
+enable access by Home Assistant.)

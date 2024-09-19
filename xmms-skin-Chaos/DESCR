@@ -1,0 +1,50 @@
+Chaos XMMS Skin
+====================
+
+[ SKIN INFO ]
+
+SKIN NAME: chaos
+SKIN VERSION: 2.0
+DATE CREATED: DEC 30, 1999
+DATE MODIFIED: JAN 17, 20
+SKIN DESIGNER: Omar Hussain
+EMAIL: ohussain@hotmail.com
+SKIN GRAPHICS BY: Omar Hussain
+
+
+
+[ DESIGNER NOTES ]
+
+Thanks to artwiz for his excellent chaos theme for BlackBox - I never
+would have made this skin (obviously! :) if not for his theme.  I would
+just like to make it clear though, that I did all the graphics myself,
+from scratch, using artwiz' screenshot as reference - I didn't 'rip'
+anything. ;)
+
+I liked artwiz' chaos theme so much that I ported it to LiteStep - you can
+find the port (which also includes a matching WindowBlinds skin) at
+ohussain.tripod.com, along with my other themes.
+
+You know, the LiteStep community has gotten sooo much from the X community,
+I hope that this skin is taken as a _teeny_ _tiny_ gift from the LiteStep
+community to the X community... ;)
+
+Thank you for downloading this skin. :)
+
+Omar Hussain
+ohussain@hotmail.com
+ohussain.tripod.com
+
+
+
+[ CHANGE LOG ]
+
+V1.0
+	- None
+
+V2.0
+	- Added a skin for the cool Nullsoft AVS plugin (ummmm, this is
+	  useless for XMMS users ;)
+	- Added a grid behind the equalizer curve
+	- Redid the equalizer bars (they're _much_ better now ;)
+	- Added the colon that was missing in the playlist time display

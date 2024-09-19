@@ -1,0 +1,2 @@
+- Double-check and possibly fix wrong ctype(3) use (look at warnings when
+  building on NetBSD)

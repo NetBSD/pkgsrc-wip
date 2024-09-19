@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+
+--- lwlib/Makefile.in.in.orig	2005-11-13 03:04:59.000000000 +0100
++++ lwlib/Makefile.in.in
+@@ -59,9 +59,10 @@ cflags = $(CFLAGS) $(cppflags)
+ 
+ #ifdef SOLARIS2
+ %.o : %.c
+-#else
+-.c.o:
++	$(CC) -c $(cflags) $<
+ #endif
++
++.c.o:
+ 	$(CC) -c $(cflags) $<
+ 
+ ## Create preprocessor output (debugging purposes only)

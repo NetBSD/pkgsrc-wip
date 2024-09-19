@@ -1,0 +1,14 @@
+sdd is a replacement for a program called 'dd'.
+
+sdd is much faster than dd in cases where input block size (ibs) is not equal
+to the output block size (obs).
+
+Some features not found on 'dd':
+
+- Statistics are much better readable as from 'dd'.
+- rmt support for if= and of=.
+- Output file is sync'd before doing statistics.
+- Timing available (print transfer speed).
+- Seek on input and output
+- Fast null i/o.
+- Progress bar.

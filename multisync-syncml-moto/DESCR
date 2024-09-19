@@ -1,0 +1,9 @@
+SyncML support (supported by e.g. Motorola EZX and many other phones
+and devices, for example the SyncML server Sync4j). SyncML also allows you to
+do remote connection of two MultiSync programs via an encrypted connection
+over the net.
+
+MultiSync is a free modular program to synchronize calendars, addressbooks
+and other PIM data between programs on your computer and other computers,
+mobile devices, PDAs or cell phones. MultiSync works on any Gnome platform,
+such as Linux.

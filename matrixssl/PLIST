@@ -1,0 +1,27 @@
+@comment $NetBSD$
+include/matrixssl/core/coreApi.h
+include/matrixssl/core/coreConfig.h
+include/matrixssl/core/list.h
+include/matrixssl/core/osdep-types.h
+include/matrixssl/core/osdep.h
+include/matrixssl/core/psUtil.h
+include/matrixssl/core/psbuf.h
+include/matrixssl/core/psmalloc.h
+include/matrixssl/core/psnet.h
+include/matrixssl/crypto/cryptoApi.h
+include/matrixssl/crypto/cryptoCheck.h
+include/matrixssl/crypto/cryptoConfig.h
+include/matrixssl/crypto/cryptoImpl.h
+include/matrixssl/crypto/cryptolib.h
+include/matrixssl/matrixsslApi.h
+include/matrixssl/matrixsslCheck.h
+include/matrixssl/matrixsslConfig.h
+include/matrixssl/matrixsslImpl.h
+include/matrixssl/matrixsslNet.h
+include/matrixssl/matrixsslSocket.h
+include/matrixssl/matrixssllib.h
+include/matrixssl/psExt.h
+include/matrixssl/version.h
+lib/matrixssl/libcore_s.a
+lib/matrixssl/libcrypt_s.a
+lib/matrixssl/libssl_s.a

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2009/01/19 12:17:34 yhardy Exp $
+
+--- configure.in.orig	2008-10-29 14:42:13.000000000 +0200
++++ configure.in	2009-01-19 13:10:15.000000000 +0200
+@@ -13,7 +13,17 @@
+ 
+ PKG_CHECK_MODULES(ALSA, alsa >= 1.0.11)
+ AC_CHECK_LIB(asound, snd_pcm_ioplug_create,,
+-	     AC_ERROR([*** libasound has no external plugin SDK]), -ldl)
++	     AC_ERROR([*** libasound has no external plugin SDK]), $DL_LIBS)
++
++AH_TEMPLATE([HAVE_BYTESWAP_H],
++            [Define to 1 if you have the byteswap.h header file.])
++AC_CHECK_HEADER([byteswap.h], AC_DEFINE([HAVE_BYTESWAP_H], [1]))
++AH_TEMPLATE([HAVE_LINUX_SOUNDCARD_H],
++            [Define to 1 if you have the linux/soundcard.h header file.])
++AC_CHECK_HEADER([linux/soundcard.h], AC_DEFINE([HAVE_LINUX_SOUNDCARD_H], [1]))
++AH_TEMPLATE([HAVE_SOUNDCARD_H],
++            [Define to 1 if you have the soundcard.h header file.])
++AC_CHECK_HEADER([soundcard.h], AC_DEFINE([HAVE_SOUNDCARD_H], [1]))
+ 
+ PKG_CHECK_MODULES(JACK, jack >= 0.98, [HAVE_JACK=yes], [HAVE_JACK=no])
+ AM_CONDITIONAL(HAVE_JACK, test x$HAVE_JACK = xyes)

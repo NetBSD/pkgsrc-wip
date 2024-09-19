@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/12 23:24:04 jihbed Exp $
+
+--- ./discident-glib/test-diglib.c.orig	2010-06-08 19:44:12.000000000 +0000
++++ ./discident-glib/test-diglib.c	2010-06-08 19:44:28.000000000 +0000
+@@ -6,6 +6,8 @@
+ #include <discident-glib.h>
+ #include <discident-glib-private.h>
+ 
++#include <locale.h>
++
+ static gboolean option_async = FALSE;
+ static gboolean option_file_list = FALSE;
+ static guint num_queries = 0;

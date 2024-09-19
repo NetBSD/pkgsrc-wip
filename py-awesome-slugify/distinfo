@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (awesome-slugify-1.6.5.tar.gz) = b7faf1a2205e60d807b105819d555cefc9182bda
+SHA512 (awesome-slugify-1.6.5.tar.gz) = 3f8cc595cecc2a77b90bb800ea9ce889dbfa40427a4fc843f8f1caf90ddc6baa44d7195e6af2f8853c6038168f29da1d77a4ffd11a38d514140a07e4eb960c11
+Size (awesome-slugify-1.6.5.tar.gz) = 8405 bytes
+SHA1 (patch-setup.py) = 7190c47727d877bd8a6d882635735cf426c8ec40

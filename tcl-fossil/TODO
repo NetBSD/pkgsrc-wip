@@ -1,0 +1,36 @@
+Tests ended at Wed Oct 26 02:58:55 CEST 2016
+all.tcl:        Total   31278   Passed  29923   Skipped 1298    Failed  57
+Sourced 148 Test Files.
+Files with failing tests: aaa_exit.test async.test clock.test encoding.test http.test httpold.test
+Number of tests skipped for each constraint:
+        9       !ieeeFloatingPoint
+        3       asyncPipeChan
+        76      bigEndian
+        5       bug-3057639
+        49      dde
+        4       dontCopyLinks
+        63      emptyTest
+        2       hasIsoLocale
+        1       knownBadTest
+        39      knownBug
+        100     localeRegexp
+        48      longIs32bit
+        14      macosxFileAttr
+        78      memory
+        46      nonPortable
+        5       notNetworkFilesystem
+        9       nt
+        1       obsolete
+        1       pcOnly
+        1       recentZlib
+        3       singleTestInterp
+        1       testexprparser && !ieeeFloatingPoint
+        7       testpreferstable
+        1       testwinclock
+        21      testwordend
+        189     thread
+        2       unthreaded
+        2       wideBiggerThanInt
+        497     win
+        4       winVista
+        6       xdev

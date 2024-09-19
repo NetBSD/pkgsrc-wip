@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/18 11:39:11 rodo6510 Exp $
+bin/cgchat
+bin/cgedit
+bin/cgterm
+share/cgterm/10x12white.bmp
+share/cgterm/10x12yellow.bmp
+share/cgterm/bell.wav
+share/cgterm/german.kbd
+share/cgterm/lower.bmp
+share/cgterm/swedish.kbd
+share/cgterm/upper.bmp
+share/cgterm/us.kbd
+share/cgterm/windows.kbd

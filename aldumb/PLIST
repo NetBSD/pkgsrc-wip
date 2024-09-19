@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/aldumb.h
+lib/libaldmb.so
+lib/libaldmb.so.2
+lib/libaldmb.so.2.0

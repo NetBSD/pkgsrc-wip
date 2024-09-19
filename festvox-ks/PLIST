@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/30 13:21:27 noud4 Exp $
+share/festival/lib/etc/unknown_DebianGNULinux/.made
+share/festival/lib/etc/unknown_DebianGNULinux/audsp
+share/festival/lib/etc/unknown_DebianGNULinux/mbrola
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/diphlist.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_accent_def.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_dur.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_f0.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_int.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_intsint_f0.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_intsint_intonation.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_intsint_tree.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_ks_mbrola.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_lex.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_lts.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_number_decl.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_phones.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_plr.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_pointlr.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_tobi.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_tobi_f0.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_token.scm
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/mbrola-pl1/pl1
+share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/mbrola-pl1/pl1_phones
+@pkgdir share/festival/lib/etc/unknown_DebianGNULinux/tmp

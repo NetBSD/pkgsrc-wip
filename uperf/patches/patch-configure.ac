@@ -1,0 +1,26 @@
+$NetBSD$
+
+Add NetBSD support.
+
+--- configure.ac.orig	2017-09-11 12:26:20.000000000 +0000
++++ configure.ac
+@@ -45,6 +45,14 @@ case "$(uname -s)" in
+ 		UPERF_LIBS="$UPERF_LIBS -lrt -lm -pthread"
+ 		CFLAGS="-D_GNU_SOURCE $CFLAGS"
+ 		;;
++	NetBSD)
++		AC_MSG_NOTICE([*** NetBSD Machine ***])
++		AC_DEFINE([UPERF_NETBSD],[1],[Setting machine os to NetBSD])
++		good_os="no"
++		sctp_default="yes"
++		ssl_default="yes"
++		UPERF_LIBS="$UPERF_LIBS -lrt -lm -pthread"
++		;;
+ 	Linux)
+ 		AC_MSG_NOTICE([*** Linux Machine ***])
+ 		AC_DEFINE([UPERF_LINUX],[1],[Setting machine os to Linux])
+@@ -375,4 +383,3 @@ echo "+---------------------------------
+ printf "|%33s:%14s|\n" "Network stats collection enabled?" "$enable_netstat"
+ printf "|%33s:%14s|\n" "CPU Performance counters?"  "$cpc"
+ echo "+------------------------------------------------+"
+-

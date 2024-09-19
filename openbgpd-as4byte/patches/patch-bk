@@ -1,0 +1,30 @@
+--- bgpd/rde_filter.c.orig	2007-01-11 15:02:38.000000000 +1000
++++ bgpd/rde_filter.c	2007-01-11 16:37:36.000000000 +1000
+@@ -15,8 +15,16 @@
+  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
++
++/* +4-Byte AS:   modifications for 4 Byte AS Number Support - 
++                 Geoff Huston, January 2007 */
++
+ #include <sys/types.h>
++#if defined(__NetBSD__)
+ #include <limits.h>
++#else
++#include <sys/limits.h>
++#endif
+ #include <sys/queue.h>
+ 
+ #include <limits.h>
+@@ -249,8 +257,9 @@
+ 	int	as, type;
+ 
+ 	if (asp != NULL && f->match.as.type != AS_NONE)
++  	        /* +4-Byte AS:   as AS size parameter (4) */
+ 		if (aspath_match(asp->aspath, f->match.as.type,
+-		    f->match.as.as) == 0)
++				 f->match.as.as,4) == 0)
+ 			return (0);
+ 
+ 	if (asp != NULL && f->match.community.as != 0) {

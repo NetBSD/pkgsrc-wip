@@ -1,0 +1,14 @@
+$NetBSD$
+
+# Portability
+--- Inchworm/CMakeLists.txt.orig	2018-09-01 15:19:04 UTC
++++ Inchworm/CMakeLists.txt
+@@ -18,7 +18,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} 
+ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2 -march=native -DNDEBUG ")
+ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
+ 
+-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lm -ldl ")
++set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lm ")
+ 
+ MESSAGE(STATUS "system: ${CMAKE_SYSTEM_NAME}")
+ if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")

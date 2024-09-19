@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2006/10/26 19:33:30 rillig Exp $
+
+--- remove_dabusb.orig	2003-10-03 09:52:17.000000000 +0200
++++ remove_dabusb	2006-10-26 21:29:28.000000000 +0200
+@@ -29,7 +29,7 @@ PPPD_DIR="/etc/ppp"
+ VERSION=""
+ # </CONFIG>
+ 
+-if [ "$1" == "--version" -o "$1" == "-v" ]
++if [ "$1" = "--version" -o "$1" = "-v" ]
+ then
+ 	echo "$VERSION"
+ 	exit 0
+@@ -42,7 +42,7 @@ then
+ fi
+ 
+ lsmod | grep -q dabusb
+-if [ $? -eq 0 -o "$1" == "--force" ]
++if [ $? -eq 0 -o "$1" = "--force" ]
+ then
+ 	module=$(modprobe -l | grep dabusb)
+ 	if [ -n "$module" ]

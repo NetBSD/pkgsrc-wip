@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Raytracing/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Raytracing/CMakeLists.txt
+@@ -10,7 +10,7 @@ INSTALL(
+         InitGui.py
+         RaytracingExample.py
+     DESTINATION
+-        Mod/Raytracing
++        freecad/Mod/Raytracing
+ )
+ 
+ INSTALL(

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/05 23:02:16 amoibos Exp $
+bin/xwindiff

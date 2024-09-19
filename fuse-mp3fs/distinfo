@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.2 2015/06/06 15:22:29 thomasklausner Exp $
+
+RMD160 (mp3fs-0.91.tar.gz) = 1992a61ba191dc8e73f5fcf29ef1a2aae040587c
+Size (mp3fs-0.91.tar.gz) = 357098 bytes
+SHA1 (patch-configure) = 8d62bab94726d9749b4172977216c005cd52c4c0
+SHA1 (patch-src_fuseops.c) = e06ac97f2e0da969ecc33357f68cb73c7b01035e
+SHA1 (patch-src_mp3fs.c) = a0e404fa74d6a6be71a9d635615326d6d02e8e44

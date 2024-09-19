@@ -1,0 +1,51 @@
+$NetBSD$
+--- src/main.c.orig	2008-11-23 11:42:19.000000000 +0000
++++ src/main.c	2008-11-23 14:38:51.000000000 +0000
+@@ -25,8 +25,6 @@
+ #include "ui-callbacks.c"
+ #include "storage.c"
+ 
+-static int errno = 0;
+-
+ static gboolean (*glista_dnd_old_drag_data_received)(
+ 	GtkTreeDragDest *drag_dest, GtkTreePath *dest, 
+ 	GtkSelectionData *selection_data);
+@@ -1254,19 +1252,23 @@
+  * Returns: TRUE if directory exists or was successfuly created, or FALSE if 
+  * there was an error creating it.
+  */
++
+ static gboolean
+ glista_cfg_check_dir()
+ {
++
++  GError *err = NULL ;
++
+ 	if (! g_file_test(gl_globs->configdir, G_FILE_TEST_IS_DIR)) {
+ 		if (! g_file_test(gl_globs->configdir, G_FILE_TEST_EXISTS)) {
+ 			
+ 			// Create the directory
+-			errno = 0;
++			
+ 			if (g_mkdir_with_parents(gl_globs->configdir, 0700) != 0) {
+ 				// We have an error!
+ 				g_printerr("Error creating configuration directory: %d\n",
+-				            errno);
+-				
++				            err->message);
++                                g_error_free(err); 	
+ 				return FALSE;
+ 	        }
+ 	        
+@@ -1277,10 +1279,10 @@
+ 			return FALSE;
+ 		}
+ 	}
+-	
+ 	return TRUE;
+ }
+ 
++
+ /**
+  * glista_cfg_init_load:
+  * 

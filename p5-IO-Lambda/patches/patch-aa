@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/28 12:07:23 uccwen Exp $
+
+--- Makefile.PL.orig	2010-02-28 19:47:32.000000000 +0000
++++ Makefile.PL
+@@ -25,7 +25,7 @@ that try to query live nameservers and g
+ 	
+ EOT
+ 	
+-		$online_tests = prompt("Do you want to enable these tests?", "y") =~ /^y/i ? 1 : 0;
++		$online_tests = 0;
+ 	}
+ }
+ 

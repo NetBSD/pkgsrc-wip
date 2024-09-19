@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2009/11/05 19:40:07 christtrekker Exp $
+
+RMD160 (lcdproc-0.5.9.tar.gz) = 6f23befdbea6ea59f4a646230f05719622cad79f
+SHA512 (lcdproc-0.5.9.tar.gz) = 48e11a587570376b9524591f4c23deace9ac1609b83ba9e17f2a4e950d5598f8f88b580ca01c174ec9c2ef98b1eef7ac274c23ca3541d4d7ff918af0598c6a25
+Size (lcdproc-0.5.9.tar.gz) = 1091292 bytes
+SHA1 (patch-clients_lcdproc_machine__NetBSD.c) = c51bfbece8a5ebc4e9949f3b3289994459b8dd85

@@ -1,0 +1,2 @@
+python-premailer converts HTML with style tags into HTML with
+inline style attributes; gmail won?t render nice without it!

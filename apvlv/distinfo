@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2010/01/24 12:42:23 leot1990 Exp $
+
+RMD160 (apvlv-0.1.5.tar.gz) = 5b9c491ec036d7b8720718033d3f683abb98a446
+SHA512 (apvlv-0.1.5.tar.gz) = 680b2d6e272cda34b0b9065f5fdf7b917a4e3ed4d54a6e78cb41a60cf43374c687b506d4148d6cecf87912957fbe6bc4c77e9278616fd236e49ade15774e1ccd
+Size (apvlv-0.1.5.tar.gz) = 4254177 bytes
+SHA1 (patch-src_ApvlvPdf.cc) = 3bdbe4fac3b3e1c7da7398598553d3d44f7df83f

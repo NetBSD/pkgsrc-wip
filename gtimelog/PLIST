@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/30 21:11:34 shindenmorr Exp $
+bin/gtimelog
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/gtimelog/__init__.py
+${PYSITELIB}/gtimelog/__init__.pyc
+${PYSITELIB}/gtimelog/__init__.pyo
+${PYSITELIB}/gtimelog/gtimelog-large.png
+${PYSITELIB}/gtimelog/gtimelog-small-bright.png
+${PYSITELIB}/gtimelog/gtimelog-small.png
+${PYSITELIB}/gtimelog/gtimelog.png
+${PYSITELIB}/gtimelog/gtimelog.ui
+${PYSITELIB}/gtimelog/main.py
+${PYSITELIB}/gtimelog/main.pyc
+${PYSITELIB}/gtimelog/main.pyo
+${PYSITELIB}/gtimelog/test_gtimelog.py
+${PYSITELIB}/gtimelog/test_gtimelog.pyc
+${PYSITELIB}/gtimelog/test_gtimelog.pyo

@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.4 2011/05/09 04:32:25 makoto Exp $
+
+;; (1) README FILE is at
+;; ${PREFIX}/share/anthy/egg-anthy.readme (in Japanese, sorry).
+;;
+;; (2) Type C-u C-\ and select "japanese-egg-anthy".
+;;     or you may set this is default as:
+     (setq default-input-method "japanese-egg-anthy")
+;;     in your init file (~/.emacs etc).
+;;
+;; (3) You may need following line in init file to work
+;;     M-x egg-toroku-region correctly
+;;     with recent UCS(UTF-8) enabled emacs.
+      (setq anthy-egg-use-utf8 t)
+;; (4) use C-\ to switch Japanese Kana or Alphanumeric input.
+===========================================================================

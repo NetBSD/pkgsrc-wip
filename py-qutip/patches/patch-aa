@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2015/01/02 23:29:11 jihbed Exp $
+
+--- qutip/control/setup.py.orig	2015-01-02 21:26:17.000000000 +0100
++++ qutip/control/setup.py	2015-01-02 22:44:36.000000000 +0100
+@@ -19,7 +19,7 @@
+             ext, sources=[ext + ".pyx"],
+             include_dirs=[np.get_include()],
+             extra_compile_args=[
+-                '-w -ffast-math -O3 -march=native -mfpmath=sse'],
++                '-w -ffast-math -O3 -mfpmath=sse'],
+             extra_link_args=[])
+ 
+     config.ext_modules = cythonize(config.ext_modules)
+@@ -35,5 +35,5 @@
+         ext_modules=[Extension(
+             ext, [ext + ".pyx"],
+             extra_compile_args=['-w', '-ffast-math', '-O3',
+-                                '-march=native', '-mfpmath=sse'],
++                                 '-mfpmath=sse'],
+             extra_link_args=[]) for ext in exts])
+\ No newline at end of file

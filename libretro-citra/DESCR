@@ -1,0 +1,9 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+Citra is a work-in-progress Nintendo 3DS emulator started in early
+2014. Citra can currently emulate, with varying degrees of success,
+a wide variety of different homebrew applications and commercial software.

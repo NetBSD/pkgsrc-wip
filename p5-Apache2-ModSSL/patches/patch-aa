@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/06/28 22:34:43 tonnerre Exp $
+
+--- ModSSL.xs.orig	2008-04-02 20:25:32.000000000 +0200
++++ ModSSL.xs
+@@ -1,4 +1,4 @@
+-#include <mod_perl.h>
++#include <httpd/mod_perl.h>
+ 
+ /* mod_ssl.h is not safe for inclusion in 2.0, so duplicate the
+  * optional function declarations. */

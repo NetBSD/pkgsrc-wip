@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.5 2015/11/03 01:20:25 agc Exp $
+
+RMD160 (telepathy-logger-0.8.2.tar.bz2) = c68a859d9434cdceb8a82788d72e58611616b2ce
+SHA512 (telepathy-logger-0.8.2.tar.bz2) = f3eda26133a4c38eeb79b01cbe3b7801a5eb773e8b4e6ce621c47d3ca701025364c6b2b890caea00104f01ba85ae891a6fad82d7a9dc487fd7a980221cede451
+Size (telepathy-logger-0.8.2.tar.bz2) = 562670 bytes
+SHA1 (patch-aa) = a01f17f1e6c7cf01fd7b684de01df47b473dec61
+SHA1 (patch-telepathy-logger_log-store_pidgin.c) = fcbd75747ef2b25a88f3de9b6d88f77aa948da25

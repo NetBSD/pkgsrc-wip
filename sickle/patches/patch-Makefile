@@ -1,0 +1,31 @@
+$NetBSD$
+
+# patching Makefile
+--- Makefile.orig	2014-07-23 02:03:28 UTC
++++ Makefile
+@@ -1,16 +1,18 @@
+ PROGRAM_NAME = sickle
+ VERSION = 1.33
+-CC = gcc
+-CFLAGS = -Wall -pedantic -DVERSION=$(VERSION)
+-DEBUG = -g
+-OPT = -O3
++CC ?= gcc
++CFLAGS ?= -Wall -pedantic -DVERSION=$(VERSION)
++DEBUG ?= -g
++OPT ?= -O3
+ ARCHIVE = $(PROGRAM_NAME)_$(VERSION)
+-LDFLAGS=
+-LIBS = -lz
+-SDIR = src
++LDFLAGS ?=
++LIBS= -lz
++SDIR ?= src
+ 
+ .PHONY: clean default build distclean dist debug
+ 
++all:	build
++
+ default: build
+ 
+ sliding.o: $(SDIR)/sliding.c $(SDIR)/kseq.h $(SDIR)/sickle.h

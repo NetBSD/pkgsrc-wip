@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.5 2013/01/21 00:38:46 othyro Exp $
+bin/gksu
+bin/gksudo
+lib/nautilus/extensions-2.0/libnautilus-gksu.la
+man/man1/gksu.1
+man/man1/gksudo.1
+share/applications/gksu.desktop
+share/gksu/gksu-migrate-conf.sh
+share/pixmaps/gksu-icon.png
+share/pixmaps/gksu-root-terminal.png

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2008/02/09 18:15:43 ishit Exp $
+
+--- Makefile.orig	2007-07-21 19:54:44.000000000 +0900
++++ Makefile
+@@ -1,6 +1,6 @@
+ BIN = mathopd
+-CC = gcc
+-CFLAGS = -O -Wall
++# CC = gcc
++# CFLAGS = -O -Wall
+ CPPFLAGS = 
+ LDFLAGS = 
+ LIBS = -lcrypt

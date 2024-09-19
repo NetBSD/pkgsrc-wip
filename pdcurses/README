@@ -1,0 +1,4 @@
+Intended as update for devel/pdcurses.
+
+This version (or only the package) seems to be broken!
+Tested with news/tin: The article list is not displayed correctly.

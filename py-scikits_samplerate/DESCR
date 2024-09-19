@@ -1,0 +1,2 @@
+Samplerate is a small python package to do high quality audio resampling for
+data in numpy arrays; IOW, it is a matlab resample replacement

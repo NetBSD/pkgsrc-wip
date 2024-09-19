@@ -1,0 +1,14 @@
+$NetBSD: patch-fsusage,v 1.1 2006/02/12 14:07:28 rillig Exp $
+
+--- src/fsusage.c.orig	2003-04-28 11:33:37.000000000 +0200
++++ src/fsusage.c	2006-02-12 13:57:57.000000000 +0100
+@@ -18,7 +18,8 @@
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>
+ #endif
+-#if !defined(NO_INFOMOUNT) || defined(__QNX__)
++
++#if !defined(NO_INFOMOUNT) || defined(__QNX__) || defined(STAT_STATVFS)
+ 
+ #if defined(__QNX__)
+ #define STAT_STATFS4

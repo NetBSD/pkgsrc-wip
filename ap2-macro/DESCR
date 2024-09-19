@@ -1,0 +1,4 @@
+mod_macro is a third-party module to the Apache HTTP Server, distributed with
+a BSD-style license like Apache. It allows the definition and use of macros
+within Apache runtime configuration files. The syntax is a natural extension
+to Apache HTML-like configuration style.

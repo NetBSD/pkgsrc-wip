@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# signal devices to hal daemon
+#
+FIFO=/tmp/halfifo
+ACTION=$1
+DEV=$2
+
+/usr/bin/logger $0 $*
+
+if [ -p $FIFO ]
+then
+	(echo $1 $2 >> $FIFO)&
+fi
+
+case ${ACTION} in
+device-attach)
+	case ${DEV} in
+	sd*)
+		pkill -hup gvfs-hal-volume-monitor
+	;;
+	esac
+;;
+device-detach)
+;;
+esac

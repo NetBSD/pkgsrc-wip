@@ -1,0 +1,4 @@
+I2 Utility library. Currently contains:
+ * error logging
+ * command-line parsing
+ * threading

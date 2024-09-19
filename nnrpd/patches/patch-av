@@ -1,0 +1,13 @@
+$NetBSD: patch-av,v 1.1 2005/01/30 22:51:34 hfath Exp $
+
+--- nnrpd/perl.c.orig	1997-12-09 00:48:50.000000000 +0100
++++ nnrpd/perl.c
+@@ -32,6 +32,8 @@ static void use_rcsid (const char *rid) 
+ extern BOOL PerlFilterActive;
+ extern HEADER	Table[], *EndOfTable;
+ extern char LogName[];
++extern PerlInterpreter *my_perl;
++
+ 
+ char *
+ HandleHeaders()

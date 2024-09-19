@@ -1,0 +1,6 @@
+SPatt (Statistic for Patterns) is a suite of C++ programs designed for
+the computation of pattern occurrences p-value on text. Assuming the text
+is generated according to Markov model, the p-value of a given observation
+is its probability to occur. The lower is the p-value, the more unlikely is
+the observation. For example, this tools can be used to find patterns with
+unusual behaviour in DNA sequences

@@ -1,0 +1,21 @@
+@comment $NetBSD$
+emul/netbsd32/bin/cjpeg
+emul/netbsd32/bin/djpeg
+emul/netbsd32/bin/jpegexiforient
+emul/netbsd32/bin/jpegtran
+emul/netbsd32/bin/rdjpgcom
+emul/netbsd32/bin/wrjpgcom
+emul/netbsd32/include/jconfig.h
+emul/netbsd32/include/jerror.h
+emul/netbsd32/include/jmorecfg.h
+emul/netbsd32/include/jpeglib.h
+emul/netbsd32/lib/libjpeg.la
+emul/netbsd32/lib/pkgconfig/libjpeg.pc
+emul/netbsd32/man/man1/cjpeg.1
+emul/netbsd32/man/man1/djpeg.1
+emul/netbsd32/man/man1/jpegtran.1
+emul/netbsd32/man/man1/rdjpgcom.1
+emul/netbsd32/man/man1/wrjpgcom.1
+@pkgdir share/doc/jpeg
+@pkgdir include
+@pkgdir bin

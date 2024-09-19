@@ -1,0 +1,8 @@
+PySmell is a python IDE completion helper.
+
+It tries to statically analyze Python source code, without executing it,
+and generates information about a project's structure that IDE tools can
+use.
+
+PySmell currently supports Vim, Emacs and TextMate. It can be integrated with
+any editor that can run Python scripts and has an auto-complete API

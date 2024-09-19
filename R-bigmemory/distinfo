@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2012/11/15 23:16:08 bubuchka Exp $
+
+RMD160 (R/bigmemory_4.5.33.tar.gz) = 5fd529ec1f740aa29b79bbdf9540973cb7b4bb7d
+SHA512 (R/bigmemory_4.5.33.tar.gz) = e864f55e4f3ee672d0e57cc85721fe06705f297ad41d0c72f66518077e575866aca653f90cbb9345e9fe10f55cf402373ec2f21f4b9cc2cc93c3f68ee5ec0a9c
+Size (R/bigmemory_4.5.33.tar.gz) = 243135 bytes
+SHA1 (patch-aa) = 02adcc82e5673df1c2a8f135e098e3217ef2fb3f

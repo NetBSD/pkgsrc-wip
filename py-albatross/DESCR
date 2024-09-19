@@ -1,0 +1,24 @@
+Albatross is a small and flexible toolkit for developing highly stateful web
+applications. The toolkit provides the following:
+* Browser based sessions via automatically generated hidden form fields
+  (cryptographically signed to ensure integrity).
+* Server side sessions via a session server or file based session store.
+* Powerful and extensible templating system which promotes separation of
+  presentation and implementation for improved program maintainability.
+* Pagination of sequences and tree browsing are handled implicitly in the
+  templating system.
+* Macros allow repeated HTML and special effects HTML to be defined in one
+  location.
+* Lookup tables translate internal program values to arbitrary template code.
+* Applications can be deployed as either CGI programs or as mod_python module
+  with minor changes to program mainline. Custom deployment can be achieved
+  by developing your own Request class.
+* Highly modular application framework which is flexible and extensible which
+  allows many different application construction models. Eight Application
+  classes are provided while many more are possible.
+* Comprehensive documentation including many installable samples.
+
+A primary design goal of Albatross is that it be small and easy to use and
+extend. Most of the toolkit is constructed from a collection of mixin classes.
+You are encouraged to look at the code and to think of new ways to combine the
+Albatross mixin classes with your own classes.

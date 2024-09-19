@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- jemboss/lib/axis/Makefile.in.orig	Thu Jul 22 12:53:05 2004
++++ jemboss/lib/axis/Makefile.in	Thu Jul 22 12:54:20 2004
+@@ -179,9 +179,9 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-pkgdata_DATA = axis-ant.jar axis.jar  \
++pkgdata_DATA = axis-ant.jar  \
+ commons-discovery.jar commons-logging.jar jaxrpc.jar \
+-log4j-1.2.8.jar saaj.jar servlet.jar wsdl4j.jar
++log4j-1.2.8.jar saaj.jar wsdl4j.jar
+ 
+ all: all-am
+ 

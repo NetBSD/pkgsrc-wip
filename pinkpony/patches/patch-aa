@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/18 13:44:03 ryo-on Exp $
+
+--- SConstruct.orig	2009-08-19 13:38:38.000000000 +0000
++++ SConstruct
+@@ -1,6 +1,6 @@
+ import os
+ 
+-env = Environment()
++env = Environment(ENV=os.environ)
+ env['CC'] = 'g++'
+ env['CCFLAGS'] = '-Wall -Wextra -Wno-unused-parameter -O2 -I/usr/include/OpenEXR -I./lib -I./external/tinyXML'
+ env['LIBS'] = ['GLU', 'GL', 'protobuf', 'IL', 'ILUT', 'audiere']

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/09/30 15:39:59 hfath Exp $
+
+--- libcnews/lock.c.orig	Mon Jan 31 06:27:13 1994
++++ libcnews/lock.c
+@@ -42,7 +42,7 @@
+ 	int locktries = 0;
+ 
+ 	tempnm = strsave(ctlfile(LOCKTEMP));
+-	(void) mktemp(tempnm);
++	(void) mkstemp(tempnm);
+ 	tempfp = fopen(tempnm, "w");
+ 	if (tempfp == NULL)
+ 		GRUMP("can't create lock temporary `%s'", tempnm);

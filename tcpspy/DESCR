@@ -1,0 +1,3 @@
+tcpspy is an administrator's tool that logs information about incoming
+and outgoing TCP/IP connections including local address, remote
+address, and the username of the user responsible for the connection.

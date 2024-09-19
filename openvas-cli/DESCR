@@ -1,0 +1,6 @@
+The Open Vulnerability Assessment System (OpenVAS) is a framework of several
+services and tools offering a comprehensive and powerful vulnerability scanning
+and vulnerability management solution.
+
+The module OpenVAS-CLI collects command line tools to handle with the OpenVAS
+services via the respective protocols.

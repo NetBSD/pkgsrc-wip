@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/19 22:21:20 hisazumi Exp $
+man/man5/metalog.conf.5
+man/man8/metalog.8
+sbin/metalog

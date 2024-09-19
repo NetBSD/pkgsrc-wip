@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/06/05 16:52:27 jihbed Exp $
+
+--- ./src/main.c.orig	2009-06-05 01:31:24.000000000 +0000
++++ ./src/main.c	2009-06-05 01:42:12.000000000 +0000
+@@ -1527,7 +1527,9 @@
+       int c;
+ 
+       while (1) {
+-	c=getopt_long_only(argc,argv,"",longopts,&option_index);
++#ifdef __NetBSD__ /*Change method getopt_long_only on getopt_long*/
++	c=getopt_long(argc,argv,"",longopts,&option_index);
++#endif
+ 	if (c==-1) break; // end of options
+ 	charopt=longopts[option_index].name;
+ 	if (!strcmp(charopt,"norecover")) {

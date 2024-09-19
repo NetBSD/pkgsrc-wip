@@ -1,0 +1,10 @@
+$NetBSD: patch-au,v 1.1.1.1 2003/04/29 09:22:28 thomasklausner Exp $
+
+--- /dev/null	2003-04-28 11:51:32.000000000 +0100
++++ src/lib/env/netbsd/common/80x86/default.extra	2003-04-28 11:48:45.000000000 +0100
+@@ -0,0 +1,5 @@
+++MACHINE	"netbsd-*-80x86"
+++AS		"/usr/bin/as"
+++LD		"/usr/bin/ld -e start -dc -dp"
+++CC		"/usr/bin/cc"
+++CRT0		"/usr/lib/crt0.o"

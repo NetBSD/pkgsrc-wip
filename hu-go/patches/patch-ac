@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- iniconfig.c.orig	2004-06-15 22:13:53.000000000 +0200
++++ iniconfig.c
+@@ -16,7 +16,7 @@
+ #include "iniconfig.h"
+ #include "utils.h"
+ 
+-#if !defined(WIN32) && !defined(SOLARIS)
++#if !defined(WIN32) && !defined(SOLARIS) && !defined(NETBSD)
+ #include <argp.h>
+ #endif
+ 
+@@ -408,7 +408,7 @@ set_arg (char nb_arg, const char *val)
+     }
+ }
+ 
+-#if !defined(WIN32) && !defined(SOLARIS)
++#if !defined(WIN32) && !defined(SOLARIS) && !defined(NETBSD)
+ 
+ //! program header for GNU argp function
+ const char *argp_program_version = "Hu-Go! 2.11";
+@@ -606,13 +606,13 @@ static struct argp argp = { options, par
+ void
+ parse_commandline (int argc, char **argv)
+ {
+-#if defined(WIN32) || defined(SOLARIS)
++#if defined(WIN32) || defined(SOLARIS) || defined(NETBSD)
+   char next_arg, i, arg_error = 0;
+ #endif
+ 
+   Log ("--[ PARSING COMMAND LINE ]--------------------------\n");
+ 
+-#if !defined(WIN32) && !defined(SOLARIS)
++#if !defined(WIN32) && !defined(SOLARIS) && !defined(NETBSD)
+   argp_parse (&argp, argc, argv, 0, 0, &option);
+ #else
+   next_arg = 0;

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.5 2015/08/17 15:34:47 fhajny Exp $
+
+RMD160 (wkhtmltox-0.12.2.1.tar.bz2) = b5081626d9f4617ee1b4555d1f0ed7514dbb5771
+Size (wkhtmltox-0.12.2.1.tar.bz2) = 36248626 bytes
+SHA1 (patch-qt_mkspecs_solaris-g++-64_qmake.conf) = d61da21fe0ae9ed29a8f9fefb8e46a8dc7fd6fe3
+SHA1 (patch-qt_src_3rdparty_sqlite_sqlite3.c) = 6c32831ef77792b532c701d8cd049b4743d689a4
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 11f8fc8e810c368487be1a4602793efa980bab09
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp) = d48814456e8ed635de9a541b7d733d07bf320cd2
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_MathExtras.h) = a35e8ecd2f6d2651744c7a6907744e5aaa8081ee
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Platform.h) = f8eed33ca51748bbaade830ff7e9bb098833a0df
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_StringImpl.h) = 71bad3d443a195af66961bcb0ebda982d608ddd8
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = b2569015db79d0ba002444dc799143243cc32fa9

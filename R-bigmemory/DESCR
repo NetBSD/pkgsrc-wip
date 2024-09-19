@@ -1,0 +1,4 @@
+Create, store, access, and manipulate massive matrices. Matrices
+are allocated to shared memory and may use memory-mapped files.
+Advanced functionality can further be added with biganalytics,
+bigtabulate, synchronicity, and bigalgebra packages.

@@ -1,0 +1,12 @@
+The HTML::TagCloud module enables you to generate "tag clouds"
+in HTML. Tag clouds serve as a textual way to visualize terms
+and topics that are used most frequently.  The tags are sorted
+alphabetically and a larger font is used to indicate more frequent term usage.
+
+Example sites with tag clouds: <http://www.43things.com/>,
+<http://www.astray.com/recipes/> and <http://www.flickr.com/photos/tags/>.
+
+This module provides a simple interface to generating a CSS-based HTML tag
+cloud.  You simply pass in a set of tags, their URL and their count. This
+module outputs stylesheet-based HTML. You may use the included CSS or
+use your own.

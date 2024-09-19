@@ -1,0 +1,1 @@
+improve CFLAGS and CCFLAGS using -D_NETBSD_SOURCE.

@@ -1,0 +1,63 @@
+$NetBSD$
+
+Don't use the special gcc-ar, gcc-ranlib when not building with LTO.
+NetBSD's gcc distribution doesn't include these.
+
+https://github.com/Arisotura/melonDS/pull/1018
+
+Don't override pkgsrc CFLAGS.
+
+--- CMakeLists.txt.orig	2020-12-25 13:42:23.000000000 +0000
++++ CMakeLists.txt
+@@ -66,15 +66,6 @@ if (ENABLE_OGLRENDERER)
+     add_definitions(-DOGLRENDERER_ENABLED)
+ endif()
+ 
+-if (CMAKE_BUILD_TYPE STREQUAL Debug)
+-	add_compile_options(-Og)
+-endif()
+-
+-if (CMAKE_BUILD_TYPE STREQUAL Release)
+-	add_compile_options(-O3)
+-	add_link_options(-s)
+-endif()
+-
+ if (WIN32)
+ 	option(BUILD_STATIC "Statically link dependencies" OFF)
+ endif()
+@@ -87,18 +78,17 @@ if (ENABLE_LTO)
+ 		add_compile_options(-flto -fPIC)
+ 		add_link_options(-flto -fuse-linker-plugin -pie)
+ 	endif()
+-endif()
+-
+-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-	set(CMAKE_AR "gcc-ar")
+-	set(CMAKE_RANLIB "gcc-ranlib")
+-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+-	find_program(LLD NAMES ld.lld ld64.lld lld-link)
+-	if (NOT LLD STREQUAL "LLD-NOTFOUND")
+-		add_link_options(-fuse-ld=lld)
++	if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
++		set(CMAKE_AR "gcc-ar")
++		set(CMAKE_RANLIB "gcc-ranlib")
++	elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
++		find_program(LLD NAMES ld.lld ld64.lld lld-link)
++		if (NOT LLD STREQUAL "LLD-NOTFOUND")
++			add_link_options(-fuse-ld=lld)
++		endif()
++		set(CMAKE_AR "llvm-ar")
++		set(CMAKE_RANLIB "llvm-ranlib")
+ 	endif()
+-	set(CMAKE_AR "llvm-ar")
+-	set(CMAKE_RANLIB "llvm-ranlib")
+ endif()
+ 
+ option(BUILD_QT_SDL "Build Qt/SDL frontend" ON)
+@@ -107,4 +97,4 @@ add_subdirectory(src)
+ 
+ if (BUILD_QT_SDL)
+ 	add_subdirectory(src/frontend/qt_sdl)
+-endif()
+\ No newline at end of file
++endif()

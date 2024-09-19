@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/05/24 14:05:14 jihbed Exp $
+
+--- hijra-autostart.desktop.orig	2008-06-28 06:23:51.000000000 +0000
++++ hijra-autostart.desktop	2009-05-24 12:57:38.000000000 +0000
+@@ -4,11 +4,11 @@
+ Name[ar]=بريمج هجرة
+ Comment=Hijri calendar in system tray icon
+ Comment[ar]=بريمج تقويم هجري
+-Exec=/usr/bin/HijriApplet --hidden
++Exec=/usr/pkg/bin/HijriApplet --hidden
+ Terminal=false
+ Type=Application
+ Icon=gnome-calendar
+ X-KDE-autostart-after=panel
+ StartupNotify=false
+-Categories=GTK;Monitor;System;X-Red-Hat-Base;
++Categories=GTK;Office;Calendar;X-Red-Hat-Base;
+ 

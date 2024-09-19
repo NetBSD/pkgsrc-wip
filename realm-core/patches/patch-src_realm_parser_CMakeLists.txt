@@ -1,0 +1,9 @@
+$NetBSD$
+
+--- src/realm/parser/CMakeLists.txt.orig	2020-06-30 08:11:11.000000000 +0000
++++ src/realm/parser/CMakeLists.txt
+@@ -49,4 +49,3 @@ if(NOT REALM_SKIP_SHARED_LIB)
+             LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT runtime
+             RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT runtime)
+ endif()
+-

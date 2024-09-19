@@ -1,0 +1,11 @@
+--- configure.ac.orig	2017-02-06 23:32:07.937678117 -0800
++++ configure.ac	2017-02-06 23:32:28.321467607 -0800
+@@ -133,7 +133,7 @@
+     enable_openssl=yes
+   fi
+ else
+-  if test "x$use_openssl" == "xyes" -a "x$have_openssl" != "xyes"; then
++  if test "x$use_openssl" = "xyes" -a "x$have_openssl" != "xyes"; then
+     AC_MSG_ERROR([OpenSSL support explicitly requested but OpenSSL could not be found])
+   fi
+ fi

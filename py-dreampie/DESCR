@@ -1,0 +1,9 @@
+This Python shell permits to work in a more productive way with
+Python interpreter providing features not yet implemented in
+standard Python IDE:
+
+ * automatic completion of attributes and file names
+ * display of function arguments and documentation
+ * result history to execute a given code at a later time
+ * history dump on HTML files for future reference
+ * support for Python 2.5, Python 2.6, Python 3.1, Jython 2.5, IronPython 2.6

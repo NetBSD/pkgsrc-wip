@@ -1,0 +1,54 @@
+The build seems to fail early with:
+
+[...]
+        Libgcrypt v1.8.4 has been configured as follows:
+
+        Platform:                  NetBSD (x86_64--netbsd)
+        Hardware detection module: hwf-x86
+        Enabled cipher algorithms: arcfour blowfish cast5 des aes twofish
+                                   serpent rfc2268 seed camellia idea salsa20
+                                   gost28147 chacha20
+        Enabled digest algorithms: crc gostr3411-94 md4 md5 rmd160 sha1
+                                   sha256 sha512 sha3 tiger whirlpool stribog
+                                   blake2
+        Enabled kdf algorithms:    s2k pkdf2 scrypt
+        Enabled pubkey algorithms: dsa elgamal rsa ecc
+        Random number generator:   default
+        Try using jitter entropy:  yes
+        Using linux capabilities:  no
+        Try using Padlock crypto:  no
+        Try using AES-NI crypto:   no
+        Try using Intel PCLMUL:    yes
+        Try using Intel SSE4.1:    yes
+        Try using DRNG (RDRAND):   yes
+        Try using Intel AVX:       yes
+        Try using Intel AVX2:      yes
+        Try using ARM NEON:        n/a
+        Try using ARMv8 crypto:    n/a
+
+=> Modifying libtool scripts to use pkgsrc libtool
+=> Modifying libtool scripts to use pkgsrc depcomp
+socklen=`/usr/bin/grep '^#define socklen_t' /tmp/pkgsrc/wip/libgcrypt-32/work/libgcrypt-1.8.4/config.h || true`;  /bin/mv /tmp/pkgsrc/wip/libgcrypt-32/work/libgcrypt-1.8.4/src/gcrypt.h /tmp/pkgsrc/wip/libgcrypt-32/work/libgcrypt-1.8.4/src/gcrypt.h.old;  /usr/bin/sed -e "s,^/\* socklen_t \*/,$socklen,"  /tmp/pkgsrc/wip/libgcrypt-32/work/libgcrypt-1.8.4/src/gcrypt.h.old > /tmp/pkgsrc/wip/libgcrypt-32/work/libgcrypt-1.8.4/src/gcrypt.h
+===> Building for compat32_libgcrypt-1.8.4
+--- all ---
+/usr/bin/make  all-recursive
+--- all-recursive ---
+Making all in compat
+--- compat.lo ---
+/bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I..  -I../src -I../src -I/usr/pkg/include -I/usr/pkg/include -I/usr/include   -O2 -m32 -pipe -O2 -march=haswell -D_FORTIFY_SOURCE=2 -I/usr/pkg/include -I/usr/include -fvisibility=hidden -fno-delete-null-pointer-checks -Wall -MT compat.lo -MD -MP -MF .deps/compat.Tpo -c -o compat.lo compat.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I../src -I/tmp/pkgsrc/wip/libgcrypt-32/work/.buildlink/include -O2 -m32 -pipe -O2 -march=haswell -D_FORTIFY_SOURCE=2 -fvisibility=hidden -fno-delete-null-pointer-checks -Wall -MT compat.lo -MD -MP -MF .deps/compat.Tpo -c compat.c  -fPIC -DPIC -o .libs/compat.o
+In file included from ../src/gcrypt-int.h:27:0,
+                 from ../src/visibility.h:38,
+                 from ../src/g10lib.h:39,
+                 from compat.c:22:
+../src/gcrypt.h:30:10: fatal error: gpg-error.h: No such file or directory
+ #include <gpg-error.h>
+          ^~~~~~~~~~~~~
+compilation terminated.
+*** [compat.lo] Error code 1
+
+make[2]: stopped in /tmp/pkgsrc/wip/libgcrypt-32/work/libgcrypt-1.8.4/compat
+1 error
+[...]
+
+(Despice libgpg-error-1.36 is installed.)

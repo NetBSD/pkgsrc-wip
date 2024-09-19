@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/03/18 23:24:43 oht Exp $
+--- makefile.orig	2006-03-10 22:08:51.000000000 +0100
++++ makefile	2006-03-10 22:10:14.000000000 +0100
+@@ -18,9 +18,9 @@
+ 
+ install:	all
+ 	strip $(TARGETS)
+-	cp smtp.proxy /usr/local/sbin/smtp.proxy
+-	cp $(TARGETS) /usr/local/sbin
+-	cp *.1 /usr/local/man/man1
++	cp smtp.proxy ${PREFIX}/sbin/smtp.proxy
++	cp $(TARGETS) ${PREFIX}/sbin
++	cp *.1 ${PREFIX}/man/man1
+ 
+ 
+ smtp.proxy:	$(SMTPPROXY)

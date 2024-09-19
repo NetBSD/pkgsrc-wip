@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libzeep
+
+.if !defined(LIBZEEP_BUILDLINK3_MK)
+LIBZEEP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libzeep+=	libzeep>=3.0.3
+BUILDLINK_PKGSRCDIR.libzeep?=	../../wip/libzeep
+
+.endif	# LIBZEEP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libzeep

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/04 15:48:52 rubengonzalez Exp $
+bin/lsw

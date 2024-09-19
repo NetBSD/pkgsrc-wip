@@ -1,0 +1,27 @@
+# $NetBSD: Makefile.common,v 1.2 2012/09/28 21:24:38 asau Exp $
+#
+# used by wip/dune-istl/Makefile
+# used by wip/dune-geometry/Makefile
+
+.include "../../wip/dune-common/Makefile.version"
+
+CATEGORIES=	math
+MASTER_SITES=	http://www.dune-project.org/download/${DUNE-VERSION}/
+
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	http://www.dune-project.org/coremodules.html/
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config perl
+USE_LANGUAGES=	c c++ fortran
+
+#GCC_REQD+=	4.1.*
+
+CONFIGURE_ARGS+=	--enable-fieldvector-size-is-method
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"

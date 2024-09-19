@@ -1,0 +1,15 @@
+$NetBSD$
+
+Honor LDFLAGS.
+
+--- makefile.orig	2011-06-19 20:56:20.000000000 +0000
++++ makefile
+@@ -52,7 +52,7 @@ endif
+ 
+ # to make mccs solver
+ mccs:  $(OBJS) libccudf.a
+-	$(CCC) -o mccs $(OBJS) -lfl -L. -lccudf \
++	$(CCC) -o mccs $(OBJS) -lfl -L. -lccudf $(LDFLAGS) \
+ 		$(CPXLD) \
+ 		$(GUROBILD) \
+ 		$(LPSOLVELD) \

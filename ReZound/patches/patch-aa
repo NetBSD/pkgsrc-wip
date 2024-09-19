@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.2 2005/07/25 13:41:54 thomasklausner Exp $
+--- config/platform/bsd.h.orig	2005-05-01 04:53:38.000000000 +0200
++++ config/platform/bsd.h
+@@ -29,7 +29,10 @@
+  	 * be slightly faster because it doesn't raise the inexact math exception.
+  	 */
+ 	#define nearbyint rint
++	#define __USE_ISOC99
++/*
+ 	#define round rintf
++*/
+ 	#define atoll(v)  strtoll((v),NULL,10)
+ #endif
+ 

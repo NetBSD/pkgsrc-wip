@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/15 13:38:02 jihbed Exp $
+bin/chemeq
+man/man1/chemeq.1
+share/doc/chemeq/tests/chemreport
+share/doc/chemeq/tests/chemreport.pl
+share/doc/chemeq/tests/chemtest
+share/doc/chemeq/tests/chemtest.pl
+share/doc/chemeq/tests/test.stuff

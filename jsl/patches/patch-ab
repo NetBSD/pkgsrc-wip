@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.2 2010/06/28 14:06:48 hfath Exp $
+
+--- config.mk.orig	2010-06-28 14:00:00.000000000 +0000
++++ config.mk
+@@ -90,6 +90,9 @@ endif
+ ifeq ($(OS_ARCH),Linux)
+ OS_CONFIG      := Linux_All
+ else
++ifeq ($(OS_ARCH),NetBSD)
++OS_CONFIG      := NetBSD_All
++else
+ ifeq ($(OS_ARCH),dgux)
+ OS_CONFIG      := dgux
+ else
+@@ -100,6 +103,7 @@ OS_CONFIG       := $(OS_ARCH)$(OS_OBJTYP
+ endif
+ endif
+ endif
++endif
+ 
+ ASFLAGS         =
+ DEFINES         =

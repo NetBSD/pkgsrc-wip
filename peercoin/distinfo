@@ -1,0 +1,11 @@
+$NetBSD$
+
+RMD160 (peercoin/master.tar.gz) = 69d50b5923ec3f7aa909facb6528ade337d328ab
+Size (peercoin/master.tar.gz) = 1710278 bytes
+SHA1 (patch-bitcoin-qt.pro) = 85bf0be2e987eb52c910f861e4810c45342b1b62
+SHA1 (patch-src_db.h) = 1c258f1534144f7c7335473e2466ae0eb58f6ba4
+SHA1 (patch-src_makefile.unix) = 62408c6babfc0c24bfa2cfe4f0881ae03c6a2e70
+SHA1 (patch-src_netbase.cpp) = aa9fa4038b417426c0f176486a22d04b4777ac47
+SHA1 (patch-src_qt_transactiondesc.cpp) = 20ff326ee3f3eccc50868aae5a70c621b5d6c35b
+SHA1 (patch-src_serialize.h) = b376b4c2c8fb5f0393200efbecee3dd6038bacf3
+SHA1 (patch-src_walletdb.cpp) = 0146d65052eb9f6f0f80ba47f5826982b1f92541

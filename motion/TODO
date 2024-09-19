@@ -1,0 +1,5 @@
+basic testing with a USB webcam seems to work OK.
+
+Needs testing to see if the Brooktree video cards
+still work. Also needs the database stuff testing
+and maybe ome tweaks to PLIST. 

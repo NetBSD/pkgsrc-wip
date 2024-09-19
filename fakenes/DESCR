@@ -1,0 +1,3 @@
+FakeNES is an Open Source NES emulator.  It currently uses the excellent
+Allegro multimedia library for input, graphics, and sound effects/music across
+various platforms.

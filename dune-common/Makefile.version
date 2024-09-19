@@ -1,0 +1,4 @@
+# $NetBSD: Makefile.version,v 1.1 2012/09/15 23:57:55 jihbed Exp $
+#
+
+DUNE-VERSION=	2.2.0

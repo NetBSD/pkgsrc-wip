@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (gambas-3.13.0.tar.gz) = ce59f952d8e9bc0bafc562530764db45d20c383d
+SHA512 (gambas-3.13.0.tar.gz) = fbe5763afca022cd46db22a4ca80d59b1a8c2d7cadf49529ea27487057616920e38d6fccec1e6d5ef56d41725f9a7fa8478be03270ca0db65dd31448dbbb5385
+Size (gambas-3.13.0.tar.gz) = 13556103 bytes
+SHA1 (patch-gb.v4l_configure.ac) = c03073a9e9db26145ef05674019d7aaa572901c5

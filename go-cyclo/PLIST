@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/gocyclo
+gopkg/pkg/${GO_PLATFORM}/github.com/fzipp/gocyclo.a
+gopkg/src/github.com/fzipp/gocyclo/CHANGELOG.md
+gopkg/src/github.com/fzipp/gocyclo/CONTRIBUTORS
+gopkg/src/github.com/fzipp/gocyclo/LICENSE
+gopkg/src/github.com/fzipp/gocyclo/README.md
+gopkg/src/github.com/fzipp/gocyclo/analyze.go
+gopkg/src/github.com/fzipp/gocyclo/analyze_test.go
+gopkg/src/github.com/fzipp/gocyclo/cmd/gocyclo/main.go
+gopkg/src/github.com/fzipp/gocyclo/complexity.go
+gopkg/src/github.com/fzipp/gocyclo/directives.go
+gopkg/src/github.com/fzipp/gocyclo/go.mod
+gopkg/src/github.com/fzipp/gocyclo/stats.go
+gopkg/src/github.com/fzipp/gocyclo/stats_test.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/cases.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/comms.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/directory/file1.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/directory/file2.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/directory/file3.nogo
+gopkg/src/github.com/fzipp/gocyclo/testdata/ifs.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/ignores.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/literals.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/loops.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/methods.go
+gopkg/src/github.com/fzipp/gocyclo/testdata/operators.go

@@ -1,0 +1,15 @@
+Copy port to x11/modular-xorg-server, do not install from wip.
+
+Waiting for devd patches required on latest FreeBSD and DragonFly
+submitted in
+pkg/50200 (x11/modular-xorg-server)
+to be accepted.
+
+Port devd patches for 1.19.6 that have not been merged
+into FreeBSD ports, supports evdev.
+
+Get modular-xorg-xephyr to build again.
+
+Get xf86-video-nv, xf86-video-vmware to build again.
+
+Get modesetting driver to work on any Intel device any OS.

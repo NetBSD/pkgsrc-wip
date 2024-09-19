@@ -1,0 +1,4 @@
+The Mozilla LDAP C SDK includes the C libraries for the LDAP application
+programming interface (API). You use the functions contained in this API to
+enable your applications to connect to, search, and update LDAP servers
+located on a network or on the Internet.

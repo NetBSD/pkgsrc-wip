@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/10/11 16:34:24 thomasklausner Exp $
+
+--- procinfo.c.orig	2006-01-07 15:03:10.000000000 +0100
++++ procinfo.c
+@@ -29,7 +29,7 @@
+ 
+ #include <ctype.h>
+ #include <signal.h>
+-#include <wait.h>
++#include <sys/wait.h>
+ #include <errno.h>
+ #include <time.h>
+ 

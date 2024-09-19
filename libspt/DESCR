@@ -1,0 +1,12 @@
+On many platforms terminal emulators need some privilege for
+some functionalities. Especially, they need root privilege on
+BSDs to prevent other users from peeking user's input. With
+libspt you can drop all privileges of your terminal
+emulator. Additionally libspt saves terminal emulator writers
+many portability related headaches. (Yes, there is many
+headaches.)
+
+From libspt-0.2 it also provides a minimal
+termios(termio/sgtty) wrapper functionality. It does not
+support any customization nor complex settings but enables you
+to implement easiest functionalities portably with least work.

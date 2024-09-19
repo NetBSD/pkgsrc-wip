@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
+${PYSITELIB}/pigg/__init__.py
+${PYSITELIB}/pigg/__init__.pyc
+${PYSITELIB}/pigg/__init__.pyo
+${PYSITELIB}/pigg/__pkginfo__.py
+${PYSITELIB}/pigg/__pkginfo__.pyc
+${PYSITELIB}/pigg/__pkginfo__.pyo
+${PYSITELIB}/pigg/fieldhelpers.py
+${PYSITELIB}/pigg/fieldhelpers.pyc
+${PYSITELIB}/pigg/fieldhelpers.pyo
+${PYSITELIB}/pigg/form.py
+${PYSITELIB}/pigg/form.pyc
+${PYSITELIB}/pigg/form.pyo
+${PYSITELIB}/pigg/mvc.py
+${PYSITELIB}/pigg/mvc.pyc
+${PYSITELIB}/pigg/mvc.pyo
+${PYSITELIB}/pigg/utils.py
+${PYSITELIB}/pigg/utils.pyc
+${PYSITELIB}/pigg/utils.pyo
+${PYSITELIB}/pigg/wgenerator.py
+${PYSITELIB}/pigg/wgenerator.pyc
+${PYSITELIB}/pigg/wgenerator.pyo

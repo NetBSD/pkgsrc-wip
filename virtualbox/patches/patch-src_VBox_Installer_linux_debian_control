@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/VBox/Installer/linux/debian/control.orig	2016-03-04 19:29:33.000000000 +0000
++++ src/VBox/Installer/linux/debian/control
+@@ -26,7 +26,7 @@ Conflicts: virtualbox, virtualbox-ose, v
+ Description: Oracle VM VirtualBox
+  VirtualBox is a powerful PC virtualization solution allowing you to run a
+  wide range of PC operating systems on your Linux system. This includes
+- Windows, Linux, FreeBSD, DOS, OpenBSD and others. VirtualBox comes with a broad
++ Windows, Linux, FreeBSD, NetBSD, DOS, OpenBSD and others. VirtualBox comes with a broad
+  feature set and excellent performance, making it the premier virtualization
+  software solution on the market.
+ XB-Python-Version: ${python:Versions}
+@@ -40,7 +40,7 @@ Conflicts: virtualbox-dbg, virtualbox-os
+ Description: Oracle VM VirtualBox debugging symbols
+  VirtualBox is a powerful PC virtualization solution allowing you to run a
+  wide range of PC operating systems on your Linux system. This includes
+- Windows, Linux, FreeBSD, DOS, OpenBSD and others. VirtualBox comes with a broad
++ Windows, Linux, FreeBSD, NetBSD, DOS, OpenBSD and others. VirtualBox comes with a broad
+  feature set and excellent performance, making it the premier virtualization
+  software solution on the market.
+  .

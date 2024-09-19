@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/mine${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/minepy/__init__.py
+${PYSITELIB}/minepy/__init__.pyc
+${PYSITELIB}/minepy/__init__.pyo
+${PYSITELIB}/minepy/mine.so
+${PYSITELIB}/minepy/utils.py
+${PYSITELIB}/minepy/utils.pyc
+${PYSITELIB}/minepy/utils.pyo

@@ -1,0 +1,18 @@
+$NetBSD$
+
+Do not change MACHINETYPE needlessly.  Doing so prevents easy
+discovery of the build directory.
+
+--- src/Makefile.orig	2020-08-03 07:31:39.000000000 +0000
++++ src/Makefile
+@@ -344,10 +344,6 @@ OSTYPE      := $(shell echo `uname`)
+ OSVERSION   := $(shell echo `uname -r`)
+ MACHINETYPE := $(shell echo `uname -m`)
+ 
+-ifeq (${MACHINETYPE}, x86_64)
+-  MACHINETYPE = amd64
+-endif
+-
+ ifeq (${MACHINETYPE}, Power Macintosh)
+   MACHINETYPE = ppc
+ endif

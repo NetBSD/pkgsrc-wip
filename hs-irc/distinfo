@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2009/11/10 03:28:55 phonohawk Exp $
+
+RMD160 (irc-0.4.4.2.tar.gz) = 2f448323980cf9d9207af25dad2e72f32e275cd0
+Size (irc-0.4.4.2.tar.gz) = 6028 bytes
+SHA1 (patch-aa) = b42e499cfbd1131326c9a3d734ba3b97c224a137

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/14 14:27:28 sohsmith Exp $
+
+RMD160 (tcmplex-panteltje-0.4.7.tgz) = 4d6378a4a7201f1f4a91974502d93d47cdf56286
+Size (tcmplex-panteltje-0.4.7.tgz) = 81185 bytes
+SHA1 (patch-unistd) = 9315e73c5641709aee8dbab1f0c64920d42425cc

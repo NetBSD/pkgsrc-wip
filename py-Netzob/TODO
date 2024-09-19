@@ -1,0 +1,92 @@
+Does not find the modules, so no loader plugins are found, then
+nothing really works.
+
+Error output:
+[MainThread]2014-01-02 22:20:17,491 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint DelimiterSeparatedImporter = DelimiterSeparatedImporter.DelimiterSeparatedImporterPlugin:DelimiterSeparatedImporterPlugin : bitarray>=0.4
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: bitarray>=0.4
+[MainThread]2014-01-02 22:20:17,508 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint IpcCapturer = IpcCapturer.IpcCapturerPlugin:IpcCapturerPlugin : python-ptrace
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: python-ptrace
+[MainThread]2014-01-02 22:20:17,523 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint NetworkCapturer = NetworkCapturer.NetworkCapturerPlugin:NetworkCapturerPlugin : pcapy
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: pcapy
+[MainThread]2014-01-02 22:20:17,539 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint OSpyImporter = OSpyImporter.OSpyImporterPlugin:OSpyImporterPlugin : bitarray>=0.4
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: bitarray>=0.4
+[MainThread]2014-01-02 22:20:17,554 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint PCAPImporter = PCAPImporter.PCAPImporterPlugin:PCAPImporterPlugin : pcapy
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: pcapy
+[MainThread]2014-01-02 22:20:17,569 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint PeachExporter = PeachExporter.PeachExporterPlugin:PeachExporterPlugin : bitarray>=0.4
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: bitarray>=0.4
+[MainThread]2014-01-02 22:20:17,579 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint WiresharkExporter = WiresharkExporter.WiresharkExporterPlugin:WiresharkExporterPlugin : bitarray>=0.4
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: bitarray>=0.4
+[MainThread]2014-01-02 22:20:17,588 - NetzobPlugin - ERROR - Impossible to load plugin declared in entrypoint XMLImporter = XMLImporter.XMLImporterPlugin:XMLImporterPlugin : bitarray>=0.4
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python2.7/site-packages/netzob/Common/Plugins/NetzobPlugin.py", line 178, in loadPlugins
+    plugin_class = entrypoint.load()
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2107, in load
+    if require: self.require(env, installer)
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 2120, in require
+    working_set.resolve(self.dist.requires(self.extras),env,installer)))
+  File "/usr/pkg/lib/python2.7/site-packages/pkg_resources.py", line 576, in resolve
+    raise DistributionNotFound(req)
+DistributionNotFound: bitarray>=0.4

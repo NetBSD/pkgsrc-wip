@@ -1,0 +1,4 @@
+SymCXX is an experimental Python package for symbolic manipulation with
+limited scope (as in minimal). It tries to stay compatible with the API
+of SymPy. It's main goal is to explore designs of SymPy's
+lambdify/SymEngine's Lambdify functionality

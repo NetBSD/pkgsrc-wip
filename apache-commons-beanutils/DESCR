@@ -1,0 +1,4 @@
+The BeanUtils Component contains a set of Java classes that provide static
+utility methods useful in manipulating Java classes that conform to
+the JavaBeans Specification naming patterns for bean properties in a
+dynamic fashion

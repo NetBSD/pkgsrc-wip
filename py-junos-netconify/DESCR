@@ -1,0 +1,10 @@
+Junos console/bootstrap New-Out-Of-Box (NOOB) configuration automation.
+
+There are times when you MUST console into a Junos device to perform
+the NOOB configuration.  Generally this configuration is the bare
+minimum in takes to:
+
+    set the root password
+    set the host-name
+    set the management ipaddr
+    enable ssh and optionally NETCONF

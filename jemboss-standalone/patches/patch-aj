@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- jemboss/utils/Makefile.in.orig	Thu Jul 22 13:01:10 2004
++++ jemboss/utils/Makefile.in	Thu Jul 22 13:07:52 2004
+@@ -179,8 +179,8 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-pkgdata_DATA = install-jemboss-server.sh keys.sh makeJar.csh \
+-makeJNLP.sh makeFileManagerJNLP.sh template.html README
++pkgdata_DATA = #install-jemboss-server.sh keys.sh makeJar.csh \
++#makeJNLP.sh makeFileManagerJNLP.sh template.html README
+ 
+ all: all-am
+ 

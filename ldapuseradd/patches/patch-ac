@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2010-09-21 12:19:41.000000000 +0000
++++ src/Makefile.in	2010-09-21 12:20:08.000000000 +0000
+@@ -14,7 +14,7 @@
+ CC=@CC@
+ CFLAGS=-Wall -I.. -I. -Iapi -Ildap @CFLAGS@
+ #TODO: --export-dynamic on non-GNU ld.
+-LDFLAGS=-Wl,-s -Wl,--export-dynamic
++LDFLAGS=-Wl,-s -Wl,--export-dynamic -lintl
+ BIN_DIR=@BIN_DIR@
+ 
+ .PHONY: all clean install

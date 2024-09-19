@@ -1,0 +1,27 @@
+# C News pkg issues
+
+- use USE_PKGINSTALL=YES for /var/news
+
+- sync patch list with dinoex.org
+
+- provide sample cron entries for user 'news' in share/examples/c-news
+
+- add DESTDIR support
+
+- to comply with the license, make sure that information about the sponsors
+  gets installed (just install all the README files)
+
+- for sizeof(time_t) == 8 != sizeof(long)
+  make sure the parts that tinker with time_t can cope with an int64_t,
+  see compiler warnings about
+
+    libcnews/mkinperm.c
+    util/getabsdate.c
+    inject/defaults.c
+    input/newsspool.c
+
+  See also <http://stackoverflow.com/questions/2467418/portable-way-to-deal-with-64-32-bit-time-t>
+  which suggests using strftime(3).
+
+- run the regression tests
+  o getabsdate test fails (prints time_t with %ld)

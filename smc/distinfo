@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.3 2009/08/25 11:56:46 thomasklausner Exp $
+
+RMD160 (SMC_0.97_source.zip) = 41dd6d77132092eb5966382bd7e22747c80ebd5d
+Size (SMC_0.97_source.zip) = 233670 bytes
+RMD160 (SMC_0.97_game.zip) = fc3a49ae21f170909c5f0778b0d3d63f7093d84a
+Size (SMC_0.97_game.zip) = 5313784 bytes
+RMD160 (music_2.0_RC_1.zip) = 722a0d09f749327a76f24c91b44fd0c48f578381
+Size (music_2.0_RC_1.zip) = 17954786 bytes
+SHA1 (patch-aa) = 394970c59109e1519300722db5a556d3d306c941
+SHA1 (patch-ab) = 5bd1eda35ea3cc8023ae924fd1ef21f5bce07027
+SHA1 (patch-ac) = 8e8880bbcb97ed8eeeff0dbd8585c66de80f9b9c
+SHA1 (patch-ad) = cddefc67ec6614f2728f44d854168a110464b959
+SHA1 (patch-ae) = 060e31d1a887bd4e28e4fb661d483cb0caf54c83
+SHA1 (patch-af) = 099be41a9b8d4e69f7a567fb9b5745aa2cd0aa80
+SHA1 (patch-ag) = 15d705ac4ef240e7074cdd5887ce29b33cf870d4
+SHA1 (patch-ah) = 7ef3c1c50ffc921a49fcab177ead0ccc51327d0b
+SHA1 (patch-ai) = db504f5e91ddf391a58378e4578bc474840ba53f

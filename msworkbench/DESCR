@@ -1,0 +1,4 @@
+MapServer Workbench is a set of cooperative tools
+to develop web mapping applications with MapServer.
+Tools are written in Tcl/Tk, and require the Mapscript
+scripting interface distributed with MapServer.

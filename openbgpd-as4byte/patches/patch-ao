@@ -1,0 +1,11 @@
+--- bgpctl/strtonum.c.dist	2007-01-11 14:41:10.000000000 +1000
++++ bgpctl/strtonum.c	2007-01-11 14:40:29.000000000 +1000
+@@ -25,6 +25,8 @@
+ #define TOOSMALL 	2
+ #define TOOLARGE 	3
+ 
++long long strtonum(const char *, long long, long long, const char **);
++
+ long long
+ strtonum(const char *numstr, long long minval, long long maxval,
+     const char **errstrp)

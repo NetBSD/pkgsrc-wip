@@ -1,0 +1,10 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/orderedset/__init__.py
+${PYSITELIB}/orderedset/__init__.pyc
+${PYSITELIB}/orderedset/__init__.pyo
+${PYSITELIB}/orderedset/_orderedset.so

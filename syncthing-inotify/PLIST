@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/12 21:25:48 tnn2 Exp $
+bin/syncthing-inotify

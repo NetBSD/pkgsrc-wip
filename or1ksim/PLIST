@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.5 2013/10/14 13:00:04 ryo-on Exp $
+bin/or32-mprofile
+bin/or32-profile
+bin/or32-sim
+include/or1ksim.h
+info/or1ksim.info
+lib/libsim.la

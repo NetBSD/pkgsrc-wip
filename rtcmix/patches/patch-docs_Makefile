@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- docs/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/Makefile
+@@ -4,7 +4,7 @@
+ #
+ include ../makefile.conf
+ 
+-DIRS = #pod
++DIRS = pod
+ 
+ all:
+ 	@for DIR in $(DIRS); \

@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/ksuid
+gopkg/pkg/${GO_PLATFORM}/github.com/segmentio/ksuid.a
+gopkg/src/github.com/segmentio/ksuid/LICENSE.md
+gopkg/src/github.com/segmentio/ksuid/README.md
+gopkg/src/github.com/segmentio/ksuid/base62.go
+gopkg/src/github.com/segmentio/ksuid/base62_test.go
+gopkg/src/github.com/segmentio/ksuid/cmd/ksuid/main.go
+gopkg/src/github.com/segmentio/ksuid/go.mod
+gopkg/src/github.com/segmentio/ksuid/ksuid.go
+gopkg/src/github.com/segmentio/ksuid/ksuid_test.go
+gopkg/src/github.com/segmentio/ksuid/rand.go
+gopkg/src/github.com/segmentio/ksuid/sequence.go
+gopkg/src/github.com/segmentio/ksuid/sequence_test.go
+gopkg/src/github.com/segmentio/ksuid/set.go
+gopkg/src/github.com/segmentio/ksuid/set_test.go
+gopkg/src/github.com/segmentio/ksuid/uint128.go
+gopkg/src/github.com/segmentio/ksuid/uint128_test.go

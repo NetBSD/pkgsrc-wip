@@ -1,0 +1,30 @@
+Fix this:
+TESTSSL_INSTALL_DIR=/usr/pkg/etc/testssl testssl mta01.hs-bochum.de:587
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+
+ATTENTION: No TLS data file found -- needed for socket-based handshakes
+Please note from 2.9 on testssl needs files in "$TESTSSL_INSTALL_DIR/etc/" to function correctly.
+
+Type "yes" to ignore this warning and proceed at your own risk --> yes
+
+No engine or GOST support via engine with your /usr/bin/openssl
+pwd: No such file or directory
+
+###########################################################
+    testssl       3.0rc5 from https://testssl.sh/dev/
+
+      This program is free software. Distribution and
+             modification under GPLv2 permitted.
+      USAGE w/o ANY WARRANTY. USE IT AT YOUR OWN RISK!
+
+       Please file bugs @ https://testssl.sh/bugs/
+
+###########################################################
+
+ Using "OpenSSL 1.1.1c  28 May 2019" [~80 ciphers]
+ on localhost:$PWD/bin/openssl
+ (built: "", platform: "NetBSD-x86_64")
+
+
+
+Fatal error: No IPv4/IPv6 address(es) for "mta01.hs-bochum.de" available

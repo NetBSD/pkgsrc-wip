@@ -1,0 +1,8 @@
+SpliX is a set of CUPS printer drivers for SPL (Samsung Printer Language)
+printers.
+
+The SPL1 printers use a specific language internally called Smart GDI.
+However, SpliX attemps to bring a support for the internally called QPDL
+language. Moreover, the smart GDI language is already supported by Ghostscript
+under the name "gdi".
+For all these reasons, Splix won't support old SPL(1) printers.

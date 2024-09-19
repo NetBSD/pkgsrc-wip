@@ -1,0 +1,31 @@
+$NetBSD: patch-wep_c,v 1.1 2010/06/27 20:08:13 gschwarz Exp $
+
+--- wep.c.orig	2005-03-02 18:00:52.000000000 +0100
++++ wep.c	2010-06-27 22:01:07.000000000 +0200
+@@ -37,6 +37,8 @@
+ #include "globals.h"
+ #include "wep.h"
+ 
++int target_bssid(const u_char *pkt);
++int GetPacketBssid(const u_char *pkt, unsigned char *bssid);
+ 
+ static u_int32_t crc_table[256] = {
+   0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f,
+@@ -291,7 +293,7 @@
+ 				continue;
+ 			}
+ 		}else{
+-			if (GetPacketBssid(pkt,global_v.target_bssid)){
++			if (GetPacketBssid(pkt,(unsigned char *)global_v.target_bssid)){
+ 				printf("Not BSSID specified.\n Detected one packet with BSSID: [%02X:%02X:%02X:%02X:%02X:%02X]\n", TOMAC(global_v.target_bssid));
+ 				debug("Only packets belongs to that BSSID will be processed.\nIf -a option reveals other BSSIDs you can specify one with --bssid.\n");
+ 				global_v.target_bssid_selected=1;
+@@ -357,7 +359,7 @@
+ 	}
+ printf("\r                                   \n");
+ printf("Total valid packets read: %u\n",totalValidPackets);
+-printf("Total packets read: %u\n",totalPackets);
++printf("Total packets read: %lu\n",totalPackets);
+ 
+ return totalPackets10;
+ }

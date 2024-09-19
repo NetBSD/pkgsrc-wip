@@ -1,0 +1,16 @@
+AOKell is a Java implementation of the Fractal component model which uses
+Aspect-Oriented Programming. The goal of AOKell is to provide some high level
+mechanisms for implementing the control semantics of a Fractal component.
+
+The two main contributions of AOKell are to provide:
+
+* an aspect-oriented solution for gluing the control part of a
+  Fractal component with its content,
+* a component-based solution for implementing the control part of
+   a Fractal component.
+
+AOKell is then a framework where the notions of a component, an interface, and a
+binding are used both to implement the business part of an application and its
+control semantics. The novelty is thus to provide a component-based
+engineering of  control.This control part is then  glued to the content
+using either AspectJ aspects or Spoon processors.

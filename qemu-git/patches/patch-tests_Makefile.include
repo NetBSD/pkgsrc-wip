@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- tests/Makefile.include.orig	2017-08-31 16:26:03.000000000 +0000
++++ tests/Makefile.include
+@@ -810,8 +810,10 @@ tests/migration/initrd-stress.img: tests
+ 	rmdir $(INITRD_WORK_DIR)
+ 
+ ifeq ($(CONFIG_POSIX),y)
++ifneq ($(CONFIG_SOLARIS),y)
+ LIBS += -lutil
+ endif
++endif
+ 
+ # QTest rules
+ 

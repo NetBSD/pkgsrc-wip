@@ -1,0 +1,77 @@
+$NetBSD: patch-Makefile.in.in,v 1.3 2021/03/28 10:36:33 hauke Exp $
+
+Sprinkle DESTDIR dust.
+
+Avoid installing backup~ files.
+
+The standards.info provided by XEmacs conflicts with the one installed by
+devel/autoconf, which is probably newer.
+
+Prefix {c,e}tags to avoid conflicts.
+
+Make TAR settable, to work around shortcomings in base tar(1)
+
+Deal with a difference between bmake and gmake in using $^ in a
+makefile target
+
+--- Makefile.in.in.orig	2021-07-26 11:30:34.000000000 +0000
++++ Makefile.in.in
+@@ -67,7 +67,7 @@ LC_ALL = C
+ RM = rm -f
+ MAKEPATH=./lib-src/make-path
+ pwd = /bin/pwd
+-TAR = tar
++TAR ?= tar
+ 
+ ## ==================== Things `configure' Might Edit ====================
+ 
+@@ -374,7 +374,7 @@ src/.gdbinit: ${srcdir}/src/.gdbinit.in.
+ 	./config.status && touch $@
+ 
+ etc/PROBLEMS: $(srcdir)/PROBLEMS
+-	cp $^ $@
++	cp $(srcdir)/PROBLEMS $@
+ 
+ ## ==================== Installation ====================
+ 
+@@ -416,7 +416,7 @@ install-arch-dep: mkdir
+ 	   fi; \
+ 	   ${INSTALL_DATA} lib-src/config.values $(DESTDIR)${docdir}/config.values; \
+ 	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC; \
+-	   for subdir in `find ${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
++	   for subdir in `find $(DESTDIR)${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
+ 	     do (cd $${subdir} && $(RM) -r RCS CVS SCCS \#* *~) ; done ; \
+ 	else true; fi
+ #if (defined(PDUMP) && !defined (DUMP_IN_EXEC)) || (defined (PDUMP) && defined(WIN32_NATIVE))
+@@ -439,7 +439,8 @@ install-arch-dep: mkdir
+ # endif /* CYGWIN */
+ #endif /* WIN32_NATIVE */
+ #ifdef HAVE_SHLIB
+-	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.* $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.el $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
+ #endif
+ 
+ install-arch-indep: mkdir info
+@@ -474,14 +475,19 @@ install-arch-indep: mkdir info
+ 	    ${INSTALL_DATA} ${srcdir}/info/dir $(DESTDIR)${infodir}/dir ; \
+ 	  fi ; \
+ 	  for file in *.info* ; do \
++	    test $${file} = "standards.info" && continue ; \
+ 	    ${INSTALL_DATA} $${file} $(DESTDIR)${infodir}/$${file} ; \
+ 	    chmod 0644 $(DESTDIR)${infodir}/$${file}; \
+ 	  done ; \
+ 	fi
+ 	cd ${srcdir}/etc && \
+ 	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
+-	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
+-	    chmod 0644 $(DESTDIR)${mandir}/$${page}${manext} ; \
++            if [ $${page} = etags ] || [ $${page} = ctags ] ; \
++            then \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/xemacs-$${page}${manext} ; \
++            else \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
++            fi \
+ 	  done
+ 	@echo "If you would like to save approximately 4M of disk space, do"
+ 	@echo "make gzip-el"

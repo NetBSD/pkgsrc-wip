@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
+
+RMD160 (xpde-0.4.0-20030730.tar.gz) = 8f2b9596ea4aa12a9216c8644e63dffa5c1bb852
+Size (xpde-0.4.0-20030730.tar.gz) = 11071021 bytes
+SHA1 (patch-aa) = 6aeb459548e6e54f5a04f4faff86dab3b6983ea2

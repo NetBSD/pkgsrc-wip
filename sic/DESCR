@@ -1,0 +1,4 @@
+sic is an extremly fast, small and simple irc client.  It reads commands from
+standard input and prints all server output to standard output. It multiplexes
+also all channel traffic into one output, that you don't have to switch
+different channel buffers, that's actually a feature.

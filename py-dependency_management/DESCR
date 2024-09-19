@@ -1,0 +1,1 @@
+Contains package manager and requirement classes used by coala.

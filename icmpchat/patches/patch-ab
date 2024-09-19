@@ -1,0 +1,53 @@
+$NetBSD: patch-ab,v 1.2 2004/01/23 01:50:18 rillig Exp $
+--- Makefile.orig	2003-04-08 12:24:34.000000000 +0200
++++ Makefile	2004-01-23 02:46:57.207860000 +0100
+@@ -1,36 +1,25 @@
+-CC 		= gcc
+-FLAGS 		= -O2 -Wall -pedantic # -DDEBUG
+-LIBS		= -lcurses
+-OBJS 		= setup.o debug.o sendicmp.o chat.o wrap.o \
++OWNFLAGS	= -O2 -Wall -pedantic # -DDEBUG
++OWNLIBS		= -lcurses
++OBJS		= setup.o debug.o sendicmp.o chat.o wrap.o \
+ 		  cipherwrap.o sha256.o rijndael.o curses.o
+ 
+-.PHONY:		default solaris clean install deinstall
++.PHONY:		all clean install deinstall
+ 
+ .c.o:
+-		${CC} ${FLAGS} -c $<
++		$(CC) $(OWNFLAGS) $(CPPFLAGS) $(CFLAGS) -c $<
+ 
+-default: 	${OBJS}
+-		${CC} ${FLAGS} -o icmpchat ${OBJS} ${LIBS}
+-		@echo Build icmpchat
++all:		icmpchat
+ 
+-solaris:	${OBJS}
+-		${CC} ${FLAGS} -o icmpchat ${OBJS} ${LIBS} -lnsl -lsocket -lresolv
++icmpchat: 	$(OBJS)
++		$(CC) -o $@ $(OBJS) $(LDFLAGS) $(OWNLIBS) $(LIBS)
+ 
+ install:
+-		install -c icmpchat /usr/local/bin
+-		@echo Installed icmpchat into /usr/local/bin/
+-		@echo Type 'icmpchat' to run
++		${BSD_INSTALL_PROGRAM} ./icmpchat ${PREFIX}/bin/icmpchat
+ 
+ deinstall:	
+-		rm -f /usr/local/bin/icmpchat
+-		@echo Removed icmpchat
++		rm -f ${PREFIX}/bin/icmpchat
++
+ clean:
+-		rm -f icmpchat *.o *~
+-		@echo Cleaned up directory
++		rm -f icmpchat ${OBJS} *~
+ 
+-setup.o:	config.h
+-debug.o:	config.h
+-chat.o:		config.h
+-sendicmp.o:	config.h
+-wrap.o:		config.h
+-cipherwrap.o:	config.h
++chat.o cipherwrap.o curses.o sendicmp.o setup.o wrap.o: config.h

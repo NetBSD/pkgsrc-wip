@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:13 thomasklausner Exp $
+bin/gfa
+share/gfa/README
+share/gfa/pixmaps/person.png

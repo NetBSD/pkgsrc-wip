@@ -1,0 +1,5 @@
+- Test that modload works
+- XXX figure out pseudo devices
+- Test that PF functions
+
+- XXX grab pf sources from 8.0, but regular sources from OS_VERSION

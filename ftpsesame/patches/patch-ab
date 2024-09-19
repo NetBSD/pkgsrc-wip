@@ -1,0 +1,94 @@
+$NetBSD: patch-ab,v 1.2 2006/08/16 12:50:23 jsonn Exp $
+
+--- ftpsesame.c.orig	2004-10-05 12:07:24.000000000 +0000
++++ ftpsesame.c
+@@ -19,14 +19,25 @@
+ #include <sys/ioctl.h>
+ 
+ #include <net/if.h>
+-#include <net/pfvar.h>
++#if defined(__DragonFly__)
++#include <net/ppp_layer/ppp_defs.h>
++#else
+ #include <net/ppp_defs.h>
+-#include <netinet/if_ether.h>
++#endif
++
+ #include <netinet/in.h>
+ #include <netinet/in_systm.h>
+ #include <netinet/ip.h>
++#include <netinet/if_ether.h>
+ #include <netinet/tcp.h>
+ #include <netinet/tcp_fsm.h>
++
++#if defined(__DragonFly__)
++#include <net/pf/pfvar.h>
++#else
++#include <net/pfvar.h>
++#endif
++
+ #include <arpa/inet.h>
+ 
+ #include <ctype.h>
+@@ -34,6 +45,7 @@
+ #include <errno.h>
+ #include <pcap.h>
+ #include <pwd.h>
++#include <signal.h>
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -46,7 +58,7 @@
+ #include "state.h"
+ 
+ #define NOPRIV_USER	"proxy"
+-#define CHROOT_DIR	"/var/empty"
++#define CHROOT_DIR	"/var/chroot/proxy"
+ 
+ #define PCAP_TO_MS	500
+ #define PURGE_INTERVAL	60
+@@ -515,14 +527,18 @@ main(int argc, char **argv)
+ 		errx(1, "filter '%s': %s", filter, pcap_geterr(hpcap));
+ 
+ 	immediate = 1;
++#ifdef BIOCIMMEDIATE
+ 	if (ioctl(pcap_fileno(hpcap), BIOCIMMEDIATE, &immediate) < 0)
+ 		err(1, "BIOCIMMEDIATE");
++#endif
+ 	wfilter.bf_len = 1;
+ 	wfilter.bf_insns = blockall;
++#ifdef __OpenBSD__
+ 	if (ioctl(pcap_fileno(hpcap), BIOCSETWF, &wfilter) < 0)
+ 		err(1, "BIOCSETWF");
+ 	if (ioctl(pcap_fileno(hpcap), BIOCLOCK) < 0)
+ 		err(1, "BIOCLOCK");
++#endif
+ 
+ 	if (daemonize) {
+ 		if (daemon(0, 0) == -1)
+@@ -626,10 +642,16 @@ drop_privs(void)
+ 	chdir("/");
+ 
+ 	gidset[0] = pw->pw_gid;
++#ifdef __OpenBSD__
+ 	if (setgroups(1, gidset) == -1 || setegid(pw->pw_gid) == -1 ||
+ 	    setgid(pw->pw_gid) == -1 || seteuid(pw->pw_uid) == -1 ||
+ 	    setuid(pw->pw_uid) == -1)
+ 		return (0);
++#else
++	if (setgroups(1, gidset) == -1 || setgid(pw->pw_gid) == -1 ||
++	    setuid(pw->pw_uid) == -1)
++		return (0);
++#endif
+ 	
+ 	return (1);
+ }
+@@ -663,7 +685,7 @@ sig_close(int sig)
+ 	gotsig_close = 1;
+ }
+ 
+-__dead void
++void
+ usage(void)
+ {
+ 	fprintf(stderr, "usage: %s [-d] [-D level] [-i interface] " \

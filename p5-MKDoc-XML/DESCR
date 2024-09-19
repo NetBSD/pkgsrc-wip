@@ -1,0 +1,10 @@
+MKDoc::XML is a suite of low level XML processing modules which comprises:
+
+* An XML tokenizer
+* An XML tree builder
+* A configurable XML markup stripper
+* A configurable XML markup tagger
+* An XML entity encoder
+* An XML entity decoder
+* An HTML-Only entity decoder
+* An XML Dumper / Undumper

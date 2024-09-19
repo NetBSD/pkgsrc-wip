@@ -1,0 +1,8 @@
+This module provides a way (as a mod_perl handler or running
+under vanilla CGI) to look at the path (as returned by dispatch_path)
+of the incoming request, parse off the desired module and
+it's run mode, create an instance of that module and run it.
+t currently supports both generations of mod_perl (1.x and 2.x).
+Although, for simplicity, all examples involving Apache
+configuration and mod_perl code will be shown using mod_perl 1.x.
+This may change as mp2 usage increases.

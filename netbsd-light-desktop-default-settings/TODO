@@ -1,0 +1,39 @@
+maybe make a tarball instead of using FILESDIR
+
+test the launcher script -- it does not do much noticable to me
+other than no pcmanfm and desktop is blue
+
+why lxdm.conf?
+no lxdm anymore?
+see http://archive.ubuntu.com/ubuntu/pool/universe/l/lubuntu-default-settings/lubuntu-default-settings_0.27.tar.gz
+and compare with 23 in my lubuntu-default-settings directory
+(not in pkgsrc)
+
+choose a font and replace Ubuntu in
+./share/netbsd-light-desktop/leafpad/leafpadrc
+./share/netbsd-light-desktop/openbox/rc.xml
+./etc/xdg/lxsession/NetBSD/desktop.conf
+./etc/xdg/lxsession/NetBSD-Netbook/desktop.conf
+./etc/xdg/pcmanfm/netbsd-light-desktop/pcmanfm.conf
+or just package that font too
+
+
+ Obt-Message: Xinerama extension is not present on the server
+ lxpanel: can't load volumealsa plugin
+
+ (lxpanel:13863): GLib-WARNING **: pthread_mutex_unlock
+ Openbox-Message: Requested key "XF86Terminal" does not exist on the display
+ Openbox-Message: Unable to find a valid menu file "/usr/pkg/share/netbsd-light-desktop/openbox/menu.xml"
+ Openbox-Message: Requested key "XF86Terminal" does not exist on the display
+
+maybe wrong openbox version?
+for
+/usr/pkg/share/netbsd-light-desktop/openbox/menu.xml
+
+on install:
+libexec/lightdm/lightdm-set-defaults --keep-old --session=NetBSD
+libexec/lightdm/lightdm-set-defaults --keep-old --greeter=lightdm-gtk-greeter
+
+on deinstall:
+libexec/lightdm/lightdm-set-defaults --remove --session=NetBSD
+libexec/lightdm/lightdm-set-defaults --remove --greeter=lightdm-gtk-greeter

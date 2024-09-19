@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (cjs-5.2.0.tar.gz) = a593d6229c92a62ea63d2b00087b1f7aa3541567
+RMD160 (cjs-5.2.0.tar.gz) = 023b9856d7587acacb5c05a86dd3c4d97d7921b1
+SHA512 (cjs-5.2.0.tar.gz) = 0ce5cc07be036fa9af93c7d98a179881789f883578a2034c3c28255ef9da96d32b4203fc39311eaea0bdbe5148f13920d72dd24acb717c4e60302b390097a825
+Size (cjs-5.2.0.tar.gz) = 601982 bytes
+SHA1 (patch-cjs_jsapi-util.cpp) = dff90582e7cf5b79dbb7a7bbbd03cf8b81d8e02a

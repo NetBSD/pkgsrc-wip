@@ -1,0 +1,32 @@
+$NetBSD$
+
+--- Makefile.orig	2012-08-22 02:33:26.000000000 +0000
++++ Makefile
+@@ -1,5 +1,5 @@
+ LIBS=-lpcre -lcrypto -lm -lpthread
+-CFLAGS=-ggdb -O3 -Wall
++CFLAGS+=-ggdb -O3 -Wall
+ OBJS=vanitygen.o oclvanitygen.o oclvanityminer.o oclengine.o keyconv.o pattern.o util.o
+ PROGS=vanitygen keyconv oclvanitygen oclvanityminer
+ 
+@@ -16,16 +16,16 @@ most: vanitygen keyconv
+ all: $(PROGS)
+ 
+ vanitygen: vanitygen.o pattern.o util.o
+-	$(CC) $^ -o $@ $(CFLAGS) $(LIBS)
++	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS) $(LIBS)
+ 
+ oclvanitygen: oclvanitygen.o oclengine.o pattern.o util.o
+-	$(CC) $^ -o $@ $(CFLAGS) $(LIBS) $(OPENCL_LIBS)
++	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS) $(LIBS) $(OPENCL_LIBS)
+ 
+ oclvanityminer: oclvanityminer.o oclengine.o pattern.o util.o
+-	$(CC) $^ -o $@ $(CFLAGS) $(LIBS) $(OPENCL_LIBS) -lcurl
++	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS) $(LIBS) $(OPENCL_LIBS) -lcurl
+ 
+ keyconv: keyconv.o util.o
+-	$(CC) $^ -o $@ $(CFLAGS) $(LIBS)
++	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS) $(LIBS)
+ 
+ clean:
+ 	rm -f $(OBJS) $(PROGS) $(TESTS)

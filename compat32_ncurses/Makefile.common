@@ -1,0 +1,97 @@
+# $NetBSD: Makefile.common,v 1.40 2019/02/25 11:54:05 jperkin Exp $
+#
+# used by devel/ncurses/Makefile
+# used by devel/ncursesw/Makefile
+
+DISTNAME=	ncurses-${NC_VERS}
+ABI?=		32
+PKGNAME=	compat${ABI}_${DISTNAME}
+NC_VERS=	6.1
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
+MASTER_SITES+=	ftp://dickey.his.com/ncurses/
+MASTER_SITES+=	ftp://dickey.his.com/ncurses/${NC_VERS}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://invisible-island.net/ncurses/ncurses.html
+LICENSE=	mit
+
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config tbl
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
+CONFIGURE_ARGS+=	--with-libtool
+CONFIGURE_ARGS+=	--enable-bsdpad
+CONFIGURE_ARGS+=	--enable-overwrite
+CONFIGURE_ARGS+=	--with-cxx-binding
+CONFIGURE_ARGS+=	--enable-pc-files
+CONFIGURE_ARGS+=	--with-pkg-config-libdir=${PREFIX}/lib/pkgconfig
+CONFIGURE_ARGS+=	--without-ada
+CONFIGURE_ARGS+=	--without-gpm
+CONFIGURE_ARGS+=	--with-manpage-format=normal
+CONFIGURE_ARGS+=	--with-manpage-tbl
+CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
+CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
+
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
+SUBST_CLASSES+=		rpath
+SUBST_FILES.rpath+=	misc/ncurses-config
+SUBST_STAGE.rpath=	post-configure
+SUBST_SED.rpath+=	-e "s|-L\\(.libdir\\)|${COMPILER_RPATH_FLAG}\\1 -L\\1|"
+SUBST_MESSAGE.rpath=	Fixing rpath in ncurses-config.
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
+CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
+CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${LOCALBASE}/bin/tic
+.endif
+
+.if !defined(TOOLS_TBL)
+# This means that groff needs to be built to get tbl(1).
+# We can only build groff if there is a builtin implementation of curses,
+# otherwise we get a circular dependency problem.
+# Additionally, Interix is special, see ../../mk/curses.buildlink3.mk
+.  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h)) || \
+	${OPSYS} == "Interix" || \
+	(${OPSYS} == "FreeBSD" && empty(OS_VERSION:M[0-9].*) && \
+		empty(OS_VERSION:M1[01].*))
+# None was available, so disable use of tbl(1)
+USE_TOOLS:=		${USE_TOOLS:Ntbl}
+CONFIGURE_ARGS+=	--without-manpage-tbl
+.  endif
+.endif
+
+.include "../../mk/compiler.mk"
+
+# Fix build under FreeBSD 10.2
+.if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ENV+=		ac_cv_c_compiler_gnu=no
+CONFIGURE_ENV+=		ac_cv_cxx_compiler_gnu=no
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-const
+TERMINFODIR=		share/lib/terminfo
+.else
+TERMINFODIR=		share/terminfo
+.endif
+
+.if !empty(CC_VERSION:Mgcc-5.*)
+# Inhibit generation of line markers in the output from the preprocessor
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=60723
+CPPFLAGS+=	-P
+.endif
+
+# This prevents tic from writing into ~/.terminfo
+INSTALLATION_DIRS+=	${TERMINFODIR}
+
+PLIST_SUBST+=	TERMINFODIR=${TERMINFODIR}
+
+CHECK_WRKREF_SKIP+=	man/man?/*

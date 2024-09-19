@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2012/12/26 14:02:01 othyro Exp $
+
+RMD160 (HawkNL17b1src.zip) = 40ce31aa6555bc5ea054debdb26b6c3e2120d28a
+Size (HawkNL17b1src.zip) = 228389 bytes
+SHA1 (patch-makefile.openbsd) = abb68f5f7f0363cb1a34fe62422968a8843013e8

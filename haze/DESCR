@@ -1,0 +1,4 @@
+Offer a system to generate binary updates for NetBSD (NOT patches),
+install, remove with full "rollback to previous state" support,
+and manage them. Simple dependencies are allowed. It also allows
+auto-generating security advisories from update data.

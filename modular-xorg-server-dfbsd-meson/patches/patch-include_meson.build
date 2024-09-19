@@ -1,0 +1,43 @@
+$NetBSD$
+
+--- include/meson.build.orig	2019-03-20 23:09:22.000000000 +0000
++++ include/meson.build
+@@ -89,7 +89,8 @@ conf_data.set('HAVE_DBUS', build_dbus)
+ conf_data.set('CONFIG_HAL', build_hal)
+ conf_data.set('SYSTEMD_LOGIND', build_systemd_logind)
+ conf_data.set('NEED_DBUS', build_systemd_logind or build_hal)
+-conf_data.set('CONFIG_WSCONS', host_machine.system() == 'openbsd')
++conf_data.set('CONFIG_WSCONS', host_machine.system() == 'openbsd' or build_wscons)
++conf_data.set('CONFIG_DEVD', build_devd)
+ 
+ conf_data.set('HAVE_XSHMFENCE', xshmfence_dep.found())
+ conf_data.set('WITH_LIBDRM', libdrm_dep.found())
+@@ -254,7 +255,7 @@ supports_syscons = false
+ supports_wscons = false
+ csrg_based = false
+ 
+-if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonflybsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+   supports_pccons = true
+   supports_pcvt = true
+   supports_syscons = true
+@@ -344,14 +345,17 @@ xorg_data.set_quoted('PCI_TXT_IDS_PATH',
+ xorg_data.set('XSERVER_PLATFORM_BUS', build_udev)
+ xorg_data.set('WSCONS_SUPPORT', host_machine.system() == 'netbsd' or host_machine.system() == 'openbsd')
+ 
+-if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonflybsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+     if host_machine.cpu_family() == 'x86' or host_machine.cpu_family() == 'x86_64'
+         xorg_data.set('USE_DEV_IO', true)
+     endif
+ elif host_machine.system() == 'netbsd'
+-    if host_machine.cpu_family() == 'x86' or host_machine.cpu_family() == 'x86_64'
++    if host_machine.cpu_family() == 'x86'
+         xorg_data.set('USE_I386_IOPL', true)
+     endif
++    if host_machine.cpu_family() == 'x86_64'
++        xorg_data.set('USE_AMD64_IOPL', true)
++    endif
+ elif host_machine.system() == 'openbsd'
+     if host_machine.cpu_family() == 'x86'
+         xorg_data.set('USE_I386_IOPL', true)

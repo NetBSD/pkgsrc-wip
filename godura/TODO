@@ -1,0 +1,6 @@
+make it an option for RPM spec files feature
+I don't want it by default.
+
+run this with efence to test
+
+maybe add regex to find/replace

@@ -1,0 +1,10 @@
+This is SylFilter, a generic message filter library and command-line tools.
+SylFilter provides a bayesian filter which is very popular as a spam filtering
+algorithm. SylFilter is also internationalized and can be applied to any
+languages.
+
+SylFilter library provides simple but powerful C APIs and can be used from C
+programs.
+
+SylFilter command-line tool can be used as a junk filter program like major
+tools such as bogofilter and bsfilter etc

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/xinv3d
+share/xinvaders3d/COPYING
+share/xinvaders3d/README
+share/xinvaders3d/xinvaders3d.lsm

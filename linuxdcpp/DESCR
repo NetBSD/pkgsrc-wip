@@ -1,0 +1,3 @@
+Linuxdcpp is a port of the win32 DC++ direct connect client to POSIX-
+like systems. Despite the name, it does run on other platforms beside
+Linux. Linuxdcpp uses the gtk2 toolkit.

@@ -1,0 +1,5 @@
+The amavis-logwatch log analyzer produces summaries, reports and statistics
+regarding the operation of amavis.
+Use standalone, or as a filter module for the open source logwatch utility.
+
+(This is the standalone install)

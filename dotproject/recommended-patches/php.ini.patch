@@ -1,0 +1,32 @@
+--- /usr/pkg/share/examples/php/php.ini-recommended	2007-09-27 19:46:00.000000000 +0200
++++ /usr/pkg/etc/php.ini	2008-03-12 10:32:49.000000000 +0100
+@@ -241,7 +241,7 @@
+ ; Resource Limits ;
+ ;;;;;;;;;;;;;;;;;;;
+ 
+-max_execution_time = 30     ; Maximum execution time of each script, in seconds
++max_execution_time = 120    ; Maximum execution time of each script, in seconds
+ max_input_time = 60	; Maximum amount of time each script may spend parsing request data
+ memory_limit = 8M      ; Maximum amount of memory a script may consume (8MB)
+ 
+@@ -549,6 +549,11 @@
+ ; needs to go here.  Specify the location of the extension with the
+ ; extension_dir directive above.
+ 
++extension=mysql.so
++extension=gd.so
++extension=zlib.so
++;acceleration module
++extension.apc.so
+ 
+ ;Windows Extensions
+ ;Note that MySQL and ODBC support is now built in, so no dll is needed for it.
+@@ -689,7 +694,7 @@
+ mysql.default_password =
+ 
+ ; Maximum time (in seconds) for connect timeout. -1 means no limit
+-mysql.connect_timeout = 60
++mysql.connect_timeout = -1
+ 
+ ; Trace mode. When trace_mode is active (=On), warnings for table/index scans and
+ ; SQL-Errors will be displayed.

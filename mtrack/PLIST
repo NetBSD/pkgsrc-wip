@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
+bin/mtrack
+bin/tle2mtrack
+etc/mtrackrc
+share/mtrack/africa.pbm
+share/mtrack/asia.pbm
+share/mtrack/australasia.pbm
+share/mtrack/dxedit.help
+share/mtrack/dxlist.help
+share/mtrack/elements.help
+share/mtrack/europe.pbm
+share/mtrack/import.help
+share/mtrack/index.help
+share/mtrack/list.help
+share/mtrack/listask.help
+share/mtrack/main.help
+share/mtrack/namerica.pbm
+share/mtrack/pacific.pbm
+share/mtrack/preferences.help
+share/mtrack/samerica.pbm
+share/mtrack/satedit.help
+share/mtrack/satlist.help
+share/mtrack/usa.pbm
+share/mtrack/visibility.help
+share/mtrack/world.pbm
+var/mtrack/locfile
+var/mtrack/satfile

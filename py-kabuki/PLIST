@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/26 18:35:37 jihbed Exp $
+${PYSITELIB}/kabuki/__init__.py
+${PYSITELIB}/kabuki/__init__.pyc
+${PYSITELIB}/kabuki/__init__.pyo
+${PYSITELIB}/kabuki/analyze.py
+${PYSITELIB}/kabuki/analyze.pyc
+${PYSITELIB}/kabuki/analyze.pyo
+${PYSITELIB}/kabuki/distributions.py
+${PYSITELIB}/kabuki/distributions.pyc
+${PYSITELIB}/kabuki/distributions.pyo
+${PYSITELIB}/kabuki/experiments.py
+${PYSITELIB}/kabuki/experiments.pyc
+${PYSITELIB}/kabuki/experiments.pyo
+${PYSITELIB}/kabuki/generate.py
+${PYSITELIB}/kabuki/generate.pyc
+${PYSITELIB}/kabuki/generate.pyo
+${PYSITELIB}/kabuki/hierarchical.py
+${PYSITELIB}/kabuki/hierarchical.pyc
+${PYSITELIB}/kabuki/hierarchical.pyo
+${PYSITELIB}/kabuki/step_methods.py
+${PYSITELIB}/kabuki/step_methods.pyc
+${PYSITELIB}/kabuki/step_methods.pyo
+${PYSITELIB}/kabuki/utils.py
+${PYSITELIB}/kabuki/utils.pyc
+${PYSITELIB}/kabuki/utils.pyo

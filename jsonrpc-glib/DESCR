@@ -1,0 +1,3 @@
+Jsonrpc-GLib is a library to communicate with JSON-RPC based peers in either a
+synchronous or asynchronous fashion. It also allows communicating using the
+GVariant serialization format instead of JSON when both peers support it.

@@ -1,0 +1,5 @@
+Pike is a dynamic programming language with a syntax similar to Java and
+C. It is simple to learn, does not require long compilation passes and
+has powerful built-in data types allowing simple and really fast data
+manipulation. Pike is released under the GNU GPL, GNU LGPL and MPL; this
+means that you can fetch it and use it for almost any purpose you please.

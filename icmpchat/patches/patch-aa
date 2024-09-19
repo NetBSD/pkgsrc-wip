@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.2 2003/07/25 16:54:51 poppnk Exp $
+
+--- curses.h__	2003-04-06 16:20:19.000000000 +0000
++++ curses.h	2003-04-29 22:04:05.000000000 +0000
+@@ -3,6 +3,7 @@
+ #ifndef IC_CURSES_H
+ #define IC_CURSES_H
+ 
++#define CURSES_H
+ #include <curses.h>
+ 
+ void start_curses(void);

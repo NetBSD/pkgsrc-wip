@@ -1,0 +1,8 @@
+The sysstat utilities are a collection of performance monitoring
+tools for Linux. These include mpstat, iostat, sar, sadc, sadf and
+sa tools. They are front-ends to the kernel proc filesystem.
+
+The mpstat tool reports statistics for each processor. iostat
+reports CPU stats and input/output statistics for devices and
+partitions. sar is used to collect, report, or save system activity
+information.

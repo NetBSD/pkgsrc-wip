@@ -1,0 +1,122 @@
+$NetBSD$
+
+# Portability
+
+--- makefile.orig	2018-07-18 09:45:21.000000000 +0000
++++ makefile
+@@ -1,10 +1,16 @@
+-all: famsa famsa-gpu
++all: famsa
+ 
+ ## USER'S OPTIONS
+ STATIC_LINK = false
+-NO_AVX = false
+-NO_AVX2 = false
+-NO_GPU = false
++# Determined at runtime, so no reason to disable unless building
++# on a system without AVX
++NO_AVX ?= true
++NO_AVX2 ?= true
++NO_GPU ?= false
++
++DESTDIR	?=
++PREFIX	?= /usr/local
++INSTALL	?= install
+ 
+ ####################
+ 
+@@ -21,18 +27,18 @@ ifeq ($(UNAME_S),Darwin)
+ endif
+ 
+  
+-CC 	= g++
++CXX 	?= g++
+ 
+ ifeq ($(STATIC_LINK), true) 
+-	CFLAGS	= -Wall -O3 -m64 -static -Wl,--whole-archive -lpthread -Wl,--no-whole-archive -std=c++11 -I $(LIBS_DIR) -I $(LIBS_LINUX_DIR) 
+-	CLINK	= -lm -static -O3 -Wl,--whole-archive -lpthread -Wl,--no-whole-archive -std=c++11 
++	CXXFLAGS	+= -Wall -static -Wl,--whole-archive -lpthread -Wl,--no-whole-archive -std=c++11 -I $(LIBS_DIR) -I $(LIBS_LINUX_DIR) 
++	CLINK	= -lm -static -Wl,--whole-archive -lpthread -Wl,--no-whole-archive -std=c++11 
+ else
+-	CFLAGS	= -Wall -O3 -m64 -std=c++11 -pthread -I $(LIBS_DIR) -I $(LIBS_LINUX_DIR)
+-	CLINK	= -lm -O3 -std=c++11 -pthread 
++	CXXFLAGS	+= -Wall -std=c++11 -pthread -I $(LIBS_DIR) -I $(LIBS_LINUX_DIR)
++	CLINK	= -lm -std=c++11 -pthread 
+ endif
+  
+-CFLAGS_AVX = $(CFLAGS) -mavx ${ABI_FLAG} -mpopcnt -funroll-loops
+-CFLAGS_AVX2 = $(CFLAGS) -mavx2 ${ABI_FLAG} -mpopcnt -funroll-loops
++CXXFLAGS_AVX = $(CXXFLAGS) -mavx ${ABI_FLAG} -mpopcnt -funroll-loops
++CXXFLAGS_AVX2 = $(CXXFLAGS) -mavx2 ${ABI_FLAG} -mpopcnt -funroll-loops
+ 
+ OPENCL_OBJS := 	 core_gpu/gpumsa.o \
+ 	opencl_utils/hardware/Buffer.o \
+@@ -59,14 +65,14 @@ COMMON_OBJS := core/input_file.o \
+ 	opencl_utils/common/StatisticsProvider.o 
+ 
+ core/lcsbp_classic.o : core/lcsbp_classic.cpp
+-	$(CC) $(CFLAGS) -c core/lcsbp_classic.cpp -o $@
++	$(CXX) $(CXXFLAGS) -c core/lcsbp_classic.cpp -o $@
+ 
+ ifeq ($(NO_AVX), true) 
+ LCS_OBJS := core/lcsbp.o \
+ 	core/lcsbp_classic.o
+ 
+ core/lcsbp.o : core/lcsbp.cpp
+-	$(CC) $(CFLAGS) -DNO_AVX -c core/lcsbp.cpp -o $@
++	$(CXX) $(CXXFLAGS) -DNO_AVX -c core/lcsbp.cpp -o $@
+ 
+ else 
+ ifeq ($(NO_AVX2), true)
+@@ -76,9 +82,9 @@ LCS_OBJS := core/lcsbp.o \
+ 	core/lcsbp_avx.o
+ 
+ core/lcsbp.o : core/lcsbp.cpp
+-	$(CC) $(CFLAGS) -DNO_AVX2 -c core/lcsbp.cpp -o $@
++	$(CXX) $(CXXFLAGS) -DNO_AVX2 -c core/lcsbp.cpp -o $@
+ core/lcsbp_avx.o : core/lcsbp_avx.cpp
+-	$(CC) $(CFLAGS_AVX) -c core/lcsbp_avx.cpp -o $@
++	$(CXX) $(CXXFLAGS_AVX) -c core/lcsbp_avx.cpp -o $@
+ else
+ LCS_OBJS := core/lcsbp.o \
+ 	core/lcsbp_classic.o \
+@@ -86,25 +92,25 @@ LCS_OBJS := core/lcsbp.o \
+ 	core/lcsbp_avx2.o
+ 
+ core/lcsbp.o : core/lcsbp.cpp
+-	$(CC) $(CFLAGS) -c core/lcsbp.cpp -o $@
++	$(CXX) $(CXXFLAGS) -c core/lcsbp.cpp -o $@
+ core/lcsbp_avx.o : core/lcsbp_avx.cpp
+-	$(CC) $(CFLAGS_AVX) -c core/lcsbp_avx.cpp -o $@
++	$(CXX) $(CXXFLAGS_AVX) -c core/lcsbp_avx.cpp -o $@
+ core/lcsbp_avx2.o : core/lcsbp_avx2.cpp
+-	$(CC) $(CFLAGS_AVX2) -c core/lcsbp_avx2.cpp -o $@
++	$(CXX) $(CXXFLAGS_AVX2) -c core/lcsbp_avx2.cpp -o $@
+ endif
+ endif
+ 
+ .cpp.o:
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CXX) $(CXXFLAGS) -c $< -o $@
+ 
+ 
+ ifeq ($(NO_GPU),false)
+ famsa-gpu: famsa_gpu/famsa_gpu.o $(COMMON_OBJS) $(LCS_OBJS) $(OPENCL_OBJS) 
+-	$(CC) $(CLINK) -o $@ famsa_gpu/famsa_gpu.o $(COMMON_OBJS) $(LCS_OBJS) $(OPENCL_OBJS) $(LIBS_LINUX_DIR)/${ASM_LIB} -lOpenCL
++	$(CXX) $(CLINK) -o $@ famsa_gpu/famsa_gpu.o $(COMMON_OBJS) $(LCS_OBJS) $(OPENCL_OBJS) -lOpenCL
+ endif
+ 
+ famsa: famsa_cpu/famsa_cpu.o $(COMMON_OBJS) $(LCS_OBJS)
+-	$(CC) $(CLINK) -o $@ famsa_cpu/famsa_cpu.o $(COMMON_OBJS) $(LCS_OBJS) $(LIBS_LINUX_DIR)/${ASM_LIB}
++	$(CXX) $(CLINK) -o $@ famsa_cpu/famsa_cpu.o $(COMMON_OBJS) $(LCS_OBJS)
+ 
+ clean:
+ 	-rm core/*.o
+@@ -115,3 +121,7 @@ clean:
+ 	-rm opencl_utils/common/*.o
+ 	-rm famsa
+ 	-rm famsa-gpu
++
++install:
++	$(INSTALL) -d $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL) -c famsa $(DESTDIR)$(PREFIX)/bin

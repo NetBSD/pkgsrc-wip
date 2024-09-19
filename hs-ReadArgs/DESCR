@@ -1,0 +1,19 @@
+ReadArgs provides the readArgs IO action, which lets you tell the compiler
+to parse the command line arguments to fit the type signature you give.
+
+For example (a :: Int, b :: String, c :: Float) <- readArgs would parse the
+first runtime argument as an Int, the second as a String (no quotes
+required) and the third as a Float.
+
+If the runtime arguments are incompatible with the type signature, then a
+simple usage statement is given of the types needed.
+
+Continuing the previous example, if it was used in a program named Example,
+the error message for the above action would be:
+
+usage: Example Int String Float
+
+Any type that has both Typeable and Read instances can be used. Char,
+String, and Text are handled specially so that command line arguments for
+both do not require quotes (as their Read instances do). A special instance
+is provided for FilePath so that no constructor or quotes are required.

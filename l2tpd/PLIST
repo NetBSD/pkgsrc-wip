@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:50 thomasklausner Exp $
+bin/l2tpd
+man/man5/l2tp-secrets.5
+man/man5/l2tpd.conf.5
+man/man8/l2tpd.8
+share/doc/l2tpd/README
+share/examples/l2tpd/l2tp-secrets.sample
+share/examples/l2tpd/l2tpd.conf.sample

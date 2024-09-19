@@ -1,0 +1,6 @@
+@comment $NetBSD$
+info/cronolog.info
+man/man8/cronolog.8
+man/man8/cronosplit.8
+sbin/cronolog
+sbin/cronosplit

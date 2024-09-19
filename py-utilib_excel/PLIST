@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 20:00:19 jihbed Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyutilib/excel/__init__.py
+${PYSITELIB}/pyutilib/excel/__init__.pyc
+${PYSITELIB}/pyutilib/excel/__init__.pyo
+${PYSITELIB}/pyutilib/excel/excel.py
+${PYSITELIB}/pyutilib/excel/excel.pyc
+${PYSITELIB}/pyutilib/excel/excel.pyo
+${PYSITELIB}/pyutilib/excel/spreadsheet.py
+${PYSITELIB}/pyutilib/excel/spreadsheet.pyc
+${PYSITELIB}/pyutilib/excel/spreadsheet.pyo

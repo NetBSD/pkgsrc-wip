@@ -1,0 +1,1 @@
+PerlIO::Layers allows you to query the filehandle's properties.

@@ -1,0 +1,2 @@
+Needs boost built with icu support.
+pkgsrc default is no icu except on Solaris.

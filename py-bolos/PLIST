@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/bolos/__init__.py
+${PYSITELIB}/bolos/__init__.pyc
+${PYSITELIB}/bolos/__init__.pyo
+${PYSITELIB}/bolos/grid.py
+${PYSITELIB}/bolos/grid.pyc
+${PYSITELIB}/bolos/grid.pyo
+${PYSITELIB}/bolos/parser.py
+${PYSITELIB}/bolos/parser.pyc
+${PYSITELIB}/bolos/parser.pyo
+${PYSITELIB}/bolos/process.py
+${PYSITELIB}/bolos/process.pyc
+${PYSITELIB}/bolos/process.pyo
+${PYSITELIB}/bolos/solver.py
+${PYSITELIB}/bolos/solver.pyc
+${PYSITELIB}/bolos/solver.pyo
+${PYSITELIB}/bolos/target.py
+${PYSITELIB}/bolos/target.pyc
+${PYSITELIB}/bolos/target.pyo

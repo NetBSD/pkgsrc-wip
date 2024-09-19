@@ -1,0 +1,17 @@
+$NetBSD$
+
+Find libpng16.so instead of libpng.so
+
+--- gb.v4l/configure.ac.orig	2018-09-01 10:28:18.000000000 +0000
++++ gb.v4l/configure.ac
+@@ -14,8 +14,8 @@ GB_COMPONENT_PKG_CONFIG(
+ GB_COMPONENT(
+   v4l, V4L, gb.v4l, [src],
+   [GB_FIND(png.h jpeglib.h linux/videodev2.h, $prefix /usr/local/lib /usr/local /usr/lib /usr, include)],
+-  [GB_FIND(libpng.$SHLIBEXT libjpeg.$SHLIBEXT, $prefix /usr/local /usr, lib)],
+-  [$C_LIB -ljpeg -lpng])
++  [GB_FIND(libpng16.$SHLIBEXT libjpeg.$SHLIBEXT, $prefix /usr/local /usr, lib)],
++  [$C_LIB -ljpeg -lpng16])
+ 
+ AC_OUTPUT( \
+ Makefile \

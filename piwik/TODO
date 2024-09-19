@@ -1,0 +1,141 @@
+------------------------------------------------------------
+- T H I S    P A C K A G E   I S   N O T   R E A D Y   Y E T
+  (In the sense you need many more work to run piwik)
+------------------------------------------------------------
+
+- php version selection is not clear (to me)
+-  [check-interpreter.mk] 
+
+"/usr/bin/env" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/console" is not allowed.
+"-e" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/misc/cron/archive.sh" does not exist.
+"/usr/bin/env" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-1.17.1/bin/_mocha" is not allowed.
+"/usr/bin/env" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-1.17.1/bin/mocha" is not allowed.
+
+- more work after pkg_add, where to note or document
+  (if MESSAGES is not the place)
+- Currently installing under ${PREFIX}/share/piwik
+ and several (many) files will be added there, should be on /var instead ?
+------------------------------------------------------------------------
+(index)
+- 1. (piwik)  make package-install 
+- 2. (php)    /usr/pkg/etc/php.ini
+- 3. (httpd server)
+     (apache) /usr/pkg/etc/httpd.conf
+- 4. (mysql)  
+- 5. (composer)
+------------------------------------------------------------------------
+(textbody)
+
+- 1. make package-install
+
+- 2. /usr/pkg/etc/php.ini setup
+
+@@ -901,6 +884,20 @@
+ ;extension=php_pspell.dll
+ ;extension=php_shmop.dll
+ 
++extension=mysql.so
++extension=curl.so
++extension=dom.so
++extension=json.so
++extension=dom.so
++extension=curl.so
++extension=gd.so
++extension=geoip.so
++extension=zlib.so
++extension=pdo.so
++extension=iconv.so
++extension=pdo_mysql.so
++extension=mbstring.so
++
+ ; The MIBS data available in the PHP distribution must be installed. 
+ ; See http://www.php.net/manual/en/snmp.installation.php 
+ ;extension=php_snmp.dll
+
+
+- 3. apache setup to browse
+     (/usr/pkg/share/piwik)
+
+--- /usr/pkg/share/examples/httpd/httpd.conf	2014-06-14 17:47:23.000000000 +0900
++++ /usr/pkg/etc/httpd/httpd.conf	2015-02-19 10:16:59.000000000 +0900
+@@ -125,6 +125,8 @@
+ LoadModule userdir_module lib/httpd/mod_userdir.so
+ LoadModule alias_module lib/httpd/mod_alias.so
+ LoadModule rewrite_module lib/httpd/mod_rewrite.so
++LoadModule php5_module lib/httpd/mod_php5.so
++AddHandler application/x-httpd-php .php
+ 
+ <IfModule !mpm_netware_module>
+ <IfModule !mpm_winnt_module>
+@@ -176,6 +178,7 @@
+ # symbolic links and aliases may be used to point to other locations.
+ #
+ DocumentRoot "/usr/pkg/share/httpd/htdocs"
++DocumentRoot "/var/share/httpd/piwik"
+ 
+ #
+ # Each directory to which Apache has access can be configured with respect
+@@ -202,7 +205,8 @@
+ #
+ # This should be changed to whatever you set DocumentRoot to.
+ #
+-<Directory "/usr/pkg/share/httpd/htdocs">
++#Directory "/usr/pkg/share/httpd/htdocs">
++<Directory "/usr/pkg/share/piwik">
+     #
+     # Possible values for the Options directive are "None", "All",
+     # or any combination of:
+
+
+  ( try access http://localhost/piwik.php )
+
+
+- 4. mysql database setup
+     (database name, userid, password)
+
+
+- 5. (composer)
+    ------------------------
+    cd /usr/pkg/share/piwik ;
+    sudo -s ;
+    mkdir -p       /var/share/httpd/piwik;
+    pax -rw -pmp . /var/share/httpd/piwik;
+    cd             /var/share/httpd/piwik;
+
+    curl -sS https://getcomposer.org/installer | php ;
+    php composer.phar install ;
+    ------------------------
+
+    (real example)
+    --------------------
+    t-105@makoto 10:30:25/150219(..share/piwik)% sudo -s
+    t-105#  curl -sS https://getcomposer.org/installer | php 
+    #!/usr/bin/env php
+    All settings correct for using Composer
+    Downloading...
+    
+    Composer successfully installed to: /usr/pkg/share/piwik/composer.phar
+    Use it: php composer.phar
+
+
+    ---------------
+    modena@root 12:55:48/150324(..httpd/piwik)%     php composer.phar install ;
+    Loading composer repositories with package information
+    Installing dependencies (including require-dev) from lock file
+       - Installing doctrine/lexer (v1.0.1)
+         Loading from cache
+        ..
+
+    symfony/var-dumper suggests installing ext-symfony_debug ()
+    Generating autoload files
+    Building xhprof...
+    Fatal error: could not build extension (make failed)! View tmp/xhprof-logs/make.log for more info.
+
+/var/share/httpd/piwik/vendor/facebook/xhprof/extension/xhprof.c:210:3: error: expected specifier-qualifier-list before 'cpu_set_t'
+/var/share/httpd/piwik/vendor/facebook/xhprof/extension/xhprof.c:238:1: warning: 'visibility' attribute ignored
+/var/share/httpd/piwik/vendor/facebook/xhprof/extension/xhprof.c:242:28: warning: 'visibility' attribute ignored
+..
+
+   209    /* The saved cpu affinity. */
+   210    cpu_set_t prev_mask;
+   211

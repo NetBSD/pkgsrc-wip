@@ -1,0 +1,7 @@
+Weston is a very basic desktop, the reference implementation of a Wayland
+compositor. Shows a wallpaper under its semi-transparent launcher panel
+with a clock. Takes over a text console, or starts a nested window
+instance inside an existing session. Renders to a framebuffer device or an
+EGL direct rendering context. Has a screenshooter and a terminal emulator.
+
+Needs wip/udev once at runtime, see its DESCR for details.

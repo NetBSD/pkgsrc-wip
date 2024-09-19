@@ -1,0 +1,18 @@
+A Highly Configurable IRC Proxy
+
+Features:
+
+* Multi-user support: lets you have multiple users each with different
+  passwords and priviledges
+* Full access control with allow and ban lists
+* Fully transparent DCC proxying
+* Detaching capability to allow users to disconnect from the proxy, but keep
+  the IRC session alive and attach to it later
+* Logs conversations while detached
+* SSL Support
+* Can listen on and bind connections to different virtual hosts
+* Uses nonblocking sockets for connections
+* Fake ident support (with help of special ident daemon included)
+* Ability to reload configuration file while running
+* Numerous tweakable settings.
+* And more

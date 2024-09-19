@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (PDCurses-3.9.tar.gz) = 6d7de4231aa0589e56008cfbb5c85039317ba27d
+SHA512 (PDCurses-3.9.tar.gz) = 4fd7c1221c5f34d94069a563dda7a796653148d903bc9023afe134b0f13bdc8b5d30000dfc80ab800e46e58b395ac2fb494d1316b80914998de5bacf0d7f3558
+Size (PDCurses-3.9.tar.gz) = 363153 bytes
+SHA1 (patch-x11_Makefile.in) = c234316fda415f60093c9173a0ad43dfca81af0f

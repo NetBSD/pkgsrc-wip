@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.3 2011/12/29 19:05:10 asau Exp $
+
+Depending on the declared type of ifconf:ifc_buf, it cannot be used with
+delete []. Store the dynamically allocated storage in a separate variable
+of the correct type and use that with delete[].
+
+--- talk/base/network.cc.orig	2011-12-14 15:58:28.000000000 +0000
++++ talk/base/network.cc
+@@ -150,7 +150,8 @@ bool BasicNetworkManager::CreateNetworks
+ 
+   struct ifconf ifc;
+   ifc.ifc_len = 64 * sizeof(struct ifreq);
+-  ifc.ifc_buf = new char[ifc.ifc_len];
++  char *ifcbuf = new char[ifc.ifc_len];
++  ifc.ifc_buf = ifcbuf;
+ 
+   if (ioctl(fd, SIOCGIFCONF, &ifc) < 0) {
+     LOG_ERR(LERROR) << "ioctl";
+@@ -158,9 +159,9 @@ bool BasicNetworkManager::CreateNetworks
+   }
+   ASSERT(ifc.ifc_len < static_cast<int>(64 * sizeof(struct ifreq)));
+ 
+-  struct ifreq* ptr = reinterpret_cast<struct ifreq*>(ifc.ifc_buf);
++  struct ifreq* ptr = reinterpret_cast<struct ifreq*>(ifcbuf);
+   struct ifreq* end =
+-      reinterpret_cast<struct ifreq*>(ifc.ifc_buf + ifc.ifc_len);
++      reinterpret_cast<struct ifreq*>(ifcbuf + ifc.ifc_len);
+ 
+   while (ptr < end) {
+     struct sockaddr_in* inaddr =
+@@ -183,7 +184,7 @@ bool BasicNetworkManager::CreateNetworks
+ #endif
+   }
+ 
+-  delete [] ifc.ifc_buf;
++  delete [] ifcbuf;
+   close(fd);
+   return true;
+ }

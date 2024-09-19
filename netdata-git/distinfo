@@ -1,0 +1,11 @@
+$NetBSD$
+
+RMD160 (netdata-1.5.0.tar.gz) = 22f84edbfa3e536c3cf3a52c76bfe765682cf9ec
+SHA512 (netdata-1.5.0.tar.gz) = 8655a6480a4975ad49804336627444336a72690377236b031a489f8c251d28e2b1ee13af18d34f60d2fc96220339315570408d7028c51d334f26a26e6765b4e5
+Size (netdata-1.5.0.tar.gz) = 2398311 bytes
+SHA1 (patch-src_common.c) = 65dd1218d48f55a9b26181d1d87d7f5d00a3505f
+SHA1 (patch-src_common.h) = 56101e3d455293be81f27cf8b0ba3634968f6d83
+SHA1 (patch-src_daemon.c) = e66833cb9f23a2911ef0cd2bb629c65adf828d8d
+SHA1 (patch-src_main.c) = 0606d0416fedbb8b64e460b1cd9faa24b3812dc5
+SHA1 (patch-src_netbsd__sysctl.c) = d5ac560925d7e8a04fe1a36d91d7d938dad0b4ce
+SHA1 (patch-src_plugin__netbsd.h) = 9d437aedb0c291da885d4e0c03d79f90202ccd0c

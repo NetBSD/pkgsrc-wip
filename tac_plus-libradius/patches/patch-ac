@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/10/04 20:26:29 gschwarz Exp $
+
+--- md5.c.orig	2008-10-04 21:47:22.000000000 +0200
++++ md5.c	2008-10-04 21:48:45.000000000 +0200
+@@ -48,6 +48,7 @@
+  */
+ 
+ #include "md5.h"
++#include <string.h> /* for memcpy() and memset() */
+ 
+ /* Constants for MD5Transform routine.
+  */

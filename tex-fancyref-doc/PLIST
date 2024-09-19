@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/fancyref/COPYING
+share/texmf-dist/doc/latex/fancyref/README
+share/texmf-dist/doc/latex/fancyref/fancyref.pdf
+share/texmf-dist/doc/latex/fancyref/freftest.tex

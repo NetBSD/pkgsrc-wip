@@ -1,0 +1,6 @@
+$NetBSD$
+
+--- src/VBox/HostDrivers/Support/netbsd/SUPDrv-netbsd.def.orig	2016-08-12 22:24:09.740629324 +0000
++++ src/VBox/HostDrivers/Support/netbsd/SUPDrv-netbsd.def
+@@ -0,0 +1 @@
++SUPDrvNetBSDIDC

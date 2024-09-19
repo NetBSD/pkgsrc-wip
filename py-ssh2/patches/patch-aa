@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/01 21:35:31 guigui2 Exp $
+
+
+--- setup_ssh4.py.orig	2008-07-19 22:04:32.000000000 -0400
++++ setup_ssh4.py	2010-03-03 01:43:10.000000000 -0500
+@@ -60,8 +60,8 @@
+ 		"-DSHA1_ASM", "-DRMD160_ASM", "-DOPENSSL_USE_APPLINK"]
+ 	# ExtraLinkArgs = ["-nodefaultlib"]
+ else:
+-    IncludeDirs = ['libssh2-0.14/include']
+-    LibraryDirs = ['libssh2-0.14/src']
++    IncludeDirs = ['']
++    LibraryDirs = ['']
+     Libraries = ['ssl', 'crypto', 'ssh2', 'z']
+ if sys.platform == 'darwin':
+     IncludeDirs = ['libssh2-0.14/include', '/usr/local/ssl/include']

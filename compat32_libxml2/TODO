@@ -1,0 +1,2 @@
+Please note that this package isn't functional yet.
+NetBSD make seems to be calling gmake with the wrong flags.

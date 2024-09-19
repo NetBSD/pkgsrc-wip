@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/01 19:49:25 thomasklausner Exp $
+
+--- configure.orig	2008-10-13 14:03:00.000000000 +0000
++++ configure
+@@ -47,7 +47,7 @@ echo 'COMMON_OBJS:=$(COMMON_OBJS) build/
+ fi
+ 
+ # Linux configuration
+-if [ "`uname`" = Linux ]
++if [ "`uname`" = Linux -o "`uname`" = NetBSD ]
+ then
+ echo 'CFLAGS:=$(CFLAGS) -DLINUXFUNC -DPREFIXPATH=\"/usr/share/games/smw\" '`sdl-config --cflags` $CFLAGS >> configuration
+ echo 'LDFLAGS:=$(LDFLAGS) '`sdl-config --libs` $LDFLAGS -lSDL_image -lSDL_mixer -lpng >> configuration

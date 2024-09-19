@@ -1,0 +1,6 @@
+POPPY is a Python package that simulates physical optical propagation
+including diffraction. It implements a flexible framework for modeling
+Fraunhofer and Fresnel diffraction and point spread
+function formation, particularly in the context of astronomical telescopes.
+POPPY was developed as part of a simulation package for JWST, but is more
+broadly applicable to many kinds of imaging simulations

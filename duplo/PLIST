@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/07 10:52:44 jihbed Exp $
+bin/duplo
+share/doc/duplo/README

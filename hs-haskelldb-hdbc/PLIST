@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
+lib/haskelldb-hdbc-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC.hi
+lib/haskelldb-hdbc-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC.p_hi
+lib/haskelldb-hdbc-${PKGVERSION}/${HASKELL_VERSION}/HShaskelldb-hdbc-${PKGVERSION}.o
+lib/haskelldb-hdbc-${PKGVERSION}/${HASKELL_VERSION}/libHShaskelldb-hdbc-${PKGVERSION}.a
+lib/haskelldb-hdbc-${PKGVERSION}/${HASKELL_VERSION}/libHShaskelldb-hdbc-${PKGVERSION}_p.a
+lib/haskelldb-hdbc-${PKGVERSION}/${HASKELL_VERSION}/package-description

@@ -1,0 +1,14 @@
+$NetBSD: patch-makefile,v 1.1.1.1 2011/10/28 17:30:05 jihbed Exp $
+
+--- makefile.orig	2010-06-09 09:15:24.000000000 +0100
++++ makefile	2011-05-13 19:05:36.000000000 +0100
+@@ -1,7 +1,7 @@
+ #Fortran compiler
+ #FC=g77
+-#FC=gfortran
+-FC=pgf77
++FC=/usr/pkg/gcc3/bin/g77
++#FC=pgf77
+ #FC=$(MPIFC)
+ 
+ #uncomment for use of LHAPDF and adapt path

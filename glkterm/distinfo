@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2005/03/07 15:25:29 dillo Exp $
+
+RMD160 (glkterm-104.tar.gz) = 21d77e00d49582d0398a6be6f11d3e7b1a5e9329
+SHA512 (glkterm-104.tar.gz) = a8264f487128eb9ee06a9c97202ed7ee67573d06d0f764597788b3deb032a4de614d9ab06cc91f39aa5ab92760e4280a1962c7e3292c429202a40d35240bfcc7
+Size (glkterm-104.tar.gz) = 123440 bytes
+SHA1 (patch-aa) = 95bae3b908487e75d694fa98ba37c9a00e7f80f6

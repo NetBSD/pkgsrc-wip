@@ -1,0 +1,22 @@
+$NetBSD: patch-be,v 1.5 2014/11/30 08:40:51 spz Exp $
+
+--- support/sys-mman.c.orig	2017-08-02 13:16:42.000000000 +0000
++++ support/sys-mman.c
+@@ -10,7 +10,6 @@
+ #include <config.h>
+ 
+ #ifndef __OpenBSD__
+-#define _XOPEN_SOURCE 600
+ #endif
+ 
+ #ifdef PLATFORM_MACOSX
+@@ -30,6 +29,9 @@
+ #include <sys/types.h>
+ #include <sys/mman.h>
+ #include <errno.h>
++#ifdef __sun
++#include <unistd.h>
++#endif
+ 
+ #include "map.h"
+ #include "mph.h"

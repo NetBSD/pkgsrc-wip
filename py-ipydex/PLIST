@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ipydex/__init__.py
+${PYSITELIB}/ipydex/__init__.pyo
+${PYSITELIB}/ipydex/__init__.pyc
+${PYSITELIB}/ipydex/core.pyo
+${PYSITELIB}/ipydex/core.pyc
+${PYSITELIB}/ipydex/displaytools.pyo
+${PYSITELIB}/ipydex/displaytools.pyc
+${PYSITELIB}/ipydex/release.pyo
+${PYSITELIB}/ipydex/release.pyc
+${PYSITELIB}/ipydex/core.py
+${PYSITELIB}/ipydex/displaytools.py
+${PYSITELIB}/ipydex/release.py

@@ -1,0 +1,3 @@
+packet filter (pf) from OpenBSD, adapted for NetBSD.
+
+NetBSD-specific module and commands built from NetBSD 8.0 sources.

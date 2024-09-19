@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/05/13 08:45:10 poppnk Exp $
+
+WARNING!! THIS PROGRAM COULD DELETE SENSIBLE INFORMATION USE IT *ONLY*
+ON TEMPORALLY DIRECTORIES LIKE /tmp.
+
+===========================================================================

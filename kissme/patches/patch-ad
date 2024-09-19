@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/03/03 20:11:53 poppnk Exp $
+--- vm/thread.c.orig	2004-03-03 19:19:47.000000000 +0000
++++ vm/thread.c	2004-03-03 19:33:31.000000000 +0000
+@@ -26,6 +26,7 @@
+ 
+ #include "vm/interp.h"
+ #include <pthread.h>
++#include <sched.h>
+ 
+ #ifdef KISSME_LINUX_USER
+ #include <stdio.h>
+@@ -83,7 +84,9 @@
+ 
+   // create the threadListMutex and make it recursive
+   pthread_mutexattr_init (&kind);
++#if __linux__
+   pthread_mutexattr_setkind_np(&kind, PTHREAD_MUTEX_RECURSIVE_NP);
++#endif
+   pthread_mutex_init(&threadListMutex, &kind);
+ 
+   // register a signal handler for the SIGUSR1 signal
+@@ -330,7 +333,11 @@
+ void java_lang_VMThread_yield(JNIEnv* env, jobject obj)
+ {
+   traceThreads0("VMThread_yield()");
++#if __linux__
+   pthread_yield();
++#else
++  sched_yield();
++#endif
+ }
+ 
+ 

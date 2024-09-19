@@ -1,0 +1,3 @@
+HList is a record system providing strongly typed heterogenous lists,
+records, type-indexed products (TIP) and co-products; licensed under
+the MIT X License.

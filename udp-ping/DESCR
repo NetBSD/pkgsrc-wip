@@ -1,0 +1,2 @@
+UDP Ping is a tool to selectively send UDP packets. A UDP ping server to
+reply to these packets is also included.

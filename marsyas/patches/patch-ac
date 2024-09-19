@@ -1,0 +1,70 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/07/10 20:23:06 bsadewitz Exp $
+
+--- configure.orig	2008-07-09 23:59:47.000000000 -0400
++++ configure
+@@ -1818,7 +1818,7 @@ INSTALL_STRIP_PROGRAM="\${SHELL} \$(inst
+ 
+ #Default CXXFLAGS
+ MARSYAS_DEFAULT_CXXFLAGS="-O3 -Wall -fPIC"
+-if test "x$CXXFLAGS" == "x"; then
++if test "x$CXXFLAGS" = "x"; then
+ 	CXXFLAGS="$MARSYAS_DEFAULT_CXXFLAGS"
+ fi
+ ac_ext=c
+@@ -3798,9 +3798,9 @@ if test "${enable_binding+set}" = set; t
+   enableval="$enable_binding"
+ 
+ fi;
+-if test "x${enable_bindings}" == "xyes" ; then
++if test "x${enable_bindings}" = "xyes" ; then
+ 
+-	  if test "x" == "x" ; then
++	  if test "x" = "x" ; then
+ 		  APP=ruby
+ 	  else
+ 		  APP=
+@@ -3844,7 +3844,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-	  if test "x$RUBY" == "x" ; then
++	  if test "x$RUBY" = "x" ; then
+ 		  { echo "$as_me:$LINENO: WARNING: No ruby found." >&5
+ echo "$as_me: WARNING: No ruby found." >&2;}
+ 	  else
+@@ -3853,7 +3853,7 @@ echo "$as_me: WARNING: No ruby found." >
+ 	  fi
+ 
+ 
+-	  if test "x" == "x" ; then
++	  if test "x" = "x" ; then
+ 		  APP=python
+ 	  else
+ 		  APP=
+@@ -3897,7 +3897,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-	  if test "x$PYTHON" == "x" ; then
++	  if test "x$PYTHON" = "x" ; then
+ 		  { echo "$as_me:$LINENO: WARNING: No python found." >&5
+ echo "$as_me: WARNING: No python found." >&2;}
+ 	  else
+@@ -3906,7 +3906,7 @@ echo "$as_me: WARNING: No python found."
+ 	  fi
+ 
+ 
+-	  if test "x" == "x" ; then
++	  if test "x" = "x" ; then
+ 		  APP=lua
+ 	  else
+ 		  APP=
+@@ -3950,7 +3950,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-	  if test "x$LUA" == "x" ; then
++	  if test "x$LUA" = "x" ; then
+ 		  { echo "$as_me:$LINENO: WARNING: No lua found." >&5
+ echo "$as_me: WARNING: No lua found." >&2;}
+ 	  else

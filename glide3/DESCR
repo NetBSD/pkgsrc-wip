@@ -1,0 +1,2 @@
+Software needed to get 3dfx voodoo3 cards working.
+If you want DRI support, turn the DRI variable to 'yes'

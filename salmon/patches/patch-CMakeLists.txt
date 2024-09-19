@@ -1,0 +1,201 @@
+$NetBSD$
+
+# Unbundle deps, eliminate build phase downloads
+--- CMakeLists.txt.orig	2018-08-29 22:38:43.000000000 +0000
++++ CMakeLists.txt
+@@ -47,7 +47,7 @@ set(CPACK_PACKAGE_NAME
+ set(CPACK_SOURCE_PACKAGE_FILE_NAME
+   "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}-Source")
+ 
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
++set (CMAKE_MODULE_PATH "/usr/pkgsrc/wip/salmon/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+ 
+ # Set a default build type if none was specified
+ set(default_build_type "Release")
+@@ -499,14 +499,14 @@ ExternalProject_Add_Step(libdivsufsort m
+  
+ set(SUFFARRAY_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/external/install/include)
+ 
+-message("Build system will fetch and build the Cereal serialization library")
+-message("==================================================================")
+-include(ExternalProject)
+-ExternalProject_Add(libcereal
+-    DOWNLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external
+-    DOWNLOAD_COMMAND curl -k -L https://github.com/USCiLab/cereal/archive/v1.2.2.tar.gz -o cereal-v1.2.2.tar.gz &&		 
+-                     ${SHASUM} 1921f26d2e1daf9132da3c432e2fd02093ecaedf846e65d7679ddf868c7289c4  cereal-v1.2.2.tar.gz &&
+-                     tar -xzvf cereal-v1.2.2.tar.gz
++#message("Build system will fetch and build the Cereal serialization library")
++#message("==================================================================")
++#include(ExternalProject)
++#ExternalProject_Add(libcereal
++    #DOWNLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external
++    #DOWNLOAD_COMMAND curl -k -L https://github.com/USCiLab/cereal/archive/v1.2.2.tar.gz -o cereal-v1.2.2.tar.gz &&		 
++                     #${SHASUM} 1921f26d2e1daf9132da3c432e2fd02093ecaedf846e65d7679ddf868c7289c4  cereal-v1.2.2.tar.gz &&
++                     #tar -xzvf cereal-v1.2.2.tar.gz
+ 
+     ##
+     #URL https://github.com/USCiLab/cereal/archive/v1.2.2.tar.gz
+@@ -514,22 +514,23 @@ ExternalProject_Add(libcereal
+     #TLS_VERIFY FALSE
+     #URL_HASH SHA1=ffddf5fc5313cfbb893e07823ca8c473084eebca
+     ##
+-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/cereal-1.2.2
+-    INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/install
++    #SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/cereal-1.2.2
++    #INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/install
++    #INSTALL_DIR ${LOCALBASE}
+     #UPDATE_COMMAND sh -c "mkdir -p <SOURCE_DIR>/build"
+-    BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/cereal-1.2.2/build
+-    CONFIGURE_COMMAND ""
+-    BUILD_COMMAND ""
+-    INSTALL_COMMAND sh -c "mkdir -p <INSTALL_DIR>/include && cp -r <SOURCE_DIR>/include/cereal <INSTALL_DIR>/include"
+-)
+-ExternalProject_Add_Step(libcereal makedir
+-  COMMAND mkdir -p <SOURCE_DIR>/build 
+-  COMMENT "Make build directory"
+-  DEPENDEES download 
+-  DEPENDERS configure)
++    #BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/cereal-1.2.2/build
++    #CONFIGURE_COMMAND ""
++    #BUILD_COMMAND ""
++    #INSTALL_COMMAND sh -c "mkdir -p <INSTALL_DIR>/include && cp -r <SOURCE_DIR>/include/cereal <INSTALL_DIR>/include"
++#)
++#ExternalProject_Add_Step(libcereal makedir
++  #COMMAND mkdir -p <SOURCE_DIR>/build 
++  #COMMENT "Make build directory"
++  #DEPENDEES download 
++  #DEPENDERS configure)
+ 
+ ## Try and find TBB first
+-find_package(TBB 2018.0 COMPONENTS tbb tbbmalloc tbbmalloc_proxy )
++find_package(TBB 2018.0 COMPONENTS tbb tbbmalloc  )
+ 
+ ##
+ #
+@@ -627,9 +628,7 @@ message("Build system will compile libgf
+ message("==================================================================")
+ ExternalProject_Add(libgff
+     DOWNLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external
+-    DOWNLOAD_COMMAND curl -k -L https://github.com/COMBINE-lab/libgff/archive/v1.1.tar.gz -o libgff.tgz &&
+-                     ${SHASUM} 34597ecd3718e6d6e7a1dd4350220664be2c1cd992070d1218564a20d7aa5697  libgff.tgz &&
+-                     tar -xzvf libgff.tgz 
++    DOWNLOAD_COMMAND tar -xzf ${DISTDIR}/salmon/v1.1.tar.gz
+     ##
+     #URL https://github.com/COMBINE-lab/libgff/archive/v1.1.tar.gz
+     #DOWNLOAD_NAME libff.tgz
+@@ -665,12 +664,9 @@ message("Build system will compile Stade
+ message("==================================================================")
+ ExternalProject_Add(libstadenio
+     DOWNLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external
+-    DOWNLOAD_COMMAND curl -k -L https://github.com/COMBINE-lab/staden-io_lib/archive/v1.14.8.1.tar.gz -o staden-io_lib-v1.14.8.tar.gz &&
+-                     ${SHASUM} f6f30eefa478cfb708f3109a35fb6ffa0e24951d9d971985df2cef5919dd0bc3 staden-io_lib-v1.14.8.tar.gz &&
+-                     mkdir -p staden-io_lib-1.14.8 &&
+-                     tar -xzf staden-io_lib-v1.14.8.tar.gz --strip-components=1 -C staden-io_lib-1.14.8 &&
++    DOWNLOAD_COMMAND mkdir -p staden-io_lib-1.14.8 &&
+                      rm -fr staden-io_lib &&
+-                     mv -f staden-io_lib-1.14.8 staden-io_lib
++                     ln -s ../../staden-io_lib-1.14.8.1 staden-io_lib
+     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/staden-io_lib
+     INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/install
+     CONFIGURE_COMMAND ./configure --enable-shared=no --without-libcurl --prefix=<INSTALL_DIR> LDFLAGS=${LIBSTADEN_LDFLAGS} CFLAGS=${LIBSTADEN_CFLAGS} CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER}
+@@ -681,58 +677,59 @@ ExternalProject_Add(libstadenio
+     INSTALL_COMMAND make install
+ )
+ 
+-set (FAST_MALLOC_LIB "")
+-set (HAVE_FAST_MALLOC FALSE)
++# jemalloc is FreeBSD's built-in allocator
++# set (FAST_MALLOC_LIB "")
++set (HAVE_FAST_MALLOC TRUE)
+ 
+ # See if we have Jemalloc
+-find_package(Jemalloc)
+-if (Jemalloc_FOUND)
++# find_package(Jemalloc)
++# if (Jemalloc_FOUND)
+   ##
+   # Don't be so stringent about the version yet
+   ##
+   #if (NOT (${JEMALLOC_VERSION} VERSION_LESS 5.1.0))
+-    message("Found Jemalloc library --- using this memory allocator")
+-    set (FAST_MALLOC_LIB ${JEMALLOC_LIBRARIES})
+-    set (HAVE_FAST_MALLOC TRUE)
++    # message("Found Jemalloc library --- using this memory allocator")
++    # set (FAST_MALLOC_LIB ${JEMALLOC_LIBRARIES})
++    # set (HAVE_FAST_MALLOC TRUE)
+   #else()
+   #  message("Fond Jemalloc version ${JEMALLOC_VERSION}, but require >= 5.1.0. Downloading newer version")
+   #endif()
+-endif()
++# endif()
+ 
+-if(CONDA_BUILD)
+-  set (JEMALLOC_FLAGS "CC=${CMAKE_C_COMPILER} CFLAGS=-fPIC CPPFLAGS=-fPIC")
+-else ()
+-  set (JEMALLOC_FLAGS "CC=${CMAKE_C_COMPILER}")
+-endif()
+-
+-if (NOT HAVE_FAST_MALLOC)
+-    message("Build system will fetch and use JEMalloc")
+-    message("==================================================================")
+-    ExternalProject_Add(libjemalloc
+-        DOWNLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external
+-        DOWNLOAD_COMMAND curl -k -L https://github.com/COMBINE-lab/jemalloc/archive/5.1.0.tar.gz -o jemalloc-5.1.0.tar.gz &&
+-                         ${SHASUM} ff28aef89df724bd7b6bd6fde8597695514e0e3404d1afad2f1eb8b55ef378d3  jemalloc-5.1.0.tar.gz &&
+-                         tar -xzf jemalloc-5.1.0.tar.gz
+-
+-        SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/jemalloc-5.1.0
+-        BUILD_IN_SOURCE TRUE
+-        INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/install
+-        CONFIGURE_COMMAND sh -c "${JEMALLOC_FLAGS} ./autogen.sh --disable-debug --prefix=<INSTALL_DIR>"
+-        INSTALL_COMMAND cp -r lib <INSTALL_DIR>/ && cp -r include <INSTALL_DIR>/
+-        )
+-
+-    set (FAST_MALLOC_LIB ${CMAKE_CURRENT_SOURCE_DIR}/external/install/lib/libjemalloc.a)
+-    set (HAVE_FAST_MALLOC TRUE)
+-    set (FETCHED_JEMALLOC TRUE)
+-    if (FETCHED_LIBBZ2)
+-       add_dependencies(libjemalloc libbz2)
+-    endif()
++# if(CONDA_BUILD)
++  # set (JEMALLOC_FLAGS "CC=${CMAKE_C_COMPILER} CFLAGS=-fPIC CPPFLAGS=-fPIC")
++# else ()
++  # set (JEMALLOC_FLAGS "CC=${CMAKE_C_COMPILER}")
++# endif()
++
++# if (NOT HAVE_FAST_MALLOC)
++    # message("Build system will fetch and use JEMalloc")
++    # message("==================================================================")
++    # ExternalProject_Add(libjemalloc
++        # DOWNLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external
++        # DOWNLOAD_COMMAND curl -k -L https://github.com/COMBINE-lab/jemalloc/archive/5.1.0.tar.gz -o jemalloc-5.1.0.tar.gz &&
++                         # ${SHASUM} ff28aef89df724bd7b6bd6fde8597695514e0e3404d1afad2f1eb8b55ef378d3  jemalloc-5.1.0.tar.gz &&
++                         # tar -xzf jemalloc-5.1.0.tar.gz
++
++        # SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/jemalloc-5.1.0
++        # BUILD_IN_SOURCE TRUE
++        # INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/install
++        # CONFIGURE_COMMAND sh -c "${JEMALLOC_FLAGS} ./autogen.sh --disable-debug --prefix=<INSTALL_DIR>"
++        # INSTALL_COMMAND cp -r lib <INSTALL_DIR>/ && cp -r include <INSTALL_DIR>/
++        # )
++
++    # set (FAST_MALLOC_LIB ${CMAKE_CURRENT_SOURCE_DIR}/external/install/lib/libjemalloc.a)
++    # set (HAVE_FAST_MALLOC TRUE)
++    # set (FETCHED_JEMALLOC TRUE)
++    # if (FETCHED_LIBBZ2)
++       # add_dependencies(libjemalloc libbz2)
++    # endif()
++
++    # if (FETCHED_LIBLZMA)
++       # add_dependencies(libjemalloc liblzma)
++    # endif()
+ 
+-    if (FETCHED_LIBLZMA)
+-       add_dependencies(libjemalloc liblzma)
+-    endif()
+-
+-endif ()
++# endif ()
+ 
+ ###
+ #

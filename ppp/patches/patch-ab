@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/18 21:45:45 jeremy-c-reed Exp $
+
+--- pppd/auth.c.orig	2002-12-24 00:01:19.000000000 -0800
++++ pppd/auth.c	2002-12-24 00:02:53.000000000 -0800
+@@ -727,7 +727,10 @@
+ {
+     if (--num_np_up == 0) {
+ 	UNTIMEOUT(check_idle, NULL);
+-	new_phase(PHASE_NETWORK);
++	/* Unset connect-time timer on disconnect. Without this, using
++	 * "demand" and "max-connect NNN" together subjects the user to
++	 * rather arbitrary disconnects.  */
++	UNTIMEOUT(connect_time_expired, NULL); new_phase(PHASE_NETWORK);
+     }
+ }
+ 

@@ -1,0 +1,14 @@
+$NetBSD$
+
+Stop checking every environment variable.
+
+--- src/github.com/cockroachdb/cockroach/Makefile.orig	2020-11-25 14:36:31.000000000 +0000
++++ src/github.com/cockroachdb/cockroach/Makefile
+@@ -1834,5 +1834,5 @@ build/variables.mk: Makefile build/archi
+ # any environment variable becomes a make variable and environments
+ # are dirty. For instance, my includes GREP_COLOR.
+ include build/variables.mk
+-$(foreach v,$(filter-out $(strip $(VALID_VARS)),$(.VARIABLES)),\
+-	$(if $(findstring command line,$(origin $v)),$(error Variable '$v' is not recognized by this Makefile)))
++#$(foreach v,$(filter-out $(strip $(VALID_VARS)),$(.VARIABLES)),\
++#	$(if $(findstring command line,$(origin $v)),$(error Variable '$v' is not recognized by this Makefile)))

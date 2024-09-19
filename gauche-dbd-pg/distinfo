@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2006/04/18 09:36:10 jgoamakf Exp $
+
+RMD160 (Gauche-dbd-pg-0.2.1.tgz) = 2cd1dcd2f824db78162bbabd9e71c80435daf31d
+Size (Gauche-dbd-pg-0.2.1.tgz) = 29020 bytes
+SHA1 (patch-aa) = 37c62838535b05bef0a9f382d29a6b85fb92d8f3

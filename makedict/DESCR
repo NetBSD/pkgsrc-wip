@@ -1,0 +1,7 @@
+XDXF (XML Dictionary Exchange Format) is a project to unite all existing
+open dictionaries and provide both users and developers with universal
+XML-based format, convertible from and to other popular formats like Mova,
+PtkDic, StarDict...
+
+The makedict converter can convert many different formats to and from XDXF
+format.

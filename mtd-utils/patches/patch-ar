@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- nandwrite.c	2006-10-07 17:33:37.000000000 +0200
++++ nandwrite.c.new	2007-09-01 09:48:11.000000000 +0200
+@@ -35,7 +35,12 @@
+ #include <sys/types.h>
+ #include <getopt.h>
+ 
++#if __NetBSD__
++#define loff_t off_t
++#include <sys/types.h>
++#else
+ #include <asm/types.h>
++#endif
+ #include "mtd/mtd-user.h"
+ 
+ #define PROGRAM "nandwrite"

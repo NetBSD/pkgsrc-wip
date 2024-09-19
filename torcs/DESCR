@@ -1,0 +1,4 @@
+TORCS, The Open Racing Car Simulator, is a car racing simulation, which
+allows you to drive in races against opponents simulated by the computer.
+You can also develop your own computer-controlled driver (also called a
+robot) in C or C++.

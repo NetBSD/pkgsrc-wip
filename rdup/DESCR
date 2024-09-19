@@ -1,0 +1,11 @@
+rdup is a utility inspired by rsync and the plan9 way of doing
+backups.  rdup itself does not backup anything. It only prints a
+list of files that are changed, or all files in case of a null
+dump, to standard output.
+
+Subsequent programs in a pipe line can be used to actually implement
+to backup scheme. After a run a new filelist is written. No warning
+is given when filelist is an existing file, it just gets overwritten
+by rdup. New runs will print out only those files that have actually
+changed since the last run, thereby making incremental backups
+possible.

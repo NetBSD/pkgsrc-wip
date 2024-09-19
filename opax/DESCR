@@ -1,0 +1,4 @@
+pax is the POSIX standard archive tool. It supports the two most
+common forms of standard archive (backup) files - CPIO and TAR.
+
+This is a port of OpenBSD pax for SuSE Linux by Thorsten Kukuk.

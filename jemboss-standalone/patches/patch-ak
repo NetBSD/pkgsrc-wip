@@ -1,0 +1,710 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- jemboss/utils/install-jemboss-server.sh.orig	Sun Jul 11 01:53:03 2004
++++ jemboss/utils/install-jemboss-server.sh	Tue Aug 10 12:53:33 2004
+@@ -157,12 +157,12 @@
+   echo
+   echo "--------------------------------------------------------------"
+   echo
+-  echo "Install EMBASSY packages (y,n) [y]?"
+-  read EMBASSY
++#  echo "Install EMBASSY packages (y,n) [y]?"
++#  read EMBASSY
+ 
+-  if [ "$EMBASSY" = "" ]; then
++#  if [ "$EMBASSY" = "" ]; then
+     EMBASSY="y"
+-  fi
++#  fi
+ 
+   echo "$EMBASSY" >> $RECORD
+   
+@@ -171,37 +171,37 @@
+     if [ ! -d $EMBOSS_DOWNLOAD/embassy ]; then
+       mkdir $EMBOSS_DOWNLOAD/embassy
+     fi
+-    echo
+-    echo "To install EMBASSY Packages:"
+-    echo "(1) Download these from ftp://ftp.uk.embnet.org/pub/EMBOSS/"
+-    echo "(2) And unpack (gunzip and untar) them in: "
+-    echo "$EMBOSS_DOWNLOAD/embassy"
+-    echo "(3) *before* pressing return to continue!"
+-    read BLANK
++#    echo
++#    echo "To install EMBASSY Packages:"
++#    echo "(1) Download these from ftp://ftp.uk.embnet.org/pub/EMBOSS/"
++#    echo "(2) And unpack (gunzip and untar) them in: "
++#    echo "$EMBOSS_DOWNLOAD/embassy"
++#    echo "(3) *before* pressing return to continue!"
++#    read BLANK
+ 
+     cd $EMBOSS_DOWNLOAD/embassy
+ 
+-    echo
+-    echo "Install all packages that are downloaded in"
+-    echo "$EMBOSS_DOWNLOAD/embassy "
+-    echo "(if no prompts will be given for each package to install)"
+-    echo "(y,n) [y]?"
++ #   echo
++ #   echo "Install all packages that are downloaded in"
++ #   echo "$EMBOSS_DOWNLOAD/embassy "
++ #   echo "(if no prompts will be given for each package to install)"
++ #   echo "(y,n) [y]?"
+     
+-    read ALL
+-    if [ "$ALL" = "" ]; then
++ #   read ALL
++ #   if [ "$ALL" = "" ]; then
+       ALL="y"
+-    fi
++ #   fi
+ 
+     for dir in *
+     do
+       if [ $ALL = "y" ]; then
+         INST="y"
+       else
+-        echo "Install $dir (y,n) [y]?"
+-        read INST
+-        if [ "$INST" = "" ]; then
++#        echo "Install $dir (y,n) [y]?"
++#        read INST
++#        if [ "$INST" = "" ]; then
+           INST="y"
+-        fi
++#        fi
+       fi
+       if [ $INST = "y" ]; then
+ 
+@@ -376,7 +376,7 @@
+   
+   JEMBOSS_PROPERTIES=$EMBOSS_INSTALL/share/EMBOSS/jemboss/resources/jemboss.properties
+ 
+-  mv $JEMBOSS_PROPERTIES $JEMBOSS_PROPERTIES.orig
++  mv $JEMBOSS_PROPERTIES $JEMBOSS_PROPERTIES.ORIGINAL
+   touch $JEMBOSS_PROPERTIES
+ 
+   if [ $AUTH = "y" ]; then
+@@ -408,12 +408,12 @@
+ #                                                    >> $JEMBOSS_PROPERTIES
+   echo "acdDirToParse=$EMBOSS_INSTALL/share/EMBOSS/acd/" >> $JEMBOSS_PROPERTIES
+   echo "embossURL=$EMBOSS_URL" >> $JEMBOSS_PROPERTIES
+-  cp $JEMBOSS_PROPERTIES $JEMBOSS_PROPERTIES.bak
++#  cp $JEMBOSS_PROPERTIES $JEMBOSS_PROPERTIES.bak
+ 
+-  echo
+-  echo "Changed $EMBOSS_INSTALL/share/EMBOSS/jemboss/resources/jemboss.properties"
+-  echo "to reflect this installation (original in jemboss.properties.orig)"
+-  echo
++#  echo
++#  echo "Changed $EMBOSS_INSTALL/share/EMBOSS/jemboss/resources/jemboss.properties"
++#  echo "to reflect this installation (original in jemboss.properties.orig)"
++#  echo
+ 
+ }
+ 
+@@ -665,39 +665,39 @@
+ }
+ 
+ 
+-clear
+-echo
+-echo "--------------------------------------------------------------"
+-echo "         EMBOSS and Jemboss Server installation script"
+-echo "--------------------------------------------------------------"
+-echo " "
+-echo "Note: any default values are given in square brackets []. "
+-echo " "
+-echo "There are two types of installation see details at: "
+-echo "http://www.rfcgr.mrc.ac.uk/Software/EMBOSS/Jemboss/install/setup.html"
+-echo " "
+-echo "(1) CLIENT-SERVER"
+-echo "(2) STANDALONE"
+-echo "Enter type of installation [1] :"
+-read INSTALL_TYPE
++#clear
++#echo
++#echo "--------------------------------------------------------------"
++#echo "         EMBOSS and Jemboss Server installation script"
++#echo "--------------------------------------------------------------"
++#echo " "
++#echo "Note: any default values are given in square brackets []. "
++#echo " "
++#echo "There are two types of installation see details at: "
++#echo "http://www.rfcgr.mrc.ac.uk/Software/EMBOSS/Jemboss/install/setup.html"
++#echo " "
++#echo "(1) CLIENT-SERVER"
++#echo "(2) STANDALONE"
++#echo "Enter type of installation [1] :"
++#read INSTALL_TYPE
+ 
+-if (test "$INSTALL_TYPE" != "1") && (test "$INSTALL_TYPE" != "2"); then
+-  INSTALL_TYPE="1"
+-fi
+-clear
++#if (test "$INSTALL_TYPE" != "1") && (test "$INSTALL_TYPE" != "2"); then
++  INSTALL_TYPE="2"
++#fi
++#clear
+ 
+-echo
+-echo "--------------------------------------------------------------"
+-echo "         EMBOSS and Jemboss Server installation script"
+-echo "--------------------------------------------------------------"
+-echo
+-echo "*** This script needs to be run with permissions to be able"
+-echo "*** to install EMBOSS in the required directories. This may"
+-echo "*** be best done as root or as a tomcat user."
+-echo
+-echo "Before running this script you should download the latest:"
+-echo
+-echo "(1) EMBOSS release (contains Jemboss) ftp://ftp.uk.embnet.org/pub/EMBOSS/"
++#echo
++#echo "--------------------------------------------------------------"
++#echo "         EMBOSS and Jemboss Server installation script"
++#echo "--------------------------------------------------------------"
++#echo
++#echo "*** This script needs to be run with permissions to be able"
++#echo "*** to install EMBOSS in the required directories. This may"
++#echo "*** be best done as root or as a tomcat user."
++#echo
++#echo "Before running this script you should download the latest:"
++#echo
++#echo "(1) EMBOSS release (contains Jemboss) ftp://ftp.uk.embnet.org/pub/EMBOSS/"
+ 
+ 
+ if [ $INSTALL_TYPE = "1" ]; then
+@@ -705,13 +705,13 @@
+   echo "(3) Apache AXIS (SOAP) release   http://xml.apache.org/axis/"
+ fi
+   
+-echo
+-echo "Has the above been downloaded (y/n)? "
+-read DOWNLOADED
++#echo
++#echo "Has the above been downloaded (y/n)? "
++#read DOWNLOADED
+ 
+-if (test "$DOWNLOADED" != "y") && (test "$DOWNLOADED" != "Y"); then
+-  exit 1
+-fi
++#if (test "$DOWNLOADED" != "y") && (test "$DOWNLOADED" != "Y"); then
++#  exit 1
++#fi
+ 
+ 
+ RECORD="install.record"
+@@ -754,22 +754,22 @@
+ esac
+ 
+ 
+-echo 
+-echo "Select the platform that your Jemboss server will be"
+-echo "run on from 1-8 [$PLATTMP]:"
+-echo "(1)  linux"
+-echo "(2)  aix"
+-echo "(3)  irix"
+-echo "(4)  hp-ux"
+-echo "(5)  solaris"
+-echo "(6)  macosX"
+-echo "(7)  OSF"
+-echo "(8)  FreeBSD"
+-read PLAT
++#echo 
++#echo "Select the platform that your Jemboss server will be"
++#echo "run on from 1-8 [$PLATTMP]:"
++#echo "(1)  linux"
++#echo "(2)  aix"
++#echo "(3)  irix"
++#echo "(4)  hp-ux"
++#echo "(5)  solaris"
++#echo "(6)  macosX"
++#echo "(7)  OSF"
++#echo "(8)  FreeBSD"
++#read PLAT
+ 
+-if [ "$PLAT" = "" ]; then
++#if [ "$PLAT" = "" ]; then
+   PLAT=$PLATTMP
+-fi
++#fi
+ 
+ echo "$PLAT" >> $RECORD
+ 
+@@ -869,22 +869,22 @@
+ # JAVA_HOME
+ #
+ getJavaHomePath
+-JAVA_HOME=$JAVA_HOME_TMP
+-if [ "$JAVA_HOME" != "0" ]; then
+-  echo "Enter java (1.3 or above) location [$JAVA_HOME_TMP]: "
+-  read JAVA_HOME
+-
+-  if [ "$JAVA_HOME" = "" ]; then 
+-    JAVA_HOME=$JAVA_HOME_TMP
+-  fi
+-fi
++JAVA_HOME=@PKG_JAVA_HOME@
++#if [ "$JAVA_HOME" != "0" ]; then
++#  echo "Enter java (1.3 or above) location [$JAVA_HOME_TMP]: "
++#  read JAVA_HOME
++
++#  if [ "$JAVA_HOME" = "" ]; then 
++#    JAVA_HOME=$JAVA_HOME_TMP
++#  fi
++#fi
+ 
+-while [ ! -f "$JAVA_HOME/bin/javac" ]
+-do
+-  echo "Enter java (1.3 or above) location (/usr/java/jdk1.3.1/): "
+-  read JAVA_HOME
+-done
+-echo
++#while [ ! -f "$JAVA_HOME/bin/javac" ]
++#do
++#  echo "Enter java (1.3 or above) location (/usr/java/jdk1.3.1/): "
++#  read JAVA_HOME
++#done
++#echo
+ echo "$JAVA_HOME" >> $RECORD
+ 
+ #
+@@ -901,29 +901,29 @@
+ JAVA_INCLUDE=$JAVA_HOME/include/
+ JAVA_INCLUDE_OS=$JAVA_INCLUDE
+ if [ -d $JAVA_INCLUDE/linux ]; then
+-  JAVA_INCLUDE_OS=${JAVA_INCLUDE}/linux
++  JAVA_INCLUDE_OS=${JAVA_INCLUDE}linux
+ elif [ -d $JAVA_INCLUDE/solaris ]; then
+-  JAVA_INCLUDE_OS=${JAVA_INCLUDE}/solaris
++  JAVA_INCLUDE_OS=${JAVA_INCLUDE}solaris
+ elif [ -d $JAVA_INCLUDE/irix ]; then
+-  JAVA_INCLUDE_OS=${JAVA_INCLUDE}/irix
++  JAVA_INCLUDE_OS=${JAVA_INCLUDE}irix
+ elif [ -d $JAVA_INCLUDE/hp-ux ]; then
+-  JAVA_INCLUDE_OS=${JAVA_INCLUDE}/hp-ux
++  JAVA_INCLUDE_OS=${JAVA_INCLUDE}hp-ux
+ elif [ -d $JAVA_INCLUDE/alpha ]; then
+-  JAVA_INCLUDE_OS=${JAVA_INCLUDE}/alpha
++  JAVA_INCLUDE_OS=${JAVA_INCLUDE}alpha
+ elif [ -d $JAVA_INCLUDE/freebsd ]; then
+-  JAVA_INCLUDE_OS=${JAVA_INCLUDE}/freebsd
++  JAVA_INCLUDE_OS=${JAVA_INCLUDE}freebsd
+ elif [ -d $JAVA_INCLUDE ]; then
+   JAVA_INCLUDE_OS=${JAVA_INCLUDE}
+ else
+-  echo "Enter java include/Header directory location (containing jni.h)? "
++#  echo "Enter java include/Header directory location (containing jni.h)? "
+   read JAVA_INCLUDE
+   JAVA_INCLUDE_OS=$JAVA_INCLUDE
+   if [ -d $JAVA_INCLUDE/linux ]; then
+-    JAVA_INCLUDE_OS=${JAVA_INCLUDE}/linux
++    JAVA_INCLUDE_OS=${JAVA_INCLUDE}linux
+   elif [ -d $JAVA_INCLUDE/solaris ]; then
+-    JAVA_INCLUDE_OS=${JAVA_INCLUDE}/solaris
++    JAVA_INCLUDE_OS=${JAVA_INCLUDE}solaris
+   elif [ -d $JAVA_INCLUDE/irix ]; then
+-    JAVA_INCLUDE_OS=${JAVA_INCLUDE}/irix
++    JAVA_INCLUDE_OS=${JAVA_INCLUDE}irix
+   elif [ -d $JAVA_INCLUDE ]; then
+     JAVA_INCLUDE_OS=${JAVA_INCLUDE}
+   else
+@@ -941,38 +941,38 @@
+ EMBOSS_DOWNLOAD_TMP=`dirname $EMBOSS_DOWNLOAD_TMP`
+ EMBOSS_DOWNLOAD_TMP=`dirname $EMBOSS_DOWNLOAD_TMP`
+ 
+-echo "Enter EMBOSS download directory"
+-echo "[$EMBOSS_DOWNLOAD_TMP]: "
+-read EMBOSS_DOWNLOAD
++#echo "Enter EMBOSS download directory"
++#echo "[$EMBOSS_DOWNLOAD_TMP]: "
++#read EMBOSS_DOWNLOAD
+ 
+-if [ "$EMBOSS_DOWNLOAD" = "" ]; then
++#if [ "$EMBOSS_DOWNLOAD" = "" ]; then
+   EMBOSS_DOWNLOAD=$EMBOSS_DOWNLOAD_TMP
+-fi
++#fi
+ 
+-while [ ! -d "$EMBOSS_DOWNLOAD/ajax" ]
+-do
+-  echo "Enter EMBOSS download directory (e.g. /usr/emboss/EMBOSS-2.x.x): "
+-  read EMBOSS_DOWNLOAD
+-done
+-echo
++#while [ ! -d "$EMBOSS_DOWNLOAD/ajax" ]
++#do
++#  echo "Enter EMBOSS download directory (e.g. /usr/emboss/EMBOSS-2.x.x): "
++#  read EMBOSS_DOWNLOAD
++#done
++#echo
+ echo "$EMBOSS_DOWNLOAD" >> $RECORD
+ 
+-echo "Enter where EMBOSS should be installed [/usr/local/emboss]: "
+-read EMBOSS_INSTALL
++#echo "Enter where EMBOSS should be installed [/usr/local/emboss]: "
++#read EMBOSS_INSTALL
+ 
+-if [ "$EMBOSS_INSTALL" = "" ]; then
+-  EMBOSS_INSTALL=/usr/local/emboss
+-fi
++#if [ "$EMBOSS_INSTALL" = "" ]; then
++  EMBOSS_INSTALL=@PREFIX@
++#fi
+ 
+-if [ -d "$EMBOSS_INSTALL/share/EMBOSS/jemboss" ]; then
+-  echo 
+-  echo "Jemboss has already be installed to: "
+-  echo "$EMBOSS_INSTALL/share/EMBOSS/jemboss "
+-  echo "It is recommended this is removed before continuing."
+-  echo "To continue press return."
+-  read BLANK
+-fi
+-echo
++#if [ -d "$EMBOSS_INSTALL/share/EMBOSS/jemboss" ]; then
++#  echo 
++#  echo "Jemboss has already be installed to: "
++#  echo "$EMBOSS_INSTALL/share/EMBOSS/jemboss "
++#  echo "It is recommended this is removed before continuing."
++#  echo "To continue press return."
++#  read BLANK
++#fi
++#echo
+ echo "$EMBOSS_INSTALL" >> $RECORD
+ 
+ if [ $INSTALL_TYPE = "1" ]; then
+@@ -1039,21 +1039,21 @@
+ 
+   CC="$CC -DTOMCAT_UID=$UUID "; export CC
+ 
+-  echo
+-  echo "Unix Authentication Method, see:"
+-  echo "http://www.rfcgr.mrc.ac.uk/Software/EMBOSS/Jemboss/install/authentication.html"
+-  echo
+-  echo "(1) shadow      (3) PAM         (5) HP-UX shadow"
+-  echo "(2) no shadow   (4) AIX shadow  (6) Re-entrant shadow"
+-  echo "(7) Re-entrant no shadow"  
+-  echo 
+-  echo "Type of unix password method being used "
+-  echo "(select 1, 2, 3, 4, 5, 6 or 7 )[$AUTH_TYPE_TMP]"
+-  read AUTH_TYPE
++#  echo
++#  echo "Unix Authentication Method, see:"
++#  echo "http://www.rfcgr.mrc.ac.uk/Software/EMBOSS/Jemboss/install/authentication.html"
++#  echo
++#  echo "(1) shadow      (3) PAM         (5) HP-UX shadow"
++#  echo "(2) no shadow   (4) AIX shadow  (6) Re-entrant shadow"
++#  echo "(7) Re-entrant no shadow"  
++#  echo 
++#  echo "Type of unix password method being used "
++#  echo "(select 1, 2, 3, 4, 5, 6 or 7 )[$AUTH_TYPE_TMP]"
++#  read AUTH_TYPE
+   
+-  if [ "$AUTH_TYPE" = "" ]; then
++#  if [ "$AUTH_TYPE" = "" ]; then
+      AUTH_TYPE="$AUTH_TYPE_TMP"
+-  fi
++#  fi
+ 
+   echo "$AUTH_TYPE" >> $RECORD
+ 
+@@ -1133,41 +1133,41 @@
+ USER_CONFIG=""
+ get_libs $USER_CONFIG
+ 
+-if [ "$USER_CONFIG" = "" ]; then
+-  echo
+-  echo "--------------------------------------------------------------"
+-  echo
+-  echo "The libraries for EMBOSS (libpng and gd) do not appear to"
+-  echo "be in /usr. It may be necessary to use the configuration"
+-  echo "flag --with-pngdriver to specify their location"
+-  echo
+-  echo "For details see the EMBOSS admin guide:"
+-  echo "http://www.uk.embnet.org/Software/EMBOSS/Doc/Admin_guide/adminguide/"
+-  echo
+-  echo "Enter any other EMBOSS configuration options (e.g. --with-pngdriver=pathname)"
+-  echo "or press return to leave blank:"
+-  read USER_CONFIG
+-elif [ "$USER_CONFIG" = "default" ]; then
+-  echo
+-  echo "--------------------------------------------------------------"
+-  echo
+-  echo "The libraries for EMBOSS (libpng and gd) appear to be in /usr,"
+-  echo "if these are the correct libraries then there should be no need"
+-  echo "to add any configuration options."
+-  echo
+-  echo "Enter any other EMBOSS configuration options (e.g. --with-pngdriver=pathname)"
+-  echo "or press return to leave blank:"
+-  read USER_CONFIG
+-else
+-  echo "Enter any other EMBOSS configuration options or press return to"
+-  echo "use default [$USER_CONFIG]:"
+-  read USER_CONFIG_TMP
+-  if [ "$USER_CONFIG_TMP" != "" ]; then
++#if [ "$USER_CONFIG" = "" ]; then
++#  echo
++#  echo "--------------------------------------------------------------"
++#  echo
++#  echo "The libraries for EMBOSS (libpng and gd) do not appear to"
++#  echo "be in /usr. It may be necessary to use the configuration"
++#  echo "flag --with-pngdriver to specify their location"
++#  echo
++#  echo "For details see the EMBOSS admin guide:"
++#  echo "http://www.uk.embnet.org/Software/EMBOSS/Doc/Admin_guide/adminguide/"
++#  echo
++#  echo "Enter any other EMBOSS configuration options (e.g. --with-pngdriver=pathname)"
++#  echo "or press return to leave blank:"
++#  read USER_CONFIG
++#elif [ "$USER_CONFIG" = "default" ]; then
++#  echo
++#  echo "--------------------------------------------------------------"
++#  echo
++#  echo "The libraries for EMBOSS (libpng and gd) appear to be in /usr,"
++#  echo "if these are the correct libraries then there should be no need"
++#  echo "to add any configuration options."
++#  echo
++#  echo "Enter any other EMBOSS configuration options (e.g. --with-pngdriver=pathname)"
++#  echo "or press return to leave blank:"
++#  read USER_CONFIG
++#else
++#  echo "Enter any other EMBOSS configuration options or press return to"
++#  echo "use default [$USER_CONFIG]:"
++#  read USER_CONFIG_TMP
++#  if [ "$USER_CONFIG_TMP" != "" ]; then
+     USER_CONFIG="$USER_CONFIG_TMP"
+-  fi
+-fi
++#  fi
++#fi
+ 
+-check_libs "$USER_CONFIG" $PLATFORM
++#check_libs "$USER_CONFIG" $PLATFORM
+ 
+ echo "$USER_CONFIG" >> $RECORD
+ #
+@@ -1180,30 +1180,30 @@
+   fi
+ fi
+ 
+-echo
+-echo "  ******** EMBOSS will be configured with this information  ******** "
+-echo 
+-echo "./configure --with-java=$JAVA_INCLUDE \\"
+-echo "            --with-javaos=$JAVA_INCLUDE_OS \\"
+-echo "            --with-thread=$PLATFORM \\"
+-echo "            --prefix=$EMBOSS_INSTALL \\"
+-echo "           $JEMBOSS_SERVER_AUTH $USER_CONFIG"
+-echo
+-
+-WORK_DIR=`pwd`
+-cd $EMBOSS_DOWNLOAD
+-
+-./configure --with-java=$JAVA_INCLUDE \
+-            --with-javaos=$JAVA_INCLUDE_OS \
+-            --with-thread=$PLATFORM \
+-            --prefix=$EMBOSS_INSTALL $JEMBOSS_SERVER_AUTH $USER_CONFIG
++#echo
++#echo "  ******** EMBOSS will be configured with this information  ******** "
++#echo 
++#echo "./configure --with-java=$JAVA_INCLUDE \\"
++#echo "            --with-javaos=$JAVA_INCLUDE_OS \\"
++#echo "            --with-thread=$PLATFORM \\"
++#echo "            --prefix=$EMBOSS_INSTALL \\"
++#echo "           $JEMBOSS_SERVER_AUTH $USER_CONFIG"
++#echo
++
++#WORK_DIR=`pwd`
++#cd $EMBOSS_DOWNLOAD
++
++#./configure --with-java=$JAVA_INCLUDE \
++#            --with-javaos=$JAVA_INCLUDE_OS \
++#            --with-thread=$PLATFORM \
++#            --prefix=$EMBOSS_INSTALL $JEMBOSS_SERVER_AUTH $USER_CONFIG
+ 
+ make
+ 
+-echo
+-echo "  ******* EMBOSS with Jemboss will be installed in $EMBOSS_INSTALL ******* "
+-echo
+-sleep 2
++#echo
++#echo "  ******* EMBOSS with Jemboss will be installed in $EMBOSS_INSTALL ******* "
++#echo
++#sleep 2
+ 
+ make install
+ 
+@@ -1211,15 +1211,15 @@
+ #
+ # Config EMBASSY
+ #
+-embassy_install $EMBOSS_DOWNLOAD $RECORD $PLATFORM $EMBOSS_INSTALL $USER_CONFIG
++#embassy_install $EMBOSS_DOWNLOAD $RECORD $PLATFORM $EMBOSS_INSTALL $USER_CONFIG
+ 
+ 
+ #
+ #
+ # Get clustalw and primer3_core path
+ #
+-getClustalWPath
+-getPrimerPath
++#getClustalWPath
++#getPrimerPath
+ 
+ #
+ #
+@@ -1280,69 +1280,69 @@
+ #
+ #
+ 
+-rm -f tomstart
++#rm -f tomstart
+ 
+-echo
+-echo "#!/bin/csh " > tomstart
+-echo "setenv JAVA_HOME $JAVA_HOME" >> tomstart
++#echo
++#echo "#!/bin/csh " > tomstart
++#echo "setenv JAVA_HOME $JAVA_HOME" >> tomstart
+ 
+-if [ "$SSL" = "y" ]; then
+-  echo "setenv JSSE_HOME $JSSE_HOME" >> tomstart
+-fi
++#if [ "$SSL" = "y" ]; then
++#  echo "setenv JSSE_HOME $JSSE_HOME" >> tomstart
++#fi
+  
+-if [ "$AIX" = "y" ]; then
+- echo "setenv LIBPATH /usr/lib/threads:/usr/lib:/lib:$EMBOSS_INSTALL/lib" >> tomstart
+- cp $EMBOSS_DOWNLOAD/ajax/.libs/libajax.so.0 $EMBOSS_INSTALL/lib
+- ln -s $EMBOSS_INSTALL/lib/libajax.so.0 $EMBOSS_INSTALL/lib/libajax.so
+-else
+- echo "setenv JAVA_OPTS \"-Djava.library.path=$EMBOSS_INSTALL/lib\"" >> tomstart
+- echo "setenv LD_LIBRARY_PATH $EMBOSS_INSTALL/lib" >> tomstart
+-fi
++#if [ "$AIX" = "y" ]; then
++# echo "setenv LIBPATH /usr/lib/threads:/usr/lib:/lib:$EMBOSS_INSTALL/lib" >> tomstart
++# cp $EMBOSS_DOWNLOAD/ajax/.libs/libajax.so.0 $EMBOSS_INSTALL/lib
++# ln -s $EMBOSS_INSTALL/lib/libajax.so.0 $EMBOSS_INSTALL/lib/libajax.so
++#else
++# echo "setenv JAVA_OPTS \"-Djava.library.path=$EMBOSS_INSTALL/lib\"" >> tomstart
++# echo "setenv LD_LIBRARY_PATH $EMBOSS_INSTALL/lib" >> tomstart
++#fi
+ 
+-if [ "$MACOSX" = "y" ]; then
+- echo "setenv DYLD_LIBRARY_PATH $EMBOSS_INSTALL/lib" >> tomstart
+-fi
++#if [ "$MACOSX" = "y" ]; then
++# echo "setenv DYLD_LIBRARY_PATH $EMBOSS_INSTALL/lib" >> tomstart
++#fi
+ 
+-if [ "$PLATFORM" = "hpux" ]; then
+- echo "setenv SHLIB_PATH $EMBOSS_INSTALL/lib" >> tomstart
+-fi
++#if [ "$PLATFORM" = "hpux" ]; then
++# echo "setenv SHLIB_PATH $EMBOSS_INSTALL/lib" >> tomstart
++#fi
+ 
+ 
+-if [ "$AUTH_TYPE" = "3" ]; then
+-  if [ -f "/lib/libpam.so" ]; then
+-    echo "setenv LD_PRELOAD /lib/libpam.so" >> tomstart
+-  elif [ -f "/usr/lib/libpam.so" ]; then
+-    echo "setenv LD_PRELOAD /usr/lib/libpam.so" >> tomstart
+-  else
+-    echo
+-    echo "WARNING: don't know what to set LD_PRELOAD to"
+-    echo "edit LD_PRELOAD in tomstart script!"
+-    echo "setenv LD_PRELOAD /usr/lib/libpam.so" >> tomstart
+-    echo
+-  fi
+-fi
++#if [ "$AUTH_TYPE" = "3" ]; then
++#  if [ -f "/lib/libpam.so" ]; then
++#    echo "setenv LD_PRELOAD /lib/libpam.so" >> tomstart
++#  elif [ -f "/usr/lib/libpam.so" ]; then
++#    echo "setenv LD_PRELOAD /usr/lib/libpam.so" >> tomstart
++#  else
++#    echo
++#    echo "WARNING: don't know what to set LD_PRELOAD to"
++#    echo "edit LD_PRELOAD in tomstart script!"
++#    echo "setenv LD_PRELOAD /usr/lib/libpam.so" >> tomstart
++#    echo
++#  fi
++#fi
+ 
+-echo 'set path=($path '"$JAVA_HOME/bin)"  >> tomstart
+-echo "rehash"  >> tomstart
+-echo "$TOMCAT_ROOT/bin/startup.sh"  >> tomstart
++#echo 'set path=($path '"$JAVA_HOME/bin)"  >> tomstart
++#echo "rehash"  >> tomstart
++#echo "$TOMCAT_ROOT/bin/startup.sh"  >> tomstart
+ 
+ 
+-rm -f tomstop
++#rm -f tomstop
+ 
+-echo
+-echo "#!/bin/csh " > tomstop
+-echo "setenv JAVA_HOME $JAVA_HOME" >> tomstop
+-echo "setenv LD_LIBRARY_PATH $EMBOSS_INSTALL/lib" >> tomstop
++#echo
++#echo "#!/bin/csh " > tomstop
++#echo "setenv JAVA_HOME $JAVA_HOME" >> tomstop
++#echo "setenv LD_LIBRARY_PATH $EMBOSS_INSTALL/lib" >> tomstop
+ #if [ "$AUTH_TYPE" = "3" ]; then
+ #  echo "setenv LD_PRELOAD /lib/libpam.so" >> tomstop
+ #fi
+-echo 'set path=($path '"$JAVA_HOME/bin)"  >> tomstop
+-echo "rehash"  >> tomstop
+-echo "$TOMCAT_ROOT/bin/shutdown.sh"  >> tomstop
++#echo 'set path=($path '"$JAVA_HOME/bin)"  >> tomstop
++#echo "rehash"  >> tomstop
++#echo "$TOMCAT_ROOT/bin/shutdown.sh"  >> tomstop
+ 
+ 
+-chmod u+x tomstart
+-chmod u+x tomstop
++#chmod u+x tomstart
++#chmod u+x tomstop
+ 
+ 
+ #
+@@ -1360,13 +1360,13 @@
+   if [ -f "$RUNFILE.bak" ]; then
+     rm -f $RUNFILE.bak
+   fi
+-  sed "s|^#java org|$JAVA_HOME/bin/java org|" $RUNFILE > $RUNFILE.new
+-  sed "s|^java org.emboss.jemboss.Jemboss &|#java org.emboss.jemboss.Jemboss &|" $RUNFILE.new  > $RUNFILE.new1
+-  sed "s|^#EMBOSS_INSTALL=\(.*\)|EMBOSS_INSTALL=$EMBOSS_INSTALL/lib; export EMBOSS_INSTALL|" $RUNFILE.new1 > $RUNFILE.new2
++#  sed "s|^#java org|$JAVA_HOME/bin/java org|" $RUNFILE > $RUNFILE.new
++#  sed "s|^java org.emboss.jemboss.Jemboss &|#java org.emboss.jemboss.Jemboss &|" $RUNFILE.new  > $RUNFILE.new1
++#  sed "s|^#EMBOSS_INSTALL=\(.*\)|EMBOSS_INSTALL=$EMBOSS_INSTALL/lib; export EMBOSS_INSTALL|" $RUNFILE.new1 > $RUNFILE.new2
+   sed "s|^#LD_LIBRARY_PATH|LD_LIBRARY_PATH|" $RUNFILE.new2 > $RUNFILE.new3
+-  rm -f $RUNFILE.new $RUNFILE.new1 $RUNFILE.new2
+-  mv $RUNFILE $RUNFILE.bak1
+-  mv $RUNFILE.new3 $RUNFILE
++#  rm -f $RUNFILE.new $RUNFILE.new1 $RUNFILE.new2
++#  mv $RUNFILE $RUNFILE.bak1
++#  mv $RUNFILE.new3 $RUNFILE
+ 
+ 
+   if [ "$AIX" = "y" ]; then
+@@ -1377,11 +1377,11 @@
+ 
+   chmod a+x $RUNFILE
+ 
+-  echo
+-  echo "To run Jemboss:"
+-  echo "cd $JEMBOSS"
+-  echo "./runJemboss.sh"
+-  echo
++#  echo
++#  echo "To run Jemboss:"
++#  echo "cd $JEMBOSS"
++#  echo "./runJemboss.sh"
++#  echo
+ 
+   exit 0
+ else

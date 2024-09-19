@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- src/VBox/Makefile.kmk.orig	2016-03-04 19:29:43.000000000 +0000
++++ src/VBox/Makefile.kmk
+@@ -22,7 +22,7 @@ include $(KBUILD_PATH)/subheader.kmk
+ ifdef VBOX_ONLY_ADDITIONS
+  include $(PATH_SUB_CURRENT)/Runtime/Makefile.kmk
+  if defined(VBOX_WITH_CROGL) || defined(VBOX_WITH_HGSMI)
+-  if1of ($(KBUILD_TARGET),win linux solaris freebsd haiku)
++  if1of ($(KBUILD_TARGET),win linux solaris freebsd haiku netbsd)
+    include $(PATH_SUB_CURRENT)/GuestHost/Makefile.kmk
+   endif
+  endif
+@@ -106,4 +106,3 @@ endif # !VBOX_ONLY_ADDITIONS && !VBOX_ON
+ 
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

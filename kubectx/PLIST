@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/kubectx
+bin/kubens
+share/bash-completion/completions/kubectx
+share/bash-completion/completions/kubens
+share/fish/completions/kubectx.fish
+share/fish/completions/kubens.fish

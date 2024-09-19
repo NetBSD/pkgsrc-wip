@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
+bin/mp3decoder.sh
+bin/mpgedit
+bin/mpgedit_nocurses
+bin/xmpgedit
+lib/libdecoder_mpg123.so
+lib/libdecoder_popen.so
+lib/libmpgedit_decoder.so
+lib/libmpglib_mpgedit.so
+man/man1/decoder.so.1
+man/man1/mp3decoder.sh.1
+man/man1/mpgedit.1
+man/man1/scramble.pl.1
+man/man1/scramble_times.pl.1
+man/man1/unscramble.pl.1
+man/man1/xmpgedit.1
+share/xmpgedit/eject.xpm
+share/xmpgedit/next_t.xpm
+share/xmpgedit/pause.xpm
+share/xmpgedit/play.xpm
+share/xmpgedit/record.xpm
+share/xmpgedit/stop.xpm

@@ -1,0 +1,5 @@
+This is a simple wrapper around tmux to allow you to define a session in a
+JSON file. This is to avoid having to do all the setup of making the session
+with a name, opening the windows with the right names and commands,
+and doing so in a consistent manner. Also, if the session already exists,
+it will just open it for you.

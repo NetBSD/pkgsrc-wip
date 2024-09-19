@@ -1,0 +1,5 @@
+bin/sipvicious_svcrack @PREFIX@/bin/sipvicious_svcrack-@PYVERSSUFFIX@
+bin/sipvicious_svcrash @PREFIX@/bin/sipvicious_svcrash-@PYVERSSUFFIX@
+bin/sipvicious_svmap @PREFIX@/bin/sipvicious_svmap-@PYVERSSUFFIX@
+bin/sipvicious_svreport @PREFIX@/bin/sipvicious_svreport-@PYVERSSUFFIX@
+bin/sipvicious_svwar @PREFIX@/bin/sipvicious_svwar-@PYVERSSUFFIX@

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/03 20:57:28 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/hgapi/__init__.py
+${PYSITELIB}/hgapi/__init__.pyc
+${PYSITELIB}/hgapi/__init__.pyo
+${PYSITELIB}/hgapi/hgapi.py
+${PYSITELIB}/hgapi/hgapi.pyc
+${PYSITELIB}/hgapi/hgapi.pyo
+${PYSITELIB}/hgapi/jython_in_practice.py
+${PYSITELIB}/hgapi/jython_in_practice.pyc
+${PYSITELIB}/hgapi/jython_in_practice.pyo
+${PYSITELIB}/hgapi/testhgapi.py
+${PYSITELIB}/hgapi/testhgapi.pyc
+${PYSITELIB}/hgapi/testhgapi.pyo

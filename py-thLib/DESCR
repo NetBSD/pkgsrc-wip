@@ -1,0 +1,5 @@
+thLib utility primarily contains unctions for working with 3D kinematics.(i.e
+quaternions and rotation matrices). In addition, it has a number of routines for
+fitting circles, lines, sine-waves, and exponential decays. For signal
+processing,a Savitzky-Golay filter is included, as well as a demonstration of
+the calculation of a power spectrum.

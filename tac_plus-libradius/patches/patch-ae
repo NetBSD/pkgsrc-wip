@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.2 2008/10/04 20:26:29 gschwarz Exp $
+
+--- report.c.orig	2000-12-18 17:58:02.000000000 +0100
++++ report.c	2008-10-04 21:51:06.000000000 +0200
+@@ -19,6 +19,7 @@
+ 
+ #include "tac_plus.h"
+ #include <stdio.h>
++#include <stdlib.h> /* for abort() */
+ 
+ #ifdef AIX
+ #include <sys/types.h>
+@@ -142,8 +143,6 @@
+ 
+ 
+     if (console) {
+-	extern int errno;
+-	
+ 	if (!ostream)
+ 	    ostream = fopen("/dev/console", "w");
+ 

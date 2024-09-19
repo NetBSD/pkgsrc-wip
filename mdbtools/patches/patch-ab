@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2012/05/02 08:21:29 noud4 Exp $
+
+http://osdir.com/ml/db.mdb-tools.devel/2007-03/msg00000.html
+
+--- ./include/mdbtools.h.orig	2012-04-19 09:30:30.000000000 +0000
++++ ./include/mdbtools.h	2012-04-19 09:30:36.000000000 +0000
+@@ -147,7 +147,7 @@
+ #define IS_JET3(mdb) (mdb->f->jet_version==MDB_VER_JET3)
+ 
+ /* hash to store registered backends */
+-extern GHashTable	*mdb_backends;
++static GHashTable	*mdb_backends;
+ 
+ /* forward declarations */
+ typedef struct mdbindex MdbIndex;

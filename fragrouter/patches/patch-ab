@@ -1,0 +1,132 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/16 17:34:34 ishit Exp $
+
+--- configure.orig	1999-07-27 00:08:51.000000000 +0900
++++ configure
+@@ -11,6 +11,10 @@
+ ac_help=
+ ac_default_prefix=/usr/local
+ # Any additions from configure.in:
++ac_help="$ac_help
++  --with-libpcap=DIR      use libpcap in DIR"
++ac_help="$ac_help
++  --with-libnet=DIR      use libnet in DIR"
+ 
+ # Initialize some variables set by options.
+ # The variables have the same names as the options, with
+@@ -21,7 +25,7 @@ exec_prefix=NONE
+ host=NONE
+ no_create=
+ nonopt=NONE
+-no_recursion=
++no_recursion=yes
+ prefix=NONE
+ program_prefix=NONE
+ program_suffix=NONE
+@@ -1375,7 +1379,95 @@ fi
+ done
+ 
+ 
+-subdirs="libpcap-0.4 Libnet-0.99b"
++#subdirs="libpcap-0.4 Libnet-0.99b"
++
++
++echo $ac_n "checking for libpcap""... $ac_c" 1>&6
++echo "configure:1844: checking for libpcap" >&5
++# Check whether --with-libpcap or --without-libpcap was given.
++if test "${with_libpcap+set}" = set; then
++  withval="$with_libpcap"
++  case "$withval" in
++  yes|no)
++     echo "$ac_t""no" 1>&6
++     ;;
++  *)
++     echo "$ac_t""$withval" 1>&6
++     if test -f $withval/pcap.h -a -f $withval/libpcap.a; then
++        owd=`pwd`
++        if cd $withval; then withval=`pwd`; cd $owd; fi
++        PCAPINC="-I$withval -I$withval/bpf"
++        PCAPLIB="-L$withval -lpcap"
++     elif test -f $withval/include/pcap.h -a \
++               -f $withval/include/net/bpf.h; then
++        owd=`pwd`
++        if cd $withval; then withval=`pwd`; cd $owd; fi
++        PCAPINC="-I$withval/include"
++        if test -f $withval/lib/libwpcap.a; then
++           PCAPLIB="-L$withval/lib -lwpcap"
++        else
++           PCAPLIB="-L$withval/lib -lpcap"
++        fi
++     else
++        { echo "configure: error: pcap.h" 1>&2; exit 1; }
++     fi
++     ;;
++  esac
++else
++   if test -f ${prefix}/include/pcap.h; then
++     PCAPINC="-I${prefix}/include"
++     if test -f ${prefix}/lib/libwpcap.a; then
++        PCAPLIB="-L${prefix}/lib -lwpcap"
++     else
++        PCAPLIB="-L${prefix}/lib -lpcap"
++     fi
++  elif test -f /usr/include/pcap/pcap.h; then
++     PCAPINC="-I/usr/include/pcap"
++     PCAPLIB="-lpcap"
++  elif test -f /usr/include/pcap.h; then
++     PCAPLIB="-lpcap"
++  else
++     echo "$ac_t""no" 1>&6
++     { echo "configure: error: libpcap not found" 1>&2; exit 1; }
++  fi
++  echo "$ac_t""yes" 1>&6
++
++fi
++
++
++echo $ac_n "checking for libnet""... $ac_c" 1>&6
++echo "configure:1897: checking for libnet" >&5
++# Check whether --with-libnet or --without-libnet was given.
++if test "${with_libnet+set}" = set; then
++  withval="$with_libnet"
++  case "$withval" in
++  yes|no)
++     echo "$ac_t""no" 1>&6
++     ;;
++  *)
++     echo "$ac_t""$withval" 1>&6
++     if test -f $withval/src/libnet.a; then
++        LNETINC="-I$withval/include"
++        LNETLIB="-L$withval/src -lnet `$withval/libnet-config --libs`"
++     elif test -x $withval/bin/libnet-config; then
++        LNETINC="`$withval/bin/libnet-config --cflags`"
++        LNETLIB="`$withval/bin/libnet-config --libs`"
++     else
++        { echo "configure: error: libnet-config not found in $withval/bin" 1>&2; exit 1; }
++     fi
++     ;;
++  esac
++else
++  if test -x ${prefix}/bin/libnet-config; then
++     LNETINC="`${prefix}/bin/libnet-config --cflags`"
++     LNETLIB="`${prefix}/bin/libnet-config --libs`"
++  else
++     echo "$ac_t""no" 1>&6
++     { echo "configure: error: libnet not found" 1>&2; exit 1; }
++  fi
++  echo "$ac_t""yes" 1>&6
++
++fi
+ 
+ 
+ trap '' 1 2 15
+@@ -1516,6 +1608,10 @@ s%@INSTALL_PROGRAM@%$INSTALL_PROGRAM%g
+ s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
+ s%@INSTALL_DATA@%$INSTALL_DATA%g
+ s%@SET_MAKE@%$SET_MAKE%g
++s%@PCAPINC@%$PCAPINC%g
++s%@PCAPLIB@%$PCAPLIB%g
++s%@LNETINC@%$LNETINC%g
++s%@LNETLIB@%$LNETLIB%g
+ s%@CPP@%$CPP%g
+ s%@subdirs@%$subdirs%g
+ 

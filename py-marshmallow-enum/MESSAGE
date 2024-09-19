@@ -1,0 +1,2 @@
+If you're on a version before 3.4, you'll also need to install:
+devel/py-enum34

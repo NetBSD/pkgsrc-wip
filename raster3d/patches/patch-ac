@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1 2010/06/01 08:14:50 obache Exp $
+
+Warning on line215 of ribbon.f: inconsistent calling sequences for zeroi,
+	arg1: here ineger variable, previously real variable.
+
+If break f2c.
+
+--- ribbon.f.orig	2003-10-20 22:50:11.000000000 +0000
++++ ribbon.f
+@@ -211,7 +211,7 @@ CEAM	     nat = -1
+ 	end
+ 
+ 	subroutine zeroi( a, nwords )
+-	integer*4 a(nwords)
++	real*4 a(nwords)
+ 	do i = 1,nwords
+ 	    a(i) = 0
+ 	end do

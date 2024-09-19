@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/12 16:08:56 jihbed Exp $
+bin/yapps2
+${PYSITELIB}/yapps/__init__.py
+${PYSITELIB}/yapps/__init__.pyc
+${PYSITELIB}/yapps/__init__.pyo
+${PYSITELIB}/yapps/grammar.py
+${PYSITELIB}/yapps/grammar.pyc
+${PYSITELIB}/yapps/grammar.pyo
+${PYSITELIB}/yapps/parsetree.py
+${PYSITELIB}/yapps/parsetree.pyc
+${PYSITELIB}/yapps/parsetree.pyo
+${PYSITELIB}/yapps/yapps_grammar.py
+${PYSITELIB}/yapps/yapps_grammar.pyc
+${PYSITELIB}/yapps/yapps_grammar.pyo
+${PYSITELIB}/yapps/yappsrt.py
+${PYSITELIB}/yapps/yappsrt.pyc
+${PYSITELIB}/yapps/yappsrt.pyo

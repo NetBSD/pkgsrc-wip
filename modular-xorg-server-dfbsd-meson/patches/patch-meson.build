@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- meson.build.orig	2019-03-20 23:09:22.000000000 +0000
++++ meson.build
+@@ -155,6 +155,9 @@ if host_machine.system() == 'windows'
+     hal_option = 'false'
+ endif
+ 
++build_wscons = get_option('wscons')
++build_devd = get_option('devd')
++
+ if get_option('systemd_logind') == 'auto'
+     build_systemd_logind = build_udev and dbus_dep.found()
+ else

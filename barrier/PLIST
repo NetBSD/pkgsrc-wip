@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/barrier
+bin/barrierc
+bin/barriers
+man/man1/barrierc.1
+man/man1/barriers.1
+share/examples/barrier/MacReadme.txt
+share/examples/barrier/barrier.conf.example
+share/examples/barrier/barrier.conf.example-advanced
+share/examples/barrier/barrier.conf.example-basic
+share/examples/barrier/org.barrier-foss.org.barrierc.plist
+share/examples/barrier/org.barrier-foss.org.barriers.plist

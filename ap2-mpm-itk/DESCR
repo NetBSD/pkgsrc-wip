@@ -1,0 +1,1 @@
+Apache module that allows to run each vhost under a separate uid and gid.

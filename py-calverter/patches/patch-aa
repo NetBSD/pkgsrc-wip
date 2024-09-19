@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/02 14:18:10 jihbed Exp $
+
+--- setup.py.orig	2010-09-02 14:59:43.000000000 +0000
++++ setup.py	2010-09-02 14:59:53.000000000 +0000
+@@ -11,7 +11,7 @@
+       url = 'https://launchpad.net/pycalverter',
+       package_dir = {},
+       packages = [""],
+-      scripts = ["calverter"],
++      scripts = ["calverter.py"],
+       license='GNU GPL v2',
+       classifiers=[
+       'Development Status :: 5 - Production/Stable',

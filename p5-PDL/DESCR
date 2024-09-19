@@ -1,0 +1,20 @@
+PDL (``Perl Data Language'') gives standard Perl the ability to compactly store
+and speedily manipulate the large N-dimensional data arrays which are the bread
+and butter of scientific computing.
+
+PDL turns perl in to a free, array-oriented, numerical language similar to (but,
+we believe, better than) such commerical packages as IDL and MatLab.  One can
+write simple perl expressions to manipulate entire numerical arrays all at once.
+For example, using PDL the perl variable $a can hold a 1024x1024 floating point
+image, it only takes 4MB of memory to store it and expressions like
+$a=sqrt($a)+2 manipulate the whole image in a few milliseconds.
+
+A simple interactive shell (perldl) is provided for use from the command line
+and a module (PDL) for use in perl scripts.
+
+The PDL distribution for Perl is free Software and provides extensive numerical
+and semi-numerical functionality with support for two- and three-dimensional
+visualisation as well as a variety of I/O formats.  The goal is to allow PDL to
+interact with a variety of external numerical packages, graphics and
+visualisation systems.  Easy interfacing to such systems is one of the core
+design features of PDL.

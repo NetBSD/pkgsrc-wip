@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
+${PERL5_SUB_INSTALLVENDORLIB}/Net/SMS/Clickatell.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/SMS/Clickatell/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Net::SMS::Clickatell.3

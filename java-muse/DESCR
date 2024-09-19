@@ -1,0 +1,9 @@
+Echomine Muse API gives you one easy-to-use set of APIs and
+frameworks for you to connect with other communication services
+such as Gnutella, ICQ, to connect with other communication services
+MSN, Yahoo, AIM, IRC, FTP, etc.  It implements the protocols and
+then adds an extra layer on top of the protocols so that access to
+all the services go through extra layer on top of the protocols so
+that access to all the services go through extra layer on top of the
+protocols so that access to all the services go through
+one unified API (similar to how JDBC works).

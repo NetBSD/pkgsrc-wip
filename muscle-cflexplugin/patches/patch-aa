@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/28 19:38:07 udontknow Exp $
+
+--- src/cryptoflex.c.orig	2003-11-29 14:10:49.000000000 -0200
++++ src/cryptoflex.c
+@@ -17,11 +17,7 @@
+ #include "../win32/CFlexPlugin.h"
+ #endif
+ 
+-#ifndef __APPLE__
+-#include <musclecard.h>
+-#else
+ #include <PCSC/musclecard.h>
+-#endif
+ 
+ #include "cryptoflex.h"
+ #include <string.h>

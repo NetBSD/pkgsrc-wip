@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:33 thomasklausner Exp $
+bin/dumb2wav
+bin/dumbout
+bin/dumbplay
+include/aldumb.h
+include/dumb.h
+lib/libaldmb.a
+lib/libaldmd.a
+lib/libdumb.a
+lib/libdumbd.a
+share/doc/dumb/deprec.txt
+share/doc/dumb/dumb.txt
+share/doc/dumb/faq.txt
+share/doc/dumb/fnptr.txt
+share/doc/dumb/howto.txt
+share/doc/dumb/licence.txt
+share/doc/dumb/modplug.txt
+share/doc/dumb/ptr.txt
+share/doc/dumb/readme.txt
+share/doc/dumb/release.txt

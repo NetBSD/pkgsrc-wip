@@ -1,0 +1,264 @@
+$NetBSD: patch-aa,v 1.15 2006/12/23 05:47:14 kcf Exp $
+
+--- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
++++ Makefile
+@@ -72,67 +72,6 @@
+ 
+ ### system dependent definitions ###
+ 
+-#CC=gcc
+-CC=`type gcc cc 2>/dev/null | grep -v "not found" | head -1 | sed -e "s/.* //"` 
+-#						# cc
+-#AR=/usr/ccs/bin/ar
+-AR=`type /usr/ccs/bin/ar ar 2>/dev/null | grep -v "not found" | head -1 | sed -e "s/.* //"` 
+-#						# archiver
+-#AWK=gawk
+-AWK=`type gawk nawk awk 2>/dev/null | grep -v "not found" | head -1 | sed -e "s/.* //"` 
+-#						# awk
+-#
+-#MAKE=gmake
+-MAKE=`type gmake make 2>/dev/null | grep -v "not found" | head -1 | sed -e "s/.* //"` 
+-#						# make
+-#
+-
+-#UNAME=
+-#						# init with the result of the
+-#						# shell command "uname"
+-
+-SEMUN=0
+-#						# set 1 if semctl() needs union
+-#                                               # e.g. at SUN/Solaris
+-
+-### importing shell variables for default parameter setting ###
+-
+-BITMODE=32
+-#BITMODE=64
+-#						# set to either 32 or 64
+-#						# for 32/64 bit support
+-
+-#SUBDIR=xsp/
+-#						# optional subdir
+-#						# must not defined as "/" only
+-
+-TARGETDIR=/usr2/js
+-#						# user specific install base dir
+-MODULE=xspsys
+-#						# module (e.g. for cvs)
+-PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
+-##PWD=.
+-#                                               # home directory
+-
+-### root dir of java core classes ###
+-
+-XSPJAVASYSDIR=../xspjsys
+-#						# java interface directory
+-### root dir of applications ###
+-
+-XSPAPPDIR=../xspapp
+-#						# application dir
+-XSPJAVADIR=../xspjava
+-#						# java application dir
+-
+-
+-### XSPD/XSP runtime config file ###
+-
+-CONFIGFILE=$(TARGETDIR)/$(SUBDIR)html/test/xspd.conf
+-#						# config file
+-#						# NOTE: must be same path as
+-#						# $(INSTALLDIR)
+-
+ ### configuration and other file directory ###
+ 
+ ETCDIR=$(PWD)/etc
+@@ -166,8 +105,6 @@ IDENT=0
+ 
+ HOMEDIR=$(PWD)
+ #						# user specific home directory
+-UTILDIR=/usr2/util
+-#						# user specific utility dir
+ SRCDIR=$(HOMEDIR)/src
+ #						# source directory
+ OBJDIR=$(HOMEDIR)/obj
+@@ -182,13 +119,6 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
+ #						# C interface documentation dir
+ CDOC_CORE_DIR=$(HOMEDIR)/doc_core
+ #						# core documentation dir
+-INSTALLDIR=$(TARGETDIR)/$(SUBDIR)html/test
+-#						# installation directory
+-
+-XSPDIR=$(TARGETDIR)/$(SUBDIR)html/test
+-#						# XSP installation directory
+-APPUTILDIR=$(TARGETDIR)/$(SUBDIR)html/test
+-#						# application utility directory
+ 
+ INCLCOMMON=$(HOMEDIR)/include
+ #						# common include path
+@@ -216,25 +146,11 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+ INTERNETDIR=$(HOMEDIR)/internetdistr
+ #						# internet distribution dir
+ 
+-TMPDIR=$(HOME)/tmpdir
++TMPDIR=$(HOMEDIR)/tmpdir
+ #						# temporary directory
+ TMPFILE=$(TMPDIR)/tmpmk_
+ #						# prename of temporary files
+ 
+-#						# compiler dependent flags 
+-CFLAGSX=-g -O
+-##CFLAGSX=-O3 -funroll-loops
+-#						# C-flags Linux Red Hat 7.3,
+-#						# Red Hat 8.0, or Fedora FC3
+-##CFLAGSX=-R suppress,CFE1111,CFE1177,CFE1186,CFE1995,CFE1178,CFE1180,CFE1550,CFE1676 -g
+-#						# C-flags reliant unix
+-##CFLAGSX=-mcpu=v9 -m$(BITMODE) -g -O
+-#						# C-flags SUN, gcc, 32/64-bit
+-##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
+-#						# C-flags SUN, SUN-cc, 32-bit
+-##CFLAGSX=-mcpu=i386 -m$(BITMODE) -g -O -DFD_SETSIZE=1024
+-#						# C-flags NetBSD, pentium
+-
+ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
+ 	-DOSTYPE=$OSTYPE -DUNAME=$(UNAME) \
+ 	-DSEMUN=$(SEMUN) \
+@@ -246,32 +162,10 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+ 	-DXSPCOMMID=$(XSPCOMMID) \
+ 	-DCONFIGFILE='"$(CONFIGFILE)"' \
+ 	-DSCCSID='$(SCCSID)' -DRCSID='$(RCSID)' -DIDENT='$(IDENT)'
+-#						# flags for compiler
+-#                                               # special flags:
+-#						# -DCOLORCHK=1      1/0
+-#						# -DVHASHTABNAM=0   1/0
+-
+-#						# flags for cc-link option
+-CLDFLAGS=-lcrypt
+-#						# link-flags Linux Red Hat 7.3,
+-#						# Red Hat 8.0, or Fedora FC3
+-##CLDFLAGS=-lcrypt -lxnet
+-#						# link-flags Reliant Unix
+-##CLDFLAGS=-lcrypt -lxnet -mcpu=v9 -m$(BITMODE)
+-#						# link-flags SUN, gcc, 32/64-bit
+-##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
+-#						# link-flags SUN, cc, 32-bit
+-##CLDFLAGS=-lcrypt -mpcu=i386 -m$(BITMODE)
+-#						# link-flags NetBSD, pentium
+ 
+-XHTMLPP=`( [ -x $(ETCDIR)/xhtmlpp ] && echo $(ETCDIR)/xhtmlpp ) \
+-	|| ( [ -x $(UTILDIR)/xhtmlpp ] && echo $(UTILDIR)/xhtmlpp )`
++XHTMLPP=${ETCDIR}/xhtmlpp
+ #						# HTML preprocessor
+ 
+-#BIT7=-bit7
+-#						# enable for 7-bit-ascii convert
+-#                                               # at using HTML preprocessor
+-
+ ### cvs specifications ###
+ 
+ CVSDIR=$(CVSROOT)
+@@ -514,21 +408,32 @@ CDOC_CORE_FILES=\
+ ### targets ###
+ 
+ install: \
+-	mkdirs \
+-	$(CVSMAKEFILE) mkcvs \
+-	all \
+-	helpdoc \
+-	$(CONFIGFILE) \
+ 	installadmin \
+ 	installapputil \
+-	xspjsys \
+-	xspapp \
+-	xspjava
++	${XSPDIR}/xspfwd \
++	${XSPDIR}/xspanalyze \
++	installincludes \
++	${EXAMPLECONFIGFILE} \
++	installlibs
+ 	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
++	@cp $(ETCDIR)/xhtmlpp ${PREFIX}/sbin/xhtmlpp
+ 	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
+ 
+ ################################################################################
+ 
++installincludes:
++	@cp ${INCLCOMMON}/*.h ${PREFIX}/include/xspd/.
++	@cp ${INCLXSP}/*.h ${PREFIX}/include/xspd/.
++	@cp ${INCLADMXSP}/*.h ${PREFIX}/include/xspd/.
++
++################################################################################
++
++installlibs:
++	@cp ${LIBXSPD} ${PREFIX}/lib/xspd/.
++	@cp ${LIBCMN} ${PREFIX}/lib/xspd/.
++
++################################################################################
++
+ installadmin: \
+ 	$(XSPDIR)/xspdAdmin.xsp
+ 
+@@ -554,13 +459,15 @@ installapputil: \
+ 
+ ################################################################################
+ 
+-all:	\
++all: \
++	mkdirs \
+ 	$(SCCS_FILES) \
+ 	$(LIBXSPD) \
+ 	$(LIBCMN) \
+-	$(XSPDIR)/xspfwd \
++	$(EXEDIR)/xspfwd \
+ 	$(EXEDIR)/xspd \
+-	$(XSPDIR)/xspanalyze
++	$(EXEDIR)/xspanalyze \
++	helpdoc
+ 	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- make `basename \`pwd\`` ready ---"
+ 
+ ################################################################################
+@@ -758,9 +665,6 @@ mkdirs:
+ 	    $(DISTRDIR) \
+ 	    $(INTERNETDIR) \
+ 	    $(DOCDIR) \
+-	    $(INSTALLDIR) \
+-	    $(XSPDIR) \
+-	    $(APPUTILDIR) \
+ 	    2>/dev/null
+ 	
+ ################################################################################
+@@ -1274,6 +1178,7 @@ $(OBJDIR)/xspfwd.o: $(SRCDIR)/xspfwd.c \
+ 	$(INCL)/xspconfig.h \
+ 	$(INCLCOMMON)/fileio.h \
+ 	$(INCL)/xsp.h
++	echo objdir is ${OBJDIR}
+ 	@echo "	compiling $(SRCDIR)/`basename $@ | sed -e 's/\..*//'`.c"
+ 	@$(CC) $(CFLAGS) -o $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o -c $(SRCDIR)/`basename $@ | sed -e 's/\..*//'`.c
+ 	
+@@ -1389,7 +1294,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
+ 		-o $@  $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o \
+ 		$(CLIBS) \
+ 		$(LIBCMN)
+-	@chmod 1755 $@
++#	@chmod 1755 $@
+ 	
+ ################################################################################
+ 
+@@ -1619,7 +1524,8 @@ xspd_conf_distr:
+ ### build the default xspd.conf config file ###
+ ### do not overwrite existing versions      ###
+ 
+-$(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
++#$(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
++$(EXAMPLECONFIGFILE): $(ETCDIR)/xspd.conf_distr
+ 	@SRCFILE=$(ETCDIR)/xspd.conf_distr; \
+ 	 DSTFILE=$@; \
+ 	 if [ ! -s $@ ] ; \
+@@ -1654,10 +1560,3 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
+ 	
+ ################################################################################
+ 
+-### for backup only ###
+-
+-$(ETCDIR)/xspd.conf:	$(CONFIGFILE)
+-	@cp $(CONFIGFILE) $@
+-	
+-################################################################################
+-

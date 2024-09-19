@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2010/02/02 18:17:19 tnn2 Exp $
+
+--- Makefile.local.mk.orig	2010-02-02 17:52:36.000000000 +0000
++++ Makefile.local.mk
+@@ -15,6 +15,7 @@ CLIENT_GATEWAY   = 1
+ 
+ ## Install prefix
+ # INSTALL_PREFIX = /usr
++INSTALL_PREFIX = ${DESTDIR}${PREFIX}
+ 
+ ## Specify ncurses include path explicitly. (should contain curses.h)
+ # NCURSES_INCLUDE = /usr/local/include/ncursesw

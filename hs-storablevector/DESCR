@@ -1,0 +1,8 @@
+Fast, packed, strict storable arrays with a list interface, a chunky
+lazy list interface with variable chunk size and an interface for
+write access via the ST monad. This is much like bytestring and binary
+but can be used for every Foreign.Storable.Storable type. See also
+packages
+http://hackage.haskell.org/cgi-bin/hackage-scripts/package/vector
+http://hackage.haskell.org/cgi-bin/hackage-scripts/package/uvector
+with a similar intention.

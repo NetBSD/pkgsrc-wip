@@ -1,0 +1,10 @@
+ightweight C++ is a programming language that looks like C++ (a lightweight
+C++ dialect) and is directly translated to readable C by the lwc preprocessor.
+It's more "K&R" and, well, more lightweight.
+
+Important thing about lightweight C++ is that by studying the generated C
+code it is easy to understand how OOP features are implemented and what is
+the cost of everything.
+
+Adding new features and extensions is also very easy (much easier than adding
+new C++ extensions to gcc at least), and this is one of lwc goals

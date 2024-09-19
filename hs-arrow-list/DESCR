@@ -1,0 +1,6 @@
+This small Haskell library provides some type class, types and
+functions to work with list arrows. List arrows represent computations
+that may return multiple outputs. Making functions that return lists
+an instance of both the Category and Arrow type class allow you to
+easily compose multiple computations into one with standard building
+blocks.

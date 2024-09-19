@@ -1,0 +1,8 @@
+# $NetBSD: TODO,v 1.3 2009/05/09 12:17:15 hfath Exp $
+
+# l2tpd pkg issues:
+
+- test in a realistic setup
+- fix the "warning: conflicting types for built-in function 'log'"
+  issue
+- ... or just "cvs remove", since the upstream project is dead?

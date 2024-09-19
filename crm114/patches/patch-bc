@@ -1,0 +1,107 @@
+$NetBSD: patch-bc,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+
+This patch patches mailfilter.crm for use :fileprefix: for all :text_cache:
+references.
+
+--- mailfilter.crm.orig	2006-11-03 09:19:12.000000000 -0600
++++ mailfilter.crm	2007-02-23 18:10:39.000000000 -0600
+@@ -220,15 +220,15 @@
+ 		#         and it's subdirectories. 
+ 		#
+ 		isolate (:tmp:) //
+-		syscall () (:tmp:) /ls :*:text_cache: 2>&1 /
++		syscall () (:tmp:) /ls :*:fileprefix::*:text_cache: 2>&1 /
+ 		match [:tmp:] <absent> /texts/
+-		syscall () () /mkdir -p :*:text_cache: /
+-		syscall () () /mkdir -p :*:text_cache:\/texts /		
+-		syscall () () /mkdir :*:text_cache:\/prob_good /
+-		syscall () () /mkdir :*:text_cache:\/prob_spam /
+-		syscall () () /mkdir :*:text_cache:\/known_good /
+-		syscall () () /mkdir :*:text_cache:\/known_spam /
+-		syscall () () /mkdir :*:text_cache:\/empty /
++		syscall () () /mkdir -p :*:fileprefix::*:text_cache: /
++		syscall () () /mkdir -p :*:fileprefix::*:text_cache:\/texts /		
++		syscall () () /mkdir :*:fileprefix::*:text_cache:\/prob_good /
++		syscall () () /mkdir :*:fileprefix::*:text_cache:\/prob_spam /
++		syscall () () /mkdir :*:fileprefix::*:text_cache:\/known_good /
++		syscall () () /mkdir :*:fileprefix::*:text_cache:\/known_spam /
++		syscall () () /mkdir :*:fileprefix::*:text_cache:\/empty /
+ 	}
+ 	#
+ 	#    Yes, text cacheing is on.  Save the input as is in the cache.
+@@ -246,7 +246,7 @@
+ 		match <absent> [:stats_only:] /SET/
+                 match <absent> [:learnspam:] /SET/
+                 match <absent> [:learnnonspam:] /SET/
+-		output [:*:text_cache:\/texts\/:*:cacheid:] /:*:_dw:/
++		output [:*:fileprefix::*:text_cache:\/texts\/:*:cacheid:] /:*:_dw:/
+ 	}		
+ }
+ 
+@@ -586,18 +586,18 @@
+ 		{
+ 		    match (:: :fileid:) /X-CRM114-CacheID: ([[:graph:]]+)/
+ 		    #      check- does the cached file exist?
+-                    syscall () (:tmp:) /ls :*:text_cache:\/texts\/:*:fileid:/
++                    syscall () (:tmp:) /ls :*:fileprefix::*:text_cache:\/texts\/:*:fileid:/
+ 		    match [:tmp:] /:*:fileid:/
+ 		    #   yes, it exists - go on with the learning method
+ 		    #      and remember this file on a permanent basis
+-		    syscall /ln :*:text_cache:\/texts\/:*:fileid: :*:text_cache:\/known_good\/:*:fileid: /
+-		    # output / \n DOING: crm mailtrainer.crm --good=:*:text_cache:\/texts\/:*:fileid: --spam=:*:text_cache:\/empty\/ \n / () (:mailtrainer_output:)
+-		    syscall /crm mailtrainer.crm --fileprefix :*:fileprefix: --good=:*:text_cache:\/texts\/:*:fileid: --spam=:*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++		    syscall /ln :*:fileprefix::*:text_cache:\/texts\/:*:fileid: :*:fileprefix::*:text_cache:\/known_good\/:*:fileid: /
++		    # output / \n DOING: crm mailtrainer.crm --good=:*:fileprefix::*:text_cache:\/texts\/:*:fileid: --spam=:*:fileprefix::*:text_cache:\/empty\/ \n / () (:mailtrainer_output:)
++		    syscall /crm mailtrainer.crm --fileprefix=:*:fileprefix: --good=:*:fileprefix::*:text_cache:\/texts\/:*:fileid: --spam=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+ 		    # output /mailtrainer output:  ':*:mailtrainer_output:'\n/
+ 		    #      and remove it from the prob_* directories, as
+ 		    #      now it's known
+-		    syscall /rm -rf  :*:text_cache:\/prob_spam\/:*:fileid:/
+-		    syscall /rm -rf  :*:text_cache:\/prob_good\/:*:fileid:/
++		    syscall /rm -rf  :*:fileprefix::*:text_cache:\/prob_spam\/:*:fileid:/
++		    syscall /rm -rf  :*:fileprefix::*:text_cache:\/prob_good\/:*:fileid:/
+ 		    #
+ 		    #      now it's trained; put in a marker in the headers
+ 		    call /:mungmail_delete:/ [X-CRM114-Status: ]
+@@ -684,17 +684,17 @@
+ 	    {
+ 		#      yes - so we use mailtrainer.crm to do the training
+ 		match (:: :fileid:) /X-CRM114-CacheID: ([[:graph:]]+)/
+-		syscall () (:tmp:) /ls :*:text_cache:\/texts\/:*:fileid:/
++		syscall () (:tmp:) /ls :*:fileprefix::*:text_cache:\/texts\/:*:fileid:/
+ 		match [:tmp:] /:*:fileid:/
+ 		#      remember this file on a permanent basis
+-		syscall /ln :*:text_cache:\/texts\/:*:fileid: :*:text_cache:\/known_spam\/:*:fileid: /
+-		#output /DOING: crm mailtrainer.crm --spam=:*:text_cache:\/known_spam\/:*:fileid: --good=:*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+-		syscall /crm mailtrainer.crm --fileprefix :*:fileprefix: --spam=:*:text_cache:\/known_spam\/:*:fileid: --good=:*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++		syscall /ln :*:fileprefix::*:text_cache:\/texts\/:*:fileid: :*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: /
++		#output /DOING: crm mailtrainer.crm --spam=:*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: --good=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++		syscall /crm mailtrainer.crm --fileprefix=:*:fileprefix: --spam=:*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: --good=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+ 		#output /mailtrainer output:  ':*:mailtrainer_output:'\n/
+ 		#      and remove it from the prob_* directories, as
+ 		#      now it's known
+-		syscall /rm -rf  :*:text_cache:\/prob_spam\/:*:fileid:/
+-		syscall /rm -rf  :*:text_cache:\/prob_good\/:*:fileid:/
++		syscall /rm -rf :*:fileprefix::*:text_cache:\/prob_spam\/:*:fileid:/
++		syscall /rm -rf :*:fileprefix::*:text_cache:\/prob_good\/:*:fileid:/
+ 		#
+ 		#      now it's trained; put in a marker in the headers
+ 		call /:mungmail_delete:/ [X-CRM114-Status: ]
+@@ -963,7 +963,7 @@
+ 	#       save unprocessed text by symlink in the text cache if needed.
+ 	{
+ 		match [:text_cache:] /./
+-		syscall () () /ln :*:text_cache:\/texts\/:*:cacheid: :*:text_cache:\/prob_spam\/:*:cacheid:/
++		syscall () () /ln :*:fileprefix::*:text_cache:\/texts\/:*:cacheid: :*:fileprefix::*:text_cache:\/prob_spam\/:*:cacheid:/
+ 	}
+ 		
+ 	#     and write out the long-form message too.	
+@@ -1108,7 +1108,7 @@
+     #             save unprocessed txt by symlink in the text cache if needed.
+     {
+ 	match [:text_cache:] /./
+-	syscall () () /ln :*:text_cache:\/texts\/:*:cacheid: :*:text_cache:\/prob_good\/:*:cacheid:/
++	syscall () () /ln :*:fileprefix::*:text_cache:\/texts\/:*:cacheid: :*:fileprefix::*:text_cache:\/prob_good\/:*:cacheid:/
+     }
+ 
+ 

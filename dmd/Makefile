@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:37 asau Exp $
+
+DMD_VERSION=	2.093.1
+PKGNAME=	dmd-${DMD_VERSION}
+DISTNAME=	v${DMD_VERSION}
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dlang/}
+GITHUB_PROJECT=	dmd
+GITHUB_TAG=	v${DMD_VERSION}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.dlang.org/
+COMMENT=	Digital Mars D compiler
+LICENSE=	boost-license
+
+WRKSRC=	${WRKDIR}/dmd-${DMD_VERSION}
+
+MAKE_FILE=	posix.mak
+# -j 16 passed to g++
+MAKE_JOBS_SAFE=	no
+USE_LANGUAGES=	c c++
+USE_TOOLS=	gmake
+MAKE_FLAGS+=	AUTO_BOOTSTRAP=1
+MAKE_FLAGS+=	BUILD=release
+MAKE_FLAGS+=	ENABLE_RELEASE=1
+MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}
+
+.include "../../mk/bsd.pkg.mk"

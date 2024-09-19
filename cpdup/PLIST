@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/08 01:10:17 hoka_adam Exp $
+bin/cpdup
+man/man1/cpdup.1

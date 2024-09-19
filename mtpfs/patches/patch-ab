@@ -1,0 +1,54 @@
+$NetBSD: patch-ab $
+
+adjust to our fuse headers
+--- mtpfs.c.orig	2016-06-18 10:28:32.000000000 +0000
++++ mtpfs.c	2016-06-18 10:26:53.000000000 +0000
+@@ -1601,7 +1601,7 @@
+ }
+ 
+ static int
+-mtpfs_statfs (const char *path, struct statfs *stbuf)
++mtpfs_statfs (const char *path, struct statvfs *stbuf)
+ {
+   DBG ("mtpfs_statfs");
+   stbuf->f_bsize = 1024;
+@@ -1613,7 +1613,7 @@
+ }
+ 
+ void *
+-mtpfs_init ()
++mtpfs_init (struct fuse_conn_info *conn)
+ {
+   LIBMTP_devicestorage_t *storage;
+   DBG ("mtpfs_init");
+@@ -1624,13 +1624,20 @@
+ }
+ 
+ int
++mtpfs_blank_chmod(const char *path, mode_t mode)
++{
++	return (0);
++}
++
++
++int
+ mtpfs_blank ()
+ {
+   // Do nothing
+ }
+ 
+ static struct fuse_operations mtpfs_oper = {
+-  .chmod = mtpfs_blank,
++  .chmod = mtpfs_blank_chmod,
+   .release = mtpfs_release,
+   .readdir = mtpfs_readdir,
+   .getattr = mtpfs_getattr,
+@@ -1774,7 +1781,7 @@
+ 
+   DBG ("Start fuse");
+ 
+-  fuse_stat = fuse_main (argc, argv, &mtpfs_oper);
++  fuse_stat = fuse_main (argc, argv, &mtpfs_oper, NULL);
+   DBG ("fuse_main returned %d\n", fuse_stat);
+   return fuse_stat;
+ }

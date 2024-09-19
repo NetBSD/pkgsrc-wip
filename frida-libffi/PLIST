@@ -1,0 +1,10 @@
+@comment $NetBSD$
+frida/include/ffi.h
+frida/include/ffitarget.h
+frida/info/libffi.info
+frida/lib/libffi.la
+frida/lib/pkgconfig/libffi.pc
+frida/man/man3/ffi.3
+frida/man/man3/ffi_call.3
+frida/man/man3/ffi_prep_cif.3
+frida/man/man3/ffi_prep_cif_var.3

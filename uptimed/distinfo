@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2013/05/10 08:20:04 ahp-nils Exp $
+
+RMD160 (uptimed-0.4.1.tar.gz) = bbb92c65db33df936e675b725a5cb2c5d290137c
+SHA512 (uptimed-0.4.1.tar.gz) = 5dfe79aebab8c8daca3a3ec88d54e312446fc7cf8b54ef1414cbfcb3fb25053ef31235de4b42cb14fc7352965b77ca2875c753b97b4d61178792a5484715e23a
+Size (uptimed-0.4.1.tar.gz) = 55162 bytes
+SHA1 (patch-ab) = 5f8a4f65be19b43c7dccde3e2a9a90243779105e

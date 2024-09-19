@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:25 thomasklausner Exp $
+bin/rezound
+share/doc/rezound/AUTHORS
+share/doc/rezound/COPYING
+share/doc/rezound/Features.txt
+share/doc/rezound/FrontendFoxFeatures.txt
+share/doc/rezound/NEWS
+share/doc/rezound/README
+share/rezound/icon_logo_32.gif
+share/rezound/impulse_hall1.wav
+share/rezound/menu.dat
+share/rezound/presets.dat

@@ -1,0 +1,9 @@
+pod2it is the italian translation project of core Perl pods. This has
+been (and currently still is) a very big work! :-)
+
+See http://pod2it.sf.net for more details about the project.
+
+Once the package has been installed, the translated documentation can
+be accessed with:
+
+  %> perldoc POD2::IT::<podname>

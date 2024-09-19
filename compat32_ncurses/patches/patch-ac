@@ -1,0 +1,67 @@
+$NetBSD: patch-ac,v 1.26 2018/04/02 16:26:03 spz Exp $
+
+--- ./configure.orig	2018-01-20 00:27:18.000000000 +0000
++++ ./configure
+@@ -11770,11 +11770,7 @@ case ".$MANPAGE_RENAMES" in
+ 	;;
+ (.|.yes)
+ 	# Debian 'man' program?
+-	if test -f /etc/debian_version ; then
+-		MANPAGE_RENAMES=`cd $srcdir && pwd`/man/man_db.renames
+-	else
+-		MANPAGE_RENAMES=no
+-	fi
++	MANPAGE_RENAMES=no
+ 	;;
+ esac
+ 
+@@ -23263,8 +23259,17 @@ EOF
+ #define HAVE_LIB${cf_have_include} 1
+ EOF
+ 
+-			TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
+-			TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
++			case ${cf_dir} in
++			form|menu|panel)
++				TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}gnu${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
++				TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}gnu${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
++				;;
++			*)
++				TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
++				TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
++				;;
++			esac
++
+ 			if test "$DFT_LWR_MODEL" = "libtool"; then
+ 				TEST_ARGS="${TEST_DEPS}"
+ 				TEST_ARG2="${TEST_DEP2}"
+@@ -23567,9 +23572,9 @@ fi
+ ADAHTML_DIR=../../doc/html/ada
+ 
+ # these could be configurable, but are not currently
+-PANEL_NAME=panel
+-MENU_NAME=menu
+-FORM_NAME=form
++PANEL_NAME=gnupanel
++MENU_NAME=gnumenu
++FORM_NAME=gnuform
+ CXX_NAME=ncurses++
+ 
+ # workaround for OS/2 (20151017)
+@@ -25011,7 +25016,15 @@ CF_EOF
+ 		cf_depsuf="${LIB_SUFFIX}${EXTRA_SUFFIX}${cf_depsuf}"
+ 	fi
+ 
+-			cf_libname=$cf_dir
++			case $cf_dir in
++			form|menu|panel)
++				cf_libname=gnu$cf_dir
++				;;
++			*)
++				cf_libname=$cf_dir
++				;;
++			esac
++
+ 			test "$cf_dir" = c++ && cf_libname=ncurses++
+ 			if test $cf_item = shared ; then
+ 				if test -n "${LIB_SUFFIX}"

@@ -1,0 +1,4 @@
+Symmetrica is a library for combinatorics. It has support for the
+representation theory of the symmetric group and related groups, combinatorics
+of tableaux, symmetric functions and polynomials, Schubert polynomials,
+and the representation theory of Hecke algebras of type A_n.

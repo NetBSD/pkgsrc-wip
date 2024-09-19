@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/07/07 19:26:40 thomasklausner Exp $
+
+RMD160 (muscletool-2.1.0.tar.gz) = 3563d4b9ecdc5b414530a9ee44a2339a380708f2
+Size (muscletool-2.1.0.tar.gz) = 171592 bytes
+SHA1 (patch-aa) = f64104654fcd0aad851c5890c3b9e3e7a5e03bf2

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/10/31 20:41:22 shattered Exp $
+
+http://www.mail-archive.com/freebsd-stable@freebsd.org/msg96708.html
+
+--- security.c.orig	2006-03-26 14:59:24.000000000 +0000
++++ security.c
+@@ -333,7 +333,7 @@ int clearEnvironment(void)
+ #ifdef HAVE_ENVIRON
+     {
+       extern char **environ;
+-      environ = NULL;
++      environ = calloc(1, sizeof(*environ));
+     }
+ #endif
+ #endif

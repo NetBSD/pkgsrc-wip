@@ -1,0 +1,38 @@
+$NetBSD: patch-bl,v 1.2 2006/01/24 21:41:09 mreriksson Exp $
+
+--- nnpfs/bsd/nnpfs_vfsops-netbsd.c.orig	2005-10-28 16:33:39.000000000 +0200
++++ nnpfs/bsd/nnpfs_vfsops-netbsd.c
+@@ -151,7 +151,7 @@ nnpfs_mount_netbsd(struct mount *mp,
+ 		 const char *user_path,
+ 		 void *user_data,
+ 		 struct nameidata *ndp,
+-		 struct proc *p)
++		 d_thread_t *p)
+ {
+     int error;
+ 
+@@ -186,9 +186,14 @@ nnpfs_vfsops = {
+ #ifdef HAVE_STRUCT_VFSOPS_VFS_DONE
+     nnpfs_done,
+ #endif
++#if !defined(__NetBSD__) || __NetBSD_Version__ < 399001400 /* 3.99.14 */
++/* XXX Autoconf should detect this instead! */
+     NULL,			/* sysctl */
++#endif
+     NULL,			/* mountroot */
+-#ifdef HAVE_STRUCT_VFSOPS_VFS_CHECKEXP
++#if defined(HAVE_STRUCT_VFSOPS_VFS_CHECKEXP) &&\
++!(defined(__NetBSD__) && __NetBSD_Version__ >= 399001400) /* 3.99.14 */
++/* XXX Autoconf should detect this instead! */
+     nnpfs_checkexp,		/* checkexp */
+ #endif
+ #ifdef HAVE_STRUCT_VFSOPS_VFS_SNAPSHOT
+@@ -198,7 +203,7 @@ nnpfs_vfsops = {
+     vfs_stdextattrctl,
+ #endif
+ #ifdef HAVE_STRUCT_VFSOPS_VFS_OPV_DESCS
+-    nnpfs_vnodeopv_descs
++    (void *)nnpfs_vnodeopv_descs
+ #endif
+ };
+ 

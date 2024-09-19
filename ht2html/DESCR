@@ -1,0 +1,4 @@
+ht2html is a simple web page templating system that defines a format and
+provides a set of Python scripts for creating a simple, but consistent web
+site. All pages include a left corner logo, a site wide site links top bar,
+and a directory-specific side

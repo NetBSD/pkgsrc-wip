@@ -1,0 +1,7 @@
+fix-yahoo-finance offers a temporary fix to the problem by scraping
+the data from Yahoo! finance using and return a Pandas DataFrame/Panel
+in the same format as pandas_datareader's get_data_yahoo().
+
+By basically "hijacking" pandas_datareader.data.get_data_yahoo()
+method, fix-yahoo-finance's implantation is easy and only requires to
+import fix_yahoo_finance into your code.

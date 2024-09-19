@@ -1,0 +1,5 @@
+The OpenCA Project is a collaborative effort to develop a robust, full-featured
+and Open Source out-of-the-box Certification Authority implementing the most
+used protocols with full-strength cryptography world-wide. OpenCA is based on
+many Open-Source Projects. Among the supported software is OpenLDAP, OpenSSL,
+Apache Project, Apache mod_ssl.

@@ -1,0 +1,3 @@
+This package was written to assist you at finding a set of packages,
+which satisfy your needs. At the moment it doesn't have a standalone
+executable, but you can do the queries from your Haskell code.

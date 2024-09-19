@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2012/07/05 03:22:04 othyro Exp $
+
+dotproject was NOT installed.  You'll need manual configurations to actually
+activate it.
+
+Setting up: (for impatients)
+
+	Setup and configure the mysql server 	(see recommented patches)
+
+	Setup and configure apache              (see recommented patches)
+
+	Setup and configure php                 (see recommented patches)
+
+	create a dotproject directory in the apache web root by extracting dotproject.
+
+	configure dotproject.
+
+===========================================================================

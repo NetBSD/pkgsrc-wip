@@ -1,0 +1,3 @@
+Brian is a simulator for spiking neural networks available on almost all
+platforms. The motivation for this project is that a simulator should not only
+save the time of processors, but also the time of scientists

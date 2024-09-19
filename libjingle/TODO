@@ -1,0 +1,3 @@
+mwilhelmy:
+- fix OS X sysctls in patch-ae
+- see TODO in files/Makefile (see talk/libjingle.scons)

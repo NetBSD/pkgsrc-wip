@@ -1,0 +1,14 @@
+* needs QtWebEngine support in py-qt5, otherwise fails with
+
+Traceback (most recent call last):
+  File "/usr/pkg/bin/anki", line 6, in <module>
+    import aqt
+  File "/usr/pkg/share/anki/aqt/__init__.py", line 14, in <module>
+    from aqt.qt import *
+  File "/usr/pkg/share/anki/aqt/qt.py", line 17, in <module>
+    from PyQt5.QtWebEngineWidgets import QWebEnginePage
+ModuleNotFoundError: No module named 'PyQt5.QtWebEngineWidgets'
+
+* Does not like qt 5.10
+
+Exception: Qt 5.10 is known to be buggy.

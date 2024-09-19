@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/18 12:59:55 poppnk Exp $
+bin/bottom
+bin/dateget
+bin/dateserve
+bin/extract
+bin/firepipe
+bin/firerecv
+bin/firesend
+bin/swapon

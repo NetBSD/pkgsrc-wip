@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.5 2012/11/15 17:51:20 othyro Exp $
+bin/gxmms2
+lib/gkrellm2/plugins/gkrellxmms2.so
+share/doc/gxmms2/README
+share/doc/gxmms2/gkrellxmms2/README
+share/gxmms2/gxmms2_mini.xpm

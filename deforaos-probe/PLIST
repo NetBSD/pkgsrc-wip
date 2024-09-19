@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/04/15 15:54:57 khorben Exp $
+bin/DaMon
+bin/Probe
+etc/AppInterface/Probe.interface

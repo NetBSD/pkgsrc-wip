@@ -1,0 +1,21 @@
+The purpose of the FFTJet package is reconstruction of particle jets in
+High Energy Physics collider data. FFTJet considers the energy flow in the event
+at multiple angular  resolution scales, locates jet-like
+structures using powerful Fourier-domain filtering techniques, and establishes
+hierarchical relationships  between clusters found at different scales. With
+FFTJet, you will be able to:
+
+ * Cleanly separate the tasks of defining "what is a jet", locating jets,
+    selecting the event topology, and reconstructing jet energies
+ * Utilize global, efficient, collinear and infrared safe jet algorithms
+ * Optimally cluster jets in the presence of magnetic field
+ * Take into account and suppress the detector noise
+ * Understand, analyze, and visualize jet substructure
+ * Apply unusual energy flow analysis techniques: fuzzy clustering and
+    multiscale blob detection
+ * Run parts of your jet reconstruction code on GPUs
+ * And much more...
+
+The FFTJet system is designed to be highly extensible, so that you can easily
+explore your own ideas about pattern recognition and jet energy reconstruction
+in HEP events.

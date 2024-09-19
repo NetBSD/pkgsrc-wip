@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
+
+RMD160 (xspread3.1.1c.tar.gz) = 10783b103fba28ab668c40610e95fe46089a73e0
+Size (xspread3.1.1c.tar.gz) = 759445 bytes
+SHA1 (patch-aa) = 580e3ae93fab4880ce700e859c811e98b311d8da
+SHA1 (patch-ab) = 7cfdfedde7ac2ecb37fc084425893c780f3d304c

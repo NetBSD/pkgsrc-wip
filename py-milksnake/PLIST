@@ -1,0 +1,20 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/milksnake/__init__.py
+${PYSITELIB}/milksnake/__init__.pyc
+${PYSITELIB}/milksnake/__init__.pyo
+${PYSITELIB}/milksnake/_compat.py
+${PYSITELIB}/milksnake/_compat.pyc
+${PYSITELIB}/milksnake/_compat.pyo
+${PYSITELIB}/milksnake/ffi.py
+${PYSITELIB}/milksnake/ffi.pyc
+${PYSITELIB}/milksnake/ffi.pyo
+${PYSITELIB}/milksnake/setuptools_ext.py
+${PYSITELIB}/milksnake/setuptools_ext.pyc
+${PYSITELIB}/milksnake/setuptools_ext.pyo

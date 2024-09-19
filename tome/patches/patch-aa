@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/17 00:14:51 phonohawk Exp $
+
+--- src/makefile.std.orig	2008-01-29 20:15:14.000000000 +0900
++++ src/makefile.std
+@@ -30,9 +30,9 @@ TOMENAME = tome3
+ # tome.cfg needs editing to point to the correct location
+ 
+ # Where lib/ and tome.cfg files goes
+-LIBDIR = $(PREFIX)/games/$(TOMENAME)/
++#LIBDIR = $(PREFIX)/games/$(TOMENAME)/
+ # Sysadmins of commercial Unix and/or BSD might prefer this
+-#LIBDIR = $(PREFIX)/share/$(TOMENAME)/
++LIBDIR = $(PREFIX)/share/$(TOMENAME)/
+ # Another example: single user installation using absolute path
+ #LIBDIR = /home/myloginname/lib/$(TOMENAME)/
+ # If none are defined then tome will look for tome.cfg in the same

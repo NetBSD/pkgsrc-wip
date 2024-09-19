@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/02 21:05:56 jihbed Exp $
+bin/getdp
+man/man1/getdp.1
+share/doc/getdp/CREDITS.txt
+share/doc/getdp/LICENSE.txt
+share/doc/getdp/README.txt
+share/doc/getdp/demos/Magnetostatics.pro
+share/doc/getdp/demos/magnet.geo
+share/doc/getdp/demos/magnet.msh
+share/doc/getdp/demos/magnet.pro
+share/doc/getdp/demos/magnet_data.pro

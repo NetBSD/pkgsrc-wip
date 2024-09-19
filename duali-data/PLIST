@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/25 11:44:18 jihbed Exp $
+share/doc/duali-data/README
+share/duali-data/prefixes
+share/duali-data/stems
+share/duali-data/suffixes
+share/duali-data/tableab
+share/duali-data/tableac
+share/duali-data/tablebc

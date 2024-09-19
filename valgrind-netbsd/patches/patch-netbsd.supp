@@ -1,0 +1,6 @@
+$NetBSD$
+
+--- netbsd.supp.orig	2019-03-26 11:05:40.634402025 +0000
++++ netbsd.supp
+@@ -0,0 +1 @@
++# Suppressions for NetBSD

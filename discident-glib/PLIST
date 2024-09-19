@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 23:24:04 jihbed Exp $
+include/discident-glib/discident-glib.h
+lib/libdiscident-glib.la
+lib/pkgconfig/discident-glib.pc
+share/gtk-doc/html/discident-glib/api-index-full.html
+share/gtk-doc/html/discident-glib/ch01.html
+share/gtk-doc/html/discident-glib/discident-glib-discident-glib.html
+share/gtk-doc/html/discident-glib/discident-glib.devhelp
+share/gtk-doc/html/discident-glib/discident-glib.devhelp2
+share/gtk-doc/html/discident-glib/home.png
+share/gtk-doc/html/discident-glib/index.html
+share/gtk-doc/html/discident-glib/index.sgml
+share/gtk-doc/html/discident-glib/left.png
+share/gtk-doc/html/discident-glib/right.png
+share/gtk-doc/html/discident-glib/style.css
+share/gtk-doc/html/discident-glib/up.png

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:09 thomasklausner Exp $
+${PYSITELIB}/_openal.so
+${PYSITELIB}/pyopenal/__init__.pyc
+${PYSITELIB}/pyopenal/__init__.pyo

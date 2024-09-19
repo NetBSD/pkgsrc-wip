@@ -1,0 +1,13 @@
+$NetBSD: patch-conf_acl.auth.php.dist,v 1.1 2012/12/21 04:25:34 triaxx Exp $
+
+More secure default ACL configuration.
+
+--- conf/acl.auth.php.dist.orig	2012-10-13 11:25:31.000000000 +0000
++++ conf/acl.auth.php.dist
+@@ -18,4 +18,5 @@
+ # upload 8
+ # delete 16
+ 
+-*               @ALL        8
++*               @ALL          0
++*               @user         8

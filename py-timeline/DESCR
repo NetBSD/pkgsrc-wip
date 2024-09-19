@@ -1,0 +1,3 @@
+The timeline package provides a way to model a series of actions
+For instance, during a web request the appserver might call out
+to a number of backend

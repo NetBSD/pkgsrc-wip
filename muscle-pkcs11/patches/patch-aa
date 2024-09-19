@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/25 21:28:57 udontknow Exp $
+
+--- include/cryptoki.h.orig	2003-08-29 11:18:04.000000000 -0300
++++ include/cryptoki.h
+@@ -35,12 +35,8 @@
+ #include <pthread.h>
+ #endif
+ 
+-#ifndef __APPLE__
+-#include <musclecard.h>
+-#else
+ #include <PCSC/wintypes.h>
+ #include <PCSC/musclecard.h>
+-#endif
+ 
+ #include <sys/types.h>
+ 

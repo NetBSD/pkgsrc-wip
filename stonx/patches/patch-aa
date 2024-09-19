@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/01/07 01:48:30 thomasklausner Exp $
+
+--- Makefile.in.orig	2004-08-15 16:35:04.000000000 +0200
++++ Makefile.in
+@@ -40,7 +40,7 @@ INC=@X_CFLAGS@
+ LIBS=@libs@
+ 
+ # X11 library path - I'm sure not everything here is X related?
+-XLIBS=@X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@ @xtra@
++XLIBS=-Wl,-R${X11BASE}/lib @X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@ @xtra@
+ SFLAGS=
+ 
+ # Monitor support, call configure with --enable-monitor

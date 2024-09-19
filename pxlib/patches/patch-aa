@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.4 2013/03/03 17:27:54 othyro Exp $
+
+Include stdbool.h if OPSYS != NetBSD.
+
+--- include/paradox.h.in.orig	2007-10-01 07:41:51.000000000 +0000
++++ include/paradox.h.in
+@@ -5,6 +5,9 @@
+ #define PX_USE_ICONV @PX_HAVE_ICONV@
+ 
+ #include <stdio.h>
++#if !defined(__NetBSD__)
++#include <stdbool.h>
++#endif
+ #if PX_USE_RECODE
+ #include <recode.h>
+ #else

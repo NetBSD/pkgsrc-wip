@@ -1,0 +1,3 @@
+Sentinels are objects with special meanings. They can be thought of as
+singletons, but they service the need of having ‘special’ values in
+your code, that have special meanings (see example below).

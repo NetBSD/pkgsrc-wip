@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/05 11:17:55 jihbed Exp $
+bin/compile_sector_decomposition
+bin/sector_decomposition-config
+include/sector_decomposition/basic_sector_decomposition.h
+include/sector_decomposition/code_generation.h
+include/sector_decomposition/constants.h
+include/sector_decomposition/integrand.h
+include/sector_decomposition/misc.h
+include/sector_decomposition/monte_carlo.h
+include/sector_decomposition/multi_index.h
+include/sector_decomposition/polyhedra.h
+include/sector_decomposition/sector_decomposition.h
+lib/libsector_decomposition.la

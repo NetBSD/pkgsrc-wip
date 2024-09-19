@@ -1,0 +1,5 @@
+UniversalCodeGrep (ucg) is an extremely fast grep-like tool
+specialized for searching large bodies of source code. It is intended
+to be largely command-line compatible with Ack, to some extent with
+ag, and where appropriate with grep. Search patterns are specified
+as PCRE regexes.

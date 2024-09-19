@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/07/17 18:11:36 kheinz Exp $
+
+--- bin/mj_queuerun.orig	2004-10-03 22:01:30.000000000 +0200
++++ bin/mj_queuerun
+@@ -6,6 +6,8 @@ BEGIN {
+   $::LOCKDIR= "blah";
+   $::UID    = "baduid";
+   $::GID    = "badgid";
++$::UID    =getpwnam($::UID);
++$::GID    =getgrnam($::GID);
+   $::UMASK  = "007";
+   $::TIMEOUT= 30;
+ 

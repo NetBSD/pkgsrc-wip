@@ -1,0 +1,12 @@
+$NetBSD: patch-bushu-util_where,v 1.1 2013/01/22 13:54:22 makoto Exp $
+
+Interpreter fix
+
+--- bushu-util/where.orig	2011-04-14 13:36:56.000000000 +0000
++++ bushu-util/where
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!@PERL@
+ 
+ require 5.000;
+ 

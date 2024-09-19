@@ -1,0 +1,12 @@
+$NetBSD$
+
+Use i386_LIBS to link libwine against libi386
+
+--- libs/wine/Makefile.in.orig	2019-08-02 19:24:39.000000000 +0000
++++ libs/wine/Makefile.in
+@@ -1,4 +1,4 @@
+-EXTRALIBS = $(DL_LIBS) $(COREFOUNDATION_LIBS) $(CORESERVICES_LIBS)
++EXTRALIBS = $(DL_LIBS) $(COREFOUNDATION_LIBS) $(CORESERVICES_LIBS) $(i386_LIBS)
+ 
+ C_SRCS = \
+ 	config.c \

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/10 21:19:44 jihbed Exp $
+
+RMD160 (mpi4py-3.0.3.tar.gz) = 50619974c2b5b566554d891f6172154b9f60edd5
+SHA512 (mpi4py-3.0.3.tar.gz) = 041768f753c8188b2560fe92711861780f0d77eda3281433520c98bb1e9b4da6a89c364f2d1c4623868ffbbcfde34ef556198b1bef6fc1c4a9c19cd5e71b546c
+Size (mpi4py-3.0.3.tar.gz) = 1429389 bytes

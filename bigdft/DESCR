@@ -1,0 +1,7 @@
+BigDFT is a DFT massively parallel electronic structure code using a wavelet
+basis set. It was developed in  an European program. Wavelets form a real space
+basis set distributed on an adaptive mesh (two levels of resolution in our
+implementation). GTH or HGH pseudopotentials are used to remove the
+core electrons.  Thanks to our Poisson solver based on a Green function
+formalism, periodic systems, surfaces and isolated
+systems can be simulated with the proper boundary conditions.

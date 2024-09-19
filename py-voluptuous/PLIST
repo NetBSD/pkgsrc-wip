@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/voluptuous/__init__.py
+${PYSITELIB}/voluptuous/__init__.pyc
+${PYSITELIB}/voluptuous/__init__.pyo
+${PYSITELIB}/voluptuous/error.py
+${PYSITELIB}/voluptuous/error.pyc
+${PYSITELIB}/voluptuous/error.pyo
+${PYSITELIB}/voluptuous/humanize.py
+${PYSITELIB}/voluptuous/humanize.pyc
+${PYSITELIB}/voluptuous/humanize.pyo
+${PYSITELIB}/voluptuous/schema_builder.py
+${PYSITELIB}/voluptuous/schema_builder.pyc
+${PYSITELIB}/voluptuous/schema_builder.pyo
+${PYSITELIB}/voluptuous/util.py
+${PYSITELIB}/voluptuous/util.pyc
+${PYSITELIB}/voluptuous/util.pyo
+${PYSITELIB}/voluptuous/validators.py
+${PYSITELIB}/voluptuous/validators.pyc
+${PYSITELIB}/voluptuous/validators.pyo

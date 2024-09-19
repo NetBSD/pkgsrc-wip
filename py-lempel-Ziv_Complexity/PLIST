@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${PYSITELIB}/lempel_ziv_complexity.pyo
+${PYSITELIB}/lempel_ziv_complexity.pyc
+${PYSITELIB}/lempel_ziv_complexity.py

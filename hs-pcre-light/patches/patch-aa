@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2009/01/22 06:33:43 phonohawk Exp $
+
+--- pcre-light.cabal.orig	2008-02-03 11:21:26.000000000 +0900
++++ pcre-light.cabal
+@@ -41,4 +41,4 @@ library
+         build-depends: base < 3
+ 
+     extra-libraries: pcre
+-
++    extra-lib-dirs: @PREFIX@/lib

@@ -1,0 +1,7 @@
+This plugin uses the blog change interface in FullBlogPlugin
+to send out email notifications for:
+
+new blog posts
+updated blog posts
+comment added
+deletion of blog posts

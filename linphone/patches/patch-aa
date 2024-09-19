@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.10 2012/04/13 20:02:17 gschwarz Exp $
+
+--- console/commands.c.orig	2012-04-06 20:23:42.000000000 +0200
++++ console/commands.c	2012-04-06 20:23:57.000000000 +0200
+@@ -381,19 +381,19 @@
+ 	LPC_COMMAND *cmd;
+ 
+ 	/* Isolate first word and args */
+-	while(*ptr && !isspace(*ptr)) ++ptr;
++	while(*ptr && !isspace((unsigned char)*ptr)) ++ptr;
+ 	if (*ptr)
+ 	{
+ 		*ptr='\0';
+  		/* set args to first nonblank */
+ 		args=ptr+1;
+-		while(*args && isspace(*args)) ++args;
++		while(*args && isspace((unsigned char)*args)) ++args;
+ 	}
+ 
+ 	/* Handle DTMF */
+-	if ( isdigit(*cl) || *cl == '#' || *cl == '*' )
++	if ( isdigit((unsigned char)*cl) || *cl == '#' || *cl == '*' )
+ 	{
+-		while ( isdigit(*cl) || *cl == '#' || *cl == '*' )
++		while ( isdigit((unsigned char)*cl) || *cl == '#' || *cl == '*' )
+ 		{
+ 			linphone_core_send_dtmf(lc, *cl);
+ 			linphone_core_play_dtmf (lc,*cl,100);
+@@ -1036,12 +1036,12 @@
+ 	if ( ! arg1 ) return 0;
+ 
+ 	/* Isolate first and second arg */
+-	while(*ptr && !isspace(*ptr)) ++ptr;
++	while(*ptr && !isspace((unsigned char)*ptr)) ++ptr;
+ 	if ( *ptr )
+ 	{
+ 		*ptr='\0';
+ 		arg2=ptr+1;
+-		while(*arg2 && isspace(*arg2)) ++arg2;
++		while(*arg2 && isspace((unsigned char)*arg2)) ++arg2;
+ 	}
+ 
+ 	if (strcmp(arg1,"add")==0)

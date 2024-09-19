@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (Prodigal-2.6.3.tar.gz) = 9c0c9a4c14c5d0f748ce4d9e8700e82d7de6eea7
+SHA512 (Prodigal-2.6.3.tar.gz) = 6d6ec310143c50c0d65dbdbd26d6d271839bb23b1da376ecef20059731a9e643d631613eccaac2eb548b295264b9fe58c21b083f1511a6554912cb7d5351d541
+Size (Prodigal-2.6.3.tar.gz) = 610934 bytes
+SHA1 (patch-Makefile) = 566be8f2b3e2f9895271e6369250e20b1c117801

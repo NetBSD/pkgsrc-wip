@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+Preprocessor magic for NetBSD.
+
+--- src/horometer.h.orig	2010-02-02 16:07:39.000000000 +0000
++++ src/horometer.h
+@@ -6,7 +6,8 @@
+ #include <stdio.h>
+ #include <time.h> // clock, clock_gettime
+ #if defined(sun) || defined(linux) || defined(__HOS_AIX__) || \
+-    defined(__CYGWIN__) || defined(__APPLE__) || defined(__FreeBSD__)
++    defined(__CYGWIN__) || defined(__APPLE__) || defined(__FreeBSD__) || \
++    defined(__NetBSD__)
+ #   include <limits.h> // CLK_TCK
+ #   include <sys/time.h> // gettimeofday, timeval
+ #   include <sys/times.h> // times, struct tms
+@@ -130,7 +131,7 @@ inline double ibis::horometer::readWallC
+     }
+ #elif defined(HAVE_GETTIMEOFDAY) || defined(unix) || defined(CRAY) || \
+     defined(linux) || defined(__HOS_AIX__) || defined(__APPLE__) || \
+-    defined(__FreeBSD__)
++    defined(__FreeBSD__) || defined(__NetBSD__)
+     struct timeval cpt;
+     gettimeofday(&cpt, 0);
+     return static_cast<double>(cpt.tv_sec) + (1e-6 * cpt.tv_usec);
+@@ -161,7 +162,8 @@ inline double ibis::horometer::readWallC
+ // read the value of the CPU clock time
+ inline double ibis::horometer::readCPUClock() {
+ #if defined(sun) || defined(sgi) || defined(linux) || defined(__APPLE__) \
+-    || defined(__HOS_AIX__) || defined(__CYGWIN__) || defined(__FreeBSD__)
++    || defined(__HOS_AIX__) || defined(__CYGWIN__) || defined(__FreeBSD__) \
++    || defined(__NetBSD__)
+     // on sun and linux, we can access getrusage to get more accurate time
+     double time=0;
+     struct rusage ruse;

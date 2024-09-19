@@ -1,0 +1,6 @@
+The Object Relational Membrane is a Python package that provides the
+functionality of an object relational layer like EJB or other persistence
+storage systems. It is a thin compatibility layer between SQL table layouts
+and Object Oriented Python. While providing a good deal of functionality, it
+tries to be as small and simple as possible. It currently works with
+PostgreSQL, Firebird and MySQL.

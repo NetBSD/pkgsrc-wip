@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/04/02 03:51:56 netcap Exp $
+
+To use it you have to have a Last.FM account.
+mkdir -p ~/.shell-fm/cache
+cp ${EGDIR}/shell-fm.rc ~/.shell-fm
+and enter your login information.
+===========================================================================

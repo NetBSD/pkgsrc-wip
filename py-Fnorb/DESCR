@@ -1,0 +1,10 @@
+Fnorb is a CORBA 2.0 ORB for Python first developed by DSTC. Fnorb's claim
+to fame is its size and pure Python implementation. These features allow it
+to be used whever Python may used (for example, within Jython) unlike other
+ORBs that rely on binary runtimes.
+
+Unfortunately Fnorb development fell behind other ORBs as research
+priorities changed at DSTC. Now that it has been open sourced our project
+aims to take the formerly closed Fnorb source-base and turn it into a pure
+Python ORB with up-to-date Python mapping and CORBA compliance (including
+POA support and the latest data-types).

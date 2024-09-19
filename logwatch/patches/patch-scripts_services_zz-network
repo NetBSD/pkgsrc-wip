@@ -1,0 +1,127 @@
+$NetBSD: patch-scripts_services_zz-network,v 1.1 2013/07/01 11:37:52 noud4 Exp $
+
+Get ip.forwarding using sysctl.
+Append netstat -a option.
+Use NetBSD ifconfig.
+Parse NetBSD ifconfig output.
+
+--- scripts/services/zz-network.orig	2011-02-20 22:18:01.000000000 +0000
++++ scripts/services/zz-network
+@@ -51,6 +51,7 @@ my $Detail = $ENV{'LOGWATCH_DETAIL_LEVEL
+ 
+ 
+ my $pathto_chkconfig = $ENV{'pathto_chkconfig'} || '/sbin/chkconfig';
++my $pathto_whereis = $ENV{'pathto_whereis'} || '/usr/bin/whereis';
+ my $pathto_sysctl_conf = $ENV{'pathto_sysctl_conf'} || '/etc/sysctl.conf';
+ my $pathto_vtysh = $ENV{'pathto_vtysh'} || '/usr/bin/vtysh';
+ my $pathto_routeadm = $ENV{'pathto_routeadm'} || '/usr/sbin/routeadm';
+@@ -87,6 +88,8 @@ sub chkcfg {
+    my ($service) = $_[0];
+    if (($OSname eq "Linux") && ( -f $pathto_chkconfig)) {
+       system("$pathto_chkconfig --list $service");
++   } elsif (($OSname eq "NetBSD") && ( -f $pathto_whereis)) {
++      system("$pathto_whereis $service");
+    } else {
+       show_which($service);
+    }
+@@ -171,6 +174,28 @@ sub routingState ()
+ 	 }
+ 	}
+ 
++	elsif ($OSname eq "NetBSD") {
++
++                open(FILE1, "/sbin/sysctl net.inet.ip.forwarding |")  || die "can't open $!";
++                while (<FILE1>)
++                {
++                 if (/net.inet.ip.forwarding = (\d+)/) {
++		     print "IP fowarding is $1\n";
++		 }
++                }
++                close(FILE1) || die "can't close $!";
++
++                open(FILE1, "/sbin/sysctl net.inet6.ip6.forwarding |")  || die "can't open $!";
++                while (<FILE1>)
++                {
++                 if (/net.inet6.ip6.forwarding = (\d+)/) {
++		     print "IPv6 fowarding is $1\n";
++		 }
++                }
++                close(FILE1) || die "can't close $!";
++
++	}
++
+         else
+         {
+ 	 print "Unable to find routing information in your system.\n";
+@@ -280,7 +305,7 @@ sub NetworkStats()
+ 	}
+ 	else {
+ 		my $netstat_cmd = "netstat -i";
+-		if ($OSname eq "SunOS") {
++		if (($OSname eq "SunOS") || ($OSname eq "NetBSD")) {
+ 		    $netstat_cmd .= " -a";
+ 		}
+                 open(NET, "$netstat_cmd |")  || die "can't run netstat: $!";
+@@ -304,6 +329,17 @@ sub NetworkStats()
+ 
+ sub IfconfigIface {
+ 
++        if ($OSname eq "NetBSD") {
++        my ($iface) = $_[0];
++                open(NET, "/sbin/ifconfig $iface |")  || die "can't run /sbin/ifconfig: $!";
++                while (<NET>)
++                 {
++                   print $_;
++                 }
++                close(NET)                    || die "can't close /sbin/ifconfig: $!";
++        }
++        else
++        {
+         my ($iface) = $_[0];
+                 open(NET, "ifconfig $iface |")  || die "can't run ifconfig: $!";
+                 while (<NET>)
+@@ -311,6 +347,7 @@ sub IfconfigIface {
+                    print $_;
+                  }
+                 close(NET)                    || die "can't close ifconfig: $!";
++	}
+ 	print "\n";
+ }
+ 
+@@ -439,6 +476,36 @@ sub InterfacesCheck
+ 	}
+ 
+         }
++        elsif ($OSname eq "NetBSD") {
++
++	# Run through twice; a single interface plumbed with both IPv4 and IPv6
++	# can be listed separately, but shouldn't count as two interfaces
++	foreach my $ip (qw( "inet" "inet6" )) {
++	    open(NET, "/sbin/ifconfig -a $ip|")  || die "can't run '/sbin/ifconfig -a $ip': $!";
++	    while (<NET>)
++	     {
++	       if ($_ =~ /^(\w+\d+(?::\d+)?): flags=\d+<[^>]+> mtu (\d+)/) {
++	       		($if_name, $mtu) = ($1, $2);
++			if (! grep { $_ eq $if_name } (@ethernet_iface_list, @other_iface_list)) {
++			    # Not seen before; process it
++			    $total_iface++;
++			    if ($mtu == 1500) {
++			    	# Guess that it's ethernet
++				push @ethernet_iface_list, $if_name;
++				push @short_ethernet_iface_list, $if_name;
++				$total_ethernet_iface++;
++			    } else {
++				push @other_iface_list, $if_name;
++				push @short_other_iface_list, $if_name;
++				$total_other_iface++;
++			    }
++			}
++		}
++	      }
++	    close(NET)                    || die "can't use '/sbin/ifconfig -a $ip': $!";
++	}
++
++        }
+         else
+         {
+ 

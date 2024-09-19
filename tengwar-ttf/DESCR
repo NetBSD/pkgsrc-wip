@@ -1,0 +1,6 @@
+The Free Tengwar Font Project aims at developing a family of general purpose
+fonts that cover J. R. R. Tolkien's Tengwar script and that are compatible with
+the Unicode standard. Additional aims are tools and documentation for the use of
+such fonts. Compatibility with Unicode means that these fonts' Tengwar glyphs
+will not be mapped over any other Unicode character. Instead, they are mapped on
+the Personal Use Area of Unicode.

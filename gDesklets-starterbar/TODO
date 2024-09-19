@@ -1,0 +1,1 @@
+- Requires uuidgen to work properly.  See PR kern/23470 for uuid support.

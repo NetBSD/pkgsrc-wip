@@ -1,0 +1,16 @@
+$NetBSD: patch-as,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- summary.h.orig	2007-09-01 10:49:36.000000000 +0200
++++ summary.h	2007-09-01 10:50:46.000000000 +0200
+@@ -15,7 +15,11 @@
+ #ifndef JFFS2_SUMMARY_H
+ #define JFFS2_SUMMARY_H
+ 
++#if __NetBSD__
++#include <sys/uio.h>
++#else
+ #include <linux/uio.h>
++#endif
+ #include <linux/jffs2.h>
+ 
+ #define DIRTY_SPACE(x) do { typeof(x) _x = (x); \

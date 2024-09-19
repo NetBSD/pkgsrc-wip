@@ -1,0 +1,3 @@
+Simple RDF to Python mapper built on top of rdflib. Manipulate RDF data stored
+remotely as Python data structures. Ontopy includes a SPARQL query builder for
+accessing sets of resources behind SPARQL endpoints

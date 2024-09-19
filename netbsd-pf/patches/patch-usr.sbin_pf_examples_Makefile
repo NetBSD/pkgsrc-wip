@@ -1,0 +1,17 @@
+$NetBSD$
+
+Install to PREFIX.
+DESTDIR support.
+
+--- usr.sbin/pf/examples/Makefile.orig	2005-06-27 20:32:40.000000000 +0000
++++ usr.sbin/pf/examples/Makefile
+@@ -2,7 +2,8 @@
+ 
+ .include <bsd.own.mk>
+ 
+-FILESDIR=	/usr/share/examples/pf
++#FILESDIR=	/usr/share/examples/pf
++FILESDIR=	${DESTDIR}${PREFIX}/share/examples/pf
+ FILES=		ackpri faq-example1 faq-example2 faq-example3
+ FILES+=		queue1 queue2 queue3 queue4
+ 

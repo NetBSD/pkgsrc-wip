@@ -1,0 +1,13 @@
+@comment $NetBSD$
+include/alkimia/alk_export.h
+include/alkimia/alkcompany.h
+include/alkimia/alkquoteitem.h
+include/alkimia/alkvalue.h
+lib/cmake/LibAlkimia/LibAlkimiaConfig.cmake
+lib/cmake/LibAlkimia/LibAlkimiaConfigVersion.cmake
+lib/cmake/LibAlkimia/LibAlkimiaTargets-relwithdebinfo.cmake
+lib/cmake/LibAlkimia/LibAlkimiaTargets.cmake
+lib/libalkimia.so
+lib/libalkimia.so.5
+lib/libalkimia.so.${PKGVERSION}
+lib/pkgconfig/libalkimia.pc

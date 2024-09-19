@@ -1,0 +1,3 @@
+GraphQL-core 3 is a Python 3.6+ port of GraphQL.js, the JavaScript
+reference implementation for GraphQL, a query language for APIs
+created by Facebook

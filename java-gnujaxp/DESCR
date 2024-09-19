@@ -1,0 +1,7 @@
+GNU JAXP, a part of the GNU Classpath Extensions project
+(hosted at savannah.gnu.org) is a free implementation of
+the standard XML processing APIs for Java:
+
+    * SAX Parser API
+    * DOM Level 2 generic XML data structures
+    * Sun's JAXP v1.1 interfaces

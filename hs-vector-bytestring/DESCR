@@ -1,0 +1,11 @@
+A time and space-efficient implementation of byte vectors using
+vectors of Word8, suitable for high performance use, both in terms of
+large data quantities, or high speed requirements. Byte vectors are
+encoded as strict Word8 arrays of bytes, held in a ForeignPtr, and can
+be passed between C and Haskell with little effort.
+
+Original GHC implementation by Bryan O'Sullivan. Rewritten to use
+Data.Array.Unboxed.UArray by Simon Marlow. Rewritten to support slices
+and use ForeignPtr by David Roundy. Polished and extended by Don
+Stewart. Redefined ByteString as a Vector (from the vector package) of
+Word8s by Bas van Dijk.

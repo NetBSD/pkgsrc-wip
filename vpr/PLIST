@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:24 thomasklausner Exp $
+bin/t-vpack
+bin/vpr
+share/doc/vpr/README_430.txt
+share/doc/vpr/manual_430.pdf
+share/doc/vpr/manual_430.ps
+share/vpr/4lut_sanitized.arch
+share/vpr/4x4lut_sanitized.arch
+share/vpr/e64-4lut.net
+share/vpr/e64-4x4lut.net
+share/vpr/e64.blif
+share/vpr/s1423.blif

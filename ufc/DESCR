@@ -1,0 +1,4 @@
+UFC (Unified Form-assembly Code) is a unified framework for finite element
+assembly. More precisely, it defines a fixed interface for communicating low
+level routines (functions) for evaluating and assembling finite element
+variational forms.

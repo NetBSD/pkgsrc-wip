@@ -1,0 +1,3 @@
+ds2 is a debug server designed to be used with LLDB to perform remote debugging
+of Linux, Android, FreeBSD, Windows and Windows Phone targets. Windows/Windows
+Phone support is still under active development.

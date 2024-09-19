@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libnl1
+
+.if !defined(LIBNL1_BUILDLINK3_MK)
+LIBNL1_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libnl1+=	libnl1>=1.1.4
+BUILDLINK_PKGSRCDIR.libnl1?=	../../wip/libnl1
+.endif
+
+BUILDLINK_TREE+=	-libnl1

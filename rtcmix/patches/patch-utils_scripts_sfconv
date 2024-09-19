@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- utils/scripts/sfconv.orig	2015-10-03 21:09:58.000000000 +0000
++++ utils/scripts/sfconv
+@@ -18,7 +18,7 @@ then
+    exit 1
+ fi
+ 
+-if [ $1 == $2 ]
++if [ $1 = $2 ]
+ then
+    echo "Your input file name is the same as your output file name!"
+    exit 1

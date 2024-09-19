@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+
+--- HGL_SRC/Makefile.orig	2002-02-01 10:40:01.000000000 -0700
++++ HGL_SRC/Makefile
+@@ -3,8 +3,8 @@ CC = cc
+ #FLAGS = -g
+ OPENWINHOME = /usr/openwin
+ MFILE = 
+-INCDIR = -I$(OPENWINHOME)/include
+-LIBDIR = -L$(OPENWINHOME)/lib
++INCDIR = -I$(PREFIX)/include -I$(OPENWINHOME)/include
++LIBDIR = -L$(OPENWINHOME)/lib -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -Wl,-R$(X11BASE)/lib
+ LIBS = -lxview -lolgx -lX11 
+ 
+ libs.o = Alloc.o HGLfuncs.o

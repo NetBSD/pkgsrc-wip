@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.2 2003/08/15 16:51:52 tvierling Exp $
+
+--- libs/pgpcdk/priv/networklib/pgpsockets/common/pgpSockets.c.orig	Fri Aug 15 10:02:42 2003
++++ libs/pgpcdk/priv/networklib/pgpsockets/common/pgpSockets.c
+@@ -39,7 +39,7 @@ ________________________________________
+ # define closesocket(x) close((x))
+ # define ioctlsocket(a,b,c) ioctl((a),(b),(c))
+ typedef int		SOCKET;
+-#if PGP_UNIX_LINUX || PGP_UNIX_HPUX || PGP_UNIX_AIX
++#if PGP_UNIX_LINUX || PGP_UNIX_HPUX || PGP_UNIX_AIX || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+ int gethostname (char * name, size_t namelen);
+ #else
+ int gethostname (char * name, int namelen);

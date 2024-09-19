@@ -1,0 +1,2 @@
+This module implements the CAST5 block cipher using compiled C code for
+increased speed. See RFC 2114.

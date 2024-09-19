@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/18 19:40:50 jihbed Exp $
+${PYSITELIB}/ncpol2sdpa/__init__.py
+${PYSITELIB}/ncpol2sdpa/__init__.pyc
+${PYSITELIB}/ncpol2sdpa/__init__.pyo
+${PYSITELIB}/ncpol2sdpa/nc_utils.py
+${PYSITELIB}/ncpol2sdpa/nc_utils.pyc
+${PYSITELIB}/ncpol2sdpa/nc_utils.pyo
+${PYSITELIB}/ncpol2sdpa/physics_utils.py
+${PYSITELIB}/ncpol2sdpa/physics_utils.pyc
+${PYSITELIB}/ncpol2sdpa/physics_utils.pyo
+${PYSITELIB}/ncpol2sdpa/sdp_relaxation.py
+${PYSITELIB}/ncpol2sdpa/sdp_relaxation.pyc
+${PYSITELIB}/ncpol2sdpa/sdp_relaxation.pyo
+${PYSITELIB}/ncpol2sdpa/sdpa_utils.py
+${PYSITELIB}/ncpol2sdpa/sdpa_utils.pyc
+${PYSITELIB}/ncpol2sdpa/sdpa_utils.pyo

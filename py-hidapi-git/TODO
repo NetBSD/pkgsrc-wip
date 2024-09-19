@@ -1,0 +1,4 @@
+Add libusb option.
+Is cython only a build dependency?
+Add LICENSE-orig.txt to licenses?
+Use SUBST instead of patching setup.py.

@@ -1,0 +1,4 @@
+HTML::Latex converts properly formatted HTML files, filehandles,
+or strings to LaTeX.  It offers several options in processing, such
+as the ignoring of tags, the configuration of the TeX, and downloading
+of URLs.

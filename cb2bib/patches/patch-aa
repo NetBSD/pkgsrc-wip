@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.4 2012/06/14 02:27:41 othyro Exp $
+
+Fixes ${PREFIX} paths.
+
+--- src/src.pro.orig	2006-12-06 20:54:01.000000000 -0500
++++ src/src.pro
+@@ -92,21 +92,21 @@ DEFINES += CB_POLL
+   desktop \
+   target \
+   script
+-  target.path = /usr/bin
++  target.path = xxPREFIXxx/bin
+   script.files += ../c2btools/dl_cb2bib
+-  script.path = /usr/bin
++  script.path = xxPREFIXxx/bin
+   desktop.files += ../cb2bib.desktop \
+   ../dl_cb2bib.desktop
+-  desktop.path = /usr/share/applications
++  desktop.path = xxPREFIXxx/share/applications
+   icons.files += ../src/icons/cb2bib.png
+-  icons.path = /usr/share/pixmaps
++  icons.path = xxPREFIXxx/share/pixmaps
+   cb2bibdata.files += ../AUTHORS \
+   ../COPYRIGHT \
+   ../LICENSE \
+   ../data \
+   ../c2btools \
+   ../testPDFImport
+-  cb2bibdata.path = /usr/share/cb2bib
++  cb2bibdata.path = xxPREFIXxx/share/cb2bib
+ }
+ disable_cbpoll{
+   message(Building without clipboardPoll.)

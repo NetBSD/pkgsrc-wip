@@ -1,0 +1,54 @@
+$NetBSD: patch-BATCH-SORT,v 1.2 2013/12/15 14:21:09 makoto Exp $
+
+New file for the function batch-sort-file,
+for sorting data file in Emacs internal code order
+from shell batch execution.
+
+--- BATCH-SORT.orig	2012-04-12 23:11:23.000000000 +0900
++++ BATCH-SORT	2012-04-12 23:16:56.000000000 +0900
+@@ -0,0 +1,45 @@
++;;;  -*- emacs-lisp -*-
++;;; BATCH-SORT --- 
++
++;; Copyright (C) 2010,2012  Makoto Fujiwara
++
++;; Author: Makoto Fujiwara <makoto@ki.nu>
++;; Keywords: 
++
++;; This program is free software; you can redistribute it and/or modify
++;; it under the terms of the GNU General Public License as published by
++;; the Free Software Foundation, either version 3 of the License, or
++;; (at your option) any later version.
++
++;; This program is distributed in the hope that it will be useful,
++;; but WITHOUT ANY WARRANTY; without even the implied warranty of
++;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++;; GNU General Public License for more details.
++
++;; You should have received a copy of the GNU General Public License
++;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
++
++;;; Commentary:
++
++;;; Code:
++(provide 'batch-sort-file)
++
++(load-file "../lisp/tc-recover.el") ; only for this compile
++(defun batch-sort-file ( )
++  "Just sort file, important thing is: done by emacs internal code order"
++   (interactive)
++   (set 'in_file                            (car command-line-args-left))
++   (set 'out_file                          (cadr command-line-args-left))
++   (set 'in_file_coding_system        (car (cddr command-line-args-left)))
++   (set 'out_file_coding_system  (car (cdr (cddr command-line-args-left))))
++   (message (concat 
++      " *** sorting `" in_file  " " in_file_coding_system 
++      "' to `"         out_file " " out_file_coding_system 
++      "' by internal code order"))
++   (setq coding-system-for-read (coding-system-from-name in_file_coding_system))
++   (insert-file-contents in_file)
++   (sort-lines nil (point-min) (point-max))
++   (setq coding-system-for-write (coding-system-from-name out_file_coding_system))
++   (write-file out_file)
++   )
++;;; BATCH-SORT ends here

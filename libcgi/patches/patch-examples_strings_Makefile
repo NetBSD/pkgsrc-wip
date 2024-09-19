@@ -1,0 +1,28 @@
+$NetBSD: patch-examples_strings_Makefile,v 1.1 2013/03/08 12:36:40 makoto Exp $
+
+Libtoolize
+
+--- examples/strings/Makefile.orig	2003-08-31 09:14:16.000000000 +0900
++++ examples/strings/Makefile	2013-03-08 21:13:45.000000000 +0900
+@@ -1,14 +1,15 @@
+ CC = gcc
+-FLAGS = -Wall
++CFLAGS = -Wall -I @@PREFIX@@/include 
++LDFLAGS = -L@@PREFIX@@/lib -lcgi -Wl,-rpath=@@PREFIX@@/lib
+ CGIBIN = .
+ 
+ all:
+ 
+-	$(CC) $(FLAGS) -lcgi explode.c -o $(CGIBIN)/explode.cgi
+-	$(CC) $(FLAGS) -lcgi htmlentities.c -o $(CGIBIN)/htmlentities.cgi
+-	$(CC) $(FLAGS) -lcgi b64.c -o $(CGIBIN)/b64.cgi
+-	$(CC) $(FLAGS) -lcgi md5.c -o $(CGIBIN)/md5.cgi
+-
++	for i in explode htmlentities b64 md5 ;\
++	 do \
++	  libtool --mode=compile $(CC) $(CFLAGS) -o $$i.o -c $$i.c ; \
++	  libtool --mode=link   $(CC) $(LDFLAGS) $$i.o -o $(CGIBIN)/$$i.cgi ;\
++	  done
+ 	@echo 
+ 	@echo Example compiled. Now copy *.cgi and *.htm files 
+ 	@echo to your webserver cgi-bin directory.

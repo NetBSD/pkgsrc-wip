@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
+lib/bmp/General/libdocklet.la
+share/locale/de/LC_MESSAGES/bmp-docklet.mo
+share/locale/fr/LC_MESSAGES/bmp-docklet.mo
+share/locale/it/LC_MESSAGES/bmp-docklet.mo
+share/locale/ja/LC_MESSAGES/bmp-docklet.mo
+share/locale/pl/LC_MESSAGES/bmp-docklet.mo

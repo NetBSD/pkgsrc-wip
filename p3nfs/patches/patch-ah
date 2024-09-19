@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2005/01/02 21:29:03 mreriksson Exp $
+
+--- nfsd/pty.c.orig	1999-04-08 14:31:37.000000000 +0200
++++ nfsd/pty.c
+@@ -3,7 +3,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ 
+-#if defined(__SVR4) || defined(__GLIBC__)
++#if defined(__SVR4) || defined(__GLIBC__) || defined(__NetBSD__)
+ #include <string.h> /* Solaris 2.4 does not have a strings.h */
+ #endif
+ 
+@@ -21,7 +21,7 @@ init_pty()
+ }
+ #else /* PTY */
+ 
+-#ifdef linux
++#if defined(linux) || defined(__NetBSD__)
+ #include <sys/ioctl.h>	/* Linux ioctl */
+ #endif
+ #include <unistd.h>

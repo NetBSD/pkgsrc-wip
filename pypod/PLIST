@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
+bin/pypod
+${PYSITELIB}/pypod/__init__.py
+${PYSITELIB}/pypod/__init__.pyc
+${PYSITELIB}/pypod/__init__.pyo
+${PYSITELIB}/pypod/audiodb.py
+${PYSITELIB}/pypod/audiodb.pyc
+${PYSITELIB}/pypod/audiodb.pyo
+${PYSITELIB}/pypod/gnupod.py
+${PYSITELIB}/pypod/gnupod.pyc
+${PYSITELIB}/pypod/gnupod.pyo
+${PYSITELIB}/pypod/gtkpod.py
+${PYSITELIB}/pypod/gtkpod.pyc
+${PYSITELIB}/pypod/gtkpod.pyo
+${PYSITELIB}/pypod/iTunesDB.py
+${PYSITELIB}/pypod/iTunesDB.pyc
+${PYSITELIB}/pypod/iTunesDB.pyo
+${PYSITELIB}/pypod/rhythmdb.py
+${PYSITELIB}/pypod/rhythmdb.pyc
+${PYSITELIB}/pypod/rhythmdb.pyo

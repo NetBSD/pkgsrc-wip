@@ -1,0 +1,7 @@
+$NetBSD$
+
+RMD160 (docker-machine-0.16.2.tar.gz) = 583d8ae2a68134a418b09d3df07cea2ac9f9262e
+SHA512 (docker-machine-0.16.2.tar.gz) = 92408c18be23cee040e96412dafeff16415834c3141b0a9c1f82cb9d6b1e0700344a158a44ffac24fed2c244d3fa5c531d9f13ffffaa4be1f4fcbd79104f899e
+Size (docker-machine-0.16.2.tar.gz) = 2823054 bytes
+SHA1 (patch-drivers_virtualbox_virtualbox__netbsd.go) = 5815fa015dc974dfc7787ecf2c1b536bfd9f7528
+SHA1 (patch-libmachine_crashreport_os__netbsd.go) = c2276db586c40045bb873d09124e8309fbe20288

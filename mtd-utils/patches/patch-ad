@@ -1,0 +1,48 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- mkfs.jffs2.c.orig	2006-04-30 22:59:15.000000000 +0200
++++ mkfs.jffs2.c	2007-10-07 13:06:52.000000000 +0200
+@@ -63,7 +63,11 @@
+ #include <ctype.h>
+ #include <time.h>
+ #include <getopt.h>
++#if __NetBSD__
++#include <machine/bswap.h>
++#else
+ #include <byteswap.h>
++#endif
+ #define crc32 __complete_crap
+ #include <zlib.h>
+ #undef crc32
+@@ -101,7 +105,7 @@
+ static int squash_uids = 0;
+ static int squash_perms = 0;
+ static int fake_times = 0;
+-int target_endian = __BYTE_ORDER;
++int target_endian = _BYTE_ORDER;
+ static const char *const app_name = "mkfs.jffs2";
+ static const char *const memory_exhausted = "memory exhausted";
+ 
+@@ -593,7 +597,7 @@
+ 	 * to parse things, try and help the poor fool to fix their
+ 	 * device table with a useful error msg... */
+ 	line = NULL;
+-	while (getline(&line, &length, file) != -1) {
++	while (fgetln(file, &length) != -1) {
+ 		/* First trim off any whitespace */
+ 		int len = strlen(line);
+ 
+@@ -1452,11 +1456,11 @@
+ 			}
+ 
+ 			case 'l':
+-				target_endian = __LITTLE_ENDIAN;
++				target_endian = _LITTLE_ENDIAN;
+ 				break;
+ 
+ 			case 'b':
+-				target_endian = __BIG_ENDIAN;
++				target_endian = _BIG_ENDIAN;
+ 				break;
+ 
+ 			case 'p':

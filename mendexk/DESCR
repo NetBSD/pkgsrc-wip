@@ -1,0 +1,6 @@
+The program mendex is a general purpose hierqarchical index generator;
+it accepts one or more input files (.idx; often produced by a text
+formatter such as LaTeX), sorts the entries, and produces an output
+file which can be formatted. It is almost compatible with makeindex,
+and additional feature for handling readings of kanji words is also
+available.

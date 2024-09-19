@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2007/06/30 22:20:33 cheusov Exp $
+
+RMD160 (ptksdict-1.2.1.tar.gz) = b5282b0af7f1773da2e5676dec53146cb56d323a
+Size (ptksdict-1.2.1.tar.gz) = 286561 bytes
+SHA1 (patch-aa) = 3a00095b1c2827e351103c54db08d1d5d869bbbf

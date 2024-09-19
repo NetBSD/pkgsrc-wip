@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 03:58:57 phonohawk Exp $
+lib/MonadCatchIO-mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/CatchIO.hi
+lib/MonadCatchIO-mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/CatchIO.p_hi
+lib/MonadCatchIO-mtl-${PKGVERSION}/${HASKELL_VERSION}/HSMonadCatchIO-mtl-${PKGVERSION}.o
+lib/MonadCatchIO-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSMonadCatchIO-mtl-${PKGVERSION}.a
+lib/MonadCatchIO-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSMonadCatchIO-mtl-${PKGVERSION}_p.a
+lib/MonadCatchIO-mtl-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/MonadCatchIO-mtl-${PKGVERSION}/LICENSE

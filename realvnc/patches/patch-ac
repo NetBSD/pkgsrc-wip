@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.2 2012/11/12 14:32:14 thomasklausner Exp $
+
+--- unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc.orig	2005-03-10 10:52:58.000000000 -0500
++++ unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc
+@@ -216,8 +216,8 @@ extern "C" {
+   void ddxUseMsg()
+   {
+     ErrorF("\nXvnc %s - built %s\n%s", XVNCVERSION, buildtime, XVNCCOPYRIGHT);
+-    ErrorF("Underlying X server release %d, %s\n\n", VENDOR_RELEASE,
+-           VENDOR_STRING);
++//    ErrorF("Underlying X server release %d, %s\n\n", VENDOR_RELEASE,
++//           VENDOR_STRING);
+     ErrorF("-screen scrn WxHxD     set screen's width, height, depth\n");
+     ErrorF("-pixdepths list-of-int support given pixmap depths\n");
+     ErrorF("-linebias n            adjust thin line pixelization\n");
+@@ -911,8 +911,8 @@ static void vfbClientStateChange(Callbac
+ void InitOutput(ScreenInfo *screenInfo, int argc, char **argv)
+ {
+   ErrorF("\nXvnc %s - built %s\n%s", XVNCVERSION, buildtime, XVNCCOPYRIGHT);
+-  ErrorF("Underlying X server release %d, %s\n\n", VENDOR_RELEASE,
+-         VENDOR_STRING);
++//  ErrorF("Underlying X server release %d, %s\n\n", VENDOR_RELEASE,
++//         VENDOR_STRING);
+   wellKnownSocketsCreated = true;
+ 
+   int i;

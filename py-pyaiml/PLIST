@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 23:30:46 jihbed Exp $
+Lib/site-packages/aiml/CHANGES.txt
+Lib/site-packages/aiml/README.txt
+Lib/site-packages/aiml/SUPPORTED_TAGS.txt
+Lib/site-packages/aiml/TODO.txt
+Lib/site-packages/aiml/self-test.aiml
+${PYSITELIB}/aiml/AimlParser.py
+${PYSITELIB}/aiml/AimlParser.pyc
+${PYSITELIB}/aiml/AimlParser.pyo
+${PYSITELIB}/aiml/DefaultSubs.py
+${PYSITELIB}/aiml/DefaultSubs.pyc
+${PYSITELIB}/aiml/DefaultSubs.pyo
+${PYSITELIB}/aiml/Kernel.py
+${PYSITELIB}/aiml/Kernel.pyc
+${PYSITELIB}/aiml/Kernel.pyo
+${PYSITELIB}/aiml/PatternMgr.py
+${PYSITELIB}/aiml/PatternMgr.pyc
+${PYSITELIB}/aiml/PatternMgr.pyo
+${PYSITELIB}/aiml/Utils.py
+${PYSITELIB}/aiml/Utils.pyc
+${PYSITELIB}/aiml/Utils.pyo
+${PYSITELIB}/aiml/WordSub.py
+${PYSITELIB}/aiml/WordSub.pyc
+${PYSITELIB}/aiml/WordSub.pyo
+${PYSITELIB}/aiml/__init__.py
+${PYSITELIB}/aiml/__init__.pyc
+${PYSITELIB}/aiml/__init__.pyo

@@ -1,0 +1,5 @@
+The SWT (Standard Widget Toolkit) component is designed to provide
+efficient, portable access to the user-interface facilities of the
+operating systems on which it is implemented.
+
+This is the GTK2 version of SWT. (For UNIX boxes)

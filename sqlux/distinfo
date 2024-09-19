@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (sqlux-1.0.5.tar.gz) = 57259f388a3a873475cb1f07d15a2f07e8481e50
+RMD160 (sqlux-1.0.5.tar.gz) = 0ecd01920bcf6a917b9a0c10bc0a210c5a5dcb6a
+SHA512 (sqlux-1.0.5.tar.gz) = ef08ed86163e804e470da19b5f3e45f9fa2a3a4a318e6da3aa0282835c6c877ff89286717805d7c7dbfa8102f5da74d39f1b469b5b2016d75b040e0b7d32c2f6
+Size (sqlux-1.0.5.tar.gz) = 246092 bytes
+SHA1 (patch-CMakeLists.txt) = 0e081bf6c215e83591043d85286319c5af126f0e

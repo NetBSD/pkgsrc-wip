@@ -1,0 +1,16 @@
+$NetBSD$
+
+Explicitly check isastream(3) for SVR4 in libspt.c.
+
+--- config.h.in.orig	2003-12-12 09:09:00.000000000 +0000
++++ config.h.in
+@@ -45,6 +45,9 @@
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
+ 
++/* Define to 1 if you have the `isastream' function. */
++#undef HAVE_ISASTREAM
++
+ /* Define to 1 if you have the <lastlog.h> header file. */
+ #undef HAVE_LASTLOG_H
+ 

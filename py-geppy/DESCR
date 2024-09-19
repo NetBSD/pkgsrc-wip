@@ -1,0 +1,8 @@
+geppy is built on top of the excellent evolutionary computation framework
+DEAP for rapid prototyping and testing of ideas with GEP. DEAP provides
+fundamental support for GP, while lacking support for GEP. geppy tries
+the best to follow the style of DEAP and attempts to maintain compatibility
+with the major infrastructure of DEAP. In other words, to some degree
+geppy may be considered as a plugin of DEAP to specially support GEP.
+If you are familiar with DEAP, then it is easy to grasp geppy. Besides,
+comprehensive documentation is also available

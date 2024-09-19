@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- BIGGUY/Makefile.in.orig	1999-12-16 19:22:41.000000000 +0000
++++ BIGGUY/Makefile.in
+@@ -37,13 +37,13 @@ LIBS=$(BLDROOT)/UTIL/util.@LIB_SUFFIX@
+ 
+ all: $(THISLIB)
+ 
+-everything: all bg_test test
++everything: all bg_test
+ 
+ bg_test: bg_test.$o $(THISLIB) $(LIBS)
+ 	$(CC) $(LDFLAGS) -o $@ bg_test.$o $(THISLIB) $(LIBS) $(LIBFLAGS)
+ 
+ test: bg_test
+-	time bg_test < $(srcdir)/bigguy.tst > bigguy.ts2
++	time ./bg_test < $(srcdir)/bigguy.tst > bigguy.ts2
+ 	cmp $(srcdir)/bigguy.tst bigguy.ts2
+ 
+ clean:

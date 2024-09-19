@@ -1,0 +1,7 @@
+$Id: TODO,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+
+Does it compile on NetBSD-(stable|current) ?
+
+Does it need py-OpenGL? Doesn't seem so, but...
+
+	-- dotz@irc.pl

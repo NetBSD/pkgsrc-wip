@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (rawdog-2.23.tar.gz) = 16f24b14db39805554bc27e3daf678fcc941f989
+SHA512 (rawdog-2.23.tar.gz) = ab3406b2dff754e425ce22bc1fe0c4773a43babe7b10bfb63e38b545baa1ea00e8cba62d106d3d9724809df3eb78efd9cbde12923443858031953099ea191e56
+Size (rawdog-2.23.tar.gz) = 69542 bytes
+SHA1 (patch-setup.py) = fd31cbe4ec9d87a8721a9ef832e36d1b917650a9

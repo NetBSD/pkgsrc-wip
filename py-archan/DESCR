@@ -1,0 +1,7 @@
+A Python module that analyzes your architecture strength based on Design
+Structure Matrix (DSM) data.
+
+Archan is a Python module that analyzes the strength of your project
+architecture according to some criteria described in "The Protection of
+Information in Computer Systems", written by Jerome H. Saltzer and Michael
+D. Schroeder.

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/24 21:42:56 plunky Exp $
+
+RMD160 (ppp-lzs-1.2.tar.gz) = c76bb397f5ed4327d428875dc1df92d69646629d
+Size (ppp-lzs-1.2.tar.gz) = 16506 bytes
+SHA1 (patch-aa) = f76ecb986db67ade1af65a7a81849457fadbf8e9
+SHA1 (patch-ab) = 22db1d06ba9fcad49bcf30dd6f6ab3e26e0178fd
+SHA1 (patch-ad) = c7db21a5f59c53d3d21c70ea659a678e6893a782
+SHA1 (patch-ae) = e2d2e1a0fd27c0968e99d42f855cc74568a6735e
+SHA1 (patch-af) = c00dfffa65d7270366790ee56279b6c3bc289735

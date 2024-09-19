@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/20 00:03:47 hisazumi Exp $
+
+--- fastcgi.c.orig	2004-02-03 09:58:56.000000000 +0900
++++ fastcgi.c	2005-06-20 07:35:13.000000000 +0900
+@@ -96,7 +96,8 @@
+     bufrec.seeker = NULL;
+     bufrec.data = stream;
+ 
+-    p = Scm_MakeBufferedPort(SCM_MAKE_STR("(fastcgi)"),
++    p = Scm_MakeBufferedPort(SCM_CLASS_PORT,
++                             SCM_MAKE_STR("(fastcgi)"),
+                              stream->isReader?SCM_PORT_INPUT:SCM_PORT_OUTPUT,
+                              TRUE, &bufrec);
+     return p;

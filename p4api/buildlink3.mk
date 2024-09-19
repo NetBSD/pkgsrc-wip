@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/07/06 10:11:29 bubuchka Exp $
+
+BUILDLINK_TREE+=	p4api
+
+.if !defined(P4API_BUILDLINK3_MK)
+P4API_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.p4api+=	p4api>=2008.2
+BUILDLINK_ABI_DEPENDS.p4api+=	p4api>=2010.1
+BUILDLINK_PKGSRCDIR.p4api?=	../../wip/p4api
+
+BUILDLINK_DEPMETHOD.p4api=	build
+
+BUILDLINK_INCDIRS.p4api+=	include/p4
+BUILDLINK_LIBDIRS.p4api+=	lib/p4
+BUILDLINK_FILES.p4api+=		share/examples/p4/*
+
+.endif # P4API_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-p4api

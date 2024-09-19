@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- libgu/gu_strsignal.c.orig	Tue May  8 18:17:48 2001
++++ libgu/gu_strsignal.c
+@@ -22,6 +22,9 @@
+ #include "before_system.h"
+ #include <string.h>
+ #include <signal.h>
++#ifdef HAVE_STRSIGNAL
++#include <unistd.h>
++#endif
+ #include "gu.h"
+ #undef strsignal
+ 

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:23 rillig Exp $
+
+RMD160 (bcel-5.2.tar.gz) = a4fcff7db896ec93e5667471f1e984c48dc61a93
+SHA512 (bcel-5.2.tar.gz) = b8473618702f4cc667594b2ff9e3ab3d3d8bbc9c3dca73da9c891c85e4024f801c1a1aa3184ef9319f82509aee50f56cc32d2b5fab05c6c4a68b1e878ff73436
+Size (bcel-5.2.tar.gz) = 2080066 bytes

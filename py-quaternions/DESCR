@@ -1,0 +1,2 @@
+A library to handle quaternions. The library is partly tested (see tests).
+It would be great to get everything (edge cases and functions) under testing

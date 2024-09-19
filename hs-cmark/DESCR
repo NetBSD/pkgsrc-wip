@@ -1,0 +1,2 @@
+This package provides Haskell bindings for libcmark, the reference parser
+for CommonMark, a fully specified variant of Markdown.

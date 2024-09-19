@@ -1,0 +1,3 @@
+This is a Python 3 library for generating hyperbolic geometry and drawing
+it with the drawSvg library.  Currently only the Poincare disk model is
+supported

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.2 2010/11/02 16:07:11 phonohawk Exp $
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/HSnon-negative-${PKGVERSION}.o
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/Chunky.hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/Chunky.p_hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/ChunkyPrivate.hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/ChunkyPrivate.p_hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/Class.hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/Class.p_hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/Wrapper.hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/Numeric/NonNegative/Wrapper.p_hi
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/libHSnon-negative-${PKGVERSION}.a
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/libHSnon-negative-${PKGVERSION}_p.a
+lib/non-negative-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/non-negative-${PKGVERSION}/LICENSE

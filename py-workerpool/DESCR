@@ -1,0 +1,2 @@
+The workerpool module is a simple framework for easily distributing jobs
+into multiple worker threads.

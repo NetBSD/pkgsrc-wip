@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/08 12:37:42 othyro Exp $
+include/libcdata.h
+include/libcdata/definitions.h
+include/libcdata/error.h
+include/libcdata/extern.h
+include/libcdata/features.h
+include/libcdata/types.h
+lib/libcdata.la
+lib/pkgconfig/libcdata.pc
+man/man3/libcdata.3

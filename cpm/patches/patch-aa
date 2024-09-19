@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/31 20:41:22 shattered Exp $
+
+--- configure.orig	2006-03-26 14:59:24.000000000 +0000
++++ configure
+@@ -2740,7 +2740,7 @@ USE_CRACKLIB=1
+ if test "${with_crack_lib+set}" = set; then
+   withval="$with_crack_lib"
+ 
+-      if test "${withval}" == "no"; then
++      if test "${withval}" = "no"; then
+         CFLAGS="$CFLAGS -DNO_CRACKLIB"
+         USE_CRACKLIB=0
+       else
+@@ -2808,7 +2808,7 @@ fi;
+ if test "${with_memlock+set}" = set; then
+   withval="$with_memlock"
+ 
+-      if test "${withval}" == "no"; then
++      if test "${withval}" = "no"; then
+         CFLAGS="$CFLAGS -DNO_MEMLOCK"
+       else
+         CFLAGS="$CFLAGS -DMEMLOCK_LIMIT=${withval}"
+@@ -3072,7 +3072,7 @@ if test "${ac_cv_lib_cdk_initCDKScreen}"
+   echo "can not find the cdk library."
+   exit 1
+ fi
+-if test ${USE_CRACKLIB} == 1; then
++if test ${USE_CRACKLIB} = 1; then
+ 
+ echo "$as_me:$LINENO: checking for FascistCheck in -lcrack" >&5
+ echo $ECHO_N "checking for FascistCheck in -lcrack... $ECHO_C" >&6
+@@ -3465,7 +3465,7 @@ fi
+ # ------------------------------------------------------------------------------
+ # we check if we can use this CDK version
+ CDK_H=`gcc ${CFLAGS} -M -MG interface_gui.c | perl -e 'while (<>) { $_ =~ s/^.*://; $_ =~ s/^\\s+//; $_ =~ s/\\\\//; $_ =~ s/\\s+$//; @tmp = split(/ /, $_); while (@tmp) { $file = shift(@tmp); if ($file =~ m:/cdk\\.h$:) { print "$file\\n"; } } }' | sort | uniq`
+-if test "${CDK_H}" == ""; then
++if test "${CDK_H}" = ""; then
+   { { echo "$as_me:$LINENO: error: could not locate CDK header file." >&5
+ echo "$as_me: error: could not locate CDK header file." >&2;}
+    { (exit 1); exit 1; }; }
+@@ -3582,7 +3582,7 @@ echo "$as_me: error: Could not find gpgm
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-LIBGPGME_VERSION="`$GPGME_CONFIG --version | cut --delimiter='.' --fields 1,2 | sed -e 's/\\.//g'`"
++LIBGPGME_VERSION="`$GPGME_CONFIG --version | cut -d '.' -f 1,2 | sed -e 's/\\.//g'`"
+ if test $LIBGPGME_VERSION -lt 10; then
+   { { echo "$as_me:$LINENO: error: GPGME must be version 1.0 or higher." >&5
+ echo "$as_me: error: GPGME must be version 1.0 or higher." >&2;}

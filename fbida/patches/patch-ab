@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.2 2011/10/20 12:20:56 rhialto Exp $
+
+--- mk/Variables.mk.orig	2011-06-01 07:31:59.000000000 +0000
++++ mk/Variables.mk
+@@ -9,7 +9,7 @@ bindir	=  $(DESTDIR)$(prefix)/bin
+ sbindir	=  $(DESTDIR)$(prefix)/sbin
+ libdir  =  $(DESTDIR)$(prefix)/$(LIB)
+ shrdir  =  $(DESTDIR)$(prefix)/share
+-mandir	=  $(shrdir)/man
++mandir	=  $(DESTDIR)$(prefix)/man
+ locdir  =  $(shrdir)/locale
+ appdir  =  $(shrdir)/applications
+ 

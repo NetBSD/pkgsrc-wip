@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/freeserf
+share/applications/freeserf.desktop
+share/doc/freeserf/COPYING
+share/doc/freeserf/README.md
+share/pixmaps/freeserf.png
+@pkgdir share/freeserf

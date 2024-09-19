@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.2 2013/01/19 08:20:48 othyro Exp $
+
+Add NetBSD support.
+
+--- error.c.orig	Wed May  1 16:59:23 2002
++++ error.c
+@@ -65,7 +65,12 @@ void xplerr2(int err, String s1, String 
+     pxplerr(msg);
+ }
+ 
++#if !defined(__NetBSD__)
++/*
++ * NetBSD has sys_errlist defined in errno.h
++ */
+ extern const char *const sys_errlist[];
++#endif
+ 
+ static void psyserr(String s)
+ {

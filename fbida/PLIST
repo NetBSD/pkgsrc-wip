@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/12 22:46:55 thomasklausner Exp $
+bin/exiftran
+bin/ida
+lib/X11/app-defaults/Ida
+man/man1/exiftran.1
+man/man1/ida.1

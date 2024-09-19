@@ -1,0 +1,5 @@
+     ICQ Transport for Jabber, implemented with Python and Twisted
+
+ICQ portions written by Daniel Henninger
+Jabber portions (bulk of) written by James Bunton
+(ie: this is based on PyMSNt's code)

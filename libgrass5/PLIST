@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.2 2005/03/18 20:43:09 daprice Exp $
+include/P_datetime.h
+include/P_site.h
+include/datetime.h
+include/gis.h
+include/gisdefs.h
+include/imagedefs.h
+include/imagery.h
+include/libgrass.h
+include/site.h
+lib/libgrass5.la

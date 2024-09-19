@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1 2010/02/21 00:08:26 pettai Exp $
+
+--- tools/autoconf.c.orig	2010-02-20 22:41:32.000000000 +0100
++++ tools/autoconf.c	2010-02-20 22:44:06.000000000 +0100
+@@ -180,7 +180,7 @@
+     strcat(sysbuf,DN);
+     system(sysbuf);
+ #else
+-    system("gcc tools/chkssl.c -I/usr/local/ssl/include -L/usr/local/ssl/lib -lssl -lcrypto -o tools/chkssl" DN);
++    system("gcc tools/chkssl.c -I@PREFIX@/include -L@PREFIX@/lib -lssl -lcrypto -o tools/chkssl" DN);
+ #endif
+     return checkcmp();
+ }
+@@ -244,6 +244,7 @@
+ 	"/usr/sbin/openssl",
+ 	"/usr/local/bin/openssl",
+ 	"/usr/local/ssl/bin/openssl",
++	"@PREFIX@/bin/openssl",
+ 	NULL
+     };
+ #endif
+@@ -382,7 +383,7 @@
+ 	    strcpy(sslbin,sslblist[sslin]);
+ 	    printf("Yes.\n");
+ 	    strcpy(sslopt,"-DHAVE_SSL ");
+-	    strcpy(ssllib,"-L/usr/local/ssl/lib -lssl -lcrypto ");
++	    strcpy(ssllib,"-L@PREFIX@/lib -lssl -lcrypto ");
+ 	}
+ #else
+ 	if(strlen(SSLPATH)+13<sizeof(mbuf))
+@@ -437,7 +438,7 @@
+ #ifdef SSLPATH
+ 	fprintf(makefile,"INCLUDE = -I./src/ -I. -I%sinclude\n",SSLPATH);
+ #else
+-	fprintf(makefile,"INCLUDE = -I./src/ -I. -I/usr/local/ssl/include\n");
++	fprintf(makefile,"INCLUDE = -I./src/ -I. -I@PREFIX@/include\n");
+ #endif
+     else
+ 	fprintf(makefile,"INCLUDE = -I./src/ -I.\n");

@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:56:29 ddeus Exp $
+${ECL}${CL_PATH}trivial-gray-streams.asd
+${ECL}${CL_PATH}trivial-gray-streams.fas
+${ECL}${CL_PATH}libtrivial-gray-streams.a
+${CL}${CL_PATH}trivial-gray-streams/CVS/Entries
+${CL}${CL_PATH}trivial-gray-streams/CVS/Repository
+${CL}${CL_PATH}trivial-gray-streams/CVS/Root
+${CL}${CL_PATH}trivial-gray-streams/Makefile
+${CL}${CL_PATH}trivial-gray-streams/mixin.${EXT}
+${CL}${CL_PATH}trivial-gray-streams/mixin.lisp
+${CL}${CL_PATH}trivial-gray-streams/package.${EXT}
+${CL}${CL_PATH}trivial-gray-streams/package.lisp
+${CL}${CL_PATH}trivial-gray-streams/trivial-gray-streams.asd
+share/doc/${LISP}-trivial-gray-streams/COPYING
+share/doc/${LISP}-trivial-gray-streams/README

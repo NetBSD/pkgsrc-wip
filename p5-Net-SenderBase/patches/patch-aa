@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/01 12:46:00 udontknow Exp $
+
+--- Makefile.PL.orig	2003-07-03 10:42:22.000000000 -0300
++++ Makefile.PL
+@@ -5,11 +5,6 @@ use strict;
+ use ExtUtils::MakeMaker;
+ 
+ unlink(".do_net");
+-if (prompt("Some of the tests do network checks. Would you like to run these?", "N") =~ /^y/i) {
+-    open(TOUCH, ">.do_net") || die $!;
+-    print TOUCH "This file just means we do the network checks. Remove it to turn them off\n";
+-    close TOUCH;
+-}
+ 
+ WriteMakefile(
+     'NAME' => 'Net::SenderBase',

@@ -1,0 +1,17 @@
+@comment $NetBSD$
+emul/netbsd32/bin/libpng-config
+emul/netbsd32/bin/libpng16-config
+emul/netbsd32/bin/png-fix-itxt
+emul/netbsd32/bin/pngfix
+emul/netbsd32/include/libpng16/png.h
+emul/netbsd32/include/libpng16/pngconf.h
+emul/netbsd32/include/libpng16/pnglibconf.h
+emul/netbsd32/include/png.h
+emul/netbsd32/include/pngconf.h
+emul/netbsd32/include/pnglibconf.h
+emul/netbsd32/lib/libpng16.la
+emul/netbsd32/lib/pkgconfig/libpng.pc
+emul/netbsd32/lib/pkgconfig/libpng16.pc
+emul/netbsd32/man/man3/libpng.3
+emul/netbsd32/man/man3/libpngpf.3
+emul/netbsd32/man/man5/png.5

@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/25 20:59:06 daprice Exp $
+
+--- configure.orig	2001-04-25 17:47:13.000000000 -0600
++++ configure
+@@ -1120,6 +1120,7 @@ echo "$ac_t""$target" 1>&6
+ 	case "$target" in
+ 		*linux*) SYSTEM="linux" ;;
+ 		*freebsd*) SYSTEM="freebsd" ;;
++		*netbsd*) SYSTEM="netbsd" ;;
+ 		*solaris*) SYSTEM="solaris" ;;
+ 		*) SYSTEM="generic" ;;
+ 	esac
+@@ -1134,6 +1135,11 @@ if test "$SYSTEM" = "freebsd"; then
+ 	MIMCFLAGS="-pthread"
+ 	MIMLIBS="-lc_r"
+ fi
++if test "$SYSTEM" = "netbsd"; then
++        MIMCC="gcc -DLIL_ENDIAN -DRTP_LITTLE_ENDIAN -DREENTRANT -Wall"
++        MIMCFLAGS=""
++        MIMLIBS="-Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lpthread"
++fi
+ if test "$SYSTEM" = "solaris"; then
+ 	MIMCC="gcc -DBIG_ENDIAN -DRTP_BIG_ENDIAN -DREENTRANT -DNEED_INET_NTOP -Wall"
+ 	MIMCFLAGS=""

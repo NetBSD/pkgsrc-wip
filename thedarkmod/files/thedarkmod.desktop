@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=The Dark Mod
+GenericName=Stealth Game
+Comment=Stealth game based on the Thief series
+Icon=thedarkmod
+Exec=thedarkmod
+Terminal=false
+Categories=Game;ActionGame;

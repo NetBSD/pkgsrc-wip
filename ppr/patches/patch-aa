@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- Configure.orig	2004-05-25 23:03:17.000000000 +0200
++++ Configure
+@@ -697,12 +697,12 @@ ATALKFLAGS=""
+ if [ -z "$ATALKTYPE" ]
+ then
+ echo "Looking for NATALI and Netatalk..."
+-for prefix in /usr/local /usr
++for prefix in $opt_prefix
+     do
+     if [ -f "$prefix/lib/libnatali.a" ]
+ 	then
+ 	echo "    Found \"$prefix/lib/libnatali.a\"."
+-	for prefix2 in /usr/local/atalk /usr/local /usr
++	for prefix2 in $opt_prefix
+ 	    do
+ 	    if [ -f "$prefix2/lib/libatalk.a" ]
+ 		then
+@@ -803,17 +803,8 @@ if [ -z "$PERL" ]
+ #
+ # See if we can find Zlib.
+ #
+-echo "Searching for Zlib..."
+-if [ -f /usr/include/zlib.h -o -f /usr/local/include/zlib.h ]
+-    then
+-    echo "  Found."
+-    ZLIB=""
+-    else
+-    echo "  Not found."
+-    ZLIB="#"
+-    fi
+ 
+-echo
++## pkgsrc buildlink3 takes care of that.
+ 
+ #
+ # Come up with a set of CFLAGS for the native compiler and for GCC.
+@@ -937,7 +928,7 @@ XWINBINDIR=$XWINBINDIR
+ WWWDIR=\$(SHAREDIR)/www
+ 
+ # Directory for man pages to be installed in.
+-MANDIR=\$(SHAREDIR)/man
++MANDIR=$prefix/man
+ 
+ # Directory for the CGI programs for the WWW interface.
+ CGI_BIN=\$(HOMEDIR)/cgi-bin
+@@ -1217,19 +1208,20 @@ if [ $SYSTEM = "NETBSD" ]
+ then
+ echo "    Emitting section for $DESCRIPTION"
+ cat >&3 <<===EndNETBSD===
+-MAKE=gmake
+-MAKEFLAGS=
++# pkgsrc sets this if necessary
++##MAKE=gmake
++MAKEFLAGS?=
+ STRIP=strip
+ OBJ=o
+ DOTEXE=
+ LIBEXT=a
+ LIBCMD=ar -q
+ RANLIB=touch
+-CC=gcc
++CC?=gcc
+ CFLAGS=$GCC_WARNINGS_CFLAGS $CFLAGS -I ../include \$(MISC_OPTS)
+-LD=gcc
+-LDFLAGS=
+-CPP=gcc -E -P -xc-header
++LD=\$(CC)
++LDFLAGS=$LDFLAGS \$(INTLLIBS) -lc
++CPP?=gcc -E -P -xc-header
+ SOCKLIBS=
+ LEX=lex
+ LEX_LIB=-ll

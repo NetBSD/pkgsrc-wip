@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.8 2013/12/12 10:59:17 gschwarz Exp $
+
+RMD160 (fnord-1.11.tar.bz2) = 3711efab6180a4ecfc10a1dd5b7183643a6d9f65
+SHA512 (fnord-1.11.tar.bz2) = 12a3751a2f98acb3ba2d468972bb785b656fa01bfb0828bc9ba5488dc7a2a66e9f226a6cc49ceda57aa7875d8d90954a9e79806c9506a7906cfff346cd400154
+Size (fnord-1.11.tar.bz2) = 28845 bytes
+SHA1 (patch-aa) = 932e80c21006099384fca392adfca2ab0c73435a
+SHA1 (patch-ab) = b8d0f1a0aed532ca73c97fe1d45fc3be23907247
+SHA1 (patch-ac) = 785909c54bae847e55e344dc255429d3182ebc06
+SHA1 (patch-ad) = b0dd03fd5ce1c29a6f4519961e96b87c6f44bb25
+SHA1 (patch-ae) = 1ad2834a737f277cf15a209e148549e33f21d3dc

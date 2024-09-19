@@ -1,0 +1,5 @@
+ - Integrate this with pkgsrc.
+ - Don't rely on pmk.conf for tools.
+ - Add USE_FEATURES support for building the package as well as
+   to the feature detection code in pmk so that it can pull in 
+   headers from and link to libnbcompat.

@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2006/05/23 23:37:37 ykomatsu Exp $
+
+You must add an alias to your httpd.conf pointing to ilohamail directory,
+for example:
+
+Alias /webmail "${PREFIX}/share/ilohamail/source"
+
+===========================================================================

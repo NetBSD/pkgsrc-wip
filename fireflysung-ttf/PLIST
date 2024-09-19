@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:36 thomasklausner Exp $
+lib/X11/fonts/TTF/fireflysung.ttf
+share/doc/fireflysung-ttf/AUTHORS
+share/doc/fireflysung-ttf/COPYRIGHT
+share/doc/fireflysung-ttf/Changelog
+share/doc/fireflysung-ttf/Changelog.big5

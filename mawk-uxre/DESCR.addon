@@ -1,0 +1,2 @@
+Unlike original mawk, mawk-uxre uses
+external regexp library libuxre and supports utf-8.

@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/06/16 08:37:29 jeremy-c-reed Exp $
+
+--- scr2png.c.orig	Sun May 20 07:43:19 2001
++++ scr2png.c	Thu Jun 16 00:32:50 2005
+@@ -30,7 +30,7 @@
+ #endif /* not lint */
+ 
+ #include <sys/stat.h>
+-#include <sys/syslimits.h>
++#include <limits.h>
+ #include <sys/types.h>
+ 
+ #include <err.h>
+@@ -39,9 +39,9 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ 
+-#include <gd/gd.h>
++#include <gd.h>
+ 
+-#define	DEFAULT_FONT 	"/usr/share/syscons/fonts/cp850-8x16.fnt"
++#define	DEFAULT_FONT 	PREFIX "/share/scr2png/cp850-8x16.fnt"
+ #define MAGIC		"SCRSHOT_"
+ #define VERSION		1
+ 

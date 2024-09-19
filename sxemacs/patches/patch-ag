@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.2 2006/09/07 12:03:21 hfath Exp $
+
+--- src/gui-x.c.orig	2006-05-07 02:18:32.000000000 +0200
++++ src/gui-x.c
+@@ -659,7 +659,7 @@ static void sanity_check_lwlib(void)
+ #endif
+ #ifdef LWLIB_USES_MOTIF
+ 	MACROLET(lwlib_uses_motif);
+-#if (XmVersion >= 1002)
++#if defined (XmVersion) && (XmVersion >= 1002)
+ 	MACROLET(lwlib_uses_motif_1_2);
+ #else
+ 	MACROLET(lwlib_does_not_use_motif_1_2);

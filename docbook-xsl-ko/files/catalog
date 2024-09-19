@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+        "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<!-- $NetBSD: catalog,v 1.1.1.1 2003/12/19 22:54:52 minskim Exp $ -->
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://docbook.or.kr/release/xsl/current/dbk-html.xsl" uri="dbk-html.xsl" />
+  <system systemId="http://docbook.or.kr/release/xsl/current/dbk-html-chunk.xsl" uri="dbk-html-chunk.xsl" />
+  <system systemId="http://docbook.or.kr/release/xsl/current/dbk-fo.xsl" uri="dbk-fo.xsl" />
+  <system systemId="http://docbook.or.kr/release/xsl/current/dbk-htmlhelp.xsl" uri="dbk-htmlhelp.xsl" />
+</catalog>

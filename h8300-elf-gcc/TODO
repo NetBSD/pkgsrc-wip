@@ -1,0 +1,9 @@
+- with --enable-languages=c,c++, encounters following problem. So now it is c only.
+
+checking for shl_load... configure: error: Link tests are not allowed after GCC_NO_EXECUTABLES.
+Makefile:9462: recipe for target 'configure-target-libstdc++-v3' failed
+gmake[1]: *** [configure-target-libstdc++-v3] Error 1
+gmake[1]: Leaving directory '/export/WRKOBJDIR/wip/h8300-elf-gcc/work/obj'
+Makefile:852: recipe for target 'all' failed
+gmake: *** [all] Error 2
+*** Error code 2

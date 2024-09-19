@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/17 15:23:51 thomasklausner Exp $
+
+RMD160 (revelation-0.4.14.tar.bz2) = f12fafeb9b99933070adb311933c89593533d0c9
+SHA512 (revelation-0.4.14.tar.bz2) = 45176bebd713161e140aba48aa35834f5a5720e425049fde62622e5a69bb1fb360c7863e10d57dfb7aca2e44ccb29d3fe66a1b9a6983bc693257426afed4b494
+Size (revelation-0.4.14.tar.bz2) = 371375 bytes

@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
+bin/tpp
+man/man1/tpp.1
+share/doc/tpp/CHANGES
+share/doc/tpp/COPYING
+share/doc/tpp/DESIGN
+share/doc/tpp/README
+share/doc/tpp/THANKS
+share/doc/tpp/contrib/tpp-mode.el
+share/doc/tpp/contrib/tpp.vim
+share/doc/tpp/examples/ac-am.tpp
+share/doc/tpp/examples/align-footer.tpp
+share/doc/tpp/examples/bold.tpp
+share/doc/tpp/examples/colors.tpp
+share/doc/tpp/examples/colors2.tpp
+share/doc/tpp/examples/debian-packaging.tpp
+share/doc/tpp/examples/exec.tpp
+share/doc/tpp/examples/horline.tpp
+share/doc/tpp/examples/huge.tpp
+share/doc/tpp/examples/list.tpp
+share/doc/tpp/examples/manyslides.tpp
+share/doc/tpp/examples/shell.tpp
+share/doc/tpp/examples/slidein.tpp
+share/doc/tpp/examples/source.tpp
+share/doc/tpp/examples/test.tpp
+share/doc/tpp/examples/tpp-features.tpp
+share/doc/tpp/examples/wrap.tpp

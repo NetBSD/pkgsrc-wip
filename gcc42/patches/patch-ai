@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2007/05/08 03:35:17 bsadewitz Exp $
+
+--- gcc/c-opts.c.orig	2007-03-12 14:50:38.000000000 -0400
++++ gcc/c-opts.c
+@@ -37,7 +37,7 @@ Software Foundation, 51 Franklin Street,
+ #include "c-incpath.h"
+ #include "debug.h"		/* For debug_hooks.  */
+ #include "opts.h"
+-#include "options.h"
++#include "../../obj/gcc/options.h"
+ #include "mkdeps.h"
+ 
+ #ifndef DOLLARS_IN_IDENTIFIERS

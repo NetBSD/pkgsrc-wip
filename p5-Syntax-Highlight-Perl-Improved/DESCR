@@ -1,0 +1,8 @@
+This module provides syntax highlighting for Perl code.
+The design bias is roughly line-oriented and streamed
+(ie, processing a file line-by-line in a single
+pass).
+Provisions may be made in the future for tasks related
+to "back-tracking"
+(ie, re-doing a single line in the middle of a stream)
+such as speeding up state copying.

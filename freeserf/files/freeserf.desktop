@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Freeserf
+Comment=Settlers 1 (Serf City) clone
+Icon=freeserf
+Exec=FreeSerf
+Terminal=false
+Categories=Game;StrategyGame;

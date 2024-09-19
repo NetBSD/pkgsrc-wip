@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:44 othyro Exp $
+#
+
+DISTNAME=	pylith-1.6.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	math python
+MASTER_SITES=	http://www.geodynamics.org/cig/software/pylith/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	http://www.geodynamics.org/cig/software/pylith
+COMMENT=	Finite element code for solving dynamic and quasi-static tectonic deformation problems
+LICENSE=	mit
+
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c++
+
+.include "../../lang/python/application.mk"
+.include "../../mk/bsd.pkg.mk"

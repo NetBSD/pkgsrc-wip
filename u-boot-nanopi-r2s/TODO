@@ -1,0 +1,6 @@
+* There's a Linux dts patch to add support for the USB3.0 bus required for the
+  RTL8153, not sure if it would be worth adding the patch to U-Boot
+  (patch url: https://gitlab.manjaro.org/manjaro-arm/packages/core/linux/-/raw/3e1568437d566bc49c49e68062c7b8bd75fa6e73/0002-arm64-dts-rockchip-add-usb3-controller-node-for-RK33.patch)
+* There was some effort to get this device upstreamed in U-Boot
+  (https://lists.denx.de/pipermail/u-boot/2020-July/420889.html), if/when
+  that happens this package should use upstream instead

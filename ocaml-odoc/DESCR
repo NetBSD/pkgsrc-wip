@@ -1,0 +1,2 @@
+odoc is a documentation generator for OCaml. It reads doc comments,
+delimited with (** ... *), and outputs HTML

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/07 10:12:58 jihbed Exp $
+
+--- setup.py.orig	2010-11-17 19:46:07.000000000 +0000
++++ setup.py	2010-11-17 19:48:35.000000000 +0000
+@@ -197,8 +197,7 @@
+                       extra_objects=extra_objects)
+ 
+ scripts = [join('tools', script)
+-           for script in ('gpaw', 'gpaw-test', 'gpaw-setup', 'gpaw-basis',
+-                          'gpaw-mpisim')]
++           for script in ('gpaw'+sys.version[:3], 'gpaw-test'+sys.version[:3], 'gpaw-setup'+sys.version[:3], 'gpaw-basis'+sys.version[:3],'gpaw-mpisim'+sys.version[:3])]
+ 
+ write_configuration(define_macros, include_dirs, libraries, library_dirs,
+                     extra_link_args, extra_compile_args,

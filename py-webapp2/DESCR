@@ -1,0 +1,13 @@
+`webapp2`_ is a lightweight Python web framework compatible with Google App
+Engine's `webapp`_.
+
+webapp2 is `simple`_. it follows the simplicity of webapp, but
+improves it in some ways: it adds better URI routing and exception handling,
+a full featured response object and a more flexible dispatching mechanism.
+
+webapp2 also offers the package `webapp2_extras`_ with several optional
+utilities: sessions, localization, internationalization, domain and subdomain
+routing, secure cookies and others.
+
+webapp2 can also be used outside of Google App Engine, independently of the
+App Engine SDK

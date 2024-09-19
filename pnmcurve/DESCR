@@ -1,0 +1,5 @@
+pnmcurve applies tone curves to pnm images. Curves are specified as a set of
+control points of a cubic spline. pnmcurve applies the resulting spline curve to
+the pnm image read from stdin and writes the resulting image to stdout. Command
+line switches allow to apply the curve only to selected color channels. By
+default pnmcurve applies the curve to all color channels.

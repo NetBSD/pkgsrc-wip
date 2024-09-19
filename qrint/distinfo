@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/22 13:30:49 jihbed Exp $
+
+RMD160 (qrint.zip) = 7b9f8e89cf3719420d062dfb05b975b6385ee0c4
+Size (qrint.zip) = 37950 bytes
+SHA1 (patch-aa) = 170b777d4a7f2e1d4669e4283d57a43961d7b272

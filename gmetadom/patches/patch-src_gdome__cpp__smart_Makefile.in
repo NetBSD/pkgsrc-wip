@@ -1,0 +1,14 @@
+$NetBSD: patch-src_gdome__cpp__smart_Makefile.in,v 1.1 2015/03/04 13:41:51 nros Exp $
+Don't link stdc++ (this is done anyay). Fixes build on Freebsd with clang.
+--- src/gdome_cpp_smart/Makefile.in.orig	2015-02-28 23:49:49.000000000 +0000
++++ src/gdome_cpp_smart/Makefile.in
+@@ -229,8 +229,7 @@ libgmetadom_gdome_cpp_smart_la_LIBADD = 
+   $(GDOME_LIBS) \
+   $(top_builddir)/src/gdome_cpp_smart/events/libevents.la \
+   $(top_builddir)/src/gdome_cpp_smart/core/libcore.la \
+-  $(top_builddir)/src/gdome_cpp_smart/basic/libbasic.la \
+-  -lstdc++
++  $(top_builddir)/src/gdome_cpp_smart/basic/libbasic.la
+ 
+ libgmetadom_gdome_cpp_smart_la_LDFLAGS = -version-info @GMETADOM_VERSION_INFO@
+ libgmetadom_gdome_cpp_smart_la_SOURCES = \

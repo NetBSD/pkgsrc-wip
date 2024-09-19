@@ -1,0 +1,6 @@
+  The Pidgin-Rhythmbox plugin will automatically update your Pidgin user and
+  status info with the currently playing music in Rhythmbox
+  If the artist and title are known, it will also attempt to create a link to
+  the song's lyrics by using Google's "I'm Feeling Lucky" feature
+  Pidgin-Rhythmbox will replace %rb in your user info and status message with
+  the song information

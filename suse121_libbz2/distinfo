@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2014/09/30 09:48:15 khorben Exp $
+
+RMD160 (suse121/libbz2-1-1.0.6-14.1.4.x86_64.rpm) = 4feceb391360551fe1b227512744d74f0dac0f80
+Size (suse121/libbz2-1-1.0.6-14.1.4.x86_64.rpm) = 40832 bytes
+RMD160 (suse121/libbz2-1-1.0.6-14.1.4.i586.rpm) = 563d54b03757d12bb4e0cb8f04724993f3a973fb
+Size (suse121/libbz2-1-1.0.6-14.1.4.i586.rpm) = 39495 bytes

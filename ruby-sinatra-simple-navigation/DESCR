@@ -1,0 +1,4 @@
+= sinatra-simple-navigation: Create navigations with simple-navigation
+
+A Sinatra extension to enable creating navigations with the simple-navigation
+gem. Also works for Padrino.

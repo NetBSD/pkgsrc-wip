@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.2 2009/08/15 12:37:50 jihbed Exp $
+bin/csp2B
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/manual.ps
+share/examples/${PKGNAME}/BUFFER.csp
+share/examples/${PKGNAME}/Counter.csp
+share/examples/${PKGNAME}/CounterActs.mch
+share/examples/${PKGNAME}/FT.csp
+share/examples/${PKGNAME}/FTref.csp
+share/examples/${PKGNAME}/FTrefActs.mch
+share/examples/${PKGNAME}/FileTransfer.csp
+share/examples/${PKGNAME}/FileTransfer2.csp
+share/examples/${PKGNAME}/MultiFileTransfer.csp
+share/examples/${PKGNAME}/MultiFileTransfer2.csp
+share/examples/${PKGNAME}/README
+share/examples/${PKGNAME}/Tokens.csp
+share/examples/${PKGNAME}/TokensActs.mch
+share/examples/${PKGNAME}/VendingMachine.csp
+share/examples/${PKGNAME}/VendingMachine2.csp

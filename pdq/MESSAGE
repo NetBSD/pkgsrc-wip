@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/05/04 01:13:27 jeremy-c-reed Exp $
+
+You probably need to install a "gs" command too.  It is available in
+the print/ghostscript* packages.
+
+The HP LaserJet 5 driver also requires "xxd" found in the
+editors/vim-share package (for the duplexing option) and "mpage" from
+the print/mpage package.
+
+===========================================================================

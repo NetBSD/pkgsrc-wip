@@ -1,0 +1,13 @@
+--- Frameworks/PopplerKit/bindings/poppler_document.c.orig	2009-03-17 08:18:08.000000000 -0500
++++ Frameworks/PopplerKit/bindings/poppler_document.c	2009-12-02 16:40:19.000000000 -0600
+@@ -19,8 +19,8 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include "poppler_document.h"
+-#include <PDFDoc.h>
+-#include <goo/GooString.h>
++#include <poppler/PDFDoc.h>
++#include <poppler/goo/GooString.h>
+ 
+ #define PDF_DOC(obj) static_cast<PDFDoc*>(obj)
+ 

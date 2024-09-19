@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/17 13:30:16 phonohawk Exp $
+lib/convertible-ascii-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Ascii.hi
+lib/convertible-ascii-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Ascii.p_hi
+lib/convertible-ascii-${PKGVERSION}/${HASKELL_VERSION}/HSconvertible-ascii-${PKGVERSION}.o
+lib/convertible-ascii-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-ascii-${PKGVERSION}.a
+lib/convertible-ascii-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-ascii-${PKGVERSION}_p.a
+lib/convertible-ascii-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/convertible-ascii-${PKGVERSION}/COPYING

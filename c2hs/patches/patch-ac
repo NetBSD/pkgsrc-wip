@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2007/04/27 14:21:44 emil_s Exp $
+
+--- c2hs/c/CParser.hs.orig	2005-08-07 13:01:47.000000000 +0000
++++ c2hs/c/CParser.hs
+@@ -5,7 +5,6 @@ import Monad	  (when)
+ import Maybe      (catMaybes)
+ 
+ import Common     (Position, Pos(..), nopos)
+-import Data.Set	  (Set, mkSet, union, elementOf)
+ import Utils      (Tag(tag))
+ import UNames     (Name, NameSupply, names)
+ import Idents     (Ident)

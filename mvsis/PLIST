@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
+bin/mvsis
+share/mvsis/examples/C880.blif
+share/mvsis/examples/apex6.blif
+share/mvsis/examples/bpds.mv
+share/mvsis/examples/cod.mv
+share/mvsis/examples/elc.mv
+share/mvsis/examples/fixed.aut
+share/mvsis/examples/frg2.blif
+share/mvsis/examples/full_adder_4.mv
+share/mvsis/examples/i9.blif
+share/mvsis/examples/lang.script
+share/mvsis/examples/mcnc5_old.super
+share/mvsis/examples/mcnc_gain.genlib
+share/mvsis/examples/pj1.blif
+share/mvsis/examples/pj2.blif
+share/mvsis/examples/pj3.blif
+share/mvsis/examples/sort.mv
+share/mvsis/examples/spec.aut
+share/mvsis/examples/term1.blif
+share/mvsis/share/master.mvsisrc
+share/mvsis/share/script.check
+share/mvsis/share/script.mvs

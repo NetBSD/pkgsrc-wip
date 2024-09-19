@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.4 2009/09/03 22:08:22 cheusov Exp $
+
+RMD160 (mc-4.1.40-pre9.tar.gz) = 17e2f0c02bd045b9d1f8bc07e9ab9545a20950dc
+Size (mc-4.1.40-pre9.tar.gz) = 1214767 bytes
+SHA1 (patch-configure) = 242e4384bb43f6695ebfc767746a2f42d5fef9fd
+SHA1 (patch-conshandler) = a1e5bc3703897c826df18261de6c9581c137433a
+SHA1 (patch-extfs-audio) = d3fdaacb4f90a48b16457b07b65d573e17629d25
+SHA1 (patch-fsusage) = e8f6c1c7048a7282607db024c42571c7a4171848
+SHA1 (patch-mountlist) = 8f3f31dd9de4d5bbe0de2c4d204db0154a201bca
+SHA1 (patch-subshell) = 9d1f91b06e04bdd3ec97cdf73a115df66752c572

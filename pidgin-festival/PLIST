@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
+lib/purple-2/festival.la
+share/locale/es/LC_MESSAGES/pidgin-festival.mo
+share/locale/pt_BR/LC_MESSAGES/pidgin-festival.mo
+share/locale/ru/LC_MESSAGES/pidgin-festival.mo

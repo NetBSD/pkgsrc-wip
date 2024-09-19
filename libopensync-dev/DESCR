@@ -1,0 +1,19 @@
+The OpenSync project is an ongoing effort to create a synchronization framework
+that will be a platform independent, general purpose synchronization engine
+utilizing modular plugins for content formats and different kind of connection
+types. OpenSync's modularity should allow it to be extended easily to new
+devices and purposes without radically changing the architecture itself,
+allowing it to support wide variety of devices used today and in the future.
+
+Even being a general purpose framework that keeps the doors open for many use
+cases, OpenSync's main and most practical goal is to create a solution to
+synchronize PIM (Personal Information Management - addressbook contacts,
+calendar events and tasks, personal notes, etc) data between mobile devices like
+mobile phones, PDAs (Personal Digital Assistant), desktop computer PIM tools and
+-services.
+
+OpenSync is a successor of project Multisync, created by the same people.
+Multisync's development stalled and it is no longer maintained, so users using
+it should look to upgrade to OpenSync when possible. The combined project
+history of these projects is long and currently the future looks bright for
+achieving the original goals.

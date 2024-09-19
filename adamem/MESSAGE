@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2005/03/29 04:57:42 xmor61 Exp $
+
+1. Invoke 'adam' to start up the Adam computer emulator.
+
+2. Invoke 'coleco' to start up the Colecovision game console emulator.
+
+3. For more info on starting and using the emulator, read the file:
+
+	${PREFIX}/share/adamem/adamem.txt
+
+4. Also, try the '-help' command line switch for a bit less detailed
+guidance.
+
+5. Enjoy!
+
+===========================================================================

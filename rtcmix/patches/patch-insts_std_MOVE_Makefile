@@ -1,0 +1,35 @@
+$NetBSD$
+
+--- insts/std/MOVE/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ insts/std/MOVE/Makefile
+@@ -46,22 +46,22 @@ BASE.o : $(INSTRUMENT_H) $(COMMON_HDRS) 
+ install: dso_install
+ 
+ dso_install: all
+-	$(INSTALL) $(CURDIR)/libPLACE.so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libMOVE.so $(LIBDESTDIR)
++	$(INSTALL) $(CURDIR)/libPLACE.so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libMOVE.so $(DESTDIR)/$(LIBDIR)
+ 
+ standalone_install: standalone
+-	$(INSTALL) $(CURDIR)/PLACE $(DESTDIR)
+-	$(INSTALL) $(CURDIR)/MOVE $(DESTDIR)
++	$(INSTALL) $(CURDIR)/PLACE $(DESTDIR)/$(BINDIR)
++	$(INSTALL) $(CURDIR)/MOVE $(DESTDIR)/$(BINDIR)
+ 
+ uninstall: dso_uninstall standalone_uninstall
+ 
+ dso_uninstall:
+-	$(RM) $(LIBDESTDIR)/libPLACE.so
+-	$(RM) $(LIBDESTDIR)/libMOVE.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libPLACE.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libMOVE.so
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/PLACE
+-	$(RM) $(DESTDIR)/MOVE
++	$(RM) $(DESTDIR)/$(BINDIR)/PLACE
++	$(RM) $(DESTDIR)/$(BINDIR)/MOVE
+ 
+ clean:
+ 	$(RM) $(OBJS) $(MOBJS) $(PROGS)

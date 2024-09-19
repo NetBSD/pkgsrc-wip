@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/confire/__init__.py
+${PYSITELIB}/confire/__init__.pyc
+${PYSITELIB}/confire/__init__.pyo
+${PYSITELIB}/confire/config.py
+${PYSITELIB}/confire/config.pyc
+${PYSITELIB}/confire/config.pyo
+${PYSITELIB}/confire/example.py
+${PYSITELIB}/confire/example.pyc
+${PYSITELIB}/confire/example.pyo
+${PYSITELIB}/confire/exceptions.py
+${PYSITELIB}/confire/exceptions.pyc
+${PYSITELIB}/confire/exceptions.pyo

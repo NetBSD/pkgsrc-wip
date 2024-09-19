@@ -1,0 +1,11 @@
+MatPlotTheme is a theming library for MatPlotLib. Greatly inspired
+by prettyplotlib, MatPlotTheme aims to provide easy-to-use APIs for
+creating proper and attractive data visualizations.
+
+In MatPlotTheme, theming MatPlotLib figures is controlled by style and
+palette, which defines how elements are customized and which colors are
+used, respectively. As MatPlotTheme provides multiple styles/palettes
+(at least that is what I am working on), using the library is as simple
+as picking a style-palette combination and plot. What's more,
+MatPlotTheme inherits MatPlotLib's API configuration, which means
+existing code can be migrated with minimal effort.

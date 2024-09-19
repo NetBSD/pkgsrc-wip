@@ -1,0 +1,11 @@
+$Id: TODO,v 1.3 2009/03/17 20:04:09 udontknow Exp $
+
+Try it out, at least in Linux and NetBSD
+- Fix bashisms for portable building, reported by smyows on freenode
+
+Use options.mk to integrate:
+- DBus
+- PAM
+- Qt
+- Valgrind
+

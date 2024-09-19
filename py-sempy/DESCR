@@ -1,0 +1,5 @@
+Sempy is a numerical software package designed to solve partial differential
+equations arising from the analysis of fluid flow and heat transfer. It is
+written in Python and carries the  ntuitive syntax of this language.
+Furthermore computational meshes can be imported from the Gmsh
+mesh generator, making Sempy flexible towards handling complex geometries.

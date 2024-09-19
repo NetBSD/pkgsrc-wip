@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.5 2014/11/02 09:31:17 makoto Exp $
+
+RMD160 (swt-4.4-gtk-linux-x86_64.zip) = d9cfd466dc30bda2abd5fab32e036d86d5a11f26
+Size (swt-4.4-gtk-linux-x86_64.zip) = 6131592 bytes
+SHA1 (patch-aa) = 55913cb3e9b37bde3828fab3b51c349252986d76
+SHA1 (patch-build_sh) = 4930f5a38e4ea0b6e998e4e93296642327c525f5
+SHA1 (patch-make__netbsd_mak) = 97e3de82b26e9f65be119c973f6017c143ddca0e

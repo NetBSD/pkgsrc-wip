@@ -1,0 +1,5 @@
+Testing a WSGI application normally involves starting a server at a local host
+and port, then pointing your test code to that address. Instead, this library
+lets you intercept calls to any specific host/port combination and redirect
+them into a WSGI application importable by your test program. Thus, you
+can avoid spawning multiple processes or threads to test your Web app.

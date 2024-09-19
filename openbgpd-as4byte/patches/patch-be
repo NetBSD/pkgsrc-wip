@@ -1,0 +1,56 @@
+--- bgpctl/parser.c.orig	2007-01-11 15:02:38.000000000 +1000
++++ bgpctl/parser.c	2007-01-11 16:28:30.000000000 +1000
+@@ -269,7 +269,7 @@
+ int			 parse_addr(const char *, struct bgpd_addr *);
+ int			 parse_prefix(const char *, struct bgpd_addr *,
+ 			     u_int8_t *);
+-int			 parse_asnum(const char *, u_int16_t *);
++int			 parse_asnum(const char *, u_int32_t *);
+ int			 parse_number(const char *, struct parse_result *,
+ 			     enum token_type);
+ int			 getcommunity(const char *);
+@@ -592,9 +592,9 @@
+ }
+ 
+ int
+-parse_asnum(const char *word, u_int16_t *asnum)
++parse_asnum(const char *word, u_int32_t *asnum)
+ {
+-	u_long	 ulval;
++  u_long	 ulval, ulval2;
+ 	char	*ep;
+ 
+ 	if (word == NULL)
+@@ -602,13 +602,20 @@
+ 
+ 	errno = 0;
+ 	ulval = strtoul(word, &ep, 0);
++        if (*ep == '.') {
++          ++ep ;
++          ulval2 = strtoul(ep,&ep,0) ;
++          if (ulval > USHRT_MAX) return(0) ;
++          if (ulval2 > USHRT_MAX) return(0) ;
++          ulval = (ulval << 16) + ulval2 ;
++	  }
+ 	if (word[0] == '\0' || *ep != '\0')
+ 		return (0);
+ 	if (errno == ERANGE && ulval == ULONG_MAX)
+ 		return (0);
+-	if (ulval > USHRT_MAX)
++	if (ulval > UINT_MAX)
+ 		return (0);
+-	*asnum = (u_int16_t)ulval;
++	*asnum = (u_int32_t)ulval;
+ 	return (1);
+ }
+ 
+@@ -698,7 +705,8 @@
+ 	struct filter_set	*fs;
+ 	char			*p;
+ 	int			 i;
+-	u_int16_t		 as, type;
++	u_int16_t		 as;
++        u_int16_t                type;
+ 
+ 	/* Well-known communities */
+ 	if (strcasecmp(word, "NO_EXPORT") == 0) {

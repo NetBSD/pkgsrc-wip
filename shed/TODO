@@ -1,0 +1,7 @@
+Some escape-sequencies are different on BSD and Linux (and probably other
+unices). Notably, number constants for pgup and pgdn, and, very likely,
+many other.
+ncurses -> curses?
+
+=== Candidate for removal ===
+If you feel this package would be usable, please take it.

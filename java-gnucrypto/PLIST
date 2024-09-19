@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/09 00:31:31 poppnk Exp $
+share/classpath/gnu-crypto.jar
+share/classpath/javax-crypto.jar
+share/classpath/javax-security.jar

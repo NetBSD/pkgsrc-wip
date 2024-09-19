@@ -1,0 +1,2 @@
+A perl module providing compatibility interfaces for Encode.pm on
+Perl versions earlier than 5.7.1.

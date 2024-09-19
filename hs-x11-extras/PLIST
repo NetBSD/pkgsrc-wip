@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:46 thomasklausner Exp $
+lib/X11-extras-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xinerama.hi
+lib/X11-extras-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Extras.hi
+lib/X11-extras-${PKGVERSION}/ghc-${GHCVERSION}/HSX11-extras-${PKGVERSION}.o
+lib/X11-extras-${PKGVERSION}/ghc-${GHCVERSION}/include/XlibExtras.h
+lib/X11-extras-${PKGVERSION}/ghc-${GHCVERSION}/libHSX11-extras-${PKGVERSION}.a
+share/doc/X11-extras-${PKGVERSION}/LICENSE

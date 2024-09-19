@@ -1,0 +1,33 @@
+$NetBSD$
+
+Use correct module path for pkgsrc.
+
+--- flowblade.orig	2019-08-26 07:46:04.000000000 +0000
++++ flowblade
+@@ -32,25 +32,7 @@ launch_dir = os.path.dirname(os.path.abs
+ 
+ print "Launch script dir:", launch_dir
+ 
+-# Update sys.path to include modules
+-# When running on distro
+-if launch_dir in {"bin", "/usr/bin", "/usr/local/bin"}:
+-    print "Running from installation..."
+-    modules_path = "/usr/share/flowblade/Flowblade"
+-    if not os.path.isdir(modules_path):
+-        modules_path = "/usr/share/pyshared/Flowblade"
+-    print "modules path:", modules_path
+-# When running in flatpak
+-elif launch_dir == "/app/bin":
+-    print "Running from Flatpak installation..."
+-    modules_path = "/app/share/flowblade/Flowblade"
+-    if not os.path.isdir(modules_path):
+-        modules_path = "/app/share/pyshared/Flowblade"
+-    print "modules path:", modules_path
+-# When running in filesystem
+-else:
+-    print "Running from filesystem..."
+-    modules_path = launch_dir + "/Flowblade"
++modules_path = "@FLOWBLADE_PATH@"
+ 
+ sys.path.insert(0, modules_path)
+ 

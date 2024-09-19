@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- configure.orig	2015-11-16 12:44:15.066306748 +0000
++++ configure
+@@ -17316,7 +17316,7 @@ fi
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: Enable library dependencies linking: $enable_interlib_deps" >&5
+ $as_echo "$as_me: Enable library dependencies linking: $enable_interlib_deps" >&6;}
+-if test "${enable_deplibs_linking}" == "yes"; then
++if test "${enable_deplibs_linking}" = "yes"; then
+ 	link_all_deplibs=yes
+ 	link_all_deplibs_CXX=yes
+ else
+@@ -19609,7 +19609,7 @@ fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBUPNP_PKG_ERRORS" >&5
+ 
+-	if test "$build_upnp" == "true" ; then
++	if test "$build_upnp" = "true" ; then
+ 			as_fn_error $? "libupnp not found." "$LINENO" 5
+ 		else
+ 			build_upnp=false
+@@ -19618,7 +19618,7 @@ fi
+ elif test $pkg_failed = untried; then
+      	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+-	if test "$build_upnp" == "true" ; then
++	if test "$build_upnp" = "true" ; then
+ 			as_fn_error $? "libupnp not found." "$LINENO" 5
+ 		else
+ 			build_upnp=false

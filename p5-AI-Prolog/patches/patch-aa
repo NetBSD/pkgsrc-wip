@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/08/08 11:25:35 athaba Exp $
+
+--- Makefile.PL.orig	2007-05-03 06:31:18.000000000 +0200
++++ Makefile.PL
+@@ -1,22 +1,12 @@
+ use ExtUtils::MakeMaker;
+-use ExtUtils::MakeMaker qw/WriteMakefile prompt/;
+ 
+ my ( @program, @extra_modules );
+-print <<"END_NOTE";
+ 
+-The 'aiprolog' shell is optional.  If you choose to install it, Term::ReadLine
+-and Term::ReadKey will be added to your list of prerequisites.
+-
+-END_NOTE
+-
+-if (prompt( "Do you wish to install the 'aiprolog' shell?", "y" ) =~ /^[Yy]/ )
+-{
+-    @program = ( EXE_FILES => ["bin/aiprolog"] );
+-    @extra_modules = (
+-        'Term::ReadLine' => 1.01,
+-        'Term::ReadKey'  => 2.21,
+-    );
+-}
++@program = ( EXE_FILES => ["bin/aiprolog"] );
++@extra_modules = (
++    'Term::ReadLine' => 1.01,
++    'Term::ReadKey'  => 2.21,
++);
+ 
+ WriteMakefile(
+     'NAME'         => 'AI::Prolog',

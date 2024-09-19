@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/22 21:32:34 kh-p Exp $
+bin/csstidy

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2008/02/16 12:47:47 cheusov Exp $
+bin/nbmake
+man/man1/nbmake.1

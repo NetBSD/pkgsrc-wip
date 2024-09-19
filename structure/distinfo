@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/12 12:11:05 outpaddling Exp $
+
+RMD160 (structure_kernel_source.tar.gz) = b8d3b55f41954567b30a1faafe8124dc8afd334f
+Size (structure_kernel_source.tar.gz) = 66735 bytes
+SHA1 (patch-Makefile) = 016733c79603a2089308789c212bb11b25f3a4a8

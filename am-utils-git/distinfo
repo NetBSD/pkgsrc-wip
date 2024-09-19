@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/08/30 15:03:43 hfath Exp $
+
+RMD160 (am-utils-6.1.5.tar.gz) = ab1485aaa65c522cc5db7c7917ec59d3b47e0803
+Size (am-utils-6.1.5.tar.gz) = 1922684 bytes
+SHA1 (patch-bootstrap) = 232e562dec1ee51877b1b71eab4a1f00dfedf55b
+SHA1 (patch-configure.ac) = 9f934e487345fd6950152e7391bff920b954cd6a
+SHA1 (patch-scripts_Makefile.am) = 1575be54e25a0d40bf085676a34b81ec5578bc17
+SHA1 (patch-scripts_expn.in) = 3502892407ecf89f47f3683defdf9c1dfada9f45
+SHA1 (patch-ylwrap) = d6933f540a4bfac3f375334ddcabdbbcc23da200

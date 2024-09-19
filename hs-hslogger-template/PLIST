@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/16 10:19:39 phonohawk Exp $
+lib/hslogger-template-${PKGVERSION}/${HASKELL_VERSION}/HShslogger-template-${PKGVERSION}.o
+lib/hslogger-template-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Logger/TH.hi
+lib/hslogger-template-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Logger/TH.p_hi
+lib/hslogger-template-${PKGVERSION}/${HASKELL_VERSION}/libHShslogger-template-${PKGVERSION}.a
+lib/hslogger-template-${PKGVERSION}/${HASKELL_VERSION}/libHShslogger-template-${PKGVERSION}_p.a
+lib/hslogger-template-${PKGVERSION}/${HASKELL_VERSION}/package-description

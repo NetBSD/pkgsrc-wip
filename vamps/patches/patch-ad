@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2009/12/04 13:16:19 rhialto Exp $
+
+--- vamps/Makefile.orig	2006-04-15 09:41:14.000000000 +0200
++++ vamps/Makefile
+@@ -35,8 +35,8 @@ vamps:		vamps.o requant.o
+ requant.o:	requant.h putvlc.h getvlc.h qTable.h
+ 
+ install:	all
+-		$(INSTALL) -d $(PREFIX)/bin
+-		$(INSTALL) -m 755 vamps $(PREFIX)/bin
++		$(INSTALL) -d $(DESTDIR)$(PREFIX)/bin
++		$(INSTALL) -m 755 vamps $(DESTDIR)$(PREFIX)/bin
+ 
+ uninstall:
+ 		rm -f $(PREFIX)/bin/vamps

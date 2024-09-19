@@ -1,0 +1,16 @@
+--- Frameworks/GNUmakefile.orig	2009-03-17 08:18:30.000000000 -0500
++++ Frameworks/GNUmakefile	2009-12-03 09:26:46.000000000 -0600
+@@ -19,11 +19,11 @@
+ export gckit ?= no
+ export iconkit ?= yes
+ export lucenekit ?= yes
+-export mediakit ?= yes
++export mediakit ?= no
+ export ogrekit ?= yes
+ export opmlkit ?= no
+ export panekit ?= yes
+-export popplerkit ?= yes
++export popplerkit ?= no
+ export scriptkit ?= yes
+ export unitkit ?= yes
+ export rsskit ?= no

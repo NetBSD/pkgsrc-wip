@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/02 15:00:41 bencollver Exp $
+
+--- configure.ac.orig	Sun Nov 16 00:31:30 2003
++++ configure.ac
+@@ -120,7 +120,7 @@ AC_SUBST(CANVAS_LIBS)
+ 
+ dnl libpng detection (Swami intro splash image)
+ 
+-PKG_CHECK_MODULES(PNG, libpng, PNG_SUPPORT=1, PNG_SUPPORT=0)
++PKG_CHECK_MODULES(PNG, libpng12, PNG_SUPPORT=1, PNG_SUPPORT=0)
+ AC_SUBST(PNG_CFLAGS)
+ AC_SUBST(PNG_LIBS)
+ AM_CONDITIONAL(PNG_SUPPORT, test "$PNG_SUPPORT" = "1")

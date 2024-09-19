@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/13 19:23:28 poppnk Exp $
+
+RMD160 (ussp-push-0.4.tar.gz) = bce0c482d6835adfaa465c2e7dac5926fbbf2d34
+Size (ussp-push-0.4.tar.gz) = 16511 bytes
+SHA1 (patch-aa) = 2beeb87fa95c6723b9e873e7f48016ba23241e73

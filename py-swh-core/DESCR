@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+swh-core
+========
+
+core library for swh's modules:
+- config parser
+- hash computations
+- serialization
+- logging mechanism
+- database connection
+- http-based RPC client/server
+
+Development
+-----------
+
+We strongly recommend you to use a [virtualenv][1] if you want to run tests or
+hack the code.
+
+To set up your development environment:
+
+```
+...

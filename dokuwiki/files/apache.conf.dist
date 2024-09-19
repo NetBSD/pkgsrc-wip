@@ -1,0 +1,59 @@
+# $NetBSD: apache.conf.dist,v 1.1 2012/12/21 04:25:34 triaxx Exp $
+#
+# Shaarli configuration file fragment for Apache
+
+#<VirtualHost *:80>
+#  ServerName "wiki.example.org"
+#  ServerAdmin "admin@example.org"
+#  DocumentRoot "@DOKUDIR@"
+#
+  <IfModule mod_alias.c>
+    Alias /dokuwiki @DOKUDIR@
+  </IfModule>
+
+  <Directory @DOKUDIR@>
+    <IfVersion < 2.4>
+      Order allow,deny
+      Allow from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all granted
+    </IfVersion>
+  </Directory>
+
+  <Location /bin>
+    <IfVersion < 2.4>
+      Order allow,deny
+      Deny from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all denied
+    </IfVersion>
+  </Location>
+
+  <Location ~ /(conf|inc|inc/lang)>
+    <IfVersion < 2.4>
+      Order allow,deny
+      Deny from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all denied
+    </IfVersion>
+    Satisfy All
+  </Location>
+
+  <Directory @DATADIR@>
+    <IfVersion < 2.4>
+      Order allow,deny
+      Deny from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all denied
+    </IfVersion>
+    Satisfy All
+  </Directory>
+
+#  ErrorLog /var/log/httpd/dokuwiki-error_log
+#  CustomLog /var/log/httpd/dokuwiki-access_log common
+#
+#</VirtualHost>

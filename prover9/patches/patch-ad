@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+
+--- ladr/Makefile.orig	2009-10-28 14:22:04.000000000 +0000
++++ ladr/Makefile
+@@ -47,10 +47,10 @@ dep:
+ 	util/make_dep $(OBJECTS)
+ 
+ clean:
+-	/bin/rm -f *.o
++	rm -f *.o
+ 
+ realclean:
+-	/bin/rm -f *.o *.a
++	rm -f *.o *.a
+ 
+ protos:
+ 	util/make_protos $(OBJECTS)

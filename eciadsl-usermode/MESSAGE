@@ -1,0 +1,29 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2005/09/28 14:24:39 rillig Exp $
+
+Copy ppp.conf from ${PREFIX}/share/examples/${PKGBASE} to
+${PKG_SYSCONFDIR}/ppp and modify these to suit to your needs :
+
+. vpi / vci
+. login / password
+. vid2 / pid2
+
+You will find your modem's vid1, pid1, vid2 and pid2 here :
+
+${PREFIX}/share/${PKGBASE}/modems.db
+
+Upload the firmware to your modem using the command :
+
+${PREFIX}/sbin/eci-load1 <vid1> <pid1> <vid2> <pid2> \
+${PREFIX}/share/${PKGBASE}/firmware00.bin
+
+Then call the synchronisation device using the command :
+
+${PREFIX}/sbin/eci-load2 <vid2> <pid2> \
+${PREFIX}/share/${PKGBASE}/synch01.bin
+
+And finally launch your PPP connexion via :
+
+${PREFIX}/sbin/ppp -background adsl
+
+===========================================================================

@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyfmmlib/__init__.py
+${PYSITELIB}/pyfmmlib/__init__.pyc
+${PYSITELIB}/pyfmmlib/__init__.pyo
+${PYSITELIB}/pyfmmlib/_internal.so
+${PYSITELIB}/pyfmmlib/version.py
+${PYSITELIB}/pyfmmlib/version.pyc
+${PYSITELIB}/pyfmmlib/version.pyo

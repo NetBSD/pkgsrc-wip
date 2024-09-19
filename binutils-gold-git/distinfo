@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.10 2015/03/15 14:22:19 bsiegert Exp $
+
+RMD160 (gdb-7.9.tar.gz) = 939dda771a073e82e7d72fd584246f3d1d8e9bdc
+Size (gdb-7.9.tar.gz) = 33225783 bytes
+SHA1 (patch-bfd_elflink.c) = e91e9c54ce97f32dbfa9e97fcf23afe3ae3b9abd
+SHA1 (patch-gdb_amd64-linux-tdep.c) = 289591103c1c855faa9ad9a05b137693461d8b73
+SHA1 (patch-gdb_common_common-utils.c) = 52b07c9e85dc7a5b88616a569ea6f45af5d47b07
+SHA1 (patch-gdb_common_common-utils.h) = bac642bb6cb8eab24a124a910033fda0b0d94117
+SHA1 (patch-gdb_dwarf2read.c) = 3a03c815afaf114ffb6e5bd3c448ee31652f4e08
+SHA1 (patch-gdb_utils.h) = 93c471220b00a2bd43f7a2fab685e02c9ed0e122
+SHA1 (patch-gold_output.cc) = caadd3f9ed2fc288a234f1d0163f4bccc8e9f478
+SHA1 (patch-opcodes_riscv-dis.c) = 950e1bc58c6c092c6e3c8f7eef1b6f9723afd6dd
+SHA1 (patch-readline_misc.c) = 395af9b11895da9abd0b9fcd4dbeb9156324e9b0
+SHA1 (patch-readline_rltty.c) = 38b3ae6e1cda6a02a43bfb0ba8d105abc977f54d
+SHA1 (patch-readline_terminal.c) = 1d4568977342abe74af84225702d024b9bda8065
+SHA1 (patch-readline_util.c) = ca054b5adca7669f29048cedd667279f28dfd07d

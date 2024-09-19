@@ -1,0 +1,2 @@
+HsSVN is a partial Subversion (SVN) binding for Haskell. Currently it
+covers the most part of Subversion FS but others are left uncovered.

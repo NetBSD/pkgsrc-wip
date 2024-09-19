@@ -1,0 +1,4 @@
+This software converts a linear temporal logic (ltl) formula to a generalised
+B?chi automaton.The resulting automaton may be used, for instance, in model
+checking, where it represents a property to be verified from
+a model (e.g. a Petri net).

@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2006/01/08 11:30:32 rillig Exp $
+
+Needed for NetBSD 3.0/i386.
+
+--- logos_libs/GrammarRules/fake_mfc.h.orig	2005-10-25 11:07:27.000000000 +0200
++++ logos_libs/GrammarRules/fake_mfc.h	2006-01-08 11:36:59.000000000 +0100
+@@ -48,6 +48,10 @@ Stuhlsatzenhausweg 3, D-66123 Saarbrueck
+ #include <string>
+ #include <cassert>
+ 
++#if !defined(MAP_ANONYMOUS) && defined(MAP_ANON)
++#define MAP_ANONYMOUS MAP_ANON
++#endif
++
+ using namespace std;
+ 
+ class CObject {

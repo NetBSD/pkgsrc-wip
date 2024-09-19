@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/19 19:26:01 daprice Exp $
+
+--- jalview.sh.in.orig	Sat Jul 26 14:54:22 2003
++++ jalview.sh.in
+@@ -3,10 +3,11 @@
+ # Any other command-line args are passed along to Jalview
+ 
+ #Assume that the path to Jalview is the same as the path to this script
+-PATH_TO_ME=`which $0`;
++#PATH_TO_ME=`which $0`;
++PATH_TO_ME=@PREFIX@/lib/java
+    
+ #Remove the name of this script from the end of the path
+-PATH_TO_ME=`echo $PATH_TO_ME | sed -e "s/\(.*\)\/.*/\1/g"`
++#PATH_TO_ME=`echo $PATH_TO_ME | sed -e "s/\(.*\)\/.*/\1/g"`
+ 
+ JALVIEW_ROOT=$PATH_TO_ME
+ 

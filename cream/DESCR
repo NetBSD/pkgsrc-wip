@@ -1,0 +1,5 @@
+Cream is a configuration of the famous Vim text editor that makes it
+easier to use, like an Apple- or Windows-style text editor. It uses
+Vim's own extensibility to improve menus, keyboard shortcuts, and
+editing behavior. Cream seamlessly maintains Vim's insertmode to access
+all the power of the original Vim plus many custom Cream extensions.

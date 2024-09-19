@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/05/31 13:41:37 thomasklausner Exp $
+
+RMD160 (unzip610b.zip) = a8e0df8e07240f5e782012004a64a2ca4f5db109
+Size (unzip610b.zip) = 1648945 bytes
+SHA1 (patch-aa) = d0bbfd14cae937f5c4170780dfcd1d46cc10d790
+SHA1 (patch-ab) = 7c5c31df628ca8bcd80a12c821a0c501607cbf5e

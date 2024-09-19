@@ -1,0 +1,2 @@
+Django git revision, simple add current git revision to request object for
+use in tempaltes and views

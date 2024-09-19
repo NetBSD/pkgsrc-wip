@@ -1,0 +1,25 @@
+$NetBSD$
+
+--- src/Mod/Idf/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Idf/CMakeLists.txt
+@@ -56,17 +56,17 @@ INSTALL(
+     FILES
+         ${IdfLibs_SRCS}
+     DESTINATION
+-        Mod/Idf/Idflibs
++        freecad/Mod/Idf/Idflibs
+ )
+ INSTALL(
+     FILES
+         ${IdfLang_SRCS}
+     DESTINATION
+-        Mod/Idf/Languages
++        freecad/Mod/Idf/Languages
+ )
+ INSTALL(
+     FILES
+         ${Idf_SRCS}
+     DESTINATION
+-        Mod/Idf
++        freecad/Mod/Idf
+ )

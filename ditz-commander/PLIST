@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 05:39:35 phonohawk Exp $
+bin/ditz-commander
+${PYSITELIB}/Ditz_Commander-1.0-py2.6.egg-info
+${PYSITELIB}/ditz/Commander.py
+${PYSITELIB}/ditz/Commander.pyc
+${PYSITELIB}/ditz/Commander.pyo
+${PYSITELIB}/ditz/MainWindow.py
+${PYSITELIB}/ditz/MainWindow.pyc
+${PYSITELIB}/ditz/MainWindow.pyo
+${PYSITELIB}/ditz/__init__.py
+${PYSITELIB}/ditz/__init__.pyc
+${PYSITELIB}/ditz/__init__.pyo

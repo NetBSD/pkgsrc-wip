@@ -1,0 +1,12 @@
+Payara Server is a drop-in replacement for GlassFish Server Open Source Edition
+4.1.  It implements the Java EE 7 specification, including JPA 2.1, JAX-RS 2.0,
+Servlets 3.1, JMS 2.0, JSF 2.2, EJB 3.2, CDI 1.1, JCache, and other features.
+
+In addition, Payara offers several features not included in the Java EE 7
+specification or in the Glassfish implementation.  For example, Payara
+integrates Hazelcast for clustering and also provides enhanced SQL and other
+monitoring tools.
+
+Payara server is released quarterly under a CDDL and GNU license.
+
+This package tracks the 4.x release branch.

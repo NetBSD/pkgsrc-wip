@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2013/09/02 19:08:24 thomasklausner Exp $
+
+RMD160 (seagull-1.8.2/seagull.svn.tar.gz) = 14c9940eb7bfeacf387bbf3d7d73c8eee89d674f
+SHA512 (seagull-1.8.2/seagull.svn.tar.gz) = 822e9028571ae0554fac32e69dbf6c32463928667207f5dde7f6c0eabeef996da6ef9e93db9d1a294f47d332a0887967e6efdcf091a7be5f47f8a07f0c49adf2
+Size (seagull-1.8.2/seagull.svn.tar.gz) = 14811741 bytes
+SHA1 (patch-build.conf) = d82286994f50d5f3b94fb561028737749583e28a
+SHA1 (patch-build.ksh) = 72d2907a7c6190448fa0cd84b857f9aa7158adb5
+SHA1 (patch-common_integer__t.hpp) = 7535382ed088c7ca522e767b1ff67f9e28e7944e
+SHA1 (patch-common_string__t.hpp) = 78db81ae5fab68f14eb17144ea5f77f69cd97f1f
+SHA1 (patch-gen-project.ksh) = a0bca8da77aac209bee9d0b21841b9d37dbf7041
+SHA1 (patch-library-trans-ip_C__TransIP.cpp) = 6f84ab7d7d36643a4914991d57593d9e012034b0
+SHA1 (patch-library-trans-ip_S__IpAddr.cpp) = 67befcd7694cd09911055015a36b9390f8985883
+SHA1 (patch-library-trans-octcap32_C__TCAPMsgBuildContextFactoryNoFlavour.body) = 0364ddcaa2a91c6d42648c2ba4e174894fdcd813
+SHA1 (patch-library-trans-octcap32_C__TCAPMsgBuildContextNoFlavour.body) = 6132e69772c198502b0f490298b98c2b998d7766
+SHA1 (patch-library-trans-octcap32_C__TcapStackNoFlavour.body) = 6a7cb02b1c592dc76499b24c1257023200256b5e
+SHA1 (patch-library-trans-tls_C__TransIPTLS.hpp) = a33a36b8f2d12eaa5669543a006a0676f77c29ff
+SHA1 (patch-octcap__include_OC_oc__config.h) = 5188693854b2091df16585080bb14139194f0af6
+SHA1 (patch-protocol-stats_C__ProtocolStats.hpp) = b9e65223904303b378f8d720005d012abbc67f8d
+SHA1 (patch-protocol-tlv_C__ProtocolTlv.cpp) = bff359d32526ad2214431212a9f6a6a4d2f6d24d
+SHA1 (patch-xml-parser_xml__definition.y) = f76428c44a496649ba75e403e2dbdc94b127871d

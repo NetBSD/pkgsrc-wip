@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/VBox/Main/glue/tests/Makefile.orig	2016-03-04 19:29:36.000000000 +0000
++++ src/VBox/Main/glue/tests/Makefile
+@@ -17,7 +17,7 @@
+ # User serviceable parts: adjust the following lines appropriately
+ #
+ 
+-# The host OS: linux, solaris, win, darwin, freebsd
++# The host OS: linux, solaris, win, darwin, freebsd, netbsd
+ HOSTOS=linux
+ # Absolute (!) path to the VirtualBox install directory
+ VBOX_BIN = /opt/VirtualBox

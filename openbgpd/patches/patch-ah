@@ -1,0 +1,51 @@
+--- bgpd/session.c.orig	2006-02-08 14:36:29.000000000 +0200
++++ bgpd/session.c	2007-05-09 11:04:32.000000000 +0300
+@@ -211,12 +211,20 @@
+ 	setproctitle("session engine");
+ 	bgpd_process = PROC_SE;
+ 
++/* NetBSD doesn't have PF_KEY implemented in a way OpenBSD has */
++#ifndef __NetBSD__
+ 	if (pfkey_init(&sysdep) == -1)
+ 		fatalx("pfkey setup failed");
++#endif
+ 
+ 	if (setgroups(1, &pw->pw_gid) ||
++#if defined(__NetBSD__)
++	    setregid(pw->pw_gid, pw->pw_gid) ||
++	    setreuid(pw->pw_uid, pw->pw_uid))
++#else
+ 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
+ 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
++#endif
+ 		fatal("can't drop privileges");
+ 
+ 	listener_cnt = 0;
+@@ -502,7 +510,9 @@
+ 	while ((p = peers) != NULL) {
+ 		peers = p->next;
+ 		bgp_fsm(p, EVNT_STOP);
++#ifndef __NetBSD__
+ 		pfkey_remove(p);
++#endif
+ 		free(p);
+ 	}
+ 
+@@ -583,7 +593,7 @@
+ 
+ 			/* init write buffer */
+ 			msgbuf_init(&peer->wbuf);
+-
++#ifndef __NetBSD__
+ 			/* init pfkey - remove old if any, load new ones */
+ 			pfkey_remove(peer);
+ 			if (pfkey_establish(peer) == -1) {
+@@ -591,7 +601,7 @@
+ 				    "pfkey setup failed");
+ 				return;
+ 			}
+-
++#endif
+ 			peer->stats.last_sent_errcode = 0;
+ 			peer->stats.last_sent_suberr = 0;
+ 

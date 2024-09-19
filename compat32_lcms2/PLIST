@@ -1,0 +1,11 @@
+@comment $NetBSD$
+emul/netbsd32/bin/linkicc
+emul/netbsd32/bin/psicc
+emul/netbsd32/bin/tificc
+emul/netbsd32/bin/transicc
+emul/netbsd32/include/lcms2.h
+emul/netbsd32/include/lcms2_plugin.h
+emul/netbsd32/lib/liblcms2.la
+emul/netbsd32/lib/pkgconfig/lcms2.pc
+emul/netbsd32/man/man1/jpgicc.1
+emul/netbsd32/man/man1/tificc.1

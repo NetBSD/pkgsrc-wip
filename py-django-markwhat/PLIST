@@ -1,0 +1,16 @@
+@comment $NetBSD$
+${PYSITELIB}/django_markwhat/__init__.py
+${PYSITELIB}/django_markwhat/__init__.pyc
+${PYSITELIB}/django_markwhat/__init__.pyo
+${PYSITELIB}/django_markwhat/models.py
+${PYSITELIB}/django_markwhat/models.pyc
+${PYSITELIB}/django_markwhat/models.pyo
+${PYSITELIB}/django_markwhat/templatetags/__init__.py
+${PYSITELIB}/django_markwhat/templatetags/__init__.pyc
+${PYSITELIB}/django_markwhat/templatetags/__init__.pyo
+${PYSITELIB}/django_markwhat/templatetags/markup.py
+${PYSITELIB}/django_markwhat/templatetags/markup.pyc
+${PYSITELIB}/django_markwhat/templatetags/markup.pyo
+${PYSITELIB}/django_markwhat/tests.py
+${PYSITELIB}/django_markwhat/tests.pyc
+${PYSITELIB}/django_markwhat/tests.pyo

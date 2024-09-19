@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2009/01/19 12:17:34 yhardy Exp $
+
+--- usb_stream/pcm_usb_stream.c.orig	2008-10-29 14:42:13.000000000 +0200
++++ usb_stream/pcm_usb_stream.c	2009-01-19 13:15:12.000000000 +0200
+@@ -18,7 +18,9 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+  */
+ 
++#ifdef HAVE_BYTESWAP_H
+ #include <byteswap.h>
++#endif
+ #define _GNU_SOURCE
+ #include <sys/mman.h>
+ #include <sys/shm.h>
+@@ -215,7 +217,11 @@
+ 		}
+ 
+ 
++#ifdef __NetBSD__
++		uus->s = mremap(uus->s, sizeof(struct usb_stream), uus->s, uus->s->read_size, 0);
++#else
+ 		uus->s = mremap(uus->s, sizeof(struct usb_stream), uus->s->read_size, MREMAP_MAYMOVE);
++#endif
+ 		if (MAP_FAILED == uus->s) {
+ 			perror("ALSA/USX2Y: mmap");
+ 			return -EPERM;

@@ -1,0 +1,2 @@
+Reverse Polish Notation interpreter for use as an interactive calculator in
+conjunction with the standard Python interactive interpreter.

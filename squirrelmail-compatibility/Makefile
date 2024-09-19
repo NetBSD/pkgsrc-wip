@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.4 2013/01/20 22:41:19 schnoebe Exp $
+#
+
+DISTNAME=	compatibility-1.3
+PKGNAME=	squirrelmail-${DISTNAME}
+CATEGORIES=	mail
+MASTER_SITES=	http://www.squirrelmail.org/plugins/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.squirrelmail.org/
+COMMENT=	Previous version compatibility plugin for SquirrelMail
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}
+
+SMDIR=			${PREFIX}/share/squirrelmail
+MESSAGE_SUBST+=		SMDIR=${SMDIR}
+
+do-build:
+
+do-install:
+	${MKDIR} ${DESTDIR}${SMDIR}/plugins
+	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
+		${TAR} -xf - -C ${DESTDIR}${SMDIR}/plugins
+
+.include "../../mail/squirrelmail/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

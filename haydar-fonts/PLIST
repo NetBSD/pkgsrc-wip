@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/21 21:15:47 jihbed Exp $
+lib/X11/fonts/haydar-fonts/haydar-10.bdf
+lib/X11/fonts/haydar-fonts/haydar-11.bdf
+lib/X11/fonts/haydar-fonts/haydar-12.bdf
+lib/X11/fonts/haydar-fonts/haydar-14.bdf
+lib/X11/fonts/haydar-fonts/haydar-16.bdf
+lib/X11/fonts/haydar-fonts/haydar-18.bdf
+lib/X11/fonts/haydar-fonts/haydar-20.bdf
+lib/X11/fonts/haydar-fonts/haydar-22.bdf
+lib/X11/fonts/haydar-fonts/haydar-24.bdf
+lib/X11/fonts/haydar-fonts/haydar-26.bdf
+lib/X11/fonts/haydar-fonts/haydar-28.bdf
+lib/X11/fonts/haydar-fonts/haydar-36.bdf
+lib/X11/fonts/haydar-fonts/haydar-48.bdf
+lib/X11/fonts/haydar-fonts/haydar-72.bdf
+lib/X11/fonts/haydar-fonts/haydar-8.bdf
+lib/X11/fonts/haydar-fonts/haydar-9.bdf

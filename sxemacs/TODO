@@ -1,0 +1,18 @@
+
+(1) Prefix all xemacs derived tools, files, man pages etc to avoid
+    conflicts with xemacs-21.* packages
+
+(2) Should we use the xemacs-packages, or create a new sxemacs-packages?
+    If the former, how to change the dependencies of xemacs-packages
+    accordingly?
+
+(3) Fix PLIST issues
+
+(4) Per default, sxemacs appears not to install gnuclient*, 
+    but installs the man pages?
+
+(5) Feed back the patches to SXEmacs maintainers
+
+(6) Fix the ugly X11 toolkit selection
+
+(7) Is this OSS sound support still relevant?

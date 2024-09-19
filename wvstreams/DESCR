@@ -1,0 +1,20 @@
+WvStreams is a network programming library in C++. It was constructed over the
+lifetime of the NetIntegrator mostly by apenwarr but also with tons of help
+from dcoombs and other members of Net Integration R&D. The version of
+WvStreams you see on this site is currently maintained by the AlumNit group.
+
+WvStreams aims to be an efficient, secure, easy-to-use, and OS-independent
+library for doing network applications development, and we think that it has
+pretty much lived up to those goals. Currently all or parts of it work under
+Linux, *BSD, Solaris, and MAC OS X. Some parts have been ported to Windows,
+with a more complete port coming really soon.
+
+Most people who have read WvStreams-based code seem to be very impressed with
+how readable it makes application programs. It would have been impossible to
+build WvDial, TunnelVision, Retchmail, and the rest of the programs found on
+this site as quickly as we did without a good framework library.
+
+Currently, what documentation exists is a bit sporadic. The header files from
+the source code are fairly well documented, and, for those looking for examples,
+all of the programs on this site have been developed using this library, so you
+should be able to get some ideas from them.

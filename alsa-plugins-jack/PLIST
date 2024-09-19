@@ -1,0 +1,2 @@
+@comment $NetBSD$
+lib/alsa-lib/libasound_module_pcm_jack.la

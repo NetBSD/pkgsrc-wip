@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/11/06 11:25:57 leonardschmidt Exp $
+
+--- src/filter.hh.orig	2004-10-10 13:00:10.000000000 +0000
++++ src/filter.hh
+@@ -21,8 +21,8 @@
+ 
+ #include <string>
+ extern "C" {
+-#include <regex.h>
+ #include <sys/types.h> 
++#include <regex.h>
+ }
+ 
+ // Filter modes

@@ -1,0 +1,100 @@
+$NetBSD$
+
+# Respect environment, use standard make vars, add destdir support
+--- Makefile.orig	2011-03-25 11:16:03.000000000 +0000
++++ Makefile
+@@ -4,17 +4,20 @@
+ #
+ 
+ # version information
+-TOOL = metal
++TOOL =	metal
+ 
+ # default installation directory
+-INSTALLDIR=/usr/local/bin
++PREFIX ?=	/usr/local
++INSTALLDIR =	${PREFIX}/bin
++INSTALL ?=	install
++STRIP ?=	strip
+ 
+ # default C++ compiler
+-CXX=g++ 
++CXX ?=		g++ 
+ 
+ # default compilation flags are 
+ #
+-# CFLAGS=-O2 -I./libsrc/ -I./pdf/
++# CXXFLAGS=-O2 -I./libsrc/ -I./pdf/
+ # 
+ # The following special options may also be added to the default
+ # 
+@@ -27,7 +30,7 @@ CXX=g++ 
+ #                                    on systems where gcc supports the long
+ #                                    long data type and on Windows.
+ # 
+-CFLAGS=-O2 -I./libsrc -I./pdf  -D_FILE_OFFSET_BITS=64 -static
++CXXFLAGS=-O2 -I./libsrc -I./pdf  -D_FILE_OFFSET_BITS=64
+ 
+ # executable file names and locations
+ BINDIR = executables
+@@ -78,7 +81,7 @@ help : 
+ 	@echo "Type...           To..."
+ 	@echo "make help         Display this help screen"
+ 	@echo "make all          Compile everything "
+-	@echo "make install      Install binaries in $(INSTALLDIR)"
++	@echo "make install      Install binaries in $(DESTDIR)$(INSTALLDIR)"
+ 	@echo "make install INSTALLDIR=directory_for_binaries"
+ 	@echo "                  Install binaries in directory_for_binaries"
+ 	@echo "make clean        Delete temporary files"
+@@ -93,7 +96,7 @@ $(BINDIR) :
+ 
+ # dependencies for executables
+ $(TARGET) : $(LIBFILE) $(TOOLSRC) $(PDFLIB)
+-	$(CXX) $(CFLAGS) -o $@ -include version/VersionInfo.h $(TOOL)/*.cpp $(PDFLIB) $(LIBFILE) -lm -lz
++	$(CXX) $(CXXFLAGS) -o $@ -include version/VersionInfo.h $(TOOL)/*.cpp $(PDFLIB) $(LIBFILE) -L$(PREFIX)/lib -lm -lz
+ 
+ $(LIBFILE) : $(LIBOBJ) $(LIBHDR)
+ 	ar -cr $@ $(LIBOBJ)
+@@ -110,20 +113,23 @@ $(PDFOBJ) : $(PDFHDR)
+ clean :
+ 	-rm -f */*.a */*.o $(EXECUTABLES) 
+ 
+-install : all $(INSTALLDIR)
++install : all $(DESTDIR)$(INSTALLDIR)
+ 	@echo " "
+-	@echo Installing to directory $(INSTALLDIR)
++	@echo Installing to directory $(DESTDIR)$(INSTALLDIR)
+ 	@echo To select a different directory, run
+ 	@echo " "
+ 	@echo make install INSTALLDIR=your_preferred_dir
+ 	@echo " "
+-	cp $(EXECUTABLES) $(INSTALLDIR)
++	$(INSTALL) -c $(EXECUTABLES) $(DESTDIR)$(INSTALLDIR)
+ 
+-$(INSTALLDIR) :
++install-strip : install
++	$(STRIP) $(DESTDIR)$(INSTALLDIR)/$(TOOL)
++
++$(DESTDIR)$(INSTALLDIR) :
+ 	@echo " "
+-	@echo Creating directory $(INSTALLDIR)
++	@echo Creating directory $(DESTDIR)$(INSTALLDIR)
+ 	@echo " "
+-	@mkdir -p $(INSTALLDIR)
++	@mkdir -p $(DESTDIR)$(INSTALLDIR)
+ 
+ new-version :
+ 	mkdir -p $(DISTRIBDIR) $(DISTRIBDIR)/$(TOOL)
+@@ -149,10 +155,10 @@ fetch : 
+ 	echo "\n"                         >> version/VersionInfo.h
+ 
+ .c.o :
+-	$(CXX) $(CFLAGS) -o $@ -c $*.c
++	$(CXX) $(CXXFLAGS) -o $@ -c $*.c
+ 
+ .cpp.o : 
+-	$(CXX) $(CFLAGS) -o $@ -c $*.cpp -DVERSION=\"$(VERSION)\"
++	$(CXX) $(CXXFLAGS) -o $@ -c $*.cpp -DVERSION=\"$(VERSION)\"
+ 
+ archive : clean
+ 	mkdir -p generic-$(TOOL)

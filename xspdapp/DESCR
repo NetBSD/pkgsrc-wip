@@ -1,0 +1,24 @@
+The eXtended Server Pages project is a very fast application server based on
+C-code. The programming environment supports application programs of the
+following kinds:
+
+      * C-programs (well tested, running at production conditions since May
+	2003)
+      * shell scripts (well tested)
+      * C++-programs (using the supported C-library, tested)
+      * Java-programs (well tested, using the supported C-library via JNI)
+
+All different kind of application programs may be mixed within the same session
+context. Java programs may use different Java runtime environments or versions
+and can be mixed within the same session context.
+
+The XSPD is not another Java based application server. The main advantages of
+the XSPD are:
+
+      * Small and fast core program code (C based).
+      * High performance with typical more than 1000 session requests per
+	second (less than 1 msec per request) and throughput with up to 4
+	MByte/sec per request.
+      * Usage of fast C/C++ based application programs with the same
+	programming techniques like JSP servlet programming.
+      * Support of session context for shell based scripts also.

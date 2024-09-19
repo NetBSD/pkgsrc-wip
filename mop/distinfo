@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2011/10/20 12:38:39 makoto Exp $
+
+RMD160 (mop-1.9.tar.gz) = 84839f036139d7c20a6f83cd1fe3c707d43581ca
+Size (mop-1.9.tar.gz) = 87721 bytes
+SHA1 (patch-mob.rb) = b96f987d8de7037feb28a099b6221069368bf3ee

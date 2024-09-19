@@ -1,0 +1,8 @@
+This package contains stubs and a mypy plugin to provide
+more precise static types and type inference for SQLAlchemy
+framework. SQLAlchemy uses some Python magic that makes
+having precise types for some code patterns problematic.
+This is why we need to accompany the stubs with mypy plugins.
+The final goal is to be able to get precise types for most common
+patterns.
+

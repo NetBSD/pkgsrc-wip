@@ -1,0 +1,17 @@
+Hint to get gcc to build up
+the bootstrap compiler's bin directory at the front of $PATH, 
+replace /usr/bin/gcc /usr/bin/cpp /usr/bin/g++ 
+with symlinks to their counterparts in the bootstrap 
+compiler directory (see note below re g++ and c++)
+
+Make sure you've got gnu-binutils and gmake; then run 
+contrib/download_prerequisites
+
+Configure with --enable-languages='c ada c++' --build=x86_64-aux-solaris2.11 --enable-threads=posix 
+--disable-libmudflap --disable-libgomp --disable-libssp 
+--disable-libquadmath --disable-nls --disable-shared --disable-lto 
+--disable-libstdcxx-pch --enable-multilib --with-gnu-as 
+--with-as=/usr/bin/gas --without-gnu-ld --with-ld=/usr/bin/ld
+
+gmake and then gmake install
+

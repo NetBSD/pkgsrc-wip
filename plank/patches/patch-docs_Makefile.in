@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- docs/Makefile.in.orig	2019-03-01 20:42:56.795097111 +0000
++++ docs/Makefile.in
+@@ -735,7 +735,7 @@ uninstall-man: uninstall-man1
+ @HAVE_HELP2MAN_TRUE@	$(HELP2MAN) $(top_builddir)/src/plank \
+ @HAVE_HELP2MAN_TRUE@		--include $(srcdir)/plank.h2m \
+ @HAVE_HELP2MAN_TRUE@		--libtool --no-info \
+-@HAVE_HELP2MAN_TRUE@		--output=$@
++@HAVE_HELP2MAN_TRUE@		--no-discard-stderr
+ 
+ @HAVE_VALADOC_TRUE@cdocs: plank_c_doc.stamp
+ @HAVE_VALADOC_TRUE@plank_c_doc.stamp: $(plank_doc_files) $(top_builddir)/lib/plank-internal.vapi Makefile

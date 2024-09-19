@@ -1,0 +1,6 @@
+Does not build on Darwin with the following error:
+
+Linking ADMsmb
+/usr/bin/ld: can't locate file for: -lcrt0.o
+collect2: ld returned 1 exit status
+*** Error code 1

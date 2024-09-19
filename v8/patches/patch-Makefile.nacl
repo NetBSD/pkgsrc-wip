@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.nacl,v 1.1 2014/08/23 17:44:12 heidnes Exp $
+
+Use the installed gyp, not the bundled version.
+
+--- Makefile.nacl.orig	2014-08-08 13:04:36.000000000 +0000
++++ Makefile.nacl
+@@ -98,7 +98,7 @@ $(NACL_MAKEFILES):
+ 	CC=${NACL_CC} \
+ 	CXX=${NACL_CXX} \
+ 	PYTHONPATH="$(shell pwd)/tools/generate_shim_headers:$(shell pwd)/build:$(PYTHONPATH)" \
+-	build/gyp/gyp --generator-output="${OUTDIR}" build/all.gyp \
++	gyp --generator-output="${OUTDIR}" build/all.gyp \
+ 	              -Ibuild/standalone.gypi --depth=. \
+ 	              -S$(suffix $(basename $@))$(suffix $@) $(GYPFLAGS) \
+                       -Dwno_array_bounds=-Wno-array-bounds

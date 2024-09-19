@@ -1,0 +1,15 @@
+--- Makefile.site.orig	2005-06-17 14:52:48.000000000 +1000
++++ Makefile.site	2005-06-17 14:53:13.000000000 +1000
+@@ -5,9 +5,9 @@
+ # uncomment the appropriate system
+ 
+ # gcc
+-CC=gcc
+-CFLAGS=`glib-config --cflags` -g
+-LIBS=`glib-config --libs` -lpthread
++#CC=gcc
++CFLAGS+=`glib-config --cflags` -g
++LIBS+=`glib-config --libs` -lpthread
+ 
+ # FreeBSD build using gcc
+ #CC=gcc

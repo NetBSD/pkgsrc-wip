@@ -1,0 +1,51 @@
+$NetBSD: patch-au,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- nftl_format.c.orig	2006-04-30 22:59:15.000000000 +0200
++++ nftl_format.c	2007-10-20 16:42:13.000000000 +0200
+@@ -31,36 +31,25 @@
+ #include <time.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++
++#if __NetBSD__
++#include <sys/param.h>
++#else
+ #include <sys/mount.h>
++#endif
+ #include <errno.h>
+ #include <string.h>
+ 
++#if __NetBSD__
++#include <sys/types.h>
++#include <mtd_swab.h>
++#else
+ #include <asm/types.h>
++#endif
+ #include <mtd/mtd-user.h>
+ #include <mtd/nftl-user.h>
+ #include <mtd/inftl-user.h>
+ 
+-#define swab16(x) \
+-        ((__u16)( \
+-                (((__u16)(x) & (__u16)0x00ffU) << 8) | \
+-                (((__u16)(x) & (__u16)0xff00U) >> 8) ))
+-#define swab32(x) \
+-        ((__u32)( \
+-                (((__u32)(x) & (__u32)0x000000ffUL) << 24) | \
+-                (((__u32)(x) & (__u32)0x0000ff00UL) <<  8) | \
+-                (((__u32)(x) & (__u32)0x00ff0000UL) >>  8) | \
+-                (((__u32)(x) & (__u32)0xff000000UL) >> 24) ))
+-
+-#if __BYTE_ORDER == __BIG_ENDIAN
+-#define cpu_to_le16(x) ({ __u16 _x = x; swab16(_x); })
+-#define cpu_to_le32(x) ({ __u32 _x = x; swab32(_x); })
+-#else
+-#define cpu_to_le16(x) (x)
+-#define cpu_to_le32(x) (x)
+-#endif
+-#define le32_to_cpu(x) cpu_to_le32(x)
+-#define le16_to_cpu(x) cpu_to_le16(x)
+-
+ unsigned char BadUnitTable[MAX_ERASE_ZONES];
+ unsigned char *readbuf;
+ unsigned char *writebuf[4];

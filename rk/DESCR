@@ -1,0 +1,4 @@
+This package provides a C++ double precision implementation of
+several basic geometric entities and transformations: points in
+3d, directions in 3d (unit vectors), 3-vectors, points in 4d,
+4-vectors, rotations, linear transformations, and boosts

@@ -1,0 +1,7 @@
+$NetBSD$
+
+RMD160 (navit-0.5.1.tar.gz) = ae510f0d68ba3d900f0a1345efee2b4183806915
+SHA512 (navit-0.5.1.tar.gz) = 22158945d7ed9d5149cf2939d2b9b220ac84dfffe8aba7206bdbb15e6b27ffe692fe9492454c06f24d0a7a93987d2fe2f2ae1e1dccc6cf6e3fe37418e02a3ede
+Size (navit-0.5.1.tar.gz) = 9867652 bytes
+SHA1 (patch-cmake_version.cmake) = 13f16145fe6881e79cbc859d768a2a62c70a9cbc
+SHA1 (patch-navit_graphics_opengl_graphics__opengl.c) = 8c0a82c65c9363db4efe4ddcaf0c7e4f3f011377

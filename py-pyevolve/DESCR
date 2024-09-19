@@ -1,0 +1,18 @@
+Pyevolve was developed to be a complete genetic algorithm framework written in
+ pure python. The main objectives of Pyevolve are:
+ .
+  * written in pure python  - to maximize the cross-platform aspect
+  * easy to use API         - the API must be easy to the end-user
+  * see the evolution       - the user can and must see and interact with the
+                              evolution statistics, graphs, etc.
+  * extensible              - the API must be extensible, the user can create
+                              new representations, genetic operators such as
+                              crossover, mutation, etc.
+  * fast                    - the design must be optimized for performance
+  * common features         - the framework must implement the most common
+                              features: selectors like roulette wheel,
+                              tournament, ranking, uniform. Scaling schemes
+                              such as linear scaling, etc.
+  * default parameters      - we must have default operators, settings, etc
+                              in all options
+  * open-source             - the source is for everyone, not only for one.

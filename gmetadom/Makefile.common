@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2014/12/26 15:39:45 nros Exp $
+#
+# used by wip/ocaml-gmetadom/Makefile
+
+DISTNAME=	gmetadom-0.2.6
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmetadom/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://gmetadom.sf.net/
+LICENSE=	gnu-lgpl-v2.1
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/gmetadom/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gmetadom/patches
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake pkg-config

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/07 00:59:04 jihbed Exp $
+etc/xdg/menus/applications-merged/islamic.menu
+share/desktop-directories/Islamic-Software.directory
+share/desktop-directories/Quran.directory
+share/icons/hicolor/scalable/categories/icon-islam.svg
+share/icons/hicolor/scalable/categories/quran-icon.svg

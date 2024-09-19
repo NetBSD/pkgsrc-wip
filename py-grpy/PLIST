@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/22 13:43:12 jihbed Exp $
+${PYSITELIB}/Christoffel.py
+${PYSITELIB}/Riemann.py
+${PYSITELIB}/Tensor.py

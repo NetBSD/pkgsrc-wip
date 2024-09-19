@@ -1,0 +1,16 @@
+$NetBSD: patch-functions,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
+
+--- functions.orig	2017-03-11 04:01:25.000000000 +0000
++++ functions
+@@ -1084,6 +1084,11 @@ clear_mtab () {
+ 
+ setup_proc () {
+ 	case "$HOST_OS" in
++	    netbsd*)
++		umount_on_exit /dev
++		umount_on_exit /proc
++		mount -t procfs -o linux proc $TARGET/proc
++		;;
+ 	    *freebsd*)
+ 		umount_on_exit /dev
+ 		umount_on_exit /proc

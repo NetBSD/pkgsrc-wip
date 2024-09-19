@@ -1,0 +1,9 @@
+This is vm-pop3d. It is a POP3 server that can run as a stand-alone
+daemon or it can run via inetd.
+
+It has support for using extra password files and mailbox spool
+directories for each domain. (It provides support for virtual mail
+accounts.)
+
+It can be used without any superuser privileges (as long as the
+mailboxes are writable by the user/group running vm-pop3d).

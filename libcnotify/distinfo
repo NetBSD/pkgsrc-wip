@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2014/02/03 09:23:21 othyro Exp $
+
+RMD160 (libcnotify-alpha-20150101.tar.gz) = 3a5770148194aaa4232dd9a9042be874a1d2ec80
+SHA512 (libcnotify-alpha-20150101.tar.gz) = b92a4c1a26f69b90b669fdb6e025ba64d16413223ed60014bd47e1aff2fd76c53f05b4a4a1ac98bf0f22d4420426c622aa3baf4b3823a7177d10279e82413062
+Size (libcnotify-alpha-20150101.tar.gz) = 451920 bytes

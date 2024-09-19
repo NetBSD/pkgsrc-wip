@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/06/01 21:35:31 guigui2 Exp $
+
+--- src/ssh2/sftp.h.orig	2007-09-23 15:28:40.000000000 -0400
++++ src/ssh2/sftp.h	2010-03-03 00:22:42.000000000 -0500
+@@ -8,7 +8,7 @@
+ #define PyOpenSSL_SSH2_SFTP_H_
+ 
+ #include <Python.h>
+-#include "libssh2_priv.h"
++#include "libssh2.h"
+ 
+ extern  int       init_SSH2_SFTP   (PyObject *);
+ 

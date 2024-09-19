@@ -1,0 +1,19 @@
+This is a program for estimating rates ("r8s") of molecular evolution
+and divergence times on a phylogenetic tree.  It implements several
+methods for estimating these parameters ranging from fairly standard
+maximum likelihood methods in the context of global or local molecular
+clocks to more experimental semiparametric and nonparametric methods
+that relax the stringency of the clock assumption using smoothing
+methods.  Its starting point is a given phylogenetic tree and a given
+set of estimated branch lengths (numbers of substitutions along each
+branch).  In addition one or more calibration points can be added to
+permit scaling of rates and times to real units.  These calibrations
+can take one of two forms:  assignment of a fixed age to a node, or
+enforcement of a minimum or maximum age constraint on a node, which is
+generally a better reflection of the information content of fossil
+evidence.  Terminal nodes are permitted to occur at any point in time,
+allowing investigation of rate variation in phylogenies such as those
+obtained from "serial" samples of viral lineages through time.
+Finally, it is possible to assign all divergence times (perhaps based
+on outside estimates of divergence times) and examine molecular rate
+variation under several models of smoothing.

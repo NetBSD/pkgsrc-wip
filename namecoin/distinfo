@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.10 2021/01/19 10:17:00 adam Exp $
+
+RMD160 (namecoin-nc0.21.0.1.tar.gz) = 860b5ff2dc410355c03a95738178231c6180b9dc
+SHA512 (namecoin-nc0.21.0.1.tar.gz) = 758a8278727c94794e6715f405c74c9a94d7dcf8f0dff98a944cd62e7052df8d811d18ae5e2716fc9545292a811ecde8ac85f50e270d689eb3e502e333c27ac8
+Size (namecoin-nc0.21.0.1.tar.gz) = 6771179 bytes
+SHA1 (patch-src_netbase.cpp) = 901c8928181ba351658562477115dc92640d3886
+SHA1 (patch-src_wallet_walletutil.cpp) = 21b7208901c8403bbe839fa601f44e7417beea4e

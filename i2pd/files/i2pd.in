@@ -1,0 +1,41 @@
+#!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD $
+#
+# PROVIDE: i2pd
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+#
+# Variables in rc.conf to enable i2pd:
+# 
+# i2pd=YES
+
+if test -f /etc/rc.subr
+then
+	. /etc/rc.subr
+fi
+
+name="i2pd"
+rcvar=$name
+command="@PREFIX@/bin/i2pd"
+extra_commands="reload"
+reload_cmd="i2pd_reload"
+required_files="@PKG_SYSCONFDIR@/i2pd.conf"
+i2pd_user="i2pd"
+i2pd_group="i2pd"
+i2pd_chdir="@PREFIX@/var/lib/i2pd"
+i2pd_flags="--conf=@PKG_SYSCONFDIR@/i2pd.conf --service $rc_flags"
+stop_cmd="i2pd_stop"
+
+i2pd_stop()
+{
+	kill -INT `cat @VARBASE@/run/i2pd/i2pd.pid`
+}
+
+i2pd_reload()
+{
+	kill -HUP `cat @VARBASE@/run/i2pd/i2pd.pid`
+}
+
+load_rc_config $name
+run_rc_command "$1"

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2005/02/06 00:30:43 mreriksson Exp $
+
+--- configure.orig	2005-02-02 22:19:35.000000000 +0100
++++ configure
+@@ -1265,7 +1265,8 @@ _ACEOF
+ echo "Configuring libhttpd"
+ 
+ echo $ECHO_N "Do you want to include support for Ember scripts (n) : $ECHO_C"
+-read EMBER
++echo "n"
++EMBER="n"
+ if test "$EMBER." = "y." -o "$EMBER." = "Y."
+ then
+ 	HAVE_EMBER="#define HAVE_EMBER"

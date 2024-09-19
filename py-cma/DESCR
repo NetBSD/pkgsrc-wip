@@ -1,0 +1,13 @@
+CMA-ES, Covariance Matrix Adaptation Evolution Strategy for non-linear numerical
+optimization in Python
+
+a stochastic numerical optimization algorithm for difficult (non-convex,
+ill-conditioned, multimodal) optimization problems in continuous search
+spaces, implemented in Python.
+
+Typical domain of application are objective functions with:
+
+ search space dimension between 5 and 100,
+ at least about 100 times dimension function evaluations needed to get
+ satisfactory solutions, non-separable, ill-conditioned, or rugged/multi-modal
+ landscapes

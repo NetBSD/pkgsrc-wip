@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/Mod/ReverseEngineering/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/ReverseEngineering/CMakeLists.txt
+@@ -9,5 +9,5 @@ INSTALL(
+         Init.py
+         InitGui.py
+     DESTINATION
+-        Mod/ReverseEngineering
++        freecad/Mod/ReverseEngineering
+ )

@@ -1,0 +1,78 @@
+$NetBSD$
+
+--- src/VBox/Additions/common/VBoxGuest/Makefile.kmk.orig	2016-03-04 19:23:09.000000000 +0000
++++ src/VBox/Additions/common/VBoxGuest/Makefile.kmk
+@@ -19,13 +19,14 @@ SUB_DEPTH = ../../../../..
+ include $(KBUILD_PATH)/subheader.kmk
+ 
+ 
+-if1of ($(KBUILD_TARGET), darwin freebsd haiku $(if $(defined VBOX_WITH_ADDITION_DRIVERS),linux,) os2 solaris win)
++if1of ($(KBUILD_TARGET), darwin freebsd netbsd haiku $(if $(defined VBOX_WITH_ADDITION_DRIVERS),linux,) os2 solaris win)
+  #
+  # VBoxGuest - The Guest Additions Driver.
+  #
+  SYSMODS += VBoxGuest
+  VBoxGuest_TEMPLATE      = VBOXGUESTR0
+  VBoxGuest_NAME.freebsd  = vboxguest
++ VBoxGuest_NAME.netbsd   = vboxguest
+  VBoxGuest_NAME.haiku    = vboxguest
+  VBoxGuest_NAME.linux    = vboxguest
+  VBoxGuest_NAME.solaris  = vboxguest
+@@ -54,10 +55,12 @@ if1of ($(KBUILD_TARGET), darwin freebsd 
+  VBoxGuest_DEPS.linux   += $(VBOX_SVN_REV_HEADER)
+  VBoxGuest_DEPS.haiku   += $(VBOX_SVN_REV_HEADER)
+  VBoxGuest_DEPS.freebsd += $(VBOX_SVN_REV_HEADER)
++ VBoxGuest_DEPS.netbsd  += $(VBOX_SVN_REV_HEADER)
+  VBoxGuest_DEPS.darwin  += $(VBOX_SVN_REV_HEADER)
+  VBoxGuest_DEFS          = VBGL_VBOXGUEST VBOX_WITH_HGCM
+  VBoxGuest_INCS          = .
+  VBoxGuest_INCS.freebsd  = $(VBoxGuest_0_OUTDIR) $(PATH_STAGE)/gen-sys-hdrs
++ VBoxGuest_INCS.netbsd  = $(VBoxGuest_0_OUTDIR) $(PATH_STAGE)/gen-sys-hdrs
+  VBoxGuest_INCS.linux    = ../../../Runtime/r0drv/linux
+  ifeq ($(KBUILD_HOST),solaris)
+   VBoxGuest_LDFLAGS.solaris         += -N misc/ctf
+@@ -80,7 +83,7 @@ if1of ($(KBUILD_TARGET), darwin freebsd 
+     VBoxGuest.cpp_SDKS   = $(VBOX_WINDDK_GST_WLH)
+    endif
+   endif # win
+-  ifn1of ($(KBUILD_TARGET), linux freebsd solaris haiku)
++  ifn1of ($(KBUILD_TARGET), linux freebsd netbsd solaris haiku)
+    VBoxGuest_SOURCES    = VBoxGuest-$(KBUILD_TARGET).cpp
+   else
+    VBoxGuest_SOURCES    = VBoxGuest-$(KBUILD_TARGET).c
+@@ -99,6 +102,10 @@ if1of ($(KBUILD_TARGET), darwin freebsd 
+   	$(PATH_STAGE)/gen-sys-hdrs/pci_if.h \
+   	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
+   	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
++  VBoxGuest_ORDERDEPS.netbsd = \
++  	$(PATH_STAGE)/gen-sys-hdrs/pci_if.h \
++  	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
++  	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
+   ifeq ($(KBUILD_TARGET),haiku)
+    # Haiku drivers cannot export symbols for other drivers, but modules can.
+    # Therefore vboxguest is a module containing the ring-0 guest lib, and vboxdev/vboxsf
+@@ -244,6 +251,19 @@ ifeq ($(KBUILD_TARGET),freebsd)
+ 
+ endif # FreeBSD
+ 
++ifeq ($(KBUILD_TARGET),netbsd)
++ #
++ # Install the source files and script(s).
++ #
++ include $(PATH_SUB_CURRENT)/netbsd/files_vboxguest
++ # sources and stuff.
++ INSTALLS += vboxguest-src
++ vboxguest-src_INST     = $(INST_ADDITIONS)src/vboxguest/
++ vboxguest-src_MODE     = a+r,u+w
++ vboxguest-src_SOURCES  = $(subst ",,$(FILES_VBOXGUEST_NOBIN))
++
++endif # FreeBSD
++
+ ifeq ($(KBUILD_TARGET),win)
+ #
+ # VBoxGuestInst - The installer.
+@@ -254,4 +274,3 @@ VBoxGuestInst_SOURCES = win/VBoxGuestIns
+ endif
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

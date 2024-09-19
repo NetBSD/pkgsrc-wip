@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.4 2008/03/17 18:57:48 hoka_adam Exp $
+
+default kernel values related semaphore is too small to use firebird.
+
+** Change them before building firebird package **
+** If not, build process may fail **
+
+You can use the following values in a custom kernel:
+
+options         SEMMNI=256      # number of semaphore identifiers
+options         SEMMNS=512      # number of semaphores in system
+options         SEMUME=256      # max number of undo entries per process
+options         SHMMAXPGS=4096  # 2048 pages is the default
+
+Or use sysctl to set the same options.
+
+If you want to use firebird from inetd, use the following:
+
+Put this to /etc/services:
+gds_db          3050/tcp  #InterBase Database Remote Protocol
+
+Put this to /etc/inetd.conf:
+gds_db stream  tcp     nowait  firebird        ${PREFIX}/bin/fb_inet_server  fb_inet_server
+
+===========================================================================

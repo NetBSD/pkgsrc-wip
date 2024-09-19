@@ -1,0 +1,12 @@
+Package should be working. Reasons why it is not suitable for import to
+pkgsrc proper:
+
+- The default rules may still be searched in different location on other
+  operating systems/configurations.
+
+- The man page for dmake is incomplete and refers to make(1s).
+  Installing this man page (possibly in another section) may create confusion
+  with the systems default make.
+
+- There is already a package devel/dmake, containing a different program.
+  A different name would be required.

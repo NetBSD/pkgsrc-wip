@@ -1,0 +1,5 @@
+The voltage read-out must be provided by a separate device-dependent package
+(see __init__ descriptor for details).
+The class provides method to retrieve the voltage, resistance or temperature,
+to convert the resistance to temperature (B-equation), and to record
+the temperature as a function of time in a background thread

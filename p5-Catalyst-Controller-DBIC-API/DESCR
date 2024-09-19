@@ -1,0 +1,1 @@
+Catalyst::Controller::DBIC::API::REST - Provides a REST interface to DBIx::Class.

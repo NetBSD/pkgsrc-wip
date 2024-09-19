@@ -1,0 +1,5 @@
+A package that lets you define quantities with units, which can
+then be used in almost any numerical calculation in any
+programming language. Checks that calculations pass dimensional
+analysis, performs unit conversions, and defines physical
+constants.

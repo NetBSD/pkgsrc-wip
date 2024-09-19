@@ -1,0 +1,3 @@
+- Doesn't actually run in my test setup!
+- Ruby replace happens too late. Probably the cleanest way to fix it
+  is to teach CMake to generate the docs itself, if ruby is available.

@@ -1,0 +1,10 @@
+Python standard library contains thread library which provides
+primitives for writing multi-threaded programs. There are primitives
+for locks (allocating, acquiring and releasing), getting an
+identification of the thread, raising an exception in the main thread
+and, most importantly, start_new_thread function for starting a new
+thread.
+
+rthread library introduced here mimics the interface of
+thread to some extent. The objective is to make distributed
+computing look and feel similar to multi-threaded programming

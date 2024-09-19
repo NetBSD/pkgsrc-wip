@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- src/VBox/HostServices/SharedOpenGL/Makefile.kmk.orig	2016-03-04 19:29:29.000000000 +0000
++++ src/VBox/HostServices/SharedOpenGL/Makefile.kmk
+@@ -376,6 +376,7 @@ VBoxOGLrenderspu_SOURCES.win     = \
+ VBoxOGLrenderspu_SOURCES.linux   = render/renderspu_glx.c
+ VBoxOGLrenderspu_SOURCES.solaris = render/renderspu_glx.c
+ VBoxOGLrenderspu_SOURCES.freebsd = render/renderspu_glx.c
++VBoxOGLrenderspu_SOURCES.netbsd = render/renderspu_glx.c
+ VBoxOGLrenderspu_OBJCFLAGS.darwin = -Wno-shadow
+ VBoxOGLrenderspu_SOURCES.darwin  = \
+ 	OpenGLTest/OpenGLTestDarwin.cpp \
+@@ -438,7 +439,7 @@ if (   defined(VBOX_WITH_QTGUI) \
+    VBoxTestOGL_QT_MODULES     += Core Gui OpenGL
+    VBoxTestOGL_LDFLAGS.darwin += -framework OpenGL
+    VBoxTestOGL_LIBS.win       += $(PATH_SDK_$(VBOX_WINPSDK)_LIB)/Opengl32.lib
+-   if1of ($(KBUILD_TARGET), solaris linux freebsd)
++   if1of ($(KBUILD_TARGET), solaris linux freebsd netbsd)
+     # must come after VBoxOGL2D, therefore don't set the arch-specific LIBS variable here!
+     VBoxTestOGL_LIBS += GL
+    endif
+@@ -448,4 +449,3 @@ if (   defined(VBOX_WITH_QTGUI) \
+ endif
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

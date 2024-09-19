@@ -1,0 +1,5 @@
+IronPython is an implementation of the Python programming language running under
+.NET and Silverlight. It supports an interactive console with fully dynamic
+compilation. It's well integrated with the rest of the .NET Framework and makes
+all .NET libraries easily available to Python programmers, while maintaining
+compatibility with the Python language.

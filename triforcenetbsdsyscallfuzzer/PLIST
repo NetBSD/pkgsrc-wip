@@ -1,0 +1,13 @@
+@comment $NetBSD$
+triforcenetbsdsyscallfuzzer/docs/setup.md
+triforcenetbsdsyscallfuzzer/docs/testing.md
+triforcenetbsdsyscallfuzzer/driver
+triforcenetbsdsyscallfuzzer/gen.py
+triforcenetbsdsyscallfuzzer/gen2.py
+triforcenetbsdsyscallfuzzer/genInputs
+triforcenetbsdsyscallfuzzer/genRepro
+triforcenetbsdsyscallfuzzer/genRepro.py
+triforcenetbsdsyscallfuzzer/genTempl.py
+triforcenetbsdsyscallfuzzer/runFuzz
+triforcenetbsdsyscallfuzzer/templ.txt
+triforcenetbsdsyscallfuzzer/testAfl

@@ -1,0 +1,2 @@
+Package depends on sh-utils (gexpr) for now. Maybe the script should better be
+fixed to use sed instead of gexpr?

@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2005/08/11 15:01:56 leonardschmidt Exp $
+
+--- src/driver_oss.c.orig	2003-08-31 13:32:02.000000000 +0000
++++ src/driver_oss.c
+@@ -24,10 +24,8 @@
+ #include "umix_common.h"
+ 
+ /* Hmm not sure about the *BSD includes */
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__FreeBSD__)
+   #include <sys/soundcard.h>
+-#elif defined(__FreeBSD__)
+-  #include "machine/soundcard.h"
+ #elif defined(__NetBSD__)
+   #include <soundcard.h>
+ #endif

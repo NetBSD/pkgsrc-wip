@@ -1,0 +1,12 @@
+python-dbus-next is a Python library for DBus that aims to be
+a fully featured high level library primarily geared towards
+integration of applications into Linux desktop and
+mobile environments.
+
+Desktop application developers can use this library for integrating
+their applications into desktop environments by implementing
+common DBus standard interfaces or creating custom plugin interfaces.
+
+Desktop users can use this library to create their own scripts
+and utilities to interact with those interfaces for customization
+of their desktop environment.

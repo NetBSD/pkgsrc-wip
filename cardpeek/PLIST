@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 18:59:30 gschwarz Exp $
+bin/cardpeek
+share/applications/cardpeek.desktop
+share/doc/cardpeek/cardpeek_ref.en.pdf
+share/icons/hicolor/48x48/apps/cardpeek-logo.png

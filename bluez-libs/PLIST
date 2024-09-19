@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
+include/bluetooth/bluetooth.h
+include/bluetooth/bnep.h
+include/bluetooth/cmtp.h
+include/bluetooth/hci.h
+include/bluetooth/hci_lib.h
+include/bluetooth/hidp.h
+include/bluetooth/l2cap.h
+include/bluetooth/rfcomm.h
+include/bluetooth/sco.h
+include/bluetooth/sdp.h
+include/bluetooth/sdp_lib.h
+lib/libbluetooth.la
+lib/pkgconfig/bluez.pc
+share/aclocal/bluez.m4

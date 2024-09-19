@@ -1,0 +1,7 @@
+This is a program that allows very fast binary file comparison.
+
+Compare is similar to cmp but faster and with better readable output.
+Compare examines one file and standard in, or two files on a byte by
+byte basis, and prints the file position of the first difference it
+finds, first in decimal and then in hexadecimal, followed by the
+differing byte content in hexadecimal and as quoted character.

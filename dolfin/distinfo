@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.9 2013/09/01 17:24:38 asau Exp $
+
+RMD160 (dolfin-1.2.0.tar.gz) = b35dcc8d4a4fac1dd3c3e719297501744c104d51
+SHA512 (dolfin-1.2.0.tar.gz) = fd383169e0202ae387a367a47bf9e7a47a6cf382cec699ad7a0f356c5f1c594cf15bedf07c98d576490036db9cfc95db933e11d2c68ec19cfc09a2773ae3c848
+Size (dolfin-1.2.0.tar.gz) = 10144756 bytes
+SHA1 (patch-dolfin_adaptivity_ErrorControl.h) = 696e7b3516b04efac311831e0a5397ef810f4f83
+SHA1 (patch-dolfin_fem_LinearVariationalProblem.h) = e6d53cd3c43d2498358680d4877fd6900d97e148
+SHA1 (patch-dolfin_io_HDF5Interface.h) = 9e1cd9bad3b2334f8a7ad1f9f24f2bf3db329ea7
+SHA1 (patch-utils_scripts_notinuse) = a696987617dc342cac9d536e5a6bf111df65efca

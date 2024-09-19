@@ -1,0 +1,127 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/19 18:07:42 daprice Exp $
+
+--- chrsh.c.orig	Thu Jul 10 11:55:31 2003
++++ chrsh.c
+@@ -80,6 +80,7 @@
+ /* The chroot jail main directory must be owned and permissioned thus */
+ #define JAILDIRUID	0
+ #define JAILDIRGID	0
++#define JAILMNT         MNT_RDONLY
+ #define JAILDIRMODE	0555
+ 
+ /* The jailed user's chrooted home directory must be this mode */
+@@ -116,6 +117,7 @@
+ # error "You MUST define either LOG_USESYSLOG or LOG_USEFILE (not both)!"
+ #endif
+ 
++#include <errno.h>
+ #include <string.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -126,6 +128,7 @@
+ #include <unistd.h>
+ #include <stdarg.h>
+ #include <sys/param.h>
++#include <sys/mount.h>
+ #include <fcntl.h>
+ #include <sys/errno.h>
+ #include <netinet/in.h>
+@@ -255,8 +258,9 @@ void clean_exit(int exitcode) {
+  *  are world writable, race conditions and worse WILL almost CERTAINLY
+  *  end up in a root compromise.
+  */
+-int checkjailed(char *item, uid_t uid, gid_t gid, int isdir, mode_t mode) {
++int checkjailed(char *item, uid_t uid, gid_t gid, int isdir, int fs_flags, mode_t mode) {
+ 	struct stat statinfo;
++	struct statfs statfsinfo;
+ 	char *type;
+ 
+ 	type = isdir ? "subdirectory" : "file";
+@@ -265,6 +269,10 @@ int checkjailed(char *item, uid_t uid, g
+ 		do_log(LOG_WARNING, "Unable to stat %s %s of the jail.", item, type);
+ 		return 1;
+ 	}
++	if (statfs(item, &statfsinfo)) {
++               do_log(LOG_WARNING, "Unable to statfs %s %s of the jail.", item, type);
++               return 1;
++       	}
+ 	if ((!(statinfo.st_mode & S_IFDIR) && isdir) || (!(statinfo.st_mode & S_IFREG) && !isdir)) {
+ 		do_log(LOG_WARNING, "Jailed %s %s is not a %s.", item, type, (isdir ? "directory" : "regular file"));
+ 		return 2;
+@@ -273,9 +281,12 @@ int checkjailed(char *item, uid_t uid, g
+ 		do_log(LOG_WARNING, "Jailed %s %s is world writable.", item, type);
+ 		return 3;
+ 	}
+-	if ((statinfo.st_mode & ALLPERMS) != mode) {
+-		do_log(LOG_WARNING, "Jailed %s %s mode does not match expected mode %lo.", item, type, mode);
+-		return 4;
++	if ((statfsinfo.f_flags & fs_flags) == 0) {
++               if ((statinfo.st_mode & ALLPERMS) != mode) {
++                       do_log(LOG_WARNING, "Jailed %s %s mode does not match expected mode %lo.", item, type, mode);
++                       return 4;
++               }
++
+ 	}
+ 	if (statinfo.st_uid != uid) {
+ 		do_log(LOG_WARNING, "Jailed %s %s is not owned by expected UID %ld.", item, type, uid);
+@@ -310,6 +321,7 @@ int main(int argc, char *argv[], char *e
+ 	struct passwd *pw;
+ 	struct group *gr;
+ 	struct stat statinfo;
++	struct statfs statfsinfo;
+ 	struct sockaddr sock;
+ 	int m, i;
+ 	int logfd = -1;
+@@ -558,13 +570,19 @@ int main(int argc, char *argv[], char *e
+ 		do_log(LOG_WARNING, "Unable to stat the jail directory: %s", jail);
+ 		clean_exit(185);
+ 	}
++	if (statfs(jail, &statfsinfo)) {
++               do_log(LOG_WARNING, "Unable to statfs the jail directory: %s", jail);
++               clean_exit(185);
++        } 
+ 	if (statinfo.st_mode & (S_IWGRP | S_IWOTH)) {
+ 		do_log(LOG_WARNING, "Jail directory is world writable.");
+ 		clean_exit(186);
+ 	}
+-	if ((statinfo.st_mode & ALLPERMS) != JAILDIRMODE) {
+-		do_log(LOG_WARNING, "Jail directory mode does not match expected mode %lo.", JAILDIRMODE);
+-		clean_exit(187);
++	if ((statfsinfo.f_flags & JAILMNT) == 0) {
++               if ((statinfo.st_mode & ALLPERMS) != JAILDIRMODE) {
++                       do_log(LOG_WARNING, "Jail directory mode does not match expected mode %lo.", JAILDIRMODE);
++                       clean_exit(187);
++               }
+ 	}
+ 	if (statinfo.st_uid != JAILDIRUID) {
+ 		do_log(LOG_WARNING, "Jail directory is not owned by expected UID %ld.", JAILDIRUID);
+@@ -587,17 +605,17 @@ int main(int argc, char *argv[], char *e
+ 	/*
+ 	 * Now look for and check out /bin and /etc in the jail...
+ 	 */
+-	if ((m = checkjailed("/etc", JAILDIRUID, JAILDIRGID, 1, JAILDIRMODE)) != 0) {
++	if ((m = checkjailed("/etc", JAILDIRUID, JAILDIRGID, 1, JAILMNT, JAILDIRMODE)) != 0) {
+ 		clean_exit(m+200);
+ 	}
+-	if ((m = checkjailed("/bin", JAILDIRUID, JAILDIRGID, 1, JAILDIRMODE)) != 0) {
++	if ((m = checkjailed("/bin", JAILDIRUID, JAILDIRGID, 1, JAILMNT, JAILDIRMODE)) != 0) {
+ 		clean_exit(m+210);
+ 	}
+ 
+ 	/*
+ 	 * Check out the user's home subdir in the jail...
+ 	 */
+-	if ((m = checkjailed(home, uid, gid, 1, HOMEDIRMODE)) != 0) {
++	if ((m = checkjailed(home, uid, gid, 1, JAILMNT, HOMEDIRMODE)) != 0) {
+ 		 clean_exit(m+220);
+ 	}
+ 
+@@ -644,7 +662,7 @@ int main(int argc, char *argv[], char *e
+ 		do_log(LOG_WARNING, "Unable to allocate space for user's jailed shell \"%s\".", pw->pw_shell);
+ 		clean_exit(241);
+ 	}
+-	if ((m = checkjailed(shell, SHELLUID, SHELLGID, 0, SHELLMODE)) != 0) {
++	if ((m = checkjailed(shell, SHELLUID, SHELLGID, 0, JAILMNT, SHELLMODE)) != 0) {
+ 		clean_exit(242+m);
+ 	}
+ 

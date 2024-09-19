@@ -1,0 +1,5 @@
+@comment $NetBSD$
+man/man8/freevrrpd.8
+sbin/freevrrpd
+share/doc/freevrrpd/ABOUTCISCOPATENT
+share/examples/freevrrpd/freevrrpd.conf

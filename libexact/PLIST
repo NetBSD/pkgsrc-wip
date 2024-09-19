@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/solve-libexact
+include/exact.h
+lib/libexact.a
+share/doc/libexact/guide.pdf

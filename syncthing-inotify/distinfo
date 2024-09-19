@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2015/04/25 17:13:03 tnn2 Exp $
+
+RMD160 (syncthing-inotify-0.6.7.tar.gz) = 5014fa241d122655c7c93fc1789207d0120a85bb
+SHA512 (syncthing-inotify-0.6.7.tar.gz) = c74323a357bc40aeaed74b9b64dfec52934b1d36df1f587ee7a045464f81e738dc0edfb14f093a7976558db3adf704f9d7bc27271da8d342654f383d0e939f7a
+Size (syncthing-inotify-0.6.7.tar.gz) = 17774 bytes

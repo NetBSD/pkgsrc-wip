@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/12 12:42:10 othyro Exp $
+lib/X11/fonts/TTF/FreeMonoTengwar.ttf
+lib/X11/fonts/TTF/TengwarFormalCSUR.ttf
+lib/X11/fonts/TTF/tengtelc.ttf
+lib/X11/fonts/TTF/tengtelcb.ttf

@@ -1,0 +1,4 @@
+Sarf is an integrated software system (engine) that can generate arabic verbs,
+derivative nouns, and gerunds, and inflect them, starting from their triple and
+quadruple roots, depending on the grammar and morphology rules,
+and using the system database.

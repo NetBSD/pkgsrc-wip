@@ -1,0 +1,32 @@
+===========================================================================
+$NetBSD$
+
+To begin using z.lua, put something like the following in
+either ~/.profile or ~/.bashrc:
+
+if [ -e ${PREFIX}/bin/z.lua ]; then
+    eval "$(lua ${PREFIX}/bin/z.lua --init posix)"
+fi
+
+Then, as z.lua learns your habits, you may use the following
+command to quickly jump around your filesystem:
+    z SOME_DIRECTORY
+
+z.lua also has explicit support for other shells, so
+you may want to consider replacing the `--init posix'
+above with:
+
+    z.lua --init bash
+	    -or-
+    z.lua --init zsh
+
+To use z.lua with the fish shell, put the following in
+~/.config/fish/init.fish:
+
+    if test -e ${PREFIX}/share/zlua/init.fish
+        source ${PREFIX}/share/zlua/init.fish
+    end
+
+See ${PREFIX}/share/doc/zlua/README.md for more details.
+
+===========================================================================

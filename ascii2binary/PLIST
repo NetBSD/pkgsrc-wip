@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/13 10:27:32 bartoszkuzma Exp $
+bin/ascii2binary
+bin/binary2ascii
+man/man1/ascii2binary.1
+man/man1/binary2ascii.1

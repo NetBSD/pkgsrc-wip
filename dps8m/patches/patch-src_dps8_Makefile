@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- src/dps8/Makefile.orig	2019-08-27 18:08:20.000000000 +0000
++++ src/dps8/Makefile
+@@ -20,7 +20,9 @@ all :
+ 
+ SIMHx = ../simh-master
+ 
+-INSTALL_ROOT ?= /usr/local/
++DESTDIR ?=
++PREFIX ?= /usr/local
++INSTALL_ROOT ?= $(DESTDIR)$(PREFIX)
+ INSTALL_BIN ?= $(INSTALL_ROOT)/bin
+ 
+ 
+@@ -270,6 +272,7 @@ all: utils $(TAGS) locallibs_then_dps8
+ #	$(CC) remote.c -o remote fnp_udplib.o
+ 
+ install: all
++	install -d $(INSTALL_BIN)
+ 	cp dps8$(EXE) $(INSTALL_BIN)/dps8$(EXE)
+ 
+ cscope:

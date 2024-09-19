@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/02 13:11:52 phonohawk Exp $
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Char8.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Char8.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Internal.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Internal.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy/Char8.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy/Char8.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy/Internal.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy/Internal.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy/Legacy.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Lazy/Legacy.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Legacy.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Legacy.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Unsafe.hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Storable/ByteString/Unsafe.p_hi
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/HSvector-bytestring-${PKGVERSION}.o
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/include/bytestring.h
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-bytestring-${PKGVERSION}.a
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-bytestring-${PKGVERSION}_p.a
+lib/vector-bytestring-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/vector-bytestring-${PKGVERSION}/LICENSE

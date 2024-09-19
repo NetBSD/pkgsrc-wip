@@ -1,0 +1,8 @@
+libRocket is the C++ user interface package based on the HTML and CSS
+standards. It is designed as a complete solution for any project's interface
+needs.
+
+libRocket uses the time-tested open standards XHTML1.0 and CSS2.0 (while
+borrowing features from HTML5 and CSS3), and extends them with features
+suited towards real-time applications. Because of this, you don't have to
+learn a whole new proprietary technology like other libraries in this space.

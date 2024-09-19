@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2012/01/18 15:02:39 moubctez Exp $
+
+RMD160 (fullblogplugin_0.11-r7969.zip) = ca9749e75d0fa103d3657d1ce101f84e94dbdcb3
+Size (fullblogplugin_0.11-r7969.zip) = 44647 bytes
+SHA1 (patch-aa) = 1e9833c9c9812471dae03c96b19e952f4d335fdb

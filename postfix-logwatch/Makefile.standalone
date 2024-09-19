@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.standalone,v 1.1 2013/07/01 11:41:44 noud4 Exp $
+
+INSTALL_TARGET=		install-standalone
+PLIST_SRC=		../../wip/postfix-logwatch/PLIST
+EGDIR=			${PREFIX}/share/examples/${FILTER_NAME}
+CONF_FILES+=		${EGDIR}/${FILTER_NAME}.conf ${PKG_SYSCONFDIR}/${FILTER_NAME}.conf
+INSTALLATION_DIRS+=	${EGDIR:S|${PREFIX}/||}
+PLIST_SUBST+=		FILTER=${FILTER_NAME}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/${FILTER_NAME}.conf ${DESTDIR}${EGDIR}

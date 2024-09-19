@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/07/17 18:11:36 kheinz Exp $
+
+--- bin/mj_shutdown.orig	2002-04-20 21:09:52.000000000 +0200
++++ bin/mj_shutdown
+@@ -8,6 +8,8 @@ BEGIN {
+   $::UMASK  = "007";
+   $::UID    = "baduid";
+   $::GID    = "badgid";
++$::UID    =getpwnam($::UID);
++$::GID    =getgrnam($::GID);
+ #  $Exporter::Verbose = 1;
+ #  $AutoLoader::Verbose = 1;
+ #  $AutoLoader::Notruncate = 1;

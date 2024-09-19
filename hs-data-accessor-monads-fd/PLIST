@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 08:38:18 phonohawk Exp $
+lib/data-accessor-monads-fd-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Monad/FD/State.hi
+lib/data-accessor-monads-fd-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Monad/FD/State.p_hi
+lib/data-accessor-monads-fd-${PKGVERSION}/${HASKELL_VERSION}/HSdata-accessor-monads-fd-${PKGVERSION}.o
+lib/data-accessor-monads-fd-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-accessor-monads-fd-${PKGVERSION}.a
+lib/data-accessor-monads-fd-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-accessor-monads-fd-${PKGVERSION}_p.a
+lib/data-accessor-monads-fd-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-accessor-monads-fd-${PKGVERSION}/LICENSE

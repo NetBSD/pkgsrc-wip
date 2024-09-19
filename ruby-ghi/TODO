@@ -1,0 +1,2 @@
+- Review that patches/patch-lib_ghi_client.rb actually DTRT (i.e. honor and
+  verify SSL certs instead of just ignoring them)

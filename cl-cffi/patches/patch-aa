@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/02/20 10:41:23 ddeus Exp $
+
+--- uffi-compat/uffi-compat.lisp.orig	2010-08-22 12:42:31.000000000 +0000
++++ uffi-compat/uffi-compat.lisp
+@@ -29,7 +29,7 @@
+ ;;; Code borrowed from UFFI is Copyright (c) Kevin M. Rosenberg.
+ 
+ (defpackage #:cffi-uffi-compat
+-  (:nicknames #:uffi) ;; is this a good idea?
++  ;(:nicknames #:uffi) ;; is this a good idea?
+   (:use #:cl)
+   (:export
+ 

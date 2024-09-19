@@ -1,0 +1,6 @@
+A little library which renders LaTeX to various
+formats, using applications on your system like
+latex, pdflatex, bibtex, dvips, ps2eps, and convert.
+LaTeX is automatically run as many times as necessary
+to achieve a clean compile (with a user-provided max
+number of attempts), and Bibtex processing is supported.

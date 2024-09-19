@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.2 2006/09/02 16:38:13 dhowland Exp $
+
+--- azureus.orig	2004-11-01 07:35:05.000000000 -0500
++++ azureus
+@@ -1,8 +1,8 @@
+-#!/bin/bash
++#!@PREFIX@/bin/bash
+ 
+ ######## CONFIGURE ########
+-JAVA_PROGRAM_DIR=""				# use full path to java bin dir, ex. "/usr/java/j2sdk1.4.2/bin/"
+-#PROGRAM_DIR="/home/username/apps/azureus"	# use full path to Azureus bin dir
++JAVA_PROGRAM_DIR="@PREFIX@/bin/"		# use full path to java bin dir, ex. "/usr/java/j2sdk1.4.2/bin/"
++PROGRAM_DIR="@PREFIX@/share/azureus"		# use full path to Azureus bin dir
+ ##########i#################
+ 
+ MSG0="Loading Azureus:"
+@@ -103,8 +103,8 @@ echo $MSG0
+ cd ${PROGRAM_DIR}
+ 
+ 
+-echo "${JAVA_PROGRAM_DIR}java -Xms16m -Xmx128m -cp \"${CLASSPATH}\" -Djava.library.path=\"${PROGRAM_DIR}\" -Dazureus.install.path=\"$PROGRAM_DIR\" org.gudy.azureus2.ui.swt.Main '$@'"
+-${JAVA_PROGRAM_DIR}java -Xms16m -Xmx128m -cp "${CLASSPATH}" -Djava.library.path="${PROGRAM_DIR}" -Dazureus.install.path="${PROGRAM_DIR}" org.gudy.azureus2.ui.swt.Main "$@"
++echo "${JAVA_PROGRAM_DIR}sun15-java -Xms16m -Xmx128m -cp \"${CLASSPATH}\" -Djava.library.path=\"${PROGRAM_DIR}\" -Dazureus.install.path=\"$PROGRAM_DIR\" org.gudy.azureus2.ui.swt.Main '$@'"
++${JAVA_PROGRAM_DIR}sun15-java -Xms16m -Xmx128m -cp "${CLASSPATH}" -Djava.library.path="${PROGRAM_DIR}" -Dazureus.install.path="${PROGRAM_DIR}" org.gudy.azureus2.ui.swt.Main "$@"
+ 
+ echo "Azureus TERMINATED."
+ 

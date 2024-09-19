@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2013/07/01 11:41:44 noud4 Exp $
+#
+# used by wip/amavis-logwatch/Makefile
+# used by wip/postfix-logwatch/Makefile
+
+USE_LANGUAGES=	# none
+REPLACE_PERL+=	${FILTER_NAME}
+NO_BUILD=	yes
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	Makefile ${FILTER_NAME}
+SUBST_SED.path+=	-e "s|/etc/logwatch|${PKG_SYSCONFDIR}|g"
+SUBST_SED.path+=	-e "s|/usr/local|${PREFIX}|g"
+SUBST_MESSAGE.path=	Fixing install path.
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+PKG_CONFIG=		yes
+OWN_DIRS+=		${PKG_SYSCONFDIR}

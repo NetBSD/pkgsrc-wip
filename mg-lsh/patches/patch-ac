@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- sample.etc.autoexec.orig	Sat Jan  8 09:22:53 2000
++++ sample.etc.autoexec
+@@ -21,10 +21,10 @@ map g:=/home                         # Y
+ map h:=/usr                          # you map x: and y: onto /bin and /usr/bin 
+ ###############################################################################
+ #  Alias some programs - the aliases may not work if you do not have the progs.
+-alias help="/usr/bin/man lsh"        # Be nice to newcomers.
+-alias nc=/usr/bin/mc                 # The illusion is complete...
+-alias mem="/bin/free -bt"            # Not that you should worry about this.
+-alias edit=/usr/bin/joe              # Any easy editor ;-).
++alias help="man lsh"                 # Be nice to newcomers.
++alias nc=mc                          # The illusion is complete...
++alias mem=free                       # Not that you should worry about this.
++alias edit=joe                       # Any easy editor ;-).
+ ###############################################################################
+ #  We can not delete a current drive.
+ # g: ; f: ; zap c:                     

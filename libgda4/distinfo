@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.5 2013/06/25 14:19:41 noud4 Exp $
+
+RMD160 (libgda-4.2.13.tar.xz) = f487af2620fc241e6608a80b863b40a81ea3c548
+SHA512 (libgda-4.2.13.tar.xz) = 54506b65ac7127ab67168f8169aba4d366ea1c7f9e5401c27c00a7eee7ea5ce33821faef0c7f2d397455869bd98025990b527cb7ad8cca1a88d32bd699d44f22
+Size (libgda-4.2.13.tar.xz) = 11247816 bytes
+SHA1 (patch-ab) = 574f75157ffd29e06cac243e10951987ed9ccf8c
+SHA1 (patch-ad) = 42cdcc7d0b90ac7ccf7d6209ddb1e804bdc05bf0
+SHA1 (patch-al) = d780a8758cac87a4b00b1ff7c2e08fa24a216d29
+SHA1 (patch-cb) = ce3b43bb7055c286f61afa20d5c32e8eb32b0faf
+SHA1 (patch-db) = 3a87d0f28420381511df512852764a5736571b7e
+SHA1 (patch-eb) = 7dfe492ba794bcaf334e45c803f95748b9c2277f
+SHA1 (patch-fb) = 0d6aba2322847aadc72968f0c86a28f0fe4532d0
+SHA1 (patch-ga) = 712ada40dd3269ec8016ae7ccfce7ad5b0fa246a
+SHA1 (patch-libgda-ui_gdaui-login_h) = 5bae78c3b0c80f9828212fd32815031ccd4643ff

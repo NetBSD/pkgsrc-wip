@@ -1,0 +1,33 @@
+$NetBSD$
+
+--- src/control/display/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/control/display/Makefile
+@@ -16,7 +16,7 @@ ifeq ($(ARCH), MACOSX)
+    # when running from elsewhere, you *must* hardcode path.
+    ifeq ($(PKG), TRUE)
+    else
+-      CXXFLAGS += -DAPP_PATH=\"$(DESTDIR)/$(APP).app\"
++      CXXFLAGS += -DAPP_PATH=\"$(DESTDIR)/$(BINDIR)/$(APP).app\"
+    endif
+ else
+    OBJS += XDisplay.o
+@@ -48,15 +48,15 @@ depend:
+ -include depend
+ 
+ install: all
+-	$(INSTALL) $(LIBDISPLAY) $(LIBDESTDIR)
++	$(INSTALL) $(LIBDISPLAY) $(DESTDIR)/$(LIBDIR)
+ ifeq ($(ARCH), MACOSX)
+-	ditto $(APP)/build/Release/$(APP).app $(DESTDIR)/$(APP).app
++	ditto $(APP)/build/Release/$(APP).app $(DESTDIR)/$(BINDIR)/$(APP).app
+ endif
+ 
+ uninstall:
+-	$(RM) $(LIBDESTDIR)/$(LIBDISPLAY)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(LIBDISPLAY)
+ ifeq ($(ARCH), MACOSX)
+-	$(RM) -r $(DESTDIR)/$(APP).app
++	$(RM) -r $(DESTDIR)/$(BINDIR)/$(APP).app
+ endif
+ 
+ clean:

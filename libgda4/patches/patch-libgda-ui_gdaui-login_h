@@ -1,0 +1,10 @@
+--- libgda-ui/gdaui-login.h.orig	2012-05-29 23:44:58.000000000 +0000
++++ libgda-ui/gdaui-login.h	2012-05-29 23:45:10.000000000 +0000
+@@ -21,6 +21,7 @@
+ #define __GDAUI_LOGIN_H__
+ 
+ #include <gtk/gtk.h>
++#include <libgda/gda-config.h>
+ 
+ G_BEGIN_DECLS
+ 

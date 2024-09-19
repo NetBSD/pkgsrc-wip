@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/strophe.h
+lib/libstrophe.la
+lib/pkgconfig/libstrophe.pc

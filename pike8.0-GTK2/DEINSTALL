@@ -1,0 +1,19 @@
+ $NetBSD: INSTALL,v 1.2 2006/06/15 20:40:16 jlam Exp $
+NAME=@NAME@
+PIKE_EXECUTABLE=@PIKE_EXECUTABLE@
+PIKE=${PREFIX}/bin/${PIKE_EXECUTABLE}
+MODULE_DIR=${PREFIX}/lib/${PIKE_EXECUTABLE}
+case ${STAGE} in
+  DEINSTALL)
+  ${ECHO} "Removing precompiled modules.";
+  cd ${MODULE_DIR} &&
+  {
+    IFS=" "
+    DIRS="modules"
+    for x in ${DIRS} ; do
+      ${ECHO} "Removing precompiled files in $x..."
+      rm -f $x/GTK.pmod.o $x/GTK2.pmod.o
+    done
+  } 
+  ;;
+esac

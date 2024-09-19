@@ -1,0 +1,7 @@
+$NetBSD$
+
+RMD160 (lumina/lumina-1.2.0-p1.tar.gz) = 3f19624efd833a428f3a236bb3c04d2afe94e4a2
+SHA512 (lumina/lumina-1.2.0-p1.tar.gz) = 8490e2b0f2fa08b2d63ec688f9993771ea935129a2947ef7bfa1874424cbede6d8877083ce90658c283858e67397383b5bab536388e9222b440015ebdf8b2919
+Size (lumina/lumina-1.2.0-p1.tar.gz) = 56032695 bytes
+SHA1 (patch-LuminaOS-NetBSD.cpp) = 891ee5634e489b84f73ec6cc821a6955ff69d578
+SHA1 (patch-OS-detect.pri) = d92d95bc56083d131c1029038a7c5d59433cfb3e

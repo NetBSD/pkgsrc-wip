@@ -1,0 +1,52 @@
+$NetBSD$
+
+Don't use $< in target rules.
+
+Pass operands after options.
+
+Remove non-portable (and unnecessary) -n flag to ln(1).
+
+--- Makefile.in.orig	Mon Jul 12 08:39:03 2021
++++ Makefile.in
+@@ -9793,20 +9793,20 @@ all-local: $(ALL_LOCAL_RULES)
+ # autogen.sh (as we do in Debian, to update the Autotools build system)
+ # it will try to build it.
+ $(srcdir)/libglnx/Makefile-libglnx.am.inc: $(srcdir)/libglnx/Makefile-libglnx.am
+-	sed -e 's,$$(libglnx_srcpath),libglnx,g' < $< > $@
++	sed -e 's,$$(libglnx_srcpath),libglnx,g' < $(srcdir)/libglnx/Makefile-libglnx.am > $@
+ # See the comment for the similar libglnx bit above
+ $(srcdir)/bsdiff/Makefile-bsdiff.am.inc: $(srcdir)/bsdiff/Makefile-bsdiff.am
+-	sed -e 's,$$(libbsdiff_srcpath),bsdiff,g' < $< > $@
++	sed -e 's,$$(libbsdiff_srcpath),bsdiff,g' < $(srcdir)/bsdiff/Makefile-bsdiff.am > $@
+ 
+ # TODO: GLIB_CHECK_VERSION > 2.5x: use --output instead of mv (see https://github.com/ostreedev/ostree/pull/1329)
+ src/libostree/ostree-enumtypes.h: src/libostree/ostree-enumtypes.h.template $(ENUM_TYPES)
+ 	$(AM_V_GEN) $(GLIB_MKENUMS) \
+-	--template $< \
++	--template src/libostree/ostree-enumtypes.h.template \
+ 	$(ENUM_TYPES) > $@.tmp && mv $@.tmp $@
+ 
+ src/libostree/ostree-enumtypes.c: src/libostree/ostree-enumtypes.c.template src/libostree/ostree-enumtypes.h $(ENUM_TYPES)
+ 	$(AM_V_GEN) $(GLIB_MKENUMS) \
+-	--template $< \
++	--template src/libostree/ostree-enumtypes.c.template \
+ 	$(ENUM_TYPES) > $@.tmp && mv $@.tmp $@
+ 
+ @BUILDOPT_INTROSPECTION_TRUE@OSTree-1.0.gir: libostree-1.la Makefile
+@@ -9816,14 +9816,14 @@ install-mkdir-remotes-d-hook:
+ 
+ src/ostree/parse-datetime.c: src/ostree/parse-datetime.y Makefile
+ 	mkdir -p src/ostree/
+-	$(AM_V_GEN) $(YACC) $< -o $@
++	$(AM_V_GEN) $(YACC) -o $@ src/ostree/parse-datetime.y
+ 
+ @BUILDOPT_USE_STATIC_COMPILER_TRUE@ostree-prepare-root : $(ostree_prepare_root_SOURCES)
+ @BUILDOPT_USE_STATIC_COMPILER_TRUE@	$(STATIC_COMPILER) -o $@ -static $(top_srcdir)/src/switchroot/ostree-prepare-root.c $(ostree_prepare_root_CPPFLAGS) $(AM_CFLAGS) $(DEFAULT_INCLUDES) -DOSTREE_PREPARE_ROOT_STATIC=1
+ 
+ tests/libreaddir-rand.so: Makefile
+ 	mkdir -p tests/
+-	$(AM_V_GEN) ln -fns ../.libs/libreaddir-rand.so tests/
++	$(AM_V_GEN) ln -fs ../.libs/libreaddir-rand.so tests/
+ 
+ tests/%-symlink-stamp: % Makefile
+ 	$(AM_V_GEN) set -e; \

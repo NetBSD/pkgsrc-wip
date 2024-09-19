@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2003/08/23 20:19:43 adrian_p Exp $
+
+--- Makefile.orig	Sat Aug 23 21:17:40 2003
++++ Makefile	Sat Aug 23 21:18:28 2003
+@@ -1,7 +1,4 @@
+-PREFIX=/usr/local
+-CC=gcc
+-CFLAGS=-Wall -ansi -pedantic -D_GNU_SOURCE
+-CFLAGS+= -DIPV6
++CFLAGS+= -DIPV6 -D_GNU_SOURCE
+ OBJS=connect.o direct.o direct6.o http.o socks5.o proxy.o main.o
+ 
+ prtunnel:	$(OBJS)

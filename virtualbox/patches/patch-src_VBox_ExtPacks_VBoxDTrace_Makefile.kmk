@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/VBox/ExtPacks/VBoxDTrace/Makefile.kmk.orig	2016-03-04 19:28:27.000000000 +0000
++++ src/VBox/ExtPacks/VBoxDTrace/Makefile.kmk
+@@ -292,6 +292,12 @@ if defined(VBOX_WITH_EXTPACK_VBOXDTRACE)
+  if1of (freebsd.x86, $(VBOX_WITH_EXTPACK_OS_ARCHS))
+   VBOX_VBOXDTRACE_FILES += $(call VBOX_VBOXDTRACE_FILES_MACRO,freebsd.x86,bin,so)
+  endif
++ if1of (netbsd.amd64, $(VBOX_WITH_EXTPACK_OS_ARCHS))
++  VBOX_VBOXDTRACE_FILES += $(call VBOX_VBOXDTRACE_FILES_MACRO,netbsd.amd64,bin,so)
++ endif
++ if1of (netbsd.x86, $(VBOX_WITH_EXTPACK_OS_ARCHS))
++  VBOX_VBOXDTRACE_FILES += $(call VBOX_VBOXDTRACE_FILES_MACRO,netbsd.x86,bin,so)
++ endif
+  if1of (linux.amd64, $(VBOX_WITH_EXTPACK_OS_ARCHS))
+   VBOX_VBOXDTRACE_FILES += $(call VBOX_VBOXDTRACE_FILES_MACRO,linux.amd64,bin,so)
+  endif
+@@ -346,4 +352,3 @@ endif # VBOX_WITH_EXTPACK_VBOXDTRACE
+ 
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

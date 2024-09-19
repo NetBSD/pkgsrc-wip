@@ -1,0 +1,3 @@
+End Of thread allow to expire of archive old mails in a mailbox taking into
+account threading : old threads are archived while still alive threads are
+kept entire.

@@ -1,0 +1,13 @@
+$NetBSD$
+Fix a bashism
+--- vendor/github.com/docker/docker/hack/dockerfile/install/containerd.installer.orig	2019-01-17 03:38:47.000000000 +0000
++++ vendor/github.com/docker/docker/hack/dockerfile/install/containerd.installer
+@@ -19,7 +19,7 @@ install_containerd() {
+ 		export EXTRA_LDFLAGS='-extldflags "-fno-PIC -static"'
+ 
+ 		# Reset build flags to nothing if we want a dynbinary
+-		if [ "$1" == "dynamic" ]; then
++		if [ "$1" = "dynamic" ]; then
+ 			export BUILDTAGS=''
+ 			export EXTRA_FLAGS=''
+ 			export EXTRA_LDFLAGS=''

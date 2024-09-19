@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.2 2008/02/29 05:03:30 dhowland Exp $
+
+--- Makefile.orig	2006-12-29 05:16:08.000000000 -0500
++++ Makefile
+@@ -6,7 +6,7 @@
+ 
+ # Can be: "linux", "macosx", "xmingw" or "mingw32"
+ #SYSTEM		:= "macosx"
+-#SYSTEM		:= "linux"
++SYSTEM		:= "linux"
+ #SYSTEM		:= "xmingw"
+ #SYSTEM		:= "mingw32"
+ 
+@@ -17,8 +17,8 @@ SOUND_CODE	:= "sdlmixer"
+ #SOUND_CODE	:= "oldmix"
+ 
+ # Destdir is where the base dir where everything is installed
+-DESTDIR		:= ../dist
+-#DESTDIR 	:= /
++#DESTDIR		:= ../dist
++DESTDIR 	:= /
+ 
+ DATA		:= ../data
+ #DATA		:= /path/to/where/data/is/unpacked/
+@@ -26,9 +26,9 @@ DATA		:= ../data
+ # Prefix is the *actual* base directory
+ # Bindir is where the cdogs binary is placed
+ # Datadir is where the data is
+-PREFIX		:= /usr/local
+-BINDIR		:= $(PREFIX)/games/bin
+-DATADIR		:= $(PREFIX)/share/games/cdogs
++#PREFIX		:= /usr/local
++BINDIR		:= $(PREFIX)/bin
++DATADIR		:= $(PREFIX)/share/cdogs
+ DOCDIR		:= $(PREFIX)/share/doc/cdogs
+ 
+ # The following are for a self-contained install
+@@ -45,15 +45,15 @@ DOCDIR		:= $(PREFIX)/share/doc/cdogs
+ 
+ CF_OPTIMISE	+= -O2
+ 
+-CC		:= gcc
+-STRIP		:= strip
++#CC		:= gcc
++#STRIP		:= strip
+ 
+ # Set to 1 for debugging
+ DEBUG=0
+ DEBUG_PROFILE=0
+ 
+ ### Change this to yes, once you are ready
+-I_AM_CONFIGURED=no
++I_AM_CONFIGURED=yes
+ 
+ # Name of the cdogs binary (probably doesn't need to be changed)
+ CDOGS=cdogs

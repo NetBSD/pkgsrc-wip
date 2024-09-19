@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/msedge/__init__.py
+${PYSITELIB}/msedge/__init__.pyc
+${PYSITELIB}/msedge/__init__.pyo
+${PYSITELIB}/msedge/selenium_tools/__init__.py
+${PYSITELIB}/msedge/selenium_tools/__init__.pyc
+${PYSITELIB}/msedge/selenium_tools/__init__.pyo
+${PYSITELIB}/msedge/selenium_tools/options.py
+${PYSITELIB}/msedge/selenium_tools/options.pyc
+${PYSITELIB}/msedge/selenium_tools/options.pyo
+${PYSITELIB}/msedge/selenium_tools/remote_connection.py
+${PYSITELIB}/msedge/selenium_tools/remote_connection.pyc
+${PYSITELIB}/msedge/selenium_tools/remote_connection.pyo
+${PYSITELIB}/msedge/selenium_tools/service.py
+${PYSITELIB}/msedge/selenium_tools/service.pyc
+${PYSITELIB}/msedge/selenium_tools/service.pyo
+${PYSITELIB}/msedge/selenium_tools/webdriver.py
+${PYSITELIB}/msedge/selenium_tools/webdriver.pyc
+${PYSITELIB}/msedge/selenium_tools/webdriver.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

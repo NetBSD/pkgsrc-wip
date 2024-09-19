@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/14 22:05:45 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/gravipy/__init__.py
+${PYSITELIB}/gravipy/__init__.pyc
+${PYSITELIB}/gravipy/__init__.pyo
+${PYSITELIB}/gravipy/tensorial.py
+${PYSITELIB}/gravipy/tensorial.pyc
+${PYSITELIB}/gravipy/tensorial.pyo

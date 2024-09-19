@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/21 17:56:30 christtrekker Exp $
+lib/X11/fonts/TTF/${PKGNAME}.ttf

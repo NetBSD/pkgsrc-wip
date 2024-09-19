@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:26:06 jihbed Exp $
+include/scscp.h
+include/scscptypes.h
+include/scscpxx.h
+info/scscp.info
+lib/libscscp.a
+lib/libscscpxx.a

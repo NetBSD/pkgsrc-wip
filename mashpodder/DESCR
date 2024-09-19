@@ -1,0 +1,8 @@
+Mashpodder allows the user to download podcast episodes.
+The user can choose to save these episodes in a named directory
+or in a date-based directory, so the most recent episodes are in one folder.
+Or, the user can combine this by having some podcasts in a named directory
+and others in the date-based directory.
+The user can choose to download all, none, or a set number of episodes per feed.
+The user can also choose to mark the episodes as downloaded
+which can be used to 'catch up' to a podcast.

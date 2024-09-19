@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/25 12:54:20 jihbed Exp $
+bin/gvariant-cat
+bin/gvariant-serialise
+include/gvariant/glib/gvariant-loadstore.h
+include/gvariant/glib/gvariant.h
+include/gvariant/glib/gvarianttype.h
+lib/libgvariant.la
+lib/pkgconfig/gvariant.pc
+share/gtk-doc/html/gvariant/gvariant-GVariant-loadstore.html
+share/gtk-doc/html/gvariant/gvariant-GVariant.html
+share/gtk-doc/html/gvariant/gvariant-GVariantType.html
+share/gtk-doc/html/gvariant/gvariant-GVariantTypeClass.html
+share/gtk-doc/html/gvariant/gvariant.devhelp
+share/gtk-doc/html/gvariant/gvariant.devhelp2
+share/gtk-doc/html/gvariant/gvariant.html
+share/gtk-doc/html/gvariant/home.png
+share/gtk-doc/html/gvariant/index.html
+share/gtk-doc/html/gvariant/index.sgml
+share/gtk-doc/html/gvariant/left.png
+share/gtk-doc/html/gvariant/right.png
+share/gtk-doc/html/gvariant/style.css
+share/gtk-doc/html/gvariant/up.png

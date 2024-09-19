@@ -1,0 +1,2 @@
+Provides methods for dealing with MIME (RFC 2045) and related e-mail
+(RFC 822/2822/5322) standards.

@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/attrs_strict/__init__.py
+${PYSITELIB}/attrs_strict/__init__.pyc
+${PYSITELIB}/attrs_strict/__init__.pyi
+${PYSITELIB}/attrs_strict/__init__.pyo
+${PYSITELIB}/attrs_strict/_commons.py
+${PYSITELIB}/attrs_strict/_commons.pyc
+${PYSITELIB}/attrs_strict/_commons.pyi
+${PYSITELIB}/attrs_strict/_commons.pyo
+${PYSITELIB}/attrs_strict/_error.py
+${PYSITELIB}/attrs_strict/_error.pyc
+${PYSITELIB}/attrs_strict/_error.pyi
+${PYSITELIB}/attrs_strict/_error.pyo
+${PYSITELIB}/attrs_strict/_type_validation.py
+${PYSITELIB}/attrs_strict/_type_validation.pyc
+${PYSITELIB}/attrs_strict/_type_validation.pyi
+${PYSITELIB}/attrs_strict/_type_validation.pyo
+${PYSITELIB}/attrs_strict/_version.py
+${PYSITELIB}/attrs_strict/_version.pyc
+${PYSITELIB}/attrs_strict/_version.pyi
+${PYSITELIB}/attrs_strict/_version.pyo
+${PYSITELIB}/attrs_strict/py.typed

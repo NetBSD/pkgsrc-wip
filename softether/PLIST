@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/vpnbridge
+bin/vpnclient
+bin/vpncmd
+bin/vpnserver
+libexec/vpnbridge/hamcore.se2
+libexec/vpnbridge/vpnbridge
+libexec/vpnclient/hamcore.se2
+libexec/vpnclient/vpnclient
+libexec/vpncmd/hamcore.se2
+libexec/vpncmd/vpncmd
+libexec/vpnserver/hamcore.se2
+libexec/vpnserver/vpnserver
+share/doc/softether/AUTHORS.TXT
+share/doc/softether/LICENSE.TXT
+share/doc/softether/README.TXT
+share/doc/softether/WARNING.TXT

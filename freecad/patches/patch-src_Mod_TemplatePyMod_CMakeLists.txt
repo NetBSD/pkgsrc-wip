@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/Mod/TemplatePyMod/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/TemplatePyMod/CMakeLists.txt
+@@ -18,5 +18,5 @@ INSTALL(
+         PythonQt.py
+         Tests.py
+     DESTINATION
+-        Mod/TemplatePyMod
++        freecad/Mod/TemplatePyMod
+ )

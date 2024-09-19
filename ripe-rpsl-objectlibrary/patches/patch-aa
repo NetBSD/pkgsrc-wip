@@ -1,0 +1,10 @@
+--- Makefile.orig	2005-06-17 14:52:52.000000000 +1000
++++ Makefile	2005-06-17 14:53:04.000000000 +1000
+@@ -1,5 +1,7 @@
+ include Makefile.site
+ 
++all:	$(RIPLIBDIR)/librpsl.a
++
+ $(RIPLIBDIR)/librpsl.a:
+ 	(cd src && make)
+ 

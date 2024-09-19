@@ -1,0 +1,6 @@
+This is the iterative solver template library which provides generic sparse
+matrix/vector classes and a variety of solvers based on these classes. A special
+feature is the use of templates to exploit the recursive block structure of
+finite element matrices at compile time. Available solvers include Krylov
+methods, (block-) incomplete decompositions and aggregation-based
+algebraic multigrid

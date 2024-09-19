@@ -1,0 +1,5 @@
+GWSurrogate is an easy to use interface to gravitational wave surrogate models
+Surrogates provide a fast and accurate evaluation mechanism for gravitational
+waveforms which would otherwise be found through solving differential
+equations. These equations must be solved in the ``building" phase, which
+was performed using other codes

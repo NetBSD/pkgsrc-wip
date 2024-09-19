@@ -1,0 +1,7 @@
+This is the GTK-server. The GTK-server is a small tool
+to enable GUI access for shell scripts and interpreted
+programming languages.
+
+It offers a stream-oriented interface which uses the
+S-expression syntax. Please consult the manpages and
+demonstration programs for details.

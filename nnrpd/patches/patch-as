@@ -1,0 +1,8 @@
+$NetBSD: patch-as,v 1.2 2005/01/30 22:51:34 hfath Exp $
+
+--- doc/nnrpd.8.orig	1997-12-09 00:48:50.000000000 +0100
++++ doc/nnrpd.8
+@@ -206,2 +206,2 @@ This is revision \\$3, dated \\$4.
+ .SH "SEE ALSO"
+-ctlinnd(8), innd(8), inn.conf(5), nnrp.access(5), signal(2), wildmat(3).
++nnrp.access(5), signal(2), wildmat(3).

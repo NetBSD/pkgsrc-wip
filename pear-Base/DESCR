@@ -1,0 +1,2 @@
+The Base component provides the basic functionality, such as autoloading,
+that all eZ Components need to function properly.

@@ -1,0 +1,20 @@
+GNU Typist (also called gtypist) is a universal typing tutor. You can learn
+correct typing and improve your skills by practicing its exercises on a
+regular basis. Its main features are:
+
+- It is free software released under the GNU General Public License. In
+  addition, it is an official program of the GNU project.
+- It comes with several typing tutorials: in Czech, English (Qwerty and Dvorak
+  keyboard), Russian and Spanish, as well as simpler exercices in German,
+  French and Norwegian.
+- It interprets a simple and intuitive scripting language that describes typing
+  tutorials. You can easily modify existing tutorials or create new ones
+  according to your needs.
+- It supports internationalization and already has an interface in Czech,
+  English, Finnish, French, German and Spanish.
+- Users can navigate through lessons through an easy to use arrow key based
+  menu interface. 'vi' up, down, left and right keys can be used too!
+- Thanks to its execution in text mode with the curses library, it can be
+  compiled and used on several operating systems, in particular on GNU/Linux
+  and GNU/HURD, on several variants of Unix, as well as on Windows/DOS with
+  the DJGPP compiler and the PDCURSES library.

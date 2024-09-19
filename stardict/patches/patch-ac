@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2010/09/09 08:58:25 rxg Exp $
+
+--- src/lib/sockets.cpp.orig	2007-09-12 09:11:41.000000000 +0000
++++ src/lib/sockets.cpp
+@@ -29,6 +29,9 @@ extern "C" {
+ # include <netdb.h>
+ # include <cerrno>
+ # include <fcntl.h>
++#if defined(__NetBSD__)
++# include <arpa/inet.h>
++#endif
+ }
+ #endif  // _WIN32
+ 
+@@ -158,7 +161,7 @@ gpointer Socket::dns_thread(gpointer dat
+ {
+     DnsQueryData *query_data = (DnsQueryData *)data;
+     struct  hostent *phost;
+-#ifndef _WIN32    
++#if !defined(_WIN32) && !defined(__NetBSD__)
+     struct  hostent hostinfo;
+     char buf[1024];
+     int ret;

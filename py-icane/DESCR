@@ -1,0 +1,5 @@
+pyicane is a Python wrapper for the Statistical Office of Cantabriaas (ICANE)
+metadata restful API. This module parses ICANEas json data and metadata into
+Python objects and common data structures such as Pandas dataframes [1].
+All ICANEas API classes and methods are covered; also, time-series data
+can be downloaded into a Python Pandas dataframe structure.

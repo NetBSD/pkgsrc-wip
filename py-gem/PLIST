@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/gem/__init__.py
+${PYSITELIB}/gem/__init__.pyc
+${PYSITELIB}/gem/__init__.pyo
+${PYSITELIB}/gem/common.py
+${PYSITELIB}/gem/common.pyc
+${PYSITELIB}/gem/common.pyo
+${PYSITELIB}/gem/matrix.py
+${PYSITELIB}/gem/matrix.pyc
+${PYSITELIB}/gem/matrix.pyo
+${PYSITELIB}/gem/plane.py
+${PYSITELIB}/gem/plane.pyc
+${PYSITELIB}/gem/plane.pyo
+${PYSITELIB}/gem/quaternion.py
+${PYSITELIB}/gem/quaternion.pyc
+${PYSITELIB}/gem/quaternion.pyo
+${PYSITELIB}/gem/ray.py
+${PYSITELIB}/gem/ray.pyc
+${PYSITELIB}/gem/ray.pyo
+${PYSITELIB}/gem/vector.py
+${PYSITELIB}/gem/vector.pyc
+${PYSITELIB}/gem/vector.pyo

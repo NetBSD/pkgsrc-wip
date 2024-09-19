@@ -1,0 +1,6 @@
+WPA-PSK dictionary attack. The PBKDF2 function makes 4096 SHA-1 passes for each
+passphrase, which takes quite a bit of time. However, if you are auditing
+WPA-PSK or WPA2-PSK networks, you can use this tool to identify weak passphrases
+that were used to generate the PMK. Supply a libpcap capture file that includes
+the 4-way handshake, a dictionary file of passphrases to guess with, and the
+SSID for the network.

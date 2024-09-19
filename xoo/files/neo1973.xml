@@ -1,0 +1,34 @@
+<neo1973>
+
+<!--
+	Date: Sun, 22 Jul 2007 20:24:31 +0800
+	From: Sean Moss-Pultz <sean@openmoko.com>
+	To: Paul Wouters <paul@xelerance.com>
+	Subject: Re: OpenMoko Pictures
+	Message-ID: <46A34C7F.9000203@openmoko.com>
+
+	> On a related question. I would like to publish the openmoko skin
+	> with the Fedora Xoo package. Since you are the copyright holder
+	> (or can speak on its behalf), is it okay to bundle these with xoo,
+	> and if so, what is the license I can attach to these skins?
+
+	Sure.
+
+-->
+
+<!--
+	Example config 'device' file for an neo1973.  
+	Hopefully the format is pretty self explanatory. 
+-->
+
+<!-- 
+     first define the window size, image and display geometry for your 
+     'fake' device.
+-->
+
+<device  width='660' height='1278' 
+         display_width='480' display_height='640' 
+         display_x='86' display_y='295' 
+	 img='neo1973.png' />
+
+</neo1973>

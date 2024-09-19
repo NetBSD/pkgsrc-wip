@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2007/08/30 22:39:15 fgudin Exp $
+
+RMD160 (shunt-1.7.2.tar.gz) = fe370847b63092bb91531c73c1f0520e58b9529e
+Size (shunt-1.7.2.tar.gz) = 25186 bytes
+SHA1 (patch-aa) = 00c93c3ea52d7199719e19cfa94df664d372ea04

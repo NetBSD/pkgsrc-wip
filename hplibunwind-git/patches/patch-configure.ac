@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- configure.ac.orig	2018-09-04 09:38:02.000000000 +0000
++++ configure.ac
+@@ -136,7 +136,7 @@ AC_MSG_RESULT([$enable_ptrace])
+ 
+ AC_ARG_ENABLE(setjmp,
+ 	AS_HELP_STRING([--enable-setjmp],[building libunwind-setjmp library]),,
+-        [AS_IF([test x$target_arch == x$host_arch], [enable_setjmp=yes], [enable_setjmp=no])]
++        [AS_IF([test x$target_arch = x$host_arch], [enable_setjmp=yes], [enable_setjmp=no])]
+ )
+ 
+ AC_ARG_ENABLE(documentation,
+@@ -179,6 +179,7 @@ AM_CONDITIONAL(ARCH_S390X, test x$target
+ AM_CONDITIONAL(OS_LINUX, expr x$target_os : xlinux >/dev/null)
+ AM_CONDITIONAL(OS_HPUX, expr x$target_os : xhpux >/dev/null)
+ AM_CONDITIONAL(OS_FREEBSD, expr x$target_os : xfreebsd >/dev/null)
++AM_CONDITIONAL(OS_NETBSD, expr x$target_os : xnetbsd >/dev/null)
+ AM_CONDITIONAL(OS_QNX, expr x$target_os : xnto-qnx >/dev/null)
+ 
+ AC_MSG_CHECKING([for ELF helper width])

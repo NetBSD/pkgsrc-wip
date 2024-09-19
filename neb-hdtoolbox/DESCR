@@ -1,0 +1,6 @@
+neb-hdtoolbox is a tool that can bootstrap a new disk for NetBSD/amiga
+without need of Amiga OS' "hdtoolbox" program.
+It can cross-partition any disk from ANY NetBSD platform.
+neb-hdtoolbox can also add, remove or resize existing NetBSD/amiga
+partitions, either from a running NetBSD/amiga or as a cross tool
+from any NetBSD platform.

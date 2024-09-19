@@ -1,0 +1,8 @@
+Apache XML-RPC is a Java implementation of XML-RPC, a
+popular protocol that uses XML over HTTP to implement
+remote procedure calls.
+
+Apache XML-RPC was previously known as Helma XML-RPC.
+If you have code using the Helma library, all you should
+have to do is change the import statements in your code
+from helma.xmlrpc.* to org.apache.xmlrpc.*.

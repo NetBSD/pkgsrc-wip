@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/07/16 01:36:20 prudhvikrishna Exp $
+--- arpdig.c	2009-07-15 19:46:20.000000000 -0500
++++ arpdig.c	2009-07-15 19:47:20.000000000 -0500
+@@ -4,13 +4,16 @@
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
+-#include <net/ethernet.h>
+ #include <net/if.h>
+ #include <net/if_dl.h>
+ #include <net/if_types.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+-
++#if defined(__NetBSD__)
++#include <net/if_ether.h>
++#else
++#include <net/ethernet.h>
++#endif
+ #include <ctype.h>
+ #include <err.h>
+ #include <ifaddrs.h>

@@ -1,0 +1,8 @@
+XPde Desktop Environment is a bunch of X11 programs, which make
+your desktop look exactly like Microsoft Windows XP(TM).
+
+XPde provides a window manager (XPwm), default "classic" theme,
+various applets, and applications like calculator, fileexplorer,
+notepad, fontview, regedit, and taskmanager.
+
+This package uses the Linux binary release.

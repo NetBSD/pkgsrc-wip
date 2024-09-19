@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2007/01/10 11:30:46 emil_s Exp $
+
+--- Examples/lhs2TeXpre.orig	2006-03-15 00:24:09.000000000 +0000
++++ Examples/lhs2TeXpre
+@@ -5,7 +5,7 @@
+ 
+ LHSHOME=..
+ 
+-if [ "$1" == "$2" ]; then
++if [ "$1" = "$2" ]; then
+   cp "$2" "$3"
+ else
+   if grep -q "^%include" "$1"; then

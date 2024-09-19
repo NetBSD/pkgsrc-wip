@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Arch/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Arch/CMakeLists.txt
+@@ -66,7 +66,7 @@ INSTALL(
+     FILES
+         ${Arch_SRCS}
+         ${Arch_QRC_SRCS}
+-    DESTINATION Mod/Arch
++    DESTINATION freecad/Mod/Arch
+ )
+ 
+ INSTALL(

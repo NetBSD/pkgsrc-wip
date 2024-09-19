@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/06 13:55:53 jihbed Exp $
+${PYSITELIB}/FixedPoint.py
+${PYSITELIB}/FixedPoint.pyc
+${PYSITELIB}/FixedPoint.pyo

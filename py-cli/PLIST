@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/climate/__init__.py
+${PYSITELIB}/climate/__init__.pyc
+${PYSITELIB}/climate/__init__.pyo
+${PYSITELIB}/climate/flags.py
+${PYSITELIB}/climate/flags.pyc
+${PYSITELIB}/climate/flags.pyo
+${PYSITELIB}/climate/log.py
+${PYSITELIB}/climate/log.pyc
+${PYSITELIB}/climate/log.pyo

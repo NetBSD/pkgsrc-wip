@@ -1,0 +1,4 @@
+JabRef is an open source bibliography reference manager. The native file format
+used by JabRef is BibTeX, the standard LaTeX bibliography format. JabRef runs
+on the Java VM (version 1.8 or newer), and works equally well on Windows, Linux,
+and Mac OS X.

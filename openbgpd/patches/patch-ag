@@ -1,0 +1,10 @@
+--- bgpd/rde_filter.c.orig	2006-02-10 07:05:09.000000000 +1000
++++ bgpd/rde_filter.c	2007-01-11 14:08:35.000000000 +1000
+@@ -16,6 +16,7 @@
+  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ #include <sys/types.h>
++#include <limits.h>
+ #include <sys/queue.h>
+ 
+ #include <limits.h>

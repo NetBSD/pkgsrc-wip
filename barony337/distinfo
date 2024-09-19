@@ -1,0 +1,9 @@
+$NetBSD$
+
+RMD160 (Barony-3.3.7.tar.gz) = a7dcbf8a6619e405ff214f9a46818767e037bcb9
+SHA512 (Barony-3.3.7.tar.gz) = e7091c55af798967afd6c8c162864bd3f9329c914ddfa31c44ae4de2cdb721fc7a22fc6984d0a132240d35ecb7c164bc4570cd36ac1faa073d939d608b988897
+Size (Barony-3.3.7.tar.gz) = 53830405 bytes
+SHA1 (patch-src_draw.cpp) = 735145f95b80eaa1296d9353e7d726c174558e0c
+SHA1 (patch-src_files.cpp) = 4c214574534cd9801a25d305d0b2a9112181423f
+SHA1 (patch-src_opengl.cpp) = 5f666dafbc21d73a0ce2ca8fa1a45c9439138a33
+SHA1 (patch-src_savepng.cpp) = e0f8388e0aebc39be6dc8b559b66d3833e6526fb

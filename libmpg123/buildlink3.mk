@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.2 2012/05/20 19:31:46 lokivit Exp $
+
+BUILDLINK_TREE+=	libmpg123
+
+.if !defined(LIBMPG123_BUILDLINK3_MK)
+LIBMPG123_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libmpg123+=	libmpg123>=1.12.3
+BUILDLINK_PKGSRCDIR.libmpg123?=		../../wip/libmpg123
+.endif # LIBMPG123_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libmpg123

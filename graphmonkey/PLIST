@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2013/01/28 00:17:33 othyro Exp $
+bin/graphmonkey
+share/graphmonkey/GraphMonkey.exe
+share/pixmaps/gm.png
+share/pixmaps/graphmonkey.png

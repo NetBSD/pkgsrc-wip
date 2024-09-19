@@ -1,0 +1,7 @@
+BogoMips (from "bogus" and MIPS) is an unscientific measurement of CPU
+speed made by the Linux kernel when it boots, to calibrate an internal
+busy-loop. An often-quoted definition of the term is "the number of
+million times per second a processor can do absolutely nothing."
+
+For further information, see the BogoMips FAQ at
+http://tldp.org/HOWTO/BogoMips/

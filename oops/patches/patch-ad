@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2004/09/09 21:48:42 shattered Exp $
+
+--- src/modules/transparent.c.orig	2001-12-02 12:10:21.000000000 +0300
++++ src/modules/transparent.c
+@@ -34,6 +34,9 @@
+ #include	<netinet/ip_fil.h>
+ #include	<netinet/ip_nat.h>
+ int		natfd;
++#ifndef	IPL_NAT
++#define	IPL_NAT	IPL_NAME
++#endif
+ #endif
+ 
+ #define	MODULE_NAME	"transparent"

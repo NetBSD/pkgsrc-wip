@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2013/03/03 19:46:48 othyro Exp $
+
+RMD160 (lilyterm-0.9.9.4.tar.gz) = cc285125f9bac96db0af5acf00d3ac0ed8c7d569
+Size (lilyterm-0.9.9.4.tar.gz) = 346180 bytes
+SHA1 (patch-configure) = 1867b50715a858014609df9eefd0741e395664e7
+SHA1 (patch-src_unit__test.sh) = ede31eac5e4e75e5fd2c0e90e99d24efb8e4575d

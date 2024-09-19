@@ -1,0 +1,29 @@
+$NetBSD$
+
+--- gtk/makefile.orig	2020-09-11 10:44:44.000000000 +0000
++++ gtk/makefile
+@@ -59,12 +59,12 @@ COMPLIB=$(SCINTILLA_DIR)/bin/scintilla.a
+ COMPONENT=$(srcdir)/../bin/libscintilla.$(SHAREDEXTENSION)
+ LEXILLA=$(srcdir)/../bin/liblexilla.$(SHAREDEXTENSION)
+ 
+-all: $(PROG) $(COMPONENT) $(LEXILLA)
++all: $(PROG)
+ 
+-vpath %.h $(srcdir) $(srcdir)/../src $(SCINTILLA_DIR)/include
++vpath %.h $(srcdir) $(srcdir)/../src $(prefix)/include
+ vpath %.cxx $(srcdir) $(srcdir)/../src
+ 
+-INCLUDES=-I $(SCINTILLA_DIR)/include -I $(srcdir)/../src
++INCLUDES=-I $(prefix)/include/scintilla -I $(srcdir)/../src
+ DEFINES += -DGTK
+ DEFINES += -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\"
+ 
+@@ -164,8 +164,6 @@ install:
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(libdir)
+ 
+ 	$(INSTALL) -m 755 $(PROG) $(DESTDIR)$(bindir)
+-	$(INSTALL) -m 755 $(COMPONENT) $(DESTDIR)$(libdir)
+-	$(INSTALL) -m 755 $(LEXILLA) $(DESTDIR)$(libdir)
+ 
+ 	for files in $(srcdir)/../src/*.properties $(srcdir)/../doc/*.html $(srcdir)/../doc/SciTEIco.png $(srcdir)/../doc/PrintHi.png $(srcdir)/../doc/SciTEIndicators.png; \
+ 	do \

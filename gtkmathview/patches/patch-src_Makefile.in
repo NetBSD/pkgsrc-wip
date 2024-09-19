@@ -1,0 +1,12 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/03/04 13:54:26 nros Exp $
+Don't link stdc++ (this is done anyway). Fixes build on Freebsd with clang.
+--- src/Makefile.in.orig	2007-10-15 07:06:05.000000000 +0000
++++ src/Makefile.in
+@@ -285,7 +285,6 @@ libmathview_la_LIBADD = \
+   $(MAYBE_BOXML_LIBADD) \
+   $(top_builddir)/src/engine/common/libengine_common.la \
+   $(top_builddir)/src/common/libcommon.la \
+-  -lstdc++ \
+   $(NULL)
+ 
+ all: all-recursive

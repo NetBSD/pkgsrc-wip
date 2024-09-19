@@ -1,0 +1,3 @@
+This package includes Prover9, an automated theorem prover
+for first-order and equational logic, and Mace4, which
+searches for finite models and counter examples.

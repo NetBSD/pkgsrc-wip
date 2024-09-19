@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Test/Gui/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Test/Gui/CMakeLists.txt
+@@ -59,7 +59,7 @@ SET_BIN_DIR(QtUnitGui QtUnitGui /Mod/Tes
+ SET_PYTHON_PREFIX_SUFFIX(QtUnitGui)
+ 
+ INSTALL(TARGETS QtUnitGui DESTINATION ${CMAKE_INSTALL_LIBDIR})
+-INSTALL(FILES ${TestGuiPy_SRCS} DESTINATION Mod/Test)
++INSTALL(FILES ${TestGuiPy_SRCS} DESTINATION freecad/Mod/Test)
+ 
+ SET(TestGuiIcon_SVG
+     Resources/icons/TestWorkbench.svg

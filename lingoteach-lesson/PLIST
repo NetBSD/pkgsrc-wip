@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 18:03:24 thomasklausner Exp $
+share/lingoteach/AUTHORS.lessons
+share/lingoteach/COPYING.lessons
+share/lingoteach/README.lessons
+share/lingoteach/data/countries.xml
+share/lingoteach/data/freedict.xml

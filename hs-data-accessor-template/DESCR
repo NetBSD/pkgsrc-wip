@@ -1,0 +1,2 @@
+Automate generation of Accessor's of the data-accessor package by
+Template Haskell functions.

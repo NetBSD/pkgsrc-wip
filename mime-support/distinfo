@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/20 19:59:08 briandealwis Exp $
+
+RMD160 (mime-support_3.62.tar.gz) = b89a413937f7c9364703cd3ebdec118c46378d8b
+SHA512 (mime-support_3.62.tar.gz) = 9fc3be41c8858b9ef6da02208035af4efaca0569cdd4e3a75d74e4fb6d23da41d1885583319f160265f973c80d020eec05e9fe733d6b70a06b3e8e17216d54c5
+Size (mime-support_3.62.tar.gz) = 37130 bytes
+SHA1 (patch-aa) = 31eb86d27a543b837fe3d3547f179975a228aebb
+SHA1 (patch-ab) = 7dcf993e8746814f52c270f9805cbf857d64b38c

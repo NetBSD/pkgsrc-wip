@@ -1,0 +1,6 @@
+This is a VERY EXPERIMENTAL plugin for syncing with Motorola phones
+using the AT command set. It supports syncing phonebook and calendar
+entries (ie. the contact and event object types). It will most
+likely mess up the data on your phone and any other members of the
+sync group, due to the limited data that can be stored on the phone.
+Use with caution and make backups!

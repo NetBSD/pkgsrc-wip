@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2012/12/03 13:51:05 othyro Exp $
+
+RMD160 (bmap-1.0.17.tar.gz) = 012b4361de10f02d3b9212d5c2cd4f25c62651f5
+Size (bmap-1.0.17.tar.gz) = 39631 bytes
+SHA1 (patch-aa) = eef75640628dcb16bd8cf91473e316f88e7abe04
+SHA1 (patch-mft_log.c) = 215efd571ba5eac65e34c41136cc0bd18fe9d70a

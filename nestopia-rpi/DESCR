@@ -1,0 +1,21 @@
+NEStopia is a portable Nintendo Entertainment System emulator
+written in C++ by Martin Freij and ported to Linux by R. Belmont.
+NEStopia strives for the most accurate emulation possible at the
+pixel-by-pixel and sample-by-sample level, and it has excellent
+mapper and UNIF board support as well. A few features:
+
+- Supports .nes and .unf/.unif format ROMs
+- Supports .fds discs
+- Supports .nsf music rips
+- All supported files can be extracted from zip or 7zip containers (an
+  archive browser is not yet included - this assumes the common
+  GoodSet case of one zip or 7zip per game)
+- Autodetection of PAL and NTSC format games
+
+This version is based on nestopia-1.40hnb19 and is optimized for Raspberry
+Pis running NetBSD.
+
+It only depends on SDL with a plain text settings file.  Extra options for
+changing the speed of the game frameskip, skipping soundsample playback,
+adding scanlines, changing to BGR color format and not waiting for sound to
+be played back faster performance.

@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (centrifuge-1.0.4-beta.tar.gz) = c41adb0ddbe11fe2d3cfb1628f7701b64ae980cd
+SHA512 (centrifuge-1.0.4-beta.tar.gz) = 859e456cc60552017bc755914f71ff890e5d1cc6e664b19ddf86d242603fe709a958f674fb47372afe4789a7773757fa7a6b87af0e552ade33edc5b119894938
+Size (centrifuge-1.0.4-beta.tar.gz) = 723189 bytes
+SHA1 (patch-Makefile) = 3d71ee94f39d5bab469f64a0e6d0bc2ff068b6ee

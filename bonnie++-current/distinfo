@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/06/01 15:26:59 hfath Exp $
+
+RMD160 (bonnie++-1.98.tgz) = c70149db5cba5bdf433ca556f72e4e1d98e5a435
+SHA512 (bonnie++-1.98.tgz) = 3cf70be4a20c58c80e29a140ec6d3c3884f1b4101e0fb63da0ea831fe4a5eb4e275bda2ce4eaf7d9c2bfb65742e985249b491cda8bdad85984a62f2fc19756c0
+Size (bonnie++-1.98.tgz) = 100339 bytes
+SHA1 (patch-Makefile.in) = 91e1a133dc7c092180189a0a609f57a5d3333792
+SHA1 (patch-bonnie++.cpp) = 2a0d92c597a5f46394111207a1496f265ec63b78

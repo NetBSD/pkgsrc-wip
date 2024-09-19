@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ua_parser/__init__.py
+${PYSITELIB}/ua_parser/__init__.pyc
+${PYSITELIB}/ua_parser/__init__.pyo
+${PYSITELIB}/ua_parser/_regexes.py
+${PYSITELIB}/ua_parser/_regexes.pyc
+${PYSITELIB}/ua_parser/_regexes.pyo
+${PYSITELIB}/ua_parser/user_agent_parser.py
+${PYSITELIB}/ua_parser/user_agent_parser.pyc
+${PYSITELIB}/ua_parser/user_agent_parser.pyo
+${PYSITELIB}/ua_parser/user_agent_parser_test.py
+${PYSITELIB}/ua_parser/user_agent_parser_test.pyc
+${PYSITELIB}/ua_parser/user_agent_parser_test.pyo

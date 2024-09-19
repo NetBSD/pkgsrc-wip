@@ -1,0 +1,3 @@
+SSTidy is an opensource CSS parser and optimiser.
+In opposite to most other CSS parsers, no regular expressions are used and
+thus CSSTidy has full CSS2 support and a higher reliability.

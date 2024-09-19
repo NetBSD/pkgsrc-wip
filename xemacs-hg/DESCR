@@ -1,0 +1,13 @@
+This is a build of XEmacs from today's repository head.
+It is by definition unstable. Use at your own risk.
+
+XEmacs is a self-documenting, customizable, extensible real-time
+display editor.
+
+Users new to XEmacs will be able to use basic features fairly rapidly
+by studying the tutorial and using the self-documentation features.
+XEmacs also has an extensive interactive manual browser.  It is easily
+extensible since its editing commands are written in Lisp.
+
+For a wide range of modes and extensions, also install
+editors/xemacs-packages.

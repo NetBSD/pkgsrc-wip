@@ -1,0 +1,5 @@
+The CSA library provides elementary connection-sets and operators for combining
+them. It also provides an iteration interface to such connection-sets enabling
+efficient iteration over existing connections with a small memory footprint also
+for very large networks. The CSA can be used as a component of neuronal network
+simulators or other tools

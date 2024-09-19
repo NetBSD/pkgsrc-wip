@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+
+Set absolute path for GS command.
+
+--- src/gvcver.h.orig	2010-04-25 23:44:25.000000000 -0700
++++ src/gvcver.h	2010-04-26 00:08:39.000000000 -0700
+@@ -75,7 +75,7 @@
+ #else
+ #if X11
+ #define INIFILE "gsview.ini"
+-#define GS_EXENAME  "gs"
++#define GS_EXENAME  "@GS_CMD@"
+ #define GS_DLLNAME  "libgs.so"
+ #else
+ #define GS_EXENAME  "gsos2.exe"

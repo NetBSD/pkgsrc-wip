@@ -1,0 +1,5 @@
+Maunium Matrix room alias proxy
+
+This is a simple room alias proxy that can respond to the [federation alias
+query endpoint]. The purpose is to allow creating room addresses with vanity
+domains without having to run a full-blown Matrix homeserver.

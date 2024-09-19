@@ -1,0 +1,2 @@
+A library providing the base utilities to handle RQL queries, such as a parser
+, a type inferencer

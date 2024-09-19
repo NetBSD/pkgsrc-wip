@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
+bin/tinyca2
+share/tinyca2/CA.pm
+share/tinyca2/CERT.pm
+share/tinyca2/GUI.pm
+share/tinyca2/GUI/CALLBACK.pm
+share/tinyca2/GUI/HELPERS.pm
+share/tinyca2/GUI/TCONFIG.pm
+share/tinyca2/GUI/WORDS.pm
+share/tinyca2/GUI/X509_browser.pm
+share/tinyca2/GUI/X509_infobox.pm
+share/tinyca2/HELPERS.pm
+share/tinyca2/KEY.pm
+share/tinyca2/OpenSSL.pm
+share/tinyca2/REQ.pm
+share/tinyca2/TCONFIG.pm
+share/tinyca2/templates/openssl.cnf

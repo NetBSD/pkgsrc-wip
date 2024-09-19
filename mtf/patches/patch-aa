@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/20 15:11:22 cjep Exp $
+
+--- Makefile.orig	Wed Sep 13 16:06:02 2000
++++ Makefile
+@@ -2,7 +2,7 @@ CC=gcc
+ 
+ #ARCH=-mpentiumpro -march=pentiumpro
+ 
+-CFLAGS=-Wall -O2 $(DEFINES) $(ARCH)
++CFLAGS+=-Wall
+ OFILES=mtf.o mtfread.o mtfutil.o
+ 
+ .SUFFIXES: .c .o

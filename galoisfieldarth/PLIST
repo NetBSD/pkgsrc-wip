@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 14:00:00 jihbed Exp $
+bin/GFPDerivTest
+bin/GaloisFieldOut
+bin/GaloisFieldTest
+bin/GaloisProto
+bin/GaloisShiftProto

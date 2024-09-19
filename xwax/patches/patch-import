@@ -1,0 +1,15 @@
+$NetBSD$
+
+Support pkgsrc's weird names for ffmpeg.
+
+--- import.orig	2018-01-19 20:40:49.000000000 +0000
++++ import
+@@ -28,7 +28,7 @@ case "$FILE" in
+ *)
+ 	echo "Calling fallback decoder..." >&2
+ 
+-	FFMPEG=$(which ffmpeg 2> /dev/null || which avconv 2> /dev/null)
++	FFMPEG=$(ls -1 @PREFIX@/bin | grep '^ffmpeg[0-9]*$' | tail -1)
+ 
+ 	if [ -z "$FFMPEG" ]; then
+ 		echo "$0: no ffmpeg or avconv available to decode file" >&2

@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.5 2015/08/06 07:56:45 thomasklausner Exp $
+
+RMD160 (debian-archive-keyring_2019.1_all.deb) = ecdefb6ff87b21ca06761afd281522bc26a565bb
+SHA512 (debian-archive-keyring_2019.1_all.deb) = 051b8507c9deba0d13dc0137ff43ae9db27b20b78c3437ca680046ae9b1c81ac505dc0a4460d4a83c4b256a04a2e57d1280eb2e8a3afb2a58f150ca6c37d0d63
+Size (debian-archive-keyring_2019.1_all.deb) = 75088 bytes
+RMD160 (debootstrap_1.0.114.tar.gz) = d59c1158d8fe3aa3ab2353f9f73a80b2fffb9e5a
+SHA512 (debootstrap_1.0.114.tar.gz) = 3eb6c3d50a403c6edde229a2da3840117f603e3e9c211f89c8b1aa759bdcf8001b5f115ddcd345601087886b6ee838972f377f3f244cf26879ca87445d2a895a
+Size (debootstrap_1.0.114.tar.gz) = 75613 bytes
+RMD160 (ubuntu-archive-keyring_2018.09.18.1-5_all.deb) = 6c15c475263738cedef58d70a34661c480026b23
+SHA512 (ubuntu-archive-keyring_2018.09.18.1-5_all.deb) = e60449a20b4f07fead3255bfb32b9abb70948f5879c4a4b5a3d3822b4096f28858af99d4dbed11568ebf2e18fc219e1398c52bf7708ffed3c698f6717ea47b78
+Size (ubuntu-archive-keyring_2018.09.18.1-5_all.deb) = 7432 bytes
+SHA1 (patch-Makefile) = c549532e9a5842b586a85a091eb1204c84f29859
+SHA1 (patch-debootstrap) = e26458e8485d185f5c1d14ed2ef6b90f49c8f3a2
+SHA1 (patch-functions) = 53c09d983608d7360c6ba503aaafd0c419610d23

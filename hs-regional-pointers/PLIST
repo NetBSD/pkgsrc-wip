@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 17:03:38 phonohawk Exp $
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/C/String/Region.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/C/String/Region.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Marshal/Alloc/Region.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Marshal/Alloc/Region.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Marshal/Array/Region.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Marshal/Array/Region.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Marshal/Utils/Region.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Marshal/Utils/Region.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Ptr/Region.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Ptr/Region.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Ptr/Region/Internal.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Ptr/Region/Internal.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Ptr/Region/Unsafe.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Ptr/Region/Unsafe.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Storable/Region.hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/Foreign/Storable/Region.p_hi
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/HSregional-pointers-${PKGVERSION}.o
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/libHSregional-pointers-${PKGVERSION}.a
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/libHSregional-pointers-${PKGVERSION}_p.a
+lib/regional-pointers-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/regional-pointers-${PKGVERSION}/LICENSE

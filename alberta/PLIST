@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 14:05:03 jihbed Exp $
+include/alberta/alberta.h
+include/alberta/alberta_inlines.h
+include/alberta/alberta_util.h
+include/alberta/alberta_util_inlines.h
+lib/libalberta_1d.la
+lib/libalberta_1d_debug.la
+lib/libalberta_2d.la
+lib/libalberta_2d_debug.la
+lib/libalberta_3d.la
+lib/libalberta_3d_debug.la
+lib/libalberta_util.la
+lib/libalberta_util_debug.la
+libexec/libtool.alberta
+share/alberta/Makefile.alberta
+share/alberta/${PKGNAME}-demo.tar.gz
+share/alberta/magic

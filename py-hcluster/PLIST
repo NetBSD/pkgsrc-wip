@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/09 21:31:41 jihbed Exp $
+${PYSITELIB}/_distance_wrap.so
+${PYSITELIB}/_hierarchy_wrap.so
+${PYSITELIB}/hcluster/__init__.py
+${PYSITELIB}/hcluster/__init__.pyc
+${PYSITELIB}/hcluster/__init__.pyo
+${PYSITELIB}/hcluster/distance.py
+${PYSITELIB}/hcluster/distance.pyc
+${PYSITELIB}/hcluster/distance.pyo
+${PYSITELIB}/hcluster/hierarchy.py
+${PYSITELIB}/hcluster/hierarchy.pyc
+${PYSITELIB}/hcluster/hierarchy.pyo

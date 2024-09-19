@@ -1,0 +1,4 @@
+py-libmpdclient2 is a Python library for making MPD (Music Player Daemon)
+clients. It replaces py-libmpdclient and is completely redesigned and written
+from the ground up. The result is a much smaller, simpler, more reliable, and
+more dynamic library.

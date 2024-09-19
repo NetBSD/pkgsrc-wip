@@ -1,0 +1,15 @@
+$NetBSD$
+
+Honor LDFLAGS.
+
+--- Makefile.in.orig	2004-03-31 12:48:27.000000000 +0000
++++ Makefile.in
+@@ -23,7 +23,7 @@ OBJS = dcdis.o symtab.o decode.o 
+ all:: dcdis
+ 
+ dcdis:	$(OBJS)
+-	$(CC) $(CFLAGS) $(DEFS) -o dcdis $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(DEFS) -o dcdis $(OBJS) $(LIBS)
+ 	$(STRIP) dcdis
+ 
+ dcdis.o:	dcdis.c

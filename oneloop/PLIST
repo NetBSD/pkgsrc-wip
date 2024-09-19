@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/02 22:15:39 jihbed Exp $
+lib/libavh_olo.a

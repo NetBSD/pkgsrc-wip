@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.4 2006/10/26 19:33:30 rillig Exp $
+
+RMD160 (eciadsl-usermode-0.10.tar.gz) = 6954e54c6c5447ac186289b0ead4f3924625c164
+Size (eciadsl-usermode-0.10.tar.gz) = 566606 bytes
+SHA1 (patch-aa) = 8decf574b9869e2af05d44f952dfa060f0d87cca
+SHA1 (patch-ab) = 1df32e04952c9179604d18ef77d023da9bf360a6
+SHA1 (patch-ac) = bbd778a7e743ea9bd59502edf37c57320e0bf7d3
+SHA1 (patch-ad) = 054bc22e096f8b0e1d10904eb4027d8e9ed5176f
+SHA1 (patch-ae) = 4488b09034829f7380b2460be1f99861288abe88
+SHA1 (patch-af) = 3c008ed07201a057f64a026fb8271400706c60c0
+SHA1 (patch-ag) = 6e155bc41dd97ad5a8aa3fda043147decafba61a
+SHA1 (patch-ah) = ed13ebc550bc01d953cfc7afac662f27cef05e10
+SHA1 (patch-ai) = e376782b4642eb382518870b3d11270670d4dfb3
+SHA1 (patch-aj) = 7ebebc0e36f859058db8be8ed2e13f46702ff74c
+SHA1 (patch-ak) = b4830264a2fd4959e7c56bbbc12439a0a26fc9f5
+SHA1 (patch-al) = a34bf43a9d57f1a4a8195694682657546cef1fcc
+SHA1 (patch-am) = ac5e441b2feceb8a6347297f1a8d82cdd4e2ffc6

@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/13 18:44:34 oht Exp $
+--- oper_midi.c.orig	2003-01-23 17:03:00.000000000 +0100
++++ oper_midi.c	2005-02-10 19:16:33.000000000 +0100
+@@ -30,6 +30,9 @@
+ #  include <machine/soundcard.h>
+ #elif defined(linux)
+ #  include <linux/soundcard.h>
++#elif defined __NetBSD__
++#include <sys/midiio.h>
++#define	   CTL_BANK_SELECT		0x00
+ #endif
+ 
+ 
+@@ -63,7 +66,9 @@
+ 	reverb_mode,
+ };
+ 
++#ifndef MIDI_DEV
+ #define MIDI_DEV	"/dev/midi"
++#endif
+ 
+ static vkb_optarg_t midi_opts[] = {
+ 	{"mididev", MIDI_DEV, "--mididev device : OSS midi device file"},
+@@ -128,7 +133,9 @@
+ note_off(Tcl_Interp *ip, void *private, int note, int vel)
+ {
+ 	putc(MIDI_NOTEOFF | chan_no, fp);
++#ifndef __NetBSD__
+ 	putc(0xf8, fp);
++#endif	
+ 	putc(note, fp);
+ 	putc(vel, fp);
+ 	fflush(fp);

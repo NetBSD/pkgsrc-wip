@@ -1,0 +1,3 @@
+Needs porting to NetBSD (Xdummy).
+Should depend on lzo or lz4 instead of zlib,
+perhaps also cups.

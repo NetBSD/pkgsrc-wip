@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:56:10 ddeus Exp $
+${ECL}${CL_PATH}trivial-features.asd
+${ECL}${CL_PATH}trivial-features.fas
+${ECL}${CL_PATH}libtrivial-features.a
+${CL}${CL_PATH}trivial-features/SPEC
+${CL}${CL_PATH}trivial-features/release.sh
+${CL}${CL_PATH}trivial-features/src/tf-abcl.lisp
+${CL}${CL_PATH}trivial-features/src/tf-allegro.lisp
+${CL}${CL_PATH}trivial-features/src/tf-clisp.lisp
+${CLISP}${CL_PATH}trivial-features/src/tf-clisp.${EXT}
+${CL}${CL_PATH}trivial-features/src/tf-cmucl.lisp
+${CL}${CL_PATH}trivial-features/src/tf-corman.lisp
+${CL}${CL_PATH}trivial-features/src/tf-ecl.lisp
+${CL}${CL_PATH}trivial-features/src/tf-lispworks.lisp
+${CL}${CL_PATH}trivial-features/src/tf-openmcl.lisp
+${SBCL}${CL_PATH}trivial-features/src/tf-sbcl.${EXT}
+${CL}${CL_PATH}trivial-features/src/tf-sbcl.lisp
+${CL}${CL_PATH}trivial-features/src/tf-scl.lisp
+${CL}${CL_PATH}trivial-features/src/tf-xcl.lisp
+${CL}${CL_PATH}trivial-features/tests/package.lisp
+${CL}${CL_PATH}trivial-features/tests/sysinfo.lisp
+${CL}${CL_PATH}trivial-features/tests/tests.lisp
+${CL}${CL_PATH}trivial-features/tests/utsname.lisp
+${CL}${CL_PATH}trivial-features/trivial-features-tests.asd
+${CL}${CL_PATH}trivial-features/trivial-features.asd
+share/doc/${LISP}-trivial-features/COPYRIGHT
+share/doc/${LISP}-trivial-features/README

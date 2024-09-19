@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/NanoComp
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nanocomp/NanoComp.py
+${PYSITELIB}/nanocomp/NanoComp.pyc
+${PYSITELIB}/nanocomp/NanoComp.pyo
+${PYSITELIB}/nanocomp/__init__.py
+${PYSITELIB}/nanocomp/__init__.pyc
+${PYSITELIB}/nanocomp/__init__.pyo
+${PYSITELIB}/nanocomp/compplots.py
+${PYSITELIB}/nanocomp/compplots.pyc
+${PYSITELIB}/nanocomp/compplots.pyo
+${PYSITELIB}/nanocomp/utils.py
+${PYSITELIB}/nanocomp/utils.pyc
+${PYSITELIB}/nanocomp/utils.pyo
+${PYSITELIB}/nanocomp/version.py
+${PYSITELIB}/nanocomp/version.pyc
+${PYSITELIB}/nanocomp/version.pyo

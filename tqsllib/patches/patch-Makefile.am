@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.am,v 1.1 2012/10/02 13:01:09 makoto Exp $
+
+To avoid following errors:
+openssl_cert.cpp: In function 'int tqsl_exportPKCS12File(void*, const char*, const char*)':
+openssl_cert.cpp:1587:2: error: invalid conversion from 'void*' to 'stack_st_OPENSSL_BLOCK*'
+openssl_cert.cpp:1587:2: error:   initializing argument 1 of 'unsigned char* ASN1_seq_pack(stack_st_OPENSSL_BLOCK*, int (*)(void*, unsigned char**), unsigned char**, int*)'
+
+--- Makefile.am.orig	2012-10-02 21:10:27.000000000 +0900
++++ Makefile.am	2012-10-02 21:10:56.000000000 +0900
+@@ -10,7 +10,7 @@
+ DLLVER=@DLLVER@
+ INCLUDES = -I$(OPENSSL)/include -I$(EXPAT)/include -I$(ZLIB)/include
+ 
+-AM_CXXFLAGS = -g3 -O -Wall $(LOTW_SERVER) $(PLATFORM) -DCONFDIR=\"$(datadir)\"
++AM_CXXFLAGS = -fpermissive -g3 -O -Wall $(LOTW_SERVER) $(PLATFORM) -DCONFDIR=\"$(datadir)\"
+ AM_LDFLAGS = @ldflags@ -L$(OPENSSL)/lib -L$(EXPAT)/lib -L$(ZLIB)/lib
+ 
+ EXTRA_LIBRARIES = libtqsllibd.a

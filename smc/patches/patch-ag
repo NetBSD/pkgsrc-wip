@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2006/01/07 23:03:06 h2m Exp $
+
+--- src/levelexit.cpp.orig	2005-07-04 03:54:16.000000000 +0200
++++ src/levelexit.cpp
+@@ -44,7 +44,7 @@ void cLevelExit :: Update( void )
+ 		( levelchange == LVLCHANGE_WARP && ( keys[pPreferences->Key_down] || pJoystick->down ) && ( (int)pPlayer->posy + pPlayer->rect.h == (int)posy && pPlayer->posx >= posx - pPlayer->rect.w && (int)pPlayer->posx <= (int)posx + rect.w ) ) )
+ 	{
+ 		pAudio->FadeOutMusic( 500 );
+-		pAudio->PlaySound( MUSIC_DIR "/game/victory_3.ogg" );
++//		pAudio->PlaySound( MUSIC_DIR "/game/victory_3.ogg" );
+ 		
+ 		if( levelchange == LVLCHANGE_WARP )
+ 		{

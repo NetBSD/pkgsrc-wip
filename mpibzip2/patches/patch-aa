@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/01/08 04:31:15 noud4 Exp $
+
+path to libmpich
+
+--- Makefile.orig	2007-07-18 19:13:27.000000000 +0000
++++ Makefile	2012-01-07 23:29:22.000000000 +0000
+@@ -12,7 +12,7 @@
+ 
+ # Standard mpibzip2 compile
+ mpibzip2: mpibzip2.cpp
+-	$(CC) -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -o mpibzip2 mpibzip2.cpp -lbz2 -lmpi -lpthread
++	$(CC) -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -o mpibzip2 mpibzip2.cpp -lbz2 -lpthread -I@PREFIX@/lib -lmpich -lmpl
+ 
+ # Choose this if you want to compile in a static version of the libbz2 library
+ mpibzip2-static: libbz2.a mpibzip2.cpp

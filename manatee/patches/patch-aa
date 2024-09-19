@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 20:27:56 daprice Exp $
+
+--- install_src.orig	Mon Sep  9 22:54:16 2002
++++ install_src
+@@ -6,9 +6,9 @@ PROJECT=$3
+ 
+ if test -d "$DESTDIR/$PROJECT"; then 
+     echo "Saving previous script install to $DESTDIR/$PROJECT.old"
+-    mv $DESTDIR/$PROJECT $DESTDIR/$PROJECT.old >& /dev/null; 
++    mv $DESTDIR/$PROJECT $DESTDIR/$PROJECT.old 
++#>& /dev/null; 
+ fi 
+ cp -R $SRCDIR/ $DESTDIR/
+-chmod -R 755 $DESTDIR/$PROJECT
+-
++chmod -R 755 $DESTDIR/
+ 

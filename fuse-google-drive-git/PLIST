@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2012/06/19 07:34:54 bsadewitz Exp $
+bin/fuse-google-drive

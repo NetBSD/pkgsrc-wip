@@ -1,0 +1,47 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       Run bundled test suite for plink2
+#
+#   History:
+#   Date        Name        Modification
+#   2019-02-11  J Bacon     Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 0 ]; then
+    usage
+fi
+
+if ! which plink; then
+    cat << EOM
+
+You must install both plink and plink2 before running the plink2 tests.
+
+EOM
+    exit 1
+fi
+
+if [ -e plink2-Tests ]; then
+    cat << EOM
+
+plink2-Tests already exits.  Remove it first if you want to run $0.
+
+EOM
+    exit 1
+fi
+
+cp -R %%DATADIR%%/Tests plink2-Tests
+cd plink2-Tests
+./run_tests.sh

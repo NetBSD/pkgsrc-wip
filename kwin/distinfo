@@ -1,0 +1,31 @@
+$NetBSD$
+
+RMD160 (kwin-5.12.5.tar.xz) = d52bdaabc4d1ebc9c0d5efc298f79d0ebfc2e001
+SHA512 (kwin-5.12.5.tar.xz) = 9a99645455f17b14ede45d656a83eb753fcd02c2ed4cca10045db84a75c610ba0732ffacca780805b3f990ab1ada6861f9036588d45c1bf487dbf1ff5bf9ba22
+Size (kwin-5.12.5.tar.xz) = 4981704 bytes
+SHA1 (patch-activation.cpp) = 4a8d4ee99571f4c48697e2d561b000e014a4bcbd
+SHA1 (patch-client.cpp) = 9cffd918463d1188bb8ffac011d10aa6a2b5fe18
+SHA1 (patch-composite.cpp) = 73d9fa94e2550d57c1b97e55ebc6dc536e3dd731
+SHA1 (patch-composite.h) = ddff2d2d28367fc3fbfaafd6b0684d7dd3a3aefc
+SHA1 (patch-decorations_decoratedclient.cpp) = 5ef7f6f600bdb335ea40aa0bb91df1b6502fd35e
+SHA1 (patch-decorations_decoratedclient.h) = f55a3dde85d8662a061a91c727591b63487a2161
+SHA1 (patch-decorations_decorationbridge.cpp) = d67840db736feb77e7d35a608a118e144e967ad7
+SHA1 (patch-decorations_decorationbridge.h) = d9d8c384ea03322064ef5ce3871a2d5064240a9a
+SHA1 (patch-geometry.cpp) = 1898cc385140c273b89a0d2aeb033c439ceee313
+SHA1 (patch-group.cpp) = 3882e35055474065090544fc99b512ade156326b
+SHA1 (patch-group.h) = 9363453feb125adfa46f931c9d76fcc941cbb023
+SHA1 (patch-kcmkwin_kwincompositing_CMakeLists.txt) = 77cf05fc7f9e75b969c746bf2bd051020354b785
+SHA1 (patch-kcmkwin_kwindecoration_declarative-plugin_previewclient.cpp) = 9a2cfc04a55b23e799d6499c5c0a04f0a00fcbfc
+SHA1 (patch-kcmkwin_kwindecoration_declarative-plugin_previewclient.h) = 1bb4d364466f81a6984c9a71a54e31e633cffa38
+SHA1 (patch-kcmkwin_kwindesktop_CMakeLists.txt) = ac855325440b14ea079a87b2ca1d79f69a7602d6
+SHA1 (patch-kcmkwin_kwinscreenedges_CMakeLists.txt) = 39972987c11dee5ebd701d41a2ab22d7ab063e1a
+SHA1 (patch-kcmkwin_kwintabbox_CMakeLists.txt) = 6d031cd693fd6c716b0db4f53cfddd7585655449
+SHA1 (patch-netinfo.cpp) = 2f92d0551397bdf463d3d67a8938b2f989e2e64f
+SHA1 (patch-plugins_qpa_integration.cpp) = d608a858ef9bcb058a63f3c6076da9fadaa43ff3
+SHA1 (patch-rules.cpp) = bf820f25ab638359620cc24e7b1a93db23b66ab2
+SHA1 (patch-sm.cpp) = 72c379ff7f5ab22b94fc3215f4ad921312c47f23
+SHA1 (patch-toplevel.cpp) = 06d9bea17ef488053099383303298e8485aef0e6
+SHA1 (patch-toplevel.h) = 6d0585156e99186310fff7345f1b168e6beba436
+SHA1 (patch-unmanaged.cpp) = 3cdb423f05a5c1dac43709462753ae217dfb089d
+SHA1 (patch-unmanaged.h) = 852d7434d52788e660817fa2ee76667dfc35a3ad
+SHA1 (patch-utils.cpp) = 80326d14aab541258a34f3225e79d0e690799eb5

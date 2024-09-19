@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	signal
+
+.if !defined(SIGNAL_BUILDLINK3_MK)
+SIGNAL_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.signal+=	R-signal>=0.7.6
+BUILDLINK_ABI_DEPENDS.signal+=	R-signal>=0.7.6
+BUILDLINK_PKGSRCDIR.signal?=	../../wip/R-signal
+.endif # SIGNAL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-signal

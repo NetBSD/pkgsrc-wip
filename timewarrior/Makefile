@@ -1,0 +1,28 @@
+# $NetBSD$
+
+DISTNAME=	timew-1.4.3
+PKGNAME=	${DISTNAME:S/timew/timewarrior/}
+CATEGORIES=	time
+MASTER_SITES=	${MASTER_SITE_GITHUB:=GothenburgBitFactory/}
+GITHUB_PROJECT= timewarrior
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://timewarrior.net/
+COMMENT=	Command-line time tracking application
+LICENSE=	mit
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+# C++11 required
+GCC_REQD+=	4.8
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+CMAKE_CONFIGURE_ARGS+=	-DTIMEW_MANDIR=${PREFIX}/${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DTIMEW_MAN1DIR=${PREFIX}/${PKGMANDIR}/man1
+CMAKE_CONFIGURE_ARGS+=	-DTIMEW_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
+CMAKE_CONFIGURE_ARGS+=	-DTIMEW_MAN7DIR=${PREFIX}/${PKGMANDIR}/man7
+
+.include "../../mk/bsd.pkg.mk"

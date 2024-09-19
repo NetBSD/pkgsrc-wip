@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- test/Makefile.am.orig	2003-11-20 16:46:17.000000000 +0000
++++ test/Makefile.am
+@@ -4,9 +4,8 @@ testlibdir = $(EM_LIBDIR)
+ testdatadir = $(pkgdatadir)
+ 
+ noinst_PROGRAMS = scale simple light texture load explode collision signal billboard font thread menu joy sound trans math misc varray unittest
+-dnl noinst_PROGRAMS = unittest
+ 
+-INCLUDES = -I../base -I../addon -I../src @INCLTDL@
++AM_CPPFLAGS = -I../base -I../addon -I../src @INCLTDL@
+ LDADD = ../src/libemilia_pin.a ../addon/libemilia_addon.a ../base/libemilia_base.a @LIBLTDL@
+ 
+ testlib_LTLIBRARIES = libModuleTest.la

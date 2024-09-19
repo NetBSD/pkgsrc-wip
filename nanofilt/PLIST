@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/NanoFilt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nanofilt/NanoFilt.py
+${PYSITELIB}/nanofilt/NanoFilt.pyc
+${PYSITELIB}/nanofilt/NanoFilt.pyo
+${PYSITELIB}/nanofilt/__init__.py
+${PYSITELIB}/nanofilt/__init__.pyc
+${PYSITELIB}/nanofilt/__init__.pyo
+${PYSITELIB}/nanofilt/utils.py
+${PYSITELIB}/nanofilt/utils.pyc
+${PYSITELIB}/nanofilt/utils.pyo
+${PYSITELIB}/nanofilt/version.py
+${PYSITELIB}/nanofilt/version.pyc
+${PYSITELIB}/nanofilt/version.pyo

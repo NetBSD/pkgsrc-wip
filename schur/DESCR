@@ -1,0 +1,12 @@
+Schur is a stand alone C program for interactively calculating properties of Lie
+groups and symmetric functions.Schur has been designed to answer questions of
+relevance to a wide range of problems of special interest to chemists,
+mathematicians and physicists particularly for persons who need specific
+knowledge relating to some aspect of Lie groups or symmetric functions and yet
+do not wish to be encumbered with complex algorithms. The objective of Schur is
+to supply results with the complexity of the algorithms hidden from view so that
+the user can effectively use Schur as a scratch pad, obtaining a result and then
+using that result to derive new results in a fully interactive manner. Schur can
+be used as a tool for calculating branching rules,  Kronecker products, Casimir
+invariants, dimensions, plethysms, S-function operations, Young diagrams and
+their hook lengths etc.

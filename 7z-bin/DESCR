@@ -1,0 +1,1 @@
+7-Zip is a file archiver with a high compression ratio.

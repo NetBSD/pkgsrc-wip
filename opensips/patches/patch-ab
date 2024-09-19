@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/12/07 10:58:09 marttikuparinen Exp $
+
+Make this build on NetBSD.
+
+--- db/db_ut.h.orig	2009-10-16 03:24:18.000000000 +0300
++++ db/db_ut.h	2009-12-07 12:23:16.000000000 +0200
+@@ -53,8 +53,10 @@
+ 
+ #include <time.h>
+ 
++#ifndef __OS_netbsd
+ #undef _XOPEN_SOURCE
+ #undef _XOPEN_SOURCE_EXTENDED
++#endif
+ 
+ 
+ #include "db_key.h"

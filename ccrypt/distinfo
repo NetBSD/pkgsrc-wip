@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2009/09/05 20:33:58 asau Exp $
+
+RMD160 (ccrypt-1.10.tar.gz) = b3b07d2e788f8ba04712879150b609a8c55f0dc5
+SHA512 (ccrypt-1.10.tar.gz) = b0130998f9830f63e8181340b3138260ab3c2014174e74fbcca77299dc9e0f807471fbfb7cc403dec7d0809f136e8afcb4c9bfd4ee5e43a1b3cc7185e14c3188
+Size (ccrypt-1.10.tar.gz) = 669491 bytes
+SHA1 (patch-emacs_Makefile.in) = 010c8d31eac615c17a8bd4848f9f6fc6b5edaeb6

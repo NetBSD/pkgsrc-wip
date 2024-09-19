@@ -1,0 +1,8 @@
+$NetBSD$
+
+RMD160 (genometools-1.6.2.tar.gz) = 941f8508f2498383e87a95df8ae6a171e0021ec2
+SHA512 (genometools-1.6.2.tar.gz) = 02b558d9a7d2bf75603bd8a620b669e010586eb9217ea031b46e0441dd9b2188687916e9c9bb5ffde8b3ffe9171f589632ebd41aa963a38837073e1a633b7c75
+Size (genometools-1.6.2.tar.gz) = 13731845 bytes
+SHA1 (patch-Makefile) = 5ca4fd4f44ed8efcbe2c859f19d52ee87b28a0f6
+SHA1 (patch-scripts_calltestcase.sh) = f73793e66c8f2884e7eddb96117aab2532737c00
+SHA1 (patch-scripts_spmcheck.sh) = e89f13a4818ee28e3b8fd686a7c4d1471d1b6c2a

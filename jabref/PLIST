@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/23 11:45:11 pdtafti Exp $
+bin/jabref
+lib/java/JabRef-${PKGVERSION}.jar

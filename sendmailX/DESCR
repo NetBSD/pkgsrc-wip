@@ -1,0 +1,12 @@
+sendmail X is a modularized message transfer system consisting of five
+(or more) persistent processes, four of which are multi-threaded. A central
+queue manager controls SMTP servers and SMTP clients to receive and send
+e-mails, an address resolver provides lookups in various maps including DNS
+for mail routing, and a main control program starts the others processes and
+watches over their execution. The queue manager organizes the flow of messages
+through the system and provides measures to avoid overloading the local or
+remote systems by implementing a central control instance.
+
+sendmail X.0 is intended to be used as a secure and efficient mail gateway. It
+does not provide any mail content modification capabilities, e.g., address
+masquerading.

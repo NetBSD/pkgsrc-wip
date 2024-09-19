@@ -1,0 +1,123 @@
+$NetBSD$
+
+# Add destdir support, use CXXFLAGS
+
+--- makefile.orig	2016-01-15 07:56:19.000000000 +0000
++++ makefile
+@@ -18,6 +18,7 @@ LIBDIR              ?= $(PREFIX)/lib
+ INCDIR              ?= $(PREFIX)/include
+ MANDIR              ?= $(PREFIX)/man/man3
+ DOCDIR              ?= $(PREFIX)/share/libzeep
++DESTDIR             ?=
+ 
+ BOOST_LIBS          = system thread filesystem regex math_c99 random
+ BOOST_LIBS          := $(BOOST_LIBS:%=boost_%$(BOOST_LIB_SUFFIX))
+@@ -32,11 +33,11 @@ SO_NAME             = libzeep.so.$(VERSI
+ LIB_NAME            = $(SO_NAME).$(VERSION_MINOR)
+ 
+ CXX                 ?= c++
+-#CFLAGS              += -O2 $(BOOST_INC_DIR:%=-I%) -I. -fPIC -pthread -std=c++11 -stdlib=libc++
+-CFLAGS              += -O2 $(BOOST_INC_DIR:%=-I%) -I. -fPIC -pthread -std=c++11 
+-#CFLAGS             += -g $(BOOST_INC_DIR:%=-I%) -I. -fPIC -pthread -shared # -std=c++0x
+-CFLAGS              += -Wall
+-CFLAGS              += -g
++#CXXFLAGS            += -O2 $(BOOST_INC_DIR:%=-I%) -I. -fPIC -pthread -std=c++11 -stdlib=libc++
++CXXFLAGS            += -O2 $(BOOST_INC_DIR:%=-I%) -I. -fPIC -pthread -std=c++11 
++#CXXFLAGS           += -g $(BOOST_INC_DIR:%=-I%) -I. -fPIC -pthread -shared # -std=c++0x
++CXXFLAGS            += -Wall
++CXXFLAGS            += -g
+ LD                  ?= ld
+ 
+ VPATH += src
+@@ -81,45 +82,42 @@ zeep-test: obj/zeep-test.o libzeep.a
+ 	$(CXX) $(BOOST_INC_DIR:%=-I%) -o $@ -I. $^ $(LDFLAGS) -lboost_date_time -lboost_regex
+ 
+ install-libs: libzeep.so
+-	install -d $(LIBDIR)
+-	install $(LIB_NAME) $(LIBDIR)/$(LIB_NAME)
+-	ln -Tfs $(LIB_NAME) $(LIBDIR)/$(SO_NAME)
+-	strip --strip-unneeded $(LIBDIR)/$(LIB_NAME)
++	install -d $(DESTDIR)$(LIBDIR)
++	install $(LIB_NAME) $(DESTDIR)$(LIBDIR)/$(LIB_NAME)
++	(cd $(DESTDIR)$(LIBDIR) && ln -fs $(LIB_NAME) $(SO_NAME))
++	strip --strip-unneeded $(DESTDIR)$(LIBDIR)/$(LIB_NAME)
+ 
+ install-dev: doc
+-	install -d $(MANDIR) $(LIBDIR) $(INCDIR)/zeep/xml $(INCDIR)/zeep/http $(INCDIR)/zeep/http/webapp
++	install -d $(DESTDIR)$(MANDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCDIR)/zeep/xml $(DESTDIR)$(INCDIR)/zeep/http $(DESTDIR)$(INCDIR)/zeep/http/webapp
+ 
+-	install zeep/config.hpp $(INCDIR)/zeep/config.hpp
+-	install zeep/dispatcher.hpp $(INCDIR)/zeep/dispatcher.hpp
+-	install zeep/envelope.hpp $(INCDIR)/zeep/envelope.hpp
+-	install zeep/exception.hpp $(INCDIR)/zeep/exception.hpp
+-	install zeep/http/connection.hpp $(INCDIR)/zeep/http/connection.hpp
+-	install zeep/http/header.hpp $(INCDIR)/zeep/http/header.hpp
+-	install zeep/http/md5.hpp $(INCDIR)/zeep/http/md5.hpp
+-	install zeep/http/message_parser.hpp $(INCDIR)/zeep/http/message_parser.hpp
+-	install zeep/http/preforked-server.hpp $(INCDIR)/zeep/http/preforked-server.hpp
+-	install zeep/http/reply.hpp $(INCDIR)/zeep/http/reply.hpp
+-	install zeep/http/request.hpp $(INCDIR)/zeep/http/request.hpp
+-	install zeep/http/request_handler.hpp $(INCDIR)/zeep/http/request_handler.hpp
+-	install zeep/http/server.hpp $(INCDIR)/zeep/http/server.hpp
+-	install zeep/http/webapp.hpp $(INCDIR)/zeep/http/webapp.hpp
+-	install zeep/http/webapp/el.hpp $(INCDIR)/zeep/http/webapp/el.hpp
+-	install zeep/server.hpp $(INCDIR)/zeep/server.hpp
+-	install zeep/xml/doctype.hpp $(INCDIR)/zeep/xml/doctype.hpp
+-	install zeep/xml/document.hpp $(INCDIR)/zeep/xml/document.hpp
+-	install zeep/xml/node.hpp $(INCDIR)/zeep/xml/node.hpp
+-	install zeep/xml/parser.hpp $(INCDIR)/zeep/xml/parser.hpp
+-	install zeep/xml/serialize.hpp $(INCDIR)/zeep/xml/serialize.hpp
+-	install zeep/xml/unicode_support.hpp $(INCDIR)/zeep/xml/unicode_support.hpp
+-	install zeep/xml/writer.hpp $(INCDIR)/zeep/xml/writer.hpp
+-	install zeep/xml/xpath.hpp $(INCDIR)/zeep/xml/xpath.hpp
+-	install doc/libzeep.3 $(MANDIR)/libzeep.3
+-	for d in . images libzeep zeep zeep/http zeep/http/preforked_server_base zeep/http/el \
+-		zeep/http/el/object zeep/xml zeep/xml/doctype zeep/xml/container zeep/xml/element \
+-		index; do install -d $(DOCDIR)/$$d; install doc/html/$$d/*.* $(DOCDIR)/$$d; done;
+-	install ./libzeep.a $(LIBDIR)/libzeep.a
+-	strip -SX $(LIBDIR)/libzeep.a
+-	ln -Tfs $(LIB_NAME) $(LIBDIR)/libzeep.so
++	install zeep/config.hpp $(DESTDIR)$(INCDIR)/zeep/config.hpp
++	install zeep/dispatcher.hpp $(DESTDIR)$(INCDIR)/zeep/dispatcher.hpp
++	install zeep/envelope.hpp $(DESTDIR)$(INCDIR)/zeep/envelope.hpp
++	install zeep/exception.hpp $(DESTDIR)$(INCDIR)/zeep/exception.hpp
++	install zeep/http/connection.hpp $(DESTDIR)$(INCDIR)/zeep/http/connection.hpp
++	install zeep/http/header.hpp $(DESTDIR)$(INCDIR)/zeep/http/header.hpp
++	install zeep/http/md5.hpp $(DESTDIR)$(INCDIR)/zeep/http/md5.hpp
++	install zeep/http/message_parser.hpp $(DESTDIR)$(INCDIR)/zeep/http/message_parser.hpp
++	install zeep/http/preforked-server.hpp $(DESTDIR)$(INCDIR)/zeep/http/preforked-server.hpp
++	install zeep/http/reply.hpp $(DESTDIR)$(INCDIR)/zeep/http/reply.hpp
++	install zeep/http/request.hpp $(DESTDIR)$(INCDIR)/zeep/http/request.hpp
++	install zeep/http/request_handler.hpp $(DESTDIR)$(INCDIR)/zeep/http/request_handler.hpp
++	install zeep/http/server.hpp $(DESTDIR)$(INCDIR)/zeep/http/server.hpp
++	install zeep/http/webapp.hpp $(DESTDIR)$(INCDIR)/zeep/http/webapp.hpp
++	install zeep/http/webapp/el.hpp $(DESTDIR)$(INCDIR)/zeep/http/webapp/el.hpp
++	install zeep/server.hpp $(DESTDIR)$(INCDIR)/zeep/server.hpp
++	install zeep/xml/doctype.hpp $(DESTDIR)$(INCDIR)/zeep/xml/doctype.hpp
++	install zeep/xml/document.hpp $(DESTDIR)$(INCDIR)/zeep/xml/document.hpp
++	install zeep/xml/node.hpp $(DESTDIR)$(INCDIR)/zeep/xml/node.hpp
++	install zeep/xml/parser.hpp $(DESTDIR)$(INCDIR)/zeep/xml/parser.hpp
++	install zeep/xml/serialize.hpp $(DESTDIR)$(INCDIR)/zeep/xml/serialize.hpp
++	install zeep/xml/unicode_support.hpp $(DESTDIR)$(INCDIR)/zeep/xml/unicode_support.hpp
++	install zeep/xml/writer.hpp $(DESTDIR)$(INCDIR)/zeep/xml/writer.hpp
++	install zeep/xml/xpath.hpp $(DESTDIR)$(INCDIR)/zeep/xml/xpath.hpp
++	install doc/libzeep.3 $(DESTDIR)$(MANDIR)/libzeep.3
++	install ./libzeep.a $(DESTDIR)$(LIBDIR)/libzeep.a
++	strip -SX $(DESTDIR)$(LIBDIR)/libzeep.a
++	(cd $(DESTDIR)$(LIBDIR) && ln -fs $(LIB_NAME) libzeep.so)
+ 
+ install: install-libs install-dev
+ 
+@@ -133,10 +131,10 @@ dist: lib
+ 	cp $(DIST_NAME).tgz ../ppa/libzeep_$(VERSION).orig.tar.gz
+ 
+ doc: FORCE
+-	cd doc; bjam
++	# cd doc; bjam
+ 
+ obj/%.o: %.cpp | obj
+-	$(CXX) -MD -c -o $@ $< $(CFLAGS)
++	$(CXX) -MD -c -o $@ $< $(CXXFLAGS)
+ 
+ obj:
+ 	mkdir -p obj

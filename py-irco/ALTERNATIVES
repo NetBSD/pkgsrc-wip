@@ -1,0 +1,6 @@
+bin/irco-convert @PREFIX@/bin/irco-convert@PYVERSSUFFIX@
+bin/irco-explorer @PREFIX@/bin/irco-explorer@PYVERSSUFFIX@
+bin/irco-graph @PREFIX@/bin/irco-graph@PYVERSSUFFIX@
+bin/irco-import @PREFIX@/bin/irco-import@PYVERSSUFFIX@
+bin/irco-init @PREFIX@/bin/irco-init@PYVERSSUFFIX@
+bin/irco-scrape @PREFIX@/bin/irco-scrape@PYVERSSUFFIX@

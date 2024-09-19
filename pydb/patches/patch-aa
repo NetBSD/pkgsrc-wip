@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2009/04/25 20:22:06 jihbed Exp $
+
+--- configure.ac.orig	2009-04-25 22:03:19.000000000 +0000
++++ configure.ac	2009-04-25 22:04:49.000000000 +0000
+@@ -136,8 +136,6 @@
+ AC_CONFIG_FILES([Doc/Makefile])
+ AC_CONFIG_FILES([Doc/pydb.1])
+ AC_CONFIG_FILES([Makefile])
+-AC_CONFIG_FILES([emacs/Makefile])
+-AC_CONFIG_FILES([emacs/pydb-test.el])
+ AC_CONFIG_FILES([pydb/__init__.py])
+ AC_CONFIG_FILES([pydb/gdb.py])
+ AC_CONFIG_FILES([pydb/pydb.py],[chmod +x pydb/pydb.py])

@@ -1,0 +1,13 @@
+$NetBSD: patch-config_Makefile.in,v 1.1 2014/12/26 21:16:29 nros Exp $
+* adapt to pkginstall of config files
+--- config/Makefile.in.orig	2007-10-15 07:06:00.000000000 +0000
++++ config/Makefile.in
+@@ -254,7 +254,7 @@ EXTRA_DIST = \
+   Makefile.slow \
+   $(NULL)
+ 
+-pkgsysconfdir = $(sysconfdir)/@PACKAGE@
++pkgsysconfdir = $(datadir)/examples/@PACKAGE@
+ pkgsysconf_DATA = \
+   gtkmathview.conf.xml
+ 

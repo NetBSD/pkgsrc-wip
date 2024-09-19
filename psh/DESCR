@@ -1,0 +1,14 @@
+The Perl Shell (psh) combines aspects of bash and other shells with
+the power of Perl scripting. It aspires to be your primary
+login shell.
+
+WHERE IT CAME FROM:
+
+Numerous times when developing Perl code, the author wished for an
+interactive Perl execution environment in which to try out code
+snippets. After some looking around, there didn't appear to be a
+handy solution that acted enough like a shell to be satisfactory.
+It all might have ended (or rather not bugun) here except that while
+discussing the idea at lunch with his friend Denny Dahl
+the pressure finally became too much to bear. That evening, version 0.001
+of the Perl Shell was born.

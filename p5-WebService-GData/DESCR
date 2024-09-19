@@ -1,0 +1,6 @@
+WebService::GData module intends to implement the Google Data protocol
+and implements some services that use this protocol, like YouTube.
+
+This package is a blueprint that most packages in this module inherit
+from. It offers a simple hashed based object creation mechanism via the
+word new.

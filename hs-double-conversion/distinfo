@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2013/03/06 15:08:32 phonohawk Exp $
+
+RMD160 (double-conversion-0.2.0.6.tar.gz) = eb773b998fd6fb43279bdb91fb00b6f19cadcb47
+Size (double-conversion-0.2.0.6.tar.gz) = 7016270 bytes
+SHA1 (patch-double-conversion_src_utils.h) = 8e062ffe3320c184b997832d0f43ae3df01bb181

@@ -1,0 +1,13 @@
+$NetBSD$
+
+dnspython3 has been superseded by the regular dnspython
+
+--- wpull.egg-info/requires.txt.orig	2017-10-27 15:52:51.000000000 +0000
++++ wpull.egg-info/requires.txt
+@@ -1,5 +1,5 @@
+ chardet
+-dnspython3
++dnspython
+ html5lib
+ namedlist
+ sqlalchemy

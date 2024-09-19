@@ -1,0 +1,5 @@
+@comment $NetBSD$
+devkitpro/devkitARM/bin/bin2s
+devkitpro/devkitARM/bin/bmp2bin
+devkitpro/devkitARM/bin/padbin
+devkitpro/devkitARM/bin/raw2c

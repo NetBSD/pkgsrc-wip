@@ -1,0 +1,5 @@
+e00pg is a tool for converting ESRI-E00 coverages into
+PostgreSQL/PostGIS sql instructions. e00pg is derived
+from M.Wurtz's m.in.e00 filter used in GRASS to import
+Arc/Info coverage export files. The code has been hardly
+modified and has loosen much of its original shape.

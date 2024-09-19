@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/27 08:27:07 ondratu Exp $
+
+--- protocols/Makefile.in.orig	2006-07-05 16:26:09.000000000 +0200
++++ protocols/Makefile.in
+@@ -181,7 +181,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/src -I$(to
+ @SSPI_PROTOCOL_SUPPORT_TRUE@	common.cpp 
+ 
+ 
+-@SSPI_PROTOCOL_SUPPORT_TRUE@sspi_la_LDFLAGS = -module -avoid-version  -L$(DESTDIR)/$(libdir) ntlm/libntlm.la
++@SSPI_PROTOCOL_SUPPORT_TRUE@sspi_la_LDFLAGS = -module -avoid-version  -L$(DESTDIR)/$(libdir)/libntlm.la
+ 
+ @SSPI_PROTOCOL_SUPPORT_TRUE@sspi_ntlm = ntlm
+ @SSPI_PROTOCOL_SUPPORT_FALSE@sspi_ntlm = 
+@@ -237,7 +237,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/src -I$(to
+ 
+ @GSERVER_PROTOCOL_SUPPORT_FALSE@gssapi_target = 
+ 
+-SUBDIRS = $(sspi_ntlm)
++#SUBDIRS = $(sspi_ntlm)
+ 
+ lib_LTLIBRARIES = $(pserver_target) \
+ 	      $(sserver_target) \
+@@ -316,7 +316,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	install-exec-recursive installdirs-recursive install-recursive \
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = Makefile.am Makefile.in
+-DIST_SUBDIRS = ntlm
++#DIST_SUBDIRS = ntlm
+ SOURCES = $(enum_la_SOURCES) $(ext_la_SOURCES) $(fork_la_SOURCES) $(gserver_la_SOURCES) $(pserver_la_SOURCES) $(server_la_SOURCES) $(sserver_la_SOURCES) $(sspi_la_SOURCES)
+ 
+ all: all-recursive

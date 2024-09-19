@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:45:23 thomasklausner Exp $
+bin/typespeed
+man/man6/typespeed.6
+share/doc/typespeed/README
+share/typespeed/rules/rule.classic
+share/typespeed/rules/rule.training
+share/typespeed/rules/template
+share/typespeed/words/words.csharp
+share/typespeed/words/words.csharp_with_operators
+share/typespeed/words/words.dos
+share/typespeed/words/words.dut
+share/typespeed/words/words.eng
+share/typespeed/words/words.esp
+share/typespeed/words/words.fin
+share/typespeed/words/words.fra
+share/typespeed/words/words.ger
+share/typespeed/words/words.ita
+share/typespeed/words/words.por
+share/typespeed/words/words.prog
+share/typespeed/words/words.tha
+share/typespeed/words/words.unix

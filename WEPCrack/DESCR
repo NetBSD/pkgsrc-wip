@@ -1,0 +1,3 @@
+WEPCrack is an open source tool for breaking 802.11 WEP secret keys. This tool
+is is an implementation of the attack described by Fluhrer, Mantin, and Shamir
+in the paper "Weaknesses in the Key Scheduling Algorithm of RC4".

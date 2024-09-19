@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2008/02/17 03:30:10 bsadewitz Exp $
+
+--- src/protocol/ftp/ftp.c.orig	2008-02-16 18:45:03.000000000 -0500
++++ src/protocol/ftp/ftp.c
+@@ -1322,7 +1322,9 @@ ftp_process_dirlist(struct cache_entry *
+ 			}
+ 
+ 		} else {
++#if 0
+ 			ERROR("Error parsing: [%.*s]", line_length, buf);
++#endif
+ 		}
+ 	}
+ }

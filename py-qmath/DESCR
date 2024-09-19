@@ -1,0 +1,8 @@
+qmath provides a class for deal with quaternion algebra and 3D rotations.
+Root evaluations and Moebius transformations are implemented.
+
+This class provides the methods to deal algebrically with quaternions.
+Quaternions operations are implemented, including square and cubic roots
+evaluations. Hurwitz quaternions can also be used. For Hurwitz quaternions
+modular operations are implemented. Moreover, other algebraic tools
+are available, such as Cross Ratio and Moebius transformations

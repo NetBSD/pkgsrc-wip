@@ -1,0 +1,12 @@
+$NetBSD$
+
+* don't create files in varbase
+
+--- src/lib/dhcpsrv/Makefile.am.orig	2019-12-30 15:56:06.783365379 +0000
++++ src/lib/dhcpsrv/Makefile.am
+@@ -387,5 +387,3 @@ libkea_dhcpsrv_parsers_include_HEADERS =
+ 	parsers/simple_parser4.h \
+ 	parsers/simple_parser6.h
+ 
+-install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(dhcp_data_dir)

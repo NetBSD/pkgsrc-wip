@@ -1,0 +1,4 @@
+A small yet quite capable Bash shell script written for Linux for encoding video
+files to the MPEG4 Part 2/Xvid video format using the ffmpeg encoder. Targeted
+primarily at encoding of full-length feature films and film series but it can be
+used for other content as well.

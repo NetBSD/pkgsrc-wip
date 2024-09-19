@@ -1,0 +1,4 @@
+A set of signal processing functions originally written for Matlab
+and Octave. Includes filter generation utilities, filtering functions,
+resampling routines, and visualization of filter models.  It also
+includes interpolation functions.

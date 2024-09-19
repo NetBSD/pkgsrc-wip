@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.3 2012/12/27 13:02:47 othyro Exp $
+bin/parcellite
+man/man1/parcellite.1
+share/applications/parcellite.desktop
+share/examples/xdg/autostart/parcellite-startup.desktop
+${PLIST.nls}share/locale/ca/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/da/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/nb/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/pl_PL/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/ro/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/parcellite.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/parcellite.mo
+share/pixmaps/parcellite.png
+share/pixmaps/parcellite.svg
+share/pixmaps/parcellite.xpm

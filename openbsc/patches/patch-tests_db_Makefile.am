@@ -1,0 +1,11 @@
+$NetBSD: patch-tests_db_Makefile.am,v 1.1 2011/08/02 23:05:26 khorben Exp $
+
+--- tests/db/Makefile.am.orig	2011-03-05 14:16:19.000000000 +0000
++++ tests/db/Makefile.am
+@@ -11,5 +11,5 @@ db_test_LDADD =	$(top_builddir)/src/libb
+ 		$(top_builddir)/src/libabis/libabis.a \
+ 		$(top_builddir)/src/libtrau/libtrau.a \
+ 		$(top_builddir)/src/libcommon/libcommon.a \
+-		$(LIBOSMOCORE_LIBS) -ldl -ldbi
++		$(LIBOSMOCORE_LIBS) -ldbi
+ 

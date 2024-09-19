@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2012/12/04 19:37:40 othyro Exp $
+
+RMD160 (memdump-1.01.tar.gz) = 437585744012de5c6f88743c05428ca9bc9cf9b1
+Size (memdump-1.01.tar.gz) = 12713 bytes
+SHA1 (patch-aa) = ac0d0aae0f2680c70b4c78c2cb69247950d0099d
+SHA1 (patch-ab) = 77f50e41d462fee1c670574fefd2942924f68af7

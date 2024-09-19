@@ -1,0 +1,4 @@
+reproc (Redirected Process) is a cross-platform C/C++ library that
+simplifies starting, stopping and communicating with external programs. The
+main use case is executing command line applications directly from C or C++
+code and retrieving their output.

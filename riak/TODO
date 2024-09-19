@@ -1,0 +1,2 @@
+Building on NetBSD 6.1 should work now.
+Ideally we should use pkgsrc snappy and spidermonkey instead of the bundled ones.

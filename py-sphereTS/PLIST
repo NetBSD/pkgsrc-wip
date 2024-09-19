@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/01 22:21:59 jihbed Exp $
+bin/sphereTS.py
+bin/sphereTSGUI.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

@@ -1,0 +1,3 @@
+Php weathermap is a network visualisation tool, to take data you already
+have and show you an overview of your network in map form. This package
+is bundled as a cacti-plugin, thru cacti-plugin-arch.

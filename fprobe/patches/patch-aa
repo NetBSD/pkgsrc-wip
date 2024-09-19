@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.2 2008/01/07 13:32:40 christian_gall Exp $
+
+--- src/fprobe.c.orig	2008-01-07 11:31:05.000000000 +0100
++++ src/fprobe.c
+@@ -561,6 +561,7 @@ int put_into(struct Flow *flow, int flag
+ 						, logbuf
+ #endif
+ 					);
++				pthread_mutex_lock(&flows_mutex[h]);
+ 			}
+ 		}
+ 		if (flag == MOVE_INTO) mem_free(flow);

@@ -1,0 +1,11 @@
+@comment $NetBSD$
+${PYSITELIB}/display_nb.py
+${PYSITELIB}/display_nb.pyc
+${PYSITELIB}/display_nb.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nbimporter.py
+${PYSITELIB}/nbimporter.pyc
+${PYSITELIB}/nbimporter.pyo

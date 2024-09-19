@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/09/09 11:17:09 adrian_p Exp $
+
+--- src/web-interfaces/ra/ra.conf.in.orig	2005-08-05 11:50:37.000000000 +0100
++++ src/web-interfaces/ra/ra.conf.in
+@@ -6,7 +6,7 @@
+ openssl    	"@OPENSSL@"
+ sslconfig  	"@etc_prefix@/openssl/openssl.cnf"
+ OCSPindex	"@var_prefix@/crypto/ocsp_index.txt"
+-MakePath   	"@MAKE@"
++MakePath   	"@MYMAKE@"
+ 
+ ## General Section
+ ## ===============

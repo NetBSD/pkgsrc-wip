@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/pinentry-dmenu
+man/man1/pinentry-dmenu.1

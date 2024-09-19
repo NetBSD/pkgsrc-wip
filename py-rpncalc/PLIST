@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/20 23:38:15 jihbed Exp $
+${PYSITELIB}/rpncalc/__init__.py
+${PYSITELIB}/rpncalc/__init__.pyc
+${PYSITELIB}/rpncalc/__init__.pyo
+${PYSITELIB}/rpncalc/chebyshev.py
+${PYSITELIB}/rpncalc/chebyshev.pyc
+${PYSITELIB}/rpncalc/chebyshev.pyo
+${PYSITELIB}/rpncalc/const.py
+${PYSITELIB}/rpncalc/const.pyc
+${PYSITELIB}/rpncalc/const.pyo
+${PYSITELIB}/rpncalc/extra.py
+${PYSITELIB}/rpncalc/extra.pyc
+${PYSITELIB}/rpncalc/extra.pyo
+${PYSITELIB}/rpncalc/ratfun.py
+${PYSITELIB}/rpncalc/ratfun.pyc
+${PYSITELIB}/rpncalc/ratfun.pyo
+${PYSITELIB}/rpncalc/rpncalc.py
+${PYSITELIB}/rpncalc/rpncalc.pyc
+${PYSITELIB}/rpncalc/rpncalc.pyo

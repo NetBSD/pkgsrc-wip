@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (canto-next/canto-next-0.9.7.tar.gz) = 7eee1ae1b959e70747e85df45635102459bcb9a2
+SHA512 (canto-next/canto-next-0.9.7.tar.gz) = 8c8c73cb6bc7455620abd299dfa0350ea5b8ec0e04d7ccdb1dd8ee2a6de51d0a0ba3934d66141dc899d28e49993c87002a936659f9c31b3c416ee294f9b616b9
+Size (canto-next/canto-next-0.9.7.tar.gz) = 53833 bytes
+SHA1 (patch-setup.py) = 1c1ef0ab3ad2cf5d655a6a851e47eae71e71b0f7

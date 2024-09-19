@@ -1,0 +1,11 @@
+--- configure.ac.orig	2009-12-05 18:36:04.000000000 -0600
++++ configure.ac	2012-02-21 08:48:27.000000000 -0600
+@@ -141,7 +141,7 @@
+ 
+ # Checks for header files.
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS([stddef.h stdlib.h string.h sys/param.h unistd.h stdint.h])
++AC_CHECK_HEADERS([inttypes.h stddef.h stdint.h stdlib.h string.h sys/param.h unistd.h])
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST

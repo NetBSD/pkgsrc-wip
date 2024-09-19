@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- jemboss/runJemboss.sh.orig	2004-02-13 02:30:25.000000000 -0700
++++ jemboss/runJemboss.sh	2004-07-28 14:53:34.000000000 -0600
+@@ -7,6 +7,13 @@
+ LIB=$JEMBOSS_HOME/lib
+ export LIB
+ 
++EMBOSS_INSTALL=@PREFIX@/share/EMBOSS/jemboss
++export EMBOSS_INSTALL
++
++LD_LIBRARY_PATH=@PREFIX@/lib
++export LD_LIBRARY_PATH
++
++CLASSPATH=:@JAVA_CLASSPATH@:
+ CLASSPATH=${JEMBOSS_HOME}:$LIB/JembossPrintAlignment.jar:
+ CLASSPATH=${CLASSPATH}:$LIB/jakarta-regexp-1.2.jar:
+ CLASSPATH=${CLASSPATH}:$LIB/jalview.jar:
+@@ -48,4 +55,4 @@
+ #Add local to run as 'standalone':
+ #java org.emboss.jemboss.Jemboss local &
+ #
+-java org.emboss.jemboss.Jemboss &
++@JAVA@/java org.emboss.jemboss.Jemboss local &

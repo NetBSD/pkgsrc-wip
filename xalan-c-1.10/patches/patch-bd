@@ -1,0 +1,15 @@
+$NetBSD: patch-bd,v 1.1 2013/01/23 02:17:06 noud4 Exp $
+
+--- src/xalanc/XalanExe/XalanExe.cpp.orig	2013-01-20 21:26:21.000000000 +0000
++++ src/xalanc/XalanExe/XalanExe.cpp	2013-01-20 21:26:57.000000000 +0000
+@@ -104,7 +104,9 @@
+ #include "C:/Program Files/Rational/Quantify/pure.h"
+ #endif
+ 
+-
++#ifdef __NetBSD__
++#include <cstring>
++#endif
+ 
+ XALAN_USING_STD(cerr)
+ XALAN_USING_STD(cin)

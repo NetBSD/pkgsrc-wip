@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.2 2012/12/04 19:37:40 othyro Exp $
+
+Add NetBSD support.
+
+--- makedefs.orig	Wed Aug 31 01:03:40 2005
++++ makedefs	Tue Sep  6 11:57:49 2005
+@@ -14,6 +14,8 @@ case "$SYSTEM.$RELEASE" in
+                 ;;
+   FreeBSD.7*)   DEFS="-DFREEBSD7"
+                 ;;
++  NetBSD.*)	DEFS="-DNETBSD"
++		;;
+   OpenBSD.2*)   DEFS="-DOPENBSD2"
+                 ;;
+   OpenBSD.3*)   DEFS="-DOPENBSD3"

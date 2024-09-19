@@ -1,0 +1,6 @@
+Bessel functions of the first kind, denoted as Ja(x), are solutions of Bessel's
+differential equation that are finite at the origin (x = 0) for integer a, and
+diverge as x approaches zero for negative non-integer a. The solution type
+(e.g.,integer or non-integer) and normalization of Ja(x) are defined by its
+properties below. It is possible to define the function by its Taylor series
+expansion around x = 0.

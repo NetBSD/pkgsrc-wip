@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/11 00:49:00 jgoamakf Exp $
+lib/ocaml/site-lib/enumerate/META
+lib/ocaml/site-lib/enumerate/enumerate.a
+lib/ocaml/site-lib/enumerate/enumerate.cma
+lib/ocaml/site-lib/enumerate/enumerate.cmxa
+lib/ocaml/site-lib/enumerate/enumerate.cmxs
+lib/ocaml/site-lib/enumerate/pa_enumerate.cmi
+lib/ocaml/site-lib/enumerate/pa_enumerate.cmx
+lib/ocaml/site-lib/enumerate/pa_enumerate.mli

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+Preprocessor magic for NetBSD.
+
+--- src/const.h.orig	2010-02-03 22:39:56.000000000 +0000
++++ src/const.h
+@@ -176,7 +176,7 @@
+ #    define PTHREAD_RWLOCK_INITIALIZER DEFAULTRWLOCK;
+ #  endif
+ 
+-#elif defined(unix) || defined(__HOS_AIX__)
++#elif defined(unix) || defined(__HOS_AIX__) || defined(__NetBSD__)
+ #  include <stdint.h>	// int32_t, ...
+ #  include <limits.h>	// PATH_MAX, OPEN_MAX
+ #  ifdef __CYGWIN__ // cygwin port of gcc compiler

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.3 2013/01/03 13:06:34 othyro Exp $
+
+RMD160 (tde-5.1v.tar.gz) = e0f96e3ba4115415d5cb94cdec69143f3493ba14
+Size (tde-5.1v.tar.gz) = 561710 bytes
+SHA1 (patch-aa) = 9d2cca0d04632fb746117b01ee7f87861eb364ef
+SHA1 (patch-ab) = b882eb50cecec8cf7a76ae0016a5ce1330e07854
+SHA1 (patch-ac) = 79ee69f5999a9d39ce6428cdec9ea6348c79b1e5
+SHA1 (patch-macro.c) = 37df3df8aea46bebe24eddb8e1604a53d13f69ea
+SHA1 (patch-tdefunc.h) = 51181ac252817ce5975dfd6a99ec4f9ffb69aefb

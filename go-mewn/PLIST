@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/mewn
+gopkg/pkg/${GO_PLATFORM}/github.com/leaanthony/mewn.a
+gopkg/pkg/${GO_PLATFORM}/github.com/leaanthony/mewn/lib.a
+gopkg/pkg/${GO_PLATFORM}/github.com/leaanthony/mewn/test.a
+gopkg/src/github.com/leaanthony/mewn/LICENSE
+gopkg/src/github.com/leaanthony/mewn/README.md
+gopkg/src/github.com/leaanthony/mewn/RELEASES.md
+gopkg/src/github.com/leaanthony/mewn/cmd/mewn/main.go
+gopkg/src/github.com/leaanthony/mewn/filegroup.go
+gopkg/src/github.com/leaanthony/mewn/go.mod
+gopkg/src/github.com/leaanthony/mewn/lib/assetdirectory.go
+gopkg/src/github.com/leaanthony/mewn/lib/ast.go
+gopkg/src/github.com/leaanthony/mewn/lib/filegroup.go
+gopkg/src/github.com/leaanthony/mewn/lib/filesystem.go
+gopkg/src/github.com/leaanthony/mewn/lib/pack.go
+gopkg/src/github.com/leaanthony/mewn/main.go
+gopkg/src/github.com/leaanthony/mewn/test/assets/hello.txt
+gopkg/src/github.com/leaanthony/mewn/test/assets/wails_small.png
+gopkg/src/github.com/leaanthony/mewn/test/empty.go
+gopkg/src/github.com/leaanthony/mewn/test/entries_test.go
+gopkg/src/github.com/leaanthony/mewn/test/example.go
+gopkg/src/github.com/leaanthony/mewn/test/filesystem_test.go
+gopkg/src/github.com/leaanthony/mewn/test/fixtures/bad.asset.txt
+gopkg/src/github.com/leaanthony/mewn/test/fixtures/empty.go.txt
+gopkg/src/github.com/leaanthony/mewn/test/fixtures/example.go.txt
+gopkg/src/github.com/leaanthony/mewn/test/pack_test.go

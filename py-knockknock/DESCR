@@ -1,0 +1,2 @@
+Simple & secure port knocking client/server written in python
+The server is intended to use together with iptables

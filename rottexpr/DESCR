@@ -1,0 +1,15 @@
+This source port of Rise of the Triad features the following:
+
+ - Now runs off of SDL2!
+ - Support for resolutions from 320x200 all the way to 3840x2160
+ - Adaptive HUD positioning (no more status bar being off to the side)
+ - HUD scaling (HUD scaling for bottomless HUD coming later)
+ - Support for bordered and borderless windowed modes
+
+New gameplay options:
+
+ * Blitzguards being outfitted with any weapon from the missile/magic weapon
+   arsenal! Yes, that means Blitzguards can use excalibats too!
+ * You can now pick up ammo from dropped missile weapons!
+ * A special respawning enemy game mode called ZomROTT, where you have to gib
+   your enemies to keep them from coming back!

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/01/08 13:25:19 draga Exp $
+
+--- Makefile.NetBSD.orig	2007-12-18 10:10:34.000000000 +0100
++++ Makefile.NetBSD
+@@ -0,0 +1,17 @@
++#
++# NetBSD specific definitions
++#
++FREEDUPEXE=./freedup
++SHATESTEXE=./sha1test
++ECHOE=echo -e
++MAKE=make
++#CC=gcc
++DEFS=-DFLAVOUR="\"b\""
++RPMBUILD=/usr/src/packages
++#
++# Uncritial definitions for testing
++#
++TUSR=bin
++TGRP=bin
++DCOL="\:"
++

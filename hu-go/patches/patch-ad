@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- Makefile.am.orig	2004-06-15 22:02:08.000000000 +0200
++++ Makefile.am
+@@ -57,6 +57,10 @@ if SDL_FREEBSD
+ hugo_SOURCES += osd_freebsd_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_linux_sdl_machine.c 
+ endif
+ 
++if SDL_NETBSD
++hugo_SOURCES += osd_freebsd_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_linux_sdl_machine.c 
++endif
++
+ if SDL_SOLARIS
+ hugo_SOURCES += osd_solaris_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_unix_sdl_machine.c
+ endif

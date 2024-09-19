@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/11/17 14:04:31 yhardy Exp $
+
+--- src/drivers/olethros/geometry.cpp.orig	2008-03-15 01:20:30.000000000 +0200
++++ src/drivers/olethros/geometry.cpp	2008-03-15 01:20:52.000000000 +0200
+@@ -24,6 +24,9 @@
+ #include <cstdio>
+ #include <exception>
+ #include <stdexcept>
++
++using namespace std;
++
+ #ifdef WIN32
+ #include <float.h>
+ #define isnan _isnan

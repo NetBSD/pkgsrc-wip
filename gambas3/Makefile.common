@@ -1,0 +1,154 @@
+# $NetBSD$
+# used by wip/gambas3/Makefile
+# used by wip/gambas3-devel/Makefile
+# used by wip/gambas3-gb-args/Makefile
+# used by wip/gambas3-gb-cairo/Makefile
+# used by wip/gambas3-gb-chart/Makefile
+# used by wip/gambas3-gb-clipper/Makefile
+# used by wip/gambas3-gb-complex/Makefile
+# used by wip/gambas3-gb-compress/Makefile
+# used by wip/gambas3-gb-compress-bzlib2/Makefile
+# used by wip/gambas3-gb-compress-zlib/Makefile
+# used by wip/gambas3-gb-crypt/Makefile
+# used by wip/gambas3-gb-data/Makefile
+# used by wip/gambas3-gb-db/Makefile
+# used by wip/gambas3-gb-db-form/Makefile
+# used by wip/gambas3-gb-db-mysql/Makefile
+# used by wip/gambas3-gb-db-odbc/Makefile
+# used by wip/gambas3-gb-db-postgresql/Makefile
+# used by wip/gambas3-gb-db-sqlite2/Makefile
+# used by wip/gambas3-gb-db-sqlite3/Makefile
+# used by wip/gambas3-gb-dbus/Makefile
+# used by wip/gambas3-gb-dbus-trayicon/Makefile
+# used by wip/gambas3-gb-desktop/Makefile
+# used by wip/gambas3-gb-desktop-gnome-keyring/Makefile
+# used by wip/gambas3-gb-desktop-x11/Makefile
+# used by wip/gambas3-gb-eval-highlight/Makefile
+# used by wip/gambas3-gb-form/Makefile
+# used by wip/gambas3-gb-form-dialog/Makefile
+# used by wip/gambas3-gb-form-editor/Makefile
+# used by wip/gambas3-gb-form-mdi/Makefile
+# used by wip/gambas3-gb-form-stock/Makefile
+# used by wip/gambas3-gb-form-terminal/Makefile
+# used by wip/gambas3-gb-gmp/Makefile
+# used by wip/gambas3-gb-gsl/Makefile
+# used by wip/gambas3-gb-gtk/Makefile
+# used by wip/gambas3-gb-gtk3/Makefile
+# used by wip/gambas3-gb-gtk-opengl/Makefile
+# used by wip/gambas3-gb-httpd/Makefile
+# used by wip/gambas3-gb-image/Makefile
+# used by wip/gambas3-gb-image-effect/Makefile
+# used by wip/gambas3-gb-image-imlib/Makefile
+# used by wip/gambas3-gb-image-io/Makefile
+# used by wip/gambas3-gb-inotify/Makefile
+# used by wip/gambas3-gb-jit/Makefile
+# used by wip/gambas3-gb-libxml/Makefile
+# used by wip/gambas3-gb-logging/Makefile
+# used by wip/gambas3-gb-map/Makefile
+# used by wip/gambas3-gb-markdown/Makefile
+# used by wip/gambas3-gb-media/Makefile
+# used by wip/gambas3-gb-media-form/Makefile
+# used by wip/gambas3-gb-memcached/Makefile
+# used by wip/gambas3-gb-mime/Makefile
+# used by wip/gambas3-gb-mysql/Makefile
+# used by wip/gambas3-gb-ncurses/Makefile
+# used by wip/gambas3-gb-net/Makefile
+# used by wip/gambas3-gb-net-curl/Makefile
+# used by wip/gambas3-gb-net-pop3/Makefile
+# used by wip/gambas3-gb-net-smtp/Makefile
+# used by wip/gambas3-gb-openal/Makefile
+# used by wip/gambas3-gb-opengl/Makefile
+# used by wip/gambas3-gb-opengl-glsl/Makefile
+# used by wip/gambas3-gb-opengl-glu/Makefile
+# used by wip/gambas3-gb-opengl-sge/Makefile
+# used by wip/gambas3-gb-openssl/Makefile
+# used by wip/gambas3-gb-option/Makefile
+# used by wip/gambas3-gb-pcre/Makefile
+# used by wip/gambas3-gb-pdf/Makefile
+# used by wip/gambas3-gb-qt4/Makefile
+# used by wip/gambas3-gb-qt4-ext/Makefile
+# used by wip/gambas3-gb-qt4-opengl/Makefile
+# used by wip/gambas3-gb-qt4-webkit/Makefile
+# used by wip/gambas3-gb-qt5/Makefile
+# used by wip/gambas3-gb-qt5-ext/Makefile
+# used by wip/gambas3-gb-qt5-opengl/Makefile
+# used by wip/gambas3-gb-qt5-webkit/Makefile
+# used by wip/gambas3-gb-report/Makefile
+# used by wip/gambas3-gb-report2/Makefile
+# used by wip/gambas3-gb-scanner/Makefile
+# used by wip/gambas3-gb-sdl/Makefile
+# used by wip/gambas3-gb-sdl2/Makefile
+# used by wip/gambas3-gb-sdl2-audio/Makefile
+# used by wip/gambas3-gb-sdl-sound/Makefile
+# used by wip/gambas3-gb-settings/Makefile
+# used by wip/gambas3-gb-signal/Makefile
+# used by wip/gambas3-gb-term/Makefile
+# used by wip/gambas3-gb-term-form/Makefile
+# used by wip/gambas3-gb-util/Makefile
+# used by wip/gambas3-gb-util-web/Makefile
+# used by wip/gambas3-gb-v4l/Makefile
+# used by wip/gambas3-gb-vb/Makefile
+# used by wip/gambas3-gb-web/Makefile
+# used by wip/gambas3-gb-web-feed/Makefile
+# used by wip/gambas3-gb-web-form/Makefile
+# used by wip/gambas3-gb-xml/Makefile
+# used by wip/gambas3-gb-xml-html/Makefile
+# used by wip/gambas3-gb-xml-rpc/Makefile
+# used by wip/gambas3-gb-xml-xslt/Makefile
+# used by wip/gambas3-ide/Makefile
+# used by wip/gambas3-runtime/Makefile
+# used by wip/gambas3-scripter/Makefile
+
+GB_VERSION=		3.13.0
+DISTNAME=		gambas-${GB_VERSION}
+CATEGORIES=		lang
+MASTER_SITES=		https://gitlab.com/gambas/gambas/-/archive/${GB_VERSION}/
+
+HOMEPAGE=		http://gambas.sourceforge.net/
+LICENSE=		gnu-gpl-v2
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/gambas3/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gambas3/patches
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoreconf automake aclocal pkg-config intltool
+CONFIGURE_DIRS!=	for d in ${BUILD_DIRS}; do echo $$d | cut -d/ -f1; done
+
+.if "${BUILD_DIRS}" != "main/gbc"
+TOOL_DEPENDS+=		gambas3-devel-${GB_VERSION}:../../wip/gambas3-devel
+TOOL_DEPENDS+=		xdg-utils-1.*:../../misc/xdg-utils
+.  export XDG_DATA_HOME	${DESTDIR}${PREFIX}/share
+.  export XDG_UTILS_INSTALL_MODE user
+
+.  for comp in ${GB_DEPENDS}
+DEPENDS+=		${comp}-${GB_VERSION}:../../wip/${comp}
+.  endfor
+
+CHECK_FILES_SKIP+=	${PREFIX}/lib/gambas3/.*
+CHECK_FILES_SKIP+=	${PREFIX}/share/gambas3/.*
+
+pre-install:
+	cd ${DESTDIR}${PREFIX}; \
+	mkdir -p bin lib share; \
+	ln -s ${PREFIX}/bin/gba3 bin/gba3; \
+	ln -s ${PREFIX}/bin/gbc3 bin/gbc3; \
+	ln -s ${PREFIX}/bin/gbi3 bin/gbi3; \
+	${CP} -r ${PREFIX}/lib/gambas3 lib || ${TRUE}; \
+	${CP} -r ${PREFIX}/share/gambas3 share || ${TRUE}
+
+post-install:
+	cd ${DESTDIR}${PREFIX}; \
+	rm bin/gba3; \
+	rm bin/gbc3; \
+	rm bin/gbi3; \
+	rmdir bin || ${TRUE}
+.endif
+
+pre-configure:
+.for d in ${CONFIGURE_DIRS}
+	cd ${WRKSRC}/${d}; \
+	./reconf
+.endfor

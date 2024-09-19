@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/07 19:26:40 thomasklausner Exp $
+bin/muscleTool
+man/man1/muscleTool.1

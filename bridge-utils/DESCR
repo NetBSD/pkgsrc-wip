@@ -1,0 +1,6 @@
+Ethernet bridging is a way to connect networks together to form a larger
+network. The standard for bridging is ANSI/IEEE 802.1d which downloaded
+from IEEE get 802 site. A bridge is a way to connect two separate network
+segments together in a protocol independent way. Packets are forwarded based
+on Ethernet address, rather than IP address (like a router). Since forwarding
+is done at Layer 2, all protocols can go transparently through a bridge.

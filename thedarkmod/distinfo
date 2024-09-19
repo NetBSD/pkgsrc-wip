@@ -1,0 +1,25 @@
+$NetBSD$
+
+RMD160 (thedarkmod.2.07.src.7z) = 94ded62dcb4a5b0e0b9bcc24e40131ecd4c58b19
+SHA512 (thedarkmod.2.07.src.7z) = e76aba85722af0e496b604a20fb9f33a44867f0179187d018a6f4dcde5a28987913ead473e86aa0810d2b37c198bfaba48c9f5ccc895af0dfc5863baf15e6db4
+Size (thedarkmod.2.07.src.7z) = 52411631 bytes
+SHA1 (patch-SConstruct) = 0fd89d7730dc02f0bbb5dd7bb7e7a79b1005f13e
+SHA1 (patch-TypeInfo_main.cpp) = ad58a4917b961c48858af61f25c8565dcb50d54f
+SHA1 (patch-game_anim_Anim__Blend.cpp) = 326457af38817439b623dd20679be67779aca3d4
+SHA1 (patch-idlib_Str.h) = 68993a266fa91d0909a2ef31720e754f013c4b90
+SHA1 (patch-idlib_bv_Frustum.cpp) = 29ab03477c8689820d0c0543f3a00956557b1c5b
+SHA1 (patch-idlib_bv_Frustum.h) = 23a13f93bb3cd94cf155f8d18894992426f46515
+SHA1 (patch-idlib_math_Math.h) = 0baeaa94b008a4779da5af1f2424df35d22e178f
+SHA1 (patch-idlib_math_Simd.cpp) = 54553c575f2f0bcdbb7ab9e6be42adbc874c8333
+SHA1 (patch-idlib_math_Simd.h) = a93f686511f8b10c63a5fd29bbebaf3a901e91da
+SHA1 (patch-idlib_math_Simd__AVX.h) = 8a9347d797a3a53e47b4df4ef721873e01b23da3
+SHA1 (patch-idlib_math_Simd__AVX2.h) = e88cb5d26d53a13f04ab817ae9cc1480555d75bd
+SHA1 (patch-renderer_qgl.h) = 4ec1b4b233046987874a8f366830fd5cfc2c564f
+SHA1 (patch-sys_gllog_gl__extensions.cpp.m4) = eeb4961c611e86b8e7ebbe333667ff9e561c4cad
+SHA1 (patch-sys_linux_main.cpp) = 2f15b1c3b635fc5f32fccbbc7f6ba39da17d8327
+SHA1 (patch-sys_osx_DOOMController.mm) = 492c6555fb0550e6eb41617176574b8c616ff48d
+SHA1 (patch-sys_scons_SConscript.darkmod) = 076e5663f2b16b88892b49d10ec11278d9be98f5
+SHA1 (patch-sys_scons_SConscript.gl) = 89fd461e5f1ea2a299de77d011d0e13b85aac27c
+SHA1 (patch-sys_sys__local.cpp) = 265e7f1c8c42d33264272ff079778355da89184b
+SHA1 (patch-sys_sys__local.h) = 20eb3286e84c1be82fc67d51c3ef79612c3d119e
+SHA1 (patch-sys_sys__public.h) = 5549b99eb433a543d5f086e2ae9432ba3f08d714

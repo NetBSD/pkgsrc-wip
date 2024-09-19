@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.2 2014/04/21 09:11:37 szptvlfn Exp $
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Blaze.hi
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Blaze.p_hi
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/HSblaze-builder-conduit-${PKGVERSION}.o
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-builder-conduit-${PKGVERSION}.a
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-builder-conduit-${PKGVERSION}_p.a
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/blaze-builder-conduit-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/Data-Conduit-Blaze.html
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/blaze-builder-conduit.haddock
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/mini_Data-Conduit-Blaze.html
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/blaze-builder-conduit-${PKGVERSION}/html/synopsis.png

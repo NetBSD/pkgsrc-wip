@@ -1,0 +1,9 @@
+Until the Go core team include support for generics in Go, genny is a
+code-generation generics solution. It allows you write normal buildable and
+testable Go code which, when processed by the genny gen tool, will replace the
+generics with specific types.
+
+  * Generic code is valid Go code
+  * Generic code compiles and can be tested
+  * Use stdin and stdout or specify in and out files
+  * Supports Go 1.4's go generate

@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/typedload/__init__.py
+${PYSITELIB}/typedload/__init__.pyc
+${PYSITELIB}/typedload/__init__.pyo
+${PYSITELIB}/typedload/datadumper.py
+${PYSITELIB}/typedload/datadumper.pyc
+${PYSITELIB}/typedload/datadumper.pyo
+${PYSITELIB}/typedload/dataloader.py
+${PYSITELIB}/typedload/dataloader.pyc
+${PYSITELIB}/typedload/dataloader.pyo
+${PYSITELIB}/typedload/exceptions.py
+${PYSITELIB}/typedload/exceptions.pyc
+${PYSITELIB}/typedload/exceptions.pyo
+${PYSITELIB}/typedload/py.typed
+${PYSITELIB}/typedload/typechecks.py
+${PYSITELIB}/typedload/typechecks.pyc
+${PYSITELIB}/typedload/typechecks.pyo

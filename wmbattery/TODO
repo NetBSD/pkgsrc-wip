@@ -1,0 +1,3 @@
+- Find out if there are other battery types than acpibat* and add
+  support for those if so
+- Check acpiacad* for whether the AC adapter is plugged in

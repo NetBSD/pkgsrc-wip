@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 16:46:30 phonohawk Exp $
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/HSexplicit-iomodes-${PKGVERSION}.o
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/System/IO/ExplicitIOModes.hi
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/System/IO/ExplicitIOModes.p_hi
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/System/IO/ExplicitIOModes/Internal.hi
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/System/IO/ExplicitIOModes/Internal.p_hi
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/System/IO/ExplicitIOModes/Unsafe.hi
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/System/IO/ExplicitIOModes/Unsafe.p_hi
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/libHSexplicit-iomodes-${PKGVERSION}.a
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/libHSexplicit-iomodes-${PKGVERSION}_p.a
+lib/explicit-iomodes-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/explicit-iomodes-${PKGVERSION}/LICENSE

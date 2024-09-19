@@ -1,0 +1,7 @@
+Xpra is 'screen for X', and more: it allows you to run X programs,
+usually on a remote host and direct their display to your local
+machine. It also allows you to display existing desktop sessions
+remotely.  Xpra is "rootless" or "seamless", and sessions can be
+accessed over SSH, or password protected and encrypted over plain
+TCP sockets.  Xpra adapts to bandwidth constraints and is fully
+open-source.

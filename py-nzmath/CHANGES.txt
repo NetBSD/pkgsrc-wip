@@ -1,0 +1,153 @@
+version 0.7.0 to 0.90.0
+-----------------------
+* change required Python version to 2.5.
+* many changes in matrix.
+* add new modules algfield, round2 and squarefree.
+* add a new module factor in poly sub-package.
+* add a new function map_choice in bigrandom.
+* add a new function euler in combinatorial.
+* add a method getRing to imaginary.Complex to fix sf bug # 1852828.
+* add a new class Real in real.
+* add a new method generate to factor.util.FactoringMethod.
+* add a new method total_degree to classes in poly.multivar.
+* add new methods resultant, discriminant and subresultant_extgcd to poly.uniutil.SubresultantGcdProvider.
+* add a new class IntegerPolynomial in poly.uniutil.
+* add a new method resultant to poly.multiutil.UniqueFactorizationDomainPolynomial.
+* change LLL into a function in lattice.
+* fix a few bugs in elliptic including sf bug #1913999.
+* fix a few bugs in gcd including sf bug #1924839.
+* fix a bug in prime._lucas_test_sequence.
+* change inplementation of polynomial.resultant.
+* a few minor modifications in rational.
+
+version 0.6.0 to 0.7.0
+----------------------
+* add a new sub-package poly for new implementation of polynomials.
+* enhance quad module; class group structure, etc.
+* add a new module compatibility for easier treatment of sets compatibility.
+* add new functions bell, stirling1 and stirling2 in combinatorial.
+* add a new function inverse in ring.
+* add a new method exact_division to ring.CommutativeRingElement.
+* add new methods getCharacteristic and getCommonSuperring to ring.Ring. 
+* add a new method permute,setKey,getData to permute.Permute and .ExPermute.
+* add a new class PermGroup and move group methods from Permute and .ExPermute.
+* fix a bug of equation.Newton.
+* fix bugs in finitefield (including sf bug #1751708, #1752666).
+* fix a bug of real.AbsoluteError (ML #75 reported by Dino Viehland).
+* update matrix to get rid of special treatment of rational integers.
+* speed up order and sgn in permute.Permute and .ExPermute.
+
+version 0.5.1 to 0.6.0
+----------------------
+* add a new module arygcd for efficient gcds for some integer rings of imaginary quadratic fields.
+* add a new module bigrange for simplifying loops.
+* add a new module cubic_root for cubic residues and cubic roots for some integer rings of imaginary quadratic fields.
+* add a new module factor.ecm for elliptic curve method factorization.
+* add partition_numbers_upto and partition_number functions in combinatorial.
+* fix a bug of arith1.AGM function. (sf bug #1600223)
+* fix a bug of bigrandom.random function. (sf bug #1590692)
+* fix a bug of equation.e2_Fp and add e1_ZnZ to the module.
+
+version 0.5.0 to 0.5.1
+----------------------
+* restructure matrix module.
+* restructure ec module.
+* revise vector module.
+* add zero and one for ResidueClassRing (requested by Bill Hale).
+* add bsgs to quad.
+* add lpsp and fpsp (Lucas and Frobenius pseudoprime tests) to prime.
+* add __hash__ for several immutable classes.
+* fix a bug of SimMethod in equation.
+* fix bugs in polynomial.
+* fix bugs in ring.
+
+version 0.4.1 to 0.5.0
+----------------------
+* rearrange modules in factor sub-package.
+* add a new module quad for computing class numbers of imaginary quadratic fields.
+* add new modules group and perm for group order computation and calculations of permutation groups.
+* fix a bug of issquare function in arith1.
+* fix a bug of e3 function in equation.
+* move zassenhaus.combinationIndexGenerator to combinatorial.
+* add functions coprime and pairwise_coprime to gcd.
+* add a function log to arith1.
+* add a method smith to matrix.IntegerMatrix.
+* add functions fallingfactorial, risingfactorial, multinomial and partitionGenerator to combinatorial.
+
+version 0.4.0 to 0.4.1
+----------------------
+* fix a bug of Schoof's method, EC.point, etc. in elliptic.
+* fix a bug of integrate method in polynomial.
+* fix a bug of e3_Fp function in equation.
+* move elliptic.divi to factor.AllDivisors.
+* rename arith1.sqroot to modsqrt and remove resembles in factor sub-package.
+* move vp from prime to arith1 and remove factor.factor.ord.
+* remove dependency on factor.trialDivision from prime.
+* move issquare from factor to arith1.
+* add a function getRing in ring.
+* add a function mpqsfind in factor.mpqs.
+* add a method order to finitefield.FinitePrimeFieldElement.
+* add generator_eratosthenes to prime (EXPERIMENTAL).
+
+version 0.3.1 to 0.4.0
+----------------------
+* add new modules equation providing a root finding methods and zassenhaus providing factorization of integer coefficient polynomials.
+* fix some bugs in factor.factor and polynomial.
+* add a method to culculate Mordel-Weil group structure of elliptic curve over finite fields. 
+* add a function floorpowerroot in arith1.
+* add functions bernoulli and catalan in combinatorial.
+* add a function PrimePowerTest in factor.factor.
+* add a function sigma in multiplicative.
+
+version 0.3.0 to 0.3.1
+----------------------
+* fix import problem, and include finitefield.py mistakenly missing in 0.3.0.
+
+version 0.2.1 to 0.3.0
+----------------------
+* create a new module multiplicative.py with euler and moebius
+  from arith1.py to avoid circular import.
+
+version 0.2.0 to 0.2.1
+----------------------
+* include some missing files in 0.2.0.
+
+Version 0.1.1 to 0.2.0
+----------------------
+* add a new module factor.mpqs, which provides multi-polynomial
+  quadratic sieve method.
+* add a method to culculate order of elliptic curve over finite fields.
+* rewrite polynomial.py for one variable polynomials.
+* rewrite real.py and imaginary.py.
+* fix bug in matrix.py (reported by Justin Walker).
+* many other bug fixes.
+* create a tutorial.txt document.
+
+Version 0.1.0 to 0.1.1
+----------------------
+* BSD-licensed.
+* add a constant j to imaginary.
+* intializing Rational with denominator 0 raises ZeroDivisionError.
+* fix bugs in real.py and elliptic.py.
+
+Version 0.0.1 to 0.1.0
+----------------------
+* add new module elliptic for elliptic curve operations.
+* remove optional argument for generator in prime.py. Condition may
+  be specified with itertools instead.
+* add new module finitefield for finite field.  It only includes
+  finite prime field at the present moment.
+* add new module combinatrial including binomial and factorial.
+* add issubring and issuperring to Ring in ring.py.
+* add mpqs function (multi-polynomial quadratic sieve) in factor.py.
+* add IntegerIfIntOrLong function in rational.py.
+* add LUDecomposition method to Matrix in matrix.py.
+* now you can factor a very big but very smooth integer by trial division.
+* speed up real.log, and it now accepts float.
+* fix bugs in rational.py, integerResidueClass.py, etc..
+
+Version 0.0.0 to 0.0.1
+----------------------
+* add __long__ and __int__ methods to Rational in rational.py.
+* add gcd method to PolynomialRing in polynomial.py.
+* fix bugs in matrix.py, polynomial.py.

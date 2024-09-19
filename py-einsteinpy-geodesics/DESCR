@@ -1,0 +1,5 @@
+EinsteinPy Geodesics is an addon package for EinsteinPy, that wraps
+over Julia's excellent DifferentialEquations.jl suite and provides
+a python interface to solve for geodesics in Kerr & Schwarzschild
+spacetime. EinsteinPy is an open source pure Python package,
+dedicated to problems arising in General Relativity and Gravitational Physics

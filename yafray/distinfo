@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:44 rillig Exp $
+
+RMD160 (yafray-0.0.7.tar.gz) = 885cf2c4c1759538f2f3e080a8fb69f3222ad91f
+Size (yafray-0.0.7.tar.gz) = 695231 bytes
+SHA1 (patch-aa) = cbcf5ec3b1861cbabde07a5f96f46f692fc07dd8
+SHA1 (patch-ab) = b973acf7c988c50d1284045e40425f8bc50a8d57

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.3 2009/01/06 12:41:53 mstapelberg Exp $
+
+RMD160 (mxallowd.1.7.tar.bz2) = 7c31cf01f662cb04c420f21480fc258a68ae4be6
+Size (mxallowd.1.7.tar.bz2) = 34504 bytes
+SHA1 (patch-aa) = a0cdaf5d5b66282be88eac7b1549121fe01b1551
+SHA1 (patch-ab) = 202a95030f6587e54200411f60c46a09fd468914
+SHA1 (patch-ac) = a42040551daf112184a51a0cdd930a2d32e318eb
+SHA1 (patch-ad) = cc451b9cf59ec8af318e1993134054f820019d4b

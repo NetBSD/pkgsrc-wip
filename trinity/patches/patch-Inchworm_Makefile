@@ -1,0 +1,16 @@
+$NetBSD$
+
+# Must use gmake
+--- Inchworm/Makefile.orig	2018-09-01 15:18:14 UTC
++++ Inchworm/Makefile
+@@ -1,8 +1,8 @@
+ all:
+ 	mkdir -p build
+-	cd build && cmake -DCMAKE_INSTALL_PREFIX="" ../ && make DESTDIR=../ install
++	cd build && cmake -DCMAKE_INSTALL_PREFIX="" ../ && ${MAKE} DESTDIR=../ install
+ 
+ clean:
+ 	@echo cleaning
+-	(cd build && make clean) || :
++	(cd build && ${MAKE} clean) || :
+ 	rm -rf ./build ./bin

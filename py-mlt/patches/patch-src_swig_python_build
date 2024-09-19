@@ -1,0 +1,22 @@
+$NetBSD$
+
+Correct swig executable.
+
+--- src/swig/python/build.orig	2019-05-08 02:27:10.000000000 +0000
++++ src/swig/python/build
+@@ -20,13 +20,13 @@ then
+ 	ln -sf ../mlt.i
+ 
+ 	# Invoke swig
+-	swig -c++ -I../../mlt++ -I../.. -python mlt.i || exit $?
++	swig3.0 -c++ -I../../mlt++ -I../.. -python mlt.i || exit $?
+ 
+ 	# Compile the wrapper
+ 	${CXX} -fPIC -D_GNU_SOURCE ${CXXFLAGS} -c -I../.. -I$PYTHON_INCLUDE mlt_wrap.cxx || exit $?
+ 
+ 	# Create the module
+-	${CXX} ${CXXFLAGS} -shared mlt_wrap.o -L../../mlt++ -lmlt++ -L../../framework -lmlt $(python-config --ldflags) -o _mlt.so || exit $?
++	${CXX} ${LDFLAGS} -shared mlt_wrap.o -L../../mlt++ -lmlt++ -L../../framework -lmlt $(python${PYVERSSUFFIX}-config --ldflags) -o _mlt.so || exit $?
+ else
+ 	echo Python not installed.
+ 	exit 1

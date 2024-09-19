@@ -1,0 +1,5 @@
+appplication is installing but cant figure out 
+a way to active it from official gitlab link
+gsettings set org.mate.interface gtk-shell-shows-app-menu true
+gsettings set org.mate.interface gtk-shell-shows-menubar true
+https://gitlab.com/vala-panel-project/vala-panel-appmenu

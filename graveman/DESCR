@@ -1,0 +1,9 @@
+Graveman! is a GPL frontend for:
+    * cdrecord
+    * mkisofs
+    * readcd
+    * sox
+    * dvd+rw-format/dvd+rw-tools from v0.3.6
+
+Graveman! can burn audio CDs (WAV, Ogg, MP3), data CDs and DVDs,
+duplicate CDs, and clean rewritable CDs and DVDs.

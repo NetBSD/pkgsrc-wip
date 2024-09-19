@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/10/05 11:06:01 ryo-on Exp $
+
+* Improve compatibility
+
+--- Makefile.in.orig	2011-09-27 17:04:40.000000000 +0000
++++ Makefile.in
+@@ -1082,8 +1082,8 @@ install-data-local:
+ 		$(DESTDIR)/$(htmldir)/lib \
+ 		$(DESTDIR)/$(htmldir)/en \
+ 		$(DESTDIR)/$(pkgicondir)
+-	$(install_sh) -m 0644 -t $(DESTDIR)/$(htmldir)/en $(HTMLFILES_EN)
+-	$(install_sh) -m 0644 -t $(DESTDIR)/$(htmldir)/lib $(HELPLIBFILES)
++	$(install_sh) -m 0644 $(HTMLFILES_EN) $(DESTDIR)/$(htmldir)/en
++	$(install_sh) -m 0644 $(HELPLIBFILES) $(DESTDIR)/$(htmldir)/lib
+ 	$(install_sh) -m 0644 $(top_srcdir)/roxterm.svg \
+ 		$(DESTDIR)/$(pkgicondir)/
+ 

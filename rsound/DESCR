@@ -1,0 +1,9 @@
+This package provides two programs:
+
+rsd -		The server which PCM data is streamed to over TCP/IP or Unix
+		domain sockets, Sound is played back with a low latency
+		depending on what backend is used. It supports several
+		connections to be played back at the same time.
+
+rsdplay -	The client which streams PCM data recieved from stdin to a
+		rsoundserv. The code in rsdplay is mostly for reference.

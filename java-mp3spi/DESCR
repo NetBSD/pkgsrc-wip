@@ -1,0 +1,3 @@
+MP3SPI is a Java Service Provider Interface that adds
+MP3(MPEG 1/2/2.5 Layer 1/2/3) audio format support for Java Platform.
+It supports streaming, ID3v2 frames and Equalizer

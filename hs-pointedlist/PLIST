@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 05:23:23 phonohawk Exp $
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/Data/List/PointedList.hi
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/Data/List/PointedList.p_hi
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/Data/List/PointedList/Circular.hi
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/Data/List/PointedList/Circular.p_hi
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/HSpointedlist-${PKGVERSION}.o
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/libHSpointedlist-${PKGVERSION}.a
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/libHSpointedlist-${PKGVERSION}_p.a
+lib/pointedlist-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/pointedlist-${PKGVERSION}/LICENSE

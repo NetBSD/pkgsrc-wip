@@ -1,0 +1,4 @@
+@comment $NetBSD$
+sbin/ppcoind
+share/examples/peercoin/peercoin.conf
+share/examples/rc.d/peercoind

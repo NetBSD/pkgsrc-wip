@@ -1,0 +1,11 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/parsy/__init__.py
+${PYSITELIB}/parsy/__init__.pyc
+${PYSITELIB}/parsy/__init__.pyo
+${PYSITELIB}/parsy/version.py
+${PYSITELIB}/parsy/version.pyc
+${PYSITELIB}/parsy/version.pyo

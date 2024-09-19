@@ -1,0 +1,5 @@
+Supermodel emulates Sega's Model 3 arcade platform, allowing you to play a
+number of ground-breaking arcade classics on your PC. It uses OpenGL and the SDL
+library, and can run on Windows, Linux, Mac OS X, NetBSD, and possibly others.
+The source code is freely available under the terms of the GNU General Public
+License.

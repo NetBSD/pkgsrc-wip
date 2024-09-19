@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2016-11-02 14:44:56.000000000 +0000
++++ Makefile
+@@ -232,7 +232,7 @@ ifeq (YES,$(DEBUG))
+   endif
+ 
+ else
+-  CXXFLAGS := -march=native ${CXXFLAGS} -O2
++  CXXFLAGS := ${CXXFLAGS} -O2
+ endif
+ 
+ 

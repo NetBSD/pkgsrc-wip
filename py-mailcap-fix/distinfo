@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 12:10:26 leot Exp $
+
+RMD160 (mailcap-fix-1.0.1.tar.gz) = e3e8b9a36969cbbfa75db503bcbf1e5bb75f9269
+SHA512 (mailcap-fix-1.0.1.tar.gz) = 9da10483d77956c0af5810e88d28a9ed7faf8a9a37794a6486ce40a66290fd3ed9cf90b6c41096122d276bbdd31813ef174f899a6e6c726d18380ac1b0b2586d
+Size (mailcap-fix-1.0.1.tar.gz) = 6343 bytes

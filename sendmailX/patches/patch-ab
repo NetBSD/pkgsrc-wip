@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/07/18 13:22:07 adrian_p Exp $
+
+--- Makefile.in.orig	2005-07-17 11:25:08.000000000 +0100
++++ Makefile.in
+@@ -883,8 +883,8 @@ uninstall-info: uninstall-info-recursive
+ 
+ 
+ install-data-hook:
+-	${CHMOD} +x ./misc/sm.setup.sh
+-	${SHELL} ./misc/sm.setup.sh
++#	${CHMOD} +x ./misc/sm.setup.sh
++#	${SHELL} ./misc/sm.setup.sh
+ 
+ # fix this...
+ 

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2014/01/14 02:55:31 nsloss Exp $
+
+RMD160 (bfgminer-3.9.0.zip) = fe782a676ad32f3371479d32aa3457072e48bebf
+Size (bfgminer-3.9.0.zip) = 1416509 bytes
+SHA1 (patch-lowl-vcom.c) = 3e830e304754c9eaf6906e153b3dec3df683991e

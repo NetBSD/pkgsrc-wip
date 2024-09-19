@@ -1,0 +1,23 @@
+$NetBSD$
+
+RMD160 (brlcad-7.26.0.tar.bz2) = bf391f887463ece786c5e1e4f3382c168bfc99b3
+SHA512 (brlcad-7.26.0.tar.bz2) = e4819da6e94ff7e5f777cb3c59a911f8818a10ddef42f02f3c3b95be9057a7a83427fdbc29bc3f610f16100b65bb14919438598bd5d59af16fcdbe9f6351006a
+Size (brlcad-7.26.0.tar.bz2) = 113073230 bytes
+SHA1 (patch-CMakeLists.txt) = ec1955dc1543fd2b6ba5a56ebf350980ac42f7df
+SHA1 (patch-misc_CMake_CompilerFlags.cmake) = 0831bd3376e2838fbd4a08be2121db73fba3db56
+SHA1 (patch-misc_CMake_ThirdParty.cmake) = 03cb989aa4de0a07e146bc80facd649946a9688b
+SHA1 (patch-regress_repository.sh) = ec31fe38033f33201e7fe709a121754b74f478df
+SHA1 (patch-src_conv_iges_main.c) = 67d9315e43313e57efd3cfeb489f035cfa8f58f6
+SHA1 (patch-src_libbu_uce-dirent.h) = 82c0f1c67316b5ddcde50c69a0f746471eaf10c6
+SHA1 (patch-src_librt_primitives_bot_gct__decimation_meshdecimation.c) = c76104ad99c8714379ad7e01b806a2f30cda4f05
+SHA1 (patch-src_other_libutahrle_rle__open__f.c) = 0f63031af8f31b86eb6348fe011e928f161d3795
+SHA1 (patch-src_other_openscenegraph_CMakeLists.txt) = df54a0a75d44bcab5d30b3a5f4b85bffc8fae8b1
+SHA1 (patch-src_other_openscenegraph_src_OpenThreads_pthreads_PThread.cpp) = 0214cd6652f9c380e0a628dd8a36e81513ea6b86
+SHA1 (patch-src_other_openscenegraph_src_osgDB_FileUtils.cpp) = 39b698f942f905f7dc04895a0c5cfc89011d67fe
+SHA1 (patch-src_other_openscenegraph_src_osg_GLExtensions.cpp) = 6310e02f41d0c46496385acad4dc231b6f290d64
+SHA1 (patch-src_other_stepcode_src_base_sc__benchmark.cc) = d3a9d6d2e5069839c218983ea8d6a945a7f33ef7
+SHA1 (patch-src_other_tcl_generic_tclInt.h) = 5205515f224c5030d3316b515de083dc3c366f56
+SHA1 (patch-src_other_tcl_generic_tclPosixStr.c) = 21ea8ff8b44bbec8cdf42a21603dc9ec04322e25
+SHA1 (patch-src_other_tcl_unix_tclUnixCompat.c) = daf031f8d8fe7500937c00626e3c6f78840bda1f
+SHA1 (patch-src_other_tcl_unix_tclUnixInit.c) = fe62352481847ae6a96d267cedd26666fb9d8cdd
+SHA1 (patch-src_other_tcl_unix_tclUnixPort.h) = 0469c2e435bda3b5d88029584da13a82f325e256

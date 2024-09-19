@@ -1,0 +1,5 @@
+Run fast fluid simulations based on the lattice Boltzmann method in Python
+on CPUs and GPUs.
+lbmpy creates highly optimized LB compute kernels in C or CUDA, for a wide
+variety of different collision operators, including MRT, entropic, and
+cumulant schemes

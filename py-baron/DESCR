@@ -1,0 +1,5 @@
+Baron is a Full Syntax Tree (FST) library for Python. By opposition to
+an `AST <https: en.wikipedia.org="" wiki="" abstract_syntax_tree="">`__ which
+drops some syntax information in the process of its creation (like empty
+lines, comments, formatting), a FST keeps everything and guarantees the
+operation fst\_to\_code(code\_to\_fst(source\_code)) == source\_code.

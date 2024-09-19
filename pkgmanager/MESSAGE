@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2006/05/01 08:15:24 scode Exp $
+
+pkgmanager behaves differently than what you may be used to. Make sure you
+read the man page before proceeding.
+
+===========================================================================

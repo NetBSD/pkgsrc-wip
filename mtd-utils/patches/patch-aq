@@ -1,0 +1,14 @@
+$NetBSD: patch-aq,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- flash_info.c	2006-10-07 17:33:37.000000000 +0200
++++ flash_info.c.new	2007-09-01 09:44:58.000000000 +0200
+@@ -8,6 +8,9 @@
+ #include <fcntl.h>
+ #include <time.h>
+ #include <sys/ioctl.h>
++#if __NetBSD__
++#include <sys/param.h>
++#endif
+ #include <sys/mount.h>
+ 
+ #include <mtd/mtd-user.h>

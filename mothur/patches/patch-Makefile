@@ -1,0 +1,37 @@
+$NetBSD$
+
+--- Makefile.orig	2018-06-19 14:16:02 UTC
++++ Makefile
+@@ -15,7 +15,11 @@
+ # BOOST_INCLUDE_DIR - location of boost include files
+ # MOTHUR_FILES - default location for mothur to look for input files at runtime. Most often used for reference files.
+ 
+-PREFIX := ${CURDIR} 
++#PREFIX := ${CURDIR} 
++DESTDIR ?= .
++PREFIX ?= /usr/local
++INSTALL ?= install
++ 
+ 
+ 64BIT_VERSION ?= yes
+ OPTIMIZE ?= yes
+@@ -89,13 +93,15 @@ endif
+     OBJECTS+=$(patsubst %.cpp,%.o,$(wildcard *.cpp))
+     OBJECTS+=$(patsubst %.c,%.o,$(wildcard *.c))
+ 
+-mothur : $(OBJECTS) uchime
++mothur : $(OBJECTS)
+ 	$(CXX) $(LDFLAGS) $(TARGET_ARCH) -o $@ $(OBJECTS) $(LIBS)
++	strip mothur
+ 
+-uchime:
+-	cd source/uchime_src && ./mk && mv uchime ../../ && cd ..
++#uchime:
++#	cd source/uchime_src && ./mk && mv uchime ../../ && cd ..
+ 
+-install : mothur uchime
++install : mothur 
++	${INSTALL} -c mothur ${DESTDIR}${PREFIX}/bin
+ #if [ "${CURDIR}" = "$(PREFIX)" ]; then \
+ #		echo 'done'; \
+ #	else \

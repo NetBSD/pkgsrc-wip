@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/xplugd
+man/man1/xplugd.1
+share/doc/xplugd/LICENSE
+share/doc/xplugd/README.md
+share/doc/xplugd/xplugrc

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 07:34:47 phonohawk Exp $
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/HSstringtable-atom-${PKGVERSION}.o
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/StringTable/Atom.hi
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/StringTable/Atom.p_hi
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/StringTable/AtomMap.hi
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/StringTable/AtomMap.p_hi
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/StringTable/AtomSet.hi
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/StringTable/AtomSet.p_hi
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/libHSstringtable-atom-${PKGVERSION}.a
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/libHSstringtable-atom-${PKGVERSION}_p.a
+lib/stringtable-atom-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/stringtable-atom-${PKGVERSION}/LICENSE

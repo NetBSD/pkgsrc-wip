@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.5 2006/10/29 11:23:11 shattered Exp $
+
+RMD160 (pdq-2.2.1.tgz) = 1983f08bd8b5fc7b68aa46b6bf1be130da78a79c
+Size (pdq-2.2.1.tgz) = 125454 bytes
+SHA1 (patch-aa) = db1e41db056bff4cbce0ce0439a9a6863b28dc54
+SHA1 (patch-ab) = deb0b6b5000935946e6eefc019e98ef56a91bce3
+SHA1 (patch-ac) = 4e17a6db0a556df972f37a97ef10c9f944ac8a25

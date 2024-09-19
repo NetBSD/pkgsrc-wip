@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/10/31 20:41:22 shattered Exp $
+
+--- general.c.orig	2006-03-26 14:59:24.000000000 +0000
++++ general.c
+@@ -26,7 +26,7 @@
+  */
+ #include "cpm.h"
+ #ifdef HAVE_CRACKLIB
+-  #include <crack.h>
++  #include <cracklib/crack.h>
+ #endif
+ #include "configuration.h"
+ #include "general.h"

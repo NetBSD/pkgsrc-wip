@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- test/Makefile.in.orig	2003-12-10 11:34:48.000000000 +0000
++++ test/Makefile.in
+@@ -621,7 +621,6 @@ uninstall-am: uninstall-info-am uninstal
+ 	mostlyclean-generic mostlyclean-libtool tags uninstall \
+ 	uninstall-am uninstall-info-am uninstall-testlibLTLIBRARIES
+ 
+-dnl noinst_PROGRAMS = unittest
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

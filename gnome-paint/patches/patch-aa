@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/22 08:38:29 jihbed Exp $
+
+--- Makefile.in.orig	2010-06-22 09:32:46.000000000 +0000
++++ Makefile.in	2010-06-22 09:33:59.000000000 +0000
+@@ -267,14 +267,6 @@
+ SUBDIRS = src po \
+ 	data
+ 
+-gnome_paintdocdir = ${prefix}/doc/gnome-paint
+-gnome_paintdoc_DATA = \
+-	README\
+-	COPYING\
+-	AUTHORS\
+-	ChangeLog\
+-	INSTALL\
+-	NEWS
+ 
+ INTLTOOL_FILES = intltool-extract.in \
+ 	intltool-merge.in \

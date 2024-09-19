@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/zmusic.h
+lib/libzmusic.so
+lib/libzmusic.so.1
+lib/libzmusic.so.1.1.0
+lib/libzmusiclite.so
+lib/libzmusiclite.so.1
+lib/libzmusiclite.so.1.1.0

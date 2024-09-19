@@ -1,0 +1,210 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/01/16 17:34:40 ishit Exp $
+
+--- tcp_seg.c.orig	1999-07-27 00:08:51.000000000 +0900
++++ tcp_seg.c
+@@ -101,18 +101,18 @@ tcp_seg_null_payload(ELEM *seg)
+   int newlen = ntohs(iph->ip_len) - (ip_hl + tcp_hl);
+   u_char *newdata;
+   
+-  if (!(newdata = malloc(ip_hl + TCP_H + newlen)))
++  if (!(newdata = malloc(ip_hl + LIBNET_TCP_H + newlen)))
+     return NULL;
+   
+   /* Whack the payload (including TCP options to elude PAWS). */
+-  memcpy(newdata, seg->data, ip_hl + TCP_H);
+-  memset(newdata + ip_hl + TCP_H, 0, newlen);
++  memcpy(newdata, seg->data, ip_hl + LIBNET_TCP_H);
++  memset(newdata + ip_hl + LIBNET_TCP_H, 0, newlen);
+ 
+   /* Correct IP length, TCP header length, TCP checksum, segment length. */
+-  ((struct ip *)newdata)->ip_len = htons(ip_hl + TCP_H + newlen);
+-  ((struct tcphdr *)(newdata + ip_hl))->th_off = TCP_H / 4;
+-  libnet_do_checksum(newdata, IPPROTO_TCP, TCP_H + newlen);
+-  seg->len = ip_hl + TCP_H + newlen;
++  ((struct ip *)newdata)->ip_len = htons(ip_hl + LIBNET_TCP_H + newlen);
++  ((struct tcphdr *)(newdata + ip_hl))->th_off = LIBNET_TCP_H / 4;
++  libnet_do_checksum(newdata, IPPROTO_TCP, LIBNET_TCP_H + newlen);
++  seg->len = ip_hl + LIBNET_TCP_H + newlen;
+ 
+   free(seg->data);
+   seg->data = newdata;
+@@ -188,23 +188,23 @@ tcp_seg_interleave_syns(ELEM *seg)
+     int ip_hl = iph->ip_hl * 4;
+     struct tcphdr *tcph = (struct tcphdr *)(s->data + ip_hl);
+ 
+-    if (!(data = malloc(ip_hl + TCP_H)))
++    if (!(data = malloc(ip_hl + LIBNET_TCP_H)))
+       return NULL;
+ 
+     /* Copy in IP header. */
+     memcpy(data, s->data, ip_hl);
+ 
+     /* Correct IP length, trash IP ID, TCP sequence number. */
+-    ((struct ip *)data)->ip_len = htons(ip_hl + TCP_H);
++    ((struct ip *)data)->ip_len = htons(ip_hl + LIBNET_TCP_H);
+     ((struct ip *)data)->ip_id = htons(iph->ip_id) * 2; /* intentional! */
+     libnet_build_tcp(ntohs(tcph->th_sport), ntohs(tcph->th_dport),
+ 		     htonl(tcph->th_seq * 2), 0, TH_SYN, ntohs(tcph->th_win),
+ 		     ntohs(tcph->th_urp), NULL, 0, data + ip_hl);
+     
+-    libnet_do_checksum(data, IPPROTO_TCP, TCP_H);
++    libnet_do_checksum(data, IPPROTO_TCP, LIBNET_TCP_H);
+ 
+     /* Add it to our list of TCP packets. */
+-    new = list_elem(data, ip_hl + TCP_H);
++    new = list_elem(data, ip_hl + LIBNET_TCP_H);
+     free(data);
+     
+     if (!(s = list_add(s, new)))
+@@ -231,34 +231,34 @@ tcp_seg_prepend_fakeclose(u_char *pkt, i
+     return NULL;
+   
+   /* Add our fake FIN packet. */
+-  if (!(data = malloc(ip_hl + TCP_H)))
++  if (!(data = malloc(ip_hl + LIBNET_TCP_H)))
+     return NULL;
+ 
+   memcpy(data, pkt, ip_hl);
+-  ((struct ip *)data)->ip_len = htons(ip_hl + TCP_H);
++  ((struct ip *)data)->ip_len = htons(ip_hl + LIBNET_TCP_H);
+   ((struct ip *)data)->ip_id = htons(iph->ip_id) * 2; /* intentional! */
+   libnet_build_tcp(ntohs(tcph->th_sport), ntohs(tcph->th_dport),
+ 		   ntohl(tcph->th_seq) + 1, ntohl(tcph->th_ack),
+ 		   TH_FIN, 0, ntohs(tcph->th_urp), NULL, 0, data + ip_hl);
+   
+-  new = list_elem(data, ip_hl + TCP_H);
++  new = list_elem(data, ip_hl + LIBNET_TCP_H);
+   free(data);
+   
+   if (!(list = list_add(list, new)))
+     return NULL;
+ 
+   /* Add our fake RST packet. */
+-  if (!(data = malloc(ip_hl + TCP_H)))
++  if (!(data = malloc(ip_hl + LIBNET_TCP_H)))
+     return NULL;
+ 
+   memcpy(data, pkt, ip_hl);
+-  ((struct ip *)data)->ip_len = htons(ip_hl + TCP_H);
++  ((struct ip *)data)->ip_len = htons(ip_hl + LIBNET_TCP_H);
+   ((struct ip *)data)->ip_id = htons(iph->ip_id) * 2 + 1; /* intentional! */
+   libnet_build_tcp(ntohs(tcph->th_sport), ntohs(tcph->th_dport),
+ 		   ntohl(tcph->th_seq) + 2, ntohl(tcph->th_ack),
+ 		   TH_RST, 0, ntohs(tcph->th_urp), NULL, 0, data + ip_hl);
+ 
+-  new = list_elem(data, ip_hl + TCP_H);
++  new = list_elem(data, ip_hl + LIBNET_TCP_H);
+   free(data);
+   
+   if (!(list = list_add(list, new)))
+@@ -280,34 +280,34 @@ tcp_seg_prepend_connection(u_char *pkt, 
+     return NULL;
+ 
+   /* Add our decoy SYN packet. */
+-  if (!(data = malloc(ip_hl + TCP_H)))
++  if (!(data = malloc(ip_hl + LIBNET_TCP_H)))
+     return NULL;
+ 
+   memcpy(data, pkt, ip_hl);
+-  ((struct ip *)data)->ip_len = htons(ip_hl + TCP_H);
++  ((struct ip *)data)->ip_len = htons(ip_hl + LIBNET_TCP_H);
+   ((struct ip *)data)->ip_id = htons(iph->ip_id) * 2; /* intentional! */
+   libnet_build_tcp(ntohs(tcph->th_sport), ntohs(tcph->th_dport),
+ 		   ntohl(tcph->th_seq) * 2, 0, TH_SYN, ntohs(tcph->th_win),
+ 		   0, NULL, 0, data + ip_hl);
+-  libnet_do_checksum(data, IPPROTO_TCP, TCP_H);
+-  new = list_elem(data, ip_hl + TCP_H);
++  libnet_do_checksum(data, IPPROTO_TCP, LIBNET_TCP_H);
++  new = list_elem(data, ip_hl + LIBNET_TCP_H);
+   free(data);
+   
+   if (!(list = list_add(list, new)))
+     return NULL;
+ 
+   /* Add our decoy RST packet, in case the attacker is filtering hers. */
+-  if (!(data = malloc(ip_hl + TCP_H)))
++  if (!(data = malloc(ip_hl + LIBNET_TCP_H)))
+     return NULL;
+ 
+   memcpy(data, pkt, ip_hl);
+-  ((struct ip *)data)->ip_len = htons(ip_hl + TCP_H);
++  ((struct ip *)data)->ip_len = htons(ip_hl + LIBNET_TCP_H);
+   ((struct ip *)data)->ip_id = htons(iph->ip_id) * 2 + 1; /* intentional! */
+   libnet_build_tcp(ntohs(tcph->th_sport), ntohs(tcph->th_dport),
+ 		   ntohl(tcph->th_seq) * 2 + 1, 0, TH_RST, ntohs(tcph->th_win),
+ 		   0, NULL, 0, data + ip_hl);
+-  libnet_do_checksum(data, IPPROTO_TCP, TCP_H);
+-  new = list_elem(data, ip_hl + TCP_H);
++  libnet_do_checksum(data, IPPROTO_TCP, LIBNET_TCP_H);
++  new = list_elem(data, ip_hl + LIBNET_TCP_H);
+   free(data);
+   
+   if (!(list = list_add(list, new)))
+@@ -335,24 +335,24 @@ tcp_seg_prepend_junk(u_char *pkt, int pk
+     return NULL;
+ 
+   for (i = 0; i < 500 ; i++) {
+-    if (!(data = malloc(ip_hl + TCP_H + PACKET)))
++    if (!(data = malloc(ip_hl + LIBNET_TCP_H + LIBNET_PACKET)))
+       return NULL;
+ 
+     /* Copy over IP header. */
+     memcpy(data, pkt, ip_hl);
+ 
+     /* Correct IP length, IP ID. */
+-    ((struct ip *)data)->ip_len = htons(ip_hl + TCP_H + PACKET);
++    ((struct ip *)data)->ip_len = htons(ip_hl + LIBNET_TCP_H + LIBNET_PACKET);
+     ((struct ip *)data)->ip_id = htons(iph->ip_id + i); /* intentional! */
+ 
+     /* Add TCP header, null payload, and fix checksum. */
+     libnet_build_tcp(ntohs(tcph->th_sport), ntohs(tcph->th_dport),
+ 		     i, 666, TH_ACK, ntohs(tcph->th_win),
+ 		     ntohs(tcph->th_urp), NULL, 0, data + ip_hl);
+-    memset(data + ip_hl + TCP_H, 0, PACKET);
+-    libnet_do_checksum(data, IPPROTO_TCP, TCP_H);
++    memset(data + ip_hl + LIBNET_TCP_H, 0, LIBNET_PACKET);
++    libnet_do_checksum(data, IPPROTO_TCP, LIBNET_TCP_H);
+     
+-    new = list_elem(data, ip_hl + TCP_H + PACKET);
++    new = list_elem(data, ip_hl + LIBNET_TCP_H + LIBNET_PACKET);
+     free(data);
+     
+     if (!(list = list_add(list, new)))
+@@ -370,7 +370,7 @@ ELEM *
+ tcp_seg_interleave_overwrites(ELEM *seg)
+ {
+   ELEM *s, *new;
+-  u_char nulls[PACKET], *newdata;
++  u_char nulls[LIBNET_PACKET], *newdata;
+   u_long newseq;
+   int newlen;
+ 
+@@ -387,21 +387,21 @@ tcp_seg_interleave_overwrites(ELEM *seg)
+     newlen = (ntohs(iph->ip_len) - (ip_hl + tcp_hl)) / 2;
+     newseq = ntohl(tcph->th_seq) + newlen;
+ 
+-    if (!(newdata = malloc(ip_hl + TCP_H + newlen)))
++    if (!(newdata = malloc(ip_hl + LIBNET_TCP_H + newlen)))
+       return NULL;
+ 
+     /* Copy in IP, TCP headers and data. */
+-    memcpy(newdata, s->data, ip_hl + TCP_H);
+-    memcpy(newdata + ip_hl + TCP_H, nulls, newlen);
++    memcpy(newdata, s->data, ip_hl + LIBNET_TCP_H);
++    memcpy(newdata + ip_hl + LIBNET_TCP_H, nulls, newlen);
+ 
+     /* Correct IP length, TCP header length, TCP seqnum, TCP checksum. */
+-    ((struct ip *)newdata)->ip_len = htons(ip_hl + TCP_H + newlen);
++    ((struct ip *)newdata)->ip_len = htons(ip_hl + LIBNET_TCP_H + newlen);
+     ((struct tcphdr *)(newdata + ip_hl))->th_seq = htonl(newseq);
+-    ((struct tcphdr *)(newdata + ip_hl))->th_off = TCP_H / 4; /* XXX - PAWS! */
+-    libnet_do_checksum(newdata, IPPROTO_TCP, TCP_H + newlen);
++    ((struct tcphdr *)(newdata + ip_hl))->th_off = LIBNET_TCP_H / 4; /* XXX - PAWS! */
++    libnet_do_checksum(newdata, IPPROTO_TCP, LIBNET_TCP_H + newlen);
+ 
+     /* Add null fragment after current fragment. */
+-    new = list_elem(newdata, ip_hl + TCP_H + newlen);
++    new = list_elem(newdata, ip_hl + LIBNET_TCP_H + newlen);
+     free(newdata);
+     
+     if (!list_add(s, new))

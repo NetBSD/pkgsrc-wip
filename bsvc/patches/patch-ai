@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2007/12/03 22:30:19 nocker Exp $
+
+--- sim68360/cpu/Makefile.orig	2007-11-20 18:25:35.000000000 +0100
++++ sim68360/cpu/Makefile	2007-11-20 18:25:50.000000000 +0100
+@@ -31,7 +31,7 @@
+ 	$(CC) $(INCLUDES) -o instruction instruction.c
+ 
+ cpu32DecodeTable.hxx: instruction instruction.list
+-	$(PROJECT_BASE)/src/sim68360/cpu/instruction  
++	${WRKSRC}/sim68360/cpu/instruction  
+ 
+ clean:
+ 	rm -f *.o $(LIBRARY) instruction

@@ -1,0 +1,5 @@
+Pyrit allows to create massive databases, pre-computing part of the IEEE 802.11
+WPA/WPA2-PSK authentication phase in a space-time-tradeoff. Exploiting the
+computational power of Many-Core- and other platforms through ATI-Stream, Nvidia
+CUDA and OpenCL, it is currently by far the most powerful attack against one of
+the world's most used security-protocols.

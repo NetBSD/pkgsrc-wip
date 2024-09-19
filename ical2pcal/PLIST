@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/ical2pcal
+share/doc/ical2pcal/README

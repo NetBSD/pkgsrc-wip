@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 08:59:45 phonohawk Exp $
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/HScore-${PKGVERSION}.o
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core.hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core.p_hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core/Parser.hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core/Parser.p_hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core/Pretty.hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core/Pretty.p_hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core/Syntax.hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/Language/Core/Syntax.p_hi
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/libHScore-${PKGVERSION}.a
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/libHScore-${PKGVERSION}_p.a
+lib/core-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/core-${PKGVERSION}/LICENSE

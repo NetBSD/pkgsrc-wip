@@ -1,0 +1,19 @@
+$NetBSD: patch-bin_jruby,v 1.1.1.1 2011/09/28 12:00:46 ryo-on Exp $
+
+--- bin/jruby.orig	2011-09-28 11:44:07.000000000 +0000
++++ bin/jruby
+@@ -43,13 +43,7 @@ while [ -h "$PRG" ] ; do
+   fi
+ done
+ 
+-JRUBY_HOME_1=`dirname "$PRG"`           # the ./bin dir
+-if [ "$JRUBY_HOME_1" = '.' ] ; then
+-  cwd=`pwd`
+-  JRUBY_HOME=`dirname $cwd` # JRUBY-2699
+-else
+-  JRUBY_HOME=`dirname "$JRUBY_HOME_1"`  # the . dir
+-fi
++JRUBY_HOME=@JRUBY_HOME@
+ 
+ if [ -z "$JRUBY_OPTS" ] ; then
+   JRUBY_OPTS=""

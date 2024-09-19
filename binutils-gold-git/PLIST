@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/dwp
+bin/ld
+bin/ld.gold
+share/locale/es/LC_MESSAGES/gold.mo
+share/locale/fi/LC_MESSAGES/gold.mo
+share/locale/fr/LC_MESSAGES/gold.mo
+share/locale/id/LC_MESSAGES/gold.mo
+share/locale/it/LC_MESSAGES/gold.mo
+share/locale/ja/LC_MESSAGES/gold.mo
+share/locale/sv/LC_MESSAGES/gold.mo
+share/locale/uk/LC_MESSAGES/gold.mo
+share/locale/vi/LC_MESSAGES/gold.mo
+share/locale/zh_CN/LC_MESSAGES/gold.mo
+x86_64--netbsd/bin/ld
+x86_64--netbsd/bin/ld.gold
+@pkgdir share/gdb/system-gdbinit
+@pkgdir share/gdb/syscalls
+@pkgdir share/gdb/python/gdb/printer
+@pkgdir share/gdb/python/gdb/function
+@pkgdir share/gdb/python/gdb/command
+@pkgdir man/man5
+@pkgdir man/man1
+@pkgdir include/gdb

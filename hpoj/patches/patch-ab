@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/08 19:22:34 airhead Exp $
+
+--- configure.in.orig	2003-11-03 11:20:28.000000000 +0100
++++ configure.in
+@@ -20,7 +20,8 @@ fi
+ # Set up default make subdirectory and install file lists.
+ SUBDIRS="lib/hpojip lib/ptal lib/sane mlcd apps/cmdline"
+ bindir_program="apps/cmdline/ptal-connect apps/cmdline/ptal-device apps/cmdline/ptal-devid apps/cmdline/ptal-pml apps/cmdline/ptal-hp apps/cmdline/hpojip-test"
+-sbindir_program="mlcd/ptal-mlcd apps/cmdline/ptal-printd apps/cmdline/ptal-photod scripts/ptal-init scripts/ptal-cups"
++sbindir_program="mlcd/ptal-mlcd apps/cmdline/ptal-printd apps/cmdline/ptal-photod"
++sbindir_script="scripts/ptal-init scripts/ptal-cups"
+ includedir_data="include/hpojip.h include/ptal.h"
+ 
+ # Select compilers and utilities.
+@@ -496,6 +497,7 @@ LIBRARY_CMDLINE=-L`echo $LIBRARY_PATH | 
+ AC_SUBST(SUBDIRS)
+ AC_SUBST(bindir_program)
+ AC_SUBST(sbindir_program)
++AC_SUBST(sbindir_script)
+ AC_SUBST(includedir_data)
+ AC_SUBST(VAR_RUN_PREFIX)
+ AC_SUBST(VAR_RUN_PREFIX_CFLAGS)
+@@ -538,6 +540,7 @@ echo "Configuration done.  Created Makef
+ echo "  SUBDIRS               = $SUBDIRS"
+ echo "  bindir_program        = $bindir_program"
+ echo "  sbindir_program       = $sbindir_program"
++echo "  sbindir_script        = $sbindir_script"
+ echo "  includedir_data       = $includedir_data"
+ # echo "  VAR_RUN_PREFIX        = $VAR_RUN_PREFIX"
+ echo "  VAR_RUN_PREFIX_CFLAGS = $VAR_RUN_PREFIX_CFLAGS"

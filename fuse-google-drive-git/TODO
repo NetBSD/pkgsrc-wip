@@ -1,0 +1,5 @@
+XXX: needs more work to be happy
+
+fopen("/home/bjs/.config/fuse-google-drive/clientsecrets"): No such file or directory
+If you are seeing this then fuse-google-drive was unable to find the files it needs in $XDG_CONFIG_HOME/fuse-google-drive/. You need to go to https://code.google.com/apis/console/ then login and create an installed application project. Select the Google Drive API and generate the necessary tokens. Then, place the clientsecrets code in $XDG_CONFIG_HOME/fuse-google-drive/clientsecrets and place the clientid in the same folder, but in the file 'clientid'.
+

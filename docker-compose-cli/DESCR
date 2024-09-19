@@ -1,0 +1,8 @@
+Compose CLI tool makes it easy to run Docker containers and Docker
+Compose applications:
+
+ - locally as a command in the docker CLI, using docker compose ...
+   commands.
+ - in the cloud using either Amazon Elastic Container Service (ECS) or
+   Microsoft Azure Container Instances (ACI) using the Docker commands
+   you already know.

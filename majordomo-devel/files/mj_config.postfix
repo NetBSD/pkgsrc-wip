@@ -1,0 +1,5 @@
+          'mta' => 'postfix',
+          'maintain_mtaconfig' => 0,
+          'mta_separator' => '+',
+          'sendmail_maintain_vut' => 0,
+        };

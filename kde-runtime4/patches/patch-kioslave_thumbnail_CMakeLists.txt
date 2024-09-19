@@ -1,0 +1,25 @@
+$NetBSD$
+
+Don't use kdewebkit
+
+--- kioslave/thumbnail/CMakeLists.txt.orig	2017-10-01 01:02:55.000000000 +0000
++++ kioslave/thumbnail/CMakeLists.txt
+@@ -89,18 +89,6 @@ install(TARGETS textthumbnail DESTINATIO
+ 
+ ########### next target ###############
+ 
+-if(NOT WINCE)
+-set(htmlthumbnail_PART_SRCS htmlcreator.cpp)
+-
+-kde4_add_plugin(htmlthumbnail ${htmlthumbnail_PART_SRCS})
+-
+-target_link_libraries(htmlthumbnail ${KDE4_KDEWEBKIT_LIBS})
+-
+-install(TARGETS htmlthumbnail DESTINATION ${PLUGIN_INSTALL_DIR})
+-endif(NOT WINCE)
+-
+-########### next target ###############
+-
+ if(NOT WIN32)
+ set(djvuthumbnail_PART_SRCS djvucreator.cpp)
+ 

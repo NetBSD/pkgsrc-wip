@@ -1,0 +1,6 @@
+
+Fix duplicate lib /usr/lib/libatlas.dylib on Darwin.
+
+Fix all CMAKE dirs so they don't default to .buildlink.
+${WRKSRC}/dolfin/dolfin-config.cmake should not contain .buildlink in
+any paths.  CMAKE policy warnings?

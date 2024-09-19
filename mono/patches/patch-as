@@ -1,0 +1,4 @@
+$NetBSD: patch-as,v 1.4 2014/11/30 08:40:51 spz Exp $
+
+From FreeBSD: https://bugzilla.novell.com/show_bug.cgi?id=528830
+

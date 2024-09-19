@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/06 20:32:19 uhabel Exp $
+
+RMD160 (perl-GPS-0.17.tar.gz) = 065d078a4a9c6e99a98f40da20db014fc18c7d4c
+SHA512 (perl-GPS-0.17.tar.gz) = 1cf96b3d103c42225b569bc0b28d644064189c6ecb27dfdfecc88a70d35f3f916d43c4a6abc5494298e6bf3b354e3e1e024c8002230682a385469c122dad3b3a
+Size (perl-GPS-0.17.tar.gz) = 44626 bytes
+SHA1 (patch-aa) = 3d3903421f81459121d25f88e2052deebe56eea0

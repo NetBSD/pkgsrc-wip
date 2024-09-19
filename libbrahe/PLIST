@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/16 15:53:43 jihbed Exp $
+bin/brahe_test_fft
+bin/brahe_test_gcflcm
+bin/brahe_test_prng
+bin/brahe_test_rounding
+bin/brahe_test_trig
+include/libbrahe/mathtools.h
+include/libbrahe/prng.h
+lib/libbrahe.la

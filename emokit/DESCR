@@ -1,0 +1,4 @@
+Emokit is a set of language for user space access to the raw stream
+data from the Emotiv EPOC headset. Note that this will not give you
+processed data (i.e. anything available in the Emo Suites in the
+software), just the raw sensor data.

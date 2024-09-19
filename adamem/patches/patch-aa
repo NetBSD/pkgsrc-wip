@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/11 19:48:05 xmor61 Exp $
+
+--- DSP.c.orig	Sun Feb 14 11:45:30 1999
++++ DSP.c	Mon Jan 10 22:03:40 2005
+@@ -15,7 +15,6 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
+-#include <values.h>
+ 
+ static int initialised=0;
+ static int stereo=0;
+@@ -103,7 +102,6 @@
+  if (freq>MAXFREQ)
+   freq=MAXFREQ;
+ 
+- if (freq>(MAXINT/441)) freq=MAXINT/441;        /* avoid overflows */
+  if (channel==3)
+  {
+   for (i=0;i<5;++i)
+@@ -430,4 +428,3 @@
+ };
+ 
+ #endif
+-

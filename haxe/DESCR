@@ -1,0 +1,10 @@
+Haxe is an open source toolkit that allows you to easily build
+cross-platform tools and applications that target many mainstream
+platforms. The Haxe toolkit includes:
+
+ -  The Haxe programming language, a modern, high-level, strictly-typed
+    programming language
+ -  The Haxe cross-compiler, a state-of-the-art, lightning-speed
+    compiler for many targets
+ -  The Haxe standard library, a complete, cross-platform library of
+    common functionality

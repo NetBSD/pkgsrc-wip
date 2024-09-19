@@ -1,0 +1,16 @@
+MAT is a toolbox composed of a GUI application, a CLI application and a
+library, to anonymize/remove metadata.
+
+For now, MAT fully supports the following formats:
+
+  * Portable Network Graphics (.png)
+  * JPEG (.jpg, .jpeg, ...)
+  * TIFF (.tif, tiff, ...)
+  * Open Documents (.odt, .odx, .ods, ...)
+  * Office OpenXml (.docx, .pptx, .xlsx, ...)
+  * Portable Document Fileformat (.pdf)
+  * Tape ARchives (.tar, .tar.bz2, ...)
+  * MPEG AUdio (.mp3, .mp2, .mp1, ...)
+  * Ogg Vorbis (.ogg, ...)
+  * Free Lossless Audio Codec (.flac)
+  * Torrent (.torrent)

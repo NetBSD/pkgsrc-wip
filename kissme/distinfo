@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:24 rillig Exp $
+
+RMD160 (kissme-0.0.32.tar.gz) = daa3ae3443f9eb4bbf8775dd59a9dd779ff89d2e
+SHA512 (kissme-0.0.32.tar.gz) = e094230358fa236ebd0ef6b9a3b2bc5e307509da03e236491b5707cf0ed6a121a3d92777bfb2be8132e58f53e7e39f22a25b95e06c564ec3257d2c52c8570ef7
+Size (kissme-0.0.32.tar.gz) = 440456 bytes
+SHA1 (patch-aa) = 6824cfb3473cd4cae6e1eb23e672ddf91eb7ff28
+SHA1 (patch-ab) = e5511fc53eaf941aa5730724bbc7fb07ca273d55
+SHA1 (patch-ac) = 1170735b7698db4cbb970ba8835cc6808945cf22
+SHA1 (patch-ad) = b382fedc43d52dd664c7deb32d748d95c0e37518
+SHA1 (patch-ae) = a4df1d853a53da00807e88cf98625c8886247ecf
+SHA1 (patch-af) = 853187ba0214f48deab494fb19341963f6808fee
+SHA1 (patch-ag) = 78d9a826fdfb020f176e5f7f51b1373cdd15d6ad
+SHA1 (patch-ah) = e8f5ec52fad97f92205adb184602ae54b91ec700

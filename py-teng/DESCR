@@ -1,0 +1,14 @@
+Teng strictly separates application logic from presentation logic. Programmer
+writes code which fetches data (for example from database, application server
+etc.) and supplies them to the templating engine. Presentation coder (for
+example web designer) writes templates and doesn't bother about data origin.
+The only thing programmer and presentation coder must obey is that data
+structure must conform to the template.
+
+Probably the most important use of Teng is generating HTML pages for web
+presentations. It is also wery useful for generating mail messages
+(but not spams).
+
+Teng composes resulting text/page/file by combining input template with program
+supplied data together with (optional) configuration and localization
+(language) dictionary.

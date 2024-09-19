@@ -1,0 +1,15 @@
+Page Layout Detection Tools is a project aiming to automate the layout
+detection in scanned page images. This task is a necessary step in OCR
+processing. One would like to detect the orientation of the text, to
+determine the text bounding box(es) for the text and graphics, to deskew
+the page images if necessary, and to remove scanning artifacts (dirt,
+speckles, shadows).
+
+The entire code will be distributed under the conditions of the GPL.
+
+The initial implementation works with black/white images in TIFF or PBM
+format. The first application in the project is a program to determine
+the skew angle for text. This is performed using an original algorithm
+based on a fast implementation of the Radon transform. (The fast Radon
+code was received from an anonymous contributor who has allowed us to
+publish the code under GPL.)

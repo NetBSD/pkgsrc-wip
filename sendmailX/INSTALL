@@ -1,0 +1,99 @@
+# $NetBSD: INSTALL,v 1.7 2005/11/16 23:07:30 adrian_p Exp $
+
+# Directories and files
+#
+SMXQD=@VARBASE@/spool/smx
+DEFEDB=${SMXQD}/defedb
+LOGDIR=@VARBASE@/log/smx
+SED=@SED@
+SMXETC=@PKG_SYSCONFDIR@
+UNAME=@UNAME@
+
+case ${STAGE} in
+
+POST-INSTALL)
+
+	# Put the users in the right groups
+	# usermod -G <group> <user>
+	#
+	@USERMOD@ -G smxc smxs
+	@USERMOD@ -G smxm smxs
+	@USERMOD@ -G smxm smxq
+
+	# Create the directories and set the permissions
+	#
+	${MKDIR} ${SMXQD}
+	${CHMOD} 0755 ${SMXQD}
+
+	for i in 0 1 2 3 4 5 6 7 8 9 A B C D E F
+	do
+		${MKDIR} ${SMXQD}/${i}
+		${CHOWN} smxs:smxq ${SMXQD}/${i}
+		${CHMOD} 0771 ${SMXQD}/${i}
+	done
+
+	${MKDIR} ${SMXQD}/defedb
+	${MKDIR} ${SMXQD}/ibdb
+	${MKDIR} ${SMXQD}/ibdb/ibdb
+
+	${CHOWN} smxq:smxq ${SMXQD}/defedb
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb/ibdb
+
+	${CHMOD} 0700 ${SMXQD}/defedb
+	${CHMOD} 0700 ${SMXQD}/ibdb 
+	${CHMOD} 0700 ${SMXQD}/ibdb/ibdb
+
+	${MKDIR} ${SMXQD}/qmsmar
+	${MKDIR} ${SMXQD}/qmsmtpc
+	${MKDIR} ${SMXQD}/qmsmtps
+
+	${CHOWN} smxq:smxm ${SMXQD}/qmsmar
+	${CHOWN} smxq:smxc ${SMXQD}/qmsmtpc
+	${CHOWN} smxq:smxs ${SMXQD}/qmsmtps
+
+	${CHMOD} 2770 ${SMXQD}/qmsmar
+	${CHMOD} 2770 ${SMXQD}/qmsmtpc
+	${CHMOD} 2770 ${SMXQD}/qmsmtps
+
+	${MKDIR} ${SMXQD}/smtps
+	${CHOWN} smxs:smxs ${SMXQD}/smtps
+	${CHMOD} 0750 ${SMXQD}/smtps 
+
+	# Setup logging and permissions on log files
+	#
+	${MKDIR} ${LOGDIR}
+	${TOUCH} ${LOGDIR}/qmgr.log
+	${TOUCH} ${LOGDIR}/smar.log
+	${TOUCH} ${LOGDIR}/smtpc.log
+	${TOUCH} ${LOGDIR}/smtps.log
+
+	${CHOWN} smxq:operator ${LOGDIR}/qmgr.log
+	${CHOWN} smxm:operator ${LOGDIR}/smar.log
+	${CHOWN} smxc:operator ${LOGDIR}/smtpc.log
+	${CHOWN} smxs:operator ${LOGDIR}/smtps.log
+
+	${CHMOD} 0640 ${LOGDIR}/qmgr.log
+	${CHMOD} 0640 ${LOGDIR}/smar.log
+	${CHMOD} 0640 ${LOGDIR}/smtpc.log
+	${CHMOD} 0640 ${LOGDIR}/smtps.log
+
+	# Fix the GID in smx.conf
+	#
+	GID=`@PREFIX@/bin/runas smxc @PREFIX@/bin/t-getgroup smxc 2>/dev/null`
+
+	${SED} "s/@SMXCGID@/${GID}/g" ${SMXETC}/smx.conf \
+		> ${SMXETC}/smx.conf.new
+	${MV} ${SMXETC}/smx.conf.new ${SMXETC}/smx.conf
+
+	${CHOWN} smx:smx ${SMXETC}/smx.conf 
+	${CHMOD} 0644 ${SMXETC}/smx.conf
+
+	# Fix the hostname in mt
+	#
+	HOSTNAME=`${UNAME} -n`
+	${ECHO} "${HOSTNAME} 	lmtp:" >> ${SMXETC}/mt
+
+	;;
+
+esac

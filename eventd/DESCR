@@ -1,0 +1,4 @@
+eventd is a daemon which manages events. Theses events can be of any type
+(connection of a buddy, new email in your inbox).
+eventd can either relay these events to another eventd or just acts depending
+on the user configuration.

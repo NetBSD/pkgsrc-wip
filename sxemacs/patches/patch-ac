@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.2 2006/09/07 12:03:21 hfath Exp $
+
+--- Makefile.in.in.orig	2006-05-07 02:18:31.000000000 +0200
++++ Makefile.in.in
+@@ -453,7 +453,7 @@ lwlib/config.h: ${srcdir}/lwlib/config.h
+ ## all.  --cet
+ 
+ check-features: all
+-	${blddir}/src/${PROGNAME} -batch -l check-features.el
++	${blddir}/src/${PROGNAME} -vanilla -batch -l check-features.el
+ 
+ install-only: ${MAKE_SUBDIR} check-features install-arch-dep install-arch-indep
+ 
+@@ -530,8 +530,10 @@ install-arch-indep: mkdir info
+ 	fi
+ 	cd ${srcdir}/etc && \
+ 	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
+-	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
+-	    chmod 0644 ${mandir}/$${page}${manext} ; \
++            if test $${page} = etags || test $${page} = ctags ; then \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/xemacs-$${page}${manext} ; else \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
++            fi \
+ 	  done
+ 	@echo "If you would like to save approximately 2M of disk space, do"
+ 	@echo "make gzip-el"

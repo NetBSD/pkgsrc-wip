@@ -1,0 +1,3 @@
+The hydrointerp package includes several interpolation functions specifically
+designed for hydrologic data. These are mainly derrived from Scipy interpolation
+functions like griddata

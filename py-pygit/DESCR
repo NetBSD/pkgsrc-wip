@@ -1,0 +1,2 @@
+Pythonic bindings for git. Those bindings map the object representation of git
+in a rather low level, and allows editing a repository.

@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+
+--- canna/widedef.h.orig	2003-12-28 02:15:20.000000000 +0900
++++ canna/widedef.h	2010-12-31 19:01:34.000000000 +0900
+@@ -36,7 +36,9 @@
+ # include <machine/ansi.h>
+ #endif
+ 
+-#if (defined(__FreeBSD__) && __FreeBSD_version < 500000) \
++#if defined(__DragonFly__)
++# define _WCHAR_T
++#elif (defined(__FreeBSD__) && __FreeBSD_version < 500000) \
+     || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
+ # ifdef _BSD_WCHAR_T_
+ #  undef _BSD_WCHAR_T_

@@ -1,0 +1,8 @@
+gnormalize is a front end to normalize, an audio converter, a ripper, an
+encoder, a cd player and a metadata (tag) editor. It uses gtk2-perl under
+GNU/Linux.
+
+gnormalize decodes the MP3/MP4/MPC/OGG/APE/FLAC file to WAV, then normalizes
+the WAV to a targeted volume level and re-encodes it. gnormalize can also rip,
+encode, convert audio format between MP3, MP4, MPC, OGG, APE and FLAC, change
+the encoding and matadata (tag) properties of final normalized files.

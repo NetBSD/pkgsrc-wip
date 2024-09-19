@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2014/07/15 13:38:02 jihbed Exp $
+
+--- src/Makefile.orig	2014-07-14 23:02:42.000000000 +0100
++++ src/Makefile	2014-07-14 23:03:00.000000000 +0100
+@@ -1,6 +1,4 @@
+ # -*- coding: utf-8 -*-
+-CXX = g++
+-CXXFLAGS= -g -O1
+ 
+ chemeq : chemeq.o chemparser.o mendeleiev.o
+ 	${CXX} $(CXXFLAGS) -o chemeq chemeq.o chemparser.o mendeleiev.o -lfl

@@ -1,0 +1,6 @@
+This is a small window manager for the X Window System written
+entirely with XCB, the straight X protocol binding to the C language.
+
+It's a traditional 'floating' window manager. It doesn't really give
+anything new to the user experience. It is pretty stupid, but can
+probably be useful for some people.

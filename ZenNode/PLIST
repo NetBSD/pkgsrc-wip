@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/ZenNode
+bin/ZenNode-bspdiff
+bin/ZenNode-bspinfo
+bin/ZenNode-compare
+share/doc/ZenNode/Custom.html
+share/doc/ZenNode/History.html
+share/doc/ZenNode/Overview.html
+share/doc/ZenNode/README.html
+share/doc/ZenNode/RMB.html
+share/doc/ZenNode/bspdiff.html
+share/doc/ZenNode/bspinfo.html
+share/doc/ZenNode/compare.html
+share/doc/ZenNode/index.html
+share/doc/ZenNode/main.css
+share/doc/ZenNode/manual.html

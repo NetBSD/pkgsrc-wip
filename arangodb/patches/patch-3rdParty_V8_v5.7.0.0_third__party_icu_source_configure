@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- 3rdParty/V8/v5.7.0.0/third_party/icu/source/configure.orig	2017-08-23 15:57:40.000000000 +0000
++++ 3rdParty/V8/v5.7.0.0/third_party/icu/source/configure
+@@ -7772,13 +7772,13 @@ fi
+ # Now that we're done using CPPFLAGS etc. for tests, we can change it
+ # for build.
+ 
+-if test "${CC}" == "clang"; then
++if test "${CC}" = "clang"; then
+    CLANGCFLAGS="-Qunused-arguments -Wno-parentheses-equality"
+ else
+    CLANGCFLAGS=""
+ fi
+ 
+-if test "${CXX}" == "clang++"; then
++if test "${CXX}" = "clang++"; then
+    CLANGCXXFLAGS="-Qunused-arguments -Wno-parentheses-equality"
+ else
+    CLANGCXXFLAGS=""

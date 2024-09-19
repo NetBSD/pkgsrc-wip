@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 14:16:29 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_stream_filter.reg
+lib/php/Horde/Stream/Filter/Bin2hex.php
+lib/php/Horde/Stream/Filter/Crc32.php
+lib/php/Horde/Stream/Filter/Eol.php
+lib/php/doc/Horde_Stream_Filter/COPYING
+lib/php/test/Horde_Stream_Filter/Horde/Stream/Filter/AllTests.php
+lib/php/test/Horde_Stream_Filter/Horde/Stream/Filter/Bin2hexTest.php
+lib/php/test/Horde_Stream_Filter/Horde/Stream/Filter/Crc32Test.php
+lib/php/test/Horde_Stream_Filter/Horde/Stream/Filter/EolTest.php

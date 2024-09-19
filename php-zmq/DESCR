@@ -1,0 +1,2 @@
+php-zmq provides bindings to the functions of ZeroMQ, a distributed
+messaging API.

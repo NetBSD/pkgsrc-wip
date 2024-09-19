@@ -1,0 +1,26 @@
+$NetBSD: patch-projects_makefile_makefile,v 1.1 2013/03/10 13:58:15 othyro Exp $
+
+Install to DESTDIR.
+
+--- projects/makefile/makefile.orig	2008-07-07 18:13:28.000000000 +0000
++++ projects/makefile/makefile
+@@ -42,15 +42,15 @@ clean:
+ 	$(DELETER) $(OBJ) $(BIN)
+ 
+ install: $(BIN)
+-	@echo Installing to: $(LOCAL)/lib and $(LOCAL)/include...
++	@echo Installing to: ${DESTDIR}$(LOCAL)/lib and ${DESTDIR}$(LOCAL)/include...
+ 	@echo -------------------------------------------------------------------
+-	$(COPIER) $(BIN) $(LOCAL)/lib
+-	$(COPIER) $(INCDIR)/$(INC) $(LOCAL)/include
++	$(COPIER) $(BIN) ${DESTDIR}$(LOCAL)/lib
++	$(COPIER) $(INCDIR)/$(INC) ${DESTDIR}$(LOCAL)/include
+ 	@echo -------------------------------------------------------------------
+ 	@echo SOIL library installed. Enjoy!
+ 
+ uninstall:
+-	$(DELETER) $(LOCAL)/include/$(INC) $(LOCAL)/lib/$(LIB)
++	$(DELETER) ${DESTDIR}$(LOCAL)/include/$(INC) ${DESTDIR}$(LOCAL)/lib/$(LIB)
+ 	@echo -------------------------------------------------------------------
+ 	@echo SOIL library uninstalled.
+ 

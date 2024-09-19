@@ -1,0 +1,5 @@
+Cockatrice is an open-source, multiplatform program for playing tabletop
+card games over a network. The program's server design prevents users from
+manipulating the game for unfair advantage.
+
+This package provides only the Cockatrice server.

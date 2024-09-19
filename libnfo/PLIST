@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/06 10:53:44 grasmi Exp $
+bin/libnfo-reader
+include/nfo.h
+lib/libnfo.a
+lib/libnfo.so
+lib/libnfo.so.1
+lib/libnfo.so.${PKGVERSION}
+lib/pkgconfig/libnfo.pc

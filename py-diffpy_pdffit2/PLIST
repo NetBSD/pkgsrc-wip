@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/22 13:47:34 jihbed Exp $
+bin/pdffit2
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6-nspkg.pth
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6.egg-info/namespace_packages.txt
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6.egg-info/requires.txt
+${PYSITELIB}/diffpy.pdffit2-1.0_r3067_20090410-py2.6.egg-info/top_level.txt
+${PYSITELIB}/diffpy/pdffit2/__init__.py
+${PYSITELIB}/diffpy/pdffit2/__init__.pyc
+${PYSITELIB}/diffpy/pdffit2/__init__.pyo
+${PYSITELIB}/diffpy/pdffit2/output.py
+${PYSITELIB}/diffpy/pdffit2/output.pyc
+${PYSITELIB}/diffpy/pdffit2/output.pyo
+${PYSITELIB}/diffpy/pdffit2/pdffit.py
+${PYSITELIB}/diffpy/pdffit2/pdffit.pyc
+${PYSITELIB}/diffpy/pdffit2/pdffit.pyo
+${PYSITELIB}/diffpy/pdffit2/pdffit2.so
+${PYSITELIB}/diffpy/pdffit2/version.py
+${PYSITELIB}/diffpy/pdffit2/version.pyc
+${PYSITELIB}/diffpy/pdffit2/version.pyo

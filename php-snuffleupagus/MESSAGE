@@ -1,0 +1,7 @@
+To enable snuffleupagus you will need to add an entry such as:
+
+  sp.configuration_file=${PKG_SYSCONFDIR}/snuffleupagus/rules/file.rules
+
+to ${PHP_EXT_CONF_DIR}/${MODNAME}.ini or a custom .ini file.
+
+For more info: https://snuffleupagus.readthedocs.io/config.html

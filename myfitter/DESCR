@@ -1,0 +1,11 @@
+ myFitter is a C++ class library for maximum likelihood fits and the numerical
+computation of p-values in likelihood ratio tests.
+
+In some situations the statistical significance (p-value) of a likelihood ratio
+test can not be computed analytically. This is, for example, the case when some
+parameters of the model are only allowed to float within a certain range or when
+the models being compared are not nested, meaning that neither model can be
+obtained from the other by fixing some of its parameters.
+
+myFitter implements a method for efficient numerical computation of p-values.
+This method is also applicable in the case of non-nested models

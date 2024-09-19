@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/techdebt${PYVERSSUFFIX}
+${PYSITELIB}/src/__init__.py
+${PYSITELIB}/src/__init__.pyc
+${PYSITELIB}/src/__init__.pyo
+${PYSITELIB}/src/lib.py
+${PYSITELIB}/src/lib.pyc
+${PYSITELIB}/src/lib.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

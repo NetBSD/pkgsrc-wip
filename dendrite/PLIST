@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/client-api-proxy
+bin/create-account
+bin/dendrite-demo-libp2p
+bin/dendrite-demo-pinecone
+bin/dendrite-demo-yggdrasil
+bin/dendrite-monolith-server
+bin/dendrite-polylith-multi
+bin/dendrite-upgrade-tests
+bin/dendritejs
+bin/dendritejs-pinecone
+bin/federation-api-proxy
+bin/furl
+bin/generate-config
+bin/generate-keys
+bin/goose
+bin/resolve-state

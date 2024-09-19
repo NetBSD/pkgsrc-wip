@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:59 thomasklausner Exp $
+bin/nestra
+share/doc/nestra/BUGS
+share/doc/nestra/README

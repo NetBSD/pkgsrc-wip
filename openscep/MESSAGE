@@ -1,0 +1,43 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2005/12/08 15:47:44 leonardschmidt Exp $
+
+0. in ${PKG_SYSCONFDIR}/openscep.cnf, edit:
+    ldapbase
+    binddn
+    bindpw
+
+1. run openscepsetup to prepare the OpenSSL mini-CA in ${PKG_SYSCONFDIR}
+
+2. set up openldap, and start slapd
+
+   0. optionally use my fancified openldap by applying
+      files/openldap-package.diff for faster setup
+   1. set slapd_chrootdir in rc.conf
+   2. use slappasswd program to set rootpw in slapd.conf to match the
+      bindpw you set above
+   3. add this line to slapd.conf:
+
+include ${PKG_SYSCONFBASE}/openldap/schema/openscep.schema
+
+3. run 'openscepsetup ldap' to load the CA certificate and CRL into LDAP.
+
+4. add to root's crontab a line like
+
+   0       */8     *       *       *       ${PREFIX}/sbin/createcrl
+
+   to rebuild the CRL three times a day
+
+5. apache.  Once you start apache, the cgi-bin/pkiclient.exe script should
+   already be runnable by any web browser.  In addition, if you've used
+   the discouraged PKG_OPTIONS.openscep=openscep-web-ui, you'll definitely
+   want to do substantial Apache configuration to password-protect the
+   ${PREFIX}/libexec/cgi-bin/openscep directory, or else anyone will be
+   able to manipulate your CA.
+
+6. A typical application is to load one certificate into an IPsec
+   security gateway (IOS or PIX) using SCEP, and then sign many client
+   certificates for road warriors without using SCEP.  See comments in
+   ${PKG_SYSCONFDIR}/openscep.cnf for instructions on signing and
+   revoking road warrior certificates manually with openssl commands.
+
+===========================================================================

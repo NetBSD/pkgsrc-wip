@@ -1,0 +1,19 @@
+This module allows and Apache 2.0 web server to register its services on a
+Zero Configuration network.
+
+Zeroconf <http://www.zeroconf.org/> is a working group of the IETF. The
+charter of this working group is to have computers network using TCP/IP
+without prior configuration: no address servers or name servers are needed.
+Zeroconf consists of the following protocols:
+
+*  Link-local IP addressing, where hosts pick a random address in the
+   169.254/16 range.
+*  Multicast DNS or mDNS, where every host runs its own DNS responder that
+   listens on port 5353 and communicates over multicast UDP/IP address
+   224.0.0.251 (IPv6 equivalent ff02::fb). All hosts are collectively
+   authorative for the .local. domain.
+*  DNS Service Discovery or DNS-SD allows hosts and their user to register and
+   browse services by a human-readable name.
+
+mod_zeroconf relies on an external mDNS Responder and currently supports
+net/howl.

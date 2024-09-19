@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2019-04-27 18:12:40.000000000 +0000
++++ Makefile
+@@ -16,7 +16,7 @@ OBJCOPY		 = $(CROSS_COMPILE)objcopy
+ HOSTAR		 = ar
+ HOSTCC		 = cc
+ 
+-LEX		 = lex
++LEX		 = flex
+ YACC		 = yacc
+ 
+ HAVE_GCC9	:= $(findstring version 9,$(shell $(CC) -v 2>&1;:))

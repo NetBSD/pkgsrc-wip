@@ -1,0 +1,9 @@
+The brainfuck language is an esoteric programming language noted for its
+extreme minimalism. It was designed to challenge and amuse programmers, and
+is not suitable for practical use.
+
+Its author is Urban Mueller from Switzerland, who also wrote the original
+interpreter for brainfuck and a compiler for the Amiga.
+
+nbfc is the "new brainfuck compiler": A brainfuck-to-C and brainfuck-to-
+Java-compiler.

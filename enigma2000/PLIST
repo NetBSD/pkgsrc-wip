@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 19:10:35 amoibos Exp $
+bin/enigma2000
+share/enigma2000/original.set
+share/enigma2000/original01.level
+share/enigma2000/original02.level
+share/enigma2000/original03.level
+share/enigma2000/original04.level
+share/enigma2000/original05.level
+share/enigma2000/original06.level
+share/enigma2000/original07.level
+share/enigma2000/original08.level
+share/enigma2000/original09.level
+share/enigma2000/original10.level
+share/enigma2000/original11.level
+share/enigma2000/original12.level

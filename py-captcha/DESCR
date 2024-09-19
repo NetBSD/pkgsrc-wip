@@ -1,0 +1,4 @@
+This is the PyCAPTCHA package, a collection of Python modules
+implementing CAPTCHAs: automated tests that humans should pass,
+but current computer programs can't. These tests are often
+used for security.

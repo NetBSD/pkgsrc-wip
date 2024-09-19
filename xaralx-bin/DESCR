@@ -1,0 +1,10 @@
+Xara Xtreme is an established, commercial graphics program for Windows.  While
+being primarily suited for vector graphics, it is also capable of doing raster
+graphics.  It is powerful, performant, and easy to use.
+
+Xara Xtreme is currently being ported to Linux (Xara LX) and Mac (Xara MX).
+It has recently also been open-sourced (under the GPL), but a source package
+is not available in pkgsrc yet.
+
+This package provides a first proof-of-concept demo-application for Linux.  It
+is NOT the complete Xara Xtreme drawing program, but a work in progress.

@@ -1,0 +1,4 @@
+Provides a class for non-negative numbers, a wrapper which can turn
+any ordered numeric type into a member of that class, and a lazy
+number type for non-negative numbers (a generalization of Peano
+numbers). This library is used by the event-list package.

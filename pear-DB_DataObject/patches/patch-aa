@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2007/04/25 12:13:08 loic-hoguin Exp $
+
+--- package.xml.orig	2007-04-09 13:21:10.000000000 +0200
++++ package.xml
+@@ -148,7 +148,6 @@
+    <file role="php" baseinstalldir="DB" md5sum="ff8c9ccc1fc81319e31a68b21655a2f4" name="DataObject/createTables.php"/>
+    <file role="php" baseinstalldir="DB" md5sum="78f91fc6fbea5e93224dbf22deff4b84" name="DataObject/Error.php"/>
+    <file role="doc" baseinstalldir="DB" md5sum="fb230fbab9e93928e6f48a0964399d40" name="docs/example.ini"/>
+-   <file role="script" baseinstalldir="DB" md5sum="ef88826fadc5e821f0973e30a82ea877" name="scripts/DB_DataObject_createTables.bat"/>
+   </filelist>
+  </release>
+  <changelog>

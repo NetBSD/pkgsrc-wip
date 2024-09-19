@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/15 12:16:48 rhialto Exp $
+
+RMD160 (pyside-1.2.4.tar.gz) = 977f215e01f12d3211c77d8efd8eef98dd6faca7
+SHA512 (pyside-1.2.4.tar.gz) = 8fbb4e695761bc98b73c6f63237c4ba11705599656c8fcffd06d762db1ada71ed92eda6299117b127765b0c681214bd23eaa81dfa30fc406f618cac054decbde
+Size (pyside-1.2.4.tar.gz) = 3905116 bytes
+SHA1 (patch-PySide_QtCore_CMakeLists.txt) = d8de8f5d040628fb24b4a9ea543683bc5497f2c9

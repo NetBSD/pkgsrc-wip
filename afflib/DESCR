@@ -1,0 +1,25 @@
+The Advanced Forensic Format --- AFF(tm) --- is an extensible open
+format for the storage of disk images and related forensic
+information.
+
+- Open format, free from any patent or license restriction.
+  Can be used with both open-source and proprietary forensic tools.
+- Extensible. Any amount of metadata can be encoded in AFF files in the
+  format of name/value pairs.
+- Efficient. AFF supports both compression and seeking within
+  compressed files.
+- Open Source C/C++ Implementation. A freely redistributable C/C++
+  implementation including the AFF Library and basic conversion tools
+  is available for download. AFFLIB(tm) is being distributed under the BSD
+  license, allowing it to be incorporated in free and proprietary
+  programs without the need to pay license fees.
+- Byte-order independent. AFFLib has been tested on both Intel and
+  PowerPC-based systems. Images created on one platform can be read on
+  another.
+- Automatic calculation and storage of MD5 and SHA-1 hash codes,
+  allowing AFF files to be automatically validated after they are
+  copied to check for accidentally corruption.
+- Explicit identification of sectors that could not be read from the
+  original disk.
+- Planned support for digital signatures and direct authoring of AFF
+  files using dd_recover.

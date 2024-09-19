@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/15 00:32:43 poppnk Exp $
+bin/memgrep
+include/memgrep.h
+lib/heaplist.so
+lib/libmemgrep.a
+lib/libmemgrep.so

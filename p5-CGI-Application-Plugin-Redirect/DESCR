@@ -1,0 +1,9 @@
+This plugin provides an easy way to do external redirects in CGI::Application.
+You don't have to worry about setting headers or worrying about return types,
+as that is all handled for you.
+redirect does an external redirect, which means that the browser will
+receive a command to load a new page, and a fresh request will come in.
+If you just want to display the results of another runmode
+within the same module, then it is often sufficient to use
+the forward method in CGI::Application::Plugin::Forward
+instead.

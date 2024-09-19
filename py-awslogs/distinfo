@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.79 2021/09/12 10:36:47 leot Exp $
+
+RMD160 (awslogs-0.14.0.tar.gz) = 45cf1ed94c387c615d4bf01754ffc0eaaff0620f
+SHA512 (awslogs-0.14.0.tar.gz) = a7079d8960b589d819b63060a5a9cf067da2c8e190dccfc0ba95fa5260e5ce5db0952ecadcb58402644701a134643f4e3ad577b8f73bf96698f22608dbbfbaae
+Size (awslogs-0.14.0.tar.gz) = 15634 bytes
+SHA1 (patch-setup.py) = 594b1cc189b3873811005ad5aa00ad12db1f20f8

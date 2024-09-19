@@ -1,0 +1,6 @@
+mac-robber is a Forensics & Incident Response tool used to collect
+the Modified, Access, and Change (MAC) times from allocated files.
+It recursively reads MAC times of files and directories and prints
+them in 'time machine' format to STDOUT.  This format is the same
+that the mactime tool from The Sleuth Kit[1] and The Coroners Toolkit
+(TCT)[2] read.

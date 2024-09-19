@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD$
+
+Before using smbnetfs, make a ~/.smb directory and copy the files it wants:
+
+$ mkdir ~/.smb
+$ cp ${PKG_SYSCONFDIR}/samba/smb.conf ~/.smb/smb.conf
+$ cp ${PREFIX}/share/examples/smbnetfs/smbnetfs.conf ~/.smb/smbnetfs.conf
+
+On NetBSD, make sure userspace mounting is enabled:
+
+# sysctl -w security.models.extensions.usermount=1
+
+After running smbnetfs with a mount point it will expose configured
+Samba shares:
+
+$ mkdir /mountpoint
+$ smbnetfs /mountpoint
+
+===========================================================================

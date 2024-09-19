@@ -1,0 +1,81 @@
+$NetBSD$
+
+Do not override CFLAGS/CXXFLAGS.
+
+Use libenet from pkgsrc.
+
+--- src/Makefile.orig	2014-05-11 18:42:17.000000000 +0000
++++ src/Makefile
+@@ -1,11 +1,10 @@
+-CXXFLAGS= -O3 -fomit-frame-pointer -ffast-math
+ override CXXFLAGS+= -Wall -fsigned-char -fno-exceptions -fno-rtti
+ 
+ PLATFORM= $(shell uname -s)
+ PLATFORM_ARCH= $(shell uname -m)
+ PLATFORM_PREFIX= native
+ 
+-INCLUDES= -Ishared -Iengine -Igame -Ienet/include
++INCLUDES= -Ishared -Iengine -Igame `pkg-config --cflags libenet`
+ 
+ STRIP=
+ ifeq (,$(findstring -g,$(CXXFLAGS)))
+@@ -45,10 +44,10 @@ override WINDRES+= -F pe-i386
+ endif
+ CLIENT_INCLUDES= $(INCLUDES) -Iinclude
+ STD_LIBS= -static-libgcc -static-libstdc++
+-CLIENT_LIBS= -mwindows $(STD_LIBS) -L$(WINBIN) -L$(WINLIB) -lSDL2 -lSDL2_image -lSDL2_mixer -lzlib1 -lopengl32 -lenet -lws2_32 -lwinmm
++CLIENT_LIBS= -mwindows $(STD_LIBS) -L$(WINBIN) -L$(WINLIB) -lSDL2 -lSDL2_image -lSDL2_mixer -lzlib1 -lopengl32 `pkg-config --libs libenet` -lws2_32 -lwinmm
+ else	
+-CLIENT_INCLUDES= $(INCLUDES) -I/usr/X11R6/include `sdl2-config --cflags`
+-CLIENT_LIBS= -Lenet -lenet -L/usr/X11R6/lib -lX11 `sdl2-config --libs` -lSDL2_image -lSDL2_mixer -lz -lGL
++CLIENT_INCLUDES= $(INCLUDES) `sdl2-config --cflags`
++CLIENT_LIBS= `pkg-config --libs libenet` -lX11 `sdl2-config --libs` -lSDL2_image -lSDL2_mixer -lz -lGL
+ endif
+ ifeq ($(PLATFORM),Linux)
+ CLIENT_LIBS+= -lrt
+@@ -128,7 +127,7 @@ SERVER_INCLUDES+= -Iinclude
+ SERVER_LIBS= -mwindows $(STD_LIBS) -L$(WINBIN) -L$(WINLIB) -lzlib1 -lenet -lws2_32 -lwinmm
+ MASTER_LIBS= $(STD_LIBS) -L$(WINBIN) -L$(WINLIB) -lzlib1 -lenet -lws2_32 -lwinmm
+ else
+-SERVER_LIBS= -Lenet -lenet -lz
++SERVER_LIBS= -Wl,-R${PREFIX}/lib `pkg-config --libs libenet` -lz
+ MASTER_LIBS= $(SERVER_LIBS)
+ endif
+ 
+@@ -169,9 +168,6 @@ $(CLIENT_PCH): %.h.gch: %.h
+ 	$(MV) $@.tmp $@
+ 
+ $(CLIENT_OBJS): CXXFLAGS += $(CLIENT_INCLUDES)
+-$(filter shared/%,$(CLIENT_OBJS)): $(filter shared/%,$(CLIENT_PCH))
+-$(filter engine/%,$(CLIENT_OBJS)): $(filter engine/%,$(CLIENT_PCH))
+-$(filter game/%,$(CLIENT_OBJS)): $(filter game/%,$(CLIENT_PCH))
+ 
+ $(filter-out standalone/shared/%,$(SERVER_PCH)): $(filter standalone/shared/%,$(SERVER_PCH))
+ $(SERVER_PCH): standalone/%.h.gch: %.h
+@@ -179,9 +175,6 @@ $(SERVER_PCH): standalone/%.h.gch: %.h
+ 	$(MV) $@.tmp $@
+ 
+ $(SERVER_MASTER_OBJS): CXXFLAGS += $(SERVER_INCLUDES)
+-$(filter standalone/shared/%,$(SERVER_MASTER_OBJS)): $(filter standalone/shared/%,$(SERVER_PCH))
+-$(filter standalone/engine/%,$(SERVER_MASTER_OBJS)): $(filter standalone/engine/%,$(SERVER_PCH))
+-$(filter standalone/game/%,$(SERVER_MASTER_OBJS)): $(filter standalone/game/%,$(SERVER_PCH))
+ 
+ $(SERVER_MASTER_OBJS): standalone/%.o: %.cpp
+ 	$(CXX) $(CXXFLAGS) -c -o $@ $<
+@@ -200,13 +193,13 @@ master: $(MASTER_OBJS)
+ 
+ install: all
+ else
+-client:	libenet $(CLIENT_OBJS)
++client:	$(CLIENT_OBJS)
+ 	$(CXX) $(CXXFLAGS) -o tess_client $(CLIENT_OBJS) $(CLIENT_LIBS)
+ 
+-server:	libenet $(SERVER_OBJS)
++server:	$(SERVER_OBJS)
+ 	$(CXX) $(CXXFLAGS) -o tess_server $(SERVER_OBJS) $(SERVER_LIBS)  
+ 	
+-master: libenet $(MASTER_OBJS)
++master: $(MASTER_OBJS)
+ 	$(CXX) $(CXXFLAGS) -o tess_master $(MASTER_OBJS) $(MASTER_LIBS)  
+ 
+ shared/tessfont.o: shared/tessfont.c

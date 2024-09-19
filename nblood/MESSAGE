@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD$
+The data seg size is too low and needs to be raised above 2GB !
+Please run the following command (under the user that executed nblood)
+for nblood to work on NetBSD
+
+$ ulimit -d 2097152
+
+To run the game, copy the original Blood datapack files and from
+that directory execute nblood
+
+To play Cryptic Passage execute nblood -ini CRYPTIC.INI from the game
+datadir
+===========================================================================

@@ -1,0 +1,3 @@
+Bip is an IRC proxy, which means it keeps connected to your preferred
+IRC servers, can store the logs for you, and even send them back to your
+IRC client(s) upon connection.

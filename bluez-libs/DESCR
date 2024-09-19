@@ -1,0 +1,4 @@
+The overall goal of this project is to make an implementation of the
+Bluetooth wireless standards specifications for Linux. The code is
+licensed under the GNU General Public License (GPL) and is now included
+in the Linux 2.4 and Linux 2.6 kernel series.

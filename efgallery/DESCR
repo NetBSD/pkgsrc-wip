@@ -1,0 +1,16 @@
+Efgallery is a static photo gallery generator in Perl with a simple
+look and feel: it shows your photos, and optionally detects faces
+so they aren't cropped in the thumbnails.
+
+Efgallery stands for "extended fgallery" as it was inspired from
+the fgallery 1.x version.
+
+You can see an example galleries at the following addresses:
+
+https://marabu.ch/efgallery/demo/ (efgallery)
+https://alexschroeder.ch/gallery/ (sitelen-mute)
+http://www.thregr.org/~wavexx/software/fgallery/demo/ (fgallery 1.x)
+
+There is no server-side processing, only static generation. The
+resulting gallery can be uploaded anywhere without any additional
+requirements on the web server or browser.

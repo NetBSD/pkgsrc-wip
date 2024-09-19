@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/10/26 15:27:58 hfath Exp $
+
+--- configure.orig	2010-10-26 13:28:19.000000000 +0000
++++ configure
+@@ -4174,14 +4174,14 @@ if test "x$ac_cv_lib_portaudio_Pa_GetDev
+ fi
+ 
+ 
+-    if test $portaudio == 18
++    if test $portaudio = 18
+   then
+ 
+ $as_echo "#define PORTAUDIO 18" >>confdefs.h
+ 
+     PA_LIBS=-lportaudio
+     has_portaudio="yes  (found Portaudio V18)"
+-  else if test $portaudio == 19
++  else if test $portaudio = 19
+     then
+ 
+ $as_echo "#define PORTAUDIO 19" >>confdefs.h
+@@ -7956,7 +7956,7 @@ echo "    Audio interface:    $has_porta
+ echo "    Wind data import:   $has_CGAL"
+ echo
+ 
+-if test $portaudio == 19
++if test $portaudio = 19
+ then
+   echo
+   echo "Attention:"

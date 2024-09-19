@@ -1,0 +1,26 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/gorm/__init__.py
+${PYSITELIB}/gorm/__init__.pyc
+${PYSITELIB}/gorm/__init__.pyo
+${PYSITELIB}/gorm/alchemy.py
+${PYSITELIB}/gorm/alchemy.pyc
+${PYSITELIB}/gorm/alchemy.pyo
+${PYSITELIB}/gorm/graph.py
+${PYSITELIB}/gorm/query.py
+${PYSITELIB}/gorm/query.pyc
+${PYSITELIB}/gorm/query.pyo
+${PYSITELIB}/gorm/reify.py
+${PYSITELIB}/gorm/reify.pyc
+${PYSITELIB}/gorm/reify.pyo
+${PYSITELIB}/gorm/sqlite.json
+${PYSITELIB}/gorm/window.py
+${PYSITELIB}/gorm/window.pyc
+${PYSITELIB}/gorm/window.pyo
+${PYSITELIB}/gorm/xjson.py
+${PYSITELIB}/gorm/xjson.pyc
+${PYSITELIB}/gorm/xjson.pyo

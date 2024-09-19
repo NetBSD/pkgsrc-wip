@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/11/17 14:04:31 yhardy Exp $
+
+--- src/libs/learning/policy.h.orig	2008-03-15 01:15:03.000000000 +0200
++++ src/libs/learning/policy.h	2008-03-15 01:15:20.000000000 +0200
+@@ -17,6 +17,9 @@
+ #include <cmath>
+ #include <cstdlib>
+ #include <cstdio>
++
++using namespace std;
++
+ #include <learning/ANN.h>
+ #include <learning/Distribution.h>
+ 

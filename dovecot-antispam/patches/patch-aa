@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/25 19:02:15 marttikuparinen Exp $
+
+Make this pkgsrc friendly.
+
+--- defconfig.orig	2009-06-15 22:19:48.000000000 +0300
++++ defconfig	2010-03-25 19:05:30.000000000 +0200
+@@ -15,7 +15,7 @@
+ #  mailtrain		- send mail to special addresses for training
+ #  crm114-exec		- direct crm114 training by calling mailreaver.crm
+ #  spool2dir		- spool trained emails to a directory
+-#BACKEND=dspam-exec
++BACKEND=dspam-exec
+ #BACKEND=signature-log
+ #BACKEND=mailtrain
+ #BACKEND=crm114-exec
+@@ -27,14 +27,14 @@
+ # point DOVECOT= to the installed headers too.
+ #DOVECOT=../dovecot-1.0.5
+ #DOVECOT=../dovecot-1.1
+-DOVECOT=/usr/include/dovecot
++DOVECOT=@PREFIX@/include/dovecot
+ 
+ # install directory for 'make install'
+ # NB no need for a final '/'
+-INSTALLDIR=/usr/lib/dovecot/modules/imap
++INSTALLDIR=@PREFIX@/lib/dovecot/imap
+ # The user and group for the installed plugin
+-USER=root
+-GROUP=root
++USER=@ROOT_USER@
++GROUP=@ROOT_GROUP@
+ 
+ # enable debugging to syslog or stderr
+ #DEBUG=stderr

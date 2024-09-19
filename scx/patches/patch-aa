@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/02/16 21:39:48 airhead Exp $
+
+--- configure.in.orig	2004-05-22 19:26:23.000000000 +0200
++++ configure.in
+@@ -34,7 +34,7 @@
+               SCX_PREPEND(`xft-config --libs`, x_libraries)
+               SCX_PREPEND(`xft-config --cflags`, x_includes)
+ 	    else
+-	      LIBS="$LIBS -L${x_libraries}"
++	      LIBS="$LIBS -Wl,-R${x_libraries} -Wl,-L${x_libraries}"
+ 	      AC_CHECK_LIB(Xrender, XRenderQueryExtension, SCX_PREPEND(-lXrender, x_libraries))
+ 	      AC_CHECK_LIB(Xft, XftFontOpen, SCX_PREPEND(-lXft, x_libraries))
+             fi

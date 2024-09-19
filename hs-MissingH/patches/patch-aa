@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/01 04:28:57 phonohawk Exp $
+
+--- MissingH.cabal.orig	2009-08-20 06:35:40.000000000 +0900
++++ MissingH.cabal
+@@ -80,11 +80,3 @@ Library
+    Build-Depends: base < 3
+  If ! os(windows)
+    Build-Depends: unix
+-
+-Executable runtests
+-  Buildable: False
+-  Main-Is: runtests.hs
+-  HS-Source-Dirs: testsrc, .
+-  Build-Depends: testpack, QuickCheck >= 1.0 && <2.0, HUnit
+-  Extensions: ExistentialQuantification, OverlappingInstances,
+-    UndecidableInstances, CPP, PatternSignatures

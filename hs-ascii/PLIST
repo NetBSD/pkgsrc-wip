@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/29 16:31:56 phonohawk Exp $
+lib/ascii-${PKGVERSION}/${HASKELL_VERSION}/Data/Ascii.hi
+lib/ascii-${PKGVERSION}/${HASKELL_VERSION}/Data/Ascii.p_hi
+lib/ascii-${PKGVERSION}/${HASKELL_VERSION}/HSascii-${PKGVERSION}.o
+lib/ascii-${PKGVERSION}/${HASKELL_VERSION}/libHSascii-${PKGVERSION}.a
+lib/ascii-${PKGVERSION}/${HASKELL_VERSION}/libHSascii-${PKGVERSION}_p.a
+lib/ascii-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ascii-${PKGVERSION}/LICENSE

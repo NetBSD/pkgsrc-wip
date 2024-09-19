@@ -1,0 +1,3 @@
+I'm putting further packaging work "on hold" until 0.5.x (user-oriented)
+release.  Currently, llvm API is not stable, and combined with Etoile's
+own issues, I don't this as good use of time right now.

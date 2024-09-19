@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.3 2005/07/25 13:41:54 thomasklausner Exp $
+
+--- configure.orig	2005-05-01 06:59:59.000000000 +0200
++++ configure
+@@ -5769,7 +5769,7 @@ fi
+ done
+ test -n "$YACC" || YACC="yacc"
+ 
+-	expr z"$YACC" : z"bison.*" >/dev/null || { { echo "$as_me:$LINENO: error: bison not found (and yacc will not work)" >&5
++	expr "$YACC" : ".*bison.*" >/dev/null || { { echo "$as_me:$LINENO: error: bison not found (and yacc will not work)" >&5
+ echo "$as_me: error: bison not found (and yacc will not work)" >&2;}
+    { (exit 1); exit 1; }; }
+ 

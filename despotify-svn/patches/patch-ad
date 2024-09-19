@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2010/02/03 17:35:30 tnn2 Exp $
+
+--- lib/local.mk.orig	2010-02-03 18:11:33.000000000 +0000
++++ lib/local.mk
+@@ -52,7 +52,6 @@ install: libdespotify.la
+ 	install -d $(INSTALL_PREFIX)/lib/pkgconfig
+ 	 
+ 	$(LT) --mode=install install libdespotify.la $(INSTALL_PREFIX)/lib/libdespotify.la
+-	$(LDCONFIG) -n $(INSTALL_PREFIX)/lib
+ 	install -d $(INSTALL_PREFIX)/include/ 
+ 	install despotify.h $(INSTALL_PREFIX)/include/
+ 	install -d $(INSTALL_PREFIX)/lib/pkgconfig/

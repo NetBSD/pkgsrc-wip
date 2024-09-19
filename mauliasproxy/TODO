@@ -1,0 +1,7 @@
+(Actually create a package)
+
+Arrange for go build.
+install README.md as documenation
+
+upstream references:
+  https://mau.dev/tulir/mauliasproxy/-/issues/1

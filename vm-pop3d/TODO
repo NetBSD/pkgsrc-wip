@@ -1,0 +1,22 @@
+add pkgsrc option for --enable-ip-based-virtual
+This feature will will select the password file
+and mail spool directory by the hostname that the user chooses to connect
+to. (Of course, with this option, you will need separate IPs for each
+virtual domain and the IP must resolve to the chosen host name.)
+If the user enters the domain name with his username,
+it will override the IP-based option.
+
+other options:
+
+VIRTUAL_UID is the UID of the owner (real Unix account) of the
+  virtual mailboxes. 
+
+VIRTUAL_MAILPATH
+/var/spool/virtual
+
+VIRTUAL_PASSWORDS_PATH
+$SYSCONFDIR/virtual or /vm-pop3d
+
+provide a pam file that has correct paths and a MESSAGE.PAM
+
+add rc.d (rc.subr) script

@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.3 2006/07/20 14:20:47 obache Exp $
+
+--- Makefile.rules.orig	2004-04-17 07:08:50.000000000 +0900
++++ Makefile.rules
+@@ -14,15 +14,15 @@
+ #
+ 
+ # Compiler flags
+-CC = gcc
+-CFLAGS = -Wall
++#CC = gcc
++#CFLAGS = -Wall
+ 
+ # Settings
+ LOG = make.log
+ DIRS = src
+ BIN = dbf
+ VERSION = 0.8.3.1
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ 
+ # Compiler settings - do not change
+ # erased dbfversion.o

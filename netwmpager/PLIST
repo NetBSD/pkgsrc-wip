@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/14 14:34:05 thomasklausner Exp $
+bin/netwmpager
+share/examples/netwmpager/config-example

@@ -1,0 +1,30 @@
+$NetBSD: patch-xp,v 1.1 2010/08/23 13:17:10 yhardy Exp $
+
+--- security/nss/tests/multinit/multinit.sh.orig	2010-06-11 22:41:21.000000000 +0200
++++ security/nss/tests/multinit/multinit.sh	2010-07-10 11:59:48.000000000 +0200
+@@ -124,14 +124,14 @@
+ 	# the database type.
+ 	if [ "$tag" != "all" ]; then
+ 	    read tag2 expected_result2
+-	    if [ "$NSS_DEFAULT_DB_TYPE" == "$tag2" ]; then
++	    if [ "$NSS_DEFAULT_DB_TYPE" = "$tag2" ]; then
+ 		expected_result=$expected_result2
+ 	    fi
+ 	fi
+ 
+ 	# convert shutdown type to option flags
+ 	shutdown_command="";
+-	if [ "$shutdown_type" == "old" ]; then
++	if [ "$shutdown_type" = "old" ]; then
+ 	   shutdown_command="--oldStype"
+ 	fi
+ 
+@@ -167,7 +167,7 @@
+ 	# show what we got and what we expected for diagnostic purposes
+ 	echo "actual   = |$actual_result|"
+ 	echo "expected = |$expected_result|"
+-	test  "$actual_result" == "$expected_result" 
++	test  "$actual_result" = "$expected_result" 
+ 	html_msg $? 0 "$testname"
+     fi
+   done

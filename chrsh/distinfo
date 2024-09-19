@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
+
+RMD160 (chrsh.c) = d4bb575b55acb775213da50da8431b7bc4f6d83c
+Size (chrsh.c) = 26266 bytes
+SHA1 (patch-aa) = e23fd61088a374bc484e3f3bcb2464604d783429
+SHA1 (patch-ab) = 41b95fa27fb8b98dce5e3b264a7f709da689a96d

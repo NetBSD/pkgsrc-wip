@@ -1,0 +1,8 @@
+SPAMS (SPArse Modeling Software) is an optimization toolbox for solving various
+sparse estimation problems
+Dictionary learning and matrix factorization (NMF, sparse PCA, ...)
+Solving sparse decomposition problems with LARS, coordinate descent, OMP, SOMP,
+proximal methods
+Solving structured sparse decomposition problems (l1/l2, l1/linf, sparse
+group lasso,
+tree-structured regularization, structured sparsity with overlapping groups,...)

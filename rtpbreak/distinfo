@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/15 22:42:15 prudhvikrishna Exp $
+
+RMD160 (rtpbreak-1.3a.tgz) = 27364da7f37c41ce80cfd421727487394994e93b
+Size (rtpbreak-1.3a.tgz) = 41355 bytes
+SHA1 (patch-aa) = 6a673cab5956677f89a1464db4750f8d3d586a0c
+SHA1 (patch-ab) = 500f1fec571f9d6370946ea040e2d221ce2be98a
+SHA1 (patch-ac) = fb74c35192a3611425e3816ab77022399799b5f1

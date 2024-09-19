@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/NanoLyse
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nanolyse/NanoLyse.py
+${PYSITELIB}/nanolyse/NanoLyse.pyc
+${PYSITELIB}/nanolyse/NanoLyse.pyo
+${PYSITELIB}/nanolyse/__init__.py
+${PYSITELIB}/nanolyse/__init__.pyc
+${PYSITELIB}/nanolyse/__init__.pyo
+${PYSITELIB}/nanolyse/version.py
+${PYSITELIB}/nanolyse/version.pyc
+${PYSITELIB}/nanolyse/version.pyo
+${PYSITELIB}/reference/lambda.fasta.gz

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/07/10 22:28:02 jihbed Exp $
+
+RMD160 (vispy-0.6.6.tar.gz) = 3edad493d9be7e8ac1144c4dcfa9244050634e4c
+SHA512 (vispy-0.6.6.tar.gz) = e06f13007533872a5527eccd808284beea32038f5422183fb6ef514d516d45e1306e404ba60f6c249e0e31ff356b2da1219e78cf9b47352696da16adf59a92a0
+Size (vispy-0.6.6.tar.gz) = 13314643 bytes
+SHA1 (patch-vispy_util_fonts___freetype.py) = 0e7e365527a754efeca4e93b81c81a20dc49d7a3
+SHA1 (patch-vispy_util_fonts___triage.py) = 45deabd0cafcfe61cbd2aee6af627c6c40f60b9e

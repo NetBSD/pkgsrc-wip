@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.5 2006/07/25 22:21:56 dillo Exp $
+
+RMD160 (daphne-0.99.7c-src.tar.gz) = 16405170c39393afa39f30e7c174dee0aea3e83c
+Size (daphne-0.99.7c-src.tar.gz) = 3502123 bytes
+SHA1 (patch-aa) = de2ee39d76a295103670af048423480bd4e09b64
+SHA1 (patch-ab) = 3dfa942e6c8012499023da343b412ae7f9e0e506
+SHA1 (patch-ac) = f12e1672f170a5c4446f8488345ad757fbff640f
+SHA1 (patch-ad) = fb9f3d2da38acd887dc5da274db5bcf86748a8ee
+SHA1 (patch-ae) = c9d8162becfc77bbc14366d6360b47750e7dd06c
+SHA1 (patch-af) = 43f8493713a9718f0dbd70f80317453c9eed263f
+SHA1 (patch-ag) = 0e2b4d5750a8fabfcadbb49238ccd36f9596abb6
+SHA1 (patch-ah) = 1caa228f134bf37b8bf9e945798d00fd93eb5e54
+SHA1 (patch-ai) = 74f23be308cadd92c10cda8fa606a3f87e8447f9
+SHA1 (patch-aj) = 1475398cef2fddeb94a3e3faefe96ecde6553483
+SHA1 (patch-ak) = 1fd9514837cca2e273bb7d1347c25c412a6bad39
+SHA1 (patch-al) = 049801fa6265b63a90f533894a98a953bd653740

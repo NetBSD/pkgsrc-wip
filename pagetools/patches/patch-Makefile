@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile,v 1.2 2014/09/08 21:24:08 thomasklausner Exp $
+
+Use LDFLAGS so rpath can be passed in from pkgsrc.
+
+--- Makefile.orig	2005-04-18 20:26:33.000000000 +0000
++++ Makefile
+@@ -3,7 +3,7 @@ WARNINGS =      -pedantic
+ C_FLAGS =       -MMD $(WARNINGS) -O2
+ C++_FLAGS =     -MMD $(WARNINGS) -O2
+ 
+-INCLUDES =      -I .
++INCLUDES =      -I . $(CPPFLAGS)
+ .SUFFIXES:      $(.SUFFIXES) .cpp
+ PTLIB = libptformats.a libptraster.a libptutil.a
+ 
+@@ -37,10 +37,10 @@ libptformats.a:     $(LIBFORMATSOBJ)
+ 
+ 
+ pbm_findskew/pbm_findskew:  pbm_findskew/pbm_findskew.o $(PTLIB)
+-	$(C++) pbm_findskew/pbm_findskew.o $(PTLIB) -l$(LIBPBM) -o $@
++	$(C++) pbm_findskew/pbm_findskew.o $(LDFLAGS) $(PTLIB) -l$(LIBPBM) -o $@
+ 
+ tiff_findskew/tiff_findskew:  tiff_findskew/tiff_findskew.o $(PTLIB)
+-	$(C++) tiff_findskew/tiff_findskew.o $(PTLIB) -ltiff -o $@
++	$(C++) tiff_findskew/tiff_findskew.o $(LDFLAGS) $(PTLIB) -ltiff -o $@
+ 
+ 
+ clean:

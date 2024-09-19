@@ -1,0 +1,4 @@
+- Keep an eye out for a proper stable release which includes the
+  new yaml-cpp API.  The current situation with a github tarball of
+  a particular revision is ugly and, because it's made on-the-fly it
+  may provide different checksums at different times.

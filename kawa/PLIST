@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
+bin/cgi-servlet
+bin/kawa
+bin/qexo
+info/kawa-tour.info
+info/kawa.info
+man/man1/kawa.1
+man/man1/qexo.1
+share/java/${PKGNAME}.jar
+share/java/kawa.jar

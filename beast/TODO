@@ -1,0 +1,6 @@
+* push configure.in patch to beast author (already sent)
+	pkgsrc/wip/beast/patches/patch-ag
+* once patch-ag is accepted, remove autoconf build-time dependency
+* push GNU PTH patch to PTH author, to cure the crash on 1.6.x (already sent)
+	http://netbsd.math.orst.edu/misc/pth_high.c.diff
+* more testing

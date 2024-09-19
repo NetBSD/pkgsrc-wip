@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/libdxfrw0/drw_base.h
+include/libdxfrw0/drw_entities.h
+include/libdxfrw0/drw_interface.h
+include/libdxfrw0/drw_objects.h
+include/libdxfrw0/libdxfrw.h
+lib/libdxfrw.la
+lib/pkgconfig/libdxfrw0.pc

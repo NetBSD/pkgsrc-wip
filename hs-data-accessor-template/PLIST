@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 08:47:08 phonohawk Exp $
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Template.hi
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Template.p_hi
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Template/Example.hi
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Template/Example.p_hi
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/HSdata-accessor-template-${PKGVERSION}.o
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-accessor-template-${PKGVERSION}.a
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-accessor-template-${PKGVERSION}_p.a
+lib/data-accessor-template-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-accessor-template-${PKGVERSION}/LICENSE

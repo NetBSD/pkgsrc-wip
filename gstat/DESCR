@@ -1,0 +1,15 @@
+Gstat is a program for the modelling, prediction and simulation of
+geostatistical data in one, two or three dimensions.  Geostatistical
+data are data (measurements) collected at known locations in space,
+from a function (process) that has a value at every location in a
+certain (1, 2 or 3-D) domain. These data (or some transform of them)
+are modelled as the sum of a constant or varying trend and a spatially
+correlated residual. Given a model for the trend, and under some
+stationarity assumptions, geostatistical modelling involves the
+estimation of the spatial correlation. Geostatistical prediction
+(`kriging') is finding the best linear unbiased prediction (the
+expected value) with its prediction error for a variable at a
+location, given observations and a model for their spatial
+variation. Simulation of a spatial variable is the creation of
+randomly drawn realizations of a field given a model for the data,
+possibly conditioned on observations.

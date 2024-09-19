@@ -1,0 +1,4 @@
+GSCommander is a Unix command monitor for GNUstep.  It was inspired by the
+CommandMon program for NEXTSTEP.  With it you can type in a shell command
+and it will display the results, all in a nice window.  It can even run a
+command at a time interval that you can set.

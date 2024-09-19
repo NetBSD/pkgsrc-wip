@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/01/02 21:16:18 gduzan Exp $
+
+RMD160 (kmymoney-4.8.3.tar.xz) = 760c3cb259ec45ec9749c6e3a25adff6d232f8ed
+SHA512 (kmymoney-4.8.3.tar.xz) = b3a9d6d65b2d8971139c5532985863e73b3f1e1d80c2091c5aaccdf8e0aacd8c53506aeb98522ca79fa830ba516e88d5acfa36d639d255c290c22b9f7b917b4e
+Size (kmymoney-4.8.3.tar.xz) = 20934596 bytes

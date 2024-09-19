@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/16 22:09:40 khorben Exp $
+lib/gtk-2.0/2.10.0/modules/libgtkstylus.la

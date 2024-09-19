@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+swh-loader-mercurial
+=========================
+
+# Configuration file
+
+In usual location for a loader, *{/etc/softwareheritage/ | ~/.swh/ |
+~/.config/swh/}loader/hg.yml*:
+
+``` YAML
+storage:
+  cls: remote
+  args:
+    url: http://localhost:5002/
+```
+
+# Basic use
+
+The main entry point to import a Mercurial repository is the `main` function
+defined in the `swh.loader.mercurial.cli` module:
+
+...

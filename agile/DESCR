@@ -1,0 +1,6 @@
+AGILe is A Generator Interface Library (& executable), i.e. a uniform
+object oriented C++ interface for a variety of Fortran-based Monte Carlo event
+generators. The role of AGILe is to provide a standard steering interface for
+Fortran generator codes which usually do not come with an executable, usually
+need to be recompiled to change parameter settings, and cannot write output into
+the C++ HepMC event record: AGILe remedies all of these defects

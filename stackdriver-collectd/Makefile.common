@@ -1,0 +1,49 @@
+# $NetBSD: Makefile.common,v 1.11 2015/10/28 11:46:07 jperkin Exp $
+
+DISTNAME=	20170316-1
+PKGNAME=	stackdriver-collectd-20170316
+GITHUB_PROJECT=	collectd
+MASTER_SITES=	https://github.com/Stackdriver/collectd/archive/stack-build/
+CATEGORIES=	sysutils
+
+HOMEPAGE=	https://collectd.org/
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/collectd-stack-build-${DISTNAME}
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c99 c++
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		VARBASE
+
+# Disable all libs support by default
+DISABLED_LIBS=		aquaero5 credis curl dbi esmtp ganglia gcrypt	\
+			iptc lvm2app memcached mnl modbus mongoc mysql	\
+			netsnmp notify oping owcapi pcap perl pq	\
+			rabbitmq routeros rrd sensors sigrok statgrab	\
+			tokyotyrant upsclient varnish xml2 xmms yajl
+CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
+			--with-perl-bindings=no --with-python=no	\
+			--disable-all-plugins
+.for lib in ${DISABLED_LIBS}
+CONFIGURE_ARGS+=	--with-lib${lib}=no
+.endfor
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
+
+CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
+
+.include "../../mk/compiler.mk"
+# XXX: proper clang version check when we have support for it.
+.if !empty(PKGSRC_COMPILER:Mclang) && ${OPSYS} != "Darwin"
+CFLAGS+=	-Wno-error=tautological-pointer-compare \
+		-Wno-error=pointer-bool-conversion
+.endif
+
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"

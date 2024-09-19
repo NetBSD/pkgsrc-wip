@@ -1,0 +1,14 @@
+Fix PLIST.
+Some comments from Alistair:
+At the moment, it can't handle the RENAME()s in NetBSD's header files,
+and I build things in a ${WRKSRC}/build directory, and these files need
+to be moved to ${PREFIX} in the install stage. The files should also be
+checked to see if there are any embedded hardcoded paths, which would
+make this approach infeasible.
+
+Build fails on 1.6.1:
+	tcc -g -Y/usr/cvs/pkgsrc/wip/tendra/work.i386/TenDRA-4.1.2/src/lib/machines/common/tokens/except_toks -Ft -o except_toks.t except_toks.j
+	tld: Error: cannot open library file 'posix': No such file or directory
+	tld: Error: cannot open library file 'ansi': No such file or directory
+	*** Error code 1
+	 -  hubertf@netbsd.org

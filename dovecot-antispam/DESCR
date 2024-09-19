@@ -1,0 +1,13 @@
+Spam scanner needs training. We'll occasionally have false positives and
+false negatives. Now this is the point where the Dovecot antispam plugin
+comes into play. Instead of moving mail into special folders or forwarding
+them to special mail addresses for retraining, the plugin offers two actions
+for the user:
+
+* moving mail out of the SPAM folder
+* moving mail into the SPAM folder
+
+This plugin watches these actions (and additionally prohibits APPENDs to
+the SPAM folder, more for technical reasons than others) and tells the spam
+classifier that it made an error and needs to re-classify the message
+(as spam/not spam depending on which way it was moved).

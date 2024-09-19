@@ -1,0 +1,24 @@
+                           TREETOOL
+                  Created by  Mike Maciukenas
+            Modified and maintained by Mike McCaughey
+                 Ribosomal RNA Database Project
+                    University of Illinois
+               Report bugs to mrmike@geta.life.uiuc.edu
+
+Treetool is an interactive tool for displaying, editing, and printing
+phylogenetic trees.  The tree is displayed visually on screen, in
+various formats, and the user is able to modify the format, structure,
+and characteristics of the tree.  Trees may be viewed, compared,
+formatted for printing, constructed from smaller trees, etc...
+
+Treetool works with Newick format tree files (Paup and Phylip
+compatible).  It handles multifurcating trees, branch lengths
+(evolutionary distances), rooted/unrooted trees, and multiple trees
+per file.  It can print to a PostScript printer, or output PICT
+graphics for Macintosh drawing programs (MacDraw).
+
+Treetool 2.0.1 is available in binary form for Sun Sparc machines (Sun
+4's) and in source form. Treetool requires X-windows (from MIT), and
+the Xview toolkit (from Sun Microsystems).  Both are free
+(copyrighted) software, available readily from a number of sources
+(both are available by anonymous ftp to export.lcs.mit.edu).

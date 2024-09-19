@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/12/03 00:38:43 dhowland Exp $
+
+--- vpr/route_timing.c.orig	2000-03-26 14:34:07.000000000 -0500
++++ vpr/route_timing.c
+@@ -228,7 +228,7 @@ boolean timing_driven_route_net (int ine
+  }
+ 
+  num_sinks = net[inet].num_pins - 1;
+- heapsort (sink_order, pin_criticality, num_sinks);
++ heapsortv (sink_order, pin_criticality, num_sinks);
+ 
+ /* Update base costs according to fanout and criticality rules */
+ 

@@ -1,0 +1,5 @@
+Netzob is an open source tool for reverse engineering, traffic
+generation and fuzzing of communication protocols. It allows to
+infer the message format and the state machine of a protocol through
+passive and active processes. The model can afterward be used to
+simulate realistic and controllable traffic.

@@ -1,0 +1,4 @@
+The Lambert W( x ) function and its possible applications in physics are
+presented. The actual numerical implementation in C++ consists of Halleys and
+Fritschs iterations with initial approximations based on branch-point expansion
+asymptotic series, rational fits, and continued-logarithm recursion

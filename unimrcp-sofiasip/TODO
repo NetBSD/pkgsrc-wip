@@ -1,0 +1,6 @@
+* Think a workaround for the long version tag (since it's a bundled patched version, I couldn't think of a better way). 
+* There's an libtool error in the install stage:
+	libtool: warning: '../libsofia-sip-ua/libsofia-sip-ua.la' has not been installed in '/usr/pkg/unimrcp/sofia-sip/lib'
+* This package has been only tested in FreeBSD 11.
+
+

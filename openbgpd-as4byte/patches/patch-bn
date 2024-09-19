@@ -1,0 +1,28 @@
+--- ./bgpd/session.h.dist	Wed Jan 10 09:22:24 2007
++++ ./bgpd/session.h	Wed Jan 10 09:19:08 2007
+@@ -16,6 +16,9 @@
+  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++/* +4-Byte AS:   modifications for 4 Byte AS Number Support - 
++                 Geoff Huston, January 2007 */
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <time.h>
+@@ -102,7 +105,14 @@
+ enum capa_codes {
+ 	CAPA_NONE,
+ 	CAPA_MP,
+-	CAPA_REFRESH
++	CAPA_REFRESH,
++        /* +4-Byte AS:   additional capability codes */
++        CAPA_RF,
++        CAPA_MR,
++        CAPA_GR = 64,
++        CAPA_4AS,
++        CAPA_DC
++
+ };
+ 
+ struct msg_header {

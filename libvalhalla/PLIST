@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/06 12:40:09 grasmi Exp $
+bin/libvalhalla-test
+include/valhalla.h
+lib/libvalhalla.a
+lib/libvalhalla.so
+lib/libvalhalla.so.1
+lib/libvalhalla.so.${PKGVERSION}
+lib/pkgconfig/libvalhalla.pc

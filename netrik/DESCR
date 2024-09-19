@@ -1,0 +1,4 @@
+For short, netrik is a really fancy text mode WWW browser (somewhat similar
+to lynx, links, w3m -- only better :-) ), having all possible features
+making sense in text mode -- including multi-windowing and JavaScript; and
+with a really nice UI.  Well, strictly speaking, it will be...

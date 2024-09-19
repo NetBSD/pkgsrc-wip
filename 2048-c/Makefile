@@ -1,0 +1,24 @@
+# $NetBSD$
+
+DISTNAME=	2048-c-20190509
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mevdschee/}
+GITHUB_PROJECT=	2048.c
+GITHUB_TAG=	c728fc1fb2bd06ed4465beff323251a0e13ae896
+
+MAINTAINER=	leot@NetBSD.org
+HOMEPAGE=	https://github.com/mevdschee/2048.c
+COMMENT=	Console version of the game 2048
+LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+
+USE_LANGUAGES=	c99
+
+TEST_TARGET=	test
+
+do-install:
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/2048 ${DESTDIR}${PREFIX}/bin
+
+.include "../../mk/bsd.pkg.mk"

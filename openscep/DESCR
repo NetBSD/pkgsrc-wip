@@ -1,0 +1,10 @@
+SCEP is a simple protocol that runs over http.  The server runs a CGI
+script http://.../cgi-bin/pkiclient.exe.  Cisco equipment (PIX, IOS)
+needs to become an SCEP client to guide it by the hand through the
+process of loading a CA certificate into itself, downloading CRLs, and
+enrolling its device certificate into the CA.  Cisco devices generate
+their own certificate requests, and the private key never leaves the
+device.  SCEP is kind of silly, but you can't use certificates with Cisco
+unless you use SCEP, so, here it is.
+
+oh, guess what, you need LDAP to use it.  enjoy!

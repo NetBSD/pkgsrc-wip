@@ -1,0 +1,12 @@
+prefix=@PREFIX@
+exec_prefix=@PREFIX@
+libdir=@PREFIX@/lib/icecat
+includedir=@PREFIX@/include/icecat
+idldir=@PREFIX@/share/idl/icecat
+
+Name: XPCOM
+Description: The Mozilla Cross Platform Component Library
+Version: 3.0
+Requires: firefox3-nspr >= 4.6.8
+Libs: -Wl,-R${libdir} -L${libdir} -lxpcom
+Cflags: -I${includedir}

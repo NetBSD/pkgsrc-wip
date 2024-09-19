@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/01/16 17:34:35 ishit Exp $
+
+--- ip_frag.c.orig	1999-07-27 00:08:51.000000000 +0900
++++ ip_frag.c
+@@ -128,7 +128,7 @@ ELEM *
+ ip_frag_add_overwrite(ELEM *list)
+ {
+   ELEM *f, *new;
+-  u_char nulls[PACKET], *newdata;
++  u_char nulls[LIBNET_PACKET], *newdata;
+   int newoff, newlen;
+ 
+   memset(nulls, 0, sizeof(nulls));
+@@ -152,7 +152,7 @@ ip_frag_add_overwrite(ELEM *list)
+     ((struct ip *)newdata)->ip_off = htons(newoff);
+ 
+     /* Add null fragment after current fragment. */
+-    new = list_elem(newdata, IP_H + newlen);
++    new = list_elem(newdata, LIBNET_IP_H + newlen);
+     free(newdata);
+     
+     if (!list_add(f, new))

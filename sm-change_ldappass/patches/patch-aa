@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/06 12:31:32 marttikuparinen Exp $
+
+--- options.php.orig	2004-12-13 05:30:13.000000000 +0100
++++ options.php
+@@ -162,7 +162,16 @@ function change_ldappass_go($debug) {
+ 			}
+ 		}
+ 
+-		$sr=ldap_search($ds,$ldap_base_dn,"($ldap_user_field=$username)",array("dn")); //search for uid
++		$user_filter = "($ldap_user_field=$username)";
++		if ($ldap_filter != "") {
++			$user_filter = "(&($ldap_filter)" . $user_filter . ")";
++		}
++
++		if ($ldap_scope == "onelevel") {
++			$sr=ldap_list($ds,$ldap_base_dn,$user_filter,array("dn")); //search for uid
++		} else {
++			$sr=ldap_search($ds,$ldap_base_dn,$user_filter,array("dn")); //search for uid
++		}
+ 		if (ldap_count_entries($ds,$sr)>1) {
+ 			array_push($Messages, _("Duplicate login entries detected, cannot change password!"));
+ 			return $Messages;
+@@ -205,7 +214,11 @@ function change_ldappass_go($debug) {
+ 				}
+ 			}				
+ 		}
+-		$sr=ldap_search($ds,$ldap_base_dn,"($ldap_user_field=$username)"); //check the db again, this time so we get the password field returned
++		if ($ldap_scope == "onelevel") {
++			$sr=ldap_list($ds,$ldap_base_dn,$user_filter); //check the db again, this time so we get the password field returned
++		} else {
++			$sr=ldap_search($ds,$ldap_base_dn,$user_filter); //check the db again, this time so we get the password field returned
++		}
+ 		$info = ldap_get_entries($ds, $sr);
+ 		if ($debug) array_push($Messages,ldap_debug_print_array($info));
+ 		$storedpass=$info[0][$ldap_password_field][0];

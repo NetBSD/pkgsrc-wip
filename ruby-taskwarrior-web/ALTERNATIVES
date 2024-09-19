@@ -1,0 +1,1 @@
+bin/task-web @PREFIX@/bin/task-web@RUBY_VER@

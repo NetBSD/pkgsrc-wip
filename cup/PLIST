@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/03 18:55:39 jihbed Exp $
+lib/java/${PKGNAME}-runtime.jar

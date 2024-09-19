@@ -1,0 +1,11 @@
+Pdq is a straightforward, flexible print subsystem. It is a
+simple replacement for lpr, lp, lpq, lpstat, and lprm.
+
+The features include: modular driver and interface support, jobs
+can be monitored through completion, job status can be checked
+after completion, users can only print files of declared types,
+users can define their own printers, multitasking (with no queues
+to get clogged), scripts can be embedded in the rc files, custom
+command-line options, and root privileges are not required.
+
+It includes various printer drivers and device interfaces.

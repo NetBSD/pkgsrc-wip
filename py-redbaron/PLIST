@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/01 23:23:05 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/redbaron.py
+${PYSITELIB}/redbaron.pyc
+${PYSITELIB}/redbaron.pyo

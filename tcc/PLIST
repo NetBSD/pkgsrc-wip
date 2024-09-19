@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:20 thomasklausner Exp $
+bin/arm-tcc
+bin/c67-tcc
+bin/tcc
+include/tcc/float.h
+include/tcc/libtcc.h
+include/tcc/stdarg.h
+include/tcc/stdbool.h
+include/tcc/stddef.h
+include/tcc/tcclib.h
+include/tcc/varargs.h
+lib/libtcc.a
+lib/tcc/bcheck.o
+lib/tcc/libtcc1.a
+man/man1/tcc.1
+share/doc/tcc/tcc-doc.html

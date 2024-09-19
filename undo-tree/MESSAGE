@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/02/22 03:52:50 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (require 'undo-tree)
+  (global-undo-tree-mode)
+===========================================================================

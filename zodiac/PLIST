@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/zod
+bin/zod-copy
+bin/zod-internal
+bin/zod-render
+lib/zodiac/config.awk
+lib/zodiac/find_cmd.awk
+lib/zodiac/markdown.awk
+lib/zodiac/render.awk

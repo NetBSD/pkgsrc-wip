@@ -1,0 +1,4 @@
+	- Install only those headers that are needed.
+	- Make sure namespace/visibility of library/API are sane,
+	  changing it as necessary.
+	- Split the NetBSD audio code into its own mini-library (?)

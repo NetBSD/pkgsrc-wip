@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2006/10/29 11:23:10 shattered Exp $
+
+RMD160 (opd-v0.2-2003-03-18.tgz) = a7cbaf41b601afb0b6c11e241377aa9a28ac91dc
+Size (opd-v0.2-2003-03-18.tgz) = 9499 bytes
+SHA1 (patch-aa) = 927a7f96a5b000b44ad9dea9f0b257c1a002b2ae

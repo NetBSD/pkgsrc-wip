@@ -1,0 +1,8 @@
+# $NetBSD$
+
+# corresponding PAM support is not available on OpenBSD/NetBSD
+[org.gnome.login-screen]
+enable-fingerprint-authentication=false
+enable-smartcard-authentication=false
+logo='${PREFIX}/share/pixmaps/NetBSD.xpm'
+

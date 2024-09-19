@@ -1,0 +1,26 @@
+$NetBSD$
+
+* use bpf on illumos
+
+--- src/lib/dhcp/Makefile.am.orig	2019-11-19 14:50:43.000000000 +0000
++++ src/lib/dhcp/Makefile.am
+@@ -68,6 +68,10 @@ if OS_BSD
+ libkea_dhcp___la_SOURCES += pkt_filter_bpf.cc pkt_filter_bpf.h
+ endif
+ 
++if OS_SOLARIS
++libkea_dhcp___la_SOURCES += pkt_filter_bpf.cc pkt_filter_bpf.h
++endif
++
+ libkea_dhcp___la_SOURCES += protocol_util.cc protocol_util.h
+ libkea_dhcp___la_SOURCES += std_option_defs.h
+ 
+@@ -152,3 +156,8 @@ if OS_BSD
+ libkea_dhcp___include_HEADERS += \
+ 	pkt_filter_bpf.h
+ endif
++
++if OS_SOLARIS
++libkea_dhcp___include_HEADERS += \
++	pkt_filter_bpf.h
++endif

@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/13 19:23:28 poppnk Exp $
+--- Makefile.orig	2005-06-02 00:32:59.000000000 +0200
++++ Makefile	2005-08-13 21:07:49.088541056 +0200
+@@ -16,19 +16,16 @@
+ # should have little trouble figuring out what they should be.
+ #
+ 
+-GLIBINC=$(shell glib-config --cflags)
+-GLIBLIB=$(shell glib-config --libs)
+-
++GLIBINC=`glib-config --cflags`
++GLIBLIB=`glib-config --libs`
+ 
+ #
+ # These are the default paths the openobex package installs under.  Hack as
+ # necessary to reflect your setup.
+ #
+ 
+-OBEXINC=-I/usr/local/include
+-OBEXLIB=-L/usr/local/lib -lopenobex -lbluetooth
+-
+-CFLAGS=-Wall
++OBEXINC=${GLIBINC}
++OBEXLIB=-lopenobex -lbluetooth ${LDFLAGS}
+ 
+ #
+ # The make rules.. basically just two files here plus the openobex and glib

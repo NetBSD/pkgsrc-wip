@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/06 23:06:21 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/django_mathjax/__init__.py
+${PYSITELIB}/django_mathjax/__init__.pyc
+${PYSITELIB}/django_mathjax/__init__.pyo
+${PYSITELIB}/django_mathjax/templatetags/__init__.py
+${PYSITELIB}/django_mathjax/templatetags/__init__.pyc
+${PYSITELIB}/django_mathjax/templatetags/__init__.pyo
+${PYSITELIB}/django_mathjax/templatetags/mathjax.py
+${PYSITELIB}/django_mathjax/templatetags/mathjax.pyc
+${PYSITELIB}/django_mathjax/templatetags/mathjax.pyo

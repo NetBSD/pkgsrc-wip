@@ -1,0 +1,7 @@
+VIrus (VI resembling utility skeleton) was originally taken from
+busybox and stripped of most unrelated stuff. The intention is to
+provide a pure, minimalist VI implementation that allows you to switch
+off shell-escaping and other security risks by default, and allow the
+admin to offer an interim user to just have a vi as login-shell on a
+certain host, while allowing others to work with a resource-sensitive
+and small vi implementation for your OS bootdisks.

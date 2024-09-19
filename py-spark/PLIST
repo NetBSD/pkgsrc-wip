@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:11 thomasklausner Exp $
+${PYSITELIB}/spark.py
+share/py-spark/doc/doc.html
+share/py-spark/doc/doc.tex
+share/py-spark/doc/paper.ps.gz
+share/py-spark/examples/auto/ast.py
+share/py-spark/examples/auto/example.py
+share/py-spark/examples/auto/spark.py
+share/py-spark/examples/auto/t1
+share/py-spark/examples/auto/t2
+share/py-spark/examples/auto/t3
+share/py-spark/examples/auto/t4
+share/py-spark/examples/auto/t5
+share/py-spark/examples/auto/t6
+share/py-spark/examples/auto/token.py
+share/py-spark/examples/paper/ast.py
+share/py-spark/examples/paper/example.py
+share/py-spark/examples/paper/spark.py
+share/py-spark/examples/paper/token.py
+share/py-spark/examples/python/main.py
+share/py-spark/examples/python/parse.py
+share/py-spark/examples/python/scan.py
+share/py-spark/examples/python/spark.py

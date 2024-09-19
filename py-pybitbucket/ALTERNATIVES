@@ -1,0 +1,1 @@
+bin/pybitbucket_cli @PREFIX@/bin/pybitbucket_cli-@PYVERSSUFFIX@

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.6 2011/03/30 10:30:18 moubctez Exp $
+
+RMD160 (tcptrack-1.4.0.tar.gz) = 9d4410401facc2ccac15ffa1b0f2630aee08e70f
+Size (tcptrack-1.4.0.tar.gz) = 111975 bytes
+SHA1 (patch-src_IPv6Address.cc) = 9e5f396bfcb55d2689bd485796f536c199762ad1

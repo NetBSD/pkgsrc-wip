@@ -1,0 +1,31 @@
+$NetBSD: patch-ba,v 1.1 2013/01/23 02:17:06 noud4 Exp $
+
+--- src/xalanc/XalanDOM/XalanDOMString.cpp.orig	2013-01-20 20:49:03.000000000 +0000
++++ src/xalanc/XalanDOM/XalanDOMString.cpp	2013-01-20 20:56:56.000000000 +0000
+@@ -27,7 +27,9 @@
+ 
+ #include <cstdlib>
+ 
+-
++#ifdef __NetBSD__
++#include <cstring>
++#endif
+ 
+ XALAN_CPP_NAMESPACE_BEGIN
+ 
+@@ -245,11 +247,11 @@
+ 		else
+ 		{
+ 			// Yuck.  We have to move data...
+-#if defined(XALAN_STRICT_ANSI_HEADERS)
++//#if defined(XALAN_STRICT_ANSI_HEADERS)
+ 			std::memmove(&*begin(), &*begin() + thePosition, theCount * sizeof(XalanDOMChar));
+-#else
+-			memmove(&*begin(), &*begin() + thePosition, theCount * sizeof(XalanDOMChar));
+-#endif
++//#else
++//			memmove(&*begin(), &*begin() + thePosition, theCount * sizeof(XalanDOMChar));
++//#endif
+ 
+ 			resize(theCount);
+ 		}

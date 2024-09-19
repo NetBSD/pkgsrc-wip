@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- librb/configure.ac.orig	2017-10-20 22:29:47.000000000 +0000
++++ librb/configure.ac
+@@ -546,7 +546,7 @@ if test "x$rb_netinet_in_h" = "xyes"; th
+ 	echo '#include <netinet/in.h>' >> $outfile
+ fi
+ 
+-if test "x$rb_netinet_tcp_h" == "xyes"; then
++if test "x$rb_netinet_tcp_h" = "xyes"; then
+ 	echo '#include <netinet/tcp.h>' >> $outfile
+ fi
+ 

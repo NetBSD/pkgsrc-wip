@@ -1,0 +1,16 @@
+$NetBSD$
+
+RMD160 (wine-4.13.tar.xz) = 7136c2aeb267fc2fdc1b35f33e1e7754702bc43c
+SHA512 (wine-4.13.tar.xz) = b359db3c99d10b489f7f72172b624e7b2e2b826c206e842a524d781ab5947e2b03623a115c2345fc71df22eb508936c2f7667d4c420a2fb6cdc34e3d2ba5e75b
+Size (wine-4.13.tar.xz) = 22137820 bytes
+SHA1 (patch-configure.ac) = f94ec93027454556c4430bfc19fe7f139cbbc071
+SHA1 (patch-dlls_ntdll_Makefile.in) = 406c489f199378a80928ee526c473a60ce53d3b5
+SHA1 (patch-dlls_ntdll_loader.c) = 3c5570a677c91d30c980c385b1209cab477ea872
+SHA1 (patch-dlls_ntdll_thread.c) = 8a13e956e6622cc215fbe6e9943a704b3a926168
+SHA1 (patch-dlls_wineoss.drv_Makefile.in) = 47da1975b1d68a57658c275e089966a46dde0395
+SHA1 (patch-dlls_wininet_http.c) = 9e539ed70a5bf010e50c7beb1c3b3c877ed5e5d8
+SHA1 (patch-libs_wine_Makefile.in) = 5793486c24a9049929b861ddfdcc3100b1b51aea
+SHA1 (patch-libs_wine_loader.c) = b797f3712baa7965ad23876943177ec13233e560
+SHA1 (patch-loader_Makefile.in) = 2719bec1f5ee3f3a89cc1013af0eb9d0a8176e72
+SHA1 (patch-programs_wineconsole_Makefile.in) = 83aa7c1450b11d5b2eb5ca79885ca599f3900a15
+SHA1 (patch-programs_wineconsole_curses.c) = 61714dc710432b4092ccaf6ffe1e82ba06d623f2

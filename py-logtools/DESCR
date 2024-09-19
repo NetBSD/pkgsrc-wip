@@ -1,0 +1,12 @@
+logtools encompasses of a few easy-to-use, easy to configure command-line tools,
+typically used in conjunction with Apache logs (but not only).
+
+The idea is to standardize log parsing and filtering using a simple, coherent
+configuration methodology and UNIX/POSIX-like command-line interface (STDIN
+input streaming, command piping etc.), so as to create a consistent environment
+for creating reports, charts and other such log mining artifacts that are
+typically employed in a Website context.
+
+logtools can be used either programmatically from within a python program, or as
+a set of atomic command-line utilities. See below for description of the command
+-line tools.

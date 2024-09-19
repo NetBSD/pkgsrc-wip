@@ -1,0 +1,9 @@
+Xesam-GLib README
+=================
+
+Xesam-GLib is a GObject library for dealing with Xesam services. It contains
+complete client side object mappings as well as a collection of classes
+useful for servers wishing to export a Xesam interface.
+
+Bugs should be filed against the GLib component of the Xesam product on
+freedesktop.org's bugtracker: http://bugzilla.freedesktop.org

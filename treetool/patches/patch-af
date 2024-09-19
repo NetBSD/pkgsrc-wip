@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- treetool/print.c.orig	1995-06-01 12:30:07.000000000 -0600
++++ treetool/print.c
+@@ -34,11 +34,11 @@ char *s;
+ 
+ 	if(s!=NULL)
+ 		if(strlen(s)>0)
+-			sprintf(cmd, "lp -d %s %s", s, filename);
++			sprintf(cmd, "lp -c -d %s %s", s, filename);
+ 		else
+-			sprintf(cmd, "lp %s", filename);
++			sprintf(cmd, "lp -c %s", filename);
+ 	else
+-		sprintf(cmd, "lp %s", filename);
++		sprintf(cmd, "lp -c %s", filename);
+ 		/*xx*/if(strlen(cmd)>=1024)fprintf(stderr,"do_print overran cmd\n");
+ 	result=system(cmd);
+ 	sprintf(cmd, "rm %s", filename);

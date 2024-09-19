@@ -1,0 +1,8 @@
+mlocate is a locate/updatedb implementation.  The 'm' stands for "merging":
+updatedb reuses the existing database to avoid rereading most of the file
+system, which makes updatedb faster and does not trash the system caches as
+much.
+
+The locate(1) utility is intended to be completely compatible to slocate.  It
+also attempts to be compatible to GNU locate, when it does not conflict with
+slocate compatibility.

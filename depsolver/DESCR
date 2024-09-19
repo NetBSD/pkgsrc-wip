@@ -1,0 +1,16 @@
+depSolver is a Boundary Element Method solver for Laplace's equation in 3D AC
+electrostatic problems. I originally wrote this program to study the
+characteristics of different dielectrophoretic trap designs. A big advantage of
+using this code to calculate dielectrophoretic forces is that the user can
+specify which approximation to use for the calculation of the force. In this
+manner, without having to change anything in the code, one can use a simple
+dipolar or quadrupolar approximation to quickly explore the force generated on a
+sphere over a large volume of space, or use the more general calculation based
+on the integration of the Maxwell's stress tensor over an arbitrarily shaped
+particle.
+
+depSolver is convenient for dielectrophoretic force calculations, but it is in
+no way limited to them. It can be used to solve a wide variety of electrostatic
+problems as long as they involve conductors were the electric potential is
+specified and all dielectrics in the system can be considered as piecewise
+homogeneous.

@@ -1,0 +1,9 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+--- src/Makefile.am.orig	2004-08-08 14:06:52.000000000 +0200
++++ src/Makefile.am	2005-02-28 20:50:48.000000000 +0100
+@@ -9,4 +9,4 @@
+                 main.c    ../include/settings.h.in
+ 
+ alive_LDFLAGS = -L$(top_builddir)/lib
+-alive_LDADD   = -lconf -lost @LIBINTL@ @ALLOCA@
++alive_LDADD   = -lconf -lost  @ALLOCA@

@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libmpq
+
+.if !defined(LIBMPQ_BUILDLINK3_MK)
+LIBMPQ_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libmpq+=	libmpq>=0.4.2
+BUILDLINK_PKGSRCDIR.libmpq?=	../../wip/libmpq
+
+.endif	# LIBMPQ_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libmpq

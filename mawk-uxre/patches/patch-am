@@ -1,0 +1,36 @@
+$NetBSD: patch-am,v 1.5 2010/08/26 20:05:28 cheusov Exp $
+
+--- regexp_system.c.orig	2010-06-25 20:43:03.000000000 +0000
++++ regexp_system.c
+@@ -286,7 +286,22 @@ prepare_regexp(char *regexp, const char 
+ void *
+ REcompile(char *regexp, size_t len)
+ {
++    int ere_flags = REG_EXTENDED;
++#ifdef REG_ONESUB
++    ere_flags |= REG_ONESUB;
++#endif
++#ifdef REG_BKTEMPTY
++    ere_flags |= REG_BKTEMPTY;
++#endif
++#ifdef REG_BKTESCAPE
++    ere_flags |= REG_BKTESCAPE;
++#endif
++#ifdef REG_ESCSEQ
++    ere_flags |= REG_ESCSEQ;
++#endif
++
+     mawk_re_t *re = (mawk_re_t *) malloc(sizeof(mawk_re_t));
++    char *new_regexp = (char *) malloc(len + 3);
+ 
+     if (re != 0) {
+ 	size_t need = (len * 2) + 8;	/* might double, with escaping */
+@@ -308,7 +323,7 @@ REcompile(char *regexp, size_t len)
+ 
+ 	    memset(re, 0, sizeof(mawk_re_t));
+ 	    re->regexp = strdup(new_regexp);
+-	    err_code = regcomp(&re->re, new_regexp, REG_EXTENDED);
++	    err_code = regcomp(&re->re, new_regexp, ere_flags);
+ 
+ 	    free(new_regexp);
+ 

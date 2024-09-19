@@ -1,0 +1,24 @@
+$NetBSD$
+
+Explicitly install man pages.
+
+--- Imakefile.orig	2004-05-19 15:39:22.000000000 +0000
++++ Imakefile
+@@ -166,7 +166,7 @@ instserver::
+ 	for i in $(SERVERDIR) ;\
+ 	do \
+ 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
++		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
+ 	done
+ 
+ instclient::
+@@ -174,7 +174,7 @@ instclient::
+ 	for i in $(CLIENTDIR) ;\
+ 	do \
+ 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
++		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
+ 	done
+ 
+ instsgs::

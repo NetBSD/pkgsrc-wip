@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2013/02/24 13:41:22 othyro Exp $
+
+RMD160 (libopensync-0.39.tar.bz2) = 2124c2d65d75811f021437383f3385df9c954328
+Size (libopensync-0.39.tar.bz2) = 1146955 bytes
+SHA1 (patch-opensync_client_opensync__client__proxy.c) = bb5f156cf7714935732fa7793f0051676ce3b4a6
+SHA1 (patch-opensync_common_opensync__list.c) = e217dc1201e93bc14bb860dc7b84e1a3671ea2c1
+SHA1 (patch-opensync_opensync__internals.h) = 5ce629e3a06c96916461d6a14905cbaeb713a1f8
+SHA1 (patch-tests_mock-plugin_mock__sync.c) = 502789a0364f9524d28fb7a0435866012f019307
+SHA1 (patch-tools_osyncstress.c) = 97feea8ddd7591be31d784aed4d8f00621168bd7
+SHA1 (patch-tools_osynctest.c) = 139c46f3daab8f34fc915e04b037c85ed845bd5a

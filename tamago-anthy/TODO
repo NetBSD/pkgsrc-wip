@@ -1,0 +1,27 @@
+- The recent problem was:
+===> Overriding tools for tamago-anthy-4.0nb20140221
+===> Extracting for tamago-anthy-4.0nb20140221
+Cloning into 'egg'...
+fatal: The remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+*** Error code 128
+-------------------------
+We need following change 
+
+Index: mk/git-package.mk
+===================================================================
+RCS file: /cvsroot/pkgsrc-wip/wip/mk/git-package.mk,v
+retrieving revision 1.17
+diff -u -r1.17 git-package.mk
+--- mk/git-package.mk	11 Feb 2014 21:54:09 -0000	1.17
++++ mk/git-package.mk	21 Feb 2014 10:58:45 -0000
+@@ -64,7 +64,7 @@
+ 
+ _GIT_CMD=		git
+ _GIT_ENV=		# empty
+-_GIT_FLAGS=		--quiet --depth 1
++_GIT_FLAGS?=		--quiet --depth 1
+ _GIT_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
+ _GIT_TODAY=		${_GIT_TODAY_CMD:sh}
+ _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'

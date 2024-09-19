@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- src/Mod/Path/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Path/CMakeLists.txt
+@@ -10,7 +10,7 @@ INSTALL(
+         Init.py
+         InitGui.py
+     DESTINATION
+-        Mod/Path
++        freecad/Mod/Path
+ )
+ 
+ SET(PathScripts_SRCS
+@@ -68,5 +68,5 @@ INSTALL(
+     FILES
+         ${PathScripts_SRCS}
+     DESTINATION
+-        Mod/Path/PathScripts
++        freecad/Mod/Path/PathScripts
+        )

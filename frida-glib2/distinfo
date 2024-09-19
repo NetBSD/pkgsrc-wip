@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.228 2018/01/28 16:51:50 wiz Exp $
+
+RMD160 (glib-2.54.3-d8a2acabac5c04d3ca5eb4f0aa050582b8a9c7ac.tar.gz) = b399e316fdbb3f83a88bdd107de721581bed8db7
+SHA512 (glib-2.54.3-d8a2acabac5c04d3ca5eb4f0aa050582b8a9c7ac.tar.gz) = c1f8f2e37a778f77b3e27566e18004c484be7626eaafb644a288ef93f253e48d1c57c88cb03dc0dde001437f6d57d098452ed327b891382b682b6a0aa2e35b46
+Size (glib-2.54.3-d8a2acabac5c04d3ca5eb4f0aa050582b8a9c7ac.tar.gz) = 8068479 bytes
+SHA1 (patch-glib_gthread-posix.c) = ffb13535432767a34492c9377a0a056fddbf078c

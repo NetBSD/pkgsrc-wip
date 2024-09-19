@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/01 04:28:57 phonohawk Exp $
+
+RMD160 (MissingH-1.1.0.1.tar.gz) = 269416cb22e56aed47a3059474fb07b4b4c538c1
+Size (MissingH-1.1.0.1.tar.gz) = 96865 bytes
+SHA1 (patch-aa) = ff7c59e74182cc12d9782c35899993f843e1eae6

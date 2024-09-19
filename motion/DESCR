@@ -1,0 +1,4 @@
+Motion is a program that monitors the video signal from one or more cameras and
+is able to detect if a significant part of the picture has changed. Motion can
+output either image files of the picture frames containing motion or movie files
+showing the entire event. It can also invoke other programs when motion is seen.

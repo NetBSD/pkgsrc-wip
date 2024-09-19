@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/check_omp
+bin/omp
+bin/omp-dialog
+man/man8/omp.8

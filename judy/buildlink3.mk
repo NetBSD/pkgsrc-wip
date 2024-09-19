@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	judy
+
+.if !defined(JUDY_BUILDLINK3_MK)
+JUDY_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.judy+=	judy>=1.0.5
+BUILDLINK_PKGSRCDIR.judy?=	../../wip/judy
+
+.endif	# JUDY_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-judy

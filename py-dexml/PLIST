@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/27 13:52:05 uccwen Exp $
+${PYSITELIB}/dexml/__init__.py
+${PYSITELIB}/dexml/__init__.pyc
+${PYSITELIB}/dexml/__init__.pyo
+${PYSITELIB}/dexml/fields.py
+${PYSITELIB}/dexml/fields.pyc
+${PYSITELIB}/dexml/fields.pyo
+${PYSITELIB}/dexml/test.py
+${PYSITELIB}/dexml/test.pyc
+${PYSITELIB}/dexml/test.pyo

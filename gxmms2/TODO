@@ -1,0 +1,1 @@
+- Make it accept other compilers than cc (MAKE_ENV?).

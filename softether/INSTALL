@@ -1,0 +1,16 @@
+case ${STAGE} in
+POST-INSTALL)
+        cat <<EOF
+===========================================================================
+NOTE: The behavior of the programs in this package is to create log files
+and configuration files in the same directory as the program. You should
+Monitor these directories for size and content, depending on your usage
+of the various programs:
+
+${PREFIX}/libexec/vpnserver
+${PREFIX}/libexec/vpnclient
+${PREFIX}/libexec/vpnbridge
+${PREFIX}/libexec/vpncmd
+EOF
+;;
+esac

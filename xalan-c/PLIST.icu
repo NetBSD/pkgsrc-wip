@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.icu,v 1.1 2013/01/22 13:25:15 noud4 Exp $
+include/xalanc/ICUBridge/ICUBridge.hpp
+include/xalanc/ICUBridge/ICUBridgeCleanup.hpp
+include/xalanc/ICUBridge/ICUBridgeCollationCompareFunctor.hpp
+include/xalanc/ICUBridge/ICUBridgeCollationCompareFunctorImpl.hpp
+include/xalanc/ICUBridge/ICUBridgeDefinitions.hpp
+include/xalanc/ICUBridge/ICUFormatNumberFunctor.hpp
+include/xalanc/ICUBridge/ICUXalanNumberFormatFactory.hpp
+include/xalanc/ICUBridge/ICUXalanNumberFormatProxy.hpp

@@ -1,0 +1,6 @@
+Revisiting the Numeric Classes
+
+The Prelude for Haskell 98 offers a well-considered set of numeric
+classes which covers the standard numeric types (Integer, Int,
+Rational, Float, Double, Complex) quite well. But they offer limited
+extensibility and have a few other flaws.

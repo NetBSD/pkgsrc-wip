@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 21:29:38 jihbed Exp $
+bin/convert
+bin/spai
+lib/libspai.a
+share/doc/spai/spaidoc.pdf
+share/doc/spai/spaidoc.ps

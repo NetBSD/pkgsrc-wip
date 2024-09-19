@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.1 2013/01/10 13:47:27 fhajny Exp $
+
+Ugly workaround - seems to build on SunOS at least just fine.
+--- configure.orig	2013-01-10 12:37:16.333637074 +0000
++++ configure
+@@ -2707,9 +2707,6 @@ $as_echo "Darwin" >&6; }
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: Windows" >&5
+ $as_echo "Windows" >&6; }
+        ;;
+-       *)
+-       as_fn_error $? "Host OS not supported." "$LINENO" 5
+-       ;;
+      esac
+ 
+ if test "${CXX}x" = "x" -a "${CC}x" = "x" -a "${host_os}" = "windows"; then
+@@ -11586,9 +11583,9 @@ _ACEOF
+ 
+ 
+ ac_gecode_library_architecture=-${VERSION_DASHES}${ac_gecode_library_architecture}
+-if test   "$ac_gecode_compiler_vendor" == "microsoft" \
+-       -o \( "$ac_gecode_compiler_vendor" == "intel" \
+-            -a "$host_os" == "windows" \) ; then
++if test   "$ac_gecode_compiler_vendor" = "microsoft" \
++       -o \( "$ac_gecode_compiler_vendor" = "intel" \
++            -a "$host_os" = "windows" \) ; then
+   DLL_ARCH=${ac_gecode_library_architecture}
+ 
+ else

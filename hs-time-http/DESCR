@@ -1,0 +1,2 @@
+This package provides functionalities to parse and format various Date
+and Time formats allowed in HTTP/1.1 (RFC 2616).

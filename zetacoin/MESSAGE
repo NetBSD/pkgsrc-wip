@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+
+To use zetacoind, you must set a rpcpassword in the configuration file:
+${PKG_SYSCONFDIR}/zetacoin.conf
+
+===========================================================================

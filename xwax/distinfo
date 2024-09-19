@@ -1,0 +1,14 @@
+$NetBSD$
+
+RMD160 (xwax-1.7.tar.gz) = 88c61bf650413db813119e15d74329e234aafe51
+SHA512 (xwax-1.7.tar.gz) = ab0fcaf32f1fd1d6b38323095524f1932a067a3d04d40e4b043993e360411fed0c4b78bb71662581b438cb1e3005bc21659db4521a6ec704994b2e8e1b7e62d4
+Size (xwax-1.7.tar.gz) = 80745 bytes
+SHA1 (patch-excrate.c) = c88e41838a2ad670db6fa33eaf9187bfeb1c75cd
+SHA1 (patch-import) = 51b4ddfea7ec63aabc6305ad372a63b8a0b7cc68
+SHA1 (patch-interface.c) = 2eaa398c55a708b90f695743369f82938cc11c2f
+SHA1 (patch-library.c) = 12ffc297d0cb4d1dcfe121106d22059cb14950f3
+SHA1 (patch-mktimecode.c) = 1fff7867368791b13cc4ad1181c6091f423ecb95
+SHA1 (patch-realtime.c) = 19ac29cc095a13e29d1d6c69731204533a7f8723
+SHA1 (patch-scan) = dff0c31ce13c3f88b924c6f74e8ab28232f01a24
+SHA1 (patch-track.c) = f85e5aea96fb5471140d11a22e876cea8dc041dc
+SHA1 (patch-xwax.c) = 580b50312f4e6282e2e1c4f91c2e4db29189fbf3

@@ -1,0 +1,6 @@
+Many central git hosting services, such as BitBucket, GitHub and GitLab,
+provide an API to perform actions such as creating repositories and
+filing pull requests.
+
+git-spindle is a collection of git subcommands to make using these services
+easier.

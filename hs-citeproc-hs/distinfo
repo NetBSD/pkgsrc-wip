@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/22 22:02:07 szptvlfn Exp $
+
+RMD160 (citeproc-hs-0.3.8.tar.gz) = 55c853097cc6bdbe41f0317efd5bdf6248e9ec2a
+Size (citeproc-hs-0.3.8.tar.gz) = 105544 bytes
+SHA1 (patch-src_Text_CSL_Pickle.hs) = 29d5eeb01c64df80c2fe4d836fc4fcdf965f281e

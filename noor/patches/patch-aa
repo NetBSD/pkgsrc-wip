@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/03 22:18:50 jihbed Exp $
+
+--- ./noor/quran.py.orig	2010-01-03 01:23:55.000000000 +0000
++++ ./noor/quran.py	2010-01-03 01:25:02.000000000 +0000
+@@ -134,7 +134,7 @@
+     path = os.path.join(noordir, local_path)
+     if os.path.exists(path):
+         return path
+-    for prefix in ['/usr', '/usr/local']:
++    for prefix in ['/usr', '/usr/pkg']:
+         path = os.path.join(prefix, 'share', global_path)
+         if os.path.exists(path):
+             return path

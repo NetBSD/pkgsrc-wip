@@ -1,0 +1,20 @@
+jEdit is a mature programmer's text editor with hundreds (counting the time
+developing plugins) of person-years of development behind it. While jEdit beats
+many expensive development tools for features and ease of use, it is released as
+free software with full source code, provided under the terms of the GPL 2.0.
+The jEdit core, together with a large collection of plugins is maintained by a
+world-wide developer team.
+
+Other features include:
+
+- Built-in macro language; extensible plugin architecture. Hundreds of macros
+  and plugins available.
+- Plugins can be downloaded and installed from within jEdit using the "plugin
+  manager" feature.
+- Auto indent, and syntax highlighting for more than 200 languages.
+- Supports a large number of character encodings including UTF8 and Unicode.
+- Folding for selectively hiding regions of text.
+- Word wrap.
+- Highly configurable and customizable.
+- Every other feature, both basic and advanced, you would expect to find in a
+  text editor.

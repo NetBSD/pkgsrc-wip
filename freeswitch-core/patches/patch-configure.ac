@@ -1,0 +1,18 @@
+$NetBSD$
+
+Fix portability issues for non-bash interpreters, this was
+identified by the check_portability.awk script used when
+PKG_DEVELOPER is set to ~yes~. Patches for source files were
+submitted to upstream, their revision and integration is pending.
+
+--- configure.ac.orig	2018-01-10 17:47:06.752411000 +0000
++++ configure.ac
+@@ -1499,7 +1499,7 @@ if test "$with_ldap" = "yes"; then
+    OPENLDAP_LIBS="${OPENLDAP_LIBS} -lldap"
+ fi
+ 
+-AM_CONDITIONAL([HAVE_LDAP],[test "x$with_ldap" == "xyes"])
++AM_CONDITIONAL([HAVE_LDAP],[test "x$with_ldap" = "xyes"])
+ 
+ AC_SUBST(OPENLDAP_LIBS)
+ 

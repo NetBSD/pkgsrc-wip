@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/14 22:03:44 thomasklausner Exp $
+bin/ncp
+bin/npoll
+bin/npush
+man/man1/ncp.1
+man/man1/npush.1

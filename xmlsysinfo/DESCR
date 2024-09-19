@@ -1,0 +1,8 @@
+XMLSysInfo (XSI) is a system monitoring daemon that replies to
+network queries with XML-encoded system information and statistics.
+Its purpose is to provide a comprehensive overview of a system's
+various components, their health, resources, load, and many other
+things. It does so equally on all supported platforms. This data
+can then be analyzed, graphed or otherwise presented by a front-end,
+or put to any other imaginable use. XMLSysInfo is BSD-licensed and
+free for anyone to use for any purpose.

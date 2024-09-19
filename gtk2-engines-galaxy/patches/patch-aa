@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.2 2013/01/21 02:06:05 othyro Exp $
+
+Only build gtk2 target.
+
+--- Makefile.in~	Fri Jul 25 22:19:13 2003
++++ Makefile.in	Thu Nov 27 03:53:37 2003
+@@ -127,7 +127,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = gtk-2.0 gtk-1.2
++SUBDIRS = gtk-2.0
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

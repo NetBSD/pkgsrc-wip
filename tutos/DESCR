@@ -1,0 +1,24 @@
+TUTOS is a tool to manage the organizational needs of small
+groups, teams, departments.  To do this it provides some web-based
+tools:
+
+a calendar for users and groups
+address manager for people, companies and departments
+bug tracking system
+product/project repository
+   with task management
+   with document management
+   with installation management
+   support of different roles
+   support of relations to other projects (base product, subproject etc.)
+mailboxes (imap/pop)
+timetracking on projects, installations and bugs
+Invoices
+Watchlists. Stay informed on changes on projects/bugs etc via email.
+support for teams that are distributed over different timezones
+fine grained permission handling
+change history
+
+All these parts are heavily linked together to give a unique interface
+for the day to day needs of people involved in project management and
+development.

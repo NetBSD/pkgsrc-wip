@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 07:25:01 phonohawk Exp $
+lib/largeword-${PKGVERSION}/${HASKELL_VERSION}/Data/LargeWord.hi
+lib/largeword-${PKGVERSION}/${HASKELL_VERSION}/Data/LargeWord.p_hi
+lib/largeword-${PKGVERSION}/${HASKELL_VERSION}/HSlargeword-${PKGVERSION}.o
+lib/largeword-${PKGVERSION}/${HASKELL_VERSION}/libHSlargeword-${PKGVERSION}.a
+lib/largeword-${PKGVERSION}/${HASKELL_VERSION}/libHSlargeword-${PKGVERSION}_p.a
+lib/largeword-${PKGVERSION}/${HASKELL_VERSION}/package-description

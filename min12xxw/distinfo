@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2007/08/21 01:18:09 bsadewitz Exp $
+
+RMD160 (min12xxw-0.0.9.tar.gz) = 9a2fbfa7c7b4edf4ac834cfac550195ebeb5f8ee
+SHA512 (min12xxw-0.0.9.tar.gz) = 3f4d469f103807a3e2f59aec8dea21aaea614a548aff210a5b8ab6f6bd2e10d71e8e3da0687f4103782a8fdb237c2bd1b152b8afea93d00d4db77a92af409b99
+Size (min12xxw-0.0.9.tar.gz) = 134610 bytes
+SHA1 (patch-aa) = b08d82d78a35f9b9fc01067a07b263f79f53b4f0
+SHA1 (patch-ab) = 55c131441775350b84403c60175840a7655986ed
+SHA1 (patch-ac) = b3cd0a56a945fad1d4541b6b3b0c27f73111589a
+SHA1 (patch-ad) = ba11319bd8e66f926003b4bcadc689d6e370cce6
+SHA1 (patch-ae) = eed71be84d77b1472cbb6e9dc8e0c59c69e1f8c8
+SHA1 (patch-af) = 315652cfef3342385a7e1d9208f4adcc755dcd85

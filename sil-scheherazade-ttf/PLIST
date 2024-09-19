@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 23:27:13 jihbed Exp $
+lib/X11/fonts/TTF/ScheherazadeRegOT.ttf
+share/doc/sil-scheherazade-ttf/FONTLOG.txt
+share/doc/sil-scheherazade-ttf/OFL-FAQ.txt
+share/doc/sil-scheherazade-ttf/OFL.txt

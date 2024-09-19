@@ -1,0 +1,15 @@
+$NetBSD: patch-version,v 1.1 2013/01/24 00:01:28 thomasklausner Exp $
+
+Fix unportable test(1) construct.
+
+--- version.orig	2005-01-13 03:00:57.000000000 +0000
++++ version
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+ VER=`awk -v ORS= '/Rserve v/ { print substr($6,2) }' src/Rsrv.h`
+-if test "$1" == "-f"; then 
++if test "$1" = "-f"; then 
+     echo "Rserve_${VER}.tar.gz"
+ else
+     echo "${VER}"

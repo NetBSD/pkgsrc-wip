@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 08:43:14 phonohawk Exp $
+bin/gtk2hsC2hs
+bin/gtk2hsHookGenerator
+bin/gtk2hsTypeGen
+share/doc/gtk2hs-buildtools-${PKGVERSION}/COPYING
+share/gtk2hs-buildtools-${PKGVERSION}/callbackGen/Signal.chs.template
+share/gtk2hs-buildtools-${PKGVERSION}/hierarchyGen/Hierarchy.chs.template
+share/gtk2hs-buildtools-${PKGVERSION}/hierarchyGen/hierarchy.list

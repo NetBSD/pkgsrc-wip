@@ -1,0 +1,20 @@
+$NetBSD: patch-aq,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- openssl/Makefile.am	2001-03-26 05:36:44.000000000 -0500
++++ openssl/Makefile.am	2005-05-09 18:40:42.000000000 -0400
+@@ -30,12 +30,7 @@
+ 		chgrp $(CAGROUP) $(OPENSCEPDIR);			\
+ 		chmod 1755 $(OPENSCEPDIR);				\
+ 	fi
+-	@if [ -f $(OPENSCEPDIR)/openscep.cnf ]; 			\
+-	then								\
+-		echo preserving existing openscep.cnf;			\
+-		cp openscep.cnf $(OPENSCEPDIR)/openscep.cnf.dist;	\
+-	else								\
+-		echo installing openscep.cnf;				\
+-		cp openscep.cnf $(OPENSCEPDIR);				\
+-	fi
++	${INSTALL_DATA_DIR} $(datadir)/examples/
++	${INSTALL_DATA_DIR} $(datadir)/examples/openscep/
++	${INSTALL_DATA} openscep.cnf $(datadir)/examples/openscep/openscep.cnf.example
+ 

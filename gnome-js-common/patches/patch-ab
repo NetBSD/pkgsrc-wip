@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/19 17:47:36 jihbed Exp $
+
+--- Makefile.in.orig	2010-03-19 18:21:35.000000000 +0000
++++ Makefile.in	2010-03-19 18:22:04.000000000 +0000
+@@ -228,14 +228,6 @@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = po modules tests
+ gnome_js_commondocdir = ${prefix}/doc/gnome_js_common
+-gnome_js_commondoc_DATA = \
+-	README \
+-	COPYING \
+-	AUTHORS \
+-	ChangeLog \
+-	INSTALL \
+-	NEWS
+-
+ INTLTOOL_FILES = intltool-extract.in \
+ 	intltool-merge.in \
+ 	intltool-update.in

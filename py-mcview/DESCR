@@ -1,0 +1,3 @@
+mcview uses the Python wrapper for HepMC to load and view HepMC
+events as 3D final-state representations in (log-)momentum space, and to dump
+the graph structure to PDF and graphviz formats

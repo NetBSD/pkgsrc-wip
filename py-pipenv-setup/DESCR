@@ -1,0 +1,5 @@
+A beautiful python package development tool: sync
+dependencies in Pipfile or Pipfile.lock to setup.py.
+Never need again to change dependencies manually in
+setup.py, and enjoy the same dependency locking
+or semantic versioning

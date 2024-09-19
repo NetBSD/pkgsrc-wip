@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- utils.c.orig	2004-05-26 22:54:16.000000000 +0200
++++ utils.c
+@@ -26,7 +26,7 @@
+ #define MAX_INPUT 255
+ #endif
+ 
+-#if defined(LINUX) || defined(SOLARIS)
++#if defined(LINUX) || defined(SOLARIS) || defined(NETBSD)
+ 
+ #include <sys/time.h>
+ #include <stdlib.h>

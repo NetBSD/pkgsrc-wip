@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.5 2012/02/10 14:13:36 bartoszkuzma Exp $
+
+RMD160 (smtp-gated-1.4.18.8.tar.gz) = 09163aab96c9daa35e44ced612d3234b6aeda53f
+Size (smtp-gated-1.4.18.8.tar.gz) = 311763 bytes
+SHA1 (patch-src_daemon.c) = 077c56ddcd4f6098ed46862a2d5cca6c9810f9b1

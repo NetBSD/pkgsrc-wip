@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (obnc_0.14.2.tar.gz) = 24839475f4edfb37d8e3e410680f821487e49aae
+SHA512 (obnc_0.14.2.tar.gz) = a4767df2865c2d05b37c8c5cee83764a68f30279c1ccf636b9618087a3e9842e66adfd661f7531ecde996791ae4876868bf0f6135783c7c0a0fdb993dea0dfbb
+Size (obnc_0.14.2.tar.gz) = 202932 bytes
+SHA1 (patch-install) = 0f9fee6da4a9bdc8a931c632d4797f14a808cb9a

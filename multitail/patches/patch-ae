@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.2 2006/06/25 00:01:44 hubertf Exp $
+
+Add DragonFly
+
+--- utils.c.orig	2015-08-12 22:36:37.000000000 +0900
++++ utils.c	2016-02-08 12:37:25.000000000 +0900
+@@ -95,7 +95,7 @@ ssize_t WRITE(int fd, char *whereto, siz
+ 
+ void get_load_values(double *v1, double *v2, double *v3)
+ {
+-#if !defined(__UCLIBC__) && (defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__GNU__) || defined(__sun) || defined(sun))
++#if !defined(__UCLIBC__) && (defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__GNU__) || defined(__sun) || defined(sun)) || defined(__DragonFly__)
+ #if defined(__GLIBC__) && ( __GLIBC__ < 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ < 2))
+ 	/* Older glibc doesn't have getloadavg() - use sysinfo() */
+ 	/* thanks to Ville Herva for this code! */

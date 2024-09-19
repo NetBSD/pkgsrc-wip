@@ -1,0 +1,42 @@
+$NetBSD: patch-aj,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
+
+--- lib/init.c	2002-02-19 18:40:06.000000000 -0500
++++ lib/init.c
+@@ -114,8 +114,11 @@
+ 	if (scep)
+ 		memset(scep, 0, sizeof(scep_t));
+ 	scep->check_transid = 1;
+-	scep->l.ldaphost = "localhost";
+-	scep->l.ldapport = LDAP_PORT;
++	scep->l.ldapuri = NULL;	/*
++				 * ldapi:/// for UNIX socket.  
++				 * ldap://localhost:389/ for UDP.
++				 * NULL for find default in ldap.conf
++				 */
+ 	if (debug)
+ 		BIO_printf(bio_err, "%s:%d: scep structure initialized\n",
+ 			__FILE__, __LINE__);
+@@ -198,18 +201,16 @@
+ 			__FILE__, __LINE__, name);
+ 
+ 	/* set ldap parameters						*/
+-	scep->l.ldaphost = CONF_get_string(scep->conf, "ldap", "ldaphost");
+-	scep->l.ldapport = atoi(CONF_get_string(scep->conf, "ldap", "ldapport"));
++	scep->l.ldapuri = CONF_get_string(scep->conf, "ldap", "ldapuri");
+ 	scep->l.ldapbase = CONF_get_string(scep->conf, "ldap", "ldapbase");
+ 	scep->l.binddn = CONF_get_string(scep->conf, "ldap", "binddn");
+ 	scep->l.bindpw = CONF_get_string(scep->conf, "ldap", "bindpw");
+ 	if (debug)
+-		BIO_printf(bio_err, "%s:%d: LDAP parameters ldap://%s:%d, "
+-			"base %s, bind as %s/%s\n", __FILE__, __LINE__,
+-			scep->l.ldaphost, scep->l.ldapport,
++		BIO_printf(bio_err, "%s:%d: LDAP parameters URI %s, "
++			"base %s, bind as %s\n", __FILE__, __LINE__,
++			scep->l.ldapuri != NULL ? scep->l.ldapuri : "<DEFAULT>", 
+ 			(scep->l.ldapbase) ? scep->l.ldapbase : "(not set)",
+-			(scep->l.binddn) ? scep->l.binddn : "(not set)",
+-			(scep->l.bindpw) ? scep->l.bindpw : "(not set)");
++			(scep->l.binddn) ? scep->l.binddn : "(not set)");
+ 
+ 	/* configure automatic granting of requests			*/
+ 	name = CONF_get_string(scep->conf, "scepd", "automatic");

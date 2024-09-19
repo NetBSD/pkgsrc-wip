@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
+
+RMD160 (cops104+.tar.gz) = a78df7b33bcf7f1590e3c00aab997ff67d27ced2
+Size (cops104+.tar.gz) = 288663 bytes
+SHA1 (patch-aa) = 3b85443df0a932481e3de559e219b89a18f5cd5a

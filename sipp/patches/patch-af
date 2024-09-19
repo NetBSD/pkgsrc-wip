@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.4 2014/12/30 16:37:05 gschwarz Exp $
+
+--- include/sipp.hpp.orig	2014-03-09 20:04:57.000000000 +0100
++++ include/sipp.hpp	2014-12-30 17:05:25.000000000 +0100
+@@ -24,6 +24,9 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#ifdef __sun
++#include <alloca.h>
++#endif
+ #include <string.h>
+ #include <pthread.h>
+ #include <sys/types.h>
+@@ -60,6 +63,9 @@
+ #else
+ #include <stdarg.h>
+ #endif
++#ifdef __NetBSD__
++#include <stdarg.h> /* for va_list */
++#endif
+ 
+ #if defined(__HPUX) || defined(__SUNOS)
+ #include <alloca.h>

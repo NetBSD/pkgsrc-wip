@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2014/04/06 16:13:01 othyro Exp $
+
+RMD160 (slime/v2.20.tar.gz) = b924551d2e5a87109566130773e648cb9ba32c4b
+SHA512 (slime/v2.20.tar.gz) = 994dbffb54ee1ab4ca529771451724c83ff83992a6d495e06cdca5cd94f0c098e48d7914489278e3015f18ea094d58c469e57301492087a33087562f69506b46
+Size (slime/v2.20.tar.gz) = 803127 bytes
+SHA1 (patch-doc_slime.texi) = fbe0096560dde65d8585414bdf856cf749f0d1cf

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 2014/02/05 17:01:59 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/05 17:01:59 christtrekker Exp $
+bin/fontaine
+share/locale/fr/LC_MESSAGES/fontaine.mo
+share/locale/th/LC_MESSAGES/fontaine.mo
+share/locale/zh_CN/LC_MESSAGES/fontaine.mo
+share/locale/zh_TW/LC_MESSAGES/fontaine.mo
+@pkgdir usr/pkg/docs
+@pkgdir docs

@@ -1,0 +1,9 @@
+* We need to export LD_LIBRARY_PATH=/usr/pkg/emul/netbsd32/lib owing
+  to X11 32-bit libs from compat80-x11 not linking against libxcb.so
+  in ${PREFIX}/emul/netbsd32/lib.
+  As a temporary solution, a wrapper script that sets LD_LIBRARY_PATH
+  is used.
+* Wine configure script sets -D_FORTIFY_SOURCE to 0 by default as it
+  seems to cause false positives on certain platforms. However, as
+  pkgsrc sets -D_FORTIFY_SOURCE to 2, I have set ac_cv_c_fortify_enabled
+  to no, thereby preventing Wine configure from reseting it.

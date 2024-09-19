@@ -1,0 +1,10 @@
+iGal is a Perl-based program that can generate and publish an
+entire online picture show (HTML slides, thumbnails and index page
+included) with just one command line invocation. If you've got a
+directory (or several) full of image files that are waiting to be
+put online and shared with friends, then iGal is for you.
+
+iGal is well documented, flexible, and configurable through command
+line options and HTML templates, specific to each gallery. Generated
+slide shows include a JavaScript trick to preload the next image in
+the slideshow - ideal for slow links.

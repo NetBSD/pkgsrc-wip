@@ -1,0 +1,7 @@
+txZMQ introduces support for general 0MQ sockets by class ZmqConnection that can
+do basic event loop integration, sending-receiving messages in non-blocking
+manner, scatter-gather for multipart messages.
+
+txZMQ uses 0MQ APIs to get file descriptor that is used to signal pending
+actions from 0MQ library IO thread running in separate thread. This is used in a
+custom file descriptor reader, which is then added to the Twisted reactor

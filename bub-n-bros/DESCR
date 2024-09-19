@@ -1,0 +1,9 @@
+The Bub's Brothers is a network, client-server game. It does not mean that you
+cannot play it alone, on a non-networked computer, but that will just be less
+fun. The game is written in the Python programming language.
+
+* The server is the program that you only need to run on one machine. It is a
+non-graphical program that computes the gameplay and sends display data to the
+clients via the network.
+
+* The client is the display program that must be executed on every machine.

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 2009/01/19 12:20:34 yhardy Exp $
+lib/alsa-lib/libasound_module_ctl_oss.la
+lib/alsa-lib/libasound_module_pcm_oss.la
+lib/alsa-lib/libasound_module_pcm_upmix.la
+lib/alsa-lib/libasound_module_pcm_usb_stream.la
+lib/alsa-lib/libasound_module_pcm_vdownmix.la
+lib/alsa-lib/libasound_module_rate_speexrate.la
+lib/alsa-lib/libasound_module_rate_speexrate_best.so
+lib/alsa-lib/libasound_module_rate_speexrate_medium.so

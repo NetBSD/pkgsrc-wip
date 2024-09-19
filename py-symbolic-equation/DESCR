@@ -1,0 +1,8 @@
+A simple Python package providing the Eq class for manipulating
+symbolic equations
+
+The Eq class defines an equation, and allows to apply arbitrary manipulations
+to the left-hand-side and/or right-hand-side of that equation. It keeps track
+all of these manipulations, and displays them neatly as a multi-line equation
+in an interactive interpreter session or a Jupyter notebook (using a LaTeX
+representation). It is mainly intended for use with SymPy

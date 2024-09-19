@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/05/10 10:44:48 bubuchka Exp $
+
+For more versatile graphs you may also want to install
+the R-Rgraphviz package.
+
+===========================================================================

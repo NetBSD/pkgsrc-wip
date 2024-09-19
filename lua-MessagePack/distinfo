@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.2 2014/11/30 21:28:59 jonthn Exp $
+
+RMD160 (lua-MessagePack-0.3.1.tar.gz) = 4b62803dc90de4baa10fe5c5d46c68460520b4a1
+Size (lua-MessagePack-0.3.1.tar.gz) = 14654 bytes

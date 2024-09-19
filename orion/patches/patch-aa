@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/02/16 22:24:27 airhead Exp $
+
+--- install.scm.orig	2004-05-22 19:42:57.000000000 +0200
++++ install.scm
+@@ -8,7 +8,7 @@ exec scsh -lel install-lib/load.scm -dm 
+   (begin
+     (define orion-template #<<END
+ #!/bin/sh
+-exec scsh -lel module-system-1.0/load.scm -lel interaction-0.2/load.scm -lel cml-1.0/load.scm -lel heap-images-1.0/load.scm -lel scx-0.2/load.scm -lm ~a/packages.scm -m main -s "$0"
++exec @SCSH_VM@ -h @HEAP_SIZE@ -i @SCSH_IMAGE@ -lel module-system-1.0/load.scm -lel interaction-0.2/load.scm -lel cml-1.0/load.scm -lel heap-images-1.0/load.scm -lel scx-0.2/load.scm -lm ~a/packages.scm -m main -s "$0"
+ !#
+ (start)
+ 

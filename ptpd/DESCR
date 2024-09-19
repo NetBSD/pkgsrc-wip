@@ -1,0 +1,4 @@
+A fork of the ptpd Precision Time Protocol (PTP) server/client intended
+to comply with the IEEE 1588-2008 (Version 2) specification, be actively
+maintained and improved, and focused on operation on Linux or other
+related Unix variants.

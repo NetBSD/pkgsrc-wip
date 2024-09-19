@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/05 21:31:17 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyicane/__init__.py
+${PYSITELIB}/pyicane/__init__.pyc
+${PYSITELIB}/pyicane/__init__.pyo
+${PYSITELIB}/pyicane/pyicane.py
+${PYSITELIB}/pyicane/pyicane.pyc
+${PYSITELIB}/pyicane/pyicane.pyo
+${PYSITELIB}/pyicane/test/__init__.py
+${PYSITELIB}/pyicane/test/__init__.pyc
+${PYSITELIB}/pyicane/test/__init__.pyo
+${PYSITELIB}/pyicane/test/test.py
+${PYSITELIB}/pyicane/test/test.pyc
+${PYSITELIB}/pyicane/test/test.pyo

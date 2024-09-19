@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- nnrpd/Makefile.orig	Fri Dec 12 18:27:34 1997
++++ nnrpd/Makefile
+@@ -71,8 +71,6 @@
+ 	@rm -f lint
+ 	-lint $(LINTFLAGS) $(SOURCES) $(LINTLIB) $(LINTFILTER) >lint
+ 
+-../include/dbz.h:
+-	(cd ../lib ; $(MAKE) ../include/dbz.h)
+ $(LIBNEWS) $(LINTLIB):
+ 	(cd ../lib ; $(MAKE) install )
+ 
+@@ -148,8 +146,6 @@
+ misc.o: ../include/clibrary.h
+ misc.o: ../include/configdata.h
+ misc.o: ../include/configdata.h
+-misc.o: ../include/dbz.h
+-misc.o: ../include/dbz.h
+ misc.o: ../include/libinn.h
+ misc.o: ../include/libinn.h
+ misc.o: ../include/logging.h

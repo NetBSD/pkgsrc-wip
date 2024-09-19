@@ -1,0 +1,59 @@
+$NetBSD: patch-ab,v 1.4 2008/10/27 19:13:58 shattered Exp $
+
+--- configure.orig	2005-01-31 14:42:31.000000000 +0000
++++ configure
+@@ -5042,6 +5042,16 @@ EOF
+ 	fi
+ 	rm -f conftest.so
+ 	if test "$SOFLAGS" = ""; then
++	    $LD conftest.o -fPIC -shared -o conftest.so 2>> config.log
++	    if test -f conftest.so ; then
++		res=`./confmain`
++	    fi
++	    if test "$res" = "test"; then
++		SOFLAGS="$LIBDB_PATH -fPIC -shared"
++	    fi
++	fi
++	rm -f conftest.so
++	if test "$SOFLAGS" = ""; then
+ 	    $LD conftest.o -fpic -shared -o conftest.so 2>> config.log
+ 	    if test -f conftest.so ; then
+ 		res=`./confmain`
+@@ -5073,7 +5083,6 @@ _ACEOF
+ 	fi
+ fi
+ 
+-LDFLAGS="$LDFLAGS $LIBDB_PATH"
+ CXXCOMPFLAGS=-c
+ CXXSOFLAGS=$SOFLAGS
+ 
+@@ -5109,6 +5118,17 @@ freebsd*) CFLAGS="$CFLAGS -D_REENTRANT -
+           esac
+ 	  RPATH_OPTION="-rpath"
+ 	  ;;
++netbsd*)  CFLAGS="$CFLAGS -D_REENTRANT -DNETBSD"
++	  LIBS="$LDFLAGS -lpthread $LEXLIB $LIBS $LIBDB_PATH $LIBDB_NAME"
++	  if test "$large_files" = "yes" ; then
++		CFLAGS="$CFLAGS -DWITH_LARGE_FILES"
++	  fi
++	  if test "X$LIBGB_NAME" != "X" ; then
++		LIBGB_NAME="$LIBGB_NAME -lstdc++"
++	  fi
++	  RPATH_OPTION="-rpath"
++	  unset LDFLAGS
++	  ;;
+ bsdi*)	  CFLAGS="$CFLAGS -pthread -DBSDOS"
+           rel=`uname -r`
+           case "$rel" in
+@@ -5988,6 +6008,11 @@ echo "$as_me:$LINENO: checking for libdb
+ echo $ECHO_N "checking for libdb.a... $ECHO_C" >&6
+ if test "X$LIBDB_PATH" != "X" ; then
+     LIBDB_PATH=$LIBDB_PATH
++    if test -r "$LIBDB_PATH/lib/libdb4.a"; then
++	LIBDB_NAME=-ldb4
++    elif test -r "$LIBDB_PATH/lib/libdb2.a"; then
++	LIBDB_NAME=-ldb2
++    fi
+ elif test -r "/usr/local/BerkeleyDB/lib/libdb.a"; then
+     LIBDB_PATH="/usr/local/BerkeleyDB"
+ elif test -r "/usr/local/BerkeleyDB.3.1/lib/libdb.a"; then

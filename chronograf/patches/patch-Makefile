@@ -1,0 +1,86 @@
+$NetBSD$
+go becomes GO_BIN
+--- Makefile.orig	2019-01-16 21:16:18.000000000 +0000
++++ Makefile
+@@ -2,7 +2,7 @@
+ 
+ VERSION = 1.7.7
+ COMMIT ?= $(shell git rev-parse --short=8 HEAD)
+-GOBINDATA := $(shell go list -f {{.Root}}  github.com/kevinburke/go-bindata 2> /dev/null)
++GOBINDATA := $(shell ${GO_BIN} list -f {{.Root}}  github.com/kevinburke/go-bindata 2> /dev/null)
+ YARN := $(shell command -v yarn 2> /dev/null)
+ 
+ SOURCES := $(shell find . -name '*.go' ! -name '*_gen.go' -not -path "./vendor/*" )
+@@ -20,8 +20,8 @@ all: dep build
+ build: assets ${BINARY}
+ 
+ ${BINARY}: $(SOURCES) .bindata .jsdep .godep
+-	go build -o ${BINARY} ${LDFLAGS} ./cmd/chronograf/main.go
+-	go build -o ${CTLBINARY} ${LDFLAGS} ./cmd/chronoctl
++	${GO_BIN} build -o ${BINARY} ${LDFLAGS} ./cmd/chronograf/main.go
++	${GO_BIN} build -o ${CTLBINARY} ${LDFLAGS} ./cmd/chronoctl
+ 
+ define CHRONOGIRAFFE
+              ._ o o
+@@ -38,7 +38,7 @@ chronogiraffe: ${BINARY}
+ 	@echo "$$CHRONOGIRAFFE"
+ 
+ docker-${BINARY}: $(SOURCES)
+-	CGO_ENABLED=0 GOOS=linux go build -installsuffix cgo -o ${BINARY} ${LDFLAGS} \
++	CGO_ENABLED=0 GOOS=linux ${GO_BIN} build -installsuffix cgo -o ${BINARY} ${LDFLAGS} \
+ 		./cmd/chronograf/main.go
+ 
+ docker: dep assets docker-${BINARY}
+@@ -50,19 +50,19 @@ assets: .jssrc .bindata
+ 	@touch .bindata
+ 
+ dist/dist_gen.go: $(UISOURCES)
+-	go generate -x ./dist
++	${GO_BIN} generate -x ./dist
+ 
+ server/swagger_gen.go: server/swagger.json
+-	go generate -x ./server
++	${GO_BIN} generate -x ./server
+ 
+ canned/bin_gen.go: canned/*.json
+-	go generate -x ./canned
++	${GO_BIN} generate -x ./canned
+ 	
+ protoboards/bin_gen.go: protoboards/*.json
+-	go generate -x ./protoboards
++	${GO_BIN} generate -x ./protoboards
+ 
+ .jssrc: $(UISOURCES)
+-	cd ui && yarn run clean && yarn run build
++	cd ui && yarn --offline run clean && yarn --offline run build
+ 	@touch .jssrc
+ 
+ dep: .jsdep .godep
+@@ -70,7 +70,7 @@ dep: .jsdep .godep
+ .godep:
+ ifndef GOBINDATA
+ 	@echo "Installing go-bindata"
+-	go get -u github.com/kevinburke/go-bindata/go-bindata
++	${GO_BIN} get -u github.com/kevinburke/go-bindata/go-bindata
+ endif
+ 	@touch .godep
+ 
+@@ -85,15 +85,15 @@ endif
+ gen: internal.pb.go
+ 
+ internal.pb.go: bolt/internal/internal.proto
+-	go generate -x ./bolt/internal
++	${GO_BIN} generate -x ./bolt/internal
+ 
+ test: jstest gotest gotestrace lint-ci
+ 
+ gotest:
+-	go test -timeout 10s ./...
++	${GO_BIN} test -timeout 10s ./...
+ 
+ gotestrace:
+-	go test -race ./...
++	${GO_BIN} test -race ./...
+ 
+ jstest:
+ 	cd ui && yarn test --runInBand

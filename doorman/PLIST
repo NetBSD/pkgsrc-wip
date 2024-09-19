@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/03 08:49:31 shindenmorr Exp $
+bin/knock
+man/man1/knock.1
+man/man5/doormand.cf.5
+man/man5/guestlist.5
+man/man5/knockcf.5
+man/man8/doormand.8
+sbin/doormand
+share/examples/doorman/doormand.cf.EXAMPLE
+share/examples/doorman/guestlist.EXAMPLE
+share/examples/doorman/ipchains_add
+share/examples/doorman/ipchains_delete
+share/examples/doorman/ipf_add
+share/examples/doorman/ipf_delete
+share/examples/doorman/ipfw_add
+share/examples/doorman/ipfw_delete
+share/examples/doorman/iptables_add
+share/examples/doorman/iptables_delete
+share/examples/doorman/pfctl_add
+share/examples/doorman/pfctl_delete

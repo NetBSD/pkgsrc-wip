@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:35 thomasklausner Exp $
+bin/es40
+bin/es40_cfg
+bin/es40_idb
+bin/es40_lsm
+bin/es40_lss
+share/es40/vgabios-0.6b.bin
+share/examples/es40/es40-netbsd.cfg
+share/examples/es40/es40.cfg

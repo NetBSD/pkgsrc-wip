@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (openwsman-2.6.11.tar.gz) = 771f1a0aa2b6205e9b7ac17582ae87b69571b816
+SHA512 (openwsman-2.6.11.tar.gz) = aa718d1aa2649b401816fbfa59e2950c226af6f6b507cd3659f4505f5bed4309db7b9eb903320f83a5c6d9d251bffd5df08910bc908bb2d381f68682a81107ca
+Size (openwsman-2.6.11.tar.gz) = 512114 bytes
+SHA1 (patch-src_lib_u_uuid.c) = b174cf1ec812c5792e606247d45b02bb3c3facbc

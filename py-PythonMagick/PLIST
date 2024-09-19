@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/05 11:53:58 ondratu Exp $
+${PYSITELIB}/PythonMagick/_PythonMagick.la
+${PYSITELIB}/PythonMagick/__init__.py
+${PYSITELIB}/PythonMagick/__init__.pyc
+${PYSITELIB}/PythonMagick/__init__.pyo

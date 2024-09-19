@@ -1,0 +1,7 @@
+The SMS Server Tools 3 is a SMS Gateway software which can send and
+receive short messages through GSM modems and mobile phones.
+
+You can send short messages by simply storing text files into a special
+spool directory. The program monitors this directory and sends new
+files automatically. It also stores received short messages into another
+directory as text files.

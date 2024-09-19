@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/03/18 23:24:43 oht Exp $
+--- smtp.c.orig	2006-03-10 13:36:59.000000000 +0100
++++ smtp.c	2006-03-10 13:37:17.000000000 +0100
+@@ -44,6 +44,7 @@
+ #include "acp.h"
+ #include "ip-lib.h"
+ #include "lib.h"
++extern char *cfgets(smtp_t *x, char *line, int size, int nooptime);
+ 
+ 
+ 	/*

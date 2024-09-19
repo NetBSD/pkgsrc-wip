@@ -1,0 +1,1 @@
+Just reads from stdin and sends to icecast server using libshout 

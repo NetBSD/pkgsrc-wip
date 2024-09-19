@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.5 2012/02/21 11:52:01 ddeus Exp $
+${CLISP}${CL_PATH}anaphora/anaphora.fas
+${CLISP}${CL_PATH}anaphora/early.fas
+${CLISP}${CL_PATH}anaphora/packages.fas
+${CLISP}${CL_PATH}anaphora/symbolic.fas
+${CL}${CL_PATH}anaphora/anaphora.asd
+${CL}${CL_PATH}anaphora/anaphora.lisp
+${CL}${CL_PATH}anaphora/early.lisp
+${CL}${CL_PATH}anaphora/packages.lisp
+${CL}${CL_PATH}anaphora/symbolic.lisp
+${CL}${CL_PATH}anaphora/tests.lisp
+${ECL}${CL_PATH}anaphora.asd
+${ECL}${CL_PATH}anaphora.fas
+${ECL}${CL_PATH}libanaphora.a
+${SBCL}${CL_PATH}anaphora/anaphora.fasl
+${SBCL}${CL_PATH}anaphora/early.fasl
+${SBCL}${CL_PATH}anaphora/packages.fasl
+${SBCL}${CL_PATH}anaphora/symbolic.fasl
+share/doc/${LISP}-anaphora/LICENSE

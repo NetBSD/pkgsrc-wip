@@ -1,0 +1,17 @@
+WebCleaner is a filtering HTTP proxy.
+
+Features:
+* HTTP/1.1 support
+* integrated HTML parser, removes unwanted HTML (adverts, flash, etc.)
+* integrated JavaScript engine, allows popup filtering
+* compress documents on-the-fly (with gzip)
+* disable animated GIFs
+* filter images by size, removes banner adverts
+* reduce images to low-bandwidth JPEGs
+* remove/add/modify arbitrary HTTP headers
+* usage of SquidGuard domain and url blacklists
+* Basic, Digest and (untested) NTLM proxy authentication support
+  per-host access control
+* configurable over a themable web interface
+
+WebCleaner is licensed under the GNU Public License (GPL).

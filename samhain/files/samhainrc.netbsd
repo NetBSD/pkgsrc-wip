@@ -1,0 +1,855 @@
+[Misc]
+RedefUser0=+INO, +SIZ, +RDEV, +CHK, -MOD, -MTM, -ATM, -CTM, -GRP, -USR
+
+# The new Samhain behavior is to check the checksum up the last-known size of
+# the file, but *yes*, the inode will change when it becomes rotated and the size
+# will get reset to a lesser value (in which case the check should know to passively 
+# fail)
+RedefGrowingLogFiles=-INO, -SIZ, +CHK, -MTM, -ATM, -CTM
+
+#
+# --------- / --------------
+#
+
+[ReadOnly]
+dir = 99/
+
+# This covers the contents of / including: /boot, /bin, /sbin, /lib, /libexec,
+# /rescue, /root, /altroot, /usr, /var, /stand, /mnt, /tmp, /proc, /kern (Even 
+# though /usr and /var will recieve overrides)
+
+[Attributes]
+file = /proc
+file = /kern
+
+[IgnoreAll]
+dir=-1/proc
+dir=-1/kern
+
+#
+# --------- /tmp -----------
+#
+[Attributes]
+file=/tmp
+[IgnoreAll]
+dir=-1/tmp
+
+
+
+#
+# --------- /root --------------
+#
+
+# Per section 5.4.2.1 of the manual, Rule #5, there are lock file written here
+# that changes the mtime/ctime of the dir, so we want to watch perms/ownership,
+# ignore ctime/mtime/size, etc., but still watch the critical files inside.
+# Note: in theory, /root should never change if you use sudo(8) w/o "-H"
+[ReadOnly]
+dir=/root/.gnupg
+[Attributes]
+file=/root/.gnupg
+file=/root/.gnupg/random_seed
+
+#
+# --------- /dev -----------
+#
+
+[Attributes]
+dir = 99/dev
+
+# User0 will be for /dev/tty* and other devices where Owner/Group/Mode can 
+# change but the Inode/Size/Device/Checksum should not change.
+
+[User0]
+file=/dev/tty*
+file=/dev/pty*
+
+#
+# --------- /etc -----------
+#
+
+[ReadOnly]
+##
+## for these files, only access time is ignored
+##
+dir = 99/etc
+
+
+# If you're running dhclient(8), resolv.conf will get re-written at renewal
+# time so pray that he dhcpd(8) on your network doesn't get owned.
+# Crytpo-signed DHCP traffic would be too much to ask from ISC, but maybe
+# not from the OpenBSD hack
+
+[Attributes]
+file=/etc/dhclient.conf
+
+# If you run CUPS, /etc/printcap gets re-written if you have
+# "Browsing On" and "Printcap /etc/printcap" in cupsd.conf(5) 
+[Attributes]
+file=/etc/printcap
+
+
+#
+# --------- /usr -----------
+#
+
+# note about the following two: this reduced the size
+# of the database greatly
+
+#
+# --------- /usr/pkgsrc -----------
+#
+
+# Leave this uncommented if you CVS update your pkgsrc
+# periodically/automatically.  If you do not, comment it
+# out and you should be informed about any unauthorized
+# modifications to pkgsrc (which is an attack vector)
+
+[IgnoreAll]
+dir=-1/usr/pkgsrc
+
+#
+# --------- /usr/src -----------
+#
+
+# Leave this uncommented if you CVS update your src
+# periodically/automatically.  If you do not, comment it
+# out and you should be informed about any unauthorized
+# modifications to src (which is an attack vector)
+
+
+[IgnoreAll]
+dir=-1/usr/src
+
+
+#
+# --------- /usr/home (/home) -----------
+#
+
+
+# /home may be a symlink to /usr/home on a stock system, but most admins cane
+# that shit. [Attributes] could be replaced here by [ReadOnly] if we wanted to
+# know about new users being added (on systems where there are no new users)
+
+[Attributes]
+file = /home
+[IgnoreAll]
+dir = -1/home
+
+# 
+# --------- /usr/compat/linux/etc -----------
+#
+
+# You're basically compromising your system by enabling Linux emulation anyway
+
+[Attributes]
+file = /usr/compat/linux/etc
+file = /usr/compat/linux/etc/ld.so.cache
+
+# 
+# --------- /usr/compat/linux/proc -----------
+#
+
+# Uncomment if you have Linux Emulation/Compat Installed/Setup/Mounted
+[Attributes]
+file=/emul/linux/proc
+[IgnoreAll]
+dir=-1/emul/linux/proc
+
+
+#
+# --------- /var/run -----------
+#
+
+# New PID files may come, and PID files may go (as services on a system change),
+# but then probably a database rebuild will occur.  But at the time of the
+# database init, we should consider everything in here subject to change
+# (checksum, times, size) during a daemon restart, but everything else stays
+# the same.
+
+# If you have periodic scripts that HUP daemons, the PID should be unachanged.
+# However, force-restarts will be a new PID, so consider this
+
+[Attributes]
+dir=99/var/run
+
+[Misc]
+# Ignore sudo(8) TTY/PTY "Tickets" if you use sudo
+IgnoreMissing = /var/run/sudo/[[:alnum:]]{1,9}/(p|t)ty.*$
+IgnoreAdded = /var/run/sudo/[[:alnum:]]{1,9}/(p|t)ty.*$
+
+#
+# --------- /var/(spool|queue|etc.) -----------
+#
+
+[Attributes]
+file=/var/cron/tabs
+file=/var/spool/mqueue
+file=/var/spool/clientmqueue
+file=/var/mail
+file=/var/tmp
+
+#
+# --------- /var/at -----------
+#
+
+# As deep as /var/at/ will be watched by 99/
+
+[Attributes]
+file=/var/at/spool
+file=/var/at/jobs
+
+#
+# --------- /var/db -----------
+#
+
+# Some files are written directly into /var/db
+[Attributes]
+file=/var/db
+
+[Attributes]
+# Updatedb per /etc/periodic.d/weekly/310.locate (FreeBSD) or /etc/weekly (NetBSD)
+file=/var/db/locate.database
+
+[Misc]
+# this file comes and goes with portaudit(1)/portversion(1)/pkg_version(1)
+# Other is ISC DHCLIENT related
+IgnoreAdded=/var/db/(pkgdb.fixme|dhclient.leases.*)
+IgnoreMissing=/var/db/(pkgdb.fixme|dhclient.leases.*)
+
+
+#
+# --------- /var/db/mysql -----------
+#
+
+# The same for MySQL, except it's probably owned by the time you get done
+# installing it.
+
+[Attributes]
+file=/var/db/mysql
+[IgnoreAll]
+dir=-1/var/db/mysql
+
+####################################################################
+# The next three entries depend on your security paranoia policy about
+# SRC and PORTSs trees, etc.  Remember, Ports is the only default attack
+# vector against FreeBSD machines.
+####################################################################
+
+
+#
+# --------- /var/db/pkg -----------
+#
+
+# This database directory gets updated if a cvsup(8)/cvs(8)/sup(8) update 
+# occurs to a Pkgsrc source tree and then "pkgdb(8) -fu" is run.  
+
+[Attributes]
+file=/var/db/pkg
+[IgnoreAll]
+dir=-1/var/db/pkg
+
+
+#
+# --------- /var/db/entropy -----------
+#
+[Attributes]
+file=/var/db/entropy
+[IgnoreAll]
+dir=-1/var/db/entropy
+
+#
+# --------- /var/msgs -----------
+#
+
+[Attributes]
+dir=-1/var/msgs
+
+#
+# --------- /var/backups -----------
+#
+
+# /etc/daily /etc/security write old revisions of system
+# critical files into here daily
+[Attributes]
+dir=-1/var/backups
+
+#
+# --------- /var/log -----------
+#
+
+# Keep this section in sync with:
+# * /etc/newsyslog.conf
+# * /etc/syslogd.conf OR:
+# * /usr/pkg/etc/syslog-ng/syslog-ng.conf
+
+# For these files, changes in signature, timestamps, and increase in size
+# are ignored, however:
+# Per discussion on the forum, this behavior change is needed due to the behavior
+# of newsyslog(8) rotation method File sizes will get smaller, inodes will change
+# as they rotate.
+
+# NOTES ON LOG ROTATION BEHAVIOR:
+# See comments about modifications to [GrowingLogFiles] to ignore INODE changes
+# As newsyslog(8)/newsyslog.conf(5) has the default behavior of:
+# - First move logfile.log to logfile.log.0
+# - then bzip2 -v9 logfile.log.0
+# - then touch(1) logfile.log
+# - then HUP if applicable & reopen the new file (new inode)
+# - Therefore, Ignore Singature, Size (if grow), and Inode changes
+# But also, there's [IgnoreMissing] regexp to account for log file pruing from 
+# the filesystem, and [IgnoreAdded] for the first Nth rotations of the logfile
+# per newsyslog.conf(5)
+
+
+# NetBSD defaults
+[Misc]
+IgnoreAdded = /var/log/(cron|xferlog|messages|maillog|secure|pflog|sendmail\.st|kerberos\.log|authlog|aculog|wtmp|wtmpx)\.[0-9](\.bz2|\.gz)?$
+IgnoreMissing= /var/log/(cron|xferlog|messages|maillog|secure|pflog|sendmail\.st|kerberos\.log|authlog|aculog|wtmp|wtmpx)\.[0-9](\.bz2|\.gz)?$
+
+# Local services you may need to account for
+IgnoreAdded = /var/log/(snmpd\.log|postgresq\.log|samhain\.log|httpd-error\.log|httpd-access\.log|httpd-ssl_request\.log)\.[0-9](\.bz2|\.gz)?$
+IgnoreMissing = /var/log/(snmpd\.log|postgresq\.log|samhain\.log|httpd-error\.log|httpd-access\.log|httpd-ssl_request\.log)\.[0-9](\.bz2|\.gz)?$
+
+[Attributes]
+dir=99/var/log
+
+# NetBSD Stock Defaults
+[GrowingLogFiles]
+File = /var/log/aculog
+File = /var/log/authlog
+File = /var/log/cron
+File = /var/log/kerberos.log
+File = /var/log/lpd-errs
+File = /var/log/maillog
+File = /var/log/messages
+File = /var/log/secure
+File = /var/log/wtmp
+File = /var/log/wtmpx
+File = /var/log/xferlog
+File = /var/log/pflog
+
+[Attributes]
+# A binary-type logfile (Screw sendmail!)
+File = /var/log/sendmail.st
+
+# NetBSD gzip(1)'s by default but newsyslog.conf(5) has bzip2 support
+[Attributes]
+File = /var/log/*.[0-9].gz
+#File = /var/log/*.[0-9].bz2
+
+#
+# --------- makewhatis(8) -----------
+# 
+
+# Account for updated whatis(8) database given manpath.conf(5)/man.conf(5)
+#and manpath(1)
+
+[Attributes]
+file=/usr/pkg/man/whatis.db
+file=/usr/pkg/man
+file=/usr/share/man/whatis.db
+file=/usr/share/man
+
+##############################################
+######## END FILE SECTION ####################
+##############################################
+
+[EventSeverity]
+
+SeverityReadOnly=crit
+SeverityLogFiles=crit
+SeverityGrowingLogs=crit
+SeverityIgnoreNone=crit
+SeverityAttributes=crit
+SeverityUser0=crit
+SeverityUser1=crit
+
+## We have a file in IgnoreAll that might or might not be present.
+## Setting the severity to 'info' prevents messages about deleted/new file.
+##
+# SeverityIgnoreAll=crit
+SeverityIgnoreAll=info
+
+## Files : file access problems
+SeverityFiles=info
+
+## Dirs  : directory access problems
+SeverityDirs=info
+
+## Names : suspect (non-printable) characters in a pathname
+SeverityNames=crit
+
+[Log]
+## Values: debug, info, notice, warn, mark, err, crit, alert, none.
+## 'mark' is used for timestamps.
+##
+## Use 'none' to SWITCH OFF a log facility
+## 
+## By default, everything equal to and above the threshold is logged.
+## The specifiers '*', '!', and '=' are interpreted as  
+## 'all', 'all but', and 'only', respectively (like syslogd(8) does, 
+## at least on Linux). Examples:
+## MailSeverity=*
+## MailSeverity=!warn
+## MailSeverity==crit
+
+## E-mail
+##
+MailSeverity=warn
+
+## Console
+##
+PrintSeverity=notice
+
+## Logfile
+##
+LogSeverity=info
+
+## Syslog
+##
+# Syslog logging is redundant at this time
+#
+#SyslogSeverity=notice
+
+## Remote server (yule)
+##
+# ExportSeverity=none
+
+## External script or program
+##
+# ExternalSeverity = none
+
+## Logging to a database
+##
+# DatabaseSeverity = none
+
+## Logging to a Prelude-IDS
+##
+# PreludeSeverity = crit
+
+
+#####################################################
+#
+# Optional modules
+#
+#####################################################
+
+#[SuidCheck]
+##
+## --- Check the filesystem for SUID/SGID binaries
+## 
+
+## Switch on
+#
+#SuidCheckActive = yes
+
+## Interval for check (seconds)
+#
+#SuidCheckInterval = 5400
+
+## Alternative: crontab-like schedule
+#
+#SuidCheckSchedule = NULL
+ 
+## Directory to exclude 
+#
+# SuidCheckExclude = NULL
+
+## Limit on files per second (0 == no limit)
+#
+# SuidCheckFps = 0
+
+## Alternative: yield after every file
+#
+# SuidCheckYield = no
+
+## Severity of a detection
+#
+# SeveritySuidCheck = crit
+
+## Quarantine SUID/SGID files if found
+#
+# SuidCheckQuarantineFiles = yes
+
+## Method for Quarantining files:
+#  0 - Delete the file.
+#  1 - Remove SUID/SGID permissions from file.
+#  2 - Move SUID/SGID file to quarantine dir.
+#
+# SuidCheckQuarantineMethod = 0
+
+## For method 1 and 3, really delete instead of truncating
+# 
+# SuidCheckQuarantineDelete = yes
+
+#[Mounts]
+#MountCheckActive=1
+#MountCheckInterval=7200
+#SeverityMountMissing=crit
+#SeverityOptionMissing=crit
+#
+#checkmount=/
+#checkmount=/dev
+#checkmount=/usr
+#checkmount=/var
+#checkmount=/var/log
+#checkmount=/opt
+#checkmount=/export
+#checkmount=/tmp
+
+#[Kernel]
+##
+## --- Check for loadable kernel module rootkits (Linux/FreeBSD only) 
+##
+
+## Switch on/off
+#
+#KernelCheckActive = True
+
+## Check interval (seconds); btw., the check is VERY fast
+#
+#KernelCheckInterval = 300
+
+## Severity
+#
+#SeverityKernel = crit
+
+
+ #[Utmp]
+##
+## --- Logging of login/logout events
+##
+
+## Switch on/off
+#
+#LoginCheckActive = True
+
+## Severity for logins, multiple logins, logouts
+# 
+#SeverityLogin=info
+#SeverityLoginMulti=crit
+#SeverityLogout=info
+
+## Interval for login/logout checks
+#
+#LoginCheckInterval = 300
+
+
+# [Database]
+##
+## --- Logging to a relational database
+##
+
+## Database name
+#
+# SetDBName = samhain
+
+## Database table
+#
+# SetDBTable = log
+
+## Database user
+#
+# SetDBUser = samhain
+
+## Database password
+#
+# SetDBPassword = (default: none)
+
+## Database host
+#
+# SetDBHost = localhost
+
+## Log the server timestamp for received messages
+#
+# SetDBServerTstamp = True
+
+## Use a persistent connection
+#
+# UsePersistent = True
+
+
+# [External]
+##
+## Interface to call external scripts/programs for logging
+##
+
+## The absolute path to the command
+## - Each invocation of this directive will end the definition of the
+##   preceding command, and start the definition of 
+##   an additional, new command
+#
+# OpenCommand = (no default)
+
+## Type (log or srv)
+## - log for log messages, srv for messages received by the server
+#
+# SetType = log
+
+## The command (full command line) to execute
+#
+# SetCommandLine = (no default)
+
+## The environment (KEY=value; repeat for more)
+#
+# SetEnviron = TZ=(your timezone)
+
+## The TIGERpkg checksum (optional)
+#
+# SetChecksum = (no default)
+
+## User who runs the command
+#
+# SetCredentials = (default: samhain process uid)
+
+## Words not allowed in message
+#
+# SetFilterNot = (none)
+
+## Words required (ALL of them)
+#
+# SetFilterAnd = (none)
+
+## Words required (at least one)
+#
+# SetFilterOr = (none)
+
+## Deadtime between consecutive calls
+#
+# SetDeadtime = 0
+
+## Add default environment (HOME, PATH, SHELL)
+#
+# SetDefault = no
+
+
+
+#####################################################
+#
+# Miscellaneous configuration options
+#
+#####################################################
+
+[Misc]
+
+## whether to become a daemon process
+## (this is not honoured on database initialisation)
+#
+# Daemon = no
+Daemon = yes
+
+# whether to test signature of files (init/check/none)
+# - if 'none', then we have to decide this on the command line -
+#
+# ChecksumTest = none
+ChecksumTest=check
+
+# Set nice level (-19 to 19, see 'man nice'),
+# and I/O limit (kilobytes per second; 0 == off)
+# to reduce load on host.
+#
+SetNiceLevel = 19
+# SetIOLimit = 0
+
+## The version string to embed in file signature databases
+#
+# VersionString = NULL
+
+## Interval between time stamp messages
+#
+# SetLoopTime = 60
+SetLoopTime = 7200
+
+## Interval between file checks 
+#
+# SetFileCheckTime = 600
+SetFileCheckTime = 43200
+
+## Alternative: crontab-like schedule
+#
+# FileCheckScheduleOne = NULL
+
+## Alternative: crontab-like schedule(2)
+#
+# FileCheckScheduleTwo = NULL
+
+## Report only once on modified fles 
+## Setting this to 'FALSE' will generate a report for any policy 
+## violation (old and new ones) each time the daemon checks the file system.
+#
+ReportOnlyOnce = True
+
+## Report in full detail
+#
+ReportFullDetail = True
+
+## Report file timestamps in local time rather than GMT
+#
+UseLocalTime = Yes
+
+## The console device (can also be a file or named pipe)
+## - There are two console devices. Accordingly, you can use
+##   this directive a second time to set the second console device.
+##   If you have not defined the second device at compile time,
+##   and you don't want to use it, then:
+##   setting it to /dev/null is less effective than just leaving
+##   it alone (setting to /dev/null will waste time by opening
+##   /dev/null and writing to it)
+#
+# SetConsole = /dev/console
+
+## Activate the SysV IPC message queue
+#
+# MessageQueueActive = False
+
+
+## If false, skip reverse lookup when connecting to a host known 
+## by name rather than IP address (i.e. trust the DNS)
+#
+SetReverseLookup = True
+
+
+## --- E-Mail ---
+
+# Only highest-level (alert) reports will be mailed immediately,
+# others will be queued. Here you can define, when the queue will
+# be flushed (Note: the queue is automatically flushed after
+# completing a file check).
+#
+# SetMailTime = 86400
+
+## Maximum number of mails to queue
+#
+# SetMailNum = 10
+
+## Recipient (max. 8)
+#
+#SetMailAddress=infosec@noc.myorg.tld
+
+## Mail relay (IP address)
+#
+SetMailRelay = 127.0.0.1
+
+## Custom subject format
+#
+MailSubject = Synchrotone Samhain: %S 
+SetMailSender = samhain@synchrotone.pgh.pub.collaborativefusion.com
+
+## --- end E-Mail ---
+
+
+## Path to the executable. If set, will be checksummed after startup
+## and before exit.
+#
+SamhainPath = /usr/pkg/sbin/samhain
+
+## The IP address of the log server
+#
+# SetLogServer = (default: compiled-in)
+
+## The IP address of the time server
+#
+# SetTimeServer = (default: compiled-in)
+
+## Trusted Users (comma delimited list of user names) 
+#
+# TrustedUser = (no default; this adds to the compiled-in list)
+
+## Path to the file signature database
+#
+SetDatabasePath = /usr/pkg/var/samhain/samhain.db
+
+## Path to the log file
+#
+# SetLogfilePath = (default: compiled-in)
+
+## Path to the PID file
+#
+# SetLockPath = (default: compiled-in)
+
+
+## The digest/checksum/hash algorithm
+#
+DigestAlgo = MD5
+
+
+## Custom format for message header. 
+## CAREFUL if you use XML logfile format.
+##
+## %S severity
+## %T timestamp
+## %C class
+##
+## %F source file
+## %L source line
+#
+# MessageHeader="%S %T "
+
+
+## Don't log path to config/database file on startup
+#
+# HideSetup = False
+
+## The syslog facility, if you log to syslog
+#
+# SyslogFacility = LOG_AUTHPRIV
+SyslogFacility=LOG_LOCAL2
+
+## The message authentication method
+## - If you change this, you *must* change it
+##   on client *and* server
+#
+# MACType = HMAC-TIGER
+
+
+## The Prelude-IDS profile to use for reporting
+## default value is "samhain"
+#
+# PreludeProfile = samhain
+
+## Map these samhain severities to impact severity 'info' severity
+#
+# PreludeMapToInfo =
+
+## Map these samhain severities to impact severity 'low' severity
+#
+# PreludeMapToLow = debug info
+
+## Map these samhain severities to impact severity 'medium' severity
+#
+# PreludeMapToMedium = notice warn err
+
+## Map these samhain severities to impact severity 'high' severity
+#
+# PreludeMapToHigh = crit alert
+
+# everything below is ignored
+[EOF]
+
+#####################################################################
+# This would be the proper syntax for parts that should only be
+#    included for certain hosts.
+# You may enclose anything in a @HOSTNAME/@end bracket, as long as the
+#    result still has the proper syntax for the config file.
+# You may have any number of @HOSTNAME/@end brackets.
+# HOSTNAME should be the fully qualified 'official' name 
+#    (e.g. 'nixon.watergate.com', not 'nixon'), no aliases. 
+#    No IP number - except if samhain cannot determine the 
+#    fully qualified hostname.
+#
+# @HOSTNAME
+# file=/foo/bar
+# @end
+#
+# These are two examples for conditional inclusion/exclusion
+# of a machine based on the output from 'uname -srm'
+# $Linux:2.*.7:i666
+# file=/foo/bar3
+# $end
+#
+# !$Linux:2.*.7:i686
+# file=/foo/bar2
+# $end
+#
+#####################################################################

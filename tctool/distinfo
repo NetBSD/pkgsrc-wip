@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.3 2012/04/12 18:06:32 gschwarz Exp $
+
+RMD160 (tctool-0.9.7.zip) = 9aa358cdaa3f2714a49cace0e402099f7aad103b
+SHA512 (tctool-0.9.7.zip) = 092d322fbc2b45b90314bda7712865d5d952e1851e3367ff087a53a30c296ac43703cbeaf0cca49d6155cf693e3370efe7db0dcb0af79a6678333dd309c0c010
+Size (tctool-0.9.7.zip) = 388340 bytes
+SHA1 (patch-aa) = 49360ae23a0d7b4688e541d16c1876a5912581da
+SHA1 (patch-ab) = 682d76cb00e5b7e35debf8704ff3c30eacb05c04
+SHA1 (patch-ac) = 875df68e3eee7ff4defdf6244ace64372610b0c8
+SHA1 (patch-tctool.cpp) = 21a3abedaa1e77c783cecdae8cba8c68173afd41

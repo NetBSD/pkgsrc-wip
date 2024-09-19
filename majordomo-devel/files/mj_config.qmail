@@ -1,0 +1,5 @@
+          'mta' => 'qmail',
+          'maintain_mtaconfig' => 0,
+          'mta_separator' => '-',
+          'qmail_path' => '@@MJ2_QMAIL_BINDIR@@',
+        };

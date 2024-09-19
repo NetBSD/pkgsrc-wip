@@ -1,0 +1,4 @@
+EK (Embedded Kermit, E-Kermit) is an implementation of the Kermit
+file transfer protocol written in ANSI C and designed for embedding
+in devices or firmware, use in realtime applications, or for
+construction of DLLs and libraries.

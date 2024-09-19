@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/kafkacat
+man/man1/kafkacat.1

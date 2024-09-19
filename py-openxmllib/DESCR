@@ -1,0 +1,4 @@
+openxmllib provides resources to handle OpenXML documents from Python.
+OpenXML is the new office document format supported natively by
+MS Office 2007, and as import/export format by Apple iWork'08 and
+OpenOffice 2.2.

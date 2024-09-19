@@ -1,0 +1,6 @@
+ApplPy is a computational probability package written in Python.
+The project runs using the open source SymPy computer algebra system
+(CAS). Because all of the dependencies that ApplPy requires to run are
+open source, ApplPy is available free of charge. While still incomplete,
+ApplPy will eventually be capable of performing a wide range of random
+variable algebra operations on univariate probaility distributions

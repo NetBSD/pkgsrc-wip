@@ -1,0 +1,5 @@
+A package manager for pkgsrc that allows non-intrusive upgrading of a
+pkgsrc installation. Upgrading packages does not mean having to remove
+all parts of the package hierarchy that depend on the packages that
+are out of date. Instead, all packages are upgraded 'in place', and
+all packages deending on updated packages are rebuild afterwards.

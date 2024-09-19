@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/22 13:27:55 jihbed Exp $
+bin/partonevolution-config
+include/partonevolution/Gauss_Laguerre.h
+include/partonevolution/anomalous.h
+include/partonevolution/complex_d.h
+include/partonevolution/constants_math.h
+include/partonevolution/coupling.h
+include/partonevolution/coupling_qed.h
+include/partonevolution/evolutionkernel.h
+include/partonevolution/integration_contour.h
+include/partonevolution/matrix_c.h
+include/partonevolution/matrix_d.h
+include/partonevolution/matrix_template.h
+include/partonevolution/partondistribution.h
+include/partonevolution/partonevolution.h
+include/partonevolution/special_functions.h
+include/partonevolution/version.h
+lib/libpartonevolution.la

@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/jira
+share/doc/go-jira/README.md

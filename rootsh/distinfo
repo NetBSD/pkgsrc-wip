@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (rootsh-1.5.3.tar.gz) = 1e5083c37a89b7c00606b4ca7367b90bc4ad58cb
+SHA512 (rootsh-1.5.3.tar.gz) = 46e2492656d1a90387d820bff2433ae8404e620cd8b0a08d79086cf145d78048e3ce7cac0bf522b64904a6986a08b1158cdda6c0e3839f69556d17b0629fb120
+Size (rootsh-1.5.3.tar.gz) = 147408 bytes
+SHA1 (patch-src_rootsh.c) = bc6fcc9a75d4223d85de4fc4f3ad83646f5ae55f

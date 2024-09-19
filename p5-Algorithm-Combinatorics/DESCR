@@ -1,0 +1,4 @@
+Algorithm::Combinatorics is an efficient generator of combinatorial
+sequences. Algorithms are selected from literature (see documentation
+for details). Iterators do not use recursion, nor stacks, and are
+written in C.

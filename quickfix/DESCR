@@ -1,0 +1,4 @@
+QuickFIX is a full-featured open source FIX engine, currently
+compatible with the FIX 4.0-4.4 spec. It runs on Windows, Linux,
+Solaris, FreeBSD and Mac OS X. API's are available for C++, Java,
+.NET, Python and Ruby.

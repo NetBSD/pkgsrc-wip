@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- utils/resample/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ utils/resample/Makefile
+@@ -20,11 +20,11 @@ libfilterkit.a: $(HFILES) filterkit.o
+ 
+ install:
+ 	@echo "making install..."	
+-	@$(INSTALL) $(CMIXDIR)/utils/resample/$(PROG) $(DESTDIR)
++	@$(INSTALL) $(CMIXDIR)/utils/resample/$(PROG) $(DESTDIR)/$(BINDIR)
+ 
+ uninstall:
+ 	@echo "making uninstall..."	
+-	$(RM) $(DESTDIR)/resample
++	$(RM) $(DESTDIR)/$(BINDIR)/resample
+ 
+ clean:
+ 	$(RM) *.o libfilterkit.a $(PROG)

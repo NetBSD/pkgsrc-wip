@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2014/11/25 12:51:28 thomasklausner Exp $
+
+RMD160 (libgrss-0.5.0.tar.gz) = 398c5b31f5f4b93b8fa26e762070eb0450f275c5
+Size (libgrss-0.5.0.tar.gz) = 439634 bytes
+SHA1 (patch-src_feeds-subscriber.c) = 4a480df8d0dd12e2a53fd73d74b507f893c29f99
+SHA1 (patch-src_utils.c) = 208fcb8d6408ebfe366d4d4c22cac3d075b1b93a

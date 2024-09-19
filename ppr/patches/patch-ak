@@ -1,0 +1,27 @@
+$NetBSD: patch-ak,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- makeprogs/make_new_dir.sh.orig	2003-08-06 16:37:15.000000000 +0200
++++ makeprogs/make_new_dir.sh
+@@ -51,20 +51,10 @@ if [ -n "$RPM_BUILD_ROOT" -a ! -d "$RPM_
+   exit 1
+   fi
+ 
+-if [ -d "$RPM_BUILD_ROOT$dir" ]
+-	then
+-	echo "    Removing old directory \"$RPM_BUILD_ROOT$dir\"..."
+-	rm -rf "$RPM_BUILD_ROOT$dir"
+-	fi
+-
+-if [ -d "$RPM_BUILD_ROOT$dir" ]
+-	then
+-	echo "Failed to remove \"$RPM_BUILD_ROOT$dir\"."
+-	exit 1
+-	fi
++## Nothing removed for pkgsrc install!!
+ 
+ echo "    Creating new directory \"$RPM_BUILD_ROOT$dir\"..."
+-mkdir "$RPM_BUILD_ROOT$dir" || exit 1
++mkdir "$RPM_BUILD_ROOT$dir" || true
+ chown $USER_PPR "$RPM_BUILD_ROOT$dir" 2>/dev/null
+ chgrp $GROUP_PPR "$RPM_BUILD_ROOT$dir" 2>/dev/null
+ chmod 755 "$RPM_BUILD_ROOT$dir"

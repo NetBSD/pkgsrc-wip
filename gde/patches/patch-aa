@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+
+--- HGL_SRC/Alloc.c.orig	2002-02-01 10:40:01.000000000 -0700
++++ HGL_SRC/Alloc.c
+@@ -15,7 +15,7 @@ char *string;
+ {
+         if (code == 0)
+         {
+-                fprintf(stderr,"Error:%s\n",string);
++                printf("Error:%s\n",string);
+                 exit(1);
+         }
+         return;
+@@ -34,7 +34,7 @@ int count,size;
+         temp = calloc(count,(unsigned)size);
+ 
+ 	if(count*size == 0)
+-		fprintf(stderr,"Allocate ZERO blocks?\n");
++		printf("Allocate ZERO blocks?\n");
+         ErrorOut(temp,"Cannot allocate memory");
+         return(temp);
+ }
+@@ -83,7 +83,7 @@ char* block;
+ void Warning(s)
+ char *s;
+ {
+-	fprintf(stderr,"Warning:%s\n",s);
++	printf("Warning:%s\n",s);
+ 	return;
+ }
+ 

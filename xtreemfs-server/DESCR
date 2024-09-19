@@ -1,0 +1,7 @@
+XtreemFS is a distributed file system software which can be used to build
+highly available file system installations without a single point of failure.
+It is designed to work well over wide area networks, has built in SSL
+support and can in theory scale to thousands of storage and metadata servers.
+
+The server-side metadata and directory services are written in Java.
+The mount client is written in C++ and uses FUSE.

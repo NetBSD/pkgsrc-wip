@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/support/mendex-doc/LICENSE
+share/texmf-dist/doc/support/mendex-doc/README.md
+share/texmf-dist/doc/support/mendex-doc/mendex.pdf
+share/texmf-dist/doc/support/mendex-doc/mendex.tex

@@ -1,0 +1,2 @@
+Gzstream is a small C++ library, basically just a wrapper, that provides
+the functionality of the zlib C-library in a C++ iostream

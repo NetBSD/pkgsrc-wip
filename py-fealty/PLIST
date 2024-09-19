@@ -1,0 +1,26 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/fealty/__init__.py
+${PYSITELIB}/fealty/__init__.pyc
+${PYSITELIB}/fealty/__init__.pyo
+${PYSITELIB}/fealty/field_numerics.c
+${PYSITELIB}/fealty/field_numerics.pyx
+${PYSITELIB}/fealty/field_numerics.so
+${PYSITELIB}/fealty/fields.py
+${PYSITELIB}/fealty/fields.pyc
+${PYSITELIB}/fealty/fields.pyo
+${PYSITELIB}/fealty/lattice.py
+${PYSITELIB}/fealty/lattice.pyc
+${PYSITELIB}/fealty/lattice.pyo
+${PYSITELIB}/fealty/lattice_numerics.c
+${PYSITELIB}/fealty/lattice_numerics.pyx
+${PYSITELIB}/fealty/lattice_numerics.so
+${PYSITELIB}/fealty/walled_field_numerics.c
+${PYSITELIB}/fealty/walled_field_numerics.pyx
+${PYSITELIB}/fealty/walled_field_numerics.so

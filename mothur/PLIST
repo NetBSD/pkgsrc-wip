@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/mothur
+@pkgdir share/examples
+@pkgdir share/doc
+@pkgdir man/man1
+@pkgdir lib
+@pkgdir include

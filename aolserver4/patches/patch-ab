@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1 2004/06/08 20:53:37 ianharding Exp $
+
+--- Makefile.orig	2002-10-30 00:01:08.000000000 +0000
++++ Makefile
+@@ -40,26 +40,29 @@ all: 
+ 		( cd $$i && $(MAKE) all ) || exit 1; \
+ 	done
+ 
+-install: install-binaries install-doc
++install: install-binaries install-doc install-tests
+ 
+ install-binaries: all
+-	for i in bin lib log include modules/tcl servers/server1/pages; do \
+-		$(MKDIR) $(AOLSERVER)/$$i; \
++	for i in modules/tcl servers/server1/pages; do \
++		$(MKDIR) $(AOLSERVER)/share/nsd/$$i; \
+ 	done
++	$(MKDIR) $(AOLSERVER)/include/nsd
++	$(MKDIR) $(AOLSERVER)/include/nsd/include
+ 	for i in include/*.h include/Makefile.global include/Makefile.module; do \
+-		$(INSTALL_DATA) $$i $(AOLSERVER)/include/; \
++		$(INSTALL_DATA) $$i $(AOLSERVER)/include/nsd/include/; \
+ 	done
+ 	for i in tcl/*.tcl; do \
+-		$(INSTALL_DATA) $$i $(AOLSERVER)/modules/tcl/; \
++		$(INSTALL_DATA) $$i $(AOLSERVER)/share/nsd/modules/tcl/; \
+ 	done
+-	$(INSTALL_DATA) sample-config.tcl $(AOLSERVER)/
++	$(MKDIR) $(AOLSERVER)/share/examples/nsd
++	$(INSTALL_DATA) sample-config.tcl $(AOLSERVER)/share/examples/nsd/
+ 	$(INSTALL_SH) install-sh $(INSTBIN)/
+ 	for i in $(dirs); do \
+ 		(cd $$i && $(MAKE) install) || exit 1; \
+ 	done
+ 
+ install-tests:
+-	$(CP) -r tests $(INSTSRVPAG)
++	$(CP) -R tests $(INSTSRVPAG)
+ 
+ install-doc:
+ 	cd doc && /bin/sh ./install-doc $(AOLSERVER)

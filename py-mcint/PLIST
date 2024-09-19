@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 21:59:40 jihbed Exp $
+${PYSITELIB}/mcint.py
+${PYSITELIB}/mcint.pyc
+${PYSITELIB}/mcint.pyo

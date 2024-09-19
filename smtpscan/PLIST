@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
+bin/smtpscan
+man/man1/smtpscan.1
+share/smtpscan/fingerprints
+share/smtpscan/tests

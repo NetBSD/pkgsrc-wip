@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- plugins/video/H.263-1998/Makefile.in.orig	2013-02-20 02:18:03.000000000 +0000
++++ plugins/video/H.263-1998/Makefile.in
+@@ -35,7 +35,7 @@ SRCS      := h263-1998.cxx \
+              $(COMMONDIR)/dyna.cxx
+ 
+ CFLAGS += @LIBAVCODEC_CFLAGS@ -I$(COMMONDIR)
+-LIBS   += @DL_LIBS@
++LIBS   += @DL_LIBS@ @LIBAVUTIL_LIBS@
+ 
+ HAVE_LIBAVCODEC_RTP_MODE=@HAVE_LIBAVCODEC_RTP_MODE@
+ ifeq ($(HAVE_LIBAVCODEC_RTP_MODE),yes)

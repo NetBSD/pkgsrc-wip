@@ -1,0 +1,19 @@
+--- Frameworks/PopplerKit/bindings/poppler_splash_renderer.c.orig	2009-03-17 08:18:08.000000000 -0500
++++ Frameworks/PopplerKit/bindings/poppler_splash_renderer.c	2009-12-02 17:05:19.000000000 -0600
+@@ -20,11 +20,11 @@
+ #include <stdlib.h>
+ #include "poppler_splash_renderer.h"
+ #include "poppler.h"
+-#include <PDFDoc.h>
+-#include <Page.h>
+-#include <goo/GooString.h>
+-#include <SplashOutputDev.h>
+-#include <splash/SplashBitmap.h>
++#include <poppler/PDFDoc.h>
++#include <poppler/Page.h>
++#include <poppler/goo/GooString.h>
++#include <poppler/SplashOutputDev.h>
++#include <poppler/splash/SplashBitmap.h>
+ 
+ #define PDF_DOC(obj) static_cast<PDFDoc*>(obj)
+ #define PAGE(obj) static_cast<Page*>(obj)

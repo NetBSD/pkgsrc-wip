@@ -1,0 +1,36 @@
+$NetBSD: patch-config_libobj.in,v 1.1 2018/12/21 15:45:13 adam Exp $
+
+Add --enable-pkgsrc-libtool option
+
+--- config/libobj.in.orig	2010-12-12 17:25:51.187240600 -0600
++++ config/libobj.in	2010-12-12 17:27:15.877207200 -0600
+@@ -7,11 +7,13 @@
+ # STLIBOBJS	list of .o objects; this must not contain variable
+ #		references.
+ 
+-.SUFFIXES: .c .so .po
++.SUFFIXES: .c .so .po .lo
+ .c.so:
+ 	$(CC) $(PICFLAGS) -DSHARED $(ALL_CFLAGS) -c $< -o $*.so.o && $(MV) $*.so.o $*.so
+ .c.po:
+ 	$(CC) $(PROFFLAGS) $(ALL_CFLAGS) -c $< -o $*.po.o && $(MV) $*.po.o $*.po
++.c.lo:
++	$(LIBTOOL) --mode=compile $(CC) $(ALL_CFLAGS) -c $<
+ 
+ # rules to generate object file lists
+ 
+@@ -27,10 +29,13 @@
+ 	@echo $(PFLIBOBJS) > $@
+ 	: updated $@
+ 
++OBJS.LA: $(LALIBOBJS) Makefile
++	@echo $(LALIBOBJS) > $@
++
+ all-libobjs: $(OBJLISTS)
+ 
+ clean-libobjs:
+-	$(RM) OBJS.ST OBJS.SH OBJS.PF $(STLIBOBJS) $(SHLIBOBJS) $(PFLIBOBJS)
++	$(RM) OBJS.ST OBJS.SH OBJS.PF OBJS.LA $(STLIBOBJS) $(SHLIBOBJS) $(PFLIBOBJS) $(LALIBOBJS)
+ 
+ Makefile: $(top_srcdir)/config/libobj.in
+ config.status: $(top_srcdir)/config/shlib.conf

@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD$
+
+If you'd like the complete documentation for wla-dx, such as wla-dx.txt,
+wla-dx.html and the manpages, consider building with:
+`PKG_OPTIONS.wla-dx+=	doc' set.
+
+An online copy of the documentation is also available here:
+	http://www.villehelin.com/wla-README.html
+
+===========================================================================

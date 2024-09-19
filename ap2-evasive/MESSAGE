@@ -1,0 +1,28 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/01/07 01:46:26 cetrox Exp $
+
+mod_evasive has default options configured, but you may also add the
+following block to your httpd.conf:
+
+<IfModule mod_evasive20.c>
+    DOSHashTableSize    3097
+    DOSPageCount        2
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   10
+</IfModule>
+
+Optionally you can also add the following directives:
+
+    DOSEmailNotify      you@yourdomain.com
+    DOSSystemCommand    "su - someuser -c '/sbin/... %s ...'"
+    DOSLogDir           "/var/log/mod_evasive"
+
+You will also need to add this line if you are building with dynamic support:
+
+LoadModule evasive20_module modules/mod_evasive20.so
+
+(This line is already added to your configuration by apxs)
+
+===========================================================================

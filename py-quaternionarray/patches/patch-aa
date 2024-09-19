@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/06 14:04:11 jihbed Exp $
+
+--- setup.py.orig	2010-09-06 12:34:53.000000000 +0000
++++ setup.py	2010-09-06 12:35:29.000000000 +0000
+@@ -2,7 +2,7 @@
+ setup(
+     name = "quaternionarray",
+     version = "0.6.1",
+-    py_modules = ['quaternionarray, test_quaternionarray'], 
++    py_modules = ['quaternionarray'], 
+ 
+     # Project uses reStructuredText, so ensure that the docutils get
+     # installed or upgraded on the target machine

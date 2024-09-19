@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/07/17 18:11:36 kheinz Exp $
+
+--- bin/mj_wwwadm.orig	2006-07-02 10:00:04.000000000 +0200
++++ bin/mj_wwwadm
+@@ -6,6 +6,8 @@ BEGIN {
+   $::LOCKDIR= "blah";
+   $::UID    = "baduid";
+   $::GID    = "badgid";
++$::UID    =getpwnam($::UID);
++$::GID    =getgrnam($::GID);
+   $::UMASK  = "007";
+   $SIG{__WARN__} = sub {print STDERR "--== $_[0]"};
+ 

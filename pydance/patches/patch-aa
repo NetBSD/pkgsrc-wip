@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1 2004/11/27 22:44:47 shattered Exp $
+
+--- Makefile.posix.orig	2004-11-28 00:32:36.000000000 +0300
++++ Makefile.posix
+@@ -7,28 +7,26 @@ all:
+ include Makefile.general
+ 
+ install: install-core install-data install-utils
+-	install -m 644 $(ALLMODS) $(DESTDIR)$(PREFIX)/share/games/pydance
+-	install -m 755 pydance.py $(DESTDIR)$(PREFIX)/share/games/pydance
+-	ln -sf ../share/games/pydance/pydance.py $(DESTDIR)$(PREFIX)/games/pydance
++	${BSD_INSTALL_DATA} $(ALLMODS) $(DESTDIR)$(PREFIX)/share/games/pydance
++	${BSD_INSTALL_SCRIPT} pydance.py $(DESTDIR)$(PREFIX)/share/games/pydance
++	ln -sf ../share/games/pydance/pydance.py $(DESTDIR)$(PREFIX)/bin/pydance
+ 
+ install-core:
+-	install -d $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(PREFIX)/games $(DESTDIR)$(PREFIX)/share/games/pydance
+-	install -d $(DESTDIR)$(PREFIX)/share/games/pydance/songs
+-	install -d $(DESTDIR)$(PREFIX)/share/man/man1 $(DESTDIR)$(PREFIX)/share/man/man6
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(PREFIX)/share/games/pydance
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(PREFIX)/share/games/pydance/songs
+ 
+ install-utils: install-core
+ 	for U in $(UTILS); do\
+-	  install -m 755 $$U `echo $(DESTDIR)$(PREFIX)/bin/$$U | sed 's/\.py//' | sed 's/utils\///'`;\
++	  ${BSD_INSTALL_SCRIPT} $$U `echo $(DESTDIR)$(PREFIX)/bin/$$U | sed 's/\.py//' | sed 's/utils\///'`;\
+ 	done
+ 
+ install-data: install-core
+ 	cp -R $(DATA) $(DESTDIR)$(PREFIX)/share/games/pydance
+-	cp docs/man/*.1 $(DESTDIR)$(PREFIX)/share/man/man1
+-	cp docs/man/*.6 $(DESTDIR)$(PREFIX)/share/man/man6
++	${BSD_INSTALL_MAN} docs/man/*.1 $(DESTDIR)$(PREFIX)/man/man1
++	${BSD_INSTALL_MAN} docs/man/*.6 $(DESTDIR)$(PREFIX)/man/man6
+ 	cp pydance.posix.cfg pydance.cfg
+-	install -D -m 644 pydance.cfg $(DESTDIR)/etc/pydance.cfg
+ 
+ install-zip: pydance.zip install-core install-data install-utils
+-	install -m 644 constants.py pydance.zip $(DESTDIR)$(PREFIX)/share/games/pydance
+-	install -m 755 pydance.py $(DESTDIR)$(PREFIX)/share/games/pydance
+-	ln -sf ../share/games/pydance/pydance.py $(DESTDIR)$(PREFIX)/games/pydance
++	${BSD_INSTALL_DATA} constants.py pydance.zip $(DESTDIR)$(PREFIX)/share/games/pydance
++	${BSD_INSTALL_SCRIPT} pydance.py $(DESTDIR)$(PREFIX)/share/games/pydance
++	ln -sf ../share/games/pydance/pydance.py $(DESTDIR)$(PREFIX)/bin/pydance

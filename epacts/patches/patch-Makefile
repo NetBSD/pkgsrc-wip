@@ -1,0 +1,14 @@
+$NetBSD$
+
+# Non-portable mkdir flag
+--- Makefile.orig	2017-02-22 08:30:03 UTC
++++ Makefile
+@@ -820,7 +820,7 @@ uninstall-am:
+ 
+ 
+ install-exec-hook:
+-	mkdir --p $(libdir)
++	mkdir -p $(libdir)
+ 	R CMD INSTALL -l $(libdir) $(datadir)/${PACKAGE}/epactsR_3.3.2.tar.gz
+ 	R CMD INSTALL -l $(libdir) $(datadir)/${PACKAGE}/mmSKAT_0.95.tar.gz
+ 

@@ -1,0 +1,302 @@
+* We need to export LD_LIBRARY_PATH=/usr/pkg/emul/netbsd32/lib owing
+  to X11 32-bit libs from compat80-x11 not linking against libxcb.so
+  in ${PREFIX}/emul/netbsd32/lib.
+  As a temporary solution, a wrapper script that sets LD_LIBRARY_PATH
+  is used.
+* Figure out why wine-4.13 is not throwing page_fault error.
+
+* Tests fail
+mode64# make test
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M adsldp.dll -p adsldp_test.exe.so sysinfo && touch sysinfo.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+002a:err:winediag:SECUR32_initNTLMSP ntlm_auth was not found or is outdated. Make sure that ntlm_auth >= 3.0.25 is in your path. Usually, you can find it in the winbind package of your distribution.
+002a:fixme:advapi:LsaOpenPolicy ((null),0x22f150,0x00000001,0x22f120) stub
+002a:fixme:security:GetWindowsAccountDomainSid (000000000022EEA0 000000000002B028 000000000022EE9C): semi-stub
+002a:fixme:advapi:LsaClose (0xcafe) stub
+002a:fixme:advapi:LsaOpenPolicy ((null),0x22f0e0,0x00000001,0x22f0b0) stub
+002a:fixme:security:GetWindowsAccountDomainSid (000000000022EE30 000000000002B318 000000000022EE2C): semi-stub
+002a:fixme:advapi:LsaClose (0xcafe) stub
+002a:fixme:advapi:LsaOpenPolicy ((null),0x22f0e0,0x00000001,0x22f0b0) stub
+002a:fixme:security:GetWindowsAccountDomainSid (000000000022EE30 000000000002B318 000000000022EE2C): semi-stub
+002a:fixme:advapi:LsaClose (0xcafe) stub
+002a:fixme:adsldp:sysinfo_get_UserName 0000000000021670,000000000022F0C8: stub
+002a:fixme:advapi:LsaOpenPolicy ((null),0x22f980,0x00000001,0x22f950) stub
+002a:fixme:security:GetWindowsAccountDomainSid (000000000022F6D0 000000000002B318 000000000022F6CC): semi-stub
+002a:fixme:advapi:LsaClose (0xcafe) stub
+002a:fixme:advapi:LsaOpenPolicy ((null),0x22f980,0x00000001,0x22f950) stub
+002a:fixme:security:GetWindowsAccountDomainSid (000000000022F6D0 000000000002B318 000000000022F6CC): semi-stub
+002a:fixme:advapi:LsaClose (0xcafe) stub
+002a:fixme:adsldp:sysinfo_get_UserName 0000000000021670,000000000022FB48: stub
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so cred && touch cred.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+002e:fixme:cred:CredReadW unhandled type -1
+002e:fixme:cred:CredReadW unhandled flags 0xdeadbeef
+002e:err:cred:CredWriteW bad username L"winetest"
+002e:err:cred:CredWriteW bad username (null)
+002e:err:cred:CredWriteW bad username (null)
+002e:fixme:cred:CredDeleteW unhandled type -1
+002e:fixme:cred:CredDeleteW unhandled flags 0xdeadbeef
+002e:fixme:cred:CredReadDomainCredentialsW (0x1b1d0, 0x0, 0x22fa50, 0x22f908) stub
+002e:fixme:cred:CredReadDomainCredentialsW (0x1b1d0, 0x0, 0x22fa50, 0x22f908) stub
+002e:fixme:cred:CredReadDomainCredentialsW (0x1b3c0, 0x0, 0x22fa50, 0x22f908) stub
+cred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping
+002e:fixme:cred:CredIsMarshaledCredentialW BinaryBlobCredential not checked
+002e:fixme:cred:CredIsMarshaledCredentialW BinaryBlobCredential not checked
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so crypt && touch crypt.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so crypt_lmhash && touch crypt_lmhash.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so crypt_md4 && touch crypt_md4.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so crypt_md5 && touch crypt_md5.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so crypt_sha && touch crypt_sha.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so eventlog && touch eventlog.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+0046:fixme:advapi:CloseEventLog (0x0) stub
+0046:fixme:advapi:CloseEventLog (0x0) stub
+0046:fixme:advapi:OpenEventLogW ((null),(null)) stub
+0046:fixme:advapi:OpenEventLogW (L"IDontExist",(null)) stub
+0046:fixme:advapi:OpenEventLogW (L"IDontExist",L"deadbeef") stub
+0046:fixme:advapi:OpenEventLogW Remote server not supported
+0046:fixme:advapi:OpenEventLogW ((null),L"deadbeef") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW (L"",L"Application") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:GetEventLogInformation (0x0, 1, 0x0, 0, 0x0) stub
+0046:fixme:advapi:GetEventLogInformation (0x0, 0, 0x0, 0, 0x0) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:GetEventLogInformation (0xcafe4242, 0, 0x0, 0, 0x0) stub
+0046:fixme:advapi:GetEventLogInformation (0xcafe4242, 0, 0x0, 0, 0x22fb40) stub
+0046:fixme:advapi:GetEventLogInformation (0xcafe4242, 0, 0x22fb59, 0, 0x0) stub
+0046:fixme:advapi:GetEventLogInformation (0xcafe4242, 0, 0x22fb59, 0, 0x22fb40) stub
+0046:fixme:advapi:GetEventLogInformation (0xcafe4242, 0, 0x22fb59, 8, 0x22fb40) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0x0,0x0) stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0x0,0x22fb40) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x0) stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fb40) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,L"backup.evt") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenBackupEventLogW ((null),L"backup.evt") stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0x0,0x22fb40) stub
+0046:fixme:advapi:CloseEventLog (0x0) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0x0,0x0) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0x0,0x22fb40) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x0) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fb40) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,L"backup.evt") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenBackupEventLogW ((null),L"backup.evt") stub
+0046:fixme:advapi:GetOldestEventLogRecord (0x0,0x22fb40) stub
+0046:fixme:advapi:CloseEventLog (0x0) stub
+0046:fixme:advapi:BackupEventLogW (0x0,(null)) stub
+0046:fixme:advapi:BackupEventLogW (0x0,L"backup.evt") stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,(null)) stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,L"backup.evt") stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,L"backup.evt") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenBackupEventLogW ((null),L"backup.evt") stub
+0046:fixme:advapi:BackupEventLogW (0x0,L"backup2.evt") stub
+0046:fixme:advapi:CloseEventLog (0x0) stub
+0046:fixme:advapi:OpenBackupEventLogW ((null),(null)) stub
+0046:fixme:advapi:OpenBackupEventLogW ((null),L"idontexist.evt") stub
+0046:fixme:advapi:OpenBackupEventLogW (L"IDontExist",(null)) stub
+0046:fixme:advapi:OpenBackupEventLogW (L"IDontExist",L"idontexist.evt") stub
+0046:fixme:advapi:OpenBackupEventLogW Remote server not supported
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,L"backup.evt") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+eventlog.c:546: Tests skipped: We don't have a backup eventlog to work with
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000000,0x00000000,0x0,0x00000000,0x0,0x0) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000000,0x00000000,0x0,0x00000000,0x22fa88,0x0) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000000,0x00000000,0x0,0x00000000,0x0,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000000,0x00000000,0x0,0x00000000,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000005,0x00000000,0x0,0x00000000,0x0,0x0) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000005,0x00000000,0x0,0x00000000,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000005,0x00000000,0x0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0x0,0x00000005,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x00000000,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x00000001,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x00000002,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x0000000d,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x0000000e,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x00000007,0x00000000,0x1b3d0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa84) stub
+eventlog.c:479: Tests skipped: No records in the 'Application' log
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:ClearEventLogW (0x0,(null)) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Application") stub
+0046:fixme:advapi:BackupEventLogW (0xcafe4242,L"backup.evt") stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:ClearEventLogW (0x0,L"backup.evt") stub
+0046:fixme:advapi:OpenBackupEventLogW ((null),L"backup.evt") stub
+0046:fixme:advapi:ClearEventLogW (0x0,L"backup.evt") stub
+0046:fixme:advapi:ClearEventLogW (0x0,L"backup2.evt") stub
+0046:fixme:advapi:ClearEventLogW (0x0,(null)) stub
+0046:fixme:advapi:CloseEventLog (0x0) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Wine") stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0020,0x0000,0x00000000,0x0,0x0000,0x00000000,0x0,0x0): stub
+0046:fixme:advapi:ReadEventLogA (0xcafe4242,0x00000005,0x00000000,0x1b1e0,0x00000038,0x22fa88,0x22fa8c) stub
+0046:fixme:advapi:ClearEventLogW (0xcafe4242,(null)) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:RegisterEventSourceA ((null),"Wine"): stub
+0046:fixme:advapi:RegisterEventSourceW (L"",L"Wine"): stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0004,0x0001,0x00000001,0x0,0x0001,0x00000000,0x7f7ff72beb00,0x0): stub
+0046:fixme:advapi:ReportEventW (0xcafe4242,0x0004,0x0001,0x00000001,0x0,0x0001,0x00000000,0x1b1e0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:DeregisterEventSource (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"WineSrc") stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0002,0x0001,0x00000002,0x0,0x0000,0x00000000,0x0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:RegisterEventSourceA ((null),"WineSrc1"): stub
+0046:fixme:advapi:RegisterEventSourceW (L"",L"WineSrc1"): stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0010,0x0001,0x00000003,0x0,0x0002,0x00000000,0x7f7ff72beaf0,0x0): stub
+0046:fixme:advapi:ReportEventW (0xcafe4242,0x0010,0x0001,0x00000003,0x0,0x0002,0x00000000,0x1b1e0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:DeregisterEventSource (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"WineSrc20") stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0001,0x0001,0x00000004,0x0,0x0000,0x00000000,0x0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:RegisterEventSourceA ((null),"WineSrc300"): stub
+0046:fixme:advapi:RegisterEventSourceW (L"",L"WineSrc300"): stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0002,0x0001,0x00000005,0x0,0x0001,0x00000000,0x7f7ff72beb00,0x0): stub
+0046:fixme:advapi:ReportEventW (0xcafe4242,0x0002,0x0001,0x00000005,0x0,0x0001,0x00000000,0x1b1e0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:DeregisterEventSource (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Wine") stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0000,0x0002,0x00000006,0x1b3d0,0x0002,0x00000000,0x7f7ff72beaf0,0x0): stub
+0046:fixme:advapi:ReportEventW (0xcafe4242,0x0000,0x0002,0x00000006,0x1b3d0,0x0002,0x00000000,0x1b1e0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:RegisterEventSourceA ((null),"WineSrc"): stub
+0046:fixme:advapi:RegisterEventSourceW (L"",L"WineSrc"): stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0010,0x0002,0x00000007,0x1b3d0,0x0000,0x00000000,0x0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:DeregisterEventSource (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"WineSrc1") stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0008,0x0002,0x00000008,0x1b3d0,0x0002,0x00000000,0x7f7ff72beaf0,0x0): stub
+0046:fixme:advapi:ReportEventW (0xcafe4242,0x0008,0x0002,0x00000008,0x1b3d0,0x0002,0x00000000,0x1b1e0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:RegisterEventSourceA ((null),"WineSrc20"): stub
+0046:fixme:advapi:RegisterEventSourceW (L"",L"WineSrc20"): stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0002,0x0002,0x00000009,0x1b3d0,0x0000,0x00000000,0x0,0x0): stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:DeregisterEventSource (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"WineSrc300") stub
+0046:fixme:advapi:ReportEventA (0xcafe4242,0x0001,0x0002,0x0000000a,0x1b3d0,0x0001,0x00000000,0x7f7ff72beb00,0x0): stub
+0046:fixme:advapi:ReportEventW (0xcafe4242,0x0001,0x0002,0x0000000a,0x1b3d0,0x0001,0x00000000,0x1b1e0,0x0): stub
+0046:err:eventlog:ReportEventW L"First string"
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:GetOldestEventLogRecord (0xcafe4242,0x22fa8c) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+0046:fixme:advapi:OpenEventLogW ((null),L"Wine") stub
+0046:fixme:advapi:GetNumberOfEventLogRecords (0xcafe4242,0x22fa80) stub
+0046:fixme:advapi:CloseEventLog (0xcafe4242) stub
+eventlog.c:889: Tests skipped: No events were written to the eventlog
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "this name is too long", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x0) stub
+0046:fixme:advapi:StartTraceA (0x0, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:StartTraceA (0x22fb40, "wine", 0x1b1e0) stub
+0046:fixme:advapi:ControlTraceA (cafe4242, "wine", 0x1b1e0, 1) stub
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so lsa && touch lsa.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+004a:fixme:advapi:LsaOpenPolicy ((null),0x22f960,0x000f0fff,0x22f930) stub
+004a:fixme:security:GetWindowsAccountDomainSid (000000000022F690 0000000000019078 000000000022F68C): semi-stub
+004a:fixme:advapi:LsaEnumerateAccountRights (0xcafe,0x22fa20,0x22f990,0x22f92c) stub
+004a:fixme:advapi:LsaClose (0xcafe) stub
+004a:fixme:advapi:LsaOpenPolicy ((null),0x22fb10,0x000f0fff,0x22fae8) stub
+004a:fixme:advapi:LsaClose (0xcafe) stub
+004a:fixme:advapi:LsaOpenPolicy ((null),0x22fb40,0x00000800,0x22fb00) stub
+004a:fixme:advapi:LsaClose (0xcafe) stub
+004a:fixme:advapi:LsaOpenPolicy ((null),0x22fb40,0x00000800,0x22fb08) stub
+/usr/pkgsrc/wip/wine64-dev/work/wine-4.13/tools/runtest -q -P wine -T ../../.. -M advapi32.dll -p advapi32_test.exe.so registry && touch registry.ok
+/usr/pkg/emul/netbsd32/lib/wine/libwine.so.1: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/ntdll.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernel32.dll.so: text relocations
+/usr/pkg/emul/netbsd32/lib/wine/wine/kernelbase.dll.so: text relocations
+004e:fixme:reg:RegQueryInfoKeyA security argument not supported.
+004e:fixme:reg:RegQueryInfoKeyW security argument not supported.
+004e:fixme:reg:RegQueryInfoKeyA security argument not supported.
+004e:fixme:reg:RegQueryInfoKeyW security argument not supported.
+004e:fixme:reg:RegQueryInfoKeyA security argument not supported.
+004e:fixme:reg:RegQueryInfoKeyW security argument not supported.
+registry.c:2850: Tests skipped: HKCR key merging not supported
+registry.c:3146: Tests skipped: HKCR key merging not supported
+004e:fixme:winspool:PerfOpen (null): stub
+004e:fixme:winspool:PerfCollect L"Global", 0x22ead8, 0x22eabc, 0x22eac0: stub
+004e:fixme:winspool:PerfClose stub
+004e:fixme:winspool:PerfOpen (null): stub
+004e:fixme:winspool:PerfCollect L"invalid counter name", 0x22ead8, 0x22eabc, 0x22eac0: stub
+004e:fixme:winspool:PerfClose stub
+registry.c:4032: Test failed: [ 9] expected 1168, got 2
+registry.c:4032: Test failed: [10] expected 1814, got 2
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/wine64-dev/work/wine-4.13/wine64/dlls/advapi32/tests
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/wine64-dev/work/wine-4.13/wine64
+
+* Investigate text relocations

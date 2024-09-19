@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2004/03/20 07:52:34 mpasternak Exp $
+
+--- src/Makefile.in.orig	2003-10-31 00:02:38.000000000 +0100
++++ src/Makefile.in
+@@ -142,7 +142,7 @@ tleenx2_SOURCES = \
+ 
+ 
+ tleenx2_LDADD = @PACKAGE_LIBS@  ../jabby/libjabby.a ../iksemel/libiksemel.a \
+-	/usr/X11R6/lib/libXss.a
++	${X11BASE}/lib/libXss.a
+ 
+ tleenx2_LDFLAGS = `pkg-config --libs gthread-2.0`
+ tleenx2_CFLAGS = -I../jabby -I../iksemel
+@@ -166,7 +166,7 @@ am_tleenx2_OBJECTS = tleenx2-main.$(OBJE
+ 	tleenx2-gg.$(OBJEXT) tleenx2-xmms-info.$(OBJEXT)
+ tleenx2_OBJECTS = $(am_tleenx2_OBJECTS)
+ tleenx2_DEPENDENCIES = ../jabby/libjabby.a ../iksemel/libiksemel.a \
+-	/usr/X11R6/lib/libXss.a
++	${X11BASE}/lib/libXss.a
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp

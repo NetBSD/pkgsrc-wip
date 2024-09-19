@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/17 16:32:20 jihbed Exp $
+${PYSITELIB}/Documentation.ipynb
+${PYSITELIB}/Intro to lifelines.ipynb
+${PYSITELIB}/LICENSE
+${PYSITELIB}/MANIFEST.in
+${PYSITELIB}/README.md
+${PYSITELIB}/Shopify Shops.ipynb
+${PYSITELIB}/Survival Analysis intro.ipynb
+${PYSITELIB}/Survival Analysis of Google Terms.ipynb
+${PYSITELIB}/Tutorial and Examples-Copy0.ipynb
+${PYSITELIB}/datasets/canadian_senators.csv
+${PYSITELIB}/datasets/dd.csv
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/lifelines/__init__.py
+${PYSITELIB}/lifelines/__init__.pyc
+${PYSITELIB}/lifelines/__init__.pyo
+${PYSITELIB}/lifelines/estimation.py
+${PYSITELIB}/lifelines/estimation.pyc
+${PYSITELIB}/lifelines/estimation.pyo
+${PYSITELIB}/lifelines/generate_datasets.py
+${PYSITELIB}/lifelines/generate_datasets.pyc
+${PYSITELIB}/lifelines/generate_datasets.pyo
+${PYSITELIB}/lifelines/plotting.py
+${PYSITELIB}/lifelines/plotting.pyc
+${PYSITELIB}/lifelines/plotting.pyo
+${PYSITELIB}/lifelines/scratch.py
+${PYSITELIB}/lifelines/scratch.pyc
+${PYSITELIB}/lifelines/scratch.pyo
+${PYSITELIB}/lifelines/statistics.py
+${PYSITELIB}/lifelines/statistics.pyc
+${PYSITELIB}/lifelines/statistics.pyo
+${PYSITELIB}/lifelines/utils.py
+${PYSITELIB}/lifelines/utils.pyc
+${PYSITELIB}/lifelines/utils.pyo
+${PYSITELIB}/styles/matplotlibrc

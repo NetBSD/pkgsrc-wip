@@ -1,0 +1,12 @@
+Ditz Commander is a GUI frontend for ditz (light weight distributed
+issue tracker).
+
+Features
+    * Integrate HTML browser and terminal in a single UI window
+    * Short cut to ditz commands like "add" , "edit" , "comment" and
+      "html"
+    * Auto determine the Issue ID of loading page for ditz commands
+      like "edit" and "comment". No need to copy & page issue ID from
+      HTML page.
+    * A single "refresh" button to generate HTML document and refresh
+      browser content

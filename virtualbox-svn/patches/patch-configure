@@ -1,0 +1,94 @@
+$NetBSD$
+
+--- configure.orig	2016-08-05 16:04:02.000000000 +0000
++++ configure
+@@ -154,6 +154,7 @@ INCVPX=""
+ LIBVPX="-lvpx"
+ PKGCONFIG="`which_wrapper pkg-config`"
+ PYTHONDIR="/usr /usr/local"
++PYTHONLINKEXTRA=""
+ QT4DIR="/usr/lib/qt4 /usr/share/qt4 /usr/lib64/qt4 /usr /usr/local"
+ QT4DIR_PKGCONFIG=1
+ QT5DIR="/usr/lib/qt5 /usr/share/qt5 /usr/lib64/qt5 /usr /usr/local"
+@@ -2126,8 +2127,8 @@ EOF
+         echo "compiling the following source file:" >> $LOG
+         cat $ODIR.tmp_src.cc >> $LOG
+         echo "using the following command line:" >> $LOG
+-        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so" >> $LOG
+-        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so >> $LOG 2>&1
++        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so" $PYTHONLINKEXTRA >> $LOG
++        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so $PYTHONLINKEXTRA >> $LOG 2>&1
+         if [ $? -eq 0 ]; then
+           found=1
+           break
+@@ -2605,6 +2606,70 @@ for option in "$@"; do
+       INCCRYPTO="-I${OPENSSLDIR}/include"
+       LIBCRYPTO="${OPENSSLDIR}/lib/libcrypto.a ${OPENSSLDIR}/lib/libssl.a"
+       ;;
++    --with-openssl-incset=*)
++      OPENSSLINCSET=`echo $option | cut -d'=' -f2`
++      INCCRYPTO="${OPENSSLINCSET}"
++      ;;
++    --with-openssl-libset=*)
++      OPENSSLLIBSET=`echo $option | cut -d'=' -f2`
++      LIBCRYPTO="${OPENSSLLIBSET}"
++      ;;
++    --with-curl-incset=*)
++      CURLINCSET=`echo $option | cut -d'=' -f2`
++      INCCURL="${CURLINCSET}"
++      ;;
++    --with-curl-libset=*)
++      CURLLIBSET=`echo $option | cut -d'=' -f2`
++      LIBCURL="${CURLLIBSET}"
++      ;;
++    --with-zlib-incset=*)
++      ZINCSET=`echo $option | cut -d'=' -f2`
++      INCZ="${ZINCSET}"
++      ;;
++    --with-zlib-libset=*)
++      ZLIBSET=`echo $option | cut -d'=' -f2`
++      LIBZ="${ZLIBSET}"
++      ;;
++    --with-x11-incset=*)
++      X11INCSET=`echo $option | cut -d'=' -f2`
++      INCX11="${X11INCSET}"
++      ;;
++    --with-x11-libset=*)
++      X11LIBSET=`echo $option | cut -d'=' -f2`
++      LIBX11="${X11LIBSET}"
++      ;;
++    --with-pulse-incset=*)
++      PULSEINCSET=`echo $option | cut -d'=' -f2`
++      INCPULSE="${PULSEINCSET}"
++      ;;
++    --with-pulse-libset=*)
++      PULSELIBSET=`echo $option | cut -d'=' -f2`
++      LIBPULSE="${PULSELIBSET}"
++      ;;
++    --with-png-incset=*)
++      PNGINCSET=`echo $option | cut -d'=' -f2`
++      INCPNG="${PNGINCSET}"
++      ;;
++    --with-png-libset=*)
++      PNGLIBSET=`echo $option | cut -d'=' -f2`
++      LIBPNG="${PNGLIBSET}"
++      ;;
++    --with-vpx-incset=*)
++      VPXINCSET=`echo $option | cut -d'=' -f2`
++      INCVPX="${VPXINCSET}"
++      ;;
++    --with-vpx-libset=*)
++      VPXLIBSET=`echo $option | cut -d'=' -f2`
++      LIBVPX="${VPXLIBSET}"
++      ;;
++    --with-python-dirset=*)
++      PYTHONDIRSET=`echo $option | cut -d'=' -f2`
++      PYTHONDIR="${PYTHONDIRSET}"
++      ;;
++    --with-python-linkextraset=*)
++      PYTHONLINKEXTRASET=`echo $option | cut -d'=' -f2`
++      PYTHONLINKEXTRA="${PYTHONLINKEXTRASET}"
++      ;;
+     --with-ow-dir=*)
+       WATCOM=`echo $option | cut -d'=' -f2`
+       ;;

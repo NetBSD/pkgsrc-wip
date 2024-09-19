@@ -1,0 +1,17 @@
+$NetBSD: patch-ap,v 1.1 2003/09/30 08:59:20 hfath Exp $
+
+--- pty.c.orig	2002-04-10 22:09:33.000000000 +0200
++++ pty.c
+@@ -35,6 +35,12 @@
+ #define PTY01 "0123456789abcdefghijklmnopqrstuv"
+ #endif
+ 
++#ifdef __NetBSD__
++#define PTY00 "/dev/ptyXX"
++#define PTY10 "p"
++#define PTY01 "0123456789abcdefghijklmnopqrstuvwxyz"
++#endif
++
+ int getPtyMaster (char *tty10, char *tty01)
+ {
+     char *p10;

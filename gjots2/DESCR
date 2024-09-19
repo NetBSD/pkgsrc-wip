@@ -1,0 +1,12 @@
+gjots2 is a fairly simple jotter application for your desktop.
+
+It displays your data organised in a tree with each leaf being your text.
+Getting data into gjots2 is fairly easy - you can type it in, directly import
+kjots files, cut and paste text or use an editor to convert other text files
+to the simple gjots2 format (see below for details). You can also convert an
+existing DOCBOOK file into gjots2 format with docbook2gjots(1).
+
+gjots2 files can be simply converted into HTML using gjots2html(1) or into
+DOCBOOK with gjots2docbook(1) Sensitive data can be encrypted by ccrypt(1),
+openssl(1) or gpg(1) simply by saving with an appropriate file suffix and
+providing a password.

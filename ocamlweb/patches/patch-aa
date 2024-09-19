@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/07 14:12:27 jihbed Exp $
+
+--- Makefile.in.orig	2005-11-04 13:30:08.000000000 +0000
++++ Makefile.in	2009-08-01 15:34:10.000000000 +0000
+@@ -1,5 +1,6 @@
+ 
+ # where to install the binaries
++DESTDIR=
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ BINDIR=@bindir@
+@@ -13,7 +14,7 @@
+ 
+ # command to update TeX' kpathsea database
+ MKTEXLSR = @MKTEXLSR@
+-UPDATETEX = $(MKTEXLSR) /usr/share/texmf /var/spool/texmf $(BASETEXDIR) > /dev/null
++UPDATETEX = $(MKTEXLSR) /usr/pkg/share/texmf $(BASETEXDIR) > /dev/null
+ 
+ # Version
+ # ATTENTION A BIEN UTILISER UN NUMERO DE VERSION DE LA FORME X.YY
+@@ -78,16 +79,14 @@
+ 	echo "let date = \""`date`"\"" >> version.ml
+ 
+ install-indep:
+-	mkdir -p $(BINDIR)
+-	mkdir -p $(MANDIR)/man1
+-	cp doc/ocamlweb.1 $(MANDIR)/man1
+-	mkdir -p $(TEXDIR)
+-	cp ocamlweb.sty $(TEXDIR)	
++	cp doc/ocamlweb.1 $(DESTDIR)$(MANDIR)/man1
++	mkdir -p $(DESTDIR)$(TEXDIR)
++	cp ocamlweb.sty $(DESTDIR)$(TEXDIR)	
+ 	$(UPDATETEX)
+ 
+ install: install-indep
+ 	if test @OCAMLBEST@ = opt ; then \
+-		cp ocamlweb $(BINDIR) ; \
++		cp ocamlweb $(DESTDIR)$(BINDIR) ; \
+ 	else \
+ 		cp ocamlweb.byte $(BINDIR)/ocamlweb ; \
+ 	fi

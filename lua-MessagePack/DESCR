@@ -1,0 +1,5 @@
+lua-MessagePack a pure Lua implementation of MessagePack data format
+
+MessagePack is an efficient binary serialization format.
+It lets you exchange data among multiple languages like JSON
+but it's faster and smaller.

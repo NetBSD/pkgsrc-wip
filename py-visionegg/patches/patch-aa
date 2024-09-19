@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+
+--- setup.py.orig	Fri Sep 19 05:56:38 2003
++++ setup.py	Fri Jan  2 00:01:12 2004
+@@ -146,7 +146,7 @@
+                                  ))
+     
+ data_files = []
+-data_base_dir = 'VisionEgg' # This becomes VISIONEGG_SYSTEM_DIR
++data_base_dir = 'share/VisionEgg' + "-" + os.environ.get("PYVERSSUFFIX", "unknown") # This becomes VISIONEGG_SYSTEM_DIR
+ data_dir = os.path.join(data_base_dir,'data')
+ test_dir = os.path.join(data_base_dir,'test')
+ data_files.append( (data_dir,[os.path.join('data','water.mov')]) )

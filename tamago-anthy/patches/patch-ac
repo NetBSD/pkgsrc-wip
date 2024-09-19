@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.3 2013/02/12 06:45:09 makoto Exp $
+
+ make-local-hook is used only before emacs-21.
+ last-command-char ->  last-command-event
+
+--- egg/egg.el.orig	2013-02-12 15:16:39.000000000 +0900
++++ egg.el	2013-02-12 15:22:54.000000000 +0900
+@@ -169,7 +169,9 @@
+       (setq egg-modeless-mode t))
+     (setq inactivate-current-input-method-function 'egg-mode)
+     (setq describe-current-input-method-function 'egg-help)
+-    (make-local-hook 'input-method-activate-hook)
++    (if (and (boundp 'emacs-major-version)
++	     (< emacs-major-version 21))
++	(make-local-hook 'input-method-activate-hook))
+     (add-hook 'input-method-activate-hook 'its-set-mode-line-title nil t)
+     (if (eq (selected-window) (minibuffer-window))
+ 	(add-hook 'minibuffer-exit-hook 'egg-exit-from-minibuffer))
+@@ -184,7 +186,7 @@
+ 
+ (defun egg-self-insert-char ()
+   (interactive)
+-  (its-start last-command-char (and (eq last-command 'egg-use-context)
++  (its-start last-command-event (and (eq last-command 'egg-use-context)
+ 				    egg-context)))
+ 
+ (defun egg-remove-all-text-properties (from to &optional object)

@@ -1,0 +1,5 @@
+This linux-hotplug package provides scripts to let you plug in new
+devices and have them autoconfigure themselves under Linux. Hotplug
+supports USB and PCI (Cardbus) devices, some common network
+interfaces,  IEEE 1394 (Firewire/i.Link) support, USB firmware,
+docking stations, etc.

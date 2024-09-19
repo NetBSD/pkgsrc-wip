@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/07/17 18:11:36 kheinz Exp $
+
+--- bin/mj_queueserv.orig	2005-07-11 17:55:41.000000000 +0200
++++ bin/mj_queueserv
+@@ -4,6 +4,8 @@ BEGIN {
+   $::TMPDIR = "/tmp/mj";
+   $::UID    = "baduid";
+   $::GID    = "badgid";
++$::UID    =getpwnam($::UID);
++$::GID    =getgrnam($::GID);
+   $::TIMEOUT = 30;
+   $::CONCURRENCY = 5;
+   $::SIG_CHLD_IGNORE = 1;

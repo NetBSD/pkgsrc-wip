@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
+
+RMD160 (shoutcast-1-9-2-linux-glibc6.tar.gz) = 415db648658899460dadc775b85cc1e2ac4eaa54
+Size (shoutcast-1-9-2-linux-glibc6.tar.gz) = 157976 bytes
+SHA1 (patch-aa) = 5fbdfe3bf865e2c3ef3dc6e18bdc6d1a31f9fddf

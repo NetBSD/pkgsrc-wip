@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/04/02 03:51:56 netcap Exp $
+
+--- src/playlist.c.orig	2007-10-24 12:06:42.000000000 +0200
++++ src/playlist.c
+@@ -21,6 +21,7 @@
+ 
+ #include "playlist.h"
+ #include "globals.h"
++#include "portability.h"
+ 
+ 
+ int expand(struct playlist * list) {

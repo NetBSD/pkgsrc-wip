@@ -1,0 +1,15 @@
+Seagull is a free, Open Source (GPL) multi-protocol traffic generator
+test tool. Primarily aimed at IMS (3GPP, TISPAN, CableLabs) protocols
+(and thus being the perfect complement to SIPp for IMS testing),
+Seagull is a powerful traffic generator for functional, load,
+endurance, stress and performance/benchmark tests for almost any
+kind of protocol.
+
+In addition, its openness allows to add the support of a brand new
+protocol in less than 2 hours - with no programming knowledge. For
+that, Seagull comes with several protocol families embedded in the
+source code:
+
+    Binary/TLV (Diameter, Radius and many 3GPP and IETF protocols)
+    External library (TCAP, SCTP)
+    Text (XCAP, HTTP, H248 ASCII)

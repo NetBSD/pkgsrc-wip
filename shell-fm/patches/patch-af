@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/04/02 03:51:56 netcap Exp $
+
+--- src/tag.c.orig	2007-10-24 12:06:42.000000000 +0200
++++ src/tag.c
+@@ -28,6 +28,7 @@
+ #include "readline.h"
+ #include "tag.h"
+ #include "xmlrpc.h"
++#include "portability.h"
+ 
+ char ** popular = NULL;
+ 

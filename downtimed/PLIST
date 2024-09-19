@@ -1,0 +1,7 @@
+@comment $NetBSD$
+@comment $Id: PLIST,v 1.2 2014/10/31 12:45:46 bartoszkuzma Exp $
+bin/downtimes
+man/man1/downtimes.1
+man/man8/downtimed.8
+sbin/downtimed
+share/examples/rc.d/downtimed

@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2015/03/22 00:28:40 tnn2 Exp $
+
+To setup a Debian "stretch" chroot on NetBSD/amd64 system:
+
+host# PATH=${PATH}:${PREFIX}/gnu/bin debootstrap --arch=amd64 stretch /emul/stretch
+host# cp ${PREFIX}/share/debootstrap/libfakesyscall-amd64.so /emul/stretch
+host# mount -t procfs -o linux proc /emul/stretch/proc
+host# chroot /emul/stretch /bin/bash
+debian# export LD_PRELOAD=/libfakesyscall-amd64.so
+debian# apt-get moo
+
+===========================================================================

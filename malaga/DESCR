@@ -1,0 +1,9 @@
+This is Malaga, a software package for the development and application
+of grammars that are used for the analysis of words and sentences
+of natural languages. It is a language-independent system that
+offers a programming language for the modelling of the language-dependent
+grammatical information. This language is also called Malaga.
+
+Malaga is based on the grammatical theory of the "Left Associative
+Grammar" (LAG), developed by Roland Hausser, professor for
+Computational Linguistics at University of Erlangen, Germany.

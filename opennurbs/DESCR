@@ -1,0 +1,3 @@
+openNURBS is an open source toolkit for reading and writing models in the 3DM
+format. This package includes the C++ source code libraries to read and write
+the file format.

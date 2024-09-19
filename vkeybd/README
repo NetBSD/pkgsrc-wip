@@ -1,0 +1,13 @@
+To get the right raw midi output device in NetBSD, this must be set during make.
+Use the midiplay "-l" option  to get a list of possible devices. 
+
+Example:
+
+midiplay -l
+0: PC speaker
+1: DS-1 integrated Yamaha OPL3
+2: Yamaha DS-1 MIDI UART
+
+make R=1
+
+make install

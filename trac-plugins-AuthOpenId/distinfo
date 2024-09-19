@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2011/08/10 13:41:34 rsmarples Exp $
+
+RMD160 (TracAuthOpenId-0.3.4.tar.gz) = a0e017c6189974e43e69896fe675fc27151402c6
+Size (TracAuthOpenId-0.3.4.tar.gz) = 28276 bytes
+SHA1 (patch-aa) = e2a5360a40c33d8f9c58f016fc0f82cc9945443a

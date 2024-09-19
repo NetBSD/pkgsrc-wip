@@ -1,0 +1,21 @@
+#!/bin/sh
+
+
+##########################################################################
+#   Function description:
+#       Pause until user presses return
+##########################################################################
+
+pause()
+{
+    local junk
+    
+    printf "Press return to continue..."
+    read junk
+}
+
+for prog in /usr/local/bin/anvi-*; do
+    echo $prog
+    $prog
+    echo '================================='
+done

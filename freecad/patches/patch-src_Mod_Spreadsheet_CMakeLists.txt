@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/Mod/Spreadsheet/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Spreadsheet/CMakeLists.txt
+@@ -10,5 +10,5 @@ INSTALL(
+         InitGui.py
+         TestSpreadsheet.py
+     DESTINATION
+-        Mod/Spreadsheet
++        freecad/Mod/Spreadsheet
+ )

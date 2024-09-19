@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/08 03:55:32 othyro Exp $
+bin/swetest
+lib/libswe.a
+share/doc/swisseph/swephprg.htm
+share/doc/swisseph/swephprg.pdf
+share/doc/swisseph/swisseph.htm
+share/doc/swisseph/swisseph.pdf

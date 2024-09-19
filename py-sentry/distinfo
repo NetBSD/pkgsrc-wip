@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/14 21:18:37 jihbed Exp $
+
+RMD160 (sentry-8.22.0.tar.gz) = afd13782ed654d2d4967dc11054d1b5bee53506d
+SHA512 (sentry-8.22.0.tar.gz) = 18c43b0b685310c41546730db8320afdbb0cda11273cf6972927f89c215a54f433647f71e8cab2d0d571bb8246f51000534de02d171df324591bdd5797a01d59
+Size (sentry-8.22.0.tar.gz) = 18415809 bytes

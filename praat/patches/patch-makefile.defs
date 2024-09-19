@@ -1,0 +1,25 @@
+$NetBSD$
+
+pkgsrc Makefile
+
+--- makefile.defs.orig	2016-04-17 12:02:57.000000000 +0000
++++ makefile.defs
+@@ -0,0 +1,18 @@
++# NetBSD flags
++
++COMPILEFLAGS += -D_FILE_OFFSET_BITS=64 -DHAVE_PULSEAUDIO -DUNIX -Dlinux `pkg-config --cflags gtk+-2.0` -Werror=missing-prototypes -Werror=implicit -Wreturn-type -Wunused -Wunused-parameter -Wuninitialized -O1 -g1 -pthread
++
++CXXFLAGS += -std=c++11 $(COMPILEFLAGS) -Wshadow
++
++CFLAGS += -std=gnu99 $(COMPILEFLAGS)
++
++LINK = $(CXX)
++
++EXECUTABLE = praat
++
++LIBS = `pkg-config --libs gtk+-2.0` -lm -lpthread -lpulse -lossaudio
++
++AR = ar
++RANLIB = ls
++ICON =
++MAIN_ICON =

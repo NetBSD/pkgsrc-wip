@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD$
+The U-Boot tools mkimage, mkenvimage, dumpimage, fdtgrep, and netconsole
+have been installed. However, the loader itself still requires manual
+installation using target-dependent files in the work tree.
+===========================================================================

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/06/14 01:32:24 mjasm Exp $
+
+--- src/typhoon/configure.orig	2002-09-25 16:48:36.000000000 -0400
++++ src/typhoon/configure
+@@ -15,7 +15,7 @@ echo Checking for gcc
+ # typhoon uses a mixture of POSIX, BSD and System V interfaces
+ #
+ 
+-if test `uname -s` = 'FreeBSD'  ; then
++if test `uname -s` = 'NetBSD'  ; then
+         STANDARDS="-D_BSD_SOURCE -D_SVID_SOURCE"
+ else
+         STANDARDS="-D_POSIX_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE"

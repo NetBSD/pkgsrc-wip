@@ -1,0 +1,2 @@
+Pyecm is a Python program to factor numbers using the Elliptic Curve Method(ECM)
+It is relatively fast in that it can quickly factors numbers up to 50 digits.

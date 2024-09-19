@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- Makefile.orig	2020-02-13 14:26:47.000000000 +0000
++++ Makefile
+@@ -23,9 +23,10 @@ ${PROG}: ${SRC}
+ 	${CC} ${CFLAGS} ${PTHREADFLAGS} ${INCLUDEFLAGS} -o ${PROG} $< ${LINKFLAGS}
+ 
+ install: ${PROG}
+-	${INSTALL} -c -m 555 -o root -g bin ${PROG} ${BINDIR}
+-	test -d ${MAN1DIR} || ${INSTALL} -d -o root ${MAN1DIR}
+-	${INSTALL} -c -m 444 -o root -g bin ${MAN} ${MAN1DIR}
++	${INSTALL} -d ${DESTDIR}/${BINDIR}
++	${INSTALL} -c -m 555 ${PROG} ${DESTDIR}/${BINDIR}
++	${INSTALL} -d ${DESTDIR}/${MAN1DIR}
++	${INSTALL} -c -m 444 ${MAN} ${DESTDIR}/${MAN1DIR}
+ 
+ clean:
+ 	-@rm -f ${PROG} *~ core *.core

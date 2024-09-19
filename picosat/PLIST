@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2 2013/09/21 15:51:50 jihbed Exp $
+bin/picogcnf
+bin/picomcs
+bin/picomus
+bin/picosat
+include/picosat/picosat.h

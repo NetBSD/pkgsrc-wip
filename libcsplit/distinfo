@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2014/02/03 09:17:58 othyro Exp $
+
+RMD160 (libcsplit-alpha-20150101.tar.gz) = a67254da04ad72d555edd732e8f79fe2e46d455a
+SHA512 (libcsplit-alpha-20150101.tar.gz) = 6b8b33dd400cedc936cdc143f897b2d25fed693fed9c6c1dacd4fee69e00b1ecf74eaf84790fc6ec7a9a4ab0b8333b0de5cd17690c076b26c2d63f85da298f52
+Size (libcsplit-alpha-20150101.tar.gz) = 457334 bytes

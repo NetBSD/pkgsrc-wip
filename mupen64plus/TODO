@@ -1,0 +1,20 @@
+* Make this work with X11_TYPE=native. Works fine with modular-xorg.
+* GlideHQ plugin build fails with:
+
+    CXX _obj/GlideHQ/TxFilter.o
+../../src/GlideHQ/TxFilter.cpp: In member function 'boolean TxFilter::filter(uint8*, int, int, uint16, uint64, GHQTexInfo*)':
+../../src/GlideHQ/TxFilter.cpp:273:11: error: 'thread' is not a member of 'std'
+../../src/GlideHQ/TxFilter.cpp:273:24: error: 'thrd' was not declared in this scope
+../../src/GlideHQ/TxFilter.cpp:279:27: error: expected type-specifier
+../../src/GlideHQ/TxFilter.cpp:279:27: error: expected ';'
+../../src/GlideHQ/TxFilter.cpp:288:25: error: expected type-specifier
+../../src/GlideHQ/TxFilter.cpp:288:25: error: expected ';'
+/usr/pkgsrc/dev/wip/mupen64plus/work/.buildlink/include/boost/system/error_code.hpp: At global scope:
+/usr/pkgsrc/dev/wip/mupen64plus/work/.buildlink/include/boost/system/error_code.hpp:214:36: warning: 'boost::system::posix_category' defined but not used
+/usr/pkgsrc/dev/wip/mupen64plus/work/.buildlink/include/boost/system/error_code.hpp:215:36: warning: 'boost::system::errno_ecat' defined but not used
+/usr/pkgsrc/dev/wip/mupen64plus/work/.buildlink/include/boost/system/error_code.hpp:216:36: warning: 'boost::system::native_ecat' defined but not used
+make: *** [_obj/GlideHQ/TxFilter.o] Error 1
+make: Leaving directory `/usr/pkgsrc/dev/wip/mupen64plus/work/mupen64plus-bundle-src-2.0/source/mupen64plus-video-glide64mk2/projects/unix'
+*** Error code 2
+
+  It's disabled for now.

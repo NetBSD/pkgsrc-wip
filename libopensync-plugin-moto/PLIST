@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
+bin/mototool
+lib/opensync/python-plugins/motosync.py
+share/opensync/defaults/moto-sync

@@ -1,0 +1,8 @@
+Computer Modern Unicode fonts were converted from metafont sources
+using mftrace with autotrace backend and fontforge. Some characters
+in several fonts are copied from Blue Sky type 1 fonts released by
+AMS. Their main purpose is to create free good quality fonts for
+use in X applications supporting many languages. Currently the fonts
+contain glyphs from Latin (Metafont ec, tc, vnr), Cyrillic (lh),
+Greek (cbgreek when available) code sets and IPA extensions (from
+tipa).  Other alphabets are also welcome.

@@ -1,0 +1,15 @@
+GitLab is Open source software to collaborate on code.
+
+It manages Git repositories with fine grained access controls that keep your
+code secure. It can perform code reviews and enhance collaboration with merge
+requests.
+
+It has support for complete continuous integration (CI) and continuous
+deployment/delivery (CD) pipelines to build, test, and deploy applications.
+Each project can also have an issue tracker, issue board, and a wiki.
+
+Used by more than 100,000 organizations, GitLab is the most popular solution to
+manage Git repositories on-premises. It is completely free and open source (MIT
+Expat license).
+
+This package contains only the assets for GitLab.

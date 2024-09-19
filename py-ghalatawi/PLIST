@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:14:10 jihbed Exp $
+${PYSITELIB}/ghalatawi/__init__.py
+${PYSITELIB}/ghalatawi/__init__.pyc
+${PYSITELIB}/ghalatawi/__init__.pyo
+${PYSITELIB}/ghalatawi/ar_ghalat.py
+${PYSITELIB}/ghalatawi/ar_ghalat.pyc
+${PYSITELIB}/ghalatawi/ar_ghalat.pyo

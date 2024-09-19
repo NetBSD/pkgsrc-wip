@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/03 13:02:07 koifren Exp $
+
+RMD160 (oolite-1.65-data.tar.gz) = a537539decdb1057e37e1ebe38a03efe90cef57c
+Size (oolite-1.65-data.tar.gz) = 16815628 bytes
+RMD160 (oolite-1.65-src.tar.gz) = cfdd518283adcd4a1188c2d631d682dbd485ae10
+Size (oolite-1.65-src.tar.gz) = 1077489 bytes
+SHA1 (patch-aa) = b125d50369e177c9b00833a4df6382a44acea5a2

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 13:50:22 thomasklausner Exp $
+man/man1/pop3.proxy.1
+sbin/pop3.proxy

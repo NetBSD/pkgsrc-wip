@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- src/Mod/Fem/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Fem/CMakeLists.txt
+@@ -68,7 +68,7 @@ INSTALL(
+         _CommandFemSolverCalculix.py
+ 
+     DESTINATION
+-        Mod/Fem
++        freecad/Mod/Fem
+ )
+ 
+ INSTALL(
+@@ -86,5 +86,5 @@ INSTALL(
+         test_files/ccx/cube_static_expected_values
+         test_files/ccx/cube.fcstd
+     DESTINATION
+-        Mod/Fem/test_files/ccx
++        freecad/Mod/Fem/test_files/ccx
+ )

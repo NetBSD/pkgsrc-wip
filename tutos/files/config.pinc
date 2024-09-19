@@ -1,0 +1,624 @@
+<?php
+/*
+ * Copyright 1999 - 2002 by Gero Kohnert
+ *
+ * Global Default Configuration
+ *
+ * WARNING:
+ * ========
+ * Please do not modify this file. Make your onsite modifications in 
+ * config.pinc which will be read after config_default.pinc
+ * This file is part of every TUTOS installation and will be overwritten in
+ * case of new installations.
+ * config.pinc instead will never be overwritten and is read AFTER config_default.pinc
+ *
+ *  CVS Info:  $Id: config.pinc,v 1.1.1.1 2003/06/29 11:40:04 thomasklausner Exp $
+ *  $Author: thomasklausner $
+ */
+# -----------------------------------------------------------------
+#
+# Database configuration
+#
+# On oracle dbname is your instance/tnsname, dbhost is not used
+# (it will be resolved by tnsnames)
+#
+$tutos[dbname][0]   = "tutos";
+#
+# The host and port where your apache server will find the database
+#
+$tutos[dbhost][0]   = "localhost";
+#
+# Port where the DB is listening
+# Postgres : 5432
+# MySQL    : 3306
+$tutos[dbport][0]   = 5432;
+#
+# The Database user who runs TUTOS
+#
+$tutos[dbuser][0]   = "tutos";
+#
+# The DB Users password
+#
+$tutos[dbpasswd][0] = "";
+#
+# dbhome is needed for oracle only !!
+#
+#$tutos[dbhome][0]   = "/opt/oracle/";
+#
+# Type of the database
+# 1 = Postgres  
+# 2 = MySQL 
+# 3 = Oracle 
+# 4 = Postgres 7.1
+# 7 = Interbase
+# 8 = Oracle OCI connection
+#
+$tutos[dbtype][0]   = 1;
+$tutos[dbalias][0]  = "Postgres database";
+#
+# Should TUTOS encrypt passwords with crypt (see db.pinc)
+# 1 = yes (default)
+# 0 = no
+#
+$tutos[cryptpw][0]  = 1;
+#
+# The path where tutos stores files
+#
+# Please create the directory so that the apache user
+# can access it and is allowed to make subdirectories
+#
+# Relative paths start at [tutoshome]/
+#
+$tutos[repository][0]  = "repository";
+#
+# You can add more database connections
+# by increasing the index from [0] to [1] etc.
+# and adding a whole new block.
+# Do this in config.pinc only !!
+#
+# $tutos[dbname][1]   = "tutos2";
+# $tutos[dbtype][1]   = 1;
+# $tutos[dbalias][1]  = "Postgres database";
+# etc. ......
+# --------------------------
+#
+# Where to save the session data
+# (running on multiple servers/clusters this must be the same for
+# all servers !)
+#
+# relative path is not allowed here and might not work with some PHP verisons !
+#
+# NOTE: It is recommended to change this to something that
+#       is not readable by everyone !!
+#       The Apache Process must have READ/WRITE access on that path
+#
+# ATTENTION: On Windows Change this to something your system understands !!!
+#            Like : $tutos[sessionpath] = "c:\\Temp";
+# 
+$tutos[sessionpath] = "/tmp";
+#
+# Logo for the headline
+# (Change this to your company logo or whatever you like)
+# Height will be resized to 40 pixels !
+# logo and logolink are either relative to [tutosdir] or should start with "http:"
+# NOTE: a value in the database entry will override these settings !!
+#        call adminpage -> select DB Name -> Modify -> change -> save
+# 
+#$tutos[logo] = "html/tutos_small.gif";
+$tutos[logo] = "http://sourceforge.net/sflogo.php?group_id=8047&amp;type=1";
+#$tutos[logolink] = "html/copyright.html";
+$tutos[logolink] = "http://www.tutos.org";
+#
+# The default timezone
+# This is the timezone where your database is running
+# For timezone names see near the end of this file.
+#
+$tutos[defaultTZ] = "Europe/London";
+#
+# Proxy Definition
+#
+# if your server (that one running the scripts) needs
+# an proxy to access outside world
+# (leave hostname empty in no proxy is needed)
+#
+$tutos[proxyhost] = "";
+$tutos[proxyport] = 3128;
+#
+# Maximum number of rows to show in overviews
+# 15 (default)
+#
+$tutos[maxshow]  = 15;
+#
+# Maximum number of rows to show in detail pages (before making an
+# overview link). Works with notes, files, appointments, tasks ...
+# 3 (default)
+#
+$tutos[maxshort]  = 3;
+#
+# Time to live
+# The number of minutes an inactive user can reappear
+# until a new login is required
+# 240 minutes (default) = 4 hours
+#
+$tutos[timetolive]  = 240;
+#
+# How long a bug may be open before a remember mail will be sent
+# 0 = disabled
+# Other values: Minutes before mail is sent (via check.php and crontab)
+# 240 minutes = 4 hours (default)
+#
+$tutos[bugremember]  = 0;
+#
+# a rule how to build the displayed bugid
+# X is substituted by the next value of the bugname sequencer oof the database
+# all other values are handeld like the strftime function of PHP
+# (see http://www.php.net/manual/en/function.strftime.php )
+# %Y year with four digits
+# %m month 01-12
+# a empty value "" falls back to the old mechanism with bugid from the main TUTOS 
+# ID generator
+#
+# NOTE: a value in the database entry will override this setting !!
+#
+$tutos[bugautoname]  = "%Y-%m-X";
+#
+# Allow deletion of bugs
+# 0 = no
+# 1 = yes
+#
+$tutos[bugdelete]  = 1;
+#
+# You may want to see tasks in calendar? 
+# tasks in calendar ( == 1)
+# no tasks in calendar ( == 0)
+#
+$tutos[tasksincalendar]  = 0;
+#
+# Support for mailing lost passwords
+# (this requires a functional mail support !)
+# 0 = no support
+# 1 = send old pw if possible (see cryptpw above)
+# 2 = always generate a new one
+#
+$tutos[pwlostsupport]  = 1;
+#
+# Authentification by PAM using the php PAM extension from
+# http://www.math.ohio-state.edu/~ccunning/pam_auth.html
+#
+# 0 = do not use pamauth
+#
+$tutos[pamauth] = 0;
+$tutos[pamservice] = "tutos";
+#
+# LDAP configuration
+# 
+# 0 = check standard database 
+# 1 = check ldauthserver for password verification
+$tutos[ldapauth] = 0;
+# encrypted passwords
+# 1 = yes
+$tutos[ldapauth_pw_enc] = 1;
+$tutos[ldapauthserver]['host'] = $_SERVER["SERVER_NAME"];
+$tutos[ldapauthserver]['port'] = 389;
+$tutos[ldapauthserver]['basedn'] = "ou=mail,ou=user,o=cvf";
+$tutos[ldapauthserver]['userdn'] = "uid";
+# Use a filter to find user. Uncomment and modify if needed
+# The only available replacement is %u for user login name
+$tutos[ldapauthserver]['filter'] = "(&(uid=%u)(resources=tutos))";
+# use given user/passwd pair to bind the LDAP server
+# 0 = no
+# 1 = yes
+$tutos[ldapauth_user] = 0;
+# do anonymous bind to ldpauthserver
+# 1 = yes
+# 0 = use tutos[ldapauthserver]['binddn']
+#     and tutos[ldapauthserver]['passwd']
+$tutos[ldapauth_anonymous] = 1;
+$tutos[ldapauthserver]['binddn'] = "ou=adminprs,ou=ldap,ou=user,o=cvf";
+$tutos[ldapauthserver]['passwd'] = "XXXX";
+#
+# list of LDAP servers for address searching
+#
+# reset lists
+$tutos[ldapserver] = array();
+$tutos[ldapport] = array();
+#
+$tutos[ldapserver][0] = $_SERVER["SERVER_NAME"];
+$tutos[ldapport][0]   = 389;
+#
+# You may add your own ldap stuff
+# by simply increasing the index [0] to other values
+# AGAIN: do this in config.pinc not in config_default.pinc
+# (for examples of public ldap servers README.ldap)
+#
+#
+# Support for X.509v3-Certs (this is alpha)
+# make sure this settings in apache-httpd.conf or .htaccess:
+#   SSLOptions +FakeBasicAuth
+# needs openssl-support in php
+# in this first version authentification is done by checking .htaccess and FakeBasicAuth
+# in future certs are stored in userdata -> todo
+$tutos[x509auth] = 0;
+#
+# auth by http
+# (beta) logout won't work
+$tutos[httpauth] = 0;
+#
+#
+# Mail features
+#
+# Mode 0 = no mail
+# Mode 1 = via sendmail
+# Mode 2 = via SMTP
+#
+$tutos[mailmode] = 2;
+# 
+# for auth use pop before smtp
+# (only useful in mailmode 2)
+# 1 = do pop auth
+# 0 = no pop auth
+$tutos[popbeforesmtp] = 0;
+$tutos[popbeforesmtp_user] = "tutos";
+$tutos[popbeforesmtp_pass] = "tutos";
+#
+# Mode 1
+# Where to find sendmail
+# Set this to something nonexistant to disable mailing
+#
+$tutos[sendmail]  = "/usr/lib/sendmail";
+#
+# Mode 2
+# The name or IP of the SMTP server
+#
+$tutos[smtphost] = "localhost";
+#
+# Fax features
+#
+# you have to install the HDL_fax package to use this
+#
+# (Disable this with usefax below)
+# Mode 1 = via faxspool (from the mgetty package)
+# Mode 2 = via mail (see above)
+#
+$tutos[faxmode] = 1;
+#
+# Mode 1
+# Where to find faxspool
+# Set tutos[usefax] to 0 to disable faxing
+# (This is preconfigured to work with the mgetty/sendfax package)
+#
+$tutos[faxspool]  = "/usr/bin/faxspool";
+#
+# Mode 2
+# Mailaddress to send the fax to
+# A @NR@ String in the mailaddress will be replaced by the faxnumber
+# Set tutos[usefax] to 0 to disable faxing
+# (This is preconfigured to work with mail2fax from the mgetty package)
+# To adapt the fax mechanism look at [tutosdir]/fax_ins.php
+#
+$tutos[faxmail]  = "fax@tutos.org";
+$tutos[faxmail_user]  = "tutos";
+$tutos[faxmail_pass]  = "xxx";
+# $tutos[faxmail]  = "[FAX:@NR@]";
+#
+# SMS Mail
+# if you have a Mail2SMS Gateway enter the mail address below
+# @NR@ will be replaced with the phone number
+# You have to install the HDL_sms package to use this
+# disable this by setting to empty string 
+# $tutos[smsmail] = "";
+$tutos[smsmail] = "sms@NR@@tutos.org";
+#
+#
+#
+# Path to overlib javascript package (used for small popup windows)
+# See http://www.bosrup.com/web/overlib/
+#
+# Path is relative to [tutoshome]/
+#
+$tutos[overlib]  = "html/overlib.js";
+#
+#
+# Path to jpgraph, to be able to draw PNG Gantts
+# relative from php directory
+#
+$tutos[jpgraph]  = "jpgraph/src";
+#
+# wvHtml et al used for file management in file.pinc
+# You will find wordview or wv at http://www.wvWare.com/wvWare.html
+#
+# TUTOS checks if these programs are executable
+#
+# $tutos[wvHtml]    = "/usr/local/bin/wvHtml";
+# The following requires wv version 0.6.4
+$tutos[wvHtml]    = "@PREFIX@/bin/wvWare";
+$tutos[wvSummary] = "@PREFIX@/bin/wvSummary";
+#
+# Display xfig files
+#
+$tutos[fig2dev]   = "@X11BASE@/bin/fig2dev";
+#
+# Display/Info for TIFF-Files
+# convert from ImageMagick
+# tiffinfo from tiff-3.5.5
+$tutos[tiffConvert]   = "@PREFIX@/bin/convert";
+$tutos[tiffSummary]   = "@PREFIX@/bin/tiffinfo";
+#
+# Version control in file management
+# ci is part of RCS
+#
+$tutos[ci]          = "/usr/bin/ci";
+#
+# Currencies we know (first one will be default)
+# (4 Characters)
+# Here you can add whatever you want (default is the first one)
+#
+$tutos[currencies] = array();
+$tutos[currencies][] = "EUR";
+$tutos[currencies][] = "DM";
+$tutos[currencies][] = "US$";
+$tutos[currencies][] = "Lit";
+$tutos[currencies][] = "AUS$";
+$tutos[currencies][] = "£";
+$tutos[currencies][] = "FF";
+$tutos[currencies][] = "YEN";
+$tutos[currencies][] = "HK$"; 
+#
+# Sequence of (possible) fields in product overview.
+# (First field will appear in first column)
+#
+$tutos[prodfields] = array();
+$tutos[prodfields][] = "name";
+$tutos[prodfields][] = "version";
+$tutos[prodfields][] = "seller";
+$tutos[prodfields][] = "manager";
+$tutos[prodfields][] = "customer";
+$tutos[prodfields][] = "supplier";
+$tutos[prodfields][] = "reseller";
+$tutos[prodfields][] = "partner";
+$tutos[prodfields][] = "desc";
+$tutos[prodfields][] = "desc1";
+$tutos[prodfields][] = "desc2";
+$tutos[prodfields][] = "cl1";
+$tutos[prodfields][] = "cl2";
+$tutos[prodfields][] = "state";
+$tutos[prodfields][] = "probability";
+$tutos[prodfields][] = "price";
+$tutos[prodfields][] = "cost";
+$tutos[prodfields][] = "creator";
+$tutos[prodfields][] = "creation";
+$tutos[prodfields][] = "p_start";
+$tutos[prodfields][] = "p_end";
+$tutos[prodfields][] = "pbugs";
+#
+# Boolean, true if you want users to always fill in projects/products
+# classification fields.
+#
+$tutos[classify_products] = 0;
+#
+# Available themes for TUTOS (see [tutosdir]/html*.css)
+# (The default theme will be the first one in this list)
+#
+$tutos[themes] = array();
+$tutos[themes][] = "blue";
+$tutos[themes][] = "tutos";
+$tutos[themes][] = "red";
+$tutos[themes][] = "white";
+#
+# Available layout engines for TUTOS (see [tutosdir]/php/layout/)
+# (The default theme will be the first one in this list)
+#
+$tutos[layouts] = array();
+$tutos[layouts][] = "classic_layout";
+$tutos[layouts][] = "test_layout";
+#
+# Timezones in TUTOS (these timezones must be known to your OS !!)
+# (Max length 30 Characters)
+$tutos[timezones] = array();
+#
+# (On linux you may find timezone names in /usr/share/zoneinfo/)
+# Windows Users please look some lines below
+#
+$tutos[timezones][] = "Europe/London";
+$tutos[timezones][] = "Europe/Berlin";
+$tutos[timezones][] = "Europe/Warsaw";
+$tutos[timezones][] = "Europe/Rome";
+$tutos[timezones][] = "Europe/Paris";
+$tutos[timezones][] = "Europe/Moscow";
+$tutos[timezones][] = "Europe/Helsinki";
+$tutos[timezones][] = "GMT";
+$tutos[timezones][] = "US/Pacific";
+$tutos[timezones][] = "US/Central";
+$tutos[timezones][] = "US/Eastern";
+$tutos[timezones][] = "US/Mountain";
+$tutos[timezones][] = "US/Hawaii";
+$tutos[timezones][] = "Asia/Singapore";
+$tutos[timezones][] = "Asia/Hong_Kong";
+$tutos[timezones][] = "Asia/Tehran";
+$tutos[timezones][] = "Asia/Tokyo";
+$tutos[timezones][] = "Australia/Sydney";
+$tutos[timezones][] = "Australia/Perth";
+#
+# Running the server on Windows you should use this !
+#
+# $tutos[timezones][] = "EST5EDT";
+# $tutos[timezones][] = "CST6CDT";
+# $tutos[timezones][] = "MST7MDT";
+# $tutos[timezones][] = "PST8PDT";
+#
+# Default start of week
+# 0 = Sunday
+# 1 = Monday
+#
+$tutos[weekstart] = 1;
+#
+# Holidays
+# 0 = disable set
+# 1 = enable set
+# users can enable/disable their own sets out of the sets that where 
+# enabled here
+#
+$tutos[holiday]['AU'] = 0;
+$tutos[holiday]['BE'] = 0;
+$tutos[holiday]['CH'] = 0;
+$tutos[holiday]['DE'] = 1;
+$tutos[holiday]['DE_AT'] = 1;
+$tutos[holiday]['EN_UK'] = 1;
+$tutos[holiday]['ES'] = 0;
+$tutos[holiday]['FR'] = 1;
+$tutos[holiday]['HU'] = 0;
+$tutos[holiday]['IT'] = 0;
+$tutos[holiday]['KO'] = 0;
+$tutos[holiday]['MX'] = 0;
+$tutos[holiday]['NI'] = 0;
+$tutos[holiday]['NL'] = 0;
+$tutos[holiday]['PL'] = 0;
+$tutos[holiday]['RU'] = 0;
+$tutos[holiday]['US'] = 1;
+$tutos[holiday]['JA'] = 0;
+$tutos[holiday]['HK'] = 0;
+$tutos[holiday]['CS'] = 0;
+#
+# Namedays
+# 0 = disable set
+# 1 = enable set
+# users can enable/disable their own set out of the sets that where 
+# enabled here
+#
+$tutos[nameday]['PL'] = 1;
+$tutos[nameday]['DE'] = 1;
+$tutos[nameday]['NL'] = 1;
+$tutos[nameday]['HU'] = 1;
+$tutos[nameday]['CS'] = 1;
+#
+# Location types for appointments
+#
+# 1 = show description in calendar
+# 0 = do not show description in calendar
+# Colors depend on style sheets
+#
+$tutos[applocdesc][0]   = 1;
+$tutos[applocdesc][1]   = 1;
+$tutos[applocdesc][2]   = 0;
+$tutos[applocdesc][3]   = 0;
+$tutos[applocdesc][4]   = 1;
+$tutos[applocdesc][5]   = 0;
+$tutos[applocdesc][6]   = 0;
+#
+# Project roles
+# Define where to search for given names
+# a = search addresses
+# t = search teams
+# c = search companies
+# d = search departments
+# p = search other products
+#
+$tutos[rolecheck][1] = "at";
+$tutos[rolecheck][2] = "at";
+$tutos[rolecheck][3] = "at";
+$tutos[rolecheck][4] = "at";
+$tutos[rolecheck][5] = "at";
+$tutos[rolecheck][6] = "atcd";
+$tutos[rolecheck][7] = "atcd";
+$tutos[rolecheck][8] = "atcd";
+$tutos[rolecheck][9] = "atcd";
+$tutos[rolecheck][10] = "p";
+$tutos[rolecheck][11] = "p";
+$tutos[rolecheck][12] = "p";
+$tutos[rolecheck][13] = "p";
+#
+# Enable/Disable parts of TUTOS
+# 1 = enable
+# 0 = disable (you still have to install everything)
+#
+$tutos[usebugtracking]    = 1;
+$tutos[usetaskmanagement] = 1;
+$tutos[usemaplink]        = 1;
+$tutos[useprojects]       = 1;
+$tutos[usecalendar]       = 1;
+$tutos[usetimetrack]      = 1;
+$tutos[usefax]            = 0;
+$tutos[usesms]            = 1;
+$tutos[useoverlib]        = 1;
+$tutos[useaddressbook]    = 1;
+# usemail decides whether mailinks point to mailto: (usemail = 0) 
+# or internal mail forms (usemail = 1)
+$tutos[usemail]           = 1;
+$tutos[usevcard]          = 1;
+$tutos[useical]           = 1;
+$tutos[usejpgraph]        = 1;
+$tutos[usehistory]        = 1;
+#
+# Database Sync Feature
+#
+$tutos[usesync]           = 1;
+#
+# Extension Handler (enable these lines in your config file)
+#
+#$tutos[handler]['city']['mapquest'] = 'mapquest/mapquest.pinc';
+#$tutos[handler]['city']['pw'] = 'phpweather/pw.pinc';
+#$tutos[handler]['fax']['fax'] = 'fax/fax.pinc';
+#$tutos[handler]['phone']['sms'] = 'sms/sms.pinc';
+#$tutos[handler]['phone']['fax'] = 'fax/fax.pinc';
+#$tutos[handler]['country']['cia'] = 'cia_factbook/cia.pinc';
+#
+# Allow Massupdates in overviews
+# allow = 1
+# disallow = 0
+#
+$tutos[massupdate] = 1;
+#
+# Default permissions for newly created objects
+# (For products, files, installations, bugs)
+# 0 = everybody can see it
+# 1 = all teams of the creator can see it
+# 2 = no default-acl, defaultgroups from db
+#
+$tutos[defaultacl] = 2;
+#
+# Check ACL-Permissions by using Sub-Select in DB
+# for all overview-statements
+# should be set by $tutos[db...][0..n] later
+# !! not completly implemented yet
+# this will use a subselect-statement in DB
+# for mysql-user: "Subselects are currently being implemented in the 4.1 development tree."
+#
+$tutos[use_check_dbacl] = 0;
+#
+# Login will be insert a entry into table lastlogins
+# !! not completly implemented yet
+#
+#$tutos[use_login_log] = 1;
+#
+# Set tutos[demo] to 0 for real work !
+# Setting it to 1 will disable changes of user settings, permissions and
+# sending mails, etc. (that"s what you see in our online demo)
+#
+$tutos[demo]=0;
+#
+# Doing some debugging logs in messages tables
+# (This will fill the messages table and the file $tutos[errlog])
+#
+$tutos[debug]=0;
+#
+# Where to put the log output for developing and bughunting
+# ATTENTION: On Windows Change this to something your system understands !!!
+#            Like : $tutos[errlog] = "c:\\Temp\\debug";
+#
+# TUTOS will create some files that are named like /tmp/debug.out and /tmp/debug.out.log
+# You have to remove old versions of these files by your own !
+#
+$tutos[errlog] = "/tmp/debug.out";
+#
+#
+# Doing some debugging in a browser-window
+# this is alpha and only tested within mozilla 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.1a) Gecko/20020610'
+# at time, there only a few debug-tags in sourcecode
+#
+$tutos[debugConsole]=0;
+#
+# The TUTOS Version number
+#
+$tutos[version]="1.1beta.20030314";
+#
+?>

@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/02 06:26:41 phonohawk Exp $
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Base.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Base.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/C.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/C.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Map.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Map.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Num.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Num.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/String.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/String.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Text.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Text.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Time.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Time.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Text.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Text.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Utils.hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Utils.p_hi
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/HSconvertible-text-${PKGVERSION}.o
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-text-${PKGVERSION}.a
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-text-${PKGVERSION}_p.a
+lib/convertible-text-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/convertible-text-${PKGVERSION}/LICENSE

@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/02/20 20:58:40 ddeus Exp $
+
+--- Makefile.orig	2003-08-04 09:32:23.000000000 +0000
++++ Makefile
+@@ -3,9 +3,11 @@
+ # for details
+ 
+ # Linux 2.4
+-OS_CFLAGS=-DNEED_PTY_H                       
++#OS_CFLAGS=-DNEED_PTY_H                       
+ # FreeBSD, version unknown
+ #OS_CFLAGS=-DNEED_LIBUTIL_H                  
++# NetBSD, version unknown
++OS_CFLAGS=-DNEED_UTIL_H -DNEED_STRINGS_H -DNEED_STDLIB_H -DNEED_UNISTD_H
+ # Solaris, some version of
+ #OS_CFLAGS=-DNEED_STRINGS_H -DNEED_LOCAL_FORKPTY_H
+ # MacOS X needs libpoll from fink

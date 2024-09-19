@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyIOSXR/__init__.py
+${PYSITELIB}/pyIOSXR/__init__.pyc
+${PYSITELIB}/pyIOSXR/__init__.pyo
+${PYSITELIB}/pyIOSXR/exceptions.py
+${PYSITELIB}/pyIOSXR/exceptions.pyc
+${PYSITELIB}/pyIOSXR/exceptions.pyo
+${PYSITELIB}/pyIOSXR/iosxr.py
+${PYSITELIB}/pyIOSXR/iosxr.pyc
+${PYSITELIB}/pyIOSXR/iosxr.pyo

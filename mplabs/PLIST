@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/16 00:02:17 jihbed Exp $
+bin/LL-2D-DGR
+bin/LL-2D-STD
+bin/ZSC-2D-DGR
+bin/ZSC-2D-STD
+share/doc/mplabs/mp-labs.pdf

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/16 05:49:35 phonohawk Exp $
+
+RMD160 (control-monad-failure-0.7.0.tar.gz) = 31e233100d29bbdc8b4e3e2b04ba288db9cd0baa
+Size (control-monad-failure-0.7.0.tar.gz) = 1389 bytes

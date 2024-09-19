@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/parameterizedtestcase/__init__.py
+${PYSITELIB}/parameterizedtestcase/__init__.pyc
+${PYSITELIB}/parameterizedtestcase/__init__.pyo
+${PYSITELIB}/parameterizedtestcase/tests.py
+${PYSITELIB}/parameterizedtestcase/tests.pyc
+${PYSITELIB}/parameterizedtestcase/tests.pyo

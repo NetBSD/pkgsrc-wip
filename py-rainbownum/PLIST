@@ -1,0 +1,20 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rainbownum/LinkedLists.py
+${PYSITELIB}/rainbownum/LinkedLists.pyc
+${PYSITELIB}/rainbownum/LinkedLists.pyo
+${PYSITELIB}/rainbownum/RainbowCartesianSumsSim.py
+${PYSITELIB}/rainbownum/RainbowProductsSim.py
+${PYSITELIB}/rainbownum/RainbowProductsSim.pyc
+${PYSITELIB}/rainbownum/RainbowProductsSim.pyo
+${PYSITELIB}/rainbownum/RainbowSim.py
+${PYSITELIB}/rainbownum/RainbowSumsSim.py
+${PYSITELIB}/rainbownum/RainbowSumsSim.pyc
+${PYSITELIB}/rainbownum/RainbowSumsSim.pyo
+${PYSITELIB}/rainbownum/__init__.py
+${PYSITELIB}/rainbownum/__init__.pyc
+${PYSITELIB}/rainbownum/__init__.pyo

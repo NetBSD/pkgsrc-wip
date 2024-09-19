@@ -1,0 +1,31 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/06/03 02:20:00 phonohawk Exp $
+
+Hunk 1:
+  I have no idea why the original Makefile.in is doing this...
+
+Hunk 2:
+  Add DESTDIR support.
+
+--- src/Makefile.in.orig	2013-02-03 13:03:43.000000000 +0000
++++ src/Makefile.in
+@@ -6,7 +6,7 @@ CFLAGS = -Wall -I./
+ LDFLAGS = @LDFLAGS@
+ OBJS = tcptunnel.o
+ 
+-BINDIR = @PREFIX@
++BINDIR = @PREFIX@/bin
+ INSTALL = install
+ STRIP = strip
+ RM = /bin/rm -f
+@@ -23,9 +23,8 @@ tcptunnel: $(OBJS)
+ 	$(CP) $(NAME) ..
+ 
+ install:
+-	$(INSTALL) -d $(BINDIR)
+-	$(INSTALL) -m 0755 $(NAME) $(BINDIR)
+-	$(STRIP) $(BINDIR)/$(NAME)
++	$(INSTALL) -d $(DESTDIR)$(BINDIR)
++	$(INSTALL) -m 0755 $(NAME) $(DESTDIR)$(BINDIR)
+ 
+ uninstall:
+ 	$(RM) $(BINDIR)/$(NAME)

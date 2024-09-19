@@ -1,0 +1,8 @@
+$NetBSD$
+
+RMD160 (motion-4.0.1.tar.gz) = f684f75a8b55371495466524a85d2c95a93dc827
+SHA512 (motion-4.0.1.tar.gz) = 6ccde3890e6af56f28208321987dd1b9d62a55bbe7cbc3ab5600263602e6e8f47589392c2f3a3a6cb54f927ee76aea94d0e83f26ce8e4047890c891b6c2f8976
+Size (motion-4.0.1.tar.gz) = 444779 bytes
+SHA1 (patch-stream.c) = 059344a6e901690f31e18d6d1bea5fb4a873b0c1
+SHA1 (patch-track.c) = 8bce673e68b42b62aee935ea4df38641227e6dc3
+SHA1 (patch-video2.c) = 2c441a30fa6eef1011fd4779dc023460746a893a

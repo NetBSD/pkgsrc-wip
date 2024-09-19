@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/test-symmetrica
+include/symmetrica/def.h
+include/symmetrica/macro.h

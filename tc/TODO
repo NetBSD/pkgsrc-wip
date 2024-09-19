@@ -1,0 +1,8 @@
+- Upstream code includes only upto emacs 24 (?)
+  .. it is kind of beyond packaging 
+  .. and may ignore for the moment.
+  
+- Which tc-is??.el is byte-compiled depends on emacs version
+  (incremental search needs by-version caring).
+  So fix PLIST variation on emacsen 20/21/22/23/24
+  .. meaning that working emacs version detection is necessary.

@@ -1,0 +1,5 @@
+PyZenity is an easy to use interface to Zenity for Python.
+Zenity is normally called from scripts by invoking it with
+a multitude of command line parameters that it uses to
+construct its interfaces. This module hides the details
+of invoking the command and presents simple API functions

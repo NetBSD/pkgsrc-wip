@@ -1,0 +1,25 @@
+sedlex is a lexer generator for OCaml, similar to ocamllex, but
+supporting Unicode. Contrary to ocamllex, lexer specifications for
+sedlex are embedded in regular OCaml source files.
+
+The lexers work with a new kind of "lexbuf", similar to ocamllex
+Lexing lexbufs, but designed to support Unicode, and abstracting
+from a specific encoding. A single lexer can work with arbitrary
+encodings of the input stream.
+
+sedlex is the successor of the ulex project. Contrary to ulex which
+was implemented as a Camlp4 syntax extension, sedlex is based on
+the new "-ppx" technology of OCaml, which allow rewriting OCaml
+parse trees through external rewriters. (And what a better name
+than "sed" for a rewriter?)
+
+As any -ppx rewriter, sedlex does not touch the concrete syntax of
+the language: lexer specifications are written in source file which
+comply with the standard grammar of OCaml programs. sedlex reuse
+the syntax for pattern matching in order to describe lexers (regular
+expressions are encoded within OCaml patterns). A nice consequence
+is that your editor (vi, emacs, ...) won't get confused (indentation,
+coloring) and you don't need to learn new priority rules. Moreover,
+sedlex is compatible with any front-end parsing technology: it
+works fine even if you use camlp4 or camlp5, with the standard or
+revised syntax.

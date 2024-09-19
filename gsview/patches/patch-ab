@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+
+Call firefox instead of mozilla for help-browser.
+
+--- srcunx/gvxhelp.txt.orig	2010-04-18 01:12:52.000000000 -0700
++++ srcunx/gvxhelp.txt	2010-04-18 01:12:28.000000000 -0700
+@@ -18,10 +18,10 @@
+   TAG="#$2"
+ fi 
+ 
+-if mozilla -remote openFile\(file://$1$TAG\) ; then
++if firefox -remote openFile\(file://$1$TAG\) ; then
+     exit 0
+ else
+-    mozilla file://$1$TAG
++    firefox file://$1$TAG
+ fi 
+ exit 0
+ 

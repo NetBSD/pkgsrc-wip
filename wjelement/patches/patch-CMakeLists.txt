@@ -1,0 +1,21 @@
+$NetBSD$
+
+Don't require a C++ Compiler or USE_LANGUAGES=c++ and install docs in share/doc
+
+--- CMakeLists.txt.orig	2015-06-03 22:52:12.000000000 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-project(WJElement)
++project(WJElement C)
+ cmake_minimum_required(VERSION 2.6)
+ include(CheckIncludeFiles)
+ include(CheckSymbolExists)
+@@ -59,7 +59,7 @@ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TR
+ ENABLE_TESTING(1)
+ 
+ INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/documentation/
+-	DESTINATION doc/wjelement/
++	DESTINATION share/doc/wjelement/
+ )
+ 
+ include_directories(include)

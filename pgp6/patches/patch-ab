@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.2 2003/08/15 16:51:12 tvierling Exp $
+
+--- libs/pgpcdk/pub/include/pgpSockets.h.orig	Wed Aug  4 14:36:04 1999
++++ libs/pgpcdk/pub/include/pgpSockets.h
+@@ -20,7 +20,7 @@ ________________________________________
+ #if PGP_UNIX
+ # include <sys/types.h>
+ # include <sys/socket.h>
+-#if PGP_UNIX_LINUX
++#if PGP_UNIX_LINUX || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+ # include <sys/time.h>		/* Needed for unknown reason */
+ # include <sys/ioctl.h>		/* Need FIONREAD */
+ #elif PGP_UNIX_SOLARIS

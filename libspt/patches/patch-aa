@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/31 16:21:21 makoto Exp $
+Give work around for problem checking pty
+
+--- libspt.c.orig	2003-12-12 16:36:35.000000000 +0900
++++ libspt.c	2011-01-01 00:05:47.000000000 +0900
+@@ -8,7 +8,7 @@
+ #include <stdio.h>  /* for perror() */
+ #include <signal.h>
+ #ifdef HAVE_PTY_SVR4
+-#include <sys/stropts.h>
++/* #include <sys/stropts.h> */
+ #endif
+ 
+ struct spt_handle_tag {

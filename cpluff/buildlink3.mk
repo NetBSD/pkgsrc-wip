@@ -1,0 +1,11 @@
+# $NetBSD$
+BUILDLINK_TREE+=	cpluff
+
+.if !defined(CPLUFF_BUILDLINK3_MK)
+CPLUFF_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.cpluff+=	cpluff>=0.1.4
+BUILDLINK_PKGSRCDIR.cpluff?=	../../wip/cpluff
+.endif	# CPLUFF_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-cpluff

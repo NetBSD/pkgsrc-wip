@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 15:55:52 phonohawk Exp $
+lib/rosezipper-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree/Zipper.hi
+lib/rosezipper-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree/Zipper.p_hi
+lib/rosezipper-${PKGVERSION}/${HASKELL_VERSION}/HSrosezipper-${PKGVERSION}.o
+lib/rosezipper-${PKGVERSION}/${HASKELL_VERSION}/libHSrosezipper-${PKGVERSION}.a
+lib/rosezipper-${PKGVERSION}/${HASKELL_VERSION}/libHSrosezipper-${PKGVERSION}_p.a
+lib/rosezipper-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/rosezipper-${PKGVERSION}/LICENSE

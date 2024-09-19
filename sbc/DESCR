@@ -1,0 +1,3 @@
+Advanced Audio Distribution Profile (A2DP) encoder and decoder with low
+computational complexity, for Bluetooth devices and the Internet. Supports
+mono and stereo streams and sampling frequencies up to 48 kHz.

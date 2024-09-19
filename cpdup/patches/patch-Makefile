@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2013/01/03 21:21:36 mrampke Exp $
+
+Link against libbsd on Linux
+
+--- Makefile.orig	2010-07-05 18:02:07.000000000 +0000
++++ Makefile
+@@ -11,10 +11,16 @@ WARNS?=	6
+ 
+ .if !defined(NOMD5)
+ SRCS+=	md5.c
+-.endif
+-
++.if defined(LIBBSD)
++LDADD+= -lbsd
++CFLAGS+= -DLIBBSD=1
++.else  # BSD, link libmd
+ LDADD+= -lmd
+-DPADD+= ${LIBMD}
++DPADD+= ${LIBMD} # XXX not sure what this line does, but it is in the original Makefile
++.endif # LIBBSD
++.else  # NOMD5
++CFLAGS+= -DNOMD5=1
++.endif # !NOMD5
+ 
+ .include <bsd.prog.mk>
+ 

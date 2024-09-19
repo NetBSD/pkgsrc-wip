@@ -1,0 +1,4 @@
+Provides the Linux-native API for async I/O. The POSIX async I/O
+facility requires this library in order to provide kernel-accelerated
+async I/O capabilities, as do applications which require the
+Linux-native async I/O API.

@@ -1,0 +1,10 @@
+@comment $NetBSD$
+@comment $Id: PLIST,v 1.2 2014/10/30 08:54:37 bartoszkuzma Exp $
+bin/sxid
+man/man1/sxid.1
+man/man5/sxid.conf.5
+share/doc/sxid/COPYING
+share/doc/sxid/ChangeLog
+share/doc/sxid/NEWS
+share/doc/sxid/README.md
+share/examples/sxid/sxid.conf

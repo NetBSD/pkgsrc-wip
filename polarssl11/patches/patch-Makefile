@@ -1,0 +1,11 @@
+--- Makefile.orig	2012-12-05 16:16:13.000000000 +0000
++++ Makefile	2012-12-05 16:16:20.000000000 +0000
+@@ -7,7 +7,7 @@
+ all:
+ 	cd library  && $(MAKE) all && cd ..
+ 	cd programs && $(MAKE) all && cd ..
+-	cd tests    && $(MAKE) all && cd ..
++#	cd tests    && $(MAKE) all && cd ..
+ 
+ install:
+ 	mkdir -p $(DESTDIR)/include/polarssl

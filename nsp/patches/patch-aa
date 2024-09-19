@@ -1,0 +1,100 @@
+--- configure.orig	2010-04-24 20:05:01.000000000 +0000
++++ configure	2010-04-24 20:08:12.000000000 +0000
+@@ -21016,7 +21016,7 @@
+     ;;
+   esac
+ 
+-  if test $PVMROOT == "$SCIDIR/pvm3"; then
++  if test $PVMROOT = "$SCIDIR/pvm3"; then
+     PVMLIBDIR=pvm3/lib/$ac_cv_PVM_arch
+   else
+     PVMLIBDIR=$PVMROOT/lib/$ac_cv_PVM_arch
+@@ -21902,22 +21902,22 @@
+ fi
+ 
+   LIBS=$ac_save_LIBS
+-  if test X"$enable_cairo_pdf" == Xyes; then
++  if test X"$enable_cairo_pdf" = Xyes; then
+ 
+ $as_echo "#define HAVE_cairo_pdf_surface /**/" >>confdefs.h
+ 
+   fi
+-  if test X"$enable_cairo_ps" == Xyes; then
++  if test X"$enable_cairo_ps" = Xyes; then
+ 
+ $as_echo "#define HAVE_cairo_ps_surface /**/" >>confdefs.h
+ 
+   fi
+-  if test X"$enable_cairo_svg" == Xyes; then
++  if test X"$enable_cairo_svg" = Xyes; then
+ 
+ $as_echo "#define HAVE_cairo_svg_surface /**/" >>confdefs.h
+ 
+   fi
+-  if test X"$enable_cairo_image" == Xyes; then
++  if test X"$enable_cairo_image" = Xyes; then
+ 
+ $as_echo "#define HAVE_cairo_image_surface /**/" >>confdefs.h
+ 
+@@ -22002,7 +22002,7 @@
+ # check that we have glut if gtkglext-1.0 is used
+ # this is not used (ZZZyes) we do not need glut for the moment
+ 
+-if test "$WITH_GL" == ZZZyes; then
++if test "$WITH_GL" = ZZZyes; then
+      for ac_header in GL/glut.h
+ do :
+   ac_fn_c_check_header_mongrel "$LINENO" "GL/glut.h" "ac_cv_header_GL_glut_h" "$ac_includes_default"
+@@ -22067,7 +22067,7 @@
+ 
+ done
+ 
+-     if test "$HAVE_GLUT" == no; then
++     if test "$HAVE_GLUT" = no; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not find the glut library." >&5
+ $as_echo "$as_me: WARNING: Could not find the glut library." >&2;}
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: WARNING OpenGL driver will not be build ." >&5
+@@ -23226,8 +23226,8 @@
+  fi
+ 
+  WITH_TKSCI=0
+- if test $TCL_VERSION_OK == 1;then
+-    if test $TK_VERSION_OK == 1 ; then
++ if test $TCL_VERSION_OK = 1;then
++    if test $TK_VERSION_OK = 1 ; then
+        WITH_TKSCI=1
+     fi
+  fi
+@@ -24464,7 +24464,7 @@
+ if test "$with_gmp" != no; then
+    ## search for gmp since gmp.pc does not exists
+    ## the next test is deactivated
+-   if test "x$PKG_CONFIG" == xDEACTIVATED ; then
++   if test "x$PKG_CONFIG" = xDEACTIVATED ; then
+       ## try first to use pkg-config
+       ## If gmp.pc is found, set GMP_CFLAGS and GMP_LIBS
+       ## this is not supposed to work since gmp.pc does not exists
+@@ -28158,19 +28158,19 @@
+ if test "xx$umfpack_libs" != "xx" ; then
+    echo "umfpack................:" $UMFPACK_LIBS
+ fi
+-if test X"$enable_cairo_image" == Xyes; then
++if test X"$enable_cairo_image" = Xyes; then
+    echo "default graphic driver.:" gtk/cairo
+ else
+    echo "default graphic driver.:" gtk
+ fi
+ echo -n "cairo output files.....:"
+-if test X"$enable_cairo_pdf" == Xyes; then
++if test X"$enable_cairo_pdf" = Xyes; then
+    echo -n " pdf"
+ fi
+-if test X"$enable_cairo_ps" == Xyes; then
++if test X"$enable_cairo_ps" = Xyes; then
+    echo -n " ps"
+ fi
+-if test X"$enable_cairo_svg" == Xyes; then
++if test X"$enable_cairo_svg" = Xyes; then
+    echo -n " svg"
+ fi
+ echo

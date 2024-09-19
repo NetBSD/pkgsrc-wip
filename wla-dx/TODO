@@ -1,0 +1,5 @@
+- If the `doc' option is set, documentation might not get built if
+  textproc/py-sphinx was installed without pkg_alternatives.
+
+  The build system may need to be patched to look for sphinx-build${VER},
+  rather than only sphinx-build.

@@ -1,0 +1,4 @@
+mincraft is a python package to handle networking between a Minecraft
+server as a client. This projects aims to be a modern,
+Python3-compatible, well-documented library for communication with a
+MineCraft server.

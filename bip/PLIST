@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/bip
+bin/bipmkpw
+man/man1/bip.1
+man/man1/bipmkpw.1
+man/man5/bip.conf.5
+share/examples/bip/bip.conf
+share/examples/bip/bip.vim

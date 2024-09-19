@@ -1,0 +1,12 @@
+PPR is a Unix print spooler expressly designed for operating
+PostScript printers.
+
+Its features are numerous, and it supports PostScript printers
+connected to parallel or serial ports, or over the network through
+AppleTalk, LanManager, LPD, and TCP/IP protocols. It accepts jobs from
+SMB clients (such as Microsoft Windows), Macintosh, and Unix clients.
+
+PPR is designed for PostScript printing, so it can detect PostScript
+errors. If the input file is not PostScript, it can pipe the input
+through a filter. PPR has been designed to manage large numbers of
+printers with minimal operator attention.

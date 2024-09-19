@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/ccat
+bin/ccdecrypt
+bin/ccencrypt
+bin/ccguess
+bin/ccrypt
+man/man1/ccat.1
+man/man1/ccdecrypt.1
+man/man1/ccencrypt.1
+man/man1/ccguess.1
+man/man1/ccrypt.1
+share/emacs/site-lisp/ps-ccrypt.el
+share/locale/locale.alias

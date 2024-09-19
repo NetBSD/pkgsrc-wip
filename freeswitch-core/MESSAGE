@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD$
+
+* There are many modules that are not enabled by default. If they are
+  required, please  manually enable them in ${WRKSRC}/modules.conf file.
+  As for now, some commonly used were included.
+
+  (You should deinstall, enable the modules, update your PLIST or use
+  CHECK-FILES=no and then install FreeSWITCH again, if new modules
+  were enabled.)
+
+* The 'local_ip_v4' variable is used by sofia-sip module.
+  However, automatic detection of this value might fail. The workaround
+  is to manually set the local_ip_v4 value in vars.xml, usually located at:
+	${PREFIX}/etc/freeswitch/vars.xml.
+
+  Example:
+	<X-PRE-PROCESS cmd="set" data="local_ip_v4=yo.ur.i.p"/>
+	Replace "yo.ur.i.p" with a proper value.
+
+* The event_socket_module by default has an IPv6 configuration, therefore,
+  it is unable to load properly. Please set your binding IP address in
+  the event_socket.conf.xml file inside conf_dir/autoload-configs/
+
+* FreeSWITCH doesn't come with a GUI. If you have the time, take a look to:
+	wip/fusionpbx package.
+===========================================================================

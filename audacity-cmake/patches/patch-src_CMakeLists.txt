@@ -1,0 +1,15 @@
+$NetBSD$
+
+CMAKE_MODULE_PATH contains multiple entries when building in pkgsrc.
+
+--- src/CMakeLists.txt.orig	2020-05-19 09:43:53.000000000 +0000
++++ src/CMakeLists.txt
+@@ -23,7 +23,7 @@ if( GIT_FOUND )
+       COMMAND
+          ${CMAKE_COMMAND} -D GIT=${GIT_EXECUTABLE}
+                           -D _PRVDIR=${_PRVDIR}
+-                          -P ${CMAKE_MODULE_PATH}/Version.cmake
++                          -P ${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules/Version.cmake
+       WORKING_DIRECTORY
+          ${topdir}
+    )

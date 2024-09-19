@@ -1,0 +1,15 @@
+Overview
+The Backplane Open Source Database is the result of over three years of
+development by FreeBSD and Linux guru Matthew Dillon and an enthusiastic
+team of developers at Backplane, Inc. Now available to both open source and
+corporate developers, Backplane serves as the basis for a new generation of
+reliable and robust networked applications
+
+Replicated RDBMS for Linux and FreeBSD
+The Backplane Open Source Database is a replicated, transactional,
+fault-tolerant relational database core. Currently supported on Linux and
+FreeBSD, Backplane is designed to run on a large number of small servers
+rather than a small number of large servers. With Backplane, it is possible
+to spread the database nodes widely, allowing database operations to work
+efficiently over WAN latencies while maintaining full transactional
+coherency across the entire replication group.

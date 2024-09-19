@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/04 19:05:15 noud4 Exp $
+bin/fala
+lib/fala/config.py
+lib/fala/const.py
+lib/fala/dists.py
+lib/fala/fala.py
+share/applications/fala.desktop
+share/fala/fala.glade
+share/fala/fala.png
+share/locale/pt_BR/LC_MESSAGES/fala.mo
+share/pixmaps/fala.png

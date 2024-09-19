@@ -1,0 +1,9 @@
+$NetBSD$
+
+RMD160 (eggnog-mapper-1.0.3.tar.gz) = 819cc711a801c234694aedddf1e3475b9919440c
+SHA512 (eggnog-mapper-1.0.3.tar.gz) = 4d53f8455dc4edf4587a75359cc9b884758f2541c9d9a02994fa009b43aecb6e8ed8dafb4b02906709b6c1c6d8fb0e059000cba59cad70d01d482fb5b4fbb8bf
+Size (eggnog-mapper-1.0.3.tar.gz) = 37713129 bytes
+SHA1 (patch-eggnogmapper_annota.py) = b967e669ac5dccf5cc5559d76d8c4b905c4721eb
+SHA1 (patch-eggnogmapper_common.py) = 02ebe44f13ccd9dde302d579596b37abb2d8f35c
+SHA1 (patch-eggnogmapper_search.py) = 7efa9ee391998546cf9d1a0b2feca1b72844cb48
+SHA1 (patch-eggnogmapper_server.py) = 778f31acde15e2cbc49e3a2eb9e68d6d5ed1d89e

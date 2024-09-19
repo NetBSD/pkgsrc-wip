@@ -1,0 +1,4 @@
+Add option for GTK+ version
+Add options or separate packages for uzbl-browser and uzbl-tabbed
+Resolve Python version conflict for uzbl-tabbed with GTK+ 2
+Add missing dependencies for uzbl-tabbed with GTK+ 3

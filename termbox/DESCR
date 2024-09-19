@@ -1,0 +1,13 @@
+Termbox is a library that provides minimalistic API which allows the
+programmer to write text-based user interfaces.
+It is based on a very simple abstraction. The main idea is viewing
+terminals as a table of fixed-size cells and input being a stream of
+structured messages.
+The model is inspired by the windows console API.
+The abstraction itself is not perfect and it may create problems in
+certain areas. The most sensitive ones are copy & pasting and wide
+characters (mostly Chinese, Japanese, Korean (CJK) characters).
+When it comes to copy & pasting, the notion of cells is not really
+compatible with the idea of text. And CJK runes often require more
+than one cell to display them nicely.
+Termbox is aimed at pseudo-graphical user interfaces.

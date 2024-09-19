@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:55 thomasklausner Exp $
+bin/mailfilter
+man/man1/mailfilter.1
+man/man5/mailfilterex.5
+man/man5/mailfilterrc.5
+share/doc/mailfilter/FAQ
+share/doc/mailfilter/INSTALL
+share/locale/de/LC_MESSAGES/mailfilter.mo
+share/locale/el/LC_MESSAGES/mailfilter.mo
+share/locale/es/LC_MESSAGES/mailfilter.mo
+share/locale/fr/LC_MESSAGES/mailfilter.mo
+share/locale/it/LC_MESSAGES/mailfilter.mo
+share/locale/pt_BR/LC_MESSAGES/mailfilter.mo
+share/locale/ru/LC_MESSAGES/mailfilter.mo

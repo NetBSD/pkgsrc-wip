@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.2 2010/01/16 17:15:41 tnn2 Exp $
+
+--- configure.orig	2008-09-11 14:38:34.000000000 +0000
++++ configure
+@@ -1803,6 +1803,10 @@ if test -z "$NSPR_CFLAGS" -o -z "$NSPR_L
+    fi
+ fi
+ 
++NSS_CFLAGS="`pkg-config --cflags nss`"
++NSS_LIBS="`pkg-config --libs nss`"
++NSPR_CFLAGS="`pkg-config --cflags nspr`"
++NSPR_LIBS="`pkg-config --libs nspr`"
+ 
+ case "$target" in
+ *-cygwin*) USE_WINDOWS_PATHS=1 ;;

@@ -1,0 +1,95 @@
+--- /usr/pkg/share/examples/httpd/httpd.conf.default	2006-11-15 12:37:51.000000000 +0100
++++ /usr/pkg/etc/httpd/httpd.conf	2008-03-15 11:50:48.000000000 +0100
+@@ -136,14 +136,14 @@
+ # a new spare.  If there are more than MaxSpareServers, some of the
+ # spares die off.  The default values are probably OK for most sites.
+ #
+-MinSpareServers 5
+-MaxSpareServers 10
++MinSpareServers 1
++MaxSpareServers 2
+ 
+ #
+ # Number of servers to start initially --- should be a reasonable ballpark
+ # figure.
+ #
+-StartServers 5
++StartServers 1
+ 
+ #
+ # Limit on total number of servers running, i.e., limit on the number
+@@ -208,6 +208,11 @@
+ AddModule mod_ssl.c
+ </IfDefine>
+ 
++#	AHA - added php support for dotproject --
++#
++LoadModule php4_module lib/httpd/mod_php4.so
++AddType application/x-httpd-php .php
++
+ #
+ # ExtendedStatus controls whether Apache will generate "full" status
+ # information (ExtendedStatus On) or just basic information (ExtendedStatus
+@@ -271,7 +276,7 @@
+ # e-mailed.  This address appears on some server-generated pages, such
+ # as error documents.
+ #
+-ServerAdmin you@your.address
++ServerAdmin hallmann@ahatec.de
+ 
+ #
+ # ServerName allows you to set a host name which is sent back to clients for
+@@ -296,7 +301,7 @@
+ # documents. By default, all requests are taken from this directory, but
+ # symbolic links and aliases may be used to point to other locations.
+ #
+-DocumentRoot "/usr/pkg/share/httpd/htdocs"
++DocumentRoot "/home/htdocs/nda.ahatec.de"
+ 
+ #
+ # Each directory to which Apache has access, can be configured with respect
+@@ -376,7 +381,7 @@
+ # directory index.  Separate multiple entries with spaces.
+ #
+ <IfModule mod_dir.c>
+-    DirectoryIndex index.html
++    DirectoryIndex index.html index.php
+ </IfModule>
+ 
+ #
+@@ -588,6 +593,9 @@
+     #
+     ScriptAlias /cgi-bin/ "/usr/pkg/libexec/cgi-bin/"
+ 
++    Include /usr/pkg/etc/httpd/mailman.conf
++    Alias /pipermail/ /usr/pkg/archives/public/
++    ScriptAlias /mailman/ "/usr/pkg/lib/mailman/cgi-bin/"
+     #
+     # "/usr/pkg/libexec/cgi-bin" should be changed to whatever your ScriptAliased
+     # CGI directory exists, if you have that configured.
+@@ -598,6 +606,12 @@
+         Order allow,deny
+         Allow from all
+     </Directory>
++    <Directory "/usr/pkg/lib/mailman/cgi-bin">
++        AllowOverride None
++        Options None
++        Order allow,deny
++        Allow from all
++    </Directory>
+ 
+ </IfModule>
+ # End of aliases.
+@@ -1200,3 +1214,12 @@
+ 
+ </IfDefine>
+ 
++#mod_perl einbinden um Perl anwenden zu konnen
++#LoadModule perl_module lib/httpd/mod_perl.so
++#<Files ~ "\.pl$">
++#PerlHandler Apache::Registry
++#PerlSendHeader On
++#SetHandler perl-script
++#Options +ExecCGI
++#</Files>
++

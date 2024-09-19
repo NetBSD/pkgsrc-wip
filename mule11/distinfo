@@ -1,0 +1,8 @@
+$NetBSD$
+
+RMD160 (mule-p20151011.tar.gz) = a517084a3d64a458e55f204696da7e3f952b5274
+Size (mule-p20151011.tar.gz) = 4246482 bytes
+SHA1 (patch-Makefile) = 66fd313096e18c1492b3478df3a1f70e0142a0a7
+SHA1 (patch-lisp_mule-init_diff) = 40043fc741c5acff7fc6c812129252f85a6f6e6b
+SHA1 (patch-src_dispnew.c) = a3ec71bfb963a044dee74ae897dc9cb424d4bf6f
+SHA1 (patch-src_paths.h-dist) = 41be3d38e5f6a2feff9fefbcdcc529e35fb3f33f

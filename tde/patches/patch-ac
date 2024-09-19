@@ -1,0 +1,77 @@
+$NetBSD: patch-ac,v 1.2 2013/01/03 13:06:34 othyro Exp $
+
+Only include Linux stuff if OPSYS=Linux.
+
+--- unix/console.c.orig	2007-04-01 01:20:16.000000000 +0000
++++ unix/console.c
+@@ -64,8 +64,10 @@
+ #include "tdefunc.h"
+ #include "keys.h"
+ #include <sys/ioctl.h>
++#ifdef __LINUX__
+ #include <linux/kd.h>
+ #include <sys/io.h>
++#endif
+ 
+ 
+ #if defined( PC_CHARS )
+@@ -114,6 +116,7 @@ char *term;
+    page( 1 );
+    video_config( cfg );
+ 
++#ifdef __LINUX__
+    if (!xterm && cfg->color) {
+       if (ioperm( 0x3c0, 0x1b, TRUE ) == 0) {
+          port_access = TRUE;
+@@ -122,6 +125,7 @@ char *term;
+          outb( 0x04, 0x3c0 );   /* 9-bit chars, blink mode off */
+       }
+    }
++#endif
+ }
+ 
+ 
+@@ -329,6 +333,7 @@ static int  kbReadShiftState( void )
+ int  arg = 6;   /* TIOCLINUX function #6 */
+ int  shift;
+ 
++#ifdef __LINUX__
+   if (ioctl( 0, TIOCLINUX, &arg ) != -1) {
+      shift = 0;
+      if (arg & 1)
+@@ -338,6 +343,7 @@ int  shift;
+      if (arg & (2 | 8))
+         shift |= _ALT;
+   } else
++#endif
+      shift = ERROR;
+   return( shift );
+ }
+@@ -528,9 +534,13 @@ int  capslock_active( void )
+ {
+ int  kbled;
+ 
++#ifdef __LINUX__
+    if (ioctl( 0, KDGKBLED, &kbled ) == -1)
+       kbled = 0;
+    return( kbled & LED_CAP );
++#else
++   return( 0 );
++#endif
+ }
+ 
+ 
+@@ -852,11 +862,13 @@ void set_cursor_size( int csize )
+  */
+ void set_overscan_color( int color )
+ {
++#ifdef __LINUX__
+    if (port_access) {
+       inb( 0x3da );             /* switch flip-flop to index mode */
+       outb( 0x31, 0x3c0 );      /* display enable, register 0x11 */
+       outb( color, 0x3c0 );     /* overscan color */
+    }
++#endif
+ }
+ 
+ 

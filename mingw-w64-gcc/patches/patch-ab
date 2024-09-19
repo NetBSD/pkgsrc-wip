@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.2 2013/02/11 00:39:27 makoto Exp $
+
+To avoid spurious build error saying:
+checking for sincos... configure: error: Link tests are not allowed after GCC_NO_EXECUTABLES.
+
+--- libstdc++-v3/configure.orig	2010-08-11 13:44:56.000000000 +0000
++++ ./libstdc++-v3/configure	2013-02-09 21:13:19.000000000 +0900
+@@ -1878,7 +1878,7 @@ if { as_var=$3; eval "test \"\${$as_var+
+   $as_echo_n "(cached) " >&6
+ else
+   if test x$gcc_no_link = xyes; then
+-  as_fn_error "Link tests are not allowed after GCC_NO_EXECUTABLES." "$LINENO" 5
++#  as_fn_error "Link tests are not allowed after GCC_NO_EXECUTABLES." "$LINENO" 5
+ fi
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+@@ -50878,7 +50878,7 @@ $as_echo "$glibcxx_gnu_ld_version" >&6; 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ld that supports -Wl,--gc-sections" >&5
+ $as_echo_n "checking for ld that supports -Wl,--gc-sections... " >&6; }
+     if test x$gcc_no_link = xyes; then
+-  as_fn_error "Link tests are not allowed after GCC_NO_EXECUTABLES." "$LINENO" 5
++#  as_fn_error "Link tests are not allowed after GCC_NO_EXECUTABLES." "$LINENO" 5
+ fi
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */

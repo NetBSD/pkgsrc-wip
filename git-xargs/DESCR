@@ -1,0 +1,17 @@
+git-xargs is a command-line tool (CLI) for making updates across
+multiple GitHub repositories with a single command. You give
+git-xargs:
+
+ - a script or a command to run
+ - a list of repos
+
+and git-xargs will:
+
+ - clone each repo
+ - run your specified script or command against it
+ - commit any changes
+ - open pull requests
+ - provide a detailed report of everything that happened
+
+Git-xargs leverages goroutines to perform the repo-updating work in
+parallel, so it is very fast.

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Link with -lrt which is needed for shm_open
+XXX unclear why only netbsd needs it
+
+--- src/frameserver/avfeed/CMakeLists.txt.orig	2018-12-10 23:33:36.000000000 +0000
++++ src/frameserver/avfeed/CMakeLists.txt
+@@ -17,6 +17,6 @@ if (AVFEED_SOURCES)
+ 		${AVFEED_DEFS}
+ 	)
+ 	target_include_directories(afsrv_avfeed PRIVATE ${FSRV_ROOT} ${AVFEED_INCLUDE_DIRS})
+-	target_link_libraries(afsrv_avfeed ${STDLIB} arcan_shmif_int ${AVFEED_LIBS})
++	target_link_libraries(afsrv_avfeed ${STDLIB} arcan_shmif_int ${AVFEED_LIBS} rt)
+ 	install(TARGETS afsrv_avfeed DESTINATION bin)
+ endif()

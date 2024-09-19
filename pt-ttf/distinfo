@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.3 2012/12/12 23:45:37 bubuchka Exp $
+
+RMD160 (pt-ttf-20121212/PTMonoOFL.zip) = b371c31e8320735664b8e117208cac06a6260ef6
+Size (pt-ttf-20121212/PTMonoOFL.zip) = 178983 bytes
+RMD160 (pt-ttf-20121212/PTSansOFL.zip) = 5672db272cf38d2878fbfbea110298d5277b212a
+Size (pt-ttf-20121212/PTSansOFL.zip) = 1600360 bytes
+RMD160 (pt-ttf-20121212/PTSerifOFL.zip) = f83b4d904a50bf169e6d480d4b462dbfbdbc669a
+Size (pt-ttf-20121212/PTSerifOFL.zip) = 1023119 bytes

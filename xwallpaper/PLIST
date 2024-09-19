@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/xwallpaper
+man/man1/xwallpaper.1
+share/zsh/site-functions/_xwallpaper

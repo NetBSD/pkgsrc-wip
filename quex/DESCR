@@ -1,0 +1,3 @@
+Quex is a generator for lexical analysers with  extended features, such as
+event handling  for mode transitions, mode inheritance  and the indentation
+event. Quex comes with an extensive documentation.

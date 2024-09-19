@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2006/12/02 22:09:37 shattered Exp $
+
+--- configure.in.orig	2006-02-25 21:27:07.000000000 +0000
++++ configure.in
+@@ -31,6 +31,11 @@ if test "$automake" = "FAIL"; then
+     AC_MSG_ERROR(Cannot continue: automake not found)
+ fi
+ 
++AC_PATH_PROGS(expr, gexpr expr, FAIL)
++if test "$expr" = "FAIL"; then
++    AC_MSG_ERROR(Cannot continue: expr not found)
++fi
++
+ dnl Checks for libraries.
+ 
+ dnl Checks for header files.

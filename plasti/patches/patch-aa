@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/22 13:14:48 jihbed Exp $
+
+--- Makefile.orig	2006-06-26 20:26:18.000000000 +0000
++++ Makefile	2010-11-12 20:39:31.000000000 +0000
+@@ -2,19 +2,19 @@
+ ## compilers
+ 
+ # gfortran
+-FORT  = gfortran
+-F90FLAGS = -O3
++#FORT  = gfortran
++#F90FLAGS = -O3
+ 
+ # g95
+-#FORT  = g95
+-#F90FLAGS = -O3 -fsloppy-char
++FORT  = g95
++F90FLAGS = -O3 -fsloppy-char
+ 
+ # Absoft (untested)
+ #FORT = f90
+ #F90FLAGS = -s -O3 -YEXT_NAMES=LCS -YEXT_SFX=_ -Z156 -N113 -N11
+ 
+ ## libraries
+-LIBS = -llapack -lblas
++LIBS = -llapack -lblas -lf95
+ 
+ all: plasti_oly meshg_oly
+ 

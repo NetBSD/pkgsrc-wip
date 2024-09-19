@@ -1,0 +1,4 @@
+JBMGen is a project to support the ARCLibrary functionality on the
+Archos GMini 120 and the Archos GMini 220. Currently these require the
+proprietary MusicMatch software to generate the database file needed by
+the ARCLibrary system.

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/24 22:01:52 szptvlfn Exp $
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/Data/Boolean.hi
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/Data/Boolean.p_hi
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/Data/Boolean/Numbers.hi
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/Data/Boolean/Numbers.p_hi
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/Data/Boolean/Overload.hi
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/Data/Boolean/Overload.p_hi
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/HSBoolean-${PKGVERSION}.o
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/libHSBoolean-${PKGVERSION}.a
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/libHSBoolean-${PKGVERSION}_p.a
+lib/Boolean-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/Boolean-${PKGVERSION}/COPYING

@@ -1,0 +1,12 @@
+- PLIST for linux
+- Patch to be multiplatform?
+- Exclude some files from being installed
+  (they most likely conflict with other packages)
+
+- This package has known vulnerabilities, please investigate and fix
+  if possible, see:
+  http://secunia.com/advisories/45363/
+  CVE-2011-5325, CVE-2014-9645, CVE-2015-9261, CVE-2017-15873, CVE-2017-15874,
+  CVE-2017-16544, CVE-2018-1000500, CVE-2018-1000517, CVE-2018-20679,
+  CVE-2019-5747, CVE-2021-28831, CVE-2022-30065, CVE-2022-48174,
+  CVE-2023-42363, CVE-2023-42364, CVE-2023-42365, CVE-2023-42366

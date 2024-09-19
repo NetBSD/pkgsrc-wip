@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/gm2calc.x
+include/gm2calc/MSSMNoFV_onshell.h
+include/gm2calc/MSSMNoFV_onshell.hpp
+include/gm2calc/MSSMNoFV_onshell_mass_eigenstates.hpp
+include/gm2calc/MSSMNoFV_onshell_physical.hpp
+include/gm2calc/MSSMNoFV_onshell_problems.hpp
+include/gm2calc/MSSMNoFV_onshell_soft_parameters.hpp
+include/gm2calc/MSSMNoFV_onshell_susy_parameters.hpp
+include/gm2calc/gm2_1loop.h
+include/gm2calc/gm2_1loop.hpp
+include/gm2calc/gm2_2loop.h
+include/gm2calc/gm2_2loop.hpp
+include/gm2calc/gm2_error.hpp
+include/gm2calc/gm2_uncertainty.h
+include/gm2calc/gm2_uncertainty.hpp
+include/gm2calc/gm2_version.h
+lib/libgm2calc.a
+share/pkgconfig/gm2calc.pc

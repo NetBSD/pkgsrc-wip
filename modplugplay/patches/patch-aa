@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/20 14:06:09 pallegra Exp $
+
+--- modplugplay.c.orig	2010-03-20 13:42:02.000000000 +0000
++++ modplugplay.c
+@@ -69,7 +69,7 @@ command line option handling
+ #include <string.h>			/* strcpy */
+ #include <stdlib.h>			/* srand/rand */
+ #include <unistd.h>
+-#include <modplug.h>			/* core */
++#include <libmodplug/modplug.h>		/* core */
+ #include <sys/ioctl.h>			/* control device */
+ #include <fcntl.h>
+ 
+@@ -87,7 +87,7 @@ command line option handling
+ #define VERSION "1.0"
+ 
+ #define BUF_SIZE 4096
+-#define DEVICE_NAME "/dev/dsp"
++#define DEVICE_NAME "@DEVOSSAUDIO@"
+ 
+ static struct termios stored_settings;
+ int audio_fd;

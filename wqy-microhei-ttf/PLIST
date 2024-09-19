@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/09 19:58:45 ryo-on Exp $
+lib/X11/fonts/TTF/wqy-microhei.ttc
+share/doc/wqy-microhei/AUTHORS.txt
+share/doc/wqy-microhei/ChangeLog.txt
+share/doc/wqy-microhei/INSTALL.txt
+share/doc/wqy-microhei/LICENSE_Apache2.txt
+share/doc/wqy-microhei/LICENSE_GPLv3.txt
+share/doc/wqy-microhei/README.txt

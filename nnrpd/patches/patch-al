@@ -1,0 +1,47 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- nnrpd/commands.c.orig	Tue Dec  9 00:48:50 1997
++++ nnrpd/commands.c
+@@ -245,8 +245,7 @@ CMDauthinfo(ac, av)
+ 	    PERMauthorized = TRUE;
+ 	    return;
+ 	}
+-	if (PERMinfile((char *)NULL, (char *)NULL, User, Password,
+-		accesslist)) {
++	if (PERMinfile(ClientHost, ClientAddr, User, Password, accesslist)) {
+ 	    PERMspecified = NGgetlist(&PERMlist, accesslist);
+ 	    syslog(L_NOTICE, "%s user %s", ClientHost, User);
+ 	    Reply("%d Ok\r\n", NNTP_AUTH_OK_VAL);
+@@ -309,6 +308,7 @@ CMDlist(ac, av)
+ 	static time_t	last_time;
+ 	time_t		now;
+ 	(void)time(&now);
++        lp = &INFOactive;
+ 	if (ac < 3 || now > last_time + NNRP_RESCAN_DELAY * 3) {
+ 	    if (last_time && !GetGroupList()) {
+ 		syslog(L_NOTICE, "%s cant getgroupslist for list %m", ClientHost);
+@@ -320,15 +320,19 @@ CMDlist(ac, av)
+ 	if (ac == 3) {
+ 	    GROUPENTRY *gp = GRPfind(av[2]);
+ 	    if (gp) {
+-		Reply("%d list:\r\n", NNTP_LIST_FOLLOWS_VAL);
+-		Printf("%s %ld %ld %c%s\r\n.\r\n",
+-		      gp->Name, (long)gp->High, (long)gp->Low,
+-		      gp->Flag, gp->Alias ? gp->Alias : "");
++		grplist[0] = av[2];
++		grplist[1] = NULL;
++		Reply("%d %s.\r\n", NNTP_LIST_FOLLOWS_VAL, lp->Format);
++		if (PERMmatch(PERMdefault, PERMlist, grplist))
++			Printf("%s %ld %ld %c%s\r\n.\r\n",
++			      gp->Name, (long)gp->High, (long)gp->Low,
++			      gp->Flag, gp->Alias ? gp->Alias : "");
++		else
++			Printf(".\r\n");
+ 		return;
+ 	    }
+ 	    wildarg = av[2];
+ 	}
+-	lp = &INFOactive;
+     }
+     else if (caseEQ(p, "active.times"))
+ 	lp = &INFOactivetimes;

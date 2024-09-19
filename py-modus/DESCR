@@ -1,0 +1,2 @@
+Pymodbus is a full Modbus protocol implementation using
+twisted/torndo/asyncio for its asynchronous communications core.

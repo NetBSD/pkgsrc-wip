@@ -1,0 +1,5 @@
+THEAMA is a curses-based version of the famous HangMan game. It supports many
+command line options and it's very easy to play and extend. THEAMA is a game for
+both players who wants waste a bit of time with a funny game and for developers
+which wants to write their own rules and graphics stuff with a little and simple
+C game.

@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- src/Makefile.in.orig	2012-01-01 15:28:51.000000000 +0000
++++ src/Makefile.in
+@@ -278,7 +278,8 @@ wsfb_drv_la_LTLIBRARIES = wsfb_drv.la
+ wsfb_drv_la_LDFLAGS = -module -avoid-version
+ wsfb_drv_ladir = @moduledir@/drivers
+ wsfb_drv_la_SOURCES = \
+-         wsfb_driver.c
++         wsfb_driver.c \
++         wsfb_cursor.c
+ 
+ all: all-am
+ 

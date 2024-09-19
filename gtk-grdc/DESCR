@@ -1,0 +1,5 @@
+Grdc is a remote desktop client based on GTK+ and Gnome.
+It provides a GTK+ application and a Gnome applet
+Features include scrollable/scalable window, floating toolbar,
+keyboard grabbing,etc.Support RDP (rdesktop), VNC (libvncclient)
+ and SSH (libssh)

@@ -1,0 +1,18 @@
+higan is a Nintendo multi-system emulator that began development on 2004-10-14.
+It currently supports the following systems:
+
+ * Famicom
+ * Super Famicom
+ * Game Boy
+ * Game Boy Color
+ * Game Boy Advance
+ * Nintendo DS
+
+higan also supports the following subsystems:
+
+ * Super Game Boy
+ * BS-X Satellaview
+ * Sufami Turbo
+
+higan was formerly known as bsnes. The project was renamed after becoming a
+multi-system emulator.

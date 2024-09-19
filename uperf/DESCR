@@ -1,0 +1,4 @@
+uperf is a network performance tool that supports modelling and replay of
+various networking patterns. uperf was initially developed by the Performance
+Applications Engineering group at Sun Microsystems. Since 2008, it is being
+developed by the community.

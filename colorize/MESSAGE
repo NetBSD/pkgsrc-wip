@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/12/12 14:13:55 ivaniclixx Exp $
+Common program usage is to put:
+
+alias ssh="colorize -- ssh"
+
+in your shell login script file (i.e. ".profile") to always use "colorize"
+when using ssh.
+===========================================================================

@@ -1,0 +1,8 @@
+postfix-policyd-spf-perl is a basic Postfix policy engine for Sender
+Policy Framework (SPF) checking. It is implemented in pure Perl and uses
+Mail::SPF.
+
+This SPF policy server implementation is very basic and requires almost
+no configuration.
+
+This is Open Patent software (See http://www.openpatents.org/ ).

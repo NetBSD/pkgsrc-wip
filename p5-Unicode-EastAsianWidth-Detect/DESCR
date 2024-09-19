@@ -1,0 +1,4 @@
+Unicode::EastAsianWidth::Detect is module that can detect the locale
+is CJK or not. For example, most of users who uses CJK languages
+are thinking that Easy Asian Width Ambiguous Widths should be double
+cells.

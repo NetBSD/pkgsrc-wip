@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- src/VBox/HostDrivers/Makefile.kmk.orig	2016-03-04 19:29:23.000000000 +0000
++++ src/VBox/HostDrivers/Makefile.kmk
+@@ -30,18 +30,18 @@ if  !defined(VBOX_ONLY_DOCS) \
+  ifdef VBOX_WITH_USB
+   include $(PATH_SUB_CURRENT)/VBoxUSB/Makefile.kmk
+  endif
+- if1of ($(KBUILD_TARGET), darwin solaris win linux freebsd)
++ if1of ($(KBUILD_TARGET), darwin solaris win linux freebsd netbsd)
+   ifdef VBOX_WITH_NETFLT
+    include $(PATH_SUB_CURRENT)/VBoxNetFlt/Makefile.kmk
+   endif
+  endif
+- if1of ($(KBUILD_TARGET), darwin solaris win linux freebsd)
++ if1of ($(KBUILD_TARGET), darwin solaris win linux freebsd netbsd)
+   ifdef VBOX_WITH_NETADP
+    include $(PATH_SUB_CURRENT)/VBoxNetAdp/Makefile.kmk
+   else
+   endif
+  endif
+- if1of ($(KBUILD_TARGET), darwin freebsd linux)
++ if1of ($(KBUILD_TARGET), darwin freebsd linux netbsd)
+   include $(PATH_SUB_CURRENT)/$(KBUILD_TARGET)/Makefile.kmk
+  endif
+ 
+@@ -55,4 +55,3 @@ endif # !defined(VBOX_ONLY_DOCS) && !def
+ 
+ # Let kBuild generate the rules.
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

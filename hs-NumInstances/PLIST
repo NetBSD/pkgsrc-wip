@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/25 13:48:40 szptvlfn Exp $
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances.hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances.p_hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/Function.hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/Function.p_hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/PreRequisites.hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/PreRequisites.p_hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/Tuple.hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/Tuple.p_hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/Util.hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/Data/NumInstances/Util.p_hi
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/HSNumInstances-${PKGVERSION}.o
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/libHSNumInstances-${PKGVERSION}.a
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/libHSNumInstances-${PKGVERSION}_p.a
+lib/NumInstances-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/NumInstances-${PKGVERSION}/LICENSE

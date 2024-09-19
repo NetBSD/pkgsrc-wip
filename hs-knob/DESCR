@@ -1,0 +1,3 @@
+Create memory-backed Handles, referencing virtual files. This is mostly
+useful for testing Handle-based APIs without having to interact with the
+filesystem.

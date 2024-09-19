@@ -1,0 +1,8 @@
+This is a front-end for the DB_File package.
+
+If you tie a hash in read-only mode, this module puts a shared lock on
+the database file, copies it to a temporary file, unlocks the original
+database, and then ties the tempfile using DB_File.
+
+If you tie the hash in read-write mode, we put an exclusive lock on the
+database and tie it directly using DB_File.

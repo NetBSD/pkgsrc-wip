@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
+
+--- xpconfig/platform_rcfile.c.orig	Sat Jun 23 22:54:23 2001
++++ xpconfig/platform_rcfile.c
+@@ -363,8 +363,8 @@ void getApplicationConfig( const char * 
+ 	} else {
+ 
+ 		/* try the directory '/etc/application.d/' */
+-		dirname = malloc( (strlen(application) + 8) * sizeof(char) );
+-		sprintf( dirname, "/etc/%s.d", application );
++		dirname = malloc(strlen(application) + strlen(PKG_SYSCONFDIR) + 4);
++		sprintf( dirname, PKG_SYSCONFDIR "/%s.d", application );
+ 		fd = open( dirname, O_RDONLY );
+ 		if (-1 != fd) {
+ 			basep = 0;
+@@ -389,8 +389,8 @@ void getApplicationConfig( const char * 
+ 		free( dirname );
+ 
+ 		/* try '/etc/applicationrc' */
+-		filename = malloc( (strlen(application) + 8) * sizeof(char) );
+-		sprintf( filename, "/etc/%src", application );
++		filename = malloc(strlen(application) + strlen(PKG_SYSCONFDIR) + 4);
++		sprintf( filename, PKG_SYSCONFDIR "/%src", application );
+ 		parseConfigFile( filename, application );
+ 		free( filename );
+ 

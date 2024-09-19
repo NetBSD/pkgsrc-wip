@@ -1,0 +1,11 @@
+This is very WIP. 
+
+The snmpd daemon's snmpd/main.c uses FreeBSD's 'struct cmsgcred' to verify
+the identity of a peer process (see <sys/socket.h>). AFAICS, NetBSD
+does not have an equivalent, so the build breaks here.
+
+I'll leave it to more network code savvy people to find a workaround.
+
+On top of that, the code has a few issues with signed vs. unsigned
+char pointers (partly patched) that do not go down well with modern
+gcc.

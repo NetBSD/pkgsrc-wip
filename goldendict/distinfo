@@ -1,0 +1,9 @@
+$NetBSD$
+
+RMD160 (goldendict/goldendict-1.5.0rc2.tar.gz) = 036861c9a4d4b92cdb42ea7f6de15db13b638d45
+SHA512 (goldendict/goldendict-1.5.0rc2.tar.gz) = b88067a90df42b07d926231f624be8796f031b872443a45f9744ceeea27f39325bc665090f773528a26ad8391ae2423a29c602068bf2cc4ed5870a07646d2362
+Size (goldendict/goldendict-1.5.0rc2.tar.gz) = 19413751 bytes
+SHA1 (patch-bgl_babylon.cc) = 5f26f0c3211cc14dc06c3919113b4d59cc4959a1
+SHA1 (patch-goldendict.pro) = cd33dba2b4aef895ebd4f36885f92520bfefb457
+SHA1 (patch-iconv.cc) = 0c336e5bc4f98b65a4829ebb0fa91f0deb180aad
+SHA1 (patch-mdictparser.cc) = 33abe38c30b9b58187d14e027da64f5f744e65f9

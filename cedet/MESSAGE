@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2011/11/18 06:06:57 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (add-to-list 'load-path "${LISPDIR}/cedet/common")
+  (require 'cedet)
+
+===========================================================================

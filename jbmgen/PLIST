@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.3 2013/01/27 17:09:10 othyro Exp $
+bin/jbmgen
+${RUBY_SITELIB}/jbmgen/BinaryStuff.rb
+${RUBY_SITELIB}/jbmgen/Dictionary.rb
+${RUBY_SITELIB}/jbmgen/FileEntry.rb
+${RUBY_SITELIB}/jbmgen/JBMFile.rb
+${RUBY_SITELIB}/jbmgen/Path.rb
+${RUBY_SITELIB}/jbmgen/Pointable.rb
+${RUBY_SITELIB}/jbmgen/TreeNode.rb
+${RUBY_SITELIB}/jbmgen/TreeNodeTypes.rb
+${RUBY_SITELIB}/jbmgen/mp3info.rb

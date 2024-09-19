@@ -1,0 +1,12 @@
+The script to start the server is particularly crap and should
+probably be rewritten.
+
+The server itself has a bug where it gets into a loop and becomes
+unresponsive - the startup script handles this, but not very well.
+
+Apart from that, this package works fine on NetBSD.
+
+files/ contains some 3rd-party addons which may or may not be
+useful.
+
+-- This package has a known vulnerability, please investigate and fix if possible. (see: http://aluigi.altervista.org/adv/unrwebdos-adv.txt and http://secunia.com/advisories/26506/)

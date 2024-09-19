@@ -1,0 +1,2 @@
+This is a tool that will build a directory of links a simple pypi index and will
+do it all as python wheels.

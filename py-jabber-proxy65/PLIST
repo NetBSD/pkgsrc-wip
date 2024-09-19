@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/proxy65/__init__.py
+${PYSITELIB}/proxy65/__init__.pyc
+${PYSITELIB}/proxy65/__init__.pyo
+${PYSITELIB}/proxy65/proxy65.py
+${PYSITELIB}/proxy65/proxy65.pyc
+${PYSITELIB}/proxy65/proxy65.pyo
+${PYSITELIB}/proxy65/socks5.py
+${PYSITELIB}/proxy65/socks5.pyc
+${PYSITELIB}/proxy65/socks5.pyo
+${PYSITELIB}/twisted/plugins/proxy65_plugin.py
+${PYSITELIB}/twisted/plugins/proxy65_plugin.pyc
+${PYSITELIB}/twisted/plugins/proxy65_plugin.pyo
+share/doc/proxy65/README

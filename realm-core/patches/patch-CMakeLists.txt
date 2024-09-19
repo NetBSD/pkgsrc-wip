@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2020-06-30 08:11:11.000000000 +0000
++++ CMakeLists.txt
+@@ -206,7 +206,12 @@ if(EXISTS "${DEPRECATED_CONFIG_FILE}")
+     message(FATAL_ERROR "${DEPRECATED_CONFIG_FILE} exists in the source directory, and will take precedence over the generated configuration in the build directory. Please remove this file before continuing. Alternatively, you can also clean your realm-core to remove this and other stale files: git clean -xfd")
+ endif()
+ 
+-set(PEGTL_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/external/pegtl/include/tao/)
++if(NOT PEGTL_SYSTEM)
++    set(PEGTL_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/external/pegtl/include/tao/)
++else()
++    find_path(PEGTL_INCLUDE_ROOTDIR tao/pegtl.hpp)
++    set(PEGTL_INCLUDE_DIR ${PEGTL_INCLUDE_ROOTDIR}/tao)
++endif()
+ 
+ # Tell the build system where to find the sources (and generated sources)
+ include_directories(src)
+@@ -249,4 +254,3 @@ set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
+ include(CPack)
+ cpack_add_component(runtime DEPENDS runtime)
+ cpack_add_component(devel DEPENDS devel)
+-

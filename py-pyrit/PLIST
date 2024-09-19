@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/24 04:17:19 othyro Exp $
+bin/pyrit
+${PYSITELIB}/cpyrit/__init__.py
+${PYSITELIB}/cpyrit/__init__.pyc
+${PYSITELIB}/cpyrit/__init__.pyo
+${PYSITELIB}/cpyrit/_cpyrit_cpu.so
+${PYSITELIB}/cpyrit/config.py
+${PYSITELIB}/cpyrit/config.pyc
+${PYSITELIB}/cpyrit/config.pyo
+${PYSITELIB}/cpyrit/cpyrit.py
+${PYSITELIB}/cpyrit/cpyrit.pyc
+${PYSITELIB}/cpyrit/cpyrit.pyo
+${PYSITELIB}/cpyrit/network.py
+${PYSITELIB}/cpyrit/network.pyc
+${PYSITELIB}/cpyrit/network.pyo
+${PYSITELIB}/cpyrit/pckttools.py
+${PYSITELIB}/cpyrit/pckttools.pyc
+${PYSITELIB}/cpyrit/pckttools.pyo
+${PYSITELIB}/cpyrit/storage.py
+${PYSITELIB}/cpyrit/storage.pyc
+${PYSITELIB}/cpyrit/storage.pyo
+${PYSITELIB}/cpyrit/util.py
+${PYSITELIB}/cpyrit/util.pyc
+${PYSITELIB}/cpyrit/util.pyo
+${PYSITELIB}/pyrit_cli.py
+${PYSITELIB}/pyrit_cli.pyc
+${PYSITELIB}/pyrit_cli.pyo

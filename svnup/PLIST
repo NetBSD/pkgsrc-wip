@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/06 21:34:58 thomasklausner Exp $
+bin/svnup
+man/man1/svnup.1
+man/man5/svnup.conf.5
+share/examples/svnup/svnup.conf

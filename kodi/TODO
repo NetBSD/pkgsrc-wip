@@ -1,0 +1,5 @@
+- kodi.bin dying on undefined reference to dllmalloc(?)
+- install
+- test that ARM still works
+- remove redundant dependencies
+- stop downloading things from the internet

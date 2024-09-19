@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/20 20:17:36 ishit Exp $
+bin/sylfilter
+include/sylfilter/bayes-filter.h
+include/sylfilter/blacklist-filter.h
+include/sylfilter/filter-kvs-gdbm.h
+include/sylfilter/filter-kvs-qdbm.h
+include/sylfilter/filter-kvs-sqlite.h
+include/sylfilter/filter-kvs.h
+include/sylfilter/filter-manager.h
+include/sylfilter/filter-utils.h
+include/sylfilter/filter.h
+include/sylfilter/ngram-filter.h
+include/sylfilter/textcontent-filter.h
+include/sylfilter/whitelist-filter.h
+include/sylfilter/wordsep-filter.h
+lib/libsylfilter.la

@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/06/17 23:14:53 dhowland Exp $
+
+Before you can use the no-ip client, you must create a config file.  This
+file may be created automatically by running the following command:
+
+    noip2 -C
+
+The file <PREFIX>/etc/rc.d/noip can be used to start the client as a daemon
+once the config file has been created. (where <PREFIX> is the location your
+packages are installed to, eg. /usr/pkg)
+
+===========================================================================

@@ -1,0 +1,11 @@
+Kup is created for helping people to keep up-to-date backups of
+their personal files. Connecting a USB hard drive is the primary
+supported way to store files, but saving files to a server over a
+network connection is also possible for advanced users.
+
+When you plug in your external hard drive Kup will automatically
+start copying your latest changes, but of course it will only do
+so if you have been active on your computer for some hourse since
+the last time you took a backup (and it can of course ask you first,
+before copying anything).  In general Kup tries to not disturb you
+needlessly.

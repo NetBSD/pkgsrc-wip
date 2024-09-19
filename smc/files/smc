@@ -1,0 +1,28 @@
+#!/bin/sh
+SHAREDIR=SHAREPATH
+LIBDIR=LIBPATH
+CONFDIR=.smc
+
+(
+cd ~
+	if [ ! -d ${CONFDIR} ]; then
+	echo No SMC user directory available -- creating that
+		mkdir $CONFDIR
+		cd $CONFDIR
+		cp -rf ${SHAREDIR}/levels .
+		mkdir savegames
+		mkdir screenshots
+		chmod 755 savegames screenshots levels
+		chmod 644 levels/*
+		ln -s ${SHAREDIR}/music music
+		ln -s ${SHAREDIR}/pixmaps pixmaps
+		ln -s ${SHAREDIR}/font font
+		ln -s ${SHAREDIR}/sounds sounds
+		ln -s ${SHAREDIR}/world world
+		ln -s ~/${CONFDIR} data
+		cd ..
+	fi
+	export SDL_AUDIO_PLUGIN="nas"
+	cd ${CONFDIR}
+	${LIBDIR}/smc "$@"
+)

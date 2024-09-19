@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/centrifuge
+bin/centrifuge-BuildSharedSequence.pl
+bin/centrifuge-RemoveEmptySequence.pl
+bin/centrifuge-RemoveN.pl
+bin/centrifuge-build
+bin/centrifuge-build-bin
+bin/centrifuge-class
+bin/centrifuge-compress.pl
+bin/centrifuge-download
+bin/centrifuge-inspect
+bin/centrifuge-inspect-bin
+bin/centrifuge-kreport
+bin/centrifuge-sort-nt.pl
+share/centrifuge/indices/Makefile
+share/doc/centrifuge/README
+share/doc/centrifuge/add.css
+share/doc/centrifuge/faq.shtml
+share/doc/centrifuge/footer.inc.html
+share/doc/centrifuge/index.shtml
+share/doc/centrifuge/manual.html
+share/doc/centrifuge/manual.inc.html
+share/doc/centrifuge/manual.inc.html.old
+share/doc/centrifuge/manual.shtml
+share/doc/centrifuge/sidebar.inc.shtml
+share/doc/centrifuge/strip_markdown.pl
+share/doc/centrifuge/style.css

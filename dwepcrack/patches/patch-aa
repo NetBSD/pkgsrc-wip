@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/10/29 13:19:22 gschwarz Exp $
+
+--- Makefile.orig	2002-02-26 12:38:31.000000000 +0100
++++ Makefile	2006-10-29 14:02:37.000000000 +0100
+@@ -1,8 +1,8 @@
+-CC      = gcc
+-PREFIX  = /usr/local
+-CFLAGS  = -Wall -g -I/usr/local/include -O2
++#CC      = gcc
++#PREFIX  = /usr/local
++#CFLAGS  = -Wall -g -I/usr/local/include -O2
+ TARGET  = dwepcrack
+-LDFLAGS = -lpcap -lcrypto
++LIBS   += -lpcap -lcrypto
+ OBJS    = main.o\
+           brute.o\
+           weakksa.o\
+@@ -13,7 +13,7 @@
+ all: dwepcrack
+ 
+ dwepcrack: $(OBJS)
+-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS)
++	$(CC) ${CPPFLAGS} $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS) ${LIBS}
+ 
+ install:
+ 	install -m 755 -o root -g wheel $(TARGET) $(PREFIX)/bin 

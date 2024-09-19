@@ -1,0 +1,13 @@
+The Python Macromolecular Library (mmLib) is a software toolkit and library of
+routines for the analysis and manipulation of macromolecular structural models,
+implemented in the Python programming language. It is accessed via a layered,
+object-oriented application programming interface, and provides a range ofuseful
+software components for parsing mmCIF, and PDB files, a library of atomic
+elements and monomers, an object-oriented data structure describing biological
+macromolecules, and an OpenGL molecular viewer. The mmLib data model is designed
+to provide easy access to the various levels of detail needed to implement
+high-level application programs for macromolecular crystallography, NMR,
+modeling, and visualization. This includes specialized classes for proteins, DNA
+amino acids, and nucleic acids. Also included is a extensive monomer library,
+element library, and specialized classes for performing unit cell calculations
+combined with a full space group library.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/18 13:43:13 ryo-on Exp $
+bin/audiere-config
+include/audiere.h
+lib/libaudiere.la

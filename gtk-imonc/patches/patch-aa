@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/03 15:26:09 gschwarz Exp $
+
+--- src/md5.h.orig	2006-11-16 20:32:25.000000000 +0100
++++ src/md5.h	2006-11-16 20:32:45.000000000 +0100
+@@ -44,7 +44,9 @@
+ #include <ctype.h>
+ #include <stdlib.h>
+ #include <string.h>
++#ifdef __linux__
+ #include <endian.h>
++#endif
+ #include <sys/types.h>
+ #if defined HAVE_LIMITS_H
+ # include <limits.h>

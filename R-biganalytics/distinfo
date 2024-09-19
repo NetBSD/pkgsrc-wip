@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2012/11/15 23:35:15 bubuchka Exp $
+
+RMD160 (R/biganalytics_1.1.14.tar.gz) = 8dbaa0fee7ca414e31d3513071c444df2b5f6128
+SHA512 (R/biganalytics_1.1.14.tar.gz) = 88491ba47306c2f83dd0d31054879cf78206e2c9ec96486486ada3bc0d6ad040156726cf752274c4c025d080f1c6cd3a4c037c1fdedbcda29c86a2dff3889a38
+Size (R/biganalytics_1.1.14.tar.gz) = 22115 bytes

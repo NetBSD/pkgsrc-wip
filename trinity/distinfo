@@ -1,0 +1,14 @@
+$NetBSD$
+
+RMD160 (trinity-2.8.3.tar.gz) = 92a7a81b15a220ff70f3ff5cb3fb80617d041c9d
+SHA512 (trinity-2.8.3.tar.gz) = 45f0712b2732591688697d3b4726e3c2f64a507d97f080b1cfeaf2d16647b196b2a3b45aac45640877bb0c4eced8578ca16fc57cd778b7a1c84908c76cee299f
+Size (trinity-2.8.3.tar.gz) = 21707766 bytes
+SHA1 (patch-Chrysalis_CMakeLists.txt) = cc637a1b8dbbd95e49c94ac3c1bd361612bc01ee
+SHA1 (patch-Chrysalis_Makefile) = 151e0c2838db9822858879fa15c47a76f75f33bb
+SHA1 (patch-Inchworm_CMakeLists.txt) = 0a00585801893b2ebac759ecf5db91b76218238f
+SHA1 (patch-Inchworm_Makefile) = 43279c6a1d6c2d1a00d5f993c734122b351ff517
+SHA1 (patch-Makefile) = a428497a9d0a674d210ab5dde97d18ac9b0adba2
+SHA1 (patch-trinity-plugins_Makefile) = a7f6526429ed3007d0336fc765fd61161f9a3ed5
+SHA1 (patch-trinity-plugins_scaffold__iworm__contigs_Makefile) = 65b8d5c5bb46448080515968f6bb49df463567be
+SHA1 (patch-trinity-plugins_seqtk-trinity-0.0.2_Makefile) = 30946c32223ae06311e7315a467af5c5de626f0c
+SHA1 (patch-util_support__scripts_plugin__install__tests.sh) = ecfe2717a827a16df01834fba8e73a8fc09ed6d7

@@ -1,0 +1,13 @@
+Uzbl is a set of web interface tools which adhere to the UNIX
+philosophy. It consists of:
+- uzbl-core: the main component which uses WebkitGtk+ for rendering
+  and network interaction. It provides a plain web view and an
+  optional status bar. It can be driven with scripts through standard
+  input/output, named pipes, or sockets.
+- uzbl-browser: a simple browser built atop uzbl-core. Provides means
+  for url changing, keeping history, downloading files, filling forms,
+  navigating links, managing cookies and events, etc. Uzbl-browser is
+  highly customisable through a configuration file, which almost
+  completely defines its behaviour.
+- uzbl-tabbed: a multiplexer for uzbl-browsers. Allows keeping
+  multiple instances of uzbl-browser in a single window.

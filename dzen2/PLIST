@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/09 17:20:14 thomasklausner Exp $
+bin/dbar
+bin/dzen2
+bin/gcpubar
+bin/gdbar
+bin/kittscanner.sh
+bin/noisyalert.sh
+bin/textwidth

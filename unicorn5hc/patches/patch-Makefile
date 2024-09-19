@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2015/03/03 12:45:07 thomasklausner Exp $
+
+Compile for Unix, not MINGW.
+
+--- Makefile.orig	2014-05-02 16:55:23.000000000 +0000
++++ Makefile
+@@ -8,10 +8,10 @@ LIBDIR = 
+ LIBS = 
+ 
+ # Defs for compiling with UNIX
+-#DEFS = -DUNIX -O3 -Wall -DTEXT
++DEFS = -DUNIX -O3 -Wall -DTEXT
+ 
+ # Defs for compiling with MINGW for native Windows binary
+-DEFS = -DUNIX -O3 -Wall -DTEXT -DMINGW
++#DEFS = -DUNIX -O3 -Wall -DTEXT -DMINGW
+ 
+ HEADERS = header.h maps.h objects.h world.h gen.h lore.h monsters.h recipe.h spells.h races.h classes.h trophies.h
+ OBJS = \

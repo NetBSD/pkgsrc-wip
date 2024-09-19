@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2013/01/21 00:38:46 othyro Exp $
+
+RMD160 (gksu-2.0.2.tar.gz) = 2864cb95529532c698b1be75914f30a70bb8145f
+Size (gksu-2.0.2.tar.gz) = 468121 bytes
+SHA1 (patch-nautilus-gksu_libnautilus-gksu.c) = 8105bb3ed2492eebab93d4fcfd11378a61e714ec

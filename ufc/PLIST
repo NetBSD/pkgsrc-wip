@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.3 2013/03/24 20:17:23 outpaddling Exp $
+include/swig/ufc.i
+include/ufc.h
+include/ufc_geometry.h
+lib/pkgconfig/ufc-1.pc
+${PYSITELIB}/ufc/__init__.py
+${PYSITELIB}/ufc/_ufc.so
+${PYSITELIB}/ufc/ufc.py
+${PYSITELIB}/ufc_utils/__init__.py
+${PYSITELIB}/ufc_utils/build.py
+${PYSITELIB}/ufc_utils/dofmap.py
+${PYSITELIB}/ufc_utils/finite_element.py
+${PYSITELIB}/ufc_utils/form.py
+${PYSITELIB}/ufc_utils/function.py
+${PYSITELIB}/ufc_utils/integrals.py
+share/ufc/UFCConfig.cmake
+share/ufc/UFCConfigVersion.cmake
+share/ufc/UseUFC.cmake

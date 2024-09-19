@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	termbox
+
+.if !defined(TERMBOX_BUILDLINK3_MK)
+TERMBOX_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.termbox+=	termbox>=1.1.2
+BUILDLINK_PKGSRCDIR.termbox?=	../../wip/termbox
+
+.endif	# TERMBOX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-termbox

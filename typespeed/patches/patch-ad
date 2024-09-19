@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/02/17 16:37:50 larnor Exp $
+
+--- distrib/typespeed.SlackBuild.orig	2007-11-29 22:40:09.000000000 +0100
++++ distrib/typespeed.SlackBuild
+@@ -56,7 +56,7 @@ tar xvzf $CWD/$NAME-$PROGRAM_VER.tar.gz
+ 
+ # Compile
+ cd $TMP/$NAME-$PROGRAM_VER
+-if [ "`pwd`" == "/tmp" ] ; then
++if [ "`pwd`" = "/tmp" ] ; then
+   echo "ERROR: something is wrong... we cant cd $TMP/$NAME-$PROGRAM_VER"
+   exit
+ fi

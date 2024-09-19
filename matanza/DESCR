@@ -1,0 +1,5 @@
+Matanza is a game developed by the Freaks Unidos. On it, each player controls
+a ship and is supposed to destroy the other players. The game runs on a telnet
+server, and players need nothing but a standard telnet client to play. All the
+animations are rendered in ASCII art. There are no intrinsic limits to the
+number of players, but a high speed connection to the server is a must.

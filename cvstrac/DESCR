@@ -1,0 +1,18 @@
+A web-based bug and patch-set tracking system for CVS, Subversion and GIT.
+
+Features
+- Automatically generates a patch-set log from CVS check-in comments
+- User-defined color-coded database queries
+- Web-based administration of the CVSROOT/passwd file
+- Built-in repository browser
+- Built-in Wiki
+- Very simple setup - a self-contained executable runs as CGI, from
+  inetd, or as a stand-alone web server
+- Minimal memory, disk and CPU requirements - works on old hardware
+- Access permissions configurable separately for each user
+- Allows for anonymous users
+- Uses a built-in SQL database engine (SQLite) - no external RDBMS required
+- Tested under Linux - works on other versions of Unix. Also works under
+  Windows
+- Can be run from a chroot jail for added security.
+- GNU Public License

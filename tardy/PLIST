@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2009/06/09 17:19:16 marko_schuetz Exp $
+bin/tardy
+man/man1/tardy.1
+man/man1/tardy_license.1

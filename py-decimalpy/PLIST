@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/31 02:19:21 jihbed Exp $
+${PYSITELIB}/decimalpy/__init__.py
+${PYSITELIB}/decimalpy/__init__.pyc
+${PYSITELIB}/decimalpy/__init__.pyo
+${PYSITELIB}/decimalpy/_decimal_to_number.py
+${PYSITELIB}/decimalpy/_decimal_to_number.pyc
+${PYSITELIB}/decimalpy/_decimal_to_number.pyo
+${PYSITELIB}/decimalpy/_math_constants_and_functions.py
+${PYSITELIB}/decimalpy/_math_constants_and_functions.pyc
+${PYSITELIB}/decimalpy/_math_constants_and_functions.pyo
+${PYSITELIB}/decimalpy/math_meta_functions.py
+${PYSITELIB}/decimalpy/math_meta_functions.pyc
+${PYSITELIB}/decimalpy/math_meta_functions.pyo
+${PYSITELIB}/decimalpy/math_types.py
+${PYSITELIB}/decimalpy/math_types.pyc
+${PYSITELIB}/decimalpy/math_types.pyo
+${PYSITELIB}/decimalpy/math_vector_functions.py
+${PYSITELIB}/decimalpy/math_vector_functions.pyc
+${PYSITELIB}/decimalpy/math_vector_functions.pyo
+${PYSITELIB}/mathematical_meta_code/__init__.py
+${PYSITELIB}/mathematical_meta_code/__init__.pyc
+${PYSITELIB}/mathematical_meta_code/__init__.pyo
+${PYSITELIB}/mathematical_meta_code/algebraic_structures.py
+${PYSITELIB}/mathematical_meta_code/algebraic_structures.pyc
+${PYSITELIB}/mathematical_meta_code/algebraic_structures.pyo

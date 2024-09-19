@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.2 2005/07/25 13:41:54 thomasklausner Exp $
+--- src/backend/DSP/TTempoChanger.h.orig	2005-05-01 04:53:40.000000000 +0200
++++ src/backend/DSP/TTempoChanger.h
+@@ -144,7 +144,7 @@ private:
+ 
+ 	TAutoBuffer<soundtouch::SAMPLETYPE> inputBuffer;
+ 
+-	SoundTouch changer;
++	soundtouch::SoundTouch changer;
+ };
+ 
+ #endif // HAVE_LIBSOUNDTOUCH

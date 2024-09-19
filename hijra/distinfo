@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/24 14:05:14 jihbed Exp $
+
+RMD160 (hijra-0.1.18.tar.bz2) = 111e16531dafadb54c23bf82ba687727c5091977
+Size (hijra-0.1.18.tar.bz2) = 22858 bytes
+SHA1 (patch-aa) = 3d0db950837588482c00f92eb82d546f32b5720d
+SHA1 (patch-ab) = a86f06a0361ec460baa58a6ab2197e670e7a8a65

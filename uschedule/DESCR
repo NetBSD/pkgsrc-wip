@@ -1,0 +1,7 @@
+The uschedule package contains a number of tools to manage the scheduling of
+jobs securely.  The uscheduled daemon is run by a supervisor, such as
+"supervise" in the "daemontools" package or "runsv" in the "runit" package.
+
+uschedule is neither "cron" nor "at" - although it does offer similar
+functionality it is not intended to be a drop-in replacement.
+It works differently and is designed to be different.

@@ -1,0 +1,10 @@
+@comment $NetBSD$
+emul/netbsd32/bin/dumpsexp
+emul/netbsd32/bin/hmac256
+emul/netbsd32/bin/libgcrypt-config
+emul/netbsd32/bin/mpicalc
+emul/netbsd32/include/gcrypt.h
+emul/netbsd32/info/gcrypt.info
+emul/netbsd32/lib/libgcrypt.la
+emul/netbsd32/man/man1/hmac256.1
+emul/netbsd32/share/aclocal/libgcrypt.m4

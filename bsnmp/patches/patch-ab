@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/05 16:04:39 hfath Exp $
+
+--- lib/snmp.c.orig	2006-02-27 10:03:16.000000000 +0000
++++ lib/snmp.c
+@@ -931,19 +931,19 @@ snmp_value_parse(const char *str, enum s
+ 						break;
+ 					  case 'x':
+ 						c = 0;
+-						if (!isxdigit(*str))
++						if (!isxdigit((int)*str))
+ 							break;
+-						if (isdigit(*str))
++						if (isdigit((int)*str))
+ 							c = *str++ - '0';
+-						else if (isupper(*str))
++						else if (isupper((int)*str))
+ 							c = *str++ - 'A' + 10;
+ 						else
+ 							c = *str++ - 'a' + 10;
+-						if (!isxdigit(*str))
++						if (!isxdigit((int)*str))
+ 							break;
+-						if (isdigit(*str))
++						if (isdigit((int)*str))
+ 							c += *str++ - '0';
+-						else if (isupper(*str))
++						else if (isupper((int)*str))
+ 							c += *str++ - 'A' + 10;
+ 						else
+ 							c += *str++ - 'a' + 10;

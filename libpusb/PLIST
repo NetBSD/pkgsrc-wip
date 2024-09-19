@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.4 2006/10/26 19:26:09 rillig Exp $
+include/pusb.h
+lib/libpusb.a
+lib/libpusb.so
+lib/libpusb.so.0
+lib/libpusb.so.0.1
+lib/libpusb_p.a
+lib/libpusb_pic.a

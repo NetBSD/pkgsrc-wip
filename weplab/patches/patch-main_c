@@ -1,0 +1,22 @@
+$NetBSD: patch-main_c,v 1.1 2010/06/27 20:08:13 gschwarz Exp $
+
+--- main.c.orig	2005-03-03 00:04:05.000000000 +0100
++++ main.c	2010-06-13 13:16:42.692216000 +0200
+@@ -159,7 +159,7 @@
+ 	int keySize=64;
+ 	int i,j;
+ 	int sizeaux;
+-	unsigned char *saux;
++	char *saux;
+ 	int tmp[6];
+ 	
+ 	struct option long_options[]={
+@@ -331,7 +331,7 @@
+ 				}else if (!strncmp(long_options[option_index].name,"debugkey",50)){
+ 					totalArgvParameters+=2;
+ 					if (!optarg || optarg[0]=='-' || totalArgvParameters == argc) QuitParameterError("debug key must be specified");
+-					global_v.useDebugKey=ReadHexByteArray(optarg,global_v.debugKey,strlen(optarg)+1);
++					global_v.useDebugKey=ReadHexByteArray((unsigned char *)optarg,global_v.debugKey,strlen(optarg)+1);
+ 					if (global_v.useDebugKey==0){
+ 						printf("ERROR: you have to specify the key like AA:BB:CC:DD:EE \n");
+ 						exit (1);	

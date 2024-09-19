@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# NBlood / Rednukem / PCExhumed
+Reverse-engineered ports of Build games using EDuke32 engine technology and development principles
+
+## NBlood
+Blood port based on EDuke32
+
+### Installing
+1. Extract NBlood to a new directory
+2. Copy the following files from Blood 1.21 to NBlood folder:
+
+   BLOOD.INI
+   BLOOD.RFF
+   BLOOD000.DEM-BLOOD003.DEM (optional)
+   CP01.MAP-CP09.MAP (optional, Cryptic Passage)
+   CPART07.AR_ (optional, Cryptic Passage)
+   CPART15.AR_ (optional, Cryptic Passage)
+   CPBB01.MAP-CPBB04.MAP (optional, Cryptic Passage)
+   CPSL.MAP (optional, Cryptic Passage)
+   CRYPTIC.INI (optional, Cryptic Passage)
+   CRYPTIC.SMK (optional, Cryptic Passage)
+...

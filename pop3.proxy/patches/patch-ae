@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.2 2009/10/11 13:50:22 thomasklausner Exp $
+
+--- main.c.orig	2007-01-15 18:33:37.000000000 +0100
++++ main.c
+@@ -241,7 +241,7 @@ int getc_fd(pop3_t *x, bio_t *bio, int c
+ 					if (time(NULL) - x->lasttimer + 2 >= POP3_CLIENTTIMER) {
+ 						char	header[200];
+ 
+-						snprintf (header, sizeof(header) - 2, "X-Timeout-Header: %lu", time(NULL));
++					    snprintf (header, sizeof(header) - 2, "X-Timeout-Header: %lu", (long unsigned) time(NULL));
+ 						cfputs(x, header, 1);
+ 						x->lasttimer = time(NULL);
+ 						continue;

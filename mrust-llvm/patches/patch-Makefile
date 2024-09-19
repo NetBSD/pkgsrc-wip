@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- Makefile.orig	2021-09-12 00:15:52.000000000 +0000
++++ Makefile
+@@ -213,9 +213,12 @@ $(RUSTC_SRC_TARBALL): $(RUSTC_SRC_DES)
+ 	@echo [CURL] $@
+ 	@rm -f $@
+ 	@curl -sS https://static.rust-lang.org/dist/$@ -o $@
+-$(RUSTC_SRC_DL): $(RUSTC_SRC_TARBALL) rustc-$(RUSTC_VERSION)-src.patch
+-	tar -xf $(RUSTC_SRC_TARBALL)
++##$(RUSTC_SRC_DL): $(RUSTC_SRC_TARBALL) rustc-$(RUSTC_VERSION)-src.patch
++$(RUSTC_SRC_DL): rustc-$(RUSTC_VERSION)-src.patch
++	@###tar -xf $(RUSTC_SRC_TARBALL)
++	@mv ../$(RUSTCSRC) ./
+ 	cd $(RUSTCSRC) && patch -p0 < ../rustc-$(RUSTC_VERSION)-src.patch;
++	find $(RUSTCSRC) -name '*.[oa]' -print0 | xargs -0 rm
+ 	cat $(RUSTC_SRC_DES) > $(RUSTC_SRC_DL)
+ endif
+ 

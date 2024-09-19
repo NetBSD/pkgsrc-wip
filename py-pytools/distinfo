@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2015/01/31 23:09:55 jihbed Exp $
+
+RMD160 (pytools-2019.1.1.tar.gz) = b684f17cc7e2a43a3535906016548477906e325e
+SHA512 (pytools-2019.1.1.tar.gz) = 757ce5e291f49763afb17210659cadfa2610aa1c9b0912d46107ac50b0d28b7b607198fa4e806e66a7f061d761057a58b00f04a4190009ec7087cffed5f9d5f9
+Size (pytools-2019.1.1.tar.gz) = 58352 bytes

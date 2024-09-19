@@ -1,0 +1,15 @@
+$NetBSD$
+
+These two tests don't have a main() function.
+
+--- Makefile.OpenBSD.orig	2015-09-29 12:15:56.000000000 +0000
++++ Makefile.OpenBSD
+@@ -29,8 +29,6 @@ TESTS=	anonmap \
+ 	randshlib \
+ 	randstack1 \
+ 	randstack2 \
+-	randarg1 \
+-	randarg2 \
+ 	rettofunc1 \
+ 	rettofunc1x \
+ 	rettofunc2 \

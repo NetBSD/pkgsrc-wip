@@ -1,0 +1,4 @@
+Z2Pack is a tool that computes topological invariants and illustrates
+non-trivial features of Berry curvature. It works as a post-processing
+tool with all major first-principles codes (z2pack.fp), as well as with
+tight-binding models (z2pack.tb)

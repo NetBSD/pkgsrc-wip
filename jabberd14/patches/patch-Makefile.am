@@ -1,0 +1,50 @@
+$NetBSD$
+
+Install configuration files to share/examples/jabberd.
+
+--- Makefile.am.orig	2019-09-29 18:37:09.000000000 +0000
++++ Makefile.am
+@@ -7,15 +7,15 @@ ACLOCAL_AMFLAGS = -I m4
+ 
+ sysconf_DATA = jabber.xml.dist
+ 
+-logdir = $(localstatedir)/log/jabberd
++logdir = @JABBERD_LOGDIR@
+ 
+ log_DATA =
+ 
+-spooldir = $(localstatedir)/spool/jabberd
++spooldir = @JABBERD_SPOOLDIR@
+ 
+ spool_DATA =
+ 
+-rundir = $(localstatedir)/run/jabberd
++rundir = @JABBERD_PIDDIR@
+ 
+ run_DATA =
+ 
+@@ -34,17 +34,17 @@ $(sysconf_DATA):
+ install-data-hook:
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	    dest=`echo $$p | sed -e s/.dist//`; \
+-	    if test -f $(DESTDIR)$(sysconfdir)/$$dest; then \
+-		echo "$@ will not overwrite existing $(DESTDIR)$(sysconfdir)/$$dest"; \
++	    if test -f $(DESTDIR)@EGDIR@/$$dest; then \
++		echo "$@ will not overwrite existing $(DESTDIR)@EGDIR@/$$dest"; \
+ 	    else \
+-		echo " $(INSTALL_DATA) $$p $(DESTDIR)$(sysconfdir)/$$dest"; \
+-		$(INSTALL_DATA) $$p $(DESTDIR)$(sysconfdir)/$$dest; \
++		echo " $(INSTALL_DATA) $$p $(DESTDIR)@EGDIR@/$$dest"; \
++		$(INSTALL_DATA) $$p $(DESTDIR)@EGDIR@/$$dest; \
+ 	    fi; \
+ 	done
+-	@if test -f $(DESTDIR)$(sysconfdir)/cacerts.pem; then \
+-	    echo "$@ will not overwrite existing $(DESTDIR)$(sysconfdir)/cacerts.pem"; \
++	@if test -f $(DESTDIR)@EGDIR@/cacerts.pem; then \
++	    echo "$@ will not overwrite existing $(DESTDIR)@EGDIR@/cacerts.pem"; \
+ 	else \
+-	    cp cacerts.pem $(DESTDIR)$(sysconfdir)/cacerts.pem; \
++	    cp cacerts.pem $(DESTDIR)@EGDIR@/cacerts.pem; \
+ 	fi;
+ 
+ clean-local:

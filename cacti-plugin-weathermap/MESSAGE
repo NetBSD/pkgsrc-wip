@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/09/28 01:09:07 pettai Exp $
+
+To activate the plugin, add this to ${CACTIDIR}/include/global.php:
+
+	$plugins[] = 'weathermap';
+
+And don't forget to add this to the crontab, so the maps gets updated:
+
+# Invoke weathermap-cacti-rebuild.php to update the maps
+*/5 * * * * php ${PLUGINDIR}/weathermap-cacti-rebuild.php \
+ > ${CACTIDIR}/log/weathermap.log 2>&1
+
+Please read the included README (${PLUGINDIR}/README)
+or consult the online manual included with this package:
+${PLUGINDIR}/docs/index.html
+
+===========================================================================

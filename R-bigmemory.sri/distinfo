@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/11/15 22:58:44 bubuchka Exp $
+
+RMD160 (R/bigmemory.sri_0.1.3.tar.gz) = 8185aea854af200a8081dfef2728adc3188f2bbe
+SHA512 (R/bigmemory.sri_0.1.3.tar.gz) = 768fe36a53551ff88b377713f0eefd596ab10e7e4e8bfdfe6e09e9b711d2ba6b033d09fd23d18818d173715c1d8d032e97c0ca17a5e66be805771d62c47cdd56
+Size (R/bigmemory.sri_0.1.3.tar.gz) = 1790 bytes

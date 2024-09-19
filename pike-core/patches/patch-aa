@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.2 2012/12/15 13:35:24 cheusov Exp $
+
+--- src/run_autoconfig.orig	2012-07-19 06:42:53.000000000 +0000
++++ src/run_autoconfig
+@@ -112,8 +112,15 @@ if [ "x$autoconf_version" != "x$autohead
+ else :; fi
+ 
+ IFS=''
+-( find . -follow -type d -print $prune_flag || \
+-  find . -type d -print $prune_flag
++(
++  if test $# = 0; then
++    find . -follow -type d -print $prune_flag || \
++    find . -type d -print $prune_flag
++  else
++    for i; do
++      echo $i
++    done
++  fi
+ ) | egrep -v '/(CVS)|(RCS)|(test-install)$' | sort | uniq | while read dir; do
+ 
+   IFS=' 	

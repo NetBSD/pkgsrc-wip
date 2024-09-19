@@ -1,0 +1,12 @@
+javac  -classpath classes:./source:/usr/pkg/java/openjdk7/lib/tools.jar:. -d classes source/javax/activation/MimeType.java
+source/javax/activation/MimeType.java:262: cannot find symbol
+        throw new MimeTypeParseException(message, token);
+              ^
+  symbol:   constructor MimeTypeParseException(String,String)
+  location: class MimeTypeParseException
+source/javax/activation/MimeType.java:269: cannot find symbol
+            throw new MimeTypeParseException(message, token);
+                  ^
+  symbol:   constructor MimeTypeParseException(String,String)
+  location: class MimeTypeParseException
+2 errors

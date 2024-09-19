@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.1 2013/02/24 23:17:38 othyro Exp $
+
+Fixes awk executable, whereis flags, and escape sequence.
+
+--- configure.orig	2013-02-08 08:06:18.000000000 +0000
++++ configure
+@@ -1,9 +1,9 @@
+ #!/bin/sh
+ 
+-PACKAGE=`grep "^PACKAGE = " .default | awk -F ' = ' '{print $2}'`
+-PREFIX=`grep "^PREFIX = " .default | awk -F ' = ' '{print $2}'`
+-DATADIR=`grep "^DATADIR = " .default | awk -F ' = ' '{print $2}'`
+-ETCDIR=`grep "^ETCDIR = " .default | awk -F ' = ' '{print $2}'`
++PACKAGE=`grep "^PACKAGE = " .default | gawk -F ' = ' '{print $2}'`
++PREFIX=`grep "^PREFIX = " .default | gawk -F ' = ' '{print $2}'`
++DATADIR=`grep "^DATADIR = " .default | gawk -F ' = ' '{print $2}'`
++ETCDIR=`grep "^ETCDIR = " .default | gawk -F ' = ' '{print $2}'`
+ 
+ BSD=0
+ UNAME="`uname`"
+@@ -379,7 +379,7 @@ if [ -n "$GMAKE" ]; then
+   IMPORTANT "gmake"
+   WARN "' instead of \`"
+   IMPORTANT "make"
+-  WARN "' to compile $PACKAGE\!\!\n\n"
++  WARN "' to compile $PACKAGE!!\n\n"
+ fi
+ 
+ $ECHO "BSD = $BSD" > .config

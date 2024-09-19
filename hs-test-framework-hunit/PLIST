@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 13:33:25 phonohawk Exp $
+lib/test-framework-hunit-${PKGVERSION}/${HASKELL_VERSION}/HStest-framework-hunit-${PKGVERSION}.o
+lib/test-framework-hunit-${PKGVERSION}/${HASKELL_VERSION}/Test/Framework/Providers/HUnit.hi
+lib/test-framework-hunit-${PKGVERSION}/${HASKELL_VERSION}/Test/Framework/Providers/HUnit.p_hi
+lib/test-framework-hunit-${PKGVERSION}/${HASKELL_VERSION}/libHStest-framework-hunit-${PKGVERSION}.a
+lib/test-framework-hunit-${PKGVERSION}/${HASKELL_VERSION}/libHStest-framework-hunit-${PKGVERSION}_p.a
+lib/test-framework-hunit-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/test-framework-hunit-${PKGVERSION}/LICENSE

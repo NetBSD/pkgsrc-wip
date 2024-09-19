@@ -1,0 +1,3 @@
+This project aims to explore symbolic modeling with object orientated
+programming. The heavy lifting is done by the sympy library. This module
+just provides a class to derive model

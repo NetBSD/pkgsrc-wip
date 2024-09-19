@@ -1,0 +1,10 @@
+$NetBSD: patch-pcf2vpnc,v 1.2 2014/02/20 20:53:59 hfath Exp $
+
+--- pcf2vpnc.orig	2014-09-05 20:53:13.000000000 +0000
++++ pcf2vpnc
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!@PERL5@
+ # Stefan Tomanek <stefan@pico.ruhr.de>
+ # updated by Wolfram Sang <ninja@the-dreams.de> on 21.10.06 and on 26.06.07
+ ##

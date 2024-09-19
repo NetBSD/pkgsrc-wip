@@ -1,0 +1,15 @@
+A set of python 3 scripts that supports proxying DNS over HTTPS as specified
+in the IETF Draft draft-ietf-doh-dns-over-https.
+
+DOH provides a way to run encrypted DNS over HTTPS, a protocol which can freely
+traverse firewalls when other encrypted mechanism may be blocked.
+
+The project comes with a set of 4 tools:
+
+ * doh-proxy: A service that receives DOH queries over HTTP2 and forwards
+              them to a recursive resolver.
+ * doh-httpproxy: Like `doh-proxy` but uses HTTP instead of HTTP2.
+                  The main intent is to run this behind a reverse proxy.
+ * doh-stub: A service that listens for DNS queries and forwards them to a
+             DOH server.
+ * doh-client: A tool to perform a test DNS query against DOH server.

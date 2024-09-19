@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/phalanx
+lib/eco.phalanx
+lib/pbook.phalanx
+lib/sbook.phalanx
+share/games/plugins/xboard/phalanx.eng

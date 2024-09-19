@@ -1,0 +1,12 @@
+PyBabelPhish is a simple Gtk-based frontend for several translation
+services available on the web. Through the use of these services,
+PyBabelPhish is able to provide full-text translations (full sentences,
+phrases, etc.). PyBabelPhish is written in 100% Python, does NOT require
+Gnome, but requires Gtk+ and PyGtk. Some languages have been removed from
+the list due to an inability to display certain foreign characters
+(especially Asian character sets). I am hopeful that support for Asian
+languages will be available in the future. PyBabelPhish is in NO way
+affiliated with or endorsed by the web-based translation services it
+accesses and should NOT be considered 'official' software from these
+companies. NO support is provided for PyBabelPhish. This software is free
+and open source under the Free Education Initiative License.x

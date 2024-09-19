@@ -1,0 +1,13 @@
+threadpool is a cross-platform C++ thread pool library. In general terms thread
+pools are an efficient mechanism for asynchronous task processing within the
+same process. They realise the thread pool pattern.
+
+A thread pool manages a group of threads in order to process a large number of
+tasks. Since multiple threads can be executed in parallel this approach may be
+very efficient regarding the overall program performance on many computer
+systems. By restricting the number of threads and by reusing them resources are
+saved and additionally the system stability is increased.
+
+The threadpool library provides a convenient way for dispatching asynchronous
+tasks. Pools can be customized, managed dynamically and easily integrated into
+your software.

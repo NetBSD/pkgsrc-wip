@@ -1,0 +1,3 @@
+A utility Python package intended for other library packages. Provides a
+function that when called with your package name, will print platform and
+dependency information.

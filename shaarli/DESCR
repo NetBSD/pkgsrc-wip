@@ -1,0 +1,24 @@
+You want to share the links you discover ? Shaarli is a minimalist delicious
+clone you can install on your own website. It is designed to be personal
+(single-user), fast and handy.
+Features:
+    minimalist design (simple is beautiful)
+    FAST
+    Easy to use: Single button in your browser to bookmark a page
+    Save url, title, description (unlimited size)
+    Classify links with tags (with autocomplete)
+    Bookmarks can be public or private
+    Browse links by page
+    Filter by tags
+    Full text search
+    Tag cloud
+    Picture wall (which can be filtered by tag or text search)
+    Permalinks
+    Automatic thumbnails for various services (imgur, imageshack.us, flickr,
+youtube, vimeo, dailymotion)
+    RSS and ATOM feeds (which can be filtered by tag or text search)
+    PubSubHubbub protocol support
+    No-brainer installation: Drop the files, use it.
+    No database required (data stored in a single file ; easy to backup)
+    Compact storage (1315 links stored in 150 kb)
+    ...

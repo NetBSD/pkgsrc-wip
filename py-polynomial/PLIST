@@ -1,0 +1,20 @@
+@comment $NetBSD$
+${PYSITELIB}/polynomial/__init__.py
+${PYSITELIB}/polynomial/__init__.pyc
+${PYSITELIB}/polynomial/__init__.pyo
+${PYSITELIB}/polynomial/binomial.py
+${PYSITELIB}/polynomial/binomial.pyc
+${PYSITELIB}/polynomial/binomial.pyo
+${PYSITELIB}/polynomial/core.py
+${PYSITELIB}/polynomial/core.pyc
+${PYSITELIB}/polynomial/core.pyo
+${PYSITELIB}/polynomial/frozen.py
+${PYSITELIB}/polynomial/frozen.pyc
+${PYSITELIB}/polynomial/frozen.pyo
+${PYSITELIB}/polynomial/trinomial.py
+${PYSITELIB}/polynomial/trinomial.pyc
+${PYSITELIB}/polynomial/trinomial.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

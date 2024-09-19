@@ -1,0 +1,11 @@
+Fix build on NetBSD-6.99.12/amd64:
+creating build/temp.netbsd-6.99.12-amd64-2.7/build/src.netbsd-6.99.12-amd64-2.7/scikits/ann
+compile options: '-Iscikits/ann -I/usr/local/include -I/usr/pkg/lib/python2.7/site-packages/numpy/core/include -I/usr/pkg/include/python2.7 -c'
+gcc: build/src.netbsd-6.99.12-amd64-2.7/scikits/ann/ANN_wrap.c
+build/src.netbsd-6.99.12-amd64-2.7/scikits/ann/ANN_wrap.c:2537:21: fatal error: stdexcept: No such file or directory
+compilation terminated.
+build/src.netbsd-6.99.12-amd64-2.7/scikits/ann/ANN_wrap.c:2537:21: fatal error: stdexcept: No such file or directory
+compilation terminated.
+error: Command "gcc -DNDEBUG -O2 -DHAVE_DB_185_H -I/usr/include -I/usr/pkg/include -O2 -I/usr/include -I/usr/pkg/include -I/usr/include -I/usr/pkg/include -fPIC -Iscikits/ann -I/usr/local/include -I/usr/pkg/lib/python2.7/site-packages/numpy/core/include -I/usr/pkg/include/python2.7 -c build/src.netbsd-6.99.12-amd64-2.7/scikits/ann/ANN_wrap.c -o build/temp.netbsd-6.99.12-amd64-2.7/build/src.netbsd-6.99.12-amd64-2.7/scikits/ann/ANN_wrap.o" failed with exit status 1
+
+Fix PLIST to use EGG_FILE.

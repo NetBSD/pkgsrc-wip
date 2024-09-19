@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2015/11/03 03:32:21 agc Exp $
+
+RMD160 (scite446.tgz) = 18a867d72230e447a43e51fe0f2d92f42b8e3c3b
+SHA512 (scite446.tgz) = 9784307e15c23158dd0a4324573e353389d327dcda3873632f9bebe6cc7a62f898cda04b825409a922069b32d5e94394a3bccec69b15de8f27285dcb88bce16e
+Size (scite446.tgz) = 2777984 bytes
+SHA1 (patch-gtk_makefile) = 29e2c7d690cf5e637b1c6fec4dd07c1c720d0d3d

@@ -1,0 +1,2 @@
+Pure python braid group implementation based on sympy.
+Original code is here: http://www-math.mit.edu/~seidel/geng/

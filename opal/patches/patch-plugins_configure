@@ -1,0 +1,13 @@
+$NetBSD: patch-plugins_configure,v 1.1 2011/12/04 22:06:04 marino Exp $
+
+--- plugins/configure.orig	2013-02-20 02:18:10.000000000 +0000
++++ plugins/configure
+@@ -7000,7 +7000,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-            #include <gsm/gsm.h>
++            #include <gsm.h>
+ 
+ int
+ main ()

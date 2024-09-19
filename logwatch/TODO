@@ -1,0 +1,19 @@
+regex improvements.
+
+more patches.
+
+maybe add patches from:
+
+unmatched entries for dovecot login 
+https://bugs.launchpad.net/ubuntu/+source/logwatch/+bug/1058760
+
+unmatched entries for dovecot deliver 
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=571163
+
+http://cuz.cx/vince_riv/2009/10/extending-logwatch-scripts-for-sendmail-milters/
+
+various on ubuntu
+https://launchpad.net/ubuntu/+source/logwatch/+bugs?field.searchtext=&orderby=-importance&search=Search&field.status%3Alist=NEW&field.status%3Alist=OPINION&field.status%3Alist=INVALID&field.status%3Alist=WONTFIX&field.status%3Alist=EXPIRED&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=FIXCOMMITTED&field.status%3Alist=FIXRELEASED&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&assignee_option=any&field.assignee=&field.bug_reporter=&field.bug_commenter=&field.subscriber=&field.tag=&field.tags_combinator=ANY&field.status_upstream-empty-marker=1&field.upstream_target=&field.has_cve.used=&field.omit_dupes.used=&field.omit_dupes=on&field.affects_me.used=&field.has_patch.used=&field.has_branches.used=&field.has_branches=on&field.has_no_branches.used=&field.has_no_branches=on&field.has_blueprints.used=&field.has_blueprints=on&field.has_no_blueprints.used=&field.has_no_blueprints=on
+
+look into:
+http://wiki.egee-see.org/index.php/SG_Logwatch-G

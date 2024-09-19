@@ -1,0 +1,12 @@
+This package provides tools for creating and manipulating
+Gaussian random variables from correlated multi-dimensional
+Gaussian distributions. The Gaussian variables are represented
+by objects of type :class:`gvar.GVar` which can be combined
+with each other and with ordinary numbers in arbitrary
+arithmetic expressions, including standard functions such
+``sin`` and ``exp``, to create new :class:`gvar.GVar`\s whose
+correlations with the original variables are tracked implicitly
+(and handled correctly).
+
+This package relies on ``numpy`` for efficient array arithmetic,
+and on Cython to compile efficient core routines and interface code

@@ -1,0 +1,8 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==23187==ERROR: AddressSanitizer: SEGV on unknown address 0x633200001560 (pc 0x00000040d8b3 bp 0x0000ffffffff sp 0x7f7fffff8030 T0)
+==23187==The signal is caused by a READ memory access.
+    #0 0x40d8b2 in getsym /home/nia/cvs/pkgsrc/wip/opensurge/work/opensurge-0.5.2/src/core/nanoparser/nanoparser.c:428:26
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/nia/cvs/pkgsrc/wip/opensurge/work/opensurge-0.5.2/src/core/nanoparser/nanoparser.c:428:26 in getsym

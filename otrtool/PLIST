@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/otrtool
+man/man1/otrtool.1

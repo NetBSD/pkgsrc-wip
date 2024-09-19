@@ -1,0 +1,21 @@
+$NetBSD: patch-al,v 1.1.1.1 2009/09/13 18:25:06 cheusov Exp $
+
+--- src/ydp2dict.c.orig	2007-09-12 06:15:08.000000000 +0300
++++ src/ydp2dict.c
+@@ -36,7 +36,6 @@ char *words;
+ char *trans;
+ }
+ PAIR;
+-
+ PAIR *arr;
+ 
+ gint stardict_strcmp(const gchar *s1, const gchar *s2)
+@@ -119,7 +118,7 @@ for (cyc=0; cyc<=1; cyc++)
+       
+       while ((p=strchr(words, '\\'))!=0)
+          {
+-         for (p2=p+1; isalnum(*p2); p2++) ;
++         for (p2=p+1; isalnum((unsigned char) *p2); p2++) ;
+          if (*p2==' ') p2++;
+          
+          if (strncmp(p+1, "par", 3)==0 /*|| strncmp(p+1, "line", 4)==0*/) *(p++)='\n';

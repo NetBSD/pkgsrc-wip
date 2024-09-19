@@ -1,0 +1,23 @@
+ - Package and (optionally) use libnbd
+ - Use fix for --no-git bootstrap fix when it lands upstream, and drop
+   the patch
+ - See if we can use non-bundled Jitter
+ - Still getting 'bison -y' issues
+
+Build failures:
+ - Debian:
+     ./configure[6522]: syntax error: unexpected 'ac_cv_prog_cc_stdc=$ac_cv_prog_cc_c89'
+ - NetBSD 9
+     https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00159.html
+ - OpenBSD (transient)
+ - OpenIndiana Hipster (transient)
+ - 'unknown instruction' on macOS:
+     https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00160.html
+
+Runtime issues:
+ - Ubuntu 16.04: multi-minute hangs printing welcome message
+    - https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00158.html
+    - try CONFIGURE_FLAGS+= --without-hserver
+
+To test:
+ - FreeBSD 12

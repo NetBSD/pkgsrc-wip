@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2005/09/11 19:09:18 gschwarz Exp $
+bin/showmesh

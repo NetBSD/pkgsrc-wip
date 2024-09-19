@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/09 00:13:40 jihbed Exp $
+lib/java/commons-logging-adapters.jar
+lib/java/commons-logging-api.jar
+lib/java/commons-logging.jar

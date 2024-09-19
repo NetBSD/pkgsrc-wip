@@ -1,0 +1,5 @@
+Text::CHM is a module that implements a (partial) support for handling
+MS Compiled HtmlHelp Files (chm files for short) via CHMLib. CHMLib is
+a small library designed for accessing MS ITSS files.  The ITSS file
+format is used for chm files, which have been the predominant medium
+for software documentation from Microsoft.

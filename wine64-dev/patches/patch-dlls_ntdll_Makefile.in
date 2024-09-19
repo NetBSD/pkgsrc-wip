@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use i386_LIBS to link ntdll against libi386
+
+--- dlls/ntdll/Makefile.in.orig	2019-08-02 19:24:39.000000000 +0000
++++ dlls/ntdll/Makefile.in
+@@ -2,7 +2,7 @@ EXTRADEFS = -D_NTSYSTEM_
+ MODULE    = ntdll.dll
+ IMPORTLIB = ntdll
+ IMPORTS   = winecrt0
+-EXTRALIBS = $(IOKIT_LIBS) $(RT_LIBS) $(PTHREAD_LIBS)
++EXTRALIBS = $(IOKIT_LIBS) $(RT_LIBS) $(PTHREAD_LIBS) $(i386_LIBS)
+ EXTRADLLFLAGS = -nodefaultlibs -Wl,--image-base,0x7bc00000
+ 
+ C_SRCS = \

@@ -1,0 +1,26 @@
+$NetBSD$
+
+Imported patch from qemu-2.3.0
+
+--- qemu_mode/qemu/Makefile.orig	2017-05-31 22:53:05.000000000 +0000
++++ qemu_mode/qemu/Makefile
+@@ -184,6 +184,7 @@ $(SRC_PATH)/pixman/configure:
+ DTC_MAKE_ARGS=-I$(SRC_PATH)/dtc VPATH=$(SRC_PATH)/dtc -C dtc V="$(V)" LIBFDT_srcdir=$(SRC_PATH)/dtc/libfdt
+ DTC_CFLAGS=$(CFLAGS) $(QEMU_CFLAGS)
+ DTC_CPPFLAGS=-I$(BUILD_DIR)/dtc -I$(SRC_PATH)/dtc -I$(SRC_PATH)/dtc/libfdt
++ARFLAGS=	-rcs
+ 
+ subdir-dtc:dtc/libfdt dtc/tests
+ 	$(call quiet-command,$(MAKE) $(DTC_MAKE_ARGS) CPPFLAGS="$(DTC_CPPFLAGS)" CFLAGS="$(DTC_CFLAGS)" LDFLAGS="$(LDFLAGS)" ARFLAGS="$(ARFLAGS)" CC="$(CC)" AR="$(AR)" LD="$(LD)" $(SUBDIR_MAKEFLAGS) libfdt/libfdt.a,)
+@@ -391,8 +392,9 @@ endif
+ install-confdir:
+ 	$(INSTALL_DIR) "$(DESTDIR)$(qemu_confdir)"
+ 
+-install-sysconfig: install-datadir install-confdir
+-	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(qemu_confdir)"
++install-sysconfig:
++	$(INSTALL_DIR) "$(DESTDIR)$(egdir)"
++	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(egdir)"
+ 
+ install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig \
+ install-datadir install-localstatedir

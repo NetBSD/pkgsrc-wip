@@ -1,0 +1,13 @@
+CL-PPCRE is a portable regular expression library for Common Lisp which has the
+following features:
+
+- It is compatible with Perl.
+- It is pretty fast.
+- It is portable between ANSI-compliant Common Lisp implementations.
+- It is thread-safe.
+- In addition to specifying regular expressions as strings like in Perl you can
+  also use S-expressions.
+- It comes with a BSD-style license so you can basically do with it whatever
+  you want.
+
+CL-PPCRE-UNICODE is CL-PPCRE with unicode extensions.

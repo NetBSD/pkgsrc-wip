@@ -1,0 +1,11 @@
+$NetBSD$
+
+RMD160 (v0.10.2.2.tar.gz) = 99f88b4055fcbd43d8352b894c1cf842767f2103
+Size (v0.10.2.2.tar.gz) = 4700783 bytes
+SHA1 (patch-src_chainparams.cpp) = 7e775c1f9d5890a6d49b94f8cde1cb9dca157833
+SHA1 (patch-src_crypto_scrypt-sse2.cpp) = 0548ce1fe5388cd3ea4e461aa40a2cba8237bc8b
+SHA1 (patch-src_crypto_scrypt.cpp) = 35b7a5c0ea59f7309f4e4ccd3f092f6223fd6e33
+SHA1 (patch-src_crypto_scrypt.h) = 9595a2c0a722958d27879e7f1f2dc4ccbae2bf13
+SHA1 (patch-src_db.h) = bd65519b99e4486cf6be7e42da535e465496a00b
+SHA1 (patch-src_netbase.cpp) = 72bcfc3b65a7ede4adc99da914715cf65df442b4
+SHA1 (patch-src_walletdb.cpp) = 7c70770a3e0de7b7daf6799b86ff67a511e2c0ff

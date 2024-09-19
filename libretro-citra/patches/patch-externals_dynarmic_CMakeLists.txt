@@ -1,0 +1,20 @@
+$NetBSD$
+
+If this check isn't disabled configure stops working.
+
+--- externals/dynarmic/CMakeLists.txt.orig	2017-12-12 15:22:23.000000000 +0000
++++ externals/dynarmic/CMakeLists.txt
+@@ -28,13 +28,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
+ # Warn on CMake API deprecations
+ set(CMAKE_WARN_DEPRECATED ON)
+ 
+-# Disable in-source builds
+-set(CMAKE_DISABLE_SOURCE_CHANGES ON)
+-set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+-if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
+-    message(SEND_ERROR "In-source builds are not allowed.")
+-endif()
+-
+ # Add the module directory to the list of paths
+ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/CMakeModules")
+ 

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2008/11/15 07:29:45 phonohawk Exp $
+
+RMD160 (tome-235-src.tar.bz2) = c13bf80cee65287c0d4280a1fa6aeb885eb7f21b
+Size (tome-235-src.tar.bz2) = 2951227 bytes
+SHA1 (patch-aa) = b9efd80fe1f5cd57df079361c03fc252b0093178
+SHA1 (patch-ab) = 246696ae37d10079511d40e350bd9eaf5233b758

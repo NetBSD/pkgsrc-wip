@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2007/10/23 02:07:05 thomasklausner Exp $
+
+RMD160 (silvertree-0.2.tar.gz) = c510c0cea0b809cf8d426e2a18082b75d1ce777c
+Size (silvertree-0.2.tar.gz) = 8155632 bytes
+SHA1 (patch-aa) = 7c825b7786ae1c0b8dd2ced4d40eb3c134e2f50b

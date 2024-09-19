@@ -1,0 +1,4 @@
+NuppelVideo is a simple and fast capture program for bttv-cards (BT8x8).
+It is based on the RTjpeg2.0 test3* programs from Justin Schoemann, who
+wrote the very fast and fine RTjpeg2.0 codec (improved by Joerg Walter
+and Wim Taymans).

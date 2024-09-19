@@ -1,0 +1,6 @@
+- Running `vd' ends up with a:
+
+   AttributeError: '_curses.window' object has no attribute 'get_wch'
+
+  It seems that curses(3) has a get_wch(3) but py-curses does not recognize it.
+  Investigate further (that's probably a general py-curses problem)!

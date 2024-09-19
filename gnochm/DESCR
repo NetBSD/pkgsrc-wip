@@ -1,0 +1,14 @@
+GnoCHM is a CHM file viewer. It is designed to integrate nicely
+with Gnome.
+
+It uses PyCHM, a Python package that exports the CHMLIB API. Features
+are:
+
+  * Support for external ms-its links
+  * Full text search support
+  * Bookmarks
+  * Configurable support for HTTP links
+  * Integrated with Gnome2
+  * Support for multiple languages
+  * Support to open multiple files at once
+  * Displays HTML page source

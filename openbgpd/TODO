@@ -1,0 +1,3 @@
+This package has known vulnerabilities, please investigate and fix if possible:
+  http://secunia.com/advisories/33752/, http://secunia.com/advisories/33975/,
+  CVE-2023-38283

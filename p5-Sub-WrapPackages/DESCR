@@ -1,0 +1,2 @@
+Add pre- and post-execution wrappers around all the subroutines
+in packages or around individual subs

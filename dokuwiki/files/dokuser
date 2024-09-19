@@ -1,0 +1,20 @@
+#!/bin/sh
+
+read -p "login: " "login"
+stty -echo
+read -p "password: " "password"
+stty echo
+echo "" >&2
+read -p "real name: " "realname"
+read -p "email: " "email"
+read -p "groups (comma separated): " "groups"
+
+phpcode=" \
+  require_once('@DOKUDIR@/inc/PassHash.class.php'); \
+  \$p = new PassHash(); \
+  \$h = \$p->hash_smd5('${password}'); \
+  print \$h; \
+  "
+hash=`php -r "${phpcode}"`
+
+echo "${login}:${hash}:${realname}:${email}:${groups}"

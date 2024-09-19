@@ -1,0 +1,7 @@
+Ion is a tiling tabbed window manager designed with
+keyboard users in mind.
+
+It supports tiled workspaces with tabbed frames and
+has fully documented configuration and scripting
+interface on top of the lightweight Lua extension
+language.

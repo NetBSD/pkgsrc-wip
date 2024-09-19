@@ -1,0 +1,3 @@
+Text::VimColor tries to markup text files according to their syntax. It can
+be used to produce web pages with pretty-printed colourful source code
+samples.

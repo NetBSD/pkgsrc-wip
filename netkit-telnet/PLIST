@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 22:56:37 poppnk Exp $
+bin/telnet
+man/man1/telnet.1
+man/man5/issue.net.5
+man/man8/in.telnetd.8
+man/man8/telnetd.8
+sbin/in.telnetd

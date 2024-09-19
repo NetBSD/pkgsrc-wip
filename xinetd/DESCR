@@ -1,0 +1,11 @@
+xinetd is a powerful replacement for inetd (with a different configuration
+format). xinetd listens for network connections and transfers to the
+appropriate software.
+
+Some features of xinetd are:
+ * access control
+ * DoS prevention
+ * extensive logging abilities
+ * offload services to a remote host
+ * ipv6 support
+ * user interaction with banners

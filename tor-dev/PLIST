@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/tor-dev
+${PLIST.openssl}bin/tor-gencert-dev
+bin/tor-print-ed-signing-cert-dev
+bin/tor-resolve-dev
+bin/torify-dev
+${PLIST.doc}man/man1/tor-dev.1
+${PLIST.doc}man/man1/tor-gencert-dev.1
+${PLIST.doc}man/man1/tor-print-ed-signing-cert-dev.1
+${PLIST.doc}man/man1/tor-resolve-dev.1
+${PLIST.doc}man/man1/torify-dev.1
+${PLIST.doc}share/doc/tordev/tor-gencert.html
+${PLIST.doc}share/doc/tordev/tor-print-ed-signing-cert.html
+${PLIST.doc}share/doc/tordev/tor-resolve.html
+${PLIST.doc}share/doc/tordev/tor.html
+${PLIST.doc}share/doc/tordev/torify.html
+share/examples/tordev/torrc.sample
+share/tordev/geoip
+share/tordev/geoip6

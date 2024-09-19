@@ -1,0 +1,9 @@
+GPL'ed Basic interpreter for Unix-like systems.
+Includes benchmarks and unit tests.
+
+Why yet another BASIC interpreter? There are no free BASIC
+interpreters for Unix that offer a capability that is even remotely
+comparable to that of QBASIC. Bwbasic is kind of broken (ever tried to
+use FOR or NEXT statements in multistatement lines?), it lacks graphic
+commands and is is slowwwwwwww as molasses.  Two orders of magnitude
+increase in speed over bwbasic looks interesting.....

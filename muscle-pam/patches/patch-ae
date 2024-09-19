@@ -1,0 +1,29 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+
+--- Makefile.orig	2003-10-03 16:32:35.000000000 -0300
++++ Makefile
+@@ -4,10 +4,7 @@ INC = -I/usr/local/include -I. -I/usr/in
+ 
+ CFLAGS = $(DEFS) $(INC) -fPIC -Wall -O2
+ 
+-# by default install in /
+-ifeq ($(DESTDIR),)
+-DESTDIR=/
+-endif
++DESTDIR=$(PREFIX)
+ 
+ LIBS = -lmusclecard -lpthread -lpam -lcrypto
+ OBJ  = preferences.o certutils.o pam_smartcard.o cardtools.o
+@@ -21,10 +18,8 @@ test:
+ 	$(CC) -o testpam testpam.c $(OBJ) $(LIBS)
+ 
+ install:
+-	install --directory $(DESTDIR)/lib/security/
+-	install --mode=755 pam_musclecard.so $(DESTDIR)/lib/security/
+-	install --directory $(DESTDIR)/etc/musclepam
+-	install --mode=644 pam-muscle.conf $(DESTDIR)/etc/musclepam/
++	install -d $(DESTDIR)/lib/security/
++	install -m 755 pam_musclecard.so $(DESTDIR)/lib/security/
+ 
+ pam_musclecard.so: $(OBJ)
+ 	$(LD) -shared -o $@ $(OBJ) $(LIBS)

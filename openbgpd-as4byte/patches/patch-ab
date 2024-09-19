@@ -1,0 +1,53 @@
+--- bgpctl/bgpctl.c.orig	2006-01-25 01:28:03.000000000 +1000
++++ bgpctl/bgpctl.c	2007-01-11 14:22:00.000000000 +1000
+@@ -20,7 +20,7 @@
+ #include <sys/socket.h>
+ #include <sys/un.h>
+ #include <net/if.h>
+-#include <net/if_media.h>
++#include "if_media.h"
+ #include <net/if_types.h>
+ 
+ #include <err.h>
+@@ -29,7 +29,11 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <util.h>
++#else /* defined(__FreeBSD__) || defined(__DragonFly__) */
++#include <libutil.h>
++#endif
+ 
+ #include "bgpd.h"
+ #include "session.h"
+@@ -42,7 +46,7 @@
+ 	NV_TIMERS
+ };
+ 
+-__dead void	 usage(void);
++ void	 usage(void);
+ int		 main(int, char *[]);
+ char		*fmt_peer(const struct peer_config *, int);
+ void		 show_summary_head(void);
+@@ -82,7 +86,7 @@
+ 
+ struct imsgbuf	*ibuf;
+ 
+-__dead void
++ void
+ usage(void)
+ {
+ 	extern char	*__progname;
+@@ -1032,7 +1036,11 @@
+ {
+ 	static char	buf[16];
+ 
++#if defined(__OpenBSD__)
+ 	if (fmt_scaled(num, buf) == -1)
++#else /* defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) */
++	if (humanize_number(buf, 16, num, "", HN_AUTOSCALE, HN_B | HN_NOSPACE | HN_DECIMAL) == -1)
++#endif
+ 		snprintf(buf, sizeof(buf), "%lldB", num);
+ 
+ 	return (buf);

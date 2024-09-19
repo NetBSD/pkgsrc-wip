@@ -1,0 +1,5 @@
+The SPI Rack is a modular electronic instrumentation platform developed by
+QuTech. It has been developed to perform measurements on nanoelectronic
+devices, but is not limited to this. Design priority was the minimization
+of noise and interference signals on the wires connected to the measured
+device (sample)

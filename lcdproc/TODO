@@ -1,0 +1,4 @@
+* Add support for specifying drivers (see --enable-drivers option to the
+	configure script)
+* Add support for specifying full/clients-only/server-only build (see
+	targets install-server and install-clients)

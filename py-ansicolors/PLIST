@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/colors/__init__.py
+${PYSITELIB}/colors/__init__.pyc
+${PYSITELIB}/colors/__init__.pyo
+${PYSITELIB}/colors/colors.py
+${PYSITELIB}/colors/colors.pyc
+${PYSITELIB}/colors/colors.pyo
+${PYSITELIB}/colors/csscolors.py
+${PYSITELIB}/colors/csscolors.pyc
+${PYSITELIB}/colors/csscolors.pyo
+${PYSITELIB}/colors/version.py
+${PYSITELIB}/colors/version.pyc
+${PYSITELIB}/colors/version.pyo

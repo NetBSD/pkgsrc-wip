@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/13 15:51:47 mreriksson Exp $
+
+--- nnpfs/bsd/nnpfs/nnpfs_locl.h.orig	2006-01-11 23:00:32.000000000 +0100
++++ nnpfs/bsd/nnpfs/nnpfs_locl.h
+@@ -215,14 +215,21 @@ typedef struct thread d_thread_t;
+ typedef d_thread_t syscall_d_thread_t;
+ #define syscall_thread_to_thread(x) (x)
+ #else /* !__FreeBSD_version || __DragonFly__ */
+-#if defined(__NetBSD__) && __NetBSD_Version__ >= 106130000
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* NetBSD 3.99.14 */
++typedef struct lwp syscall_d_thread_t;
++#define syscall_thread_to_thread(x) ((x))
++#elif defined(__NetBSD__) && __NetBSD_Version__ >= 106130000
+ typedef struct lwp syscall_d_thread_t;
+ #define syscall_thread_to_thread(x) ((x)->l_proc)
+ #else
+ typedef struct proc syscall_d_thread_t;
+ #define syscall_thread_to_thread(x) (x)
+ #endif
++#if __NetBSD_Version__ >= 399001400 /* NetBSD 3.99.14 */
++typedef struct lwp d_thread_t;
++#else /* __NetBSD_Version__ >= 399001400 */
+ typedef struct proc d_thread_t;
++#endif /* __NetBSD_Version__ >= 399001400 */
+ #endif /* !__FreeBSD_version || __DragonFly__ */
+ 
+ #ifdef VV_ROOT
+@@ -254,6 +261,11 @@ struct genfs_ops nnpfs_genfsops;
+ #define nnpfs_cnp_to_proc(cnp) ((cnp)->cn_proc)
+ #define nnpfs_proc_to_cred(p) proc_ucred(p)
+ #define nnpfs_proc_to_euid(p) XXX
++#elif defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++#define nnpfs_uio_to_proc(uiop) ((uiop)->uio_lwp)
++#define nnpfs_cnp_to_proc(cnp) ((cnp)->cn_lwp)
++#define nnpfs_proc_to_cred(p) ((p)->l_proc->p_ucred)
++#define nnpfs_proc_to_euid(p) ((p)->l_proc->p_ucred->cr_uid)
+ #else
+ #define nnpfs_uio_to_proc(uiop) ((uiop)->uio_procp)
+ #define nnpfs_cnp_to_proc(cnp) ((cnp)->cn_proc)
+@@ -300,9 +312,13 @@ typedef int nnpfs_malloc_type;
+ #if defined(HAVE_FREEBSD_THREAD)
+ #define nnpfs_curproc() (curthread)
+ #else
++#if __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++#define nnpfs_curproc() (curlwp)
++#else
+ #define nnpfs_curproc() (curproc)
+ #endif
+ #endif
++#endif
+ 
+ void	nnpfs_pushdirty(struct vnode *vp);
+ 

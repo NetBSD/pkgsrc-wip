@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2008/08/15 17:07:24 schnoebe Exp $
+
+    To use proxy65, several items must be set in rc.conf.
+
+    The available variables are:
+	proxy65_jid	[Jabber ID of the service, default "proxy65"]
+	proxy65_secret	[shared secret with the S2S]
+	proxy65_rhost	[ost of the Jabber service router, default "localhost"]
+	proxy65_rport	[port of the Jabber service router, default 5347]
+	proxy65_ips	[proxy address:ports to be advertised/used]
+
+    proxy65_secret and proxy65_ips variables are required.
+
+    ex:
+	proxy65_jid=proxy.jabber.example.org
+	proxy65_secret=JabberSecret
+	proxy65_rhost=jabber.example.org
+	proxy65_rport=5347
+	proxy65_ips=172.17.233.23:8010
+
+===========================================================================

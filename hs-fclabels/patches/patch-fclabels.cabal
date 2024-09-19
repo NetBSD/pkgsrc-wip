@@ -1,0 +1,16 @@
+$NetBSD: patch-fclabels.cabal,v 1.1 2012/03/04 07:06:36 phonohawk Exp $
+
+It works well with template-haskell-2.7.0
+
+
+--- fclabels.cabal.orig	2011-08-31 14:21:33.000000000 +0000
++++ fclabels.cabal
+@@ -44,7 +44,7 @@ Library
+   GHC-Options: -Wall
+   Build-Depends:
+       base                       < 5
+-    , template-haskell >= 2.2 && < 2.7
++    , template-haskell >= 2.2 && < 2.7.1
+     , mtl              >= 1.0 && < 2.2
+     , transformers     >= 0.2 && < 0.3
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.2 2013/01/27 17:09:10 othyro Exp $
+
+Require jbmgen/JBMFile.
+
+--- jbmgen.orig	2005-01-25 17:57:46.000000000 +0000
++++ jbmgen
+@@ -19,7 +19,7 @@
+ #
+ 
+ 
+-require "JBMFile.rb"
++require "jbmgen/JBMFile"
+ 
+ def traverse_files(root_path)
+     begin

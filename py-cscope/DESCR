@@ -1,0 +1,3 @@
+A python script to generate a cscope index from a Python source tree.
+pycscope uses Python's own parser and AST to generate the index, so it
+is a bit more accurate than plain cscope.

@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/dbar
+bin/dzen2
+bin/gcpubar
+bin/gdbar
+bin/kittscanner.sh
+bin/noisyalert.sh
+bin/textwidth

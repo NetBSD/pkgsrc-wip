@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+
+Use INSTALL_SCRIPT to install shell script (instead of INSTALL_EXE).
+Pkgsrc handling of ini files
+
+--- srcunx/unx.mak.orig	2004-11-26 21:51:26.000000000 -0800
++++ srcunx/unx.mak	2010-04-26 22:40:09.000000000 -0700
+@@ -43,6 +43,7 @@
+ OBJ=o
+ INSTALL=install -m 644
+ INSTALL_EXE=install -m 755
++INSTALL_SCRIPT=install -m 755
+ #CDEBUG=
+ #LDEBUG=
+ CDEBUG=-g
+@@ -163,7 +164,7 @@
+ 	-mkdir -p $(GSVIEW_BINDIR)
+ 	chmod 755 $(GSVIEW_BINDIR)
+ 	$(INSTALL_EXE) $(BD)gsview$(EXE) $(GSVIEW_BINDIR)/gsview
+-	$(INSTALL_EXE) $(SRCUNX)gvxhelp.txt $(GSVIEW_BINDIR)/gsview-help
++	$(INSTALL_SCRIPT) $(SRCUNX)gvxhelp.txt $(GSVIEW_BINDIR)/gsview-help
+ 	-mkdir -p $(GSVIEW_MANDIR)
+ 	chmod 755  $(GSVIEW_MANDIR)
+ 	-mkdir -p $(GSVIEW_MANDIR)/man1
+@@ -189,11 +190,6 @@
+ 	$(INSTALL) $(BD)gvxru.htm  $(GSVIEW_DOCDIR)/gvxru.htm
+ 	$(INSTALL) $(BD)gvxse.htm  $(GSVIEW_DOCDIR)/gvxse.htm
+ 	$(INSTALL) $(BD)gvxsk.htm  $(GSVIEW_DOCDIR)/gvxsk.htm
+-	-mkdir -p $(GSVIEW_ETCPATH)
+-	chmod 755  $(GSVIEW_ETCPATH)
+-	-mkdir -p $(GSVIEW_ETCPATH)/gsview
+-	chmod 755  $(GSVIEW_ETCPATH)/gsview
+-	$(INSTALL) $(SRC)printer.ini  $(GSVIEW_ETCPATH)/gsview/printer.ini
+ 
+ tar:
+ 	rm -rf /var/tmp/gsview

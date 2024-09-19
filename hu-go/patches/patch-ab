@@ -1,0 +1,90 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- configure.orig	2004-06-06 13:29:46.000000000 +0200
++++ configure
+@@ -311,7 +311,7 @@ ac_includes_default="\
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE LN_S ZLIB_TRUE ZLIB_FALSE SDL_CONFIG SDL_CFLAGS SDL_LIBS PKG_CONFIG GTK_CFLAGS GTK_LIBS GTK_TRUE GTK_FALSE CPP EGREP ALLOCA NETPLAY_TRUE NETPLAY_FALSE SDL_LINUX_TRUE SDL_LINUX_FALSE SDL_MIXER_LINUX_TRUE SDL_MIXER_LINUX_FALSE ZE_HCD_OGG_SUPPORT_TRUE ZE_HCD_OGG_SUPPORT_FALSE SDL_NET_LINUX_TRUE SDL_NET_LINUX_FALSE ALLEGRO_LINUX_TRUE ALLEGRO_LINUX_FALSE SDL_WIN32_TRUE SDL_WIN32_FALSE ALLEGRO_WIN32_TRUE ALLEGRO_WIN32_FALSE ALLEGRO_DJGPP_TRUE ALLEGRO_DJGPP_FALSE SDL_FREEBSD_TRUE SDL_FREEBSD_FALSE SDL_SOLARIS_TRUE SDL_SOLARIS_FALSE HUGO_TARGET_MACHINE HUGO_TARGET_LIBRARY HUGO_TARGET_LIBRARY_LD LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE LN_S ZLIB_TRUE ZLIB_FALSE SDL_CONFIG SDL_CFLAGS SDL_LIBS PKG_CONFIG GTK_CFLAGS GTK_LIBS GTK_TRUE GTK_FALSE CPP EGREP ALLOCA NETPLAY_TRUE NETPLAY_FALSE SDL_LINUX_TRUE SDL_LINUX_FALSE SDL_MIXER_LINUX_TRUE SDL_MIXER_LINUX_FALSE ZE_HCD_OGG_SUPPORT_TRUE ZE_HCD_OGG_SUPPORT_FALSE SDL_NET_LINUX_TRUE SDL_NET_LINUX_FALSE ALLEGRO_LINUX_TRUE ALLEGRO_LINUX_FALSE SDL_WIN32_TRUE SDL_WIN32_FALSE ALLEGRO_WIN32_TRUE ALLEGRO_WIN32_FALSE ALLEGRO_DJGPP_TRUE ALLEGRO_DJGPP_FALSE SDL_FREEBSD_TRUE SDL_FREEBSD_FALSE SDL_NETBSD_TRUE SDL_NETBSD_FALSE SDL_SOLARIS_TRUE SDL_SOLARIS_FALSE HUGO_TARGET_MACHINE HUGO_TARGET_LIBRARY HUGO_TARGET_LIBRARY_LD LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -8210,6 +8210,13 @@ else
+ fi
+ 
+ 
++if false; then
++  SDL_NETBSD_TRUE=
++  SDL_NETBSD_FALSE='#'
++else
++  SDL_NETBSD_TRUE='#'
++  SDL_NETBSD_FALSE=
++fi
+ 
+ 
+ if false; then
+@@ -8364,6 +8371,25 @@ else
+ fi
+ 
+ 	 ;;
++	 i386-NetBSD)
++	  echo "NetBSD build enabled"
++
++		 	 HUGO_TARGET_MACHINE="NETBSD"
++
++ 			 CFLAGS="$CFLAGS `sdl-config --cflags`"
++       LIBS="$LIBS `sdl-config --libs`"
++
++
++
++if true; then
++  SDL_NETBSD_TRUE=
++  SDL_NETBSD_FALSE='#'
++else
++  SDL_NETBSD_TRUE='#'
++  SDL_NETBSD_FALSE=
++fi
++
++	 ;;
+ 	sun4u-SunOS)
+ 	  echo "Solaris build enabled"
+ 
+@@ -8638,6 +8664,13 @@ echo "$as_me: error: conditional \"SDL_F
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++if test -z "${SDL_NETBSD_TRUE}" && test -z "${SDL_NETBSD_FALSE}"; then
++  { { echo "$as_me:$LINENO: error: conditional \"SDL_NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++echo "$as_me: error: conditional \"SDL_NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
+ if test -z "${SDL_SOLARIS_TRUE}" && test -z "${SDL_SOLARIS_FALSE}"; then
+   { { echo "$as_me:$LINENO: error: conditional \"SDL_SOLARIS\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5
+@@ -8701,6 +8734,13 @@ echo "$as_me: error: conditional \"SDL_F
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++if test -z "${SDL_NETBSD_TRUE}" && test -z "${SDL_NETBSD_FALSE}"; then
++  { { echo "$as_me:$LINENO: error: conditional \"SDL_NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++echo "$as_me: error: conditional \"SDL_NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
+ if test -z "${SDL_SOLARIS_TRUE}" && test -z "${SDL_SOLARIS_FALSE}"; then
+   { { echo "$as_me:$LINENO: error: conditional \"SDL_SOLARIS\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5
+@@ -9324,6 +9364,8 @@ s,@ALLEGRO_DJGPP_TRUE@,$ALLEGRO_DJGPP_TR
+ s,@ALLEGRO_DJGPP_FALSE@,$ALLEGRO_DJGPP_FALSE,;t t
+ s,@SDL_FREEBSD_TRUE@,$SDL_FREEBSD_TRUE,;t t
+ s,@SDL_FREEBSD_FALSE@,$SDL_FREEBSD_FALSE,;t t
++s,@SDL_NETBSD_TRUE@,$SDL_NETBSD_TRUE,;t t
++s,@SDL_NETBSD_FALSE@,$SDL_NETBSD_FALSE,;t t
+ s,@SDL_SOLARIS_TRUE@,$SDL_SOLARIS_TRUE,;t t
+ s,@SDL_SOLARIS_FALSE@,$SDL_SOLARIS_FALSE,;t t
+ s,@HUGO_TARGET_MACHINE@,$HUGO_TARGET_MACHINE,;t t

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2012/09/02 07:10:40 noud4 Exp $
+
+glib.h patch.
+
+--- src/globalstrings.h.orig	2012-09-01 13:43:15.000000000 +0000
++++ src/globalstrings.h	2012-09-01 13:43:24.000000000 +0000
+@@ -21,7 +21,7 @@
+ #ifndef REGEXXER_GLOBALSTRINGS_H_INCLUDED
+ #define REGEXXER_GLOBALSTRINGS_H_INCLUDED
+ 
+-#include <glib/gutils.h>  /* for G_DIR_SEPARATOR_S */
++#include <glib.h>  /* for G_DIR_SEPARATOR_S */
+ 
+ namespace Regexxer
+ {

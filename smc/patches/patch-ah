@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1 2006/01/07 23:03:06 h2m Exp $
+
+--- src/savegame.cpp.orig	2005-06-22 22:27:54.000000000 +0200
++++ src/savegame.cpp
+@@ -475,12 +475,14 @@ bool cSavegame :: HandleMessage( string 
+ 	}
+ 	else if( parts[0].compare( "Save_Time_Stamp" ) == 0 )
+ 	{
++/* bogus warning msg
+ 		if( count != 6 )
+ 		{
+ 			printf( "%s : ", loaded_save_info.description.c_str() );
+ 			printf( "Savegame Error : line %d, %s needs 6 parameters\n", line, parts[0].c_str() );
+ 			return 0;
+ 		}
++*/
+ 
+ 		char Date[40];
+ 		/* Date part info

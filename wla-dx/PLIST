@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/wla-6502
+bin/wla-6510
+bin/wla-65816
+bin/wla-65c02
+bin/wla-gb
+bin/wla-huc6280
+bin/wla-spc700
+bin/wla-z80
+bin/wlab
+bin/wlalink
+${PLIST.doc}man/man1/wla-6502.1
+${PLIST.doc}man/man1/wla-6510.1
+${PLIST.doc}man/man1/wla-65816.1
+${PLIST.doc}man/man1/wla-65c02.1
+${PLIST.doc}man/man1/wla-gb.1
+${PLIST.doc}man/man1/wla-huc6280.1
+${PLIST.doc}man/man1/wla-spc700.1
+${PLIST.doc}man/man1/wla-z80.1
+${PLIST.doc}man/man1/wlab.1
+${PLIST.doc}man/man1/wlalink.1
+${PLIST.doc}man/man7/wla-dx.7
+${PLIST.doc}share/doc/wla-dx/CHANGELOG
+${PLIST.doc}share/doc/wla-dx/FILE_FORMATS
+${PLIST.doc}share/doc/wla-dx/wla-dx.html
+${PLIST.doc}share/doc/wla-dx/wla-dx.txt

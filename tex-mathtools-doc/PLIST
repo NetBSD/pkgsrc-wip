@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/mathtools/README
+share/texmf-dist/doc/latex/mathtools/empheq.pdf
+share/texmf-dist/doc/latex/mathtools/mathtools.pdf
+share/texmf-dist/doc/latex/mathtools/mhsetup.pdf

@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.4 2008/10/21 19:50:02 gschwarz Exp $
+
+--- src/index_dir.c.orig	2005-02-22 04:00:24.000000000 +0100
++++ src/index_dir.c	2008-09-21 22:50:30.000000000 +0200
+@@ -29,7 +29,11 @@
+ #include <fcntl.h>
+ #include "compat.h"
+ 
++#ifdef NAME_MAX
++#define MAX_FILE_LENGTH				NAME_MAX
++#else /* e.g. Solaris */
+ #define MAX_FILE_LENGTH                         MAXNAMLEN
++#endif
+ #define MAX_PATH_LENGTH                         PATH_MAX
+ 
+ #define INT_TO_HEX(x) \
+@@ -37,12 +41,18 @@
+ 
+ #include "escape.h"
+ 
++#ifdef __APPLE__
++#define SCANDIR_ARG3_CONST
++#else
++#define SCANDIR_ARG3_CONST	const
++#endif
++
+ char *html_escape_string(const char *inp, char *dest,
+                          const unsigned int len);
+ char *http_escape_string(const char *inp, char *buf,
+                          const unsigned int len);
+ 
+-int select_files(const struct dirent *d);
++int select_files(SCANDIR_ARG3_CONST struct dirent *d);
+ int index_directory(char *dir, char *title);
+ void send_error(int error);
+ 
+@@ -184,7 +194,7 @@
+            "<body>\n%s\n</body>\n</html>\n", the_error, the_error);
+ }
+ 
+-int select_files(const struct dirent *dirbuf)
++int select_files(SCANDIR_ARG3_CONST struct dirent *dirbuf)
+ {
+     if (dirbuf->d_name[0] == '.')
+         return 0;

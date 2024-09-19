@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/git_multimail.py
+${PYSITELIB}/git_multimail-${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/git_multimail-${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/git_multimail-${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/git_multimail-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/git_multimail.py
+${PYSITELIB}/git_multimail.pyc
+${PYSITELIB}/git_multimail.pyo

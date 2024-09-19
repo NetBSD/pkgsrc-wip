@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.11 2015/11/03 01:20:20 agc Exp $
+
+RMD160 (jabberd-1.6.1.1.80-b2b871eaf3f6455d7d37113ce23d6bc59c8da70f.tar.gz) = 77b7027db3eb498a8d4d94d4b19ea045f8cc5d80
+SHA512 (jabberd-1.6.1.1.80-b2b871eaf3f6455d7d37113ce23d6bc59c8da70f.tar.gz) = b62ff5046b6e50491685775fb09d421ec561ad3c64536e80aa29631e9adcdcef23ee9a576ed7621786a3a89abc00bd20b0799041168aca40c7ac9d351969f5d3
+Size (jabberd-1.6.1.1.80-b2b871eaf3f6455d7d37113ce23d6bc59c8da70f.tar.gz) = 655198 bytes
+SHA1 (patch-Makefile.am) = 928cdb5aa77e80f5b698f08b623484d93d3500ab
+SHA1 (patch-configure.ac) = 2b33279ad40c2f8857324e48c1d5784fc6cc0bd3
+SHA1 (patch-jabberd_lib_xmlnode.cc) = 64dbacdb09753e74a05a3873401051339f616133
+SHA1 (patch-jabberd_lib_xmlnode.hh) = 58a3dc7dafca01e494aa99b28445d6c0157c35ca
+SHA1 (patch-jsm_sessions.cc) = 051bfddb6bbec1684fd89e0c0c0fbc48fa89a568
+SHA1 (patch-xdb__sql_xdb__sql.cc) = 5807e42a55803d27f8c39c3a3c613d2b91854bfc

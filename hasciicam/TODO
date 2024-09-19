@@ -1,0 +1,2 @@
+o hasciicam crashes if called (Memory fault (core dumped)) via "-driver curses"
+  options. Should be investigated further.

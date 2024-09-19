@@ -1,0 +1,19 @@
+- Update package for security issue:
+	http://secunia.com/advisories/15742/
+  (dhowland)-updated to 4.1.1 but I dont think this will ever be fixed
+
+- We should be like vnc and tightvnc in pkgsrc and split the viewer
+  and server.  Remove the viewer from this package and either move
+  wip/vncviewer4 to wip/realvncviewer or move this package from
+  wip/realvnc to wip/vnc4.  I prefer keeping the realvnc name.
+
+- Still havn't looked into IPv6 support.
+- This package has a known vulnerability, please investigate and fix if possible. (see: http://www.realvnc.com/products/free/4.1/release-notes.html).
+
+- Build on NetBSD-6.99.15/amd64 with modular xorg fails with:
+gcc -O2 -ansi -Dasm=__asm GccWarningOptions   -I../../include -I../../exports/include/X11  -I../.. -I../../exports/include -I/usr/X11R6/include  -DCSRG_BASED  -DFUNCPROTO=15 -DNARROWPROTO     -DCPP_PROGRAM="\"cpp\"" -DHAS_MERGE_CONSTANTS=`if gcc -fmerge-constants -xc /dev/null -S -o /dev/null 2> /dev/null 1> /dev/null; then echo 1; else echo 0; fi`            -c imake.c
+gcc: GccWarningOptions: No such file or directory
+*** Error code 1
+
+- Possible vulnerabilites to investigate:
+	CVE-2021-41380

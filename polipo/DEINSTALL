@@ -1,0 +1,12 @@
+# $NetBSD: DEINSTALL,v 1.3 2012/02/18 21:31:43 ishit Exp $
+
+VARBASE="@VARBASE@"
+
+case ${STAGE} in
+DEINSTALL)
+	if [ -d ${VARBASE}/cache/polipo ]; then
+	  echo "If you won't use the POLIPO package anymore, remove the cache manually by"
+	  echo "     rm -rf ${VARBASE}/cache/polipo"
+	fi
+	;;
+esac

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2018/06/30 19:01:52 fhajny Exp $
+
+RMD160 (hotdoc-0.13.4.tar.gz) = 79dd8d6b4d1186873b4c499d3d1c7e1d49a47723
+SHA512 (hotdoc-0.13.4.tar.gz) = 7e9c3232dd2276a60d40ad9dffd3934c82f0d4bdd54afaa514006e63743c7b168ef7b23edea698b24dd618f6348c5723f69408c063f46668f625bdcc8a1d8566
+Size (hotdoc-0.13.4.tar.gz) = 1818874 bytes

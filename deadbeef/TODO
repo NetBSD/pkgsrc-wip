@@ -1,0 +1,3 @@
+Segfault:
+
+Undefined PLT symbol "trkproperties_build_key_list" (symnum = 155)

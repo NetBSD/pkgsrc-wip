@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2006/01/07 23:03:06 h2m Exp $
+
+--- src/overworld.cpp.orig	2005-07-04 02:14:36.000000000 +0200
++++ src/overworld.cpp
+@@ -77,7 +77,7 @@ cWaypoint :: ~cWaypoint( void )
+ 
+ void cWaypoint :: Init( void )
+ {
+-	image = GetImage( "world/Waypoints/default_1.png" );
++	image = GetImage( "world/waypoints/default_1.png" );
+ 
+ 	arrow_blue_l = GetImage( "world/arrowb_left_small.png" );
+ 	arrow_blue_r = GetImage( "world/arrowb_right_small.png" );

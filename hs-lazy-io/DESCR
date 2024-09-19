@@ -1,0 +1,3 @@
+The library provides some basic but useful lazy IO functions. Keep in mind
+that lazy IO is generally discouraged. Perhaps a coroutine library (e.g.
+pipes) will better suit your needs.

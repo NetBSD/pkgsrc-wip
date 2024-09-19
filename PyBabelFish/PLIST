@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
+bin/pybabelfish
+${PYSITELIB}/BabelPhish/URLRead.py
+${PYSITELIB}/BabelPhish/pixmaps/babtitle.gif
+${PYSITELIB}/BabelPhish/pixmaps/play.gif
+${PYSITELIB}/BabelPhish/pixmaps/s1.gif
+${PYSITELIB}/BabelPhish/pixmaps/s10.gif
+${PYSITELIB}/BabelPhish/pixmaps/s11.gif
+${PYSITELIB}/BabelPhish/pixmaps/s12.gif
+${PYSITELIB}/BabelPhish/pixmaps/s13.gif
+${PYSITELIB}/BabelPhish/pixmaps/s14.gif
+${PYSITELIB}/BabelPhish/pixmaps/s15.gif
+${PYSITELIB}/BabelPhish/pixmaps/s16.gif
+${PYSITELIB}/BabelPhish/pixmaps/s2.gif
+${PYSITELIB}/BabelPhish/pixmaps/s3.gif
+${PYSITELIB}/BabelPhish/pixmaps/s4.gif
+${PYSITELIB}/BabelPhish/pixmaps/s5.gif
+${PYSITELIB}/BabelPhish/pixmaps/s6.gif
+${PYSITELIB}/BabelPhish/pixmaps/s7.gif
+${PYSITELIB}/BabelPhish/pixmaps/s8.gif
+${PYSITELIB}/BabelPhish/pixmaps/s9.gif
+${PYSITELIB}/BabelPhish/pixmaps/stop.gif
+${PYSITELIB}/BabelPhish/pybabelfish.py
+${PYSITELIB}/BabelPhish/pyfilter.py
+${PYSITELIB}/BabelPhish/pytheme.py
+${PYSITELIB}/BabelPhish/pythonol_festival.py
+${PYSITELIB}/BabelPhish/symbolbar.py

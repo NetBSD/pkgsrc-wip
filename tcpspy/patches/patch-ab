@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/06 15:47:19 poppnk Exp $
+--- Makefile.orig	2004-09-06 05:36:10.000000000 -0400
++++ Makefile	2004-09-06 05:36:18.000000000 -0400
+@@ -39,8 +39,8 @@
+ tcpspy.o: tcpspy.c
+ 
+ doc:
+-	groff -Tps -man tcpspy.8 >tcpspy.ps
+-	ps2pdf tcpspy.ps tcpspy.pdf
++	#groff -Tps -man tcpspy.8 >tcpspy.ps
++	#ps2pdf tcpspy.ps tcpspy.pdf
+ 
+ clean:
+ 	rm -f log.o rule_lexer.o rule_grammar.o rule_lexer.c \

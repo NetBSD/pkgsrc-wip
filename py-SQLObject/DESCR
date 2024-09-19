@@ -1,0 +1,14 @@
+SQLObject is an object-relational mapper. It allows you to translate RDBMS
+table rows into Python objects, and manipulate those objects to
+transparently manipulate the database.
+
+In using SQLObject, you will create a class definition that will describe
+how the object connects to the database (in addition to any other methods
+you may wish to add to the class). SQLObject will produce the code to access
+the database, and update the database with your changes. The interface to
+the database is meant to be indistinguishable from other interfaces you may
+add to the object.
+
+SQLObject also includes a novel feature to generate WHERE clauses using
+Python syntax and objects (intead of generating SQL using string
+substitution, as is traditional).

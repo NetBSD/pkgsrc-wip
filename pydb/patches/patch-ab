@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2009/04/25 20:22:06 jihbed Exp $
+
+--- Makefile.am.orig	2009-04-25 22:06:06.000000000 +0000
++++ Makefile.am	2009-04-25 22:09:10.000000000 +0000
+@@ -23,7 +23,6 @@
+ else
+ emacs =
+ endif
+-SUBDIRS = test $(emacs)
+ 
+ # Basename of debugger, used to form help doc, python script and script
+ # installed in an executable directory.

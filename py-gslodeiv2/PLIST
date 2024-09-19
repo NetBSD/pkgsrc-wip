@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pygslodeiv2/__init__.py
+${PYSITELIB}/pygslodeiv2/__init__.pyc
+${PYSITELIB}/pygslodeiv2/__init__.pyo
+${PYSITELIB}/pygslodeiv2/_gslodeiv2_numpy.so
+${PYSITELIB}/pygslodeiv2/_release.py
+${PYSITELIB}/pygslodeiv2/_release.pyc
+${PYSITELIB}/pygslodeiv2/_release.pyo
+${PYSITELIB}/pygslodeiv2/_util.py
+${PYSITELIB}/pygslodeiv2/_util.pyc
+${PYSITELIB}/pygslodeiv2/_util.pyo
+${PYSITELIB}/pygslodeiv2/tests/__init__.py
+${PYSITELIB}/pygslodeiv2/tests/__init__.pyc
+${PYSITELIB}/pygslodeiv2/tests/__init__.pyo
+${PYSITELIB}/pygslodeiv2/tests/test_odeiv2_numpy.py
+${PYSITELIB}/pygslodeiv2/tests/test_odeiv2_numpy.pyc
+${PYSITELIB}/pygslodeiv2/tests/test_odeiv2_numpy.pyo

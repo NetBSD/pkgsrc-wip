@@ -1,0 +1,46 @@
+$NetBSD$
+
+--- insts/std/PVOC/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ insts/std/PVOC/Makefile
+@@ -6,7 +6,7 @@ CURDIR = $(CMIXDIR)/insts/std/$(NAME)
+ OBJS = PVOC.o lpa.o lpamp.o makewindows.o fft.o fold.o overlapadd.o setup.o
+ 
+ INCLUDES += -I$(CMIXDIR)/src/rtcmix
+-CXXFLAGS +=  -DSHAREDLIBDIR=\"$(LIBDESTDIR)\"
++CXXFLAGS +=  -DSHAREDLIBDIR=\"$(DESTDIR)/$(LIBDIR)\"
+ 
+ FILTERS = libPVRandBend.so libPVRandBands.so libPVTransBend.so
+ 
+@@ -40,23 +40,23 @@ $(NAME):	$(UGENS_H) $(OBJS) $(CMIXOBJS)
+ install: dso_install
+ 
+ dso_install: lib$(NAME).so $(FILTERS)
+-	$(INSTALL) $(CURDIR)/lib$(NAME).so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libPVRandBend.so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libPVRandBands.so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libPVTransBend.so $(LIBDESTDIR)
++	$(INSTALL) $(CURDIR)/lib$(NAME).so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libPVRandBend.so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libPVRandBands.so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libPVTransBend.so $(DESTDIR)/$(LIBDIR)
+ 
+ standalone_install: standalone
+-	$(INSTALL) $(CURDIR)/$(NAME) $(DESTDIR)
++	$(INSTALL) $(CURDIR)/$(NAME) $(DESTDIR)/$(BINDIR)
+ 
+ uninstall: dso_uninstall standalone_uninstall
+ 
+ dso_uninstall:
+-	$(RM) $(LIBDESTDIR)/lib$(NAME).so
+-	$(RM) $(LIBDESTDIR)/libPVRandBend.so
+-	$(RM) $(LIBDESTDIR)/libPVRandBands.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/lib$(NAME).so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libPVRandBend.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libPVRandBands.so
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/$(NAME)
++	$(RM) $(DESTDIR)/$(BINDIR)/$(NAME)
+ 
+ clean:
+ 	$(RM) $(OBJS) $(PROGS) $(FILTERS) PVFilter.o PVFilterTest.o PVRandBend.o PVRandBands.o PVTransBend.o

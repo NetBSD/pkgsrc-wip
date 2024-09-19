@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.1 2006/07/06 21:45:32 thomasklausner Exp $
+
+--- s9xskin.cc.orig	2004-02-24 23:32:58.000000000 +0000
++++ s9xskin.cc
+@@ -35,7 +35,7 @@ s9x_SkinFileBase::~s9x_SkinFileBase()
+ {
+ 	if(skinfptr)
+ 		fclose(skinfptr);
+-	index::iterator i = idx.begin(), e = idx.end();
++	s9index::iterator i = idx.begin(), e = idx.end();
+ 	for(; i!=e; i++)
+ 	{
+ 		s9x_SkinFileIndexRecord *rec = (*i).second;
+@@ -110,7 +110,7 @@ void s9x_SkinReader::loadIndex()
+  */
+ uint32_t s9x_SkinReader::getFileSize(std::string filename)
+ {
+-	index::iterator e = idx.end(), f = idx.find(filename);
++	s9index::iterator e = idx.end(), f = idx.find(filename);
+ 	if(e==f)
+ 		return 0;
+ 	s9x_SkinFileIndexRecord *rec = f->second;
+@@ -125,7 +125,7 @@ std::istream& s9x_SkinReader::getIstream
+ 	char *data;
+ 	uint32_t len;
+ 
+-	index::iterator e = idx.end(), f = idx.find(filename);
++	s9index::iterator e = idx.end(), f = idx.find(filename);
+ 	if(e==f)
+ 		throw std::string("file not found: " + filename);
+ 	s9x_SkinFileIndexRecord *rec = (*f).second;
+@@ -153,7 +153,7 @@ std::istream& s9x_SkinReader::getIstream
+  */
+ FILE* s9x_SkinReader::seekFile(std::string filename)
+ {
+-	index::iterator e = idx.end(), f = idx.find(filename);
++	s9index::iterator e = idx.end(), f = idx.find(filename);
+ 	if(e==f)
+ 		throw std::string("file not found: " + filename);
+ 	s9x_SkinFileIndexRecord *rec = f->second;
+@@ -209,7 +209,7 @@ void s9x_SkinWriter::addFile(const std::
+ 	struct stat statbuf;
+ 	s9x_SkinFileIndexRecord *rec;
+ 
+-	index::const_iterator e = idx.end();
++	s9index::const_iterator e = idx.end();
+ 	if(idx.find(filename)!=e)  // already listed
+ 		return;
+ 	rec = (s9x_SkinFileIndexRecord*)malloc(sizeof(s9x_SkinFileIndexRecord));

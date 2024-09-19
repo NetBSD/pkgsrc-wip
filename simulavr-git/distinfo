@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2014/06/18 02:21:52 makoto Exp $
+
+RMD160 (simulavr-1.0.0.tar.gz) = 0e9eb32f398943449b564e919765348c32f4c600
+Size (simulavr-1.0.0.tar.gz) = 1013014 bytes
+SHA1 (patch-configure.ac) = f3e9737a27306f288b46a632093a0698bb352c57
+SHA1 (patch-m4_ac_python_devel.m4) = ecf8f6afc194f821879b04fde7de5a6caddc63f1

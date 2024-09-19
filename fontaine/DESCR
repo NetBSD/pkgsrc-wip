@@ -1,0 +1,4 @@
+Fontaine is a command-line utility that displays key meta information about
+font files, including but not limited to font name, style, weight, glyph
+count, character count, copyright, license information, and orthographic
+coverage. It produces reports in JSON, XML, XHTML, and plain-text.

@@ -1,0 +1,10 @@
+ZODIAC is a static website generator powered by sh and awk. The core features
+of zodiac are:
+
+- utilization of existing tools (i.e. awk, sh, find, etc.)
+- supports using plain html
+- built-in support for markdown
+- a simple, easy to use templating system
+- supports custom helpers written in awk
+- configuration, meta, helpers, etc. can be added as you need them
+- convert your markup using any external command that accepts a UNIX-style pipe

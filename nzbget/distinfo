@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2011/01/02 10:38:53 mjoellnir Exp $
+
+RMD160 (nzbget-17.1.tar.gz) = 464df7627689e8095df4951dafcce53df9b87ccf
+SHA512 (nzbget-17.1.tar.gz) = 85647087492443c93eba9bf1b02606585975f7194b400ee20252465141eb9dce9800bb7e7d89645f9e08c421710d0a9762aee337c63e218eeaad03802a5faf78
+Size (nzbget-17.1.tar.gz) = 1612896 bytes

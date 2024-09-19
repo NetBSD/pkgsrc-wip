@@ -1,0 +1,19 @@
+Import py27-fatiando-0.0.1 as wip/py-fatiando.
+
+Fatiando a Terra provides command-line tools and an API for a variety of
+geophysical modeling applications. It makes heavy use of Numpy for linear
+algebra operations, provides a high level interface to visualise your data
+and results using Matplotlib for 2D and Mayavi2 for 3D. Optimized code is
+written in Fortran and C and wrapped to Python using Numpy's f2py.
+CVS: ----------------------------------------------------------------------
+CVS: Please edit the above message to give a brief description
+CVS: of the package for those who read the *-changes@ list.
+CVS: Did you remember to run pkglint(1) before importing?
+CVS:
+CVS: Lines starting with CVS: will be automatically removed.
+CVS:
+CVS: will add: wip/py-fatiando
+CVS: will add: wip/py-fatiando/Makefile
+CVS: will add: wip/py-fatiando/PLIST
+CVS: will add: wip/py-fatiando/DESCR
+CVS: will add: wip/py-fatiando/distinfo

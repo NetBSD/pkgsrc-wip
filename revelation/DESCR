@@ -1,0 +1,11 @@
+Revelation is a password manager for the GNOME desktop, released
+under the GNU GPL license. It stores all your accounts and passwords
+in a single, secure place, and gives you access to it through a
+user-friendly graphical interface.
+
+Among other features, Revelation is able to:
+
+* Store passwords encrypted
+* Store passwords organizated
+* Autolock on idle or when desktop locks
+* Import from and export to different formats

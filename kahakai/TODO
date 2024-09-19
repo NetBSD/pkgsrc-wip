@@ -1,0 +1,10 @@
+$Id: TODO,v 1.1.1.1 2004/02/29 12:07:03 mpasternak Exp $
+
+Needs a newer swig (currently the one in pkgsrc is horribly outdated, I'm
+too busy to update it) to build
+
+Needs devel/boost/buildlink3.mk (already PRed)
+
+Create PLIST
+
+	-- dotz@irc.pl

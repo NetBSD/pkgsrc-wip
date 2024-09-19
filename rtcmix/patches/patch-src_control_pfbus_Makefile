@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- src/control/pfbus/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/control/pfbus/Makefile
+@@ -33,15 +33,15 @@ depend:
+ 
+ install: all
+ ifeq ($(BUILDTYPE), STANDALONE)
+-	$(INSTALL) $(CONNLIB) $(LIBDESTDIR)
++	$(INSTALL) $(CONNLIB) $(DESTDIR)/$(LIBDIR)
+ else
+ endif
+ 
+ uninstall:
+-	$(RM) $(LIBDESTDIR)/$(CONNLIB)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(CONNLIB)
+ 
+ clean:
+-	$(RM) *.o *.so $(LIBDESTDIR)/$(CONNLIB) $(CONNLIB)
++	$(RM) *.o *.so $(DESTDIR)/$(LIBDIR)/$(CONNLIB) $(CONNLIB)
+ 
+ cleanall: clean
+ 	$(RM) depend

@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.3 2009/08/16 18:21:48 cheusov Exp $
+share/doc/freedict-tools-xsl/COPYING
+share/doc/freedict-tools-xsl/README
+share/freedict-tools-xsl/getauthor.xsl
+share/freedict-tools-xsl/getedition.xsl
+share/freedict-tools-xsl/getmaintainer.xsl
+share/freedict-tools-xsl/getsourceurl.xsl
+share/freedict-tools-xsl/getstatus.xsl
+share/freedict-tools-xsl/gettitle.xsl
+share/freedict-tools-xsl/group-homographs-sorted.xsl
+share/freedict-tools-xsl/group-homographs.xsl
+share/freedict-tools-xsl/inc/indent.xsl
+share/freedict-tools-xsl/inc/teientry2txt.xsl
+share/freedict-tools-xsl/inc/teiheader2txt.xsl
+share/freedict-tools-xsl/sort.xsl
+share/freedict-tools-xsl/tei-wrapper.xml
+share/freedict-tools-xsl/tei2c5-reverse.xsl
+share/freedict-tools-xsl/tei2c5.xsl
+share/freedict-tools-xsl/tei2dic.xsl
+share/freedict-tools-xsl/tei2dictxml.xsl
+share/freedict-tools-xsl/tei2ding.xsl
+share/freedict-tools-xsl/tei2haali.xsl
+share/freedict-tools-xsl/tei2htm.xsl
+share/freedict-tools-xsl/tei2txt.xsl
+share/freedict-tools-xsl/tei2vok.xsl
+share/freedict-tools-xsl/tei2webster.xsl

@@ -1,0 +1,8 @@
+$NetBSD: patch-at,v 1.1 2005/01/30 22:51:34 hfath Exp $
+
+--- doc/nnrp.access.5.orig	1997-12-09 00:48:50.000000000 +0100
++++ doc/nnrp.access.5
+@@ -101,3 +101,2 @@ This is revision \\$3, dated \\$4.
+ .SH "SEE ALSO"
+-innd(8),
+ newsfeeds(5),

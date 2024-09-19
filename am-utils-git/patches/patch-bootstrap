@@ -1,0 +1,43 @@
+$NetBSD: patch-bootstrap,v 1.1 2013/08/30 15:03:43 hfath Exp $
+
+--- bootstrap.orig	2013-08-30 10:38:57.000000000 +0000
++++ bootstrap
+@@ -48,38 +48,6 @@ else
+     exit 2
+ fi
+ 
+-echo "AMU: Fixing ylwrap..."
+-patch << \EOF
+---- ylwrap.orig	2013-05-14 20:00:39.000000000 -0400
+-+++ ylwrap	2013-05-14 20:06:06.000000000 -0400
+-@@ -199,8 +199,24 @@
+-       # include guards too.
+-       FROM=`guard "$from"`
+-       TARGET=`guard "$to"`
+-+
+-+      prefix=`echo $input | sed \
+-+		-e 's,^.*/,,g' \
+-+		-e 's/_parse.[yl]$/_/g' \
+-+		-e 's/_tok.[yl]$/_/g'`
+-+
+-+      case $prefix in
+-+      *.y)
+-+	      code_prefix="$(basename $prefix _gram.y)_yy";;
+-+      *.l)
+-+	      code_prefix="$(basename $prefix _lex.l)_yy";;
+-+      *)
+-+	      code_prefix="$prefix";;
+-+      esac
+-+
+-       sed -e "/^#/!b" -e "s|$input_rx|$input_sub_rx|" -e "$rename_sed" \
+--          -e "s|$FROM|$TARGET|" "$from" >"$target" || ret=$?
+-+          -e "s|$FROM|$TARGET|" "$from" | sed -e "s|yy|$code_prefix|g" > \
+-+	  "$target" || ret=$?
+- 
+-       # Check whether files must be updated.
+-       if test "$from" != "$parser"; then
+-\EOF
+-
+ # save timestamp
+ echo "AMU: save timestamp..."
+ echo timestamp > stamp-h.in

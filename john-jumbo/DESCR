@@ -1,0 +1,16 @@
+John the Ripper is a password cracker, currently available for UNIX, DOS,
+WinNT/Win95. Its primary purpose is to detect weak UNIX passwords. It has
+been tested with Linux x86/Alpha/SPARC, FreeBSD x86, OpenBSD x86, Solaris
+2.x SPARC and x86, Digital UNIX, AIX, HP-UX, and IRIX.
+
+The DOS and Win32 ports are done with DJGPP and Cygnus Developer's Kit,
+respectively.
+
+This is the community-enhanced version, which integrates lots of contributed
+patches adding GPU support (OpenCL and CUDA), support for a hundred of
+additional hash and cipher types (including popular ones such as NTLM, raw MD5,
+etc., and even things such as encrypted OpenSSH private keys, ZIP and RAR
+archives, PDF files, etc.), as well as some optimizations and features.
+Unfortunately, its overall quality is lower than the official version's.
+Requires OpenSSL. There are unofficial binary builds (by John the Ripper user
+community members) for Windows, Linux, Solaris, and Mac OS X.

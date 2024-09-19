@@ -1,0 +1,15 @@
+Wed Nov 19 13:45:43 CET 2003
+I am creating this package only as a dependency of py-willow (which I am
+going to use).
+
+To make it be a fully working package, someone should write startup scripts
+for rc.d
+
+dnsd should be run like:
+
+     dnsd -d --configdir=${PREFIX}/etc/oak --logfile=somelogfile \
+	--configfile=${PREFIX}/etc/oak/config.py
+
+add -v to increase verbosity
+
+	-- dotz@irc.pl

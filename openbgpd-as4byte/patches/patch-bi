@@ -1,0 +1,471 @@
+--- bgpd/rde_attr.c.orig	2007-01-11 15:02:39.000000000 +1000
++++ bgpd/rde_attr.c	2007-01-10 20:44:47.000000000 +1000
+@@ -369,37 +369,131 @@
+ 	&astable.hashtbl[(x) & astable.hashmask]
+ 
+ int
+-aspath_verify(void *data, u_int16_t len)
++aspath_verify(void *data, u_int16_t len, u_int8_t as_4bytes)
+ {
+ 	u_int8_t	*seg = data;
+ 	u_int16_t	 seg_size;
+ 	u_int8_t	 seg_len, seg_type;
++        u_int8_t         as_size;
+ 
+-	if (len & 1)
++	/****/
++        u_int32_t as ;
++        int i;
++	fprintf(stderr,"aspath_verify - 4bytes = %d, length=%u\n",as_4bytes,len) ;
++	/****/
++
++
++        as_size = (as_4bytes) ? 4 : 2 ;
++
++	if (len & 1) {
+ 		/* odd length aspath are invalid */
+-		return (AS_ERR_BAD);
++	/****/
++	  fprintf(stderr,"aspath_verify - len = %u == ODD!\n",len) ;
++	/****/
+ 
++		return (AS_ERR_BAD);
++	}
+ 	for (; len > 0; len -= seg_size, seg += seg_size) {
+-		if (len < 2)
++	  if (len < 2) {
++	/****/
++	  fprintf(stderr,"aspath_verify - len = %u < 2!\n",len) ;
++	/****/
++
+ 			return (AS_ERR_BAD);
++	  }
+ 		seg_type = seg[0];
+ 		seg_len = seg[1];
++	/****/
++		fprintf(stderr,"aspath: type = %u len = %u\n",seg_type,seg_len);
++	/****/
++
++		if ((seg_type != AS_SET) && (seg_type != AS_SEQUENCE)) {
++	/****/
++	  fprintf(stderr,"aspath_verify - type = %u == UNKNOWN!\n",seg_type) ;
++	/****/
+ 
+-		if (seg_type != AS_SET && seg_type != AS_SEQUENCE)
+ 			return (AS_ERR_TYPE);
++		}
++		seg_size = 2 + as_size * seg_len;
+ 
+-		seg_size = 2 + 2 * seg_len;
+-
+-		if (seg_size > len)
++		if (seg_size > len) {
++	/****/
++		  fprintf(stderr,"aspath_verify - segment size > remaining length :%u > %u!\n",seg_size,len) ;
++	/****/
+ 			return (AS_ERR_LEN);
+-
+-		if (seg_size == 0)
++		}
++		if (seg_size == 0) {
++	/****/
++	  fprintf(stderr,"aspath_verify - type = %u == 0 EMPTY!\n",seg_size) ;
++	/****/
+ 			/* empty aspath segment are not allowed */
+ 			return (AS_ERR_BAD);
+ 	}
++		/****/
++		fprintf(stderr,"%s",((seg_type == AS_SEQUENCE) ? " " : " { ")) ;
++                for (i = 0 ; i < seg_len; i++) {
++		  as = aspath_extract(seg,i,as_size) ;
++                  fprintf(stderr," %u.%u",((as >> 16) & 65535), (as & 65535)) ;
++		}
++		fprintf(stderr,"%s",(seg_type == AS_SEQUENCE) ? " " : " } ") ;
++		/****/
++	}
++        /****/
++	fprintf(stderr,"\n") ;
++/****/
++
+ 	return (0);	/* aspath is valid but probably not loop free */
+ }
+ 
++/* inflate a 2byte AS path to a 4 byte as path */
++
++u_char *
++aspath_inflate(void *data, u_int16_t len, u_int16_t *retlen)
++{
++        u_int8_t	*seg = data;
++	u_int16_t	 seg_size=0;
++	u_int8_t	 seg_len;
++        u_int16_t        o_len = len;
++        u_int8_t        *ret_ptr ;
++        u_int8_t        *fill_ptr ;
++        int              i;
++
++        /****/
++        fprintf(stderr,"inflate: aspath length = %d\n",len) ;
++        /****/
++
++        *retlen = 0 ;
++	for (; len > 0; len -= seg_size, seg += seg_size) {
++		seg_len = seg[1];
++		seg_size = 2 + (2 * seg_len);
++		*retlen += 2 + (4 * seg_len);
++ 	}
++        ret_ptr = malloc(*retlen) ;
++        if (ret_ptr == NULL)
++          fatal("aspath_inflate") ;
++        len = o_len ;
++        seg = data ;
++        fill_ptr = ret_ptr;
++	for (; len > 0; len -= seg_size, seg += seg_size) {
++                *fill_ptr++ = seg[0] ;
++		seg_len = seg[1];
++                *fill_ptr++ = seg[1] ;
++		seg_size = 2 + (2 * seg_len);
++		for (i = 0 ; i < seg_len ; ++i) {
++                  *fill_ptr++ = 0 ;
++                  *fill_ptr++ = 0 ;
++                  *fill_ptr++ = seg[2 + (2 * i)] ;
++                  *fill_ptr++ = seg[2 + (2 * i) + 1] ;
++                }
++ 	}
++        /****/
++        fprintf(stderr,"inflated: aspath length = %d\n",*retlen) ;
++        /****/
++
++        return(ret_ptr) ;
++}
++
++
+ void
+ aspath_init(u_int32_t hashsize)
+ {
+@@ -430,7 +524,7 @@
+ }
+ 
+ struct aspath *
+-aspath_get(void *data, u_int16_t len)
++aspath_get(void *data, u_int16_t len, int as_size)
+ {
+ 	struct aspath_list	*head;
+ 	struct aspath		*aspath;
+@@ -447,7 +541,7 @@
+ 
+ 		aspath->refcnt = 0;
+ 		aspath->len = len;
+-		aspath->ascnt = aspath_count(data, len);
++		aspath->ascnt = aspath_count(data, len, as_size);
+ 		memcpy(aspath->data, data, len);
+ 
+ 		/* link */
+@@ -494,7 +588,7 @@
+ }
+ 
+ u_int16_t
+-aspath_count(const void *data, u_int16_t len)
++aspath_count(const void *data, u_int16_t len, int as_size)
+ {
+ 	const u_int8_t	*seg;
+ 	u_int16_t	 cnt, seg_size;
+@@ -505,7 +599,7 @@
+ 	for (; len > 0; len -= seg_size, seg += seg_size) {
+ 		seg_type = seg[0];
+ 		seg_len = seg[1];
+-		seg_size = 2 + 2 * seg_len;
++		seg_size = 2 + as_size * seg_len;
+ 
+ 		if (seg_type == AS_SET)
+ 			cnt += 1;
+@@ -518,8 +612,8 @@
+ 	return (cnt);
+ }
+ 
+-u_int16_t
+-aspath_neighbor(struct aspath *aspath)
++u_int32_t
++aspath_neighbor(struct aspath *aspath, int as_size)
+ {
+ 	/*
+ 	 * Empty aspath is OK -- internal as route.
+@@ -530,11 +624,11 @@
+ 	if (aspath->len == 0)
+ 		return (0);
+ 
+-	return (aspath_extract(aspath->data, 0));
++	return (aspath_extract(aspath->data, 0, as_size));
+ }
+ 
+ int
+-aspath_loopfree(struct aspath *aspath, u_int16_t myAS)
++aspath_loopfree(struct aspath *aspath, u_int32_t myAS, int as_size)
+ {
+ 	u_int8_t	*seg;
+ 	u_int16_t	 len, seg_size;
+@@ -544,10 +638,10 @@
+ 	for (len = aspath->len; len > 0; len -= seg_size, seg += seg_size) {
+ 		seg_type = seg[0];
+ 		seg_len = seg[1];
+-		seg_size = 2 + 2 * seg_len;
++		seg_size = 2 + (as_size * seg_len);
+ 
+ 		for (i = 0; i < seg_len; i++) {
+-			if (myAS == aspath_extract(seg, i))
++		  if (myAS == aspath_extract(seg, i, as_size))
+ 				return (0);
+ 		}
+ 
+@@ -557,6 +651,167 @@
+ 	return (1);
+ }
+ 
++struct aspath *
++aspath_translate(struct aspath *aspath, u_int8_t *ndata, u_int16_t nlen)
++{
++  u_int8_t      *seg;
++  u_int8_t      *nseg;
++  u_int8_t	 seg_len, seg_type;
++  u_int16_t      seg_size;
++  u_int32_t      offset;
++  int            len;
++  int            i;
++  int            j;
++  int            indx = 0;
++  int            nindx = 0;
++  int            subs = 0;
++  u_int32_t      as;
++  u_int32_t      nas;
++  u_int32_t      asstack[512];
++  u_int32_t      apstack[512]; 
++  u_int32_t      nasstack[512];
++  u_int32_t      napstack[512]; 
++  struct aspath *new_aspath;
++
++  seg = aspath->data;
++  offset = 0 ;
++  for (len = aspath->len; len > 0; len -= seg_size, offset += seg_size, seg += seg_size) {
++    seg_type = seg[0];
++    seg_len = seg[1];
++    seg_size = 2 + 4 * seg_len;
++
++    if ((seg_type == AS_SET) || (seg_type == AS_SEQUENCE)) {
++      for (i = 0; i < seg_len ; ++i) {
++        as = aspath_extract(seg, i, 4) ;
++        if (indx < 512) {
++          asstack[indx] = as;
++          apstack[indx] = offset + 2 + (4 * i);
++          ++indx ;
++	  }
++        else
++          return(0) ;
++        }
++      }
++    else 
++      return(0) ;
++    }
++
++  seg = ndata;
++  offset = 0;
++  for (len = nlen; len > 0; len -= seg_size, offset += seg_size, seg += seg_size) {
++    seg_type = seg[0];
++    seg_len = seg[1];
++    seg_size = 2 + 4 * seg_len;
++
++    if ((seg_type == AS_SET) || (seg_type == AS_SEQUENCE)) {
++      for (i = 0; i < seg_len ; ++i) {
++        as = aspath_extract(seg, i, 4) ;
++        if (nindx < 512) {
++          nasstack[nindx] = as ;
++          napstack[nindx] = offset + 2 + (4 * i);
++          ++nindx ;
++	  }
++        else
++          return(0) ;
++        }
++      }
++    else 
++      return(0) ;
++    }
++  if (!nindx || (nindx > indx)) 
++    return(0) ;
++
++  --nindx ;
++  --indx ;
++
++  /* now compare the two vectors
++     either as = newas
++        or  as = as_trans and newas > 65535 
++        or error!  */
++  for (i = 0 ; i <= nindx ; ++i) {
++    as = asstack[indx - i] ;
++    nas = nasstack[nindx - i] ;
++    if ((as != nas) && ((as != AS_TRANS) || (nas < 65536)))
++      return(0) ;
++    if (as != nas)
++      ++subs ;
++    }
++ 
++  if (!subs) 
++    return(0) ;
++
++  nseg = ndata ;
++  len = aspath->len ;
++  seg = malloc(len) ;
++  memcpy(seg,aspath->data,len) ;
++  if (seg == NULL) 
++    fatal("aspath_translate") ;
++
++  /* now to perform the substitution in the new copy of the aspath*/
++  for (i = 0 ; i <= nindx ; ++i) {
++    as = asstack[indx - i] ;
++    nas = nasstack[nindx - i] ;
++    if (as != nas) {
++      for (j = 0 ; j < 4 ; ++j) 
++        *(seg + (apstack[indx - i] + j)) = *(nseg + (napstack[nindx - i] + j));
++      }
++    }
++
++  new_aspath = aspath_get(seg, len, 4) ;
++  free(seg);
++  return(new_aspath) ;
++}
++
++struct aspath *
++aspath_convert(struct aspath *aspath)
++{
++  u_char        *p;
++  u_int8_t      *seg;
++  u_int8_t       seg_type;
++  u_int8_t       seg_len;
++  u_int16_t      seg_size;
++  u_int32_t      as;
++  int            seg_c_size;
++  int            len;
++  int            wpos = 0;
++  int            i;
++  struct aspath *new_aspath;
++
++  /* first run down the as path and count the equiv 2byte size */
++  seg_c_size = 0 ;
++  seg = aspath->data;
++  for (len = aspath->len; len > 0; len -= seg_size, seg += seg_size) {
++    seg_type = seg[0];
++    seg_len = seg[1];
++    seg_size = 2 + 4 * seg_len;
++    seg_c_size += 2 + 2 * seg_len ;
++    }
++
++  /* now allocate the new 2byte path and populate it */
++  p = malloc(seg_c_size) ;
++  if (p == NULL) 
++    fatal("aspath_convert") ;
++
++  seg = aspath->data;
++  for (len = aspath->len; len > 0; len -= seg_size, seg += seg_size) {
++    p[wpos++] = seg[0];
++    seg_len = seg[1];
++    p[wpos++] = seg_len;
++    seg_size = 2 + 4 * seg_len;
++
++    for (i = 0; i < seg_len ; ++i) {
++      as = aspath_extract(seg, i, 4) ;
++      if (as > 65535) 
++        as = AS_TRANS ;
++      p[wpos++] = (as >> 8) & 255 ;
++      p[wpos++] = as & 255 ;
++      }
++    }
++  len = seg_c_size ;
++  new_aspath = aspath_get(p,len,2) ;
++  return(new_aspath) ;
++}
++
+ int
+ aspath_compare(struct aspath *a1, struct aspath *a2)
+ {
+@@ -596,7 +851,7 @@
+  * Returns a new prepended aspath. Old needs to be freed by caller.
+  */
+ struct aspath *
+-aspath_prepend(struct aspath *asp, u_int16_t as, int quantum)
++aspath_prepend(struct aspath *asp, u_int32_t as, int quantum)
+ {
+ 	u_char		*p;
+ 	int		 len, overflow = 0, shift = 0, size, wpos = 0;
+@@ -623,10 +878,10 @@
+ 		return (asp);
+ 	} else if (type == AS_SET || size + quantum > 255) {
+ 		/* need to attach a new AS_SEQUENCE */
+-		len = 2 + quantum * 2 + asp->len;
+-		overflow = type == AS_SET ? quantum : (size + quantum) & 0xff;
++		len = 2 + quantum * 4 + asp->len;
++		overflow = (type == AS_SET) ? quantum : (size + quantum) & 0xff;
+ 	} else
+-		len = quantum * 2 + asp->len;
++		len = quantum * 4 + asp->len;
+ 
+ 	quantum -= overflow;
+ 
+@@ -635,14 +890,14 @@
+ 		fatal("aspath_prepend");
+ 
+ 	/* first prepends */
+-	as = htons(as);
++	as = htonl(as);
+ 	if (overflow > 0) {
+ 		p[wpos++] = AS_SEQUENCE;
+ 		p[wpos++] = overflow;
+ 
+ 		for (; overflow > 0; overflow--) {
+-			memcpy(p + wpos, &as, 2);
+-			wpos += 2;
++			memcpy(p + wpos, &as, 4);
++			wpos += 4;
+ 		}
+ 	}
+ 	if (quantum > 0) {
+@@ -651,13 +906,13 @@
+ 		p[wpos++] = quantum + size;
+ 
+ 		for (; quantum > 0; quantum--) {
+-			memcpy(p + wpos, &as, 2);
+-			wpos += 2;
++			memcpy(p + wpos, &as, 4);
++			wpos += 4;
+ 		}
+ 	}
+ 	memcpy(p + wpos, asp->data + shift, asp->len - shift);
+ 
+-	asp = aspath_get(p, len);
++	asp = aspath_get(p, len,4);
+ 	free(p);
+ 
+ 	return (asp);
+@@ -665,7 +920,7 @@
+ 
+ /* we need to be able to search more than one as */
+ int
+-aspath_match(struct aspath *a, enum as_spec type, u_int16_t as)
++aspath_match(struct aspath *a, enum as_spec type, u_int32_t as, int as_size)
+ {
+ 	u_int8_t	*seg;
+ 	int		 final;
+@@ -684,7 +939,7 @@
+ 	for (len = a->len; len > 0; len -= seg_size, seg += seg_size) {
+ 		seg_type = seg[0];
+ 		seg_len = seg[1];
+-		seg_size = 2 + 2 * seg_len;
++		seg_size = 2 + (as_size * seg_len);
+ 
+ 		final = (len == seg_size);
+ 
+@@ -693,7 +948,7 @@
+ 			continue;
+ 
+ 		for (i = 0; i < seg_len; i++)
+-			if (as == aspath_extract(seg, i)) {
++		  if (as == aspath_extract(seg, i, as_size)) {
+ 				if (final && i + 1 >= seg_len)
+ 					/* the final (rightmost) as */
+ 					if (type == AS_TRANSIT)

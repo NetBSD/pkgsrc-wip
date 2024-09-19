@@ -1,0 +1,17 @@
+@comment $NetBSD$
+include/libunwind-common.h
+include/libunwind-dynamic.h
+include/libunwind-ptrace.h
+include/libunwind-x86_64.h
+include/libunwind.h
+include/unwind.h
+lib/libunwind-generic.a
+lib/libunwind-generic.so
+lib/libunwind-ptrace.la
+lib/libunwind-setjmp.la
+lib/libunwind-x86_64.la
+lib/libunwind.la
+lib/pkgconfig/libunwind-generic.pc
+lib/pkgconfig/libunwind-ptrace.pc
+lib/pkgconfig/libunwind-setjmp.pc
+lib/pkgconfig/libunwind.pc

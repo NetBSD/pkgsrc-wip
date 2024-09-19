@@ -1,0 +1,2 @@
+Util for sending desktop notifications over dbus. Supports replace_id, hints and
+actions(mainloop required)

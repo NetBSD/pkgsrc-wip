@@ -1,0 +1,3 @@
+Libevent's http interface was created as a JIT server, never meant to
+be a full-fledged HTTP service. This library attempts to improve on
+that.

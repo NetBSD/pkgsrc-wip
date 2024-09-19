@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 13:49:58 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_constraint.reg
+lib/php/Horde/Constraint.php
+lib/php/Horde/Constraint/AlwaysFalse.php
+lib/php/Horde/Constraint/AlwaysTrue.php
+lib/php/Horde/Constraint/And.php
+lib/php/Horde/Constraint/Coupler.php
+lib/php/Horde/Constraint/IsEqual.php
+lib/php/Horde/Constraint/IsInstanceOf.php
+lib/php/Horde/Constraint/Not.php
+lib/php/Horde/Constraint/Null.php
+lib/php/Horde/Constraint/Or.php
+lib/php/Horde/Constraint/PregMatch.php
+lib/php/doc/Horde_Constraint/COPYING
+lib/php/test/Horde_Constraint/Horde/Constraint/AllTests.php
+lib/php/test/Horde_Constraint/Horde/Constraint/AlwaysFalseTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/AlwaysTrueTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/AndTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/IsInstanceOfTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/NotTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/NullTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/OrTest.php
+lib/php/test/Horde_Constraint/Horde/Constraint/PregMatchTest.php

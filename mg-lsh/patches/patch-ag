@@ -1,0 +1,155 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- misc.c.orig	Sat Jan  8 09:22:53 2000
++++ misc.c
+@@ -10,7 +10,12 @@
+ #include <sys/wait.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#include <sys/mount.h>
++#else
+ #include <sys/vfs.h>
++#endif
+ 
+ #ifdef USE_TERMCAP
+ #include <termcap.h>
+@@ -20,95 +25,72 @@
+ 
+ 
+ #ifdef USE_TERMCAP
++
++char lsh_bp[1024];
++char tbuf[4096];
++
+ int
+ bootcap (char *termstr)
+ {
+-  if (tgetent (NULL, termstr) <= 0)
++  char *tp;
++
++  if (tgetent (lsh_bp, termstr) <= 0)
+     {
+       plerr (PLTER);
+       return 1;
+     }
+ 
+-  if (rsstr != NULL)
+-    {
+-      free (rsstr);
+-    }
+-  rsstr = tgetstr ("rs", NULL);
++  tp = tbuf;
++  rsstr = tgetstr ("rs", &tp);
++  *tp++ = '\000';
+   if (rsstr == NULL)
+     {
+-      rsstr = tgetstr ("cl", NULL);
++      rsstr = tgetstr ("cl", &tp);
++      *tp++ = '\000';
+     }
+ 
+-  if (sestr != NULL)
+-    {
+-      free (sestr);
+-    }
+-  sestr = tgetstr ("se", NULL);
++  sestr = tgetstr ("se", &tp);
++  *tp++ = '\000';
+ 
+-  if (sostr != NULL)
+-    {
+-      free (sostr);
+-    }
+-  sostr = tgetstr ("so", NULL);
++  sostr = tgetstr ("so", &tp);
++  *tp++ = '\000';
+ 
+   if (tgetflag ("hs") && tgetflag ("es"))
+     {
+-      if (fsstr)
+-	free (fsstr);
+-      fsstr = tgetstr ("fs", NULL);
+-
+-      if (tsstr)
+-	free (tsstr);
+-      fsstr = tgetstr ("ts", NULL);
++      fsstr = tgetstr ("fs", &tp);
++      *tp++ = '\000';
++
++      fsstr = tgetstr ("ts", &tp);
++      *tp++ = '\000';
+     }
+ 
+   if (!tgetflag ("ks"))
+     {
+-      if (k1str != NULL)
+-	{
+-	  free (k1str);
+-	}
+-      k1str = tgetstr ("k1", NULL);
+-
+-      if (k3str != NULL)
+-	{
+-	  free (k3str);
+-	}
+-      k3str = tgetstr ("k3", NULL);
+-
+-      if (krstr != NULL)
+-	{
+-	  free (krstr);
+-	}
+-      krstr = tgetstr ("kr", NULL);
+-
+-      if (kustr != NULL)
+-	{
+-	  free (kustr);
+-	}
+-      kustr = tgetstr ("ku", NULL);
+-
+-      if (klstr != NULL)
+-	{
+-	  free (klstr);
+-	}
+-      klstr = tgetstr ("kl", NULL);
+-
+-      if (kdstr != NULL)
+-	{
+-	  free (kdstr);
+-	}
+-      kdstr = tgetstr ("kd", NULL);
+-    }
++      k1str = tgetstr ("k1", &tp);
++      *tp++ = '\000';
+ 
+-  if (hostr != NULL)
+-    {
+-      free (hostr);
++      k3str = tgetstr ("k3", &tp);
++      *tp++ = '\000';
++
++      krstr = tgetstr ("kr", &tp);
++      *tp++ = '\000';
++
++      kustr = tgetstr ("ku", &tp);
++      *tp++ = '\000';
++
++      klstr = tgetstr ("kl", &tp);
++      *tp++ = '\000';
++
++      kdstr = tgetstr ("kd", &tp);
++      *tp++ = '\000';
+     }
+-  hostr = tgetstr ("cl", NULL);
++
++  hostr = tgetstr ("cl", &tp);
++  *tp++ = '\000';
+   if (hostr == NULL)
+     {
+-      hostr = tgetstr ("ho", NULL);
++      hostr = tgetstr ("ho", &tp);
++      *tp++ = '\000';
+     }
+ 
+   return 0;

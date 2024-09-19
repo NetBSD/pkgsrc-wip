@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- tools/hal-luks-setup.orig	2008-08-10 13:50:10.000000000 +0000
++++ tools/hal-luks-setup
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Copyright (C) 2005 W. Michael Petullo <mike@flyn.org>
+ # Copyright (C) 2006 David Zeuthen <davidz@redhat.com>
+@@ -44,9 +44,9 @@ if [ -n "$HAL_METHOD_INVOKED_BY_SYSTEMBU
+ fi
+ 
+ IS_HOTPLUGGABLE=`hal-get-property --udi $HAL_PROP_BLOCK_STORAGE_DEVICE --key storage.hotpluggable`
+-if [ "$IS_HOTPLUGGABLE" == "true" ] ; then
++if [ "$IS_HOTPLUGGABLE" = "true" ] ; then
+     ACTION="org.freedesktop.hal.storage.crypto-setup-removable"
+-elif [ "$IS_HOTPLUGGABLE" == "false" ] ; then
++elif [ "$IS_HOTPLUGGABLE" = "false" ] ; then
+     ACTION="org.freedesktop.hal.storage.crypto-setup-fixed"
+ else
+     unknown_error

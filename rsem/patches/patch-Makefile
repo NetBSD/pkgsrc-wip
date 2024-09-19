@@ -1,0 +1,91 @@
+$NetBSD$
+
+# Respect the environment
+--- Makefile.orig	2016-03-07 07:49:06 UTC
++++ Makefile
+@@ -1,5 +1,9 @@
+-SAMTOOLS = samtools-1.3
+-HTSLIB = htslib-1.3
++# Use ?= to allow overriding standard variables with make arguments or
++# environment variables.  This eliminates the need to edit the Makefile for
++# different platforms and allows package managers to control automated builds.
++
++SAMTOOLS ?= samtools-1.3
++HTSLIB ?= htslib-1.3
+ 
+ ifneq ($(cygwin), true)
+   SAMTOOLS_MAKEFILE = Makefile
+@@ -7,31 +11,36 @@ else
+   SAMTOOLS_MAKEFILE = Makefile.cygwin
+ endif
+ 
+-# overridable, defaulting to local copy
+-BOOST = .
++# Overridable, defaulting to local copy
++BOOST ?= .
+ 
+ # Compilation variables
+-CXX = g++
+-CXXFLAGS = -std=gnu++98 -Wall -I. -I$(BOOST) -I$(SAMTOOLS)/$(HTSLIB)
+-CPPFLAGS =
++CXX ?= g++
++# Allow overriding non-portable flags
++CXXFLAGS ?= -Wall
++CXXFLAGS += -std=gnu++98 -I. -I$(BOOST) -I$(SAMTOOLS)/$(HTSLIB)
++CPPFLAGS ?=
+ 
+-LDFLAGS =
+-LDLIBS =
++LDFLAGS ?=
++LDLIBS ?=
+ 
+ # Installation variables
+-INSTALL = install
+-INSTALL_PROGRAM = $(INSTALL) -p
+-INSTALL_DATA = $(INSTALL) -p -m 644
+-INSTALL_DIR = $(INSTALL) -d
+-STRIP ?=strip
++INSTALL ?= install
++INSTALL_PROGRAM ?= $(INSTALL) -p
++INSTALL_DATA ?= $(INSTALL) -p -m 644
++INSTALL_DIR ?= $(INSTALL) -d
++STRIP ?= strip
+ 
+-prefix ?= /usr/local
+-exec_prefix = $(prefix)
++# PREFIX, not prefix, is used by most package managers
++PREFIX ?= /usr/local
++exec_prefix = $(PREFIX)
+ bindir = $(exec_prefix)/bin
++libexecdir ?= $(bindir)
++perl_mod_dir ?= $(bindir)
+ 
+ # Auxiliary variables for compilation
+-SAMHEADERS = $(SAMTOOLS)/$(HTSLIB)/htslib/sam.h
+-SAMLIBS = $(SAMTOOLS)/$(HTSLIB)/libhts.a
++SAMHEADERS ?= $(SAMTOOLS)/$(HTSLIB)/htslib/sam.h
++SAMLIBS ?= $(SAMTOOLS)/$(HTSLIB)/libhts.a
+ CONFIGURE = ./configure
+ 
+ OBJS1 = parseIt.o
+@@ -158,12 +167,15 @@ ebseq :
+ 
+ # Install RSEM
+ install : $(PROGRAMS) $(SCRIPTS) $(SAMTOOLS)/samtools rsem_perl_utils.pm
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir)/$(SAMTOOLS)
++	$(INSTALL_DIR) \
++		$(DESTDIR)$(bindir) \
++		$(DESTDIR)$(libexecdir)/rsem \
++		$(DESTDIR)$(perl_mod_dir)
+ 	$(foreach prog,$(PROGRAMS),$(INSTALL_PROGRAM) $(prog) $(DESTDIR)$(bindir)/$(prog) ; $(STRIP) $(DESTDIR)$(bindir)/$(prog) ;)
+-	$(INSTALL_PROGRAM) $(SAMTOOLS)/samtools $(DESTDIR)$(bindir)/$(SAMTOOLS)/samtools
+-	$(STRIP) $(DESTDIR)$(bindir)/$(SAMTOOLS)/samtools
+-	$(foreach script,$(SCRIPTS),$(INSTALL_PROGRAM) $(script) $(DESTDIR)$(bindir)/$(script) ;)
+-	$(INSTALL_DATA) rsem_perl_utils.pm $(DESTDIR)$(bindir)/rsem_perl_utils.pm
++	$(INSTALL_PROGRAM) $(SAMTOOLS)/samtools $(DESTDIR)$(libexecdir)/rsem
++	$(STRIP) $(DESTDIR)$(libexecdir)/rsem/samtools
++	$(foreach script,$(SCRIPTS),$(INSTALL_PROGRAM) $(script) $(DESTDIR)$(bindir) ;)
++	$(INSTALL_DATA) rsem_perl_utils.pm $(DESTDIR)$(perl_mod_dir)
+ 
+ # Clean
+ clean :

@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.2 2005/09/28 06:30:39 rillig Exp $
+
+--- rule_grammar.y.orig	2004-09-06 05:34:07.000000000 -0400
++++ rule_grammar.y	2004-09-06 05:34:17.000000000 -0400
+@@ -34,3 +34,4 @@
++#include <stdio.h>
+ #include <netinet/in.h>
+ #include <stdlib.h>
+ #include <sys/types.h>

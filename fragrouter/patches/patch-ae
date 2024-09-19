@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/01/16 17:34:35 ishit Exp $
+
+--- sniff.c.orig	1999-07-30 22:02:35.000000000 +0900
++++ sniff.c
+@@ -55,7 +55,7 @@ int
+ sniff_init(char *intf, char *ebuf)
+ {
+   char *dev, filter[BUFSIZ];
+-  struct link_int *llif;
++  struct libnet_link_int *llif;
+   struct ether_addr *llmac;
+   u_long llip;
+   u_int net, mask;

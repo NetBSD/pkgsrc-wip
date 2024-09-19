@@ -1,0 +1,4 @@
+The Bash Debugger Project contains patched sources to BASH that enable better
+debugging support as well as improved error reporting. In addition, this
+project contains the most comprehensive source-code debugger for bash that
+has been written.

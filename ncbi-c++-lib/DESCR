@@ -1,0 +1,7 @@
+NCBI C++ Toolkit contains more biological classes then any other toolkit.
+It contains an extensive set of functions to create, store and compute
+biological information. It provides easy integration with individual
+projects along with exisitng NCBI code.
+
+This package contains libraries and header files needed by  applications
+that were build using NCBI C++ toolkit.

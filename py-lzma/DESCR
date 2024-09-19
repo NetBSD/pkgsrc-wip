@@ -1,0 +1,3 @@
+PyLZMA provides a platform independent way to read and write data
+that has been compressed or can be decompressed by the LZMA
+library by Igor Pavlov

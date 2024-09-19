@@ -1,0 +1,25 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/06/14 01:28:30 mjasm Exp $
+
+--- util/Makefile.in.orig	1999-10-03 19:28:29.000000000 -0400
++++ util/Makefile.in
+@@ -6,11 +6,10 @@ YFLAGS		= -d
+ CC		= @cc@
+ CFLAGS		= @cflags@
+ LIBS		= -ltyphoon
+-PREFIX		= /usr/local
+ LDFLAGS		= -L../src
+ DESTBIN		= $(PREFIX)/bin
+ DESTOWN		= root
+-DESTGRP		= local
++DESTGRP		= wheel
+ SHELL		= /bin/sh
+ PROGRAMS	= ddlp dbdview tyexport tyimport # tybackup tyrestore
+ MADESRCS	= ddl.c exp.c imp.c ddl.h exp.h imp.h
+@@ -72,7 +71,6 @@ tags:		$(HDRS) $(SRCS)
+ 
+ install:	$(PROGRAMS)
+ 		cp $(PROGRAMS) $(DESTBIN)
+-		cd $(DESTBIN) && -mcs -c $(PROGRAMS)
+ 		cd $(DESTBIN) && strip $(PROGRAMS)
+ 		cd $(DESTBIN) && chmod 755 $(PROGRAMS)
+ 		cd $(DESTBIN) && chown $(DESTOWN) $(PROGRAMS)

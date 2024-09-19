@@ -1,0 +1,4 @@
+The NCBI sequence databases and software tools are designed around
+a particular model of biological sequence data. This package
+contains various binaries obtained after NCBI Toolkit compilation
+along with their documentation.

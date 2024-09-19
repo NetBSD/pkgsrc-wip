@@ -1,0 +1,17 @@
+Asynchronous is first of all an architecture tool. It allows
+organizing a complete application into Thread Worlds, each world
+having the possibility to use the same or different threadpools for
+long-lasting tasks. The library provides an implementation of the
+Active Object pattern, extended to allow many Active Objects to live
+in the same World. It provides several Threadpools and many parallel
+algorithms making use of it.  And most important of all, it allows
+simple, blocking-free asynchronous programming based on thread-safe
+callbacks.
+
+This is particularly relevant for Designers who often have headaches
+bringing the notion of threads into class diagrams. These usually do
+not mix well. Asynchronous solves this problems: it allows
+representing a Thread World as a Component or Package, objects of this
+Component or Package living into the corresponding thread.
+
+Note: Asynchronous is not part of the Boost library.

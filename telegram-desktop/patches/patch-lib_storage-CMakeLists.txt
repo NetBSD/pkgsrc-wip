@@ -1,0 +1,14 @@
+$NetBSD$
+
+Remove useless precompiled headers from lib_storage
+
+--- Telegram/lib_storage/CMakeLists.txt.orig	2020-02-17 20:21:07.812160059 +0000
++++ Telegram/lib_storage/CMakeLists.txt
+@@ -10,7 +10,6 @@ init_target(lib_storage)
+ 
+ get_filename_component(src_loc . REALPATH)
+ 
+-target_precompile_headers(lib_storage PRIVATE ${src_loc}/storage/storage_pch.h)
+ nice_target_sources(lib_storage ${src_loc}
+ PRIVATE
+     storage/storage_clear_legacy.cpp

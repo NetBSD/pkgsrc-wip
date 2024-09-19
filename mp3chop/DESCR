@@ -1,0 +1,7 @@
+mp3chop can be used for extracting parts of MP3 files and reporting
+information about MP3 files. It is designed to work as a filter program
+in the UNIX sense. As it processes the file it only outputs MP3 frames
+so it also removes junk from the file. It is capable of stripping or
+preserving ID3v1 and ID3v2 tags. Since it only works at the frame level
+it supports layer 1 and layer 2 files in addition to the layer 3 files
+implied by its name.

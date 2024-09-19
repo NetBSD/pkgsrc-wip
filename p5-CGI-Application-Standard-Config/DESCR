@@ -1,0 +1,7 @@
+CGI::Application::Standard::Config -- Define a standard configuration
+API for CGI::Application.
+This module defines a minimum standard interface that configuration
+plugins for CGI::Application should meet.
+Having such a standard allows other plugin authors to rely on basic
+configuration functionality without coding exceptions for several
+configuration modules or giving up on such integration.

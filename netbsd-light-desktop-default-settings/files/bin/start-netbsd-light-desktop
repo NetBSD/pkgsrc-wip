@@ -1,0 +1,59 @@
+#!/bin/sh
+
+if [ -z "$XDG_CONFIG_HOME" ]; then
+    export XDG_CONFIG_HOME="$HOME/.config"
+fi
+
+# TODO: check this
+if test "x$XDG_CONFIG_DIRS" = "x"
+then
+  XDG_CONFIG_DIRS="@PKG_SYSCONFDIR@/xdg/netbsd-light-desktop:@PKG_SYSCONFDIR@/xdg"
+else
+  XDG_CONFIG_DIRS="@PKG_SYSCONFDIR@/xdg/netbsd-light-desktop:$XDG_CONFIG_DIRS"
+fi
+export XDG_CONFIG_DIRS
+
+# TODO: check these paths:
+if test "x$XDG_DATA_DIRS" = "x"
+then
+ XDG_DATA_DIRS="@PKG_SYSCONFDIR@/xdg/netbsd-light-desktop:@PREFIX@/share:@PREFIX@/share/gdm:/var/lib/menu-xdg"
+ else
+ XDG_DATA_DIRS="@PKG_SYSCONFDIR@/xdg/netbsd-light-desktop:$XDG_DATA_DIRS:@PREFIX@/share:@PREFIX@/share/gdm:/var/lib/menu-xdg"
+fi
+export XDG_DATA_DIRS
+
+# Ensure the existance of openbox config file
+OPENBOX_CONF_DIR="$XDG_CONFIG_HOME/openbox"
+if [ ! -f "$OPENBOX_CONF_DIR/netbsd-desktop-light-rc.xml" ]; then
+    mkdir -p "$OPENBOX_CONF_DIR"
+    cp @PREFIX@/share/netbsd-light-desktop/openbox/rc.xml "$OPENBOX_CONF_DIR/netbsd-light-desktop-rc.xml"
+fi
+
+# Install custom QT configuration if no one is already installed
+if [ ! -f "$XDG_CONFIG_HOME/Trolltech.conf" ]; then
+    cp @PREFIX@/share/netbsd-light-desktop/qt/Trolltech.conf "$XDG_CONFIG_HOME/Trolltech.conf"
+fi
+
+# Install custom configuration for leafpad
+LEAFPAD_CONF_DIR="$XDG_CONFIG_HOME/leafpad"
+if [ ! -f "$LEAFPAD_CONF_DIR/leafpadrc" ]; then
+    mkdir -p "$LEAFPAD_CONF_DIR"
+    cp @PREFIX@/share/netbsd-light-desktop/leafpad/leafpadrc "$LEAFPAD_CONF_DIR/leafpadrc"
+fi
+
+# Clean up after GDM (GDM sets the number of desktops to one)
+xprop -root -remove _NET_NUMBER_OF_DESKTOPS -remove _NET_DESKTOP_NAMES -remove _NET_CURRENT_DESKTOP 2> /dev/null
+
+#Ensure the menu prefix
+export XDG_MENU_PREFIX="lxde-"
+
+# Enable GTK+2 integration for OpenOffice.org, if available.
+export SAL_USE_VCLPLUGIN=gtk
+
+# Launch DBus if needed
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+       eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
+
+# Start the LXDE session
+exec @PREFIX@/bin/lxsession -s NetBSD -e LXDE

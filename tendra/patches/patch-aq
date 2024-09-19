@@ -1,0 +1,6 @@
+$NetBSD: patch-aq,v 1.1.1.1 2003/04/29 09:22:28 thomasklausner Exp $
+
+--- /dev/null	2003-04-28 11:50:55.000000000 +0100
++++ src/lib/env/netbsd/common/80x86/Z-p	1998-03-16 10:38:54.000000000 +0000
+@@ -0,0 +1 @@
+++FLAG_TRANS	"-Z1"

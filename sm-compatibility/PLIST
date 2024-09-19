@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
+${PLUGIN_DIR}/INSTALL
+${PLUGIN_DIR}/README
+${PLUGIN_DIR}/functions.php
+${PLUGIN_DIR}/index.php
+${PLUGIN_DIR}/setup.php
+${PLUGIN_DIR}/version

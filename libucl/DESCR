@@ -1,0 +1,4 @@
+UCL is the Universal Configuration Language.  It is heavily influenced by
+nginx the configuration format as the example of a convenient configuration
+system.  However, UCL is fully compatible with JSON format and is able to
+parse json files.

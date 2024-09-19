@@ -1,0 +1,24 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/12/03 22:30:19 nocker Exp $
+
+--- UI/main.tk.orig    1998-11-09 04:39:29.000000000 +0100
++++ UI/main.tk         2007-11-25 20:42:00.000000000 +0100
+@@ -10,4 +10,9 @@
+ ###############################################################################
+ 
++## Bring to foreground in OSX
++if {$tcl_platform(os) == "Darwin"} {
++        catch {exec osascript -e {tell app "Wish Shell" to activate} &} 
++}
++
+ ## Include the various sub-systems
+ source $Program(LibDir)/BtkFile.tk
+@@ -978,7 +983,7 @@ proc ParseCommandLineArguments {} {
+ 
+   ## If we're in windows then exit
+-  if {$tcl_version >= 7.5 && $tcl_platform(platform) == "windows"} {
++#  if {$tcl_version >= 7.5 && $tcl_platform(platform) == "windows"} {
+     return
+-  }
++#  }
+ 
+   ## Get the arguments from the environment variable

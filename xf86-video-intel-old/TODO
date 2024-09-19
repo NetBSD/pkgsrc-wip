@@ -1,0 +1,47 @@
+In file included from i810.h:44:0,
+                 from i810_driver.c:85:
+/scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/xf86PciInfo.h:50:2: warning: #warning "xf86PciInfo.h is deprecated.  For greater compatibility, drivers should include necessary PCI IDs locally rather than relying on this file from xorg-server."
+In file included from i810_driver.c:85:0:
+i810.h:87:1: warning: 'IOADDRESS' is deprecated
+i810.h:89:1: warning: 'IOADDRESS' is deprecated
+i810.h:91:1: warning: 'IOADDRESS' is deprecated
+i810.h:93:1: warning: 'IOADDRESS' is deprecated
+i810.h:191:4: warning: 'IOADDRESS' is deprecated
+In file included from i810_driver.c:86:0:
+i830.h:129:1: warning: 'IOADDRESS' is deprecated
+i830.h:131:1: warning: 'IOADDRESS' is deprecated
+i830.h:133:1: warning: 'IOADDRESS' is deprecated
+i830.h:135:1: warning: 'IOADDRESS' is deprecated
+i830.h:480:4: warning: 'IOADDRESS' is deprecated
+i810_driver.c: In function 'i810Setup':
+i810_driver.c:494:7: warning: implicit declaration of function 'LoaderRefSymLists'
+i810_driver.c:494:7: warning: nested extern declaration of 'LoaderRefSymLists'
+i810_driver.c: In function 'I810FreeRec':
+i810_driver.c:543:4: warning: 'Xfree' is deprecated (declared at /scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/os.h:233)
+i810_driver.c: In function 'I810DoDDC':
+i810_driver.c:810:7: warning: implicit declaration of function 'xf86LoaderReqSymLists'
+i810_driver.c:810:7: warning: nested extern declaration of 'xf86LoaderReqSymLists'
+i810_driver.c: In function 'I810PreInit':
+i810_driver.c:871:23: error: 'struct _vgaHWRec' has no member named 'PIOOffset'
+i810_driver.c:879:4: warning: implicit declaration of function 'xf86RegisterResources'
+i810_driver.c:879:4: warning: nested extern declaration of 'xf86RegisterResources'
+i810_driver.c:879:56: error: 'ResNone' undeclared (first use in this function)
+i810_driver.c:879:56: note: each undeclared identifier is reported only once for each function it appears in
+i810_driver.c:881:9: error: 'struct _ScrnInfoRec' has no member named 'racMemFlags'
+i810_driver.c:881:25: error: 'RAC_FB' undeclared (first use in this function)
+i810_driver.c:881:34: error: 'RAC_COLORMAP' undeclared (first use in this function)
+i810_driver.c:930:4: warning: 'Xalloc' is deprecated (declared at /scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/os.h:214)
+i810_driver.c:1321:4: warning: implicit declaration of function 'xf86SetOperatingState'
+i810_driver.c:1321:4: warning: nested extern declaration of 'xf86SetOperatingState'
+i810_driver.c:1321:26: error: 'resVgaIo' undeclared (first use in this function)
+i810_driver.c:1321:56: error: 'ResUnusedOpr' undeclared (first use in this function)
+i810_driver.c:1322:26: error: 'resVgaMem' undeclared (first use in this function)
+i810_driver.c:1322:57: error: 'ResDisableOpr' undeclared (first use in this function)
+i810_driver.c: In function 'I810ScreenInit':
+i810_driver.c:2317:4: warning: 'Xcalloc' is deprecated (declared at /scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/os.h:220)
+i810_driver.c: In function 'I810CloseScreen':
+i810_driver.c:2727:7: warning: 'Xfree' is deprecated (declared at /scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/os.h:233)
+i810_driver.c:2733:3: warning: 'Xfree' is deprecated (declared at /scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/os.h:233)
+i810_driver.c:2754:4: warning: 'Xfree' is deprecated (declared at /scratch/wip/xf86-video-intel-old/work/.buildlink/include/xorg/os.h:233)
+*** Error code 1
+

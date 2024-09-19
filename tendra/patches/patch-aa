@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/29 09:22:27 thomasklausner Exp $
+
+--- INSTALL	2003/04/28 10:03:41	1.1
++++ INSTALL	2003/04/28 10:04:27
+@@ -66,12 +66,12 @@
+ #			plenty of free space).
+ #
+ 
+-BASE_DIR=/usr/local/src/TenDRA-4.1.2
+-PUBLIC_BIN=/usr/local/bin
+-INSTALL_DIR=/usr/local/lib/TenDRA
++BASE_DIR=`pwd`
++PUBLIC_BIN=${BASE_DIR}/build/bin
++INSTALL_DIR=${BASE_DIR}/build/lib/TenDRA
+ COMMON_DIR=${INSTALL_DIR}/lib
+ MACH_DIR=${INSTALL_DIR}/machines
+-MAN_DIR=/usr/local/man
++MAN_DIR=${BASE_DIR}/build/man
+ WORK_DIR=${BASE_DIR}/work
+ TEMP_DIR=/var/tmp
+ 
+@@ -307,7 +307,7 @@
+     if [ ! -d ${DIR} ]
+     then
+ 	${COMMENT} creating ${DIR} ...
+-	mkdir ${DIR} || exit 1
++	mkdir -p ${DIR} || exit 1
+     fi
+ done
+ 

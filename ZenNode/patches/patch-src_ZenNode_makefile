@@ -1,0 +1,61 @@
+$NetBSD$
+
+Use pkgsrc defined C++ compiler via CXX.
+Honor LDFLAGS.
+Remove "-fstrength-reduce" (not supported by clang).
+Add "-Wno-write-strings" to avoid warning flood.
+
+--- src/ZenNode/makefile.orig	2004-05-28 05:27:38.000000000 +0000
++++ src/ZenNode/makefile
+@@ -1,17 +1,16 @@
+ # ZenNode makefile for Linux
+ 
+-CC       = g++
+-CFLAGS  += -g -O -fstrength-reduce -fno-rtti
+-CFLAGS  += -fomit-frame-pointer -foptimize-sibling-calls
++CXXFLAGS  += -g -O -fno-rtti
++CXXFLAGS  += -fomit-frame-pointer -foptimize-sibling-calls
+ #CFLAGS  += -fbranch-probabilities
+ #CFLAGS  += -fprofile-arcs
+-WARNINGS = -Wall -Wno-format -Wstrict-prototypes -Wmissing-prototypes -Winline
++WARNINGS = -Wall -Wno-format -Winline -Wno-write-strings -Wno-unused-function
+ #CC       = /opt/intel/compiler60/ia32/bin/icc
+ #CFLAGS   = -g -O3
+ INCLUDES = -I../DOOM -I../common
+ TARGETS  = ZenNode bspdiff bspinfo compare
+ 
+-CFLAGS  += -D__LINUX__
++CXXFLAGS  += -D__LINUX__
+ 
+ ifdef WIN32
+ CFLAGS  += -D__WIN32__
+@@ -26,7 +25,7 @@ LIBS    += -lpthread -lrt
+ endif
+ 
+ .cpp.o:
+-	$(CC) -c $(CFLAGS) $(WARNINGS) $(INCLUDES) -o $@ $<
++	$(CXX) -c $(CXXFLAGS) $(WARNINGS) $(INCLUDES) -o $@ $<
+ 
+ .SUFFIXES: .cpp .o
+ 
+@@ -38,16 +37,16 @@ clean:
+ 	rm -rf {.,../DOOM/,../common/logger}/{*.o,*~} $(TARGETS)
+ 
+ ZenNode: ZenMain.o ZenNode.o ZenReject.o ZenRMB.o blockmap.o console.o ../DOOM/wad.o ../DOOM/level.o $(LOGGER)
+-	$(CC) $(LIBS) -o $@ $^
++	$(CXX) $(LDFLAGS) $(LIBS) -o $@ $^
+ 
+ bspdiff: bspdiff.o console.o ../DOOM/wad.o ../DOOM/level.o $(LOGGER)
+-	$(CC) $(LIBS) -o $@ $^
++	$(CXX) $(LDFLAGS) $(LIBS) -o $@ $^
+ 
+ bspinfo: bspinfo.o console.o ../DOOM/wad.o ../DOOM/level.o $(LOGGER)
+-	$(CC) $(LIBS) -o $@ $^
++	$(CXX) $(LDFLAGS) $(LIBS) -o $@ $^
+ 
+ compare: compare.o console.o ../DOOM/wad.o ../DOOM/level.o $(LOGGER)
+-	$(CC) $(LIBS) -o $@ $^
++	$(CXX) $(LDFLAGS) $(LIBS) -o $@ $^
+ 
+ ZenReject.o: \
+ 	ZenReject.cpp	\

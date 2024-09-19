@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2013/01/21 02:58:05 othyro Exp $
+
+RMD160 (gurlchecker-0.13.1.tar.gz) = 86c07058b1fc8c519b84433216fbdb8ad8fbcfae
+Size (gurlchecker-0.13.1.tar.gz) = 709336 bytes
+SHA1 (patch-aa) = a33271c29908eeadc5f48b9e96cb6421e149252e

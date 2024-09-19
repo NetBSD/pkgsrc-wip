@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/19 20:59:33 jihbed Exp $
+bin/ratpoints
+include/ratpoints.h
+lib/libratpoints.a
+share/doc/ratpoints/ratpoints-doc.pdf

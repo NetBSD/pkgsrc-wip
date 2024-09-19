@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/19 17:47:36 jihbed Exp $
+
+--- configure.orig	2010-03-19 18:12:44.000000000 +0000
++++ configure	2010-03-19 18:13:55.000000000 +0000
+@@ -15204,7 +15204,7 @@
+ fi
+ 
+ 
+-if test x"$want_seed" == x"yes" ; then
++if test x"$want_seed" = x"yes" ; then
+ 
+ 
+ if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+@@ -15332,7 +15332,7 @@
+   have_seed=no
+ fi
+ 
+-   if test x"$have_seed" == x"yes" ; then
++   if test x"$have_seed" = x"yes" ; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:$LINENO: checking for SEED" >&5
+@@ -15461,7 +15461,7 @@
+ fi
+ 
+ 
+-if test x"$want_gjs" == x"yes" ; then
++if test x"$want_gjs" = x"yes" ; then
+    if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"gjs-gi-1.0\"") >&5
+   ($PKG_CONFIG --exists --print-errors "gjs-gi-1.0") 2>&5
+@@ -15473,7 +15473,7 @@
+   have_gjs=no
+ fi
+ 
+-   if test x"$have_gjs" == x"yes" ; then
++   if test x"$have_gjs" = x"yes" ; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:$LINENO: checking for GJS" >&5

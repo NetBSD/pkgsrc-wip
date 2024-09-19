@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2013/07/17 12:52:44 obache Exp $
+
+RMD160 (h323plus-v1_20_2-src.tar.gz) = 5e6cdc098eef707978050a1d0eb8ce3f95427634
+Size (h323plus-v1_20_2-src.tar.gz) = 2148186 bytes
+SHA1 (patch-configure) = 6776b0e3bbbed269c50eda6efceeb81e7dcd5e22
+SHA1 (patch-include_gccpdu.h) = e8d7327c923370fbe0314e3ed92225ec9d29e0c9
+SHA1 (patch-include_gnugknat.h) = 822f032a73aadc06e77e1c930a5b804b92640b1b
+SHA1 (patch-include_h225.h) = 535a6d3fd8982ef5dcf24d0de8aebc8b28e9e535
+SHA1 (patch-include_h235.h) = 7f6acb87583fa55d7669304a9fa6234b7399512d
+SHA1 (patch-include_h450_h4508.h) = a0f53b113ffd7e4cda132f4867dadda5d4adc227
+SHA1 (patch-include_h501.h) = 0ad9e084db2baa3a0ee2753d6aae68d19062445c
+SHA1 (patch-openh323u.mak.in) = c0ba0055e23995f0632dd0d615df225af91ab44a
+SHA1 (patch-src_gccpdu.cxx) = 54f1baff87dc91ebce6714c12ed43045e8228008
+SHA1 (patch-src_gnugknat.cxx) = cafa39a46fb919c8c05502856294e3609472f4d7
+SHA1 (patch-src_h225__1.cxx) = 00eaa046c9f7e7acf5acc54028e9f4da3cfb2fed
+SHA1 (patch-src_h235.cxx) = b4e16f0fd7cd3ab5cd0419e935715e83b7c934a2
+SHA1 (patch-src_h235auth.cxx) = 2810eab603745e6adbbf24afc4768a1fec46ec6e
+SHA1 (patch-src_h323ep.cxx) = b1fa2915d1a27a6379703f8dfecabc820cb7cda9
+SHA1 (patch-src_h450_h4508.cxx) = 3d8ce9a8e077d79633da43c1eef2b80f5ce3d7e4
+SHA1 (patch-src_h501.cxx) = b20d7a3b34b6a1644faec8443dea867ae72ba0e7

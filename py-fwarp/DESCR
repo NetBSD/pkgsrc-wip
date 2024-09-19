@@ -1,0 +1,1 @@
+Fwrap wraps Fortran code in C, Cython and Python. It focuses on Fortran 90 and 95, and will work with Fortran 77 so long as you limit yourself to “sane” Fortran 77

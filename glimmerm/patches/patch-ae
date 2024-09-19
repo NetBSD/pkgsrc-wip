@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.2 2006/04/21 13:19:05 rillig Exp $
+
+--- train/scoreSTOP.c.orig	2003-05-16 11:43:18.000000000 -0600
++++ train/scoreSTOP.c
+@@ -89,7 +89,7 @@ int  Is_Stop  (const int * , double *);
+ int *basetoint(char sequence[], long length);
+ int comp(const void *a, const void *b);
+ 
+-void main ( int argc, char * argv [])
++int main ( int argc, char * argv [])
+ { 
+    FILE  * Infile, *Outfile;
+    char  S [MAX_STRING_LEN], T [MAX_STRING_LEN], Name[MAX_STRING_LEN];

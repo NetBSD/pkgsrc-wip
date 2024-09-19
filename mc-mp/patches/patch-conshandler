@@ -1,0 +1,16 @@
+$NetBSD: patch-conshandler,v 1.1 2009/09/03 22:08:22 cheusov Exp $
+
+--- src/cons.handler.c.orig	2003-04-28 12:34:24.000000000 +0300
++++ src/cons.handler.c
+@@ -203,8 +203,9 @@ handle_console_linux (unsigned char acti
+ 	    console_flag = 0;
+ 	}
+ 	break;
+-    default:
+-	/* Nothing */
++/*    default:
++	Nothing
++*/
+     }
+ }
+ 

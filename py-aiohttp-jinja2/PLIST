@@ -1,0 +1,16 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/aiohttp_jinja2/__init__.py
+${PYSITELIB}/aiohttp_jinja2/__init__.pyc
+${PYSITELIB}/aiohttp_jinja2/__init__.pyo
+${PYSITELIB}/aiohttp_jinja2/helpers.py
+${PYSITELIB}/aiohttp_jinja2/helpers.pyc
+${PYSITELIB}/aiohttp_jinja2/helpers.pyo
+${PYSITELIB}/aiohttp_jinja2/py.typed
+${PYSITELIB}/aiohttp_jinja2/typedefs.py
+${PYSITELIB}/aiohttp_jinja2/typedefs.pyc
+${PYSITELIB}/aiohttp_jinja2/typedefs.pyo

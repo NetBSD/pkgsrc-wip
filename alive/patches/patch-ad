@@ -1,0 +1,345 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+--- src/http.c.orig	2004-12-21 16:46:14.000000000 +0100
++++ src/http.c	2005-03-04 19:22:02.000000000 +0100
+@@ -38,7 +38,6 @@
+ #include <errno.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+-
+ #include "http.h"
+ #include "log.h"
+ 
+@@ -57,17 +56,80 @@
+  *          socket descriptior.
+  */
+ 
++ char *  xtrprxsrv (char * proxyenv, char * p1)
++{
++    char *p2;
++    p1  = strchr (proxyenv,':');
++    p1++;
++   p1++;
++   p1++;
++    p2 = strrchr (proxyenv,':');
++    *(p2)= '\0';
++    return (p1);
++}
++
++ int  xtrprxprt (char * proxyenv)
++{
++    char *p1;
++   char *p2;
++    p1  = strrchr (proxyenv,':');
++    p1++;
++     p2 = strrchr (proxyenv,'/');
++    *(p2)= '\0';
++    return(atoi(p1));
++}
++ char *  xtrprxprtcl (char * proxyenv, char * p1)
++{
++    char *p2;
++     p2 = strchr (proxyenv,':');
++    *(p2)= '\0';
++    return (p1);
++}
++char chk_proxy (char *name, int verbose)
++{
++    char prtclstring[250];
++    char * proxprot  = NULL;
++    char * proxyenv = getenv("no_proxy");	 
++    if ( proxyenv != NULL)
++    {
++    	if  ((strncmp(proxyenv, name ,sizeof(name)))==0)
++	{
++	  DEBUG  ("noprox=name \n ");
++	    return 0;
++	}
++    }
++    proxyenv = getenv("http_proxy");
++    if ( proxyenv == NULL)
++	return 0;
++    proxprot = prtclstring;
++    strlcpy (prtclstring, proxyenv, sizeof (prtclstring));
++
++    proxprot = xtrprxprtcl(proxprot , proxprot );
++    if  ((strncmp( proxprot, "http" ,sizeof(proxprot)))!=0)
++    {
++	 DEBUG  ("no http \n ");
++	return 0;
++    }
++    return 1;
++}
++    
++
+ static int
+ http_open_server (char *name, short port, int verbose)
+ {
+   int result, sockfd;
++  int proxport;
+   struct hostent *he;
+   struct sockaddr_in address;
+-
++  char proxy = 1;
+   /* Try to find the login host */
+   he = gethostbyname (name);
++  DEBUG  (_("h_name=  %s"),he->h_name);
++
+   if (he == NULL)
+     {
++	if ((he = gethostbyname(name)) == NULL) 
++	{
+       ERROR (_("DNS lookup of login server %s failed to resolve to an IP#"), name);
+       ERROR (_("Try the commands nslookup, host or dig for more details."));
+       ERROR (_("gethostbyname() returns: %s"), strerror (errno));
+@@ -75,6 +137,41 @@
+     }
+   else
+     {
++	    result =1;
++	}
++  }
++  else
++  {
++      if ( chk_proxy (name, verbose))
++      {
++        char srvstring[250];
++    	 char prtclstring[250];
++  	 char *proxyenv= NULL;
++ 	 char * proxserv= NULL;
++	 proxy = 1;
++	 proxyenv = getenv("http_proxy");
++	 DEBUG (_("proxyenv:  %s "), proxyenv);
++	 proxserv = srvstring;
++	 strlcpy (srvstring,proxyenv , sizeof (srvstring));
++	 strlcpy (prtclstring, proxyenv, sizeof (prtclstring));
++	 proxserv=  xtrprxsrv (proxserv, proxserv );
++	 DEBUG  (_("proxserv :  %s "),proxserv  );
++	 proxport=  xtrprxprt (proxyenv );
++	  DEBUG (_("proxyport  :  %d "),proxport  );
++	 he = gethostbyname(proxserv);
++	  DEBUG  (_("proxserv h_name=  %s port = %d "),he->h_name, proxport );		
++      }
++      else 
++      {
++	  proxy = 0;
++	  he = gethostbyname(name);
++      }
++	    	
++	 	     
++     result =1;
++  }  
++  if ( result > 0 )
++  {
+       /* Setup a socket */
+       sockfd = socket (PF_INET, SOCK_STREAM, 0);
+       if (-1 == sockfd)
+@@ -86,7 +183,11 @@
+         {
+           /* Setup address to connecto to ... */
+           address.sin_family = PF_INET;
++	    if (proxy)
++		address.sin_port   = htons (proxport);
++	    else
+           address.sin_port   = htons (port);
++		
+           address.sin_addr   = *((struct in_addr *) he->h_addr);
+           memset (&(address.sin_zero), 0, sizeof (address.sin_zero));
+ 
+@@ -95,8 +196,14 @@
+           if (-1 == result)
+             {
+               close (sockfd);
+-              ERROR (_("Failed to connect to login server (%s): %s"),
+-                     name, strerror (errno));
++	      if (proxy	)
++	      {
++		  ERROR (_("Failed to connect to proxy server (%s): %s"),name, strerror (errno));
++	      }
++	      else
++	      {
++		 ERROR (_("Failed to connect to login server (%s): %s"), name, strerror (errno));
++	      }
+             }
+           else
+             {
+@@ -169,10 +276,20 @@
+     }
+ 
+   /* Register and get login page */
++    if ( chk_proxy (config->login_server , verbose))
++    {
++	snprintf (config->send_msg,sizeof(config->send_msg),PRX_PRLGN_MSG, 
++	  config->login_server,  config->server_port, config->init_page,
++          config->login_server,
++          config->login_server);
++    }
++    else 
++    {
+   sprintf (config->send_msg, PRELOGIN_MSG,
+            config->init_page,
+            config->login_server,
+            config->login_server);
++    }
+ 
+   DEBUG (config->send_msg);
+ 
+@@ -254,9 +371,13 @@
+ 
+ static int __http_internet_login (config_data_t *config, int verbose)
+ {
+-  int result = 0, length;
++  int result = 0;
++  size_t length;
+   char *login_string, *temp;
+-
++  char tmpstr1[512];
++  char tmpstr2[512];
++  login_string = tmpstr1;
++  temp = tmpstr2;
+   /* Clear the read string to make sure we don't rely on previous results. */
+   config->get_msg [0] = 0;
+   config->logged_in   = 0;
+@@ -278,8 +399,8 @@
+     + strlen (config->password_key) + strlen (config->password)
+     + strlen (config->login_string_footer) + strlen ("Plus approximately 10%");
+ 
+-  temp = (char *) alloca (length);
+-  if (!temp)
++ 
++   if (!length)
+     {
+       close (config->sockfd);
+       ERROR (_("Failed to allocate memory (%d bytes): %s"),
+@@ -289,20 +410,20 @@
+ 
+   if (config->login_string_header)
+     {
+-      result = sprintf (temp, "%s&", config->login_string_header);
++	result = snprintf (temp, sizeof (tmpstr2), "%s&",config->login_string_header);
+     }
+ 
+-  result += sprintf (&temp[result], "%s=%s&%s=%s",
++  result += snprintf (&temp[result],sizeof (tmpstr2), "%s=%s&%s=%s",
+                      config->username_key,
+                      config->username,
+                      config->password_key,
+                      config->password);
+ 
+-  if (config->login_string_footer) result += sprintf (&temp[result], "&%s", config->login_string_footer);
++  if (config->login_string_footer) 
++      result += snprintf (&temp[result], sizeof (tmpstr2), "&%s", config->login_string_footer);
+ 
+   DEBUG (_("Login string: %s"), temp);
+ 
+-  login_string = (char *) alloca (length);
+   if (!login_string)
+     {
+       close (config->sockfd);
+@@ -313,23 +434,40 @@
+   /* Encode the the login string. No spaces! */
+   {
+     int i;
+-
+-    length = strlen (temp) + 1;
++    length = strlen (temp);
+     for (i = 0; i < length; i++)
+       {
+-        if (' ' == temp [i]) login_string [i] = '+';
+-        else                 login_string [i] = temp [i];
++        if (' ' == temp [i]) 
++	      login_string [i] = '+';
++        else  
++	    login_string [i] = temp [i];
+       }
+   }
+ 
++ 
+   /* Paste it all into the login template */
++     if ( chk_proxy (config->login_server , verbose))
++   {
++       	snprintf (config->send_msg,sizeof (config->send_msg), PRX_LGN_MSG , 
++	   config->login_server, config->server_port,  config->login_page,
++         config->login_server,
++	 getenv ("OSTYPE"),	 	  
++         config->login_server,config->server_port, config->init_page,
++	 (int) length,
++	 login_string	);
++   }
++   else
++   {   
+   sprintf (config->send_msg, LOGIN_MSG,
+            config->login_page,
+            config->login_server,
+            config->login_server,
+            config->init_page,
+-           length,
++	   (int) length,
+            login_string);
++   }
++  DEBUG (_("login_string= : %s"), login_string);
++  strlcat (config->send_msg ,login_string,sizeof (config->send_msg));
+ 
+   /* Send login string to server */
+   DEBUG (config->send_msg);
+@@ -409,6 +547,10 @@
+           LOG (_("%s(): Start %s with --verbose --debug to see whole reply."), __FUNCTION__, PACKAGE_NAME);
+         }
+     }
++  else if (config->logged_in == 1)
++  {
++      ERROR(_("SUCCESSFUL LOGIN"));
++  }
+ 
+   return result;
+ }
+@@ -444,10 +586,20 @@
+     }
+ 
+   /* Send logout request */
++  if ( chk_proxy (config->login_server, verbose))
++  {
++      snprintf (config->send_msg, sizeof (config->send_msg),
++           PRX_LGT_MSG, config->login_server,config->server_port,config->logout_page,
++	   config->login_server,config->server_port, config->init_page,	
++           config->login_server);
++  }
++  else
++  {
+   sprintf (config->send_msg,
+            LOGOUT_MSG,
+            config->logout_page, config->login_server,
+            config->init_page, config->login_server);
++  }
+ 
+   DEBUG (config->send_msg);
+ 
+@@ -460,6 +612,9 @@
+ 
+       return -1;
+     }
++   DEBUG (config->send_msg);
++  result = send (config->sockfd, config->send_msg, strlen (config->send_msg), 0);
++
+ 
+   LOG (_("Waiting for logout reply, 5 second timeout ..."));
+   result = http_poll_read (config->sockfd, 5);
+@@ -491,11 +646,12 @@
+       close (config->sockfd);
+       ERROR(_("LOGOUT FAILED"));
+       config->logged_in = 0;
+-
++      DEBUG (_("config->get_msg 0:%s \n "),config->get_msg);
++      DEBUG (_("config->logged_out_string 0:%s \n "), config->logged_out_string );
+       return -1;
+     }
+ 
+-  LOG (_("SUCCESSFUL LOGOUT"));
++  ERROR (_("SUCCESSFUL LOGOUT"));
+ 
+   /* Make sure to close the connection before leaving. */
+   close (config->sockfd);
+@@ -629,3 +785,4 @@
+  * indent-tabs-mode: nil;
+  * End:
+  */
++

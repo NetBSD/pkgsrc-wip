@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2006/10/29 11:23:09 shattered Exp $
+
+RMD160 (fvwm-crystal-3.0.4.tar.gz) = 70a28dc1dc045ff55f10d76ee7bd530eb53233c6
+Size (fvwm-crystal-3.0.4.tar.gz) = 3589430 bytes
+SHA1 (patch-aa) = dee068695048bd6e3f5de20acf733c61ca26a545

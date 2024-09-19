@@ -1,0 +1,95 @@
+// suspend, hibernate 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.freedesktop.upower.hibernate" || 
+      action.id == "org.freedesktop.upower.suspend" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+}); 
+
+// shutdown, restart 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.freedesktop.consolekit.system.stop" || 
+      action.id == "org.freedesktop.consolekit.system.restart" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+}); 
+
+// color management 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.freedesktop.color-manager.create-device" || 
+      action.id == "org.freedesktop.color-manager.create-profile" || 
+      action.id == "org.freedesktop.color-manager.delete-device" || 
+      action.id == "org.freedesktop.color-manager.delete-profile" || 
+      action.id == "org.freedesktop.color-manager.device-inhibit" || 
+      action.id == "org.freedesktop.color-manager.modify-device" || 
+      action.id == "org.freedesktop.color-manager.modify-profile" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+}); 
+
+// media 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.freedesktop.udisks2.eject-media" || 
+      action.id == "org.freedesktop.udisks2.filesystem-mount" || 
+      action.id == "org.freedesktop.udisks2.filesystem-mount-other-seat" || 
+      action.id == "org.freedesktop.udisks2.filesystem-mount-system" || 
+      action.id == "org.freedesktop.udisks2.filesystem-unmount-others" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+}); 
+
+// screen backlight 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.cinnamon.settings-daemon.plugins.power.backlight-helper" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+}); 
+
+// network manager 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.freedesktop.NetworkManager.enable-disable-network" || 
+      action.id == "org.freedesktop.NetworkManager.enable-disable-wifi" || 
+      action.id == "org.freedesktop.NetworkManager.enable-disable-wwan" || 
+      action.id == "org.freedesktop.NetworkManager.network-control" || 
+      action.id == "org.freedesktop.NetworkManager.settings.modify.hostname" || 
+      action.id == "org.freedesktop.NetworkManager.settings.modify.own" || 
+      action.id == "org.freedesktop.NetworkManager.settings.modify.system" || 
+      action.id == "org.freedesktop.NetworkManager.sleep-wake" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+}); 
+
+// others 
+polkit.addRule (function(action, subject) 
+{ 
+  if (action.id == "org.freedesktop.locale1.set-keyboard" || 
+      action.id == "org.freedesktop.locale1.set-locale" || 
+      action.id == "org.freedesktop.timedate1.set-local-rtc" || 
+      action.id == "org.freedesktop.timedate1.set-ntp" || 
+      action.id == "org.freedesktop.timedate1.set-time" || 
+      action.id == "org.freedesktop.timedate1.set-timezone" || 
+      action.id == "org.cinnamon.settings-users" || 
+      action.id == "org.nemo.root" && 
+      subject.isInGroup ("operator")) 
+      { 
+        return polkit.Result.YES; 
+      } 
+});

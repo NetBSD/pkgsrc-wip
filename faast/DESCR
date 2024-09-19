@@ -1,0 +1,3 @@
+FAAST is an open-source C++ library providing strongly object-oriented
+data structures and high-performance algorithms for elements and
+polynomials in Artin-Schreier towers over finite fields.

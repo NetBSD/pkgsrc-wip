@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 20:24:44 jihbed Exp $
+lib/perl5/${OS_VERSION}2.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/Extractor.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/Extractor/Doxyparse.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/Extractor/Sloccount.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/FilenameFilter.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/LanguageFilter.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/Metrics.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/Model.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/Output/DOT.pm
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-doc
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-evolution-matrix
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-graph
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-metrics
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-metrics-batch
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-metrics-history
+lib/perl5/vendor_perl/${OS_VERSION}2.0/Analizo/scripts/analizo-tree-evolution
+lib/perl5/vendor_perl/${OS_VERSION}2.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/analizo/.packlist
+lib/perl5/vendor_perl/bin/analizo
+lib/perl5/vendor_perl/man/man1/analizo-doc.1
+lib/perl5/vendor_perl/man/man1/analizo-evolution-matrix.1
+lib/perl5/vendor_perl/man/man1/analizo-graph.1
+lib/perl5/vendor_perl/man/man1/analizo-metrics-batch.1
+lib/perl5/vendor_perl/man/man1/analizo-metrics-history.1
+lib/perl5/vendor_perl/man/man1/analizo-metrics.1
+lib/perl5/vendor_perl/man/man1/analizo-tree-evolution.1
+lib/perl5/vendor_perl/man/man1/analizo.1

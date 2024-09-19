@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.2 2012/11/16 23:37:01 noud4 Exp $
+bin/loggly-add-device${PYVERSSUFFIX}
+bin/loggly-create-input${PYVERSSUFFIX}
+bin/loggly-delete-input${PYVERSSUFFIX}
+bin/loggly-describe-input${PYVERSSUFFIX}
+bin/loggly-remove-device${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/loggly/__init__.py
+${PYSITELIB}/loggly/__init__.pyc
+${PYSITELIB}/loggly/__init__.pyo
+${PYSITELIB}/loggly/connection.py
+${PYSITELIB}/loggly/connection.pyc
+${PYSITELIB}/loggly/connection.pyo
+${PYSITELIB}/loggly/device.py
+${PYSITELIB}/loggly/device.pyc
+${PYSITELIB}/loggly/device.pyo
+${PYSITELIB}/loggly/input.py
+${PYSITELIB}/loggly/input.pyc
+${PYSITELIB}/loggly/input.pyo

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:19 thomasklausner Exp $
+bin/stonx
+etc/stonx/keysyms
+etc/stonx/stonxrc
+share/stonx/cartridge.img
+share/stonx/gemdos_c/bench1.prg
+share/stonx/gemdos_c/final.tos
+share/stonx/gemdos_c/mint/stonx.xfs
+share/stonx/tos.img

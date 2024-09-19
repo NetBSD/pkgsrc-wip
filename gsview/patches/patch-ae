@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+
+Set absolute path for GS and pstotext commands.
+
+--- srcunx/gvxdll.c.orig	2010-04-25 23:44:59.000000000 -0700
++++ srcunx/gvxdll.c	2010-04-26 00:10:18.000000000 -0700
+@@ -461,7 +461,7 @@
+     int real_orientation;
+ #define MAXARG 12
+     char *nargv[MAXARG];
+-    char pstotext_string[] = "pstotext";
++    char pstotext_string[] = "@PSTOTEXT_CMD@";
+     char bboxes_string[] = "-bboxes";
+     char cork_string[] = "-cork";
+     char landscape_string[] = "-landscape";
+@@ -469,7 +469,7 @@
+     char portrait_string[] = "-portrait";
+     char output_string[] = "-output";
+     char gs_string[] = "-gs";
+-    char gs_prog[] = "gs";
++    char gs_prog[] = "@GS_CMD@";
+     int k = 0;
+ 
+     if (pstotext_pid != 0) {

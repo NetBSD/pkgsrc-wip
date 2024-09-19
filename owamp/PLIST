@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/03 00:38:05 mbowie Exp $
+bin/owampd
+bin/owfetch
+bin/owping
+bin/owstats
+bin/owtvec
+bin/owup
+bin/powstream
+lib/libowamp.a
+man/man1/owfetch.1
+man/man1/owping.1
+man/man1/owstats.1
+man/man1/owup.1
+man/man1/powstream.1
+man/man5/owampd.conf.5
+man/man5/owampd.limits.5
+man/man5/owampd.pfs.5
+man/man8/owampd.8

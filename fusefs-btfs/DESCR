@@ -1,0 +1,2 @@
+btfs is a simple FUSE (Filesystem in USErspace) application to map some
+basic bluetooth functions into the filesystem.

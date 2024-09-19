@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.2 2008/02/09 18:15:43 ishit Exp $
+
+--- ../doc/sample.cfg.orig	2003-11-18 08:07:12.000000000 +0900
++++ ../doc/sample.cfg
+@@ -10,7 +10,7 @@ Tuning {
+ 	ScriptTimeout 60
+ }
+ 
+-User daemon
++User mathopd
+ StayRoot On
+ 
+ PIDFile /var/mathopd/pid

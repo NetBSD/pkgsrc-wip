@@ -1,0 +1,16 @@
+CRM114 is a system to examine incoming e-mail, system log streams,
+data files or other data streams, and to sort, filter, or alter
+the incoming files or data streams according to the user's wildest
+desires. Criteria for categorization of data can be by satisfaction
+of regexes, by sparse binary polynomial matching with a Bayesian
+Chain Rule evaluator, a Hidden Markov Model, or by other means.
+Accuracy of the SBPH/BCR classifier has been seen in excess of 99
+per cent, for 1/4 megabyte of learning text. In other words, CRM114
+learns, and it learns fast .
+
+CRM114 is compatible with SpamAssassin or other spam-flagging
+software; it can also be pipelined in front of or behind procmail.
+CRM114 is also useful as a syslog or firewall log filter, to alert
+you to important events but ignore the ones that aren't meaningful.
+
+This package tracks the "Cutting Edge Version".

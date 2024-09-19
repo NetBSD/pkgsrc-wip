@@ -1,0 +1,87 @@
+$NetBSD: patch-ac,v 1.2 2008/03/08 11:30:44 hoka_adam Exp $
+
+--- vmsbackup.c.orig	1988-09-12 17:15:29.000000000 +0000
++++ vmsbackup.c
+@@ -76,11 +76,13 @@
+  */
+ #include    <stdio.h>
+ #include    <ctype.h>
++#include    <stdlib.h>
++#include    <strings.h>
+ 
+ #include    <sys/ioctl.h>
+ #include    <sys/types.h>
+ #ifdef REMOTE
+-#include    <local/rmt.h>
++#include    <rmt.h>
+ #include    <sys/stat.h>
+ #endif
+ #include    <sys/mtio.h>
+@@ -88,7 +90,7 @@
+ 
+ #ifdef pyr
+ #define SWAP
+-#endif pyr
++#endif /* pyr */
+ 
+ #ifdef sun
+ #define SWAP
+@@ -149,7 +151,7 @@ struct bsa {
+ #ifdef    STREAM
+ char    *def_tapefile = "/dev/rts8";
+ #else
+-char    *def_tapefile = "/dev/rmt8";
++char    *def_tapefile = "/dev/st0";
+ #endif
+ char    *tapefile;
+ 
+@@ -198,7 +200,7 @@ int    vfcsize;
+ 
+ #ifdef    NEWD
+ FILE    *lf;
+-#endif    NEWD
++#endif /* NEWD */
+ 
+ int    fd;        /* tape file descriptor */
+ int     cflag, dflag, eflag, sflag, tflag, vflag, wflag, xflag;
+@@ -219,7 +221,7 @@ openfile(fn)
+ char    *fn;
+ {
+     char    ufn[256];
+-    char    ans[80];
++    int     ans;
+     char    *p, *q, s, *ext;
+     int    procf;
+ 
+@@ -266,10 +268,11 @@ char    *fn;
+     }
+     if(!eflag && procf) procf = typecmp(++ext);
+     if(procf && wflag) {
++        fflush(stdin);
+         printf("extract %s [ny]",filename);
+         fflush(stdout);
+-        gets(ans);
+-        if(*ans != 'y') procf = NULL;
++        ans = fgetc(stdin);
++        if(ans != 'y') procf = 0;
+     }
+     if(procf)
+         /* open the file for writing */
+@@ -448,7 +451,7 @@ unsigned short    rsize;
+                 fprintf(lf, "reclen = %d\n", reclen);
+                 fprintf(lf, "i = %d\n", i);
+                 fprintf(lf, "rsize = %d\n", rsize);
+-#endif    NEWD
++#endif /* NEWD */
+                 fix = reclen;
+                 i += 2;
+                 if (recfmt == FAB_dol_C_VFC) {
+@@ -833,7 +836,7 @@ char    *argv[];
+ #ifdef    NEWD
+     /* close debug file */
+     fclose(lf);
+-#endif    NEWD
++#endif /* NEWD */
+ 
+     /* exit cleanly */
+     exit(0);

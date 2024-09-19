@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2006/09/02 16:38:13 dhowland Exp $
+
+RMD160 (Azureus_2.2.0.2_linux.GTK.tar.bz2) = ab6f2881d520ac9150b5094ed30e7e3472b9296c
+Size (Azureus_2.2.0.2_linux.GTK.tar.bz2) = 5260046 bytes
+SHA1 (patch-aa) = cebc81b63be45ab0934a0c7778c6bc2ace64b190

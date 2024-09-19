@@ -1,0 +1,13 @@
+- Fix this problem when putting in a passphrase for signing email:
+  	"NSRangeException: Range Location + length too great"
+  Not sure if this is a NetBSD-specific problem or if it's fixed in the latest 
+  version of GNUMail's (1.2.0) PGP bundle, but it's worth looking into. May 
+  have something to do with some of the compiler warnings.
+
+- Integrate this package more with GNUMail, i.e. reduce or eliminate Makefile
+  duplication between this package and GNUMail, similar to how packages with
+  add-on plugins/modules such as libao and Apache work.
+
+- Should versioning be based on GNUMail itself or on this specific bundle?  The
+  version of this PGP bundle is 0.7.0 but it's included with the source for
+  GNUMail 1.1.2.  I chose the latter for now....

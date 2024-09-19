@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 14:22:25 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_text_flowed.reg
+lib/php/Horde/Text/Flowed.php
+lib/php/doc/Horde_Text_Flowed/COPYING
+lib/php/test/Horde_Text_Flowed/Horde/Text/Flowed/AllTests.php
+lib/php/test/Horde_Text_Flowed/Horde/Text/Flowed/Autoload.php
+lib/php/test/Horde_Text_Flowed/Horde/Text/Flowed/FlowedTest.php
+lib/php/test/Horde_Text_Flowed/Horde/Text/Flowed/phpunit.xml

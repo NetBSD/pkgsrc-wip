@@ -1,0 +1,5 @@
+LibGRSS is a library for easy management of RSS/Atom/Pie feeds.
+
+Includes methods to fetch, parse and handle XML documents,
+an implementation of PubSubHubBub client,
+an OPML parser and some more utility.

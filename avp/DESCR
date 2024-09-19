@@ -1,0 +1,9 @@
+Unofficial Linux, Mac OS X port of the
+Fox Interactive Rebellion Developments game,
+Aliens vs. Predator Gold.
+
+Please note that only the AvP Gold data works with this release.
+
+All the game data files and directories must be in lower case !
+Either copy the avp executable to the game data directory or
+set the AVP_DATA environment variable to the game data directory.

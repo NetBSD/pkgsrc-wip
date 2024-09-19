@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/11 05:49:07 phonohawk Exp $
+lib/concrete-typerep-${PKGVERSION}/${HASKELL_VERSION}/Data/ConcreteTypeRep.hi
+lib/concrete-typerep-${PKGVERSION}/${HASKELL_VERSION}/Data/ConcreteTypeRep.p_hi
+lib/concrete-typerep-${PKGVERSION}/${HASKELL_VERSION}/HSconcrete-typerep-${PKGVERSION}.o
+lib/concrete-typerep-${PKGVERSION}/${HASKELL_VERSION}/libHSconcrete-typerep-${PKGVERSION}.a
+lib/concrete-typerep-${PKGVERSION}/${HASKELL_VERSION}/libHSconcrete-typerep-${PKGVERSION}_p.a
+lib/concrete-typerep-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/concrete-typerep-${PKGVERSION}/LICENSE

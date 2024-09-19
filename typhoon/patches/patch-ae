@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/06/14 01:28:30 mjasm Exp $
+
+--- src/Makefile.in.orig	1999-10-03 19:28:28.000000000 -0400
++++ src/Makefile.in
+@@ -4,11 +4,10 @@ DEFINES		= -I../include @defs@
+ CC		= @cc@
+ CFLAGS		= @cflags@
+ RANLIB		= @ranlib@
+-PREFIX		= /usr/local
+ DESTLIB		= $(PREFIX)/lib
+ DESTHDR		= $(PREFIX)/include
+ DESTOWN		= root
+-DESTGRP		= local
++DESTGRP		= wheel
+ SHELL		= /bin/sh
+ LIBRARY		= libtyphoon.a
+ LIBHDRS		= ../include/environ.h ../include/typhoon.h

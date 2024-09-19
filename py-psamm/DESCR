@@ -1,0 +1,4 @@
+PSAMM is an open source software that is designed for the curation and analysis
+of metabolic models. It supports model version tracking, model annotation, data
+ integration, data parsing and formatting, consistency checking,
+ automatic gap filling, and model simulations

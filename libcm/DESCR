@@ -1,0 +1,4 @@
+This library provides supporting functions for the metacity compositor.
+To use it, you must have a driver which supports
+GLX_EXT_get_texture_from_pixmap().  If there's a way around this, please let me
+know! Works on i915, not on radeon r300.  Should work on radeon r200.

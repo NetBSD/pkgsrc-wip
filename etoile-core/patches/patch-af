@@ -1,0 +1,15 @@
+--- Frameworks/PopplerKit/bindings/poppler_page.c.orig	2009-03-17 08:18:08.000000000 -0500
++++ Frameworks/PopplerKit/bindings/poppler_page.c	2009-12-02 16:53:04.000000000 -0600
+@@ -19,9 +19,9 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include "poppler_page.h"
+-#include <PDFDoc.h>
+-#include <Catalog.h>
+-#include <Page.h>
++#include <poppler/PDFDoc.h>
++#include <poppler/Catalog.h>
++#include <poppler/Page.h>
+ 
+ #define PDF_DOC(obj) static_cast<PDFDoc*>(obj)
+ #define PAGE(obj) static_cast<Page*>(obj)

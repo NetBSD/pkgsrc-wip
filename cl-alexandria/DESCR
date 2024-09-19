@@ -1,0 +1,10 @@
+Alexandria is a project and a library for Common Lisp systems.
+
+As a project Alexandria's goal is to reduce duplication of effort and improve
+portability of Common Lisp code according to its own idiosyncratic and rather
+conservative aesthetic. What this actually means is open to debate, but each
+project member has a veto on all project activities, so a degree of
+conservativism is inevitable.
+
+As a library Alexandria is one of the means by which the project strives for
+its goals. Alexandria is a collection of portable public domain utilities.

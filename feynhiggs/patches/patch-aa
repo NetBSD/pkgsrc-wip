@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/04/02 22:32:34 jihbed Exp $
+
+--- makefile.in.orig	2011-03-26 18:37:34.000000000 +0100
++++ makefile.in	2011-03-26 18:37:40.000000000 +0100
+@@ -1,8 +1,8 @@
+ FHVERSION = 2.7.3
+ 
+-LIBDIR = $(PREFIX)/lib
+-INCLUDEDIR = $(PREFIX)/include
+-BINDIR = $(PREFIX)/bin
++LIBDIR = $(DESTDIR)$(PREFIX)/lib
++INCLUDEDIR = $(DESTDIR)$(PREFIX)/include
++BINDIR = $(DESTDIR)$(PREFIX)/bin
+ 
+ BLD = build
+ 

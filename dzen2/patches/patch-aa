@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/01/09 17:20:14 thomasklausner Exp $
+
+--- /usr/pkgsrc/wip/dzen.commit/work/dzen2-0.8.5/config.mk	2007-08-18 06:18:50.000000000 +0000
++++ config.mk
+@@ -4,11 +4,10 @@ VERSION = 0.8.5
+ # Customize below to fit your system
+ 
+ # paths
+-PREFIX = /usr/local
+-MANPREFIX = ${PREFIX}/share/man
++MANPREFIX = ${PREFIX}/${PKGMANDDIR}
+ 
+-X11INC = /usr/X11R6/include
+-X11LIB = /usr/X11R6/lib
++X11INC = ${X11BASE}/include
++X11LIB = ${X11BASE}/lib
+ INCS = -I. -I/usr/include -I${X11INC}
+ 
+ # Configure the features you want to be supported
+@@ -19,25 +18,25 @@ INCS = -I. -I/usr/include -I${X11INC}
+ # Comment  : Add # to the beginning of the respective lines
+ 
+ # Option 1: No Xinerama no XPM
+-LIBS = -L/usr/lib -lc -L${X11LIB} -lX11
+-CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
++#LIBS = -lc -lX11
++#CFLAGS += -DVERSION=\"${VERSION}\"
+ 
+ # Option 2: No Xinerama with XPM
+-#LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -lXpm
+-#CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\" -DDZEN_XPM
++#LIBS = -lc -lX11 -lXpm
++#CFLAGS += -DVERSION=\"${VERSION}\" -DDZEN_XPM
+ 
+ # Option 3: With Xinerama no XPM
+-#LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -lXinerama
+-#CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA
++#LIBS = -lc -lX11 -lXinerama
++#CFLAGS += -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA
+ 
+ # Option 4: With Xinerama and XPM
+-#LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -lXinerama -lXpm
+-#CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA -DDZEN_XPM
++LIBS = -lc -lX11 -lXinerama -lXpm
++CFLAGS += -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA -DDZEN_XPM
+ 
+ # END of feature configuration
+ 
+ 
+-LDFLAGS = ${LIBS}
++LDFLAGS += ${LIBS}
+ 
+ # Solaris, uncomment for Solaris
+ #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"

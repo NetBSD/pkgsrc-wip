@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2013/06/09 12:08:39 noud4 Exp $
+
+patches to adopt to python and pkgsrc paths.
+
+--- eggtray/Makefile.in.orig	2005-03-21 17:56:25.000000000 +0000
++++ eggtray/Makefile.in	2013-05-27 08:13:28.000000000 +0000
+@@ -19,7 +19,7 @@
+ 
+ # Compilation stuff
+ CC		= gcc
+-PYTHON_VERSION	= $(shell echo `python -c "import sys; print sys.version[0:3]"`)
+-PYTHON_INCLUDE	= -I/usr/include/python$(PYTHON_VERSION) \
++PYTHON_VERSION	= $(shell echo `python@PYVERSSUFFIX@ -c "import sys; print sys.version[0:3]"`)
++PYTHON_INCLUDE	= -I@PREFIX@/include/python$(PYTHON_VERSION) \
+                   @EGG_CFLAGS@
+ LIBS            = @EGG_LIBS@$(shell pkg-config gtk+-2.0 --libs) \
+@@ -28,12 +28,12 @@
+ PYCHECKER	= /usr/bin/pychecker
+ 
+ # Directories for installation
+-RHNSHARE_DIR    = $(DESTDIR)/$(PREFIX)/usr/share/ups-monitor
++RHNSHARE_DIR    = $(DESTDIR)/$(PREFIX)/share/ups-monitor
+ # all dirs
+ DIRS		= $(BIN_DIR) $(PIXMAP_DIR)
+ 
+ # INSTALL scripts 
+-INSTALL         = install --verbose 
++INSTALL         = install 
+ INSTALL_BIN     = $(INSTALL) -m 755 
+ INSTALL_DIR     = $(INSTALL) -m 755 -d 
+ INSTALL_DATA    = $(INSTALL) -m 644 

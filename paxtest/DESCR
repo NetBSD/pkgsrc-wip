@@ -1,0 +1,19 @@
+When I started the Adamantix project, one of the first things I did
+was to add PaX functionality to the kernel. PaX is a process memory
+protection patch.  Anything that happens outside the kernel on a
+UNIX system happens inside a process. There are many attacks on the
+Internet that try to corrupt the process memory, in order to make
+it do something for which it was not intended. One example of such
+an attack is the so called buffer overflow attack. This kind of
+attack is one of the most popular at this moment.
+
+PaX protects against such attacks. Or so the author claims. When I
+started to add PaX to Adamantix, almost nothing happened. A few
+libraries broke, but that was easy to fix, and that was it. I
+expected many programs to break. So I started to wonder: ``Does
+this patch really do anything?'' Instead of speculating, I decided
+to write a test suite. After some time, the first version of paxtest
+was ready. More functionality was added. With the addition of every
+test, it proved that PaX was working just fine. I decided to publish
+paxtest, because it can be useful for other people to test the
+functionality of the memory protection of their system(s).

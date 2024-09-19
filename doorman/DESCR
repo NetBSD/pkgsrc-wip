@@ -1,0 +1,5 @@
+The doorman is intended to run on systems which have their firewall rules
+turned down tightly enough as to be effectively invisible to the outside
+world.
+
+The doorman adds and removes extra rules in a carefully controlled manner.

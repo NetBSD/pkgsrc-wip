@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.2 2012/04/20 07:24:39 dholland Exp $
+
+- dragonfly support
+
+- ignore result of opal_speexdsp_float test as it is not robust.
+AFAICT in pkgsrc it should always produce "no", but it doesn't always,
+and this leads to build failure later.
+
+
+--- configure.orig	2013-02-20 02:18:59.000000000 +0000
++++ configure
+@@ -5591,7 +5591,7 @@ case "$OSTYPE" in
+           HAVE_RANLIB=yes
+         ;;
+ 
+-    *BSD )
++    *BSD|DragonFly )
+           SHAREDLIBEXT=so
+           SHARED_CFLAGS="-fPIC"
+ 
+@@ -7272,7 +7272,7 @@ $as_echo_n "checking Speex has float... 
+ $as_echo "$opal_speexdsp_float" >&6; }
+ 
+ 
+-          if test $opal_speexdsp_float = yes; then :
++          if false && test $opal_speexdsp_float = yes; then :
+ 
+ $as_echo "#define OPAL_SPEEX_FLOAT_NOISE 1" >>confdefs.h
+ 

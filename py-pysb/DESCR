@@ -1,0 +1,4 @@
+PySB (pronounced "Pie Ess Bee") is a framework for building rule-based
+mathematical models of biochemical systems. It works nicely with scientific
+Python libraries such as NumPy, SciPy and SymPy
+for model simulation and analysis.

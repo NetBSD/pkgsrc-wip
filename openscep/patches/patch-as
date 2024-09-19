@@ -1,0 +1,176 @@
+$NetBSD: patch-as,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
+
+--- openssl/openscepsetup.in.orig	Wed Apr  4 23:36:37 2001
++++ openssl/openscepsetup.in
+@@ -16,40 +16,45 @@
+ 	esac
+ done
+ 
+-openscepdir=OPENSCEPDIR
+-caowner=CAOWNER
+-cagroup=CAGROUP
++openscepdir=@PKG_SYSCONFDIR@
++caowner=@OPENSCEP_USER@
++cagroup=@OPENSCEP_GROUP@
++webgroup=@APACHE_GROUP@
+ 
+-# does the configuration directory exists?
+-if [ ! -d ${openscepdir} ]
+-then
+-	mkdir ${openscepdir}
+-	chmod +t ${openscepdir}
+-	chown ${caowner} ${openscepdir}
+-	chgrp ${cagroup} ${openscepdir}
+-fi
++umask 002
+ 
+-# does the configuration file exists? 
+-if [ ! -r ${openscepdir}/openscep.cnf ]
+-then
+-	echo configuration file ${openscepdir}/openscep.cnf does not exist >&2
+-	if [ -r ${openscepdir}/openscep.cnf.dist ]
+-	then
+-		echo creating default configuration file, please edit...
+-		cp ${openscepdir}/openscep.cnf.dist $openscepdir/openscep.cnf
+-	else
+-		echo probably forgot to \'make install\'
+-		exit 1
+-	fi
+-fi
++@CHOWN@ ${caowner}:${webgroup} ${openscepdir}/openscep.cnf
++@CHMOD@ 440 ${openscepdir}/openscep.cnf
+ 
+-scepconf=BINDIR/scepconf
++scepconf=@PREFIX@/bin/scepconf
+ if [ ! -x ${scepconf} ]
+ then
+ 	echo Installation problem: scepconf binary not found at configured >&2
+ 	echo location ${scepconf}. Cannot continue. >&2
+ 	exit 1
+ fi
++
++case "$1" in
++ldap)
++	@PREFIX@/sbin/createcrl 2>&1 | @GREP@ -v "^crl2ldap"
++	LDAPBASE="$( 
++		${scepconf} ldap ldapbase | \
++		@SED@ -e 's!^"!!' -e 's!"$!!'
++	)"
++	@SED@ 	-e "s|!LDAPBASE!|$LDAPBASE|g" \
++		-e "s|!LDAP_FIRSTATTR!|$(
++			echo $LDAPBASE | @SED@ -e 's/=.*$//'
++			)|g" \
++		-e "s|!LDAP_FIRSTVAL!|$(
++			echo $LDAPBASE | @SED@ -e 's/,.*$//' -e 's/^[^=][^=]*=//'
++			)|g" \
++		< @PREFIX@/share/examples/openscep/openscep.ldif \
++		| ${openscepdir}/ldap-cheatsheet.sh add -a
++	@PREFIX@/sbin/createcrl
++	exit
++	;;
++esac
++
+ openssl=`${scepconf} scepd openssl`
+ if [ ! -x "${openssl}" ]
+ then
+@@ -57,27 +62,28 @@
+ 	echo "configured correctly. Please verify that the openssl" >&2
+ 	echo "variable in the scepd section of the OpenSCEP configuration" >&2
+ 	echo "file ${openscepdir}/openscep.cnf points to the correct" >&2
+-	echo "binary (default /usr/local/ssl/bin/openssl), and run" >&2
++	echo "binary (default @SSLBASE@/bin/openssl), and run" >&2
+ 	echo "openscepsetup again." >&2
+ 	exit 1
+ fi
+ 
+-
+ # generate a random seed file
+-${openssl} rand -rand /etc/passwd:/etc/hosts:/etc/services:/etc/inetd.conf \
++${openssl} rand -rand /dev/urandom \
+ 	-out ${openscepdir}/.rnd 1024
+ 
+ # make sure all the directories exist
+-for d in certs granted pending rejected newcerts revoked
++for d in granted pending rejected newcerts revoked
+ do
+ 	if [ ! -d ${openscepdir}/${d} ]
+ 	then
+-		mkdir ${openscepdir}/${d}
+-		chown ${caowner} ${openscepdir}/${d}
+-		chgrp ${cagroup} ${openscepdir}/${d}
++		@MKDIR@ ${openscepdir}/${d}
++		@CHOWN@ ${caowner}:${cagroup} ${openscepdir}/${d}
+ 	fi
+ done
+ 
++@CHOWN@ ${caowner}:${webgroup} ${openscepdir}/pending
++@CHMOD@ 775 ${openscepdir}/pending
++
+ # if cacert and cakey exist, stop at this point
+ if [ -r ${openscepdir}/cacert.pem -o -r ${openscepdir}/cakey.pem ]
+ then
+@@ -89,17 +95,16 @@
+ 		echo overwriting certificates
+ 	fi
+ fi
+-rm -f ${openscepdir}/serial
++@RM@ -f ${openscepdir}/serial
+ > ${openscepdir}/index.txt
+-chown ${caowner} ${openscepdir}/index.txt
+-chgrp ${cagroup} ${openscepdir}/index.txt
++@CHOWN@ ${caowner}:${cagroup} ${openscepdir}/index.txt
+ 
+-trap "rm -f ${openscepdir}/cacert0.pem ${openscepdir}/careq.pem" 0 1 2 15
++trap "@RM@ -f ${openscepdir}/cacert0.pem ${openscepdir}/careq.pem" 0 1 2 15
+ 
+ # create ca certificate
+ # 1. create a request, due to the option -nodes, the key will not be
+ #    encrypted
+-${openssl} req -new -newkey rsa:1024 					\
++${openssl} req -new -newkey rsa:2048 \
+ 	-config ${openscepdir}/openscep.cnf 				\
+ 	-out ${openscepdir}/careq.pem -keyout ${openscepdir}/cakey.pem 	\
+ 	-nodes
+@@ -115,21 +120,30 @@
+ 	-CAkey ${openscepdir}/cakey.pem -CA ${openscepdir}/cacert0.pem	\
+ 	-CAserial ${openscepdir}/serial -CAcreateserial			\
+ 	-extfile ${openscepdir}/openscep.cnf -extensions v3_ca		\
+-	-days 3652 -out ${openscepdir}/cacert.pem
++	-days @OPENSCEP_CA_EXPIRY@ -out ${openscepdir}/cacert.pem
+ ${openssl} x509 -in ${openscepdir}/cacert.pem 				\
+ 	-out ${openscepdir}/cacert.der -outform DER
+ 
++# 4. deal with the regression in serial number handling introduced      \
++#    in openssl 0.9.7e.  although they could accomplish all their goals \
++#    very easily without changing a single user-visible command line    \
++#    option, they chose to rototil both openssl_x509 and CA.pl to       \
++#    introduce an additional meaningless ritual, and did it all without \
++#    updating the manual.  They're running a real world-class operation \
++#    over there.
++${openssl} x509 -in ${openscepdir}/cacert.pem                           \
++	-noout -next_serial -out ${openscepdir}/serial 2>/dev/null
++
++@RM@ ${openscepdir}/careq.pem ${openscepdir}/cacert0.pem
++@CHOWN@ ${caowner}:${cagroup} ${openscepdir}/serial
++@CHMOD@ 664 ${openscepdir}/serial
++@CHOWN@ ${caowner}:${webgroup} ${openscepdir}/cakey.pem
++@CHMOD@ 440 ${openscepdir}/cakey.pem
++
++# just set the permissions.
++@TOUCH@ ${openscepdir}/crl.pem ${openscepdir}/crl.der
++@CHOWN@ ${caowner}:${cagroup} ${openscepdir}/crl.pem ${openscepdir}/crl.der
+ 
+-# create an empty crl
+-${openssl} ca -config ${openscepdir}/openscep.cnf -gencrl		\
+-	-crldays 10 							\
+-	-cert ${openscepdir}/cacert.pem 				\
+-	-keyfile ${openscepdir}/cakey.pem				\
+-	-out ${openscepdir}/crl.pem
+-${openssl} crl -in ${openscepdir}/crl.pem 				\
+-	-out ${openscepdir}/crl.der -outform DER
+-chown ${caowner} ${openscepdir}/crl.*
+-chgrp ${cagroup} ${openscepdir}/crl.*
++# set up LDAP.  then run @PREFIX@/sbin/createcrl to actually make an empty CRL.
+ 
+-# that's it
+ exit 0

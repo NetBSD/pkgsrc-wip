@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:06 thomasklausner Exp $
+bin/proz
+man/man1/proz.1
+man/man1/prozilla.1
+share/examples/prozilla/prozilla.conf

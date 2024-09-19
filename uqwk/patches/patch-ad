@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2006/09/23 18:23:14 gschwarz Exp $
+
+--- score.c.orig	2006-09-23 17:55:25.000000000 +0200
++++ score.c	2006-09-23 17:55:11.000000000 +0200
+@@ -6,6 +6,7 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
++#include <sys/types.h>
+ #include <regex.h>			/* POSIX regular expressions */
+ #include "uqwk.h"
+ 

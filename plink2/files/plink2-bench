@@ -1,0 +1,50 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       Simple performance test for plink2
+#       
+#   History:
+#   Date        Name        Modification
+#   2019-02-11  J Bacon     Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 trials threads\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 2 ]; then
+    usage
+fi
+
+trials=$1
+threads=$2
+
+rm -f plink2.* testdata*
+
+printf "Generating test data...\n"
+plink2 --dummy 9999 999999 --out testdata
+cat testdata.psam | cut -f 1 | tail -n +2 | sort -R | head -n 6666 > id_subset.txt
+which plink2
+
+trial=1
+while [ $trial -le $trials ]; do
+    printf "\n                          *** Trial $trial ***\n"
+    printf "\n===========================================================\n"
+    printf "Running --keep benchmark..."
+    printf "\n===========================================================\n\n"
+    time plink2 --pfile testdata --keep id_subset.txt --make-pgen
+    
+    printf "\n===========================================================\n"
+    printf "Running KING-robust benchmark..."
+    printf "\n===========================================================\n\n"
+    time plink2 --pfile testdata --make-king
+    trial=$(($trial + 1))
+done

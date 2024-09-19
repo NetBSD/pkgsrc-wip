@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/29 18:09:52 poppnk Exp $
+sbin/hciemu

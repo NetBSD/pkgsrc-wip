@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/01/24 21:42:56 plunky Exp $
+
+--- lkm/lzs.h.orig	2006-01-21 19:15:41.000000000 +0000
++++ lkm/lzs.h
+@@ -0,0 +1,23 @@
++#ifndef DO_LZS
++#define DO_LZS		1	/* by default, include Stac LZS */
++#endif
++ 
++/*
++ * Definitions for Stac LZS Compression
++ */
++#define CI_LZS			17	/* config option for Stac LZS */
++#define CILEN_LZS		5	/* length of config option */
++
++#define LZS_CHECKMODE(p)	((p)[4] & 0x7)
++#define LZS_CHECKMODE_MAX	4
++
++#define LZS_CMODE_NONE		0	/* No Checking */
++#define LZS_CMODE_LCB		1	/* Longitudinal Check Byte */
++#define LZS_CMODE_CRC		2	/* CRC-16 */
++#define LZS_CMODE_SEQ		3	/* Sequence Number */
++#define LZS_CMODE_EXT		4	/* Extended Mode */
++
++#define LZS_HISTORY_MAX		1
++#define LZS_HISTORY_MSB(b)	(((b) >> 8) & 0xff)
++#define LZS_HISTORY_LSB(b)	((b) & 0xff)
++#define LZS_HISTORY(p)		(((p)[2] << 8) | (p)[3])

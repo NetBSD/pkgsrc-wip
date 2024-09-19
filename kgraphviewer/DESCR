@@ -1,0 +1,17 @@
+KGraphViewer is a tool to display graphviz .dot graphs.
+
+It is more generally a KPart able to display any graph data that graphviz can
+handle. This part is commanded through the signals/slots mechanism. It is used
+in an experimental dot graphs editor called kgrapheditor released with in this
+package.
+
+The currently implemented features are:
+- graphviz 2.12 xdot format supported
+- zooming
+- loading of several graphs in tabs;
+- saving of the recent files list;
+- manual reload of files;
+- display of a bird-eye view of the graph;
+- moving of the graph by dragging;
+- graph printing with preview;
+- loading of nearly all graphviz example graphs;

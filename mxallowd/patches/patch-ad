@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.2 2009/01/06 12:41:53 mstapelberg Exp $
+
+--- ./Makefile.in.orig	2009-01-06 11:40:42.000000000 +0100
++++ ./Makefile.in
+@@ -16,11 +16,11 @@ all: mxallowd
+ 
+ install: mxallowd
+ 	$(INSTALL) -m 755 -d $(DESTDIR)/${PREFIX}/sbin/
+-	$(INSTALL) -m 755 -d $(DESTDIR)/${PREFIX}/share/man/man1
+-	$(INSTALL) -m 755 -d $(DESTDIR)/${SYSCONFDIR}
++	$(INSTALL) -m 755 -d $(DESTDIR)/${MANDIR}/man1
++	$(INSTALL) -m 755 -d $(DESTDIR)/${PREFIX}/share/doc/mxallowd/samples
+ 	$(INSTALL) -m 755 mxallowd $(DESTDIR)/${PREFIX}/sbin/mxallowd
+ 	$(INSTALL) -m 644 mxallowd.1 $(DESTDIR)/${MANDIR}/man1/mxallowd.1
+-	$(INSTALL) -m 644 mxallowd.conf $(DESTDIR)/${SYSCONFDIR}/mxallowd.conf
++	$(INSTALL) -m 644 mxallowd.conf $(DESTDIR)/${PREFIX}/share/doc/mxallowd/samples/mxallowd.conf
+ 
+ uninstall:
+ 	rm $(DESTDIR)/${PREFIX}/sbin/mxallowd

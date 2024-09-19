@@ -1,0 +1,7 @@
+$NetBSD$
+
+RMD160 (libnl-1.1.4.tar.gz) = 4d4f0599bc9348dbdb5a5affc960d76fab504a99
+SHA512 (libnl-1.1.4.tar.gz) = 25e26ddcc16540346ea34815ab6ac094177e5cee2eb3d843c4f8b30cd9d83390a3e87cb46046dc3bd9ae4d21f77e57bb3827c2cfc588eb18afe049921f2030b4
+Size (libnl-1.1.4.tar.gz) = 1174974 bytes
+SHA1 (patch-lib_netfilter_ct.c) = 6e7e90048a751eff4f6dd883e813df5c37a477a7
+SHA1 (patch-lib_netfilter_log.c) = 065df630d86b9633c670c6293c99a7fa4b66c71c

@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
+
+--- vmsbackup.1.orig	Mon Sep 12 18:15:28 1988
++++ vmsbackup.1
+@@ -3,8 +3,7 @@
+ vmsbackup \- read a VMS backup tape
+ .SH SYNOPSIS
+ .B vmsbackup
+-.B \-{tx}[cdevw][s setnumber][f tapefile]
+-[ name ... ]
++\-{tx}[cdevw][s setnumber][f tapefile] [name...]
+ .SH DESCRIPTION
+ .I vmsbackup
+ reads a VMS generated backup tape, converting the files

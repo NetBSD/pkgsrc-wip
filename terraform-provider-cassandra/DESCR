@@ -1,0 +1,5 @@
+Terraform provider for managing Apache Cassandra.
+It provides the following features with respect to CQL 3.0.0 spec:
+ - Manage Keyspace(s)
+ - Manage Role(s)
+ - Managing Grants

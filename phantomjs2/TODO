@@ -1,0 +1,81 @@
+o Fix linking phase of jsc and phantomjs (various libraries in the Makefile have
+  the ".la" extension while really they are ".a").
+o Fix build issues when linking phantomjs (NetBSD/amd64 7.99.5 and
+pkgsrc-current with gcc(1)):
+
+ [...]
+ .libs/phantom.o: In function `Phantom::execute()':
+ phantom.cpp:(.text+0x6c4a): undefined reference to `QString::toLocal8Bit() const'
+ .libs/webpage.o: In function `WebPage::openUrl(QString const&, QVariant const&, QMap<QString, QVariant> const&)':
+ webpage.cpp:(.text+0x33f0): undefined reference to `QString::toLatin1() const'
+ webpage.cpp:(.text+0x3926): undefined reference to `QString::toUtf8() const'
+ webpage.cpp:(.text+0x3b59): undefined reference to `QString::toUtf8() const'
+ webpage.cpp:(.text+0x3b6d): undefined reference to `QString::toUtf8() const'
+ webpage.cpp:(.text+0x3cb0): undefined reference to `QString::toLatin1() const'
+ .libs/webpage.o: In function `WebPage::render(QString const&, QMap<QString, QVariant> const&)':
+ webpage.cpp:(.text+0xb6b2): undefined reference to `QString::toLocal8Bit() const'
+ .libs/webserver.o: In function `WebServer::listenOnPort(QString const&, QMap<QString, QVariant> const&)':
+ webserver.cpp:(.text+0x17db): undefined reference to `QString::toLocal8Bit() const'
+ .libs/webserver.o: In function `WebServer::handleRequest(mg_event, mg_connection*, mg_request_info const*)':
+ webserver.cpp:(.text+0x305f): undefined reference to `QString::toLocal8Bit() const'
+ .libs/webserver.o: In function `WebServerResponse::writeHead(int, QMap<QString, QVariant> const&)':
+ webserver.cpp:(.text+0x54b7): undefined reference to `QString::toLocal8Bit() const'
+ webserver.cpp:(.text+0x54e5): undefined reference to `QString::toLocal8Bit() const'
+ .libs/webserver.o: In function `WebServerResponse::write(QVariant const&)':
+ webserver.cpp:(.text+0x5b18): undefined reference to `QString::toUtf8() const'
+ .libs/utils.o: In function `Utils::messageHandler(QtMsgType, QMessageLogContext const&, QString const&)':
+ utils.cpp:(.text+0x7a): undefined reference to `QString::toLocal8Bit() const'
+ utils.cpp:(.text+0xb1): undefined reference to `QString::toLocal8Bit() const'
+ utils.cpp:(.text+0x1a4): undefined reference to `QString::toLocal8Bit() const'
+ utils.cpp:(.text+0x1db): undefined reference to `QString::toLocal8Bit() const'
+ utils.cpp:(.text+0x2fb): undefined reference to `QString::toLocal8Bit() const'
+ .libs/utils.o:utils.cpp:(.text+0x329): more undefined references to `QString::toLocal8Bit() const' follow
+ .libs/networkaccessmanager.o: In function `JsNetworkRequest::setHeader(QString const&, QVariant const&)':
+ networkaccessmanager.cpp:(.text+0x615): undefined reference to `QString::toLatin1() const'
+ .libs/networkaccessmanager.o: In function `JsNetworkRequest::changeUrl(QString const&)':
+ networkaccessmanager.cpp:(.text+0x6fe): undefined reference to `QString::toLatin1() const'
+ .libs/networkaccessmanager.o: In function `NetworkAccessManager::createRequest(QNetworkAccessManager::Operation, QNetworkRequest const&, QIODevice*)':
+ networkaccessmanager.cpp:(.text+0x92fd): undefined reference to `QString::toLatin1() const'
+ .libs/filesystem.o: In function `File::setEncoding(QString const&)':
+ filesystem.cpp:(.text+0x1f0): undefined reference to `QString::toLatin1() const'
+ .libs/filesystem.o: In function `FileSystem::_open(QString const&, QMap<QString, QVariant> const&) const':
+ filesystem.cpp:(.text+0x400b): undefined reference to `QString::toLatin1() const'
+ .libs/terminal.o:terminal.cpp:(.text+0xed): more undefined references to `QString::toLatin1() const' follow
+ .libs/repl.o: In function `REPL::REPL(QWebFrame*, Phantom*)':
+ repl.cpp:(.text+0x1aa): undefined reference to `QString::toLocal8Bit() const'
+ .libs/repl.o: In function `REPL::offerCompletion(char const*, linenoiseCompletions*)':
+ repl.cpp:(.text+0x1124): undefined reference to `QString::toLocal8Bit() const'
+ repl.cpp:(.text+0x1311): undefined reference to `QString::toLocal8Bit() const'
+ .libs/qcommandline.o: In function `QCommandLine::showVersion(bool, int)':
+ qcommandline.cpp:(.text+0xa8b): undefined reference to `QString::toLocal8Bit() const'
+ .libs/qcommandline.o: In function `QCommandLine::showHelp(bool, int)':
+ qcommandline.cpp:(.text+0x2cd0): undefined reference to `QString::toLocal8Bit() const'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(qwebframe.o): In function `QWebFrame::print(QPrinter*, QWebFrame::PrintCallback*) const':
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x139): undefined reference to `QtPrintContext::QtPrintContext(QPainter*, QRect const&, QWebFrameAdapter*)'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x194): undefined reference to `QtPrintContext::pageCount() const'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x273): undefined reference to `QtPrintContext::pageCount() const'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x2b4): undefined reference to `QtPrintContext::graphicsContext() const'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x2f0): undefined reference to `QtPrintContext::graphicsContext() const'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x329): undefined reference to `QtPrintContext::spoolPage(int, float)'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x35e): undefined reference to `QtPrintContext::~QtPrintContext()'
+ qwebframe.cpp:(.text._ZNK9QWebFrame5printEP8QPrinterPNS_13PrintCallbackE+0x424): undefined reference to `QtPrintContext::pageCount() const'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(qwebpage.o): In function `QWebPagePrivate::adapterForWidget(QObject*) const':
+ qwebpage.cpp:(.text._ZNK15QWebPagePrivate16adapterForWidgetEP7QObject+0x39): undefined reference to `QtPluginWidgetAdapter::QtPluginWidgetAdapter()'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(QtFallbackWebPopup.o): In function `WebCore::QtFallbackWebPopup::~QtFallbackWebPopup()':
+ QtFallbackWebPopup.cpp:(.text._ZN7WebCore18QtFallbackWebPopupD2Ev+0x34): undefined reference to `vtable for QWebSelectMethod'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(QtFallbackWebPopup.o): In function `WebCore::QtFallbackWebPopup::activeChanged(int)':
+ QtFallbackWebPopup.cpp:(.text._ZN7WebCore18QtFallbackWebPopup13activeChangedEi+0x9): undefined reference to `QWebSelectMethod::selectItem(int, bool, bool)'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(moc_QtFallbackWebPopup.o): In function `WebCore::QtFallbackWebPopup::qt_metacast(char const*)':
+ moc_QtFallbackWebPopup.cpp:(.text._ZN7WebCore18QtFallbackWebPopup11qt_metacastEPKc+0x3d): undefined reference to `QWebSelectMethod::qt_metacast(char const*)'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(moc_QtFallbackWebPopup.o): In function `WebCore::QtFallbackWebPopup::qt_metacall(QMetaObject::Call, int, void**)':
+ moc_QtFallbackWebPopup.cpp:(.text._ZN7WebCore18QtFallbackWebPopup11qt_metacallEN11QMetaObject4CallEiPPv+0x11): undefined reference to `QWebSelectMethod::qt_metacall(QMetaObject::Call, int, void**)'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(moc_QtFallbackWebPopup.o):(.data.rel.ro._ZTIN7WebCore18QtFallbackWebPopupE[_ZTIN7WebCore18QtFallbackWebPopupE]+0x10): undefined reference to `typeinfo for QWebSelectMethod'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5WebKitWidgets.a(moc_QtFallbackWebPopup.o):(.data.rel.ro._ZN7WebCore18QtFallbackWebPopup16staticMetaObjectE+0x0): undefined reference to `QWebSelectMethod::staticMetaObject'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5Gui.a(qimage_conversions.o): In function `qInitImageConversions()':
+ qimage_conversions.cpp:(.text+0x4563): undefined reference to `convert_RGB888_to_RGB32_ssse3(QImageData*, QImageData const*, QFlags<Qt::ImageConversionFlag>)'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5Gui.a(qjpeghandler.o): In function `QJpegHandler::QJpegHandler()':
+ qjpeghandler.cpp:(.text+0x166a): undefined reference to `qt_convert_rgb888_to_rgb32_ssse3(unsigned int*, unsigned char const*, int)'
+ /usr/pkgsrc/wip/phantomjs/work/phantomjs-2.0.0/src/qt/qtbase/lib/libQt5Gui.a(qdrawhelper.o): In function `qInitDrawhelperAsm()':
+ qdrawhelper.cpp:(.text+0x2f135): undefined reference to `qt_blend_argb32_on_argb32_ssse3(unsigned char*, int, unsigned char const*, int, int, int, int)'
+ Makefile.phantomjs:248: recipe for target '../bin/phantomjs' failed
+ [...]

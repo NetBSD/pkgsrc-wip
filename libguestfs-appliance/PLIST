@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/guestfs/README.fixed
+lib/guestfs/initrd
+lib/guestfs/kernel
+lib/guestfs/root
+lib/guestfs/root.qcow2

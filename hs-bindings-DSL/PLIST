@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/20 03:39:04 phonohawk Exp $
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/Bindings.hi
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/Bindings.p_hi
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/HSbindings-DSL-${PKGVERSION}.o
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/include/bindings.cmacros.h
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/include/bindings.dsl.h
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/libHSbindings-DSL-${PKGVERSION}.a
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/libHSbindings-DSL-${PKGVERSION}_p.a
+lib/bindings-DSL-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/bindings-DSL-${PKGVERSION}/LICENSE

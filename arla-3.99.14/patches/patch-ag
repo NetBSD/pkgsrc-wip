@@ -1,0 +1,38 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/01/13 15:51:48 mreriksson Exp $
+
+--- nnpfs/bsd/nnpfs_vfsops-bsd.c.orig	2006-01-12 00:36:10.000000000 +0100
++++ nnpfs/bsd/nnpfs_vfsops-bsd.c
+@@ -211,7 +211,10 @@ common_fhtovp(struct mount * mp,
+ 
+ /* new style fhtovp */
+ 
+-#ifdef HAVE_STRUCT_VFSOPS_VFS_CHECKEXP
++#if defined(HAVE_STRUCT_VFSOPS_VFS_CHECKEXP) ||\
++( defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 ) /* 3.99.14 */
++/* XXX HAVE_STRUCT_VFSOPS_VFS_CHECKEXP should be set by autoconf on
++	NetBSD post 3.99.14 instead! */
+ int
+ nnpfs_fhtovp(struct mount * mp,
+ 	   struct fid * fhp,
+@@ -488,6 +491,8 @@ nnpfs_fhopen (d_thread_t *proc,
+     struct vnode *vp;
+ #ifdef HAVE_FREEBSD_THREAD
+     struct ucred *cred = proc->td_proc->p_ucred;
++#elif defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++    struct ucred *cred = proc->l_proc->p_ucred;
+ #else
+     struct ucred *cred = proc->p_ucred;
+ #endif
+@@ -559,8 +564,12 @@ nnpfs_fhopen (d_thread_t *proc,
+ #if defined(__DragonFly__)
+     error = falloc(proc->td_proc, &fp, &index);
+ #else
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++    error = falloc(proc->l_proc, &fp, &index);
++#else
+     error = falloc(proc, &fp, &index);
+ #endif
++#endif
+     if (error)
+ 	goto out;
+ 

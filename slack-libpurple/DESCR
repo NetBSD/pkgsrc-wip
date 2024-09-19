@@ -1,0 +1,12 @@
+A Slack protocol plugin for libpurple IM clients.
+
+Here's how slack concepts are mapped to purple:
+
+  * Your "open" channels (on the slack bar) are mapped to the buddy list:
+    joining a channel is equivalent to creating a buddy
+  * Which conversations are open in purple is up to you, and has no effect
+    on slack... (how to deal with activity in open channels with no
+    conversation?)
+  * For bitlbee IRC connections, Slack channels are "chat channels" that
+    can be added to your configuration with
+    "`chat add <account id> #<channel>`"

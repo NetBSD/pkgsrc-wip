@@ -1,0 +1,57 @@
+$NetBSD: patch-mupen64plus-video-z64_projects_unix_Makefile,v 1.1 2013/07/07 12:48:16 othyro Exp $
+
+Add NetBSD support. Fix DL_LIBS and perms for INSTALL_LIB.
+
+--- mupen64plus-video-z64/projects/unix/Makefile.orig	2013-07-05 02:23:14.000000000 +0000
++++ mupen64plus-video-z64/projects/unix/Makefile
+@@ -50,6 +50,12 @@ ifeq ("$(UNAME)","FreeBSD")
+   SO_EXTENSION = so
+   SHARED = -shared
+ endif
++ifeq ("$(UNAME)","NetBSD")
++  OS = NETBSD
++  SO_EXTENSION = so
++  SHARED = -shared
++  $(warning OS type "$(UNAME)" not officially supported.')
++endif
+ ifeq ("$(UNAME)","OpenBSD")
+   OS = FREEBSD
+   SO_EXTENSION = so
+@@ -121,7 +127,7 @@ endif
+ # base CFLAGS, LDLIBS, and LDFLAGS
+ OPTFLAGS ?= -O3 -flto
+ WARNFLAGS ?= -Wall
+-CFLAGS += $(OPTFLAGS) $(WARNFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src
++CFLAGS += $(OPTFLAGS) $(WARNFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
+ CXXFLAGS += -fvisibility-inlines-hidden
+ LDFLAGS += $(SHARED)
+ 
+@@ -168,16 +174,16 @@ ifeq ($(OS), OSX)
+     ifeq ($(ARCH_DETECTED), 64BITS)
+       CFLAGS += -pipe -arch x86_64 -mmacosx-version-min=$(OSX_SDK) -isysroot $(OSX_SYSROOT)/MacOSX$(OSX_SDK).sdk
+       LDFLAGS += -bundle
+-      LDLIBS += -ldl
++      LDLIBS += ${DL_LIBS}
+     else
+       CFLAGS += -pipe -mmmx -msse -fomit-frame-pointer -arch i686 -mmacosx-version-min=$(OSX_SDK) -isysroot $(OSX_SYSROOT)/MacOSX$(OSX_SDK).sdk
+       LDFLAGS += -bundle
+-      LDLIBS += -ldl
++      LDLIBS += ${DL_LIBS}
+     endif
+   endif
+ endif
+ ifeq ($(OS), LINUX)
+-  LDLIBS += -ldl
++  LDLIBS += ${DL_LIBS}
+ endif
+ ifeq ($(OS), FREEBSD)
+   LDLIBS += -lc
+@@ -361,7 +367,7 @@ all: $(TARGET)
+ 
+ install: $(TARGET)
+ 	$(INSTALL) -d "$(DESTDIR)$(PLUGINDIR)"
+-	$(INSTALL) -m 0644 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
++	$(INSTALL) -m 0755 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(SHAREDIR)"
+ 
+ uninstall:

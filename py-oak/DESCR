@@ -1,0 +1,4 @@
+The Oak DNS server is a Domain Name Server written in pure python. It
+implements an authoritative nameserver as well as a recursive nameserver.
+
+It's licensed under the LGPL.

@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.2 2010/03/10 13:12:26 marttikuparinen Exp $
+
+Added DESTDIR support.
+
+--- Makefile.defs.orig	2009-12-21 20:19:38.000000000 +0200
++++ Makefile.defs	2010-03-10 14:34:46.000000000 +0200
+@@ -157,7 +157,7 @@
+ SYSBASE ?= /usr
+ 
+ # dirs 
+-cfg-dir = etc/$(MAIN_NAME)/
++cfg-dir = share/examples/$(MAIN_NAME)/
+ bin-dir = sbin/
+ 
+ ARCH_B = $(shell echo $(ARCH) | sed -e 's/.*64.*/64b/')
+@@ -227,8 +227,6 @@
+ endif
+ 
+  # install location
+-DESTDIR ?= $(LOCALBASE)
+-PREFIX ?= $(DESTDIR)
+ prefix = $(PREFIX)
+ # install path is $(basedir) $(prefix) 
+ # example:
+@@ -236,7 +234,7 @@
+ #  basedir=/tmp
+ #  prefix=/usr/local
+ 
+-BASEDIR ?=
++BASEDIR ?= $(DESTDIR)
+ basedir = $(BASEDIR)
+ # install prefixes for various stuff
+ cfg-prefix = $(basedir)$(prefix)

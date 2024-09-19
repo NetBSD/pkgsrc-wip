@@ -1,0 +1,8 @@
+- Seems to be unable to communicate with libvirtd via socket.
+  (Maybe take a look at systemd scripts for comparison)
+- Lots of --with-X=no, should have options.
+- Some files from PLIST missing on macOS.
+- _PATH_MOUNTED undefined in storage/storage_backend_fs.c with
+  musl-libc.
+- Update (= migrate to meson)
+- Config file list is outdated (missing files on install)

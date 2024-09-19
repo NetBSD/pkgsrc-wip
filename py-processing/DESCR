@@ -1,0 +1,11 @@
+Processing is a Python package which supports the spawning of processes
+using the API of the standard library's threading module. Features include:
+
+ * Objects can  be transferred  between  processes using pipes or
+   multi-producer/multi-consumer queues.
+ * Objects can be shared between processes using a server process or
+   (for simple data) shared memory.
+ * Equivalents  of all the synchronization primitives in threading
+   are available.
+ * A Pool class makes it easy to submit tasks to a pool of worker
+   processes.

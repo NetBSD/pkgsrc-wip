@@ -1,0 +1,16 @@
+$NetBSD$
+
+Was failing without this with GNUmakefile:928: start] Error 1
+
+--- GNUmakefile.orig	2020-03-17 03:19:02.000000000 +0000
++++ GNUmakefile
+@@ -924,8 +924,7 @@ endif
+ 
+ all: duke3d
+ 
+-start:
+-	$(BUILD_STARTED)
++start: duke3d
+ 
+ tools: $(addsuffix $(EXESUFFIX),$(tools_targets)) | start
+ 	@$(call LL,$^)

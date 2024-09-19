@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2013/12/27 03:09:35 makoto Exp $
+
+--- ld/Makefile.in.orig	2006-08-24 21:01:50.000000000 +0200
++++ ld/Makefile.in	2006-08-24 21:02:16.000000000 +0200
+@@ -269,7 +269,7 @@
+ # We put the scripts in the directory $(scriptdir)/ldscripts.
+ # We can't put the scripts in $(datadir) because the SEARCH_DIR
+ # directives need to be different for native and cross linkers.
+-scriptdir = $(tooldir)/lib
++scriptdir = $(prefix)/lib
+ BASEDIR = $(srcdir)/..
+ BFDDIR = $(BASEDIR)/bfd
+ INCDIR = $(BASEDIR)/include

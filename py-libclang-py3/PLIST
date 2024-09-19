@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/clang/__init__.py
+${PYSITELIB}/clang/__init__.pyc
+${PYSITELIB}/clang/__init__.pyo
+${PYSITELIB}/clang/cindex.py
+${PYSITELIB}/clang/cindex.pyc
+${PYSITELIB}/clang/cindex.pyo
+${PYSITELIB}/clang/enumerations.py
+${PYSITELIB}/clang/enumerations.pyc
+${PYSITELIB}/clang/enumerations.pyo
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/top_level.txt

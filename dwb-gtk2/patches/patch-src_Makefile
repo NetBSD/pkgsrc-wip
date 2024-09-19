@@ -1,0 +1,42 @@
+$NetBSD: patch-src_Makefile,v 1.1 2015/05/27 17:59:19 f8l Exp $
+
+Imported from http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/ports/www/dwb/patches/patch-src_Makefile?rev=1.1
+
+--- src/Makefile.orig	2014-03-07 11:39:43.000000000 +0000
++++ src/Makefile
+@@ -26,30 +26,25 @@ OBJ += $(BASEDIR)/$(OBJRC)
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJ) 
+-	@echo $(CC) -o $@
+-	@$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) 
++	$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) 
+ 
+ -include $(OBJ:.o=.d)
+ -include $(DOBJ:.do=.dd)
+ 
+ %.o: %.c %.h config.h dwb.h
+-	@echo $(CC) $<
+-	@$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) 
++	$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) 
+ 
+ debug: $(DTARGET)
+ 
+ deps.d: %.c %.h
+-	@echo "$(CC) -MM $@"
+-	@$(CC) $(CFLAGS) -MM $< -o $@
++	$(CC) $(CFLAGS) -MM $< -o $@
+ 
+ 
+ %.do: %.c %.h config.h
+-	@echo "${CC} $<"
+-	@$(CC) -c -o $@ $< $(DCFLAGS) 
++	$(CC) -c -o $@ $< $(DCFLAGS) 
+ 
+ $(DTARGET): $(DOBJ) ../exar/exar.o ../dwbremote/dwbremote.o
+-	@echo "$(CC) $@"
+-	@$(CC) $(DOBJ) ../exar/exar.o ../dwbremote/dwbremote.o -o $(DTARGET) $(LDFLAGS) 
++	$(CC) $(DOBJ) ../exar/exar.o ../dwbremote/dwbremote.o -o $(DTARGET) $(LDFLAGS) 
+ 
+ dependencies: $(DEPS)
+ 

@@ -1,0 +1,8 @@
+self=mx.example.com
+audit
+clients=100
+delay=1m
+escape-from=1
+immediate
+minfree=10m
+timeout=1h

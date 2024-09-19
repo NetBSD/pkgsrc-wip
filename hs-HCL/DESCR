@@ -1,0 +1,6 @@
+This module provides a set of functions for building simple
+command-line interfaces. It allows interfaces which collect values
+(such as Integers, Dates, or other structured values), build lists of
+values, and use simple menus. It is not intended to build complex
+interfaces with full cursor control. It is oriented towards line-based
+interfaces.

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/jltc2mtc
+bin/jltcdump
+bin/jltcgen
+bin/ltcdump
+bin/ltcgen

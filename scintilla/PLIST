@@ -1,0 +1,13 @@
+@comment $NetBSD$
+include/scintilla/ILexer.h
+include/scintilla/ILoader.h
+include/scintilla/Platform.h
+include/scintilla/SciLexer.h
+include/scintilla/Sci_Position.h
+include/scintilla/Scintilla.h
+include/scintilla/Scintilla.iface
+include/scintilla/ScintillaWidget.h
+lib/liblexilla.a
+lib/liblexilla.so
+lib/libscintilla.a
+lib/libscintilla.so

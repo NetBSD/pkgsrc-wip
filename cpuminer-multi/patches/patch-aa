@@ -1,0 +1,11 @@
+--- configure.ac.orig   2017-01-26 14:27:43.000000000 -0500
++++ configure.ac        2017-11-22 16:11:56.000000000 -0500
+@@ -31,7 +31,7 @@
+ #endif
+ ])
+ 
+-AC_CHECK_DECLS([be32dec, le32dec, be32enc, le32enc, le16dec, le16enc], [], [],
++AC_CHECK_DECLS([be64dec, le64dec, be64enc, le64enc, be32dec, le32dec, be32enc, le32enc, le16dec, le16enc], [], [],
+ [AC_INCLUDES_DEFAULT
+ #ifdef HAVE_SYS_ENDIAN_H
+ #include <sys/endian.h>

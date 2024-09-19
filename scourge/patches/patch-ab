@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+
+--- src/creature.cpp.orig	Thu May  6 21:25:46 2004
++++ src/creature.cpp
+@@ -241,7 +241,11 @@ bool Creature::gotoPosition(Map *map, Si
+   
+   if((int)bestPath.size() > bestPathPos) {
+     // take a step on the bestPath
++#if __GNUC_PREREQ__(2, 96)
+     Location location = bestPath.at(bestPathPos);
++#else
++    Location location = bestPath[bestPathPos];
++#endif
+     // if we can't step there, someone else has moved there ahead of us
+     Uint16 oldDir = dir;
+     //dir = next->getDir();

@@ -1,0 +1,10 @@
+tslib is a cross-platform library that provides access to touchscreen
+devices and the ability to apply filters to their input events.
+
+tslib is used to access touch screen devices, in case the operating
+system doesn't provide driver support. It may instead also only be used
+to optimize the touch user experience by applying mathematical filters
+in any number or order. The libts library is highly configurable
+and portable. tslib includes tools to calibrate, test and use the
+library. It is well suited for embedded devices and used in many
+commercial products. tslib includes documentation on how to use it.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/19 04:06:58 alnsn Exp $
+
+RMD160 (lbn-5.1/lbn.tar.gz) = a9915e0a9115e9be4e5f3b1b5d385bbc9d43906a
+Size (lbn-5.1/lbn.tar.gz) = 4150 bytes
+SHA1 (patch-Makefile) = 60cf4c15cecd2bdea5d8e1963cea68209d176df6

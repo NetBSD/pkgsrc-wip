@@ -1,0 +1,5 @@
+ACQ4 is a python-based platform for experimental neurophysiology.
+It includes support for standard electrophysiology, multiphoton imaging,
+scanning laser photostimulation, and many other experimental techniques. ACQ4 is
+highly modular and extensible, allowing support to be added for new types of
+devices, techniques, user-interface modules, and analyses

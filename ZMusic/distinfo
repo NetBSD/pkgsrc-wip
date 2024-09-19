@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (ZMusic/1.1.4.tar.gz) = ada552bd6698f4bb4ff4a45e4752660a5697cbf7
+SHA512 (ZMusic/1.1.4.tar.gz) = 5188fb095897769514c4a4698fabb5640e7ca86fe0665d4bfe6649a940b00ac02d87decda626be8a848ba6db0a468cc985d74d0fda2d3da8657fee079e0bde73
+Size (ZMusic/1.1.4.tar.gz) = 1809045 bytes
+SHA1 (patch-source_mididevices_music__fluidsynth__mididevice.cpp) = b4f36a9b397d8b5b3aa1da657b262b0450f66c48

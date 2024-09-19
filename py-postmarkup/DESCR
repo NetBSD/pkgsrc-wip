@@ -1,0 +1,3 @@
+Converts BBCode (http://en.wikipedia.org/wiki/BBCode) in to HTML
+and XHTML snippets. Always outputs valid XHTML, even from badly
+nested BBCode

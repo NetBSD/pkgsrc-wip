@@ -1,0 +1,2 @@
+This is source code for an implementation of the Glk library which runs
+in a terminal window, using the curses library for screen control.

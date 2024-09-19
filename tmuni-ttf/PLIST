@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/04 07:01:21 phonohawk Exp $
+lib/X11/fonts/TTF/TibMachUni-${PKGVERSION}.ttf
+share/doc/${PKGNAME}/ReadMe.txt
+share/doc/${PKGNAME}/gpl.txt

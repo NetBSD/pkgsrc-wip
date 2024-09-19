@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- libs/gum/prof/meson.build.orig	2018-03-12 19:53:33.000000000 +0000
++++ libs/gum/prof/meson.build
+@@ -38,6 +38,13 @@ if host_os_family == 'linux'
+   endif
+ endif
+ 
++if host_os_family == 'netbsd'
++  gum_prof_sources += ['gumbusycyclesampler-netbsd.c']
++  if not host_cpu_is_intel
++    gum_prof_sources += ['gumcyclesampler-netbsd.c']
++  endif
++endif
++
+ if host_os_family == 'qnx'
+   gum_prof_sources += [
+     'gumbusycyclesampler-qnx.c',

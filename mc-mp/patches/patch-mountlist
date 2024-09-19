@@ -1,0 +1,27 @@
+$NetBSD: patch-mountlist,v 1.1 2006/02/12 14:07:28 rillig Exp $
+
+--- src/mountlist.c.orig	2003-04-30 12:00:11.000000000 +0200
++++ src/mountlist.c	2006-02-12 14:52:44.000000000 +0100
+@@ -47,6 +47,10 @@
+ #endif
+ #endif
+ 
++#if defined(BSD) && !defined(MOUNTED_GETMNTINFO)
++#define MOUNTED_GETMNTINFO
++#endif
++
+ #ifdef MOUNTED_GETMNTINFO	/* 4.4BSD.  */
+ #include <sys/mount.h>
+ #endif
+@@ -243,7 +247,11 @@ struct mount_entry *read_filesystem_list
+ 
+ #ifdef MOUNTED_GETMNTINFO	/* 4.4BSD.  */
+     {
++#ifdef HAVE_STATVFS
++	struct statvfs *fsp;
++#else
+ 	struct statfs *fsp;
++#endif
+ 	int entries;
+ 
+ 	entries = getmntinfo (&fsp, MNT_NOWAIT);

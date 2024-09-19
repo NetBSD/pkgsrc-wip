@@ -1,0 +1,9 @@
+This is freecell, a console (ncurses) version of the popular solitaire
+game.
+
+Modern freecell was invented by Paul Alfille in 1978.
+
+This implementation of freecell was written from scratch by Linus Akesson
+<linus@linusakesson.net> in 2007.
+
+See also http://en.wikipedia.org/wiki/Freecell

@@ -1,0 +1,5 @@
+Package and build manager for D applications and libraries.
+
+ - Simple package and build description not getting in your way
+ - Integrated with Git, avoiding maintenance tasks such as incrementing version
+ numbers or uploading new project releases

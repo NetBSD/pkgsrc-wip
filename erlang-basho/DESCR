@@ -1,0 +1,4 @@
+This package holds the Erlang programming language as forked by
+Basho. Its main purpose is to be used to build the Riak datastore
+by Basho, improving on performance, security, stability and
+scalability aspects of stock Erlang.

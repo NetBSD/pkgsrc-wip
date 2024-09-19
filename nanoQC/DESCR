@@ -1,0 +1,23 @@
+Quality control tools for long read sequencing data aiming to
+replicate some of the plots made by fastQC. This is an immature tool
+and I welcome all contributions.
+
+Creates dynamic plots using bokeh.  For an example see
+http://decoster.xyz/wouter/.
+
+nanoQC [-h] [-v] [-o OUTDIR] fastq
+
+positional arguments:
+  fastq                 Reads data in fastq.gz format.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         Print version and exit.
+  -o, --outdir OUTDIR   Specify directory in which output has to be created.
+  -l, --minlen int      Minimum length of reads to be included in the plots
+                        This also controls the length plotted in the graphs
+                        from the beginning and end of reads
+			(length plotted = minlen / 2)
+
+If you use this tool, please consider citing our publication:
+https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty149/4934939.

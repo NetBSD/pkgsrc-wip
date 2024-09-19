@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/06 21:34:58 thomasklausner Exp $
+
+RMD160 (svnup-1.05.tar.xz) = 99d2edf5831e8b3c45151cacdad318eaa3daac76
+Size (svnup-1.05.tar.xz) = 18984 bytes
+SHA1 (patch-Makefile) = c88b9e21cd3852602c14a2fc45c68f7d6c6874c8

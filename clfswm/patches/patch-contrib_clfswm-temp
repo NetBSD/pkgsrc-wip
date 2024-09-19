@@ -1,0 +1,17 @@
+$NetBSD: patch-contrib_clfswm-temp,v 1.1.1.1 2011/12/18 18:09:04 dukzcry Exp $
+
+The idea of doing temporary linking set using clisp-link given
+by Dirk Sondermann and was posted under "Building with CLISP"
+topic in Stumpwm-devel mailing list. 
+--- contrib/clfswm.orig	2011-12-11 20:43:40.402643000 +0400
++++ contrib/clfswm	2011-12-11 20:44:59.063272000 +0400
+@@ -67,6 +67,9 @@ die() {
+ 
+ build_clisp ()
+ {
++	lisp_core="clisp-core"
++	lisp_program="$lisp -K ${PWD}/$lisp_core"
++	MAKE=: with_dynamic_modules=no ${lisp}-link add "`$lisp_program -b`/base" $lisp_core "`$lisp_program -b`/clx/new-clx"
+     $lisp_bin $lisp_opt -m 8MB -E ISO-8859-1 -q -i "$asdf_path"/asdf.lisp -x "(load \"$clfswm_asd_path/clfswm.asd\")
+                 (asdf:oos 'asdf:load-op :clfswm) \
+        		(EXT:SAVEINITMEM \"$dump_image\" :INIT-FUNCTION (lambda () (clfswm:main) (quit)) :EXECUTABLE t :norc t)"

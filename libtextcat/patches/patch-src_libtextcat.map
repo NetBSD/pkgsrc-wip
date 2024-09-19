@@ -1,0 +1,43 @@
+--- /dev/null	2011-02-04 21:03:13 +0000
++++ src/libtextcat.map	2011-02-04 20:49:38 +0000
+@@ -0,0 +1,40 @@
++{
++	global: 
++		charcopy
++		issame
++		nextcharstart
++		utfstrlen
++		wgmempool_Done
++		wgmempool_Init
++		wgmempool_Reset
++		wgmempool_alloc
++		wgmempool_getline
++		wgmempool_strdup
++		special_textcat_Init
++		textcat_Classify
++		textcat_Done
++		textcat_Init
++		textcat_Version
++		fp_Compare
++		fp_Create
++		fp_Debug
++		fp_Done
++		fp_Init
++		fp_Name
++		fp_Print
++		fp_Read
++		heapextract
++		wg_calloc
++		wg_free
++		wg_getline
++		wg_malloc
++		wg_split
++		wg_strdup
++		wg_strgmov
++		wg_trim
++		wg_zalloc
++		wgmem_error
++		
++	local:
++		*;
++}

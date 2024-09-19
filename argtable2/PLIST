@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.3 2012/09/02 21:51:46 jihbed Exp $
+include/argtable2.h
+lib/libargtable2.a
+man/man3/argtable.3
+man/man3/argtable2.3
+share/doc/argtable/arg_int.gif
+share/doc/argtable/argtable2-advanced.html
+share/doc/argtable/argtable2-advanced.pdf
+share/doc/argtable/argtable2-advanced.ps
+share/doc/argtable/argtable2-intro.html
+share/doc/argtable/argtable2-intro.pdf
+share/doc/argtable/argtable2-intro.ps
+share/doc/argtable/argtable2.html
+share/doc/argtable/argtable2.pdf
+share/doc/argtable/argtable2.ps
+share/doc/argtable/argxxx.gif

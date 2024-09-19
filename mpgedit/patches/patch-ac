@@ -1,0 +1,61 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+
+--- makefile.linux.orig	Thu Sep 11 08:14:11 2003
++++ makefile.linux
+@@ -1,14 +1,14 @@
+-CFLAGS = -fPIC -Dlint -DSTDC_HEADERS -Wall $(CDEBUGFLAGS) $(CFLAGS1)
++CFLAGS += -fPIC -Dlint -DSTDC_HEADERS -Wall $(CDEBUGFLAGS) $(CFLAGS1)
+ 
+-CDEBUGFLAGS = -O3 
++CDEBUGFLAGS = 
+ CFLAGS1     = -Iinclude -Ilibmp3lame -Impglib
+ 
+ # Enable these for debugging and Electric Fence memory debugging
+ #CDEBUGFLAGS = -g 
+ #EFENCE      = -lefence
+-LIBS        = -L. -lmpgeditlib
++LIBS        = -Wl,-R${PREFIX}/lib -L. -lmpgeditlib
+ 
+-MPEGDECODER = -Lmpglib -lmpglib_mpgedit
++MPEGDECODER = -Wl,-R${PREFIX}/lib -Lmpglib -lmpglib_mpgedit
+ 
+ all: mkbuildnum libmpgeditlib.a libmpgedit.so subdirs mpgedit \
+      mpgedit_nocurses mp3_time \
+@@ -60,13 +60,13 @@ mpgedit_buildnum.h:
+ 	./mkbuildnum Linux > mpgedit_buildnum.h
+ 
+ mpgedit: $(mp3_header_objs) $(curses_obj) libmpgedit.so
+-	$(CC) -o $@ $(mp3_header_objs) $(curses_obj) $(LIBS) -lncurses -ldl $(EFENCE)
++	$(CC) -o $@ $(mp3_header_objs) $(curses_obj) $(LIBS) -lncurses $(EFENCE)
+ 
+ dlopen: dlopen.o
+-	$(CC) -o $@ dlopen.o -ldl 
++	$(CC) -o $@ dlopen.o
+ 
+ mpgedit_nocurses: $(mp3_header_objs)   $(nocurses_obj)
+-	$(CC) -o $@ $(mp3_header_objs) -L. -lmpgeditlib $(nocurses_obj) -ldl
++	$(CC) -o $@ $(mp3_header_objs) -L. -lmpgeditlib $(nocurses_obj)
+ 
+ tstheader: tstheader.o header.o
+ 	$(CC) -o $@ tstheader.o header.o
+@@ -93,17 +93,17 @@ decoder_public.o: decoder.c
+ 	$(CC) $(CFLAGS) -D_NO_STATIC -c decoder.c -o decoder_public.o
+ 
+ play: play.o
+-	$(CC) -o $@ play.o -L. -lmpgeditlib  -ldl
++	$(CC) -o $@ play.o -L. -lmpgeditlib 
+ 
+ #zzz
+ simple_play: simple_play.o  libmpgeditlib.a
+-	$(CC) -o $@ simple_play.o -L. -lmpgeditlib  -ldl
++	$(CC) -o $@ simple_play.o -L. -lmpgeditlib
+ 
+ 
+ TSIZE_OBJS = tsize.o playif.o editif.o plugin_unix.o decoder.o mpegfio.o \
+              header.o xing_header.o mpegindx.o mp3time.o
+ tsize: $(TSIZE_OBJS)
+-	$(CC) -o $@ $(TSIZE_OBJS) -ldl
++	$(CC) -o $@ $(TSIZE_OBJS)
+ 
+ libdecoder_mpg123.so: decoder_mpg123.o audio.o
+ 	$(CC) -fPIC -rdynamic -shared -o libdecoder_mpg123.so decoder_mpg123.o audio.o $(MPEGDECODER)

@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.2 2010/07/06 07:07:04 emil_s Exp $
+
+--- Makefile.orig	2008-07-28 16:16:23.000000000 +0000
++++ Makefile
+@@ -87,8 +87,8 @@ install-share:
+ 	@echo " --- Installing global data --- "
+ 	@mkdir -p ${DESTDIR}${prefix}/share/pal;
+ 	install -m 0644 -o root ../share/*.pal ${DESTDIR}${prefix}/share/pal
+-	@mkdir -p ${DESTDIR}/etc;
+-	install -m 0644 -o root ../pal.conf ${DESTDIR}/etc/
++	@mkdir -p ${DESTDIR}/@EGDIR@;
++	install -m 0644 -o root ../pal.conf ${DESTDIR}/@EGDIR@
+ 	@echo
+ 
+ # "install" will install the files needed by pal and also check to see
+@@ -111,9 +111,9 @@ install: install-no-rm
+ install-man:
+ 	@echo " --- Installing man page --- "
+ 	cd ../; sed 's/PAL_VERSION/$(PAL_VERSION)/' pal.1.template | gzip -9 > pal.1.gz
+-	@mkdir -p ${DESTDIR}${prefix}/share/man/man1/
+-	install -m 0644 -o root ../pal.1.gz ${DESTDIR}${prefix}/share/man/man1/
+-	install -m 0644 -o root convert/vcard2pal.1 ${DESTDIR}${prefix}/share/man/man1/
++	@mkdir -p ${DESTDIR}${prefix}/man/man1/
++	install -m 0644 -o root ../pal.1.gz ${DESTDIR}${prefix}/man/man1/
++	install -m 0644 -o root convert/vcard2pal.1 ${DESTDIR}${prefix}/man/man1/
+ 	rm ../pal.1.gz
+ 	@echo
+ 

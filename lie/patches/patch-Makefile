@@ -1,0 +1,27 @@
+$NetBSD$
+
+--- Makefile.orig	2000-04-07 07:46:28.000000000 +0000
++++ Makefile
+@@ -1,11 +1,11 @@
+ srcdir     :=$(shell pwd)
+ 
+-CFLAGS= -O
++#CFLAGS= -O
+ fixed-flags = -I$(srcdir) -I$(srcdir)/box
+ all-C-flags:= -ansi $(fixed-flags) $(CFLAGS)
+ non-ansi-flags :=  $(fixed-flags) $(CFLAGS)
+ 
+-CC = gcc # some compiler for ANSI/ISO C
++#CC = gcc # some compiler for ANSI/ISO C
+ 
+ # These settings should also be used in subdirectories:
+ export CC all-C-flags fixed-flags CFLAGS
+@@ -71,7 +71,7 @@ lexer.o: parser.h
+ # Binding to the GNU readline library is achieved by -Dpreprocessor below
+ 
+ getl.o:	getl.c
+-	$(CC) -c $(CPPFLAGS) -Dpreprocessor $(all-C-flags) $<
++	$(CC) -c $(CPPFLAGS) $(all-C-flags) $<
+ gapgetl.o: getl.c
+ 	$(CC) -c $(CPPFLAGS) $(all-C-flags) -o gapgetl.o $<
+ 

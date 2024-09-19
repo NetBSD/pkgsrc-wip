@@ -1,0 +1,13 @@
+Introduction
+------------
+LibHTTPD can be used to add basic web server capabilities to an application
+or embedded device. The library handles both static and dynamically generated
+content, has very low overheads, and provides many features to simplify the
+creation of web based application interfaces.
+
+License
+-------
+Available under our Dual License scheme (GPL for Open Source users and a
+Developer license for commercial applications). The Developer license is a
+royalty free license allowing you to incorporate web server functionality in
+your product for a low, fixed price.

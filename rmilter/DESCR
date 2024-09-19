@@ -1,0 +1,9 @@
+Rmilter is used to integrate rspamd and milter compatible MTA,
+for example postfix or sendmail. Rmilter can also do other useful stuff:
+  Clamav scanning (via unix or tcp socket).
+  Rspamd scanning
+  Greylisting with redis upstream
+  Ratelimit with redis upstream
+  Auto-whitelisting (internal and via redis upstream)
+  Replies check (whitelisting replies to sent messages)
+  Passing messages and/or their headers to beanstalk servers

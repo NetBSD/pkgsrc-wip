@@ -1,0 +1,6 @@
+This library is a partial implementation of the AT&T/Apple AppleTalk
+Library Interface.  The ALI was designed as the standard AppleTalk API
+for Unix System V Release 4.
+
+This library is designed for use with Netatalk, a Unix AppleTalk
+implementation from the University of Michigan.

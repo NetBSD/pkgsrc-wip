@@ -1,0 +1,25 @@
+$NetBSD$
+
+--- Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ Makefile
+@@ -11,7 +11,8 @@ else
+ 	DIRS = include genlib insts src
+ endif
+ 
+-all:	install_dirs
++all:
++	@if test ! -d $(BLIBDIR); then mkdir $(BLIBDIR); fi;
+ 	@echo "making all ..."
+ 	@for DIR in $(DIRS); \
+ 	do \
+@@ -105,8 +106,8 @@ standalone_install::
+ 	@echo "standalone_install done."; echo ""
+ 
+ install_dirs::
+-	@if test ! -d $(LIBDIR); then mkdir $(LIBDIR); fi;
+-	@if test ! -d $(LIBDESTDIR); then mkdir $(LIBDESTDIR); fi;
++	@if test ! -d $(DESTDIR)/$(BINDIR); then mkdir -p $(DESTDIR)/$(BINDIR); fi;
++	@if test ! -d $(DESTDIR)/$(LIBDIR); then mkdir -p $(DESTDIR)/$(LIBDIR); fi;
+ 
+ ###########################################################  make uninstall  ###
+ 

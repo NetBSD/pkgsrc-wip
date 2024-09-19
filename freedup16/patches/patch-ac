@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/01/08 13:25:19 draga Exp $
+
+--- Makefile.orig	2011-02-04 07:22:15.000000000 +0000
++++ Makefile
+@@ -35,7 +35,7 @@ CFLAGS=-g3 -Wall -pedantic -D_LARGEFILE_
+ # Suggested values are "/usr/local/bin" or "/usr/bin".
+ #
+ INSTALL = install
+-INSTALLDIR = $(PRE)/usr/bin
++INSTALLDIR = $(DESTDIR)/$(BIN_DIR)
+ INSTBINMODE = 755
+ INSTDOCMODE = 755
+ INSTALLOWN = root
+@@ -45,7 +45,8 @@ INSTALLGRP = root
+ # MANPAGEDIR indicates directory where the fdupes man page is to be
+ # installed. Suggested values are "/usr/local/man" or "/usr/man".
+ #
+-MANPAGEDIR = $(PRE)/usr/share/man
++MANPAGEDIR = $(DESTDIR)/$(MAN_DIR)
++
+ 
+ #
+ # VERSION determines the program's version number.
+@@ -64,12 +65,12 @@ TARFILES= $(MAKFILES) demo $(SRCFILES) R
+ HTMLFILES=intro.html syntax.html download.html process.html \
+ 	  examples.html hint.html questions.html offer.html
+ DOCFILES= freedup.css index.html foot.html head.html $(HTMLFILES)
+-OBJFILES= freedup.o config.o sha1.o mp3.o mp4.o mpc.o jpg.o my.o ogg.o auto.o web.o socket.o 
++OBJFILES= freedup.o config.o sha1.o mp3.o mp4.o mpc.o jpg.o my.o ogg.o auto.o
+ 
+ #
+ # ALL that needs/should be done
+ #
+-all:	freedup test
++all:	freedup symharden
+ 
+ tags:	$(SRCFILES)
+ 	ctags $(SRCFILES)

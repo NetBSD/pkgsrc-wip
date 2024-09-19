@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/slurm/jobacct_gather_cgroup.la
+lib/slurm/proctrack_cgroup.la
+lib/slurm/switch_cray_aries.la
+lib/slurm/task_affinity.la
+lib/slurm/task_cgroup.la

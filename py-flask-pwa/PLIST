@@ -1,0 +1,26 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flask_pwa/__init__.py
+${PYSITELIB}/flask_pwa/__init__.pyc
+${PYSITELIB}/flask_pwa/__init__.pyo
+${PYSITELIB}/flask_pwa/__version__.py
+${PYSITELIB}/flask_pwa/__version__.pyc
+${PYSITELIB}/flask_pwa/__version__.pyo
+${PYSITELIB}/flask_pwa/static/images/apple-icon-180x180.png
+${PYSITELIB}/flask_pwa/static/images/favicon.ico
+${PYSITELIB}/flask_pwa/static/images/icons/icon-128x128.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-144x144.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-152x152.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-192x192.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-384x384.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-512x512.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-72x72.png
+${PYSITELIB}/flask_pwa/static/images/icons/icon-96x96.png
+${PYSITELIB}/flask_pwa/static/js/sw.js
+${PYSITELIB}/flask_pwa/static/manifest.json
+${PYSITELIB}/flask_pwa/templates/pwa/base.html
+${PYSITELIB}/flask_pwa/templates/pwa/offline.html

@@ -1,0 +1,4 @@
+This is a pure Python implementation of the systemd
+sd_notify protocol. This protocol can be used to inform
+systemd about service start-up completion, watchdog
+events, and other service status changes

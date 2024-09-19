@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/03 17:59:18 jihbed Exp $
+${PYSITELIB}/parameters/__init__.py
+${PYSITELIB}/parameters/__init__.pyc
+${PYSITELIB}/parameters/__init__.pyo
+${PYSITELIB}/parameters/export.py
+${PYSITELIB}/parameters/export.pyc
+${PYSITELIB}/parameters/export.pyo
+${PYSITELIB}/parameters/random.py
+${PYSITELIB}/parameters/random.pyc
+${PYSITELIB}/parameters/random.pyo
+${PYSITELIB}/parameters/validators.py
+${PYSITELIB}/parameters/validators.pyc
+${PYSITELIB}/parameters/validators.pyo

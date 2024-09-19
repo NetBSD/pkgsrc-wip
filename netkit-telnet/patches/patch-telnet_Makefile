@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- telnet/Makefile.orig	1999-08-01 05:06:37.000000000 +0000
++++ telnet/Makefile
+@@ -22,6 +22,8 @@ depend:
+ 	$(CXX) $(CXXFLAGS) -MM $(SRCS) >depend.mk
+ 
+ install: telnet
++	install -d $(INSTALLROOT)$(BINDIR)
++	install -d $(INSTALLROOT)$(MANDIR)/man1
+ 	install -s -m$(BINMODE) telnet $(INSTALLROOT)$(BINDIR)
+ 	install -m$(MANMODE) telnet.1 $(INSTALLROOT)$(MANDIR)/man1
+ 

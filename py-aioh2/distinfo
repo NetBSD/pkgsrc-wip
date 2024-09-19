@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (aioh2-0.2.2.tar.gz) = 86ffaef78bdd140420f040a4c2d1f1951f29def5
+SHA512 (aioh2-0.2.2.tar.gz) = a9a7c1fdbf6def7840ec928adbe7926990c763db5efaa28d3b6809d8b340eccbbaf4b98e3c738085abb8491b7c7a0d1185ca4feefaca4c95964ffdacb4d91fc8
+Size (aioh2-0.2.2.tar.gz) = 24585 bytes
+SHA1 (patch-setup.py) = b115e9e49b7c4162242eace49374add709f7b930

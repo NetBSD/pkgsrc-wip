@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 23:15:38 jihbed Exp $
+bin/lbt
+bin/lbt2dot
+share/doc/lbt/index.html
+share/doc/lbt/notgp0-opt.png
+share/doc/lbt/notgp0.png

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/20 20:19:14 jeremy-c-reed Exp $
+
+--- interp.c.orig	Mon Nov  6 18:17:26 1995
++++ interp.c
+@@ -516,7 +516,7 @@ int mo, day, yr;
+     mdays[1] = 28 + (yr%4 == 0);
+ 
+     if (mo < 1 || mo > 12 || day < 1 || day > mdays[--mo] ||
+-		yr > 1999 || yr < 1970) {
++		yr > 2099 || yr < 1970) {
+ 	scerror("@dts: invalid argument");
+ 	cellerror = CELLERROR;
+ 	return(0.0);

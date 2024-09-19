@@ -1,0 +1,5 @@
+The documentation of System.Environment.getProgName says that
+"However, this is hard-to-impossible to implement on some non-Unix
+OSes, so instead, for maximum portability, we just return the leafname
+of the program as invoked." This library tries to provide the missing
+path.

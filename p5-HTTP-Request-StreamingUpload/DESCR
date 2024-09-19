@@ -1,0 +1,5 @@
+HTTP::Request::StreamingUpload is streaming upload wrapper for
+HTTP::Request. It could be alike when $DYNAMIC_FILE_UPLOAD of
+HTTP::Request::Common was used. However, it is works only for POST
+method with form-data. HTTP::Request::StreamingUpload works on the
+all HTTP methods.

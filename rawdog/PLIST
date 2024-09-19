@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/rawdog
+${PYSITELIB}/rawdoglib/__init__.py
+${PYSITELIB}/rawdoglib/__init__.pyc
+${PYSITELIB}/rawdoglib/__init__.pyo
+${PYSITELIB}/rawdoglib/feedscanner.py
+${PYSITELIB}/rawdoglib/feedscanner.pyc
+${PYSITELIB}/rawdoglib/feedscanner.pyo
+${PYSITELIB}/rawdoglib/persister.py
+${PYSITELIB}/rawdoglib/persister.pyc
+${PYSITELIB}/rawdoglib/persister.pyo
+${PYSITELIB}/rawdoglib/plugins.py
+${PYSITELIB}/rawdoglib/plugins.pyc
+${PYSITELIB}/rawdoglib/plugins.pyo
+${PYSITELIB}/rawdoglib/rawdog.py
+${PYSITELIB}/rawdoglib/rawdog.pyc
+${PYSITELIB}/rawdoglib/rawdog.pyo
+man/man1/rawdog.1
+share/examples/rawdog/config
+share/examples/rawdog/style.css

@@ -1,0 +1,4 @@
+tortunnel is a partial Onion Proxy implementation that's designed to build
+single-hop circuits through TOR exit nodes. This is useful for instances
+where you might want some very low level of anonymity and don't want to deal
+with the performance implications of using TOR's full three-hop circuits.

@@ -1,0 +1,4 @@
+should this install the tests files too?
+
+for some reason pxspread is linked to libX11 and I don't
+think it is supposed to.

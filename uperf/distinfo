@@ -1,0 +1,9 @@
+$NetBSD$
+
+RMD160 (uperf-1.0.6.tar.gz) = d21e6370555ea6f833ef4ee79fd95c41b6007cf3
+SHA512 (uperf-1.0.6.tar.gz) = 2fa36e4af17d7f8fd947aac940fc8ba47a1a92eeccabd85d21871e98950736854c9bd35593eaa82ae75e13d0461cdafd6550bf7db83b4599c1ccc3e93dd01a6e
+Size (uperf-1.0.6.tar.gz) = 222351 bytes
+SHA1 (patch-configure.ac) = c40c50a96ce98bf8dad54b3375fae04d03b8f174
+SHA1 (patch-src_sctp.c) = 0657cd93c8784e1fb7d70f865d5a05db579f88c8
+SHA1 (patch-src_sendfilev.c) = 96f3b232c37fc28565ee418fad0c9caa13edef29
+SHA1 (patch-src_ssl.c) = 47e84be348ded53c1154eee21b5e6b0fa4c9a278

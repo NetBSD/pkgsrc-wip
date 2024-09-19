@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2009/09/13 18:25:06 cheusov Exp $
+
+--- src/Makefile.am.orig	2007-11-07 09:55:24.000000000 +0200
++++ src/Makefile.am
+@@ -100,7 +100,7 @@ edict_LDADD = $(STARDICT_LIBS)
+ edict_SOURCES = edict.cpp
+ 
+ dsl2dict_LDFLAGS =
+-dsl2dict_LDADD = $(STARDICT_LIBS) $(DSL2DICT_LIBS)
++dsl2dict_LDADD = $(STARDICT_LIBS) $(DSL2DICT_LIBS) $(LIBOBJS)
+ dsl2dict_SOURCES = dsl2dict.c
+ 
+ duden_LDFLAGS =

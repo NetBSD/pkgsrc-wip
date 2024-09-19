@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/downhill/__init__.py
+${PYSITELIB}/downhill/__init__.pyc
+${PYSITELIB}/downhill/__init__.pyo
+${PYSITELIB}/downhill/adaptive.py
+${PYSITELIB}/downhill/adaptive.pyc
+${PYSITELIB}/downhill/adaptive.pyo
+${PYSITELIB}/downhill/base.py
+${PYSITELIB}/downhill/base.pyc
+${PYSITELIB}/downhill/base.pyo
+${PYSITELIB}/downhill/dataset.py
+${PYSITELIB}/downhill/dataset.pyc
+${PYSITELIB}/downhill/dataset.pyo
+${PYSITELIB}/downhill/first_order.py
+${PYSITELIB}/downhill/first_order.pyc
+${PYSITELIB}/downhill/first_order.pyo
+${PYSITELIB}/downhill/util.py
+${PYSITELIB}/downhill/util.pyc
+${PYSITELIB}/downhill/util.pyo

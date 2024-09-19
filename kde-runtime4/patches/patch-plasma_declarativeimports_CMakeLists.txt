@@ -1,0 +1,12 @@
+$NetBSD$
+
+Don't link to kactivities
+
+--- plasma/declarativeimports/CMakeLists.txt.orig	2017-10-01 01:02:55.000000000 +0000
++++ plasma/declarativeimports/CMakeLists.txt
+@@ -6,5 +6,4 @@ add_subdirectory(graphicswidgets)
+ add_subdirectory(krunnermodel)
+ add_subdirectory(qtextracomponents)
+ add_subdirectory(plasmacomponents)
+-add_subdirectory(plasmaextracomponents)
+ add_subdirectory(locale)

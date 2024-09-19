@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/03 20:11:53 poppnk Exp $
+--- vm/locks.c.orig	2004-03-03 19:00:42.000000000 +0000
++++ vm/locks.c	2004-03-03 19:01:02.000000000 +0000
+@@ -762,7 +762,7 @@
+ 
+   sys_mutex_lock(&threadIdMutex);
+   // First try the bottom bits of the supplied pthread
+-  threadId = hint & THREAD_ID_MAX;
++  threadId = ((int)hint & (int)THREAD_ID_MAX);
+   if ((threadIdBitmap[threadId >> 5] & (1 << (threadId & 0x1f))) == 0) {
+     // Set the bit and return
+     threadIdBitmap[threadId >> 5] |= (1 << (threadId & 0x1f));

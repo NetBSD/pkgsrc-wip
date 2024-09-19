@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/17 09:07:27 jgoamakf Exp $
+lib/gauche/site/0.8.6/${MACHINE_GNU_PLATFORM}/dbd_pg.so
+share/gauche/site/lib/.packages/Gauche-dbd-pg.gpd
+share/gauche/site/lib/dbd/pg.scm

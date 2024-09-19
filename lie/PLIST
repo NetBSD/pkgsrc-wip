@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/lie
+lib/lie/INFO.0
+lib/lie/INFO.1
+lib/lie/INFO.2
+lib/lie/INFO.3
+lib/lie/INFO.4
+lib/lie/INFO.ind
+lib/lie/LEARN.ind

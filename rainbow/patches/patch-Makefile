@@ -1,0 +1,41 @@
+$NetBSD$
+
+# Respect env, eliminate gmake dep
+
+--- Makefile.orig	2015-07-27 18:28:54.000000000 +0000
++++ Makefile
+@@ -1,9 +1,12 @@
+-CC=gcc
+-CFLAGS= -W -O2 -Wall -Wno-self-assign -Wno-unused-function
++CC?=gcc
++CFLAGS?= -W -O2 -Wall -Wno-self-assign -Wno-unused-function
+ DFLAGS= -D_FILE_OFFSET_BITS=64
+ GLIBS=-lm
+ GENERIC_SRC= string.h bitvec.h file_reader.h hashset.h sort.h list.h dna.h heap.h stdaln.h vector.h
+ 
++RAINBOW_OBJS=	main.o  divide.o file_reader.o asm_R2.o mergectg.o cluster.o
++RBASM_OBJS=	asm_R2.o rbasm_main.o file_reader.o
++
+ .SUFFIXES:.c .o
+ 
+ .c.o:
+@@ -12,14 +15,14 @@ GENERIC_SRC= string.h bitvec.h file_read
+ #all: rainbow rbasm rbmergetag ezmsim 
+ all: rainbow ezmsim rbasm
+ 
+-rainbow: main.o  divide.o file_reader.o asm_R2.o mergectg.o cluster.o
+-	$(CC) $(CFLAGS) -o $@ $^ $(GLIBS) 
++rainbow: $(RAINBOW_OBJS)
++	$(CC) $(CFLAGS) -o $@ $(RAINBOW_OBJS) $(GLIBS) 
+ 
+-rbasm: asm_R2.o rbasm_main.o file_reader.o
+-	$(CC) $(CFLAGS) -o $@ $^ $(GLIBS)
++rbasm: $(RBASM_OBJS)
++	$(CC) $(CFLAGS) -o $@ $(RBASM_OBJS) $(GLIBS)
+ 
+ ezmsim: ezmsim.o
+-	$(CC) $(CFLAGS) -o $@ $^ $(GLIBS)
++	$(CC) $(CFLAGS) -o $@ ezmsim.o $(GLIBS)
+ 
+ asm_R2.o: asm_R2.c asm_R2.h string.h vector.h hashset.h file_reader.h \
+   dna.h

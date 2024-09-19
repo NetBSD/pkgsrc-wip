@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- graphics/canvas.c.orig	1994-05-02 14:34:56.000000000 -0600
++++ graphics/canvas.c
+@@ -1330,7 +1330,7 @@ int scrollx, scrolly;
+     tmp->fg=colors[fg];
+     tmp->bg=colors[bg];
+     sa.background_pixel=tmp->bg;
+-    XChangeWindowAttributes(tmp->xdpy, tmp->win, CWBackPixel, sa);
++    XChangeWindowAttributes(tmp->xdpy, tmp->win, CWBackPixel, &sa);
+     tmp->magx=1;
+     tmp->magy=1;
+     tmp->xpos=0;

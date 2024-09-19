@@ -1,0 +1,13 @@
+FreeJ is a vision mixer: an instrument for realtime video manipulation used
+in the fields of dance teather, veejaying, medical visualisation and TV.
+
+With FreeJ multiple layers can be filtered thru effect chains and then mixed
+together. The supported layer inputs are images, movies, live cameras,
+particle generators, text scrollers, flash animations and more.
+
+All the resulting video mix can be shown on multiple and remote screens,
+encoded into a movie and streamed live to the internet.
+
+FreeJ can be controlled locally or remotely, also from multiple places at the
+same time, using its slick console interface; can be automated via javascript
+and operated via MIDI and Joystick.

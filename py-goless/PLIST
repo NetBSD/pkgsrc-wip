@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/goless/__init__.py
+${PYSITELIB}/goless/__init__.pyc
+${PYSITELIB}/goless/__init__.pyo
+${PYSITELIB}/goless/backends.py
+${PYSITELIB}/goless/backends.pyc
+${PYSITELIB}/goless/backends.pyo
+${PYSITELIB}/goless/channels.py
+${PYSITELIB}/goless/channels.pyc
+${PYSITELIB}/goless/channels.pyo
+${PYSITELIB}/goless/compat.py
+${PYSITELIB}/goless/compat.pyc
+${PYSITELIB}/goless/compat.pyo
+${PYSITELIB}/goless/selecting.py
+${PYSITELIB}/goless/selecting.pyc
+${PYSITELIB}/goless/selecting.pyo

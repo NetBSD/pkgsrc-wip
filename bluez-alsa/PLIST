@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/bluealsa
+bin/bluealsa-aplay
+etc/dbus-1/system.d/bluealsa.conf
+lib/alsa-lib/libasound_module_ctl_bluealsa.la
+lib/alsa-lib/libasound_module_pcm_bluealsa.la
+share/alsa/alsa.conf.d/20-bluealsa.conf

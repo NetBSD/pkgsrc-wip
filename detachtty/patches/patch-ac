@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/02/20 20:58:40 ddeus Exp $
+
+--- attachtty.c.orig	2003-08-04 09:32:23.000000000 +0000
++++ attachtty.c
+@@ -133,7 +133,7 @@ void connect_ssh(char *host, char *path)
+     char buf[2];
+ 
+   
+-    if(pipe(&pipe_des)) bail("pipe");
++    if(pipe(pipe_des)) bail("pipe");
+     pid=fork();
+     if(pid<0) {			/* error */
+ 	bail("attachtty","Can't fork");

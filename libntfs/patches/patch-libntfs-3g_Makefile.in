@@ -1,0 +1,13 @@
+$NetBSD$
+
+
+--- libntfs-3g/Makefile.in.orig	2016-09-10 20:56:17.741899778 +0000
++++ libntfs-3g/Makefile.in	2016-09-10 20:58:08.408036431 +0000
+@@ -983,7 +983,6 @@
+ 
+ install-exec-am: install-libLTLIBRARIES
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+ install-html: install-html-am
+ 
+ install-html-am:

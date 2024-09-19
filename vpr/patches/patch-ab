@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.2 2006/12/03 05:36:17 dhowland Exp $
+
+--- vpr/makefile.orig	2000-03-26 14:34:20.000000000 -0500
++++ vpr/makefile
+@@ -19,16 +19,16 @@ CC = gcc 
+ 
+ # On many non-Solaris machines, use LIB_DIR = -L/usr/lib/X11R5
+ 
+-LIB_DIR = -L/usr/openwin/lib
++#LIB_DIR = -L/usr/openwin/lib
+ 
+ 
+ # Sometimes get errors under Solaris if you don't use the -R option
+ # to (I think) put info about where the shared object libraries are
+ # right into the binary.  Shouldn't be necessary, but it is on our machines.
+ 
+-LIB = -lX11 -lm -R/usr/openwin/lib
++LIB = -lX11 -lm @X11_LDFLAGS@
+ 
+-X11_INCLUDE = -I/usr/openwin/include
++#X11_INCLUDE = -I/usr/openwin/include
+ 
+ # Overly strict flags line below.  Lots of useless warnings, but can 
+ # let you look for redudant declarations. 
+@@ -73,7 +73,7 @@ H = util.h vpr_types.h globals.h graphic
+ 
+ # Add purify before $(CC) in the link line below to run purify on VPR.
+ 
+-$(EXE): $(OBJ) test_h.o
++all: $(OBJ) test_h.o
+ 	$(CC) $(FLAGS) $(OBJ) -o $(EXE) $(LIB_DIR) $(LIB)
+ 
+ # test_h.c is a dummy file -- it just checks the header files against each

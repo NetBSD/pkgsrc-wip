@@ -1,0 +1,34 @@
+# $NetBSD: apache.conf.dist,v 1.2 2012/12/17 17:26:24 triaxx Exp $
+#
+# Shaarli configuration file fragment for Apache
+
+#<VirtualHost *:80>
+#  ServerName "bookmarks.example.org"
+#  ServerAdmin "admin@example.org"
+#  DocumentRoot "@RCDIR@"
+#
+  <IfModule mod_alias.c>
+    Alias "/bookmarks" "@RCDIR@"
+  </IfModule>
+
+  <Directory "@RCDIR@">
+    <IfVersion < 2.4>
+      Order allow,deny
+      Allow from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all granted
+    </IfVersion>
+  </Directory>
+
+  <Location ~ /(images|inc|tpl)>
+    <IfVersion < 2.4>
+      Order allow,deny
+      Allow from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all granted
+    </IfVersion>
+  </Location>
+#
+#</VirtualHost>

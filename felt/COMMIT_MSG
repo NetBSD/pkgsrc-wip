@@ -1,0 +1,32 @@
+(3.06 to 3.07 Changes are not found yet)
+
+** Changes to FElt from 3.05 to 3.06 (released 3/24/00)
+
+The following bugs/things were fixed/changed:
+   1. the details stream was getting set all the time on the regular
+      writing of structural results, producing extraneous output
+      if the details flag hadn't actually been set
+   2. the text output for static thermal analysis was going to 
+      stdout rather than the output window in velvet
+   3. as part of the rearrangement of the isoparametric elements and
+      element stresses/nodally averaged stresses, the components of the
+      stress vectors for cst, iso_2d, iso_quad, and axisymm elements
+      have changed.  All of them (plus bricks) now have 10 components:
+      sigma_x, sigma_y, sigma_z, tau_xy, tau_xz, tau_yz, sigma_1, sigma_2,
+      sigma_3, and the von Mises stress.  (sigma_r, sigma_z, sigma_theta,
+      tau_rz, 0, 0, sigma_1. sigma_2, 0, sigma_VM for axisymm elements).
+   
+The following features were added:
+   1. all of velvet's post-processing graphics except animation and mode 
+      shapes have been ported over to OpenGL.  The big reason for this is to
+      provide 3D color plots of stress and displacement for problems
+      using brick elements, but it also makes the post-processing code
+      quite a bit cleaner and provides nice rotation control.  Try
+      loading the new examples brick_cap.flt and brick_ring.flt into
+      velvet (ignore the no nodes in the z=0 plane message), solve,
+      and plot stresses or displacements.  As mentioned above, all of
+      the plottable stresses are now nodally averaged results.  The
+      component can vary from 1 to 10.  Displacements are treated the
+      same as before.   Saves don't really work yet.  If you need a
+      dump you can always xwd the window on your own and crop it and
+      convert it as necessary.

@@ -1,0 +1,7 @@
+Uses DEFTAPE from Linux /usr/include/sys/mtio.h
+
+Won't build under NetBSD (and I didn't try troubleshooting).
+
+This needs to CONFLICT with pax (but wouldn't do any good,
+since currently pkgtools/pax doesn't get registered)
+or install as opax.

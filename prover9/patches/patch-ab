@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+
+--- apps.examples/Makefile.orig	2003-08-08 18:34:15.000000000 +0000
++++ apps.examples/Makefile
+@@ -7,8 +7,8 @@ test:
+ 	./run-all
+ 
+ clean:
+-	/bin/rm -rf $(OUTPUTS) backup
++	rm -rf $(OUTPUTS) backup
+ 
+ backup:
+-	/bin/rm -rf backup
++	rm -rf backup
+ 	mkdir backup && mv $(OUTPUTS) backup

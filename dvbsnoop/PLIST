@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 17:27:06 poppnk Exp $
+bin/dvbsnoop

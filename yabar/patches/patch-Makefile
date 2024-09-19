@@ -1,0 +1,15 @@
+$NetBSD$
+
+Get ld flags for xcb from pkg-config.
+
+--- Makefile.orig	2016-04-08 21:27:30.000000000 +0000
++++ Makefile
+@@ -2,7 +2,7 @@ VERSION = $(shell git describe)
+ CPPFLAGS += -DVERSION=\"$(VERSION)\" -D_POSIX_C_SOURCE=199309L -DYA_INTERNAL -DYA_DYN_COL \
+ 			-DYA_ENV_VARS -DYA_INTERNAL_EWMH
+ CFLAGS += -std=c99 -Iinclude -pedantic -Wall -Os `pkg-config --cflags pango pangocairo libconfig`
+-LDLIBS := -lxcb -lpthread -lxcb-randr -lxcb-ewmh `pkg-config --libs pango pangocairo libconfig`
++LDLIBS := -lpthread -lxcb-randr -lxcb-ewmh `pkg-config --libs pango pangocairo libconfig xcb`
+ PROGRAM := yabar
+ PREFIX ?= /usr
+ BINPREFIX ?= $(PREFIX)/bin

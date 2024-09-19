@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2012/02/19 07:52:23 jgoamakf Exp $
+
+RMD160 (Class-Date-1.1.17.tar.gz) = cd20d11dfdd763720e5504a3a8f3cd7e9b67077a
+SHA512 (Class-Date-1.1.17.tar.gz) = 0cc0c0145e3fb3c95f80a8d1dcdd1414db98350093392855f129b4e7ac09fee900a8577f1bd91c5ded2ea24730e1138f3ab23e42b848efa2e2efe1e87b720dca
+Size (Class-Date-1.1.17.tar.gz) = 51202 bytes

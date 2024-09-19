@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/20 20:19:14 jeremy-c-reed Exp $
+
+--- Makefile.in.orig	Mon Nov  6 18:17:18 1995
++++ Makefile.in
+@@ -1,7 +1,7 @@
+ 
+ # Common prefix for installation directories.
+ # NOTE: This directory must exist when you start the install.
+-prefix		= /usr/local
++prefix		= @prefix@
+ exec_prefix	= $(prefix)
+ # Where to put the executables.
+ bindir		= $(exec_prefix)/bin
+@@ -19,7 +19,7 @@ CC	= @CC@
+ CFLAGS	= @CFLAGS@
+ DEFS	= @DEFS@
+ LIBS	= @LIBS@
+-INCLUDEDIR = -I. -I$(srcdir)
++INCLUDEDIR = -I. -I$(srcdir) @CPPFLAGS@
+ LN	= @LN_S@
+ RM	= rm -f
+ SHELL	= /bin/sh

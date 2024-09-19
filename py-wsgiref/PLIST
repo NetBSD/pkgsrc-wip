@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/14 20:28:25 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wsgiref/__init__.py
+${PYSITELIB}/wsgiref/__init__.pyc
+${PYSITELIB}/wsgiref/__init__.pyo
+${PYSITELIB}/wsgiref/handlers.py
+${PYSITELIB}/wsgiref/handlers.pyc
+${PYSITELIB}/wsgiref/handlers.pyo
+${PYSITELIB}/wsgiref/headers.py
+${PYSITELIB}/wsgiref/headers.pyc
+${PYSITELIB}/wsgiref/headers.pyo
+${PYSITELIB}/wsgiref/simple_server.py
+${PYSITELIB}/wsgiref/simple_server.pyc
+${PYSITELIB}/wsgiref/simple_server.pyo
+${PYSITELIB}/wsgiref/util.py
+${PYSITELIB}/wsgiref/util.pyc
+${PYSITELIB}/wsgiref/util.pyo
+${PYSITELIB}/wsgiref/validate.py
+${PYSITELIB}/wsgiref/validate.pyc
+${PYSITELIB}/wsgiref/validate.pyo

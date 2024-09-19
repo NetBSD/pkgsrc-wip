@@ -1,0 +1,13 @@
+$NetBSD: patch-utils_scripts_notinuse,v 1.1 2013/09/01 17:24:38 asau Exp $
+
+--- utils/scripts/notinuse.orig	2013-03-24 16:25:41.000000000 +0000
++++ utils/scripts/notinuse
+@@ -17,7 +17,7 @@ fi
+ 
+ for f in `find . -name '*.h' -printf '%f '`; do
+ 	a=`rgrep $f * | grep include`
+-	if [ "x$a" == "x" ]; then
++	if [ "x$a" = "x" ]; then
+ 		echo File $f may not be used.
+ 	fi
+ done

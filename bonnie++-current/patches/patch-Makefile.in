@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2012/06/01 15:26:59 hfath Exp $
+
+--- Makefile.in.orig	2012-06-01 14:51:35.000000000 +0000
++++ Makefile.in
+@@ -52,15 +52,15 @@ generate_randfile: generate_randfile.o
+ 	$(LINK) generate_randfile.o -o generate_randfile
+ 
+ install-bin: $(EXE) $(EXES)
+-	mkdir -p $(eprefix)/bin $(eprefix)/sbin
+-	@INSTALL_PROGRAM@ @stripping@ $(EXES) $(eprefix)/sbin
+-	@INSTALL_PROGRAM@ @stripping@ $(EXE) $(eprefix)/bin
+-	@INSTALL_SCRIPT@ $(SCRIPTS) $(eprefix)/bin
++	mkdir -p $(eprefix)/bin ${DESTDIR}$(eprefix)/sbin
++	@INSTALL_PROGRAM@ @stripping@ $(EXES) ${DESTDIR}$(eprefix)/sbin
++	@INSTALL_PROGRAM@ @stripping@ $(EXE) ${DESTDIR}$(eprefix)/bin
++	@INSTALL_SCRIPT@ $(SCRIPTS) ${DESTDIR}$(eprefix)/bin
+ 
+ install: install-bin
+-	mkdir -p @mandir@/man1 @mandir@/man8
+-	@INSTALL_DATA@ $(MAN1) @mandir@/man1
+-	@INSTALL_DATA@ $(MAN8) @mandir@/man8
++	mkdir -p @mandir@/man1 ${DESTDIR}@mandir@/man8
++	@INSTALL_DATA@ $(MAN1) ${DESTDIR}@mandir@/man1
++	@INSTALL_DATA@ $(MAN8) ${DESTDIR}@mandir@/man8
+ 
+ %.o: %.cpp
+ 	$(CXX) -c $<

@@ -1,0 +1,8 @@
+A Hash::AsObject is a blessed hash that provides
+read-write access to its elements using accessors.
+(Actually, they're both accessors and mutators.)
+
+It's designed to act as much like a plain hash as
+possible; this means, for example, that you can use
+methods like DESTROY to get or set hash elements
+with that name. See below for more information.

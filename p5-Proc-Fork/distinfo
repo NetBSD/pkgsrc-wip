@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2013/04/26 02:13:51 jgoamakf Exp $
+
+RMD160 (Proc-Fork-0.806.tar.gz) = 771e272e2fa26f1a4d7da86f0cb9dddca54c8d13
+SHA512 (Proc-Fork-0.806.tar.gz) = aa3e8ff43007fb27bec2ad9a8b5c796eaefa50d13c70d53c392e57d635351e1012ad91d5b634bd83c6ac17e61890bc5f8731b98f745691565a91c3752d236baf
+Size (Proc-Fork-0.806.tar.gz) = 14627 bytes

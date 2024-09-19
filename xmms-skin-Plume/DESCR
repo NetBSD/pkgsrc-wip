@@ -1,0 +1,19 @@
+Plume XMMS Skin v1
+==================
+
+With this skin I've tried to mimic the user interface of plasma screens,
+where only few colors and few space are available. Hope you'll like it!
+
+Thanks to:
+- SMAR (SMAR2K@hotmail.com) for its Amp X-Treme WinAmp skin upon which is
+  based this XMMS skin.
+- Jesse Kaufman (glandix@linuxfreak.com) for its NeXTAmp3 skin, from which
+  I've taken some ideas.
+
+To install this skin, simply put the skin file (Plume-XMMS-vXX.tgz)
+into your ~/.xmms/Skins directory.
+
+Licenced with GNU GPL version 2.
+
+Andréas Saudemont
+asaudemont@voila.fr

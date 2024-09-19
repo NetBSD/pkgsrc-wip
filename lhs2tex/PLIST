@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.6 2011/10/20 00:30:23 minskim Exp $
+bin/lhs2TeX
+man/man1/lhs2TeX.1
+share/doc/lhs2tex/Guide2.pdf
+share/doc/lhs2tex/INSTALL
+share/doc/lhs2tex/RELEASE
+share/doc/lhs2tex/polytable.pdf
+share/lhs2tex/colorcode.fmt
+share/lhs2tex/forall.fmt
+share/lhs2tex/greek.fmt
+share/lhs2tex/jfpcompat.fmt
+share/lhs2tex/lhs2TeX.fmt
+share/lhs2tex/lhs2TeX.sty
+share/lhs2tex/polycode.fmt
+share/lhs2tex/spacing.fmt
+share/texmf-dist/tex/latex/lazylist/lazylist.sty
+share/texmf-dist/tex/latex/polytable/polytable.sty

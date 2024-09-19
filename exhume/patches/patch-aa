@@ -1,0 +1,101 @@
+--- configure.orig	2008-10-20 13:04:12.000000000 +0100
++++ configure	2011-05-01 00:39:07.000000000 +0100
+@@ -19993,7 +19993,7 @@
+   pkglib=no; pkginc=no; pkggood=no
+ 
+   ## Don't know why this isn't working by default:
+-  test x${prefix} == xNONE && prefix=${ac_default_prefix}
++  test x${prefix} = xNONE && prefix=${ac_default_prefix}
+ 
+   ## Environment variables for specifying paths
+ 
+@@ -20009,7 +20009,7 @@
+   if test "$pkgpath"; then CLHEPPATH="$pkgpath"; fi
+ 
+   ## Has this lib been disabled?
+-  if test x$pkgpath == xno; then
++  if test x$pkgpath = xno; then
+     { echo "$as_me:$LINENO: Not building against CLHEP" >&5
+ echo "$as_me: Not building against CLHEP" >&6;}
+      if false; then
+@@ -20039,7 +20039,7 @@
+   pkglib=no
+ 
+   ## Don't know why this isn't working by default:
+-  test x${prefix} == xNONE && prefix=${ac_default_prefix}
++  test x${prefix} = xNONE && prefix=${ac_default_prefix}
+ 
+   ## Environment variables for specifying paths
+ 
+@@ -20071,7 +20071,7 @@
+   if test "$pkgpath"; then CLHEPPATH="$pkgpath"; fi
+ 
+   ## Has this lib been disabled?
+-  if test x$pkgpath == xno; then
++  if test x$pkgpath = xno; then
+     { echo "$as_me:$LINENO: Not building against CLHEP" >&5
+ echo "$as_me: Not building against CLHEP" >&6;}
+   else
+@@ -20121,7 +20121,7 @@
+     fi
+ 
+     ## Execute pass/fail shell code
+-    if test "x$pkglib" == "xyes"; then
++    if test "x$pkglib" = "xyes"; then
+       true
+ 
+     else
+@@ -20151,7 +20151,7 @@
+   pkginc=no
+ 
+   ## Don't know why this isn't working by default:
+-  test x${prefix} == xNONE && prefix=${ac_default_prefix}
++  test x${prefix} = xNONE && prefix=${ac_default_prefix}
+ 
+   ## Environment variables for specifying paths
+ 
+@@ -20175,7 +20175,7 @@
+   if test "$pkgpath"; then CLHEPPATH="$pkgpath"; fi
+ 
+   ## Has this header been disabled?
+-  if test x$pkgpath == xno; then
++  if test x$pkgpath = xno; then
+     { echo "$as_me:$LINENO: Not building against CLHEP" >&5
+ echo "$as_me: Not building against CLHEP" >&6;}
+   else
+@@ -20213,7 +20213,7 @@
+     fi
+ 
+     ## Execute pass/fail shell code
+-    if test "x$pkginc" == "xyes"; then
++    if test "x$pkginc" = "xyes"; then
+       true
+ 
+     else
+@@ -20236,7 +20236,7 @@
+ 
+ 
+     ## Execute pass/fail shell code
+-    if test "x$pkglib" == "xyes" && test "x$pkginc" == "xyes"; then
++    if test "x$pkglib" = "xyes" && test "x$pkginc" = "xyes"; then
+       #AC_MSG_NOTICE([cedar_PkgName paths verified])
+       pkggood="yes"
+       { echo "$as_me:$LINENO: Found CLHEP" >&5
+@@ -20316,7 +20316,7 @@
+   clhep_config=no
+ fi
+ 
+-if test x$clhep_config == xyes; then
++if test x$clhep_config = xyes; then
+   { echo "$as_me:$LINENO: CLHEP version < 2.0 detected." >&5
+ echo "$as_me: CLHEP version < 2.0 detected." >&6;}
+   AM_CPPFLAGS="$AM_CPPFLAGS -DCLHEP1"
+@@ -20962,6 +20962,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;

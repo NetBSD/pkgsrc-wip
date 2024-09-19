@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/21 19:05:25 mpasternak Exp $
+
+--- libsupport/defs.h.orig	2003-04-02 07:27:13.000000000 +0200
++++ libsupport/defs.h
+@@ -29,6 +29,9 @@
+ #include <sys/time.h>
+ #include <time.h>
+ #endif
++#ifdef __NetBSD__
++#define HAS_SRANDOMDEV 0
++#endif
+ 
+ #include <errno.h>
+ #include <setjmp.h>

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- treetool/Makefile.orig	1994-05-02 15:04:28.000000000 -0600
++++ treetool/Makefile
+@@ -59,7 +59,7 @@ OBJS=about.o\
+ HOBJS=${OBJDIR}/treelib.o ${OBJDIR}/graphics.o
+ 
+ 
+-LIBS=-lX11 -lm -lxview -lolgx
++LIBS=-Wl,-R/usr/X11R6/lib -L/usr/X11R6/lib -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lX11 -lxview -lolgx -lm
+ 
+ all: t
+ 

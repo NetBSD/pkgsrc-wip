@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2004/09/09 21:46:38 shattered Exp $
+
+--- src/oops.c.orig	Mon Feb  4 10:22:07 2002
++++ src/oops.c
+@@ -803,7 +803,7 @@
+ 
+     if ( pidfile[0] != 0 && (pid_d == -1) ) {
+ 	char	pid[11];
+-	flock_t fl;
++	struct flock fl;
+ 
+ 	pid_d = open(pidfile, O_RDWR|O_CREAT|O_NONBLOCK, S_IRUSR|S_IWUSR|S_IRGRP);
+ 	if ( pid_d == -1 ) {

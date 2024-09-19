@@ -1,0 +1,17 @@
+$NetBSD$
+
+Do not build included libwebp, use system one.
+
+--- CMakeLists.txt.orig	2019-09-24 03:40:00.000000000 +0000
++++ CMakeLists.txt
+@@ -223,8 +223,8 @@ add_definitions(-DPNG_NO_MMX_CODE) # Do 
+ # libwebp
+ if(WITH_WEBP_SUPPORT)
+   set(WEBP_LIBRARIES webp webpdemux webpmux)
+-  set(WEBP_INCLUDE_DIR ${LIBWEBP_DIR}/src)
+-  include_directories(${WEBP_INCLUDE_DIR})
++#  set(WEBP_INCLUDE_DIR ${LIBWEBP_DIR}/src)
++#  include_directories(${WEBP_INCLUDE_DIR})
+ endif()
+ 
+ # tinyxml

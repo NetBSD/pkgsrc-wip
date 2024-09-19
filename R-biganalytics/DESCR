@@ -1,0 +1,5 @@
+This package extends the bigmemory package with various analytics.
+Functions bigkmeans and binit may also be used with native R objects.
+For tapply-like functions, the bigtabulate package may also be
+helpful.  For linear algebra support, see bigalgebra. For mutex
+(locking) support for advanced shared-memory usage, see synchronicity.

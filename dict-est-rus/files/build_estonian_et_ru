@@ -1,0 +1,46 @@
+#!/bin/sh
+
+#  
+# $Date: 2006/12/06 13:40:15 $
+#  
+
+LC_ALL=C
+export LC_ALL
+
+url="http://sf.net/projects/er-dict"
+
+tar_base64 (){
+    cat <<EOF
+_____
+
+00-database-script
+    Below are scripts for building .index/.dict files.
+    Extract them using the following command:
+    mimencode -ub | gunzip | tar x
+
+EOF
+
+    tar -chf - "$@" | gzip | mimencode -b
+}
+
+{
+    cat <<EOF
+According to Mihail Suhoruki <hej@hot.ee>,
+author of er-dict software:
+"...The accompanying word base has no ownership
+and is completely free."
+
+Converted to DICTD format by Aleksey Cheusov <cheusov@tut.by>
+
+{00-database-script} - script for converting to dictd format.
+
+EOF
+
+sed 's/ - /	/' words.dwb |
+awk -F'\t' '{printf "_____\n\n%s\n%s\n", $1, $1 " - " $2}'
+
+	tar_base64 "$0"
+} |
+dictfmt --headword-separator ', ' --without-headword \
+--utf8 -c5 --allchars --without-time \
+-u "$url" -s 'Estonian-Russian dictionary' estonian_et-ru

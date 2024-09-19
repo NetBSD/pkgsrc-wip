@@ -1,0 +1,4 @@
+XTags is a little keyboard-driven program which implements tags for X11.
+It's a pseudo-WM called WHM (Window Helper Manager). The main goal is to
+get rid of a "real" WM by using it with dvtm on the master tag and put
+the secondary clients into the other tags.

@@ -1,0 +1,16 @@
+$NetBSD$
+
+Typographically correct apostrophes in the pdf version are not worth
+the hassle of installing texinfo v5 over using the base texinfo.
+
+--- doc/slime.texi.orig	2017-08-28 11:51:57.000000000 +0000
++++ doc/slime.texi
+@@ -3,8 +3,6 @@
+ @setfilename slime.info
+ 
+ @documentencoding UTF-8
+-@codequoteundirected on
+-@codequotebacktick on
+ 
+ @dircategory Emacs
+ @direntry

@@ -1,0 +1,7 @@
+It contains functions that solve least squares linear regression
+problems under linear equality/inequality constraints. Functions
+for solving quadratic programming problems are also available, which
+transform such problems into least squares ones first. It is developed
+based on the 'Fortran' program of Lawson and Hanson (1974, 1995),
+which is public domain and available at
+<http://www.netlib.org/lawson-hanson>.

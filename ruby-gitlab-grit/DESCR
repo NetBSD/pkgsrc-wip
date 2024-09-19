@@ -1,0 +1,18 @@
+Grit gives you object oriented read/write access to Git repositories
+via Ruby. The main goals are stability and performance. To this end,
+some of the interactions with Git repositories are done by shelling
+out to the system's git command, and other interactions are done with
+pure Ruby reimplementations of core Git functionality. This choice,
+however, is transparent to end users, and you need not know which
+method is being used.
+
+This software was developed to power GitHub, and should be considered
+production ready. An extensive test suite is provided to verify its
+correctness.
+
+Original Grit is maintained by Tom Preston-Werner, Scott Chacon, Chris
+Wanstrath, and PJ Hyett.
+
+This fork is maintained by GitLab.com
+
+This documentation is accurate as of Grit 2.3.

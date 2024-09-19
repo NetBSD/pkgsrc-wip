@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- memcheck/Makefile.am.orig	2018-05-05 07:42:22.000000000 +0000
++++ memcheck/Makefile.am
+@@ -98,6 +98,11 @@ vgpreload_memcheck_@VGCONF_ARCH_PRI@_@VG
+ 	$(PRELOAD_LDFLAGS_@VGCONF_PLATFORM_PRI_CAPS@) \
+ 	$(LIBREPLACEMALLOC_LDFLAGS_@VGCONF_PLATFORM_PRI_CAPS@)
+ 
++if VGCONF_OS_IS_NETBSD
++vgpreload_memcheck_@VGCONF_ARCH_PRI@_@VGCONF_OS@_so_LDFLAGS += \
++       -shared -fPIC
++endif
++
+ if VGCONF_HAVE_PLATFORM_SEC
+ vgpreload_memcheck_@VGCONF_ARCH_SEC@_@VGCONF_OS@_so_SOURCES      = \
+ 	$(VGPRELOAD_MEMCHECK_SOURCES_COMMON)
+@@ -111,4 +116,3 @@ vgpreload_memcheck_@VGCONF_ARCH_SEC@_@VG
+ 	$(PRELOAD_LDFLAGS_@VGCONF_PLATFORM_SEC_CAPS@) \
+ 	$(LIBREPLACEMALLOC_LDFLAGS_@VGCONF_PLATFORM_SEC_CAPS@)
+ endif
+-

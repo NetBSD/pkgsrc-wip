@@ -1,0 +1,33 @@
+$NetBSD$
+
+Honors user's {C,LD}FLAGS.
+
+--- Makefile.orig	2020-10-29 13:36:16.000000000 +0000
++++ Makefile
+@@ -35,7 +35,7 @@ CC = $(WIN32_DEV_TOP)/mingw-4.7.2/bin/gc
+ 
+ DATA_ROOT_DIR_PURPLE:="$(PROGFILES32)/Pidgin"
+ PLUGIN_DIR_PURPLE:="$(DATA_ROOT_DIR_PURPLE)/plugins"
+-CFLAGS = \
++CFLAGS += \
+     -g \
+     -O2 \
+     -Wall \
+@@ -54,7 +54,7 @@ PLUGIN_DIR_PURPLE:=$(DESTDIR)$(shell pkg
+ DATA_ROOT_DIR_PURPLE:=$(DESTDIR)$(shell pkg-config --variable=datarootdir $(PURPLE_MOD))
+ PKGS=$(PURPLE_MOD) glib-2.0 gobject-2.0
+ 
+-CFLAGS = \
++CFLAGS += \
+     -g \
+     -O2 \
+     -Wall \
+@@ -72,7 +72,7 @@ endif
+ .PHONY: all
+ all: $(LIBNAME)
+ 
+-LDFLAGS = -shared
++LDFLAGS += -shared
+ 
+ json.%: json-parser/json.%
+ 	cp $< $@

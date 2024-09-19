@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2006/12/17 20:51:30 dhowland Exp $
+
+--- sis/pld/act_ite.c.orig	2004-02-07 05:14:57.000000000 -0500
++++ sis/pld/act_ite.c
+@@ -125,6 +125,8 @@ node_t *fanin;
+    and the minimum column cover variables in cover, generates an ite for the 
+    original function. */
+ 
++static int compare();
++
+ ite_vertex *
+ my_or_ite_F(array_b, cover, array, network)
+ array_t *array_b;
+@@ -132,7 +134,6 @@ array_t *array;
+ sm_row *cover;
+ network_t *network;
+ {
+-    static int compare();
+     int  i;
+     ite_vertex *vertex;
+     sm_element *p;

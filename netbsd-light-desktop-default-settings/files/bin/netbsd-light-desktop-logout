@@ -1,0 +1,2 @@
+#!/bin/sh
+lxsession-logout --banner "@PREFIX@/share/netbsd-light-desktop/images/logout-banner.png" --side=top

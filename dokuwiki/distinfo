@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.2 2013/06/25 10:04:45 triaxx Exp $
+
+RMD160 (dokuwiki-2013-05-10a.tgz) = cb934be93c8a5e6df80ac12902fd228ad544b0f2
+SHA512 (dokuwiki-2013-05-10a.tgz) = dcbd9c204d80bdda15a16485df1a4e73337d12cb360fd922996d995cf4242d0c8612a7dbae2f701d1fac58364643b62212671284f96b8eb77be0c401b83cfce0
+Size (dokuwiki-2013-05-10a.tgz) = 2961725 bytes
+SHA1 (patch-conf_acl.auth.php.dist) = aa81fa5304a08dd8919fd9eaaa91b30763c0a83e
+SHA1 (patch-conf_dokuwiki.php) = 31834b63f55f5578b1c362b1b704c28539abe494
+SHA1 (patch-conf_local.php.dist) = cb90dae7d9f4d72849c24f0b9a2e8e2f366071d4

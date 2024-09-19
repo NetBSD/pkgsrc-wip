@@ -1,0 +1,22 @@
+$NetBSD: patch-gcc_config_t-netbsd,v 1.1 2017/05/03 00:21:03 maya Exp $
+
+--- gcc/config/t-netbsd.orig	2019-01-01 12:31:55.000000000 +0000
++++ gcc/config/t-netbsd
+@@ -1,4 +1,4 @@
+-# Copyright (C) 2017-2019 Free Software Foundation, Inc.
++# Copyright (C) 2002-2014 Free Software Foundation, Inc.
+ #
+ # This file is part of GCC.
+ #
+@@ -16,6 +16,11 @@
+ # along with GCC; see the file COPYING3.  If not see
+ # <http://www.gnu.org/licenses/>.
+ 
++
+ netbsd.o: $(srcdir)/config/netbsd.c
+ 	$(COMPILE) $<
+ 	$(POSTCOMPILE)
++
++netbsd-d.o: config/netbsd-d.c
++	$(COMPILE) $<
++	$(POSTCOMPILE)

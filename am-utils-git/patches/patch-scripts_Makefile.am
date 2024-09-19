@@ -1,0 +1,13 @@
+$NetBSD: patch-scripts_Makefile.am,v 1.1 2013/08/30 15:03:43 hfath Exp $
+
+--- scripts/Makefile.am.orig	2013-08-30 10:15:20.000000000 +0000
++++ scripts/Makefile.am
+@@ -23,7 +23,7 @@ noinst_SCRIPTS =	\
+ 
+ bin_SCRIPTS = expn
+ 
+-sysconf_DATA = amd.conf-sample lostaltmail.conf-sample
++sysconf_DATA = 
+ 
+ # man pages
+ man_MANS = amd.conf.5 automount2amd.8 expn.1

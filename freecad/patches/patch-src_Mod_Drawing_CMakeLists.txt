@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Drawing/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Drawing/CMakeLists.txt
+@@ -13,7 +13,7 @@ INSTALL(
+         DrawingTests.py
+         DrawingPatterns.py
+     DESTINATION
+-        Mod/Drawing
++        freecad/Mod/Drawing
+ )
+ 
+ INSTALL(

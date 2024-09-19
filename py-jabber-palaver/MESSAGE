@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2008/08/25 15:38:06 schnoebe Exp $
+
+You will need to customize the following file to get palaver to work
+with jabber:
+
+	${PKG_SYSCONFDIR}/palaver.xml
+
+Quick start for jabberd2:
+
+	Verify and update the following fields in
+	${PKG_SYSCONFDIR}/palaver.xml:
+
+	<name>...</name>	--  Set to the public name of the service
+				    ex: chat.jabber.example
+	<ip>...</ip>		--  Set to the hostname or IP address
+				    of the main jabber server
+	<secret>...</secret>	--  should be set to the legacy components
+				    shared secret in jabber2's router.xml
+				    (look for <secret>...</secret> in
+				    router.xml)
+
+===========================================================================

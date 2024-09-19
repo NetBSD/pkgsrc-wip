@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/05 06:03:54 phonohawk Exp $
+lib/punycode-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Punycode.hi
+lib/punycode-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Punycode.p_hi
+lib/punycode-${PKGVERSION}/${HASKELL_VERSION}/HSpunycode-${PKGVERSION}.o
+lib/punycode-${PKGVERSION}/${HASKELL_VERSION}/libHSpunycode-${PKGVERSION}.a
+lib/punycode-${PKGVERSION}/${HASKELL_VERSION}/libHSpunycode-${PKGVERSION}_p.a
+lib/punycode-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/punycode-${PKGVERSION}/LICENSE

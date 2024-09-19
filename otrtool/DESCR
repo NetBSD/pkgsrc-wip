@@ -1,0 +1,6 @@
+otrtool aims to provide an open source tool to deal with otrkey-files from
+onlinetvrecoder.com. At the moment it is able to decrypt them, in the
+future a download manager and/or EPG could be added.
+
+Note: This is free software, but you will need an onlinetvrecorder.com
+account to make use of it.

@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- scripts/Makefile.in.orig	2014-10-30 14:38:56.000000000 +0000
++++ scripts/Makefile.in
+@@ -308,7 +308,7 @@ noinst_SCRIPTS = \
+ 	redhat-ctl-amd	\
+ 	test-attrcache
+ 
+-sysconf_DATA = amd.conf-sample lostaltmail.conf-sample
++sysconf_DATA = 
+ 
+ # man pages
+ man_MANS = amd.conf.5 automount2amd.8

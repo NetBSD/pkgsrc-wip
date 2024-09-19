@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.2 2008/02/09 21:27:38 ishit Exp $
+
+--- Makefile.orig	2007-10-06 22:43:15.000000000 +0900
++++ Makefile
+@@ -2,7 +2,7 @@ PREFIX = /usr/local
+ BINDIR = $(PREFIX)/bin
+ MANDIR = $(PREFIX)/man
+ INFODIR = $(PREFIX)/info
+-LOCAL_ROOT = /usr/share/polipo/www
++LOCAL_ROOT = $(PREFIX)/share/polipo/www
+ DISK_CACHE_ROOT = /var/cache/polipo
+ 
+ # To compile with Unix CC:
+@@ -90,19 +90,19 @@ install: install.binary install.man
+ 
+ install.binary: all
+ 	mkdir -p $(TARGET)$(BINDIR)
+-	mkdir -p $(TARGET)$(LOCAL_ROOT)
+-	mkdir -p $(TARGET)$(LOCAL_ROOT)/doc
++#	mkdir -p $(TARGET)$(LOCAL_ROOT)
++#	mkdir -p $(TARGET)$(LOCAL_ROOT)/doc
+ 	rm -f $(TARGET)$(BINDIR)/polipo
+ 	cp -f polipo $(TARGET)$(BINDIR)/
+-	cp -f html/* $(TARGET)$(LOCAL_ROOT)/doc
+-	cp -f localindex.html $(TARGET)$(LOCAL_ROOT)/index.html
++#	cp -f html/* $(TARGET)$(LOCAL_ROOT)/doc
++#	cp -f localindex.html $(TARGET)$(LOCAL_ROOT)/index.html
+ 
+ install.man: all
+ 	mkdir -p $(TARGET)$(MANDIR)/man1
+-	mkdir -p $(TARGET)$(INFODIR)
++#	mkdir -p $(TARGET)$(INFODIR)
+ 	cp -f polipo.man $(TARGET)$(MANDIR)/man1/polipo.1
+-	cp polipo.info $(TARGET)$(INFODIR)/
+-	install-info --info-dir=$(TARGET)$(INFODIR) polipo.info
++#	cp polipo.info $(TARGET)$(INFODIR)/
++#	install-info --info-dir=$(TARGET)$(INFODIR) polipo.info
+ 
+ 
+ polipo.info: polipo.texi

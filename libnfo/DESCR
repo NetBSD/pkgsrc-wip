@@ -1,0 +1,13 @@
+=======================================
+============ GeeXboX libnfo ===========
+== An NFO file parser/writer library ==
+=======================================
+
+Libnfo is a small library used to parse and write NFO files.
+NFO files are used to store metadata information on many multimedia files.
+
+The NFO file format is used by (at least) Enna and XBMC Media Centers.
+See http://xbmc.org/wiki/?title=Import_-_Export_Library
+
+Libnfo is free software - it is licensed under the terms of the GNU/LGPL
+version 2.1+.

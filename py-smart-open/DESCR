@@ -1,0 +1,4 @@
+Python 3 library for efficient streaming of very large files
+from/to storages such as S3, GCS, Azure Blob Storage, HDFS,
+WebHDFS, HTTP, HTTPS, SFTP, or local filesystem. It supports
+transparent, on-the-fly (de-)compression for a variety of different formats.

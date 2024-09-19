@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/nanoQC
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nanoQC/__init__.py
+${PYSITELIB}/nanoQC/__init__.pyc
+${PYSITELIB}/nanoQC/__init__.pyo
+${PYSITELIB}/nanoQC/nanoQC.py
+${PYSITELIB}/nanoQC/nanoQC.pyc
+${PYSITELIB}/nanoQC/nanoQC.pyo
+${PYSITELIB}/nanoQC/version.py
+${PYSITELIB}/nanoQC/version.pyc
+${PYSITELIB}/nanoQC/version.pyo

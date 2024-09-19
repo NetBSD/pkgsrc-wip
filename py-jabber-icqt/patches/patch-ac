@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.2 2008/02/18 21:24:57 sebpierrel Exp $
+
+start from the installation directory
+
+--- PyICQt.py.orig	2006-03-06 13:12:26.000000000 -0600
++++ PyICQt.py
+@@ -1,8 +1,8 @@
+ #!/usr/bin/env python
+ 
+-# Make 'cwd'/src in the PYTHONPATH
++# Make {transport directory}/src in the PYTHONPATH
+ import sys, os, os.path
+-PATH = os.path.abspath(os.path.dirname(sys.argv[0]))
++PATH = os.path.join("@PREFIX@", "@TRANSPORTDIR@")
+ os.chdir(PATH)
+ PATH = os.path.join(PATH, "src")
+ sys.path[0] = PATH

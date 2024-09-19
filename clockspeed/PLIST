@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
+bin/clockview
+bin/sntpclock
+bin/taiclock
+bin/taiclockd
+man/man1/clockview.1
+man/man1/sntpclock.1
+man/man1/taiclock.1
+man/man1/taiclockd.1
+man/man3/leapsecs.3
+man/man3/tai.3
+man/man3/tai_pack.3
+man/man3/taia.3
+man/man3/taia_now.3
+man/man3/taia_pack.3
+man/man8/clockadd.8
+man/man8/clockspeed.8
+sbin/clockadd
+sbin/clockspeed
+share/doc/clockspeed/BLURB
+share/doc/clockspeed/CHANGES
+share/doc/clockspeed/INSTALL
+share/doc/clockspeed/README
+share/doc/clockspeed/THANKS
+share/doc/clockspeed/TODO
+share/examples/clockspeed/leapsecs.dat

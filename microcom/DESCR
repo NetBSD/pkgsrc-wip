@@ -1,0 +1,11 @@
+microcom is a minicom-like serial terminal emulator with scripting support.
+
+Features
+    * Add/strip line feeds, local echo control
+    * Hardware/software flow control support
+    * 8 bit, one stop, no parity
+    * Support for standard speeds form 1200 to 460800 bps
+    * Default UNIX tty emulation
+    * BASIC like script language support
+    * Distribution: source code, LINUX executable, LRP based floppy
+    * Automatic modem detection

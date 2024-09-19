@@ -1,0 +1,7 @@
+net/svnup is a lightweight, dependency-free, BSD licensed program
+to pull source files from an Apache Subversion server. In much the
+same way that csup and cvsup were used to checkout source code
+before the deprecation of CVS at FreeBSD.org, svnup was written
+for sysadmins who only need to keep a local source tree in sync
+and who don't want or need the extra overhead that the official
+svn client leaves behind.

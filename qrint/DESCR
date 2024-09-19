@@ -1,0 +1,5 @@
+QRINT is a suite of Fortran 77 codes that approximates the orthogonal factor Q
+in the QR factorization of a fundamental matrix solution (or part thereof) of a
+linear system. The codes integrate the differential equations defining
+the factor Q by representing Q as product of elementary Householder reflectors
+or Givens rotations

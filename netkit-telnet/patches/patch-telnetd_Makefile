@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- telnetd/Makefile.orig	1999-12-14 00:43:30.000000000 +0000
++++ telnetd/Makefile
+@@ -27,6 +27,9 @@ $(OBJS): defs.h ext.h pathnames.h telnet
+ telnetd.o: ../version.h
+ 
+ install: telnetd
++	install -d $(INSTALLROOT)$(SBINDIR)
++	install -d $(INSTALLROOT)$(MANDIR)/man5
++	install -d $(INSTALLROOT)$(MANDIR)/man8
+ 	install -s -m$(DAEMONMODE) telnetd $(INSTALLROOT)$(SBINDIR)/in.telnetd
+ 	install -m$(MANMODE) issue.net.5 $(INSTALLROOT)$(MANDIR)/man5/
+ 	install -m$(MANMODE) telnetd.8 $(INSTALLROOT)$(MANDIR)/man8/in.telnetd.8

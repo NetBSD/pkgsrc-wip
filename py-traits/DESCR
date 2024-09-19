@@ -1,0 +1,12 @@
+The traits package provides a metaclass with special attributes that are
+called traits. A trait is a type definition that can be used for normal
+Python object attributes, giving the attributes some additional characteristics:
+
+ * Initialization: A trait attribute can have a default value
+ * Validation: A trait attribute is manifestly typed.
+ * Delegation: The value of a trait attribute can be contained in another
+   object
+ * Notification: Setting the value of a trait attribute can fired
+   callbacks
+ * Visualization: With the TraitsUI package, GUIs can be generated
+   automatically from traited objects.

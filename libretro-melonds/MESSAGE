@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD$
+
+melonDS requires the following BIOS image files for operation:
+
+* bios7.bin, 16KB: ARM7 BIOS
+* bios9.bin, 4KB: ARM9 BIOS
+* firmware.bin, 128/256/512KB: firmware
+
+In retroarch, you'll need to place them in the System Directory.
+
+Alternatively, you can place them in your Content Directory next to the
+software you are going to run.
+
+===========================================================================

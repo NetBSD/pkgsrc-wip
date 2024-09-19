@@ -1,0 +1,2 @@
+MOPAC provides routines to solve the electronic structure of molecules on a
+semi-empirical level. Available methods include MNDO, MINDO/3, AM1 and PM3.

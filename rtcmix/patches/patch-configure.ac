@@ -1,0 +1,260 @@
+$NetBSD$
+
+--- configure.ac.orig	2015-10-03 21:09:58.000000000 +0000
++++ configure.ac
+@@ -31,12 +31,26 @@ case "$host" in
+    *-*-freebsd*)
+       ARCH=FREEBSD
+       ;;
++   *-*-netbsd*)
++      ARCH=NETBSD
++      ;;
+    *)
+       ARCH=LINUX
+       ;;
+ esac
+ AC_SUBST(ARCH)
+-
++case "$host_cpu" in
++   *arm*)
++      CPU=arm
++      ;;
++   *x86_64*)
++      CPU=x86
++      ;;
++   *i?86*)
++      CPU=x86
++      ;;
++esac
++AC_SUBST(CPU)
+ 
+ # Standard program, library and header checks ----------------------------------
+ 
+@@ -95,104 +109,114 @@ sys/param.h sys/socket.h sys/time.h term
+ #AC_SUBST(PTRSIZEFLAG)
+ 
+ #############################################################################
+-# Architecture -- pointer size
+-# This is set up to allow compiling fat (64/32) binaries eventually.  -JG
+-
+-# First find out which ptr sizes we can support
+-# NB: Must do AC_PROG_CC above this, or it will fail on Slack 10.2.
+-TMP_CFLAGS="$CFLAGS"
+-CFLAGS="-m64"
+-AC_RUN_IFELSE(
+-   [AC_LANG_PROGRAM([], [return sizeof(void *) == 8 ? 0 : 1;])],
+-   [CAN_BUILD_64BIT="yes"],
+-   [CAN_BUILD_64BIT="no"]
+-)
+-CFLAGS="-m32"
+-AC_RUN_IFELSE(
+-   [AC_LANG_PROGRAM([], [return sizeof(void *) == 4 ? 0 : 1;])],
+-   [CAN_BUILD_32BIT="yes"],
+-   [CAN_BUILD_32BIT="no"]
+-)
+-CFLAGS="$TMP_CFLAGS"
+-
+-# Gather user requests
+-WANTS_64BIT=""
+-AC_ARG_WITH(64bit,
+-   AC_HELP_STRING([--with-64bit], [build 64-bit version]),
+-   [if test "$withval" != "no"; then
+-      if test "$CAN_BUILD_64BIT" = "no"; then
+-         AC_MSG_ERROR([Don't know how to build a 64-bit object.])
+-      fi
+-      WANTS_64BIT="yes"
+-   else
+-      WANTS_64BIT="no"
+-   fi]
+-)
+-WANTS_32BIT=""
+-AC_ARG_WITH(32bit,
+-   AC_HELP_STRING([--with-32bit], [build 32-bit version]),
+-   [if test "$withval" != "no"; then
+-      if test "$CAN_BUILD_32BIT" = "no"; then
+-         AC_MSG_ERROR([Don't know how to build a 32-bit object.])
+-      fi
+-      WANTS_32BIT="yes"
+-   else
+-      WANTS_32BIT="no"
+-   fi]
+-)
+-
+-# Build only 64bit by default, unless user requests 32bit, or requests not to
+-# build 64bit, or the system doesn't support 64bit. This logic will have to be
+-# changed if we want to support fat 64/32 binaries.
+-ARCH_64BIT=""
+-ARCH_32BIT=""
+-if test "$CAN_BUILD_64BIT" = "yes" \
+-		-a "$WANTS_32BIT" != "yes" \
+-		-a "$WANTS_64BIT" != "no"; then
+-  	ARCH_64BIT="-m64"
+-else
+-   if test "$CAN_BUILD_32BIT" = "no"; then
+-      AC_MSG_ERROR([Don't know how to build a 32-bit object.])
+-   fi
+-   ARCH_32BIT="-m32"
+-fi
+-
+-# Set up summary display for user and export variables.
+-WITH_64BIT="false"
+-WITH_32BIT="false"
+-if test "$ARCH_64BIT" != ""; then
+-   WITH_64BIT="true"
+-fi
+-if test "$ARCH_32BIT" != ""; then
+-   WITH_32BIT="true"
+-fi
+-
+-# add fPIC flag for Linux 64bit builds
+-PICFLAGS=""
+-if test "$ARCH_64BIT" != ""; then
+-   if test "$ARCH" = "LINUX"; then
+-      PICFLAGS=" -fPIC"
+-   fi
++if test "$CPU" = "x86"; then
++	# Architecture -- pointer size
++	# This is set up to allow compiling fat (64/32) binaries eventually.  -JG
++
++	# First find out which ptr sizes we can support
++	# NB: Must do AC_PROG_CC above this, or it will fail on Slack 10.2.
++	TMP_CFLAGS="$CFLAGS"
++	CFLAGS="-m64"
++	AC_RUN_IFELSE(
++	   [AC_LANG_PROGRAM([], [return sizeof(void *) == 8 ? 0 : 1;])],
++	   [CAN_BUILD_64BIT="yes"],
++	   [CAN_BUILD_64BIT="no"]
++	)
++	CFLAGS="-m32"
++	AC_RUN_IFELSE(
++	   [AC_LANG_PROGRAM([], [return sizeof(void *) == 4 ? 0 : 1;])],
++	   [CAN_BUILD_32BIT="yes"],
++	   [CAN_BUILD_32BIT="no"]
++	)
++
++	CFLAGS="$TMP_CFLAGS"
++	
++	# Gather user requests
++	WANTS_64BIT=""
++	AC_ARG_WITH(64bit,
++	   AC_HELP_STRING([--with-64bit], [build 64-bit version]),
++	   [if test "$withval" != "no"; then
++	      if test "$CAN_BUILD_64BIT" = "no"; then
++	         AC_MSG_ERROR([Don't know how to build a 64-bit object.])
++	      fi
++	      WANTS_64BIT="yes"
++	   else
++	      WANTS_64BIT="no"
++	   fi]
++	)
++
++	WANTS_32BIT=""
++	AC_ARG_WITH(32bit,
++	   AC_HELP_STRING([--with-32bit], [build 32-bit version]),
++	   [if test "$withval" != "no"; then
++	      if test "$CAN_BUILD_32BIT" = "no"; then
++	         AC_MSG_ERROR([Don't know how to build a 32-bit object.])
++	      fi
++	      WANTS_32BIT="yes"
++	   else
++	      WANTS_32BIT="no"
++	   fi]
++	)
++
++
++	# Build only 64bit by default, unless user requests 32bit, or requests not to
++	# build 64bit, or the system doesn't support 64bit. This logic will have to be
++	# changed if we want to support fat 64/32 binaries.
++	ARCH_64BIT=""
++	ARCH_32BIT=""
++	if test "$CAN_BUILD_64BIT" = "yes" \
++			-a "$WANTS_32BIT" != "yes" \
++			-a "$WANTS_64BIT" != "no"; then
++	  	ARCH_64BIT="-m64"
++	else
++	   if test "$CAN_BUILD_32BIT" = "no"; then
++	      AC_MSG_ERROR([Don't know how to build a 32-bit object.])
++	   fi
++	   ARCH_32BIT="-m32"
++	fi
++
++
++	# Set up summary display for user and export variables.
++	WITH_64BIT="false"
++	WITH_32BIT="false"
++	if test "$ARCH_64BIT" != ""; then
++	   WITH_64BIT="true"
++	fi
++	if test "$ARCH_32BIT" != ""; then
++	   WITH_32BIT="true"
++	fi
++	
++	# add fPIC flag for Linux 64bit builds
++	PICFLAGS=""
++	if test "$ARCH_64BIT" != ""; then
++	   if test "$ARCH" = "LINUX"; then
++	      PICFLAGS=" -fPIC"
++	   fi
++	fi
++
++	#echo "****** ARCH_64BIT: $ARCH_64BIT" 
++	#echo "****** ARCH_32BIT: $ARCH_32BIT" 
++	
++	# Combine the bit flags into one symbol to be added to ARCHFLAGS later
++	ARCH_BITFLAGS="$ARCH_64BIT $ARCH_32BIT"
++	
++	# Feed the right arch flags to Xcode for MouseWindow, DisplayWindow
++	BUILD_ARCH=""
++	if test "$ARCH" = "MACOSX"; then  # this trips up slack 10.2, so don't bother
++	   if test "$WITH_32BIT" = "true"; then
++	      BUILD_ARCH+="i386"
++	   fi
++	   if test "$WITH_64BIT" = "true"; then
++	      BUILD_ARCH+="x86_64"
++	   fi
++	fi
++fi
++if test "$CPU" = "arm"; then
++	PICFLAGS=" -fPIC"
++	BUILD_ARCH="arm"
+ fi
+ AC_SUBST(PICFLAGS)
+-
+-#echo "****** ARCH_64BIT: $ARCH_64BIT" 
+-#echo "****** ARCH_32BIT: $ARCH_32BIT" 
+-
+-# Combine the bit flags into one symbol to be added to ARCHFLAGS later
+-ARCH_BITFLAGS="$ARCH_64BIT $ARCH_32BIT"
+ AC_SUBST(ARCH_BITFLAGS)
+-
+-# Feed the right arch flags to Xcode for MouseWindow, DisplayWindow
+-BUILD_ARCH=""
+-if test "$ARCH" = "MACOSX"; then  # this trips up slack 10.2, so don't bother
+-   if test "$WITH_32BIT" = "true"; then
+-      BUILD_ARCH+="i386"
+-   fi
+-   if test "$WITH_64BIT" = "true"; then
+-      BUILD_ARCH+="x86_64"
+-   fi
+-fi
+ AC_SUBST(BUILD_ARCH)
+ #############################################################################
+ 
+@@ -276,14 +300,14 @@ AC_SUBST(PYTHON_SUPPORT)
+ AC_SUBST(PYTHON)
+ 
+ # Documentation options
+-HTMLDESTDIR="$CMIXDIR"/docs/html          # default location
++HTMLDIR="$CMIXDIR"/docs/html          # default location
+ AC_ARG_WITH(docdir,
+    AC_HELP_STRING([--with-docdir=PATH], [put documentation in this directory]),
+    [if test "$withval" != "no" && test "$withval" != "yes"; then
+-      AC_SUBST(HTMLDESTDIR, ["$withval"/html]),
++      AC_SUBST(HTMLDIR, ["$withval"/html]),
+    fi]
+ )
+-AC_SUBST(HTMLDESTDIR)
++AC_SUBST(HTMLDIR)
+ 
+ # NetPlay options
+ NPLAY_SUPPORT=FALSE                       # default

@@ -1,0 +1,3 @@
+EToS (Efficient Technology of Spike sorting; Extracellular recording
+To Spike trains) is an open-source system for spike sorting. EToS
+contains the programs of spike detection, feature extraction and clustering

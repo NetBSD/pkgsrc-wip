@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/isawig2slha${PYVERSSUFFIX}
+bin/slha2isawig${PYVERSSUFFIX}
+bin/slhaplot${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pyslha.py
+${PYSITELIB}/pyslha.pyc
+${PYSITELIB}/pyslha.pyo

@@ -1,0 +1,15 @@
+(1) Only tried with NetBSD/amd64, just starting. (Thanks @tsutsuii)
+   - Test is only done by FreeWnn, but not successfull even with it 
+     (you need to start jserver before you start mule)
+
+   (Now tested also on NetBSD/i386)
+
+(2) src/xemacs is not handled yet
+
+(3) in some case you will see
+modena@makoto 13:51:14/150407(..wip/mule11)% mule
+Fatal error (6).zsh: abort (core dumped)  mule
+
+My case was I had following line in .Xdefaults
+ Emacs.Font:     -*-*-medium-r-normal--14-*-*-*-*-*-fontset-14
+This is harmfull for current mule-1.1

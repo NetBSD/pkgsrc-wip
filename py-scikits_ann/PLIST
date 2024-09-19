@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}.egg-info/namespace_packages.txt
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/scikits.ann-${PYPKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/scikits/__init__.py
+${PYSITELIB}/scikits/ann/ANN.py
+${PYSITELIB}/scikits/ann/ANN.pyc
+${PYSITELIB}/scikits/ann/ANN.pyo
+${PYSITELIB}/scikits/ann/_ANN.so
+${PYSITELIB}/scikits/ann/__init__.py
+${PYSITELIB}/scikits/ann/__init__.pyc
+${PYSITELIB}/scikits/ann/__init__.pyo
+${PYSITELIB}/scikits/ann/info.py
+${PYSITELIB}/scikits/ann/info.pyc
+${PYSITELIB}/scikits/ann/info.pyo
+${PYSITELIB}/scikits/ann/setup.py
+${PYSITELIB}/scikits/ann/setup.pyc
+${PYSITELIB}/scikits/ann/setup.pyo
+${PYSITELIB}/scikits/ann/version.py
+${PYSITELIB}/scikits/ann/version.pyc
+${PYSITELIB}/scikits/ann/version.pyo

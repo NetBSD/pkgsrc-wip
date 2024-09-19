@@ -1,0 +1,551 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- lsh.1.orig	Sat Jan  8 09:22:53 2000
++++ lsh.1
+@@ -77,7 +77,7 @@ is not designed to run complex scripts, 
+ ,
+ .BR gawk(1)
+ ,
+-.BR m4(info)
++.BR m4(1)
+ ,
+ .BR perl(1)
+ ,
+@@ -171,7 +171,7 @@ environment variable for a local tty is 
+ All builtin commands are case insensitive.
+ .PP
+ .TP
+-.I ALIAS: 
++.I ALIAS
+ Allows the abreviation of an external command. For example the 
+ program /usr/bin/joe could be invoked by typing 
+ .B EDIT 
+@@ -185,7 +185,7 @@ is defined twice, the second definition 
+ alias is deleted, the previous definition becomes available
+ again.
+ .TP
+-.I BREAK: 
++.I BREAK
+ Allows the masking of selected signals. To ignore a signal type
+ .B BREAK OFF [SIGNALNUMBER] 
+ where SIGNALNUMBER will default to the value of
+@@ -204,7 +204,7 @@ the default action on receiving a signal
+ shells which will ignore 
+ .B SIG_INT
+ .TP
+-.I BYE: 
++.I BYE
+ or
+ .I EXIT 
+ or
+@@ -219,7 +219,7 @@ character (usually ^D) will exit without
+ .TP
+ .I CALL 
+ or 
+-.I @: 
++.I @
+ Will try to read commands from the file specified
+ as argument. If that fails, they will try to execute the arguments.
+ .I ? 
+@@ -228,24 +228,24 @@ command if the previous external command
+ .TP
+ .I CD 
+ or
+-.I CHDIR: 
++.I CHDIR
+ If run without arguments, it will display your
+ current working directory, otherwise it will change to the directory
+ supplied as argument.
+ .TP
+-.I CLS: 
++.I CLS
+ Will attempt to clear the screen. If possible this command will use the 
+ .BR termcap(5) 
+ database.
+ .TP
+-.I COPY: 
++.I COPY
+ .B COPY SOURCEFILE [+ SOURCEFILE] [DESTINATIONFILE] 
+ Inefficiently
+ copies a file or set of files to a new file or directory. source files
+ separated by a + are concatenated. Wildcards can be used in source and
+ destination files, but this may produce unexpected results.
+ .TP
+-.I CTTY: 
++.I CTTY
+ Will try to open its argument for reading and appending. 
+ If the argument is a terminal, a prompt will also be printed. 
+ If its last argument is a 
+@@ -260,25 +260,25 @@ terminates once a 
+ is encountered. This command has been only
+ included for completeness and should not be used.
+ .TP
+-.I DATE: 
++.I DATE
+ Displays the date.
+ .TP
+ .I DEL 
+ or 
+-.I ERASE: 
++.I ERASE
+ Will delete the first argument, or whatever that argument expanded to.
+ .TP
+-.I DIR: 
++.I DIR
+ If run without arguments, it will list the contents of the
+ current working directory. Otherwise it will list the first argument,
+ or whatever that argument expanded to. See the 
+ .B DIRCMD
+ environment variable for the supported optional switches.
+ .TP
+-.I ECHO:
++.I ECHO
+ Displays all its arguments (with variable substitution).
+ .TP
+-.I MAP: 
++.I MAP
+ .B MAP [DRIVE=LINUXPATH] 
+ will assign a drive to a 
+ .SM Linux 
+@@ -290,7 +290,7 @@ will automagically substitute 
+ for drive (volume)
+ .B D:
+ .TP
+-.I PAUSE: 
++.I PAUSE
+ Will wait for the user to press a key. If a quoted string is
+ supplied as argument, it will be printed as message, for example 
+ .B PAUSE "Make my Day !" 
+@@ -300,16 +300,16 @@ and wait until the user strikes any key.
+ .TP
+ .I MD 
+ or
+-.I MKDIR: 
++.I MKDIR
+ Will try to create the directory given as argument.
+ No shell expansion takes place, and only the first directory in the
+ will argument list be created.
+ .TP
+-.I PATH: 
++.I PATH
+ Will set the search path. 
+ .B path "/usr/games" 
+ will set the path to games,
+-.B path c:\bin 
++.B path c:\ebin 
+ will set it to
+ .B /bin if
+ .B C: 
+@@ -317,31 +317,39 @@ has been mapped to the root directory.
+ .TP
+ .I RD 
+ or 
+-.I RMDIR: 
++.I RMDIR
+ Will try to remove the directory given as argument.
+ No shell expansion takes place, and only the first directory in the 
+ argument list will be removed.
+ .TP
+-.I REM: 
++.I REM
+ If this sequence occurs as the first characters on a line, then all following
+ characters will be ignored. Generally '#' is more useful.
+ .TP
+ .I REN 
+ or 
+-.I RENAME: 
++.I RENAME
+ Will rename files. If rename is interactive (
+ .B RENCMD 
+ has been set to include 
+ .B /c
+-), then <y> will rename a file, <a> will rename all files,
+-<q> will stop the rename procedure entirely, <u> will rename all files
++), then
++.I y
++will rename a file,
++.I a
++will rename all files,
++.I q
++will stop the rename procedure entirely,
++.I u
++will rename all files
+ which have a unique destination (ie those which will not overwrite an
+ existing file). Please note that a non-interactive rename will issue
+-B<no> warning on overwriting an existing file. Wildcards can be used,
++.B no
++warning on overwriting an existing file. Wildcards can be used,
+ but the results may be unpredictable.  Only the first two arguments will
+ be considered, the rest will be silently ignored.
+ .TP
+-.I PROMPT:
++.I PROMPT
+ .B PROMPT [PROMPTSTRING] 
+ Will change the appearance of the prompt. 
+ The default string is $N$G. The following escapes can be used. 
+@@ -413,43 +421,47 @@ $$ - Dollar Character
+ 
+ $_ - Newline Character
+ 
+-${B<lsh command>} - Will run any normal 
++${
++.B lsh command
++} - Will run any normal 
+ .SM 
+ lsh 
+ command.  
+ 
+-$[B<environment variable>] - Will print the value of any normal 
++$[
++.B environment variable
++] - Will print the value of any normal 
+ .SM lsh
+ environment variable.
+ .TP
+-.I SET: 
++.I SET
+ .B SET [VARIABLENAME[=]VALUE] 
+ will set VARIABLENAME to VALUE.
+ .B SET 
+ without arguments will display all environment variables.
+ .TP
+-.I TIME: 
++.I TIME
+ Displays the time - but only to the nearest second.
+ .TP
+-.I TYPE: 
++.I TYPE
+ Will echo the filename given as first argument to the screen.
+ .TP
+-.I UNALIAS: 
++.I UNALIAS
+ Will remove the definition of an alias. For example
+ .B UNALIAS EDIT
+ will remove the definition of 
+ .B EDIT
+ .TP
+-.I VER:
++.I VER
+ Displays the version of the shell. First public release was 0.44.
+ .TP
+-.I VOL: 
++.I VOL
+ Will print some unimportant information about the drive which has been 
+ assigned to a given 
+ .SM Linux 
+ path.
+ .TP
+-.I ZAP: 
++.I ZAP
+ .B ZAP DRIVE 
+ will delete a drive. This may obviously not be your
+ current drive.
+@@ -457,13 +469,24 @@ current drive.
+ .SH Shell Expansion
+ 
+ Shell expansion is case insensitive. The wildcard B<*> will match any
+-character except for a B<.> so to match filenames containing several
++character except for a
++.B .
++so to match filenames containing several
+ dots, the shell requires an argument like *.*.*.*. Any normal character
+-following a B<*> and before a B<.> will be 
++following a
++.B *
++and before a
++.B .
++will be 
+ .I ignored 
+ during expansion.
+-This means that normal characters are only useful before B<*> or once
+-B<*> matching has been terminated by a B<.> Only directories and regular
++This means that normal characters are only useful before
++.B *
++or once
++.B *
++matching has been terminated by a
++.B .
++Only directories and regular
+ files will be matched, thus no devices, symbolic links and the like will
+ be matched. Only files to which the user has some kind of access will be
+ matched.
+@@ -473,122 +496,182 @@ matched.
+ The following environment variables influence the behavior of the shell : 
+ 
+ .TP
+-.B TRUE : The value of this variables is used in conditional statements.
++.B TRUE
++: The value of this variables is used in conditional statements.
+ Its default value is 0 - so if the last external command returned 0, 
+ then any subsequent conditional will be evaluated, until a further
+ external command does not return 0.
+ 
+ .TP
+-.B DIRCMD : The options associated with the builtin command to list the
+-directory. Supported options are I</a>, I</b>, I</c>, I</p> and I</w>. Note
+-that, when using the I</c> switch, the difference between blocks
++.B DIRCMD
++: The options associated with the builtin command to list the
++directory. Supported options are
++.I /a
++,
++.I /b
++,
++.I /c
++,
++.I /p
++and
++.I /w
++. Note
++that, when using the
++.I /c
++switch, the difference between blocks
+ allocated and bytes used is larger than the real value, since the space
+ occupied by directories is not included in the number of bytes used.
+-The paging I</p> can be interrupted by typing I<q>.
+-
+-.TP
+-.B RENCMD : Option I</c> will make the B<RENAME> command interactive. 
+-
+-.TP
+-.B DELCMD : Option I</c> will make the B<ERASE> command interactive. 
++The paging
++.I /p
++can be interrupted by typing
++.I q
++.
++
++.TP
++.B RENCMD
++: Option
++.I /c
++will make the
++.B RENAME
++command interactive. 
++
++.TP
++.B DELCMD
++: Option
++.I /c
++will make the
++.B ERASE
++command interactive. 
+ 
+ .TP
+-.B TMOUT : The value of this variable tells the shell the number of 
++.B TMOUT
++: The value of this variable tells the shell the number of 
+ seconds to wait for input before terminating itself (Useful if people
+ tend to forget to log out).
+ 
+ .TP
+-.B LINES and B<COLUMNS> : used by the /p and /w switch of B<DIRCMD>
++.B LINES
++and
++.B COLUMNS
++: used by the /p and /w switch of
++.B DIRCMD
+ respectively to determine the layout of the directory listing.
+ 
+ .TP
+-.B UMASK : The default protection assigned to files created by the shell
++.B UMASK
++: The default protection assigned to files created by the shell
+ or any of its children. Its value has to be a 3 digit octal number.
+ 
+ .TP
+-.B PROMPT : Determines the appearance of the shell prompt. Note that the
+-builtin command B<prompt> does not modify this value, only the shells
+-internal representation of it. To modify this variable use the B<SET>
++.B PROMPT
++: Determines the appearance of the shell prompt. Note that the
++builtin command
++.B prompt
++does not modify this value, only the shells
++internal representation of it. To modify this variable use the
++.B SET
+ command instead.
+ 
+ .TP
+-.B NICE : Processes run in the background have their priority decreased
++.B NICE
++: Processes run in the background have their priority decreased
+ by this value. Its default value is 5.
+ 
+ .TP
+-.B PATH : Determines the path which is searched for commands by the
+-execvp() function. If not set, this defaults to B</bin:/usr/bin:> or
+-whatever your glibc uses as default. This should be set using 
++.B PATH
++: Determines the path which is searched for commands by the
++execvp() function. If not set, this defaults to
++.B /bin:/usr/bin:
++or
++whatever your libc uses as default. This should be set using 
+ .SM Linux
+-syntax, since only the builtin B<PATH> will try to convert drive
++syntax, since only the builtin
++.B PATH
++will try to convert drive
+ mappings into 
+ .SM Linux
+ paths (which might be ambiguous anyway, so rather
+ use set).
+ 
+ .TP
+-.B MAIL : The file 
++.B MAIL
++: The file 
+ .SM lsh
+ will check for mail on starting and on exit (If
+ new mail has arrived, then the shell will wait for a second exit or 
+ logout request). This variable may currently only point to one file.
+ 
+ .TP
+-.B HOME : The location of the users B<autoexec> file which is run on login
+-or if B<NOUNINIT> is set.
++.B HOME
++: The location of the users
++.B autoexec
++file which is run on login or if
++.B NOUNINIT
++is set.
+ 
+ .TP
+-.B FUNNY : If set, the shell will try to print funny error messages. 
++.B FUNNY
++: If set, the shell will try to print funny error messages. 
+ A value of 1 might be more funny than a larger value.
+ 
+ .TP
+-.B TERM : Tells the shell what termcap entry to use.
++.B TERM
++: Tells the shell what termcap entry to use.
+ 
+ .TP
+-.B NOUNINIT : Forces every shell spawned to read the 
++.B NOUNINIT
++: Forces every shell spawned to read the 
+ .I /etc/autoexec 
+ file
+ and the autoexec file in the home directory of the user.
+ 
+ .TP
+-.B NOMAP : Disallow new drive mappings.
++.B NOMAP
++: Disallow new drive mappings.
+ 
+ .TP
+-.B NOALIAS : Disallow definition of new aliases.
++.B NOALIAS
++: Disallow definition of new aliases.
+ 
+ .TP
+-.B NOSET : Disallow changing of the environment. Setting this variable
++.B NOSET
++: Disallow changing of the environment. Setting this variable
+ is irreversible and hence also blocks the modification of any of the
+ other variables.
+ 
+ .TP
+-.B NOBATCH : Disallows running of non-interactive background processes.
++.B NOBATCH
++: Disallows running of non-interactive background processes.
+ 
+ .TP
+-.B NOROOT : Disallows 
++.B NOROOT
++: Disallows 
+ .SM Linux
+ paths or quoted strings in command line, any
+ argument starting with a '/' will be converted into a '-'. So '/xvf' 
+ becomes '-xvf'. 
+ 
+ .TP
+-.B NOFREEDOM : Setting this variable is equivalent to setting all the 
++.B NOFREEDOM
++: Setting this variable is equivalent to setting all the 
+ above variables starting with NO.
+ 
+ .TP
+-.B OUTPUT : Output of processes running in the background will be appended
++.B OUTPUT
++: Output of processes running in the background will be appended
+ to the file which is defined in this variable. The default file is 
+ .I lsh.out 
+ 
+ .TP
+-.B SHLVL : The value of this variable is incremented each time a new 
++.B SHLVL
++: The value of this variable is incremented each time a new 
+ instance of the shell is invoked.
+ 
+ .SH Special Characters
+ 
+ Redirection reserves <>| Environment references reserve % Comments 
+ reserve # Wildcards reserve ?* and to a lesser degree . Command
+-separators reserve ; Drive and path specifications reserve :\
++separators reserve ; Drive and path specifications reserve :\e
+ Switches reserve / Batch calls reserve @ Concatenation during copy
+ reserves + Environment assignments reserves = Quoting reserves "
+ Backgrounding reserves ! 
+@@ -617,11 +700,11 @@ try to find that value, otherwise it jus
+ 3 - Individual command sequences are identified. Sequences are separated
+ by ';'. There are some exceptions to this : When you set the path,
+ using a command like 
+-.B PATH=c:\bin;c:\usr\bin
++.B PATH=c:\ebin;c:\eusr\ebin
+ , only the first command
+ sequence will be executed - otherwise the shell might try to run a
+ command called 
+-.B c:\usr\bin
++.B c:\eusr\ebin
+ ..
+ 
+ 4 - Options for a command sequence are identified. This means that
+@@ -688,7 +771,7 @@ ls -l ; whoami
+ 
+ zap z:
+ 
+-dir c:\bin 
++dir c:\ebin 
+ 
+ xterm ; ?exit
+ 
+@@ -712,12 +795,12 @@ help, command line limited to 127 charac
+ .SH SEE ALSO
+ 
+ 
+- .BR shells(5) 
+- ,
+- .BR chsh(1) 
+- ,
+- .BR ftpd(8) 
+- for information about having this shell
++.BR shells(5) 
++,
++.BR chsh(1) 
++,
++.BR ftpd(8) 
++for information about having this shell
+ as a login shell.
+ .BR termcap(5) 
+ for setting up a terminal description.
+@@ -732,8 +815,15 @@ in the file COPYING which you should hav
+ .SH BUGS
+ 
+ Oh, lots and lots. Statements after a call statement are ignored (or
+-worse - so avoid having a ; after @, ?, B<CALL> or B<CTTY>), no parameters can
++worse - so avoid having a ; after @, ?,
++.B CALL
++or
++.B CTTY
++), no parameters can
+ be passed to a batch file, little checking for excess parameter passed to
+-builtins, shell expansion is crufty I<and buggy>. However, some bugs
++builtins, shell expansion is crufty
++.I and
++.IR buggy
++. However, some bugs
+ have seniority (they have been propagated from the originals) and hence
+ are features. Be warned.

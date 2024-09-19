@@ -1,0 +1,31 @@
+$NetBSD$
+
+(1) string-to-int is an obsolete function; use `string-to-number' instead
+
+(2) use tc-is22 for emacs26 too
+
+--- ./lisp/tc-pre-base.in.orig	2016-03-21 18:53:18.000000000 +0900
++++ ./lisp/tc-pre-base.in	2016-12-23 21:48:21.000000000 +0900
+@@ -26,10 +26,10 @@
+   (cond ((string-match "XEmacs" emacs-version)
+ 	 'xemacs)
+ 	((and (boundp 'mule-version)
+-	      (>= (string-to-int mule-version) 4))
++	      (>= (string-to-number mule-version) 4))
+ 	 'mule-4)
+ 	((and (boundp 'mule-version)
+-	      (= (string-to-int mule-version) 3))
++	      (= (string-to-number mule-version) 3))
+ 	 'mule-3)
+ 	((numberp (string-match "^19" emacs-version))
+ 	 'mule-2)
+@@ -47,7 +47,8 @@
+ 	 'tc-is18)
+ 	((memq tcode-emacs-version '(mule-1 mule-2 mule-3 xemacs))
+ 	 'tc-is19)
+-	((numberp (string-match "^22" emacs-version))
++	((or (numberp (string-match "^22" emacs-version))
++	     (numberp (string-match "^26" emacs-version)) )
+ 	 'tc-is22)
+ 	(t
+ 	 'tc-is20))

@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/toluapp
+include/tolua++.h
+lib/libtoluapp.so
+share/toluapp/INSTALL
+share/toluapp/README
+share/toluapp/doc/index.html
+share/toluapp/doc/tolua++.html
+share/toluapp/doc/toluapp.gif

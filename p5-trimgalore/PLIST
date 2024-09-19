@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/trim_galore
+share/trimgalore/test_files/4_seqs_with_Ns.fastq.gz
+share/trimgalore/test_files/colorspace_file.fastq
+share/trimgalore/test_files/empty_file.fastq
+share/trimgalore/test_files/illumina_100K.fastq.gz
+share/trimgalore/test_files/nextera_100K.fastq.gz
+share/trimgalore/test_files/smallRNA_100K.fastq.gz
+share/trimgalore/test_files/truncated.fq.gz

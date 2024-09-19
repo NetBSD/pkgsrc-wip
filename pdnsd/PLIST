@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:05 thomasklausner Exp $
+man/man5/pdnsd.conf.5
+man/man8/pdnsd-ctl.8
+man/man8/pdnsd.8
+sbin/pdnsd
+sbin/pdnsd-ctl
+share/examples/pdnsd/pdnsd.conf.sample
+share/examples/rc.d/pdnsd

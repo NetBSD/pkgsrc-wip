@@ -1,0 +1,19 @@
+package termdbms
+        imports modernc.org/sqlite
+        imports modernc.org/libc
+        imports modernc.org/libc/errno: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/errno
+package termdbms
+        imports modernc.org/sqlite
+        imports modernc.org/libc
+        imports modernc.org/libc/signal: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/signal
+package termdbms
+        imports modernc.org/sqlite
+        imports modernc.org/libc/sys/types: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/sys/types
+package termdbms
+        imports modernc.org/sqlite
+        imports modernc.org/libc
+        imports modernc.org/libc/time: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/time
+package termdbms
+        imports modernc.org/sqlite
+        imports modernc.org/libc
+        imports modernc.org/libc/unistd: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/unistd

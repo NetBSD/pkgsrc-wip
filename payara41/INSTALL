@@ -1,0 +1,7 @@
+#!@SH@
+
+case "${STAGE}" in
+POST-INSTALL)
+	${RUN} ${CHOWN} -R @PAYARA_USER@:@PAYARA_GROUP@ @PAYARA_HOME@/glassfish/domains
+	;;
+esac

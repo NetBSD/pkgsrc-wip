@@ -1,0 +1,17 @@
+$NetBSD$
+
+RMD160 (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 88330d01a8404f46e0c795e1b6cb92fce159fe5c
+SHA512 (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 607c5319c5fffb06a7f2beed9769cad29e32c9384de9d7b74ff791e03e2e10f720db3b29dcb6c7a7ec81e057368fe6b5887cc1ddb1207fdf3977825353dd5dfb
+Size (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 12573451 bytes
+SHA1 (patch-config.h.in) = 9d7f701ba8577e6501e4d64e80adef397255e46a
+SHA1 (patch-gum_backend-elf_gumelfmodule.c) = b30c4e1ac7e9deefe530cc11aebc50233e5af8f6
+SHA1 (patch-gum_backend-netbsd_gummemory-netbsd.c) = bb2c9c1597ffd127935d4a95425c19f86a8e970e
+SHA1 (patch-gum_backend-netbsd_gumnetbsd.h) = 4d2e92dce09e162dc020e913f3d1f8783f581e86
+SHA1 (patch-gum_backend-netbsd_gumprocess-netbsd.c) = d267fe6159596069b5dfe6becd90d44720421f98
+SHA1 (patch-gum_backend-posix_gummemory-posix.c) = dcbfb08821ac1cb0fedf672e409c5289fbc594bd
+SHA1 (patch-gum_gumdefs.h) = cb24f98c906572196228ee0d09c2cd2dcaa5c306
+SHA1 (patch-gum_gumprocess.c) = 915a233f242186a45b375ef2690cf534d8ad39f2
+SHA1 (patch-gum_meson.build) = 24f1b2351a48058e8305daac00c422088fad25ff
+SHA1 (patch-libs_gum_prof_gumbusycyclesampler-netbsd.c) = 2fad7c8e1feaa243b2dafc63f74d1b5d1430f5ec
+SHA1 (patch-libs_gum_prof_meson.build) = c3728d856ea8871714679c028844f827b47282d0
+SHA1 (patch-meson.build) = 35def371e4561904c96d386f70e4fbe8ab5cb5ef

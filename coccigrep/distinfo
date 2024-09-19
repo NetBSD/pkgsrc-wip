@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.6 2017/05/05 11:04:15 leot Exp $
+
+RMD160 (coccigrep-1.20.tar.gz) = 01b955b84ebb8b284e227c57767ddea8e8f985c8
+SHA512 (coccigrep-1.20.tar.gz) = 35d6a43b515c261ba025b876a72566581f892624eb9f47cde4121f16b2922ead8cd94e2c0ea6e00e4c64a3fe0cdcc4aeadc4c49900a8de8cfc0b589208ecae9c
+Size (coccigrep-1.20.tar.gz) = 33027 bytes

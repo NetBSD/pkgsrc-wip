@@ -1,0 +1,7 @@
+The DISPred project provides tools for calculating deep inelastic scattering
+(DIS) cross sections at LO and NLO in QCD. An example program is provided which
+will calculate the cross sections for neutral and charged current
+electron-proton scattering.
+
+DISpred makes use of QCDNUM (v16) for QCD evolution and the NLO coefficient
+functions and uses LHAPDF for the input PDFs.

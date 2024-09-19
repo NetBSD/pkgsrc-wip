@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1 2013/06/12 16:51:13 noud4 Exp $
+
+--- libtest/Makefile.in.orig	2013-06-12 15:31:34.000000000 +0000
++++ libtest/Makefile.in	2013-06-12 15:32:24.000000000 +0000
+@@ -93,8 +93,8 @@
+ install_sh = @install_sh@
+ topdir = @topdir@
+ 
+-INCLUDES = -I../xbase
+-LDADD = -L../xbase -lxbase
++INCLUDES = -I$(top_builddir)
++LDADD = -L$(top_builddir)/xbase -lxbase
+ 
+ noinst_PROGRAMS = indextst exptest locktest testdate testhtml.cgi
+ 

@@ -1,0 +1,6 @@
+OEPLITZ is a FORTRAN90 library which solves a variety of Toeplitz and circulant
+linear systems. The package can also handle circulant Toeplitz systems, and
+some other more complicated but related forms. The TOEPLITZ package was written
+in the early 1980's by a joint working group of American and Soviet
+mathematicians. The original, true, correct version of TOEPLITZ is available
+in the TOEPLITZ subdirectory of the NETLIB web site

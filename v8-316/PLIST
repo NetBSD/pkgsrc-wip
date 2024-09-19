@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/25 13:23:13 fhajny Exp $
+bin/d8
+include/v8-debug.h
+include/v8-preparser.h
+include/v8-profiler.h
+include/v8-testing.h
+include/v8.h
+include/v8stdint.h
+lib/libv8.so
+lib/libv8.so.1

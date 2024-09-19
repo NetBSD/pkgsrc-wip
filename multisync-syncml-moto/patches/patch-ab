@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/12/13 17:50:15 noud4 Exp $
+
+--- configure.in.orig	2004-04-12 23:03:23.000000000 +0200
++++ configure.in
+@@ -30,7 +30,7 @@ AC_DEFINE(OPENSSL_NO_KRB5,1,Disable SSL 
+ dnl Check for 0.8.1 or later of libwbxml2
+ AC_CHECK_LIB(wbxml2, wbxml_conv_wbxml2xml)
+ AC_MSG_CHECKING(for correct libwbxml2 version)
+-AC_TRY_COMPILE([#include <wbxml2/wbxml.h>],[WBXMLConvXML2WBXMLParams w; w.wbxml_version = WBXML_VERSION_11 ],AC_MSG_RESULT(yes);LIBWBXML=1,AC_MSG_RESULT(no);LIBWBXML=0)
++AC_TRY_COMPILE([#include <wbxml.h>],[WBXMLConvXML2WBXMLParams w; w.wbxml_version = WBXML_VERSION_11 ],AC_MSG_RESULT(yes);LIBWBXML=1,AC_MSG_RESULT(no);LIBWBXML=0)
+ AC_DEFINE_UNQUOTED(USE_LIBWBXML, ${LIBWBXML},Defined if the correct libwbxml2 version exists.)
+ if test "x${LIBWBXML}" = "x0"; then
+    echo "To enable WBXML communication (for e.g. cell phones) you must have version 0.8.1 or later of libwbxml2."
+@@ -51,6 +51,6 @@ AC_SUBST(EVO_RPM_VER)
+ AC_OUTPUT([
+ Makefile
+ src/Makefile
+-${MULTISYNC_TOP}/specs/multisync-syncml.spec
++../../specs/multisync-syncml.spec
+ ])
+ 

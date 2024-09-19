@@ -1,0 +1,4 @@
+Runs.
+Its handling of the data directory is strange (it seems to need a folder called "data" in the current dir - not ideal).
+There's no way to skip the intro and selecting a game mode with the mouse doesn't seem to work.
+Needs a .desktop file, etc.

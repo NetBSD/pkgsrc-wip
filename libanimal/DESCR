@@ -1,0 +1,5 @@
+AnImaL is an imaging and computer vision library written in C.
+
+Differently from most other toolkits, it is intended to provide
+the maximum functionality by making strong usage of similar
+libraries.

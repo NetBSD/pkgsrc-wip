@@ -1,0 +1,1 @@
+bin/ytdl @PREFIX@/bin/ytdl@PYVERSSUFFIX@

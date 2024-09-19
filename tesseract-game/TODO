@@ -1,0 +1,1 @@
+Segfaults on NetBSD with optimizations, works with -O0.

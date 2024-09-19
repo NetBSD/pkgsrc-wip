@@ -1,0 +1,5 @@
+Postoffice is a simple SMTP mail server and client.  It supports greylisting,
+auth login, adapted sendmail milters, tcpwrappers (hosts.deny) and
+BSD mailwrappers (mailer.conf).
+
+User guide : http://pbraun.nethence.com/doc/mail/postoffice.html

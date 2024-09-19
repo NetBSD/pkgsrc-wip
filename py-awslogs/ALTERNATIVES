@@ -1,0 +1,1 @@
+bin/awslogs @PREFIX@/bin/awslogs@PYVERSSUFFIX@

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2004/08/10 21:30:12 rillig Exp $
+bin/cvs-syncmail

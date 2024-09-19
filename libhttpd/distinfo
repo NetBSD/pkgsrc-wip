@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2005/03/28 13:28:13 thomasklausner Exp $
+
+RMD160 (libhttpd-1.4.tar.gz) = 04ab4bae4788c748a1bddc5f9676895d5d27751b
+Size (libhttpd-1.4.tar.gz) = 169015 bytes
+SHA1 (patch-aa) = 74a30b14262949aa6e717522ebe719c1a33ca6c2
+SHA1 (patch-ab) = a3c76197bb6e0940a747c29a6f7fbf88894254f4

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.3 2013/01/21 15:18:23 othyro Exp $
+
+RMD160 (libdisasm-0.23.tar.gz) = bd205e2399724e37738c9ad633fd24321acef5ff
+Size (libdisasm-0.23.tar.gz) = 454721 bytes

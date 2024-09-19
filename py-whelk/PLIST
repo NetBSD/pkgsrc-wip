@@ -1,0 +1,17 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/whelk/__init__.py
+${PYSITELIB}/whelk/__init__.pyc
+${PYSITELIB}/whelk/__init__.pyo
+${PYSITELIB}/whelk/_subprocess.py
+${PYSITELIB}/whelk/_subprocess.pyc
+${PYSITELIB}/whelk/_subprocess.pyo
+${PYSITELIB}/whelk/subprocess_32.py
+${PYSITELIB}/whelk/subprocess_32.pyc
+${PYSITELIB}/whelk/subprocess_32.pyo
+${PYSITELIB}/whelk/subprocess_33.py
+${PYSITELIB}/whelk/subprocess_33.pyc
+${PYSITELIB}/whelk/subprocess_33.pyo
+${PYSITELIB}/whelk/subprocess_34.py
+${PYSITELIB}/whelk/subprocess_34.pyc
+${PYSITELIB}/whelk/subprocess_34.pyo

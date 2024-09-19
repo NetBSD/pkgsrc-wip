@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# Tech-debt
+
+A simple tool to quantify your technical debt
+
+## Installation  
+
+requirements : python 3 
+
+
+pip install techdebt
+
+## Usage 
+
+
+1. Adding debpt annotation
+
+add debt annotations in your project files to mark technical debt:
+
+- @debt() 
+- @debt("debt_type") or 
+...

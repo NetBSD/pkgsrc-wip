@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- kcmkwin/kwindesktop/CMakeLists.txt.orig	2016-04-19 11:12:37.000000000 +0000
++++ kcmkwin/kwindesktop/CMakeLists.txt
+@@ -21,6 +21,7 @@ target_link_libraries(kcm_kwindesktop
+     KF5::WindowSystem
+     KF5::XmlGui
+     ${X11_LIBRARIES}
++    kwineffects
+     kwin4_effect_builtins
+ )
+ 

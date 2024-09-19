@@ -1,0 +1,45 @@
+$NetBSD: patch-Makefile,v 1.1 2012/12/30 00:40:59 othyro Exp $
+
+Let's not hardcode everything important and relevant.
+
+--- Makefile.orig	2000-11-09 17:58:19.000000000 +0000
++++ Makefile
+@@ -1,14 +1,14 @@
+-MAKE=make
+-CC=gcc
+-CFLAGS=-Wall -g
+-RM=rm -f
+-X=/usr/X11R6
+-INCLUDES=-I$(X)/include
+-LIBPATHS=-L${X}/lib
+-LIBS=-lXext
++MAKE?=make
++CC?=gcc
++CFLAGS?=-Wall -g
++RM?=rm -f
++X?=/usr/X11R6
++#INCLUDES=-I$(X)/include
++LDFLAGS?=-L${X}/lib
++LIBS?=-lXext
+ PROG=wmswallow
+ OBJS=wmswallow.o
+-SH=/bin/sh
++SH?=/bin/sh
+ 
+ default:
+ 	@echo "Type make <platform> to compile."
+@@ -29,7 +29,7 @@ solaris-gcc:
+ 		LIBS="-lXext -lX" main
+ 
+ main:	${OBJS}
+-	${CC} ${CFLAGS} $(INCLUDES) ${OBJS} -o ${PROG} ${LIBPATHS} ${LIBS}
++	${CC} ${CFLAGS} ${OBJS} -o ${PROG} ${LDFLAGS} ${LIBS}
+ 
+ tarball:
+ 	${SH} -c "cd ..;tar cpO wmswallow/*.c wmswallow/Makefile \
+@@ -42,4 +42,4 @@ clean:
+ 	${RM} ${PROG} *~ *.o
+ 
+ .c.o:
+-	${CC} ${CFLAGS} $(INCLUDES) -c $<
++	${CC} ${CFLAGS} -c $<

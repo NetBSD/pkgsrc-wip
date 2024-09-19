@@ -1,0 +1,2 @@
+The downhill package provides algorithms for minimizing scalar
+loss functions that are defined using Theano

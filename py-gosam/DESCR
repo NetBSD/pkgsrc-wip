@@ -1,0 +1,9 @@
+The package GoSam allows for the automated calculation of one-loop
+amplitudes for multi-particle processes in renormalizable quantum
+field theories. The amplitudes, which are generated in terms of Feynman
+diagrams, can be reduced using either D-dimensional integrand-level
+decomposition or by tensor reduction. GoSam can be used to calculate
+one-loop QCD and/or electroweak corrections to Standard Model processes
+and offers the flexibility to link model files for theories Beyond the
+Standard Model. A standard interface (BLHA1, BLHA2) to programs
+calculating real radiation is also implemented.

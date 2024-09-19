@@ -1,0 +1,26 @@
+$NetBSD$
+
+Disable generating manual in pdf
+
+--- doc/Makefile.am.orig	2018-06-23 21:13:47.982109206 +0900
++++ doc/Makefile.am	2018-06-23 21:17:30.011571953 +0900
+@@ -9,12 +9,12 @@ TEXINFO_TEX = no-texinfo.tex
+ 
+ MAKEINFO = $(EMACS) -q -no-site-file -batch -l texinfmt -f batch-texinfo-format
+ 
+-all: manual.pdf
++all:
+ 
+ manual.pdf: tc.texinfo
+-	ptex tc.texinfo
+-	$(EMACS) -q -no-site-file -batch -l $(srcdir)/texindex.el \
+-		-f batch-texindex tc.cp tc.cp tc.fn tc.ky tc.tp tc.vr
+-	ptex tc.texinfo
+-	mv tc.dvi manual.dvi
+-	dvipdfm manual.dvi
++	echo tc.texinfo
++#	$(EMACS) -q -no-site-file -batch -l $(srcdir)/texindex.el \
++#		-f batch-texindex tc.cp tc.cp tc.fn tc.ky tc.tp tc.vr
++#	ptex tc.texinfo
++#	mv tc.dvi manual.dvi
++#	dvipdfm manual.dvi

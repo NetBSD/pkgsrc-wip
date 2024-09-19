@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2004/04/19 16:06:39 thomasklausner Exp $
+
+--- Makefile.nol.orig	Wed Jul 31 00:19:57 2002
++++ Makefile.nol
+@@ -6,6 +6,7 @@
+ CC       = cc
+ RM_F     = rm -f
+ LDADD    = -lm
++LDADD   += ${LIBOSSAUDIO}
+ #LDADD  += -lesd
+ #LDADD  += -lossaudio
+ 

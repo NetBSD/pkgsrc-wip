@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/25 19:02:15 marttikuparinen Exp $
+lib/dovecot/imap/lib90_antispam_plugin.so

@@ -1,0 +1,4 @@
+guile-stis-parser provides a functional parser combinator library that
+supports backtracking and a small logical framework. The idea is to
+build up chunks that are memoized and there is no clear scanner/parser
+separation, chunks can be expressions as well as simple tokens.

@@ -1,0 +1,2 @@
+This module provides a Catalyst::Log implementation that uses
+Log::Log4perl as the underlying log mechanism.

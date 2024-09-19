@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
+bin/aoi
+lib/java/${PKGNAME}/ArtOfIllusion.jar
+lib/java/${PKGNAME}/Icons/32x32.png
+lib/java/${PKGNAME}/Icons/48x48.png
+lib/java/${PKGNAME}/Icons/64x64.png
+lib/java/${PKGNAME}/Plugins/Help/AOIHelp.zip
+lib/java/${PKGNAME}/Plugins/Help/helpgui-1.1a.jar
+lib/java/${PKGNAME}/Plugins/Help/jhall.jar
+lib/java/${PKGNAME}/Plugins/Help/jhelpaction.jar
+lib/java/${PKGNAME}/Plugins/Help/pircbot.jar
+lib/java/${PKGNAME}/Plugins/HelpPlugin.jar
+lib/java/${PKGNAME}/Plugins/OSSpecific.jar
+lib/java/${PKGNAME}/Plugins/PluginRegistry.jar
+lib/java/${PKGNAME}/Plugins/PostInstall.jar
+lib/java/${PKGNAME}/Plugins/Renderers.jar
+lib/java/${PKGNAME}/Plugins/SPManager.jar
+lib/java/${PKGNAME}/Plugins/Tools.jar
+lib/java/${PKGNAME}/Plugins/Translators.jar
+lib/java/${PKGNAME}/Scripts/Objects/Fur.aoi
+lib/java/${PKGNAME}/Scripts/Objects/Fur.bsh
+lib/java/${PKGNAME}/Scripts/Objects/Particle Jet.bsh
+lib/java/${PKGNAME}/Scripts/Objects/README.txt
+lib/java/${PKGNAME}/Scripts/Startup/README.txt
+lib/java/${PKGNAME}/Scripts/Tools/Join Objects.bsh
+lib/java/${PKGNAME}/Scripts/Tools/Platonic Solid.bsh
+lib/java/${PKGNAME}/Scripts/Tools/README.txt
+lib/java/${PKGNAME}/Scripts/Tools/Sculpt.bsh
+lib/java/${PKGNAME}/Scripts/Tools/Text.bsh
+lib/java/${PKGNAME}/Scripts/Tools/Thicken.bsh
+share/doc/${PKGNAME}/HISTORY
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/README

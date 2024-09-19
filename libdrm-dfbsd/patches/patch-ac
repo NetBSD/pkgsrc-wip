@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.4 2012/02/16 20:30:56 hans Exp $
+
+--- xf86drm.h.orig	2010-03-05 23:21:13.000000000 +0000
++++ xf86drm.h
+@@ -35,7 +35,11 @@
+ #define _XF86DRM_H_
+ 
+ #include <stdarg.h>
++#if @ATOMIC_OPS_CHECK@
++#include <sys/atomic.h>
++#else
+ #include <sys/types.h>
++#endif
+ #include <stdint.h>
+ #include <drm.h>
+ 
+@@ -55,6 +59,9 @@
+ #else /* One of the *BSDs */
+ 
+ #include <sys/ioccom.h>
++#ifdef __sun
++#define _IOC(d, x, y, t)	((int)((uint32_t)(d | (((sizeof (t)) & IOCPARM_MASK)<<16) | (x<<8) | y)))
++#endif
+ #define DRM_IOCTL_NR(n)         ((n) & 0xff)
+ #define DRM_IOC_VOID            IOC_VOID
+ #define DRM_IOC_READ            IOC_OUT
+@@ -333,7 +340,12 @@ typedef struct _drmSetVersion {
+ #define DRM_LOCK_HELD  0x80000000U /**< Hardware lock is held */
+ #define DRM_LOCK_CONT  0x40000000U /**< Hardware lock is contended */
+ 
+-#if defined(__GNUC__) && (__GNUC__ >= 2)
++#if @ATOMIC_OPS_CHECK@ /* configured by pkgsrc */
++
++#define DRM_CAS(lock, old, new, __ret)	\
++ (__ret = atomic_cas_uint(&__drm_dummy_lock(lock), (old), (new)) != (old));
++
++#elif defined(__GNUC__) && (__GNUC__ >= 2)
+ # if defined(__i386) || defined(__AMD64__) || defined(__x86_64__) || defined(__amd64__)
+ 				/* Reflect changes here to drmP.h */
+ #define DRM_CAS(lock,old,new,__ret)                                    \

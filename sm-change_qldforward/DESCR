@@ -1,0 +1,6 @@
+The Change Qmail-LDAP Forward SquirrelMail plugin allows users to manipulate
+mailforwarding attributes in an LDAP database through a Squirrelmail plugin.
+It was designed with qmail-ldap implementations in mind, but it may very well
+work for other LDAP mailserver backends.  If anyone has such a server in mind,
+I would be interested in hearing if it works, and/or helping to extend the
+functionality of the plugin.

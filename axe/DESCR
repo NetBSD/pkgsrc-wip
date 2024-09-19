@@ -1,0 +1,3 @@
+Command line tool that lets you look inside .ATR and .XFD files,
+insert new files into them, remove files from them, etc. Great
+tool to go along with the atari800 emulator package.

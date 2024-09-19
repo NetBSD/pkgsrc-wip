@@ -1,0 +1,300 @@
+--- bgpd/rde.c.orig	2007-01-11 15:02:39.000000000 +1000
++++ bgpd/rde.c	2007-01-11 16:32:45.000000000 +1000
+@@ -626,6 +631,10 @@
+ {
+ 	struct rde_peer		*peer;
+ 	struct rde_aspath	*asp = NULL, *fasp;
++	struct attr	        *a;
++        struct attr             *b;
++        struct attr              tmp;
++        struct aspath           *new_aspath;
+ 	u_char			*p, *mpp = NULL;
+ 	int			 pos = 0;
+ 	u_int16_t		 afi, len, mplen;
+@@ -633,6 +642,7 @@
+ 	u_int16_t		 attrpath_len;
+ 	u_int16_t		 nlri_len;
+ 	u_int8_t		 prefixlen, safi, subtype;
++        u_int32_t                aggregator_as;
+ 	struct bgpd_addr	 prefix;
+ 	struct mpattr		 mpa;
+ 
+@@ -668,31 +678,88 @@
+ 
+ 	if (attrpath_len != 0) { /* 0 = no NLRI information in this message */
+ 		/* parse path attributes */
++	        /* allocate an empty path structure */
+ 		asp = path_get();
++                /* len is the length of the attribute set in bytes */
+ 		while (len > 0) {
+-			if ((pos = rde_attr_parse(p, len, peer, asp,
+-			    &mpa)) < 0) {
++
++			if ((pos = rde_attr_parse(p, len, peer, asp, &mpa)) < 0) {
+ 				path_put(asp);
++				/****/
++				fprintf(stderr,"Attribute parse error\n") ;
++/***/
++
+ 				return (-1);
+ 			}
+ 			p += pos;
+ 			len -= pos;
+ 		}
+ 
++                /* perform an AGGREGATOR substitution */
++                /* first check that NEW_AGGREGATOR attribute was present */
++         	if ((a = attr_optget(asp, ATTR_NEW_AGGREGATOR)) != NULL) {
++                  /* second, check that an AGGREGATOR attribute was present */
++           	  if ((b = attr_optget(asp, ATTR_AGGREGATOR)) != NULL) {
++                    /* then check that we are on a 2 byte to 4 byte boundary */
++                    /* and the AGGREGATOR is AS_TRANS */
++                    if (!(peer->capa_received.as_4bytes)) {
++                      aggregator_as = as_extract(b->data,4) ;
++                      if (aggregator_as == AS_TRANS) {
++                        memcpy(b->data,a->data,4) ;
++                        /* now re-hash the aggregator attribute by releasing it and re-adding it*/
++                        tmp.flags = b->flags ;
++	   	        tmp.type = b->flags ;
++		        tmp.len = b->len ;
++                        tmp.data = malloc(tmp.len) ;
++                        memcpy(tmp.data,b->data,tmp.len) ;
++                        attr_free(asp,b) ;
++                        attr_optadd(asp,tmp.flags,tmp.type,tmp.data,tmp.len) ;
++                        free(tmp.data) ;
++		        }
++		      }
++		    }
++                  /* now remove the NEW_AGGREGATOR attribute */
++		  attr_free(asp,a) ;
++		  }
++
++                /* attempt a PATH substitution */
++                /* first check that NEW_PATH attribute was present */
++         	if ((a = attr_optget(asp, ATTR_NEW_ASPATH)) != NULL) {
++                  /* then check that we are on a 2 byte to 4 byte boundary */
++                  if (!(peer->capa_received.as_4bytes)) {
++                    if ((new_aspath = aspath_translate(asp->aspath,a->data,a->len)) == NULL) {
++				rde_update_err(peer, ERR_UPDATE, ERR_UPD_NEWASPATH,
++				    NULL, 0);
++				path_put(asp);
++				return (-1);
++                      }
++                    aspath_put(asp->aspath) ;
++                    asp->aspath = new_aspath;
++		    }
++                  /* now remove the NEW_AS_PATH attribute */
++		  attr_free(asp,a) ;
++		  }
++
++
+ 		/* check for missing but necessary attributes */
+-		if ((subtype = rde_attr_missing(asp, peer->conf.ebgp,
+-		    nlri_len))) {
++		if ((subtype = rde_attr_missing(asp, peer->conf.ebgp, nlri_len))) {
+ 			rde_update_err(peer, ERR_UPDATE, ERR_UPD_MISSNG_WK_ATTR,
+ 			    &subtype, sizeof(u_int8_t));
+ 			path_put(asp);
++			/***/
++			fprintf(stderr,"Missing well known attributes\n");
++			/***/
+ 			return (-1);
+ 		}
+ 
+ 		/* enforce remote AS if requested */
+ 		if (asp->flags & F_ATTR_ASPATH &&
+ 		    peer->conf.enforce_as == ENFORCE_AS_ON)
+-			if (peer->conf.remote_as !=
+-			    aspath_neighbor(asp->aspath)) {
++		  if (peer->conf.remote_as != aspath_neighbor(asp->aspath,4)) {
++		    /***/
++		    fprintf(stderr,"Remote AS is not equal to aspath neighbor AS\n") ;
++                    fprintf(stderr,"configured remote AS is %u, Neighbor is %u\n",peer->conf.remote_as,aspath_neighbor(asp->aspath,4)) ;
++		    /***/
+ 				rde_update_err(peer, ERR_UPDATE, ERR_UPD_ASPATH,
+ 				    NULL, 0);
+ 				path_put(asp);
+@@ -820,7 +887,10 @@
+ 	p += 2 + attrpath_len;
+ 
+ 	/* aspath needs to be loop free nota bene this is not a hard error */
+-	if (peer->conf.ebgp && !aspath_loopfree(asp->aspath, conf->as)) {
++	if (peer->conf.ebgp && !aspath_loopfree(asp->aspath, conf->as,4)) {
++	  /****/
++	  fprintf(stderr,"LOOP in AS PATH\n");
++/***/
+ 		path_put(asp);
+ 		return (0);
+ 	}
+@@ -1012,19 +1082,26 @@
+ #define CHECK_FLAGS(s, t, m)	\
+ 	(((s) & ~(ATTR_EXTLEN | (m))) == (t))
+ 
++/* parse update attribute set */
+ int
+ rde_attr_parse(u_char *p, u_int16_t len, struct rde_peer *peer,
+     struct rde_aspath *a, struct mpattr *mpa)
+ {
+ 	struct bgpd_addr nexthop;
+ 	u_char		*op = p;
++        u_char          *new_p;
+ 	u_int32_t	 tmp32;
+ 	u_int16_t	 attr_len;
++        u_int16_t        new_attr_len;
+ 	u_int16_t	 plen = 0;
+ 	u_int8_t	 flags;
+ 	u_int8_t	 type;
+ 	u_int8_t	 tmp8;
+ 
++	/****/
++	fprintf(stderr,"rde_attr_parse - parse update\n") ;
++	/****/
++
+ 	if (len < 3) {
+ bad_len:
+ 		rde_update_err(peer, ERR_UPDATE, ERR_UPD_ATTRLEN, op, len);
+@@ -1050,6 +1127,9 @@
+ 	/* adjust len to the actual attribute size including header */
+ 	len = plen + attr_len;
+ 
++/*****/
++	fprintf(stderr,"UPDATE: attribute: flags = %x, length=%u  attr = %u\n",flags, attr_len,type) ;
++/*****/
+ 	switch (type) {
+ 	case ATTR_UNDEF:
+ 		rde_update_err(peer, ERR_UPDATE, ERR_UPD_UNSPECIFIC, NULL, 0);
+@@ -1076,9 +1156,16 @@
+ 		a->flags |= F_ATTR_ORIGIN;
+ 		break;
+ 	case ATTR_ASPATH:
++	  /****/
++	  fprintf(stderr,"AS Path\n") ;
++          /****/
++
+ 		if (!CHECK_FLAGS(flags, ATTR_WELL_KNOWN, 0))
+ 			goto bad_flags;
+-		if (aspath_verify(p, attr_len) != 0) {
++		/****/
++                fprintf(stderr,"Received ASPATH, 4byte = %u\n",peer->capa_received.as_4bytes);
++                /****/
++		if (aspath_verify(p, attr_len, peer->capa_received.as_4bytes) < 0) {
+ 			rde_update_err(peer, ERR_UPDATE, ERR_UPD_ASPATH,
+ 			    NULL, 0);
+ 			return (-1);
+@@ -1086,9 +1173,51 @@
+ 		if (a->flags & F_ATTR_ASPATH)
+ 			goto bad_list;
+ 		a->flags |= F_ATTR_ASPATH;
+-		a->aspath = aspath_get(p, attr_len);
++                new_p = p ;
++                new_attr_len = attr_len ;
++	  /****/
++		fprintf(stderr,"peer 4byte? = %d\n",peer->capa_received.as_4bytes) ;
++          /****/
++                if (!(peer->capa_received.as_4bytes)) {
++	  /****/
++		  fprintf(stderr,"inflate the as path to 4bytes\n") ;
++          /****/
++
++                  if (!(new_p = aspath_inflate(p,attr_len,&new_attr_len))) 
++                    return(-1) ;
++                }     
++		a->aspath = aspath_get(new_p, new_attr_len,4);
++                if (!(peer->capa_received.as_4bytes)) {
++                  free(new_p) ;
++                }     
+ 		plen += attr_len;
+ 		break;
++	case ATTR_NEW_ASPATH:
++		/****/
++                fprintf(stderr,"Received NEW_ASPATH, 4byte = %u\n",peer->capa_received.as_4bytes);
++                /****/
++
++   	        /* should only receive this attr from 2 byte as (old) bgp peers */
++      	        if (peer->capa_received.as_4bytes)
++		        goto bad_flags ;
++
++		if (attr_len <= 4)
++			goto bad_len;
++
++   	        /* flag setting is optional (0x80) and transitive (0x40) */
++		if (!(flags & (ATTR_OPTIONAL | ATTR_TRANSITIVE)))
++			goto bad_flags;
++
++		if (aspath_verify(p, attr_len, 1) < 0) {
++			rde_update_err(peer, ERR_UPDATE, ERR_UPD_NEWASPATH,
++			    NULL, 0);
++			return (-1);
++		}
++
++                /* store this attribute and perform path sustitution at the end of the
++                   attribute parse block */
++		goto optattr;
++
+ 	case ATTR_NEXTHOP:
+ 		if (attr_len != 4)
+ 			goto bad_len;
+@@ -1149,10 +1278,35 @@
+ 			goto bad_flags;
+ 		goto optattr;
+ 	case ATTR_AGGREGATOR:
+-		if (attr_len != 6)
++   	        if ((peer->capa_received.as_4bytes) && (attr_len != 8))
++			goto bad_len;
++   	        if ((!(peer->capa_received.as_4bytes)) && (attr_len != 6))
+ 			goto bad_len;
+ 		if (!CHECK_FLAGS(flags, ATTR_OPTIONAL|ATTR_TRANSITIVE, 0))
+ 			goto bad_flags;
++                if (peer->capa_received.as_4bytes)
++ 		  goto optattr;
++                new_attr_len = attr_len + 2 ;
++                if ((new_p = malloc(new_attr_len)) == NULL)
++		  fatal("rde_attr_parse") ;
++                new_p[0] = 0; 
++                new_p[1] = 0 ;
++		memcpy(&new_p[2],p,6);
++		if (attr_optadd(a, flags, type, new_p, new_attr_len) == -1) {
++		  rde_update_err(peer, ERR_UPDATE, ERR_UPD_ATTRLIST,NULL, 0);
++		  return (-1);
++		}
++                free(new_p) ;
++		plen += attr_len;
++		break;
++	case ATTR_NEW_AGGREGATOR:
++   	        /* should only receive this attr from 2 byte as (old) bgp peers */
++      	        if (peer->capa_received.as_4bytes)
++		        goto bad_flags ;
++		if (attr_len != 8)
++			goto bad_len;
++		if (!(flags & (ATTR_OPTIONAL | ATTR_TRANSITIVE)))
++			goto bad_flags;
+ 		goto optattr;
+ 	case ATTR_COMMUNITIES:
+ 		if ((attr_len & 0x3) != 0)
+@@ -1527,7 +1681,7 @@
+ 
+ 	for (i = 0; i <= pathtable.path_hashmask; i++) {
+ 		LIST_FOREACH(asp, &pathtable.path_hashtbl[i], path_l) {
+-			if (!aspath_match(asp->aspath, a->type, a->as))
++		  if (!aspath_match(asp->aspath, a->type, a->as,4))
+ 				continue;
+ 			/* match found */
+ 			LIST_FOREACH(p, &asp->prefix_h, path_l)
+@@ -1957,7 +2111,7 @@
+ /*
+  * generic helper function
+  */
+-u_int16_t
++u_int32_t
+ rde_local_as(void)
+ {
+ 	return (conf->as);
+@@ -2261,7 +2415,7 @@
+ 	struct rde_peer		*p;
+ 
+ 	asp = path_get();
+-	asp->aspath = aspath_get(NULL, 0);
++	asp->aspath = aspath_get(NULL, 0,3);
+ 	asp->origin = ORIGIN_IGP;
+ 	asp->flags = F_ATTR_ORIGIN | F_ATTR_ASPATH |
+ 	    F_ATTR_LOCALPREF | F_PREFIX_ANNOUNCED;

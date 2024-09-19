@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/30 08:24:23 phonohawk Exp $
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Peel.hi
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Peel.p_hi
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/IO/Peel.hi
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/IO/Peel.p_hi
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Peel.hi
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Peel.p_hi
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/HSmonad-peel-${PKGVERSION}.o
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/libHSmonad-peel-${PKGVERSION}.a
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/libHSmonad-peel-${PKGVERSION}_p.a
+lib/monad-peel-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/monad-peel-${PKGVERSION}/LICENSE

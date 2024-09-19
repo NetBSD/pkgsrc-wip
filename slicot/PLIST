@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/libslicot.a
+lib/libslicot.so
+lib/libslicot.so.0
+lib/libslicot.so.0.0
+lib/libslicot_p.a
+lib/libslicot_pic.a

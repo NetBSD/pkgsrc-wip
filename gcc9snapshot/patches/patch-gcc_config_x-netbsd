@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_config_x-netbsd,v 1.1 2017/05/03 00:21:03 maya Exp $
+
+Add host hooks for NetBSD - needed for working precompiled headers.
+http://gcc.gnu.org/bugzilla/show_bug.cgi?id=58397
+
+--- gcc/config/x-netbsd.orig	2018-11-26 21:21:16.000000000 +0000
++++ gcc/config/x-netbsd
+@@ -2,3 +2,7 @@ host-netbsd.o : $(srcdir)/config/host-ne
+   coretypes.h hosthooks.h hosthooks-def.h $(HOOKS_H)
+ 	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
+ 		$(srcdir)/config/host-netbsd.c
++host-netbsd.o : $(srcdir)/config/host-netbsd.c $(CONFIG_H) $(SYSTEM_H) \
++  coretypes.h hosthooks.h hosthooks-def.h $(HOOKS_H)
++	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
++		$(srcdir)/config/host-netbsd.c

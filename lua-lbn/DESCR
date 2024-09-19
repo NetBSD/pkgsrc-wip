@@ -1,0 +1,2 @@
+A fast integer-only arbitrary precision library for Lua
+based on OpenSSL bn.

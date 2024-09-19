@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.2 2013/01/03 13:06:34 othyro Exp $
+
+Use curses instead of ncurses.
+
+--- tdestr.h.orig	2006-09-15 01:22:24.000000000 +0000
++++ tdestr.h
+@@ -39,7 +39,7 @@
+    #include <dirent.h>             /* walking down directories */
+    #include <limits.h>             /* NAME_MAX and PATH_MAX, POSIX stuff */
+    #include <malloc.h>             /* for memory allocation */
+-   #include <ncurses.h>
++   #include <curses.h>
+    #include <unistd.h>             /* chdir, getcwd, etc... */
+    #include <sys/types.h>
+    #include <sys/stat.h>

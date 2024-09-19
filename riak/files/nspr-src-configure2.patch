@@ -1,0 +1,26 @@
+--- c_src/nsprpub/configure.orig	2014-11-27 15:55:05.000000000 +0000
++++ c_src/nsprpub/configure	2014-11-27 15:58:03.000000000 +0000
+@@ -4370,15 +4370,19 @@
+     if test -z "$OBJECT_FMT"; then
+         if echo __ELF__ | ${CC-cc} -E - | grep -q __ELF__ 2>/dev/null; then
+             OBJECT_FMT=a.out
+-            DLL_SUFFIX=so.1.0
+-            DSO_LDOPTS='-shared'
+         else
+             OBJECT_FMT=ELF
+-            DLL_SUFFIX=so
+-            DSO_LDOPTS='-shared -Wl,-soname,$(notdir $@)'
+         fi
+     fi
+ 
++    if test "$OBJECT_FMT" = "a.out"; then
++        DLL_SUFFIX=so.1.0
++        DSO_LDOPTS='-shared'
++    else
++        DLL_SUFFIX=so
++        DSO_LDOPTS='-shared -Wl,-soname,$(notdir $@)'
++    fi
++
+     if test "$LIBRUNPATH"; then
+         DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
+     fi

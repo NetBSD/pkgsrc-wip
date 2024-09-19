@@ -1,0 +1,23 @@
+$NetBSD$
+
+We provide PREFIX and CFLAGS from the package Makefile
+
+--- Makefile.orig	2014-09-04 10:57:27.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ 
+ VERSION=20140904
+-PREFIX=/usr/local/sbin
++PREFIX?=/usr/local/sbin
+ SUBDIR=in.dhcp in.dns in.mvp in.jabberd in.www in.proxy in.smtp in.ctcs
+ 
+ # Available CFLAGS:
+@@ -36,7 +36,7 @@ SUBDIR=in.dhcp in.dns in.mvp in.jabberd 
+ #              - in.dhcp will use the NSS to discover IP addresses and
+ #                hostnames from MAC addresses of clients
+ #
+-export CFLAGS	:= -DONELOG -DNORELATIVE -DCGI -DUPDATEPS -Os -s
++#export CFLAGS	:= -DONELOG -DNORELATIVE -DCGI -DUPDATEPS -Os -s
+ 
+ all:
+ 	@mkdir -p bin

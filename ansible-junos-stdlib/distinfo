@@ -1,0 +1,5 @@
+$NetBSD$
+
+RMD160 (ansible-junos-stdlib-1.4.0.tar.gz) = e35527e149c186616d8ba66a025725ef8b2182a6
+SHA512 (ansible-junos-stdlib-1.4.0.tar.gz) = 382bc09a493c68c0948cfafe7c15ba149ca7ccb1f8c6490027d5886f654114b4e7ff28670cf1de97d29fdab39e2bb84495cacfb475493ced7b212f65df8726c2
+Size (ansible-junos-stdlib-1.4.0.tar.gz) = 42820 bytes

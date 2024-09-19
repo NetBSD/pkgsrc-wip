@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/07/11 17:40:53 bharder Exp $
+include/mpg123.h
+lib/libmpg123.la
+lib/pkgconfig/libmpg123.pc

@@ -1,0 +1,22 @@
+Scm is a portable Scheme implementation written in C including the
+following features:
+    * Conforms to Revised^5 Report on the Algorithmic Language Scheme and
+	the IEEE P1178 specification.
+    * Support for SICP, R2RS, R3RS, and R5RS scheme code.
+    * Supports inexact real and complex numbers, 30 bit immediate integers
+	and large precision integers.
+    * Supports many Common Lisp functions.
+    * Char-code-limit, most-positive-fixnum, most-negative-fixnum, and
+	internal-time-units-per-second constants. *Features* and
+	*load-pathname* variables.
+    * Arrays and bit-vectors. String ports and software emulation ports.
+	I/O extensions providing ANSI C and POSIX.1 facilities.
+    * Interfaces to standard libraries including REGEX string regular
+	expression matching and the CURSES screen management package.
+    * Available add-on packages including an interactive debugger, database,
+	X-window graphics, BGI graphics, Motif, and Open-Windows packages.
+    * A compiler (HOBBIT) and dynamic linking of compiled modules.
+    * User definable responses to interrupts and errors,
+	Process-syncronization primitives. Setable levels of monitoring
+	and timing information printed interactively (the verbose function).
+	Restart, quit, and exec.

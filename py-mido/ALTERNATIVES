@@ -1,0 +1,4 @@
+bin/mido-connect @PREFIX@/bin/mido-connect-@PYVERSSUFFIX@
+bin/mido-play @PREFIX@/bin/mido-play-@PYVERSSUFFIX@
+bin/mido-ports @PREFIX@/bin/mido-ports-@PYVERSSUFFIX@
+bin/mido-serve @PREFIX@/bin/mido-serve-@PYVERSSUFFIX@

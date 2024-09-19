@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- jemboss/org/emboss/jemboss/parser/Ajax.java.orig	Thu Jul 22 13:11:30 2004
++++ jemboss/org/emboss/jemboss/parser/Ajax.java	Thu Jul 22 13:11:47 2004
+@@ -127,7 +127,7 @@
+   {
+     try
+     {
+-      System.loadLibrary("ajax");
++      System.loadLibrary("ajaxj");
+     }
+     catch(UnsatisfiedLinkError e) 
+     {

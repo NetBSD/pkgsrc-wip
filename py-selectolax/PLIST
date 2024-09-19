@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/selectolax/__init__.py
+${PYSITELIB}/selectolax/__init__.pyc
+${PYSITELIB}/selectolax/__init__.pyo
+${PYSITELIB}/selectolax/node.pxi
+${PYSITELIB}/selectolax/parser.c
+${PYSITELIB}/selectolax/parser.pxd
+${PYSITELIB}/selectolax/parser.pyx
+${PYSITELIB}/selectolax/parser.so
+${PYSITELIB}/selectolax/selector.pxi

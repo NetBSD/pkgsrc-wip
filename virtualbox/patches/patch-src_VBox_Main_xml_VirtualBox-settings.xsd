@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- src/VBox/Main/xml/VirtualBox-settings.xsd.orig	2016-03-04 19:29:43.000000000 +0000
++++ src/VBox/Main/xml/VirtualBox-settings.xsd
+@@ -743,9 +743,9 @@
+       <xsd:restriction base="xsd:token">
+         <xsd:enumeration value="null"/> <!-- deprecated -->
+         <xsd:enumeration value="Null"/> <!-- all platforms -->
+-        <xsd:enumeration value="OSS"/> <!-- Linux, Solaris, FreeBSD -->
+-        <xsd:enumeration value="ALSA"/> <!-- Linux, FreeBSD -->
+-        <xsd:enumeration value="Pulse"/> <!-- Linux -->
++        <xsd:enumeration value="OSS"/> <!-- Linux, Solaris, FreeBSD, NetBSD -->
++        <xsd:enumeration value="ALSA"/> <!-- Linux, FreeBSD, NetBSD -->
++        <xsd:enumeration value="Pulse"/> <!-- Linux, NetBSD -->
+         <xsd:enumeration value="CoreAudio"/> <!-- Mac OS X -->
+         <xsd:enumeration value="MMPM"/> <!-- OS/2 -->
+         <xsd:enumeration value="SolAudio"/> <!-- Solaris -->

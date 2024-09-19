@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/25 18:15:28 jihbed Exp $
+${PYSITELIB}/okasha/__init__.py
+${PYSITELIB}/okasha/__init__.pyc
+${PYSITELIB}/okasha/__init__.pyo
+${PYSITELIB}/okasha/baseWebApp.py
+${PYSITELIB}/okasha/baseWebApp.pyc
+${PYSITELIB}/okasha/baseWebApp.pyo
+${PYSITELIB}/okasha/bottleTemplate.py
+${PYSITELIB}/okasha/bottleTemplate.pyc
+${PYSITELIB}/okasha/bottleTemplate.pyo
+${PYSITELIB}/okasha/bottleTemplateSegment.py
+${PYSITELIB}/okasha/bottleTemplateSegment.pyc
+${PYSITELIB}/okasha/bottleTemplateSegment.pyo
+${PYSITELIB}/okasha/kidTemplate.py
+${PYSITELIB}/okasha/kidTemplate.pyc
+${PYSITELIB}/okasha/kidTemplate.pyo
+${PYSITELIB}/okasha/utils.py
+${PYSITELIB}/okasha/utils.pyc
+${PYSITELIB}/okasha/utils.pyo
+${PYSITELIB}/okasha/xsltTemplate.py
+${PYSITELIB}/okasha/xsltTemplate.pyc
+${PYSITELIB}/okasha/xsltTemplate.pyo

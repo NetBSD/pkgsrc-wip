@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/realalg/__init__.py
+${PYSITELIB}/realalg/__init__.pyc
+${PYSITELIB}/realalg/__init__.pyo
+${PYSITELIB}/realalg/base_algebraic.py
+${PYSITELIB}/realalg/base_algebraic.pyc
+${PYSITELIB}/realalg/base_algebraic.pyo
+${PYSITELIB}/realalg/cypari2_algebraic.py
+${PYSITELIB}/realalg/cypari2_algebraic.pyc
+${PYSITELIB}/realalg/cypari2_algebraic.pyo
+${PYSITELIB}/realalg/cypari_algebraic.py
+${PYSITELIB}/realalg/cypari_algebraic.pyc
+${PYSITELIB}/realalg/cypari_algebraic.pyo
+${PYSITELIB}/realalg/interval.py
+${PYSITELIB}/realalg/interval.pyc
+${PYSITELIB}/realalg/interval.pyo
+${PYSITELIB}/realalg/sympy_algebraic.py
+${PYSITELIB}/realalg/sympy_algebraic.pyc
+${PYSITELIB}/realalg/sympy_algebraic.pyo

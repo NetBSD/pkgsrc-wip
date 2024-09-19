@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ "$0" = "<!--BIN_DIR-->/adam" ] ; then TARGET="adamem"
+elif [ "$0" = "<!--BIN_DIR-->/coleco" ] ; then TARGET="cvem"
+else echo "Unknown Error" ; exit ; fi
+cd <!--ADAMEM_DIR--> && $TARGET "$*"

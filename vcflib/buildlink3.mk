@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	vcflib
+
+.if !defined(VCFLIB_BUILDLINK3_MK)
+VCFLIB_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.vcflib+=	vcflib>=0.0.0.20180208
+BUILDLINK_PKGSRCDIR.vcflib?=	../../wip/vcflib
+.endif	# VCFLIB_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-vcflib

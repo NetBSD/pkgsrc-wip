@@ -1,0 +1,8 @@
+$NetBSD$
+
+RMD160 (apr-util-1.5.4-patches.tar.gz) = 2450ac6856d012d47e439139453ad1a38accb5d8
+SHA512 (apr-util-1.5.4-patches.tar.gz) = 9cf20aa7ba06d178a863db8191238c981d0348e3d4b0e291960aecb3e355d99ab711106ce3aa4ef6c07dcade301de698a96c199ed229dce34ac18a2635f1fe2f
+Size (apr-util-1.5.4-patches.tar.gz) = 18486 bytes
+RMD160 (apr-util-1.5.4.tar.gz) = 7acf9c15d19d832d79d5225bba328e4c99715b2c
+SHA512 (apr-util-1.5.4.tar.gz) = db040a307f8628f56707514ca873a7b57db69a7c26de04e20fc7bb3ccd759c00f855b76d4ad2fea390006c05fdf88bff416aafc7fcbe963fdeb404484178d5dd
+Size (apr-util-1.5.4.tar.gz) = 874044 bytes

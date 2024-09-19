@@ -1,0 +1,2 @@
+This is a small project that attempts to seamlessly integrate
+ SQLAlchemy into the Django web framework.

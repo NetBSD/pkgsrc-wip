@@ -1,0 +1,215 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/19 18:07:42 daprice Exp $
+
+--- chrsh.1.orig	Thu Jul 10 12:04:44 2003
++++ chrsh.1
+@@ -0,0 +1,210 @@
++.\"	@RCS@
++.\" Copyright (c) 1991, 1993
++.\"	The Regents of the University of California.  All rights reserved.
++.\"
++.\" This code is derived from software contributed to Berkeley by
++.\" Kenneth Almquist.
++.\"
++.\" Redistribution and use in source and binary forms, with or without
++.\" modification, are permitted provided that the following conditions
++.\" are met:
++.\" 1. Redistributions of source code must retain the above copyright
++.\"    notice, this list of conditions and the following disclaimer.
++.\" 2. Redistributions in binary form must reproduce the above copyright
++.\"    notice, this list of conditions and the following disclaimer in the
++.\"    documentation and/or other materials provided with the distribution.
++.\" 3. All advertising materials mentioning features or use of this software
++.\"    must display the following acknowledgement:
++.\"	This product includes software developed by the University of
++.\"	California, Berkeley and its contributors.
++.\" 4. Neither the name of the University nor the names of its contributors
++.\"    may be used to endorse or promote products derived from this software
++.\"    without specific prior written permission.
++.\"
++.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++.\" SUCH DAMAGE.
++.\"
++.\"	@(#)chrsh.1	8.6 (Berkeley) 5/4/95
++.\"
++.Dd February 1, 2003
++.Os
++.Dt SH 1
++.Sh NAME
++.Nm chrsh
++.Nd 
++.Xr chroot 2
++shell
++.Sh SYNOPSIS
++.Nm
++.Sh DESCRIPTION
++.Nm
++is a wrapper program around a user's normal shell to restrict access
++to within a
++.Xr chroot 2
++jail.
++.Nm
++is very picky about how the jail is set up, who owns what, and the
++permissions of things. If after you set it up, it doesn't seem to
++work, check the log file (/var/log/chrsh.log by default unless you
++change it in the chrsh.c source file) to see what the wrapper did not
++like.
++.Pp
++The chrsh program needs to be set up in /etc/master.passwd as the
++user's shell. The user's home directory needs to use a format similar
++to wuftp, using the /./ to indicate where the jail begins. Look at the
++chrsh.c file's configuration section before compiling to set up who
++will own what and what permissions the wrapper should expect. The
++wrapper expects the GECOS information to be identical within the
++.Xr chroot 8
++jail as it appears in the real /etc/master.passwd database.
++.Sh EXAMPLE SETUP
++An example set-up using chrsh to "jail" or confine the user to a small
++controlled portion of the system.
++.Pp
++From
++.Xr master.passwd 5
++(password omitted)
++.Dl user:*:2000:2000::0:0:User:/usr/home/user/./home:/bin/chrsh
++.Pp
++From
++.Xr group 5
++.Dl testgroup:*:2000:
++.Pp
++The following directories were then created:
++.Dl /usr/home/user       -- owned by root.wheel, mode 0555
++.Dl /usr/home/user/bin   -- owned by root.wheel, mode 0555
++.Dl /usr/home/user/etc   -- owned by root.wheel, mode 0555
++.Dl /usr/home/user/home  -- owned by user.testgroup, mode 0750
++.Pp
++The following files were then copied:
++.Dl /bin/sh to /usr/home/user/bin/sh -- owned by root.wheel, mode 0555
++.Pp
++A small selection of /bin/* utilities was also copied to /usr/home/user/bin
++.Pp
++Next, this file was compiled thus:
++.Dl cc -o chrsh chrsh.c
++.Dl cp chrsh /bin/chrsh
++.Dl chown root.wheel /bin/chrsh
++.Dl chmod 04555 /bin/chrsh
++.Pp
++Finally, the /usr/home/user/etc directory was set up thus:
++.Dl /usr/home/user/etc/shells -- owned by root.wheel, mode 0555
++.Dl -- contained only 1 line:
++.Dl /bin/sh
++.Pp
++.Dl /usr/home/user/etc/group -- owned by root.wheel, mode 0555
++.Dl -- contained a minimal set of groups:
++.Dl wheel:*:0:
++.Dl user:*:2000:
++.Dl nogroup:*:65533:
++.Dl nobody:*:65534:
++.Pp
++.Dl /usr/home/user/etc/master.passwd -- owned by root.wheel, mode 0600
++.Dl -- contained a minimal set of users:
++.Dl root:*:0:0::0:0:Root System Administrator:/root:/bin/sh
++.Dl user:*:2000:2000::0:0:User:/home:/bin/sh
++.Pp
++To set up the password database within the jail:
++.Dl cd /usr/home/user/etc
++.Dl pwd_mkdb -d . master.passwd
++This set up the pwd.db and spwd.db files in /usr/home/user/etc.
++.Sh DESIGN MUSINGS
++Here's some of my rough thoughs and ideas that spawned this excursion
++into wrapper coding:
++.Pp
++If the user's shell is
++.Nm
++then look at the user's home directory and parse it.  It should follow
++wu_ftpd standards for specifying
++.Xr chroot 2
++point and home subdir.  For example:
++.Dl joe:*:200:200::Joe User:/chroot/jail/./home/joe:/bin/chrsh
++.Pp
++This shell MUST be suid root so it can perform the
++.Xr chroot 2
++function to the jail directory.  Also, the jail directory MUST be
++owned by the UID and GID specified in the configuration section or the
++source code.  Additionally, the home subdir directory must be owned by
++the user in question with group ownership the same GID as in
++.Xr passwd 5 .
++It must NOT be world writable.  Finally, a minimal "/bin" and "/etc"
++must exist in the chroot jail, owned by specified UID and GID, using
++the specified mode.
++.Pp
++For the jail to be secure, there MUST be a password database in the
++jail that is NOT world writable in a secure place, and there should be
++no suid/sgid programs in the jail.  They could be used to compromise
++the jail.
++.Pp
++Once the
++.Xr chroot 2
++takes place, we check the pw stuff in the chrooted jail and it MUST
++match EXACTLY EXCEPT for the home dir and shell.  The home dir MUST
++match the home subdir portion of the real pw entry, and the shell MUST
++be a safely owned executable and MUST have an entry in the chrooted
++.Xr shells 5
++database.
++.Pp
++After all checks are done, this prog. gives up root privs.  and
++becomes the user in question.  The environment vars. HOME and SHELL
++are set to the
++.Xr chroot 2
++jail versions, and the new shell is
++.Xr execve 2 'd.
++Just before the
++.Xr execve 2 ,
++the log file is flagged by a
++.Xr fcntl 2
++call for automatic closing should the
++.Xr execve 2
++succeed.
++.Pp
++If the
++.Xr execve 2
++fails, the log file descriptor is still valid permitting the program
++to add some final log entries to describe the problem.
++.Pp
++If root or some other potentially useful UID or GID is compromised
++within the chroot environment, all bets are off.  Hence I recommend
++against ALL suid and sgid programs within the environment.  Period.
++.Sh SEE ALSO
++.Xr chroot 2 ,
++.Xr execve 2 ,
++.Xr fcntl 2 ,
++.Xr group 5 ,
++.Xr master.passwd 5 ,
++.Xr passwd 5 ,
++.Xr shells 5 ,
++.Xr ssh 1 .
++.Sh SECURITY CONSIDERATIONS
++If you use
++.Nm
++to allow users shell access and use
++.Xr ssh 1 ,
++please be aware that some versions of the
++.Xr ssh 1
++server can permit the remote user to bypass their local shell setting
++("ssh -l username -t hostname /bin/sh") and still get access to a
++shell that is NOT chrooted. This problem does NOT affect all users of
++.Xr ssh 1 .
++Additionally, keep in mind that
++.Xr ssh 1
++may also permit the user to use IP forwarding, enabling the user to
++act as if he/she were connecting FROM the server where
++.Xr ssh 1
++resides, or even operate IP services that get forwarded to the user's
++computer.
++.Sh AUTHORS
++This software was written by Aaron D. Gifford with contributions from
++H. D. Moore.  See the following URL for additional information:
++.Dl http://www.aarongifford.com/computers/chrsh.html
++

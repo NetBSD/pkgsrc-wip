@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/hfuzz-cc
+bin/hfuzz-clang
+bin/hfuzz-clang++
+bin/hfuzz-g++
+bin/hfuzz-gcc
+bin/honggfuzz

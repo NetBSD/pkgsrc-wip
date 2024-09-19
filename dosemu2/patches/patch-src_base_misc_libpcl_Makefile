@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- src/base/misc/libpcl/Makefile.orig	2017-11-02 06:22:58.000000000 +0000
++++ src/base/misc/libpcl/Makefile
+@@ -6,7 +6,8 @@
+ 
+ top_builddir=../../../..
+ include $(top_builddir)/Makefile.conf
+-ALL_CPPFLAGS += -I$(REALTOPDIR)/src/arch/linux/mcontext
++#ALL_CPPFLAGS += -I$(REALTOPDIR)/src/arch/linux/mcontext
++ALL_CPPFLAGS += -I$(REALTOPDIR)/src/arch/netbsd/mcontext
+ 
+ CFILES=pcl.c pcl_ctx.c
+ 

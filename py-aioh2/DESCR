@@ -1,0 +1,12 @@
+HTTP/2 implementation with hyper-h2 on Python 3 asyncio.
+
+Features:
+* Asynchronous HTTP/2 client and server
+* Multiplexing streams of data with managed flow and priority control
+* Optional tickless health check
+* More to come
+
+Non-features:
+* Request/Response wrappers
+* Web server, dispatcher, cookie, etc
+* HTTP/2 upgrade

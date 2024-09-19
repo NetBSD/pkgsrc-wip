@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/beautysh
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/beautysh/__init__.py
+${PYSITELIB}/beautysh/__main__.py
+${PYSITELIB}/beautysh/__init__.pyo
+${PYSITELIB}/beautysh/__init__.pyc
+${PYSITELIB}/beautysh/__main__.pyo
+${PYSITELIB}/beautysh/__main__.pyc
+${PYSITELIB}/beautysh/beautysh.pyo
+${PYSITELIB}/beautysh/beautysh.pyc
+${PYSITELIB}/beautysh/beautysh.py

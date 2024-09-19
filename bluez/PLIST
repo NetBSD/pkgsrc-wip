@@ -1,0 +1,22 @@
+@comment $NetBSD$
+bin/bluetoothctl
+bin/btmon
+etc/dbus-1/system.d/bluetooth.conf
+include/bluetooth/bluetooth.h
+include/bluetooth/bnep.h
+include/bluetooth/cmtp.h
+include/bluetooth/hci.h
+include/bluetooth/hci_lib.h
+include/bluetooth/hidp.h
+include/bluetooth/l2cap.h
+include/bluetooth/rfcomm.h
+include/bluetooth/sco.h
+include/bluetooth/sdp.h
+include/bluetooth/sdp_lib.h
+lib/cups/backend/bluetooth
+lib/libbluetooth.la
+lib/pkgconfig/bluez.pc
+libexec/bluetooth/bluetoothd
+man/man8/bluetoothd.8
+share/zsh/site-functions/_bluetoothctl
+@pkgdir man/man1

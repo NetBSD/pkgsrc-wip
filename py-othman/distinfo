@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/25 22:00:58 jihbed Exp $
+
+RMD160 (othman_0.2.7.orig.tar.bz2) = 8be80f22f14a2dc89aebae00cca0d066eca89118
+Size (othman_0.2.7.orig.tar.bz2) = 535012 bytes
+SHA1 (patch-setup.py) = 0cc41d21d734a7a6c8600039513b888cc4b10202

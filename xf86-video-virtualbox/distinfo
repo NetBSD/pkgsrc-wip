@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2015/09/15 20:56:03 tnn2 Exp $
+
+RMD160 (VirtualBox-6.0.14.tar.bz2) = 4ca116a3e4c93424d9e6bd6de8267e3d112d80aa
+SHA512 (VirtualBox-6.0.14.tar.bz2) = e1a64c6633987e178b368dc17e738c6fbef4ab262c574188819f1186bf33f38d8c5accd6a566279a12ccd3544bab4ee5a1f8dce7c8c56d7373489c5ff7f8556d
+Size (VirtualBox-6.0.14.tar.bz2) = 154236138 bytes
+SHA1 (patch-include_VBox_VBoxGuest.h) = 5882e1340101d4b1cb6e183c61d7e8f19f728151
+SHA1 (patch-src_VBox_Additions_x11_vboxvideo_VBoxVideoIPRT.h) = 6bf757dcbe2e25ca1ea8120b6decafad881e1db3
+SHA1 (patch-src_VBox_Additions_x11_vboxvideo_edid.c) = 6888d49f37e20dcf84d49319be9c336e901725d8
+SHA1 (patch-src_VBox_Additions_x11_vboxvideo_pointer.c) = 927ef89d4c04338866063ecb9e4758a088e03f08
+SHA1 (patch-src_VBox_Additions_x11_vboxvideo_vboxvideo.c) = 6bb61fcf7ead6916ab9701fb6614a3af31e34d87

@@ -1,0 +1,13 @@
+$NetBSD$
+
+RMD160 (cinnamon-4.6.7.tar.gz) = 7ca215e916ee9ab4b0c470a2da55cba9ba479412
+SHA512 (cinnamon-4.6.7.tar.gz) = 4807d5330c1e2a7e1804257b88dbec2822aa386b0bc2fe2d3aca8e5a27125703987dbabca35360e99216e7b4370bcf6339de562026b48529442a4edda6eb9070
+Size (cinnamon-4.6.7.tar.gz) = 2271281 bytes
+SHA1 (patch-configure.ac) = e8b055699a6d98feaa19855cc306720cd444120a
+SHA1 (patch-data_org.cinnamon.gschema.xml.in) = 2b0e12c578cc007232d3ad11813774142244a562
+SHA1 (patch-files_Makefile.in) = 435a12f03baabd1e3ec482d9a5f4f28645a689a2
+SHA1 (patch-files_usr_share_cinnamon-session_sessions_cinnamon.session) = b8e63c49d1a53d49ddccb3bb156edda99886c414
+SHA1 (patch-files_usr_share_cinnamon_cinnamon-settings-users_cinnamon-settings-users.py) = 46953a3fd347bdd2023298e748ae04d09d8a728d
+SHA1 (patch-files_usr_share_cinnamon_cinnamon-settings_modules_cs__backgrounds.py) = ff773942a592ca48281876c8e02a35dd6eb452c2
+SHA1 (patch-files_usr_share_cinnamon_cinnamon-settings_modules_cs__info.py) = 9f88ce95c464b5c673c0a9f0dbc7be15daff2f7d
+SHA1 (patch-src_Makefile.am) = a2445ebbbca1fa66e56307251e83ba80714da7ec

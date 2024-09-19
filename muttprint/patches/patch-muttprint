@@ -1,0 +1,13 @@
+$NetBSD: patch-muttprint,v 1.1.1.1 2012/03/11 15:19:53 mayureshw Exp $
+
+--- muttprint.orig	2005-05-16 11:15:52.000000000 +0000
++++ muttprint
+@@ -773,7 +773,7 @@ if ($Config{'PRINTER'} =~ /^(TO_FILE|fil
+ 		}
+ 	}
+ }
+-
+++chdir($ENV{HOME}) || chdir('/');
+ ################################### ENDE ####################################
+ 
+ 

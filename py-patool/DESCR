@@ -1,0 +1,4 @@
+Various archive formats can be created, extracted, tested, listed,
+searched, compared and repacked by patool. The advantage of patool
+is its simplicity in handling archive files without having to remember
+a myriad of programs and options

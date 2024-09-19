@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/17 21:16:12 daprice Exp $
+
+--- configure.orig	Tue Jul 22 09:55:10 2003
++++ configure
+@@ -1900,7 +1900,7 @@ echo "$as_me: error: \"  $x_arg:  requir
+    { (exit 1); exit 1; }; }
+       ;;
+ 
+-      --with-extra-action=* | --exec-prefix=* | --with-build-root=* \
++      --with-extra-action=* | --x-includes=* | --x-libraries=* | --with-libintl-prefix=* | --with-app=* | --with-objects=* | --prefix=* | --exec-prefix=* | --with-build-root=* \
+       | --with-projects=* | --with-check=* \
+       | --cache-file=* | --build=* | --host=* \
+       | [A-Z]*=* \
+@@ -10212,11 +10212,11 @@ fi
+ ## NCBI C Toolkit
+ if test "$with_ncbi_c" != "no" ; then
+    NCBI_C_PATH=${NCBI_C_PATH:="$NCBI"}
+-   NCBI_C_INCLUDE="-I$NCBI_C_PATH/include${bit64_sfx}"
++   NCBI_C_INCLUDE="-I$PREFIX/include/ncbi"
+    if test "$with_debug" = "no" ; then
+-     NCBI_C_LIBPATH="$NCBI_C_PATH/lib${bit64_sfx}"
++     NCBI_C_LIBPATH="$PREFIX/lib/ncbi"
+    else
+-     NCBI_C_LIBPATH="$NCBI_C_PATH/altlib${bit64_sfx}"
++     NCBI_C_LIBPATH="$PREFIX/lib/ncbi"
+    fi
+    if test "$with_mt" = "yes" ; then
+      NCBI_C_LIBPATH="$NCBI_C_LIBPATH $NCBI_C_LIBPATH/ncbithr.o"
+@@ -10226,7 +10226,7 @@ if test "$with_ncbi_c" != "no" ; then
+    elif test "$OSTYPE" = "darwin" ; then
+      NCBI_C_ncbi="-lncbi -Wl,-framework,AppKit"
+    else
+-     NCBI_C_ncbi="-lncbi"
++     NCBI_C_ncbi="-L$PREFIX/lib/ncbi -lncbi"
+    fi
+    NCBI_C_LIBPATH="-L$NCBI_C_LIBPATH"
+    echo "$as_me:$LINENO: checking for the NCBI C toolkit in $NCBI_C_PATH" >&5

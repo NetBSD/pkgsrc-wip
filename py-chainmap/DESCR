@@ -1,0 +1,5 @@
+This module is a polyfill, implementing ChainMap for reasonably-recent versions
+of Python that do not have collections.ChainMap-namely, Python 2.6, Python
+3.2, and PyPy3 releases based on Python 3.2. (It will also work as expected on
+Python 2.7, PyPy, and Python 3.3+, but it is not strictly needed there since
+those versions' collections modules contains good ChainMap implementations.)

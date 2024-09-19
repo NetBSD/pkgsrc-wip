@@ -1,0 +1,8 @@
+$NetBSD$
+
+RMD160 (miktex-2.9.7250.tar.xz) = 89f886c818b409e429b01944f08d9758abf8f16f
+SHA512 (miktex-2.9.7250.tar.xz) = 151917fa2c658ce588a7d18769e4664d108e0e4087ec198b5b75b6831e4b4e90da7783e69a125873665e192323e059d26e332baeed8e8c778087b62bf783869d
+Size (miktex-2.9.7250.tar.xz) = 25680464 bytes
+SHA1 (patch-Libraries_MiKTeX_Core_Process_unx_unxProcess.cpp) = b58602e253026bdf1201f62cd6057bf6762e5504
+SHA1 (patch-Libraries_MiKTeX_Trace_include_miktex_Trace_TraceStream.h) = f5b4ce40231298769171023ee1fffc9849da6242
+SHA1 (patch-Libraries_MiKTeX_Util_include_miktex_Util_StringUtil.h) = a02817a0e9b60668c94fd46cb8b0891e80520576

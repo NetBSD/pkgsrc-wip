@@ -1,0 +1,5 @@
+ZenNode is a node/blockmap/reject builder written by Marc Rousseau.
+
+It is very fast (especially the reject builder) and produces nodes that work
+well with GL source ports. For example, it makes OpenGL holes disappear almost
+entirely in Doom Legacy.

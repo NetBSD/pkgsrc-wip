@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/27 13:43:39 phonohawk Exp $
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/Data/Double/Conversion/ByteString.hi
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/Data/Double/Conversion/ByteString.p_hi
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/Data/Double/Conversion/FFI.hi
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/Data/Double/Conversion/FFI.p_hi
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/Data/Double/Conversion/Text.hi
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/Data/Double/Conversion/Text.p_hi
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/HSdouble-conversion-${PKGVERSION}.o
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/libHSdouble-conversion-${PKGVERSION}.a
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/libHSdouble-conversion-${PKGVERSION}_p.a
+lib/double-conversion-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/double-conversion-${PKGVERSION}/LICENSE

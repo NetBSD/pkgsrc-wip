@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/15 08:20:33 thomasklausner Exp $
+
+--- Makefile.orig	2004-09-14 13:12:20.000000000 +0200
++++ Makefile
+@@ -11,7 +11,7 @@ ZLIB = ../zlib
+ CFLAGS = -O3 -g -Wall -I. -I$(PNGINC) -I$(ZINC) -funroll-loops -fomit-frame-pointer
+ 
+ #LDFLAGS = -L$(PNGLIB) -lpng -L$(ZLIB) -lz -lm
+-LDFLAGS = $(PNGLIB)/libpng.a -L$(ZLIB) -lz -lm
++LDFLAGS = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng -L$(ZLIB) -lz -lm
+ #LDFLAGS = $(PNGLIB)/libpng.a $(ZLIB)/libz.a -lm
+ 
+ OBJS = pngnq.o rwpng.o neuquant32.o

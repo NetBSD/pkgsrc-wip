@@ -1,0 +1,24 @@
+@comment $NetBSD$
+share/texmf-dist/doc/ptex/ptex-manual/LICENSE
+share/texmf-dist/doc/ptex/ptex-manual/README.md
+share/texmf-dist/doc/ptex/ptex-manual/eptex_resume.pdf
+share/texmf-dist/doc/ptex/ptex-manual/eptex_resume.tex
+share/texmf-dist/doc/ptex/ptex-manual/eptexdoc.pdf
+share/texmf-dist/doc/ptex/ptex-manual/eptexdoc.tex
+share/texmf-dist/doc/ptex/ptex-manual/fam256d.tex
+share/texmf-dist/doc/ptex/ptex-manual/fam256p.tex
+share/texmf-dist/doc/ptex/ptex-manual/jfm.pdf
+share/texmf-dist/doc/ptex/ptex-manual/jfm.tex
+share/texmf-dist/doc/ptex/ptex-manual/jtex_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-manual/jtex_asciimw.tex
+share/texmf-dist/doc/ptex/ptex-manual/jtexdoc_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-manual/jtexdoc_asciimw.tex
+share/texmf-dist/doc/ptex/ptex-manual/ptex-guide-en.pdf
+share/texmf-dist/doc/ptex/ptex-manual/ptex-guide-en.tex
+share/texmf-dist/doc/ptex/ptex-manual/ptex-manual.pdf
+share/texmf-dist/doc/ptex/ptex-manual/ptex-manual.sty
+share/texmf-dist/doc/ptex/ptex-manual/ptex-manual.tex
+share/texmf-dist/doc/ptex/ptex-manual/ptexdoc_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-manual/ptexdoc_asciimw.tex
+share/texmf-dist/doc/ptex/ptex-manual/ptexskip_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-manual/ptexskip_asciimw.tex

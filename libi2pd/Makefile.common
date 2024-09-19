@@ -1,0 +1,25 @@
+# $NetBSD$
+# used by wip/i2pd/Makefile
+# used by wip/i2pd-git/Makefile
+
+GITHUB_PROJECT=	i2pd
+I2PD_VERSION=	2.31.0
+DISTNAME=	i2pd-${I2PD_VERSION}
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PurpleI2P/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
+WRKSRC=		${WRKDIR}/${DISTNAME}/
+CMAKE_ARG_PATH=	build/
+
+MAINTAINER=	jake.slazenger@yandex.com
+HOMEPAGE=	https://github.com/PurpleI2P/i2pd/
+LICENSE=	modified-bsd
+
+USE_CMAKE=	yes
+
+USE_LANGUAGES=	c c++11
+
+.include "options.mk"
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"

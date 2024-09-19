@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2005/01/09 09:30:29 mreriksson Exp $
+lib/multisync/libldap_plugin.la

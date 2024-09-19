@@ -1,0 +1,6 @@
+cd data && /usr/bin/make
+cd: can't cd to data
+*** [all] Error code 2
+
+make: stopped in pkgsrc/wip/tudu/work/tudu-0.10.4
+1 error

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:24 rillig Exp $
+
+RMD160 (Browser282b2.tar.gz) = 8271db019f30c0e571650b79a3fff87368eced52
+Size (Browser282b2.tar.gz) = 651283 bytes
+SHA1 (patch-aa) = 590b5e3655a5533549078b0ac31a4fe2866e0c87

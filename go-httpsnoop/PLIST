@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/codegen
+gopkg/pkg/${GO_PLATFORM}/github.com/bradfitz/httpsnoop.a
+gopkg/src/github.com/bradfitz/httpsnoop/LICENSE.txt
+gopkg/src/github.com/bradfitz/httpsnoop/Makefile
+gopkg/src/github.com/bradfitz/httpsnoop/README.md
+gopkg/src/github.com/bradfitz/httpsnoop/bench_test.go
+gopkg/src/github.com/bradfitz/httpsnoop/capture_metrics.go
+gopkg/src/github.com/bradfitz/httpsnoop/capture_metrics_test.go
+gopkg/src/github.com/bradfitz/httpsnoop/codegen/main.go
+gopkg/src/github.com/bradfitz/httpsnoop/docs.go
+gopkg/src/github.com/bradfitz/httpsnoop/go.mod
+gopkg/src/github.com/bradfitz/httpsnoop/unwrap_test.go
+gopkg/src/github.com/bradfitz/httpsnoop/wrap_generated_gteq_1.8.go
+gopkg/src/github.com/bradfitz/httpsnoop/wrap_generated_gteq_1.8_test.go
+gopkg/src/github.com/bradfitz/httpsnoop/wrap_generated_lt_1.8.go
+gopkg/src/github.com/bradfitz/httpsnoop/wrap_generated_lt_1.8_test.go
+gopkg/src/github.com/bradfitz/httpsnoop/wrap_test.go

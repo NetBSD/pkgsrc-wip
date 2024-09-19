@@ -1,0 +1,7 @@
+SymbolicC++ uses C++ and object-oriented programming to develop a computer
+algebra system. Object-oriented programming is an approach to software design
+that is based on classes rather than procedures. This approach maximizes
+modularity and information hiding. Object-oriented design provides many
+advantages. For example, it combines both the data and the functions that
+operate on that data into a single unit. Such a unit
+(abstract data type) is called a class.

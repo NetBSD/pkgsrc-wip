@@ -1,0 +1,2 @@
+Interpolates irregularly spaced data to a regular grid using natural
+neighbor interpolation. Based on the natgrid library

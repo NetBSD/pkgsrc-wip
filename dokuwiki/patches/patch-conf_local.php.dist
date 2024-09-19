@@ -1,0 +1,26 @@
+$NetBSD: patch-conf_local.php.dist,v 1.1 2012/12/21 04:25:34 triaxx Exp $
+
+More secure default local configuration.
+
+--- conf/local.php.dist.orig	2012-10-13 11:25:31.000000000 +0000
++++ conf/local.php.dist
+@@ -3,14 +3,10 @@
+  * This is an example of how a local.php could look like.
+  * Simply copy the options you want to change from dokuwiki.php
+  * to this file and change them.
+- *
+- * When using the installer, a correct local.php file be generated for
+- * you automatically.
+  */
+-
+-
+-//$conf['title']       = 'My Wiki';        //what to show in the title
+-
+-//$conf['useacl']      = 1;                //Use Access Control Lists to restrict access?
+-//$conf['superuser']   = 'joe';
++$conf['title']     = 'DokuWiki';
++$conf['lang']      = 'en';
++$conf['license']   = 'cc-by-sa';
++$conf['useacl']    = 1;
++$conf['superuser'] = '@admin';
+ 

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:14 thomasklausner Exp $
+lib/gtk-2.0/2.10.0/engines/libmgicchikn.la
+share/themes/CortlandChicken/README
+share/themes/CortlandChicken/gtk-2.0/check-in.png
+share/themes/CortlandChicken/gtk-2.0/check-out.png
+share/themes/CortlandChicken/gtk-2.0/gtkrc
+share/themes/CortlandChicken/gtk-2.0/radio-both.png
+share/themes/CortlandChicken/gtk-2.0/radio-in.png
+share/themes/CortlandChicken/gtk-2.0/radio-out.png
+share/themes/MagicChicken/README
+share/themes/MagicChicken/gtk-2.0/gtkrc
+share/themes/OkayishChicken/README
+share/themes/OkayishChicken/gtk-2.0/gtkrc

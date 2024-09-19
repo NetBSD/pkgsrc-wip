@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/gtkmmorse
+man/man1/gtkmmorse.1

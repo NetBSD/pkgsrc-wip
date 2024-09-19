@@ -1,0 +1,50 @@
+$NetBSD: patch-desktop_Makefile.in,v 1.1 2012/06/13 22:54:58 othyro Exp $
+
+Removing $(DESTDIR) installdirs here.
+
+--- desktop/Makefile.in.orig	2008-03-24 12:51:49.000000000 +0000
++++ desktop/Makefile.in
+@@ -68,7 +68,7 @@ am__vpath_adj = case $$p in \
+     *) f=$$p;; \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-am__installdirs = "$(DESTDIR)$(icondir)"
++am__installdirs = "$(icondir)"
+ iconDATA_INSTALL = $(INSTALL_DATA)
+ DATA = $(icon_DATA)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+@@ -242,20 +242,20 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+ uninstall-info-am:
+ install-iconDATA: $(icon_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(icondir)" || $(mkdir_p) "$(DESTDIR)$(icondir)"
++	test -z "$(icondir)" || $(mkdir_p) "$(icondir)"
+ 	@list='$(icon_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(iconDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(icondir)/$$f'"; \
+-	  $(iconDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(icondir)/$$f"; \
++	  echo " $(iconDATA_INSTALL) '$$d$$p' '$(icondir)/$$f'"; \
++	  $(iconDATA_INSTALL) "$$d$$p" "$(icondir)/$$f"; \
+ 	done
+ 
+ uninstall-iconDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(icon_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(icondir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(icondir)/$$f"; \
++	  echo " rm -f '$(icondir)/$$f'"; \
++	  rm -f "$(icondir)/$$f"; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -295,7 +295,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(icondir)"; do \
++	for dir in "$(icondir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+ install: install-am

@@ -1,0 +1,1 @@
+bin/pystatsd-server @PREFIX@/bin/pystatsd-server@PYVERSSUFFIX@

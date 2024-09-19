@@ -1,0 +1,8 @@
+[Term]
+path = libglkterm.so
+
+[Gtk]
+path = libgtkglk.so
+
+[Default]
+libs = Term

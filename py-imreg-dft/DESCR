@@ -1,0 +1,4 @@
+imreg_dft implements means of guessing translation, rotation and scale
+variation between two images. It doesn?t work with those images directly
+but it works with their spectrum (DFT using FFT), and its log-polar
+transformation

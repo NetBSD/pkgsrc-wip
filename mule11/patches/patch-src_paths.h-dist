@@ -1,0 +1,30 @@
+$NetBSD: patch-src_paths.h-dist,v 1.3 2015/04/07 15:54:02 makoto Exp $
+
+Adjst PATH, this is preparation, /usr/local will be SUBSTtituted.
+
+--- src/paths.h-dist.orig	2015-03-28 00:05:34.000000000 +0900
++++ src/paths.h-dist	2015-04-07 16:13:46.000000000 +0900
+@@ -1,19 +1,19 @@
+ /* The default search path for Lisp function "load".
+    This sets load-path.  */
+-#define PATH_LOADSEARCH "/usr/local/emacs/lisp"
++#define PATH_LOADSEARCH "/usr/local/share/mule/lisp"
+ 
+ /* the extra search path for programs to invoke.
+  This is appended to whatever the PATH environment variable says
+  to set the Lisp variable exec-path and the first file namein it
+   sets the Lisp variable exec-directory.  */
+-#define PATH_EXEC "/usr/local/emacs/etc"
++#define PATH_EXEC "/usr/local/share/mule/etc"
+ 
+ /* the name of the directory that contains lock files
+  with which we record what files are being modified in Emacs.
+  This directory should be writable by everyone.
+  THE STRING MUST END WITH A SLASH!!!  */
+-#define PATH_LOCK "/usr/local/emacs/lock/"
++#define PATH_LOCK "@VARBASE@/lock/emacs"
+ 
+ /* the name of the file !!!SuperLock!!! in the directory
+  specified by PATH_LOCK.  Yes, this is redundant.  */
+-#define PATH_SUPERLOCK "/usr/local/emacs/lock/!!!SuperLock!!!"
++#define PATH_SUPERLOCK "@VARBASE@/lock/emacs/lock/!!!SuperLock!!!"

@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.2 2008/05/29 22:18:16 asau Exp $
+
+--- Makefile.orig	2008-02-06 08:25:10.000000000 +0300
++++ Makefile	2008-05-30 01:40:10.000000000 +0400
+@@ -427,16 +427,16 @@
+ 
+ rpm_prefix=$(HOME)/rpmbuild/
+ 
+-prefix = /usr/local/
++prefix = $(PREFIX)
+ exec_prefix = $(prefix)
+ # directory where `make install' will put executable.
+-bindir = $(exec_prefix)bin/
+-libdir = $(exec_prefix)lib/
+-libscmdir = $(libdir)scm/
++bindir = $(prefix)/bin
++libdir = $(prefix)/lib
++libscmdir = $(prefix)/share/scm
+ # directory where `make install' will put manual page.
+-man1dir = $(prefix)man/man1/
+-infodir = $(prefix)info/
+-includedir = $(prefix)include/
++man1dir = $(prefix)man/man1
++infodir = $(prefix)/info
++includedir = $(prefix)/include
+ 
+ README:	build build.scm scm.info
+ 	$(SCMEXE) -l build -e"(make-readme)"

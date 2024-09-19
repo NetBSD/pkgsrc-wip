@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (napalm-eos-0.5.6.tar.gz) = 7281b101341458cb99ef1f2631d424651924b146
+SHA512 (napalm-eos-0.5.6.tar.gz) = 56ce3d003edbc0b8befe0cc91e2921ab0976f73530e285eac21c216cf4e213e1024463a2b842a790eabe2251e01cb79acc299955b4ef44ece8ba57f68dca8243
+Size (napalm-eos-0.5.6.tar.gz) = 58667 bytes
+SHA1 (patch-setup.py) = acf54ad4a9689713b96d06b1b90a82e25d4c6cab

@@ -1,0 +1,2 @@
+GConf Cleaner is to clean up the unknown/invalid gconf keys that
+still sitting down on your gconf database.

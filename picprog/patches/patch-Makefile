@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2014/08/23 23:07:16 leot1990 Exp $
+
+Use BSD_INSTALL_PROGRAM and BSD_INSTALL_MAN.
+
+--- Makefile.orig	2010-04-14 01:19:53.000000000 +0000
++++ Makefile
+@@ -56,8 +56,8 @@ tar:
+ 		$(PROG)-$$VERSION/[a-zA-Z]*.{html,png,1,h,cc}
+ 
+ install: all
+-	install -c -o 0 -g 0 -m 755 $(PROG) /usr/local/bin/
+-	install -c -o 0 -g 0 -m 644 *.1 /usr/local/man/man1/
++	${BSD_INSTALL_PROGRAM} $(PROG) /usr/local/bin/
++	${BSD_INSTALL_MAN} *.1 /usr/local/man/man1/
+ 
+ #
+ # include a dependency file if one exists

@@ -1,0 +1,5 @@
+This library supports templates inspired by the Perl HTML::Chunks
+module, but this Haskell implementation checks at compile time that
+the templates used exist and are used correctly. The templates are
+combined within the compiled Haskell, removing the dependency on the
+external template file.

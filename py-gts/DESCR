@@ -1,0 +1,3 @@
+PyGTS is a python package that can be used to construct, manipulate,
+and perform computations on 3D triangulated surfaces.It is a hand-crafted
+and "pythonic" binding for the GNU Triangulated Surface (GTS) Library

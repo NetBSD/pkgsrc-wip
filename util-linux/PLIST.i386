@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2004/04/01 10:19:11 jeremy-c-reed Exp $
+man/man8/ramsize.8
+man/man8/rdev.8
+man/man8/rootflags.8
+man/man8/vidmode.8
+sbin/ramsize
+sbin/rdev
+sbin/rootflags
+sbin/vidmode

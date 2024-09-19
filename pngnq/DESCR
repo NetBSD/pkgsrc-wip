@@ -1,0 +1,3 @@
+Pngnq is a tool for quantizing PNG images in RGBA format.  Pngnq
+is an adaptation by Stuart Coyle of Greg Roelf's pnqquant program
+using Anthony Dekker's neuquant algorithm.

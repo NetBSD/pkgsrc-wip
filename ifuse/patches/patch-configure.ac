@@ -1,0 +1,11 @@
+--- configure.ac.orig	2017-02-07 01:23:07.201064368 -0800
++++ configure.ac	2017-02-07 01:23:16.993742146 -0800
+@@ -22,7 +22,7 @@
+   AC_DEFINE([HAVE_LIBIMOBILEDEVICE_1_1_5], 1, [Define if libimobiledevice is using 1.1.5 API])
+ fi
+ libimobiledevice_VERSION=`$PKG_CONFIG --modversion "libimobiledevice-1.0" 2>&1`
+-PKG_CHECK_MODULES(libfuse, fuse >= 2.7.0)
++PKG_CHECK_MODULES(libfuse, fuse >= 2.6.0)
+ PKG_CHECK_MODULES(libplist, libplist)
+ 
+ # Checks for header files.

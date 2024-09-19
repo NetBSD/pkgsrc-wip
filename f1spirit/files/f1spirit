@@ -1,0 +1,3 @@
+#!/bin/sh
+cd @PREFIX@/share/f1spirit
+./f1spirit

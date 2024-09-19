@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.2 2012/12/26 14:02:01 othyro Exp $
+include/hawklib.h
+include/nl.h
+lib/NL.so
+lib/NL.so.1
+lib/NL.so.1.7
+lib/libNL.a
+lib/libNL.so
+lib/libNL.so.1
+lib/libNL.so.1.7
+lib/libNL.so.1.7.0

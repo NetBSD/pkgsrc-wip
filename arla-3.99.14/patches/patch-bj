@@ -1,0 +1,15 @@
+$NetBSD: patch-bj,v 1.1.1.1 2006/01/13 15:51:48 mreriksson Exp $
+
+Cast "size" to (unsigned long long) to avoid a compiler warning on amd64.
+
+--- tools/release-tools/tar-rootify.c.orig	2005-03-26 12:32:30.000000000 +0100
++++ tools/release-tools/tar-rootify.c
+@@ -118,7 +118,7 @@ main(int argc, char **argv)
+ 	    fprintf(stderr, "gname = %.*s\n", (int)sizeof(p->gname), p->gname);
+ 	    fprintf(stderr, "type =     %c\n", p->typeflag);
+ 	    fprintf(stderr, "size = %.*s\n", (int)sizeof(p->size), p->size);
+-	    fprintf(stderr, "size = %llo\n", size);
++	    fprintf(stderr, "size = %llo\n", (unsigned long long)size);
+ 	}
+ 
+ 	hcksum = estrntoll(p->chksum, 8, 8);

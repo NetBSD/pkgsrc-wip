@@ -1,0 +1,32 @@
+$NetBSD$
+
+# Respect env, add install target
+
+--- Makefile.orig	2018-03-13 15:49:30.000000000 +0000
++++ Makefile
+@@ -1,12 +1,22 @@
+ CCXXFLAGS=-Dint_lnx -O
+-CXX=g++
++CXX?=g++
+ SHELL=/bin/sh
+ LDLIB=-lz
+ LDLIN=-linterp.1
+-CXXFLAGS=$(CCXXFLAGS)
++CXXFLAGS+=$(CCXXFLAGS)
++
++DESTDIR	?= .
++PREFIX	?= /usr/local
++MKDIR	?= mkdir
++
++all:	ukbgene
+ 
+ ukbgene : ukbgene.o
+-	$(CXX) -o ukbgene $< -L. -lugene -lz
++	$(CXX) -o ukbgene ukbgene.o -L. $(LDFLAGS) -lugene -lz
++
++install:
++	$(MKDIR) -p $(DESTDIR)$(PREFIX)/bin
++	install -c ukbgene $(DESTDIR)$(PREFIX)/bin
+ 
+ clean:
+ 	rm *.o

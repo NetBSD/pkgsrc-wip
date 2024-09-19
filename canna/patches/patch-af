@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+
+--- lib/RKC/convert.c.orig	2004-04-27 06:48:37.000000000 +0900
++++ lib/RKC/convert.c	2010-12-31 18:49:15.000000000 +0900
+@@ -30,7 +30,7 @@
+ #include "rkcw.h"
+ #include "canna/RK.h"
+ #include "rkc.h"
+-#include "IRproto.h"
++#include "../server/IRproto.h"
+ #include "RKindep/file.h"
+ 
+ #include <sys/types.h>

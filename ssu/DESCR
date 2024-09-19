@@ -1,0 +1,13 @@
+Until now, Unix developers which required access to a SourceSafe
+repository (formerly Visual SourceSafe) had to use a Windows machine
+or, in the lucky case that the architecture was standard enough,
+pay another time. SSU provides access to local and remote SourceSafe
+repositories through TCP, to any POSIX system (Linux, BSDs, OS X,
+etc), and for free, alleviating the pain. SSU also improves the
+SourceSafe interface and tries to work around several design bugs.
+
+SSU supports and uniforms a good subset of the SourceSafe features
+and has proven to be stable when used by a team of 6 developers
+accessing a single server. SSU has been developed since one year
+now and employs some regression testing. We're interested in
+feedback, we'd be glad to know about any success.

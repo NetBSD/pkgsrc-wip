@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.2 2009/06/23 21:42:43 yhardy Exp $
+lib/firefox/plugins/xine-logo.ogg
+lib/firefox/plugins/xineplugin.la

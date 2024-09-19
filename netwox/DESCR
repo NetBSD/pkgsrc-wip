@@ -1,0 +1,10 @@
+netwox helps to find and solve some network problems:
+  - sniffing, spoofing
+  - clients, servers
+  - DNS, FTP, HTTP, IRC, NNTP, SMTP, SNMP, SYSLOG, TELNET, TFTP
+  - scan, ping, traceroute
+  - etc.
+
+Netwox contains over 150 tools using the network library netwib.
+Some tools are only a simplified implementation, while others are
+very sophisticated.

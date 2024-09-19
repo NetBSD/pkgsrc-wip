@@ -1,0 +1,2 @@
+HaskellDB support for HDBC. You will also need one or more back-end
+specific packages.

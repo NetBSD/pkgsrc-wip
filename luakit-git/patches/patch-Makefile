@@ -1,0 +1,17 @@
+$NetBSD$
+
+Install config files to examples.
+
+--- Makefile.orig	2021-08-26 08:19:47.708939528 +0000
++++ Makefile
+@@ -109,8 +109,8 @@ install: all
+ 	install -m644 luakit.so $(DESTDIR)$(LIBDIR)/luakit.so
+ 	install -d $(DESTDIR)$(PREFIX)/bin
+ 	install luakit $(DESTDIR)$(PREFIX)/bin/luakit
+-	install -d $(DESTDIR)$(XDGPREFIX)/luakit/
+-	install -m644 config/*.lua $(DESTDIR)$(XDGPREFIX)/luakit/
++	install -d $(DESTDIR)$(PREFIX)/share/examples/luakit/
++	install -m644 config/*.lua $(DESTDIR)$(PREFIX)/share/examples/luakit/
+ 	install -d $(DESTDIR)$(PIXMAPDIR)
+ 	install -m644 extras/luakit.png $(DESTDIR)$(PIXMAPDIR)
+ 	install -m644 extras/luakit.svg $(DESTDIR)$(PIXMAPDIR)

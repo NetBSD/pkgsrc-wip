@@ -1,0 +1,6 @@
+Literate programming, as defined by Knuth, means to combine program code and
+documentation into one source document from which program code and documentation
+can be extracted. The approach of ocamlweb is that documentation is to be
+included in the program code as special comments. The ocamlweb tool extracts
+from this the documented program code as LaTeX document, while no special
+preprocessing is required to compile the source files.

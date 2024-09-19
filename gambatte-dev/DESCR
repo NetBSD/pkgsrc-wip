@@ -1,0 +1,6 @@
+Gambatte is an accuracy-focused, open-source, cross-platform Game
+Boy / Game Boy Color emulator written in C++. It is based on hundreds
+of corner case hardware tests, as well as previous documentation
+and reverse engineering efforts.
+
+This is the development version of gambatte.

@@ -1,0 +1,5 @@
+Documentation for tex-attachfile.
+
+This documentation is needed for the attachfile2 package
+in print/tex-oberdiek. The attachfile2 package should be
+used instead of attachfile.

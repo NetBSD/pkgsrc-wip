@@ -1,0 +1,17 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/gwsurrogate/__init__.py
+${PYSITELIB}/gwsurrogate/__init__.pyc
+${PYSITELIB}/gwsurrogate/__init__.pyo
+${PYSITELIB}/gwsurrogate/parametric_funcs.py
+${PYSITELIB}/gwsurrogate/parametric_funcs.pyc
+${PYSITELIB}/gwsurrogate/parametric_funcs.pyo
+${PYSITELIB}/gwsurrogate/surrogate.py
+${PYSITELIB}/gwsurrogate/surrogate.pyc
+${PYSITELIB}/gwsurrogate/surrogate.pyo
+${PYSITELIB}/gwsurrogate/surrogateIO.py
+${PYSITELIB}/gwsurrogate/surrogateIO.pyc
+${PYSITELIB}/gwsurrogate/surrogateIO.pyo
+${PYSITELIB}/gwsurrogate/surrogate_repo.py
+${PYSITELIB}/gwsurrogate/surrogate_repo.pyc
+${PYSITELIB}/gwsurrogate/surrogate_repo.pyo

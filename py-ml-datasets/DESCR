@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+<a href="https://explosion.ai"><img src="https://explosion.ai/assets/img/logo.svg" width="125" height="125" align="right" /></a>
+
+# Machine learning dataset loaders for testing and examples
+
+Loaders for various machine learning datasets for testing and example scripts.
+Previously in `thinc.extra.datasets`.
+
+[![PyPi Version](https://img.shields.io/pypi/v/ml-datasets.svg?style=flat-square&logo=pypi&logoColor=white)](https://pypi.python.org/pypi/ml-datasets)
+
+## Setup and installation
+
+The package can be installed via pip:
+
+```bash
+pip install ml-datasets
+```
+
+## Loaders
+
+Loaders can be imported directly or used via their string name (which is useful if they're set via command line arguments). Some loaders may take arguments – see the source for details.
+...

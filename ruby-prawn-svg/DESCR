@@ -1,0 +1,3 @@
+This gem allows you to render SVG directly into a PDF using the 'prawn' gem.
+Since PDF is vector-based, you'll get nice scaled graphics if you use SVG
+instead of an image.

@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/pgen_compress
+bin/plink2
+bin/plink2-bench
+bin/plink2-test
+share/plink2/Tests/TEST_DOSAGE_ROUND_TRIP/.gitignore
+share/plink2/Tests/TEST_DOSAGE_ROUND_TRIP/run_tests.sh
+share/plink2/Tests/TEST_EXTRACT_CHR/.gitignore
+share/plink2/Tests/TEST_EXTRACT_CHR/run_tests.sh
+share/plink2/Tests/TEST_EXTRACT_CHR/simulate.txt
+share/plink2/Tests/TEST_MAF_FILTER/.gitignore
+share/plink2/Tests/TEST_MAF_FILTER/run_tests.sh
+share/plink2/Tests/TEST_MAF_FILTER/simulate.txt
+share/plink2/Tests/TEST_PGEN_FREQ/.gitignore
+share/plink2/Tests/TEST_PGEN_FREQ/run_tests.sh
+share/plink2/Tests/TEST_PGEN_FREQ/simulate.txt
+share/plink2/Tests/TEST_PHASED_VCF/.gitignore
+share/plink2/Tests/TEST_PHASED_VCF/1kg_phase3_chr21_start.vcf.gz
+share/plink2/Tests/TEST_PHASED_VCF/pca_compare.py
+share/plink2/Tests/TEST_PHASED_VCF/run_tests.sh
+share/plink2/Tests/TEST_SAMPLE_SUBSET/.gitignore
+share/plink2/Tests/TEST_SAMPLE_SUBSET/run_tests.sh
+share/plink2/Tests/run_tests.sh

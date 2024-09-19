@@ -1,0 +1,5 @@
+Virtual ALSA PCM device implements BlueZ 5 audio profiles. Lets ALSA apps
+stream and capture using your wireless headset without adding PulseAudio
+dependencies or implementing its APIs. Pass bluealsa instead of your sound
+card identifier to your apps or tools such as aplay, arecord and amixer.
+See automation example in acme.js.org/ctl ear section.

@@ -1,0 +1,27 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- nnrpd/nnrpd.c.orig	Tue Dec  9 00:48:50 1997
++++ nnrpd/nnrpd.c
+@@ -384,12 +384,9 @@ StartConnection(accesslist)
+ {
+     struct sockaddr_in	sin;
+     int			length;
+-    char		buff[SMBUF];
+-    char		*ClientAddr;
+ 
+     /* Get the peer's name. */
+     length = sizeof sin;
+-    ClientAddr = NULL;
+     if (getpeername(STDIN, (struct sockaddr *)&sin, &length) < 0) {
+ 	if (!isatty(STDIN)) {
+ 	    syslog(L_ERROR, "%s cant getpeername %m", "?");
+@@ -430,8 +427,7 @@ StartConnection(accesslist)
+ 		ClientHost);
+ 	}
+ 	else {
+-	    ClientAddr = buff;
+-	    (void)strcpy(buff, inet_ntoa(sin.sin_addr));
++	    (void)strcpy(ClientAddr, inet_ntoa(sin.sin_addr));
+ 	}
+ #else
+ 	(void)strcpy(ClientHost, inet_ntoa(sin.sin_addr));

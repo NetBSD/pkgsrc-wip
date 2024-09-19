@@ -1,0 +1,16 @@
+$NetBSD$
+
+Install default rules to "share/lib/dmake".
+(to make it clear that they are not associated with BSD make)
+
+--- sunpro/Make/bin/make/common/Makefile.def.orig	2017-04-18 22:58:00.000000000 +0000
++++ sunpro/Make/bin/make/common/Makefile.def
+@@ -6,7 +6,7 @@ include		$(SRCROOT)/$(RULESDIR)/rules.to
+ ###########################################################################
+ 
+ INSMODE=	0644
+-INSDIR=		share/lib/make
++INSDIR=		share/lib/dmake
+ TARGET=		make.rules
+ AUXSRCEXT=	.file
+ 

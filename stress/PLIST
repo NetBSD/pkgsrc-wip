@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/stress
+info/stress.info
+man/man1/stress.1

@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/cuba.h
+lib/libcuba.a
+share/cuba.pdf

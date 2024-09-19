@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.3 2012/12/09 03:55:33 othyro Exp $
+bin/ossec-rootcheck
+share/doc/rootcheck/README
+share/rootcheck/db/cis_debian_linux_rcl.txt
+share/rootcheck/db/cis_rhel5_linux_rcl.txt
+share/rootcheck/db/cis_rhel_linux_rcl.txt
+share/rootcheck/db/rootkit_files.txt
+share/rootcheck/db/rootkit_trojans.txt
+share/rootcheck/db/system_audit_rcl.txt
+share/rootcheck/db/win_applications_rcl.txt
+share/rootcheck/db/win_audit_rcl.txt
+share/rootcheck/db/win_malware_rcl.txt
+share/rootcheck/rootcheck.conf

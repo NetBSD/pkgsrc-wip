@@ -1,0 +1,17 @@
+Kamailio (successor of former OpenSER and SER) is an Open Source SIP
+Server released under GPL, able to handle thousands of call setups per
+second. Kamailio can be used to build large platforms for VoIP and
+realtime communications - presence, WebRTC, Instant messaging and
+other applications.  Moreover, it can be easily used for scaling up
+SIP-to-PSTN gateways, PBX systems or media servers like Asterisk,
+FreeSWITCH or SEMS.
+
+Among the powerful features: asynchronous TCP, UDP and SCTP, secure
+communication via TLS for VoIP (voice, video, text); WebSocket support
+for WebRTC; IPv4 and IPv6; SIMPLE instant messaging and presence with
+embedded XCAP server and MSRP relay; asynchronous operations; IMS
+extensions for VoLTE; ENUM; DID and least cost routing; load
+balancing; routing fail-over; accounting, authentication and
+authorization; support for many backend systems such as MySQL,
+Postgres, Oracle, Radius, LDAP, Redis, Cassandra, MongoDB, Memcached;
+Json and XMLRPC control interface, SNMP monitoring.

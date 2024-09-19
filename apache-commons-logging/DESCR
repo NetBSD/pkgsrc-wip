@@ -1,0 +1,3 @@
+Provides a simple, component oriented interface together with wrappers for
+several existing java logging systems. The user can choose at runtime which
+system they want to use for logging

@@ -1,0 +1,3 @@
+Nominatim (from the Latin, 'by name') is a tool to search OpenStreetMap data by
+name and address (geocoding) and to generate synthetic addresses of OSM points
+(reverse geocoding).

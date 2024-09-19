@@ -1,0 +1,6 @@
+* rpath for bpgenc/bpgdec missing
+* library not installed
+* library not libtoolized
+
+Problems reported upstream, hoping for upstream fix.
+-- wiz 20150110

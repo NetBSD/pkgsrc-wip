@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Connection.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Connection.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/ConnectionImpl.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/ConnectionImpl.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Consts.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Consts.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Statement.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Statement.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Types.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Types.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Utils.hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Utils.p_hi
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/HSHDBC-sqlite3-${PKGVERSION}.o
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHSHDBC-sqlite3-${PKGVERSION}.a
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHSHDBC-sqlite3-${PKGVERSION}_p.a
+lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/HDBC-sqlite3-${PKGVERSION}/COPYRIGHT

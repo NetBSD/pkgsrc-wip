@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (xcffib-0.6.0.tar.gz) = 40b61466bc92290b0460c2b195e9c24734e2e9c7
+SHA512 (xcffib-0.6.0.tar.gz) = de78b738f2a75e6569a0529d1fe2844b2cafe48623f25c20a9572ce881cb97325c3823dfe883a2e14bc93d01342f20c4ab561928312f65d0a67364fecb5c8ba5
+Size (xcffib-0.6.0.tar.gz) = 84360 bytes
+SHA1 (patch-xcffib_____init____.py) = 10b44e1f164000f6b36b784394f707e1fa9612ca

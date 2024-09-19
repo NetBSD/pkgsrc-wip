@@ -1,0 +1,4 @@
+ltrace is a debugging tool that traces library calls in ELF32
+executables.  It intercepts and records the dynamic library calls
+from the executed process.  It can also intercept and print system
+calls.

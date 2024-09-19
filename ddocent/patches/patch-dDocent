@@ -1,0 +1,308 @@
+$NetBSD$
+
+Fixes for GNU sort, awk, shuf naming. Ensure $SHELL is bash. Path cleanup.
+--- dDocent.orig	2018-06-15 14:58:07 UTC
++++ dDocent
+@@ -1,6 +1,10 @@
+ #!/usr/bin/env bash
++
+ export LC_ALL=en_US.UTF-8
+ 
++# GNU Parallel uses $SHELL and has issues with [t]csh
++export SHELL=%%PREFIX%%/bin/bash
++
+ ##########dDocent##########
+ VERSION='2.5.2'
+ #This script serves as an interactive bash wrapper to QC, assemble, map, and call SNPs from double digest RAD (SE or PE), ezRAD (SE or PE) data, or SE RAD data.
+@@ -27,19 +31,19 @@ do
+ 	fi
+ done
+ 
+-if find ${PATH//:/ } -maxdepth 1 -name trimmomatic*jar 2> /dev/null| grep -q 'trim' ; then
+-	TRIMMOMATIC=$(find ${PATH//:/ } -maxdepth 1 -name trimmomatic*jar 2> /dev/null | head -1)
+-	else
++if [ -e %%JAVAJARDIR%%/trimmomatic.jar ]; then
++	TRIMMOMATIC=%%JAVAJARDIR%%/trimmomatic.jar
++else
+     echo "The dependency trimmomatic is not installed or is not in your" '$PATH'"."
+     NUMDEP=$((NUMDEP + 1))
+-	fi
++fi
+ 
+-if find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | grep -q 'Tru' ; then
+-	ADAPTERS=$(find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | head -1)
+-	else
++if [ -e %%PREFIX%%/share/trimmomatic/adapters/TruSeq2-PE.fa ]; then
++	ADAPTERS=%%PREFIX%%/share/trimmomatic/adapters/TruSeq2-PE.fa
++else
+     echo "The file listing adapters (included with trimmomatic) is not installed or is not in your" '$PATH'"."
+     NUMDEP=$((NUMDEP + 1))
+-    fi
++fi
+ 
+ SAMV1=$(samtools 2>&1 >/dev/null | grep Ver | sed -e 's/Version://' | cut -f2 -d " " | sed -e 's/-.*//' | cut -c1)
+ SAMV2=$(samtools 2>&1 >/dev/null | grep Ver | sed -e 's/Version://' | cut -f2 -d " " | sed -e 's/-.*//' | cut -c3)
+@@ -96,7 +100,8 @@ VCFTV=$(vcftools | grep VCF | grep -oh '
+         elif [ "$VCFTV" -ge "12" ]; then
+                 VCFGTFLAG="--max-missing"
+ 	fi
+-BWAV=$(bwa 2>&1 | mawk '/Versi/' | sed 's/Version: //g' | sed 's/0.7.//g' | sed 's/-.*//g' | cut -c 1-2)
++BWAV=$(bwa 2>&1 | mawk '/Versi/' | sed 's/Version: //g' | sed 's/0.7.//g' | sed
++ 's/a*-.*//g')
+ 	if [ "$BWAV" -lt "13" ]; then
+         	echo "The version of bwa installed in your" '$PATH' "is not optimized for dDocent."
+         	echo "Please install at least version 0.7.13"
+@@ -114,10 +119,16 @@ BTC=$( bedtools --version | mawk '{print
+ 		exit 1	
+ 	fi
+ 		
+-if ! awk --version | fgrep -v GNU &>/dev/null; then
+-         awk=gawk
+-    else
+-         awk=awk
++if ! awk --version | fgrep -q GNU; then
++	awk=gawk
++else
++	awk=awk
++fi
++
++if ! sort --version | fgrep -q GNU; then
++	sort=gsort
++else
++	sort=sort
+ fi
+ 
+ if [ $NUMDEP -gt 0 ]; then
+@@ -391,18 +402,18 @@ if [ "$SNP" != "no" ]; then
+ 			mawk -v OFS='\t' {'print $1,$2'} reference.fasta.fai > genome.file
+ 			cat namelist | parallel -j $FB2 "bedtools coverage -b {}-RG.bam -a mapped.bed -counts -sorted -g genome.file > {}.cov.stats"
+ 		fi
+-		cat *.cov.stats | sort -k1,1 -k2,2n | bedtools merge -i - -c 4 -o sum > cov.stats
++		cat *.cov.stats | $sort -k1,1 -k2,2n | bedtools merge -i - -c 4 -o sum > cov.stats
+ 	fi
+ 		
+ 	if head -1 reference.fasta | grep -e 'dDocent' reference.fasta 1>/dev/null; then
+ 	
+-		DP=$(mawk '{print $4}' cov.stats | sort -rn | perl -e '$d=.001;@l=<>;print $l[int($d*@l)]')
++		DP=$(mawk '{print $4}' cov.stats | $sort -rn | perl -e '$d=.001;@l=<>;print $l[int($d*@l)]')
+ 		CC=$( mawk -v x=$DP '$4 < x' cov.stats | mawk '{len=$3-$2;lc=len*$4;tl=tl+lc} END {OFMT = "%.0f";print tl/"'$NUMProc'"}')
+ 	else
+-		DP=$(mawk '{print $4}' cov.stats | sort -rn | perl -e '$d=.00005;@l=<>;print $l[int($d*@l)]')
++		DP=$(mawk '{print $4}' cov.stats | $sort -rn | perl -e '$d=.00005;@l=<>;print $l[int($d*@l)]')
+ 		CC=$( mawk -v x=$DP '$4 < x' cov.stats | mawk '{len=$3-$2;lc=len*$4;tl=tl+lc} END {OFMT = "%.0f";print tl/"'$NUMProc'"}')
+ 	fi
+-	mawk -v x=$DP '$4 < x' cov.stats |sort -V -k1,1 -k2,2 | mawk -v cutoff=$CC 'BEGIN{i=1} 
++	mawk -v x=$DP '$4 < x' cov.stats |$sort -V -k1,1 -k2,2 | mawk -v cutoff=$CC 'BEGIN{i=1} 
+ 	{
+ 	len=$3-$2;lc=len*$4;cov = cov + lc
+ 	if ( cov < cutoff) {x="mapped."i".bed";print $1"\t"$2"\t"$3 > x}
+@@ -440,7 +451,7 @@ if [ "$SNP" != "no" ]; then
+ 	
+ 	rm freebayes.error freebayes.log &> /dev/null
+ 	
+-	ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | shuf | parallel --bar --halt now,fail=1 --env call_genos --memfree $MAXMemory -j $NUMProc --no-notice "call_genos {} 2> /dev/null"
++	ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | gshuf | parallel --bar --halt now,fail=1 --env call_genos --memfree $MAXMemory -j $NUMProc --no-notice "call_genos {} 2> /dev/null"
+ 
+ 
+ 	if [ -f "freebayes.error" ]; then
+@@ -450,13 +461,13 @@ if [ "$SNP" != "no" ]; then
+ 		LIM=$(( $NUMProc * 2 ))
+         	if head -1 reference.fasta | grep -e 'dDocent' reference.fasta 1>/dev/null; then
+ 
+-                	DP=$(mawk '{print $4}' cov.stats | sort -rn | perl -e '$d=.001;@l=<>;print $l[int($d*@l)]')
++                	DP=$(mawk '{print $4}' cov.stats | $sort -rn | perl -e '$d=.001;@l=<>;print $l[int($d*@l)]')
+                 	CC=$( mawk -v x=$DP '$4 < x' cov.stats | mawk '{len=$3-$2;lc=len*$4;tl=tl+lc} END {OFMT = "%.0f";print tl/"'$LIM'"}')
+         	else
+-                	DP=$(mawk '{print $4}' cov.stats | sort -rn | perl -e '$d=.00005;@l=<>;print $l[int($d*@l)]')
++                	DP=$(mawk '{print $4}' cov.stats | $sort -rn | perl -e '$d=.00005;@l=<>;print $l[int($d*@l)]')
+                 	CC=$( mawk -v x=$DP '$4 < x' cov.stats | mawk '{len=$3-$2;lc=len*$4;tl=tl+lc} END {OFMT = "%.0f";print tl/"'$LIM'"}')
+         	fi
+-        	mawk -v x=$DP '$4 < x' cov.stats |sort -V -k1,1 -k2,2 | mawk -v cutoff=$CC 'BEGIN{i=1}
++        	mawk -v x=$DP '$4 < x' cov.stats |$sort -V -k1,1 -k2,2 | mawk -v cutoff=$CC 'BEGIN{i=1}
+         	{ len=$3-$2;lc=len*$4;cov = cov + lc
+         	if ( cov < cutoff) {x="mapped."i".bed";print $1"\t"$2"\t"$3 > x}
+         	else {i=i+1; x="mapped."i".bed"; print $1"\t"$2"\t"$3 > x; cov=0}
+@@ -467,7 +478,7 @@ if [ "$SNP" != "no" ]; then
+ 		echo "Using FreeBayes to call SNPs again"
+ 		NumP=$(( $NUMProc / 4 ))
+ 		NumP=$(( $NumP * 3 ))
+-		ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | shuf | parallel --bar --halt now,fail=1 --env call_genos --memfree $MAXMemory -j $NumP --no-notice "call_genos {} 2> /dev/null" 
++		ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | gshuf | parallel --bar --halt now,fail=1 --env call_genos --memfree $MAXMemory -j $NumP --no-notice "call_genos {} 2> /dev/null" 
+         fi
+ 
+ 	if [ -f "freebayes.error" ]; then
+@@ -477,13 +488,13 @@ if [ "$SNP" != "no" ]; then
+ 		LIM=$(( $NUMProc * 4 ))
+         	if head -1 reference.fasta | grep -e 'dDocent' reference.fasta 1>/dev/null; then
+ 
+-                	DP=$(mawk '{print $4}' cov.stats | sort -rn | perl -e '$d=.001;@l=<>;print $l[int($d*@l)]')
++                	DP=$(mawk '{print $4}' cov.stats | $sort -rn | perl -e '$d=.001;@l=<>;print $l[int($d*@l)]')
+                 	CC=$( mawk -v x=$DP '$4 < x' cov.stats | mawk '{len=$3-$2;lc=len*$4;tl=tl+lc} END {OFMT = "%.0f";print tl/"'$LIM'"}')
+         	else
+-                	DP=$(mawk '{print $4}' cov.stats | sort -rn | perl -e '$d=.00005;@l=<>;print $l[int($d*@l)]')
++                	DP=$(mawk '{print $4}' cov.stats | $sort -rn | perl -e '$d=.00005;@l=<>;print $l[int($d*@l)]')
+                 	CC=$( mawk -v x=$DP '$4 < x' cov.stats | mawk '{len=$3-$2;lc=len*$4;tl=tl+lc} END {OFMT = "%.0f";print tl/"'$LIM'"}')
+         	fi
+-        	mawk -v x=$DP '$4 < x' cov.stats |sort -V -k1,1 -k2,2 | mawk -v cutoff=$CC 'BEGIN{i=1}
++        	mawk -v x=$DP '$4 < x' cov.stats |$sort -V -k1,1 -k2,2 | mawk -v cutoff=$CC 'BEGIN{i=1}
+         	{ len=$3-$2;lc=len*$4;cov = cov + lc
+         	if ( cov < cutoff) {x="mapped."i".bed";print $1"\t"$2"\t"$3 > x}
+         	else {i=i+1; x="mapped."i".bed"; print $1"\t"$2"\t"$3 > x; cov=0}
+@@ -492,7 +503,7 @@ if [ "$SNP" != "no" ]; then
+             	NumP=$(( $NumP / 4 ))
+                 NumP=$(( $NumP * 3 ))
+ 		echo "Using FreeBayes to call SNPs again"
+-                ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | shuf | parallel --bar --halt now,fail=1 --env call_genos --memfree $MAXMemory -j $NumP --no-notice "call_genos {} 2> /dev/null"
++                ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | gshuf | parallel --bar --halt now,fail=1 --env call_genos --memfree $MAXMemory -j $NumP --no-notice "call_genos {} 2> /dev/null"
+ 	fi
+ 
+ 	if [ -f "freebayes.error" ]; then
+@@ -560,8 +571,8 @@ fi
+ 
+ #Function for trimming reads using trimmomatic
+ trim_reads(){
+-	TRIMMOMATIC=$(find ${PATH//:/ } -maxdepth 1 -name trimmomatic*jar 2> /dev/null | head -1)
+-    	ADAPTERS=$(find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | head -1)
++	TRIMMOMATIC=%%JAVAJARDIR%%/trimmomatic.jar
++	ADAPTERS=%%PREFIX%%/share/trimmomatic/adapters/TruSeq2-PE.fa
+ 
+ 	if [ -f $1.R.fq.gz ]; then	
+ 		java -Xmx2g -jar $TRIMMOMATIC PE -threads 2 -phred33 $1.F.fq.gz $1.R.fq.gz $1.R1.fq.gz $1.unpairedF.fq.gz $1.R2.fq.gz $1.unpairedR.fq.gz ILLUMINACLIP:$ADAPTERS:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:5:10 $TW &> $1.trim.log
+@@ -617,7 +628,7 @@ if [ -z "$CUTOFF" ]; then
+ 	do 
+ 	echo $i >> pfile
+ 	done
+-	cat pfile | parallel -j $NUMProc --no-notice "echo -n {}xxx && mawk -v x={} '\$1 >= x' uniq.seqs | wc -l" | mawk  '{gsub("xxx","\t",$0); print;}'| sort -g > uniqseq.data
++	cat pfile | parallel -j $NUMProc --no-notice "echo -n {}xxx && mawk -v x={} '\$1 >= x' uniq.seqs | wc -l" | mawk  '{gsub("xxx","\t",$0); print;}'| $sort -g > uniqseq.data
+ 	rm pfile
+ 
+ 
+@@ -652,7 +663,7 @@ export -f special_uniq
+ 
+ 
+ if [[ "$ATYPE" == "RPE" || "$ATYPE" == "ROL" ]]; then
+-  	parallel --no-notice -j $NUMProc --env special_uniq special_uniq $CUTOFF {} ::: *.uniq.seqs  | sort --parallel=$NUMProc -S 2G | uniq -c > uniqCperindv
++  	parallel --no-notice -j $NUMProc --env special_uniq special_uniq $CUTOFF {} ::: *.uniq.seqs  | $sort --parallel=$NUMProc -S 2G | uniq -c > uniqCperindv
+ else
+ 	parallel --no-notice -j $NUMProc mawk -v x=$CUTOFF \''$1 >= x'\' ::: *.uniq.seqs | cut -f2 | perl -e 'while (<>) {chomp; $z{$_}++;} while(($k,$v) = each(%z)) {print "$v\t$k\n";}' > uniqCperindv
+ fi
+@@ -670,7 +681,7 @@ if [ -z "$CUTOFF2" ]; then
+ 	echo $i >> ufile
+ 	done
+ 
+-	cat ufile | parallel -j $NUMProc --no-notice "echo -n {}xxx && mawk -v x={} '\$1 >= x' uniqCperindv | wc -l" | mawk  '{gsub("xxx","\t",$0); print;}'| sort -g > uniqseq.peri.data
++	cat ufile | parallel -j $NUMProc --no-notice "echo -n {}xxx && mawk -v x={} '\$1 >= x' uniqCperindv | wc -l" | mawk  '{gsub("xxx","\t",$0); print;}'| $sort -g > uniqseq.peri.data
+ 	rm ufile
+ 
+ 	
+@@ -734,7 +745,7 @@ if [ ${NAMES[@]:(-1)}.F.fq.gz -nt ${NAME
+ 		cat namelist | parallel --no-notice -j $NUMProc "zcat {}.F.fq.gz | mawk '$AWK1' | mawk '$AWK2' > {}.forward"
+ 		cat namelist | parallel --no-notice -j $NUMProc "zcat {}.R.fq.gz | mawk '$AWK1' | mawk '$AWK2' > {}.reverse"
+ 		if [ "$ATYPE" = "RPE" ]; then
+-			cat namelist | parallel --no-notice -j $NUMProc "paste {}.forward {}.reverse | sort -k1 -S 200M > {}.fr"
++			cat namelist | parallel --no-notice -j $NUMProc "paste {}.forward {}.reverse | $sort -k1 -S 200M > {}.fr"
+ 			cat namelist | parallel --no-notice -j $NUMProc "cut -f1 {}.fr | uniq -c > {}.f.uniq && cut -f2 {}.fr > {}.r"
+ 			cat namelist | parallel --no-notice -j $NUMProc "mawk '$AWK4' {}.f.uniq > {}.f.uniq.e" 
+ 			cat namelist | parallel --no-notice -j $NUMProc "paste -d '-' {}.f.uniq.e {}.r | mawk '$AWK3'| sed 's/-/NNNNNNNNNN/' | sed -e '$SED1' | sed -e '$SED2'> {}.uniq.seqs"
+@@ -805,7 +816,7 @@ getAssemblyInfo
+ fi
+ 
+ if [[ "$ATYPE" == "RPE" || "$ATYPE" == "ROL" ]]; then
+-  	parallel --no-notice -j $NUMProc --env special_uniq special_uniq $CUTOFF {} ::: *.uniq.seqs  | sort --parallel=$NUMProc -S 2G | uniq -c > uniqCperindv
++  	parallel --no-notice -j $NUMProc --env special_uniq special_uniq $CUTOFF {} ::: *.uniq.seqs  | $sort --parallel=$NUMProc -S 2G | uniq -c > uniqCperindv
+ else
+ 	parallel --no-notice -j $NUMProc mawk -v x=$CUTOFF \''$1 >= x'\' ::: *.uniq.seqs | cut -f2 | perl -e 'while (<>) {chomp; $z{$_}++;} while(($k,$v) = each(%z)) {print "$v\t$k\n";}' > uniqCperindv
+ fi
+@@ -817,16 +828,16 @@ if [[ "$ATYPE" == "RPE" || "$ATYPE" == "
+   parallel --no-notice -j $NUMProc mawk -v x=$CUTOFF \''$1 >= x'\' ::: *.uniq.seqs | cut -f2 | sed 's/NNNNNNNNNN/-/' >  total.uniqs
+   cut -f 1 -d "-" total.uniqs > total.u.F
+   cut -f 2 -d "-" total.uniqs > total.u.R
+-  paste total.u.F total.u.R | sort -k1 --parallel=$NUMProc -S 2G > total.fr
++  paste total.u.F total.u.R | $sort -k1 --parallel=$NUMProc -S 2G > total.fr
+  
+-  parallel --no-notice --env special_uniq special_uniq $CUTOFF {} ::: *.uniq.seqs  | sort --parallel=$NUMProc -S 2G | uniq -c > total.f.uniq
++  parallel --no-notice --env special_uniq special_uniq $CUTOFF {} ::: *.uniq.seqs  | $sort --parallel=$NUMProc -S 2G | uniq -c > total.f.uniq
+   join -1 2 -2 1 -o 1.1,1.2,2.2 total.f.uniq total.fr | mawk '{print $1 "\t" $2 "NNNNNNNNNN" $3}' | mawk -v x=$CUTOFF2 '$1 >= x' > uniq.k.$CUTOFF.c.$CUTOFF2.seqs
+   rm total.uniqs total.u.* total.fr total.f.uniq* 
+   
+ else
+ 	parallel --no-notice mawk -v x=$CUTOFF \''$1 >= x'\' ::: *.uniq.seqs | cut -f2 | perl -e 'while (<>) {chomp; $z{$_}++;} while(($k,$v) = each(%z)) {print "$v\t$k\n";}' | mawk -v x=$CUTOFF2 '$1 >= x' > uniq.k.$CUTOFF.c.$CUTOFF2.seqs
+ fi
+-sort -k1 -r -n uniq.k.$CUTOFF.c.$CUTOFF2.seqs | cut -f 2 > totaluniqseq
++$sort -k1 -r -n uniq.k.$CUTOFF.c.$CUTOFF2.seqs | cut -f 2 > totaluniqseq
+ mawk '{c= c + 1; print ">dDocent_Contig_" c "\n" $1}' totaluniqseq > uniq.full.fasta
+ LENGTH=$(mawk '!/>/' uniq.full.fasta  | mawk '(NR==1||length<shortest){shortest=length} END {print shortest}')
+ LENGTH=$(($LENGTH * 3 / 4))
+@@ -861,21 +872,21 @@ if [[ "$ATYPE" == "PE" || "$ATYPE" == "R
+ 		sed -e 's/NNNNNNNNNN/	/g' uniq.fasta | cut -f1 > uniq.F.fasta
+ 	  	CDHIT=$(python -c "print (max("$simC" - 0.1,0.8))")
+ 	  	cd-hit-est -i uniq.F.fasta -o xxx -c $CDHIT -T $NUMProc -M 0 -g 1 -d 100 &>cdhit.log
+-	  	mawk '{if ($1 ~ /Cl/) clus = clus + 1; else  print $3 "\t" clus}' xxx.clstr | sed 's/[>dDocent_Contig_,...]//g' | sort -g -k1 -S 2G --parallel=$NUMProc > sort.contig.cluster.ids
++	  	mawk '{if ($1 ~ /Cl/) clus = clus + 1; else  print $3 "\t" clus}' xxx.clstr | sed 's/[>dDocent_Contig_,...]//g' | $sort -g -k1 -S 2G --parallel=$NUMProc > sort.contig.cluster.ids
+ 	  	paste sort.contig.cluster.ids totaluniqseq > contig.cluster.totaluniqseq
+           
+      	else
+-        	sed -e 's/NNNNNNNNNN/	/g' totaluniqseq | cut -f1 | sort --parallel=$NUMProc -S 2G| uniq | mawk '{c= c + 1; print ">dDocent_Contig_" c "\n" $1}' > uniq.F.fasta
++        	sed -e 's/NNNNNNNNNN/	/g' totaluniqseq | cut -f1 | $sort --parallel=$NUMProc -S 2G| uniq | mawk '{c= c + 1; print ">dDocent_Contig_" c "\n" $1}' > uniq.F.fasta
+ 		CDHIT=$(python -c "print (max("$simC" - 0.1,0.8))")
+ 		cd-hit-est -i uniq.F.fasta -o xxx -c $CDHIT -T $NUMProc -M 0 -g 1 -d 100 &>cdhit.log
+-  		mawk '{if ($1 ~ /Cl/) clus = clus + 1; else  print $3 "\t" clus}' xxx.clstr | sed 's/[>dDocent_Contig_,...]//g' | sort -g -k1 -S 2G --parallel=$NUMProc > sort.contig.cluster.ids
++  		mawk '{if ($1 ~ /Cl/) clus = clus + 1; else  print $3 "\t" clus}' xxx.clstr | sed 's/[>dDocent_Contig_,...]//g' | $sort -g -k1 -S 2G --parallel=$NUMProc > sort.contig.cluster.ids
+   		paste sort.contig.cluster.ids <(mawk '!/>/' uniq.F.fasta) > contig.cluster.Funiq
+-  		sed -e 's/NNNNNNNNNN/	/g' totaluniqseq | sort --parallel=$NUMProc -k1 -S 2G | mawk '{print $0 "\t" NR}'  > totaluniqseq.CN
++  		sed -e 's/NNNNNNNNNN/	/g' totaluniqseq | $sort --parallel=$NUMProc -k1 -S 2G | mawk '{print $0 "\t" NR}'  > totaluniqseq.CN
+   		join -t $'\t' -1 3 -2 1 contig.cluster.Funiq totaluniqseq.CN -o 2.3,1.2,2.1,2.2 > contig.cluster.totaluniqseq
+ 	fi	
+ 	
+ 	#CD-hit output is converted to rainbow format
+-	sort -k2,2 -g contig.cluster.totaluniqseq -S 2G --parallel=$NUMProc | sed -e 's/NNNNNNNNNN/	/g' > rcluster
++	$sort -k2,2 -g contig.cluster.totaluniqseq -S 2G --parallel=$NUMProc | sed -e 's/NNNNNNNNNN/	/g' > rcluster
+ 	rainbow div -i rcluster -o rbdiv.out -f 0.5 -K 10
+         CLUST=(`tail -1 rbdiv.out | cut -f5`)
+ 	CLUST1=$(( $CLUST / 100 + 1))
+@@ -944,9 +955,9 @@ if [[ "$ATYPE" == "HYB" ]];then
+ 		sed -e 's/NNNNNNNNNN/	/g' uniq.ua.fasta | cut -f1 > uniq.F.ua.fasta
+ 		CDHIT=$(python -c "print(max("$simC" - 0.1,0.8))")
+ 		cd-hit-est -i uniq.F.ua.fasta -o xxx -c $CDHIT -T 0 -M 0 -g 1 -d 100 &>cdhit.log
+-		mawk '{if ($1 ~ /Cl/) clus = clus + 1; else  print $3 "\t" clus}' xxx.clstr | sed 's/[>dDocent_Contig_,...]//g' | sort -g -k1 -S 2G --parallel=$NUMProc > sort.contig.cluster.ids.ua
++		mawk '{if ($1 ~ /Cl/) clus = clus + 1; else  print $3 "\t" clus}' xxx.clstr | sed 's/[>dDocent_Contig_,...]//g' | $sort -g -k1 -S 2G --parallel=$NUMProc > sort.contig.cluster.ids.ua
+ 		paste sort.contig.cluster.ids.ua totaluniqseq.ua > contig.cluster.totaluniqseq.ua
+-		sort -k2,2 -g -S 2G --parallel=$NUMProc contig.cluster.totaluniqseq.ua | sed -e 's/NNNNNNNNNN/	/g' > rcluster.ua
++		$sort -k2,2 -g -S 2G --parallel=$NUMProc contig.cluster.totaluniqseq.ua | sed -e 's/NNNNNNNNNN/	/g' > rcluster.ua
+ 		#CD-hit output is converted to rainbow format
+ 		rainbow div -i rcluster.ua -o rbdiv.ua.out -f 0.5 -K 10
+ 		if [ "$ATYPE" == "PE" ]; then
+@@ -1028,7 +1039,14 @@ else
+ fi
+ 
+ #Tries to get number of processors, if not asks user
+-NUMProc=( `grep -c ^processor /proc/cpuinfo 2> /dev/null` ) 
++if [ `uname` = Linux ]; then
++    NUMProc=( `grep -c ^processor /proc/cpuinfo 2> /dev/null` )
++elif [ `uname` = FreeBSD ]; then
++    NUMProc=( `sysctl -n hw.ncpu` )
++else
++    printf "Unsupported platform: `uname`\n"
++    exit 1
++fi
+ NUMProc=$(($NUMProc + 0)) 
+ 
+ echo "dDocent detects $NUMProc processors available on this system."
+@@ -1045,7 +1063,16 @@ if [ $NUMProc -lt 1 ]; then
+ fi
+ 
+ #Tries to get maximum system memory, if not asks user
+-MAXMemory=$(($(grep -Po '(?<=^MemTotal:)\s*[0-9]+' /proc/meminfo | tr -d " ") / 1048576))
++if [ `uname` = Linux ]; then
++    MAXMemory=$(($(grep -Po '(?<=^MemTotal:)\s*[0-9]+' /proc/meminfo | tr -d "
++") / 1048576))G
++elif [ `uname` = FreeBSD ]; then
++    MAXMemory=`sysctl -n hw.realmem`
++    MAXMemory=$((MAXMemory / 1073741824))G
++else
++    printf "Unsupported platform: `uname`\n"
++    exit 1
++fi
+ 
+ echo "dDocent detects $MAXMemory gigabytes of maximum memory available on this system."
+ echo "Please enter the maximum memory to use for this analysis in gigabytes"

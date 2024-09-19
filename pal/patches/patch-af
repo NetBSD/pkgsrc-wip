@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2010/07/06 07:07:04 emil_s Exp $
+
+--- manage.c.orig	2008-07-28 16:16:23.000000000 +0000
++++ manage.c
+@@ -22,7 +22,7 @@
+ 
+ #include <readline/readline.h>
+ #include <ncurses.h>
+-#include <term.h>
++#include <ncurses/term.h>
+ #include <signal.h>
+ #include <sys/ioctl.h> /* get # columns for terminal */
+ 

@@ -1,0 +1,6 @@
+GNU/LDTP is aimed at producing high quality test automation framework and
+cutting-edge tools that can be used to test GNU/Linux Desktop and improve it.
+It uses the "Accessibility" libraries to poke through the application's
+user interface. The framework has tools to generate "AppMap" by reading
+through the user interface components of an application. The framework also
+has tools to record test-cases based on user-selection on the application

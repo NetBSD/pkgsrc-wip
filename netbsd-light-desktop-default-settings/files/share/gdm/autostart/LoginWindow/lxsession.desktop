@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Lxsession
+TryExec=@PREFIX@/bin/lxsession -s NetBSD
+Exec=@PREFIX@/bin/lxsession -s NetBSD
+OnlyShowIn=GNOME;LXDE;
+X-GNOME-Autostart-Phase=Initialization
+X-GNOME-Autostart-Notify=true
+X-GNOME-AutoRestart=true

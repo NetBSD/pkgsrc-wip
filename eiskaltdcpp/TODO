@@ -1,0 +1,15 @@
+Does not build on NetBSD-9.99.31/amd64:
+
+In file included from /usr/include/openssl/crypto.h:25,
+                 from /usr/include/openssl/comp.h:16,
+                 from /usr/include/openssl/ssl.h:17,
+                 from /scratch/wip/eiskaltdcpp/work/eiskaltdcpp-2.2.10/dcpp/SSL.h:19,
+                 from /scratch/wip/eiskaltdcpp/work/eiskaltdcpp-2.2.10/dcpp/SSLSocket.h:23,
+                 from /scratch/wip/eiskaltdcpp/work/eiskaltdcpp-2.2.10/dcpp/CryptoManager.h:24,
+                 from /scratch/wip/eiskaltdcpp/work/eiskaltdcpp-2.2.10/dcpp/CryptoManager.cpp:20:
+/usr/include/openssl/ossl_typ.h:104:16: note: forward declaration of 'struct dh_st'
+ typedef struct dh_st DH;
+                ^~~~~
+/scratch/wip/eiskaltdcpp/work/eiskaltdcpp-2.2.10/dcpp/CryptoManager.cpp:107:20: error: invalid use of incomplete type 'struct dh_st'
+             if (!dh->p || !dh->g) {
+                    ^~

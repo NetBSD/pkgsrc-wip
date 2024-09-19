@@ -1,0 +1,11 @@
+Plucker is an offline Web and e-book viewer for Palm OS based handheld
+devices and PDAs and comes with Unix, Linux, Windows, and Mac OS X
+tools, scripts, and conduits that let you decide exactly what part of
+the World Wide Web you'd like to download onto your PDA (as long as
+they're in standard HTML or text format).  These web pages are then
+processed, compressed, and transferred to the PDA for viewing by the
+Plucker viewer.
+
+PyPlucker is a Python module that provides the set of tools fetching
+the web pages you specify, and handles the conversion of them to
+Plucker format.

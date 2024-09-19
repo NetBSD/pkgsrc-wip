@@ -1,0 +1,25 @@
+$NetBSD: patch-af,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+Preprocessor magic for NetBSD.
+
+--- src/util.cpp.orig	2010-09-11 01:36:58.000000000 +0000
++++ src/util.cpp
+@@ -13,7 +13,7 @@
+ #include "horometer.h"
+ #include "resource.h"
+ #include <stdarg.h>	// vsprintf
+-#if defined(unix) || defined(__HOS_AIX__) || defined(__APPLE__) || defined(_XOPEN_SOURCE) || defined(_POSIX_C_SOURCE)
++#if defined(unix) || defined(__HOS_AIX__) || defined(__APPLE__) || defined(_XOPEN_SOURCE) || defined(_POSIX_C_SOURCE) || defined(__NetBSD__)
+ #include <pwd.h>	// getpwuid
+ #include <unistd.h>	// getuid, rmdir, sysconf
+ #include <sys/stat.h>	// stat
+@@ -1181,7 +1181,8 @@ const char* ibis::util::userName() {
+ #elif defined(_POSIX_VERSION)
+ #if (defined(HAVE_GETPWUID_R) || defined(_REENTRANT) || \
+      defined(_POSIX_THREAD_SAFE_FUNCTIONS) || defined(sun) || \
+-     defined(_THREAD_SAFE) || defined(__APPLE__) || defined(__FreeBSD__)) && \
++      defined(_THREAD_SAFE) || defined(__APPLE__) || defined(__FreeBSD__) || \
++      defined(__NetBSD__)) && \
+     defined(_SC_GETPW_R_SIZE_MAX)
+ 	// use the thread-safe version of getpwuid_r
+ 	struct passwd  pass;

@@ -1,0 +1,4 @@
+Libcmt stands for composable memory transcations library.
+It implements a transactional model of concurrency using Glib,where
+deadlock is not possible (beaucouse there are not locks at all) and
+transactions are composable

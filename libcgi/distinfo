@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2013/03/08 12:36:39 makoto Exp $
+
+RMD160 (libcgi-1.0.tar.gz) = e67eaaab382bf77d0445c21d38a41be6a82cbf13
+Size (libcgi-1.0.tar.gz) = 78932 bytes
+SHA1 (patch-Makefile.in) = 5ff19e93b045e6576d296479bc6763188e925226
+SHA1 (patch-examples_guestbook_Makefile) = 1bf5b5035b84b604f94e8b4be9b02ecc66ed3a5e
+SHA1 (patch-examples_multiple_Makefile) = 9ed509fa3fb7f331082ae3daded802305e0a60c5
+SHA1 (patch-examples_redirect_Makefile) = cd5c920edff0d8c6acb474b18d6ef90ac53a8d69
+SHA1 (patch-examples_session_session_ex1_Makefile) = f329f6b6bceaefbc9e626c607bdeddc908751bfd
+SHA1 (patch-examples_session_session_ex1_restricted_c) = a84f19ae3dfd7c7adee8a08791ebc6655f292395
+SHA1 (patch-examples_session_session_ex1_session_c) = 8d7897c5b6bc72d264775d398cfdfa4e309a1f0a
+SHA1 (patch-examples_session_session_ex2_Makefile) = 3d42c687a2d1d2a19b9a683e1119f6b3ad530b05
+SHA1 (patch-examples_simple_form_Makefile) = 4f6fd36ea1b75c796ad9c9d38acabffc5c789891
+SHA1 (patch-examples_strings_Makefile) = ee83c49c5e4bd90fa98d7bf21c28224e15c9a841
+SHA1 (patch-examples_strings_b64_c) = 5dd0eded8a833aa2c201450a60521f43200b5a47

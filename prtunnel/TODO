@@ -1,0 +1,5 @@
+$NetBSD: TODO,v 1.2 2003/08/23 21:04:13 adrian_p Exp $
+
+Needs more testing.
+
+Fix IPv6 as it is not autodetecting correctly at the moment.

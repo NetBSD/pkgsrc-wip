@@ -1,0 +1,3 @@
+CLHEP it is intended to be a set of HEP-specific foundation and utility classes
+such as random generators, physics vectors, geometry and linear algebra. CLHEP
+is structured in a set of packages independent of any external package.

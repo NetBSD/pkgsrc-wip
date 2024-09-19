@@ -1,0 +1,9 @@
+The inclusion of content from Nintendo is questionable. This license(s) on these
+files must be clarified before this can go into HEAD.
+
+Doesn't start:
+Solarus 1.2.0
+Opening quest '/usr/pkg/share/solarus/zsdx'
+2D acceleration: no
+Fatal: This quest is made for Solarus 1.1.x but you are running Solarus 1.2.0
+[1]   Abort trap (core dumped) solarus /usr/pkg...

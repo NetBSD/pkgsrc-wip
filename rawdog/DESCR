@@ -1,0 +1,8 @@
+rawdog is a feed aggregator, capable of producing a personal "river of
+news" or a public "planet" page. It supports all common feed formats,
+including all versions of RSS and Atom. By default, it is run from cron,
+collects articles from a number of feeds, and generates a static HTML
+page listing the newest articles in date order. It supports per-feed
+customizable update times, and uses ETags, Last-Modified, gzip
+compression, and RFC3229+feed to minimize network bandwidth usage. Its
+behaviour is highly customisable using plugins written in Python.

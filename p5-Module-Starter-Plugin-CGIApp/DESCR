@@ -1,0 +1,5 @@
+This is a plugin for Module::Starter that builds you a skeleton CGI::Application
+module with all the extra files needed to package it for CPAN.
+You can customize the output using HTML::Template
+This module subclasses Module::Starter::Plugin::Template which in turn
+subclasses Module::Starter::Simple.

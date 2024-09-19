@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2005/01/16 22:59:52 mreriksson Exp $
+lib/multisync/libbackup_plugin.la

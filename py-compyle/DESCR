@@ -1,0 +1,16 @@
+Compyle allows users to execute a restricted subset of Python
+(almost similar to C) on a variety of HPC platforms. Currently
+we support multi-core CPU execution using Cython, and for GPU
+devices we use OpenCL or CUDA.
+
+Users start with code implemented in a very restricted Python
+syntax, this code is then automatically transpiled, compiled
+and executed to run on either one CPU core, or multiple CPU
+cores (via OpenMP) or on a GPU. Compyle offers source-to-source
+transpilation, making it a very convenient tool for writing HPC
+libraries.
+
+Some simple yet powerful parallel utilities are provided which
+can allow you to solve a remarkably large number of interesting
+HPC problems. Compyle also features JIT transpilation making
+it easy to us

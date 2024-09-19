@@ -1,0 +1,5 @@
+milter-greylist is a stand-alone milter written in C that implement
+grey listing. It has been reported as efficient and easy to setup
+by a large number of system administrators.
+
+This is the development snapshot with the latest and greatest features

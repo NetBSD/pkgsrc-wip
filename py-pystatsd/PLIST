@@ -1,0 +1,22 @@
+@comment $NetBSD$
+bin/pystatsd-server${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pystatsd/__init__.py
+${PYSITELIB}/pystatsd/__init__.pyc
+${PYSITELIB}/pystatsd/__init__.pyo
+${PYSITELIB}/pystatsd/daemon.py
+${PYSITELIB}/pystatsd/daemon.pyc
+${PYSITELIB}/pystatsd/daemon.pyo
+${PYSITELIB}/pystatsd/gmetric.py
+${PYSITELIB}/pystatsd/gmetric.pyc
+${PYSITELIB}/pystatsd/gmetric.pyo
+${PYSITELIB}/pystatsd/server.py
+${PYSITELIB}/pystatsd/server.pyc
+${PYSITELIB}/pystatsd/server.pyo
+${PYSITELIB}/pystatsd/statsd.py
+${PYSITELIB}/pystatsd/statsd.pyc
+${PYSITELIB}/pystatsd/statsd.pyo

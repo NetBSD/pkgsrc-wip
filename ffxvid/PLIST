@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/ffxvid
+man/ffxvid.1
+share/doc/ffxvid/AUTHORS
+share/doc/ffxvid/ChangeLog
+share/doc/ffxvid/HDR_to_SDR_instructions.txt
+share/doc/ffxvid/LICENSE
+share/doc/ffxvid/README
+share/doc/ffxvid/preset.txt

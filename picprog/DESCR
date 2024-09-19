@@ -1,0 +1,15 @@
+PICmicro microcontrollers, or MCUs, are fine chips that are especially easy
+to program with a simple device attached to a parallel or serial port.
+Because of the EEPROM or Flash memory, they are also easy and fast to erase
+and reprogram without need for UV equipment. This makes them very popular
+among electronics hobbyists.
+
+At the moment this is the second implementation of a PIC programmer for
+Linux that works with the very simple and cheap serial port programmers.
+The first one I know was made by Ralph Metzler in 1996. My programmer was
+originally designed for PIC16C84 and PIC16F84 chips back in 1997, and since
+then I have implemented other chips without access to most of them. I have
+tested PIC16F628, PIC16F676, PIC12F675, PIC16F88, PIC16F876A, PIC16F76,
+PIC18F1320 and PIC18F458. Others have used many other models. The dsPIC30
+family has some code in the sources, but the support is not finished yet.
+Some 12 bit chips should be supported but I have not tested that support.

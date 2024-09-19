@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2006/07/07 19:16:44 thomasklausner Exp $
+
+RMD160 (libmusclecard-1.3.3.tar.gz) = 47371038fb7750af73eebc241fa9009e939f907e
+Size (libmusclecard-1.3.3.tar.gz) = 561772 bytes
+SHA1 (patch-aa) = 34b66095ba0fdab7ec7bc76bc277e07aba605b42
+SHA1 (patch-ab) = 91db6c8250d8f1da745db82947bb58f6db41996f

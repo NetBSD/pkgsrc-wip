@@ -1,0 +1,4 @@
+nsim is for systems in physics, biology and finance that are modelled in
+continuous time with differential equations. nsim makes it easy to
+define and simulate these (including proper treatment of noise) and
+to analyze the resulting time series

@@ -1,0 +1,18 @@
+SafeKeep is a centralized and easy to use backup application that
+combines the best features of a mirror and an incremental backup.
+It sets up the appropriate environment for compatible backup packages
+and simplifies the process of running them.
+
+You will probably find SafeKeep useful if you:
+
+    Run a Unix, and you need to backup your data,
+    Prefer Open Source, and you are not willing to trust your
+    valuable data to a closed, proprietary product,
+    Demand Security, because it is not negotiable,
+    Strive for Simplicity, because TCO matters.
+
+If you feel SafeKeep may be the answer for your data backup needs,
+take a few moments to see what it can offer. We've tried to make
+it simple, secure, and manageable. We built it on top of solid open
+source components that have been extensively tested by the community.
+You can trust SafeKeep with your data.

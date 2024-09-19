@@ -1,0 +1,5 @@
+sxid tracks any changes in s[ug]id files and folders. If there are any
+new ones, ones that aren't set any more, or they have changed bits or
+other modes then it reports the changes. It also tracks s[ug]id files by
+md5 checksums. This helps detect if a root kit has been installed which
+would not show under normal name and permissions checking.

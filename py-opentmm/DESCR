@@ -1,0 +1,11 @@
+OpenTMM is an object-oriented electrodynamic S-matrix (transfer matrix)
+code with modern applications.
+
+Electromagnetic wave propagation through planar stratified media
+(multilayer stack); the three-dimensional space is divided into layers.
+The interfaces separating the layers are assumed to be perfectly planar
+and the layers are assumed to be isotropic and homogeneous, with a complex
+permittivity and permeability.  Moreover, the layers may be composed of a
+left-handed material  (negative refractive material) and/or a right-handed
+material. The implementation is suitable for the study of modern
+applications, e.g., Anderson localization of light and sub-wavelength imaging

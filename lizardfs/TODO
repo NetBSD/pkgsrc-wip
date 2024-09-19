@@ -1,0 +1,3 @@
+- doesn't work on librefuse systems because we seem to depend on features
+  present only in fuse_lowlevel.h, which is present only in "vanilla"
+  libfuse.

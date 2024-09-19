@@ -1,0 +1,4 @@
+Exporter::Tidy is a perl module, which serves as an easy,
+clean alternative to Exporter. Unlike Exporter, it is not
+subclassed, but it simply exports a custom import() into
+your namespace.

@@ -1,0 +1,2 @@
+Tiny application for changing RandR settings--requires gtk2+GConf2 and RandR
+1.2.

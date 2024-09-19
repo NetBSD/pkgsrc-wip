@@ -1,0 +1,73 @@
+$NetBSD$
+
+* Don't assume sys/capability.h is guaranteed present on Linux.
+* Adapt /var-paths for pkgsrc defaults.
+* Install default config files in example directory; pkgsrc config
+  file framework will install them in the right place.
+
+--- configure.ac.orig	2016-07-31 15:25:05.000000000 +0000
++++ configure.ac
+@@ -21,7 +21,7 @@
+ 
+ AC_PREREQ(2.63)
+ 
+-AC_INIT([pulseaudio],[m4_esyscmd(./git-version-gen .tarball-version)],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
++AC_INIT([pulseaudio],[9.1],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
+ AC_CONFIG_SRCDIR([src/daemon/main.c])
+ AC_CONFIG_MACRO_DIR([m4])
+ AC_CONFIG_HEADERS([config.h])
+@@ -130,7 +130,6 @@ AC_MSG_CHECKING([host operating system])
+ case "$host_os" in
+     linux*)
+         AC_MSG_RESULT([linux])
+-        host_has_caps=1
+         os_is_linux=1
+     ;;
+     freebsd*)
+@@ -1360,9 +1359,9 @@ fi
+ 
+ PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
+-PA_SYSTEM_CONFIG_PATH="${localstatedir}/lib/pulse"
++PA_SYSTEM_CONFIG_PATH="${localstatedir}/db/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_CONFIG_PATH, PA_SYSTEM_CONFIG_PATH, [System config dir])
+-PA_SYSTEM_STATE_PATH="${localstatedir}/lib/pulse"
++PA_SYSTEM_STATE_PATH="${localstatedir}/db/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
+ 
+ PA_BINARY=${bindir}/pulseaudio${EXEEXT}
+@@ -1374,8 +1373,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+ AC_SUBST(PA_SOEXT, [.so])
+ AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
+ 
+-AC_SUBST(pulseconfdir, ["${sysconfdir}/pulse"])
+-AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdir, [Location of configuration files])
++AC_SUBST(pulseconfdirreal, ["${sysconfdir}/pulse"])
++AC_SUBST(pulseconfdir, ["${EGDIR}"])
++AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdirreal, [Location of configuration files]
+ 
+ #### Mac OSX specific stuff #####
+ 
+@@ -1391,22 +1391,6 @@ AC_ARG_WITH(mac-sysroot,
+     AS_HELP_STRING([--with-mac-sysroot=<path>], [SDK basedir to use as the logical root directory for headers and libraries.]),
+     mac_sysroot=$withval)
+ 
+-if test "x$os_is_darwin" = "x1" ; then
+-    LDFLAGS="$LDFLAGS -mmacosx-version-min=$mac_version_min"
+-    CFLAGS="$CFLAGS -mmacosx-version-min=$mac_version_min"
+-
+-    if test "x$mac_sysroot" != "x" ; then
+-        LDFLAGS="$LDFLAGS -isysroot $mac_sysroot"
+-        CFLAGS="$CFLAGS -isysroot $mac_sysroot"
+-    fi
+-
+-    if test "x$enable_mac_universal" = "xyes" ; then
+-        mac_arches="-arch i386 -arch x86_64"
+-        LDFLAGS="$LDFLAGS $mac_arches"
+-        CFLAGS="$CFLAGS $mac_arches"
+-    fi
+-fi
+-
+ AC_ARG_ENABLE([webrtc-aec],
+     AS_HELP_STRING([--enable-webrtc-aec], [Enable the optional WebRTC-based echo canceller]))
+ 

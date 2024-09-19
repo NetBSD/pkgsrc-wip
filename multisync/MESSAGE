@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/01/05 10:23:23 mreriksson Exp $
+
+You need to install at least one of the synchronization modules from
+multisync-* before multisync can do anything useful!
+
+===========================================================================

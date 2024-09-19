@@ -1,0 +1,2 @@
+WARN: PLIST:4: Use of "share/doc/html" is deprecated. Use "share/doc/${PKGBASE}" instead.
+WARN: PLIST:5: Use of "share/doc/html" is deprecated. Use "share/doc/${PKGBASE}" instead.

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/02/11 17:37:42 bjan2 Exp $
+
+--- src/QUANTAnet_barrierUdp_c.cxx.orig	2003-10-07 13:02:53.000000000 -0700
++++ src/QUANTAnet_barrierUdp_c.cxx
+@@ -23,7 +23,7 @@
+ #include <QUANTA/QUANTAnet_barrierUdp_c.hxx>
+ 
+ #ifndef WIN32
+-#include <sys/errno.h>
++#include <errno.h>
+ #endif
+ 
+ /* 

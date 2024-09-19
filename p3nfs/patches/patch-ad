@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/01/02 21:29:03 mreriksson Exp $
+
+--- nfsd/mp_pfs_ops.c.orig	2002-09-06 07:06:31.000000000 +0200
++++ nfsd/mp_pfs_ops.c
+@@ -2,7 +2,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <time.h>
+-#if defined(__SVR4) || defined(__GLIBC__)
++#if defined(__SVR4) || defined(__GLIBC__) || defined(__NetBSD__)
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <string.h>

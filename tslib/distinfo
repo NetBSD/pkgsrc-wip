@@ -1,0 +1,6 @@
+$NetBSD$
+
+RMD160 (tslib-1.16.tar.gz) = 8d057bde6f49553f84d89f7a85f6e67ad860b2f5
+SHA512 (tslib-1.16.tar.gz) = a236395c38db400217c154e8ec4f08dca4a85855866d17b6ae9f77f58fb410298fd324a112433c4280f6b8e626d68ed20d186c985845cd85cf460dc284917f8d
+Size (tslib-1.16.tar.gz) = 209234 bytes
+SHA1 (patch-src_ts__open.c) = 99b1577465bab08c1f2c2e7a6b4451911a800671

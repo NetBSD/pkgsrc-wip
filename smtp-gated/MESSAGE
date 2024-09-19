@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/11/21 14:26:07 bartoszkuzma Exp $
+
+If you want to run smtp-gated with IP Filter as a non-root user,
+you need to set proper permission to file /dev/ipnat. For example:
+
+	chown root:${SMTP_GATED_GROUP} /dev/ipnat
+	chmod 0640 /dev/ipnat
+===========================================================================

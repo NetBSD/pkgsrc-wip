@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST.thunderbird,v 1.2 2013/12/21 14:44:17 noud4 Exp $
+lib/thunderbird/extensions/trackerbird@bustany.org
+share/applications/trackerbird-launcher.desktop
+share/xul-ext/trackerbird/README
+share/xul-ext/trackerbird/chrome.manifest
+share/xul-ext/trackerbird/chrome/content/about.xul
+share/xul-ext/trackerbird/chrome/content/bindings.js
+share/xul-ext/trackerbird/chrome/content/email-address-parser.js
+share/xul-ext/trackerbird/chrome/content/mailstore.js
+share/xul-ext/trackerbird/chrome/content/namespace.js
+share/xul-ext/trackerbird/chrome/content/options.xul
+share/xul-ext/trackerbird/chrome/content/persistent-store.js
+share/xul-ext/trackerbird/chrome/content/plugin.js
+share/xul-ext/trackerbird/chrome/content/queue.js
+share/xul-ext/trackerbird/chrome/content/tb-overlay.xul
+share/xul-ext/trackerbird/chrome/content/trackerstore.js
+share/xul-ext/trackerbird/chrome/content/ui.js
+share/xul-ext/trackerbird/chrome/locale/en-US/about.dtd
+share/xul-ext/trackerbird/chrome/locale/en-US/options.dtd
+share/xul-ext/trackerbird/chrome/locale/en-US/overlay.dtd
+share/xul-ext/trackerbird/chrome/locale/en-US/overlay.properties
+share/xul-ext/trackerbird/chrome/skin/overlay.css
+share/xul-ext/trackerbird/defaults/preferences/prefs.js
+share/xul-ext/trackerbird/install.rdf

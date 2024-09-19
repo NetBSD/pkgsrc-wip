@@ -1,0 +1,78 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/24 23:47:11 thomasklausner Exp $
+
+--- mp1e/common/mmx.c.orig	2005-02-25 19:30:47.000000000 +0100
++++ mp1e/common/mmx.c
+@@ -52,7 +52,7 @@ typedef union {
+ 		unsigned int		edx;
+ 		unsigned int		ecx;
+ 	}			r;
+-} cpuid_t;
++} mmx_cpuid_t;
+ 
+ static inline int
+ toggle_eflags_id(void)
+@@ -81,7 +81,7 @@ toggle_eflags_id(void)
+ }
+ 
+ static /*inline*/ unsigned int
+-cpuid(cpuid_t *buf, unsigned int level)
++mmx_cpuid(mmx_cpuid_t *buf, unsigned int level)
+ {
+ 	unsigned int eax;
+ 
+@@ -125,17 +125,17 @@ cpuid(cpuid_t *buf, unsigned int level)
+ int
+ cpu_detection(void)
+ {
+-	cpuid_t c;
++	mmx_cpuid_t c;
+ 
+ 	if (!toggle_eflags_id()) {
+ 		ASSERT("identify CPU", 0);
+ 		return CPU_UNKNOWN;
+ 	}
+ 
+-	cpuid(&c, 0);
++	mmx_cpuid(&c, 0);
+ 
+ 	if (!strncmp(c.s + 4, "GenuineIntel", 12)) {
+-		cpuid(&c, 1);
++		mmx_cpuid(&c, 1);
+ 
+ 		if (FEATURE(INTEL_MMX | INTEL_CMOV | INTEL_SSE | INTEL_SSE2))
+ 			return CPU_PENTIUM_4;
+@@ -146,8 +146,8 @@ cpu_detection(void)
+ 		if (FEATURE(INTEL_MMX))
+ 			return CPU_PENTIUM_MMX;
+ 	} else if (!strncmp(c.s + 4, "AuthenticAMD", 12)) {
+-		if (cpuid(&c, 0x80000000) > 0x80000000) {
+-			cpuid(&c, 0x80000001);
++		if (mmx_cpuid(&c, 0x80000000) > 0x80000000) {
++			mmx_cpuid(&c, 0x80000001);
+ 
+ 			if (FEATURE(AMD_MMX | AMD_MMXEXT | AMD_3DNOW | AMD_3DNOWEXT))
+ 				return CPU_ATHLON;
+@@ -155,19 +155,19 @@ cpu_detection(void)
+ 				return CPU_K6_2;
+ 		}
+ 	} else if (!strncmp(c.s + 4, "CyrixInstead", 12)) {
+-		if (cpuid(&c, 0x80000000) > 0x80000000) {
+-			cpuid(&c, 0x80000001);
++		if (mmx_cpuid(&c, 0x80000000) > 0x80000000) {
++			mmx_cpuid(&c, 0x80000001);
+ 
+ 			if (FEATURE(CYRIX_MMX | CYRIX_MMXEXT | CYRIX_3DNOW))
+ 				return CPU_CYRIX_III;
+ 		} else {
+-			cpuid(&c, 1);
++			mmx_cpuid(&c, 1);
+ 
+ 			if (FEATURE(CYRIX_MMX))
+ 				return CPU_CYRIX_MII;
+ 		}
+ 	} else if (!strncmp(c.s + 4, "CentaurHauls", 12)) {
+-		cpuid(&c, 1);
++		mmx_cpuid(&c, 1);
+ 
+ 		if (FEATURE(INTEL_MMX | INTEL_CMOV | INTEL_SSE))
+ 			return CPU_CYRIX_NEHEMIAH;

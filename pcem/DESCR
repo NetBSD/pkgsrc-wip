@@ -1,0 +1,5 @@
+Emulator for various IBM PC computers and clones.
+
+Supports hardware from the 8088 to the 486 and Pentium, graphics cards
+such at the 3DFX Voodoo, sound cards such as the Sound Blaster 16
+Ensoniq AudioPCI, and Gravis UltraSound.

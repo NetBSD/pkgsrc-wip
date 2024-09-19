@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- defs.conf.in.orig	2015-10-03 21:09:58.000000000 +0000
++++ defs.conf.in
+@@ -34,9 +34,10 @@ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ # suppress warning in configure...
+ datarootdir = @datarootdir@
+-#DESTDIR = @bindir@
+-MANDESTDIR = @mandir@
+-HTMLDESTDIR = @HTMLDESTDIR@
++BINDIR = @bindir@
++LIBDIR = @libdir@
++MANDIR = @mandir@
++HTMLDIR = @htmldir@
+ 
+ XLIBDIR = @x_libraries@
+ 

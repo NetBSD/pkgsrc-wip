@@ -1,0 +1,3 @@
+Gxconsole is gtk-based reading system console messages like xconsole.
+It stays on Icon Tray,and it also notifies in arrivals the new message.Also
+it can pop-up the window containing whole messages when clicking its icon

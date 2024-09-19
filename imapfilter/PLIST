@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.6 2013/07/19 13:58:56 degroote Exp $
+bin/imapfilter
+man/man1/imapfilter.1
+man/man5/imapfilter_config.5
+share/examples/imapfilter/config.lua
+share/examples/imapfilter/extend.lua
+share/imapfilter/account.lua
+share/imapfilter/auxiliary.lua
+share/imapfilter/common.lua
+share/imapfilter/mailbox.lua
+share/imapfilter/message.lua
+share/imapfilter/options.lua
+share/imapfilter/regex.lua
+share/imapfilter/set.lua

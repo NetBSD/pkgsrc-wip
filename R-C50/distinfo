@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/11/15 23:41:06 bubuchka Exp $
+
+RMD160 (R/C50_0.1.0-24.tar.gz) = 6c0046664259511e7bc966e097f520029d441e0c
+SHA512 (R/C50_0.1.0-24.tar.gz) = 25766d3b1978704d01a2fe4e9108c0b647f9bfdda1358face944a27aeaff22e1b1a1f81092fe7fd110f0eb76228116acab2628e4f609ff1c3bc234e3bd686265
+Size (R/C50_0.1.0-24.tar.gz) = 304686 bytes

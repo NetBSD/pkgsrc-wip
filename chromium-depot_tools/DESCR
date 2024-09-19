@@ -1,0 +1,3 @@
+Chromium and Chromium OS use a package of scripts called depot_tools
+to manage checkouts and code reviews.  The depot_tools package
+includes gclient, gcl, git-cl, repo, and others.

@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.6 2015/06/06 16:23:52 krytarowski Exp $
+
+RMD160 (plank-0.11.4.tar.xz) = c9eb35a5bf967eac9e82e8b5c089eaee752f8993
+SHA512 (plank-0.11.4.tar.xz) = 178d78ecb6a6cc66237b4024a10db135626cd1623717c8e218f0ba3b630af1868bc8c174b5c87ab7762c3b62837d2554cadd44b2731edc03f965441d48ccaa77
+Size (plank-0.11.4.tar.xz) = 1022640 bytes
+SHA1 (patch-configure) = 469978f44015b81880bb0249034684a196774ec8
+SHA1 (patch-docs_Makefile.am) = 3ecb420aaf6ff6d346792be4e201e47b6947ebc8
+SHA1 (patch-docs_Makefile.in) = 0d189a3d619bc441ce2ad3e8ba8e354c6999d691
+SHA1 (patch-lib_Drawing_Renderer.vala) = 0ad5d1b98ba2ad06b5eb4f95cd5c36dd93fe2b8e
+SHA1 (patch-lib_Drawing_Theme.vala) = f52280d8019c1ce3f911e2b08887a89d36f4ac1e
+SHA1 (patch-lib_Items_DockContainer.vala) = b63761bde12487ef8c4b517e996fb46b4793a310
+SHA1 (patch-lib_Items_DockItem.vala) = 3b7dbd59e049deed91e930fb5c1d8ceb44274720
+SHA1 (patch-lib_Makefile.in) = d5d929ad332d5fec859eb169f3e65b8c80a5bd31
+SHA1 (patch-lib_Services_Preferences.vala) = 3db9672ceb37d853154bc1277057167d73b56794
+SHA1 (patch-lib_Services_Settings.vala) = 05678ed77bf0e920f6edacece0b9742167cfd62d

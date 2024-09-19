@@ -1,0 +1,9 @@
+--- src/hooks/Makefile.in.orig	2010-09-21 12:23:41.000000000 +0000
++++ src/hooks/Makefile.in	2010-09-21 12:23:59.000000000 +0000
+@@ -1,5 +1,5 @@
+ SOBJS=hook_home.so hook_mail.so hook_sql.so hook_web.so hook_script.so
+-CFLAGS=-Wunused -I.. -I../.. -I../api -I../ldap
++CFLAGS=-Wunused -I.. -I../.. -I../api -I../ldap -fPIC
+ CC=@CC@
+ LIB_DIR=@LIB_DIR@
+ 

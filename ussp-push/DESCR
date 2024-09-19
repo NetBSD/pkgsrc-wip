@@ -1,0 +1,5 @@
+ussp-push is a OBEX object pusher for Linux, using the BlueZ BlueTooth stack.
+The original ussp-push implementation required explicit binding to RFCOMM
+channels before the usage, that made it quite cumbersome to use. I added
+BlueTooth name resolution, and direct access to remote BlueTooth listening
+channels.

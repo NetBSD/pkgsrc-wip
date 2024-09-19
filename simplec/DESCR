@@ -1,0 +1,10 @@
+This is a port of Small C / 386 to Linux. It is based rather heavily on
+a Windows NT port that was pointed out to me on the forum. While I've only
+been working on the port for a few weeks, it already compiles simple
+applications. I've included several bash scripts to help automate the
+process of linking the generated files. You'll need NASM to generate
+runnable applications with this.
+
+A lot of work still needs to be done, but you can compile small
+applications with it. If you make any improvements, please send them
+back to me so I can incorportate them into future releases.

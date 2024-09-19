@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/ppserver${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pp.py
+${PYSITELIB}/pp.pyc
+${PYSITELIB}/pp.pyo
+${PYSITELIB}/ppauto.py
+${PYSITELIB}/ppauto.pyc
+${PYSITELIB}/ppauto.pyo
+${PYSITELIB}/ppcommon.py
+${PYSITELIB}/ppcommon.pyc
+${PYSITELIB}/ppcommon.pyo
+${PYSITELIB}/pptransport.py
+${PYSITELIB}/pptransport.pyc
+${PYSITELIB}/pptransport.pyo
+${PYSITELIB}/ppworker.py
+${PYSITELIB}/ppworker.pyc
+${PYSITELIB}/ppworker.pyo
+man/man1/ppserver.1
+share/doc/py-pp/ppdoc.html

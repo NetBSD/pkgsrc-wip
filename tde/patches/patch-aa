@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.2 2013/01/03 13:06:34 othyro Exp $
+
+Don't hardcode things like CFLAGS, LIBS, bindir, etc.
+
+--- makefile.orig	2005-09-20 05:17:56.000000000 +0000
++++ makefile
+@@ -39,8 +39,8 @@ STRIP = strip
+ #STRIP = true
+ 
+ # Should the executable be compressed?
+-DJP = upx -9 -qq	# djgpp users should use v1.23.
+-#DJP = true
++#DJP = upx -9 -qq	# djgpp users should use v1.23.
++DJP = true
+ 
+ # Comment the following to see the compilation commands.
+ BRIEF = @
+@@ -55,8 +55,6 @@ endif
+ endif
+ 
+ CFLAGS	= -Wall -g
+-CFLAGS += -O2 -finline-functions
+-CFLAGS += -mtune=pentiumpro -fomit-frame-pointer
+ CFLAGS += -DNDEBUG
+ 
+ ifeq ($(OS),unix)
+@@ -66,7 +64,7 @@ CFLAGS += -D__UNIX__
+ #CFLAGS += -DPC_CHARS
+ PROJ	= tde
+ DBG	= tdedbg
+-LIBS	= -lncurses
++LIBS	= -lcurses
+ else
+ ifeq ($(OS),win32)
+ PROJ	= tdew.exe
+@@ -148,8 +146,8 @@ install: $(PROJ)
+ 	-$(STRIP) $(PROJ)
+ 	-$(DJP) $(PROJ)
+ ifeq ($(OS),unix)
+-	cp $(PROJ) $(bindir)
+-	ln -fs $(bindir)/$(PROJ) $(bindir)/tdv
++	cp $(PROJ) ${DESTDIR}$(bindir)
++	ln -fs ${DESTDIR}$(bindir)/$(PROJ) ${DESTDIR}$(bindir)/tdv
+ else
+ 	cp $(PROJ) $(bindir)/tde.exe
+ 	cp $(LINK) $(bindir)

@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2009/07/30 06:07:12 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (autoload 'rst-mode "rst"
+            "mode for editing reStructuredText documents" t)
+  (setq auto-mode-alist
+        (append '(("\\.rst$" . rst-mode)
+                  ("\\.rest$" . rst-mode)) auto-mode-alist))
+
+===========================================================================

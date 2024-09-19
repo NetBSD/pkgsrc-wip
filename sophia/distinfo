@@ -1,0 +1,7 @@
+$NetBSD$
+
+RMD160 (sophia-version_2.2.tar.gz) = 1d529900f8083288c9248f3799e29d7cbb3e5634
+SHA512 (sophia-version_2.2.tar.gz) = 714f61c5df82f4546e202d82e98451a8559eb2e04f56c905d894580f9288a55527121bb4c29b03d86468ed0d85bed353af0769fc74f9c4830e47cceba1784655
+Size (sophia-version_2.2.tar.gz) = 342669 bytes
+SHA1 (patch-sophia_std_ss_stdvfc.c) = 2a30d2d9d1d898a5a878bc2f7524ffc7ae781b47
+SHA1 (patch-sophia_std_ss_thread.c) = 6fef6948747dabb5e52be2b9e7e102519eca3398

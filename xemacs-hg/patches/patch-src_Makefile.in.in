@@ -1,0 +1,52 @@
+$NetBSD: patch-src_Makefile.in.in,v 1.2 2017/11/16 15:07:05 hauke Exp $
+
+Deal with bulk build namespace intrusion.
+
+SunOS 5 bmake / gmake fixes
+
+--- src/Makefile.in.in.orig	2013-08-21 17:43:45.000000000 +0000
++++ src/Makefile.in.in
+@@ -392,9 +392,9 @@ ldflags  = $(LDFLAGS) $(ld_switch_all) $
+ 
+ #ifdef SOLARIS2
+ %.o : %.c
+-#else
+-.c.o:
++	$(CC) -c $(cflags) $<
+ #endif
++.c.o:
+ 	$(CC) -c $(cflags) $<
+ 
+ ## Create preprocessor output (debugging purposes only)
+@@ -437,10 +437,10 @@ RAW_EXE  = temacs
+ DO_TEMACS = $(DUMPENV) ./$(RAW_EXE)
+ DO_XEMACS = ./$(PROGNAME)
+ 
+-BATCH = -no-packages -batch
++MY_BATCH = -no-packages -batch
+ BATCH_PACKAGES = -vanilla -batch
+-TEMACS_BATCH = $(DO_TEMACS) -nd $(BATCH)
+-XEMACS_BATCH = $(DO_XEMACS) $(BATCH)
++TEMACS_BATCH = $(DO_TEMACS) -nd $(MY_BATCH)
++XEMACS_BATCH = $(DO_XEMACS) $(MY_BATCH)
+ XEMACS_BATCH_PACKAGES = $(DO_XEMACS) $(BATCH_PACKAGES)
+ temacs_loadup_args = -l $(LISP)/loadup.el
+ dump_temacs_args   = $(temacs_loadup_args) dump
+@@ -644,7 +644,7 @@ load-shadows: update-elc-2
+ 
+ release: all
+ 	-if [ -w $(LISP) ]; then \
+-	  w=`pwd`; cd $(SRC) && $$w/$(RAW_EXE) -nd $(BATCH) -l $(LISP)/inc-vers; \
++	  w=`pwd`; cd $(SRC) && $$w/$(RAW_EXE) -nd $(MY_BATCH) -l $(LISP)/inc-vers; \
+ 	else true; fi
+ 	-$(dump_temacs)
+ 	touch release
+@@ -931,7 +931,7 @@ run-rtcmacs: rtcmacs
+ 	ignore POLL; \
+ 	check -access; \
+ 	suppress rui; \
+-	runargs -nd $(BATCH) $(run_temacs_args) -vanilla; \
++	runargs -nd $(MY_BATCH) $(run_temacs_args) -vanilla; \
+ 	run' rtcmacs
+ 
+ debug-temacs: $(RAW_EXE)

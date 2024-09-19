@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/02/18 11:39:11 rodo6510 Exp $
+
+--- Makefile.orig	2011-02-18 14:27:22.000000000 +0000
++++ Makefile
+@@ -9,8 +9,8 @@ SOCKETLIBS=
+ #SOCKETLIBS = -lsocket -lnsl
+ 
+ CC=gcc
+-CFLAGS=-O3 -Wall `sdl-config --cflags` -DPREFIX=\"$(PREFIX)\"
+-LDFLAGS=`sdl-config --libs` $(SOCKETLIBS)
++CFLAGS+=-Wall `sdl-config --cflags` -DPREFIX=\"$(PREFIX)\"
++LDFLAGS+=`sdl-config --libs` $(SOCKETLIBS)
+ 
+ 
+ OBJS= \

@@ -1,0 +1,44 @@
+$NetBSD$
+
+--- docs/pod/gen20.pod.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/pod/gen20.pod
+@@ -32,31 +32,31 @@ The size of the function table: how many
+ 
+ A code indicating the type of random distribution to use:
+ 
+-=over 8
+-
+ =for html <p>
+ 
+-=item 0
++=over 8
++
++=item '0'
+ 
+ even distribution
+ 
+-=item 1
++=item '1'
+ 
+ low-weighted linear distribution
+ 
+-=item 2
++=item '2'
+ 
+ high-weighted linear distribution
+ 
+-=item 3
++=item '3'
+ 
+ triangular distribution weighted towards 0.5
+ 
+-=item 4
++=item '4'
+ 
+ gaussian distribution, with mean of 0.5 and standard deviation of 0.166666
+ 
+-=item 5
++=item '5'
+ 
+ cauchy distribution, with mean of 0.5 and alpha of 0.00628338
+ 

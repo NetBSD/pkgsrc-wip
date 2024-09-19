@@ -1,0 +1,12 @@
+$NetBSD$
+
+honor $DESTDIR
+
+--- Makefile.orig	2021-02-20 23:36:13.000000000 +0900
++++ Makefile	2021-03-05 08:27:25.212358892 +0900
+@@ -23,4 +23,4 @@ clean:
+ 	rm -f *.o ft8/*.o common/*.o fft/*.o $(TARGETS)
+ install:
+ 	$(AR) rc libft8.a ft8/constants.o ft8/encode.o ft8/pack.o ft8/text.o common/wave.o 
+-	install libft8.a /usr/lib/libft8.a
++	${BSD_INSTALL} libft8.a ${DESTDIR}${PREFIX}/lib/libft8.a

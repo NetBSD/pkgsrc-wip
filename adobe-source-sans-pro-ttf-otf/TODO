@@ -1,0 +1,6 @@
+- split OTF and TTF into separate packages?
+- figure out a shorter package name
+- figure out where to place the version number
+- provide an example fontconfig XML file that reduces spacing between the
+  letters. Currently, the spaces are so big that the font is essentially
+  unusable.

@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.5 2012/11/12 14:32:14 thomasklausner Exp $
+
+RMD160 (vnc-4_1_2-unixsrc.tar.gz) = 2a2d615825e6ac74aca5f0c29d025e576b725dc3
+Size (vnc-4_1_2-unixsrc.tar.gz) = 537713 bytes
+RMD160 (X430src-1.tgz) = 46d4c1c99d9b6529912b05c9fa7ed0b7993e948b
+Size (X430src-1.tgz) = 10993622 bytes
+RMD160 (X430src-2.tgz) = d5081f5e1f1498b2def0ec6b562c4d873275a9e5
+Size (X430src-2.tgz) = 7962239 bytes
+RMD160 (X430src-3.tgz) = fd585512ec26fec1c70d79954376e79c3d53248b
+Size (X430src-3.tgz) = 12366363 bytes
+SHA1 (patch-aa) = 977c3c337e6778e8538b6c7daeece4a5b98aa8a4
+SHA1 (patch-ab) = c15d57e253f42cafae6de1da6e3960190857a22d
+SHA1 (patch-ac) = 92aa4a3012e615e29c0625ea8197120fec695f18
+SHA1 (patch-common_network_TcpSocket.cxx) = 2f7e4893995e537a72447d94ce54eeb79ef40358
+SHA1 (patch-unix_tx_TXDialog.h) = 612e4f61b4ee908ae5870f073d194ee7f166eaf4
+SHA1 (patch-unix_tx_TXImage.cxx) = df65cdafb74bab45d1e7f44ef9eb73d29143ac77
+SHA1 (patch-unix_x0vncserver_Image.cxx) = c3baddd4d5a0807b1bf91375c0bf227e6a466885

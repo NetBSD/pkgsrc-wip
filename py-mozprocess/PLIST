@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mozprocess/__init__.py
+${PYSITELIB}/mozprocess/__init__.pyc
+${PYSITELIB}/mozprocess/__init__.pyo
+${PYSITELIB}/mozprocess/processhandler.py
+${PYSITELIB}/mozprocess/processhandler.pyc
+${PYSITELIB}/mozprocess/processhandler.pyo
+${PYSITELIB}/mozprocess/qijo.py
+${PYSITELIB}/mozprocess/qijo.pyc
+${PYSITELIB}/mozprocess/qijo.pyo
+${PYSITELIB}/mozprocess/winprocess.py
+${PYSITELIB}/mozprocess/winprocess.pyc
+${PYSITELIB}/mozprocess/winprocess.pyo

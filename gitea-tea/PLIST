@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/tea
+share/examples/gitea-tea/auto-completion/_tea
+share/examples/gitea-tea/auto-completion/gitea-tea.bash

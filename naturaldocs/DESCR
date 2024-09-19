@@ -1,0 +1,14 @@
+Natural Docs is an open-source, extensible, multi-language documentation
+generator.  You document your code in a natural syntax that reads like plain
+English.  Natural Docs then scans your code and builds high-quality HTML
+documentation from it.
+
+Full Language Support (Full code documentation, Inheritance diagrams,
+Auto-scoping):
+    C#, Perl, ActionScript 2
+
+Basic Language Support (Explicit documentation only, No inheritance diagrams,
+Topic scoping):
+    C/C++, Java, PHP, Python, PL/SQL, Visual Basic, Pascal/Delphi, Ada,
+    JavaScript, Ruby, Tcl, ColdFusion, Assembly, Fortran (free-format only),
+    R, Makefiles, Plain Text, Custom Languages

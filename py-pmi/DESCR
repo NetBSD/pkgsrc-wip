@@ -1,0 +1,2 @@
+PMI is a pure python module that allows libraries to provide functions that are
+parallelized using MPI but that can nontheless be called from serial Python scripts.

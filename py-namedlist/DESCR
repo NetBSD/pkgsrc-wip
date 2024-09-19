@@ -1,0 +1,11 @@
+namedlist provides 2 factory functions, namedlist.namedlist and
+namedlist.namedtuple. namedlist.namedtuple is similar to
+collections.namedtuple, with the following differences:
+
+ * namedlist.namedtuple supports per-field default values.
+ * namedlist.namedtuple supports an optional default value, to be used by all
+   fields that do not have an explicit default value.
+
+namedlist.namedlist is similar, with this additional difference:
+
+ * namedlist.namedlist instances are mutable.

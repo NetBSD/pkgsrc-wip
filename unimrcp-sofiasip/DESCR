@@ -1,0 +1,6 @@
+** Patched SOFIA-SIP for UniMRCP **
+
+It can be used as a building block for SIP client software for uses such as
+VoIP, IM, and many other real-time and person-to-person communication services.
+The primary target platform for Sofia-SIP is GNU/Linux. Sofia-SIP is based on a
+SIP stack developed at the Nokia Research Center.

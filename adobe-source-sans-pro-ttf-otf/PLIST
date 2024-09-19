@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/28 00:02:14 mwilhelmy Exp $
+lib/X11/fonts/TTF/SourceSansPro-Black.otf
+lib/X11/fonts/TTF/SourceSansPro-Black.ttf
+lib/X11/fonts/TTF/SourceSansPro-BlackIt.otf
+lib/X11/fonts/TTF/SourceSansPro-BlackIt.ttf
+lib/X11/fonts/TTF/SourceSansPro-Bold.otf
+lib/X11/fonts/TTF/SourceSansPro-Bold.ttf
+lib/X11/fonts/TTF/SourceSansPro-BoldIt.otf
+lib/X11/fonts/TTF/SourceSansPro-BoldIt.ttf
+lib/X11/fonts/TTF/SourceSansPro-ExtraLight.otf
+lib/X11/fonts/TTF/SourceSansPro-ExtraLight.ttf
+lib/X11/fonts/TTF/SourceSansPro-ExtraLightIt.otf
+lib/X11/fonts/TTF/SourceSansPro-ExtraLightIt.ttf
+lib/X11/fonts/TTF/SourceSansPro-It.otf
+lib/X11/fonts/TTF/SourceSansPro-It.ttf
+lib/X11/fonts/TTF/SourceSansPro-Light.otf
+lib/X11/fonts/TTF/SourceSansPro-Light.ttf
+lib/X11/fonts/TTF/SourceSansPro-LightIt.otf
+lib/X11/fonts/TTF/SourceSansPro-LightIt.ttf
+lib/X11/fonts/TTF/SourceSansPro-Regular.otf
+lib/X11/fonts/TTF/SourceSansPro-Regular.ttf
+lib/X11/fonts/TTF/SourceSansPro-Semibold.otf
+lib/X11/fonts/TTF/SourceSansPro-Semibold.ttf
+lib/X11/fonts/TTF/SourceSansPro-SemiboldIt.otf
+lib/X11/fonts/TTF/SourceSansPro-SemiboldIt.ttf

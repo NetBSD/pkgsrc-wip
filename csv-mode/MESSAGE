@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/03/05 06:59:32 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (autoload 'csv-mode "csv-mode"
+            "Major mode for editing comma-separated value files." t)
+  (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
+
+===========================================================================

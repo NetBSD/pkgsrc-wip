@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/22 23:08:12 jihbed Exp $
+include/mopac7/libmopac7.h
+lib/libmopac7.la
+lib/pkgconfig/libmopac7.pc

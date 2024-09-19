@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/04 08:50:00 shattered Exp $
+share/doc/vista-fonts/ms-ttf-license
+share/fonts/X11/TTF/CALIBRI.ttf
+share/fonts/X11/TTF/CALIBRIB.ttf
+share/fonts/X11/TTF/CALIBRII.ttf
+share/fonts/X11/TTF/CALIBRIZ.ttf
+share/fonts/X11/TTF/CAMBRIAB.ttf
+share/fonts/X11/TTF/CAMBRIAI.ttf
+share/fonts/X11/TTF/CAMBRIAZ.ttf
+share/fonts/X11/TTF/CANDARA.ttf
+share/fonts/X11/TTF/CANDARAB.ttf
+share/fonts/X11/TTF/CANDARAI.ttf
+share/fonts/X11/TTF/CANDARAZ.ttf
+share/fonts/X11/TTF/CONSOLA.ttf
+share/fonts/X11/TTF/CONSOLAB.ttf
+share/fonts/X11/TTF/CONSOLAI.ttf
+share/fonts/X11/TTF/CONSOLAZ.ttf
+share/fonts/X11/TTF/CONSTAN.ttf
+share/fonts/X11/TTF/CONSTANB.ttf
+share/fonts/X11/TTF/CONSTANI.ttf
+share/fonts/X11/TTF/CONSTANZ.ttf
+share/fonts/X11/TTF/CORBEL.ttf
+share/fonts/X11/TTF/CORBELB.ttf
+share/fonts/X11/TTF/CORBELI.ttf
+share/fonts/X11/TTF/CORBELZ.ttf

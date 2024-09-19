@@ -1,0 +1,20 @@
+Current problem is:
+
+
+--- iofunc.o ---                                                                                                                                                                                                                                            
+c++   -gdwarf-2 -O2 -fPIC  -Dcplusplus_2_1 -Wno-deprecated -DLEAKCHECK    -I/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/.. -I/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/../..  -I/export/CHROOT/tmp/wip/ivtoo
+ls/work/ivtools-1.2/src  -I/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/include -I/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/include/ivstd -I/usr/X11R7/include     -c /export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/..
+/iofunc.c                                                                                                                                                                                                                                                   
+/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/../iofunc.c: In member function 'virtual void OpenFileFunc::execute()':
+/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/../iofunc.c:381:27: error: 'reactor_singleton' is not a member of 'ComterpHandler'
+       if (ComterpHandler::reactor_singleton()->register_handler(pipeobj->rdfd(), pipe_handler,
+                           ^~~~~~~~~~~~~~~~~
+/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/../iofunc.c:382:65: error: 'ACE_Event_Handler' has not been declared
+                                                                 ACE_Event_Handler::READ_MASK)==-1) {
+                                                                 ^~~~~~~~~~~~~~~~~
+/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/ComTerp/NETBSD/../iofunc.c:386:21: error: 'class ComterpHandler' has no member named 'log_only'
+       pipe_handler->log_only(1);
+                     ^~~~~~~~
+*** [iofunc.o] Error code 1
+
+

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.2 2005/02/15 13:23:03 fabinator Exp $
+--- src/yafraycore/Makefile.in-orig	2005-02-14 02:10:31.000000000 +0100
++++ src/yafraycore/Makefile.in	2005-02-14 02:10:44.000000000 +0100
+@@ -191,7 +191,7 @@
+ 	filter.lo matrix4.lo mesh.lo reference.lo scene.lo \
+ 	threadedscene.lo forkedscene.lo ipc.lo ccthreads.lo noise.lo \
+ 	background.lo sphere.lo texture.lo targaIO.lo triangle.lo \
+-	triangletools.lo vector3d.lo object3d.lo photon.lo params.lo \
++	triangletools.lo vector3d.lo object3d.lo photon.lo params.lo tools.lo \
+ 	yafsystem.lo renderblock.lo
+ libyafraycore_la_OBJECTS = $(am_libyafraycore_la_OBJECTS)
+ 

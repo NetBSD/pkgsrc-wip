@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:43 thomasklausner Exp $
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/HScurl-${PKGVERSION}.o
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Code.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Code.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Debug.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Debug.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Easy.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Easy.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Info.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Info.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Opts.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Opts.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Post.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Post.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Types.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Types.p_hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/libHScurl-${PKGVERSION}.a
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/libHScurl-${PKGVERSION}_p.a
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/curl-${PKGVERSION}/LICENSE

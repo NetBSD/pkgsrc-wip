@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+Preprocessor magic for NetBSD.
+
+--- tests/readcsv.cpp.orig	2010-08-25 14:59:35.000000000 +0000
++++ tests/readcsv.cpp
+@@ -54,7 +54,7 @@
+ #include <sys/stat.h>	// mkdir
+ #elif defined(_WIN32)
+ #include <direct.h>	// _mkdir, _chdir
+-#elif defined(linux) || defined(unix) || defined(__APPLE__) || defined(__FreeBSD__)
++#elif defined(linux) || defined(unix) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/stat.h>	// mkdir
+ #include <sys/types.h>
+ #endif
+@@ -476,7 +476,7 @@ int main(int argc, char** argv) {
+     // generate output file pointers
+     int ierr = 0;
+     const char *dest = (argc>2 ? argv[2] : "tmp");
+-#if defined(__CYGWIN__) || defined(linux) || defined(unix) || defined(__HOS_AIX__) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__CYGWIN__) || defined(linux) || defined(unix) || defined(__HOS_AIX__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+     mkdir(dest, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IXGRP);
+     ierr = chdir(dest);
+ #elif defined(_WIN32)

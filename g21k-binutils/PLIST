@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
+21k/etc/a21000
+bin/asm21k
+bin/cdump21k
+bin/ld21k
+bin/mem21k
+man/man1/a21000.1
+man/man1/asm21k.1
+man/man1/ld21k.1
+man/man1/mem21k.1

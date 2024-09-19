@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/01 22:26:05 jihbed Exp $
+${PYSITELIB}/LinAlg.py
+${PYSITELIB}/LinAlg.pyc
+${PYSITELIB}/LinAlg.pyo

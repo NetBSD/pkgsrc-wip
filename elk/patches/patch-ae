@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/01/19 14:26:42 jihbed Exp $
+
+--- src/spacegroup/Makefile.orig	2010-11-18 12:23:46.000000000 +0000
++++ src/spacegroup/Makefile	2010-11-18 12:24:28.000000000 +0000
+@@ -5,7 +5,7 @@
+ #-------------------------------------------------------------------------------
+ .SUFFIXES: .o .f90
+ .f90.o:
+-	$(F90) $(F90_OPTS) -c $<
++	$(F95) $(F95_OPTS) -c $<
+ 
+ #-------------------------------------------------------------------------------
+ # Source files
+@@ -26,7 +26,7 @@
+ EXE = spacegroup
+ 
+ spacegroup:	$(OBJ)
+-	$(F90) $(F90_OPTS) -o $(EXE) $(OBJ)
++	$(F95) $(F95_OPTS) -o $(EXE) $(OBJ)
+ 
+ clean:
+ 	rm -f *.o *.mod *~ fort.* ifc* *.gcno *.OUT *.xsf *.ascii gmon.out \

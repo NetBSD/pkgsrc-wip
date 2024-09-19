@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/12 07:58:58 jgoamakf Exp $
+lib/ocaml/site-lib/comparelib/META
+lib/ocaml/site-lib/comparelib/comparelib.a
+lib/ocaml/site-lib/comparelib/comparelib.cma
+lib/ocaml/site-lib/comparelib/comparelib.cmxa
+lib/ocaml/site-lib/comparelib/comparelib.cmxs
+lib/ocaml/site-lib/comparelib/comparelib_dummy.cmi
+lib/ocaml/site-lib/comparelib/comparelib_dummy.cmx
+lib/ocaml/site-lib/comparelib/comparelib_dummy.ml
+lib/ocaml/site-lib/comparelib/pa_compare.a
+lib/ocaml/site-lib/comparelib/pa_compare.cma
+lib/ocaml/site-lib/comparelib/pa_compare.cmi
+lib/ocaml/site-lib/comparelib/pa_compare.cmx
+lib/ocaml/site-lib/comparelib/pa_compare.cmxa
+lib/ocaml/site-lib/comparelib/pa_compare.cmxs
+lib/ocaml/site-lib/comparelib/pa_compare.ml

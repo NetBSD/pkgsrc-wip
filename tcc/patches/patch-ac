@@ -1,0 +1,89 @@
+$NetBSD: patch-ac,v 1.6 2005/07/20 20:51:02 rillig Exp $
+
+--- Makefile.orig	2004-11-08 16:47:16.000000000 -0400
++++ Makefile	2004-11-24 16:43:05.000000000 -0400
+@@ -3,7 +3,7 @@
+ #
+ include config.mak
+ 
+-CFLAGS=-O2 -g -Wall
++#CFLAGS=-O2 -g -Wall
+ ifndef CONFIG_WIN32
+ LIBS=-ldl
+ BCHECK_O=bcheck.o
+@@ -13,13 +13,13 @@
+ 
+ CFLAGS+=-mpreferred-stack-boundary=2
+ ifeq ($(GCC_MAJOR),2)
+-CFLAGS+=-m386 -malign-functions=0
++CFLAGS+=-malign-functions=0
+ else
+-CFLAGS+=-march=i386 -falign-functions=0 -fno-strict-aliasing
++CFLAGS+=-falign-functions=0 -fno-strict-aliasing
+ endif
+ 
+ DISAS=objdump -d
+-INSTALL=install
++#INSTALL=install
+ PROGS=tcc$(EXESUF) c67-tcc$(EXESUF) arm-tcc$(EXESUF)
+ # run local version of tcc with local libraries and includes
+ TCC=./tcc -B. -I.
+@@ -127,30 +127,30 @@
+ 
+ # TinyCC runtime libraries
+ libtcc1.o: libtcc1.c
+-	$(CC) -O2 -Wall -c -o $@ $<
++	$(CC) $(CFLAGS) -c -o $@ $<
+ 
+ libtcc1$(LIBSUF): libtcc1.o
+ 	$(AR) rcs $@ $^
+ 
+ bcheck.o: bcheck.c
+-	$(CC) -O2 -Wall -c -o $@ $<
++	$(CC) $(CFLAGS) -c -o $@ $<
+ 
+ install: tcc_install libinstall
+ 
+ tcc_install: $(PROGS) tcc.1 libtcc1$(LIBSUF) $(BCHECK_O) tcc-doc.html tcc.1
+-	mkdir -p "$(bindir)"
+-	$(INSTALL) -s -m755 $(PROGS) "$(bindir)"
++	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
++	$(BSD_INSTALL_PROGRAM) $(PROGS) $(bindir)
+ ifndef CONFIG_WIN32
+-	mkdir -p "$(mandir)/man1"
+-	$(INSTALL) tcc.1 "$(mandir)/man1"
++	$(BSD_INSTALL_MAN_DIR) $(mandir)/man1
++	$(BSD_INSTALL_MAN) tcc.1 $(mandir)/man1
+ endif
+-	mkdir -p "$(libdir)/tcc"
+-	mkdir -p "$(libdir)/tcc/include"
+-	$(INSTALL) -m644 libtcc1$(LIBSUF) $(BCHECK_O) "$(libdir)/tcc"
+-	$(INSTALL) -m644 stdarg.h stddef.h stdbool.h float.h varargs.h \
+-                   tcclib.h "$(libdir)/tcc/include"
+-	mkdir -p "$(docdir)"
+-	$(INSTALL) -m644 tcc-doc.html "$(docdir)"
++	$(BSD_INSTALL_DATA_DIR) $(libdir)/tcc
++	$(BSD_INSTALL_DATA_DIR) $(prefix)/include/tcc
++	$(BSD_INSTALL_LIB) libtcc1$(LIBSUF) $(BCHECK_O) $(libdir)/tcc
++	$(BSD_INSTALL_DATA) stdarg.h stddef.h stdbool.h float.h varargs.h \
++                   tcclib.h $(prefix)/include/tcc
++	$(BSD_INSTALL_DATA_DIR) $(docdir)
++	$(BSD_INSTALL_DATA) tcc-doc.html $(docdir)
+ 
+ clean:
+ 	rm -f *~ *.o tcc tcc1 tcct tcc_g tcctest.ref *.bin *.i ex2 \
+@@ -167,10 +167,10 @@
+ 
+ # libtcc generation and example
+ libinstall: libtcc$(LIBSUF) 
+-	mkdir -p "$(libdir)"
+-	$(INSTALL) -m644 libtcc$(LIBSUF) "$(libdir)"
+-	mkdir -p "$(includedir)"
+-	$(INSTALL) -m644 libtcc.h "$(includedir)"
++	$(BSD_INSTALL_DATA_DIR) $(libdir)
++	$(BSD_INSTALL_LIB) libtcc$(LIBSUF) $(libdir)
++	$(BSD_INSTALL_DATA_DIR) $(includedir)
++	$(BSD_INSTALL_DATA) libtcc.h $(prefix)/include/tcc
+ 
+ libtcc.o: tcc.c i386-gen.c Makefile
+ 	$(CC) $(CFLAGS) -DLIBTCC -c -o $@ $<

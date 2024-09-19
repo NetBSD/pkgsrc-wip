@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/23 09:45:05 fhajny Exp $
+
+RMD160 (wackamole-2.1.4.tar.gz) = 3931a3ae2132be23d4063c28334d6f25f2576960
+Size (wackamole-2.1.4.tar.gz) = 139767 bytes
+SHA1 (patch-Makefile.in) = fd0a6d3e65ee90ca61d3a58792c464cc94fced49

@@ -1,0 +1,3 @@
+wants to use py-notify and python-3.x, but pkgsrc notify does not
+support python-3.x.  Might have other missing dependencies, see
+Makefile.

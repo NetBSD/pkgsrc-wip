@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- docs/pod/rtoutput.pod.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/pod/rtoutput.pod
+@@ -38,10 +38,10 @@ The type of header to use for the sound 
+ string.  Note that if you name the file with a recognized suffix
+ (see above), you don't need to specify a header type in this way.
+ 
+-=over 8
+-
+ =for html <p>
+ 
++=over 8
++
+ =item I<aiff>
+ 
+ AIFF format

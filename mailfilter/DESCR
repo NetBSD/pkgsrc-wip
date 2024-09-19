@@ -1,0 +1,3 @@
+Mailfilter filters mail on a POP3 server, allowing junk to be deleted on
+the server rather than after it has been downloaded, and integrates with
+other programs such as fetchmail.

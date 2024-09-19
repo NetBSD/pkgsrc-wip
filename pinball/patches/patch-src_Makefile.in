@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Makefile.in.orig	2003-12-10 11:34:47.000000000 +0000
++++ src/Makefile.in
+@@ -505,8 +505,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	uninstall-pinincludeHEADERS uninstall-pinlibLIBRARIES
+ 
+ 
+-dnl libemilia_pin_la_SOURCES = $(libemilia_pin_a_SOURCES)
+-
+ # !+rzr : This trick workaround a bad generated rule (under Linux mingw32)
+ # src/ litool returns:  -L/usr/local//lib /usr/lib/libjpeg.so
+ # make -C src  wpinball.exe (build the final programm)

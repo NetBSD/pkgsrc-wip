@@ -1,0 +1,24 @@
+Cannon Fodder is an action-strategy shoot 'em up game developed by
+Sensible Software and published by Virgin Interactive.  The game
+is military-themed and based on shooting action but with a strategy
+game-style control system. The player directs troops through numerous
+missions, battling enemy infantry, vehicles and installations.
+
+Open Fodder requires the user to own a copy of Cannon Fodder, and
+to copy the data files into the game data directory.  At present,
+it supports 3 versions:
+
+1) Dos Retail CD Version Copy 'CF_ENG.DAT' from the CD to the
+Data/Dos_CD folder
+
+2) Amiga Retail Use the WHDLoad installer on an Amiga to extract
+the game files, and copy all the extracted files into the Data/Amiga
+folder
+
+3) Amiga CD32 Retail Copy the files from the 'Fodder' folder on
+the CD-Rom, to the Data/Amiga_CD folder. For the final video,
+Extract Track2 from the CD and name it 'Track2.flv', placed in the
+Amiga_CD folder.
+
+Open Fodder includes the Amiga Format Christmas Special and Amiga
+Power Issue #31 Demo.

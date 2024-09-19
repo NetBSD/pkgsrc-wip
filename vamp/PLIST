@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 14:57:26 jihbed Exp $
+include/vamp/divisions.mod
+include/vamp/exceptions.mod
+include/vamp/histograms.mod
+include/vamp/kinds.mod
+include/vamp/linalg.mod
+include/vamp/products.mod
+include/vamp/specfun.mod
+include/vamp/tao52_random_numbers.mod
+include/vamp/tao_random_numbers.mod
+include/vamp/utils.mod
+include/vamp/vamp.mod
+include/vamp/vamp_stat.mod
+lib/vamp/libvamp.la
+share/doc/vamp/preview.pdf
+share/doc/vamp/preview2.pdf
+share/doc/vamp/vamp.pdf

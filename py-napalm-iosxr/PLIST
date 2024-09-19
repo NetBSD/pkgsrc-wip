@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/napalm_iosxr/__init__.py
+${PYSITELIB}/napalm_iosxr/__init__.pyc
+${PYSITELIB}/napalm_iosxr/__init__.pyo
+${PYSITELIB}/napalm_iosxr/constants.py
+${PYSITELIB}/napalm_iosxr/constants.pyc
+${PYSITELIB}/napalm_iosxr/constants.pyo
+${PYSITELIB}/napalm_iosxr/iosxr.py
+${PYSITELIB}/napalm_iosxr/iosxr.pyc
+${PYSITELIB}/napalm_iosxr/iosxr.pyo
+${PYSITELIB}/napalm_iosxr/templates/delete_ntp_peers.j2
+${PYSITELIB}/napalm_iosxr/templates/delete_ntp_servers.j2
+${PYSITELIB}/napalm_iosxr/templates/delete_probes.j2
+${PYSITELIB}/napalm_iosxr/templates/delete_snmp_config.j2
+${PYSITELIB}/napalm_iosxr/templates/delete_users.j2
+${PYSITELIB}/napalm_iosxr/templates/schedule_probes.j2
+${PYSITELIB}/napalm_iosxr/templates/set_hostname.j2
+${PYSITELIB}/napalm_iosxr/templates/set_ntp_peers.j2
+${PYSITELIB}/napalm_iosxr/templates/set_ntp_servers.j2
+${PYSITELIB}/napalm_iosxr/templates/set_probes.j2
+${PYSITELIB}/napalm_iosxr/templates/set_users.j2
+${PYSITELIB}/napalm_iosxr/templates/snmp_config.j2

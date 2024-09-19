@@ -1,0 +1,6 @@
+Querying massive datasets can be time consuming
+and expensive without the right hardware and
+infrastructure. Google BigQuery solves
+this problem by enabling super-fast, SQL queries
+against append-mostly tables, using the processing
+power of Googles infrastructure.

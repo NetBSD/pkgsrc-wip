@@ -1,0 +1,34 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/01/13 15:51:48 mreriksson Exp $
+
+--- nnpfs/bsd/nnpfs_vnodeops-bsd.c.orig	2006-01-12 23:07:20.000000000 +0100
++++ nnpfs/bsd/nnpfs_vnodeops-bsd.c
+@@ -52,6 +52,8 @@ RCSID("$Id: nnpfs_vnodeops-bsd.c,v 1.148
+ 
+ #ifdef HAVE_FREEBSD_THREAD
+ #define NNPFS_AP_PROC(ap) ((ap)->a_td)
++#elif defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++#define NNPFS_AP_PROC(ap) ((ap)->a_l)
+ #else
+ #define NNPFS_AP_PROC(ap) ((ap)->a_p)
+ #endif
+@@ -94,7 +96,11 @@ nnpfs_fsync(struct vop_fsync_args * ap)
+ };  */
+ {
+ #ifdef HAVE_STRUCT_VOP_FSYNC_ARGS_A_FLAGS
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++    return nnpfs_fsync_common(ap->a_vp, ap->a_cred, NULL, ap->a_flags, ap->a_l);
++#else
+     return nnpfs_fsync_common(ap->a_vp, ap->a_cred, NULL, ap->a_flags, ap->a_p);
++#endif
+ #else
+ #ifdef __DragonFly__
+     return nnpfs_fsync_common(ap->a_vp, ap->a_td->td_proc->p_ucred, NULL,
+@@ -605,6 +611,8 @@ nnpfs_link(struct vop_link_args * ap)
+     d_thread_t *p = cnp->cn_td;
+ #elif defined(HAVE_FREEBSD_THREAD)
+     d_thread_t *p = cnp->cn_thread;
++#elif defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++    d_thread_t *p = cnp->cn_lwp;
+ #else
+     d_thread_t *p = cnp->cn_proc;
+ #endif

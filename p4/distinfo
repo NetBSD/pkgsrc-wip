@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.2 2011/07/05 22:02:24 bubuchka Exp $
+
+RMD160 (perforce-2010.2/darwin90u/p4) = 23e03f191490c5926a0e8690ad48eb823fc9fe57
+Size (perforce-2010.2/darwin90u/p4) = 2378688 bytes
+RMD160 (perforce-2010.2/freebsd60x86/p4) = 96c9772f7f443537cfb2f51195d911fb0c5b8625
+Size (perforce-2010.2/freebsd60x86/p4) = 706148 bytes
+RMD160 (perforce-2010.2/freebsd60x86_64/p4) = a92730782c97bb42e4f663cf82c2ed993ed996ca
+Size (perforce-2010.2/freebsd60x86_64/p4) = 781912 bytes
+RMD160 (perforce-2010.2/linux26x86/p4) = e8d49a0a5d1e2aa9a0164aa80c7d48c2bf5d9082
+Size (perforce-2010.2/linux26x86/p4) = 777652 bytes
+RMD160 (perforce-2010.2/linux26x86_64/p4) = f005e85c6fac463fb85ab8b51c10b92d6f9903d8
+Size (perforce-2010.2/linux26x86_64/p4) = 841488 bytes
+RMD160 (perforce-2010.2/netbsd31x86/p4) = 5cfb59284bd1f66284ab50a3f6f477a368adef44
+Size (perforce-2010.2/netbsd31x86/p4) = 750364 bytes

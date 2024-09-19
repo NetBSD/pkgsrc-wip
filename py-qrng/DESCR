@@ -1,0 +1,7 @@
+qRNG is an open-source quantum random number generator written in python.
+It achieves this by using IBM's [QISKit](https://qiskit.org/) API to
+communicate with any one of their 3 publicly accessible quantum computers:
+
+- 'ibmqx4'
+- 'ibmqx5'
+- 'ibmqx_16_melborne'

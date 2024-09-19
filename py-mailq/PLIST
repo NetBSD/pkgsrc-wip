@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/pqshell
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pymailq/__init__.py
+${PYSITELIB}/pymailq/__init__.pyc
+${PYSITELIB}/pymailq/__init__.pyo
+${PYSITELIB}/pymailq/control.py
+${PYSITELIB}/pymailq/control.pyc
+${PYSITELIB}/pymailq/control.pyo
+${PYSITELIB}/pymailq/selector.py
+${PYSITELIB}/pymailq/selector.pyc
+${PYSITELIB}/pymailq/selector.pyo
+${PYSITELIB}/pymailq/shell.py
+${PYSITELIB}/pymailq/shell.pyc
+${PYSITELIB}/pymailq/shell.pyo
+${PYSITELIB}/pymailq/store.py
+${PYSITELIB}/pymailq/store.pyc
+${PYSITELIB}/pymailq/store.pyo
+${PYSITELIB}/pymailq/utils.py
+${PYSITELIB}/pymailq/utils.pyc
+${PYSITELIB}/pymailq/utils.pyo
+share/doc/pymailq/LICENSE
+share/doc/pymailq/README.rst
+share/man/man1/pqshell.1

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/16 09:02:58 noud4 Exp $
+
+RMD160 (contacts-0.12.tar.bz2) = ff12cc45280311437e79e53859ca12d441dc0248
+Size (contacts-0.12.tar.bz2) = 358322 bytes
+SHA1 (patch-ac) = 203477f0121f4d69de818ce9d94be6d205b8ec58

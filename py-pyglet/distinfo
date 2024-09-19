@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/25 01:14:35 othyro Exp $
+
+RMD160 (pyglet-1.3.2.tar.gz) = 31b519d23d28d4f410bf604eea719915e9f182be
+SHA512 (pyglet-1.3.2.tar.gz) = 02dc0008f51514733a81f664502e2f552b68b2c2f7afd59b12db0edaa98c551803d0fe348cd1fad5c24bc9859b1cf3a73db3583d18be040baa94f1ebb4167ac9
+Size (pyglet-1.3.2.tar.gz) = 3577374 bytes

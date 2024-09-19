@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/21 03:39:30 phonohawk Exp $
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/Bindings/Librrd.hi
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/Bindings/Librrd.p_hi
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/Bindings/Librrd/Client.hi
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/Bindings/Librrd/Client.p_hi
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/Bindings/Posix/Time.hi
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/Bindings/Posix/Time.p_hi
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/HSbindings-librrd-${PKGVERSION}.o
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/libHSbindings-librrd-${PKGVERSION}.a
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/libHSbindings-librrd-${PKGVERSION}_p.a
+lib/bindings-librrd-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/bindings-librrd-${PKGVERSION}/COPYING

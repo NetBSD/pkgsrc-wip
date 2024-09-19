@@ -1,0 +1,6 @@
+- Should it be renamed to py-gitsome?
+- Investigate the differences and possible rationale between uritemplate and
+  uritemplate.py (former is textproc/py-uritemplate, latter not present in
+  pkgsrc)
+- Is it possible to avoid providing bundled xonsh and using shells/xonsh
+  instead? (<https://github.com/donnemartin/gitsome/issues/25>)

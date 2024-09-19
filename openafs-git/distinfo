@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.5 2015/11/03 00:15:02 agc Exp $
+
+RMD160 (openafs-1.7.11-src.tar.bz2) = 4e6c61496989b69544d0039a9fd6ca8627fc4df0
+SHA512 (openafs-1.7.11-src.tar.bz2) = afcef33d78ec882b28c056c8ffe0668056f23adcfe55d76468aed2ac91406a73ef8469fe4ff1c8e584ca6657ee4f6f7119d4865b0c50ae716221e435824ac10a
+Size (openafs-1.7.11-src.tar.bz2) = 14774648 bytes
+SHA1 (patch-src_afs_NBSD_osi__machdep.h) = fc0f21c21b9f76f59a1177d3fb2fcefe11975cae
+SHA1 (patch-src_afs_NBSD_osi__vm.c) = 5642f5e36987374221904416e15a7db20bd38aad
+SHA1 (patch-src_afs_NBSD_osi__vnodeops.c) = aadf29b109a6a03567f4a1a62073fd5f94665648
+SHA1 (patch-src_auth_cellconfig.c) = f9389e3779faea42ad3ffe7387a9cbf2dddc437b
+SHA1 (patch-src_config_param.amd64__nbsd70.h) = a5b8ae4846d3787dd69513d218ad71557cc5c6ee
+SHA1 (patch-src_config_param.i386__nbsd70.h) = e41fbc68958b7b0b061f46bae127fae34fcfe9b2
+SHA1 (patch-src_config_param.nbsd70.h) = d3cd44137c23770baa95a54c9866e1cd294f4dbf
+SHA1 (patch-src_config_shlib-build.in) = 4275f19bf902d897f378807161a96209b73c3362
+SHA1 (patch-src_config_shlib-install.in) = 7d25c29e06f451b25554878d9dc340a7637726d2
+SHA1 (patch-src_crypto_hcrypto_kernel_config.h) = 902950c78316916030928bf1e4a4358063f2ab3f
+SHA1 (patch-src_external_heimdal_roken_roken-common.h) = 5c6b797b9a0b28b093dec1fe09cf8b51e4fb4d8b
+SHA1 (patch-src_external_heimdal_roken_roken.h.in) = 3c6a246652fd1bb5e94425bf6eab983c762c19e7
+SHA1 (patch-src_libafs_MakefileProto.NBSD.in) = 87d6b697a7195296cd83290605f5d9207600cdbe
+SHA1 (patch-src_rxkad_fcrypt.c) = 1854b6d8ba151705b3c02080e1a0e1ce7d7a2a5e

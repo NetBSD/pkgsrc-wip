@@ -1,0 +1,5 @@
+inspyred is a free, open source framework for creating biologically-inspired
+computational intelligence algorithms in Python, including evolutionary
+computation, swarm intelligence, and immunocomputing. Additionally,
+inspyred provides easy-to-use canonical versions of many bio-inspired
+algorithms for users who do not need much customization

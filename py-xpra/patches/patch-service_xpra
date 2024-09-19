@@ -1,0 +1,4 @@
+$NetBSD$
+
+Fix unportable test operator.
+

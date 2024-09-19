@@ -1,0 +1,4 @@
+ArrayFire Python Bindings isa high performance library for parallel
+computing with an easy-to-use API. It enables users to write scientific
+computing code that is portable across CUDA, OpenCL and CPU devices. This
+project provides Python bindings for the ArrayFire library

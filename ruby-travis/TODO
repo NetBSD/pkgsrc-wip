@@ -1,0 +1,2 @@
+At least on NetBSD/evbarm (aarch64) `travis' probably fails due ruby-ffi.
+Test on other platforms and investigate further.

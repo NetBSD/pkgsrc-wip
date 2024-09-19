@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:50:43 thomasklausner Exp $
+${PLUGIN_DIR}/INSTALL
+${PLUGIN_DIR}/README
+${PLUGIN_DIR}/config.php.sample
+${PLUGIN_DIR}/locale/PL_pl/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/PL_pl/LC_MESSAGES/change_ldappass.po
+${PLUGIN_DIR}/locale/change_ldappass.po
+${PLUGIN_DIR}/locale/de/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/el_GR/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/el_GR/LC_MESSAGES/change_ldappass.po
+${PLUGIN_DIR}/locale/es/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/fr/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/fr/LC_MESSAGES/change_ldappass.po
+${PLUGIN_DIR}/locale/fr_FR/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/fr_FR/LC_MESSAGES/change_ldappass.po
+${PLUGIN_DIR}/locale/no_NO/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/no_NO/LC_MESSAGES/change_ldappass.po
+${PLUGIN_DIR}/locale/pt_BR/LC_MESSAGES/change_ldappass.mo
+${PLUGIN_DIR}/locale/pt_BR/LC_MESSAGES/change_ldappass.po
+${PLUGIN_DIR}/options.php
+${PLUGIN_DIR}/setup.php
+${PLUGIN_DIR}/version

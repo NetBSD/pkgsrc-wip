@@ -1,0 +1,3 @@
+SID (Syntax Improving Device) is an LL(1) parser generator. It can read
+grammars written in more convenient forms (namely a subset of LR) and
+transform them to LL(1).

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.5 2013/12/19 03:25:56 othyro Exp $
+bin/desmume
+bin/desmume-cli
+man/man1/desmume-cli.1
+man/man1/desmume.1
+share/applications/desmume.desktop
+${PLIST.nls}share/locale/es/LC_MESSAGES/desmume.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/desmume.mo
+${PLIST.nls}share/locale/nb/LC_MESSAGES/desmume.mo
+${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/desmume.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/desmume.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/desmume.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/desmume.mo
+share/pixmaps/DeSmuME.xpm

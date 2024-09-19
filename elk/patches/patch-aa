@@ -1,0 +1,155 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/19 14:26:42 jihbed Exp $
+
+--- setup.orig	2010-08-08 18:15:39.000000000 +0000
++++ setup	2010-11-18 10:07:32.000000000 +0000
+@@ -3,144 +3,21 @@
+ 
+ # generic values
+ MAKE="make"
+-F90="f90"
+-F90_OPTS=""
+-F77=$F90
+-F77_OPTS=$F90_OPTS
++F95="g95"
++F95_OPTS="-O3 -funroll-loops"
++F77=$F95
++F77_OPTS=$F95_OPTS
+ AR="ar"
+ LIB_SYS=""
+ LIB_LPK="lapack.a blas.a"
+ LIB_FFT="fftlib.a"
+ 
+-# get system type from user
+-GETSYS ()
+-{
+-  clear
+-  echo "Choose system type:"
+-  echo
+-  echo " 1. HP-UX, It2, HP Fortran            2. Linux, x86, Intel Fortran 7"
+-  echo " 3. Linux, x86, Intel Fortran 8-10    4. Linux, x86, NAG Fortran"
+-  echo " 5. Tru64, HP/Compaq Fortran          6. HP-UX, It2, HP Fortran, OpenMP"
+-  echo " 7. AIX, XL Fortran                   8. Linux, x86, g95"
+-  echo " 9. Linux, x86, PGI                  10. Fujitsu VPP"
+-  echo "11. Hitachi SR8000                   12. IBM AIX, RISC6000"
+-  echo "13. SGI Origin 2000/3000             14. SUN workstations"
+-  echo "15. Cray-T3E                         16. OSX, G4/5, Absoft Fortran"
+-  echo "17. OSX, G4/5, NAG Fortran           18. Linux, x86, GFortran"
+-  echo
+-  echo " o. Other                             x. Exit"
+-  echo
+-  read SYS
+-  if [ "$SYS" = x ] ; then
+-    exit 0
+-  elif [ "$SYS" = o ] ; then
+-    echo "Enter Fortran 90 compiler command:"
+-    read F90
+-    echo "Enter Fortran 90 compiler options:"
+-    read F90_OPTS
+-    echo "Enter Fortran 77 compiler command:"
+-    read F77
+-    echo "Enter Fortran 77 compiler options:"
+-    read F77_OPTS
+-  elif [ "$SYS" = 1 ] ; then
+-    F90="f90"
+-    F90_OPTS="+Ofast +DD64"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 2 ] ; then
+-    F90="ifc"
+-    F90_OPTS="-O3 -ip -unroll -prefetch -scalar_rep -w90"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 3 ] ; then
+-    F90="ifort"
+-    F90_OPTS="-O3 -ip -unroll -scalar_rep -w90"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 4 ] ; then
+-    F90="f95"
+-    F90_OPTS="-O4 -kind=byte -dusty -dcfuns"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 5 ] ; then
+-    F90="f90"
+-    F90_OPTS="-O5 -fast"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 6 ] ; then
+-    F90="f90"
+-    F90_OPTS="+Ofast +Oopenmp +DD64"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 7 ] ; then
+-    F90="xlf90"
+-    F90_OPTS="-O4"
+-    F77="xlf77"
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 8 ] ; then
+-    F90="g95"
+-    F90_OPTS="-O3 -funroll-loops"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 9 ] ; then
+-    F90="pgf90"
+-    F90_OPTS="-fast"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 10 ] ; then
+-    F90="frt"
+-    F90_OPTS="-O4"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 11 ] ; then
+-    F90="f90"
+-    F90_OPTS="-O4"
+-  elif [ "$SYS" = 12 ] ; then
+-    F90="xlf"
+-    F90_OPTS="-O3 -qsuffix=f=f90 -qfree=f90"
+-    F77=$F90
+-    F77_OPTS="-O3"
+-  elif [ "$SYS" = 13 ] ; then
+-    F90="f90"
+-    F90_OPTS="-mips4 -64 -O2"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 14 ] ; then
+-    F90="f90"
+-    F90_OPTS="-fast -dalign"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 15 ] ; then
+-    F90="f90"
+-    F90_OPTS="-O3"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 16 ] ; then
+-    F90="f90"
+-    F90_OPTS="-O"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 17 ] ; then
+-    F90="f95"
+-    F90_OPTS="-O4 -kind=byte -dusty -dcfuns"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  elif [ "$SYS" = 18 ] ; then
+-    F90="gfortran"
+-    F90_OPTS="-O3 -funroll-loops -ffast-math"
+-    F77=$F90
+-    F77_OPTS=$F90_OPTS
+-  else
+-    GETSYS
+-  fi
+-}
+ 
+-GETSYS
+ 
+ # produce the make.inc file
+ echo "MAKE = $MAKE" > make.inc
+-echo "F90 = $F90" >> make.inc
+-echo "F90_OPTS = $F90_OPTS" >> make.inc
++echo "F95 = $F95" >> make.inc
++echo "F95_OPTS = $F95_OPTS" >> make.inc
+ echo "F77 = $F77" >> make.inc
+ echo "F77_OPTS = $F77_OPTS" >> make.inc
+ echo "AR = $AR" >> make.inc

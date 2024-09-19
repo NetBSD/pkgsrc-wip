@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/premake4
+share/doc/premake4/license.lua
+share/doc/premake4/license.premake4

@@ -1,0 +1,24 @@
+$NetBSD$
+
+Replace "python3" with @PYTHONBIN@ (later substituted for the actual
+path) so configure finds it.
+
+--- configure.orig	2021-04-01 15:45:09.000000000 +0000
++++ configure
+@@ -236,12 +236,12 @@
+ }
+ 
+ #
+-# Test python3 and h5py
++# Test @PYTHONBIN@ and h5py
+ #
+-system('python3 -c "import h5py"');
++system('@PYTHONBIN@ -c "import h5py"');
+ if ( $? ) {
+-  print "\nPython3 and the h5py module is a pre-requisite for RepeatMasker.\n" 
+-      . "Either python3 could not be found in your path or h5py is not installed.\n"
++  print "\n@PYTHONBIN@ and the h5py module is a pre-requisite for RepeatMasker.\n" 
++      . "Either @PYTHONBIN@ could not be found in your path or h5py is not installed.\n"
+       . "Please very both before rerunning configure.\n\n";
+ }
+ 

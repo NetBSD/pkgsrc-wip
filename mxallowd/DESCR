@@ -1,0 +1,9 @@
+mxallowd is a daemon for pf/pflog which implements a slightly improved
+nolisting mechanism. Basically your nameserver has to be configured to
+return two MX ip addresses of which one does not run a mail server on
+port 25 (the one with higher priority). Most spammers try to connect
+directly to the first mailserver -- mxallowd blocks that. You have to
+connect to the first one and then to the second one, direct connections
+do not work. Real mailservers (not spammers) have to try all MX ip
+addresses in order (sorted by priority) until they succeed in delivering
+the mail.

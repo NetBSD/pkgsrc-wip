@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/30 13:16:15 noud4 Exp $
+share/festival/lib/voices/pl/cstr_pl_em_diphone/README
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_em_diphone.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_em_dur.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_em_int.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_lex.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_lts.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_phones.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/cstr_pl_token.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/diphlist.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/festvox/number_decl.scm
+share/festival/lib/voices/pl/cstr_pl_em_diphone/group/cstr_pl_em_diphone.group

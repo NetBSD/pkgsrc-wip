@@ -1,0 +1,4 @@
+VPR is a placement and routing tool for array-based FPGAs, and T-VPack is a
+logic block packing (clustering) program. VPR was written to allow circuits to
+be placed and routed on a wide variety of FPGAs to facilitate comparisons of
+different architectures.

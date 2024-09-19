@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/blist/__init__.py
+${PYSITELIB}/blist/__init__.pyc
+${PYSITELIB}/blist/__init__.pyo
+${PYSITELIB}/blist/_blist.so
+${PYSITELIB}/blist/_btuple.py
+${PYSITELIB}/blist/_btuple.pyc
+${PYSITELIB}/blist/_btuple.pyo
+${PYSITELIB}/blist/_sorteddict.py
+${PYSITELIB}/blist/_sorteddict.pyc
+${PYSITELIB}/blist/_sorteddict.pyo
+${PYSITELIB}/blist/_sortedlist.py
+${PYSITELIB}/blist/_sortedlist.pyc
+${PYSITELIB}/blist/_sortedlist.pyo

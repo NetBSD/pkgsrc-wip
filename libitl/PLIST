@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/07 00:53:34 jihbed Exp $
+include/itl/hijri.h
+include/itl/prayer.h
+lib/itl/libitl.a
+lib/itl/libitl.so
+lib/itl/libitl.so.0
+lib/itl/libitl.so.0.0.7
+share/doc/libitl/method-info.txt

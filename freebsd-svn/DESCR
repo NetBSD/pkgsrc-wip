@@ -1,0 +1,4 @@
+This package contains all the Subversion programs and libraries except
+the Apache module mod_dav_svn (for which see the ap2-subversion
+package) and the Python bindings and some programs which use them (for
+which see the py-subversion package). It includes the FreeBSD commit template.

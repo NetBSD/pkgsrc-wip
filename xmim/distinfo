@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
+
+RMD160 (mim-1.2.tar.gz) = e623b5c8f25723c3d19d7c07cf4b720e36831b7d
+Size (mim-1.2.tar.gz) = 94504 bytes
+SHA1 (patch-aa) = de35d1b6794a75cc40d8e9916a64f4b678a17199
+SHA1 (patch-ab) = 780385839253c9d17150caa643e99ac4d4bcafee
+SHA1 (patch-ac) = e27865de15e3deae265f8966c13f907b8e857211
+SHA1 (patch-ad) = 5778efbe0b16c39457f3a1eb6fd9a9d7f955e27d

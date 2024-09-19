@@ -1,0 +1,3 @@
+This little utility is written for System Administrators that mainly want to
+change the NIC's MAC address for compatibilty reasons, or for "spoofing" their
+NIC's MAC address.

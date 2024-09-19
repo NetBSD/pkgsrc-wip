@@ -1,0 +1,7 @@
+autoproject interviews the user, then creates a source package for a new
+program which follows the GNU programming standards. The new package uses
+autoconf to configure itself, and automake to create the Makefile.
+The idea is that you execute autoproject just once when you start a new
+project. It will ask a few questions, then create a new directory and populate
+it with standard files, customized for the new project. Optionally, the new
+package will use an external command line parser or a parser generator.

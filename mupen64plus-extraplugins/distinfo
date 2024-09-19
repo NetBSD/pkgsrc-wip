@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/07/07 12:48:16 othyro Exp $
+
+RMD160 (mupen64plus-extraplugins-src-2.0.0.tar.gz) = de19b6abbad51c2ad32c7027c51d5ba194083eb4
+Size (mupen64plus-extraplugins-src-2.0.0.tar.gz) = 589176 bytes
+SHA1 (patch-mupen64plus-rsp-z64_projects_unix_Makefile) = 82f54f19b35adba8202bcaf04b6378a97dcbd5d6
+SHA1 (patch-mupen64plus-video-arachnoid_projects_unix_Makefile) = cb9c622cf773aa4ee081ffbab394f9db0009cfce
+SHA1 (patch-mupen64plus-video-glide64_projects_unix_Makefile) = 0b8309165c220d30640b9406379e96b95536f915
+SHA1 (patch-mupen64plus-video-glide64_src_rdp.cpp) = 073ba1a7178fb9230c32660320edc3df13e04b46
+SHA1 (patch-mupen64plus-video-z64_projects_unix_Makefile) = 759b1e77eb5a3c484ce7d1f8cbb0e9f0e95702a7

@@ -1,0 +1,11 @@
+- This package needs to be fixed or deleted since lang/sun-jre15 was deleted.
+- AFAIK azureus will not work with NetBSD native java, therefore,
+  this package uses Linux binary emulation.
+  Should the package name be changed to reflect this?
+
+- This package should be modified to support Linux.  Linux would not
+  require the Suse compatibility packages.
+  However, I had to downgrade to a much older version of Azureus in order
+  to work with NetBSD's Linux binary emulation.  Native Linux would not
+  have this problem (I assume) so it would want to have the latest version.
+  Perhaps there should be two packages?

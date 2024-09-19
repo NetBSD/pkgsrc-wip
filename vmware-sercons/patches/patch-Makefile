@@ -1,0 +1,16 @@
+$NetBSD$
+
+NetBSD needs -pthread to build.
+
+--- Makefile.orig	2017-12-11 19:03:21.000000000 +0000
++++ Makefile
+@@ -10,6 +10,9 @@ ifeq ($(OS),SunOS)
+ CFLAGS += -m32
+ CFLAGS += -lnsl -lsocket
+ endif
++ifeq ($(OS),NetBSD)
++CFLAGS += -pthread
++endif
+ 
+ PROG = sercons
+ 

@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	carla
+
+.if !defined(CARLA_BUILDLINK3_MK)
+CARLA_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.carla+=	carla>=2.2.0
+BUILDLINK_PKGSRCDIR.carla?=	../../wip/carla
+
+.endif	# CARLA_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-carla

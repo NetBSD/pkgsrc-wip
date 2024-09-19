@@ -1,0 +1,6 @@
+PyNFG is designed to make it easy for researchers to model strategic
+environments using the Network Form Game (NFG) formalism developed by David
+Wolpert with contributions from Ritchie Lee, James Bono and others. The main
+idea of the NFG framework is to translate a strategic environment into the
+language of probabilistic graphical models. The result is a more intuitive,
+powerful, and user-friendly framework than the extensive form

@@ -1,0 +1,6 @@
+This library consists of two sublibraries pyFresnel and pyQW for performing
+physics simulations. pyFresnel contains codes for modelling the optical
+properties of dielectric layers, starting from a simple interface and finishing
+with an optical transfer matrix code. Unlike other optical transfer matrix
+codes, this code allows for layers with uniaxial dielectrics which
+have their the optical axes normal to the plane of the layers.

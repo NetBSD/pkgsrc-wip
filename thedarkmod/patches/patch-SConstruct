@@ -1,0 +1,45 @@
+$NetBSD$
+
+--- SConstruct.orig	2019-02-02 17:51:46.000000000 +0000
++++ SConstruct
+@@ -12,7 +12,8 @@ import scons_utils
+ conf_filename='site.conf'
+ # choose configuration variables which should be saved between runs
+ # ( we handle all those as strings )
+-serialized=['CC', 'CXX', 'JOBS', 'BUILD', 'GL_HARDLINK',
++serialized=['CC', 'CXX', 'CFLAGS', 'CXXFLAGS', 'LINKFLAGS',
++	'JOBS', 'BUILD', 'GL_HARDLINK',
+ 	'DEBUG_MEMORY', 'LIBC_MALLOC', 'ID_MCHECK', 'NOCURL',
+ 	'BUILD_ROOT', 'BASEFLAGS', 'SILENT', 'NO_GCH', 'OPENMP',
+ 	'TARGET_ARCH' ]
+@@ -214,11 +215,11 @@ LINK = CXX
+ # BASE + GAME + OPT for game
+ # _noopt versions of the environements are built without the OPT
+ 
+-BASECPPFLAGS = [ ]
++BASECPPFLAGS = [ CFLAGS.split(" "), CXXFLAGS.split(" ") ]
+ CORECPPPATH = [ ]
+ CORELIBPATH = [ ]
+ CORECPPFLAGS = [ ]
+-BASELINKFLAGS = [ ]
++BASELINKFLAGS = [ LINKFLAGS.split(" ") ]
+ CORELINKFLAGS = [ ]
+ 
+ # for release build, further optimisations that may not work on all files
+@@ -284,7 +285,6 @@ elif ( BUILD == 'release' ):
+ 	# -finline-functions: implicit at -O3
+ 	# -fschedule-insns2: implicit at -O2
+ 	# -fno-unsafe-math-optimizations: that should be on by default really. hit some wonko bugs in physics code because of that
+-	OPTCPPFLAGS = [ '-g', '-O3', '-ffast-math', '-fno-unsafe-math-optimizations' ] 
+ 	if ( ID_MCHECK == '0' ):
+ 		ID_MCHECK = '2'
+ else:
+@@ -373,7 +373,7 @@ SConscript( g_build + '/core/glimp/sys/s
+ VariantDir( g_build + '/core', '.', duplicate = 0 )
+ thedarkmod = SConscript( g_build + '/core/sys/scons/SConscript.darkmod' )
+ 
+-exe_name = 'thedarkmod.' + ('x64' if TARGET_ARCH == 'x64' else cpu)
++exe_name = 'thedarkmod'
+ # Note: this target only runs if you append ".." (without quotes) as the last argument to scons command line
+ # It copies executable into ../darkmod, which is default location of darkmod installation in development environment
+ InstallAs( '../darkmod/' + exe_name, thedarkmod )

@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/10/19 09:19:28 makoto Exp $
+ See ${PREFIX}/share/${PKGBASE}/README.j (Sorry, in Japanese)
+ or (in English)
+   http://www.gentei.org/~yuuji/software/mop/index-e.html
+    (in Japanese)
+   http://www.gentei.org/~yuuji/software/mop/
+
+(1) mop -h     for help
+(2) mop --init to get necessay files onto current directory,
+    or,
+    copy ${PREFIX}/share/${PKGBASE}/template.html with your convenient name and
+    location
+(3) Modify template.html or your-copy.html for your purpose
+(4) mop your-modified-copy.html
+(5) slide-01.html is the entry page of your presentation
+===========================================================================

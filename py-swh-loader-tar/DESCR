@@ -1,0 +1,5 @@
+The Software Heritage Tarball Loader is in charge of ingesting the directory
+representation of the tarball into the Software Heritage archive.
+
+
+

@@ -1,0 +1,8 @@
+R implementation of various estimators of entropy, such as the
+shrinkage estimator by Hausser and Strimmer, the maximum likelihood
+and the Millow-Madow estimator, various Bayesian estimators, and
+the Chao-Shen estimator. It also offers an R interface to the NSB
+estimator. Furthermore, it provides functions for estimating
+Kullback-Leibler divergence, chi2-squared, mutual information, and
+chi2-squared statistic of independence. In addition there are
+functions for discretizing continuous random variables.

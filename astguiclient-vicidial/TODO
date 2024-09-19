@@ -1,0 +1,4 @@
+* Use of {PAX} to replace install script.
+* Fill out the PLIST after install script is replaced.
+* Only tested on FreeBSD 11 x86_64.
+* Document options in mk/defaults/options.description. 

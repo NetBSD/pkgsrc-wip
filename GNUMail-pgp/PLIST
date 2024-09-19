@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/PGP
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/clear_20.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/clear_48.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/encrypted_20.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/encrypted_48.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/encrypted_80.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/pgp-mail.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/signed+encrypted_80.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/signed_20.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/signed_48.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/signed_80.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/unsigned_20.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/Resources/unsigned_48.tiff
+share/GNUstep/Local/Library/GNUMail/PGP.bundle/stamp.make

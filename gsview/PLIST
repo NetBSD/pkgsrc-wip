@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+bin/gsview
+bin/gsview-help
+man/man1/gsview.1
+share/examples/gsview/printer.ini
+share/doc/${PKGNAME}/LICENCE
+share/doc/${PKGNAME}/Readme.htm
+share/doc/${PKGNAME}/cdorder.txt
+share/doc/${PKGNAME}/gsview.css
+share/doc/${PKGNAME}/gvxct.htm
+share/doc/${PKGNAME}/gvxde.htm
+share/doc/${PKGNAME}/gvxen.htm
+share/doc/${PKGNAME}/gvxes.htm
+share/doc/${PKGNAME}/gvxfr.htm
+share/doc/${PKGNAME}/gvxgr.htm
+share/doc/${PKGNAME}/gvxit.htm
+share/doc/${PKGNAME}/gvxnl.htm
+share/doc/${PKGNAME}/gvxru.htm
+share/doc/${PKGNAME}/gvxse.htm
+share/doc/${PKGNAME}/gvxsk.htm
+share/doc/${PKGNAME}/regorder.txt

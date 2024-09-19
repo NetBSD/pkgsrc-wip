@@ -1,0 +1,4 @@
+ - Investigate what is `truncate' tool used in clipmenud and if there is any
+   portable way to do what it does
+ - Investigate possible semantic of %N in strftime(3) (used in the date(1)
+   invocation, probably not portable or a typo)

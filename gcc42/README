@@ -1,0 +1,4 @@
+1) You may want to adjust the "Optional languages"  
+   section of the Makefile before building this package.
+
+2) As of now, only C, C++, and Objective C/C++ are supported.

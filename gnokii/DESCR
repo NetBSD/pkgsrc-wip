@@ -1,0 +1,6 @@
+gnokii provides tools and a user space driver for use with mobile phones
+under Linux, various unices and Win32.
+
+With gnokii you can do such things as make data calls, update your
+address book, change calendar entires, send and receive SMS messages and
+load ring tones depending on the phone you have.
