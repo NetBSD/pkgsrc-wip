@@ -14,15 +14,17 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3.2:../../wip/py-hmmlearn
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.1:../../math/py-scipy
 # cykhash>=2.0,<3.0
 DEPENDS+=	${PYPKGPREFIX}-cykhash>=2.0:../../devel/py-cykhash
+DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=1.3:../../math/py-scikit-learn
+DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3.2:../../wip/py-hmmlearn
 TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 USE_TOOLS+=	bash perl:test
 REPLACE_BASH=	test/cmdlinetest* test/prockreport test/*.py test/pyprofile*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38	# Does not build
 
 do-test: install
 	${RM} -rf ${WRKSRC}/temp
