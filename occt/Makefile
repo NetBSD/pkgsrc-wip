@@ -12,7 +12,6 @@ COMMENT=	Boundary Representation modeling toolkit and 3D geometry library
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 USE_TOOLS+=	bash:run
 WRKSRC=		${WRKDIR}/occt-V${PKGVERSION_NOREV:S/./_/g}
 
@@ -58,6 +57,7 @@ OCCT_CUSTOM_COMPILER_DRIVER=	custom_gcc_32.sh
 
 PLIST_SUBST=	OCCT_CUSTOM_COMPILER_DRIVER=${OCCT_CUSTOM_COMPILER_DRIVER:Q}
 
+.include "../../devel/cmake/build.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"

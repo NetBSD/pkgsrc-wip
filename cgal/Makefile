@@ -12,17 +12,17 @@ HOMEPAGE=	https://www.cgal.org/
 COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
-CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-CMAKE_CONFIGURE_ARGS+=		-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 REPLACE_SH+=	scripts/cgal_create_CMakeLists
 REPLACE_SH+=	scripts/cgal_create_cmake_script
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
