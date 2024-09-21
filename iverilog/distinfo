@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:04:12 nia Exp $
-
-BLAKE2s (verilog-12.0.tar.gz) = a33ac3b9c33cc7600355da36a64b82411d00eb26c385b717052a0817aa1ee22b
-SHA512 (verilog-12.0.tar.gz) = a8e112f760903335ef2fbf00529e5fe282b83c1f583c4316373b9410d7fad2a53d5c4adb82dd62491c14a620cb5b1fab117cb0cde638c86b65fe5b7b0dd07152
-Size (verilog-12.0.tar.gz) = 2995096 bytes
-SHA1 (patch-aa) = cf075110416f6db0892129796cd83b8ae8de55fa
-SHA1 (patch-cadpli_Makefile.in) = ed21a5f529ac449c26b831cbd5fde052d9ed5466

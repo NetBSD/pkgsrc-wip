@@ -1741,7 +1741,6 @@ SUBDIR+=	ised
 SUBDIR+=	islamic-menus
 SUBDIR+=	ispell-dictionaries
 SUBDIR+=	itools
-SUBDIR+=	iverilog
 SUBDIR+=	ivtools
 SUBDIR+=	ja-freewnn-cvs
 SUBDIR+=	ja-ptex
