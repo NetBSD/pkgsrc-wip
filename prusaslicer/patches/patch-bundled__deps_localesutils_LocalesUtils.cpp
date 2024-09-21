@@ -5,14 +5,14 @@ as it affects the whole process rather than a single thread.
 See the following thread for rationale against uselocale(3):
 https://mail-index.netbsd.org/tech-userlevel/2015/12/28/msg009546.html
 
---- src/libslic3r/LocalesUtils.cpp.orig	2021-12-17 14:00:02.000000000 +0000
-+++ src/libslic3r/LocalesUtils.cpp
-@@ -21,11 +21,14 @@ CNumericLocalesSetter::CNumericLocalesSe
+--- bundled_deps/localesutils/LocalesUtils.cpp.orig	2024-09-20 13:38:59.616830457 +0000
++++ bundled_deps/localesutils/LocalesUtils.cpp
+@@ -26,11 +26,14 @@ CNumericLocalesSetter::CNumericLocalesSe
      m_original_locale = uselocale((locale_t)0);
      m_new_locale = newlocale(LC_NUMERIC_MASK, "C", m_original_locale);
      uselocale(m_new_locale);
 -#else // linux / BSD
-+#elif __LINUX__ || __OpenBSD__
++#elif __linux__ || __OpenBSD__
      m_original_locale = uselocale((locale_t)0);
      m_new_locale = duplocale(m_original_locale);
      m_new_locale = newlocale(LC_NUMERIC_MASK, "C", m_new_locale);
@@ -23,7 +23,7 @@ https://mail-index.netbsd.org/tech-userlevel/2015/12/28/msg009546.html
  #endif
  }
  
-@@ -35,9 +38,11 @@ CNumericLocalesSetter::~CNumericLocalesS
+@@ -40,9 +43,11 @@ CNumericLocalesSetter::~CNumericLocalesS
  {
  #ifdef _WIN32
      std::setlocale(LC_NUMERIC, m_orig_numeric_locale.data());

@@ -2,14 +2,14 @@ $NetBSD$
 
 Recent libhidapi renamed the library to include -libusb suffix.
 
---- src/slic3r/CMakeLists.txt.orig	2024-06-14 21:54:48.000000000 +0000
+--- src/slic3r/CMakeLists.txt.orig	2024-09-18 13:39:04.000000000 +0000
 +++ src/slic3r/CMakeLists.txt
-@@ -400,7 +400,7 @@ endforeach()
- 
- encoding_check(libslic3r_gui)
- 
--target_link_libraries(libslic3r_gui libslic3r avrdude libcereal imgui libvgcode GLEW::GLEW OpenGL::GL hidapi libcurl ${wxWidgets_LIBRARIES} NanoSVG::nanosvg NanoSVG::nanosvgrast)
-+target_link_libraries(libslic3r_gui libslic3r avrdude libcereal imgui libvgcode GLEW::GLEW OpenGL::GL hidapi-libusb libcurl ${wxWidgets_LIBRARIES} NanoSVG::nanosvg NanoSVG::nanosvgrast)
- 
- if (MSVC)
-     target_link_libraries(libslic3r_gui Setupapi.lib)
+@@ -431,7 +431,7 @@ target_link_libraries(
+     libvgcode
+     GLEW::GLEW
+     OpenGL::GL
+-    hidapi
++    hidapi-libusb
+     libcurl
+     ${wxWidgets_LIBRARIES}
+     NanoSVG::nanosvg

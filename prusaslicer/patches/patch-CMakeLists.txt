@@ -4,7 +4,7 @@ Use GTK3, since that's how we build wxWidgets.
 
 Define additional macro to OpenGL ES builds.
 
---- CMakeLists.txt.orig	2024-06-14 21:54:48.000000000 +0000
+--- CMakeLists.txt.orig	2024-09-18 13:39:04.000000000 +0000
 +++ CMakeLists.txt
 @@ -53,7 +53,7 @@ CMAKE_DEPENDENT_OPTION(SLIC3R_DESKTOP_IN
  
@@ -23,3 +23,13 @@ Define additional macro to OpenGL ES builds.
  endif()
  
  if(SLIC3R_DESKTOP_INTEGRATION)
+@@ -374,7 +375,8 @@ set(MINIMUM_BOOST_VERSION "1.66.0")
+ set(_boost_components "system;filesystem;thread;log;locale;regex;chrono;atomic;date_time;iostreams;nowide")
+ find_package(Boost ${MINIMUM_BOOST_VERSION} REQUIRED COMPONENTS ${_boost_components})
+ 
+-find_package(Eigen3 3.3.7 REQUIRED)
++find_package(Eigen3 3.3.7 REQUIRED NO_MODULE)
++include_directories(BEFORE SYSTEM ${EIGEN3_INCLUDE_DIR})
+ 
+ add_library(boost_libs INTERFACE)
+ add_library(boost_headeronly INTERFACE)

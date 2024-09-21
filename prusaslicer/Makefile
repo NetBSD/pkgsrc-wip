@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.8.0
+PKGVERSION=	2.8.1
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(alpha|beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -65,10 +65,12 @@ pre-configure:
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/heimdal/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/libxml/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/cgal/buildlink3.mk"
 .include "../../wip/libbgcode/buildlink3.mk"
@@ -77,6 +79,7 @@ pre-configure:
 .include "../../wip/occt/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 BUILDLINK_API_DEPENDS.Xrandr+=  Xrandr>=1.0.2
 .include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

@@ -2,13 +2,13 @@ $NetBSD$
 
 Ignore OpenCASCADE version.
 
---- src/occt_wrapper/CMakeLists.txt.orig	2022-08-19 14:41:23.000000000 +0000
+--- src/occt_wrapper/CMakeLists.txt.orig	2024-09-20 08:13:14.959981974 +0000
 +++ src/occt_wrapper/CMakeLists.txt
 @@ -19,7 +19,7 @@ include(GenerateExportHeader)
  
  generate_export_header(OCCTWrapper)
  
--find_package(OpenCASCADE 7.6.2 REQUIRED)
+-find_package(OpenCASCADE 7.6.1 REQUIRED)
 +find_package(OpenCASCADE REQUIRED)
  
  set(OCCT_LIBS

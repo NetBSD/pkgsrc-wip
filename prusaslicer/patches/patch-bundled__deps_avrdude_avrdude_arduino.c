@@ -2,8 +2,8 @@ $NetBSD$
 
 alloca requires stdlib.h.
 
---- src/avrdude/arduino.c.orig	2020-03-21 10:55:51.000000000 +0000
-+++ src/avrdude/arduino.c
+--- bundled_deps/avrdude/avrdude/arduino.c.orig	2024-09-20 23:45:57.762961668 +0000
++++ bundled_deps/avrdude/avrdude/arduino.c
 @@ -28,6 +28,7 @@
  #include "ac_cfg.h"
  
