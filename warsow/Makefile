@@ -16,7 +16,7 @@ HOMEPAGE=	https://warsow.net/
 COMMENT=	Free fast-paced first-person shooter
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/warsow-2.1.2-netbsd/source
+WRKSRC=			${WRKDIR}/warsow-2.1.2-pkgsrc/source
 WARSOW_DATA_SRC=	${WRKDIR}/warsow-2.1.2/basewsw
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++

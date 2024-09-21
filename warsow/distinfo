@@ -6,3 +6,4 @@ Size (warsow-2.1.2.tar.gz) = 465567628 bytes
 BLAKE2s (warsow-engine-2.1.2.tar.gz) = 17e0e44bb4688f02bd4138e37a17a01fde48f0b3f369faf7111d29d52c5be0e1
 SHA512 (warsow-engine-2.1.2.tar.gz) = 7162b75c0236ba3f257a8816f2808183f3c96e313dfdee907a20fb5580b2fd841bc93d341684265d5782002b3a624364f1f5d5bad4208376e4066b5c8fc7b709
 Size (warsow-engine-2.1.2.tar.gz) = 14547552 bytes
+SHA1 (patch-client_CMakeLists.txt) = 661c726bd4d1023b0cc0b8969c5c84dbc9a4535e
