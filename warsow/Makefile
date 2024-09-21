@@ -7,7 +7,7 @@ PKGNAME=	warsow-2.1.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 GITHUB_PROJECT=	warsow
-GITHUB_TAG=	${PKGVERSION_NOREV}-netbsd
+GITHUB_TAG=	${PKGVERSION_NOREV}-pkgsrc
 DISTFILES=	${DEFAULT_DISTFILES} warsow-2.1.2.tar.gz
 SITES.warsow-2.1.2.tar.gz=	https://warsow.net/
 
@@ -18,7 +18,6 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/warsow-2.1.2-netbsd/source
 WARSOW_DATA_SRC=	${WRKDIR}/warsow-2.1.2/basewsw
-USE_CMAKE=		yes
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 
@@ -65,6 +64,7 @@ do-install:
 			${WRKSRC}/build/basewsw/$${lib} ${DESTDIR}${PREFIX}/share/warsow/basewsw/$${lib};	\
 	done
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
