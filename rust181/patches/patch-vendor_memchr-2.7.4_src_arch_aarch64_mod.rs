@@ -2,8 +2,8 @@ $NetBSD$
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
---- work/rustc-1.81.0-src/vendor/memchr-2.7.4/src/arch/aarch64/mod.rs.orig	2024-09-22 19:17:13.167426584 +0000
-+++ work/rustc-1.81.0-src/vendor/memchr-2.7.4/src/arch/aarch64/mod.rs
+--- vendor/memchr-2.7.4/src/arch/aarch64/mod.rs.orig	2024-09-22 19:17:13.167426584 +0000
++++ vendor/memchr-2.7.4/src/arch/aarch64/mod.rs
 @@ -2,6 +2,8 @@
  Vector algorithms for the `aarch64` target.
  */
