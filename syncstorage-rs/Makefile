@@ -40,7 +40,7 @@ USE_TOOLS+=		pkg-config
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 INSTALLATION_DIRS+=	bin share/doc/syncstorage-rs share/examples/syncstorage-rs
 INSTALLATION_DIRS+=	lib/tokenserver
