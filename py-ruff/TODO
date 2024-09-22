@@ -1,0 +1,24 @@
+===> Building for py312-ruff-0.6.6
+* Building wheel...
+Running `maturin-3.12 pep517 build-wheel -i /usr/pkg/bin/python3.12 --compatibility off`
+error: failed to load manifest for workspace member `/scratch/devel/py-ruff/work/ruff-0.6.6/crates/red_knot_python_semantic`
+referenced by workspace at `/scratch/devel/py-ruff/work/ruff-0.6.6/Cargo.toml`
+
+Caused by:
+  failed to load manifest for dependency `ruff_db`
+
+Caused by:
+  failed to load manifest for dependency `salsa`
+
+Caused by:
+  failed to read `/scratch/devel/py-ruff/work/ruff-0.6.6/salsa-rs-f608ff8b24f07706492027199f51132244034f29/Cargo.toml`
+
+Caused by:
+  No such file or directory (os error 2)
+💥 maturin failed
+  Caused by: Cargo metadata failed. Does your crate compile with `cargo build`?
+  Caused by: `cargo metadata` exited with an error:
+Error: command ['maturin-3.12', 'pep517', 'build-wheel', '-i', '/usr/pkg/bin/python3.12', '--compatibility', 'off'] returned non-zero exit status 1
+
+ERROR Backend subprocess exited when trying to invoke build_wheel
+*** Error code 1
