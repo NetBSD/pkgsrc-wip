@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 EXTRACT_USING=	gtar
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 CXXFLAGS+=	-fpermissive
 
+.include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
