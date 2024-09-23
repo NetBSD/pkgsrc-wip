@@ -12,8 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6.0:../../math/py-scipy
-DEPENDS+=	# TODO: chemicals>=1.2.0
-DEPENDS+=	# TODO: fluids>=1.0.26
+DEPENDS+=	${PYPKGPREFIX}-fluids>=1.0.26:../../wip/py-fluids
+DEPENDS+=	${PYPKGPREFIX}-chemicals>=1.2.0:../../wip/py-chemicals
 
 USE_LANGUAGES=	# none
 
