@@ -1,6 +1,6 @@
 # $ NetBSD $
 
-DISTNAME=	msgpack-2.0.0
+DISTNAME=	msgpack-2.1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
 GITHUB_PROJECT=	msgpack-c
