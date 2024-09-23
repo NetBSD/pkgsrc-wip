@@ -1,1 +1,4 @@
-wip: committed to seek help on mailing list
+Requires this in scons4/build.mk
+
+	_SCONS_BUILD_ARGS+=     prefix=${PREFIX}
+

@@ -24,7 +24,17 @@ SCONS_BUILD_ARGS+=	build
 PKGCONFIG_OVERRIDE+=	platform/posix/cantera.pc.in
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
+DEPENDS+=	googletest>=1.15.2:../../devel/googletest
+DEPENDS+=	eigen3>=3.4.0:../../math/eigen3
+DEPENDS+=	boost-libs>=1.85.0:../../devel/boost-libs
+DEPENDS+=	sundials>=7.1.1:../../wip/sundials
 
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
+.include "../../wip/sundials/buildlink3.mk"
+.include "../../textproc/yaml-cpp/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../devel/scons4/build.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

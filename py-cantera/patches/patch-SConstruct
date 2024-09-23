@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- SConstruct.orig	2024-09-23 15:15:56.609908629 +0000
++++ SConstruct
+@@ -850,7 +850,7 @@ else:
+     toolchain = ["default"]
+ 
+ env = Environment(tools=toolchain+["textfile", "subst", "recursiveInstall", "UnitsInterfaceBuilder", "wix", "gch"],
+-                  ENV={"PATH": os.environ["PATH"]},
++                  ENV=os.environ,
+                   toolchain=toolchain,
+                   **extraEnvArgs)
+ 

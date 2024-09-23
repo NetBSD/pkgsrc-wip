@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (cantera/v3.1.0a4.tar.gz) = 43809ea958c6d95d4e4877c27020510b53d921b94b1d65127e301a4ab25077d4
 SHA512 (cantera/v3.1.0a4.tar.gz) = 9083659cfd534f4cc019daddff7ce6fa370d3c79c043ebcc0d9330c52f9bb5d87887e40cbf125e40c853d22a63c759aa19ff05ae74810ebcc943303aeee679d4
 Size (cantera/v3.1.0a4.tar.gz) = 2551741 bytes
+SHA1 (patch-SConstruct) = 440d2da5fcc4c3a7bcbc58c81e3bc82dd7f2265f
