@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sundials-7.1.1.tar.gz) = 81a79332ee533ad0d0f3e3979a31cdce50e6af30ae6609aa328c4d5113487a71
+SHA512 (sundials-7.1.1.tar.gz) = 5dc1329f8baf94601133e66def9db95e3d62dc954c1f2d52612aea121600b93f188089d361ff0fc7bdf0264daee13b9b062174705dc06ceecbde2eb2121856a2
+Size (sundials-7.1.1.tar.gz) = 93104639 bytes

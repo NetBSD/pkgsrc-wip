@@ -1,0 +1,9 @@
+math/sundials: Update sundials to 7.1.1
+
+Update prepared in wip by Mayuresh (mayuresh@acm.org)
+
+Examples volume has grown. Disabled their packaging. Can re-enable if someone
+wants.
+
+Last pkgsrc version 4.1.0 was about 5 years old and not meeting the
+requirements of some newer packages.

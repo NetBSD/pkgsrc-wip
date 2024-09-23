@@ -1,0 +1,23 @@
+# $NetBSD$
+
+GITHUB_PROJECT=	sundials
+DISTNAME=	sundials-7.1.1
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LLNL/}
+GITHUB_RELEASE=	v7.1.1
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/LLNL/sundials/
+COMMENT=	SUite of Nonlinear and DIfferential/ALgebraic equation Solvers
+LICENSE=	modified-bsd
+
+USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DEXAMPLES_ENABLE_C=OFF
+CMAKE_CONFIGURE_ARGS+=	-DEXAMPLES_ENABLE_CXX=OFF
+CMAKE_CONFIGURE_ARGS+=	-DEXAMPLES_ENABLE_CUDA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DEXAMPLES_INSTALL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DSUNDIALS_INSTALL_CMAKEDIR=${PREFIX}/share/sundials
+
+.include "../../devel/cmake/build.mk"
+.include "../../mk/bsd.pkg.mk"
