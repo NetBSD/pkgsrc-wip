@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (chemicals-1.2.0.tar.gz) = 2216c50baa56fa8b5b4a5cb2be2011f3679a88fd273a7af3271c6b8c4c360402
+SHA512 (chemicals-1.2.0.tar.gz) = 474544bce2c2ad09631e65c5b9de2154e1290b4c74e2859bfb7ac94979c8c32322c7a456a9d5803402c5e9c559a84af85f35b76fe4d55c6583017d90149c72e7
+Size (chemicals-1.2.0.tar.gz) = 25125928 bytes

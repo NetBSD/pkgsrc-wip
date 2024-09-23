@@ -1,0 +1,295 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/chemicals/Critical Properties/Appendix to PSRK Revision 4.tsv
+${PYSITELIB}/chemicals/Critical Properties/CRCCriticalOrganics.tsv
+${PYSITELIB}/chemicals/Critical Properties/DIPPRPinaMartines.tsv
+${PYSITELIB}/chemicals/Critical Properties/IUPACOrganicCriticalProps.tsv
+${PYSITELIB}/chemicals/Critical Properties/Mathews1972InorganicCriticalProps.tsv
+${PYSITELIB}/chemicals/Critical Properties/PassutDanner1973.tsv
+${PYSITELIB}/chemicals/Critical Properties/Yaws Collection.tsv
+${PYSITELIB}/chemicals/Critical Properties/fedors_Vc_predictions.tsv
+${PYSITELIB}/chemicals/Critical Properties/omega_Psat_Tc_predictions.tsv
+${PYSITELIB}/chemicals/Critical Properties/wilson_jasperson_Tc_Pc_predictions.tsv
+${PYSITELIB}/chemicals/Density/COSTALD Parameters.tsv
+${PYSITELIB}/chemicals/Density/CRC Inorganics densties of molten compounds and salts.tsv
+${PYSITELIB}/chemicals/Density/CRC Liquid Inorganic Constant Densities.tsv
+${PYSITELIB}/chemicals/Density/CRC Solid Inorganic Constant Densities.tsv
+${PYSITELIB}/chemicals/Density/CRC Virial polynomials.tsv
+${PYSITELIB}/chemicals/Density/Mchaweh SN0 deltas.tsv
+${PYSITELIB}/chemicals/Density/Perry Parameters 105.tsv
+${PYSITELIB}/chemicals/Density/VDI PPDS Density of Saturated Liquids.tsv
+${PYSITELIB}/chemicals/Electrolytes/CRC Thermodynamic Properties of Aqueous Ions.tsv
+${PYSITELIB}/chemicals/Electrolytes/CRC conductivity infinite dilution.tsv
+${PYSITELIB}/chemicals/Electrolytes/Electrolyte dissociations.tsv
+${PYSITELIB}/chemicals/Electrolytes/Laliberte2009.tsv
+${PYSITELIB}/chemicals/Electrolytes/Lange Pure Species Conductivity.tsv
+${PYSITELIB}/chemicals/Electrolytes/Magomedov Thermal Conductivity.tsv
+${PYSITELIB}/chemicals/Electrolytes/Marcus Ion Conductivities.tsv
+${PYSITELIB}/chemicals/Electrolytes/McCleskey Electrical Conductivity.tsv
+${PYSITELIB}/chemicals/Electrolytes/Permittivity (Dielectric Constant) of Liquids.tsv
+${PYSITELIB}/chemicals/Environment/CRC logP table.tsv
+${PYSITELIB}/chemicals/Environment/Official Global Warming Potentials 2007.tsv
+${PYSITELIB}/chemicals/Environment/Official Global Warming Potentials 2014.tsv
+${PYSITELIB}/chemicals/Environment/Official Global Warming Potentials 2021.tsv
+${PYSITELIB}/chemicals/Environment/Ozone Depletion Potentials.tsv
+${PYSITELIB}/chemicals/Environment/Syrres logP data.csv.gz
+${PYSITELIB}/chemicals/Heat Capacity/CRC Standard Thermodynamic Properties of Chemical Substances.tsv
+${PYSITELIB}/chemicals/Heat Capacity/CRCHeatCapacitySolids.tsv
+${PYSITELIB}/chemicals/Heat Capacity/JANAF_1998_gas_Cp.json
+${PYSITELIB}/chemicals/Heat Capacity/JANAF_1998_liq_Cp.json
+${PYSITELIB}/chemicals/Heat Capacity/JANAF_1998_solid_Cp.json
+${PYSITELIB}/chemicals/Heat Capacity/Perrys Table 2-151-2.tsv
+${PYSITELIB}/chemicals/Heat Capacity/Perrys Table 2-151.json
+${PYSITELIB}/chemicals/Heat Capacity/Perrys Table 2-151.tsv
+${PYSITELIB}/chemicals/Heat Capacity/PolingDatabank.tsv
+${PYSITELIB}/chemicals/Heat Capacity/TRC Thermodynamics of Organic Compounds in the Gas State.tsv
+${PYSITELIB}/chemicals/Heat Capacity/Zabransky.tsv
+${PYSITELIB}/chemicals/Heat Capacity/psi4_adjusted_characteristic_temperatures.json
+${PYSITELIB}/chemicals/Heat Capacity/psi4_unadjusted_characteristic_temperatures.json
+${PYSITELIB}/chemicals/Heat Capacity/webbook_shomate_coefficients.json
+${PYSITELIB}/chemicals/Identifiers/Anion db.tsv
+${PYSITELIB}/chemicals/Identifiers/Cation db.tsv
+${PYSITELIB}/chemicals/Identifiers/Fake CAS Registry.tsv
+${PYSITELIB}/chemicals/Identifiers/Inorganic db.tsv
+${PYSITELIB}/chemicals/Identifiers/Mixtures Compositions.tsv
+${PYSITELIB}/chemicals/Identifiers/chemical identifiers example user db.tsv
+${PYSITELIB}/chemicals/Identifiers/chemical identifiers pubchem large.tsv
+${PYSITELIB}/chemicals/Identifiers/chemical identifiers pubchem small.tsv
+${PYSITELIB}/chemicals/Identifiers/dippr_2014.csv
+${PYSITELIB}/chemicals/Interface/Jasper-Lange.tsv
+${PYSITELIB}/chemicals/Interface/MuleroCachadinaParameters.tsv
+${PYSITELIB}/chemicals/Interface/Somayajulu.tsv
+${PYSITELIB}/chemicals/Interface/SomayajuluRevised.tsv
+${PYSITELIB}/chemicals/Interface/VDI PPDS surface tensions.tsv
+${PYSITELIB}/chemicals/Law/Canada Feb 11 2015 - DSL.csv.gz
+${PYSITELIB}/chemicals/Law/EC Inventory No Longer Polymers (NLP).csv
+${PYSITELIB}/chemicals/Law/ECHA Tonnage Bands.csv.zip
+${PYSITELIB}/chemicals/Law/EINECS 2015-03.csv.gz
+${PYSITELIB}/chemicals/Law/EPA 2012 Chemical Data Reporting.csv
+${PYSITELIB}/chemicals/Law/EPA Chemical Data Reporting - 2012.csv.gz
+${PYSITELIB}/chemicals/Law/HPV 2015 March 3.csv
+${PYSITELIB}/chemicals/Law/SPIN Inventory 2015-03.csv.gz
+${PYSITELIB}/chemicals/Law/TSCA Inventory 2016-01.csv.gz
+${PYSITELIB}/chemicals/Misc/CRC Handbook Organic RI.csv
+${PYSITELIB}/chemicals/Misc/ChemSep8.32.xml
+${PYSITELIB}/chemicals/Misc/Dahmen_Marquardt_ignition_delay_IQT.tsv
+${PYSITELIB}/chemicals/Misc/Element data.csv
+${PYSITELIB}/chemicals/Misc/Florian_Liming_CETANE_experimental.tsv
+${PYSITELIB}/chemicals/Misc/Florian_Liming_MON_experimental.tsv
+${PYSITELIB}/chemicals/Misc/Florian_Liming_RON_MON_ANN.tsv
+${PYSITELIB}/chemicals/Misc/Florian_Liming_RON_experimental.tsv
+${PYSITELIB}/chemicals/Misc/Muller Supporting Info Dipoles.csv
+${PYSITELIB}/chemicals/Misc/Physical Constants of Inorganic Compounds.csv
+${PYSITELIB}/chemicals/Misc/Physical Constants of Organic Compounds.csv
+${PYSITELIB}/chemicals/Misc/Poling Dipole.csv
+${PYSITELIB}/chemicals/Misc/Travis_Kessler_Combustdb_CETANE.tsv
+${PYSITELIB}/chemicals/Misc/Travis_Kessler_Combustdb_MON.tsv
+${PYSITELIB}/chemicals/Misc/Travis_Kessler_Combustdb_RON.tsv
+${PYSITELIB}/chemicals/Misc/Travis_Kessler_Combustdb_predictions.tsv
+${PYSITELIB}/chemicals/Misc/VDI Saturation Compounds Data.json
+${PYSITELIB}/chemicals/Misc/cccbdb.nist.gov Dipoles.csv
+${PYSITELIB}/chemicals/Misc/chemsep_radius_of_gyrations.tsv
+${PYSITELIB}/chemicals/Misc/common_chemistry_data.tsv
+${PYSITELIB}/chemicals/Misc/default.sqlite
+${PYSITELIB}/chemicals/Misc/element.txt
+${PYSITELIB}/chemicals/Misc/heos_constants.tsv
+${PYSITELIB}/chemicals/Misc/joback_predictions.tsv
+${PYSITELIB}/chemicals/Misc/psi4_dipoles.tsv
+${PYSITELIB}/chemicals/Misc/psi4_linear.tsv
+${PYSITELIB}/chemicals/Misc/psi4_radius_of_gyrations.tsv
+${PYSITELIB}/chemicals/Misc/webbook_constants.tsv
+${PYSITELIB}/chemicals/Misc/wikidata_properties.tsv
+${PYSITELIB}/chemicals/Phase Change/Alibakhshi one-coefficient enthalpy of vaporization.tsv
+${PYSITELIB}/chemicals/Phase Change/Bell 2018 je7b00967_si_001.tsv
+${PYSITELIB}/chemicals/Phase Change/CRC Handbook Heat of Fusion.tsv
+${PYSITELIB}/chemicals/Phase Change/CRC Handbook Heat of Vaporization.tsv
+${PYSITELIB}/chemicals/Phase Change/Ghazerati Appendix Sublimation Enthalpy.tsv
+${PYSITELIB}/chemicals/Phase Change/Ghazerati Appendix Vaporization Enthalpy.tsv
+${PYSITELIB}/chemicals/Phase Change/OpenNotebook Melting Points.tsv
+${PYSITELIB}/chemicals/Phase Change/Table 2-150 Heats of Vaporization of Inorganic and Organic Liquids.tsv
+${PYSITELIB}/chemicals/Phase Change/VDI PPDS Enthalpies of vaporization.tsv
+${PYSITELIB}/chemicals/Phase Change/Yaws Boiling Points.tsv
+${PYSITELIB}/chemicals/Reactions/API TDB Albahri Hf (g).tsv
+${PYSITELIB}/chemicals/Reactions/ATcT 1.112 (g).tsv
+${PYSITELIB}/chemicals/Reactions/ATcT 1.112 (l).tsv
+${PYSITELIB}/chemicals/Reactions/JANAF_1998.tsv
+${PYSITELIB}/chemicals/Reactions/Yaws Hf S0 (g).tsv
+${PYSITELIB}/chemicals/Safety/DIPPR T_flash Serat.csv
+${PYSITELIB}/chemicals/Safety/IARC Carcinogen Database.tsv
+${PYSITELIB}/chemicals/Safety/IS IEC 60079-20-1 2010.tsv
+${PYSITELIB}/chemicals/Safety/NFPA 497 2008.tsv
+${PYSITELIB}/chemicals/Safety/National Toxicology Program Carcinogens.tsv
+${PYSITELIB}/chemicals/Safety/Ontario Exposure Limits.json
+${PYSITELIB}/chemicals/Safety/Ontario Exposure Limits.tsv
+${PYSITELIB}/chemicals/Thermal Conductivity/Table 2-314 Vapor Thermal Conductivity of Inorganic and Organic Substances.tsv
+${PYSITELIB}/chemicals/Thermal Conductivity/Table 2-315 Thermal Conductivity of Inorganic and Organic Liquids.tsv
+${PYSITELIB}/chemicals/Thermal Conductivity/VDI PPDS Thermal conductivity of gases.tsv
+${PYSITELIB}/chemicals/Thermal Conductivity/VDI PPDS Thermal conductivity of saturated liquids.tsv
+${PYSITELIB}/chemicals/Triple Properties/Staveley 1981.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Alcock_Itkin_Horrigan_metalic_elements.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Alcock_Itkin_Horrigan_metalic_elements_sublimation.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Antoine Collection Poling.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Antoine Extended Collection Poling.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Landolt_antoine_V20.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Landolt_antoine_sublimation_V20.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Table 2-8 Vapor Pressure of Inorganic and Organic Liquids.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/VDI PPDS Boiling temperatures at different pressures.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Wagner Collection Poling.tsv
+${PYSITELIB}/chemicals/Vapor Pressure/Wagner Original McGarry.tsv
+${PYSITELIB}/chemicals/Viscosity/Dutt Prasad 3 term.tsv
+${PYSITELIB}/chemicals/Viscosity/MagalhaesLJ.tsv
+${PYSITELIB}/chemicals/Viscosity/PolingLJ.tsv
+${PYSITELIB}/chemicals/Viscosity/Table 2-312 Vapor Viscosity of Inorganic and Organic Substances.tsv
+${PYSITELIB}/chemicals/Viscosity/Table 2-313 Viscosity of Inorganic and Organic Liquids.tsv
+${PYSITELIB}/chemicals/Viscosity/VDI PPDS Dynamic viscosity of gases polynomials.tsv
+${PYSITELIB}/chemicals/Viscosity/VDI PPDS Dynamic viscosity of saturated liquids polynomials.tsv
+${PYSITELIB}/chemicals/Viscosity/Viswanath Natarajan Dynamic 2 term Exponential.tsv
+${PYSITELIB}/chemicals/Viscosity/Viswanath Natarajan Dynamic 2 term.tsv
+${PYSITELIB}/chemicals/Viscosity/Viswanath Natarajan Dynamic 3 term.tsv
+${PYSITELIB}/chemicals/__init__.py
+${PYSITELIB}/chemicals/__init__.pyc
+${PYSITELIB}/chemicals/__init__.pyo
+${PYSITELIB}/chemicals/acentric.py
+${PYSITELIB}/chemicals/acentric.pyc
+${PYSITELIB}/chemicals/acentric.pyi
+${PYSITELIB}/chemicals/acentric.pyo
+${PYSITELIB}/chemicals/air.py
+${PYSITELIB}/chemicals/air.pyc
+${PYSITELIB}/chemicals/air.pyo
+${PYSITELIB}/chemicals/combustion.py
+${PYSITELIB}/chemicals/combustion.pyc
+${PYSITELIB}/chemicals/combustion.pyi
+${PYSITELIB}/chemicals/combustion.pyo
+${PYSITELIB}/chemicals/critical.py
+${PYSITELIB}/chemicals/critical.pyc
+${PYSITELIB}/chemicals/critical.pyi
+${PYSITELIB}/chemicals/critical.pyo
+${PYSITELIB}/chemicals/data_reader.py
+${PYSITELIB}/chemicals/data_reader.pyc
+${PYSITELIB}/chemicals/data_reader.pyo
+${PYSITELIB}/chemicals/dipole.py
+${PYSITELIB}/chemicals/dipole.pyc
+${PYSITELIB}/chemicals/dipole.pyi
+${PYSITELIB}/chemicals/dipole.pyo
+${PYSITELIB}/chemicals/dippr.py
+${PYSITELIB}/chemicals/dippr.pyc
+${PYSITELIB}/chemicals/dippr.pyi
+${PYSITELIB}/chemicals/dippr.pyo
+${PYSITELIB}/chemicals/elements.py
+${PYSITELIB}/chemicals/elements.pyc
+${PYSITELIB}/chemicals/elements.pyi
+${PYSITELIB}/chemicals/elements.pyo
+${PYSITELIB}/chemicals/environment.py
+${PYSITELIB}/chemicals/environment.pyc
+${PYSITELIB}/chemicals/environment.pyi
+${PYSITELIB}/chemicals/environment.pyo
+${PYSITELIB}/chemicals/exceptions.py
+${PYSITELIB}/chemicals/exceptions.pyc
+${PYSITELIB}/chemicals/exceptions.pyo
+${PYSITELIB}/chemicals/flash_basic.py
+${PYSITELIB}/chemicals/flash_basic.pyc
+${PYSITELIB}/chemicals/flash_basic.pyo
+${PYSITELIB}/chemicals/heat_capacity.py
+${PYSITELIB}/chemicals/heat_capacity.pyc
+${PYSITELIB}/chemicals/heat_capacity.pyi
+${PYSITELIB}/chemicals/heat_capacity.pyo
+${PYSITELIB}/chemicals/iapws.py
+${PYSITELIB}/chemicals/iapws.pyc
+${PYSITELIB}/chemicals/iapws.pyo
+${PYSITELIB}/chemicals/identifiers.py
+${PYSITELIB}/chemicals/identifiers.pyc
+${PYSITELIB}/chemicals/identifiers.pyo
+${PYSITELIB}/chemicals/interface.py
+${PYSITELIB}/chemicals/interface.pyc
+${PYSITELIB}/chemicals/interface.pyi
+${PYSITELIB}/chemicals/interface.pyo
+${PYSITELIB}/chemicals/lennard_jones.py
+${PYSITELIB}/chemicals/lennard_jones.pyc
+${PYSITELIB}/chemicals/lennard_jones.pyi
+${PYSITELIB}/chemicals/lennard_jones.pyo
+${PYSITELIB}/chemicals/miscdata.py
+${PYSITELIB}/chemicals/miscdata.pyc
+${PYSITELIB}/chemicals/miscdata.pyi
+${PYSITELIB}/chemicals/miscdata.pyo
+${PYSITELIB}/chemicals/molecular_geometry.py
+${PYSITELIB}/chemicals/molecular_geometry.pyc
+${PYSITELIB}/chemicals/molecular_geometry.pyo
+${PYSITELIB}/chemicals/numba.py
+${PYSITELIB}/chemicals/numba.pyc
+${PYSITELIB}/chemicals/numba.pyo
+${PYSITELIB}/chemicals/numba_vectorized.py
+${PYSITELIB}/chemicals/numba_vectorized.pyc
+${PYSITELIB}/chemicals/numba_vectorized.pyo
+${PYSITELIB}/chemicals/permittivity.py
+${PYSITELIB}/chemicals/permittivity.pyc
+${PYSITELIB}/chemicals/permittivity.pyi
+${PYSITELIB}/chemicals/permittivity.pyo
+${PYSITELIB}/chemicals/phase_change.py
+${PYSITELIB}/chemicals/phase_change.pyc
+${PYSITELIB}/chemicals/phase_change.pyi
+${PYSITELIB}/chemicals/phase_change.pyo
+${PYSITELIB}/chemicals/py.typed
+${PYSITELIB}/chemicals/rachford_rice.py
+${PYSITELIB}/chemicals/rachford_rice.pyc
+${PYSITELIB}/chemicals/rachford_rice.pyi
+${PYSITELIB}/chemicals/rachford_rice.pyo
+${PYSITELIB}/chemicals/reaction.py
+${PYSITELIB}/chemicals/reaction.pyc
+${PYSITELIB}/chemicals/reaction.pyi
+${PYSITELIB}/chemicals/reaction.pyo
+${PYSITELIB}/chemicals/reactions.pyi
+${PYSITELIB}/chemicals/refractivity.py
+${PYSITELIB}/chemicals/refractivity.pyc
+${PYSITELIB}/chemicals/refractivity.pyi
+${PYSITELIB}/chemicals/refractivity.pyo
+${PYSITELIB}/chemicals/safety.py
+${PYSITELIB}/chemicals/safety.pyc
+${PYSITELIB}/chemicals/safety.pyo
+${PYSITELIB}/chemicals/solubility.py
+${PYSITELIB}/chemicals/solubility.pyc
+${PYSITELIB}/chemicals/solubility.pyi
+${PYSITELIB}/chemicals/solubility.pyo
+${PYSITELIB}/chemicals/temperature.py
+${PYSITELIB}/chemicals/temperature.pyc
+${PYSITELIB}/chemicals/temperature.pyi
+${PYSITELIB}/chemicals/temperature.pyo
+${PYSITELIB}/chemicals/thermal_conductivity.py
+${PYSITELIB}/chemicals/thermal_conductivity.pyc
+${PYSITELIB}/chemicals/thermal_conductivity.pyi
+${PYSITELIB}/chemicals/thermal_conductivity.pyo
+${PYSITELIB}/chemicals/triple.py
+${PYSITELIB}/chemicals/triple.pyc
+${PYSITELIB}/chemicals/triple.pyi
+${PYSITELIB}/chemicals/triple.pyo
+${PYSITELIB}/chemicals/units.py
+${PYSITELIB}/chemicals/units.pyc
+${PYSITELIB}/chemicals/units.pyo
+${PYSITELIB}/chemicals/utils.py
+${PYSITELIB}/chemicals/utils.pyc
+${PYSITELIB}/chemicals/utils.pyi
+${PYSITELIB}/chemicals/utils.pyo
+${PYSITELIB}/chemicals/vapor_pressure.py
+${PYSITELIB}/chemicals/vapor_pressure.pyc
+${PYSITELIB}/chemicals/vapor_pressure.pyi
+${PYSITELIB}/chemicals/vapor_pressure.pyo
+${PYSITELIB}/chemicals/vectorized.py
+${PYSITELIB}/chemicals/vectorized.pyc
+${PYSITELIB}/chemicals/vectorized.pyi
+${PYSITELIB}/chemicals/vectorized.pyo
+${PYSITELIB}/chemicals/virial.py
+${PYSITELIB}/chemicals/virial.pyc
+${PYSITELIB}/chemicals/virial.pyi
+${PYSITELIB}/chemicals/virial.pyo
+${PYSITELIB}/chemicals/viscosity.py
+${PYSITELIB}/chemicals/viscosity.pyc
+${PYSITELIB}/chemicals/viscosity.pyi
+${PYSITELIB}/chemicals/viscosity.pyo
+${PYSITELIB}/chemicals/volume.py
+${PYSITELIB}/chemicals/volume.pyc
+${PYSITELIB}/chemicals/volume.pyi
+${PYSITELIB}/chemicals/volume.pyo
