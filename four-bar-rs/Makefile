@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.19 2024/09/13 18:04:02 pin Exp $
 
-DISTNAME=	four-bar-rs-7.0.3
+DISTNAME=	four-bar-rs-7.0.4
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KmolYuan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

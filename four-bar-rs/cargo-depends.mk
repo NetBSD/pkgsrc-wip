@@ -99,7 +99,6 @@ CARGO_CRATE_DEPENDS+=	combine-4.6.7
 CARGO_CRATE_DEPENDS+=	concurrent-queue-2.5.0
 CARGO_CRATE_DEPENDS+=	console-0.15.8
 CARGO_CRATE_DEPENDS+=	console_error_panic_hook-0.1.7
-CARGO_CRATE_DEPENDS+=	const-str-0.5.7
 CARGO_CRATE_DEPENDS+=	core-foundation-0.9.4
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	core-graphics-0.23.2
