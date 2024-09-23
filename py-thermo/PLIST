@@ -1,0 +1,290 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/Artistic_license_2_0.txt
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/henry.json
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/nrtl.ipd
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/nrtl.json
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/pr.ipd
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/pr.json
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/uniquac.json
+${PYSITELIB}/thermo/Interaction Parameters/ChemSep/wilson.json
+${PYSITELIB}/thermo/Interaction Parameters/PRTranslated_best_henry_T_dep.json
+${PYSITELIB}/thermo/Interaction Parameters/Sander_henry_T_dep.json
+${PYSITELIB}/thermo/Interaction Parameters/Sander_henry_const.json
+${PYSITELIB}/thermo/Law/Canada Feb 11 2015 - DSL.csv.gz
+${PYSITELIB}/thermo/Law/EC Inventory No Longer Polymers (NLP).csv
+${PYSITELIB}/thermo/Law/ECHA Tonnage Bands.csv.zip
+${PYSITELIB}/thermo/Law/EINECS 2015-03.csv.gz
+${PYSITELIB}/thermo/Law/EPA 2012 Chemical Data Reporting.csv
+${PYSITELIB}/thermo/Law/EPA Chemical Data Reporting - 2012.csv.gz
+${PYSITELIB}/thermo/Law/HPV 2015 March 3.csv
+${PYSITELIB}/thermo/Law/SPIN Inventory 2015-03.csv.gz
+${PYSITELIB}/thermo/Law/TSCA Inventory 2016-01.csv.gz
+${PYSITELIB}/thermo/Misc/Ho_1972_thermal_conductivity_solid.json
+${PYSITELIB}/thermo/Misc/coolprop_correlations.json
+${PYSITELIB}/thermo/Misc/elements.json
+${PYSITELIB}/thermo/Misc/inorganic_correlations.json
+${PYSITELIB}/thermo/Misc/janaf_correlations.json
+${PYSITELIB}/thermo/Misc/mixture_correlations.json
+${PYSITELIB}/thermo/Misc/organic_correlations.json
+${PYSITELIB}/thermo/Misc/pycalphad_unary50.json
+${PYSITELIB}/thermo/Misc/refprop_correlations.json
+${PYSITELIB}/thermo/Phase Change/Bell 2018 je7b00967_si_001.tsv
+${PYSITELIB}/thermo/Phase Change/DDBST UNIFAC assignments.tsv
+${PYSITELIB}/thermo/Phase Change/DDBST_UNIFAC_assignments.sqlite
+${PYSITELIB}/thermo/Phase Change/NIST KT 2011 interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/PSRK interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/UNIFAC LLE interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/UNIFAC Lyngby interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/UNIFAC modified Dortmund interaction parameters 2006.tsv
+${PYSITELIB}/thermo/Phase Change/UNIFAC modified Dortmund interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/UNIFAC modified NIST 2015 interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/UNIFAC original interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/VTPR 2012 interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/VTPR 2014 interaction parameters.tsv
+${PYSITELIB}/thermo/Phase Change/VTPR 2016 interaction parameters.tsv
+${PYSITELIB}/thermo/Scalar Parameters/PRTwu_PinaMartinez.json
+${PYSITELIB}/thermo/Scalar Parameters/PRTwu_ibell_2018.json
+${PYSITELIB}/thermo/Scalar Parameters/PRVolumeTranslation_PinaMartinez.json
+${PYSITELIB}/thermo/Scalar Parameters/SRKTwu_PinaMartinez.json
+${PYSITELIB}/thermo/Scalar Parameters/SRKVolumeTranslation_PinaMartinez.json
+${PYSITELIB}/thermo/Scalar Parameters/chemsep_APISRK.json
+${PYSITELIB}/thermo/Scalar Parameters/chemsep_PSRK_matthias_copeman.json
+${PYSITELIB}/thermo/Scalar Parameters/chemsep_regular_solution.json
+${PYSITELIB}/thermo/Vapor Pressure/ANTOINE_EXTENDED_POLING_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/ANTOINE_POLING_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/COOLPROP_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/DIPPR_PERRY_8E_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/VDI_PPDS_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/VDI_TABULAR_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/WAGNER_MCGARRY_polyfits.json
+${PYSITELIB}/thermo/Vapor Pressure/WAGNER_POLING_polyfits.json
+${PYSITELIB}/thermo/__init__.py
+${PYSITELIB}/thermo/__init__.pyc
+${PYSITELIB}/thermo/__init__.pyo
+${PYSITELIB}/thermo/activity.py
+${PYSITELIB}/thermo/activity.pyc
+${PYSITELIB}/thermo/activity.pyo
+${PYSITELIB}/thermo/base.py
+${PYSITELIB}/thermo/base.pyc
+${PYSITELIB}/thermo/base.pyo
+${PYSITELIB}/thermo/bulk.py
+${PYSITELIB}/thermo/bulk.pyc
+${PYSITELIB}/thermo/bulk.pyo
+${PYSITELIB}/thermo/chemical.py
+${PYSITELIB}/thermo/chemical.pyc
+${PYSITELIB}/thermo/chemical.pyo
+${PYSITELIB}/thermo/chemical_package.py
+${PYSITELIB}/thermo/chemical_package.pyc
+${PYSITELIB}/thermo/chemical_package.pyo
+${PYSITELIB}/thermo/chemical_utils.py
+${PYSITELIB}/thermo/chemical_utils.pyc
+${PYSITELIB}/thermo/chemical_utils.pyo
+${PYSITELIB}/thermo/coolprop.py
+${PYSITELIB}/thermo/coolprop.pyc
+${PYSITELIB}/thermo/coolprop.pyo
+${PYSITELIB}/thermo/database.py
+${PYSITELIB}/thermo/database.pyc
+${PYSITELIB}/thermo/database.pyo
+${PYSITELIB}/thermo/datasheet.py
+${PYSITELIB}/thermo/datasheet.pyc
+${PYSITELIB}/thermo/datasheet.pyo
+${PYSITELIB}/thermo/electrochem.py
+${PYSITELIB}/thermo/electrochem.pyc
+${PYSITELIB}/thermo/electrochem.pyo
+${PYSITELIB}/thermo/eos.py
+${PYSITELIB}/thermo/eos.pyc
+${PYSITELIB}/thermo/eos.pyo
+${PYSITELIB}/thermo/eos_alpha_functions.py
+${PYSITELIB}/thermo/eos_alpha_functions.pyc
+${PYSITELIB}/thermo/eos_alpha_functions.pyo
+${PYSITELIB}/thermo/eos_mix.py
+${PYSITELIB}/thermo/eos_mix.pyc
+${PYSITELIB}/thermo/eos_mix.pyo
+${PYSITELIB}/thermo/eos_mix_methods.py
+${PYSITELIB}/thermo/eos_mix_methods.pyc
+${PYSITELIB}/thermo/eos_mix_methods.pyo
+${PYSITELIB}/thermo/eos_volume.py
+${PYSITELIB}/thermo/eos_volume.pyc
+${PYSITELIB}/thermo/eos_volume.pyo
+${PYSITELIB}/thermo/equilibrium.py
+${PYSITELIB}/thermo/equilibrium.pyc
+${PYSITELIB}/thermo/equilibrium.pyo
+${PYSITELIB}/thermo/fitting.py
+${PYSITELIB}/thermo/fitting.pyc
+${PYSITELIB}/thermo/fitting.pyo
+${PYSITELIB}/thermo/flash/__init__.py
+${PYSITELIB}/thermo/flash/__init__.pyc
+${PYSITELIB}/thermo/flash/__init__.pyo
+${PYSITELIB}/thermo/flash/flash_base.py
+${PYSITELIB}/thermo/flash/flash_base.pyc
+${PYSITELIB}/thermo/flash/flash_base.pyo
+${PYSITELIB}/thermo/flash/flash_pure_vls.py
+${PYSITELIB}/thermo/flash/flash_pure_vls.pyc
+${PYSITELIB}/thermo/flash/flash_pure_vls.pyo
+${PYSITELIB}/thermo/flash/flash_utils.py
+${PYSITELIB}/thermo/flash/flash_utils.pyc
+${PYSITELIB}/thermo/flash/flash_utils.pyo
+${PYSITELIB}/thermo/flash/flash_vl.py
+${PYSITELIB}/thermo/flash/flash_vl.pyc
+${PYSITELIB}/thermo/flash/flash_vl.pyo
+${PYSITELIB}/thermo/flash/flash_vln.py
+${PYSITELIB}/thermo/flash/flash_vln.pyc
+${PYSITELIB}/thermo/flash/flash_vln.pyo
+${PYSITELIB}/thermo/functional_groups.py
+${PYSITELIB}/thermo/functional_groups.pyc
+${PYSITELIB}/thermo/functional_groups.pyo
+${PYSITELIB}/thermo/group_contribution/__init__.py
+${PYSITELIB}/thermo/group_contribution/__init__.pyc
+${PYSITELIB}/thermo/group_contribution/__init__.pyo
+${PYSITELIB}/thermo/group_contribution/fedors.py
+${PYSITELIB}/thermo/group_contribution/fedors.pyc
+${PYSITELIB}/thermo/group_contribution/fedors.pyo
+${PYSITELIB}/thermo/group_contribution/group_contribution_base.py
+${PYSITELIB}/thermo/group_contribution/group_contribution_base.pyc
+${PYSITELIB}/thermo/group_contribution/group_contribution_base.pyo
+${PYSITELIB}/thermo/group_contribution/joback.py
+${PYSITELIB}/thermo/group_contribution/joback.pyc
+${PYSITELIB}/thermo/group_contribution/joback.pyo
+${PYSITELIB}/thermo/group_contribution/wilson_jasperson.py
+${PYSITELIB}/thermo/group_contribution/wilson_jasperson.pyc
+${PYSITELIB}/thermo/group_contribution/wilson_jasperson.pyo
+${PYSITELIB}/thermo/heat_capacity.py
+${PYSITELIB}/thermo/heat_capacity.pyc
+${PYSITELIB}/thermo/heat_capacity.pyo
+${PYSITELIB}/thermo/interaction_parameters.py
+${PYSITELIB}/thermo/interaction_parameters.pyc
+${PYSITELIB}/thermo/interaction_parameters.pyo
+${PYSITELIB}/thermo/interface.py
+${PYSITELIB}/thermo/interface.pyc
+${PYSITELIB}/thermo/interface.pyo
+${PYSITELIB}/thermo/law.py
+${PYSITELIB}/thermo/law.pyc
+${PYSITELIB}/thermo/law.pyo
+${PYSITELIB}/thermo/mixture.py
+${PYSITELIB}/thermo/mixture.pyc
+${PYSITELIB}/thermo/mixture.pyo
+${PYSITELIB}/thermo/nrtl.py
+${PYSITELIB}/thermo/nrtl.pyc
+${PYSITELIB}/thermo/nrtl.pyo
+${PYSITELIB}/thermo/numba.py
+${PYSITELIB}/thermo/numba.pyc
+${PYSITELIB}/thermo/numba.pyo
+${PYSITELIB}/thermo/permittivity.py
+${PYSITELIB}/thermo/permittivity.pyc
+${PYSITELIB}/thermo/permittivity.pyo
+${PYSITELIB}/thermo/phase_change.py
+${PYSITELIB}/thermo/phase_change.pyc
+${PYSITELIB}/thermo/phase_change.pyo
+${PYSITELIB}/thermo/phase_identification.py
+${PYSITELIB}/thermo/phase_identification.pyc
+${PYSITELIB}/thermo/phase_identification.pyo
+${PYSITELIB}/thermo/phases/__init__.py
+${PYSITELIB}/thermo/phases/__init__.pyc
+${PYSITELIB}/thermo/phases/__init__.pyo
+${PYSITELIB}/thermo/phases/air_phase.py
+${PYSITELIB}/thermo/phases/air_phase.pyc
+${PYSITELIB}/thermo/phases/air_phase.pyo
+${PYSITELIB}/thermo/phases/ceos.py
+${PYSITELIB}/thermo/phases/ceos.pyc
+${PYSITELIB}/thermo/phases/ceos.pyo
+${PYSITELIB}/thermo/phases/combined.py
+${PYSITELIB}/thermo/phases/combined.pyc
+${PYSITELIB}/thermo/phases/combined.pyo
+${PYSITELIB}/thermo/phases/coolprop_phase.py
+${PYSITELIB}/thermo/phases/coolprop_phase.pyc
+${PYSITELIB}/thermo/phases/coolprop_phase.pyo
+${PYSITELIB}/thermo/phases/gibbs_eos.py
+${PYSITELIB}/thermo/phases/gibbs_eos.pyc
+${PYSITELIB}/thermo/phases/gibbs_eos.pyo
+${PYSITELIB}/thermo/phases/gibbs_excess.py
+${PYSITELIB}/thermo/phases/gibbs_excess.pyc
+${PYSITELIB}/thermo/phases/gibbs_excess.pyo
+${PYSITELIB}/thermo/phases/helmholtz_eos.py
+${PYSITELIB}/thermo/phases/helmholtz_eos.pyc
+${PYSITELIB}/thermo/phases/helmholtz_eos.pyo
+${PYSITELIB}/thermo/phases/iapws_phase.py
+${PYSITELIB}/thermo/phases/iapws_phase.pyc
+${PYSITELIB}/thermo/phases/iapws_phase.pyo
+${PYSITELIB}/thermo/phases/ideal_gas.py
+${PYSITELIB}/thermo/phases/ideal_gas.pyc
+${PYSITELIB}/thermo/phases/ideal_gas.pyo
+${PYSITELIB}/thermo/phases/petroleum.py
+${PYSITELIB}/thermo/phases/petroleum.pyc
+${PYSITELIB}/thermo/phases/petroleum.pyo
+${PYSITELIB}/thermo/phases/phase.py
+${PYSITELIB}/thermo/phases/phase.pyc
+${PYSITELIB}/thermo/phases/phase.pyo
+${PYSITELIB}/thermo/phases/phase_utils.py
+${PYSITELIB}/thermo/phases/phase_utils.pyc
+${PYSITELIB}/thermo/phases/phase_utils.pyo
+${PYSITELIB}/thermo/phases/virial_phase.py
+${PYSITELIB}/thermo/phases/virial_phase.pyc
+${PYSITELIB}/thermo/phases/virial_phase.pyo
+${PYSITELIB}/thermo/property_package.py
+${PYSITELIB}/thermo/property_package.pyc
+${PYSITELIB}/thermo/property_package.pyo
+${PYSITELIB}/thermo/redlich_kister.py
+${PYSITELIB}/thermo/redlich_kister.pyc
+${PYSITELIB}/thermo/redlich_kister.pyo
+${PYSITELIB}/thermo/regular_solution.py
+${PYSITELIB}/thermo/regular_solution.pyc
+${PYSITELIB}/thermo/regular_solution.pyo
+${PYSITELIB}/thermo/serialize.py
+${PYSITELIB}/thermo/serialize.pyc
+${PYSITELIB}/thermo/serialize.pyo
+${PYSITELIB}/thermo/stream.py
+${PYSITELIB}/thermo/stream.pyc
+${PYSITELIB}/thermo/stream.pyo
+${PYSITELIB}/thermo/test_utils.py
+${PYSITELIB}/thermo/test_utils.pyc
+${PYSITELIB}/thermo/test_utils.pyo
+${PYSITELIB}/thermo/thermal_conductivity.py
+${PYSITELIB}/thermo/thermal_conductivity.pyc
+${PYSITELIB}/thermo/thermal_conductivity.pyo
+${PYSITELIB}/thermo/unifac.py
+${PYSITELIB}/thermo/unifac.pyc
+${PYSITELIB}/thermo/unifac.pyo
+${PYSITELIB}/thermo/uniquac.py
+${PYSITELIB}/thermo/uniquac.pyc
+${PYSITELIB}/thermo/uniquac.pyo
+${PYSITELIB}/thermo/units.py
+${PYSITELIB}/thermo/units.pyc
+${PYSITELIB}/thermo/units.pyo
+${PYSITELIB}/thermo/utils/__init__.py
+${PYSITELIB}/thermo/utils/__init__.pyc
+${PYSITELIB}/thermo/utils/__init__.pyo
+${PYSITELIB}/thermo/utils/functional.py
+${PYSITELIB}/thermo/utils/functional.pyc
+${PYSITELIB}/thermo/utils/functional.pyo
+${PYSITELIB}/thermo/utils/mixture_property.py
+${PYSITELIB}/thermo/utils/mixture_property.pyc
+${PYSITELIB}/thermo/utils/mixture_property.pyo
+${PYSITELIB}/thermo/utils/names.py
+${PYSITELIB}/thermo/utils/names.pyc
+${PYSITELIB}/thermo/utils/names.pyo
+${PYSITELIB}/thermo/utils/t_dependent_property.py
+${PYSITELIB}/thermo/utils/t_dependent_property.pyc
+${PYSITELIB}/thermo/utils/t_dependent_property.pyo
+${PYSITELIB}/thermo/utils/tp_dependent_property.py
+${PYSITELIB}/thermo/utils/tp_dependent_property.pyc
+${PYSITELIB}/thermo/utils/tp_dependent_property.pyo
+${PYSITELIB}/thermo/vapor_pressure.py
+${PYSITELIB}/thermo/vapor_pressure.pyc
+${PYSITELIB}/thermo/vapor_pressure.pyo
+${PYSITELIB}/thermo/vectorized.py
+${PYSITELIB}/thermo/vectorized.pyc
+${PYSITELIB}/thermo/vectorized.pyo
+${PYSITELIB}/thermo/viscosity.py
+${PYSITELIB}/thermo/viscosity.pyc
+${PYSITELIB}/thermo/viscosity.pyo
+${PYSITELIB}/thermo/volume.py
+${PYSITELIB}/thermo/volume.pyc
+${PYSITELIB}/thermo/volume.pyo
+${PYSITELIB}/thermo/wilson.py
+${PYSITELIB}/thermo/wilson.pyc
+${PYSITELIB}/thermo/wilson.pyo

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (thermo-0.3.0.tar.gz) = c447e3a211c7ac5a6b8e2137fbcb2ed20ff80674c42e65f935cb8c7aa2da5c38
+SHA512 (thermo-0.3.0.tar.gz) = de62c208e92f4527d966166d8d0bc8e388b35cf4378dcd5aebbc9ae0c96e83b1b4aa3a24723b0c66cfdbb91f1813397e450144f93735e4d6d59657b82f5bb517
+Size (thermo-0.3.0.tar.gz) = 9333911 bytes
