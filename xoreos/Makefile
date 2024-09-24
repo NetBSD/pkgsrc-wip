@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/xoreos/xoreos/
+HOMEPAGE=	https://xoreos.org/
 COMMENT=	Open source implementation of BioWare's Aurora engine
 LICENSE=	gnu-gpl-v3
 
