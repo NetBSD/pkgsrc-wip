@@ -12,13 +12,14 @@ LICENSE=	gnu-lgpl-v2.1
 
 EXTRACT_USING=	gtar
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 AUTO_MKDIRS=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/phaethon ${DESTDIR}${PREFIX}/bin/phaethon
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/bin/phaethon \
+		${DESTDIR}${PREFIX}/bin/phaethon
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
