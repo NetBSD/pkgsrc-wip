@@ -21,8 +21,6 @@ WARSOW_DATA_SRC=	${WRKDIR}/warsow-2.1.2/basewsw
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 
-CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}/libexec/warsow
-
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/warsow
 INSTALLATION_DIRS+=	share/warsow/libs
