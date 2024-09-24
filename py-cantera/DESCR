@@ -1,0 +1,12 @@
+Cantera is an open-source collection of object-oriented software tools for
+problems involving chemical kinetics, thermodynamics, and transport processes.
+Among other things, it can be used to:
+
+    Evaluate thermodynamic and transport properties of mixtures
+    Compute chemical equilibrium
+    Evaluate species chemical production rates
+    Conduct kinetics simulations with large reaction mechanisms
+    Simulate one-dimensional flames
+    Conduct reaction path analysis
+    Create process simulations using networks of stirred reactors
+    Model non-ideal fluids

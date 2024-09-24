@@ -1,6 +1,9 @@
 $NetBSD$
 
+BLAKE2s (cantera/cantera-cantera-example-data-dbc4212.tar.gz) = 6bef9f5fb052242d1d2da589931ba09fa8f6d67409039de19b20a85129bed23c
+SHA512 (cantera/cantera-cantera-example-data-dbc4212.tar.gz) = 348446b0fc472153a0da2b3981345ad5b294e3586e80860b61ec050e934f88121c612c0baa4f4cd1673127ac55f31e0f7a62ccf8bcd8cb5817925b13b8b32a88
+Size (cantera/cantera-cantera-example-data-dbc4212.tar.gz) = 224214 bytes
 BLAKE2s (cantera/v3.1.0a4.tar.gz) = 43809ea958c6d95d4e4877c27020510b53d921b94b1d65127e301a4ab25077d4
 SHA512 (cantera/v3.1.0a4.tar.gz) = 9083659cfd534f4cc019daddff7ce6fa370d3c79c043ebcc0d9330c52f9bb5d87887e40cbf125e40c853d22a63c759aa19ff05ae74810ebcc943303aeee679d4
 Size (cantera/v3.1.0a4.tar.gz) = 2551741 bytes
-SHA1 (patch-SConstruct) = 440d2da5fcc4c3a7bcbc58c81e3bc82dd7f2265f
+SHA1 (patch-SConstruct) = 92561ff32259595d4254b219dd78e0f6c7a01b89

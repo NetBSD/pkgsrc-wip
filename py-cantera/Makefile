@@ -8,6 +8,8 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cantera/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
+GITHUB_SUBMODULES+=	cantera cantera-example-data dbc4212 data/example_data
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Cantera/cantera/
 COMMENT=	Chemical kinetics, thermodynamics, and transport tool suite
@@ -18,8 +20,10 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
 
 SCONS_BUILD_ARGS+=	build
-
-#MAKE_ENV+=	CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+SCONS_BUILD_ARGS+=	prefix=${DESTDIR}${PREFIX}
+SCONS_BUILD_ARGS+=	sundials_include=${PREFIX}/include
+SCONS_BUILD_ARGS+=	sundials_libdir=${PREFIX}/lib
+SCONS_BUILD_ARGS+=	run_examples=no
 
 PKGCONFIG_OVERRIDE+=	platform/posix/cantera.pc.in
 
@@ -29,7 +33,14 @@ DEPENDS+=	eigen3>=3.4.0:../../math/eigen3
 DEPENDS+=	boost-libs>=1.85.0:../../devel/boost-libs
 DEPENDS+=	sundials>=7.1.1:../../wip/sundials
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
+TOOL_DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.18.6:../../devel/py-ruamel-yaml
+
+CHECK_RELRO=	no
+
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../wip/sundials/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"

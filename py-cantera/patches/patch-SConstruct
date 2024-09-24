@@ -1,6 +1,9 @@
 $NetBSD$
 
---- SConstruct.orig	2024-09-23 15:15:56.609908629 +0000
+1. In pkgsrc, need to pass the entire environment, not just PATH.
+2. Use prefix/man instead of prefix/share/man for man pages in pkgsrc
+
+--- SConstruct.orig	2024-08-18 23:21:57.000000000 +0000
 +++ SConstruct
 @@ -850,7 +850,7 @@ else:
      toolchain = ["default"]
@@ -11,3 +14,12 @@ $NetBSD$
                    toolchain=toolchain,
                    **extraEnvArgs)
  
+@@ -1771,7 +1771,7 @@ else:
+     env["ct_datadir"] = (prefix / "share" / "cantera" / "data").as_posix()
+     env["ct_sampledir"] = (prefix  / "share" / "cantera" / "samples").as_posix()
+     env["ct_docdir"] = (prefix / "share" / "cantera" / "doc").as_posix()
+-    env["ct_mandir"] = (prefix / "share" / "man" / "man1").as_posix()
++    env["ct_mandir"] = (prefix / "man" / "man1").as_posix()
+ 
+ 
+ addInstallActions = ('install' in COMMAND_LINE_TARGETS or
