@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/cir2py
+bin/pyspice-post-installation
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -70,9 +71,9 @@ ${PYSITELIB}/PySpice/Scripts/__init__.pyo
 ${PYSITELIB}/PySpice/Scripts/cir2py.py
 ${PYSITELIB}/PySpice/Scripts/cir2py.pyc
 ${PYSITELIB}/PySpice/Scripts/cir2py.pyo
-${PYSITELIB}/PySpice/Scripts/py${PKGVERSION}_post_installation.py
-${PYSITELIB}/PySpice/Scripts/py${PKGVERSION}_post_installation.pyc
-${PYSITELIB}/PySpice/Scripts/py${PKGVERSION}_post_installation.pyo
+${PYSITELIB}/PySpice/Scripts/pyspice_post_installation.py
+${PYSITELIB}/PySpice/Scripts/pyspice_post_installation.pyc
+${PYSITELIB}/PySpice/Scripts/pyspice_post_installation.pyo
 ${PYSITELIB}/PySpice/Spice/BasicElement.py
 ${PYSITELIB}/PySpice/Spice/BasicElement.pyc
 ${PYSITELIB}/PySpice/Spice/BasicElement.pyo
@@ -194,9 +195,9 @@ ${PYSITELIB}/tasks/git.pyo
 ${PYSITELIB}/tasks/github.py
 ${PYSITELIB}/tasks/github.pyc
 ${PYSITELIB}/tasks/github.pyo
-${PYSITELIB}/tasks/ng${PKGVERSION}.py
-${PYSITELIB}/tasks/ng${PKGVERSION}.pyc
-${PYSITELIB}/tasks/ng${PKGVERSION}.pyo
+${PYSITELIB}/tasks/ngspice.py
+${PYSITELIB}/tasks/ngspice.pyc
+${PYSITELIB}/tasks/ngspice.pyo
 ${PYSITELIB}/tasks/release.py
 ${PYSITELIB}/tasks/release.pyc
 ${PYSITELIB}/tasks/release.pyo
