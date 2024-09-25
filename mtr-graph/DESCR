@@ -2,5 +2,5 @@ mtr combines functionality of traceroute and ping in a single network tool
 
 v0.85 fork with whois info, IDN, unicode, etc.
 
-This version is built from https://github.com/yvs2014/mtr085 fork
+Built from https://github.com/yvs2014/mtr085 fork
 Main project location is https://github.com/traviscross/mtr

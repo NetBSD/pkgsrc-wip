@@ -22,19 +22,19 @@ PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 .include "../../mk/bsd.options.mk"
 
 .if empty(PKG_OPTIONS:Minet6)
-CMAKE_CONFIGURE_ARGS+=	-DIPV6=OFF
+MESON_ARGS+=	-DIPV6=false
 .endif
 
 .if empty(PKG_OPTIONS:Mdns)
-CMAKE_CONFIGURE_ARGS+=	-DDNS=OFF
+MESON_ARGS+=	-DDNS=false
 .endif
 
 .if empty(PKG_OPTIONS:Mmpls)
-CMAKE_CONFIGURE_ARGS+=	-DMPLS=OFF
+MESON_ARGS+=	-DMPLS=false
 .endif
 
 .if empty(PKG_OPTIONS:Mipinfo)
-CMAKE_CONFIGURE_ARGS+=	-DIPINFO=OFF
+MESON_ARGS+=	-DIPINFO=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mgraph)
@@ -42,15 +42,15 @@ CMAKE_CONFIGURE_ARGS+=	-DIPINFO=OFF
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
-CMAKE_CONFIGURE_ARGS+=	-DGRAPH=ON
+MESON_ARGS+=	-DGRAPH=true
 .endif
 
 .if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn2/buildlink3.mk"
 .else
-CMAKE_CONFIGURE_ARGS+=	-DIDN=OFF
+MESON_ARGS+=	-DIDN=false
 .endif
 
 .if empty(PKG_OPTIONS:Municode)
-CMAKE_CONFIGURE_ARGS+=	-DUNICODE=OFF
+MESON_ARGS+=	-DUNICODE=false
 .endif
