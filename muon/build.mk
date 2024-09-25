@@ -4,7 +4,7 @@
 # (cross-compilation is not supported by muon).
 # Uses devel/samurai as build tool (instead of devel/ninja-build).
 
-MUON_REQD?=	0
+MUON_REQD?=	0.3
 .for version in ${MUON_REQD}
 TOOL_DEPENDS+=	muon>=${version}:../../wip/muon
 .endfor

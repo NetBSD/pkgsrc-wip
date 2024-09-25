@@ -1,6 +1,13 @@
 muon is an implementation of the meson build system in C99 with minimal
 dependencies.
 
+Features
+========
+- muon analyze - a static analyzer for meson.build files.
+- muon fmt - a meson.build code formatter.
+- An interactive stepping debugger.
+- fast.
+
 Non-features
 ============
 - bug-for-bug compatibility with meson.

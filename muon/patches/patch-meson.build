@@ -1,0 +1,16 @@
+$NetBSD$
+
+Disable subdirectories "tests" and "doc".
+The build system tries to download additional stuff (not allowed for pkgsrc).
+
+--- meson.build.orig	2024-09-24 16:08:34.000000000 +0000
++++ meson.build
+@@ -154,5 +154,6 @@ muon = executable(
+ 
+ python3 = find_program('python3', required: false)
+ 
+-subdir('tests')
+-subdir('doc')
++# Disabled for pkgsrc
++#subdir('tests')
++#subdir('doc')
