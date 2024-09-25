@@ -12,9 +12,10 @@ LICENSE=	2-clause-bsd
 
 PLIST_SUBST+=	VERS="${VERSION}"
 
-PKGCONFIG_OVERRIDE+=		output/muon-private/libdoom-umapinfo-1.pc
+PKGCONFIG_OVERRIDE+=		output/.muon/libdoom-umapinfo-1.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
+MUON_REQD+=	0.3.0
 .include "../../wip/muon/build.mk"
 
 .include "../../mk/bsd.pkg.mk"
