@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CC_FEATURES=	c99
 
+CFLAGS+=		-DBOOTSTRAP_NO_SAMU
 TOOL_DEPENDS+=		samurai>=1.2:../../devel/samurai
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
