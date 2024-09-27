@@ -22,46 +22,29 @@ DEPENDS+=		samurai>=1.2:../../devel/samurai
 # Required by some platforms for clock_gettime()
 LDFLAGS+=		-lrt
 
+MUON_ARGS+=		-Dlibcurl=disabled
+MUON_ARGS+=		-Dlibarchive=disabled
+MUON_ARGS+=		-Dlibpkgconf=enabled
+MUON_ARGS+=		-Dsamurai=disabled
+MUON_ARGS+=		-Dreadline=builtin
+MUON_ARGS+=		-Dstatic=false
+MUON_ARGS+=		-Ddocs=disabled
+MUON_ARGS+=		-Dwebsite=false
+MUON_ARGS+=		-Dtracy=disabled
+
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-configure:
-	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-		${CONFIG_SHELL} ./bootstrap.sh bootstrap1
-	cd ${WRKSRC} && env ${CONFIGURE_ENV} ./bootstrap1/muon setup \
-		-Dlibcurl=disabled \
-		-Dlibarchive=disabled \
-		-Dlibpkgconf=enabled \
-		-Dsamurai=disabled \
-		-Dreadline=builtin \
-		-Dstatic=false \
-		-Ddocs=disabled \
-		-Dwebsite=false \
-		-Dtracy=disabled \
-		bootstrap2
-	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-		samu -j ${_MAKE_JOBS_N:U1} -C bootstrap2
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${CONFIG_SHELL} ./bootstrap.sh bootstrap
 
 do-build:
-	cd ${WRKSRC} && env ${MAKE_ENV} ./bootstrap2/muon setup \
-		-Dlibcurl=disabled \
-		-Dlibarchive=disabled \
-		-Dlibpkgconf=enabled \
-		-Dsamurai=disabled \
-		-Dreadline=builtin \
-		-Dstatic=false \
-		-Ddocs=disabled \
-		-Dwebsite=false \
-		-Dtracy=disabled \
-		output
-	cd ${WRKSRC} && env ${MAKE_ENV} \
-		samu -j ${_MAKE_JOBS_N:U1} -C output
+	cd ${WRKSRC} && env ${MAKE_ENV} ./bootstrap/muon setup ${MUON_ARGS} output
+	cd ${WRKSRC} && env ${MAKE_ENV} samu -j ${_MAKE_JOBS_N:U1} -C output
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/output/muon \
-		${DESTDIR}${PREFIX}/bin/muon
-	${INSTALL_MAN} ${WRKDIR}/man/muon.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/output/muon ${DESTDIR}${PREFIX}/bin/muon
+	${INSTALL_MAN} ${WRKDIR}/man/muon.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/pkgconf/buildlink3.mk"
 
