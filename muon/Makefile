@@ -17,7 +17,7 @@ USE_CC_FEATURES=	c99
 
 # Use external samurai
 CFLAGS+=		-DBOOTSTRAP_NO_SAMU
-TOOL_DEPENDS+=		samurai>=1.2:../../devel/samurai
+DEPENDS+=		samurai>=1.2:../../devel/samurai
 
 # Required by some platforms for clock_gettime()
 LDFLAGS+=		-lrt
