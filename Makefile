@@ -1145,6 +1145,7 @@ SUBDIR+=	gambas3-scripter
 SUBDIR+=	gambatte-dev
 SUBDIR+=	gappa
 SUBDIR+=	garage
+SUBDIR+=	garden
 SUBDIR+=	gat
 SUBDIR+=	gauche
 SUBDIR+=	gauche-dbd-pg
