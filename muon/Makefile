@@ -8,15 +8,19 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		${DEFAULT_DISTFILES} man.tar.gz
 SITES.man.tar.gz=	https://muon.build/releases/v${DISTNAME}/docs/
 
-MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://git.sr.ht/~lattis/muon
-COMMENT=	Implementation of meson build system in C99 with minimal dependencies
-LICENSE=	gnu-gpl-v3
+MAINTAINER=		micha@NetBSD.org
+HOMEPAGE=		https://git.sr.ht/~lattis/muon
+COMMENT=		Implementation of meson build system in C99 with minimal dependencies
+LICENSE=		gnu-gpl-v3
 
 USE_CC_FEATURES=	c99
 
+# Use external samurai
 CFLAGS+=		-DBOOTSTRAP_NO_SAMU
 TOOL_DEPENDS+=		samurai>=1.2:../../devel/samurai
+
+# Required by some platforms for clock_gettime()
+LDFLAGS+=		-lrt
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
