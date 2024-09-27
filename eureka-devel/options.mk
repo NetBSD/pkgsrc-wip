@@ -23,5 +23,5 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_OPENGL=off
 # xdg-utils: Create dependency for xdg-utils (Portland project)
 # Can be used by FLTK for fl_open_uri() on X11.
 .if !empty(PKG_OPTIONS:Mxdg-utils)
-DEPENDS+=	xdg-utils>=1.1:../../misc/xdg-utils
+DEPENDS+=		xdg-utils>=1.1:../../misc/xdg-utils
 .endif
