@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	bio-mocha-1.16
+DISTNAME=	bio-mocha-1.20
 CATEGORIES=	biology
 MASTER_SITES=	https://software.broadinstitute.org/software/mocha/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=samtools/}
-DISTFILES+=	bio-mocha_1.16-20221221.tar.gz
+DISTFILES+=	bio-mocha_1.20-20240505.tar.gz
 GITHUB_PROJECT=	bcftools
-GITHUB_TAG=	1.16
+GITHUB_TAG=	1.21
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://software.broadinstitute.org/software/mocha/
