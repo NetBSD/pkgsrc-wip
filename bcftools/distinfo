@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (bcftools-1.21.tar.bz2) = 517b73f84870fa967e6f7f6241c446131cc54229e7ee446110955e39dfbe2563
+SHA512 (bcftools-1.21.tar.bz2) = f8fb2e50a1a9e7a7e8a4f71d71d052f6019d54c60ae060d0abfbd01ab61a2c44e04e069c479ea9f6156513b54a611a9a46930a0ff4454019bb715fdb9558d07d
+Size (bcftools-1.21.tar.bz2) = 7982173 bytes
+SHA1 (patch-Makefile) = 9dfe7b5dcf77deac6d248d7612440780ec8a3731
