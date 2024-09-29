@@ -552,6 +552,7 @@ share/emacs/${PKGVERSION}/etc/images/ins-changelog.pbm
 share/emacs/${PKGVERSION}/etc/images/ins-changelog.xpm
 share/emacs/${PKGVERSION}/etc/images/jump-to.pbm
 share/emacs/${PKGVERSION}/etc/images/jump-to.xpm
+share/emacs/${PKGVERSION}/etc/images/kitchen-sink.xpm
 share/emacs/${PKGVERSION}/etc/images/last-page.pbm
 share/emacs/${PKGVERSION}/etc/images/last-page.xpm
 share/emacs/${PKGVERSION}/etc/images/left-arrow.pbm
