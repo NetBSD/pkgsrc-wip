@@ -54,6 +54,9 @@ do-install:
 		${DESTDIR}${PREFIX}/libexec/bcftools
 	(cd ${WRKSRC}/MoCha && pax -rw . ${DESTDIR}${DATADIR})
 
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../wip/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
