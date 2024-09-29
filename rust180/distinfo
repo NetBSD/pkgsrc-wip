@@ -1,8 +1,5 @@
 $NetBSD: distinfo,v 1.159 2023/06/19 14:46:47 bsiegert Exp $
 
-BLAKE2s (rust-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 5423dd837f47538992a67313a83983b583148f670f561da1d2a256fc98b5e24d
-SHA512 (rust-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 449b8520f0904e15163e6a55bec5dcdb18c0e423b6dd2450f99dd061edcdbd33e9c4fe5dc874ab09b4efabd6199f9ad595f13ecd4d69d708c68f9fc54c1da6c4
-Size (rust-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 159858112 bytes
 BLAKE2s (rust-1.79.0-aarch64-apple-darwin.tar.gz) = 9f50d07420f6344cdc67198ee3194b5fed2957260dd5dddc054a7af8c53d9afd
 SHA512 (rust-1.79.0-aarch64-apple-darwin.tar.gz) = d46685ba1542ea3c6f4e514d49538c41e21c8117d45a2cf1c7724604e5eb86a3a6e3a830fec271b117d52b2896fd77bc5b35aaa35e7e5e937f43ec34870d5fb9
 Size (rust-1.79.0-aarch64-apple-darwin.tar.gz) = 333587301 bytes
@@ -54,9 +51,9 @@ Size (rust-1.79.0-x86_64-unknown-linux-gnu.tar.gz) = 329537108 bytes
 BLAKE2s (rust-1.79.0-x86_64-unknown-netbsd.tar.xz) = 4971fcf283e43e1b3b2bc3819da73d9e8991537aece847d321d9972457f4b18c
 SHA512 (rust-1.79.0-x86_64-unknown-netbsd.tar.xz) = 7b1b94da389b79afce60e769578defd9bcec6427c95071ebf9556dee70a958e7cc38d40f3fb24a26955c2d662c4a2114657ed25f7091b0a282666505b89dde40
 Size (rust-1.79.0-x86_64-unknown-netbsd.tar.xz) = 163729172 bytes
-BLAKE2s (rust-std-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 7c0740d555c35930695d3a987a5dc6614308dcce5fab93fd670a32cee2d10af6
-SHA512 (rust-std-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 24c1aa3306701a8d3eea284fe316a7b369a2b6d97716a7de339561ed3e3090456fa503c0ec1d3272ac91591b2e231fda44bbd5c32f06ca55c2072233851070e6
-Size (rust-std-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 22754836 bytes
+BLAKE2s (rust-1.80.1-aarch64_be-unknown-netbsd.tar.xz) = 269594581c9530022621bf1ff077b55655ab86c71dd165a2eab6afaeb85711c3
+SHA512 (rust-1.80.1-aarch64_be-unknown-netbsd.tar.xz) = 9af9f238a5b51757271f39c6ddc78b294768679ee2cd931f4c8d81022f0d9c91b31e9ff9a73a76d109e9ae87f494138a64f3320adf130b2dc42ae3caacfa4e2d
+Size (rust-1.80.1-aarch64_be-unknown-netbsd.tar.xz) = 170426396 bytes
 BLAKE2s (rust-std-1.79.0-aarch64-apple-darwin.tar.gz) = 2a9c0de6207701699e0c1b7d68ea43e26d857e4d43d61ee4fbc28ae77b0017fa
 SHA512 (rust-std-1.79.0-aarch64-apple-darwin.tar.gz) = 431074b739f6fb9e21c68af8484e0bc3c496fde2be18e55ccb576514c76248775ca1bb5c9477b6062c9e0e5f68fedf9a18ff34e20ecf50a11157bd4c9dd4284a
 Size (rust-std-1.79.0-aarch64-apple-darwin.tar.gz) = 40079416 bytes
@@ -105,6 +102,9 @@ Size (rust-std-1.79.0-x86_64-unknown-linux-gnu.tar.gz) = 45178826 bytes
 BLAKE2s (rust-std-1.79.0-x86_64-unknown-netbsd.tar.xz) = 539c691f46329683c01e37a065fff061c6fbc7c6aedc14bccff579844003c3b6
 SHA512 (rust-std-1.79.0-x86_64-unknown-netbsd.tar.xz) = f8f82e8c9a5f49ac60db401178777b7e7a12486c4a21ea9b555af4a9ea765b9122803d3e13eb0f16ce94790d1a92344f0bc75910ff39ffcb2d8559e9c00d4c1c
 Size (rust-std-1.79.0-x86_64-unknown-netbsd.tar.xz) = 25697328 bytes
+BLAKE2s (rust-std-1.80.1-aarch64_be-unknown-netbsd.tar.xz) = 4c51df88bebd86fcbcb9a03a44979a9935ae68415c8ae8771b246a1127d2d6bd
+SHA512 (rust-std-1.80.1-aarch64_be-unknown-netbsd.tar.xz) = f047240b7fb7663571a3e3c9c5ad7a9c1109ca212d5a3492d7edde4db8028437b1d102f94f24c817684bd62a3f8f98ad834b593acbae68719e9aab307762b14b
+Size (rust-std-1.80.1-aarch64_be-unknown-netbsd.tar.xz) = 21406608 bytes
 BLAKE2s (rustc-1.80.1-src.tar.gz) = 691e52751254798b20cabb79f267f6ebac8660cc94536693726ac5d8095c2099
 SHA512 (rustc-1.80.1-src.tar.gz) = e33bc028f44742b4eab43ca5068123d5afa458594366f49ac5ac3ba3748a1852fe3e74ced360a66dcbac1b59f5a6b0ce7bdf53f8fc6e838f6b27be0e89c52f51
 Size (rustc-1.80.1-src.tar.gz) = 377927214 bytes
