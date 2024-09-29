@@ -50,8 +50,7 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/vcfutils
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../archivers/xz/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../biology/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
