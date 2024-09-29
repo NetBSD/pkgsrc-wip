@@ -15,6 +15,8 @@ DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-trimspaces-[0-9]*:../../print/tex-trimspaces
+DEPENDS+=	tex-transparent-[0-9]*:../../print/tex-transparent
+DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
 
 # catalogue-contact-bugs https://github.com/mrpiggi/svg/issues
 # catalogue-contact-repository https://github.com/mrpiggi/svg
