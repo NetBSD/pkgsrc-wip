@@ -1,1 +1,7 @@
 @comment $NetBSD$
+libexec/bcftools/extendFMT.so
+libexec/bcftools/mocha.so
+libexec/bcftools/mochatools.so
+share/bio-mocha/mocha_plot.R
+share/bio-mocha/pileup_plot.R
+share/bio-mocha/summary_plot.R

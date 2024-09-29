@@ -5,6 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	https://software.broadinstitute.org/software/mocha/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=samtools/}
 DISTFILES+=	bio-mocha_1.20-20240505.tar.gz
+DISTFILES+=	bcftools-1.21.tar.bz2
 GITHUB_PROJECT=	bcftools
 GITHUB_TAG=	1.21
 
@@ -13,10 +14,15 @@ HOMEPAGE=	https://software.broadinstitute.org/software/mocha/
 COMMENT=	Bcftools plugin for mosaic chromosomal alteration analysis
 LICENSE=	mit
 
-SUBST_CLASSES+=	1
-SUBST_STAGE.1=	pre-configure
-SUBST_SED.1+=	-e 's|@PV@|${PV}|g'
-SUBST_FILES.1+=	${WRKSRC}/configure.ac
+REPLACE_INTERPRETER+=   R
+REPLACE.R.old=          /usr/bin/env Rscript
+REPLACE.R.new=          ${PREFIX}/bin/Rscript
+REPLACE_FILES.R=        MoCha/*.R
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
+SUBST_FILES.version=	configure.ac
 
 DEPENDS=	bash:../../shells/bash
 DEPENDS+=	bcftools>=1.16:../../biology/bcftools
@@ -25,13 +31,15 @@ USE_TOOLS+=	autoconf automake autoreconf gmake perl pax
 GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/* test/test.pl
 
+WRKSRC=		${WRKDIR}/bcftools-${GITHUB_TAG}
+
 DATADIR=		${PREFIX}/share/bio-mocha
 INSTALLATION_DIRS=	libexec/bcftools
 
 post-extract:
-	@${MV} ${WRKDIR}/*.c ${WRKDIR}/*.h ${WRKSRC}/plugins
+	@${CP} ${WRKDIR}/*.c ${WRKDIR}/*.h ${WRKSRC}/plugins
 	@${MKDIR} ${WRKSRC}/MoCha
-	@${MV} ${WRKDIR}/*.R ${WRKSRC}/MoCha
+	@${CP} ${WRKDIR}/*.R ${WRKSRC}/MoCha
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
@@ -43,8 +51,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plugins/mocha.so \
 		${DESTDIR}${PREFIX}/libexec/bcftools
 	${INSTALL_PROGRAM} ${WRKSRC}/plugins/mochatools.so \
-		${DESTDIR}${PREFIX}/libexec/bcftools
-	${INSTALL_PROGRAM} ${WRKSRC}/plugins/trio-phase.so \
 		${DESTDIR}${PREFIX}/libexec/bcftools
 	(cd ${WRKSRC}/MoCha && pax -rw . ${DESTDIR}${DATADIR})
 
