@@ -49,7 +49,9 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/vcfutils.pl \
 		${DESTDIR}${PREFIX}/bin/vcfutils
 
-.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
