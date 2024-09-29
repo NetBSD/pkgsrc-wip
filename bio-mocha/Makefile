@@ -34,7 +34,8 @@ REPLACE_PERL=	misc/* test/test.pl
 WRKSRC=		${WRKDIR}/bcftools-${GH_TAG}
 
 DATADIR=		${PREFIX}/share/bio-mocha
-INSTALLATION_DIRS=	libexec/bcftools
+# FIXME: Why is share/bio-mocha only required on macOS?
+INSTALLATION_DIRS=	libexec/bcftools share/bio-mocha
 
 post-extract:
 	${CP} ${WRKDIR}/*.c ${WRKDIR}/*.h ${WRKSRC}/plugins
