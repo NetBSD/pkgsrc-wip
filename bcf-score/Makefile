@@ -37,7 +37,8 @@ CFLAGS+=	-isystem ${PREFIX}/include/suitesparse
 LDFLAGS+=	-lcholmod
 
 DATADIR=		${PREFIX}/share/bcf-score
-INSTALLATION_DIRS=	libexec/bcftools
+# FIXME: Why is share/bcf-score only necessary on darwin?
+INSTALLATION_DIRS=	libexec/bcftools share/bcf-score
 
 post-extract:
 	${CP} ${WRKDIR}/*.c ${WRKDIR}/*.h ${WRKSRC}/plugins
