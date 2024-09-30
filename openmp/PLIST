@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/17 16:35:44 adam Exp $
+@comment $NetBSD$
 include/omp-tools.h
 include/omp.h
 include/ompt.h
@@ -6,3 +6,11 @@ include/ompx.h
 lib/libgomp.so
 lib/libiomp5.so
 lib/libomp.so
+lib/libompd.so
+share/gdb/python/ompd/__init__.py
+share/gdb/python/ompd/frame_filter.py
+share/gdb/python/ompd/ompd.py
+share/gdb/python/ompd/ompdModule.so
+share/gdb/python/ompd/ompd_address_space.py
+share/gdb/python/ompd/ompd_callbacks.py
+share/gdb/python/ompd/ompd_handles.py

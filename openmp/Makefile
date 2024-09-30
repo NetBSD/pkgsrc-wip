@@ -23,5 +23,6 @@ CMAKE_CONFIGURE_ARGS+=	-DOPENMP_ENABLE_OMPT_TOOLS=OFF
 BUILDLINK_TRANSFORM.NetBSD+=	opt:-std=c++17:-std=gnu++17 # alloca
 
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/application.mk"
 .include "../../wip/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
