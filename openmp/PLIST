@@ -6,4 +6,3 @@ include/ompx.h
 lib/libgomp.so
 lib/libiomp5.so
 lib/libomp.so
-lib/libompd.so

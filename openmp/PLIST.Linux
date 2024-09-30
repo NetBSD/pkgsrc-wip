@@ -1,3 +1,4 @@
+lib/libompd.so
 share/gdb/python/ompd/__init__.py
 share/gdb/python/ompd/frame_filter.py
 share/gdb/python/ompd/ompd.py
@@ -5,4 +6,3 @@ share/gdb/python/ompd/ompdModule.so
 share/gdb/python/ompd/ompd_address_space.py
 share/gdb/python/ompd/ompd_callbacks.py
 share/gdb/python/ompd/ompd_handles.py
-
