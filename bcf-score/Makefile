@@ -33,7 +33,7 @@ REPLACE_PERL=	misc/* test/test.pl
 
 WRKSRC=		${WRKDIR}/bcftools-${GH_TAG}
 
-CFLAGS+=	-isystem ${LOCALBASE}/include/suitesparse
+CFLAGS+=	-isystem ${PREFIX}/include/suitesparse
 LDFLAGS+=	-lcholmod
 
 DATADIR=		${PREFIX}/share/bcf-score
@@ -49,7 +49,6 @@ pre-configure:
 
 # One .so for each .c in the score distfile
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/libexec/bcftools
 	${INSTALL_PROGRAM} ${WRKSRC}/plugins/blup.so \
 		${DESTDIR}${PREFIX}/libexec/bcftools
 	${INSTALL_PROGRAM} ${WRKSRC}/plugins/liftover.so \
