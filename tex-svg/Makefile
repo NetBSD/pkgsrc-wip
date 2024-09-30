@@ -16,6 +16,7 @@ DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-trimspaces-[0-9]*:../../print/tex-trimspaces
 DEPENDS+=	tex-transparent-[0-9]*:../../print/tex-transparent
+DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
 DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
 
