@@ -166,9 +166,6 @@ ${PYSITELIB}/streamlink/plugins/cnbce.pyo
 ${PYSITELIB}/streamlink/plugins/cnews.py
 ${PYSITELIB}/streamlink/plugins/cnews.pyc
 ${PYSITELIB}/streamlink/plugins/cnews.pyo
-${PYSITELIB}/streamlink/plugins/crunchyroll.py
-${PYSITELIB}/streamlink/plugins/crunchyroll.pyc
-${PYSITELIB}/streamlink/plugins/crunchyroll.pyo
 ${PYSITELIB}/streamlink/plugins/chzzk.py
 ${PYSITELIB}/streamlink/plugins/chzzk.pyc
 ${PYSITELIB}/streamlink/plugins/chzzk.pyo
@@ -205,9 +202,6 @@ ${PYSITELIB}/streamlink/plugins/earthcam.pyo
 ${PYSITELIB}/streamlink/plugins/euronews.py
 ${PYSITELIB}/streamlink/plugins/euronews.pyc
 ${PYSITELIB}/streamlink/plugins/euronews.pyo
-${PYSITELIB}/streamlink/plugins/facebook.py
-${PYSITELIB}/streamlink/plugins/facebook.pyc
-${PYSITELIB}/streamlink/plugins/facebook.pyo
 ${PYSITELIB}/streamlink/plugins/filmon.py
 ${PYSITELIB}/streamlink/plugins/filmon.pyc
 ${PYSITELIB}/streamlink/plugins/filmon.pyo
@@ -277,9 +271,6 @@ ${PYSITELIB}/streamlink/plugins/mediaklikk.pyo
 ${PYSITELIB}/streamlink/plugins/mediavitrina.py
 ${PYSITELIB}/streamlink/plugins/mediavitrina.pyc
 ${PYSITELIB}/streamlink/plugins/mediavitrina.pyo
-${PYSITELIB}/streamlink/plugins/mildom.py
-${PYSITELIB}/streamlink/plugins/mildom.pyc
-${PYSITELIB}/streamlink/plugins/mildom.pyo
 ${PYSITELIB}/streamlink/plugins/mitele.py
 ${PYSITELIB}/streamlink/plugins/mitele.pyc
 ${PYSITELIB}/streamlink/plugins/mitele.pyo
@@ -457,12 +448,6 @@ ${PYSITELIB}/streamlink/plugins/tviplayer.pyo
 ${PYSITELIB}/streamlink/plugins/tvp.py
 ${PYSITELIB}/streamlink/plugins/tvp.pyc
 ${PYSITELIB}/streamlink/plugins/tvp.pyo
-${PYSITELIB}/streamlink/plugins/tvrby.py
-${PYSITELIB}/streamlink/plugins/tvrby.pyc
-${PYSITELIB}/streamlink/plugins/tvrby.pyo
-${PYSITELIB}/streamlink/plugins/tvrplus.py
-${PYSITELIB}/streamlink/plugins/tvrplus.pyc
-${PYSITELIB}/streamlink/plugins/tvrplus.pyo
 ${PYSITELIB}/streamlink/plugins/tvtoya.py
 ${PYSITELIB}/streamlink/plugins/tvtoya.pyc
 ${PYSITELIB}/streamlink/plugins/tvtoya.pyo
@@ -496,9 +481,6 @@ ${PYSITELIB}/streamlink/plugins/vkplay.pyo
 ${PYSITELIB}/streamlink/plugins/vtvgo.py
 ${PYSITELIB}/streamlink/plugins/vtvgo.pyc
 ${PYSITELIB}/streamlink/plugins/vtvgo.pyo
-${PYSITELIB}/streamlink/plugins/webtv.py
-${PYSITELIB}/streamlink/plugins/webtv.pyc
-${PYSITELIB}/streamlink/plugins/webtv.pyo
 ${PYSITELIB}/streamlink/plugins/welt.py
 ${PYSITELIB}/streamlink/plugins/welt.pyc
 ${PYSITELIB}/streamlink/plugins/welt.pyo
@@ -520,12 +502,6 @@ ${PYSITELIB}/streamlink/plugins/zdf_mediathek.pyo
 ${PYSITELIB}/streamlink/plugins/zeenews.py
 ${PYSITELIB}/streamlink/plugins/zeenews.pyc
 ${PYSITELIB}/streamlink/plugins/zeenews.pyo
-${PYSITELIB}/streamlink/plugins/zengatv.py
-${PYSITELIB}/streamlink/plugins/zengatv.pyc
-${PYSITELIB}/streamlink/plugins/zengatv.pyo
-${PYSITELIB}/streamlink/plugins/zhanqi.py
-${PYSITELIB}/streamlink/plugins/zhanqi.pyc
-${PYSITELIB}/streamlink/plugins/zhanqi.pyo
 ${PYSITELIB}/streamlink/py.typed
 ${PYSITELIB}/streamlink/session/__init__.py
 ${PYSITELIB}/streamlink/session/__init__.pyc

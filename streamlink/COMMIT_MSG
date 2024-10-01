@@ -1,6 +1,31 @@
-multimedia/streamlink: update to streamlink-6.10.0
+multimedia/streamlink: update to streamlink-6.11.0
 
 Changelog:
+
+== streamlink 6.11.0 (2024-10-01)
+
+- Deprecated:
+   `--record-and-pipe=...` in favor of `--stdout --record=...`
+   (and explicitly disallowed `--stdout --output=...`)
+- Fixed: error when setting both `--http-no-ssl-verify`
+   and `--http-disable-dh`
+- Fixed: `--player-passthrough` without a resolved default `--player`
+- Fixed: error when stdout/stderr file descriptors are missing
+- Updated: webbrowser API's Chrome devtools protocol to latest version
+- Updated plugins:
+  - crunchyroll: removed plugin
+  - dlive: fixed missing stream URL signature
+  - facebook: removed plugin
+  - mildom: removed plugin
+  - tvrby: removed plugin
+  - tvrplus: removed plugin
+  - twitch: fixed client-integrity token acquirement
+  - vk: fixed API params and validation schema
+  - webtv: removed plugin
+  - zengatv: removed plugin
+  - zhanqi: removed plugin
+- Tests: removed `pytest-asyncio` dependency
+
 
 == streamlink 6.10.0 (2024-09-06)
 
