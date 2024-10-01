@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_fence.cc.orig	2024-08-21 22:46:46.539323600 +0000
+--- ui/gl/gl_fence.cc.orig	2024-09-24 20:49:58.709514600 +0000
 +++ ui/gl/gl_fence.cc
 @@ -17,7 +17,7 @@
  #include "ui/gl/gl_surface_egl.h"

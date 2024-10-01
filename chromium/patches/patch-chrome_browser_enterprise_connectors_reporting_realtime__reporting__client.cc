@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2024-08-21 22:46:08.786449200 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2024-09-24 20:49:18.150955200 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
-@@ -58,7 +58,7 @@
+@@ -59,7 +59,7 @@
  #include "base/strings/utf_string_conversions.h"
  #endif
  
@@ -15,8 +15,8 @@ $NetBSD$
  #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/device_signals/core/browser/signals_aggregator.h"
-@@ -133,7 +133,7 @@ void UploadSecurityEventReport(base::Val
-       std::move(upload_callback));
+@@ -144,7 +144,7 @@ void UploadSecurityEventReport(base::Val
+       std::move(report), std::move(upload_callback));
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2024-08-21 22:46:15.664155200 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2024-09-24 20:49:25.337586000 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"
@@ -17,7 +17,7 @@ $NetBSD$
  
 @@ -23,7 +23,7 @@ class PrefRegistrySimple;
  class PrefService;
- #endif
+ #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)

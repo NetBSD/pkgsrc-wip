@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- google_apis/google_api_keys-inc.cc.orig	2024-08-21 22:46:20.206621400 +0000
+--- google_apis/google_api_keys-inc.cc.orig	2024-09-24 20:49:29.846981500 +0000
 +++ google_apis/google_api_keys-inc.cc
-@@ -190,14 +190,18 @@ class APIKeyCache {
+@@ -196,14 +196,18 @@ class APIKeyCache {
          STRINGIZE_NO_EXPANSION(GOOGLE_METRICS_SIGNING_KEY), std::string(),
          nullptr, std::string(), environment.get(), command_line, gaia_config);
  

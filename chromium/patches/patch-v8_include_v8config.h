@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8config.h.orig	2024-08-21 22:48:49.521937800 +0000
+--- v8/include/v8config.h.orig	2024-09-24 20:51:57.350927600 +0000
 +++ v8/include/v8config.h
 @@ -201,6 +201,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_FUCHSIA) \
@@ -36,7 +36,7 @@ $NetBSD$
 +#endif
 +
 +#ifdef V8_OS_FREEBSD
-+# define V8_TARGET_OS_OPENBSD
++# define V8_TARGET_OS_FREEBSD
 +# define V8_TARGET_OS_BSD
 +#endif
 +

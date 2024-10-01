@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-08-21 22:46:15.309118700 +0000
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-09-24 20:49:24.827541000 +0000
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
-@@ -30,7 +30,7 @@
+@@ -35,7 +35,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"
  #include "third_party/crashpad/crashpad/util/process/process_memory.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <signal.h>
  #elif BUILDFLAG(IS_APPLE)
  #include <mach/exception_types.h>
-@@ -90,7 +90,7 @@ bool CrashAnalyzer::GetExceptionInfo(
+@@ -95,7 +95,7 @@ bool CrashAnalyzer::GetExceptionInfo(
  
  crashpad::VMAddress CrashAnalyzer::GetAccessAddress(
      const crashpad::ExceptionSnapshot& exception) {

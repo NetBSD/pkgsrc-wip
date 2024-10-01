@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_extra_parts_linux.cc.orig	2024-08-21 22:46:08.551425200 +0000
+--- chrome/browser/chrome_browser_main_extra_parts_linux.cc.orig	2024-09-24 20:49:17.900933300 +0000
 +++ chrome/browser/chrome_browser_main_extra_parts_linux.cc
 @@ -58,7 +58,7 @@ void ChromeBrowserMainExtraPartsLinux::P
  

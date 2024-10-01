@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util.cc.orig	2024-08-21 22:46:16.988291000 +0000
+--- components/sync_device_info/local_device_info_util.cc.orig	2024-09-24 20:49:26.864719900 +0000
 +++ components/sync_device_info/local_device_info_util.cc
-@@ -84,7 +84,7 @@ void OnMachineStatisticsLoaded(LocalDevi
+@@ -85,7 +85,7 @@ void OnMachineStatisticsLoaded(LocalDevi
  sync_pb::SyncEnums::DeviceType GetLocalDeviceType() {
  #if BUILDFLAG(IS_CHROMEOS)
    return sync_pb::SyncEnums_DeviceType_TYPE_CROS;
@@ -15,7 +15,7 @@ $NetBSD$
    return sync_pb::SyncEnums_DeviceType_TYPE_LINUX;
  #elif BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
    switch (ui::GetDeviceFormFactor()) {
-@@ -109,7 +109,7 @@ DeviceInfo::OsType GetLocalDeviceOSType(
+@@ -110,7 +110,7 @@ DeviceInfo::OsType GetLocalDeviceOSType(
    return DeviceInfo::OsType::kChromeOsAsh;
  #elif BUILDFLAG(IS_CHROMEOS_LACROS)
    return DeviceInfo::OsType::kChromeOsLacros;
@@ -24,7 +24,7 @@ $NetBSD$
    return DeviceInfo::OsType::kLinux;
  #elif BUILDFLAG(IS_ANDROID)
    return DeviceInfo::OsType::kAndroid;
-@@ -128,7 +128,7 @@ DeviceInfo::OsType GetLocalDeviceOSType(
+@@ -129,7 +129,7 @@ DeviceInfo::OsType GetLocalDeviceOSType(
  
  DeviceInfo::FormFactor GetLocalDeviceFormFactor() {
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

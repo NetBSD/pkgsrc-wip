@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_window.cc.orig	2024-08-21 22:46:46.638333800 +0000
+--- ui/ozone/platform/x11/x11_window.cc.orig	2024-09-24 20:49:58.805523000 +0000
 +++ ui/ozone/platform/x11/x11_window.cc
-@@ -1499,7 +1499,7 @@ void X11Window::OnXWindowStateChanged() 
+@@ -1504,7 +1504,7 @@ void X11Window::OnXWindowStateChanged() 
    WindowTiledEdges tiled_state = GetTiledState();
    if (tiled_state != tiled_state_) {
      tiled_state_ = tiled_state;

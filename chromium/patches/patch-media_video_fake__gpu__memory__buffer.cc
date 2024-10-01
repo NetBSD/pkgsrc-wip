@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/fake_gpu_memory_buffer.cc.orig	2024-08-21 22:46:23.079916200 +0000
+--- media/video/fake_gpu_memory_buffer.cc.orig	2024-09-24 20:49:32.247192100 +0000
 +++ media/video/fake_gpu_memory_buffer.cc
-@@ -9,7 +9,7 @@
+@@ -14,7 +14,7 @@
  #include "media/base/format_utils.h"
  #include "media/base/video_frame.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <fcntl.h>
  #include <sys/stat.h>
  #include <sys/types.h>
-@@ -52,7 +52,7 @@ class FakeGpuMemoryBufferImpl : public g
+@@ -57,7 +57,7 @@ class FakeGpuMemoryBufferImpl : public g
  
  }  // namespace
  
@@ -24,7 +24,7 @@ $NetBSD$
  base::ScopedFD GetDummyFD() {
    base::ScopedFD fd(open("/dev/zero", O_RDWR));
    DCHECK(fd.is_valid());
-@@ -82,7 +82,7 @@ FakeGpuMemoryBuffer::FakeGpuMemoryBuffer
+@@ -87,7 +87,7 @@ FakeGpuMemoryBuffer::FakeGpuMemoryBuffer
    static base::AtomicSequenceNumber buffer_id_generator;
    handle_.id = gfx::GpuMemoryBufferId(buffer_id_generator.GetNext());
  
@@ -33,7 +33,7 @@ $NetBSD$
    for (size_t i = 0; i < VideoFrame::NumPlanes(video_pixel_format_); i++) {
      const gfx::Size plane_size_in_bytes =
          VideoFrame::PlaneSize(video_pixel_format_, i, size_);
-@@ -144,7 +144,7 @@ gfx::GpuMemoryBufferHandle FakeGpuMemory
+@@ -149,7 +149,7 @@ gfx::GpuMemoryBufferHandle FakeGpuMemory
    gfx::GpuMemoryBufferHandle handle;
    handle.type = gfx::NATIVE_PIXMAP;
    handle.id = handle_.id;

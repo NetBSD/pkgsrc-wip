@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/chrome_crashpad_handler.cc.orig	2024-08-21 22:46:14.875074100 +0000
+--- components/crash/core/app/chrome_crashpad_handler.cc.orig	2024-09-24 20:49:24.507513000 +0000
 +++ components/crash/core/app/chrome_crashpad_handler.cc
 @@ -6,5 +6,9 @@
  extern "C" int CrashpadHandlerMain(int argc, char* argv[]);

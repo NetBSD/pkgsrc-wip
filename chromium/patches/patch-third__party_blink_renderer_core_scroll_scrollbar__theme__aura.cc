@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2024-08-21 22:46:27.502370000 +0000
+--- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2024-09-24 20:49:36.875598400 +0000
 +++ third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
-@@ -149,7 +149,7 @@ bool ScrollbarThemeAura::SupportsDragSna
+@@ -148,7 +148,7 @@ bool ScrollbarThemeAura::SupportsDragSna
  // is true for at least GTK and QT apps).
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.
@@ -15,7 +15,7 @@ $NetBSD$
    return false;
  #else
    return true;
-@@ -372,7 +372,7 @@ bool ScrollbarThemeAura::ShouldCenterOnT
+@@ -418,7 +418,7 @@ bool ScrollbarThemeAura::ShouldCenterOnT
                                               const WebMouseEvent& event) const {
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.

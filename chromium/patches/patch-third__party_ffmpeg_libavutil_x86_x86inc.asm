@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-08-21 22:47:01.089816600 +0000
+--- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-09-24 20:50:13.112778700 +0000
 +++ third_party/ffmpeg/libavutil/x86/x86inc.asm
 @@ -46,6 +46,12 @@
      %endif

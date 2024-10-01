@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.cc.orig	2024-08-21 22:46:08.730443500 +0000
+--- chrome/browser/download/download_prefs.cc.orig	2024-09-24 20:49:18.091950000 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -11,6 +11,7 @@
  #include <vector>
@@ -52,7 +52,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kOpenPdfDownloadInSystemReader, false);
  #endif
  #if BUILDFLAG(IS_ANDROID)
-@@ -469,7 +474,7 @@ void DownloadPrefs::DisableAutoOpenByUse
+@@ -471,7 +476,7 @@ void DownloadPrefs::DisableAutoOpenByUse
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -61,7 +61,7 @@ $NetBSD$
  void DownloadPrefs::SetShouldOpenPdfInSystemReader(bool should_open) {
    if (should_open_pdf_in_system_reader_ == should_open)
      return;
-@@ -501,7 +506,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
+@@ -503,7 +508,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
  
  void DownloadPrefs::ResetAutoOpenByUser() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -70,7 +70,7 @@ $NetBSD$
    SetShouldOpenPdfInSystemReader(false);
  #endif
    auto_open_by_user_.clear();
-@@ -538,7 +543,7 @@ void DownloadPrefs::SaveAutoOpenState() 
+@@ -540,7 +545,7 @@ void DownloadPrefs::SaveAutoOpenState() 
  bool DownloadPrefs::CanPlatformEnableAutoOpenForPdf() const {
  #if BUILDFLAG(IS_CHROMEOS)
    return false;  // There is no UI for auto-open on ChromeOS.
@@ -79,7 +79,7 @@ $NetBSD$
    return ShouldOpenPdfInSystemReader();
  #else
    return false;
-@@ -690,7 +695,14 @@ base::FilePath DownloadPrefs::SanitizeDo
+@@ -692,7 +697,14 @@ base::FilePath DownloadPrefs::SanitizeDo
  #else
    // If the stored download directory is an absolute path, we presume it's
    // correct; there's not really much more validation we can do here.

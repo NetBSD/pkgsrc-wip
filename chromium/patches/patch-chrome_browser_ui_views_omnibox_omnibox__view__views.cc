@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/omnibox/omnibox_view_views.cc.orig	2024-08-21 22:46:11.333710700 +0000
+--- chrome/browser/ui/views/omnibox/omnibox_view_views.cc.orig	2024-09-24 20:49:20.796187400 +0000
 +++ chrome/browser/ui/views/omnibox/omnibox_view_views.cc
-@@ -1972,7 +1972,7 @@ void OmniboxViewViews::MaybeAddSendTabTo
+@@ -1973,7 +1973,7 @@ void OmniboxViewViews::MaybeAddSendTabTo
  }
  
  void OmniboxViewViews::OnPopupOpened() {

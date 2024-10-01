@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.h.orig	2024-08-21 22:46:24.567068800 +0000
+--- printing/print_settings.h.orig	2024-09-24 20:49:34.095354300 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"
@@ -24,7 +24,7 @@ $NetBSD$
  inline constexpr char kLinuxSystemPrintDialogDataPrinter[] = "printer_name";
  inline constexpr char kLinuxSystemPrintDialogDataPrintSettings[] =
      "print_settings";
-@@ -101,7 +101,7 @@ class COMPONENT_EXPORT(PRINTING) PrintSe
+@@ -101,7 +101,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
      std::string vendor_id;
    };
  
@@ -33,7 +33,7 @@ $NetBSD$
    using AdvancedSettings = std::map<std::string, base::Value>;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -276,7 +276,7 @@ class COMPONENT_EXPORT(PRINTING) PrintSe
+@@ -276,7 +276,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
      pages_per_sheet_ = pages_per_sheet;
    }
  
@@ -42,7 +42,7 @@ $NetBSD$
    AdvancedSettings& advanced_settings() { return advanced_settings_; }
    const AdvancedSettings& advanced_settings() const {
      return advanced_settings_;
-@@ -429,7 +429,7 @@ class COMPONENT_EXPORT(PRINTING) PrintSe
+@@ -429,7 +429,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
    // Number of pages per sheet.
    int pages_per_sheet_;
  

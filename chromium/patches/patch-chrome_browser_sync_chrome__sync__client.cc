@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/chrome_sync_client.cc.orig	2024-08-21 22:46:10.474622500 +0000
+--- chrome/browser/sync/chrome_sync_client.cc.orig	2024-09-24 20:49:19.862105400 +0000
 +++ chrome/browser/sync/chrome_sync_client.cc
 @@ -119,7 +119,7 @@
  #endif  // BUILDFLAG(ENABLE_SPELLCHECK)
@@ -16,7 +16,7 @@ $NetBSD$
  #include "chrome/browser/ui/tabs/saved_tab_groups/saved_tab_group_service_factory.h"
  #elif BUILDFLAG(IS_ANDROID)
 @@ -233,7 +233,7 @@ bool ShouldSyncAppsTypesInTransportMode(
- syncer::ModelTypeControllerDelegate* GetSavedTabGroupControllerDelegate(
+ syncer::DataTypeControllerDelegate* GetSavedTabGroupControllerDelegate(
      Profile* profile) {
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
@@ -24,8 +24,8 @@ $NetBSD$
    auto* keyed_service =
        tab_groups::SavedTabGroupServiceFactory::GetForProfile(profile);
    CHECK(keyed_service);
-@@ -251,7 +251,7 @@ syncer::ModelTypeControllerDelegate* Get
- syncer::ModelTypeControllerDelegate* GetSharedTabGroupControllerDelegate(
+@@ -251,7 +251,7 @@ syncer::DataTypeControllerDelegate* GetS
+ syncer::DataTypeControllerDelegate* GetSharedTabGroupControllerDelegate(
      Profile* profile) {
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
@@ -33,7 +33,7 @@ $NetBSD$
    tab_groups::SavedTabGroupKeyedService* keyed_service =
        tab_groups::SavedTabGroupServiceFactory::GetForProfile(profile);
    CHECK(keyed_service);
-@@ -545,7 +545,7 @@ ChromeSyncClient::CreateModelTypeControl
+@@ -544,7 +544,7 @@ ChromeSyncClient::CreateDataTypeControll
      // platforms.
      bool enable_tab_group_sync = false;
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -42,7 +42,7 @@ $NetBSD$
      enable_tab_group_sync = true;
  #elif BUILDFLAG(IS_ANDROID)
      enable_tab_group_sync =
-@@ -586,7 +586,7 @@ ChromeSyncClient::CreateModelTypeControl
+@@ -585,7 +585,7 @@ ChromeSyncClient::CreateDataTypeControll
  
  // Chrome prefers OS provided spell checkers where they exist. So only sync the
  // custom dictionary on platforms that typically don't provide one.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2024-08-21 22:46:25.783193600 +0000
+--- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2024-09-24 20:49:35.258456500 +0000
 +++ third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc
 @@ -68,7 +68,7 @@ bool StructTraits<blink::mojom::Renderer
  

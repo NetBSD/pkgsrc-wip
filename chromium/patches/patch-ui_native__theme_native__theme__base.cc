@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/native_theme_base.cc.orig	2024-08-21 22:46:46.572327000 +0000
+--- ui/native_theme/native_theme_base.cc.orig	2024-09-24 20:49:58.742517500 +0000
 +++ ui/native_theme/native_theme_base.cc
-@@ -236,7 +236,7 @@ void NativeThemeBase::Paint(cc::PaintCan
+@@ -241,7 +241,7 @@ void NativeThemeBase::Paint(cc::PaintCan
        break;
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

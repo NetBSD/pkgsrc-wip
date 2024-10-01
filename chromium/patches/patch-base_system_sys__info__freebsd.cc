@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2024-08-21 22:46:04.788039000 +0000
+--- base/system/sys_info_freebsd.cc.orig	2024-09-24 20:49:13.837576600 +0000
 +++ base/system/sys_info_freebsd.cc
 @@ -9,30 +9,106 @@
  #include <sys/sysctl.h>

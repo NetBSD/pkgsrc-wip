@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2024-08-21 22:46:46.806351000 +0000
+--- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2024-09-24 20:49:58.968537300 +0000
 +++ ui/views/test/ui_controls_factory_desktop_aura_ozone.cc
 @@ -296,7 +296,7 @@ void UpdateDisplaySync(const std::string
  }

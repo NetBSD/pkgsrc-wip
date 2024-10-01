@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2024-08-21 22:46:20.336634600 +0000
+--- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2024-09-24 20:49:29.968992200 +0000
 +++ gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc
-@@ -27,7 +27,7 @@
+@@ -32,7 +32,7 @@
  #include "ui/gfx/half_float.h"
  #include "ui/gl/test/gl_test_support.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "gpu/ipc/common/gpu_memory_buffer_impl_native_pixmap.h"
  #include "ui/gfx/linux/client_native_pixmap_factory_dmabuf.h"
  #endif
-@@ -70,7 +70,7 @@ class GpuMemoryBufferTest : public testi
+@@ -75,7 +75,7 @@ class GpuMemoryBufferTest : public testi
    GLManager gl_;
  };
  

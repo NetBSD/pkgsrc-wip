@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/audio_latency.cc.orig	2024-08-21 22:46:22.215827500 +0000
+--- media/base/audio_latency.cc.orig	2024-09-24 20:49:31.658140400 +0000
 +++ media/base/audio_latency.cc
-@@ -147,7 +147,7 @@ int AudioLatency::GetRtcBufferSize(int s
+@@ -148,7 +148,7 @@ int AudioLatency::GetRtcBufferSize(int s
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \

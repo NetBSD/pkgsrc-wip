@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-08-21 22:46:11.473725000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-09-24 20:49:20.948200700 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -577,7 +577,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
+@@ -573,7 +573,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
      content::WebContents* web_contents,
      Profile* profile,
      const std::string& app_id) {
@@ -15,7 +15,7 @@ $NetBSD$
    WebAppProvider* provider = WebAppProvider::GetForWebApps(profile);
    CHECK(provider);
  
-@@ -797,7 +797,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
+@@ -799,7 +799,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
    }
  }
  

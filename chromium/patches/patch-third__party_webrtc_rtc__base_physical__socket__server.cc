@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2024-08-21 22:48:15.281426700 +0000
+--- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2024-09-24 20:51:26.796245800 +0000
 +++ third_party/webrtc/rtc_base/physical_socket_server.cc
 @@ -54,7 +54,7 @@
  #include "rtc_base/time_utils.h"

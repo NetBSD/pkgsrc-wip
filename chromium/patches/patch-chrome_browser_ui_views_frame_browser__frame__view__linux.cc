@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2024-08-21 22:46:11.288706000 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2024-09-24 20:49:20.749183200 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_linux.cc
 @@ -60,7 +60,7 @@ gfx::ShadowValues BrowserFrameViewLinux:
  

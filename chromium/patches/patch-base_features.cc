@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/features.cc.orig	2024-08-21 22:46:04.680027700 +0000
+--- base/features.cc.orig	2024-09-24 20:49:13.722566600 +0000
 +++ base/features.cc
 @@ -9,8 +9,10 @@
  #include "base/threading/platform_thread.h"

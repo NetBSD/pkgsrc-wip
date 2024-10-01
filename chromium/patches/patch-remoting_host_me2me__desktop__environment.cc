@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/me2me_desktop_environment.cc.orig	2024-08-21 22:46:24.650077300 +0000
+--- remoting/host/me2me_desktop_environment.cc.orig	2024-09-24 20:49:34.181362000 +0000
 +++ remoting/host/me2me_desktop_environment.cc
 @@ -119,7 +119,7 @@ std::string Me2MeDesktopEnvironment::Get
      capabilities += protocol::kRemoteWebAuthnCapability;

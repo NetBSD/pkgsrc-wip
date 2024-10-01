@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2024-08-21 22:46:15.240111600 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2024-09-24 20:49:24.754534700 +0000
 +++ components/feature_engagement/public/feature_constants.h
 @@ -20,7 +20,7 @@ BASE_DECLARE_FEATURE(kIPHDemoMode);
  BASE_DECLARE_FEATURE(kIPHDummyFeature);
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_DECLARE_FEATURE(kEsbDownloadRowPromoFeature);
  #endif
-@@ -264,7 +264,8 @@ BASE_DECLARE_FEATURE(kDefaultBrowserTrig
+@@ -255,7 +255,8 @@ BASE_DECLARE_FEATURE(kDefaultBrowserTrig
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -23,14 +23,14 @@ $NetBSD$
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
 +    BUILDFLAG(IS_BSD)
  BASE_DECLARE_FEATURE(kIPHAutofillCreditCardBenefitFeature);
+ BASE_DECLARE_FEATURE(kIPHAutofillDisabledVirtualCardSuggestionFeature);
  BASE_DECLARE_FEATURE(kIPHAutofillExternalAccountProfileSuggestionFeature);
- BASE_DECLARE_FEATURE(kIPHAutofillManualFallbackFeature);
-@@ -314,7 +315,7 @@ BASE_DECLARE_FEATURE(kIPHScalableIphHelp
+@@ -306,7 +307,7 @@ BASE_DECLARE_FEATURE(kIPHScalableIphHelp
  BASE_DECLARE_FEATURE(kIPHScalableIphGamingFeature);
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_DECLARE_FEATURE(kIPHDesktopPWAsLinkCapturingLaunch);
+ BASE_DECLARE_FEATURE(kIPHToolbarManagementButtonFeature);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
- 

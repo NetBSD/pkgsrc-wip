@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/audio/audio_service.cc.orig	2024-08-21 22:46:17.925387100 +0000
+--- content/browser/audio/audio_service.cc.orig	2024-09-24 20:49:27.901811000 +0000
 +++ content/browser/audio/audio_service.cc
 @@ -32,7 +32,7 @@
  #if BUILDFLAG(ENABLE_PASSTHROUGH_AUDIO_CODECS)

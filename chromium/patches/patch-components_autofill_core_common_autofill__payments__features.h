@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.h.orig	2024-08-21 22:46:14.598045800 +0000
+--- components/autofill/core/common/autofill_payments_features.h.orig	2024-09-24 20:49:24.195485600 +0000
 +++ components/autofill/core/common/autofill_payments_features.h
 @@ -14,7 +14,7 @@ namespace autofill::features {
  

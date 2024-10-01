@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_openbsd.cc.orig	2024-08-21 22:46:04.788039000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2024-09-24 20:49:13.837576600 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -3,7 +3,6 @@
  // found in the LICENSE file.

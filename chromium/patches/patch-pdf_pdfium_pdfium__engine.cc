@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- pdf/pdfium/pdfium_engine.cc.orig	2024-08-21 22:46:24.429054700 +0000
+--- pdf/pdfium/pdfium_engine.cc.orig	2024-09-24 20:49:33.744323500 +0000
 +++ pdf/pdfium/pdfium_engine.cc
 @@ -93,7 +93,7 @@
  #include "gin/public/cppgc.h"

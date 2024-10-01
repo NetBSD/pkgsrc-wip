@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sessions/session_restore.cc.orig	2024-08-21 22:46:10.349609600 +0000
+--- chrome/browser/sessions/session_restore.cc.orig	2024-09-24 20:49:19.742094800 +0000
 +++ chrome/browser/sessions/session_restore.cc
 @@ -99,7 +99,7 @@
  #include "chrome/browser/web_applications/web_app_registrar.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/whats_new/whats_new_fetcher.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -1049,7 +1049,7 @@ class SessionRestoreImpl : public Browse
+@@ -1051,7 +1051,7 @@ class SessionRestoreImpl : public Browse
      bool is_first_tab = true;
      for (const auto& startup_tab : startup_tabs) {
        const GURL& url = startup_tab.url;

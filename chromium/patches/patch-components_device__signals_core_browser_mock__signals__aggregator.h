@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/mock_signals_aggregator.h.orig	2024-08-21 22:46:14.940081000 +0000
+--- components/device_signals/core/browser/mock_signals_aggregator.h.orig	2024-09-24 20:49:24.579519300 +0000
 +++ components/device_signals/core/browser/mock_signals_aggregator.h
 @@ -17,7 +17,7 @@ class MockSignalsAggregator : public Sig
    MockSignalsAggregator();

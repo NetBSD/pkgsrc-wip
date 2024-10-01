@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/flags/flags.cc.orig	2024-08-21 22:48:49.884975000 +0000
+--- v8/src/flags/flags.cc.orig	2024-09-24 20:51:57.720960100 +0000
 +++ v8/src/flags/flags.cc
-@@ -15,6 +15,10 @@
+@@ -16,6 +16,10 @@
  #include <set>
  #include <sstream>
  
@@ -17,7 +17,7 @@ $NetBSD$
  #include "src/base/functional.h"
  #include "src/base/lazy-instance.h"
  #include "src/base/platform/platform.h"
-@@ -34,7 +38,11 @@
+@@ -35,7 +39,11 @@
  namespace v8::internal {
  
  // Define {v8_flags}, declared in flags.h.
@@ -29,7 +29,7 @@ $NetBSD$
  
  // {v8_flags} needs to be aligned to a memory page, and the size needs to be a
  // multiple of a page size. This is required for memory-protection of the memory
-@@ -806,6 +814,10 @@ void FlagList::FreezeFlags() {
+@@ -807,6 +815,10 @@ void FlagList::FreezeFlags() {
    // Note that for string flags we only protect the pointer itself, but not the
    // string storage. TODO(12887): Fix this.
    base::OS::SetDataReadOnly(&v8_flags, sizeof(v8_flags));

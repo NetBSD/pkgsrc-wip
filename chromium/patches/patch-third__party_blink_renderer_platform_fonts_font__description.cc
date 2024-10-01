@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2024-08-21 22:46:28.077429000 +0000
+--- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2024-09-24 20:49:37.595661600 +0000
 +++ third_party/blink/renderer/platform/fonts/font_description.cc
 @@ -44,7 +44,7 @@
  #include "third_party/blink/renderer/platform/wtf/text/string_hash.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/sys-info.cc.orig	2024-08-21 22:48:49.551941000 +0000
+--- v8/src/base/sys-info.cc.orig	2024-09-24 20:51:57.382930500 +0000
 +++ v8/src/base/sys-info.cc
 @@ -37,8 +37,12 @@ namespace base {
  

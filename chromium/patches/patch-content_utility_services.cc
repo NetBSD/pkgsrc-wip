@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/services.cc.orig	2024-08-21 22:46:19.377536300 +0000
+--- content/utility/services.cc.orig	2024-09-24 20:49:29.126918300 +0000
 +++ content/utility/services.cc
 @@ -74,7 +74,7 @@
  extern sandbox::TargetServices* g_utility_target_services;
@@ -15,7 +15,7 @@ $NetBSD$
  #include "media/mojo/services/mojo_video_encode_accelerator_provider_factory.h"
  #include "sandbox/linux/services/libc_interceptor.h"
  #include "sandbox/policy/mojom/sandbox.mojom.h"
-@@ -97,7 +97,7 @@ extern sandbox::TargetServices* g_utilit
+@@ -102,7 +102,7 @@ extern sandbox::TargetServices* g_utilit
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -24,7 +24,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  #include "content/common/features.h"
  #include "media/mojo/services/stable_video_decoder_factory_process_service.h"  // nogncheck
-@@ -115,13 +115,13 @@ extern sandbox::TargetServices* g_utilit
+@@ -120,13 +120,13 @@ extern sandbox::TargetServices* g_utilit
  #endif  // BUILDFLAG(ENABLE_ACCESSIBILITY_SERVICE)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
@@ -40,7 +40,7 @@ $NetBSD$
  #include "media/capture/capture_switches.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) ||
          // BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -239,7 +239,7 @@ auto RunAudio(mojo::PendingReceiver<audi
+@@ -244,7 +244,7 @@ auto RunAudio(mojo::PendingReceiver<audi
        << "task_policy_set TASK_QOS_POLICY";
  #endif
  
@@ -49,7 +49,7 @@ $NetBSD$
    auto* command_line = base::CommandLine::ForCurrentProcess();
    if (sandbox::policy::SandboxTypeFromCommandLine(*command_line) ==
        sandbox::mojom::Sandbox::kNoSandbox) {
-@@ -328,7 +328,7 @@ auto RunVideoCapture(
+@@ -340,7 +340,7 @@ auto RunVideoCapture(
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
    auto service = std::make_unique<UtilityThreadVideoCaptureServiceImpl>(
        std::move(receiver), base::SingleThreadTaskRunner::GetCurrentDefault());
@@ -58,7 +58,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    {
  #else
-@@ -384,7 +384,7 @@ auto RunOOPArcVideoAcceleratorFactorySer
+@@ -396,7 +396,7 @@ auto RunOOPArcVideoAcceleratorFactorySer
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -67,7 +67,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  auto RunStableVideoDecoderFactoryProcessService(
      mojo::PendingReceiver<
-@@ -395,7 +395,7 @@ auto RunStableVideoDecoderFactoryProcess
+@@ -407,7 +407,7 @@ auto RunStableVideoDecoderFactoryProcess
  #endif  // (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)) &&
          // (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  
@@ -76,7 +76,7 @@ $NetBSD$
  auto RunVideoEncodeAcceleratorProviderFactory(
      mojo::PendingReceiver<media::mojom::VideoEncodeAcceleratorProviderFactory>
          receiver) {
-@@ -418,7 +418,7 @@ void RegisterIOThreadServices(mojo::Serv
+@@ -430,7 +430,7 @@ void RegisterIOThreadServices(mojo::Serv
    // loop of type IO that can get notified when pipes have data.
    services.Add(RunNetworkService);
  
@@ -85,7 +85,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
    if (base::FeatureList::IsEnabled(
            features::kRunStableVideoDecoderFactoryProcessServiceOnIOThread)) {
-@@ -470,7 +470,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -486,7 +486,7 @@ void RegisterMainThreadServices(mojo::Se
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -94,7 +94,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
    if (!base::FeatureList::IsEnabled(
            features::kRunStableVideoDecoderFactoryProcessServiceOnIOThread)) {
-@@ -479,7 +479,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -495,7 +495,7 @@ void RegisterMainThreadServices(mojo::Se
  #endif  // (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)) &&
          // (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  

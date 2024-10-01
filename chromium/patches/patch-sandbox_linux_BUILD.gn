@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/BUILD.gn.orig	2024-08-21 22:46:24.752087800 +0000
+--- sandbox/linux/BUILD.gn.orig	2024-09-24 20:49:34.286371200 +0000
 +++ sandbox/linux/BUILD.gn
 @@ -12,11 +12,11 @@ if (is_android) {
  }

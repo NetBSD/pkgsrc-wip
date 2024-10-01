@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-08-21 22:46:11.300707300 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-09-24 20:49:20.761184200 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h
 @@ -27,7 +27,7 @@
  #include "ui/views/layout/flex_layout_view.h"
@@ -30,7 +30,7 @@ $NetBSD$
    void RemovedFromWidget() override;
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   gfx::Insets MirroredFrameBorderInsets() const override;
+   gfx::Insets RestoredMirroredFrameBorderInsets() const override;
    gfx::Insets GetInputInsets() const override;
    SkRRect GetRestoredClipRegion() const override;
 @@ -195,7 +195,7 @@ class PictureInPictureBrowserFrameView
@@ -42,7 +42,7 @@ $NetBSD$
    // Returns whether a client-side shadow should be drawn for the window.
    bool ShouldDrawFrameShadow() const;
  
-@@ -371,7 +371,7 @@ class PictureInPictureBrowserFrameView
+@@ -376,7 +376,7 @@ class PictureInPictureBrowserFrameView
    // `top_bar_color_animation_`.
    std::optional<SkColor> current_foreground_color_;
  

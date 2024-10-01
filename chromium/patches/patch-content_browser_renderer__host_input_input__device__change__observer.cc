@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-08-21 22:46:18.195415000 +0000
+--- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-09-24 20:49:28.183835500 +0000
 +++ content/browser/renderer_host/input/input_device_change_observer.cc
 @@ -9,7 +9,7 @@
  

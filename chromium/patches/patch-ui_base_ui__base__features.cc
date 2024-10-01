@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2024-08-21 22:46:46.191287800 +0000
+--- ui/base/ui_base_features.cc.orig	2024-09-24 20:49:58.234472800 +0000
 +++ ui/base/ui_base_features.cc
-@@ -157,7 +157,7 @@ BASE_FEATURE(kWaylandPerSurfaceScale,
+@@ -162,7 +162,7 @@ BASE_FEATURE(kWaylandTextInputV3,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_OZONE)
  
@@ -15,7 +15,7 @@ $NetBSD$
  // If this feature is enabled, users not specify --ozone-platform-hint switch
  // will get --ozone-platform-hint=auto treatment. https://crbug.com/40250220.
  COMPONENT_EXPORT(UI_BASE_FEATURES)
-@@ -259,7 +259,7 @@ BASE_FEATURE(kExperimentalFlingAnimation
+@@ -264,7 +264,7 @@ BASE_FEATURE(kExperimentalFlingAnimation
               "ExperimentalFlingAnimation",
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -24,7 +24,7 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_ASH) && \
       !BUILDFLAG(IS_CHROMEOS_LACROS))
               base::FEATURE_ENABLED_BY_DEFAULT
-@@ -363,7 +363,7 @@ bool IsForcedColorsEnabled() {
+@@ -366,7 +366,7 @@ bool IsForcedColorsEnabled() {
  BASE_FEATURE(kEyeDropper,
               "EyeDropper",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

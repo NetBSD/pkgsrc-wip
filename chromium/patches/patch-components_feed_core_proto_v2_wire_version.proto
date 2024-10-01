@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/proto/v2/wire/version.proto.orig	2024-08-21 22:46:15.245112200 +0000
+--- components/feed/core/proto/v2/wire/version.proto.orig	2024-09-24 20:49:24.760535200 +0000
 +++ components/feed/core/proto/v2/wire/version.proto
 @@ -25,8 +25,8 @@ message Version {
      BETA = 3;

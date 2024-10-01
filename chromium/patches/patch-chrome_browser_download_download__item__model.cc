@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_item_model.cc.orig	2024-08-21 22:46:08.728443400 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2024-09-24 20:49:18.089949800 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -814,7 +814,7 @@ bool DownloadItemModel::IsCommandChecked
               download_crx_util::IsExtensionDownload(*download_);

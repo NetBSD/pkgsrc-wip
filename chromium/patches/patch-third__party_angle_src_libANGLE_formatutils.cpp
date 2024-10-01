@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/formatutils.cpp.orig	2024-08-21 22:46:54.753166400 +0000
+--- third_party/angle/src/libANGLE/formatutils.cpp.orig	2024-09-24 20:50:07.693302900 +0000
 +++ third_party/angle/src/libANGLE/formatutils.cpp
 @@ -1475,7 +1475,7 @@ static InternalFormatInfoMap BuildIntern
      AddYUVFormat(&map,  GL_G8_B8R8_2PLANE_420_UNORM_ANGLE,            true,   8,   8,  8,   0,  0,  GL_G8_B8R8_2PLANE_420_UNORM_ANGLE,    GL_UNSIGNED_BYTE, GL_UNSIGNED_NORMALIZED, false, RequireExt<&Extensions::yuvInternalFormatANGLE>,          RequireExt<&Extensions::yuvInternalFormatANGLE>,          RequireExt<&Extensions::yuvInternalFormatANGLE>,          NeverSupported, NeverSupported);

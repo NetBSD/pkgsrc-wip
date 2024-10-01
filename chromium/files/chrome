@@ -50,7 +50,10 @@ fi
 # Chromium is failing to start a new pulseaudio server,
 # however can use an already started.
 #
-pgrep -x pulseaudio || pulseaudio --start --log-target=syslog --exit-idle-time=-1
+BUILT_WITH_PULSE=@PULSE@
+if [ "$BUILT_WITH_PULSE" = "yes" ]; then
+	pgrep -x pulseaudio || pulseaudio --start --log-target=syslog --exit-idle-time=-1
+fi
 
 # Always use our versions of ffmpeg libs.
 # This also makes RPMs find the compatibly-named library symlinks.

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/BUILD.gn.orig	2024-08-21 22:46:18.661462800 +0000
+--- content/common/BUILD.gn.orig	2024-09-24 20:49:28.416856000 +0000
 +++ content/common/BUILD.gn
-@@ -388,19 +388,28 @@ source_set("common") {
+@@ -386,19 +386,28 @@ source_set("common") {
    }
  
    if (is_linux || is_chromeos) {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2024-08-21 22:46:10.478623000 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2024-09-24 20:49:19.866105800 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
 @@ -85,7 +85,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
@@ -24,7 +24,7 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
    syncer::SyncPrefs prefs(profile->GetPrefs());
    local_sync_backend_enabled = prefs.IsLocalSyncEnabled();
-@@ -271,7 +271,7 @@ SyncServiceFactory::SyncServiceFactory()
+@@ -276,7 +276,7 @@ SyncServiceFactory::SyncServiceFactory()
    DependsOn(ProfilePasswordStoreFactory::GetInstance());
    DependsOn(PowerBookmarkServiceFactory::GetInstance());
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

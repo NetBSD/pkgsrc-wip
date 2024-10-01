@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/BUILD.gn.orig	2024-08-21 22:46:22.176823600 +0000
+--- media/audio/BUILD.gn.orig	2024-09-24 20:49:31.620137200 +0000
 +++ media/audio/BUILD.gn
-@@ -270,10 +270,24 @@ source_set("audio") {
+@@ -268,10 +268,35 @@ source_set("audio") {
      deps += [ "//media/base/android:media_jni_headers" ]
    }
  
@@ -15,7 +15,7 @@ $NetBSD$
      sources += [ "linux/audio_manager_linux.cc" ]
    }
  
-+  if (is_bsd) {
++  if (is_bsd && !use_audioio) {
 +    sources += [ "sndio/audio_manager_sndio.cc" ]
 +  }
 +
@@ -26,6 +26,17 @@ $NetBSD$
 +      "sndio/sndio_input.h",
 +      "sndio/sndio_output.cc",
 +      "sndio/sndio_output.h"
++    ]
++   }
++
++  if (use_audioio) {
++    sources += [
++      "audioio/audio_manager_audioio.cc",
++      "audioio/audio_manager_audioio.h",
++      "audioio/audioio_input.cc",
++      "audioio/audioio_input.h",
++      "audioio/audioio_output.cc",
++      "audioio/audioio_output.h"
 +    ]
 +   }
 +

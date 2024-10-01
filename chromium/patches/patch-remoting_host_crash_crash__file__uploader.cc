@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/crash/crash_file_uploader.cc.orig	2024-08-21 22:46:24.608073000 +0000
+--- remoting/host/crash/crash_file_uploader.cc.orig	2024-09-24 20:49:34.137358200 +0000
 +++ remoting/host/crash/crash_file_uploader.cc
 @@ -44,7 +44,7 @@ constexpr char kMinidumpFileName[] = "du
  

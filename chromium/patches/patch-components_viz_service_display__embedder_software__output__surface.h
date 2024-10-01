@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.h.orig	2024-08-21 22:46:17.744368800 +0000
+--- components/viz/service/display_embedder/software_output_surface.h.orig	2024-09-24 20:49:27.715794600 +0000
 +++ components/viz/service/display_embedder/software_output_surface.h
-@@ -45,7 +45,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
+@@ -44,7 +44,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
    gfx::OverlayTransform GetDisplayTransform() override;
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -15,7 +15,7 @@ $NetBSD$
    void SetNeedsSwapSizeNotifications(
        bool needs_swap_size_notifications) override;
  #endif
-@@ -65,7 +65,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
+@@ -64,7 +64,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

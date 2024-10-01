@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_utils.cc.orig	2024-08-21 22:46:15.919181300 +0000
+--- components/policy/core/common/policy_utils.cc.orig	2024-09-24 20:49:25.611610000 +0000
 +++ components/policy/core/common/policy_utils.cc
-@@ -28,7 +28,7 @@ bool IsPolicyTestingEnabled(PrefService*
+@@ -22,7 +22,7 @@ bool IsPolicyTestingEnabled(PrefService*
      return true;
    }
  

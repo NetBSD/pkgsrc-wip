@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-08-21 22:46:11.196696800 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-09-24 20:49:20.654174800 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
-@@ -454,7 +454,7 @@ std::u16string TaskManagerTableModel::Ge
+@@ -459,7 +459,7 @@ std::u16string TaskManagerTableModel::Ge
            ? stringifier_->backgrounded_string()
            : stringifier_->foregrounded_string();
  
@@ -15,7 +15,7 @@ $NetBSD$
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int fd_count = observed_task_manager()->GetOpenFdCount(tasks_[row]);
        return fd_count >= 0 ? base::FormatNumber(fd_count)
-@@ -621,7 +621,7 @@ int TaskManagerTableModel::CompareValues
+@@ -626,7 +626,7 @@ int TaskManagerTableModel::CompareValues
        return BooleanCompare(is_proc1_bg, is_proc2_bg);
      }
  
@@ -24,7 +24,7 @@ $NetBSD$
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int proc1_fd_count =
            observed_task_manager()->GetOpenFdCount(tasks_[row1]);
-@@ -806,7 +806,7 @@ void TaskManagerTableModel::UpdateRefres
+@@ -811,7 +811,7 @@ void TaskManagerTableModel::UpdateRefres
        type = REFRESH_TYPE_KEEPALIVE_COUNT;
        break;
  

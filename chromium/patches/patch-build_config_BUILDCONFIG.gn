@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/BUILDCONFIG.gn.orig	2024-08-21 22:46:04.988059500 +0000
+--- build/config/BUILDCONFIG.gn.orig	2024-09-24 20:49:14.037594300 +0000
 +++ build/config/BUILDCONFIG.gn
 @@ -136,7 +136,8 @@ declare_args() {
    is_official_build = false

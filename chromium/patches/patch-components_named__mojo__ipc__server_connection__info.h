@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2024-08-21 22:46:15.522140500 +0000
+--- components/named_mojo_ipc_server/connection_info.h.orig	2024-09-24 20:49:25.184572500 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
-@@ -14,8 +14,14 @@
+@@ -12,8 +12,14 @@
  #include "base/win/scoped_handle.h"
  #elif BUILDFLAG(IS_MAC)
  #include <bsm/libbsm.h>
@@ -22,9 +22,9 @@ $NetBSD$
  #endif
  
  namespace named_mojo_ipc_server {
-@@ -33,7 +39,7 @@ struct ConnectionInfo {
-   std::optional<base::win::ScopedHandle> impersonation_token{};
- #elif BUILDFLAG(IS_MAC)
+@@ -29,7 +35,7 @@ struct ConnectionInfo {
+   base::ProcessId pid{};
+ #if BUILDFLAG(IS_MAC)
    audit_token_t audit_token{};
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

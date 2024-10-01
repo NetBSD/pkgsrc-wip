@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- BUILD.gn.orig	2024-08-21 22:46:03.067862300 +0000
+--- BUILD.gn.orig	2024-09-24 20:49:12.063421000 +0000
 +++ BUILD.gn
 @@ -66,7 +66,7 @@ declare_args() {
    root_extra_deps = []
@@ -23,7 +23,7 @@ $NetBSD$
        "//net:net_unittests",
        "//sandbox:sandbox_unittests",
        "//services:services_unittests",
-@@ -431,7 +430,7 @@ group("gn_all") {
+@@ -428,7 +427,7 @@ group("gn_all") {
        }
      }
  
@@ -32,7 +32,7 @@ $NetBSD$
        deps += [
          "//third_party/breakpad:breakpad_unittests",
          "//third_party/breakpad:core-2-minidump",
-@@ -626,6 +625,15 @@ group("gn_all") {
+@@ -623,6 +622,15 @@ group("gn_all") {
        }
      }
  
@@ -48,7 +48,7 @@ $NetBSD$
      if (is_mac) {
        deps += [
          "//third_party/breakpad:dump_syms($host_system_allocator_toolchain)",
-@@ -674,7 +682,7 @@ group("gn_all") {
+@@ -671,7 +679,7 @@ group("gn_all") {
        }
      }
  
@@ -57,16 +57,16 @@ $NetBSD$
        # The official builders use this binary from the default toolchain's
        # output directory after building in order to upload the symbols of that
        # binary. They build the binary like `ninja symupload` which requires the
-@@ -1124,7 +1132,7 @@ if (use_blink && !is_cronet_build) {
+@@ -1111,7 +1119,7 @@ if (use_blink && !is_cronet_build) {
      ]
    }
  
 -  if (!is_chromeos_ash && !is_ios && !is_fuchsia && !is_android && !is_castos) {
 +  if (!is_chromeos_ash && !is_ios && !is_fuchsia && !is_android && !is_castos && !is_bsd) {
+     out_dir = get_path_info(root_build_dir, "name")
      script_test("chrome_wpt_tests") {
        script = "//third_party/blink/tools/run_wpt_tests.py"
-       args = [
-@@ -1221,7 +1229,7 @@ if (use_blink && !is_cronet_build) {
+@@ -1209,7 +1217,7 @@ if (use_blink && !is_cronet_build) {
        data_deps += [ "//content/web_test:web_test_common_mojom_js_data_deps" ]
      }
  
@@ -75,7 +75,7 @@ $NetBSD$
        # Using the default toolchain for this tool, as it's run during tests not
        # during the build. This places a symlink in the root_build_dir for scrips
        # to use.
-@@ -1235,7 +1243,7 @@ if (use_blink && !is_cronet_build) {
+@@ -1223,7 +1231,7 @@ if (use_blink && !is_cronet_build) {
        data_deps += [ "//third_party/breakpad:dump_syms" ]
      }
  
@@ -84,7 +84,7 @@ $NetBSD$
        # Using the default toolchain for this tool, as it's run during tests not
        # during the build. This places a symlink in the root_build_dir for scrips
        # to use.
-@@ -1702,7 +1710,7 @@ group("chromium_builder_perf") {
+@@ -1693,7 +1701,7 @@ group("chromium_builder_perf") {
        data_deps += [ "//chrome/test:performance_browser_tests" ]
      }
  

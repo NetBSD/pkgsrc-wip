@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/examples/widget_example.cc.orig	2024-08-21 22:46:46.786348800 +0000
+--- ui/views/examples/widget_example.cc.orig	2024-09-24 20:49:58.948535400 +0000
 +++ ui/views/examples/widget_example.cc
-@@ -49,7 +49,7 @@ void WidgetExample::CreateExampleView(Vi
+@@ -50,7 +50,7 @@ void WidgetExample::CreateExampleView(Vi
    modal_button->SetCallback(
        base::BindRepeating(&WidgetExample::CreateDialogWidget,
                            base::Unretained(this), modal_button, true));

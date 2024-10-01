@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2024-08-21 22:46:11.207697900 +0000
+--- chrome/browser/ui/ui_features.h.orig	2024-09-24 20:49:20.665176000 +0000
 +++ chrome/browser/ui/ui_features.h
-@@ -80,7 +80,7 @@ BASE_DECLARE_FEATURE(kAccessCodeCastUI);
- 
- BASE_DECLARE_FEATURE(kEvDetailsInPageInfo);
+@@ -78,7 +78,7 @@ bool IsExtensionMenuInRootAppMenu();
+ BASE_DECLARE_FEATURE(kAccessCodeCastUI);
+ #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
  
-@@ -239,7 +239,7 @@ bool IsToolbarPinningEnabled();
+@@ -256,7 +256,7 @@ bool IsToolbarPinningEnabled();
  
  BASE_DECLARE_FEATURE(kTopChromeWebUIUsesSpareRenderer);
  
@@ -24,7 +24,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kUpdateTextOptions);
  extern const base::FeatureParam<int> kUpdateTextOptionNumber;
  #endif
-@@ -266,7 +266,7 @@ BASE_DECLARE_FEATURE(kViewsJSAppModalDia
+@@ -283,7 +283,7 @@ BASE_DECLARE_FEATURE(kViewsJSAppModalDia
  
  BASE_DECLARE_FEATURE(kStopLoadingAnimationForHiddenWindow);
  

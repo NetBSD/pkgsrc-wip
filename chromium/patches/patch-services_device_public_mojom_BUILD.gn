@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/mojom/BUILD.gn.orig	2024-08-21 22:46:24.871100200 +0000
+--- services/device/public/mojom/BUILD.gn.orig	2024-09-24 20:49:34.408382000 +0000
 +++ services/device/public/mojom/BUILD.gn
-@@ -97,7 +97,7 @@ mojom("device_service") {
+@@ -98,7 +98,7 @@ mojom("device_service") {
    enable_js_fuzzing = false
  
    enabled_features = []

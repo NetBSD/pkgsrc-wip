@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/on_device_model_service.h.orig	2024-08-21 22:46:24.997113000 +0000
+--- services/on_device_model/on_device_model_service.h.orig	2024-09-24 20:49:34.539393400 +0000
 +++ services/on_device_model/on_device_model_service.h
 @@ -22,6 +22,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

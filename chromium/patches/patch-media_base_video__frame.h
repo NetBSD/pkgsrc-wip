@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2024-08-21 22:46:22.248831000 +0000
+--- media/base/video_frame.h.orig	2024-09-24 20:49:31.691143500 +0000
 +++ media/base/video_frame.h
-@@ -45,7 +45,7 @@
+@@ -50,7 +50,7 @@
  #include "base/apple/scoped_cftyperef.h"
  #endif  // BUILDFLAG(IS_APPLE)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/files/scoped_file.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -111,7 +111,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -116,7 +116,7 @@ class MEDIA_EXPORT VideoFrame : public b
      STORAGE_UNOWNED_MEMORY = 2,  // External, non owned data pointers.
      STORAGE_OWNED_MEMORY = 3,  // VideoFrame has allocated its own data buffer.
      STORAGE_SHMEM = 4,         // Backed by read-only shared memory.
@@ -24,7 +24,7 @@ $NetBSD$
      // TODO(mcasas): Consider turning this type into STORAGE_NATIVE
      // based on the idea of using this same enum value for both DMA
      // buffers on Linux and CVPixelBuffers on Mac (which currently use
-@@ -402,7 +402,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -407,7 +407,7 @@ class MEDIA_EXPORT VideoFrame : public b
        ReleaseMailboxAndGpuMemoryBufferCB mailbox_holder_and_gmb_release_cb,
        base::TimeDelta timestamp);
  
@@ -33,7 +33,7 @@ $NetBSD$
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -721,7 +721,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -726,7 +726,7 @@ class MEDIA_EXPORT VideoFrame : public b
    scoped_refptr<gpu::ClientSharedImage> shared_image(
        size_t texture_index) const;
  
@@ -42,7 +42,7 @@ $NetBSD$
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -963,7 +963,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -968,7 +968,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
    bool is_mappable_si_enabled_ = false;
  

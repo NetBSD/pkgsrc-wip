@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-08-21 22:46:09.253497100 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-09-24 20:49:18.619996300 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
 @@ -196,11 +196,11 @@
  #include "chrome/notification_helper/notification_helper_constants.h"

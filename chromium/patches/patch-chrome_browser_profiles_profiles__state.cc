@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profiles_state.cc.orig	2024-08-21 22:46:09.649537800 +0000
+--- chrome/browser/profiles/profiles_state.cc.orig	2024-09-24 20:49:19.036033000 +0000
 +++ chrome/browser/profiles/profiles_state.cc
 @@ -196,7 +196,7 @@ bool IsGuestModeRequested(const base::Co
                            PrefService* local_state,

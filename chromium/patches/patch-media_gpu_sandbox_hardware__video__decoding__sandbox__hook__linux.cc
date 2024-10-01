@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2024-08-21 22:46:22.385845000 +0000
+--- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2024-09-24 20:49:31.830155600 +0000
 +++ media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc
 @@ -16,7 +16,9 @@
  #include "media/gpu/vaapi/vaapi_wrapper.h"
@@ -25,7 +25,7 @@ $NetBSD$
                                bool include_sys_dev_char,
                                bool read_write) {
 @@ -176,6 +179,7 @@ bool HardwareVideoDecodingPreSandboxHook
-   NOTREACHED_NORETURN();
+   NOTREACHED();
  #endif  // BUILDFLAG(USE_V4L2_CODEC)
  }
 +#endif

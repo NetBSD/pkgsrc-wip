@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_posix.cc.orig	2024-08-21 22:46:08.552425400 +0000
+--- chrome/browser/chrome_browser_main_posix.cc.orig	2024-09-24 20:49:17.901933400 +0000
 +++ chrome/browser/chrome_browser_main_posix.cc
 @@ -79,7 +79,7 @@ void ExitHandler::ExitWhenPossibleOnUITh
    } else {

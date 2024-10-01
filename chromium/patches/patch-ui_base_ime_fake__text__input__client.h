@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/fake_text_input_client.h.orig	2024-08-21 22:46:46.157284300 +0000
+--- ui/base/ime/fake_text_input_client.h.orig	2024-09-24 20:49:58.203470200 +0000
 +++ ui/base/ime/fake_text_input_client.h
-@@ -98,7 +98,7 @@ class FakeTextInputClient : public TextI
+@@ -101,7 +101,7 @@ class FakeTextInputClient : public TextI
    void SetTextEditCommandForNextKeyEvent(TextEditCommand command) override;
    ukm::SourceId GetClientSourceForMetrics() const override;
    bool ShouldDoLearning() override;

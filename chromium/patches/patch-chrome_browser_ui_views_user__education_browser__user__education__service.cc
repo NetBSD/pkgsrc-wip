@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-08-21 22:46:11.443722000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-09-24 20:49:20.913197500 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -1008,7 +1008,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -957,7 +957,7 @@ void MaybeRegisterChromeFeaturePromos(
                      FeaturePromoSpecification::AcceleratorInfo())
                      .SetBubbleArrow(HelpBubbleArrow::kTopLeft)));
  

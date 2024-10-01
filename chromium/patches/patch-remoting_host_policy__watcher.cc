@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/policy_watcher.cc.orig	2024-08-21 22:46:24.654077800 +0000
+--- remoting/host/policy_watcher.cc.orig	2024-09-24 20:49:34.185362300 +0000
 +++ remoting/host/policy_watcher.cc
 @@ -178,7 +178,7 @@ base::Value::Dict PolicyWatcher::GetDefa
               true);

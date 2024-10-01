@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-08-21 22:46:04.596019300 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-09-24 20:49:13.632558600 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h
 @@ -168,7 +168,7 @@ constexpr bool kUseLazyCommit = false;
  // This may be required on more platforms in the future.

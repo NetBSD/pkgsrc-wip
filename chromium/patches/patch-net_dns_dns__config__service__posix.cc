@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_config_service_posix.cc.orig	2024-08-21 22:46:23.768987000 +0000
+--- net/dns/dns_config_service_posix.cc.orig	2024-09-24 20:49:33.090266200 +0000
 +++ net/dns/dns_config_service_posix.cc
 @@ -39,6 +39,11 @@
  #include "net/dns/dns_config_watcher_mac.h"

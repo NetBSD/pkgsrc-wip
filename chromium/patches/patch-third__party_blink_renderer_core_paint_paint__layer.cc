@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2024-08-21 22:46:27.458365700 +0000
+--- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2024-09-24 20:49:36.831594500 +0000
 +++ third_party/blink/renderer/core/paint/paint_layer.cc
 @@ -120,7 +120,7 @@ namespace blink {
  

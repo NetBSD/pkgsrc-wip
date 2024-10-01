@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2024-08-21 22:46:18.262421800 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2024-09-24 20:49:28.254841800 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
 @@ -102,7 +102,7 @@
  #include "media/fuchsia_media_codec_provider_impl.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/browser/child_thread_type_switcher_linux.h"
  #include "media/mojo/mojom/video_encode_accelerator.mojom.h"
  #endif
-@@ -602,7 +602,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -611,7 +611,7 @@ class CONTENT_EXPORT RenderProcessHostIm
    // Sets this RenderProcessHost to be guest only. For Testing only.
    void SetForGuestsOnlyForTesting();
  
@@ -24,7 +24,7 @@ $NetBSD$
    // Launch the zygote early in the browser startup.
    static void EarlyZygoteLaunch();
  #endif  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_MAC)
-@@ -967,7 +967,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -976,7 +976,7 @@ class CONTENT_EXPORT RenderProcessHostIm
      std::unique_ptr<service_manager::BinderRegistry> binders_;
      mojo::Receiver<mojom::ChildProcessHost> receiver_{this};
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/mock_network_change_notifier.h.orig	2024-08-21 22:46:23.528962400 +0000
+--- net/base/mock_network_change_notifier.h.orig	2024-09-24 20:49:32.838244000 +0000
 +++ net/base/mock_network_change_notifier.h
 @@ -84,7 +84,7 @@ class MockNetworkChangeNotifier : public
    // use_default_connection_cost_implementation is set to true.

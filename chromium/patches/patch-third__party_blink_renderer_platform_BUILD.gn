@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2024-08-21 22:46:28.031424300 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2024-09-24 20:49:37.549657600 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
-@@ -2003,7 +2003,7 @@ static_library("test_support") {
+@@ -2007,7 +2007,7 @@ static_library("test_support") {
    ]
  
    # fuzzed_data_provider may not work with a custom toolchain.

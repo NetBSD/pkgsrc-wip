@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/memory/partition_allocator/inspect_utils.h.orig	2024-08-21 22:46:45.373204000 +0000
+--- tools/memory/partition_allocator/inspect_utils.h.orig	2024-09-24 20:49:57.546412500 +0000
 +++ tools/memory/partition_allocator/inspect_utils.h
 @@ -61,7 +61,7 @@ class RemoteProcessMemoryReader {
    const pid_t pid_;

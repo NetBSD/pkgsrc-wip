@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/webui/web_ui_util.cc.orig	2024-08-21 22:46:46.194288300 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2024-09-24 20:49:58.236473000 +0000
 +++ ui/base/webui/web_ui_util.cc
-@@ -39,7 +39,7 @@ namespace {
+@@ -44,7 +44,7 @@ namespace {
  constexpr float kMaxScaleFactor = 1000.0f;
  
  std::string GetFontFamilyMd() {
@@ -15,7 +15,7 @@ $NetBSD$
    return "Roboto, " + GetFontFamily();
  #else
    return GetFontFamily();
-@@ -216,7 +216,7 @@ std::string GetFontFamily() {
+@@ -221,7 +221,7 @@ std::string GetFontFamily() {
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_message_utils.h.orig	2024-08-21 22:46:22.169823000 +0000
+--- ipc/ipc_message_utils.h.orig	2024-09-24 20:49:31.613136500 +0000
 +++ ipc/ipc_message_utils.h
 @@ -214,7 +214,7 @@ struct ParamTraits<unsigned int> {
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have

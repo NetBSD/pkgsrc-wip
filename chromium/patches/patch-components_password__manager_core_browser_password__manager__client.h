@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_client.h.orig	2024-08-21 22:46:15.741163000 +0000
+--- components/password_manager/core/browser/password_manager_client.h.orig	2024-09-24 20:49:25.423593300 +0000
 +++ components/password_manager/core/browser/password_manager_client.h
 @@ -30,7 +30,7 @@
  #include "net/cert/cert_status_flags.h"
@@ -21,6 +21,6 @@ $NetBSD$
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // Creates and show the cross domain confirmation popup.
-   virtual std::unique_ptr<PasswordCrossDomainConfirmationPopupController>
-   ShowCrossDomainConfirmationPopup(const gfx::RectF& element_bounds,
+ 
+   // Shows the bubble with the details of the `form`.
+   virtual void OpenPasswordDetailsBubble(

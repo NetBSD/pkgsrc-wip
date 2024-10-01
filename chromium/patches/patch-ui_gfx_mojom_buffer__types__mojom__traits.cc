@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/buffer_types_mojom_traits.cc.orig	2024-08-21 22:46:46.486318000 +0000
+--- ui/gfx/mojom/buffer_types_mojom_traits.cc.orig	2024-09-24 20:49:58.523498300 +0000
 +++ ui/gfx/mojom/buffer_types_mojom_traits.cc
 @@ -33,7 +33,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
        return gfx::mojom::GpuMemoryBufferPlatformHandle::NewSharedMemoryHandle(

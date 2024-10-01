@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/tab_strip_region_view.cc.orig	2024-08-21 22:46:11.301707500 +0000
+--- chrome/browser/ui/views/frame/tab_strip_region_view.cc.orig	2024-09-24 20:49:20.763184300 +0000
 +++ chrome/browser/ui/views/frame/tab_strip_region_view.cc
-@@ -201,7 +201,7 @@ TabStripRegionView::TabStripRegionView(s
+@@ -204,7 +204,7 @@ TabStripRegionView::TabStripRegionView(s
  
      // TODO(crbug.com/40118868): Revisit the macro expression once build flag
      // switch of lacros-chrome is complete.

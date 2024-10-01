@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-08-21 22:46:11.173694400 +0000
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-09-24 20:49:20.632172800 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
 @@ -86,7 +86,7 @@
  #include "chromeos/startup/browser_params_proxy.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2024-08-21 22:46:10.467621800 +0000
+--- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2024-09-24 20:49:19.854104500 +0000
 +++ chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc
 @@ -14,7 +14,7 @@
  #include "components/supervised_user/core/browser/supervised_user_service.h"
@@ -23,4 +23,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    extensions_metrics_delegate =
        std::make_unique<SupervisedUserExtensionsMetricsDelegateImpl>(
-           extensions::ExtensionRegistry::Get(profile), *profile->GetPrefs());
+           extensions::ExtensionRegistry::Get(profile), profile);

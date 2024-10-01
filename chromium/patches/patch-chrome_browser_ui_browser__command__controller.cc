@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2024-08-21 22:46:11.036680200 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2024-09-24 20:49:20.502161500 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
-@@ -129,7 +129,7 @@
+@@ -130,7 +130,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
  #endif
-@@ -138,7 +138,7 @@
+@@ -139,7 +139,7 @@
  #include "ui/ozone/public/ozone_platform.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/ui/shortcuts/desktop_shortcuts_utils.h"
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -315,7 +315,7 @@ bool BrowserCommandController::IsReserve
+@@ -316,7 +316,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -567,7 +567,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -571,7 +571,7 @@ bool BrowserCommandController::ExecuteCo
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -42,7 +42,7 @@ $NetBSD$
      case IDC_MINIMIZE_WINDOW:
        browser_->window()->Minimize();
        break;
-@@ -579,7 +579,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -583,7 +583,7 @@ bool BrowserCommandController::ExecuteCo
        break;
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD$
      case IDC_USE_SYSTEM_TITLE_BAR: {
        PrefService* prefs = profile()->GetPrefs();
        prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -773,7 +773,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -777,7 +777,7 @@ bool BrowserCommandController::ExecuteCo
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -60,7 +60,7 @@ $NetBSD$
        if (base::FeatureList::IsEnabled(features::kShortcutsNotApps)) {
          chrome::CreateDesktopShortcutForActiveWebContents(browser_);
        } else {
-@@ -1272,12 +1272,12 @@ void BrowserCommandController::InitComma
+@@ -1280,12 +1280,12 @@ void BrowserCommandController::InitComma
  #endif
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -75,7 +75,7 @@ $NetBSD$
    bool use_system_title_bar = true;
  #if BUILDFLAG(IS_OZONE)
    use_system_title_bar = ui::OzonePlatform::GetInstance()
-@@ -1592,7 +1592,7 @@ void BrowserCommandController::UpdateCom
+@@ -1600,7 +1600,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  

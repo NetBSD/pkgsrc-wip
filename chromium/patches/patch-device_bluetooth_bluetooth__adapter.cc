@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/bluetooth/bluetooth_adapter.cc.orig	2024-08-21 22:46:19.524551400 +0000
+--- device/bluetooth/bluetooth_adapter.cc.orig	2024-09-24 20:49:29.182923300 +0000
 +++ device/bluetooth/bluetooth_adapter.cc
 @@ -32,7 +32,7 @@ namespace device {
  BluetoothAdapter::ServiceOptions::ServiceOptions() = default;

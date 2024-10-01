@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_host.cc.orig	2024-08-21 22:46:24.639076200 +0000
+--- remoting/host/it2me/it2me_host.cc.orig	2024-09-24 20:49:34.169360900 +0000
 +++ remoting/host/it2me/it2me_host.cc
-@@ -52,7 +52,7 @@
+@@ -56,7 +56,7 @@
  #include "remoting/host/chromeos/features.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "remoting/host/linux/wayland_manager.h"
  #include "remoting/host/linux/wayland_utils.h"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -180,7 +180,7 @@ void It2MeHost::Connect(
+@@ -184,7 +184,7 @@ void It2MeHost::Connect(
  
    OnPolicyUpdate(std::move(policies));
  
@@ -24,7 +24,7 @@ $NetBSD$
    if (IsRunningWayland()) {
      WaylandManager::Get()->Init(host_context_->ui_task_runner());
    }
-@@ -340,7 +340,7 @@ void It2MeHost::ConnectOnNetworkThread(
+@@ -344,7 +344,7 @@ void It2MeHost::ConnectOnNetworkThread(
  
    // Set up the desktop environment options.
    DesktopEnvironmentOptions options(DesktopEnvironmentOptions::CreateDefault());

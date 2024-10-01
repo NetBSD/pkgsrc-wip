@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context_builder.cc.orig	2024-08-21 22:46:24.397051300 +0000
+--- net/url_request/url_request_context_builder.cc.orig	2024-09-24 20:49:33.711320600 +0000
 +++ net/url_request/url_request_context_builder.cc
-@@ -441,7 +441,7 @@ std::unique_ptr<URLRequestContext> URLRe
+@@ -446,7 +446,7 @@ std::unique_ptr<URLRequestContext> URLRe
    }
  
    if (!proxy_resolution_service_) {

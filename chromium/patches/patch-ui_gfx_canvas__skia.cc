@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/canvas_skia.cc.orig	2024-08-21 22:46:46.453314800 +0000
+--- ui/gfx/canvas_skia.cc.orig	2024-09-24 20:49:58.491495400 +0000
 +++ ui/gfx/canvas_skia.cc
 @@ -213,7 +213,7 @@ void Canvas::DrawStringRectWithFlags(con
      Range range = StripAcceleratorChars(flags, &adjusted_text);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-08-21 22:46:11.417719400 +0000
+--- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-09-24 20:49:20.886195200 +0000
 +++ chrome/browser/ui/views/tabs/tab_drag_controller.cc
 @@ -98,7 +98,7 @@
  #include "components/remote_cocoa/browser/window.h"
@@ -33,7 +33,7 @@ $NetBSD$
    ref->can_release_capture_ = false;
  #endif
    ref->start_point_in_screen_ =
-@@ -1065,7 +1065,7 @@ TabDragController::DragBrowserToNewTabSt
+@@ -1034,7 +1034,7 @@ TabDragController::DragBrowserToNewTabSt
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -42,7 +42,7 @@ $NetBSD$
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2151,7 +2151,7 @@ void TabDragController::CompleteDrag() {
+@@ -2064,7 +2064,7 @@ void TabDragController::CompleteDrag() {
        }
  
        // If source window was maximized - maximize the new window as well.
@@ -51,7 +51,7 @@ $NetBSD$
        // Keeping maximized state breaks snap to Grid on Windows when dragging
        // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
        // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2597,7 +2597,7 @@ TabDragController::Liveness TabDragContr
+@@ -2510,7 +2510,7 @@ TabDragController::Liveness TabDragContr
    }
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

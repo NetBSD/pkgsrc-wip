@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_unittest.cc.orig	2024-08-21 22:46:04.759035800 +0000
+--- base/process/process_unittest.cc.orig	2024-09-24 20:49:13.807574000 +0000
 +++ base/process/process_unittest.cc
 @@ -199,7 +199,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
    // was spawned and a time recorded after it was spawned. However, since the

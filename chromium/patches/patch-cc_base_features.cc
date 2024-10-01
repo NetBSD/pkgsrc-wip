@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2024-08-21 22:46:05.071068000 +0000
+--- cc/base/features.cc.orig	2024-09-24 20:49:14.123601700 +0000
 +++ cc/base/features.cc
 @@ -85,7 +85,7 @@ const base::FeatureParam<int> kDeferImpl
  // be using a separate flag to control the launch on GL.

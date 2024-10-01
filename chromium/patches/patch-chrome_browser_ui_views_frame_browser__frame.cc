@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-08-21 22:46:11.286706000 +0000
+--- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-09-24 20:49:20.747183000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.cc
 @@ -54,7 +54,7 @@
  #include "components/user_manager/user_manager.h"
@@ -42,7 +42,7 @@ $NetBSD$
    // If the window was sent to a different workspace, prioritize it if
    // it was sent to the current workspace and deprioritize it
    // otherwise.  This is done by MoveBrowsersInWorkspaceToFront()
-@@ -563,7 +563,7 @@ void BrowserFrame::OnMenuClosed() {
+@@ -564,7 +564,7 @@ void BrowserFrame::OnMenuClosed() {
  }
  
  void BrowserFrame::SelectNativeTheme() {
@@ -51,7 +51,7 @@ $NetBSD$
    // Use the regular NativeTheme instance if running incognito mode, regardless
    // of system theme (gtk, qt etc).
    ui::NativeTheme* native_theme = ui::NativeTheme::GetInstanceForNativeUi();
-@@ -604,7 +604,7 @@ void BrowserFrame::OnTouchUiChanged() {
+@@ -605,7 +605,7 @@ void BrowserFrame::OnTouchUiChanged() {
  bool BrowserFrame::RegenerateFrameOnThemeChange(
      BrowserThemeChangeType theme_change_type) {
    bool need_regenerate = false;

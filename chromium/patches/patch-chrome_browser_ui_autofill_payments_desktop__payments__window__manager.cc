@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-08-21 22:46:11.018678400 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-09-24 20:49:20.487160200 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
-@@ -49,7 +49,7 @@ gfx::Rect GetPopupSizeForVcn3ds() {
+@@ -46,7 +46,7 @@ gfx::Rect GetPopupSizeForVcn3ds() {
  DesktopPaymentsWindowManager::DesktopPaymentsWindowManager(
      ContentAutofillClient* client)
      : client_(CHECK_DEREF(client)) {
@@ -15,7 +15,7 @@ $NetBSD$
    scoped_observation_.Observe(BrowserList::GetInstance());
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
  }
-@@ -109,7 +109,7 @@ void DesktopPaymentsWindowManager::WebCo
+@@ -106,7 +106,7 @@ void DesktopPaymentsWindowManager::WebCo
    }
  }
  

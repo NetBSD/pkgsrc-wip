@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/enterprise_companion_client.cc.orig	2024-08-21 22:46:12.067786000 +0000
+--- chrome/enterprise_companion/enterprise_companion_client.cc.orig	2024-09-24 20:49:21.390239500 +0000
 +++ chrome/enterprise_companion/enterprise_companion_client.cc
-@@ -33,7 +33,7 @@ namespace {
+@@ -36,7 +36,7 @@ namespace {
  
  #if BUILDFLAG(IS_MAC)
  constexpr char kServerName[] = MAC_BUNDLE_IDENTIFIER_STRING ".service";

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-08-21 22:46:08.911462000 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-09-24 20:49:18.275966200 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -205,7 +205,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -204,7 +204,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[tab_groups::prefs::kAutoPinNewTabGroups] =
        settings_api::PrefType::kBoolean;
  
@@ -15,7 +15,7 @@ $NetBSD$
    (*s_allowlist)[::prefs::kUseCustomChromeFrame] =
        settings_api::PrefType::kBoolean;
  #endif
-@@ -217,7 +217,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -216,7 +216,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kCurrentThemeID] = settings_api::PrefType::kString;
    (*s_allowlist)[::prefs::kPinnedActions] = settings_api::PrefType::kList;
    (*s_allowlist)[::prefs::kPolicyThemeColor] = settings_api::PrefType::kNumber;

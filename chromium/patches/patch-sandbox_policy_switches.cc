@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.cc.orig	2024-08-21 22:46:24.776090400 +0000
+--- sandbox/policy/switches.cc.orig	2024-09-24 20:49:34.311373200 +0000
 +++ sandbox/policy/switches.cc
 @@ -54,10 +54,10 @@ const char kWindowsSystemProxyResolverSa
  const char kMirroringSandbox[] = "mirroring";

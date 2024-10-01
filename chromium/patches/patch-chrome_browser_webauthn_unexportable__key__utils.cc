@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/unexportable_key_utils.cc.orig	2024-08-21 22:46:11.781756600 +0000
+--- chrome/browser/webauthn/unexportable_key_utils.cc.orig	2024-09-24 20:49:21.275229500 +0000
 +++ chrome/browser/webauthn/unexportable_key_utils.cc
 @@ -33,7 +33,7 @@ GetWebAuthnUnexportableKeyProvider() {
    // If there is a scoped UnexportableKeyProvider configured, we always use

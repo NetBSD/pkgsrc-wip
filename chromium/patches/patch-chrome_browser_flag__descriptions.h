@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2024-08-21 22:46:09.078479300 +0000
+--- chrome/browser/flag_descriptions.h.orig	2024-09-24 20:49:18.441980600 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -273,7 +273,7 @@ extern const char kImageDescriptionsAlte
+@@ -299,7 +299,7 @@ extern const char kImageDescriptionsAlte
  extern const char kImageDescriptionsAlternateRoutingDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  extern const char kAutofillEnableAmountExtractionDesktopName[];
  extern const char kAutofillEnableAmountExtractionDesktopDescription[];
  #endif
-@@ -660,7 +660,7 @@ extern const char kDevicePostureName[];
+@@ -694,7 +694,7 @@ extern const char kDevicePostureName[];
  extern const char kDevicePostureDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD$
  extern const char kDocumentPictureInPictureAnimateResizeName[];
  extern const char kDocumentPictureInPictureAnimateResizeDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) ||
-@@ -1764,7 +1764,7 @@ extern const char kCbdTimeframeRequiredN
+@@ -1805,7 +1805,7 @@ extern const char kCbdTimeframeRequiredN
  extern const char kCbdTimeframeRequiredDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
  extern const char kPolicyIndicationForManagedDefaultSearchName[];
  extern const char kPolicyIndicationForManagedDefaultSearchDescription[];
  #endif
-@@ -1958,7 +1958,7 @@ extern const char kShowAutofillTypePredi
+@@ -2003,7 +2003,7 @@ extern const char kShowAutofillTypePredi
  extern const char kShowAutofillTypePredictionsDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -42,7 +42,7 @@ $NetBSD$
  extern const char kShowFeaturedEnterpriseSiteSearchName[];
  extern const char kShowFeaturedEnterpriseSiteSearchDescription[];
  
-@@ -1980,7 +1980,7 @@ extern const char kSiteInstanceGroupsFor
+@@ -2025,7 +2025,7 @@ extern const char kSiteInstanceGroupsFor
  extern const char kSiteInstanceGroupsForDataUrlsDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -51,7 +51,7 @@ $NetBSD$
  extern const char kSiteSearchSettingsPolicyName[];
  extern const char kSiteSearchSettingsPolicyDescription[];
  
-@@ -4557,7 +4557,7 @@ extern const char kLacrosMergeIcuDataFil
+@@ -4604,7 +4604,7 @@ extern const char kLacrosMergeIcuDataFil
  extern const char kLacrosMergeIcuDataFileDescription[];
  #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -60,7 +60,7 @@ $NetBSD$
  extern const char kGetAllScreensMediaName[];
  extern const char kGetAllScreensMediaDescription[];
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -4705,7 +4705,7 @@ extern const char kV4L2FlatStatefulVideo
+@@ -4750,7 +4750,7 @@ extern const char kV4L2FlatStatefulVideo
  
  // Linux ---------------------------------------------------------------------
  
@@ -69,17 +69,17 @@ $NetBSD$
  extern const char kOzonePlatformHintChoiceDefault[];
  extern const char kOzonePlatformHintChoiceAuto[];
  extern const char kOzonePlatformHintChoiceX11[];
-@@ -4724,6 +4724,9 @@ extern const char kSimplifiedTabDragUIDe
+@@ -4772,6 +4772,9 @@ extern const char kWaylandPerWindowScali
  
- extern const char kWaylandPerWindowScalingName[];
- extern const char kWaylandPerWindowScalingDescription[];
+ extern const char kWaylandTextInputV3Name[];
+ extern const char kWaylandTextInputV3Description[];
 +
 +extern const char kAudioBackendName[];
 +extern const char kAudioBackendDescription[];
  #endif  // BUILDFLAG(IS_LINUX)
  
  // All views-based platforms --------------------------------------------------
-@@ -4753,7 +4756,7 @@ extern const char kWebBluetoothConfirmPa
+@@ -4801,7 +4804,7 @@ extern const char kWebBluetoothConfirmPa
  extern const char kWebBluetoothConfirmPairingSupportDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -88,7 +88,7 @@ $NetBSD$
  extern const char kSkipUndecryptablePasswordsName[];
  extern const char kSkipUndecryptablePasswordsDescription[];
  
-@@ -4772,13 +4775,13 @@ extern const char kScreenlockReauthPromo
+@@ -4820,13 +4823,13 @@ extern const char kScreenlockReauthPromo
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -104,7 +104,7 @@ $NetBSD$
  extern const char kEnableNetworkServiceSandboxName[];
  extern const char kEnableNetworkServiceSandboxDescription[];
  
-@@ -4877,7 +4880,7 @@ extern const char kElementCaptureDescrip
+@@ -4925,7 +4928,7 @@ extern const char kElementCaptureDescrip
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -113,7 +113,7 @@ $NetBSD$
  extern const char kUIDebugToolsName[];
  extern const char kUIDebugToolsDescription[];
  #endif
-@@ -4931,7 +4934,7 @@ extern const char kAutofillCaretExtracti
+@@ -4979,7 +4982,7 @@ extern const char kAutofillCaretExtracti
  extern const char kAutofillCaretExtractionDescription[];
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  
@@ -121,4 +121,13 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  extern const char kThirdPartyProfileManagementName[];
  extern const char kThirdPartyProfileManagementDescription[];
+ 
+@@ -5035,7 +5038,7 @@ extern const char kEnableCertManagementV
+ extern const char kEnableCertManagementV2UIDescription[];
+ #endif  // BUILDFLAG(CHROME_ROOT_STORE_CERT_MANAGEMENT_UI)
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ extern const char kSupervisedProfileHideGuestName[];
+ extern const char kSupervisedProfileHideGuestDescription[];
  

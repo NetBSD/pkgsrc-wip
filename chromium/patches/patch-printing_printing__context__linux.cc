@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_context_linux.cc.orig	2024-08-21 22:46:24.569069100 +0000
+--- printing/printing_context_linux.cc.orig	2024-09-24 20:49:34.097354700 +0000
 +++ printing/printing_context_linux.cc
 @@ -23,7 +23,7 @@
  #endif

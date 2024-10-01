@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/management/management_api.cc.orig	2024-08-21 22:46:19.937593700 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2024-09-24 20:49:29.579958200 +0000
 +++ extensions/browser/api/management/management_api.cc
 @@ -285,7 +285,7 @@ bool PlatformSupportsApprovalFlowForExte
  #if BUILDFLAG(IS_CHROMEOS)

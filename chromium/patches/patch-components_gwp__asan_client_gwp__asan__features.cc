@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/gwp_asan_features.cc.orig	2024-08-21 22:46:15.306118500 +0000
+--- components/gwp_asan/client/gwp_asan_features.cc.orig	2024-09-24 20:49:24.824540900 +0000
 +++ components/gwp_asan/client/gwp_asan_features.cc
 @@ -9,7 +9,7 @@
  namespace gwp_asan::internal {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-08-21 22:46:46.143283000 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-09-24 20:49:58.188468700 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
 @@ -99,7 +99,7 @@ void OSExchangeDataProviderNonBacked::Se
  

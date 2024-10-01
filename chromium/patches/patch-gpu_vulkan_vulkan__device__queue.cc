@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_device_queue.cc.orig	2024-08-21 22:46:20.374638600 +0000
+--- gpu/vulkan/vulkan_device_queue.cc.orig	2024-09-24 20:49:30.006995700 +0000
 +++ gpu/vulkan/vulkan_device_queue.cc
-@@ -149,7 +149,7 @@ bool VulkanDeviceQueue::Initialize(
+@@ -154,7 +154,7 @@ bool VulkanDeviceQueue::Initialize(
  
        // In dual-CPU cases, we cannot detect the active GPU correctly on Linux,
        // so don't select GPU device based on the |gpu_info|.
@@ -15,7 +15,7 @@ $NetBSD$
      // If gpu_info is provided, the device should match it.
      if (gpu_info && (device_properties.vendorID != gpu_info->gpu.vendor_id ||
                       device_properties.deviceID != gpu_info->gpu.device_id)) {
-@@ -292,7 +292,7 @@ bool VulkanDeviceQueue::Initialize(
+@@ -297,7 +297,7 @@ bool VulkanDeviceQueue::Initialize(
    // Android, Fuchsia, Linux, and CrOS (VaapiVideoDecoder) need YCbCr sampler
    // support.
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || \

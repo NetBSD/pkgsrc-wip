@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2024-08-21 22:46:28.076429100 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2024-09-24 20:49:37.594661500 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -55,7 +55,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/gfx/font_fallback_linux.h"
  #endif
  
-@@ -165,7 +165,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -167,7 +167,7 @@ class PLATFORM_EXPORT FontCache final {
  
    static void MaybePreloadSystemFonts();
  
@@ -24,7 +24,7 @@ $NetBSD$
    // These are needed for calling QueryRenderStyleForStrike, since
    // gfx::GetFontRenderParams makes distinctions based on DSF.
    static float DeviceScaleFactor() { return device_scale_factor_; }
-@@ -241,7 +241,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -243,7 +243,7 @@ class PLATFORM_EXPORT FontCache final {
        const char* locale_family_name);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -33,7 +33,7 @@ $NetBSD$
    static bool GetFontForCharacter(UChar32,
                                    const char* preferred_locale,
                                    gfx::FallbackFontData*);
-@@ -314,7 +314,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -316,7 +316,7 @@ class PLATFORM_EXPORT FontCache final {
                                     const FontFaceCreationParams&,
                                     std::string& name);
  
@@ -42,7 +42,7 @@ $NetBSD$
    static AtomicString GetFamilyNameForCharacter(SkFontMgr*,
                                                  UChar32,
                                                  const FontDescription&,
-@@ -351,7 +351,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -353,7 +353,7 @@ class PLATFORM_EXPORT FontCache final {
    bool is_test_font_mgr_ = false;
  #endif  // BUILDFLAG(IS_WIN)
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2024-08-21 22:46:18.655462300 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2024-09-24 20:49:28.409855400 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
-@@ -18,8 +18,10 @@
+@@ -19,8 +19,10 @@
  #include "build/chromeos_buildflags.h"
  #include "content/common/zygote/zygote_commands_linux.h"
  #include "content/common/zygote/zygote_communication_linux.h"
@@ -17,7 +17,7 @@ $NetBSD$
  #include "sandbox/linux/services/credentials.h"
  #include "sandbox/linux/services/namespace_sandbox.h"
  #include "sandbox/linux/suid/client/setuid_sandbox_host.h"
-@@ -37,6 +39,7 @@ namespace content {
+@@ -38,6 +40,7 @@ namespace content {
  
  namespace {
  
@@ -25,7 +25,7 @@ $NetBSD$
  // Receive a fixed message on fd and return the sender's PID.
  // Returns true if the message received matches the expected message.
  bool ReceiveFixedMessage(int fd,
-@@ -58,6 +61,7 @@ bool ReceiveFixedMessage(int fd,
+@@ -60,6 +63,7 @@ bool ReceiveFixedMessage(int fd,
      return false;
    return true;
  }
@@ -33,7 +33,7 @@ $NetBSD$
  
  }  // namespace
  
-@@ -67,9 +71,13 @@ ZygoteHost* ZygoteHost::GetInstance() {
+@@ -69,9 +73,13 @@ ZygoteHost* ZygoteHost::GetInstance() {
  }
  
  ZygoteHostImpl::ZygoteHostImpl()
@@ -47,7 +47,7 @@ $NetBSD$
        sandbox_binary_(),
        zygote_pids_lock_(),
        zygote_pids_() {}
-@@ -82,6 +90,7 @@ ZygoteHostImpl* ZygoteHostImpl::GetInsta
+@@ -84,6 +92,7 @@ ZygoteHostImpl* ZygoteHostImpl::GetInsta
  }
  
  void ZygoteHostImpl::Init(const base::CommandLine& command_line) {
@@ -55,7 +55,7 @@ $NetBSD$
    if (command_line.HasSwitch(sandbox::policy::switches::kNoSandbox)) {
      return;
    }
-@@ -132,6 +141,7 @@ void ZygoteHostImpl::Init(const base::Co
+@@ -138,6 +147,7 @@ void ZygoteHostImpl::Init(const base::Co
             "you can try using --"
          << sandbox::policy::switches::kNoSandbox << ".";
    }
@@ -63,7 +63,7 @@ $NetBSD$
  }
  
  void ZygoteHostImpl::AddZygotePid(pid_t pid) {
-@@ -156,6 +166,7 @@ pid_t ZygoteHostImpl::LaunchZygote(
+@@ -162,6 +172,7 @@ pid_t ZygoteHostImpl::LaunchZygote(
      base::CommandLine* cmd_line,
      base::ScopedFD* control_fd,
      base::FileHandleMappingVector additional_remapped_fds) {
@@ -71,7 +71,7 @@ $NetBSD$
    int fds[2];
    CHECK_EQ(0, socketpair(AF_UNIX, SOCK_SEQPACKET | SOCK_CLOEXEC, 0, fds));
    CHECK(base::UnixDomainSocket::EnableReceiveProcessId(fds[0]));
-@@ -224,9 +235,12 @@ pid_t ZygoteHostImpl::LaunchZygote(
+@@ -230,9 +241,12 @@ pid_t ZygoteHostImpl::LaunchZygote(
  
    AddZygotePid(pid);
    return pid;

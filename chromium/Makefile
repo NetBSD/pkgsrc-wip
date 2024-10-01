@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			128.0.6613.84
+VERSION=			129.0.6668.70
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -11,8 +11,8 @@ SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=			${PROFILE_DISTFILE}
 
+MAINTAINER=			kikadf.01@gmail.com
 #MAINTAINER=			ryoon@NetBSD.org
-MAINTAINER+=			kikadf.01@gmail.com
 HOMEPAGE=			https://www.chromium.org/Home
 COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
@@ -79,7 +79,6 @@ SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
-SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	chrome.sh
@@ -94,6 +93,13 @@ SUBST_SED.man+=		-e 's,@@PACKAGE@@,chromium,g'
 SUBST_SED.man+=		-e 's,@@MENUNAME@@,Chromium Web Browser,g'
 
 .include "options.mk"
+
+SUBST_CLASSES+=		pulse
+SUBST_STAGE.pulse=	pre-configure
+SUBST_MESSAGE.pulse=	Set BUILT_WITH_PULSE to ${WITH_PA} in chromium wrapper
+SUBST_FILES.pulse+=	chrome.sh
+SUBST_SED.pulse+=	-e 's,@PULSE@,${WITH_PA},g'
+
 .include "tests.mk"
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}

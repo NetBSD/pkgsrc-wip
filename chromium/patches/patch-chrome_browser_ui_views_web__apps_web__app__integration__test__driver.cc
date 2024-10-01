@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2024-08-21 22:46:11.455723300 +0000
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2024-09-24 20:49:20.927199000 +0000
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
-@@ -516,7 +516,7 @@ std::string GetFileExtension(FileExtensi
+@@ -515,7 +515,7 @@ std::string GetFileExtension(FileExtensi
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  SiteConfig GetSiteConfigurationFromAppName(const std::string& app_name) {
    SiteConfig config;
    bool is_app_found = false;
-@@ -2104,7 +2104,7 @@ void WebAppIntegrationTestDriver::Delete
+@@ -2100,7 +2100,7 @@ void WebAppIntegrationTestDriver::Delete
    if (app_name.empty()) {
      app_name = GetSiteConfiguration(site).app_name;
    }
@@ -24,7 +24,7 @@ $NetBSD$
    ASSERT_TRUE(override_registration_->test_override().IsShortcutCreated(
        profile(), app_id, app_name));
    ASSERT_TRUE(
-@@ -3431,7 +3431,7 @@ void WebAppIntegrationTestDriver::CheckR
+@@ -3427,7 +3427,7 @@ void WebAppIntegrationTestDriver::CheckR
            app_state->id, app_state->name);
    ASSERT_TRUE(icon_color.has_value());
    ASSERT_THAT(site_config.icon_color, testing::Eq(icon_color.value()));
@@ -33,7 +33,7 @@ $NetBSD$
    ASSERT_TRUE(override_registration_->test_override().IsRunOnOsLoginEnabled(
        profile(), app_state->id, app_state->name));
  #endif
-@@ -3446,7 +3446,7 @@ void WebAppIntegrationTestDriver::CheckR
+@@ -3442,7 +3442,7 @@ void WebAppIntegrationTestDriver::CheckR
        GetAppBySiteMode(after_state_change_action_state_.get(), profile(), site);
    ASSERT_TRUE(app_state);
    base::ScopedAllowBlockingForTesting allow_blocking;
@@ -42,7 +42,7 @@ $NetBSD$
    ASSERT_FALSE(override_registration_->test_override().IsRunOnOsLoginEnabled(
        profile(), app_state->id, app_state->name));
  #endif
-@@ -3456,7 +3456,7 @@ void WebAppIntegrationTestDriver::CheckR
+@@ -3452,7 +3452,7 @@ void WebAppIntegrationTestDriver::CheckR
  void WebAppIntegrationTestDriver::CheckSiteHandlesFile(
      Site site,
      FileExtension file_extension) {
@@ -51,7 +51,7 @@ $NetBSD$
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -3472,7 +3472,7 @@ void WebAppIntegrationTestDriver::CheckS
+@@ -3468,7 +3468,7 @@ void WebAppIntegrationTestDriver::CheckS
  void WebAppIntegrationTestDriver::CheckSiteNotHandlesFile(
      Site site,
      FileExtension file_extension) {
@@ -60,7 +60,7 @@ $NetBSD$
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -4289,7 +4289,7 @@ base::FilePath WebAppIntegrationTestDriv
+@@ -4285,7 +4285,7 @@ base::FilePath WebAppIntegrationTestDriv
      base::FilePath shortcut_dir,
      const std::string& app_name,
      const webapps::AppId& app_id) {
@@ -69,7 +69,7 @@ $NetBSD$
    return override_registration_->test_override().GetShortcutPath(
        profile(), shortcut_dir, app_id, app_name);
  #else
-@@ -4489,7 +4489,7 @@ bool WebAppIntegrationTestDriver::IsShor
+@@ -4485,7 +4485,7 @@ bool WebAppIntegrationTestDriver::IsShor
      const webapps::AppId& id) {
    base::ScopedAllowBlockingForTesting allow_blocking;
    bool is_shortcut_and_icon_correct = false;
@@ -78,7 +78,7 @@ $NetBSD$
    bool is_shortcut_correct =
        override_registration_->test_override().IsShortcutCreated(profile, id,
                                                                  name);
-@@ -4533,7 +4533,7 @@ bool WebAppIntegrationTestDriver::DoIcon
+@@ -4529,7 +4529,7 @@ bool WebAppIntegrationTestDriver::DoIcon
      do_icon_colors_match =
          (expected_icon_pixel_color == shortcut_pixel_color_apps_folder.value());
    }

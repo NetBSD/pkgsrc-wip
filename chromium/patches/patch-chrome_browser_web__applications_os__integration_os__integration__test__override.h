@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/os_integration_test_override.h.orig	2024-08-21 22:46:11.737752200 +0000
+--- chrome/browser/web_applications/os_integration/os_integration_test_override.h.orig	2024-09-24 20:49:21.229225400 +0000
 +++ chrome/browser/web_applications/os_integration/os_integration_test_override.h
 @@ -99,7 +99,7 @@ class OsIntegrationTestOverride
    virtual base::FilePath chrome_apps_folder() = 0;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_util.cc.orig	2024-08-21 22:46:46.461315600 +0000
+--- ui/gfx/font_util.cc.orig	2024-09-24 20:49:58.499496000 +0000
 +++ ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@
  

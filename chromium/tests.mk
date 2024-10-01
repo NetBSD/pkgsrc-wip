@@ -1,10 +1,7 @@
 # $NetBSD$
 
 REGRESS_DISTFILE=		chromium-${VERSION}-testdata${EXTRACT_SUFX}
-FONTS_DISTFILE=			test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz
-SITES.${FONTS_DISTFILE}=	http://nerd.hu/distfiles/
 DISTFILES+=			${REGRESS_DISTFILE}
-DISTFILES+=			${FONTS_DISTFILE}
 EXTRACT_ONLY=			${DISTNAME}${EXTRACT_SUFX} ${PROFILE_DISTFILE}
 
 USE_TOOLS+=	xzcat gzip tar
@@ -47,8 +44,6 @@ TEST_TARGET+=	wm_unittests
 pre-test:
 	@${ECHO_MSG} "=> Extracting ${REGRESS_DISTFILE}"
 	${XZCAT} ${DISTDIR}/${REGRESS_DISTFILE} | ${TAR} -C ${WRKDIR} -xf -
-	@${ECHO_MSG} "=> Extracting ${FONTS_DISTFILE}"
-	${GZIP_CMD} -dc ${DISTDIR}/${FONTS_DISTFILE} | ${TAR} -C ${WRKSRC}/third_party/test_fonts -xf -
 	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
 	${LN} -sf ${PREFIX}/bin/clang++ ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang++
 	${LN} -sf ${PREFIX}/bin/clang ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang

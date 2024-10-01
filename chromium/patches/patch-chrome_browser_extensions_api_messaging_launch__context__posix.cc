@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2024-08-21 22:46:08.880458800 +0000
+--- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2024-09-24 20:49:18.244963400 +0000
 +++ chrome/browser/extensions/api/messaging/launch_context_posix.cc
 @@ -86,7 +86,7 @@ std::optional<LaunchContext::ProcessStat
  

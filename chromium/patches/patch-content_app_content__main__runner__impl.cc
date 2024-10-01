@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2024-08-21 22:46:17.864381000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2024-09-24 20:49:27.839805400 +0000
 +++ content/app/content_main_runner_impl.cc
-@@ -149,18 +149,20 @@
+@@ -147,18 +147,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
  #include "content/public/common/content_descriptors.h"
  
@@ -29,7 +29,7 @@ $NetBSD$
  #include "third_party/boringssl/src/include/openssl/crypto.h"
  #include "third_party/webrtc_overrides/init_webrtc.h"  // nogncheck
  
-@@ -194,6 +196,10 @@
+@@ -192,6 +194,10 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -40,7 +40,7 @@ $NetBSD$
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -403,7 +409,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -400,7 +406,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +49,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
  // Loads the (native) libraries but does not initialize them (i.e., does not
-@@ -441,7 +447,10 @@ void PreloadLibraryCdms() {
+@@ -438,7 +444,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,7 +60,7 @@ $NetBSD$
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -453,9 +462,16 @@ void PreSandboxInit() {
+@@ -450,9 +459,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
@@ -77,7 +77,16 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -877,11 +893,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -764,7 +780,7 @@ RunOtherNamedProcessTypeMain(const std::
+     unregister_thread_closure = base::HangWatcher::RegisterThread(
+         base::HangWatcher::ThreadType::kMainThread);
+     bool start_hang_watcher_now;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+     // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
+     // initialized, because the sandbox can't be started with multiple threads.
+     // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
+@@ -874,11 +890,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -91,7 +100,7 @@ $NetBSD$
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1058,6 +1073,18 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1055,6 +1070,18 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -110,16 +119,7 @@ $NetBSD$
  #endif
  
    delegate_->SandboxInitialized(process_type);
-@@ -1133,7 +1160,7 @@ int NO_STACK_PROTECTOR ContentMainRunner
-           ->ReconfigureAfterFeatureListInit(process_type);
-     }
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-     // If dynamic Mojo Core is being used, ensure that it's loaded very early in
-     // the child/zygote process, before any sandbox is initialized. The library
-     // is not fully initialized with IPC support until a ChildProcess is later
-@@ -1169,6 +1196,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
+@@ -1154,6 +1181,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
  
    RegisterMainThreadFactories();
  

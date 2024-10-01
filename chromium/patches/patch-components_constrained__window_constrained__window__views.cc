@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/constrained_window/constrained_window_views.cc.orig	2024-08-21 22:46:14.845071000 +0000
+--- components/constrained_window/constrained_window_views.cc.orig	2024-09-24 20:49:24.475510100 +0000
 +++ components/constrained_window/constrained_window_views.cc
-@@ -369,7 +369,7 @@ bool SupportsGlobalScreenCoordinates() {
+@@ -371,7 +371,7 @@ bool SupportsGlobalScreenCoordinates() {
  }
  
  bool PlatformClipsChildrenToViewport() {

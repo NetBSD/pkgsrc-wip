@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2024-08-21 22:46:46.769347200 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2024-09-24 20:49:58.931534000 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -85,7 +85,7 @@
  #include "base/win/win_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -756,7 +756,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -757,7 +757,7 @@ bool Textfield::OnKeyPressed(const ui::K
    if (!textfield)
      return handled;
  
@@ -33,7 +33,7 @@ $NetBSD$
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
    if (!handled && linux_ui &&
-@@ -939,7 +939,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -940,7 +940,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD$
    // Skip any accelerator handling that conflicts with custom keybindings.
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
-@@ -1999,7 +1999,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -1995,7 +1995,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
@@ -51,7 +51,7 @@ $NetBSD$
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2505,14 +2505,14 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2501,14 +2501,14 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }

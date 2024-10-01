@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.cc.orig	2024-08-21 22:46:04.912051700 +0000
+--- base/tracing/trace_time.cc.orig	2024-09-24 20:49:13.960587500 +0000
 +++ base/tracing/trace_time.cc
 @@ -8,13 +8,19 @@
  #include "build/build_config.h"

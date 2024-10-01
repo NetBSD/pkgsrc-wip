@@ -4,14 +4,17 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/media_options.gni.orig	2024-08-21 22:46:22.435850100 +0000
+--- media/media_options.gni.orig	2024-09-24 20:49:31.881160000 +0000
 +++ media/media_options.gni
-@@ -190,12 +190,15 @@ declare_args() {
+@@ -190,12 +190,18 @@ declare_args() {
    # Enables runtime selection of ALSA library for audio.
    use_alsa = false
  
 +  # Enable runtime selection of sndio(7)
 +  use_sndio = false
++
++  # Enable runtime selection of audio(4)
++  use_audioio = false
 +
    # Alsa should be used on all non-Android, non-Mac POSIX systems - with the
    # exception of CastOS desktop builds.

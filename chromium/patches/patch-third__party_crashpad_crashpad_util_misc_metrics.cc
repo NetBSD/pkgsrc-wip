@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/metrics.cc.orig	2024-08-21 22:46:41.315787600 +0000
+--- third_party/crashpad/crashpad/util/misc/metrics.cc.orig	2024-09-24 20:49:53.779081800 +0000
 +++ third_party/crashpad/crashpad/util/misc/metrics.cc
 @@ -25,7 +25,7 @@
  #define METRICS_OS_NAME "Win"

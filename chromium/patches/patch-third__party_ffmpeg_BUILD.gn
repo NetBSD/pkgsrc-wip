@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/BUILD.gn.orig	2024-08-21 22:47:00.226728000 +0000
+--- third_party/ffmpeg/BUILD.gn.orig	2024-09-24 20:50:11.983679500 +0000
 +++ third_party/ffmpeg/BUILD.gn
 @@ -343,7 +343,6 @@ target(link_target_type, "ffmpeg_interna
        libs += [

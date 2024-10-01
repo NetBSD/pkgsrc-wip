@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.cc.orig	2024-08-21 22:46:46.192288000 +0000
+--- ui/base/ui_base_switches.cc.orig	2024-09-24 20:49:58.234472800 +0000
 +++ ui/base/ui_base_switches.cc
 @@ -31,13 +31,13 @@ const char kShowMacOverlayBorders[] = "s
  const char kEnableResourcesFileSharing[] = "enable-resources-file-sharing";

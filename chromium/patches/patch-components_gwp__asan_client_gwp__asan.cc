@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/gwp_asan.cc.orig	2024-08-21 22:46:15.305118300 +0000
+--- components/gwp_asan/client/gwp_asan.cc.orig	2024-09-24 20:49:24.824540900 +0000
 +++ components/gwp_asan/client/gwp_asan.cc
 @@ -75,7 +75,7 @@ namespace {
  // ProcessSamplingBoost is the multiplier to increase the

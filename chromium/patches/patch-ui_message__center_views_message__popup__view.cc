@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/message_center/views/message_popup_view.cc.orig	2024-08-21 22:46:46.566326400 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2024-09-24 20:49:58.736517000 +0000
 +++ ui/message_center/views/message_popup_view.cc
-@@ -137,7 +137,7 @@ void MessagePopupView::Show() {
+@@ -144,7 +144,7 @@ std::unique_ptr<views::Widget> MessagePo
    params.z_order = ui::ZOrderLevel::kFloatingWindow;
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

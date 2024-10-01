@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/cloud_content_scanning/deep_scanning_utils.cc.orig	2024-08-21 22:46:10.265601200 +0000
+--- chrome/browser/safe_browsing/cloud_content_scanning/deep_scanning_utils.cc.orig	2024-09-24 20:49:19.668088200 +0000
 +++ chrome/browser/safe_browsing/cloud_content_scanning/deep_scanning_utils.cc
 @@ -16,7 +16,7 @@
  #include "components/crash/core/common/crash_key.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/prefs/pref_service.h"
  #endif
-@@ -416,7 +416,7 @@ std::string GetProfileEmail(Profile* pro
+@@ -419,7 +419,7 @@ std::string GetProfileEmail(Profile* pro
    std::string email =
        GetProfileEmail(IdentityManagerFactory::GetForProfile(profile));
  

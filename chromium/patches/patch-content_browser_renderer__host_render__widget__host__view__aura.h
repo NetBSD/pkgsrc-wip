@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.h.orig	2024-08-21 22:46:18.270422700 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.h.orig	2024-09-24 20:49:28.262842700 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.h
-@@ -260,7 +260,7 @@ class CONTENT_EXPORT RenderWidgetHostVie
+@@ -261,7 +261,7 @@ class CONTENT_EXPORT RenderWidgetHostVie
    ukm::SourceId GetClientSourceForMetrics() const override;
    bool ShouldDoLearning() override;
  

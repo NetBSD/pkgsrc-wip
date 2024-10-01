@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/media/frameless_media_interface_proxy.h.orig	2024-08-21 22:46:18.112406500 +0000
+--- content/browser/media/frameless_media_interface_proxy.h.orig	2024-09-24 20:49:28.095827800 +0000
 +++ content/browser/media/frameless_media_interface_proxy.h
 @@ -19,7 +19,7 @@
  #include "mojo/public/cpp/bindings/receiver_set.h"

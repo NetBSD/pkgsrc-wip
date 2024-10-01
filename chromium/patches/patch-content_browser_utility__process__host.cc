@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host.cc.orig	2024-08-21 22:46:18.604457000 +0000
+--- content/browser/utility_process_host.cc.orig	2024-09-24 20:49:28.359851100 +0000
 +++ content/browser/utility_process_host.cc
-@@ -61,7 +61,7 @@
+@@ -62,7 +62,7 @@
  #include "content/browser/v8_snapshot_files.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
  #include "base/pickle.h"
-@@ -74,7 +74,7 @@
+@@ -75,7 +75,7 @@
  #include "services/network/public/mojom/network_service.mojom.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "base/task/sequenced_task_runner.h"
  #include "components/viz/host/gpu_client.h"
  #include "media/capture/capture_switches.h"
-@@ -85,7 +85,7 @@ namespace content {
+@@ -86,7 +86,7 @@ namespace content {
  
  namespace {
  
@@ -33,7 +33,7 @@ $NetBSD$
  base::ScopedFD PassNetworkContextParentDirs(
      std::vector<base::FilePath> network_context_parent_dirs) {
    base::Pickle pickle;
-@@ -150,7 +150,7 @@ UtilityProcessHost::UtilityProcessHost(s
+@@ -151,7 +151,7 @@ UtilityProcessHost::UtilityProcessHost(s
        started_(false),
        name_(u"utility process"),
        file_data_(std::make_unique<ChildProcessLauncherFileData>()),
@@ -42,7 +42,7 @@ $NetBSD$
        allowed_gpu_(false),
        gpu_client_(nullptr, base::OnTaskRunnerDeleter(nullptr)),
  #endif
-@@ -209,7 +209,7 @@ void UtilityProcessHost::SetPreloadLibra
+@@ -210,7 +210,7 @@ void UtilityProcessHost::SetPreloadLibra
  #endif  // BUILDFLAG(IS_WIN)
  
  void UtilityProcessHost::SetAllowGpuClient() {
@@ -51,16 +51,16 @@ $NetBSD$
    allowed_gpu_ = true;
  #endif
  }
-@@ -348,7 +348,7 @@ bool UtilityProcessHost::StartProcess() 
-       switches::kMuteAudio,
-       switches::kUseFileForFakeAudioCapture,
+@@ -349,7 +349,7 @@ bool UtilityProcessHost::StartProcess() 
+         switches::kMuteAudio,
+         switches::kUseFileForFakeAudioCapture,
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
 -    BUILDFLAG(IS_SOLARIS)
 +    BUILDFLAG(IS_SOLARIS) || BUILDFLAG(IS_NETBSD)
-       switches::kAlsaInputDevice,
-       switches::kAlsaOutputDevice,
+         switches::kAlsaInputDevice,
+         switches::kAlsaOutputDevice,
  #endif
-@@ -407,7 +407,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -408,7 +408,7 @@ bool UtilityProcessHost::StartProcess() 
      file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -69,7 +69,7 @@ $NetBSD$
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -418,13 +418,13 @@ bool UtilityProcessHost::StartProcess() 
+@@ -419,13 +419,13 @@ bool UtilityProcessHost::StartProcess() 
      }
  #endif  // BUILDFLAG(IS_LINUX)
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/sqlite/BUILD.gn.orig	2024-08-21 22:46:43.583020200 +0000
+--- third_party/sqlite/BUILD.gn.orig	2024-09-24 20:49:56.099285400 +0000
 +++ third_party/sqlite/BUILD.gn
 @@ -142,7 +142,7 @@ config("sqlite_warnings") {
        ]

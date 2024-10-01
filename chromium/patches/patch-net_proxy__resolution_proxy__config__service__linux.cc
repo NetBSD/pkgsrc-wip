@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-08-21 22:46:24.284039700 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-09-24 20:49:33.596310600 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -11,7 +11,9 @@
  
