@@ -68,7 +68,6 @@ info/transient.info.gz
 info/url.info.gz
 info/use-package.info.gz
 info/vhdl-mode.info.gz
-info/vip.info.gz
 info/viper.info.gz
 info/vtable.info.gz
 info/widget.info.gz
@@ -928,7 +927,6 @@ share/emacs/${PKGVERSION}/etc/refcards/sk-dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/sk-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/sk-survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/survival.tex
-share/emacs/${PKGVERSION}/etc/refcards/vipcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/viperCard.tex
 share/emacs/${PKGVERSION}/etc/rgb.txt
 share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3+libreoffice.rnc
@@ -3176,8 +3174,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/autoload.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/autoload.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl.el.gz
@@ -3194,8 +3190,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/info-edit.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/info-edit.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/inversion.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/inversion.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
@@ -3210,8 +3204,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/makesum.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/makesum.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/meese.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/messcompat.el
 share/emacs/${PKGVERSION}/lisp/obsolete/metamail.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/metamail.elc
@@ -3221,8 +3213,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/netrc.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/netrc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/nnir.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/nnir.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-def.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-def.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-gpg.el.gz
@@ -3239,8 +3229,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/ps-def.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/ps-def.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/quickurl.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/quickurl.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rlogin.el.gz
@@ -3249,10 +3237,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/starttls.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/starttls.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/terminal.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/terminal.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/thumbs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/thumbs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/tls.el.gz
@@ -3275,18 +3259,10 @@ share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mtn.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mtn.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/vi.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/vi.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/vip.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/vip.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vt-control.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vt-control.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vt100-led.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vt100-led.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/yow.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/yow.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-C.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-C.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-R.el.gz
