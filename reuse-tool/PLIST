@@ -83,3 +83,10 @@ ${PYSITELIB}/reuse/templates/default_template.jinja2.license
 ${PYSITELIB}/reuse/vcs.py
 ${PYSITELIB}/reuse/vcs.pyc
 ${PYSITELIB}/reuse/vcs.pyo
+man/man1/reuse-annotate.1
+man/man1/reuse-convert-dep5.1
+man/man1/reuse-download.1
+man/man1/reuse-lint.1
+man/man1/reuse-spdx.1
+man/man1/reuse-supported-licenses.1
+man/man1/reuse.1
