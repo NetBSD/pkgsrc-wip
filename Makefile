@@ -1686,6 +1686,7 @@ SUBDIR+=	imonc
 SUBDIR+=	include-what-you-use
 SUBDIR+=	incron
 SUBDIR+=	inetdxtra
+SUBDIR+=	inferno
 SUBDIR+=	influx-cli
 SUBDIR+=	influxdb
 SUBDIR+=	inform
