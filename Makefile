@@ -2,7 +2,7 @@
 
 COMMENT=	Work-in-progress packages
 
-SUBDIR+=	2048-c
+rSUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
 SUBDIR+=	7-zip-zstd
@@ -4966,6 +4966,7 @@ SUBDIR+=	reproc
 SUBDIR+=	resin
 SUBDIR+=	retawq
 SUBDIR+=	retro68
+SUBDIR+=	reuse-tool
 SUBDIR+=	revealjs
 SUBDIR+=	revelation
 SUBDIR+=	reviewdog

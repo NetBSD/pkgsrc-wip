@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (reuse-tool-4.0.3.tar.gz) = 387c6737cd9098d5f6074247260c745b08acc881464c9fe188284c3356401185
+SHA512 (reuse-tool-4.0.3.tar.gz) = 2f9dca807a0f3eed9356c1fcbe9f7bc8fd9711ac3583811decf90bbb28818a0af64925fa31ee84e8c0e8241d64e9194209b03cb422bf1aeb6b160eca3289bec6
+Size (reuse-tool-4.0.3.tar.gz) = 360402 bytes
