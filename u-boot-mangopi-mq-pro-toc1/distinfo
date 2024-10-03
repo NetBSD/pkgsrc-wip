@@ -1,9 +1,0 @@
-$NetBSD$
-
-BLAKE2s (u-boot-d1-2022-04-05.tar.gz) = d223fc195faafcb4045f97a6e8a5688f9c95d7c060d5f384db7552096586b6ce
-SHA512 (u-boot-d1-2022-04-05.tar.gz) = a5c9b984709415b7872097cbd268c9519369ec1c772cf00c015bb39aab673901adac3f27f82823e9c1e516144b44e55fb462e7cb378c099fb85e9a5a918df9c6
-Size (u-boot-d1-2022-04-05.tar.gz) = 22849741 bytes
-SHA1 (patch-arch_riscv_Kconfig) = fc231f36bdb76ac4068edd845ce4de79dc12e4a7
-SHA1 (patch-arch_riscv_Makefile) = 62aa1bbd9b77f39ffbd2cfe37843daee3e6ad1a6
-SHA1 (patch-arch_riscv_dts_Makefile) = 3f6bdce9a2a2f271d463467cbbe7857e7bc01df0
-SHA1 (patch-scripts_dtc_pylibfdt_Makefile) = fc3fb6c2aa6ad8e71aecb30839c9e474adcf5229
