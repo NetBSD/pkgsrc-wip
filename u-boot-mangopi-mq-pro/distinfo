@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (u-boot-d1-2022-10-31.tar.gz) = a04ab1bdab918399dbccbfda7f7c91f6f173db96957737873fd41da51e69dcf9
+SHA512 (u-boot-d1-2022-10-31.tar.gz) = 0922957b50ed8aff7e0864e7aaee67e2c9978297a688d0122fa9980bc9976ef20182bc1056d2a85ad36b9a10f2ce154f3d2f7124f16584a4dac173a46e23367a
+Size (u-boot-d1-2022-10-31.tar.gz) = 23849460 bytes
+SHA1 (patch-board_sunxi_board-riscv.c) = be6c791520bb1a9001ba65e976e44b975a2f29a8
