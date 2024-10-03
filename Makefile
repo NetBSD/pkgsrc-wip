@@ -953,6 +953,7 @@ SUBDIR+=	firefox102
 SUBDIR+=	firehose
 SUBDIR+=	flag
 SUBDIR+=	flam3-svn
+SUBDIR+=	flamegraph-rs
 SUBDIR+=	flamelens
 SUBDIR+=	flameshot
 SUBDIR+=	flang
