@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2024/07/18 08:51:14 rxg Exp $
-share/opensbi/sun20i-d1/fw_dynamic.bin

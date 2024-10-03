@@ -2646,7 +2646,6 @@ SUBDIR+=	openmp
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
 SUBDIR+=	openrw-git
-SUBDIR+=	opensbi-sun20i-d1
 SUBDIR+=	openscad
 SUBDIR+=	openscep
 SUBDIR+=	openshot-qt
