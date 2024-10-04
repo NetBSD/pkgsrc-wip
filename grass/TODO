@@ -1,0 +1,4 @@
+- Doesn't compile yet
+  - fix python3 shebangs
+- missing buildlinks for many libs
+- testing

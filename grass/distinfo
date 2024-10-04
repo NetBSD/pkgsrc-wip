@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (grass-8.4.0.tar.gz) = 7c9207c0f9e958fd9f73a852eba53076289d512d77074e7406e80f90931bf337
+SHA512 (grass-8.4.0.tar.gz) = ce46d8f7575d139966dff65efc45fccab3c591373f282dd0d3fb73b3558e7e37cf63943b166a50e697ca4ba17bf841d5325e986d2c44aaa6661b2b4464ce35ea
+Size (grass-8.4.0.tar.gz) = 69895829 bytes
+SHA1 (patch-configure) = 9bf712a791dc47f70acdda0dccc4f9d03cb337f6
