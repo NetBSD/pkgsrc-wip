@@ -1,8 +1,6 @@
 $NetBSD$
 
-BLAKE2s (denise/v2.0.tar.bz2) = 311e6b46b988b4d594f0e06bae650257dd365b500ed4722493e816c5c410a63b
-SHA512 (denise/v2.0.tar.bz2) = aa320950721ec924a05b7ff40d0bd4901a597a699f94cd58365dfc75f104f7396cf02f6d8080cba53a3de2ec84ddf72c0888e6041516cc37ced12da257c6238a
-Size (denise/v2.0.tar.bz2) = 16324313 bytes
-SHA1 (patch-Makefile) = 2050b7b562345d9fc0290732bbf49734dcc06591
-SHA1 (patch-driver_Makefile) = a3179f48c86f3819f0ef7108d6466859dbd585a5
+BLAKE2s (denise/v2.3.tar.bz2) = a5c17eab2ecc6b8f847e051e70b62a61315f993e51ffac5fe7b8118bf5192533
+SHA512 (denise/v2.3.tar.bz2) = 1046d2e20e10be81e23b23af31c4820d7bbe339db216a4427d6f1d1bb09ca60261c140f603200fcef5a5bc4bea434cbd0f9e41c19f517075941f6d464b843152
+Size (denise/v2.3.tar.bz2) = 19381619 bytes
 SHA1 (patch-emulation_tools_socket.cpp) = 3d3fe88b3b51f95962fe068b1ea5375a048fd4b4
