@@ -19,17 +19,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
-# NetBSD/sparc64 when using the internal LLVM needs
-# to not use gcc 10.4 or 10.5 (as found in 10.0_BETA or 10.0), ref.
-# https://github.com/rust-lang/rust/issues/117231
-# (however, gcc from 9.x produces a working LLVM).
-.if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
-.  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
-# Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
-GCC_REQD+=	12
-.  endif
-.endif
-
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.
 .if ${OPSYS} == "NetBSD" && ${BUILD_TARGET} == "dist"
@@ -39,6 +28,17 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 
 .include "../../mk/bsd.options.mk"
+
+# NetBSD/sparc64 when using the internal LLVM needs
+# to not use gcc 10.4 or 10.5 (as found in 10.0_BETA or 10.0), ref.
+# https://github.com/rust-lang/rust/issues/117231
+# (however, gcc from 9.x produces a working LLVM, go figure).
+.if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
+.  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
+# Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
+GCC_REQD+=	12
+.  endif
+.endif
 
 #
 # Use the internal copy of LLVM or the external one?
