@@ -49,6 +49,10 @@ PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-libunwind=system
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+# Also turn off build of the internal LLD, as the external LLVM
+# may be older (e.g. 17) than the internal LLD (now 18.x), ref.
+# https://github.com/rust-lang/rust/issues/131291
+CONFIGURE_ARGS+=	--set rust.lld=false
 .endif
 
 #
