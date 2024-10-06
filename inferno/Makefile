@@ -5,7 +5,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonhoo/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jonhoo/inferno/
 COMMENT=	Rust port of FlameGraph
 LICENSE=	cddl-1.0

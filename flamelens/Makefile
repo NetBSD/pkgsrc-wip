@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YS-L/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/YS-L/flamelens/
 COMMENT=	Flamegraph viewer in the terminal
 LICENSE=	mit
