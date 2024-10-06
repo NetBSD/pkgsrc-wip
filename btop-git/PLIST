@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.1 2024/10/06 10:43:17 fox Exp $
 bin/btop
 man/man1/btop.1
 share/applications/btop.desktop
