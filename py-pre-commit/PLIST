@@ -216,3 +216,6 @@ ${PYSITELIB}/pre_commit/xargs.pyo
 ${PYSITELIB}/pre_commit/yaml.py
 ${PYSITELIB}/pre_commit/yaml.pyc
 ${PYSITELIB}/pre_commit/yaml.pyo
+${PYSITELIB}/pre_commit/yaml_rewrite.py
+${PYSITELIB}/pre_commit/yaml_rewrite.pyc
+${PYSITELIB}/pre_commit/yaml_rewrite.pyo
