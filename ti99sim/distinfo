@@ -1,0 +1,11 @@
+$NetBSD$
+
+BLAKE2s (ti99sim-0.16.0.src.tar.xz) = b6cd23be4a8e281f926a82726409d466651ae03f69fb9a431d1ce44a2d93b09c
+SHA512 (ti99sim-0.16.0.src.tar.xz) = 5636b1ecbaf7da10ecaea2d59aac0d84f03934065c02d3441576e4675a6d818ca21e3af80caddfa9fef640f6e0bef093a09082ec0d453df87b67431d7f5c0fec
+Size (ti99sim-0.16.0.src.tar.xz) = 193760 bytes
+SHA1 (patch-Makefile.linux) = 246b6a6c750bdd1cdc760d9e5e1faa336f913f76
+SHA1 (patch-include_common.hpp) = c2baa6abfbe640cb15dfd7190d743373250a90db
+SHA1 (patch-include_platform.hpp) = 2b01ea7439d915095a36ea01921c2266fd77094b
+SHA1 (patch-rules.mak) = 0df5cdfefbff13fc2bf7042609157858c7c204a5
+SHA1 (patch-src_core_device-support.cpp) = c685db3bd50d8ee1d320971a3b759e06459c15be
+SHA1 (patch-src_core_stateobject.cpp) = 9ee81d2897741d5d881dd35a83fd622a360ff9ce

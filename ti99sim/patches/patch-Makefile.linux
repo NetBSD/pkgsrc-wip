@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.linux.orig	2024-10-04 12:57:23 UTC
++++ Makefile.linux
+@@ -52,7 +52,7 @@ install: ti99sim
+ 	 done
+ 	@if [ $(BIN_DIR) != $(SYS_BIN) ]; then \
+ 	   for target in $(notdir $(ITARGETS)); do \
+-	     ln -f -s $(BIN_DIR)/$$target $(SYS_BIN)/$$target; \
++	     cp $(BIN_DIR)/$$target $(SYS_BIN)/$$target; \
+ 	   done \
+ 	fi
+ 
