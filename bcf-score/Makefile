@@ -19,15 +19,16 @@ REPLACE.R.old=		/usr/bin/env Rscript
 REPLACE.R.new=		${PREFIX}/bin/Rscript
 REPLACE_FILES.R=	bcf-score/*.R
 
+REPLACE_BASH+=		mpileup_bench/compare_vcf_simple.sh
+
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
 SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
 SUBST_FILES.version=	configure.ac
 
-DEPENDS=	bash>=0:../../shells/bash
 DEPENDS+=	bcftools>=1.16:../../biology/bcftools
 
-USE_TOOLS+=	autoconf automake autoreconf gmake perl pax
+USE_TOOLS+=	autoconf automake autoreconf bash gmake perl pax
 GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/* test/test.pl
 
@@ -67,6 +68,7 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../math/suitesparse/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/htslib/buildlink3.mk"
