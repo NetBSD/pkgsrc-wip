@@ -3,9 +3,13 @@ $NetBSD$
 BLAKE2s (ti99sim-0.16.0.src.tar.xz) = b6cd23be4a8e281f926a82726409d466651ae03f69fb9a431d1ce44a2d93b09c
 SHA512 (ti99sim-0.16.0.src.tar.xz) = 5636b1ecbaf7da10ecaea2d59aac0d84f03934065c02d3441576e4675a6d818ca21e3af80caddfa9fef640f6e0bef093a09082ec0d453df87b67431d7f5c0fec
 Size (ti99sim-0.16.0.src.tar.xz) = 193760 bytes
-SHA1 (patch-Makefile.linux) = 246b6a6c750bdd1cdc760d9e5e1faa336f913f76
+SHA1 (patch-Makefile.linux) = c45906a6dda3ede7328390e15bbacaaa0f5cde56
 SHA1 (patch-include_common.hpp) = 6a0e63c88eb988b8c8f52ca3bfa435179c206ed4
 SHA1 (patch-include_platform.hpp) = 2b01ea7439d915095a36ea01921c2266fd77094b
-SHA1 (patch-rules.mak) = 2454d30b3440edc679591b961ca879f2855e5819
+SHA1 (patch-rules.mak) = 2c370ccccc7f775d48c453aedb09bab37532ec35
+SHA1 (patch-src_Makefile) = 973ef9f28c277d4be8f67b8e7d55f3e314acc797
+SHA1 (patch-src_console_Makefile) = 79e5b9c710d005facfa7641f2ec129e9f72241b1
 SHA1 (patch-src_core_device-support.cpp) = c685db3bd50d8ee1d320971a3b759e06459c15be
 SHA1 (patch-src_core_stateobject.cpp) = 9ee81d2897741d5d881dd35a83fd622a360ff9ce
+SHA1 (patch-src_sdl_Makefile) = 2cb0bda9c81110f6ee03739ceb5160cb872f34f1
+SHA1 (patch-src_util_Makefile) = e2f64a450229b737f6f70cdf67f43ff8dfeefe07

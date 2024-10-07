@@ -24,10 +24,14 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/ti99sim-${PV}
-# Check this
-MAKE_FLAGS+=	DATA_DIR=${STAGEDIR}${DATADIR} \ \
-		BIN_DIR=${STAGEDIR}${DATADIR}/bin \
-		SYS_BIN=${STAGEDIR}${PREFIX}/bin
+# FIXME: Is it necessary for binaries to exist in DATADIR, or can
+# BIN_DIR be ${PREFIX}/bin?
+MAKE_FLAGS+=	DATA_DIR=${DESTDIR}${DATADIR} \
+		BIN_DIR=${DESTDIR}${DATADIR}/bin \
+		SYS_BIN=${DESTDIR}${PREFIX}/bin \
+		MAKE=${PREFIX}/bin/gmake
+# FIXME: This shouldn't be needed
+LDFLAGS+=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lcrypto
 
 PV=		0.16.0
 DATADIR=	${PREFIX}/share/ti99sim

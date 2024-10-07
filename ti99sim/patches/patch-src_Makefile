@@ -1,0 +1,26 @@
+$NetBSD$
+
+# Respect env $(MAKE)
+
+--- src/Makefile.orig	2020-05-25 20:52:22.000000000 +0000
++++ src/Makefile
+@@ -1,11 +1,11 @@
+ all:
+-	@make -C core
+-	@make -C console
+-	@make -C sdl
+-	@make -C util
++	$(MAKE) -C core
++	$(MAKE) -C console
++	$(MAKE) -C sdl
++	$(MAKE) -C util
+ 
+ clean:
+-	@make -C core clean
+-	@make -C console clean
+-	@make -C sdl clean
+-	@make -C util clean
++	$(MAKE) -C core clean
++	$(MAKE) -C console clean
++	$(MAKE) -C sdl clean
++	$(MAKE) -C util clean
