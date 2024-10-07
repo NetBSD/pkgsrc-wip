@@ -56,7 +56,9 @@ do-install:
 	(cd ${WRKSRC}/MoCha && pax -rw . ${DESTDIR}${DATADIR})
 
 .include "../../devel/zlib/buildlink3.mk"
+# Required for Linux, even though inherited from htslib
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
