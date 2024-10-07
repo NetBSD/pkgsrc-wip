@@ -1,8 +1,19 @@
 $NetBSD$
 
---- include/common.hpp.orig	2024-10-03 22:11:28 UTC
+# Locate endian.h on macOS
+
+--- include/common.hpp.orig	2020-05-25 20:52:23.000000000 +0000
 +++ include/common.hpp
-@@ -116,9 +116,9 @@ template <typename T, size_t N> char( &ArraySizeHelper
+@@ -111,14 +111,18 @@ template <typename T, size_t N> char( &A
+ 
+ 	#endif
+ 
++#elif defined (OS_MACOSX)
++
++	#include <machine/endian.h>
++
+ #else
+ 
  	// Use the environments endian definitions
  	#include <endian.h>
  
