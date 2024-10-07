@@ -71,5 +71,7 @@ do-install:
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/suitesparse/buildlink3.mk"
 .include "../../lang/python/application.mk"
+# Required by cholmod, a not-always-used component of suitesparse
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
