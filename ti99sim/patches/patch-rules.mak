@@ -1,10 +1,10 @@
 $NetBSD$
 
-# Add NetBSD support
+# Portability
 
 --- rules.mak.orig	2020-05-25 20:52:22.000000000 +0000
 +++ rules.mak
-@@ -12,23 +12,20 @@ ifndef CXX
+@@ -12,23 +12,22 @@ ifndef CXX
  CXX      := g++
  endif
  
@@ -21,8 +21,9 @@ $NetBSD$
  LFLAGS   += -Wl,--gc-sections
  LFLAGS   += -rdynamic
  
--XLIBS    += -lstdc++fs
-+# XLIBS    += -lstdc++fs
++ifeq ($(OS),OS_LINUX)
+ XLIBS    += -lstdc++fs
++endif
  
  WARNINGS := -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
  WARNINGS += -Wno-implicit-fallthrough
@@ -31,7 +32,7 @@ $NetBSD$
  WARNINGS += -Wcast-qual
  
  INCLUDES := -I../../include
-@@ -41,10 +38,6 @@ ifeq ($(CFG),Debug)
+@@ -41,10 +40,6 @@ ifeq ($(CFG),Debug)
  DEBUG    := 1
  endif
  
@@ -42,7 +43,7 @@ $NetBSD$
  ifdef LTO
  CFLAGS   += -flto
  LFLAGS   += -flto
-@@ -80,6 +73,10 @@ ifeq ($(OSTYPE),FreeBSD)
+@@ -80,6 +75,10 @@ ifeq ($(OSTYPE),FreeBSD)
  OS       := OS_LINUX
  endif
  

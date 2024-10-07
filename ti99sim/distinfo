@@ -6,6 +6,6 @@ Size (ti99sim-0.16.0.src.tar.xz) = 193760 bytes
 SHA1 (patch-Makefile.linux) = 246b6a6c750bdd1cdc760d9e5e1faa336f913f76
 SHA1 (patch-include_common.hpp) = 6a0e63c88eb988b8c8f52ca3bfa435179c206ed4
 SHA1 (patch-include_platform.hpp) = 2b01ea7439d915095a36ea01921c2266fd77094b
-SHA1 (patch-rules.mak) = 0df5cdfefbff13fc2bf7042609157858c7c204a5
+SHA1 (patch-rules.mak) = 2454d30b3440edc679591b961ca879f2855e5819
 SHA1 (patch-src_core_device-support.cpp) = c685db3bd50d8ee1d320971a3b759e06459c15be
 SHA1 (patch-src_core_stateobject.cpp) = 9ee81d2897741d5d881dd35a83fd622a360ff9ce
