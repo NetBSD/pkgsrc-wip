@@ -2,7 +2,7 @@
 
 COMMENT=	Work-in-progress packages
 
-rSUBDIR+=	2048-c
+SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
 SUBDIR+=	7-zip-zstd
