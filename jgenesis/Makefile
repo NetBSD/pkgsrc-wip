@@ -20,7 +20,7 @@ DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		glyphon-${GLYPHON_REV}.tar.gz
 SITES.glyphon-${GLYPHON_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=grovesNL/}glyphon/archive/${GLYPHON_REV}.tar.gz
 
-#RUST_REQ=	1.80.1
+RUST_REQ=	1.80.1
 #Upstream does not state the required MSRV.
 #This package is confirmed to build with Rust 1.80.1 on amd64
 USE_TOOLS+=	pkg-config
