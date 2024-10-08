@@ -12,6 +12,7 @@ bin/mkspch
 bin/say
 bin/ti99sim-console
 bin/ti99sim-sdl
+bin/ti99sim-setup
 share/ti99sim/bin/catalog
 share/ti99sim/bin/convert-ctg
 share/ti99sim/bin/decode
@@ -25,6 +26,18 @@ share/ti99sim/bin/mkspch
 share/ti99sim/bin/say
 share/ti99sim/bin/ti99sim-console
 share/ti99sim/bin/ti99sim-sdl
+share/ti99sim/roms/cf7+.dat
+share/ti99sim/roms/cf7a+.bin
+share/ti99sim/roms/gram-kracker.dat
+share/ti99sim/roms/mini-memory.dat
+share/ti99sim/roms/spchrom.dat
+share/ti99sim/roms/ti-994.dat
+share/ti99sim/roms/ti-994a-qi.dat
+share/ti99sim/roms/ti-994a-v22.dat
+share/ti99sim/roms/ti-994a.dat
+share/ti99sim/roms/ti-disk.dat
+share/ti99sim/roms/ti-pcard.dat
+share/ti99sim/roms/tiworkshop379.dat
 @pkgdir share/ti99sim/disks
 @pkgdir share/ti99sim/console
 @pkgdir share/ti99sim/cartridges

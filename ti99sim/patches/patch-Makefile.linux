@@ -1,41 +1,26 @@
 $NetBSD$
 
-# Symlinks are problematic with destdir
+# Install ROMs, symlinks are problematic with destdir
 
 --- Makefile.linux.orig	2020-05-25 20:52:22.000000000 +0000
 +++ Makefile.linux
-@@ -1,7 +1,5 @@
- # TI-99/sim Makefile for Linux
- 
--XLIBS += -lstdc++fs
--
- ifndef DATA_DIR
- DATA_DIR  := /opt/ti99sim
- endif
-@@ -42,17 +40,18 @@ SRC_DIRS = \
- 	src/util
- 
- install: ti99sim
--	@$(INSTALL) -d $(DATA_DIR)
--	@$(INSTALL) -d $(DATA_DIR)/cartridges
--	@$(INSTALL) -d $(DATA_DIR)/console
--	@$(INSTALL) -d $(DATA_DIR)/disks
--	@$(INSTALL) -d $(BIN_DIR)
--	@for target in $(ITARGETS); do \
-+	$(INSTALL) -d $(DATA_DIR)
-+	$(INSTALL) -d $(DATA_DIR)/cartridges
-+	$(INSTALL) -d $(DATA_DIR)/console
-+	$(INSTALL) -d $(DATA_DIR)/disks
-+	$(INSTALL) -d $(BIN_DIR)
-+	$(INSTALL) -d $(SYS_BIN)
-+	for target in $(ITARGETS); do \
+@@ -46,15 +46,18 @@ install: ti99sim
+ 	@$(INSTALL) -d $(DATA_DIR)/cartridges
+ 	@$(INSTALL) -d $(DATA_DIR)/console
+ 	@$(INSTALL) -d $(DATA_DIR)/disks
++	@$(INSTALL) -d $(DATA_DIR)/roms
+ 	@$(INSTALL) -d $(BIN_DIR)
++	@$(INSTALL) -d $(SYS_BIN)
+ 	@for target in $(ITARGETS); do \
  	   $(INSTALL) -s $$target $(BIN_DIR); \
  	 done
--	@if [ $(BIN_DIR) != $(SYS_BIN) ]; then \
-+	if [ $(BIN_DIR) != $(SYS_BIN) ]; then \
+ 	@if [ $(BIN_DIR) != $(SYS_BIN) ]; then \
  	   for target in $(notdir $(ITARGETS)); do \
 -	     ln -f -s $(BIN_DIR)/$$target $(SYS_BIN)/$$target; \
 +	     cp $(BIN_DIR)/$$target $(SYS_BIN)/$$target; \
  	   done \
  	fi
++	$(INSTALL) roms/* $(DATA_DIR)/roms
  
+ uninstall:
+ 	@for target in $(notdir $(ITARGETS)); do \

@@ -5,8 +5,8 @@
 #              Mon Oct  7 11:59:41 CDT 2024               #
 ###########################################################
 
-DISTNAME=	ti99sim-${PV}.src
-PKGNAME=	${DISTNAME}
+DISTNAME=	${PKGNAME}.src
+PKGNAME=	ti99sim-${PV}
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.mrousseau.org/programs/ti99sim/archives/
 EXTRACT_SUFX=	.tar.xz
@@ -35,6 +35,12 @@ LDFLAGS+=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lcrypto
 
 PV=		0.16.0
 DATADIR=	${PREFIX}/share/ti99sim
+
+post-patch:
+	${SED} -e 's|/usr/local|${PREFIX}|g' ${FILESDIR}/ti99sim-setup > ${WRKDIR}/ti99sim-setup
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/ti99sim-setup ${DESTDIR}${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

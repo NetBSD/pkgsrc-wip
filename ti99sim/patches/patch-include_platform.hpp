@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Document misleading code
+
 --- include/platform.hpp.orig	2024-10-06 12:13:54 UTC
 +++ include/platform.hpp
 @@ -35,6 +35,10 @@
