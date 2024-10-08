@@ -5,10 +5,10 @@
 #              Mon Oct  7 11:59:41 CDT 2024               #
 ###########################################################
 
-DISTNAME=	ti99sim-0.16.0.10
+DISTNAME=	ti99sim-0.16.0.12
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	379951e7f342af873e8a8a98e2c47ab6f760194a
+GITHUB_TAG=	eff05f6fc1ee6e5da3c099b41f210f7be6369c47
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://www.mrousseau.org/programs/ti99sim/
