@@ -5526,6 +5526,7 @@ SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
 SUBDIR+=	tex-simplekv
 SUBDIR+=	tex-simplekv-doc
+SUBDIR+=	tex-svg
 SUBDIR+=	tex-texlive-ja-doc
 SUBDIR+=	tex-tkz-grapheur
 SUBDIR+=	tex-tkz-grapheur-doc
