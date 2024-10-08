@@ -5,16 +5,20 @@
 #              Mon Oct  7 11:59:41 CDT 2024               #
 ###########################################################
 
-DISTNAME=	${PKGNAME}.src
-PKGNAME=	ti99sim-${PV}
+DISTNAME=	ti99sim-0.16.0.10
 CATEGORIES=	emulators
-MASTER_SITES=	https://www.mrousseau.org/programs/ti99sim/archives/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	379951e7f342af873e8a8a98e2c47ab6f760194a
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://www.mrousseau.org/programs/ti99sim/
 COMMENT=	SDL-based TI-99/4a simulator
 LICENSE=	gnu-gpl-v3
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
+SUBST_FILES.prefix=	scripts/ti99sim-setup
 
 # Test and change if necessary.
 # MAKE_JOBS_SAFE=	no
@@ -23,7 +27,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/ti99sim-${PV}
 # FIXME: Is it necessary for binaries to exist in DATADIR, or can
 # BIN_DIR be ${PREFIX}/bin?
 MAKE_FLAGS+=	DATA_DIR=${DESTDIR}${DATADIR} \
@@ -33,14 +36,10 @@ MAKE_FLAGS+=	DATA_DIR=${DESTDIR}${DATADIR} \
 # FIXME: This shouldn't be needed
 LDFLAGS+=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lcrypto
 
-PV=		0.16.0
 DATADIR=	${PREFIX}/share/ti99sim
 
-post-patch:
-	${SED} -e 's|/usr/local|${PREFIX}|g' ${FILESDIR}/ti99sim-setup > ${WRKDIR}/ti99sim-setup
-
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/ti99sim-setup ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/ti99sim-setup ${DESTDIR}${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

@@ -1,15 +1,5 @@
 $NetBSD$
 
-BLAKE2s (ti99sim-0.16.0.src.tar.xz) = b6cd23be4a8e281f926a82726409d466651ae03f69fb9a431d1ce44a2d93b09c
-SHA512 (ti99sim-0.16.0.src.tar.xz) = 5636b1ecbaf7da10ecaea2d59aac0d84f03934065c02d3441576e4675a6d818ca21e3af80caddfa9fef640f6e0bef093a09082ec0d453df87b67431d7f5c0fec
-Size (ti99sim-0.16.0.src.tar.xz) = 193760 bytes
-SHA1 (patch-Makefile.linux) = 5e97cd887fdd8762a7caa95ec789295a40c4f3dd
-SHA1 (patch-include_common.hpp) = 6a0e63c88eb988b8c8f52ca3bfa435179c206ed4
-SHA1 (patch-include_platform.hpp) = 351c26f2c5d3697009ed41398a00981743fea317
-SHA1 (patch-rules.mak) = 2c370ccccc7f775d48c453aedb09bab37532ec35
-SHA1 (patch-src_Makefile) = 973ef9f28c277d4be8f67b8e7d55f3e314acc797
-SHA1 (patch-src_console_Makefile) = 79e5b9c710d005facfa7641f2ec129e9f72241b1
-SHA1 (patch-src_core_device-support.cpp) = 77042bb0d1fb5e348a98a6694bc3ee57f1ee7943
-SHA1 (patch-src_core_stateobject.cpp) = 4abda2c067e115d341976c0a92bd7cdff7b0c56b
-SHA1 (patch-src_sdl_Makefile) = 2cb0bda9c81110f6ee03739ceb5160cb872f34f1
-SHA1 (patch-src_util_Makefile) = e2f64a450229b737f6f70cdf67f43ff8dfeefe07
+BLAKE2s (ti99sim-0.16.0.10-379951e7f342af873e8a8a98e2c47ab6f760194a.tar.gz) = c3cc4f8db43b49fb2f05c4e5c0df1588729dc172ffa04d1ddd2e5a4ed0a9327f
+SHA512 (ti99sim-0.16.0.10-379951e7f342af873e8a8a98e2c47ab6f760194a.tar.gz) = 042d7b2411992fac10a35599819239d5b8fb86e1d79a76112296760464c5a9bce4d22de8c64a4647eeb7e274e29d1341adb0c8f11523b4ef5be13db925210899
+Size (ti99sim-0.16.0.10-379951e7f342af873e8a8a98e2c47ab6f760194a.tar.gz) = 270505 bytes
