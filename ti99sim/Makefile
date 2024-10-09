@@ -5,10 +5,10 @@
 #              Mon Oct  7 11:59:41 CDT 2024               #
 ###########################################################
 
-DISTNAME=	ti99sim-0.16.0.12
+DISTNAME=	ti99sim-0.16.0.17
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	eff05f6fc1ee6e5da3c099b41f210f7be6369c47
+GITHUB_TAG=	5c027150ecdc41a6f444e208d14efe569ecf098e
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://www.mrousseau.org/programs/ti99sim/
@@ -20,8 +20,8 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 SUBST_FILES.prefix=	scripts/ti99sim-setup
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
+# Fails on 8-core Mac Mini
+MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
@@ -30,7 +30,7 @@ USE_TOOLS+=	gmake
 # FIXME: Is it necessary for binaries to exist in DATADIR, or can
 # BIN_DIR be ${PREFIX}/bin?
 MAKE_FLAGS+=	DATA_DIR=${DESTDIR}${DATADIR} \
-		BIN_DIR=${DESTDIR}${DATADIR}/bin \
+		BIN_DIR=${DESTDIR}${PREFIX}/bin \
 		SYS_BIN=${DESTDIR}${PREFIX}/bin \
 		MAKE=${PREFIX}/bin/gmake
 # FIXME: This shouldn't be needed
