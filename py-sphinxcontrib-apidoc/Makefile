@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-apidoc/}
 
-MAINTAINER=	micha@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/sphinxcontrib-apidoc/
 COMMENT=	Sphinx extension for running sphinx-apidoc on each build
 LICENSE=	2-clause-bsd
