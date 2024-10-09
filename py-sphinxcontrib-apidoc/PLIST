@@ -1,17 +1,16 @@
 @comment $NetBSD$
-${PYSITELIB}/sphinxcontrib/__init__.py
-${PYSITELIB}/sphinxcontrib/__init__.pyc
-${PYSITELIB}/sphinxcontrib/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/apidoc/__init__.py
 ${PYSITELIB}/sphinxcontrib/apidoc/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/apidoc/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/apidoc/ext.py
 ${PYSITELIB}/sphinxcontrib/apidoc/ext.pyc
 ${PYSITELIB}/sphinxcontrib/apidoc/ext.pyo
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/AUTHORS
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/LICENSE
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/METADATA
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/RECORD
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/WHEEL
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/pbr.json
-${PYSITELIB}/sphinxcontrib_apidoc-0.0.0.dist-info/top_level.txt
+${PYSITELIB}/sphinxcontrib_apidoc-${PKGVERSION}-py3.12-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
