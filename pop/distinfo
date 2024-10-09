@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pop-6.1.1.tar.gz) = 8250c5e992c8b3ba2b8f80e1efcb551d1f3883e829975d03cb7b00c90661e29e
+SHA512 (pop-6.1.1.tar.gz) = 24296b5baf7b3748a2c89728cb0d318acb1a2b682245d9f5def61ff0feabc29ef3cc57852b206c90e88fbf59adb6860b3943020fd20aede960a07789977fa60f
+Size (pop-6.1.1.tar.gz) = 188630 bytes

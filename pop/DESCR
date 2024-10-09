@@ -1,0 +1,6 @@
+A Tasty Treat For All Your Database Needs
+So what does Pop do exactly?
+It cleans up some of the common patterns and work flows usually associated
+with dealing with databases in Go.
+Pop makes it easy to do CRUD operations, run migrations, and build/execute
+queries.
