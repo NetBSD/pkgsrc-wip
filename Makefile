@@ -1846,6 +1846,7 @@ SUBDIR+=	kea-git
 SUBDIR+=	keama-git
 SUBDIR+=	kermit
 SUBDIR+=	kew
+SUBDIR+=	kepubify
 SUBDIR+=	kf6-kstatusnotifieritem
 SUBDIR+=	kgamma5
 SUBDIR+=	kgrab
