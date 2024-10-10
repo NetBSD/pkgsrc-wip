@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (divoom-0.1.42.tar.gz) = f837648e18de8c1e3ed171e0d27bd3af60bacdaf3d9b2d0f5be00d0009907f92
+SHA512 (divoom-0.1.42.tar.gz) = 1b54bbf0a7d799d1a0d6bb92562ec9f2e4b45ccb83a83ca1a52873398b3ad5cd80e9681426c06ab8da24a486a329880c7116182bf9597d2067cb22ccc0592ac9
+Size (divoom-0.1.42.tar.gz) = 513682 bytes

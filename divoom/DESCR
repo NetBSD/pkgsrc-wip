@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# Divoom
+![Divoom](https://raw.githubusercontent.com/r12f/divoom/main/assets/Logo.png)
+
+Rust Library for controlling divoom devices that support REST APIs, such as pixoo-64 (and from how divoom's api/doc organizes, maybe more in the future).
+
+[![Crates.io](https://img.shields.io/crates/v/divoom)](https://crates.io/crates/divoom)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/r12f/divoom?color=blue&label=github%20release&style=flat-square)](https://github.com/r12f/divoom/releases)
+[![Documentation](https://docs.rs/divoom/badge.svg)](https://docs.rs/divoom/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE-APACHE)
+[![Build Status](https://riff.visualstudio.com/divoom/_apis/build/status/r12f.divoom?branchName=main)](https://riff.visualstudio.com/divoom/_build/latest?definitionId=7&branchName=main)
+
+```rust
+// Get current channel
+use divoom::*;
+
+println!(
+    "{}",
+    PixooClient::new("192.168.0.123").get_current_channel().await?
+);
+
+...

@@ -1,0 +1,8 @@
+# cargo generate-lockfile
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+error: no matching package named `anyhow` found
+location searched: registry `crates-io`
+required by package `divoom v0.0.1 (/scratch/wip/divoom/work/divoom-0.1.42/divoom)`
