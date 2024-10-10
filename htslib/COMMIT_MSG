@@ -1,0 +1,13 @@
+biology/htslib: Update to 1.21
+
+Packaged in wip by J Bacon
+
+# pkgsrc-specific changes:
+
+Remove mysterious CONFIGURE_ENV.NetBSD+= hts_cv_have_neon=no.
+A comment was added stating that it caused build failures.
+
+# Upstream changes:
+
+Numerous bug fixes and enhancements since 1.17.
+Changes: https://github.com/samtools/htslib/releases

@@ -13,7 +13,7 @@ HOMEPAGE=	https://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit
 
-USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
+USE_TOOLS+=		autoconf automake autoreconf bash:test gmake perl:test
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libcurl
 PKGCONFIG_OVERRIDE=	htslib.pc.in
