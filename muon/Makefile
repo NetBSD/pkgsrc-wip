@@ -43,7 +43,7 @@ do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} samu -j ${_MAKE_JOBS_N:U1} -C output
 
 do-test:
-	cd ${WRKSRC}/output && env ${TEST_ENV} /usr/pkg/bin/muon test
+	cd ${WRKSRC}/output && env ${TEST_ENV} ./muon test
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/output/muon ${DESTDIR}${PREFIX}/bin/muon
