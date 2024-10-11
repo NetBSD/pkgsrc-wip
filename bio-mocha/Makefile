@@ -59,6 +59,7 @@ do-install:
 .include "../../math/gsl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/htslib/buildlink3.mk"
+.include "../../math/R/buildlink3.mk"
 # Required for Linux, even though inherited from htslib
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
