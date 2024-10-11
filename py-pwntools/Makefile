@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pwntools-4.11.1
+DISTNAME=	pwntools-4.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwntools/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.15.2:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-pip>=6.0.8:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-psutil>=3.3.0:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-pyelftools>=0.24:../../devel/py-pyelftools
+DEPENDS+=	${PYPKGPREFIX}-pyelftools>=0.29:../../devel/py-pyelftools
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ropgadget>=5.3:../../wip/py-ropgadget
@@ -30,9 +30,9 @@ DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers-[0-9]*:../../devel/py-sortedcontainers
-DEPENDS+=	${PYPKGPREFIX}-unicorn>=1.0.2:../../emulators/py-unicorn
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-unicorn>=2.0.1:../../emulators/py-unicorn
+DEPENDS+=	${PYPKGPREFIX}-unix-ar-[0-9]*:../../wip/py-unix-ar
+DEPENDS+=	${PYPKGPREFIX}-zstandard-[0-9]*:../../archivers/py-zstandard
 
 post-install:
 .for f in asm checksec common constgrep cyclic debug disablenx disasm elfdiff \

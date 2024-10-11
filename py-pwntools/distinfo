@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (pwntools-4.11.1.tar.gz) = 670c93d8b84321ee0696c58bb3402235300549629caac619106ef5f042400473
-SHA512 (pwntools-4.11.1.tar.gz) = 2330214a64740a55ed15f1b25dc4e56020b5c7065c3cc0b0067e44b8f5657a34f0dfe9094497849655d7748463ccb4719eed7f02412fe08dc00ccb92fb0772be
-Size (pwntools-4.11.1.tar.gz) = 5297392 bytes
+BLAKE2s (pwntools-4.13.1.tar.gz) = 5f8183b17b825c518f5ee8adadce91f11a16efba6a1d696311d97941d2ca8b16
+SHA512 (pwntools-4.13.1.tar.gz) = cd4c9e13c27ab5343f0b1c26b03bf0e59dc755ede1ee0d1d2dc4f7a895c5474cefb0d03f581a6ad1b5f573ddd54134d0a9db63a7db6c8a44f2d229fb80f1fe9f
+Size (pwntools-4.13.1.tar.gz) = 5476226 bytes
