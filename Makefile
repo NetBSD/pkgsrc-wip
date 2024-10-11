@@ -4779,6 +4779,7 @@ SUBDIR+=	py-umalqurra
 SUBDIR+=	py-unidecode
 SUBDIR+=	py-unidiff
 SUBDIR+=	py-uniseg
+SUBDIR+=	py-unix-ar
 SUBDIR+=	py-update-checker
 SUBDIR+=	py-upsilon
 SUBDIR+=	py-uptime
