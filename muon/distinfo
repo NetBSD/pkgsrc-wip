@@ -6,4 +6,4 @@ Size (muon-0.3.0/0.3.0.tar.gz) = 445990 bytes
 BLAKE2s (muon-0.3.0/man.tar.gz) = a29909a298c4140169684bfb3c0156aef8269b1335473f37ed02506dce110f49
 SHA512 (muon-0.3.0/man.tar.gz) = 8dfc00ce366b172196d815e74e9941debcc4a306333f1d8cda8ca31d501bdb72fe3a0ec8df0391731906674fa9d4bf014d96974bc73566f5baf30f10c232d60f
 Size (muon-0.3.0/man.tar.gz) = 8067 bytes
-SHA1 (patch-meson.build) = 3533d7c4b34a2f3dd9e67778becd17f342a69dfa
+SHA1 (patch-tests_project_meson.build) = 6bfac6756950c2e6e0016d6b2b3978542f9ae963
