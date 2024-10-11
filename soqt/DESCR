@@ -1,0 +1,3 @@
+SoQt is a library which provides the glue between Systems in Motion's Coin
+high-level 3D visualization library and Troll Tech's Qt 2D user interface
+library.

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2010/11/02 13:26:43 silasdb Exp $
+
+BLAKE2s (SoQt-1.6.3.tar.gz) = a21cd51f24d5b827abddeb44ffbb7fd051ab2ad11efe2aecd58ec68aa3635b6d
+SHA512 (SoQt-1.6.3.tar.gz) = 478d4b26897566a9e17258a90d92325305269f8f4f50c82ebb3f0bef24a4c41f798f718958205673d101fb5d91bef0b8b35b470eda7b013669405031c5ca7897
+Size (SoQt-1.6.3.tar.gz) = 1114323 bytes
+BLAKE2s (coin3d-soanydata-soanydata-1_1_0.tar.gz) = 323eee7c14ffb4d250ca66d428e2ef45ca17ad526cbf99448f2d6f7ae3c0932c
+SHA512 (coin3d-soanydata-soanydata-1_1_0.tar.gz) = 23bda34b59d54c6b518619be7df0f310af89b08d1dcaf687d78fcbb482905df55c597b4405eeada096cdf654a45866c25519393f073253671f7ee4f6edbd8987
+Size (coin3d-soanydata-soanydata-1_1_0.tar.gz) = 151127 bytes
+BLAKE2s (coin3d-sogui-426cd49.tar.gz) = 5afca6edc06cb15ab8cd001f8e69981e337baa18fc53b9a86fdc8ba747326c92
+SHA512 (coin3d-sogui-426cd49.tar.gz) = defdeb37c22aaea33a2d0178050a9f0ed0807302bee7abb2ae1a1b122a49fe588f9c16c94d75bb94d767b64ad3cf1bd552985c609ff28f60f0d74c51880e553b
+Size (coin3d-sogui-426cd49.tar.gz) = 424686 bytes
