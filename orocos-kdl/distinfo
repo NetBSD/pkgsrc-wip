@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (orocos-kdl-1.3.1.tar.gz) = f4ddb7af0b51fc558ba78861aec3f09b049125f7
-SHA512 (orocos-kdl-1.3.1.tar.gz) = 93abd9dd5aef3710f784f9db8eea4738458bffa5295923993e2d77656c18f7354559412fb7eb5f1e9da7112de19aa36d3f0f68f149852f955bce960fd3b719e7
-Size (orocos-kdl-1.3.1.tar.gz) = 202471 bytes
+BLAKE2s (orocos-kdl-1.5.1.tar.gz) = 1f0d3d365e7a29a9b08b6a55cdfa1e3d9c96d409aeeff42fdebf787232937cd7
+SHA512 (orocos-kdl-1.5.1.tar.gz) = 9774b76b755ea81168390643813789783f60d0b1cdb46cd250e3e0d27f75a6cf2fd3bfd2081c04e30a14ff4fc70d0080c9b43b82ee181c2dda82f23f052b338d
+Size (orocos-kdl-1.5.1.tar.gz) = 251074 bytes
