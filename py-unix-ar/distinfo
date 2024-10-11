@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.10 2023/05/26 20:00:17 adam Exp $
+
+BLAKE2s (unix_ar-0.2.1.tar.gz) = 4b31b76ad34645ff564c42f4699bcd664985dd0b89334b46b36b7f3d2157e3bf
+SHA512 (unix_ar-0.2.1.tar.gz) = 5fa88fa061aef9dc7a8a48712217386cc06bd8c3cc504e59cb3729eb58ecb2a06b907fc16a24cbab103c0e65b33af6fb1d83358b766fcb9992ac1ba7496cc80d
+Size (unix_ar-0.2.1.tar.gz) = 7441 bytes
