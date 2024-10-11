@@ -66,12 +66,13 @@ do-install:
 	(cd ${WRKSRC}/bcf-score && pax -rw . ${DESTDIR}${DATADIR})
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../wip/htslib/buildlink3.mk"
+.include "../../math/suitesparse/buildlink3.mk"
+# Needed on Linux, even though inherited from htslib
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
-.include "../../math/gsl/buildlink3.mk"
-.include "../../math/suitesparse/buildlink3.mk"
-.include "../../lang/python/application.mk"
 # Required by cholmod, a not-always-used component of suitesparse
 .include "../../parallel/openmp/buildlink3.mk"
-.include "../../wip/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
