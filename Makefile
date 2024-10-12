@@ -1450,7 +1450,6 @@ SUBDIR+=	hal
 SUBDIR+=	halfempty
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
-SUBDIR+=	haplohseq
 SUBDIR+=	hare
 SUBDIR+=	harec
 SUBDIR+=	harmony
