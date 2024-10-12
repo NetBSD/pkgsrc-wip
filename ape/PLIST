@@ -32,6 +32,10 @@ share/APE/Languages/C/Macros/macros
 share/APE/Languages/C/Macros/menu.txt
 share/APE/Languages/C/language_opts
 share/APE/Languages/C/syntax_highlighting
+share/APE/Languages/C99/Macros/macros
+share/APE/Languages/C99/Macros/menu.txt
+share/APE/Languages/C99/language_opts
+share/APE/Languages/C99/syntax_highlighting
 share/APE/Languages/CSS/Macros/macros
 share/APE/Languages/CSS/Macros/menu.txt
 share/APE/Languages/CSS/language_opts
