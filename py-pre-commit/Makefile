@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-4.0.0
+DISTNAME=	pre_commit-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pre-commit.com/
 COMMENT=	Framework for managing and maintaining multi-language pre-commit hook
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # upstream dropped support
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # upstream dropped support
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
