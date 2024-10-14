@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vsearch-2.27.1
+DISTNAME=	vsearch-2.29.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=torognes/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +20,9 @@ CONFIGURE_ARGS+=	--disable-pdfman
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
+
+post-install:
+	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/vsearch
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
