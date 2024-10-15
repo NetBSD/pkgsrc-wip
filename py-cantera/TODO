@@ -14,3 +14,5 @@ Should we be passing buildlink here?
 
 	SCONS_BUILD_ARGS+=      sundials_include=${PREFIX}/include
 	SCONS_BUILD_ARGS+=      sundials_libdir=${PREFIX}/lib
+
+${PYSITELIB}/cantera/data and share/cantera/data appear to have duplicated yaml files. Wonder if we can trim them out from ${PYSITELIB}
