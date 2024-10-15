@@ -5,6 +5,6 @@ Installing the LDraw parts library:
 
 sudo mkdir -p "${PREFIX}/share/leocad"
 sudo ftp -o "${PREFIX}/share/leocad/library.bin" \
-	https://www.ldraw.org/library/updates/complete.zip
+	https://library.ldraw.org/library/updates/complete.zip
 
 ===========================================================================
