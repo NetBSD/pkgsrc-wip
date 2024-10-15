@@ -5308,6 +5308,7 @@ SUBDIR+=	splix
 SUBDIR+=	spot
 SUBDIR+=	spread4
 SUBDIR+=	spyder
+SUBDIR+=	sq
 SUBDIR+=	sqlc
 SUBDIR+=	sqlitewrite
 SUBDIR+=	sqlux
