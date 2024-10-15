@@ -1,0 +1,15 @@
+sq is a command line tool that provides jq-style access to structured
+data sources: SQL databases, or document formats like CSV or Excel. It
+is the lovechild of sql+jq.
+
+sq executes jq-like queries, or database-native SQL. It can join across
+sources: join a CSV file to a Postgres table, or MySQL with Excel.
+
+sq outputs to a multitude of formats including JSON, Excel, CSV, HTML,
+Markdown and XML, and can insert query results directly to a SQL
+database.
+
+sq can also inspect sources to view metadata about the source structure
+(tables, columns, size). You can use sq diff to compare tables, or
+entire databases. sq has commands for common database operations to
+copy, truncate, and drop tables.
