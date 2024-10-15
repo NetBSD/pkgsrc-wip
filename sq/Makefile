@@ -11,7 +11,7 @@ COMMENT=	Jq-style access to structured data sources
 LICENSE=	mit
 
 GO_BUILD_PATTERN+=      -ldflags ' \
-			-X github.com/neilotoole/sq/cli/buildinfo.Version=${PKGVERSION_NOREV} \
+			-X github.com/neilotoole/sq/cli/buildinfo.Version=${GITHUB_TAG} \
 			-X github.com/neilotoole/sq/cli/buildinfo.Commit= \
 			-X github.com/neilotoole/sq/cli/buildinfo.Timestamp='
 
