@@ -30,8 +30,5 @@ DEPENDS+=	zstd>0:../../archivers/zstd
 
 META_PACKAGE=	yes
 
-# Inherited from py-macs2 dep
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

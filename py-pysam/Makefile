@@ -27,8 +27,6 @@ MAKE_ENV+=	HTSLIB_MODE=external \
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib.netbsd-9.3-amd64-cpython-310/pysam/
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PYSITELIB}/pysam
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../lang/python/egg.mk"
 .include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/py-cython/tool.mk"

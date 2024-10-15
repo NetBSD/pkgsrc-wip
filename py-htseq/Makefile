@@ -24,9 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.4:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	c c++
 
-# Inherited from py-matplotlib
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
