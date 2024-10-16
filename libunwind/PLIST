@@ -4,7 +4,6 @@ include/__libunwind_config.h
 include/libunwind.h
 include/libunwind.modulemap
 include/mach-o/compact_unwind_encoding.h
-include/mach-o/compact_unwind_encoding.modulemap
 include/unwind.h
 include/unwind_arm_ehabi.h
 include/unwind_itanium.h

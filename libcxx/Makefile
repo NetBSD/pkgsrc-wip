@@ -31,6 +31,7 @@ CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/${LIBCXXABI}/include
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_INCLUDE_BENCHMARKS=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_STATICALLY_LINK_ABI_IN_SHARED_LIBRARY=ON
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
@@ -48,6 +49,7 @@ post-extract:
 	${LN} -f -s ${WRKDIR}/${LIBCXXABI} ${WRKDIR}/libcxxabi
 
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../wip/libcxxabi/buildlink3.mk"
 .include "../../wip/libunwind/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

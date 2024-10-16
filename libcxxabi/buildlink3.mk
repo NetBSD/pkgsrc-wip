@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	libcxxabi
 .if !defined(LIBCXXABI_BUILDLINK3_MK)
 LIBCXXABI_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libcxxabi+=	libcxxabi>=18.0.0
+BUILDLINK_API_DEPENDS.libcxxabi+=	libcxxabi>=19.1.0
 BUILDLINK_PKGSRCDIR.libcxxabi?=		../../wip/libcxxabi
 
 .include "../../wip/llvm/buildlink3.mk"

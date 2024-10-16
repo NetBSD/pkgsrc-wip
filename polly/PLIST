@@ -44,6 +44,7 @@ include/polly/Support/GICHelper.h
 include/polly/Support/ISLOStream.h
 include/polly/Support/ISLOperators.h
 include/polly/Support/ISLTools.h
+include/polly/Support/PollyDebug.h
 include/polly/Support/SCEVAffinator.h
 include/polly/Support/SCEVValidator.h
 include/polly/Support/ScopHelper.h

@@ -41,7 +41,7 @@ CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
-# IMPORTANT: copy __config_site from partial build of libcxx.
+# IMPORTANT: copy __assertion_handler and __config_site from partial build of libcxx.
 post-extract:
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 	${CP} ${FILESDIR}/__assertion_handler ${FILESDIR}/__config_site \

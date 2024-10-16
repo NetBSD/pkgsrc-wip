@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	llvm
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=18.0.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=19.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../wip/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
@@ -92,6 +92,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-xray
 BUILDLINK_FILES.llvm+=		bin/not
 BUILDLINK_FILES.llvm+=		bin/obj2yaml
 BUILDLINK_FILES.llvm+=		bin/opt
+BUILDLINK_FILES.llvm+=		bin/reduce-chunk-list
 BUILDLINK_FILES.llvm+=		bin/sancov
 BUILDLINK_FILES.llvm+=		bin/sanstats
 BUILDLINK_FILES.llvm+=		bin/split-file

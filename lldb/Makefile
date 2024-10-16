@@ -33,6 +33,7 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_HOME=${PREFIX}
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 LUA_VERSIONS_ACCEPTED=	53
+PLIST_SUBST+=		LUA_VERSION=${LUA_VERSION:R}
 
 REPLACE_PERL+=		*/*.pl
 
@@ -52,8 +53,6 @@ TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
-
-PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
 .include "options.mk"
 

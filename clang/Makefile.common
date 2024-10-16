@@ -12,12 +12,8 @@ HOMEPAGE=	https://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	apache-2.0
 
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
-
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
 GCC_REQD+=		7
 
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
@@ -129,9 +125,6 @@ CMAKE_CONFIGURE_ARGS+=    -DCLANG_DEFAULT_CXX_STDLIB:STRING="libc++"
 LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
 PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
 
-PKGVERSION_MAJOR=	18
-PLIST_SUBST+=		PKGVERSION_MAJOR=${PKGVERSION_MAJOR}
-
 PLIST_VARS+=	notdylib
 .if ${SHLIB_TYPE} == "dylib"
 SOEXT=		dylib
@@ -167,11 +160,9 @@ PKG_FAIL_REASON+=	"z3 PKG_OPTION must be enabled in lang/llvm"
 CMAKE_CONFIGURE_ARGS+=		-DLLVM_ENABLE_Z3_SOLVER=ON
 .endif
 
-post-extract:
-	${MKDIR} ${WRKSRC}/build
-
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm
+.include "../../textproc/libxml2/buildlink3.mk"

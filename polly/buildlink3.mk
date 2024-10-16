@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	polly
 .if !defined(POLLY_BUILDLINK3_MK)
 POLLY_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.polly+=	polly>=18.0.0
+BUILDLINK_API_DEPENDS.polly+=	polly>=19.1.0
 BUILDLINK_PKGSRCDIR.polly?=	../../wip/polly
 
 .include "../../wip/llvm/buildlink3.mk"

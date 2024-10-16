@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.29 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
-SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
-Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
-BLAKE2s (polly-18.1.8.src.tar.xz) = 0b3cf94acff01104fb8cee9d242fee062efb4eddfa4d2e0c2559c894e7335385
-SHA512 (polly-18.1.8.src.tar.xz) = c6186f42c821a542a4c85326023bed82031b9ff3a77deff9644929a93d66d88f19f7b76c190273e50fdfdae41572687576cb24fa6799c407fab0fea0b5fee991
-Size (polly-18.1.8.src.tar.xz) = 9159676 bytes
-BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
-SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
-Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
+BLAKE2s (cmake-19.1.2.src.tar.xz) = dd4e015f4bfcff100a0e93a3004dc46e7558e2e50e355dfc224bc60a0ef06b5d
+SHA512 (cmake-19.1.2.src.tar.xz) = 9d13575a3e55a500dd5370591386a79ccc2164056448571620427f64236bf3fd1369090e3d5bdeef725b181d563462f331ff03c54e0667c01d079cf3af8b0c3f
+Size (cmake-19.1.2.src.tar.xz) = 9296 bytes
+BLAKE2s (polly-19.1.2.src.tar.xz) = 1425a437f8d40002ae7729ccdd20da7b9bc97c54f7e10d9fbc98389cb84454cf
+SHA512 (polly-19.1.2.src.tar.xz) = a9f75472920285c188aa9bd88b61f560c4d687be6df2f2279efad33509d7f433650bd9674a01a45e3367bce271c2cc0389f70918c2d50503987ca3a8a570b126
+Size (polly-19.1.2.src.tar.xz) = 9163252 bytes
+BLAKE2s (runtimes-19.1.2.src.tar.xz) = 6d89879feb1806632144f8510cda27aeee59f20ee4c78583d0efea98353fc83d
+SHA512 (runtimes-19.1.2.src.tar.xz) = 32d28a78ff7229453830aa1f344b4ee520959176c81eaf0a8c7e1f65eeaf422ae1616144c379929762f54f24ddeb34df0c8206287d18a9a29bb070f5787c9002
+Size (runtimes-19.1.2.src.tar.xz) = 7220 bytes
