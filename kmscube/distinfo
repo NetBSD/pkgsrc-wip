@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.40 2023/12/05 20:15:23 markd Exp $
+
+BLAKE2s (kmscube.tar.bz2) = 47f84626bb895da33d2859c61b896ac54d87ca28b6b5445fc120565622b1ed34
+SHA512 (kmscube.tar.bz2) = 7c6a183a5383537da0b08fbfc4cb961eb3ed2b67398ad0d7cb0017a0e7e28ffa0e968c4e754fc5952da838e2a58d748e54c5fd92ea94aa236e0bb1fcf69cd453
+Size (kmscube.tar.bz2) = 92327 bytes
+SHA1 (patch-kmscube.c) = 732381e2ebdc522e290c7e16994bf4f24f760c9a
+SHA1 (patch-texturator.c) = 6854f5417ca0d679c97ac9772293a8d345ec51f7
