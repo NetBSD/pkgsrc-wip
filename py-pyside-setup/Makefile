@@ -34,6 +34,7 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtscxml/buildlink3.mk"
+.include "../../x11/qt5-qtserialport/buildlink3.mk"
 #.include "../../x11/qt5-qtspeech/buildlink3.mk"
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"

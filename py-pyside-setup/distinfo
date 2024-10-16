@@ -3,4 +3,5 @@ $NetBSD: $
 BLAKE2s (pyside-setup-opensource-src-5.15.15.tar.xz) = 403c535eccd8d4fe234dc4e1f2c43cedd0ea05fbd0e85305a31a777ab4fcdb8e
 SHA512 (pyside-setup-opensource-src-5.15.15.tar.xz) = a8c4e235983c681d6a81ca2d3b20c586a4941e63aac1dd3eafc24d0691558819b403cc0c4a6861d1dc02512e424a919ff0ce8fa897959966eac7f19a3840ab71
 Size (pyside-setup-opensource-src-5.15.15.tar.xz) = 3586600 bytes
+SHA1 (patch-sources_pyside2_cmake_Macros_PySideModules.cmake) = c753d3abba7e7b80ad71205612e861eb3698fc0d
 SHA1 (patch-sources_shiboken2_libshiboken_helper.h) = 4fb43ed185711529104f112d5b85bcf3f1688af8
