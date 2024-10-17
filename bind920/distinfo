@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.20 2024/07/23 13:50:32 taca Exp $
 
-BLAKE2s (bind-9.20.2.tar.xz) = 7cee1649ea07555289430f3b8b7e0655f268ec66066689db0dabeaf7e3d3f956
-SHA512 (bind-9.20.2.tar.xz) = da5c9ca3cedf8e28ccf85f886772a306eccf95c10883eff42e6d34694d650cdbd00b3e5fe30cc9fb012029c1a5e8e829ebd6ce2ffefa323d7057e8915badf90c
-Size (bind-9.20.2.tar.xz) = 5865060 bytes
+BLAKE2s (bind-9.20.3.tar.xz) = 7138270b2903658107b0e1f85e321d32cf7d6608518f6f45d73852375c6fde4f
+SHA512 (bind-9.20.3.tar.xz) = 02321aa6d8260f410a319d78bcabec468b30a0ac3ebb66f54b998452bdb171626e12dd9362b1caaa55526d4788180b3177063fe2263cd168be8600a6e2592952
+Size (bind-9.20.3.tar.xz) = 5664328 bytes
 SHA1 (patch-configure.ac) = f1f672271aa38c10b12d12d48455eb0af82d270c
-SHA1 (patch-lib_dns_acl.c) = 731f99ad448717aa642c6c1b2f4c0ef0b002cc07
