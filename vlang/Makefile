@@ -3,7 +3,7 @@
 #DISTNAME=	vlang-weekly-${VER}
 DISTNAME=	vlang-${VER}
 #VER=		2023.26
-VER=		0.3.5
+VER=		0.4.8
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vlang/}
 GITHUB_PROJECT=	v
@@ -29,7 +29,7 @@ DEPENDS+=	boehm-gc>=8:../../devel/boehm-gc
 # Then search in https://github.com/vlang/vc/commits/master for the
 # commit that mentions the abbreviated above commit in its commit
 # message.
-GITHUB_SUBMODULES+=	vlang vc     330f701607e1073da284d36824a453c47dc2830c vc
+GITHUB_SUBMODULES+=	vlang vc     54beb1f416b404a06b894e6883a0e2368d80bc3e vc
 # tccbin is the dummy branch thirdparty-unknown-unknown and needs no updates.
 GITHUB_SUBMODULES+=	vlang tccbin de82a130c282c03eac3ccd442b995a5174e865ec thirdparty/tcc
 
@@ -44,7 +44,18 @@ pre-configure:
 SUBST_CLASSES+=		hashbang
 SUBST_STAGE.hashbang=	pre-install
 SUBST_FILES.hashbang+=	cmd/tools/*.vsh
+SUBST_FILES.hashbang+=	cmd/tools/*/*.vsh
 SUBST_SED.hashbang=	-e '1s,\#!.*,\#!${INSTALLDIR}/v,'
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-install
+SUBST_FILES.bash+=	cmd/tools/fuzz/fuzz_v_parser_with_radamsa.sh
+SUBST_SED.bash=		-e '1s,\#!.*,\#!${PREFIX}/bin/bash,'
+
+SUBST_CLASSES+=		expect
+SUBST_STAGE.expect=	pre-install
+SUBST_FILES.expect+=	cmd/tools/vcreate/tests/*.expect
+SUBST_SED.expect=	-e '1s,\#!.*,\#!${PREFIX}/bin/expect,'
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch

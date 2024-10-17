@@ -7,15 +7,6 @@ TODO: Type net.Addr (a network address) seems not to get defined.
 
 TODO: Uses 'pthread_rwlockattr_setpshared()' which NetBSD doesn't seem to
 implement.
-
-$ CFLAGS=-D_PTHREAD_PSHARED ./v test
-failed    cmd: "/tmpfs/wip/vlang/work.x86_64/v-weekly.2021.37/v" -skip-unused "/tmpfs/wip/vlang/work.x86_64/v-weekly.2021.37/cmd/tools/vtest.v"
-failed   code: 1
-==================
-ld: /tmp//ccJpZukZ.o: in function `sync__RwMutex_init':
-vtest.8479168851317294636.tmp.c:(.text+0x1f877): undefined reference to `pthread_rwlockattr_setpshared'
-...
-
 I patched it out. Should be upstreamed somehow, cleanly.
 
 TODO: several tests fail with signal 11: segmentation fault, possibly
@@ -24,3 +15,58 @@ TODO: several tests fail with signal 11: segmentation fault, possibly
 
 Summary for testing vlib: 59 failed, 1420 passed, 19 skipped, 1498 total. Runtime: 549385 ms, on 5 parallel jobs.
 Summary for building examples: 41 failed, 116 passed, 17 skipped, 174 total. Runtime: 37395 ms, on 5 parallel jobs.
+
+0.4.8:
+
+Summary for all V _test.v files: 26 passed, 4 skipped, 30 total. Elapsed time: 6661 ms, on 5 parallel jobs. Comptime: 26814 ms. Runtime: 1054 ms.
+Summary for running '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v' vet over most .v files: 2093 passed, 3 skipped, 2096 total. Elapsed time: 4725 ms, on 5 parallel jobs.
+Summary for running '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v' fmt -inprocess -verify over most .v files: 1 failed, 3693 passed, 3 skipped, 3697 total. Elapsed time: 8177 ms, on 5 parallel jobs.
+Summary for running vfmt over V files: 3688 passed, 3 skipped, 3691 total. Elapsed time: 7488 ms, on 5 parallel jobs.
+Summary for building cmd/tools: 2 failed, 68 passed, 70 total. Elapsed time: 51393 ms, on 5 parallel jobs.
+Summary for building examples: 50 failed, 147 passed, 16 skipped, 213 total. Elapsed time: 74616 ms, on 5 parallel jobs.
+
+
+ FAIL  [173/213] C:  1082.2 ms, R:     0.000 ms examples/ttf_font/example_ttf.v
+>> compilation failed:
+================== C compilation error (from cc): ==============
+cc: In file included from /tmp/v_1000/tsession_7e5536e48800_01JADKX7467M407XREMM39QVR9/example_ttf.01JADKYXZWTKBM55435DZMYWQE.tmp.c:958:
+cc: /tmpfs/wip/vlang/work.x86_64/v-0.4.8/thirdparty/sokol/sokol_app.h:2029:10: error: #error ("sokol_app.h: unknown 3D API selected for Linux, must be SOKOL_GLCORE, SOKOL_GLES3")
+cc:  2029 |         #error("sokol_app.h: unknown 3D API selected for Linux, must be SOKOL_GLCORE, SOKOL_GLES3")
+cc:       |          ^~~~~
+cc: /tmpfs/wip/vlang/work.x86_64/v-0.4.8/thirdparty/sokol/sokol_app.h:2160:14: fatal error: X11/Xlib.h: No such file or directory
+cc:  2160 |     #include <X11/Xlib.h>
+cc:       |              ^~~~~~~~~~~~
+cc: compilation terminated.
+================================================================
+(You can pass `-cg`, or `-show-c-output` as well, to print all the C error messages).
+
+---- Summary of `v test-all`: --------------------------------------
+Total runtime: 838804 ms
+>          OK: V can compile hello world. 
+>          OK: V can output a .c file, without compiling further. 
+>          OK: V can compile hello world with -skip-unused. 
+>          OK: V can test vlib/builtin with -skip-unused 
+>          OK: V can compile hello world with both -skip-unused and -profile . 
+>          OK: V can run code given after `-e` 
+>          OK: V can run code with `-e`, that use semicolons and several imports, and that accepts CLI parameters. 
+>          OK: V can run main.c.v files 
+>          OK: V can compile itself. 
+>          OK: V can compile itself with -cstrict. 
+>          OK: V can compile itself with -autofree. 
+>          OK: V can compile itself with -prealloc. 
+>          OK: V can compile itself with -skip-unused. 
+>          OK: All .v files can be processed with `v fmt`. Note: the result may not always be compilable, but `v fmt` should not crash. 
+>          OK: `v install` works. 
+>          OK: Running net.http with -d trace_http_request works. 
+>          OK: Running net.http with -d trace_http_response works. 
+>          OK: `v -usecache -cg` works. 
+>          OK: V can crun a script, that lacks a .vsh extension 
+>          OK: V can run a script, that lacks a .vsh extension 
+>      Failed: '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v'  -progress test-cleancode
+>      Failed: '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v'  -progress test-self
+>      Failed: '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v'  -progress -N -W build-tools
+>      Failed: '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v'  -progress -N -W build-examples
+>      Failed: '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v' check-md -hide-warnings .
+>      Failed: '/tmpfs/wip/vlang/work.x86_64/v-0.4.8/v' -usecache examples/tetris/tetris.v
+*** Error code 1
+
