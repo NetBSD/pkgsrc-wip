@@ -1,8 +1,7 @@
 @comment $NetBSD$
 bin/chezmoi
 share/doc/chezmoi/comparison-table.md
-share/doc/chezmoi/index.md
-share/doc/chezmoi/install.md
+share/doc/chezmoi/license.md
 share/doc/chezmoi/migrating-from-another-dotfile-manager.md
 share/doc/chezmoi/quick-start.md
 share/doc/chezmoi/what-does-chezmoi-do.md

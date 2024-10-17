@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	chezmoi-2.11.2
+DISTNAME=	chezmoi-2.52.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=twpayne/}
 GITHUB_PROJECT=	chezmoi
@@ -13,19 +13,15 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
-DEPENDS+=	go>=1.16.0:../../lang/go
-DEPENDS+=	git>=0:../../devel/git
+DEPENDS+=	git-base>=0:../../devel/git-base
 DEPENDS+=	age>=0:../../security/age
 
 .include "go-modules.mk"
 
 GO_BUILD_PATTERN=	-trimpath -mod=readonly -tags noupgrade -ldflags "-X github.com/twpayne/chezmoi.cmd.DocsDir=/usr/pkg/share/doc/${GITHUB_PROJECT} -X main.version=${PKGVERSION_NOREV}"
 
-do-build:
-	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} build -v ${GO_BUILD_PATTERN}
-
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/chezmoi ${DESTDIR}${PREFIX}/bin/chezmoi
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/chezmoi ${DESTDIR}${PREFIX}/bin/chezmoi
 	mkdir -p ${DESTDIR}${PREFIX}/share/doc/chezmoi
 	${INSTALL_DATA} ${WRKSRC}/assets/chezmoi.io/docs/*md ${DESTDIR}${PREFIX}/share/doc/chezmoi/
 
