@@ -1,4 +1,11 @@
-devel/cargo-c: update to 0.10.4
+devel/cargo-c: update to 0.10.5
+
+0.10.5
+ - cargo 0.83
+ - Windows support overhaul with fixes and better CI support (thank you @amyspark and @folkertdev !)
+ - Plenty of refactoring, tests (thank you @folkertdev !)
+ - Fix link-line support on workspaces with packages with different dependencies (thank you @thiblahute !)
+ - Additional small fixes
 
 0.10.4
  - cargo 0.82.0
