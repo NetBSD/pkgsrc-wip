@@ -1,10 +1,10 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	rtl_433
-GITHUB_TAG=	21.05
-DISTNAME=	21.05
+GITHUB_TAG=	23.11
+DISTNAME=	23.11
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=merbanan/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -37,4 +37,5 @@ post-install:
 
 .include "options.mk"
 .include "../../devel/libusb1/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
