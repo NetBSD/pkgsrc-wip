@@ -6,7 +6,7 @@ $NetBSD$
 
 --- services/device/hid/BUILD.gn.orig	2024-09-24 20:49:34.393380600 +0000
 +++ services/device/hid/BUILD.gn
-@@ -36,7 +36,35 @@ source_set("hid") {
+@@ -36,7 +36,33 @@ source_set("hid") {
      "//services/device/public/mojom",
    ]
  
@@ -30,14 +30,12 @@ $NetBSD$
 +    ]
 +  }
 +
-+#  if (is_netbsd) {
-+#    sources += [
-+#      "hid_connection_netbsd.cc",
-+#      "hid_connection_netbsd.h",
-+#      "hid_service_netbsd.cc",
-+#      "hid_service_netbsd.h",
-+#    ]
-+#  }
++  if (is_netbsd) {
++    sources += [
++      "hid_service_netbsd.cc",
++      "hid_service_netbsd.h",
++    ]
++  }
 +
 +  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
      sources += [

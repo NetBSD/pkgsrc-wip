@@ -6,7 +6,7 @@ $NetBSD$
 
 --- services/device/hid/hid_service.cc.orig	2024-09-24 20:49:34.395380700 +0000
 +++ services/device/hid/hid_service.cc
-@@ -20,6 +20,10 @@
+@@ -20,12 +20,18 @@
  
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(USE_UDEV)
  #include "services/device/hid/hid_service_linux.h"
@@ -17,7 +17,15 @@ $NetBSD$
  #elif BUILDFLAG(IS_MAC)
  #include "services/device/hid/hid_service_mac.h"
  #elif BUILDFLAG(IS_WIN)
-@@ -68,6 +72,10 @@ constexpr base::TaskTraits HidService::k
+ #include "services/device/hid/hid_service_win.h"
+ #elif BUILDFLAG(IS_FUCHSIA)
+ #include "services/device/hid/hid_service_fuchsia.h"
++#elif BUILDFLAG(IS_NETBSD)
++#include "services/device/hid/hid_service_netbsd.h"
+ #endif
+ 
+ namespace device {
+@@ -68,12 +74,18 @@ constexpr base::TaskTraits HidService::k
  std::unique_ptr<HidService> HidService::Create() {
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(USE_UDEV)
    return std::make_unique<HidServiceLinux>();
@@ -28,3 +36,11 @@ $NetBSD$
  #elif BUILDFLAG(IS_MAC)
    return std::make_unique<HidServiceMac>();
  #elif BUILDFLAG(IS_WIN)
+   return std::make_unique<HidServiceWin>();
+ #elif BUILDFLAG(IS_FUCHSIA)
+   return std::make_unique<HidServiceFuchsia>();
++#elif BUILDFLAG(IS_NETBSD)
++  return std::make_unique<HidServiceNetBSD>();
+ #else
+   return nullptr;
+ #endif
