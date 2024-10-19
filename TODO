@@ -81,7 +81,6 @@ Suggested package updates
 	o kmymoney4-4.6.2
 	o kup-0.6.0
 	o kvirc-3.4.2
-	o lazyjj-0.4.2 [needs rust > 1.79]
 	o ldtp-3.5.0
 	o leo-6.6.2
 	o libgtk-java-2.10.2
