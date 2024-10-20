@@ -14,6 +14,9 @@ CONFLICTS+=	compton-[0-9]*
 SUPERSEDES+=	compton-[0-9]*
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
+.include "../../lang/ruby/rubyversion.mk"
+
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
 USE_TOOLS+=		pkg-config
