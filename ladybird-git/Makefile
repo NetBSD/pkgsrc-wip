@@ -40,5 +40,6 @@ SUBST_STAGE.fontpath=	pre-build
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../wip/simdutf/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
