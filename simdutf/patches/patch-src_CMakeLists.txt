@@ -2,7 +2,7 @@ $NetBSD$
 
 Don't leak -fPIC to cmake users of simdutf
 
---- src/CMakeLists.txt.orig	2023-11-16 14:48:22.396784033 +0000
+--- src/CMakeLists.txt.orig	2024-10-11 16:35:29.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -15,9 +15,6 @@ if(MSVC)
      target_compile_options(simdutf PRIVATE /WX /W3 /sdl /w34714) # https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4714?view=vs-2019
@@ -12,5 +12,5 @@ Don't leak -fPIC to cmake users of simdutf
 -    target_compile_options(simdutf INTERFACE -fPIC)
 -  endif()
    target_compile_options(simdutf PRIVATE -Wall -Wextra -Weffc++)
-   target_compile_options(simdutf PRIVATE -Wfatal-errors -Wsign-compare -Wshadow -Wwrite-strings -Wpointer-arith -Winit-self -Wconversion -Wno-sign-conversion)
+   target_compile_options(simdutf PRIVATE -Wfatal-errors -Wsign-compare -Wshadow -Wwrite-strings -Wpointer-arith -Winit-self -Wconversion -Wno-sign-conversion -Wunused-function)
  endif(MSVC)

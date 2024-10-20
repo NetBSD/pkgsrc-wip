@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (simdutf-4.0.4.tar.gz) = 89160e70117b3c229a29f4d822e3305ec319821f3b6c5d97635b6d34be974b6a
-SHA512 (simdutf-4.0.4.tar.gz) = f14bb4a79ca23237d299f84893a56a14844a0a2762cf3eaf2c8b2d9cf9471ec77c87a33f8a792cc62dff41b02f61513312bb735d6de61cb0a7e4d05b03de76a6
-Size (simdutf-4.0.4.tar.gz) = 1867836 bytes
+BLAKE2s (simdutf-5.6.0.tar.gz) = b5a295f5a566882ae644fb951cb2acbe735bdd619da02703ae3c74f46ee67c20
+SHA512 (simdutf-5.6.0.tar.gz) = 57748cadd07a265e7297408f20ab7a7e899f8676972027b09b168464f7b68de82790a6877bfad8197501be95a754b18458be4c36740bafb7e0a32630c7bd1d2d
+Size (simdutf-5.6.0.tar.gz) = 2003297 bytes
 SHA1 (patch-CMakeLists.txt) = 03e7a05b55e0d6a09d6a085441e57bb71b05a6c0
-SHA1 (patch-src_CMakeLists.txt) = c687a77ed3f6b6994c6fcbfd84e8648a6d3608bc
+SHA1 (patch-src_CMakeLists.txt) = e202e4cb66155a11066f002d632d0bf1f5e72152

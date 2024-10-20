@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	simdutf-4.0.4
+DISTNAME=	simdutf-5.6.0
 CATEGORIES=	converters textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simdutf/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,5 +29,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE-APACHE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/cmake/build.mk"
-
 .include "../../mk/bsd.pkg.mk"
