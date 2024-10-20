@@ -1841,7 +1841,6 @@ SUBDIR+=	kdecoration
 SUBDIR+=	kea
 SUBDIR+=	kea-git
 SUBDIR+=	keama-git
-SUBDIR+=	kepubify
 SUBDIR+=	kermit
 SUBDIR+=	kf6-kstatusnotifieritem
 SUBDIR+=	kgamma5

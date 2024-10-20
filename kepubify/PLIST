@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/covergen
-bin/kepubify
-bin/seriesmeta
