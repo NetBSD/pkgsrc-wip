@@ -1,8 +1,0 @@
-Program asciidoctor found: NO
-
-man/meson.build:3:7: ERROR: Program 'asciidoctor' not found or not executable
-
-A full log can be found at /usr/pkgsrc/wip/picom/work/picom-12.3/output/meson-logs/meson-log.txt
-*** Error code 1
-
-Stop.

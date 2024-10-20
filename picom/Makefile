@@ -19,6 +19,12 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
+SUBST_CLASSES+=         rubyver
+SUBST_SED.rubyver+=     -e "s/asciidoctor/asciidoctor${RUBY_SUFFIX}/"
+SUBST_FILES.rubyver+=	man/meson.build
+SUBST_STAGE.rubyver=    pre-configure
+SUBST_MESSAGE.rubyver=  Fixing asciidoctor executable name.
+
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 MESON_ARGS+=		-Dwith_docs=true
