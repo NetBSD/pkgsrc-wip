@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.4 2024/08/06 13:39:40 nia Exp $
+bin/compton
+bin/compton-trans
+bin/picom
+bin/picom-trans
+man/man1/picom-trans.1
+man/man1/picom.1
+share/applications/compton.desktop
+share/applications/picom.desktop
+share/examples/picom/picom.sample.conf
+share/examples/picom/xdg/autostart/picom.desktop
+share/icons/hicolor/48x48/apps/compton.png
+share/icons/hicolor/scalable/apps/compton.svg

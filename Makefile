@@ -3091,6 +3091,7 @@ SUBDIR+=	php-xdiff
 SUBDIR+=	php-zmq
 SUBDIR+=	picolisp
 SUBDIR+=	picolisp64
+SUBDIR+=	picom
 SUBDIR+=	picosat
 SUBDIR+=	picprog
 SUBDIR+=	pidgin-evolution
