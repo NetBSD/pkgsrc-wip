@@ -41,7 +41,7 @@ pre-configure:
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../devel/at-spi2-atk/buildlink3.mk"
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

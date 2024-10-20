@@ -14,7 +14,6 @@ META_PACKAGE=	yes
 # see https://git.gnome.org/browse/
 # Please keep the order alphabetically using the upstream package (git repo) name
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
-DEPENDS+=	at-spi2-atk-[0-9]*:../../devel/at-spi2-atk
 DEPENDS+=	at-spi2-core-[0-9]*:../../devel/at-spi2-core
 DEPENDS+=	atk-[0-9]*:../../devel/atk
 DEPENDS+=	atkmm-[0-9]*:../../devel/atkmm
