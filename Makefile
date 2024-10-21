@@ -1447,6 +1447,7 @@ SUBDIR+=	hackgennerd-ttf
 SUBDIR+=	haddock
 SUBDIR+=	hal
 SUBDIR+=	halfempty
+SUBDIR+=	halloy
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
 SUBDIR+=	hare

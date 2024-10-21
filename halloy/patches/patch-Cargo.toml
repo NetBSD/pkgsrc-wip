@@ -1,0 +1,16 @@
+$NetBSD$
+
+halloy uses -dev / git snapshot versions of iced,
+which are not available as crates.
+
+Use a released version of iced.
+
+--- Cargo.toml	2024-09-17 20:20:54.000000000 +0000
++++ Cargo.toml
+@@ -60,6 +60,3 @@
+ [workspace]
+ members = ["data", "ipc", "irc", "irc/proto"]
+ 
+-[patch.crates-io]
+-iced = { git = "https://github.com/iced-rs/iced", rev = "8fb939b5a920e0cd836dbdd24c948f8f2512fc7e" }
+-iced_core = { git = "https://github.com/iced-rs/iced", rev = "8fb939b5a920e0cd836dbdd24c948f8f2512fc7e" }
