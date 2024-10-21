@@ -1,4 +1,4 @@
-FLTK 1.4.x development snapshot
+FLTK 1.4.x release candidate
 
 Enabling the untested "wayland" option should (in theory) allow to use
 the new Wayland backend.

@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	fltk-1.4.x
+DISTNAME=	fltk-1.4.0rc1-source
+PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
-GITHUB_TAG=	6ed7b56c798eea9ae36cfcc88c33235a26c9932d
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	https://fltk.org/pub/fltk/1.4.0/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.fltk.org/
@@ -13,8 +13,6 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES+=	c99
-FORCE_C_STD=		c99
-FORCE_CXX_STD=		c++98
 
 USE_TOOLS+=		autoconf gmake nroff pkg-config
 USE_LIBTOOL=		yes
@@ -34,18 +32,9 @@ CONFIGURE_ARGS+=	--disable-localzlib
 # Disable build of test programs
 CONFIGURE_ARGS+=	--disable-test
 
-.include "options.mk"
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 
-# ------------------------------------------------------
-# Clean the source tree first for snapshots
-# (CPPFLAGS/LDFLAGS are for modular X)
-# => Remove this section for release version
-pre-configure:
-	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC} && \
-		CPPFLAGS="-I ${PREFIX}/include" LDFLAGS="-L ${PREFIX}/lib" \
-		${GMAKE} ${MAKE_FLAGS} clean
-# ------------------------------------------------------
+.include "options.mk"
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
