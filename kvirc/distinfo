@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kvirc-5.2.6.tar.gz) = 8c20c2c0a7ca329e187bd9f987976785bfbecd1fcff667be7cf6acc8318b5477
+SHA512 (kvirc-5.2.6.tar.gz) = 54c845287d69be0e777a812b47212e061ae74b85c129fe97091ada554a320f4ae6ef65643a2a8238c8f938d1e1d7b02236d76e0950a41e6376288ac1b9070de5
+Size (kvirc-5.2.6.tar.gz) = 6336310 bytes

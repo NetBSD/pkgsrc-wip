@@ -1880,6 +1880,7 @@ SUBDIR+=	kubeval
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kustomize
+SUBDIR+=	kvirc
 SUBDIR+=	kwin
 SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon

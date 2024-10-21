@@ -1,0 +1,48 @@
+[ 88%] Building CXX object src/modules/pythoncore/CMakeFiles/kvipythoncore.dir/libkvipythoncore.cpp.o
+In file included from /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/src/modules/pythoncore/libkvipythoncore.cpp:38:0:
+/usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/src/modules/pythoncore/pythonheaderwrapper.h:10:10: fatal error: Python.h: No such file or directory
+ #include <Python.h>
+          ^~~~~~~~~~
+compilation terminated.
+*** [src/modules/pythoncore/CMakeFiles/kvipythoncore.dir/libkvipythoncore.cpp.o] Error code 1
+
+make[2]: stopped in /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/cmake-pkgsrc-build
+1 error
+
+make[2]: stopped in /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/cmake-pkgsrc-build
+*** [src/modules/pythoncore/CMakeFiles/kvipythoncore.dir/all] Error code 2
+
+make[1]: stopped in /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/cmake-pkgsrc-build
+1 error
+
+make[1]: stopped in /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/cmake-pkgsrc-build
+*** [all] Error code 2
+
+make: stopped in /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/cmake-pkgsrc-build
+1 error
+
+make: stopped in /usr/pkgsrc/wip/kvirc/work/KVIrc-5.2.6/cmake-pkgsrc-build
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/kvirc
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/kvirc
+
+##############################################################
+
+*** Please use pkgtools/verifypc to sanity check dependencies.
+$ verifypc
+verifypc: glib-2.0 not a direct dependency
+verifypc: gmodule-no-export-2.0 not a direct dependency
+$ pkg_info -n enchant2
+Information for enchant2-2.8.2:
+
+Requires:
+hunspell-en_US-[0-9]*
+hunspell>=1.7.0nb7
+glib2>=2.76.4nb1
+
+
