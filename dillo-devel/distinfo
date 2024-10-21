@@ -6,3 +6,4 @@ Size (dillo-3.1.1.tar.gz) = 1516060 bytes
 SHA1 (patch-configure.ac) = 3a4f7a9ea5638704819b793b30e3688c141d87d9
 SHA1 (patch-dillo-install-hyphenation) = 27f3a481da421a691c4c39093f010c01abee2515
 SHA1 (patch-doc_Makefile.am) = ca7a9529aeafef944695347024d05adaac7ae2b7
+SHA1 (patch-src_html.cc) = b298991b0f26b05e2c150cecd7324f2c50a222c5
