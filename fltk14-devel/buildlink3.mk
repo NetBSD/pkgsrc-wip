@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	fltk
 .if !defined(FLTK_BUILDLINK3_MK)
 FLTK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.4.0
-BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.4.0
+BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.4.0rc1
+BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.4.0rc1
 BUILDLINK_PKGSRCDIR.fltk?=	../../wip/fltk14-devel
 BUILDLINK_FILES.fltk+=		include/Fl/*
 
