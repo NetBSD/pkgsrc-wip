@@ -1,0 +1,3 @@
+sysutils/sysupgrade: autodetect of the used stable branch in default.conf
+
+* Avoid unwanted downgrade, when use sysupgrade auto on NetBSD-10
