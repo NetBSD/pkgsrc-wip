@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2023/09/26 07:38:58 wiz Exp $
 
-PKGNAME=	git-cinnabar-0.6.2 #nbYYYYMMDD
+PKGNAME=	git-cinnabar-0.7.0beta2
+PKGREVISION=	20241022
 CATEGORIES=	devel
 # MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
 # # does not contain the git submodules, please update GITHUB_SUBMODULES below
@@ -8,7 +9,7 @@ CATEGORIES=	devel
 
 GIT_REPO=	https://github.com/glandium/git-cinnabar.git
 GIT_BRANCH=	try
-#GIT_REVISION=	1cdda5f564a2f91f62f156e8b753da954bd6d3ba
+#GIT_REVISION=	4fb9f8dcf2f566d6fb411adb198cfeb73f2cb564
 DEFAULT_DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
