@@ -231,6 +231,7 @@ SUBDIR+=	artemis
 SUBDIR+=	arti
 SUBDIR+=	arx-libertatis-git
 SUBDIR+=	ascii2binary
+SUBDIR+=	asm-lsp
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
 SUBDIR+=	asterisk11-vicidial
