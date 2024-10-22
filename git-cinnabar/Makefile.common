@@ -1,0 +1,17 @@
+#	$NetBSD: Makefile.common,v 1.1 2024/06/14 14:13:33 riastradh Exp $
+#
+
+# used by wip/git-cinnabar/Makefile
+# used by wip/py-hg-cinnabarclone/Makefile
+
+VERSION=	0.7.0beta2
+DISTNAME=	git-cinnabar-${VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
+GITHUB_PROJECT=	git-cinnabar
+GITHUB_TAG=	refs/tags/${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+HOMEPAGE=	https://github.com/glandium/git-cinnabar/
+LICENSE=	mpl-2.0 AND gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/git-cinnabar/distinfo
