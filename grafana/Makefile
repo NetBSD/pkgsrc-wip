@@ -10,9 +10,8 @@ HOMEPAGE=	https://grafana.com/
 COMMENT=	Metrics dashboard and graph editor
 LICENSE=	gnu-agpl-v3 AND apache-2.0 AND mit
 
+ARGMAX_REQ=	524288
 DISTFILES=	${DEFAULT_DISTFILES}
-
-DISTINFO_ARGMAX_REQD+=	524288
 
 # We don't have suitable infrastructure in pkgsrc for generating frontend
 # assets, so we'll extract prebuilt frontend assets.
