@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/asyncore/__init__.py
+${PYSITELIB}/asyncore/__init__.pyc
+${PYSITELIB}/asyncore/__init__.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
