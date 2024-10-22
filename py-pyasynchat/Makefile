@@ -16,5 +16,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
