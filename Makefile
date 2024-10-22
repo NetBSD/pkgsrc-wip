@@ -5126,6 +5126,7 @@ SUBDIR+=	rust177-bin
 SUBDIR+=	rust178
 SUBDIR+=	rust178-bin
 SUBDIR+=	rust181
+SUBDIR+=	rust181-bin
 SUBDIR+=	s-nail
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
