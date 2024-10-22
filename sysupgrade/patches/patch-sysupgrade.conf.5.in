@@ -1,0 +1,21 @@
+$NetBSD: patch-sysupgrade.conf.5.in,v 1.2 2022/04/15 09:10:56 nia Exp $
+
+* Add variable for archive file extension
+
+--- sysupgrade.conf.5.in.orig	2013-07-28 21:26:59.000000000 +0000
++++ sysupgrade.conf.5.in
+@@ -162,6 +162,14 @@ The presence of a modules set enables th
+ procedure.
+ .Pp
+ Default: AUTO.
++.It Va ARCHIVE_EXTENSION
++.Pp
++Archive file extension of the sets. Can be either
++.Sq tgz
++or
++.Sq tar.xz .
++.Pp
++Default: depends on CPU architecture.
+ .El
+ .Sh SEE ALSO
+ .Xr sysupgrade 8
