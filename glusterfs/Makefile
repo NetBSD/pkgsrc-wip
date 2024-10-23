@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2023/03/28 01:10:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.126 2024/08/19 06:08:08 wiz Exp $
 
 DISTNAME=	glusterfs-10.4
-# PKGREVISION=	2
+PKGREVISION=	7
 CATEGORIES=	filesystems
 MASTER_SITES=	https://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -18,10 +18,10 @@ CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-tcmalloc
+# libtirpc not in pkgsrc (yet)
+# CONFIGURE_ARGS+=	--without-libtirpc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples/${PKGBASE}
-# libtirpc not in pkgsrc (yet)
-CONFIGURE_ARGS+=	--without-libtirpc
 
 # Upstream glusterfs effectively dropped support for 32bit platforms
 # somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
@@ -135,11 +135,10 @@ pre-build:
 	${ECHO} "glusterd.vol.sample: glusterd.vol" >> Makefile &&	\
 	${ECHO} "	cp glusterd.vol glusterd.vol.sample" >> Makefile
 
-
 # Debug
-CFLAGS+=		-g
-INSTALL_UNSTRIPPED=	yes
-CONFIGURE_ARGS+=	--enable-debug
+#CFLAGS+=		-g
+#INSTALL_UNSTRIPPED=	yes
+#CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
 #CFLAGS+=		-DGC_DEBUG
 #CFLAGS+=		-include gc.h
@@ -157,6 +156,13 @@ post-install:
 	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 .endif
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+# uses distutils in configure
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
+
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
@@ -170,6 +176,7 @@ BUILDLINK_API_DEPENDS.userspace-rcu+=	userspace-rcu>=0.12.1
 .endif
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../devel/libtirpc/buildlink3.mk"
 
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=	-lexecinfo
