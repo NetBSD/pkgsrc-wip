@@ -1,0 +1,17 @@
+devel/guile-g-golf: Add version x.y
+
+G-Golf is a tool to develop fast and feature-rich graphical
+applications, with a clean and recognizable look and feel. Here is an
+overview of the GNOME platform libraries, accessible using G-Golf.
+
+In particular, libadwaita provides a number of widgets that change
+their layout based on the available space. This can be used to make
+applications adapt their UI between desktop and mobile devices. The
+GNOME Web (best known through its code name, Epiphany, is a good
+example of such pan adaptive UI.
+
+G-Golf uses Glib, GObject and GObject Introspection. As it imports a
+Typelib (a GObject introspectable library), G-Golf defines GObject
+classes as GOOPS (the Guile Object Oriented System) classes. GObject
+methods are defined and added to their corresponding generic
+function. Simple functions are defined as scheme procedures.

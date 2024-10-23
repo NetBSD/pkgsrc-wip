@@ -1,4 +1,4 @@
-  - resolve installation path (in chosen guile vs separate)
+  - decide on g-golf vs guile-g-golf
   - package guile-lib for guile 3, or flip it
+  - resolve installation path (in chosen guile vs separate)
   - test and make work
-  

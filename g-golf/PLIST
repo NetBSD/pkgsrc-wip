@@ -29,6 +29,7 @@ guile/3.0/lib/guile/3.0/site-ccache/g-golf/gi/version.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/gi/vfunc-info.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/byte-arrays.go
+guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/date-and-time-functions.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/glist.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/gslist.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/io-channels.go
@@ -121,6 +122,7 @@ guile/3.0/share/guile/site/g-golf/gi/version.scm
 guile/3.0/share/guile/site/g-golf/gi/vfunc-info.scm
 guile/3.0/share/guile/site/g-golf/glib.scm
 guile/3.0/share/guile/site/g-golf/glib/byte-arrays.scm
+guile/3.0/share/guile/site/g-golf/glib/date-and-time-functions.scm
 guile/3.0/share/guile/site/g-golf/glib/glist.scm
 guile/3.0/share/guile/site/g-golf/glib/gslist.scm
 guile/3.0/share/guile/site/g-golf/glib/io-channels.scm
