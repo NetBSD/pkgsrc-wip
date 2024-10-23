@@ -1,3 +1,7 @@
 - set PKGNAME to not contain release-
-- make it build
+- fix compilation issues
+  * va_list used without declaration
+  * mbedtls
+  * BSD support: https://gitlab.com/CalcProgrammer1/OpenRGB/-/issues/876
 - test it
+

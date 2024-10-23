@@ -11,6 +11,13 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-# \todo qmake
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake \
+	    -unix -recursive OpenRGB.pro \
+	    ${MAKE_ENV} \
+	    QMAKE_CFLAGS=${CFLAGS:Q} \
+	    QMAKE_CXXFLAGS=${CXXFLAGS:Q} \
+	    QMAKE_LFLAGS=${LDFLAGS:Q}
 
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
