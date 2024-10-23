@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/OpenFodder
-share/doc/OpenFodder/INSTALL.md
-share/doc/OpenFodder/README.md
-share/examples/OpenFodder/openfodder.ini.example
