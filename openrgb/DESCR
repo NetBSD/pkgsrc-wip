@@ -1,0 +1,11 @@
+OpenRGB controls LED lighting found in many computer systems.
+Features include
+* Set colors and select effect modes for a wide variety of RGB hardware
+* Save and load profiles
+* Control lighting from third party software using the OpenRGB SDK
+* Command line interface
+* Connect multiple instances of OpenRGB to synchronize lighting across multiple PCs
+* Can operate standalone or in a client/headless server configuration
+* View device information
+* No official/manufacturer software required
+

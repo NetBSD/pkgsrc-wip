@@ -1,0 +1,3 @@
+- set PKGNAME to not contain release-
+- make it build
+- test it
