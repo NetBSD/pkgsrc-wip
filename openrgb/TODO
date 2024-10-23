@@ -1,7 +1,7 @@
 - set PKGNAME to not contain release-
 - fix compilation issues
   * va_list used without declaration
-  * mbedtls
   * BSD support: https://gitlab.com/CalcProgrammer1/OpenRGB/-/issues/876
+  * i2c/smbus: disable or fix
 - test it
 

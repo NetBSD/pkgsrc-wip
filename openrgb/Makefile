@@ -19,5 +19,10 @@ do-configure:
 	    QMAKE_CXXFLAGS=${CXXFLAGS:Q} \
 	    QMAKE_LFLAGS=${LDFLAGS:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
+
+.include "../../comms/libhidapi/buildlink3.mk"
+.include "../../security/mbedtls/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

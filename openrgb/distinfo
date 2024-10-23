@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (OpenRGB-release_0.9.tar.gz) = 55da7a1f2ced80454c2112afa94e728c1d4d3fd5fcacc71d6070313388323001
 SHA512 (OpenRGB-release_0.9.tar.gz) = 3ac0cc6e6ec7b1719c0a4f069cface22f42d9d83d47ab1c5ddedb830568fdaa57956f73370a2daaecf8d694f66cbcf83b119935b5f4693a201adc36c63a21e1a
 Size (OpenRGB-release_0.9.tar.gz) = 29880152 bytes
+SHA1 (patch-i2c__smbus_i2c__smbus.h) = f43f04cb92d1eced6a9a34e8d8c422150248f14c
