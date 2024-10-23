@@ -2651,6 +2651,7 @@ SUBDIR+=	openlogos
 SUBDIR+=	openmp
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
+SUBDIR+=	openrgb
 SUBDIR+=	openrw-git
 SUBDIR+=	openscad
 SUBDIR+=	openscep
