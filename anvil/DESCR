@@ -1,0 +1,6 @@
+Anvil is a graphical, multi-pane tiling editor that makes bold use
+of the mouse and integrates closely with the shell. It supports
+syntax highlighting, multiple cursors and selections, remote file
+editing, and contains a powerful text manipulation language.
+
+Anvil is inspired by Acme.
