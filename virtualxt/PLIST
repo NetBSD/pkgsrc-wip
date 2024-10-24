@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/ebridge
 bin/virtualxt
 bin/virtualxt.elks
 bin/virtualxt.freedos

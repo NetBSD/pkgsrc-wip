@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	virtualxt-1.1
+DISTNAME=	virtualxt-1.1.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andreas-jonsson/}
 
@@ -21,7 +21,7 @@ TOOL_DEPENDS+=	premake5-5.0.*:../../devel/premake5
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin share/virtualxt/bios share/virtualxt/boot
-BUILD_TARGET=		sdl2-frontend
+BUILD_TARGET=		sdl2-frontend ebridge-tool
 CFLAGS+=		-DVXT_VERSION_RELEASE
 
 post-extract:
@@ -29,10 +29,11 @@ post-extract:
 	${CP} ${FILESDIR}/virtualxt.elks ${WRKSRC}
 
 pre-build:
-	cd ${WRKSRC} && premake5 --pcap gmake
+	cd ${WRKSRC} && premake5 gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/sdl2/virtualxt ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/build/ebridge/ebridge ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/virtualxt.freedos ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/virtualxt.elks ${DESTDIR}${PREFIX}/bin
 
