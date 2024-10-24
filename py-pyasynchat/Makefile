@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyasyncore>=1.0.2:../../wip/py-pyasyncore
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 39 310 311
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
