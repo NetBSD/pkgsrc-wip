@@ -2,20 +2,3 @@ VirtualXT is a Turbo PC/XT emulator that runs on modern
 hardware and operating systems. It is designed to be
 simple and lightweight yet still capable enough to run
 a large library of old application and games.
-
-Features:
-
-* Intel 8088 or NEC V20 CPU
-* Hardware CPU validator
-* CGA/HGC compatible graphics
-* GLaBIOS or Turbo XT BIOS 3.1 with extensions
-* Keyboard controller with 83-key XT-style keyboard
-* Serial port with Microsoft 2-button mouse
-* Floppy and hard disk controller
-* ISA passthrough using Arstech USB2ISA adapter
-* Direct file share with host
-* Flexible module system
-* Integerated GDB server
-* AdLib music synthesizer
-* EMS memory expansion
-* Ethernet adapter
