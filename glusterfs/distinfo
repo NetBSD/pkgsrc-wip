@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.82 2024/08/06 21:10:47 riastradh Exp $
 
-BLAKE2s (glusterfs-10.4.tar.gz) = 9813ba102591f6ab715fc7d3dc089860888effe70dc146a4366667be0cc9bd0c
-SHA512 (glusterfs-10.4.tar.gz) = 06c563ab77a29145b1fac44f5a56a91539accb69ba736fe6297aa3f38b128e68ba4f7d0b49ac6eb56397a51950fb4de882ff60037e91c61ad13dd89a18139d82
-Size (glusterfs-10.4.tar.gz) = 8293872 bytes
+BLAKE2s (glusterfs-10.5.tar.gz) = faade0983cda3ff366b32c9b3c7869dc96f9785b8e5fa513fa39811b7e428f77
+SHA512 (glusterfs-10.5.tar.gz) = 393b976308da911562e653e1ed6db2149a7d7390fbd31155bbd4b1bb067c6c155f2c7ca74dc8409474294a8542b6cb4d83cd52f6b68bab6a430a8c080be1be29
+Size (glusterfs-10.5.tar.gz) = 8170057 bytes
 SHA1 (patch-api_src_glfs.c) = c35c974631b7674643edc31d526f18a648be9cce
 SHA1 (patch-cli_src_cli-cmd-parser.c) = 4bf24309275b6500e3acb0a12fcacf365b86ff04
 SHA1 (patch-cli_src_cli-xml-output.c) = afd03ce801992985864504dbc19887b62447da7d
