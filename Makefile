@@ -3757,6 +3757,7 @@ SUBDIR+=	py-gato
 SUBDIR+=	py-gatspy
 SUBDIR+=	py-gauss
 SUBDIR+=	py-gbpy
+SUBDIR+=	py-gcalcli
 SUBDIR+=	py-gdal
 SUBDIR+=	py-gdxcc
 SUBDIR+=	py-gem
