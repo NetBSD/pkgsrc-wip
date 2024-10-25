@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (gcalcli-4.5.0.tar.gz) = 6594d11b45234603fc1217795503542bbbe89cbeb1befbbad0411248b4b147ba
 SHA512 (gcalcli-4.5.0.tar.gz) = da69839b7f5ececf708f27d57cd5b37a148686151599125326c2af69bf7f2467c87af99866abd256f24bca126e39bfdca8cbc881db18d3e0967a59b010c042f9
 Size (gcalcli-4.5.0.tar.gz) = 1903651 bytes
+SHA1 (patch-gcalcli_cli.py) = 3dc68125d655778c90010932783e6ac6a63e213d
