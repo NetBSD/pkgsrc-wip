@@ -1,0 +1,8 @@
+gcalcli init seems to fails with:
+
+ RecursionError: maximum recursion depth exceeded while calling a Python object
+ [...]
+ OSError: Failed to fetch credentials. If this is a nonstandard gcalcli install, please try again with a system-installed gcalcli as a workaround.
+ Details: https://github.com/insanum/gcalcli/issues/735.
+
+No idea if this is an upstream issue or not.
