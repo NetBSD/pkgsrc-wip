@@ -6,3 +6,4 @@ gcalcli init seems to fails with:
  Details: https://github.com/insanum/gcalcli/issues/735.
 
 No idea if this is an upstream issue or not.
+This will be likely be fixed in 4.5.1.
