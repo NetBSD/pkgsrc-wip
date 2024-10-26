@@ -1,0 +1,28 @@
+$NetBSD$
+
+Just do a native build.
+
+--- makefile.orig	2024-10-10 23:37:26.000000000 +0000
++++ makefile
+@@ -1,5 +1,5 @@
+ COPY := cp -p
+-GO_BUILD := go build -i
++GO_BUILD := go build
+ 
+ # Default build configuration, can be overridden at build time.
+ GOARCH?=$(shell go env GOARCH)
+@@ -81,6 +81,14 @@ create-package-folder:
+ 	mkdir -p $(GO_SPACE)/bin/updates/ssmcli/`cat $(GO_SPACE)/VERSION`/
+ 	mkdir -p $(GO_SPACE)/bin/updates/sessionmanagerplugin/`cat $(GO_SPACE)/VERSION`/
+ 
++.PHONY: build-host-native-pkgsrc
++build-host-native-pkgsrc: checkstyle copy-src pre-build
++	@echo "Build for pkgsrc host platform"
++	$(GO_BUILD) -ldflags "-s -w" -o $(GO_SPACE)/bin/pkgsrc_host_plugin/session-manager-plugin -v \
++		$(GO_SPACE)/src/sessionmanagerplugin-main/main.go
++	$(GO_BUILD) -ldflags "-s -w" -o $(GO_SPACE)/bin/pkgsrc_host/ssmcli -v \
++    		$(GO_SPACE)/src/ssmcli-main/main.go
++
+ .PHONY: build-linux-amd64
+ build-linux-amd64: checkstyle copy-src pre-build
+ 	@echo "Build for linux platform"

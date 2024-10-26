@@ -1,0 +1,8 @@
+# TODO
+
+- needs go compiler
+    - can we build more pkgsrc-go-idiomatically?
+- needs docs installed
+- needs paths adjusted (like LOGDIR)
+- lots of warnings at package time
+- hints: <https://github.com/freebsd/freebsd-ports/blob/main/sysutils/amazon-ssm-plugin/Makefile>

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (session-manager-plugin-1.2.677.0.tar.gz) = 5aba974147146423b0c32ba721c0924278ac4059c558e95e1f77c0ed43410efd
+SHA512 (session-manager-plugin-1.2.677.0.tar.gz) = 695b38fd41da97293eff3e46b13fc73263a32dc48a3d93dfad9fdfaa37dfca87c8841a30dd54c9371033b9e4cdd3e977a8eb5548c73926b50636da0433269c0b
+Size (session-manager-plugin-1.2.677.0.tar.gz) = 35309456 bytes
+SHA1 (patch-makefile) = 7af29d493603e66f8600a0750a6f972d7aa89a65

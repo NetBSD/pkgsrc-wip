@@ -1,0 +1,7 @@
+Session Manager is a fully managed AWS Systems Manager capability that
+lets you manage your Amazon Elastic Compute Cloud (Amazon EC2)
+instances, on-premises instances and virtual machines. Session Manager
+provides secure and auditable instance management without the need to
+open inbound ports. When you use the Session Manager plugin with the AWS
+CLI to start a session, the plugin builds the websocket connection to
+your managed instances.
