@@ -5,4 +5,8 @@ If /etc/machine-id or /var/lib/dbus/machine-id
 not exists, you should generate one. For that,
 run the following command as root:
 
+- if dbus installed:
 	dbus-uuidgen --ensure
+
+- without dbus:
+	sh -c 'date|md5 > /etc/machine-id'
