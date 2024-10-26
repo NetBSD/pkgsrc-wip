@@ -1,0 +1,4 @@
+net/megacmd: update README file
+
+* Add example command to generate machine-id
+  without dbus, what has X dependencies
