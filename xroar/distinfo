@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.5 2024/01/02 00:21:01 ryoon Exp $
+
+BLAKE2s (xroar-1.6.6.tar.gz) = ba5ead171969ecebe83a7b9a9c469caccedd5a9a5b0588b17bee0e59a930b285
+SHA512 (xroar-1.6.6.tar.gz) = 3b90a56bdde09aa79f37c66953d3c3c8b9bd7b017cb0b2d244e59e636c9596418a9585702d0226891b15840486edeedfd18c83d4170c54f2da4511874e14cd0d
+Size (xroar-1.6.6.tar.gz) = 2207118 bytes

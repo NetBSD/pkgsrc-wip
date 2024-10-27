@@ -1,0 +1,84 @@
+emulators/xroar: Update to 1.6.6
+
+Version 1.6.6, Tue 15 Oct 2024
+
+ * Force X11 in GTK+ 3 UI, fixing crash querying keyboard map [Rolf Michelsen]
+
+Version 1.6.5, Mon 23 Sep 2024
+
+ * SDL: fix use of physical joysticks after disconnecting [Pere Serrat]
+
+Version 1.6.4, Fri 20 Sep 2024
+
+ * Fix Control+Shift+digit shortcuts
+ * Fix LUT-based composite rendering for CoCo 3 [Christian M]
+
+Version 1.6.3, Thu 12 Sep 2024
+
+ * Ensure data chunk in WAV output is of even length [Stacey Vetzal]
+
+Version 1.6.2, Fri  6 Sep 2024
+
+ * Add missing menus to Windows/Mac OS X+ UIs
+
+Version 1.6.1, Thu  5 Sep 2024
+
+ * Reinstate ROM image header skipping [Davy Mitchell]
+
+Version 1.6, Thu  5 Sep 2024
+
+ * New -ram-org option to specify RAM addressing
+ * New -ram-init option to specify initial RAM state
+ * 6309 DIVD behaviour fixed against Tim Lindner's fuzzing tool
+ * 6309 DIVD timing fixed according to David Banks's behaviour notes
+ * 6309 DIVQ behaviour & timing adjusted similarly, though untested
+ * More accurate observed NTSC CoCo 3 GIME composite video behaviour
+ * New GTK+ 3 UI
+ * New printer control dialog (GTK+ 3, Windows) or menu options (Mac OS X+)
+ * Update CoCo 3 video timings
+ * SDL: open joysticks in controller mode if possible
+ * New unified keyboard abstraction
+ * Extra default keyboard-based virtual joystick profiles: WASD, IJKL, QAOP
+ * Dynamically include configs for all physical joysticks on startup
+ * New machine Dragon Professional (Alpha), 'dragonpro'
+ * New machine Tandy Deluxe Colour Computer, 'deluxecoco'
+
+Version 1.5.5, Sun 24 Mar 2024
+
+ * Allow SDL to use WASAPI (Windows) audio (bug fixed in SDL 2.29.3)
+ * Use queued audio interface in SDL leading to less glitchy Windows audio
+
+Version 1.5.4, Mon 26 Feb 2024
+
+ * Fixed 6309 register-memory bit ops [R. Allen Murphy]
+
+Version 1.5.3, Tue  6 Feb 2024
+
+ * GIME: fix interrupt fixes fix (fixes RoboCop)
+
+Version 1.5.2, Mon 29 Jan 2024
+
+ * GIME: timer interrupt fixes [Tim Lindner]
+
+Version 1.5.1, Sat 27 Jan 2024
+
+ * Include a cartridge database (mostly CoCo 3 32K) for convenience
+ * Fix potential crash when cartridge loading fails [Russ Le Blang]
+ * Recognise Windows "<drive-letter>:" [Russ Le Blang]
+
+Version 1.5, Thu 25 Jan 2024
+
+ * Add ability to change Picture Area, seeing more or less border
+ * New option -vo-picture
+ * Respect -geometry dimensions in SDL-based UIs
+ * Add optional 60Hz vertical scaling (on by default)
+ * New option -no-vo-scale-60hz disables 60Hz scaling
+ * Faster ROM intercept based printing on CoCo and MC-10
+ * GIME: respect X offset and HVEN in COCO mode
+ * MPI slot config moved from global to per-cart, included in -config-print
+ * Add screenshot to PNG from menu or Control+Shift+S
+ * Fix printing after switching machines [Jak Fearon]
+ * Better rendering of paths in Windows dialogs
+ * Fix some CoCo 3 cartridge behaviour [Christian Haitian]
+ * GIME: reset video address later (fixes Androne) [Russ Le Blang]
+ * GIME: fix various $FExx access problems
