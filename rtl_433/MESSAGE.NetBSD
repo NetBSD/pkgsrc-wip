@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD$
+
+NOTE: limitations of rtl_433 on NetBSD.
+
+Due to limitations of NetBSD's usb(4)/ugen(4) driver[1], rtl_433 cannot
+detect Software Defined Radio (SDR) devices. However, rtl_433 can still
+read ('-r') and decode signal data from files written ('-w') by other
+rtl_433 instances or read from a rtl_tcp stream ('-d rtl_tcp{...}').
+
+[1] better explanation needed.
+===========================================================================
