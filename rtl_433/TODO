@@ -1,1 +1,6 @@
-(gdt can import this once converged; gdt actually uses rtl_433.)
+  - remove all MESSAGE files one way or the other
+
+  - consider moving to a snapshot instead of a release, as rtl_433 does not have releases adequately often
+
+  - document or remove most CMAKE_CONFIGURE_ARGS as they look leftover from an earlier time
+  
