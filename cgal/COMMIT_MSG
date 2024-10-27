@@ -1,6 +1,10 @@
-math/cgal: Update to 5.6.1
+math/cgal: Update to 5.6.2
 
 Most noteably, since v5.0, cgal is by default header-only.
+
+CGAL-5.6.2
+
+CGAL-5.6.2 is a bug-fix release
 
 CGAL-5.6.1
 
