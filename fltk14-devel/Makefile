@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fltk-1.4.0rc1-source
+DISTNAME=	fltk-1.4.0rc2-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	x11
 MASTER_SITES=	https://fltk.org/pub/fltk/1.4.0/

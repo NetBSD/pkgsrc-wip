@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (fltk-1.4.0rc1-source.tar.bz2) = 2dc7f01f5d20ad71f87a55c0606866c85f059e337c14b7a766e69861606d0c8a
-SHA512 (fltk-1.4.0rc1-source.tar.bz2) = 6e66c99455d514962d0dd487d16888c49dd25a56f375ff93bb680d1021c430ac3a8decb199ff0243951b90834037654ef67b60b57f9cf42937fa3fa6fd189934
-Size (fltk-1.4.0rc1-source.tar.bz2) = 8450680 bytes
+BLAKE2s (fltk-1.4.0rc2-source.tar.bz2) = b884034a40f81c54e1cac5ec359f6705f1669551546531c9ec90cee3ec045826
+SHA512 (fltk-1.4.0rc2-source.tar.bz2) = d124b88d58ab39fc98bdcad6308c449745ec50ada1a30cbb29aee5acaad6c8d441a4e3421cca073c509a42b1beee6624973a01b3abf4a2a59b8b4090547cc881
+Size (fltk-1.4.0rc2-source.tar.bz2) = 8450001 bytes
 SHA1 (patch-documentation_Makefile) = a7edaea63d7c4ef8b740281eaf65e6cb491487f9
