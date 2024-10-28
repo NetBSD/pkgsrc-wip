@@ -5562,6 +5562,7 @@ SUBDIR+=	thepeg
 SUBDIR+=	thunderbird
 SUBDIR+=	thunderbird68-enigmail
 SUBDIR+=	ti99sim
+SUBDIR+=	tigervnc113
 SUBDIR+=	tilda
 SUBDIR+=	tilix
 SUBDIR+=	timescaledb-tune
