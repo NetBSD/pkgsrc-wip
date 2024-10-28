@@ -1,8 +1,8 @@
 net/unison: Update to 2.53.6
 
-## Changes in 2.53.6 (NOT YET RELEASED) 
+## Changes in 2.53.6
 
-Released FUTURE
+Released 2024-11-01
 
   * Remove workaround for Windows DST: Time differences of one hour
     are no longer treated as not different.
