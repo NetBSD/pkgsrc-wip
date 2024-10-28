@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2024-09-24 20:49:27.839805400 +0000
+--- content/app/content_main_runner_impl.cc.orig	2024-10-26 07:00:12.853410200 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -147,18 +147,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
@@ -77,7 +77,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -764,7 +780,7 @@ RunOtherNamedProcessTypeMain(const std::
+@@ -764,7 +780,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
      unregister_thread_closure = base::HangWatcher::RegisterThread(
          base::HangWatcher::ThreadType::kMainThread);
      bool start_hang_watcher_now;
@@ -100,7 +100,7 @@ $NetBSD$
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1055,6 +1070,18 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1059,6 +1074,18 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -119,7 +119,7 @@ $NetBSD$
  #endif
  
    delegate_->SandboxInitialized(process_type);
-@@ -1154,6 +1181,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
+@@ -1158,6 +1185,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

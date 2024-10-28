@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2024-09-24 20:49:24.753534600 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2024-10-26 07:00:07.201977000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -18,7 +18,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
  BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -630,7 +630,8 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+@@ -639,7 +639,8 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -25,7 +25,7 @@ $NetBSD$
  BASE_FEATURE(kIPHAutofillCreditCardBenefitFeature,
               "IPH_AutofillCreditCardBenefit",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -767,7 +768,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+@@ -776,7 +777,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

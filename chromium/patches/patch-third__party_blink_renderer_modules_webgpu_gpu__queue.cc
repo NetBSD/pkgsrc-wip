@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu_queue.cc.orig	2024-09-24 20:49:37.515654600 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu_queue.cc.orig	2024-10-26 07:00:34.807115600 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu_queue.cc
 @@ -788,7 +788,7 @@ bool GPUQueue::CopyFromCanvasSourceImage
  // on linux platform.

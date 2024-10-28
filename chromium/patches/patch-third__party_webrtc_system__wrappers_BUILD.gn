@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/system_wrappers/BUILD.gn.orig	2024-09-24 20:51:27.025266000 +0000
+--- third_party/webrtc/system_wrappers/BUILD.gn.orig	2024-10-26 07:05:55.570218600 +0000
 +++ third_party/webrtc/system_wrappers/BUILD.gn
-@@ -63,8 +63,6 @@ rtc_library("system_wrappers") {
+@@ -62,8 +62,6 @@ rtc_library("system_wrappers") {
      if (!build_with_chromium) {
        sources += [ "source/cpu_features_linux.cc" ]
      }

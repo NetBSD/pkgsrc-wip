@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2024-09-24 20:49:32.255193000 +0000
+--- mojo/core/channel.cc.orig	2024-10-26 07:00:22.913421400 +0000
 +++ mojo/core/channel.cc
-@@ -79,7 +79,11 @@ const size_t kMaxUnusedReadBufferCapacit
- // Fuchsia: The zx_channel_write() API supports up to 64 handles.
- const size_t kMaxAttachedHandles = 64;
+@@ -82,7 +82,11 @@ const size_t kMaxAttachedHandles = 64;
+ const size_t kMaxAttachedHandles = 253;
+ #endif  // BUILDFLAG(IS_FUCHSIA)
  
 +#if defined(__i386__) && defined(OS_FREEBSD)
 +const size_t kChannelMessageAlignment = 4;

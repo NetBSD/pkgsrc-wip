@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-09-24 20:49:32.247192100 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-10-26 07:00:22.884405100 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
-@@ -111,7 +111,7 @@ class GpuMemoryBufferVideoFramePool::Poo
+@@ -98,7 +98,7 @@ class GpuMemoryBufferVideoFramePool::Poo
                  gpu::SHARED_IMAGE_USAGE_RASTER_READ |
                  gpu::SHARED_IMAGE_USAGE_DISPLAY_READ |
                  gpu::SHARED_IMAGE_USAGE_SCANOUT;
@@ -15,7 +15,7 @@ $NetBSD$
      // TODO(crbug.com/40194712): Always add the flag once the
      // OzoneImageBacking is by default turned on.
      if (base::CommandLine::ForCurrentProcess()->HasSwitch(
-@@ -800,7 +800,7 @@ void GpuMemoryBufferVideoFramePool::Pool
+@@ -695,7 +695,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }
  
    bool is_software_backed_video_frame = !video_frame->HasTextures();
@@ -24,12 +24,12 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1345,7 +1345,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
-         media::IOSurfaceIsWebGPUCompatible(handle.io_surface.get());
+@@ -1104,7 +1104,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+       media::IOSurfaceIsWebGPUCompatible(handle.io_surface.get());
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-     is_webgpu_compatible =
-         handle.native_pixmap_handle.supports_zero_copy_webgpu_import;
+   is_webgpu_compatible =
+       handle.native_pixmap_handle.supports_zero_copy_webgpu_import;
  #endif

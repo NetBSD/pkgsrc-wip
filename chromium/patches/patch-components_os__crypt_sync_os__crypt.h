@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2024-09-24 20:49:25.337586000 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2024-10-26 07:00:07.890395200 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"
@@ -73,6 +73,6 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Create the KeyStorage. Will be null if no service is found. A Config must
-   // be set before every call to this method.
-   std::unique_ptr<KeyStorageLinux> CreateKeyStorage();
+   // Returns a cached string of "peanuts". Is thread-safe.
+   crypto::SymmetricKey* GetPasswordV10();
+ 

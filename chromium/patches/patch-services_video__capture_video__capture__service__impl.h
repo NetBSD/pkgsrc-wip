@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_capture/video_capture_service_impl.h.orig	2024-09-24 20:49:34.612399800 +0000
+--- services/video_capture/video_capture_service_impl.h.orig	2024-10-26 07:00:30.559268200 +0000
 +++ services/video_capture/video_capture_service_impl.h
 @@ -27,7 +27,7 @@
  #include "services/video_capture/ash/video_capture_device_factory_ash.h"

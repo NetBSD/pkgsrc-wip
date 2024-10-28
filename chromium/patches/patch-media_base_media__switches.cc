@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2024-09-24 20:49:31.676142000 +0000
+--- media/base/media_switches.cc.orig	2024-10-26 07:00:21.314518000 +0000
 +++ media/base/media_switches.cc
 @@ -21,7 +21,7 @@
  #include "ui/gl/gl_features.h"
@@ -24,8 +24,8 @@ $NetBSD$
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
-@@ -368,8 +368,8 @@ BASE_FEATURE(kMacLoopbackAudioForScreenS
-              "MacLoopbackAudioForScreenShare",
+@@ -375,8 +375,8 @@ BASE_FEATURE(kUseSCContentSharingPicker,
+              "UseSCContentSharingPicker",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_MAC)
 -
@@ -35,7 +35,7 @@ $NetBSD$
  // Enables system audio mirroring using pulseaudio.
  BASE_FEATURE(kPulseaudioLoopbackForCast,
               "PulseaudioLoopbackForCast",
-@@ -379,6 +379,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
+@@ -386,6 +386,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
  BASE_FEATURE(kPulseaudioLoopbackForScreenShare,
               "PulseaudioLoopbackForScreenShare",
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -67,7 +67,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -676,7 +701,7 @@ BASE_FEATURE(kFeatureManagementLiveTrans
+@@ -682,7 +707,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
  // Show toolbar button that opens dialog for controlling media sessions.
  BASE_FEATURE(kGlobalMediaControls,
               "GlobalMediaControls",
@@ -76,7 +76,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -704,7 +729,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
+@@ -705,7 +730,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
               "MediaRemotingWithoutFullscreen",
@@ -85,7 +85,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -716,7 +741,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
+@@ -717,7 +742,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
  BASE_FEATURE(kGlobalMediaControlsPictureInPicture,
               "GlobalMediaControlsPictureInPicture",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -94,7 +94,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -745,7 +770,7 @@ BASE_FEATURE(kUnifiedAutoplay,
+@@ -746,7 +771,7 @@ BASE_FEATURE(kUnifiedAutoplay,
               "UnifiedAutoplay",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -103,16 +103,16 @@ $NetBSD$
  // Enable vaapi video decoding on linux. This is already enabled by default on
  // chromeos, but needs an experiment on linux.
  BASE_FEATURE(kVaapiVideoDecodeLinux,
-@@ -836,7 +861,7 @@ BASE_FEATURE(kVaapiVp9SModeHWEncoding,
-              "VaapiVp9SModeHWEncoding",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -846,7 +871,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
+              "VSyncMjpegDecoding",
+              base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Enables the new V4L2StatefulVideoDecoder instead of V4L2VideoDecoder.
  // Owners: frkoenig@chromium.org, mcasas@chromium.org
  // Expiry: When the |V4L2FlatVideoDecoder| flag handles stateful decoding on
-@@ -1463,7 +1488,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDe
+@@ -1479,7 +1504,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDe
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
@@ -121,7 +121,7 @@ $NetBSD$
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1543,7 +1568,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
+@@ -1559,7 +1584,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
               "RecordWebAudioEngagement",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

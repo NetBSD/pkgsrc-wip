@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/switches.h.orig	2024-09-24 20:49:34.128357200 +0000
+--- remoting/host/base/switches.h.orig	2024-10-26 07:00:29.752896300 +0000
 +++ remoting/host/base/switches.h
 @@ -35,13 +35,13 @@ extern const char kProcessTypeRdpDesktop
  extern const char kProcessTypeEvaluateCapability[];

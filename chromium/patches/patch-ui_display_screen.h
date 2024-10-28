@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/display/screen.h.orig	2024-09-24 20:49:58.358483800 +0000
+--- ui/display/screen.h.orig	2024-10-26 07:01:26.899818000 +0000
 +++ ui/display/screen.h
 @@ -140,7 +140,7 @@ class DISPLAY_EXPORT Screen {
    // (both of which may or may not be `nearest_id`).

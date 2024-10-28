@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main.cc.orig	2024-09-24 20:49:14.875667800 +0000
+--- chrome/app/chrome_main.cc.orig	2024-10-26 06:59:47.325901700 +0000
 +++ chrome/app/chrome_main.cc
 @@ -30,11 +30,11 @@
  #include "chrome/app/chrome_main_mac.h"
@@ -29,7 +29,7 @@ $NetBSD$
  #define ENABLE_OLD_HEADLESS
  #endif
  
-@@ -119,7 +119,7 @@ int ChromeMain(int argc, const char** ar
+@@ -120,7 +120,7 @@ int ChromeMain(int argc, const char** ar
  #error Unknown platform.
  #endif
  
@@ -38,7 +38,7 @@ $NetBSD$
    PossiblyDetermineFallbackChromeChannel(argv[0]);
  #endif
  
-@@ -185,7 +185,7 @@ int ChromeMain(int argc, const char** ar
+@@ -186,7 +186,7 @@ int ChromeMain(int argc, const char** ar
    SetUpBundleOverrides();
  #endif
  

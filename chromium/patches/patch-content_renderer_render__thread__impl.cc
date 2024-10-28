@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/render_thread_impl.cc.orig	2024-09-24 20:49:28.587871000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2024-10-26 07:00:14.175213300 +0000
 +++ content/renderer/render_thread_impl.cc
 @@ -215,6 +215,8 @@
  
@@ -33,7 +33,7 @@ $NetBSD$
        base::FeatureList::IsEnabled(media::kVaapiVideoEncodeLinux) &&
  #else
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoEncode) &&
-@@ -1817,7 +1819,7 @@ std::unique_ptr<CodecFactory> RenderThre
+@@ -1815,7 +1817,7 @@ std::unique_ptr<CodecFactory> RenderThre
      bool enable_video_encode_accelerator) {
    mojo::PendingRemote<media::mojom::VideoEncodeAcceleratorProvider>
        vea_provider;

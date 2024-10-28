@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-09-24 20:49:21.346235500 +0000
+--- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-10-26 07:00:01.939780000 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
 @@ -17,7 +17,7 @@
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2024-09-24 20:49:31.901162000 +0000
+--- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2024-10-26 07:00:21.798795700 +0000
 +++ media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc
-@@ -837,7 +837,7 @@ const gfx::GpuMemoryBufferId& StructTrai
+@@ -841,7 +841,7 @@ const gfx::GpuMemoryBufferId& StructTrai
    return input.id;
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  // static
  gfx::NativePixmapHandle StructTraits<
      media::stable::mojom::NativeGpuMemoryBufferHandleDataView,
-@@ -858,7 +858,7 @@ bool StructTraits<media::stable::mojom::
+@@ -862,7 +862,7 @@ bool StructTraits<media::stable::mojom::
  
    output->type = gfx::NATIVE_PIXMAP;
  

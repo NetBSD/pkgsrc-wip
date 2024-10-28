@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2024-09-24 20:49:18.428979600 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2024-10-26 06:59:56.880706500 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
-@@ -321,7 +321,7 @@ const struct {
+@@ -324,7 +324,7 @@ const struct {
       FILE_PATH_LITERAL("Library/Mobile Documents/com~apple~CloudDocs"),
       kDontBlockChildren},
  #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
      // On Linux also block access to devices via /dev.
      {kNoBasePathKey, FILE_PATH_LITERAL("/dev"), kBlockAllChildren},
      // And security sensitive data in /proc and /sys.

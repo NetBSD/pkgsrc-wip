@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2024-09-24 20:49:31.830155600 +0000
+--- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2024-10-26 07:00:21.651711500 +0000
 +++ media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc
 @@ -18,12 +18,15 @@
  #include "media/gpu/v4l2/v4l2_device.h"
@@ -22,8 +22,8 @@ $NetBSD$
    sandbox::syscall_broker::BrokerCommandSet command_set;
    std::vector<BrokerFilePermission> permissions;
  
-@@ -121,6 +124,7 @@ bool HardwareVideoEncodingPreSandboxHook
-     }
+@@ -132,6 +135,7 @@ bool HardwareVideoEncodingPreSandboxHook
+     dlopen("libvulkan_radeon.so", kDlopenFlags);
    }
  #endif
 +#endif

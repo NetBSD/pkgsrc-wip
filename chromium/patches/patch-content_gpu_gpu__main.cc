@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2024-09-24 20:49:28.436857700 +0000
+--- content/gpu/gpu_main.cc.orig	2024-10-26 07:00:13.998105800 +0000
 +++ content/gpu/gpu_main.cc
 @@ -95,10 +95,14 @@
  #include "sandbox/win/src/sandbox.h"
@@ -59,7 +59,7 @@ $NetBSD$
    // Thread type delegate of the process should be registered before
    // thread type change below for the main thread and for thread pool in
    // ChildProcess constructor.
-@@ -438,7 +443,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -439,7 +444,7 @@ int GpuMain(MainFunctionParams parameter
  
  namespace {
  
@@ -68,7 +68,7 @@ $NetBSD$
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
-@@ -478,7 +483,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+@@ -479,7 +484,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
    sandbox_options.accelerated_video_encode_enabled =
        !gpu_prefs.disable_accelerated_video_encode;
  

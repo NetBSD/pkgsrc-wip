@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_openbsd.cc.orig	2024-09-24 20:49:13.806573900 +0000
+--- base/process/process_metrics_openbsd.cc.orig	2024-10-26 06:59:45.377718200 +0000
 +++ base/process/process_metrics_openbsd.cc
 @@ -6,36 +6,40 @@
  
@@ -60,7 +60,7 @@ $NetBSD$
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -43,38 +47,9 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -43,37 +47,9 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
@@ -85,8 +85,7 @@ $NetBSD$
 -
 -base::expected<TimeDelta, ProcessCPUUsageError>
 -ProcessMetrics::GetCumulativeCPUUsage() {
--  NOTREACHED_IN_MIGRATION();
--  return base::unexpected(ProcessCPUUsageError::kNotImplemented);
+-  NOTREACHED();
 -}
 -
 -ProcessMetrics::ProcessMetrics(ProcessHandle process)
@@ -100,7 +99,7 @@ $NetBSD$
    struct vmtotal vmtotal;
    unsigned long mem_total, mem_free, mem_inactive;
    size_t len = sizeof(vmtotal);
-@@ -86,9 +61,136 @@ size_t GetSystemCommitCharge() {
+@@ -85,9 +61,136 @@ size_t GetSystemCommitCharge() {
    mem_free = vmtotal.t_free;
    mem_inactive = vmtotal.t_vm - vmtotal.t_avm;
  

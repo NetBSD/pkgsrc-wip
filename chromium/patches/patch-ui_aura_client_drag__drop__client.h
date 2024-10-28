@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/aura/client/drag_drop_client.h.orig	2024-09-24 20:49:58.155465800 +0000
+--- ui/aura/client/drag_drop_client.h.orig	2024-10-26 07:01:26.557760200 +0000
 +++ ui/aura/client/drag_drop_client.h
 @@ -44,7 +44,7 @@ class AURA_EXPORT DragDropClient {
        int allowed_operations,

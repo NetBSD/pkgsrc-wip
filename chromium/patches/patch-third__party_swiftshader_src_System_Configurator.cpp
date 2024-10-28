@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/System/Configurator.cpp.orig	2024-09-24 20:50:22.151572000 +0000
+--- third_party/swiftshader/src/System/Configurator.cpp.orig	2024-10-26 07:02:24.652370000 +0000
 +++ third_party/swiftshader/src/System/Configurator.cpp
 @@ -38,6 +38,9 @@ namespace sw {
  

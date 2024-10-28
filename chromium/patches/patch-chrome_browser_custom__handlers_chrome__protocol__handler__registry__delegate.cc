@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/custom_handlers/chrome_protocol_handler_registry_delegate.cc.orig	2024-09-24 20:49:18.023944100 +0000
+--- chrome/browser/custom_handlers/chrome_protocol_handler_registry_delegate.cc.orig	2024-10-26 06:59:56.174277300 +0000
 +++ chrome/browser/custom_handlers/chrome_protocol_handler_registry_delegate.cc
 @@ -68,7 +68,7 @@ void ChromeProtocolHandlerRegistryDelega
  // If true default protocol handlers will be removed if the OS level

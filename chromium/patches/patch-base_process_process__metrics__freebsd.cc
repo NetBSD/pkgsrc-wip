@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_freebsd.cc.orig	2024-09-24 20:49:13.805574000 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2024-10-26 06:59:45.376717600 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,19 +3,37 @@
  // found in the LICENSE file.
@@ -47,7 +47,7 @@ $NetBSD$
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -23,22 +41,18 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -23,21 +41,18 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
@@ -72,13 +72,12 @@ $NetBSD$
 -
 -base::expected<TimeDelta, ProcessCPUUsageError>
 -ProcessMetrics::GetCumulativeCPUUsage() {
--  NOTREACHED_IN_MIGRATION();
--  return base::unexpected(ProcessCPUUsageError::kNotImplemented);
+-  NOTREACHED();
 +  return base::ok(Microseconds(info.ki_runtime));
  }
  
  size_t GetSystemCommitCharge() {
-@@ -64,4 +78,228 @@ size_t GetSystemCommitCharge() {
+@@ -63,4 +78,228 @@ size_t GetSystemCommitCharge() {
    return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
  }
  

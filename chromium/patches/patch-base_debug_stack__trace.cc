@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace.cc.orig	2024-09-24 20:49:13.720566300 +0000
+--- base/debug/stack_trace.cc.orig	2024-10-26 06:59:45.284661800 +0000
 +++ base/debug/stack_trace.cc
 @@ -258,7 +258,7 @@ bool StackTrace::WillSymbolizeToStreamFo
    // Symbols are not expected to be reliable when gn args specifies

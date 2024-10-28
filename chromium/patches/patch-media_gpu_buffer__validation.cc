@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/buffer_validation.cc.orig	2024-09-24 20:49:31.813154200 +0000
+--- media/gpu/buffer_validation.cc.orig	2024-10-26 07:00:21.593678000 +0000
 +++ media/gpu/buffer_validation.cc
 @@ -16,7 +16,7 @@
  #include "ui/gfx/geometry/size.h"

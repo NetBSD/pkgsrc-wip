@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_main_loop.cc.orig	2024-09-24 20:49:27.927813000 +0000
+--- content/browser/browser_main_loop.cc.orig	2024-10-26 07:00:13.034520400 +0000
 +++ content/browser/browser_main_loop.cc
 @@ -250,6 +250,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"
@@ -32,8 +32,8 @@ $NetBSD$
  #endif
  
    // GLib's spawning of new processes is buggy, so it's important that at this
-@@ -582,7 +594,7 @@ int BrowserMainLoop::EarlyInitialization
-   base::PlatformThread::SetCurrentThreadType(base::ThreadType::kCompositing);
+@@ -583,7 +595,7 @@ int BrowserMainLoop::EarlyInitialization
+       base::ThreadType::kDisplayCritical);
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_ANDROID)

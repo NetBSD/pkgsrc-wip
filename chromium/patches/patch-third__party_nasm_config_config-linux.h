@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/nasm/config/config-linux.h.orig	2024-09-24 20:50:17.245141300 +0000
+--- third_party/nasm/config/config-linux.h.orig	2024-10-26 07:01:57.197150000 +0000
 +++ third_party/nasm/config/config-linux.h
 @@ -160,7 +160,7 @@
  

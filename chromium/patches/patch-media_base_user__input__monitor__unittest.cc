@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/user_input_monitor_unittest.cc.orig	2024-09-24 20:49:31.688143300 +0000
+--- media/base/user_input_monitor_unittest.cc.orig	2024-10-26 07:00:21.328526000 +0000
 +++ media/base/user_input_monitor_unittest.cc
 @@ -13,7 +13,7 @@
  #include "build/build_config.h"

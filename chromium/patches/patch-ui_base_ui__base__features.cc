@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2024-09-24 20:49:58.234472800 +0000
+--- ui/base/ui_base_features.cc.orig	2024-10-26 07:01:26.706785400 +0000
 +++ ui/base/ui_base_features.cc
 @@ -162,7 +162,7 @@ BASE_FEATURE(kWaylandTextInputV3,
               base::FEATURE_DISABLED_BY_DEFAULT);

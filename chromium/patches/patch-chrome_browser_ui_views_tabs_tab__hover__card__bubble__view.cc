@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_hover_card_bubble_view.cc.orig	2024-09-24 20:49:20.889195400 +0000
+--- chrome/browser/ui/views/tabs/tab_hover_card_bubble_view.cc.orig	2024-10-26 07:00:01.177317000 +0000
 +++ chrome/browser/ui/views/tabs/tab_hover_card_bubble_view.cc
-@@ -374,7 +374,7 @@ TabHoverCardBubbleView::TabHoverCardBubb
+@@ -375,7 +375,7 @@ TabHoverCardBubbleView::TabHoverCardBubb
    // not become active. Setting this to false creates the need to explicitly
    // hide the hovercard on press, touch, and keyboard events.
    SetCanActivate(false);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics.cc.orig	2024-09-24 20:49:13.804573800 +0000
+--- base/process/process_metrics.cc.orig	2024-10-26 06:59:45.375717000 +0000
 +++ base/process/process_metrics.cc
 @@ -17,7 +17,7 @@ namespace base {
  namespace {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.cc.orig	2024-09-24 20:49:29.743972500 +0000
+--- extensions/shell/browser/shell_extensions_api_client.cc.orig	2024-10-26 07:00:17.588286900 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.cc
 @@ -58,7 +58,7 @@ ShellExtensionsAPIClient::CreateDisplayI
  

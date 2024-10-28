@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-09-24 20:49:21.046209300 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-10-26 07:00:01.395449400 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -189,7 +189,7 @@
+@@ -176,7 +176,7 @@
  #include "chrome/browser/ui/webui/chromeos/chrome_url_disabled/chrome_url_disabled_ui.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/webui_js_error/webui_js_error_ui.h"
  #endif
  
-@@ -214,22 +214,22 @@
+@@ -201,22 +201,22 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -40,9 +40,9 @@ $NetBSD$
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
- #include "chrome/browser/ui/webui/whats_new/whats_new_util.h"
  #endif
-@@ -550,7 +550,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+ 
+@@ -506,7 +506,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUIMobileSetupHost)
      return &NewWebUI<ash::cellular_setup::MobileSetupUI>;
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
@@ -51,7 +51,7 @@ $NetBSD$
    if (url.host_piece() == chrome::kChromeUIWebUIJsErrorHost)
      return &NewWebUI<WebUIJsErrorUI>;
  #endif
-@@ -602,7 +602,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -558,7 +558,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUINaClHost)
      return &NewWebUI<NaClUI>;
  #endif
@@ -60,16 +60,7 @@ $NetBSD$
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
    if (url.host_piece() == chrome::kChromeUITabModalConfirmDialogHost)
-@@ -633,7 +633,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
-   if (url.host_piece() == chrome::kChromeUIWebuiGalleryHost) {
-     return &NewWebUI<WebuiGalleryUI>;
-   }
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (url.host_piece() == chrome::kChromeUIWhatsNewHost &&
-       whats_new::IsEnabled()) {
-     return &NewWebUI<WhatsNewUI>;
-@@ -652,26 +652,26 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -599,26 +599,26 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    }
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -101,7 +92,7 @@ $NetBSD$
    if (url.host_piece() == chrome::kChromeUIWebAppSettingsHost)
      return &NewWebUI<WebAppSettingsUI>;
  #endif
-@@ -907,7 +907,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -854,7 +854,7 @@ base::RefCountedMemory* ChromeWebUIContr
    if (page_url.host_piece() == chrome::kChromeUINewTabPageHost)
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
  
@@ -110,7 +101,7 @@ $NetBSD$
    if (page_url.host_piece() == chrome::kChromeUIWhatsNewHost)
      return WhatsNewUI::GetFaviconResourceBytes(scale_factor);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -935,7 +935,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -882,7 +882,7 @@ base::RefCountedMemory* ChromeWebUIContr
      return ManagementUI::GetFaviconResourceBytes(scale_factor);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

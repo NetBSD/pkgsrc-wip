@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2024-09-24 20:49:25.400591400 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2024-10-26 07:00:07.955434600 +0000
 +++ components/password_manager/core/browser/features/password_features.h
-@@ -90,7 +90,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerLog
+@@ -93,7 +93,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerLog
  // Enables triggering password suggestions through the context menu.
  BASE_DECLARE_FEATURE(kPasswordManualFallbackAvailable);
  

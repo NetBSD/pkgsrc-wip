@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2024-09-24 20:49:13.816574800 +0000
+--- base/rand_util_posix.cc.orig	2024-10-26 06:59:45.475777900 +0000
 +++ base/rand_util_posix.cc
 @@ -28,7 +28,7 @@
  #include "base/time/time.h"
@@ -36,7 +36,7 @@ $NetBSD$
  // TODO(pasko): Unify reading kernel version numbers in:
  // mojo/core/channel_linux.cc
  // chrome/browser/android/seccomp_support_detector.cc
-@@ -181,6 +183,7 @@ bool UseBoringSSLForRandBytes() {
+@@ -177,6 +179,7 @@ bool UseBoringSSLForRandBytes() {
  namespace {
  
  void RandBytesInternal(span<uint8_t> output, bool avoid_allocation) {
@@ -44,7 +44,7 @@ $NetBSD$
  #if !BUILDFLAG(IS_NACL)
    // The BoringSSL experiment takes priority over everything else.
    if (!avoid_allocation && internal::UseBoringSSLForRandBytes()) {
-@@ -217,6 +220,9 @@ void RandBytesInternal(span<uint8_t> out
+@@ -213,6 +216,9 @@ void RandBytesInternal(span<uint8_t> out
    const int urandom_fd = GetUrandomFD();
    const bool success = ReadFromFD(urandom_fd, as_writable_chars(output));
    CHECK(success);
@@ -54,7 +54,7 @@ $NetBSD$
  }
  
  }  // namespace
-@@ -236,9 +242,11 @@ void RandBytes(span<uint8_t> output) {
+@@ -232,9 +238,11 @@ void RandBytes(span<uint8_t> output) {
    RandBytesInternal(output, /*avoid_allocation=*/false);
  }
  

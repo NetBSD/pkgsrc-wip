@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_implementation.cc.orig	2024-09-24 20:49:58.710514500 +0000
+--- ui/gl/gl_implementation.cc.orig	2024-10-26 07:01:27.191867000 +0000
 +++ ui/gl/gl_implementation.cc
-@@ -252,7 +252,7 @@ GetRequestedGLImplementationFromCommandL
+@@ -253,7 +253,7 @@ GetRequestedGLImplementationFromCommandL
      const base::CommandLine* command_line) {
    bool overrideUseSoftwareGL =
        command_line->HasSwitch(switches::kOverrideUseSoftwareGLForTests);

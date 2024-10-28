@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/enterprise_companion_client.cc.orig	2024-09-24 20:49:21.390239500 +0000
+--- chrome/enterprise_companion/enterprise_companion_client.cc.orig	2024-10-26 07:00:01.991811500 +0000
 +++ chrome/enterprise_companion/enterprise_companion_client.cc
 @@ -36,7 +36,7 @@ namespace {
  

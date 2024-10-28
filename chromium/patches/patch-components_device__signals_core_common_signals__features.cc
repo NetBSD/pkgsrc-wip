@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/signals_features.cc.orig	2024-09-24 20:49:24.583519700 +0000
+--- components/device_signals/core/common/signals_features.cc.orig	2024-10-26 07:00:06.825748400 +0000
 +++ components/device_signals/core/common/signals_features.cc
 @@ -46,7 +46,7 @@ bool IsNewFunctionEnabled(NewEvFunction 
  }

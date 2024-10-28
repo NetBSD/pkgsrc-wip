@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/file_video_capture_device_factory.cc.orig	2024-09-24 20:49:31.718145800 +0000
+--- media/capture/video/file_video_capture_device_factory.cc.orig	2024-10-26 07:00:21.375553000 +0000
 +++ media/capture/video/file_video_capture_device_factory.cc
 @@ -52,7 +52,7 @@ void FileVideoCaptureDeviceFactory::GetD
        VideoCaptureApi::WIN_DIRECT_SHOW;

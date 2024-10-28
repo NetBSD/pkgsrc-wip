@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-09-24 20:49:28.015821000 +0000
+--- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-10-26 07:00:13.235642400 +0000
 +++ content/browser/gpu/gpu_memory_buffer_manager_singleton.cc
-@@ -54,7 +54,7 @@ scoped_refptr<base::SingleThreadTaskRunn
+@@ -46,7 +46,7 @@ scoped_refptr<base::SingleThreadTaskRunn
  #endif
  }
  
@@ -15,10 +15,10 @@ $NetBSD$
  bool IsGpuMemoryBufferNV12Supported() {
    static bool is_computed = false;
    static bool supported = false;
-@@ -117,7 +117,7 @@ void GpuMemoryBufferManagerSingleton::On
-     SetNativeConfigurations(std::move(configs));
-   }
- #endif  // BUILDFLAG(IS_OZONE_X11)
+@@ -98,7 +98,7 @@ GpuMemoryBufferManagerSingleton::GetInst
+ }
+ 
+ void GpuMemoryBufferManagerSingleton::OnGpuExtraInfoUpdate() {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Dynamic check whether the NV12 format is supported as it may be

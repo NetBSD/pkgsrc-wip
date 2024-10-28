@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/mojom/BUILD.gn.orig	2024-09-24 20:49:34.496389600 +0000
+--- services/network/public/mojom/BUILD.gn.orig	2024-10-26 07:00:30.365179500 +0000
 +++ services/network/public/mojom/BUILD.gn
 @@ -493,11 +493,11 @@ mojom("url_loader_base") {
    }

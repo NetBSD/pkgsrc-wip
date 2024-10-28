@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2024-09-24 20:49:29.127918500 +0000
+--- content/utility/utility_main.cc.orig	2024-10-26 07:00:15.705142700 +0000
 +++ content/utility/utility_main.cc
 @@ -36,17 +36,21 @@
  #include "services/screen_ai/buildflags/buildflags.h"
@@ -103,16 +103,16 @@ $NetBSD$
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
    // Seccomp-BPF policy.
-@@ -292,7 +304,7 @@ int UtilityMain(MainFunctionParams param
-                              screen_ai::GetBinaryPathSwitch()));
-       break;
- #endif
+@@ -295,7 +307,7 @@ int UtilityMain(MainFunctionParams param
+     case sandbox::mojom::Sandbox::kVideoEffects:
+       // TODO(crbug.com/361128453): Implement this.
+       NOTREACHED() << "kVideoEffects sandbox not implemented.";
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
      case sandbox::mojom::Sandbox::kHardwareVideoDecoding:
        pre_sandbox_hook =
            base::BindOnce(&media::HardwareVideoDecodingPreSandboxHook);
-@@ -319,6 +331,7 @@ int UtilityMain(MainFunctionParams param
+@@ -322,6 +334,7 @@ int UtilityMain(MainFunctionParams param
      default:
        break;
    }
@@ -120,7 +120,7 @@ $NetBSD$
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -326,6 +339,11 @@ int UtilityMain(MainFunctionParams param
+@@ -329,6 +342,11 @@ int UtilityMain(MainFunctionParams param
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }

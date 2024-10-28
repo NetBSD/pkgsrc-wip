@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2024-09-24 20:49:25.184572500 +0000
+--- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2024-10-26 07:00:07.634239400 +0000
 +++ components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc
-@@ -22,7 +22,7 @@ namespace named_mojo_ipc_server {
+@@ -23,7 +23,7 @@ namespace named_mojo_ipc_server {
  // static
  mojo::PlatformChannelEndpoint ConnectToServer(
      const mojo::NamedPlatformChannel::ServerName& server_name) {

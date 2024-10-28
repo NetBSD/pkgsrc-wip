@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-09-24 20:49:58.375485200 +0000
+--- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-10-26 07:01:26.928823000 +0000
 +++ ui/events/devices/x11/device_data_manager_x11.cc
 @@ -849,6 +849,7 @@ void DeviceDataManagerX11::SetDisabledKe
  }

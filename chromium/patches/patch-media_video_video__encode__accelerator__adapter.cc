@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2024-09-24 20:49:32.250192400 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2024-10-26 07:00:22.909419000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -164,7 +164,7 @@ VideoEncodeAccelerator::Config SetUpVeaC
    if (is_rgb)

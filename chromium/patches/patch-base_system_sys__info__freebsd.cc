@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2024-09-24 20:49:13.837576600 +0000
+--- base/system/sys_info_freebsd.cc.orig	2024-10-26 06:59:45.509798500 +0000
 +++ base/system/sys_info_freebsd.cc
-@@ -9,30 +9,106 @@
+@@ -9,28 +9,103 @@
  #include <sys/sysctl.h>
  
  #include "base/notreached.h"
@@ -27,7 +27,7 @@ $NetBSD$
 +  }
 +  return ncpu;
 +}
-+
++  
 +uint64_t SysInfo::AmountOfPhysicalMemoryImpl() {
 +  int pages, page_size, r = 0;
    size_t size = sizeof(pages);
@@ -37,14 +37,12 @@ $NetBSD$
 +
 +  if (r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, NULL, 0);
-+  if (r == 0)
++  if (r == 0)   
 +    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
 +
 +  if (r == -1) {
-     NOTREACHED_IN_MIGRATION();
-     return 0;
-   }
--  return static_cast<int64_t>(pages) * page_size;
++    NOTREACHED();
++  }
 +
 +  return static_cast<uint64_t>(pages) * page_size;
 +}
@@ -54,7 +52,7 @@ $NetBSD$
 +  unsigned int pgfree, pginact, pgcache;
 +  size_t size = sizeof(page_size);
 +  size_t szpg = sizeof(pgfree);
-+
++ 
 +  if (r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
 +  if (r == 0)
@@ -65,9 +63,10 @@ $NetBSD$
 +    r = sysctlbyname("vm.stats.vm.v_cache_count", &pgcache, &szpg, NULL, 0);
 +
 +  if (r == -1) {
-+    NOTREACHED();
+     NOTREACHED();
 +    return 0;
-+  }
+   }
+-  return static_cast<int64_t>(pages) * page_size;
 +
 +  return static_cast<uint64_t>((pgfree + pginact + pgcache) * page_size);
 +}
@@ -99,10 +98,8 @@ $NetBSD$
    size_t size = sizeof(limit);
 +
    if (sysctlbyname("kern.ipc.shmmax", &limit, &size, NULL, 0) < 0) {
-     NOTREACHED_IN_MIGRATION();
-     return 0;
+     NOTREACHED();
    }
-+
    return static_cast<uint64_t>(limit);
  }
  

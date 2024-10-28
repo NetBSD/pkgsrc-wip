@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/linux/BUILD.gn.orig	2024-09-24 20:49:14.054595700 +0000
+--- build/config/linux/BUILD.gn.orig	2024-10-26 06:59:45.827991700 +0000
 +++ build/config/linux/BUILD.gn
 @@ -41,7 +41,7 @@ config("runtime_library") {
    }

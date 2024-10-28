@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/kill.h.orig	2024-09-24 20:49:13.799573400 +0000
+--- base/process/kill.h.orig	2024-10-26 06:59:45.371714600 +0000
 +++ base/process/kill.h
 @@ -123,7 +123,7 @@ BASE_EXPORT TerminationStatus GetTermina
  BASE_EXPORT TerminationStatus GetKnownDeadTerminationStatus(

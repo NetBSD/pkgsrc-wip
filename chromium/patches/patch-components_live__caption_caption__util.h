@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/live_caption/caption_util.h.orig	2024-09-24 20:49:25.067562000 +0000
+--- components/live_caption/caption_util.h.orig	2024-10-26 07:00:07.471140400 +0000
 +++ components/live_caption/caption_util.h
 @@ -15,7 +15,7 @@ class PrefService;
  namespace captions {

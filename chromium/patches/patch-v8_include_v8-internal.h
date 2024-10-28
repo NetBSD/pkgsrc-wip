@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8-internal.h.orig	2024-09-24 20:51:57.344927000 +0000
+--- v8/include/v8-internal.h.orig	2024-10-26 07:03:23.565830700 +0000
 +++ v8/include/v8-internal.h
-@@ -213,7 +213,7 @@ using SandboxedPointer_t = Address;
+@@ -229,7 +229,7 @@ using SandboxedPointer_t = Address;
  #ifdef V8_ENABLE_SANDBOX
  
  // Size of the sandbox, excluding the guard regions surrounding it.

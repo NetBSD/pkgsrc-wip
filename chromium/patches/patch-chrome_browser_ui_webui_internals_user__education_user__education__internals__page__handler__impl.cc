@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/internals/user_education/user_education_internals_page_handler_impl.cc.orig	2024-09-24 20:49:21.067211200 +0000
+--- chrome/browser/ui/webui/internals/user_education/user_education_internals_page_handler_impl.cc.orig	2024-10-26 07:00:01.417462600 +0000
 +++ chrome/browser/ui/webui/internals/user_education/user_education_internals_page_handler_impl.cc
 @@ -41,7 +41,7 @@
  #include "ui/base/l10n/l10n_util.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2024-09-24 20:50:14.377889600 +0000
+--- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2024-10-26 07:01:50.782357700 +0000
 +++ third_party/libc++abi/src/src/cxa_guard_impl.h
 @@ -425,6 +425,17 @@ void PlatformFutexWake(int* addr) {
    __tsan_release(addr);

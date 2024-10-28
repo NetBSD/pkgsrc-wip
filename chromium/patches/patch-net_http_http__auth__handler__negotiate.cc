@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_handler_negotiate.cc.orig	2024-09-24 20:49:33.135270000 +0000
+--- net/http/http_auth_handler_negotiate.cc.orig	2024-10-26 07:00:26.169149900 +0000
 +++ net/http/http_auth_handler_negotiate.cc
 @@ -120,7 +120,7 @@ int HttpAuthHandlerNegotiate::Factory::C
  #elif BUILDFLAG(IS_POSIX)

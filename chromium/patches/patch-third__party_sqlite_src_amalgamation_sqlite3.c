@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-09-24 20:51:07.325536700 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-10-26 07:03:04.793807300 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
 @@ -14187,7 +14187,7 @@ struct fts5_api {
  ** But _XOPEN_SOURCE define causes problems for Mac OS X, so omit
@@ -25,7 +25,7 @@ $NetBSD$
  #ifdef SQLITE_USE_ALLOCA
  # define sqlite3StackAllocRaw(D,N)   alloca(N)
  # define sqlite3StackAllocRawNN(D,N) alloca(N)
-@@ -45170,6 +45173,11 @@ static int unixRandomness(sqlite3_vfs *N
+@@ -45183,6 +45186,11 @@ static int unixRandomness(sqlite3_vfs *N
    memset(zBuf, 0, nBuf);
    randomnessPid = osGetpid(0);
  #if !defined(SQLITE_TEST) && !defined(SQLITE_OMIT_RANDOMNESS)
@@ -37,7 +37,7 @@ $NetBSD$
    {
      int fd, got;
      fd = robust_open("/dev/urandom", O_RDONLY, 0);
-@@ -45186,6 +45194,7 @@ static int unixRandomness(sqlite3_vfs *N
+@@ -45199,6 +45207,7 @@ static int unixRandomness(sqlite3_vfs *N
      }
    }
  #endif

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2024-09-24 20:49:20.702179000 +0000
+--- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2024-10-26 07:00:00.776073000 +0000
 +++ chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc
-@@ -38,7 +38,7 @@
+@@ -39,7 +39,7 @@
  #include "ui/wm/core/wm_state.h"
  #endif  // defined(USE_AURA)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <sys/stat.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -131,7 +131,7 @@ void ChromeBrowserMainExtraPartsViews::P
+@@ -132,7 +132,7 @@ void ChromeBrowserMainExtraPartsViews::P
          return controller;
        }));
  

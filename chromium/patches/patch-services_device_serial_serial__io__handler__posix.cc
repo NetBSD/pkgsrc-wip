@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/serial_io_handler_posix.cc.orig	2024-09-24 20:49:34.413382300 +0000
+--- services/device/serial/serial_io_handler_posix.cc.orig	2024-10-26 07:00:30.282141400 +0000
 +++ services/device/serial/serial_io_handler_posix.cc
 @@ -73,7 +73,7 @@ bool BitrateToSpeedConstant(int bitrate,
      BITRATE_TO_SPEED_CASE(9600)

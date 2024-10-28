@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2024-09-24 20:49:21.128216500 +0000
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2024-10-26 07:00:01.610580000 +0000
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
-@@ -205,7 +205,7 @@ base::Value::Dict CreateProfileEntry(con
+@@ -209,7 +209,7 @@ base::Value::Dict CreateProfileEntry(con
  
    if (AccountInfo::IsManaged(entry->GetHostedDomain())) {
      profile_entry.Set("avatarBadge", "cr:domain");
@@ -15,7 +15,7 @@ $NetBSD$
    } else if (base::FeatureList::IsEnabled(
                   supervised_user::kShowKiteForSupervisedUsers) &&
               entry->IsSupervised()) {
-@@ -1208,7 +1208,7 @@ void ProfilePickerHandler::BeginFirstWeb
+@@ -1224,7 +1224,7 @@ void ProfilePickerHandler::BeginFirstWeb
  }
  
  void ProfilePickerHandler::MaybeUpdateGuestMode() {

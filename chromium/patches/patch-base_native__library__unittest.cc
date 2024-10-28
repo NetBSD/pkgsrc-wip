@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/native_library_unittest.cc.orig	2024-09-24 20:49:13.788572300 +0000
+--- base/native_library_unittest.cc.orig	2024-10-26 06:59:45.360707800 +0000
 +++ base/native_library_unittest.cc
-@@ -133,7 +133,7 @@ TEST(NativeLibraryTest, LoadLibrary) {
+@@ -135,7 +135,7 @@ TEST(NativeLibraryTest, LoadLibrary) {
  // versions with respect to symbol resolution scope.
  // TSan and MSan error out on RTLD_DEEPBIND, https://crbug.com/705255
  #if !BUILDFLAG(IS_ANDROID) && !defined(THREAD_SANITIZER) && \

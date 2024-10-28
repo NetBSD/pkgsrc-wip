@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/audio_manager_sndio.cc.orig	2024-10-18 11:20:15.314572045 +0000
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2024-10-28 13:44:53.622495674 +0000
 +++ media/audio/sndio/audio_manager_sndio.cc
 @@ -0,0 +1,213 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

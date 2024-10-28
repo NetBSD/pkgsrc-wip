@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/embedder/features.h.orig	2024-09-24 20:49:32.261193500 +0000
+--- mojo/core/embedder/features.h.orig	2024-10-26 07:00:22.920425200 +0000
 +++ mojo/core/embedder/features.h
 @@ -16,7 +16,7 @@ namespace core {
  

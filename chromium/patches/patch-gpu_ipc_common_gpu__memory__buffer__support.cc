@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/common/gpu_memory_buffer_support.cc.orig	2024-09-24 20:49:29.988994100 +0000
+--- gpu/ipc/common/gpu_memory_buffer_support.cc.orig	2024-10-26 07:00:18.026553200 +0000
 +++ gpu/ipc/common/gpu_memory_buffer_support.cc
 @@ -26,7 +26,7 @@
  #include "ui/ozone/public/ozone_platform.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "gpu/ipc/common/gpu_memory_buffer_impl_native_pixmap.h"
  #endif
  
-@@ -56,7 +56,7 @@ GpuMemoryBufferSupport::GetNativeGpuMemo
+@@ -55,7 +55,7 @@ GpuMemoryBufferSupport::GetNativeGpuMemo
    return gfx::IO_SURFACE_BUFFER;
  #elif BUILDFLAG(IS_ANDROID)
    return gfx::ANDROID_HARDWARE_BUFFER;

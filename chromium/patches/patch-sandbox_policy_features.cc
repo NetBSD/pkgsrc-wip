@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.cc.orig	2024-09-24 20:49:34.305372700 +0000
+--- sandbox/policy/features.cc.orig	2024-10-26 07:00:30.176092900 +0000
 +++ sandbox/policy/features.cc
 @@ -20,7 +20,11 @@ namespace sandbox::policy::features {
  // (Only causes an effect when feature kNetworkServiceInProcess is disabled.)
@@ -18,7 +18,7 @@ $NetBSD$
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  // Enables a fine-grained seccomp-BPF syscall filter for the network service.
-@@ -140,7 +144,7 @@ BASE_FEATURE(kSpectreVariant2Mitigation,
+@@ -134,7 +138,7 @@ BASE_FEATURE(kSpectreVariant2Mitigation,
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  

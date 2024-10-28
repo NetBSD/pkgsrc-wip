@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2024-09-24 20:49:33.655315900 +0000
+--- net/socket/udp_socket_posix.cc.orig	2024-10-26 07:00:28.258186000 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;

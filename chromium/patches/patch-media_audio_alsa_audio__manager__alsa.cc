@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2024-09-24 20:49:31.622137300 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2024-10-26 07:00:21.221464600 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -100,7 +100,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2024-09-24 20:49:20.665176000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2024-10-26 07:00:00.682016000 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -78,7 +78,7 @@ bool IsExtensionMenuInRootAppMenu();
  BASE_DECLARE_FEATURE(kAccessCodeCastUI);
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
  
-@@ -256,7 +256,7 @@ bool IsToolbarPinningEnabled();
+@@ -258,7 +258,7 @@ bool IsToolbarPinningEnabled();
  
  BASE_DECLARE_FEATURE(kTopChromeWebUIUsesSpareRenderer);
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2024-09-24 20:49:21.043209000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2024-10-26 07:00:01.390446200 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
-@@ -36,7 +36,7 @@
+@@ -43,7 +43,7 @@
  #include "net/ssl/client_cert_store_mac.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #include "components/enterprise/client_certificates/core/certificate_provisioning_service.h"
  #include "components/enterprise/client_certificates/core/client_certificates_service.h"
-@@ -98,7 +98,7 @@ std::unique_ptr<ClientCertStoreLoader> C
+@@ -191,7 +191,7 @@ std::unique_ptr<ClientCertStoreLoader> C
  #endif
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  // ClientCertStore implementation that always returns an empty list. The
  // CertificateProvisioningService implementation expects to wrap a platform
  // cert store, but here we only want to get results from the provisioning
-@@ -393,7 +393,7 @@ CreatePlatformClientCertSource(
+@@ -673,7 +673,7 @@ CreatePlatformClientCertSource(
  #endif
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2024-09-24 20:49:31.691143500 +0000
+--- media/base/video_frame.h.orig	2024-10-26 07:00:21.331527700 +0000
 +++ media/base/video_frame.h
 @@ -50,7 +50,7 @@
  #include "base/apple/scoped_cftyperef.h"
@@ -24,7 +24,7 @@ $NetBSD$
      // TODO(mcasas): Consider turning this type into STORAGE_NATIVE
      // based on the idea of using this same enum value for both DMA
      // buffers on Linux and CVPixelBuffers on Mac (which currently use
-@@ -407,7 +407,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -393,7 +393,7 @@ class MEDIA_EXPORT VideoFrame : public b
        ReleaseMailboxAndGpuMemoryBufferCB mailbox_holder_and_gmb_release_cb,
        base::TimeDelta timestamp);
  
@@ -33,16 +33,16 @@ $NetBSD$
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -726,7 +726,7 @@ class MEDIA_EXPORT VideoFrame : public b
-   scoped_refptr<gpu::ClientSharedImage> shared_image(
-       size_t texture_index) const;
+@@ -711,7 +711,7 @@ class MEDIA_EXPORT VideoFrame : public b
+   // wait for the included sync point.
+   scoped_refptr<gpu::ClientSharedImage> shared_image() const;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -968,7 +968,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -953,7 +953,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
    bool is_mappable_si_enabled_ = false;
  

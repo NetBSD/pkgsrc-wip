@@ -4,10 +4,19 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2024-09-24 20:49:21.046209300 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2024-10-26 07:00:01.393448000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_configs.cc
-@@ -110,10 +110,10 @@ void RegisterChromeWebUIConfigs() {
-   map.AddWebUIConfig(std::make_unique<TermsUIConfig>());
+@@ -77,7 +77,7 @@
+ #include "chrome/browser/ui/webui/certificate_manager/certificate_manager_ui.h"
+ #endif  // BUILDFLAG(CHROME_ROOT_STORE_CERT_MANAGEMENT_UI)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
+ #endif
+ 
+@@ -148,10 +148,10 @@ void RegisterChromeWebUIConfigs() {
+   map.AddWebUIConfig(std::make_unique<WebuiGalleryUIConfig>());
  #endif  // !BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
@@ -19,3 +28,12 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_EXTENSIONS)
    map.AddWebUIConfig(std::make_unique<extensions::ExtensionsUIConfig>());
+@@ -165,7 +165,7 @@ void RegisterChromeWebUIConfigs() {
+   map.AddWebUIConfig(std::make_unique<CertificateManagerUIConfig>());
+ #endif  // BUILDFLAG(CHROME_ROOT_STORE_CERT_MANAGEMENT_UI)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   map.AddWebUIConfig(std::make_unique<WhatsNewUIConfig>());
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 

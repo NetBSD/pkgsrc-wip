@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/on_device_model_service.h.orig	2024-09-24 20:49:34.539393400 +0000
+--- services/on_device_model/on_device_model_service.h.orig	2024-10-26 07:00:30.406198300 +0000
 +++ services/on_device_model/on_device_model_service.h
-@@ -22,6 +22,10 @@
- #include "sandbox/policy/linux/sandbox_linux.h"
- #endif
+@@ -27,6 +27,10 @@ namespace ml {
+ class OnDeviceModelInternalImpl;
+ }
  
 +#if BUILDFLAG(IS_BSD)
 +#include "sandbox/policy/sandbox.h"
@@ -17,7 +17,7 @@ $NetBSD$
  namespace on_device_model {
  
  class COMPONENT_EXPORT(ON_DEVICE_MODEL) OnDeviceModelService
-@@ -35,7 +39,7 @@ class COMPONENT_EXPORT(ON_DEVICE_MODEL) 
+@@ -40,7 +44,7 @@ class COMPONENT_EXPORT(ON_DEVICE_MODEL) 
    // Must be called in the service's process after the run loop finished.
    [[nodiscard]] static bool Shutdown();
  

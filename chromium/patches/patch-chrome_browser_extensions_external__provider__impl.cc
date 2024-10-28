@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/external_provider_impl.cc.orig	2024-09-24 20:49:18.354973000 +0000
+--- chrome/browser/extensions/external_provider_impl.cc.orig	2024-10-26 06:59:56.742622600 +0000
 +++ chrome/browser/extensions/external_provider_impl.cc
-@@ -834,7 +834,7 @@ void ExternalProviderImpl::CreateExterna
+@@ -816,7 +816,7 @@ void ExternalProviderImpl::CreateExterna
    if (!profile->GetPrefs()->GetBoolean(pref_names::kBlockExternalExtensions)) {
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -15,7 +15,7 @@ $NetBSD$
      provider_list->push_back(std::make_unique<ExternalProviderImpl>(
          service,
          base::MakeRefCounted<ExternalPrefLoader>(
-@@ -862,7 +862,7 @@ void ExternalProviderImpl::CreateExterna
+@@ -844,7 +844,7 @@ void ExternalProviderImpl::CreateExterna
          bundled_extension_creation_flags));
  
      // Define a per-user source of external extensions.

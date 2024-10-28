@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2024-09-24 20:49:18.599994700 +0000
+--- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2024-10-26 06:59:57.128857400 +0000
 +++ chrome/browser/media/webrtc/webrtc_log_uploader.cc
 @@ -106,7 +106,7 @@ std::string GetLogUploadProduct() {
    const char product[] = "Chrome_Mac";

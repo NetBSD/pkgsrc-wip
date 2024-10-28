@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2024-09-24 20:49:24.195485600 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2024-10-26 07:00:06.362466800 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
 @@ -8,7 +8,7 @@
  
@@ -15,7 +15,7 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
  // When enabled, Chrome will extract the checkout amount from the checkout page
  // of the allowlisted merchant websites.
-@@ -292,7 +292,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
+@@ -320,7 +320,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

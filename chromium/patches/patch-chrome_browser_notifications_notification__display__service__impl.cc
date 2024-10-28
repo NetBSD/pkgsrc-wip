@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/notifications/notification_display_service_impl.cc.orig	2024-09-24 20:49:18.712004400 +0000
+--- chrome/browser/notifications/notification_display_service_impl.cc.orig	2024-10-26 06:59:57.361998800 +0000
 +++ chrome/browser/notifications/notification_display_service_impl.cc
 @@ -32,7 +32,7 @@
  #endif

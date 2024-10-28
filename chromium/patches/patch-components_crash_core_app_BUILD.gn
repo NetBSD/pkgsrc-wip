@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/BUILD.gn.orig	2024-09-24 20:49:24.506512900 +0000
+--- components/crash/core/app/BUILD.gn.orig	2024-10-26 07:00:06.726688100 +0000
 +++ components/crash/core/app/BUILD.gn
-@@ -82,6 +82,10 @@ static_library("app") {
+@@ -70,6 +70,10 @@ static_library("app") {
      ]
    }
  
@@ -17,7 +17,7 @@ $NetBSD$
    defines = [ "CRASH_IMPLEMENTATION" ]
  
    public_deps = [ ":lib" ]
-@@ -95,7 +99,7 @@ static_library("app") {
+@@ -83,7 +87,7 @@ static_library("app") {
      "//third_party/crashpad/crashpad/util",
    ]
  
@@ -26,7 +26,7 @@ $NetBSD$
      sources += [ "crashpad_linux.cc" ]
      data_deps = [ ":chrome_crashpad_handler" ]
    }
-@@ -115,7 +119,7 @@ static_library("app") {
+@@ -103,7 +107,7 @@ static_library("app") {
      libs = [ "log" ]
    }
  
@@ -35,7 +35,7 @@ $NetBSD$
      deps += [
        "//base:base_static",
        "//components/crash/core/common",
-@@ -246,11 +250,6 @@ if (is_mac || is_android || is_linux || 
+@@ -234,11 +238,6 @@ if (is_mac || is_android || is_linux || 
    executable("chrome_crashpad_handler") {
      sources = [ "chrome_crashpad_handler.cc" ]
  
@@ -44,6 +44,6 @@ $NetBSD$
 -      "//third_party/crashpad/crashpad/handler",
 -    ]
 -
-     if (is_mac && (is_component_build || is_asan)) {
+     if (is_mac && (is_component_build || is_asan || is_ubsan_any)) {
        ldflags = [
          # The handler is in

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			129.0.6668.70
+VERSION=			130.0.6723.69
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -168,6 +168,7 @@ EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		${COMPILER_RPATH_FLAG}${X11BASE}/lib
 EXTRA_CXXFLAGS=	-Wno-unknown-warning-option \
 		-I${BUILDLINK_DIR}/include \
+		-I${BUILDLINK_DIR}/include/libepoll-shim \
 		-I${BUILDLINK_DIR}/include/glib \
 		-I${BUILDLINK_DIR}/include/nss
 
@@ -306,6 +307,7 @@ do-install:
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/libatomic/buildlink3.mk"
+.include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"

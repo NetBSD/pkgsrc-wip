@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/build/scripts/run_with_pythonpath.py.orig	2024-09-24 20:49:36.197538900 +0000
+--- third_party/blink/renderer/build/scripts/run_with_pythonpath.py.orig	2024-10-26 07:00:32.962337000 +0000
 +++ third_party/blink/renderer/build/scripts/run_with_pythonpath.py
 @@ -22,6 +22,7 @@ def main():
          existing_pp = (

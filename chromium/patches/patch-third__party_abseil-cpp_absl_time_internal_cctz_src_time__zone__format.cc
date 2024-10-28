@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc.orig	2024-09-24 20:49:35.059439000 +0000
+--- third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc.orig	2024-10-26 07:00:31.713789000 +0000
 +++ third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc
 @@ -19,7 +19,8 @@
  #endif

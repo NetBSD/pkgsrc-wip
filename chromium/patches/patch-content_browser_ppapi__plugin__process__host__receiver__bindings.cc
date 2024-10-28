@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/ppapi_plugin_process_host_receiver_bindings.cc.orig	2024-09-24 20:49:28.135831400 +0000
+--- content/browser/ppapi_plugin_process_host_receiver_bindings.cc.orig	2024-10-26 07:00:13.442768300 +0000
 +++ content/browser/ppapi_plugin_process_host_receiver_bindings.cc
 @@ -8,7 +8,7 @@
  

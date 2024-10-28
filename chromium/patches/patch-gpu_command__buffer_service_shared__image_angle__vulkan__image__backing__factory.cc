@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2024-09-24 20:49:29.942990000 +0000
+--- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2024-10-26 07:00:17.878463000 +0000
 +++ gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc
 @@ -20,7 +20,7 @@ namespace {
  // TODO(penghuang): verify the scanout is the right usage for video playback.

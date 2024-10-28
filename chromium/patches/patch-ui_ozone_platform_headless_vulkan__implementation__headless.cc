@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2024-09-24 20:49:58.767519700 +0000
+--- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2024-10-26 07:01:27.339892000 +0000
 +++ ui/ozone/platform/headless/vulkan_implementation_headless.cc
 @@ -118,7 +118,7 @@ VulkanImplementationHeadless::ExportVkFe
  

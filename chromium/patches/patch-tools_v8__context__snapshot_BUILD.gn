@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/v8_context_snapshot/BUILD.gn.orig	2024-09-24 20:49:58.035455500 +0000
+--- tools/v8_context_snapshot/BUILD.gn.orig	2024-10-26 07:01:26.387731600 +0000
 +++ tools/v8_context_snapshot/BUILD.gn
 @@ -36,6 +36,24 @@ buildflag_header("buildflags") {
    ]

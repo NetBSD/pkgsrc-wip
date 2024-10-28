@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_path_watcher/file_path_watcher.h.orig	2024-09-24 20:49:27.993819000 +0000
+--- content/browser/file_system_access/file_path_watcher/file_path_watcher.h.orig	2024-10-26 07:00:13.191615800 +0000
 +++ content/browser/file_system_access/file_path_watcher/file_path_watcher.h
 @@ -125,7 +125,7 @@ class CONTENT_EXPORT FilePathWatcher {
      Type type = Type::kNonRecursive;

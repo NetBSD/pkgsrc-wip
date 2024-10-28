@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2024-09-24 20:49:28.626874400 +0000
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2024-10-26 07:00:14.220240600 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
 @@ -51,7 +51,7 @@
  #include "net/base/network_change_notifier.h"

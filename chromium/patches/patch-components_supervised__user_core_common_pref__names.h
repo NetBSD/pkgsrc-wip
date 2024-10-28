@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/pref_names.h.orig	2024-09-24 20:49:26.779712400 +0000
+--- components/supervised_user/core/common/pref_names.h.orig	2024-10-26 07:00:11.275451700 +0000
 +++ components/supervised_user/core/common/pref_names.h
 @@ -137,7 +137,7 @@ inline constexpr char kFirstTimeIntersti
      "profile.managed.banner_state";

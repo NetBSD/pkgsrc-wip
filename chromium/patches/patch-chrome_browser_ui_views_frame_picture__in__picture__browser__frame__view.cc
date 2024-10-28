@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc.orig	2024-09-24 20:49:20.761184200 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc.orig	2024-10-26 07:00:00.957183100 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc
 @@ -61,7 +61,7 @@
  #include "ui/aura/window.h"
@@ -60,7 +60,7 @@ $NetBSD$
  gfx::Insets
  PictureInPictureBrowserFrameView::RestoredMirroredFrameBorderInsets() const {
    auto border = FrameBorderInsets();
-@@ -1188,7 +1188,7 @@ void PictureInPictureBrowserFrameView::A
+@@ -1189,7 +1189,7 @@ void PictureInPictureBrowserFrameView::A
  // views::View implementations:
  
  void PictureInPictureBrowserFrameView::OnPaint(gfx::Canvas* canvas) {
@@ -69,7 +69,7 @@ $NetBSD$
    // Draw the PiP window frame borders and shadows, including the top bar
    // background.
    if (window_frame_provider_) {
-@@ -1343,7 +1343,7 @@ void PictureInPictureBrowserFrameView::U
+@@ -1344,7 +1344,7 @@ void PictureInPictureBrowserFrameView::U
  }
  
  gfx::Insets PictureInPictureBrowserFrameView::FrameBorderInsets() const {
@@ -78,7 +78,7 @@ $NetBSD$
    if (window_frame_provider_) {
      const auto insets = window_frame_provider_->GetFrameThicknessDip();
      const bool tiled = frame()->tiled();
-@@ -1361,7 +1361,7 @@ gfx::Insets PictureInPictureBrowserFrame
+@@ -1362,7 +1362,7 @@ gfx::Insets PictureInPictureBrowserFrame
  }
  
  gfx::Insets PictureInPictureBrowserFrameView::ResizeBorderInsets() const {
@@ -87,7 +87,7 @@ $NetBSD$
    return FrameBorderInsets();
  #elif !BUILDFLAG(IS_CHROMEOS_ASH)
    return gfx::Insets(kResizeBorder);
-@@ -1382,7 +1382,7 @@ gfx::Size PictureInPictureBrowserFrameVi
+@@ -1383,7 +1383,7 @@ gfx::Size PictureInPictureBrowserFrameVi
                     top_height + border_thickness.bottom());
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/renderer/gl/glx/FunctionsGLX.cpp.orig	2024-09-24 20:50:07.792311700 +0000
+--- third_party/angle/src/libANGLE/renderer/gl/glx/FunctionsGLX.cpp.orig	2024-10-26 07:02:15.692342300 +0000
 +++ third_party/angle/src/libANGLE/renderer/gl/glx/FunctionsGLX.cpp
 @@ -144,10 +144,10 @@ bool FunctionsGLX::initialize(Display *x
      // which a GLXWindow was ever created.

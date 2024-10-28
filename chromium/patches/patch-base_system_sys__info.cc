@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.cc.orig	2024-09-24 20:49:13.837576600 +0000
+--- base/system/sys_info.cc.orig	2024-10-26 06:59:45.509798500 +0000
 +++ base/system/sys_info.cc
 @@ -223,7 +223,7 @@ std::string SysInfo::HardwareModelName()
  #endif

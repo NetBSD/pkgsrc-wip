@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-09-24 20:49:20.948200700 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-10-26 07:00:01.248360000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
 @@ -573,7 +573,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
-     content::WebContents* web_contents,
+     Browser* browser,
      Profile* profile,
      const std::string& app_id) {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

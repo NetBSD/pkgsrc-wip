@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/color/native_chrome_color_mixer.cc.orig	2024-09-24 20:49:20.529163800 +0000
+--- chrome/browser/ui/color/native_chrome_color_mixer.cc.orig	2024-10-26 07:00:00.420857200 +0000
 +++ chrome/browser/ui/color/native_chrome_color_mixer.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"

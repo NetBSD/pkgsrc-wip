@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/linux/unbundle/libevent.gn.orig	2024-09-24 20:49:14.079598000 +0000
+--- build/linux/unbundle/libevent.gn.orig	2024-10-26 06:59:45.852006400 +0000
 +++ build/linux/unbundle/libevent.gn
 @@ -9,7 +9,12 @@ shim_headers("libevent_shim") {
    headers = [ "event.h" ]

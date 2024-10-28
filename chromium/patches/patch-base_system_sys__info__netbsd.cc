@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_netbsd.cc.orig	2024-10-18 11:20:13.264338640 +0000
+--- base/system/sys_info_netbsd.cc.orig	2024-10-28 13:44:49.834421890 +0000
 +++ base/system/sys_info_netbsd.cc
-@@ -0,0 +1,91 @@
+@@ -0,0 +1,88 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -43,8 +43,7 @@ $NetBSD$
 +  int ncpu;
 +  size_t size = sizeof(ncpu);
 +  if (sysctl(mib, std::size(mib), &ncpu, &size, NULL, 0) < 0) {
-+    NOTREACHED_IN_MIGRATION();
-+    return 1;
++    NOTREACHED();
 +  }
 +  return ncpu;
 +}
@@ -64,10 +63,8 @@ $NetBSD$
 +  int mib[] = {CTL_KERN, KERN_SYSVIPC, KERN_SYSVIPC_SHMMAX};
 +  size_t limit;
 +  size_t size = sizeof(limit);
-+  // pledge(2)
 +  if (sysctl(mib, std::size(mib), &limit, &size, NULL, 0) < 0) {
-+    NOTREACHED_IN_MIGRATION();
-+    return 0;
++    NOTREACHED();
 +  }
 +  return static_cast<uint64_t>(limit);
 +}

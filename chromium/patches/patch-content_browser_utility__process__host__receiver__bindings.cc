@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-09-24 20:49:28.359851100 +0000
+--- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-10-26 07:00:13.747953700 +0000
 +++ content/browser/utility_process_host_receiver_bindings.cc
 @@ -10,12 +10,12 @@
  #include "content/public/browser/content_browser_client.h"

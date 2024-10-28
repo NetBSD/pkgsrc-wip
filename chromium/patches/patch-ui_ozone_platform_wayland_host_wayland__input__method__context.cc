@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_input_method_context.cc.orig	2024-09-24 20:49:58.780520700 +0000
+--- ui/ozone/platform/wayland/host/wayland_input_method_context.cc.orig	2024-10-26 07:01:27.352894000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_input_method_context.cc
 @@ -60,7 +60,7 @@ namespace {
  // Only enable the preedit string for sequence mode (i.e. when using dead keys

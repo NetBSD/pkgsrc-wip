@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/BUILD.gn.orig	2024-09-24 20:49:34.305372700 +0000
+--- sandbox/policy/BUILD.gn.orig	2024-10-26 07:00:30.175092500 +0000
 +++ sandbox/policy/BUILD.gn
 @@ -50,7 +50,7 @@ component("policy") {
        "//third_party/jni_zero",
@@ -15,7 +15,7 @@ $NetBSD$
      sources += [
        "linux/bpf_audio_policy_linux.cc",
        "linux/bpf_audio_policy_linux.h",
-@@ -125,6 +125,38 @@ component("policy") {
+@@ -127,6 +127,38 @@ component("policy") {
        "//sandbox/linux:suid_sandbox_client",
      ]
    }

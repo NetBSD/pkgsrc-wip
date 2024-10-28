@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-09-24 20:49:31.816154500 +0000
+--- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-10-26 07:00:21.636702800 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
 @@ -53,7 +53,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \

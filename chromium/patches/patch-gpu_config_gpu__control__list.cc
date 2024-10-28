@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_control_list.cc.orig	2024-09-24 20:49:29.974992800 +0000
+--- gpu/config/gpu_control_list.cc.orig	2024-10-26 07:00:17.914485000 +0000
 +++ gpu/config/gpu_control_list.cc
 @@ -282,7 +282,7 @@ bool GpuControlList::More::GLVersionInfo
  GpuControlList::GLType GpuControlList::More::GetDefaultGLType() {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2024-09-24 20:49:21.070211400 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2024-10-26 07:00:01.420464500 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
 @@ -58,7 +58,7 @@
  #include "ui/base/l10n/l10n_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    // Insert the device signals consent disclosure at the end of browser
    // reporting section.
    auto* user_permission_service = GetUserPermissionService();
-@@ -543,7 +543,7 @@ policy::PolicyService* ManagementUIHandl
+@@ -557,7 +557,7 @@ policy::PolicyService* ManagementUIHandl
        ->policy_service();
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/trace_processor/importers/ftrace/v4l2_tracker.cc.orig	2024-09-24 20:51:14.727186400 +0000
+--- third_party/perfetto/src/trace_processor/importers/ftrace/v4l2_tracker.cc.orig	2024-10-26 07:04:46.935818400 +0000
 +++ third_party/perfetto/src/trace_processor/importers/ftrace/v4l2_tracker.cc
 @@ -62,7 +62,7 @@ void V4l2Tracker::ParseV4l2Event(uint64_
      case FtraceEvent::kV4l2QbufFieldNumber: {

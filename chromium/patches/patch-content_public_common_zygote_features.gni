@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/zygote/features.gni.orig	2024-09-24 20:49:28.524865600 +0000
+--- content/public/common/zygote/features.gni.orig	2024-10-26 07:00:14.104170000 +0000
 +++ content/public/common/zygote/features.gni
 @@ -2,4 +2,4 @@
  # Use of this source code is governed by a BSD-style license that can be

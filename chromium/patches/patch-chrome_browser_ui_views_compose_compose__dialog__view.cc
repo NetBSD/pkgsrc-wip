@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2024-09-24 20:49:20.707179500 +0000
+--- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2024-10-26 07:00:00.796085100 +0000
 +++ chrome/browser/ui/views/compose/compose_dialog_view.cc
 @@ -159,7 +159,7 @@ void ComposeDialogView::OnBeforeBubbleWi
      views::Widget::InitParams* params,

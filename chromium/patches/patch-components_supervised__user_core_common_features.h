@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2024-09-24 20:49:26.779712400 +0000
+--- components/supervised_user/core/common/features.h.orig	2024-10-26 07:00:11.275451700 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(
  // Applies new informative strings during the parental extension approval flow.
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop);
  #endif
  
-@@ -62,11 +62,11 @@ BASE_DECLARE_FEATURE(kCustomWebSignInInt
+@@ -59,11 +59,11 @@ BASE_DECLARE_FEATURE(kSupervisedUserProf
  
  // Displays a Family Link kite badge on the supervised user avatar in various
  // surfaces.
@@ -29,7 +29,7 @@ $NetBSD$
  // This hides the following guest mode entry points for supervised users:
  //
  // * In the Profile menu for supervised profiles
-@@ -78,7 +78,7 @@ BASE_DECLARE_FEATURE(kHideGuestModeForSu
+@@ -75,7 +75,7 @@ BASE_DECLARE_FEATURE(kHideGuestModeForSu
  // unauthenticated (e.g. signed out of the content area) account.
  BASE_DECLARE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers);
  

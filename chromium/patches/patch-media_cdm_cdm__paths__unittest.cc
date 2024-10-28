@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/cdm/cdm_paths_unittest.cc.orig	2024-09-24 20:49:31.744148000 +0000
+--- media/cdm/cdm_paths_unittest.cc.orig	2024-10-26 07:00:21.422580000 +0000
 +++ media/cdm/cdm_paths_unittest.cc
 @@ -27,7 +27,7 @@ const char kComponentPlatform[] =
      "win";

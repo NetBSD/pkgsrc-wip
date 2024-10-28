@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h.orig	2024-09-24 20:51:00.957977800 +0000
+--- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h.orig	2024-10-26 07:02:02.408780300 +0000
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 @@ -22,7 +22,8 @@
  #elif (__cplusplus >= 201103L) && defined(I18N_PHONENUMBERS_USE_STDMUTEX)

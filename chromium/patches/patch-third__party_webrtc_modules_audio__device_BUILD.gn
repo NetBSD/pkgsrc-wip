@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-09-24 20:51:26.443214700 +0000
+--- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-10-26 07:05:46.692261500 +0000
 +++ third_party/webrtc/modules/audio_device/BUILD.gn
-@@ -333,7 +333,7 @@ rtc_library("audio_device_impl") {
+@@ -330,7 +330,7 @@ rtc_library("audio_device_impl") {
      if (rtc_use_dummy_audio_file_devices) {
        defines += [ "WEBRTC_DUMMY_FILE_DEVICES" ]
      } else {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/compiler_specific.h.orig	2024-09-24 20:49:13.706565100 +0000
+--- base/compiler_specific.h.orig	2024-10-26 06:59:45.269652600 +0000
 +++ base/compiler_specific.h
-@@ -326,7 +326,8 @@
+@@ -257,7 +257,8 @@
  //
  // In some cases it's desirable to remove this, e.g. on hot functions, or if
  // we have purposely changed the reference canary.
@@ -16,7 +16,7 @@ $NetBSD$
  #if HAS_ATTRIBUTE(__no_stack_protector__)
  #define NO_STACK_PROTECTOR __attribute__((__no_stack_protector__))
  #else
-@@ -457,7 +458,7 @@ inline constexpr bool AnalyzerAssumeTrue
+@@ -388,7 +389,7 @@ inline constexpr bool AnalyzerAssumeTrue
  // See https://clang.llvm.org/docs/AttributeReference.html#preserve-most for
  // more details.
  #if (defined(ARCH_CPU_ARM64) || defined(ARCH_CPU_X86_64)) && \

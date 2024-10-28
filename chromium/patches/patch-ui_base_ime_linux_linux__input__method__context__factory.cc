@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/linux/linux_input_method_context_factory.cc.orig	2024-09-24 20:49:58.206470500 +0000
+--- ui/base/ime/linux/linux_input_method_context_factory.cc.orig	2024-10-26 07:01:26.663778000 +0000
 +++ ui/base/ime/linux/linux_input_method_context_factory.cc
 @@ -9,7 +9,7 @@
  #include "build/build_config.h"

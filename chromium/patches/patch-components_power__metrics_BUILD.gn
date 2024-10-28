@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/power_metrics/BUILD.gn.orig	2024-09-24 20:49:25.931638000 +0000
+--- components/power_metrics/BUILD.gn.orig	2024-10-26 07:00:09.798554400 +0000
 +++ components/power_metrics/BUILD.gn
 @@ -41,7 +41,7 @@ static_library("power_metrics") {
      ldflags = [ "/DELAYLOAD:setupapi.dll" ]

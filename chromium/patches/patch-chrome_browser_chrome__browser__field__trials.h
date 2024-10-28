@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_field_trials.h.orig	2024-09-24 20:49:17.896932800 +0000
+--- chrome/browser/chrome_browser_field_trials.h.orig	2024-10-26 06:59:55.770031700 +0000
 +++ chrome/browser/chrome_browser_field_trials.h
 @@ -34,7 +34,7 @@ class ChromeBrowserFieldTrials : public 
        const variations::EntropyProviders& entropy_providers,

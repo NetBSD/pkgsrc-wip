@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/public/cpp/utilities.cc.orig	2024-09-24 20:49:34.559395000 +0000
+--- services/screen_ai/public/cpp/utilities.cc.orig	2024-10-26 07:00:30.427208000 +0000
 +++ services/screen_ai/public/cpp/utilities.cc
 @@ -18,7 +18,7 @@ namespace screen_ai {
  

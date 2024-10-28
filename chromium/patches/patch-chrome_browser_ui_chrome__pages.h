@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.h.orig	2024-09-24 20:49:20.511162300 +0000
+--- chrome/browser/ui/chrome_pages.h.orig	2024-10-26 07:00:00.400845000 +0000
 +++ chrome/browser/ui/chrome_pages.h
 @@ -39,7 +39,7 @@ namespace signin {
  enum class ConsentLevel;

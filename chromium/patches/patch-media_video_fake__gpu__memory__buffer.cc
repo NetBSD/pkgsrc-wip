@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/fake_gpu_memory_buffer.cc.orig	2024-09-24 20:49:32.247192100 +0000
+--- media/video/fake_gpu_memory_buffer.cc.orig	2024-10-26 07:00:22.883404500 +0000
 +++ media/video/fake_gpu_memory_buffer.cc
 @@ -14,7 +14,7 @@
  #include "media/base/format_utils.h"

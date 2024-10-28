@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2024-09-24 20:49:26.778712300 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-10-26 07:00:11.275451700 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -66,7 +66,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExten
               "UpdatedSupervisedUserExtensionApprovalStrings",
@@ -24,8 +24,8 @@ $NetBSD$
    bool skipParentApprovalEnabled = base::FeatureList::IsEnabled(
        kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
    bool permissionExtensionsForSupervisedUsersEnabled =
-@@ -106,13 +106,13 @@ BASE_FEATURE(kCustomWebSignInInterceptFo
-              "CustomWebSignInInterceptForSupervisedUsersUi",
+@@ -106,13 +106,13 @@ BASE_FEATURE(kSupervisedUserProfileSigni
+              "SupervisedUserProfileSigninIPH",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.cc.orig	2024-09-24 20:49:20.748183000 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.cc.orig	2024-10-26 07:00:00.939172000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.cc
 @@ -18,7 +18,7 @@ BrowserFrameViewLayoutLinuxNative::~Brow
  

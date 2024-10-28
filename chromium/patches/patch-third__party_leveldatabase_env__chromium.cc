@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/leveldatabase/env_chromium.cc.orig	2024-09-24 20:49:54.376134200 +0000
+--- third_party/leveldatabase/env_chromium.cc.orig	2024-10-26 07:01:16.331911600 +0000
 +++ third_party/leveldatabase/env_chromium.cc
-@@ -326,7 +326,8 @@ ChromiumWritableFile::ChromiumWritableFi
+@@ -329,7 +329,8 @@ ChromiumWritableFile::ChromiumWritableFi
  
  Status ChromiumWritableFile::SyncParent() {
    TRACE_EVENT0("leveldb", "SyncParent");

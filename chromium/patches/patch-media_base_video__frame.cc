@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2024-09-24 20:49:31.691143500 +0000
+--- media/base/video_frame.cc.orig	2024-10-26 07:00:21.331527700 +0000
 +++ media/base/video_frame.cc
 @@ -88,7 +88,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -33,7 +33,7 @@ $NetBSD$
    bool is_native_buffer =
        gpu_memory_buffer
            ? (gpu_memory_buffer->GetType() != gfx::SHARED_MEMORY_BUFFER)
-@@ -822,7 +822,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -782,7 +782,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
@@ -42,8 +42,8 @@ $NetBSD$
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1536,7 +1536,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
-                         : shared_images_[texture_index];
+@@ -1489,7 +1489,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+   return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

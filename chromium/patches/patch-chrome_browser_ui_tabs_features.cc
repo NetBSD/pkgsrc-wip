@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/features.cc.orig	2024-09-24 20:49:20.639173500 +0000
+--- chrome/browser/ui/tabs/features.cc.orig	2024-10-26 07:00:00.648995900 +0000
 +++ chrome/browser/ui/tabs/features.cc
 @@ -48,7 +48,7 @@ BASE_FEATURE(kTabStripCollectionStorage,
  bool CanShowTabSearchPositionSetting() {

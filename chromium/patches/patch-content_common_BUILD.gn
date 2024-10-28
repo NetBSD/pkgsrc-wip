@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/BUILD.gn.orig	2024-09-24 20:49:28.416856000 +0000
+--- content/common/BUILD.gn.orig	2024-10-26 07:00:13.945073400 +0000
 +++ content/common/BUILD.gn
 @@ -386,19 +386,28 @@ source_set("common") {
    }

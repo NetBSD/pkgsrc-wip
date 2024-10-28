@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run.py.orig	2024-09-24 20:52:00.436198500 +0000
+--- v8/tools/run.py.orig	2024-10-26 07:04:13.416204700 +0000
 +++ v8/tools/run.py
-@@ -9,7 +9,7 @@ scripts."""
- import subprocess
- import sys
+@@ -21,7 +21,7 @@ if cmd and cmd[0] == '--redirect-stdout'
+   kwargs = dict(stdout=subprocess.PIPE)
+   cmd = cmd[2:]
  
--result = subprocess.call(sys.argv[1:])
-+sys.exit(subprocess.call(sys.argv[1:], env={"LD_LIBRARY_PATH":"${WRKSRC}/out/Release"}))
- if result != 0:
-   # Windows error codes such as 0xC0000005 and 0xC0000409 are much easier
-   # to recognize and differentiate in hex.
+-process = subprocess.Popen(cmd, **kwargs)
++process = subprocess.Popen(cmd, env={"LD_LIBRARY_PATH":"${WRKSRC}/out/Release"}, **kwargs)
+ stdout, _ = process.communicate()
+ if stdout_file:
+   with stdout_file.open('w') as f:

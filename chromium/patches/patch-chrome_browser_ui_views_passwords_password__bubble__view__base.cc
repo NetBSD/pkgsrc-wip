@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2024-09-24 20:49:20.809188400 +0000
+--- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2024-10-26 07:00:01.015218300 +0000
 +++ chrome/browser/ui/views/passwords/password_bubble_view_base.cc
 @@ -41,7 +41,7 @@
  #include "ui/base/metadata/metadata_impl_macros.h"

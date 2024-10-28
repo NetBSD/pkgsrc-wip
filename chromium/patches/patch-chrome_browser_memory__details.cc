@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/memory_details.cc.orig	2024-09-24 20:49:18.615996000 +0000
+--- chrome/browser/memory_details.cc.orig	2024-10-26 06:59:57.144867000 +0000
 +++ chrome/browser/memory_details.cc
 @@ -38,7 +38,7 @@
  #include "services/resource_coordinator/public/cpp/memory_instrumentation/memory_instrumentation.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/public/browser/zygote_host/zygote_host_linux.h"
  #endif
  
-@@ -334,7 +334,7 @@ void MemoryDetails::CollectChildInfoOnUI
+@@ -335,7 +335,7 @@ void MemoryDetails::CollectChildInfoOnUI
            });
      }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket_unittest.cc.orig	2024-09-24 20:49:13.795573000 +0000
+--- base/posix/unix_domain_socket_unittest.cc.orig	2024-10-26 06:59:45.367712000 +0000
 +++ base/posix/unix_domain_socket_unittest.cc
 @@ -15,6 +15,8 @@
  #include <sys/types.h>

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_connection.cc.orig	2024-09-24 20:49:58.776520500 +0000
+--- ui/ozone/platform/wayland/host/wayland_connection.cc.orig	2024-10-26 07:01:27.348893400 +0000
 +++ ui/ozone/platform/wayland/host/wayland_connection.cc
-@@ -537,7 +537,7 @@ bool WaylandConnection::ShouldUseOverlay
+@@ -541,7 +541,7 @@ bool WaylandConnection::ShouldUseOverlay
    // isn't present on any non-exo Wayland compositors.
    bool should_use_overlay_delegation =
        IsWaylandOverlayDelegationEnabled() && !fractional_scale_manager_v1();

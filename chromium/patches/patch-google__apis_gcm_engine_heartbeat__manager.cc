@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- google_apis/gcm/engine/heartbeat_manager.cc.orig	2024-09-24 20:49:29.843981300 +0000
+--- google_apis/gcm/engine/heartbeat_manager.cc.orig	2024-10-26 07:00:17.726370800 +0000
 +++ google_apis/gcm/engine/heartbeat_manager.cc
 @@ -32,7 +32,7 @@ const int kMinClientHeartbeatIntervalMs 
  // Minimum time spent sleeping before we force a new heartbeat.

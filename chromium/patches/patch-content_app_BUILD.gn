@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/BUILD.gn.orig	2024-09-24 20:49:27.837805300 +0000
+--- content/app/BUILD.gn.orig	2024-10-26 07:00:12.851409000 +0000
 +++ content/app/BUILD.gn
 @@ -96,9 +96,9 @@ source_set("content_main_runner_app") {
        "//chromeos/startup:constants",

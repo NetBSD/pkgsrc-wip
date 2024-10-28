@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2024-09-24 20:49:17.900933300 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2024-10-26 06:59:55.774034300 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
 @@ -25,7 +25,7 @@
  #include "device/bluetooth/dbus/bluez_dbus_thread_manager.h"
@@ -34,7 +34,7 @@ $NetBSD$
  void ChromeBrowserMainPartsLinux::PostMainMessageLoopRun() {
    ChromeBrowserMainPartsPosix::PostMainMessageLoopRun();
    ui::OzonePlatform::GetInstance()->PostMainMessageLoopRun();
-@@ -169,7 +171,7 @@ void ChromeBrowserMainPartsLinux::CheckI
+@@ -170,7 +172,7 @@ void ChromeBrowserMainPartsLinux::CheckI
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
  void ChromeBrowserMainPartsLinux::PostDestroyThreads() {

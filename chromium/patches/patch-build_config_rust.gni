@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2024-09-24 20:49:14.057596000 +0000
+--- build/config/rust.gni.orig	2024-10-26 06:59:45.830993700 +0000
 +++ build/config/rust.gni
-@@ -270,6 +270,10 @@ if (is_linux || is_chromeos) {
+@@ -277,6 +277,10 @@ if (is_linux || is_chromeos) {
    }
  }
  

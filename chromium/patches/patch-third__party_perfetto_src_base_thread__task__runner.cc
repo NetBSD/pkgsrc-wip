@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/thread_task_runner.cc.orig	2024-09-24 20:51:14.657180300 +0000
+--- third_party/perfetto/src/base/thread_task_runner.cc.orig	2024-10-26 07:04:45.870703500 +0000
 +++ third_party/perfetto/src/base/thread_task_runner.cc
 @@ -27,8 +27,9 @@
  #include "perfetto/ext/base/thread_utils.h"

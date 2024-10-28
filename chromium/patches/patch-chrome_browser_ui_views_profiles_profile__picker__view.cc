@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2024-09-24 20:49:20.844191600 +0000
+--- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2024-10-26 07:00:01.104272400 +0000
 +++ chrome/browser/ui/views/profiles/profile_picker_view.cc
-@@ -87,7 +87,7 @@
+@@ -88,7 +88,7 @@
  #include "chrome/browser/ui/views/profiles/first_run_flow_controller_lacros.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/shell_integration_linux.h"
  #endif
  
-@@ -117,7 +117,7 @@ class ProfilePickerWidget : public views
+@@ -118,7 +118,7 @@ class ProfilePickerWidget : public views
      views::Widget::InitParams params(
          views::Widget::InitParams::NATIVE_WIDGET_OWNS_WIDGET);
      params.delegate = profile_picker_view_;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/clang/BUILD.gn.orig	2024-09-24 20:49:14.046595000 +0000
+--- build/config/clang/BUILD.gn.orig	2024-10-26 06:59:45.819986800 +0000
 +++ build/config/clang/BUILD.gn
-@@ -237,7 +237,12 @@ template("clang_lib") {
+@@ -236,7 +236,12 @@ template("clang_lib") {
  
  # Adds a dependency on the Clang runtime library clang_rt.builtins.
  clang_lib("compiler_builtins") {

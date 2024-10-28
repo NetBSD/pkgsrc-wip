@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/corewm/tooltip_aura.cc.orig	2024-09-24 20:49:58.937534600 +0000
+--- ui/views/corewm/tooltip_aura.cc.orig	2024-10-26 07:01:27.798969000 +0000
 +++ ui/views/corewm/tooltip_aura.cc
-@@ -36,7 +36,7 @@ namespace {
+@@ -37,7 +37,7 @@ namespace {
  bool CanUseTranslucentTooltipWidget() {
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

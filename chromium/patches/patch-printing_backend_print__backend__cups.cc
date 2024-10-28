@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/print_backend_cups.cc.orig	2024-09-24 20:49:34.087353700 +0000
+--- printing/backend/print_backend_cups.cc.orig	2024-10-26 07:00:29.677861000 +0000
 +++ printing/backend/print_backend_cups.cc
-@@ -32,7 +32,7 @@
+@@ -33,7 +33,7 @@
  #include "printing/mojom/print.mojom.h"
  #include "url/gurl.h"
  
@@ -15,12 +15,21 @@ $NetBSD$
  #include "base/feature_list.h"
  #include "printing/backend/cups_connection.h"
  #include "printing/backend/print_backend_cups_ipp.h"
-@@ -283,7 +283,7 @@ bool PrintBackendCUPS::IsValidPrinter(co
+@@ -63,7 +63,7 @@ int CaptureCupsDestCallback(void* data, 
+   return 1;  // Keep going.
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ // This may be removed when Amazon Linux 2 reaches EOL (30 Jun 2025).
+ bool AreNewerCupsFunctionsAvailable() {
+   return cupsFindDestDefault && cupsFindDestSupported && ippValidateAttributes;
+@@ -291,7 +291,7 @@ bool PrintBackendCUPS::IsValidPrinter(co
  #if !BUILDFLAG(IS_CHROMEOS)
  scoped_refptr<PrintBackend> PrintBackend::CreateInstanceImpl(
      const std::string& locale) {
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
-   if (base::FeatureList::IsEnabled(features::kCupsIppPrintingBackend)) {
+   if (AreNewerCupsFunctionsAvailable() &&
+       base::FeatureList::IsEnabled(features::kCupsIppPrintingBackend)) {
      return base::MakeRefCounted<PrintBackendCupsIpp>(CupsConnection::Create());
-   }

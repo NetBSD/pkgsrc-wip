@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/tab_strip_prefs.cc.orig	2024-09-24 20:49:20.652174700 +0000
+--- chrome/browser/ui/tabs/tab_strip_prefs.cc.orig	2024-10-26 07:00:00.666006000 +0000
 +++ chrome/browser/ui/tabs/tab_strip_prefs.cc
 @@ -20,7 +20,7 @@ namespace tabs {
  

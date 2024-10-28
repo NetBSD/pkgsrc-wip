@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox_type.cc.orig	2024-09-24 20:49:34.311373200 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2024-10-26 07:00:30.181095100 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -38,7 +38,7 @@ bool IsUnsandboxedSandboxType(Sandbox sa
  #endif
@@ -33,7 +33,7 @@ $NetBSD$
      case Sandbox::kZygoteIntermediateSandbox:
      case Sandbox::kHardwareVideoEncoding:
  #endif
-@@ -130,7 +130,7 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -131,7 +131,7 @@ void SetCommandLineFlagsForSandboxType(b
  #endif
      case Sandbox::kPrintCompositor:
      case Sandbox::kAudio:
@@ -42,7 +42,7 @@ $NetBSD$
      case Sandbox::kVideoCapture:
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -141,10 +141,10 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -142,10 +142,10 @@ void SetCommandLineFlagsForSandboxType(b
      case Sandbox::kMediaFoundationCdm:
      case Sandbox::kWindowsSystemProxyResolver:
  #endif  // BUILDFLAG(IS_WIN)
@@ -55,7 +55,7 @@ $NetBSD$
      case Sandbox::kHardwareVideoEncoding:
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -169,7 +169,7 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -171,7 +171,7 @@ void SetCommandLineFlagsForSandboxType(b
            switches::kServiceSandboxType,
            StringFromUtilitySandboxType(sandbox_type));
        break;
@@ -64,7 +64,7 @@ $NetBSD$
      case Sandbox::kZygoteIntermediateSandbox:
        break;
  #endif
-@@ -209,7 +209,7 @@ sandbox::mojom::Sandbox SandboxTypeFromC
+@@ -211,7 +211,7 @@ sandbox::mojom::Sandbox SandboxTypeFromC
      return Sandbox::kUtility;
    }
  
@@ -73,7 +73,7 @@ $NetBSD$
    // Intermediate process gains a sandbox later.
    if (process_type == switches::kZygoteProcessType)
      return Sandbox::kZygoteIntermediateSandbox;
-@@ -257,7 +257,7 @@ std::string StringFromUtilitySandboxType
+@@ -259,7 +259,7 @@ std::string StringFromUtilitySandboxType
        return switches::kUtilitySandbox;
      case Sandbox::kAudio:
        return switches::kAudioSandbox;
@@ -82,7 +82,7 @@ $NetBSD$
      case Sandbox::kVideoCapture:
        return switches::kVideoCaptureSandbox;
  #endif
-@@ -287,11 +287,11 @@ std::string StringFromUtilitySandboxType
+@@ -291,11 +291,11 @@ std::string StringFromUtilitySandboxType
      case Sandbox::kMirroring:
        return switches::kMirroringSandbox;
  #endif
@@ -96,7 +96,7 @@ $NetBSD$
      case Sandbox::kHardwareVideoEncoding:
        return switches::kHardwareVideoEncodingSandbox;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -310,7 +310,7 @@ std::string StringFromUtilitySandboxType
+@@ -314,7 +314,7 @@ std::string StringFromUtilitySandboxType
        // The following are not utility processes so should not occur.
      case Sandbox::kRenderer:
      case Sandbox::kGpu:
@@ -105,10 +105,10 @@ $NetBSD$
      case Sandbox::kZygoteIntermediateSandbox:
  #endif
        NOTREACHED_IN_MIGRATION();
-@@ -382,15 +382,15 @@ sandbox::mojom::Sandbox UtilitySandboxTy
-   if (sandbox_string == switches::kScreenAISandbox)
-     return Sandbox::kScreenAI;
- #endif
+@@ -389,15 +389,15 @@ sandbox::mojom::Sandbox UtilitySandboxTy
+   if (sandbox_string == switches::kVideoEffectsSandbox) {
+     return Sandbox::kVideoEffects;
+   }
 -#if BUILDFLAG(IS_FUCHSIA)
 +#if BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    if (sandbox_string == switches::kVideoCaptureSandbox)

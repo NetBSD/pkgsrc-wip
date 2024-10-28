@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments_data_manager.cc.orig	2024-09-24 20:49:24.162482700 +0000
+--- components/autofill/core/browser/payments_data_manager.cc.orig	2024-10-26 07:00:06.309434700 +0000
 +++ components/autofill/core/browser/payments_data_manager.cc
-@@ -1057,7 +1057,7 @@ bool PaymentsDataManager::ShouldShowCard
+@@ -1054,7 +1054,7 @@ bool PaymentsDataManager::ShouldShowCard
  // The feature is only for Linux, Windows, Mac, and Fuchsia.
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

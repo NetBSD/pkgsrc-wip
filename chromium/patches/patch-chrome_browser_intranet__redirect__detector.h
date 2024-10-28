@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/intranet_redirect_detector.h.orig	2024-09-24 20:49:18.490985000 +0000
+--- chrome/browser/intranet_redirect_detector.h.orig	2024-10-26 06:59:56.970761300 +0000
 +++ chrome/browser/intranet_redirect_detector.h
 @@ -25,7 +25,7 @@ class SimpleURLLoader;
  class PrefRegistrySimple;

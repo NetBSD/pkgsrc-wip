@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2024-09-24 20:49:26.775712000 +0000
+--- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2024-10-26 07:00:11.271449000 +0000
 +++ components/supervised_user/core/browser/supervised_user_metrics_service.cc
 @@ -47,7 +47,7 @@ SupervisedUserMetricsService::Supervised
        extensions_metrics_delegate_(std::move(extensions_metrics_delegate)) {

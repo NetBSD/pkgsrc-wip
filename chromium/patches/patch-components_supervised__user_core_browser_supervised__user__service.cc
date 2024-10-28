@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_service.cc.orig	2024-09-24 20:49:26.776712200 +0000
+--- components/supervised_user/core/browser/supervised_user_service.cc.orig	2024-10-26 07:00:11.272449700 +0000
 +++ components/supervised_user/core/browser/supervised_user_service.cc
-@@ -173,7 +173,7 @@ FirstTimeInterstitialBannerState Supervi
+@@ -152,7 +152,7 @@ FirstTimeInterstitialBannerState Supervi
      const FirstTimeInterstitialBannerState original_state) {
    FirstTimeInterstitialBannerState target_state = original_state;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

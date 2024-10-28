@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/frame_background.cc.orig	2024-09-24 20:49:58.995539700 +0000
+--- ui/views/window/frame_background.cc.orig	2024-10-26 07:01:27.897985700 +0000
 +++ ui/views/window/frame_background.cc
 @@ -110,7 +110,7 @@ void FrameBackground::PaintMaximized(gfx
                                       int width) const {
