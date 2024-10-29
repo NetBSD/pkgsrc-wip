@@ -1,0 +1,12 @@
+devel/cargo-deb: Add cargo-deb version 2.7.0
+
+cargo-deb is a Cargo helper that automates the creation of Debian
+(.deb) packages from Rust projects, enabling seamless distribution and
+installation on Debian-based Linux distributions like Ubuntu. It
+simplifies the packaging process by leveraging information already
+present in the Cargo.toml file, and allows customization for
+Debian-specific fields such as maintainer, dependencies, license, and
+description to meet distribution standards. This makes it easier to
+share Rust applications with users, who can then install or upgrade
+them with a single .deb file, ensuring better integration with system
+dependencies and package management workflows.
