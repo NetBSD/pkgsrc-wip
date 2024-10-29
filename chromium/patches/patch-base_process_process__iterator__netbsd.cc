@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator_netbsd.cc.orig	2024-10-28 13:44:49.491688371 +0000
+--- base/process/process_iterator_netbsd.cc.orig	2024-10-29 13:58:37.580999417 +0000
 +++ base/process/process_iterator_netbsd.cc
 @@ -0,0 +1,132 @@
 +// Copyright 2013 The Chromium Authors
