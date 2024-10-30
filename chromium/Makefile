@@ -252,7 +252,7 @@ do-configure:
 
 do-build:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} ${TARGET}
+	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out/${BUILDTYPE} ${TARGET}
 
 
 CHROMIUM=		chrome
