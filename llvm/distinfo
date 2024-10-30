@@ -1,14 +1,14 @@
 $NetBSD: distinfo,v 1.41 2023/03/05 17:26:09 he Exp $
 
-BLAKE2s (cmake-19.1.2.src.tar.xz) = dd4e015f4bfcff100a0e93a3004dc46e7558e2e50e355dfc224bc60a0ef06b5d
-SHA512 (cmake-19.1.2.src.tar.xz) = 9d13575a3e55a500dd5370591386a79ccc2164056448571620427f64236bf3fd1369090e3d5bdeef725b181d563462f331ff03c54e0667c01d079cf3af8b0c3f
-Size (cmake-19.1.2.src.tar.xz) = 9296 bytes
-BLAKE2s (llvm-19.1.2.src.tar.xz) = 7373d2394080c6f6f7569972da27e6b2d44fcc07ae5acc8edd7e33bd4e949d69
-SHA512 (llvm-19.1.2.src.tar.xz) = bc95b827126afadb20370c59554d97c559a39611430411f029006e4f749d445a50390922380ddd2c62fdf34709e79b8f3528d6bba916338a15cc8897f35c41ac
-Size (llvm-19.1.2.src.tar.xz) = 67806088 bytes
-BLAKE2s (runtimes-19.1.2.src.tar.xz) = 6d89879feb1806632144f8510cda27aeee59f20ee4c78583d0efea98353fc83d
-SHA512 (runtimes-19.1.2.src.tar.xz) = 32d28a78ff7229453830aa1f344b4ee520959176c81eaf0a8c7e1f65eeaf422ae1616144c379929762f54f24ddeb34df0c8206287d18a9a29bb070f5787c9002
-Size (runtimes-19.1.2.src.tar.xz) = 7220 bytes
+BLAKE2s (cmake-19.1.3.src.tar.xz) = 1a4800dca9b3505ab18d80a89f188819bb9d6e3b25638aa62367624f512e7282
+SHA512 (cmake-19.1.3.src.tar.xz) = ad1d798cd4546691b0ee469015086bb7cf3553e4ca578239d116eaf8620725a6f26ebe18f5b9f7725b5d628898e47bbcc7e3230b6788dbf86ae5acc047eec8d1
+Size (cmake-19.1.3.src.tar.xz) = 9300 bytes
+BLAKE2s (llvm-19.1.3.src.tar.xz) = aed5cbae80fcf336f6f655d6e26021b34be76c3fbdd9c9c192438a3771fb963f
+SHA512 (llvm-19.1.3.src.tar.xz) = 08fae7c520fb1f4791d63d4471f48f88d5646ca51fc9770a9735534fc44e5b6988485bcfcb5a64f766f2f3fbe66a9962f1cfc29e41144f5ae32a76d4c50bdc81
+Size (llvm-19.1.3.src.tar.xz) = 67810976 bytes
+BLAKE2s (runtimes-19.1.3.src.tar.xz) = 7f99741bd6911d8c465aacdf02f50662d5c944a78812e56dc75e483a4e771d53
+SHA512 (runtimes-19.1.3.src.tar.xz) = 53746f5c762eb3886effc4e46138e172a5993ff874afece55767f356e00df5fa252b0fb07592cb2155181b18e7836b9f9d8c380747b9b0a128d22b1ead7d9642
+Size (runtimes-19.1.3.src.tar.xz) = 7228 bytes
 SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
