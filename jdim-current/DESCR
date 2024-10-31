@@ -1,3 +1,4 @@
 JDim is a fork of JD, which is a viewer program for 2ch-like BBS.
 
 Install graphics/webp-pixbuf-loader if you want to render WebP images.
+Also consider installing graphics/libavif for AVIF images.
