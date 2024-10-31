@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/jdim
+share/applications/jdim.desktop
+share/icons/hicolor/48x48/apps/jdim.png
+share/icons/hicolor/scalable/apps/jdim.svg
+share/metainfo/jdim.metainfo.xml

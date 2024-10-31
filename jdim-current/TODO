@@ -1,0 +1,4 @@
+* AVIF support needs a gdk-pixbuf loader module but we don't seem to have
+  packaged it. After doing it we should mention it in DESCR. See
+  https://github.com/JDimproved/JDim/discussions/737 and
+  https://github.com/AOMediaCodec/libavif/pull/182

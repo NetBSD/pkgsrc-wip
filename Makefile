@@ -1789,6 +1789,7 @@ SUBDIR+=	jazz2-resurrection
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jd
+SUBDIR+=	jdim-current
 SUBDIR+=	jedit
 SUBDIR+=	jellyfish
 SUBDIR+=	jellyfish2
