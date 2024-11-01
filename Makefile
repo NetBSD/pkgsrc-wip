@@ -228,7 +228,6 @@ SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
-SUBDIR+=	arti
 SUBDIR+=	arx-libertatis-git
 SUBDIR+=	ascii2binary
 SUBDIR+=	asm-lsp
