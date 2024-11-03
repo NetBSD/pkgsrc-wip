@@ -5830,6 +5830,7 @@ SUBDIR+=	whatscli
 SUBDIR+=	which
 SUBDIR+=	why
 SUBDIR+=	wicd
+SUBDIR+=	wiki-tui
 SUBDIR+=	widelands
 SUBDIR+=	will-it-scale-git
 SUBDIR+=	wine
