@@ -5420,6 +5420,7 @@ SUBDIR+=	sympow
 SUBDIR+=	syn68k
 SUBDIR+=	synce-dynamite
 SUBDIR+=	synce-orange
+SUBDIR+=	syncstorage-rs
 SUBDIR+=	syncthing-discosrv
 SUBDIR+=	syncthing-inotify
 SUBDIR+=	syncthing-relaysrv
