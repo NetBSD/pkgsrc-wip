@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	task-3.37.2
+PKGNAME=	task-3.39.2
 
 DISTNAME=	task-${GITHUB_TAG}
 CATEGORIES=	devel
@@ -17,15 +17,13 @@ EXTRACT_USING=	bsdtar
 
 .include "go-modules.mk"
 
-GO_BUILD_PATTERN=	./cmd/task
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X github.com/go-task/task/v3/internal/version.version=${PKGVERSION_NOREV}'
+GO_BUILD_PATTERN+=	./cmd/task
 
 INSTALLATION_DIRS+=	bin \
 			share/bash-completion/completions \
 			share/zsh/site-functions
-
-do-build:
-	${RUN}${_ULIMIT_CMD} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install \
-		-ldflags '-X github.com/go-task/task/v3/internal/version.version=${PKGVERSION_NOREV}' -v ${GO_BUILD_PATTERN}
 
 do-install:
 	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
