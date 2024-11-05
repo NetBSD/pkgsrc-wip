@@ -39,6 +39,10 @@ DEADPOOL_REV=				deadpool-v0.7.0
 DISTFILES=				${DEFAULT_DISTFILES}
 DISTFILES+=				deadpool-${DEADPOOL_REV}.tar.gz
 SITES.deadpool-${DEADPOOL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=mozilla-services/}deadpool/archive/${DEADPOOL_REV}.tar.gz
+# needs snapshot
+SENTRY_REV=		1b65b5c99af975496880e7325218479e0037d097
+DISTFILES+=		sentry-rust-${SENTRY_REV}.tar.gz
+SITES.sentry-rust-${SENTRY_REV}.tar.gz+=   -${MASTER_SITE_GITHUB:=getsentry/}sentry-rust/archive/${SENTRY_REV}.tar.gz
 
 USE_LANGUAGES=		c c++ # rust, but needs toolchain
 USE_TOOLS+=		pkg-config

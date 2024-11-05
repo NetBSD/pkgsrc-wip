@@ -1,0 +1,12 @@
+===> Building for syncstorage-rs-0.17.13
+error: failed to get `sentry` as a dependency of package `syncserver-common v0.17.13 (/scratch/wip/syncstorage-rs/work/syncstorage-rs-0.17.13/syncserver-common)`
+
+Caused by:
+  failed to load source for dependency `sentry`
+
+Caused by:
+  Unable to update /scratch/wip/syncstorage-rs/work/sentry-rust-1b65b5c99af975496880e7325218479e0037d097
+
+Caused by:
+  found a virtual manifest at `/scratch/wip/syncstorage-rs/work/sentry-rust-1b65b5c99af975496880e7325218479e0037d097/Cargo.toml` instead of a package manifest
+*** Error code 101
