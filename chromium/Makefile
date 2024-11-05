@@ -4,12 +4,16 @@ DISTNAME=			chromium-${VERSION}
 VERSION=			130.0.6723.69
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
-EXTRACT_SUFX=			.tar.xz
+EXTRACT_SUFX_C=			.tar.xz
 
-PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
+PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
 SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
-DISTFILES+=			${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
 DISTFILES+=			${PROFILE_DISTFILE}
+
+# audioio source
+A_VERSION=			130.0
+GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
 
 MAINTAINER=			kikadf.01@gmail.com
 #MAINTAINER=			ryoon@NetBSD.org

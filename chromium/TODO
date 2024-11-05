@@ -1,20 +1,18 @@
 To Do:
 
-1) If pulseaudio not run, chromium can't start it, so no sound:
+0) Build on NetBSD-10 amd64, should work on OpenBSD and FreeBSD
+
+1) Audio backends
+ a) NetBSD uses sunaudio (https://github.com/kikadf/chromium-audioio)
+ b) OpenBSD uses sndio
+ c) FreeBSD uses pulseaudio
+
+If pulseaudio not run, chromium can't start it, so no sound:
 VERBOSE1:pulse_util.cc(261)] Failed to connect to the context. Error: Connection refused
 WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
 
 If pulseaudio already started, chromium can join it, and has sound.
 This is the workaround, see the files/chrome launch wrapper.
-
-NOTE: 
- a) OpenBSD (of course) uses sndio.
- b) FreeBSD uses auto audio backand selector:
-    pulse (if running) -> sndio -> alsa -> fake
-    and use sndio/audio_manager_sndio.cc instead of linux/audio_manager_linux.cc
- c) NetBSD uses pulseaudio backend with sndio/audio_manager_sndio.cc (after 128.*)
-
-TODO: port to audioio
 
 2) HID doesn't work on NetBSD.
 NOTE: For this OpenBSD uses fido and libudev-openbsd, FreeBSD uses devd.

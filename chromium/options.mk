@@ -2,13 +2,20 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
-PKG_OPTIONS_GROUP.audio=	alsa audioio pulseaudio sndio
+PKG_OPTIONS_GROUP.audio=	alsa pulseaudio sndio sunaudio
 PKG_SUPPORTED_OPTIONS+=		debug
-PKG_SUGGESTED_OPTIONS=		pulseaudio
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		sunaudio
+.elif ${OPSYS} == "OpenBSD"
+PKG_SUGGESTED_OPTIONS+=		sndio
+.else
+PKG_SUGGESTED_OPTIONS+=		pulseaudio
+.endif
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Maudioio)
+.if !empty(PKG_OPTIONS:Msunaudio)
 GN_ARGS+=	use_audioio=true
 .else
 GN_ARGS+=	use_audioio=false
@@ -32,7 +39,6 @@ GN_ARGS+=	use_pulseaudio=false
 
 .if !empty(PKG_OPTIONS:Msndio)
 GN_ARGS+=	use_sndio=true
-.include "../../wip/sndio/buildlink3.mk"
 .else
 GN_ARGS+=	use_sndio=false
 .endif
