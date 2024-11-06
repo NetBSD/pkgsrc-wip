@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (brlcad-7.26.0.tar.bz2) = bf391f887463ece786c5e1e4f3382c168bfc99b3
+BLAKE2s (brlcad-7.26.0.tar.bz2) = 31eee6dd2af9aaa69804e0d9b3935d67f36dd334139d9a3227f72ff2f89c5e35
 SHA512 (brlcad-7.26.0.tar.bz2) = e4819da6e94ff7e5f777cb3c59a911f8818a10ddef42f02f3c3b95be9057a7a83427fdbc29bc3f610f16100b65bb14919438598bd5d59af16fcdbe9f6351006a
 Size (brlcad-7.26.0.tar.bz2) = 113073230 bytes
 SHA1 (patch-CMakeLists.txt) = ec1955dc1543fd2b6ba5a56ebf350980ac42f7df
