@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.4 2024/11/01 14:10:47 triaxx Exp $
+
+Add check for sys/midiio.h.
+
+--- configure.orig	2024-01-16 20:55:47.000000000 +0000
++++ configure
+@@ -8207,6 +8207,12 @@ then :
+   printf "%s\n" "#define HAVE_SYS_LINK_H 1" >>confdefs.h
+ 
+ fi
++ac_fn_c_check_header_compile "$LINENO" "sys/midiio.h" "ac_cv_header_sys_midiio_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_midiio_h" = xyes
++then :
++  printf "%s\n" "#define HAVE_SYS_MIDIIO_H 1" >>confdefs.h
++
++fi
+ ac_fn_c_check_header_compile "$LINENO" "sys/modem.h" "ac_cv_header_sys_modem_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_modem_h" = xyes
+ then :
