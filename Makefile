@@ -6043,6 +6043,7 @@ SUBDIR+=	zoneminder
 SUBDIR+=	zoneminder132
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
+SUBDIR+=	zsh-history-substring-search
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
