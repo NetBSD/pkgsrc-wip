@@ -2706,6 +2706,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/ipa-praat.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/ipa-praat.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/ipa.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/ipa.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/iroquoian.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/iroquoian.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/japanese.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/japanese.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/lao.el.gz
