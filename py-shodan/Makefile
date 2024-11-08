@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/achillean/shodan-python
 COMMENT=	Python library and command-line utility for Shodan
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-plugins-[0-9]*:../../devel/py-click-plugins
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
@@ -25,5 +27,5 @@ USE_LANGUAGES=	# none
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/shodan ${DESTDIR}${PREFIX}/bin/shodan${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
