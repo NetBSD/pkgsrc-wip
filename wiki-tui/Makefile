@@ -3,7 +3,7 @@
 DISTNAME=	wiki-tui-0.9.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
-GITHUB_TAG=	2bf6e3ebd780891d2b78761ba7fccbc5578dedbb
+GITHUB_TAG=	6574f7e88bc16c9a7063a6bbc3640737bdc3bb44
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://builditluc.github.io/wiki-tui/
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.76.0
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	share/applications share/icons/hicolor/scalable/apps
