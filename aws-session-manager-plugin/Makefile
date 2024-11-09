@@ -15,10 +15,13 @@ LICENSE=	apache-2.0
 USE_TOOLS+=	gmake
 BUILD_TARGET=	build-host-native-pkgsrc
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pkgsrc_host/* ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pkgsrc_host_plugin/* ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
 
+
+.include "../../lang/go/version.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,4 @@
 @comment $NetBSD$
 bin/session-manager-plugin
 bin/ssmcli
+share/doc/aws-session-manager-plugin/README.md
