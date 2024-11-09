@@ -185,6 +185,9 @@ ${PYSITELIB}/dask/array/tests/test_image.pyo
 ${PYSITELIB}/dask/array/tests/test_linalg.py
 ${PYSITELIB}/dask/array/tests/test_linalg.pyc
 ${PYSITELIB}/dask/array/tests/test_linalg.pyo
+${PYSITELIB}/dask/array/tests/test_map_blocks.py
+${PYSITELIB}/dask/array/tests/test_map_blocks.pyc
+${PYSITELIB}/dask/array/tests/test_map_blocks.pyo
 ${PYSITELIB}/dask/array/tests/test_masked.py
 ${PYSITELIB}/dask/array/tests/test_masked.pyc
 ${PYSITELIB}/dask/array/tests/test_masked.pyo

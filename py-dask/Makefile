@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dask-2024.9.0
+DISTNAME=	dask-2024.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 GITHUB_PROJECT=	dask
@@ -41,7 +41,7 @@ DEPENDS+=	${PYPKGPREFIX}-apache-arrow>=14.0.1:../../wip/py-apache-arrow
 DEPENDS+=	${PYPKGPREFIX}-bokeh>=2.4.2:../../wip/py-bokeh
 DEPENDS+=	${PYPKGPREFIX}-cityhash-[0-9]*:../../wip/py-cityhash
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.5.0:../../converters/py-cloudpickle
-#DEPENDS+=	${PYPKGPREFIX}-dask_expr>=1.1.1:../../wip/py-dask_expr
+DEPENDS+=	${PYPKGPREFIX}-dask_expr>=1.1.17:../../wip/py-dask_expr
 DEPENDS+=	${PYPKGPREFIX}-distributed>=${GITHUB_TAG}:../../wip/py-distributed
 DEPENDS+=	${PYPKGPREFIX}-fastavro>=1.1.0:../../wip/py-fastavro
 DEPENDS+=	${PYPKGPREFIX}-partd>=1.2.0:../../wip/py-partd
