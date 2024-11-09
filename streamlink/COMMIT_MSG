@@ -1,6 +1,55 @@
-multimedia/streamlink: update to streamlink-6.11.0
+multimedia/streamlink: update to streamlink-7.0.0
 
 Changelog:
+
+== streamlink 7.0.0 (2024-11-04)
+
+- BREAKING: dropped support for EOL Python 3.8 (Win 7/8 are now
+            unsupported)
+- BREAKING/CLI: removed deprecated config file and plugin config
+            file paths
+- BREAKING/CLI: removed deprecated plugin sideloading paths
+- BREAKING/CLI: removed deprecated `--force-progress` CLI argument
+- BREAKING/CLI: removed deprecated stream-type related CLI arguments
+  - `--hls-segment-attempts`
+  - `--hls-segment-threads`
+  - `--hls-segment-timeout`
+  - `--hls-timeout`
+  - `--http-stream-timeout`
+- BREAKING/API: removed deprecated stream-type related session options
+  - `hls-segment-attempts`
+  - `hls-segment-threads`
+  - `hls-segment-timeout`
+  - `hls-timeout`
+  - `dash-segment-attempts`
+  - `dash-segment-threads`
+  - `dash-segment-timeout`
+  - `dash-timeout`
+  - `http-stream-timeout`
+- BREAKING/API: removed deprecated import paths for `HTTPSession` and
+                `HTTPAdapter`s
+- BREAKING/API: removed deprecated import paths for `NoPluginError`,
+                `NoStreamsError`, `PluginError` and `Plugin`
+- BREAKING/packaging: dropped "32 bit" Windows x86 and Linux AppImage
+                      i686 builds
+- Removed: flawed implementation of VLC-specific player variables
+- Deprecated: `--verbose-player` CLI argument in favor of
+              `--player-verbose`
+- Deprecated: `--fifo` CLI argument in favor of `--player-fifo`
+- Added: warning messages for deprecated/suppressed plugin arguments
+- Fixed: errors on missing `stdin` file descriptor
+- Fixed: `--interface` not having an effect on custom `HTTPAdapter`s
+- Updated plugins:
+  - afreeca: renamed to soop, overhauled plugin and deprecated old
+             plugin CLI arguments
+  - ruv: rewritten and fixed plugin
+  - tv3cat: updated plugin matchers
+- Docs: updated documentation of various CLI arguments
+- Chore: updated typing annotations (PEP 563, PEP 585, PEP 604,
+         PEP 613)
+- Chore: reformatted the whole code base using ruff
+- Build: bumped `trio` dependency to `>=0.25.0,<1` on Python >= 3.13
+
 
 == streamlink 6.11.0 (2024-10-01)
 

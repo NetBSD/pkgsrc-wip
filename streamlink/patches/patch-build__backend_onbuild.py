@@ -2,24 +2,24 @@ $NetBSD$
 
 Match the call parameters with how it is used by our py-versioningit package.
 
---- build_backend/onbuild.py.orig	2023-12-16 06:18:37.000000000 +0000
+--- build_backend/onbuild.py.orig	2024-11-04 16:33:10.000000000 +0000
 +++ build_backend/onbuild.py
-@@ -18,11 +18,12 @@ except ImportError:  # pragma: no cover
+@@ -22,11 +22,12 @@ except ImportError:  # pragma: no cover
  def onbuild(
      *,
      is_source: bool,
--    template_fields: Dict[str, Any],
--    params: Dict[str, Any],
-+    template_fields: Optional[Dict[str, Any]] = {},
-+    params: Optional[Dict[str, Any]] = {},
+-    template_fields: dict[str, Any],
+-    params: dict[str, Any],
++    template_fields: Optional[dict[str, Any]] = {},
++    params: Optional[dict[str, Any]] = {},
      # backward compatibility for `versioningit <3.0.0`
-     build_dir: Optional[Union[str, Path]] = None,
-     file_provider: Optional[SetuptoolsFileProvider] = None,
+     build_dir: str | Path | None = None,
+     file_provider: SetuptoolsFileProvider | None = None,
 +    version: Optional[str] = None
  ):
      """
      Remove the ``versioningit`` build-requirement from Streamlink's source distribution.
-@@ -45,7 +46,8 @@ def onbuild(
+@@ -49,7 +50,8 @@ def onbuild(
          raise RuntimeError("Missing file_provider or build_dir")
  
      pkg_dir: Path = base_dir / "src" if is_source else base_dir
