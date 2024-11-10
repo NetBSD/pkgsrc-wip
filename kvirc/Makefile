@@ -29,7 +29,7 @@ CMAKE_CONFIGURE_ARGS+=	-DMANDIR=man
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+#.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"

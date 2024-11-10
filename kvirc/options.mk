@@ -1,8 +1,16 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kvirc
-PKG_SUPPORTED_OPTIONS=	inet6 kde python
-PKG_SUGGESTED_OPTIONS=	inet6 kde
+PKG_SUPPORTED_OPTIONS=	inet6 kde qtwebengine python
+PKG_SUGGESTED_OPTIONS=	inet6 kde qtwebengine
+
+.include "../../mk/bsd.prefs.mk"
+
+# x11/qt5-qtwebengine-5.15 (pkgsrc-2024Q3)
+# does not build on NetBSD/i386 and sometimes on Linux
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
+PKG_SUGGESTED_OPTIONS+=	-qtwebengine
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,9 +19,6 @@ PKG_SUGGESTED_OPTIONS=	inet6 kde
 CMAKE_CONFIGURE_ARGS+=	-DWANT_IPV6=ON
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWANT_IPV6=OFF
-# Required by x11/qt5-webengine?
-.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-.include "../../x11/qt5-qtlocation/buildlink3.mk"
 .endif
 
 
@@ -30,6 +35,17 @@ TOOL_DEPENDS+=	extra-cmake-modules>=0:../../devel/extra-cmake-modules
 .include "../../devel/kparts/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWANT_KDE=OFF
+.endif
+
+
+.if !empty(PKG_OPTIONS:Mqtwebengine)
+CMAKE_CONFIGURE_ARGS+=	-DWANT_QTWEBENGINE=ON
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+# exposed with -DWANT_IPV6=OFF
+.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
+.include "../../x11/qt5-qtlocation/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DWANT_QTWEBENGINE=OFF
 .endif
 
 
