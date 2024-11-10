@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kvirc
 PKG_SUPPORTED_OPTIONS=	inet6 kde python
-PKG_DEFAULT_OPTIONS=	inet6 kde
+PKG_SUGGESTED_OPTIONS=	inet6 kde
 
 .include "../../mk/bsd.options.mk"
 
