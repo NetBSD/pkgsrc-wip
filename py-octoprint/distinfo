@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/12/07 10:51:22 khorben Exp $
-
-BLAKE2s (OctoPrint-1.9.2.tar.gz) = f36bbe2d042edc2f4b5e1e4a03fbbb63000e104cf3411e53fe08588283edb8fd
-SHA512 (OctoPrint-1.9.2.tar.gz) = ea8ae6d5c2b312940288df662c5ccb6d2f9f8edf779cd0115b587bc0f67507d91d3311a3d7018dd64d880be922daa6dd09474c6be165d4c04bca48aafc2a4edc
-Size (OctoPrint-1.9.2.tar.gz) = 5903637 bytes
