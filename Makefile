@@ -5445,7 +5445,6 @@ SUBDIR+=	tagtool
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
-SUBDIR+=	task
 SUBDIR+=	tasks
 SUBDIR+=	tavrasm
 SUBDIR+=	tc
