@@ -10,13 +10,14 @@ MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/escherba/cityhash
 COMMENT=	Python wrapper for FarmHash and CityHash
 LICENSE=	modified-bsd
-PKGREVISION=	1
+PKGREVISION=	2
 
 WRKSRC=	${WRKDIR}/python-${DISTNAME}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.41:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cpuinfo>=9.0.0:../../sysutils/py-cpuinfo
 DEPENDS+=	cityhash-[0-9]*:../../textproc/cityhash
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
