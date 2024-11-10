@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mergiraf-0.2.0.tar.gz) = 4e3bc03090ba6ba17fe6be026cd765b64bdc89debfec8f2915a936edb45c2b1a
+SHA512 (mergiraf-0.2.0.tar.gz) = 88ff389b4441986430cbf4c8ee32d4cf51f7339864a323532870ef836c9f5ff51f35d8b0ecc02b20647003277e398227500b301ff589d5416821e8d6a9e10bbf
+Size (mergiraf-0.2.0.tar.gz) = 1117688 bytes
