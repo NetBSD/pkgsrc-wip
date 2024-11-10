@@ -8,8 +8,8 @@ $NetBSD$
  sha2.workspace = true
 -sentry.workspace = true
 -sentry-backtrace.workspace = true
-+sentry = { path = "../../sentry-rust-1b65b5c99af975496880e7325218479e0037d097" }
-+sentry-backtrace = { path = "../../sentry-rust-1b65b5c99af975496880e7325218479e0037d097" }
++sentry = { path = "../../sentry-rust-1b65b5c99af975496880e7325218479e0037d097/sentry" }
++sentry-backtrace = { path = "../../sentry-rust-1b65b5c99af975496880e7325218479e0037d097/sentry-backtrace" }
  serde.workspace = true
  serde_json.workspace = true
  slog.workspace = true
