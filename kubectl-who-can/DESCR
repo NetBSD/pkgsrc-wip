@@ -1,0 +1,2 @@
+kubectl plugin to show which subjects have RBAC permissions to
+VERB [TYPE | TYPE/NAME | NONRESOURCEURL] in Kubernetes.
