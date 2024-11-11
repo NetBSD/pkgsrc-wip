@@ -1880,6 +1880,7 @@ SUBDIR+=	ktjet
 SUBDIR+=	kubeconform
 SUBDIR+=	kubectl
 SUBDIR+=	kubectl-ingress-nginx
+SUBDIR+=	kubectl-who-can
 SUBDIR+=	kubectx
 SUBDIR+=	kubepug
 SUBDIR+=	kubeval
