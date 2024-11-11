@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dask_expr-1.1.7
+DISTNAME=	dask_expr-1.1.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dask_expr/}
