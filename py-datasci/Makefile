@@ -8,7 +8,7 @@ META_PACKAGE=	yes
 
 MAINTAINER=	matthewd@fastmail.us
 
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 .include "../../lang/python/pyversion.mk"
 
