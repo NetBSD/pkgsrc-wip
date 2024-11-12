@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lima-0.19.1
+DISTNAME=	lima-1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lima-vm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,7 +31,7 @@ MAKE_FLAGS+=	VERSION=${GITHUB_TAG}
 SUBST_CLASSES+=			legacy-bios
 SUBST_STAGE.legacy-bios=	pre-configure
 SUBST_MESSAGE.legacy-bios=	Force to use legacy BIOS on NetBSD
-SUBST_FILES.legacy-bios+=	examples/default.yaml
+SUBST_FILES.legacy-bios+=	templates/default.yaml
 SUBST_SED.legacy-bios+=		-e 's/legacyBIOS: null/legacyBIOS: true/'
 .endif
 

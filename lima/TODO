@@ -1,0 +1,24 @@
+Mostly importable, some bits to investigate documented here in order that it
+works out of the box in NetBSD.
+
+The following networks is probably needed and/or we should figure out how to
+just default to that in NetBSD, copypasting `~/.lima/_config/networks.yaml`
+(not super-sure if that's really needed or "shared" will be picked up
+automatically, double-check!):
+
+```yaml
+networks:
+  shared:
+    mode: shared
+    gateway: 192.168.105.1
+    dhcpEnd: 192.168.105.254
+    netmask: 255.255.255.0
+```
+
+NetBSD only supports `reverse-sshfs`, the following is needed in
+`~/.lima/_config/default.yaml` (for that maybe we can use similar SUBST
+logic that we already have):
+
+```
+mountType: reverse-sshfs
+```
