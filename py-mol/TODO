@@ -18,3 +18,7 @@ AttributeError: 'NoneType' object has no attribute 'pack'
 *** Error code 1
 
 Convert to py-qt* instead of py-Pmw.
+
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2024-50636
