@@ -1,0 +1,8 @@
+x11/liblxqt: update to 2.1.0
+
+liblxqt-2.1.0 / 2024-11-05
+===========================
+ * Replaced `QLatin1String` with `QLatin1StringView`.
+ * Enable custom screenlockers on X11 and wayland.
+ * Fixed setting of item geometries in grid layout.
+ * Support reversing the order of items in LXQt's grid layout.
