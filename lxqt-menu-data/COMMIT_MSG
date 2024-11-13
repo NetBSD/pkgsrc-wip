@@ -1,0 +1,6 @@
+sysutils/lxqt-menu-data: update to 2.1.0
+
+lxqt-menu-data-2.1.0 / 2024-11-05
+=================================
+ * Removed simple menu.
+ * Updated Readme.

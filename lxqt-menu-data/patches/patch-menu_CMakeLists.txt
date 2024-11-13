@@ -1,0 +1,14 @@
+$NetBSD$
+
+Install config files to pkgsrc standard location.
+
+--- menu/CMakeLists.txt.orig	2024-11-13 12:21:53.263755453 +0000
++++ menu/CMakeLists.txt
+@@ -20,6 +20,6 @@ install(FILES
+     lxqt-applications-compact.menu
+     lxqt-applications-fm.menu
+     lxqt-config.menu
+-    DESTINATION "${LXQT_ETC_XDG_DIR}/menus"
++    DESTINATION "share/examples/menus"
+     COMPONENT Runtime
+ )
