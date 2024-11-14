@@ -2995,6 +2995,7 @@ SUBDIR+=	payara41
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbzx
 SUBDIR+=	pcem
+SUBDIR+=	pcmanfm-qt
 SUBDIR+=	pcp
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdcurses
