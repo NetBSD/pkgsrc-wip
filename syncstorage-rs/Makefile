@@ -34,6 +34,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 .include "cargo-depends.mk"
 
+SITES.curl-sys-0.4.78+curl-8.11.0.crate= https://static.crates.io/crates/curl-sys/
+
 # Depends on an mozilla-modified version of crate
 DEADPOOL_REV=				deadpool-v0.7.0
 DISTFILES=				${DEFAULT_DISTFILES}
