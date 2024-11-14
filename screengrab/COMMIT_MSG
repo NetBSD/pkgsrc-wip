@@ -1,0 +1,6 @@
+graphics/screengrab: update to 2.9.0
+
+2.9.0 / 2024-11-05
+==================
+ * Properly initialized and destroyed shortcuts settings.
+ * Fixed a memory leak in a pointer `QList`.
