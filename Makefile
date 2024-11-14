@@ -1962,6 +1962,7 @@ SUBDIR+=	libcxx
 SUBDIR+=	libcxxabi
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
+SUBDIR+=	libdbusmenu-lxqt
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
