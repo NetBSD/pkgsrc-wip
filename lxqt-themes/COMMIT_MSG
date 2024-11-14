@@ -1,0 +1,10 @@
+graphics/lxqt-themes: update to 2.1.0
+
+lxqt-themes-2.1.0 / 2024-11-05
+===============================
+ * Delete invalid empty folder.
+ * Style tooltips also in configuration center based on palette or theme.
+ * Fixed wordclock texts.
+ * Added tooltip styling.
+ * Added palettes for all themes.
+ * Fixed styling of ColorPicker, Backlight, StatusNotifier in various themes.
