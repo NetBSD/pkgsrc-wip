@@ -1,0 +1,10 @@
+x11/lxqt-notificationd: update to 2.1.0
+
+lxqt-notificationd-2.1.0 / 2024-11-05
+======================================
+ * Corrected a mistake in processing `image-path`.
+ * Fixed multi-screen setups with Wayland.
+ * Standardized the desktop file.
+ * Added "Do Not Disturb" to tray menu.
+ * Fixed regressions.
+ * Workaround for translucency artifacts with Qt 6.8.0 on Wayland.
