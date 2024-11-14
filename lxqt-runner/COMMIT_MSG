@@ -1,0 +1,8 @@
+x11/lxqt-runner: update to 2.1.0
+
+lxqt-runner-2.1.0 / 2024-11-05
+===============================
+ * Updated `README.md`.
+ * Added layershell runtime dependency.
+ * Fixed multi-screen setups with Wayland.
+ * Set the layer shell scope to "launcher".
