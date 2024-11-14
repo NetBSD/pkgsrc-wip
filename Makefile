@@ -2225,6 +2225,7 @@ SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-admin
 SUBDIR+=	lxqt-build-tools
+SUBDIR+=	lxqt-globalkeys
 SUBDIR+=	lxqt-menu-data
 SUBDIR+=	lxqt-openssh-askpass
 SUBDIR+=	lxqt-policykit

@@ -1,0 +1,9 @@
+x11/lxqt-globalkeys: update to 2.1.0
+
+lxqt-globalkeys-2.1.0 / 2024-11-05
+===================================
+ * Show "unsupported" message under wayland.
+ * Added "X-LXQt-X11-Only=true" to the desktop file.
+ * Added "X11" to the Comment of the desktop file.
+ * Added icons to dialog buttons.
+
