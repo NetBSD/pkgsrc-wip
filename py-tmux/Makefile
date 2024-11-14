@@ -13,7 +13,7 @@ COMMENT=	Simple wrapper for tmux
 LICENSE=	apache-2.0
 
 # \todo CSE by putting this in wheel.mk.
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.1:../../devel/py-docopt
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=1.1.0:../../textproc/py-jsonschema
