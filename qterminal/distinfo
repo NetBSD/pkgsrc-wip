@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.12 2024/08/02 17:52:55 pin Exp $
+
+BLAKE2s (qterminal-2.1.0.tar.xz) = 58bfda7219d0161ac6ad96aea6f0106f7b13608cd3d2d1a1c12724d82e8a8035
+SHA512 (qterminal-2.1.0.tar.xz) = 3787bb8269a4b06c8c42d0c1c5e900a85e868e36e415f4ae05bbcb1fde3cbdf88a2ada7a86dd39a4a07305586fcb19e2ab04182bdd9f7f10dbf6cd4fd1194f22
+Size (qterminal-2.1.0.tar.xz) = 231468 bytes
