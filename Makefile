@@ -2221,6 +2221,7 @@ SUBDIR+=	lwtools
 SUBDIR+=	lxdm
 SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
+SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-menu-data
 SUBDIR+=	lxqt-themes
