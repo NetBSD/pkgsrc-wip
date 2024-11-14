@@ -2227,6 +2227,7 @@ SUBDIR+=	lxqt-admin
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-menu-data
 SUBDIR+=	lxqt-policykit
+SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
