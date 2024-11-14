@@ -2224,6 +2224,7 @@ SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-menu-data
+SUBDIR+=	lxqt-policykit
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
