@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qmediamanager-0.1.1.6-abeeab1f82583e4fa4a176ec4795155a1e039a2b.tar.gz) = 5cbff0802c4bf129836b5a92ba481f8fbe2267d84e49f647f63af56bca4522d7
-SHA512 (qmediamanager-0.1.1.6-abeeab1f82583e4fa4a176ec4795155a1e039a2b.tar.gz) = d98005d02b2de941a0297662c095a5ff3eafb61a849e3d1aaebb4b89036c00cb829dfee4adb30e6ab2644d8cfbbde88d177c249af27e55d122bb9e0e9c7ee6d1
-Size (qmediamanager-0.1.1.6-abeeab1f82583e4fa4a176ec4795155a1e039a2b.tar.gz) = 1069684 bytes
+BLAKE2s (qmediamanager-0.1.2.tar.gz) = ba3afde3f40b1d05f75271bba8fea4955da43e6fad060d2add2326f15e70e7db
+SHA512 (qmediamanager-0.1.2.tar.gz) = f71b331a29a77a02241beecca66be00e1250ca28c06fe8f5cbeb0be4a7d9d065f31f49ea96775404fd64a998989f1bb169865f4641bd4d3965ba75d4607b9d84
+Size (qmediamanager-0.1.2.tar.gz) = 1069653 bytes

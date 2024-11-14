@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	qmediamanager-0.1.1.6
+DISTNAME=	qmediamanager-0.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	abeeab1f82583e4fa4a176ec4795155a1e039a2b
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/qmediamanager
