@@ -1,7 +1,0 @@
-graphics/lximage-qt: update to 2.1.0
-
-lximage-qt-2.1.0 / 2024-11-05
-==============================
- * Corrected a misspelled mimetype in the desktop entry.
- * Small fix to selecting the screenshot area.
- * Cleaned up licenses.

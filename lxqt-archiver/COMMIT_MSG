@@ -1,7 +1,0 @@
-archivers/lxqt-archiver: update to 1.1.0
-
-lxqt-archiver-1.1.0 / 2024-11-05
-===================================
- * Added `application/vnd.rar` to the supported mime types.
- * Add clear button to filter bar.
- * Silenced a compilation warning about `GList`.

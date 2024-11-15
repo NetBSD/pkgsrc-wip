@@ -1,5 +1,0 @@
-security/lxqt-policykit: update to 2.1.0
-
-lxqt-policykit-2.1.0 / 2024-11-05
-==================================
- * Always localize the string "Password".

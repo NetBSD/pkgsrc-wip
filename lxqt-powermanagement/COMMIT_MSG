@@ -1,6 +1,0 @@
-sysutils/lxqt-powermanagement: update to 2.1.0
-
-lxqt-powermanagement-2.1.0 / 2024-11-05
-========================================
- * Fixed memory leak.
- * Inform users of XF86 keys under Wayland.

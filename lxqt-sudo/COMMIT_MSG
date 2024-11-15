@@ -1,5 +1,0 @@
-security/lxqt-sudo: update to 2.1.0
-
-lxqt-sudo-2.1.0 / 2024-11-05
-=============================
- * Add new env vars for `sudo`.

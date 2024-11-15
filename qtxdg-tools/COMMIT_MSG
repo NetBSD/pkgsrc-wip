@@ -1,5 +1,0 @@
-x11/qtxdg-tools: update to 4.1.0
-
-qtxdg-tools-4.1.0 / 2024-11-05
-===============================
- * Do not include `file://` when opening local files.

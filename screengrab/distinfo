@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.11 2024/08/02 17:57:00 pin Exp $
-
-BLAKE2s (screengrab-2.9.0.tar.xz) = b685ce0e7a1cb36a43d744436cfdcac5efe33dd0ce037e7820f604ade3579100
-SHA512 (screengrab-2.9.0.tar.xz) = cd9bc9546363a497ecef1110fc40635d5339e2e14b009e0fa3482fb31981d4dd818c5c66eb031c29c9668348607fe9bce4c2f1b42ad44ac760de8f0a40c90221
-Size (screengrab-2.9.0.tar.xz) = 348316 bytes

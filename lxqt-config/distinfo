@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2024/08/02 17:29:20 pin Exp $
-
-BLAKE2s (lxqt-config-2.1.0.tar.xz) = 31199659b38ba13c94e2debcf05ad3adbdc5aabce05ded100211dfb7f78e4e50
-SHA512 (lxqt-config-2.1.0.tar.xz) = 4bbfbb4aa668c8c72cffc5df52299a91eb2ea791bd6f4d3e5a52bf3937658dfad84183c167ddc5f8c1db9daedc1b00e3033d8b7a246cbda8d54af61ca51ff536
-Size (lxqt-config-2.1.0.tar.xz) = 391732 bytes
-SHA1 (patch-lxqt-config-input_keyboardlayoutconfig.h) = ba7ce5b75579f4478fe14a96dd852027f3570a79
