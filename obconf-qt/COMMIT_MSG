@@ -1,0 +1,6 @@
+wm/obconf-qt: update to 0.16.5
+
+obconf-qt-0.16.5 / 2024-11-01
+=============================
+ * Ported to Qt6 and updated translations.
+

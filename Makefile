@@ -2613,6 +2613,7 @@ SUBDIR+=	nyan
 SUBDIR+=	nyh-hoc
 SUBDIR+=	nyxt
 SUBDIR+=	nzbget
+SUBDIR+=	obconf-qt
 SUBDIR+=	obfuscate
 SUBDIR+=	objfw-fossil
 SUBDIR+=	obmenu
