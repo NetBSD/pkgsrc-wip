@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.12 2024/08/02 17:02:55 pin Exp $
+
+BLAKE2s (pavucontrol-qt-2.1.0.tar.xz) = 84b11c8e2da09aebbfa6cc0aee54619fb33b5066c1fe8d275a2be7553ac639e3
+SHA512 (pavucontrol-qt-2.1.0.tar.xz) = a5aff774ddad06b8af2a4424836e7cb48a47efcca882225ba06474292b7845575d220eda34353d408e54e6466dd4738a0160925a251fbe8a332b88c8f2c8c534
+Size (pavucontrol-qt-2.1.0.tar.xz) = 115596 bytes
