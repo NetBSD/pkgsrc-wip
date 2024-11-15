@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2023/05/26 20:00:17 adam Exp $
+
+BLAKE2s (c7n-0.9.42.0.tar.gz) = beda6512ef360f8d8663629389429b3d715f0e43c6ba60b52fe0f2d334795033
+SHA512 (c7n-0.9.42.0.tar.gz) = 47163196e421330b11a3dcfa4ead2c201b1a6f8c1716ab5de31518803c212c7c7ae7e7b89b6b4e0d57c1c1f07e444448eb7e179fff89be06cbcaa1f4bc1702b9
+Size (c7n-0.9.42.0.tar.gz) = 18602784 bytes
+SHA1 (patch-pyproject.toml) = 4f7107b77e4e7c83aa37acb52acfee776fc583f6

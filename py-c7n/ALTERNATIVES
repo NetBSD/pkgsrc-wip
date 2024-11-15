@@ -1,0 +1,1 @@
+bin/custodian @PREFIX@/bin/custodian@PYVERSSUFFIX@
