@@ -5650,6 +5650,7 @@ SUBDIR+=	tsh
 SUBDIR+=	tslib
 SUBDIR+=	ttf-indic-fonts
 SUBDIR+=	ttr
+SUBDIR+=	ttyd
 SUBDIR+=	ttyload
 SUBDIR+=	ttysnoop
 SUBDIR+=	ttytter
