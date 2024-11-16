@@ -1,0 +1,2 @@
+bin/c7n-kates @PREFIX@/bin/c7n-kates@PYVERSSUFFIX@
+bin/c7n-kube @PREFIX@/bin/c7n-kube@PYVERSSUFFIX@
