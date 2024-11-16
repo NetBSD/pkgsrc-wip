@@ -3421,6 +3421,7 @@ SUBDIR+=	py-bw2parameters
 SUBDIR+=	py-bxa
 SUBDIR+=	py-c-lasso
 SUBDIR+=	py-c7n
+SUBDIR+=	py-c7n-kube
 SUBDIR+=	py-cPyparsing
 SUBDIR+=	py-calphad
 SUBDIR+=	py-calverter
