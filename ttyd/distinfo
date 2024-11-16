@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (ttyd-1.7.7.tar.gz) = 5d1add29755af2ae8271df717eeeabdac399bcf367abd46b8e3202655e2eaa28
+SHA512 (ttyd-1.7.7.tar.gz) = 0cc643223c603dfbd32bc8233e6d2b8d59efd0b1208ef684277ff690fd92ca9ce242b8ea229a5621c43301ce99f95ee56fbe1f3b8df47329be89c3d0658d7663
+Size (ttyd-1.7.7.tar.gz) = 621347 bytes
+SHA1 (patch-src_pty.c) = 1d1f6edf6342e4dff690798bf4c30a04f7493240

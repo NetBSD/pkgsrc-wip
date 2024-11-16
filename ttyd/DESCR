@@ -1,0 +1,12 @@
+ttyd is a simple command-line tool for sharing terminal over the web.
+
+Features
+
+- Built on top of libuv and WebGL2 for speed
+- Fully-featured terminal with CJK and IME support
+- ZMODEM (lrzsz) / trzsz file transfer support
+- Sixel image output support (img2sixel / lsix)
+- SSL support based on OpenSSL / Mbed TLS
+- Run any custom command with options
+- Basic authentication support and many other custom options
+- Cross platform: macOS, Linux, FreeBSD/OpenBSD, OpenWrt, Windows
