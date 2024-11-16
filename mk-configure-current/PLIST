@@ -185,6 +185,11 @@ share/examples/mk-configure/efun/Makefile
 share/examples/mk-configure/efun/expect.out
 share/examples/mk-configure/efun/prog.c
 share/examples/mk-configure/efun/test.mk
+share/examples/mk-configure/efun2/Makefile
+share/examples/mk-configure/efun2/cprog.c
+share/examples/mk-configure/efun2/cxxprog.cc
+share/examples/mk-configure/efun2/expect.out
+share/examples/mk-configure/efun2/test.mk
 share/examples/mk-configure/errc/Makefile
 share/examples/mk-configure/errc/expect.out
 share/examples/mk-configure/errc/prog.c
