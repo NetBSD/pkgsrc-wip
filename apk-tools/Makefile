@@ -3,7 +3,7 @@
 DISTNAME=	apk-tools-v3.0.0_pre0nb2
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	misc
-MASTER_SITES=	https://nishi.e3t.cc/
+MASTER_SITES=	https://nishi.boats/
 
 MAINTAINER=	nishi@nishi.boats
 HOMEPAGE=	https://git.alpinelinux.org/apk-tools/
