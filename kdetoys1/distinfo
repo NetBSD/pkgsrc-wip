@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kdetoys-1.1.2.tar.gz) = 1bcac01a7afe46453af9ed3f7b1d504a7aaf6cd9b35199db7a5ee94be964b940
+SHA512 (kdetoys-1.1.2.tar.gz) = 409d012f04b0efc3559f896731cb69046ac0a404054db31456276a8fecf0c0a7e57a1cf49a654e7bbf4906988678f77af15cc3a3a4eafd453c9713d69b1b42a2
+Size (kdetoys-1.1.2.tar.gz) = 174673 bytes

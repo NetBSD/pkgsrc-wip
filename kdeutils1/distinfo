@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kdeutils-1.1.2.tar.gz) = 5db4b63b5b593d208e529be9743cdddc0a9c0c106553f73b429df5fa77f8edd4
+SHA512 (kdeutils-1.1.2.tar.gz) = 8a4446077f7dae7443963138450dcf0b3bf5e64b3b605fec0f4f3f6b64ac05467bd2b9fb5fd7166f8cec5765813623691976f1e03b89c1b9bae777c8973f7bf6
+Size (kdeutils-1.1.2.tar.gz) = 1500698 bytes

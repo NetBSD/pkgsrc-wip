@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kdenetwork-1.1.2.tar.gz) = 868a47d18d1e62b3f2cf676698ffbdada20cb70dd5ed35afe54dfc0cae74fbf5
+SHA512 (kdenetwork-1.1.2.tar.gz) = 60854c8d3558dfb46c2f743008e61d83b74598ce854b1ec63d35b149a0166401b66c72932abfe13e5c83e3f3a4673a80c53cfea3384a57daa97e0b864a67d4c1
+Size (kdenetwork-1.1.2.tar.gz) = 3026805 bytes
