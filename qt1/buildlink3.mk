@@ -1,0 +1,16 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	qt1
+
+.if !defined(QT1_BUILDLINK3_MK)
+QT1_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.qt1+=        qt1>=0
+BUILDLINK_ABI_DEPENDS.qt1+=        qt1>=0
+BUILDLINK_PKGSRCDIR.qt1?=          ../../wip/qt1
+
+BUILDLINK_INCDIRS.qt1+=    include
+BUILDLINK_LIBDIRS.qt1+=    lib
+.endif
+
+BUILDLINK_TREE+=	-qt1
