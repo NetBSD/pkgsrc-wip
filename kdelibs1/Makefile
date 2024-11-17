@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	kdelibs-1.1.2
+PKGNAME=	${DISTNAME:S/-1/1-1/}
 CATEGORIES=	x11
 MASTER_SITES=	http://nishi.boats/
 
