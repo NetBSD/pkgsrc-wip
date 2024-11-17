@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kdebase-1.1.2.tar.gz) = b625d716c82ad17aaf329e8b16867a85fe9f3046715b1a8a36b31538240208b5
+SHA512 (kdebase-1.1.2.tar.gz) = 7311089a8e4a8ab1e971299465a9269d3edb11b908cca226f7f5a5a63b1e9327fcc0d5af55d608ecc944ee3ad537ee7fe8785314f776b1f813b190ac645a10fc
+Size (kdebase-1.1.2.tar.gz) = 8939558 bytes
