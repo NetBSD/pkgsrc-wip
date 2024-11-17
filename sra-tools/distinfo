@@ -1,13 +1,12 @@
 $NetBSD$
 
-BLAKE2s (ncbi-ncbi-vdb-ff143ec1.tar.gz) = 66163ec0c658d03ed085425448ebbfebe23a67d28776d928384cdeb39d1bb4d1
-SHA512 (ncbi-ncbi-vdb-ff143ec1.tar.gz) = bf35ad78623f90fd8f9ddf30f33c8b8febb44a40fee1abad215fd8f1a986725593a2c94c7da82b5b8362fe9308cbf3ee026d14eb9921dac2e090a7710b93d202
-Size (ncbi-ncbi-vdb-ff143ec1.tar.gz) = 19057498 bytes
-BLAKE2s (sra-tools-3.0.10.133-2a26be56758d6d6be3362f8c229f09ced4530873.tar.gz) = 5a0f368e997114b00fd38c9bd05bc1d01565bb14e46a85e007f1535b0501b799
-SHA512 (sra-tools-3.0.10.133-2a26be56758d6d6be3362f8c229f09ced4530873.tar.gz) = f39bdd5036de1a1afec8c36badd5193ce4ce106202638f8e16e05518394c19241935aa6d8537d6554637663828ca44caaffd93f4ecbe0b731af67de7e868edce
-Size (sra-tools-3.0.10.133-2a26be56758d6d6be3362f8c229f09ced4530873.tar.gz) = 45451112 bytes
+BLAKE2s (ncbi-ncbi-vdb-3.1.1.tar.gz) = 60e10ac43b3bfbeac580fa1680ba86291b7f2656c950e6f13d0f2021a6894029
+SHA512 (ncbi-ncbi-vdb-3.1.1.tar.gz) = ccfeb38abf8eb80d54394b4a32d851e78408d9019d1ca4b53c71681e2e9ffec904d222b2d0d32fc98fe527f66c84764ae73a8d63dada7f3b5a33c51dc3f84462
+Size (ncbi-ncbi-vdb-3.1.1.tar.gz) = 19055901 bytes
+BLAKE2s (sra-tools-3.1.1.tar.gz) = de0665b9ec114fad64b052eda29e521612ea6dddaf5555a6ed32078222834553
+SHA512 (sra-tools-3.1.1.tar.gz) = df8ae5fca3761712306db6a98074d1b1e1a02a78c09c861852a16a9bc576fc39dd6e5afe0f1572e4901786fd3a757675fe0af7e79bb85d9eac021e69e88c48f1
+Size (sra-tools-3.1.1.tar.gz) = 45754110 bytes
 SHA1 (patch-build_env.cmake) = 14add56e66e5578fd0d51ce55329285e0981ac4e
-SHA1 (patch-ncbi-vdb_libs_kdbtext_path.hpp) = 78ec06ed7aa60fd2bded6129ddf25172c104ad77
 SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = f49eb28f8bfeb528c1d7c2e9d184502b9eba273c
 SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
 SHA1 (patch-tools_external_driver-tool_sratools.cpp) = c490d83f03471e6e8e34b8e88534469ed45b2886

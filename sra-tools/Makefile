@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=		sra-tools-3.0.10.133
+DISTNAME=		sra-tools-3.1.1
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
-GITHUB_TAG=		2a26be56758d6d6be3362f8c229f09ced4530873
-GITHUB_SUBMODULES+=	ncbi ncbi-vdb ff143ec1 ncbi-vdb
+GITHUB_SUBMODULES+=	ncbi ncbi-vdb 3.1.1 ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
@@ -37,9 +36,8 @@ SUBST_FILES.submoddir+=	CMakeLists.txt
 
 REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh */*/*/*/*.sh
 
-USE_CMAKE=	yes
-CMAKE_CONFIGURE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=		-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl	# ncbi-vdb/CMakeLists.posix.txt
 
 EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
@@ -60,17 +58,10 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
 .endif
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
-.if ${OPSYS} == Darwin
-	# Unsure how to prevent cmake from emitting @rpath in the first place
-	# No instances of @rpath or -install_name in any files before cmake
-	for f in ${WRKSRC}/ncbi-vdb/build/libs/ncbi-vdb/CMakeFiles/*/link.txt; do \
-		${SED} -e 's|@rpath|${PREFIX}/lib|g' $${f} > $${f}.tmp && ${MV} -f $${f}.tmp $${f}; \
-	done
-.endif
 	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
 post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/bin/*.3.1.0
+	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION}
 	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
 	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
