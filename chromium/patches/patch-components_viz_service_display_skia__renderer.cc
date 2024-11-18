@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display/skia_renderer.cc.orig	2024-10-26 07:00:12.553228000 +0000
+--- components/viz/service/display/skia_renderer.cc.orig	2024-11-14 01:04:08.235600500 +0000
 +++ components/viz/service/display/skia_renderer.cc
-@@ -1363,7 +1363,7 @@ void SkiaRenderer::ClearFramebuffer() {
+@@ -1364,7 +1364,7 @@ void SkiaRenderer::ClearFramebuffer() {
    if (current_frame()->current_render_pass->has_transparent_background) {
      ClearCanvas(SkColors::kTransparent);
    } else {

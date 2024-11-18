@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/media_source.cc.orig	2024-10-26 07:00:07.513166000 +0000
+--- components/media_router/common/media_source.cc.orig	2024-11-14 01:04:07.040588400 +0000
 +++ components/media_router/common/media_source.cc
 @@ -57,7 +57,7 @@ bool IsSystemAudioCaptureSupported() {
    if (!media::IsSystemLoopbackCaptureSupported()) {

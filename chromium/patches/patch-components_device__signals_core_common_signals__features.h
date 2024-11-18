@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/signals_features.h.orig	2024-10-26 07:00:06.825748400 +0000
+--- components/device_signals/core/common/signals_features.h.orig	2024-11-14 01:04:06.820586200 +0000
 +++ components/device_signals/core/common/signals_features.h
-@@ -28,7 +28,7 @@ enum class NewEvFunction { kFileSystemIn
+@@ -31,7 +31,7 @@ enum class NewEvFunction { kFileSystemIn
  bool IsNewFunctionEnabled(NewEvFunction new_ev_function);
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \

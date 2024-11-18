@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/start_host_main.cc.orig	2024-10-26 07:00:29.929979300 +0000
+--- remoting/host/setup/start_host_main.cc.orig	2024-11-14 01:04:11.344631400 +0000
 +++ remoting/host/setup/start_host_main.cc
 @@ -38,7 +38,7 @@
  #include <unistd.h>

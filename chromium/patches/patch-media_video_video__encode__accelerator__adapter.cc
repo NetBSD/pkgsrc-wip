@@ -4,20 +4,20 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2024-10-26 07:00:22.909419000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2024-11-14 01:04:10.687625000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
-@@ -164,7 +164,7 @@ VideoEncodeAccelerator::Config SetUpVeaC
-   if (is_rgb)
+@@ -160,7 +160,7 @@ VideoEncodeAccelerator::Config SetUpVeaC
      config.input_format = PIXEL_FORMAT_I420;
+   }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (format != PIXEL_FORMAT_I420 ||
        !VideoFrame::IsStorageTypeMappable(storage_type)) {
      // ChromeOS/Linux hardware video encoders supports I420 on-memory
-@@ -550,7 +550,7 @@ void VideoEncodeAcceleratorAdapter::Init
-       SetUpVeaConfig(profile_, options_, format, first_frame->storage_type(),
-                      supported_rc_modes_, required_encoder_type_);
+@@ -519,7 +519,7 @@ void VideoEncodeAcceleratorAdapter::Init
+       profile_, options_, format, first_frame->storage_type(),
+       supported_rc_modes_, required_encoder_type_, is_gpu_supported_format);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

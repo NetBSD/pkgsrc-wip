@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/node/node.gni.orig	2024-10-26 07:01:17.245087100 +0000
+--- third_party/node/node.gni.orig	2024-11-14 01:04:21.974737600 +0000
 +++ third_party/node/node.gni
 @@ -22,7 +22,7 @@ template("node") {
  

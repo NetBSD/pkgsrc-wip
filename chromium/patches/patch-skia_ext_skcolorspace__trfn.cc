@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/skcolorspace_trfn.cc.orig	2024-10-26 07:00:30.640305500 +0000
+--- skia/ext/skcolorspace_trfn.cc.orig	2024-11-14 01:04:11.593634000 +0000
 +++ skia/ext/skcolorspace_trfn.cc
 @@ -7,6 +7,8 @@
  #pragma allow_unsafe_buffers

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/autofill_optimization_guide.cc.orig	2024-10-26 07:00:06.081296000 +0000
+--- components/autofill/core/browser/autofill_optimization_guide.cc.orig	2024-11-14 01:04:06.536583400 +0000
 +++ components/autofill/core/browser/autofill_optimization_guide.cc
 @@ -186,7 +186,7 @@ void AutofillOptimizationGuide::OnDidPar
      }

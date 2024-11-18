@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/about/about_ui.cc.orig	2024-10-26 07:00:01.251361800 +0000
+--- chrome/browser/ui/webui/about/about_ui.cc.orig	2024-11-14 01:04:04.883566900 +0000
 +++ chrome/browser/ui/webui/about/about_ui.cc
 @@ -596,7 +596,7 @@ std::string ChromeURLs(content::BrowserC
    return html;

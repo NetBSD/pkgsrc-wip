@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/event_fd.cc.orig	2024-10-26 07:04:45.815697700 +0000
+--- third_party/perfetto/src/base/event_fd.cc.orig	2024-11-14 01:09:19.604974300 +0000
 +++ third_party/perfetto/src/base/event_fd.cc
 @@ -22,7 +22,8 @@
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_WIN)

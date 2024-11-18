@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/tcp_socket_posix.cc.orig	2024-10-26 07:00:28.212164000 +0000
+--- net/socket/tcp_socket_posix.cc.orig	2024-11-14 01:04:11.162629600 +0000
 +++ net/socket/tcp_socket_posix.cc
 @@ -98,6 +98,17 @@ bool SetTCPKeepAlive(int fd, bool enable
        PLOG(ERROR) << "Failed to set TCP_KEEPALIVE on fd: " << fd;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/test/BUILD.gn.orig	2024-10-26 07:00:14.259264500 +0000
+--- content/test/BUILD.gn.orig	2024-11-14 01:04:08.719605200 +0000
 +++ content/test/BUILD.gn
-@@ -1755,7 +1755,7 @@ test("content_browsertests") {
+@@ -1754,7 +1754,7 @@ test("content_browsertests") {
      "../test/url_loader_interceptor_browsertest.cc",
    ]
  

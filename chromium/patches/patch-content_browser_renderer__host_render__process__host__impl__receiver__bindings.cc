@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2024-10-26 07:00:13.578851000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2024-11-14 01:04:08.528603300 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -52,7 +52,7 @@
  #include "third_party/blink/public/mojom/webdatabase/web_database.mojom.h"

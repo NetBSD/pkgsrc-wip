@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp.orig	2024-10-26 07:02:24.719377800 +0000
+--- third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp.orig	2024-11-14 01:13:10.267982700 +0000
 +++ third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp
 @@ -49,13 +49,17 @@ public:
  	{

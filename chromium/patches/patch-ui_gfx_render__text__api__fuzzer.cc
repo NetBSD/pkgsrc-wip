@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_api_fuzzer.cc.orig	2024-10-26 07:01:27.141858800 +0000
+--- ui/gfx/render_text_api_fuzzer.cc.orig	2024-11-14 01:04:23.902757000 +0000
 +++ ui/gfx/render_text_api_fuzzer.cc
 @@ -20,7 +20,7 @@
  #include "ui/gfx/font_util.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/stable/BUILD.gn.orig	2024-10-26 07:00:21.797795000 +0000
+--- media/mojo/mojom/stable/BUILD.gn.orig	2024-11-14 01:04:10.508623100 +0000
 +++ media/mojo/mojom/stable/BUILD.gn
 @@ -196,7 +196,7 @@ source_set("unit_tests") {
    } else if (use_v4l2_codec) {

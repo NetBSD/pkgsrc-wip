@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_unittest.cc.orig	2024-10-26 07:00:28.259186500 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2024-11-14 01:04:11.165629600 +0000
 +++ net/socket/udp_socket_unittest.cc
 @@ -372,7 +372,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);

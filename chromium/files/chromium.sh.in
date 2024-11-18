@@ -58,9 +58,9 @@ fi
 # Always use our versions of ffmpeg libs.
 # This also makes RPMs find the compatibly-named library symlinks.
 if [ -n "$LD_LIBRARY_PATH" ]; then
-	LD_LIBRARY_PATH="@PREFIX@/chrome:@PREFIX@/chrome/lib:$LD_LIBRARY_PATH"
+	LD_LIBRARY_PATH="@PREFIX@/lib/chromium:@PREFIX@/lib/chromium/lib:$LD_LIBRARY_PATH"
 else
-	LD_LIBRARY_PATH="@PREFIX@/chrome:@PREFIX@/chrome/lib"
+	LD_LIBRARY_PATH="@PREFIX@/lib/chromium:@PREFIX@/lib/chromium/lib"
 fi
 export LD_LIBRARY_PATH
 
@@ -72,4 +72,4 @@ export LD_LIBRARY_PATH
 #[ -z ${ENABLE_WASM} ] && \
 #	_NOWASM="--disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming --js-flags=--noexpose-wasm"
 
-LANG=${_l} exec "@PREFIX@/chrome/chrome" ${_NOWASM} "${@}"
+LANG=${_l} exec "@PREFIX@/lib/chromium/chrome" ${_NOWASM} "${@}"

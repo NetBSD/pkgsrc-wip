@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/memory_usage_monitor_posix.h.orig	2024-10-26 07:00:32.968339700 +0000
+--- third_party/blink/renderer/controller/memory_usage_monitor_posix.h.orig	2024-11-14 01:04:12.220640200 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.h
 @@ -13,7 +13,7 @@
  #include "third_party/blink/renderer/controller/controller_export.h"

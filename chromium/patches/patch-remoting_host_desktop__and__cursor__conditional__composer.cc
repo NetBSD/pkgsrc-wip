@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_and_cursor_conditional_composer.cc.orig	2024-10-26 07:00:29.761900400 +0000
+--- remoting/host/desktop_and_cursor_conditional_composer.cc.orig	2024-11-14 01:04:11.312631100 +0000
 +++ remoting/host/desktop_and_cursor_conditional_composer.cc
 @@ -7,7 +7,7 @@
  #include "base/functional/bind.h"

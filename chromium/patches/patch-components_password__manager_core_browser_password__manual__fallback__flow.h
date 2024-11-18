@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.h.orig	2024-10-26 07:00:08.010468000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.h.orig	2024-11-14 01:04:07.208590000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.h
 @@ -17,7 +17,7 @@
  #include "components/password_manager/core/browser/ui/saved_passwords_presenter.h"

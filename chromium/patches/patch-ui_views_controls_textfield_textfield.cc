@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2024-10-26 07:01:27.790967700 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2024-11-14 01:04:24.050758400 +0000
 +++ ui/views/controls/textfield/textfield.cc
-@@ -85,7 +85,7 @@
+@@ -87,7 +87,7 @@
  #include "base/win/win_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -183,7 +183,7 @@ bool IsControlKeyModifier(int flags) {
+@@ -185,7 +185,7 @@ bool IsControlKeyModifier(int flags) {
  // Control-modified key combination, but we cannot extend it to other platforms
  // as Control has different meanings and behaviors.
  // https://crrev.com/2580483002/#msg46
@@ -24,7 +24,7 @@ $NetBSD$
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -761,7 +761,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -763,7 +763,7 @@ bool Textfield::OnKeyPressed(const ui::K
    if (!textfield)
      return handled;
  
@@ -33,7 +33,7 @@ $NetBSD$
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
    if (!handled && linux_ui &&
-@@ -944,7 +944,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -946,7 +946,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD$
    // Skip any accelerator handling that conflicts with custom keybindings.
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
-@@ -1994,7 +1994,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -1997,7 +1997,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
@@ -51,7 +51,7 @@ $NetBSD$
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2500,14 +2500,14 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2503,14 +2503,14 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }

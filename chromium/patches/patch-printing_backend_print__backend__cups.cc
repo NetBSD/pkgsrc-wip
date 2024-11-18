@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/print_backend_cups.cc.orig	2024-10-26 07:00:29.677861000 +0000
+--- printing/backend/print_backend_cups.cc.orig	2024-11-14 01:04:11.285631000 +0000
 +++ printing/backend/print_backend_cups.cc
 @@ -33,7 +33,7 @@
  #include "printing/mojom/print.mojom.h"
@@ -23,8 +23,8 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  // This may be removed when Amazon Linux 2 reaches EOL (30 Jun 2025).
  bool AreNewerCupsFunctionsAvailable() {
-   return cupsFindDestDefault && cupsFindDestSupported && ippValidateAttributes;
-@@ -291,7 +291,7 @@ bool PrintBackendCUPS::IsValidPrinter(co
+   return cupsFindDestDefault && cupsFindDestSupported && cupsUserAgent &&
+@@ -292,7 +292,7 @@ bool PrintBackendCUPS::IsValidPrinter(co
  #if !BUILDFLAG(IS_CHROMEOS)
  scoped_refptr<PrintBackend> PrintBackend::CreateInstanceImpl(
      const std::string& locale) {

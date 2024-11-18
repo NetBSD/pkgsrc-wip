@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-10-26 06:59:56.575521000 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-11-14 01:04:03.533553400 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -193,7 +193,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -188,7 +188,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[autofill::prefs::kAutofillPaymentCardBenefits] =
        settings_api::PrefType::kBoolean;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
    (*s_allowlist)[autofill::prefs::kAutofillPredictionImprovementsEnabled] =
        settings_api::PrefType::kBoolean;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-@@ -211,7 +211,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -206,7 +206,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[tab_groups::prefs::kAutoPinNewTabGroups] =
        settings_api::PrefType::kBoolean;
  
@@ -24,7 +24,7 @@ $NetBSD$
    (*s_allowlist)[::prefs::kUseCustomChromeFrame] =
        settings_api::PrefType::kBoolean;
  #endif
-@@ -223,7 +223,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -218,7 +218,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kCurrentThemeID] = settings_api::PrefType::kString;
    (*s_allowlist)[::prefs::kPinnedActions] = settings_api::PrefType::kList;
    (*s_allowlist)[::prefs::kPolicyThemeColor] = settings_api::PrefType::kNumber;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/filter/zstd_source_stream.cc.orig	2024-10-26 07:00:26.147138800 +0000
+--- net/filter/zstd_source_stream.cc.orig	2024-11-14 01:04:11.078628800 +0000
 +++ net/filter/zstd_source_stream.cc
 @@ -7,6 +7,7 @@
  #include <algorithm>

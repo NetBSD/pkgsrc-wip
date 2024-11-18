@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-10-26 07:00:00.937171000 +0000
+--- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-11-14 01:04:04.777565700 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.cc
-@@ -54,7 +54,7 @@
+@@ -55,7 +55,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/display/screen.h"
  #include "ui/linux/linux_ui.h"
  #endif
-@@ -89,7 +89,7 @@ class ThemeChangedObserver : public view
+@@ -90,7 +90,7 @@ class ThemeChangedObserver : public view
  };
  
  bool IsUsingLinuxSystemTheme(Profile* profile) {
@@ -24,7 +24,7 @@ $NetBSD$
    return ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme();
  #else
    return false;
-@@ -184,7 +184,7 @@ void BrowserFrame::InitBrowserFrame() {
+@@ -185,7 +185,7 @@ void BrowserFrame::InitBrowserFrame() {
  
    Init(std::move(params));
  
@@ -33,7 +33,7 @@ $NetBSD$
    SelectNativeTheme();
  #else
    SetNativeTheme(ui::NativeTheme::GetInstanceForNativeUi());
-@@ -370,7 +370,7 @@ void BrowserFrame::OnNativeWidgetWorkspa
+@@ -372,7 +372,7 @@ void BrowserFrame::OnNativeWidgetWorkspa
    chrome::SaveWindowWorkspace(browser_view_->browser(), GetWorkspace());
    chrome::SaveWindowVisibleOnAllWorkspaces(browser_view_->browser(),
                                             IsVisibleOnAllWorkspaces());
@@ -42,7 +42,7 @@ $NetBSD$
    // If the window was sent to a different workspace, prioritize it if
    // it was sent to the current workspace and deprioritize it
    // otherwise.  This is done by MoveBrowsersInWorkspaceToFront()
-@@ -564,7 +564,7 @@ void BrowserFrame::OnMenuClosed() {
+@@ -566,7 +566,7 @@ void BrowserFrame::OnMenuClosed() {
  }
  
  void BrowserFrame::SelectNativeTheme() {
@@ -51,7 +51,7 @@ $NetBSD$
    // Use the regular NativeTheme instance if running incognito mode, regardless
    // of system theme (gtk, qt etc).
    ui::NativeTheme* native_theme = ui::NativeTheme::GetInstanceForNativeUi();
-@@ -605,7 +605,7 @@ void BrowserFrame::OnTouchUiChanged() {
+@@ -607,7 +607,7 @@ void BrowserFrame::OnTouchUiChanged() {
  bool BrowserFrame::RegenerateFrameOnThemeChange(
      BrowserThemeChangeType theme_change_type) {
    bool need_regenerate = false;

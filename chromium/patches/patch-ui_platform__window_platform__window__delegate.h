@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_delegate.h.orig	2024-10-26 07:01:27.446910000 +0000
+--- ui/platform_window/platform_window_delegate.h.orig	2024-11-14 01:04:23.985757800 +0000
 +++ ui/platform_window/platform_window_delegate.h
-@@ -181,7 +181,7 @@ class COMPONENT_EXPORT(PLATFORM_WINDOW) 
+@@ -191,7 +191,7 @@ class COMPONENT_EXPORT(PLATFORM_WINDOW) 
    virtual void OnWindowStateChanged(PlatformWindowState old_state,
                                      PlatformWindowState new_state) = 0;
  

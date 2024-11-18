@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_constants.h.orig	2024-10-26 07:00:01.419463900 +0000
+--- chrome/browser/ui/webui/management/management_ui_constants.h.orig	2024-11-14 01:04:04.950567500 +0000
 +++ chrome/browser/ui/webui/management/management_ui_constants.h
 @@ -8,14 +8,14 @@
  #include "build/build_config.h"

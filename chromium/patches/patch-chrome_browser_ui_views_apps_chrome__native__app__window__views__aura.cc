@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2024-10-26 07:00:00.692022000 +0000
+--- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2024-11-14 01:04:04.739565400 +0000
 +++ chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc
-@@ -19,7 +19,7 @@
+@@ -20,7 +20,7 @@
  #include "ui/gfx/image/image_skia.h"
  #include "ui/views/widget/widget.h"
  

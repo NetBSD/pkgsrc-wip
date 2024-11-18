@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/init/input_method_initializer.cc.orig	2024-10-26 07:01:26.661777700 +0000
+--- ui/base/ime/init/input_method_initializer.cc.orig	2024-11-14 01:04:23.712755000 +0000
 +++ ui/base/ime/init/input_method_initializer.cc
 @@ -10,7 +10,7 @@
  #include "build/chromeos_buildflags.h"

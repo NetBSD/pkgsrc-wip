@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/unix_socket.cc.orig	2024-10-26 07:04:45.871703600 +0000
+--- third_party/perfetto/src/base/unix_socket.cc.orig	2024-11-14 01:09:19.608974200 +0000
 +++ third_party/perfetto/src/base/unix_socket.cc
 @@ -44,7 +44,7 @@
  #include <unistd.h>

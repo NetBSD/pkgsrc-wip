@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/brotli/common/platform.h.orig	2024-10-26 07:01:15.111674300 +0000
+--- third_party/brotli/common/platform.h.orig	2024-11-14 01:04:21.210730000 +0000
 +++ third_party/brotli/common/platform.h
 @@ -28,7 +28,7 @@
  #include <brotli/port.h>

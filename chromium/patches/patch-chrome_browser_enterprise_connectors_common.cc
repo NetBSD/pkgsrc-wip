@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/common.cc.orig	2024-10-26 06:59:56.354386800 +0000
+--- chrome/browser/enterprise/connectors/common.cc.orig	2024-11-14 01:04:03.464552600 +0000
 +++ chrome/browser/enterprise/connectors/common.cc
 @@ -23,7 +23,7 @@
  #include "components/policy/core/common/policy_loader_lacros.h"

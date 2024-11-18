@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_openbsd.cc.orig	2024-10-26 06:59:45.374716300 +0000
+--- base/process/process_handle_openbsd.cc.orig	2024-11-14 01:04:01.835536500 +0000
 +++ base/process/process_handle_openbsd.cc
 @@ -3,48 +3,112 @@
  // found in the LICENSE file.
@@ -85,7 +85,7 @@ $NetBSD$
 +  if ((cpath = getenv("CHROME_EXE_PATH")) != NULL)
 +    result = FilePath(cpath);
 +  else
-+    result = FilePath("/usr/local/chrome/chrome");
++    result = FilePath("@PREFIX@/lib/chromium/chrome");
 +
 +  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) != -1) {
 +    retvalargs = static_cast<char**>(malloc(len));

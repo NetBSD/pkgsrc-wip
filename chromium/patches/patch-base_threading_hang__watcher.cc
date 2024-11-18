@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/hang_watcher.cc.orig	2024-10-26 06:59:45.671897000 +0000
+--- base/threading/hang_watcher.cc.orig	2024-11-14 01:04:01.892536900 +0000
 +++ base/threading/hang_watcher.cc
-@@ -354,7 +354,7 @@ void HangWatcher::InitializeOnMainThread
+@@ -352,7 +352,7 @@ void HangWatcher::InitializeOnMainThread
  
    bool enable_hang_watcher = base::FeatureList::IsEnabled(kEnableHangWatcher);
  

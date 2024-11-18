@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_factory.h.orig	2024-10-26 07:01:26.713786600 +0000
+--- ui/base/x/x11_cursor_factory.h.orig	2024-11-14 01:04:23.734755300 +0000
 +++ ui/base/x/x11_cursor_factory.h
 @@ -20,7 +20,7 @@ namespace ui {
  class X11Cursor;

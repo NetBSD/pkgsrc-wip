@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.cc.orig	2024-10-26 07:00:29.684864300 +0000
+--- printing/print_settings.cc.orig	2024-11-14 01:04:11.289631000 +0000
 +++ printing/print_settings.cc
-@@ -320,7 +320,7 @@ PrintSettings& PrintSettings::operator=(
+@@ -319,7 +319,7 @@ PrintSettings& PrintSettings::operator=(
  #endif
    is_modifiable_ = settings.is_modifiable_;
    pages_per_sheet_ = settings.pages_per_sheet_;
@@ -15,7 +15,7 @@ $NetBSD$
    for (const auto& item : settings.advanced_settings_)
      advanced_settings_.emplace(item.first, item.second.Clone());
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -350,7 +350,7 @@ bool PrintSettings::operator==(const Pri
+@@ -349,7 +349,7 @@ bool PrintSettings::operator==(const Pri
  #endif
                    is_modifiable_, requested_custom_margins_in_points_,
                    pages_per_sheet_
@@ -24,7 +24,7 @@ $NetBSD$
                    ,
                    advanced_settings_
  #endif
-@@ -374,7 +374,7 @@ bool PrintSettings::operator==(const Pri
+@@ -373,7 +373,7 @@ bool PrintSettings::operator==(const Pri
                    other.is_modifiable_,
                    other.requested_custom_margins_in_points_,
                    other.pages_per_sheet_
@@ -33,7 +33,7 @@ $NetBSD$
                    ,
                    other.advanced_settings_
  #endif
-@@ -414,7 +414,7 @@ void PrintSettings::Clear() {
+@@ -413,7 +413,7 @@ void PrintSettings::Clear() {
  #endif
    is_modifiable_ = true;
    pages_per_sheet_ = 1;

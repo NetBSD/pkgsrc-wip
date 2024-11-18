@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc.orig	2024-10-26 06:59:56.403416600 +0000
+--- chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc.orig	2024-11-14 01:04:03.476552700 +0000
 +++ chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc
 @@ -13,7 +13,7 @@ namespace enterprise_connectors {
  

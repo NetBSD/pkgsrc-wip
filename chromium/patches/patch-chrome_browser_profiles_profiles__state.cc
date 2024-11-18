@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profiles_state.cc.orig	2024-10-26 06:59:57.891320500 +0000
+--- chrome/browser/profiles/profiles_state.cc.orig	2024-11-14 01:04:03.891557000 +0000
 +++ chrome/browser/profiles/profiles_state.cc
-@@ -196,7 +196,7 @@ bool IsGuestModeRequested(const base::Co
+@@ -190,7 +190,7 @@ bool IsGuestModeRequested(const base::Co
                            PrefService* local_state,
                            bool show_warning) {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
@@ -15,7 +15,7 @@ $NetBSD$
    DCHECK(local_state);
  
    // Check if guest mode enforcement commandline switch or policy are provided.
-@@ -243,7 +243,7 @@ bool IsGuestModeEnabled() {
+@@ -226,7 +226,7 @@ bool IsGuestModeEnabled() {
      return false;
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    // If there are any supervised profiles, disable guest mode.
    if (base::FeatureList::IsEnabled(
            supervised_user::kHideGuestModeForSupervisedUsers) &&
-@@ -259,7 +259,7 @@ bool IsGuestModeEnabled() {
+@@ -245,7 +245,7 @@ bool IsGuestModeEnabled() {
  }
  
  bool IsGuestModeEnabled(const Profile& profile) {

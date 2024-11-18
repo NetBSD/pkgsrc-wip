@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2024-10-26 07:00:34.565014600 +0000
+--- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2024-11-14 01:04:12.731645300 +0000
 +++ third_party/blink/renderer/modules/media/audio/audio_device_factory.cc
 @@ -35,7 +35,7 @@ namespace {
  AudioDeviceFactory* g_factory_override = nullptr;

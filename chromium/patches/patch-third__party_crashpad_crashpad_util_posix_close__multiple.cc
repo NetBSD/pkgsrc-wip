@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2024-10-26 07:01:15.573764300 +0000
+--- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2024-11-14 01:04:21.330731200 +0000
 +++ third_party/crashpad/crashpad/util/posix/close_multiple.cc
 @@ -73,7 +73,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
  // This is an advantage over looping over all possible file descriptors, because

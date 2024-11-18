@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2024-10-26 07:00:21.331527700 +0000
+--- media/base/video_frame.cc.orig	2024-11-14 01:04:10.388621800 +0000
 +++ media/base/video_frame.cc
 @@ -88,7 +88,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -33,7 +33,16 @@ $NetBSD$
    bool is_native_buffer =
        gpu_memory_buffer
            ? (gpu_memory_buffer->GetType() != gfx::SHARED_MEMORY_BUFFER)
-@@ -782,7 +782,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -453,7 +453,7 @@ VideoFrame::CreateFrameForGpuMemoryBuffe
+ }
+ 
+ // static
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ scoped_refptr<VideoFrame> VideoFrame::WrapOOPVDMailbox(
+     VideoPixelFormat format,
+     const gpu::Mailbox& mailbox,
+@@ -769,7 +769,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
@@ -42,7 +51,16 @@ $NetBSD$
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1489,7 +1489,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1261,7 +1261,7 @@ bool VideoFrame::IsMappable() const {
+   return IsStorageTypeMappable(storage_type_);
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD) 
+ bool VideoFrame::HasOOPVDMailbox() const {
+   return wrapped_frame_ ? wrapped_frame_->HasOOPVDMailbox()
+                         : !oopvd_mailbox_.IsZero();
+@@ -1490,7 +1490,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
    return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  

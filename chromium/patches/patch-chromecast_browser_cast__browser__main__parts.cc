@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/browser/cast_browser_main_parts.cc.orig	2024-10-26 07:00:04.881567200 +0000
+--- chromecast/browser/cast_browser_main_parts.cc.orig	2024-11-14 01:04:06.066578600 +0000
 +++ chromecast/browser/cast_browser_main_parts.cc
 @@ -94,7 +94,7 @@
  #include "ui/ozone/public/ozone_platform.h"
@@ -25,7 +25,7 @@ $NetBSD$
  base::FilePath GetApplicationFontsDir() {
    std::unique_ptr<base::Environment> env(base::Environment::Create());
 @@ -313,7 +313,7 @@ const DefaultCommandLineSwitch kDefaultS
-     {cc::switches::kDisableThreadedAnimation, ""},
+     {switches::kDisableThreadedAnimation, ""},
  #endif  // BUILDFLAG(IS_ANDROID)
  #endif  // BUILDFLAG(IS_CAST_AUDIO_ONLY)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

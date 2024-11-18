@@ -4,23 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/managed_ui.cc.orig	2024-10-26 07:00:00.536927700 +0000
+--- chrome/browser/ui/managed_ui.cc.orig	2024-11-14 01:04:04.683565000 +0000
 +++ chrome/browser/ui/managed_ui.cc
-@@ -435,7 +435,7 @@ std::optional<std::string> GetDeviceMana
+@@ -439,7 +439,7 @@ std::optional<std::string> GetDeviceMana
        g_browser_process->platform_part()->browser_policy_connector_ash();
    return connector->GetEnterpriseDomainManager();
  #else
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   std::string custom_management_label =
-       g_browser_process->local_state()
-           ? g_browser_process->local_state()->GetString(
-@@ -469,7 +469,7 @@ std::optional<std::string> GetAccountMan
+   if (base::FeatureList::IsEnabled(
+           features::kEnterpriseManagementDisclaimerUsesCustomLabel)) {
+     std::string custom_management_label =
+@@ -476,7 +476,7 @@ std::optional<std::string> GetAccountMan
                 policy::EnterpriseManagementAuthority::CLOUD))
      return std::nullopt;
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   std::string custom_management_label =
-       profile->GetPrefs()->GetString(prefs::kEnterpriseCustomLabel);
-   if (!custom_management_label.empty()) {
+   if (base::FeatureList::IsEnabled(
+           features::kEnterpriseManagementDisclaimerUsesCustomLabel)) {
+     std::string custom_management_label =

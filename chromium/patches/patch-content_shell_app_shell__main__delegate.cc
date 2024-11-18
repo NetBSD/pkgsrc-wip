@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/app/shell_main_delegate.cc.orig	2024-10-26 07:00:14.217239000 +0000
+--- content/shell/app/shell_main_delegate.cc.orig	2024-11-14 01:04:08.714605000 +0000
 +++ content/shell/app/shell_main_delegate.cc
-@@ -276,7 +276,7 @@ void ShellMainDelegate::PreSandboxStartu
+@@ -269,7 +269,7 @@ void ShellMainDelegate::PreSandboxStartu
      // Reporting for sub-processes will be initialized in ZygoteForked.
      if (process_type != switches::kZygoteProcess) {
        crash_reporter::InitializeCrashpad(process_type.empty(), process_type);

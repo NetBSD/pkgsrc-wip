@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2024-10-26 07:03:13.950794200 +0000
+--- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2024-11-14 01:11:58.785925900 +0000
 +++ third_party/skia/src/ports/SkMemory_malloc.cpp
 @@ -15,7 +15,8 @@
  

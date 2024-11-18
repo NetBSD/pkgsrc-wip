@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-10-26 07:00:17.892471600 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-11-14 01:04:09.443612300 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -48,7 +48,7 @@
  #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"

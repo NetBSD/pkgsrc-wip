@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_implementation.cc.orig	2024-10-26 07:01:27.191867000 +0000
+--- ui/gl/gl_implementation.cc.orig	2024-11-14 01:04:23.925757200 +0000
 +++ ui/gl/gl_implementation.cc
 @@ -253,7 +253,7 @@ GetRequestedGLImplementationFromCommandL
      const base::CommandLine* command_line) {

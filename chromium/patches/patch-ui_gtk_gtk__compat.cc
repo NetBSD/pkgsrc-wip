@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/gtk_compat.cc.orig	2024-10-26 07:01:27.204869300 +0000
+--- ui/gtk/gtk_compat.cc.orig	2024-11-14 01:04:23.931757200 +0000
 +++ ui/gtk/gtk_compat.cc
 @@ -62,27 +62,47 @@ auto DlCast(void* symbol) {
  }

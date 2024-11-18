@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_control_list.cc.orig	2024-10-26 07:00:17.914485000 +0000
+--- gpu/config/gpu_control_list.cc.orig	2024-11-14 01:04:09.452612600 +0000
 +++ gpu/config/gpu_control_list.cc
-@@ -282,7 +282,7 @@ bool GpuControlList::More::GLVersionInfo
+@@ -277,7 +277,7 @@ bool GpuControlList::More::GLVersionInfo
  GpuControlList::GLType GpuControlList::More::GetDefaultGLType() {
  #if BUILDFLAG(IS_CHROMEOS)
    return kGLTypeGL;
@@ -15,7 +15,7 @@ $NetBSD$
    return kGLTypeGL;
  #elif BUILDFLAG(IS_MAC)
    return kGLTypeGL;
-@@ -819,7 +819,7 @@ GpuControlList::OsType GpuControlList::G
+@@ -848,7 +848,7 @@ GpuControlList::OsType GpuControlList::G
    return kOsAndroid;
  #elif BUILDFLAG(IS_FUCHSIA)
    return kOsFuchsia;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/linux/dmabuf_uapi.h.orig	2024-10-26 07:01:27.131857200 +0000
+--- ui/gfx/linux/dmabuf_uapi.h.orig	2024-11-14 01:04:23.895757000 +0000
 +++ ui/gfx/linux/dmabuf_uapi.h
 @@ -5,12 +5,11 @@
  #ifndef UI_GFX_LINUX_DMABUF_UAPI_H_

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.cc.orig	2024-10-26 07:00:29.868950800 +0000
+--- remoting/host/ipc_constants.cc.orig	2024-11-14 01:04:11.326631300 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -17,7 +17,7 @@ namespace remoting {
  
@@ -15,7 +15,7 @@ $NetBSD$
  
  #if !defined(NDEBUG)
  // Use a different IPC name for debug builds so that we can run the host
-@@ -68,7 +68,7 @@ GetChromotingHostServicesServerName() {
+@@ -81,7 +81,7 @@ GetChromotingHostServicesServerName() {
    static const base::NoDestructor<mojo::NamedPlatformChannel::ServerName>
        server_name(
            named_mojo_ipc_server::WorkingDirectoryIndependentServerNameFromUTF8(

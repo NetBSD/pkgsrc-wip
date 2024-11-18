@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-10-26 07:00:32.966338900 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-11-14 01:04:12.219640300 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -81,12 +81,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"
@@ -21,7 +21,7 @@ $NetBSD$
  #include "third_party/blink/renderer/controller/highest_pmf_reporter.h"
  #include "third_party/blink/renderer/controller/user_level_memory_pressure_signal_generator.h"
  #endif
-@@ -256,7 +256,7 @@ void BlinkInitializer::RegisterInterface
+@@ -255,7 +255,7 @@ void BlinkInitializer::RegisterInterface
        main_thread_task_runner);
  #endif
  
@@ -30,7 +30,7 @@ $NetBSD$
    binders.Add<mojom::blink::MemoryUsageMonitorLinux>(
        ConvertToBaseRepeatingCallback(
            CrossThreadBindRepeating(&MemoryUsageMonitorPosix::Bind)),
-@@ -303,7 +303,7 @@ void BlinkInitializer::RegisterMemoryWat
+@@ -302,7 +302,7 @@ void BlinkInitializer::RegisterMemoryWat
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

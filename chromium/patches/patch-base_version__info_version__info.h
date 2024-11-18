@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/version_info/version_info.h.orig	2024-10-26 06:59:45.720926800 +0000
+--- base/version_info/version_info.h.orig	2024-11-14 01:04:01.911537200 +0000
 +++ base/version_info/version_info.h
 @@ -74,6 +74,8 @@ constexpr std::string_view GetOSType() {
    return "FreeBSD";

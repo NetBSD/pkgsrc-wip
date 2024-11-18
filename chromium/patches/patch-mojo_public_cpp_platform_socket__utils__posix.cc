@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2024-10-26 07:00:22.971453700 +0000
+--- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2024-11-14 01:04:10.718625000 +0000
 +++ mojo/public/cpp/platform/socket_utils_posix.cc
 @@ -34,7 +34,7 @@ bool IsRecoverableError() {
  }

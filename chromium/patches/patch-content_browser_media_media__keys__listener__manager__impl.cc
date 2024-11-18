@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/media/media_keys_listener_manager_impl.cc.orig	2024-10-26 07:00:13.405745700 +0000
+--- content/browser/media/media_keys_listener_manager_impl.cc.orig	2024-11-14 01:04:08.451602500 +0000
 +++ content/browser/media/media_keys_listener_manager_impl.cc
 @@ -333,7 +333,7 @@ void MediaKeysListenerManagerImpl::Start
      return;

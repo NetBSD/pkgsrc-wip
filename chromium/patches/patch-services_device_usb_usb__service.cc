@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service.cc.orig	2024-10-26 07:00:30.290145200 +0000
+--- services/device/usb/usb_service.cc.orig	2024-11-14 01:04:11.466632600 +0000
 +++ services/device/usb/usb_service.cc
 @@ -21,12 +21,16 @@
  

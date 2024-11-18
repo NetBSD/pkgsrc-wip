@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2024-10-26 06:59:56.355387400 +0000
+--- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2024-11-14 01:04:03.465552800 +0000
 +++ chrome/browser/enterprise/connectors/connectors_service.cc
-@@ -528,7 +528,7 @@ bool ConnectorsService::ConnectorsEnable
+@@ -510,7 +510,7 @@ bool ConnectorsService::ConnectorsEnable
  
    Profile* profile = Profile::FromBrowserContext(context_);
  

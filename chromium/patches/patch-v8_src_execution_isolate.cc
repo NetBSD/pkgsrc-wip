@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/execution/isolate.cc.orig	2024-10-26 07:03:38.284417400 +0000
+--- v8/src/execution/isolate.cc.orig	2024-11-14 01:10:09.619233800 +0000
 +++ v8/src/execution/isolate.cc
 @@ -168,6 +168,10 @@
  #include "src/execution/simulator-base.h"
@@ -17,7 +17,7 @@ $NetBSD$
  extern "C" const uint8_t v8_Default_embedded_blob_code_[];
  extern "C" uint32_t v8_Default_embedded_blob_code_size_;
  extern "C" const uint8_t v8_Default_embedded_blob_data_[];
-@@ -4972,6 +4976,13 @@ void Isolate::InitializeDefaultEmbeddedB
+@@ -4995,6 +4999,13 @@ void Isolate::InitializeDefaultEmbeddedB
    const uint8_t* data = DefaultEmbeddedBlobData();
    uint32_t data_size = DefaultEmbeddedBlobDataSize();
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-10-26 07:00:36.938975300 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-11-14 01:04:13.036648300 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -23,6 +23,13 @@
  extern "C" void* __libc_stack_end;  // NOLINT

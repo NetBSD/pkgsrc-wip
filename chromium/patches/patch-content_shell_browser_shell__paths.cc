@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_paths.cc.orig	2024-10-26 07:00:14.222241900 +0000
+--- content/shell/browser/shell_paths.cc.orig	2024-11-14 01:04:08.716605200 +0000
 +++ content/shell/browser/shell_paths.cc
 @@ -13,7 +13,7 @@
  

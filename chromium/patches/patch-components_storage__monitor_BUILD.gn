@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/storage_monitor/BUILD.gn.orig	2024-10-26 07:00:10.472964000 +0000
+--- components/storage_monitor/BUILD.gn.orig	2024-11-14 01:04:07.685594800 +0000
 +++ components/storage_monitor/BUILD.gn
 @@ -75,7 +75,7 @@ static_library("storage_monitor") {
        deps += [ "//services/device/public/mojom" ]

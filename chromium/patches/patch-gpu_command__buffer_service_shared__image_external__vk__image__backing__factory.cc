@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2024-10-26 07:00:17.885467300 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2024-11-14 01:04:09.440612300 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc
-@@ -142,7 +142,7 @@ bool IsFormatSupported(viz::SharedImageF
- }  // namespace
+@@ -176,7 +176,7 @@ bool IsFormatSupported(viz::SharedImageF
  
- constexpr SharedImageUsageSet kSupportedUsage =
+ SharedImageUsageSet SupportedUsage() {
+   SharedImageUsageSet supported_usage =
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DAWN)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DAWN)
-     SHARED_IMAGE_USAGE_WEBGPU_READ | SHARED_IMAGE_USAGE_WEBGPU_WRITE |
-     SHARED_IMAGE_USAGE_WEBGPU_SWAP_CHAIN_TEXTURE |
-     SHARED_IMAGE_USAGE_WEBGPU_STORAGE_TEXTURE |
+       SHARED_IMAGE_USAGE_WEBGPU_READ | SHARED_IMAGE_USAGE_WEBGPU_WRITE |
+       SHARED_IMAGE_USAGE_WEBGPU_SWAP_CHAIN_TEXTURE |
+       SHARED_IMAGE_USAGE_WEBGPU_STORAGE_TEXTURE |

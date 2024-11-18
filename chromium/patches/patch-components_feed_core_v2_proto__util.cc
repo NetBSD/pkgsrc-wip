@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util.cc.orig	2024-10-26 07:00:07.216986000 +0000
+--- components/feed/core/v2/proto_util.cc.orig	2024-11-14 01:04:06.921587200 +0000
 +++ components/feed/core/v2/proto_util.cc
 @@ -93,8 +93,8 @@ feedwire::Version GetPlatformVersionMess
  

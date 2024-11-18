@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/switches.h.orig	2024-10-26 07:01:27.147859800 +0000
+--- ui/gfx/switches.h.orig	2024-11-14 01:04:23.905757000 +0000
 +++ ui/gfx/switches.h
 @@ -19,7 +19,7 @@ GFX_SWITCHES_EXPORT extern const char kF
  GFX_SWITCHES_EXPORT extern const char kForcePrefersNoReducedMotion[];

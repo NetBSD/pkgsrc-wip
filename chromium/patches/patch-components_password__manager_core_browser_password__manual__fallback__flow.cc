@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2024-10-26 07:00:08.010468000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2024-11-14 01:04:07.208590000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.cc
 @@ -43,7 +43,7 @@ std::u16string GetUsernameFromLabel(cons
  }
@@ -24,7 +24,7 @@ $NetBSD$
        std::optional<password_manager::PasswordForm> credentials =
            GetCorrespondingPasswordForm(
                suggestion.GetPayload<Suggestion::PasswordSuggestionDetails>(),
-@@ -413,7 +413,7 @@ void PasswordManualFallbackFlow::EnsureC
+@@ -418,7 +418,7 @@ void PasswordManualFallbackFlow::EnsureC
      const Suggestion::PasswordSuggestionDetails& payload,
      base::OnceClosure on_allowed) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

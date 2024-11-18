@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/mojom/sandbox.mojom.orig	2024-10-26 07:00:30.181095100 +0000
+--- sandbox/policy/mojom/sandbox.mojom.orig	2024-11-14 01:04:11.405632000 +0000
 +++ sandbox/policy/mojom/sandbox.mojom
-@@ -80,6 +80,15 @@ enum Sandbox {
+@@ -81,6 +81,15 @@ enum Sandbox {
    [EnableIf=is_fuchsia]
    kVideoCapture,
  

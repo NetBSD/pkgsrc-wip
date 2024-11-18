@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc.orig	2024-10-26 07:01:27.426906600 +0000
+--- ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc.orig	2024-11-14 01:04:23.971757700 +0000
 +++ ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc
 @@ -322,7 +322,7 @@ void XDGToplevelWrapperImpl::OnToplevelC
    window_states.is_activated =

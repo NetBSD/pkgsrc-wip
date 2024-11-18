@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/core/fxge/cfx_fontmapper.cpp.orig	2024-10-26 07:06:58.612016700 +0000
+--- third_party/pdfium/core/fxge/cfx_fontmapper.cpp.orig	2024-11-14 01:05:49.083918000 +0000
 +++ third_party/pdfium/core/fxge/cfx_fontmapper.cpp
 @@ -157,7 +157,7 @@ constexpr AltFontFamily kAltFontFamilies
      {"ForteMT", "Forte"},

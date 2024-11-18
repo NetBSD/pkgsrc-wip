@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2024-10-26 07:00:07.201977000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2024-11-14 01:04:06.914587300 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -165,7 +165,7 @@ const base::Feature* const kAllFeatures[
+@@ -162,7 +162,7 @@ const base::Feature* const kAllFeatures[
      &kIPHiOSLensOverlayEntrypointTipFeature,
  #endif  // BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -25,7 +25,7 @@ $NetBSD$
      &kIPHAutofillCreditCardBenefitFeature,
      &kIPHAutofillDisabledVirtualCardSuggestionFeature,
      &kIPHAutofillExternalAccountProfileSuggestionFeature,
-@@ -281,7 +282,7 @@ const base::Feature* const kAllFeatures[
+@@ -282,7 +283,7 @@ const base::Feature* const kAllFeatures[
      &kIPHScalableIphGamingFeature,
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  

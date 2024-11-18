@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc.orig	2024-10-26 07:00:04.902580000 +0000
+--- chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc.orig	2024-11-14 01:04:06.077578800 +0000
 +++ chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc
-@@ -336,7 +336,7 @@ CastWebView::Scoped RuntimeApplicationSe
-       GetFlagEntry(feature::kCastCoreIsRemoteControlMode,
-                    config_.extra_features(), /*default_value=*/false);
-   params->enabled_for_dev = IsEnabledForDev();
+@@ -346,7 +346,7 @@ CastWebView::Scoped RuntimeApplicationSe
+   params->force_720p_resolution =
+       GetFlagEntry(feature::kCastCoreForce720p, config_.extra_features(),
+                    /*default_value=*/false);
 -#if BUILDFLAG(ENABLE_CAST_RECEIVER) && BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(ENABLE_CAST_RECEIVER) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
-   // cast_receiver::ApplicationControlsImpl constructs an instance of
-   // url_rewrite::UrlRequestRewriteRulesManager. CastWebContentsImpl should NOT
-   // construct its own instance, or UrlRequestRulesReceiver will crash when a
+   // Starboard-based (linux) cast receivers may not render their UI at 720p, so
+   // we need to scale to the proper resolution. For example, a 4k TV may render
+   // the window at 1920x1080, so a scaling factor of 1.5 is necessary for a 720p

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/src/filesystem/filesystem_clock.cpp.orig	2024-10-26 07:02:04.111983500 +0000
+--- third_party/libc++/src/src/filesystem/filesystem_clock.cpp.orig	2024-11-14 01:06:42.509480500 +0000
 +++ third_party/libc++/src/src/filesystem/filesystem_clock.cpp
 @@ -30,7 +30,7 @@
  #endif

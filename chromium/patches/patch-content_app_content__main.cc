@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main.cc.orig	2024-10-26 07:00:12.852409600 +0000
+--- content/app/content_main.cc.orig	2024-11-14 01:04:08.316601300 +0000
 +++ content/app/content_main.cc
 @@ -227,7 +227,7 @@ NO_STACK_PROTECTOR int RunContentProcess
      base::EnableTerminationOnOutOfMemory();

@@ -1,5 +1,6 @@
 $NetBSD$
 
-RMD160 (OpenRA/release-20161019.tar.gz) = 0de95795c2578cdead6e2090cd2528142f600776
-SHA512 (OpenRA/release-20161019.tar.gz) = f21ed9140527dacae3ca983bde44b7be50d47b9b0af06c67e5dc8acfff29b59561e20ec49be8eda67726a2eb96970b843e1c9fcb2932ea91855dc5a502199aec
-Size (OpenRA/release-20161019.tar.gz) = 12017426 bytes
+BLAKE2s (OpenRA/release-20231010.tar.gz) = ad03cef3d622997b8e93080f3907b9a874ebe4b8416c75f5bb1bfc22034f73eb
+SHA512 (OpenRA/release-20231010.tar.gz) = 76968f241f506faf879793b63553bd259eb2ae204c607dcbfdb03078773c32d3d122ffe554049d31fed5cd7d35bf22fb07ef0fa73505a88b2ce7f8ae21189f8d
+Size (OpenRA/release-20231010.tar.gz) = 24088852 bytes
+SHA1 (patch-configure-system-libraries.sh) = 119d7b7c2f2e59de7001f0ebad20e86091a70248

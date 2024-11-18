@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-10-26 07:00:13.145587700 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-11-14 01:04:08.377601900 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.h
 @@ -34,7 +34,7 @@ class DevToolsFrontendHostImpl : public 
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_toplevel_window.h.orig	2024-10-26 07:01:27.357895000 +0000
+--- ui/ozone/platform/wayland/host/wayland_toplevel_window.h.orig	2024-11-14 01:04:23.967757700 +0000
 +++ ui/ozone/platform/wayland/host/wayland_toplevel_window.h
-@@ -261,7 +261,7 @@ class WaylandToplevelWindow : public Way
+@@ -262,7 +262,7 @@ class WaylandToplevelWindow : public Way
    // The display ID to switch to in case the state is `kFullscreen`.
    int64_t fullscreen_display_id_ = display::kInvalidDisplayId;
  

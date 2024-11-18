@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2024-10-26 07:00:01.104272400 +0000
+--- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2024-11-14 01:04:04.829566200 +0000
 +++ chrome/browser/ui/views/profiles/profile_picker_view.cc
 @@ -88,7 +88,7 @@
  #include "chrome/browser/ui/views/profiles/first_run_flow_controller_lacros.h"

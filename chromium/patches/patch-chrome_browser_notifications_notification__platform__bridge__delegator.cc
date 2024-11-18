@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/notifications/notification_platform_bridge_delegator.cc.orig	2024-10-26 06:59:57.365000700 +0000
+--- chrome/browser/notifications/notification_platform_bridge_delegator.cc.orig	2024-11-14 01:04:03.739555400 +0000
 +++ chrome/browser/notifications/notification_platform_bridge_delegator.cc
 @@ -56,7 +56,7 @@ bool SystemNotificationsEnabled(Profile*
  #elif BUILDFLAG(IS_WIN)

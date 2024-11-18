@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.h.orig	2024-10-26 07:00:14.100167800 +0000
+--- content/public/common/content_switches.h.orig	2024-11-14 01:04:08.663604700 +0000
 +++ content/public/common/content_switches.h
 @@ -110,6 +110,7 @@ CONTENT_EXPORT extern const char kEnable
  CONTENT_EXPORT extern const char kEnableIsolatedWebAppsInRenderer[];
@@ -14,7 +14,7 @@ $NetBSD$
  CONTENT_EXPORT extern const char kEnableNetworkInformationDownlinkMax[];
  CONTENT_EXPORT extern const char kEnableCanvas2DLayers[];
  CONTENT_EXPORT extern const char kEnablePluginPlaceholderTesting[];
-@@ -266,7 +267,7 @@ CONTENT_EXPORT extern const char kPreven
+@@ -265,7 +266,7 @@ CONTENT_EXPORT extern const char kPreven
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

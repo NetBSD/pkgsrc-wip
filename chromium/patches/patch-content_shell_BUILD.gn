@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/BUILD.gn.orig	2024-10-26 07:00:14.209234000 +0000
+--- content/shell/BUILD.gn.orig	2024-11-14 01:04:08.710605100 +0000
 +++ content/shell/BUILD.gn
-@@ -1084,7 +1084,7 @@ group("content_shell_crash_test") {
+@@ -1086,7 +1086,7 @@ group("content_shell_crash_test") {
    if (is_win) {
      data_deps += [ "//build/win:copy_cdb_to_output" ]
    }

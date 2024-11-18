@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-10-26 07:00:13.747953700 +0000
+--- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-11-14 01:04:08.578603700 +0000
 +++ content/browser/utility_process_host_receiver_bindings.cc
-@@ -10,12 +10,12 @@
+@@ -10,13 +10,13 @@
  #include "content/public/browser/content_browser_client.h"
  #include "content/public/common/content_client.h"
  
@@ -16,12 +16,13 @@ $NetBSD$
  #include "content/browser/font_service.h"  // nogncheck
  #endif
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  #include "components/viz/host/gpu_client.h"
  #include "content/public/browser/gpu_client.h"
  #endif
-@@ -24,13 +24,13 @@ namespace content {
+@@ -25,14 +25,14 @@ namespace content {
  
  void UtilityProcessHost::BindHostReceiver(
      mojo::GenericPendingReceiver receiver) {
@@ -32,8 +33,9 @@ $NetBSD$
      return;
    }
  #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    if (allowed_gpu_) {
      // TODO(crbug.com/328099369) Remove once all clients get this directly.
      if (auto gpu_receiver = receiver.As<viz::mojom::Gpu>()) {

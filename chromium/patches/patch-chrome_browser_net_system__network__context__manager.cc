@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2024-10-26 06:59:57.254933800 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2024-11-14 01:04:03.729555400 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -102,7 +102,7 @@
  
@@ -142,7 +142,7 @@ $NetBSD$
    gssapi_library_loader_observer_.Install(network_service);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -969,7 +969,7 @@ bool SystemNetworkContextManager::IsNetw
+@@ -965,7 +965,7 @@ bool SystemNetworkContextManager::IsNetw
        break;
    }
  

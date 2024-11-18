@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/platform_canvas.h.orig	2024-10-26 07:00:30.615294000 +0000
+--- skia/ext/platform_canvas.h.orig	2024-11-14 01:04:11.592634000 +0000
 +++ skia/ext/platform_canvas.h
 @@ -58,7 +58,7 @@ SK_API HDC GetNativeDrawingContext(SkCan
  

@@ -4,41 +4,41 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_capture/video_capture_service_impl.cc.orig	2024-10-26 07:00:30.559268200 +0000
+--- services/video_capture/video_capture_service_impl.cc.orig	2024-11-14 01:04:11.571633800 +0000
 +++ services/video_capture/video_capture_service_impl.cc
-@@ -42,7 +42,7 @@
- #include "services/video_capture/lacros/device_factory_adapter_lacros.h"
+@@ -43,7 +43,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  #include "media/capture/capture_switches.h"
  #include "media/capture/video/video_capture_gpu_channel_host.h"
  #include "services/viz/public/cpp/gpu/context_provider_command_buffer.h"
-@@ -110,7 +110,7 @@ class VideoCaptureServiceImpl::GpuDepend
-       this};
+@@ -112,7 +112,7 @@ class VideoCaptureServiceImpl::GpuDepend
  };
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  // Intended usage of this class is to create viz::Gpu in utility process and
  // connect to viz::GpuClient of browser process, which will call to Gpu service.
  // Also, this class holds the viz::ContextProvider to listen and monitor Gpu
-@@ -337,7 +337,7 @@ void VideoCaptureServiceImpl::LazyInitia
+@@ -334,7 +334,7 @@ void VideoCaptureServiceImpl::LazyInitia
      gpu_dependencies_context_ = std::make_unique<GpuDependenciesContext>();
  
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
--#if BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_CHROMEOS_ASH)
    {
  #else
-   if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled()) {
-@@ -469,7 +469,7 @@ void VideoCaptureServiceImpl::OnGpuInfoU
- }
+@@ -468,7 +468,7 @@ void VideoCaptureServiceImpl::OnGpuInfoU
  #endif
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  void VideoCaptureServiceImpl::SetVizGpu(std::unique_ptr<viz::Gpu> viz_gpu) {
    viz_gpu_ = std::move(viz_gpu);
  }

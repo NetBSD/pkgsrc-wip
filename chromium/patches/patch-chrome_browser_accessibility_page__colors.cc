@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/accessibility/page_colors.cc.orig	2024-10-26 06:59:53.768816000 +0000
+--- chrome/browser/accessibility/page_colors.cc.orig	2024-11-14 01:04:02.887547000 +0000
 +++ chrome/browser/accessibility/page_colors.cc
 @@ -12,7 +12,7 @@
  #include "components/sync_preferences/pref_service_syncable.h"

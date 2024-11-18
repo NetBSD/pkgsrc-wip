@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.h.orig	2024-10-26 07:00:12.971482000 +0000
+--- content/browser/browser_child_process_host_impl.h.orig	2024-11-14 01:04:08.358601600 +0000
 +++ content/browser/browser_child_process_host_impl.h
 @@ -35,7 +35,7 @@
  #include "base/win/object_watcher.h"

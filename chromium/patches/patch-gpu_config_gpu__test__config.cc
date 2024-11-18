@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_test_config.cc.orig	2024-10-26 07:00:17.967517100 +0000
+--- gpu/config/gpu_test_config.cc.orig	2024-11-14 01:04:09.455612700 +0000
 +++ gpu/config/gpu_test_config.cc
 @@ -29,7 +29,7 @@ GPUTestConfig::OS GetCurrentOS() {
  #if BUILDFLAG(IS_CHROMEOS_ASH)

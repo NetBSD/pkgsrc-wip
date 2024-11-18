@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/third_party/marl/src/memory.cpp.orig	2024-10-26 07:03:12.976689300 +0000
+--- third_party/swiftshader/third_party/marl/src/memory.cpp.orig	2024-11-14 01:13:12.846992300 +0000
 +++ third_party/swiftshader/third_party/marl/src/memory.cpp
 @@ -19,7 +19,8 @@
  

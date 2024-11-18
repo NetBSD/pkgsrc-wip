@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2024-10-26 06:59:56.896716400 +0000
+--- chrome/browser/flag_descriptions.h.orig	2024-11-14 01:04:03.606554000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -297,7 +297,7 @@ extern const char kImprovedSigninUIOnDes
+@@ -293,7 +293,7 @@ extern const char kImprovedSigninUIOnDes
  extern const char kImprovedSigninUIOnDesktopDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,16 @@ $NetBSD$
  extern const char kAutofillEnableAmountExtractionDesktopName[];
  extern const char kAutofillEnableAmountExtractionDesktopDescription[];
  #endif
-@@ -715,7 +715,7 @@ extern const char kDevicePostureName[];
+@@ -302,7 +302,7 @@ extern const char kAutofillEnableAndroid
+ extern const char kAutofillEnableAndroidNKeyForFidoAuthenticationDescription[];
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ extern const char kAutofillEnableBuyNowPayLaterForAffirmName[];
+ extern const char kAutofillEnableBuyNowPayLaterForAffirmDescription[];
+ 
+@@ -737,7 +737,7 @@ extern const char kDevicePostureName[];
  extern const char kDevicePostureDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +33,7 @@ $NetBSD$
  extern const char kDocumentPictureInPictureAnimateResizeName[];
  extern const char kDocumentPictureInPictureAnimateResizeDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) ||
-@@ -2022,7 +2022,7 @@ extern const char kShowAutofillTypePredi
+@@ -1998,7 +1998,7 @@ extern const char kShowAutofillTypePredi
  extern const char kShowAutofillTypePredictionsDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +42,7 @@ $NetBSD$
  extern const char kShowFeaturedEnterpriseSiteSearchName[];
  extern const char kShowFeaturedEnterpriseSiteSearchDescription[];
  
-@@ -2044,7 +2044,7 @@ extern const char kSiteInstanceGroupsFor
+@@ -2020,7 +2020,7 @@ extern const char kSiteInstanceGroupsFor
  extern const char kSiteInstanceGroupsForDataUrlsDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -42,7 +51,16 @@ $NetBSD$
  extern const char kSiteSearchSettingsPolicyName[];
  extern const char kSiteSearchSettingsPolicyDescription[];
  
-@@ -4576,7 +4576,7 @@ extern const char kBlinkExtensionDiagnos
+@@ -2182,7 +2182,7 @@ extern const char kTouchTextEditingRedes
+ extern const char kTranslateForceTriggerOnEnglishName[];
+ extern const char kTranslateForceTriggerOnEnglishDescription[];
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ extern const char kTranslationAPIName[];
+ extern const char kTranslationAPIDescription[];
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -4514,7 +4514,7 @@ extern const char kBlinkExtensionDiagnos
  extern const char kBlinkExtensionDiagnosticsDescription[];
  #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -51,7 +69,7 @@ $NetBSD$
  extern const char kGetAllScreensMediaName[];
  extern const char kGetAllScreensMediaDescription[];
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -4713,7 +4713,7 @@ extern const char kV4L2FlatStatefulVideo
+@@ -4652,7 +4652,7 @@ extern const char kEnableArmHwdrmDescrip
  
  // Linux ---------------------------------------------------------------------
  
@@ -60,17 +78,17 @@ $NetBSD$
  extern const char kOzonePlatformHintChoiceDefault[];
  extern const char kOzonePlatformHintChoiceAuto[];
  extern const char kOzonePlatformHintChoiceX11[];
-@@ -4735,6 +4735,9 @@ extern const char kWaylandPerWindowScali
+@@ -4677,6 +4677,9 @@ extern const char kWaylandTextInputV3Des
  
- extern const char kWaylandTextInputV3Name[];
- extern const char kWaylandTextInputV3Description[];
+ extern const char kWaylandUiScalingName[];
+ extern const char kWaylandUiScalingDescription[];
 +
 +extern const char kAudioBackendName[];
 +extern const char kAudioBackendDescription[];
  #endif  // BUILDFLAG(IS_LINUX)
  
- // All views-based platforms --------------------------------------------------
-@@ -4764,7 +4767,7 @@ extern const char kWebBluetoothConfirmPa
+ // Random platform combinations -----------------------------------------------
+@@ -4696,7 +4699,7 @@ extern const char kWebBluetoothConfirmPa
  extern const char kWebBluetoothConfirmPairingSupportDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -79,8 +97,8 @@ $NetBSD$
  extern const char kSkipUndecryptablePasswordsName[];
  extern const char kSkipUndecryptablePasswordsDescription[];
  
-@@ -4780,7 +4783,7 @@ extern const char kScreenlockReauthPromo
- #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+@@ -4718,7 +4721,7 @@ extern const char kScreenlockReauthPromo
+         // BUILDFLAG(IS_CHROMEOS_ASH)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
@@ -88,7 +106,7 @@ $NetBSD$
  extern const char kFollowingFeedSidepanelName[];
  extern const char kFollowingFeedSidepanelDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-@@ -4791,7 +4794,7 @@ extern const char kTaskManagerDesktopRef
+@@ -4732,7 +4735,7 @@ extern const char kTaskManagerDesktopRef
  extern const char kTaskManagerDesktopRefreshDescription[];
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -97,7 +115,7 @@ $NetBSD$
  extern const char kEnableNetworkServiceSandboxName[];
  extern const char kEnableNetworkServiceSandboxDescription[];
  
-@@ -4888,7 +4891,7 @@ extern const char kElementCaptureDescrip
+@@ -4829,7 +4832,7 @@ extern const char kElementCaptureDescrip
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -106,8 +124,8 @@ $NetBSD$
  extern const char kUIDebugToolsName[];
  extern const char kUIDebugToolsDescription[];
  #endif
-@@ -4942,7 +4945,7 @@ extern const char kAutofillCaretExtracti
- extern const char kAutofillCaretExtractionDescription[];
+@@ -4880,7 +4883,7 @@ extern const char kComposeUpfrontInputMo
+ extern const char kComposeUpfrontInputModesDescription[];
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
@@ -115,9 +133,9 @@ $NetBSD$
  extern const char kThirdPartyProfileManagementName[];
  extern const char kThirdPartyProfileManagementDescription[];
  
-@@ -4998,7 +5001,7 @@ extern const char kEnableCertManagementV
- extern const char kEnableCertManagementV2UIDescription[];
- #endif  // BUILDFLAG(CHROME_ROOT_STORE_CERT_MANAGEMENT_UI)
+@@ -4946,7 +4949,7 @@ extern const char kOverlayScrollbarsOSSe
+ extern const char kOverlayScrollbarsOSSettingsDescription[];
+ #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)

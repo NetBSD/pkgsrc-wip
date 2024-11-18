@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/web_app_install_info.h.orig	2024-10-26 07:00:01.793691200 +0000
+--- chrome/browser/web_applications/web_app_install_info.h.orig	2024-11-14 01:04:05.046568400 +0000
 +++ chrome/browser/web_applications/web_app_install_info.h
 @@ -39,7 +39,7 @@
  #include "url/gurl.h"

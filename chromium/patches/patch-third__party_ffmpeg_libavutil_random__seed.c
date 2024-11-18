@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-10-26 07:02:37.880860800 +0000
+--- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-11-14 01:07:54.738151000 +0000
 +++ third_party/ffmpeg/libavutil/random_seed.c
 @@ -20,6 +20,10 @@
  

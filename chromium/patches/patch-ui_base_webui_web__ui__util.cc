@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/webui/web_ui_util.cc.orig	2024-10-26 07:01:26.709786000 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2024-11-14 01:04:23.732755200 +0000
 +++ ui/base/webui/web_ui_util.cc
 @@ -44,7 +44,7 @@ namespace {
  constexpr float kMaxScaleFactor = 1000.0f;

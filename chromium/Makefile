@@ -1,15 +1,20 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			130.0.6723.69
+VERSION=			131.0.6778.69
 CATEGORIES=			www
-MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
+MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
+MASTER_SITES+=			https://chromium-tarballs.syd1.cdn.digitaloceanspaces.com/
+MASTER_SITES+=			https://nerd.hu/distfiles/
 EXTRACT_SUFX_C=			.tar.xz
 
-PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
-SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
+PROFILE_DISTFILES=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
+PROFILE_DISTFILES+=		chrome-v8-${VERSION}.profdata${EXTRACT_SUFX_C}
+GN_DISTFILES=			chrome-gn-${VERSION}-src${EXTRACT_SUFX_C}
+SITES.${PROFILE_DISTFILE}=	https://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
-DISTFILES+=			${PROFILE_DISTFILE}
+DISTFILES+=			${PROFILE_DISTFILES}
+DISTFILES+=			${GN_DISTFILES}
 
 # audioio source
 A_VERSION=			130.0
@@ -78,14 +83,17 @@ FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pathes
+SUBST_FILES.path+=	base/base_paths_posix.cc
+SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
+SUBST_FILES.path+=	chromium.sh
 SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
-SUBST_FILES.path+=	chrome.sh
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
@@ -101,7 +109,7 @@ SUBST_SED.man+=		-e 's,@@MENUNAME@@,Chromium Web Browser,g'
 SUBST_CLASSES+=		pulse
 SUBST_STAGE.pulse=	pre-configure
 SUBST_MESSAGE.pulse=	Set BUILT_WITH_PULSE to ${WITH_PA} in chromium wrapper
-SUBST_FILES.pulse+=	chrome.sh
+SUBST_FILES.pulse+=	chromium.sh
 SUBST_SED.pulse+=	-e 's,@PULSE@,${WITH_PA},g'
 
 .include "tests.mk"
@@ -215,14 +223,14 @@ GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\"
 #GN_ARGS+=	google_default_client_id=\"74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com\"
 #GN_ARGS+=	google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
-NOT_PAX_MPROTECT_SAFE+=	chrome/chrome
-#NOT_PAX_ASLR_SAFE+=	chrome/chrome
+NOT_PAX_MPROTECT_SAFE+=	lib/chromium/chrome
+#NOT_PAX_ASLR_SAFE+=	lib/chromium/chrome
 
 PKG_CC=			clang
 PKG_CXX=		clang++
 
 post-extract:
-	${CP} ${FILESDIR}/chrome ${WRKSRC}/chrome.sh
+	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 pre-configure:
 #	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
@@ -259,9 +267,9 @@ do-build:
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out/${BUILDTYPE} ${TARGET}
 
 
-CHROMIUM=		chrome
+CHROMIUM=		chromium
 BUILDDIR=		${WRKSRC}/out/${BUILDTYPE}
-INSTALLATION_DIRS+=	${CHROMIUM}
+INSTALLATION_DIRS+=	lib/${CHROMIUM}
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PREFIX}/share/applications
@@ -282,26 +290,26 @@ CHROMIUM_LIBS+=		vk_swiftshader_icd.json
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/chrome.sh ${DESTDIR}${PREFIX}/bin/${CHROMIUM}
+	${INSTALL_SCRIPT} ${WRKSRC}/${CHROMIUM}.sh ${DESTDIR}${PREFIX}/bin/${CHROMIUM}
 	${INSTALL_DATA} ${FILESDIR}/chromium-browser.desktop ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_PROGRAM} ${BUILDDIR}/${CHROMIUM} ${DESTDIR}${PREFIX}/${CHROMIUM}
+	${INSTALL_PROGRAM} ${BUILDDIR}/chrome ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 	${INSTALL_PROGRAM} ${BUILDDIR}/chromedriver.unstripped  ${DESTDIR}${PREFIX}/bin/chromedriver
 .for i in ${CHROMIUM_LIBS}
-	${INSTALL_LIB} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/${CHROMIUM}
+	${INSTALL_LIB} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/resources/manpage.1.in \
-		 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/chrome.1
-	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/${CHROMIUM}
+		 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${CHROMIUM}.1
+	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .for i in ${ICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${i}.png \
-		${DESTDIR}${PREFIX}/${ICONS_DIR${i}}/chrome.png
+		${DESTDIR}${PREFIX}/${ICONS_DIR${i}}/${CHROMIUM}.png
 .endfor
 .for i in locales resources
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
-		${FIND} ${i} -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM}
+		${FIND} ${i} -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
 .for f in snapshot_blob.bin v8_context_snapshot.bin
-	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/${CHROMIUM}
+	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"

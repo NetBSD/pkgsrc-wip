@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2024-10-26 06:59:56.641561300 +0000
+--- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2024-11-14 01:04:03.543553400 +0000
 +++ chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc
-@@ -29,7 +29,7 @@
+@@ -28,7 +28,7 @@
  #include "extensions/browser/process_manager.h"
  #include "extensions/common/error_utils.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "extensions/common/permissions/permissions_data.h"
  #endif
  
-@@ -38,7 +38,7 @@ namespace {
+@@ -37,7 +37,7 @@ namespace {
  bool CanEnableAudioDebugRecordingsFromExtension(
      const extensions::Extension* extension) {
    bool enabled_by_permissions = false;
@@ -24,7 +24,7 @@ $NetBSD$
    if (extension) {
      enabled_by_permissions =
          extension->permissions_data()->active_permissions().HasAPIPermission(
-@@ -576,7 +576,7 @@ void WebrtcLoggingPrivateStartEventLoggi
+@@ -575,7 +575,7 @@ void WebrtcLoggingPrivateStartEventLoggi
  
  ExtensionFunction::ResponseAction
  WebrtcLoggingPrivateGetLogsDirectoryFunction::Run() {

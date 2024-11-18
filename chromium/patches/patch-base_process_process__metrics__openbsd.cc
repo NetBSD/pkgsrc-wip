@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_openbsd.cc.orig	2024-10-26 06:59:45.377718200 +0000
+--- base/process/process_metrics_openbsd.cc.orig	2024-11-14 01:04:01.836536400 +0000
 +++ base/process/process_metrics_openbsd.cc
 @@ -6,36 +6,40 @@
  

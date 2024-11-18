@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/password_reuse_manager_factory.cc.orig	2024-10-26 06:59:57.567123400 +0000
+--- chrome/browser/password_manager/password_reuse_manager_factory.cc.orig	2024-11-14 01:04:03.806556000 +0000
 +++ chrome/browser/password_manager/password_reuse_manager_factory.cc
 @@ -141,7 +141,7 @@ PasswordReuseManagerFactory::BuildServic
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch

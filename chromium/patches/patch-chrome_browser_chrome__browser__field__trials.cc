@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_field_trials.cc.orig	2024-10-26 06:59:55.770031700 +0000
+--- chrome/browser/chrome_browser_field_trials.cc.orig	2024-11-14 01:04:03.353551600 +0000
 +++ chrome/browser/chrome_browser_field_trials.cc
-@@ -48,7 +48,7 @@
+@@ -49,7 +49,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_trial.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/nix/xdg_util.h"
  #include "ui/base/ui_base_features.h"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -155,7 +155,7 @@ void ChromeBrowserFieldTrials::RegisterS
+@@ -135,7 +135,7 @@ void ChromeBrowserFieldTrials::RegisterS
  #endif
  }
  

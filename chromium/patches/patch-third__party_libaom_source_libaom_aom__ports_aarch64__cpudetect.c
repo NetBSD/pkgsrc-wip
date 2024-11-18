@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-10-26 07:02:07.928436300 +0000
+--- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-11-14 01:05:13.999004800 +0000
 +++ third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
-@@ -99,10 +99,46 @@ static int arm_get_cpu_caps(void) {
+@@ -127,10 +127,46 @@ static int arm_get_cpu_caps(void) {
    return flags;
  }
  

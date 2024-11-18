@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/can_lower_nice_to.cc.orig	2024-10-26 06:59:45.366711600 +0000
+--- base/posix/can_lower_nice_to.cc.orig	2024-11-14 01:04:01.831536300 +0000
 +++ base/posix/can_lower_nice_to.cc
 @@ -11,8 +11,12 @@
  

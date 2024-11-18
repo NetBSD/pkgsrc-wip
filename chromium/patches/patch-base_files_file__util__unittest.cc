@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_unittest.cc.orig	2024-10-26 06:59:45.305674600 +0000
+--- base/files/file_util_unittest.cc.orig	2024-11-14 01:04:01.800536200 +0000
 +++ base/files/file_util_unittest.cc
-@@ -3886,7 +3886,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
+@@ -3928,7 +3928,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,7 @@ $NetBSD$
  TEST_F(FileUtilTest, ReadFileToStringWithProcFileSystem) {
    FilePath file_path("/proc/cpuinfo");
    std::string data = "temp";
-@@ -4608,7 +4608,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
+@@ -4665,7 +4665,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
                  NULL);
  #else
      size_t bytes_written =

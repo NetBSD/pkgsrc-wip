@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2024-10-26 07:00:06.948823200 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2024-11-14 01:04:06.862586700 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -445,6 +445,9 @@ std::string GetPlatformForUAMetadata() {
  # else

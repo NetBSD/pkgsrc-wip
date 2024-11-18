@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2024-10-26 07:00:11.275451700 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-11-14 01:04:07.811596200 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -66,7 +66,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExten
               "UpdatedSupervisedUserExtensionApprovalStrings",
@@ -49,3 +49,12 @@ $NetBSD$
  BASE_FEATURE(kForceSupervisedUserReauthenticationForYouTube,
               "ForceSupervisedUserReauthenticationForYouTube",
               base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -172,7 +172,7 @@ BASE_FEATURE(kReplaceSupervisionSystemCa
+ 
+ BASE_FEATURE(kFetchListFamilyMembersWithCapability,
+              "FetchListFamilyMembersWithCapability",
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT

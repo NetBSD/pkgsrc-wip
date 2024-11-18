@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/chromoting_event.cc.orig	2024-10-26 07:00:29.706874600 +0000
+--- remoting/base/chromoting_event.cc.orig	2024-11-14 01:04:11.293630800 +0000
 +++ remoting/base/chromoting_event.cc
 @@ -192,7 +192,7 @@ void ChromotingEvent::AddSystemInfo() {
    SetString(kCpuKey, base::SysInfo::OperatingSystemArchitecture());

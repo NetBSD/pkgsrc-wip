@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/remote_open_url_client.cc.orig	2024-10-26 07:00:29.919974800 +0000
+--- remoting/host/remote_open_url/remote_open_url_client.cc.orig	2024-11-14 01:04:11.338631400 +0000
 +++ remoting/host/remote_open_url/remote_open_url_client.cc
 @@ -18,7 +18,7 @@
  #include "remoting/host/mojom/chromoting_host_services.mojom.h"

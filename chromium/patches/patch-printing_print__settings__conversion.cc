@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings_conversion.cc.orig	2024-10-26 07:00:29.684864300 +0000
+--- printing/print_settings_conversion.cc.orig	2024-11-14 01:04:11.289631000 +0000
 +++ printing/print_settings_conversion.cc
 @@ -285,7 +285,7 @@ std::unique_ptr<PrintSettings> PrintSett
      settings->set_is_modifiable(is_modifiable.value());

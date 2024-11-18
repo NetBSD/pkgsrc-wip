@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2024-10-26 07:00:01.610580000 +0000
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2024-11-14 01:04:04.980568000 +0000
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
 @@ -209,7 +209,7 @@ base::Value::Dict CreateProfileEntry(con
  
@@ -15,7 +15,7 @@ $NetBSD$
    } else if (base::FeatureList::IsEnabled(
                   supervised_user::kShowKiteForSupervisedUsers) &&
               entry->IsSupervised()) {
-@@ -1224,7 +1224,7 @@ void ProfilePickerHandler::BeginFirstWeb
+@@ -1211,7 +1211,7 @@ void ProfilePickerHandler::BeginFirstWeb
  }
  
  void ProfilePickerHandler::MaybeUpdateGuestMode() {

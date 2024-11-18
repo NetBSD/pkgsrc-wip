@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_unittest.cc.orig	2024-10-26 06:59:45.510799200 +0000
+--- base/system/sys_info_unittest.cc.orig	2024-11-14 01:04:01.852536700 +0000
 +++ base/system/sys_info_unittest.cc
 @@ -265,12 +265,16 @@ TEST_F(SysInfoTest, GetHardwareInfo) {
    EXPECT_TRUE(IsStringUTF8(hardware_info->model));

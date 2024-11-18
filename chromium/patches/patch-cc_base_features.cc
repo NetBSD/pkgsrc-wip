@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2024-10-26 06:59:45.894031800 +0000
+--- cc/base/features.cc.orig	2024-11-14 01:04:01.985538000 +0000
 +++ cc/base/features.cc
-@@ -78,7 +78,7 @@ const base::FeatureParam<int> kDeferImpl
+@@ -85,7 +85,7 @@ const base::FeatureParam<int> kDeferImpl
  // be using a separate flag to control the launch on GL.
  BASE_FEATURE(kUseDMSAAForTiles,
               "UseDMSAAForTiles",

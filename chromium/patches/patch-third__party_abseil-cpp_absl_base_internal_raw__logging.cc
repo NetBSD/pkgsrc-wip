@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/base/internal/raw_logging.cc.orig	2024-10-26 07:00:31.507696900 +0000
+--- third_party/abseil-cpp/absl/base/internal/raw_logging.cc.orig	2024-11-14 01:04:11.672634600 +0000
 +++ third_party/abseil-cpp/absl/base/internal/raw_logging.cc
 @@ -44,7 +44,7 @@
  #if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \

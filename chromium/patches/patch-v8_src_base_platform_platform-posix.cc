@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2024-10-26 07:03:24.666949500 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2024-11-14 01:10:09.507233400 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -27,6 +27,9 @@
      defined(__NetBSD__) || defined(__OpenBSD__)
@@ -43,7 +43,7 @@ $NetBSD$
  // static
  void* OS::GetRandomMmapAddr() {
    uintptr_t raw_addr;
-@@ -416,6 +428,7 @@ void* OS::GetRandomMmapAddr() {
+@@ -412,6 +424,7 @@ void* OS::GetRandomMmapAddr() {
  #endif
    return reinterpret_cast<void*>(raw_addr);
  }
@@ -51,7 +51,7 @@ $NetBSD$
  
  // TODO(bbudge) Move Cygwin and Fuchsia stuff into platform-specific files.
  #if !V8_OS_CYGWIN && !V8_OS_FUCHSIA
-@@ -704,7 +717,7 @@ void OS::DestroySharedMemoryHandle(Platf
+@@ -700,7 +713,7 @@ void OS::DestroySharedMemoryHandle(Platf
  #if !V8_OS_ZOS
  // static
  bool OS::HasLazyCommits() {
@@ -60,7 +60,7 @@ $NetBSD$
    return true;
  #else
    // TODO(bbudge) Return true for all POSIX platforms.
-@@ -859,6 +872,8 @@ int OS::GetCurrentThreadId() {
+@@ -855,6 +868,8 @@ int OS::GetCurrentThreadId() {
    return static_cast<int>(thread_self());
  #elif V8_OS_FUCHSIA
    return static_cast<int>(zx_thread_self());
@@ -69,7 +69,7 @@ $NetBSD$
  #elif V8_OS_SOLARIS
    return static_cast<int>(pthread_self());
  #elif V8_OS_ZOS
-@@ -1160,7 +1175,11 @@ Thread::Thread(const Options& options)
+@@ -1156,7 +1171,11 @@ Thread::Thread(const Options& options)
        stack_size_(options.stack_size()),
        priority_(options.priority()),
        start_semaphore_(nullptr) {
@@ -81,7 +81,7 @@ $NetBSD$
    if (stack_size_ > 0) stack_size_ = std::max(stack_size_, min_stack_size);
    set_name(options.name());
  }
-@@ -1175,7 +1194,7 @@ static void SetThreadName(const char* na
+@@ -1171,7 +1190,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    static_assert(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
@@ -90,7 +90,7 @@ $NetBSD$
  #elif V8_OS_DARWIN
    // pthread_setname_np is only available in 10.6 or later, so test
    // for it at runtime.
-@@ -1350,7 +1369,7 @@ void Thread::SetThreadLocal(LocalStorage
+@@ -1346,7 +1365,7 @@ void Thread::SetThreadLocal(LocalStorage
  // keep this version in POSIX as most Linux-compatible derivatives will
  // support it. MacOS and FreeBSD are different here.
  #if !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) && !defined(_AIX) && \

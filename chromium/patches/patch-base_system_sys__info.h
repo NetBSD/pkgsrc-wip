@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.h.orig	2024-10-26 06:59:45.509798500 +0000
+--- base/system/sys_info.h.orig	2024-11-14 01:04:01.851536500 +0000
 +++ base/system/sys_info.h
-@@ -325,6 +325,8 @@ class BASE_EXPORT SysInfo {
+@@ -331,6 +331,8 @@ class BASE_EXPORT SysInfo {
    static void ResetCpuSecurityMitigationsEnabledForTesting();
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
   private:
    friend class test::ScopedAmountOfPhysicalMemoryOverride;
    FRIEND_TEST_ALL_PREFIXES(SysInfoTest, AmountOfAvailablePhysicalMemory);
-@@ -337,7 +339,7 @@ class BASE_EXPORT SysInfo {
+@@ -343,7 +345,7 @@ class BASE_EXPORT SysInfo {
    static HardwareInfo GetHardwareInfoSync();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/background_mode_optimizer.cc.orig	2024-10-26 06:59:55.724003800 +0000
+--- chrome/browser/background/background_mode_optimizer.cc.orig	2024-11-14 01:04:03.332551500 +0000
 +++ chrome/browser/background/background_mode_optimizer.cc
 @@ -31,7 +31,7 @@ std::unique_ptr<BackgroundModeOptimizer>
      return nullptr;

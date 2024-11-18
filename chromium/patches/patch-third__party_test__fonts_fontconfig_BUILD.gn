@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/test_fonts/fontconfig/BUILD.gn.orig	2024-10-26 07:01:19.345481900 +0000
+--- third_party/test_fonts/fontconfig/BUILD.gn.orig	2024-11-14 01:04:22.727745300 +0000
 +++ third_party/test_fonts/fontconfig/BUILD.gn
 @@ -26,7 +26,11 @@ if (is_linux || is_chromeos) {
  

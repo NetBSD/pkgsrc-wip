@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2024-10-26 07:00:00.682016000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2024-11-14 01:04:04.734565300 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -103,7 +103,7 @@ BASE_FEATURE(kAccessCodeCastUI,
+@@ -104,7 +104,7 @@ BASE_FEATURE(kAccessCodeCastUI,
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  
@@ -15,16 +15,7 @@ $NetBSD$
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
  BASE_FEATURE(kFewerUpdateConfirmations,
-@@ -395,7 +395,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRen
-              "TopChromeWebUIUsesSpareRenderer",
-              base::FEATURE_ENABLED_BY_DEFAULT);
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Enables alternate update-related text to be displayed in browser app menu
- // button, menu item and confirmation dialog.
- BASE_FEATURE(kUpdateTextOptions,
-@@ -467,7 +467,7 @@ BASE_FEATURE(kStopLoadingAnimationForHid
+@@ -446,7 +446,7 @@ BASE_FEATURE(kStopLoadingAnimationForHid
               "StopLoadingAnimationForHiddenWindow",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

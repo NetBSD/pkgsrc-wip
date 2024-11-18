@@ -4,8 +4,17 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2024-10-26 06:59:56.912726000 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2024-11-14 01:04:03.613554200 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
+@@ -10,7 +10,7 @@
+ // New headless mode is available on Linux, Windows and Mac platforms.
+ // More platforms will be added later, so avoid function level clutter
+ // by providing stub implementations at the end of the file.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ 
+ #include "base/base_switches.h"
+ #include "base/files/file_path.h"
 @@ -19,7 +19,7 @@
  #include "chrome/common/chrome_switches.h"
  #include "content/public/common/content_switches.h"
@@ -15,8 +24,8 @@ $NetBSD$
  #include "ui/gl/gl_switches.h"               // nogncheck
  #include "ui/ozone/public/ozone_switches.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -87,7 +87,7 @@ class HeadlessModeHandleImpl : public He
-       command_line->AppendSwitchPath(switches::kUserDataDir, GetUserDataDir());
+@@ -94,7 +94,7 @@ class HeadlessModeHandleImpl : public He
+       }
      }
  
 -#if BUILDFLAG(IS_LINUX)

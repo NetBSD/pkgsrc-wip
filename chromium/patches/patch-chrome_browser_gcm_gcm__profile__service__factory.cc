@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2024-10-26 06:59:56.902720000 +0000
+--- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2024-11-14 01:04:03.608554100 +0000
 +++ chrome/browser/gcm/gcm_profile_service_factory.cc
 @@ -89,7 +89,7 @@ GCMProfileServiceFactory::ScopedTestingF
  // static

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2024-10-26 07:04:45.336646000 +0000
+--- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2024-11-14 01:09:19.594974000 +0000
 +++ third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto
 @@ -10,7 +10,7 @@ message V4l2QbufFtraceEvent {
    optional uint32 field = 2;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/profile_network_context_service.cc.orig	2024-10-26 06:59:57.250931500 +0000
+--- chrome/browser/net/profile_network_context_service.cc.orig	2024-11-14 01:04:03.726555300 +0000
 +++ chrome/browser/net/profile_network_context_service.cc
-@@ -140,7 +140,7 @@
+@@ -142,7 +142,7 @@
  #include "chromeos/startup/browser_params_proxy.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #include "components/enterprise/client_certificates/core/certificate_provisioning_service.h"
  #include "components/enterprise/client_certificates/core/client_certificates_service.h"
-@@ -260,7 +260,7 @@ void UpdateCookieSettings(Profile* profi
+@@ -269,7 +269,7 @@ void UpdateCookieSettings(Profile* profi
        });
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
      Profile* profile,
      std::unique_ptr<net::ClientCertStore> platform_store) {
-@@ -986,7 +986,7 @@ ProfileNetworkContextService::CreateClie
+@@ -1141,7 +1141,7 @@ ProfileNetworkContextService::CreateClie
    store = std::make_unique<ClientCertStoreLacros>(
        std::move(certificate_provider), cert_db_initializer, std::move(store));
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)

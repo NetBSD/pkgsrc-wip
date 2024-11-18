@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_window.cc.orig	2024-10-26 07:01:27.357895000 +0000
+--- ui/ozone/platform/wayland/host/wayland_window.cc.orig	2024-11-14 01:04:23.968757600 +0000
 +++ ui/ozone/platform/wayland/host/wayland_window.cc
-@@ -318,7 +318,7 @@ void WaylandWindow::OnPointerFocusChange
+@@ -323,7 +323,7 @@ void WaylandWindow::OnPointerFocusChange
    // Whenever the window gets the pointer focus back, the cursor shape must be
    // updated. Otherwise, it is invalidated upon wl_pointer::leave and is not
    // restored by the Wayland compositor.
@@ -15,7 +15,7 @@ $NetBSD$
    if (focused && async_cursor_) {
      async_cursor_->AddCursorLoadedCallback(base::BindOnce(
          &WaylandWindow::OnCursorLoaded, AsWeakPtr(), async_cursor_));
-@@ -584,7 +584,7 @@ bool WaylandWindow::ShouldUseNativeFrame
+@@ -604,7 +604,7 @@ bool WaylandWindow::ShouldUseNativeFrame
  void WaylandWindow::SetCursor(scoped_refptr<PlatformCursor> platform_cursor) {
    DCHECK(platform_cursor);
  
@@ -24,7 +24,7 @@ $NetBSD$
    auto async_cursor = WaylandAsyncCursor::FromPlatformCursor(platform_cursor);
  
    if (async_cursor_ == async_cursor) {
-@@ -795,7 +795,7 @@ std::string WaylandWindow::WindowStates:
+@@ -815,7 +815,7 @@ std::string WaylandWindow::WindowStates:
    } else {
      base::TrimString(states, " ", &states);
    }
@@ -33,7 +33,7 @@ $NetBSD$
    states += "; tiled_edges: ";
    std::string tiled = "";
    if (tiled_edges.left) {
-@@ -1283,12 +1283,12 @@ void WaylandWindow::UpdateCursorShape(sc
+@@ -1318,12 +1318,12 @@ void WaylandWindow::UpdateCursorShape(sc
          cursor->bitmaps(), hotspot_in_dips,
          std::ceil(cursor->cursor_image_scale_factor()));
    }

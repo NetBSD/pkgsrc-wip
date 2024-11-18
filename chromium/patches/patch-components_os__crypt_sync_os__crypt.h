@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2024-10-26 07:00:07.890395200 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2024-11-14 01:04:07.161589600 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/memory_details.cc.orig	2024-10-26 06:59:57.144867000 +0000
+--- chrome/browser/memory_details.cc.orig	2024-11-14 01:04:03.692555000 +0000
 +++ chrome/browser/memory_details.cc
 @@ -38,7 +38,7 @@
  #include "services/resource_coordinator/public/cpp/memory_instrumentation/memory_instrumentation.h"

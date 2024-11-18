@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/BUILD.gn.orig	2024-10-26 07:01:27.168863300 +0000
+--- ui/gl/BUILD.gn.orig	2024-11-14 01:04:23.916757000 +0000
 +++ ui/gl/BUILD.gn
 @@ -168,7 +168,6 @@ component("gl") {
    public_deps = [
@@ -22,7 +22,7 @@ $NetBSD$
      ]
      if (enable_swiftshader) {
        data_deps += [
-@@ -538,7 +536,6 @@ test("gl_unittests") {
+@@ -541,7 +539,6 @@ test("gl_unittests") {
  
    data_deps = [
      "//testing/buildbot/filters:gl_unittests_filters",

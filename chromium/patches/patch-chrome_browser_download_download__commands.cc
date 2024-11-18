@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_commands.cc.orig	2024-10-26 06:59:56.273337600 +0000
+--- chrome/browser/download/download_commands.cc.orig	2024-11-14 01:04:03.444552400 +0000
 +++ chrome/browser/download/download_commands.cc
 @@ -26,7 +26,7 @@
  #include "ui/base/clipboard/scoped_clipboard_writer.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/fake_display_client.h.orig	2024-10-26 07:00:12.640280700 +0000
+--- components/viz/test/fake_display_client.h.orig	2024-11-14 01:04:08.252600400 +0000
 +++ components/viz/test/fake_display_client.h
 @@ -36,7 +36,7 @@ class FakeDisplayClient : public mojom::
    void AddChildWindowToBrowser(gpu::SurfaceHandle child_window) override;

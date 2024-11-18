@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-10-26 07:01:16.287903000 +0000
+--- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-11-14 01:04:21.627734200 +0000
 +++ third_party/ipcz/src/reference_drivers/random.cc
 @@ -14,7 +14,8 @@
  #include <windows.h>

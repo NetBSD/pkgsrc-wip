@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-10-26 07:01:15.569763700 +0000
+--- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-11-14 01:04:21.328731300 +0000
 +++ third_party/crashpad/crashpad/util/misc/uuid.cc
 @@ -110,7 +110,7 @@ bool UUID::InitializeWithNew() {
    InitializeFromBytes(uuid);

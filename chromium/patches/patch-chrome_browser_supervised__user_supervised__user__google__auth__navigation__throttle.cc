@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2024-10-26 06:59:59.268157000 +0000
+--- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2024-11-14 01:04:04.299561000 +0000
 +++ chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc
-@@ -29,7 +29,7 @@
- 
- #if BUILDFLAG(IS_ANDROID)
+@@ -32,7 +32,7 @@
  #include "chrome/browser/supervised_user/child_accounts/child_account_service_android.h"
+ #include "components/signin/public/identity_manager/identity_manager.h"
+ #include "ui/android/view_android.h"
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/supervised_user/supervised_user_verification_controller_client.h"
  #include "chrome/browser/supervised_user/supervised_user_verification_page.h"
  #endif
-@@ -145,7 +145,7 @@ SupervisedUserGoogleAuthNavigationThrott
+@@ -148,7 +148,7 @@ SupervisedUserGoogleAuthNavigationThrott
      return content::NavigationThrottle::DEFER;
    }
  

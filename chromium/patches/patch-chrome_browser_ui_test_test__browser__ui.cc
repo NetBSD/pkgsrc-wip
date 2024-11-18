@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/test/test_browser_ui.cc.orig	2024-10-26 07:00:00.670008700 +0000
+--- chrome/browser/ui/test/test_browser_ui.cc.orig	2024-11-14 01:04:04.728565200 +0000
 +++ chrome/browser/ui/test/test_browser_ui.cc
 @@ -22,7 +22,7 @@
  

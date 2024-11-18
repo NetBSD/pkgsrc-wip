@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/emulate/wayland_input_emulate.cc.orig	2024-10-26 07:01:27.340892000 +0000
+--- ui/ozone/platform/wayland/emulate/wayland_input_emulate.cc.orig	2024-11-14 01:04:23.958757400 +0000
 +++ ui/ozone/platform/wayland/emulate/wayland_input_emulate.cc
 @@ -284,7 +284,7 @@ void WaylandInputEmulate::EmulateUpdateD
  }

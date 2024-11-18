@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/lock.cc.orig	2024-10-26 07:00:04.748486300 +0000
+--- chrome/updater/lock.cc.orig	2024-11-14 01:04:06.010578200 +0000
 +++ chrome/updater/lock.cc
 @@ -26,7 +26,7 @@ namespace updater {
  std::unique_ptr<ScopedLock> CreateScopedLock(const std::string& name,

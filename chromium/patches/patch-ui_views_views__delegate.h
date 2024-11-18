@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/views_delegate.h.orig	2024-10-26 07:01:27.853978200 +0000
+--- ui/views/views_delegate.h.orig	2024-11-14 01:04:24.077758800 +0000
 +++ ui/views/views_delegate.h
-@@ -146,7 +146,7 @@ class VIEWS_EXPORT ViewsDelegate {
+@@ -147,7 +147,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.
    virtual bool IsWindowInMetro(gfx::NativeWindow window) const;
  #elif BUILDFLAG(ENABLE_DESKTOP_AURA) && \

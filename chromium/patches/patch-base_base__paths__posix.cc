@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/base_paths_posix.cc.orig	2024-10-26 06:59:45.265650000 +0000
+--- base/base_paths_posix.cc.orig	2024-11-14 01:04:01.786536000 +0000
 +++ base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>
@@ -117,7 +117,7 @@ $NetBSD$
 +        if ((cpath = getenv("CHROME_EXE_PATH")) != NULL)
 +          *result = FilePath(cpath);
 +        else
-+          *result = FilePath("/usr/local/chrome/chrome");
++          *result = FilePath("@PREFIX@/lib/chromium/chrome");
 +        return true;
 +#if !BUILDFLAG(IS_AIX)
 +      }

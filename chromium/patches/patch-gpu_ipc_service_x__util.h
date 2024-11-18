@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/x_util.h.orig	2024-10-26 07:00:18.076583400 +0000
+--- gpu/ipc/service/x_util.h.orig	2024-11-14 01:04:09.466612600 +0000
 +++ gpu/ipc/service/x_util.h
 @@ -12,7 +12,7 @@
  #include "gpu/ipc/service/gpu_config.h"

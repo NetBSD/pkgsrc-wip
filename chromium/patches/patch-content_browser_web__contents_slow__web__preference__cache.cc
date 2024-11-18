@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-10-26 07:00:13.494799900 +0000
-+++ content/browser/renderer_host/input/input_device_change_observer.cc
-@@ -9,7 +9,7 @@
+--- content/browser/web_contents/slow_web_preference_cache.cc.orig	2024-11-14 01:04:08.579604000 +0000
++++ content/browser/web_contents/slow_web_preference_cache.cc
+@@ -16,7 +16,7 @@
  
  #if BUILDFLAG(IS_WIN)
  #include "ui/events/devices/input_device_observer_win.h"
@@ -14,9 +14,9 @@ $NetBSD$
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "ui/events/devices/device_data_manager.h"
  #elif BUILDFLAG(IS_ANDROID)
- #include "ui/events/devices/input_device_observer_android.h"
-@@ -21,7 +21,7 @@ InputDeviceChangeObserver::InputDeviceCh
-   render_view_host_impl_ = rvhi;
+ #include "ui/base/device_form_factor.h"
+@@ -54,7 +54,7 @@ SlowWebPreferenceCache::SlowWebPreferenc
+ 
  #if BUILDFLAG(IS_WIN)
    ui::InputDeviceObserverWin::GetInstance()->AddObserver(this);
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -24,8 +24,8 @@ $NetBSD$
    ui::DeviceDataManager::GetInstance()->AddObserver(this);
  #elif BUILDFLAG(IS_ANDROID)
    ui::InputDeviceObserverAndroid::GetInstance()->AddObserver(this);
-@@ -31,7 +31,7 @@ InputDeviceChangeObserver::InputDeviceCh
- InputDeviceChangeObserver::~InputDeviceChangeObserver() {
+@@ -64,7 +64,7 @@ SlowWebPreferenceCache::SlowWebPreferenc
+ SlowWebPreferenceCache::~SlowWebPreferenceCache() {
  #if BUILDFLAG(IS_WIN)
    ui::InputDeviceObserverWin::GetInstance()->RemoveObserver(this);
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/drive_metrics_provider_linux.cc.orig	2024-10-26 07:00:07.545185300 +0000
+--- components/metrics/drive_metrics_provider_linux.cc.orig	2024-11-14 01:04:07.057588600 +0000
 +++ components/metrics/drive_metrics_provider_linux.cc
 @@ -4,7 +4,13 @@
  

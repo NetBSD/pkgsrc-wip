@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_capturer_proxy.cc.orig	2024-10-26 07:00:29.761900400 +0000
+--- remoting/host/desktop_capturer_proxy.cc.orig	2024-11-14 01:04:11.312631100 +0000
 +++ remoting/host/desktop_capturer_proxy.cc
 @@ -26,7 +26,7 @@
  #include "remoting/host/chromeos/frame_sink_desktop_capturer.h"

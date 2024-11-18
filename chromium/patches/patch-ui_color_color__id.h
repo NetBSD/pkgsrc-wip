@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/color/color_id.h.orig	2024-10-26 07:01:26.866812500 +0000
+--- ui/color/color_id.h.orig	2024-11-14 01:04:23.784755700 +0000
 +++ ui/color/color_id.h
 @@ -622,7 +622,7 @@
    \

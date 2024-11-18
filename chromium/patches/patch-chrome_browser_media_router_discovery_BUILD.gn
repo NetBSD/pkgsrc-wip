@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/BUILD.gn.orig	2024-10-26 06:59:57.074824300 +0000
+--- chrome/browser/media/router/discovery/BUILD.gn.orig	2024-11-14 01:04:03.665554800 +0000
 +++ chrome/browser/media/router/discovery/BUILD.gn
 @@ -82,7 +82,7 @@ static_library("discovery") {
    ]
