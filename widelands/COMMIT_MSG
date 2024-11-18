@@ -1,4 +1,9 @@
-games/widelands: Update widelands to 1.2
+games/widelands: Update widelands to 1.2.1
+
+Highlights in the Widelands 1.2.1 release:
+
+- This point release fixes several bugs and crashes found in Widelands 1.2, and
+  offers full compatibility between these two releases for multiplayer games and replays.
 
 Highlights in the Widelands 1.2 release:
 

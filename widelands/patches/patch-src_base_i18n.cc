@@ -6,19 +6,9 @@ Undefine any *gettext macros to avoid infinite recursion.
 
 https://github.com/widelands/widelands/issues/6488
 
---- src/base/i18n.cc.orig	2024-03-28 10:12:05.000000000 +0000
+--- src/base/i18n.cc.orig	2024-10-30 12:47:18.000000000 +0000
 +++ src/base/i18n.cc
-@@ -20,9 +20,7 @@
- 
- #include "base/i18n.h"
- 
--#ifdef __FreeBSD__
- #include <clocale>
--#endif
- 
- #include <cstdlib>
- #include <map>
-@@ -46,6 +44,12 @@
+@@ -46,6 +46,12 @@
  #endif
  #endif
  
