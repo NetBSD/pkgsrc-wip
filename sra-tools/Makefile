@@ -43,7 +43,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 .include "../../mk/bsd.prefs.mk"
 
-# macOS not support @rpath
+# macOS does not support @rpath
 .if ${OPSYS} == Darwin
 SUBST_CLASSES+=		srarpath
 SUBST_STAGE.srarpath=	post-configure
