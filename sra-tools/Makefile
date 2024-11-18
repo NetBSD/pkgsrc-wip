@@ -16,9 +16,8 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
 
-# The config.c and file-path.posix.cpp substs follow
-# static patches.  Run "make clean patch" before updating
-# those patches so this subst does not get added to them.
+# SUBST edits may follow static patches.  Run "make clean patch" before
+# updating those patches so SUBST changes do not get added to them.
 SUBST_CLASSES+=		etcdir
 SUBST_STAGE.etcdir=	pre-configure
 SUBST_SED.etcdir+=	-e 's|"/etc/ncbi"|"${PREFIX}/etc/ncbi"|g'
@@ -44,6 +43,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 .include "../../mk/bsd.prefs.mk"
 
+# macOS not support @rpath
 .if ${OPSYS} == Darwin
 SUBST_CLASSES+=		srarpath
 SUBST_STAGE.srarpath=	post-configure
@@ -55,18 +55,21 @@ pre-configure:
 .if ${OPSYS} == NetBSD
 	# Incorrect gcc/x86_64/byteswap.h found before correct bsd/byteswap.h
 	# Adding #ifndef __NetBSD__ to gcc/x86_64/byteswap.h doesn't work
+	# Still needed as of sra-tools 3.1.1
 	${RM} -f ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
 .endif
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
 	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
+# FIXME: Tweak build so moving things around destdir is unnecessary
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION}
-	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
+	${STRIP} ${DESTDIR}${PREFIX}/lib/*.${PKGVERSION}
+	${TEST} -e ${DESTDIR}${PREFIX}/share/examples && ${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
-	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
+	${TEST} -e ${DESTDIR}${EXAMPLESDIR}/AlignSliceTest.cpp || ${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
 	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
-	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
+	${TEST} -e ${DESTDIR}${PREFIX}/share/examples-python && ${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
 	# FIXME: Can we prevent build from detecting java?
 	${RM} -rf ${DESTDIR}${PREFIX}/jar
 	${RM} -rf ${DESTDIR}${PREFIX}/share/examples-java
