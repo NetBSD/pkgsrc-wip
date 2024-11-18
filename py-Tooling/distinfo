@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pyTooling-8.0.3.tar.gz) = cd3fdff49f85a929746c11011d9d4ccec2384f5b69da43967e6ede56c078048b
+SHA512 (pyTooling-8.0.3.tar.gz) = fd9abbaf93528462d1168960f2796a31630dc17ae19596fa8db8561e7fa5c439111c1027a4dc98d72c300795ca9655c7a356c0a55fa162d90b438609927cbe2e
+Size (pyTooling-8.0.3.tar.gz) = 714044 bytes
