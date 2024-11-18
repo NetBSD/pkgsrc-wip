@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.28 2024/10/04 04:25:35 ryoon Exp $
+
+BLAKE2s (kicad-8.0.6.tar.bz2) = d6d44c5f5469878575b514abe0b6d8bc0d18f56b941c3dcf0fdf4a48b1bab2db
+SHA512 (kicad-8.0.6.tar.bz2) = 6c35830c9314b801970a4af4100e3ffc30d1c4eaea9a806f8c23f22d2d3d46743d70b9748b757f0b990b9e394aa97edf45da0d484274faa2f20ba1d83ff6b7b4
+Size (kicad-8.0.6.tar.bz2) = 72953578 bytes
+SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
+SHA1 (patch-CMakeLists.txt) = c0d017d3b8b202004dff71386da451fd81ede969
+SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
+SHA1 (patch-common_import__gfx_dxf__import__plugin.cpp) = 9ba67a398f9d9c0bd487b0cc5a8954be9cf8e274
+SHA1 (patch-cvpcb_CMakeLists.txt) = a839b465f73727786495dace80c1706d457b33e4
+SHA1 (patch-eeschema_CMakeLists.txt) = 89d5b25822f6d5856f827823e0646be80cbbfcb4
+SHA1 (patch-eeschema_sim_kibis_ibis__parser.cpp) = e173ccb32679174033540395e321abaee9eb2200
+SHA1 (patch-eeschema_sim_kibis_kibis.cpp) = 18d804db727498cffef4dffc36b30dbe2c608bcb
+SHA1 (patch-eeschema_sim_sim_model_tline.cpp) = 901488c10a8a2c558a4bebe15dc1339d1bbce066
+SHA1 (patch-eeschema_sim_sim_property.cpp) = 3edb3ba6d1ac3f15d7562cb5b6c11815ee77d7d2
+SHA1 (patch-gerbview_CMakeLists.txt) = ae4d813f4247b46546ef0945785ae99114d2d68d
+SHA1 (patch-include_kiway.h) = 7208f474e895ea07ba5e5f56bab46d4d529b9e57
+SHA1 (patch-pagelayout__editor_CMakeLists.txt) = d6ee568713ce666f2ece34974a922698d9479c8e
+SHA1 (patch-pcb__calculator_CMakeLists.txt) = 4b496498c6bef100f2eca99209e3efa521a3c653
+SHA1 (patch-pcbnew_CMakeLists.txt) = 671cc75cabbc0f3f73241a3d6db6ce41730465bf
+SHA1 (patch-plugins_3d_idf_CMakeLists.txt) = 9061c5c5eac3311625ba93e541d557007c83eddc
+SHA1 (patch-plugins_3d_vrml_CMakeLists.txt) = ea6942a953432c5c0124c57e9afb01f8a5c5325d
+SHA1 (patch-thirdparty_libcontext_libcontext.h) = cde252b7ee114f88527d953aa0c3ebcdd905c4a9
