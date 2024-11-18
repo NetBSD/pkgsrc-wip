@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (ghdl/f1de234f5e77eb8fb765da945a0bf34ec4abb864-f1de234f5e77eb8fb765da945a0bf34ec4abb864.tar.gz) = 8805e151aa3f69bf17729df932dbee34e2cb7362b06bc36b4b3954b8f825ec7a
+SHA512 (ghdl/f1de234f5e77eb8fb765da945a0bf34ec4abb864-f1de234f5e77eb8fb765da945a0bf34ec4abb864.tar.gz) = 401da68b303ec2e0ee2418f4f92d2dd921fec398fd0eba3ba1aa9351c525321ceb6b251142ee666a35e25bf5cd685a9fd12ceb79996ce7bb07a1853db674cc67
+Size (ghdl/f1de234f5e77eb8fb765da945a0bf34ec4abb864-f1de234f5e77eb8fb765da945a0bf34ec4abb864.tar.gz) = 7798367 bytes
+SHA1 (patch-configure) = 70257b3cd6b59ec3076d64ba0eae127216f13e50
+SHA1 (patch-src_ortho_mcode_memsegs__c.c) = d52a68ade07780519dbeb72ae92933a703085853

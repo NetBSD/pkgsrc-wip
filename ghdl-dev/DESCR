@@ -1,0 +1,11 @@
+GHDL is a shorthand for G Hardware Design Language (currently, G has no
+meaning). It is a VHDL analyzer, compiler, simulator and (experimental)
+synthesizer that can process (nearly) any VHDL design.  Unlike some other
+simulators, GHDL is a compiler: it directly translates a VHDL file to machine
+code, without using an intermediary language such as C or C++. Therefore, the
+compiled code should be faster and the analysis time should be shorter than
+with a compiler using an intermediary language.
+
+This package is created to build dev version of ghdl for those interested in
+newer features and bug fixes that are newer than the last released version.
+This package uses mcode backend which is supposed handle large designs better.
