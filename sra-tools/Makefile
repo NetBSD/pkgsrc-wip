@@ -61,16 +61,9 @@ pre-configure:
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
 	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
-# FIXME: Tweak build so moving things around destdir is unnecessary
 post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION}
-	${STRIP} ${DESTDIR}${PREFIX}/lib/*.${PKGVERSION}
-	${TEST} -e ${DESTDIR}${PREFIX}/share/examples && ${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
-	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
-	${TEST} -e ${DESTDIR}${EXAMPLESDIR}/AlignSliceTest.cpp || ${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
-	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
-	${TEST} -e ${DESTDIR}${PREFIX}/share/examples-python && ${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
-	# FIXME: Can we prevent build from detecting java?
+	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
+	${STRIP} ${DESTDIR}${PREFIX}/lib/*.${PKGVERSION_NOREV}
 	${RM} -rf ${DESTDIR}${PREFIX}/jar
 	${RM} -rf ${DESTDIR}${PREFIX}/share/examples-java
 	${RM} -rf ${DESTDIR}${PREFIX}/share/javadoc
@@ -81,6 +74,7 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
