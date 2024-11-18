@@ -1,0 +1,4 @@
+fix:
+checking for suffix of object files... configure: error: in `/usr/builds/work/wip/riscv64-none-elf-xuantie-gcc/work.x86_64/build/riscv64-none-elf/libgcc':
+configure: error: cannot compute suffix of object files: cannot compile
+See `config.log' for more details

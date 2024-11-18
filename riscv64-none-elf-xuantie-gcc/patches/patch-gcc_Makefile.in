@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- gcc/Makefile.in.orig	2022-12-04 15:58:07.000000000 +0000
++++ gcc/Makefile.in
+@@ -2387,7 +2387,7 @@ $(simple_generated_c:insn-%.c=s-%): s-%:
+ 	$(RUN_GEN) build/gen$*$(build_exeext) $(md_file) \
+ 	  $(filter insn-conditions.md,$^) > tmp-$*.c
+ 	$(SHELL) $(srcdir)/../move-if-change tmp-$*.c insn-$*.c
+-	$*v=$$(echo $$(csplit insn-$*.c /parallel\ compilation/ -k -s {$(INSN-GENERATED-SPLIT-NUM)} -f insn-$* -b "%d.c" 2>&1));\
++	$*v=$$(echo $$(gcsplit insn-$*.c /parallel\ compilation/ -k -s {$(INSN-GENERATED-SPLIT-NUM)} -f insn-$* -b "%d.c" 2>&1));\
+ 	[ ! "$$$*v" ] || grep "match not found" <<< $$$*v
+ 	[ -s insn-$*0.c ] || (for i in $(insn-generated-split-num); do touch insn-$*$$i.c; done && echo "" > insn-$*.c)
+ 	$(STAMP) s-$*

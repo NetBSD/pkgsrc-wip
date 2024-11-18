@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2024/03/18 17:39:35 dogcow Exp $
+
+BLAKE2s (xuantie-gcc/THead-2.6.1.tar.gz) = ce1bac3ed2b4fa48bf1d2fde65809e2ecf9388ac878b4f0477c8bd8e526aeb11
+SHA512 (xuantie-gcc/THead-2.6.1.tar.gz) = 2346560798061827a56c4c86006e4f59765b506ea7d40925680921022960a59cb6d5074956ad442fe8e94bc27ef5c10b2d109fb78a685faa57bb757cdced6679
+Size (xuantie-gcc/THead-2.6.1.tar.gz) = 21804604 bytes
+BLAKE2s (xuantie-gcc/gcc-THead-2.6.1.tar.gz) = b3f1736909c214832cd962f084993028bff11b6179b52d2cfbcc907e02f1342a
+SHA512 (xuantie-gcc/gcc-THead-2.6.1.tar.gz) = 7338e6f89008fa77a0caedae15f7c02829838376e67c52a9ce93157fbcf640526828c32941bcd23f227dfdc919e39a9917950b36809ea9a63392af9d87da2fa8
+Size (xuantie-gcc/gcc-THead-2.6.1.tar.gz) = 119069178 bytes
+SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
+SHA1 (patch-gcc_Makefile.in) = 008bb4b0ca644e7bb5cb78ec4a6b54b849816a8d
+SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
+SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
+SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-libffi_configure) = 4be83b5c6a0efbea44d44f9e22fa22a2e7ff1c29
+SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = a4ebc2541ab664fbc6fd489e64dc134f47ab4c46
+SHA1 (patch-libgcc_config.host) = d40d4d08c807eeff98cc246d1ea756b5b2c749b0
+SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
+SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
+SHA1 (patch-libiberty_Makefile.in) = 7ea2578b5b77cb4adcd4afe3d63739efc68a1540
+SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
+SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
+SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4183b00a5ee6e61524da4755c825a0c08fd01ed6

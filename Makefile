@@ -5005,6 +5005,7 @@ SUBDIR+=	ripole
 SUBDIR+=	rippled
 SUBDIR+=	riscv64-none-elf-binutils
 SUBDIR+=	riscv64-none-elf-gcc
+SUBDIR+=	riscv64-none-elf-xuantie-gcc
 SUBDIR+=	rk
 SUBDIR+=	rlottie
 SUBDIR+=	rmilter
