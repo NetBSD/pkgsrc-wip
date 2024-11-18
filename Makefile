@@ -3075,7 +3075,6 @@ SUBDIR+=	pear-phploc
 SUBDIR+=	peercoin
 SUBDIR+=	pegtl
 SUBDIR+=	pentagram
-SUBDIR+=	perl5-devel
 SUBDIR+=	petsc
 SUBDIR+=	pgp6
 SUBDIR+=	pgplot
