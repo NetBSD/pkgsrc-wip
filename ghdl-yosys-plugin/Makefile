@@ -16,10 +16,12 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/ghdl-yosys-plugin-511412f984d64ed7c46c4bdbd839f4b3c48f6fa5
 USE_LANGUAGES=	c c++
 
+RELRO_SUPPORTED=	no
+
 USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=	yosys-[0-9]*:../../devel/yosys
 
-DEPENDS+=	ghdl-4.*:../../cad/ghdl
+DEPENDS+=	ghdl-dev-5.*:../../wip/ghdl-dev
 
 .include "../../mk/bsd.pkg.mk"
