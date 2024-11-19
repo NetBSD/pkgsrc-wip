@@ -25,7 +25,7 @@ SUBST_FILES.etcdir+=	ncbi-vdb/libs/kfg/config.c
 
 SUBST_CLASSES+=		binpath
 SUBST_STAGE.binpath=	pre-configure
-SUBST_SED.binpath+=	-e 's|/usr/local|${PREFIX}|g'
+SUBST_SED.binpath+=	-e 's|/usr/local/bin|${PREFIX}/bin|g'
 SUBST_FILES.binpath+=	tools/external/driver-tool/file-path.posix.cpp
 
 SUBST_CLASSES+=		submoddir
