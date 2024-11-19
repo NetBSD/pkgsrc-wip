@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libglvnd-v1.7.0.tar.gz) = f7454fc75765cafa8d74452afeb0fcc0d7a2386a0750955e8ff85cb96a72eb26
+SHA512 (libglvnd-v1.7.0.tar.gz) = 7b6eb8e075b48f1d915b892044adc3260547d74ed61d1e2fa6c5f0f8c3527754abea314181e088626d4fd58bb221085e5288c4758d828e171c7dcb0e4991745c
+Size (libglvnd-v1.7.0.tar.gz) = 839820 bytes
