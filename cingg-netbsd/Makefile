@@ -20,12 +20,12 @@ USE_LANGUAGES=		c c++
 
 USE_TOOLS+=	bash:run pkg-config
 
-#SHEBANG_GLOB=	*.sh *.bld
-#SHEBANG_FILES=	cinelerra-5.1/doc/ContextManual.pl
+REPLACE_PERL=cinelerra-5.1/doc/ContextManual.pl
+
 USE_TOOLS+=	pkg-config gmake aclocal autoconf automake makeinfo
 GNU_CONFIGURE=	yes
 
-REPLACE_BASH=   cinelerra-5.1/inst.sh
+REPLACE_BASH=   cinelerra-5.1/inst.sh cinelerra-5.1/doc/RenderMux.sh
 
 CFLAGS+=		-fpermissive
 
