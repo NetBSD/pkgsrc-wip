@@ -18,13 +18,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-x86_64 NetBSD-*-i386
 
 USE_LANGUAGES=		c c++
 
-USE_TOOLS+=	bash:run
-
-# fix pkgsrc bugs?
-.if exists(/usr/pkg/bin/pkg-config)
-TOOLS_PLATFORM.pkg-config?=	/usr/pkg/bin/pkg-config
-.endif
-
+USE_TOOLS+=	bash:run pkg-config
 
 #SHEBANG_GLOB=	*.sh *.bld
 #SHEBANG_FILES=	cinelerra-5.1/doc/ContextManual.pl
@@ -89,8 +83,6 @@ do-install:
 
 
 .include "../../lang/python/tool.mk"
-.include "../../mk/tools/pkg-config.mk"
-.include "../../devel/pkgconf/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/libdeflate/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
