@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- go.sum.orig	2024-10-03 13:16:25.000000000 +0000
++++ go.sum
+@@ -1,6 +1,6 @@
+ eliasnaur.com/font v0.0.0-20230308162249-dd43949cb42d h1:ARo7NCVvN2NdhLlJE9xAbKweuI9L6UgfTbYb0YwPacY=
+ eliasnaur.com/font v0.0.0-20230308162249-dd43949cb42d/go.mod h1:OYVuxibdk9OSLX8vAqydtRPP87PyTFcT9uH3MlEGBQA=
+-gioui.org v0.6.0 h1:ZSXO/AbpFZJ2L9NU69uFQfDI3BKIH+YEJElrn0B+aZI=
++gioui.org v0.6.0 h1:6jLQqWcJz/9gKooxsUsbd0N4Xz5N2JYGOw3wSg5iqKc=
+ gioui.org v0.6.0/go.mod h1:eUvGo6FAzA7jUqeSu5a+M1W03yc9r1nanIBS8A5+Nng=
+ gioui.org/cpu v0.0.0-20210808092351-bfe733dd3334/go.mod h1:A8M0Cn5o+vY5LTMlnRoK3O5kG+rH0kWfJjeKd9QpBmQ=
+ gioui.org/cpu v0.0.0-20210817075930-8d6a761490d2 h1:AGDDxsJE1RpcXTAxPG2B4jrwVUJGFDjINIPi1jtO6pc=

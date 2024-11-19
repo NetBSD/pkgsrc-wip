@@ -14,15 +14,40 @@ USE_LANGUAGES=	c
 
 GO_VERSION_REQD+=	123
 GO_MODULES_FILES=	${WRKSRC}/anvil/src/anvil/go.mod
-GO_BUILD_PATTERN=	.
+
+PATCH_DIST_STRIP=	-p1
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/anvil/src/anvil
 
-do-build:
-	cd ${WRKSRC} && ${PKGSRC_SETENV}	\
-	    GOPATH=${WRKDIR}/.gopath ${PREFIX}/bin/go123 ${GOFLAGS} build ${GO_BUILD_TAGS} -ldflags=${GO_LDFLAGS:Q}
+post-extract:
+	${CP} ${WRKSRC}/fs_linux.go ${WRKSRC}/fs_netbsd.go
+
+MAKE_ENV+=	CGO_LDFLAGS=${CGO_LDFLAGS:Q}
+
+pre-build:
+	cd ${WRKDIR}/.goproxy/gioui.org/\@v/ && \
+	unzip v0.6.0.zip && \
+	cd gioui.org\@v0.6.0 && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__wayland.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__wayland.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__x11.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_internal_xkb_xkb__unix.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__unix.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__wayland.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__x11.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-gpu_headless_headless__egl.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_egl_egl.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_egl_egl__unix.go && \
+	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_gl_gl__unix.go && \
+        cd .. && zip -r v0.6.0.zip gioui.org\@v0.6.0
 
 .include "go-modules.mk"
 
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../wip/libglvnd/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

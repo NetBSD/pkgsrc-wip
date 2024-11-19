@@ -1,3 +1,3 @@
-- while it succeeds buildling, there is no executable and there is an
-  error, fix this.
+- post a patch to gioui.org for netbsd support (see kev-patches) and
+  the pre-build mess.
 - test it
