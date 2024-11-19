@@ -1,0 +1,25 @@
+$NetBSD$
+
+BLAKE2s (webkitgtk-2.46.3.tar.xz) = 828a3f896542ddc2b34c370576ec9c4a50be736cbe59c464f96fc5d97dbb714b
+SHA512 (webkitgtk-2.46.3.tar.xz) = efec6e92bbea3379cf3bd1aff7d91aee3f028dcd1bcfbe7120d5ded30ada1541469fc5cd7897cb375e03a55e59d268f915c2a35345a84192b14971ac4339719f
+Size (webkitgtk-2.46.3.tar.xz) = 42820196 bytes
+SHA1 (patch-Source_ThirdParty_ANGLE_src_common_SimpleMutex.h) = 6cd83b9ec476ed39adecec6b30e898bda8e5b76d
+SHA1 (patch-Source_ThirdParty_ANGLE_src_common_platform.h) = 2fda057edc3dde3356f0663ec5aa52cb61fb1229
+SHA1 (patch-Source_ThirdParty_ANGLE_src_common_system__utils__linux.cpp) = 7da7a59e2c0ab0c9fa92d746aceb11f1aab3290d
+SHA1 (patch-Source_ThirdParty_ANGLE_src_libANGLE_renderer_gl_egl_DisplayEGL.cpp) = 2cad21ee98bfbf89248a229a05e299e3dcec28b3
+SHA1 (patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h) = 6a854b85a470ad32aea3bb5f49d4622ba9df1bb6
+SHA1 (patch-Source_ThirdParty_skia_src_ports_SkMemory__malloc.cpp) = e277d988eeaacb7ec8b7f051342b77c5e8ac06a7
+SHA1 (patch-Source_WTF_wtf_InlineASM.h) = d2d6eff085c546b7bcedc4feff69c2f9b636f0bf
+SHA1 (patch-Source_WTF_wtf_Platform.h) = b84c3133ea3e0066a382988b441056dca6b38fa3
+SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = d11d941d8ca446b9cd8a452b1eda43497a44c3c9
+SHA1 (patch-Source_WTF_wtf_glib_FileSystemGlib.cpp) = a46ae871e2c0919da94bcb14a2b94d0e5a911922
+SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 1549a9bbbc11129e42995719d592ab747413eef6
+SHA1 (patch-Source_WebCore_rendering_RenderBox.h) = f3aa267788a218d9b5cb4d58715abbbc3444d2b6
+SHA1 (patch-Source_WebCore_rendering_shapes_ShapeOutsideInfo.cpp) = fd50d400a5410eb76810f838e4147295acc402ad
+SHA1 (patch-Source_WebKit_UIProcess_Launcher_glib_ProcessLauncherGLib.cpp) = deebf7ac3d75f55f2000f496702623661da4561a
+SHA1 (patch-Source_WebKit_UIProcess_glib_WebProcessPoolGLib.cpp) = 4c19862444b9b32ff1b4f5474ad61f5a1e4bca36
+SHA1 (patch-Source_WebKit_UIProcess_gtk_AcceleratedBackingStoreDMABuf.cpp) = 1cb80621f317954ba5918d0f9efdf28191b4e92e
+SHA1 (patch-Source_bmalloc_bmalloc_AvailableMemory.cpp) = 814ba3dc4f941ea13811f6c8d3d7a8ed47844c16
+SHA1 (patch-Source_bmalloc_bmalloc_AvailableMemory.h) = a1eace5da1fa5058067ed2b035e9d685906ce0e4
+SHA1 (patch-Source_bmalloc_bmalloc_BPlatform.h) = 73e57da70ced45db26fa0e039025aff4af25e2b8
+SHA1 (patch-Source_bmalloc_bmalloc_EligibilityResult.h) = 39b1e2efea01a586081d5317d8cb514dd63c3b2e
