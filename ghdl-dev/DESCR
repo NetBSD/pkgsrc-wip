@@ -8,4 +8,3 @@ with a compiler using an intermediary language.
 
 This package is created to build dev version of ghdl for those interested in
 newer features and bug fixes that are newer than the last released version.
-This package uses mcode backend which is supposed handle large designs better.
