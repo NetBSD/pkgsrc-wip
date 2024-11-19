@@ -39,8 +39,6 @@ CMAKE_CONFIGURE_ARGS+=		-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl	# ncbi-vdb/CMakeLists.posix.txt
 
-EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
-
 .include "../../mk/bsd.prefs.mk"
 
 # macOS does not support @rpath
