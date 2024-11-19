@@ -31,6 +31,8 @@ TOOLS_PLATFORM.pkg-config?=	/usr/pkg/bin/pkg-config
 USE_TOOLS+=	pkg-config gmake aclocal autoconf automake makeinfo
 GNU_CONFIGURE=	yes
 
+REPLACE_BASH=   cinelerra-5.1/inst.sh
+
 CFLAGS+=		-fpermissive
 
 MAKE_ENV=		BSD=1
