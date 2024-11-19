@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Support NetBSD for mcode backend.
+https://github.com/ghdl/ghdl/issues/2797
 
 --- src/ortho/mcode/memsegs_c.c.orig	2024-11-18 10:40:25.368626207 +0000
 +++ src/ortho/mcode/memsegs_c.c

@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Support NetBSD for mcode backend.
+https://github.com/ghdl/ghdl/issues/2797
 
 --- configure.orig	2024-11-17 09:54:17.000000000 +0000
 +++ configure
