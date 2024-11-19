@@ -14,7 +14,7 @@ HOMEPAGE=	https://www.cinelerra-gg.org/
 
 LICENSE=	gnu-gpl-v2
 
-ONLY_FOR_PLATFORM=	NetBSD-*-amd64 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-x86_64 NetBSD-*-i386
 
 USE_LANGUAGES=		c c++
 
@@ -86,6 +86,7 @@ do-install:
 	cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
 
 
+.include "../../lang/python/tool.mk"
 .include "../../mk/tools/pkg-config.mk"
 .include "../../devel/pkgconf/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"

@@ -1,0 +1,12 @@
+$NetBSD$
+
+Bash in /usr/pkg/bin on NetBSD
+
+--- ./cinelerra-5.1/inst.sh.orig	2024-11-19 04:54:37.057900686 +0300
++++ ./cinelerra-5.1/inst.sh	2024-11-19 04:55:11.775405100 +0300
+@@ -1,4 +1,4 @@
+-#!/bin/bash -e
++#!/usr/pkg/bin/bash -e
+ # inst.sh <dir> <objs...>
+ dir="$1"; shift 1
+ mkdir -p "$dir"
