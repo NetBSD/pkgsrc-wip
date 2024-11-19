@@ -2,14 +2,14 @@ $NetBSD$
 
 cxxabi-reexports is not available.
 
---- src/CMakeLists.txt.orig	2024-10-15 20:50:18.614403239 +0000
+--- src/CMakeLists.txt.orig	2024-11-19 08:08:07.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -232,7 +232,7 @@ if (LIBCXX_ENABLE_SHARED)
-   # Maybe re-export symbols from libc++abi
-   # In particular, we don't re-export the symbols if libc++abi is merged statically
-   # into libc++ because in that case there's no dylib to re-export from.
+@@ -231,7 +231,7 @@ if (LIBCXX_ENABLE_SHARED)
+ 
+   # Maybe force some symbols to be weak, not weak or not exported.
+   # TODO: This shouldn't depend on the platform, and ideally it should be done in the sources.
 -  if (APPLE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
 +  if (FALSE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
              AND NOT LIBCXX_STATICALLY_LINK_ABI_IN_SHARED_LIBRARY)
-     target_link_libraries(cxx_shared PRIVATE cxxabi-reexports)
- 
+     target_link_libraries(cxx_shared PRIVATE
+       "-Wl,-unexported_symbols_list,${CMAKE_CURRENT_SOURCE_DIR}/../lib/libc++unexp.exp"

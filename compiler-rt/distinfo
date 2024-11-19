@@ -1,13 +1,13 @@
 $NetBSD: distinfo,v 1.23 2023/03/03 09:53:14 wiz Exp $
 
-BLAKE2s (cmake-19.1.3.src.tar.xz) = 1a4800dca9b3505ab18d80a89f188819bb9d6e3b25638aa62367624f512e7282
-SHA512 (cmake-19.1.3.src.tar.xz) = ad1d798cd4546691b0ee469015086bb7cf3553e4ca578239d116eaf8620725a6f26ebe18f5b9f7725b5d628898e47bbcc7e3230b6788dbf86ae5acc047eec8d1
-Size (cmake-19.1.3.src.tar.xz) = 9300 bytes
-BLAKE2s (compiler-rt-19.1.3.src.tar.xz) = cc98cbecd9e57565c096e58684242fc7731e6f523edae8c220b42f5544c1345c
-SHA512 (compiler-rt-19.1.3.src.tar.xz) = 045c6b16ee0a374e726775ecd48b77d12e7db20c9b101af68a705968691b9af57b66d5554dd44e76c79e0e05a04e7c010189291c96b1c15062f36d2c06d08e40
-Size (compiler-rt-19.1.3.src.tar.xz) = 2528276 bytes
-BLAKE2s (runtimes-19.1.3.src.tar.xz) = 7f99741bd6911d8c465aacdf02f50662d5c944a78812e56dc75e483a4e771d53
-SHA512 (runtimes-19.1.3.src.tar.xz) = 53746f5c762eb3886effc4e46138e172a5993ff874afece55767f356e00df5fa252b0fb07592cb2155181b18e7836b9f9d8c380747b9b0a128d22b1ead7d9642
-Size (runtimes-19.1.3.src.tar.xz) = 7228 bytes
+BLAKE2s (cmake-19.1.4.src.tar.xz) = b7af240d3d76500a40fe77474bf363440c5281428a8d49d9d8b9139808324d69
+SHA512 (cmake-19.1.4.src.tar.xz) = 4b2b4a3bd9e120a42e6a5f73c7d1fa7c806594d0856c51934063e585509c23897dd5c6ffb334c6773e6a5f57f7791490a620317f029566a62faa69c312ec02ce
+Size (cmake-19.1.4.src.tar.xz) = 9296 bytes
+BLAKE2s (compiler-rt-19.1.4.src.tar.xz) = f1b40fb35295e145d673ab288b4bc8a2ac724b593b8e6c6101b1ad14823c0452
+SHA512 (compiler-rt-19.1.4.src.tar.xz) = a75eb7c7e1cf102319033b23b7dd741e0a965cd6af4da9a83d814ce292b03af35ae068783318b2d5660cd198516e5d1c80ab65b33c966b50b5abb22bbfcd74c4
+Size (compiler-rt-19.1.4.src.tar.xz) = 2529144 bytes
+BLAKE2s (runtimes-19.1.4.src.tar.xz) = 330cfae691d9bad4eed406ddf25af2a8dd32a53b045ca5a11f6604dca8858414
+SHA512 (runtimes-19.1.4.src.tar.xz) = e099792deeaf2d7610d8623701fa5898a56acda7cfa20745bd5f7aa14bc2a7900ca76e52b9dd80f109994eecac068d97a2984ae86105c974db6c38400a8f1c63
+Size (runtimes-19.1.4.src.tar.xz) = 7224 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 0ef687b2e8d67abd025e08869df17eaadc4dccd0
