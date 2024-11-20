@@ -15,15 +15,16 @@ USE_TOOLS+=	zip
 
 GO_VERSION_REQD+=	123
 GO_MODULES_FILES=	${WRKSRC}/anvil/src/anvil/go.mod
+GO_LDFLAGS+=		-r ${X11BASE}/lib
 
 PATCH_DIST_STRIP=	-p1
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/anvil/src/anvil
 
+INSTALLATION_DIRS+=	bin
+
 post-extract:
 	${CP} ${WRKSRC}/fs_linux.go ${WRKSRC}/fs_netbsd.go
-
-MAKE_ENV+=	CGO_LDFLAGS=${CGO_LDFLAGS:Q}
 
 pre-build:
 	cd ${WRKDIR}/.goproxy/gioui.org/\@v/ && \
@@ -40,6 +41,13 @@ pre-build:
 	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_egl_egl__unix.go && \
 	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_gl_gl__unix.go && \
         cd .. && zip -r v0.6.0.zip gioui.org\@v0.6.0
+
+do-build:
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}    \
+		GOPATH=${WRKDIR}/.gopath ${GO} ${GOFLAGS} build ${GO_BUILD_TAGS} -ldflags=${GO_LDFLAGS:Q} -o anvil
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/anvil ${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
 
