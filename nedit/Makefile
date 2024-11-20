@@ -15,7 +15,8 @@ HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
 LICENSE=	gnu-gpl-v2
 
-VERS=		5.7
+MAKE_JOBS_SAFE= no
+
 MASTER_SITE_NEDIT= \
 		https://sourceforge.net/projects/nedit/files/nedit-source/
 
