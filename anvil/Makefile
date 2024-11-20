@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	anvil-src-v0.3
-PKGNAME=	${DISTNAME:S,-v,-,}
+PKGNAME=	${DISTNAME:S,-src-v,-,}
 CATEGORIES=	editors
 MASTER_SITES=	http://anvil-editor.net/releases/
 
@@ -11,6 +11,7 @@ COMMENT=	Plan 9 acme-like editor written in Go
 LICENSE=	mit
 
 USE_LANGUAGES=	c
+USE_TOOLS+=	zip
 
 GO_VERSION_REQD+=	123
 GO_MODULES_FILES=	${WRKSRC}/anvil/src/anvil/go.mod
@@ -29,7 +30,6 @@ pre-build:
 	unzip v0.6.0.zip && \
 	cd gioui.org\@v0.6.0 && \
 	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__wayland.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__wayland.go && \
 	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__x11.go && \
 	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_internal_xkb_xkb__unix.go && \
 	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__unix.go && \
@@ -44,7 +44,7 @@ pre-build:
 .include "go-modules.mk"
 
 .include "../../devel/wayland/buildlink3.mk"
-.include "../../wip/libglvnd/buildlink3.mk"
+#.include "../../wip/libglvnd/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../x11/libX11/buildlink3.mk"
