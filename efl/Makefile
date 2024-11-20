@@ -128,5 +128,6 @@ MESON_ARGS+=			-Dopengl=base
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.40.0
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
