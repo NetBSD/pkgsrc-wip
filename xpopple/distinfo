@@ -1,7 +1,4 @@
 $NetBSD$
 
-BLAKE2s (xpopple-0.0.0.tar.gz) = 69217a3079908094e11121d042354a7c1f55b6482ca1a51e1b250dfd1ed0eef9
-SHA512 (xpopple-0.0.0.tar.gz) = cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
-Size (xpopple-0.0.0.tar.gz) = 0 bytes
 SHA1 (patch-configure.ac) = 1d19b970d55a2c8ac5ebb53189aade38fa55811d
 SHA1 (patch-xpdf_XPDFViewer.cc) = ca5921db6c0bb297409dce24141437acb4a40972

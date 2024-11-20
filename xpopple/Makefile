@@ -4,7 +4,7 @@ DISTNAME=	xpopple-3.04.0
 CATEGORIES=	print
 GIT_REPO=	http://offog.org/git/xpopple.git
 GIT_BRANCH=	master
-GIT_REVISION=	9fae34b25c6e8e5d4e95bcc67531963c1c80cc33
+GIT_REVISION=	0aa7a917fd5999521f8117fe3384dbcb3c8828ad
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://offog.org/code/xpopple/
@@ -15,8 +15,8 @@ CONFLICTS=	xpdf-[0-9]*
 CONFLICTS+=	xpdf4-[0-9]*
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
-FORCE_CXX_STD=		c++17
+USE_CXX_FEATURES+=	c++20
+FORCE_CXX_STD=		c++20
 
 USE_TOOLS=		autoconf automake autoreconf pkg-config
 
