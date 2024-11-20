@@ -1,4 +1,7 @@
 # $NetBSD: Makefile,v 1.240 2022/11/23 16:19:06 adam Exp $
+#
+# Some environment variables that can help debugging this:
+# https://trac.webkit.org/wiki/EnvironmentVariables
 
 DISTNAME=	webkitgtk-2.46.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
