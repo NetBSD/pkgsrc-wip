@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.21 2021/10/26 10:21:34 nia Exp $
+
+BLAKE2s (nedit-5.7-src.tar.gz) = 39c70225a47446ecd8d655d830f1175af624a65e9a471b44d64cd0589751e244
+SHA512 (nedit-5.7-src.tar.gz) = cf242d2f8eea4c78649dbeb741f545a3dc8ffaf5bb36239794a4b2635420e5445fa1c77472add79c05ec081d71a0b9df4431f48db365a71692e43869fd4e7932
+Size (nedit-5.7-src.tar.gz) = 1344754 bytes
+SHA1 (patch-aa) = aee848d3c2ddf0f0919f89d5e6994b3b2bb84d58

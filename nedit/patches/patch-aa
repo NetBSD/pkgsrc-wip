@@ -1,0 +1,14 @@
+--- makefiles/Makefile.netbsd.orig	2024-11-19 17:46:24.345240965 +0300
++++ makefiles/Makefile.netbsd	2024-11-19 17:46:51.342881630 +0300
+@@ -10,9 +10,9 @@
+ # To test if the Motif library exports the runtime version
+ # add -DHAVE__XMVERSIONSTRING to CFLAGS
+ #
+-CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
++CFLAGS=-O -I/usr/X11R7/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
+ ARFLAGS=-ur
+-LIBS= -L/usr/X11R6/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11
++LIBS= -L/usr/pkg/lib -L/usr/X11R7/lib -rpath=/usr/pkg/lib -rpath=/usr/X11R7/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11 -L/usr/pkg/lib -L/usr/X11R7/lib
+ 
+ include Makefile.common
+ 
