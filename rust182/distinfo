@@ -1,8 +1,5 @@
 $NetBSD: distinfo,v 1.159 2023/06/19 14:46:47 bsiegert Exp $
 
-BLAKE2s (rust-1.80.1-x86_64-unknown-illumos.tar.gz) = 19a7088bf5df1ea978f34c00d59ca6a6997d1757daf0ab290241291aa7bd2cc7
-SHA512 (rust-1.80.1-x86_64-unknown-illumos.tar.gz) = b39e2aa68d3c9b8a241c3b0c2a49c5377e092487c116930ce06834cddba6270e66c494fdb8a4928096f654724a592520c6f7fb4f45da4a22b8fb3058ed74b721
-Size (rust-1.80.1-x86_64-unknown-illumos.tar.gz) = 218858660 bytes
 BLAKE2s (rust-1.81.0-aarch64-apple-darwin.tar.gz) = aa033b8af1b7cf6a08476da3f74fa4634bc82224fb170cda4683aa6b5fde0916
 SHA512 (rust-1.81.0-aarch64-apple-darwin.tar.gz) = 542be316f94beaf12d2c87f67acaaf41273a7fe2117768a46d02cef30522dd1c1fd4eeff22e516b77d5b173a435ff4140433b23327561318fbe4a0b1519f2ab9
 Size (rust-1.81.0-aarch64-apple-darwin.tar.gz) = 342382518 bytes
@@ -45,6 +42,9 @@ Size (rust-1.81.0-x86_64-apple-darwin.tar.gz) = 346755530 bytes
 BLAKE2s (rust-1.81.0-x86_64-unknown-freebsd.tar.gz) = ea20d7a67bed2b1a37b8ad31f92e121a2110f02311888b85cf0a03ec6320723b
 SHA512 (rust-1.81.0-x86_64-unknown-freebsd.tar.gz) = 3617c5054f0f8f6657c5cae0dfc49644cb83a28b1741bafb916f16d6681ef3697f09a0f892e24b629b720206ac4eda31fa7618ea647ab4dc29f31dd024dfb3dc
 Size (rust-1.81.0-x86_64-unknown-freebsd.tar.gz) = 329217094 bytes
+BLAKE2s (rust-1.81.0-x86_64-unknown-illumos.tar.gz) = 887706a94ceaf9fcae2c192545bc09c77d23d95b956d76d8cf6b2c1aaeffa203
+SHA512 (rust-1.81.0-x86_64-unknown-illumos.tar.gz) = 9b3ca7d18970d2023f25a82dd8b35c2524e1ba286d3492771a1e1cdf26a4e544d3e42dbad878108e1e52b3617f6e939994a289f4cbd8eaf68c1ddd6a005a1188
+Size (rust-1.81.0-x86_64-unknown-illumos.tar.gz) = 223431240 bytes
 BLAKE2s (rust-1.81.0-x86_64-unknown-linux-gnu.tar.gz) = 64140ced76a7a2230bc710bd2ca562fd3e4c4deb0dff194a71a17a2675911a4c
 SHA512 (rust-1.81.0-x86_64-unknown-linux-gnu.tar.gz) = b6eb16fcb109e6c60a80d63999dce969e7abfed936d6e68c563d212db0cd9ec5d6874d45a185157838878b0ed68e52796d763192656c12496cd7572757292b8c
 Size (rust-1.81.0-x86_64-unknown-linux-gnu.tar.gz) = 340154798 bytes
