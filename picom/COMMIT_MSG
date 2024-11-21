@@ -1,5 +1,13 @@
 x11/picom: update to 12.4
 
+# 12.5
+
+Sorry, I shouldn't have moved the v12.4, this will not happen again. This release cycle is short to minimize the impact.
+
+## Bug fixes
+
+* Fix assertion failure when running with some window managers (e.g. qtile) and no window is focused (#1384)
+
 # 12.4 (2024-Nov-09)
 
 ## Improvements
