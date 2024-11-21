@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.1 2024/03/18 17:39:35 dogcow Exp $
 
-BLAKE2s (xuantie-gcc/THead-2.6.1.tar.gz) = ce1bac3ed2b4fa48bf1d2fde65809e2ecf9388ac878b4f0477c8bd8e526aeb11
-SHA512 (xuantie-gcc/THead-2.6.1.tar.gz) = 2346560798061827a56c4c86006e4f59765b506ea7d40925680921022960a59cb6d5074956ad442fe8e94bc27ef5c10b2d109fb78a685faa57bb757cdced6679
-Size (xuantie-gcc/THead-2.6.1.tar.gz) = 21804604 bytes
-BLAKE2s (xuantie-gcc/gcc-THead-2.6.1.tar.gz) = b3f1736909c214832cd962f084993028bff11b6179b52d2cfbcc907e02f1342a
-SHA512 (xuantie-gcc/gcc-THead-2.6.1.tar.gz) = 7338e6f89008fa77a0caedae15f7c02829838376e67c52a9ce93157fbcf640526828c32941bcd23f227dfdc919e39a9917950b36809ea9a63392af9d87da2fa8
-Size (xuantie-gcc/gcc-THead-2.6.1.tar.gz) = 119069178 bytes
+BLAKE2s (gcc-THead-2.6.1.tar.gz) = b3f1736909c214832cd962f084993028bff11b6179b52d2cfbcc907e02f1342a
+SHA512 (gcc-THead-2.6.1.tar.gz) = 7338e6f89008fa77a0caedae15f7c02829838376e67c52a9ce93157fbcf640526828c32941bcd23f227dfdc919e39a9917950b36809ea9a63392af9d87da2fa8
+Size (gcc-THead-2.6.1.tar.gz) = 119069178 bytes
+BLAKE2s (newlib-THead-2.6.1.tar.gz) = ce1bac3ed2b4fa48bf1d2fde65809e2ecf9388ac878b4f0477c8bd8e526aeb11
+SHA512 (newlib-THead-2.6.1.tar.gz) = 2346560798061827a56c4c86006e4f59765b506ea7d40925680921022960a59cb6d5074956ad442fe8e94bc27ef5c10b2d109fb78a685faa57bb757cdced6679
+Size (newlib-THead-2.6.1.tar.gz) = 21804604 bytes
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = 008bb4b0ca644e7bb5cb78ec4a6b54b849816a8d
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53

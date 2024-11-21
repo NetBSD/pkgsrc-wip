@@ -5,14 +5,13 @@ DISTNAME=		gcc-${THEADVER}
 PKGNAME=		cross-riscv64-none-elf-${GIT_BRANCH}
 CATEGORIES=		cross
 THEADVER=		THead-2.6.1
-#NEWLIBVER=		3.2.0
+NEWLIBVER=		THead-2.6.1	#3.2.0
 MASTER_SITES=		${MASTER_SITE_GITHUB:=XUANTIE-RV/}
 GITHUB_PROJECT=		gcc
 GITHUB_TAG=		refs/tags/${THEADVER}
-DIST_SUBDIR=		xuantie-gcc
 DISTFILES=		${DEFAULT_DISTFILES} \
-			${THEADVER}.tar.gz
-SITES.${THEADVER}.tar.gz=	https://github.com/XUANTIE-RV/newlib/archive/refs/tags/
+			newlib-${NEWLIBVER}.tar.gz
+SITES.newlib-${NEWLIBVER}.tar.gz=	-https://github.com/XUANTIE-RV/newlib/archive/refs/tags/${NEWLIBVER}.tar.gz
 
 MAINTAINER=		port-riscv@NetBSD.org
 HOMEPAGE=		# none
@@ -63,8 +62,8 @@ INFO_FILES=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 post-extract:
-	${LN} -s ${WRKDIR}/newlib-${THEADVER}/newlib ${WRKSRC}/newlib
-	${LN} -s ${WRKDIR}/newlib-${THEADVER}/libgloss ${WRKSRC}/libgloss
+	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/newlib ${WRKSRC}/newlib
+	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/libgloss ${WRKSRC}/libgloss
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
