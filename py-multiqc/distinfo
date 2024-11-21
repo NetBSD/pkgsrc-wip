@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (multiqc-1.21.tar.gz) = 6ee85b3f14bc7c4d4a22ab3634c264a52d3b4cac90b4561ceaee3039669a3161
-SHA512 (multiqc-1.21.tar.gz) = 65756023c7636cdb36152c1e57cad5ca2ff19edf89b3f689919888193a52bdd8c474d2b2a317a6325ba38938f1bea244dabf5fa1e92885fe2fc8032ecaab4726
-Size (multiqc-1.21.tar.gz) = 4325701 bytes
+BLAKE2s (multiqc-1.25.2.tar.gz) = 16e776d47cbbc78460a481d6403523fffb7b580887238c8e9df18cb12c608330
+SHA512 (multiqc-1.25.2.tar.gz) = 38649171bb51fa39cf9b5969891c7b1b12531d4a5b1b15e5f2d886b242546b967c3847afe485b8e0d411809347c998eff35310ad0cbe806dc7bf967c18eac2d0
+Size (multiqc-1.25.2.tar.gz) = 4326758 bytes
 SHA1 (patch-multiqc_multiqc.py) = 666b3c1a7af2a05582d38540fbfdc32a264120ff
