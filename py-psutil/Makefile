@@ -29,5 +29,5 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 post-install:
 	${FIND} ${DESTDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP} {} +
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
