@@ -4224,6 +4224,7 @@ SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-opt-einsum
 SUBDIR+=	py-optlang
+SUBDIR+=	py-orca
 SUBDIR+=	py-orderedset
 SUBDIR+=	py-ore-algebra
 SUBDIR+=	py-orm
