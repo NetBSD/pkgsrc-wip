@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/fonts/yhmath/LICENSE
+share/texmf-dist/doc/fonts/yhmath/README
+share/texmf-dist/doc/fonts/yhmath/yhcmex10.vpl
+share/texmf-dist/doc/fonts/yhmath/yhmath.pdf
