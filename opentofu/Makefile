@@ -8,8 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.terraform.io/
-COMMENT=	Infrastructure orchestration tool
+HOMEPAGE=	https://opentofu.org/
+COMMENT=	Open source infrastructure as code
 LICENSE=	mpl-2.0
 
 #GO_BUILD_PATTERN=	.
