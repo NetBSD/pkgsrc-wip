@@ -35,8 +35,10 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=4:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../graphics/py-spectra
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10:../../graphics/py-Pillow
-
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+
+# Not listed as a dep, but run errors out with module not found:
+DEPENDS+=	${PYPKGPREFIX}-natsort-[0-9]*:../../textproc/py-natsort
 
 post-patch:
 	${RM} ${WRKSRC}/multiqc/multiqc.py.orig
