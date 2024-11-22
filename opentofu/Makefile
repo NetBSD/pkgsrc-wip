@@ -12,8 +12,6 @@ HOMEPAGE=	https://opentofu.org/
 COMMENT=	Open source infrastructure as code
 LICENSE=	mpl-2.0
 
-#GO_BUILD_PATTERN=	.
-
 SUBST_CLASSES+=			providers-prefix
 SUBST_STAGE.providers-prefix=	pre-configure
 SUBST_MESSAGE.providers-prefix=	Honor providers installed via pkgsrc
