@@ -1,0 +1,23 @@
+1. 'make replace' does not work:
+
+❯ make replace
+===> Replacing for IRust-irust
+*** Error code 1
+
+Stop.
+make[1]: stopped making "replace" in /bd/pkgsrc/wip/irust
+*** Error code 1
+
+Stop.
+make: stopped making "replace" in /bd/pkgsrc/wip/irust
+
+2. 'pkglint' is not clean:
+
+WARN: Makefile:4: Invalid character "@" in Git tag.
+WARN: distinfo:45: Distfiles without version number should be placed in a versioned DIST_SUBDIR.
+2 warnings found.
+(Run "pkglint -e" to show explanations.)
+
+https://github.com/sigmaSd/IRust/releases/tag/irust%401.71.29 <- this is how the tag appears in the distribution, with the '@' sign. 
+
+3. The package is called 'IRust-irust' instead of simply 'irust'. 
