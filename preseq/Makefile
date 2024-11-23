@@ -7,7 +7,7 @@
 
 DISTNAME=	preseq-3.2.0
 CATEGORIES=	biology
-MASTER_SITES=	https://github.com/smithlabcode/preseq/releases/download/v\${PKGVERSION_NOREV}/
+MASTER_SITES=	https://github.com/smithlabcode/preseq/releases/download/v${PKGVERSION_NOREV}/
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/smithlabcode/preseq
