@@ -3221,6 +3221,7 @@ SUBDIR+=	praat
 SUBDIR+=	preload
 SUBDIR+=	premake
 SUBDIR+=	premake4
+SUBDIR+=	preseq
 SUBDIR+=	primesieve
 SUBDIR+=	prjtrellis
 SUBDIR+=	probcons

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (preseq-3.2.0.tar.gz) = d6e2e24de766d82114ba1c26b57b970bcba415fc11fb5a5e956ce80bb95acf21
+SHA512 (preseq-3.2.0.tar.gz) = a06c198a6080c2e7a2a88af6211e93745cc18474d9bf44867f6562adecbf210e778df109aa2ff0f81083f0958b01278a7dabeb56399b949fd27bb4783f913cd9
+Size (preseq-3.2.0.tar.gz) = 6488708 bytes
