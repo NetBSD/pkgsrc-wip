@@ -1,5 +1,8 @@
-Mostly importable, some bits to investigate documented here in order that it
-works out of the box in NetBSD.
+Investigate why Docker does no longer work out of the box with alpine (it worked
+with lima-0.19.1!).
+
+Apart that, mostly importable, some bits to investigate documented here
+in order that it works out of the box in NetBSD.
 
 The following networks is probably needed and/or we should figure out how to
 just default to that in NetBSD, copypasting `~/.lima/_config/networks.yaml`
