@@ -1,15 +1,15 @@
 # $NetBSD$
 
-DISTNAME=	rq-0.0.7rc1
+DISTNAME=	rq-0.0.10
 CATEGORIES=	devel
-MASTER_SITES=	-https://git.sr.ht/~charles/rq/archive/v${PKGVERSION_NOREV:S/rc/-RC/}.tar.gz
+MASTER_SITES=	-https://git.sr.ht/~charles/rq/archive/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~charles/rq
 COMMENT=	Rego Query
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-v/:S/rc/-RC/}
+WRKSRC=		${WRKDIR}/${PKGBASE}-v${PKGVERSION_NOREV}
 
 GO_BUILD_PATTERN+=	./cmd/rq
 
