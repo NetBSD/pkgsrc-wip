@@ -17,9 +17,9 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 # Package builds with clang specific switches
 PKGSRC_COMPILER=	clang
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin libexec libdata
 
-USE_TOOLS+=	bash gmake
+USE_TOOLS+=	bash gmake pax
 
 WRKSRC=		${WRKDIR}
 
@@ -36,9 +36,15 @@ inweb:
 inform: inweb
 	cd ${WRKDIR}/inform && ${BASH} scripts/first.sh
 
+post-build:
+	${ECHO} '#!/bin/sh' > ${WRKSRC}/inform.sh
+	${ECHO} ${PREFIX}'/libexec/inform7 -internal '${PREFIX}'/libdata/inform7/Internal "$$@"' >> ${WRKSRC}/inform.sh
+
 do-install:
 .for file in inform7
-	${INSTALL_PROGRAM} ${WRKSRC}/inform/${file}/Tangled/${file} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/inform/${file}/Tangled/${file} ${DESTDIR}${PREFIX}/libexec
 .endfor
+	cd ${WRKDIR}/inform/inform7 && ${PAX} -pp -rw * ${DESTDIR}${PREFIX}/libdata/inform7
+	${INSTALL_SCRIPT} ${WRKSRC}/inform.sh ${DESTDIR}${PREFIX}/bin/inform7
 
 .include "../../mk/bsd.pkg.mk"

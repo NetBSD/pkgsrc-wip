@@ -1,0 +1,8 @@
+Trying to compile
+
+ To begin:
+        say "Hello world."
+  
+
+with "inform7 -basic helloworld.i7" fails, see
+https://inform7.atlassian.net/browse/I7-2498
