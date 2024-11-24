@@ -1668,6 +1668,7 @@ SUBDIR+=	i2pd
 SUBDIR+=	i2pd-git
 SUBDIR+=	i3-git
 SUBDIR+=	i686-elf-binutils
+SUBDIR+=	i686-elf-gcc
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	ibus-tutcode
