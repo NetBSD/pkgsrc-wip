@@ -1,17 +1,6 @@
-net/unison: Update to 2.53.6
+net/unison: Update to 2.53.8
 
-## Changes in 2.53.6
+So far, changes are:
 
-Released 2024-11-01
-
-  * Remove workaround for Windows DST: Time differences of one hour
-    are no longer treated as not different.
-  * Time remaining, when over 24h, shown as days and HMS instead of
-    just HMS.
-  * Stop using deprecated [GdkPixbuf.from_xpm_data] (avoids problems
-    with some versions of gdkpixbuf).
-
-  Deprecation warning: support for external rsync will be removed,
-  likely in 2.54.0.
-
-
+  - minor build system improvements
+  
