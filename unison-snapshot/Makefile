@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.158 2024/05/07 23:52:11 gdt Exp $
+# $NetBSD: Makefile,v 1.166 2024/11/23 13:59:40 wiz Exp $
 
 # master after 2.53.7
 DISTNAME=	unison-2.53.7.50
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_TAG=	d08a5c35e5a9a2cf9729fff56af0313999aa0c06
 
 MAINTAINER=	gdt@NetBSD.org
@@ -17,12 +16,12 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
-ALL_ENV+=	MANDIR=${PREFIX}/man
+ALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../lang/ocaml/ocaml.mk"
 
-.if (${OCAML_USE_OPT_COMPILER} == "yes")
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
 MAKE_FLAGS+=	NATIVE=true
 .else
 MAKE_FLAGS+=	NATIVE=false
