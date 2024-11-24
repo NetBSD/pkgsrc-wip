@@ -19,13 +19,13 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
+PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
+
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.
 .if ${OPSYS} == "NetBSD" && ${BUILD_TARGET} == "dist"
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .endif
-
-PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 
 .include "../../mk/bsd.options.mk"
 
@@ -35,7 +35,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 # (however, gcc from 9.x produces a working LLVM, go figure).
 .if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
 .  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
-# Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
+# Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (18.x).
 GCC_REQD+=	12
 .  endif
 .endif
