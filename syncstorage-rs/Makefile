@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.10 2024/11/01 12:54:57 wiz Exp $
 
-DISTNAME=	syncstorage-rs-0.17.13
+DISTNAME=	syncstorage-rs-0.17.15
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 
@@ -34,17 +34,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 .include "cargo-depends.mk"
 
-SITES.curl-sys-0.4.78+curl-8.11.0.crate= https://static.crates.io/crates/curl-sys/
+SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
 
-# Depends on an mozilla-modified version of crate
-DEADPOOL_REV=				deadpool-v0.7.0
-DISTFILES=				${DEFAULT_DISTFILES}
-DISTFILES+=				deadpool-${DEADPOOL_REV}.tar.gz
-SITES.deadpool-${DEADPOOL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=mozilla-services/}deadpool/archive/${DEADPOOL_REV}.tar.gz
 # needs snapshot
-SENTRY_REV=		1b65b5c99af975496880e7325218479e0037d097
-DISTFILES+=		sentry-rust-${SENTRY_REV}.tar.gz
-SITES.sentry-rust-${SENTRY_REV}.tar.gz+=   -${MASTER_SITE_GITHUB:=getsentry/}sentry-rust/archive/${SENTRY_REV}.tar.gz
+SENTRY_REV=					1b65b5c99af975496880e7325218479e0037d097
+DISTFILES=					${DEFAULT_DISTFILES}
+DISTFILES+=					sentry-rust-${SENTRY_REV}.tar.gz
+SITES.sentry-rust-${SENTRY_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=getsentry/}sentry-rust/archive/${SENTRY_REV}.tar.gz
 
 USE_LANGUAGES=		c c++ # rust, but needs toolchain
 USE_TOOLS+=		pkg-config
@@ -53,9 +49,6 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 
 INSTALLATION_DIRS+=	bin share/doc/syncstorage-rs share/examples/syncstorage-rs
 INSTALLATION_DIRS+=	lib/tokenserver
-
-post-extract:
-	mv ${WRKDIR}/deadpool* ${WRKDIR}/deadpool
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/syncserver ${DESTDIR}${PREFIX}/bin
