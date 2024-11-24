@@ -14,7 +14,7 @@
 #	Official Rust binaries are only published for certain platforms,
 #	including Darwin, FreeBSD, Linux, and NetBSD x86_64.
 #
-#	Possible values: src bin
+#	Possible values: src bin native
 #	Default: src
 #
 # === Package-settable variables ===

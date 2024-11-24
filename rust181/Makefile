@@ -209,8 +209,6 @@ BUILDLINK_TRANSFORM+=	opt:x86_64:arm64
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
 
-NB=
-
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.80.1
 RUST_ARCH:=		aarch64-apple-darwin
