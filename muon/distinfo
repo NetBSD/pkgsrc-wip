@@ -1,9 +1,10 @@
 $NetBSD$
 
-BLAKE2s (muon-0.3.0/0.3.0.tar.gz) = 831af6f70a771160c51c9611071abcff98be556f553a7b9eb75bf19e4aab9afe
-SHA512 (muon-0.3.0/0.3.0.tar.gz) = 32a0275845bcd6b3fba710d4820c9d88c74f02f9ed50b55118a9df10432ad169d67c713b071a2feeac7f1389fd4010486dcf3e631c33bf7a9af9f485bfad3772
-Size (muon-0.3.0/0.3.0.tar.gz) = 445990 bytes
-BLAKE2s (muon-0.3.0/man.tar.gz) = a29909a298c4140169684bfb3c0156aef8269b1335473f37ed02506dce110f49
-SHA512 (muon-0.3.0/man.tar.gz) = 8dfc00ce366b172196d815e74e9941debcc4a306333f1d8cda8ca31d501bdb72fe3a0ec8df0391731906674fa9d4bf014d96974bc73566f5baf30f10c232d60f
-Size (muon-0.3.0/man.tar.gz) = 8067 bytes
-SHA1 (patch-tests_project_meson.build) = 6bfac6756950c2e6e0016d6b2b3978542f9ae963
+BLAKE2s (muon-0.3.1/0.3.1.tar.gz) = b7ef7da182dbd4d207050d13b57d006ad84384ee0dfdce56db8e69dbf1986233
+SHA512 (muon-0.3.1/0.3.1.tar.gz) = f9113d463bee6ecad6d97de0ea4ab210632e7baac265f32992036a5cab005222965615c3b3f7f0a4f2a5a880143f09d59233f43e9d6e3ae3ec700ba28f6a1bbc
+Size (muon-0.3.1/0.3.1.tar.gz) = 446185 bytes
+BLAKE2s (muon-0.3.1/man.tar.gz) = a4c684299b27f35615bf92d90a1761da8de86cdfeab5b77ac62695d611ab194e
+SHA512 (muon-0.3.1/man.tar.gz) = 1f1f054c0e2331c63245adbd1111552b331ecac337f1902490c5ba6dbe48c858787cb5a3cce00b26491b0dfac1001938b7f4461c7df098098e2202cd4021b8da
+Size (muon-0.3.1/man.tar.gz) = 8067 bytes
+SHA1 (patch-meson.build) = 3399887cc133b97fb6f2f5669ae59ec8d7bbaf8b
+SHA1 (patch-tests_project_meson.build) = dd116edbc57961fd34038197e6ec563fd6752e58

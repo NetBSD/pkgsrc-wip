@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		muon-0.3.0
+PKGNAME=		muon-0.3.1
 DISTNAME=		${PKGNAME:S/muon-//}
 CATEGORIES=		devel
 MASTER_SITES=		https://git.sr.ht/~lattis/muon/archive/

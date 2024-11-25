@@ -1,108 +1,19 @@
 $NetBSD$
 
-Disable download of additional tests (not allowed for pkgsrc).
+Fix build without git.
 
---- tests/project/meson.build.orig	2024-09-24 16:08:34.000000000 +0000
+From upstream commit 74174cbb3e9e1386982b18ffd0ab0e4fe72c98b2.
+
+--- tests/project/meson.build.orig	2024-10-07 15:19:19.000000000 +0000
 +++ tests/project/meson.build
-@@ -401,53 +401,54 @@ else
+@@ -401,8 +401,9 @@ else
      endif
  endif
  
--if git.found()
++meson_tests_dir = meson.current_source_dir() / 'meson-tests'
++
+ if git.found()
 -    meson_tests_dir = meson.current_source_dir() / 'meson-tests'
--    meson_tests_sha = '1e565931348f15f3f9b654f46ab4bf5fa009ca4f'
--
--    if fs.is_dir('meson-tests')
--        meson_tests_clean = run_command(git, '-C', meson_tests_dir, 'diff', '--quiet', check: false).returncode() == 0
--
--        # If the meson-tests repo has no modifications and is not up to date,
--        # force update it.
--        if meson_tests_clean and run_command(
--            git,
--            '-C', meson_tests_dir,
--            'merge-base',
--            '--is-ancestor', meson_tests_sha,
--            'HEAD',
--            check: false,
--        ).returncode() != 0
--            warning('force-updating meson-tests repo')
--            run_command(
--                git,
--                '-C', meson_tests_dir,
--                'fetch',
--                '--all',
--                capture: false,
--                check: true,
--            )
--
--            run_command(
--                git,
--                '-C', meson_tests_dir,
--                'reset',
--                '--hard', 'origin/master',
--                capture: false,
--                check: true,
--            )
--        endif
--    else
--        run_command(
--            git,
--            'clone',
--            get_option('meson_tests_repo'),
--            meson_tests_dir,
--            capture: false,
--            check: true,
--        )
--    endif
--endif
-+# Disabled for pkgsrc
-+#if git.found()
-+#    meson_tests_dir = meson.current_source_dir() / 'meson-tests'
-+#    meson_tests_sha = '1e565931348f15f3f9b654f46ab4bf5fa009ca4f'
-+#
-+#    if fs.is_dir('meson-tests')
-+#        meson_tests_clean = run_command(git, '-C', meson_tests_dir, 'diff', '--quiet', check: false).returncode() == 0
-+#
-+#        # If the meson-tests repo has no modifications and is not up to date,
-+#        # force update it.
-+#        if meson_tests_clean and run_command(
-+#            git,
-+#            '-C', meson_tests_dir,
-+#            'merge-base',
-+#            '--is-ancestor', meson_tests_sha,
-+#            'HEAD',
-+#            check: false,
-+#        ).returncode() != 0
-+#            warning('force-updating meson-tests repo')
-+#            run_command(
-+#                git,
-+#                '-C', meson_tests_dir,
-+#                'fetch',
-+#                '--all',
-+#                capture: false,
-+#                check: true,
-+#            )
-+#
-+#            run_command(
-+#                git,
-+#                '-C', meson_tests_dir,
-+#                'reset',
-+#                '--hard', 'origin/master',
-+#                capture: false,
-+#                check: true,
-+#            )
-+#        endif
-+#    else
-+#        run_command(
-+#            git,
-+#            'clone',
-+#            get_option('meson_tests_repo'),
-+#            meson_tests_dir,
-+#            capture: false,
-+#            check: true,
-+#        )
-+#    endif
-+#endif
+     meson_tests_sha = '1e565931348f15f3f9b654f46ab4bf5fa009ca4f'
  
- skip_meson_tests = not fs.is_dir('meson-tests')
- if skip_meson_tests
+     if not fs.is_dir(meson_tests_dir)
