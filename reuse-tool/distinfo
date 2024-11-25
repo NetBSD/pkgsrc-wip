@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (reuse-tool-4.0.3.tar.gz) = 387c6737cd9098d5f6074247260c745b08acc881464c9fe188284c3356401185
-SHA512 (reuse-tool-4.0.3.tar.gz) = 2f9dca807a0f3eed9356c1fcbe9f7bc8fd9711ac3583811decf90bbb28818a0af64925fa31ee84e8c0e8241d64e9194209b03cb422bf1aeb6b160eca3289bec6
-Size (reuse-tool-4.0.3.tar.gz) = 360402 bytes
-SHA1 (patch-docs_conf.py) = 50ed766eb22fee68a1e39c634e71d3ef040f1410
+BLAKE2s (reuse-tool-5.0.2.tar.gz) = 01e27295a32353cf8820f5d31db25e6bd331314c7026a039372962394d13bed3
+SHA512 (reuse-tool-5.0.2.tar.gz) = 472048dcb16df330478727278de593e6e102fe224d7acd485666d3d2ceb49725426e008e1c116c41acea3c767de347cf5e4775c1471cb287c5d594860db75a5a
+Size (reuse-tool-5.0.2.tar.gz) = 398518 bytes
+SHA1 (patch-docs_conf.py) = 5616d9c3168e5e370788fb470b37a6b1b0556a01

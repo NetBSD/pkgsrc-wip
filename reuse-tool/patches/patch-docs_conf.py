@@ -4,7 +4,7 @@ Disable "apidoc" (not required for building man pages).
 Disable "intersphinx_mapping" (wants do fetch stuff from network).
 pkgsrc-wip package for py-furo is broken (not required for building man pages).
 
---- docs/conf.py.orig	2024-07-08 11:58:05.000000000 +0000
+--- docs/conf.py.orig	2024-11-14 09:32:08.000000000 +0000
 +++ docs/conf.py
 @@ -52,29 +52,15 @@ extensions = [
      "sphinx.ext.intersphinx",
@@ -20,7 +20,7 @@ pkgsrc-wip package for py-furo is broken (not required for building man pages).
 -
 -apidoc_module_dir = str(ROOT_DIR / "src/reuse")
 -# apidoc_output_dir = "api"
--# apidoc_excluded_paths = []
+-apidoc_excluded_paths = ["cli"]
 -apidoc_separate_modules = True
 -apidoc_toc_file = False
 -apidoc_extra_args = ["--maxdepth", "2"]
