@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/asyncore/__init__.py
+${PYSITELIB}/asyncore/__init__.pyc
+${PYSITELIB}/asyncore/__init__.pyo
+${PYSITELIB}/pyasyncore-${PKGVERSION}.dist-info/LICENSE
+${PYSITELIB}/pyasyncore-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/pyasyncore-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/pyasyncore-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/pyasyncore-${PKGVERSION}.dist-info/top_level.txt
