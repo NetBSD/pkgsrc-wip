@@ -18,6 +18,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		autoconf automake gmake
 
+PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
+
 pre-configure:
 	(cd ${WRKSRC}; ./autogen.sh --prefix ${PREFIX})
 
