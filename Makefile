@@ -3368,6 +3368,7 @@ SUBDIR+=	py-astroscrappy
 SUBDIR+=	py-astutils
 SUBDIR+=	py-async
 SUBDIR+=	py-asyncmock
+SUBDIR+=	py-asyncore
 SUBDIR+=	py-asynctest
 SUBDIR+=	py-atmark
 SUBDIR+=	py-atmos
