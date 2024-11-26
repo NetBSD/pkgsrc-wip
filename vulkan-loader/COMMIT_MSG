@@ -1,0 +1,8 @@
+graphics/vulkan-loader: Add to version 1.3.296
+
+Packaged in wip by Niclas Rosenvik
+Update prepared in wip by Frédéric Fauberteau
+
+It is suggested upstream to use sdk tags which are of better quality. The
+version of graphics/vulkan-headers and graphics/vulkan-loader should be the
+same.

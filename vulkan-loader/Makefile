@@ -1,12 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	Vulkan-Loader
-DISTNAME=	sdk-1.2.162.0
-PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME:S/sdk-//}
+DISTNAME=	vulkan-loader-1.3.296
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_TAG=	${DISTNAME}
+GITHUB_PROJECT=	Vulkan-Loader
+GITHUB_TAG=	vulkan-sdk-${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	nros@NetBSD.org
@@ -14,19 +13,21 @@ HOMEPAGE=	https://github.com/KhronosGroup/Vulkan-Loader/
 COMMENT=	Loader for Vulkan Graphics API
 LICENSE=	apache-2.0
 
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_TOOLS+=	pkg-config
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 # wayland support missing in pkgsrc
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_WSI_WAYLAND_SUPPORT=OFF
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 PKGCONFIG_OVERRIDE+=	loader/vulkan.pc.in
 
-.include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+
+#.include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../graphics/vulkan-headers/buildlink3.mk"
