@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.282 2024/06/29 13:08:09 wiz Exp $
+# $NetBSD: gcc.mk,v 1.284 2024/10/16 20:16:25 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -230,12 +230,8 @@ GCC_REQD+=	4.9
 .endif
 
 .if !empty(USE_CC_FEATURES:Mc17)
-# \todo Find gcc documentation about c17 support.
-# gcc7 fails with --std=c17
-# gcc8, gcc9 are unknown
-# gcc10 works
-
-# Choose 10 following the limited versions guidance.
+# GCC 8 is the first version that works.  10 is the first version
+# shipped with a NetBSD release.
 GCC_REQD+=	10.0
 .endif
 
@@ -381,6 +377,8 @@ _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
 # Note that pkgsrc also sets this flag itself for Darwin+clang.
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=sign-conversion
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=incompatible-pointer-types
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-int
 .endif
 
 .if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[01234].*)
@@ -612,7 +610,7 @@ _NEED_GCC13=	yes
 _NEED_GCC14=	yes
 .endif
 
-# We've got fixed set of Ada compilers and languages them provided. So we try to find best possible variant
+# We have fixed set of Ada compilers and languages them provided. So we try to find best possible variant
 _NEED_GCC6_AUX?=no
 _NEED_GCC10_AUX?=no
 _NEED_GCC13_GNAT?=no
@@ -637,18 +635,6 @@ _NEED_GCC14_GNAT=no
 .     else
 PKG_FAIL_REASON+=	"Package requires fortran compiler"
 .     endif
-.  endif
-.  if ${_NEED_GCC6_AUX:tl} == "yes" && ${_NEED_GCC6:tl} != "yes"
-_NEED_GCC6_AUX=no
-.  endif
-.  if ${_NEED_GCC10_AUX:tl} == "yes" && ${_NEED_GCC10:tl} != "yes"
-_NEED_GCC10_AUX=no
-.  endif
-.  if ${_NEED_GCC13_GNAT:tl} == "yes" && ${_NEED_GCC13:tl} != "yes"
-_NEED_GCC13_GNAT=no
-.  endif
-.  if ${_NEED_GCC14_GNAT:tl} == "yes" && ${_NEED_GCC14:tl} != "yes"
-_NEED_GCC14_GNAT=no
 .  endif
 .  if !empty(USE_LANGUAGES:Mobjc)
 _NEED_GCC6_AUX=no
@@ -689,8 +675,8 @@ _NEED_GCC14=no
 .  if ${_NEED_GCC14_GNAT:tl} == "yes"
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
-_NEED_GCC13_AUX=no
-.  if ${_NEED_GCC13_GNAT:tl} == "yes"
+_NEED_GCC13_GNAT=no
+.  elif ${_NEED_GCC13_GNAT:tl} == "yes"
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
 .  elif ${_NEED_GCC10_AUX:tl} == "yes"
@@ -989,8 +975,8 @@ _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc14-gnat
-_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
+_GCC_PKGSRCDIR=		../../wip/gcc14-gnat
+_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../wip/gcc14-gnat
 _USE_GCC_SHLIB?=	no
 .  endif
 .endif
