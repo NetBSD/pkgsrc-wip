@@ -1,5 +1,10 @@
-geography/proj: Update to ? (from 9.5.0)
+geography/proj: Update to 9.5.1
 
 Upstream NEWS, less normal updates (e.g. EPSG database) and other
 housekeeping, bugfixes, minor improvements follows.
 
+* Database: update to EPSG v11.021 (#4254, #4275, #4297)
+
+* Speed-up dramatically proj.db build time (#4280)
+
+* Database: ingest deprecated ESRI names to be able to better import old WKT ESRI (#4282)
