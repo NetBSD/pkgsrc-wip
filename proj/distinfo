@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.24 2024/09/15 12:53:31 gdt Exp $
 
-BLAKE2s (proj-9.5.1RC1.tar.gz) = 458295e298a7bf8e5ec93e437f49a9e7d0c0a0ca35f80cd220da3c2362178234
-SHA512 (proj-9.5.1RC1.tar.gz) = 02c46e2e47dc65dd1dc52b7e02bbd9d9802915d4fb301dd187df846b110b3f7c55f8ac531b25962e657f81bbd0d16f1baf24508f6049692f2b1621b7e7d0ec65
-Size (proj-9.5.1RC1.tar.gz) = 5702389 bytes
-SHA1 (patch-data_CMakeLists.txt) = eeae6e976aeb5fa35efd99096a52253e788a8592
+BLAKE2s (proj-9.5.1RC2.tar.gz) = ad43b92e6196f7e1649f29adda587e01f45fe58453fb11b4f127e36c96f0dded
+SHA512 (proj-9.5.1RC2.tar.gz) = 66078ebca236477324859ad2dab492e10bbd23f65cc53f588b468dce2176b66b42ea50613d05bd99a144ecd66d33628e335d2b1e9382f6a8cf36ee9619505a09
+Size (proj-9.5.1RC2.tar.gz) = 5702355 bytes
