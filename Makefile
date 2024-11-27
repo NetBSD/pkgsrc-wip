@@ -2632,6 +2632,7 @@ SUBDIR+=	ocamlweb
 SUBDIR+=	occt
 SUBDIR+=	ocserv
 SUBDIR+=	odin
+SUBDIR+=	offpunk
 SUBDIR+=	offset
 SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
