@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (readability-lxml-0.8.1.tar.gz) = 96cab93209f580eeb27ca86428b5b46f6fe46c2ed1deec8b2a030881ef2b7c3a
+SHA512 (readability-lxml-0.8.1.tar.gz) = e975116c8e34d7395e22acab2257dc9e90d75835317deadab6fb4bfd8aea5a8af9eacaabf26e96230665006dee63a0e7dd2afceba480da4d5f31b2b3bf7129c2
+Size (readability-lxml-0.8.1.tar.gz) = 15878 bytes
