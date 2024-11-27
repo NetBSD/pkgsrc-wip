@@ -4482,6 +4482,7 @@ SUBDIR+=	py-rdopkg
 SUBDIR+=	py-rdoupdate
 SUBDIR+=	py-reactive-papi
 SUBDIR+=	py-reactive-platform
+SUBDIR+=	py-readability-lxml
 SUBDIR+=	py-realalg
 SUBDIR+=	py-rebound
 SUBDIR+=	py-rebound3
