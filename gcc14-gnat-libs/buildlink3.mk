@@ -15,19 +15,22 @@ BUILDLINK_DEPMETHOD.gcc14-gnat-libs?=	full
 
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
-TARGET_LIBDIR.gcc13-gnat-libs=	${PREFIX}/gcc14-gnat/${GCC_TARGET_MACHINE}/lib
+TARGET_LIBDIR.gcc14-gnat-libs=	${PREFIX}/gcc14-gnat/${GCC_TARGET_MACHINE}/lib
 
-BUILDLINK_PASSTHRU_DIRS+=	${TARGET_LIBDIR.gcc13-gnat-libs}
+BUILDLINK_PASSTHRU_DIRS+=	${TARGET_LIBDIR.gcc14-gnat-libs}
 
 BUILDLINK_FILES.gcc14-gnat-libs=	#empty
 BUILDLINK_AUTO_VARS.gcc14-gnat-libs=	no
-BUILDLINK_RPATHDIRS.gcc14-gnat-libs=	${TARGET_LIBDIR.gcc13-gnat-libs}
+BUILDLINK_RPATHDIRS.gcc14-gnat-libs=	${TARGET_LIBDIR.gcc14-gnat-libs}
 
 .if defined(LD_RUN_PATH)
-LD_RUN_PATH:=	${TARGET_LIBDIR.gcc13-gnat-libs}:${LD_RUN_PATH}
+LD_RUN_PATH:=	${TARGET_LIBDIR.gcc14-gnat-libs}:${LD_RUN_PATH}
 .else
-LD_RUN_PATH:=	${TARGET_LIBDIR.gcc13-gnat-libs}
+LD_RUN_PATH:=	${TARGET_LIBDIR.gcc14-gnat-libs}
 .endif
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${TARGET_LIBDIR.gcc14-gnat-libs}
+LDFLAGS+=	-Wl,-z,relro,-z,now
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
