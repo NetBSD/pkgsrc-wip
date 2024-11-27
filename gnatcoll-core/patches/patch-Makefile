@@ -1,31 +1,26 @@
-$NetBSD: patch-Makefile,v 1.0 2024/05/08 23:00:00 dkazankov Exp $
+$NetBSD: patch-Makefile,v 1.0 2024/11/27 11:00:00 dkazankov Exp $
 
-Make static-pic in addition to static lib
-Add install options
+Add necessary parameters for pkgsrc build
+Fix destdir building in rsync absence
 
---- Makefile.orig	2023-09-21 18:57:14.000000000 +0300
-+++ Makefile	2024-05-10 23:25:58.532726100 +0300
-@@ -101,7 +101,7 @@
- ifeq ($(ENABLE_SHARED), yes)
-    LIBRARY_TYPES=static relocatable static-pic
- else
--   LIBRARY_TYPES=static
-+   LIBRARY_TYPES=static static-pic
- endif
+--- Makefile.orig	2024-09-24 12:28:32.000000000 +0300
++++ Makefile	2024-11-27 13:11:31.400017372 +0200
+@@ -99,7 +99,8 @@
+  --target=$(NORMALIZED_TARGET) \
+  --prefix=local-install \
+  --install \
+- --enable-shared=$(ENABLE_SHARED)
++ --enable-shared=$(ENABLE_SHARED) \
++ --gpr-opts $(GPRBUILD_OPTIONS)
  
- ifeq ($(GNATCOV), yes)
-@@ -129,12 +129,13 @@
+ build:
+ 	rm -rf local-install
+@@ -123,7 +124,7 @@
  
- # Used to pass extra options to GPRBUILD, like -d for instance
- GPRBUILD_OPTIONS=
-+GPRINSTALL_OPTIONS=
+ install:
+ 	@echo "Installing gnatcoll into $(prefix)"
+-	rsync -av ./local-install/ $(prefix)$(integrated_install)  
++	cp -r ./local-install/* $(prefix)$(integrated_install)  
  
- BUILDER=$(GNATCOV_PROJECT_PATH) gprbuild -p -m $(GTARGET) $(RBD) \
-         -j$(PROCESSORS) $(GPR_VARS) \
- 	$(GPRBUILD_OPTIONS) $(GNATCOV_BUILD_OPTS)
- INSTALLER=gprinstall -p -f $(GTARGET) $(GPR_VARS) \
--	$(RBD) --sources-subdir=include/gnatcoll --prefix=$(prefix)$(integrated_install)
-+	$(RBD) --sources-subdir=include/gnatcoll --prefix=$(prefix)$(integrated_install) $(GPRINSTALL_OPTIONS)
- CLEANER=gprclean -q $(RBD) $(GTARGET)
- UNINSTALLER=$(INSTALLER) -p -f --install-name=gnatcoll --uninstall
- 
+ ###########
+ # Cleanup #

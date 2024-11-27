@@ -9,11 +9,11 @@ BUILDLINK_API_DEPENDS.gnatcoll-core+=	gnatcoll-core>=24.0.0
 BUILDLINK_PKGSRCDIR.gnatcoll-core=	../../wip/gnatcoll-core
 BUILDLINK_DEPMETHOD.gnatcoll-core?=	build
 
-BUILDLINK_FILES.gnatcoll-core=		include/gnatcoll/* lib/gnatcoll.*/*
-BUILDLINK_FILES.gnatcoll-core+=		share/gpr/manifests/gnatcoll share/gpr/gnatcoll.gpr
+BUILDLINK_FILES.gnatcoll-core=		include/gnatcoll*/* lib/libgnatcoll* lib/gnatcoll.*/*
+BUILDLINK_FILES.gnatcoll-core+=		share/gpr/manifests/gnatcoll* share/gpr/gnatcoll*.gpr
 
 BUILDLINK_CONTENTS_FILTER.gnatcoll-core=	\
-	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
+	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatcoll.*$$|share/gpr/manifests/gnatcoll.*|share/gpr/gnatcoll.*\.gpr$$)'
 
 .endif
 

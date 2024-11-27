@@ -3,19 +3,18 @@ $NetBSD: patch-gnatcoll.gpr,v 1.0 2024/05/17 18:00:00 dkazankov Exp $
 Fix extra libs on NetBSD
 Fix RELRO options on NetBSD
 
---- gnatcoll.gpr.orig	2023-09-21 18:57:14.000000000 +0300
-+++ gnatcoll.gpr	2024-05-17 18:02:19.343616530 +0300
-@@ -105,7 +105,8 @@
+--- core/gnatcoll_core.gpr.orig	2024-09-24 12:28:32.000000000 +0300
++++ core/gnatcoll_core.gpr
+@@ -154,7 +154,7 @@
     end case;
     case OS is
        when "unix" =>
 -         Extra_Libs := Extra_Libs & ("-ldl"); --  For gnatcoll.plugins
-+         --Extra_Libs := Extra_Libs & ("-ldl"); --  For gnatcoll.plugins
 +         null;
        when others =>
           null;
     end case;
-@@ -156,6 +157,13 @@
+@@ -206,6 +206,13 @@
  
        for Switches ("gnatcoll_support.c") use
          Extra_Switches & Compiler'Switches ("C");

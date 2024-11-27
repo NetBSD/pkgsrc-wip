@@ -2,8 +2,8 @@ $NetBSD: patch-executable_path.c,v 1.0 2024/05/06 14:00:00 dkazankov Exp $
 
 Add NetBSD support
 
---- src/executable_path.c.orig	2023-09-21 18:57:14.000000000 +0300
-+++ src/executable_path.c	2024-05-06 13:54:06.462078706 +0300
+--- core/src/executable_path.c.orig	2024-09-24 12:28:32.000000000 +0300
++++ core/src/executable_path.c
 @@ -50,7 +50,7 @@
      return (int) GetModuleFileNameA(NULL, buffer, (DWORD) size);
  }
