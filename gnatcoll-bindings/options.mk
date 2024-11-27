@@ -1,12 +1,16 @@
 # $NetBSD: options.mk,v 1.0 2024/05/13 15:00:00 dkazankov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnatcoll-bindings
-PKG_SUPPORTED_OPTIONS=	gmp iconv lzma omp python python3 readline syslog zlib
-PKG_SUGGESTED_OPTIONS=	gmp iconv lzma omp readline syslog zlib
+PKG_SUPPORTED_OPTIONS=	cpp gmp iconv lzma omp python python3 readline syslog zlib
+PKG_SUGGESTED_OPTIONS=	cpp gmp iconv lzma omp python3 readline syslog zlib
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcpp)
+BINDINGS+=	cpp
+.endif
 
 .if !empty(PKG_OPTIONS:Mgmp)
 .  include "../../devel/gmp/buildlink3.mk"

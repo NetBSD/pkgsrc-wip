@@ -3,7 +3,7 @@ $NetBSD: patch-version_information,v 1.0 2024/05/06 14:00:00 dkazankov Exp $
 Set version information
 
 --- version_information.orig	2023-09-21 18:57:14.000000000 +0300
-+++ version_information	2024-05-06 14:53:16.555885083 +0300
++++ version_information
 @@ -1 +1 @@
 -0.0
-+24.0
++25.0
