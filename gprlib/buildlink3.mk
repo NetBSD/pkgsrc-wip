@@ -12,11 +12,12 @@ BUILDLINK_DEPMETHOD.gprlib?=	build
 BUILDLINK_AUTO_VARS.gprlib=	no
 BUILDLINK_AUTO_DIRS.gprlib=	no
 
+BUILDLINK_FILES.gprlib=		lib/libgnatprj.so
 BUILDLINK_FILES.gprlib=		include/gpr/* lib/gpr/*
 BUILDLINK_FILES.gprlib+=	share/gpr/manifests/gpr share/gpr/gpr.gpr
 
 BUILDLINK_CONTENTS_FILTER.gprlib=	\
-	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$|/gpr\.adb$$|/gpr-util-put_resource_usage__unix\.adb$$)'
+	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatprj\.so$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$|/gpr\.adb$$|/gpr-util-put_resource_usage__unix\.adb$$)'
 
 .endif
 
