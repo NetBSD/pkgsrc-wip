@@ -1,0 +1,15 @@
+$NetBSD: patch-postgres_Makefile,v 1.0 2024/07/24 19:00:00 dkazankov Exp $
+
+Fix library types to build
+
+--- postgres/Makefile.orig	2022-09-02 15:43:38.000000000 +0300
++++ postgres/Makefile	2024-07-24 20:34:07.604188615 +0300
+@@ -91,7 +91,7 @@
+ ifeq ($(ENABLE_SHARED), yes)
+    LIBRARY_TYPES=static relocatable static-pic
+ else
+-   LIBRARY_TYPES=static
++   LIBRARY_TYPES=static static-pic
+ endif
+ 
+ ifeq ($(INTEGRATED), yes)

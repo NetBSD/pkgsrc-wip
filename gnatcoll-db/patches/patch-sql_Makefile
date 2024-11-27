@@ -1,0 +1,15 @@
+$NetBSD: patch-sql_Makefile,v 1.0 2024/07/24 19:00:00 dkazankov Exp $
+
+Fix library types to build
+
+--- sql/Makefile.orig	2022-09-02 15:43:38.000000000 +0300
++++ sql/Makefile	2024-07-24 20:32:31.706525848 +0300
+@@ -85,7 +85,7 @@
+ ifeq ($(ENABLE_SHARED), yes)
+    LIBRARY_TYPES=static relocatable static-pic
+ else
+-   LIBRARY_TYPES=static
++   LIBRARY_TYPES=static static-pic
+ endif
+ 
+ ifeq ($(INTEGRATED), yes)
