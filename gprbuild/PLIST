@@ -149,6 +149,7 @@ share/gprconfig/fortran.xml
 share/gprconfig/gnat.xml
 share/gprconfig/gprconfig.xsd
 share/gprconfig/linker.xml
+share/gprconfig/morello-vx7r2.xml
 share/gprconfig/nocompiler.xml
 share/gprconfig/ppc-vx6.xml
 share/gprconfig/ppc-vx653.xml

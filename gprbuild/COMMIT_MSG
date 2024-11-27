@@ -1,7 +1,3 @@
-devel/gprbuild: Update to 24.0.0nb3
+devel/gprbuild: Update to 25.0.0
 
-* Removed unnecessary fixed links to Ada RTS in bootstrap build
-  so package can be built with newer GNAT versions
-* New gprbuild.mk file for packages that use only gprbuild
-  for building
-* Runpath handling fixes
+* Major release update

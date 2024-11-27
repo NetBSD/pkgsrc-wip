@@ -1,9 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2024/03/19 13:20:35 wiz Exp $
 
-GPRBUILD_VERSION:=	24.0.0
-
-DISTNAME=	gprbuild-${GPRBUILD_VERSION}
-PKGREVISION=	3
+DISTNAME=	gprbuild-25.0.0
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
@@ -60,13 +57,15 @@ SUBST_CLASSES+=			fixver
 SUBST_STAGE.fixver=		pre-configure
 SUBST_FILES.fixver=		deps/xmlada/configure
 SUBST_MESSAGE.fixver=		Fix version in configure
-SUBST_SED.fixver=		-e 's,18.0w,24.0w,g'
+SUBST_SED.fixver=		-e 's,18.0w,25.0w,g'
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} bin libexec share \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "../../wip/gcc14-gnat/gcc.mk"
 
 pre-configure:
 	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${WRKDIR}/
