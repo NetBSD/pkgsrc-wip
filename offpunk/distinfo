@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.88 2024/10/20 09:56:27 leot Exp $
+
+BLAKE2s (offpunk-2.4.tar.gz) = 9285ce1280855b1f2397689217acfb02af72809c322e325b07ca79d833a3fd41
+SHA512 (offpunk-2.4.tar.gz) = 03b778487bd8dd8f60ef2402fc3df9163c25f5066384c0771eb5611ea771ccea540b4d64e8a999bc5fe4ee56d6541190f704fb90f4faeebfc10fcfb6582cf6b8
+Size (offpunk-2.4.tar.gz) = 471822 bytes
