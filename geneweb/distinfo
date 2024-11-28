@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (geneweb/v7.1-beta.tar.gz) = 8fbe0f83c19f3ecd6077af4fea1d9ad195147d130ec49dccf6c13fc3cc745088
+SHA512 (geneweb/v7.1-beta.tar.gz) = d45d69866b94869495788b4fd10e74bb23b70a0fb32547afb7385bbaa62a4526916d66217f354e434b12faca883c8624e606c5593d1a3740fb07005b53abff76
+Size (geneweb/v7.1-beta.tar.gz) = 14465662 bytes
+SHA1 (patch-etc_install-cgi.sh) = e3723c42be0f931958a3ddf2c71afcb506e6930b
