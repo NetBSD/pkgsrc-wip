@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.2 2019/07/31 15:00:16 brook Exp $
+
+BUILDLINK_TREE+=	R-Rcpp
+
+.if !defined(R_RCPP_BUILDLINK3_MK)
+R_RCPP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.R-Rcpp+=	R-Rcpp>=1.0.2
+BUILDLINK_PKGSRCDIR.R-Rcpp?=	../../wip/R-Rcpp
+.endif	# R_RCPP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-R-Rcpp
