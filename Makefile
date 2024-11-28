@@ -5520,6 +5520,7 @@ SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws
 SUBDIR+=	terraform-provider-aws-modules-http
 SUBDIR+=	terraform-provider-aws3
+SUBDIR+=	terraform-provider-aws5
 SUBDIR+=	terraform-provider-cassandra
 SUBDIR+=	terraform-provider-cloudinit
 SUBDIR+=	terraform-provider-flux
