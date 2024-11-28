@@ -4,6 +4,7 @@ DISTNAME=	terraform-provider-aws-5.78.0
 PKGNAME=	${DISTNAME:S/aws/aws5/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
+GITHUB_PROJECT=	terraform-provider-aws
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
