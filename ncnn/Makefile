@@ -1,12 +1,10 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	ncnn
+DISTNAME=	ncnn
 GITHUB_TAG=	20240820
-DISTNAME=	${GITHUB_PROJECT}
 PKGNAME=	${DISTNAME}-${GITHUB_TAG}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tencent/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://github.com/Tencent/ncnn/
@@ -16,5 +14,6 @@ LICENSE=	modified-bsd AND zlib AND 2-clause-bsd
 USE_LANGUAGES=	c c++
 
 .include "../../devel/cmake/build.mk"
+
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
