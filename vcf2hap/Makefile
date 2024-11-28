@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/auerlab/vcf2hap
 COMMENT=	Generate .hap file from VCF for haplohseq
 LICENSE=	2-clause-bsd
 
-MAKE_ENV+=	VERSION=${PKGVERSION}
+MAKE_ENV+=	VERSION=${PKGVERSION} MANDIR=${PREFIX}/${PKGMANDIR}
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend

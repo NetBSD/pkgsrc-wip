@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/auerlab/vcf-split
 COMMENT=	Split a multi-sample VCF into single-sample VCFs
 LICENSE=	2-clause-bsd
 
-MAKE_ENV+=	VERSION=${PKGVERSION}
+MAKE_ENV+=	VERSION=${PKGVERSION} MANDIR=${PREFIX}/${PKGMANDIR}
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend

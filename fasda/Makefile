@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 DEPENDS=	stringtie>0:../../wip/stringtie
 
 LDFLAGS.SunOS+=	-lresolv
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
