@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2024/05/07 07:18:55 wiz Exp $
 
-DISTNAME=	cargo-c-0.10.5
+DISTNAME=	cargo-c-0.10.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/lu-zero/cargo-c
 COMMENT=	Build and install C-compatible libraries from Rust lang
 LICENSE=	2-clause-bsd
 
-SITES.curl-sys-0.4.77+curl-8.10.1.crate=	https://static.crates.io/crates/curl-sys/
+SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.80.1
+RUST_REQ=	1.81.0
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 

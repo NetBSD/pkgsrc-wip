@@ -1,4 +1,9 @@
-devel/cargo-c: update to 0.10.5
+devel/cargo-c: update to 0.10.6
+
+0.10.6
+ - Initial OpenBSD support, thank you @botovq and @ajacoutot!
+ - cargo 0.84
+ - Some documentation clarification
 
 0.10.5
  - cargo 0.83
