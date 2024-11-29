@@ -3903,6 +3903,7 @@ SUBDIR+=	py-htseq
 SUBDIR+=	py-http-prompt
 SUBDIR+=	py-httpie-jwt-auth
 SUBDIR+=	py-hug
+SUBDIR+=	py-huggingface-hub
 SUBDIR+=	py-hugo
 SUBDIR+=	py-hvac
 SUBDIR+=	py-hybridlfpy
