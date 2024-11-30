@@ -1,13 +1,9 @@
 # $NetBSD$
 
-# XXX: Before updating this package please check
-# XXX: <https://github.com/terraform-linters/tflint/discussions/1826> and if
-# XXX: license changed.
-# XXX: It would be nice to preserve a last mpl-2.0 version of this package so
-# XXX: people can still use that one instead of the one under
-# XXX: busl-1.1-license.
-
-DISTNAME=	tflint-0.48.0
+# XXX: tflint v0.50.3 is the last non-BUSL version.
+# XXX: If you would like to update this package please
+# XXX: preserve this one by renaming it.
+DISTNAME=	tflint-0.50.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-linters/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
