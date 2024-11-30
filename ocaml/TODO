@@ -7,4 +7,8 @@
     + explain PLIST changes
     + explain why pic and flambda options are being removed
   - create meta-pkgs/bulk-test-ocaml and test
+  - examine unresolved upstream 5.x issues
+    + https://github.com/ocaml/ocaml/pull/13320#issuecomment-2252316606
+    + https://github.com/ocaml/ocaml/pull/13320#issuecomment-2252316606
+    + https://github.com/ocaml/ocaml/pull/13320#issuecomment-2252316606
   - run tests and assess
