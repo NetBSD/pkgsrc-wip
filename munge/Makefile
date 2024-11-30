@@ -23,8 +23,16 @@ MUNGE_DIR?=		${PREFIX}/var/lib/munge
 MUNGE_LOG_DIR?=		${PREFIX}/var/log/munge
 MUNGE_RUN_DIR?=		${PREFIX}/var/run/munge
 MUNGE_ETC_DIR?=		${PREFIX}/etc/munge
-MUNGE_USER=		munge
-MUNGE_GROUP=		${MUNGE_USER}
+
+# Daemons should not run as root if they don't need to
+# Allow override, e.g. env MUNGE_USER=joe MUNGE_GROUP=staff bmake install
+.if defined(UNPRIVILEGED_USER) && ${UNPRIVILEGED_USER} == "root"	# Building as root
+MUNGE_USER?=		munge
+MUNGE_GROUP?=		${MUNGE_USER}
+.else
+MUNGE_USER?=		${UNPRIVILEGED_USER}
+MUNGE_GROUP?=		${UNPRIVILEGED_GROUP}
+.endif
 
 PKG_GROUPS+=		${MUNGE_GROUP}
 PKG_USERS+=		${MUNGE_USER}:${MUNGE_GROUP}
@@ -60,7 +68,6 @@ post-install:
 # Should not be necessary with AUTO_MKDIRS enabled, but it is
 INSTALLATION_DIRS+=	share/munge/Launchd
 post-install:
-	# ${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
 	${INSTALL_DATA} ${FILESDIR}/*.plist \
 		${DESTDIR}${PREFIX}/share/munge/Launchd
 .endif

@@ -1,0 +1,13 @@
+security/munge: Update to 0.5.16
+
+Packaged in wip by J Bacon
+
+The next paragraph describes the pkgsrc-specific packaging changes,
+if any.
+
+The next paragraph summarizes the upstream changes on a high level.
+In packages following the GNU Coding Standards, these changes are in
+the NEWS file, see
+https://www.gnu.org/prep/standards/html_node/NEWS-File.html.
+
+See https://www.pkgsrc.org/wip/users/#COMMIT_MSG.
