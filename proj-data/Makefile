@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/09/15 13:54:50 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/01 23:41:18 gdt Exp $
 
 VERSION_BASE=	1.20
 #VERSION_RC=	RC1

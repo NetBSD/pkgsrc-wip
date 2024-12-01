@@ -8,7 +8,7 @@ PROJ_BUILDLINK3_MK:=
 # Proj withdrew the old API with 8.0.0.
 BUILDLINK_API_DEPENDS.proj+=	proj>=8.0.0
 BUILDLINK_ABI_DEPENDS.proj+=	proj>=9.5.0nb3
-BUILDLINK_PKGSRCDIR.proj?=	../../geography/proj
+BUILDLINK_PKGSRCDIR.proj?=	../../wip/proj
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

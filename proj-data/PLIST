@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/09/15 13:54:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/01 23:41:18 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
