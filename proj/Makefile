@@ -2,7 +2,7 @@
 
 VERSION_BASE=	9.5.1
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
-VERSION_RC=	RC2
+#VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}

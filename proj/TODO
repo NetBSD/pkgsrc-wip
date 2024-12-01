@@ -1,9 +1,10 @@
-Convert to cmake :-(
+eventually:
 
-Figure out CDN location/permission issues.  This is likely just an
-upstream doc issue, if any.
+  Figure out CDN location/permission issues.  This is likely just an
+  upstream doc issue, if any.
 
-Test all proj dependencies in pkgsrc.
+when upstream has API breaks:
 
-Run tests and resolve issues.
+  Test all proj dependencies in pkgsrc.
 
+  Run tests and resolve issues.

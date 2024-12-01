@@ -1,7 +1,7 @@
 geography/proj: Update to 9.5.1
 
-Upstream NEWS, less normal updates (e.g. EPSG database) and other
-housekeeping, bugfixes, minor improvements follows.
+Upstream NEWS, less housekeeping, bugfixes, minor improvements
+follows.
 
 * Database: update to EPSG v11.021 (#4254, #4275, #4297)
 
