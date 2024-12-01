@@ -116,6 +116,8 @@ over the list at
 https://github.com/ZoneMinder/zoneminder/blob/release-1.32/INSTALL and
 set some.
 
+Probably, see (or create) conf.d/zmpaths.conf.
+
 ## Issues due to pkgsrc changes from 1.30 to 1.32
 
 pkgsrc changed the config dir from /usr/pkg/etc to /usr/pkg/etc/zm, so
