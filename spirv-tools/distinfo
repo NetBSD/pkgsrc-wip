@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (SPIRV-Tools-2024.2.tar.gz) = 5f10b569568842fec5ffff65dc5b551c6ed80d2dca0c470b7ac3567639cb3ecb
+SHA512 (SPIRV-Tools-2024.2.tar.gz) = 1ac7195fb0a1d94f81702f4fe0e33da4b024a5c822d840fb3960665483fbbb163cb28f346d174856c7499422323bf891c334b0d9a8352ff3e0bc5aef8a5b037c
+Size (SPIRV-Tools-2024.2.tar.gz) = 3175743 bytes
+SHA1 (patch-CMakeLists.txt) = 766518783611a5bb65634b82eadea2592f9c602c
+SHA1 (patch-include_spirv-tools_libspirv.h) = fb9ef4384543943877f59a0d89400562fc347f67
+SHA1 (patch-source_binary.cpp) = deeee25f74fa45f68ce34c045f83cd9cd679f2e2
+SHA1 (patch-source_operand.cpp) = 675f4a5717f87107020b7c0eee43662c556abd32
+SHA1 (patch-source_print.cpp) = ee1dcd3f5695a2457826f6044428b2c0e026db37
