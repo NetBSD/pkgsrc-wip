@@ -6080,7 +6080,6 @@ SUBDIR+=	zipios
 SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
-SUBDIR+=	zoneminder132
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
 SUBDIR+=	zsh-history-substring-search
