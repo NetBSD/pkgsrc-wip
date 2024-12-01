@@ -3,7 +3,7 @@ $NetBSD$
 - Don't depend on git
 - fix PLIST issue with macOS cp(1)
 
---- GNUmakefile.orig	2024-08-20 07:21:48.000000000 +0000
+--- GNUmakefile.orig	2024-10-25 17:22:40.000000000 +0000
 +++ GNUmakefile
 @@ -291,7 +291,7 @@ endif
  
@@ -12,9 +12,9 @@ $NetBSD$
 -	CGO_CPPFLAGS="$(CGO_CPPFLAGS)" CGO_CXXFLAGS="$(CGO_CXXFLAGS)" CGO_LDFLAGS="$(CGO_LDFLAGS)" $(GOENVFLAGS) $(GO) build -buildmode exe -o build/tinygo$(EXE) -tags "byollvm osusergo" -ldflags="-X github.com/tinygo-org/tinygo/goenv.GitSha1=`git rev-parse --short HEAD`" .
 +	CGO_CPPFLAGS="$(CGO_CPPFLAGS)" CGO_CXXFLAGS="$(CGO_CXXFLAGS)" CGO_LDFLAGS="$(CGO_LDFLAGS)" $(GOENVFLAGS) $(GO) build -buildmode exe -o build/tinygo$(EXE) -tags "byollvm osusergo" -ldflags="-X github.com/tinygo-org/tinygo/goenv.GitSha1=$(GIT_SHA1)" .
  test: wasi-libc check-nodejs-version
- 	CGO_CPPFLAGS="$(CGO_CPPFLAGS)" CGO_CXXFLAGS="$(CGO_CXXFLAGS)" CGO_LDFLAGS="$(CGO_LDFLAGS)" $(GO) test $(GOTESTFLAGS) -timeout=20m -buildmode exe -tags "byollvm osusergo" $(GOTESTPKGS)
+ 	CGO_CPPFLAGS="$(CGO_CPPFLAGS)" CGO_CXXFLAGS="$(CGO_CXXFLAGS)" CGO_LDFLAGS="$(CGO_LDFLAGS)" $(GO) test $(GOTESTFLAGS) -timeout=1h -buildmode exe -tags "byollvm osusergo" $(GOTESTPKGS)
  
-@@ -906,7 +906,7 @@ endif
+@@ -945,7 +945,7 @@ endif
  	@cp -rp lib/mingw-w64/mingw-w64-crt/lib-common/api-ms-win-crt-* build/release/tinygo/lib/mingw-w64/mingw-w64-crt/lib-common
  	@cp -rp lib/mingw-w64/mingw-w64-crt/lib-common/kernel32.def.in  build/release/tinygo/lib/mingw-w64/mingw-w64-crt/lib-common
  	@cp -rp lib/mingw-w64/mingw-w64-crt/stdio/ucrt_*                build/release/tinygo/lib/mingw-w64/mingw-w64-crt/stdio
