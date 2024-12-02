@@ -2038,7 +2038,6 @@ SUBDIR+=	libguestfs-appliance
 SUBDIR+=	libgusb
 SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
-SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libi2pd
 SUBDIR+=	libical2

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:09 nia Exp $
-
-BLAKE2s (libharu/libharu-2.4.3.tar.gz) = 1e722ebc3d6a1ab0f8c83098391b0d006fcf9e701cc8854be7910d9b36d61fc0
-SHA512 (libharu/libharu-2.4.3.tar.gz) = 4b01dd0d23bdcaec6f69fe5f059902e7f49eafdf19d53d4cce8b4d52a54b2057b764de29390f4da9e75aeb32cb6af8606b23478b04edf9f7dcb1e4b769c5fff2
-Size (libharu/libharu-2.4.3.tar.gz) = 1411024 bytes
