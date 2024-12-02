@@ -1,4 +1,7 @@
-devel/cargo-c: update to 0.10.6
+devel/cargo-c: update to 0.10.7
+
+0.10.7
+ - Unbreak .def generation on the *-msvc target
 
 0.10.6
  - Initial OpenBSD support, thank you @botovq and @ajacoutot!
