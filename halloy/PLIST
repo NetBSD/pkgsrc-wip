@@ -1,2 +1,4 @@
 @comment $NetBSD$
 bin/halloy
+share/doc/halloy/CHANGELOG.md
+share/doc/halloy/README.md

@@ -1,16 +1,25 @@
 $NetBSD$
 
-halloy uses -dev / git snapshot versions of iced,
-which are not available as crates.
+Halloy uses git+https snapshots of dark-light and iced.
 
-Use a released version of iced.
+Make Halloy look for packaged versions of dark-light and iced that we will
+provide ourselves, instead of trying to use snapshots.
 
---- Cargo.toml	2024-09-17 20:20:54.000000000 +0000
+--- Cargo.toml	2024-10-29 09:27:44.000000000 -0000
 +++ Cargo.toml
-@@ -60,6 +60,3 @@
+@@ -45,7 +45,7 @@
+ tokio-stream = { version = "0.1.16", features = ["fs"] }
+ 
+ # change to 1.2.0 when it is released https://github.com/frewsxcv/rust-dark-light/issues/38
+-dark-light = { git = "https://github.com/frewsxcv/rust-dark-light", rev = "3eb3e93dd0fa30733c3e93082dd9517fb580ae95" }
++dark-light = "1.1.1"
+ 
+ [dependencies.uuid]
+ version = "1.0"
+@@ -66,6 +66,3 @@
  [workspace]
  members = ["data", "ipc", "irc", "irc/proto"]
  
 -[patch.crates-io]
--iced = { git = "https://github.com/iced-rs/iced", rev = "8fb939b5a920e0cd836dbdd24c948f8f2512fc7e" }
--iced_core = { git = "https://github.com/iced-rs/iced", rev = "8fb939b5a920e0cd836dbdd24c948f8f2512fc7e" }
+-iced = { git = "https://github.com/iced-rs/iced", rev = "d660fad33d97cf78507c6797b5fe45b3daf47454" }
+-iced_core = { git = "https://github.com/iced-rs/iced", rev = "d660fad33d97cf78507c6797b5fe45b3daf47454" }

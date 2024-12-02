@@ -1,0 +1,33 @@
+$NetBSD$
+
+iced_wgpu uses a fork of glyphon, and iced_winit uses a fork of winit.
+
+Make iced look for packaged versions of glyphon and winit that we will
+provide ourselves, instead of trying to use a snapshot.
+
+
+error: all dependencies must have a version specified when packaging.
+dependency `glyphon` does not specify a version
+Note: The packaged dependency will use the version from crates.io,
+the `git` specification will be removed from the dependency declaration.
+
+--- ../pkgsrc-iced/Cargo.toml	2024-10-25 12:41:40.000000000 -0000
++++ ../pkgsrc-iced/Cargo.toml
+@@ -150,7 +150,7 @@
+ dark-light = "1.0"
+ futures = "0.3"
+ glam = "0.25"
+-glyphon = { git = "https://github.com/hecrj/glyphon.git", rev = "0d7ba1bba4dd71eb88d2cface5ce649db2413cb7" }
++glyphon = "0.5.0"
+ guillotiere = "0.6"
+ half = "2.2"
+ image = { version = "0.24", default-features = false }
+@@ -186,7 +186,7 @@
+ wgpu = "22.0"
+ winapi = "0.3"
+ window_clipboard = "0.4.1"
+-winit = { git = "https://github.com/iced-rs/winit.git", rev = "254d6b3420ce4e674f516f7a2bd440665e05484d" }
++winit = "0.30.1"
+ 
+ [workspace.lints.rust]
+ rust_2018_idioms = { level = "forbid", priority = -1 }
