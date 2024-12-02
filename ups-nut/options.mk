@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/03/24 11:01:55 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2023/11/09 21:02:48 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ups-nut
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
