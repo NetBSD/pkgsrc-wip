@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Hack to fix PLIST issue on macOS
+# Hack to fix PLIST on macOS
 
 --- setup.py.orig	2024-08-17 08:56:33.000000000 +0000
 +++ setup.py
@@ -46,14 +46,14 @@ $NetBSD$
 +                if name == "blosc" or name == "blosc2":
 +                    print("directories = ", directories)
 +                    print("rundir (should be 'True') = ", directories[2])
-+                    sys.exit(1)
 +                    # FIXME: tables-3.10.1 hack
 +                    # Forcing rundir to True for macOS.  This is a
 +                    # hack, but it's the value it should have, since the
 +                    # headers and libs are found.  When rundir is None,
 +                    # setup.py copyies libblosc into the py-tables
 +                    # installation, breaking PLIST.
-+                    directories[2] = True
++                    if directories[0] and directories[1]:
++                        directories[2] = True
          return tuple(directories)
  
  
