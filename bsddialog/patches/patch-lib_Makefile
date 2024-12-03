@@ -6,16 +6,21 @@ Also install bsddialog_theme.h
 
 --- lib/Makefile.orig	2024-12-02 18:36:02.000000000 +0000
 +++ lib/Makefile
-@@ -19,7 +19,7 @@ CFLAGS += -D_XOPEN_SOURCE_EXTENDED -fPIC
- 	-fstack-protector-strong
- LDFLAGS += -fstack-protector-strong -shared -Wl,-x -Wl,--fatal-warnings \
- 	-Wl,--warn-shared-textrel -Wl,-soname,${LIBRARY_SO}.${VERSION} \
+@@ -15,11 +15,8 @@ PREFIX = /usr/local
+ .if defined(DEBUG)
+ CFLAGS += -g
+ .endif
+-CFLAGS += -D_XOPEN_SOURCE_EXTENDED -fPIC -Wall -Wextra -std=gnu99 \
+-	-fstack-protector-strong
+-LDFLAGS += -fstack-protector-strong -shared -Wl,-x -Wl,--fatal-warnings \
+-	-Wl,--warn-shared-textrel -Wl,-soname,${LIBRARY_SO}.${VERSION} \
 -	-L/usr/lib -lncursesw -ltinfow
-+	-L/usr/lib -lcurses
++CFLAGS += -D_XOPEN_SOURCE_EXTENDED -fPIC -Wall -Wextra -std=gnu99
++LDFLAGS += -shared -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lcurses
  
  LN = ln -s -f
  RM = rm -f
-@@ -29,6 +29,7 @@ all: ${LIBRARY}
+@@ -29,6 +26,7 @@ all: ${LIBRARY}
  install: all
  	${INSTALL} -m 0644 bsddialog.h ${DESTDIR}${PREFIX}/include/bsddialog.h
  	${INSTALL} -m 0644 bsddialog_progressview.h ${DESTDIR}${PREFIX}/include/bsddialog_progressview.h
@@ -23,7 +28,7 @@ Also install bsddialog_theme.h
  	${INSTALL} -m 0644 ${LIBRARY_A} ${DESTDIR}${PREFIX}/lib/${LIBRARY_A}
  	${INSTALL} -m 0755 ${LIBRARY_SO}.${VERSION} ${DESTDIR}${PREFIX}/lib/${LIBRARY_SO}.${VERSION}
  	${LN} ${LIBRARY_SO}.${VERSION} ${DESTDIR}${PREFIX}/lib/${LIBRARY_SO}
-@@ -36,6 +37,7 @@ install: all
+@@ -36,6 +34,7 @@ install: all
  uninstall:
  	${RM} ${DESTDIR}${PREFIX}/include/bsddialog.h
  	${RM} ${DESTDIR}${PREFIX}/include/bsddialog_progressview.h
