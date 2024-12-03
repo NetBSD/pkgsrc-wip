@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix the build on NetBSD
+
+--- lib/Makefile.orig	2024-12-02 18:36:02.000000000 +0000
++++ lib/Makefile
+@@ -19,7 +19,7 @@ CFLAGS += -D_XOPEN_SOURCE_EXTENDED -fPIC
+ 	-fstack-protector-strong
+ LDFLAGS += -fstack-protector-strong -shared -Wl,-x -Wl,--fatal-warnings \
+ 	-Wl,--warn-shared-textrel -Wl,-soname,${LIBRARY_SO}.${VERSION} \
+-	-L/usr/lib -lncursesw -ltinfow
++	-L/usr/lib -lcurses
+ 
+ LN = ln -s -f
+ RM = rm -f

@@ -15,5 +15,9 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}/bsddialog-${GITLAB_TAG}
 
+MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+AUTO_MKDIRS=	yes
+
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
