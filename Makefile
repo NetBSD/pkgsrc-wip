@@ -373,6 +373,7 @@ SUBDIR+=	brumbrumrally
 SUBDIR+=	bsa
 SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
+SUBDIR+=	bsddialog
 SUBDIR+=	bsfilter
 SUBDIR+=	bsh
 SUBDIR+=	bsnmp

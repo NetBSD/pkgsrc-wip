@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bsddialog-1.0.4.tar.gz) = 44fe9cf0b05a2ea3a003093debb77a6ad890774ce98fd4f4fe0f43a28d5a8731
+SHA512 (bsddialog-1.0.4.tar.gz) = 317ee8c7f69e7e24cc70b0e701c25b17b744aa606cb60ca9a67d756856a253a0fee231f05b55b187400c2f98cfbc464640f75457513cbeebb17aea3dd9057772
+Size (bsddialog-1.0.4.tar.gz) = 87327 bytes

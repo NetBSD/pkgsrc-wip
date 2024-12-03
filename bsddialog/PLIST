@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/bsddialog
+include/bsddialog.h
+include/bsddialog_progressview.h
+lib/libdialog.a
+lib/libdialog.so
+lib/libdialog.so.1.0.4
