@@ -3,5 +3,6 @@ $NetBSD$
 BLAKE2s (bsddialog-1.0.4.tar.gz) = 44fe9cf0b05a2ea3a003093debb77a6ad890774ce98fd4f4fe0f43a28d5a8731
 SHA512 (bsddialog-1.0.4.tar.gz) = 317ee8c7f69e7e24cc70b0e701c25b17b744aa606cb60ca9a67d756856a253a0fee231f05b55b187400c2f98cfbc464640f75457513cbeebb17aea3dd9057772
 Size (bsddialog-1.0.4.tar.gz) = 87327 bytes
-SHA1 (patch-lib_Makefile) = 46ec7125bcf1ef45840e08118e66bbed5ef495c1
+SHA1 (patch-lib_GNUmakefile) = 5e97c44570ea93a6f476920b6404432128d0952c
+SHA1 (patch-lib_Makefile) = c8b5387d496d1b6a45ae15258ba4a1bdb6625f80
 SHA1 (patch-utility_Makefile) = 08247e044594740830c8c418a3e54d31dd7b44d5

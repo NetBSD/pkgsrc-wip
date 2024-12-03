@@ -2,6 +2,7 @@
 bin/bsddialog
 include/bsddialog.h
 include/bsddialog_progressview.h
+include/bsddialog_theme.h
 lib/libbsddialog.a
 lib/libbsddialog.so
 lib/libbsddialog.so.1.0.4
