@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/openbsd/BUILD.gn.orig	2024-11-16 19:58:02.268763486 +0000
+--- build/toolchain/openbsd/BUILD.gn.orig	2024-12-03 16:59:21.755199918 +0000
 +++ build/toolchain/openbsd/BUILD.gn
 @@ -0,0 +1,66 @@
 +# Copyright 2013 The Chromium Authors. All rights reserved.

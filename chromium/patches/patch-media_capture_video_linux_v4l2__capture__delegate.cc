@@ -126,7 +126,28 @@ $NetBSD$
  
    const int result =
        HANDLE_EINTR(v4l2_->poll(&device_pfd, 1, kCaptureTimeoutMs));
-@@ -1067,6 +1085,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1049,6 +1067,12 @@ void V4L2CaptureDelegate::DoCapture() {
+       // in older kernels, and stopping and starting the stream gets the camera
+       // out of this bad state. Upgrading the kernel is difficult so this is our
+       // way out for now.
++#if BUILDFLAG(IS_NETBSD)
++      // On NetBSD cause: StartStream@media/capture/video/linux/v4l2_capture_delegate.cc:1017,
++      // Error requesting MMAP buffers from V4L2, OS message: Device busy (16)
++      // so do nothing, just wait for timeout_count_ >= kContinuousTimeoutLimit
++      DLOG(WARNING) << "DoCapture: poll timeout";
++#else
+       DLOG(WARNING) << "Restarting camera stream";
+       if (!StopStream() || !StartStream())
+         return;
+@@ -1056,6 +1080,7 @@ void V4L2CaptureDelegate::DoCapture() {
+           FROM_HERE,
+           base::BindOnce(&V4L2CaptureDelegate::DoCapture, GetWeakPtr()));
+       return;
++#endif
+     } else if (timeout_count_ >= kContinuousTimeoutLimit) {
+       SetErrorState(
+           VideoCaptureError::kV4L2MultipleContinuousTimeoutsWhileReadPolling,
+@@ -1067,6 +1092,7 @@ void V4L2CaptureDelegate::DoCapture() {
      timeout_count_ = 0;
    }
  
@@ -134,7 +155,7 @@ $NetBSD$
    // Dequeue events if the driver has filled in some.
    if (device_pfd.revents & POLLPRI) {
      bool controls_changed = false;
-@@ -1102,6 +1121,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1102,6 +1128,7 @@ void V4L2CaptureDelegate::DoCapture() {
        client_->OnCaptureConfigurationChanged();
      }
    }
@@ -142,7 +163,7 @@ $NetBSD$
  
    // Deenqueue, send and reenqueue a buffer if the driver has filled one in.
    if (device_pfd.revents & POLLIN) {
-@@ -1155,7 +1175,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1155,7 +1182,7 @@ void V4L2CaptureDelegate::DoCapture() {
        // workable on Linux.
  
        // See http://crbug.com/959919.
@@ -151,7 +172,7 @@ $NetBSD$
        if (use_gpu_buffer_) {
          v4l2_gpu_helper_->OnIncomingCapturedData(
              client_.get(), buffer_tracker->start(),
-@@ -1228,7 +1248,7 @@ void V4L2CaptureDelegate::SetErrorState(
+@@ -1228,7 +1255,7 @@ void V4L2CaptureDelegate::SetErrorState(
    client_->OnError(error, from_here, reason);
  }
  

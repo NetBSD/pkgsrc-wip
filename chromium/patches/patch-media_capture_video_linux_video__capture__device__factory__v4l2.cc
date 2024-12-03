@@ -33,7 +33,7 @@ $NetBSD$
      : public VideoCaptureDeviceFactoryV4L2::DeviceProvider {
   public:
    void GetDeviceIds(std::vector<std::string>* target_container) override {
-+#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
++#if BUILDFLAG(IS_OPENBSD)
 +    target_container->emplace_back("/dev/video");
 +#else
      const base::FilePath path("/dev/");
@@ -84,3 +84,15 @@ $NetBSD$
    return HANDLE_EINTR(v4l2_->ioctl(fd, request, argp));
  }
  
+@@ -279,6 +293,11 @@ std::vector<float> VideoCaptureDeviceFac
+         frame_rates.push_back(
+             frame_interval.discrete.denominator /
+             static_cast<float>(frame_interval.discrete.numerator));
++#if BUILDFLAG(IS_NETBSD)
++        // On NetBSD VIDIOC_ENUM_FRAMEINTERVALS(video_enum_frameival) always return the same values
++        // and not handle index, what is cause infinity loop. One round is enough.
++        break;
++#endif
+       }
+     } else if (frame_interval.type == V4L2_FRMIVAL_TYPE_CONTINUOUS ||
+                frame_interval.type == V4L2_FRMIVAL_TYPE_STEPWISE) {
