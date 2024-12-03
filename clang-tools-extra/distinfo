@@ -1,14 +1,14 @@
 $NetBSD: distinfo,v 1.17 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (clang-19.1.4.src.tar.xz) = 43b8d1258a3eb1a9805d7ab918285c3f8f2333393adf2704a8c559ac9601dd7c
-SHA512 (clang-19.1.4.src.tar.xz) = 7e207946fe4faf0de910df55b9fd40735088b66f25283f1165091eddda5b71491460b9c486526720ab5b3ee2f2937d6c1d7e1dd65c02fc99640809a1b0f06b73
-Size (clang-19.1.4.src.tar.xz) = 23510712 bytes
-BLAKE2s (clang-tools-extra-19.1.4.src.tar.xz) = 2148bf909e2a352ea9a20837285faf9b0fc77dde756387ddcbe3947fb9197025
-SHA512 (clang-tools-extra-19.1.4.src.tar.xz) = 791043a5c41ed9f8d16b8fcb226cf67ba63123190eb9a7608b74957c2d7ea91d73d17b2850f8f622d64773f6622e298c570641e6d1b0bcabc900b2974ef0948c
-Size (clang-tools-extra-19.1.4.src.tar.xz) = 3417036 bytes
-BLAKE2s (cmake-19.1.4.src.tar.xz) = b7af240d3d76500a40fe77474bf363440c5281428a8d49d9d8b9139808324d69
-SHA512 (cmake-19.1.4.src.tar.xz) = 4b2b4a3bd9e120a42e6a5f73c7d1fa7c806594d0856c51934063e585509c23897dd5c6ffb334c6773e6a5f57f7791490a620317f029566a62faa69c312ec02ce
-Size (cmake-19.1.4.src.tar.xz) = 9296 bytes
-BLAKE2s (runtimes-19.1.4.src.tar.xz) = 330cfae691d9bad4eed406ddf25af2a8dd32a53b045ca5a11f6604dca8858414
-SHA512 (runtimes-19.1.4.src.tar.xz) = e099792deeaf2d7610d8623701fa5898a56acda7cfa20745bd5f7aa14bc2a7900ca76e52b9dd80f109994eecac068d97a2984ae86105c974db6c38400a8f1c63
-Size (runtimes-19.1.4.src.tar.xz) = 7224 bytes
+BLAKE2s (clang-19.1.5.src.tar.xz) = 485b2e6a44cdbadc71612809ba2b3c7f2e2d7d883e8c8e3cbe7d22a2578141b8
+SHA512 (clang-19.1.5.src.tar.xz) = 7cc5f4d2f84b44d4bdaa08c51c9f1b688fdd20a36987062320d25e742996fb08588ddebfaa98d4919a54f8dbd7024e819271b9b2fbba3138561bcc0baec2ddc0
+Size (clang-19.1.5.src.tar.xz) = 23510992 bytes
+BLAKE2s (clang-tools-extra-19.1.5.src.tar.xz) = 5c239b93b36322b228adf0c05c57451879643ac6d2cb3164a4530a651d1843e7
+SHA512 (clang-tools-extra-19.1.5.src.tar.xz) = ae9c81358dfeeefbc2eec13b0a45750e47edceb83bddfd83fa5b9c6ed7a429fbd8753ab901dc3a25a31c28b7a8463e3d401024ad83e0971d7a6579b26103ce65
+Size (clang-tools-extra-19.1.5.src.tar.xz) = 3417016 bytes
+BLAKE2s (cmake-19.1.5.src.tar.xz) = e730918bd71022369d4f9a1848c194acebf6b6296cf6cadc4e13cb71823fb63e
+SHA512 (cmake-19.1.5.src.tar.xz) = 3c59125d8b3aed042ed8659e372bf04c0b0255d09dd397ff11a32a771e87a2670c8bf32aed9c243b8b056c175d08f96dc3f8379ac449f1ec666f210da1da63e6
+Size (cmake-19.1.5.src.tar.xz) = 9300 bytes
+BLAKE2s (runtimes-19.1.5.src.tar.xz) = 86c8ce0cc4b07292fb1c02074c0e27bac5acf78359a395acbe8df1216a4efe4a
+SHA512 (runtimes-19.1.5.src.tar.xz) = 0810ae94f21a1dceb6520ff8b1262af1793332de513a6a45356090ff501de4dd4c8701805a2178de2f66bf0db85c8c0e2a284460f6167b052300c05aed88e6af
+Size (runtimes-19.1.5.src.tar.xz) = 7228 bytes
