@@ -5,7 +5,7 @@
 #              Tue Jan 16 21:48:02 CST 2018               #
 ###########################################################
 
-DISTNAME=	FastTree-${PORTVERSION}
+DISTNAME=	FastTree-2.1.11
 CATEGORIES=	biology
 MASTER_SITES=	http://www.microbesonline.org/fasttree/
 EXTRACT_SUFX=	.c
@@ -18,8 +18,6 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}
 
 CFLAGS=		-fopenmp -DNO_SSE
-
-PORTVERSION=	2.1.10
 
 INSTALLATION_DIRS=	bin
 
