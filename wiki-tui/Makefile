@@ -3,7 +3,7 @@
 DISTNAME=	wiki-tui-0.9.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
-GITHUB_TAG=	10b624318085cb07b95327a9736d96c2bd191d3d
+GITHUB_TAG=	cf510cf33c2d0a8e68d6f9df4721aed86a1a2bfc
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://builditluc.github.io/wiki-tui/
