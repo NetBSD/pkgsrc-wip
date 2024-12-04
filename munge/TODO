@@ -1,2 +1,2 @@
-Get launchd working with non-root user
 Substitute UNPRIVILEGED_USER and UNPRIVILEGED_GROUP into daemon scripts
+    Verify when only installing as root
