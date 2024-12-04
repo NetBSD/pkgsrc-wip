@@ -11,6 +11,8 @@
 	<key>KeepAlive</key>
 	<true/>
 	<key>UserName</key>
-	<string>munge</string>
+	<string>%%MUNGE_USER%%</string>
+	<key>GroupName</key>
+	<string>%%MUNGE_GROUP%%</string>
     </dict>
 </plist>
