@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sagittarius-0.9.11
+DISTNAME=	sagittarius-0.9.12
 CATEGORIES=	lang
 MASTER_SITES=	https://bitbucket.org/ktakashi/sagittarius-scheme/downloads/
 
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/build
 
 PKGCONFIG_OVERRIDE+=	cmake/sagittarius.pc.in
+CMAKE_CONFIGURE_ARGS+=	-DMACHINE_GNU_PLATFORM:string=${MACHINE_GNU_PLATFORM}
 
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
