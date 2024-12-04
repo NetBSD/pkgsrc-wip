@@ -15,7 +15,7 @@ DESTDIR ?=	.
 all:	${BIN}
 
 ${BIN}: ${SRC} Makefile
-	${CC} ${CFLAGS} ${SRC} -o ${BIN} -lm
+	${CC} ${CFLAGS} ${SRC} -o ${BIN} ${LDFLAGS} -lm
 
 install: ${BIN}
 	${MKDIR} -p ${DESTDIR}${PREFIX}/bin

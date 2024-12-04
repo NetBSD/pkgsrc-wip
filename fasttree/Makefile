@@ -17,9 +17,23 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 
-CFLAGS=		-fopenmp -DNO_SSE
+# CFLAGS=		-fopenmp -DNO_SSE
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+# Xcode supports -Xpreprocessor -fopenmp, but does not supply OpenMP libs
+# parallel/openmp installs an entire llvm
+# Maybe a libomp package would suffice?
+.if ${OPSYS} == Darwin
+SUBST_CLASSES+=		openmp
+SUBST_SED.openmp=	-e 's|-fopenmp|-Xpreprocessor &|g'
+SUBST_STAGE.openmp=	pre-configure
+SUBST_FILES.openmp=	Makefile
+LDFLAGS+= 		-L${PREFIX}/lib -lomp -lm
+.include "../../parallel/openmp/buildlink3.mk"
+.endif
 
 do-extract:
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
