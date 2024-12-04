@@ -5,11 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.5.83
+DISTNAME=	lpjs-0.0.5.86
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	0f0b0542dcf142c61c5b7ff8610d8fed5022c295
+GITHUB_TAG=	a8a49330a379699abc4797431c1c1879e4e6ce41
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -24,7 +24,7 @@ DEPENDS=	auto-admin>=0.8.0.31:../../wip/auto-admin \
 
 # Force install with full debug info until release
 CFLAGS+=	-g
-MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes
+MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes MANDIR=${PREFIX}/${PKGMANDIR}
 LDFLAGS.SunOS=	-lresolv -lsocket -lnsl
 
 LPJS_USER=		lpjs

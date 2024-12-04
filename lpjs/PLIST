@@ -8,6 +8,7 @@ libexec/lpjs/SMI/compd-enable
 libexec/lpjs/SMI/dispatchd-disable
 libexec/lpjs/SMI/dispatchd-enable
 libexec/lpjs/SMI/log
+libexec/lpjs/SMI/munge-disable
 libexec/lpjs/SMI/munge-enable
 libexec/lpjs/SMI/reset-queue
 libexec/lpjs/SMI/restart
