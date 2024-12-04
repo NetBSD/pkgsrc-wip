@@ -1,0 +1,47 @@
+devel/git-cinnabar, devel/py-hg-cinnabarclone: update to 0.7.0beta2
+
+While here: Disable `version-check' feature so git-cinnabar doesn't
+phone home every time you run it.
+
+Upstream release notes:
+
+0.7.0-beta.2 Pre-release
+
+What's new since 0.7.0-beta.1?
+
+ * Based on git 2.46.2.
+ * Avoid showing an update notification for the current beta version when it is the latest release.
+ * Fixed git push --dry-run to not report spurious errors.
+ * Allow git push --dry-run to create metadata for the changesets the push would create.
+ * Various changes to download.py and git cinnabar self-update.
+
+
+0.7.0-beta.1 Pre-release
+
+/!\ As of version 0.7, some corner cases in Mercurial repositories will generate different git commits than with prior versions of git-cinnabar. This means a fresh clone might have different git SHA-1s than existing clones, but this doesn't impact the use of existing clones with newer versions of git-cinnabar.
+
+Most repositories should remain non-affected by the change.
+
+You can set the cinnabar.compat git configuration to 0.6 to keep the previous behavior.
+
+What's new since 0.6.3?
+
+ * Based on git 2.46.0.
+ * Fixed git cinnabar fsck to avoid misreporting weird old Mercurial file history as metadata corruption.
+ * Fixed the creation of empty trees for manifests.
+ * Fixed access to ssh remotes with absolute paths.
+ * Fixed cinnabarclone extension with Mercurial >= 6.6.
+ * Fixed handling cinnabar.refs=heads,tips (backwards incompatible change).
+ * Various optimizations making clones and pulls faster.
+ * Made negotiation with repo with large number of heads faster for pull and push.
+ * git cinnabar fetch and git cinnabar reclone now handle everything internally instead of delegating to git fetch and git remote, respectively.
+ * git cinnabar reclone doesn't lose metadata history when a cinnabarclone is used.
+ * A clone with cinnabarclone now only records one metadata update instead of two when there are updates after the cinnabarclone.
+ * git cinnabar reclone now only records one metadata update even when pulling from several remotes at the same time.
+ * git cinnabar reclone will try to restore as many of the heads it knew about, fetching from skipDefaultUpdate remotes if necessary.
+ * git cinnabar reclone --rebase allows to automatically rebase local branches and detached heads when git commits change after the reclone (e.g. when switching between a plain clone to a grafted clone, or when there was a bug in the original conversion)
+ * cinnabar.check=no-bundle2 now pretends the Mercurial server doesn't support bundle2.
+ * Updated crate dependencies.
+ * Many refactors, including the conversion of many functions from C to Rust.
+ * Experimental support for tweaking the similarity level when detecting copies and renames during a push.
+ * Experimental support for pushing named branches and tags.

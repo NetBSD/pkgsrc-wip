@@ -16,6 +16,12 @@ USE_TOOLS+=	gmake pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 
+CARGO_NO_DEFAULT_FEATURES=	yes
+# version-check is on by default -- disable it for pkgsrc since pkgsrc
+# manages version checks and updates, not the software itself, so no
+# need for git-cinnabar to phone home every time you run it.
+#CARGO_FEATURES+=		version-check
+
 # This has to come before -I/usr/include/krb5 (which comes in on NetBSD
 # via curl with gssapi enabled) because both git-core and krb5 have a
 # file called `hex.h' which git-core uses internally.
