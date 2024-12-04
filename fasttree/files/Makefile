@@ -3,12 +3,11 @@ BIN =		FastTree
 SRC =		FastTree*.c
 CC ?=		gcc
 CFLAGS ?=	-O3
-CFLAGS +=	-DOPENMP -fopenmp -finline-functions -funroll-loops
+CFLAGS +=	-DOPENMP -fopenmp
 
 MKDIR ?=	mkdir
 INSTALL ?=	install
 PREFIX ?=	/usr/local
-DESTDIR ?=	.
 
 .PHONY:	all install clean
 
