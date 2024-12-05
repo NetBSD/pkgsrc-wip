@@ -20,5 +20,8 @@ USE_LANGUAGES=	# none
 # test data not included
 # https://github.com/kellyjonbrazil/jc/issues/620
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} jc jc-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

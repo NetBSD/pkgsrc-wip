@@ -1,0 +1,1 @@
+bin/jc @PREFIX@/bin/jc-@PYVERSSUFFIX@
