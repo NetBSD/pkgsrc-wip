@@ -1,18 +1,18 @@
 $NetBSD$
 
-Fix the build on NetBSD
+Fix the build on NetBSD and macOS
 
---- utility/Makefile.orig	2024-12-03 22:19:17.670467040 +0000
+--- utility/Makefile.orig	2024-12-02 18:36:02.000000000 +0000
 +++ utility/Makefile
 @@ -14,9 +14,9 @@ CFLAGS += -g
  CFLAGS += -I${LIBPATH} -std=gnu99 -Wall -Wextra -Werror
  
  .if defined(NORPATH)
 -LDFLAGS += -ltinfow -L${LIBPATH} -lbsddialog
-+LDFLAGS += -L${LIBPATH} -lbsddialog
++LDFLAGS += -L${LIBPATH} -lcurses -lbsddialog
  .else
 -LDFLAGS += -ltinfow -Wl,-rpath=${LIBPATH} -L${LIBPATH} -lbsddialog
-+LDFLAGS += -Wl,-rpath=${LIBPATH} -L${LIBPATH} -lbsddialog
++LDFLAGS += -Wl,-rpath=${LIBPATH} -L${LIBPATH} -lcurses -lbsddialog
  .endif
  
  INSTALL = install

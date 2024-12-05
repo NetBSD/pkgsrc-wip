@@ -2,7 +2,7 @@ $NetBSD$
 
 Portability fix
 
---- utility/util_builders.c.orig	2024-12-03 23:51:29.672563271 +0000
+--- utility/util_builders.c.orig	2024-12-02 18:36:02.000000000 +0000
 +++ utility/util_builders.c
 @@ -82,7 +82,7 @@ int gauge_builder(BUILDER_ARGS)
  
