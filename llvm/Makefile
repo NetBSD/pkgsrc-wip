@@ -90,6 +90,7 @@ SOEXT=		so
 PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
+PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
 NOTDYLIBS=		LTO Remarks
 .for libname in ${NOTDYLIBS}
