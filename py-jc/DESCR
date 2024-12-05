@@ -1,0 +1,6 @@
+jc JSONifies the output of many CLI tools, file-types, and common
+strings for easier parsing in scripts.
+
+jc can also be used as a python library. In this case the returned
+value will be a python dictionary, a list of dictionaries, or even
+a lazy iterable of dictionaries instead of JSON.

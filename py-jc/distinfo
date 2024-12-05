@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (jc-1.25.4.tar.gz) = a6b8288cb33178e85d462ce0c68d7533515c4013faa7f42937a0a9511cc1d7c6
+SHA512 (jc-1.25.4.tar.gz) = 0889a0ace07fdcf29e766a9ded1df9bae112f4a41cdfb11f9e9e5a961a131fc260968a795da08182e7c2f2a6939a9cedcf0eebaea3c36a1635dcf5d6fe055120
+Size (jc-1.25.4.tar.gz) = 587475 bytes
