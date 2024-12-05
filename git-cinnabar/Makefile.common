@@ -15,3 +15,4 @@ HOMEPAGE=	https://github.com/glandium/git-cinnabar/
 LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/git-cinnabar/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/git-cinnabar/patches
