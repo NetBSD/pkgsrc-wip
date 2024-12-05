@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.4 2014/12/31 14:14:16 thomasklausner Exp $
 
-BLAKE2s (fslsfonts-1.0.6.tar.xz) = 91997bc4aa3cd68bbe398b9f8f579f8f124ed5efcbbf91bd797b75abfdd22c40
-SHA512 (fslsfonts-1.0.6.tar.xz) = 1181a8e6cc820410d1deac98b3e5097506e4168c6515307b6b9aaf705cb57193a009cb331a51d46ce68e9548712f122b5c942d5a1bc1e01bdd191b7b1beab09e
-Size (fslsfonts-1.0.6.tar.xz) = 123484 bytes
+BLAKE2s (fslsfonts-1.0.7.tar.xz) = c0577b059774ded2d38cf3541c3c10fabd7d3f945cb7a1a7d53b915ac4feb4c1
+SHA512 (fslsfonts-1.0.7.tar.xz) = e907e3fc1fdbfe72b7c1a502ab479ee2ff4d8577dc0c86152dee5ee48471e514d7c5749707ceb936027cbd93c68a79a0be30334aeb1f812549907c2726e38dd0
+Size (fslsfonts-1.0.7.tar.xz) = 127436 bytes

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2014/12/31 14:14:16 thomasklausner Exp $
 
-DISTNAME=	fslsfonts-1.0.6
+DISTNAME=	fslsfonts-1.0.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,5 +15,4 @@ USE_LANGUAGES=	c
 
 .include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
