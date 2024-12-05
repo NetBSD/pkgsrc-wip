@@ -412,3 +412,5 @@ BLAKE2s (zstd-sys-2.0.13+zstd.1.5.6.crate) = df71c3b7a2dd396817e8e71eee920caccb9
 SHA512 (zstd-sys-2.0.13+zstd.1.5.6.crate) = c1f0176ebd0914879d0060796776c7fe376293ce9bc9f8f07ee3b809932a75aa033881d59a1bc99b6cd9af85b8e225fc09bcfc96013e556d7c11f155b759ecbf
 Size (zstd-sys-2.0.13+zstd.1.5.6.crate) = 749090 bytes
 SHA1 (patch-git-core_ci_run-test-slice.sh) = 9c7bc2b52c677d96d77a4d842650828a23c3eccc
+SHA1 (patch-tests_cinnabarclone.t) = 054754e932eb52a04001da5cae96c5582dfacddc
+SHA1 (patch-tests_push-refs.t) = c6de59558337c8fe193df7166a9a4179cf3e14ca
