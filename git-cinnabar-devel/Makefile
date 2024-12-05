@@ -10,6 +10,7 @@ CATEGORIES=	devel
 GIT_REPO=	https://github.com/glandium/git-cinnabar.git
 GIT_BRANCH=	try
 #GIT_REVISION=	4fb9f8dcf2f566d6fb411adb198cfeb73f2cb564
+
 DEFAULT_DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -49,14 +50,29 @@ do-install:
 
 CARGO_TEST_ARGS=	test ${DEFAULT_CARGO_ARGS}
 
-do-test:
+do-test: do-test-cargo
+do-test-cargo: .PHONY
+	@${STEP_MSG} Running cargo test
 	${RUN} cd ${CARGO_WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_TEST_ARGS}
 
+TEST_DEPENDS+=		${PYPKGPREFIX}-cram>=0:../../devel/py-cram
+
+# this.cannot.possibly.exist.invalid-tld appears in some tests that
+# check for exact error messages, so let that bypass the fake proxy.
+do-test: do-test-cram
+do-test-cram: .PHONY
+	@${STEP_MSG} Running cram tests
+	${RUN} cd ${CARGO_WRKSRC} && \
+	${SETENV} ${MAKE_ENV} PATH=${CARGO_WRKSRC}/target/release:${PATH:Q} \
+	    no_proxy=localhost,this.cannot.possibly.exist.invalid-tld \
+	    ${PREFIX}/bin/cram ${PKG_VERBOSE:D--verbose} tests
+
 .include "cargo-depends.mk"
 
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../archivers/zstd/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
