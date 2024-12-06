@@ -19,6 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensio
 
 USE_LANGUAGES=	c c++
 
+# This allows libblosc*.dylib to be found by setup.py
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${PREFIX}/lib
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pt2to3 pt2to3-${PYVERSSUFFIX} && \
