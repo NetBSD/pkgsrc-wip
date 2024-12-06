@@ -69,9 +69,9 @@ BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=1.0.6
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.60
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.11.91
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15.0
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=2.7.2
+BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=8.4.0
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .if ${LIBRSVG_TYPE} == "rust"
 .include "../../graphics/graphite2/buildlink3.mk"
