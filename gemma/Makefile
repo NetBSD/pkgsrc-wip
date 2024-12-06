@@ -5,11 +5,11 @@
 #              Mon Apr 29 11:01:43 CDT 2019               #
 ###########################################################
 
-DISTNAME=	GEMMA-0.98.1
-PKGREVISION=	1
+DISTNAME=	gemma-0.98.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=genetics-statistics/}
 GITHUB_PROJECT=	GEMMA
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/genetics-statistics/GEMMA
@@ -27,7 +27,7 @@ MAKE_FILE=	${FILESDIR}/Makefile
 # Requires multithreading for decent performance
 # Remember that this would interact with any limitation
 # of math/cblas, if there were any.
-BLAS_ACCEPTED=	openblas_pthread openblas_openmp accelerate.framework
+BLAS_ACCEPTED=	openblas_pthread openblas_openmp
 
 BLAS_C_INTERFACE=	yes
 CXXFLAGS+=		${BLAS_INCLUDES}
