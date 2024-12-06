@@ -5,7 +5,7 @@
 # used by wip/ups-nut-usb/Makefile
 # used by wip/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.8.2.1418
+DISTNAME=		nut-2.8.2.1482
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.NetBSD.org/~gdt/
