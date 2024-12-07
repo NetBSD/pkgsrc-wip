@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/logging_unittest.cc.orig	2024-11-14 01:04:01.812536200 +0000
+--- base/logging_unittest.cc.orig	2024-12-03 23:30:04.241359200 +0000
 +++ base/logging_unittest.cc
 @@ -41,7 +41,7 @@
  #include "base/posix/eintr_wrapper.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/drive_info.h.orig	2024-11-14 01:04:01.797536100 +0000
+--- base/files/drive_info.h.orig	2024-12-03 23:30:04.205356100 +0000
 +++ base/files/drive_info.h
 @@ -40,7 +40,7 @@ class BASE_EXPORT DriveInfo {
    std::optional<bool> has_seek_penalty;

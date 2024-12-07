@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/process_memory_dump.cc.orig	2024-11-14 01:04:01.902537000 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2024-12-03 23:30:04.435376600 +0000
 +++ base/trace_event/process_memory_dump.cc
 @@ -120,7 +120,7 @@ std::optional<size_t> ProcessMemoryDump:
  #if BUILDFLAG(IS_WIN)

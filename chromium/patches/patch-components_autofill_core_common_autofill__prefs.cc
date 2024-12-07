@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.cc.orig	2024-11-14 01:04:06.590584000 +0000
+--- components/autofill/core/common/autofill_prefs.cc.orig	2024-12-03 23:30:15.113331600 +0000
 +++ components/autofill/core/common/autofill_prefs.cc
 @@ -118,7 +118,7 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif

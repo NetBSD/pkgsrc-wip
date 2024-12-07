@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-11-14 01:04:03.533553400 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-12-03 23:30:09.227805400 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
 @@ -188,7 +188,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[autofill::prefs::kAutofillPaymentCardBenefits] =

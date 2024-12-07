@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/cdm_registration.h.orig	2024-11-14 01:04:05.095569000 +0000
+--- chrome/common/media/cdm_registration.h.orig	2024-12-03 23:30:12.261076500 +0000
 +++ chrome/common/media/cdm_registration.h
 @@ -16,7 +16,7 @@
  void RegisterCdmInfo(std::vector<content::CdmInfo>* cdms);

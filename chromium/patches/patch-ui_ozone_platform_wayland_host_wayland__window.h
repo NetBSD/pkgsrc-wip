@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-11-14 01:04:23.968757600 +0000
+--- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-12-03 23:30:51.871618500 +0000
 +++ ui/ozone/platform/wayland/host/wayland_window.h
 @@ -41,7 +41,7 @@
  #include "ui/platform_window/platform_window_init_properties.h"

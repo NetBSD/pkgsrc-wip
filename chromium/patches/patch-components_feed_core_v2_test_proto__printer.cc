@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/test/proto_printer.cc.orig	2024-11-14 01:04:06.925587200 +0000
+--- components/feed/core/v2/test/proto_printer.cc.orig	2024-12-03 23:30:15.728386600 +0000
 +++ components/feed/core/v2/test/proto_printer.cc
 @@ -158,8 +158,8 @@ class TextProtoPrinter {
    }

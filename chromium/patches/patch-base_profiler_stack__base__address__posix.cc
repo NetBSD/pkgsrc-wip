@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2024-11-14 01:04:01.839536400 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2024-12-03 23:30:04.299364600 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"

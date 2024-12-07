@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.h.orig	2024-11-14 01:04:11.291631000 +0000
+--- printing/printing_features.h.orig	2024-12-03 23:30:25.102224800 +0000
 +++ printing/printing_features.h
 @@ -22,7 +22,7 @@ COMPONENT_EXPORT(PRINTING_BASE)
  BASE_DECLARE_FEATURE(kAddPrinterViaPrintscanmgr);

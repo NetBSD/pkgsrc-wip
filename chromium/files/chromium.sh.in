@@ -69,7 +69,8 @@ export LD_LIBRARY_PATH
 [ -f ~/.config/user-dirs.dirs ] || \
 	echo 'XDG_DOWNLOAD_DIR="$HOME/Downloads"' > ~/.config/user-dirs.dirs
 
-#[ -z ${ENABLE_WASM} ] && \
-#	_NOWASM="--disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming --js-flags=--noexpose-wasm"
+# WebAssembly can be disabled by setting CHROMIUM_ENABLE_WASM=0 in your environment.
+[ ${CHROMIUM_ENABLE_WASM} -eq 0 ] && \
+	_NOWASM="--disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming --js-flags=--noexpose-wasm"
 
 LANG=${_l} exec "@PREFIX@/lib/chromium/chrome" ${_NOWASM} "${@}"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/system_cpu/cpu_probe.cc.orig	2024-11-14 01:04:07.858596600 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2024-12-03 23:30:17.822574000 +0000
 +++ components/system_cpu/cpu_probe.cc
 @@ -30,6 +30,9 @@ std::unique_ptr<CpuProbe> CpuProbe::Crea
    return CpuProbeWin::Create();

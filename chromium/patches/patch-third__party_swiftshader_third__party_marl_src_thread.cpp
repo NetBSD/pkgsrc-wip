@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/third_party/marl/src/thread.cpp.orig	2024-11-14 01:13:12.848992000 +0000
+--- third_party/swiftshader/third_party/marl/src/thread.cpp.orig	2024-12-03 23:31:25.602107300 +0000
 +++ third_party/swiftshader/third_party/marl/src/thread.cpp
 @@ -46,6 +46,9 @@
  #include <unistd.h>

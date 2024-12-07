@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_command_ids.h.orig	2024-11-14 01:04:02.291540900 +0000
+--- chrome/app/chrome_command_ids.h.orig	2024-12-03 23:30:05.417464500 +0000
 +++ chrome/app/chrome_command_ids.h
 @@ -68,12 +68,12 @@
  #define IDC_TOGGLE_MULTITASK_MENU       34050

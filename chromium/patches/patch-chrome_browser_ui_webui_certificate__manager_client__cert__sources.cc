@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2024-11-14 01:04:04.935567400 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2024-12-03 23:30:11.948048600 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
 @@ -51,7 +51,7 @@
  #include "net/ssl/client_cert_store_mac.h"

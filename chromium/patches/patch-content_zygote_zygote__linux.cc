@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/zygote/zygote_linux.cc.orig	2024-11-14 01:04:09.037608400 +0000
+--- content/zygote/zygote_linux.cc.orig	2024-12-03 23:30:20.163783300 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
  // Copyright 2012 The Chromium Authors

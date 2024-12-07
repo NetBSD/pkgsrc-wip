@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/switches.cc.orig	2024-11-14 01:04:23.905757000 +0000
+--- ui/gfx/switches.cc.orig	2024-12-03 23:30:51.746607300 +0000
 +++ ui/gfx/switches.cc
 @@ -32,7 +32,7 @@ const char kForcePrefersNoReducedMotion[
  // Run in headless mode, i.e., without a UI or display server dependencies.

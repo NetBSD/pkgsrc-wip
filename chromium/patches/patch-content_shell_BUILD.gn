@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/BUILD.gn.orig	2024-11-14 01:04:08.710605100 +0000
+--- content/shell/BUILD.gn.orig	2024-12-03 23:30:19.580731200 +0000
 +++ content/shell/BUILD.gn
 @@ -1086,7 +1086,7 @@ group("content_shell_crash_test") {
    if (is_win) {

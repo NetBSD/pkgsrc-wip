@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2024-11-14 01:04:03.884556800 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2024-12-03 23:30:09.960870700 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
 @@ -349,7 +349,7 @@
  #include "chrome/browser/profiles/gaia_info_update_service_factory.h"

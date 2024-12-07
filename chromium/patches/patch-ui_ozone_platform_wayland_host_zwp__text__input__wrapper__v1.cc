@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2024-11-14 01:04:23.972757600 +0000
+--- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2024-12-03 23:30:51.878619000 +0000
 +++ ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc
 @@ -256,6 +256,10 @@ void ZWPTextInputWrapperV1::SetSurroundi
    // so if it exceeds 16 bits, it may be broken.

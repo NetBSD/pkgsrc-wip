@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2024-11-14 01:04:04.649564500 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2024-12-03 23:30:11.382998000 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
 @@ -72,7 +72,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
    registry->RegisterIntegerPref(prefs::kDefaultBrowserDeclinedCount, 0);

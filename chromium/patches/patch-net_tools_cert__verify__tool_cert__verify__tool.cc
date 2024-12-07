@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-11-14 01:04:11.183629800 +0000
+--- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-12-03 23:30:24.770195200 +0000
 +++ net/tools/cert_verify_tool/cert_verify_tool.cc
 @@ -35,7 +35,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"

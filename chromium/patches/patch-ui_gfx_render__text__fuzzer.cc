@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_fuzzer.cc.orig	2024-11-14 01:04:23.902757000 +0000
+--- ui/gfx/render_text_fuzzer.cc.orig	2024-12-03 23:30:51.740606800 +0000
 +++ ui/gfx/render_text_fuzzer.cc
 @@ -17,7 +17,7 @@
  #include "ui/gfx/canvas.h"

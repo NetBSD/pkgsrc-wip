@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/profile_network_context_service.cc.orig	2024-11-14 01:04:03.726555300 +0000
+--- chrome/browser/net/profile_network_context_service.cc.orig	2024-12-03 23:30:09.653843400 +0000
 +++ chrome/browser/net/profile_network_context_service.cc
 @@ -142,7 +142,7 @@
  #include "chromeos/startup/browser_params_proxy.h"

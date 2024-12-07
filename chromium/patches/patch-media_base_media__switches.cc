@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2024-11-14 01:04:10.380622000 +0000
+--- media/base/media_switches.cc.orig	2024-12-03 23:30:23.041040700 +0000
 +++ media/base/media_switches.cc
 @@ -21,7 +21,7 @@
  #include "ui/gl/gl_features.h"

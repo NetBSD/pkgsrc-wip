@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/protected_memory_posix.cc.orig	2024-11-14 01:04:01.816536200 +0000
+--- base/memory/protected_memory_posix.cc.orig	2024-12-03 23:30:04.248360000 +0000
 +++ base/memory/protected_memory_posix.cc
 @@ -6,7 +6,7 @@
  

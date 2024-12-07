@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-11-14 01:04:23.819756000 +0000
+--- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-12-03 23:30:51.587593000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
 @@ -18,7 +18,7 @@
  #include "ui/events/keycodes/dom/dom_code.h"

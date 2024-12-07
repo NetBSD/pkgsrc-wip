@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/helpers_unittests.cc.orig	2024-11-14 01:04:10.688624900 +0000
+--- media/webrtc/helpers_unittests.cc.orig	2024-12-03 23:30:23.680097800 +0000
 +++ media/webrtc/helpers_unittests.cc
 @@ -40,7 +40,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
    EXPECT_TRUE(config.echo_canceller.enabled);

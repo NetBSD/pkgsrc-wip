@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/managed_ui.cc.orig	2024-11-14 01:04:04.683565000 +0000
+--- chrome/browser/ui/managed_ui.cc.orig	2024-12-03 23:30:11.454004300 +0000
 +++ chrome/browser/ui/managed_ui.cc
 @@ -439,7 +439,7 @@ std::optional<std::string> GetDeviceMana
        g_browser_process->platform_part()->browser_policy_connector_ash();

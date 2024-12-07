@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2024-11-14 01:06:45.649499000 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2024-12-03 23:31:00.618400300 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_internal.h
 @@ -15,6 +15,13 @@
  namespace angle

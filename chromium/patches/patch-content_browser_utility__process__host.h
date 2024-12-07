@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host.h.orig	2024-11-14 01:04:08.578603700 +0000
+--- content/browser/utility_process_host.h.orig	2024-12-03 23:30:19.172694700 +0000
 +++ content/browser/utility_process_host.h
 @@ -34,7 +34,7 @@ class Thread;
  }  // namespace base

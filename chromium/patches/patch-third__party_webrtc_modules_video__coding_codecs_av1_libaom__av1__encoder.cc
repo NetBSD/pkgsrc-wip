@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc.orig	2024-11-14 01:09:18.797970000 +0000
+--- third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc.orig	2024-12-03 23:32:41.031842700 +0000
 +++ third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc
 @@ -299,7 +299,9 @@ int LibaomAv1Encoder::InitEncode(const V
      SET_ENCODER_PARAM_OR_RETURN_ERROR(AV1E_SET_ENABLE_PALETTE, 0);

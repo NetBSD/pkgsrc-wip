@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle.cc.orig	2024-11-14 01:04:01.835536500 +0000
+--- base/process/process_handle.cc.orig	2024-12-03 23:30:04.289363600 +0000
 +++ base/process/process_handle.cc
 @@ -30,7 +30,7 @@ UniqueProcId GetUniqueIdForProcess() {
               : UniqueProcId(GetCurrentProcId());

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-11-14 01:04:10.461622700 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-12-03 23:30:23.192054000 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -67,7 +67,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(

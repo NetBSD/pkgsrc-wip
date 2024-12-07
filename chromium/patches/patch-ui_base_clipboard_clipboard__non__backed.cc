@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_non_backed.cc.orig	2024-11-14 01:04:23.697754900 +0000
+--- ui/base/clipboard/clipboard_non_backed.cc.orig	2024-12-03 23:30:51.360572800 +0000
 +++ ui/base/clipboard/clipboard_non_backed.cc
 @@ -461,7 +461,7 @@ ClipboardNonBacked::ClipboardNonBacked()
    // so create internal clipboards for platform supported clipboard buffers.

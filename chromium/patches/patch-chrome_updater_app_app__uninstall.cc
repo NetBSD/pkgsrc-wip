@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/app/app_uninstall.cc.orig	2024-11-14 01:04:06.003578000 +0000
+--- chrome/updater/app/app_uninstall.cc.orig	2024-12-03 23:30:13.867220200 +0000
 +++ chrome/updater/app/app_uninstall.cc
 @@ -161,7 +161,7 @@ void UninstallInThreadPool(UpdaterScope 
              }

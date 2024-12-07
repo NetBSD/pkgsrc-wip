@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2024-11-14 01:04:04.297561000 +0000
+--- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2024-12-03 23:30:10.763942700 +0000
 +++ chrome/browser/supervised_user/classify_url_navigation_throttle.cc
 @@ -219,7 +219,7 @@ void ClassifyUrlNavigationThrottle::OnIn
      case SupervisedUserNavigationThrottle::kCancelWithInterstitial: {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2024-11-14 01:10:09.730234400 +0000
+--- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2024-12-03 23:33:17.902840600 +0000
 +++ v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h
 @@ -579,7 +579,7 @@ void LiftoffAssembler::StoreTaggedPointe
  }

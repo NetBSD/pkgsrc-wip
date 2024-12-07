@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/host_settings.cc.orig	2024-11-14 01:04:11.295631000 +0000
+--- remoting/base/host_settings.cc.orig	2024-12-03 23:30:25.109225500 +0000
 +++ remoting/base/host_settings.cc
 @@ -7,7 +7,7 @@
  #include "base/no_destructor.h"

@@ -1,20 +1,15 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			131.0.6778.69
+VERSION=			131.0.6778.108
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
-MASTER_SITES+=			https://chromium-tarballs.syd1.cdn.digitaloceanspaces.com/
-MASTER_SITES+=			https://nerd.hu/distfiles/
 EXTRACT_SUFX_C=			.tar.xz
 
-PROFILE_DISTFILES=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
-PROFILE_DISTFILES+=		chrome-v8-${VERSION}.profdata${EXTRACT_SUFX_C}
-GN_DISTFILES=			chrome-gn-${VERSION}-src${EXTRACT_SUFX_C}
-SITES.${PROFILE_DISTFILE}=	https://nerd.hu/distfiles/
+PROFILE_DISTFILES=		chromium-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
+SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
 DISTFILES+=			${PROFILE_DISTFILES}
-DISTFILES+=			${GN_DISTFILES}
 
 # audioio source
 A_VERSION=			130.0

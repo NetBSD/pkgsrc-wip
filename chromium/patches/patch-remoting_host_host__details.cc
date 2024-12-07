@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_details.cc.orig	2024-11-14 01:04:11.317631200 +0000
+--- remoting/host/host_details.cc.orig	2024-12-03 23:30:25.153229500 +0000
 +++ remoting/host/host_details.cc
 @@ -23,7 +23,7 @@ std::string GetHostOperatingSystemName()
    return "Mac";

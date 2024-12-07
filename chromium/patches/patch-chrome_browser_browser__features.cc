@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2024-11-14 01:04:03.340551400 +0000
+--- chrome/browser/browser_features.cc.orig	2024-12-03 23:30:08.788766000 +0000
 +++ chrome/browser/browser_features.cc
 @@ -71,7 +71,7 @@ BASE_FEATURE(kClosedTabCache,
               "ClosedTabCache",

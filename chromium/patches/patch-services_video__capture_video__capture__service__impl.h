@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_capture/video_capture_service_impl.h.orig	2024-11-14 01:04:11.571633800 +0000
+--- services/video_capture/video_capture_service_impl.h.orig	2024-12-03 23:30:25.621271400 +0000
 +++ services/video_capture/video_capture_service_impl.h
 @@ -28,7 +28,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)

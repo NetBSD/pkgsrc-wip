@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2024-11-14 01:04:10.380622000 +0000
+--- media/base/media_switches.h.orig	2024-12-03 23:30:23.041040700 +0000
 +++ media/base/media_switches.h
 @@ -44,7 +44,7 @@ MEDIA_EXPORT extern const char kDisableB
  MEDIA_EXPORT extern const char kReportVp9AsAnUnsupportedMimeType[];

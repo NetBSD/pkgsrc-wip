@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/tab_group_sync/tab_group_sync_service_factory.cc.orig	2024-11-14 01:04:04.332561300 +0000
+--- chrome/browser/tab_group_sync/tab_group_sync_service_factory.cc.orig	2024-12-03 23:30:10.839949400 +0000
 +++ chrome/browser/tab_group_sync/tab_group_sync_service_factory.cc
 @@ -31,7 +31,7 @@
  #include "components/sync_device_info/device_info_sync_service.h"

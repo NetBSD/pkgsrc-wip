@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/visited_url_ranking/visited_url_ranking_service_factory.cc.orig	2024-11-14 01:04:05.003568200 +0000
+--- chrome/browser/visited_url_ranking/visited_url_ranking_service_factory.cc.orig	2024-12-03 23:30:12.078060200 +0000
 +++ chrome/browser/visited_url_ranking/visited_url_ranking_service_factory.cc
 @@ -44,7 +44,7 @@
  #include "components/visited_url_ranking/public/visited_url_ranking_service.h"

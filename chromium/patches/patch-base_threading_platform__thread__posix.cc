@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_posix.cc.orig	2024-11-14 01:04:01.893537000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2024-12-03 23:30:04.415374800 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -77,11 +77,11 @@ void* ThreadFunc(void* params) {
      if (!thread_params->joinable)

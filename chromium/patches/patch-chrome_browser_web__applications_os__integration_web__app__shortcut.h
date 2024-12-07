@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.h.orig	2024-11-14 01:04:05.036568400 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.h.orig	2024-12-03 23:30:12.145066300 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.h
 @@ -21,7 +21,7 @@
  #include "ui/gfx/image/image_family.h"

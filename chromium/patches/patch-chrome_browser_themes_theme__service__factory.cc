@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service_factory.cc.orig	2024-11-14 01:04:04.350561600 +0000
+--- chrome/browser/themes/theme_service_factory.cc.orig	2024-12-03 23:30:10.871952300 +0000
 +++ chrome/browser/themes/theme_service_factory.cc
 @@ -27,11 +27,11 @@
  

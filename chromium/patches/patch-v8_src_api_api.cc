@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2024-11-14 01:10:09.499233200 +0000
+--- v8/src/api/api.cc.orig	2024-12-03 23:33:16.967840700 +0000
 +++ v8/src/api/api.cc
 @@ -151,7 +151,7 @@
  #include "src/wasm/wasm-serialization.h"

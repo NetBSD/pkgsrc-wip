@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-11-14 01:04:04.785565900 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-12-03 23:30:11.657022500 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -77,7 +77,7 @@ void SystemMenuModelBuilder::BuildSystem
      ui::SimpleMenuModel* model) {

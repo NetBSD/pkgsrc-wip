@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-11-14 01:04:11.673634800 +0000
+--- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-12-03 23:30:25.882294700 +0000
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
  #include <sys/syscall.h>

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-11-14 01:04:10.462622600 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-12-03 23:30:23.195054300 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -1095,7 +1095,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    }

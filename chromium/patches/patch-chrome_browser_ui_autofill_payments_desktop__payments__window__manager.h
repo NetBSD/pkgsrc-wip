@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-11-14 01:04:04.638564300 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-12-03 23:30:11.359995800 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h
 @@ -14,7 +14,7 @@
  #include "components/autofill/core/browser/payments/payments_window_manager.h"

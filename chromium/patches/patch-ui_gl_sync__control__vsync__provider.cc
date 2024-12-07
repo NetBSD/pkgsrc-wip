@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/sync_control_vsync_provider.cc.orig	2024-11-14 01:04:23.930757300 +0000
+--- ui/gl/sync_control_vsync_provider.cc.orig	2024-12-03 23:30:51.801612100 +0000
 +++ ui/gl/sync_control_vsync_provider.cc
 @@ -11,7 +11,7 @@
  #include "base/trace_event/trace_event.h"

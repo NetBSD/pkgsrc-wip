@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/pre_sandbox_init.cc.orig	2024-11-14 01:04:11.527633200 +0000
+--- services/on_device_model/pre_sandbox_init.cc.orig	2024-12-03 23:30:25.545264500 +0000
 +++ services/on_device_model/pre_sandbox_init.cc
 @@ -14,7 +14,7 @@
  #include "services/on_device_model/ml/chrome_ml.h"  // nogncheck

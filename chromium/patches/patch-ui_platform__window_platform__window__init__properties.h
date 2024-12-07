@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_init_properties.h.orig	2024-11-14 01:04:23.985757800 +0000
+--- ui/platform_window/platform_window_init_properties.h.orig	2024-12-03 23:30:51.900621000 +0000
 +++ ui/platform_window/platform_window_init_properties.h
 @@ -56,7 +56,7 @@ class WorkspaceExtensionDelegate;
  class ScenicWindowDelegate;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/memory_linux.cc.orig	2024-11-14 01:04:01.834536300 +0000
+--- base/process/memory_linux.cc.orig	2024-12-03 23:30:04.288363500 +0000
 +++ base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);
  

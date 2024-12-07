@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_memory_buffer.h.orig	2024-11-14 01:04:23.890756800 +0000
+--- ui/gfx/gpu_memory_buffer.h.orig	2024-12-03 23:30:51.717604600 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -15,7 +15,7 @@
  #include "ui/gfx/geometry/rect.h"

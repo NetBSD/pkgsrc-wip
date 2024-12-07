@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-11-14 01:04:08.618604200 +0000
+--- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-12-03 23:30:19.256702200 +0000
 +++ content/ppapi_plugin/ppapi_plugin_main.cc
 @@ -52,6 +52,11 @@
  #include "gin/v8_initializer.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments_data_manager.cc.orig	2024-11-14 01:04:06.575583700 +0000
+--- components/autofill/core/browser/payments_data_manager.cc.orig	2024-12-03 23:30:15.079328500 +0000
 +++ components/autofill/core/browser/payments_data_manager.cc
 @@ -1095,7 +1095,7 @@ bool PaymentsDataManager::ShouldShowCard
  // The feature is only for Linux, Windows, Mac, and Fuchsia.

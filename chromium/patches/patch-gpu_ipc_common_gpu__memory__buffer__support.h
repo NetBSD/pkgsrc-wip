@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/common/gpu_memory_buffer_support.h.orig	2024-11-14 01:04:09.460612500 +0000
+--- gpu/ipc/common/gpu_memory_buffer_support.h.orig	2024-12-03 23:30:21.058863400 +0000
 +++ gpu/ipc/common/gpu_memory_buffer_support.h
 @@ -21,7 +21,7 @@
  #include "ui/gfx/geometry/size.h"

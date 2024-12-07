@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/text_input_client.h.orig	2024-11-14 01:04:23.715755000 +0000
+--- ui/base/ime/text_input_client.h.orig	2024-12-03 23:30:51.394575800 +0000
 +++ ui/base/ime/text_input_client.h
 @@ -268,7 +268,7 @@ class COMPONENT_EXPORT(UI_BASE_IME) Text
    // fields that are considered 'private' (e.g. in incognito tabs).

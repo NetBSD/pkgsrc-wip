@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/management/chrome_management_api_delegate.cc.orig	2024-11-14 01:04:03.518553300 +0000
+--- chrome/browser/extensions/api/management/chrome_management_api_delegate.cc.orig	2024-12-03 23:30:09.191802000 +0000
 +++ chrome/browser/extensions/api/management/chrome_management_api_delegate.cc
 @@ -417,7 +417,7 @@ bool ChromeManagementAPIDelegate::Launch
    apps::LaunchContainer launch_container =

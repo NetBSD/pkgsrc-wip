@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_client.h.orig	2024-11-14 01:04:07.206590200 +0000
+--- components/password_manager/core/browser/password_manager_client.h.orig	2024-12-03 23:30:16.421448700 +0000
 +++ components/password_manager/core/browser/password_manager_client.h
 @@ -30,7 +30,7 @@
  #include "net/cert/cert_status_flags.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/common/features.cc.orig	2024-11-14 01:04:23.944757500 +0000
+--- ui/ozone/common/features.cc.orig	2024-12-03 23:30:51.829614600 +0000
 +++ ui/ozone/common/features.cc
 @@ -35,7 +35,7 @@ BASE_FEATURE(kWaylandSurfaceSubmissionIn
  // enabled.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_platform_data.cc.orig	2024-11-14 01:04:12.903647000 +0000
+--- third_party/blink/renderer/platform/fonts/font_platform_data.cc.orig	2024-12-03 23:30:28.682545000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_platform_data.cc
 @@ -54,7 +54,7 @@
  namespace blink {

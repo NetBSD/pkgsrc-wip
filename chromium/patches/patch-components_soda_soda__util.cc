@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/soda/soda_util.cc.orig	2024-11-14 01:04:07.678594800 +0000
+--- components/soda/soda_util.cc.orig	2024-12-03 23:30:17.368533400 +0000
 +++ components/soda/soda_util.cc
 @@ -27,7 +27,7 @@
  #include "base/win/windows_version.h"

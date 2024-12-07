@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/external_provider_impl.cc.orig	2024-11-14 01:04:03.565553700 +0000
+--- chrome/browser/extensions/external_provider_impl.cc.orig	2024-12-03 23:30:09.312812800 +0000
 +++ chrome/browser/extensions/external_provider_impl.cc
 @@ -792,7 +792,7 @@ void ExternalProviderImpl::CreateExterna
  

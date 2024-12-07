@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/generate_bindings.py.orig	2024-11-14 01:04:09.467612700 +0000
+--- gpu/vulkan/generate_bindings.py.orig	2024-12-03 23:30:21.075864800 +0000
 +++ gpu/vulkan/generate_bindings.py
 @@ -271,7 +271,7 @@ VULKAN_DEVICE_FUNCTIONS = [
      ]

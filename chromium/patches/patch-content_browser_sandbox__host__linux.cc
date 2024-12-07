@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/sandbox_host_linux.cc.orig	2024-11-14 01:04:08.542603500 +0000
+--- content/browser/sandbox_host_linux.cc.orig	2024-12-03 23:30:19.095687900 +0000
 +++ content/browser/sandbox_host_linux.cc
 @@ -45,6 +45,7 @@ void SandboxHostLinux::Init() {
    // Instead, it replies on a temporary socket provided by the caller.

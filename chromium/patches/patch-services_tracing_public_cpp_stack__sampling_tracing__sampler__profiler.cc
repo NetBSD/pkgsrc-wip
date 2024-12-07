@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2024-11-14 01:04:11.564633600 +0000
+--- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2024-12-03 23:30:25.611270400 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
 @@ -38,7 +38,7 @@
  #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"

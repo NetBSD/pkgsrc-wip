@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/scheduler/responsiveness/jank_monitor_impl.cc.orig	2024-11-14 01:04:08.544603300 +0000
+--- content/browser/scheduler/responsiveness/jank_monitor_impl.cc.orig	2024-12-03 23:30:19.098688100 +0000
 +++ content/browser/scheduler/responsiveness/jank_monitor_impl.cc
 @@ -340,7 +340,7 @@ void JankMonitorImpl::ThreadExecutionSta
      // in context menus, among others). Simply ignore the mismatches for now.

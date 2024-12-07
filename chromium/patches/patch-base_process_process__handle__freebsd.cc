@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_freebsd.cc.orig	2024-11-14 01:04:01.835536500 +0000
+--- base/process/process_handle_freebsd.cc.orig	2024-12-03 23:30:04.290363600 +0000
 +++ base/process/process_handle_freebsd.cc
 @@ -3,6 +3,7 @@
  // found in the LICENSE file.

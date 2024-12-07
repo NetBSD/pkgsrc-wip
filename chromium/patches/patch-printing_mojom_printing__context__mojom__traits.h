@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits.h.orig	2024-11-14 01:04:11.288631000 +0000
+--- printing/mojom/printing_context_mojom_traits.h.orig	2024-12-03 23:30:25.096224300 +0000
 +++ printing/mojom/printing_context_mojom_traits.h
 @@ -166,7 +166,7 @@ struct StructTraits<printing::mojom::Pri
      return s.pages_per_sheet();

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/small-vector.h.orig	2024-11-14 01:10:09.509233200 +0000
+--- v8/src/base/small-vector.h.orig	2024-12-03 23:33:16.990840700 +0000
 +++ v8/src/base/small-vector.h
 @@ -22,7 +22,7 @@ template <typename T, size_t kSize, type
  class SmallVector {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_connection.cc.orig	2024-11-14 01:04:23.962757600 +0000
+--- ui/ozone/platform/wayland/host/wayland_connection.cc.orig	2024-12-03 23:30:51.861617600 +0000
 +++ ui/ozone/platform/wayland/host/wayland_connection.cc
 @@ -541,7 +541,7 @@ bool WaylandConnection::ShouldUseOverlay
    // isn't present on any non-exo Wayland compositors.

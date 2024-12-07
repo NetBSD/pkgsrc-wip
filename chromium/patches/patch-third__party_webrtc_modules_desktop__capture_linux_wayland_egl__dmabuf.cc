@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc.orig	2024-11-14 01:09:18.766970000 +0000
+--- third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc.orig	2024-12-03 23:32:40.947842800 +0000
 +++ third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc
 @@ -10,11 +10,15 @@
  

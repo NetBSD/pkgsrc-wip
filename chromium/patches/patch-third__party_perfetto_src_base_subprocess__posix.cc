@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/subprocess_posix.cc.orig	2024-11-14 01:09:19.606974100 +0000
+--- third_party/perfetto/src/base/subprocess_posix.cc.orig	2024-12-03 23:32:31.107843400 +0000
 +++ third_party/perfetto/src/base/subprocess_posix.cc
 @@ -35,7 +35,8 @@
  #include <thread>

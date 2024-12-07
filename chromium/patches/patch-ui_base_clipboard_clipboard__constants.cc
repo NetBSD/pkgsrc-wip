@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_constants.cc.orig	2024-11-14 01:04:23.696755000 +0000
+--- ui/base/clipboard/clipboard_constants.cc.orig	2024-12-03 23:30:51.358572500 +0000
 +++ ui/base/clipboard/clipboard_constants.cc
 @@ -25,7 +25,7 @@ const char kMimeTypeOctetStream[] = "app
  // Used for window dragging on some platforms.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_process_launcher_helper.h.orig	2024-11-14 01:04:08.367601600 +0000
+--- content/browser/child_process_launcher_helper.h.orig	2024-12-03 23:30:18.749657000 +0000
 +++ content/browser/child_process_launcher_helper.h
 @@ -304,7 +304,7 @@ class ChildProcessLauncherHelper
    std::optional<base::ProcessId> process_id_ = std::nullopt;

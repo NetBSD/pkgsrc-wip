@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2024-11-14 01:04:05.103569000 +0000
+--- chrome/common/webui_url_constants.h.orig	2024-12-03 23:30:12.276078000 +0000
 +++ chrome/common/webui_url_constants.h
 @@ -578,24 +578,24 @@ inline constexpr char16_t kOsUISystemURL
  inline constexpr char kOsUIVersionURL[] = "os://version";

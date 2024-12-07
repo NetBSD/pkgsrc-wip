@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/ppapi_plugin/ppapi_blink_platform_impl.h.orig	2024-11-14 01:04:08.618604200 +0000
+--- content/ppapi_plugin/ppapi_blink_platform_impl.h.orig	2024-12-03 23:30:19.256702200 +0000
 +++ content/ppapi_plugin/ppapi_blink_platform_impl.h
 @@ -36,7 +36,7 @@ class PpapiBlinkPlatformImpl : public Bl
    blink::WebString DefaultLocale() override;

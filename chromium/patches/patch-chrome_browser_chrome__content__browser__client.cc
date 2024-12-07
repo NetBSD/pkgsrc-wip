@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.cc.orig	2024-11-14 01:04:03.355551500 +0000
+--- chrome/browser/chrome_content_browser_client.cc.orig	2024-12-03 23:30:08.827769500 +0000
 +++ chrome/browser/chrome_content_browser_client.cc
 @@ -498,7 +498,7 @@
  #include "storage/browser/file_system/external_mount_points.h"

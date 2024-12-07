@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.h.orig	2024-11-14 01:04:03.508553000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.h.orig	2024-12-03 23:30:09.167800000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.h
 @@ -7,7 +7,7 @@
  

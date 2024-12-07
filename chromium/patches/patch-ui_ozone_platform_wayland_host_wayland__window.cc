@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_window.cc.orig	2024-11-14 01:04:23.968757600 +0000
+--- ui/ozone/platform/wayland/host/wayland_window.cc.orig	2024-12-03 23:30:51.871618500 +0000
 +++ ui/ozone/platform/wayland/host/wayland_window.cc
 @@ -323,7 +323,7 @@ void WaylandWindow::OnPointerFocusChange
    // Whenever the window gets the pointer focus back, the cursor shape must be

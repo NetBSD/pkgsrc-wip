@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2024-11-14 01:04:08.609604100 +0000
+--- content/common/features.h.orig	2024-12-03 23:30:19.240700700 +0000
 +++ content/common/features.h
 @@ -34,7 +34,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);

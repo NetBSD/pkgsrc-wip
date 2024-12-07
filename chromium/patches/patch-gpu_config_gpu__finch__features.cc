@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2024-11-14 01:04:09.454612500 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2024-12-03 23:30:21.046862400 +0000
 +++ gpu/config/gpu_finch_features.cc
 @@ -147,7 +147,8 @@ const base::FeatureParam<std::string>
  BASE_FEATURE(kDefaultEnableGpuRasterization,

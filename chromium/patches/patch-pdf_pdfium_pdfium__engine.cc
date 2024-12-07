@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- pdf/pdfium/pdfium_engine.cc.orig	2024-11-14 01:04:11.207630200 +0000
+--- pdf/pdfium/pdfium_engine.cc.orig	2024-12-03 23:30:24.952211400 +0000
 +++ pdf/pdfium/pdfium_engine.cc
 @@ -99,7 +99,7 @@
  #include "ui/accessibility/ax_features.mojom-features.h"

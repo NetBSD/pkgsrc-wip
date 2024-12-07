@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.h.orig	2024-11-14 01:04:03.729555400 +0000
+--- chrome/browser/net/system_network_context_manager.h.orig	2024-12-03 23:30:09.658843800 +0000
 +++ chrome/browser/net/system_network_context_manager.h
 @@ -198,7 +198,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;

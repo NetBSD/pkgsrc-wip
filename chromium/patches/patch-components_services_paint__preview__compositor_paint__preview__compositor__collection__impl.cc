@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2024-11-14 01:04:07.630594300 +0000
+--- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2024-12-03 23:30:17.276525000 +0000
 +++ components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc
 @@ -22,7 +22,7 @@
  

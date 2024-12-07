@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/Reactor/Debug.cpp.orig	2024-11-14 01:13:10.259982800 +0000
+--- third_party/swiftshader/src/Reactor/Debug.cpp.orig	2024-12-03 23:31:18.924036700 +0000
 +++ third_party/swiftshader/src/Reactor/Debug.cpp
 @@ -46,7 +46,8 @@ namespace {
  

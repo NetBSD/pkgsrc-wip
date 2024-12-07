@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders.cc.orig	2024-11-14 01:04:03.353551600 +0000
+--- chrome/browser/chrome_browser_interface_binders.cc.orig	2024-12-03 23:30:08.819768700 +0000
 +++ chrome/browser/chrome_browser_interface_binders.cc
 @@ -129,12 +129,12 @@
  #endif  // BUILDFLAG(FULL_SAFE_BROWSING)

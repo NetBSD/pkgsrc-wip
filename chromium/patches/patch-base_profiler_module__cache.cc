@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/module_cache.cc.orig	2024-11-14 01:04:01.838536500 +0000
+--- base/profiler/module_cache.cc.orig	2024-12-03 23:30:04.297364200 +0000
 +++ base/profiler/module_cache.cc
 @@ -38,7 +38,7 @@ std::string TransformModuleIDToSymbolSer
    // Android and Linux Chrome builds use the "breakpad" format to index their

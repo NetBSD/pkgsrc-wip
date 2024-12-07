@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/ext/base/thread_utils.h.orig	2024-11-14 01:09:19.563974000 +0000
+--- third_party/perfetto/include/perfetto/ext/base/thread_utils.h.orig	2024-12-03 23:32:31.012843400 +0000
 +++ third_party/perfetto/include/perfetto/ext/base/thread_utils.h
 @@ -41,9 +41,10 @@
  namespace perfetto {

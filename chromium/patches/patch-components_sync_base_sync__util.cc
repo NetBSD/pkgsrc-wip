@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/base/sync_util.cc.orig	2024-11-14 01:04:07.816596300 +0000
+--- components/sync/base/sync_util.cc.orig	2024-12-03 23:30:17.732565900 +0000
 +++ components/sync/base/sync_util.cc
 @@ -45,6 +45,8 @@ std::string GetSystemString() {
    system = "FREEBSD ";

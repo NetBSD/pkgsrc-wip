@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service.cc.orig	2024-11-14 01:04:04.349561500 +0000
+--- chrome/browser/themes/theme_service.cc.orig	2024-12-03 23:30:10.870952100 +0000
 +++ chrome/browser/themes/theme_service.cc
 @@ -70,7 +70,7 @@
  #include "extensions/browser/extension_registry_observer.h"

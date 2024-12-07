@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2024-11-14 01:04:12.916647200 +0000
+--- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2024-12-03 23:30:28.706547300 +0000
 +++ third_party/blink/renderer/platform/graphics/begin_frame_provider.cc
 @@ -71,8 +71,12 @@ void BeginFrameProvider::CreateComposito
  

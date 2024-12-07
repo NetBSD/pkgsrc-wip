@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-11-14 01:04:06.920587300 +0000
+--- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-12-03 23:30:15.718385700 +0000
 +++ components/feed/core/v2/feed_network_impl_unittest.cc
 @@ -747,8 +747,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
  

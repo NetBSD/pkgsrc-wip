@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/user_permission_service.h.orig	2024-11-14 01:04:06.819586300 +0000
+--- components/device_signals/core/browser/user_permission_service.h.orig	2024-12-03 23:30:15.530369000 +0000
 +++ components/device_signals/core/browser/user_permission_service.h
 @@ -57,7 +57,7 @@ class UserPermissionService : public Key
    // missing.

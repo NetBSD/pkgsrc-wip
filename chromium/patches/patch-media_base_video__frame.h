@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2024-11-14 01:04:10.389622000 +0000
+--- media/base/video_frame.h.orig	2024-12-03 23:30:23.057042100 +0000
 +++ media/base/video_frame.h
 @@ -50,7 +50,7 @@
  #include "base/apple/scoped_cftyperef.h"

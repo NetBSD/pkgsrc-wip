@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/guarded_page_allocator_posix.cc.orig	2024-11-14 01:04:06.952587600 +0000
+--- components/gwp_asan/client/guarded_page_allocator_posix.cc.orig	2024-12-03 23:30:15.779391300 +0000
 +++ components/gwp_asan/client/guarded_page_allocator_posix.cc
 @@ -35,8 +35,9 @@ void GuardedPageAllocator::MarkPageInacc
    // mmap() a PROT_NONE page over the address to release it to the system, if

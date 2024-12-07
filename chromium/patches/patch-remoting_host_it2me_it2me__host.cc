@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_host.cc.orig	2024-11-14 01:04:11.328631200 +0000
+--- remoting/host/it2me/it2me_host.cc.orig	2024-12-03 23:30:25.173231400 +0000
 +++ remoting/host/it2me/it2me_host.cc
 @@ -58,7 +58,7 @@
  #include "remoting/host/chromeos/features.h"

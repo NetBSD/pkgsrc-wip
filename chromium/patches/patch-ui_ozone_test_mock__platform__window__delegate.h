@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/test/mock_platform_window_delegate.h.orig	2024-11-14 01:04:23.983757700 +0000
+--- ui/ozone/test/mock_platform_window_delegate.h.orig	2024-12-03 23:30:51.897620700 +0000
 +++ ui/ozone/test/mock_platform_window_delegate.h
 @@ -35,7 +35,7 @@ class MockPlatformWindowDelegate : publi
    MOCK_METHOD2(OnWindowStateChanged,

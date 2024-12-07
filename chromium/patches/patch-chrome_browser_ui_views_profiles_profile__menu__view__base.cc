@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-11-14 01:04:04.827566400 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-12-03 23:30:11.739030000 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
 @@ -693,7 +693,7 @@ void ProfileMenuViewBase::SetProfileIden
        image_model, management_badge, this,

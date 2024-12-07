@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_sandbox_delegate.cc.orig	2024-11-14 01:04:08.578603700 +0000
+--- content/browser/utility_sandbox_delegate.cc.orig	2024-12-03 23:30:19.173694800 +0000
 +++ content/browser/utility_sandbox_delegate.cc
 @@ -76,10 +76,10 @@ UtilitySandboxedProcessLauncherDelegate:
  #if BUILDFLAG(IS_FUCHSIA)

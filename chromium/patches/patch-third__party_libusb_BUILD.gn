@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libusb/BUILD.gn.orig	2024-11-14 01:04:21.705735000 +0000
+--- third_party/libusb/BUILD.gn.orig	2024-12-03 23:30:47.509228500 +0000
 +++ third_party/libusb/BUILD.gn
 @@ -3,7 +3,7 @@
  # found in the LICENSE file.

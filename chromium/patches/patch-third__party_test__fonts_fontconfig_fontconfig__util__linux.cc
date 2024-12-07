@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2024-11-14 01:04:22.727745300 +0000
+--- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2024-12-03 23:30:49.439401000 +0000
 +++ third_party/test_fonts/fontconfig/fontconfig_util_linux.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

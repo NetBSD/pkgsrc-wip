@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.cc.orig	2024-11-14 01:04:04.276560800 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2024-12-03 23:30:10.714938200 +0000
 +++ chrome/browser/signin/signin_util.cc
 @@ -81,7 +81,7 @@ CookiesMover::CookiesMover(base::WeakPtr
  CookiesMover::~CookiesMover() = default;

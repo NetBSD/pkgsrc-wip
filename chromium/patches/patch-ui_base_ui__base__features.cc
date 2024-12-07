@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2024-11-14 01:04:23.730755300 +0000
+--- ui/base/ui_base_features.cc.orig	2024-12-03 23:30:51.422578300 +0000
 +++ ui/base/ui_base_features.cc
 @@ -173,7 +173,7 @@ BASE_FEATURE(kWaylandUiScale,
               base::FEATURE_DISABLED_BY_DEFAULT);

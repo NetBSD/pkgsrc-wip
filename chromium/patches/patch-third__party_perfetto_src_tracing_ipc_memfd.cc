@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/ipc/memfd.cc.orig	2024-11-14 01:09:19.944975900 +0000
+--- third_party/perfetto/src/tracing/ipc/memfd.cc.orig	2024-12-03 23:32:33.176843200 +0000
 +++ third_party/perfetto/src/tracing/ipc/memfd.cc
 @@ -20,7 +20,8 @@
  

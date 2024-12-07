@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.cc.orig	2024-11-14 01:04:01.751535700 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.cc.orig	2024-12-03 23:30:04.093346000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.cc
 @@ -38,7 +38,7 @@ uint32_t SecTaskGetCodeSignStatus(SecTas
  #endif  // PA_BUILDFLAG(IS_MAC)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_commands.cc.orig	2024-11-14 01:04:04.646564500 +0000
+--- chrome/browser/ui/browser_commands.cc.orig	2024-12-03 23:30:11.376997500 +0000
 +++ chrome/browser/ui/browser_commands.cc
 @@ -2035,7 +2035,7 @@ void OpenUpdateChromeDialog(Browser* bro
    } else if (UpgradeDetector::GetInstance()->is_outdated_install_no_au()) {

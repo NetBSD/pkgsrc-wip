@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel_mojo.cc.orig	2024-11-14 01:04:10.343621500 +0000
+--- ipc/ipc_channel_mojo.cc.orig	2024-12-03 23:30:22.968034000 +0000
 +++ ipc/ipc_channel_mojo.cc
 @@ -105,7 +105,7 @@ class ThreadSafeChannelProxy : public mo
  };

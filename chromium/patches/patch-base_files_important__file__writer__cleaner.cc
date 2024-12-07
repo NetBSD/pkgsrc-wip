@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/important_file_writer_cleaner.cc.orig	2024-11-14 01:04:01.801536000 +0000
+--- base/files/important_file_writer_cleaner.cc.orig	2024-12-03 23:30:04.215357000 +0000
 +++ base/files/important_file_writer_cleaner.cc
 @@ -25,7 +25,8 @@ namespace base {
  namespace {

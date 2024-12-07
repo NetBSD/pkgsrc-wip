@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-11-14 01:04:04.781566000 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-12-03 23:30:11.648021700 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
 @@ -2367,7 +2367,7 @@ void BrowserView::TabDraggingStatusChang
    // CrOS cleanup is done.

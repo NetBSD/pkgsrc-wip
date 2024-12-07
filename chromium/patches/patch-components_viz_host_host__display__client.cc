@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/host/host_display_client.cc.orig	2024-11-14 01:04:08.221600300 +0000
+--- components/viz/host/host_display_client.cc.orig	2024-12-03 23:30:18.487633500 +0000
 +++ components/viz/host/host_display_client.cc
 @@ -65,7 +65,7 @@ void HostDisplayClient::AddChildWindowTo
  }

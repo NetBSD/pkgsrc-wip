@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/tflite/features.gni.orig	2024-11-14 01:04:22.727745300 +0000
+--- third_party/tflite/features.gni.orig	2024-12-03 23:30:49.440401000 +0000
 +++ third_party/tflite/features.gni
 @@ -9,8 +9,8 @@ declare_args() {
    # This enables building TFLite with XNNPACK. Currently only available for

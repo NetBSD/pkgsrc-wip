@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/messaging/message_service.cc.orig	2024-11-14 01:04:09.262610700 +0000
+--- extensions/browser/api/messaging/message_service.cc.orig	2024-12-03 23:30:20.604822600 +0000
 +++ extensions/browser/api/messaging/message_service.cc
 @@ -78,7 +78,7 @@ namespace {
  const char kReceivingEndDoesntExistError[] =

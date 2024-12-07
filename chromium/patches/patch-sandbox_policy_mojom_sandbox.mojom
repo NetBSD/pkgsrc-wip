@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/mojom/sandbox.mojom.orig	2024-11-14 01:04:11.405632000 +0000
+--- sandbox/policy/mojom/sandbox.mojom.orig	2024-12-03 23:30:25.316244100 +0000
 +++ sandbox/policy/mojom/sandbox.mojom
 @@ -81,6 +81,15 @@ enum Sandbox {
    [EnableIf=is_fuchsia]
