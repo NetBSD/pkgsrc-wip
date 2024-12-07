@@ -177,3 +177,4 @@ man/man8/auto-change-login-class.8
 man/man8/auto-image2dev.8
 man/man8/auto-pkgsrc-non-removable.8
 man/man8/auto-update-system.8
+man/man8/auto-user-admin.8
