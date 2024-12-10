@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (fastapi-0.70.0.tar.gz) = 88c399deac9a7df6f0a56793d7033e540549fbe62e4565b6362c341d34bce34d
-SHA512 (fastapi-0.70.0.tar.gz) = 81297e6fc0300324840d165a6f682b31a3e90f0eca75ebd93b6d95048b57321d4305b8c3eb785ec12103e70eb0be3357537a2ae6ccceaaa8fc69c0fd82617341
-Size (fastapi-0.70.0.tar.gz) = 6127551 bytes
+BLAKE2s (fastapi-0.115.6.tar.gz) = 058ac8d95e1824e9eb7341ee9e35a7a2b91e9c5b05e38e96793cd32fa8143ca9
+SHA512 (fastapi-0.115.6.tar.gz) = be246ef3d1739d58ba841f595aee5f5219770ac7dcb0f408b5730696458ad7ab7a5ec29f5ebf28caf2e9c3ac594cbdf8e7eed5abb41f1ad02f729d659b4cf44c
+Size (fastapi-0.115.6.tar.gz) = 301336 bytes

@@ -1,2 +1,4 @@
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2024-24762
+
+Check all dependencies are needed and/or add missing ones.
