@@ -1495,6 +1495,7 @@ SUBDIR+=	hiawatha
 SUBDIR+=	higan
 SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
+SUBDIR+=	himalaya
 SUBDIR+=	hisat2
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	honk
