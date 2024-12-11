@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/01 12:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/14 22:22:12 wiz Exp $
 
-DISTNAME=	syncstorage-rs-0.17.15
+DISTNAME=	syncstorage-rs-0.18.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mozilla-services/syncstorage-rs/
 COMMENT=	Firefox Sync Storage server in Rust
 LICENSE=	mpl-2.0
+
+SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys/
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
@@ -33,14 +35,6 @@ RUST_REQ+=	1.80
 PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 .include "cargo-depends.mk"
-
-SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
-
-# needs snapshot
-SENTRY_REV=					1b65b5c99af975496880e7325218479e0037d097
-DISTFILES=					${DEFAULT_DISTFILES}
-DISTFILES+=					sentry-rust-${SENTRY_REV}.tar.gz
-SITES.sentry-rust-${SENTRY_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=getsentry/}sentry-rust/archive/${SENTRY_REV}.tar.gz
 
 USE_LANGUAGES=		c c++ # rust, but needs toolchain
 USE_TOOLS+=		pkg-config
