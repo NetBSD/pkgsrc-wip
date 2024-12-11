@@ -16,26 +16,30 @@ USE_TOOLS=	gmake autoconf automake alocal pkg-config
 HAS_CONFIGURE=		yes
 GNU_CONFIGURE=	yes
 
-# TODO: do this better
-C_ARGS=	--prefix=${PREFIX} --mandir=/usr/pkg/man
-C_ARGS+=	--customgc=no
-C_ARGS+=	--gccustominstall=skip
-C_ARGS+=	--gclibdir=${PREFIX}/lib
-C_ARGS+=	--gcincdir=${PREFIX}/include
-C_ARGS+=	--customlibuv=no
-C_ARGS+=	--disable-pcre
-C_ARGS+=	--disable-pcre2
-C_ARGS+=	--customunistring=no
-C_ARGS+=	--disable-libbacktrace
+LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib
 
-do-configure:
-	cd ${WRKSRC} && ./configure ${C_ARGS}
+CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=/usr/pkg/man
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
+CONFIGURE_ARGS+=	--lflags=${LDFLAGS:Q}
+CONFIGURE_ARGS+=	--customgc=no
+CONFIGURE_ARGS+=	--gccustominstall=skip
+CONFIGURE_ARGS+=	--gclibdir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--gcincdir=${PREFIX}/include
+CONFIGURE_ARGS+=	--customlibuv=no
+CONFIGURE_ARGS+=	--disable-pcre
+CONFIGURE_ARGS+=	--disable-pcre2
+CONFIGURE_ARGS+=	--customunistring=no
+CONFIGURE_ARGS+=	--disable-libbacktrace
 
-#TODO: do this better as well
+#do-configure:
+#	cd ${WRKSRC} && ./configure ${CONFIGURE_ARGS}
+
 do-build:
-	cd ${WRKSRC} && ${MAKE_ENVS} LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS}" ${GMAKE}
+	cd ${WRKSRC} && ${MAKE_ENVS} LDFLAGS=${LDFLAGS:Q} CFLAGS=${CFLAGS:Q} ${GMAKE}
 
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
