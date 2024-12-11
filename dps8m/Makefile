@@ -1,21 +1,22 @@
 # $NetBSD$
 
 PKGNAME=	dps8m-${VER}
-DISTNAME=	dps8_R${VER}_source
+DISTNAME=	dps8m-r${VER}-src
 CATEGORIES=	emulators
-MASTER_SITES=	http://ringzero.wikidot.com/local--files/start/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	https://dps8m.gitlab.io/dps8m-r${VER}-archive/R${VER}/
+EXTRACT_SUFX=	.tar.lz
 
-VER=		2.0
+VER=		3.0.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitlab.com/dps8m/dps8m
-COMMENT=	Multics DPS8/M emulator
-LICENSE=	# icu
+HOMEPAGE=	https://dps8m.gitlab.io/dps8m/
+COMMENT=	DPS-8/M mainframe simulator
+LICENSE=	icu
 
-WRKSRC=	${WRKDIR}/${PKGBASE}-code
+WRKSRC=		${WRKDIR}/dps8
 
 USE_TOOLS+=	gmake
+MAKE_FILE=	GNUmakefile
 
 LDFLAGS.NetBSD+=     -lm
 
