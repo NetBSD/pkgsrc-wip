@@ -1,0 +1,8 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/jiter/__init__.py
+${PYSITELIB}/jiter/__init__.pyc
+${PYSITELIB}/jiter/__init__.pyo
+${PYSITELIB}/jiter/jiter.so
