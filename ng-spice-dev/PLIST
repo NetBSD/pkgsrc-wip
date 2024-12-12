@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/ngspice
+lib/ngspice/analog.cm
+lib/ngspice/digital.cm
+lib/ngspice/spice2poly.cm
+lib/ngspice/table.cm
+lib/ngspice/xtradev.cm
+lib/ngspice/xtraevt.cm
+man/man1/ngspice.1
+share/ngspice/scripts/setplot
+share/ngspice/scripts/spectrum
+share/ngspice/scripts/spinit
+share/ngspice/scripts/src/ngspice/cmtypes.h
+share/ngspice/scripts/src/ngspice/cosim.h
+share/ngspice/scripts/src/ngspice/miftypes.h
+share/ngspice/scripts/src/verilator_main.cpp
+share/ngspice/scripts/src/verilator_shim.cpp
+share/ngspice/scripts/vlnggen

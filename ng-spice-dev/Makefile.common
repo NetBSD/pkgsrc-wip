@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.4 2024/08/05 13:11:06 tnn Exp $
+#
+# used by can/ng-spice
+# used by can/ng-spice-shared
+# used by wip/ng-spice-shared-dev/Makefile
+
+VERSION=	43
+DISTNAME=	ngspice-${VERSION}
+CATEGORIES=	cad
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
+
+DISTINFO_FILE=	${.CURDIR}/../../cad/ng-spice/distinfo
+
+MAINTAINER=	dmcmahill@NetBSD.org
+HOMEPAGE=	http://ngspice.sourceforge.net/
+LICENSE=	modified-bsd AND gnu-lgpl-v2.1 AND gnu-gpl-v2 AND mpl-2.0
+
+USE_LIBTOOL=	YES
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c c++
+GCC_REQD+=	12
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-debug
+
+CFLAGS.Linux+=		-D_POSIX_C_SOURCE=200809L       # fileno(3)
+CFLAGS.Linux+=		-fopenmp
+# should be _XOPEN_SOURCE, but glibc hides usleep with _POSIX_C_SOURCE.
+CFLAGS.Linux+=		-D_DEFAULT_SOURCE=1             # usleep(3)
+
+.include "../../devel/readline/buildlink3.mk"
