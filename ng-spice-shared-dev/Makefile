@@ -11,6 +11,5 @@ CONFIGURE_ARGS+=	--with-ngshared=YES
 post-install:
 	${RM} -r ${DESTDIR}${PREFIX}/share/ngspice/scripts ${DESTDIR}${PREFIX}/lib/ngspice
 
-
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
