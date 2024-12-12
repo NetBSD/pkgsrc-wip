@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.6 2024/10/15 01:32:59 thorpej Exp $
+
+BLAKE2s (abc-yosys-0.47.tar.gz) = 267c6776c8320697514966a22e0d0cce8330ffd0a477dc583d31739a2489d32c
+SHA512 (abc-yosys-0.47.tar.gz) = 7327efe99523b74034d8bbe6d3add0d25f4a764b15de6c8abe058451463e18fdf87d8388225f50c7335164e185d8b36aa317cf0826297cbe0cfc69fdb8617fd7
+Size (abc-yosys-0.47.tar.gz) = 6264697 bytes
+BLAKE2s (yosys-0.47.tar.gz) = 7371b62b7320d0349bc8b89d8a0a2b46c7deeaf5a2b47a1e008befea67e77c8b
+SHA512 (yosys-0.47.tar.gz) = d45dc8983fd03687f06e13e9938fb5424c9a297110d670e79d69f821f51e60ce0c19901488b62aeea801c4ff2616166c50386b3f3fb9c03fe655bb50f2ac7b0a
+Size (yosys-0.47.tar.gz) = 3020517 bytes
+SHA1 (patch-Makefile) = db77fa7d0274a1f11290e46ee92dfc80b7d88556
+SHA1 (patch-kernel_driver.cc) = 4b0b0ffd2a7e3757bdf87728460e34831f2075aa
