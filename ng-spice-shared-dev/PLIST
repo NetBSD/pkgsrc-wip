@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/ngspice/sharedspice.h
+lib/libngspice.la
+lib/pkgconfig/ngspice.pc
+@pkgdir share/ngspice
