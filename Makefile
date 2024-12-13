@@ -2038,6 +2038,7 @@ SUBDIR+=	libgtop
 SUBDIR+=	libgudev
 SUBDIR+=	libguestfs-appliance
 SUBDIR+=	libgusb
+SUBDIR+=	libgweather4
 SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
 SUBDIR+=	libhttpd

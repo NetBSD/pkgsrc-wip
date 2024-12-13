@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.19 2021/10/26 10:15:21 nia Exp $
+
+BLAKE2s (libgweather-4.4.4.tar.xz) = 0c29da5b64436a8f96bd0a7616545018e669ac1a547b1520db2ac83a2e4ee19c
+SHA512 (libgweather-4.4.4.tar.xz) = 2140c742a89a3816ef0e20d0eac570bbc4af058d1c94982b08819740132e7ca56eb9597b3817385310d19d7f1ab6d478fb665770f99db1eca1c0aab1c073dd2f
+Size (libgweather-4.4.4.tar.xz) = 2843040 bytes
