@@ -2451,7 +2451,6 @@ SUBDIR+=	muscletool
 SUBDIR+=	musl
 SUBDIR+=	musl-fts
 SUBDIR+=	mutter
-SUBDIR+=	mutter-linux
 SUBDIR+=	muttprint
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
