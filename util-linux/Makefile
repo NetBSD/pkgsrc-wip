@@ -29,26 +29,14 @@ MESON_ARGS+=		-Dbuild-fdisks=disabled
 MESON_ARGS+=		-Dbuild-sulogin=disabled
 MESON_ARGS+=		-Dbuild-setterm=disabled
 
-MAKE_ENV+=		DESTDIR=${PREFIX}
-MAKE_ENV+=		ETCDIR=${PREFIX}/share/examples/util-linux
-MAKE_ENV+=		FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
-MAKE_ENV+=		INFO_DIR=/${PKGINFODIR}
-MAKE_ENV+=		MAN_DIR=/${PKGMANDIR}
-
-INFO_FILES=		# PLIST
-
-#CONF_FILES=	${PREFIX}/share/examples/util-linux/fdprm ${PKG_SYSCONFDIR}/fdprm
-
-#PLIST_SRC=		${PKGDIR}/PLIST
-# XXX let maintainer know of your architecture if this breaks
-#PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
+PLIST_SRC=	PLIST
 
 .include "../../devel/meson/build.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+#.include "../../devel/ncurses/buildlink3.mk"
 # zlib used for cramfs
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../security/openpam/buildlink3.mk"
+#.include "../../databases/sqlite3/buildlink3.mk"
+#.include "../../security/openpam/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

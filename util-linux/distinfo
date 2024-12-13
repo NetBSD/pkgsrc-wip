@@ -3,4 +3,3 @@ $NetBSD: distinfo,v 1.4 2005/12/19 19:13:10 jeremy-c-reed Exp $
 BLAKE2s (util-linux-2.40.1.tar.xz) = a5f9d04c8a26567b901634c94afeb16317d4b12ca13253a8f543fdbbe29c4ca2
 SHA512 (util-linux-2.40.1.tar.xz) = 58ec6eb41d4b6bfc544a80e95c71b5f3798ab4d2a9435d3ee9e5edd56f9b3f09bcb154bdd70e002dc018938937e2e946ae731dcda0f86b362fc43423689e41fc
 Size (util-linux-2.40.1.tar.xz) = 8823784 bytes
-SHA1 (patch-meson.build) = 75aae43d84b46307b15ff3c33974717874daf902
