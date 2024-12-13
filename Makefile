@@ -1194,6 +1194,7 @@ SUBDIR+=	gdm2
 SUBDIR+=	gdsreader
 SUBDIR+=	geant
 SUBDIR+=	gecode
+SUBDIR+=	geocode-glib2
 SUBDIR+=	geekcode
 SUBDIR+=	gef
 SUBDIR+=	gemma

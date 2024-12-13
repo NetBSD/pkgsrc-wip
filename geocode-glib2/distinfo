@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:09 nia Exp $
+
+BLAKE2s (geocode-glib-3.26.4.tar.xz) = f528c1bc773a578395d365411e673977eb5cf3582ff99621556dda6b01a02d35
+SHA512 (geocode-glib-3.26.4.tar.xz) = 998c2f02a8d3d34a8b6a4b031da2e7c28df27014bcf58f3374fbc0c829fff6257c2622fd9bf331e05b85fbc761c64554fb77ce2d986e0f8b59b17aa486f9f609
+Size (geocode-glib-3.26.4.tar.xz) = 75352 bytes
