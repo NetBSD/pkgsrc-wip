@@ -1,16 +1,13 @@
 # $NetBSD: Makefile,v 1.12 2024/10/22 11:29:50 thorpej Exp $
 
-# XXX Yosys changed their release tag format in 0.45 to just a bare
-# XXX number, sigh.
-YOSYS_VERSION=	0.47
-YOSYS_TAG=	${YOSYS_VERSION}
-ABC_TAG=	yosys-${YOSYS_VERSION}
-ABC_DISTNAME=	abc-${ABC_TAG}
-DISTNAME=	yosys-${YOSYS_TAG}
-CATEGORIES=	devel
+YOSYS_VERSION=	0.48
+GITHUB_PROJECT=	yosys
+DISTNAME=	yosys
+PKGNAME=	${DISTNAME}-${YOSYS_VERSION}
+CATEGORIES=	devel cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
-GITHUB_TAG=	${YOSYS_TAG}
-EXTRACT_SUFX=	.tar.gz		# needed early
+GITHUB_RELEASE=	v${YOSYS_VERSION}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/YosysHQ/yosys
@@ -27,14 +24,7 @@ GCC_REQD+=		10
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-ABC_DISTFILE=	${ABC_DISTNAME}${EXTRACT_SUFX}
-DISTFILES=	${DEFAULT_DISTFILES}
-
-DISTFILES+=		${ABC_DISTFILE}
-SITES.${ABC_DISTFILE}=	-${MASTER_SITE_GITHUB:=YosysHQ/abc/archive/}${ABC_TAG}${EXTRACT_SUFX}
-
-EXTRACT_DIR.${ABC_DISTFILE}=		${WRKSRC}/abc
-EXTRACT_OPTS_TAR.${ABC_DISTFILE}=	--strip-components=1
+WRKSRC=	${WRKDIR}
 
 .if ${CC_VERSION:Mclang*}
 YOSYS_COMPILER=	clang
@@ -71,6 +61,7 @@ REPLACE_BASH+=		misc/yosys-config.in
 do-configure:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} config-${YOSYS_COMPILER}
 
+.include "../../wip/abc/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/tcl/buildlink3.mk"

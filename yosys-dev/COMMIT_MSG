@@ -1,5 +1,5 @@
-devel/yosys: Update to version 0.47
+devel/yosys: Update to version 0.48
 Update prepared in wip by Mayuresh <mayuresh@acm.org>
 
 See ChangeLog for details:
-https://github.com/YosysHQ/yosys/releases/tag/v0.47
+https://github.com/YosysHQ/yosys/releases/tag/v0.48

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/10/15 01:32:59 thorpej Exp $
+@comment $NetBSD$
 bin/yosys
 bin/yosys-abc
 bin/yosys-config
@@ -20,7 +20,9 @@ share/yosys/anlogic/eagle_bb.v
 share/yosys/anlogic/lutrams.txt
 share/yosys/anlogic/lutrams_map.v
 share/yosys/cells.lib
+share/yosys/choices/han-carlson.v
 share/yosys/choices/kogge-stone.v
+share/yosys/choices/sklansky.v
 share/yosys/cmp2lcu.v
 share/yosys/cmp2lut.v
 share/yosys/cmp2softlogic.v
@@ -76,7 +78,9 @@ share/yosys/gowin/brams.txt
 share/yosys/gowin/brams_map.v
 share/yosys/gowin/cells_map.v
 share/yosys/gowin/cells_sim.v
-share/yosys/gowin/cells_xtra.v
+share/yosys/gowin/cells_xtra_gw1n.v
+share/yosys/gowin/cells_xtra_gw2a.v
+share/yosys/gowin/cells_xtra_gw5a.v
 share/yosys/gowin/lutrams.txt
 share/yosys/gowin/lutrams_map.v
 share/yosys/greenpak4/cells_blackbox.v
