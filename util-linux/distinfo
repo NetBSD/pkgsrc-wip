@@ -1,7 +1,5 @@
 $NetBSD: distinfo,v 1.4 2005/12/19 19:13:10 jeremy-c-reed Exp $
 
-RMD160 (util-linux-2.12r.tar.gz) = 700e25d825886f85c13e9a5102645d286f31e23b
-SHA512 (util-linux-2.12r.tar.gz) = c98a01387cf75481d95ea26ce820d8c2940f5b7118f31aed8eea4949f2b2cf0304c8afc7e23eea624545f9eb2af6f38c8113157e61192b49d13dbac0f0323b77
-Size (util-linux-2.12r.tar.gz) = 1992725 bytes
-SHA1 (patch-aa) = 0ab4228166c1b01c9b1f7d332f57bde1aea06fd2
-SHA1 (patch-ab) = 058439aaa2db18e5bcbebf3522315086d2c4060e
+BLAKE2s (util-linux-2.40.1.tar.xz) = a5f9d04c8a26567b901634c94afeb16317d4b12ca13253a8f543fdbbe29c4ca2
+SHA512 (util-linux-2.40.1.tar.xz) = 58ec6eb41d4b6bfc544a80e95c71b5f3798ab4d2a9435d3ee9e5edd56f9b3f09bcb154bdd70e002dc018938937e2e946ae731dcda0f86b362fc43423689e41fc
+Size (util-linux-2.40.1.tar.xz) = 8823784 bytes
