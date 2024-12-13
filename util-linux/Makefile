@@ -28,8 +28,15 @@ MESON_ARGS+=		-Dbuild-agetty=disabled
 MESON_ARGS+=		-Dbuild-fdisks=disabled
 MESON_ARGS+=		-Dbuild-sulogin=disabled
 MESON_ARGS+=		-Dbuild-setterm=disabled
+MESON_ARGS+=		-Dbuild-python=disabled
+MESON_ARGS+=		-Dbuild-libmount=disabled
+MESON_ARGS+=		-Dbuild-libuuid=disabled
 
 PLIST_SRC=	PLIST
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/getopt
+	${RM} ${DESTDIR}${PREFIX}/man/man1/getopt.1
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
