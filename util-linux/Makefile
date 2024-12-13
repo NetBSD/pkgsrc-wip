@@ -15,8 +15,20 @@ CONFLICTS=	ddate-[0-9]*
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 CHECK_PORTABILITY_SKIP=	tools/config-gen
 
-#USE_TOOLS+=		gmake
-#GNU_CONFIGURE=		YES
+MESON_ARGS+=		-Dbuild-liblastlog2=disabled
+MESON_ARGS+=		-Dbuild-login=disabled
+MESON_ARGS+=		-Dbuild-chfn-chsh=disabled
+MESON_ARGS+=		-Dbuild-su=disabled
+MESON_ARGS+=		-Dbuild-runuser=disabled
+MESON_ARGS+=		-Dbuild-pg=disabled
+MESON_ARGS+=		-Dbuild-more=disabled
+MESON_ARGS+=		-Dbuild-ul=disabled
+MESON_ARGS+=		-Dbuild-irqtop=disabled
+MESON_ARGS+=		-Dbuild-agetty=disabled
+MESON_ARGS+=		-Dbuild-fdisks=disabled
+MESON_ARGS+=		-Dbuild-sulogin=disabled
+MESON_ARGS+=		-Dbuild-setterm=disabled
+
 MAKE_ENV+=		DESTDIR=${PREFIX}
 MAKE_ENV+=		ETCDIR=${PREFIX}/share/examples/util-linux
 MAKE_ENV+=		FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
@@ -25,11 +37,11 @@ MAKE_ENV+=		MAN_DIR=/${PKGMANDIR}
 
 INFO_FILES=		# PLIST
 
-CONF_FILES=	${PREFIX}/share/examples/util-linux/fdprm ${PKG_SYSCONFDIR}/fdprm
+#CONF_FILES=	${PREFIX}/share/examples/util-linux/fdprm ${PKG_SYSCONFDIR}/fdprm
 
-PLIST_SRC=		${PKGDIR}/PLIST
+#PLIST_SRC=		${PKGDIR}/PLIST
 # XXX let maintainer know of your architecture if this breaks
-PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
+#PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
@@ -38,4 +50,5 @@ PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
 # zlib used for cramfs
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../security/openpam/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
