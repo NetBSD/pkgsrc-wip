@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.11 2021/10/26 11:19:40 nia Exp $
+
+BLAKE2s (gsettings-desktop-schemas-47.1.tar.xz) = 578c0271f630174c2855a0d412d64fcf9d2f2eb9fade0af7f5bcfee611df9f36
+SHA512 (gsettings-desktop-schemas-47.1.tar.xz) = 8c4575958f6dd351e4a1a60d61f9080933979942b2fcef5c1211ab508b99a91325c857a9ac8d92e372968fad4736d55aa7b746f185aae9ecd1f691ced9ff53a0
+Size (gsettings-desktop-schemas-47.1.tar.xz) = 806272 bytes
