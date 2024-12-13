@@ -2151,6 +2151,7 @@ SUBDIR+=	libvips
 SUBDIR+=	libvirt
 SUBDIR+=	libvirt-glib
 SUBDIR+=	libvpx-git
+SUBDIR+=	libwacom
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
