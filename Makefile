@@ -1289,6 +1289,7 @@ SUBDIR+=	gnome-common
 SUBDIR+=	gnome-core
 SUBDIR+=	gnome-desktop2
 SUBDIR+=	gnome-desktop3
+SUBDIR+=	gnome-desktop4
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-maps
