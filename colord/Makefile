@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	colord-1.4.5
+DISTNAME=	colord-1.4.7
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -36,7 +36,7 @@ TOOL_DEPENDS+=	docbook-xsl-ns-[0-9]*:../../wip/docbook-xsl-ns
 
 .if ${OPSYS} == "Linux"
 .include "../../wip/libgusb/buildlink3.mk"
-.include "../../wip/udev/buildlink3.mk"
+#.include "../../wip/udev/buildlink3.mk"
 .include "../../wip/libgudev/buildlink3.mk"
 .endif
 .include "../../graphics/lcms2/buildlink3.mk"
