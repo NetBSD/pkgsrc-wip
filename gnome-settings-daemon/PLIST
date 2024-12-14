@@ -1,7 +1,8 @@
 @comment $NetBSD$
-include/gnome-settings-daemon-40/gnome-settings-daemon/gsd-enums.h
-lib/gnome-settings-daemon-40/libgsd.so
+include/gnome-settings-daemon-47/gnome-settings-daemon/gsd-enums.h
+lib/gnome-settings-daemon-47/libgsd.so
 lib/pkgconfig/gnome-settings-daemon.pc
+lib/udev/rules.d/61-gnome-settings-daemon-rfkill.rules
 libexec/gsd-a11y-settings
 libexec/gsd-backlight-helper
 libexec/gsd-color
@@ -12,10 +13,13 @@ libexec/gsd-media-keys
 libexec/gsd-power
 libexec/gsd-print-notifications
 libexec/gsd-printer
+libexec/gsd-rfkill
 libexec/gsd-screensaver-proxy
 libexec/gsd-sharing
 libexec/gsd-sound
 libexec/gsd-usb-protection
+libexec/gsd-wacom
+libexec/gsd-wacom-oled-helper
 libexec/gsd-xsettings
 share/GConf/gsettings/gnome-settings-daemon.convert
 share/examples/xdg/Xwayland-session.d/00-xrdb
@@ -47,6 +51,7 @@ share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml
 share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.sharing.gschema.xml
 share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.xsettings.gschema.xml
 share/gnome-settings-daemon/datetime/backward
+share/locale/ab/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/af/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/am/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ar/LC_MESSAGES/gnome-settings-daemon.mo
@@ -94,6 +99,7 @@ share/locale/is/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/it/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ja/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ka/LC_MESSAGES/gnome-settings-daemon.mo
+share/locale/kab/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/kk/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/km/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/kn/LC_MESSAGES/gnome-settings-daemon.mo
@@ -145,3 +151,5 @@ share/locale/zh_HK/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 share/polkit-1/actions/org.gnome.settings-daemon.plugins.power.policy
+share/polkit-1/actions/org.gnome.settings-daemon.plugins.wacom.policy
+@pkgdir etc
