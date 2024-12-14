@@ -2065,6 +2065,7 @@ SUBDIR+=	libmpg123
 SUBDIR+=	libmpq
 SUBDIR+=	libmusclecard
 SUBDIR+=	libncl
+SUBDIR+=	libndp
 SUBDIR+=	libnest2d-ultimaker
 SUBDIR+=	libnestedsums
 SUBDIR+=	libneural

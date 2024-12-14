@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/ndptool
+include/ndp.h
+lib/libndp.la
+lib/pkgconfig/libndp.pc
+man/man8/ndptool.8
