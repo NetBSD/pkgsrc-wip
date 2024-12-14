@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2024/08/14 08:58:42 adam Exp $
+
+BLAKE2s (gcr-4.3.0.tar.xz) = 74c7749eb6d80047a9fa02eb5e71ecad73e42b0e485d2a2b8c15b27161f2d228
+SHA512 (gcr-4.3.0.tar.xz) = 3f252de55e07d47a49c03b714e323ceb00d82e010fe1bb606073e3188bf8bef84359a322ed6fe843620fa5d108e825dd7e9a60136c8a0e802b8f2178aa87b164
+Size (gcr-4.3.0.tar.xz) = 726488 bytes
+SHA1 (patch-gcr_test-secure-memory.c) = e8002f64467d001e06c8af28f16b0c1ffe7211ad
