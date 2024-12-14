@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.94 2022/01/03 08:18:47 cirnatdan Exp $
+
+BLAKE2s (evolution-data-server-3.54.2.tar.xz) = 7572bde2fd97d3b348b26c56c67d00aec647f3cdc2c9eb9ab8e6f0c822bfc96d
+SHA512 (evolution-data-server-3.54.2.tar.xz) = 798770614ff734adde29b565283948f083918f8bec01f805824868d37a7132d948c261aa0082ede7d39d83049879d47fdcc22418837372da2f05e9b692c5a653
+Size (evolution-data-server-3.54.2.tar.xz) = 5098848 bytes
+SHA1 (patch-cmake_modules_FindKRB5.cmake) = 1e85c35bd1212c4efdad561c0067ae8cbe7fd825
