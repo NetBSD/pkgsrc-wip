@@ -39,10 +39,8 @@ MESON_ARGS+=		-Dgudev=false
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gnome-settings-daemon.pc
 
-PYTHON_FOR_BUILD_ONLY=	tool
-
+INSTALLATION_DIRS+=	share/examples
 post-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/share/examples
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg ${DESTDIR}${PREFIX}/share/examples/
 
 CONF_FILES+=	${PREFIX}/share/examples/xdg/Xwayland-session.d/00-xrdb \
