@@ -30,6 +30,7 @@ SUBDIR+=	LuaJIT-git
 SUBDIR+=	LuaJIT2
 SUBDIR+=	LuaJIT21
 SUBDIR+=	MoleInvasion
+SUBDIR+=	NetworkManager
 SUBDIR+=	OpenGLUT
 SUBDIR+=	OpenJK-git
 SUBDIR+=	OpenLara
