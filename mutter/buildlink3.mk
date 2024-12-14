@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	mutter
 .if !defined(MUTTER_BUILDLINK3_MK)
 MUTTER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mutter+=	mutter>=40.0
+BUILDLINK_API_DEPENDS.mutter+=	mutter>=44.0
 BUILDLINK_PKGSRCDIR.mutter?=	../../wip/mutter
 
 .include "../../devel/gobject-introspection/buildlink3.mk"

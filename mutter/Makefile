@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2020/11/22 00:05:09 gutteridge Exp $
 
-DISTNAME=	mutter-43.rc
+DISTNAME=	mutter-44.9
 CATEGORIES=	wm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -29,6 +29,7 @@ MESON_ARGS+=		-Dlibwacom=false
 MESON_ARGS+=		-Dremote_desktop=false
 MESON_ARGS+=		-Dprofiler=false
 MESON_ARGS+=		-Dwayland=false
+MESON_ARGS+=		-Dxwayland=false
 MESON_ARGS+=		-Dtests=false #tests require Wayland support
 MESON_ARGS+=		-Dsm=true
 MESON_ARGS+=		-Dverbose=true
