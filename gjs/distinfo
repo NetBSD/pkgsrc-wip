@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.10 2022/03/10 20:53:35 nia Exp $
+
+BLAKE2s (gjs-1.82.1.tar.xz) = cc73b6a97413d4b1c0ae8b17a3692262fdd7c3dab821515d7157dae23aeb19fe
+SHA512 (gjs-1.82.1.tar.xz) = 2e4e1ceee784d252cb0f6a5df9c9dd9a486112af9973e184d785cb4bcb06a5844e16ce51b8a46021220f2b6ead24186eb98cc15b836492f71922e8a80669b16f
+Size (gjs-1.82.1.tar.xz) = 728920 bytes
