@@ -1253,6 +1253,7 @@ SUBDIR+=	gitless
 SUBDIR+=	gitsome
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
+SUBDIR+=	gjs
 SUBDIR+=	gksu
 SUBDIR+=	gleam-stdlib
 SUBDIR+=	glib-java
