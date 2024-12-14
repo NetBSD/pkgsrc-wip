@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.8 2024/05/09 20:27:46 wiz Exp $
+
+BLAKE2s (gnome-shell-44.0.tar.xz) = c17f183ac27e5078c478d2d52c679bc225267c840813967127f0ff3d99aecc91
+SHA512 (gnome-shell-44.0.tar.xz) = 5e19e3e3b06be6b06699f49501dee85fd21e5f4f394902732c505c24baa16a719848e31034d98718deb06cb004d3e8daf886a086412c2b67614eafecd1676bde
+Size (gnome-shell-44.0.tar.xz) = 1992764 bytes
+SHA1 (patch-config.h.meson) = 204829c331612de97f5c8d60b7788c96d60cc010
+SHA1 (patch-js_dbusServices_screencast_screencastService.js) = adc9cc45f496c98e0ff5241701dda47ff9df2797
+SHA1 (patch-src_main.c) = d6d109ff7aee58a437aa9389403366e4be241d40
+SHA1 (patch-src_shell-util.c) = 92fbc695162f7fe735b92eb344215cf0c69e65c6

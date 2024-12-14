@@ -1300,6 +1300,7 @@ SUBDIR+=	gnome-maps
 SUBDIR+=	gnome-mount
 SUBDIR+=	gnome-paint
 SUBDIR+=	gnome-settings-daemon
+SUBDIR+=	gnome-shell
 SUBDIR+=	gnome-todo
 SUBDIR+=	gnome-tweaks
 SUBDIR+=	gnome40
