@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2020/11/22 00:05:09 gutteridge Exp $
 
-DISTNAME=	mutter-40.1
+DISTNAME=	mutter-43.rc
 CATEGORIES=	wm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +32,7 @@ MESON_ARGS+=		-Dwayland=false
 MESON_ARGS+=		-Dtests=false #tests require Wayland support
 MESON_ARGS+=		-Dsm=true
 MESON_ARGS+=		-Dverbose=true
+MESON_ARGS+=		-Dsystemd=false
 
 .if ${OPSYS} == "NetBSD"
 MESON_ARGS+=		-Dopengl_libname=libGL.so
@@ -65,13 +66,17 @@ post-install:
 REQD_FILES+=		${EGDIR}/X11/xinit/xinitrc.d/90-mutter \
 			${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-mutter
 
+.if ${OPSYS} == "Linux"
+.include "../../wip/mk/libseccomp.buildlink3.mk"
+.endif
+
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.glib2+=				glib2>=2.67.3
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
-.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
+.include "../../wip/gnome-settings-daemon/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=       gsettings-desktop-schemas>=40.0
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
@@ -79,7 +84,9 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=       gsettings-desktop-schema
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../x11/gnome-desktop3/buildlink3.mk"
+.include "../../wip/gnome-desktop4/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../wip/colord/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2020/11/10 01:56:20 nia Exp $
 
-RMD160 (mutter-40.1.tar.xz) = a99888904705fb184c5f7cf5ee5b6accdfff9a30
-SHA512 (mutter-40.1.tar.xz) = c2b6603e1d55492916f742f9cb8e15588cb30e78c37de987404ac40d3befa65e417184305ad87fdffc41052a094790f9e324a1ea7482e5de4f0439dceefed118
-Size (mutter-40.1.tar.xz) = 2680816 bytes
+BLAKE2s (mutter-43.rc.tar.xz) = 0bae273d38fcc82df74b3aef5ecac6d8b192e1cc9b343e5538c282cebd370acb
+SHA512 (mutter-43.rc.tar.xz) = b1f9971a3d62c4dc1cb3ddd67f6e2a3cdca04a4897400424debdf9ba270fe31c0c897c2932460e55dd22d7c2f1df744e6c6f69f8888f817ed23a64fe804b1bba
+Size (mutter-43.rc.tar.xz) = 2772164 bytes
 SHA1 (patch-clutter_clutter_clutter-stage-view.c) = abba7a702a612457ba56acf1ecfd9396d28d1a2c
 SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.c) = 75547ffc2560860b6101a19165a3659bf799104e
 SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.h) = 311de2a52624c081bd5baf4a6f878a6f1ebd4015
