@@ -1855,6 +1855,7 @@ SUBDIR+=	kactivitymanagerd
 SUBDIR+=	kaf
 SUBDIR+=	kafkacat
 SUBDIR+=	kahakai
+SUBDIR+=	kakoune-lsp
 SUBDIR+=	kallisto
 SUBDIR+=	kamailio
 SUBDIR+=	kannel-gateway
