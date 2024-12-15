@@ -1,10 +1,11 @@
 # $NetBSD: Makefile,v 1.5 2024/12/04 18:51:39 bsiegert Exp $
 
+GO124_VERSION=	1.24rc1
 .include "../../lang/go/version.mk"
-GO_BOOTSTRAP_REQD=	120
+GO_BOOTSTRAP_REQD=	122
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	123
+GOVERSSUFFIX=	124
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
@@ -26,8 +27,8 @@ BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 INSTALLATION_DIRS=	bin go${GOVERSSUFFIX}
 
 REPLACE_BASH+=	lib/time/update.bash
-REPLACE_BASH+=	misc/wasm/go_js_wasm_exec
-REPLACE_BASH+=	misc/wasm/go_wasip1_wasm_exec
+REPLACE_BASH+=	lib/wasm/go_js_wasm_exec
+REPLACE_BASH+=	lib/wasm/go_wasip1_wasm_exec
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
