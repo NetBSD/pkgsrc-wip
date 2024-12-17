@@ -12,6 +12,8 @@ LICENSE=	2-clause-bsd
 
 INSTALL_TARGET=	install-strip
 
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+
 pre-build:
 	cd ${WRKSRC} && ${MAKE} LOCALBASE=${LOCALBASE} depend
 
