@@ -10,7 +10,7 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/mutter
 COMMENT=	GNOME window manager
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		msgfmt pkg-config gdbus-codegen
+USE_TOOLS+=		msgfmt pkg-config gdbus-codegen fix-rpath
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 .include "../../graphics/MesaLib/features.mk"
@@ -40,14 +40,14 @@ MESON_ARGS+=		-Dopengl_libname=libGL.so
 TOOLS_PLATFORM.msgfmt=
 .endif
 
-PKGCONFIG_OVERRIDE_STAGE=	pre-install
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-8.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-pango-8.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-8.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-x11-8.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/libmutter-8.pc
+#PKGCONFIG_OVERRIDE_STAGE=	pre-install
+#PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-8.pc
+#PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-pango-8.pc
+#PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-8.pc
+#PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-x11-8.pc
+#PKGCONFIG_OVERRIDE+=		output/meson-private/libmutter-8.pc
 
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-8
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-12
 
 post-extract:
 	${CP} ${FILESDIR}/90-mutter ${WRKSRC}/data
