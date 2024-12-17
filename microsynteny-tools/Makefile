@@ -18,6 +18,8 @@ DEPENDS+=	biolibc-tools>0:../../wip/biolibc-tools
 
 REPLACE_PYTHON=	Scripts/*.py
 
+MAKE_ENV+=      MANDIR=${PREFIX}/${PKGMANDIR}
+
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
