@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-BLAKE2s (cmake-19.1.5.src.tar.xz) = e730918bd71022369d4f9a1848c194acebf6b6296cf6cadc4e13cb71823fb63e
-SHA512 (cmake-19.1.5.src.tar.xz) = 3c59125d8b3aed042ed8659e372bf04c0b0255d09dd397ff11a32a771e87a2670c8bf32aed9c243b8b056c175d08f96dc3f8379ac449f1ec666f210da1da63e6
-Size (cmake-19.1.5.src.tar.xz) = 9300 bytes
-BLAKE2s (flang-19.1.5.src.tar.xz) = 9cc4879f04648765b037b250db3aa68a3211dae8a588fe3ec2a6b99acd0f9f7b
-SHA512 (flang-19.1.5.src.tar.xz) = bc5cd97a7ec25b699e7a7251ae97a87923850bcc876c0a90257fada5bcd1665c74e852d2bdb27c83f6c8c194f373d6642d2f7d8b50df551d7546c4b3c78bfdce
-Size (flang-19.1.5.src.tar.xz) = 3347584 bytes
-BLAKE2s (runtimes-19.1.5.src.tar.xz) = 86c8ce0cc4b07292fb1c02074c0e27bac5acf78359a395acbe8df1216a4efe4a
-SHA512 (runtimes-19.1.5.src.tar.xz) = 0810ae94f21a1dceb6520ff8b1262af1793332de513a6a45356090ff501de4dd4c8701805a2178de2f66bf0db85c8c0e2a284460f6167b052300c05aed88e6af
-Size (runtimes-19.1.5.src.tar.xz) = 7228 bytes
+BLAKE2s (cmake-19.1.6.src.tar.xz) = 4cafdb934a688c3f7ebafc8aac058a49c19f0491e3b324c3b6dd82c6fbf7a227
+SHA512 (cmake-19.1.6.src.tar.xz) = 08fd5a7581d0b91098d1c9c30d9c31517f27b0a259ee2838fa71f79a0bd81140c33bc9544e9f557aee412361b8b994ece2e46a1c066528e7be7662a114f773b2
+Size (cmake-19.1.6.src.tar.xz) = 9300 bytes
+BLAKE2s (flang-19.1.6.src.tar.xz) = c93672a0b1289b2a574432b4dacad3b4da8ef192a16496134302956d5b0171b1
+SHA512 (flang-19.1.6.src.tar.xz) = ad32d8c86d41a48e947e6f4590f7be0d1f6618863a8639c27fba63852749fcad0d2b6cd63797f50e45a8ac061c1cc903656ee8ffaa706e8b5d13515a41f4334d
+Size (flang-19.1.6.src.tar.xz) = 3347616 bytes
+BLAKE2s (runtimes-19.1.6.src.tar.xz) = 042953421a37719daf315f772f5f4a89a50c4eb05a9602f93126ae587dbd0662
+SHA512 (runtimes-19.1.6.src.tar.xz) = f9e022285d30941a71f1fa9457d57530100e3332acbfcda2f01eee7ba2e164d810c21c62fcee5185269bf6b5f108f1f549650ec01e8ac81435e8c93642426063
+Size (runtimes-19.1.6.src.tar.xz) = 7228 bytes
