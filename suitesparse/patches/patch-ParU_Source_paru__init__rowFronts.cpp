@@ -1,15 +1,23 @@
 $NetBSD$
 
-# Silence compiler error on Alma8: Sym is predetermined 'shared'
+# Hack for Alma (RHEL) 8
 
---- ParU/Source/paru_init_rowFronts.cpp.orig	2024-12-18 14:04:59.003674095 +0000
+--- ParU/Source/paru_init_rowFronts.cpp.orig	2024-12-18 21:05:00.880749971 +0000
 +++ ParU/Source/paru_init_rowFronts.cpp
-@@ -439,7 +439,7 @@ ParU_Info paru_init_rowFronts
-     // copying Diag_map
-     if (Diag_map)
-     {
--        #pragma omp taskloop default(none) shared(Sym, Diag_map, inv_Diag_map) \
-+        #pragma omp taskloop default(none) shared(Diag_map, inv_Diag_map) \
-         grainsize(512)
-         for (int64_t i = 0; i < Sym->n; i++)
-         {
+@@ -34,7 +34,15 @@ ParU_Info paru_init_rowFronts
+     ParU_Numeric *Num_handle,
+     // inputs, not modified:
+     cholmod_sparse *A,
+-    const ParU_Symbolic Sym     // symbolic analysis
++    // gcc on Alma 8 actually errors out on line 443:
++    // error: "Sym" is predetermined "shared" for "shared"
++    // It's dumb to error out when the programmer just restates a default,
++    // but some extant versions of gcc do this, while others (and clang)
++    // error out if Sym is not included in the shared list.  Removing
++    // default(none) is risky, as behavior may differ with different
++    // compilers.
++    // const ParU_Symbolic Sym     // symbolic analysis
++    ParU_Symbolic Sym     // symbolic analysis
+ )
+ {
+ 
