@@ -1,10 +1,10 @@
 $NetBSD$
 
-# Hack for Alma (RHEL) 8
+# Fix build on Alma (RHEL) 8
 
---- ParU/Source/paru_init_rowFronts.cpp.orig	2024-12-18 21:05:00.880749971 +0000
+--- ParU/Source/paru_init_rowFronts.cpp.orig	2024-08-24 17:13:32.000000000 +0000
 +++ ParU/Source/paru_init_rowFronts.cpp
-@@ -34,7 +34,15 @@ ParU_Info paru_init_rowFronts
+@@ -34,7 +34,17 @@ ParU_Info paru_init_rowFronts
      ParU_Numeric *Num_handle,
      // inputs, not modified:
      cholmod_sparse *A,
@@ -15,7 +15,9 @@ $NetBSD$
 +    // but some extant versions of gcc do this, while others (and clang)
 +    // error out if Sym is not included in the shared list.  Removing
 +    // default(none) is risky, as behavior may differ with different
-+    // compilers.
++    // compilers.  Since the code is confirmed to build on most platforms
++    // with const Sym, we know that nothing is trying to modify Sym after,
++    // so removing the const should not cause any problems.
 +    // const ParU_Symbolic Sym     // symbolic analysis
 +    ParU_Symbolic Sym     // symbolic analysis
  )
