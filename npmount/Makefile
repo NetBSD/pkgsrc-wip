@@ -18,6 +18,8 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 SUBST_FILES.prefix=	npmount.c
 
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
+
 SPECIAL_PERMS+=		bin/npmount ${SETUID_ROOT_PERMS}
 INSTALLATION_DIRS=	bin
 
