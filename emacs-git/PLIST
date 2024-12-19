@@ -4109,6 +4109,8 @@ share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
 share/emacs/${PKGVERSION}/lisp/tree-widget.elc
 share/emacs/${PKGVERSION}/lisp/treesit.el.gz
 share/emacs/${PKGVERSION}/lisp/treesit.elc
+share/emacs/${PKGVERSION}/lisp/tty-tip.el.gz
+share/emacs/${PKGVERSION}/lisp/tty-tip.elc
 share/emacs/${PKGVERSION}/lisp/tutorial.el.gz
 share/emacs/${PKGVERSION}/lisp/tutorial.elc
 share/emacs/${PKGVERSION}/lisp/type-break.el.gz
