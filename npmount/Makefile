@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd
 EGDIR=		${PREFIX}/share/examples/npmount
 CONF_FILES=	${EGDIR}/npmount.conf.sample ${PREFIX}/etc/npmount.conf
 
+LDFLAGS.SunOS+=	-lsocket -lresolv -lnsl
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
