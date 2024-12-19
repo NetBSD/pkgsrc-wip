@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	Set of packages for sparse matrices calculation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-USE_LANGUAGES=		c c++ fortran8
+USE_LANGUAGES=	c c++ fortran8
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
