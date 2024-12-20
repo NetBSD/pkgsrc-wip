@@ -1,5 +1,12 @@
 net/unison: Update to 2.53.8
 
-So far, changes are:
+Packaging changes:
+
+  - drop gmake usage in pkgsrc makefile
+  - enable lablgtk (because it builds now)
+  - hard force off BSD fsmonitor, pending upstream fix
+
+Upstream NEWS
 
   - minor build system improvements
+  - upstream Makefile rototill, so that it works with BSD make

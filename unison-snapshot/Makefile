@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.166 2024/11/23 13:59:40 wiz Exp $
 
 # master after 2.53.7
-DISTNAME=	unison-2.53.7.50
+DISTNAME=	unison-2.53.7.51
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	d08a5c35e5a9a2cf9729fff56af0313999aa0c06
+GITHUB_TAG=	8db0681d52140512f6154cac01596b276415ad13
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
@@ -13,7 +13,8 @@ HOMEPAGE=	https://github.com/bcpierce00/unison
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake bash
+USE_TOOLS+=	bash
+# \todo Explain
 MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
@@ -21,6 +22,9 @@ MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../lang/ocaml/ocaml.mk"
 
+# Unison will use ocampopt if possible, and otherwise ocamlc, but
+# passing NATIVE lets pkgsrc build byte code on a native platform,
+# should that be desired.
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 MAKE_FLAGS+=	NATIVE=true
 .else
@@ -34,6 +38,7 @@ MAKE_FLAGS+=	NATIVE=false
 
 # \todo
 #   add fsmonitor option, needing python and libinotify, or forcing it off
+#   for now, it is statically forced off, pending upstream fix
 
 # Unison does not install non-man docs
 INSTALLATION_DIRS+=	share/doc/unison

@@ -2,8 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk
-# ocaml-lablgtk3 is broken
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	lablgtk
 
 .include "../../mk/bsd.options.mk"
 
