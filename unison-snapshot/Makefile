@@ -22,7 +22,7 @@ MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../lang/ocaml/ocaml.mk"
 
-# Unison will use ocampopt if possible, and otherwise ocamlc, but
+# Unison will use ocamlopt if possible, and otherwise ocamlc, but
 # passing NATIVE lets pkgsrc build byte code on a native platform,
 # should that be desired.
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
