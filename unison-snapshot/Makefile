@@ -1,11 +1,12 @@
 # $NetBSD: Makefile,v 1.166 2024/11/23 13:59:40 wiz Exp $
 
-# master after 2.53.7
-DISTNAME=	unison-2.53.7.51
+# master after 2.53.7.
+# This is the fix-linotify branch for now.
+DISTNAME=	unison-2.53.7.51.1
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	8db0681d52140512f6154cac01596b276415ad13
+GITHUB_TAG=	865862b3de4013ec2c7952ad218091201c5bce3f
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
@@ -13,12 +14,18 @@ HOMEPAGE=	https://github.com/bcpierce00/unison
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash pkg-config
 # \todo Explain
 MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	HOME=${WRKDIR:Q}
+
+# Upstream installs this if unison-fsmonitor is not built, but it's
+# deprecated, and that makes PLIST handling harder, so just get rid of it.
+# (Upstream probably will soon.)
+post-extract:
+	cd ${WRKSRC} && rm -f src/fsmonitor.py
 
 .include "../../lang/ocaml/ocaml.mk"
 
@@ -36,10 +43,6 @@ MAKE_FLAGS+=	NATIVE=false
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-# \todo
-#   add fsmonitor option, needing python and libinotify, or forcing it off
-#   for now, it is statically forced off, pending upstream fix
-
 # Unison does not install non-man docs
 INSTALLATION_DIRS+=	share/doc/unison
 
@@ -48,8 +51,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/CONTRIBUTING.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/INSTALL.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/share/doc/unison
-	# \todo See fsmonitor above.
-	${RM} ${DESTDIR}${PREFIX}/bin/fsmonitor.py
 
 TEST_TARGET=		test
 

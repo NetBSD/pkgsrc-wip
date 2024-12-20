@@ -1,5 +1,6 @@
 @comment $NetBSD: PLIST,v 1.7 2022/05/08 15:02:33 gdt Exp $
 bin/unison
+${PLIST.monitor}bin/unison-fsmonitor
 ${PLIST.gtk3}bin/unison-gui
 man/man1/unison.1
 share/doc/unison/CONTRIBUTING.md
