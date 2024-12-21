@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (mpdecimal-2.5.1.tar.gz) = 823e2701ce0bc19550c7f58819fd9b067fa9154fd0f83c3518c3b8a38f7f27e2
-SHA512 (mpdecimal-2.5.1.tar.gz) = 710cb5cb71dbcf3e170ca15869c148df0547b848400c6b6dd70c67d9961dbe1190af8fb4d1623bfb0ca2afe44f369a42e311ab5225ed89d4031cb49a3bd70f30
-Size (mpdecimal-2.5.1.tar.gz) = 2584021 bytes
+BLAKE2s (mpdecimal-4.0.0.tar.gz) = 02a10248bfe5df47a25edde34604c7b26c8e51429e57992cd0e459c605591d6b
+SHA512 (mpdecimal-4.0.0.tar.gz) = 7610ac53ac79f7a8a33fa7a3e61515810444ec73ebca859df7a9ddc18e96b990c99323172810c9cc7f6d6e1502c0be308cd443d6c2d5d0c871648e4842e05d59
+Size (mpdecimal-4.0.0.tar.gz) = 315325 bytes
