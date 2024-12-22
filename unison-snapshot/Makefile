@@ -2,11 +2,11 @@
 
 # master after 2.53.7.
 # This is the fix-linotify branch for now.
-DISTNAME=	unison-2.53.7.51.1
+DISTNAME=	unison-2.53.7.52
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	865862b3de4013ec2c7952ad218091201c5bce3f
+GITHUB_TAG=	3b8d3d45129de2a8ce590040004f15fb747a73e8
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
@@ -20,12 +20,6 @@ MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	HOME=${WRKDIR:Q}
-
-# Upstream installs this if unison-fsmonitor is not built, but it's
-# deprecated, and that makes PLIST handling harder, so just get rid of it.
-# (Upstream probably will soon.)
-post-extract:
-	cd ${WRKSRC} && rm -f src/fsmonitor.py
 
 .include "../../lang/ocaml/ocaml.mk"
 
