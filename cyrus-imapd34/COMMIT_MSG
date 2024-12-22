@@ -1,0 +1,14 @@
+mail/cyrus-imapd34: Add Cyrus imapd version 3.4.6
+
+IMAP (Internet Message Access Protocol) is an Internet standards-track
+protocol for accessing messages (mail, bboards, news, etc). The Cyrus
+IMAP server differs from other IMAP server implementations in that it
+is generally intended to be run on "sealed" servers, where normal users
+are not permitted to log in. The mailbox database is stored in parts of
+the filesystem that are private to the Cyrus IMAP system. All user
+access to mail is through the IMAP, POP3, or KPOP protocols.
+
+Version 3.4.x of the Cyrus IMAP server is a useful transition version
+from 2.4.x to higher versions, since this is the latest version that
+can upgrade in-place from Cyrus IMAP 2.4. Once upgraded to 3.4, you can
+then consider upgrading to later versions.

@@ -49,7 +49,7 @@ CONFIGURE_ENV+=	COMPILE_ET=/usr/bin/compile_et
 CONFIGURE_ARGS+=	--with-com-err=yes
 .  endif
 .endif
-.if defined(CONFIGURE_ENV) && !empty(CONFIGURE_ENV:MCOMPILE_ET=*)
+.if !empty(CONFIGURE_ENV:MCOMPILE_ET=*)
 post-configure:		generate-compile-et
 .endif
 
