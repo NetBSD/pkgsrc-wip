@@ -154,6 +154,7 @@ Suggested package updates
 	o wkhtmltopdf-0.12.4
 	o wlroots-0.18
 	o xaralx-bin-0.7.1692
+	o xdg-desktop-portal-1.19.1
 	o xf86-input-libinput-1.5.0
 	o xf86-input-synaptics-1.9.2
 	o xf86-video-geode-2.11.21
