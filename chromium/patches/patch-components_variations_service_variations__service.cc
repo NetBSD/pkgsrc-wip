@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/variations/service/variations_service.cc.orig	2024-12-03 23:30:18.436628800 +0000
+--- components/variations/service/variations_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/variations/service/variations_service.cc
 @@ -102,7 +102,7 @@ std::string GetPlatformString() {
    return "android";

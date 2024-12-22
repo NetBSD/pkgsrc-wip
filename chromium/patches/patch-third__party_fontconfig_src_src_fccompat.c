@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/fontconfig/src/src/fccompat.c.orig	2024-12-03 23:31:07.511016400 +0000
+--- third_party/fontconfig/src/src/fccompat.c.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/fontconfig/src/src/fccompat.c
 @@ -184,7 +184,9 @@ FcRandom(void)
  {

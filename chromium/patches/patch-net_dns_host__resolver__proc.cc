@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/host_resolver_proc.cc.orig	2024-12-03 23:30:24.430164800 +0000
+--- net/dns/host_resolver_proc.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ net/dns/host_resolver_proc.cc
 @@ -15,10 +15,6 @@
  #include "net/base/net_errors.h"

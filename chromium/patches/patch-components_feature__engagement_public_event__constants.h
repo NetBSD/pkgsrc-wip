@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/event_constants.h.orig	2024-12-03 23:30:15.706384700 +0000
+--- components/feature_engagement/public/event_constants.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/feature_engagement/public/event_constants.h
 @@ -14,7 +14,7 @@ namespace events {
  

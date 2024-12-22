@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/gpu_pre_sandbox_hook_linux.h.orig	2024-12-03 23:30:19.242700800 +0000
+--- content/common/gpu_pre_sandbox_hook_linux.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/common/gpu_pre_sandbox_hook_linux.h
 @@ -5,8 +5,13 @@
  #ifndef CONTENT_COMMON_GPU_PRE_SANDBOX_HOOK_LINUX_H_

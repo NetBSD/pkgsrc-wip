@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libsync/src/include/sync/sync.h.orig	2024-12-03 23:31:34.205846500 +0000
+--- third_party/libsync/src/include/sync/sync.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/libsync/src/include/sync/sync.h
 @@ -22,7 +22,9 @@
  #include <sys/cdefs.h>

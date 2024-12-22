@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/client/BUILD.gn.orig	2024-12-03 23:30:46.699156000 +0000
+--- third_party/crashpad/crashpad/client/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/crashpad/crashpad/client/BUILD.gn
 @@ -137,6 +137,13 @@ static_library("common") {
    if (crashpad_is_win) {

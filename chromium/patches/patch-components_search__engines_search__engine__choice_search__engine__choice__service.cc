@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-12-03 23:30:17.186517000 +0000
+--- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/search_engines/search_engine_choice/search_engine_choice_service.cc
 @@ -613,7 +613,7 @@ void SearchEngineChoiceService::Register
  

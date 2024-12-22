@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/corewm/tooltip_aura.cc.orig	2024-12-03 23:30:52.035633000 +0000
+--- ui/views/corewm/tooltip_aura.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/views/corewm/tooltip_aura.cc
 @@ -37,7 +37,7 @@ namespace {
  bool CanUseTranslucentTooltipWidget() {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/event_switches.h.orig	2024-12-03 23:30:51.577592100 +0000
+--- ui/events/event_switches.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/events/event_switches.h
 @@ -13,7 +13,7 @@ namespace switches {
  EVENTS_BASE_EXPORT extern const char kCompensateForUnstablePinchZoom[];

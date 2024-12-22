@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/user_agent.cc.orig	2024-12-03 23:30:19.252701800 +0000
+--- content/common/user_agent.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/common/user_agent.cc
 @@ -45,7 +45,7 @@ std::string GetUserAgentPlatform() {
    return "";

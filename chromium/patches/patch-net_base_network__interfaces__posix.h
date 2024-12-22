@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_interfaces_posix.h.orig	2024-12-03 23:30:24.162140800 +0000
+--- net/base/network_interfaces_posix.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ net/base/network_interfaces_posix.h
 @@ -8,6 +8,8 @@
  // This file provides some basic functionality shared between

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/cdm_registration.cc.orig	2024-12-03 23:30:12.261076500 +0000
+--- chrome/common/media/cdm_registration.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/common/media/cdm_registration.cc
 @@ -33,7 +33,7 @@
  #if BUILDFLAG(ENABLE_WIDEVINE)

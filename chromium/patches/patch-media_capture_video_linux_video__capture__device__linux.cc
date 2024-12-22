@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/video_capture_device_linux.cc.orig	2024-12-03 23:30:23.089044800 +0000
+--- media/capture/video/linux/video_capture_device_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ media/capture/video/linux/video_capture_device_linux.cc
 @@ -15,7 +15,7 @@
  #include "build/build_config.h"

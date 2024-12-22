@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/BUILD.gn.orig	2024-12-03 23:30:22.980035000 +0000
+--- media/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
 +++ media/BUILD.gn
 @@ -97,6 +97,12 @@ config("media_config") {
        defines += [ "DLOPEN_PULSEAUDIO" ]

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-12-03 23:30:11.811036300 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
 @@ -845,7 +845,7 @@ void MaybeRegisterChromeFeaturePromos(
                           "defaulted to saved for the first time.")));

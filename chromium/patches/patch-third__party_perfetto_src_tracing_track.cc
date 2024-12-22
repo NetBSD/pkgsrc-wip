@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/track.cc.orig	2024-12-03 23:32:33.188843300 +0000
+--- third_party/perfetto/src/tracing/track.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/perfetto/src/tracing/track.cc
 @@ -60,8 +60,9 @@ protos::gen::TrackDescriptor ProcessTrac
    auto desc = Track::Serialize();

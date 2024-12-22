@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-12-03 23:30:27.822468000 +0000
+--- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
 @@ -73,7 +73,7 @@
  #include "ui/display/screen_info.h"

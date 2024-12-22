@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-12-03 23:30:19.010680200 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
 @@ -25,7 +25,7 @@
  #include "media/base/media_switches.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2024-12-03 23:30:09.555834500 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.cc
 @@ -21,7 +21,7 @@
  #if BUILDFLAG(IS_CHROMEOS_ASH)

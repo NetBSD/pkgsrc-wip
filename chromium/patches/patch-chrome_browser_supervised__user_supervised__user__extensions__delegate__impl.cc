@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc.orig	2024-12-03 23:30:10.765942800 +0000
+--- chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc
 @@ -194,7 +194,7 @@ void SupervisedUserExtensionsDelegateImp
        return;

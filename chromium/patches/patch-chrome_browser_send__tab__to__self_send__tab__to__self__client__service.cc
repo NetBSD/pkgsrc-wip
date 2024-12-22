@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc.orig	2024-12-03 23:30:10.648932500 +0000
+--- chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc
 @@ -16,7 +16,7 @@
  #include "components/send_tab_to_self/send_tab_to_self_model.h"

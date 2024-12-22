@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-12-03 23:30:09.086792700 +0000
+--- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/profiles/profile.h"

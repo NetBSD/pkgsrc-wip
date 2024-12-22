@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/views_delegate.cc.orig	2024-12-03 23:30:52.078637000 +0000
+--- ui/views/views_delegate.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/views/views_delegate.cc
 @@ -97,7 +97,7 @@ bool ViewsDelegate::IsWindowInMetro(gfx:
    return false;

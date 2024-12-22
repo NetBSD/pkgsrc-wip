@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2024-12-03 23:30:28.677544600 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
 @@ -81,7 +81,7 @@ extern const char kNotoColorEmojiCompat[
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-12-03 23:30:18.822663300 +0000
+--- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/gpu/gpu_memory_buffer_manager_singleton.cc
 @@ -46,7 +46,7 @@ scoped_refptr<base::SingleThreadTaskRunn
  #endif

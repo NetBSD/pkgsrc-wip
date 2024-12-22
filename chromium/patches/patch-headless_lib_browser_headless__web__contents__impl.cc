@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-12-03 23:30:21.085865700 +0000
+--- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ headless/lib/browser/headless_web_contents_impl.cc
 @@ -62,7 +62,7 @@ namespace headless {
  namespace {

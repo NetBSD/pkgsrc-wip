@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/network.cc.orig	2024-12-03 23:32:41.202842700 +0000
+--- third_party/webrtc/rtc_base/network.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/webrtc/rtc_base/network.cc
 @@ -290,7 +290,12 @@ AdapterType GetAdapterTypeFromName(absl:
    }

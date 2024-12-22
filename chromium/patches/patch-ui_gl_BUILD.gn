@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/BUILD.gn.orig	2024-12-03 23:30:51.769609200 +0000
+--- ui/gl/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/gl/BUILD.gn
 @@ -168,7 +168,6 @@ component("gl") {
    public_deps = [

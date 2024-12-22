@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libusb/src/libusb/os/threads_posix.c.orig	2024-12-03 23:30:47.514228800 +0000
+--- third_party/libusb/src/libusb/os/threads_posix.c.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/libusb/src/libusb/os/threads_posix.c
 @@ -19,9 +19,11 @@
   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA

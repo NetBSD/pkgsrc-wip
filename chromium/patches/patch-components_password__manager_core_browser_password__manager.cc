@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager.cc.orig	2024-12-03 23:30:16.420448500 +0000
+--- components/password_manager/core/browser/password_manager.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/password_manager/core/browser/password_manager.cc
 @@ -419,7 +419,7 @@ void PasswordManager::RegisterProfilePre
        prefs::kAutofillableCredentialsAccountStoreLoginDatabase, false);

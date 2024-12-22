@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_dialogs.h.orig	2024-12-03 23:30:11.844039200 +0000
+--- chrome/browser/ui/web_applications/web_app_dialogs.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_dialogs.h
 @@ -22,7 +22,7 @@
  #include "ui/gfx/native_widget_types.h"

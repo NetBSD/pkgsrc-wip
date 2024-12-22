@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2024-12-03 23:30:09.166799800 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc
 @@ -24,7 +24,7 @@
  #include "base/win/registry.h"

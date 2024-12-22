@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2024-12-03 23:30:12.155067000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.h
 @@ -40,7 +40,7 @@ class ShellLinkItem;
  

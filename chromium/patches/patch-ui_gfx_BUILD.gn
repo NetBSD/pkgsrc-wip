@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/BUILD.gn.orig	2024-12-03 23:30:51.688602000 +0000
+--- ui/gfx/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/gfx/BUILD.gn
 @@ -666,7 +666,7 @@ source_set("memory_buffer_sources") {
      deps += [ "//build/config/linux/libdrm" ]

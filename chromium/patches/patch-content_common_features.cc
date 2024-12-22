@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2024-12-03 23:30:19.240700700 +0000
+--- content/common/features.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/common/features.cc
 @@ -143,7 +143,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
               base::FEATURE_ENABLED_BY_DEFAULT);

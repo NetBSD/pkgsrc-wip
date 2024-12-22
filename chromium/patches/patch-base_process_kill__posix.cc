@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/kill_posix.cc.orig	2024-12-03 23:30:04.286363400 +0000
+--- base/process/kill_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/process/kill_posix.cc
 @@ -157,7 +157,7 @@ void EnsureProcessTerminated(Process pro
        0, new BackgroundReaper(std::move(process), Seconds(2)));

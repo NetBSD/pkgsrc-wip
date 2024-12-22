@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/v8_snapshot_files.cc.orig	2024-12-03 23:30:19.173694800 +0000
+--- content/browser/v8_snapshot_files.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/v8_snapshot_files.cc
 @@ -17,7 +17,7 @@ namespace content {
  std::map<std::string, absl::variant<base::FilePath, base::ScopedFD>>

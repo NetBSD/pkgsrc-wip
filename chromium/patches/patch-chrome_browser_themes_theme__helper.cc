@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_helper.cc.orig	2024-12-03 23:30:10.869952200 +0000
+--- chrome/browser/themes/theme_helper.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/themes/theme_helper.cc
 @@ -18,7 +18,7 @@
  #include "ui/gfx/image/image.h"

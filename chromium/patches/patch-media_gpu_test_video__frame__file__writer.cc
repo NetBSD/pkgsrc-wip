@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/video_frame_file_writer.cc.orig	2024-12-03 23:30:23.209055700 +0000
+--- media/gpu/test/video_frame_file_writer.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ media/gpu/test/video_frame_file_writer.cc
 @@ -26,7 +26,7 @@
  #include "testing/gtest/include/gtest/gtest.h"

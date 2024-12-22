@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-12-03 23:32:49.613842200 +0000
+--- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 @@ -20,7 +20,7 @@
  #include "core/fxge/fx_font.h"

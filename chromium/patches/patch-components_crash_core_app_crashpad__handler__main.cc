@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/crashpad_handler_main.cc.orig	2024-12-03 23:30:15.447361500 +0000
+--- components/crash/core/app/crashpad_handler_main.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/crash/core/app/crashpad_handler_main.cc
 @@ -10,7 +10,7 @@
  #include "third_party/crashpad/crashpad/handler/handler_main.h"

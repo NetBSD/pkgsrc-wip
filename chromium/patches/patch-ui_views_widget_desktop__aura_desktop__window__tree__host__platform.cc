@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-12-03 23:30:52.084637400 +0000
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
 @@ -49,7 +49,7 @@
  #include "ui/wm/core/window_util.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/hid_writer_linux.cc.orig	2024-12-03 23:30:20.292795000 +0000
+--- device/gamepad/hid_writer_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ device/gamepad/hid_writer_linux.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

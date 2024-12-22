@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2024-12-03 23:30:09.537833000 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc
 @@ -9,7 +9,11 @@
  #include <sys/socket.h>

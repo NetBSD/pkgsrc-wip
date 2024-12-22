@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/atomicops.h.orig	2024-12-03 23:30:04.179353700 +0000
+--- base/atomicops.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/atomicops.h
 @@ -71,7 +71,11 @@ typedef intptr_t Atomic64;
  

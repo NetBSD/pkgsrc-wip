@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2024-12-03 23:30:17.381534600 +0000
+--- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/startup_metric_utils/common/startup_metric_utils.cc
 @@ -94,7 +94,7 @@ base::TimeTicks CommonStartupMetricRecor
    // Enabling this logic on OS X causes a significant performance regression.

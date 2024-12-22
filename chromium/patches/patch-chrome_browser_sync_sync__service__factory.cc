@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2024-12-03 23:30:10.778944000 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
 @@ -109,7 +109,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)

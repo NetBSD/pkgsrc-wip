@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/dwa/dwa_service.cc.orig	2024-12-03 23:30:15.976408700 +0000
+--- components/metrics/dwa/dwa_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/metrics/dwa/dwa_service.cc
 @@ -88,7 +88,7 @@ void DwaService::RecordCoarseSystemInfor
    coarse_system_info->set_platform(::dwa::CoarseSystemInfo::PLATFORM_WINDOWS);

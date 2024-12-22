@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2024-12-03 23:30:12.145066300 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.cc
 @@ -71,7 +71,7 @@ namespace {
  

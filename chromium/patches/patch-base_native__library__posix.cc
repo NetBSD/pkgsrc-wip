@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/native_library_posix.cc.orig	2024-12-03 23:30:04.275362300 +0000
+--- base/native_library_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/native_library_posix.cc
 @@ -34,7 +34,7 @@ NativeLibrary LoadNativeLibraryWithOptio
    // http://crbug.com/17943, http://crbug.com/17557, http://crbug.com/36892,

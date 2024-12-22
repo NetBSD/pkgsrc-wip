@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-12-03 23:30:10.626930500 +0000
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
 @@ -16,7 +16,7 @@
  #include "services/screen_ai/public/cpp/utilities.h"

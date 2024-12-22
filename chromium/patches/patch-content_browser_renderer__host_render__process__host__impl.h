@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2024-12-03 23:30:19.065685000 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
 @@ -102,7 +102,7 @@
  #include "media/fuchsia_media_codec_provider_impl.h"

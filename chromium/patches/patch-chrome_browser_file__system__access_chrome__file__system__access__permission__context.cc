@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2024-12-03 23:30:09.393820000 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
 @@ -336,7 +336,7 @@ const struct {
       FILE_PATH_LITERAL("Library/Mobile Documents/com~apple~CloudDocs"),

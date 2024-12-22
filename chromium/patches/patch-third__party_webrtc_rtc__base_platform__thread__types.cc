@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-12-03 23:32:41.212842700 +0000
+--- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/webrtc/rtc_base/platform_thread_types.cc
 @@ -11,7 +11,9 @@
  #include "rtc_base/platform_thread_types.h"

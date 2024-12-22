@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/system_utils.cpp.orig	2024-12-03 23:31:00.500389800 +0000
+--- third_party/angle/src/common/system_utils.cpp.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/angle/src/common/system_utils.cpp
 @@ -25,7 +25,7 @@ namespace angle
  {

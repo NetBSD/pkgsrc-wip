@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/widevine/cdm/widevine.gni.orig	2024-12-03 23:30:50.268475000 +0000
+--- third_party/widevine/cdm/widevine.gni.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/widevine/cdm/widevine.gni
 @@ -28,6 +28,9 @@ library_widevine_cdm_available =
      (is_chromeos &&

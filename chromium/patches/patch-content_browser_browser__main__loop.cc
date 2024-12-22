@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_main_loop.cc.orig	2024-12-03 23:30:18.732655300 +0000
+--- content/browser/browser_main_loop.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/browser_main_loop.cc
 @@ -250,6 +250,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"

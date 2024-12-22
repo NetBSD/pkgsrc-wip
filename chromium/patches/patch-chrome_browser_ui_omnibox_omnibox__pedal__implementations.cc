@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2024-12-03 23:30:11.462005100 +0000
+--- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc
 @@ -1976,7 +1976,7 @@ const gfx::VectorIcon& GetSharingHubVect
    return omnibox::kShareMacChromeRefreshIcon;

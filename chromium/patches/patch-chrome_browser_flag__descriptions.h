@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2024-12-03 23:30:09.412821800 +0000
+--- chrome/browser/flag_descriptions.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
 @@ -293,7 +293,7 @@ extern const char kImprovedSigninUIOnDes
  extern const char kImprovedSigninUIOnDesktopDescription[];

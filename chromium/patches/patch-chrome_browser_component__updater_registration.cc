@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2024-12-03 23:30:08.923778000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
 @@ -82,7 +82,7 @@
  #include "media/base/media_switches.h"

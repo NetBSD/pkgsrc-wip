@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_screen.cc.orig	2024-12-03 23:30:51.868618200 +0000
+--- ui/ozone/platform/wayland/host/wayland_screen.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_screen.cc
 @@ -47,7 +47,7 @@
  #include "ui/ozone/platform/wayland/host/org_gnome_mutter_idle_monitor.h"

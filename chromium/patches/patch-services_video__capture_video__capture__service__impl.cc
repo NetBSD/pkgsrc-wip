@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_capture/video_capture_service_impl.cc.orig	2024-12-03 23:30:25.621271400 +0000
+--- services/video_capture/video_capture_service_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ services/video_capture/video_capture_service_impl.cc
 @@ -43,7 +43,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc.orig	2024-12-03 23:30:28.950569000 +0000
+--- third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc
 @@ -323,7 +323,7 @@ void TextCodecICU::CreateICUConverter() 
    DCHECK(!converter_icu_);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_internal_posix.cc.orig	2024-12-03 23:30:04.414374800 +0000
+--- base/threading/platform_thread_internal_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/threading/platform_thread_internal_posix.cc
 @@ -41,7 +41,7 @@ ThreadPriorityForTest NiceValueToThreadP
  }

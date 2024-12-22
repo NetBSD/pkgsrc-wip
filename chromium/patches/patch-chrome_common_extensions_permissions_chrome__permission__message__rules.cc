@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/permissions/chrome_permission_message_rules.cc.orig	2024-12-03 23:30:12.255076000 +0000
+--- chrome/common/extensions/permissions/chrome_permission_message_rules.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/common/extensions/permissions/chrome_permission_message_rules.cc
 @@ -285,7 +285,7 @@ int GetEnterpriseReportingPrivatePermiss
    }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2024-12-03 23:30:16.610465500 +0000
+--- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_client.cc
 @@ -720,7 +720,7 @@ void CloudPolicyClient::FetchPolicy(Poli
          fetch_request->set_invalidation_payload(invalidation_payload_);

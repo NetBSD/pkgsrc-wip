@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2024-12-03 23:30:28.494528300 +0000
+--- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
 @@ -6321,7 +6321,7 @@ void WebGLRenderingContextBase::TexImage
    constexpr bool kAllowZeroCopyImages = true;

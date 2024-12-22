@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/basic_desktop_environment.cc.orig	2024-12-03 23:30:25.134227800 +0000
+--- remoting/host/basic_desktop_environment.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ remoting/host/basic_desktop_environment.cc
 @@ -195,7 +195,7 @@ std::unique_ptr<DesktopCapturer> BasicDe
    scoped_refptr<base::SingleThreadTaskRunner> capture_task_runner;

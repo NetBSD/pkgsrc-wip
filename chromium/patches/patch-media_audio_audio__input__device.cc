@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/audio_input_device.cc.orig	2024-12-03 23:30:22.989035800 +0000
+--- media/audio/audio_input_device.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ media/audio/audio_input_device.cc
 @@ -269,7 +269,7 @@ void AudioInputDevice::OnStreamCreated(
  // here. See comments in AliveChecker and PowerObserverHelper for details and

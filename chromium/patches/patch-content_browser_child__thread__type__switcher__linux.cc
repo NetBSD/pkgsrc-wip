@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.cc.orig	2024-12-03 23:30:18.752657200 +0000
+--- content/browser/child_thread_type_switcher_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/child_thread_type_switcher_linux.cc
 @@ -20,6 +20,9 @@ void SetThreadTypeOnLauncherThread(base:
                                     base::ThreadType thread_type) {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/launcher/test_launcher.cc.orig	2024-12-03 23:30:04.384372000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -74,6 +74,7 @@
  #include "testing/gtest/include/gtest/gtest.h"

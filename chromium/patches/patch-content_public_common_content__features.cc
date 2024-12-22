@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2024-12-03 23:30:19.478722000 +0000
+--- content/public/common/content_features.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/public/common/content_features.cc
 @@ -65,7 +65,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
  // TODO(crbug.com/40118868): Remove !IS_CHROMEOS_LACROS once lacros starts being

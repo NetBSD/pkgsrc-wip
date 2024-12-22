@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2024-12-03 23:30:11.657022500 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_delegate.cc
 @@ -21,7 +21,7 @@
  #include "chromeos/ui/frame/desks/move_to_desks_menu_model.h"

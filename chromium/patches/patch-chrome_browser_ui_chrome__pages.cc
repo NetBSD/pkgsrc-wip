@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2024-12-03 23:30:11.384998000 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.cc
 @@ -87,7 +87,7 @@
  #include "components/signin/public/identity_manager/identity_manager.h"

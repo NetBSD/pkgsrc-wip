@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/webui/web_ui_main_frame_observer.cc.orig	2024-12-03 23:30:19.218698700 +0000
+--- content/browser/webui/web_ui_main_frame_observer.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.cc
 @@ -13,7 +13,7 @@
  #include "content/public/browser/navigation_handle.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_memory_buffer.cc.orig	2024-12-03 23:30:51.717604600 +0000
+--- ui/gfx/gpu_memory_buffer.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/gfx/gpu_memory_buffer.cc
 @@ -63,7 +63,7 @@ GpuMemoryBufferHandle GpuMemoryBufferHan
    handle.region = region.Duplicate();

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2024-12-03 23:30:10.603928300 +0000
+--- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc
 @@ -696,7 +696,7 @@ void IncidentReportingService::OnEnviron
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/mock_network_change_notifier.cc.orig	2024-12-03 23:30:24.156140300 +0000
+--- net/base/mock_network_change_notifier.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ net/base/mock_network_change_notifier.cc
 @@ -103,7 +103,7 @@ MockNetworkChangeNotifier::GetCurrentCon
    return connection_cost_;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/src/chrono.cpp.orig	2024-12-03 23:31:09.222169400 +0000
+--- third_party/libc++/src/src/chrono.cpp.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/libc++/src/src/chrono.cpp
 @@ -34,7 +34,7 @@
  // OpenBSD and GPU do not have a fully conformant suite of POSIX timers, but

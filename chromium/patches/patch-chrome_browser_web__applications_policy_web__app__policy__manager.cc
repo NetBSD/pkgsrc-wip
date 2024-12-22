@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-12-03 23:30:12.147066400 +0000
+--- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
 @@ -106,7 +106,7 @@ namespace web_app {
  

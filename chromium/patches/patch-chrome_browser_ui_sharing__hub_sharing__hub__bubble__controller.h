@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h.orig	2024-12-03 23:30:11.506009000 +0000
+--- chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h
 @@ -36,7 +36,7 @@ class SharingHubBubbleController {
    // Returns true if the omnibox icon should be shown.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/platform_posix.cc.orig	2024-12-03 23:32:33.178843300 +0000
+--- third_party/perfetto/src/tracing/platform_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/perfetto/src/tracing/platform_posix.cc
 @@ -110,12 +110,13 @@ std::unique_ptr<base::TaskRunner> Platfo
  }

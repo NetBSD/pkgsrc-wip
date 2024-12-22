@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2024-12-03 23:30:10.766943000 +0000
+--- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc
 @@ -32,7 +32,7 @@
  #include "chrome/browser/supervised_user/child_accounts/child_account_service_android.h"

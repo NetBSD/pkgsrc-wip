@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/tab_strip_region_view.cc.orig	2024-12-03 23:30:11.657022500 +0000
+--- chrome/browser/ui/views/frame/tab_strip_region_view.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/views/frame/tab_strip_region_view.cc
 @@ -205,7 +205,7 @@ TabStripRegionView::TabStripRegionView(s
  

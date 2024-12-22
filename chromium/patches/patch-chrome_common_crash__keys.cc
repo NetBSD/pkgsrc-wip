@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/crash_keys.cc.orig	2024-12-03 23:30:12.231073900 +0000
+--- chrome/common/crash_keys.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/common/crash_keys.cc
 @@ -56,7 +56,9 @@ class CrashKeyWithName {
    ~CrashKeyWithName() = delete;

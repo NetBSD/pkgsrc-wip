@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.cc.orig	2024-12-03 23:30:09.408821300 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/flag_descriptions.cc
 @@ -475,7 +475,7 @@ const char kIsolatedSandboxedIframesDesc
      "grouping when enabled is per-site.";

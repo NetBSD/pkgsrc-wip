@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/syslog_logging.cc.orig	2024-12-03 23:30:04.325366700 +0000
+--- base/syslog_logging.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/syslog_logging.cc
 @@ -17,7 +17,7 @@
  #include "base/strings/string_util.h"

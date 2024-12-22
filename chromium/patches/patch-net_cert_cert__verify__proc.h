@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/cert/cert_verify_proc.h.orig	2024-12-03 23:30:24.176142000 +0000
+--- net/cert/cert_verify_proc.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ net/cert/cert_verify_proc.h
 @@ -186,7 +186,7 @@ class NET_EXPORT CertVerifyProc
      kMaxValue = kChainLengthOne

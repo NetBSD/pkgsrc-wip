@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/debugger_posix.cc.orig	2024-12-03 23:30:04.198355400 +0000
+--- base/debug/debugger_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/debug/debugger_posix.cc
 @@ -41,6 +41,10 @@
  #include <sys/sysctl.h>

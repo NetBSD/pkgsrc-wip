@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2024-12-03 23:30:17.724565300 +0000
+--- components/supervised_user/core/common/features.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(
  // Applies new informative strings during the parental extension approval flow.

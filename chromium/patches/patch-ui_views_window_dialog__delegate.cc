@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/dialog_delegate.cc.orig	2024-12-03 23:30:52.098638800 +0000
+--- ui/views/window/dialog_delegate.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/views/window/dialog_delegate.cc
 @@ -105,7 +105,7 @@ Widget* DialogDelegate::CreateDialogWidg
  

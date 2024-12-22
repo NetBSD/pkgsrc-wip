@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2024-12-03 23:30:17.724565300 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -66,7 +66,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExten
               "UpdatedSupervisedUserExtensionApprovalStrings",

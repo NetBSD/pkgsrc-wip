@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_x11.cpp.orig	2024-12-03 23:31:00.618400300 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_x11.cpp.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_x11.cpp
 @@ -8,6 +8,10 @@
  

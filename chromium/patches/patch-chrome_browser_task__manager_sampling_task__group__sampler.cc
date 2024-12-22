@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2024-12-03 23:30:10.864951600 +0000
+--- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.cc
 @@ -46,7 +46,7 @@ TaskGroupSampler::TaskGroupSampler(
      const OnCpuRefreshCallback& on_cpu_refresh,

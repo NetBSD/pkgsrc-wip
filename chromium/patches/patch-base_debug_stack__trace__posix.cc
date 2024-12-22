@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2024-12-03 23:30:04.201355700 +0000
+--- base/debug/stack_trace_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/debug/stack_trace_posix.cc
 @@ -45,8 +45,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but

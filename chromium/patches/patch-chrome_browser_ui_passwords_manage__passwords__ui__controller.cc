@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2024-12-03 23:30:11.476006300 +0000
+--- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/passwords/manage_passwords_ui_controller.cc
 @@ -97,7 +97,7 @@ namespace {
  

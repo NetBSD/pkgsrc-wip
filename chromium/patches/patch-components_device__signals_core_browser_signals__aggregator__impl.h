@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2024-12-03 23:30:15.530369000 +0000
+--- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/device_signals/core/browser/signals_aggregator_impl.h
 @@ -29,7 +29,7 @@ class SignalsAggregatorImpl : public Sig
    ~SignalsAggregatorImpl() override;

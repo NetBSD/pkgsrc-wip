@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/resource/resource_bundle.cc.orig	2024-12-03 23:30:51.415577700 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/base/resource/resource_bundle.cc
 @@ -914,7 +914,7 @@ void ResourceBundle::ReloadFonts() {
  }

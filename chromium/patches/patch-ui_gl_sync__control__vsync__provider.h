@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/sync_control_vsync_provider.h.orig	2024-12-03 23:30:51.802612300 +0000
+--- ui/gl/sync_control_vsync_provider.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/gl/sync_control_vsync_provider.h
 @@ -31,7 +31,7 @@ class SyncControlVSyncProvider : public 
    bool SupportGetVSyncParametersIfAvailable() const override;

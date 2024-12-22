@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2024-12-03 23:30:11.955049300 +0000
+--- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"

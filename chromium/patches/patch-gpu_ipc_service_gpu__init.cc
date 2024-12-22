@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2024-12-03 23:30:21.067864200 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -387,7 +387,7 @@ bool GpuInit::InitializeAndStartSandbox(
    enable_watchdog = false;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_context.cc.orig	2024-12-03 23:30:51.786610800 +0000
+--- ui/gl/gl_context.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/gl/gl_context.cc
 @@ -517,7 +517,7 @@ bool GLContext::MakeVirtuallyCurrent(
    DCHECK(virtual_context->IsCurrent(surface));

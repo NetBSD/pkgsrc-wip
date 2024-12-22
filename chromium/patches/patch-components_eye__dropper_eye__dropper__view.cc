@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2024-12-03 23:30:15.681382400 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
 @@ -203,7 +203,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    // EyeDropper/WidgetDelegate.

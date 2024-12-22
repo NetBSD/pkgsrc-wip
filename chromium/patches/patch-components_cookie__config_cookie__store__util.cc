@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/cookie_config/cookie_store_util.cc.orig	2024-12-03 23:30:15.439360900 +0000
+--- components/cookie_config/cookie_store_util.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/cookie_config/cookie_store_util.cc
 @@ -12,7 +12,7 @@
  namespace cookie_config {

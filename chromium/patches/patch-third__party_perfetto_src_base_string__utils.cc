@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/string_utils.cc.orig	2024-12-03 23:32:31.106843200 +0000
+--- third_party/perfetto/src/base/string_utils.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ third_party/perfetto/src/base/string_utils.cc
 @@ -38,9 +38,10 @@ namespace base {
  

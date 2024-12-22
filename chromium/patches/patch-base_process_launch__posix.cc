@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch_posix.cc.orig	2024-12-03 23:30:04.288363500 +0000
+--- base/process/launch_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ base/process/launch_posix.cc
 @@ -67,6 +67,9 @@
  #error "macOS should use launch_mac.cc"

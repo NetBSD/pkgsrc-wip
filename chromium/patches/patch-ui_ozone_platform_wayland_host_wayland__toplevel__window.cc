@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_toplevel_window.cc.orig	2024-12-03 23:30:51.870618300 +0000
+--- ui/ozone/platform/wayland/host/wayland_toplevel_window.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_toplevel_window.cc
 @@ -629,7 +629,7 @@ void WaylandToplevelWindow::HandleToplev
    const bool did_active_change = is_active_ != window_states.is_activated;

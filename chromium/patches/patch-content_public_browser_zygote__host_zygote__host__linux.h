@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/zygote_host/zygote_host_linux.h.orig	2024-12-03 23:30:19.475721800 +0000
+--- content/public/browser/zygote_host/zygote_host_linux.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/public/browser/zygote_host/zygote_host_linux.h
 @@ -35,11 +35,13 @@ class ZygoteHost {
    // after the first render has been forked.

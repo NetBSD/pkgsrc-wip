@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_switches.h.orig	2024-12-03 23:30:16.423448800 +0000
+--- components/password_manager/core/browser/password_manager_switches.h.orig	2024-12-17 17:58:49.000000000 +0000
 +++ components/password_manager/core/browser/password_manager_switches.h
 @@ -10,7 +10,7 @@
  

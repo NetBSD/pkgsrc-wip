@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/zygote/zygote_main_linux.cc.orig	2024-12-03 23:30:20.163783300 +0000
+--- content/zygote/zygote_main_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/zygote/zygote_main_linux.cc
 @@ -11,7 +11,9 @@
  #include <stddef.h>

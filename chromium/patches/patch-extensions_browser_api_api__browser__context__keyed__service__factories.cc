@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2024-12-03 23:30:20.567819400 +0000
+--- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ extensions/browser/api/api_browser_context_keyed_service_factories.cc
 @@ -117,7 +117,7 @@ void EnsureApiBrowserContextKeyedService
  #endif

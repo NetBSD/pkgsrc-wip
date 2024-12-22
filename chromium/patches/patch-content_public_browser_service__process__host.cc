@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/service_process_host.cc.orig	2024-12-03 23:30:19.465721000 +0000
+--- content/public/browser/service_process_host.cc.orig	2024-12-17 17:58:49.000000000 +0000
 +++ content/public/browser/service_process_host.cc
 @@ -71,7 +71,7 @@ ServiceProcessHost::Options::WithPreload
  ServiceProcessHost::Options& ServiceProcessHost::Options::WithGpuClient(
