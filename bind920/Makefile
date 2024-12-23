@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.20.3
+BIND_VERSION=	9.20.4
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
@@ -59,7 +59,7 @@ PKG_USERS=		${BIND_USER}:${BIND_GROUP}
 PKG_GECOS.${BIND_USER}=	Named pseudo-user
 PKG_HOME.${BIND_USER}=	${BIND_DIR}
 
-DOCS=			CHANGES OPTIONS.md README.md
+DOCS=			OPTIONS.md README.md
 
 FILES_SUBST+=		BIND_GROUP=${BIND_GROUP} \
 			BIND_USER=${BIND_USER} PAX=${PAX:Q} \
@@ -89,6 +89,9 @@ post-install:
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
+	${INSTALL_DATA} \
+		${WRKSRC}/doc/changelog/changelog-${BIND_VERSION}.rst \
+		${DESTDIR}${PREFIX}/${DOCDIR}/CHANGES
 	${INSTALL_DATA} ${WRKSRC}/bind.keys ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/atomic64.mk"
