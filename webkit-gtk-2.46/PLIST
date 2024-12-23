@@ -223,10 +223,10 @@ lib/girepository-1.0/WebKit2-4.1.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.1.typelib
 lib/libjavascriptcoregtk-4.1.so
 lib/libjavascriptcoregtk-4.1.so.0
-lib/libjavascriptcoregtk-4.1.so.0.6.13
+lib/libjavascriptcoregtk-4.1.so.0.6.14
 lib/libwebkit2gtk-4.1.so
 lib/libwebkit2gtk-4.1.so.0
-lib/libwebkit2gtk-4.1.so.0.16.6
+lib/libwebkit2gtk-4.1.so.0.16.7
 lib/pkgconfig/javascriptcoregtk-4.1.pc
 lib/pkgconfig/webkit2gtk-4.1.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.1.pc
