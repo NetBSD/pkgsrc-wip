@@ -1,5 +1,10 @@
 $NetBSD$
 
-BLAKE2s (libopenshot-audio-0.2.2.tar.gz) = aaf29eff009beac4a14e823e28ad8ada072a21c7adbd09e6beeb7877de346d8d
-SHA512 (libopenshot-audio-0.2.2.tar.gz) = 9960c6225dd9b843d18134e851761bf12861220a2c63970055bc73d554725e56abd6d35339f7490b672faaf0699f58e3701ff8a966ab07af3264325a9d0dc472
-Size (libopenshot-audio-0.2.2.tar.gz) = 1808059 bytes
+BLAKE2s (libopenshot-audio-0.4.0.tar.gz) = d1b45ed249aab15d0f1d80f241709adc955e5842738faf15ce4ee2e6236ae1fe
+SHA512 (libopenshot-audio-0.4.0.tar.gz) = 38dd62f24d6e9aaffe5f1ac51e374263cbc98a51f9e1391ab4ede2290fc67bfb7f29e525e986a8cbbbdde25a343bcd085e1269427dcc72f04ef7031991310ed2
+Size (libopenshot-audio-0.4.0.tar.gz) = 2260995 bytes
+SHA1 (patch-JuceLibraryCode_modules_juce__core_native_juce__BasicNativeHeaders.h) = 2cb955d33bf67de809f1af653f2244b7143c5269
+SHA1 (patch-JuceLibraryCode_modules_juce__core_native_juce__Files__linux.cpp) = 15788a1d1ab997ba74f50c8e670ce54d45854417
+SHA1 (patch-JuceLibraryCode_modules_juce__core_native_juce__SharedCode__posix.h) = f42d81207d5143a4d5bbd1602e0141211b0c93e1
+SHA1 (patch-JuceLibraryCode_modules_juce__core_native_juce__SystemStats__linux.cpp) = 43e955ae3b9de384427656f72807e65131a4a598
+SHA1 (patch-JuceLibraryCode_modules_juce__core_system_juce__TargetPlatform.h) = 11a8a67ad0b6038fb723eba76c66047929687aaf
