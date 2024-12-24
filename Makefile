@@ -5888,6 +5888,7 @@ SUBDIR+=	wezterm
 SUBDIR+=	wgrib2
 SUBDIR+=	whatscli
 SUBDIR+=	which
+SUBDIR+=	whisper.cpp
 SUBDIR+=	why
 SUBDIR+=	wicd
 SUBDIR+=	will-it-scale-git
