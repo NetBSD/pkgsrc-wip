@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	gnu++17
+USE_CXX_FEATURES=	c++17
 
 BLAS_INDEX64=		yes
 BLAS_ACCEPTED=		openblas_pthread #openblas_openmp
