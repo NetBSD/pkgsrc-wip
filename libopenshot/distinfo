@@ -1,5 +1,9 @@
 $NetBSD$
 
-BLAKE2s (libopenshot-0.2.7.tar.gz) = d55b34d4f8c7548f29ddf9a2a20950d1336c58f94e6924f1804e70c2437308b0
-SHA512 (libopenshot-0.2.7.tar.gz) = 71cb0e4010d8f3ff453486c3da3c7019c6569066845dcc58f438049a08b1c8663f31c29a728ce5461e9d3a1ca550038b757d4528e62a26eeb45ecbe600353988
-Size (libopenshot-0.2.7.tar.gz) = 22472544 bytes
+BLAKE2s (libopenshot-0.4.0.tar.gz) = f8e28c02006a7549ffd1d76e43810cc49f06f38b4aebd7503b3687895315a950
+SHA512 (libopenshot-0.4.0.tar.gz) = e5aa91e2ec3f64952a60e069e3c843d3ac59c3f896d81dccd789e52244f442ceed2e62374b6aeeb2514a8b88557edd60faca33cadb06c297ff400aebc83f98a6
+Size (libopenshot-0.4.0.tar.gz) = 26131657 bytes
+SHA1 (patch-src_AudioWaveformer.cpp) = b858f71bee62d4e83a9e4304ea8a2320d41e766e
+SHA1 (patch-src_FFmpegReader.cpp) = 386fe35077b4a51d92de12e98dedce6326a49315
+SHA1 (patch-src_FFmpegWriter.cpp) = bca8455b860b9100f117e1eeb011dfc20936067b
+SHA1 (patch-src_ImageReader.cpp) = 6d030bcb8890810dd226a4c0c19c63cf486a1cc6

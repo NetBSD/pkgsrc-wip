@@ -1,8 +1,10 @@
 @comment $NetBSD$
 include/libopenshot/AudioBufferSource.h
-include/libopenshot/AudioDeviceInfo.h
+include/libopenshot/AudioDevices.h
+include/libopenshot/AudioLocation.h
 include/libopenshot/AudioReaderSource.h
 include/libopenshot/AudioResampler.h
+include/libopenshot/AudioWaveformer.h
 include/libopenshot/CVObjectDetection.h
 include/libopenshot/CVStabilization.h
 include/libopenshot/CVTracker.h
@@ -18,10 +20,6 @@ include/libopenshot/ClipProcessingJobs.h
 include/libopenshot/Color.h
 include/libopenshot/Coordinate.h
 include/libopenshot/CrashHandler.h
-include/libopenshot/DecklinkInput.h
-include/libopenshot/DecklinkOutput.h
-include/libopenshot/DecklinkReader.h
-include/libopenshot/DecklinkWriter.h
 include/libopenshot/DummyReader.h
 include/libopenshot/EffectBase.h
 include/libopenshot/EffectInfo.h
@@ -97,21 +95,11 @@ include/libopenshot/effects/Shift.h
 include/libopenshot/effects/Stabilizer.h
 include/libopenshot/effects/Tracker.h
 include/libopenshot/effects/Wave.h
-include/libopenshot/openshot_autogen/moc_predefs.h
 include/libopenshot/sort_filter/Hungarian.h
 include/libopenshot/sort_filter/KalmanTracker.h
 lib/libopenshot.${RUBY_DLEXT}
 lib/libopenshot.so.${PKGVERSION}
-lib/libopenshot.so.21
+lib/libopenshot.so.27
 ${PYSITELIB}/_openshot.${RUBY_DLEXT}
 ${PYSITELIB}/openshot.py
 ${RUBY_VENDORARCHLIB}/openshot.${RUBY_DLEXT}
-@pkgdir include/libopenshot/protobuf_messages
-@pkgdir include/libopenshot/openshot_autogen/include
-@pkgdir include/libopenshot/openshot_autogen/4DVC4UZSMN
-@pkgdir include/libopenshot/CMakeFiles/openshot_autogen.dir
-@pkgdir include/libopenshot/CMakeFiles/openshot.dir/openshot_autogen
-@pkgdir include/libopenshot/CMakeFiles/openshot.dir/effects
-@pkgdir include/libopenshot/CMakeFiles/openshot.dir/audio_effects
-@pkgdir include/libopenshot/CMakeFiles/openshot.dir/Qt
-@pkgdir include/libopenshot/CMakeFiles/jsoncpp_lib.dir/__/thirdparty/jsoncpp
