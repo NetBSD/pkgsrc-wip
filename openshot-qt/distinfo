@@ -1,5 +1,6 @@
 $NetBSD$
 
-BLAKE2s (openshot-qt/v2.6.1.tar.gz) = 3079a67b7726596484c757a3e49fc0e808761fc3b7e1dd012ed015386ac0b603
-SHA512 (openshot-qt/v2.6.1.tar.gz) = 9e2d1eae5d72ec2deab914e464dac0d84a864ba2ca63104fad57c90fc907764d5683149fb8136d50030cae993cef9a977e995b0783868988de4668e71a3a5ee2
-Size (openshot-qt/v2.6.1.tar.gz) = 68566443 bytes
+BLAKE2s (openshot-qt-3.3.0.tar.gz) = e4b7c125481d569c8f77668e369dd6200c92b2f67cc90f62e05f10d4c5457bad
+SHA512 (openshot-qt-3.3.0.tar.gz) = 3744653ed8e89e52f72975891e3c357752baa8f99f04e5492072f366fc842b97852a2380bc1bc122bdbf4de6b7afab50d2f906a6f3701fcb798739364701fa77
+Size (openshot-qt-3.3.0.tar.gz) = 98508240 bytes
+SHA1 (patch-installer_build-mac-dmg.sh) = 4aa9fdc290358cede0eecd6176e549f8dd012c35
