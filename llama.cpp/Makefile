@@ -18,7 +18,6 @@ USE_CXX_FEATURES=	gnu++17
 BLAS_INDEX64=		yes
 BLAS_ACCEPTED=		openblas_pthread #openblas_openmp
 BLAS_C_INTERFACE=	yes
-CXXFLAGS+=		${BLAS_INCLUDES}
 
 PKGCONFIG_OVERRIDE+=	cmake/llama.pc.in
 REPLACE_PYTHON+=	*.py */*.py */*/*.py
@@ -30,6 +29,12 @@ CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_TESTS=no
 CMAKE_CONFIGURE_ARGS+=	-DGGML_OPENCL_EMBED_KERNELS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGGML_OPENCL_PROFILING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGGML_OPENCL_USE_ADRENO_KERNELS=OFF
+
+SUBST_CLASSES+=		findblas
+SUBST_STAGE.findblas=	pre-configure
+SUBST_MESSAGE.findblas=	Fixing libpci soname
+SUBST_FILES.findblas+=	ggml/src/ggml-blas/CMakeLists.txt
+SUBST_SED.findblas+=	-e 's,DepBLAS openblas64,DepBLAS ${BLAS_PC},'
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
