@@ -2401,7 +2401,6 @@ SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
 SUBDIR+=	mpc
 SUBDIR+=	mpc-el
-SUBDIR+=	mpdecimal
 SUBDIR+=	mpg123-jack
 SUBDIR+=	mpg123-svn
 SUBDIR+=	mpgedit
