@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2024-12-23 08:59:58.392061022 +0000
++++ CMakeLists.txt
+@@ -121,7 +121,7 @@ whisper_option_depr(WARNING     WHISPER_
+ #
+ 
+ if (NOT TARGET ggml)
+-    add_subdirectory(ggml)
++#    add_subdirectory(ggml)
+     # ... otherwise assume ggml is added by a parent CMakeLists.txt
+ endif()
+ add_subdirectory(src)
