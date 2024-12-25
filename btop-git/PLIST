@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/10/06 10:43:17 fox Exp $
+@comment $NetBSD$
 bin/btop
 man/man1/btop.1
 share/applications/btop.desktop
@@ -12,6 +12,7 @@ share/btop/themes/dusklight.theme
 share/btop/themes/elementarish.theme
 share/btop/themes/everforest-dark-hard.theme
 share/btop/themes/everforest-dark-medium.theme
+share/btop/themes/everforest-light-medium.theme
 share/btop/themes/flat-remix-light.theme
 share/btop/themes/flat-remix.theme
 share/btop/themes/greyscale.theme
