@@ -322,7 +322,6 @@ SUBDIR+=	biostar-tools
 SUBDIR+=	bip
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
-SUBDIR+=	bkcrack
 SUBDIR+=	blackbox_exporter
 SUBDIR+=	blad
 SUBDIR+=	blast2go
