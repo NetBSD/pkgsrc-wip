@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (ugrep-5.1.1.tar.gz) = 28f23ac60308f51a3f914ad069a00747cbd025bc9dd759e08515cc3adbf740e3
-SHA512 (ugrep-5.1.1.tar.gz) = 6ff6bfcf57b0bbad242958db3e0094ed251a440d0f3783305a0b3aca2aa46bc10fb6c5280c7c4a03d99ded6214b508326efefcd584cb94c70a8bf3c01597b340
-Size (ugrep-5.1.1.tar.gz) = 6238147 bytes
-SHA1 (patch-man_ugrep.1) = b3e2a42612e009b7d8165edee379b75edbb8d4e2

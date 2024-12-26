@@ -1,7 +1,0 @@
-textproc/ugrep: Update to v5.1.1
-
-- a minor improvement of the regex syntax to allow escaped spaces
-- updated POSIX regex lazy quantifier matching in linear time using an
-  advanced DFA transformation algorithm
-- minor update to fix a problem with POSIX lazy quantifier matching when
-  combined with anchors, causing longer pattern matches than expected

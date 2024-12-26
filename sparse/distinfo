@@ -1,7 +1,0 @@
-$NetBSD$
-
-BLAKE2s (sparse-0.6.4.tar.gz) = 83424a6da44e63c389a53961db3de1da1a16a94fccbde2201095de976e2b07f9
-SHA512 (sparse-0.6.4.tar.gz) = 3e301f50643c7a01eaf8823c159ab4f33a2724c2ca0516113e19e4a3242b82d3cad84b5a52f5d58f56d11c5f6468230a76dafc240e2386c4aa75ea96a8323edb
-Size (sparse-0.6.4.tar.gz) = 478893 bytes
-SHA1 (patch-Makefile) = 4b6ca037b59126a2b33d10a4fbadf96018c052f3
-SHA1 (patch-pre-process.c) = a30be7c701ac8933f93a4021593dcdb61ed5ec0c

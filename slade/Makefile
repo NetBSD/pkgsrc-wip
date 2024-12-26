@@ -49,6 +49,5 @@ BUILDLINK_API_DEPENDS.sfml+=		sfml>=2.0
 .include "../../multimedia/sfml/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../wip/wxGTK32/buildlink3.mk"
-
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
