@@ -5496,6 +5496,7 @@ SUBDIR+=	tc-git
 SUBDIR+=	tc-hasida-table
 SUBDIR+=	tcc
 SUBDIR+=	tcc-git
+SUBDIR+=	tcl9
 SUBDIR+=	tcl-curl
 SUBDIR+=	tcl-expect
 SUBDIR+=	tcl-fossil
