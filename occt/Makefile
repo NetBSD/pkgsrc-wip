@@ -25,6 +25,7 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOC_Overview=OFF
 
 REPLACE_BASH+=	adm/templates/draw.sh
 
+CXXFLAGS+=			-fpermissive
 CXXFLAGS.SunOS+=		-DSOLARIS=1
 LDFLAGS.SunOS+=			-lnsl
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
