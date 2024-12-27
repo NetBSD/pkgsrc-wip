@@ -1,0 +1,6 @@
+openmohaa: import openmohaa-0.80.0 as games/openmohaa
+
+OpenMoHAA is an open source game engine for the game "Medal of
+Honor: Allied Assault".  The main goal of OpenMoHAA is to ensure
+the future and continuity of "Medal of Honor: Allied Assault" on
+all platforms/architectures by providing new patches and features.

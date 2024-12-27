@@ -1,0 +1,15 @@
+@comment $NetBSD$
+bin/omohaaded
+bin/openmohaa
+lib/openmohaa/cgame.${MACHINE_GNU_ARCH}.so
+lib/openmohaa/game.${MACHINE_GNU_ARCH}.so
+lib/openmohaa/launch_openmohaa_base.${MACHINE_GNU_ARCH}
+lib/openmohaa/launch_openmohaa_breakthrough.${MACHINE_GNU_ARCH}
+lib/openmohaa/launch_openmohaa_spearhead.${MACHINE_GNU_ARCH}
+lib/openmohaa/omohaaded.${MACHINE_GNU_ARCH}
+lib/openmohaa/openmohaa.${MACHINE_GNU_ARCH}
+share/applications/org.openmoh.openmohaa.desktop
+share/applications/org.openmoh.openmohaab.desktop
+share/applications/org.openmoh.openmohaas.desktop
+share/icons/hicolor/symbolic/apps/org.openmoh.openmohaa.svg
+share/metainfo/org.openmoh.openmohaa.metainfo.xml

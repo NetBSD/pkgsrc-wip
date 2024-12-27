@@ -2684,6 +2684,7 @@ SUBDIR+=	opengrok
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openjkdf2
 SUBDIR+=	openlogos
+SUBDIR+=	openmohaa
 SUBDIR+=	openmp
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
