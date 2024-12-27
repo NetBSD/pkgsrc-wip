@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (tcl9.0.1-src.tar.gz) = c1225ec564615e7030f921ce0d773f7b98503e63a6805a41a7c665d85471695c
+SHA512 (tcl9.0.1-src.tar.gz) = 8ef8289bd86b4cc2597d63f4b460fa4a67da66dbb1bafa29cb8cd960867d07636f12713ecb1a95a96bd6c284b6f0f4264ff96da2feeb52a5a9795f036fa346c3
+Size (tcl9.0.1-src.tar.gz) = 11697609 bytes
