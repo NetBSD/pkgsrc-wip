@@ -1,0 +1,30 @@
+$NetBSD$
+
+Avoiding to generate CMake RPATH_CHANGE target for third party librarires.
+
+--- CMakeLists.txt.orig	2024-12-21 00:00:00.000000000 +0000
++++ CMakeLists.txt
+@@ -256,6 +256,7 @@ ExternalProject_Add(
+         -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/realesrgan_install
+         -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+         -DUSE_SYSTEM_NCNN=${USE_SYSTEM_NCNN}
++	-DCMAKE_SKIP_RPATH:BOOL=TRUE
+     BUILD_ALWAYS ON
+     INSTALL_COMMAND ${CMAKE_COMMAND} --build . --target install --config ${CMAKE_BUILD_TYPE}
+ )
+@@ -269,6 +270,7 @@ ExternalProject_Add(
+         -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/realcugan_install
+         -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+         -DUSE_SYSTEM_NCNN=${USE_SYSTEM_NCNN}
++	-DCMAKE_SKIP_RPATH:BOOL=TRUE
+     BUILD_ALWAYS ON
+     INSTALL_COMMAND ${CMAKE_COMMAND} --build . --target install --config ${CMAKE_BUILD_TYPE}
+ )
+@@ -282,6 +284,7 @@ ExternalProject_Add(
+         -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/rife_install
+         -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+         -DUSE_SYSTEM_NCNN=${USE_SYSTEM_NCNN}
++	-DCMAKE_SKIP_RPATH:BOOL=TRUE
+     BUILD_ALWAYS ON
+     INSTALL_COMMAND ${CMAKE_COMMAND} --build . --target install --config ${CMAKE_BUILD_TYPE}
+ )

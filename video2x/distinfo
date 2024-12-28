@@ -1,0 +1,15 @@
+$NetBSD$
+
+BLAKE2s (video2x/librealcugan-ncnn-vulkan-52f598265a973fc8b17eb5e13cddc0e71c0a79dc.tar.gz) = 7de4ea1c2abf3ea3b93741c7dff03073dcbfa4993020119b26b795b6554e757e
+SHA512 (video2x/librealcugan-ncnn-vulkan-52f598265a973fc8b17eb5e13cddc0e71c0a79dc.tar.gz) = 2f8e456f50c301a25892f773c53f94093f180e6f32f1487ae200c98d8461116b1372b052fe289704742c9eed9a7c52e50a9423e06b50daefc498e75dc3591a1c
+Size (video2x/librealcugan-ncnn-vulkan-52f598265a973fc8b17eb5e13cddc0e71c0a79dc.tar.gz) = 43800573 bytes
+BLAKE2s (video2x/librealesrgan-ncnn-vulkan-cd68df6f98f036fcc9e7d63597ea6faa427c2d2d.tar.gz) = 23e1c0ec7330202b7170907cebe2dcad9bdad4c4cb4635508a324359b70e690a
+SHA512 (video2x/librealesrgan-ncnn-vulkan-cd68df6f98f036fcc9e7d63597ea6faa427c2d2d.tar.gz) = 8de2688c9b410911e253269f0456991334335e217ffcdf925dcfef563ab376a1d92179ddf82b5e8334f30bf51b16e0d0cf5d7c8b8af5e4e687e83a19f2bd7b50
+Size (video2x/librealesrgan-ncnn-vulkan-cd68df6f98f036fcc9e7d63597ea6faa427c2d2d.tar.gz) = 108374 bytes
+BLAKE2s (video2x/librife-ncnn-vulkan-f2edda49a5fd817a7137509e54e70d2e30d9b684.tar.gz) = e0948c180286c2e36bf88ee54b6e7c0625fe18a82aeff134acf752146d69adc6
+SHA512 (video2x/librife-ncnn-vulkan-f2edda49a5fd817a7137509e54e70d2e30d9b684.tar.gz) = 73933e67757bb92ab7ee6f56203ee4d47f5dd3437505fb9b83ef82221e01605711f7a47765446e668787ef234c259cd0574bb8f9f03354c2a1be38d08b9d8d5b
+Size (video2x/librife-ncnn-vulkan-f2edda49a5fd817a7137509e54e70d2e30d9b684.tar.gz) = 428382218 bytes
+BLAKE2s (video2x/video2x-6.3.1.tar.gz) = f06aea047c16357918ea4570708d8678ec8eea32f0c5502e96da25de18d580f7
+SHA512 (video2x/video2x-6.3.1.tar.gz) = 427161f0c768276f0b6e7d685b78c83e1711e50337f32da628b9980d468a5a5a8b01b630e52e38b8895dac160061138e7d4d65f7600fcba47e8593372fc916b9
+Size (video2x/video2x-6.3.1.tar.gz) = 515762222 bytes
+SHA1 (patch-CMakeLists.txt) = 78b642998a82c2a8f191dd00db60bee817776dc0

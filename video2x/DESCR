@@ -1,0 +1,9 @@
+A Machine learning-based lossless video super resolution framework
+
+Video2X came a long way from its original concepts to what it has become today.
+It started as a simple concept of "waifu2x can upscale images, and a video is
+just a sequence of images". Then, a PoC was made which can barely upscale a
+single video with waifu2x-caffe and with fixed settings. Now, Video2X has
+become a comprehensive and customizable video upscaling tool with a nice GUI
+and a community around it. This article documents in detail how Video2X's
+concept was born, and what happened during its development.
