@@ -11,21 +11,18 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-# Depends on an unpublished crates. Can't use cargo.mk to fetch them.
+# Depends on unpublished crates. Can't use cargo.mk to fetch them.
 ASYNC_ZIP_REV=		c909fda63fcafe4af496a07bfda28a5aae97e58d
 PUBGRUB_REV=		648aa343486e5529953153781fc86025c73c4a61
 TL_REV=			6e25b2ee2513d75385101a8ff9f591ef51f314ec
-VERSION_RANGES_REV=	648aa343486e5529953153781fc86025c73c4a61
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		async_zip-${ASYNC_ZIP_REV}.tar.gz
 DISTFILES+=		pubgrub-${PUBGRUB_REV}.tar.gz
 DISTFILES+=		tl-${TL_REV}.tar.gz
-DISTFILES+=		version-ranges-${VERSION_RANGES_REV}.tar.gz
 
 SITES.async_zip-${ASYNC_ZIP_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=charliermarsh/}rs-async-zip/archive/${ASYNC_ZIP_REV}.tar.gz
 SITES.pubgrub-${PUBGRUB_REV}.tar.gz+=			-${MASTER_SITE_GITHUB:=astral-sh/}pubgrub/archive/${PUBGRUB_REV}.tar.gz
 SITES.tl-${TL_REV}.tar.gz+=				-${MASTER_SITE_GITHUB:=astral-sh/}tl/archive/${TL_REV}.tar.gz
-SITES.version-ranges-${VERSION_RANGES_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=astral-sh/}pubgrub/archive/${VERSION_RANGES_REV}.tar.gz
 
 RUST_REQ=	1.83
 USE_LANGUAGES+=	c c++

@@ -20,7 +20,7 @@ CARGO_CRATE_DEPENDS+=	async-channel-2.3.1
 CARGO_CRATE_DEPENDS+=	async-compression-0.4.18
 CARGO_CRATE_DEPENDS+=	async-trait-0.1.83
 CARGO_CRATE_DEPENDS+=	async_http_range_reader-0.9.1
-# Depends on an unpublished crates. Can't use cargo.mk to fetch them.
+# Depends on unpublished crates. Can't use cargo.mk to fetch them.
 #CARGO_CRATE_DEPENDS+=	async_zip-0.0.17
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.4.0
@@ -284,7 +284,7 @@ CARGO_CRATE_DEPENDS+=	procfs-0.17.0
 CARGO_CRATE_DEPENDS+=	procfs-core-0.17.0
 CARGO_CRATE_DEPENDS+=	ptr_meta-0.3.0
 CARGO_CRATE_DEPENDS+=	ptr_meta_derive-0.3.0
-# Depends on an unpublished crates. Can't use cargo.mk to fetch them.
+# Depends on unpublished crates. Can't use cargo.mk to fetch them.
 #CARGO_CRATE_DEPENDS+=	pubgrub-0.2.1
 CARGO_CRATE_DEPENDS+=	quinn-0.11.6
 CARGO_CRATE_DEPENDS+=	quinn-proto-0.11.9
@@ -412,7 +412,7 @@ CARGO_CRATE_DEPENDS+=	tinystr-0.7.6
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	tinyvec-1.8.1
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
-# Depends on an unpublished crates. Can't use cargo.mk to fetch them.
+# Depends on unpublished crates. Can't use cargo.mk to fetch them.
 #CARGO_CRATE_DEPENDS+=	tl-0.7.8
 CARGO_CRATE_DEPENDS+=	tokio-1.42.0
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.4.0
@@ -462,7 +462,7 @@ CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.2
 CARGO_CRATE_DEPENDS+=	uuid-1.11.0
 CARGO_CRATE_DEPENDS+=	valuable-0.1.0
-# Depends on an unpublished crates. Can't use cargo.mk to fetch them.
+# Depends on unpublished crates. Can't use cargo.mk to fetch them.
 #CARGO_CRATE_DEPENDS+=	version-ranges-0.1.1
 CARGO_CRATE_DEPENDS+=	version_check-0.9.5
 CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
