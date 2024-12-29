@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (with-editor-3.4.3.tar.gz) = cdf2959edcf0275a24f9a670c22ad60b376a2658eacc3aa377fb54aeedaa5008
+SHA512 (with-editor-3.4.3.tar.gz) = f628617d2924ed05d901bea836c2174a88c88fa7bd5a2f4afc71e2f38d9853e5719cb74f2eeab46bab10d007ed9b74599824e16028735aa4f4be66745ae6f22a
+Size (with-editor-3.4.3.tar.gz) = 34087 bytes
+SHA1 (patch-default.mk) = 98716bceb03da0e0c71a9a1a1555a05d4f3aa93d
+SHA1 (patch-docs_Makefile) = 588e442c590a139bcaacf04e958c310532788eb7
+SHA1 (patch-lisp_with-editor.el) = d79327212381e84ae06f7caade69c597e421cf2a

@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${EMACS_LISPPREFIX}/with-editor/with-editor-autoloads.el
+${EMACS_LISPPREFIX}/with-editor/with-editor.el
+${EMACS_LISPPREFIX}/with-editor/with-editor.elc

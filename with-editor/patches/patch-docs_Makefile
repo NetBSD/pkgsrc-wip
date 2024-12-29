@@ -1,0 +1,15 @@
+$NetBSD$
+
+temporarily disable html html-dir pdf
+
+--- docs/Makefile.orig	2024-12-29 21:28:18.621307214 +0900
++++ docs/Makefile	2024-12-30 04:26:08.195605356 +0900
+@@ -1,7 +1,7 @@
+ -include ../config.mk
+ include ../default.mk
+ 
+-docs: texi info html html-dir pdf
++docs: texi info 
+ 
+ texi:     $(PKG).texi
+ info:     $(PKG).info dir
