@@ -1,6 +1,40 @@
-multimedia/streamlink: update to streamlink-7.0.0
+multimedia/streamlink: update to streamlink-7.1.1
 
 Changelog:
+
+== streamlink 7.1.1 (2024-12-28)
+
+- Fixed: `--show-matchers=pluginname` not working when plugins are
+         loaded lazily
+
+
+== streamlink 7.1.0 (2024-12-28)
+
+- Added: `--show-matchers=pluginname` CLI argument
+- Updated: `Streamlink` and `Plugin` constructors to allow both
+           `Mapping` and `Options` as `options` types
+- Fixed: uncaught DASH errors if FFmpeg is unavailable
+  As a side effect, if FFmpeg is unavailable, DASH streams will only
+  return one sub-stream of the video and/or audio streams that would
+  be muxed otherwise.
+- Fixed: incorrect DASH segment duration in timeline manifests
+- Fixed: dynamic DASH streams incorrectly requiring the `publishTime`
+  and `availabilityStartTime` attributes
+- Fixed: incorrect DASH segment and manifest base-URL joining
+- Fixed: `matchers` and `arguments` objects being shared in inherited
+  `Plugin` classes
+- Updated plugins:
+  - various: replaced verbose URL matcher regexes of most plugins with
+             multiple simple ones
+  - bilibili: updated schema to include MPEG-TS HLS streams
+  - bilibili: added back high-res `HTTPStream` streams from the v1 API
+              with higher priority
+  - mangomolo: replaced media.gov.kw with 51.com.kw
+  - soop: rewritten authentication
+  - vkplay: renamed to vkvideo and updated matcher
+  - welt: fixed schema
+- Build: removed `typing-extensions` from runtime dependencies
+
 
 == streamlink 7.0.0 (2024-11-04)
 

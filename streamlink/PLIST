@@ -460,9 +460,9 @@ ${PYSITELIB}/streamlink/plugins/vinhlongtv.pyo
 ${PYSITELIB}/streamlink/plugins/vk.py
 ${PYSITELIB}/streamlink/plugins/vk.pyc
 ${PYSITELIB}/streamlink/plugins/vk.pyo
-${PYSITELIB}/streamlink/plugins/vkplay.py
-${PYSITELIB}/streamlink/plugins/vkplay.pyc
-${PYSITELIB}/streamlink/plugins/vkplay.pyo
+${PYSITELIB}/streamlink/plugins/vkvideo.py
+${PYSITELIB}/streamlink/plugins/vkvideo.pyc
+${PYSITELIB}/streamlink/plugins/vkvideo.pyo
 ${PYSITELIB}/streamlink/plugins/vtvgo.py
 ${PYSITELIB}/streamlink/plugins/vtvgo.pyc
 ${PYSITELIB}/streamlink/plugins/vtvgo.pyo
@@ -549,9 +549,6 @@ ${PYSITELIB}/streamlink/stream/http.pyo
 ${PYSITELIB}/streamlink/stream/segmented/__init__.py
 ${PYSITELIB}/streamlink/stream/segmented/__init__.pyc
 ${PYSITELIB}/streamlink/stream/segmented/__init__.pyo
-${PYSITELIB}/streamlink/stream/segmented/concurrent.py
-${PYSITELIB}/streamlink/stream/segmented/concurrent.pyc
-${PYSITELIB}/streamlink/stream/segmented/concurrent.pyo
 ${PYSITELIB}/streamlink/stream/segmented/segment.py
 ${PYSITELIB}/streamlink/stream/segmented/segment.pyc
 ${PYSITELIB}/streamlink/stream/segmented/segment.pyo
@@ -742,6 +739,9 @@ ${PYSITELIB}/streamlink_cli/output/player.py
 ${PYSITELIB}/streamlink_cli/output/player.pyc
 ${PYSITELIB}/streamlink_cli/output/player.pyo
 ${PYSITELIB}/streamlink_cli/py.typed
+${PYSITELIB}/streamlink_cli/show_matchers.py
+${PYSITELIB}/streamlink_cli/show_matchers.pyc
+${PYSITELIB}/streamlink_cli/show_matchers.pyo
 ${PYSITELIB}/streamlink_cli/streamrunner.py
 ${PYSITELIB}/streamlink_cli/streamrunner.pyc
 ${PYSITELIB}/streamlink_cli/streamrunner.pyo
