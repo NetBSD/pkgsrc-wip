@@ -3,6 +3,7 @@ $NetBSD$
 BLAKE2s (magit-4.1.3.tar.gz) = b9c8bab2b4002a537ac4e2efb9b737f43eafb6fa37aea4213dba502cce0f17c0
 SHA512 (magit-4.1.3.tar.gz) = 1f589b9d08e29a072d71e363c4326db341890e25e52d8c5dd75c0f9dd5bb1e663d2fc0d5c6be396dd557318725cc063b7cb0ed2acddbf9fa980c6e36a415edf3
 Size (magit-4.1.3.tar.gz) = 676146 bytes
-SHA1 (patch-default.mk) = 73b21b3f68b1cd880ac1db3a6a847980e4c09516
+SHA1 (patch-Makefile) = 81822d9a722472f1c79d1d4550f644e7796be37a
+SHA1 (patch-default.mk) = 1a5e17b74ff13431a9469fd10e01b8109b9a39c4
 SHA1 (patch-lisp_magit-base.el) = 411583a93a88c8307cd9eb12f936f71812d43daa
 SHA1 (patch-lisp_magit-section.el) = 5c129ad6ca17858b7dce8030f0b7f8b7d0086aa8

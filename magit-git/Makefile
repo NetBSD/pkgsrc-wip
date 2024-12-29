@@ -15,12 +15,15 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 
-MAKE_ENV=	MANUAL_HTML_ARGS=
+#MAKE_ENV+=	MANUAL_HTML_ARGS=
+#MAKE_ENV+=	-DPREFIX=${PREFIX}
+#MAKE_ENV+=	-DDASH_DIR=${PREFIX}/share/emacs/site-lisp/dash
+#MAKE_ENV+=	-DINSTALL_INFO=install-info
 
 SUBST_CLASSES+=		lisp
 SUBST_FILES.lisp=	default.mk
 SUBST_STAGE.lisp=	pre-build
-SUBST_SED.lisp=		-e s.@@@PREFIX@@@.${PREFIX}.
+SUBST_SED.lisp=		-e s.@@PREFIX@@.${PREFIX}.
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	#
@@ -30,8 +33,9 @@ MAKE_JOBS_SAFE=	no
 .include "../../editors/emacs/modules.mk"
 
 #INFO_FILES=	yes
-#UILD_TARGET=	all
+#UILD_TARGET=	lisp
 TEST_TARGET=	check
 
 .include "../../wip/dash-el/buildlink3.mk"
+.include "../../wip/with-editor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
