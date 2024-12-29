@@ -1,9 +1,29 @@
-Now another package with-editor is necessary (magit/with-editor at github)
+emacs
+M-x load-library magit RET
+M-x magit-status RET
 
-In toplevel form:
-git-commit.el:109:2: Error: Cannot open load file: No such file or directory, with-editor
-gmake[1]: *** [Makefile:70: git-commit.elc] Error 1
-gmake[1]: Leaving directory '/tmp/wip/magit-git/work/magit-4.1.3/lisp'
-gmake: *** [Makefile:74: lisp] Error 2
-*** Error code 2
-
+ ■  Warning (comp): dash.el:615:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:628:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:645:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1059:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1219:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1272:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1320:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1335:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1341:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:1523:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:2254:2: Warning: docstring has wrong usage of unescaped single quotes (use \= or different quoting)
+ ■  Warning (comp): dash.el:2613:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:2632:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): dash.el:3318:2: Warning: docstring wider than 80 characters
+ ■  Warning (comp): magit-section.el:1901:22: Warning: reference to free variable `alist-get'
+ ■  Warning (comp): magit-section.el: Warning: the function `(setf compat-call)' is not known to be defined.
+ ■  Warning (comp): magit-git.el:596:20: Warning: reference to free variable `executable-find'
+ ■  Warning (comp): magit-git.el:952:25: Warning: reference to free variable `executable-find'
+ ■  Warning (comp): magit-git.el:596:8: Warning: the function `compat-call' is not known to be defined.
+ ■  Warning (comp): magit-mode.el:1394:34: Warning: reference to free variable `assoc-delete-all'
+ ■  Warning (comp): magit-mode.el:1394:22: Warning: the function `compat-call' is not known to be defined.
+ ■  Warning (comp): magit-autorevert.el:111:28: Warning: reference to free variable `executable-find'
+ ■  Warning (comp): magit-autorevert.el:111:16: Warning: the function `compat-call' is not known to be defined.
+ ■  Warning (comp): magit-branch.el:211:55: Warning: the function `transient-scope' is not known to be defined.
+ ■  Warning (comp): magit-remote.el:71:55: Warning: the function `transient-scope' is not known to be defined.
