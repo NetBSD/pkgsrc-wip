@@ -1,2 +1,4 @@
 @comment $NetBSD$
 bin/uv
+bin/uv-globfilter
+bin/uvx
