@@ -1,10 +1,18 @@
 $NetBSD$
 
 work around
-
---- default.mk.orig	2024-12-30 04:31:36.943965754 +0900
-+++ default.mk	2024-12-30 04:28:28.529903285 +0900
-@@ -26,6 +26,7 @@ ORG_LOAD_PATH  = -L ../../org/lisp
+ 
+--- default.mk.orig	2024-12-01 23:19:07.000000000 +0900
++++ default.mk	2024-12-30 12:24:32.887985629 +0900
+@@ -19,6 +19,7 @@ EMACS_ARGS ?=
+ EMACS_ARGS += --eval '(setq with-editor-emacsclient-executable nil)'
+ 
+ LOAD_PATH  ?= $(addprefix -L ../../,$(DEPS))
++LOAD_PATH  += -L  @@PREFIX@@/share/emacs/site-lisp/compat
+ LOAD_PATH  += -L .
+ 
+ ifndef ORG_LOAD_PATH
+@@ -26,6 +27,7 @@ ORG_LOAD_PATH  = -L ../../org/lisp
  endif
  
  INSTALL_INFO     ?= $(shell command -v ginstall-info || printf install-info)

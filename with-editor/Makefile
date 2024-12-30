@@ -22,6 +22,11 @@ USE_LANGUAGES=	#
 USE_TOOLS+=	gmake makeinfo
 MAKE_JOBS_SAFE=	no
 
+SUBST_CLASSES+=         lisp
+SUBST_FILES.lisp=       default.mk
+SUBST_STAGE.lisp=       pre-build
+SUBST_SED.lisp=         -e s.@@PREFIX@@.${PREFIX}.
+
 .include "../../editors/emacs/modules.mk"
 
 #INFO_FILES=		yes
@@ -38,16 +43,6 @@ do-install:
 	${INSTALL_DATA} lisp/with-editor.elc          ${DESTDIR}${INSTALLATION_DIRS} ; \
 	)
 
+.include "../../wip/emacs-compat/buildlink3.mk"
 .include "../../wip/dash-el/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-
-# /tmp/wip/with-editor/work/with-editor-3.4.3/lisp:
-# total 288
-# drwxr-xr-x  2 makoto  wheel    240 Dec 30 04:34 .
-# drwxr-xr-x  5 makoto  wheel    576 Dec 30 04:34 ..
-# -rw-r--r--  1 makoto  wheel   1166 Dec  1 23:19 Makefile
-# -rw-r--r--  1 makoto  wheel   4137 Dec 30 04:34 with-editor-autoloads.el
-# -rw-r--r--  1 makoto  wheel  43284 Dec 30 04:34 with-editor.el
-# -rw-r--r--  1 makoto  wheel  43282 Dec  1 23:19 with-editor.el.orig
-# -rw-r--r--  1 makoto  wheel  36291 Dec 30 04:34 with-editor.elc
