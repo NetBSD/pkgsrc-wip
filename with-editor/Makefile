@@ -33,9 +33,9 @@ AUTO_MKDIRS=		yes
 
 do-install:
 	( cd ${WRKSRC} ; \
-	${INSTALL} lisp/with-editor-autoloads.el ${DESTDIR}${INSTALLATION_DIRS} ; \
-	${INSTALL} lisp/with-editor.el           ${DESTDIR}${INSTALLATION_DIRS} ; \
-	${INSTALL} lisp/with-editor.elc          ${DESTDIR}${INSTALLATION_DIRS} ; \
+	${INSTALL_DATA} lisp/with-editor-autoloads.el ${DESTDIR}${INSTALLATION_DIRS} ; \
+	${INSTALL_DATA} lisp/with-editor.el           ${DESTDIR}${INSTALLATION_DIRS} ; \
+	${INSTALL_DATA} lisp/with-editor.elc          ${DESTDIR}${INSTALLATION_DIRS} ; \
 	)
 
 .include "../../wip/dash-el/buildlink3.mk"
