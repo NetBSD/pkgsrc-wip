@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (transient-0.8.1.tar.gz) = 7e79f1a1e5b1831ca61b408c26ed74522cbca2004b7db5b1d8b3f80a33c71062
+SHA512 (transient-0.8.1.tar.gz) = 7d278452dbbd259654aa5f9576b94613224b7243f26445a364081a7e50eaf8fcc82d2699dceeffdd9a1364bcd4bc27af139b73ac90c251c45332247c0fe61c66
+Size (transient-0.8.1.tar.gz) = 152761 bytes
+SHA1 (patch-default.mk) = 2fa9fd9572b8eac529863969bf6037a7ae02097e
+SHA1 (patch-docs_Makefile) = 588e442c590a139bcaacf04e958c310532788eb7

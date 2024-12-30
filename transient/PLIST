@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${EMACS_LISPPREFIX}/transient/transient-autoloads.el
+${EMACS_LISPPREFIX}/transient/transient.el
+${EMACS_LISPPREFIX}/transient/transient.elc
