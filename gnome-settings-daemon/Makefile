@@ -17,8 +17,6 @@ USE_TOOLS+=	gdbus-codegen
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-40
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
@@ -38,6 +36,8 @@ MESON_ARGS+=		-Dgudev=false
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gnome-settings-daemon.pc
+
+LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-47
 
 INSTALLATION_DIRS+=	share/examples
 post-install:
