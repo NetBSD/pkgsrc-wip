@@ -4,4 +4,4 @@ BLAKE2s (magit-4.1.3.tar.gz) = b9c8bab2b4002a537ac4e2efb9b737f43eafb6fa37aea4213
 SHA512 (magit-4.1.3.tar.gz) = 1f589b9d08e29a072d71e363c4326db341890e25e52d8c5dd75c0f9dd5bb1e663d2fc0d5c6be396dd557318725cc063b7cb0ed2acddbf9fa980c6e36a415edf3
 Size (magit-4.1.3.tar.gz) = 676146 bytes
 SHA1 (patch-Makefile) = f5ca5309c2f62fa731dc40316622d8b7b13591ae
-SHA1 (patch-default.mk) = 2a2ebceb835a1aaa2974b60ad3fba460be5939af
+SHA1 (patch-default.mk) = 26b19fb25656d1c471f347502640f76327a5a220

@@ -7,7 +7,7 @@ $NetBSD$
 3. set INSTALL_INFO
 
 --- default.mk.orig	2024-12-07 07:14:31.000000000 +0900
-+++ default.mk	2024-12-30 10:40:17.647071777 +0900
++++ default.mk	2024-12-30 13:59:47.275422244 +0900
 @@ -34,8 +34,10 @@ BATCH       = $(EMACS) -Q --batch $(EMAC
  LISP_EXTRA_TARGETS ?= check-declare
  
@@ -35,7 +35,15 @@ $NetBSD$
  
  SEQ_DIR ?= $(shell \
    find -L $(ELPA_DIR) -maxdepth 1 -regex '.*/seq-[.0-9]*' 2> /dev/null | \
-@@ -172,6 +176,7 @@ WITH_EDITOR_DIR ?= $(shell \
+@@ -165,6 +169,7 @@ TRANSIENT_DIR ?= $(shell \
+ ifeq "$(TRANSIENT_DIR)" ""
+   TRANSIENT_DIR = $(TOP)../transient/lisp
+ endif
++TRANSIENT_DIR = @@PREFIX@@/share/emacs/site-lisp/transient
+ 
+ WITH_EDITOR_DIR ?= $(shell \
+   find -L $(ELPA_DIR) -maxdepth 1 -regex '.*/with-editor-[.0-9]*' 2> /dev/null | \
+@@ -172,6 +177,7 @@ WITH_EDITOR_DIR ?= $(shell \
  ifeq "$(WITH_EDITOR_DIR)" ""
    WITH_EDITOR_DIR = $(TOP)../with-editor/lisp
  endif
