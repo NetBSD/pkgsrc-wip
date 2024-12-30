@@ -36,6 +36,7 @@ MAKE_JOBS_SAFE=	no
 #UILD_TARGET=	lisp
 TEST_TARGET=	check
 
+.include "../../wip/emacs-compat/buildlink3.mk"
 .include "../../wip/dash-el/buildlink3.mk"
 .include "../../wip/with-editor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
