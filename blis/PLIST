@@ -1,11 +1,13 @@
 @comment $NetBSD$
-include/${BLIS_VARIANT}/blis.h
-include/${BLIS_VARIANT}/cblas.h
-lib/lib${BLIS_VARIANT}.a
-lib/lib${BLIS_VARIANT}.so
-lib/lib${BLIS_VARIANT}.so.4
-lib/lib${BLIS_VARIANT}.so.4.0.0
-share/${BLIS_VARIANT}/common.mk
-share/${BLIS_VARIANT}/config.mk
-share/${BLIS_VARIANT}/config/arch/make_defs.mk
-share/pkgconfig/${BLIS_VARIANT}.pc
+include/blis.h
+include/blis/blis.h
+include/blis/cblas.h
+include/cblas.h
+lib/libblis.a
+lib/libblis.so
+lib/libblis.so.4
+lib/libblis.so.4.0.0
+lib/pkgconfig/blis.pc
+share/blis/common.mk
+share/blis/config.mk
+share/blis/config/arch/make_defs.mk
