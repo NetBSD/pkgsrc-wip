@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mozversion-2.3.0.tar.gz) = 8326554c6676b67642cb9da86b1ab8be9df0efbd
-SHA512 (mozversion-2.3.0.tar.gz) = 96e07b16542d1d52c77df095c98d67bbb27c66b6417eea854319c026e3fa9f4e47a0d9fafb651b8d1255749972a4b6abcbdc51f9fa8c3cccc1e051935bebe882
-Size (mozversion-2.3.0.tar.gz) = 3102 bytes
+BLAKE2s (mozversion-2.4.0.tar.gz) = 55ee4ad9275a4339934402a28d88917ae6daa4f2c812a19b92d8bfccac49ddea
+SHA512 (mozversion-2.4.0.tar.gz) = a5e521592aca1d23aacf850e23633e9202f102da65078aa287f9d9e5c13c5a68a3c8ae6b00cf9893e5b65fbaed4f90e76639e5e8098978fe408bb7d4a22e4763
+Size (mozversion-2.4.0.tar.gz) = 3121 bytes

@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	mozversion-2.3.0
+DISTNAME=	mozversion-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://files.pythonhosted.org/packages/2e/89/2b8669a488d2c33c7ee7135a3efa66a43f34f32c7d74049d424eddbb3331/
+MASTER_SITES=	https://files.pythonhosted.org/packages/64/1f/d6a90f6da9b362642d6d4301202f20c8750322b2b365823b0362d4505821/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
