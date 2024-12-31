@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/blessings/__init__.py
+${PYSITELIB}/blessings/__init__.pyc
+${PYSITELIB}/blessings/__init__.pyo
+${PYSITELIB}/blessings/tests.py
+${PYSITELIB}/blessings/tests.pyc
+${PYSITELIB}/blessings/tests.pyo
