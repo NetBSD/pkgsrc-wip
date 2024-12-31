@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mozlog-6.1.tar.gz) = d765b90d0048bc3cccdb7c8eb97ed8510acc6e05
-SHA512 (mozlog-6.1.tar.gz) = 96d92d350070f7c80d0b1b2c4bc620a57c165f6c18f8959a0a6df2cc36aeb8f69d1aedf35ec0d5489b1d02931a07ae5e4f5253b681c20385d44a31ba00f4dfbc
-Size (mozlog-6.1.tar.gz) = 50754 bytes
+BLAKE2s (mozlog-8.0.0.tar.gz) = 86d95da948b16598120c647819990c2c17c1c94d85751fc1b100e7d53ab1c348
+SHA512 (mozlog-8.0.0.tar.gz) = 25a9c9e35f733dc01de654ca60e23cfd583d82f5463e7349ef8306e5c2e840f3d5ba33465665871644be77eac1aa167627758c3cdbba14b0df2ce72fe24eb4c4
+Size (mozlog-8.0.0.tar.gz) = 53098 bytes
