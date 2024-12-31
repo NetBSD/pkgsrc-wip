@@ -1,0 +1,4 @@
+This was added as a dep for py-mozlog. However, now the dep has been replaced
+with py-blessed. Hence this package can be removed - unless someone else wants
+it.
+
