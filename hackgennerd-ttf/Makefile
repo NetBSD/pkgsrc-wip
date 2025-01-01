@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	hackgennerd-ttf-2.9.1
+PKGNAME=	hackgennerd-ttf-2.10.0
 DISTNAME=	HackGen_NF_v${PKGVERSION_NOREV}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yuru7/}
