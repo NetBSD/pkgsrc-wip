@@ -71,7 +71,7 @@ PATCH_DIST_STRIP=	-p1
 PATCHFILES=		gcc-12.4.0-Darwin-x86_64.diff
 PATCH_SITES=		ftp://ftp.netbsd.org/pub/pkgsrc/distfiles
 .else # use a distribution patchset to avoid conflicts with above
-PATCHFILES=		gcc-12.4.0-gcc-12.4.0-patch-libgcc_config.host
+PATCHFILES=		gcc-12.4.0-patch-libgcc_config.host
 PATCH_SITES=		ftp://ftp.netbsd.org/pub/pkgsrc/distfiles
 .endif
 
