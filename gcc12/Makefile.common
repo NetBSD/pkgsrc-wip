@@ -57,12 +57,22 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
 .include "options.mk"
 
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+# note: homebrew patchset should work for both x86_64 and aarch64, but
+#       may only work up to Sonoma (MacOS v14, Darwin v23)
+# see:  https://formulae.brew.sh/formula/gcc@12
+#
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 150000
 BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
 PATCHFILES=		gcc-12.4.0.diff
 PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/ca7047d/gcc/
 PATCH_DIST_STRIP=	-p1
+.elif ${OPSYS} == "Darwin"
+PATCHFILES=		gcc-12.4.0-Darwin-x86_64.diff
+PATCH_SITES=		ftp://ftp.netbsd.org/pub/pkgsrc/distfiles
+.else # use a distribution patchset to avoid conflicts with above
+PATCHFILES=		gcc-12.4.0-gcc-12.4.0-patch-libgcc_config.host
+PATCH_SITES=		ftp://ftp.netbsd.org/pub/pkgsrc/distfiles
 .endif
 
 ## For graphite support.
