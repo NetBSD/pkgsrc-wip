@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mozrunner-8.0.2.tar.gz) = f7e2733384c80339f771d92efc4c2562745db14b
-SHA512 (mozrunner-8.0.2.tar.gz) = 075635d8e95f81a03e0e188d96e3e2744aeff2640a43aecec44afc1e7f80e786ad3e7720c0c4e968ff2331f6e0f33dee182ece1d012c6662f71858711ee43dd3
-Size (mozrunner-8.0.2.tar.gz) = 28297 bytes
+BLAKE2s (mozrunner-8.3.1.tar.gz) = 8707345c51d7309a52e3dece9bd20edbe66597cbd4c15453ea1d7cd5568bca6d
+SHA512 (mozrunner-8.3.1.tar.gz) = a2d146b00271103dfde9376587e69f18f9aab26cacace21d525c6b139318486c6b119f0178c8854cf9d7a7c9f04562555e569d5df12c04ed7fe76f8db889e893
+Size (mozrunner-8.3.1.tar.gz) = 31167 bytes
