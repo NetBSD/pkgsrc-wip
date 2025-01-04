@@ -2462,6 +2462,7 @@ SUBDIR+=	muttprint
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
 SUBDIR+=	mxallowd
+SUBDIR+=	mxml4
 SUBDIR+=	myfitter
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs

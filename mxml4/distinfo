@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.9 2024/11/14 12:10:03 nros Exp $
+
+BLAKE2s (mxml-4.0.3.tar.gz) = 85816ed021468e15307c192ba890a030cc40e3b7a3afaaa97ed34957e4bb21db
+SHA512 (mxml-4.0.3.tar.gz) = 4e03e935c85addb6ce7183a80eb69e309058b51ff058ddc0cf44d16e3b17b455c0dfedd199d5a28292e805a61ec0d0fb698ee88397e53f7ec5d8b54db33f4300
+Size (mxml-4.0.3.tar.gz) = 1576803 bytes
+SHA1 (patch-Makefile.in) = 9b4eb417c4377b084ebe92c1b3a550f3240b401a
+SHA1 (patch-configure) = 616f1d644fa6c92f8dfb4ae97dce79ccaaf5c9e5

@@ -1,0 +1,35 @@
+$NetBSD$
+
+* Let pkgsrc set optimize level
+* Don't add debug symbols if the user doesn't want it
+* Fix /usr/local as prefix in pkgsrc
+
+--- configure.orig	2024-04-21 21:10:21.000000000 +0000
++++ configure
+@@ -4429,7 +4429,7 @@ then :
+ else $as_nop
+ 
+     CSFLAGS="-o runtime"
+-    OPTIM="$OPTIM -g -Os"
++    OPTIM="$OPTIM"
+     OPTIONS=""
+ 
+ fi
+@@ -4458,7 +4458,7 @@ else $as_nop
+ 
+ 	# Otherwise use the Fortify enhancements to catch any unbounded
+ 	# string operations...
+-	CPPFLAGS="$CPPFLAGS -D_FORTIFY_SOURCE=3"
++	CPPFLAGS="$CPPFLAGS"
+ 
+ fi
+ 
+@@ -4724,7 +4724,7 @@ else $as_nop
+ 
+ fi
+ PKGCONFIG_LIBS="$LINK_MXML"
+-if test "$realprefix" != "/usr" -a "$realprefix" != "/usr/local"
++if test "$realprefix" != "/usr"
+ then :
+ 
+     PKGCONFIG_LIBS="-L\${libdir} $PKGCONFIG_LIBS"

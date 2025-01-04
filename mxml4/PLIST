@@ -1,0 +1,12 @@
+@comment $NetBSD$
+include/libmxml4/mxml.h
+lib/libmxml4.la
+lib/pkgconfig/mxml4.pc
+man/man3/mxml4.3
+share/doc/mxml4/CHANGES
+share/doc/mxml4/LICENSE
+share/doc/mxml4/NOTICE
+share/doc/mxml4/README
+share/doc/mxml4/mxml-cover.png
+share/doc/mxml4/mxml.epub
+share/doc/mxml4/mxml.html

@@ -1,0 +1,118 @@
+$NetBSD$
+
+* Libtoolize build
+
+--- Makefile.in.orig	2024-04-21 21:10:21.000000000 +0000
++++ Makefile.in
+@@ -43,10 +43,10 @@ SHELL		=	/bin/sh
+ # Installation programs...
+ #
+ 
+-INSTALL_BIN	=	$(INSTALL) -c -m 755
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) 
+ INSTALL_DATA	=	$(INSTALL) -c -m 444
+ INSTALL_DIR	=	$(INSTALL) -d -m 755
+-INSTALL_LIB	=	$(INSTALL) -c -m 755
++INSTALL_LIB	=	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB)
+ INSTALL_MAN	=	$(INSTALL) -c -m 444
+ 
+ 
+@@ -54,7 +54,7 @@ INSTALL_MAN	=	$(INSTALL) -c -m 444
+ # Libraries...
+ #
+ 
+-LIBMXML		=	@LIBMXML@
++LIBMXML		=	libmxml4.la
+ LIBMXML_BASE	=	@LIBMXML_BASE@
+ LIBMXML_STATIC	=	@LIBMXML_STATIC@
+ MXML_MAN	=	@MXML_MAN@
+@@ -140,10 +140,10 @@ BUILDROOT	=	$(DSTROOT)$(DESTDIR)
+ #
+ 
+ .SILENT:
+-.SUFFIXES:	.c .man .o
+-.c.o:
++.SUFFIXES:	.c .man .lo
++.c.lo:
+ 	echo Compiling $<
+-	$(CC) $(CFLAGS) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
+ 
+ 
+ #
+@@ -206,7 +206,7 @@ distclean:	clean
+ 
+ .NOTPARALLEL: install install-$(LIBMXML) $(INSTALL_STATIC)
+ 
+-install:	$(TARGETS) install-$(LIBMXML) $(INSTALL_STATIC)
++install:	$(TARGETS) install-$(LIBMXML) 
+ 	echo Installing documentation in $(BUILDROOT)$(docdir)...
+ 	$(INSTALL_DIR) $(BUILDROOT)$(docdir)
+ 	for file in $(DOCFILES); do \
+@@ -222,11 +222,10 @@ install:	$(TARGETS) install-$(LIBMXML) $
+ 	$(INSTALL_DIR) $(BUILDROOT)$(mandir)/man3
+ 	$(INSTALL_MAN) doc/mxml.3 $(BUILDROOT)$(mandir)/man3/$(MXML_MAN)
+ 
+-install-libmxml.a:	libmxml.a
+-	echo Installing libmxml.a to $(BUILDROOT)$(libdir)...
++install-libmxml.la:	libmxml.la
++	echo Installing libmxml.la to $(BUILDROOT)$(libdir)...
+ 	$(INSTALL_DIR) $(BUILDROOT)$(libdir)
+-	$(INSTALL_LIB) libmxml.a $(BUILDROOT)$(libdir)
+-	$(RANLIB) $(BUILDROOT)$(libdir)/libmxml.a
++	$(INSTALL_LIB) libmxml.la $(BUILDROOT)$(libdir)
+ 
+ install-libmxml.so.2:	libmxml.so.2
+ 	echo Installing libmxml.so to $(BUILDROOT)$(libdir)...
+@@ -243,11 +242,10 @@ install-libmxml.2.dylib: libmxml.2.dylib
+ 	$(RM) $(BUILDROOT)$(libdir)/libmxml.dylib
+ 	$(LN) libmxml.2.dylib $(BUILDROOT)$(libdir)/libmxml.dylib
+ 
+-install-libmxml4.a:	libmxml4.a
++install-libmxml4.la:	libmxml4.la
+ 	echo Installing libmxml4.a to $(BUILDROOT)$(libdir)...
+ 	$(INSTALL_DIR) $(BUILDROOT)$(libdir)
+-	$(INSTALL_LIB) libmxml4.a $(BUILDROOT)$(libdir)
+-	$(RANLIB) $(BUILDROOT)$(libdir)/libmxml4.a
++	$(INSTALL_LIB) libmxml4.la $(BUILDROOT)$(libdir)
+ 
+ install-libmxml4.so.2:	libmxml4.so.2
+ 	echo Installing libmxml4.so to $(BUILDROOT)$(libdir)...
+@@ -354,15 +352,13 @@ sloc:
+ 
+ 
+ #
+-# libmxml.a
++# libmxml.la
+ #
+ 
+-libmxml.a libmxml4.a:	$(LIBOBJS)
++libmxml.la libmxml4.la:	$(LIBOBJS:.o=.lo)
+ 	echo Creating $@...
+-	$(RM) $@
+-	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
+-	$(RANLIB) $@
+-
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${LIBOBJS:.o=.lo} \
++		-o ${LIBMXML} -rpath ${PREFIX}/lib -version-info 2:0
+ $(LIBOBJS):	mxml.h mxml-private.h
+ 
+ 
+@@ -405,13 +401,13 @@ libmxml.2.dylib libmxml4.2.dylib:	$(LIBO
+ # testmxml
+ #
+ 
+-testmxml:	$(LIBMXML_STATIC) testmxml.o
++testmxml:	$(LIBMXML) testmxml.o
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ testmxml.o $(LIBMXML_STATIC) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ testmxml.o $(LIBMXML) $(LIBS)
+ 
+-testmxml-vg:	$(LIBOBJS) testmxml.o
++testmxml-vg:	$(LIBMXML) $(LIBOBJS:.o=.lo) testmxml.o
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ testmxml.o $(LIBOBJS) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ testmxml.o $(LIBOBJS:.o=.lo) $(LIBS)
+ 
+ testmxml.o:	mxml.h
+ 

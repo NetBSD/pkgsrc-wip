@@ -1,0 +1,4 @@
+Mini-XML 4 is a small XML parsing library that you can use to
+read XML and XML-like data files in your application without
+requiring large non-standard libraries.
+Older version of this library is in textproc/mxml .
