@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	mozinfo-1.2.2
+DISTNAME=	mozinfo-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
-MASTER_SITES=	https://files.pythonhosted.org/packages/49/af/5544ceda137684e1d7dcecfd7e2d7b73dc0b4b99a0b9d1bb0cafb5c4cb73/
+MASTER_SITES=	https://files.pythonhosted.org/packages/23/35/96cccb2244a08247f5c1b5e810d6117d35a30e4a3e29679ed0c7dd2406c6/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
@@ -15,5 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-mozfile>=0.12:../../wip/py-mozfile
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

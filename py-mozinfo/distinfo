@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mozinfo-1.2.2.tar.gz) = 83195c7c582175ec663ab4744bfce34da753aa23
-SHA512 (mozinfo-1.2.2.tar.gz) = 3d24a5e21a8548cab2c685f7d3b36a1383f7cd1ada7b88e94adc37cb60ee656bdbfe4c64cab55889c9897b048f902f4696768915d3f60442a2cf5b6c2ba7b371
-Size (mozinfo-1.2.2.tar.gz) = 5818 bytes
+BLAKE2s (mozinfo-1.2.3.tar.gz) = 037a4e2de8832ef6e360f8baf1751d6843ff93496d2ac1d18362c6dcd6e64730
+SHA512 (mozinfo-1.2.3.tar.gz) = c3162dfb5807370dbf9a4906c6a4fa09bacbe754e19db5f8a0e236d607110c09e343a46550aa46b77332d6b7c25ad5c02c02c0087ece153c12a3a03861f84661
+Size (mozinfo-1.2.3.tar.gz) = 6358 bytes
