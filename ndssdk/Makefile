@@ -6,7 +6,7 @@ MASTER_SITES=	https://sourceforge.net/projects/ndssdk/files/
 
 MAINTAINER=	goon.mage@yahoo.com
 HOMEPAGE=	https://sourceforge.net/projects/ndssdk/
-COMMENT=	Nintendo DS C Compiler, tools and libraries
+COMMENT=	Nintendo DS ARM9 C and Objective-C Compiler, tools and libraries
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/ndssdk-1.8.0.1
