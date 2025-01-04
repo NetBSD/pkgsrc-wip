@@ -1,15 +1,14 @@
 # $NetBSD: Makefile.common,v 1.4 2024/08/05 13:11:06 tnn Exp $
 #
-# used by can/ng-spice
-# used by can/ng-spice-shared
-# used by wip/ng-spice-shared-dev/Makefile
+# used by ../../wip/ng-spice-dev/Makefile
+# used by ../../wip/ng-spice-shared-dev/Makefile
 
 VERSION=	43
 DISTNAME=	ngspice-${VERSION}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 
-DISTINFO_FILE=	${.CURDIR}/../../cad/ng-spice/distinfo
+DISTINFO_FILE=	${.CURDIR}/../../wip/ng-spice-dev/distinfo
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://ngspice.sourceforge.net/
