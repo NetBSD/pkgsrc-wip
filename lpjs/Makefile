@@ -24,7 +24,9 @@ DEPENDS=	auto-admin>=0.8.0.31:../../wip/auto-admin \
 
 # Force install with full debug info until release
 CFLAGS+=	-g
-MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	VERSION=${PKGVERSION}
 LDFLAGS.SunOS=	-lresolv -lsocket -lnsl
 
 LPJS_USER=		lpjs
