@@ -1168,6 +1168,7 @@ SUBDIR+=	gcc10-aux
 SUBDIR+=	gcc10snapshot
 SUBDIR+=	gcc13-gnat
 SUBDIR+=	gcc13-gnat-libs
+SUBDIR+=	gcc14
 SUBDIR+=	gcc14-gnat
 SUBDIR+=	gcc14-gnat-libs
 SUBDIR+=	gcc42
