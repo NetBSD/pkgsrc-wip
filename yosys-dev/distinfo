@@ -5,4 +5,4 @@ SHA512 (yosys-0.48/yosys.tar.gz) = c76756171dcff7f7281e19ad94ffde7498965799841c6
 Size (yosys-0.48/yosys.tar.gz) = 9679731 bytes
 SHA1 (patch-Makefile) = db77fa7d0274a1f11290e46ee92dfc80b7d88556
 SHA1 (patch-kernel_driver.cc) = 4b0b0ffd2a7e3757bdf87728460e34831f2075aa
-SHA1 (patch-kernel_tclapi.cc) = 1000ddf2455aabfe9c70893e51b87ed6389bdd03
+SHA1 (patch-kernel_tclapi.cc) = 1394b3ec7961bd5455ba8d9d22f10c3c24af4d04
