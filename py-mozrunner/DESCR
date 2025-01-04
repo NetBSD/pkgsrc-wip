@@ -1,2 +1,3 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+Mozrunner provides an API to manage a gecko-based application with an arbitrary
+configuration profile. It currently supports local desktop binaries such as
+Firefox and Thunderbird, as well as Firefox OS on mobile devices and emulators.
