@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (num2words-0.5.10.tar.gz) = bb2fcf6c78863636467955c52ff64b970c68e3eb61701436a143bfbf9a5c6d13
-SHA512 (num2words-0.5.10.tar.gz) = 004e171717d6dd058ee3f905bb240198bcfe9b7d3aa0743f6abeda4145d0a3b00d6ee6e0b266bbad1d539dba58b7721f4d13b011aaec4869c170b965b4c2de3c
-Size (num2words-0.5.10.tar.gz) = 110623 bytes
+BLAKE2s (num2words-0.5.14.tar.gz) = 7dccb50799e13a10a9a9e4a366fba1d402c47229b8c1e666ecea02c6f394d05c
+SHA512 (num2words-0.5.14.tar.gz) = 05b7f256df7f23d2b6cbf398b1c908954dab213ae3ed6f2121b7ef9ce9f33539eebcf48f4da4a341e86b1905d7531a84fc7125d22bc710eda13a9d33f6f2ecc2
+Size (num2words-0.5.14.tar.gz) = 218213 bytes
