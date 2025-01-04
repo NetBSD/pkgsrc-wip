@@ -1,0 +1,1 @@
+Due to certain config management by xsb, PLIST ends up hard coding the OS version. Either we should rename files suitably to avoid hard coding or have a way to derive the OS version automatically (not sure if pkgsrc has some variable to do that).
