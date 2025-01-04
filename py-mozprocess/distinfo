@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mozprocess-1.2.0.tar.gz) = 4a5a16d3b23244abe3f46080c1ac83d56b5e1721
-SHA512 (mozprocess-1.2.0.tar.gz) = a10c414cb6d1e8edc1e9726d8d8af8cfdc7a16e1b4247117b7806e8e3bae78adecb732f0329c7c73b1961311e10e81389be59924ad943c0951b402a55c45bb00
-Size (mozprocess-1.2.0.tar.gz) = 21483 bytes
+BLAKE2s (mozprocess-1.4.0.tar.gz) = 22dbc558cd0869106d4a5c49a6c0f8d2e578a6bd55fa2298b086bd72b0736b02
+SHA512 (mozprocess-1.4.0.tar.gz) = 1c5cab04281f9c5b3cfaacffc3a33a6d925419a0e3f13ca72b5b661840e1258166cfacd9dc78413fc6c094165dc6c5c85e0d0a41b33741a1a1feca5ab39747f3
+Size (mozprocess-1.4.0.tar.gz) = 21642 bytes

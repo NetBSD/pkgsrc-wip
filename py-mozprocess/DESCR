@@ -1,5 +1,5 @@
 Mozprocess is a process-handling module that provides some additional features
-beyond those available with python’s subprocess:
+beyond those available with python's subprocess:
 
  - better handling of child processes, especially on Windows
  - the ability to timeout the process after some absolute period, or some
