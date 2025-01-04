@@ -12,6 +12,7 @@ libexec/lpjs/SMI/log
 libexec/lpjs/SMI/munge-disable
 libexec/lpjs/SMI/munge-enable
 libexec/lpjs/SMI/reset-queue
+libexec/lpjs/SMI/resolve-host
 libexec/lpjs/SMI/restart
 libexec/lpjs/SMI/start
 libexec/lpjs/SMI/stop
