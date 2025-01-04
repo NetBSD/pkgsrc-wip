@@ -24,9 +24,10 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../wip/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
