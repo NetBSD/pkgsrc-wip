@@ -1,0 +1,7 @@
+www/elinks: Update elinks to 0.18
+
+Update prepared in wip by Mayuresh <mayuresh@acm.org>
+
+Build process is now based on meson.
+
+Release notes: https://github.com/rkd77/elinks/releases
