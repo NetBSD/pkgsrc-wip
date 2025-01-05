@@ -21,6 +21,7 @@ bin/auto-os-release
 bin/auto-os-variant
 bin/auto-ostype
 bin/auto-package-installed
+bin/auto-physmem
 bin/auto-pkg-branch
 bin/auto-pkg-latest
 bin/auto-pkgsrc-branch
@@ -43,6 +44,14 @@ bin/auto-ssh-reverse-authorize
 bin/auto-update-pkgsrc
 bin/auto-using-pkgsrc
 bin/auto-wacom-map-display
+man/man8/auto-add-swap.8
+man/man8/auto-admin.8
+man/man8/auto-change-login-class.8
+man/man8/auto-image2dev.8
+man/man8/auto-physmem.8
+man/man8/auto-pkgsrc-non-removable.8
+man/man8/auto-update-system.8
+man/man8/auto-user-admin.8
 sbin/auto-add-fdesc-mount
 sbin/auto-add-group
 sbin/auto-add-hosts-entry
@@ -171,10 +180,3 @@ sbin/auto-xdm-toggle
 share/auto-admin/ipfw-rules.sh
 share/auto-admin/local_early
 share/auto-admin/rc.local_early
-man/man8/auto-add-swap.8
-man/man8/auto-admin.8
-man/man8/auto-change-login-class.8
-man/man8/auto-image2dev.8
-man/man8/auto-pkgsrc-non-removable.8
-man/man8/auto-update-system.8
-man/man8/auto-user-admin.8
