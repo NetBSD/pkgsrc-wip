@@ -17,7 +17,7 @@ COMMENT=	Lightweight, Portable Job Scheduler
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS=	realpath>0:../../wip/realpath
-DEPENDS=	auto-admin>=0.8.0.31:../../wip/auto-admin \
+DEPENDS=	auto-admin>=0.8.0.82:../../wip/auto-admin \
 		runas>0:../../sysutils/runas
 # Only necessary for releases
 # WRKSRC=		${WRKDIR}/LPJS-${PKGVERSION_NOREV}
