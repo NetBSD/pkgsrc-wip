@@ -2,7 +2,6 @@
 
 R_PKGNAME=	listenv
 R_PKGVER=	0.9.1
-CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Environments behaving (almost) as lists
