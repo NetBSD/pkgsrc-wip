@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cabal2pkg-0.1.0.1
+DISTNAME=	cabal2pkg-0.1.0.3
 PKGNAME=	${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
