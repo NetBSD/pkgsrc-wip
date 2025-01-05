@@ -1,0 +1,10 @@
+cabal2pkg is a tool to automate importing Haskell packages to pkgsrc and
+updating existing Haskell packages in pkgsrc. cabal2pkg is similar
+to url2pkg(8), in that it downloads a distfile, extracts it, and generates
+package Makefile and other files, but it is specialised in Haskell packages and
+is intended to generate mostly complete Makefile.
+
+cabal2pkg can also update existing packages by performing 3-way merge on files.
+In the update mode, cabal2pkg fetches two package metadata of the current and
+the updated version, then tries to apply differences between two versions
+against the current set of files.

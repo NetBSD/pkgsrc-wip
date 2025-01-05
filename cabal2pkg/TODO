@@ -1,0 +1,2 @@
+This package should be eventually imported to pkgtools/cabal2pkg but should
+stay here for a while, because it's still experimental at the moment.

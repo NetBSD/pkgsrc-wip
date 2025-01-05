@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/cabal2pkg
+man/man8/cabal2pkg.8
+share/doc/${HS_PLATFORM}/${PKGNAME}/UNLICENSE
