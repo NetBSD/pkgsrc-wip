@@ -8,7 +8,7 @@ LIBFIXPOSIX_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libfixposix+=	libfixposix>=0.4.3
 BUILDLINK_PKGSRCDIR.libfixposix?=	../../wip/libfixposix
 
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif	# LIBFIXPOSIX_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libfixposix

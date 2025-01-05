@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (libfixposix-0.5.0-040cd8fba91e7bec8a14236db9f318c70f8c5390.tar.gz) = 916c687c9fc4e9475f74bdfff8d5f7ae2f682720
-SHA512 (libfixposix-0.5.0-040cd8fba91e7bec8a14236db9f318c70f8c5390.tar.gz) = 73707d4479062155de0b9f1528ea0e9af5a7fbd4877f4da0ea857857a68d29ffbee1f502ebc91fd55090469275acb74530dfc29cb852c75c4bc603ef6ff0c53e
-Size (libfixposix-0.5.0-040cd8fba91e7bec8a14236db9f318c70f8c5390.tar.gz) = 40602 bytes
+BLAKE2s (libfixposix-0.5.1.tar.gz) = dc4862ae508e2285b6c788eb0c36589459011b916d7ccdb12388768f3cc7b1ae
+SHA512 (libfixposix-0.5.1.tar.gz) = 7749f560e779d4dc5712f9871fcca6b6143c482cef90c1785616c2520d75a82b22831ab5e6b76e703dccd1f5344baddf847623ccb91b0552feae6aa7054ac859
+Size (libfixposix-0.5.1.tar.gz) = 41296 bytes
