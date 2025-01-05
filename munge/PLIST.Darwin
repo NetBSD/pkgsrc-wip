@@ -1,2 +1,2 @@
 @comment $NetBSD$
-share/munge/Launchd/org.pkgsrc.munged.plist
+share/munge/Launchd/org.pkgsrc.munge.plist

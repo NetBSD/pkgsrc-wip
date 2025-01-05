@@ -69,15 +69,15 @@ SUBST_CLASSES+=		launchd
 SUBST_STAGE.launchd=	pre-configure
 SUBST_SED.launchd=	-e 's|%%MUNGE_USER%%|${MUNGE_USER}|g'
 SUBST_SED.launchd+=	-e 's|%%MUNGE_GROUP%%|${MUNGE_GROUP}|g'
-SUBST_FILES.launchd=	${WRKDIR}/org.pkgsrc.munged.plist
+SUBST_FILES.launchd=	${WRKDIR}/org.pkgsrc.munge.plist
 
 # Should not be necessary with AUTO_MKDIRS enabled, but it is
 INSTALLATION_DIRS+=	share/munge/Launchd
 post-patch:
-	${CP} ${FILESDIR}/org.pkgsrc.munged.plist ${WRKDIR}
+	${CP} ${FILESDIR}/org.pkgsrc.munge.plist ${WRKDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/org.pkgsrc.munged.plist \
+	${INSTALL_DATA} ${WRKDIR}/org.pkgsrc.munge.plist \
 		${DESTDIR}${PREFIX}/share/munge/Launchd
 .endif
 
