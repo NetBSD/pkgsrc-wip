@@ -4,9 +4,9 @@ Deal with bulk build namespace intrusion.
 
 SunOS 5 bmake / gmake fixes
 
---- src/Makefile.in.in.orig	2013-08-21 17:43:45.000000000 +0000
+--- src/Makefile.in.in.orig	2025-01-06 18:59:58.012563463 +0000
 +++ src/Makefile.in.in
-@@ -392,9 +392,9 @@ ldflags  = $(LDFLAGS) $(ld_switch_all) $
+@@ -362,9 +362,9 @@ ldflags  = $(LDFLAGS) $(ld_switch_all) $
  
  #ifdef SOLARIS2
  %.o : %.c
@@ -18,13 +18,13 @@ SunOS 5 bmake / gmake fixes
  	$(CC) -c $(cflags) $<
  
  ## Create preprocessor output (debugging purposes only)
-@@ -437,10 +437,10 @@ RAW_EXE  = temacs
+@@ -402,10 +402,10 @@ RAW_EXE  = temacs.exe
  DO_TEMACS = $(DUMPENV) ./$(RAW_EXE)
  DO_XEMACS = ./$(PROGNAME)
  
--BATCH = -no-packages -batch
-+MY_BATCH = -no-packages -batch
- BATCH_PACKAGES = -vanilla -batch
+-BATCH = -no-packages -no-configured-paths -batch
++MY_BATCH = -no-packages -no-configured-paths -batch
+ BATCH_PACKAGES = -vanilla -no-configured-paths -batch
 -TEMACS_BATCH = $(DO_TEMACS) -nd $(BATCH)
 -XEMACS_BATCH = $(DO_XEMACS) $(BATCH)
 +TEMACS_BATCH = $(DO_TEMACS) -nd $(MY_BATCH)
@@ -32,7 +32,7 @@ SunOS 5 bmake / gmake fixes
  XEMACS_BATCH_PACKAGES = $(DO_XEMACS) $(BATCH_PACKAGES)
  temacs_loadup_args = -l $(LISP)/loadup.el
  dump_temacs_args   = $(temacs_loadup_args) dump
-@@ -644,7 +644,7 @@ load-shadows: update-elc-2
+@@ -610,7 +610,7 @@ load-shadows: update-elc-2
  
  release: all
  	-if [ -w $(LISP) ]; then \
@@ -41,7 +41,7 @@ SunOS 5 bmake / gmake fixes
  	else true; fi
  	-$(dump_temacs)
  	touch release
-@@ -931,7 +931,7 @@ run-rtcmacs: rtcmacs
+@@ -897,7 +897,7 @@ run-rtcmacs: rtcmacs
  	ignore POLL; \
  	check -access; \
  	suppress rui; \

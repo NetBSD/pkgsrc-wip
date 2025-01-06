@@ -6,35 +6,21 @@ Install internal build scripts as scripts
 
 Prefix {c,e}tags to avoid conflicts
 
---- lib-src/Makefile.in.in.orig	2013-08-21 17:43:44.000000000 +0000
+--- lib-src/Makefile.in.in.orig	2025-01-06 19:10:12.962500316 +0000
 +++ lib-src/Makefile.in.in
-@@ -69,6 +69,7 @@ sitemoduledir=@sitemoduledir@
- INSTALL = @install_pp@ @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
- INSTALL_DATA = @INSTALL_DATA@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
- 
- ## ========================== Lists of Files ===========================
- 
-@@ -245,25 +246,35 @@ do-blessmail: $(blessmail)
+@@ -242,9 +242,9 @@ do-blessmail: $(blessmail)
  ${archlibdir}: all
  	@echo; echo "Installing utilities run internally by XEmacs."
  	./make-path $(DESTDIR)${archlibdir}
 -	if test "`(cd ${archlibdir} && $(pwd))`" != "`$(pwd)`"; then \
 +	if test "`(cd $(DESTDIR)${archlibdir} && $(pwd))`" != "`$(pwd)`"; then \
  	  for f in ${PRIVATE_INSTALLABLE_EXES}; do \
- 	    (cd .. && $(INSTALL_PROGRAM) lib-src/$$f $(DESTDIR)${archlibdir}/$$f) ; \
+-	    (cd .. && $(INSTALL_PROGRAM) lib-src/$$f $(DESTDIR)${archlibdir}/$$f) ; \
++	    (cd .. && $(INSTALL_SCRIPT) lib-src/$$f $(DESTDIR)${archlibdir}/$$f) ; \
  	  done ; \
  	fi
--	if test "`(cd ${archlibdir} && $(pwd))`" \
-+	if test "`(cd $(DESTDIR)${archlibdir} && $(pwd))`" \
- 	     != "`(cd ${srcdir}     && $(pwd))`"; then \
- 	  for f in ${PRIVATE_INSTALLABLE_SCRIPTS}; do \
--	    (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$$f $(DESTDIR)${archlibdir}/$$f); \
-+	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$$f $(DESTDIR)${archlibdir}/$$f); \
- 	  done ; \
- 	fi
- 
+ 	if test "`(cd ${archlibdir} && $(pwd))`" \
+@@ -257,10 +257,20 @@ ${archlibdir}: all
  install: ${archlibdir}
  	@echo; echo "Installing utilities for users to run."
  	for file in ${PUBLIC_INSTALLABLE_EXES} ; do \
@@ -47,7 +33,7 @@ Prefix {c,e}tags to avoid conflicts
 +          fi \
  	done
  	for file in ${PUBLIC_INSTALLABLE_SCRIPTS} ; do \
--	  (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$${file} $(DESTDIR)${bindir}/$${file}) ; \
+-	  (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} $(DESTDIR)${bindir}/$${file}) ; \
 +          if [ $${file} = rcs-checkin ] || [ $${file} = send-pr ] ; \
 +            then \
 +              (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} $(DESTDIR)${bindir}/xemacs-$${file}) ; \
@@ -57,12 +43,3 @@ Prefix {c,e}tags to avoid conflicts
  	done
  
  uninstall:
-@@ -379,7 +390,7 @@ make-dump-id: ${srcdir}/make-dump-id.c
- #ifdef DUMP_IN_EXEC
- insert-data-in-exec: ${srcdir}/insert-data-in-exec.c
- 	$(CC) $(cflags) ${srcdir}/insert-data-in-exec.c $(ldflags) -o $@
--#endif /* not DUMP_IN_EXEC */
-+#endif /* DUMP_IN_EXEC */
- 
- cflags_gnuserv  = $(CFLAGS) $(cppflags) $(c_switch_all)
- ldflags_gnuserv = $(LDFLAGS) $(ld_switch_all) @libs_xauth@ $(ld_libs_general)

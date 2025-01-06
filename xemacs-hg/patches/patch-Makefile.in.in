@@ -11,10 +11,7 @@ Prefix {c,e}tags to avoid conflicts.
 
 Make TAR settable, to work around shortcomings in base tar(1)
 
-Deal with a difference between bmake and gmake in using $^ in a
-makefile target
-
---- Makefile.in.in.orig	2021-07-26 11:30:34.000000000 +0000
+--- Makefile.in.in.orig	2025-01-06 18:59:57.709890754 +0000
 +++ Makefile.in.in
 @@ -67,7 +67,7 @@ LC_ALL = C
  RM = rm -f
@@ -25,24 +22,15 @@ makefile target
  
  ## ==================== Things `configure' Might Edit ====================
  
-@@ -374,7 +374,7 @@ src/.gdbinit: ${srcdir}/src/.gdbinit.in.
- 	./config.status && touch $@
- 
- etc/PROBLEMS: $(srcdir)/PROBLEMS
--	cp $^ $@
-+	cp $(srcdir)/PROBLEMS $@
- 
- ## ==================== Installation ====================
- 
 @@ -416,7 +416,7 @@ install-arch-dep: mkdir
  	   fi; \
  	   ${INSTALL_DATA} lib-src/config.values $(DESTDIR)${docdir}/config.values; \
- 	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC; \
+ 	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC-`src/${PROGNAME} -sd`; \
 -	   for subdir in `find ${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
 +	   for subdir in `find $(DESTDIR)${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
  	     do (cd $${subdir} && $(RM) -r RCS CVS SCCS \#* *~) ; done ; \
  	else true; fi
- #if (defined(PDUMP) && !defined (DUMP_IN_EXEC)) || (defined (PDUMP) && defined(WIN32_NATIVE))
+ #if !defined (DUMP_IN_EXEC) && !defined(WIN32_NATIVE)
 @@ -439,7 +439,8 @@ install-arch-dep: mkdir
  # endif /* CYGWIN */
  #endif /* WIN32_NATIVE */
