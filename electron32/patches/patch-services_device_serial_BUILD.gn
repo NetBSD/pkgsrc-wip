@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/device/serial/BUILD.gn.orig	2024-10-18 12:34:32.053738400 +0000
++++ services/device/serial/BUILD.gn
+@@ -5,7 +5,7 @@
+ import("//build/config/chromeos/ui_mode.gni")
+ import("//build/config/features.gni")
+ 
+-if (is_win || ((is_linux || is_chromeos) && use_udev) || is_mac) {
++if (is_win || ((!is_bsd && is_linux || is_chromeos) && use_udev) || is_mac) {
+   config("platform_support") {
+     visibility = [ ":serial" ]
+     if (is_win) {

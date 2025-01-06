@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- mojo/core/BUILD.gn.orig	2024-10-18 12:34:29.398988700 +0000
++++ mojo/core/BUILD.gn
+@@ -166,7 +166,7 @@ template("core_impl_source_set") {
+         ]
+       }
+ 
+-      if ((is_linux || is_chromeos || is_android) && !is_nacl) {
++      if ((is_linux || is_chromeos || is_android) && !is_nacl && !is_bsd) {
+         sources += [
+           "channel_linux.cc",
+           "channel_linux.h",

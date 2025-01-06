@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- device/bluetooth/BUILD.gn.orig	2024-10-18 12:34:16.433350800 +0000
++++ device/bluetooth/BUILD.gn
+@@ -249,6 +249,7 @@ component("bluetooth") {
+       "IOKit.framework",
+       "Foundation.framework",
+     ]
++    configs += ["//electron/build/config:mas_build"]
+   }
+ 
+   if (is_mac) {

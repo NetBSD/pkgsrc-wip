@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- device/gamepad/BUILD.gn.orig	2024-10-18 12:34:16.701214800 +0000
++++ device/gamepad/BUILD.gn
+@@ -99,7 +99,7 @@ component("gamepad") {
+       "hid_writer_linux.cc",
+       "hid_writer_linux.h",
+     ]
+-    if (use_udev) {
++    if (use_udev && !is_bsd) {
+       sources += [
+         "gamepad_device_linux.cc",
+         "gamepad_device_linux.h",

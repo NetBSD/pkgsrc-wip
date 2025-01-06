@@ -1,0 +1,18 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/dawn/test/tint/bug/chromium/378541479.wgsl.expected.msl.orig	2025-01-06 07:57:04.978922409 +0000
++++ third_party/dawn/test/tint/bug/chromium/378541479.wgsl.expected.msl
+@@ -0,0 +1,9 @@
++#include <metal_stdlib>
++
++using namespace metal;
++kernel void compute_main(const constant uint* tint_symbol [[buffer(1)]], depth2d<float, access::sample> tint_symbol_1 [[texture(0)]], const constant uint2* tint_symbol_2 [[buffer(0)]]) {
++  uint const level_idx = min(uint(*(tint_symbol)), (tint_symbol_1.get_num_mip_levels() - 1u));
++  float res = tint_symbol_1.read(uint2(min(*(tint_symbol_2), (uint2(tint_symbol_1.get_width(level_idx), tint_symbol_1.get_height(level_idx)) - uint2(1u)))), level_idx);
++  return;
++}
++

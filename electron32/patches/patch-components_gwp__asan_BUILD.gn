@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- components/gwp_asan/BUILD.gn.orig	2024-10-18 12:34:06.782403200 +0000
++++ components/gwp_asan/BUILD.gn
+@@ -15,7 +15,7 @@ test("gwp_asan_unittests") {
+     "//testing/gtest",
+     "//third_party/boringssl",
+   ]
+-  if (is_win || is_mac || is_linux || is_chromeos || is_android) {
++  if ((is_win || is_mac || is_linux || is_chromeos || is_android) && !is_bsd) {
+     deps += [
+       "//components/gwp_asan/client:unit_tests",
+       "//components/gwp_asan/crash_handler:unit_tests",

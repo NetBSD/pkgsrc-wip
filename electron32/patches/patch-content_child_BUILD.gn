@@ -1,0 +1,22 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/child/BUILD.gn.orig	2024-10-18 12:34:14.198494700 +0000
++++ content/child/BUILD.gn
+@@ -130,6 +130,13 @@ target(link_target_type, "child") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "sandboxed_process_thread_type_handler.cc",
++      "sandboxed_process_thread_type_handler.h",
++    ]
++  }
++
+   if (is_win) {
+     sources += [
+       "dwrite_font_proxy/dwrite_font_proxy_init_impl_win.cc",

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ppapi/buildflags/buildflags.gni.orig	2024-10-18 12:34:31.673916300 +0000
++++ ppapi/buildflags/buildflags.gni
+@@ -19,7 +19,7 @@ declare_args() {
+   # Enables Pepper API (PPAPI) plugin support.
+   # The only remaining PPAPI plugin supported is NaCl and if is disabled
+   # we can disable PPAPI.
+-  enable_ppapi = enable_plugins && enable_nacl && !is_fuchsia
++  enable_ppapi = enable_plugins && !is_fuchsia
+ }
+ 
+ assert(enable_plugins || !enable_ppapi)

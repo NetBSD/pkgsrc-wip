@@ -1,0 +1,82 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/electron_node/deps/base64/unofficial.gni.orig	2024-11-18 09:27:56.000000000 +0000
++++ third_party/electron_node/deps/base64/unofficial.gni
+@@ -12,6 +12,10 @@ template("base64_gn_build") {
+     }
+   }
+ 
++  # FIXME(zcbenz): ASM on win/x86 compiles perfectly in upstream Node, figure
++  # out why it does not work in Electron's build configs.
++  support_x86_asm = current_cpu == "x64" || (current_cpu == "x86" && !is_win)
++
+   config("base64_internal_config") {
+     include_dirs = [ "base64/lib" ]
+     if (is_component_build) {
+@@ -19,7 +23,7 @@ template("base64_gn_build") {
+     } else {
+       defines = []
+     }
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       defines += [
+         "HAVE_SSSE3=1",
+         "HAVE_SSE41=1",
+@@ -69,7 +73,7 @@ template("base64_gn_build") {
+   source_set("base64_ssse3") {
+     configs += [ ":base64_internal_config" ]
+     sources = [ "base64/lib/arch/ssse3/codec.c" ]
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       if (is_clang || !is_win) {
+         cflags_c = [ "-mssse3" ]
+       }
+@@ -79,7 +83,7 @@ template("base64_gn_build") {
+   source_set("base64_sse41") {
+     configs += [ ":base64_internal_config" ]
+     sources = [ "base64/lib/arch/sse41/codec.c" ]
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       if (is_clang || !is_win) {
+         cflags_c = [ "-msse4.1" ]
+       }
+@@ -89,7 +93,7 @@ template("base64_gn_build") {
+   source_set("base64_sse42") {
+     configs += [ ":base64_internal_config" ]
+     sources = [ "base64/lib/arch/sse42/codec.c" ]
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       if (is_clang || !is_win) {
+         cflags_c = [ "-msse4.2" ]
+       }
+@@ -99,7 +103,7 @@ template("base64_gn_build") {
+   source_set("base64_avx") {
+     configs += [ ":base64_internal_config" ]
+     sources = [ "base64/lib/arch/avx/codec.c" ]
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       if (is_clang || !is_win) {
+         cflags_c = [ "-mavx" ]
+       } else if (is_win) {
+@@ -111,7 +115,7 @@ template("base64_gn_build") {
+   source_set("base64_avx2") {
+     configs += [ ":base64_internal_config" ]
+     sources = [ "base64/lib/arch/avx2/codec.c" ]
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       if (is_clang || !is_win) {
+         cflags_c = [ "-mavx2" ]
+       } else if (is_win) {
+@@ -123,7 +127,7 @@ template("base64_gn_build") {
+   source_set("base64_avx512") {
+     configs += [ ":base64_internal_config" ]
+     sources = [ "base64/lib/arch/avx512/codec.c" ]
+-    if (current_cpu == "x86" || current_cpu == "x64") {
++    if (support_x86_asm) {
+       if (is_clang || !is_win) {
+         cflags_c = [
+           "-mavx512vl",

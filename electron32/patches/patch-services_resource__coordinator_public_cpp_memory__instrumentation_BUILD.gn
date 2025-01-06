@@ -1,0 +1,24 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn.orig	2024-10-18 12:34:32.153691800 +0000
++++ services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn
+@@ -29,10 +29,14 @@ component("memory_instrumentation") {
+     sources += [ "os_metrics_win.cc" ]
+   }
+ 
+-  if (is_android || is_linux || is_chromeos) {
++  if ((is_android || is_linux || is_chromeos) && !is_bsd) {
+     sources += [ "os_metrics_linux.cc" ]
+   }
+ 
++  if (is_bsd) {
++    sources += [ "os_metrics_bsd.cc" ]
++  }
++
+   if (is_fuchsia) {
+     sources += [ "os_metrics_fuchsia.cc" ]
+   }

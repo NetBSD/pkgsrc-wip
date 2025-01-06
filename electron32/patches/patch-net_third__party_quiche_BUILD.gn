@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- net/third_party/quiche/BUILD.gn.orig	2024-10-18 12:34:31.621940900 +0000
++++ net/third_party/quiche/BUILD.gn
+@@ -29,7 +29,7 @@ import("//net/third_party/quiche/src/bui
+ import("//testing/libfuzzer/fuzzer_test.gni")
+ import("//third_party/protobuf/proto_library.gni")
+ 
+-build_epoll_based_tools = is_linux || is_chromeos
++build_epoll_based_tools = (is_linux && !is_bsd) || is_chromeos
+ 
+ config("quiche_internal_config") {
+   cflags = []

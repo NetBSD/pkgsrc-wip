@@ -1,0 +1,30 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/base/BUILD.gn.orig	2024-10-18 12:35:12.344421900 +0000
++++ ui/base/BUILD.gn
+@@ -363,6 +363,7 @@ component("base") {
+       "interaction/element_tracker_mac.mm",
+       "resource/resource_bundle_mac.mm",
+     ]
++    configs += ["//electron/build/config:mas_build"]
+   }
+ 
+   if (is_apple) {
+@@ -380,6 +381,13 @@ component("base") {
+     sources += [ "resource/resource_bundle_lacros.cc" ]
+   }
+ 
++  if (is_mas_build) {
++    sources -= [
++      "cocoa/remote_accessibility_api.h",
++      "cocoa/remote_accessibility_api.mm",
++    ]
++  }
++
+   if (is_ios) {
+     sources += [
+       "device_form_factor_ios.mm",

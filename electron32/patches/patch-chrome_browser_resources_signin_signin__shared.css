@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- chrome/browser/resources/signin/signin_shared.css.orig	2024-10-18 12:34:02.184919600 +0000
++++ chrome/browser/resources/signin/signin_shared.css
+@@ -54,7 +54,7 @@ a {
+   border-radius: var(--scrollbar-width);
+ }
+ 
+-<if expr="is_macosx or is_linux or is_chromeos">
++<if expr="is_macosx or is_posix or is_chromeos">
+ .action-container {
+   flex-flow: row-reverse;
+   justify-content: flex-start;

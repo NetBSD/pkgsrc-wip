@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/viz/privileged/mojom/compositing/frame_sink_manager.mojom.orig	2024-10-18 12:34:32.205667500 +0000
++++ services/viz/privileged/mojom/compositing/frame_sink_manager.mojom
+@@ -34,6 +34,7 @@ struct RootCompositorFrameSinkParams {
+   bool send_swap_size_notifications = false;
+   // Disables begin frame rate limiting for the display compositor.
+   bool disable_frame_rate_limit = false;
++  bool offscreen = false;
+ 
+   [EnableIf=is_android]
+   float refresh_rate;

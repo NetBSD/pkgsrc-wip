@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- base/functional/unretained_traits.h.orig	2024-10-18 12:33:59.766274500 +0000
++++ base/functional/unretained_traits.h
+@@ -93,7 +93,7 @@ struct SupportsUnretainedImpl {
+ // official builds, and then in non-test code as well.
+ #if defined(FORCE_UNRETAINED_COMPLETENESS_CHECKS_FOR_TESTS) || \
+     (!defined(UNIT_TEST) && !defined(OFFICIAL_BUILD) &&        \
+-     (BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)))
++     (BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)))
+       static_assert(v,
+                     "Argument requires unretained storage, but type is not "
+                     "fully defined. This prevents determining whether "

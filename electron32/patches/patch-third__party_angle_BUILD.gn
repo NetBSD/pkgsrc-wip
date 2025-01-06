@@ -1,0 +1,35 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/angle/BUILD.gn.orig	2024-10-18 12:37:20.638903400 +0000
++++ third_party/angle/BUILD.gn
+@@ -347,7 +347,6 @@ config("extra_warnings") {
+       "-Wtautological-type-limit-compare",
+       "-Wundefined-reinterpret-cast",
+       "-Wunneeded-internal-declaration",
+-      "-Wunused-but-set-variable",
+       "-Wsuggest-destructor-override",
+       "-Wsuggest-override",
+ 
+@@ -524,7 +523,7 @@ template("angle_common_lib") {
+       all_dependent_configs = [ ":angle_disable_pool_alloc" ]
+     }
+ 
+-    if (is_linux || is_chromeos) {
++    if ((is_linux || is_chromeos) && !is_bsd) {
+       libs = [ "dl" ]
+     }
+ 
+@@ -679,6 +678,9 @@ angle_static_library("angle_gpu_info_uti
+         "Xi",
+         "Xext",
+       ]
++      if (is_bsd) {
++        libs += [ "GL" ]
++      }
+     }
+ 
+     if (angle_use_wayland && angle_has_build) {

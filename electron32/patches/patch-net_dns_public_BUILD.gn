@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- net/dns/public/BUILD.gn.orig	2024-10-18 12:34:30.278572800 +0000
++++ net/dns/public/BUILD.gn
+@@ -78,7 +78,7 @@ source_set("tests") {
+     "doh_provider_entry_unittest.cc",
+   ]
+ 
+-  if (is_posix && !is_android) {
++  if (is_posix && !is_android && !is_bsd) {
+     sources += [ "resolv_reader_unittest.cc" ]
+   }
+ 

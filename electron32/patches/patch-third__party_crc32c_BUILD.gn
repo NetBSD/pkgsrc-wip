@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/crc32c/BUILD.gn.orig	2024-10-18 12:35:04.363647200 +0000
++++ third_party/crc32c/BUILD.gn
+@@ -46,7 +46,7 @@ config("crc32c_config") {
+   }
+ 
+   # Android added <sys/auxv.h> in API level 18.
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android && !is_bsd) {
+     defines += [
+       "HAVE_STRONG_GETAUXVAL=1",
+       "HAVE_WEAK_GETAUXVAL=1",

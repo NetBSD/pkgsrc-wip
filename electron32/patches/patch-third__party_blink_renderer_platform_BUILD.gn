@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2024-10-18 12:34:36.419717800 +0000
++++ third_party/blink/renderer/platform/BUILD.gn
+@@ -2003,7 +2003,7 @@ static_library("test_support") {
+   ]
+ 
+   # fuzzed_data_provider may not work with a custom toolchain.
+-  if (custom_toolchain == "" && is_clang) {
++  if ((custom_toolchain == "" && is_clang) && !is_bsd) {
+     sources += [
+       "testing/fuzzed_data_provider.cc",
+       "testing/fuzzed_data_provider.h",

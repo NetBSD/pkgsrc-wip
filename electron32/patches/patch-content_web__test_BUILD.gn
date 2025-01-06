@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/web_test/BUILD.gn.orig	2024-10-18 12:34:16.213462600 +0000
++++ content/web_test/BUILD.gn
+@@ -151,6 +151,8 @@ static_library("web_test_browser") {
+     "browser/web_test_tts_platform.h",
+   ]
+ 
++  configs += ["//electron/build/config:mas_build"]
++
+   if (is_mac) {
+     sources += [ "browser/web_test_shell_platform_delegate_mac.mm" ]
+   } else if (toolkit_views && !is_castos) {

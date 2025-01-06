@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- components/remote_cocoa/app_shim/BUILD.gn.orig	2024-10-18 12:34:07.597964800 +0000
++++ components/remote_cocoa/app_shim/BUILD.gn
+@@ -16,6 +16,7 @@ component("app_shim") {
+   assert(is_mac)
+ 
+   configs += [ ":app_shim_warnings" ]
++  configs += ["//electron/build/config:mas_build"]
+   sources = [
+     "NSToolbar+Private.h",
+     "NSToolbar+Private.mm",

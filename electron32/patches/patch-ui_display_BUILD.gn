@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/display/BUILD.gn.orig	2024-10-18 12:35:12.452378700 +0000
++++ ui/display/BUILD.gn
+@@ -72,6 +72,10 @@ component("display") {
+       "mac/display_link_mac.mm",
+       "mac/screen_mac.mm",
+     ]
++
++    configs += [
++      "//electron/build/config:mas_build"
++    ]
+   }
+ 
+   if (is_win) {

@@ -1,0 +1,48 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- chrome/BUILD.gn.orig	2024-10-18 12:33:59.998143200 +0000
++++ chrome/BUILD.gn
+@@ -192,11 +192,16 @@ if (!is_android && !is_mac) {
+           "common/crash_keys.h",
+         ]
+ 
++        if (!is_electron_build) {
++          deps = [
++            ":packed_resources_integrity_header",
++          ]
++        }
++
+         deps += [
+           ":chrome_dll",
+           ":chrome_exe_version",
+           ":copy_first_run",
+-          ":packed_resources_integrity_header",
+           ":visual_elements_resources",
+           "//base",
+           "//build:branding_buildflags",
+@@ -1567,7 +1572,7 @@ if (is_chrome_branded && !is_android) {
+   }
+ }
+ 
+-if (!is_android) {
++if (!is_android && !is_electron_build) {
+   chrome_paks("packed_resources") {
+     if (is_mac) {
+       output_dir = "$root_gen_dir/repack"
+@@ -1606,6 +1611,12 @@ if (!is_android) {
+   }
+ }
+ 
++if (is_electron_build) {
++  group("packed_resources") {
++    public_deps = [ "//electron:packed_resources" ]
++  }
++}
++
+ if (!is_android) {
+   repack("browser_tests_pak") {
+     testonly = true

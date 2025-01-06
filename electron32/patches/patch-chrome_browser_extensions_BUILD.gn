@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- chrome/browser/extensions/BUILD.gn.orig	2024-10-18 12:34:01.505298100 +0000
++++ chrome/browser/extensions/BUILD.gn
+@@ -1513,6 +1513,10 @@ source_set("extensions") {
+     deps += [ "//chrome/services/printing/public/mojom" ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [ "api/image_writer_private/removable_storage_provider_linux.cc" ]
++  }
++
+   if (enable_service_discovery) {
+     sources += [
+       "api/mdns/mdns_api.cc",

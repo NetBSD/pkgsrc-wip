@@ -1,0 +1,30 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- mojo/public/tools/bindings/mojom.gni.orig	2024-10-18 12:34:29.514933800 +0000
++++ mojo/public/tools/bindings/mojom.gni
+@@ -763,6 +763,21 @@ template("mojom") {
+       enabled_features += [ "is_apple" ]
+     }
+ 
++    if (is_openbsd) {
++      enabled_features += [ "is_openbsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
++    if (is_netbsd) {
++      enabled_features += [ "is_netbsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
++    if (is_freebsd) {
++      enabled_features += [ "is_freebsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
+     action(parser_target_name) {
+       allow_remote = true
+ 

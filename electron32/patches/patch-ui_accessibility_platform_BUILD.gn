@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/accessibility/platform/BUILD.gn.orig	2024-10-18 12:35:11.944581500 +0000
++++ ui/accessibility/platform/BUILD.gn
+@@ -255,6 +255,7 @@ component("platform") {
+       weak_frameworks = [
+         "Accessibility.framework",  # macOS 11
+       ]
++      configs += ["//electron/build/config:mas_build"]
+     }
+ 
+     if (is_ios) {
