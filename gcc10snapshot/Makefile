@@ -8,6 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC10S_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc10-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
+PKGREVISION=	1
 CATEGORIES=	lang
 #MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC10S_DIST_VERSION}/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC10S_DIST_VERSION}/
@@ -39,12 +40,6 @@ INFO_FILES=		yes
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
-
-SUBST_CLASSES+=		vars
-SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
-SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	gcc/Makefile.in
-SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 
 .include "../../mk/bsd.prefs.mk"
@@ -144,6 +139,22 @@ BUILDLINK_DEPMETHOD.binutils=	full
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
 .endif
+
+# DO NOT REMOVE THIS SUBST.  If it fails, the corruption to
+# patch-gcc_Makefile.in chronicled in PR pkg/58963 `gcc:
+# LINK_LIBGCC_SPEC snafu' <https://gnats.NetBSD.org/58963> probably got
+# replicated yet again.  You must make sure that LINK_LIBGCC_SPEC is
+# appropriately set with @GCC_TARGET_MACHINE@ in patch-gcc_Makefile.in
+# or similar, or confirm with a discussion on tech-pkg@ that it is no
+# longer relevant before you remove this SUBST.
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	GCC_TARGET_MACHINE
+
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
