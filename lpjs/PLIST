@@ -22,6 +22,7 @@ libexec/lpjs/UI/create-script
 libexec/lpjs/UI/jobs
 libexec/lpjs/UI/menu
 libexec/lpjs/UI/nodes
+libexec/lpjs/UI/peak-mem
 libexec/lpjs/UI/submit
 libexec/lpjs/banner
 libexec/lpjs/chaperone
@@ -31,6 +32,7 @@ man/man1/lpjs-create-script.1
 man/man1/lpjs-jobs.1
 man/man1/lpjs-menu.1
 man/man1/lpjs-nodes.1
+man/man1/lpjs-peak-mem.1
 man/man1/lpjs-submit.1
 man/man8/lpjs-admin.8
 man/man8/lpjs-clear-queue.8
@@ -56,3 +58,6 @@ share/lpjs/Systemd/lpjs_compd.service
 share/lpjs/Systemd/lpjs_compd.sysconfig
 share/lpjs/Systemd/lpjs_dispatchd.service
 share/lpjs/Systemd/lpjs_dispatchd.sysconfig
+@pkgdir var/spool/lpjs
+@pkgdir var/log/lpjs
+@pkgdir etc/lpjs
