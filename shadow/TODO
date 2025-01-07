@@ -34,4 +34,4 @@ but the manpage says: no longer used by programs ... handled by PAM now
   if possible:
    CVE-2005-4890, CVE-2011-0721, CVE-2013-4235, CVE-2016-6252,
    CVE-2017-12424, CVE-2018-7169, CVE-2019-19882, CVE-2023-0634,
-   CVE-2023-4641
+   CVE-2023-4641, CVE-2024-56433
