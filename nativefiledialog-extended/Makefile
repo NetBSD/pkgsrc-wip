@@ -1,14 +1,14 @@
 # $NetBSD$
 
 DISTNAME=	nativefiledialog-extended-1.2.1
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=btzy/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org
+MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/btzy/nativefiledialog-extended/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Cross platform native file dialog library with C and C++ bindings
+LICENSE=	zlib
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 

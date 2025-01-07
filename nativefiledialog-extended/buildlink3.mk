@@ -2,12 +2,12 @@
 
 BUILDLINK_TREE+=	nativefiledialog-extended
 
-.if !defined(NATIVEFILEDIALOG-EXTENDED_BUILDLINK3_MK)
-NATIVEFILEDIALOG-EXTENDED_BUILDLINK3_MK:=
+.if !defined(NATIVEFILEDIALOG_EXTENDED_BUILDLINK3_MK)
+NATIVEFILEDIALOG_EXTENDED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nativefiledialog-extended+=	nativefiledialog-extended>=1.2.1
-BUILDLINK_PKGSRCDIR.nativefiledialog-extended?=	../../wip/nativefiledialog-extended
+BUILDLINK_PKGSRCDIR.nativefiledialog-extended?=		../../wip/nativefiledialog-extended
 
-.endif	# NATIVEFILEDIALOG-EXTENDED_BUILDLINK3_MK
+.endif	# NATIVEFILEDIALOG_EXTENDED_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nativefiledialog-extended
