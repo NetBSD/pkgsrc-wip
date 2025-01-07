@@ -16,9 +16,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
-# XXX - for testing, use defaults, i.e., from this directory
-# PATCHDIR=		${.CURDIR}/../../lang/gcc12/patches
-# DISTINFO_FILE=		${.CURDIR}/../../lang/gcc12/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gcc12/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/gcc12/distinfo
 
 # Relocations result in a linker error on AArch64, but not x86.
 MKPIE_SUPPORTED=	no
@@ -68,7 +67,7 @@ CONFIGURE_ARGS+=	--disable-darwin-at-rpath
 PATCHFILES=		gcc-12.4.0.diff
 PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/ca7047d/gcc/
 PATCH_DIST_STRIP=	-p1
-.elif ${OPSYS} == "Darwin"
+.elif ${MACHINE_PLATFORM:MDarwin-*-x86_64}
 PATCHFILES=		gcc-12.4.0-Darwin-x86_64.diff
 PATCH_SITES=		ftp://ftp.netbsd.org/pub/pkgsrc/distfiles
 .else # use a distribution patchset to avoid conflicts with above
