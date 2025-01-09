@@ -3,7 +3,7 @@
 DISTNAME=	alacritty-0.16.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	a26174890e2184fa29b68fde7b72de5a566ad711
+GITHUB_TAG=	8833551b0da3fdace94e1e6c07c6f57f45d9065e
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://alacritty.org/
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/alacritty-a26174890e2184fa29b68fde7b72de5a566ad711
+WRKSRC=			${WRKDIR}/alacritty-8833551b0da3fdace94e1e6c07c6f57f45d9065e
 
 RUST_REQ=		1.74.0
 USE_LANGUAGES+=		c c++
