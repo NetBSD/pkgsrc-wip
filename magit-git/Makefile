@@ -25,6 +25,12 @@ SUBST_FILES.lisp=	default.mk
 SUBST_STAGE.lisp=	pre-build
 SUBST_SED.lisp=		-e s.@@PREFIX@@.${PREFIX}.
 
+SUBST_CLASSES+=		batch
+SUBST_FILES.batch=	default.mk lisp/Makefile test/Makefile
+SUBST_STAGE.batch=	pre-build
+SUBST_MESSAGE.batch=	Avoid conflict variable BATCH with pbulk
+SUBST_SED.batch=	-e s.BATCH.BATCH2.
+
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	#
 USE_TOOLS+=	gmake makeinfo
