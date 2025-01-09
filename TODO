@@ -202,6 +202,7 @@ Suggested ready to import packages
 	o py-pyasyncore
 	o py-pyasynchat
 	o rar4
+	o rust-1.84
 	o send-pr
 	o tqsllib
 	o trustedQSL
