@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cabal2pkg-0.1.0.3
+DISTNAME=	cabal2pkg-0.1.0.4
 PKGNAME=	${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
@@ -16,6 +16,9 @@ LICENSE=	unlicense
 # to be usable even while the tree of Haskell packages in pkgsrc is broken,
 # i.e. while we are updating the tree.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
+
+# cabal2pkg needs to invoke ${MAKE} at runtime.
+ALL_ENV+=	MAKE=${MAKE:Q}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8
 post-install:

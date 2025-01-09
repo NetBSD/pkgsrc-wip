@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cabal2pkg-0.1.0.3.tar.gz) = c0f0843436cb9b4931e9d1feb481b7865aef75b5f83bbf819c668d469d964600
-SHA512 (cabal2pkg-0.1.0.3.tar.gz) = 75760837a889d02db28fbae0dfef97619474268192ced9e834b483dbe4ac5f4dc16f05205cab819ddc2b43538518fc425ebf5085ef3d2c81081011b35005cd79
-Size (cabal2pkg-0.1.0.3.tar.gz) = 65861 bytes
+BLAKE2s (cabal2pkg-0.1.0.4.tar.gz) = d6eae9dc79290aeabcaba3d2c6db0e67eec760d1456dba3cbc896f4a5f1c0788
+SHA512 (cabal2pkg-0.1.0.4.tar.gz) = 4ba8390e516723a2c33db5ae1f058dc3b922fa3aa2ae7f6c4ab0a56810c870719164a297cb9a52ba0b817c504578ca5eaa82c66f203ed1f3c0ac3d96e5b2f393
+Size (cabal2pkg-0.1.0.4.tar.gz) = 65966 bytes
