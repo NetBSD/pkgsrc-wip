@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERS=		1.48.14
+VERS=		1.48.16
 #PKGNAME=	doomlegacy-${VERS}
 SVNVERS=	1705
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}

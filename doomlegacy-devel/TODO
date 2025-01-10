@@ -20,8 +20,21 @@ Part 28: Viewfit setting "Fit_Height" does not work correctly
 
 Part 29: Bossaction problem with enabled MBF21
 ==============================================
-[ ] Ultimate Doom map E2M8 does not end after Cyberdemon was killed
-    => Reported in bug ticket  #693
+[X] Ultimate Doom map E2M8 does not end after Cyberdemon was killed
+    => Reported in bug ticket #693
+    => Fixed with release 1.48.16
+
+
+Features and bug fixes up to Part 29 were released with version 1.48.16
+(SVN revision 1704).
+
+
+Part 30: Savegame sync problem with format 1.49
+===============================================
+[ ] Game can be saved with new format 1.49, but not loaded again
+    Error message: "Legacy save game sync error"
+    => Added pkgsrc patch
+    => Reported in bug ticket #696
 
 
 EOF
