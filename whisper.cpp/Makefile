@@ -1,11 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	whisper.cpp-1.7.4pre20241223
+DISTNAME=	whisper.cpp-1.7.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggerganov/}
 GITHUB_PROJECT=	whisper.cpp
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	ed09075ca09fa111c0506a415aa6f94c96a5d432
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/ggerganov/whisper.cpp/

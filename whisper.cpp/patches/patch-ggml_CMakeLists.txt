@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ggml/CMakeLists.txt.orig	2024-12-23 09:00:15.190720752 +0000
+--- ggml/CMakeLists.txt.orig	2025-01-11 13:17:23.722292800 +0000
 +++ ggml/CMakeLists.txt
-@@ -248,8 +248,8 @@ set_target_properties(ggml PROPERTIES PU
+@@ -249,8 +249,8 @@ set_target_properties(ggml PROPERTIES PU
  #if (GGML_METAL)
  #    set_target_properties(ggml PROPERTIES RESOURCE "${CMAKE_CURRENT_SOURCE_DIR}/src/ggml-metal.metal")
  #endif()
@@ -11,5 +11,5 @@ $NetBSD$
 +#install(TARGETS ggml LIBRARY PUBLIC_HEADER)
 +#install(TARGETS ggml-base LIBRARY)
  
- # FIXME: this should be done in the backend cmake files
- if (GGML_METAL)
+ if (GGML_STANDALONE)
+     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/ggml.pc.in

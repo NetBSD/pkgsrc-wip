@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (whisper.cpp-1.7.4pre20241223-ed09075ca09fa111c0506a415aa6f94c96a5d432.tar.gz) = 7b095f8bec3f4be3f209150d12434bf88589c25cfca732d0a1029d1e00d0d44d
-SHA512 (whisper.cpp-1.7.4pre20241223-ed09075ca09fa111c0506a415aa6f94c96a5d432.tar.gz) = c6f78382b55fd8d0150c39c8fc8cbd2840c463c74ca4e9c82e2792aa41b2c3ee4815d0d6642f535301bd1a5e3aa3b0653931b3267bc92f50ae2624775fccddb1
-Size (whisper.cpp-1.7.4pre20241223-ed09075ca09fa111c0506a415aa6f94c96a5d432.tar.gz) = 5349911 bytes
+BLAKE2s (whisper.cpp-1.7.4.tar.gz) = 0c873281173970b1b771081c61f3c1ed3998ffac5ae9e4f2d0f94f50ea658f3e
+SHA512 (whisper.cpp-1.7.4.tar.gz) = 84ea48babc78a048e8c1b67d9ce5492b270f9ce86a175f3878905bf3403ce6954d74e6289f020b1aa1f15eaf623251f8fed8c25b68f5882299a10bdb9643ae05
+Size (whisper.cpp-1.7.4.tar.gz) = 5352431 bytes
 SHA1 (patch-CMakeLists.txt) = c83ba3d348fc3f70b00a9ab3ac0c750251436fe3
-SHA1 (patch-ggml_CMakeLists.txt) = 6b35984542f8e1cc1b9aafd897d18a3f8026a203
+SHA1 (patch-ggml_CMakeLists.txt) = 4de575a735f81e280a1c5e4f2e51e9117b1833e4
