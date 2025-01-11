@@ -6,19 +6,19 @@ Shared upstream via:
 
  <https://github.com/mitchellh/go-ps/pull/59>
 
---- go.sum.orig	2023-09-19 11:08:23.000000000 +0000
+--- go.sum.orig	2024-09-30 09:29:31.000000000 +0000
 +++ go.sum
-@@ -308,6 +308,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
+@@ -327,6 +327,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
  github.com/hashicorp/golang-lru/v2 v2.0.5/go.mod h1:QeFd9opnmA6QUJc5vARoKUSoFhyfM2/ZepoAG6RGpeM=
- github.com/homeport/dyff v1.5.8 h1:CZvnYFh6Pr/c+d32EnWODAHRTctrDKkz0tFr6yTYCpU=
- github.com/homeport/dyff v1.5.8/go.mod h1:S669ekLW2ttUp6lT1d0jIlmH+eAsP3psfl9K6oMIBeU=
+ github.com/homeport/dyff v1.7.1 h1:B3KJUtnU53H2UryxGcfYKQPrde8VjjbwlHZbczH3giQ=
+ github.com/homeport/dyff v1.7.1/go.mod h1:iLe5b3ymc9xmHZNuJlNVKERE8L2isQMBLxFiTXcwZY0=
 +github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23 h1:bOKbKZULjNQbnK+xXLXXa42TlFYELUNoyUTym+8KDvM=
 +github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23/go.mod h1:J4lOc8z8yJs6vUwklHw2XEIiT4z4C40KtWVN3nvg8Pg=
- github.com/imdario/mergo v0.3.15 h1:M8XP7IuFNsqUx6VPK2P9OSmsYsI/YFaGil0uD21V3dM=
- github.com/imdario/mergo v0.3.15/go.mod h1:WBLT9ZmE3lPoWsEzCh9LPo3TiwVN+ZKEjmz+hD27ysY=
+ github.com/imdario/mergo v0.3.16 h1:wwQJbIsHYGMUyLSPrEq1CT16AhnhNJQ51+4fdHUnCl4=
+ github.com/imdario/mergo v0.3.16/go.mod h1:WBLT9ZmE3lPoWsEzCh9LPo3TiwVN+ZKEjmz+hD27ysY=
  github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
-@@ -373,8 +375,6 @@ github.com/matttproud/golang_protobuf_ex
- github.com/matttproud/golang_protobuf_extensions v1.0.4/go.mod h1:BSXmuO+STAnVfrANrmjBb36TMTDstsz7MSK+HVaYKv4=
+@@ -396,8 +398,6 @@ github.com/mattn/go-shellwords v1.0.12/g
+ github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
  github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
  github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 -github.com/mitchellh/go-ps v1.0.0 h1:i6ampVEEF4wQFF+bkYfwYgY+F/uYJDktmvLPf7qIgjc=
