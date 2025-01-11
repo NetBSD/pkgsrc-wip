@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2024/05/07 07:18:55 wiz Exp $
 
-DISTNAME=	cargo-c-0.10.7
+DISTNAME=	cargo-c-0.10.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sy
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.81.0
+RUST_REQ=	1.82.0
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
