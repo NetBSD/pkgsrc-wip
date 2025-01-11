@@ -4305,6 +4305,8 @@ share/emacs/${PKGVERSION}/lisp/windmove.el.gz
 share/emacs/${PKGVERSION}/lisp/windmove.elc
 share/emacs/${PKGVERSION}/lisp/window-tool-bar.el.gz
 share/emacs/${PKGVERSION}/lisp/window-tool-bar.elc
+share/emacs/${PKGVERSION}/lisp/window-x.el.gz
+share/emacs/${PKGVERSION}/lisp/window-x.elc
 share/emacs/${PKGVERSION}/lisp/window.el.gz
 share/emacs/${PKGVERSION}/lisp/window.elc
 share/emacs/${PKGVERSION}/lisp/winner.el.gz
