@@ -19,6 +19,7 @@ ONLY_FOR_PLATFORM=	NetBSD-[0-9]*-x86_64
 WRKSRC=		${WRKDIR}/pharo-vm
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+USE_TOOLS=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DFLAVOUR=CoInterpreter
 CMAKE_CONFIGURE_ARGS+=	-DALWAYS_INTERACTIVE=1
@@ -50,6 +51,7 @@ do-install:
 	done
 
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

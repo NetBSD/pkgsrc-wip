@@ -4,9 +4,9 @@ $NetBSD$
 - backtrace(3) requires libexecinfo
 - use uuidgen(2)
 
---- CMakeLists.txt.orig	2023-03-10 09:04:12.000000000 +0000
+--- CMakeLists.txt.orig	2024-12-04 10:21:13.000000000 +0000
 +++ CMakeLists.txt
-@@ -266,6 +266,9 @@ elseif(UNIX)
+@@ -249,6 +249,9 @@ elseif(UNIX)
      elseif(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
          set(OPENBSD 1)
          set(VM_TARGET_OS "openbsd")
@@ -16,7 +16,7 @@ $NetBSD$
      else()
          set(VM_TARGET_OS "${CMAKE_SYSTEM_NAME}")
      endif()
-@@ -415,13 +418,14 @@ check_include_files(dlfcn.h HAVE_DLFCN_H
+@@ -402,13 +405,14 @@ check_include_files(dlfcn.h HAVE_DLFCN_H
  check_library_exists(dl dlopen "" HAVE_LIBDL)
  check_library_exists(dyld dlopen "" HAVE_DYLD)
  check_struct_has_member("struct tm" tm_gmtoff time.h HAVE_TM_GMTOFF)
@@ -32,7 +32,7 @@ $NetBSD$
  check_library_exists(uuid uuid_generate "" HAVE_UUID_GENERATE)
  
  
-@@ -499,6 +503,10 @@ set(VM_SOURCES
+@@ -486,6 +490,10 @@ set(VM_SOURCES
  add_executable(${VM_EXECUTABLE_NAME} ${VM_FRONTEND_APPLICATION_TYPE} ${VM_FRONTEND_SOURCES})
  addLibraryWithRPATH(${VM_LIBRARY_NAME} ${VM_SOURCES})
  
@@ -43,3 +43,18 @@ $NetBSD$
  #
  # LibFFI
  #
+@@ -532,6 +540,14 @@ if(OSX)
+   )
+ endif()
+ 
++if(NETBSD)
++  include(FindPkgConfig)
++  pkg_check_modules(EPOLL REQUIRED epoll-shim)
++  message(STATUS "epoll-shim:" ${EPOLL_VERSION})
++  target_include_directories(${VM_LIBRARY_NAME} PUBLIC ${EPOLL_INCLUDEDIR}/libepoll-shim)
++  target_link_libraries(${VM_LIBRARY_NAME} ${EPOLL_LINK_LIBRARIES})
++endif()
++
+ target_link_libraries(${VM_EXECUTABLE_NAME} ${VM_LIBRARY_NAME})
+ 
+ add_required_libs_per_platform()
