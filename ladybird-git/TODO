@@ -17,3 +17,4 @@ Downloads files during build:
 Sometimes core dumps problems when visiting web pages.
 Reported at
 https://github.com/SerenityOS/serenity/issues/23375
+https://github.com/LadybirdBrowser/ladybird/issues/438
