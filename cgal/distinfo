@@ -1,5 +1,6 @@
 $NetBSD$
 
-BLAKE2s (CGAL-5.6.2.tar.xz) = beb5c6c25cfbed5a3b116571c67fecf5a62ce7705af74950ef4c29f11dd246ec
-SHA512 (CGAL-5.6.2.tar.xz) = 5f47c69320fdf4cea53df9c2ebfe27080cc919b2be2b2aeeacabdd2820c71600a1dc0def53b7436bd7e20b391f7d23e77461779beb3ba34e8d856f6714ff85bd
-Size (CGAL-5.6.2.tar.xz) = 24489156 bytes
+BLAKE2s (cgal-6.0.1.tar.gz) = 6bd76acbccfa05579ed1b4012b17b99be5365528224102ec809a64fabd4ad775
+SHA512 (cgal-6.0.1.tar.gz) = 28963cdbf84d516290da69ca2ad5c90ec61dd9ca9cd97643ccf5b553c406e96a82621270214c0c81c32da7f8c388090a304d229925ed6e1548dbce3abcf1a259
+Size (cgal-6.0.1.tar.gz) = 142804948 bytes
+SHA1 (patch-Scripts_developer_scripts_cgal_build) = 3a63ceb5c1819fd85d2037593edb75c0bd3a2c76
