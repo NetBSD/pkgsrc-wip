@@ -1,0 +1,15 @@
+$NetBSD$
+
+ERROR: [check-portability.awk] => Found test ... == ...:
+ERROR: [check-portability.awk] Scripts/developer_scripts/cgal_build:7: if [ $? == 0 ]; then
+
+--- Scripts/developer_scripts/cgal_build.orig	2024-10-19 01:04:13.000000000 +0900
++++ Scripts/developer_scripts/cgal_build	2025-01-11 08:44:39.321706533 +0900
+@@ -4,6 +4,6 @@
+ 
+ [ -r Makefile ] || cmake .
+ 
+-if [ $? == 0 ]; then
++if [ $? = 0 ]; then
+   make -f Makefile ${1+"$@"}
+ fi
