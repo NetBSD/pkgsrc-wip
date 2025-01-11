@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cabal2pkg-0.1.0.4
+DISTNAME=	cabal2pkg-0.1.1
 PKGNAME=	${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
@@ -42,6 +42,7 @@ post-install:
 .include "../../devel/hs-mono-traversable/buildlink3.mk"
 .include "../../net/hs-network-uri/buildlink3.mk"
 .include "../../devel/hs-optparse-applicative/application.mk"
+.include "../../devel/hs-ordered-containers/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-pretty-show/buildlink3.mk"
