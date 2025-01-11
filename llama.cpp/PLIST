@@ -10,6 +10,7 @@ bin/llama-embedding
 bin/llama-eval-callback
 bin/llama-export-lora
 bin/llama-gbnf-validator
+bin/llama-gen-docs
 bin/llama-gguf
 bin/llama-gguf-hash
 bin/llama-gguf-split
@@ -28,6 +29,7 @@ bin/llama-passkey
 bin/llama-perplexity
 bin/llama-quantize
 bin/llama-quantize-stats
+bin/llama-qwen2vl-cli
 bin/llama-retrieval
 bin/llama-run
 bin/llama-save-load-state
@@ -37,6 +39,7 @@ bin/llama-simple-chat
 bin/llama-speculative
 bin/llama-speculative-simple
 bin/llama-tokenize
+bin/llama-tts
 include/ggml-alloc.h
 include/ggml-backend.h
 include/ggml-blas.h
@@ -50,6 +53,7 @@ include/ggml-rpc.h
 include/ggml-sycl.h
 include/ggml-vulkan.h
 include/ggml.h
+include/gguf.h
 include/llama-cpp.h
 include/llama.h
 lib/cmake/llama/llama-config.cmake
