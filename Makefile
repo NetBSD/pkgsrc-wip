@@ -5755,7 +5755,6 @@ SUBDIR+=	umix
 SUBDIR+=	umoci
 SUBDIR+=	umurmur
 SUBDIR+=	unagi
-SUBDIR+=	unarchiver-clt
 SUBDIR+=	undo-tree
 SUBDIR+=	unicorn5hc
 SUBDIR+=	unifi
