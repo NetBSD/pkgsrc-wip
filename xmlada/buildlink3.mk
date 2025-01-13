@@ -13,11 +13,11 @@ BUILDLINK_AUTO_VARS.xmlada=	no
 BUILDLINK_AUTO_DIRS.xmlada=	no
 
 BUILDLINK_FILES.xmlada=		lib/*
-BUILDLINK_FILES.xmlada=		include/xmlada/* lib/xmlada/*
+BUILDLINK_FILES.xmlada=		include/xmlada/* lib/libxmlada* lib/xmlada/*
 BUILDLINK_FILES.xmlada+=	share/gpr/manifests/xmlada share/gpr/xmlada*.gpr
 
 BUILDLINK_CONTENTS_FILTER.xmlada=	\
-	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libxmlada.*\.so$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
+	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
 
 .endif
 
