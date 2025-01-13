@@ -1,9 +1,3 @@
-Requires this in scons4/build.mk since PREFIX option is not supported. (Or
-commenting this line should be fine since we add prefix to build args in
-Makefile.) A systematic solution is needed for this.
-
-	_SCONS_BUILD_ARGS+=     prefix=${PREFIX}
-
 Following warning may be handled by building sundials with blas/lapack
 
 - WARNING: External BLAS/LAPACK has been specified for Cantera but SUNDIALS was built without this support. Cantera will use the slower default solver implementations included with SUNDIALS. You can resolve this warning by installing or building SUNDIALS with BLAS/LAPACK support.
