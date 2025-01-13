@@ -2,10 +2,10 @@
 
 DISTNAME=  	xdg-0.9.0
 CATEGORIES=	x11	
-MASTER_SITES=	https://sourceforge.net/projects/xdg/files/
+MASTER_SITES=	https://sourceforge.net/projects/xdg2/files/
 
-MAINTAINER=	goon.mage@yahoo.com
-HOMEPAGE=	https://sourceforge.net/projects/xdg/
+MAINTAINER=	indur9@yahoo.com
+HOMEPAGE=	https://sourceforge.net/projects/xdg2/
 COMMENT=	General purpose X11 library. Usable for anything graphical e.g. window managers or 3D.		
 LICENSE=	GPL	
 
