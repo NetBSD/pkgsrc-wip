@@ -1,8 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2024/05/02 14:00:00 dkazankov Exp $
 
-.include "version.mk"
-PKGNAME=	alire-${ALIRE_VERSION}
-PKGREVISION=	1
+PKGNAME=	alire-2.0.2
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/alire-project/alire
@@ -16,11 +14,11 @@ RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-GCC_REQD+=	13
+#GCC_REQD+=	13
 
 DISTNAME=	alire-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	alire
-GITHUB_TYPE=	tag
+#GITHUB_TYPE=	tag
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alire-project/}
 
@@ -34,7 +32,7 @@ GITHUB_SUBMODULES+=	mosteo	diskflags	60729edf31816aca0036b13b2794c39a9bd0172e	de
 GITHUB_SUBMODULES+=	alire-project	gnatcoll-core	4e663b87a028252e7e074f054f8f453661397166	deps/gnatcoll-slim
 GITHUB_SUBMODULES+=	mosteo	minirest	9a9c660f9c6f27f5ef75417e7fac7061dff14d78	deps/minirest
 GITHUB_SUBMODULES+=	mosteo	optional	1aa0e20bf7cd010c4b59e6ab7cc4b089790b796e	deps/optional
-GITHUB_SUBMODULES+=	alire-project	semantic_versioning	cc2148cf9c8934fb557b5ae49a3f7947194fa7ee	deps/semantic_versioning
+GITHUB_SUBMODULES+=	alire-project	semantic_versioning	4861e32bd8a2f0df038d3ecc9a72b6381e7a34cc	deps/semantic_versioning
 GITHUB_SUBMODULES+=	HeisenbugLtd	si_units	9329d2591b82440ccc859a53f1380ac07ea4194d	deps/si_units
 GITHUB_SUBMODULES+=	alire-project	simple_logging	3505dc645f3eef6799a486aae223d37e88cfc4d5	deps/simple_logging
 GITHUB_SUBMODULES+=	Fabien-Chouteau	spdx_ada	2df9b1182544359c751544e52e14c94830d99fa6	deps/spdx
@@ -49,6 +47,8 @@ MAKE_ENV=		ALIRE_OS=netbsd ALIRE_BUILD_MODE=release
 
 # Use GPRBuild as main build system
 .include "../../wip/gprbuild/gprbuild.mk"
+
+.include "../../wip/gcc14-gnat/gcc.mk"
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
