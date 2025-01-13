@@ -20,7 +20,7 @@ RELRO_SUPPORTED=	no
 
 USE_TOOLS+=	gmake
 
-TOOL_DEPENDS+=	yosys-[0-9]*:../../devel/yosys
+TOOL_DEPENDS+=	yosys-[0-9]*:../../wip/yosys-dev
 
 DEPENDS+=	ghdl-dev-5.*:../../wip/ghdl-dev
 
