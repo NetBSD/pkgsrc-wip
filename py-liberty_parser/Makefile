@@ -14,5 +14,10 @@ USE_LANGUAGES=	# none
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-sympy>=1.6:../../math/py-sympy
+DEPENDS+=	${PYPKGPREFIX}-lark>=1.1:../../wip/py-lark
+
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
