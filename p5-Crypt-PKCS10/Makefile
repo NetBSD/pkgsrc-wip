@@ -11,6 +11,7 @@ COMMENT=	Parse PKCS #10 certificate requests
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Convert-ASN1>=0:../../textproc/p5-Convert-ASN1
+DEPENDS+=	p5-CryptX>=0:../../security/p5-CryptX
 
 PERL5_PACKLIST=		auto/Crypt/PKCS10/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
