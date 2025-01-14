@@ -1,0 +1,5 @@
+lang/py-lark: Update py-lark to 1.2.2
+Update prepared in wip by Mayuresh <mayuresh@acm.org>
+
+lang/py-lark-parser 0.12 is outdated. Also keeping with the usual naming
+pattern, it should use the github project name rather than github username

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (lark/1.2.2.tar.gz) = 3e321170f3eb8eef735dff1d109dd3517bab21e178e1a5deb7c9c847eba08320
+SHA512 (lark/1.2.2.tar.gz) = 8a0af3be2b6d3b23ab61ae970d944a773ef49c690d15a71d8fd44a9e7585e608001de06d5f20d4d4c9dac9bdad98a88599156330ff92d5d659344d1a581c42ea
+Size (lark/1.2.2.tar.gz) = 416094 bytes
