@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (liberty_parser-0.0.25.tar.gz) = 261d1be99aae677549abcb918f7b261d5910ab793e8aa0f1e765512893a5f094
+SHA512 (liberty_parser-0.0.25.tar.gz) = a63684c921f75f32c28651a257f9a3dd8e2cca2f1327085a339dd783a2e3363212cbe6d201e643bc5a4c6b7e95ccb1c6ebd2be22d8015bd70c909ceb98567a2d
+Size (liberty_parser-0.0.25.tar.gz) = 16856 bytes

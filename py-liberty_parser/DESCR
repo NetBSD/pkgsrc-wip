@@ -1,0 +1,3 @@
+This library provides functions to parse, manipulate and format 'Liberty'
+files.  The liberty format is a common standard to describe certain aspects of
+standard-cell libraries such as timing, power, cell pin types, etc.
