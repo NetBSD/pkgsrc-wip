@@ -117,7 +117,6 @@ SHA1 (patch-compiler_rustc__target_src_spec_targets_aarch64__unknown__netbsd.rs)
 SHA1 (patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs) = bbfbac8c4047340fc220e26bfaa8e7d7f5dcb284
 SHA1 (patch-compiler_rustc__target_src_spec_targets_mipsel__unknown__netbsd.rs) = 7deeb7d1d3306e96891dec144ac90398b88c6ad4
 SHA1 (patch-compiler_rustc__target_src_spec_targets_sparc64__unknown__netbsd.rs) = cde3a59b5d53b58a3824aef8dddbf815bcdd8eb8
-SHA1 (patch-config.example.toml) = 520ad7a26249780ae79a5dc1d2b534a8c6aef0a5
 SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 9d5ef634c5a454e474ea5fee76da9bb768f5b3d9
 SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 3b84a462c6bc8245d579452e4c37e3ce13314952
 SHA1 (patch-library_std_src_sys_pal_unix_mod.rs) = bfc59ae4568547e3ed71c8b31ba5b5b5363d5d40
