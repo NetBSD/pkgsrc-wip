@@ -2824,7 +2824,6 @@ SUBDIR+=	p5-Class-DBI-Sweet
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Config-YAML
 SUBDIR+=	p5-Crypt-CAST5
-SUBDIR+=	p5-Crypt-PKCS10
 SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBD-Sybase
 SUBDIR+=	p5-DBIx-Class-ResultSet-RecursiveUpdate
