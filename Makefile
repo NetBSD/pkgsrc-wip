@@ -910,7 +910,6 @@ SUBDIR+=	fastahack
 SUBDIR+=	fastaunique
 SUBDIR+=	fastbit
 SUBDIR+=	fastcol
-SUBDIR+=	fastfetch
 SUBDIR+=	fastjet
 SUBDIR+=	fastool
 SUBDIR+=	fastp
