@@ -5916,6 +5916,7 @@ SUBDIR+=	wla-dx-git
 SUBDIR+=	wlroots
 SUBDIR+=	wmbattery
 SUBDIR+=	wmc2d
+SUBDIR+=	wmctrl
 SUBDIR+=	wmii-devel
 SUBDIR+=	wmname
 SUBDIR+=	wmnetload
