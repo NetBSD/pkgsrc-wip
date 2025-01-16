@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	bcbio-gff-0.7.0
-PKGNAME=	${PYPKGPREFIX}-bcbio-gff-0.7.0
+DISTNAME=	bcbio-gff-${PKGVERSION_NOREV}
+PKGNAME=	${PYPKGPREFIX}-bcbio-gff-0.7.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcbio-gff/}
 
