@@ -39,4 +39,17 @@ Part 30: Savegame sync problem with format 1.49
     => Fixed with SVN revision 1710
 
 
+Part 31: Problem with melee attack
+==================================
+[X] No damage to the player
+    => Reported in bug ticket #697
+    => Fixed with SVN revision 1710
+
+
+Part 32: Most MBF21 maps crash the engine
+=========================================
+[ ] Segmentation fault
+    => Reported in bug ticket #698
+
+
 EOF

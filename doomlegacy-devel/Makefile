@@ -2,7 +2,7 @@
 
 VERS=		1.48.16
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1710
+SVNVERS=	1713
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
