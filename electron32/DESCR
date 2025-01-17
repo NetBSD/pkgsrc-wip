@@ -1,3 +1,5 @@
-Chromium is an open-source browser project that aims to build a
-safer, faster, and more stable way for all Internet users to
-experience the web.
+Electron is a framework for building desktop applications
+using JavaScript, HTML, and CSS. By embedding Chromium and
+Node.js into its binary, Electron allows you to maintain
+one JavaScript codebase and create cross-platform apps that
+work on the supported operating systems.

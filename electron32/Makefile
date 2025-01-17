@@ -39,7 +39,7 @@ EXTRACT_ONLY=			${CHROMIUM_DISTFILE}
 EXTRACT_ONLY+=			${DISTFILES:C/${CHROMIUM_DISTFILE}\.[0-9]//}
 
 MAINTAINER=			kikadf.01@gmail.com
-HOMEPAGE=			https://electronjs.org
+HOMEPAGE=			https://electronjs.org/
 COMMENT=			Build cross-platform desktop apps with JavaScript, HTML, and CSS
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0 AND mit
 
@@ -104,7 +104,7 @@ SUBST_FILES.path+=	base/base_paths_posix.cc
 SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
-SUBST_FILES.path+=	chromium.sh
+SUBST_FILES.path+=	chrome/browser/file_system_access/chrome_file_system_access_permission_context.h
 SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
@@ -114,20 +114,7 @@ SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	pre-configure
-SUBST_MESSAGE.man=	Fixing manpage
-SUBST_FILES.man+=	chrome/app/resources/manpage.1.in
-SUBST_SED.man+=		-e 's,@@PACKAGE@@,chromium,g'
-SUBST_SED.man+=		-e 's,@@MENUNAME@@,Chromium Web Browser,g'
-
 .include "options.mk"
-
-#SUBST_CLASSES+=		pulse
-#SUBST_STAGE.pulse=	pre-configure
-#SUBST_MESSAGE.pulse=	Set BUILT_WITH_PULSE to ${WITH_PA} in chromium wrapper
-#SUBST_FILES.pulse+=	chromium.sh
-#SUBST_SED.pulse+=	-e 's,@PULSE@,${WITH_PA},g'
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
@@ -246,7 +233,7 @@ PKG_CC=			clang
 PKG_CXX=		clang++
 
 post-fetch:
-	@if [ ! -f ${DISTDIR}/chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C} ]; then \
+	if [ ! -f ${DISTDIR}/chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C} ]; then \
 		${CAT} ${DISTDIR}/chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C}.? > \
 			${DISTDIR}/chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C}; \
 	fi
