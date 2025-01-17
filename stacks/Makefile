@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2023/08/14 05:23:52 wiz Exp $
 
-DISTNAME=	stacks-2.60
-PKGREVISION=	3
+DISTNAME=	stacks-2.68
 CATEGORIES=	biology
 MASTER_SITES=	http://catchenlab.life.illinois.edu/stacks/source/
 
@@ -12,16 +11,21 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
+# Is this needed?
+# FORCE_CXX_STD=	c++14
 USE_TOOLS+=		bash perl:run
 GNU_CONFIGURE=		yes
 
 REPLACE_BASH+=		scripts/stacks-count-reads-per-sample-per-locus
-REPLACE_BASH+=		scripts/stacks-dist-extract
 REPLACE_BASH+=		scripts/stacks-gdb
 REPLACE_BASH+=		scripts/stacks-samtools-tview
 REPLACE_PERL=		scripts/*.pl
 REPLACE_PYTHON+=	scripts/*.py
+REPLACE_PYTHON+=	scripts/stacks-dist-extract
 REPLACE_PYTHON+=	scripts/stacks-integrate-alignments
+REPLACE_PYTHON+=	scripts/stacks-private-alleles
+
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/home/bacon/Pkgsrc/pkgsrc/wip/stacks/work/.destdir/home/bacon/Pkgsrc/pkg/bin/stacks-private-alleles" is not allowed.
 
 REPLACE_INTERPRETER+=	Rscript
 REPLACE.Rscript.old=	.*Rscript
