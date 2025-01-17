@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/CalebBell/fluids
 COMMENT=	Fluid dynamics component of Chemical Engineering Design Library
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
