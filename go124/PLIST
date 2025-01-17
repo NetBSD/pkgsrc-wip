@@ -1195,6 +1195,7 @@ go124/src/cmd/compile/internal/syntax/testdata/issue63835.go
 go124/src/cmd/compile/internal/syntax/testdata/issue65790.go
 go124/src/cmd/compile/internal/syntax/testdata/issue68589.go
 go124/src/cmd/compile/internal/syntax/testdata/issue69506.go
+go124/src/cmd/compile/internal/syntax/testdata/issue70974.go
 go124/src/cmd/compile/internal/syntax/testdata/linalg.go
 go124/src/cmd/compile/internal/syntax/testdata/map.go
 go124/src/cmd/compile/internal/syntax/testdata/map2.go
@@ -1589,6 +1590,7 @@ go124/src/cmd/go/internal/cache/default.go
 go124/src/cmd/go/internal/cache/hash.go
 go124/src/cmd/go/internal/cache/hash_test.go
 go124/src/cmd/go/internal/cache/prog.go
+go124/src/cmd/go/internal/cacheprog/cacheprog.go
 go124/src/cmd/go/internal/cfg/bench_test.go
 go124/src/cmd/go/internal/cfg/cfg.go
 go124/src/cmd/go/internal/cfg/zdefaultcc.go
@@ -2107,6 +2109,7 @@ go124/src/cmd/go/testdata/script/build_cache_link.txt
 go124/src/cmd/go/testdata/script/build_cache_output.txt
 go124/src/cmd/go/testdata/script/build_cache_pgo.txt
 go124/src/cmd/go/testdata/script/build_cache_trimpath.txt
+go124/src/cmd/go/testdata/script/build_cacheprog_issue70848.txt
 go124/src/cmd/go/testdata/script/build_cc_cache_issue64423.txt
 go124/src/cmd/go/testdata/script/build_cd_gopath_different.txt
 go124/src/cmd/go/testdata/script/build_cgo_consistent_results.txt
@@ -2236,6 +2239,7 @@ go124/src/cmd/go/testdata/script/env_cache.txt
 go124/src/cmd/go/testdata/script/env_changed.txt
 go124/src/cmd/go/testdata/script/env_cross_build.txt
 go124/src/cmd/go/testdata/script/env_exp.txt
+go124/src/cmd/go/testdata/script/env_gocacheprog.txt
 go124/src/cmd/go/testdata/script/env_gomod_issue61455.txt
 go124/src/cmd/go/testdata/script/env_issue46807.txt
 go124/src/cmd/go/testdata/script/env_sanitize.txt
@@ -2770,6 +2774,7 @@ go124/src/cmd/go/testdata/script/test_fuzz_cache.txt
 go124/src/cmd/go/testdata/script/test_fuzz_cgo.txt
 go124/src/cmd/go/testdata/script/test_fuzz_chatty.txt
 go124/src/cmd/go/testdata/script/test_fuzz_cleanup.txt
+go124/src/cmd/go/testdata/script/test_fuzz_context.txt
 go124/src/cmd/go/testdata/script/test_fuzz_cov.txt
 go124/src/cmd/go/testdata/script/test_fuzz_deadline.txt
 go124/src/cmd/go/testdata/script/test_fuzz_dup_cache.txt
@@ -3479,6 +3484,7 @@ go124/src/cmd/link/testdata/dynimportvar/asm/a_amd64.s
 go124/src/cmd/link/testdata/dynimportvar/asm/a_arm64.s
 go124/src/cmd/link/testdata/dynimportvar/main.go
 go124/src/cmd/link/testdata/linkname/badlinkname.go
+go124/src/cmd/link/testdata/linkname/builtin.go
 go124/src/cmd/link/testdata/linkname/coro.go
 go124/src/cmd/link/testdata/linkname/coro2.go
 go124/src/cmd/link/testdata/linkname/coro_asm/asm.s
@@ -4628,6 +4634,7 @@ go124/src/crypto/internal/fips140/aes/gcm/ghash.go
 go124/src/crypto/internal/fips140/aes/gcm/interface_test.go
 go124/src/crypto/internal/fips140/aes/interface_test.go
 go124/src/crypto/internal/fips140/alias/alias.go
+go124/src/crypto/internal/fips140/asan.go
 go124/src/crypto/internal/fips140/bigmod/_asm/go.mod
 go124/src/crypto/internal/fips140/bigmod/_asm/go.sum
 go124/src/crypto/internal/fips140/bigmod/_asm/nat_amd64_asm.go
@@ -4645,8 +4652,8 @@ go124/src/crypto/internal/fips140/bigmod/nat_s390x.s
 go124/src/crypto/internal/fips140/bigmod/nat_test.go
 go124/src/crypto/internal/fips140/bigmod/nat_wasm.go
 go124/src/crypto/internal/fips140/bigmod/testdata/mod_inv_tests.txt
+go124/src/crypto/internal/fips140/boring.go
 go124/src/crypto/internal/fips140/cast.go
-go124/src/crypto/internal/fips140/check/asan.go
 go124/src/crypto/internal/fips140/check/check.go
 go124/src/crypto/internal/fips140/check/checktest/asm.s
 go124/src/crypto/internal/fips140/check/checktest/asm_386.s
@@ -4656,10 +4663,10 @@ go124/src/crypto/internal/fips140/check/checktest/asm_arm64.s
 go124/src/crypto/internal/fips140/check/checktest/asm_none.go
 go124/src/crypto/internal/fips140/check/checktest/asm_stub.go
 go124/src/crypto/internal/fips140/check/checktest/test.go
-go124/src/crypto/internal/fips140/check/noasan.go
 go124/src/crypto/internal/fips140/drbg/cast.go
 go124/src/crypto/internal/fips140/drbg/ctrdrbg.go
 go124/src/crypto/internal/fips140/drbg/rand.go
+go124/src/crypto/internal/fips140/drbg/rand_test.go
 go124/src/crypto/internal/fips140/ecdh/cast.go
 go124/src/crypto/internal/fips140/ecdh/ecdh.go
 go124/src/crypto/internal/fips140/ecdh/order_test.go
@@ -4748,6 +4755,8 @@ go124/src/crypto/internal/fips140/nistec/p256_table.go
 go124/src/crypto/internal/fips140/nistec/p256_table_test.go
 go124/src/crypto/internal/fips140/nistec/p384.go
 go124/src/crypto/internal/fips140/nistec/p521.go
+go124/src/crypto/internal/fips140/notasan.go
+go124/src/crypto/internal/fips140/notboring.go
 go124/src/crypto/internal/fips140/pbkdf2/cast.go
 go124/src/crypto/internal/fips140/pbkdf2/pbkdf2.go
 go124/src/crypto/internal/fips140/rsa/cast.go
@@ -4758,6 +4767,7 @@ go124/src/crypto/internal/fips140/rsa/pkcs1v15_test.go
 go124/src/crypto/internal/fips140/rsa/pkcs1v22.go
 go124/src/crypto/internal/fips140/rsa/pkcs1v22_test.go
 go124/src/crypto/internal/fips140/rsa/rsa.go
+go124/src/crypto/internal/fips140/rsa/testdata/gcd_lcm_tests.txt
 go124/src/crypto/internal/fips140/rsa/testdata/miller_rabin_tests.txt
 go124/src/crypto/internal/fips140/sha256/_asm/go.mod
 go124/src/crypto/internal/fips140/sha256/_asm/go.sum
@@ -6069,6 +6079,8 @@ go124/src/go/doc/testdata/examples/issue43658.go
 go124/src/go/doc/testdata/examples/issue43658.golden
 go124/src/go/doc/testdata/examples/multiple.go
 go124/src/go/doc/testdata/examples/multiple.golden
+go124/src/go/doc/testdata/examples/shadow_predeclared.go
+go124/src/go/doc/testdata/examples/shadow_predeclared.golden
 go124/src/go/doc/testdata/examples/values.go
 go124/src/go/doc/testdata/examples/values.golden
 go124/src/go/doc/testdata/examples/whole_file.go
@@ -6966,6 +6978,8 @@ go124/src/internal/goexperiment/exp_swissmap_off.go
 go124/src/internal/goexperiment/exp_swissmap_on.go
 go124/src/internal/goexperiment/exp_synchashtriemap_off.go
 go124/src/internal/goexperiment/exp_synchashtriemap_on.go
+go124/src/internal/goexperiment/exp_synctest_off.go
+go124/src/internal/goexperiment/exp_synctest_on.go
 go124/src/internal/goexperiment/flags.go
 go124/src/internal/goexperiment/mkconsts.go
 go124/src/internal/goos/gengoos.go
@@ -10451,6 +10465,7 @@ go124/src/testing/benchmark.go
 go124/src/testing/benchmark_test.go
 go124/src/testing/cover.go
 go124/src/testing/example.go
+go124/src/testing/example_loop_test.go
 go124/src/testing/export_test.go
 go124/src/testing/flag_test.go
 go124/src/testing/fstest/mapfs.go
@@ -10468,6 +10483,7 @@ go124/src/testing/iotest/reader.go
 go124/src/testing/iotest/reader_test.go
 go124/src/testing/iotest/writer.go
 go124/src/testing/iotest/writer_test.go
+go124/src/testing/loop_test.go
 go124/src/testing/match.go
 go124/src/testing/match_test.go
 go124/src/testing/newcover.go
@@ -10480,6 +10496,7 @@ go124/src/testing/slogtest/example_test.go
 go124/src/testing/slogtest/run_test.go
 go124/src/testing/slogtest/slogtest.go
 go124/src/testing/sub_test.go
+go124/src/testing/synctest/context_example_test.go
 go124/src/testing/synctest/synctest.go
 go124/src/testing/testing.go
 go124/src/testing/testing_other.go
