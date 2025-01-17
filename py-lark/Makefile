@@ -13,6 +13,8 @@ HOMEPAGE=	https://github.com/lark-parser/lark/
 COMMENT=	Parsing toolkit for Python
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 WRKSRC=		${WRKDIR}/lark-1.2.2
 USE_LANGUAGES=	# none
 
