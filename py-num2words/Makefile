@@ -10,10 +10,12 @@ HOMEPAGE=	https://github.com/savoirfairelinux/num2words
 COMMENT=	Modules to convert numbers to words. Easily extensible
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
 TEST_DEPENDS+=	# TODO: delegator.py>=0
 
 USE_LANGUAGES=	# none
+
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
