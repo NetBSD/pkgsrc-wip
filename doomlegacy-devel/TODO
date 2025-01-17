@@ -31,10 +31,12 @@ Features and bug fixes up to Part 29 were released with version 1.48.16
 
 Part 30: Savegame sync problem with format 1.49
 ===============================================
-[ ] Game can be saved with new format 1.49, but not loaded again
+[X] Game can be saved with new format 1.49, but not loaded again
     Error message: "Legacy save game sync error"
     => Added pkgsrc patch
     => Reported in bug ticket #696
+    => Removed pkgsrc patch
+    => Fixed with SVN revision 1710
 
 
 EOF
