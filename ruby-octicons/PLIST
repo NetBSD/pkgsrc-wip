@@ -541,6 +541,8 @@ ${GEM_LIBDIR}/lib/build/svg/sort-desc-16.svg
 ${GEM_LIBDIR}/lib/build/svg/sort-desc-24.svg
 ${GEM_LIBDIR}/lib/build/svg/sparkle-fill-16.svg
 ${GEM_LIBDIR}/lib/build/svg/sparkle-fill-24.svg
+${GEM_LIBDIR}/lib/build/svg/sparkles-fill-16.svg
+${GEM_LIBDIR}/lib/build/svg/sparkles-fill-24.svg
 ${GEM_LIBDIR}/lib/build/svg/sponsor-tiers-16.svg
 ${GEM_LIBDIR}/lib/build/svg/sponsor-tiers-24.svg
 ${GEM_LIBDIR}/lib/build/svg/square-16.svg
@@ -650,5 +652,3 @@ ${GEM_LIBDIR}/lib/octicons.rb
 ${GEM_LIBDIR}/lib/octicons/octicon.rb
 ${GEM_LIBDIR}/lib/octicons/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/3.2.0/plugins
-@pkgdir lib/ruby/gems/3.2.0/extensions

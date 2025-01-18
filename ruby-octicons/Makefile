@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	octicons-19.11.0
+DISTNAME=	octicons-19.14.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
