@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/CalebBell/chemicals
 COMMENT=	Chemical properties component of ChEDL library
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-fluids>=1.0.26:../../wip/py-fluids
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6.0:../../math/py-scipy
