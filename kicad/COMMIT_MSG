@@ -1,57 +1,129 @@
-cad/kicad: Update to 5.0.6
+cad/kicad: Update to 8.0.7
 
-KiCad 8.0.6 (2024-10-24):
+KiCad 8.0.7 (2024-12-03):
+
+General
+
+- Fix URI environment variable expansion issue. #18918
+- Fix display of broken fonts. #19010
+- Clear unknown keys from environment variable maps on save. #18734
+- Exclude letter hotkeys from shift fallback. #19093
+- Fix missing text and graphics in PDF plots. #16456
+- Handle DXF files with out of bounds values. #18523
+- Fix invalid Bezier curve DXF import. #11153
+- Fix incorrectly rendered font depending on rotation. #18377
+- Make color picker dialog usable on hidpi monitors. #17860
+- Scale text size to inside scaled blocks on DXF import. #18525
+- Fix copy-paste issue for grids with checkboxes. #18985
+- Update font when needed on italic/bold change. #18592
+- Prevent altering text thickness when switching bold option on and
+  off. #18975
 
 Schematic Editor
 
-- Do not create empty labels when the pin has no name. #18535
-- Fix output when printing custom font in drawing sheet. #18579
-- Fix broken symbol links when importing CADSTAR schematics. #17143
-- Fix annotation issue loading legacy schematics. #18779
-- Decode UTF-8 for component field values in backannotation
-  parser. #18406
+- Make sheet pin unconnected indicator (X) follow when dragging
+  sheet. #18854
+- Fix import compatibility with LCEDA/EasyEDA v2.2.32. #18994
+- Use symbol/netport name from device entry if empty when importing
+  EasyEDA/LCEDA schematic. #19021
+- Do not import empty visible net labels from EasyEDA/LCEDA Pro
+  schematics. #19034
+- Import Bezier curves in symbols from EasyEDA/LCEDA schematics.
+  https://gitlab.com/kicad/code/kicad/-/issues/19034.[#19034.]
+- Test for valid sheet name in sheet dialog properties. #18981
+- Fix missing actions strings and hotkey conflict. #17694
+- Respect background color fill when plotting to PDF. #18919
+- Fix copy and paste issue in bus alias definition. #18558
+- Do not allow repeat action to cause sheet recursion. #18199
+- Fix crash when importing Eagle schematic when board file doesn’t
+  exist in non-stand alone mode. #18241
+- Warn user when template field names contain trailing/leading white
+  space.https://gitlab.com/kicad/code/kicad/-/issues/18601[#18601]
+- Fix an issue in sheet cross-references of global labels. #18534
+- Add sheet changes to net navigation history. #18616
+
+Symbol Editor.
+
+- Preserve pin numbering when duplicating.
 
 Spice Simulator
 
-- Make simulation warnings non-fatal. #18143
-- Fix contrast and update issues with simulation cursors. #18390
-- Use shown E24 tune values. #18746
+- Fix missing current scale in AC simulation. #18313
+- Fix crash when deselecting the probe tool. #18547
 
 Board Editor
 
-- Fix crash when enabling filled shape properties in a text
-  box. #18640
-- Update track widths during routing.
-- Fix crash when opening version 3 legacy board file. #18553
-- Correctly mirror dimensions when placed on back silk screen
-  layer. #18643
-- Import POURED items as zone fills from EasyEDA/LCEDA Pro v2.2+ board
-  files. #18664
-- Make "Move Corner To…​" use defined grid origin. #18479
-- Use correct radius when expanding to polygon, rule area, or zone
-  from selection. #18724
-- Correctly show ratsnest lines for graphical items with nets. #18774
-- Prevent text box from moving when continuously flipping. #18797
-- Convert small arcs in line chain to segments to avoid overflow
-  issues in Altium importer.
-- Improve default textbox alignment in Altium importer.
+- Prevent solder mask bridge DRC error with mask pad.
+- Report implicit design rule minimums as being from the board
+  setup. #18642
+
+- Fix importing custom design rules. #18580
+- Don’t ask about locking twice. #18679
+- Make orphaned nets obey the minimum board clearance.
+- Make neck in a zone fill the DRC epsilon smaller on each
+  side. #18921
+
+- Make sure paste action can’t be performed through modal
+  dialog. #18912
+- Make polyline properties dialog honor the escape key. #18850
+- Fix focus issue in parent window after hiding the search
+  panel. #12613
+- Fix DRC error with arcs.
+- Fix text position when drawing PCB text on non paired layers. #18980
+- Fix error in DRC rule resolver. #19012
+- Force orphaned nets to obey the minimum board clearance. #19051
+- Fix Eagle footprint library migration crash. #18702
+- Fix unconnected pads missing in IPC-2581 export. #18293
+- Fix crash on routing many traces. #18328
+- Correctly generate thermal reliefs on parts rotated by 45
+  degrees. #18329
+- Fix circular courtyard DRC error. #18347
+- Fix random malformed board outline with arcs DRC errors. #18125
+- Properly group automatically generated objects. #18874
+- Fixing paste issue in footprint library tables. #18732
+- Fix disappearing courtyard layers. #18978
+- Use appropriate tuning pattern icon in menus for tuning pattern
+  generators.
+- Make convert to lines use the width of polygons where
+  applicable. #18713
+- Length tuning workflow improvements. #18979
+- Show empty field for unconstrained length in length tuning
+  properties. #18979
+- Fix crash after Fabmaster import. #19174
+- Update DRC exclusions from DRC dialog. #19113
 
 Footprint Editor
 
-- Allow removing default field values from text items. #18663
+- Fix crash when saving a footprint. #19018
+- Add 3D mouse support for 3D view. #14002
 
 Gerber Viewer
 
-- Fix loading Gerber files with long line lengths. #18890
+- Add 3D mouse support. #13306
+
+3D Viewer
+
+- Ensure the 3D display view is not modified after menu
+  selection. #17422
+
+- Fix omission of STEP models with relative path assignment. #16242
+
+Worksheet Editor
+
+- Add 3D mouse support. #13306
+
+PCB Calculator
+
+- Always use black text in E-series resistor table. #17033
 
 Command Line Interface
 
-- Ensure plotted layers in gerber export are restricted to enabled
-  layers. #18811
+- Accept multiple Gerber layers for single layer plotting. #19089
 
-Windows
+macOS
 
-- Bump wxWidgets version to 3.2.6.
-- Bump wxPython version to 4.2.2.
-- Bump ngspce version to 43.
+- Fix missed rows when pasting to grid. #18916
 
+Python Scripting
+
+- Ensure image handlers are loaded before loading a board. #18959

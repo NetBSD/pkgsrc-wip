@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2024/11/01 12:51:33 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.108 2025/01/10 22:49:54 wiz Exp $
 
-V=		8.0.6
+V=		8.0.7
 DISTNAME=	kicad-${V}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
@@ -18,8 +17,8 @@ TOOL_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++17
-USE_CXX_FEATURES+=	charconv filesystem
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	charconv filesystem c++17
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release

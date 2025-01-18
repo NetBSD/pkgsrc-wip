@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2024/10/04 04:25:35 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2024/11/20 01:29:49 mef Exp $
 
-BLAKE2s (kicad-8.0.6.tar.bz2) = d6d44c5f5469878575b514abe0b6d8bc0d18f56b941c3dcf0fdf4a48b1bab2db
-SHA512 (kicad-8.0.6.tar.bz2) = 6c35830c9314b801970a4af4100e3ffc30d1c4eaea9a806f8c23f22d2d3d46743d70b9748b757f0b990b9e394aa97edf45da0d484274faa2f20ba1d83ff6b7b4
-Size (kicad-8.0.6.tar.bz2) = 72953578 bytes
+BLAKE2s (kicad-8.0.7.tar.bz2) = adbfe3ac8915a607ec89a29ab144c18d0169306456d1a78b631fc5a8d574b11b
+SHA512 (kicad-8.0.7.tar.bz2) = 1b14454621834bbb0059c75fac29e136c5e457664c4e2a351e5d360ff3d6ab095e53e6ca927af4da2f9ac46fc8a04b4aa576fcc5b10a6410b8348aad2eb45803
+Size (kicad-8.0.7.tar.bz2) = 73012606 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
 SHA1 (patch-CMakeLists.txt) = c0d017d3b8b202004dff71386da451fd81ede969
 SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
