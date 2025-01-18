@@ -10,6 +10,7 @@ HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
 COMMENT=	Library to get system information for use in Mozilla testing
 LICENSE=	mpl-1.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.4.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-mozfile>=0.12:../../wip/py-mozfile
 
