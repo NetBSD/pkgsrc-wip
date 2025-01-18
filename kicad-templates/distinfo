@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.15 2024/11/23 11:11:38 mef Exp $
 
-BLAKE2s (kicad-templates-8.0.7.tar.bz2) = 66acd6a7eb099b352b9ff3882a1cbf295b19ba7a7c07f5d2e02632bd10e51ffd
-SHA512 (kicad-templates-8.0.7.tar.bz2) = 740c3dd4f8555f0af5db71e636a81e6ae8b85370a19d4d237289318a29faa30edf12588cfe1a7afb5627a19cd3f5312ed1be6bfa541b05d8014a7d3ed3e6bbcd
-Size (kicad-templates-8.0.7.tar.bz2) = 2783385 bytes
+BLAKE2s (kicad-templates-8.0.8.tar.bz2) = b578697e638bed4ff371dcd5f420c778426f0ff6709092b6b853ba6d27269fd1
+SHA512 (kicad-templates-8.0.8.tar.bz2) = 6da30e5d3911e553fbdfd91214d43cbcc9c4fdafb5e021591ec74a6322d0203c840d769862e7c8ca2a88fa7b72266a6acb79c9f0fb9b1e4e6ae99d44352fd381
+Size (kicad-templates-8.0.8.tar.bz2) = 2865381 bytes

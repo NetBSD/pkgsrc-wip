@@ -1,4 +1,135 @@
-cad/kicad: Update to 8.0.7
+cad/kicad: Update to 8.0.8
+
+KiCad 8.0.8 (2025-01-12):
+
+General
+
+- Remove compensation padding in KiCad launcher for newer wxWidgets
+  versions. #24550
+- Make settings migration dialog re-sizable. #19347
+- Fix parsing of Altium overbar notation. #19080
+- Update pin table when model changes. #19253
+- Recognize ${KICAD7_3DMODEL_DIR} and all future major
+  releases. #18809
+- Skip hidden files when making backup. #18341
+- Fix crash when opening the PCB editor while closing the schematic
+  editor. #19341
+- Fix broken Eagle board and schematic file import. #19528
+
+Schematic Editor
+
+- Plot labels in color. #19040
+- Fix some issues that can crash editor on close.
+- Don’t change selection after selecting find-next hit. #19233
+- Display footprints in footprint assignment tool. #18685
+- Avoid crash on save if a polyline is empty.
+- Don’t rename root sheet when switching language. #19262
+- Do not save automatically placed flag for text with no
+  fields. #19159
+- Fix connectivity issue with global label connected to power
+  symbol. #18092
+- Preserve symbol unit when loading schematic with missing instance
+  data. #19073
+- Fix crash in schematic editor when finishing a wire. #18136
+- Fix crash when opening footprint browser from schematic symbol
+  properties. #19318
+- Fix QA test failure in orcadpcb2 netlist exporter. #18822
+- Fix a crash when library symbol is missing. #17146
+- Fix crash after project save and reopened after cannot find symbol
+  in netlist error. #17146
+- Improve symbol load time when opening a large database
+  library. #18826
+- Fix crash when undoing new sheet action from within sheet. #19358
+- Make PDF export respect background color fill. #18919
+- Don’t lose reference designators when importing third party
+  schematics. #19490
+- Prevent freeze when pasting a long string into search bar. #19464
+
+Symbol Editor
+
+- Fix crash on corrupt symbol library table. #19236
+- Don’t hang when trying to paste image as text. #19079
+- Allow opening color picker dialog from polygon shape properties
+  panel. #19254
+
+Spice Simulator
+
+- Only populate spice code in the simulation dialog code field. #18771
+- Fix crash after probing and changing signal color. #17841
+- Fix crash when a net named VT exists. #18648
+
+Board Editor
+
+- Handle circular zone cutouts in Fabmaster import.
+- Don’t add zero radius holes on Fabmaster import.
+- Do not import unplaced footprints on Fabmaster import.
+- Handle circles on Fabmaster import.
+- Map unknown layers to KiCad user layers on Fabmaster import.
+- Handle rectangles on Fabmaster import.
+- Improve detection of open versus closed polygons on Fabmaster
+  import.
+- Fix text import on Fabmaster import.
+- Handle squares, oblongs, and regular polygons on Fabmaster import.
+- Keep DRC marker exclusions up to date. #17429
+- Make sure descendants get new UUIDs when pasting. #19052
+- Fix crash when running DRC. #18600
+- Allow plot options to override the board tenting settings. #18991
+- Add example for silk_board_edge_clearance custom rule. #19260
+- Fix rats nest issue where blind vias are treated as through
+  vias. #18982
+- Don’t trigger DRC footprint library warning when description and
+  keywords do not match. #19259
+- Allow selection of PCB DRC markers when not on active layer. #19258
+- Allow DRC markers to be selected with area selection. #19258
+- Rebuild layer preset list on language change. #19181
+- Fix track start property display. #19215
+- Fix thread deadlock when closing the footprint chooser
+  dialog. #18107
+- Prevent DRC freeze when using footprint with custom pad
+  shapes. #19325
+- Plot from render cache if fonts aren’t embedded. #18672
+- Add rectangle height and width to properties panel. #17181
+- Fix pad inside isolated zone "island" not marked as
+  unconnected. #17288
+- Allow custom rules that explicitly allow holes from one footprint to
+  overlap the courtyard from another.
+- Fix pin rotation parsing in the legacy symbol library plugin.
+- Adjust DRC clearance for net ties. #14008
+- Properly cancel 3D export. #19279
+- Fix scale when exporting IPC-2581 using inches units.
+- Fix compatibility with Allegro PCB Router using Specctra sessions.
+- Fix Specctra session import from TopoR.
+- Handle wildcards and case-insensitivity in custom rule pin type
+  comparisons. #19513
+
+Footprint Editor
+
+- Properly handle group duplicate. #19245
+- Ignore invisible pads in enumeration tool. #18750
+- Do not add extra grid rows when resetting default field property
+  preferences. #19369
+- Update QR footprint wizard.
+
+Gerber Viewer
+
+- Fix crash on specific gerber files. #19394
+
+3D Viewer
+
+- Use font render cache when available. #18672
+
+PCB Calculator
+
+- Add measure unit to Rho constant in transmission line tab. #19312
+
+Windows
+
+- Fix opening zip archives from project manager tree. #19399
+
+macOS
+
+- Fix dialog focus issue. #3765 #17460
+
 
 KiCad 8.0.7 (2024-12-03):
 
