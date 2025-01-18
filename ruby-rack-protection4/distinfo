@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (rack-protection-4.0.0.gem) = 92478345e41f45dab7a9a592c81f410cf9a653b0bdfe572cab44312c9ad8556e
-SHA512 (rack-protection-4.0.0.gem) = 5eb33e4829e5e0d320a14d169fd007111641e388f2b6e5f8de98d45dfd1e6705cdb4e1ce29524ebb6fb5afe14079b8e5370c9c389cb2befca4ca508da73165b3
-Size (rack-protection-4.0.0.gem) = 17408 bytes
+BLAKE2s (rack-protection-4.1.1.gem) = 5af7530a71359e36e9d12d0fd705d96f1e77fe8940f08e86a2e89bf310b9e009
+SHA512 (rack-protection-4.1.1.gem) = 0f5fd96d93eab654a7333fe75772b460e91b129da143df420f84ac259f2e24e3b1cf5a1892c1edd2dee3a2ed456cd025ae49dc961c7122a1852de3f15f77d1b1
+Size (rack-protection-4.1.1.gem) = 18432 bytes

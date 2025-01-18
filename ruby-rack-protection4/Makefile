@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rack-protection-4.0.0
+DISTNAME=	rack-protection-4.1.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rack-protection/rack-protection4/}
 CATEGORIES=	www
 
