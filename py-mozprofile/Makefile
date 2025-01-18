@@ -10,6 +10,7 @@ HOMEPAGE=	https://firefox-source-docs.mozilla.org/mozbase/mozprofile.html
 COMMENT=	Library to create and modify Mozilla application profiles
 LICENSE=	mpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mozfile>=1.2:../../wip/py-mozfile
 DEPENDS+=	${PYPKGPREFIX}-mozlog>=6.0:../../wip/py-mozlog
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
