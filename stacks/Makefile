@@ -25,8 +25,6 @@ REPLACE_PYTHON+=	scripts/stacks-dist-extract
 REPLACE_PYTHON+=	scripts/stacks-integrate-alignments
 REPLACE_PYTHON+=	scripts/stacks-private-alleles
 
-ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/home/bacon/Pkgsrc/pkgsrc/wip/stacks/work/.destdir/home/bacon/Pkgsrc/pkg/bin/stacks-private-alleles" is not allowed.
-
 REPLACE_INTERPRETER+=	Rscript
 REPLACE.Rscript.old=	.*Rscript
 REPLACE.Rscript.new=	${PREFIX}/bin/Rscript
