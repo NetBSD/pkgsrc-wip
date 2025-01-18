@@ -1,3 +1,4 @@
 $NetBSD$
 
 SHA1 (patch-Makefile) = 87cd9333e786899109df3a931c6d0e99fbd017de
+SHA1 (patch-src_netbsd_btop__collect.cpp) = fc456e15c11a5e50b8a2ae3ca569d1b27f2141cc
