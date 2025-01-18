@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	useragent-0.16.10
+DISTNAME=	useragent-0.16.11
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
