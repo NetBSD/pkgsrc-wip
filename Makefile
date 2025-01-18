@@ -2108,6 +2108,7 @@ SUBDIR+=	libqd
 SUBDIR+=	libquantum
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
+SUBDIR+=	librecad
 SUBDIR+=	librem
 SUBDIR+=	libreoffice-git
 SUBDIR+=	libreswan-4

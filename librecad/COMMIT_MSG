@@ -1,0 +1,72 @@
+cad/librecad: Update to 2.2.1
+
+What's Changed
+
+- Issue #1007 - Update appadata to pass validation by @hfiguiere in
+  #1580
+- Add IfSilent jump instruction to skip browser launch after install
+  by @makos in #1618
+- Update pt-br translation by @natrodrigo in #1582
+- added missing tools from standard tool bar, fixes #1511 by
+  @pollywinters in #1535
+- new DimArc tool, fixes #1255 by @melwyncarlo in #1484
+- Fix linker error when linking freetype w/ ttf2lff by @cfelder in
+  #1592
+- Add ability to copy objects and mini dialog to set options to Align
+  p... by @gwhitney in #1138
+- Handle fractional imperial dimensions by @Sleet01 in #1178
+- Dxf2png PR #1293 by @dxli in #1620
+- Add command by @dxli in #1621
+- Fix #1388 - Allow entering radius in command box by
+  @MarcelloTheArcane in #1389
+- Hide zero foot by @dxli in #1622
+- CI: windows x64: avoid extra Qt tools by @dxli in #1623
+- tangent 3 circle sometimes fails with parallels, fixes #1386 by
+  @melwyncarlo in #1440
+- Fixed a heap corruption upon startup. by @madmaxoft in #1628
+- Change DXF Export to use ext Style handle ID for 340 Dimstyle
+  field. by @computergeek1507 in #1551
+- Ref PR #1432 - Update tab order in qg dlgtext.UI - also add "cbFont"
+  selector into the tab order by @pollywinters in #1540
+- feature request - ability to set the style of a POINT, fixes #960 by
+  @pollywinters in #1532
+- radius=0 is invalid error displayed repeatedly when zooming, fixes
+  #1514 by @pollywinters in #1531
+- Fixes for glowing effect on mouse hovering by @dxli in #1641
+- Issue #1639: minor UI fixes for Point options by @dxli in #1642
+- grid appears in 2nd file, when it is disabled in 1st file, fixes
+  #1451 by @melwyncarlo in #1457
+- PR #1486 fixes by @dxli in #1644
+- Add CodeQL workflow by @jorgectf in #1646
+- Issue #1645: user option for mouse-over effects by @dxli in #1650
+- Qt-5.15 support by @dxli in #1656
+- Issue #1572 : add topology sorting for hatch loops by @dxli in #1659
+- Issue #778 Painter: use Qt native dash pattern by @dxli in #1661
+- Update cyrillic_ii.lff by @app4soft in #1663
+- Polyline Equations in Command by @melwyncarlo in #1449
+- feat: Shortcut "." to specify current point coordinates on command
+  line by @gwhitney in #1673
+- Mtext: initial support for Right-to-left text by @dxli in #1674
+- Issue #1572: fix hatching area calculation by @dxli in #1680
+- feat: Extend one-character coordinate shortcuts by @gwhitney in #1677
+- Issue #1572: updated loop extraction algorithm by @dxli in #1681
+- Icons by @flywire in #1702
+- Update README.md with the support of dxf2svg by @jonadem in #1707
+- Adding support for C++17 in project files. by @marko-radojcic in #1708
+- Fix loading of splines that falsely defined by closed by
+  @baranovskiykonstantin in #1712
+- Support snapping for leaders by @Earlopain in #1714
+- Export 2 csv plugin by @quimperval in #1730
+- Initial Parabola support by @dxli in #1740
+- Parabola support common tangent by @dxli in #1742
+- Snap Middle by Melwyn PR #1424 by @dxli in #1744
+- Pens palette widget by @sand1024 in #1745
+- Layer tree view by @sand1024 in #1748
+- Pen Toolbar Actions - small improvement for pen operations by
+  @sand1024 in #1750
+- Shear support by @dxli in #1749
+- Additional actions by @sand1024 in #1761
+- Pen toolbar - sync pen by layer action now works if PenPalette
+  widget is disabled by @sand1024 in #1763
+- more reliable selection of segments for break/divide action by
+  @sand1024 in #1766

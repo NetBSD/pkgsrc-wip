@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.13 2021/10/26 10:04:13 nia Exp $
+
+BLAKE2s (LibreCAD-2.2.1.tar.gz) = d809008011f82ed96de1b68195d0972cd594dafbe8842255fb6575ac53bd96e4
+SHA512 (LibreCAD-2.2.1.tar.gz) = 5dd7992060ae250d27c74a153ee6d2ec1372d68a9de1d3c16909147754382b9ffc389799b4b25178c18e53e3ad809b90a97fe8fb75bf40a53ea106fd87c2a59b
+Size (LibreCAD-2.2.1.tar.gz) = 14109533 bytes
+SHA1 (patch-librecad_src_main_qc__applicationwindow.cpp) = 58b3ba5a8ff52b19634445ccb6b408d6f721e0d3
+SHA1 (patch-scripts_postprocess-unix.sh) = 2f80f5a23b990943552790d58ac4528fabb83642
