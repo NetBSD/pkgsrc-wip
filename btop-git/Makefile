@@ -1,15 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	btop-1.4.0.20241214
+DISTNAME=	btop-1.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	5535f50e2023f032309333ae6bade3a9824d2f56
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/aristocratos/btop
 COMMENT=	Colorful TTY resource monitor
 LICENSE=	apache-2.0
+
+GIT_REPO=	https://github.com/aristocratos/btop.git
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -32,4 +33,5 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
