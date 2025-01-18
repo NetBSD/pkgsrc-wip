@@ -48,5 +48,3 @@ ${GEM_LIBDIR}/lib/rss/xml.rb
 ${GEM_LIBDIR}/lib/rss/xmlparser.rb
 ${GEM_LIBDIR}/lib/rss/xmlscanner.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/3.2.0/plugins
-@pkgdir lib/ruby/gems/3.2.0/extensions
