@@ -10,6 +10,7 @@ HOMEPAGE=	https://firefox-source-docs.mozilla.org/mozbase/mozprocess.html
 COMMENT=	Mozilla-authored process handling
 LICENSE=	mpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mozinfo>=0:../../wip/py-mozinfo
 
 USE_LANGUAGES=	# none
