@@ -10,6 +10,7 @@ HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Marionette
 COMMENT=	Marionette Driver
 LICENSE=	mpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mozrunner>=7.4.0:../../wip/py-mozrunner
 DEPENDS+=	${PYPKGPREFIX}-mozversion>=2.1.0:../../wip/py-mozversion
 DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
