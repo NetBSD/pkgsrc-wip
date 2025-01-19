@@ -11,5 +11,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-unf-[0-9]*:../../converters/ruby-unf
 
+OVERRIDE_GEMSPEC+=		unf>=0.1.0
+
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
