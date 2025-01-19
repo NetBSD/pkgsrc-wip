@@ -10,6 +10,7 @@ HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
 COMMENT=	Reliable start/stop/configuration of Mozilla Applications
 LICENSE=	mpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mozdevice>=4.0.0:../../wip/py-mozdevice
 DEPENDS+=	${PYPKGPREFIX}-mozfile>=1.2:../../wip/py-mozfile
 DEPENDS+=	${PYPKGPREFIX}-mozinfo>=0.7:../../wip/py-mozinfo
