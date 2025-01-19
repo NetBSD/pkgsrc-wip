@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2025-01-06 07:57:03.921469245 +0000
+--- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2025-01-19 14:12:04.011298787 +0000
 +++ content/common/gpu_pre_sandbox_hook_bsd.cc
 @@ -0,0 +1,68 @@
 +// Copyright 2023 The Chromium Authors

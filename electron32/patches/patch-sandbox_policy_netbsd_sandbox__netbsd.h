@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- sandbox/policy/netbsd/sandbox_netbsd.h.orig	2025-01-06 07:57:04.481545432 +0000
+--- sandbox/policy/netbsd/sandbox_netbsd.h.orig	2025-01-19 14:12:04.074323539 +0000
 +++ sandbox/policy/netbsd/sandbox_netbsd.h
 @@ -0,0 +1,278 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

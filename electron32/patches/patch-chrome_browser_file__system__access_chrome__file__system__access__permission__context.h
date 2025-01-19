@@ -136,7 +136,7 @@ $NetBSD$
 +      {kNoBasePathKey, FILE_PATH_LITERAL("/sys"), kBlockAllChildren},
 +      // And system files in /boot and /etc.
 +      {kNoBasePathKey, FILE_PATH_LITERAL("/boot"), kBlockAllChildren},
-+      {kNoBasePathKey, FILE_PATH_LITERAL("/etc"), kBlockAllChildren},
++      {kNoBasePathKey, FILE_PATH_LITERAL("@PKG_SYSCONFBASE@"), kBlockAllChildren},
 +      // And block all of ~/.config, matching the similar restrictions on mac
 +      // and windows.
 +      {base::DIR_HOME, FILE_PATH_LITERAL(".config"), kBlockAllChildren},

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- media/audio/sndio/audio_manager_sndio.cc.orig	2025-01-06 07:57:04.274233182 +0000
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2025-01-19 14:12:04.049477446 +0000
 +++ media/audio/sndio/audio_manager_sndio.cc
 @@ -0,0 +1,213 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

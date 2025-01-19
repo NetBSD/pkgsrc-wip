@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/toolchain/freebsd/BUILD.gn.orig	2025-01-06 07:57:03.085518042 +0000
+--- build/toolchain/freebsd/BUILD.gn.orig	2025-01-19 14:12:03.886423960 +0000
 +++ build/toolchain/freebsd/BUILD.gn
 @@ -0,0 +1,66 @@
 +# Copyright 2013 The Chromium Authors. All rights reserved.

@@ -85,7 +85,7 @@ $NetBSD$
 +  if ((cpath = getenv("CHROME_EXE_PATH")) != NULL)
 +    result = FilePath(cpath);
 +  else
-+    result = FilePath("/usr/local/chrome/chrome");
++    result = FilePath("@PREFIX@/lib/@PKGBASE@/electron");
 +
 +  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) != -1) {
 +    retvalargs = static_cast<char**>(malloc(len));

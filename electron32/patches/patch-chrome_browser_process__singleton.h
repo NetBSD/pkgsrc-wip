@@ -14,7 +14,7 @@ $NetBSD$
  #include "ui/gfx/native_widget_types.h"
  
  #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID)
-@@ -100,14 +101,24 @@ class ProcessSingleton {
+@@ -100,10 +101,20 @@ class ProcessSingleton {
    // should handle it (i.e., because the current process is shutting down).
    using NotificationCallback =
        base::RepeatingCallback<bool(base::CommandLine command_line,
@@ -32,14 +32,10 @@ $NetBSD$
    ProcessSingleton(const base::FilePath& user_data_dir,
 +                   const base::span<const uint8_t> additional_data,
                     const NotificationCallback& notification_callback);
++#endif
  
    ProcessSingleton(const ProcessSingleton&) = delete;
    ProcessSingleton& operator=(const ProcessSingleton&) = delete;
- 
-+#endif
-   ~ProcessSingleton();
- 
-   // Notify another process, if available. Otherwise sets ourselves as the
 @@ -171,11 +182,16 @@ class ProcessSingleton {
  #endif
  
