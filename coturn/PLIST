@@ -6,7 +6,6 @@ bin/turnutils_oauth
 bin/turnutils_peer
 bin/turnutils_stunclient
 bin/turnutils_uclient
-etc/turnserver.conf.default
 include/turn/client/TurnMsgLib.h
 include/turn/client/ns_turn_ioaddr.h
 include/turn/client/ns_turn_msg.h
@@ -24,6 +23,13 @@ man/man1/turnutils_oauth.1
 man/man1/turnutils_peer.1
 man/man1/turnutils_stunclient.1
 man/man1/turnutils_uclient.1
+share/coturn/schema.mongo.sh
+share/coturn/schema.sql
+share/coturn/schema.stats.redis
+share/coturn/schema.userdb.redis
+share/coturn/testmongosetup.sh
+share/coturn/testredisdbsetup.sh
+share/coturn/testsqldbsetup.sql
 share/doc/coturn/INSTALL
 share/doc/coturn/LICENSE
 share/doc/coturn/README.turnadmin
@@ -90,11 +96,3 @@ share/examples/coturn/scripts/restapi/secure_udp_client_with_secret.sh
 share/examples/coturn/scripts/restapi/shared_secret_maintainer.pl
 share/examples/coturn/scripts/selfloadbalance/secure_dos_attack.sh
 share/examples/coturn/scripts/selfloadbalance/secure_relay.sh
-share/turnserver/schema.mongo.sh
-share/turnserver/schema.sql
-share/turnserver/schema.stats.redis
-share/turnserver/schema.userdb.redis
-share/turnserver/testmongosetup.sh
-share/turnserver/testredisdbsetup.sh
-share/turnserver/testsqldbsetup.sql
-@pkgdir var/turnserver

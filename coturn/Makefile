@@ -1,11 +1,13 @@
 # $NetBSD$
 
 DISTNAME=	coturn-4.6.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 GITHUB_PROJECT=	coturn
 
 MAINTAINER=	kethzer.dr@gmail.com
+#MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/coturn/coturn
 COMMENT=	TURN and STUN server (for VoIP/webrtc)
 LICENSE=	modified-bsd
@@ -24,25 +26,20 @@ CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -leve
 
 BUILD_DEFS+=		VARBASE
 
-# Configure installation paths.
-# \todo Why is this not setting PREFIX?
-CONFIGURE_ENV+=		BINDIR=${PREFIX}/bin
-CONFIGURE_ENV+=		LIBDIR=${PREFIX}/lib
-CONFIGURE_ENV+=		MANPREFIX=${PREFIX}
-CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		INCLUDEDIR=${PREFIX}/include
-CONFIGURE_ENV+=		LOCALSTATEDIR=${PREFIX}/var/turnserver
-CONFIGURE_ENV+=		DOCSDIR=${PREFIX}/share/doc/coturn
-CONFIGURE_ENV+=		EXAMPLESDIR=${PREFIX}/share/examples/coturn
-CONFIGURE_ENV+=		TURNDBDIR=${VARBASE}/turnserver
-CONFIGURE_ENV+=		TURNINCLUDEDIR=${PREFIX}/include/turn
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+# Use coturn as docs/examples subdir name.  \todo No command-line argument?
+CONFIGURE_ENV+=		PORTNAME=coturn
+# Defaults to ${PREFIX}/etc; respect pkgsrc tunable.
+CONFIGURE_ARGS+=	--confdir=${PKG_SYSCONFDIR}
+# Defaults to ${PREFIX}/var; give it a subdirectory.
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/coturn
 
-# \todo Does the package really not make these?
-INSTALLATION_DIRS+=	bin lib ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	${PREFIX}/var/turnserver
-INSTALLATION_DIRS+=	share/doc/coturn share/examples/coturn
+# \todo Why is there a db installed in /var?  Won't that overwrite the user's database?
 
-#CONF_FILES+=		${PREFIX}/etc/turnserver.conf.default
+post-install:
+	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/turnserver.conf.default
+
+CONF_FILES+=		${PREFIX}/share/examples/coturn/etc/turnserver.conf ${PKG_SYSCONFDIR}/turnserver.conf
 #RCD_SCRIPTS=		turnserver
 
 .include "options.mk"
