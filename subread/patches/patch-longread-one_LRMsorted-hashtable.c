@@ -1,7 +1,3 @@
-$NetBSD$
-
-# Use predefined macros
-
 --- longread-one/LRMsorted-hashtable.c.orig	2018-11-08 14:47:43 UTC
 +++ longread-one/LRMsorted-hashtable.c
 @@ -22,11 +22,9 @@

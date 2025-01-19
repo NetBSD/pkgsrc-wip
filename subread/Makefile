@@ -7,19 +7,19 @@
 # The libsysinfo package is only for SunOS at the time of this writing.
 # FreeBSD has a libsysinfo port that may serve as a model for NetBSD.
 
-DISTNAME=	subread-2.0.2-source
-PKGNAME=	subread-2.0.2
+DISTNAME=	subread-2.0.8-source
+PKGNAME=	subread-2.0.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=subread/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://bioinf.wehi.edu.au/subread-package/
+HOMEPAGE=	https://subread.sourceforge.net/
 COMMENT=	High-performance read alignment, quantification and mutation discovery
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/subread-2.0.2-source/src
+WRKSRC=		${WRKDIR}/subread-2.0.8-source/src
 
 CFLAGS+=	-fcommon
 MAKE_FILE=	${FILESDIR}/Makefile.pkg

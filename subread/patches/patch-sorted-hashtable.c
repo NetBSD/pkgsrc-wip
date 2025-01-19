@@ -1,7 +1,3 @@
-$NetBSD$
-
-# Portability
-
 --- sorted-hashtable.c.orig	2018-11-08 03:33:50 UTC
 +++ sorted-hashtable.c
 @@ -23,11 +23,9 @@

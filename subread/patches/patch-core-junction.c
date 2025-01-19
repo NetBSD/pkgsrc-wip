@@ -1,7 +1,3 @@
-$NetBSD$
-
-# Portability
-
 --- core-junction.c.orig	2018-11-08 15:19:02 UTC
 +++ core-junction.c
 @@ -22,6 +22,7 @@

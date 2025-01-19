@@ -1,12 +1,12 @@
 $NetBSD$
 
-# Use predefined macros
+# Use standard compiler macros
 
---- subread.h.orig	2018-11-08 14:46:06 UTC
+--- subread.h.orig	2024-07-25 00:30:10.000000000 +0000
 +++ subread.h
-@@ -102,7 +102,7 @@
- 
+@@ -114,7 +114,7 @@
  #define USE_POSIX_MUTEX_LOCK
+ #endif
  
 -#if defined(MACOS) || defined(FREEBSD) || defined(USE_POSIX_MUTEX_LOCK)
 +#if defined(__APPLE__) || defined(__FreeBSD__) || defined(USE_POSIX_MUTEX_LOCK)
