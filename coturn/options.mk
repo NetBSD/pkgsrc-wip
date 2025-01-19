@@ -17,6 +17,7 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
+# \todo Check/justify these settings.
 DBLIBS+=	${BUILDLINK_PREFIX.postgresql-lib}
 CONFIGURE_ENV+=	POSTCFLAGS="-I${PREFIX}/include/postgresql"
 .endif

@@ -7,7 +7,7 @@ GITHUB_PROJECT=	coturn
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/coturn/coturn
-COMMENT=	The TURN Server is a VoIP media traffic NAT traversal server
+COMMENT=	TURN and STUN server (for VoIP/webrtc)
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
@@ -21,6 +21,8 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=		PTHREAD_LIBS=-pthread TURN_DISABLE_RPATH=1
 CONFIGURE_ENV+=		LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
 CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
+
+BUILD_DEFS+=		VARBASE
 
 # Configure installation paths.
 # \todo Why is this not setting PREFIX?
@@ -42,8 +44,6 @@ INSTALLATION_DIRS+=	share/doc/coturn share/examples/coturn
 
 #CONF_FILES+=		${PREFIX}/etc/turnserver.conf.default
 #RCD_SCRIPTS=		turnserver
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include "options.mk"
 
