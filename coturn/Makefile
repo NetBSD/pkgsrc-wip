@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	coturn-4.5.2
+DISTNAME=	coturn-4.6.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 GITHUB_PROJECT=	coturn
