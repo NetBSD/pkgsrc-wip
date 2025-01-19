@@ -5130,6 +5130,7 @@ SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8
+SUBDIR+=	ruby-logger
 SUBDIR+=	ruby-multi_xml
 SUBDIR+=	ruby-mustache-sinatra
 SUBDIR+=	ruby-net-http-pipeline

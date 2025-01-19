@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/push_gem.yml
+${GEM_LIBDIR}/.github/workflows/test.yml
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/lib/logger.rb
+${GEM_LIBDIR}/lib/logger/errors.rb
+${GEM_LIBDIR}/lib/logger/formatter.rb
+${GEM_LIBDIR}/lib/logger/log_device.rb
+${GEM_LIBDIR}/lib/logger/period.rb
+${GEM_LIBDIR}/lib/logger/severity.rb
+${GEM_LIBDIR}/lib/logger/version.rb
+${GEM_LIBDIR}/logger.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
