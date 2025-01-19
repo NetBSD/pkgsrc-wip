@@ -1,10 +1,3 @@
-Prepare COMMIT_MSG for import to pkgsrc.
-
-Remove MESSAGE.  This repeats pkgsrc-wide configuration norms and
-exhorts to read the upstream documentation.
-
-Install upstream's postinstall as documentation.
-
 Check if ccache is being avoided, which implies perhaps avoiding
 compilers wrappers.
 
