@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	coturn-4.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 GITHUB_PROJECT=	coturn
@@ -40,7 +40,7 @@ post-install:
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/turnserver.conf.default
 
 CONF_FILES+=		${PREFIX}/share/examples/coturn/etc/turnserver.conf ${PKG_SYSCONFDIR}/turnserver.conf
-#RCD_SCRIPTS=		turnserver
+RCD_SCRIPTS=		turnserver
 
 .include "options.mk"
 
