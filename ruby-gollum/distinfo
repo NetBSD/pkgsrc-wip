@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (gollum-6.0.1.gem) = 97691a264e2d4f0ace4ab165bdbe3bdb66a70748ad585631b57ef425cd0c8693
-SHA512 (gollum-6.0.1.gem) = 26fa35dfe6eabe104cfb8f434543fc74d1943a8378230811c7134e95da6522b28d336d4b91a46af9b2e97eb9ccb899ae40c665367f6632ce69c57a3a666beae6
-Size (gollum-6.0.1.gem) = 5867008 bytes
+BLAKE2s (gollum-6.1.0.gem) = d3ee4c1c3d5f0c4e5430d11a81b01f3aacb227346d1eeac50c8c6fc9ec8214e5
+SHA512 (gollum-6.1.0.gem) = a58c779b6d4948efcb05ce4f0ebfa991e6a55d3ff69bfa39783bd8c2aa8e2c342afdabf00b6acfa46199c28aaa3ce8286ac88e8ad9fac09e22a8786daa87a092
+Size (gollum-6.1.0.gem) = 5407232 bytes
