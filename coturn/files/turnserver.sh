@@ -20,9 +20,9 @@ name="turnserver"
 rcvar=$name
 
 : ${turnserver:=no}
-: ${turnserver_config=@PREFIX@/etc/turnserver.conf}
+: ${turnserver_config=@COTURN_DATA@/turnserver.conf}
 : ${coturn_user:=@COTURN_USER@}
-: ${synapse_group:=@SYNAPSE_GROUP@}
+: ${coturn_group:=@COTURN_GROUP@}
 
 load_rc_config $name
 
