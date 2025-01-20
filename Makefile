@@ -2137,6 +2137,7 @@ SUBDIR+=	libspt
 SUBDIR+=	libsquish
 SUBDIR+=	libstacktrace
 SUBDIR+=	libstrophe
+SUBDIR+=	libsysinfo
 SUBDIR+=	libtextcat
 SUBDIR+=	libtheorafile
 SUBDIR+=	libtirpc
