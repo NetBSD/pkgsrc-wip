@@ -21,16 +21,15 @@ USE_LIBTOOL=		yes
 
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no	# --enable-libtool is not officially known
+CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
 CONFIGURE_ARGS+=	--enable-print
-CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-threads
-
 # Use pkgsrc versions of libraries, not package's bundled versions
 CONFIGURE_ARGS+=	--disable-localjpeg
 CONFIGURE_ARGS+=	--disable-localpng
 CONFIGURE_ARGS+=	--disable-localzlib
-
 # Disable build of test programs
 CONFIGURE_ARGS+=	--disable-test
 
