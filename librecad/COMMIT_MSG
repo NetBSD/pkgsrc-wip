@@ -1,5 +1,7 @@
 cad/librecad: Update to 2.2.1
 
+Packaged in wip by Atsushi Toyokura.
+
 What's Changed
 
 - Issue #1007 - Update appadata to pass validation by @hfiguiere in

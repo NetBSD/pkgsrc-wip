@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2024/12/29 15:09:40 adam Exp $
+# $NetBSD: Makefile,v 1.93 2025/01/20 23:39:20 gdt Exp $
 
 DISTNAME=	LibreCAD-2.2.1
 PKGNAME=	${DISTNAME:tl}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=LibreCAD/}
 GITHUB_PROJECT=	LibreCAD
 GITHUB_TAG=	${DISTNAME:S/LibreCAD-//g}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://librecad.org/
 COMMENT=	Free Open Source personal CAD application
 LICENSE=	gnu-gpl-v2
@@ -16,18 +16,20 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 EXTRACT_USING=	bsdtar
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
+# Upstream declares that c++17 is required in librecad.pro and adds -std.
+# Some subdirectories apparently use -std=gnu++1z.
+USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	gnu++1z
+
 USE_TOOLS+=	pax pkg-config
 USE_LIBTOOL=	yes
-
-USE_CXX_FEATURES+=	c++11
 
 SUBST_CLASSES+=		qtdir
 SUBST_STAGE.qtdir=	pre-configure
 SUBST_MESSAGE.qtdir=	Set qt5/bin
 SUBST_FILES.qtdir+=	scripts/postprocess-unix.sh
 SUBST_VARS.qtdir+=	QTDIR
-
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mclang*)
@@ -41,9 +43,11 @@ INSTALLATION_DIRS+=	share/${PKGBASE}
 INSTALLATION_DIRS+=	lib/${PKGBASE}
 
 QMAKE_OPTIONS+=	CONFIG+=release
-QMAKE_OPTIONS+=	BOOST_DIR=${PREFIX}
-QMAKE_OPTIONS+=	BOOST_LIBDIR=${PREFIX}/lib
-QMAKE_OPTIONS+=	MUPARSER_DIR=${PREFIX}
+# This doesn't seem right.  Probably we should be using
+# BUILDLINK_PREFIX.boost-libs but that's empty.
+#QMAKE_OPTIONS+=	BOOST_DIR=${PREFIX}
+#QMAKE_OPTIONS+=	BOOST_LIBDIR=${PREFIX}/lib
+#QMAKE_OPTIONS+=	MUPARSER_DIR=${PREFIX}
 QMAKE_OPTIONS+=	QMAKE_LFLAGS_RELEASE=
 QMAKE_OPTIONS+=	DISABLE_POSTSCRIPT=true
 
