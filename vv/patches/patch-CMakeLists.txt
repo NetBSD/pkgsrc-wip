@@ -1,0 +1,15 @@
+$NetBSD$
+
+backtrace() is in libexecinfo on NetBSD.
+XXX: make NetBSD-specific.
+
+--- CMakeLists.txt.orig	2025-01-20 13:27:17.866095709 +0000
++++ CMakeLists.txt
+@@ -91,6 +91,7 @@ set(MCOREUTIL_SRC
+ add_library(mcoreutil ${MCOREUTIL_SRC})
+ target_link_libraries(mcoreutil PRIVATE
+     Tracy::TracyClient
++    execinfo
+     ${PNG_LINK_LIBRARIES}
+ )
+ target_include_directories(mcoreutil PRIVATE
