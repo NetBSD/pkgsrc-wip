@@ -9,5 +9,5 @@ Size (vv-3.1.tar.gz) = 1839316 bytes
 BLAKE2s (wolfpld-tracy-f583d1c855bcf45d182eb16a57e84afdab7b0e67.tar.gz) = 379d29e811edb705d066f087b18cb0596a8ecd4a9c1f629809415fd14a940935
 SHA512 (wolfpld-tracy-f583d1c855bcf45d182eb16a57e84afdab7b0e67.tar.gz) = 36401c62b39ae7c44f765b7c0e092f795756d947159b3c1e9fc2034735dad7746fadb1265bd06bf2bd4a6d2c318e62811a4438aa4eb43ddb1e5f32871aaf284e
 Size (wolfpld-tracy-f583d1c855bcf45d182eb16a57e84afdab7b0e67.tar.gz) = 5253102 bytes
-SHA1 (patch-CMakeLists.txt) = 7035f9ddbe59acef9b3f82057bbb77bf59740ae4
-SHA1 (patch-src_util_Alloca.h) = 33efddd07a29e60dd90acb3957d584a35bdac08c
+SHA1 (patch-CMakeLists.txt) = c2cb6538860c6a561dff91f6be2d8fac0b8429f5
+SHA1 (patch-src_util_Alloca.h) = d3f26e7eba4a645c4fef7a0248a0efaef7ca8cc1
