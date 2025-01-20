@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	subread-2.0.8-source
+DISTNAME=	${PKGNAME}-source
 PKGNAME=	subread-2.0.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=subread/}
