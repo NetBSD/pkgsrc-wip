@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	fltk
 .if !defined(FLTK_BUILDLINK3_MK)
 FLTK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.4.0rc1
-BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.4.0rc1
+BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.4.1
+BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.4.1
 BUILDLINK_PKGSRCDIR.fltk?=	../../wip/fltk14-devel
 BUILDLINK_FILES.fltk+=		include/Fl/*
 
@@ -17,7 +17,6 @@ pkgbase := fltk
 
 # For "cairo" option
 .if ${PKG_BUILD_OPTIONS.fltk:Mcairo}
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.0
 .  include "../../graphics/cairo/buildlink3.mk"
 .endif
 

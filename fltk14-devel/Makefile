@@ -1,9 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	fltk-1.4.0rc2-source
+DISTNAME=	fltk-1.4.1-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	x11
-MASTER_SITES=	https://fltk.org/pub/fltk/1.4.0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
+GITHUB_PROJECT=	fltk
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	micha@NetBSD.org
