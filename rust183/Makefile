@@ -36,13 +36,13 @@ FORCE_RPATH=		--force-rpath
 BROKEN_ON_PLATFORM+=	NetBSD-[1-8].*-*
 
 HAS_CONFIGURE=		yes
-PYTHON_FOR_BUILD_ONLY=	yes
-CONFIG_SHELL=		${PYTHONBIN}
+PYTHON_FOR_BUILD_ONLY=	tool
+CONFIG_SHELL=		${TOOL_PYTHONBIN}
 CONFIGURE_SCRIPT=	src/bootstrap/configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--python=${TOOL_PYTHONBIN}
 CONFIGURE_ARGS+=	--release-channel=stable
 CONFIGURE_ARGS+=	--local-rust-root=${RUST_BOOTSTRAP_PATH}
 CONFIGURE_ARGS+=	--enable-extended	# Build and install cargo too.
@@ -533,12 +533,12 @@ do-build:
 	${SETENV} ${MAKE_ENV}						\
 	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then		\
 		unset DESTDIR;						\
-		${PYTHONBIN} ./x.py -v					\
+		${TOOL_PYTHONBIN} ./x.py -v				\
 		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N};			\
 	else								\
-		${PYTHONBIN} ./x.py -v					\
+		${TOOL_PYTHONBIN} ./x.py -v				\
 		    ${BUILD_TARGET} --stage 2 -j ${_MAKE_JOBS_N} &&	\
-		${PYTHONBIN} ./x.py -v					\
+		${TOOL_PYTHONBIN} ./x.py -v				\
 		    doc --stage 2 -j ${_MAKE_JOBS_N};			\
 	fi"
 
@@ -546,7 +546,7 @@ do-test:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV}						\
-		${PYTHONBIN} ./x.py -v test -j ${_MAKE_JOBS_N}
+		${TOOL_PYTHONBIN} ./x.py -v test -j ${_MAKE_JOBS_N}
 
 PATCH_BINARIES+=	bin/cargo
 PATCH_BINARIES+=	bin/cargo-clippy
@@ -561,7 +561,7 @@ do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
-		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N};	\
+		${TOOL_PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N};	\
 	for bin in ${PATCH_BINARIES}; do				\
 		f=${DESTDIR}${PREFIX}/$${bin};				\
 		if [ -f $$f ]; then					\
@@ -705,7 +705,7 @@ DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
 TOOL_DEPENDS+= cmake-[0-9]*:../../devel/cmake
-.include "../../devel/cmake/buildlink3.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
