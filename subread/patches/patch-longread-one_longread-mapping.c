@@ -1,3 +1,7 @@
+$NetBSD$
+
+# Add FreeBSD support
+
 --- longread-one/longread-mapping.c.orig	2021-03-30 13:58:29 UTC
 +++ longread-one/longread-mapping.c
 @@ -30,7 +30,9 @@
