@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (stacks-2.68.tar.gz) = 149419fb6ca34333aa1850e44e18054c0a1aa45564a88cfba542142f5581f79c
-SHA512 (stacks-2.68.tar.gz) = 32ec2fc8c493128ec0a9aca0dced64cde485014a9236e80959c8a10a69b7d970f216c564c91d5fdc0773ad0ed0e6dce2c581ddd709788ed044a053f62cc2b1b0
-Size (stacks-2.68.tar.gz) = 15552836 bytes
+BLAKE2s (stacks-2.69.tar.gz) = 5158df19f325364fa7c1627616059f8b8b0cee8cb6a2ba2849b8685a4b7311a3
+SHA512 (stacks-2.69.tar.gz) = 9672a4b9e91d20899aa572f5bb9231eb95e0e5bf0f0e23ee62ef6720e282d9c40d623e79fdb446b47b70afb96c0dea3874daca354e3a16e0778db520d129d1af
+Size (stacks-2.69.tar.gz) = 12430344 bytes
 SHA1 (patch-src_Hwp.cc) = 15b1872fd0199a13020cecf7ff34478cf83007fd
 SHA1 (patch-src_PopSum.cc) = fbf56bbdb3f8e0cc146ca19c75c910fbc00ae36b
 SHA1 (patch-src_Vcf.cc) = 26f04decced076cd189fe3162c4641809d070060

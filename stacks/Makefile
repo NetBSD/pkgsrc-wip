@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2023/08/14 05:23:52 wiz Exp $
 
-DISTNAME=	stacks-2.68
+DISTNAME=	stacks-2.69
 CATEGORIES=	biology
 MASTER_SITES=	http://catchenlab.life.illinois.edu/stacks/source/
 
