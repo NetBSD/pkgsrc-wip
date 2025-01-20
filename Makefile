@@ -1227,6 +1227,7 @@ SUBDIR+=	ggobi
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
+SUBDIR+=	gh-dash
 SUBDIR+=	ghc-core
 SUBDIR+=	ghdl-dev
 SUBDIR+=	ghdl-yosys-plugin
