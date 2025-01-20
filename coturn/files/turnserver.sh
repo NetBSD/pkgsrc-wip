@@ -19,13 +19,15 @@
 name="turnserver"
 rcvar=$name
 
-load_rc_config $name
-
 : ${turnserver:=no}
 : ${turnserver_config=@PREFIX@/etc/turnserver.conf}
+: ${coturn_user:=@COTURN_USER@}
+: ${synapse_group:=@SYNAPSE_GROUP@}
+
+load_rc_config $name
 
 command="@PREFIX@/bin/${name}"
-command_args="--daemon -c ${turnserver_config}"
+command_args="--daemon --proc-user ${coturn_user} --proc-group ${coturn_user} -c ${turnserver_config}"
 required_files=${turnserver_config}
 
 run_rc_command "$1"
