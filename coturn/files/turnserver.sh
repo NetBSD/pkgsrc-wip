@@ -20,7 +20,7 @@ name="turnserver"
 rcvar=$name
 
 : ${turnserver:=no}
-: ${turnserver_config=@COTURN_DATA@/turnserver.conf}
+: ${turnserver_config=@PKG_SYSCONFDIR@/turnserver.conf}
 : ${coturn_user:=@COTURN_USER@}
 : ${coturn_group:=@COTURN_GROUP@}
 
