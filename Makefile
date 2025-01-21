@@ -4465,6 +4465,7 @@ SUBDIR+=	py-pytrends
 SUBDIR+=	py-pyvista
 SUBDIR+=	py-pyvo
 SUBDIR+=	py-pywebview
+SUBDIR+=	py-pywhat
 SUBDIR+=	py-qalsadi
 SUBDIR+=	py-qclib
 SUBDIR+=	py-qcodes
