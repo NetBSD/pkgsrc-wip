@@ -23,6 +23,7 @@ PLIST_SUBST+=		PYVERS=${PYVERSSUFFIX:S/.//}
 
 .include "../../lang/python/wheel.mk"
 
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
