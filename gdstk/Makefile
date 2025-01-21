@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/heitzmann/gdstk/
-COMMENT=	Python/C++ library for GDSII and OASIS files
+COMMENT=	C++/Python library for GDSII and OASIS files
 LICENSE=	boost-license
 
 USE_LANGUAGES+=	c c++
