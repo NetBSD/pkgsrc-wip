@@ -57,6 +57,7 @@ REPLACE_PYTHON+=	tests/share/*.py
 REPLACE_PYTHON+=	tests/tools/*.py
 
 REPLACE_BASH+=		misc/yosys-config.in
+DEPENDS+=		bash-[0-9]*:../../shells/bash
 
 do-configure:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} config-${YOSYS_COMPILER}
