@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	newsboat-2.37
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	https://newsboat.org/releases/2.37/
 EXTRACT_SUFX=	.tar.xz
@@ -13,6 +14,7 @@ LICENSE=	mit
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		awk gmake msgfmt pkg-config
+USE_GNU_ICONV=		yes
 USE_CURSES=		wide
 FAKE_NCURSES=		yes
 
@@ -28,8 +30,7 @@ BUILD_TARGET=	all doc
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 MAKE_ENV+=	CXX_FOR_BUILD=${NATIVE_CXX:Q}
-MAKE_ENV+=	CARGO_BUILD_FLAGS=--target\ ${RUST_ARCH:Q}
-MAKE_ENV+=	CARGO_TARGET_DIR=${WRKSRC}/target/${RUST_ARCH}
+MAKE_ENV+=	CARGO_BUILD_TARGET=${RUST_ARCH:Q}
 .endif
 MAKE_ENV+=	GETTEXT_LIB_DIR=${BUILDLINK_PREFIX.gettext:Q}/lib
 MAKE_ENV+=	GETTEXT_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext:Q}/include

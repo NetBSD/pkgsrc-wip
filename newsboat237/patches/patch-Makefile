@@ -1,10 +1,26 @@
 $NetBSD$
 
-Use PTHREAD_LDFLAGS, PTHREAD_LIBS, DL_LDFLAGS, DL_LIBS.
+1. Handle CARGO_BUILD_TARGET in one more place, for the -I path.
+
+2. Use PTHREAD_LDFLAGS, PTHREAD_LIBS, DL_LDFLAGS, DL_LIBS for newsboat.
+
+2. Use PTHREAD_LDFLAGS, PTHREAD_LIBS, DL_LDFLAGS, DL_LIBS for podboat.
 
 --- Makefile.orig	2024-09-22 15:05:50.000000000 +0000
 +++ Makefile
-@@ -57,7 +57,7 @@ FILTERLIB_OUTPUT=libfilter.a
+@@ -23,7 +23,11 @@ CXX_FOR_BUILD?=$(CXX)
+ DEFINES=-DLOCALEDIR='"$(localedir)"' -DCATCH_AMALGAMATED_CUSTOM_MAIN
+ 
+ WARNFLAGS=-Werror -Wall -Wextra -Wunreachable-code
++ifdef CARGO_BUILD_TARGET
++INCLUDES=-Iinclude -Istfl -Ifilter -I. -Irss -I$(CARGO_TARGET_DIR)/$(CARGO_BUILD_TARGET)/cxxbridge/
++else
+ INCLUDES=-Iinclude -Istfl -Ifilter -I. -Irss -I$(CARGO_TARGET_DIR)/cxxbridge/
++endif
+ # Keep in sync with c++ version specified in FFI build.rs
+ BARE_CXXFLAGS=-std=c++14 -O2 -ggdb $(INCLUDES)
+ LDFLAGS+=-L.
+@@ -57,7 +61,7 @@ FILTERLIB_OUTPUT=libfilter.a
  NEWSBOAT=newsboat
  NEWSBOAT_SRCS:=$(shell cat mk/newsboat.deps)
  NEWSBOAT_OBJS:=$(patsubst %.cpp,%.o,$(NEWSBOAT_SRCS))
@@ -13,7 +29,7 @@ Use PTHREAD_LDFLAGS, PTHREAD_LIBS, DL_LDFLAGS, DL_LIBS.
  
  RSSPPLIB_SRCS=$(sort $(wildcard rss/*.cpp))
  RSSPPLIB_OBJS=$(patsubst rss/%.cpp,rss/%.o,$(RSSPPLIB_SRCS))
-@@ -66,7 +66,7 @@ RSSPPLIB_OUTPUT=librsspp.a
+@@ -66,7 +70,7 @@ RSSPPLIB_OUTPUT=librsspp.a
  PODBOAT=podboat
  PODBOAT_SRCS:=$(shell cat mk/podboat.deps)
  PODBOAT_OBJS:=$(patsubst %.cpp,%.o,$(PODBOAT_SRCS))
