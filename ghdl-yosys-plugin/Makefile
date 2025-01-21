@@ -23,5 +23,6 @@ USE_TOOLS+=	gmake
 TOOL_DEPENDS+=	yosys-[0-9]*:../../wip/yosys-dev
 
 DEPENDS+=	ghdl-dev-5.*:../../wip/ghdl-dev
+DEPENDS+=	gcc10-aux-10.*:../../lang/gcc10-aux
 
 .include "../../mk/bsd.pkg.mk"
