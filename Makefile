@@ -3813,6 +3813,7 @@ SUBDIR+=	py-gauss
 SUBDIR+=	py-gbpy
 SUBDIR+=	py-gcalcli
 SUBDIR+=	py-gdal
+SUBDIR+=	py-gdstk
 SUBDIR+=	py-gdxcc
 SUBDIR+=	py-gem
 SUBDIR+=	py-genesis

@@ -1,0 +1,11 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/gdstk/__init__.py
+${PYSITELIB}/gdstk/__init__.pyc
+${PYSITELIB}/gdstk/__init__.pyo
+${PYSITELIB}/gdstk/_gdstk.cpython-${PYVERS}.so
+${PYSITELIB}/gdstk/_gdstk.pyi
+${PYSITELIB}/gdstk/py.typed
