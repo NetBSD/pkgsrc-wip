@@ -1198,6 +1198,7 @@ SUBDIR+=	gdk-pixbuf-jxl
 SUBDIR+=	gdm
 SUBDIR+=	gdm2
 SUBDIR+=	gdsreader
+SUBDIR+=	gdstk
 SUBDIR+=	geant
 SUBDIR+=	gecode
 SUBDIR+=	geekcode
