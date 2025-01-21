@@ -15,6 +15,6 @@ USE_LANGUAGES=  C++
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xdg ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/LMtester ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
