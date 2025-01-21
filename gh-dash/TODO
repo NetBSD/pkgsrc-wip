@@ -1,0 +1,3 @@
+Works only if run via `gh-dash`. Investigate if it can be run via `gh
+dash` too, i.e. how gh can possibly pick up extensions installed via
+pkgsrc.
