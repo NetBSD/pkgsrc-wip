@@ -1,0 +1,2 @@
+bin/pywhat @PREFIX@/bin/pywhat@PYVERSSUFFIX@
+bin/what @PREFIX@/bin/what@PYVERSSUFFIX@

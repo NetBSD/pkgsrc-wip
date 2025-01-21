@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.90 2025/01/19 16:29:06 leot Exp $
+
+BLAKE2s (pywhat-5.1.0.tar.gz) = 99f705bea65462f38055d286ff53ccaa740bb13270cbba82e5075be18764230b
+SHA512 (pywhat-5.1.0.tar.gz) = ac4b0467caca7ae464c2593a91f49b224112d6a044a71cadab9ef9efe2314dda46a7a08773a1ff4ea38c284b34399f466b0b40fdb399315b9335b929eae18f1b
+Size (pywhat-5.1.0.tar.gz) = 592482 bytes
