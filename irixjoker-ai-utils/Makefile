@@ -6,7 +6,7 @@ MASTER_SITES=	https://sourceforge.net/projects/irixjoker-ai-utils/files/
 
 MAINTAINER=	indur9@yahoo.com
 HOMEPAGE=	https://sourceforge.net/projects/irixjoker-ai-utils/
-COMMENT= 	sound file modification system (AIF/AIFF based using AI)	
+COMMENT= 	General purpose AI library (also includes machine learning and adaptive systems theory).	
 LICENSE=	Nekoware
 
 WRKSRC=		${WRKDIR}/irixjoker-ai-utils-0.1.12/
