@@ -1,0 +1,40 @@
+@comment $NetBSD$
+bin/newsboat
+bin/podboat
+man/man1/newsboat.1
+man/man1/podboat.1
+share/doc/newsboat/CHANGELOG.md
+share/doc/newsboat/examples/config
+share/doc/newsboat/examples/example-bookmark-plugin.sh
+share/doc/newsboat/examples/example-exec-script.py
+share/doc/newsboat/faq.html
+share/doc/newsboat/newsboat.html
+share/icons/hicolor/scalable/apps/newsboat.svg
+share/locale/ca/LC_MESSAGES/newsboat.mo
+share/locale/de/LC_MESSAGES/newsboat.mo
+share/locale/es/LC_MESSAGES/newsboat.mo
+share/locale/fr/LC_MESSAGES/newsboat.mo
+share/locale/hu/LC_MESSAGES/newsboat.mo
+share/locale/it/LC_MESSAGES/newsboat.mo
+share/locale/ja/LC_MESSAGES/newsboat.mo
+share/locale/nb/LC_MESSAGES/newsboat.mo
+share/locale/nl/LC_MESSAGES/newsboat.mo
+share/locale/pl/LC_MESSAGES/newsboat.mo
+share/locale/pt_BR/LC_MESSAGES/newsboat.mo
+share/locale/ru/LC_MESSAGES/newsboat.mo
+share/locale/sk/LC_MESSAGES/newsboat.mo
+share/locale/sv/LC_MESSAGES/newsboat.mo
+share/locale/tr/LC_MESSAGES/newsboat.mo
+share/locale/uk/LC_MESSAGES/newsboat.mo
+share/locale/zh/LC_MESSAGES/newsboat.mo
+share/locale/zh_TW/LC_MESSAGES/newsboat.mo
+@pkgdir share/doc/newsboat/contrib/wallabag
+@pkgdir share/doc/newsboat/contrib/readeck
+@pkgdir share/doc/newsboat/contrib/miniflux
+@pkgdir share/doc/newsboat/contrib/linkding
+@pkgdir share/doc/newsboat/contrib/image-preview
+@pkgdir share/doc/newsboat/contrib/image-pager
+@pkgdir share/doc/newsboat/contrib/getpocket.com
+@pkgdir share/doc/newsboat/contrib/fltr-substack
+@pkgdir share/doc/newsboat/contrib/filters
+@pkgdir share/doc/newsboat/contrib/colorschemes
