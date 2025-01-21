@@ -5,15 +5,15 @@
 #              Tue Jul 16 13:02:58 CDT 2019               #
 ###########################################################
 
-DISTNAME=	packmol-18.169
+DISTNAME=	packmol-v20.15.3
 CATEGORIES=	science
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mcubeg/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=m3g/}
 GITHUB_PROJECT=	packmol
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://m3g.iqm.unicamp.br/packmol/home.shtml
-COMMENT=	Pack molecules in defined regions of space
+HOMEPAGE=	https://m3g.github.io/packmol/
+COMMENT=	Creates Initial Configurations for Molecular Dynamics Simulations
 LICENSE=	mit
 
 USE_LANGUAGES=	fortran
