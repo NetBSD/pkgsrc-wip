@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	newsboat-2.37
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	https://newsboat.org/releases/2.37/
 EXTRACT_SUFX=	.tar.xz

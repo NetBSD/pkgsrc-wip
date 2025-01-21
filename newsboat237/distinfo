@@ -729,3 +729,4 @@ Size (xdg-2.5.2.crate) = 14394 bytes
 SHA1 (patch-Makefile) = 8ad3625d15c5d1782a0848f77b24373273197819
 SHA1 (patch-config.sh) = af48319845183552a4d9cea2f117a948b059647d
 SHA1 (patch-newsboat.cpp) = fc29e931269dae31c61d2f15fb3a9da4fc63ca51
+SHA1 (patch-rust_libnewsboat_src_utils.rs) = 44ae16b60b75e8302dbe0cba09015ef6e14f8dc3
