@@ -12,13 +12,15 @@ HOMEPAGE=	https://github.com/davatorium/rofi
 COMMENT=	Window switcher, run dialog and dmenu replacement
 LICENSE=	x11
 
-USE_TOOLS+=	pkg-config bash flex bison
+USE_TOOLS+=	pkg-config bash:run flex bison
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	YACC='bison -y'
 
 REPLACE_BASH+=	script/rofi-sensible-terminal
 REPLACE_BASH+=	script/rofi-theme-selector
+
+TEST_TARGET=	check
 
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
