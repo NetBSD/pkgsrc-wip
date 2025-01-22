@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${GH_PROJECT}-${PKGVERSION_NOREV}
 .include "../../devel/cmake/build.mk"
 .include "../../devel/knotifications/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtwayland/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
