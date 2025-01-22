@@ -5732,6 +5732,7 @@ SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server
 SUBDIR+=	tuxguitar
+SUBDIR+=	tuxpaint-config
 SUBDIR+=	tuxpaint-cvs
 SUBDIR+=	tuxtype2
 SUBDIR+=	tvmet

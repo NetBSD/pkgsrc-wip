@@ -1,0 +1,15 @@
+$NetBSD$
+
+Ensure that trans directory is made before trying to put files in it.
+
+--- Makefile.orig	2018-08-28 17:18:29.000000000 +0000
++++ Makefile
+@@ -406,7 +406,7 @@ endif
+ 
+ # Build the translation files for gettext
+ 
+-$(MOFILES): trans/%.mo: src/po/%.po
++$(MOFILES): trans/%.mo: src/po/%.po trans
+ 	msgfmt -o $@ $<
+ 
+ .PHONY: translations
