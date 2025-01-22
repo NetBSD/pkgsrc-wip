@@ -26,7 +26,6 @@ share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_AUGLAG.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_AUGLAG_EQ.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_CCSAQ.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_LBFGS.m
-share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_LBFGS_NOCEDAL.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_MMA.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_SLSQP.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_LD_TNEWTON.m

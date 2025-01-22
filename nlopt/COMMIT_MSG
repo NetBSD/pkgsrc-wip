@@ -1,6 +1,18 @@
-math/nlopt: Update to NLopt 2.8.0
+math/nlopt: Update to NLopt 2.9.1
 
 Changes:
+
+NLopt 2.9.1
+  - Fixed PRAXIS box constraints ([#528])
+
+NLopt 2.9.0
+  - New NLOPT_LUKSAN cmake option to build without Luksan LGPL code (#568).
+  - Dropped unused LD_LBFGS_NOCEDAL enum value.
+  - Python 3.13 support (#565).
+  - Fixed COBYLA not returning the optimum (#57)
+  - Fixed SLSQP returning infeasible optimum (#368)
+  - Fixed STOGO not registering new optimum (#504)
+  - Various minor bugfixes (#570, #563, #379, #511)
 
 NLopt 2.8.0
   - Support C++ functors for objective functions (#457).

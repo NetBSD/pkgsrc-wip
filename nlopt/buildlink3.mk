@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	nlopt
 .if !defined(NLOPT_BUILDLINK3_MK)
 NLOPT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.nlopt+=	nlopt>=2.7.1
-BUILDLINK_ABI_DEPENDS.nlopt+=	nlopt>=2.7.1
+BUILDLINK_API_DEPENDS.nlopt+=	nlopt>=2.9.1
+BUILDLINK_ABI_DEPENDS.nlopt+=	nlopt>=2.9.1
 BUILDLINK_PKGSRCDIR.nlopt?=	../../wip/nlopt
 
 .include "../../mk/bsd.fast.prefs.mk"

@@ -1,0 +1,2 @@
+Export OCTAVE_VERSION from math/octave/version.mk, and reference from octave
+Makefile and here.
