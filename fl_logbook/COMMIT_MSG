@@ -1,0 +1,4 @@
+ham/fl_logbook: Switch to FLTK 1.4
+
+- Include FLTK headers from subdirectory "FL"
+- Update and document patches

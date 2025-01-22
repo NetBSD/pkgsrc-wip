@@ -1,0 +1,73 @@
+$NetBSD$
+
+Use $(CXX) to build C++ programs.
+
+--- makefile.orig	2008-01-25 17:02:00.000000000 +0000
++++ makefile
+@@ -6,7 +6,6 @@
+ #
+ 
+ SRC = src/
+-CC = g++
+ CCFLAG = `fltk-config --cxxflags` -I$(SRC) -Wno-deprecated 
+ LIBS = `fltk-config --ldflags`
+ 
+@@ -16,45 +15,45 @@ LIBS = `fltk-config --ldflags`
+ all: fl_logbook
+ 
+ adif_io.o: $(SRC)adif_io.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)adif_io.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)adif_io.cpp
+ 
+ support.o: $(SRC)support.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)support.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)support.cpp
+ 
+ ipcdata.o: $(SRC)ipcdata.cpp $(SRC)ipcdata.h
+-	$(CC) $(CCFLAG) -c $(SRC)ipcdata.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)ipcdata.cpp
+ 	
+ multipsklog.o: $(SRC)multipsklog.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)multipsklog.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)multipsklog.cpp
+ 
+ qso_db.o: $(SRC)qso_db.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)qso_db.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)qso_db.cpp
+ 
+ lgbook.o:$(SRC)lgbook.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)lgbook.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)lgbook.cpp
+  
+ calendar.o:$(SRC)calendar.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)calendar.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)calendar.cxx
+  
+ combo.o:$(SRC)combo.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)combo.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)combo.cxx
+  
+ date.o:$(SRC)date.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)date.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)date.cxx
+  
+ table.o:$(SRC)table.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)table.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)table.cxx
+  
+ fileio.o:$(SRC)fileio.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)fileio.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)fileio.cpp
+  
+ fl_logbook.o: $(SRC)fl_logbook.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)fl_logbook.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)fl_logbook.cpp
+ 
+ fl_logbook:  fl_logbook.o lgbook.o qso_db.o combo.o \
+ 		adif_io.o multipsklog.o support.o \
+ 		calendar.o date.o table.o fileio.o ipcdata.o
+-	$(CC) $(CCFLAG) \
++	$(CXX) $(CCFLAG) \
+ 		fl_logbook.o lgbook.o qso_db.o combo.o \
+ 		adif_io.o multipsklog.o support.o \
+ 		calendar.o date.o table.o fileio.o ipcdata.o \

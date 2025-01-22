@@ -964,6 +964,7 @@ SUBDIR+=	firefox-hg
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firefox102
 SUBDIR+=	firehose
+SUBDIR+=	fl_logbook
 SUBDIR+=	flag
 SUBDIR+=	flam3-svn
 SUBDIR+=	flamegraph-rs
