@@ -1,0 +1,37 @@
+devel/edelib: Add version 2.1
+
+Small and portable C++ library for EDE (Equinox Desktop Environment).
+
+Aims are to provide enough background for easier EDE components construction
+and development.
+
+Upstream changelog for version 2.1
+----------------------------------
+- Added tooltip support for menu items.
+- edelib can be compiled without DBus binding. EDELIB_HAVE_DBUS #ifdef can be
+  used to check if edelib has DBus support.
+- Added edelib-dbus-explorer, a dynamic UI tool for exploring and communicating
+  with DBus services via a builtin Scheme interpreter.
+- Fixed various bugs in bundled Scheme interpreter, detected after TinyCLOS
+  tests.
+- Faster (append) and fixed (gcd) and (lcm) in Scheme interpreter.
+- Added JSON module for Scheme interpreter.
+- Added workaround for missing _SC_GETPW_R_SIZE_MAX on Minix.
+- Added str_hash() function for simple hash computing from string, which
+  unified hashing code through edelib.
+- edelib now ships its own rgb.txt as the Minix X11 distribution keeps it in
+  uncommon places.
+- Theme engine is using C++ RTTI (optional feature) to figure out how to update
+  widget fonts.
+- Fixed a couple of warnings produced by clang.
+- Font cache engine will prevent registering fonts if already registered.
+- FontChooser is now using font cache for querying fonts.
+- edelib-convert-icontheme can use rsvg-convert now.
+- Redesigned icon chooser dialog: now the user can also choose icons not found
+  in the icon theme.
+- Small dir_list() optimization.
+- Fixed core dumping for bundled Jam on Minix.
+- Added support for querying NETWM window states.
+- Expandable group can now read global scrollbar size.
+- Icon theme engine now supports searching for icons when exact icon size wasn't
+  found; this completes full support for fd.o icon theme specification.

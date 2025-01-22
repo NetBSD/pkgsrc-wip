@@ -803,6 +803,7 @@ SUBDIR+=	edb-debugger
 SUBDIR+=	edb-debugger-git
 SUBDIR+=	edbrowse
 SUBDIR+=	edelib
+SUBDIR+=	edelib21
 SUBDIR+=	edencommon
 SUBDIR+=	edid-decode
 SUBDIR+=	editorconfig-checker
