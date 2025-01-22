@@ -23,6 +23,7 @@ libexec/lpjs/UI/jobs
 libexec/lpjs/UI/menu
 libexec/lpjs/UI/nodes
 libexec/lpjs/UI/peak-mem
+libexec/lpjs/UI/run-time
 libexec/lpjs/UI/submit
 libexec/lpjs/banner
 libexec/lpjs/chaperone
@@ -37,6 +38,7 @@ man/man1/lpjs-menu.1
 man/man1/lpjs-nodes.1
 man/man1/lpjs-peak-mem.1
 man/man1/lpjs-reset-queue.1
+man/man1/lpjs-run-time.1
 man/man1/lpjs-submit.1
 man/man8/lpjs-compd-disable.8
 man/man8/lpjs-compd-enable.8
