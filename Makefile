@@ -6050,6 +6050,7 @@ SUBDIR+=	xpipe
 SUBDIR+=	xplore
 SUBDIR+=	xplugd
 SUBDIR+=	xpopple
+SUBDIR+=	xpp
 SUBDIR+=	xqf
 SUBDIR+=	xrdp
 SUBDIR+=	xrdp09

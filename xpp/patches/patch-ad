@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- xpp.h.orig	2004-12-06 17:59:35.000000000 +0000
++++ xpp.h
+@@ -36,6 +36,7 @@
+ #include <cups/cups.h>
+ #include <cups/ipp.h>
+ #include <cups/language.h>
++#include <cups/ppd.h>
+ #include <FL/Fl.H>
+ #include <FL/Fl_Window.H>
+ #include <FL/Fl_Box.H>
+@@ -177,7 +178,7 @@ public:
+    */
+ 
+   int /* O - index of the record of the given option in the array */
+-  printFiles::getSpecialOptionIndex(int *num_special_opts_in_arr,
++  getSpecialOptionIndex(int *num_special_opts_in_arr,
+ 				      /* number of options in the array */
+ 				      special_opt_t **special_opts_arr,
+                                       /* array of numerical/string 

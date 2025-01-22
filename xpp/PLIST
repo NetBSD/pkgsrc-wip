@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/xpp
+share/doc/xpp/LICENSE
+share/doc/xpp/README

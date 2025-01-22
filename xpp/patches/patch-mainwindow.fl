@@ -1,0 +1,24 @@
+$NetBSD$
+
+Use header "FL/Fl_File_Chooser.H" for FLTK 1.4.
+
+--- mainwindow.fl.orig	2004-12-07 03:24:46.000000000 +0000
++++ mainwindow.fl
+@@ -18,6 +18,8 @@ class xppMainWindow {open
+   Function {xppMainWindow(int  argc, char *argv[], int &exitstat)} {open
+   } {
+     code {exitstat = 0;
++optionDialog=NULL;
++instanceDialog=NULL;
+ print=new printFiles(argc,argv,exitstat);
+ if (exitstat != 0) return;} {}
+     Fl_Window mainWindow {
+@@ -70,7 +72,7 @@ if (chosen_file)
+   fileList->value(print->filelist);
+ }}
+           private xywh {440 75 65 25} down_box DOWN_BOX shortcut 0x80062 align 16
+-          code0 {\#include <FL/fl_file_chooser.H>}
++          code0 {\#include <FL/Fl_File_Chooser.H>}
+           code1 {\#include "xpp.h"}
+         }
+         Fl_Scroll printerList {

@@ -1,0 +1,12 @@
+$NetBSD$
+
+BLAKE2s (xpp-1.5.tar.gz) = 997243685b7393ee02ff91d6abf5d812cfb0c01b0d0472b7fbdfbae246f6ffd7
+SHA512 (xpp-1.5.tar.gz) = 098ce2f78f0f38153680a52e8af1707eadf2f96ed58a2087bdb3e462e44f5e4f5d1a382cd319d8c0d030dea416ce1bf76d0698b3b91ab7019a1c0dab08418d77
+Size (xpp-1.5.tar.gz) = 107755 bytes
+SHA1 (patch-ab) = 76d0ca39bef410e580f805ca10a3d953285c58bb
+SHA1 (patch-ac) = d94f9359d19de5dff684f61a53af4607bb31f78c
+SHA1 (patch-ad) = 5af9e367c1b025ec1d9940101a8b3338d84ae5d6
+SHA1 (patch-ae) = 28aa8dcfc325f89aed0f0d4a988af713ccdb8740
+SHA1 (patch-cupshelper.cxx) = 57d33096de6fdf9805d644eb21364ea8f1df3604
+SHA1 (patch-mainwindow.fl) = 7cc3fa44a169bfb49b93b90c21029accd57da66c
+SHA1 (patch-xppmain.cxx) = 22fd3c51678613eb05f1cb6611d60e9eb7053772
