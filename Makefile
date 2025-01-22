@@ -983,6 +983,7 @@ SUBDIR+=	flintqs
 SUBDIR+=	flite2
 SUBDIR+=	flnews-devel
 SUBDIR+=	flowblade
+SUBDIR+=	flpsed
 SUBDIR+=	fltk14-devel
 SUBDIR+=	fltk2
 SUBDIR+=	flux2

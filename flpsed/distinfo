@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (flpsed-0.7.3.tar.gz) = 3b106dfcfffb64a718cc117604aa9aa3622431e9d8b3b7bbbf706f461940ac17
+SHA512 (flpsed-0.7.3.tar.gz) = b0a8bf2ea08630d280f83f7c32b4574ba4cf7fd989943492e77d1b73c8d83c81a5df40e64bfff744b5518de845eba21119242ff752e16b20816b225ccb7c3321
+Size (flpsed-0.7.3.tar.gz) = 146788 bytes
