@@ -59,6 +59,7 @@ CHECK_PORTABILITY_SKIP+=	third_party/rust-src/vendor/libdbus-sys-0.2.5/vendor/db
 CHECK_PORTABILITY_SKIP+=	third_party/rust-toolchain/lib/rustlib/src/rust/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
+CHECK_PORTABILITY_SKIP+=	third_party/electron_node/deps/v8/tools/profiling/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
 TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
