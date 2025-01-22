@@ -1,0 +1,27 @@
+$NetBSD$
+
+Honor CFLAGS/CXXFLAGS/LDFLAGS/LIBS.
+
+--- Jamrules.orig	2014-06-21 21:24:40.000000000 +0000
++++ Jamrules
+@@ -14,11 +14,15 @@ if ! $(JAMCONFIG_READ) {
+ 	Exit "Can't find Jamconfig. Did you run 'configure' first?" ;
+ }
+ 
+-# by default all flags that jam uses directly are cleared
+-# here should _not_ be set anything since they are filled per target
+-CCFLAGS = ;
+-C++FLAGS = ;
+-OPTIM = ;
++
++# variables used by jam directly
++# OPTIM is cleared so it don't collide with FLAGS
++OPTIM     = ;
++CCFLAGS   = $(CFLAGS) ;
++C++FLAGS  = $(CXXFLAGS) ;
++LINKFLAGS = $(LDFLAGS) ;
++LINKLIBS  = $(LIBS) ;
++
+ 
+ # only haiku jam
+ JCACHEFILE = $(TOP)/.jamcache ;

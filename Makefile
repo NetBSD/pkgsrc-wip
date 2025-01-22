@@ -802,6 +802,7 @@ SUBDIR+=	ecrire
 SUBDIR+=	edb-debugger
 SUBDIR+=	edb-debugger-git
 SUBDIR+=	edbrowse
+SUBDIR+=	ede21
 SUBDIR+=	edelib
 SUBDIR+=	edelib21
 SUBDIR+=	edencommon

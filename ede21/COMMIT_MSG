@@ -1,0 +1,110 @@
+x11/ede: Update to 2.1
+
+- Use FLTK 1.4
+
+General
+-------
+- Added guards for DBus support in edelib. If DBus is disabled in edelib, DBus
+  related code in EDE will not be compiled as well now.
+  This way EDE can support platforms where DBus is not available, e.g. Minix.
+- Removed some obsolete eFLTK rules in the build system.
+- Fixed some Clang warnings.
+- All applications use titles, so tools like xrestop can identify windows.
+- Fixed Bug 211 (startede would refer to old X11R6 resource path).
+- XDG_CURRENT_DESKTOP is set to 'ede' on startup.
+
+Panel (ede-panel)
+-----------------
+- Applet code is more modular now.
+- Panel will be resized correctly after screen dimensions (or resolution)
+  was changed, while EDE is running.
+- Added tooltip support in Start menu. Tooltips contain a short explanation
+  of the selected program; the explanation is read from the Comment key in
+  the program's .desktop file.
+- Fixed Bug 205 (memory applet would show negative values).
+- Fixed memory leaks when Panel exits; on exit, Panel did not release applets
+  memory, resulting in memory leaks.
+- Fixed compilation on older FLTK versions (older than 1.3.x).
+- Panel can now check if an application provides icons with needed sizes and
+  will use them. If not, it will try to resize the application's default icon
+  or global default icon. This makes panel icons cleaner and prettier.
+- Added autoreload support for the main menu. When a new application was added
+  or removed, Panel will detect this and update the menu. It also takes into
+  account if the menu is already opened and does a reload as soon as the user
+  closes it.
+- Improved support for older FLTK versions (1.1.x series).
+- Keep window order, no matter how pekwm restacks windows. This prevents many
+  internal allocations and made panel happy with the Sawfish window manager.
+- Task buttons are stretched by default.
+- Faster removal of task buttons, thanks to optimized FLTK 1.3 group removal.
+- Better handling of workspace changes and setting sticky tag for window.
+- Implemented request from bug 217 (ability to show all windows in taskbar, no
+  matter which desktop is shown).
+- Hider (Panel hiding button) is not an applet any more but part of Panel core
+  code.
+- Memory applet uses sysinfo() instead of /proc to query data. This is a
+  compile-time feature, so on unsupported platforms only an empty box is shown.
+- Added support for Panel height resize.
+- Added new battery monitor applet with UPower backend.
+
+Notification daemon (ede-notify-daemon)
+---------------------------------------
+- Daemon preserves notification message window when mouse pointer is hovered
+  over it. With this a user can easily read longer messages without worrying
+  that the daemon will hide it.
+
+Bug Report Tool (ede-bug-report)
+--------------------------------
+- Center the window when shown and fixed some spelling issues.
+- ifdef-ed pselect() as Minix does not have it.
+- Added support for receiving notifications. When issue gets update,
+  reporter can receive mail notifications, but has to have Bugzilla account
+  first (Bugzilla prerequisite). This implements Bug 201.
+- Fixed OpenSolaris C98 errors.
+
+Crash reporter (ede-crasher)
+----------------------------
+- Made size_t visible on Minix.
+- Try to read core.PID first, then fallback to core in case a crash was
+  detected.
+- In report dialog show used X and FLTK versions.
+
+Launch application (ede-launch)
+-------------------------------
+- ifdef-ed setrlimit() as Minix does not have it.
+- Launch Crash Reporter also on edelib-based applications beside EDE
+  applications.
+- Fixed Bug 186 (ede-launch does not read Terminal key from .desktop file).
+- Resource loading is lazy now, so ede-launch will load configuration when it
+  is needed.
+- Implemented support for Terminal and StartupNotify keys.
+- If Path key was set, change working directory to given folder.
+
+Window manager (pekwm)
+----------------------
+- Fixed iconv() calls, since different platforms have different declarations.
+- Prevent running commands from window menu.
+- Cleaned some compiler warnings.
+
+EDE Start service (evoke)
+-------------------------
+- When user would logout or shutdown the system, warning dialog was showing
+  about wrong DBus reply. Now ConsoleKit is used (on systems where ConsoleKit
+  is still available) to check if a user actually can perform the action.
+- Fixed Bug 194 (ede-desktop does not save icon position on shutdown).
+- In logout dialog the confirmation button is now bound to the Enter key.
+
+Desktop (ede-desktop)
+---------------------
+- Icons are loaded by using IconLoader::set() from edelib.
+- Improved behavior if configuration isn't loaded.
+- Fixed dirent usage on strict POSIX systems (Slackware).
+- Show tooltip over an icon if the icon contains a Comment key.
+- Added support for editing existing icons.
+- Fixed compilation on older FLTK versions (older than 1.3.x).
+- Fixed Bug 235 (working directory and startup notification for desktop icons).
+
+Autostart service (ede-autostart)
+---------------------------------
+- Prevent running .desktop files which have OnlyShowIn/NotShowIn without the
+  'EDE' key.

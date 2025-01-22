@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.8 2021/10/26 11:33:47 nia Exp $
+
+BLAKE2s (ede-2.1.tar.gz) = a3dca1a7eef7b4dc7ff9a2b285aee2d3e771c88fa43cd321f072ad7fa51dc828
+SHA512 (ede-2.1.tar.gz) = b26c4f11f8ba3638ee287698d6caeba4a47966a8bfe9e1377ab78a81224c8c6c657bb488d7317cdafe8b5698be42bef3d57f4d48ef709929ddd7eefa00f79a13
+Size (ede-2.1.tar.gz) = 12854852 bytes
+SHA1 (patch-Jamrules) = b84ae10c13c42c6819329b41ed3e1762b5d86252
+SHA1 (patch-configure) = 3242b87a7d0c4dc75911825be19f50b5a05714c1
+SHA1 (patch-ede-desktop_Wallpaper.cpp) = d1424dd5941192684897bbca85f5f872a6d47bf5
