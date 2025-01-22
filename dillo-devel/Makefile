@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dillo-3.1.1
+DISTNAME=	dillo-3.2.0
 CATEGORIES=	www
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
