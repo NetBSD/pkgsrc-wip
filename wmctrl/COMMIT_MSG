@@ -1,1 +1,0 @@
-wmctrl: fix 64 bit architecture implementation of 32 bit data
