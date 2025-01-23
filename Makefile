@@ -578,7 +578,6 @@ SUBDIR+=	corert-git
 SUBDIR+=	cortex-var
 SUBDIR+=	cortextool
 SUBDIR+=	cosmo-engine
-SUBDIR+=	coturn
 SUBDIR+=	courier-imap
 SUBDIR+=	courierpassd
 SUBDIR+=	cowpatty
