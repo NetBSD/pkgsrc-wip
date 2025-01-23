@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=zsh-users/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kikadf.01@gmail.com
+HOMEPAGE=	https://github.com/zsh-users/zsh-history-substring-search
 COMMENT=	Fish-like history search feature for Zsh
 LICENSE=	modified-bsd
 
