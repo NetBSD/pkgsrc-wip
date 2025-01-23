@@ -6120,7 +6120,6 @@ SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
-SUBDIR+=	zsh-history-substring-search
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
