@@ -1,7 +1,6 @@
+This wip package has some changes that should be merged into
+net/coturn.
+
 Check if ccache is being avoided, which implies perhaps avoiding
 compilers wrappers.
 
-OLD: recheck with 4.6.3.
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2018-4056, CVE-2018-4058, CVE-2018-4059, CVE-2020-4067, CVE-2020-6061,
-  CVE-2020-6062, CVE-2020-26262
