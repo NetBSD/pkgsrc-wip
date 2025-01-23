@@ -1,10 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	coturn-4.6.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
-GITHUB_PROJECT=	coturn
 
 MAINTAINER=	kethzer.dr@gmail.com
 #MAINTAINER+=	gdt@NetBSD.org
@@ -12,20 +11,32 @@ HOMEPAGE=	https://github.com/coturn/coturn
 COMMENT=	TURN and STUN server (for VoIP/webrtc)
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-rpath
+CONFIGURE_ARGS+=	--localstatedir ${VARBASE}/turnserver
+CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
-USE_TOOLS+=	pkg-config
-USE_LIBTOOL=	yes
+# Pass cflags/libs
+CONFIGURE_ENV+=		LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
+CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
 
-HAS_CONFIGURE=	yes
+# \todo File a bug upstream, or explain why the warning is wrong.
+CFLAGS+=	-Wno-stringop-truncation
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
+COTURN_CONFIG=	${PKG_SYSCONFDIR}/turnserver.conf
+COTURN_EGDIR=	${PREFIX}/share/examples/coturn
+CONF_FILES=	${COTURN_EGDIR}/etc/turnserver.conf ${COTURN_CONFIG}
+
+BUILD_DEFS+=	VARBASE
+RCD_SCRIPTS=	turnserver
 
 COTURN_USER?=	coturn
 COTURN_GROUP?=	${COTURN_USER}
 COTURN_DATA?=	${VARBASE}/db/coturn
-BUILD_DEFS+=	COTURN_USER COTURN_GROUP COTURN_DATA VARBASE
+BUILD_DEFS+=	COTURN_USER COTURN_GROUP COTURN_DATA
 
 OWN_DIRS_PERMS+=		${COTURN_DATA} ${COTURN_USER} ${COTURN_GROUP} 0770
 
@@ -37,18 +48,10 @@ PKG_GECOS.${COTURN_USER}=	coturn daemon user
 PKG_HOME.${COTURN_USER}=	${COTURN_DATA}
 PKG_SHELL.${COTURN_USER}=	${NOLOGIN}
 
-RCD_SCRIPTS=		turnserver
-
 FILES_SUBST+=	COTURN_USER=${COTURN_USER:Q}
 FILES_SUBST+=	COTURN_GROUP=${COTURN_GROUP:Q}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-# Pass cflags/libs
-CONFIGURE_ENV+=		PTHREAD_LIBS=-pthread TURN_DISABLE_RPATH=1
-CONFIGURE_ENV+=		LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
-CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 # Use coturn as docs/examples subdir name.  \todo No command-line argument?
 CONFIGURE_ENV+=		PORTNAME=coturn
 # Defaults to ${PREFIX}/etc; respect pkgsrc tunable.
@@ -56,14 +59,17 @@ CONFIGURE_ARGS+=	--confdir=${PKG_SYSCONFDIR}
 # Defaults to ${PREFIX}/var; give it a subdirectory.
 CONFIGURE_ARGS+=	--localstatedir=${COTURN_DATA}
 
-# \todo Why is there a db installed in /var?  Won't that overwrite the user's database?
+# \todo Why is there a db installed in /var?  If not within PREFIX we don't pick it up,
+# but it seems like a bug.
 
+.include "options.mk"
+
+# upstream installs both a .conf.default in etcdir, and the
+# pkgsrc-right-way .conf in egdir.
 post-install:
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/turnserver.conf.default
 
-CONF_FILES+=		${PREFIX}/share/examples/coturn/etc/turnserver.conf ${PKG_SYSCONFDIR}/turnserver.conf
 
-
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
