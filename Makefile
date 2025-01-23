@@ -5498,7 +5498,6 @@ SUBDIR+=	system-config-printer
 SUBDIR+=	system-tools-backends
 SUBDIR+=	systemc
 SUBDIR+=	systemsettings
-SUBDIR+=	sysupgrade
 SUBDIR+=	sysvinit
 SUBDIR+=	syx
 SUBDIR+=	t-coffee
