@@ -1,1 +1,20 @@
-net/tigervnc: Switch to FLTK 1.4.
+net/tigervnc: Update to 1.14.1
+
+- Switch to cmake/build.mk
+- Switch to FLTK 1.4
+- Remove pkgsrc patch that was merged upstream
+
+
+The bugfix release TigerVNC 1.14.1 is now available. This release fixes a
+number of regressions, the most prominent being:
+
+- Default installation of native viewer can once again handle VncAuth
+- Graphic acceleration now can now be disabled through the vncserver config
+  file the same way as other features
+- Command vncpasswd can again correctly update passwords
+- Native viewer once again consider passwd file that contain more than one
+  password valid
+- Native viewer can once again connect to RealVNC servers
+- Users of x0vncserver should no longer experience the mouse cursor moving
+  to the upper left corner
+- H264 encoding no longer causes crashing

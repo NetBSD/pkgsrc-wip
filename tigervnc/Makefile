@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=		tigervnc-1.14.0
+DISTNAME=		tigervnc-1.14.1
 PKGNAME=		${DISTNAME}.1.20.13
-PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v${DISTNAME:S/tigervnc-//}
@@ -161,4 +160,5 @@ pre-configure:
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
