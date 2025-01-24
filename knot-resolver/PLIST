@@ -1,8 +1,8 @@
 @comment $NetBSD$
 etc/knot-resolver/icann-ca.pem
+etc/knot-resolver/kresd.conf
 etc/knot-resolver/root.hints
 etc/knot-resolver/root.keys
-etc/knot-resolver/kresd.conf
 include/libkres/api.h
 include/libkres/array.h
 include/libkres/cdb_api.h
@@ -105,6 +105,6 @@ share/doc/knot-resolver/examples/config.cluster
 share/doc/knot-resolver/examples/config.docker
 share/doc/knot-resolver/examples/config.internal
 share/doc/knot-resolver/examples/config.isp
-share/doc/knot-resolver/examples/config.privacy
 share/doc/knot-resolver/examples/config.personal
+share/doc/knot-resolver/examples/config.privacy
 share/doc/knot-resolver/examples/config.splitview
