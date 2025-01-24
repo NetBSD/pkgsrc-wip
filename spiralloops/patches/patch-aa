@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- Makefile.in.orig	Mon May  7 14:42:59 2001
++++ Makefile.in
+@@ -9,12 +9,12 @@
+ 
+ CC	=	gcc
+ CXX	=	g++
+-CFLAGS	=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
+-CXXFLAGS=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
+-INCPATH	=	-I/usr/X11R6/include
+-LINK	=	g++
++CFLAGS	+=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
++CXXFLAGS+=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
++INCPATH	=
++LINK	=	g++ ${LDFLAGS}
+ LFLAGS	=	
+-LIBS	=   -L/usr/X11R6/lib -lfltk -lGL -lXext -lX11 -lm -ldl
++LIBS	=	-lfltk -lGL -lXext -lX11 -lm ${LIBOSSAUDIO}
+ MOC	=	moc
+ UIC	=	
+ TAR	=	tar -cf

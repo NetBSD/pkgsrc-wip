@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- SpiralSound/Sample.C.orig	2001-04-19 20:48:13.000000000 +0000
++++ SpiralSound/Sample.C
+@@ -18,9 +18,9 @@
+ 
+ #include <string.h>
+ #include "Sample.h"
+-#include "iostream.h"
++#include <iostream>
+ 
+-Sample::Sample(int Len=0) :
++Sample::Sample(int Len) :
+ m_Data(NULL),
+ m_Length(0)
+ {

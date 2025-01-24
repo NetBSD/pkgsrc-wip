@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- SpiralSound/SpiralInfo.C.orig	2001-04-19 20:48:13.000000000 +0000
++++ SpiralSound/SpiralInfo.C
+@@ -16,13 +16,13 @@
+  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+ 
+-#include <iostream.h>
+-#include <fstream.h>
++#include <iostream>
++#include <fstream>
+ #include <stdlib.h>
+ 
+ #include "SpiralInfo.h"
+ 
+-float RandFloat(float s=0.0f, float e=1.0f)
++float RandFloat(float s, float e)
+ {
+ 	return s+((rand()%10000/10000.0)*(e-s));
+ }

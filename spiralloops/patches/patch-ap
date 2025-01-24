@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- GUI/Widgets/Fl_Trigger.C.orig	2001-05-07 20:43:34.000000000 +0000
++++ GUI/Widgets/Fl_Trigger.C
+@@ -17,7 +17,7 @@
+ */ 
+ 
+ #include "Fl_Trigger.h"
+-#include <iostream.h>
++#include <iostream>
+ #include <FL/fl_draw.H>
+ #include <math.h>
+ #include <stdio.h>
+@@ -27,7 +27,7 @@
+ 
+ static const float RADCONV = 0.017453292;
+ 
+-Fl_Trigger::Fl_Trigger(int x, int y, int w, int h, const char* label=0) : 
++Fl_Trigger::Fl_Trigger(int x, int y, int w, int h, const char* label) : 
+ Fl_Widget(x,y,w,h,label),
+ m_CentreX(0),
+ m_CentreY(0),

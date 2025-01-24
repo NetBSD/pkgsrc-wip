@@ -1,0 +1,26 @@
+$NetBSD$
+
+BLAKE2s (SpiralLoops-2.0.0.tar.gz) = b6a3ff6a9e99b2571dbf49a63663b1023f51d7768d72d544291efc74e0d94ade
+SHA512 (SpiralLoops-2.0.0.tar.gz) = b21ba819476cf46294674ea8ea87e326f1b5f744547131190dfc2a4c956695e5c229093028732832a6cce79f9f1483d0329d2c82990775b263a6db82bbb83c6e
+Size (SpiralLoops-2.0.0.tar.gz) = 85458 bytes
+SHA1 (patch-GUI_LoopGUI.C) = 1abbba4f2567a136adb522d64643fb7f13f65487
+SHA1 (patch-GUI_OutputGUI.C) = 44d31b4b176def4a1cd417470776dbd6c4c0c583
+SHA1 (patch-GUI_Widgets_Fl__LED__Button.cxx) = be1f4d47bf53a565e738b35d5d11e49b2f0687e0
+SHA1 (patch-SpiralLoops.C) = fc61cc9159015e0eafa9836b4246945e949419f4
+SHA1 (patch-aa) = 6dcc532e44e03a7f4d9b2d1f3e2062308b2854be
+SHA1 (patch-ab) = 9b276f356d2da5eda3b0ed49e58f1bde6cc87de6
+SHA1 (patch-ac) = 04946ad637a6e0a371e604ffaadd15c119f796da
+SHA1 (patch-ad) = 09c1734e875335dae92afef7bbbd4fdc6821eb1f
+SHA1 (patch-af) = 0bfe36fc2fe19182ade1f4a0f0cf79436bf21a0d
+SHA1 (patch-ag) = 86736dde352931cd0dc89cb4b5560ef7ef84305f
+SHA1 (patch-ah) = 13266cbc1dc1e6961478052c4de32490cea5833e
+SHA1 (patch-ai) = 6311e5df74a10bf0f722068625290dfd81fc0771
+SHA1 (patch-aj) = 6ae1e01753d648695f10261eeb23de617a617fc7
+SHA1 (patch-ak) = 94e4650bc10a7073718a83b27ab47e217cf15f85
+SHA1 (patch-am) = 25fdb4422dd007d7ebee50a3fb2e2accc72b275b
+SHA1 (patch-an) = 0c45e0959591c066afb3c98c1a076b57d028b8f4
+SHA1 (patch-ap) = ae40c9c49c5cea53d9f72d5258becda13c580c08
+SHA1 (patch-aq) = 3f21e84fcbc911ebaf3bb60009f7f0b4b60c801a
+SHA1 (patch-ar) = 63b1db77bf55825618e5e1c0f65f69c0e36e19f6
+SHA1 (patch-as) = 5198351e7d8ad641fef6eb4ba73ff86803b50a09
+SHA1 (patch-at) = dcd9bbf940a6433b4cfc175a6d4a0d6ee167b3ea

@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- SpiralSound/RiffWav.C.orig	2001-04-19 20:48:12.000000000 +0000
++++ SpiralSound/RiffWav.C
+@@ -16,7 +16,7 @@
+  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */ 
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include <fstream>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -26,6 +26,17 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ 
++#ifdef __sun
++#include <sys/byteorder.h>
++#define LITTLE_ENDIAN 1234
++#define BIG_ENDIAN 4321
++#ifdef _BIG_ENDIAN
++#define __BYTE_ORDER BIG_ENDIAN
++#else
++#define __BYTE_ORDER LITTLE_ENDIAN
++#endif
++#endif
++
+ const int HEADERLEN = (4+24+8);
+ 
+ #if __BYTE_ORDER == BIG_ENDIAN
+@@ -55,7 +66,7 @@ WavFile::HeaderInfo::HeaderInfo() : Riff
+ #endif
+ }
+ 
+-int WavFile::Open(string FileName, Mode mode, Channels channels=MONO)
++int WavFile::Open(string FileName, Mode mode, Channels channels)
+ {
+ 	if (m_Stream!=NULL) 
+ 	{
