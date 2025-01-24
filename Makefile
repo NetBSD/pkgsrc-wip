@@ -592,7 +592,6 @@ SUBDIR+=	cqlsh
 SUBDIR+=	crchack-git
 SUBDIR+=	creal
 SUBDIR+=	cream
-SUBDIR+=	creduce-git
 SUBDIR+=	crispy-doom
 SUBDIR+=	crm114
 SUBDIR+=	cronolog-devel
