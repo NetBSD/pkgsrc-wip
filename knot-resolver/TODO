@@ -1,9 +1,9 @@
 # $NetBSD$
 
-[ ] Update Makefile
+[.] Update Makefile
 [ ] Create start-up script
-[ ] Ensure that all LUA points to proper folder after installation
-[ ] Create folder for cache
+[X] Ensure that all LUA points to proper folder after installation
+[X] Create folder for cache
 [ ] Sanity check of everything
 [ ] Run it it somewhere for test
 

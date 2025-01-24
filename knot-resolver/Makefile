@@ -14,20 +14,24 @@ USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=		-DINSTALL_BINDIR="bin"
 CMAKE_ARGS+=		-DINSTALL_INFODIR="${PKGINFODIR}"
-CMAKE_ARGS+=		-DINSTALL_LIBDIR="lib"
+CMAKE_ARGS+=		-DINSTALL_LIBDIR="${PKGLIBDIR}"
 CMAKE_ARGS+=		-DINSTALL_MANDIR="${PKGMANDIR}"
 CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 CMAKE_ARGS+=		-DINSTALL_SBINDIR="sbin"
 CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin"
 
+MESON_ARGS+=		-Dinstall_kresd_conf=enabled
+
 PKG_SYSCONFVAR=		knot-resolver
+
+MAKE_DIRS+=             ${LOCALBASE}/var/cache/knot-resovler
 
 .include "../../mk/bsd.prefs.mk"
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	cmake pkg-config
 
-RCD_SCRIPTS=	knot-resolver
+RCD_SCRIPTS=	kresd
 
 .include "../../net/knot/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
