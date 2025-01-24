@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (flwm-1.16.tgz) = 66c2c2ed949d61fb2aa6f4594cab3c742132f52a7d4f410da93ca805867a4b8b
+SHA512 (flwm-1.16.tgz) = d352e13b0385a017922d636988ba02f20cbe5f8ccd69522f43711a3d3cc04fe876af9f2126d63bd6c862494bace6510a5cda286ce165a54bf58cade1758e1f12
+Size (flwm-1.16.tgz) = 93510 bytes
+SHA1 (patch-Makefile) = a0617f7483c186c398ccc8a0ecce8765e741c2d3
+SHA1 (patch-makeinclude.in) = bde2c26c3c52882082926b48ae9ca8b9a0a3d5c7

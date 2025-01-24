@@ -988,6 +988,7 @@ SUBDIR+=	fltk2
 SUBDIR+=	flux2
 SUBDIR+=	fluxspace
 SUBDIR+=	flvmeta
+SUBDIR+=	flwm
 SUBDIR+=	flyback
 SUBDIR+=	fnaify-extralibs
 SUBDIR+=	fnord
