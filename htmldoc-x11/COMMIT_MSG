@@ -1,1 +1,45 @@
 www/htmldoc-x11: Update to 1.9.20
+
+# Changes in HTMLDOC v1.9.20
+
+- Fixed a regression that caused spaces to disappear between some words
+  (Issue #533)
+- Fixed resolution of relative links within a document (Issue #534)
+
+
+# Changes in HTMLDOC v1.9.19
+
+- Security: Fixed an issue with the `file_basename` implementation (Issue #532)
+- Added support for 'file' method in links (Issue #512)
+- Updated HTML and header/footer code to use a string pool to simplify memory
+  management and fix potential double-free bugs.
+- Updated configure script to look for zlib with pkg-config (Issue #519)
+- Updated markdown support code to mmd.
+- Fixed hyperlinks to subfolders (Issue #525)
+- Fixed export of UTF-8 HTML (Issue #526)
+- Fixed handling of whitespace-only nodes (Issue #528)
+- Fixed handling of tabs in PRE nodes (Issue #529)
+- Fixed case sensitivity of link targets (Issue #530)
+
+
+# Changes in HTMLDOC v1.9.18
+
+- Fixed table rendering when there are missing `</tr>` (Issue #494)
+- Fixed support for links of the form "filename.html#anchor" in PDF output
+  (Issue #514)
+- Fixed `--header1` support for web page output (Issue #515)
+- Fixed markdown emphasized, strong, and struck-through text (Issue 517)
+
+
+# Changes in HTMLDOC v1.9.17
+
+- Added new `--pre-indent` option to control indentation of pre-formatted text
+  (Issue #505)
+- Now link to CUPS library instead of embedding its HTTP code.
+- Updated PostScript and PDF date/time information to use UTC (Issue #490)
+- Fixed multiple conversions of UTF-8 HTML files from the GUI (Issue #496)
+- Fixed a compile bug on Solaris (Issue #498)
+- Fixed a markdown parsing bug (Issue #503)
+- Fixed a relative URL handling bug (Issue #507)
+- Fixed a crash bug with bad title images (Issue #510)
+- Fixed some minor CodeQL warnings.
