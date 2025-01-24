@@ -1879,6 +1879,7 @@ SUBDIR+=	kea
 SUBDIR+=	kea-git
 SUBDIR+=	keama-git
 SUBDIR+=	kermit
+SUBDIR+=	knot-resolver
 SUBDIR+=	kf6-kstatusnotifieritem
 SUBDIR+=	kgamma5
 SUBDIR+=	kgrab
