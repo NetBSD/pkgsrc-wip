@@ -1,0 +1,30 @@
+$NetBSD$
+
+--- SpiralInfo.C.orig	2002-06-02 15:44:31.000000000 +0000
++++ SpiralInfo.C
+@@ -16,13 +16,13 @@
+  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+ 
+-#include <iostream.h>
+-#include <fstream.h>
++#include <iostream>
++#include <fstream>
+ #include <stdlib.h>
+ 
+ #include "SpiralSound/SpiralInfo.h"
+ 
+-float RandFloat(float s=0.0f, float e=1.0f)
++float RandFloat(float s, float e)
+ {
+ 	return s+((rand()%10000/10000.0)*(e-s));
+ }
+@@ -42,7 +42,7 @@ int    SpiralInfo::SAMPLERATE  = 44100;
+ float  SpiralInfo::MAXSAMPLE   = 1.0f;
+ bool   SpiralInfo::WANTMIDI    = true;
+ int    SpiralInfo::FILTERGRAN  = 50;
+-string SpiralInfo::OUTPUTFILE  = "/dev/dsp";
++string SpiralInfo::OUTPUTFILE  = DEVOSSAUDIO;
+ string SpiralInfo::MIDIFILE    = "/dev/midi";
+ int    SpiralInfo::POLY        = 2;
+ bool   SpiralInfo::REALTIMEOUT = true;

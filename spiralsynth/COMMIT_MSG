@@ -1,0 +1,4 @@
+wm/spiralsynth: Patch to work with FLTK 1.4.
+
+- Modified two patches to include C++ headers with ".H" extension
+  (instead of ".h")

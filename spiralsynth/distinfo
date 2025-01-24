@@ -1,0 +1,20 @@
+$NetBSD$
+
+BLAKE2s (SpiralSynth-2.0.0.tar.gz) = 161cbb848a8ec7785b52717b57306abf53b498c074476625c6d04379c460dee9
+SHA512 (SpiralSynth-2.0.0.tar.gz) = fb9b1c84d03120c372af344f1f3e6ec4bfecea8d2c2afed9f5484c13e453bf816cfa7429690d3a3356ca84a51df31fdbb3ca25d2d2b023aacacfea6ec4936244
+Size (SpiralSynth-2.0.0.tar.gz) = 66263 bytes
+SHA1 (patch-GUI_OutputGUI.C) = 1cb3da64627aba3e7367aab0ab252a21838be0c9
+SHA1 (patch-SpiralSound_Midi.C) = 1ad683da963d1d65472eea64dcf8664a0f54e9c7
+SHA1 (patch-aa) = 01e4f4348761ca5c3e7e7c9dce0e13fa0b2b986f
+SHA1 (patch-ab) = 1be8a26fbfcdcde6d775c55586fbff24f55b212f
+SHA1 (patch-ad) = 235afa6618c5ec5aef2ca3448388f11757918832
+SHA1 (patch-ae) = decad0d1a4b2894a4dd9b9bc6bac9e4984b63357
+SHA1 (patch-af) = 88d1a457ad82184a1d5f34e3f56de2d8fb7daf89
+SHA1 (patch-ah) = d2ff3c4ddd4da9c96a74c3f898aa3429dcc51bb9
+SHA1 (patch-ai) = e21a111e3e52fc3c24433f248fa1bfdf566e72dd
+SHA1 (patch-aj) = 7e3e29fbfd38428d68f195db8a7f5007c1417c88
+SHA1 (patch-ak) = 67643c5abea0498f8ea046c5abd52f2d328a5538
+SHA1 (patch-al) = 7436bce933cbddcd4f869ab2cbbe27762d4273e5
+SHA1 (patch-am) = 78ab70a1952f389712412515652c2e8cc7d917a3
+SHA1 (patch-ao) = 138f58bd7fae0226690747efcb8daf472e3a5337
+SHA1 (patch-ar) = 44ab335b5a7831080d58a952f3cc13e5795a3f0e
