@@ -1,0 +1,39 @@
+# $NetBSD$
+#
+# used by www/htmldoc/Makefile
+# used by www/htmldoc-x11/Makefile
+
+# This section contains variables that might be overridden.
+PKGNAME?=	${PKGNAME_BASE}-${VERSION}
+COMMENT?=	Converts HTML to indexed HTML, PDF and/or PostScript
+
+# Normal package Makefile contents follow.
+VERSION=	1.9.20
+PKGNAME_BASE=	htmldoc
+CATEGORIES=	www
+DIST_SUBDIR=	${PKGNAME_BASE}
+DISTNAME=	v${VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelrsweet/htmldoc/archive/}
+EXTRACT_USING=	bsdtar
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.msweet.org/htmldoc/
+LICENSE=	gnu-gpl-v2
+
+PATCHDIR=		${.CURDIR}/../../wip/htmldoc/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/htmldoc/distinfo
+PLIST_SRC=		${.CURDIR}/../../wip/htmldoc/PLIST
+
+.include "${.CURDIR}/../../wip/htmldoc/options.mk"
+
+WRKSRC=			${WRKDIR}/${PKGNAME_BASE}-${PKGVERSION_NOREV}
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c99
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"

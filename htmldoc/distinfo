@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.24 2022/05/24 21:35:45 fcambus Exp $
+
+BLAKE2s (htmldoc/v1.9.20.tar.gz) = 76ed5022a462c327a8aa39648f2ab2e0d0c121c5b7007cf477b077c6e8d53da1
+SHA512 (htmldoc/v1.9.20.tar.gz) = f6ab62bb819eef4dbed8abb5a95bd61292f1fdd513cbdeb776822ef01c3fac0f3250fbab0568b6a828a6c5ad6ca13541827efe7a1ccfbed334361cf0d3624254
+Size (htmldoc/v1.9.20.tar.gz) = 3313590 bytes
+SHA1 (patch-desktop_Makefile) = 687b416d6b4189aa4b0242b23858daabd54a76ed
