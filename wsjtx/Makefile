@@ -10,7 +10,7 @@ MASTER_SITES=	https://sourceforge.net/projects/wsjt/files/wsjtx-2.5.4/wsjtx-2.5.
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://physics.princeton.edu/pulsar/k1jt/
+HOMEPAGE=	https://wsjt.sourceforge.io/wsjtx.html
 COMMENT=	Weak Signal Communication by Joe Talor (K1JT)
 LICENSE=	gnu-gpl-v3
 
