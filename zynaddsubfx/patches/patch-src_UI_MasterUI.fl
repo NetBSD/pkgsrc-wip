@@ -1,0 +1,17 @@
+$NetBSD$
+
+Added for FLTK 1.4:
+<https://fltk.gitlab.io/fltk/Fl_8cxx.html#a94ee21d83137569a6730e3e2e7305cbc>
+
+--- src/UI/MasterUI.fl.orig	2025-01-24 14:11:58.729362850 +0000
++++ src/UI/MasterUI.fl
+@@ -22,6 +22,9 @@ decl {\#if ! defined(PLUGINVERSION) && H
+ \#endif} {private local
+ } 
+ 
++decl {\#include <FL/platform.H>} {public local
++} 
++
+ decl {\#include "WidgetPDial.h"} {public local
+ } 
+ 

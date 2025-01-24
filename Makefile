@@ -6120,6 +6120,7 @@ SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
+SUBDIR+=	zynaddsubfx
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
