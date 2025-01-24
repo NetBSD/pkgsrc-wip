@@ -1,3 +1,3 @@
 wm/zynaddsubfx: Patch to work with FLTK 1.4.
 
-- Iinclude <FL/platform.H> for FLTK 1.4.
+- Include <FL/platform.H> for FLTK 1.4.
