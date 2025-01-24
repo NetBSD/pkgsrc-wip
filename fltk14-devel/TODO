@@ -9,9 +9,9 @@
     "fltk.list" has entires with 444 permissions, looks like a bug.
 [X] Check for library suffixes on AIX, HP-UX and macOS
     Should use libtool like FLTK 1.3
-[ ] Library soname should be libfltk.so.1.4
 [X] Build test programs only on request (make test)
     This was rejected upstream (Issue #940).
     Disable build of test programs with new option "--disable-test".
 [X] Fix X11 options
 [X] Add cairo and wayland options
+[X] Add patch for fatal error: cairo.h: No such file or directory
