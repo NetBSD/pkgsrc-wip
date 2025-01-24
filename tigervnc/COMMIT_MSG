@@ -1,6 +1,5 @@
 net/tigervnc: Update to 1.14.1
 
-- Switch to cmake/build.mk
 - Switch to FLTK 1.4
 - Remove pkgsrc patch that was merged upstream
 

@@ -2,6 +2,7 @@ $NetBSD$
 
 A method Fl__Window::maximize() was added in FLTK 1.4, it should not be
 called by this code written for FLTK 1.3.
+<https://github.com/TigerVNC/tigervnc/pull/1887>
 
 --- vncviewer/DesktopWindow.cxx.orig	2024-10-22 13:45:27.000000000 +0000
 +++ vncviewer/DesktopWindow.cxx

@@ -12,4 +12,4 @@ SHA1 (patch-unix_vncserver_vncserver.in) = 6b72c2b3a23428b2a752d956b83f227247fd8
 SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = 4ef672a8836883cba95d6e6ac6e48ff55331f478
 SHA1 (patch-unix_xserver_hw_vnc_vncBlockHandler.c) = 534a621aab793625c27737d42c5bf12c9574a414
 SHA1 (patch-unix_xserver_os_inputthread.c) = da8f1a6ab905d2569f61e92d8cf9891ed14ec42a
-SHA1 (patch-vncviewer_DesktopWindow.cxx) = 956998f4eaf74fec744f6852d46964506707ed7d
+SHA1 (patch-vncviewer_DesktopWindow.cxx) = 42ac9b8a70f55ed4ca8827f299c7b5cf2eaa55b7
