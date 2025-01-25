@@ -1,52 +1,59 @@
-O
-lude -I/tmp/WRKOBJDIR/wip/wsjtx/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/src -I/tmp/WRKOBJDIR/wip/wsjtx/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/lib -I/usr/pkg/include -I/usr/include -I/usr/pkg/qt5/include -I/usr/pkg/incld: warning: libstdc++.so.9, needed by /tmp/WRKOBJDIR/wip/wsjtx/work/.buildlink/lib/libboost_log_setup.so, may conflict with libstdc++.so.7
-gmake[5]: *** [CMakeFiles/qra64sim.dir/build.make:108: qra64sim] Error 1
-gmake[4]: *** [CMakeFiles/Makefile2:939: CMakeFiles/qra64sim.dir/all] Error 2
-ld: warning: libstdc++.so.9, needed by /tmp/WRKOBJDIR/wip/wsjtx/work/.buildlink/lib/libboost_log_setup.so, may conflict with libstdc++.so.7
-ld: libwsjt_fort.a(four2a.f90.o): in function `four2a_':
-four2a.f90:(.text+0x3b5): undefined reference to `sfftw_destroy_plan_'
-ld: four2a.f90:(.text+0x423): undefined reference to `sfftw_destroy_plan_'
-ld: four2a.f90:(.text+0x44a): undefined reference to `sfftw_destroy_plan_'
-ld: four2a.f90:(.text+0x471): undefined reference to `sfftw_destroy_plan_'
-ld: four2a.f90:(.text+0x498): undefined reference to `sfftw_destroy_plan_'
-ld: libwsjt_fort.a(four2a.f90.o):four2a.f90:(.text+0x4bf): more undefined references to `sfftw_destroy_plan_' follow
-ld: libwsjt_fort.a(four2a.f90.o): in function `four2a_':
-four2a.f90:(.text+0x790): undefined reference to `sfftw_plan_dft_r2c_1d_'
-ld: four2a.f90:(.text+0x7d6): undefined reference to `sfftw_plan_dft_c2r_1d_'
-ld: four2a.f90:(.text+0x85b): undefined reference to `sfftw_destroy_plan_'
-ld: four2a.f90:(.text+0x8a1): undefined reference to `sfftw_plan_dft_1d_'
-ld: four2a.f90:(.text+0x83d): undefined reference to `sfftw_execute_'
-gmake[5]: *** [CMakeFiles/jt49sim.dir/build.make:108: jt49sim] Error 1
-gmake[4]: *** [CMakeFiles/Makefile2:911: CMakeFiles/jt49sim.dir/all] Error 2
-[ 64%] Built target msk144code
-[ 64%] Linking CXX executable wsprcode
+1. Previous problem, missing sfftw_* symbol, is resolved by adding
+   PKG_OPTIONS.fftw+=     fftw-fortran
+   and packaged fine on NetBSD/amd64 9.3
 
+2. On NetBSD/amd64 9.3 Now getting at starting
+   'wsjtx' failed: Cannot allocate memory
 
+3. On NetBSD/amd64 10.99.12 (pbulk) not packaged yet with
 
-[ 92%] Performing configure step for 'wsjtx'
--- The C compiler identification is GNU 10.3.0
--- The CXX compiler identification is GNU 10.3.0
-.....
-.....
-.....
--- Looking for rig_set_cache_timeout_ms
--- Looking for rig_set_cache_timeout_ms - found
-CMake Error at /tmp/wip/wsjtx/work/.buildlink/qt5/lib/cmake/Qt5/Qt5Config.cmake:28 (find_package):
-  Could not find a package configuration file provided by "Qt5LinguistTools"
-  with any of the following names:
+   => Checking for missing run-time search paths in wsjtx-2.5.4
+ERROR: bin/fst4sim: missing library: libgfortran.so.5
+ERROR: bin/fst4sim: missing library: libquadmath.so.0
+ERROR: bin/fst4sim: missing library: libstdc++.so.7
+ERROR: bin/fst4sim: missing library: libgomp.so.1
+ERROR: bin/ft8code: missing library: libgfortran.so.5
+ERROR: bin/ft8code: missing library: libquadmath.so.0
+ERROR: bin/ft8code: missing library: libstdc++.so.7
+ERROR: bin/ft8code: missing library: libgomp.so.1
+ERROR: bin/jt4code: missing library: libgfortran.so.5
+ERROR: bin/jt4code: missing library: libquadmath.so.0
+ERROR: bin/jt4code: missing library: libstdc++.so.7
+ERROR: bin/jt4code: missing library: libgomp.so.1
+ERROR: bin/jt65code: missing library: libgfortran.so.5
+ERROR: bin/jt65code: missing library: libquadmath.so.0
+ERROR: bin/jt65code: missing library: libstdc++.so.7
+ERROR: bin/jt65code: missing library: libgomp.so.1
+ERROR: bin/jt9: missing library: libgfortran.so.5
+ERROR: bin/jt9: missing library: libquadmath.so.0
+ERROR: bin/jt9: missing library: libstdc++.so.7
+ERROR: bin/jt9: missing library: libgomp.so.1
+ERROR: bin/jt9code: missing library: libgfortran.so.5
+ERROR: bin/jt9code: missing library: libquadmath.so.0
+ERROR: bin/jt9code: missing library: libstdc++.so.7
+ERROR: bin/jt9code: missing library: libgomp.so.1
+ERROR: bin/msk144code: missing library: libgfortran.so.5
+ERROR: bin/msk144code: missing library: libquadmath.so.0
+ERROR: bin/msk144code: missing library: libstdc++.so.7
+ERROR: bin/msk144code: missing library: libgomp.so.1
+ERROR: bin/q65code: missing library: libgfortran.so.5
+ERROR: bin/q65code: missing library: libquadmath.so.0
+ERROR: bin/q65code: missing library: libstdc++.so.7
+ERROR: bin/q65code: missing library: libgomp.so.1
+ERROR: bin/q65sim: missing library: libgfortran.so.5
+ERROR: bin/q65sim: missing library: libquadmath.so.0
+ERROR: bin/q65sim: missing library: libstdc++.so.7
+ERROR: bin/q65sim: missing library: libgomp.so.1
+ERROR: bin/wsjtx: missing library: libgfortran.so.5
+ERROR: bin/wsjtx: missing library: libquadmath.so.0
+ERROR: bin/wsjtx: missing library: libstdc++.so.7
+ERROR: bin/wsjtx: missing library: libgomp.so.1
+*** Error code 1
 
-    Qt5LinguistToolsConfig.cmake
-    qt5linguisttools-config.cmake
+Stop.
+make[1]: stopped making "stage-install" in /usr/pkgsrc/wip/wsjtx
+*** Error code 1
 
-  Add the installation prefix of "Qt5LinguistTools" to CMAKE_PREFIX_PATH or
-  set "Qt5LinguistTools_DIR" to a directory containing one of the above
-  files.  If "Qt5LinguistTools" provides a separate development package or
-  SDK, be sure it has been installed.
-Call Stack (most recent call first):
-  CMakeLists.txt:881 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-See also "/tmp/wip/wsjtx/work/wsjtx-2.3.1/wsjtx-prefix/src/wsjtx-build/CMakeFiles/CMakeOutput.log".
-See also "/tmp/wip/wsjtx/work/wsjtx-2.3.1/wsjtx-prefix/src/wsjtx-build/CMakeFiles/CMakeError.log".
-
+Stop.
+make: stopped making "stage-install" in /usr/pkgsrc/wip/wsjtx
+mef20@makoto 07:28:01/250126(..wip/wsjtx)%
