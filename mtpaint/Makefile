@@ -1,9 +1,9 @@
-# $NetBSD
+# $NetBSD$
 
-COMMITS=	419
-DISTNAME=	mtpaint-0.0.0.${COMMITS}
+# mtpaint's maintainer uses commits as releases.
+DISTNAME=	mtpaint-3.50.11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wjaguar/}
-GITHUB_TAG=	199472ad6a4ecee6c8583fb5a504a2e99712b4fc
+GITHUB_TAG=	f37cf09c02b0ebd81d29c67be9741f54d76a9171
 WRKSRC=		${WRKDIR}/mtPaint-${GITHUB_TAG}
 CATEGORIES=	graphics
 
@@ -18,14 +18,19 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	cflags gtk3 jpeg jp2v2 webp intl tiff man
 USE_TOOLS+=		gmake pkg-config
 
-TOOL_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
+.include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../archivers/libzip/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
