@@ -3,4 +3,3 @@ $NetBSD$
 BLAKE2s (cinelerra-c92ff91.tar.gz) = d792a5d9a2a425a60921d9be53f363d1d0568457b65006797fd1a865bdc93b75
 SHA512 (cinelerra-c92ff91.tar.gz) = 96790b72451a430b555b8b4f56d09cae825d194d62d6743f523655daf7471cd00d2984a5b04c0d6b6278e5704fc6095420c80ea9b966baa98615c59d8a7fdd73
 Size (cinelerra-c92ff91.tar.gz) = 223564252 bytes
-SHA1 (patch-aa) = ec634efcd8f7f2efca0cee3e8b94606799e4b148
