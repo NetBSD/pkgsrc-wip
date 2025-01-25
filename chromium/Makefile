@@ -54,10 +54,13 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-#ONLY_FOR_PLATFORM+=		*-*-arm # not yet
-#ONLY_FOR_PLATFORM+=		*-*-aarch64 # not yet
-#ONLY_FOR_PLATFORM+=		*-*-i386 # not yet
-ONLY_FOR_PLATFORM+=		*-*-x86_64
+SUPPORTED_OS=			NetBSD-1[0-9].* FreeBSD-*
+SUPPORTED_OS+=			OpenBSD-* Linux-* Darwin-*
+.for os in ${SUPPORTED_OS}
+ONLY_FOR_PLATFORM+=		${os}-x86_64
+ONLY_FOR_PLATFORM+=		${os}-aarch64
+ONLY_FOR_PLATFORM+=		${os}-i386
+.endfor
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -228,8 +231,6 @@ post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 pre-configure:
-#	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
-#		${BUILDLINK_DIR}/bin/java
 	# Prepare internal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHONBIN} scripts/build_ffmpeg.py \
