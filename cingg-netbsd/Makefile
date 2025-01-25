@@ -1,12 +1,12 @@
 # $NetBSD$
 DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
-DISTVERSION=		5.1-20240703
+DISTVERSION=		5.1-20241228
 #DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-DISTREVISION=		5
+DISTREVISION=		1
 CATEGORIES=		multimedia
-REV=			73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
+REV=			c92ff91450d5a66e8bef72a103ae13002144953c # git revision
 MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
-DISTFILES=		cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz
+DISTFILES=		cinelerra-c92ff91.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Professional video editing and compositing environment
@@ -15,6 +15,8 @@ HOMEPAGE=	https://www.cinelerra-gg.org/
 LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-x86_64 NetBSD-*-i386
+
+#CHECK_PORTABILITY_SKIP=cinelerra-5.1/configure
 
 USE_LANGUAGES=		c c++
 
@@ -51,7 +53,7 @@ CONFIGURE_ARGS+=	--with-lv2
 CONFIGURE_ARGS+=	--without-libzmpeg
 CONFIGURE_ARGS+=	--without-commercial
 CONFIGURE_ARGS+=	--without-thirdparty
-CONFIGURE_ARGS+=	--with-jobs=4
+CONFIGURE_ARGS+=	--with-jobs=${MAKE_JOBS:U1}
 
 WRKSRC=			${WRKDIR}/cinelerra-${REV:C/(.......).*/\1/}
 CONFIGURE_DIRS=		${WRKSRC}/cinelerra-5.1
@@ -63,8 +65,8 @@ post-patch:
 	# remove thirdparty/src for more space
 	rm -rf ${CONFIGURE_DIRS}/thirdparty/src/*
 #	# correct the bash interpreter path
-	cd ${CONFIGURE_DIRS}/cinelerra && sed -i  -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
-		../configure.ac bdcreate.C dvdcreate.C shbtnprefs.C
+#	cd ${CONFIGURE_DIRS}/cinelerra && sed -i  -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
+#		../configure.ac bdcreate.C dvdcreate.C shbtnprefs.C
 
 pre-configure:
 	cd ${CONFIGURE_DIRS}  \
@@ -72,7 +74,7 @@ pre-configure:
 
 CONFIG_SHELL=	bash
 
-do-configure: # naeed MAKE_ENV esp BSD=1
+do-configure: # need MAKE_ENV esp BSD=1
 	cd ${CONFIGURE_DIRS}  && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash configure ${CONFIGURE_ARGS}
 
 do-build:
