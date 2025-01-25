@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.20 2024/09/30 17:53:01 ktnb Exp $
+# used by fonts/nerd-fonts-3270/Makefile
+# used by fonts/nerd-fonts-Agave/Makefile
+# used by fonts/nerd-fonts-AnonymousPro/Makefile
+# used by fonts/nerd-fonts-Arimo/Makefile
+# used by fonts/nerd-fonts-AurulentSansMono/Makefile
+# used by fonts/nerd-fonts-BigBlueTerminal/Makefile
+# used by fonts/nerd-fonts-BitstreamVeraSansMono/Makefile
+# used by fonts/nerd-fonts-CascadiaCode/Makefile
+# used by fonts/nerd-fonts-CodeNewRoman/Makefile
+# used by fonts/nerd-fonts-Cousine/Makefile
+# used by fonts/nerd-fonts-iA-Writer/Makefile
+# used by fonts/nerd-fonts-IBMPlexMono/Makefile
+# used by fonts/nerd-fonts-DaddyTimeMono/Makefile
+# used by fonts/nerd-fonts-FantasqueSansMono/Makefile
+# used by fonts/nerd-fonts-Meslo/Makefile
+# used by fonts/nerd-fonts-JetBrainsMono/Makefile
+# used by fonts/nerd-fonts-SourceCodePro/Makefile
+# used by fonts/nerd-fonts-Hack/Makefile
+# used by fonts/nerd-fonts-NerdFontsSymbolsOnly/Makefile
+
+CATEGORIES=	fonts
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
+GITHUB_PROJECT=	nerd-fonts
+GITHUB_RELEASE=	v3.3.0
+DIST_SUBDIR=	${GITHUB_PROJECT}/${GITHUB_RELEASE:S/v//}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ryanoasis/nerd-fonts/
+# the glyphs/icons are from multiple sources, so all these licenses need to be accepted
+GLYPH_LICENSES=	cc-by-v4.0 AND mit AND ofl-v1.1 AND unlicense AND apache-2.0
+# allow overriding in case the derived font falls under a license not already covered by the glyphs
+LICENSE?=	${GLYPH_LICENSES}
+
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}
