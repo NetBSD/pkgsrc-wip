@@ -22,7 +22,7 @@ USE_LIBTOOL=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-.  if ${OPSYS_VERSION} >109900
+.  if ${OPSYS_VERSION} >100000
 GCC_REQD+=	14
 .  endif
 .endif
