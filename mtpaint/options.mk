@@ -2,15 +2,10 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mtpaint
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	gtk gtk2 gtk3
+PKG_OPTIONS_GROUP.toolkit=	gtk2 gtk3
 PKG_SUGGESTED_OPTIONS=		gtk3
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgtk)
-.  include "../../x11/gtk/buildlink3.mk"
-CONFIGURE_ARGS+=	gtk1
-.endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 .  include "../../x11/gtk2/buildlink3.mk"

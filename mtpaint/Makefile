@@ -8,14 +8,14 @@ WRKSRC=		${WRKDIR}/mtPaint-${GITHUB_TAG}
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mtpaint.sourceforge.net/
+HOMEPAGE=	https://mtpaint.sourceforge.net/
 COMMENT=	Painting program and photo editor
 LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	cflags gtk3 jpeg jp2v2 webp intl tiff man
+CONFIGURE_ARGS+=	cflags jpeg jp2v2 webp intl tiff man
 USE_TOOLS+=		gmake pkg-config
 
 .include "options.mk"
