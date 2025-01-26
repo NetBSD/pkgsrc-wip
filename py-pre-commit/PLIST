@@ -114,6 +114,9 @@ ${PYSITELIB}/pre_commit/languages/golang.pyo
 ${PYSITELIB}/pre_commit/languages/haskell.py
 ${PYSITELIB}/pre_commit/languages/haskell.pyc
 ${PYSITELIB}/pre_commit/languages/haskell.pyo
+${PYSITELIB}/pre_commit/languages/julia.py
+${PYSITELIB}/pre_commit/languages/julia.pyc
+${PYSITELIB}/pre_commit/languages/julia.pyo
 ${PYSITELIB}/pre_commit/languages/lua.py
 ${PYSITELIB}/pre_commit/languages/lua.pyc
 ${PYSITELIB}/pre_commit/languages/lua.pyo
