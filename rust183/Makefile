@@ -19,6 +19,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash grep gmake perl:build pkg-config
 
+TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
+
+FORCE_RPATH=		--force-rpath
+
 # This is a bug:
 #   https://github.com/rust-lang/rust/issues/130708
 # "Building rust 1.81.0 does network access in the "build" phase"
@@ -544,11 +548,28 @@ do-test:
 	${SETENV} ${MAKE_ENV}						\
 		${PYTHONBIN} ./x.py -v test -j ${_MAKE_JOBS_N}
 
+PATCH_BINARIES+=	bin/cargo
+PATCH_BINARIES+=	bin/cargo-clippy
+PATCH_BINARIES+=	bin/clippy-driver
+PATCH_BINARIES+=	bin/rust-analyzer
+PATCH_BINARIES+=	bin/rustc
+PATCH_BINARIES+=	bin/rustdoc
+PATCH_BINARIES+=	bin/rustfmt
+PATCH_BINARIES+=	libexec/rust-analyzer-proc-macro-srv
+
 do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
-		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
+		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N};	\
+	for bin in ${PATCH_BINARIES}; do				\
+		f=${DESTDIR}${PREFIX}/$${bin};				\
+		if [ -f $$f ]; then					\
+cmd="${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f"; \
+			echo $$cmd; 					\
+			$$cmd;						\
+		fi; 							\
+	done
 
 SUBST_CLASSES+=		destdir
 SUBST_STAGE.destdir=	post-install
