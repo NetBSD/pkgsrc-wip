@@ -2,58 +2,22 @@
    PKG_OPTIONS.fftw+=     fftw-fortran
    and packaged fine on NetBSD/amd64 9.3
 
-2. On NetBSD/amd64 9.3 Now getting at starting
+2. On NetBSD/amd64 9.3 (and 10.99.12) Now getting at starting
    'wsjtx' failed: Cannot allocate memory
 
-3. On NetBSD/amd64 10.99.12 (pbulk) not packaged yet with
+3. On NetBSD/amd64 10.99.12 (pbulk) had not been packaged  with
+    ..
+    ERROR: bin/wsjtx: missing library: libgomp.so.1
+    ..
+    etc,
+  The work around is asking gcc 14, and now packaged.
 
-   => Checking for missing run-time search paths in wsjtx-2.5.4
-ERROR: bin/fst4sim: missing library: libgfortran.so.5
-ERROR: bin/fst4sim: missing library: libquadmath.so.0
-ERROR: bin/fst4sim: missing library: libstdc++.so.7
-ERROR: bin/fst4sim: missing library: libgomp.so.1
-ERROR: bin/ft8code: missing library: libgfortran.so.5
-ERROR: bin/ft8code: missing library: libquadmath.so.0
-ERROR: bin/ft8code: missing library: libstdc++.so.7
-ERROR: bin/ft8code: missing library: libgomp.so.1
-ERROR: bin/jt4code: missing library: libgfortran.so.5
-ERROR: bin/jt4code: missing library: libquadmath.so.0
-ERROR: bin/jt4code: missing library: libstdc++.so.7
-ERROR: bin/jt4code: missing library: libgomp.so.1
-ERROR: bin/jt65code: missing library: libgfortran.so.5
-ERROR: bin/jt65code: missing library: libquadmath.so.0
-ERROR: bin/jt65code: missing library: libstdc++.so.7
-ERROR: bin/jt65code: missing library: libgomp.so.1
-ERROR: bin/jt9: missing library: libgfortran.so.5
-ERROR: bin/jt9: missing library: libquadmath.so.0
-ERROR: bin/jt9: missing library: libstdc++.so.7
-ERROR: bin/jt9: missing library: libgomp.so.1
-ERROR: bin/jt9code: missing library: libgfortran.so.5
-ERROR: bin/jt9code: missing library: libquadmath.so.0
-ERROR: bin/jt9code: missing library: libstdc++.so.7
-ERROR: bin/jt9code: missing library: libgomp.so.1
-ERROR: bin/msk144code: missing library: libgfortran.so.5
-ERROR: bin/msk144code: missing library: libquadmath.so.0
-ERROR: bin/msk144code: missing library: libstdc++.so.7
-ERROR: bin/msk144code: missing library: libgomp.so.1
-ERROR: bin/q65code: missing library: libgfortran.so.5
-ERROR: bin/q65code: missing library: libquadmath.so.0
-ERROR: bin/q65code: missing library: libstdc++.so.7
-ERROR: bin/q65code: missing library: libgomp.so.1
-ERROR: bin/q65sim: missing library: libgfortran.so.5
-ERROR: bin/q65sim: missing library: libquadmath.so.0
-ERROR: bin/q65sim: missing library: libstdc++.so.7
-ERROR: bin/q65sim: missing library: libgomp.so.1
-ERROR: bin/wsjtx: missing library: libgfortran.so.5
-ERROR: bin/wsjtx: missing library: libquadmath.so.0
-ERROR: bin/wsjtx: missing library: libstdc++.so.7
-ERROR: bin/wsjtx: missing library: libgomp.so.1
-*** Error code 1
+4. Riastradh@ told following test
 
-Stop.
-make[1]: stopped making "stage-install" in /usr/pkgsrc/wip/wsjtx
-*** Error code 1
+mef20@makoto 07:41:06/250127(..wip/wsjtx)% \
+sudo  dtrace -n 'sdt:::set-error /(execname == "wsjtx" || execname == "ktrace") && arg0 == 12/ { @[stack()] count()
+ }' -c "ktrace ./wsjtx"
 
-Stop.
-make: stopped making "stage-install" in /usr/pkgsrc/wip/wsjtx
-mef20@makoto 07:28:01/250126(..wip/wsjtx)%
+dtrace: invalid probe specifier sdt:::set-error /(execname == "wsjtx" || execname == "ktrace") && arg0 == 12/ { @[stack()] count() }: syntax error near "count"
+[ 3856376.1307068] sorry, pid 23498 was killed: orphaned traced process
+mmef20@makoto 07:41:06/250127(..wip/wsjtx)% \

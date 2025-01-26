@@ -14,7 +14,6 @@ HOMEPAGE=	https://wsjt.sourceforge.io/wsjtx.html
 COMMENT=	Weak Signal Communication by Joe Talor (K1JT)
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++ fortran
 USE_TOOLS+=	pkg-config gmake tar
 USE_LIBTOOL=	yes
@@ -67,7 +66,7 @@ SUBST_STAGE.hamlib=	pre-configure
 SUBST_MESSAGE.hamlib=	fix PREFIX inside patch
 SUBST_VARS.hamlib=	PREFIX
 
-
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
