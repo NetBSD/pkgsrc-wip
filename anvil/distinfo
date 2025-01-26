@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (anvil-src-v0.3.tar.gz) = 45085de29cb247cd872675932c492e8dfa91499592afc022579f222362be7cdb
-SHA512 (anvil-src-v0.3.tar.gz) = 8c3473f799008ae05d9fa2aa75fa87c1bd1770e212808f0435372dd8ebed4a664e61371e088e62e50dd1f597a7be99525ed035bd16a51e0bcbab7be21667eaf0
-Size (anvil-src-v0.3.tar.gz) = 366970 bytes
+BLAKE2s (anvil-src-v0.4.tar.gz) = aea8c93d66eb49011d83c99cb33e9c8332bdc60e8b7849bec13491f8a54359f8
+SHA512 (anvil-src-v0.4.tar.gz) = 2af35cc16471c87054816347502cb605af6311f3d8d0108b5c119b97ecc3dc64131d4311f78c3b75553d18d7ceb6b352c6cc52beb249400c1e7c5a7b39efbe7e
+Size (anvil-src-v0.4.tar.gz) = 3397 bytes
 BLAKE2s (gioui.org_@v_v0.6.0.mod) = 87ba94f15199123035bb0a9769afb1e9a48565478558c0cd821c3582e411113b
 SHA512 (gioui.org_@v_v0.6.0.mod) = fe7cbd899883c9cbfada4931b70d1edde6ca9e11d4596cf001a5b2deff6593a63afb8574273e1a569d3a2bdad86860189c2e546b338584bc4354025ac866dfe8
 Size (gioui.org_@v_v0.6.0.mod) = 406 bytes
