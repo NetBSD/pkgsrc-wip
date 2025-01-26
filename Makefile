@@ -1474,6 +1474,7 @@ SUBDIR+=	halfempty
 SUBDIR+=	halloy
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
+SUBDIR+=	haplhoseq
 SUBDIR+=	hare
 SUBDIR+=	harec
 SUBDIR+=	harmony
