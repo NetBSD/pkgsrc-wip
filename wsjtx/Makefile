@@ -19,6 +19,14 @@ USE_LANGUAGES+=	c c++ fortran
 USE_TOOLS+=	pkg-config gmake tar
 USE_LIBTOOL=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.  if ${OPSYS_VERSION} >109900
+GCC_REQD+=	14
+.  endif
+.endif
+
 DEPENDS+=	qt5-qttranslations-[0-9]*:../../x11/qt5-qttranslations
 
 CMAKE_CONFIGURE_ARGS+=	-DNVTT_SHARED=ON
