@@ -18,10 +18,6 @@ USE_LANGUAGES+=	c c++ fortran
 USE_TOOLS+=	pkg-config gmake tar
 USE_LIBTOOL=	yes
 
-#.if empty(PKG_BUILD_OPTIONS.fftw:Mfftw-fortran)
-# PKG_FAIL_REASON+=      'You need to set PKG_OPTIONS.fftw:Mfftw-fortran, at its compile time.'
-#.endif
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
@@ -71,6 +67,11 @@ SUBST_MESSAGE.hamlib=	fix PREFIX inside patch
 SUBST_VARS.hamlib=	PREFIX
 
 .include "../../devel/cmake/build.mk"
+.include "../../math/fftw/buildlink3.mk"
+.if empty(PKG_BUILD_OPTIONS.fftw:Mfftw-fortran)
+PKG_FAIL_REASON+=      'You need to set PKG_OPTIONS.fftw:Mfftw-fortran, at its compile time.'
+.endif
+
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
@@ -84,7 +85,6 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../math/fftw/buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 BUILDLINK_API_DEPENDS.hamlib+=	hamlib>=4.1
 .include "../../ham/hamlib/buildlink3.mk"
