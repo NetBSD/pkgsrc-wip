@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config gmake tar
 USE_LIBTOOL=	yes
 
 #.if empty(PKG_BUILD_OPTIONS.fftw:Mfftw-fortran)
-# PKG_FAIL_REASON+=      'You need to set PKG_BUILD_OPTIONS.fftw:Mfftw-fortran, at its compile time.'
+# PKG_FAIL_REASON+=      'You need to set PKG_OPTIONS.fftw:Mfftw-fortran, at its compile time.'
 #.endif
 
 .include "../../mk/bsd.prefs.mk"
