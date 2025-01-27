@@ -1,5 +1,8 @@
-Stumpwm is a tiling, keyboard driven X11 Window Manager written entirely in
-Common Lisp. It attempts to be customizable yet visually minimal. There are no
-window decorations, no icons, and no buttons. It does have various hooks to
-attach your personal customizations, and variables to tweak. With a 100% Common
-Lisp window manager there's no stopping the hacks. Just re-eval and GO!
+StumpWM is a window manager written entirely in Common Lisp. It
+attempts to be highly customizable while relying entirely on the
+keyboard for input. You will not find buttons, icons, title bars,
+tool bars, or any of the other conventional GUI widgets. StumpWM
+attempts to be customizable yet visually minimal. There are no
+window decorations, no icons, and no buttons. It does have various
+hooks to attach your personal customizations, and variables to
+tweak.
