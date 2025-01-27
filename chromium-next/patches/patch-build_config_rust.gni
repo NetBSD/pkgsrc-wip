@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/rust.gni.orig	2025-01-07 19:49:01.000000000 +0000
++++ build/config/rust.gni
+@@ -298,6 +298,10 @@ if (is_linux || is_chromeos) {
+   }
+ }
+ 
++if (is_bsd) {
++  rust_abi_target = string_replace(rust_abi_target, "linux-gnu", current_os)
++}
++
+ assert(!toolchain_has_rust || rust_abi_target != "")
+ 
+ # This variable is passed to the Rust libstd build.

@@ -17,3 +17,5 @@ This is the workaround, see the files/chromium.sh.in launch wrapper.
 2) HID doesn't work on NetBSD.
 NOTE: For this OpenBSD uses libudev-openbsd, FreeBSD uses devd.
 
+NOTE: chromium-132 switch to llvm-19, so chromium-132 available
+as wip/chromium-next what is use wip/llvm.

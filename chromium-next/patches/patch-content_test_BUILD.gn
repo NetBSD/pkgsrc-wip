@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/test/BUILD.gn.orig	2025-01-07 19:49:01.000000000 +0000
++++ content/test/BUILD.gn
+@@ -1772,7 +1772,7 @@ test("content_browsertests") {
+     "../test/url_loader_interceptor_browsertest.cc",
+   ]
+ 
+-  if (is_linux) {
++  if ((is_linux) && !is_bsd) {
+     sources += [ "../browser/network/address_map_linux_browsertest.cc" ]
+   }
+ 

@@ -470,6 +470,7 @@ SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium
 SUBDIR+=	chromium-depot_tools
+SUBDIR+=	chromium-next
 SUBDIR+=	chronograf
 SUBDIR+=	chrsh
 SUBDIR+=	chruby
