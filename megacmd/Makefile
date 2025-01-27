@@ -60,4 +60,5 @@ post-install:
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
