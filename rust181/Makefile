@@ -398,8 +398,8 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
 TOOL_DEPENDS+=		gzip>=0:../../archivers/gzip
 TOOLS_CREATE+=		md5sum
-TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
-TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
+TOOLS_PATH.md5sum=	${TOOLBASE}/bin/gmd5sum
+TOOLS_PLATFORM.gzcat=	${TOOLBASE}/bin/gzip -cd
 .endif
 
 SUBST_CLASSES+=		prefix
