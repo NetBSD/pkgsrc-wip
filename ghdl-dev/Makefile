@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	ghdl
-GITHUB_TAG=	f1de234f5e77eb8fb765da945a0bf34ec4abb864
-DISTNAME=	f1de234f5e77eb8fb765da945a0bf34ec4abb864
-PKGNAME=	${GITHUB_PROJECT}-dev-5.0.0.9655
+DISTNAME=	d0ca8b657482bbdad1e8196a2a58cc3c7e8f8f8a
+PKGNAME=	${GITHUB_PROJECT}-dev-5.0.0.9860
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ghdl/}
+GITHUB_PROJECT=	ghdl
+GITHUB_TAG=	d0ca8b657482bbdad1e8196a2a58cc3c7e8f8f8a
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,10 +33,10 @@ PLIST_VARS+=	llvm
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-TOOL_DEPENDS+=	gcc10-aux-[0-9]*:../../lang/gcc10-aux
-CONFIGURE_ENV+=		GNATMAKE=${PREFIX}/gcc10-aux/bin/gnatmake
+CONFIGURE_ENV+=	GNATMAKE=${PREFIX}/gcc10-aux/bin/gnatmake
 CONFIGURE_ARGS+=	--with-llvm-config=${PREFIX}/bin/llvm-config
 BUILDLINK_DEPMETHOD.clang=	build
+.include "../../lang/gcc10-aux/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 PLIST.llvm=	yes
