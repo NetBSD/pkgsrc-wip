@@ -1,4 +1,0 @@
-net/megacmd: fix build on i386
-
-Avoid configure error: cannot figure out how to use std::atomic,
-with use atomic64.mk
