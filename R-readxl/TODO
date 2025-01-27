@@ -1,0 +1,13 @@
+Missing uselocale:
+
+If you look at FreeBSD side, uselocal is implemented:
+
+  setlocal thread unsafe version
+  uselocal thread safe version
+
+gcc -I"/usr/pkg/lib/R/include" -DNDEBUG -Iunix -I. -I'/usr/pkg/lib/R/library/cpp11/include' -I'/usr/pkg/lib/R/library/progress/include' -I/usr/pkg/include -I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5   -fvisibility=hidden -fpic  -O2 -pthread -I/usr/pkg/include -I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -c libxls/locale.c -o libxls/locale.o
+libxls/locale.c: In function 'xls_wcstombs_l':
+libxls/locale.c:84:26: warning: implicit declaration of function 'uselocale'; did you mean 'setlocale'? [-Wimplicit-function-declaration]
+   84 |     locale_t oldlocale = uselocale(loc);
+      |                          ^~~~~~~~~
+      |                          setlocale
