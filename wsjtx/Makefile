@@ -2,8 +2,6 @@
 
 DISTNAME=	wsjtx-2.5.4
 CATEGORIES=	ham
-#MASTER_SITES=	https://physics.princeton.edu/pulsar/k1jt/
-#MASTER_SITES=	https://downloads.sourceforge.net/project/wsjt/wsjtx-2.5.4/
 MASTER_SITES=	https://sourceforge.net/projects/wsjt/files/wsjtx-2.5.4/wsjtx-2.5.4.tgz/
 # for 2.6.1
 #ASTER_SITES=	https://wsjt.sourceforge.io/downloads/
