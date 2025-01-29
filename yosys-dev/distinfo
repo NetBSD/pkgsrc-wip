@@ -1,8 +1,7 @@
 $NetBSD: distinfo,v 1.6 2024/10/15 01:32:59 thorpej Exp $
 
-BLAKE2s (yosys-0.48/yosys.tar.gz) = 8825f0caf86fdc907d5c036e4302ed120a49fddebb2ad6cb8d14d1f68a53e034
-SHA512 (yosys-0.48/yosys.tar.gz) = c76756171dcff7f7281e19ad94ffde7498965799841c68b21259d12ade78494f5c8be59b5278777fabe904321ae214c702fdaef9c49ee23a3fa109a59b4b0322
-Size (yosys-0.48/yosys.tar.gz) = 9679731 bytes
-SHA1 (patch-Makefile) = db77fa7d0274a1f11290e46ee92dfc80b7d88556
-SHA1 (patch-kernel_driver.cc) = 4b0b0ffd2a7e3757bdf87728460e34831f2075aa
+BLAKE2s (yosys-0.49/yosys.tar.gz) = 4b7d701275f6592e3a69be6234c0d1c7fd11a30f9274cd4321415a8f41265200
+SHA512 (yosys-0.49/yosys.tar.gz) = d716f0495899196947c3a2bdad10c7e0e39c3c0ab2f2600b701bd719edc3e9fa2d86a0eba12c59d9b28651a88563bd83dab4ce37d38ce984d4a74d6d17c1752b
+Size (yosys-0.49/yosys.tar.gz) = 9686496 bytes
+SHA1 (patch-kernel_driver.cc) = 0eccf6d43794b52b0baf28922edbc451bd35788a
 SHA1 (patch-kernel_tclapi.cc) = 1394b3ec7961bd5455ba8d9d22f10c3c24af4d04
