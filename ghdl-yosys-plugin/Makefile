@@ -22,7 +22,11 @@ USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=	yosys-[0-9]*:../../wip/yosys-dev
 
-DEPENDS+=	ghdl-dev-5.*:../../wip/ghdl-dev
-DEPENDS+=	gcc10-aux-10.*:../../lang/gcc10-aux
+DEPENDS+=	ghdl-4.1.*:../../wip/ghdl-dev
 
 .include "../../mk/bsd.pkg.mk"
+#
+# gcc6-aux dependency is not met on Linux. Hence we use native gnat on Linux
+.if ${OPSYS} != "Linux"
+DEPENDS+=	gcc10-aux-10.*:../../lang/gcc10-aux
+.endif
