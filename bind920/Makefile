@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.20.4
+BIND_VERSION=	9.20.5
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
@@ -32,6 +32,9 @@ MAKE_ENV+=		WRKDIR=${WRKDIR} PREFIX=${PREFIX}
 .if ${OPSYS} == "Linux" && !exists(/usr/include/sys/capability.h)
 CONFIGURE_ARGS+=		--disable-linux-caps
 .endif
+
+# Compile with debug info
+CFLAGS+=	-g
 
 CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
