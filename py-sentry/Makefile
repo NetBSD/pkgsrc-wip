@@ -60,8 +60,8 @@ DEPENDS+=	${PYPKGPREFIX}-statsd>=3.2.2:../../wip/py-statsd
 DEPENDS+=	${PYPKGPREFIX}-structlog>=18.1.0:../../sysutils/py-structlog
 DEPENDS+=	${PYPKGPREFIX}-symbolic>=5.0.1:../../wip/py-symbolic
 DEPENDS+=	${PYPKGPREFIX}-test-django>=3.1.2:../../www/py-test-django
-DEPENDS+=	${PYPKGPREFIX}-test-html>=1.17.0:../../wip/py-test-html
-DEPENDS+=	${PYPKGPREFIX}-test-metadata>=1.7.0:../../wip/py-test-metadata
+DEPENDS+=	${PYPKGPREFIX}-test-html>=1.17.0:../../devel/py-test-html
+DEPENDS+=	${PYPKGPREFIX}-test-metadata>=1.7.0:../../devel/py-test-metadata
 DEPENDS+=	${PYPKGPREFIX}-test>=3.5.0:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-toronado>=0.0.11:../../wip/py-toronado
 DEPENDS+=	${PYPKGPREFIX}-u2flib-server>=5.0.0:../../wip/py-u2flib-server
