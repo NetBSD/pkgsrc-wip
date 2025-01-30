@@ -412,6 +412,7 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calypso-git
+SUBDIR+=	camlp5
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
