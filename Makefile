@@ -3847,10 +3847,7 @@ SUBDIR+=	py-github3.py
 SUBDIR+=	py-glespy
 SUBDIR+=	py-glom
 SUBDIR+=	py-gmane
-# $NetBSD$
-
-COMMENT=	Work-in-progress packages
-
+SUBDIR+=	py-gmqtt
 SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
