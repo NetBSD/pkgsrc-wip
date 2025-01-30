@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (gmqtt-0.7.0.tar.gz) = f5a50d447bf72e9b30f5cd1372bc1df8b8f4d7b042e637bf1c3c98cb0d8c2ebc
+SHA512 (gmqtt-0.7.0.tar.gz) = 14b2b7eb4cf95684c689fe4b2a08d1e340fa80c9ae3bcde8e6babd6018d52823e54a273763f8ad01b11817f1650c411e6a4f641293feade0944291bc014b60f3
+Size (gmqtt-0.7.0.tar.gz) = 34838 bytes
