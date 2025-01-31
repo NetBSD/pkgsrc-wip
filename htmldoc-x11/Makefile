@@ -5,7 +5,7 @@ PKGNAME=	htmldoc-x11-${VERSION}
 
 CONFIGURE_ARGS+=	--with-gui
 
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../wip/htmldoc/Makefile.common"
 

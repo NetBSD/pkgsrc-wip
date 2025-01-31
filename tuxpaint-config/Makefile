@@ -23,7 +23,7 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../textproc/libunibreak/buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 

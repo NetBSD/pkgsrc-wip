@@ -87,6 +87,6 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 # FLTK must be compiled with multithreading support
 # FLTK version 1.4 is supported (should be compiled with pango support)
 #.include "../../x11/fltk13/buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

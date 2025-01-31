@@ -30,7 +30,7 @@ do-install:
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .include "../../wip/edelib/buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 

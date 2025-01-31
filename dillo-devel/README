@@ -1,4 +1,4 @@
-This package is patched to use wip/fltk14-devel.
+This package is patched to use FLTK 1.4.
 
 If FLTK 1.4 is compiled with the pango option, glyph substitution is supported
 on X11 platform.

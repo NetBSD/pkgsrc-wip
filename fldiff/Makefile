@@ -18,5 +18,5 @@ MAKE_FLAGS+=	BUILDROOT=${DESTDIR:Q}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

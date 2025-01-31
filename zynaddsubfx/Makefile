@@ -51,7 +51,7 @@ post-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/mxml/buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

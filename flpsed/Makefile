@@ -20,7 +20,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/flpsed
 
 # FLTK version 1.4 is supported too
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

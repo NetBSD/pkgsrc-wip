@@ -31,6 +31,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/SpiralLoops ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/oss.buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

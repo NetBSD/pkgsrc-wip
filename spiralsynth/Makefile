@@ -30,6 +30,6 @@ do-install:
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

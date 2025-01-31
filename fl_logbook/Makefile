@@ -20,6 +20,6 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fl_logbook ${DESTDIR}${PREFIX}/bin
 
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../..x11/fltk/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
