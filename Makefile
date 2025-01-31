@@ -6093,6 +6093,7 @@ SUBDIR+=	yamlfmt
 SUBDIR+=	yap
 SUBDIR+=	yaupspe
 SUBDIR+=	yder
+SUBDIR+=	yed
 SUBDIR+=	yersinia
 SUBDIR+=	yet-another-cloudwatch-exporter
 SUBDIR+=	yi
