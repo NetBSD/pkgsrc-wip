@@ -711,7 +711,6 @@ SUBDIR+=	diff-pdf
 SUBDIR+=	diffsitter-git
 SUBDIR+=	digestif
 SUBDIR+=	digitemp
-SUBDIR+=	dillo-devel
 SUBDIR+=	ding
 SUBDIR+=	dionysus
 SUBDIR+=	discident-glib
