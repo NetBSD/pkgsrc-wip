@@ -1,0 +1,5 @@
+This package provides the FLTK 1.1 API (no longer maintained).
+New applications should use the FLTK 1.4 API.
+
+This package is intended for potential users of the former package x11/fltk
+with FLTK 1.1.
