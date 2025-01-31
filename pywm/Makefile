@@ -17,5 +17,5 @@ PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # py-pyrex
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../wip/fltk11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

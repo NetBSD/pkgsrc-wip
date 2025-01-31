@@ -33,8 +33,8 @@ USE_LANGUAGES=	c c++ fortran
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 
-### x11/fltk
-.include "../../x11/fltk/buildlink3.mk"
+### x11/fltk (is now FLTK 1.4, switched to old FLTK 1.1)
+.include "../../wip/fltk11/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

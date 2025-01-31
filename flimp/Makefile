@@ -19,5 +19,5 @@ DEPENDS+=	pnmcurve-[0-9]*:../../wip/pnmcurve
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../wip/fltk11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

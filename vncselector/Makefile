@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../wip/fltk11/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .if ${X11_TYPE} == "native"
 .include "../../mk/x11.buildlink3.mk"
