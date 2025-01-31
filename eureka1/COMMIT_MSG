@@ -1,0 +1,3 @@
+Not for import. pkgsrc has the 2.x branch in games/eureka.
+
+This package is intended for older systems without C++17.
