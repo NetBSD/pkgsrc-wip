@@ -533,12 +533,12 @@ do-build:
 	${SETENV} ${MAKE_ENV}						\
 	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then		\
 		unset DESTDIR;						\
-		${TOOL_PYTHONBIN} ./x.py -v				\
+		${PYTHONBIN} ./x.py 					\
 		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N};			\
 	else								\
-		${TOOL_PYTHONBIN} ./x.py -v				\
+		${PYTHONBIN} ./x.py					\
 		    ${BUILD_TARGET} --stage 2 -j ${_MAKE_JOBS_N} &&	\
-		${TOOL_PYTHONBIN} ./x.py -v				\
+		${PYTHONBIN} ./x.py					\
 		    doc --stage 2 -j ${_MAKE_JOBS_N};			\
 	fi"
 
@@ -546,7 +546,7 @@ do-test:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV}						\
-		${TOOL_PYTHONBIN} ./x.py -v test -j ${_MAKE_JOBS_N}
+		${PYTHONBIN} ./x.py test -j ${_MAKE_JOBS_N}
 
 PATCH_BINARIES+=	bin/cargo
 PATCH_BINARIES+=	bin/cargo-clippy
@@ -561,7 +561,7 @@ do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
-		${TOOL_PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N};	\
+		${PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N};	\
 	for bin in ${PATCH_BINARIES}; do				\
 		f=${DESTDIR}${PREFIX}/$${bin};				\
 		if [ -f $$f ]; then					\
