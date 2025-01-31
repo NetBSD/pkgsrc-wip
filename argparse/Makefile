@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	argparse-3.0
+DISTNAME=	argparse-3.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=p-ranav/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
