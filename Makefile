@@ -5929,7 +5929,6 @@ SUBDIR+=	wise3
 SUBDIR+=	witchblast
 SUBDIR+=	with-editor
 SUBDIR+=	wjelement
-SUBDIR+=	wkhtmltopdf
 SUBDIR+=	wl-git
 SUBDIR+=	wl-snapshot
 SUBDIR+=	wla-dx
