@@ -34,7 +34,8 @@ META_PACKAGE=	yes
 ## PYTHON
 
 # HA 2024.4 requires 3.12
-PYTHON_VERSIONS_ACCEPTED=312
+# HA 2025.2 requires 3.13
+PYTHON_VERSIONS_ACCEPTED=313
 .include "../../lang/python/pyversion.mk"
 
 # Building HA in a venv requires virtualenv
