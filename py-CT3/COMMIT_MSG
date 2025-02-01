@@ -1,0 +1,6 @@
+textproc/py-CT3: Add version 3.4.0
+
+Cheetah is a Python-powered template engine and code-generator.
+It is similar to the Jakarta project's Velocity.
+
+This is CT3, which is the currently maintained version of Cheetah3.
