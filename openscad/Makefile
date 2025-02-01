@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.103 2023/11/12 13:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2024/12/29 15:09:40 adam Exp $
 
-VERSION=	2021.01
+VERSION=	2021.02		#just greater than 2021.01
 DISTNAME=	openscad-${VERSION}
-PKGREVISION=	27
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscad/}
-GITHUB_TAG=	openscad-${VERSION}
+GITHUB_TAG=   	0c8ac0e6c5c84ab21b6392f1e82458cd03b62966
 
 MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	https://www.openscad.org/
@@ -16,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison gettext pkg-config itstool
 USE_LIBTOOL=	yes
 
-WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
+WRKSRC= 	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 
 CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
