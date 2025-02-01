@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/weectl
-bin/weewxd
+bin/weectl-${PYVERSSUFFIX}
+bin/weewxd-${PYVERSSUFFIX}
 ${PYSITELIB}/schemas/__init__.py
 ${PYSITELIB}/schemas/__init__.pyc
 ${PYSITELIB}/schemas/__init__.pyo
@@ -476,5 +476,3 @@ ${PYSITELIB}/weewx_data/weewx.conf
 ${PYSITELIB}/weewxd.py
 ${PYSITELIB}/weewxd.pyc
 ${PYSITELIB}/weewxd.pyo
-share/doc/weewx/LICENSE.txt
-share/doc/weewx/README.md

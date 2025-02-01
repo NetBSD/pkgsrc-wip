@@ -16,7 +16,8 @@ USE_LANGUAGES=
 # weewx uses sqlite3
 .include "../../lang/python/batteries-included.mk"
 
-TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
 
 # pyproject.toml, in order:
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj
@@ -36,14 +37,15 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/weewx_data/util/logwatch/scripts/services/
 DOCDIR=		${PREFIX}/share/doc/weewx
 
 INSTALLATION_DIRS=	${DOCDIR}
-post-install:
-	${MV} ${DESTDIR}/${PREFIX}/${PYSITELIB}/LICENSE.txt ${DESTDIR}${DOCDIR}
-	${MV} ${DESTDIR}/${PREFIX}/${PYSITELIB}/README.md ${DESTDIR}${DOCDIR}
 
 # \todo Grasp and perhaps deal with config file generation/update.
 
 # \todo Consider how to manage edits to skins, which are sort of code
 # and sort of config files.
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} weectl weectl-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} weewxd weewxd-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
