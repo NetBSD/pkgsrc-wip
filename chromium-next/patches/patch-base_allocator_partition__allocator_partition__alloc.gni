@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-01-07 19:49:01.000000000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-01-27 17:37:37.000000000 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
 @@ -38,7 +38,7 @@ if (is_nacl) {
  use_large_empty_slot_span_ring = true

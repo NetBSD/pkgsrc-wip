@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc
 @@ -854,7 +854,7 @@ const gfx::GpuMemoryBufferId& StructTrai
    return input.id;

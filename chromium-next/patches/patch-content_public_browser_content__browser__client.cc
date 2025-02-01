@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/content_browser_client.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- content/public/browser/content_browser_client.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ content/public/browser/content_browser_client.cc
 @@ -1355,7 +1355,7 @@ bool ContentBrowserClient::ShouldRunOutO
  // that can be adequately sandboxed.

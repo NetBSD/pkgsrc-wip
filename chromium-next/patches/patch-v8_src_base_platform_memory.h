@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/memory.h.orig	2025-01-07 19:49:01.000000000 +0000
+--- v8/src/base/platform/memory.h.orig	2025-01-27 17:37:37.000000000 +0000
 +++ v8/src/base/platform/memory.h
 @@ -21,13 +21,13 @@
  #include <malloc/malloc.h>

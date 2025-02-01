@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2025-01-07 19:49:01.000000000 +0000
+--- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
 +++ tools/perf/chrome_telemetry_build/BUILD.gn
 @@ -47,7 +47,7 @@ group("telemetry_chrome_test") {
      data_deps += [ "//chrome:reorder_imports" ]

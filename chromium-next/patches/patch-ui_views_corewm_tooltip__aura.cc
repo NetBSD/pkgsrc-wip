@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/corewm/tooltip_aura.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- ui/views/corewm/tooltip_aura.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ ui/views/corewm/tooltip_aura.cc
 @@ -38,7 +38,7 @@ static constexpr int kTooltipMaxWidth = 
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/printing/printer_query.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- chrome/browser/printing/printer_query.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ chrome/browser/printing/printer_query.cc
 @@ -341,7 +341,7 @@ void PrinterQuery::UpdatePrintSettings(b
      crash_key = std::make_unique<crash_keys::ScopedPrinterInfo>(

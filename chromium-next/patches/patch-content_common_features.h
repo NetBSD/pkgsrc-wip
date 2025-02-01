@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2025-01-07 19:49:01.000000000 +0000
+--- content/common/features.h.orig	2025-01-27 17:37:37.000000000 +0000
 +++ content/common/features.h
 @@ -35,7 +35,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDev
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);

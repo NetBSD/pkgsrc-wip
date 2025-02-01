@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler/BUILD.gn.orig	2025-01-07 19:49:01.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -199,7 +199,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -99,6 +99,15 @@ $NetBSD$
        ]
  
        cflags_cc += [
+@@ -2306,7 +2310,7 @@ config("export_dynamic") {
+ # 2. Remove the thin_archive config, so that the .a file actually contains all
+ #    .o files, instead of just references to .o files in the build directoy
+ config("thin_archive") {
+-  if ((is_apple && use_lld) || (is_linux && !is_clang)) {
++  if ((is_apple && use_lld) || (is_linux && !is_clang) || (is_netbsd)) {
+     # The macOS and iOS linker ld64.ldd doesn't support thin archive without
+     # symbol table, gcc on linux also throws the error `archive has no index`.
+     arflags = [
 @@ -2761,7 +2765,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.

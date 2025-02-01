@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -159,7 +159,7 @@ VideoEncodeAccelerator::Config SetUpVeaC
      config.input_format = PIXEL_FORMAT_I420;

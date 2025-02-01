@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/enclave_manager.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- chrome/browser/webauthn/enclave_manager.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ chrome/browser/webauthn/enclave_manager.cc
 @@ -693,7 +693,7 @@ base::flat_set<std::string> GetGaiaIDs(
  

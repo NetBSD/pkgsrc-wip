@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
 @@ -69,13 +69,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"

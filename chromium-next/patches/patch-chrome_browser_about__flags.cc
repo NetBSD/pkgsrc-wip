@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/about_flags.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- chrome/browser/about_flags.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ chrome/browser/about_flags.cc
 @@ -249,7 +249,7 @@
  #include "ui/ui_features.h"

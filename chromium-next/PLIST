@@ -5,8 +5,6 @@ lib/chromium/chrome
 lib/chromium/chrome_100_percent.pak
 lib/chromium/chrome_200_percent.pak
 lib/chromium/headless_command_resources.pak
-lib/chromium/headless_lib_data.pak
-lib/chromium/headless_lib_strings.pak
 lib/chromium/libEGL.so
 lib/chromium/libGLESv2.so
 lib/chromium/libVkICD_mock_icd.so

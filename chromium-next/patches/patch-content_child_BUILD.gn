@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/BUILD.gn.orig	2025-01-07 19:49:01.000000000 +0000
+--- content/child/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
 +++ content/child/BUILD.gn
 @@ -131,6 +131,13 @@ target(link_target_type, "child") {
      ]

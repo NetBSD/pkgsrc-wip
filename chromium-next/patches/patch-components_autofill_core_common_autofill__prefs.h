@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.h.orig	2025-01-07 19:49:01.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.h.orig	2025-01-27 17:37:37.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.h
 @@ -73,7 +73,7 @@ inline constexpr char kAutofillPaymentCv
  inline constexpr char kAutofillPaymentCardBenefits[] =

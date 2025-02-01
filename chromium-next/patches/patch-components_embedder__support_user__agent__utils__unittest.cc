@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
 @@ -71,7 +71,7 @@ const char kDesktop[] =
      "X11; CrOS x86_64 14541.0.0"

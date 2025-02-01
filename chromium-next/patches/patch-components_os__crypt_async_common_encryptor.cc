@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/async/common/encryptor.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- components/os_crypt/async/common/encryptor.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ components/os_crypt/async/common/encryptor.cc
 @@ -277,7 +277,7 @@ std::optional<std::string> Encryptor::De
      // or not encryption worked or not, and certainly not advisable to recommend

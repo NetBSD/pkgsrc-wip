@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
 @@ -314,7 +314,7 @@
  #include "components/user_notes/user_notes_prefs.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_netbsd.cc.orig	2025-01-20 18:01:27.808948085 +0000
+--- base/system/sys_info_netbsd.cc.orig	2025-02-01 17:17:21.317906002 +0000
 +++ base/system/sys_info_netbsd.cc
 @@ -0,0 +1,88 @@
 +// Copyright 2011 The Chromium Authors

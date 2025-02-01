@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			132.0.6834.83
+VERSION=			132.0.6834.159
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -52,10 +52,17 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-#ONLY_FOR_PLATFORM+=		*-*-arm # not yet
-#ONLY_FOR_PLATFORM+=		*-*-aarch64 # not yet
-#ONLY_FOR_PLATFORM+=		*-*-i386 # not yet
-ONLY_FOR_PLATFORM+=		*-*-x86_64
+# Supported platforms, synced with rust/platform.mk
+.for c_arch in x86_64 i386 aarch64
+ONLY_FOR_PLATFORM+=		NetBSD-1[0-9].*-${c_arch}
+ONLY_FOR_PLATFORM+=		Linux-*-${c_arch}
+.endfor
+
+.for c_arch in x86_64 aarch64
+ONLY_FOR_PLATFORM+=		Darwin-*-${c_arch}
+.endfor
+
+ONLY_FOR_PLATFORM+=		FreeBSD-*-x86_64
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -129,7 +136,7 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
-GN_ARGS+=	chrome_pgo_phase=0
+#GN_ARGS+=	chrome_pgo_phase=0
 GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
 GN_ARGS+=	enable_backup_ref_ptr_support=false
@@ -313,7 +320,6 @@ do-install:
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
-.include "../../devel/libatomic/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
@@ -336,7 +342,8 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../wip/clang/buildlink3.mk"
 .include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/rust/rust.mk"
+#.include "../../lang/rust/rust.mk"
+.include "../../wip/rust182/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
@@ -374,4 +381,5 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

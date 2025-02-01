@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc
 @@ -71,7 +71,11 @@ void XSLTProcessor::GenericErrorFunc(voi
    // It would be nice to do something with this error message.

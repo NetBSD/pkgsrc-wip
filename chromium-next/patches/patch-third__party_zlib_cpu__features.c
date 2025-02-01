@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/cpu_features.c.orig	2025-01-07 19:49:01.000000000 +0000
+--- third_party/zlib/cpu_features.c.orig	2025-01-27 17:37:37.000000000 +0000
 +++ third_party/zlib/cpu_features.c
 @@ -39,7 +39,8 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -28,6 +28,8 @@
  

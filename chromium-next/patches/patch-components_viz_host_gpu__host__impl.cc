@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/host/gpu_host_impl.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- components/viz/host/gpu_host_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ components/viz/host/gpu_host_impl.cc
 @@ -139,7 +139,7 @@ GpuHostImpl::GpuHostImpl(Delegate* deleg
  // overlays are not currently supported on Linux, elide the call here at this

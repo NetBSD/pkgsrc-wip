@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/sockaddr_util_posix.cc.orig	2025-01-07 19:49:01.000000000 +0000
+--- net/base/sockaddr_util_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
 +++ net/base/sockaddr_util_posix.cc
 @@ -46,7 +46,8 @@ bool FillUnixAddress(const std::string& 
      return true;
