@@ -10,6 +10,9 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://cheetahtemplate.org/
 COMMENT=	Template engine and code generation tool
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 CONFLICTS+=	Cheetah-[0-9]*
 CONFLICTS+=	py-cheetah3-[0-9]*
 
