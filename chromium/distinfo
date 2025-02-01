@@ -146,7 +146,7 @@ SHA1 (patch-build_config_compiler_BUILD.gn) = cb0c731c3287995fc9557f5b2023ca2bec
 SHA1 (patch-build_config_linux_BUILD.gn) = cb87b778e7eaa6d9f3f5b53502c62824e4688d3d
 SHA1 (patch-build_config_linux_pkg-config.py) = d41205c0ccfa08be9b8fe879d7234e82d9752a23
 SHA1 (patch-build_config_ozone.gni) = 5ae4f8c236c2e9b505d2d438e0a69328e73391e0
-SHA1 (patch-build_config_rust.gni) = fa4e96a73586829e160d116b3b19e3fbe3805755
+SHA1 (patch-build_config_rust.gni) = ce41c836ba624903d24a34abe984e95a503f0d78
 SHA1 (patch-build_config_v8__target__cpu.gni) = f5a37fa2170acbb0e857394bfdbdfe713ce3f228
 SHA1 (patch-build_detect__host__arch.py) = 42b3d2f5edf58a3663ca72ff7309352b4af8d7be
 SHA1 (patch-build_gn__run__binary.py) = 752aa7c70696cd05bae26d82929b07a2086b0504
@@ -668,6 +668,7 @@ SHA1 (patch-content_browser_ppapi__plugin__process__host__receiver__bindings.cc)
 SHA1 (patch-content_browser_renderer__host_delegated__frame__host.cc) = f82807c5d354852860c90075cb01b45e82e99600
 SHA1 (patch-content_browser_renderer__host_media_service__video__capture__device__launcher.cc) = c25b3137528cad4f5a7561412d7a5fdbd35b173f
 SHA1 (patch-content_browser_renderer__host_pepper_pepper__file__io__host.cc) = 4db24342c9c322e120ff060bd9a1c5fec9af2def
+SHA1 (patch-content_browser_renderer__host_render__process__host__impl.cc) = 0f57cdeb5b90412755ff17e22e4bc1fda3d0f686
 SHA1 (patch-content_browser_renderer__host_render__process__host__impl.h) = c49458aa4c77ad19a1a54df586dbc2d969ef9fb1
 SHA1 (patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc) = b7184af29baca7e84b096b1ed73032f5192e57b3
 SHA1 (patch-content_browser_renderer__host_render__view__host__impl.cc) = dad13b383b47eab092f191290b16400db25a275d

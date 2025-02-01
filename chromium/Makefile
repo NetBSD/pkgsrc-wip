@@ -2,6 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			131.0.6778.204
+PKGREVISION=			1
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -54,13 +55,17 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-SUPPORTED_OS=			NetBSD-1[0-9].* FreeBSD-*
-SUPPORTED_OS+=			OpenBSD-* Linux-* Darwin-*
-.for os in ${SUPPORTED_OS}
-ONLY_FOR_PLATFORM+=		${os}-x86_64
-ONLY_FOR_PLATFORM+=		${os}-aarch64
-ONLY_FOR_PLATFORM+=		${os}-i386
+# Supported platforms, synced with rust/platform.mk
+.for c_arch in x86_64 i386 aarch64
+ONLY_FOR_PLATFORM+=		NetBSD-1[0-9].*-${c_arch}
+ONLY_FOR_PLATFORM+=		Linux-*-${c_arch}
 .endfor
+
+.for c_arch in x86_64 aarch64
+ONLY_FOR_PLATFORM+=		Darwin-*-${c_arch}
+.endfor
+
+ONLY_FOR_PLATFORM+=		FreeBSD-*-x86_64
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -314,7 +319,6 @@ do-install:
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
-.include "../../devel/libatomic/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
@@ -373,4 +377,5 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
