@@ -1,13 +1,10 @@
 # $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
-DISTNAME=	weewx-4.10.2
+DISTNAME=	weewx-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
-
-# See also
-# https://reviews.freebsd.org/file/data/wxlggqqqglli6l66usac/PHID-FILE-kucs3bj4stbb6iw4zpy5/D6324.diff
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://weewx.com/
@@ -16,49 +13,29 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Substituting pkgsrc paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	setup.cfg
-SUBST_VARS.paths=	PREFIX
-
-# weewx might work with 27, but it causes pain with pkgsrc deps so just don't
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # weewx uses sqlite3
 .include "../../lang/python/batteries-included.mk"
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.0.0:../../devel/py-cheetah3
-DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
+# pyproject.toml, in order:
+DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj
+DEPENDS+=	${PYPKGPREFIX}-CT3>=3.1:../../wip/py-CT3 # textproc
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=5.2:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.6.0:../../math/py-ephem
+DEPENDS+=	${PYPKGPREFIX}-pymysql>=1.0:../../databases/py-pymysql
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.0:../../devel/py-usb
+DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.2:../../devel/py-usb
 
-REPLACE_PYTHON+=		util/i18n/i18n-report
+REPLACE_PYTHON+=		src/weewx_data/util/i18n/i18n-report
 
-# \todo Decide whether to depend/patch, omit, or continue to ignore.
-CHECK_INTERPRETER_SKIP+=	weewx/util/init.d/weewx.lsb
-CHECK_INTERPRETER_SKIP+=	weewx/util/init.d/weewx.suse
-CHECK_INTERPRETER_SKIP+=	weewx/util/logwatch/scripts/services/weewx
+# Ignore perl rather than depend on it.  For now, don't even consider
+# a split package.
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/weewx_data/util/logwatch/scripts/services/weewx
 
-# Move config file to an example-type path.
-# \todo Consider patching setup.py instead.
-post-install:
-	mv ${DESTDIR}/${PREFIX}/weewx/weewx.conf ${DESTDIR}/${PREFIX}/weewx/weewx.conf.DIST
-
-CONF_FILES+=	${PREFIX}/weewx/weewx.conf.DIST ${PREFIX}/weewx/weewx.conf
-
-# weewx has its own scheme for updating the config file, and it is
-# likely a lot of work to make a package that behaves correctly,
-# separating out the code that runs at distutils install time into
-# installation and configuration update.
-
-# \todo Consider somehow integrating weewx's config file update scheme.
+# \todo Grasp and perhaps deal with config file generation/update.
 
 # \todo Consider how to manage edits to skins, which are sort of code
 # and sort of config files.
 
 .include "../../lang/python/application.mk"
-.include "../../wip/python/distutils.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
