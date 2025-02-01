@@ -16,6 +16,8 @@ USE_LANGUAGES=
 # weewx uses sqlite3
 .include "../../lang/python/batteries-included.mk"
 
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
+
 # pyproject.toml, in order:
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-CT3>=3.1:../../wip/py-CT3 # textproc
@@ -30,6 +32,13 @@ REPLACE_PYTHON+=		src/weewx_data/util/i18n/i18n-report
 # Ignore perl rather than depend on it.  For now, don't even consider
 # a split package.
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/weewx_data/util/logwatch/scripts/services/weewx
+
+DOCDIR=		${PREFIX}/share/doc/weewx
+
+INSTALLATION_DIRS=	${DOCDIR}
+post-install:
+	${MV} ${DESTDIR}/${PREFIX}/${PYSITELIB}/LICENSE.txt ${DESTDIR}${DOCDIR}
+	${MV} ${DESTDIR}/${PREFIX}/${PYSITELIB}/README.md ${DESTDIR}${DOCDIR}
 
 # \todo Grasp and perhaps deal with config file generation/update.
 

@@ -476,3 +476,5 @@ ${PYSITELIB}/weewx_data/weewx.conf
 ${PYSITELIB}/weewxd.py
 ${PYSITELIB}/weewxd.pyc
 ${PYSITELIB}/weewxd.pyo
+share/doc/weewx/LICENSE.txt
+share/doc/weewx/README.md
