@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.15 2024/04/28 08:09:07 mef Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:04:14 nia Exp $
 
-BLAKE2s (openscad-2021.02-0c8ac0e6c5c84ab21b6392f1e82458cd03b62966.tar.gz) = f0c778a8cd1b7f71a736407815913eae94fa5dc15e21899a1cd62c49d79a30d3
-SHA512 (openscad-2021.02-0c8ac0e6c5c84ab21b6392f1e82458cd03b62966.tar.gz) = 0ff87f01e7c254ae1bd09ce1f7a36f1cda72b6f7b7f2575279ae70b3d8ff2908c03d8d12da991fd8a6075cd6495b6f0edee7126ae5ba729cf24b58cee51172d1
-Size (openscad-2021.02-0c8ac0e6c5c84ab21b6392f1e82458cd03b62966.tar.gz) = 25552205 bytes
-SHA1 (patch-src_geometry_cgal_cgalutils-project.c) = f13ced93f5766e61f237f3d32531f0b434468c87
+BLAKE2s (openscad-2021.01.tar.gz) = dc3d5a762d8b334fcdefc41d3c15a3b01023ce93ed4b2bae2f9d13c5100c7918
+SHA512 (openscad-2021.01.tar.gz) = 2dac2d9c2fdbb720bc2e56f66849a75abe10ee646f918c53dadf33d57a30f3c605a536483bd97410d715309064ac99330ce15657440e4d66b426635dfab6a32b
+Size (openscad-2021.01.tar.gz) = 15656800 bytes
+SHA1 (patch-features_qscintilla2-priv.prf) = ca5d5735d091441d6daf7535802f5ba7362c808c
+SHA1 (patch-openscad.pro) = 55e97368d2fdd77c8a4773699cfffdaccd65d63f
+SHA1 (patch-scripts_translation-update.sh) = 24929df617e450558934e46b1711f241945da7eb
+SHA1 (patch-src_FileModule.cc) = cfaedae9342de7ce70888f6d8c224e6cd774cdc1
+SHA1 (patch-src_cgalutils-polyhedron.cc) = b775822c0cb921a196a7dd4356f19e8f30631bbf
+SHA1 (patch-src_cgalutils-tess.cc) = b6571d63159e222fbcbfc89bc05984264304bfb7
+SHA1 (patch-src_colormap.h) = d218a17ac71e0178d32b79723b532c9f098bc038
+SHA1 (patch-src_openscad.cc) = ec2898bf5236ee5be2150cc74f1615c4dd0c2ae0
+SHA1 (patch-src_scintillaeditor.h) = 47d2cde8d7349a23770c549e5df9b219678825e9
