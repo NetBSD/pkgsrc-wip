@@ -8,6 +8,10 @@ HOMEPAGE=	https://www.home-assistant.io/
 COMMENT=	Meta-package for prereqs for Home Assistant
 LICENSE=	modified-bsd
 
+# This package is intended to be usable with the most recent stable
+# branch; modifications should either be tested in that environment or
+# sent to ${MAINTAINER}.
+
 META_PACKAGE=	yes
 
 # This package is currently tuned for and tested on NetBSD 9 amd64 and
@@ -25,7 +29,10 @@ META_PACKAGE=	yes
 
 # Despite depending on programs as build tools, record a full
 # dependency so that "pkgin ar" after installing this package will not
-# remove e.g. the rust compiler.
+# remove e.g. the rust compiler.  The point is that while that's a
+# build-time dependency in pkgsrc, it's a run-time dependency for this
+# package, because the user will do builds when this package is
+# installed.
 
 # The vast majority of HA components are just python (perhaps a chain
 # of dependencies) and build straightforwardly with "bin/pip install";
@@ -43,18 +50,22 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 ## BUILD TOOLS
 
-# Builds in the venv will use cmake, pkg-config, and invoke rust and
-# gfortran.									      
-# NB: One must add gfortran's bindir to the PATH for the venv build.
+# Builds in the venv will use cmake, pkg-config, and invoke gcc,
+# fortran and rust.
+# NB: One must add gcc/gfortran's bindir to the PATH for the venv build.
 DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 
 # GCC
 # \todo Depend on gcc10, because numpy needs it, and venv build
-# scripts will thus require it.
+# scripts will thus require it.  For now, requiring gfortran 10 adds
+# the dependency.
 
 # FORTRAN
 USE_LANGUAGES+=	fortran77
+GFORTRAN_VERSION=	10
+# \todo Revisit the version, so e.g. the version matching native gcc
+# will be used on NetBSD-current.
 .include "../../mk/compiler/gfortran.mk"
 
 RUST_RUNTIME=	yes		# record a dependency

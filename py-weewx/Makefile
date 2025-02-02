@@ -11,6 +11,10 @@ HOMEPAGE=	https://weewx.com/
 COMMENT=	Python-powered template engine and code-generator
 LICENSE=	gnu-gpl-v3
 
+# This package is intended to be usable with the most recent stable
+# branch; modifications should either be tested in that environment or
+# sent to ${MAINTAINER}.
+
 USE_LANGUAGES=
 
 # weewx uses sqlite3
