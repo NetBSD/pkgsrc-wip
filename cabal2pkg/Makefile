@@ -12,6 +12,13 @@ HOMEPAGE=	https://github.com/depressed-pho/cabal2pkg
 COMMENT=	Tool to automate importing/updating Haskell packages in pkgsrc
 LICENSE=	unlicense
 
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	Cabal	\
+	Cabal-syntax	\
+	Diff	\
+	containers	\
+	extra
+
 # cabal2pkg should not depend on shared Haskell libraries, because it needs
 # to be usable even while the tree of Haskell packages in pkgsrc is broken,
 # i.e. while we are updating the tree.

@@ -1,0 +1,20 @@
+$NetBSD$
+
+Fix build with GHC 9.10
+
+--- cabal2pkg.cabal.orig	2025-02-02 07:32:42.492143593 +0000
++++ cabal2pkg.cabal
+@@ -1,4 +1,4 @@
+-cabal-version:      3.4
++cabal-version:      3.12
+ name:               cabal2pkg
+ version:            0.1.1
+ synopsis:           A tool to automate importing/updating Haskell packages in pkgsrc
+@@ -118,6 +118,7 @@ executable cabal2pkg
+       , network-uri          ^>= 2.6.4
+       , optparse-applicative ^>= 0.18.1
+       , ordered-containers   ^>= 0.2.3
++      , os-string            ^>= 2.0.2
+       , prettyprinter        ^>= 1.7.1
+       , prettyprinter-ansi-terminal ^>= 1.1.3
+       , pretty-show          ^>= 1.10

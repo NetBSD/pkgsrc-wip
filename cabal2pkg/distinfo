@@ -3,3 +3,5 @@ $NetBSD$
 BLAKE2s (cabal2pkg-0.1.1.tar.gz) = 7bd5cf4f91134301df766b7296e88db6ad3fb9056ca411b66591c341143fd6ca
 SHA512 (cabal2pkg-0.1.1.tar.gz) = b1208d8adf3cabd8e0be965f469ac289a6d0cbb3f65c7a31dd05a2dc4b5f2ddb938e397ee45a6c0f8dacf9f2956f9a4a7c50bf88db6d3132ae0d021ec4298603
 Size (cabal2pkg-0.1.1.tar.gz) = 67842 bytes
+SHA1 (patch-cabal2pkg.cabal) = b2d8cb1344dd82c38b93cd53c58d95214f40f1cc
+SHA1 (patch-src_System_OsString_Posix_Instances.hs) = 71f3c9b663a444301baa20ffd333f27daf7128d6
