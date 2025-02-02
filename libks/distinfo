@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (libks-2.0.6.tar.gz) = cce1f2f22586443fc70fcb6e1f97ffc86d5a321b
+RMD160 (libks-2.0.6.tar.gz) = 3c9bcf56c4c2c762d8d094d0a7a3726436523e2a
+Size (libks-2.0.6.tar.gz) = 238880 bytes
+SHA1 (patch-CMakeLists.txt) = d019b9c8f46a01a87394c5aa3f4eed071d14be25
+SHA1 (patch-cmake_ksutil.cmake) = e4ab71a407582c954a9f929e4e6d6192831b0d4e
+SHA1 (patch-src_ks__thread.c) = 6180a7e02f68377ba4fd3e287ffffe7a35063f9d

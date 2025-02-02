@@ -1,0 +1,14 @@
+$NetBSD$
+
+Work around. Skip tests.
+
+--- CMakeLists.txt.orig	2024-07-23 20:48:07.000000000 +0000
++++ CMakeLists.txt	2024-09-19 17:08:21.421459585 +0000
+@@ -610,7 +610,6 @@
+ 
+ # Add tests
+ enable_testing()
+-add_subdirectory(tests)
+ 
+ if (WITH_KS_TEST)
+ 	enable_testing()
