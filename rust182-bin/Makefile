@@ -183,14 +183,14 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 
 # Illumos:
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	x86_64-unknown-illumos
-#DN:=		${DISTNAME}
-#EXTRACT_SUFX=	.tar.gz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
-#.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	x86_64-unknown-illumos
+DN:=		${DISTNAME}
+EXTRACT_SUFX=	.tar.gz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+.endif
 
 
 # Binary still extracts to plain non-nb'ed directory
@@ -210,12 +210,20 @@ do-install:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for bin in clippy-driver miri rls rust-analyzer rustc rustdoc
+.  for bin in cargo-clippy clippy-driver miri rls rust-analyzer rustc rustdoc rustfmt
 	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
 		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
 		    ${DESTDIR}${PREFIX}/bin/${bin};			\
+	done
+.  endfor
+.  for libexec in rust-analyzer-proc-macro-srv
+	otool -XL ${DESTDIR}${PREFIX}/libexec/${libexec}		\
+	    | ${GREP} '@rpath' | while read rpath rest; do		\
+		install_name_tool -change $$rpath			\
+		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
+		    ${DESTDIR}${PREFIX}/libexec/${libexec};		\
 	done
 .  endfor
 .  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 	\
