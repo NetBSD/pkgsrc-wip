@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	hut-0.4.0
+DISTNAME=	hut-0.6.0
 CATEGORIES=	devel
-MASTER_SITES=	https://git.sr.ht/~emersion/hut/refs/download/v${PKGVERSION_NOREV}/
+MASTER_SITES=	https://git.sr.ht/~xenrox/hut/refs/download/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://git.sr.ht/~emersion/hut/
+HOMEPAGE=	https://git.sr.ht/~xenrox/hut
 COMMENT=	CLI tool for sr.ht
 LICENSE=	gnu-agpl-v3
 
