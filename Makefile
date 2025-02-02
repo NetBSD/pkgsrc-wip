@@ -5640,7 +5640,6 @@ SUBDIR+=	thepeg
 SUBDIR+=	thunderbird
 SUBDIR+=	thunderbird68-enigmail
 SUBDIR+=	ti99sim
-SUBDIR+=	tigervnc
 SUBDIR+=	tigervnc113
 SUBDIR+=	tilda
 SUBDIR+=	tilix
