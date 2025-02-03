@@ -1,6 +1,6 @@
 $NetBSD: patch-src_bootstrap_src_core_builder.rs,v 1.5 2024/07/27 02:35:24 tnn Exp $
 
-Find external libunwind on Linux.
+Find external libunwind and libLLVM on pkgsrc (not just Linux).
 Use @PREFIX@ in rpath.
 
 Also, follow up on
@@ -30,14 +30,12 @@ which should fix the cross-compile failure.
                      let not_supported = error
                          .lines()
                          .any(|line| line.contains("unsupported crate type `proc-macro`"));
-@@ -2262,6 +2266,11 @@ impl<'a> Builder<'a> {
+@@ -2262,6 +2266,9 @@ impl<'a> Builder<'a> {
              rustdocflags.arg("--cfg=parallel_compiler");
          }
  
-+	// added for pkgsrc libunwind
-+	if target.contains("linux") {
-+		rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
-+	}
++	// added for pkgsrc libunwind and LLVM
++	rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
 +
          Cargo {
              command: cargo,
