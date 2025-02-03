@@ -1,6 +1,6 @@
 $NetBSD$
 
-Find external libunwind on Linux.
+Find external libunwind and libLLVM in pkgsrc (not just Linux).
 Use @PREFIX@ in rpath.
 
 Adapt fix to
@@ -21,14 +21,12 @@ https://github.com/rust-lang/rust/issues/133629
                          .arg("--target")
                          .arg(target.rustc_target_arg())
                          .arg("--print=file-names")
-@@ -1198,6 +1201,11 @@ impl Builder<'_> {
+@@ -1198,6 +1201,9 @@ impl Builder<'_> {
              rustflags.arg("-Zinline-mir-preserve-debug");
          }
  
-+        // added for pkgsrc libunwind
-+        if target.contains("linux") {
-+                rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
-+        }
++        // added for pkgsrc libunwind or external LLVM
++        rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX/lib");
 +
          Cargo {
              command: cargo,
