@@ -338,8 +338,7 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../wip/clang/buildlink3.mk"
 .include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-#.include "../../lang/rust/rust.mk"
-.include "../../wip/rust182/rust.mk"
+.include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
