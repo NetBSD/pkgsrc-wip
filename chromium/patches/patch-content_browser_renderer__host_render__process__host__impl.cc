@@ -1,5 +1,9 @@
 $NetBSD$
 
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
 --- content/browser/renderer_host/render_process_host_impl.cc.orig	2025-02-01 12:26:17.880666258 +0100
 +++ content/browser/renderer_host/render_process_host_impl.cc
 @@ -220,7 +220,7 @@

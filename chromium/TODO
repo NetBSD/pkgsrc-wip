@@ -1,11 +1,10 @@
 To Do:
 
-0) Build on NetBSD-10 amd64, should work on OpenBSD and FreeBSD
+0) Build on NetBSD-10 amd64
 
 1) Audio backends
  a) NetBSD uses sunaudio (https://github.com/kikadf/chromium-audioio)
- b) OpenBSD uses sndio
- c) FreeBSD uses pulseaudio
+ b) FreeBSD uses pulseaudio
 
 If pulseaudio not run, chromium can't start it, so no sound:
 VERBOSE1:pulse_util.cc(261)] Failed to connect to the context. Error: Connection refused

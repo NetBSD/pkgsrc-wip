@@ -16,6 +16,9 @@ DISTFILES+=			${PROFILE_DISTFILES}
 A_VERSION=			130.0
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
 
+# LLVM_MAJOR_VERSION
+LLVM_MV=			18
+
 MAINTAINER=			kikadf.01@gmail.com
 #MAINTAINER=			ryoon@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
@@ -46,8 +49,6 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
-#TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
-#TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
 TOOL_DEPENDS+=			rust-bindgen-[0-9]*:../../devel/rust-bindgen
 
 DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
@@ -56,16 +57,12 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/compiler.mk"
 
 # Supported platforms, synced with rust/platform.mk
-.for c_arch in x86_64 i386 aarch64
+.for c_arch in x86_64 aarch64
 ONLY_FOR_PLATFORM+=		NetBSD-1[0-9].*-${c_arch}
 ONLY_FOR_PLATFORM+=		Linux-*-${c_arch}
-.endfor
-
-.for c_arch in x86_64 aarch64
 ONLY_FOR_PLATFORM+=		Darwin-*-${c_arch}
+ONLY_FOR_PLATFORM+=		FreeBSD-*-${c_arch}
 .endfor
-
-ONLY_FOR_PLATFORM+=		FreeBSD-*-x86_64
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -159,6 +156,7 @@ GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
 GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	use_sndio=false
 GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
 GN_ARGS+=	use_system_harfbuzz=true
@@ -171,7 +169,7 @@ GN_ARGS+=	v8_enable_cet_ibt=true
 
 # flags
 CFLAGS+=	-fno-stack-protector
-CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
+CFLAGS+=	-isystem${PREFIX}/lib/clang/${LLVM_MV}/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
 CFLAGS+=	-Wno-unknown-warning-option
 
@@ -200,10 +198,6 @@ FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
 PLIST.swiftshader=	yes
 FFMPEG_TARGET=		x64
-.elif ${MACHINE_ARCH} == "i386"
-EXTRA_LDFLAGS+=		-Wl,--no-keep-memory
-PLIST.swiftshader=	yes
-FFMPEG_TARGET=		ia32
 .endif
 
 GN_ARGS+=	extra_cxxflags=\"${EXTRA_CXXFLAGS}\" \
@@ -377,5 +371,4 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
