@@ -34,8 +34,8 @@ which should fix the cross-compile failure.
              rustdocflags.arg("--cfg=parallel_compiler");
          }
  
-+	// added for pkgsrc libunwind and LLVM
-+	rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
++        // added for pkgsrc libunwind and LLVM
++        rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
 +
          Cargo {
              command: cargo,
