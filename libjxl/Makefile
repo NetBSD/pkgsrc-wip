@@ -7,7 +7,6 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_VERSION=${PKGVERSION_NOREV}
 CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_BROTLI=ON
@@ -27,6 +26,7 @@ PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl.pc.in
 PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl_cms.pc.in
 PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
