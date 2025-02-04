@@ -19,10 +19,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash grep gmake perl:build pkg-config
 
-TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
-
-FORCE_RPATH=		--force-rpath
-
 # This is a bug:
 #   https://github.com/rust-lang/rust/issues/130708
 # "Building rust 1.81.0 does network access in the "build" phase"
@@ -94,6 +90,11 @@ CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
+FORCE_RPATH=		--force-rpath
+.endif
 
 # Allow overriding MAKE_JOBS_SAFE
 # some may chose to mostly build faster,
@@ -561,7 +562,8 @@ do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
-		${PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N};	\
+		${PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N}
+.if ${OPSYS} == "NetBSD"
 	for bin in ${PATCH_BINARIES}; do				\
 		f=${DESTDIR}${PREFIX}/$${bin};				\
 		if [ -f $$f ]; then					\
@@ -570,6 +572,7 @@ cmd="${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f"; \
 			$$cmd;						\
 		fi; 							\
 	done
+.endif
 
 SUBST_CLASSES+=		destdir
 SUBST_STAGE.destdir=	post-install
