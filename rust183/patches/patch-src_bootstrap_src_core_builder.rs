@@ -40,3 +40,12 @@ which should fix the cross-compile failure.
          Cargo {
              command: cargo,
              compiler,
+@@ -2617,7 +2624,7 @@ impl Cargo {
+                 Some(format!("-Wl,-rpath,@loader_path/../{libdir}"))
+             } else if !target.is_windows() && !target.contains("aix") && !target.contains("xous") {
+                 self.rustflags.arg("-Clink-args=-Wl,-z,origin");
+-                Some(format!("-Wl,-rpath,$ORIGIN/../{libdir}"))
++                Some(format!("-Wl,-rpath,@PREFIX@/lib"))
+             } else {
+                 None
+             };
