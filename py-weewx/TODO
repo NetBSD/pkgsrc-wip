@@ -1,0 +1,12 @@
+This package is useful in wip, and awkward to hoist to pkgsrc.
+
+  - Consider installing an rc.d script.
+
+  - Issues best addressed upstream, not really about the package.
+    - Put "schema" under a weewx namespace; it's awkward at site-packages top level.
+    - Install examples in examples.
+    - Don't have weectl station put examples in user config dir
+
+  - Consider an option for py-requests (needed for some drivers).  But
+    really people can just install it.
+    

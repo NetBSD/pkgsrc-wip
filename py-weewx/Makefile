@@ -2,6 +2,7 @@
 
 DISTNAME=	weewx-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
 EXTRACT_SUFX=	.tgz
@@ -31,20 +32,25 @@ DEPENDS+=	${PYPKGPREFIX}-pymysql>=1.0:../../databases/py-pymysql
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.2:../../devel/py-usb
 
-REPLACE_PYTHON+=		src/weewx_data/util/i18n/i18n-report
+# Dependencies of common extensions, as long as they are not heavy.
+#   mqtt
+DEPENDS+=	${PYPKGPREFIX}-paho-mqtt>=2:../../net/py-paho-mqtt
+
+REPLACE_PYTHON+=	src/weewx_data/util/i18n/i18n-report
 
 # Ignore perl rather than depend on it.  For now, don't even consider
 # a split package.
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/weewx_data/util/logwatch/scripts/services/weewx
 
-DOCDIR=		${PREFIX}/share/doc/weewx-${PYVERSSUFFIX}
+DOCDIR=			${PREFIX}/share/doc/weewx-${PYVERSSUFFIX}
 
 INSTALLATION_DIRS=	${DOCDIR}
 
-# \todo Grasp and perhaps deal with config file generation/update.
-
-# \todo Consider how to manage edits to skins, which are sort of code
-# and sort of config files.
+# weewx 4.x had code and data in the same dir, and setup.py install
+# would merge config file changes.  weewx 5.x does not appear to do
+# this, and the user is left to manually adjust or not, as is the
+# usual custom.  This comment is a caution that the config file
+# behavior is not entirely understood.  This also applies to skins.
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/LICENSE.txt
