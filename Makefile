@@ -5875,7 +5875,6 @@ SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vsearch
 SUBDIR+=	vulkan-loader
-SUBDIR+=	vv
 SUBDIR+=	w3c-httpd
 SUBDIR+=	wackamole
 SUBDIR+=	wadgadget
