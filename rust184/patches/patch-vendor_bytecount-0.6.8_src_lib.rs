@@ -23,7 +23,7 @@ Ref. https://github.com/rust-lang/rust/issues/129819
          }
 -        #[cfg(all(target_arch = "aarch64", not(feature = "generic_simd")))]
 +        #[cfg(all(
-+            target_arch = "aarch64", 
++            target_arch = "aarch64",
 +            target_endian = "little",
 +            not(feature = "generic_simd")
 +        ))]

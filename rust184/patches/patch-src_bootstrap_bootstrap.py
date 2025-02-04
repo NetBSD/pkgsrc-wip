@@ -59,7 +59,7 @@ Also use @PREFIX@ and not $ORIGIN in rpath.
  
          patchelf = "{}/bin/patchelf".format(nix_deps_dir)
          rpath_entries = [
-+	    "@PREFIX@/lib",
++            "@PREFIX@/lib",
              os.path.join(os.path.realpath(nix_deps_dir), "lib")
          ]
          patchelf_args = ["--add-rpath", ":".join(rpath_entries)]
