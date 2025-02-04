@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (Cytopia-0.2.1.tar.gz) = 765aa7db0a72ef7fe0efc8ff4550608a48054d06884e23b80b6666f031125332
+SHA512 (Cytopia-0.2.1.tar.gz) = d1c5875267881441ed7af79d6ff3423b1d58dcf43228993c437cbc010a6217d7b238b05ed9b0289e4738fd5b08bc48b3ceeea0cc7acf87b356fca1b46f88191c
+Size (Cytopia-0.2.1.tar.gz) = 45757141 bytes

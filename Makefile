@@ -644,6 +644,7 @@ SUBDIR+=	cygwin-binutils
 SUBDIR+=	cyrus-imapd30
 SUBDIR+=	cyrus-imapd34
 SUBDIR+=	cyrus-imapd36
+SUBDIR+=	cytopia
 SUBDIR+=	d-feet
 SUBDIR+=	d1x-rebirth
 SUBDIR+=	d2
