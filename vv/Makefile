@@ -33,7 +33,7 @@ do-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
-.include "../../wip/libjxl/buildlink3.mk"
+.include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/libsixel/buildlink3.mk"
