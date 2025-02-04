@@ -1,6 +1,0 @@
-Don't link correctly on SunOS, missing __extendhfdf2
-The above is fixed in gcc 14. see:
-https://gcc.gnu.org/bugzilla/show_bug.cgi?id=113700
-
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2024-11403, CVE-2024-11498
