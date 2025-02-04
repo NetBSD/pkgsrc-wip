@@ -1,15 +1,15 @@
 # $NetBSD$
 
-.include "../../wip/libjxl/Makefile.common"
+.include "../../graphics/libjxl/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lib/gdk-pixbuf-/g}
 COMMENT=	JpegXL GDK pixbuf loader
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 CONFIGURE_DIRS=	plugins/gdk-pixbuf
 BUILD_DIRS=	plugins/gdk-pixbuf
