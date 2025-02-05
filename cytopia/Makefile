@@ -12,15 +12,25 @@ HOMEPAGE=	https://www.cytopia.net/
 COMMENT=	City building simulation game
 LICENSE=	gnu-gpl-v3
 
-# TODO: OpenAL
+USE_LANGUAGES=	c++
+USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DUSE_PACKAGE_MANAGER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_AUDIO=OFF
+
+# for audio
+#.include "../../audio/SDL2_mixer/buildlink3.mk"
+#.include "../../audio/libvorbis/buildlink3.mk"
+## TODO: openal-soft fails to build on my Linux host
+#.include "../../audio/openal-soft/buildlink3.mk"
+#.include "../../multimedia/libogg/buildlink3.mk"
+
 # TODO: imgui
 # TODO: libnoise
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
