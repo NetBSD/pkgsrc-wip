@@ -18,7 +18,7 @@ COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
-USE_TOOLS+=	bash:run perl:run pax
+USE_TOOLS+=	bash perl pax
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
@@ -26,35 +26,37 @@ BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
 INSTALLATION_DIRS=	bin go${GOVERSSUFFIX}
 
-REPLACE_BASH+=	lib/time/update.bash
-REPLACE_BASH+=	lib/wasm/go_js_wasm_exec
-REPLACE_BASH+=	lib/wasm/go_wasip1_wasm_exec
-REPLACE_BASH+=	src/all.bash
-REPLACE_BASH+=	src/bootstrap.bash
-REPLACE_BASH+=	src/buildall.bash
-REPLACE_BASH+=	src/clean.bash
-REPLACE_BASH+=	src/cmd/compile/internal/ssa/_gen/cover.bash
-REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/plan9/mkall.sh
-REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/plan9/mkerrors.sh
-REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
-REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
-REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/windows/mkerrors.bash
-REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/windows/mkknownfolderids.bash
-REPLACE_BASH+=	src/crypto/internal/boring/build.sh
-REPLACE_BASH+=	src/crypto/internal/boring/build-boring.sh
-REPLACE_BASH+=	src/crypto/internal/boring/build-goboring.sh
-REPLACE_BASH+=	src/go/doc/comment/mkstd.sh
-REPLACE_BASH+=	src/cmp.bash
-REPLACE_BASH+=	src/make.bash
-REPLACE_BASH+=	src/race.bash
-REPLACE_BASH+=	src/run.bash
-REPLACE_BASH+=	src/runtime/race/mkcgo.sh
-REPLACE_BASH+=	src/syscall/mkall.sh
-REPLACE_BASH+=	src/syscall/mkerrors.sh
-REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
+# These are scripts for upstream developers which are simply installed
+# as part of all the golang source code, but are not used at runtime.
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/lib/time/update.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/lib/wasm/go_js_wasm_exec
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/lib/wasm/go_wasip1_wasm_exec
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/all.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/bootstrap.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/buildall.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/clean.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/compile/internal/ssa/_gen/cover.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/vendor/golang.org/x/sys/plan9/mkall.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/vendor/golang.org/x/sys/plan9/mkerrors.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/vendor/golang.org/x/sys/windows/mkerrors.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmd/vendor/golang.org/x/sys/windows/mkknownfolderids.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/crypto/internal/boring/build.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/crypto/internal/boring/build-boring.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/crypto/internal/boring/build-goboring.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/go/doc/comment/mkstd.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/cmp.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/make.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/race.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/run.bash
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/runtime/race/mkcgo.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/syscall/mkall.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/syscall/mkerrors.sh
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/syscall/mksysnum_plan9.sh
 
-REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
-REPLACE_PERL+=	src/syscall/*.pl
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/regexp/syntax/make_perl_groups.pl
+CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/syscall/*.pl
 
 # uses own linker, which does not support relro on NetBSD
 CHECK_RELRO_SKIP+=		go${GOVERSSUFFIX}/bin/go
@@ -109,7 +111,15 @@ do-install:
 	cd ${WRKSRC} && rm -rf pkg/obj pkg/bootstrap
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+	cd ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} && \
+	${RM} -rf pkg/tool/${NATIVE_GO_PLATFORM}
+.endif
 .for cmd in go gofmt
+.  if ${USE_CROSS_COMPILE:tl} == "yes"
+	${MV} ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}/bin/${GO_PLATFORM}/${cmd} \
+		${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}/bin/${cmd}
+.  endif
 	${LN} -sf ${PREFIX}/go${GOVERSSUFFIX}/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
 .endfor
 
