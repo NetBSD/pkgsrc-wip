@@ -2399,6 +2399,7 @@ SUBDIR+=	modular-xorg-server-dfbsd-meson
 SUBDIR+=	modular-xorg-server-linux
 SUBDIR+=	modular-xorg-xspice
 SUBDIR+=	moe
+SUBDIR+=	mofilereader
 SUBDIR+=	mona
 SUBDIR+=	monajat
 SUBDIR+=	mono

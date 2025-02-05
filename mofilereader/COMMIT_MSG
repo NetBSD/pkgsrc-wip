@@ -1,0 +1,4 @@
+devel/mofilereader: import 1.2.0 from wip
+
+Library and program for reading .mo files, like GNU gettext, but liberally
+licensed and the library is a single header.
