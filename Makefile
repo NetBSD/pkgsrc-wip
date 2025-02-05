@@ -2091,6 +2091,7 @@ SUBDIR+=	libnfc
 SUBDIR+=	libnfo
 SUBDIR+=	libnl
 SUBDIR+=	libnl1
+SUBDIR+=	libnoise
 SUBDIR+=	libnsl
 SUBDIR+=	libntfs
 SUBDIR+=	libode
