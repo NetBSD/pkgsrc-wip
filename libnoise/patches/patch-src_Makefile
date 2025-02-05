@@ -1,0 +1,24 @@
+$NetBSD$
+
+Let libtool do its library things
+
+--- src/Makefile.orig	2004-10-24 19:21:12.000000000 +0000
++++ src/Makefile
+@@ -11,7 +11,7 @@ OBJECTS=$(SOURCES:.cpp=.o)
+ .PHONY: all clean cleandeps cleanobjs cleanlib libnoise libnoise.so libnoise.so.0
+ 
+ # hooks for future makefiles being able to make multiple SOs, or older SOs
+-libnoise: libnoise.so libnoise.a libnoise.la
++libnoise: libnoise.la
+ libnoise.so: libnoise.so.0
+ libnoise.so.0: libnoise.so.0.3
+ 
+@@ -21,7 +21,7 @@ libnoise.so.0.3: $(OBJECTS)
+ 
+ libnoise.a: $(OBJECTS)
+ 	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $@ $(OBJECTS)
+-libnoise.la: $(OBJECTS)
++libnoise.la: $(OBJECTS:.o=.lo)
+ 	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $@ $(OBJECTS:.o=.lo)
+ 
+ clean:	cleandeps cleanobjs cleanlib

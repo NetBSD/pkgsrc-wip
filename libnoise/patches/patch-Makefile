@@ -1,0 +1,15 @@
+$NetBSD$
+
+Exclude lib/Makefile, let libtool deal with that
+
+--- Makefile.orig	2025-02-05 10:16:36.598268887 +0000
++++ Makefile
+@@ -3,7 +3,7 @@ all: doc src include lib
+ clean: cleandoc cleansrc cleaninclude cleanlib
+ install: installinclude installlib
+ 
+-doc src include lib:
++doc src include:
+ 	$(MAKE) -C $@
+ 
+ lib: include
