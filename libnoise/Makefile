@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.zip
 WRKSRC=		${WRKDIR}/noise
 
 USE_LANGUAGES=	c++
+USE_TOOLS+=	gmake
 
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://www.cytopia.net/
