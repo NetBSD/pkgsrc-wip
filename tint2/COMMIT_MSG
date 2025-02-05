@@ -1,0 +1,3 @@
+x11/tint2: fix to find pathes of icons and aplications
+
+Use devel/cmake/build.mk instead of USE_CMAKE
