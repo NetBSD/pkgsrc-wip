@@ -23,7 +23,6 @@ SHA1 (patch-gcc_configure) = f13d23c46315d18fdbc3bbbad26d0763e2b27690
 SHA1 (patch-isl_configure) = a6295c509bdc82e8b54d7dec5252994532463091
 SHA1 (patch-libffi_configure) = 919bbe094e3ce547a0186eeaddb20a662595f79a
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
-SHA1 (patch-libgcc_config.host) = e3c3bc36f9f18e4b0864f10aa464774e133339c1
 SHA1 (patch-libgcc_config_i386_t-darwin) = 5c719be042134bf33f7d4d2bde63573f37df9a84
 SHA1 (patch-libgcc_config_rs6000_t-darwin) = a88cca89c7f28997e28b81d830b96613f23978ec
 SHA1 (patch-libgcc_config_t-darwin-libgccs1) = 75e5c3467bfd5716519a65f4d1a6da169486999e
