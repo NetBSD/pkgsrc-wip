@@ -31,6 +31,7 @@ man/man3/_xt_ff_pclose.3
 man/man3/_xt_ff_raw_close.3
 man/man3/_xt_ff_raw_open.3
 man/man3/libxtend.3
+man/man3/xf_ff_gets_malloc.3
 man/man3/xt_csv_read_field.3
 man/man3/xt_csv_read_field_malloc.3
 man/man3/xt_csv_skip_field.3
@@ -113,7 +114,6 @@ man/man3/xt_ff_printf.3
 man/man3/xt_ff_putc.3
 man/man3/xt_ff_puts.3
 man/man3/xt_ff_read.3
-man/man3/xt_ff_read_line_malloc.3
 man/man3/xt_ff_rewind.3
 man/man3/xt_ff_seeko.3
 man/man3/xt_ff_set_buff.3
