@@ -67,15 +67,15 @@ STAGE1_LDFLAGS=		${LDFLAGS} -static
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	# empty
+LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
-BOOT_LDFLAGS=		${LDFLAGS_FOR_TARGET}
-BOOT_LDFLAGS+=		-static-libstdc++ -static-libgcc
+BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
 BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
 BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+BOOT_LDFLAGS+=		${LDFLAGS_FOR_TARGET}
 # Needed on Darwin when LDFLAGS point to a SDK
 .if !empty(OSX_SDK_PATH)
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
