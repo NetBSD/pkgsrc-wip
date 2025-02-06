@@ -1174,6 +1174,7 @@ SUBDIR+=	gcalcli-git
 SUBDIR+=	gcc10-aux
 SUBDIR+=	gcc10snapshot
 SUBDIR+=	gcc12
+SUBDIR+=	gcc13
 SUBDIR+=	gcc13-gnat
 SUBDIR+=	gcc13-gnat-libs
 SUBDIR+=	gcc14-gnat
