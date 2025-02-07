@@ -16,7 +16,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
 USE_TOOLS+=		gmake pkg-config
-CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
 CHECK_PORTABILITY_SKIP+=	cmake/templates/xcode-*
