@@ -14,7 +14,7 @@ HOMEPAGE=	https://opencv.org/
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++11
+USE_CXX_FEATURES=	c++17
 USE_TOOLS+=		gmake pkg-config
 
 CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
@@ -28,14 +28,13 @@ CMAKE_CONFIGURE_ARGS+=		-DOPENCV_GENERATE_SETUPVARS=OFF
 CMAKE_CONFIGURE_ARGS+=		-DPROTOBUF_UPDATE_FILES=ON
 CMAKE_CONFIGURE_ARGS+=		-DWITH_EIGEN=OFF
 CMAKE_CONFIGURE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
-# doesn't build on NetBSD with libva-2.17.0
+# needed by protobuf
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_CXX_STANDARD=17
+# doesn't build on NetBSD with libva-2.22.0
 CMAKE_CONFIGURE_ARGS+=		-DWITH_VA=OFF
 #.include "../../multimedia/libva/buildlink3.mk"
 CMAKE_CONFIGURE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_CONFIGURE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
-
-BUILDLINK_TRANSFORM+=	rm:-Werror=address
-BUILDLINK_TRANSFORM+=	rm:-Werror=non-virtual-dtor
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections

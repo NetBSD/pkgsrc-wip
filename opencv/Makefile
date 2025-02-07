@@ -7,14 +7,8 @@ DISTNAME=	opencv-${OPENCV_VERSION}
 MAINTAINER=	anthony.mallet@laas.fr
 COMMENT=	Library for computer vision problems
 
-PKGCONFIG_OVERRIDE+=		build/unix-install/opencv.pc
-PKGCONFIG_OVERRIDE_STAGE=	post-configure
-
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	samples/python/*.py
-
-# includes configure output and paths to gmake etc.
-CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "options.mk"
 
