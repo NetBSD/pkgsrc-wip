@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- sdk/cmake/config.h.in.orig	2025-02-06 17:13:17.062965383 +0100
++++ sdk/cmake/config.h.in
+@@ -229,7 +229,8 @@
+ #define USE_DB 0
+ 
+ /* Use inotify API */
+-#if !defined(__APPLE__) && !defined(_WIN32)
++#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__FreeBSD__) && \
++    !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+ #define USE_INOTIFY 1
+ #endif
+ 
