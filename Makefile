@@ -2219,6 +2219,7 @@ SUBDIR+=	linux24-kernel-headers
 SUBDIR+=	linuxdcpp
 SUBDIR+=	linuxtv-dvb-apps
 SUBDIR+=	lire
+SUBDIR+=	lisp-scripts
 SUBDIR+=	lisp-sound
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
