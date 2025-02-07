@@ -14,11 +14,10 @@ RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-#GCC_REQD+=	13
+GCC_REQD+=	13
 
 DISTNAME=	alire-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	alire
-#GITHUB_TYPE=	tag
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alire-project/}
 
@@ -47,8 +46,6 @@ MAKE_ENV=		ALIRE_OS=netbsd ALIRE_BUILD_MODE=release
 
 # Use GPRBuild as main build system
 .include "../../wip/gprbuild/gprbuild.mk"
-
-.include "../../wip/gcc14-gnat/gcc.mk"
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
