@@ -14,7 +14,7 @@ BUILDLINK_INCDIRS.opencv+=	include/opencv4
 pkgbase := opencv
 .include "../../mk/pkg-build-options.mk"
 
-#.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.opencv:Mjasper}
