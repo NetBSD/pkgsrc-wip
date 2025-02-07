@@ -65,8 +65,6 @@ GENERATE_PLIST+= \
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../wip/gcc14-gnat/gcc.mk"
-
 pre-configure:
 	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${WRKDIR}/
 	${RUN} ${MKDIR} ${OBJDIR}
