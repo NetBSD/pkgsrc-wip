@@ -1,5 +1,7 @@
 $NetBSD$
 
+Do not download files during build, let pkgsrc provide it.
+
 --- ../opencv_contrib-4.11.0/modules/face/CMakeLists.txt.orig	2025-02-07 17:04:23.284140051 +0000
 +++ ../opencv_contrib-4.11.0/modules/face/CMakeLists.txt
 @@ -8,20 +8,6 @@ ocv_define_module(face opencv_core

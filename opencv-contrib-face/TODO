@@ -1,2 +1,0 @@
-- packages, but installs too many files, so can't be installed because it conflicts with opencv
-- duplicates complete patchset of opencv because it needs one additional one for opencv-contrib

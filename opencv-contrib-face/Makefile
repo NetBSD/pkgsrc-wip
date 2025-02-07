@@ -1,5 +1,9 @@
 # $NetBSD: Makefile,v 1.25 2023/01/03 17:36:26 wiz Exp $
 
+# can't use ninja because we only want to install parts of it
+CMAKE_GENERATOR=	make
+INSTALL_DIRS=		modules/face modules/plot modules/tracking
+
 .include "../../wip/opencv/Makefile.common"
 
 DISTNAME=	opencv_contrib-${OPENCV_VERSION}
@@ -12,8 +16,6 @@ COMMENT=	OpenCV face recognition contributed module
 DISTFILES=	${DEFAULT_DISTFILES} opencv-${PKGVERSION_NOREV}${EXTRACT_SUFX} opencv-${PKGVERSION_NOREV}_face_landmark_model.dat
 # use the hash from modules/face/CMakeLists.txt
 SITES.opencv-4.11.0_face_landmark_model.dat=	-https://raw.githubusercontent.com/opencv/opencv_3rdparty/8afa57abc8229d611c4937165d20e2a2d9fc5a12/face_landmark_model.dat
-
-INSTALL_DIRS=	build/modules/face build/modules/plot build/modules/tracking
 
 WRKSRC=		${WRKDIR}/opencv-${PKGVERSION_NOREV}
 
