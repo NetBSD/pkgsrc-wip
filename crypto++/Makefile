@@ -2,6 +2,7 @@
 
 DISTNAME=	cryptopp870
 PKGNAME=	cryptopp-8.7.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
@@ -14,6 +15,7 @@ LICENSE=	boost-license
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 MAKE_FILE=		GNUmakefile
+BUILD_TARGET=		all libcryptopp.pc
 WRKSRC=			${WRKDIR}
 CPPFLAGS+=		-DCRYPTOPP_DISABLE_ASM -fPIC
 
