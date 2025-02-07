@@ -7,10 +7,6 @@ DISTNAME=	opencv-${OPENCV_VERSION}
 MAINTAINER=	anthony.mallet@laas.fr
 COMMENT=	Library for computer vision problems
 
-INSTALLATION_DIRS+=	share/doc/opencv/papers
-INSTALLATION_DIRS+=	share/doc/opencv/ref/pics
-INSTALLATION_DIRS+=	share/OpenCV/haarcascades
-
 PKGCONFIG_OVERRIDE+=		build/unix-install/opencv.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
@@ -22,7 +18,9 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "options.mk"
 
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 TEST_TARGET=	test
 
 post-install:
@@ -30,8 +28,11 @@ post-install:
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openjpeg+=	openjpeg>=2.3.1
+.include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/extension.mk"

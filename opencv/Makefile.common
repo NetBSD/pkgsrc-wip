@@ -1,10 +1,11 @@
 # $NetBSD: Makefile.common,v 1.16 2022/12/01 13:39:03 jperkin Exp $
+#
 # used by wip/opencv/Makefile
 # used by wip/opencv-contrib-face/Makefile
 #
 # DO NOT FORGET to regen wip/opencv-contrib-face/distinfo!
 
-OPENCV_VERSION=	4.7.0
+OPENCV_VERSION=	4.11.0
 
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
@@ -12,10 +13,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
 HOMEPAGE=	https://opencv.org/
 LICENSE=	modified-bsd
 
-PATCHDIR=	${.CURDIR}/../../wip/opencv/patches
-
-USE_LANGUAGES=		c c++11
-USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
 USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
@@ -48,8 +47,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 # Disable SSE/SSE2 to avoid build errors from missing _mm_pause.
 CMAKE_CONFIGURE_ARGS+=		-DCPU_BASELINE=""
 .endif
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/atomic64.mk"
 .include "../../lang/python/pyversion.mk"

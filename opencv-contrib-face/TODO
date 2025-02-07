@@ -1,16 +1,2 @@
-- packages, but installs too many files
-- face plugin is not built
-- face plugin wants to download a file, see opencv_contrib-4.7.0/modules/face/CMakeLists.txt:
-
-ocv_download(
-    FILENAME face_landmark_model.dat
-    HASH ${__file_hash}
-    URL
-      "${OPENCV_FACE_ALIGNMENT_URL}"
-      "$ENV{OPENCV_FACE_ALIGNMENT_URL}"
-      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/${__commit_hash}/"
-    DESTINATION_DIR "${CMAKE_BINARY_DIR}/${OPENCV_TEST_DATA_INSTALL_PATH}/cv/face/"
-    ID "data"
-    RELATIVE_URL
-    STATUS res
-)
+- packages, but installs too many files, so can't be installed because it conflicts with opencv
+- duplicates complete patchset of opencv because it needs one additional one for opencv-contrib
