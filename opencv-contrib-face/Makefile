@@ -22,9 +22,9 @@ WRKSRC=		${WRKDIR}/opencv-${PKGVERSION_NOREV}
 post-extract:
 	${CP} ${WRKDIR}/opencv-${PKGVERSION_NOREV}_face_landmark_model.dat ${WRKDIR}/opencv_contrib-${PKGVERSION_NOREV}/modules/face/face_landmark_model.dat
 
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_FFMPEG=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_JASPER=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_DOCS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DWITH_FFMPEG=OFF
+CMAKE_CONFIGURE_ARGS+=		-DWITH_JASPER=OFF
 
 CMAKE_CONFIGURE_ARGS+=		-DOPENCV_EXTRA_MODULES_PATH=${WRKDIR}/${DISTNAME}/modules
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_adas=OFF
@@ -74,26 +74,19 @@ CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_ts=OFF
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_videoio=OFF
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_videostab=OFF
 
+# needed by face
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_objdetect=ON
+# needed by objdetect
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_calib3d=ON
 # needed by calib3d
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_features2d=ON
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_flann=ON
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_imgproc=ON
 # needed by flann and objdetect
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_core=ON
-# flann needed by calib3d
-CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_flann=ON
-# calib3d needed by objdetect
-CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_calib3d=ON
-# objdetect needed by face
-CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_objdetect=ON
+
 # needed by tracking
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_opencv_video=ON
-
-# direct patch difficult due to partial merge with opencv package
-SUBST_CLASSES+=		stereo
-SUBST_FILES.stereo+=	../opencv_contrib-${PKGVERSION_NOREV}/modules/stereo/CMakeLists.txt
-SUBST_SED.stereo+=	-e "s/ocv_define_module(stereo/ocv_define_module(stereo opencv_calib3d/"
-SUBST_STAGE.stereo=	pre-configure
-SUBST_MESSAGE.stereo=	Add missing library dependency.
 
 BUILDLINK_API_DEPENDS.opencv+=	opencv>=${PKGVERSION_NOREV}
 .include "../../wip/opencv/buildlink3.mk"
