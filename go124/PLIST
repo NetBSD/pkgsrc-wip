@@ -56,6 +56,7 @@ go124/go.env
 go124/lib/fips140/Makefile
 go124/lib/fips140/README.md
 go124/lib/fips140/fips140.sum
+go124/lib/fips140/v1.0.0.zip
 go124/lib/time/README
 go124/lib/time/mkzip.go
 go124/lib/time/update.bash
@@ -1412,6 +1413,7 @@ go124/src/cmd/compile/internal/types2/termlist.go
 go124/src/cmd/compile/internal/types2/termlist_test.go
 go124/src/cmd/compile/internal/types2/testdata/local/issue47996.go
 go124/src/cmd/compile/internal/types2/testdata/local/issue68183.go
+go124/src/cmd/compile/internal/types2/testdata/local/issue71254.go
 go124/src/cmd/compile/internal/types2/testdata/manual.go
 go124/src/cmd/compile/internal/types2/tuple.go
 go124/src/cmd/compile/internal/types2/type.go
@@ -1567,6 +1569,7 @@ go124/src/cmd/go/internal/auth/auth.go
 go124/src/cmd/go/internal/auth/auth_test.go
 go124/src/cmd/go/internal/auth/gitauth.go
 go124/src/cmd/go/internal/auth/gitauth_test.go
+go124/src/cmd/go/internal/auth/httputils.go
 go124/src/cmd/go/internal/auth/netrc.go
 go124/src/cmd/go/internal/auth/netrc_test.go
 go124/src/cmd/go/internal/auth/userauth.go
@@ -1678,8 +1681,10 @@ go124/src/cmd/go/internal/lockedfile/mutex.go
 go124/src/cmd/go/internal/lockedfile/transform_test.go
 go124/src/cmd/go/internal/mmap/mmap.go
 go124/src/cmd/go/internal/mmap/mmap_other.go
+go124/src/cmd/go/internal/mmap/mmap_test.go
 go124/src/cmd/go/internal/mmap/mmap_unix.go
 go124/src/cmd/go/internal/mmap/mmap_windows.go
+go124/src/cmd/go/internal/mmap/testdata/small_file.txt
 go124/src/cmd/go/internal/modcmd/download.go
 go124/src/cmd/go/internal/modcmd/edit.go
 go124/src/cmd/go/internal/modcmd/graph.go
@@ -2204,6 +2209,7 @@ go124/src/cmd/go/testdata/script/cover_cgo_xtest.txt
 go124/src/cmd/go/testdata/script/cover_coverpkg_partial.txt
 go124/src/cmd/go/testdata/script/cover_coverpkg_with_init.txt
 go124/src/cmd/go/testdata/script/cover_coverprofile_multipkg.txt
+go124/src/cmd/go/testdata/script/cover_coverprofile_nocoverpkg.txt
 go124/src/cmd/go/testdata/script/cover_dash_c.txt
 go124/src/cmd/go/testdata/script/cover_dep_loop.txt
 go124/src/cmd/go/testdata/script/cover_dot_import.txt
@@ -2685,6 +2691,7 @@ go124/src/cmd/go/testdata/script/mod_tidy_version_tooold.txt
 go124/src/cmd/go/testdata/script/mod_tool_70582.txt
 go124/src/cmd/go/testdata/script/mod_toolchain.txt
 go124/src/cmd/go/testdata/script/mod_toolchain_slash.txt
+go124/src/cmd/go/testdata/script/mod_unknown_block.txt
 go124/src/cmd/go/testdata/script/mod_update_sum_readonly.txt
 go124/src/cmd/go/testdata/script/mod_upgrade_patch.txt
 go124/src/cmd/go/testdata/script/mod_vcs_missing.txt
@@ -4842,6 +4849,7 @@ go124/src/crypto/internal/fips140deps/cpu/cpu.go
 go124/src/crypto/internal/fips140deps/fipsdeps.go
 go124/src/crypto/internal/fips140deps/fipsdeps_test.go
 go124/src/crypto/internal/fips140deps/godebug/godebug.go
+go124/src/crypto/internal/fips140hash/hash.go
 go124/src/crypto/internal/fips140only/fips140only.go
 go124/src/crypto/internal/fips140test/acvp_capabilities.json
 go124/src/crypto/internal/fips140test/acvp_test.config.json
@@ -4895,8 +4903,8 @@ go124/src/crypto/md5/md5block_loong64.s
 go124/src/crypto/md5/md5block_ppc64x.s
 go124/src/crypto/md5/md5block_riscv64.s
 go124/src/crypto/md5/md5block_s390x.s
-go124/src/crypto/mlkem/mlkem1024.go
-go124/src/crypto/mlkem/mlkem768.go
+go124/src/crypto/mlkem/example_test.go
+go124/src/crypto/mlkem/mlkem.go
 go124/src/crypto/mlkem/mlkem_test.go
 go124/src/crypto/pbkdf2/pbkdf2.go
 go124/src/crypto/pbkdf2/pbkdf2_test.go
@@ -7805,6 +7813,9 @@ go124/src/internal/types/testdata/fixedbugs/issue69955.go
 go124/src/internal/types/testdata/fixedbugs/issue70150.go
 go124/src/internal/types/testdata/fixedbugs/issue70417.go
 go124/src/internal/types/testdata/fixedbugs/issue70526.go
+go124/src/internal/types/testdata/fixedbugs/issue71131.go
+go124/src/internal/types/testdata/fixedbugs/issue71198.go
+go124/src/internal/types/testdata/fixedbugs/issue71284.go
 go124/src/internal/types/testdata/spec/assignability.go
 go124/src/internal/types/testdata/spec/comparable.go
 go124/src/internal/types/testdata/spec/comparable1.19.go
@@ -9225,6 +9236,7 @@ go124/src/runtime/libfuzzer.go
 go124/src/runtime/libfuzzer_amd64.s
 go124/src/runtime/libfuzzer_arm64.s
 go124/src/runtime/linkname.go
+go124/src/runtime/linkname_swiss.go
 go124/src/runtime/linkname_unix.go
 go124/src/runtime/lock_futex.go
 go124/src/runtime/lock_futex_tristate.go
