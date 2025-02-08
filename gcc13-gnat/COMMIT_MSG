@@ -1,6 +1,0 @@
-lang/gcc13-gnat: Update to 13.3.0
-
-* Package updated to GCC 13.3 release
-* Patches adjusted to new codebase
-* New gcc13-gnat-libs package with dynamic libs only
-* Runpaths handling improved
