@@ -607,7 +607,6 @@ SUBDIR+=	crosswrench-git
 SUBDIR+=	crrcsim
 SUBDIR+=	crust-firmware
 SUBDIR+=	cryptcat
-SUBDIR+=	crypto++
 SUBDIR+=	crystal
 SUBDIR+=	crystal-bin
 SUBDIR+=	cskk
