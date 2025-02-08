@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (d2-v0.6.8.tar.gz) = d2389c51dcf39f45bea2d78c788c53232141a373ab4f183e69f739687efdd4a7
-SHA512 (d2-v0.6.8.tar.gz) = f4e33262849c95336a4cf38fbec64582159f1418f864b26ded1a3091cf0ba75fc148244c158803bd22f6b55e195d465b9b58e3ec1e236b59a56d416e188ee3e9
-Size (d2-v0.6.8.tar.gz) = 19811526 bytes
+BLAKE2s (d2-v0.6.9.tar.gz) = 5065e56af80e759e6beeac8366ccd94de568b1713e5e582170ce2e206047b805
+SHA512 (d2-v0.6.9.tar.gz) = 2ee9fefdcc2a7ac3617f61cad5a78033d2f0bbd5714f8730ed324271eaf4ba3ce2c9c228ee69ccdbd3db18ea19a460126d11868e5e537e9fb109ca5c4e0bc6ba
+Size (d2-v0.6.9.tar.gz) = 27676052 bytes
 BLAKE2s (github.com__puerkito_bio_goquery_@v_v1.10.0.mod) = caa7ac090a31263ee1896e437251d861b0ff2ed3b22105019615600fbfeaa47c
 SHA512 (github.com__puerkito_bio_goquery_@v_v1.10.0.mod) = f182efa22de4aa0a770141485aa4511c0f08bf0a59fe74c350397d19cfdc50e7da0d053e3989bfe2f0f6ba4b95a0e4e7429195aee3d1b85c5c06ea871c8125c6
 Size (github.com__puerkito_bio_goquery_@v_v1.10.0.mod) = 126 bytes
@@ -24,6 +24,12 @@ Size (github.com_andybalholm_cascadia_@v_v1.3.2.zip) = 53781 bytes
 BLAKE2s (github.com_boombuler_barcode_@v_v1.0.0.mod) = d58a8d4840f1e596a46eea4e2e7f28d20ff2bd0498d04db30cbb77015e8e4960
 SHA512 (github.com_boombuler_barcode_@v_v1.0.0.mod) = 1487d5ffde5f6d64bc21be1aa02926261a519fad462731254f03cf124758162cb6f6848fe412cd5b02606674f566ed213ae4fb7b5e54afe29df5ea60e08d3c03
 Size (github.com_boombuler_barcode_@v_v1.0.0.mod) = 36 bytes
+BLAKE2s (github.com_coder_websocket_@v_v1.8.12.mod) = f1d3586af4cb986946c57ed79c5540b50744f6ca5959b42acb5e3788197d8527
+SHA512 (github.com_coder_websocket_@v_v1.8.12.mod) = f70882e33b888cb2a27b9fec79c77c6eaf7f36e41075e48d783c1db6cd1ffec67545d54db600bc68f64727c3a8561e483201c533881a0711f83e3f5757fa840a
+Size (github.com_coder_websocket_@v_v1.8.12.mod) = 43 bytes
+BLAKE2s (github.com_coder_websocket_@v_v1.8.12.zip) = 5c004ddc6f2e60b77dae3aa6f7f6e8a3149b29ae9b95cdf9f5731e8bfab5de15
+SHA512 (github.com_coder_websocket_@v_v1.8.12.zip) = 62385e22d30fb2f8d3a6dd2e66694e003c494e77b9d2e08489fbb057ca70c725260c5a04ef24029c2f5414bff4ebec45103d3dbcb009c74b808d2442a4acff09
+Size (github.com_coder_websocket_@v_v1.8.12.zip) = 69725 bytes
 BLAKE2s (github.com_creack_pty_@v_v1.1.9.mod) = df42a1d34a4df624a6fbab600483cf5afb215874880e2e9e23f5fb03d719eb16
 SHA512 (github.com_creack_pty_@v_v1.1.9.mod) = 9cf1687520933d3d6bbec9d7c51472998d3bdbe1b3d2a7478fca80f9e7944f9040a2b8ec7d49f1458bd46a5121bae4810d314725add41efd413319a5006b944a
 Size (github.com_creack_pty_@v_v1.1.9.mod) = 39 bytes
@@ -528,12 +534,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (nhooyr.io_websocket_@v_v1.8.17.mod) = 3935d0be91717cd995ee4fa77d101f55452363e635979741684f05ce08ef6e3f
-SHA512 (nhooyr.io_websocket_@v_v1.8.17.mod) = 36a0fe9045bbfaf3c4da939e5d4e5ab0aa3c262ba1196e98056df2feebec916ca7b4cf8dcbf125fb3879263b95f7d4c37f62a789626c7223af4a6a380e61949f
-Size (nhooyr.io_websocket_@v_v1.8.17.mod) = 36 bytes
-BLAKE2s (nhooyr.io_websocket_@v_v1.8.17.zip) = a04c5d3b03d285988408d55c2750fa9243e9621ac8f53d0c6e2515d74927176b
-SHA512 (nhooyr.io_websocket_@v_v1.8.17.zip) = 3971b46b6b0687d187ee7fc4ce29a521d49570fe8e398286c51ad39b14374f2b64be5f79127440a84902cd4ad05956b8d12c55dca665f652df673db489e28c58
-Size (nhooyr.io_websocket_@v_v1.8.17.zip) = 67040 bytes
 BLAKE2s (oss.terrastruct.com_util-go_@v_v0.0.0-20241005222610-44c011a04896.mod) = edb80c5112af6b560453154492fc7897816e541000a548360d06b71e6b5a3fb2
 SHA512 (oss.terrastruct.com_util-go_@v_v0.0.0-20241005222610-44c011a04896.mod) = ef433f88868d3f246ebf5c9e7312aabfb00388abae706d1cef0bc1eddcb91e12576ec3468d1414eac9d14b8ce1ec5352f7f896ab5c0637a77ba906e997b45ad2
 Size (oss.terrastruct.com_util-go_@v_v0.0.0-20241005222610-44c011a04896.mod) = 458 bytes
