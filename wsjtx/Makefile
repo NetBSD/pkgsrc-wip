@@ -67,7 +67,7 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../devel/cmake/build.mk"
 .include "../../math/fftw/buildlink3.mk"
 .if empty(PKG_BUILD_OPTIONS.fftw:Mfftw-fortran)
-PKG_FAIL_REASON+=      'You need to set PKG_OPTIONS.fftw:Mfftw-fortran, at its compile time.'
+PKG_FAIL_REASON+=      'You need to set PKG_OPTIONS.fftw+= fftw-fortran, at its compile time.'
 .endif
 
 .include "../../graphics/openexr/buildlink3.mk"
