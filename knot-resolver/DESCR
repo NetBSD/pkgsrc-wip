@@ -1,8 +1,0 @@
-Knot Resolver is a caching full resolver implementation
-written in C and LuaJIT, both a resolver library and a daemon.
-The core architecture is tiny and efficient, and provides a
-foundation and a state-machine like API for extensions.
-There are three modules built-in - *iterator*, *validator*,
-*cache*, and a few more are loaded by default.
-Most of the rich features are written in Lua(JIT) and C.
-Batteries are included, but optional.

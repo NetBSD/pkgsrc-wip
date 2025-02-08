@@ -106,12 +106,12 @@ ALL_ENV+=		CARGO_HOME=${WRKDIR}
 #	${RM} -f ${DESTDIR}${PREFIX}/.crates.toml
 #	${RM} -f ${DESTDIR}${PREFIX}/.crates2.json
 	
-.if ${OPSYS} == "Darwin"
-.PHONY: do-cargo-post-install-darwin-fix-rpath
-post-install: do-cargo-post-install-darwin-fix-rpath
-do-cargo-post-install-darwin-fix-rpath:
-	${RUN} cd ${DESTDIR};								\
-	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do	\
-	  install_name_tool -id /$$i $$i;						\
-	done
-.endif
+#.if ${OPSYS} == "Darwin"
+#.PHONY: do-cargo-post-install-darwin-fix-rpath
+#post-install: do-cargo-post-install-darwin-fix-rpath
+#do-cargo-post-install-darwin-fix-rpath:
+#	${RUN} cd ${DESTDIR};								\
+#	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do	\
+#	  install_name_tool -id /$$i $$i;						\
+#	done
+#.endif

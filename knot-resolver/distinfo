@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (knot-resolver-5.7.4.tar.xz) = 7fe0d2b44d17ea9e86e54d8296060600abfef73efa592894caf6cf3d2136ae70
-SHA512 (knot-resolver-5.7.4.tar.xz) = 5d8ea5b5b0cba5a1058aaa6e04573c838895d6b2c204e8d09c9ad898fb074c52ef7589afdad164b007edf151167d31fd0f940466edfeec597f96e5bc1cd72171
-Size (knot-resolver-5.7.4.tar.xz) = 1931124 bytes
-SHA1 (patch-utils_client_kresc.c) = 94976fd265048974df41988981f4a7eaeab91a54
