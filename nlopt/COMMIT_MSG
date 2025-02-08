@@ -2,6 +2,15 @@ math/nlopt: Update to NLopt 2.9.1
 
 Changes:
 
+NLopt 2.10.0
+  - New Java bindings (#578).
+  - Allow disabling exceptions with set_exceptions_enabled (#580).
+  - Configurable tolg tolerance parameter for Luksan gradient stopping
+    condition (#585).
+  - Restored LD_LBFGS_NOCEDAL enum value (dropped in 2.9) to ease backwards
+    compatibility for wrappers in other languages (though this algorithm is
+    currently unimplemented) (#587).
+
 NLopt 2.9.1
   - Fixed PRAXIS box constraints ([#528])
 
