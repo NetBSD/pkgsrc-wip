@@ -1,13 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/01/30 11:09:45 jmcneill Exp $
+# $NetBSD$
 
-BUILDLINK_TREE+=	gst-plugins1-opengl
+BUILDLINK_TREE+=	gst-plugins1-gl
 
-.if !defined(GST_PLUGINS1_OPENGL_BUILDLINK3_MK)
-GST_PLUGINS1_OPENGL_BUILDLINK3_MK:=
+.if !defined(GST_PLUGINS1_GL_BUILDLINK3_MK)
+GST_PLUGINS1_GL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gst-plugins1-opengl+=	gst-plugins1-opengl>=1.4.5
-BUILDLINK_PKGSRCDIR.gst-plugins1-opengl?=	../../wip/gst-plugins1-opengl
+BUILDLINK_API_DEPENDS.gst-plugins1-gl+=	gst-plugins1-gl>=1.24.12
+BUILDLINK_PKGSRCDIR.gst-plugins1-gl?=	../../wip/gst-plugins1-gl
 
-.endif	# GST_PLUGINS1_OPENGL_BUILDLINK3_MK
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.endif	# GST_PLUGINS1_GL_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-gst-plugins1-opengl
+BUILDLINK_TREE+=	-gst-plugins1-gl
