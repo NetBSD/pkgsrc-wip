@@ -1,0 +1,15 @@
+@comment $NetBSD$
+share/fonts/X11/TTF/2097.ttf
+share/fonts/X11/TTF/2197 Block.ttf
+share/fonts/X11/TTF/2197 Heavy.ttf
+share/fonts/X11/TTF/Amalgama.ttf
+share/fonts/X11/TTF/Assegai Rounded.ttf
+share/fonts/X11/TTF/F500 Ang-ular.ttf
+share/fonts/X11/TTF/F5000.ttf
+share/fonts/X11/TTF/FX300 Angular.ttf
+share/fonts/X11/TTF/FX300.ttf
+share/fonts/X11/TTF/Fusion.ttf
+share/fonts/X11/TTF/WO3.ttf
+share/fonts/X11/TTF/X2.ttf
+share/fonts/X11/TTF/supErphoniX2.ttf
+@pkgdir share/fonts/X11/OTF
