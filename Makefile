@@ -6086,6 +6086,7 @@ SUBDIR+=	yakuake
 SUBDIR+=	yamlfmt
 SUBDIR+=	yap
 SUBDIR+=	yaupspe
+SUBDIR+=	yazi
 SUBDIR+=	yder
 SUBDIR+=	yersinia
 SUBDIR+=	yet-another-cloudwatch-exporter
