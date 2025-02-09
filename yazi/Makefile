@@ -12,9 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.84.1
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.84.1 on amd64
+RUST_REQ=	1.83.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
