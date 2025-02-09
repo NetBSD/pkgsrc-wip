@@ -151,7 +151,6 @@ SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	aldumb
 SUBDIR+=	alertmanager
-SUBDIR+=	alire
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins

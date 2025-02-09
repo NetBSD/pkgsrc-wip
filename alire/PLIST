@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2024/05/09 12:30:00 dkazankov Exp $
-bin/alr
-share/gpr/manifests/alr
-share/gpr/manifests/alr_env

@@ -1,7 +1,0 @@
-devel/alire: Update to 2.0.1nb1
-
-* Package updated to upstream 2.0.1 release
-* Build type changed to "release" to avoid runtime exceptions:
-  some patches added/changed, Makefile modified
-* Build process moved to gprbuild.mk, so wip version of gprbuild
-  reqired to build
