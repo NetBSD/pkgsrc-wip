@@ -1407,3 +1407,6 @@ Size (zerovec-0.10.4.crate) = 126398 bytes
 BLAKE2s (zerovec-derive-0.10.3.crate) = 39169b3f694a23e151216d25802a49f00889bfe0e5c6e744cc26792325703db2
 SHA512 (zerovec-derive-0.10.3.crate) = caefbffeb35265db9f74933bf07109d57f0da48156cafd4f330af78a5c7eb9ab0831a80789ad4fb119875ebc6cfd7e3de68c9984b77dca5151f9be41f1ae6e09
 Size (zerovec-derive-0.10.3.crate) = 19438 bytes
+SHA1 (patch-.._vendor_mac_address-1.1.7_examples_lookup.rs) = ec2b43ba896b7c8f2345e25995b573bdd8a30242
+SHA1 (patch-.._vendor_mac_address-1.1.7_src_iter_mod.rs) = e38104ebf2d668c29bf4db8ffb09913e0acbe74f
+SHA1 (patch-.._vendor_mac_address-1.1.7_src_lib.rs) = 0e460b3f603878e9c13fdf1506dc528acd9da249
