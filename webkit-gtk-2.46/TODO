@@ -1,0 +1,33 @@
+In file included from /scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/cmake-pkgsrc-build/WebCore/DerivedSources/unified-sources/UnifiedSource-3c72abbe-52.cpp:1:
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp: In function 'std::optional<WTF::GRefPtr<_GstContext> > WebCore::requestGLContext(const char*)':
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1835:40: error: 'class WebCore::PlatformDisplay' has no member named 'gstGLDisplay'; did you mean 'eglDisplay'?
+ 1835 |     auto* gstGLDisplay = sharedDisplay.gstGLDisplay();
+      |                                        ^~~~~~~~~~~~
+      |                                        eglDisplay
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1836:40: error: 'class WebCore::PlatformDisplay' has no member named 'gstGLContext'; did you mean 'skiaGLContext'?
+ 1836 |     auto* gstGLContext = sharedDisplay.gstGLContext();
+      |                                        ^~~~~~~~~~~~
+      |                                        skiaGLContext
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1841:33: error: 'GST_GL_DISPLAY_CONTEXT_TYPE' was not declared in this scope
+ 1841 |     if (!g_strcmp0(contextType, GST_GL_DISPLAY_CONTEXT_TYPE)) {
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1841:33: note: the macro 'GST_GL_DISPLAY_CONTEXT_TYPE' had not yet been defined
+In file included from /usr/pkg/include/gstreamer-1.0/gst/gl/gl.h:31,
+                 from /scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerVideoFrameConverter.cpp:28,
+                 from /scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/cmake-pkgsrc-build/WebCore/DerivedSources/unified-sources/UnifiedSource-3c72abbe-52.cpp:4:
+/usr/pkg/include/gstreamer-1.0/gst/gl/gstgldisplay.h:169: note: it was later defined here
+  169 | #define GST_GL_DISPLAY_CONTEXT_TYPE "gst.gl.GLDisplay"
+      |
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1843:9: error: 'gst_context_set_gl_display' was not declared in this scope
+ 1843 |         gst_context_set_gl_display(displayContext.get(), gstGLDisplay);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1850:49: error: 'GST_TYPE_GL_CONTEXT' was not declared in this scope
+ 1850 |         gst_structure_set(structure, "context", GST_TYPE_GL_CONTEXT, gstGLContext, nullptr);
+      |                                                 ^~~~~~~~~~~~~~~~~~~
+/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.46.6/Source/WebCore/platform/graphics/gstreamer/GStreamerCommon.cpp:1850:49: note: the macro 'GST_TYPE_GL_CONTEXT' had not yet been defined
+In file included from /usr/pkg/include/gstreamer-1.0/gst/gl/gl.h:28:
+/usr/pkg/include/gstreamer-1.0/gst/gl/gstglcontext.h:32: note: it was later defined here
+   32 | #define GST_TYPE_GL_CONTEXT         (gst_gl_context_get_type())
+      |
+[4484/7882] Building CXX object Source/WebCore/CMakeFiles/WebCore.dir/__/__/WebCore/DerivedSources/unified-sources/UnifiedSource-3c72abbe-53.cpp.o
+ninja: build stopped: subcommand failed.

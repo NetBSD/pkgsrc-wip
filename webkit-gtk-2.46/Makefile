@@ -3,7 +3,7 @@
 # Some environment variables that can help debugging this:
 # https://trac.webkit.org/wiki/EnvironmentVariables
 
-DISTNAME=	webkitgtk-2.46.5
+DISTNAME=	webkitgtk-2.46.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -22,6 +22,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
+
+# this doesn't seem to be using the pkg-config file, which would add this
+CXXFLAGS+=	-I${PREFIX}/lib/gstreamer-1.0/include
 
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
@@ -165,6 +168,7 @@ CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../wip/gst-plugins1-gl/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 #.include "../../sysutils/libnotify/buildlink3.mk"

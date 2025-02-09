@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (webkitgtk-2.46.5.tar.xz) = cec524bc69e068fcae301617a328b045ef7bde97e15225fe086fdb71360ca9f0
-SHA512 (webkitgtk-2.46.5.tar.xz) = 9a0eb018361d407f13b303f66babcdc9960075bf69b83cf2ee8f708e5396cfa9e0a720f77695aea216072392e0603c2dc8ad50e6d56f962d4a52e9cdadf38275
-Size (webkitgtk-2.46.5.tar.xz) = 42898600 bytes
+BLAKE2s (webkitgtk-2.46.6.tar.xz) = bca462875a8ff6349f903993835528c32fcc742566cc85d2a119cc7e7af9c3a6
+SHA512 (webkitgtk-2.46.6.tar.xz) = 2b9a004ea1d70e9b5298a0964ed04fea6082ab5f08d81c35c0f653351488b032850476b401694870bda1d202afa239e6726b1f250ce2e11ecf4aae5b98fdd65f
+Size (webkitgtk-2.46.6.tar.xz) = 42914744 bytes
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_SimpleMutex.h) = 6cd83b9ec476ed39adecec6b30e898bda8e5b76d
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_platform.h) = 2fda057edc3dde3356f0663ec5aa52cb61fb1229
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_system__utils__linux.cpp) = 7da7a59e2c0ab0c9fa92d746aceb11f1aab3290d
@@ -10,7 +10,6 @@ SHA1 (patch-Source_ThirdParty_ANGLE_src_libANGLE_renderer_gl_egl_DisplayEGL.cpp)
 SHA1 (patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h) = 6a854b85a470ad32aea3bb5f49d4622ba9df1bb6
 SHA1 (patch-Source_ThirdParty_skia_src_ports_SkMemory__malloc.cpp) = e277d988eeaacb7ec8b7f051342b77c5e8ac06a7
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = d2d6eff085c546b7bcedc4feff69c2f9b636f0bf
-SHA1 (patch-Source_WTF_wtf_Platform.h) = b84c3133ea3e0066a382988b441056dca6b38fa3
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = d11d941d8ca446b9cd8a452b1eda43497a44c3c9
 SHA1 (patch-Source_WTF_wtf_glib_FileSystemGlib.cpp) = a46ae871e2c0919da94bcb14a2b94d0e5a911922
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 1549a9bbbc11129e42995719d592ab747413eef6
