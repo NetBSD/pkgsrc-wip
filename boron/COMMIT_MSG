@@ -1,0 +1,9 @@
+boron: Add devel/boron version 2.1.0
+
+Boron is an interpreted, prototype-based, scripting language similar to Rebol.
+The interpreter and datatype system is a C library useful for building
+domain-specific languages (DSLs) embedded in C/C++ applications.
+
+It is a smaller language than Rebol with fewer built-in data types, no infix
+operators, and no built-in internet protocols.  It does add the capability to
+slice series values and store data in a serialized binary format.

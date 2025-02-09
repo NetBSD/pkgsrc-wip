@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	boron
+
+.if !defined(BORON_BUILDLINK3_MK)
+BORON_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.boron+=	boron>=2.1.0
+BUILDLINK_PKGSRCDIR.boron?=	../../wip/boron
+.endif	# BORON_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-boron

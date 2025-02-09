@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/boron
+lib/libboron.so.2
+lib/libboron.so.${PKGVERSION}
+man/man1/boron.1

@@ -1,0 +1,32 @@
+$NetBSD$
+
+Fix DESTDIR.
+
+--- Makefile.orig	2023-12-12 04:43:52.000000000 +0000
++++ Makefile
+@@ -3,11 +3,11 @@
+ VER=2.1.0
+ 
+ DESTDIR ?= /usr/local
+-BIN_DIR=$(DESTDIR)/bin
+-LIB_DIR=$(DESTDIR)/lib
+-INC_DIR=$(DESTDIR)/include/boron
+-MAN_DIR=$(DESTDIR)/share/man/man1
+-VIM_DIR=$(DESTDIR)/share/vim/vimfiles/syntax
++BIN_DIR=$(DESTDIR)$(PREFIX)/bin
++LIB_DIR=$(DESTDIR)$(PREFIX)/lib
++INC_DIR=$(DESTDIR)$(PREFIX)/include/boron
++MAN_DIR=$(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
++VIM_DIR=$(DESTDIR)$(PREFIX)/share/vim/vimfiles/syntax
+ 
+ OS := $(shell uname)
+ 
+@@ -91,7 +91,7 @@ $(ODIR)/%.o: eval/%.c
+ 	cc -c $(CFLAGS) $(CONFIG) $< -o $@
+ 
+ boron: $(EXE_OBJS) $(BORON_LIB)
+-	cc $^ -o $@ $(EXE_LIBS)
++	cc $^ -o $@ $(EXE_LIBS) $(LDFLAGS)
+ 
+ $(ODIR)/os.o: unix/os.c
+ 	cc -c $(CFLAGS) $(CONFIG) $< -o $@
