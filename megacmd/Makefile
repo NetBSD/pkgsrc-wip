@@ -19,9 +19,7 @@ USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	filesystem
 FORCE_CXX_STD=		c++17
 USE_LIBTOOL=		yes
-#USE_TOOLS+=		autoreconf autoconf automake gmake
 USE_TOOLS+=		pkg-config
-#GNU_CONFIGURE=		yes
 REPLACE_SH=		src/client/mega-*
 CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM
 
@@ -32,23 +30,9 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_FREEIMAGE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_PDFIUM=OFF
 
-
-#CONFIGURE_ARGS+=	--disable-examples
-#CONFIGURE_ARGS+=	--disable-java
-#CONFIGURE_ARGS+=	--disable-php
-#CONFIGURE_ARGS+=	--disable-python
-#CONFIGURE_ARGS+=	--without-termcap
-#CONFIGURE_ARGS+=	--without-libraw
-#CONFIGURE_ARGS+=	--without-libzen
-#CONFIGURE_ARGS+=	--without-rt
-#CONFIGURE_ARGS+=	--enable-gcc-hardening
-
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
 INSTALLATION_DIRS+=	share/doc/megacmd
-
-#pre-configure:
-#	cd ${WRKSRC} && ${SH} autogen.sh
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd_completion.sh \
@@ -60,7 +44,6 @@ post-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-#.include "../../multimedia/libmediainfo/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/crypto++/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"

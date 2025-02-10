@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Fix to find libcrypto++
+
 --- sdk/cmake/modules/sdklib_libraries.cmake.orig	2025-01-24 13:56:57.000000000 +0100
 +++ sdk/cmake/modules/sdklib_libraries.cmake
 @@ -95,7 +95,7 @@ macro(load_sdklib_libraries)

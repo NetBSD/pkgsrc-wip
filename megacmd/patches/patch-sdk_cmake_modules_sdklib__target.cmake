@@ -1,5 +1,7 @@
 $NetBSD$
 
+* On gcc-10 std::filesystem is in stdc++
+
 --- sdk/cmake/modules/sdklib_target.cmake.orig	2025-02-07 10:00:44.872621812 +0100
 +++ sdk/cmake/modules/sdklib_target.cmake
 @@ -358,7 +358,7 @@ endif()

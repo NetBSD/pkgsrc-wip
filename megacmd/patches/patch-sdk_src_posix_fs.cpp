@@ -1,6 +1,8 @@
 $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.2 2024/06/18 18:23:15 bsiegert Exp $
 
-Fix build on NetBSD, use statvfs
+* Fix build on NetBSD, use statvfs
+* Don't use mntent features on BSDs
+* O_NOATIME not available on BSDs
 
 --- sdk/src/posix/fs.cpp.orig	2025-01-24 13:56:57.000000000 +0100
 +++ sdk/src/posix/fs.cpp
@@ -60,13 +62,51 @@ Fix build on NetBSD, use statvfs
          int fd = ::open(path, O_RDONLY) ;
  #else
          // for sync in particular, try to open without setting access-time
-@@ -2061,7 +2083,8 @@ ScanResult PosixFileSystemAccess::direct
-     return SCAN_SUCCESS;
+@@ -2062,6 +2084,7 @@ ScanResult PosixFileSystemAccess::direct
  }
  
--#ifndef __APPLE__
-+#if !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__OpenBSD__) && \
-+    !defined(__NetBSD__) && !defined(__DragonFly__)
+ #ifndef __APPLE__
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
  
  // Determine which device contains the specified path.
  static std::string deviceOf(const std::string& database,
+@@ -2230,6 +2253,7 @@ static std::string deviceOf(const std::s
+     // No database has a mapping for this path.
+     return std::string();
+ }
++#endif
+ 
+ // Compute legacy filesystem fingerprint.
+ static std::uint64_t fingerprintOf(const std::string& path)
+@@ -2258,6 +2282,7 @@ static std::uint64_t fingerprintOf(const
+     return ++value;
+ }
+ 
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+ // Determine the UUID of the specified device.
+ static std::string uuidOf(const std::string& device)
+ {
+@@ -2334,6 +2359,7 @@ static std::string uuidOf(const std::str
+     // Couldn't determine device's UUID.
+     return std::string();
+ }
++#endif
+ 
+ fsfp_t FileSystemAccess::fsFingerprint(const LocalPath& path) const
+ {
+@@ -2344,6 +2370,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
+     if (!fingerprint)
+         return fsfp_t();
+ 
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+     // What device contains the specified path?
+     auto device = deviceOf(path.localpath);
+ 
+@@ -2360,6 +2387,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
+ 
+     LOG_warn << "Falling back to legacy filesystem fingerprint: "
+              << path;
++#endif
+ 
+     // Couldn't determine filesystem UUID.
+     return fsfp_t(fingerprint, std::string());

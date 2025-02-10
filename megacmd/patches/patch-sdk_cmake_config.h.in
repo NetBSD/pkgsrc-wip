@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Not define USE_INOTIFY on BSDs
+
 --- sdk/cmake/config.h.in.orig	2025-02-06 17:13:17.062965383 +0100
 +++ sdk/cmake/config.h.in
 @@ -229,7 +229,8 @@

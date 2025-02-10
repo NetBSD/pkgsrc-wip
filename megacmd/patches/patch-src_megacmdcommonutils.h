@@ -1,5 +1,7 @@
 $NetBSD$
 
+* BSDs use the functions of linux
+
 --- src/megacmdcommonutils.h.orig	2025-02-07 09:44:39.977015171 +0100
 +++ src/megacmdcommonutils.h
 @@ -269,7 +269,8 @@ void sleepMilliSeconds(long microseconds

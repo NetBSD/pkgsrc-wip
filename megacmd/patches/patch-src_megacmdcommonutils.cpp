@@ -1,5 +1,7 @@
 $NetBSD$
 
+* BSDs use the functions of linux
+
 --- src/megacmdcommonutils.cpp.orig	2025-02-07 09:43:13.320748794 +0100
 +++ src/megacmdcommonutils.cpp
 @@ -1128,7 +1128,8 @@ bool isValidEmail(string email)

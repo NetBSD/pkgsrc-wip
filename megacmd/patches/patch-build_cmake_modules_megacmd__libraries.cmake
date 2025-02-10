@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Fix used pcre library name
+
 --- build/cmake/modules/megacmd_libraries.cmake.orig	2025-01-30 14:04:12.000000000 +0100
 +++ build/cmake/modules/megacmd_libraries.cmake
 @@ -16,7 +16,7 @@ macro(load_megacmdserver_libraries)

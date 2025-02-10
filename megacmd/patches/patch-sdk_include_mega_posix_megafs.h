@@ -1,5 +1,7 @@
 $NetBSD$
 
+* BSDFileSystemAccess for BSDs
+
 --- sdk/include/mega/posix/megafs.h.orig	2025-01-24 13:56:57.000000000 +0100
 +++ sdk/include/mega/posix/megafs.h
 @@ -192,8 +192,7 @@ private:
