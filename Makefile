@@ -454,6 +454,7 @@ SUBDIR+=	chapel
 SUBDIR+=	chartsrv
 SUBDIR+=	charybdis
 SUBDIR+=	chbg
+SUBDIR+=	cheat
 SUBDIR+=	check-update
 SUBDIR+=	checkstyle
 SUBDIR+=	chemeq

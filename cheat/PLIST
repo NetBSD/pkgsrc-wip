@@ -1,0 +1,3 @@
+@comment $NetBSD$
+include/cheat.h
+man/man7/cheat.7
