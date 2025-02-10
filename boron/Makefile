@@ -18,6 +18,7 @@ USE_TOOLS+=	bash:run gmake
 REPLACE_BASH+=	configure
 CONFIG_SHELL=	${BASH}
 BUILD_TARGET=	boron
+INSTALL_TARGET=	install install-dev
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
