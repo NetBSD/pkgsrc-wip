@@ -3,7 +3,7 @@ $NetBSD: patch-gprproject_____init____.py,v 1.0 2024/11/27 11:00:00 dkazankov Ex
 Fix parameters throughput
 
 --- gprproject/__init__.py.orig	2024-09-24 12:28:32.000000000 +0300
-+++ gprproject/__init__.py	2024-11-27 14:33:44.097637432 +0200
++++ gprproject/__init__.py
 @@ -173,7 +173,7 @@
              print(f'{var:<32} := "{value}";')
  
@@ -13,3 +13,26 @@ Fix parameters throughput
              if status == 0 and args.install:
                  status = gpr.install([])
              return status
+@@ -182,19 +182,19 @@
+ 
+     def clean(self, args):
+         gpr = GPRTool.load(self.project_file)
+-        return gpr.clean([])
++        return gpr.clean(args.gpr_opts)
+ 
+     def install(self, args):
+         gpr = GPRTool.load(self.project_file)
+         if args.prefix:
+             gpr.prefix = os.path.abspath(args.prefix)
+-        return gpr.install([])
++        return gpr.install(args.gpr_opts)
+ 
+     def uninstall(self, args):
+         gpr = GPRTool.load(self.project_file)
+         if args.prefix:
+             gpr.prefix = os.path.abspath(args.prefix)
+-        return gpr.uninstall([])
++        return gpr.uninstall(args.gpr_opts)
+ 
+     def add_arguments(self, parser: argparse.ArgumentParser) -> None:
+         """Function to be used by end user to add switch to the build command.

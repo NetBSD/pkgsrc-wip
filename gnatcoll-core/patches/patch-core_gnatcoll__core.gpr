@@ -1,4 +1,4 @@
-$NetBSD: patch-gnatcoll.gpr,v 1.0 2024/05/17 18:00:00 dkazankov Exp $
+$NetBSD: patch-core_gnatcoll__core.gpr,v 1.0 2024/05/17 18:00:00 dkazankov Exp $
 
 Fix extra libs on NetBSD
 Fix RELRO options on NetBSD

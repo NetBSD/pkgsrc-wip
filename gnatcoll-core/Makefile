@@ -11,11 +11,13 @@ HOMEPAGE=	https://github.com/AdaCore/gnatcoll-core
 COMMENT=	The GNAT Components Collection (GNATcoll) - Core packages
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake grep
 
 .include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES=	c ada
+
+GCC_REQD+=	13
 
 MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD ENABLE_SHARED=yes
 
@@ -23,17 +25,19 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
 
-.include "../../wip/gcc14-gnat-libs/buildlink3.mk"
+.include "../../lang/gcc13-gnat-libs/buildlink3.mk"
+.include "../../devel/gprbuild/buildlink3.mk"
+
+# These lines must be after previous include
+GPRBUILD_OPTIONS+=	--config=default.cgpr
+GPRINSTALL_OPTIONS+=	--config=default.cgpr
+BUILD_MAKE_FLAGS+=	GPRINSTALL_OPTIONS=${GPRINSTALL_OPTIONS:Q}
 
 BUILDLINK_DEPMETHOD.xmlada=	full
 .include "../../wip/xmlada/buildlink3.mk"
 
 BUILDLINK_DEPMETHOD.gprlib=	full
 .include "../../wip/gprlib/buildlink3.mk"
-
-.include "../../wip/gprbuild/buildlink3.mk"
-
-.include "../../wip/gcc14-gnat/gcc.mk"
 
 PYTHON_VERSIONS_ACCEPTED=	312 311 310 39 38 27
 .include "../../lang/python/tool.mk"
