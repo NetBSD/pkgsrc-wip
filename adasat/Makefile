@@ -20,6 +20,8 @@ CHECK_RELRO_SUPPORTED=	no
 
 USE_LANGUAGES=	ada
 
+GCC_REQD+=	13
+
 MAKE_FLAGS=	BUILD_MODE=prod
 BUILD_TARGET=	all-libs
 
@@ -29,10 +31,7 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
 
-.include "../../wip/gcc14-gnat-libs/buildlink3.mk"
-
-.include "../../wip/gprbuild/buildlink3.mk"
-
-.include "../../wip/gcc14-gnat/gcc.mk"
+.include "../../lang/gcc13-gnat-libs/buildlink3.mk"
+.include "../../devel/gprbuild/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
