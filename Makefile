@@ -353,6 +353,7 @@ SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	bore
 SUBDIR+=	boringssl
+SUBDIR+=	boron
 SUBDIR+=	bowtie2
 SUBDIR+=	bpcscripts
 SUBDIR+=	bpytop
