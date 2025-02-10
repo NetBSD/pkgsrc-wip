@@ -19,6 +19,8 @@ GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	ada
 
+GCC_REQD+=	13
+
 SUBST_CLASSES+=		fixver
 SUBST_STAGE.fixver=	pre-configure
 SUBST_FILES.fixver=	./configure.in	./configure
@@ -31,9 +33,7 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
 
-.include "../../wip/gprbuild/buildlink3.mk"
-
-.include "../../wip/gcc14-gnat-libs/buildlink3.mk"
-.include "../../wip/gcc14-gnat/gcc.mk"
+.include "../../lang/gcc13-gnat-libs/buildlink3.mk"
+.include "../../devel/gprbuild/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
