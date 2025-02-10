@@ -45,7 +45,7 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ### Native Language Support
 ###
 .if !empty(PKG_OPTIONS:Mnls)
-USE_TOOLS+=msgfmt
+USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
