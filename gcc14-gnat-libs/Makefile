@@ -26,7 +26,7 @@ CHECK_RELRO_SUPPORTED=	no
 
 ## Depend on exactly ${GCC14_DIST_VERSION}.
 TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GCC14_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc14-gnat
-TOOL_DEPENDS+=		patchelf-*:../../devel/patchelf
+TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -63,7 +63,7 @@ do-install:
 	cd ${LIBGCC_PREFIX} && \
 		${PAX} -rw -s '/^\(.*\/\)\([^\/]*\)/\2/' \
 		${DESTDIR}${LOCALBASE}/${TARGET_LIBDIR} <${LIBRARY_FILES}
-	echo "Patching RPATH in destination libraries..."
+	${ECHO} "Patching RPATH in destination libraries..."
 	cd ${DESTDIR}${LOCALBASE} && \
 		${FIND} ${TARGET_LIBDIR} \( -name \*.so\* -and -type f \) -print \
 			-exec patchelf --force-rpath --set-rpath '$$ORIGIN:${LOCALBASE}/${TARGET_LIBDIR}' {} \;
