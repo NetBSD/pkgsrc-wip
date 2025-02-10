@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (unity-2.6.1.tar.gz) = 72f06899ac8978d3716660f6ac90f82a0c2c80c00a14ced1ad708c23194b5248
+SHA512 (unity-2.6.1.tar.gz) = 70d4c73a2ca317fd64ca2bce62f911d3e398f63e8b8c5b1b718d43c336c482c08f73839f655dc87cec4b58b63306bea3c1f3018aa8b0d6c5130a8b620e16e5f7
+Size (unity-2.6.1.tar.gz) = 316918 bytes
+SHA1 (patch-meson.build) = 991b9f08b6942ef2d96796b8f2efb973e15d7673
+SHA1 (patch-meson__options.txt) = f18a1330d00a35bd85871081cf62d00e1751b5b7

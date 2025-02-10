@@ -1,0 +1,23 @@
+$NetBSD$
+
+Prepare package version for pkgsrc SUBST framework.
+
+--- meson.build.orig	2025-01-01 16:53:54.000000000 +0000
++++ meson.build
+@@ -7,14 +7,8 @@
+ project('unity', 'c',
+   license: 'MIT',
+ 
+-  # Set project version to value extracted from unity.h header
+-  version: run_command(
+-    [
+-      'auto/extract_version.py',
+-      'src/unity.h'
+-    ],
+-    check: true
+-  ).stdout().strip(),
++  # Set project version (pkgsrc uses version of package)
++  version: '@PKGVERSION_NOREV@',
+ 
+   meson_version: '>=0.47.0',
+   default_options: [

@@ -5788,6 +5788,7 @@ SUBDIR+=	unimrcp-apr
 SUBDIR+=	unimrcp-aprutil
 SUBDIR+=	unimrcp-sofiasip
 SUBDIR+=	unison-snapshot
+SUBDIR+=	unity
 SUBDIR+=	universal-test-runner
 SUBDIR+=	universalcodegrep
 SUBDIR+=	unix2tcp

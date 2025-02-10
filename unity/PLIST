@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/unity/unity.h
+include/unity/unity_internals.h
+lib/libunity.a
+lib/pkgconfig/unity.pc

@@ -1,0 +1,8 @@
+devel/unity: Import version 2.6.1
+
+Unity Test is a unit testing framework built for C, with a focus on working
+with embedded toolchains.
+
+This project is made to test code targetting microcontrollers big and small.
+The core project is a single C file and a pair of headers, allowing it to be
+added to your existing build setup without too much headache.
