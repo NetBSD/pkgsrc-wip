@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix build on NetBSD.
+https://github.com/jstkdng/ueberzugpp/pull/245
 
 --- src/process/linux.cpp.orig	2025-02-11 15:17:24.790710191 +0000
 +++ src/process/linux.cpp

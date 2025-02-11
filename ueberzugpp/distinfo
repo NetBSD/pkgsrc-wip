@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (ueberzugpp-2.9.6.tar.gz) = 418c03427c17388d7729f90e164a8d8962cee8d6d70b2f29901e890c2ea96e33
 SHA512 (ueberzugpp-2.9.6.tar.gz) = bb70933cbc887cc3967c6011f0616d056f5723f333f6cfd70e7a3dd785791b83b9855c0b3d0c901efc59d65ba113462946bc0f08d57cf845ec6c59ec861da874
 Size (ueberzugpp-2.9.6.tar.gz) = 69379 bytes
-SHA1 (patch-src_process_linux.cpp) = 2a4797cb732b0fcdc3737301e67cd5c6c556591b
+SHA1 (patch-src_process_linux.cpp) = 6a1836bf696748ba28663cab61a59e9c4c590a66
