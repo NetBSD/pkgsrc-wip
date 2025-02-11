@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/faun.h
+lib/libfaun.so
+lib/libfaun.so.0
+lib/libfaun.so.${PKGVERSION}

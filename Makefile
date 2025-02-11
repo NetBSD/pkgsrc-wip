@@ -923,6 +923,7 @@ SUBDIR+=	fastrpc
 SUBDIR+=	fasttree
 SUBDIR+=	fastx-toolkit
 SUBDIR+=	fatsort
+SUBDIR+=	faun
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel

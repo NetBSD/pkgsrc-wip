@@ -1,0 +1,28 @@
+$NetBSD$
+
+Use pkgsrc install macros.
+
+--- Makefile.orig	2025-01-04 16:35:20.000000000 +0000
++++ Makefile
+@@ -79,14 +79,15 @@ crossfade: example/crossfade.c $(FAUN_LI
+ 	$(CC) -Wall -W $< $(CFLAGS) -I. -L. -lfaun $(DEP_STATIC) $(LDFLAGS) -o $@
+ 
+ install:
+-	mkdir -p $(DESTDIR)/include $(LIB_DIR)
+-	install -m 644 faun.h $(DESTDIR)/include
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/include
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/lib
++	$(BSD_INSTALL_DATA) faun.h $(DESTDIR)$(PREFIX)/include
+ ifdef STATIC_LIB
+-	install -m 644 $(FAUN_LIB) $(LIB_DIR)
++	$(BSD_INSTALL_LIB) $(FAUN_LIB) $(DESTDIR)$(PREFIX)/lib
+ else
+-	install -m 755 $(FAUN_LIB) $(LIB_DIR)
+-	ln -s $(FAUN_LIB) $(LIB_DIR)/$(FAUN_SO)
+-	ln -s $(FAUN_LIB) $(LIB_DIR)/libfaun.so
++	$(BSD_INSTALL_LIB) $(FAUN_LIB) $(DESTDIR)$(PREFIX)/lib
++	ln -s $(FAUN_LIB) $(DESTDIR)$(PREFIX)/lib/$(FAUN_SO)
++	ln -s $(FAUN_LIB) $(DESTDIR)$(PREFIX)/lib/libfaun.so
+ endif
+ 
+ clean:

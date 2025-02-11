@@ -1,0 +1,5 @@
+audio/faun: Add version 0.2.1
+
+Packaged in wip by Frédéric Fauberteau
+
+Faun is a high-level C API for playback of sound & music in games & demos.
