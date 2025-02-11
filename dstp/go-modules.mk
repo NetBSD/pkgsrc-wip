@@ -1,4 +1,3 @@
-===> Extracting for dstp-0.4.0
 # $NetBSD$
 
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.13.0.mod
