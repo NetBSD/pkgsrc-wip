@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2024/05/31 14:00:00 dkazankov Exp $
 
-.include "version.mk"
-PKGNAME=	spark2014-${SPARK2014_VERSION}
+PKGNAME=	spark2014-13.0.0
 PKGREVISION=	1
 CATEGORIES=	lang devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -40,7 +39,8 @@ SITES.${GCC_DISTFILE}=	${MASTER_SITE_GNU:=gcc/${GCC_DISTNAME}/}
 
 GCC_REQD+=	13
 
-.include "../../wip/gprbuild/buildlink3.mk"
+.include "../../devel/gprbuild/buildlink3.mk"
+
 .include "../../wip/xmlada/buildlink3.mk"
 .include "../../wip/gprlib/buildlink3.mk"
 .include "../../wip/gnatcoll-core/buildlink3.mk"
