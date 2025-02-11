@@ -1,9 +1,20 @@
 $NetBSD: patch-sql_Makefile,v 1.0 2024/07/24 19:00:00 dkazankov Exp $
 
+Fix target calculation
 Fix library types to build
+Add extra options to gprinstall
 
---- xref/Makefile.orig	2022-09-02 15:43:38.000000000 +0300
-+++ xref/Makefile	2024-07-24 20:33:41.375207331 +0300
+--- xref/Makefile.orig	2023-11-06 12:21:17.000000000 +0200
++++ xref/Makefile
+@@ -76,7 +76,7 @@
+ # Load current setup if any
+ -include makefile.setup
+ 
+-NORMALIZED_TARGET := $(subst normalized_target:,,$(wordlist 6,6,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers)))
++NORMALIZED_TARGET := $(lastword $(subst :, ,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers | grep ' 1 normalized_target:')))
+ ifeq ($(NORMALIZED_TARGET),)
+   $(error No toolchain found for target "$(TARGET)")
+ endif
 @@ -86,7 +86,7 @@
  ifeq ($(ENABLE_SHARED), yes)
     LIBRARY_TYPES=static relocatable static-pic
@@ -13,3 +24,18 @@ Fix library types to build
  endif
  
  ifeq ($(INTEGRATED), yes)
+@@ -99,11 +99,13 @@
+ 
+ # Used to pass extra options to GPRBUILD, like -d for instance
+ GPRBUILD_OPTIONS=
++GPRINSTALL_OPTIONS=
+ 
+ BUILDER=gprbuild -p -m $(GTARGET) $(RBD) -j$(PROCESSORS) $(GPR_VARS) \
+ 	$(GPRBUILD_OPTIONS)
+ INSTALLER=gprinstall -p -f --target=$(TARGET) $(GPR_VARS) \
+-	$(RBD) --sources-subdir=include/$(NAME) --prefix=$(prefix)$(integrated_install)
++	$(RBD) --sources-subdir=include/$(NAME) --prefix=$(prefix)$(integrated_install) \
++	$(GPRINSTALL_OPTIONS)
+ CLEANER=gprclean -q $(RBD) $(GPR_VARS)
+ UNINSTALLER=$(INSTALLER) -p -f --install-name=$(NAME) --uninstall
+ 

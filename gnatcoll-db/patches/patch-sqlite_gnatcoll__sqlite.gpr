@@ -3,7 +3,7 @@ $NetBSD: patch-sqlite_gnatcoll__sqlite.gpr,v 1.0 2024/07/24 19:00:00 dkazankov E
 Fix project paths
 
 --- sqlite/gnatcoll_sqlite.gpr.orig	2022-09-02 15:43:38.000000000 +0300
-+++ sqlite/gnatcoll_sqlite.gpr	2024-07-24 19:35:36.829916300 +0300
++++ sqlite/gnatcoll_sqlite.gpr
 @@ -23,7 +23,7 @@
  
  with "gnatcoll_sqlite_conf.gpr";

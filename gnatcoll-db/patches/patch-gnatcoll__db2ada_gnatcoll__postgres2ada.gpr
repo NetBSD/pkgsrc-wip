@@ -3,7 +3,7 @@ $NetBSD: patch-gnatcoll__db2ada_gnatcoll__postgres2ada.gpr,v 1.0 2024/07/24 19:0
 Fix project paths
 
 --- gnatcoll_db2ada/gnatcoll_postgres2ada.gpr.orig	2022-09-02 15:43:38.000000000 +0300
-+++ gnatcoll_db2ada/gnatcoll_postgres2ada.gpr	2024-07-24 18:55:39.814325097 +0300
++++ gnatcoll_db2ada/gnatcoll_postgres2ada.gpr
 @@ -23,8 +23,8 @@
  
  with "../gnatcoll_db_shared.gpr";

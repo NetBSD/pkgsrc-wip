@@ -1,9 +1,10 @@
 $NetBSD: patch-postgres_gnatcoll__postgres.gpr,v 1.0 2024/07/24 19:00:00 dkazankov Exp $
 
 Fix project paths
+Add required libraries
 
---- postgres/gnatcoll_postgres.gpr.orig	2022-09-02 15:43:38.000000000 +0300
-+++ postgres/gnatcoll_postgres.gpr	2024-07-24 19:38:37.895285106 +0300
+--- postgres/gnatcoll_postgres.gpr.orig	2023-11-06 12:21:17.000000000 +0200
++++ postgres/gnatcoll_postgres.gpr
 @@ -23,7 +23,7 @@
  
  with "gnatcoll_postgres_conf.gpr";
@@ -13,3 +14,12 @@ Fix project paths
  
  library project GnatColl_Postgres is
  
+@@ -71,7 +71,7 @@
+    package Ide renames GnatColl_Postgres_Conf.Ide;
+ 
+    package Linker is
+-      for Linker_Options use ("-lpq");
++      for Linker_Options use ("-lpq", "-lpgcommon", "-lpgport", "-lssl", "-lcrypto", "-lintl", "-lgssapi");
+    end Linker;
+ 
+ end GnatColl_Postgres;
