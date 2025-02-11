@@ -4845,6 +4845,7 @@ SUBDIR+=	py-typedload
 SUBDIR+=	py-u2flib-server
 SUBDIR+=	py-ua-parser
 SUBDIR+=	py-ubjson
+SUBDIR+=	py-ueberzug
 SUBDIR+=	py-umalqurra
 SUBDIR+=	py-unidecode
 SUBDIR+=	py-unidiff

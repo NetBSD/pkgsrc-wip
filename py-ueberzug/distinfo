@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (ueberzug-18.3.1.tar.gz) = c8badf20f0d054ef299eb78c5ed07a363fbd0047f154447b82e8f0c75c1bb9cd
+SHA512 (ueberzug-18.3.1.tar.gz) = 194f94c69d61163edde4a09b9575efa18d82119636f1b89b062fde207b18c7d0aca3ed144b08194a81417f6fe5ae9069de58b824b31ad1f34ecb80c67b4d1fc1
+Size (ueberzug-18.3.1.tar.gz) = 58290 bytes
+SHA1 (patch-ueberzug_X_python.h) = 3bf15479e9bcb184668405138e24df563b4c9f0c
