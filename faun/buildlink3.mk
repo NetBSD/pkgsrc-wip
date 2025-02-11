@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	faun
+
+.if !defined(FAUN_BUILDLINK3_MK)
+FAUN_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.faun+=	faun>=0.2.1
+BUILDLINK_PKGSRCDIR.faun?=	../../wip/faun
+
+.endif	# FAUN_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-faun
