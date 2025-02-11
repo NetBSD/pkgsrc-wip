@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/ueberzug
+bin/ueberzugpp
+man/man1/ueberzug.1
+man/man1/ueberzugpp.1

@@ -5772,6 +5772,7 @@ SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	udp-ping
 SUBDIR+=	udunits2
+SUBDIR+=	ueberzugcpp
 SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
