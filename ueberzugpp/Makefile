@@ -10,8 +10,9 @@ HOMEPAGE=	https://github.com/jstkdng/ueberzugpp/
 COMMENT=	Command line utility allowing to draw images on terminals
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++20
+USE_TOOLS+=		pkg-config
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/CLI11/buildlink3.mk"
