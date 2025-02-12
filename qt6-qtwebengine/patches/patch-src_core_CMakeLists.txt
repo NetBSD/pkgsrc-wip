@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- src/core/CMakeLists.txt.orig	2025-01-24 10:49:20.000000000 +0000
++++ src/core/CMakeLists.txt
+@@ -21,7 +21,7 @@ add_subdirectory(tools/qwebengine_conver
+ #   TOOLCHAIN SETUP
+ ##
+ 
+-if(LINUX)
++if(UNIX)
+     setup_toolchains()
+ endif()
+ 
+@@ -200,7 +200,7 @@ foreach(arch ${archs})
+                 accessibility_activation_observer.cpp accessibility_activation_observer.h
+         )
+ 
+-        extend_gn_target(${buildGn} CONDITION LINUX OR WIN32
++        extend_gn_target(${buildGn} CONDITION UNIX OR WIN32
+             SOURCES
+                 compositor/content_gpu_client_qt.cpp compositor/content_gpu_client_qt.h
+                 ozone/gl_context_qt.cpp ozone/gl_context_qt.h
+@@ -213,7 +213,7 @@ foreach(arch ${archs})
+                 ozone/gl_surface_wgl_qt.cpp ozone/gl_surface_wgl_qt.h
+         )
+ 
+-        extend_gn_target(${buildGn} CONDITION LINUX
++        extend_gn_target(${buildGn} CONDITION UNIX
+             SOURCES
+                 ozone/gl_ozone_angle_qt.cpp ozone/gl_ozone_angle_qt.h
+                 ozone/gl_ozone_egl_qt.cpp ozone/gl_ozone_egl_qt.h
+@@ -436,7 +436,7 @@ foreach(arch ${archs})
+             CONDITION QT_FEATURE_webenginedriver
+         )
+ 
+-        if(LINUX)
++        if(UNIX)
+             list(APPEND gnArgArg
+                 angle_enable_gl=true
+                 use_gtk=false # GTK toolkit bindings

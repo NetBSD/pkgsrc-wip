@@ -1,0 +1,59 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/BUILD.gn
+@@ -64,7 +64,7 @@ declare_args() {
+   qtwebengine_target = "//tools/gn"
+ }
+ 
+-if (is_official_build) {
++if (is_official_build && !is_bsd) {
+   # An official (maximally optimized!) component (optimized for build times)
+   # build doesn't make sense and usually doesn't work.
+   assert(!is_component_build)
+@@ -96,7 +96,6 @@ group("gn_all") {
+       "//codelabs",
+       "//components:components_unittests",
+       "//components/gwp_asan:gwp_asan_unittests",
+-      "//infra/orchestrator:orchestrator_all",
+       "//net:net_unittests",
+       "//sandbox:sandbox_unittests",
+       "//services:services_unittests",
+@@ -426,7 +425,7 @@ group("gn_all") {
+       }
+     }
+ 
+-    if (is_linux || is_chromeos || is_android) {
++    if ((is_linux && !is_bsd) || is_chromeos || is_android) {
+       deps += [
+         "//third_party/breakpad:breakpad_unittests",
+         "//third_party/breakpad:core-2-minidump",
+@@ -626,6 +625,15 @@ group("gn_all") {
+       }
+     }
+ 
++    if (is_bsd) {
++      deps -= [
++        "//third_party/breakpad:dump_syms($host_system_allocator_toolchain)",
++        "//third_party/breakpad:microdump_stackwalk($host_system_allocator_toolchain)",
++        "//third_party/breakpad:minidump_dump($host_system_allocator_toolchain)",
++        "//third_party/breakpad:minidump_stackwalk($host_system_allocator_toolchain)",
++      ]
++    }
++
+     if (is_mac) {
+       deps += [
+         "//third_party/breakpad:dump_syms",
+@@ -1093,7 +1101,7 @@ if (use_blink && !is_cronet_build) {
+     ]
+   }
+ 
+-  if (!is_chromeos_ash && !is_ios && !is_fuchsia && !is_android && !is_castos) {
++  if (!is_chromeos_ash && !is_ios && !is_fuchsia && !is_android && !is_castos && !is_bsd) {
+     script_test("chrome_wpt_tests") {
+       script = "//third_party/blink/tools/run_wpt_tests.py"
+       args = [

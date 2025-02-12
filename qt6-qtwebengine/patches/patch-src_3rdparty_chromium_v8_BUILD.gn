@@ -1,0 +1,129 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/v8/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/v8/BUILD.gn
+@@ -1448,6 +1448,15 @@ config("toolchain") {
+   } else if (target_os == "chromeos") {
+     defines += [ "V8_HAVE_TARGET_OS" ]
+     defines += [ "V8_TARGET_OS_CHROMEOS" ]
++  } else if (target_os == "openbsd") {
++    defines += [ "V8_HAVE_TARGET_OS" ]
++    defines += [ "V8_TARGET_OS_OPENBSD" ]
++  } else if (target_os == "freebsd") {
++    defines += [ "V8_HAVE_TARGET_OS" ]
++    defines += [ "V8_TARGET_OS_FREEBSD" ]
++  } else if (target_os == "netbsd") {
++    defines += [ "V8_HAVE_TARGET_OS" ]
++    defines += [ "V8_TARGET_OS_NETBSD" ]
+   }
+ 
+   # TODO(infra): Support v8_enable_prof on Windows.
+@@ -2339,6 +2348,23 @@ action("generate_bytecode_builtins_list"
+   ]
+ }
+ 
++action("run_paxctl_mksnapshot") {
++    deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++
++    script = "tools/run-paxctl.py"
++    stamp = "$target_gen_dir/paxctl_stamp"
++    outputs = [ stamp ]
++
++    sources = []
++    data = []
++
++    args = [
++      rebase_path(stamp, root_build_dir), "/usr/sbin/paxctl", "+m", "./" + rebase_path(get_label_info(":mksnapshot($v8_snapshot_toolchain)",
++                                        "root_out_dir") + "/mksnapshot",
++                         root_build_dir),
++    ]
++}
++
+ # Template to generate different V8 snapshots based on different runtime flags.
+ # Can be invoked with run_mksnapshot(<name>). The target will resolve to
+ # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
+@@ -2357,7 +2383,11 @@ template("run_mksnapshot") {
+     suffix = "_$name"
+   }
+   action("run_mksnapshot_" + name) {
+-    deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++    if (target_os == "netbsd") {
++      deps = [ ":mksnapshot($v8_snapshot_toolchain)", ":run_paxctl_mksnapshot" ]
++    } else {
++      deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++    }
+ 
+     script = "tools/run.py"
+ 
+@@ -2414,6 +2444,12 @@ template("run_mksnapshot") {
+       if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
+         args += [ "--reorder-builtins" ]
+       }
++
++      if (v8_current_cpu == "x86") {
++        args -= [
++          "--abort-on-bad-builtin-profile-data",
++        ]
++      }
+     }
+ 
+     # This is needed to distinguish between generating code for the simulator
+@@ -4417,7 +4453,7 @@ v8_header_set("v8_internal_headers") {
+       # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+       # based on Darwin and thus POSIX-compliant to a similar degree.
+       if (is_linux || is_chromeos || is_mac || is_ios ||
+-          target_os == "freebsd") {
++          target_os == "freebsd" || target_os == "netbsd") {
+         sources += [ "src/trap-handler/handler-inside-posix.h" ]
+       } else if (is_win) {
+         sources += [ "src/trap-handler/handler-inside-win.h" ]
+@@ -5811,7 +5847,7 @@ v8_source_set("v8_base_without_compiler"
+       # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+       # based on Darwin and thus POSIX-compliant to a similar degree.
+       if (is_linux || is_chromeos || is_mac || is_ios ||
+-          target_os == "freebsd") {
++          target_os == "freebsd" || target_os == "netbsd") {
+         sources += [
+           "src/trap-handler/handler-inside-posix.cc",
+           "src/trap-handler/handler-outside-posix.cc",
+@@ -6423,7 +6459,7 @@ v8_component("v8_libbase") {
+     }
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",
+       "src/base/platform/platform-linux.cc",
+@@ -6434,6 +6470,27 @@ v8_component("v8_libbase") {
+       "dl",
+       "rt",
+     ]
++  } else if (is_openbsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-openbsd.cc",
++    ]
++    libs = [ "execinfo" ]
++  } else if (is_netbsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-openbsd.cc",
++    ]
++    libs = [
++      "rt",
++      "execinfo",
++    ]
++  } else if (is_freebsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-freebsd.cc",
++    ]
++    libs = [ "execinfo" ]
+   } else if (current_os == "aix") {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",

@@ -5001,6 +5001,7 @@ SUBDIR+=	qt1
 SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
+SUBDIR+=	qt6-qtwebengine
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtfm
 SUBDIR+=	qtile

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/ui/gfx/switches.h.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/ui/gfx/switches.h
+@@ -18,7 +18,7 @@ GFX_SWITCHES_EXPORT extern const char kE
+ GFX_SWITCHES_EXPORT extern const char kForcePrefersReducedMotion[];
+ GFX_SWITCHES_EXPORT extern const char kHeadless[];
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ GFX_SWITCHES_EXPORT extern const char kX11Display[];
+ GFX_SWITCHES_EXPORT extern const char kNoXshm[];
+ #endif

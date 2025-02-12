@@ -1,0 +1,35 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/content/test/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/content/test/BUILD.gn
+@@ -1612,7 +1612,7 @@ test("content_browsertests") {
+     "../test/url_loader_interceptor_browsertest.cc",
+   ]
+ 
+-  if (is_linux) {
++  if ((is_linux) && !is_bsd) {
+     sources += [ "../browser/network/address_map_linux_browsertest.cc" ]
+   }
+ 
+@@ -2271,7 +2271,7 @@ static_library("run_all_unittests") {
+     ":test_support",
+     "//base/test:test_support",
+   ]
+-  if (is_linux || is_chromeos) {
++  if ((is_linux && !is_bsd) || is_chromeos) {
+     deps += [ "//content/common:set_process_title_linux" ]
+   }
+ }
+@@ -3375,7 +3375,7 @@ test("content_unittests") {
+     deps += [ "//third_party/boringssl" ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux && !is_bsd) || is_chromeos) {
+     sources += [ "../common/set_process_title_linux_unittest.cc" ]
+     deps += [ "//content/common:set_process_title_linux" ]
+   }

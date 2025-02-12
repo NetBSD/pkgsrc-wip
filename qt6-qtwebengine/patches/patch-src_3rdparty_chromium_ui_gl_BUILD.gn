@@ -1,0 +1,32 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/ui/gl/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/ui/gl/BUILD.gn
+@@ -186,7 +186,6 @@ jumbo_component("gl") {
+   ]
+   public_deps = [
+     "//base",
+-    "//third_party/mesa_headers",
+     "//ui/events/platform",
+     "//ui/gfx",
+     "//ui/gfx/geometry",
+@@ -428,7 +427,6 @@ jumbo_component("gl") {
+     data_deps += [
+       "//third_party/angle:libEGL",
+       "//third_party/angle:libGLESv2",
+-      "//third_party/mesa_headers",
+     ]
+     if (enable_swiftshader) {
+       data_deps += [
+@@ -646,7 +644,6 @@ test("gl_unittests") {
+ 
+   data_deps = [
+     "//testing/buildbot/filters:gl_unittests_filters",
+-    "//third_party/mesa_headers",
+   ]
+ 
+   if (is_win) {

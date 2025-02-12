@@ -1,0 +1,43 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn
+@@ -36,6 +36,24 @@ buildflag_header("buildflags") {
+   ]
+ }
+ 
++action("run_paxctl_v8_context_snapshot_generator") {
++  deps = [ ":v8_context_snapshot_generator($v8_snapshot_toolchain)" ]
++
++  script = "//v8/tools/run-paxctl.py"
++  stamp = "$target_gen_dir/paxctl_stamp"
++  outputs = [ stamp ]
++
++  sources = []
++  data = []
++
++  args = [
++    rebase_path(stamp, root_build_dir),
++    "/usr/sbin/paxctl", "+m",
++    "./" + rebase_path(get_label_info(":v8_context_snapshot_generator", "root_out_dir") + "/v8_context_snapshot_generator",
++    root_build_dir),
++  ]
++}
++
+ if (use_v8_context_snapshot) {
+   if (v8_snapshot_toolchain == current_toolchain) {
+     action("generate_v8_context_snapshot") {
+@@ -53,6 +71,9 @@ if (use_v8_context_snapshot) {
+       ]
+ 
+       deps = [ ":v8_context_snapshot_generator" ]
++      if (target_os == "netbsd") {
++        deps += [ ":run_paxctl_v8_context_snapshot_generator" ]
++      }
+ 
+       # TODO(sky): figure out why this doesn't work on android cross compile.
+       # In the case of compiling for the snapshot `shlib_extension` is ".so"

@@ -1,0 +1,20 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/build/config/clang/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
++++ src/3rdparty/chromium/build/config/clang/BUILD.gn
+@@ -173,6 +173,11 @@ clang_lib("compiler_builtins") {
+     # the Rust stdlib's intrinsics here.
+     #
+     # Don't define libname which makes this target do nothing.
++  } else if (is_bsd) {
++    # Since there's no Rust in the toolchain, there's no concern that we'll use
++    # the Rust stdlib's intrinsics here.
++    #
++    # Don't define libname which makes this target do nothing.
+   } else if (is_mac) {
+     libname = "osx"
+   } else if (is_ios) {

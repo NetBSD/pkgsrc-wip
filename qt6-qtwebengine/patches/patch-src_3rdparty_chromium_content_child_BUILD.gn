@@ -1,0 +1,22 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/content/child/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ src/3rdparty/chromium/content/child/BUILD.gn
+@@ -130,6 +130,13 @@ target(link_target_type, "child") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "sandboxed_process_thread_type_handler.cc",
++      "sandboxed_process_thread_type_handler.h",
++    ]
++  }
++
+   if (is_win) {
+     sources += [
+       "dwrite_font_proxy/dwrite_font_proxy_init_impl_win.cc",
