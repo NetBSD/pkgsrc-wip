@@ -12,7 +12,12 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++20
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pax pkg-config
+
+INSTALLATION_DIRS+=	share/examples/ueberzugpp
+
+post-install:
+	cd ${WRKSRC}/scripts && ${PAX} -pe -rw * ${DESTDIR}${PREFIX}/share/examples/ueberzugpp
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/CLI11/buildlink3.mk"

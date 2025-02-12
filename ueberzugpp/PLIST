@@ -3,3 +3,11 @@ bin/ueberzug
 bin/ueberzugpp
 man/man1/ueberzug.1
 man/man1/ueberzugpp.1
+share/examples/ueberzugpp/fifo/fzf-fifo
+share/examples/ueberzugpp/fifo/img-fifo
+share/examples/ueberzugpp/fzfub
+share/examples/ueberzugpp/img
+share/examples/ueberzugpp/lf/cleaner
+share/examples/ueberzugpp/lf/lfub
+share/examples/ueberzugpp/lf/preview
+share/examples/ueberzugpp/sockets.py
