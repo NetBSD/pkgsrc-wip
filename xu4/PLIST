@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/xu4
+share/applications/xu4.desktop
+share/doc/xu4/README.md
+share/icons/hicolor/48x48/apps/xu4.png
+share/xu4/U4-Upgrade.mod
+share/xu4/Ultima-IV.mod
+share/xu4/render.pak
+share/xu4/u4upgrad.zip

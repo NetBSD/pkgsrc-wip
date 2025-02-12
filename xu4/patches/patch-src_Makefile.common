@@ -1,0 +1,17 @@
+$NetBSD$
+
+Fix glfw backend.
+
+--- src/Makefile.common.orig	2025-02-11 22:49:17.575727072 +0000
++++ src/Makefile.common
+@@ -77,8 +77,10 @@ CXXSRCS=\
+ ifeq ($(UI),glv)
+ 	CSRCS+=$(GLV_SRC)
+ else
++ifneq ($(UI),glfw)
+ 	CXXSRCS+=event_$(UI).cpp
+ endif
++endif
+ 
+ #ifeq ($(CONF),boron)
+ 	CSRCS+=module.c support/cdi.c

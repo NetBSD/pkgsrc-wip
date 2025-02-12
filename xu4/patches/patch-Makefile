@@ -1,0 +1,36 @@
+$NetBSD$
+
+* Don't download third-party archives.
+* Don't use non-portable option of install.
+
+--- Makefile.orig	2025-01-04 21:38:58.000000000 +0000
++++ Makefile
+@@ -11,7 +11,7 @@ endif
+ DESTDIR ?= /usr/local
+ 
+ MODULES=render.pak Ultima-IV.mod U4-Upgrade.mod
+-BORON=boron
++BORON=@BORON@
+ REND=module/render
+ 
+ 
+@@ -45,12 +45,13 @@ ultima4.zip:
+ u4upgrad.zip:
+ 	curl -sSL -o $@ http://sourceforge.net/projects/xu4/files/Ultima%204%20VGA%20Upgrade/1.3/u4upgrad.zip
+ 
+-install: src/xu4 $(MODULES) u4upgrad.zip
+-	mkdir -p $(DESTDIR)/bin $(DESTDIR)/share/xu4
+-	install -m 755 -s src/xu4 $(DESTDIR)/bin/xu4
+-	install -m 644 -t $(DESTDIR)/share/xu4 $(MODULES) u4upgrad.zip
+-	install -D -m 644 icons/shield.png $(DESTDIR)/share/icons/hicolor/48x48/apps/xu4.png
+-	install -D -m 644 dist/xu4.desktop $(DESTDIR)/share/applications/xu4.desktop
++install: src/xu4 $(MODULES)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/xu4
++	$(BSD_INSTALL_PROGRAM) src/xu4 $(DESTDIR)$(PREFIX)/bin/xu4
++	$(BSD_INSTALL_DATA) $(MODULES) u4upgrad.zip $(DESTDIR)$(PREFIX)/share/xu4
++	$(BSD_INSTALL_DATA) icons/shield.png $(DESTDIR)$(PREFIX)/share/icons/hicolor/48x48/apps/xu4.png
++	$(BSD_INSTALL_DATA) dist/xu4.desktop $(DESTDIR)$(PREFIX)/share/applications/xu4.desktop
+ 
+ snapshot: $(MODULES)
+ 	@rm -f project.tar.gz

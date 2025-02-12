@@ -6081,6 +6081,7 @@ SUBDIR+=	xtraceroute
 SUBDIR+=	xtreemfs-client
 SUBDIR+=	xtreemfs-server
 SUBDIR+=	xtrkcad
+SUBDIR+=	xu4
 SUBDIR+=	xwallpaper
 SUBDIR+=	xwax
 SUBDIR+=	xwelltris

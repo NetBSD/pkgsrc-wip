@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.9 2024/02/01 09:33:08 wiz Exp $
+
+BLAKE2s (u4upgrad.zip) = fdef92af2342fec7f2636049979d757ee3b866452bfaabd5a31233b09882fdf9
+SHA512 (u4upgrad.zip) = 4832d8cfd266d3ccc5eab5184bd2b6b9acd4c0203478873fb5e11704d95104dd9285a7752bad77f873d4f8603673184ae9421964509b948ec69944a4ceadd083
+Size (u4upgrad.zip) = 632072 bytes
+BLAKE2s (xu4-1.4.2.tar.gz) = 63d292668b8ba5aa38f0ad86912b14266c9923c6e41ce554dd5675130e50a214
+SHA512 (xu4-1.4.2.tar.gz) = d2ae3fdf47809d4238f986594f182326538d2bbfcd0bacade859a70b8ad91d7b387a3f3d4561361cc3cbd715cc4d54c73c01ad61dcdf10948e715e714e5147f0
+Size (xu4-1.4.2.tar.gz) = 8069084 bytes
+SHA1 (patch-Makefile) = 44c0a9c0e34dcd7d144bdeb1630046dce117a115
+SHA1 (patch-src_Makefile.common) = c44697504a018069b08af5372fe2e4771a58a3c6
+SHA1 (patch-src_screen__sdl.cpp) = 97540d293b9ce3a72b242e6b3afe0447b26a163a
+SHA1 (patch-src_support_cdi.c) = dd39751389d6a7766d24bb5f694ac5ce4eaaf174
+SHA1 (patch-src_support_irecord.c) = ac0b560551c2dcbaa501f4d60850b5feed9730a6
