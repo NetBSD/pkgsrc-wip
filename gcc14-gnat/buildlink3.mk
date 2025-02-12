@@ -10,14 +10,27 @@ BUILDLINK_ABI_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14.1
 BUILDLINK_PKGSRCDIR.gcc14-gnat=		../../wip/gcc14-gnat
 BUILDLINK_DEPMETHOD.gcc14-gnat?=	build
 
+PREPEND_PATH+=	${BUILDLINK_DIR}/gcc14-gnat/bin
+
 GNU_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
 ADALIB_PREFIX=	gcc14-gnat/lib/gcc/${GNU_TARGET_MACHINE}/14.2.0
 
-BUILDLINK_FILES.gcc14-gnat+=	${ADALIB_PREFIX}/adalib/*.ali
+BUILDLINK_FILES.gcc14-gnat+=	gcc14-gnat/${GNU_TARGET_MACHINE}/lib/*
 
-BUILDLINK_INCDIRS.gcc14-gnat+=	gcc14-gnat/include ${ADALIB_PREFIX}/adainclude
-BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/lib ${ADALIB_PREFIX}/adalib
+BUILDLINK_INCDIRS.gcc14-gnat+=	gcc14-gnat/include
+BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/include
+BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/include-fixed
+BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/plugin/include
+BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/adainclude
+
+BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/lib
+BUILDLINK_LIBDIRS.gcc14-gnat+=	${ADALIB_PREFIX}
+BUILDLINK_LIBDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/adalib
+BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/${GNU_TARGET_MACHINE}/lib
+
+BUILDLINK_CONTENTS_FILTER.gcc14-gnat = ${EGREP} \
+    '(bin/.*|include/.*|lib/.*|libexec/.*|${GNU_TARGET_MACHINE}/lib/.*)'
 
 pkgbase := gcc14-gnat
 .include "../../mk/pkg-build-options.mk"
