@@ -1503,6 +1503,7 @@ SUBDIR+=	hercules-server
 SUBDIR+=	hercules4aethra
 SUBDIR+=	heroes
 SUBDIR+=	herwig
+SUBDIR+=	hex
 SUBDIR+=	hey
 SUBDIR+=	hgsubversion
 SUBDIR+=	hiawatha

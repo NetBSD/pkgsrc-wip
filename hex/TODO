@@ -1,0 +1,15 @@
+This package downloads code from the internet during the build,
+and needs package handling like go-modules.mk or cargo-depends.mk
+before it should be imported to pkgsrc.
+
+Additionally, it needs to be taught how to use the system certificates
+to avoid build problems like
+http://shadow.netbsd.org/pub/pkgsrc/packages/reports/HEAD/NetBSD-10.0-x86_64/20250210.1231//hex-2.1.1/build.log
+
+** (EXIT from #PID<0.94.0>) an exception was raised:
+    ** (CaseClauseError) no case clause matching: :undefined
+        (public_key 1.16.1) pubkey_os_cacerts.erl:40: :pubkey_os_cacerts.get/0
+        (mix 1.17.2) lib/mix/utils.ex:664: Mix.Utils.read_httpc/1
+        (mix 1.17.2) lib/mix/utils.ex:576: anonymous fn/2 in Mix.Utils.read_path/2
+        (elixir 1.17.2) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+        (elixir 1.17.2) lib/task/supervised.ex:36: Task.Supervised.reply/4
