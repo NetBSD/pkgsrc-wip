@@ -28,6 +28,6 @@ DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
