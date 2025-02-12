@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	${PYPKGPREFIX}-homeassistant-0.07
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -14,8 +15,8 @@ LICENSE=	modified-bsd
 
 META_PACKAGE=	yes
 
-# This package is currently tuned for and tested on NetBSD 9 amd64 and
-# is probably ok on NetBSD 10.
+# This package is currently tuned for and tested on NetBSD/amd64 9 and
+# 10.
 
 # Home Assistant (HA) upstream pins exact dependencies as a general
 # practice, and this is incompatible with packaging systems.  Thus,
@@ -23,11 +24,10 @@ META_PACKAGE=	yes
 # homeasssistant.  Instead, it has dependencies so that after
 # installing it, trying to build homeassistant in a venv it can
 # succeed.  HA has many optional modules, so there is no one set of
-# dependencies; we steer towards the union of reasonable
-# installations, erring on the side of depending on more rather than
-# less.
+# dependencies; we steer to the union of reasonable installations,
+# erring on the side of depending on more rather than less.
 
-# Despite depending on programs as build tools, record a full
+# Despite depending on programs that are build tools, record a full
 # dependency so that "pkgin ar" after installing this package will not
 # remove e.g. the rust compiler.  The point is that while that's a
 # build-time dependency in pkgsrc, it's a run-time dependency for this
@@ -96,11 +96,11 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 
-# stream integration needs ha-ffmpeg depends on ffmpeg
-# \todo Reconsider ffmpeg6 vs 4.
-DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
+# generic and stream require PyAV which depends on ffmpeg >= 7.
+DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
 
-# onvif integration needs onvif_zeep_async depends on lxml depends on libxml2 libxslt
+# onvif integration requires onvif_zeep_async which depends on lxml
+# depends on libxml2 and libxslt.
 DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
@@ -112,17 +112,20 @@ DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 ## ha-av
 #
-# ffmpeg4 installs to /usr/pkg/lib/ffmpeg4, and HA expects to just find ffmpeg
-#   export PKG_CONFIG_PATH=/usr/pkg/lib/ffmpeg4/pkgconfig
+# ffmpeg7 installs to /usr/pkg/lib/ffmpeg7, and HA expects to just find ffmpeg
+#   export PKG_CONFIG_PATH=/usr/pkg/lib/ffmpeg7/pkgconfig
 #
-# ffmpeg's pkgconfig files have "-Wl,-rpath,/usr/pkg/lib/ffmpeg4/lib",
+# ffmpeg's pkgconfig files have "-Wl,-rpath,/usr/pkg/lib/ffmpeg7/lib",
 # but PyAV's setup.py is buggy and looks at flags to see if they are
 # known and doesn't support -Wl,-rpath.  Changing to -R makes it work.
 # This is a bug in PyAV.  \todo File a fix.
+#
+# PyAV further seems to not pass -R correctly, and the workaround is
+# to symlink the ffmpeg shlibs into /usr/pkg/lib.
 
 ## cryptography
 #
-# As of 41, the build fails to find openssl on NetBSD 9.
+# As of 41, the build fails to find openssl.
 # https://docs.rs/openssl/latest/openssl/#automatic advises
 #   export OPENSSL_DIR=/usr
 
