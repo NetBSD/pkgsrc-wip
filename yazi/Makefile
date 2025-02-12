@@ -31,6 +31,8 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/yazi
 	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/yazi-default.toml \
 		${DESTDIR}${PREFIX}/share/examples/yazi
+	${INSTALL_DATA} ${WRKSRC}/assets/yazi.desktop \
+		${DESTDIR}${PREFIX}/share/applications
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/lua54/buildlink3.mk"
