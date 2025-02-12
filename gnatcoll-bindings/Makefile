@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake grep
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_LANGUAGES=	c cpp ada
 
 GCC_REQD+=	13
@@ -25,20 +23,20 @@ SUBST_FILES.fixver=	version_information
 SUBST_SED.fixver=	-e 's,0.0,25.0,g'
 SUBST_MESSAGE.fixver=	Fix version information
 
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
+
+.include "../../mk/bsd.prefs.mk"
+
 .include "options.mk"
 
 MAKE_FLAGS+=	BINDINGS=${BINDINGS:Q}
 MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD ENABLE_SHARED=yes
 
-GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../lang/gcc13-gnat-libs/buildlink3.mk"
-.include "../../devel/gprbuild/buildlink3.mk"
-
-GPRBUILD_OPTIONS+=	--config=../default.cgpr
-GPRINSTALL_OPTIONS+=	--config=../default.cgpr
+.include "../../wip/gprbuild/buildlink3.mk"
 
 BUILDLINK_DEPMETHOD.xmlada=	full
 .include "../../wip/xmlada/buildlink3.mk"

@@ -3,7 +3,7 @@ $NetBSD: patch-Makefile,v 1.0 2024/05/13 10:30:00 dkazankov Exp $
 Fix install directory, build type, version number and NetBSD sha256sum
 
 --- Makefile.orig	2023-01-05 11:22:11.000000000 +0200
-+++ Makefile	2024-05-20 14:53:45.799587834 +0300
++++ Makefile
 @@ -41,7 +41,9 @@
  	install-all why3 all setup all-nightly doc-nightly run-benchmark \
          create-benchmark
@@ -23,7 +23,7 @@ Fix install directory, build type, version number and NetBSD sha256sum
  CP=cp -pr
  MV=mv -f
 -VERSION=0.0w
-+VERSION=13.0
++VERSION='FSF 13.0'
  
  # main target for developers
  all: gnat2why gnatprove why3

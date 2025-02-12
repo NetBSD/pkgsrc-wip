@@ -3,7 +3,7 @@ $NetBSD: patch-why3_Makefile.in,v 1.0 2024/05/20 09:00:00 dkazankov Exp $
 NetBSD doesn't have -C option
 
 --- why3/Makefile.in.orig	2022-12-21 10:10:00.000000000 +0200
-+++ why3/Makefile.in	2024-05-20 13:01:28.447738691 +0300
++++ why3/Makefile.in
 @@ -844,7 +844,7 @@
  	$(INSTALL_DATA) share/images/*.png $(DATADIR)/why3/images
  	$(MKDIR_P) $(DATADIR)/why3/lang

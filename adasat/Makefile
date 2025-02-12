@@ -14,10 +14,6 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	gmake
 
-CHECK_RELRO_SUPPORTED=	no
-
-.include "../../mk/bsd.prefs.mk"
-
 USE_LANGUAGES=	ada
 
 GCC_REQD+=	13
@@ -31,7 +27,10 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
 
+.include "../../mk/bsd.prefs.mk"
+
+
 .include "../../lang/gcc13-gnat-libs/buildlink3.mk"
-.include "../../devel/gprbuild/buildlink3.mk"
+.include "../../wip/gprbuild/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

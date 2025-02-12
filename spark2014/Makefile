@@ -15,8 +15,6 @@ HAS_CONFIGURE=	yes
 MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
 
-.include "../../mk/bsd.prefs.mk"
-
 DISTNAME=	spark2014-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	spark2014
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
@@ -39,7 +37,37 @@ SITES.${GCC_DISTFILE}=	${MASTER_SITE_GNU:=gcc/${GCC_DISTNAME}/}
 
 GCC_REQD+=	13
 
-.include "../../devel/gprbuild/buildlink3.mk"
+CONFIG_SHELL=		${MAKE_PROGRAM}
+CONFIGURE_ARGS+=	DESTDIR=${DESTDIR} PREFIX=${PREFIX}
+CONFIGURE_SCRIPT=	setup
+
+MAKE_FLAGS+=		DESTDIR=${DESTDIR} PREFIX=${PREFIX}
+
+INSTALL_TARGET=		install-all
+
+SUBST_CLASSES+=			interpreter
+SUBST_STAGE.interpreter=	pre-configure
+SUBST_FILES.interpreter=	benchmark_script/*
+SUBST_MESSAGE.interpreter=	Fix interpreter
+SUBST_SED.interpreter=		-e 's,/bin/bash,/bin/sh,g'
+
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} bin \( -type f -or -type l \) -print | ${SORT};
+
+.include "../../mk/bsd.prefs.mk"
+
+post-extract:
+# Link GNAT sources to main build tree
+	${RUN} cd ${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG} \
+	&& ${LN} -s ../../${GCC_DISTNAME}/gcc/ada gnat2why/gnat_src
+
+post-install:
+# Fix group write mode
+	cd ${DESTDIR}${PREFIX} && \
+	${CHMOD} -R -P g-w ./*
+
+.include "../../wip/gprbuild/buildlink3.mk"
 
 .include "../../wip/xmlada/buildlink3.mk"
 .include "../../wip/gprlib/buildlink3.mk"
@@ -65,32 +93,6 @@ BUILDLINK_DEPMETHOD.ocaml-num=	build
 BUILDLINK_DEPMETHOD.ocaml-yojson=	build
 .include "../../devel/ocaml-yojson/buildlink3.mk"
 
-CONFIG_SHELL=		${MAKE_PROGRAM}
-CONFIGURE_ARGS+=	DESTDIR=${DESTDIR} PREFIX=${PREFIX}
-CONFIGURE_SCRIPT=	setup
-
-MAKE_FLAGS+=		DESTDIR=${DESTDIR} PREFIX=${PREFIX}
-
-INSTALL_TARGET=		install-all
-
-SUBST_CLASSES+=			interpreter
-SUBST_STAGE.interpreter=	pre-configure
-SUBST_FILES.interpreter=	benchmark_script/*
-SUBST_MESSAGE.interpreter=	Fix interpreter
-SUBST_SED.interpreter=		-e 's,/bin/bash,/bin/sh,g'
-
-GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-	${FIND} bin \( -type f -or -type l \) -print | ${SORT};
-
-post-extract:
-# Link GNAT sources to main build tree
-	${RUN} cd ${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG} \
-	&& ${LN} -s ../../${GCC_DISTNAME}/gcc/ada gnat2why/gnat_src
-
-post-install:
-# Fix group write mode
-	cd ${DESTDIR}${PREFIX} && \
-	${CHMOD} -R -P g-w ./*
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

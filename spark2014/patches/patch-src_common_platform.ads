@@ -3,7 +3,7 @@ $NetBSD: patch-src_common_platform.ads,v 1.0 2024/05/19 22:00:00 dkazankov Exp $
 Add NetBSD support
 
 --- src/common/platform.ads.orig	2023-01-05 11:22:11.000000000 +0200
-+++ src/common/platform.ads	2024-05-19 22:23:47.685720387 +0300
++++ src/common/platform.ads
 @@ -30,7 +30,7 @@
  
     type Host_Operating_System_Flavor is

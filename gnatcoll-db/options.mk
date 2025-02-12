@@ -31,7 +31,6 @@ INSTALL_DIRS+=		sqlite
 
 .if !empty(PKG_OPTIONS:Mpostgres)
 .  include "../../wip/gnatcoll-bindings/buildlink3.mk"
-.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_DIRS+=	postgres
 BUILD_DIRS+=		postgres
 INSTALL_DIRS+=		postgres
@@ -56,4 +55,9 @@ INSTALL_DIRS+=		gnatinspect
 CONFIGURE_DIRS+=	gnatcoll_db2ada
 BUILD_DIRS+=		gnatcoll_db2ada
 INSTALL_DIRS+=		gnatcoll_db2ada
+.endif
+
+.if !empty(PKG_OPTIONS:Mpostgres) || \
+    !empty(PKG_OPTIONS:Mgnatcoll_postgres2ada) || !empty(PKG_OPTIONS:Mgnatcoll_all2ada)
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif

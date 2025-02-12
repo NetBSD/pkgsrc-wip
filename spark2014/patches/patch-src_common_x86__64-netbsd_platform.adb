@@ -2,8 +2,8 @@ $NetBSD: patch-src_common_x86__64-netbsd_platform.adb,v 1.0 2024/05/19 22:00:00 
 
 Add NetBSD support
 
---- /dev/null	2024-05-19 12:29:31.992878759 +0300
-+++ src/common/x86_64-netbsd/platform.adb	2024-05-19 22:09:54.259989387 +0300
+--- /dev/null
++++ src/common/x86_64-netbsd/platform.adb
 @@ -0,0 +1,37 @@
 +------------------------------------------------------------------------------
 +--                                                                          --

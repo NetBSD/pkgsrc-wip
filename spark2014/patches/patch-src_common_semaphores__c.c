@@ -3,7 +3,7 @@ $NetBSD: patch-src_common_semaphores__c.c,v 1.0 2024/05/31 14:00:00 dkazankov Ex
 Fix runtime error caused semaphore names on NetBSD
 
 --- src/common/semaphores_c.c.orig	2023-01-05 11:22:11.000000000 +0200
-+++ src/common/semaphores_c.c	2024-05-31 22:33:16.871296137 +0300
++++ src/common/semaphores_c.c
 @@ -30,8 +30,33 @@
  #include <stdio.h>
  #include <stdlib.h>

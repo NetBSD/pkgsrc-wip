@@ -17,8 +17,6 @@ HAS_CONFIGURE=	yes
 
 CHECK_PIE_SKIP+=	bin/*
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_LANGUAGES=	c ada
 
 GCC_REQD+=	13
@@ -28,6 +26,12 @@ SUBST_STAGE.fixver=	pre-configure
 SUBST_FILES.fixver=	version_information
 SUBST_SED.fixver=	-e 's,0.0,25.0,g'
 SUBST_MESSAGE.fixver=	Fix version information
+
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} bin include lib share \( -type f -or -type l \) -print | ${SORT};
+
+.include "../../mk/bsd.prefs.mk"
 
 .include "options.mk"
 
@@ -125,15 +129,8 @@ do-install:
 .  endif
 .endfor
 
-GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-	${FIND} bin include lib share \( -type f -or -type l \) -print | ${SORT};
-
 .include "../../lang/gcc13-gnat-libs/buildlink3.mk"
-.include "../../devel/gprbuild/buildlink3.mk"
-
-GPRBUILD_OPTIONS+=	--config=../default.cgpr
-GPRINSTALL_OPTIONS+=	--config=../default.cgpr
+.include "../../wip/gprbuild/buildlink3.mk"
 
 BUILDLINK_DEPMETHOD.xmlada=	full
 .include "../../wip/xmlada/buildlink3.mk"
