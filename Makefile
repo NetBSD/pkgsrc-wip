@@ -1236,6 +1236,7 @@ SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
 SUBDIR+=	gh-dash
 SUBDIR+=	ghc-core
+SUBDIR+=	ghc7
 SUBDIR+=	ghdl-dev
 SUBDIR+=	ghdl-yosys-plugin
 SUBDIR+=	ghmm
