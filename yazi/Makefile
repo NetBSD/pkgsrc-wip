@@ -16,7 +16,7 @@ RUST_REQ=	1.83.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
-INSTALLATION_DIRS=	bin share/examples/yazi
+INSTALLATION_DIRS=	bin share/applications share/examples/yazi
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yazi \
