@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Use FSACCESS_CLASS of linux on BSDs
+
 --- sdk/include/mega/posix/megafs.h.orig	2025-02-13 10:44:28.677854322 +0100
 +++ sdk/include/mega/posix/megafs.h
 @@ -192,7 +192,8 @@ private:

@@ -3,6 +3,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.2 2024/06/18 18:23:15 bsiegert Exp $
 * Fix build on NetBSD, use statvfs
 * Don't use mntent features on BSDs
 * O_NOATIME not available on BSDs
+* BSDs use LinuxFileSystemAccess
 
 --- sdk/src/posix/fs.cpp.orig	2025-01-24 13:56:57.000000000 +0100
 +++ sdk/src/posix/fs.cpp
