@@ -40,14 +40,6 @@ GCC_REQD+=	12
 .  endif
 .endif
 
-# Fix for problem seen during rust-installer run w/rust 1.84.1 on macppc,
-# "of course" experienced near the end of the build process:
-# assertion "memcmp(mf_ptr(mf) - 1, mf_ptr(mf) - matches[i].dist - 2, matches[i].len) == 0" failed: file "xz-5.2/src/liblzma/lz/lz_encoder_mf.c", line 40, function "lzma_mf_find"
-# The above is seen with both in-tree gcc (10.5.0) and gcc12 from pkgsrc.
-.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc}
-GCC_REQD+=	14
-.endif
-
 #
 # Use the internal copy of LLVM or the external one?
 #
