@@ -1820,8 +1820,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/oclosure.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/oclosure.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-vc.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-vc.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pcase.el.gz
@@ -3225,6 +3223,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/netrc.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/netrc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/nnir.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/nnir.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/package-x.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/package-x.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-def.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-def.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-gpg.el.gz
