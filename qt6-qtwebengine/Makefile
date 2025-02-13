@@ -30,6 +30,8 @@ CMAKE_CONFIGURE_ARGS+=		-G Ninja
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_ffmpeg=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_icu=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libevent=ON
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_minizip=ON
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_zlib=ON
 ## for the moment
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_re2=OFF
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_proprietary_codecs=ON
@@ -100,6 +102,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../archivers/minizip/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
@@ -115,6 +118,7 @@ do-install:
 #.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=  tool
