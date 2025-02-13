@@ -42,6 +42,7 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
