@@ -15,6 +15,8 @@ COMMENT=	CLI and scriptable application to access MEGA
 # MEGAcmd: GPLv3, SDK: BSD 2-clause
 LICENSE=	gnu-gpl-v3 AND 2-clause-bsd
 
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
 USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	filesystem
 FORCE_CXX_STD=		c++17
