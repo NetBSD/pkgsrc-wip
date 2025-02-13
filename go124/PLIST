@@ -14145,6 +14145,7 @@ go124/test/wasmexport2.go
 go124/test/wasmmemsize.dir/asm_wasm.s
 go124/test/wasmmemsize.dir/main.go
 go124/test/wasmmemsize.go
+go124/test/weak.go
 go124/test/winbatch.go
 go124/test/writebarrier.go
 go124/test/zerodivide.go
