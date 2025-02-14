@@ -1,0 +1,9 @@
+ouch is a CLI tool for compressing and decompressing for various formats
+
+Features:
+* Easy to use
+* Fast
+* Great error message feedback
+* No runtime dependencies required
+* Accessibility mode
+* Shell completions and man pages
