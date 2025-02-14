@@ -15,6 +15,8 @@ TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=		${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
+USE_TOOLS+=		bison
+
 UNLIMIT_RESOURCES+=	datasize
 
 USE_CXX_FEATURES+=	c++20
