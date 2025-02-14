@@ -30,14 +30,16 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineWidgets.pc
 
 CMAKE_CONFIGURE_ARGS+=		-G Ninja
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_proprietary_codecs=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_ffmpeg=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_icu=ON
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_lcms2=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libevent=ON
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libvpx=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_minizip=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_zlib=ON
 ## for the moment
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_re2=OFF
-CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_proprietary_codecs=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_kerberos=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_vulkan=OFF
 
@@ -123,6 +125,7 @@ do-install:
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=  tool
 .include "../../lang/python/batteries-included.mk"
