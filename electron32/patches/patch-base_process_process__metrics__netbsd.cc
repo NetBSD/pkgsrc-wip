@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- base/process/process_metrics_netbsd.cc.orig	2025-01-19 14:12:03.862032599 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2025-02-15 09:43:46.223087337 +0000
 +++ base/process/process_metrics_netbsd.cc
 @@ -0,0 +1,175 @@
 +// Copyright 2013 The Chromium Authors

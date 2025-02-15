@@ -6,10 +6,12 @@ $NetBSD$
 
 --- .gn.orig	2024-10-18 12:33:59.054677000 +0000
 +++ .gn
-@@ -172,4 +172,8 @@ exec_script_whitelist =
+@@ -172,4 +172,10 @@ exec_script_whitelist =
  
        "//tools/grit/grit_rule.gni",
        "//tools/gritsettings/BUILD.gn",
++
++      "//third_party/icu/BUILD.gn",
 +
 +      "//electron/BUILD.gn",
 +      "//third_party/electron_node/deps/base64/BUILD.gn",

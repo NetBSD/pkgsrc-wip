@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-notification-dbus-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/api-notification-dbus-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/api-notification-dbus-spec.ts
 @@ -19,7 +19,8 @@ import { ifdescribe } from './lib/spec-h
  

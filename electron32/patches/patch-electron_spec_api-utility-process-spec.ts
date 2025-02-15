@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-utility-process-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/api-utility-process-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/api-utility-process-spec.ts
 @@ -438,7 +438,8 @@ describe('utilityProcess module', () => 
        expect(output).to.include(result);

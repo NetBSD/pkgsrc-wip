@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/common/platform_util.h.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/common/platform_util.h.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/common/platform_util.h
 @@ -56,7 +56,7 @@ bool SetLoginItemEnabled(const std::stri
                           bool enabled);

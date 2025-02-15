@@ -2,7 +2,7 @@
 
 DISTNAME=			electron32-${VERSION}
 # See ${WRKSRC}/electron/DEPS for versions
-VERSION=			32.2.7
+VERSION=			32.3.0
 CHROMIUM_VERSION=		128.0.6613.186
 AUDIOIO_VERSION=		130.0
 NODE_VERSION=			20.18.1
@@ -11,6 +11,7 @@ SQUIRREL_VERSION=		0e5d146ba13101a1302d59ea6e6e0b3cace4ae38
 REACTIVEOBJC_VERSION=		74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76
 MANTLE_VERSION=			78d3966b3c331292ea29ec38661b25df0a245948
 ENGFLOW_VERSION=		955335c30a752e9ef7bff375baab5e0819b6c00d
+LLVM_MV=			18
 CATEGORIES=			devel
 MASTER_SITES=			${MASTER_SITE_GITHUB:=electron/}
 GITHUB_PROJECT=			electron
@@ -67,7 +68,7 @@ TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
+TOOL_DEPENDS+=			nodejs-20*:../../lang/nodejs20
 #TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
 TOOL_DEPENDS+=			rust-bindgen-[0-9]*:../../devel/rust-bindgen
 TOOL_DEPENDS+=			yarn-[0-9]*:../../devel/yarn
@@ -77,10 +78,12 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-#ONLY_FOR_PLATFORM+=		*-*-arm # not yet
-#ONLY_FOR_PLATFORM+=		*-*-aarch64 # not yet
-#ONLY_FOR_PLATFORM+=		*-*-i386 # not yet
-ONLY_FOR_PLATFORM+=		*-*-x86_64
+.for c_arch in x86_64 aarch64
+ONLY_FOR_PLATFORM+=		NetBSD-1[0-9].*-${c_arch}
+ONLY_FOR_PLATFORM+=		Linux-*-${c_arch}
+ONLY_FOR_PLATFORM+=		Darwin-*-${c_arch}
+ONLY_FOR_PLATFORM+=		FreeBSD-*-${c_arch}
+.endfor
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -163,6 +166,7 @@ GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
 GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	use_sndio=false
 GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
 GN_ARGS+=	use_system_harfbuzz=true
@@ -175,7 +179,7 @@ GN_ARGS+=	v8_enable_cet_ibt=true
 
 # flags
 CFLAGS+=	-fno-stack-protector
-CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
+CFLAGS+=	-isystem${PREFIX}/lib/clang/${LLVM_MV}/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
 CFLAGS+=	-Wno-unknown-warning-option
 
@@ -195,8 +199,8 @@ EXTRA_CXXFLAGS=	-Wno-unknown-warning-option \
 RUSTC_VERSION=	rustc -V
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true \
-		rust_sysroot_absolute=\"${PREFIX}\" \
-		rustc_version=\"${RUSTC_VERSION:sh}\"
+		rust_sysroot_absolute="${PREFIX}" \
+		rustc_version="${RUSTC_VERSION:sh}"
 
 PLIST_VARS+=		swiftshader
 .if ${MACHINE_ARCH} == "aarch64"
@@ -204,14 +208,10 @@ FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
 PLIST.swiftshader=	yes
 FFMPEG_TARGET=		x64
-.elif ${MACHINE_ARCH} == "i386"
-EXTRA_LDFLAGS+=		-Wl,--no-keep-memory
-PLIST.swiftshader=	yes
-FFMPEG_TARGET=		ia32
 .endif
 
-GN_ARGS+=	extra_cxxflags=\"${EXTRA_CXXFLAGS}\" \
-		extra_ldflags=\"${EXTRA_LDFLAGS}\"
+GN_ARGS+=	extra_cxxflags="${EXTRA_CXXFLAGS}" \
+		extra_ldflags="${EXTRA_LDFLAGS}"
 
 # Proprietary codecs are enabled.
 FFMPEG_BRAND=	Chrome
@@ -219,7 +219,7 @@ FFMPEG_BDIR=	${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${LOWER_OPSYS}/
 FFMPEG_CDIR=	${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${LOWER_OPSYS}/${FFMPEG_TARGET}
 
 GN_ARGS+=	proprietary_codecs=true \
-		ffmpeg_branding=\"${FFMPEG_BRAND}\"
+		ffmpeg_branding="${FFMPEG_BRAND}"
 
 GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
 GN_BOOTSTRAP_FLAGS+=	--skip-generate-buildfiles

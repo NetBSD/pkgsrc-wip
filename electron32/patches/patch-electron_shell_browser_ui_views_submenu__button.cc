@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/ui/views/submenu_button.cc.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/browser/ui/views/submenu_button.cc.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/browser/ui/views/submenu_button.cc
 @@ -22,7 +22,7 @@ SubmenuButton::SubmenuButton(PressedCall
                               const SkColor& background_color)

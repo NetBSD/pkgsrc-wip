@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-browser-window-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/api-browser-window-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/api-browser-window-spec.ts
 @@ -67,7 +67,8 @@ describe('BrowserWindow module', () => {
        }).not.to.throw();
@@ -16,7 +16,7 @@ $NetBSD$
        const appPath = path.join(fixtures, 'apps', 'xwindow-icon');
        const appProcess = childProcess.spawn(process.execPath, [appPath]);
        await once(appProcess, 'exit');
-@@ -1123,7 +1124,8 @@ describe('BrowserWindow module', () => {
+@@ -1126,7 +1127,8 @@ describe('BrowserWindow module', () => {
  
      describe('BrowserWindow.minimize()', () => {
        // TODO(codebytere): Enable for Linux once maximize/minimize events work in CI.
@@ -26,7 +26,7 @@ $NetBSD$
          const minimize = once(w, 'minimize');
          w.minimize();
          await minimize;
-@@ -1140,7 +1142,8 @@ describe('BrowserWindow module', () => {
+@@ -1143,7 +1145,8 @@ describe('BrowserWindow module', () => {
        });
  
        // TODO(dsanders11): Enable for Linux once CI plays nice with these kinds of tests
@@ -36,7 +36,7 @@ $NetBSD$
          const maximize = once(w, 'maximize');
          const shown = once(w, 'show');
          w.maximize();
-@@ -1205,7 +1208,8 @@ describe('BrowserWindow module', () => {
+@@ -1208,7 +1211,8 @@ describe('BrowserWindow module', () => {
          expect(w.isFocused()).to.equal(true);
        });
  
@@ -46,7 +46,7 @@ $NetBSD$
          const w1 = new BrowserWindow({ show: false });
          const w2 = new BrowserWindow({ show: false });
          const w3 = new BrowserWindow({ show: false });
-@@ -1306,7 +1310,8 @@ describe('BrowserWindow module', () => {
+@@ -1309,7 +1313,8 @@ describe('BrowserWindow module', () => {
          expect(w.isFocused()).to.equal(false);
        });
  
@@ -56,7 +56,7 @@ $NetBSD$
          const w1 = new BrowserWindow({ show: false });
          const w2 = new BrowserWindow({ show: false });
          const w3 = new BrowserWindow({ show: false });
-@@ -1765,7 +1770,8 @@ describe('BrowserWindow module', () => {
+@@ -1768,7 +1773,8 @@ describe('BrowserWindow module', () => {
          });
        });
  
@@ -66,7 +66,7 @@ $NetBSD$
          it('checks normal bounds when maximized', async () => {
            const bounds = w.getBounds();
            const maximize = once(w, 'maximize');
-@@ -1975,7 +1981,8 @@ describe('BrowserWindow module', () => {
+@@ -1978,7 +1984,8 @@ describe('BrowserWindow module', () => {
          });
        });
  
@@ -76,7 +76,7 @@ $NetBSD$
          it('checks normal bounds when minimized', async () => {
            const bounds = w.getBounds();
            const minimize = once(w, 'minimize');
-@@ -2938,7 +2945,8 @@ describe('BrowserWindow module', () => {
+@@ -2941,7 +2948,8 @@ describe('BrowserWindow module', () => {
    describe('BrowserWindow.setOpacity(opacity)', () => {
      afterEach(closeAllWindows);
  
@@ -86,7 +86,7 @@ $NetBSD$
        it('make window with initial opacity', () => {
          const w = new BrowserWindow({ show: false, opacity: 0.5 });
          expect(w.getOpacity()).to.equal(0.5);
-@@ -2964,7 +2972,8 @@ describe('BrowserWindow module', () => {
+@@ -2967,7 +2975,8 @@ describe('BrowserWindow module', () => {
        });
      });
  
@@ -96,7 +96,7 @@ $NetBSD$
        it('sets 1 regardless of parameter', () => {
          const w = new BrowserWindow({ show: false });
          w.setOpacity(0);
-@@ -3175,7 +3184,8 @@ describe('BrowserWindow module', () => {
+@@ -3178,7 +3187,8 @@ describe('BrowserWindow module', () => {
        expect(overlayRectPreMax.height).to.equal(size);
  
        // 'maximize' event is not emitted on Linux in CI.
@@ -106,7 +106,7 @@ $NetBSD$
          const maximize = once(w, 'maximize');
          w.show();
          w.maximize();
-@@ -3241,7 +3251,8 @@ describe('BrowserWindow module', () => {
+@@ -3244,7 +3254,8 @@ describe('BrowserWindow module', () => {
          expect(preMaxHeight).to.equal(size);
  
          // 'maximize' event is not emitted on Linux in CI.
@@ -116,7 +116,7 @@ $NetBSD$
            const maximize = once(w, 'maximize');
            w.show();
            w.maximize();
-@@ -3906,7 +3917,8 @@ describe('BrowserWindow module', () => {
+@@ -3909,7 +3920,8 @@ describe('BrowserWindow module', () => {
          expect(test.nodeTimers).to.equal(true);
          expect(test.nodeUrl).to.equal(true);
  
@@ -126,7 +126,7 @@ $NetBSD$
            expect(test.creationTime).to.be.null('creation time');
            expect(test.systemMemoryInfo).to.be.null('system memory info');
          } else {
-@@ -4411,7 +4423,8 @@ describe('BrowserWindow module', () => {
+@@ -4414,7 +4426,8 @@ describe('BrowserWindow module', () => {
      });
    });
  
@@ -136,7 +136,7 @@ $NetBSD$
      afterEach(closeAllWindows);
      it('emits an event when window is maximized', async () => {
        const w = new BrowserWindow({ show: false });
-@@ -4682,7 +4695,8 @@ describe('BrowserWindow module', () => {
+@@ -4685,7 +4698,8 @@ describe('BrowserWindow module', () => {
      // TODO(zcbenz):
      // This test does not run on Linux CI. See:
      // https://github.com/electron/electron/issues/28699
@@ -146,7 +146,7 @@ $NetBSD$
        const w = new BrowserWindow({});
        const maximize = once(w, 'maximize');
        w.maximize();
-@@ -4699,7 +4713,8 @@ describe('BrowserWindow module', () => {
+@@ -4702,7 +4716,8 @@ describe('BrowserWindow module', () => {
    });
  
    // TODO(dsanders11): Enable once maximize event works on Linux again on CI
@@ -156,7 +156,7 @@ $NetBSD$
      afterEach(closeAllWindows);
      it('should show the window if it is not currently shown', async () => {
        const w = new BrowserWindow({ show: false });
-@@ -4736,7 +4751,8 @@ describe('BrowserWindow module', () => {
+@@ -4739,7 +4754,8 @@ describe('BrowserWindow module', () => {
  
      // TODO(dsanders11): Enable once minimize event works on Linux again.
      //                   See https://github.com/electron/electron/issues/28699
@@ -166,7 +166,7 @@ $NetBSD$
        const w = new BrowserWindow();
        const minimize = once(w, 'minimize');
        w.minimize();
-@@ -5210,7 +5226,8 @@ describe('BrowserWindow module', () => {
+@@ -5213,7 +5229,8 @@ describe('BrowserWindow module', () => {
        });
  
        // On Linux there is no "resizable" property of a window.
@@ -176,7 +176,7 @@ $NetBSD$
          const w = new BrowserWindow({ show: false });
          expect(w.resizable).to.be.true('resizable');
  
-@@ -5349,7 +5366,8 @@ describe('BrowserWindow module', () => {
+@@ -5352,7 +5369,8 @@ describe('BrowserWindow module', () => {
      });
    });
  
@@ -186,7 +186,7 @@ $NetBSD$
      // Not implemented on Linux.
      afterEach(closeAllWindows);
  
-@@ -6516,7 +6534,8 @@ describe('BrowserWindow module', () => {
+@@ -6519,7 +6537,8 @@ describe('BrowserWindow module', () => {
    describe('"transparent" option', () => {
      afterEach(closeAllWindows);
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-safe-storage-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/api-safe-storage-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/api-safe-storage-spec.ts
 @@ -29,7 +29,8 @@ describe('safeStorage module', () => {
  

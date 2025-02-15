@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/browser_process_impl.h.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/browser/browser_process_impl.h.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/browser/browser_process_impl.h
 @@ -23,7 +23,7 @@
  #include "services/network/public/cpp/shared_url_loader_factory.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/net/system_network_context_manager.cc.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/browser/net/system_network_context_manager.cc.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/browser/net/system_network_context_manager.cc
 @@ -42,7 +42,7 @@
  #include "shell/common/options_switches.h"

@@ -6,7 +6,15 @@ $NetBSD$
 
 --- third_party/blink/renderer/platform/BUILD.gn.orig	2024-10-18 12:34:36.419717800 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
-@@ -2003,7 +2003,7 @@ static_library("test_support") {
+@@ -335,6 +335,7 @@ component("platform") {
+   output_name = "blink_platform"
+ 
+   sources = [
++    "accept_languages_watcher.h",
+     "animation/animation_translation_util.cc",
+     "animation/animation_translation_util.h",
+     "animation/compositor_animation.cc",
+@@ -2003,7 +2004,7 @@ static_library("test_support") {
    ]
  
    # fuzzed_data_provider may not work with a custom toolchain.

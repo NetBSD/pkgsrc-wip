@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2025-01-19 14:12:04.112051133 +0000
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2025-02-15 09:43:46.452142121 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
 @@ -0,0 +1,40 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/osr/osr_host_display_client.h.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/browser/osr/osr_host_display_client.h.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/browser/osr/osr_host_display_client.h
 @@ -72,7 +72,7 @@ class OffScreenHostDisplayClient : publi
        mojo::PendingReceiver<viz::mojom::LayeredWindowUpdater> receiver)

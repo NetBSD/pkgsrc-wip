@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/common/node_bindings_linux.cc.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/common/node_bindings_linux.cc.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/common/node_bindings_linux.cc
 @@ -4,12 +4,25 @@
  

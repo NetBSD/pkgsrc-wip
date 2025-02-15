@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/lib/browser/init.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/lib/browser/init.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/lib/browser/init.ts
 @@ -162,7 +162,8 @@ const mainStartupScript = packageJson.ma
  const KNOWN_XDG_DESKTOP_VALUES = new Set(['Pantheon', 'Unity:Unity7', 'pop:GNOME']);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-net-log-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/api-net-log-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/api-net-log-spec.ts
 @@ -121,7 +121,8 @@ describe('netLog module', () => {
      expect(JSON.parse(dump).events.some((x: any) => x.params && x.params.bytes && Buffer.from(x.params.bytes, 'base64').includes(unique))).to.be.true('uuid present in dump');

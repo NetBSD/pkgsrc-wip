@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/extensions/api/runtime/electron_runtime_api_delegate.cc.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/browser/extensions/api/runtime/electron_runtime_api_delegate.cc.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/browser/extensions/api/runtime/electron_runtime_api_delegate.cc
 @@ -55,6 +55,10 @@ bool ElectronRuntimeAPIDelegate::GetPlat
      info->os = extensions::api::runtime::PlatformOs::kLinux;

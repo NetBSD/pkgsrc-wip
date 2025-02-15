@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/lib/browser/api/power-monitor.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/lib/browser/api/power-monitor.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/lib/browser/api/power-monitor.ts
 @@ -17,7 +17,8 @@ class PowerMonitor extends EventEmitter 
        const pm = createPowerMonitor();

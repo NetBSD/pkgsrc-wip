@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-native-image-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/api-native-image-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/api-native-image-spec.ts
 @@ -428,7 +428,8 @@ describe('nativeImage module', () => {
      });

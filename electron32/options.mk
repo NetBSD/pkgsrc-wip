@@ -2,13 +2,11 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.electron
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
-PKG_OPTIONS_GROUP.audio=	alsa pulseaudio sndio sunaudio
+PKG_OPTIONS_GROUP.audio=	alsa pulseaudio sunaudio
 PKG_SUPPORTED_OPTIONS+=		debug
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		sunaudio
-.elif ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=		sndio
 .else
 PKG_SUGGESTED_OPTIONS+=		pulseaudio
 .endif
@@ -35,12 +33,6 @@ GN_ARGS+=	use_pulseaudio=true
 .else
 #WITH_PA=	no
 GN_ARGS+=	use_pulseaudio=false
-.endif
-
-.if !empty(PKG_OPTIONS:Msndio)
-GN_ARGS+=	use_sndio=true
-.else
-GN_ARGS+=	use_sndio=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)

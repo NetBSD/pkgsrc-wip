@@ -6,7 +6,18 @@ $NetBSD$
 
 --- third_party/dawn/src/tint/lang/wgsl/resolver/validator.cc.orig	2024-10-18 12:38:01.525448000 +0000
 +++ third_party/dawn/src/tint/lang/wgsl/resolver/validator.cc
-@@ -661,6 +661,22 @@ bool Validator::AddressSpaceLayout(const
+@@ -577,10 +577,6 @@ bool Validator::AddressSpaceLayout(const
+         return true;
+     }
+ 
+-    if (!core::IsHostShareable(address_space)) {
+-        return true;
+-    }
+-
+     auto note_usage = [&] {
+         AddNote(source) << style::Type(store_ty->FriendlyName()) << " used in address space "
+                         << style::Enum(address_space) << " here";
+@@ -661,6 +657,22 @@ bool Validator::AddressSpaceLayout(const
                      return false;
                  }
              }

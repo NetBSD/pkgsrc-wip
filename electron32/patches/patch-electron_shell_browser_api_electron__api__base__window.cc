@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_base_window.cc.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/shell/browser/api/electron_api_base_window.cc.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/shell/browser/api/electron_api_base_window.cc
 @@ -40,7 +40,7 @@
  #include "shell/browser/ui/views/win_frame_view.h"

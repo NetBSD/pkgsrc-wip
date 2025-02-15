@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/script/spec-runner.js.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/script/spec-runner.js.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/script/spec-runner.js
-@@ -165,7 +165,8 @@ async function runTestUsingElectron (spe
+@@ -197,7 +197,8 @@ async function runTestUsingElectron (spe
      exe = path.resolve(BASE, utils.getElectronExec());
    }
    const runnerArgs = [`electron/${specDir}`, ...unknownArgs.slice(2)];

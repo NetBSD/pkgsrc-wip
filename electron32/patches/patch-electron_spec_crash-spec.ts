@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/crash-spec.ts.orig	2024-12-05 00:03:24.000000000 +0000
+--- electron/spec/crash-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
 +++ electron/spec/crash-spec.ts
 @@ -47,7 +47,8 @@ const shouldRunCase = (crashCase: string
        if (process.platform === 'win32') {
