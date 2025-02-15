@@ -1,11 +1,10 @@
 # $NetBSD$
 
 VERSION=	7.1-beta
-
 GITHUB_PROJECT=	geneweb
 GITHUB_TAG=	refs/tags/v${VERSION}
 DISTNAME=	v${VERSION}
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+PKGNAME=	${GITHUB_PROJECT}-7.1b1
 CATEGORIES=	# TODO: add primary category
 MASTER_SITES=	${MASTER_SITE_GITHUB:=geneweb/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -33,9 +32,12 @@ do-configure:
 
 BUILD_TARGET=	build
 
+.include "../../devel/ocaml-ppx_import/buildlink3.mk"
 .include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../lang/camlp5/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../textproc/ocaml-markup/buildlink3.mk"
 .include "../../textproc/ocaml-uutf/buildlink3.mk"
+.include "../../www/ocaml-uri/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

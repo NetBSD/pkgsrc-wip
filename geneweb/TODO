@@ -1,3 +1,9 @@
   - add libraries that are needed
+
+    Error: Library "jingoo" not found.
+    Error: Library "ppx_blob" not found.
+    Error: Library "ppx_deriving.show" not found.
+    Error: Library "uunf" not found.
+
   - report bashism upstream
   - test
