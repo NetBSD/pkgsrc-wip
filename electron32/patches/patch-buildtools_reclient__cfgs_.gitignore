@@ -9,6 +9,6 @@ $NetBSD$
 @@ -1,4 +1,5 @@
  /chromium-browser-clang/
  /python/
-+/nacl/
++/naclXXX/
  /win-cross/
  reproxy.cfg

@@ -10,7 +10,7 @@ $NetBSD$
  /data
  /delegate_execute
  /device/serial/device_serial_mojo.xml
-+/electron
++/electronXXX
  /google_apis/gcm/gcm.xml
  /googleurl
  /gpu/gles2_conform_test

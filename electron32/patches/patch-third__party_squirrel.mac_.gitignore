@@ -17,4 +17,4 @@ $NetBSD$
  *.moved-aside
  DerivedData
  .idea/
-+vendor
++vendorXXX

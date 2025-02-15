@@ -109,8 +109,7 @@ $NetBSD$
      EXPECT_TRUE(r()->Resolve()) << r()->error();
  }
  
--}  // namespace
-+TEST_F(ResolverAddressSpaceLayoutValidationTest, AlignAttributeTooSmall_Storage) {
++TEST_F(ResolverAddressSpaceLayoutValidationTest, AlignAttributeTooSmal_Storagel) {
 +    // struct S {
 +    //   @align(4) vector : vec4u;
 +    //   scalar : u32;
@@ -202,5 +201,5 @@ $NetBSD$
 +56:78 note: 'S' used in address space 'function' here)");
 +}
 +
-+ }  // namespace
+ }  // namespace
  }  // namespace tint::resolver

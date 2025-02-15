@@ -10,9 +10,9 @@ $NetBSD$
  /data_sharing_sdk
  /devserver
  /directxsdk
-+/electron_node
++/electron_nodeXXX
  /elfutils/src
-+/engflow-reclient-configs/
++/engflow-reclient-configsXXX/
  /espresso/lib/
  /eyesfree/src
  /fuchsia-sdk/images
@@ -20,7 +20,7 @@ $NetBSD$
  /mocha
  /mockito/src
  /nacl_sdk_binaries/
-+/nan
++/nanXXX
  /ninja
  /node/*.tar.gz
  /node/linux/
@@ -28,7 +28,7 @@ $NetBSD$
  /spirv-headers/src
  /spirv-tools/src
  /sqlite4java/lib/
-+/squirrel.mac
++/squirrel.macXXX
  /subresource-filter-ruleset/data/*
  /swift-format
  /swift-toolchain

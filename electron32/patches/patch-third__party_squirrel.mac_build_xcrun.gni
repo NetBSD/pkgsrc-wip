@@ -1,0 +1,27 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/squirrel.mac/build/xcrun.gni.orig	2025-02-15 11:29:58.522658435 +0000
++++ third_party/squirrel.mac/build/xcrun.gni
+@@ -0,0 +1,18 @@
++template("xcrun_action") {
++  assert(defined(invoker.cmd), "Need cmd name to run")
++  assert(defined(invoker.args), "Need cmd argumets")
++  assert(defined(invoker.inputs), "Need inputs")
++  assert(defined(invoker.outputs), "Need outputs")
++
++  action(target_name) {
++    forward_variables_from(invoker,
++                           [
++                             "deps",
++                             "public_deps",
++                             "inputs",
++                             "outputs",
++                           ])
++    script = "//third_party/squirrel.mac/build/xcrun.py"
++    args = [ invoker.cmd ] + invoker.args
++  }
++}
