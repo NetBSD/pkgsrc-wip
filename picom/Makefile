@@ -25,6 +25,7 @@ SUBST_MESSAGE.rubyver=	Fixing asciidoctor executable name.
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
+FORCE_C_STD=		gnu11
 MESON_ARGS+=		-Dwith_docs=true
 REPLACE_SH+=		bin/picom-trans
 PYTHON_FOR_BUILD_ONLY=	tool
