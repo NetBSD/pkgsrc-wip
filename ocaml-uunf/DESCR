@@ -1,0 +1,4 @@
+Uunf is an OCaml library for normalizing Unicode text.  It supports
+all Unicode normalization formsx.  The library is independent from any
+IO mechanism or Unicode text data structure and it can process text
+without a complete in-memory representation.

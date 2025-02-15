@@ -1,0 +1,8 @@
+  - Fix ocaml crash during build.
+
+  - See if OPAM should be overriding do-build, or if the override in
+    Makefile is ok.
+
+  - Figure out USE_LANGUAGES.
+
+  - Resolve use of uutf or not.

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (uunf-16.0.0.tar.gz) = 8db037e4254186dcca7493e553ab97f293e5710fb077582de61d253cfd9c1a52
+SHA512 (uunf-16.0.0.tar.gz) = 65fdc69fd1fa6f1dc9a8cf4f176e440ac9e5905989ffabf719d35d63a681f08b19748fd239c1d8c6c01e8feeca250322c321f69a889d50018900c53d011bac36
+Size (uunf-16.0.0.tar.gz) = 54558 bytes

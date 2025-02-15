@@ -2666,6 +2666,7 @@ SUBDIR+=	ocaml-ounit
 SUBDIR+=	ocaml-ptmap
 SUBDIR+=	ocaml-sedlex
 SUBDIR+=	ocaml-sha
+SUBDIR+=	ocaml-uunf
 SUBDIR+=	ocamlweb
 SUBDIR+=	occt
 SUBDIR+=	ocserv
