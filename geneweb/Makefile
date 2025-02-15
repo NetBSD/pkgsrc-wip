@@ -13,10 +13,10 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/geneweb/geneweb/
 COMMENT=	GeneWeb is a genealogy database that runs as a web server
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/geneweb-${VERSION}
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
 OCAML_USE_DUNE=		yes
@@ -24,7 +24,7 @@ OCAML_USE_DUNE=		yes
 OPAM_INSTALL_FILES=	${OCAML_FINDLIB_DIRS}
 DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
 
-RCD_SCRIPTS=	geneweb
+RCD_SCRIPTS=		geneweb
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,7 +33,9 @@ do-configure:
 
 BUILD_TARGET=	build
 
-#.include "../../lang/camlp5/buildlink3.mk"
+.include "../../devel/ocaml-ppxlib/buildlink3.mk"
+.include "../../lang/camlp5/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../textproc/ocaml-uutf/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
