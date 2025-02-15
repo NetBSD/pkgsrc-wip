@@ -14,7 +14,7 @@ $NetBSD$
    }
  
    if (is_ios) {
-@@ -270,10 +271,24 @@ source_set("audio") {
+@@ -270,10 +271,35 @@ source_set("audio") {
      deps += [ "//media/base/android:media_jni_headers" ]
    }
  
@@ -23,7 +23,7 @@ $NetBSD$
      sources += [ "linux/audio_manager_linux.cc" ]
    }
  
-+  if (is_bsd) {
++  if (is_bsd && !use_audioio) {
 +    sources += [ "sndio/audio_manager_sndio.cc" ]
 +  }
 +
@@ -34,6 +34,17 @@ $NetBSD$
 +      "sndio/sndio_input.h",
 +      "sndio/sndio_output.cc",
 +      "sndio/sndio_output.h"
++    ]
++   }
++
++  if (use_audioio) {
++    sources += [
++      "audioio/audio_manager_audioio.cc",
++      "audioio/audio_manager_audioio.h",
++      "audioio/audioio_input.cc",
++      "audioio/audioio_input.h",
++      "audioio/audioio_output.cc",
++      "audioio/audioio_output.h"
 +    ]
 +   }
 +

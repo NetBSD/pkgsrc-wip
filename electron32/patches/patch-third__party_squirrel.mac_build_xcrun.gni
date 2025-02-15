@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/squirrel.mac/build/xcrun.gni.orig	2025-02-15 11:29:58.522658435 +0000
+--- third_party/squirrel.mac/build/xcrun.gni.orig	2025-02-15 18:06:05.562986686 +0000
 +++ third_party/squirrel.mac/build/xcrun.gni
 @@ -0,0 +1,18 @@
 +template("xcrun_action") {

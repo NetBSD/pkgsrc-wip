@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/squirrel.mac/BUILD.gn.orig	2025-02-15 11:29:58.520543295 +0000
+--- third_party/squirrel.mac/BUILD.gn.orig	2025-02-15 18:06:05.560887527 +0000
 +++ third_party/squirrel.mac/BUILD.gn
 @@ -0,0 +1,242 @@
 +assert(is_mac)

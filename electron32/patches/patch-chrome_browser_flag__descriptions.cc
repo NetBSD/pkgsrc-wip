@@ -69,7 +69,7 @@ $NetBSD$
  const char kOzonePlatformHintChoiceDefault[] = "Default";
  const char kOzonePlatformHintChoiceAuto[] = "Auto";
  const char kOzonePlatformHintChoiceX11[] = "X11";
-@@ -8156,6 +8156,18 @@ const char kSimplifiedTabDragUIDescripti
+@@ -8156,6 +8156,20 @@ const char kSimplifiedTabDragUIDescripti
  const char kWaylandPerWindowScalingName[] = "Wayland per-window scaling";
  const char kWaylandPerWindowScalingDescription[] =
      "Enable Wayland's per-window scaling experimental support.";
@@ -80,7 +80,9 @@ $NetBSD$
 +const char kAudioBackendDescription[] =
 +#if BUILDFLAG(IS_OPENBSD)
 +    "Select the desired audio backend to use. The default is sndio.";
-+#elif BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
++#if BUILDFLAG(IS_NETBSD)
++    "Select the desired audio backend to use. The default is audioio.";
++#elif BUILDFLAG(IS_FREEBSD)
 +    "Select the desired audio backend to use. The default will automatically "
 +    "enumerate through the supported backends.";
 +#endif
@@ -88,7 +90,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX)
  
  // All views-based platforms --------------------------------------------------
-@@ -8182,14 +8194,14 @@ const char kZeroCopyVideoCaptureDescript
+@@ -8182,14 +8196,14 @@ const char kZeroCopyVideoCaptureDescript
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -105,7 +107,7 @@ $NetBSD$
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -8221,7 +8233,7 @@ const char kWebBluetoothConfirmPairingSu
+@@ -8221,7 +8235,7 @@ const char kWebBluetoothConfirmPairingSu
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -114,7 +116,7 @@ $NetBSD$
  const char kSkipUndecryptablePasswordsName[] =
      "Skip undecryptable passwords to use the available decryptable "
      "passwords.";
-@@ -8375,7 +8387,7 @@ const char kElementCaptureDescription[] 
+@@ -8375,7 +8389,7 @@ const char kElementCaptureDescription[] 
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -123,7 +125,7 @@ $NetBSD$
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -8449,7 +8461,7 @@ const char kAutofillCaretExtractionDescr
+@@ -8449,7 +8463,7 @@ const char kAutofillCaretExtractionDescr
      "Enables passing caret position via Autofill";
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  

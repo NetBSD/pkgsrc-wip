@@ -60,8 +60,8 @@ $NetBSD$
 +  node_release_urlbase = ""
 +
 +  # Allows downstream packagers (eg. Linux distributions) to build Electron against system shared libraries.
-+  use_system_cares = false
-+  use_system_nghttp2 = false
++  use_system_cares = true
++  use_system_nghttp2 = true
 +  use_system_llhttp = false
 +  use_system_histogram = false
 +}

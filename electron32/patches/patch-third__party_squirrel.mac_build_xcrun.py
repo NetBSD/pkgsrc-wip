@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/squirrel.mac/build/xcrun.py.orig	2025-02-15 11:29:58.522791133 +0000
+--- third_party/squirrel.mac/build/xcrun.py.orig	2025-02-15 18:06:05.563109524 +0000
 +++ third_party/squirrel.mac/build/xcrun.py
 @@ -0,0 +1,14 @@
 +#!/usr/bin/env python3

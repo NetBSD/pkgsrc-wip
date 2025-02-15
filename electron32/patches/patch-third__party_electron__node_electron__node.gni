@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/electron_node/electron_node.gni.orig	2025-02-15 11:29:58.448432187 +0000
+--- third_party/electron_node/electron_node.gni.orig	2025-02-15 18:06:05.492527090 +0000
 +++ third_party/electron_node/electron_node.gni
 @@ -0,0 +1,4 @@
 +declare_args() {

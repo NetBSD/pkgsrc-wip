@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/electron_node/tools/generate_original_fs.py.orig	2025-02-15 11:29:58.475139877 +0000
+--- third_party/electron_node/tools/generate_original_fs.py.orig	2025-02-15 18:06:05.515059820 +0000
 +++ third_party/electron_node/tools/generate_original_fs.py
 @@ -0,0 +1,19 @@
 +import os
