@@ -10,6 +10,10 @@ HOMEPAGE=	https://github.com/dbuenzli/uunf/
 COMMENT=	OCaml library for normalizing Unicode text
 LICENSE=	isc
 
+TOOL_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+TOOL_DEPENDS+=	ocamlbuild-[0-9]*:../../devel/ocamlbuild
+TOOL_DEPENDS+=	ocaml-topkg-[0-9]*:../../misc/ocaml-topkg
+
 # Consider hoisting this to github.mk?
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
