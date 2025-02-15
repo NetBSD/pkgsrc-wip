@@ -21,6 +21,10 @@ UNLIMIT_RESOURCES+=	datasize
 
 USE_CXX_FEATURES+=	c++20
 
+# kill fatal warnings or QtPdf fails to build because of
+#  warning: libstdc++.so.9, needed by ... may conflict with libstdc++.so.7
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
+
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Pdf.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6PdfQuick.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6PdfWidgets.pc
@@ -30,6 +34,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineWidgets.pc
 
 CMAKE_CONFIGURE_ARGS+=		-G Ninja
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_pdf_v8=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_proprietary_codecs=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_ffmpeg=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_icu=ON
@@ -84,15 +89,6 @@ GN_SYSTEM_LIBS=	libevent
 #GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 CHROMESRC=		${WRKSRC}/src/3rdparty/chromium
-
-#EXTRA_LDFLAGS=		-L${PREFIX}/lib \
-#			-L${X11BASE}/lib \
-#			${COMPILER_RPATH_FLAG}${PREFIX}/lib \
-#			${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr \
-#			${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
-#			${COMPILER_RPATH_FLAG}${X11BASE}/lib
-
-PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngine.pc
 
 pre-configure:
 	cd ${CHROMESRC} && \
