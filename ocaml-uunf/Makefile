@@ -16,8 +16,10 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=
 
 .include "../../lang/ocaml/ocaml.mk"
-OCAML_USE_DUNE=	yes
-OCAML_USE_OPAM=	yes
+OCAML_USE_DUNE=			yes
+OCAML_USE_OPAM=			yes
+# Compiler crashes during build.
+OCAML_USE_OPT_COMPILER=		no
 
 do-build:
 	cd ${WRKSRC} && ocaml pkg/pkg.ml build
