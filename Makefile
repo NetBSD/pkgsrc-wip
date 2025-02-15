@@ -710,6 +710,7 @@ SUBDIR+=	dict-server-current
 SUBDIR+=	diff-pdf
 SUBDIR+=	diffsitter-git
 SUBDIR+=	digestif
+SUBDIR+=	digikam
 SUBDIR+=	digitemp
 SUBDIR+=	ding
 SUBDIR+=	dionysus

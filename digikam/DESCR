@@ -1,0 +1,21 @@
+digiKam is an advanced digital photo management application for KDE, which makes
+importing and organizing digital photos a "snap". The photos are organized in
+albums which can be sorted chronologically, by folder layout or by custom
+collections.
+
+You tag your images which can be spread out across multiple folders, and digiKam
+provides fast and intuitive ways to browse these tagged images. You can also add
+comments to your images.  digiKam makes use of a fast and robust database to
+store these meta-informations which makes adding and editing of comments and
+tags very reliable.
+
+An easy-to-use interface is provided that enables you to connect to your camera
+and preview, download and/or delete your images. Basic auto-transformations can
+be deployed on the fly during image downloading.
+
+Another tool, which most artists and photographers will be familiar with, is a
+Light Table. This tool assists artists and photographers with reviewing their
+work ensuring the highest quality only. A classical light table will show the
+artist the place on the images to touch up. Well in digiKam, the light table
+function provides the user a similar experience. You can import a photo, drag it
+onto the light table, and touch up only the areas that need it.
