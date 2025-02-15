@@ -48,6 +48,7 @@ post-install:
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cryptopp+=	cryptopp>=8.7.0nb1
 .include "../../security/crypto++/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
