@@ -30,15 +30,17 @@ CHECK_PORTABILITY_SKIP=	get-deps
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fish/completions
+INSTALLATION_DIRS+=	share/icons/hicolor/symbolic/apps
+INSTALLATION_DIRS+=	share/zsh/site-functions
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
-
-post-build:
-	tic -x -o ${WRKSRC}/terminfo ${WRKSRC}/termwiz/data/wezterm.terminfo
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wezterm \
@@ -53,11 +55,23 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/generate-bidi \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/assets/wezterm.desktop \
+		${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/assets/shell-completion/bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/wezterm
+	${INSTALL_DATA} ${WRKSRC}/assets/shell-completion/fish \
+		${DESTDIR}${PREFIX}/share/fish/completions/wezterm.fish
+	${INSTALL_DATA} ${WRKSRC}/assets/shell-completion/zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_wezterm
+	${INSTALL_DATA} ${WRKSRC}/assets/icon/wezterm-icon.svg \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/symbolic/apps/org.wezfurlong.wezterm.svg
 
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/wayland/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"

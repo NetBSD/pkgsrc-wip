@@ -1,8 +1,3 @@
-Additional files to install:
- - icons
- - shell completions
- - desktop file
-
 Additional shared libraries that need linking
 
 => Checking for PIE in wezterm-0.0.20250216
@@ -14,7 +9,3 @@ ERROR: bin/wezterm-gui: missing library: libxkbcommon-x11.so.0
 ERROR: bin/wezterm-gui: missing library: libwayland-egl.so.1
 ERROR: bin/wezterm-gui: missing library: libwayland-client.so.0
 *** Error code 1
-
-Stop.
-
-Also, check if additional build dependencies should be declared.
