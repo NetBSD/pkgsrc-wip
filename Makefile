@@ -1382,7 +1382,6 @@ SUBDIR+=	gp-toric
 SUBDIR+=	gpak
 SUBDIR+=	gpatch
 SUBDIR+=	gplbasic
-SUBDIR+=	gprbuild
 SUBDIR+=	gprlib
 SUBDIR+=	gpsdrive
 SUBDIR+=	gptfdisk
