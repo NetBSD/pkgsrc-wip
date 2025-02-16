@@ -41,6 +41,7 @@ bin/auto-replace-file
 bin/auto-software-manager
 bin/auto-ssh-authorize
 bin/auto-ssh-reverse-authorize
+bin/auto-update-manager
 bin/auto-update-pkgsrc
 bin/auto-using-pkgsrc
 bin/auto-wacom-map-display
