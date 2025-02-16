@@ -1,67 +1,45 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	wezterm
-DISTNAME=	wezterm-20220408-101518-b908e2dd-src
+DISTNAME=	wezterm-0.0.20250216
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wez/}
-GITHUB_RELEASE=	20220408-101518-b908e2dd
-DISTFILES+=	${DISTNAME}.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
+GITHUB_TAG=	ee0c04e735fb94cb5119681f704fb7fa6731e713
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	https://github.com/wez/wezterm/
-COMMENT=	Terminal emulator
+HOMEPAGE=	https://wezterm.org/
+COMMENT=	Powerful cross-platform terminal emulator and multiplexer
 LICENSE=	mit AND ofl-v1.1
 
-WRKSRC=			${WRKDIR}/wezterm-${GITHUB_RELEASE}
+# wezterm just takes HEAD, but that will lead to distfile problems; hardcode the heads as of 20250216
+GITHUB_SUBMODULES+=	harfbuzz harfbuzz b97ef6c702910f4317cc364c7d67c380047b237f deps/harfbuzz/harfbuzz
+GITHUB_SUBMODULES+=	glennrp libpng b525503b78392335a43558c6a053e0209140762d deps/freetype/libpng
+GITHUB_SUBMODULES+=	madler zlib 7108497fda9d4536a1afade7f42266e06dca4488 deps/freetype/zlib
+GITHUB_SUBMODULES+=	freetype freetype b1f47850878d232eea372ab167e760ccac4c4e32 deps/freetype/freetype2
+# xcb-imdkit-rs _also_ needs a submodule
+GITHUB_SUBMODULES+=	fcitx xcb-imdkit 44f5c8219bcae9e6afc2391dc50486efcf0bdf06 ../xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}/deps/xcb-imdkit
+
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+XCB_IMDKIT_RS_REV=	358e226573461fe540efb920e2aad740e3c6fab1
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}.tar.gz
+
+SITES.xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=wez/}xcb-imdkit-rs/archive/${XCB_IMDKIT_RS_REV}.tar.gz
+
+CHECK_PORTABILITY_SKIP=	get-deps
+
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c c++
-
-DISTFILES+=	xkbcommon-0.5.0-5cc8f233ac2b8bfa0d7a26fd981b77e68c3f2219.tar.gz
-SITES.xkbcommon-0.5.0-5cc8f233ac2b8bfa0d7a26fd981b77e68c3f2219.tar.gz= \
-	-https://github.com/wez/xkbcommon-rs/archive/5cc8f233ac2b8bfa0d7a26fd981b77e68c3f2219.tar.gz
-
-.include "cargo-depends.mk"
-
-PKGCONFIG_OVERRIDE+=	deps/freetype/libpng/libpng.pc.in
-PKGCONFIG_OVERRIDE+=	deps/freetype/libpng/scripts/libpng.pc.in
-PKGCONFIG_OVERRIDE+=	deps/freetype/zlib/contrib/minizip/minizip.pc.in
-PKGCONFIG_OVERRIDE+=	deps/freetype/zlib/zlib.pc.in
-PKGCONFIG_OVERRIDE+=	deps/harfbuzz/harfbuzz/src/harfbuzz-gobject.pc.in
-PKGCONFIG_OVERRIDE+=	deps/harfbuzz/harfbuzz/src/harfbuzz-icu.pc.in
-PKGCONFIG_OVERRIDE+=	deps/harfbuzz/harfbuzz/src/harfbuzz-subset.pc.in
-PKGCONFIG_OVERRIDE+=	deps/harfbuzz/harfbuzz/src/harfbuzz.pc.in
-
-SUBST_CLASSES+=		sshdtest
-SUBST_STAGE.sshdtest=	pre-configure
-SUBST_MESSAGE.sshdtest=	Do not print malformed sshd config
-SUBST_FILES.sshdtest=	wezterm-ssh/tests/sshd.rs
-SUBST_SED.sshdtest+=	-e 's,std::fs::write,//std::fs::write,g'
-
-post-extract:
-	${MV} ${WRKDIR}/xkbcommon-rs-5cc8f233ac2b8bfa0d7a26fd981b77e68c3f2219 ${WRKDIR}/vendor/xkbcommon-0.5.0
-	${RUN}${PRINTF} '{"package":"%s","files":{}}'   \
-	  `${DIGEST} sha256 < ${_DISTDIR}/xkbcommon-0.5.0-5cc8f233ac2b8bfa0d7a26fd981b77e68c3f2219.tar.gz` \
-	  > ${CARGO_VENDOR_DIR}/xkbcommon-0.5.0/.cargo-checksum.json
-
-post-patch:
-	${CP} ${FILESDIR}/netbsd.rs ${WRKDIR}/vendor/ioctl-rs-0.1.6/src/os/
-	rm ${WRKSRC}/wezterm-gui/src/update.rs
-
-do-build:
-	# Do not build ssh for now.
-	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS} --manifest-path wezterm/Cargo.toml
-	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS} --manifest-path wezterm-gui/Cargo.toml
-	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS} --manifest-path wezterm-mux-server/Cargo.toml
-	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS} --manifest-path strip-ansi-escapes/Cargo.toml
 
 post-build:
 	tic -x -o ${WRKSRC}/terminfo ${WRKSRC}/termwiz/data/wezterm.terminfo
 
-do-test:
-	# Alpine Linux writes about tests getting stuck and sshd needs to be killed
-	cd ${WRKSRC} && ${MAKEENV} cargo test --frozen
+.include "cargo-depends.mk"
 
-.include "../../devel/wayland/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xcb-util-image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
