@@ -633,6 +633,18 @@ _NEED_GCC14_GNAT=no
 PKG_FAIL_REASON+=	"Package requires fortran compiler"
 .     endif
 .  endif
+.  if ${_NEED_GCC6_AUX:tl} == "yes" && ${_NEED_GCC6:tl} != "yes"
+_NEED_GCC6_AUX=no
+.  endif
+.  if ${_NEED_GCC10_AUX:tl} == "yes" && ${_NEED_GCC10:tl} != "yes"
+_NEED_GCC10_AUX=no
+.  endif
+.  if ${_NEED_GCC13_GNAT:tl} == "yes" && ${_NEED_GCC13:tl} != "yes"
+_NEED_GCC13_GNAT=no
+.  endif
+.  if ${_NEED_GCC14_GNAT:tl} == "yes" && ${_NEED_GCC14:tl} != "yes"
+_NEED_GCC14_GNAT=no
+.  endif
 .  if !empty(USE_LANGUAGES:Mobjc)
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
