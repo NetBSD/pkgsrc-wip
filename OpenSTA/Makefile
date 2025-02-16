@@ -13,8 +13,11 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/OpenSTA-20925bb00965c1199c45aca0318c2baeb4042c5a
 
-GCC_REQD+=	13
 FORCE_CXX_STD=	c++20
+
+.include "options.mk"
+.include "../../mk/bsd.prefs.mk"
+
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	chmod cp bison find pax
