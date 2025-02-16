@@ -123,13 +123,15 @@ do-install:
 #.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=  tool
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 #.include "../../multimedia/openh264/buildlink3.mk"
-.include "../../print/libcups/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../sysutils/pciutils/libname.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
