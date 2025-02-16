@@ -1,2 +1,7 @@
 @comment $NetBSD: PLIST,v 1.2 2022/01/23 16:14:24 pin Exp $
+bin/generate-bidi
+bin/strip-ansi-escapes
+bin/sync-color-schemes
 bin/wezterm
+bin/wezterm-gui
+bin/wezterm-mux-server

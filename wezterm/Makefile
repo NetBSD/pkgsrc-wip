@@ -30,8 +30,29 @@ CHECK_PORTABILITY_SKIP=	get-deps
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
+INSTALLATION_DIRS=	bin
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+
 post-build:
 	tic -x -o ${WRKSRC}/terminfo ${WRKSRC}/termwiz/data/wezterm.terminfo
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wezterm \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wezterm-gui \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wezterm-mux-server \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/strip-ansi-escapes \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/sync-color-schemes \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/generate-bidi \
+		${DESTDIR}${PREFIX}/bin
 
 .include "cargo-depends.mk"
 
