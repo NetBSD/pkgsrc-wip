@@ -3,7 +3,7 @@ $NetBSD$
 Support Catch2 v3.
 Based on https://github.com/prusa3d/PrusaSlicer/issues/11567
 
---- tests/arrange/test_arrange_integration.cpp.orig	2024-02-29 13:03:32.000000000 +0000
+--- tests/arrange/test_arrange_integration.cpp.orig	2024-12-20 11:54:34.000000000 +0000
 +++ tests/arrange/test_arrange_integration.cpp
 @@ -1,4 +1,10 @@
 -#include <catch2/catch.hpp>
@@ -16,17 +16,17 @@ Based on https://github.com/prusa3d/PrusaSlicer/issues/11567
 +#include <catch2/matchers/catch_matchers_floating_point.hpp>
  #include "test_utils.hpp"
  
- #include <libslic3r/Arrange/Arrange.hpp>
-@@ -12,6 +18,8 @@
+ #include <arrange-wrapper/Arrange.hpp>
+@@ -11,6 +17,8 @@
+ #include "libslic3r/Geometry/ConvexHull.hpp"
  #include "libslic3r/Format/3mf.hpp"
- #include "libslic3r/ModelArrange.hpp"
  
 +using Catch::Matchers::WithinRel;
 +
  static Slic3r::Model get_example_model_with_20mm_cube()
  {
      using namespace Slic3r;
-@@ -560,10 +568,10 @@ TEST_CASE("Virtual bed handlers - Stride
+@@ -559,10 +567,10 @@ TEST_CASE("Virtual bed handlers - Stride
                  auto ref_pos = tr * Vec3d::Zero();
  
                  auto displace = bed_index * (unscaled(vbh.stride_scaled()));
@@ -39,7 +39,7 @@ Based on https://github.com/prusa3d/PrusaSlicer/issues/11567
              }
          }
      }
-@@ -868,8 +876,8 @@ bool settings_eq(const Slic3r::arr2::Arr
+@@ -871,8 +879,8 @@ bool settings_eq(const Slic3r::arr2::Arr
  {
      return v1.is_rotation_enabled() == v2.is_rotation_enabled() &&
             v1.get_arrange_strategy() == v2.get_arrange_strategy() &&

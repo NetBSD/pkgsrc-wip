@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.8.1
+PKGVERSION=	2.9.0
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(alpha|beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -18,7 +18,7 @@ LICENSE=	gnu-agpl-v3
 ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
 
 # Uses std::to_chars_result from <charconv> which is actually gcc8+.
-GCC_REQD+=		10
+# GCC_REQD+=		10
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 USE_TOOLS+=		gmake pkg-config:run
@@ -47,6 +47,7 @@ pre-configure:
 .include "../../devel/catch2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
@@ -63,6 +64,7 @@ pre-configure:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
