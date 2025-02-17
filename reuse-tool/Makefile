@@ -13,8 +13,6 @@ LICENSE=	apache-2.0 AND gnu-gpl-v3 AND cc-by-sa-v4.0 AND cc0-1.0-universal
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-myst-parser>=3.0.1:../../textproc/py-myst-parser
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=6.0.0:../../devel/py-pbr
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.9.0:../../devel/py-poetry-core
