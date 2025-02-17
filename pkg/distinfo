@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.17 2021/10/26 11:11:07 nia Exp $
+
+BLAKE2s (pkg-2.0.6.tar.gz) = bb247357520170299ebbbca37c77279d63514ea644c1148fc7b3077f43108e0a
+SHA512 (pkg-2.0.6.tar.gz) = 9f8edd5b3f18eaf0e4602e062c156cb3fc8d544e5a6ec6501201fd4f9b22976acbfd4dbeed80b1c77b4fdd2c5f0f4499bd51cf28a29656679c3a2c25565d24c9
+Size (pkg-2.0.6.tar.gz) = 16399889 bytes
+SHA1 (patch-external_libder_libder_libder__private.h) = 6cb11bcea09b45a41a25b9e45500bb156c5fca5a
+SHA1 (patch-libpkg_fetch__ssh.c) = 2b3e26dfe43b5d585dffae065d9a1e5ed137bc47
+SHA1 (patch-libpkg_pkg__abi.c) = 7803f49bf32f0018545d5ac02195e6dd844bea35
+SHA1 (patch-libpkg_pkg__config.c) = d2998971010c9196400f1fba5174acc03386f012
+SHA1 (patch-libpkg_pkg__elf.c) = f65eadb3c6b85933c4f6b9ab5a1064707ace0cb3
+SHA1 (patch-libpkg_pkg__jobs.c) = 75dadbaebd9963f583ee06c7dd30c4bb27749645
+SHA1 (patch-libpkg_pkgsign__ecc.c) = 7397f39dfb830bf914dbac57a876586ea69ad980
+SHA1 (patch-libpkg_ssh.c) = 533f4b06c270a68318ae44cd1de17fa27c95d347
+SHA1 (patch-libpkg_utils.c) = 75ba395d5ca08546428d088b80c62add553dfd16
+SHA1 (patch-scripts_periodic_411.pkg-backup.in) = ec4ff8991b79608c448739b693b2eb527b646c63

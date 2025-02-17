@@ -3196,6 +3196,7 @@ SUBDIR+=	piranha
 SUBDIR+=	piwik
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
+SUBDIR+=	pkg
 SUBDIR+=	pkg-dev
 SUBDIR+=	pkg_conflicts
 SUBDIR+=	pkg_fake
