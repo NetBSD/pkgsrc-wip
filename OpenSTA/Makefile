@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=	${WRKDIR}/OpenSTA-20925bb00965c1199c45aca0318c2baeb4042c5a
 
 FORCE_CXX_STD=	c++20
+CXXFLAGS.Linux+=	-fPIC
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
