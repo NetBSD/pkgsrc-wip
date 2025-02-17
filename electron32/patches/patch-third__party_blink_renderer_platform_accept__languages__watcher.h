@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/blink/renderer/platform/accept_languages_watcher.h.orig	2025-02-15 18:06:05.472098097 +0000
+--- third_party/blink/renderer/platform/accept_languages_watcher.h.orig	2025-02-17 11:32:29.530929935 +0000
 +++ third_party/blink/renderer/platform/accept_languages_watcher.h
 @@ -0,0 +1,22 @@
 +// Copyright 2024 The Chromium Authors

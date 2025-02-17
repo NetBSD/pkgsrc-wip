@@ -1,4 +1,4 @@
 To Do:
 
-0) Build on NetBSD-10 amd64, should work on OpenBSD and FreeBSD
-1) Not usable yet
+0) Built on NetBSD-10 amd64
+1) Successful building and packaging, not tested yet

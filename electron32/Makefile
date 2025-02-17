@@ -68,7 +68,7 @@ TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-TOOL_DEPENDS+=			nodejs-20*:../../lang/nodejs20
+TOOL_DEPENDS+=			nodejs-20.*:../../lang/nodejs20
 #TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
 TOOL_DEPENDS+=			rust-bindgen-[0-9]*:../../devel/rust-bindgen
 TOOL_DEPENDS+=			yarn-[0-9]*:../../devel/yarn
@@ -106,6 +106,7 @@ SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	base/base_paths_posix.cc
 SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
+SUBST_FILES.path+=	build/gn_run_binary.py
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	chrome/browser/file_system_access/chrome_file_system_access_permission_context.h
@@ -113,10 +114,17 @@ SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	third_party/blink/renderer/build/scripts/run_with_pythonpath.py
+SUBST_FILES.path+=	third_party/electron_node/tools/generate_gn_filenames_json.py
+SUBST_FILES.path+=	third_party/engflow-reclient-configs/python/python_remote_wrapper.template
+SUBST_FILES.path+=	third_party/squirrel.mac/build/xcrun.py
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
+SUBST_FILES.path+=	tools/protoc_wrapper/protoc_wrapper.py
 SUBST_FILES.path+=	ui/qt/qt.gni
+SUBST_FILES.path+=	v8/tools/run.py
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
+SUBST_VARS.path+=	WRKSRC SH
 
 .include "options.mk"
 
@@ -318,7 +326,7 @@ do-install:
 	cd ${WRKSRC}/out/${BUILDTYPE}/gen && \
 		${FIND} node_headers -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .for f in snapshot_blob.bin v8_context_snapshot.bin LICENSE LICENSES.chromium.html version
-	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
+	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -363,6 +371,7 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
 BUILDLINK_TRANSFORM+=	l:pci:pciutils

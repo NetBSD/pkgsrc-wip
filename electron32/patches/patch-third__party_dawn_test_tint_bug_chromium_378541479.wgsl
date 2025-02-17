@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/dawn/test/tint/bug/chromium/378541479.wgsl.orig	2025-02-15 18:06:05.484712435 +0000
+--- third_party/dawn/test/tint/bug/chromium/378541479.wgsl.orig	2025-02-17 11:32:29.544110663 +0000
 +++ third_party/dawn/test/tint/bug/chromium/378541479.wgsl
 @@ -0,0 +1,10 @@
 +// flags: --transform robustness

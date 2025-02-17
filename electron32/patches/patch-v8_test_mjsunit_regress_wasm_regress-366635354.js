@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- v8/test/mjsunit/regress/wasm/regress-366635354.js.orig	2025-02-15 18:06:05.621191360 +0000
+--- v8/test/mjsunit/regress/wasm/regress-366635354.js.orig	2025-02-17 11:32:29.684024980 +0000
 +++ v8/test/mjsunit/regress/wasm/regress-366635354.js
 @@ -0,0 +1,32 @@
 +// Copyright 2024 the V8 project authors. All rights reserved.

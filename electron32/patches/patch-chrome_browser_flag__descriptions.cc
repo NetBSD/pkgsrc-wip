@@ -80,7 +80,7 @@ $NetBSD$
 +const char kAudioBackendDescription[] =
 +#if BUILDFLAG(IS_OPENBSD)
 +    "Select the desired audio backend to use. The default is sndio.";
-+#if BUILDFLAG(IS_NETBSD)
++#elif BUILDFLAG(IS_NETBSD)
 +    "Select the desired audio backend to use. The default is audioio.";
 +#elif BUILDFLAG(IS_FREEBSD)
 +    "Select the desired audio backend to use. The default will automatically "

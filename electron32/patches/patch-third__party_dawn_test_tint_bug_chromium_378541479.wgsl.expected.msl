@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/dawn/test/tint/bug/chromium/378541479.wgsl.expected.msl.orig	2025-02-15 18:06:05.485796005 +0000
+--- third_party/dawn/test/tint/bug/chromium/378541479.wgsl.expected.msl.orig	2025-02-17 11:32:29.545206537 +0000
 +++ third_party/dawn/test/tint/bug/chromium/378541479.wgsl.expected.msl
 @@ -0,0 +1,9 @@
 +#include <metal_stdlib>

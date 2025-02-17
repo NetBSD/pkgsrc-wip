@@ -11,8 +11,8 @@ $NetBSD$
        protoc_cmd += ["--include_imports"]
  
 +  nenv = os.environ.copy()
-+  nenv["PATH"] = "${WRKOBJDIR}/bin:" + nenv["PATH"]
-+  nenv["LD_LIBRARY_PATH"] = "${WRKSRC}/out/Release"
++#  nenv["PATH"] = "${WRKOBJDIR}/bin:" + nenv["PATH"]
++  nenv["LD_LIBRARY_PATH"] = "@WRKSRC@/out/Release"
 +
    dependency_file_data = None
    if options.descriptor_set_out and options.descriptor_set_dependency_file:

@@ -58,7 +58,7 @@ $NetBSD$
 +        &kAudioBackend, "audio-backend",
 +#if BUILDFLAG(IS_OPENBSD)
 +        AudioBackend::kSndio,
-+#if BUILDFLAG(IS_NETBSD)
++#elif BUILDFLAG(IS_NETBSD)
 +        AudioBackend::kAudioIO,
 +#elif BUILDFLAG(IS_FREEBSD)
 +        AudioBackend::kAuto,
