@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
 GITHUB_TAG=	ee0c04e735fb94cb5119681f704fb7fa6731e713
 
-MAINTAINER=	bsiegert@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://wezterm.org/
 COMMENT=	Powerful cross-platform terminal emulator and multiplexer
 LICENSE=	mit AND ofl-v1.1
