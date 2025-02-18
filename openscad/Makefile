@@ -12,9 +12,10 @@ HOMEPAGE=	https://www.openscad.org/
 COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison gettext pkg-config itstool
-USE_LIBTOOL=	yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+USE_TOOLS+=		bison gettext pkg-config itstool
+USE_LIBTOOL=		yes
 
 WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
 
@@ -24,10 +25,12 @@ CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
+# CGAL 6.0.x+ needs c++17
+BUILDLINK_TRANSFORM+=	opt:-std=c++1y:-std=c++17
+
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake \
-	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex \
-	    QMAKE_CXXFLAGS+=-std=c++0x
+	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
