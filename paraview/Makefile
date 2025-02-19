@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	ParaView-v5.12.1
+DISTNAME=	ParaView-v5.13.2
 PKGNAME=	${DISTNAME:S/ParaView-v/paraview-/1}
 CATEGORIES=	math
-MASTER_SITES=	https://www.paraview.org/files/v5.12/
+PV_VER=		${PKGVERSION_NOREV:C/\.[0-9]+$//}
+MASTER_SITES=	https://www.paraview.org/files/v${PV_VER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.paraview.org/
@@ -26,7 +27,7 @@ CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_doubleconversion=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_eigen=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_expat=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_exprtk=OFF
-CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_fmt=ON
+CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_fmt=OFF
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_freetype=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_gl2ps=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_glew=ON
@@ -61,9 +62,9 @@ PY_PATCHPLIST=	yes
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
-PRINT_PLIST_AWK+=	{gsub(/5.12/, "$${PV_VER}");}
+PRINT_PLIST_AWK+=	{gsub(/${PV_VER}/, "$${PV_VER}");}
 
-PLIST_SUBST+=	PV_VER=5.12
+PLIST_SUBST+=	PV_VER=${PV_VER}
 
 .include "../../lang/python/extension.mk"
 
@@ -86,14 +87,13 @@ PLIST_SUBST+=	PV_VER=5.12
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../print/libharu/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
-.include "../../wip/libharu/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
