@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (elmerfem/release-9.0.tar.gz) = a3615ca55caa28bb8c2f3ecbb561663f70b53afaad671f772faf93b80b04afcf
 SHA512 (elmerfem/release-9.0.tar.gz) = 0affb0420b674ebf4d089c4039ba78dd29650f0daf956eab59bd7bea1c466ba6dfdf17c1ca6c953f36bbf95ed127dc9e6e025ee3edb1d2a56e55e61e24e97254
 Size (elmerfem/release-9.0.tar.gz) = 64060003 bytes
+SHA1 (patch-fem_src_modules_DCRComplexSolve.F90) = 374863211b038abf507818641ec4b6cafc9c904a

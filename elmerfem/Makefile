@@ -31,9 +31,10 @@ SUBST_FILES.rpath=	${CMAKE_BUILD_DIR}/fem/src/CMakeFiles/Solver_TGT.dir/link.txt
 SUBST_SED.rpath=	"s|-O|-Wl,-R${PREFIX}/lib/elmersolver -O|"
 
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../mk/mpi.buildlink3.mk"
-.include "../../x11/qwt6-qt4/buildlink3.mk"
+.include "../../wip/qwt6-qt4/buildlink3.mk"
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
