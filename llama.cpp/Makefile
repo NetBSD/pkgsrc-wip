@@ -4,14 +4,14 @@ DISTNAME=	llama.cpp-${GITHUB_TAG}
 PKGNAME=	${DISTNAME:S/-b/-0.0.2./}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggerganov/}
-GITHUB_TAG=	b4458
+GITHUB_TAG=	b4728
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ggerganov/llama.cpp/
 COMMENT=	LLM inference in C/C++
 LICENSE=	mit
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		git pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
