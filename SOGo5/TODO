@@ -1,3 +1,0 @@
-- resolve wrkdir references in binaries (PKG_DEVELOPER)
-
-- Don't use SED during install (pkglint)

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/09/11 12:01:54 tm Exp $
-
-BLAKE2s (SOGo-5.5.0.tar.gz) = 02adecb5cc657f4ee87fb575e23f09708bee0d261a75ee8306f29ddec5c2efff
-SHA512 (SOGo-5.5.0.tar.gz) = c480a8f8cd48a6f5e6c84d470c430338eea825d74885ef4ecef04e1eebe07b2b8f93681b72dd9ead80103436bb96b7f44b71bca6a9cf80dc4dc8e9599c2e9b1d
-Size (SOGo-5.5.0.tar.gz) = 34579723 bytes
-SHA1 (patch-SoObjects_SOGo_pkcs5__pbkdf2.c) = 2a15b36e8b16950f9dcbed674a400b19443371f7
-SHA1 (patch-aa) = 44adf104976bd2a991afce098099ace40e12e41c
-SHA1 (patch-general.make) = c7874a2a3f121b7df2a3a3e9eedff0d1bcbaf44b
