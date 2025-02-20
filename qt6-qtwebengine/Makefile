@@ -43,7 +43,9 @@ CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libevent=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libvpx=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_minizip=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_zlib=ON
-## for the moment
+# As pkgsrc abseil is built with FORCE_CXX_STD=c++14 it is incompatible
+# with chromium's bundled abseil and therefore so is pkgsrc re2
+# so use bundled version
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_re2=OFF
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_kerberos=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_vulkan=OFF
@@ -117,7 +119,7 @@ do-install:
 # chromium insists on using its own protobuf
 # so don't include here as versions must match
 #.include "../../devel/protobuf/buildlink3.mk"
-.include "../../devel/re2/buildlink3.mk"
+#.include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
