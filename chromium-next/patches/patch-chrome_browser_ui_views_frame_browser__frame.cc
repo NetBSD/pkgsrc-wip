@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_frame.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.cc
 @@ -52,7 +52,7 @@
  #include "ui/aura/window.h"
@@ -42,7 +42,7 @@ $NetBSD$
    // If the window was sent to a different workspace, prioritize it if
    // it was sent to the current workspace and deprioritize it
    // otherwise.  This is done by MoveBrowsersInWorkspaceToFront()
-@@ -563,7 +563,7 @@ void BrowserFrame::OnMenuClosed() {
+@@ -567,7 +567,7 @@ void BrowserFrame::OnMenuClosed() {
  }
  
  void BrowserFrame::SelectNativeTheme() {
@@ -51,7 +51,7 @@ $NetBSD$
    // Use the regular NativeTheme instance if running incognito mode, regardless
    // of system theme (gtk, qt etc).
    ui::NativeTheme* native_theme = ui::NativeTheme::GetInstanceForNativeUi();
-@@ -604,7 +604,7 @@ void BrowserFrame::OnTouchUiChanged() {
+@@ -608,7 +608,7 @@ void BrowserFrame::OnTouchUiChanged() {
  bool BrowserFrame::RegenerateFrameOnThemeChange(
      BrowserThemeChangeType theme_change_type) {
    bool need_regenerate = false;

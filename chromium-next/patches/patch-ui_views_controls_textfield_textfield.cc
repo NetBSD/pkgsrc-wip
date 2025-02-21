@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -86,7 +86,7 @@
  #include "base/win/win_util.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -181,7 +181,7 @@ bool IsControlKeyModifier(int flags) {
+@@ -183,7 +183,7 @@ bool IsControlKeyModifier(int flags) {
  // Control-modified key combination, but we cannot extend it to other platforms
  // as Control has different meanings and behaviors.
  // https://crrev.com/2580483002/#msg46
@@ -24,16 +24,16 @@ $NetBSD$
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -762,7 +762,7 @@ bool Textfield::OnKeyPressed(const ui::K
-   if (!textfield)
+@@ -790,7 +790,7 @@ bool Textfield::OnKeyPressed(const ui::K
      return handled;
+   }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
    if (!handled && linux_ui &&
-@@ -945,7 +945,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -975,7 +975,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD$
    // Skip any accelerator handling that conflicts with custom keybindings.
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
-@@ -2010,7 +2010,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -2066,7 +2066,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
@@ -51,20 +51,21 @@ $NetBSD$
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2516,14 +2516,14 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2584,7 +2584,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        // Only erase by line break on Linux and ChromeOS.
-       if (shift)
+       if (shift) {
          return ui::TextEditCommand::DELETE_TO_BEGINNING_OF_LINE;
+@@ -2592,7 +2592,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
        return ui::TextEditCommand::DELETE_WORD_BACKWARD;
      case ui::VKEY_DELETE:
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        // Only erase by line break on Linux and ChromeOS.
-       if (shift && control)
+       if (shift && control) {
          return ui::TextEditCommand::DELETE_TO_END_OF_LINE;

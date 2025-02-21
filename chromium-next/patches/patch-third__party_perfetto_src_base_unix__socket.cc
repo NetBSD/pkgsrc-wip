@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/unix_socket.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/perfetto/src/base/unix_socket.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/perfetto/src/base/unix_socket.cc
 @@ -44,7 +44,7 @@
  #include <unistd.h>
@@ -15,12 +15,12 @@ $NetBSD$
  #include <sys/ucred.h>
  #endif
  
-@@ -917,15 +917,27 @@ void UnixSocket::ReadPeerCredentialsPosi
-     return;
-   PERFETTO_CHECK(peer_cred_mode_ != SockPeerCredMode::kIgnore);
- 
--#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__) && PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
+@@ -940,15 +940,27 @@ void UnixSocket::ReadPeerCredentialsPosi
+   int res = getpeereid(fd, &peer_uid_, nullptr);
+   PERFETTO_CHECK(res == 0);
+   // There is no pid when obtaining peer credentials for QNX
+-#elif PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
++#elif !defined(__FreeBSD__) && !defined(__NetBSD__) && PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
      PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
 +#if PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
 +  struct sockpeercred user_cred;

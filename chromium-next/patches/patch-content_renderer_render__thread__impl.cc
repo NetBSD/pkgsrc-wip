@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/render_thread_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/renderer/render_thread_impl.cc
-@@ -212,6 +212,8 @@
+@@ -211,6 +211,8 @@
  
  #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -15,7 +15,7 @@ $NetBSD$
  #else
  #include <malloc.h>
  #endif
-@@ -1046,7 +1048,7 @@ media::GpuVideoAcceleratorFactories* Ren
+@@ -1047,7 +1049,7 @@ media::GpuVideoAcceleratorFactories* Ren
                               kGpuStreamIdMedia, kGpuStreamPriorityMedia);
  
    const bool enable_video_decode_accelerator =
@@ -24,7 +24,7 @@ $NetBSD$
        base::FeatureList::IsEnabled(media::kAcceleratedVideoDecodeLinux) &&
  #endif  // BUILDFLAG(IS_LINUX)
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoDecode) &&
-@@ -1055,7 +1057,7 @@ media::GpuVideoAcceleratorFactories* Ren
+@@ -1056,7 +1058,7 @@ media::GpuVideoAcceleratorFactories* Ren
         gpu::kGpuFeatureStatusEnabled);
  
    const bool enable_video_encode_accelerator =
@@ -33,7 +33,7 @@ $NetBSD$
        base::FeatureList::IsEnabled(media::kAcceleratedVideoEncodeLinux) &&
  #else
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoEncode) &&
-@@ -1850,7 +1852,7 @@ std::unique_ptr<CodecFactory> RenderThre
+@@ -1849,7 +1851,7 @@ RenderThreadImpl::CreateMediaMojoCodecFa
      bool enable_video_encode_accelerator) {
    mojo::PendingRemote<media::mojom::VideoEncodeAcceleratorProvider>
        vea_provider;

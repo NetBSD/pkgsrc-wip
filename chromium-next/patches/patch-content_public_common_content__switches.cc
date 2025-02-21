@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/public/common/content_switches.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/public/common/content_switches.cc
-@@ -347,6 +347,8 @@ const char kEnableIsolatedWebAppsInRende
+@@ -346,6 +346,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.
  const char kEnableLogging[]                 = "enable-logging";
  
@@ -15,12 +15,12 @@ $NetBSD$
  // Enables the type, downlinkMax attributes of the NetInfo API. Also, enables
  // triggering of change attribute of the NetInfo API when there is a change in
  // the connection type.
-@@ -954,7 +956,7 @@ const char kPreventResizingContentsForTe
+@@ -946,7 +948,7 @@ const char kPreventResizingContentsForTe
+     "prevent-resizing-contents-for-testing";
+ #endif
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Allows sending text-to-speech requests to speech-dispatcher, a common
  // Linux speech service. Because it's buggy, the user must explicitly
  // enable it so that visiting a random webpage can't cause instability.

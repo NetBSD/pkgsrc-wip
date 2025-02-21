@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/desktop_environment_options.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- remoting/host/base/desktop_environment_options.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ remoting/host/base/desktop_environment_options.cc
 @@ -99,7 +99,7 @@ bool DesktopEnvironmentOptions::capture_
    // TODO(joedow): Determine whether we can migrate additional platforms to

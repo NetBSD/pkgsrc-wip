@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/webrtc/rtc_base/net_test_helpers.cc
 @@ -21,6 +21,7 @@
  #endif

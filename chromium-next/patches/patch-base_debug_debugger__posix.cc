@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/debugger_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/debug/debugger_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/debug/debugger_posix.cc
 @@ -41,6 +41,10 @@
  #include <sys/sysctl.h>
@@ -17,26 +17,25 @@ $NetBSD$
  #if BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
  #endif
-@@ -86,6 +90,7 @@ bool BeingDebugged() {
+@@ -87,6 +91,7 @@ bool BeingDebugged() {
  
    // Initialize mib, which tells sysctl what info we want.  In this case,
    // we're looking for information about a specific process ID.
 +#if !BUILDFLAG(IS_NETBSD)
-   int mib[] = {
-     CTL_KERN,
-     KERN_PROC,
-@@ -97,36 +102,75 @@ bool BeingDebugged() {
-     0
+   int mib[] = {CTL_KERN,
+                KERN_PROC,
+                KERN_PROC_PID,
+@@ -97,37 +102,75 @@ bool BeingDebugged() {
+                0
  #endif
    };
 +#else
-+  int mib[] = {
-+    CTL_KERN,
-+    KERN_PROC2,
-+    KERN_PROC_PID,
-+    getpid(),
-+    sizeof(struct kinfo_proc2),
-+    1
++  int mib[] = {CTL_KERN,
++               KERN_PROC2,
++               KERN_PROC_PID,
++               getpid(),
++               sizeof(struct kinfo_proc2),
++               1
 +  };
 +#endif
  
@@ -54,8 +53,9 @@ $NetBSD$
 +#endif
  
  #if BUILDFLAG(IS_OPENBSD)
-   if (sysctl(mib, std::size(mib), NULL, &info_size, NULL, 0) < 0)
+   if (sysctl(mib, std::size(mib), NULL, &info_size, NULL, 0) < 0) {
      return -1;
+   }
  
 -  mib[5] = (info_size / sizeof(struct kinfo_proc));
 +  mib[5] = static_cast<int>((info_size / sizeof(struct kinfo_proc)));

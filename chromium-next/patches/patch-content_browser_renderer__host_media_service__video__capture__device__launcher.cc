@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
-@@ -25,7 +25,7 @@
+@@ -26,7 +26,7 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/browser/gpu/gpu_data_manager_impl.h"
  #endif
  
-@@ -173,7 +173,7 @@ void ServiceVideoCaptureDeviceLauncher::
+@@ -176,7 +176,7 @@ void ServiceVideoCaptureDeviceLauncher::
    }
  #else
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled()) {

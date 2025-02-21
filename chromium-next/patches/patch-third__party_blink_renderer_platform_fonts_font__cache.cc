@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
-@@ -81,7 +81,7 @@ extern const char kNotoColorEmojiCompat[
+@@ -82,7 +82,7 @@ extern const char kNotoColorEmojiCompat[
  
  SkFontMgr* FontCache::static_font_manager_ = nullptr;
  
@@ -15,7 +15,7 @@ $NetBSD$
  float FontCache::device_scale_factor_ = 1.0;
  #endif
  
-@@ -132,7 +132,7 @@ const FontPlatformData* FontCache::Syste
+@@ -133,7 +133,7 @@ const FontPlatformData* FontCache::Syste
      const FontDescription& font_description) {
    const AtomicString& family = FontCache::SystemFontFamily();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \

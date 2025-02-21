@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/headless_surface_factory.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/ozone/platform/headless/headless_surface_factory.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/ozone/platform/headless/headless_surface_factory.cc
 @@ -34,7 +34,7 @@
  #include "ui/ozone/platform/headless/headless_window_manager.h"

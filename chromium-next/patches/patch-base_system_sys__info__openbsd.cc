@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_openbsd.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -12,6 +12,7 @@
  
@@ -14,7 +14,7 @@ $NetBSD$
  
  namespace {
  
-@@ -27,9 +28,14 @@ uint64_t AmountOfMemory(int pages_name) 
+@@ -28,9 +29,14 @@ uint64_t AmountOfMemory(int pages_name) 
  
  namespace base {
  
@@ -30,7 +30,7 @@ $NetBSD$
    int ncpu;
    size_t size = sizeof(ncpu);
    if (sysctl(mib, std::size(mib), &ncpu, &size, NULL, 0) < 0) {
-@@ -40,7 +46,23 @@ int SysInfo::NumberOfProcessors() {
+@@ -41,7 +47,23 @@ int SysInfo::NumberOfProcessors() {
  
  // static
  uint64_t SysInfo::AmountOfPhysicalMemoryImpl() {
@@ -55,7 +55,7 @@ $NetBSD$
  }
  
  // static
-@@ -55,15 +77,27 @@ uint64_t SysInfo::MaxSharedMemorySize() 
+@@ -56,15 +78,27 @@ uint64_t SysInfo::MaxSharedMemorySize() 
    int mib[] = {CTL_KERN, KERN_SHMINFO, KERN_SHMINFO_SHMMAX};
    size_t limit;
    size_t size = sizeof(limit);

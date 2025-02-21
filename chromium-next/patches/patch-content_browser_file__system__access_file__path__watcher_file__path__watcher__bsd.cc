@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc.orig	2025-02-01 17:17:21.428285741 +0000
+--- content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc.orig	2025-02-20 13:19:48.814814322 +0000
 +++ content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc
-@@ -0,0 +1,55 @@
+@@ -0,0 +1,60 @@
 +// Copyright 2024 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -60,5 +60,10 @@ $NetBSD$
 +
 +FilePathWatcher::FilePathWatcher()
 +    : FilePathWatcher(std::make_unique<FilePathWatcherImpl>()) {}
++
++// static
++size_t FilePathWatcher::GetQuotaLimitImpl() {
++  return std::numeric_limits<size_t>::max();
++}
 +
 +}  // namespace content

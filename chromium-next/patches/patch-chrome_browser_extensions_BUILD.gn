@@ -4,16 +4,16 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/extensions/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/extensions/BUILD.gn
-@@ -1426,6 +1426,10 @@ source_set("extensions") {
-     deps += [ "//chrome/services/printing/public/mojom" ]
-   }
+@@ -1418,6 +1418,10 @@ source_set("extensions") {
+       deps += [ "//chrome/services/printing/public/mojom" ]
+     }
  
-+  if (is_bsd) {
-+    sources -= [ "api/image_writer_private/removable_storage_provider_linux.cc" ]
-+  }
++    if (is_bsd) {
++      sources -= [ "api/image_writer_private/removable_storage_provider_linux.cc" ]
++    }
 +
-   if (enable_pdf) {
-     deps += [
-       "//chrome/browser/pdf",
+     if (enable_pdf) {
+       deps += [
+         "//chrome/browser/pdf",

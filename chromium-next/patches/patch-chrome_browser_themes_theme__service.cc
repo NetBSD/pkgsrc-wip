@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/themes/theme_service.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/themes/theme_service.cc
 @@ -70,7 +70,7 @@
  #include "extensions/browser/extension_registry_observer.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #include "ui/ozone/public/ozone_platform.h"  // nogncheck
  #endif
-@@ -328,7 +328,7 @@ CustomThemeSupplier* ThemeService::GetTh
+@@ -330,7 +330,7 @@ CustomThemeSupplier* ThemeService::GetTh
  }
  
  bool ThemeService::ShouldUseCustomFrame() const {

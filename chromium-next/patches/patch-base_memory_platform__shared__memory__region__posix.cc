@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/memory/platform_shared_memory_region_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/memory/platform_shared_memory_region_posix.cc
-@@ -55,7 +55,7 @@ bool CheckFDAccessMode(int fd, int expec
+@@ -56,7 +56,7 @@ bool CheckFDAccessMode(int fd, int expec
  
  }  // namespace
  
@@ -15,7 +15,7 @@ $NetBSD$
  // static
  ScopedFD PlatformSharedMemoryRegion::ExecutableRegion::CreateFD(size_t size) {
    PlatformSharedMemoryRegion region =
-@@ -168,7 +168,7 @@ bool PlatformSharedMemoryRegion::Convert
+@@ -176,7 +176,7 @@ bool PlatformSharedMemoryRegion::Convert
  // static
  PlatformSharedMemoryRegion PlatformSharedMemoryRegion::Create(Mode mode,
                                                                size_t size
@@ -24,7 +24,7 @@ $NetBSD$
                                                                ,
                                                                bool executable
  #endif
-@@ -197,7 +197,7 @@ PlatformSharedMemoryRegion PlatformShare
+@@ -205,7 +205,7 @@ PlatformSharedMemoryRegion PlatformShare
    // flag.
    FilePath directory;
    if (!GetShmemTempDir(

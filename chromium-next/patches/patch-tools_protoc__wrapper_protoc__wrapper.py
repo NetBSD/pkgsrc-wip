@@ -4,15 +4,15 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/protoc_wrapper/protoc_wrapper.py.orig	2025-01-27 17:37:37.000000000 +0000
+--- tools/protoc_wrapper/protoc_wrapper.py.orig	2025-02-17 21:09:38.000000000 +0000
 +++ tools/protoc_wrapper/protoc_wrapper.py
 @@ -183,15 +183,19 @@ def main(argv):
      if not options.exclude_imports:
        protoc_cmd += ["--include_imports"]
  
 +  nenv = os.environ.copy()
-+  nenv["PATH"] = "${WRKOBJDIR}/bin:" + nenv["PATH"]
-+  nenv["LD_LIBRARY_PATH"] = "${WRKSRC}/out/Release"
++#  nenv["PATH"] = "${WRKOBJDIR}/bin:" + nenv["PATH"]
++  nenv["LD_LIBRARY_PATH"] = "@WRKSRC@/out/Release"
 +
    dependency_file_data = None
    if options.descriptor_set_out and options.descriptor_set_dependency_file:

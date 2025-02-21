@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.h
-@@ -47,12 +47,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
+@@ -46,12 +46,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
                       base::ScopedFD* control_fd,
                       base::FileHandleMappingVector additional_remapped_fds);
  
@@ -21,7 +21,7 @@ $NetBSD$
  
    bool HasZygote() { return !zygote_pids_.empty(); }
  
-@@ -67,9 +69,11 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
+@@ -66,9 +68,11 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
  
    int renderer_sandbox_status_;
  

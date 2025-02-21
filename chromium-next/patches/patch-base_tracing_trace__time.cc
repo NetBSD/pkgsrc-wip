@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/tracing/trace_time.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/tracing/trace_time.cc
 @@ -8,13 +8,19 @@
  #include "build/build_config.h"
@@ -26,11 +26,4 @@ $NetBSD$
 +    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    struct timespec ts;
    int res = clock_gettime(CLOCK_BOOTTIME, &ts);
-   if (res != -1)
-@@ -24,4 +30,4 @@ int64_t TraceBootTicksNow() {
- }
- 
- }  // namespace tracing
--}  // namespace base
-\ No newline at end of file
-+}  // namespace base
+   if (res != -1) {

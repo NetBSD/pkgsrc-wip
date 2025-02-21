@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -145,7 +145,7 @@
  #include "components/about_ui/credit_utils.h"
@@ -36,7 +36,7 @@ $NetBSD$
  #include "chrome/browser/policy/policy_path_parser.h"
  #include "components/crash/core/app/crashpad.h"
  #endif
-@@ -341,7 +341,7 @@ void AdjustLinuxOOMScore(const std::stri
+@@ -340,7 +340,7 @@ void AdjustLinuxOOMScore(const std::stri
  // and resources loaded.
  bool SubprocessNeedsResourceBundle(const std::string& process_type) {
    return
@@ -45,7 +45,7 @@ $NetBSD$
        // The zygote process opens the resources for the renderers.
        process_type == switches::kZygoteProcess ||
  #endif
-@@ -426,7 +426,7 @@ bool HandleVersionSwitches(const base::C
+@@ -425,7 +425,7 @@ bool HandleVersionSwitches(const base::C
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -54,7 +54,7 @@ $NetBSD$
  // Show the man page if --help or -h is on the command line.
  void HandleHelpSwitches(const base::CommandLine& command_line) {
    if (command_line.HasSwitch(switches::kHelp) ||
-@@ -438,7 +438,7 @@ void HandleHelpSwitches(const base::Comm
+@@ -437,7 +437,7 @@ void HandleHelpSwitches(const base::Comm
  }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -63,7 +63,7 @@ $NetBSD$
  void SIGTERMProfilingShutdown(int signal) {
    content::Profiling::Stop();
    struct sigaction sigact;
-@@ -520,7 +520,7 @@ std::optional<int> AcquireProcessSinglet
+@@ -519,7 +519,7 @@ std::optional<int> AcquireProcessSinglet
    // process can be exited.
    ChromeProcessSingleton::CreateInstance(user_data_dir);
  
@@ -72,7 +72,7 @@ $NetBSD$
    // Read the xdg-activation token and set it in the command line for the
    // duration of the notification in order to ensure this is propagated to an
    // already running browser process if it exists.
-@@ -604,7 +604,7 @@ void InitializeUserDataDir(base::Command
+@@ -603,7 +603,7 @@ void InitializeUserDataDir(base::Command
    std::string process_type =
        command_line->GetSwitchValueASCII(switches::kProcessType);
  
@@ -81,7 +81,7 @@ $NetBSD$
    // On Linux, Chrome does not support running multiple copies under different
    // DISPLAYs, so the profile directory can be specified in the environment to
    // support the virtual desktop use-case.
-@@ -700,7 +700,7 @@ void RecordMainStartupMetrics(const Star
+@@ -699,7 +699,7 @@ void RecordMainStartupMetrics(const Star
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -90,7 +90,7 @@ $NetBSD$
    // Record the startup process creation time on supported platforms. On Android
    // this is recorded in ChromeMainDelegateAndroid.
    startup_metric_utils::GetCommon().RecordStartupProcessCreationTime(
-@@ -889,7 +889,7 @@ std::optional<int> ChromeMainDelegate::P
+@@ -888,7 +888,7 @@ std::optional<int> ChromeMainDelegate::P
  #if BUILDFLAG(IS_OZONE)
    // Initialize Ozone platform and add required feature flags as per platform's
    // properties.
@@ -99,7 +99,7 @@ $NetBSD$
    ui::SetOzonePlatformForLinuxIfNeeded(*base::CommandLine::ForCurrentProcess());
  #endif
    ui::OzonePlatform::PreEarlyInitialization();
-@@ -1085,7 +1085,7 @@ void ChromeMainDelegate::CommonEarlyInit
+@@ -1089,7 +1089,7 @@ void ChromeMainDelegate::CommonEarlyInit
    const bool is_canary_dev = IsCanaryDev();
    const bool emit_crashes =
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -108,7 +108,7 @@ $NetBSD$
        is_canary_dev;
  #else
        false;
-@@ -1234,7 +1234,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1238,7 +1238,7 @@ std::optional<int> ChromeMainDelegate::B
  
    // TODO(crbug.com/40118868): Revisit the macro expression once build flag
    // switch of lacros-chrome is complete.
@@ -117,7 +117,7 @@ $NetBSD$
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -1264,7 +1264,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1268,7 +1268,7 @@ std::optional<int> ChromeMainDelegate::B
  #if BUILDFLAG(IS_CHROMEOS)
    chromeos::dbus_paths::RegisterPathProvider();
  #endif
@@ -126,7 +126,7 @@ $NetBSD$
    nacl::RegisterPathProvider();
  #endif
  
-@@ -1559,7 +1559,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1563,7 +1563,7 @@ void ChromeMainDelegate::PreSandboxStart
      CHECK(!loaded_locale.empty()) << "Locale could not be found for " << locale;
    }
  
@@ -135,7 +135,7 @@ $NetBSD$
    // Zygote needs to call InitCrashReporter() in RunZygote().
    if (process_type != switches::kZygoteProcess &&
        !command_line.HasSwitch(switches::kDisableCrashpadForTesting)) {
-@@ -1647,13 +1647,13 @@ absl::variant<int, content::MainFunction
+@@ -1651,13 +1651,13 @@ absl::variant<int, content::MainFunction
  #else
  
  #if BUILDFLAG(IS_MAC) || (BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && \

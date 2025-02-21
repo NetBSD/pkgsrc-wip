@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sessions/session_restore.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/sessions/session_restore.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/sessions/session_restore.cc
 @@ -102,7 +102,7 @@
  #include "chrome/browser/web_applications/web_app_registrar.h"

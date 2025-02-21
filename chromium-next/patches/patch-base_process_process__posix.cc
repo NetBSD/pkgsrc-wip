@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/process/process_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/process/process_posix.cc
 @@ -23,10 +23,15 @@
  #include "base/trace_event/base_tracing.h"
@@ -23,7 +23,7 @@ $NetBSD$
  #if BUILDFLAG(CLANG_PROFILING)
  #include "base/test/clang_profiling.h"
  #endif
-@@ -99,7 +104,7 @@ bool WaitpidWithTimeout(base::ProcessHan
+@@ -100,7 +105,7 @@ bool WaitpidWithTimeout(base::ProcessHan
  }
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD$
  // Using kqueue on Mac so that we can wait on non-child processes.
  // We can't use kqueues on child processes because we need to reap
  // our own children using wait.
-@@ -376,7 +381,7 @@ bool Process::WaitForExitWithTimeoutImpl
+@@ -379,7 +384,7 @@ bool Process::WaitForExitWithTimeoutImpl
    const bool exited = (parent_pid < 0);
  
    if (!exited && parent_pid != our_pid) {
@@ -41,7 +41,7 @@ $NetBSD$
      // On Mac we can wait on non child processes.
      return WaitForSingleNonChildProcess(handle, timeout);
  #else
-@@ -413,7 +418,56 @@ void Process::Exited(int exit_code) cons
+@@ -416,7 +421,56 @@ void Process::Exited(int exit_code) cons
  
  int Process::GetOSPriority() const {
    DCHECK(IsValid());

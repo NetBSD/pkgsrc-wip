@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/messaging/message_service.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- extensions/browser/api/messaging/message_service.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ extensions/browser/api/messaging/message_service.cc
-@@ -78,7 +78,7 @@ namespace {
+@@ -74,7 +74,7 @@ namespace {
  const char kReceivingEndDoesntExistError[] =
      "Could not establish connection. Receiving end does not exist.";
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  const char kMissingPermissionError[] =
      "Access to native messaging requires nativeMessaging permission.";
  const char kProhibitedByPoliciesError[] =
-@@ -551,7 +551,7 @@ void MessageService::OpenChannelToNative
+@@ -634,7 +634,7 @@ void MessageService::OpenChannelToNative
      return;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

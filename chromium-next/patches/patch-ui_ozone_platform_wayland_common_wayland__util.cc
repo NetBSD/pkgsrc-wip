@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/ozone/platform/wayland/common/wayland_util.cc
-@@ -343,7 +343,7 @@ void TransformToWlArray(
+@@ -325,7 +325,7 @@ void SkColorToWlArray(const SkColor4f& c
  }
  
  base::TimeTicks EventMillisecondsToTimeTicks(uint32_t milliseconds) {
@@ -15,7 +15,7 @@ $NetBSD$
    // TODO(crbug.com/40287874): `milliseconds` comes from Weston that
    // uses timestamp from libinput, which is different from TimeTicks.
    // Use EventTimeForNow(), for now.
-@@ -385,7 +385,7 @@ bool MaybeHandlePlatformEventForDrag(con
+@@ -367,7 +367,7 @@ bool MaybeHandlePlatformEventForDrag(con
  }
  
  void RecordConnectionMetrics(wl_display* display) {

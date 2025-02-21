@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/atomicops.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/atomicops.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/atomicops.h
-@@ -71,7 +71,11 @@ typedef intptr_t Atomic64;
+@@ -74,7 +74,11 @@ typedef intptr_t Atomic64;
  
  // Use AtomicWord for a machine-sized pointer.  It will use the Atomic32 or
  // Atomic64 routines below, depending on your architecture.

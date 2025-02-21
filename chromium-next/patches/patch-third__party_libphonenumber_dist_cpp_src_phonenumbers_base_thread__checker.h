@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h
 @@ -22,8 +22,8 @@
  // Note that I18N_PHONENUMBERS_NO_THREAD_SAFETY must be defined only to let the

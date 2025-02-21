@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"
@@ -21,7 +21,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -45,7 +53,21 @@ std::optional<uintptr_t> GetAndroidMainT
+@@ -47,7 +55,21 @@ std::optional<uintptr_t> GetAndroidMainT
  
  #if !BUILDFLAG(IS_LINUX)
  uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
@@ -43,7 +43,7 @@ $NetBSD$
    // pthread_getattr_np will crash on ChromeOS & Linux if we are in the sandbox
    // and pthread_id refers to a different thread, due to the use of
    // sched_getaffinity().
-@@ -58,12 +80,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
+@@ -60,12 +82,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
                        << logging::SystemErrorCodeToString(result);
    // See crbug.com/617730 for limitations of this approach on Linux-like
    // systems.
@@ -58,7 +58,7 @@ $NetBSD$
    const uintptr_t base_address = reinterpret_cast<uintptr_t>(address) + size;
    return base_address;
  }
-@@ -80,7 +104,7 @@ std::optional<uintptr_t> GetThreadStackB
+@@ -82,7 +106,7 @@ std::optional<uintptr_t> GetThreadStackB
    // trying to work around the problem.
    return std::nullopt;
  #else

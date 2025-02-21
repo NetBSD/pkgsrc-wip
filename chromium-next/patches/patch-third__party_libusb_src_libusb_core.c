@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libusb/src/libusb/core.c.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/libusb/src/libusb/core.c.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/libusb/src/libusb/core.c
 @@ -448,7 +448,7 @@ libusb_free_device_list(list, 1);
   * which grows when required. it can be freed once discovery has completed,

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/command.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- extensions/common/command.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ extensions/common/command.cc
-@@ -284,7 +284,7 @@ std::string Command::CommandPlatform() {
+@@ -281,7 +281,7 @@ std::string Command::CommandPlatform() {
    return values::kKeybindingPlatformMac;
  #elif BUILDFLAG(IS_CHROMEOS)
    return values::kKeybindingPlatformChromeOs;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ gpu/command_buffer/service/gles2_cmd_decoder.cc
-@@ -2874,7 +2874,7 @@ GLES2Decoder* GLES2Decoder::Create(
+@@ -2864,7 +2864,7 @@ GLES2Decoder* GLES2Decoder::Create(
    }
  
  // Allow linux to run fuzzers.

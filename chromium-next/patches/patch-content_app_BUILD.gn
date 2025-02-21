@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/app/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/app/BUILD.gn
-@@ -96,9 +96,9 @@ source_set("content_main_runner_app") {
-       "//chromeos/startup:constants",
-     ]
-   }
+@@ -89,9 +89,9 @@ source_set("content_main_runner_app") {
+            "//third_party/tflite:buildflags",
+            "//tools/v8_context_snapshot:buildflags",
+          ]
 -  if (build_tflite_with_xnnpack) {
 -    deps += [ "//third_party/cpuinfo" ]
 -  }

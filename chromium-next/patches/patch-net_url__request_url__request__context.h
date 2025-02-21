@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- net/url_request/url_request_context.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ net/url_request/url_request_context.h
-@@ -92,7 +92,7 @@ class NET_EXPORT URLRequestContext final
+@@ -90,7 +90,7 @@ class NET_EXPORT URLRequestContext final
  // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
  // complete.
  #if !BUILDFLAG(IS_WIN) && \

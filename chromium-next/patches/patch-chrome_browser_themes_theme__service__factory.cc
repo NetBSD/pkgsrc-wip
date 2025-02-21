@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service_factory.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/themes/theme_service_factory.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/themes/theme_service_factory.cc
 @@ -27,11 +27,11 @@
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include "ui/linux/linux_ui_factory.h"
  #endif
  
-@@ -108,7 +108,7 @@ ThemeServiceFactory::~ThemeServiceFactor
+@@ -109,7 +109,7 @@ ThemeServiceFactory::~ThemeServiceFactor
  std::unique_ptr<KeyedService>
  ThemeServiceFactory::BuildServiceInstanceForBrowserContext(
      content::BrowserContext* profile) const {
@@ -29,7 +29,7 @@ $NetBSD$
    using ThemeService = ThemeServiceAuraLinux;
  #endif
  
-@@ -122,9 +122,9 @@ void ThemeServiceFactory::RegisterProfil
+@@ -123,9 +123,9 @@ void ThemeServiceFactory::RegisterProfil
      user_prefs::PrefRegistrySyncable* registry) {
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

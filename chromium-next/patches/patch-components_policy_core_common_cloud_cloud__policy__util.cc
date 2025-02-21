@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -20,7 +20,7 @@
+ #include "base/win/wincred_shim.h"
  #endif
  
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
--    BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  #include <pwd.h>
  #include <sys/types.h>
  #include <unistd.h>
@@ -19,8 +19,8 @@ $NetBSD$
  #import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
  #endif
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include <limits.h>  // For HOST_NAME_MAX
  #endif
  
@@ -32,16 +32,16 @@ $NetBSD$
  #include <algorithm>
  #include <utility>
  
-@@ -88,7 +93,7 @@ namespace em = enterprise_management;
+@@ -83,7 +88,7 @@ namespace policy {
+ namespace em = enterprise_management;
  
  std::string GetMachineName() {
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
--    BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    char hostname[HOST_NAME_MAX];
    if (gethostname(hostname, HOST_NAME_MAX) == 0)  // Success.
      return hostname;
-@@ -144,7 +149,7 @@ std::string GetMachineName() {
+@@ -139,7 +144,7 @@ std::string GetMachineName() {
  
  std::string GetOSVersion() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \
@@ -50,7 +50,7 @@ $NetBSD$
    return base::SysInfo::OperatingSystemVersion();
  #elif BUILDFLAG(IS_WIN)
    base::win::OSInfo::VersionNumber version_number =
-@@ -167,7 +172,7 @@ std::string GetOSArchitecture() {
+@@ -161,7 +166,7 @@ std::string GetOSArchitecture() {
  }
  
  std::string GetOSUsername() {

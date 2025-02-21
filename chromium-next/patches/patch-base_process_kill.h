@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/kill.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/process/kill.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/process/kill.h
 @@ -123,7 +123,7 @@ BASE_EXPORT TerminationStatus GetTermina
- BASE_EXPORT TerminationStatus GetKnownDeadTerminationStatus(
-     ProcessHandle handle, int* exit_code);
+ BASE_EXPORT TerminationStatus
+ GetKnownDeadTerminationStatus(ProcessHandle handle, int* exit_code);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

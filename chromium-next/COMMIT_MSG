@@ -1,0 +1,127 @@
+www/chromium: ***
+
+* 131.0.6778.264
+This update includes 4 security fixes. Below, we highlight
+fixes that were contributed by external researchers.
+Please see the Chrome Security Page for more information.
+[$55000][383356864] High CVE-2025-0291: Type Confusion in
+V8. Reported by Popax21 on 2024-12-11
+We would also like to thank all security researchers that
+worked with us during the development cycle to prevent
+security bugs from ever reaching the stable channel.
+
+As usual, our ongoing internal security work was responsible
+for a wide range of fixes:
+[388088544] Various fixes from internal audits, fuzzing and
+other initiatives
+
+* 132.0.6834.83
+This update includes 16 security fixes. Below, we highlight
+fixes that were contributed by external researchers.
+Please see the Chrome Security Page for more information.
+[$7000][374627491] High CVE-2025-0434: Out of bounds memory
+access in V8. Reported by ddme on 2024-10-21
+[$7000][379652406] High CVE-2025-0435: Inappropriate
+implementation in Navigation. Reported by Alesandro Ortiz
+on 2024-11-18
+[$3000][382786791] High CVE-2025-0436: Integer overflow in
+Skia. Reported by Han Zheng (HexHive) on 2024-12-08
+[$2000][378623799] High CVE-2025-0437: Out of bounds read
+in Metrics. Reported by Xiantong Hou of Wuheng Lab and
+Pisanbao on 2024-11-12
+[TBD][384186539] High CVE-2025-0438: Stack buffer overflow
+in Tracing. Reported by Han Zheng (HexHive) on 2024-12-15
+[$5000][371247941] Medium CVE-2025-0439: Race in Frames.
+Reported by Hafiizh on 2024-10-03
+[$5000][40067914] Medium CVE-2025-0440: Inappropriate
+implementation in Fullscreen. Reported by Umar Farooq on 2023-07-22
+[$2000][368628042] Medium CVE-2025-0441: Inappropriate
+implementation in Fenced Frames. Reported by someoneverycurious
+on 2024-09-21
+[$2000][40940854] Medium CVE-2025-0442: Inappropriate
+implementation in Payments. Reported by Ahmed ElMasry on 2023-11-08
+[$1000][376625003] Medium CVE-2025-0443: Insufficient
+data validation in Extensions. Reported by Anonymous on 2024-10-31
+[$1000][359949844] Low CVE-2025-0446: Inappropriate
+implementation in Extensions. Reported by Hafiizh on 2024-08-15
+[$1000][375550814] Low CVE-2025-0447: Inappropriate
+implementation in Navigation. Reported by Khiem Tran (@duckhiem)
+on 2024-10-25
+[$1000][377948403] Low CVE-2025-0448: Inappropriate
+implementation in Compositing. Reported by Dahyeon Park on 2024-11-08
+We would also like to thank all security researchers that
+worked with us during the development cycle to prevent security
+bugs from ever reaching the stable channel.
+
+As usual, our ongoing internal security work was responsible
+for a wide range of fixes:
+[389761478] Various fixes from internal audits, fuzzing and
+other initiatives
+
+* 132.0.6834.110
+This update includes 3 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$11000][386143468] High CVE-2025-0611: Object corruption in V8.
+Reported by 303f06e3 on 2024-12-26
+[$8000][385155406] High CVE-2025-0612: Out of bounds memory access
+in V8. Reported by Alan Goodman on 2024-12-20
+
+As usual, our ongoing internal security work was responsible for
+a wide range of fixes:
+[391144311] Various fixes from internal audits, fuzzing and other
+initiatives
+
+* 132.0.6834.159
+This update includes 2 security fixes. Below, we highlight fixes that
+were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$2000][384844003] Medium CVE-2025-0762: Use after free in DevTools.
+Reported by Sakana.S on 2024-12-18
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[392630675] Various fixes from internal audits, fuzzing and other
+initiatives
+
+* 133.0.6943.53
+This update includes 12 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$7000][390889644] High CVE-2025-0444: Use after free in Skia.
+Reported by Francisco Alonso (@revskills) on 2025-01-19
+[TBD][392521083] High CVE-2025-0445: Use after free in V8.
+Reported by 303f06e3 on 2025-01-27
+[$2000][40061026] Medium CVE-2025-0451: Inappropriate implementation
+in Extensions API. Reported by Vitor Torres and
+Alesandro Ortiz on 2022-09-18
+
+As usual, our ongoing internal security work was responsible for
+a wide range of fixes:
+[394135363] Various fixes from internal audits, fuzzing and other
+initiatives
+
+* 133.0.6943.98
+This update includes 4 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$55000][391907159] High CVE-2025-0995: Use after free in V8.
+Reported by Popax21 on 2025-01-24
+[TBD][391788835] High CVE-2025-0996: Inappropriate implementation
+in Browser UI. Reported by yuki yamaoto on 2025-01-23
+[TBD][391666328] High CVE-2025-0997: Use after free in Navigation.
+Reported by asnine on 2025-01-23
+[TBD][386857213] High CVE-2025-0998: Out of bounds memory access
+in V8. Reported by Alan Goodman on 2024-12-31
+
+* 133.0.6943.126
+This update includes 3 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$11000][394350433] High CVE-2025-0999: Heap buffer overflow in V8.
+Reported by Seunghyun Lee (@0x10n) on 2025-02-04
+[TBD][383465163] High CVE-2025-1426: Heap buffer overflow in GPU.
+Reported by un3xploitable && GF on 2024-12-11
+[$4000][390590778] Medium CVE-2025-1006: Use after free in Network.
+Reported by Tal Keren, Sam Agranat, Eran Rom, Edouard Bochin,
+Adam Hatsir of Palo Alto Networks on 2025-01-18

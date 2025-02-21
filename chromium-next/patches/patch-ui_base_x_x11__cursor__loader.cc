@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
-@@ -34,7 +34,7 @@
+@@ -36,7 +36,7 @@
  #include "ui/gfx/x/connection.h"
  #include "ui/gfx/x/xproto.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -59,7 +59,11 @@ std::string CursorPathFromLibXcursor() {
+@@ -81,7 +81,11 @@ std::string CursorPathFromLibXcursor() {
      void operator()(void* ptr) const { dlclose(ptr); }
    };
  
@@ -27,7 +27,7 @@ $NetBSD$
    if (!lib)
      return "";
  
-@@ -170,7 +174,7 @@ scoped_refptr<base::RefCountedMemory> Re
+@@ -210,7 +214,7 @@ scoped_refptr<base::RefCountedMemory> Re
      const std::string& rm_xcursor_theme) {
    constexpr const char kDefaultTheme[] = "default";
    std::string themes[] = {
@@ -36,7 +36,7 @@ $NetBSD$
      // The toolkit theme has the highest priority.
      LinuxUi::instance() ? LinuxUi::instance()->GetCursorThemeName()
                          : std::string(),
-@@ -359,7 +363,7 @@ uint32_t XCursorLoader::GetPreferredCurs
+@@ -400,7 +404,7 @@ uint32_t XCursorLoader::GetPreferredCurs
      return size;
    }
  

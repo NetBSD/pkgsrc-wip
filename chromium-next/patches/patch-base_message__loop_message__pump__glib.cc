@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_glib.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,15 @@
  #include <glib.h>
@@ -22,7 +22,7 @@ $NetBSD$
  #include "base/logging.h"
  #include "base/memory/raw_ptr.h"
  #include "base/notreached.h"
-@@ -51,9 +60,19 @@ int GetTimeIntervalMilliseconds(TimeTick
+@@ -52,9 +61,19 @@ int GetTimeIntervalMilliseconds(TimeTick
  }
  
  bool RunningOnMainThread() {

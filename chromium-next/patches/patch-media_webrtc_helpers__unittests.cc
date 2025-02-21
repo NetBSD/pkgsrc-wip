@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/helpers_unittests.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- media/webrtc/helpers_unittests.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ media/webrtc/helpers_unittests.cc
-@@ -40,7 +40,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -39,7 +39,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
    EXPECT_TRUE(config.echo_canceller.enabled);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
    EXPECT_FALSE(config.gain_controller1.enabled);
    EXPECT_TRUE(config.gain_controller2.enabled);
  #elif BUILDFLAG(IS_CASTOS) || BUILDFLAG(IS_CAST_ANDROID)
-@@ -73,7 +73,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -66,7 +66,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  TEST(CreateWebRtcAudioProcessingModuleTest,
       InputVolumeAdjustmentEnabledWithAgc2) {
    ::base::test::ScopedFeatureList feature_list;
-@@ -89,7 +89,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -82,7 +82,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -33,7 +33,7 @@ $NetBSD$
  TEST(CreateWebRtcAudioProcessingModuleTest,
       CanDisableInputVolumeAdjustmentWithAgc2) {
    ::base::test::ScopedFeatureList feature_list;
-@@ -106,7 +106,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -99,7 +99,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

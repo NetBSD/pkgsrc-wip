@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
 @@ -90,7 +90,7 @@ bool IsExtensionMenuInRootAppMenu() {
    return base::FeatureList::IsEnabled(kExtensionsMenuInAppMenu);
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
  BASE_FEATURE(kFewerUpdateConfirmations,
-@@ -300,7 +300,7 @@ BASE_FEATURE(kTabOrganizationAppMenuItem
+@@ -264,7 +264,7 @@ BASE_FEATURE(kTabOrganizationAppMenuItem
               base::FEATURE_ENABLED_BY_DEFAULT);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,9 +24,9 @@ $NetBSD$
  BASE_FEATURE(kMultiTabOrganization,
               "MultiTabOrganization",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -463,7 +463,7 @@ BASE_FEATURE(kStopLoadingAnimationForHid
-              "StopLoadingAnimationForHiddenWindow",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -412,7 +412,7 @@ BASE_FEATURE(kViewsJSAppModalDialog,
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/network_service_instance_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/browser/network_service_instance_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/browser/network_service_instance_impl.cc
-@@ -85,7 +85,7 @@
+@@ -84,7 +84,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/browser/system_dns_resolution/system_dns_resolver.h"
  #include "services/network/public/mojom/system_dns_resolution.mojom-forward.h"
  #endif
-@@ -368,7 +368,7 @@ void CreateInProcessNetworkService(
+@@ -367,7 +367,7 @@ void CreateInProcessNetworkService(
                                  std::move(receiver)));
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  // Runs a self-owned SystemDnsResolverMojoImpl. This is meant to run on a
  // high-priority thread pool.
  void RunSystemDnsResolverOnThreadPool(
-@@ -437,7 +437,7 @@ network::mojom::NetworkServiceParamsPtr 
+@@ -436,7 +436,7 @@ network::mojom::NetworkServiceParamsPtr 
    }
  #endif  // BUILDFLAG(IS_POSIX)
  

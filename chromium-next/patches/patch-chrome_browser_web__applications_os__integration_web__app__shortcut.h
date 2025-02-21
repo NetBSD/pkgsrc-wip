@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.h
-@@ -21,7 +21,7 @@
+@@ -22,7 +22,7 @@
  #include "ui/gfx/image/image_family.h"
  #include "url/gurl.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/web_applications/os_integration/web_app_shortcut_linux.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -74,7 +74,7 @@ struct ShortcutInfo {
+@@ -75,7 +75,7 @@ struct ShortcutInfo {
    // the installed PWA experience and thus the icons are not designed to be
    // displayed on an OS dock.
    bool is_diy_app = false;

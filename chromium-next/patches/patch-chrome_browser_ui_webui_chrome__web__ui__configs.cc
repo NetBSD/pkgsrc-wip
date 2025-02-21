@@ -4,16 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_configs.cc
-@@ -139,30 +139,30 @@
+@@ -140,26 +140,26 @@
  #include "chrome/browser/ui/webui/conflicts/conflicts_ui.h"
  #endif  // BUILDFLAG(IS_WIN)
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/ui/webui/webui_js_error/webui_js_error_ui.h"
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
@@ -42,7 +37,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/discards/discards_ui.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -198,7 +198,7 @@
+@@ -190,7 +190,7 @@
  #include "chrome/browser/ui/webui/signin/signin_error_ui.h"
  #endif  //  !BUILDFLAG(IS_CHROMEOS_ASH) && !BUILDFLAG(IS_ANDROID)
  
@@ -51,25 +46,16 @@ $NetBSD$
  #include "chrome/browser/ui/webui/on_device_translation_internals/on_device_translation_internals_ui.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -326,14 +326,14 @@ void RegisterChromeWebUIConfigs() {
-   map.AddWebUIConfig(std::make_unique<WebuiGalleryUIConfig>());
- #endif  // BUILDFLAG(IS_ANDROID)
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+@@ -323,7 +323,7 @@ void RegisterChromeWebUIConfigs() {
    map.AddWebUIConfig(std::make_unique<WebUIJsErrorUIConfig>());
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+ #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    map.AddWebUIConfig(std::make_unique<LinuxProxyConfigUI>());
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||
--        // BUILDFLAG(IS_OPENBSD)
-+        // BUILDFLAG(IS_BSD)
- 
- #if BUILDFLAG(ENABLE_EXTENSIONS)
-   map.AddWebUIConfig(std::make_unique<extensions::ExtensionsUIConfig>());
-@@ -355,7 +355,7 @@ void RegisterChromeWebUIConfigs() {
+         // BUILDFLAG(IS_OPENBSD)
+@@ -348,7 +348,7 @@ void RegisterChromeWebUIConfigs() {
    map.AddWebUIConfig(std::make_unique<ConflictsUIConfig>());
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -78,7 +64,7 @@ $NetBSD$
    map.AddWebUIConfig(std::make_unique<BrowserSwitchUIConfig>());
    map.AddWebUIConfig(std::make_unique<WebAppSettingsUIConfig>());
    map.AddWebUIConfig(std::make_unique<WhatsNewUIConfig>());
-@@ -363,20 +363,20 @@ void RegisterChromeWebUIConfigs() {
+@@ -356,20 +356,20 @@ void RegisterChromeWebUIConfigs() {
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

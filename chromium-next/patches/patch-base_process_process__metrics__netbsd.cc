@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_netbsd.cc.orig	2025-02-01 17:17:21.315008124 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2025-02-20 13:19:48.716086107 +0000
 +++ base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,175 @@
+@@ -0,0 +1,210 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -29,6 +29,33 @@ $NetBSD$
 +
 +ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
 +
++base::expected<ProcessMemoryInfo, ProcessUsageError>
++ProcessMetrics::GetMemoryInfo() const {
++  ProcessMemoryInfo memory_info;
++  struct kinfo_proc2 info;
++  size_t length = sizeof(struct kinfo_proc2);
++
++  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process_,
++                sizeof(struct kinfo_proc2), 1 };
++
++  if (process_ == 0) {
++    return base::unexpected(ProcessUsageError::kSystemError);
++  }
++
++  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
++    return base::unexpected(ProcessUsageError::kSystemError);
++  }
++
++  if (length == 0) {
++    return base::unexpected(ProcessUsageError::kProcessNotFound);
++  }
++
++  memory_info.resident_set_bytes =
++    checked_cast<uint64_t>(info.p_vm_rssize * getpagesize());
++
++  return memory_info;
++}
++
 +base::expected<TimeDelta, ProcessCPUUsageError>
 +ProcessMetrics::GetCumulativeCPUUsage() {
 +  struct kinfo_proc2 info;
@@ -38,8 +65,16 @@ $NetBSD$
 +  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process_,
 +                sizeof(struct kinfo_proc2), 1 };
 +
++  if (process_ == 0) {
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  }
++
 +  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
 +    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  }
++
++  if (length == 0) {
++    return base::unexpected(ProcessCPUUsageError::kProcessNotFound);
 +  }
 +
 +  tv.tv_sec = info.p_rtime_sec;
@@ -71,7 +106,7 @@ $NetBSD$
 +
 +  pagesize = checked_cast<size_t>(getpagesize());
 +
-+  return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
++  return mem_total - (mem_free * pagesize) - (mem_inactive * pagesize);
 +}
 +
 +int ProcessMetrics::GetOpenFdCount() const {
@@ -83,9 +118,9 @@ $NetBSD$
 +//  return GetMaxFds();
 +}
 +
-+uint64_t ProcessMetrics::GetVmSwapBytes() const {
++bool ProcessMetrics::GetPageFaultCounts(PageFaultCounts* counts) const {
 +  NOTIMPLEMENTED();
-+  return 0;
++  return false;
 +}
 +
 +bool GetSystemMemoryInfo(SystemMemoryInfoKB* meminfo) {

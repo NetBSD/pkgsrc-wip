@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -58,7 +58,7 @@
  #        include "libANGLE/renderer/gl/wgl/DisplayWGL.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #        include "libANGLE/renderer/gl/egl/DisplayEGL.h"
  #        if defined(ANGLE_USE_X11)
  #            include "libANGLE/renderer/gl/glx/DisplayGLX_api.h"
-@@ -410,7 +410,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -422,7 +422,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
              impl = new rx::DisplayCGL(state);
              break;
  
@@ -24,7 +24,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == 0)
              {
-@@ -456,7 +456,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -468,7 +468,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
  #if defined(ANGLE_ENABLE_OPENGL)
  #    if defined(ANGLE_PLATFORM_WINDOWS)
              impl = new rx::DisplayWGL(state);
@@ -33,7 +33,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == 0)
              {
-@@ -507,7 +507,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -519,7 +519,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
                  impl = rx::CreateVulkanWin32Display(state);
              }
              break;
@@ -42,7 +42,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2079,7 +2079,7 @@ static ClientExtensions GenerateClientEx
+@@ -2139,7 +2139,7 @@ static ClientExtensions GenerateClientEx
      extensions.platformWaylandEXT = true;
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD$
      extensions.platformSurfacelessMESA = true;
  #endif
  
-@@ -2125,7 +2125,7 @@ static ClientExtensions GenerateClientEx
+@@ -2185,7 +2185,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

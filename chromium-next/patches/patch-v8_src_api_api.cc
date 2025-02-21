@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- v8/src/api/api.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ v8/src/api/api.cc
-@@ -152,7 +152,7 @@
+@@ -153,7 +153,7 @@
  #include "src/wasm/wasm-serialization.h"
  #endif  // V8_ENABLE_WEBASSEMBLY
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6571,7 +6571,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6640,7 +6640,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

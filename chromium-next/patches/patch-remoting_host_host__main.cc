@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- remoting/host/host_main.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ remoting/host/host_main.cc
 @@ -50,7 +50,7 @@ int FileChooserMain();
  int RdpDesktopSessionMain();
@@ -33,9 +33,9 @@ $NetBSD$
    } else if (process_type == kProcessTypeXSessionChooser) {
      main_routine = &XSessionChooserMain;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -222,7 +222,7 @@ int HostMain(int argc, char** argv) {
-   // be initialized first, so that the preference for crash-reporting can be
-   // looked up in the config file.
+@@ -224,7 +224,7 @@ int HostMain(int argc, char** argv) {
+   // Note that we enable crash reporting only if the user has opted in to having
+   // the crash reports uploaded.
    if (IsUsageStatsAllowed()) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

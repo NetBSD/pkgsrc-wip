@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc
-@@ -57,7 +57,7 @@
+@@ -60,7 +60,7 @@
  #include "chrome/browser/policy/browser_dm_token_storage_mac.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/policy/browser_dm_token_storage_linux.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -66,7 +66,7 @@
+@@ -69,7 +69,7 @@
  #include "chrome/install_static/install_util.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/connectors/device_trust/key_management/browser/device_trust_key_manager_impl.h"
  #include "chrome/browser/enterprise/connectors/device_trust/key_management/browser/key_rotation_launcher.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-@@ -106,7 +106,7 @@ void ChromeBrowserCloudManagementControl
+@@ -109,7 +109,7 @@ void ChromeBrowserCloudManagementControl
  
  #if BUILDFLAG(IS_MAC)
    storage_delegate = std::make_unique<BrowserDMTokenStorageMac>();
@@ -33,7 +33,7 @@ $NetBSD$
    storage_delegate = std::make_unique<BrowserDMTokenStorageLinux>();
  #elif BUILDFLAG(IS_WIN)
    storage_delegate = std::make_unique<BrowserDMTokenStorageWin>();
-@@ -277,7 +277,7 @@ ChromeBrowserCloudManagementControllerDe
+@@ -280,7 +280,7 @@ ChromeBrowserCloudManagementControllerDe
  
  std::unique_ptr<enterprise_connectors::DeviceTrustKeyManager>
  ChromeBrowserCloudManagementControllerDesktop::CreateDeviceTrustKeyManager() {

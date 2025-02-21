@@ -4,21 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/common/webui_url_constants.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/common/webui_url_constants.h
-@@ -578,24 +578,24 @@ inline constexpr char16_t kOsUISystemURL
- inline constexpr char kOsUIVersionURL[] = "os://version";
- #endif
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- inline constexpr char kChromeUIWebUIJsErrorHost[] = "webuijserror";
- inline constexpr char kChromeUIWebUIJsErrorURL[] = "chrome://webuijserror/";
- #endif
+@@ -497,18 +497,18 @@ inline constexpr char kChromeUIOsUrlAppU
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_ASH)
-+    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  inline constexpr char kChromeUIConnectorsInternalsHost[] =
      "connectors-internals";
  #endif
@@ -35,7 +28,7 @@ $NetBSD$
  inline constexpr char kChromeUIWebAppSettingsHost[] = "app-settings";
  inline constexpr char kChromeUIWebAppSettingsURL[] = "chrome://app-settings/";
  inline constexpr char kChromeUIWhatsNewHost[] = "whats-new";
-@@ -607,13 +607,13 @@ inline constexpr char kChromeUILinuxProx
+@@ -520,11 +520,11 @@ inline constexpr char kChromeUILinuxProx
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -44,14 +37,12 @@ $NetBSD$
  inline constexpr char kChromeUISandboxHost[] = "sandbox";
  #endif
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD) || \
-     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  inline constexpr char kChromeUIBrowserSwitchHost[] = "browser-switch";
  inline constexpr char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
-@@ -635,7 +635,7 @@ inline constexpr char kChromeUIProfilePi
+ inline constexpr char kChromeUIIntroDefaultBrowserSubPage[] = "default-browser";
+@@ -545,7 +545,7 @@ inline constexpr char kChromeUIProfilePi
  inline constexpr char kChromeUIProfilePickerUrl[] = "chrome://profile-picker/";
  #endif
  

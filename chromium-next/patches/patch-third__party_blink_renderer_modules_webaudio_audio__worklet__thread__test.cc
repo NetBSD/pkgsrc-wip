@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc
-@@ -469,7 +469,7 @@ class AudioWorkletThreadPriorityTest
+@@ -465,7 +465,7 @@ class AudioWorkletThreadPriorityTest
  
      // TODO(crbug.com/1022888): The worklet thread priority is always NORMAL
      // on OS_LINUX and OS_CHROMEOS regardless of the thread priority setting.

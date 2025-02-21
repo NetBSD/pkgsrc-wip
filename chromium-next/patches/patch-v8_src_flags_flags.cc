@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/flags/flags.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- v8/src/flags/flags.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ v8/src/flags/flags.cc
 @@ -16,6 +16,10 @@
  #include <set>
@@ -14,7 +14,7 @@ $NetBSD$
 +#include <sys/mman.h>
 +#endif
 +
- #include "src/base/functional.h"
+ #include "src/base/hashing.h"
  #include "src/base/lazy-instance.h"
  #include "src/base/platform/platform.h"
 @@ -816,6 +820,10 @@ void FlagList::FreezeFlags() {

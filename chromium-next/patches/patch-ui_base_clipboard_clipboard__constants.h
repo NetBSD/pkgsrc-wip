@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_constants.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/base/clipboard/clipboard_constants.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/base/clipboard/clipboard_constants.h
 @@ -41,7 +41,7 @@ extern const char kMimeTypeWindowDrag[];
  
@@ -15,3 +15,12 @@ $NetBSD$
  COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
  extern const char kMimeTypeLinuxUtf8String[];
  COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
+@@ -53,7 +53,7 @@ COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES
+         // BUILDFLAG(IS_FUCHSIA)
+ 
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+ extern const char kMimeTypeSourceUrl[];
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||
+         // BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_ANDROID)

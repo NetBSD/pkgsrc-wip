@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_netbsd.cc.orig	2025-02-01 17:17:21.317906002 +0000
+--- base/system/sys_info_netbsd.cc.orig	2025-02-20 13:19:48.719650779 +0000
 +++ base/system/sys_info_netbsd.cc
-@@ -0,0 +1,88 @@
+@@ -0,0 +1,89 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -28,8 +28,9 @@ $NetBSD$
 +uint64_t AmountOfMemory(int pages_name) {
 +  long pages = sysconf(pages_name);
 +  long page_size = sysconf(_SC_PAGESIZE);
-+  if (pages < 0 || page_size < 0)
++  if (pages < 0 || page_size < 0) {
 +    return 0;
++  }
 +  return static_cast<uint64_t>(pages) * static_cast<uint64_t>(page_size);
 +}
 +

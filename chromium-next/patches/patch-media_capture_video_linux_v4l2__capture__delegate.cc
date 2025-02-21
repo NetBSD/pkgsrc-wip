@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.cc
 @@ -5,8 +5,10 @@
  #include "media/capture/video/linux/v4l2_capture_delegate.h"
@@ -172,7 +172,7 @@ $NetBSD$
        if (use_gpu_buffer_) {
          v4l2_gpu_helper_->OnIncomingCapturedData(
              client_.get(), buffer_tracker->start(),
-@@ -1220,7 +1247,7 @@ void V4L2CaptureDelegate::SetErrorState(
+@@ -1221,7 +1248,7 @@ void V4L2CaptureDelegate::SetErrorState(
    client_->OnError(error, from_here, reason);
  }
  

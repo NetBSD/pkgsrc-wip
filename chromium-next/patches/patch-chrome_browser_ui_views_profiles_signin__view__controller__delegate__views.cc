@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
 @@ -58,7 +58,7 @@
  namespace {
@@ -15,7 +15,7 @@ $NetBSD$
  const int kManagedUserNoticeConfirmationDialogWidth = 512;
  const int kManagedUserNoticeConfirmationDialogHeight = 576;
  const int kManagedUserNoticeConfirmationUpdatedDialogWidth = 780;
-@@ -179,7 +179,7 @@ SigninViewControllerDelegateViews::Creat
+@@ -180,7 +180,7 @@ SigninViewControllerDelegateViews::Creat
  }
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -24,7 +24,7 @@ $NetBSD$
  // static
  std::unique_ptr<views::WebView>
  SigninViewControllerDelegateViews::CreateManagedUserNoticeConfirmationWebView(
-@@ -338,7 +338,7 @@ SigninViewControllerDelegateViews::Signi
+@@ -339,7 +339,7 @@ SigninViewControllerDelegateViews::Signi
  
    SetButtons(static_cast<int>(ui::mojom::DialogButton::kNone));
  
@@ -33,7 +33,7 @@ $NetBSD$
    // On the local profile creation dialog, cancelling the dialog (for instance
    // through the VKEY_ESCAPE accelerator) should delete the profile.
    if (delete_profile_on_cancel) {
-@@ -426,7 +426,7 @@ void SigninViewControllerDelegateViews::
+@@ -429,7 +429,7 @@ void SigninViewControllerDelegateViews::
    content_view_->RequestFocus();
  }
  
@@ -42,7 +42,7 @@ $NetBSD$
  void SigninViewControllerDelegateViews::DeleteProfileOnCancel() {
    ProfileAttributesEntry* entry =
        g_browser_process->profile_manager()
-@@ -502,7 +502,7 @@ SigninViewControllerDelegate::CreateProf
+@@ -505,7 +505,7 @@ SigninViewControllerDelegate::CreateProf
  }
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  

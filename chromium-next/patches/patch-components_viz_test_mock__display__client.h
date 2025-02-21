@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/mock_display_client.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/viz/test/mock_display_client.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/viz/test/mock_display_client.h
 @@ -45,7 +45,7 @@ class MockDisplayClient : public mojom::
- #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS_ASH)
+ #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS)
    MOCK_METHOD1(SetPreferredRefreshRate, void(float refresh_rate));
- #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS_ASH)
+ #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS)
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
    MOCK_METHOD1(DidCompleteSwapWithNewSize, void(const gfx::Size&));

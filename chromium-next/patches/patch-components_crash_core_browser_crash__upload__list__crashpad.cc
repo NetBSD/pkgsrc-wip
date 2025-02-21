@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/crash/core/browser/crash_upload_list_crashpad.cc
-@@ -38,7 +38,9 @@ CrashUploadListCrashpad::~CrashUploadLis
+@@ -37,7 +37,9 @@ CrashUploadListCrashpad::~CrashUploadLis
  std::vector<std::unique_ptr<UploadList::UploadInfo>>
  CrashUploadListCrashpad::LoadUploadList() {
    std::vector<crash_reporter::Report> reports;
@@ -16,7 +16,7 @@ $NetBSD$
  
    std::vector<std::unique_ptr<UploadInfo>> uploads;
    for (const crash_reporter::Report& report : reports) {
-@@ -52,9 +54,13 @@ CrashUploadListCrashpad::LoadUploadList(
+@@ -51,9 +53,13 @@ CrashUploadListCrashpad::LoadUploadList(
  
  void CrashUploadListCrashpad::ClearUploadList(const base::Time& begin,
                                                const base::Time& end) {

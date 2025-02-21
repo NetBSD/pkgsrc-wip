@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -101,7 +101,7 @@ const char* const kBadFlags[] = {
+@@ -94,7 +94,7 @@ const char* const kBadFlags[] = {
+     extensions::switches::kExtensionsOnChromeURLs,
+ #endif
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      // Speech dispatcher is buggy, it can crash and it can make Chrome freeze.
      // http://crbug.com/327295
      switches::kEnableSpeechDispatcher,

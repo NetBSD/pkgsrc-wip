@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/crash/core/app/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/crash/core/app/BUILD.gn
 @@ -70,6 +70,10 @@ static_library("app") {
      ]
@@ -35,7 +35,7 @@ $NetBSD$
      deps += [
        "//base:base_static",
        "//components/crash/core/common",
-@@ -234,11 +238,6 @@ if (is_mac || is_android || is_linux || 
+@@ -236,11 +240,6 @@ if (is_mac || is_android || is_linux || 
    executable("chrome_crashpad_handler") {
      sources = [ "chrome_crashpad_handler.cc" ]
  

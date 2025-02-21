@@ -126,6 +126,7 @@ lib/chromium/resources/accessibility/reading_mode_gdocs_helper/gdocs_script.js
 lib/chromium/resources/accessibility/reading_mode_gdocs_helper_manifest.json
 lib/chromium/resources/inspector_overlay/inspector_overlay_resources.grd
 lib/chromium/resources/inspector_overlay/main.js
+lib/chromium/resources/tts_engine/background.js
 lib/chromium/snapshot_blob.bin
 lib/chromium/v8_context_snapshot.bin
 ${PLIST.swiftshader}lib/chromium/vk_swiftshader_icd.json

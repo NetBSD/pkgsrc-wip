@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/style/platform_style.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/views/style/platform_style.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/views/style/platform_style.cc
 @@ -16,7 +16,7 @@
  #include "ui/views/controls/focusable_border.h"
@@ -15,16 +15,7 @@ $NetBSD$
  #include "ui/views/controls/scrollbar/overlay_scroll_bar.h"
  #endif
  
-@@ -49,7 +49,7 @@ const View::FocusBehavior PlatformStyle:
- // Linux clips bubble windows that extend outside their parent window
- // bounds.
- const bool PlatformStyle::kAdjustBubbleIfOffscreen =
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     false;
- #else
-     true;
-@@ -58,7 +58,7 @@ const bool PlatformStyle::kAdjustBubbleI
+@@ -27,7 +27,7 @@ namespace views {
  // static
  std::unique_ptr<ScrollBar> PlatformStyle::CreateScrollBar(
      ScrollBar::Orientation orientation) {

@@ -4,20 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/utils.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/perfetto/src/base/utils.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/perfetto/src/base/utils.cc
-@@ -38,8 +38,9 @@
+@@ -38,7 +38,8 @@
  #include <mach/vm_page_size.h>
  #endif
  
--#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
--    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
-+#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
-+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)) && \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)) || \
+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
  #include <sys/prctl.h>
  
- #ifndef PR_GET_TAGGED_ADDR_CTRL
 @@ -278,14 +279,22 @@ void Daemonize(std::function<int()> pare
  
  std::string GetCurExecutablePath() {
@@ -43,15 +41,13 @@ $NetBSD$
  #elif PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE)
    uint32_t size = 0;
    PERFETTO_CHECK(_NSGetExecutablePath(nullptr, &size));
-@@ -337,8 +346,9 @@ void AlignedFree(void* ptr) {
+@@ -337,7 +346,8 @@ void AlignedFree(void* ptr) {
  }
  
  bool IsSyncMemoryTaggingEnabled() {
--#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
--    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
-+#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
-+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)) && \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)) || \
+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
    // Compute only once per lifetime of the process.
    static bool cached_value = [] {
-     const int res = prctl(PR_GET_TAGGED_ADDR_CTRL, 0, 0, 0, 0);

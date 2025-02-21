@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/print_backend_cups.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- printing/backend/print_backend_cups.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ printing/backend/print_backend_cups.cc
-@@ -33,7 +33,7 @@
+@@ -29,7 +29,7 @@
  #include "printing/mojom/print.mojom.h"
  #include "url/gurl.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/feature_list.h"
  #include "printing/backend/cups_connection.h"
  #include "printing/backend/print_backend_cups_ipp.h"
-@@ -63,7 +63,7 @@ int CaptureCupsDestCallback(void* data, 
+@@ -59,7 +59,7 @@ int CaptureCupsDestCallback(void* data, 
    return 1;  // Keep going.
  }
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_popup.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_popup.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_popup.cc
-@@ -34,7 +34,7 @@ WaylandPopup::WaylandPopup(PlatformWindo
+@@ -31,7 +31,7 @@ WaylandPopup::WaylandPopup(PlatformWindo
                             WaylandWindow* parent)
      : WaylandWindow(delegate, connection) {
    set_parent_window(parent);

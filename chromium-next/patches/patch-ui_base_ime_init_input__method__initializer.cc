@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/init/input_method_initializer.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/base/ime/init/input_method_initializer.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/base/ime/init/input_method_initializer.cc
-@@ -8,7 +8,7 @@
- #include "base/functional/callback.h"
+@@ -9,7 +9,7 @@
+ #include "base/trace_event/trace_event.h"
  #include "build/build_config.h"
  
 -#if defined(USE_AURA) && BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/base/ime/linux/fake_input_method_context.h"
  #include "ui/base/ime/linux/linux_input_method_context_factory.h"
  #elif BUILDFLAG(IS_WIN)
-@@ -31,7 +31,7 @@ void ShutdownInputMethod() {
+@@ -33,7 +33,7 @@ void ShutdownInputMethod() {
  }
  
  void InitializeInputMethodForTesting() {
@@ -24,7 +24,7 @@ $NetBSD$
    GetInputMethodContextFactoryForTest() =
        base::BindRepeating([](LinuxInputMethodContextDelegate* delegate)
                                -> std::unique_ptr<LinuxInputMethodContext> {
-@@ -43,7 +43,7 @@ void InitializeInputMethodForTesting() {
+@@ -45,7 +45,7 @@ void InitializeInputMethodForTesting() {
  }
  
  void ShutdownInputMethodForTesting() {

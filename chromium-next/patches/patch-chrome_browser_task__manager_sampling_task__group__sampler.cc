@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.cc
 @@ -46,7 +46,7 @@ TaskGroupSampler::TaskGroupSampler(
      const OnCpuRefreshCallback& on_cpu_refresh,
@@ -42,7 +42,7 @@ $NetBSD$
    if (TaskManagerObserver::IsResourceRefreshEnabled(REFRESH_TYPE_FD_COUNT,
                                                      refresh_flags)) {
      blocking_pool_runner_->PostTaskAndReplyWithResult(
-@@ -150,7 +150,7 @@ int TaskGroupSampler::RefreshIdleWakeups
+@@ -153,7 +153,7 @@ int TaskGroupSampler::RefreshIdleWakeups
    return process_metrics_->GetIdleWakeupsPerSecond();
  }
  

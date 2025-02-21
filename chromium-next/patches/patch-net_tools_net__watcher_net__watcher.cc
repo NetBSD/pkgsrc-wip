@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/net_watcher/net_watcher.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- net/tools/net_watcher/net_watcher.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ net/tools/net_watcher/net_watcher.cc
 @@ -32,7 +32,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc
 @@ -20,6 +20,7 @@ static base::LazyInstance<scoped_refptr<
  

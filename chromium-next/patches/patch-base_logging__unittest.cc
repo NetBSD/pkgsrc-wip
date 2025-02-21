@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/logging_unittest.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/logging_unittest.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/logging_unittest.cc
 @@ -41,7 +41,7 @@
  #include "base/posix/eintr_wrapper.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include <ucontext.h>
  #endif
  
-@@ -585,14 +585,18 @@ void CheckCrashTestSighandler(int, sigin
+@@ -589,14 +589,18 @@ void CheckCrashTestSighandler(int, sigin
    // need the arch-specific boilerplate below, which is inspired by breakpad.
    // At the same time, on OSX, ucontext.h is deprecated but si_addr works fine.
    uintptr_t crash_addr = 0;

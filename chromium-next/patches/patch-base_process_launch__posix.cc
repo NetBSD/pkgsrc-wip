@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/process/launch_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/process/launch_posix.cc
 @@ -67,6 +67,9 @@
  #error "macOS should use launch_mac.cc"
@@ -16,7 +16,7 @@ $NetBSD$
  extern char** environ;
  
  namespace base {
-@@ -223,6 +226,8 @@ static const char kFDDir[] = "/dev/fd";
+@@ -224,6 +227,8 @@ static const char kFDDir[] = "/dev/fd";
  static const char kFDDir[] = "/dev/fd";
  #elif BUILDFLAG(IS_OPENBSD)
  static const char kFDDir[] = "/dev/fd";

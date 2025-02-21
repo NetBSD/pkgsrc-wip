@@ -4,15 +4,13 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/clock_snapshots.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/perfetto/src/base/clock_snapshots.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/perfetto/src/base/clock_snapshots.cc
-@@ -26,7 +26,8 @@ ClockSnapshotVector CaptureClockSnapshot
-   ClockSnapshotVector snapshot_data;
+@@ -27,6 +27,7 @@ ClockSnapshotVector CaptureClockSnapshot
  #if !PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) && \
      !PERFETTO_BUILDFLAG(PERFETTO_OS_WIN) &&   \
--    !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL)
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL) &&  \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
+     !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL) &&  \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD) &&  \
+     !PERFETTO_BUILDFLAG(PERFETTO_OS_QNX)
    struct {
      clockid_t id;
-     protos::pbzero::BuiltinClock type;

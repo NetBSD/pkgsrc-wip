@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator_netbsd.cc.orig	2025-02-01 17:17:21.314343044 +0000
+--- base/process/process_iterator_netbsd.cc.orig	2025-02-20 13:19:48.715379897 +0000
 +++ base/process/process_iterator_netbsd.cc
-@@ -0,0 +1,132 @@
+@@ -0,0 +1,134 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -80,8 +80,9 @@ $NetBSD$
 +    kinfo_proc2& kinfo = kinfo_procs_[index_of_kinfo_proc_];
 +
 +    // Skip processes just awaiting collection
-+    if ((kinfo.p_pid > 0) && (kinfo.p_stat == SZOMB))
++    if ((kinfo.p_pid > 0) && (kinfo.p_stat == SZOMB)) {
 +      continue;
++    }
 +
 +    int mib[] = { CTL_KERN, KERN_PROC_ARGS, kinfo.p_pid };
 +
@@ -120,11 +121,12 @@ $NetBSD$
 +    entry_.ppid_ = kinfo.p_ppid;
 +    entry_.gid_ = kinfo.p__pgid;
 +    size_t last_slash = data.rfind('/', exec_name_end);
-+    if (last_slash == std::string::npos)
++    if (last_slash == std::string::npos) {
 +      entry_.exe_file_.assign(data, 0, exec_name_end);
-+    else
++    } else {
 +      entry_.exe_file_.assign(data, last_slash + 1,
 +                              exec_name_end - last_slash - 1);
++    }
 +    // Start w/ the next entry next time through
 +    ++index_of_kinfo_proc_;
 +    // Done

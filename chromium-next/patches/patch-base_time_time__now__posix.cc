@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/time/time_now_posix.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- base/time/time_now_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ base/time/time_now_posix.cc
 @@ -27,7 +27,7 @@
  #endif

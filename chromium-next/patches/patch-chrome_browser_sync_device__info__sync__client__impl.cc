@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/sync/device_info_sync_client_impl.cc
-@@ -41,7 +41,7 @@ std::string DeviceInfoSyncClientImpl::Ge
+@@ -43,7 +43,7 @@ std::string DeviceInfoSyncClientImpl::Ge
  // included in lacros-chrome once build flag switch of lacros-chrome is
  // complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \

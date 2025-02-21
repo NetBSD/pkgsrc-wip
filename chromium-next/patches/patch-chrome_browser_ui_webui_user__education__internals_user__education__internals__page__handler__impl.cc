@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/internals/user_education/user_education_internals_page_handler_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
-+++ chrome/browser/ui/webui/internals/user_education/user_education_internals_page_handler_impl.cc
-@@ -44,7 +44,7 @@
+--- chrome/browser/ui/webui/user_education_internals/user_education_internals_page_handler_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
++++ chrome/browser/ui/webui/user_education_internals/user_education_internals_page_handler_impl.cc
+@@ -45,7 +45,7 @@
  #include "ui/base/l10n/l10n_util.h"
  #include "ui/base/webui/resource_path.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/browser_navigator.h"
  #include "chrome/browser/ui/browser_navigator_params.h"
  #include "net/base/url_util.h"
-@@ -84,7 +84,7 @@ user_education::NewBadgeRegistry* GetNew
+@@ -85,7 +85,7 @@ user_education::NewBadgeRegistry* GetNew
  }
  
  whats_new::WhatsNewRegistry* GetWhatsNewRegistry() {
@@ -24,7 +24,7 @@ $NetBSD$
    return g_browser_process->GetFeatures()->whats_new_registry();
  #else
    return nullptr;
-@@ -773,7 +773,7 @@ void UserEducationInternalsPageHandlerIm
+@@ -794,7 +794,7 @@ void UserEducationInternalsPageHandlerIm
  }
  
  void UserEducationInternalsPageHandlerImpl::LaunchWhatsNewStaging() {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/std/BUILD.gn.orig	2025-01-27 17:37:37.000000000 +0000
+--- build/rust/std/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
 +++ build/rust/std/BUILD.gn
-@@ -100,7 +100,6 @@ if (toolchain_has_rust) {
+@@ -115,7 +115,6 @@ if (toolchain_has_rust) {
    # don't need to pass to the C++ linker because they're used for specialized
    # purposes.
    skip_stdlib_files = [

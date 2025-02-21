@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
-@@ -500,6 +500,9 @@ std::string GetPlatformForUAMetadata() {
+@@ -481,6 +481,9 @@ std::string GetPlatformForUAMetadata() {
  # else
    return "Chromium OS";
  # endif

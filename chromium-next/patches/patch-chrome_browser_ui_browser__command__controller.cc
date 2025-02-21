@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
-@@ -127,7 +127,7 @@
+@@ -126,7 +126,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
  #endif
-@@ -136,7 +136,7 @@
+@@ -135,7 +135,7 @@
  #include "ui/ozone/public/ozone_platform.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/ui/shortcuts/desktop_shortcuts_utils.h"
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -317,7 +317,7 @@ bool BrowserCommandController::IsReserve
+@@ -323,7 +323,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -572,7 +572,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -580,7 +580,7 @@ bool BrowserCommandController::ExecuteCo
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -42,7 +42,7 @@ $NetBSD$
      case IDC_MINIMIZE_WINDOW:
        browser_->window()->Minimize();
        break;
-@@ -584,7 +584,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -592,7 +592,7 @@ bool BrowserCommandController::ExecuteCo
        break;
  #endif
  
@@ -51,16 +51,25 @@ $NetBSD$
      case IDC_USE_SYSTEM_TITLE_BAR: {
        PrefService* prefs = profile()->GetPrefs();
        prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -788,7 +788,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -798,7 +798,7 @@ bool BrowserCommandController::ExecuteCo
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-       if (base::FeatureList::IsEnabled(features::kShortcutsNotApps)) {
-         chrome::CreateDesktopShortcutForActiveWebContents(browser_);
-       } else {
-@@ -1263,12 +1263,12 @@ void BrowserCommandController::InitComma
+       chrome::CreateDesktopShortcutForActiveWebContents(browser_);
+ #else
+       web_app::CreateWebAppFromCurrentWebContents(
+@@ -970,7 +970,7 @@ bool BrowserCommandController::ExecuteCo
+ #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
+     case IDC_CHROME_WHATS_NEW:
+ #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
+-    (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX))
++    (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+       ShowChromeWhatsNew(browser_);
+       break;
+ #else
+@@ -1285,12 +1285,12 @@ void BrowserCommandController::InitComma
  #endif
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -75,12 +84,12 @@ $NetBSD$
    bool use_system_title_bar = true;
  #if BUILDFLAG(IS_OZONE)
    use_system_title_bar = ui::OzonePlatform::GetInstance()
-@@ -1606,7 +1606,7 @@ void BrowserCommandController::UpdateCom
+@@ -1634,7 +1634,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   if (base::FeatureList::IsEnabled(features::kShortcutsNotApps)) {
-     command_updater_.UpdateCommandEnabled(
-         IDC_CREATE_SHORTCUT, shortcuts::CanCreateDesktopShortcut(browser_));
+   command_updater_.UpdateCommandEnabled(
+       IDC_CREATE_SHORTCUT, shortcuts::CanCreateDesktopShortcut(browser_));
+ #else

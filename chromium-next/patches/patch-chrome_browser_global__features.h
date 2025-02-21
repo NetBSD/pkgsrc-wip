@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/global_features.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/global_features.h
-@@ -14,7 +14,7 @@ namespace system_permission_settings {
+@@ -14,7 +14,7 @@
+ namespace system_permission_settings {
  class PlatformHandle;
  }  // namespace system_permission_settings
- namespace whats_new {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ namespace whats_new {
  class WhatsNewRegistry;
- #endif
  }  // namespace whats_new
-@@ -45,7 +45,7 @@ class GlobalFeatures {
+@@ -52,7 +52,7 @@ class GlobalFeatures {
    system_permissions_platform_handle() {
      return system_permissions_platform_handle_.get();
    }
@@ -24,7 +24,7 @@ $NetBSD$
    whats_new::WhatsNewRegistry* whats_new_registry() {
      return whats_new_registry_.get();
    }
-@@ -60,7 +60,7 @@ class GlobalFeatures {
+@@ -77,7 +77,7 @@ class GlobalFeatures {
  
    virtual std::unique_ptr<system_permission_settings::PlatformHandle>
    CreateSystemPermissionsPlatformHandle();
@@ -33,7 +33,7 @@ $NetBSD$
    virtual std::unique_ptr<whats_new::WhatsNewRegistry> CreateWhatsNewRegistry();
  #endif
  
-@@ -70,7 +70,7 @@ class GlobalFeatures {
+@@ -87,7 +87,7 @@ class GlobalFeatures {
  
    std::unique_ptr<system_permission_settings::PlatformHandle>
        system_permissions_platform_handle_;
@@ -41,4 +41,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    std::unique_ptr<whats_new::WhatsNewRegistry> whats_new_registry_;
  #endif
- };
+ 

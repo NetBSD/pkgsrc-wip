@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/content_settings/core/browser/website_settings_registry.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/content_settings/core/browser/website_settings_registry.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/content_settings/core/browser/website_settings_registry.cc
-@@ -67,7 +67,7 @@ const WebsiteSettingsInfo* WebsiteSettin
+@@ -66,7 +66,7 @@ const WebsiteSettingsInfo* WebsiteSettin
  #if BUILDFLAG(IS_WIN)
    if (!(platform & PLATFORM_WINDOWS))
      return nullptr;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/lzma_sdk/C/CpuArch.c.orig	2025-01-27 17:37:37.000000000 +0000
+--- third_party/lzma_sdk/C/CpuArch.c.orig	2025-02-17 21:09:38.000000000 +0000
 +++ third_party/lzma_sdk/C/CpuArch.c
-@@ -412,12 +412,40 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
+@@ -854,6 +854,34 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  BoolInt CPU_IsSupported_AES (void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  
@@ -41,10 +41,17 @@ $NetBSD$
  
  #else // __APPLE__
  
- #include <sys/auxv.h>
+@@ -869,11 +897,13 @@ BoolInt CPU_IsSupported_AES (void) { ret
+   #endif
+ #endif
  
--#if !defined(ARMV8_OS_FUCHSIA)
-+#if !defined(ARMV8_OS_FUCHSIA) && !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #ifdef Z7_GETAUXV_AVAILABLE
+ // #pragma message("=== Z7_GETAUXV_AVAILABLE === ")
+ #include <sys/auxv.h>
  #define USE_HWCAP
- #endif // !defined(ARMV8_OS_FUCHSIA)
+ #endif
++#endif
+ 
+ #ifdef USE_HWCAP
  

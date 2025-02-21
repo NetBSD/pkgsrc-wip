@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/flag_descriptions.cc
-@@ -470,7 +470,7 @@ const char kAutofillDisableLocalCardMigr
+@@ -492,7 +492,7 @@ const char kAutofillDisableLocalCardMigr
      "from checkout flows and from the payment methods settings page.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  const char kAutofillEnableAmountExtractionDesktopName[] =
      "Enable checkout amount extraction on Chrome desktop";
  const char kAutofillEnableAmountExtractionDesktopDescription[] =
-@@ -479,7 +479,7 @@ const char kAutofillEnableAmountExtracti
+@@ -501,7 +501,7 @@ const char kAutofillEnableAmountExtracti
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  const char kAutofillEnableBuyNowPayLaterForAffirmName[] =
      "Enable buy now pay later on Autofill for Affirm";
  const char kAutofillEnableBuyNowPayLaterForAffirmDescription[] =
-@@ -976,7 +976,7 @@ const char kDevicePostureDescription[] =
+@@ -961,7 +961,7 @@ const char kDevicePostureDescription[] =
      "Enables Device Posture API (foldable devices)";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -33,7 +33,7 @@ $NetBSD$
  const char kDocumentPictureInPictureAnimateResizeName[] =
      "Document Picture-in-Picture Animate Resize";
  const char kDocumentPictureInPictureAnimateResizeDescription[] =
-@@ -1060,7 +1060,7 @@ const char kCompressionDictionaryTranspo
+@@ -1038,7 +1038,7 @@ const char kCompressionDictionaryTranspo
      "when the connection is using a well known root cert or when the server is "
      "a localhost.";
  
@@ -42,7 +42,7 @@ $NetBSD$
  const char kContextualCueingName[] = "Contextual cueing";
  const char kContextualCueingDescription[] =
      "Enables the contextual cueing system to support showing actions";
-@@ -2203,7 +2203,7 @@ const char kContextualPageActionsShareMo
+@@ -2222,7 +2222,7 @@ const char kContextualPageActionsShareMo
      "Enables share model data collection.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -51,7 +51,7 @@ $NetBSD$
  const char kEnableSearchAggregatorPolicyName[] =
      "Enable EnterpriseSearchAggregatorSettings policy";
  const char kEnableSearchAggregatorPolicyDescription[] =
-@@ -3516,7 +3516,7 @@ const char kSiteInstanceGroupsForDataUrl
+@@ -3541,7 +3541,7 @@ const char kSiteInstanceGroupsForDataUrl
      "but in the same SiteInstanceGroup, and thus the same process.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -60,7 +60,7 @@ $NetBSD$
  const char kPwaNavigationCapturingName[] = "Desktop PWA Link Capturing";
  const char kPwaNavigationCapturingDescription[] =
      "Enables opening links from Chrome in an installed PWA. Currently under "
-@@ -3736,7 +3736,7 @@ const char kTranslateForceTriggerOnEngli
+@@ -3785,7 +3785,7 @@ const char kTranslateForceTriggerOnEngli
      "Force the Translate Triggering on English pages experiment to be enabled "
      "with the selected language model active.";
  
@@ -69,16 +69,16 @@ $NetBSD$
  const char kTranslationAPIName[] = "Experimental translation API";
  const char kTranslationAPIDescription[] =
      "Enables the on-device language translation API. "
-@@ -7663,7 +7663,7 @@ const char kBlinkExtensionDiagnosticsDes
-     "Enable the experimental Diagnostics Blink Extension.";
- #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
+@@ -7491,7 +7491,7 @@ const char kTetheringExperimentalFunctio
+ 
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  const char kGetAllScreensMediaName[] = "GetAllScreensMedia API";
  const char kGetAllScreensMediaDescription[] =
      "When enabled, the getAllScreensMedia API for capturing multiple screens "
-@@ -7883,7 +7883,7 @@ const char kEnableArmHwdrmDescription[] 
+@@ -7721,7 +7721,7 @@ const char kEnableArmHwdrmDescription[] 
  
  // Linux -----------------------------------------------------------------------
  
@@ -87,7 +87,7 @@ $NetBSD$
  const char kOzonePlatformHintChoiceDefault[] = "Default";
  const char kOzonePlatformHintChoiceAuto[] = "Auto";
  const char kOzonePlatformHintChoiceX11[] = "X11";
-@@ -7929,6 +7929,20 @@ const char kWaylandUiScalingDescription[
+@@ -7767,6 +7767,20 @@ const char kWaylandUiScalingDescription[
      "Enable experimental support for text scaling in the Wayland backend "
      "backed by full UI scaling. Requires #wayland-per-window-scaling to be "
      "enabled too.";
@@ -108,8 +108,8 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX)
  
  // Random platform combinations -----------------------------------------------
-@@ -7941,7 +7955,7 @@ const char kZeroCopyVideoCaptureDescript
- #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+@@ -7779,7 +7793,7 @@ const char kZeroCopyVideoCaptureDescript
+ #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
@@ -117,7 +117,7 @@ $NetBSD$
  const char kFollowingFeedSidepanelName[] = "Following feed in the sidepanel";
  const char kFollowingFeedSidepanelDescription[] =
      "Enables the following feed in the sidepanel.";
-@@ -7963,7 +7977,7 @@ const char kTaskManagerDesktopRefreshDes
+@@ -7805,7 +7819,7 @@ const char kTaskManagerDesktopRefreshDes
      "Enables a refreshed design for the Task Manager on Desktop platforms.";
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -126,7 +126,7 @@ $NetBSD$
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -7995,7 +8009,7 @@ const char kWebBluetoothConfirmPairingSu
+@@ -7837,7 +7851,7 @@ const char kWebBluetoothConfirmPairingSu
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -135,7 +135,7 @@ $NetBSD$
  const char kSkipUndecryptablePasswordsName[] =
      "Skip undecryptable passwords to use the available decryptable "
      "passwords.";
-@@ -8150,7 +8164,7 @@ const char kElementCaptureDescription[] 
+@@ -7987,7 +8001,7 @@ const char kElementCaptureDescription[] 
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -144,7 +144,7 @@ $NetBSD$
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -8206,7 +8220,7 @@ const char kComposeUpfrontInputModesDesc
+@@ -8043,7 +8057,7 @@ const char kComposeUpfrontInputModesDesc
      "Enables upfront input modes in the Compose dialog";
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  
@@ -153,9 +153,9 @@ $NetBSD$
  const char kThirdPartyProfileManagementName[] =
      "Third party profile management";
  const char kThirdPartyProfileManagementDescription[] =
-@@ -8323,7 +8337,7 @@ const char kOverlayScrollbarsOSSettingsD
-     "Enable the os settings for overlay scrollbars on ChromeOS.";
- #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
+@@ -8178,7 +8192,7 @@ const char kOverlayScrollbarsOSSettingsD
+     "Enable the OS settings for overlay scrollbars on ChromeOS.";
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)

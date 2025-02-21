@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ remoting/host/it2me/it2me_native_messaging_host_main.cc
 @@ -30,7 +30,7 @@
  #include "remoting/host/resources.h"
@@ -33,7 +33,7 @@ $NetBSD$
    // Required for any calls into GTK functions, such as the Disconnect and
    // Continue windows. Calling with nullptr arguments because we don't have
    // any command line arguments for gtk to consume.
-@@ -257,7 +257,7 @@ int It2MeNativeMessagingHostMain(int arg
+@@ -251,7 +251,7 @@ int It2MeNativeMessagingHostMain(int arg
        PolicyWatcher::CreateWithTaskRunner(context->file_task_runner(),
                                            context->management_service());
  
@@ -42,7 +42,7 @@ $NetBSD$
    scoped_refptr<AutoThreadTaskRunner> input_task_runner;
    if (!IsRunningWayland()) {
      // Create an X11EventSource on all UI threads, so the global X11 connection
-@@ -284,7 +284,7 @@ int It2MeNativeMessagingHostMain(int arg
+@@ -278,7 +278,7 @@ int It2MeNativeMessagingHostMain(int arg
    // Run the loop until channel is alive.
    run_loop.Run();
  

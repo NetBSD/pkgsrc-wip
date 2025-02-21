@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			132.0.6834.159
+VERSION=			133.0.6943.126
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -126,7 +126,6 @@ GN_SYSTEM_LIBS=		dav1d
 GN_SYSTEM_LIBS+=	fontconfig
 GN_SYSTEM_LIBS+=	icu
 GN_SYSTEM_LIBS+=	libaom
-GN_SYSTEM_LIBS+=	libevent
 #GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
 GN_SYSTEM_LIBS+=	libpng
 GN_SYSTEM_LIBS+=	libvpx
@@ -311,19 +310,14 @@ do-install:
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../devel/re2/buildlink3.mk"
-.include "../../devel/snappy/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
@@ -338,7 +332,8 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../wip/clang/buildlink3.mk"
 .include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/rust/rust.mk"
+#.include "../../lang/rust/rust.mk"
+.include "../../wip/rust182/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"

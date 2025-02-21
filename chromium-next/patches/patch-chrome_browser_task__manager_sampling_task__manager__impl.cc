@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_manager_impl.cc
-@@ -219,7 +219,7 @@ void TaskManagerImpl::GetUSERHandles(Tas
+@@ -226,7 +226,7 @@ void TaskManagerImpl::GetUSERHandles(Tas
  }
  
  int TaskManagerImpl::GetOpenFdCount(TaskId task_id) const {

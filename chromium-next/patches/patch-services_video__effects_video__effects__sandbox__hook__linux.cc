@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_effects/video_effects_sandbox_hook_linux.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- services/video_effects/video_effects_sandbox_hook_linux.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ services/video_effects/video_effects_sandbox_hook_linux.cc
 @@ -6,7 +6,13 @@
  
@@ -17,7 +17,7 @@ $NetBSD$
 +#else
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
- #include "services/on_device_model/ml/chrome_ml.h"
+ #include "services/on_device_model/ml/chrome_ml_holder.h"
  
  namespace video_effects {
 @@ -29,8 +35,10 @@ bool VideoEffectsPreSandboxHook(

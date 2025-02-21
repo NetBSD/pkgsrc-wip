@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
 @@ -267,6 +267,10 @@
  #include "chrome/browser/spellchecker/spellcheck_service.h"
@@ -26,7 +26,7 @@ $NetBSD$
      ProfileManager* profile_manager = g_browser_process->profile_manager();
      ProfileAttributesEntry* entry =
          profile_manager->GetProfileAttributesStorage()
-@@ -901,7 +905,17 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -887,7 +891,17 @@ void ProfileImpl::DoFinalInit(CreateMode
  }
  
  base::FilePath ProfileImpl::last_selected_directory() {

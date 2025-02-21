@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/browser_features.cc
-@@ -65,7 +65,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
-              "CertVerificationNetworkTime",
+@@ -71,7 +71,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
               base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
  // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
  // disabled without losing data.
-@@ -81,7 +81,7 @@ BASE_FEATURE(kDbusSecretPortal,
+@@ -87,7 +87,7 @@ BASE_FEATURE(kDbusSecretPortal,
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
               "DestroyProfileOnBrowserClose",
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -24,7 +24,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -248,7 +248,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -228,7 +228,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
               "SandboxExternalProtocolBlockedWarning",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

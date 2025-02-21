@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_main_loop.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- content/browser/browser_main_loop.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ content/browser/browser_main_loop.cc
-@@ -249,6 +249,12 @@
+@@ -247,6 +247,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"
  #endif
  
@@ -19,7 +19,7 @@ $NetBSD$
  // One of the linux specific headers defines this as a macro.
  #ifdef DestroyAll
  #undef DestroyAll
-@@ -543,6 +549,12 @@ int BrowserMainLoop::EarlyInitialization
+@@ -541,6 +547,12 @@ int BrowserMainLoop::EarlyInitialization
    // by now since a thread to start the ServiceManager has been created
    // before the browser main loop starts.
    DCHECK(SandboxHostLinux::GetInstance()->IsInitialized());
@@ -32,7 +32,7 @@ $NetBSD$
  #endif
  
    // GLib's spawning of new processes is buggy, so it's important that at this
-@@ -581,7 +593,7 @@ int BrowserMainLoop::EarlyInitialization
+@@ -573,7 +585,7 @@ int BrowserMainLoop::EarlyInitialization
        base::ThreadType::kDisplayCritical);
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

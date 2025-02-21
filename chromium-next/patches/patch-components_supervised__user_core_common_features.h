@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/supervised_user/core/common/features.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(
  // Applies new informative strings during the parental extension approval flow.
@@ -26,10 +26,10 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- // This hides the following guest mode entry points for supervised users:
- //
- // * In the Profile menu for supervised profiles
-@@ -71,7 +71,7 @@ BASE_DECLARE_FEATURE(kHideGuestModeForSu
+ // Uses supervised user strings on the signout dialog.
+ BASE_DECLARE_FEATURE(kEnableSupervisedUserVersionSignOutDialog);
+ 
+@@ -74,7 +74,7 @@ BASE_DECLARE_FEATURE(kHideGuestModeForSu
  // unauthenticated (e.g. signed out of the content area) account.
  BASE_DECLARE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers);
  

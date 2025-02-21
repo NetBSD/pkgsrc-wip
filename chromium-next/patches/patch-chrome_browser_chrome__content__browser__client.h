@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2025-01-27 17:37:37.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2025-02-17 21:09:38.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
-@@ -538,7 +538,7 @@ class ChromeContentBrowserClient : publi
+@@ -545,7 +545,7 @@ class ChromeContentBrowserClient : publi
    bool IsPluginAllowedToUseDevChannelAPIs(
        content::BrowserContext* browser_context,
        const GURL& url) override;

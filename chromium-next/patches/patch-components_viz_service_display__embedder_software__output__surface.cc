@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
-@@ -113,7 +113,7 @@ void SoftwareOutputSurface::SwapBuffersC
+@@ -115,7 +115,7 @@ void SoftwareOutputSurface::SwapBuffersC
    base::TimeTicks now = base::TimeTicks::Now();
    base::TimeDelta interval_to_next_refresh =
        now.SnappedToNextTick(refresh_timebase_, refresh_interval_) - now;
@@ -15,7 +15,7 @@ $NetBSD$
    if (needs_swap_size_notifications_)
      client_->DidSwapWithSize(pixel_size);
  #endif
-@@ -140,7 +140,7 @@ gfx::OverlayTransform SoftwareOutputSurf
+@@ -142,7 +142,7 @@ gfx::OverlayTransform SoftwareOutputSurf
    return gfx::OVERLAY_TRANSFORM_NONE;
  }
  

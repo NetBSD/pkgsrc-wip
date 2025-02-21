@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/common/features.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/safe_browsing/core/common/features.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/safe_browsing/core/common/features.cc
-@@ -256,7 +256,7 @@ constexpr base::FeatureParam<std::string
+@@ -262,7 +262,7 @@ constexpr base::FeatureParam<std::string
  BASE_FEATURE(kSafeBrowsingAsyncRealTimeCheck,
               "SafeBrowsingAsyncRealTimeCheck",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/fake_text_input_client.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- ui/base/ime/fake_text_input_client.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ ui/base/ime/fake_text_input_client.cc
 @@ -227,7 +227,7 @@ bool FakeTextInputClient::ShouldDoLearni
    return should_do_learning_;

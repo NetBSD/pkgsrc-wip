@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2025-01-27 17:37:37.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2025-02-17 21:09:38.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -13,7 +13,7 @@ BASE_FEATURE(kAutofillDisableLocalCardMi
+@@ -11,7 +11,7 @@ BASE_FEATURE(kAutofillDisableLocalCardMi
               "AutofillDisableLocalCardMigration",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -15,12 +15,12 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
  // When enabled, Chrome will extract the checkout amount from the checkout page
  // of the allowlisted merchant websites.
-@@ -319,7 +319,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
+@@ -322,7 +322,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
+ #endif  // BUILDFLAG(IS_ANDROID)
+ 
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || \
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD) || \
-     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // The new user consent UI is fully launched on MacOS, Windows and Linux.
    return true;
+ #else
