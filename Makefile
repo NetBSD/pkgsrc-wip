@@ -444,6 +444,7 @@ SUBDIR+=	centrifuge
 SUBDIR+=	cereal
 SUBDIR+=	cfiles
 SUBDIR+=	cgal
+SUBDIR+=	cgic
 SUBDIR+=	cglib
 SUBDIR+=	cgnslib
 SUBDIR+=	cgterm
