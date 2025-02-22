@@ -1,4 +1,13 @@
-devel/cargo-c: update to 0.10.9
+devel/cargo-c: update to 0.10.11
+
+0.10.11
+ - Use the correct minimum rust version
+
+0.10.10
+ - cargo 0.86
+ - Make sure the implib version in use does not produce faulty libraries on certain Windows targets
+ - Changing package.metadata.capi will trigger a rebuild
+ - Change a little the hashing logic to make sure the generated files match the compiled rust code
 
 0.10.9
  - Fix Meson naming convention and import lib generation under MinGW (Thank you @kleisauke !)
