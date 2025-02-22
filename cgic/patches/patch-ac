@@ -1,0 +1,54 @@
+$NetBSD: patch-ac,v 1.2 2006/01/06 22:46:51 adam Exp $
+
+--- cgic.c.orig	2024-10-01 02:56:24.000000000 +0000
++++ cgic.c
+@@ -124,8 +124,9 @@ static int cgiStrBeginsNc(char *s1, char
+ static int unitTest();
+ #endif
+ 
+-int main(int argc, char *argv[]) {
+-	int result;
++int
++cgiInit(void)
++{
+ 	char *cgiContentLengthString;
+ 	char *e;
+ 	cgiSetupConstants();
+@@ -211,17 +212,6 @@ int main(int argc, char *argv[]) {
+ 	cgiOut = stdout;
+ 	cgiRestored = 0;
+ 
+-
+-	/* These five lines keep compilers from
+-		producing warnings that argc and argv
+-		are unused. They have no actual function. */
+-	if (argc) {
+-		if (argv[0]) {
+-			cgiRestored = 0;
+-		}
+-	}	
+-
+-
+ 	if (cgiStrEqNc(cgiRequestMethod, "post")) {
+ #ifdef CGICDEBUG
+ 		CGICDEBUGSTART
+@@ -297,8 +287,8 @@ int main(int argc, char *argv[]) {
+ 	cgiFreeResources();
+ 	return 0;
+ #else
+-	result = cgiMain();
+-	return result;
++	atexit(cgiFreeResources);
++	return 0;
+ #endif
+ }
+ 
+@@ -2559,7 +2549,7 @@ static int unitTest() {
+ 	e = e->next;
+ 	unitTestAssert(!!e, "Test failed: fifth entry missing");
+ 	unitTestAssert(!strcmp(e->attr, "empty2"), "fifth entry name is not empty2");
+-	unitTestAssert(!strcmp(e->value, ""), "fifth entry value is not empty string");
++	unitTestAssert(!stcrmp(e->value, ""), "fifth entry value is not empty string");
+ 	unitTestAssert(!e->next, "unexpected entry at end of list");
+ 	return 0;
+ }
