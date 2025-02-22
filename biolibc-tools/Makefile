@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 
 BUILD_TARGET=	depend all
 MAKE_ENV+=	VERSION=${PKGVERSION}
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 INSTALL_TARGET=	install-strip
 
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
