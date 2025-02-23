@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.91 2025/01/30 11:29:21 wiz Exp $
+
+BLAKE2s (evolution-3.55.2.tar.xz) = bc4499079a080f335eb7a60cebefc22df25a559cd98c5f8eaea34f1fae4d7907
+SHA512 (evolution-3.55.2.tar.xz) = 2cadd0de104a360cff34e9a7936e77e5daa5809cae805299543a5c6980b825aa4973805f1347b87b2492b0eef0f06fb73b79abf7d6d75c9bf4db42e79d75393c
+Size (evolution-3.55.2.tar.xz) = 13764484 bytes
+SHA1 (patch-CMakeLists.txt) = 6d66b151d7d7edda1cbc78f57f998d4c1fd9616d

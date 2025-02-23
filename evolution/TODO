@@ -1,0 +1,22 @@
+Current problem:
+
+
+-- Checking for modules 'cairo-gobject;gail-3.0>=3.22;gdk-pixbuf-2.0>=2.24.0;gio-2.0>=2.70;gio-unix-2.0;gmodule-2.0>=2.70;gsettings-desktop-schemas>=2.91.92;gtk+-3.0>=3.22;libxml-2.0>=2.7.3;shared-mime-info>=0.22;webkit2gtk-4.1>='
+--
+CMake Error at /usr/pkg/share/cmake-3.31/Modules/FindPkgConfig.cmake:645 (message):
+  The following required packages were not found:
+
+   - webkit2gtk-4.1>=
+
+Call Stack (most recent call first):
+  /usr/pkg/share/cmake-3.31/Modules/FindPkgConfig.cmake:873 (_pkg_check_modules_internal)
+  CMakeLists.txt:260 (pkg_check_modules)
+
+
+-- Configuring incomplete, errors occurred!
+*** Error code 1
+
+Stop.
+make[1]: stopped making "package" in /export/CHROOT/usr/pkgsrc/wip/evolution
+*** Error code 1
+
