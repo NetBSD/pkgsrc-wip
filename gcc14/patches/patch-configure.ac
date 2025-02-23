@@ -1,0 +1,15 @@
+$NetBSD$
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- configure.ac
++++ configure.ac
+@@ -747,6 +747,8 @@ esac
+
+ # Disable libffi for some systems.
+ case "${target}" in
++  aarch64*-*-darwin2*)
++    ;;
+   powerpc-*-darwin*)
+     ;;
+   i[[3456789]]86-*-darwin*)
