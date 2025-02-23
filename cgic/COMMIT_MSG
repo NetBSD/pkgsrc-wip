@@ -1,0 +1,44 @@
+(www/cgic) Updated 2.06 to 2.08
+
+(upstream)
+What's new in version 2.08?
+
+Beginning with version 2.08, `cgic` offers more options when setting
+cookies. To enhance security, the following options can be used when
+setting a cookie:
+
+  * Secure
+  * HttpOnly
+  * SameSite=Strict
+
+The new function cgiHeaderCookieSet allows you to set these
+options. The function cgiHeaderCookieSetString is kept for
+compatibility reasons.
+
+What's new in version 2.07?
+
+Per a suggestion by Geoff Mulligan, cgic now tolerates keys without a
+value in URL-encoded GET and POST submissions. Although the HTML5 spec
+discourages it, there are existing systems in the wild that do leave
+the `=` off entirely if the value is an empty string. Beginning with
+version 2.07, `cgic` handles this as you'd expect: you get an entry
+with the corresponding key and an empty string as the value. A simple
+unit test compilation target was also added, to test this feature and
+rule out side effects.
+
+(pkgsrc, test done, as follows, just something shown)
+
+                         make package-install
+  290  2025-02-23 11:42  pushd /tmp
+  291  2025-02-23 11:42  mkdir cgic
+  292  2025-02-23 11:43  cd cgic
+  324  2025-02-23 12:02  gcc  -I /usr/pkg/include -c /usr/pkg/share/examples/cgiclib/cgictest.c
+  325  2025-02-23 12:02  gcc  -L /usr/pkg/lib -lcgic cgictest.o -o test
+  327  2025-02-23 12:02  ./test
+  332  2025-02-23 12:04  env LD_LIBRARY_PATH=/usr/pkg/lib ./test
+
+  334  2025-02-23 12:04  cp  /usr/pkg/share/examples/cgiclib/capture.c ./
+  337  2025-02-23 12:05  gcc  -I /usr/pkg/include -c capture.c
+  339  2025-02-23 12:05  gcc  -L /usr/pkg/lib -lcgic  capture.o -o capture
+  340  2025-02-23 12:05  env LD_LIBRARY_PATH=/usr/pkg/lib ./capture
+
