@@ -3312,7 +3312,6 @@ SUBDIR+=	pxlib
 SUBDIR+=	pxview
 SUBDIR+=	py-Beaker
 SUBDIR+=	py-Brenda
-SUBDIR+=	py-CT3
 SUBDIR+=	py-CalDAVClientLibrary
 SUBDIR+=	py-Climate
 SUBDIR+=	py-Cura
