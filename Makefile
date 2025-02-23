@@ -883,6 +883,7 @@ SUBDIR+=	eventd
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	evisum
+SUBDIR+=	evolution
 SUBDIR+=	evolution-data-server
 SUBDIR+=	ewm
 SUBDIR+=	exabgp4
