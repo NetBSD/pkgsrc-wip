@@ -2,7 +2,10 @@
 bin/skint
 share/doc/${PKGNAME}/README.md
 share/${PKGNAME}/i.c
+share/${PKGNAME}/i.h
 share/${PKGNAME}/k.c
 share/${PKGNAME}/n.c
+share/${PKGNAME}/n.h
 share/${PKGNAME}/s.c
+share/${PKGNAME}/s.h
 share/${PKGNAME}/t.c

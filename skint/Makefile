@@ -20,6 +20,7 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/[skint].c ${DESTDIR}${PREFIX}/share/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/[skint].h ${DESTDIR}${PREFIX}/share/${PKGNAME_NOREV}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"
