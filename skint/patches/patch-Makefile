@@ -1,0 +1,28 @@
+$NetBSD$
+
+Use CC provided by pkgsrc.
+Use DESTDIR when installing.
+
+--- Makefile.orig	2025-02-06 23:17:15.000000000 +0000
++++ Makefile
+@@ -8,9 +8,9 @@ ARCH      = unknown
+ 
+ ifneq ($(shell which clang),)
+   $(info clang is detected) 
+-  CC = clang
++  #CC = clang
+ else
+-  CC = gcc
++  #CC = gcc
+ endif
+ 
+ ifeq ($(OS),Windows_NT)
+@@ -80,7 +80,7 @@ realclean:
+ 	$(RM) $(objects) $(exe)
+ 
+ install:
+-	$(INSTALL) $(exe) $(PREFIX)/bin
++	$(INSTALL) $(exe) $(DESTDIR)$(PREFIX)/bin
+ 
+ uninstall:
+ 	$(UNINSTALL) $(exe) $(PREFIX)/bin

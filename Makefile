@@ -5332,6 +5332,7 @@ SUBDIR+=	siscone
 SUBDIR+=	sjg-mk-files
 SUBDIR+=	skinlf
 SUBDIR+=	skippy-xd
+SUBDIR+=	skint
 SUBDIR+=	slack-libpurple
 SUBDIR+=	slack-term
 SUBDIR+=	slackpkg2pkgsrc
