@@ -23,7 +23,7 @@ CHECK_RELRO_SUPPORTED=	no
 NOT_FOR_PLATFORM+=	Interix-*-*
 
 USE_LANGUAGES=		c c++ ada
-USE_TOOLS+=		gmake makeinfo sed:run tar perl
+USE_TOOLS+=		gmake makeinfo sed perl
 USE_TOOLS.NetBSD+=	gsed
 
 GNU_CONFIGURE=		yes

@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.1 2024/03/08 12:02:33 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc13-gnat
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc14-gnat
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
 PKG_SUGGESTED_OPTIONS=	gcc-graphite
 
@@ -45,12 +45,15 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ### Native Language Support
 ###
 .if !empty(PKG_OPTIONS:Mnls)
-USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
+PREFER.iconv=		pkgsrc
 .include "../../converters/libiconv/buildlink3.mk"
+PREFER.gettext=		pkgsrc
 .include "../../devel/gettext-lib/buildlink3.mk"
+PLIST.nls=	yes
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
@@ -76,6 +79,7 @@ CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 LIBS.SunOS+=		-lgmp
+
 .  include "../../devel/gmp/buildlink3.mk"
 .  include "../../math/mpcomplex/buildlink3.mk"
 .  include "../../math/mpfr/buildlink3.mk"
