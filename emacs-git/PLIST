@@ -2792,8 +2792,6 @@ share/emacs/${PKGVERSION}/lisp/mail/flow-fill.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/flow-fill.elc
 share/emacs/${PKGVERSION}/lisp/mail/footnote.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/footnote.elc
-share/emacs/${PKGVERSION}/lisp/mail/hashcash.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/hashcash.elc
 share/emacs/${PKGVERSION}/lisp/mail/ietf-drums-date.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/ietf-drums-date.elc
 share/emacs/${PKGVERSION}/lisp/mail/ietf-drums.el.gz
@@ -3186,6 +3184,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/gs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/hashcash.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/hashcash.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/idlw-complete-structtag.el.gz
