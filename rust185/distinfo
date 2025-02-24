@@ -145,6 +145,7 @@ SHA1 (patch-vendor_libc-0.2.158_src_unix_solarish_mod.rs) = 194bd1dbbc568cc596ab
 SHA1 (patch-vendor_libc-0.2.167_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 2cfc335e8ac0855fe04ffb1b870771b085316655
 SHA1 (patch-vendor_libc-0.2.167_src_unix_solarish_mod.rs) = e4304cbfdad03c7da68ab95260af3a07bdde7b64
 SHA1 (patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 02c4efefbf1e9e1bd98eb9524515677250ae7454
+SHA1 (patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = c5e1c2d896d5e9d32aeb56bc3e4d9fb26be9edf0
 SHA1 (patch-vendor_libc-0.2.169_src_unix_solarish_mod.rs) = e02c56106a092b4f2e27427ea8b5d96bf437c356
 SHA1 (patch-vendor_line-index-0.1.2_src_lib.rs) = 30aa5c82630ea0e8969abb527c11640712efba1e
 SHA1 (patch-vendor_lzma-sys-0.1.20_config.h) = 4849052ddb2f04f539fd7060fc1b43cc3acf99c4
