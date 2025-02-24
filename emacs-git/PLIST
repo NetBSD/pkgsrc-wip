@@ -1255,8 +1255,6 @@ share/emacs/${PKGVERSION}/lisp/calendar/todo-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/todo-mode.elc
 share/emacs/${PKGVERSION}/lisp/case-table.el.gz
 share/emacs/${PKGVERSION}/lisp/case-table.elc
-share/emacs/${PKGVERSION}/lisp/cdl.el.gz
-share/emacs/${PKGVERSION}/lisp/cdl.elc
 share/emacs/${PKGVERSION}/lisp/cedet/cedet-cscope.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/cedet-cscope.elc
 share/emacs/${PKGVERSION}/lisp/cedet/cedet-files.el.gz
@@ -2538,8 +2536,6 @@ share/emacs/${PKGVERSION}/lisp/json.el.gz
 share/emacs/${PKGVERSION}/lisp/json.elc
 share/emacs/${PKGVERSION}/lisp/jsonrpc.el.gz
 share/emacs/${PKGVERSION}/lisp/jsonrpc.elc
-share/emacs/${PKGVERSION}/lisp/kermit.el.gz
-share/emacs/${PKGVERSION}/lisp/kermit.elc
 share/emacs/${PKGVERSION}/lisp/keymap.el.gz
 share/emacs/${PKGVERSION}/lisp/keymap.elc
 share/emacs/${PKGVERSION}/lisp/kmacro.el.gz
@@ -3174,6 +3170,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/autoload.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/autoload.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/cdl.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/cdl.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl.el.gz
@@ -3204,6 +3202,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/inversion.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/inversion.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/kermit.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/kermit.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/linum.el.gz
