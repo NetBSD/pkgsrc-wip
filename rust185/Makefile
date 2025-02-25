@@ -588,6 +588,10 @@ PATCH_BINARIES+=	bin/rustdoc
 PATCH_BINARIES+=	bin/rustfmt
 PATCH_BINARIES+=	libexec/rust-analyzer-proc-macro-srv
 
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+
 do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
@@ -601,6 +605,12 @@ cmd="${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f"; \
 			echo $$cmd; 					\
 			$$cmd;						\
 		fi; 							\
+	done
+.endif
+.if ${OPSYS} == "Darwin"
+	cd ${DESTDIR}${PREFIX}/lib && \
+	for lib in rustlib/*/lib/libstd-*.${SOEXT}; do \
+		${LN} -f $${lib} $${lib##*/}; \
 	done
 .endif
 
