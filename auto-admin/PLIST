@@ -4,6 +4,7 @@ bin/auto-ask
 bin/auto-backup-file
 bin/auto-check-ports-branch
 bin/auto-clean-pkgsrc
+bin/auto-dreckly-setup
 bin/auto-fastest-mirror
 bin/auto-fetch-install-media
 bin/auto-get-ip
