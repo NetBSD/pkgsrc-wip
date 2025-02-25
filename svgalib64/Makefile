@@ -4,9 +4,9 @@ DISTNAME=	svgalib-1.4.3
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.svgalib.org/
 
-MAINTAINER=	indur9@yahoo.com ### old : collver1@comcast.net
+MAINTAINER=	indur9@yahoo.com
 HOMEPAGE=	https://www.svgalib.org/
-COMMENT=	Low level console graphics library
+COMMENT=	Low level console graphics library (64 bit video)
 
 
 USE_TOOLS+=	gmake

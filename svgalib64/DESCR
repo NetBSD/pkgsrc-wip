@@ -9,3 +9,5 @@ Also, svgalib corrects  most  of  VGAlib's textmode corruption behaviour by
 catching SIGSEGV, SIGFPE, SIGILL, and other fatal  signals and  ensuring  that
 a program is running in the currently visible virtual console before setting a
 graphics mode.
+
+Note : This adaption of SVGAlib works only on 64 bit machines.
