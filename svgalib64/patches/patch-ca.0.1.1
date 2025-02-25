@@ -1,0 +1,616 @@
+diff -Naur svgalib-1.4.3.orig/Makefile.cfg svgalib-1.4.3-nbsd/Makefile.cfg
+--- svgalib-1.4.3.orig/Makefile.cfg	2025-02-18 10:23:12.209757756 +0100
++++ svgalib-1.4.3-nbsd/Makefile.cfg	2025-02-18 11:53:55.311140360 +0100
+@@ -140,6 +140,7 @@
+ INCLUDE_NV3_DRIVER = y
+ INCLUDE_ET6000_DRIVER = y
+ INCLUDE_VESA_DRIVER = y
++INCLUDE_IHD_DRIVER = y
+ INCLUDE_MX_DRIVER = y
+ INCLUDE_PARADISE_DRIVER = y
+ INCLUDE_RAGE_DRIVER = y
+@@ -171,6 +172,7 @@
+ INCLUDE_APM_DRIVER_TEST = y
+ INCLUDE_NV3_DRIVER_TEST = y
+ INCLUDE_ET6000_DRIVER_TEST = y
++INCLUDE_IHD_DRIVER_TEST = y
+ INCLUDE_MX_DRIVER_TEST = y
+ INCLUDE_PARADISE_DRIVER_TEST = y
+ INCLUDE_RAGE_DRIVER_TEST = y
+diff -Naur svgalib-1.4.3.orig/src/Makefile svgalib-1.4.3-nbsd/src/Makefile
+--- svgalib-1.4.3.orig/src/Makefile	2025-02-18 10:23:12.364759064 +0100
++++ svgalib-1.4.3-nbsd/src/Makefile	2025-02-18 11:50:45.628448772 +0100
+@@ -187,6 +187,13 @@
+     VGA_DEFINES += -DINCLUDE_VESA_DRIVER_TEST
+   endif
+ endif
++ifdef INCLUDE_IHD_DRIVER
++  VGA_DEFINES +=-DINCLUDE_IHD_DRIVER
++  DRIVERS += ihd.o
++  ifdef INCLUDE_IHD_DRIVER_TEST
++    VGA_DEFINES += -DINCLUDE_IHD_DRIVER_TEST
++  endif
++endif
+ ifdef INCLUDE_NV3_DRIVER
+   VGA_DEFINES +=-DINCLUDE_NV3_DRIVER
+   DRIVERS += nv3.o
+diff -Naur svgalib-1.4.3.orig/src/_types.h svgalib-1.4.3-nbsd/src/_types.h
+--- svgalib-1.4.3.orig/src/_types.h	1970-01-01 01:00:00.000000000 +0100
++++ svgalib-1.4.3-nbsd/src/_types.h	2025-02-18 10:38:07.488947844 +0100
+@@ -0,0 +1,29 @@
++/* VGAlib version 1.4.3 - (c) 2025 Zanthia of Silverhawk Software  */
++/*                                                                 */
++/* This library is free software; you can redistribute it and/or   */
++/* modify it without any restrictions. This library is distributed */
++/* in the hope that it will be useful, but without any warranty.   */
++
++#ifndef __TYPES_H
++#define __TYPES_H
++
++/* byte and character */
++typedef unsigned char byte;
++typedef unsigned char u8;
++
++typedef unsigned char uint8;
++
++/* NOTE : redefine these for good measure */
++typedef unsigned short int u16;
++typedef unsigned int u32;
++typedef unsigned long int u64;
++
++typedef unsigned short int uint16;
++typedef unsigned int uint32;
++typedef unsigned long int uint64;
++
++/* optional */
++typedef void *id;
++typedef void *void_ptr;
++
++#endif
+diff -Naur svgalib-1.4.3.orig/src/ihd.c svgalib-1.4.3-nbsd/src/ihd.c
+--- svgalib-1.4.3.orig/src/ihd.c	1970-01-01 01:00:00.000000000 +0100
++++ svgalib-1.4.3-nbsd/src/ihd.c	2025-02-18 12:00:16.520229366 +0100
+@@ -0,0 +1,543 @@
++/* VGAlib version 1.4.3 - (c) 2025 Zanthia of Silverhawk Software  */
++/*                                                                 */
++/* This library is free software; you can redistribute it and/or   */
++/* modify it without any restrictions. This library is distributed */
++/* in the hope that it will be useful, but without any warranty.   */
++
++/*
++Intel HD driver (WIP)
++*/
++
++
++#include <stdlib.h>
++#include <stdio.h>		/* for printf */
++#include <string.h>		/* for memset */
++#include <unistd.h>
++#include "vga.h"
++#include "libvga.h"
++#include "driver.h"
++
++
++/* New style driver interface. */
++#include "timing.h"
++#include "vgaregs.h"
++#include "interface.h"
++#include "accel.h"
++#include "vgapci.h"
++
++#define IHDREG_SAVE(i) (VGA_TOTAL_REGS+i)
++#define IHD_TOTAL_REGS (VGA_TOTAL_REGS + 2 + 40)
++
++static int ihd_init(int, int, int);
++static void ihd_unlock(void);
++static void ihd_lock(void);
++
++void __svgalib_ihdaccel_init(AccelSpecs * accelspecs, int bpp, int width_in_pixels);
++
++static int ihd_memory,ihd_chiptype;
++static int ihd_is_linear, ihd_linear_base, ihd_io_base;
++
++static CardSpecs *cardspecs;
++
++static void ihd_setpage(int page)
++{
++   page<<=1;
++   outl(ihd_io_base+0x2c,(inl(ihd_io_base+0x2c)&0xfff00000)|(page)|(page<<10));
++}
++
++static int __svgalib_ihd_inlinearmode(void)
++{
++return ihd_is_linear;
++}
++
++/* Fill in chipset specific mode information */
++
++static void ihd_getmodeinfo(int mode, vga_modeinfo *modeinfo)
++{
++
++    if(modeinfo->colors==16)return;
++
++    modeinfo->maxpixels = ihd_memory*1024/modeinfo->bytesperpixel;
++    modeinfo->maxlogicalwidth = 4088;
++    modeinfo->startaddressrange = ihd_memory * 1024 - 1;
++    modeinfo->haveblit = 0;
++    modeinfo->flags &= ~HAVE_RWPAGE;
++
++    if (modeinfo->bytesperpixel >= 1) {
++	if(ihd_linear_base)modeinfo->flags |= CAPABLE_LINEAR;
++        if (__svgalib_ihd_inlinearmode())
++	    modeinfo->flags |= IS_LINEAR;
++    }
++}
++
++/* Read and save chipset-specific registers */
++
++typedef struct {
++   unsigned int pllCtrl0, pllCtrl1, dacMode, dacAddr,
++      		vidProcCfg, vidScreenSize, vgaInit0,
++                vgaInit1, vidDesktopStartAddr,vidDesktopOverlayStride;
++} *HWRecPtr;
++
++static int ihd_saveregs(unsigned char regs[])
++{ 
++  HWRecPtr save;
++
++  ihd_unlock();		/* May be locked again by other programs (e.g. X) */
++  
++  save=(HWRecPtr)(regs+62);
++  
++  regs[IHDREG_SAVE(0)]=__svgalib_inCR(0x1a);
++  regs[IHDREG_SAVE(1)]=__svgalib_inCR(0x1b);
++  save->pllCtrl0=inl(ihd_io_base+0x40);
++  save->pllCtrl1=inl(ihd_io_base+0x44);
++  save->dacMode=inl(ihd_io_base+0x4c);
++  save->dacAddr=inl(ihd_io_base+0x50);
++  save->vidProcCfg=inl(ihd_io_base+0x5c);
++  save->vidScreenSize=inl(ihd_io_base+0x98);
++  save->vgaInit0=inl(ihd_io_base+0x28);
++  save->vgaInit1=inl(ihd_io_base+0x2c);
++  save->vidDesktopStartAddr=inl(ihd_io_base+0xe4);
++  save->vidDesktopOverlayStride=inl(ihd_io_base+0xe8);
++  
++  return IHD_TOTAL_REGS - VGA_TOTAL_REGS;
++}
++
++/* Set chipset-specific registers */
++
++static void ihd_setregs(const unsigned char regs[], int mode)
++{  
++    HWRecPtr restore;
++
++    ihd_unlock();		/* May be locked again by other programs (eg. X) */
++  
++    restore=(HWRecPtr)(regs+62);
++  
++    __svgalib_outCR(0x1a,regs[IHDREG_SAVE(0)]);
++    __svgalib_outCR(0x1b,regs[IHDREG_SAVE(1)]);
++    outl(ihd_io_base+0x40,restore->pllCtrl0);
++    outl(ihd_io_base+0x44,restore->pllCtrl1);
++    outl(ihd_io_base+0x4c,restore->dacMode);
++    outl(ihd_io_base+0x50,restore->dacAddr);
++    outl(ihd_io_base+0x5c,restore->vidProcCfg);
++    outl(ihd_io_base+0x98,restore->vidScreenSize);
++    outl(ihd_io_base+0x28,restore->vgaInit0);
++    outl(ihd_io_base+0x2c,restore->vgaInit1);
++    outl(ihd_io_base+0xe4,restore->vidDesktopStartAddr);
++    outl(ihd_io_base+0xe8,restore->vidDesktopOverlayStride);
++    outl(ihd_io_base+0x5c,restore->vidProcCfg&0xfffffffe);
++    outl(ihd_io_base+0x5c,restore->vidProcCfg|1);
++    outl(ihd_io_base+0x5c,restore->vidProcCfg);
++
++}
++
++/* Return nonzero if mode is available */
++
++static int ihd_modeavailable(int mode)
++{
++    struct info *info;
++    ModeTiming *modetiming;
++    ModeInfo *modeinfo;
++
++    if ((mode < G640x480x256 )
++	|| mode == G720x348x2)
++	return __svgalib_vga_driverspecs.modeavailable(mode);
++
++    info = &__svgalib_infotable[mode];
++    if (ihd_memory * 1024 < info->ydim * info->xbytes)
++	return 0;
++
++    modeinfo = __svgalib_createModeInfoStructureForSvgalibMode(mode);
++
++    if((modeinfo->bitsPerPixel==16)&&(modeinfo->greenWeight==5)) {
++	free(modeinfo);
++        return 0;
++    }
++
++    modetiming = malloc(sizeof(ModeTiming));
++    if (__svgalib_getmodetiming(modetiming, modeinfo, cardspecs)) {
++	free(modetiming);
++	return 0;
++    }
++    free(modetiming);
++    free(modeinfo);
++
++    return SVGADRV;
++}
++
++static unsigned comp_lmn(int freq) ;
++/* Set a mode */
++
++/* Local, called by ihd_setmode(). */
++
++static void ihd_initializemode(unsigned char *moderegs,
++			    ModeTiming * modetiming, ModeInfo * modeinfo, int mode)
++{ /* long k; */
++
++    int vd,vt,vbs,vbe,ht,hd,hss,hse;
++
++    HWRecPtr ihd_regs;
++
++    ihd_regs=(HWRecPtr)(moderegs+62);
++   
++    ihd_saveregs(moderegs);
++
++    __svgalib_setup_VGA_registers(moderegs, modetiming, modeinfo);
++
++    hd = (modetiming->CrtcHDisplay>>3)-1;
++    hss = (modetiming->CrtcHSyncStart>>3);
++    hse = (modetiming->CrtcHSyncEnd>>3);
++    ht = (modetiming->CrtcHTotal>>3)-5;
++    moderegs[IHDREG_SAVE(0)]=((ht&0x100)>>8) |
++       			    ((hd&0x100)>>6) |
++                            ((hd&0x100)>>4) |
++                            ((ht&0x40)>>1) |
++                            ((hss&0x100)>>2) |
++                            ((hse&0x20)<<2) ; 
++
++    vd    = modetiming->CrtcVDisplay - 1;
++    vt = modetiming->CrtcVTotal - 2;
++    vbs  = modetiming->CrtcVSyncStart - 1;
++    vbe  = vt; 
++    moderegs[IHDREG_SAVE(1)]=((vt & 0x400)>>10) | 
++		            ((vd  & 0x400)>>8) |
++		            ((vbs & 0x400)>>6) |
++		            ((vbe & 0x400)>>4);
++/*
++    if (modetiming->flags & INTERLACED)
++	    moderegs[MXREG_SAVE(3)] |= 0x8;
++*/
++
++    ihd_regs->vidProcCfg&=0xf7e30000;
++    ihd_regs->vidProcCfg|=0x00000c81;
++
++    ihd_regs->vidScreenSize=modeinfo->width|(modeinfo->height<<12);
++
++    if (modetiming->flags & DOUBLESCAN)
++	    ihd_regs->vidProcCfg |= 0x10;
++
++    switch (modeinfo->bitsPerPixel)
++    {
++	    case 8: 
++               	    ihd_regs->vidProcCfg|=0<<18;
++		    break;
++	    case 15: 
++	    case 16:if(modeinfo->greenWeight==5){
++                        ihd_regs->vidProcCfg|=1<<18;
++                    } else ihd_regs->vidProcCfg|=1<<18;
++		    break;
++	    case 24: 
++               	    ihd_regs->vidProcCfg|=2<<18;
++		    break;
++	    case 32: 
++               	    ihd_regs->vidProcCfg|=3<<18;
++		    break;
++	    default: 
++		    break;
++    }
++    
++    ihd_regs->vgaInit0&=0xfffffffb;
++    if(modeinfo->bitsPerPixel!=8){
++        ihd_regs->vgaInit0|=4;
++    };
++
++    ihd_regs->pllCtrl0=comp_lmn(modetiming->pixelClock);
++    moderegs[VGA_MISCOUTPUT]|=0x0c;
++
++    ihd_regs->vidDesktopStartAddr=0;
++    ihd_regs->vidDesktopOverlayStride=modeinfo->lineWidth;    
++
++    ihd_regs->vgaInit0=0x1140;
++    ihd_regs->vgaInit1=0x00100000;
++
++    moderegs[41]=0;
++
++    if(modeinfo->bitsPerPixel==8){
++       moderegs[79]=0;
++    };
++
++    ihd_is_linear=0;
++
++return ;
++
++}
++
++static int ihd_setmode(int mode, int prv_mode)
++{
++    unsigned char *moderegs;
++    ModeTiming modetiming;
++    ModeInfo *modeinfo;
++
++    if ((mode < G640x480x256 /*&& mode != G320x200x256*/)
++	|| mode == G720x348x2) {
++
++	return __svgalib_vga_driverspecs.setmode(mode, prv_mode);
++    }
++    if (!ihd_modeavailable(mode))
++	return 1;
++
++    modeinfo = __svgalib_createModeInfoStructureForSvgalibMode(mode);
++
++    if (__svgalib_getmodetiming(&modetiming, modeinfo, cardspecs)) {
++	free(modeinfo);
++	return 1;
++    }
++
++    moderegs = malloc(IHD_TOTAL_REGS);
++
++    ihd_initializemode(moderegs, &modetiming, modeinfo, mode);
++
++    __svgalib_setregs(moderegs);	/* Set standard regs. */
++    ihd_setregs(moderegs, mode);		/* Set extended regs. */
++    free(moderegs);
++
++    __svgalib_InitializeAcceleratorInterface(modeinfo);
++
++    free(modeinfo);
++
++
++    return 0;
++}
++
++
++/* Unlock chipset-specific registers */
++
++static void ihd_unlock(void)
++{
++    int vgaIOBase, temp;
++
++    vgaIOBase = (inb(0x3CC) & 0x01) ? 0x3D0 : 0x3B0;
++    outb(vgaIOBase + 4, 0x11);
++    temp = inb(vgaIOBase + 5);
++    outb(vgaIOBase + 5, temp & 0x7F);
++    
++    outl(ihd_io_base+0x28,(inl(ihd_io_base+0x28)&0xffffffbf)|(1<<6));
++}
++
++static void ihd_lock(void)
++{
++    int vgaIOBase, temp;
++
++    vgaIOBase = (inb(0x3CC) & 0x01) ? 0x3D0 : 0x3B0;
++    outb(vgaIOBase + 4, 0x11);
++    temp = inb(vgaIOBase + 5);
++    outb(vgaIOBase + 5, temp & 0x7F);
++    
++    outl(ihd_io_base+0x28,(inl(ihd_io_base+0x28)&0xffffffbf));
++}
++
++
++/* Indentify chipset, initialize and return non-zero if detected */
++
++static int ihd_test(void)
++{
++   int found,_ioperm=0;
++   unsigned long buf[64];
++
++   if (getenv("IOPERM") == NULL) {
++      _ioperm=1;
++      if (iopl(3) < 0) {
++        printf("svgalib: ihd: cannot get I/O permissions\n");
++        exit(1);
++      }
++   }
++   found=(!__svgalib_pci_find_vendor_vga(0x121a,buf,0))&&
++          (((buf[0]>>16)==0x0003)||
++          ((buf[0]>>16)==0x0009)||
++          ((buf[0]>>16)==0x0005));
++    
++   if (_ioperm) iopl(0);
++
++   if(found)ihd_init(0,0,0); 
++   return found;
++}
++
++
++/* Set display start address (not for 16 color modes) */
++/* Cirrus supports any address in video memory (up to 2Mb) */
++
++static void ihd_setdisplaystart(int address)
++{ 
++  outw(CRT_IC, ((address>>2) & 0x00FF00) | 0x0C);
++  outw(CRT_IC, (((address>>2) & 0x00FF) << 8) | 0x0D);
++  outl(ihd_io_base+0xe4,address);
++
++}
++
++
++/* Set logical scanline length (usually multiple of 8) */
++
++static void ihd_setlogicalwidth(int width)
++{   
++    int offset = width >> 3;
++ 
++    __svgalib_outCR(0x13,offset&0xff);
++    outl(ihd_io_base+0xe8,width);
++}
++
++static int ihd_linear(int op, int param)
++{
++if (op==LINEAR_ENABLE || op==LINEAR_DISABLE){ ihd_is_linear=1-ihd_is_linear; return 0;}
++if (op==LINEAR_QUERY_BASE) return ihd_linear_base;
++if (op == LINEAR_QUERY_RANGE || op == LINEAR_QUERY_GRANULARITY) return 0;		/* No granularity or range. */
++    else return -1;		/* Unknown function. */
++}
++
++static int ihd_match_programmable_clock(int clock)
++{
++return clock ;
++}
++
++static int ihd_map_clock(int bpp, int clock)
++{
++return clock ;
++}
++
++static int ihd_map_horizontal_crtc(int bpp, int pixelclock, int htiming)
++{
++return htiming;
++}
++
++/* Function table (exported) */
++
++DriverSpecs __svgalib_ihd_driverspecs =
++{
++    ihd_saveregs,
++    ihd_setregs,
++    ihd_unlock,
++    ihd_lock,
++    ihd_test,
++    ihd_init,
++    ihd_setpage,
++    NULL,
++    NULL,
++    ihd_setmode,
++    ihd_modeavailable,
++    ihd_setdisplaystart,
++    ihd_setlogicalwidth,
++    ihd_getmodeinfo,
++    0,				/* old blit funcs */
++    0,
++    0,
++    0,
++    0,
++    0,				/* ext_set */
++    0,				/* accel */
++    ihd_linear,
++    0,				/* accelspecs, filled in during init. */
++    NULL,                       /* Emulation */
++};
++
++/* Initialize chipset (called after detection) */
++
++static int ihd_init(int force, int par1, int par2)
++{
++    unsigned long buf[64];
++    int found=0;
++    int _ioperm=0;
++
++    if (force) {
++	ihd_memory = par1;
++        ihd_chiptype = par2;
++    } else {
++
++    };
++    
++    if (getenv("IOPERM") == NULL) {
++      _ioperm=1;
++      if (iopl(3) < 0) {
++        printf("svgalib: ihd: cannot get I/O permissions\n");
++        exit(1);
++      }
++    }
++     
++    found=(!__svgalib_pci_find_vendor_vga(0x121a,buf,0))&&
++            (((buf[0]>>16)==0x0003)||
++            ((buf[0]>>16)==0x0009)||
++            ((buf[0]>>16)==0x0005));
++    
++/*     if (_ioperm) iopl(0);*/
++    if (found){
++       ihd_linear_base=buf[5]&0xffffff00;
++       ihd_io_base=buf[6]&0xff00;
++    };
++
++    if(ihd_memory==0) {
++       unsigned int draminit0,draminit1;
++       
++       draminit0=inl(ihd_io_base+0x18);
++       draminit1=inl(ihd_io_base+0x1c);
++       if(draminit1&0x40000000) {
++          /* SDRAM */
++          ihd_memory=16*1024;
++       } else {
++          /* SGRAM */
++          ihd_memory=1024*4*
++             (1+((draminit0>>27)&1))* /* SGRAM type - 8MBIT or 16MBIT */
++             (1+((draminit0>>26)&1)); /* Number of sgram chips (4 or 8) */
++       }
++    }
++    
++    ihd_unlock();
++    
++    if (__svgalib_driver_report) {
++	printf("Using Banshee / Voodoo3 driver, %iKB.\n",ihd_memory);
++    }
++    
++    cardspecs = malloc(sizeof(CardSpecs));
++    cardspecs->videoMemory = ihd_memory;
++    cardspecs->maxPixelClock4bpp = 270000;	
++    cardspecs->maxPixelClock8bpp = 270000;	
++    cardspecs->maxPixelClock16bpp = 270000;	
++    cardspecs->maxPixelClock24bpp = 270000;
++    cardspecs->maxPixelClock32bpp = 270000;
++    cardspecs->flags = INTERLACE_DIVIDE_VERT | CLOCK_PROGRAMMABLE;
++    cardspecs->maxHorizontalCrtc = 4088;
++    cardspecs->maxPixelClock4bpp = 0;
++    cardspecs->nClocks =0;
++    cardspecs->mapClock = ihd_map_clock;
++    cardspecs->mapHorizontalCrtc = ihd_map_horizontal_crtc;
++    cardspecs->matchProgrammableClock=ihd_match_programmable_clock;
++    __svgalib_driverspecs = &__svgalib_ihd_driverspecs;
++    __svgalib_banked_mem_base=0xa0000;
++    __svgalib_banked_mem_size=0x10000;
++    __svgalib_linear_mem_base=ihd_linear_base;
++    __svgalib_linear_mem_size=ihd_memory*0x400;
++    return 0;
++}
++
++#define REFFREQ 14318.18
++
++static unsigned
++comp_lmn(int freq)
++{
++  int m, n, k, best_m, best_n, best_k, f_cur, best_error;
++
++  best_error=freq;
++  best_n=best_m=best_k=0;
++  for (n=1; n<256; n++) {
++    f_cur=REFFREQ*(n+2);
++    if (f_cur<freq) {
++      f_cur=f_cur/3;
++      if (freq-f_cur<best_error) {
++        best_error=freq-f_cur;
++        best_n=n;
++        best_m=1;
++        best_k=0;
++        continue;
++      }
++    }
++    for (m=1; m<64; m++) {
++      for (k=0; k<4; k++) {
++        f_cur=REFFREQ*(n+2)/(m+2)/(1<<k);
++        if (abs(f_cur-freq)<best_error) {
++          best_error=abs(f_cur-freq);
++          best_n=n;
++          best_m=m;
++          best_k=k;
++	}
++      }
++    }
++  }
++  return (best_n << 8) | (best_m<<2) | best_k;
++}
++

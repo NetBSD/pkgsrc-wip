@@ -1,0 +1,40 @@
+* add wsmouse glue
+* test more video drivers
+
+
+I have encountered problems where the console stops displaying.
+Sometimes I can switch to another console, and type in stuff
+but nothing displays.
+
+So it can be useful to have 2 consoles logged in as root ahead
+of time.  When the display gets munged, you can switch to the
+other console and blindly type some commands to recover the
+console.
+
+Before running a svgalib program, /usr/pkg/bin/savetextmode
+You only need to run this once.
+
+Also, do not run the svgalib program on the very first
+console.  If the first console gets hosed, it is hosed for
+good.
+
+Now, if your svgalib application is not displaying, and you
+cannot exit it, try switching to the other console.  You
+might still see nothing on the screen, but type
+/usr/pkg/bin/textmode
+
+Now you should see what you are typing.  But be warned, do
+not switch back to the svgalib application console.  It is
+still hosed, and you might get stuck permanently.
+
+Let's say the first console is console 0, and we avoided
+the first console and ran the svgalib application on
+console 1.
+
+wsconscfg -d -F 1
+wsconscfg -t 80x25 -e vt100 1
+pkill -f ttyE1
+
+This forcefully deletes console 1, then re-creates it, then
+kills the stale getty.  Now you can switch to console 1 and
+press enter a few times to get a login prompt.

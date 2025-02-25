@@ -1,0 +1,33 @@
+$NetBSD: distinfo,v 1.5 2005/09/28 06:41:42 rillig Exp $
+
+RMD160 (svgalib-1.4.3.tar.gz) = 611269f70ed378b6460f5e34f8c35d89646e92c5
+SHA512 (svgalib-1.4.3.tar.gz) = 05d0b2d860a3c0be0a5d10778665fe9f980a2f7304dcf2339f8ff2ca625072b190694ebd7ac9ed688fc6695f04541f663bb2c603c89064a0e7ad59c262d9efe8
+Size (svgalib-1.4.3.tar.gz) = 840282 bytes
+SHA1 (patch-aa) = 13314ed7507cd4fe06dc94124eebe797e18b5c52
+SHA1 (patch-ab) = c5e61ae5378e5d110ecc6c44897d1c42e73c75b8
+SHA1 (patch-ac) = fbcdde262d76a192610b0cf08e74145e9ea900bc
+SHA1 (patch-ad) = 54db5ec72e350f04182ad46e009baef716bba473
+SHA1 (patch-ae) = a18b5f9268a2721ed1f466ef0ee5566cffdd3f03
+SHA1 (patch-af) = ec5ae6101648e1e8609d8991e64e44b5fb466cdb
+SHA1 (patch-ag) = 03877bfd80f7d7240faf6ac80d79d0ce487d301e
+SHA1 (patch-ah) = 30833f96cc1118534c0c0231bfb5d6497af7b5db
+SHA1 (patch-ai) = 8fa4a76c24d138b199836fc2f492aeff4d609fdb
+SHA1 (patch-aj) = 9608dbfd81b896649c47019e9e3ef30174c1a15e
+SHA1 (patch-ak) = 494790dc29cfb41932e4a1520f853c838f14bf37
+SHA1 (patch-al) = 3d9192a0407f17b48b0d5a42743779318b93a8eb
+SHA1 (patch-am) = c0e49033e788d9377adabd8250989034c7ab80a1
+SHA1 (patch-an) = 4f4b7de4ccd0493e53ea357b877a876e04cb7d64
+SHA1 (patch-ao) = 9774108a174a67883d62ce1a0c42bdc1c980b6cf
+SHA1 (patch-ap) = 199e3976408c2470c65c3f0bb887a6f35209252e
+SHA1 (patch-aq) = 0517ec8602e160fc32f92da78c06ed40782f29f4
+SHA1 (patch-ar) = 066f70e4f9a9603c0ba24f284012e6032ff3982c
+SHA1 (patch-as) = 1125c23facea4fff2db3d1aa0770f7ef8affe301
+SHA1 (patch-at) = 2c4c86c4716e96f356d944a445cfec12032896ad
+SHA1 (patch-au) = 5406878e0cbf32fbd3d1e9e3d0fcafc77a24ff14
+SHA1 (patch-av) = ddd9492d620536c48e649ebcc3f7a70d6b94a5ad
+SHA1 (patch-aw) = c5b9de2342354f818c2af0e80ddb1f8deda03062
+SHA1 (patch-ax) = 5e00564cff2888608b337855fd338326aacd045b
+SHA1 (patch-ay) = 8fef73883a2fd06caf8b563ddfadef049488e781
+SHA1 (patch-az) = ce6a993e0c9e9ff4ff1e9208f891658bc035986f
+SHA1 (patch-ba) = b02085de0143e9204223c6e1fb87cbfe82031343
+SHA1 (patch-bb) = c0e9bb61c6fa5060ae54d18168a28846b517dd47

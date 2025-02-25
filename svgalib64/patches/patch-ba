@@ -1,0 +1,476 @@
+$NetBSD: patch-ba,v 1.1 2003/07/31 15:13:39 bencollver Exp $
+
+--- src/lrmi.c.orig	Mon Aug  7 00:17:23 2000
++++ src/lrmi.c
+@@ -12,10 +12,14 @@ This software has NO WARRANTY.  Use it a
+ 
+ #include <stdio.h>
+ #include <string.h>
+-#include <asm/vm86.h>
+ 
+ #ifdef USE_LIBC_VM86
+-#include <sys/vm86.h>
++#include <sys/types.h>
++#include <signal.h>
++#include <machine/psl.h>
++#include <machine/segments.h>
++#include <machine/sysarch.h>
++#include <machine/vm86.h>
+ #endif
+ 
+ #include <sys/types.h>
+@@ -30,7 +34,7 @@ This software has NO WARRANTY.  Use it a
+ #define REAL_MEM_SIZE 	0x10000
+ #define REAL_MEM_BLOCKS 	0x100
+ 
+-int __svgalib_lrmi_cpu_type=CPU_386;
++int __svgalib_lrmi_cpu_type=VCPU_386;
+ 
+ struct mem_block
+ 	{
+@@ -171,7 +175,7 @@ LRMI_free_real(void *m)
+ 	}
+ 
+ 
+-#define DEFAULT_VM86_FLAGS 	(IF_MASK | IOPL_MASK)
++#define DEFAULT_VM86_FLAGS 	(PSL_I|PSL_IOPL)
+ #define DEFAULT_STACK_SIZE 	0x1000
+ #define RETURN_TO_32_INT 	255
+ 
+@@ -210,9 +214,9 @@ get_int_off(int i)
+ static inline void
+ pushw(unsigned short i)
+ 	{
+-	struct vm86_regs *r = &context.vm.regs;
+-	r->esp -= 2;
+-	*(unsigned short *)(((unsigned int)r->ss << 4) + r->esp) = i;
++	struct vm86_regs *r = &context.vm.substr.regs;
++	r->vmsc.sc_esp -= 2;
++	*(unsigned short *)(((unsigned int)r->vmsc.sc_ss << 4) + r->vmsc.sc_esp) = i;
+ 	}
+ 
+ 
+@@ -282,13 +286,13 @@ LRMI_init(void)
+ 
+ 	memset(&context.vm, 0, sizeof(context.vm));
+ 
+-	context.vm.cpu_type = __svgalib_lrmi_cpu_type;
++	context.vm.substr.ss_cpu_type = __svgalib_lrmi_cpu_type;
+ 
+ 	/*
+ 	 Enable kernel emulation of all ints except RETURN_TO_32_INT
+ 	*/
+-	memset(&context.vm.int_revectored, 0, sizeof(context.vm.int_revectored));
+-	set_bit(RETURN_TO_32_INT, &context.vm.int_revectored);
++	memset(&context.vm.int_byuser, 0, sizeof(context.vm.int_byuser));
++	set_bit(RETURN_TO_32_INT, &context.vm.int_byuser);
+ 
+ 	context.ready = 1;
+ 
+@@ -299,36 +303,36 @@ LRMI_init(void)
+ static void
+ set_regs(struct LRMI_regs *r)
+ 	{
+-	context.vm.regs.edi = r->edi;
+-	context.vm.regs.esi = r->esi;
+-	context.vm.regs.ebp = r->ebp;
+-	context.vm.regs.ebx = r->ebx;
+-	context.vm.regs.edx = r->edx;
+-	context.vm.regs.ecx = r->ecx;
+-	context.vm.regs.eax = r->eax;
+-	context.vm.regs.eflags = DEFAULT_VM86_FLAGS;
+-	context.vm.regs.es = r->es;
+-	context.vm.regs.ds = r->ds;
+-	context.vm.regs.fs = r->fs;
+-	context.vm.regs.gs = r->gs;
++	context.vm.substr.regs.vmsc.sc_edi = r->edi;
++	context.vm.substr.regs.vmsc.sc_esi = r->esi;
++	context.vm.substr.regs.vmsc.sc_ebp = r->ebp;
++	context.vm.substr.regs.vmsc.sc_ebx = r->ebx;
++	context.vm.substr.regs.vmsc.sc_edx = r->edx;
++	context.vm.substr.regs.vmsc.sc_ecx = r->ecx;
++	context.vm.substr.regs.vmsc.sc_eax = r->eax;
++	context.vm.substr.regs.vmsc.sc_eflags = DEFAULT_VM86_FLAGS;
++	context.vm.substr.regs.vmsc.sc_es = r->es;
++	context.vm.substr.regs.vmsc.sc_ds = r->ds;
++	context.vm.substr.regs.vmsc.sc_fs = r->fs;
++	context.vm.substr.regs.vmsc.sc_gs = r->gs;
+ 	}
+ 
+ 
+ static void
+ get_regs(struct LRMI_regs *r)
+ 	{
+-	r->edi = context.vm.regs.edi;
+-	r->esi = context.vm.regs.esi;
+-	r->ebp = context.vm.regs.ebp;
+-	r->ebx = context.vm.regs.ebx;
+-	r->edx = context.vm.regs.edx;
+-	r->ecx = context.vm.regs.ecx;
+-	r->eax = context.vm.regs.eax;
+-	r->flags = context.vm.regs.eflags;
+-	r->es = context.vm.regs.es;
+-	r->ds = context.vm.regs.ds;
+-	r->fs = context.vm.regs.fs;
+-	r->gs = context.vm.regs.gs;
++	r->edi = context.vm.substr.regs.vmsc.sc_edi;
++	r->esi = context.vm.substr.regs.vmsc.sc_esi;
++	r->ebp = context.vm.substr.regs.vmsc.sc_ebp;
++	r->ebx = context.vm.substr.regs.vmsc.sc_ebx;
++	r->edx = context.vm.substr.regs.vmsc.sc_edx;
++	r->ecx = context.vm.substr.regs.vmsc.sc_ecx;
++	r->eax = context.vm.substr.regs.vmsc.sc_eax;
++	r->flags = context.vm.substr.regs.vmsc.sc_eflags;
++	r->es = context.vm.substr.regs.vmsc.sc_es;
++	r->ds = context.vm.substr.regs.vmsc.sc_ds;
++	r->fs = context.vm.substr.regs.vmsc.sc_fs;
++	r->gs = context.vm.substr.regs.vmsc.sc_gs;
+ 	}
+ 
+ #define DIRECTION_FLAG 	(1 << 10)
+@@ -338,11 +342,11 @@ em_ins(int size)
+ 	{
+ 	unsigned int edx, edi;
+ 
+-	edx = context.vm.regs.edx & 0xffff;
+-	edi = context.vm.regs.edi & 0xffff;
+-	edi += (unsigned int)context.vm.regs.ds << 4;
++	edx = context.vm.substr.regs.vmsc.sc_edx & 0xffff;
++	edi = context.vm.substr.regs.vmsc.sc_edi & 0xffff;
++	edi += (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	if (context.vm.regs.eflags & DIRECTION_FLAG)
++	if (context.vm.substr.regs.vmsc.sc_eflags & DIRECTION_FLAG)
+ 		{
+ 		if (size == 4)
+ 			asm volatile ("std; insl; cld"
+@@ -367,10 +371,10 @@ em_ins(int size)
+ 			 : "=D" (edi) : "d" (edx), "0" (edi));
+ 		}
+ 
+-	edi -= (unsigned int)context.vm.regs.ds << 4;
++	edi -= (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	context.vm.regs.edi &= 0xffff0000;
+-	context.vm.regs.edi |= edi & 0xffff;
++	context.vm.substr.regs.vmsc.sc_edi &= 0xffff0000;
++	context.vm.substr.regs.vmsc.sc_edi |= edi & 0xffff;
+ 	}
+ 
+ static void
+@@ -378,12 +382,12 @@ em_rep_ins(int size)
+ 	{
+ 	unsigned int ecx, edx, edi;
+ 
+-	ecx = context.vm.regs.ecx & 0xffff;
+-	edx = context.vm.regs.edx & 0xffff;
+-	edi = context.vm.regs.edi & 0xffff;
+-	edi += (unsigned int)context.vm.regs.ds << 4;
++	ecx = context.vm.substr.regs.vmsc.sc_ecx & 0xffff;
++	edx = context.vm.substr.regs.vmsc.sc_edx & 0xffff;
++	edi = context.vm.substr.regs.vmsc.sc_edi & 0xffff;
++	edi += (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	if (context.vm.regs.eflags & DIRECTION_FLAG)
++	if (context.vm.substr.regs.vmsc.sc_eflags & DIRECTION_FLAG)
+ 		{
+ 		if (size == 4)
+ 			asm volatile ("std; rep; insl; cld"
+@@ -414,13 +418,13 @@ em_rep_ins(int size)
+ 			 : "d" (edx), "0" (edi), "1" (ecx));
+ 		}
+ 
+-	edi -= (unsigned int)context.vm.regs.ds << 4;
++	edi -= (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	context.vm.regs.edi &= 0xffff0000;
+-	context.vm.regs.edi |= edi & 0xffff;
++	context.vm.substr.regs.vmsc.sc_edi &= 0xffff0000;
++	context.vm.substr.regs.vmsc.sc_edi |= edi & 0xffff;
+ 
+-	context.vm.regs.ecx &= 0xffff0000;
+-	context.vm.regs.ecx |= ecx & 0xffff;
++	context.vm.substr.regs.vmsc.sc_ecx &= 0xffff0000;
++	context.vm.substr.regs.vmsc.sc_ecx |= ecx & 0xffff;
+ 	}
+ 
+ static void
+@@ -428,11 +432,11 @@ em_outs(int size)
+ 	{
+ 	unsigned int edx, esi;
+ 
+-	edx = context.vm.regs.edx & 0xffff;
+-	esi = context.vm.regs.esi & 0xffff;
+-	esi += (unsigned int)context.vm.regs.ds << 4;
++	edx = context.vm.substr.regs.vmsc.sc_edx & 0xffff;
++	esi = context.vm.substr.regs.vmsc.sc_esi & 0xffff;
++	esi += (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	if (context.vm.regs.eflags & DIRECTION_FLAG)
++	if (context.vm.substr.regs.vmsc.sc_eflags & DIRECTION_FLAG)
+ 		{
+ 		if (size == 4)
+ 			asm volatile ("std; outsl; cld"
+@@ -457,10 +461,10 @@ em_outs(int size)
+ 			 : "=S" (esi) : "d" (edx), "0" (esi));
+ 		}
+ 
+-	esi -= (unsigned int)context.vm.regs.ds << 4;
++	esi -= (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	context.vm.regs.esi &= 0xffff0000;
+-	context.vm.regs.esi |= esi & 0xffff;
++	context.vm.substr.regs.vmsc.sc_esi &= 0xffff0000;
++	context.vm.substr.regs.vmsc.sc_esi |= esi & 0xffff;
+ 	}
+ 
+ static void
+@@ -468,12 +472,12 @@ em_rep_outs(int size)
+ 	{
+ 	unsigned int ecx, edx, esi;
+ 
+-	ecx = context.vm.regs.ecx & 0xffff;
+-	edx = context.vm.regs.edx & 0xffff;
+-	esi = context.vm.regs.esi & 0xffff;
+-	esi += (unsigned int)context.vm.regs.ds << 4;
++	ecx = context.vm.substr.regs.vmsc.sc_ecx & 0xffff;
++	edx = context.vm.substr.regs.vmsc.sc_edx & 0xffff;
++	esi = context.vm.substr.regs.vmsc.sc_esi & 0xffff;
++	esi += (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	if (context.vm.regs.eflags & DIRECTION_FLAG)
++	if (context.vm.substr.regs.vmsc.sc_eflags & DIRECTION_FLAG)
+ 		{
+ 		if (size == 4)
+ 			asm volatile ("std; rep; outsl; cld"
+@@ -504,61 +508,61 @@ em_rep_outs(int size)
+ 			 : "d" (edx), "0" (esi), "1" (ecx));
+ 		}
+ 
+-	esi -= (unsigned int)context.vm.regs.ds << 4;
++	esi -= (unsigned int)context.vm.substr.regs.vmsc.sc_ds << 4;
+ 
+-	context.vm.regs.esi &= 0xffff0000;
+-	context.vm.regs.esi |= esi & 0xffff;
++	context.vm.substr.regs.vmsc.sc_esi &= 0xffff0000;
++	context.vm.substr.regs.vmsc.sc_esi |= esi & 0xffff;
+ 
+-	context.vm.regs.ecx &= 0xffff0000;
+-	context.vm.regs.ecx |= ecx & 0xffff;
++	context.vm.substr.regs.vmsc.sc_ecx &= 0xffff0000;
++	context.vm.substr.regs.vmsc.sc_ecx |= ecx & 0xffff;
+ 	}
+ 
+ static void
+ em_inb(void)
+ 	{
+ 	asm volatile ("inb (%w1), %b0"
+-	 : "=a" (context.vm.regs.eax)
+-	 : "d" (context.vm.regs.edx), "0" (context.vm.regs.eax));
++	 : "=a" (context.vm.substr.regs.vmsc.sc_eax)
++	 : "d" (context.vm.substr.regs.vmsc.sc_edx), "0" (context.vm.substr.regs.vmsc.sc_eax));
+ 	}
+ 
+ static void
+ em_inw(void)
+ 	{
+ 	asm volatile ("inw (%w1), %w0"
+-	 : "=a" (context.vm.regs.eax)
+-	 : "d" (context.vm.regs.edx), "0" (context.vm.regs.eax));
++	 : "=a" (context.vm.substr.regs.vmsc.sc_eax)
++	 : "d" (context.vm.substr.regs.vmsc.sc_edx), "0" (context.vm.substr.regs.vmsc.sc_eax));
+ 	}
+ 
+ static void
+ em_inl(void)
+ 	{
+ 	asm volatile ("inl (%w1), %0"
+-	 : "=a" (context.vm.regs.eax)
+-	 : "d" (context.vm.regs.edx));
++	 : "=a" (context.vm.substr.regs.vmsc.sc_eax)
++	 : "d" (context.vm.substr.regs.vmsc.sc_edx));
+ 	}
+ 
+ static void
+ em_outb(void)
+ 	{
+ 	asm volatile ("outb %b0, (%w1)"
+-	 : : "a" (context.vm.regs.eax),
+-	 "d" (context.vm.regs.edx));
++	 : : "a" (context.vm.substr.regs.vmsc.sc_eax),
++	 "d" (context.vm.substr.regs.vmsc.sc_edx));
+ 	}
+ 
+ static void
+ em_outw(void)
+ 	{
+ 	asm volatile ("outw %w0, (%w1)"
+-	 : : "a" (context.vm.regs.eax),
+-	 "d" (context.vm.regs.edx));
++	 : : "a" (context.vm.substr.regs.vmsc.sc_eax),
++	 "d" (context.vm.substr.regs.vmsc.sc_edx));
+ 	}
+ 
+ static void
+ em_outl(void)
+ 	{
+ 	asm volatile ("outl %0, (%w1)"
+-	 : : "a" (context.vm.regs.eax),
+-	 "d" (context.vm.regs.edx));
++	 : : "a" (context.vm.substr.regs.vmsc.sc_eax),
++	 "d" (context.vm.substr.regs.vmsc.sc_edx));
+ 	}
+ 
+ static int
+@@ -572,8 +576,8 @@ emulate(void)
+ 		} prefix = { 0, 0 };
+ 	int i = 0;
+ 
+-	insn = (unsigned char *)((unsigned int)context.vm.regs.cs << 4);
+-	insn += context.vm.regs.eip;
++	insn = (unsigned char *)((unsigned int)context.vm.substr.regs.vmsc.sc_cs << 4);
++	insn += context.vm.substr.regs.vmsc.sc_eip;
+ 
+ 	while (1)
+ 		{
+@@ -687,7 +691,7 @@ emulate(void)
+ 			return 0;
+ 		}
+ 
+-	context.vm.regs.eip += i;
++	context.vm.substr.regs.vmsc.sc_eip += i;
+ 	return 1;
+ 	}
+ 
+@@ -723,7 +727,7 @@ lrmi_vm86(struct vm86_struct *vm)
+ 	return r;
+ 	}
+ #else
+-#define lrmi_vm86 vm86
++#define lrmi_vm86 i386_vm86
+ #endif
+ 
+ 
+@@ -735,26 +739,26 @@ debug_info(int vret)
+ 
+ 	fputs("vm86() failed\n", stderr);
+ 	fprintf(stderr, "return = 0x%x\n", vret);
+-	fprintf(stderr, "eax = 0x%08lx\n", context.vm.regs.eax);
+-	fprintf(stderr, "ebx = 0x%08lx\n", context.vm.regs.ebx);
+-	fprintf(stderr, "ecx = 0x%08lx\n", context.vm.regs.ecx);
+-	fprintf(stderr, "edx = 0x%08lx\n", context.vm.regs.edx);
+-	fprintf(stderr, "esi = 0x%08lx\n", context.vm.regs.esi);
+-	fprintf(stderr, "edi = 0x%08lx\n", context.vm.regs.edi);
+-	fprintf(stderr, "ebp = 0x%08lx\n", context.vm.regs.ebp);
+-	fprintf(stderr, "eip = 0x%08lx\n", context.vm.regs.eip);
+-	fprintf(stderr, "cs  = 0x%04x\n", context.vm.regs.cs);
+-	fprintf(stderr, "esp = 0x%08lx\n", context.vm.regs.esp);
+-	fprintf(stderr, "ss  = 0x%04x\n", context.vm.regs.ss);
+-	fprintf(stderr, "ds  = 0x%04x\n", context.vm.regs.ds);
+-	fprintf(stderr, "es  = 0x%04x\n", context.vm.regs.es);
+-	fprintf(stderr, "fs  = 0x%04x\n", context.vm.regs.fs);
+-	fprintf(stderr, "gs  = 0x%04x\n", context.vm.regs.gs);
+-	fprintf(stderr, "eflags  = 0x%08lx\n", context.vm.regs.eflags);
++	fprintf(stderr, "eax = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_eax);
++	fprintf(stderr, "ebx = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_ebx);
++	fprintf(stderr, "ecx = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_ecx);
++	fprintf(stderr, "edx = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_edx);
++	fprintf(stderr, "esi = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_esi);
++	fprintf(stderr, "edi = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_edi);
++	fprintf(stderr, "ebp = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_ebp);
++	fprintf(stderr, "eip = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_eip);
++	fprintf(stderr, "cs  = 0x%04x\n", context.vm.substr.regs.vmsc.sc_cs);
++	fprintf(stderr, "esp = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_esp);
++	fprintf(stderr, "ss  = 0x%04x\n", context.vm.substr.regs.vmsc.sc_ss);
++	fprintf(stderr, "ds  = 0x%04x\n", context.vm.substr.regs.vmsc.sc_ds);
++	fprintf(stderr, "es  = 0x%04x\n", context.vm.substr.regs.vmsc.sc_es);
++	fprintf(stderr, "fs  = 0x%04x\n", context.vm.substr.regs.vmsc.sc_fs);
++	fprintf(stderr, "gs  = 0x%04x\n", context.vm.substr.regs.vmsc.sc_gs);
++	fprintf(stderr, "eflags  = 0x%08lx\n", context.vm.substr.regs.vmsc.sc_eflags);
+ 
+ 	fputs("cs:ip = [ ", stderr);
+ 
+-	p = (unsigned char *)((context.vm.regs.cs << 4) + (context.vm.regs.eip & 0xffff));
++	p = (unsigned char *)((context.vm.substr.regs.vmsc.sc_cs << 4) + (context.vm.substr.regs.vmsc.sc_eip & 0xffff));
+ 
+ 	for (i = 0; i < 16; ++i)
+ 		fprintf(stderr, "%02x ", (unsigned int)p[i]);
+@@ -779,13 +783,13 @@ run_vm86(void)
+ 			if (v == RETURN_TO_32_INT)
+ 				return 1;
+ 
+-			pushw(context.vm.regs.eflags);
+-			pushw(context.vm.regs.cs);
+-			pushw(context.vm.regs.eip);
+-
+-			context.vm.regs.cs = get_int_seg(v);
+-			context.vm.regs.eip = get_int_off(v);
+-			context.vm.regs.eflags &= ~(VIF_MASK | TF_MASK);
++			pushw(context.vm.substr.regs.vmsc.sc_eflags);
++			pushw(context.vm.substr.regs.vmsc.sc_cs);
++			pushw(context.vm.substr.regs.vmsc.sc_eip);
++
++			context.vm.substr.regs.vmsc.sc_cs = get_int_seg(v);
++			context.vm.substr.regs.vmsc.sc_eip = get_int_off(v);
++			context.vm.substr.regs.vmsc.sc_eflags &= ~(PSL_VIF | PSL_T);
+ 
+ 			continue;
+ 			}
+@@ -808,22 +812,20 @@ LRMI_call(struct LRMI_regs *r)
+ 	{
+ 	unsigned int vret;
+ 
+-	memset(&context.vm.regs, 0, sizeof(context.vm.regs));
+-
+ 	set_regs(r);
+ 
+-	context.vm.regs.cs = r->cs;
+-	context.vm.regs.eip = r->ip;
++	context.vm.substr.regs.vmsc.sc_cs = r->cs;
++	context.vm.substr.regs.vmsc.sc_eip = r->ip;
+ 
+ 	if (r->ss == 0 && r->sp == 0)
+ 		{
+-		context.vm.regs.ss = context.stack_seg;
+-		context.vm.regs.esp = context.stack_off;
++		context.vm.substr.regs.vmsc.sc_ss = context.stack_seg;
++		context.vm.substr.regs.vmsc.sc_esp = context.stack_off;
+ 		}
+ 	else
+ 		{
+-		context.vm.regs.ss = r->ss;
+-		context.vm.regs.esp = r->sp;
++		context.vm.substr.regs.vmsc.sc_ss = r->ss;
++		context.vm.substr.regs.vmsc.sc_esp = r->sp;
+ 		}
+ 
+ 	pushw(context.ret_seg);
+@@ -856,22 +858,20 @@ LRMI_int(int i, struct LRMI_regs *r)
+ 		return 0;
+ 		}
+ 
+-	memset(&context.vm.regs, 0, sizeof(context.vm.regs));
+-
+ 	set_regs(r);
+ 
+-	context.vm.regs.cs = seg;
+-	context.vm.regs.eip = off;
++	context.vm.substr.regs.vmsc.sc_cs = seg;
++	context.vm.substr.regs.vmsc.sc_eip = off;
+ 
+ 	if (r->ss == 0 && r->sp == 0)
+ 		{
+-		context.vm.regs.ss = context.stack_seg;
+-		context.vm.regs.esp = context.stack_off;
++		context.vm.substr.regs.vmsc.sc_ss = context.stack_seg;
++		context.vm.substr.regs.vmsc.sc_esp = context.stack_off;
+ 		}
+ 	else
+ 		{
+-		context.vm.regs.ss = r->ss;
+-		context.vm.regs.esp = r->sp;
++		context.vm.substr.regs.vmsc.sc_ss = r->ss;
++		context.vm.substr.regs.vmsc.sc_esp = r->sp;
+ 		}
+ 
+ 	pushw(DEFAULT_VM86_FLAGS);

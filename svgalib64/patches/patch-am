@@ -1,0 +1,176 @@
+$NetBSD: patch-am,v 1.2 2003/07/31 15:12:40 bencollver Exp $
+
+--- src/vga.c.orig	Tue May 29 07:37:55 2001
++++ src/vga.c
+@@ -22,10 +22,10 @@
+ #include <unistd.h>
+ #include <stdarg.h>
+ #include <sys/mman.h>
+-#include <sys/kd.h>
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
+-#include <sys/vt.h>
++#include <dev/wscons/wsconsio.h>
++#include <dev/wscons/wsdisplay_usl_io.h>
+ #include <sys/wait.h>
+ #include <errno.h>
+ #include <ctype.h>
+@@ -38,6 +38,38 @@
+ #include "vgaregs.h"
+ #include "vgaversion.h"
+ 
++#ifdef __NetBSD__
++#define IOMAP_ELEMENTS 32
++#define IOMAP_ELEMENT_BITS 32
++int ioperm(unsigned long from, unsigned long num, int turn_on)
++{
++	int i;
++	int j = from + num;
++	int base;
++	int offset;
++	int retval;
++	unsigned long iomap[IOMAP_ELEMENTS];
++
++	if (j > 1024)
++		return EINVAL;
++
++	retval = i386_get_ioperm(iomap);
++	if (retval != 0)
++		return retval;
++
++	for (i = from; i < j; i++) {
++		base = i / IOMAP_ELEMENT_BITS;
++		offset = i - (base * IOMAP_ELEMENT_BITS);
++		if (turn_on)
++			iomap[base] &= ~(1 << offset);
++		else
++			iomap[base] |= 1 << offset;
++	}
++	retval = i386_set_ioperm(iomap);
++	return retval;
++}
++#endif
++
+ #ifdef BACKGROUND
+ #include "vgabg.h"
+ 
+@@ -772,7 +804,7 @@ static void set_graphtermio(void)
+     /* Leave keyboard alone when rawkeyboard is enabled! */
+     if (__svgalib_kbd_fd < 0) {
+ 	/* set graphics mode termio parameters */
+-	ioctl(0, TCSETSW, &graph_termio);
++	ioctl(0, TIOCSETAW, &graph_termio);
+     }
+ }
+ 
+@@ -782,7 +814,7 @@ static void set_texttermio(void)
+     /* Leave keyboard alone when rawkeyboard is enabled! */
+     if (__svgalib_kbd_fd < 0) {
+ 	/* restore text mode termio parameters */
+-	ioctl(0, TCSETSW, &text_termio);
++	ioctl(0, TIOCSETAW, &text_termio);
+     }
+ }
+ 
+@@ -793,9 +825,9 @@ static void disable_interrupt(void)
+ 
+     /* Well, one could argue that sigint is not enabled at all when in __svgalib_nosigint
+        but sometimes they *still* are enabled b4 graph_termio is set.. */
+-    ioctl(0, TCGETS, &cur_termio);
++    ioctl(0, TIOCGETA, &cur_termio);
+     cur_termio.c_lflag &= ~ISIG;
+-    ioctl(0, TCSETSW, &cur_termio);
++    ioctl(0, TIOCSETAW, &cur_termio);
+ }
+ 
+ 
+@@ -805,9 +837,9 @@ static void enable_interrupt(void)
+ 
+     if (__svgalib_nosigint) /* do not reenable, they are often reenabled by text_termio */
+ 	return; 
+-    ioctl(0, TCGETS, &cur_termio);
++    ioctl(0, TIOCGETA, &cur_termio);
+     cur_termio.c_lflag |= ISIG;
+-    ioctl(0, TCSETSW, &cur_termio);
++    ioctl(0, TIOCSETAW, &cur_termio);
+ }
+ 
+ /* The following is rather messy and inelegant. The only solution I can */
+@@ -882,7 +914,7 @@ static int check_owner(int vc)
+     if (!getuid())
+         return 1;               /* root can do it always */
+ #endif
+-    sprintf(fname, "/dev/tty%d", vc);
++    sprintf(fname, "/dev/ttyE%x", vc);
+     if ((stat(fname, &sbuf) >= 0) && (getuid() == sbuf.st_uid)) {
+         return 1;
+     }
+@@ -918,11 +950,9 @@ void __svgalib_open_devconsole(void)
+             continue;
+         if (ioctl(__svgalib_tty_fd, VT_GETMODE, &vtm) < 0)
+             continue;
+-        if ((sbuf.st_rdev & 0xff00) != 0x400)
+-            continue;
+-        if (!(sbuf.st_rdev & 0xff))
++        if (major(sbuf.st_rdev & 0xff00) != 47)
+             continue;
+-        svgalib_vc = sbuf.st_rdev & 0xff;
++        svgalib_vc = minor(sbuf.st_rdev) + 1;
+         return;                 /* perfect */
+     }
+ 
+@@ -934,7 +964,7 @@ void __svgalib_open_devconsole(void)
+         goto error;
+     if (svgalib_vc <= 0)
+         goto error;
+-    sprintf(fname, "/dev/tty%d", svgalib_vc);
++    sprintf(fname, "/dev/ttyE%x", svgalib_vc - 1);
+     close(__svgalib_tty_fd);
+     /* change our control terminal: */
+     setpgid(0,getppid());
+@@ -1271,7 +1301,7 @@ static char sig2catch[] =
+  SIGTRAP, SIGIOT, SIGBUS, SIGFPE,
+  SIGSEGV, SIGPIPE, SIGALRM, SIGTERM,
+  SIGXCPU, SIGXFSZ, SIGVTALRM,
+-/* SIGPROF ,*/ SIGPWR};
++/* SIGPROF ,*/ SIGUSR1};
+ static struct sigaction old_signal_handler[sizeof(sig2catch)];
+ 
+ struct vt_mode __svgalib_oldvtmode;
+@@ -1879,15 +1909,15 @@ static void initialize(void)
+ #endif
+ 
+     /* save text mode termio parameters */
+-    ioctl(0, TCGETS, &text_termio);
++    ioctl(0, TIOCGETA, &text_termio);
+ 
+     graph_termio = text_termio;
+ 
+     /* change termio parameters to allow our own I/O processing */
+-    graph_termio.c_iflag &= ~(BRKINT | PARMRK | INPCK | IUCLC | IXON | IXOFF);
++    graph_termio.c_iflag &= ~(BRKINT | PARMRK | INPCK | IXON | IXOFF);
+     graph_termio.c_iflag |= (IGNBRK | IGNPAR);
+ 
+-    graph_termio.c_oflag &= ~(ONOCR);
++/*    graph_termio.c_oflag &= ~(ONOCR);*/
+ 
+     graph_termio.c_lflag &= ~(ICANON | ECHO | ECHOE | ECHOK | ECHONL | NOFLSH);
+     if (__svgalib_nosigint)
+@@ -2096,7 +2126,7 @@ void vga_safety_fork(void (*shutdown_rou
+      *  If this didn't suffice we claim we are on an old system and just don't
+      *  need to restore it.
+      */
+-    ioctl(__svgalib_tty_fd, KDGKBMODE, &oldkbmode);
++    ioctl(__svgalib_tty_fd, WSKBDIO_GETMODE, &oldkbmode);
+ 
+     childpid = fork();
+     if (childpid < 0) {
+@@ -2113,7 +2143,7 @@ void vga_safety_fork(void (*shutdown_rou
+ 		shutdown_routine();
+ 
+ 	    vga_setmode(TEXT);	/* resets termios as well */
+-	    ioctl(__svgalib_tty_fd, KDSKBMODE, oldkbmode);
++	    ioctl(__svgalib_tty_fd, WSKBDIO_SETMODE, &oldkbmode);
+ 
+ 	    if (WIFEXITED(child_status))
+ 		exit(WEXITSTATUS(child_status));
