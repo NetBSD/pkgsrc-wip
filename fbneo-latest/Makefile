@@ -4,7 +4,7 @@
 # ones we provide support for. Anybody using an outdated version of
 # FBNeo is strongly advised to update to the latest nightly.
 VERSION=	1.0.0.03 # Reported by the software
-DISTNAME=	fbneo_latest-${VERSION}
+DISTNAME=	fbneo-latest-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=finalburnneo/}
 GITHUB_PROJECT=	FBNeo

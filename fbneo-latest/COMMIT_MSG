@@ -1,4 +1,4 @@
-emulators/fbneo-latest: Add fbneo-latest version 0
+emulators/fbneo-latest: Add fbneo-latest version 1.0.0.03
 
 Packaged in wip by adr.
 
@@ -12,3 +12,7 @@ considering bumping the version more regularily, but that would be
 for the sake of having easier versioning for romset management,
 not for the sake of having outdated versions available from 3rd
 party package managers."
+
+The project uses now an included version of libspng (https://libspng.org).
+Input is now configurable by the tab menu.
+Fixed bugs, new emulation features, &c.
