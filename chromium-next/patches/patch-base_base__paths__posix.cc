@@ -44,7 +44,7 @@ $NetBSD$
 +#elif BUILDFLAG(IS_NETBSD)
 +      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC_ARGS, getpid(), KERN_PROC_PATHNAME });
 +      if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
-+        NOTREACHED_IN_MIGRATION() << "Unable to resolve path.";
++        NOTREACHED() << "Unable to resolve path.";
 +        return false;
 +      }
 +      *result = FilePath(bin_dir.value());

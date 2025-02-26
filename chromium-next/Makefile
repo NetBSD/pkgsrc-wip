@@ -145,6 +145,7 @@ GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	is_clang=true
+GN_ARGS+=	moc_qt6_path=\"${PREFIX}/qt6/libexec\"
 GN_ARGS+=	optimize_webui=true
 GN_ARGS+=	thin_lto_enable_optimizations=true
 GN_ARGS+=	treat_warnings_as_errors=false
@@ -156,6 +157,8 @@ GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
 GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	use_qt5=false
+GN_ARGS+=	use_qt6=true
 GN_ARGS+=	use_sndio=false
 GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
@@ -280,7 +283,6 @@ INSTALLATION_DIRS+=	${ICONS_DIR${i}}
 CHROMIUM_LIBS+=		libEGL.so
 CHROMIUM_LIBS+=		libGLESv2.so
 CHROMIUM_LIBS+=		libVkICD_mock_icd.so
-CHROMIUM_LIBS+=		libvulkan.so.1
 .if ${MACHINE_ARCH} != "aarch64"
 CHROMIUM_LIBS+=		libvk_swiftshader.so
 CHROMIUM_LIBS+=		vk_swiftshader_icd.json
@@ -294,6 +296,7 @@ do-install:
 .for i in ${CHROMIUM_LIBS}
 	${INSTALL_LIB} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
+	${INSTALL_LIB} ${BUILDDIR}/libvulkan.so.1 ${DESTDIR}${PREFIX}/lib/${CHROMIUM}/libvulkan.so
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/resources/manpage.1.in \
 		 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${CHROMIUM}.1
 	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
@@ -370,5 +373,5 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
