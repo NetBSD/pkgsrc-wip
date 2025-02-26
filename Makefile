@@ -927,6 +927,7 @@ SUBDIR+=	fastx-toolkit
 SUBDIR+=	fatsort
 SUBDIR+=	faun
 SUBDIR+=	fbida
+SUBDIR+=	fbneo-latest
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
 SUBDIR+=	fbsd2pkg

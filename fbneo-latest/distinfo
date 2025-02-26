@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.2 2025/02/22 19:37:36 rillig Exp $
+
+BLAKE2s (fbneo_latest-1.0.0.03-8127c5e30a6d559ecc096e0ca510bf9cbe5dc92d.tar.gz) = 08c10c1f05719625a2c8c4188035c7b1af9e0f8e2eb8d79c132e0d9837321987
+SHA512 (fbneo_latest-1.0.0.03-8127c5e30a6d559ecc096e0ca510bf9cbe5dc92d.tar.gz) = 4df64f21eb38185ee977319503702fb3f6992ee7230aac7a333f8207c936c8e0d426a1e61c6a6eb30a02ff3af96d2413df00209dda07852512d289a03ebfd1db
+Size (fbneo_latest-1.0.0.03-8127c5e30a6d559ecc096e0ca510bf9cbe5dc92d.tar.gz) = 13842228 bytes
+SHA1 (patch-makefile) = 8cda282eb8560eedcbf94e5256dc2778743b1633
+SHA1 (patch-makefile.sdl2) = ae59085364d58dd5168a823d30c5253100a4d058
+SHA1 (patch-src_burn_burn__endian.h) = fc7d4a08ab0918304bde5eb1dee3166dc8875535

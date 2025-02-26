@@ -1,0 +1,14 @@
+emulators/fbneo-latest: Add fbneo-latest version 0
+
+Packaged in wip by adr.
+
+This is an update of emulators/fbneo. I contacted mainstream
+asking for a new release so joysticks can be configured:
+
+"Nightlies are the recommended builds, and the only ones we provide
+support for. Anybody using an outdated version of FBNeo is strongly
+advised to update to the latest nightly.  Arguably, i've been
+considering bumping the version more regularily, but that would be
+for the sake of having easier versioning for romset management,
+not for the sake of having outdated versions available from 3rd
+party package managers."
