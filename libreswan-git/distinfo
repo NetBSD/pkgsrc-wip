@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libreswan/libreswan-5.1pre0-ca6cfbe2682dd18200672d05baf09daa75465d70.tar.gz) = ad62afc59cd80e0234d1d5c3f36b8553da4e855104b35956e1b7f96d231f838b
-SHA512 (libreswan/libreswan-5.1pre0-ca6cfbe2682dd18200672d05baf09daa75465d70.tar.gz) = ea8ef3cc9db0c1116942467b4a2fdb52eb068b9cd0804f80703cef0aa64a86b50bce9077c5a1a4d84e435615f3fbdfd409bdeff5d19d781c9f5e6941973c35f9
-Size (libreswan/libreswan-5.1pre0-ca6cfbe2682dd18200672d05baf09daa75465d70.tar.gz) = 3940526 bytes
+BLAKE2s (libreswan/libreswan-5.2pre0-f26544b7efbd68bc8fb957c5a9d498f42598520e.tar.gz) = be45f7abc27dc1d81ab1bdedd3bcbcd822d5b4d3c0e638b82c1dadb80392e2a1
+SHA512 (libreswan/libreswan-5.2pre0-f26544b7efbd68bc8fb957c5a9d498f42598520e.tar.gz) = 14db97fc718cf878140f473dd9858d90584aea21400d70475b138ec35e19a33ce46972e083a72cee643a414b6dbce49e3a68f0945b55989a09e7bc849bf35a6f
+Size (libreswan/libreswan-5.2pre0-f26544b7efbd68bc8fb957c5a9d498f42598520e.tar.gz) = 4115838 bytes
