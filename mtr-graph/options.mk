@@ -4,6 +4,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.mtr085
 
 PKG_SUPPORTED_OPTIONS+=		dns
 PKG_SUPPORTED_OPTIONS+=		idn
+PKG_SUPPORTED_OPTIONS+=		nls
 PKG_SUPPORTED_OPTIONS+=		unicode
 PKG_SUPPORTED_OPTIONS+=		ipinfo
 PKG_SUPPORTED_OPTIONS+=		inet6
@@ -17,6 +18,7 @@ PKG_SUGGESTED_OPTIONS+=	inet6
 PKG_SUGGESTED_OPTIONS+=	mpls
 
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
+PLIST_VARS+=	nls
 
 .include "../../mk/bsd.options.mk"
 
@@ -43,3 +45,12 @@ MESON_ARGS+=	-DIPINFO=false
 .if empty(PKG_OPTIONS:Municode)
 MESON_ARGS+=	-DUNICODE=false
 .endif
+
+.if empty(PKG_OPTIONS:Mnls)
+MESON_ARGS+=	-DNLS=false
+.else
+USE_TOOLS+=		gettext msgfmt
+USE_PKGLOCALEDIR=	yes
+PLIST.nls=		yes
+.endif
+
