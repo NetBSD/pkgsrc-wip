@@ -1,5 +1,7 @@
 @comment $NetBSD$
+cross-i686-elf/bin/i686-elf-c++
 cross-i686-elf/bin/i686-elf-cpp
+cross-i686-elf/bin/i686-elf-g++
 cross-i686-elf/bin/i686-elf-gcc
 cross-i686-elf/bin/i686-elf-gcc-${PKGVERSION}
 cross-i686-elf/bin/i686-elf-gcc-ar
@@ -185,6 +187,11 @@ cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/convert.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/coretypes.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/coverage.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cp/cp-tree.def
+cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cp/cp-tree.h
+cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
+cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cp/name-lookup.h
+cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cp/operators.def
+cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cp/type-utils.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cppbuiltin.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cppdefault.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/cpplib.h
@@ -521,6 +528,7 @@ cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/wide-int.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/xcoff.h
 cross-i686-elf/lib/gcc/i686-elf/${PKGVERSION}/plugin/include/xcoffout.h
 cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/cc1
+cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/cc1plus
 cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/collect2
 cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/install-tools/fixinc.sh
 cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/install-tools/fixincl
@@ -531,6 +539,7 @@ cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/lto-wrapper
 cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/lto1
 cross-i686-elf/libexec/gcc/i686-elf/${PKGVERSION}/plugin/gengtype
 cross-i686-elf/man/man1/i686-elf-cpp.1
+cross-i686-elf/man/man1/i686-elf-g++.1
 cross-i686-elf/man/man1/i686-elf-gcc.1
 cross-i686-elf/man/man1/i686-elf-gcov-dump.1
 cross-i686-elf/man/man1/i686-elf-gcov-tool.1
