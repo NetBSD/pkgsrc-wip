@@ -15,12 +15,13 @@ LICENSE=	gnu-gpl-v2
 
 #WRKSRC=		${WRKDIR}/PySide-${VERSION}
 
+PYTHON_VERSIONS_ACCEPTED=	311
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES+=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
 
 .include "../../devel/cmake/build.mk"
 
@@ -35,6 +36,7 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtscxml/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
+.include "../../x11/qt5-qtwebsockets/buildlink3.mk"
 #.include "../../x11/qt5-qtspeech/buildlink3.mk"
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
