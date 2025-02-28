@@ -28,6 +28,7 @@ PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 #.include "../../x11/qt5-qtcharts/buildlink3.mk"
