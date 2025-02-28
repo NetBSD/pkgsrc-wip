@@ -54,7 +54,7 @@ REPLACE_PYTHON+=	src/Mod/Robot/MovieTool.py src/Mod/OpenSCAD/prototype.py
 
 # Plot module deps
 #DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-py-boost-[0-9]*:../../devel/py-boost
+DEPENDS+=	${PYPKGPREFIX}-boost-[0-9]*:../../devel/py-boost
 
 .include "../../devel/cmake/build.mk"
 
@@ -62,7 +62,6 @@ DEPENDS+=	${PYPKGPREFIX}-py-boost-[0-9]*:../../devel/py-boost
 .include "../../wip/orocos-kdl/buildlink3.mk"
 .include "../../cad/occt/buildlink3.mk"
 .include "../../wip/py-pyside-setup/buildlink3.mk"
-#.include "../../devel/py-boost/buildlink3.mk"
 .include "../../wip/soqt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 #.include "../../x11/qt5-qttools/buildlink3.mk"
