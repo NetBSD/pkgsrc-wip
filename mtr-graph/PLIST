@@ -3,4 +3,5 @@ man/man8/mtr.8
 sbin/mtr
 share/doc/mtr/SECURITY
 ${PLIST.nls}share/locale/es/LC_MESSAGES/mtr085.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/mtr085.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/mtr085.mo
