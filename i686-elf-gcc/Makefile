@@ -9,7 +9,6 @@ PKGNAME=	cross-${GCC_TARGET}-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC8_DIST_VERSION}/}
 EXTRACT_USING=	bsdtar
-PATCHDIR=	${.CURDIR}/../../lang/gcc8/patches
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	port-i386@NetBSD.org

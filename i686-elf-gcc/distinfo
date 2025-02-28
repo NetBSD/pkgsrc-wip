@@ -23,6 +23,7 @@ SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
 SHA1 (patch-gcc_ginclude_stddef.h) = fb1f83801e0f5bcec110667dc868c47ff2d10343
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
 SHA1 (patch-gcc_plugin.c) = 7a7ebc6650fe327fa7be1f7a4d26e8edc7597fcf
+SHA1 (patch-gcc_system.h) = 06d2aa59d1f34321ed7ff97167be193a54f3c81b
 SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8

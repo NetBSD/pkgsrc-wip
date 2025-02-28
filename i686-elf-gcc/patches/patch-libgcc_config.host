@@ -1,0 +1,32 @@
+$NetBSD: patch-libgcc_config.host,v 1.4 2023/01/29 10:47:33 wiz Exp $
+
+Add NetBSD support for aarch64, x86 and x86_64.
+
+--- libgcc/config.host.orig	2021-05-14 08:42:10.000000000 +0000
++++ libgcc/config.host
+@@ -353,6 +353,12 @@ aarch64*-*-fuchsia*)
+ 	tmake_file="${tmake_file} ${cpu_type}/t-lse t-slibgcc-libgcc"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp"
+ 	;;
++aarch64*-*-netbsd*)
++	extra_parts="$extra_parts crtfastmath.o"
++	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
++	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
++	md_unwind_header=aarch64/aarch64-unwind.h
++	;;
+ aarch64*-*-linux*)
+ 	extra_parts="$extra_parts crtfastmath.o"
+ 	md_unwind_header=aarch64/linux-unwind.h
+@@ -636,10 +642,10 @@ x86_64-*-freebsd*)
+ 	md_unwind_header=i386/freebsd-unwind.h
+ 	;;
+ i[34567]86-*-netbsdelf*)
+-	tmake_file="${tmake_file} i386/t-crtstuff"
++	tmake_file="${tmake_file} i386/t-netbsd i386/t-crtstuff"
+ 	;;
+ x86_64-*-netbsd*)
+-	tmake_file="${tmake_file} i386/t-crtstuff"
++	tmake_file="${tmake_file} i386/t-netbsd i386/t-crtstuff"
+ 	;;
+ i[34567]86-*-openbsd*)
+ 	;;
