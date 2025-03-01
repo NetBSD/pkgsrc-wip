@@ -5268,7 +5268,6 @@ SUBDIR+=	sddm
 SUBDIR+=	sdict-tools
 SUBDIR+=	sdif-git
 SUBDIR+=	sdl-sopwith
-SUBDIR+=	sdl12-compat
 SUBDIR+=	seafile-client
 SUBDIR+=	seafile-gui
 SUBDIR+=	seafile-server
