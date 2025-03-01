@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bnoordhuis/}
 GITHUB_TAG=	856c40542d3ee5ab0c23cb86a2a4ca0ba623619f
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.tkgate.org/
+HOMEPAGE=	https://bnoordhuis.github.io/tkgate/
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
 LICENSE=	gnu-gpl-v2
 
