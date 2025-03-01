@@ -3,4 +3,7 @@ $NetBSD: distinfo,v 1.20 2024/07/23 13:50:32 taca Exp $
 BLAKE2s (bind-9.20.6.tar.xz) = e9bd08fb5fbea3d8e560adfed64f182d1efb2c6ad0dd0ec1712998990440c484
 SHA512 (bind-9.20.6.tar.xz) = 8582f0f0acde7898ade2aba30bdcf4ef71a3d45c938b815b70bdb06c604680c2213ff508d598472c3962f75741a926edbe2280581841f3f3c95c0cba1c56c96f
 Size (bind-9.20.6.tar.xz) = 5639720 bytes
+SHA1 (patch-bin_named_statschannel.c) = 0be5baa65ad129f5ed551ae239d49091c177d91d
 SHA1 (patch-configure.ac) = f1f672271aa38c10b12d12d48455eb0af82d270c
+SHA1 (patch-lib_dns_include_dns_zone.h) = 14cc09f7ad1fa9cd29ec089c294111c48a403535
+SHA1 (patch-lib_dns_zone.c) = e6d1e643181271c185bc92fb188becb85f7340fb
