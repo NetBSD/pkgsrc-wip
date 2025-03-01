@@ -13,22 +13,18 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
-#SE_IMAKE=		yes
-USE_TOOLS+=		gm4 bison autoconf pkg-config
+USE_TOOLS+=		gm4 bison autoconf
 
 TKGATE_SITENAME=	Earth
 
 CONFIGURE_ENV+=		BUILDLINK_LDFLAGS=${BUILDLINK_LDFLAGS:Q}
 CONFIGURE_ENV+=		LOCALBASE=${PREFIX}
-#ONFIGURE_ENV+=		DESTDIR=${DESTDIR}
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths to find tclConfig.sh, man page
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	configure.ac acinclude.m4
 SUBST_VARS.prefix=	PREFIX
-
-#KGCONFIG_OVERRIDE+=	tcl.pc.in
 
 pre-configure:
 	(cd ${WRKSRC}; ./autogen.sh)
