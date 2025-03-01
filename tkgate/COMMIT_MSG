@@ -1,0 +1,253 @@
+(cad/tkgate) Updated 1.8.7 to 2.0
+
+TkGate 2.0 Release notes.
+
+See INSTALL for installation instructions.
+
+*****************************************************************************
+SAVE FILE DIFFERENCES WITH PAST VERSIONS
+
+2.0-b5 and earlier
+   The DEMUX device was redesigned in 2.0-b5.  When reading earlier save files,
+   any instance of DEMUX are translated to OLDDEMUX which have the original
+   definition.
+
+1.8.x and earlier
+   Substantial changes in save file format were made in the transition from
+   1.8.x to 2.0.  The new format is expected to be compliant with 3rd party
+   verilog tools.  TkGate 2.0 can read files from earlier versions of tkgate
+   but can only write 2.0 format files which will be unreadable by earlier
+   versions of tkgate.
+
+1.6h and earlier
+   These versions do not support the "extender bar" style of basic gates.  Files
+   saved by later versions may either not load properly, or may have input wires
+   in odd places when loaded under old versions of tkgate.
+
+1.5c and earlier
+   Positions of wire "tap" elements have changed slightly due to the new method
+   for drawing buses.  When reading old files, the positions will be slightly
+   modified to fit the new scheme, but if you save the file, wire positions will
+   be slightly off when rereading from an old version of tkgate.
+
+   Basic flip-flop elements do not exist in this version and lower.
+   
+1.4c and earlier
+   Multi-technology delay specification, and per-gate delay specification is
+   not supported.  If any delays other than "default" are used, the file may
+   not be readable by older versions of tkgate.
+
+*****************************************************************************
+MULTI-LINGUAL SUPPORT (JAPANESE)
+
+As of TkGate 2.0, Japanese support is automatically compiled in.  To use
+it, run tkgate with the -Lja option, or make sure your LANG environment
+variable is set to a Japanese locale (e.g., ja_JP.eucJP).  Attempting to
+run TkGate with an invalid locality value could cause it to core dump
+in the tcl/tk initialization routines.  You must also set up kanji
+conversion and input servers in order to input Japanese.  Currently,
+Japanese is only supported in comments and "frames".
+
+There are many ways of configuring kanji conversion and input servers,
+so I will not go into all of them here.  I have tested tkgate with
+canna.  Make the following changes to enable Japanese input:
+
+In .xinitrc:
+
+   kinput2 -canna -xim&
+
+In .cshrc:
+
+   setenv XMODIFIERS "@im=kinput2"
+
+To enter switch between English input and Japanese input use the
+command <shift-space>.  While Japanese messages are enabled for any
+locale name that starts with "ja", the locale must be set to "ja_JP.eucJP"
+in order to enable Japanese input.  Using the '-Lja' switch will also
+ensure that the environment variables are set correctly.
+
+*****************************************************************************
+CREDITS
+
+  * Thanks to Marc Lavallee for Linux rpm spec file.
+  * Thanks to Peter Bartke for the German translation.
+  * Thanks to Laurent Bonnaud for the French translation.
+  * Thanks to Agustin Borrego for the Spanish translation.
+  * Thanks to Kevin Donnelly for the Welsh translation.
+  * Thanks to Jacques JANVILLE for the French translation and French tutorials.
+  * Thanks to Marc Lavallee for Linux rpm spec file.
+  * Thanks to Roman Valls for the Catalan translation.
+  * Thanks to Anthony Winstanley for the cygwin patch. 
+
+*****************************************************************************
+VERSION HISTORY 
+
+Version 2.0-b10 - September 26, 2009
+     * Fixed bug causing bar led to display wrong value when some bits are unknown.
+     * Fixed bug making "Add" button inactive in port list dialog box for
+	concat components.
+     * Fixed bug in memory viewer for memories with 256 words or less.
+     * Fixed bug causing initialization file specs. on memories not to
+	be recognized.
+
+Version 2.0-b9 - May 5, 2009
+     * Fixed bug causing core dump when reversing port ordering on decoder.
+     * Fixed bug in updating module tree when creating module instances.
+     * Expanded components in the 74xx library.
+ 
+Version 2.0-b8 - April 25, 2009
+     * Fixed bug with libraries with no descriptions. 
+     * Fixed bug in freeing of memory in circuit properties editing
+       which caused a core dump on some systems.
+     * Fixed bug in module interface update when loading a module that
+	overrides a library module of the same name.
+     * Fixed bug in display of scope axis when non-standard timescale 
+	is used.
+
+Version 2.0-b7 - February 23, 2009
+     * Wire names can be displayed on switches/dips
+     * Right click on wires now sensitive to label/size markings.
+     * Added ability to supress timing violation notices.
+     * Fixed bug causing excessive calls to html formatter in comments objects.
+     * Fixed bug with cut/paste in HDL modules.
+     * Fixed bug with module interface autogeneration of HDL modules.
+     * Fixed bug with module properties not being saved properly
+
+Version 2.0-b6 - February 12, 2009
+     * Created new "Scripts" tab in Circuit Properties dialog box.  Moved list
+	of start-up scripts to the new page.
+     * Moved the "Auto Start" option from the "General" page to the "Simulation"
+	page in the Circuit Properties box.
+     * Added a "Design Initialization Time" circuit property that can specify
+	a time over which to ignore timing violations.
+
+Version 2.0-b6 - February 6, 2009
+     * Fixed detection of iconv.h
+     * Fixed Japanese font problem in tk elements.
+     * Fixed bugs with wire handling, library handling, simulation error handling.
+     * Fixed bug with switches not updating in GUI when controlled by script.
+     * Updated "Details" pages of several gate properties dialog boxes.
+     * Improved handling of locales
+     * Tabbing in dialog boxes added
+     * Reorganized main menus
+     * Renamed DEMUX as DECODER.  Added a properly defined DEMUX.
+     * Updated most of the Japanese locale strings
+     * Updated all German locale strings and tutorials
+     * Added JK Flip-Flop
+     * Added "Script" component that allows you to include Verilog snippets in
+	netlist modules.
+     * Added memory content viewer
+     * Added "current time" display when simulator is active.
+
+Version 2.0-b5 - Internal Only
+
+Version 2.0-b4 - January 10, 2009
+     * Fixed core dump bug caused by clicking in scope window below list
+       of traces.
+     * Cleaned up interface look.
+     * Fixed sizing problem with dialog boxes that sometimes caused clipping
+       of the dialog box elements.
+     * Fixed simulator bug in register initialization.  Registers were not
+       being initialized until end of time step 0 and were triggering events.
+     * Fixed problem with initial display of flip-flop type in properties
+       dialog box.
+     * Updated gmac to produce new-style memory files (-g can be used to
+       get old-style files).
+     * Fixed problem with entries in port box not getting highlighted when clicked on.
+     * Fixed memory problem that happens when doing "new circuit" from menu.
+     * Fixed bug with module copy/rename, etc. dialog boxes not going away on "OK"
+     * Fixed bug with rename of currently viewed module.
+     * Dialog titlebars now localizable.
+
+Version 2.0-b3 - January 2, 2009
+     * Grab and scroll tool (and auto grab with button 2)
+     * New options setting dialog box
+     * Mouse over highlighting for tabs
+     * Wires with bit sizes greater than 32 bits
+     * Fixed bug with warning reporting in simulation mode
+     * Updated print dialog box
+     * Updated library manager and added it to the circuit properies box
+     * Fixed problem with display of Japanese in main edit window.
+     * Additional minor bug fixes.
+
+Version 2.0-b2 - December 22, 2008
+     * Fixed problem with leds in modules
+     * Fixed edge problem with ranges in scope window
+     * Fixed display problem with scope print dialog box
+     * Fixed problem with saving of wire merge devices
+     * Fixed some problems with unnecessary setting of "modified" flag
+     * Probe positions now remembered between simulation runs
+     * You can now drag and reposition traces in scope.
+     * Mouse over of signal names in scope will show full name.
+     * Fixed simulator bug when assigning concat to a variable with
+	a bit width larger than the source.
+
+Version 2.0-b1 - December 1, 2008
+     * Updated to work with tcl/tk 8.5
+     * Fixed bug in flip-flop device.
+     * Create verilog template system for built-in devices (see primitives directory)
+     * Fixed bug in "Delete Module" dialog box causing core dump when dialog
+       was closed by pressing enter.
+
+Version 2.0-a12 - September 24, 2007
+     * Cleanup of some names in menus.
+     * Added key bindings for interface update features.
+
+Version 2.0-a11 - September 24, 2007
+     * Fixed bugs and made minor feature enhancements to block port editing
+       through popup menus.
+     * Fixed bug causing delayed updates to graphical view in interface editor 
+     * Module instances can now be updated in place with new interfaces.
+     * Slight redesign of the module interface type selector.
+
+Version 2.0-a10 - September 19, 2007
+     * Added mouse-over cursor change on edges of blocks.
+     * Fixed problems with port names changing when wire is cut.
+     * When connecting wires, oldest name is now given precedence
+       in making name choice for merged wire.
+     * Fixed problem with getting module edge popup menu when window has
+       been scrolled.
+
+Version 2.0-a9 - September 12, 2007
+     * Fixed configure script to look in /opt/local for Tcl/Tk
+     * Fixed bit-order problem in display of symbol modules on some platforms.
+     * Fixed start-up crash on 64-bit machines.
+     * Fixed bug in symbol editor that could cause loss of port information
+     * Implement import/export of X bitmaps in symbol editor
+
+Version 2.0-a8 - August 18, 2007
+     * Fixed problem preventing hyperlinks from working when num-lock/scroll-lock
+       was pressed.
+     * Changed default install directory to /usr/local on all machines
+     * Minor interface tweeks.
+
+Version 2.0-a7 - August 17, 2007
+     * Changed default install directory to /usr/local on non-FreeBSD machines.
+     * Fixed some printing bugs
+     * Fixed bugs with print dialog box
+     * Fixed bug with display of gate name on "concat" elements
+     * Fixed configuration problem with Italian locale
+     * Ability to force TTY input from simulation script added.
+
+Version 2.0-a6 - July 13, 2007
+     * Made wire taps easier to select.
+     * Fixed bug in layout of module interfaces.
+     * Fixed bug allowing wires to be inappropriately manipulated in the interface display.
+     * Initial draft of documentation for 2.0
+
+Version 2.0-a5 - May 22, 2007
+     * Autoconf-based installation
+     * Fixed bug preventing the shift-click sequence from being able to edit hyperlinks
+     * Fixed some Japanese localization issues. 
+
+Version 2.0-a1 - February 7, 2007
+     * Updated interface.
+     * Support for textual Verilog module definitions.
+     * All gates are now rotatable.  Use Tab/Backtab to rotate selection.
+     * Automatic interface generator.
+     * Support for user defined symbols.
+     * Hierarchical module browser.
+     * Jump-to-module supported while in simulation mode.
+     * Expanded and dockable toolbars.
+     * Better library support.
+     * Pinout options on concat, muxes, and demuxes.

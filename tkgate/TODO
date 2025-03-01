@@ -1,0 +1,16 @@
+current situation:
+
+
+checking for strspn... yes
+checking for strstr... yes
+checking for strcasestr... yes
+checking tcl/tk version... configure: error: could not find tclConfig.sh
+*** Error code 1
+
+Stop.
+make[1]: stopped making "package" in /export/CHROOT/usr/pkgsrc/wip/tkgate
+*** Error code 1
+
+Stop.
+make: stopped making "package" in /export/CHROOT/usr/pkgsrc/wip/tkgate
+thinkc11@makoto 16:24:48/250301 (wip/tkgate)%

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.14 2021/10/26 10:04:16 nia Exp $
+
+BLAKE2s (tkgate-2.0-856c40542d3ee5ab0c23cb86a2a4ca0ba623619f.tar.gz) = 0fc13262b19baef010a407dbc5e2088e726addd56ca1cfe441de1510ce79fa0e
+SHA512 (tkgate-2.0-856c40542d3ee5ab0c23cb86a2a4ca0ba623619f.tar.gz) = 01a2f820930f42ae3f0eba3f4d74988125459509564c602b32eb721ca972316255880d1a4dcea6100fc2c3925742a356190f0c4f871d3c658cb1cca5a64266c5
+Size (tkgate-2.0-856c40542d3ee5ab0c23cb86a2a4ca0ba623619f.tar.gz) = 7585906 bytes
+SHA1 (patch-acinclude.m4) = 0bb6a8a939ad91472f2935fc858070ccb83aaa08
+SHA1 (patch-configure.ac) = 60ba43dc86e2b3d9cb68d4a70f8bfc4804a96eaa

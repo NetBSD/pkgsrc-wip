@@ -1,0 +1,25 @@
+$NetBSD$
+
+checking tcl/tk version... configure: error: could not find tclConfig.sh
+*** Error code 1
+
+--- configure.ac.orig	2022-02-15 11:57:56.000000000 +0000
++++ configure.ac
+@@ -43,7 +43,7 @@ TKGATE_INCDIRS="/usr/X11R6/include /usr/
+ #
+ # Directories to search for library files
+ #
+-TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib"
++TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib @PREFIX@/lib"
+ 
+ #
+ # Libraries we may need if available.
+@@ -55,7 +55,7 @@ TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/
+ #
+ # Default prefix directory for installation by OS 
+ #
+-AC_PREFIX_DEFAULT(/usr/local)
++AC_PREFIX_DEFAULT(@PREFIX@)
+ 
+ 
+ #############################################################################
