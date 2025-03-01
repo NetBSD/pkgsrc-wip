@@ -5677,6 +5677,7 @@ SUBDIR+=	tinyssh
 SUBDIR+=	tipp10
 SUBDIR+=	tk-itk3
 SUBDIR+=	tkblt
+SUBDIR+=	tkgate
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
 SUBDIR+=	tktile
