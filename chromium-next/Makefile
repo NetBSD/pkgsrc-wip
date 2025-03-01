@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			133.0.6943.126
+VERSION=			133.0.6943.141
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
