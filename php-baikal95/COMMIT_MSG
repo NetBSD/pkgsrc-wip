@@ -1,0 +1,12 @@
+net/php-baikal: updated baikal from 0.93 to 0.95
+
+This release gets rid of pkgsrc patches that have been incorporated by upstream
+
+Release notes from upstream:
+0.95
+Dependency upgrades. Should improve compatibility with php 8.2
+Ships with sabre/dav 4.6.0
+0.94
+Fix difference in database scheme between MySQL and SQLite
+Make base_uri case sensitive
+Upgrade sabre/dav to 4.5.0 (this should fix some warnings on php 8.2)
