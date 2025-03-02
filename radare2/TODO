@@ -1,0 +1,7 @@
+current problem:
+
+=> Checking file-check results for radare2-5.9.8
+=> Checking for non-existent script interpreters in radare2-5.9.8
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/tmp/wip/radare2/work/.destdir/usr/pkg/share/radare2/5.9.8/scripts/licenses
+.r2.js" is not allowed.
+*** Error code 1
