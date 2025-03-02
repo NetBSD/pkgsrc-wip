@@ -3,11 +3,12 @@
 .include "../../chat/jitsi-meet/Makefile.common"
 
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
+PKGREVISION=	1
 
 USE_LANGUAGES+=	c++
 USE_TOOLS+=	gmake tar
 
-TOOL_DEPENDS+=	npm-[0-9]*:../../lang/npm
+TOOL_DEPENDS+=	nodejs>=18:../../lang/nodejs22
 
 BUILD_TARGET=	compile
 INSTALL_TARGET=	deploy source-package
