@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (vsearch-2.30.0.tar.gz) = 7962abb52ecbe438eba885afd04ff6bfa8c3c45de741efb34fdd9360d3c4bdad
 SHA512 (vsearch-2.30.0.tar.gz) = f3e74ec3ff3831dd70117d1cbfacd693fc7d89b8fa19dccc3fe863655fd3304d1ce3a960ba8369ec73a45b0b0efcb796ce627d37cfe113912872eb7fbb0d99a1
 Size (vsearch-2.30.0.tar.gz) = 285775 bytes
+SHA1 (patch-src_vsearch.h) = 6e9a21883a2bb7a54d8550fa0eaf8b1ae1767ec0
