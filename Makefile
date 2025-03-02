@@ -5021,6 +5021,7 @@ SUBDIR+=	quiterss
 SUBDIR+=	qwt6-qt4
 SUBDIR+=	qxmpp
 SUBDIR+=	r8s
+SUBDIR+=	radare2
 SUBDIR+=	radare2-git
 SUBDIR+=	rage
 SUBDIR+=	rainbow
