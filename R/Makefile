@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.251 2024/02/15 07:48:50 markd Exp $
+# $NetBSD: Makefile,v 1.266 2025/03/02 10:26:38 mef Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.4.0
+DISTNAME=	R-4.4.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
+
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/R/lib
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
@@ -149,17 +151,10 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #TOOL_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 #TOOL_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
 
-#SUBST_CLASSES+=		rpath
-#SUBST_STAGE.rpath=	pre-configure
-#SUBST_FILES.rpath=	configure.ac
-#SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
-
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
-
-BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/R/library/mgcv/libs/mgcv.so
@@ -184,8 +179,9 @@ fix-darwin-install-name:
 
 # remove orig version left out
 post-install:
-	${RM}	${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
+	${RM}	-f ${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
 
+BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

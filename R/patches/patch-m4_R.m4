@@ -1,4 +1,4 @@
-$NetBSD: patch-m4_R.m4,v 1.5 2024/01/08 23:15:39 mef Exp $
+$NetBSD: patch-m4_R.m4,v 1.6 2024/05/27 20:45:14 mef Exp $
 
 Ensure tests for clog & co. fail, not just emit warning
 

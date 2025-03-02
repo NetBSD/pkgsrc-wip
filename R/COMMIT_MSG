@@ -1,243 +1,86 @@
-(math/R) Updated 4.3.3. to 4.4.0
+(math/R) Updated 4.4.2 to 4.4.3
 
-NEWS for R version 4.4.0 (2024-04-24)
-NEWS
+CHANGES IN R 4.4.3:
 
-R News
+  INSTALLATION:
 
-CHANGES IN R 4.4.0
-SIGNIFICANT USER-VISIBLE CHANGES:
-*   Startup banners, R --version, sessionInfo() and R CMD check no longer report
-    (64-bit) as part of the platform as this is almost universal – the increasingly rare
-    32-bit platforms will still report (32-bit).
-    On Windows, ditto for window titles.
+         * R can be installed using C23 (for example with '-std=gnu23'
+           or '-std=gnu2x') with recent compilers including 'gcc'
+           12-14, Apple 'clang' 15-16, LLVM 'clang' 17-20 and Intel
+           'icx' 2024.2.
 
-*   is.atomic(NULL) now returns FALSE, as NULL is not an atomic vector.
-    Strict back-compatibility would replace is.atomic(foo) by (is.null(foo) ||
-    is.atomic(foo)) but should happen only sparingly.
-    NEW FEATURES:
+           It can be installed with the upcoming (at the time of
+           writing) 'gcc' 15, which defaults to C23.
 
-*   The confint() methods for "glm" and "nls" objects have been copied to the
-    stats package. Previously, they were stubs which called versions in package MASS.
-    The MASS namespace is no longer loaded if you invoke (say) confint(glmfit).
-    Further, the "glm" method for profile() and the plot() and pairs() methods
-    for class "profile" have been copied from MASS to stats. (profile.nls() and
-    plot.profile.nls() were already in stats.)
+  C-LEVEL FACILITIES:
 
-*   The confint() and profile methods for "glm" objects have gained a possibility to
-    do profiling based on the Rao Score statistic in addition to the default Likelihood
-    Ratio. This is controlled by a new test = argument.
+         * The functions 'R_strtod' and 'R_atof' now allow hexadecimal
+           constants without an exponent, for compatibility with their
+           C99 versions (PR#18805).
 
-* The pairs() method for "profile" objects has been extended with a
-    which = argument to allow plotting only a subset of the
-    parameters.
+  UTILITIES:
 
-* The "glm" method for anova() computes test statistics and p-values
-  by default, using a chi-squared test or an F test depending on whether
-  the dispersion is fixed or free.  Test statistics can be suppressed by
-  giving argument test a false logical value.
+         * 'R CMD build' and 'R CMD check' now allow reference output
+           for demo scripts ('demo/<demo>.Rout.save' files) to be
+           shipped with the package, as proposed by Torsten Hothorn in
+           PR#18816.
 
-* In setRepositories() the repositories can be set using their names
-    via name = instead of index ind =.
+  BUG FIXES:
 
-* methods() and .S3methods() gain a all.names option for the (rare)
-  case where functions starting with a ‘.’ should be included.
+         * 'kappa(A, exact=TRUE)' for singular 'A' returns 'Inf' more
+           generally, fixing PR#18817 reported by Mikael Jagan.
 
-* Serializations can now be interrupted (e.g., by Ctrl-C on a
-  Unix-alike) if they take too long, e.g., from save.image(), thanks to
-  suggestions by Ivan Krylov and others on R-devel.
+         * Fixed URLs of the sun spots ('sunspot.month' etc) data sets
+           and mention future changes due to recalibration.
 
-* New startup option ‘--max-connections’ to set the maximum number of
-  simultaneous connections for the session. Defaults to 128 as before:
-  allowed values up to 4096 (but resource limits may in practice
-  restrict to smaller values).
+         * The parser now accepts hexadecimal constants with a decimal
+           point without an exponent (taken as 'p0') as documented in
+           '?NumericConstants' (PR#18819).
 
-* R on Windows (since Windows 10 2004) now uses the new Segment Heap
-  allocator.  This may improve performance of some memory-intensive
-  applications.
+         * 'rbind()' now works correctly when inputs include a raw
+           vector and a logical, integer or double vector - previously
+           the inclusion of the latter was garbled.
 
-* When R packages are built, typically by R CMD build <pkg>, the new
-  --user=<build_user> option overrides the (internally determined) user
-  name, currently Sys.info()["user"] or LOGNAME. This is a (modified)
-  fulfillment of Will Landau’s suggestion in PR#17530.
+         * 'smooth.spline()' checks validity of its arguments
+           'df.offset' and 'penalty': it could segfault if they were
+           'NULL'.
 
-* tools::testInstalledBasic() gets new optional arguments outDir and
-  testSrcdir, e.g., allowing to use it in a builddir != srcdir setup,
-  and in standard “binary” Windows installation if a source ‘tests/’
-  folder is present.
+         * 'isGeneric(<primitive>, fdef=*, getName=TRUE)' now also
+           returns the name instead of just 'TRUE', fixing PR#18829
+           reported by Mikael Jagan.
 
-* range(<DT_with_Inf>, finite = TRUE) now work for objects of class
-  "Date", "POSIXct", and "POSIXlt" with infinite entries, analogously to
-  range.default(), as proposed by Davis Vaughan on R-devel. Other
-  range()-methods can make use of new function .rangeNum().
+         * 'isGeneric(fdef = print)' now works, fixing PR#18369 thanks
+           to Mikael Jagan.
 
-* New .internalGenerics object complementing .S3PrimitiveGenerics, for
-    documentation and low-level book-keeping.
+         * 'sort(x, method = "qsort")' made illegal accesses when 'x'
+           has length 0.
 
-* grid() now invisibly returns the x- and y- coordinates at which the
-  grid-lines were drawn.
+         * 'dir.create()' is protected against being passed an empty
+           string as its 'path' argument.
 
-*   norm(., type) now also works for complex matrices.
+         * Silent integer overflow could occur in the 'exact'
+           computations for 'fisher.test()' for unrealistic inputs:
+           this is now an error.
 
-* kappa(., exact = TRUE, norm = *) now works for all norms and also
-  for complex matrices. In symmetric / triangular cases, the new
-  argument uplo = "U" | "L" allows the upper or lower triangular part to
-  be specified.
+         * Some invalid C-level memory accesses are avoided for
+           'loglin(, margin = NULL)'.
 
-* memDecompress(type = "unknown") recognizes compression in the
-    default ‘zlib’ format as used by memCompress(type = "gzip").
+           'loglin(, param = TRUE)' no longer gives an error in corner
+           cases such as a one-dimensional input.
 
-* memCompress() and memDecompress() will use the libdeflate library
-  (https: //github.com/ebiggers/libdeflate) if installed. This uses the
-  same type of compression for type = "gzip" but is 1.5-2x faster than
-  the system libz library on some common platforms: the speed-up may
-  depend on the library version.
+         * 'dev.capabilities() $ events' now reports '"Idle"' if the
+           device provides it, fixing PR#18836, thanks to Trevor Davis.
 
-* diff() for objects of class "Date", "POSIXct", and "POSIXlt" accepts
-    a units argument passed via ....
+         * 'arima(.., seasonal = <wrong-vector>)' correctly errors now,
+           ditto for 'arima0()', thanks to Norbert Kuder's report on
+           the R-devel list.
 
-* Dynamic help now does a much better job of rendering package
-    ‘DESCRIPTION’ metadata.
+         * 'binomial(<link>)$linkinv(eta)' and '.. $mu.eta(eta)' now
+           also work for '"logit"' link when 'is.integer(eta)'.
 
-* Rprof() gains an event argument and support for elapsed (real) time
-profiling on Unix (PR#18076).
+         * 'as.roman(x)' now should work platform independently, also
+           for, e.g., 'x = "IIIII"' (= V) and 'x = "IIIIII"' (= VI).
 
-*   filled.contour() gains a key.border argument.
-
-* tools::update_pkg_po() gets arguments pot_make and mo_make for not
-  re-making the corresponding files, and additionally a verbose
-  argument.
-
-* Hexadecimal string colour specifications are now accepted in short
-  form, so, for example, we can use "#123", which is equivalent to
-  "#112233".  Thanks to MikeFC for the original idea and Ella Kaye,
-  Malcolm Barrett, George Stagg, and Hanne Oberman for the patch.
-
-*   Plain-text help shows \var markup by angle brackets.
-
-* The new experimental primitive function declare() is intended to
-  eventually allow information about R code to be communicated to the
-  interpreter, compiler, and code analysis tools. The syntax for
-  declarations is still being developed.
-
-* Functions psmirnov(), qsmirnov() and rsmirnov() in package stats
-  have had argument two.sided renamed to alternative, to take into
-  account that the permutation distributions of the one-sided statistics
-  can be different in the case of ties. Consequence of PR#18582.
-
-*   sort() is now an implicit S4 generic in methods.
-
-* Formatting and printing, format(z), print(z), of complex vectors z
-  no longer zap relatively small real or imaginary parts to zero, fixing
-  PR#16752. This is an API change, as it was documented previously to
-  round real and imaginary parts together on purpose, producing nicer
-  looking output. As mentioned, e.g. in the PR, this change is
-  compatible with many other “R-like” programming environments.  We have
-  simplified the internal code and now basically format the real and
-  imaginary parts independently of each other.
-
-* New experimental functions Tailcall() and Exec() to support writing
-    stack-spaceefficient recursive functions.
-
-* Where characters are attempted to be plotted by pdf(), postscript()
-  and xfig() which are not in the selected 8-bit character set (most
-  often Latin-1) and the R session is using a UTF-8 locale, the warning
-  messages will show the UTF-8 character rather than its bytes and one
-  dot will be substituted per character rather than per byte.
-  (Platforms whose iconv() does transliteration silently plot the
-  transliteration.)  In a UTF-8 locale some transliterations are now
-  done with a warning (e.g., dashes and Unicode minus to hyphen,
-  ligatures are expanded, permille (‘‰’) is replaced by ‘o/oo’),
-  although the OS may have got there first. These are warnings as they
-  will continue to be replaced by dots in earlier versions of R.
-
-* The matrix multiplication functions crossprod() and tcrossprod() are
-  now also primitive and S3 generic, as %*% had become in R 4.3.0.
-
-* source() and example() have a new optional argument catch.aborts
-  which allows continued evaluation of the R code after an error.
-
-* The non-Quartz tiff() devices allow additional types of compression
-  if supported by the platform’s ‘libtiff’ library.
-
-*   The list of base and recommended package names is now provided by
-    tools::standard_package_names().
-
-* cairo_pdf() and cairo_ps() default to onefile = TRUE to closer match
-  pdf() and postscript().
-
-* New option catch.script.errors provides a documented way to catch
-  errors and then continue in non-interactive use.
-
-* L %||% R newly in base is an expressive idiom for the phrases
-  if(!is.null(L)) L else R or if(is.null(L)) R else L.
-
-* The return value from warnings() now always inherits from "warnings"
-    as documented, now also in the case of no warnings where it
-    previously returned NULL.
-
-*   as.complex("1i") now returns 0 + 1i instead of NA with a warning.
-
-* z <- c(NA, 1i) now keeps the imaginary part Im(z[1]) == 0, no longer
-  coercing to NA_complex_. Similarly, cumsum(z) correctly sums real and
-  imaginary parts separately, i.e., without “crosstalk” in case of NAs.
-
-*   On Alpine Linux iconv() now maps "latin2", "latin-2", "latin9" and "latin-9"
-    to encoding names the OS knows about (case-insensitively).
-
-* iconv(sub = "Unicode") now always zero-pads to four (hex) digits,
-  rather than to 4 or 8. (This seems to have become the convention
-  once Unicode restricted the number of Unicode points to 221 − 1
-  and so will never need more than 6 digits.)
-
-*   NCOL(NULL) now returns 0 instead of 1, for consistency with cbind().
-
-* The information for the Euro glyph missing from the Adobe ‘.afm’
-  files for the Courier, Helvetica and Times families has been copied
-  from their URW equivalents – this will improve vertical centring in
-  the pdf() and postscript() devices.
-
-* The included BLAS sources have been updated to those shipped with
-  LAPACK version 3.12.0. The changes are almost entirely cosmetic.
-
-
-*   The included LAPACK sources have been updated to version 3.12.0 and some further
-double-complex routines added.
-
-* There are new font families for the 2014–5 URW 2.0 fonts (see ?pdf)
-  which are included in recent versions of Ghostscript. These have font
-  widths for most Greek glyphs and a few others which were missing from
-  the original versions (whose font families remain available for
-  reproducibility, although Ghostscript-based viewers will render using
-  the 2.0 versions).
-
-* Improve the large-n efficiency of as.matrix(<dist>), thanks an R
-  contributors effort, notably by Tim Taylor and Heather Turner, see
-  PR#18660.
-
-*   The default and numeric methods of all.equal() get a check.class option.
-
-* zapsmall() gets new optional arguments, function mFUN and min.d, for
-  extra flexibility; fulfills a wish in PR#18199. Also, it is now an
-  implicit S4 generic in package methods.
-
-*   The Rd filter for aspell() gains an ignore argument.
-
-* New generic function sort_by(), primarily useful for the data.frame
-  method which can be used to sort rows of a data frame by one or more
-  columns.
-
-*   The icence headers for the RPC code in ‘src/extra/xdr’ have been updated to use
-    the GPL-compatible licence published by Oracle America in 2010.
-
-*   New function pkg2HTML() in tools to create single-page HTML reference manuals for
-    R packages.
-
-* The byte code evaluator now uses less C stack space for recursive
-  calls to bytecompiled functions. It also makes more of an effort to
-  avoid allocations for scalar return values.
-
-* New completion option backtick (disabled by default) allows
-  non-syntactic completions to be wrapped in backquotes. This is
-  currently only useful for Jupyter notebooks via the IRkernel package,
-  and may cause problems for other backends.
+         * 'R CMD Rd2pdf' works again on an installed package directory
+           containing LaTeX help (from option '--latex'), thanks to a
+           report by Peter Ruckdeschel.

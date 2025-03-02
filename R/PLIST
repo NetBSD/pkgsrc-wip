@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.42 2024/11/01 07:12:59 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -385,20 +385,13 @@ lib/R/library/Matrix/po/lt/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/lt/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/R-Matrix.mo
-lib/R/library/Matrix/scripts/AMD.patch
-lib/R/library/Matrix/scripts/CAMD.patch
-lib/R/library/Matrix/scripts/CCOLAMD.patch
-lib/R/library/Matrix/scripts/CHOLMOD.patch
-lib/R/library/Matrix/scripts/COLAMD.patch
-lib/R/library/Matrix/scripts/CXSparse.patch
-lib/R/library/Matrix/scripts/SuiteSparse_config.patch
-lib/R/library/Matrix/scripts/api.patch
+lib/R/library/Matrix/scripts/SuiteSparse.patch
+lib/R/library/Matrix/scripts/cholmod.h.patch
 lib/R/library/Matrix/scripts/disclaimer.txt
 lib/R/library/Matrix/scripts/rules.mk
 lib/R/library/Matrix/scripts/rules.sh
 lib/R/library/Matrix/scripts/sources.mk
 lib/R/library/Matrix/scripts/ssget.sh
-lib/R/library/Matrix/scripts/wall.patch
 lib/R/library/Matrix/test-tools-1.R
 lib/R/library/Matrix/test-tools-Matrix.R
 lib/R/library/Matrix/test-tools.R
@@ -775,6 +768,7 @@ lib/R/library/grDevices/html/00Index.html
 lib/R/library/grDevices/html/R.css
 lib/R/library/grDevices/icc/srgb
 lib/R/library/grDevices/icc/srgb.flate
+lib/R/library/grDevices/libs/cairo.so
 lib/R/library/grDevices/libs/grDevices.so
 lib/R/library/graphics/DESCRIPTION
 lib/R/library/graphics/INDEX
@@ -1234,13 +1228,13 @@ lib/R/library/survival/doc/compete.pdf
 lib/R/library/survival/doc/concordance.R
 lib/R/library/survival/doc/concordance.Rnw
 lib/R/library/survival/doc/concordance.pdf
-lib/R/library/survival/doc/discrim.R
-lib/R/library/survival/doc/discrim.Rnw
-lib/R/library/survival/doc/discrim.pdf
 lib/R/library/survival/doc/index.html
 lib/R/library/survival/doc/matrix.R
 lib/R/library/survival/doc/matrix.Rnw
 lib/R/library/survival/doc/matrix.pdf
+lib/R/library/survival/doc/methods.R
+lib/R/library/survival/doc/methods.Rnw
+lib/R/library/survival/doc/methods.pdf
 lib/R/library/survival/doc/multi.Rnw
 lib/R/library/survival/doc/multi.pdf
 lib/R/library/survival/doc/other.Rnw

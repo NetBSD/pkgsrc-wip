@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.103 2024/02/15 07:48:50 markd Exp $
+$NetBSD: distinfo,v 1.111 2025/03/02 10:26:38 mef Exp $
 
-BLAKE2s (R-4.4.0.tar.gz) = 31efebb6f183d6e754b82dfb14b4715659a01d5ee95b86048d6127f884d42d6a
-SHA512 (R-4.4.0.tar.gz) = 8f44eac49c58db7f161732135be4d1757f65b18545f3f15c463d499794735d02f4a4cb9bacff90d16e80b624ead8aa0af16899cf7654b6cb91a46868e405bd17
-Size (R-4.4.0.tar.gz) = 37335563 bytes
-SHA1 (patch-configure.ac) = 91bed37afc2ee2f68695f8496c56ae23aaf42b43
+BLAKE2s (R-4.4.3.tar.gz) = c7860018ef691608dfa505c2bbeb7e015d03d106e8590587b49d1eac63449cda
+SHA512 (R-4.4.3.tar.gz) = 2a1d1e5ee2e18c928e2b3e58df372083b4bbd0822863a8441404999209035436e236c8ffe3970827fbf3d765157365800ebb0bb46f361c6abe473ddec30be06f
+Size (R-4.4.3.tar.gz) = 40234425 bytes
 SHA1 (patch-m4_R.m4) = 3e1d390d8aa9895aee7cb479ddab371d82562b88
-SHA1 (patch-src_include_R__ext_Error.h) = bc55a8bba6bf931e3f6794577e63bfafdfc740cf
+SHA1 (patch-src_extra_xdr_xdr__mem.c) = 2e607b070db8b24a6ad5501e9c7c1549bf1b1d82
+SHA1 (patch-src_extra_xdr_xdr__stdio.c) = e4d8ace08ad282f44113941dd6a3b194769b8167
 SHA1 (patch-src_library_stats_src_Makefile.in) = 4eb93292858392792c37a706399e2cef91821bbe
 SHA1 (patch-src_main_character.c) = c1be2cae404ecbdd547343b70e9d072e9e1d5549
