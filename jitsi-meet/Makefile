@@ -26,7 +26,7 @@ CONF_FILES+=		${EGDIR}/title.html ${PKG_SYSCONFDIR}/title.html
 # \todo Explain how this variable makes its way into the package.
 BUILD_DEFS+=		VARBASE
 
-INSTALLATION_DIRS=	${EGDIR} share/examples/jitsi-meet
+INSTALLATION_DIRS=	${EGDIR} share/examples/jitsi-meet share/doc/jitsi-meet
 
 do-configure:
 	cd ${WRKSRC} && \
@@ -47,5 +47,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/interface_config.js
 	${INSTALL_DATA} ${WRKSRC}/title.html \
 		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/title.html
+	${INSTALL_DATA} files/README.pkgsrc \
+		${DESTDIR}${PREFIX}/share/doc/jitsi-meet/README.pkgsrc
 
 .include "../../mk/bsd.pkg.mk"

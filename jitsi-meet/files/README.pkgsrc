@@ -1,0 +1,26 @@
+$NetBSD$
+
+First, understand that installing jitsi-meet is an advanced-level
+system administration activity.  There is very little about jitsi-meet
+that is specific to pkgsrc.
+
+Read the upstream installation and configuration instructions:
+
+  https://jitsi.github.io/handbook/docs/devops-guide/
+
+Note that, surprisingly, there are no instructions for nginx
+configuration.  Apparently that is within the Debian packages, and
+reading that (after finding it) is likely helpful.  The following
+link, old and not validated, may also be helpful:
+
+  https://pub.nethence.com/chat/jitsi-meet-nginx
+
+Using prosody is the standard approach, documented by upstream.
+Multiple old web pages explain how to use ejabberd instead:
+
+  https://blog.windfluechter.net/content/blog/2020/06/19/1759-jitsi-meet-and-ejabberd
+  https://blog.jabberhead.tk/2020/03/16/install-jitsi-meet-alongside-ejabberd/
+
+An old configuration example:
+
+  https://github.com/debalance/meet.debalance.de/tree/master/etc

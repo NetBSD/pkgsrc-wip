@@ -4,8 +4,6 @@
 - Excise google analytics, following pkgsrc's norm of removing
   phone-home code.
 
-- Provide installation instructions.
-
 - No longer pull data from the network (see www/gitea)
 
 - Resolve chat/jitsi-meet/Makefile.common setting DISTINFO_FILE but

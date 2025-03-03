@@ -1,4 +1,5 @@
 @comment $NetBSD$
+share/doc/jitsi-meet/README.pkgsrc
 share/examples/jitsi-meet/config.js
 share/examples/jitsi-meet/interface_config.js
 share/examples/jitsi-meet/title.html
