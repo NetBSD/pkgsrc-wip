@@ -1,8 +1,7 @@
-- Place more configuration files in $SYSCONFDIR/jitsi-meet
-  (branding.json...)
-
-- Excise google analytics, following pkgsrc's norm of removing
-  phone-home code.
+- Following pkgsrc norms, ensure that there are no loads from
+  third-party sites in a default configuration, specifically avoiding:
+    . google analytics
+    . google openidconnect
 
 - No longer pull data from the network (see www/gitea)
 
