@@ -33,8 +33,9 @@ do-configure:
 		npm install
 
 # Running webpack takes a lot of RAM.  Building on a machine with 6000
-# MB, heavy paging resulted, and it wasn't clear that it would finish.
-# With 12000 MB, the package built without issues.
+# MB with WRKDIR on tmpfs, heavy paging resulted, and it wasn't clear
+# that it would finish.  With 10000 MB, it built in reasonable time
+# with some paging.  With 12000 MB, it built without issues.
 BUILD_TARGET=	compile
 
 INSTALL_TARGET=	deploy source-package
