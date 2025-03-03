@@ -9,6 +9,9 @@ HOMEPAGE=	https://docs.astral.sh/uv/
 COMMENT=	Extremely fast Python package and project manager
 LICENSE=	apache-2.0 OR mit
 
+# for included jemalloc
+USE_TOOLS+=	gmake
+
 .include "cargo-depends.mk"
 
 # Depends on unpublished crates. Can't use cargo.mk to fetch them.
