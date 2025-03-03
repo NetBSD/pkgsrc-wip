@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/electron_browser_main_parts.cc.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts.cc.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts.cc
 @@ -78,7 +78,7 @@
  #include "ui/wm/core/wm_state.h"

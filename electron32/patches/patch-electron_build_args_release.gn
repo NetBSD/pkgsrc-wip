@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/build/args/release.gn.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/build/args/release.gn.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/build/args/release.gn
 @@ -7,7 +7,7 @@ is_official_build = true
  # explicitly override here to build OpenH264 encoder/FFmpeg decoder.

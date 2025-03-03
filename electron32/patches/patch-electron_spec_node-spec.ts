@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/node-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/spec/node-spec.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/spec/node-spec.ts
 @@ -148,7 +148,8 @@ describe('node feature', () => {
      });

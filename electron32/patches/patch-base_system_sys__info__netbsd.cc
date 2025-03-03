@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- base/system/sys_info_netbsd.cc.orig	2025-02-17 11:32:29.298174394 +0000
+--- base/system/sys_info_netbsd.cc.orig	2025-03-03 17:47:27.449612236 +0000
 +++ base/system/sys_info_netbsd.cc
 @@ -0,0 +1,91 @@
 +// Copyright 2011 The Chromium Authors

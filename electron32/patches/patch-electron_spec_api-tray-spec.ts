@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-tray-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/spec/api-tray-spec.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/spec/api-tray-spec.ts
 @@ -131,7 +131,8 @@ describe('tray module', () => {
    describe('tray.getBounds()', () => {

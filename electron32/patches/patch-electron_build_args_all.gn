@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/build/args/all.gn.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/build/args/all.gn.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/build/args/all.gn
 @@ -14,8 +14,8 @@ v8_enable_snapshot_native_code_counters 
  v8_enable_javascript_promise_hooks = true

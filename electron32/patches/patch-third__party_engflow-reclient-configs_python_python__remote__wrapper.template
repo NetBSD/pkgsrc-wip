@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/engflow-reclient-configs/python/python_remote_wrapper.template.orig	2025-02-17 11:32:29.576323644 +0000
+--- third_party/engflow-reclient-configs/python/python_remote_wrapper.template.orig	2025-03-03 17:47:27.720910354 +0000
 +++ third_party/engflow-reclient-configs/python/python_remote_wrapper.template
 @@ -0,0 +1,29 @@
 +#!@SH@

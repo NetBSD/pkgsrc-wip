@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/app/electron_crash_reporter_client.h.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/app/electron_crash_reporter_client.h.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/app/electron_crash_reporter_client.h
 @@ -31,7 +31,7 @@ class ElectronCrashReporterClient : publ
        const std::map<std::string, std::string>& annotations);

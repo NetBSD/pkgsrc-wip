@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-desktop-capturer-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/spec/api-desktop-capturer-spec.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/spec/api-desktop-capturer-spec.ts
 @@ -45,7 +45,8 @@ ifdescribe(!process.arch.includes('arm')
    });

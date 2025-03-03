@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts_posix.cc
 @@ -210,6 +210,9 @@ void ElectronBrowserMainParts::InstallSh
    g_pipe_pid = getpid();

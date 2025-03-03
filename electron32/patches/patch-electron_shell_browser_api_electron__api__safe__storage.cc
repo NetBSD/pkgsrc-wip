@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_safe_storage.cc.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/api/electron_api_safe_storage.cc.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/api/electron_api_safe_storage.cc
 @@ -20,7 +20,7 @@ const char* kEncryptionVersionPrefixV11 
  bool use_password_v10 = false;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_web_contents.cc.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/api/electron_api_web_contents.cc.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/api/electron_api_web_contents.cc
 @@ -153,11 +153,11 @@
  #include "ui/base/cocoa/defaults_utils.h"
@@ -20,7 +20,7 @@ $NetBSD$
  #include "ui/gfx/font_render_params.h"
  #endif
  
-@@ -517,7 +517,7 @@ std::optional<base::TimeDelta> GetCursor
+@@ -520,7 +520,7 @@ std::optional<base::TimeDelta> GetCursor
        ui::TextInsertionCaretBlinkPeriodFromDefaults());
    if (system_value)
      return *system_value;
@@ -29,7 +29,7 @@ $NetBSD$
    if (auto* linux_ui = ui::LinuxUi::instance())
      return linux_ui->GetCursorBlinkInterval();
  #elif BUILDFLAG(IS_WIN)
-@@ -871,7 +871,7 @@ void WebContents::InitWithSessionAndOpti
+@@ -874,7 +874,7 @@ void WebContents::InitWithSessionAndOpti
    accept_languages.pop_back();
    prefs->accept_languages = accept_languages;
  
@@ -38,7 +38,7 @@ $NetBSD$
    // Update font settings.
    static const gfx::FontRenderParams params(
        gfx::GetFontRenderParams(gfx::FontRenderParamsQuery(), nullptr));
-@@ -2612,7 +2612,7 @@ void WebContents::ForcefullyCrashRendere
+@@ -2619,7 +2619,7 @@ void WebContents::ForcefullyCrashRendere
  
    content::RenderProcessHost* rph = rwh->GetProcess();
    if (rph) {
@@ -47,7 +47,7 @@ $NetBSD$
      // A generic |CrashDumpHungChildProcess()| is not implemented for Linux.
      // Instead we send an explicit IPC to crash on the renderer's IO thread.
      rph->ForceCrash();
-@@ -3291,7 +3291,7 @@ void WebContents::CopyImageAt(int x, int
+@@ -3298,7 +3298,7 @@ void WebContents::CopyImageAt(int x, int
  void WebContents::Focus() {
    // Focusing on WebContents does not automatically focus the window on macOS
    // and Linux, do it manually to match the behavior on Windows.
@@ -56,7 +56,7 @@ $NetBSD$
    if (owner_window())
      owner_window()->Focus(true);
  #endif
-@@ -4152,7 +4152,7 @@ ui::ImageModel WebContents::GetDevToolsW
+@@ -4159,7 +4159,7 @@ ui::ImageModel WebContents::GetDevToolsW
  }
  #endif
  

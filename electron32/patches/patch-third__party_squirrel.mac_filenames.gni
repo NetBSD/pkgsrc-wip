@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/squirrel.mac/filenames.gni.orig	2025-02-17 11:32:29.624747209 +0000
+--- third_party/squirrel.mac/filenames.gni.orig	2025-03-03 17:47:27.778198810 +0000
 +++ third_party/squirrel.mac/filenames.gni
 @@ -0,0 +1,243 @@
 +squirrel_filenames = {

@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=			electron32-${VERSION}
+DISTNAME=			${ELECTRON}-${ELECTRON_VER}
 # See ${WRKSRC}/electron/DEPS for versions
-VERSION=			32.3.0
 CHROMIUM_VERSION=		128.0.6613.186
 AUDIOIO_VERSION=		130.0
 NODE_VERSION=			20.18.1
@@ -22,10 +21,12 @@ CHROMIUM_DISTFILE=		chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C}
 CHROMIUM_DISTFILES=		chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C}.0
 CHROMIUM_DISTFILES+=		chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C}.1
 CHROMIUM_DISTFILES+=		chromium-${CHROMIUM_VERSION}${EXTRACT_SUFX_C}.2
+NODE_MODULES=			${ELECTRON}-node_modules-${ELECTRON_VER}.tar.gz
 SITES.${CHROMIUM_DISTFILE}.0=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v32.2.1/
 SITES.${CHROMIUM_DISTFILE}.1=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v32.2.1/
 SITES.${CHROMIUM_DISTFILE}.2=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v32.2.1/
 DISTFILES+=			${CHROMIUM_DISTFILES}
+DISTFILES+=			${NODE_MODULES}
 DISTFILES+=			${DEFAULT_DISTFILES}
 
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${AUDIOIO_VERSION} media/audio/audioio
@@ -68,22 +69,13 @@ TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-TOOL_DEPENDS+=			nodejs-20.*:../../lang/nodejs20
-#TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
 TOOL_DEPENDS+=			rust-bindgen-[0-9]*:../../devel/rust-bindgen
 TOOL_DEPENDS+=			yarn-[0-9]*:../../devel/yarn
 
 DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 
-.include "../../mk/bsd.prefs.mk"
+.include "platform.mk"
 .include "../../mk/compiler.mk"
-
-.for c_arch in x86_64 aarch64
-ONLY_FOR_PLATFORM+=		NetBSD-1[0-9].*-${c_arch}
-ONLY_FOR_PLATFORM+=		Linux-*-${c_arch}
-ONLY_FOR_PLATFORM+=		Darwin-*-${c_arch}
-ONLY_FOR_PLATFORM+=		FreeBSD-*-${c_arch}
-.endfor
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -162,8 +154,9 @@ GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	is_clang=true
+GN_ARGS+=	moc_qt6_path="${PREFIX}/qt6/libexec"
 GN_ARGS+=	optimize_webui=true
-GN_ARGS+=	override_electron_version="${VERSION}"
+GN_ARGS+=	override_electron_version="${ELECTRON_VER}"
 GN_ARGS+=	thin_lto_enable_optimizations=true
 GN_ARGS+=	treat_warnings_as_errors=false
 GN_ARGS+=	use_allocator_shim=false
@@ -174,6 +167,8 @@ GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
 GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	use_qt5=false
+GN_ARGS+=	use_qt6=true
 GN_ARGS+=	use_sndio=false
 GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
@@ -260,8 +255,12 @@ post-extract:
 	#${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 	# Install node modules for electron
+	${ECHO} "yarn-offline-mirror \"${WRKDIR}/${ELECTRON}-node_modules-${ELECTRON_VER}\"" \
+		>> ${WRKSRC}/electron/.yarnrc
 	${SED} -i.bak '/.*prepare.*husky.*/d' ${WRKSRC}/electron/package.json
-	cd ${WRKSRC}/electron && ${SETENV} yarn install --frozen-lockfile
+	cd ${WRKSRC}/electron && \
+		${SETENV} HOME=${WRKDIR}/.home XDG_CACHE_HOME=${HOME}/.cache \
+		yarn install --frozen-lockfile --offline
 
 pre-configure:
 	# Prepare internal ffmpeg
@@ -304,7 +303,6 @@ INSTALLATION_DIRS+=	bin
 ELECTRON_LIBS+=		libEGL.so
 ELECTRON_LIBS+=		libGLESv2.so
 ELECTRON_LIBS+=		libVkICD_mock_icd.so
-ELECTRON_LIBS+=		libvulkan.so.1
 ELECTRON_LIBS+=		libffmpeg.so
 .if ${MACHINE_ARCH} != "aarch64"
 ELECTRON_LIBS+=		libvk_swiftshader.so
@@ -318,6 +316,7 @@ do-install:
 .for i in ${ELECTRON_LIBS}
 	${INSTALL_LIB} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endfor
+	${INSTALL_LIB} ${BUILDDIR}/libvulkan.so.1 ${DESTDIR}${PREFIX}/lib/${PKGBASE}/libvulkan.so
 	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .for i in locales resources gen/electron/buildflags gen/v8/embedded.S
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
@@ -329,72 +328,7 @@ do-install:
 	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endfor
 
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
-.include "../../audio/libopus/buildlink3.mk"
-.include "../../audio/speech-dispatcher/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
-.include "../../devel/dconf/buildlink3.mk"
-.include "../../devel/libatomic/buildlink3.mk"
-.include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libevent/buildlink3.mk"
-.include "../../devel/libusb1/buildlink3.mk"
-.include "../../devel/nspr/buildlink3.mk"
-.include "../../devel/nss/buildlink3.mk"
-.include "../../devel/re2/buildlink3.mk"
-.include "../../devel/snappy/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../fonts/harfbuzz/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/libwebp/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-.include "../../lang/compiler-rt/buildlink3.mk"
-.include "../../lang/python/tool.mk"
-.include "../../lang/rust/rust.mk"
-.include "../../misc/usbids/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
-.include "../../multimedia/dav1d/buildlink3.mk"
-.include "../../multimedia/libaom/buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
-.include "../../multimedia/openh264/buildlink3.mk"
-.include "../../net/libcares/buildlink3.mk"
-.include "../../print/libcups/buildlink3.mk"
-.include "../../security/libgnome-keyring/buildlink3.mk"
-.include "../../security/libsecret/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../sysutils/pciutils/buildlink3.mk"
-# Use -lpciutils instead of -lpci for pkgsrc.
-BUILDLINK_TRANSFORM+=	l:pci:pciutils
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-.include "../../textproc/jsoncpp/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
-.include "../../www/nghttp2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXfixes/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

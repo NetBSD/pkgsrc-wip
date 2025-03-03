@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/default_app/default_app.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/default_app/default_app.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/default_app/default_app.ts
 @@ -61,7 +61,8 @@ async function createWindow (backgroundC
      show: false

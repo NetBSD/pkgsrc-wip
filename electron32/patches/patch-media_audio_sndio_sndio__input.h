@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- media/audio/sndio/sndio_input.h.orig	2025-02-17 11:32:29.468450445 +0000
+--- media/audio/sndio/sndio_input.h.orig	2025-03-03 17:47:27.614678627 +0000
 +++ media/audio/sndio/sndio_input.h
 @@ -0,0 +1,91 @@
 +// Copyright 2013 The Chromium Authors. All rights reserved.

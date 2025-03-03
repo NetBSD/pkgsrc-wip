@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- base/process/process_metrics_netbsd.cc.orig	2025-02-17 11:32:29.295221890 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2025-03-03 17:47:27.445950955 +0000
 +++ base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,175 @@
+@@ -0,0 +1,193 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -20,6 +20,8 @@ $NetBSD$
 +#include <sys/sysctl.h>
 +#include <sys/vmmeter.h>
 +
++#include "base/files/dir_reader_posix.h" // DirReaderPosix
++#include "base/process/internal_linux.h" // GetProcPidDir()
 +#include "base/memory/ptr_util.h"
 +#include "base/types/expected.h"
 +#include "base/values.h"
@@ -75,7 +77,23 @@ $NetBSD$
 +}
 +
 +int ProcessMetrics::GetOpenFdCount() const {
-+  return -1;
++  // Use /proc/<pid>/fd to count the number of entries there.
++  FilePath fd_path = internal::GetProcPidDir(process_).Append("fd");
++
++  DirReaderPosix dir_reader(fd_path.value().c_str());
++  if (!dir_reader.IsValid()) {
++    return -1;
++  }
++
++  int total_count = 0;
++  for (; dir_reader.Next();) {
++    const char* name = dir_reader.name();
++    if (strcmp(name, ".") != 0 && strcmp(name, "..") != 0) {
++      ++total_count;
++    }
++  }
++
++  return total_count;
 +}
 +
 +int ProcessMetrics::GetOpenFdSoftLimit() const {

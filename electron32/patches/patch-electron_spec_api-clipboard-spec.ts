@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-clipboard-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/spec/api-clipboard-spec.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/spec/api-clipboard-spec.ts
 @@ -54,7 +54,8 @@ ifdescribe(process.platform !== 'win32' 
      });

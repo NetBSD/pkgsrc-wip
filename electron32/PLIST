@@ -12,7 +12,7 @@ lib/electron32/libGLESv2.so
 lib/electron32/libVkICD_mock_icd.so
 lib/electron32/libffmpeg.so
 ${PLIST.swiftshader}lib/electron32/libvk_swiftshader.so
-lib/electron32/libvulkan.so.1
+lib/electron32/libvulkan.so
 lib/electron32/locales/af.pak
 lib/electron32/locales/af.pak.info
 lib/electron32/locales/am.pak

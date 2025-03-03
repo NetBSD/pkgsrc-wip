@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_desktop_capturer.cc.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/api/electron_api_desktop_capturer.cc.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/api/electron_api_desktop_capturer.cc
 @@ -46,7 +46,7 @@
  #endif

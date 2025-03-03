@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- base/threading/platform_thread_bsd.cc.orig	2025-02-17 11:32:29.299679583 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2025-03-03 17:47:27.451143616 +0000
 +++ base/threading/platform_thread_bsd.cc
 @@ -0,0 +1,31 @@
 +// Copyright 2023 The Chromium Authors

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/ui/views/electron_views_delegate.h.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/ui/views/electron_views_delegate.h.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/ui/views/electron_views_delegate.h
 @@ -44,7 +44,7 @@ class ViewsDelegate : public views::View
    HICON GetSmallWindowIcon() const override;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- v8/tools/run-paxctl.py.orig	2025-02-17 11:32:29.684442540 +0000
+--- v8/tools/run-paxctl.py.orig	2025-03-03 17:47:27.838127135 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
 +#!@PYTHONBIN@

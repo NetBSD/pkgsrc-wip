@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/lib/browser/api/menu-item-roles.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/lib/browser/api/menu-item-roles.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/lib/browser/api/menu-item-roles.ts
 @@ -2,7 +2,8 @@ import { app, BaseWindow, BrowserWindow,
  

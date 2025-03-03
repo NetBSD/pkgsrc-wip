@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/spec/api-power-monitor-spec.ts.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/spec/api-power-monitor-spec.ts.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/spec/api-power-monitor-spec.ts
 @@ -18,7 +18,8 @@ import { ifdescribe, startRemoteControlA
  describe('powerMonitor', () => {

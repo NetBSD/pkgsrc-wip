@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_power_monitor.cc.orig	2025-01-21 17:36:55.000000000 +0000
+--- electron/shell/browser/api/electron_api_power_monitor.cc.orig	2025-02-26 12:22:11.000000000 +0000
 +++ electron/shell/browser/api/electron_api_power_monitor.cc
 @@ -118,6 +118,11 @@ void PowerMonitor::OnSpeedLimitChange(in
        gin::DataObjectBuilder(isolate).Set("limit", speed_limit).Build());
