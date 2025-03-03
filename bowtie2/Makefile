@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/BenLangmead/bowtie2
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	gnu-gpl-v3
 
+ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax:build perl:run
 REPLACE_PERL=	scripts/*.pl bowtie2
