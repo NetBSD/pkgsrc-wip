@@ -17,7 +17,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_BASE_VERS}:../../databases/php-pdo_sqlite
 
-REPLACE_SH+=	vendor/twig/twig/drupal_test.sh
 REPLACE_SH+=	vendor/bin/sabredav
 
 PHP_VERSIONS_INCOMPATIBLE=	56 # as of 0.6.0
