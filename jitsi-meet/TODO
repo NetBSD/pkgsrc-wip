@@ -1,4 +1,16 @@
-- Place more configuration files in $SYSCONFDIR/jitsi-meet (branding.json...)
-- Provide installation instructions
+- Place more configuration files in $SYSCONFDIR/jitsi-meet
+  (branding.json...)
+
+- Excise google analytics, following pkgsrc's norm of removing
+  phone-home code.
+
+- Provide installation instructions.
+
 - No longer pull data from the network (see www/gitea)
-- Work around out of memory conditions (eg "ulimit -l $((`ulimit -l` * 2))")
+
+- Resolve chat/jitsi-meet/Makefile.common setting DISTINFO_FILE but
+  not PATCHDIR.  Makefile.common is partly for all jitsi-world
+  packages, and partly for things that use a specific distifile.
+  Perhaps that should be split into two fragments so that e.g. jicofo
+  would only include the larger-scope defines, and not have to undo
+  the jitsi-meet-specific settings.
