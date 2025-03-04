@@ -4369,6 +4369,7 @@ SUBDIR+=	py-portalocker
 SUBDIR+=	py-portray
 SUBDIR+=	py-poster
 SUBDIR+=	py-postgresfixture
+SUBDIR+=	py-posting
 SUBDIR+=	py-postmarkup
 SUBDIR+=	py-potr
 SUBDIR+=	py-pox
