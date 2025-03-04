@@ -2,7 +2,7 @@
 
 DISTNAME=	weewx-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
 EXTRACT_SUFX=	.tgz
@@ -25,7 +25,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
 
 # pyproject.toml, in order:
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj
-DEPENDS+=	${PYPKGPREFIX}-CT3>=3.1:../../wip/py-CT3 # textproc
+DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.4:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=5.2:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.6.0:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-pymysql>=1.0:../../databases/py-pymysql
