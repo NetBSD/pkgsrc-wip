@@ -85,6 +85,8 @@ RUN_ZIP_HASH=		sha256 -q ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH}/${
 RUN_NODEJS_VER=		node --version
 NODEJS_VER=		${RUN_NODEJS_VER:sh}
 
+NOT_PAX_MPROTECT_SAFE+=	lib/vscode/code-oss
+
 post-extract:
 	# Install script
 	${CP} ${FILESDIR}/code.sh.in ${WRKSRC}/code-oss.sh
@@ -147,8 +149,8 @@ do-build:
 		npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers \
 		npm --userconfig=${WRKSRC}/.npmrc run gulp vscode-linux-${ELECTRON_ARCH}-min
 	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
-		${WRKSRC}/.build/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
-	${FIND} ${WRKSRC} -type f -name '*.orig' -delete
+		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
+	${FIND} ${BUILDDIR} -type f -name '*.orig' -delete
 
 BUILDDIR=		${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}
 INSTALLATION_DIRS+=	lib/vscode
