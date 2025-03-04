@@ -1,0 +1,66 @@
+8.6.9
+
+UniFi Network Application 8.6.9 increases the VLAN limit on the
+EFG and UXG-Enterprise and includes the improvements and bugfixes
+listed below.
+
+Improvements
+
+ - Added the ability to filter the AP Density widget in the Dashboard by Radio Bands.
+ - Added French, Italian, and Portuguese as languages.
+ - Added Enhanced IoT Connectivity option in the advanced WiFi settings.
+ - Improved connectivity for IoT devices.
+ - Requires firmware version 6.6.78 and 7.0.66 or newer.
+ - Added support for packet captures on WAN ports.
+ - Improved the latency for loading the Dashboard.
+ - Improved the user experience for the Dashboard.
+ - Improved the user search experience within Hotspot Manager.
+ - Improved searching within Settings.
+ - Improved feedback in Port Manager when a device exceeds the Tagged VLAN Management limits.
+ - Renamed AP Analyzer to Radio Manager and improved the user experience.
+ - Renamed RF Scanning to AirTime Scan and is now available under Radios > Environment.
+ - Updated validation for WiFi Settings when MLO is enabled. It now requires WPA3/WPA3 Enterprise.
+ - Updated VLAN limit to 500 for the EFG and UXG-Enterprise.
+ - Requires UniFi (Cloud) Gateway firmware version 4.1 or newer.
+
+Bugfixes
+
+ - Fixed the inability to load the Dashboard after restoring backups in rare cases.
+ - Fixed an issue where some devices showed the AirTime scan but didn't support it.
+ - Fixed the inability to upload images in the Hotspot Portal designer in rare cases.
+ - Fixed an issue where users could configure NetFlow while the adopted Gateway didn't support it.
+ - Fixed an issue where MAC ACLs didn't function correctly when using any as source or destination.
+ - Fixed an issue where the Site-to-Site VPN status could be inaccurate on the Viewer page under Insights.
+ - Fixed the inability to open Settings in rare cases.
+ - Fixed an issue where some devices didn't list their signal strength in the AP Meshing settings.
+ - Fixed Packet Capture issues for Access Points using MLO.
+ - Fixed ISP Speed Test History on setups with a PPPoE connection.
+ - Fixed the inability to set SFP28 ports with FEC configured to auto-negotiation.
+
+
+8.5.6
+
+UniFi Network Application 8.5.6 adds support for support for NetFlow
+and Packet Capture on Gateways, and an improved Dashboard user
+experience including customizable widgets.
+
+Improved Dashboard
+
+Improved the Dashboard experience to provide immediate insight into
+critical issues, as well as allowing widgets and time ranges to be
+customized.
+
+ - Customize the Dashboard and widgets to focus on the information that is important for you.
+ - Widgets include Active Channels, AP Radio Overview and Deployment Density and Most Active APs, Clients and Apps.
+
+More widgets will be added in future releases.
+
+NetFlow
+
+Allows capturing and exporting traffic information to a collector.
+
+ - Versions 10, 9 and 5 are supported.
+ - Customize the collector address, port and rates.
+ - Requires a UniFi (Cloud) Gateway firmware version 4.1 or newer.
+
+NetFlow is not supported on the UniFi Express and UXG-Lite models.

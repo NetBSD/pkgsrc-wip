@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/08/28 19:34:24 abs Exp $
+# $NetBSD: options.mk,v 1.4 2024/06/07 15:33:17 abs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.unifi
 PKG_OPTIONS_GROUP.mongodb=	mongodb4 mongodb6

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2023/05/10 16:30:23 gdt Exp $
+# $NetBSD: Makefile,v 1.36 2024/09/21 13:37:34 abs Exp $
 
-DISTNAME=	unifi-8.2.93
+DISTNAME=	unifi-8.6.9
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
+DISTFILES=	${DEFAULT_DISTFILES}
 
 # Updates must be tested to not only build but actually function under
 # at least NetBSD 10/amd64 with actual UBNT hardware.
@@ -21,13 +22,11 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
-
 
 # Unifi bundles snappy-java-1.0.5.jar, which contains native code.
 # We can use the bundled snappy-java but we must recompile the native portion
-# because it only ship linux binaries. The rcd script takes care of loading the
+# because it only ships linux binaries. The rcd script takes care of loading the
 # correct library.
 SNAPPY_JAVA=		snappy-java-1.0.5.4
 # github.mk only works for the main MASTER_SITES definition and does
