@@ -911,6 +911,9 @@ share/emacs/${PKGVERSION}/etc/refcards/cs-survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/de-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/emacsver.tex
+share/emacs/${PKGVERSION}/etc/refcards/es-dired-ref.tex
+share/emacs/${PKGVERSION}/etc/refcards/es-refcard.tex
+share/emacs/${PKGVERSION}/etc/refcards/es-survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-survival.tex
