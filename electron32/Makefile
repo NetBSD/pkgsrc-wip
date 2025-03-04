@@ -229,7 +229,7 @@ GN_BOOTSTRAP_FLAGS+=	--skip-generate-buildfiles
 # This is pkgsrc use only.
 #GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\"
 
-#NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/electron
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/electron
 
 PKG_CC=			clang
 PKG_CXX=		clang++
