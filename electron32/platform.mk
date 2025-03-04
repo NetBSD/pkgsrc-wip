@@ -17,9 +17,9 @@ USE_ELECTRON?=		electronpkg
 
 TOOL_DEPENDS+=		nodejs-${NODE_VERSION_DEFAULT}.*:../../lang/nodejs${NODE_VERSION_DEFAULT}
 .if ${USE_ELECTRON} == "dependency"
-DEPENDS+=		${ELECTRON}-[0-9]*:../../wip/${ELECTRON}
+DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .elif ${USE_ELECTRON} == "bundled"
-TOOL_DEPENDS+=		${ELECTRON}-[0-9]*:../../wip/${ELECTRON}
+TOOL_DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,6 +38,12 @@ FILES_SUBST+=		ELECTRON=${ELECTRON}
 FILES_SUBST+=		ELECTRONBIN=${ELECTRONBIN}
 
 .if ${USE_ELECTRON} == "bundled" || ${USE_ELECTRON} == "electronpkg"
+
+PLIST_VARS+=		swiftshader
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.swiftshader=	yes
+.endif
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"

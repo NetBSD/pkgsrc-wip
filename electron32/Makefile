@@ -205,11 +205,9 @@ GN_ARGS+=	enable_rust=true \
 		rust_sysroot_absolute="${PREFIX}" \
 		rustc_version="${RUSTC_VERSION:sh}"
 
-PLIST_VARS+=		swiftshader
 .if ${MACHINE_ARCH} == "aarch64"
 FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
-PLIST.swiftshader=	yes
 FFMPEG_TARGET=		x64
 .endif
 
