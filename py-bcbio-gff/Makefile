@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcbio-gff/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/project/bcbio-gff/
+HOMEPAGE=	https://github.com/chapmanb/bcbb/tree/master/gff/
 COMMENT=	Read and write Generic Feature Format (GFF) with Biopython integration
 LICENSE=	modified-bsd
 
