@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Always use our versions of ffmpeg libs.
+# This also makes RPMs find the compatibly-named library symlinks.
+if [ -n "$LD_LIBRARY_PATH" ]; then
+	LD_LIBRARY_PATH="@PREFIX@/lib/vscode:$LD_LIBRARY_PATH"
+else
+	LD_LIBRARY_PATH="@PREFIX@/lib/vscode"
+fi
+export LD_LIBRARY_PATH
+
+ELECTRON_RUN_AS_NODE=1 exec @PREFIX@/lib/vscode/code-oss \
+@PREFIX@/lib/vscode/resources/app/out/cli.js "$@"

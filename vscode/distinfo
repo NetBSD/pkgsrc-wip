@@ -1,0 +1,31 @@
+$NetBSD: distinfo,v 1.82 2024/12/21 15:30:31 schwarz Exp $
+
+BLAKE2s (vscode-1.97.1.tar.gz) = 87f8723bd4108287fed7720bd25fd96725ad7fa77f9d2501598a34646c9548bc
+SHA512 (vscode-1.97.1.tar.gz) = 0b2222bba50276df07fcea79dfe34232610505c890b519e150b08ab5274c505e698e4e5e9a781050eb112b2ecdb611a69e9c7e84ec2f08c339facb76ee2f88e3
+Size (vscode-1.97.1.tar.gz) = 23875640 bytes
+BLAKE2s (vscode-node_modules-1.97.1.tar.gz) = 038304c6af1426720367e1ffea22cd95f4939294ff0024c8bd2c7881b115cff6
+SHA512 (vscode-node_modules-1.97.1.tar.gz) = 446e0fe70a1cccfb4e72e13572fef3ba441bef01e9585e94723a03fa183cae3463a49a505925facfa95d1dfbd7681fc980e84c70f30cdf85c4c2dc02dddf29b9
+Size (vscode-node_modules-1.97.1.tar.gz) = 416491170 bytes
+SHA1 (patch-build_lib_layersChecker.ts) = f7e07c4bf5d4f58ea37383aef61af71e2357f22a
+SHA1 (patch-build_lib_snapshotLoader.ts) = 7203f8fec3bd86684e85b70f00825aa69661156b
+SHA1 (patch-extensions_emmet_src_test_testUtils.ts) = 9c4c756e44a191ab2ab660170cc27534fe838eef
+SHA1 (patch-extensions_vscode-api-tests_src_utils.ts) = 6d5ab29d490d52bb64635a5dcf2de89cd36ea5ab
+SHA1 (patch-extensions_vscode-test-resolver_src_util_processes.ts) = 2156802e40b6aa923e812fb67e1767a87ce92c78
+SHA1 (patch-node__modules_kerberos_binding.gyp) = 32c308f346cc3ea4263bea8fe9f36b6f133dde7e
+SHA1 (patch-node__modules_kerberos_src_kerberos__common.h) = f564f3a2b2873440c8bd6c5e634a562355539360
+SHA1 (patch-node__modules_node-pty_src_unix_pty.cc) = cfff2b99cb736d05b982376871ec1e659f805d30
+SHA1 (patch-product.json) = 36f64bed665c508a803b93699ee8a74f83106261
+SHA1 (patch-remote_node__modules_kerberos_binding.gyp) = 181de4a582e39b73347952906df373c78f875ab2
+SHA1 (patch-remote_node__modules_kerberos_src_kerberos__common.h) = 132467c87f9afee83dbd5fbb90500435ee9b5128
+SHA1 (patch-remote_node__modules_node-pty_src_unix_pty.cc) = 35d79718a3c7566e9e960923e1dc95266d1181e0
+SHA1 (patch-scripts_code-perf.js) = 9809b850f0fa27723dac17751e691a874fe6c266
+SHA1 (patch-src_bootstrap-node.ts) = 3460a917204359adef752aaf73523e13b8d95103
+SHA1 (patch-src_main.ts) = f2bc16c9948d5c5c18c5c7697219c47a4b1d343f
+SHA1 (patch-src_vs_base_common_platform.ts) = 1c8b0c4ecc8727805c266375996dcb8e4e63a3bb
+SHA1 (patch-src_vs_base_node_ps.ts) = d4d52c095715b34321f3dd833e9daa882211a8ed
+SHA1 (patch-src_vs_code_electron-main_app.ts) = 0d7c988602b3814afcd000c92440df0e4a0be784
+SHA1 (patch-src_vs_platform_environment_node_userDataPath.ts) = b97d4f7c23193fe64380357657a6fb189764aa43
+SHA1 (patch-src_vs_platform_native_electron-main_nativeHostMainService.ts) = 78137b5d717011bcee3b5106017a712d22263d8e
+SHA1 (patch-src_vs_workbench_api_browser_mainThreadTask.ts) = 7e642866645295edd126c9984bab69d4cbfcf4e5
+SHA1 (patch-src_vs_workbench_services_actions_common_menusExtensionPoint.ts) = 6dbb9ffd7621f265871d27a395137b0f1572ad94
+SHA1 (patch-test_automation_src_electron.ts) = fc23124393f19d7af8c061d86b33141af05f3aa7
