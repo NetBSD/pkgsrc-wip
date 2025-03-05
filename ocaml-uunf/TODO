@@ -1,8 +1,8 @@
-  - Fix ocaml crash during build.
+  - Fix ocaml crash during build.  Apparently ocamlopt crashes.  It
+    seems reasonable to use the bytecode compiler instead, but that
+    seems buried in topkg.
 
   - See if OPAM should be overriding do-build, or if the override in
     Makefile is ok.
 
-  - Figure out USE_LANGUAGES.
-
-  - Resolve use of uutf or not.
+  - Resolve topkg having a bl3 file, when it's a build tool.

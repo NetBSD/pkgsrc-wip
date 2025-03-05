@@ -20,14 +20,11 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=
 
 .include "../../lang/ocaml/ocaml.mk"
-OCAML_USE_DUNE=			yes
-OCAML_USE_OPAM=			yes
-# Compiler crashes during build.
-OCAML_USE_OPT_COMPILER=		no
 
 do-build:
 	cd ${WRKSRC} && ocaml pkg/pkg.ml build
 
-# Earliier, it seemed to demand uutf, despite documenting no dependencies.
-#.include "../../textproc/ocaml-uutf/buildlink3.mk"
+# Why does ocaml-topkg have a bl3 if it's a build tool?
+#.include "../../misc/ocaml-topkg/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
