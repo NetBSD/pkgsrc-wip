@@ -3,6 +3,9 @@ $NetBSD$
 Apply patch from https://gitlab.isc.org/isc-projects/bind9/-/issues/5198
 to work around core dump observed there.
 
+Also apply fix for https://gitlab.isc.org/isc-projects/bind9/-/issues/5215
+to work around a similar core dump / crash.
+
 --- lib/dns/zone.c.orig	2025-02-11 17:35:31.021335759 +0000
 +++ lib/dns/zone.c
 @@ -18212,18 +18212,22 @@ dns_zone_getsourceaddr(dns_zone_t *zone)
@@ -33,3 +36,14 @@ to work around core dump observed there.
  }
  
  isc_time_t
+@@ -18284,7 +18288,9 @@ get_request_transport_type(dns_zone_t *z
+ 					 : DNS_TRANSPORT_UDP;
+ 
+ 		/* Check if the peer is forced to always use TCP. */
+-		if (transport_type != DNS_TRANSPORT_TCP) {
++		if (transport_type != DNS_TRANSPORT_TCP &&
++		    !dns_remote_done(&zone->primaries))
++		 {
+ 			isc_result_t result;
+ 			isc_sockaddr_t primaryaddr;
+ 			isc_netaddr_t primaryip;

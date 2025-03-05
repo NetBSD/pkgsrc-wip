@@ -6,4 +6,4 @@ Size (bind-9.20.6.tar.xz) = 5639720 bytes
 SHA1 (patch-bin_named_statschannel.c) = 0be5baa65ad129f5ed551ae239d49091c177d91d
 SHA1 (patch-configure.ac) = f1f672271aa38c10b12d12d48455eb0af82d270c
 SHA1 (patch-lib_dns_include_dns_zone.h) = 14cc09f7ad1fa9cd29ec089c294111c48a403535
-SHA1 (patch-lib_dns_zone.c) = e6d1e643181271c185bc92fb188becb85f7340fb
+SHA1 (patch-lib_dns_zone.c) = 4010551aa4b9d8c302137da94db96aa27285dde4
