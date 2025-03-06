@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.340 2024/04/07 07:33:58 wiz Exp $
 
-DISTNAME=	qemu-8.2.2
+DISTNAME=	qemu-9.2.2
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
@@ -13,6 +13,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 USE_LANGUAGES+=		c c++
 #USE_TOOLS+=		bison flex makeinfo perl:build pod2man pkg-config
@@ -26,15 +30,14 @@ RCD_SCRIPTS=		qemu-guest-agent
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+BUILDLINK_TRANSFORM+=	rm:-lint
 
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--python=${PYTHONBIN}
-CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 ALL_ENV+=		MESON_RSP_THRESHOLD=262144
@@ -49,7 +52,7 @@ CONFIGURE_ARGS+=	--disable-bzip2
 CONFIGURE_ARGS+=	--disable-cap-ng
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 CONFIGURE_ARGS+=	--disable-curses
-CONFIGURE_ARGS+=	--disable-docs
+#CONFIGURE_ARGS+=	--disable-docs
 CONFIGURE_ARGS+=	--disable-fdt
 CONFIGURE_ARGS+=	--disable-gcrypt
 CONFIGURE_ARGS+=	--disable-glusterfs
@@ -87,12 +90,20 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
 		ninja -j ${_MAKE_JOBS_N:U1} -C build install
+	# not needed for guest agent
+	${RM} -r ${DESTDIR}${PREFIX}/include/qemu-plugin.h
+	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qemu.1
+	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-block-drivers.7
+	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-cpu-models.7
+	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-qmp-ref.7
+	${RM} -r ${DESTDIR}${PREFIX}/share/doc/qemu
+	${RM} -r ${DESTDIR}${PREFIX}/share/qemu/keymaps
+	${RM} -r ${DESTDIR}${PREFIX}/share/qemu/trace-events-all
 
 # Some dependencies aren't correct and this tries to be re-made on install,
 # failing due to configure bugs.
 post-build:
 	${TOUCH} ${WRKSRC}/config-host.mak
-
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/tool.mk"

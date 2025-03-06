@@ -1,7 +1,4 @@
 @comment $NetBSD$
 bin/qemu-ga
-include/qemu-plugin.h
-share/qemu/trace-events-all
-@pkgdir var/run
-@pkgdir share/doc/qemu
-@pkgdir man/man1
+man/man7/qemu-ga-ref.7
+man/man8/qemu-ga.8
