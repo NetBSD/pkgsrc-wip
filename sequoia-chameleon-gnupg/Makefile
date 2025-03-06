@@ -29,11 +29,17 @@ INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 INSTALLATION_DIRS+=	share/zsh/site-functions
 
+# https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg/-/issues/127
+BUILDLINK_TRANSFORM+=	rm:-lnettl
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/man-pages/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/sq.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions
-	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/sq.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d
-	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/_sq ${DESTDIR}${PREFIX}/share/zsh/site-functions
+	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/gpg-sq.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions
+	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/gpgv-sq.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions
+	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/gpg-sq.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d
+	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/gpgv-sq.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d
+	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/_gpg-sq ${DESTDIR}${PREFIX}/share/zsh/site-functions
+	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/_gpgv-sq ${DESTDIR}${PREFIX}/share/zsh/site-functions
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
