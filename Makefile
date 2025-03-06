@@ -5831,7 +5831,6 @@ SUBDIR+=	using-mpi
 SUBDIR+=	usrsctp
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
-SUBDIR+=	uv
 SUBDIR+=	uzbl
 SUBDIR+=	uzbl-git
 SUBDIR+=	v8
