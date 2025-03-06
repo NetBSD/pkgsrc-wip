@@ -5284,6 +5284,7 @@ SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	sent
 SUBDIR+=	seqtk
+SUBDIR+=	sequoia-chameleon-gnupg
 SUBDIR+=	serendipity
 SUBDIR+=	serious-engine-tfe-git
 SUBDIR+=	serious-engine-tse-git
