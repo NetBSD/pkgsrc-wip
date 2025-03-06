@@ -125,3 +125,42 @@ Reported by un3xploitable && GF on 2024-12-11
 [$4000][390590778] Medium CVE-2025-1006: Use after free in Network.
 Reported by Tal Keren, Sam Agranat, Eran Rom, Edouard Bochin,
 Adam Hatsir of Palo Alto Networks on 2025-01-18
+
+* 133.0.6943.141
+This update includes 1 security fix. Please see the Chrome Security
+Page for more information.
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[399107077]Various fixes from internal audits, fuzzing and other
+initiatives
+
+* 134.0.6998.35
+This update includes 14 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$7000][397731718] High CVE-2025-1914: Out of bounds read in V8.
+Reported by Zhenghang Xiao (@Kipreyyy) and Nan Wang (@eternalsakura13)
+on 2025-02-20
+[$4000][391114799] Medium CVE-2025-1915: Improper Limitation of a
+Pathname to a Restricted Directory in DevTools. Reported by
+Topi Lassila on 2025-01-20
+[$3000][376493203] Medium CVE-2025-1916: Use after free in Profiles.
+Reported by parkminchan, SSD Labs Korea on 2024-10-31
+[$2000][329476341] Medium CVE-2025-1917: Inappropriate Implementation
+in Browser UI. Reported by Khalil Zhani on 2024-03-14
+[$2000][388557904] Medium CVE-2025-1918: Out of bounds read in PDFium.
+Reported by asnine on 2025-01-09
+[$2000][392375312] Medium CVE-2025-1919: Out of bounds read in Media.
+Reported by @Bl1nnnk and @Pisanbao on 2025-01-26
+[$1000][387583503] Medium CVE-2025-1921: Inappropriate Implementation
+in Media Stream. Reported by Kaiido on 2025-01-04
+[$5000][384033062] Low CVE-2025-1922: Inappropriate Implementation in
+Selection. Reported by Alesandro Ortiz on 2024-12-14
+[$1000][382540635] Low CVE-2025-1923: Inappropriate Implementation in
+Permission Prompts. Reported by Khalil Zhani on 2024-12-06
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[400559715] Various fixes from internal audits, fuzzing and other initiatives
+
