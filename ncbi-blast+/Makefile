@@ -61,6 +61,8 @@ CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 # pkglint warning, but build fails on NetBSD without it
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
+# configure script and build system disagree about sse42 on AMD Phenom
+CONFIGURE_ARGS+=	--without-sse42
 WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
 .include "../../mk/bsd.prefs.mk"
