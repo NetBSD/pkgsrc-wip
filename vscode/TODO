@@ -1,0 +1,8 @@
+Build on NetBSD latest stable branch pkgsrc -trunk, and pkgsrc latest quarterly.
+Tested on NetBSD latest stable branch with latest pkgsrc quarterly.
+
+NOTE:
+1) Pasting doesn't work:
+Known issue with electron32, comming release based on electron34 will fix
+- workaround: Removing editor.action.clipboardPasteAction keyboard shortcut
+  see: https://wiki.archlinux.org/title/Visual_Studio_Code#Pasting_doesn't_work

@@ -6,6 +6,9 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
 
 NODE_MODULES=		vscode-node_modules-${PKGVERSION_NOREV}.tar.gz
+#NOTE: SITES.${NODE_MODULES} doesn't work
+#SITES.${NODE_MODULES}=	https://downloads.sourceforge.net/sourceforge/kikadf/NetBSD/
+MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=kikadf/NetBSD/}
 DISTFILES+=		${NODE_MODULES}
 DISTFILES+=		${DEFAULT_DISTFILES}
 
