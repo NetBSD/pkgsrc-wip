@@ -1,4 +1,4 @@
-devel/uv: Add uv version 0.6.4
+devel/uv: Add uv version 0.5.13
 
 uv is an extremely fast Python package and project manager written in
 Rust.  It aims to replace a variety of tools such as pip, pip-tools,

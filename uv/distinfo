@@ -1674,4 +1674,5 @@ Size (zstd-safe-7.2.1.crate) = 21122 bytes
 BLAKE2s (zstd-sys-2.0.13+zstd.1.5.6.crate) = df71c3b7a2dd396817e8e71eee920caccb9ae769f06d82920e6eea55df3be7dc
 SHA512 (zstd-sys-2.0.13+zstd.1.5.6.crate) = c1f0176ebd0914879d0060796776c7fe376293ce9bc9f8f07ee3b809932a75aa033881d59a1bc99b6cd9af85b8e225fc09bcfc96013e556d7c11f155b759ecbf
 Size (zstd-sys-2.0.13+zstd.1.5.6.crate) = 749090 bytes
-SHA1 (patch-Cargo.toml) = 80bc003c67aa2d3fbe665ef4103eec8246b7d86c
+SHA1 (patch-Cargo.toml) = 129e2232fe022cf197f4bf7000abe210fcca4480
+SHA1 (patch-crates_uv-client_Cargo.toml) = 05f9a564b83557d0d3f8434d47d855cdbaeae621
