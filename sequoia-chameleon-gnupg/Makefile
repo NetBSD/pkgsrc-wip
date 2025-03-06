@@ -29,9 +29,6 @@ INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 INSTALLATION_DIRS+=	share/zsh/site-functions
 
-# https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg/-/issues/127
-BUILDLINK_TRANSFORM+=	rm:-lnettl
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/man-pages/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/target/release/build/sequoia-chameleon-gnupg-*/out/shell-completions/gpg-sq.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions

@@ -30,8 +30,6 @@ RCD_SCRIPTS=		qemu-guest-agent
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
 
-BUILDLINK_TRANSFORM+=	rm:-lint
-
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
