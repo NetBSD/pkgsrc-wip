@@ -14,3 +14,6 @@ warning: sequoia-chameleon-gnupg@0.12.0: shell completions written to /scratch/s
 warning: sequoia-chameleon-gnupg@0.12.0: man pages written to /scratch/security/sequoia-chameleon-gnupg/work/sequoia-chameleon-gnupg-v0.12.0-bba1ced319eb4cd34d937392054d9d0ea0838243/target/release/build/sequoia-chameleon-gnupg-51a9f693b2f17ea6/out/man-pages
 
 error: could not compile `sequoia-chameleon-gnupg` (bin "gpgv-sq") due to 1 previous error; 2 warnings emitted
+
+Reported upstream at:
+https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg/-/issues/127
