@@ -8,6 +8,7 @@ SHA1 (patch-src_algo_blast_core_blast__kappa.c) = 6fcad996b3a8e5b6c2400608bff9de
 SHA1 (patch-src_build-system_Makefile.in.top) = 71d5246867a8c985c1175c338fb0af664094ca01
 SHA1 (patch-src_build-system_configure) = 95185d53179a69a1b1cfa6870aca36dd962d2c43
 SHA1 (patch-src_build-system_helpers_Makefile.run__with__lock.app) = d69b9e349646c970c3b296707f917defbe39cccd
+SHA1 (patch-src_objtools_blast_seqdb__reader_test_seqdb__perf.cpp) = 7f562585357d70150494bcfcd9f259fc031ca165
 SHA1 (patch-src_util_checksum_cityhash_city.cc) = ff8e84d90a4fc0d9d33e17abd05ed8e9f2de12fc
 SHA1 (patch-src_util_checksum_farmhash_farmhash.cc) = 9b56d69ab7c0da328c35bba4dde04134dd80efc6
 SHA1 (patch-src_util_checksum_farmhash_farmhash.h) = c3ff60de9a9020d3b706c2bff37f6f4cde4e6b6b
