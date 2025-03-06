@@ -1,8 +1,22 @@
 $NetBSD$
 
+Don't override docdir when prefix is set
+Fixed the lack of build and host options.
+It always failed to find patch even though it's there.
+
 --- configure.orig	2023-12-22 16:18:46.000000000 +0000
 +++ configure
-@@ -1120,6 +1120,9 @@ while : ; do
+@@ -682,8 +682,7 @@ while : ; do
+       zipdir=$libdir/$fildir;
+       dlldir=$libdir/$fildir;
+       mandir=$prefix/man/man1;
+-      infodir=$prefix/info;
+-      docdir=$prefix/doc/bigloo-$release;;
++      infodir=$prefix/info;;
+ 
+     --bigloo=*)
+       bigloo="`echo $1 | sed 's/^[^=]*=//'`";;
+@@ -1120,6 +1119,9 @@ while : ; do
      --enable-srfi27)
        srfi27force="yes";;
  
@@ -12,7 +26,7 @@ $NetBSD$
      --enable-*)
        api="`echo $1 | sed 's/--[^-]*-//'`";
        add=1;
-@@ -1151,6 +1154,12 @@ while : ; do
+@@ -1151,6 +1153,12 @@ while : ; do
      --hostsh=*)
        hostsh="`echo $1 | sed 's/^[^=]*=//'`";;
  
@@ -25,7 +39,7 @@ $NetBSD$
      -*)
        if [ "$1" != "-h" -a "$1" != "-help" -a "$1" != "--help" ]; then
          echo "*** ERROR: unknown option \"$1\""
-@@ -2119,18 +2128,18 @@ if [ $action = "all" -o $action = "biglo
+@@ -2119,18 +2127,18 @@ if [ $action = "all" -o $action = "biglo
  fi
  
  # checking patch
@@ -55,7 +69,7 @@ $NetBSD$
    
  #*---------------------------------------------------------------------*/
  #*    Executable names                                                 */
-@@ -2242,7 +2251,7 @@ else
+@@ -2242,7 +2250,7 @@ else
    fi
  
    if [ "$gcparallelmark " = "yes " ]; then

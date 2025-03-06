@@ -5,23 +5,24 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp-sop.inria.fr/indes/fp/Bigloo/
 
 MAINTAINER=	ktnb@NetBSD.org
-HOMEPAGE=	ftp://ftp-sop.inria.fr/indes/fp/Bigloo/
+HOMEPAGE=	https://www-sop.inria.fr/indes/fp/Bigloo/
 COMMENT=	Scheme development environment
 LICENSE=	gnu-gpl-v2
 
 CHECK_PORTABILITY_SKIP+=	api-contribs/bigloo-with-dbus/configure
 
-USE_LANGUAGE=	c c++
-USE_TOOLS=	gmake autoconf automake alocal pkg-config
-HAS_CONFIGURE=		yes
+USE_LANGUAGES=	c c++
+USE_TOOLS=	gmake autoconf automake pkg-config
+HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
+INFO_FILES=	yes
 
-LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}
 
-CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=/usr/pkg/man
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
-CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
-CONFIGURE_ARGS+=	--lflags=${LDFLAGS:Q}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--cflags=${CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--lflags=${LDFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--ldflags=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--customgc=no
 CONFIGURE_ARGS+=	--gccustominstall=skip
 CONFIGURE_ARGS+=	--gclibdir=${PREFIX}/lib
@@ -31,12 +32,10 @@ CONFIGURE_ARGS+=	--disable-pcre
 CONFIGURE_ARGS+=	--disable-pcre2
 CONFIGURE_ARGS+=	--customunistring=no
 CONFIGURE_ARGS+=	--disable-libbacktrace
-
-#do-configure:
-#	cd ${WRKSRC} && ./configure ${CONFIGURE_ARGS}
+CONFIGURE_ARGS+=	--no-share
 
 do-build:
-	cd ${WRKSRC} && ${MAKE_ENVS} LDFLAGS=${LDFLAGS:Q} CFLAGS=${CFLAGS:Q} ${GMAKE}
+	cd ${WRKSRC} && LDFLAGS=${LDFLAGS:M*:Q} CFLAGS=${CFLAGS:M*:Q} ${GMAKE}
 
 
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -45,7 +44,6 @@ do-build:
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-#.include "../../wip/libbacktrace/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=     opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
