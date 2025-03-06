@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/accounts_policy_manager.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/signin/accounts_policy_manager.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/signin/accounts_policy_manager.cc
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
  #include "chrome/browser/ui/webui/profile_helper.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/policy/core/common/features.h"
  #include "components/signin/public/identity_manager/accounts_mutator.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -208,7 +208,7 @@ void AccountsPolicyManager::Initialize()
+@@ -209,7 +209,7 @@ void AccountsPolicyManager::Initialize()
            &AccountsPolicyManager::OnGoogleServicesUsernamePatternChanged,
            weak_pointer_factory_.GetWeakPtr()));
  
@@ -24,7 +24,7 @@ $NetBSD$
    auto* identity_manager = IdentityManagerFactory::GetForProfile(profile_);
    identity_manager_observation_.Observe(identity_manager);
    profile_pref_change_registrar_.Init(profile_->GetPrefs());
-@@ -223,7 +223,7 @@ void AccountsPolicyManager::Initialize()
+@@ -224,7 +224,7 @@ void AccountsPolicyManager::Initialize()
  }
  
  void AccountsPolicyManager::Shutdown() {
@@ -33,7 +33,7 @@ $NetBSD$
    profile_pref_change_registrar_.RemoveAll();
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
    local_state_pref_registrar_.RemoveAll();
-@@ -340,7 +340,7 @@ void AccountsPolicyManager::OnUserConfir
+@@ -341,7 +341,7 @@ void AccountsPolicyManager::OnUserConfir
  }
  #endif  // defined(TOOLKIT_VIEWS) && !BUILDFLAG(IS_CHROMEOS)
  

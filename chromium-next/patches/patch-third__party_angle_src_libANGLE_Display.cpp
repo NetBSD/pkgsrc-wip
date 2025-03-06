@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -58,7 +58,7 @@
  #        include "libANGLE/renderer/gl/wgl/DisplayWGL.h"
@@ -51,7 +51,7 @@ $NetBSD$
      extensions.platformSurfacelessMESA = true;
  #endif
  
-@@ -2185,7 +2185,7 @@ static ClientExtensions GenerateClientEx
+@@ -2186,7 +2186,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

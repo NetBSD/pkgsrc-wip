@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -406,7 +406,7 @@
+@@ -427,7 +427,7 @@
        name: "AppTitle",
        status: "experimental",
        origin_trial_feature_name: "AppTitle",
@@ -15,7 +15,7 @@ $NetBSD$
        base_feature: "WebAppEnableAppTitle",
      },
      {
-@@ -1559,7 +1559,7 @@
+@@ -1599,7 +1599,7 @@
        name: "DocumentIsolationPolicy",
        status: "experimental",
        origin_trial_feature_name: "DocumentIsolationPolicy",
@@ -24,7 +24,7 @@ $NetBSD$
        base_feature: "none",
      },
      {
-@@ -1852,7 +1852,7 @@
+@@ -1895,7 +1895,7 @@
        base_feature: "none",
        public: true,
        origin_trial_feature_name: "FedCmMultipleIdentityProviders",
@@ -33,16 +33,16 @@ $NetBSD$
        origin_trial_allows_third_party: true,
      },
      {
-@@ -3275,7 +3275,7 @@
+@@ -3285,7 +3285,7 @@
        // Tracking bug for the implementation: https://crbug.com/1462930
        name: "PermissionElement",
        origin_trial_feature_name: "PermissionElement",
--      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
-+      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd", "netbsd"],
-       status: {"Android": "", "default": "experimental"},
+-      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "android"],
++      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "android", "openbsd", "freebsd", "netbsd"],
+       status: "experimental",
        public: true,
        base_feature_status: "enabled",
-@@ -3401,7 +3401,7 @@
+@@ -3422,7 +3422,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
@@ -51,7 +51,7 @@ $NetBSD$
        status: "stable",
        public: true,
        base_feature: "none",
-@@ -4433,7 +4433,7 @@
+@@ -4482,7 +4482,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -60,7 +60,7 @@ $NetBSD$
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4617,7 +4617,7 @@
+@@ -4669,7 +4669,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -69,3 +69,12 @@ $NetBSD$
        status: "experimental",
        base_feature: "none",
      },
+@@ -4938,7 +4938,7 @@
+     {
+       name: "WebIdentityDigitalCredentials",
+       origin_trial_feature_name: "WebIdentityDigitalCredentials",
+-      origin_trial_os: ["android", "win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["android", "win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       origin_trial_allows_third_party: true,
+       implied_by: ["WebIdentityDigitalCredentialsCreation"],
+       public: true,

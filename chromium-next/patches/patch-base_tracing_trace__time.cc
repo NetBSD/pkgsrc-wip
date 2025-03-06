@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/tracing/trace_time.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/tracing/trace_time.cc
-@@ -8,13 +8,19 @@
+@@ -8,12 +8,18 @@
  #include "build/build_config.h"
  #include "third_party/perfetto/include/perfetto/base/time.h"
  
@@ -16,8 +16,7 @@ $NetBSD$
 +#define CLOCK_BOOTTIME CLOCK_MONOTONIC
 +#endif
 +
- namespace base {
- namespace tracing {
+ namespace base::tracing {
  
  int64_t TraceBootTicksNow() {
    // On Windows and Mac, TRACE_TIME_TICKS_NOW() behaves like boottime already.

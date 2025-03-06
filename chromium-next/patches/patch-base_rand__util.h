@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/rand_util.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/rand_util.h
-@@ -141,7 +141,7 @@ void RandomShuffle(Itr first, Itr last) 
+@@ -209,7 +209,7 @@ void RandomShuffle(Itr first, Itr last) 
    std::shuffle(first, last, RandomBitGenerator());
  }
  

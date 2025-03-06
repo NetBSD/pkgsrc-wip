@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/linux/unbundle/icu.gn.orig	2025-02-17 21:09:38.000000000 +0000
+--- build/linux/unbundle/icu.gn.orig	2025-02-25 19:55:16.000000000 +0000
 +++ build/linux/unbundle/icu.gn
 @@ -17,6 +17,15 @@ config("icu_config") {
      "USING_SYSTEM_ICU=1",

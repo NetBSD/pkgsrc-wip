@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/supervised_user/core/common/features.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/supervised_user/core/common/features.h
-@@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(
+@@ -30,7 +30,7 @@ BASE_DECLARE_FEATURE(
  // Applies new informative strings during the parental extension approval flow.
  BASE_DECLARE_FEATURE(kUpdatedSupervisedUserExtensionApprovalStrings);
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop);
  #endif
  
-@@ -55,11 +55,11 @@ BASE_DECLARE_FEATURE(kCustomProfileStrin
+@@ -60,7 +60,7 @@ BASE_DECLARE_FEATURE(kCustomProfileStrin
  
  // Displays a Family Link kite badge on the supervised user avatar in various
  // surfaces.
@@ -24,17 +24,12 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kShowKiteForSupervisedUsers);
  #endif
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- // Uses supervised user strings on the signout dialog.
- BASE_DECLARE_FEATURE(kEnableSupervisedUserVersionSignOutDialog);
- 
-@@ -74,7 +74,7 @@ BASE_DECLARE_FEATURE(kHideGuestModeForSu
+@@ -68,7 +68,7 @@ BASE_DECLARE_FEATURE(kShowKiteForSupervi
  // unauthenticated (e.g. signed out of the content area) account.
  BASE_DECLARE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- // Force re-authentication when an unauthenticated supervised user tries to
- // access YouTube, so that content restrictions can be applied.
- BASE_DECLARE_FEATURE(kForceSupervisedUserReauthenticationForYouTube);
+ // Uses supervised user strings on the signout dialog.
+ BASE_DECLARE_FEATURE(kEnableSupervisedUserVersionSignOutDialog);
+ 

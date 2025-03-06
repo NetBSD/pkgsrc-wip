@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/tab_strip_prefs.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/tabs/tab_strip_prefs.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/tabs/tab_strip_prefs.cc
-@@ -20,7 +20,7 @@ namespace tabs {
+@@ -21,7 +21,7 @@ namespace tabs {
  
  bool GetDefaultTabSearchRightAligned() {
    // These platforms are all left aligned, the others should be right.

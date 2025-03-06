@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run_dialog.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/first_run/first_run_dialog.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/first_run/first_run_dialog.h
 @@ -12,7 +12,7 @@
  // Hide this function on platforms where the dialog does not exist.

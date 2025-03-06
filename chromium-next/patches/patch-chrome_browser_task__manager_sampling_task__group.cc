@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.cc
-@@ -41,7 +41,7 @@ const int kBackgroundRefreshTypesMask =
+@@ -36,7 +36,7 @@ const int kBackgroundRefreshTypesMask =
  #if BUILDFLAG(IS_WIN)
      REFRESH_TYPE_START_TIME | REFRESH_TYPE_CPU_TIME |
  #endif  // BUILDFLAG(IS_WIN)
@@ -15,7 +15,7 @@ $NetBSD$
      REFRESH_TYPE_FD_COUNT |
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
  #if BUILDFLAG(ENABLE_NACL)
-@@ -126,7 +126,7 @@ TaskGroup::TaskGroup(
+@@ -117,7 +117,7 @@ TaskGroup::TaskGroup(
  #if BUILDFLAG(ENABLE_NACL)
        nacl_debug_stub_port_(nacl::kGdbDebugStubPortUnknown),
  #endif  // BUILDFLAG(ENABLE_NACL)
@@ -24,7 +24,7 @@ $NetBSD$
        open_fd_count_(-1),
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
        idle_wakeups_per_second_(-1),
-@@ -145,7 +145,7 @@ TaskGroup::TaskGroup(
+@@ -132,7 +132,7 @@ TaskGroup::TaskGroup(
                              weak_ptr_factory_.GetWeakPtr()),
          base::BindRepeating(&TaskGroup::OnIdleWakeupsRefreshDone,
                              weak_ptr_factory_.GetWeakPtr()),
@@ -33,7 +33,7 @@ $NetBSD$
          base::BindRepeating(&TaskGroup::OnOpenFdCountRefreshDone,
                              weak_ptr_factory_.GetWeakPtr()),
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-@@ -324,7 +324,7 @@ void TaskGroup::OnRefreshNaClDebugStubPo
+@@ -302,7 +302,7 @@ void TaskGroup::OnRefreshNaClDebugStubPo
  }
  #endif  // BUILDFLAG(ENABLE_NACL)
  

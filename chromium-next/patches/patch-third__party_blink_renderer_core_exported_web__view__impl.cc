@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -429,7 +429,7 @@ void RecordPrerenderActivationSignalDela
  #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_WIN)

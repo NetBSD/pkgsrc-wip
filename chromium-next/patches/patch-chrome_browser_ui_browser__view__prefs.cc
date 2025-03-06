@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_view_prefs.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/browser_view_prefs.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/browser_view_prefs.cc
-@@ -15,7 +15,7 @@
+@@ -14,7 +14,7 @@
  
  namespace {
  
@@ -15,7 +15,7 @@ $NetBSD$
  bool GetCustomFramePrefDefault() {
  #if BUILDFLAG(IS_OZONE)
    return ui::OzonePlatform::GetInstance()
-@@ -31,7 +31,7 @@ bool GetCustomFramePrefDefault() {
+@@ -30,7 +30,7 @@ bool GetCustomFramePrefDefault() {
  
  void RegisterBrowserViewProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {

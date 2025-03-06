@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
-@@ -145,7 +145,7 @@
- #include "components/about_ui/credit_utils.h"
+@@ -146,7 +146,7 @@
+ #include "components/webui/about/credit_utils.h"
  #endif
  
 -#if BUILDFLAG(ENABLE_NACL) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/nacl/common/nacl_paths.h"
  #include "components/nacl/zygote/nacl_fork_delegate_linux.h"
  #endif
-@@ -189,17 +189,17 @@
+@@ -187,17 +187,17 @@
  #include "v8/include/v8.h"
  #endif
  
@@ -36,7 +36,7 @@ $NetBSD$
  #include "chrome/browser/policy/policy_path_parser.h"
  #include "components/crash/core/app/crashpad.h"
  #endif
-@@ -340,7 +340,7 @@ void AdjustLinuxOOMScore(const std::stri
+@@ -315,7 +315,7 @@ void AdjustLinuxOOMScore(const std::stri
  // and resources loaded.
  bool SubprocessNeedsResourceBundle(const std::string& process_type) {
    return
@@ -45,25 +45,25 @@ $NetBSD$
        // The zygote process opens the resources for the renderers.
        process_type == switches::kZygoteProcess ||
  #endif
-@@ -425,7 +425,7 @@ bool HandleVersionSwitches(const base::C
+@@ -398,7 +398,7 @@ bool HandleVersionSwitches(const base::C
+   return false;
+ }
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Show the man page if --help or -h is on the command line.
  void HandleHelpSwitches(const base::CommandLine& command_line) {
    if (command_line.HasSwitch(switches::kHelp) ||
-@@ -437,7 +437,7 @@ void HandleHelpSwitches(const base::Comm
+@@ -410,7 +410,7 @@ void HandleHelpSwitches(const base::Comm
  }
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
+ #endif  // BUILDFLAG(IS_LINUX)
  
 -#if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_ANDROID)
 +#if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_BSD)
  void SIGTERMProfilingShutdown(int signal) {
    content::Profiling::Stop();
    struct sigaction sigact;
-@@ -519,7 +519,7 @@ std::optional<int> AcquireProcessSinglet
+@@ -492,7 +492,7 @@ std::optional<int> AcquireProcessSinglet
    // process can be exited.
    ChromeProcessSingleton::CreateInstance(user_data_dir);
  
@@ -72,7 +72,7 @@ $NetBSD$
    // Read the xdg-activation token and set it in the command line for the
    // duration of the notification in order to ensure this is propagated to an
    // already running browser process if it exists.
-@@ -603,7 +603,7 @@ void InitializeUserDataDir(base::Command
+@@ -570,7 +570,7 @@ void InitializeUserDataDir(base::Command
    std::string process_type =
        command_line->GetSwitchValueASCII(switches::kProcessType);
  
@@ -81,7 +81,7 @@ $NetBSD$
    // On Linux, Chrome does not support running multiple copies under different
    // DISPLAYs, so the profile directory can be specified in the environment to
    // support the virtual desktop use-case.
-@@ -699,7 +699,7 @@ void RecordMainStartupMetrics(const Star
+@@ -666,7 +666,7 @@ void RecordMainStartupMetrics(const Star
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -90,7 +90,7 @@ $NetBSD$
    // Record the startup process creation time on supported platforms. On Android
    // this is recorded in ChromeMainDelegateAndroid.
    startup_metric_utils::GetCommon().RecordStartupProcessCreationTime(
-@@ -888,7 +888,7 @@ std::optional<int> ChromeMainDelegate::P
+@@ -825,7 +825,7 @@ std::optional<int> ChromeMainDelegate::P
  #if BUILDFLAG(IS_OZONE)
    // Initialize Ozone platform and add required feature flags as per platform's
    // properties.
@@ -99,7 +99,7 @@ $NetBSD$
    ui::SetOzonePlatformForLinuxIfNeeded(*base::CommandLine::ForCurrentProcess());
  #endif
    ui::OzonePlatform::PreEarlyInitialization();
-@@ -1089,7 +1089,7 @@ void ChromeMainDelegate::CommonEarlyInit
+@@ -973,7 +973,7 @@ void ChromeMainDelegate::CommonEarlyInit
    const bool is_canary_dev = IsCanaryDev();
    const bool emit_crashes =
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -108,17 +108,17 @@ $NetBSD$
        is_canary_dev;
  #else
        false;
-@@ -1238,7 +1238,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1120,7 +1120,7 @@ std::optional<int> ChromeMainDelegate::B
+     return 0;  // Got a --credits switch; exit with a success error code.
+   }
  
-   // TODO(crbug.com/40118868): Revisit the macro expression once build flag
-   // switch of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -1268,7 +1268,7 @@ std::optional<int> ChromeMainDelegate::B
- #if BUILDFLAG(IS_CHROMEOS)
+@@ -1145,7 +1145,7 @@ std::optional<int> ChromeMainDelegate::B
+   ash::RegisterPathProvider();
    chromeos::dbus_paths::RegisterPathProvider();
  #endif
 -#if BUILDFLAG(ENABLE_NACL) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
@@ -126,7 +126,7 @@ $NetBSD$
    nacl::RegisterPathProvider();
  #endif
  
-@@ -1563,7 +1563,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1433,7 +1433,7 @@ void ChromeMainDelegate::PreSandboxStart
      CHECK(!loaded_locale.empty()) << "Locale could not be found for " << locale;
    }
  
@@ -135,7 +135,7 @@ $NetBSD$
    // Zygote needs to call InitCrashReporter() in RunZygote().
    if (process_type != switches::kZygoteProcess &&
        !command_line.HasSwitch(switches::kDisableCrashpadForTesting)) {
-@@ -1651,13 +1651,13 @@ absl::variant<int, content::MainFunction
+@@ -1521,13 +1521,13 @@ absl::variant<int, content::MainFunction
  #else
  
  #if BUILDFLAG(IS_MAC) || (BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && \

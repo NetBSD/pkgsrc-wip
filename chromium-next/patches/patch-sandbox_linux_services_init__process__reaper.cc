@@ -4,17 +4,17 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/init_process_reaper.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- sandbox/linux/services/init_process_reaper.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ sandbox/linux/services/init_process_reaper.cc
-@@ -2,6 +2,7 @@
- // Use of this source code is governed by a BSD-style license that can be
- // found in the LICENSE file.
+@@ -7,6 +7,7 @@
+ #pragma allow_unsafe_libc_calls
+ #endif
  
 +#if 0
  #include "sandbox/linux/services/init_process_reaper.h"
  
  #include <signal.h>
-@@ -100,3 +101,4 @@ bool CreateInitProcessReaper(base::OnceC
+@@ -105,3 +106,4 @@ bool CreateInitProcessReaper(base::OnceC
  }
  
  }  // namespace sandbox.

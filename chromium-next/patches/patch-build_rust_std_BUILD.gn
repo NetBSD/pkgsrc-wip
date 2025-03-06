@@ -4,8 +4,17 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/std/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
+--- build/rust/std/BUILD.gn.orig	2025-02-25 19:55:16.000000000 +0000
 +++ build/rust/std/BUILD.gn
+@@ -89,7 +89,7 @@ if (toolchain_has_rust) {
+     # These are no longer present in the Windows toolchain.
+     stdlib_files += [
+       "addr2line",
+-      "adler2",
++      "adler",
+       "gimli",
+       "libc",
+       "memchr",
 @@ -115,7 +115,6 @@ if (toolchain_has_rust) {
    # don't need to pass to the C++ linker because they're used for specialized
    # purposes.

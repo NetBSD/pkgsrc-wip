@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/base/files/file_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- tools/gn/src/base/files/file_posix.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ tools/gn/src/base/files/file_posix.cc
 @@ -359,7 +359,7 @@ void File::DoInitialize(const FilePath& 
  bool File::Flush() {

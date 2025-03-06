@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/common.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/enterprise/connectors/common.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/enterprise/connectors/common.cc
-@@ -23,7 +23,7 @@
+@@ -22,7 +22,7 @@
  #include "components/policy/core/common/policy_loader_lacros.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/prefs/pref_service.h"
  #endif
-@@ -266,7 +266,7 @@ std::string GetProfileEmail(Profile* pro
+@@ -199,7 +199,7 @@ std::string GetProfileEmail(Profile* pro
    std::string email =
        GetProfileEmail(IdentityManagerFactory::GetForProfile(profile));
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
-@@ -128,7 +128,7 @@ void InvalidateContext(v8::Local<v8::Con
+@@ -129,7 +129,7 @@ void InvalidateContext(v8::Local<v8::Con
  std::string GetPlatformString() {
  #if BUILDFLAG(IS_CHROMEOS)
    return "chromeos";

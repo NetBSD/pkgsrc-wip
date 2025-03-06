@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/features.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- net/base/features.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ net/base/features.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
  BASE_FEATURE(kAsyncDns,
@@ -15,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -530,7 +530,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
+@@ -549,7 +549,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
               "SpdyHeadersToHttpResponseUseBuilder",
               base::FEATURE_DISABLED_BY_DEFAULT);
  

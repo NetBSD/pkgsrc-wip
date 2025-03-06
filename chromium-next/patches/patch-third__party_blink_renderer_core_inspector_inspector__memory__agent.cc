@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/blink/renderer/core/inspector/inspector_memory_agent.cc
 @@ -192,7 +192,7 @@ InspectorMemoryAgent::GetSamplingProfile
  
  Vector<String> InspectorMemoryAgent::Symbolize(
-     const WebVector<const void*>& addresses) {
+     const std::vector<const void*>& addresses) {
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // TODO(alph): Move symbolization to the client.

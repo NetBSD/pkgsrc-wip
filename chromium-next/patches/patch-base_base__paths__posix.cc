@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/base_paths_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/base_paths_posix.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>

@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -162,7 +162,7 @@ const base::Feature* const kAllFeatures[
-     &kIPHiOSSharedTabGroupForeground,
+@@ -165,7 +165,7 @@ const base::Feature* const kAllFeatures[
+     &kIPHiOSReminderNotificationsOverflowMenuBubbleFeature,
  #endif  // BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -232,7 +232,7 @@ const base::Feature* const kAllFeatures[
+@@ -236,7 +236,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -24,7 +24,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
      &kIPHAutofillCardInfoRetrievalSuggestionFeature,
      &kIPHAutofillCreditCardBenefitFeature,
-@@ -286,7 +286,7 @@ const base::Feature* const kAllFeatures[
+@@ -290,7 +290,7 @@ const base::Feature* const kAllFeatures[
      &kIPHScalableIphGamingFeature,
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- remoting/host/host_main.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ remoting/host/host_main.cc
-@@ -50,7 +50,7 @@ int FileChooserMain();
+@@ -55,7 +55,7 @@ int FileChooserMain();
  int RdpDesktopSessionMain();
  int UrlForwarderConfiguratorMain();
  #endif  // BUILDFLAG(IS_WIN)
@@ -15,7 +15,7 @@ $NetBSD$
  int XSessionChooserMain();
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -63,7 +63,7 @@ const char kUsageMessage[] =
+@@ -68,7 +68,7 @@ const char kUsageMessage[] =
      "\n"
      "Options:\n"
  
@@ -24,7 +24,7 @@ $NetBSD$
      "  --audio-pipe-name=<pipe> - Sets the pipe name to capture audio on "
      "Linux.\n"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -156,7 +156,7 @@ MainRoutineFn SelectMainRoutine(const st
+@@ -161,7 +161,7 @@ MainRoutineFn SelectMainRoutine(const st
    } else if (process_type == kProcessTypeUrlForwarderConfigurator) {
      main_routine = &UrlForwarderConfiguratorMain;
  #endif  // BUILDFLAG(IS_WIN)
@@ -33,7 +33,7 @@ $NetBSD$
    } else if (process_type == kProcessTypeXSessionChooser) {
      main_routine = &XSessionChooserMain;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -224,7 +224,7 @@ int HostMain(int argc, char** argv) {
+@@ -229,7 +229,7 @@ int HostMain(int argc, char** argv) {
    // Note that we enable crash reporting only if the user has opted in to having
    // the crash reports uploaded.
    if (IsUsageStatsAllowed()) {

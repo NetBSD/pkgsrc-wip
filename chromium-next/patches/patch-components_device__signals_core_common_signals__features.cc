@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/signals_features.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/device_signals/core/common/signals_features.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/device_signals/core/common/signals_features.cc
-@@ -50,7 +50,7 @@ bool IsNewFunctionEnabled(NewEvFunction 
- }
+@@ -11,7 +11,7 @@ BASE_FEATURE(kAllowClientCertificateRepo
+              base::FEATURE_ENABLED_BY_DEFAULT);
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_CHROMEOS)

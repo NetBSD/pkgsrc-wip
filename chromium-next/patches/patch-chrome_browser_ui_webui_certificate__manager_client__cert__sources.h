@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.h
 @@ -19,7 +19,7 @@ CreatePlatformClientCertSource(
          remote_client,
@@ -19,8 +19,8 @@ $NetBSD$
  CreateExtensionsClientCertSource(Profile* profile);
  #endif
  
--#if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  class ClientCertManagementAccessControls {
   public:
    enum KeyStorage {

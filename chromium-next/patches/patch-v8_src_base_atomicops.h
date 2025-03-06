@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/atomicops.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- v8/src/base/atomicops.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ v8/src/base/atomicops.h
 @@ -57,10 +57,10 @@ using Atomic64 = SbAtomic64;
  using Atomic8 = char;

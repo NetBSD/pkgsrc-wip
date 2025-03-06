@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_unittest.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/process/process_metrics_unittest.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/process/process_metrics_unittest.cc
-@@ -58,7 +58,8 @@
+@@ -63,7 +63,8 @@
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||      \
      BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_WIN) || \

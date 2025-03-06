@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/os_crypt/sync/os_crypt.h
-@@ -15,7 +15,7 @@
+@@ -16,7 +16,7 @@
  #include "build/chromecast_buildflags.h"
  #include "crypto/subtle_passkey.h"
  
@@ -15,16 +15,7 @@ $NetBSD$
  class KeyStorageLinux;
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -24,7 +24,7 @@ class PrefRegistrySimple;
- class PrefService;
- #endif  // BUILDFLAG(IS_WIN)
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)
- namespace crypto {
- class SymmetricKey;
- }
-@@ -37,7 +37,7 @@ struct Config;
+@@ -32,7 +32,7 @@ struct Config;
  // Temporary interface due to OSCrypt refactor. See OSCryptImpl for descriptions
  // of what each function does.
  namespace OSCrypt {
@@ -33,7 +24,7 @@ $NetBSD$
  COMPONENT_EXPORT(OS_CRYPT)
  void SetConfig(std::unique_ptr<os_crypt::Config> config);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -82,7 +82,7 @@ COMPONENT_EXPORT(OS_CRYPT) void UseMockK
+@@ -77,7 +77,7 @@ COMPONENT_EXPORT(OS_CRYPT) void UseMockK
  COMPONENT_EXPORT(OS_CRYPT) void SetLegacyEncryptionForTesting(bool legacy);
  COMPONENT_EXPORT(OS_CRYPT) void ResetStateForTesting();
  #endif  // BUILDFLAG(IS_WIN)
@@ -42,7 +33,16 @@ $NetBSD$
  COMPONENT_EXPORT(OS_CRYPT)
  void UseMockKeyStorageForTesting(
      base::OnceCallback<std::unique_ptr<KeyStorageLinux>()>
-@@ -109,7 +109,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
+@@ -86,7 +86,7 @@ COMPONENT_EXPORT(OS_CRYPT) void ClearCac
+ COMPONENT_EXPORT(OS_CRYPT)
+ void SetEncryptionPasswordForTesting(const std::string& password);
+ #endif  // (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS))
+-#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE) &&         \
++#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD) && \
+         !(BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS)) || \
+     BUILDFLAG(IS_FUCHSIA)
+ COMPONENT_EXPORT(OS_CRYPT)
+@@ -111,7 +111,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
    // Returns singleton instance of OSCryptImpl.
    static OSCryptImpl* GetInstance();
  
@@ -51,7 +51,7 @@ $NetBSD$
    // Set the configuration of OSCryptImpl.
    // This method, or SetRawEncryptionKey(), must be called before using
    // EncryptString() and DecryptString().
-@@ -201,7 +201,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
+@@ -203,7 +203,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
    void ResetStateForTesting();
  #endif
  
@@ -60,8 +60,8 @@ $NetBSD$
    // For unit testing purposes, inject methods to be used.
    // |storage_provider_factory| provides the desired |KeyStorage|
    // implementation. If the provider returns |nullptr|, a hardcoded password
-@@ -226,13 +226,13 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
-   crypto::SymmetricKey* GetEncryptionKey();
+@@ -227,13 +227,13 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
+   bool DeriveKey();
  #endif  // BUILDFLAG(IS_APPLE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE)

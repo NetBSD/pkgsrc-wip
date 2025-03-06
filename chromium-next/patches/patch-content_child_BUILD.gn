@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
+--- content/child/BUILD.gn.orig	2025-02-25 19:55:16.000000000 +0000
 +++ content/child/BUILD.gn
 @@ -134,6 +134,13 @@ target(link_target_type, "child") {
      ]
@@ -19,4 +19,4 @@ $NetBSD$
 +
    if (is_win) {
      sources += [
-       "dwrite_font_proxy/dwrite_font_proxy_init_impl_win.cc",
+       "child_process_sandbox_support_impl_win.cc",

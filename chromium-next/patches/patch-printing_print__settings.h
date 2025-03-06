@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- printing/print_settings.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"

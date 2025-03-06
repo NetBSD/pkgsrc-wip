@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/browser.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/browser.h
-@@ -301,7 +301,7 @@ class Browser : public TabStripModelObse
+@@ -300,7 +300,7 @@ class Browser : public TabStripModelObse
      std::optional<int64_t> display_id;
  #endif
  

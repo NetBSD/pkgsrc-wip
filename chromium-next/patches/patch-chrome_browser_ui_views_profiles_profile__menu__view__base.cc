@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
-@@ -640,7 +640,7 @@ void ProfileMenuViewBase::SetProfileIden
+@@ -642,7 +642,7 @@ void ProfileMenuViewBase::SetProfileIden
        ProfileMenuViewBase::kIdentityImageSize, kIdentityImageBorder,
        /*has_dotted_ring=*/false);
  

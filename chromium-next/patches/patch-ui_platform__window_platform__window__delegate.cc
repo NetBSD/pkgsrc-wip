@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_delegate.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- ui/platform_window/platform_window_delegate.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ ui/platform_window/platform_window_delegate.cc
 @@ -57,7 +57,7 @@ gfx::Insets PlatformWindowDelegate::Calc
    return gfx::Insets();

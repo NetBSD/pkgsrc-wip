@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher_linux.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher_linux.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher_linux.cc
 @@ -4,11 +4,22 @@
  
@@ -27,8 +27,8 @@ $NetBSD$
 +#include <net/if_dl.h>
 +#endif
  
+ #include <algorithm>
  #include <string>
- 
 @@ -117,6 +128,7 @@ SettingValue GetScreenlockSecured() {
  // Implements the logic from the native host installation script. First find the
  // root device identifier, then locate its parent and get its type.

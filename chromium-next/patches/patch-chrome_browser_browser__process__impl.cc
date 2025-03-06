@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -254,7 +254,7 @@
+@@ -259,7 +259,7 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/browser_features.h"
- #include "components/os_crypt/async/browser/secret_portal_key_provider.h"
- #endif
-@@ -1121,7 +1121,7 @@ void BrowserProcessImpl::RegisterPrefs(P
+ #include "components/os_crypt/async/browser/fallback_linux_key_provider.h"
+ #include "components/os_crypt/async/browser/freedesktop_secret_key_provider.h"
+@@ -1135,7 +1135,7 @@ void BrowserProcessImpl::RegisterPrefs(P
                                  GoogleUpdateSettings::GetCollectStatsConsent());
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingAllowed, true);
  
@@ -24,8 +24,8 @@ $NetBSD$
    os_crypt_async::SecretPortalKeyProvider::RegisterLocalPrefs(registry);
  #endif
  }
-@@ -1387,7 +1387,7 @@ void BrowserProcessImpl::PreMainMessageL
-               features::kUseAppBoundEncryptionProviderForEncryption))));
+@@ -1405,7 +1405,7 @@ void BrowserProcessImpl::PreMainMessageL
+           local_state())));
  #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX)
@@ -33,7 +33,7 @@ $NetBSD$
    if (base::FeatureList::IsEnabled(features::kDbusSecretPortal)) {
      providers.emplace_back(
          /*precedence=*/10u,
-@@ -1637,7 +1637,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1672,7 +1672,7 @@ void BrowserProcessImpl::Unpin() {
  // Mac is currently not supported.
  // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
  // complete.

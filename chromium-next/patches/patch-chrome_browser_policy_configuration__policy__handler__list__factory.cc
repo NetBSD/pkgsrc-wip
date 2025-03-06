@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/policy/configuration_policy_handler_list_factory.cc
-@@ -253,19 +253,19 @@
+@@ -253,7 +253,7 @@
  #include "components/spellcheck/browser/pref_names.h"
  #endif  // BUILDFLAG(ENABLE_SPELLCHECK)
  
@@ -15,7 +15,8 @@ $NetBSD$
  #include "chrome/browser/enterprise/idle/action.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/device_signals/core/browser/pref_names.h"  // nogncheck due to crbug.com/1125897
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -264,12 +264,12 @@
+ #endif  // BUILDFLAG(ENABLE_GLIC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_ANDROID)
@@ -29,7 +30,7 @@ $NetBSD$
  #include "chrome/browser/privacy_sandbox/privacy_sandbox_policy_handler.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-@@ -279,13 +279,13 @@
+@@ -283,13 +283,13 @@
  #endif  // BUILDFLAG(ENTERPRISE_CLIENT_CERTIFICATES)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -45,7 +46,7 @@ $NetBSD$
  #include "components/search_engines/enterprise/search_aggregator_policy_handler.h"
  #include "components/search_engines/enterprise/site_search_policy_handler.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-@@ -580,7 +580,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -590,7 +590,7 @@ const PolicyToPreferenceMapEntry kSimple
    { key::kDefaultDirectSocketsSetting,
      prefs::kManagedDefaultDirectSocketsSetting,
      base::Value::Type::INTEGER },
@@ -54,7 +55,7 @@ $NetBSD$
    { key::kDeletingUndecryptablePasswordsEnabled,
      password_manager::prefs::kDeletingUndecryptablePasswordsEnabled,
      base::Value::Type::BOOLEAN },
-@@ -939,7 +939,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -961,7 +961,7 @@ const PolicyToPreferenceMapEntry kSimple
      prefs::kManagedDefaultGeolocationSetting,
      base::Value::Type::INTEGER },
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) \
@@ -63,7 +64,7 @@ $NetBSD$
    { key::kRequireOnlineRevocationChecksForLocalAnchors,
      prefs::kCertRevocationCheckingRequiredLocalAnchors,
      base::Value::Type::BOOLEAN },
-@@ -948,7 +948,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -970,7 +970,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::BOOLEAN },
  #endif  // #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
          // || BUILDFLAG(IS_WIN)  || BUILDFLAG(IS_MAC)
@@ -72,7 +73,7 @@ $NetBSD$
    { key::kFullscreenAllowed,
      prefs::kFullscreenAllowed,
      base::Value::Type::BOOLEAN },
-@@ -1788,7 +1788,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -1810,7 +1810,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::INTEGER},
  #endif // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -81,7 +82,7 @@ $NetBSD$
    { key::kGSSAPILibraryName,
      prefs::kGSSAPILibraryName,
      base::Value::Type::STRING },
-@@ -1847,7 +1847,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -1869,7 +1869,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::BOOLEAN },
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -90,7 +91,7 @@ $NetBSD$
    { key::kNetworkServiceSandboxEnabled,
      prefs::kNetworkServiceSandboxEnabled,
      base::Value::Type::BOOLEAN },
-@@ -1873,12 +1873,12 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -1895,12 +1895,12 @@ const PolicyToPreferenceMapEntry kSimple
      prefs::kTotalMemoryLimitMb,
      base::Value::Type::INTEGER },
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
@@ -105,7 +106,7 @@ $NetBSD$
    { key::kUnmanagedDeviceSignalsConsentFlowEnabled,
      device_signals::prefs::kUnmanagedDeviceSignalsConsentFlowEnabled,
      base::Value::Type::BOOLEAN },
-@@ -1889,7 +1889,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -1911,7 +1911,7 @@ const PolicyToPreferenceMapEntry kSimple
      prefs::kLiveTranslateEnabled,
      base::Value::Type::BOOLEAN },
  #endif // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -114,7 +115,7 @@ $NetBSD$
    { key::kDefaultBrowserSettingEnabled,
      prefs::kDefaultBrowserSettingEnabled,
      base::Value::Type::BOOLEAN },
-@@ -1901,7 +1901,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -1923,7 +1923,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::BOOLEAN },
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) \
@@ -123,7 +124,7 @@ $NetBSD$
    { key::kAutoplayAllowed,
      prefs::kAutoplayAllowed,
      base::Value::Type::BOOLEAN },
-@@ -2002,7 +2002,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -2024,7 +2024,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::BOOLEAN },
  #endif // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
  
@@ -132,7 +133,7 @@ $NetBSD$
    { key::kAlternativeBrowserPath,
      browser_switcher::prefs::kAlternativeBrowserPath,
      base::Value::Type::STRING },
-@@ -2107,7 +2107,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -2129,7 +2129,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::LIST },
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -141,7 +142,7 @@ $NetBSD$
    { key::kAuthNegotiateDelegateByKdcPolicy,
      prefs::kAuthNegotiateDelegateByKdcPolicy,
      base::Value::Type::BOOLEAN },
-@@ -2181,7 +2181,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -2203,7 +2203,7 @@ const PolicyToPreferenceMapEntry kSimple
      ash::prefs::kUrlParameterToAutofillSAMLUsername,
      base::Value::Type::STRING },
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
@@ -150,7 +151,7 @@ $NetBSD$
    { key::kTabDiscardingExceptions,
      performance_manager::user_tuning::prefs::kManagedTabDiscardingExceptions,
      base::Value::Type::LIST },
-@@ -2210,7 +2210,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -2232,7 +2232,7 @@ const PolicyToPreferenceMapEntry kSimple
      prefs::kUiAutomationProviderEnabled,
      base::Value::Type::BOOLEAN },
  #endif  // BUILDFLAG(IS_WIN)
@@ -159,7 +160,7 @@ $NetBSD$
    { key::kOutOfProcessSystemDnsResolutionEnabled,
      prefs::kOutOfProcessSystemDnsResolutionEnabled,
      base::Value::Type::BOOLEAN },
-@@ -2250,7 +2250,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -2272,7 +2272,7 @@ const PolicyToPreferenceMapEntry kSimple
      base::Value::Type::INTEGER },
  #endif
  #if BUILDFLAG(ENABLE_EXTENSIONS)
@@ -168,7 +169,7 @@ $NetBSD$
    { key::kExtensionInstallTypeBlocklist,
      extensions::pref_names::kExtensionInstallTypeBlocklist,
      base::Value::Type::LIST},
-@@ -2276,7 +2276,7 @@ const PolicyToPreferenceMapEntry kSimple
+@@ -2298,7 +2298,7 @@ const PolicyToPreferenceMapEntry kSimple
    { key::kTabCompareSettings,
      optimization_guide::prefs::kProductSpecificationsEnterprisePolicyAllowed,
      base::Value::Type::INTEGER},
@@ -177,7 +178,7 @@ $NetBSD$
    { key::kChromeForTestingAllowed,
      prefs::kChromeForTestingAllowed,
      base::Value::Type::BOOLEAN },
-@@ -2432,7 +2432,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -2484,7 +2484,7 @@ std::unique_ptr<ConfigurationPolicyHandl
    // Policies for all platforms - End
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -186,7 +187,7 @@ $NetBSD$
    handlers->AddHandler(std::make_unique<IntRangePolicyHandler>(
        key::kMemorySaverModeSavings,
        performance_manager::user_tuning::prefs::kMemorySaverModeAggressiveness,
-@@ -2448,7 +2448,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -2500,7 +2500,7 @@ std::unique_ptr<ConfigurationPolicyHandl
          // BUILDFLAG(IS_CHROMEOS_ASH)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -195,8 +196,8 @@ $NetBSD$
    handlers->AddHandler(
        std::make_unique<SearchAggregatorPolicyHandler>(chrome_schema));
    handlers->AddHandler(
-@@ -2655,7 +2655,7 @@ std::unique_ptr<ConfigurationPolicyHandl
- #endif  // BUILDFLAG(IS_ANDROID)
+@@ -2713,7 +2713,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+ #endif  // !BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_ANDROID)
@@ -204,7 +205,7 @@ $NetBSD$
    handlers->AddHandler(
        std::make_unique<enterprise_idle::IdleTimeoutPolicyHandler>());
    handlers->AddHandler(
-@@ -2708,7 +2708,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -2766,7 +2766,7 @@ std::unique_ptr<ConfigurationPolicyHandl
        key::kBrowsingDataLifetime, browsing_data::prefs::kBrowsingDataLifetime,
        chrome_schema));
  
@@ -213,7 +214,7 @@ $NetBSD$
    handlers->AddHandler(std::make_unique<GuestModePolicyHandler>());
    handlers->AddHandler(std::make_unique<LocalSyncPolicyHandler>());
    handlers->AddHandler(std::make_unique<ThemeColorPolicyHandler>());
-@@ -2800,7 +2800,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -2852,7 +2852,7 @@ std::unique_ptr<ConfigurationPolicyHandl
    std::vector<std::unique_ptr<ConfigurationPolicyHandler>>
        signin_legacy_policies;
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -222,7 +223,7 @@ $NetBSD$
    signin_legacy_policies.push_back(std::make_unique<SimplePolicyHandler>(
        key::kForceBrowserSignin, prefs::kForceBrowserSignin,
        base::Value::Type::BOOLEAN));
-@@ -3167,7 +3167,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -3219,7 +3219,7 @@ std::unique_ptr<ConfigurationPolicyHandl
  #endif
  
  #if BUILDFLAG(ENABLE_SPELLCHECK)
@@ -231,7 +232,7 @@ $NetBSD$
    handlers->AddHandler(std::make_unique<SpellcheckLanguagePolicyHandler>());
    handlers->AddHandler(
        std::make_unique<SpellcheckLanguageBlocklistPolicyHandler>(
-@@ -3175,7 +3175,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -3227,7 +3227,7 @@ std::unique_ptr<ConfigurationPolicyHandl
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  #endif  // BUILDFLAG(ENABLE_SPELLCHECK)
  
@@ -240,7 +241,7 @@ $NetBSD$
    handlers->AddHandler(std::make_unique<SimplePolicyHandler>(
        key::kAllowSystemNotifications, prefs::kAllowSystemNotifications,
        base::Value::Type::BOOLEAN));
-@@ -3193,7 +3193,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -3245,7 +3245,7 @@ std::unique_ptr<ConfigurationPolicyHandl
            first_party_sets::FirstPartySetsOverridesPolicyHandler>(
            key::kRelatedWebsiteSetsOverrides, chrome_schema)));
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -249,7 +250,7 @@ $NetBSD$
    handlers->AddHandler(std::make_unique<PrivacySandboxPolicyHandler>());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-@@ -3216,7 +3216,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -3268,7 +3268,7 @@ std::unique_ptr<ConfigurationPolicyHandl
            base::Value::Type::BOOLEAN)));
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -258,7 +259,7 @@ $NetBSD$
    handlers->AddHandler(std::make_unique<BatterySaverPolicyHandler>());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -3234,7 +3234,7 @@ std::unique_ptr<ConfigurationPolicyHandl
+@@ -3286,7 +3286,7 @@ std::unique_ptr<ConfigurationPolicyHandl
    std::vector<GenAiDefaultSettingsPolicyHandler::GenAiPolicyDetails>
        gen_ai_default_policies;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

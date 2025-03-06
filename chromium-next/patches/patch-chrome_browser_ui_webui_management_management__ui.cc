@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui.cc
-@@ -173,11 +173,11 @@ void ManagementUI::GetLocalizedStrings(
+@@ -175,11 +175,11 @@ void ManagementUI::GetLocalizedStrings(
         IDS_MANAGEMENT_FILE_TRANSFER_VISIBLE_DATA},
        {kManagementReportFileEvents, IDS_MANAGEMENT_REPORT_FILE_EVENTS},
  #endif  // BUILDFLAG(IS_CHROMEOS)

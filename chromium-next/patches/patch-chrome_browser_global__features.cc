@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/glic/launcher/glic_background_mode_manager.h"  // nogncheck
@@ -24,7 +24,7 @@ $NetBSD$
    whats_new_registry_ = CreateWhatsNewRegistry();
  #endif
  
-@@ -79,7 +79,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -88,7 +88,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
-@@ -643,7 +643,7 @@ void GpuMemoryBufferVideoFramePool::Pool
+@@ -644,7 +644,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }
  
    bool is_software_backed_video_frame = !video_frame->HasSharedImage();
@@ -15,7 +15,7 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1051,7 +1051,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+@@ -1054,7 +1054,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
        media::IOSurfaceIsWebGPUCompatible(handle.io_surface.get());
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
    is_webgpu_compatible =
        handle.native_pixmap_handle.supports_zero_copy_webgpu_import;
  #endif
-@@ -1231,7 +1231,7 @@ GpuMemoryBufferVideoFramePool::PoolImpl:
+@@ -1225,7 +1225,7 @@ GpuMemoryBufferVideoFramePool::PoolImpl:
        si_usage |= gpu::SHARED_IMAGE_USAGE_SCANOUT;
      }
  

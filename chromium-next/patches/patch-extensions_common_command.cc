@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/command.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- extensions/common/command.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ extensions/common/command.cc
-@@ -281,7 +281,7 @@ std::string Command::CommandPlatform() {
-   return values::kKeybindingPlatformMac;
+@@ -116,7 +116,7 @@ std::string Command::CommandPlatform() {
+   return ui::kKeybindingPlatformMac;
  #elif BUILDFLAG(IS_CHROMEOS)
-   return values::kKeybindingPlatformChromeOs;
+   return ui::kKeybindingPlatformChromeOs;
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   return values::kKeybindingPlatformLinux;
+   return ui::kKeybindingPlatformLinux;
  #elif BUILDFLAG(IS_FUCHSIA)
    // TODO(crbug.com/40220501): Change this once we decide what string should be

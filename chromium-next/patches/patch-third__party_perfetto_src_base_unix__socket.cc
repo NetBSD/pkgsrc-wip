@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/unix_socket.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/perfetto/src/base/unix_socket.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/perfetto/src/base/unix_socket.cc
-@@ -44,7 +44,7 @@
+@@ -45,7 +45,7 @@
  #include <unistd.h>
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <sys/ucred.h>
  #endif
  
-@@ -940,15 +940,27 @@ void UnixSocket::ReadPeerCredentialsPosi
+@@ -976,15 +976,27 @@ void UnixSocket::ReadPeerCredentialsPosi
    int res = getpeereid(fd, &peer_uid_, nullptr);
    PERFETTO_CHECK(res == 0);
    // There is no pid when obtaining peer credentials for QNX

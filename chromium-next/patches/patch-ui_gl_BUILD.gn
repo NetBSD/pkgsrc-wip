@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
+--- ui/gl/BUILD.gn.orig	2025-02-25 19:55:16.000000000 +0000
 +++ ui/gl/BUILD.gn
-@@ -168,7 +168,6 @@ component("gl") {
+@@ -169,7 +169,6 @@ component("gl") {
    public_deps = [
      ":gl_enums",
      "//base",
@@ -14,7 +14,7 @@ $NetBSD$
      "//ui/events/platform",
      "//ui/gfx",
      "//ui/gfx/geometry",
-@@ -316,7 +315,6 @@ component("gl") {
+@@ -323,7 +322,6 @@ component("gl") {
      data_deps += [
        "//third_party/angle:libEGL",
        "//third_party/angle:libGLESv2",
@@ -22,7 +22,7 @@ $NetBSD$
      ]
      if (enable_swiftshader) {
        data_deps += [
-@@ -541,7 +539,6 @@ test("gl_unittests") {
+@@ -548,7 +546,6 @@ test("gl_unittests") {
  
    data_deps = [
      "//testing/buildbot/filters:gl_unittests_filters",

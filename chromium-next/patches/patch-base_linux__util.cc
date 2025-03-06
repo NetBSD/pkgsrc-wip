@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/linux_util.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/linux_util.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/linux_util.cc
-@@ -159,10 +159,14 @@ void SetLinuxDistro(const std::string& d
+@@ -164,10 +164,14 @@ void SetLinuxDistro(const std::string& d
  }
  
  bool GetThreadsForProcess(pid_t pid, std::vector<pid_t>* tids) {

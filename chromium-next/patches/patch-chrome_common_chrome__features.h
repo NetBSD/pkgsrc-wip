@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -55,13 +55,13 @@ BASE_DECLARE_FEATURE(kUseAdHocSigningFor
  #endif  // BUILDFLAG(IS_MAC)
@@ -22,7 +22,7 @@ $NetBSD$
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kBackgroundModeAllowRestart);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -155,7 +155,7 @@ BASE_DECLARE_FEATURE(kDesktopPWAsPrevent
+@@ -153,7 +153,7 @@ BASE_DECLARE_FEATURE(kDesktopPWAsPrevent
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kDesktopPWAsTabStripSettings);
  
@@ -31,7 +31,7 @@ $NetBSD$
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kShortcutsNotApps);
-@@ -465,7 +465,7 @@ BASE_DECLARE_FEATURE(kKAnonymityServiceO
+@@ -500,7 +500,7 @@ BASE_DECLARE_FEATURE(kKAnonymityServiceO
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kKAnonymityServiceStorage);
  
@@ -40,7 +40,7 @@ $NetBSD$
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorModerateLevel;
-@@ -473,7 +473,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -508,7 +508,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

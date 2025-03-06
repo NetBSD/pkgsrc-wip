@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
 @@ -101,7 +101,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
@@ -15,7 +15,16 @@ $NetBSD$
  #include "components/component_updater/installer_policies/amount_extraction_heuristic_regexes_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -251,7 +251,7 @@ void RegisterComponentsForUpdate() {
+@@ -114,7 +114,7 @@
+ #include "chrome/browser/component_updater/lacros_component_remover.h"
+ #endif  // BUILDFLAG(IS_CHROMEOS)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/component_updater/wasm_tts_engine_component_installer.h"
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 
+@@ -258,12 +258,12 @@ void RegisterComponentsForUpdate() {
    RegisterCookieReadinessListComponent(cus);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,3 +33,9 @@ $NetBSD$
    RegisterAmountExtractionHeuristicRegexesComponent(cus);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (features::IsWasmTtsComponentUpdaterEnabled()) {
+     RegisterWasmTtsEngineComponent(cus);
+   }

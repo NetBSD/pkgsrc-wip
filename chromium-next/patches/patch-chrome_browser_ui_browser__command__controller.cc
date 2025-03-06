@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
 @@ -126,7 +126,7 @@
  #include "components/user_manager/user_manager.h"
@@ -33,25 +33,16 @@ $NetBSD$
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -580,7 +580,7 @@ bool BrowserCommandController::ExecuteCo
- 
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
-     case IDC_MINIMIZE_WINDOW:
-       browser_->window()->Minimize();
-       break;
-@@ -592,7 +592,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -575,7 +575,7 @@ bool BrowserCommandController::ExecuteCo
        break;
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     case IDC_USE_SYSTEM_TITLE_BAR: {
-       PrefService* prefs = profile()->GetPrefs();
-       prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -798,7 +798,7 @@ bool BrowserCommandController::ExecuteCo
+     case IDC_MINIMIZE_WINDOW:
+       browser_->window()->Minimize();
+       break;
+@@ -790,7 +790,7 @@ bool BrowserCommandController::ExecuteCo
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -60,7 +51,7 @@ $NetBSD$
        chrome::CreateDesktopShortcutForActiveWebContents(browser_);
  #else
        web_app::CreateWebAppFromCurrentWebContents(
-@@ -970,7 +970,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -957,7 +957,7 @@ bool BrowserCommandController::ExecuteCo
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
      case IDC_CHROME_WHATS_NEW:
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -69,22 +60,16 @@ $NetBSD$
        ShowChromeWhatsNew(browser_);
        break;
  #else
-@@ -1285,12 +1285,12 @@ void BrowserCommandController::InitComma
- #endif
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
-   command_updater_.UpdateCommandEnabled(IDC_MINIMIZE_WINDOW, true);
-   command_updater_.UpdateCommandEnabled(IDC_MAXIMIZE_WINDOW, true);
-   command_updater_.UpdateCommandEnabled(IDC_RESTORE_WINDOW, true);
+@@ -1264,7 +1264,7 @@ void BrowserCommandController::InitComma
+   command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
+   command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
  #endif
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   bool use_system_title_bar = true;
- #if BUILDFLAG(IS_OZONE)
-   use_system_title_bar = ui::OzonePlatform::GetInstance()
-@@ -1634,7 +1634,7 @@ void BrowserCommandController::UpdateCom
+   command_updater_.UpdateCommandEnabled(IDC_MINIMIZE_WINDOW, true);
+   command_updater_.UpdateCommandEnabled(IDC_MAXIMIZE_WINDOW, true);
+   command_updater_.UpdateCommandEnabled(IDC_RESTORE_WINDOW, true);
+@@ -1614,7 +1614,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  

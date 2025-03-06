@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/BUILD.gn.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/BUILD.gn.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/BUILD.gn
-@@ -932,7 +932,7 @@ component("base") {
+@@ -931,7 +931,7 @@ component("base") {
      #"system/sys_info_openbsd.cc",
    ]
  
@@ -15,7 +15,7 @@ $NetBSD$
      sources += [
        "posix/sysctl.cc",
        "posix/sysctl.h",
-@@ -1089,11 +1089,26 @@ component("base") {
+@@ -1088,11 +1088,26 @@ component("base") {
    # Needed for <atomic> if using newer C++ library than sysroot, except if
    # building inside the cros_sdk environment - use host_toolchain as a
    # more robust check for this.
@@ -43,7 +43,7 @@ $NetBSD$
    if (use_allocator_shim) {
      if (is_apple) {
        sources += [ "allocator/early_zone_registration_apple.h" ]
-@@ -1113,7 +1128,7 @@ component("base") {
+@@ -1112,7 +1127,7 @@ component("base") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -52,7 +52,7 @@ $NetBSD$
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -2121,6 +2136,29 @@ component("base") {
+@@ -2122,6 +2137,29 @@ component("base") {
      ]
    }
  
@@ -82,7 +82,7 @@ $NetBSD$
    # iOS
    if (is_ios) {
      sources += [
-@@ -2266,6 +2304,33 @@ component("base") {
+@@ -2267,6 +2305,33 @@ component("base") {
      }
    }
  
@@ -116,7 +116,7 @@ $NetBSD$
    if (use_blink) {
      sources += [
        "files/file_path_watcher.cc",
-@@ -2616,7 +2681,7 @@ buildflag_header("protected_memory_build
+@@ -2617,7 +2682,7 @@ buildflag_header("protected_memory_build
    header = "protected_memory_buildflags.h"
    header_dir = "base/memory"
  
@@ -125,7 +125,7 @@ $NetBSD$
                               (is_win || is_linux || is_android || is_mac)
  
    flags = [ "PROTECTED_MEMORY_ENABLED=$protected_memory_enabled" ]
-@@ -3093,7 +3158,7 @@ if (is_apple) {
+@@ -3096,7 +3161,7 @@ if (is_apple) {
    }
  }
  
@@ -134,7 +134,7 @@ $NetBSD$
    # This test must compile with -fstack-protector-all
    source_set("stack_canary_linux_unittests") {
      testonly = true
-@@ -3779,7 +3844,7 @@ test("base_unittests") {
+@@ -3781,7 +3846,7 @@ test("base_unittests") {
      ]
    }
  
@@ -143,7 +143,7 @@ $NetBSD$
      sources += [
        "debug/proc_maps_linux_unittest.cc",
        "files/scoped_file_linux_unittest.cc",
-@@ -3807,7 +3872,7 @@ test("base_unittests") {
+@@ -3809,7 +3874,7 @@ test("base_unittests") {
        "posix/file_descriptor_shuffle_unittest.cc",
        "posix/unix_domain_socket_unittest.cc",
      ]
@@ -152,7 +152,7 @@ $NetBSD$
        sources += [
          "profiler/stack_base_address_posix_unittest.cc",
          "profiler/stack_copier_signal_unittest.cc",
-@@ -3818,7 +3883,7 @@ test("base_unittests") {
+@@ -3820,7 +3885,7 @@ test("base_unittests") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -161,7 +161,7 @@ $NetBSD$
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -4006,7 +4071,7 @@ test("base_unittests") {
+@@ -4008,7 +4073,7 @@ test("base_unittests") {
      deps += [ ":base_profiler_test_support_library" ]
    }
  

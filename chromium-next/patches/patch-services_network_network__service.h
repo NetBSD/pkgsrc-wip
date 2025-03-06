@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- services/network/network_service.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ services/network/network_service.h
 @@ -237,7 +237,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
        const std::vector<ContentSettingPatternSource>& settings) override;
@@ -24,7 +24,7 @@ $NetBSD$
    // This is called just before a GSSAPI library may be loaded.
    void OnBeforeGssapiLibraryLoad();
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -501,7 +501,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -509,7 +509,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    // leaking stale listeners between tests.
    std::unique_ptr<net::NetworkChangeNotifier> mock_network_change_notifier_;
  

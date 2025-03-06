@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_message_utils.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- ipc/ipc_message_utils.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ ipc/ipc_message_utils.cc
 @@ -399,7 +399,7 @@ void ParamTraits<unsigned int>::Log(cons
  }

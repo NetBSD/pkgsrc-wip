@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- content/browser/utility_process_host.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ content/browser/utility_process_host.cc
 @@ -63,7 +63,7 @@
  #include "content/browser/v8_snapshot_files.h"
@@ -24,7 +24,7 @@ $NetBSD$
  base::ScopedFD PassNetworkContextParentDirs(
      std::vector<base::FilePath> network_context_parent_dirs) {
    base::Pickle pickle;
-@@ -352,7 +352,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -353,7 +353,7 @@ bool UtilityProcessHost::StartProcess() 
          switches::kMuteAudio,
          switches::kUseFileForFakeAudioCapture,
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -33,7 +33,7 @@ $NetBSD$
          switches::kAlsaInputDevice,
          switches::kAlsaOutputDevice,
  #endif
-@@ -412,7 +412,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -413,7 +413,7 @@ bool UtilityProcessHost::StartProcess() 
      file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -42,7 +42,7 @@ $NetBSD$
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -429,7 +429,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -430,7 +430,7 @@ bool UtilityProcessHost::StartProcess() 
      if (metrics_name_ == video_capture::mojom::VideoCaptureService::Name_) {
        bool pass_gpu_buffer_flag =
            switches::IsVideoCaptureUseGpuMemoryBufferEnabled();

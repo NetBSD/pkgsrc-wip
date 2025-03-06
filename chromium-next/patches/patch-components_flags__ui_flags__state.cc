@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/flags_ui/flags_state.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/flags_ui/flags_state.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/flags_ui/flags_state.cc
-@@ -751,7 +751,7 @@ unsigned short FlagsState::GetCurrentPla
+@@ -761,7 +761,7 @@ unsigned short FlagsState::GetCurrentPla
    return kOsWin;
  #elif BUILDFLAG(IS_CHROMEOS)
    return kOsCrOS;

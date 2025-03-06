@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h
 @@ -18,7 +18,7 @@
  #include "components/keyed_service/core/keyed_service.h"

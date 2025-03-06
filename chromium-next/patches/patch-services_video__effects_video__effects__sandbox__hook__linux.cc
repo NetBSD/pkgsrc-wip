@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_effects/video_effects_sandbox_hook_linux.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- services/video_effects/video_effects_sandbox_hook_linux.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ services/video_effects/video_effects_sandbox_hook_linux.cc
 @@ -6,7 +6,13 @@
  

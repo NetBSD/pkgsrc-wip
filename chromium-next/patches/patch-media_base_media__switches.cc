@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- media/base/media_switches.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ media/base/media_switches.cc
 @@ -20,7 +20,7 @@
  #include "ui/gl/gl_features.h"
@@ -24,7 +24,7 @@ $NetBSD$
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
-@@ -378,8 +378,8 @@ BASE_FEATURE(kUseSCContentSharingPicker,
+@@ -371,8 +371,8 @@ BASE_FEATURE(kUseSCContentSharingPicker,
               "UseSCContentSharingPicker",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_MAC)
@@ -35,7 +35,7 @@ $NetBSD$
  // Enables system audio mirroring using pulseaudio.
  BASE_FEATURE(kPulseaudioLoopbackForCast,
               "PulseaudioLoopbackForCast",
-@@ -389,6 +389,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
+@@ -382,6 +382,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
  BASE_FEATURE(kPulseaudioLoopbackForScreenShare,
               "PulseaudioLoopbackForScreenShare",
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -67,7 +67,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -634,7 +659,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
+@@ -624,7 +649,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
  // Show toolbar button that opens dialog for controlling media sessions.
  BASE_FEATURE(kGlobalMediaControls,
               "GlobalMediaControls",
@@ -76,7 +76,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -657,7 +682,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
+@@ -647,7 +672,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
               "MediaRemotingWithoutFullscreen",
@@ -85,7 +85,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -669,7 +694,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
+@@ -659,7 +684,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
  BASE_FEATURE(kGlobalMediaControlsPictureInPicture,
               "GlobalMediaControlsPictureInPicture",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -94,7 +94,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -698,7 +723,7 @@ BASE_FEATURE(kUnifiedAutoplay,
+@@ -688,7 +713,7 @@ BASE_FEATURE(kUnifiedAutoplay,
               "UnifiedAutoplay",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -103,7 +103,7 @@ $NetBSD$
  // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
  // on chromeos, but needs an experiment on linux.
  BASE_FEATURE(kAcceleratedVideoDecodeLinux,
-@@ -802,7 +827,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
+@@ -791,7 +816,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
               "VSyncMjpegDecoding",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -112,7 +112,7 @@ $NetBSD$
  // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               "V4L2H264TemporalLayerHWEncoding",
-@@ -1380,7 +1405,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDe
+@@ -1357,7 +1382,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDe
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
@@ -121,7 +121,7 @@ $NetBSD$
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1460,7 +1485,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
+@@ -1439,7 +1464,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
               "RecordWebAudioEngagement",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

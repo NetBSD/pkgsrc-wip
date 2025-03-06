@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/audio_processor.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- media/webrtc/audio_processor.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ media/webrtc/audio_processor.cc
-@@ -506,7 +506,7 @@ std::optional<double> AudioProcessor::Pr
+@@ -509,7 +509,7 @@ std::optional<double> AudioProcessor::Pr
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
    DCHECK_LE(volume, 1.0);
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \

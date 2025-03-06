@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- ui/views/controls/textfield/textfield.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ ui/views/controls/textfield/textfield.h
 @@ -47,7 +47,7 @@
  #include "ui/views/view_observer.h"

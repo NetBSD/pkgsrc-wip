@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/discardable_memory/service/discardable_shared_memory_manager.cc
 @@ -172,7 +172,7 @@ uint64_t GetDefaultMemoryLimit() {
    // Limits the number of FDs used to 32, assuming a 4MB allocation size.

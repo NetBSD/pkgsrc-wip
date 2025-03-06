@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/speech-dispatcher/libspeechd_version.h.orig	2025-02-26 09:59:08.201396261 +0000
+--- third_party/speech-dispatcher/libspeechd_version.h.orig	2025-03-06 14:18:43.146728026 +0000
 +++ third_party/speech-dispatcher/libspeechd_version.h
 @@ -0,0 +1,29 @@
 +/*

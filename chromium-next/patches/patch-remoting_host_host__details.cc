@@ -4,14 +4,32 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_details.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- remoting/host/host_details.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ remoting/host/host_details.cc
-@@ -23,7 +23,7 @@ std::string GetHostOperatingSystemName()
+@@ -7,7 +7,7 @@
+ #include "base/system/sys_info.h"
+ #include "build/build_config.h"
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "base/linux_util.h"
+ #endif
+ 
+@@ -22,7 +22,7 @@ std::string GetHostOperatingSystemName()
    return "Mac";
- #elif BUILDFLAG(IS_CHROMEOS_ASH)
+ #elif BUILDFLAG(IS_CHROMEOS)
    return "ChromeOS";
--#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return "Linux";
  #elif BUILDFLAG(IS_ANDROID)
    return "Android";
+@@ -34,7 +34,7 @@ std::string GetHostOperatingSystemName()
+ // Get the host Operating System Version, removing the need to check for OS
+ // definitions and keeps the format used consistent.
+ std::string GetHostOperatingSystemVersion() {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   return base::GetLinuxDistro();
+ #else
+   return base::SysInfo::OperatingSystemVersion();

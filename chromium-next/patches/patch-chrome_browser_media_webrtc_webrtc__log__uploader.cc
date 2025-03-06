@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_log_uploader.cc
-@@ -106,7 +106,7 @@ std::string GetLogUploadProduct() {
+@@ -108,7 +108,7 @@ std::string GetLogUploadProduct() {
    const char product[] = "Chrome_Mac";
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

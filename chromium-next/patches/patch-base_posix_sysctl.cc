@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/sysctl.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/posix/sysctl.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/posix/sysctl.cc
 @@ -4,6 +4,7 @@
  

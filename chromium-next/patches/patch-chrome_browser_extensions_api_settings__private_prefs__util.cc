@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -192,7 +192,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -190,7 +190,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[autofill::prefs::kAutofillPaymentCardBenefits] =
        settings_api::PrefType::kBoolean;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -14,7 +14,7 @@ $NetBSD$
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    (*s_allowlist)[autofill::prefs::kAutofillPredictionImprovementsEnabled] =
        settings_api::PrefType::kBoolean;
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+   (*s_allowlist)[autofill::prefs::kAutofillBnplEnabled] =
 @@ -210,7 +210,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[tab_groups::prefs::kAutoPinNewTabGroups] =
        settings_api::PrefType::kBoolean;

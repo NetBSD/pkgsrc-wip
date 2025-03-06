@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
 @@ -71,7 +71,7 @@ const char kDesktop[] =
      "X11; CrOS x86_64 14541.0.0"
@@ -24,7 +24,7 @@ $NetBSD$
    // Post-UA Reduction there is a single <unifiedPlatform> value for Linux:
    // X11; Linux x86_64
    ASSERT_EQ(2u, pieces.size());
-@@ -727,7 +727,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
+@@ -703,7 +703,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
  #endif
  #elif BUILDFLAG(IS_ANDROID)
    EXPECT_EQ(metadata.platform, "Android");

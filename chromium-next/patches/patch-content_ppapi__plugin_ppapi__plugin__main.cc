@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ content/ppapi_plugin/ppapi_plugin_main.cc
 @@ -52,6 +52,11 @@
  #include "gin/v8_initializer.h"
@@ -18,7 +18,7 @@ $NetBSD$
  #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID)
  #include <stdlib.h>
  #endif
-@@ -141,7 +146,7 @@ int PpapiPluginMain(MainFunctionParams p
+@@ -139,7 +144,7 @@ int PpapiPluginMain(MainFunctionParams p
    gin::V8Initializer::LoadV8Snapshot();
  #endif
  

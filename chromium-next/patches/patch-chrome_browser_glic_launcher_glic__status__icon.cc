@@ -4,14 +4,32 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/launcher/glic_status_icon.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/glic/launcher/glic_status_icon.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/glic/launcher/glic_status_icon.cc
-@@ -30,7 +30,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
-   // TODO(crbug.com/382287104): Use correct icon.
-   // TODO(crbug.com/386839488): Chose color based on system theme.
-   gfx::ImageSkia status_tray_icon = gfx::CreateVectorIcon(kGlicButtonIcon,
+@@ -84,7 +84,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+   if (!status_icon_) {
+     return;
+   }
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-                                                           SK_ColorWHITE
- #else
-                                                           SK_ColorBLACK
+   //  Set a vector icon for proper themeing on Linux.
+   status_icon_->SetIcon(
+       GlicVectorIconManager::GetVectorIcon(IDR_GLIC_BUTTON_VECTOR_ICON));
+@@ -108,7 +108,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+ GlicStatusIcon::~GlicStatusIcon() {
+   context_menu_ = nullptr;
+   if (status_icon_) {
+-#if !BUILDFLAG(IS_LINUX)
++#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
+     status_icon_->RemoveObserver(this);
+ #endif
+     std::unique_ptr<StatusIcon> removed_icon =
+@@ -196,7 +196,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+   menu->AddItem(
+       IDC_GLIC_STATUS_ICON_MENU_REMOVE_ICON,
+       l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_REMOVE_ICON));
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_EXIT,
+                 l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_EXIT));
+ #endif

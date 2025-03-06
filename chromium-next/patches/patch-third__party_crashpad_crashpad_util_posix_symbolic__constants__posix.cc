@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc
 @@ -68,7 +68,7 @@ constexpr const char* kSignalNames[] = {
      "INFO",

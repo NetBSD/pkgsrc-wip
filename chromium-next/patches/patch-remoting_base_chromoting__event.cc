@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/chromoting_event.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- remoting/base/chromoting_event.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ remoting/base/chromoting_event.cc
-@@ -192,7 +192,7 @@ void ChromotingEvent::AddSystemInfo() {
+@@ -191,7 +191,7 @@ void ChromotingEvent::AddSystemInfo() {
    SetString(kCpuKey, base::SysInfo::OperatingSystemArchitecture());
    SetString(kOsVersionKey, base::SysInfo::OperatingSystemVersion());
    SetString(kWebAppVersionKey, STRINGIZE(VERSION));
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    Os os = Os::CHROMOTING_LINUX;
- #elif BUILDFLAG(IS_CHROMEOS_ASH)
+ #elif BUILDFLAG(IS_CHROMEOS)
    Os os = Os::CHROMOTING_CHROMEOS;

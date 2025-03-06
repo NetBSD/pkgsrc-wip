@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_columns.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_columns.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_columns.h
-@@ -278,7 +278,7 @@ inline constexpr std::array kColumns = {
+@@ -277,7 +277,7 @@ inline constexpr std::array kColumns = {
                      .default_visibility = false},
  #endif
  

@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			133.0.6943.141
+VERSION=			134.0.6998.35
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -94,7 +94,6 @@ SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
-SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 

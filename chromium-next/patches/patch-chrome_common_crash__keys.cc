@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/crash_keys.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/common/crash_keys.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/common/crash_keys.cc
-@@ -56,7 +56,9 @@ class CrashKeyWithName {
+@@ -52,7 +52,9 @@ class CrashKeyWithName {
    ~CrashKeyWithName() = delete;
  
    std::string_view Name() const { return name_; }
@@ -16,7 +16,7 @@ $NetBSD$
    void Clear() { crash_key_.Clear(); }
    void Set(std::string_view value) { crash_key_.Set(value); }
  
-@@ -201,6 +203,7 @@ void AllocateCrashKeyInBrowserAndChildre
+@@ -197,6 +199,7 @@ void AllocateCrashKeyInBrowserAndChildre
    GetCommandLineStringAnnotations().emplace_back(std::string(key)).Set(value);
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  void AppendStringAnnotationsCommandLineSwitch(base::CommandLine* command_line) {
    std::string string_annotations;
    for (const auto& crash_key : GetCommandLineStringAnnotations()) {
-@@ -212,6 +215,7 @@ void AppendStringAnnotationsCommandLineS
+@@ -211,6 +214,7 @@ void AppendStringAnnotationsCommandLineS
    }
    command_line->AppendSwitchASCII(kStringAnnotationsSwitch, string_annotations);
  }

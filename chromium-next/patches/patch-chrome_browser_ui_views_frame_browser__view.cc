@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -2368,7 +2368,7 @@ void BrowserView::ToolbarSizeChanged(boo
+@@ -2489,7 +2489,7 @@ void BrowserView::ToolbarSizeChanged(boo
  }
  
  void BrowserView::TabDraggingStatusChanged(bool is_dragging) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc
-@@ -191,7 +191,7 @@ void ShortcutSubManager::Execute(
+@@ -199,7 +199,7 @@ void ShortcutSubManager::Execute(
      return;
    }
  

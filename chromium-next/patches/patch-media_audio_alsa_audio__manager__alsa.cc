@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
-@@ -100,7 +100,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -106,7 +106,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;
  
    // Loop through the physical sound cards to get ALSA device hints.
@@ -16,7 +16,7 @@ $NetBSD$
      void** hints = NULL;
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
-@@ -112,7 +114,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -118,7 +120,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
        DLOG(WARNING) << "GetAlsaAudioDevices: unable to get device hints: "
                      << wrapper_->StrError(error);
      }
@@ -26,7 +26,7 @@ $NetBSD$
  }
  
  void AudioManagerAlsa::GetAlsaDevicesInfo(AudioManagerAlsa::StreamType type,
-@@ -195,7 +199,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
+@@ -201,7 +205,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
    // goes through software conversion if needed (e.g. incompatible
    // sample rate).
    // TODO(joi): Should we prefer "hw" instead?
@@ -38,7 +38,7 @@ $NetBSD$
    return strncmp(kDeviceTypeDesired, device_name,
                   std::size(kDeviceTypeDesired) - 1) == 0;
  }
-@@ -247,7 +255,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -253,7 +261,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
    // Loop through the sound cards.
    // Don't use snd_device_name_hint(-1,..) since there is an access violation
    // inside this ALSA API with libasound.so.2.0.0.
@@ -48,7 +48,7 @@ $NetBSD$
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
        for (void** hint_iter = hints; *hint_iter != NULL; hint_iter++) {
-@@ -271,7 +281,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -277,7 +287,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
        DLOG(WARNING) << "HasAnyAudioDevice: unable to get device hints: "
                      << wrapper_->StrError(error);
      }

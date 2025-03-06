@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/about/about_ui.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/webui/about/about_ui.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/webui/about/about_ui.cc
-@@ -500,7 +500,7 @@ std::string ChromeURLs(content::BrowserC
+@@ -496,7 +496,7 @@ std::string ChromeURLs(content::BrowserC
    return html;
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  std::string AboutLinuxProxyConfig() {
    std::string data;
    AppendHeader(&data,
-@@ -542,7 +542,7 @@ TermsUIConfig::TermsUIConfig()
+@@ -538,7 +538,7 @@ TermsUIConfig::TermsUIConfig()
      : AboutUIConfigBase(chrome::kChromeUITermsHost) {}
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  LinuxProxyConfigUI::LinuxProxyConfigUI()
      : AboutUIConfigBase(chrome::kChromeUILinuxProxyConfigHost) {}
  #endif
-@@ -594,7 +594,7 @@ void AboutUIHTMLSource::StartDataRequest
+@@ -590,7 +590,7 @@ void AboutUIHTMLSource::StartDataRequest
        response =
            ui::ResourceBundle::GetSharedInstance().LoadDataResourceString(idr);
      }

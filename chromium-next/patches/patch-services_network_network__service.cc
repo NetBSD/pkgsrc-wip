@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- services/network/network_service.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ services/network/network_service.cc
-@@ -97,11 +97,11 @@
+@@ -98,11 +98,11 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include "services/network/network_change_notifier_passive_factory.h"
  #endif
  
-@@ -971,7 +971,7 @@ void NetworkService::SetExplicitlyAllowe
+@@ -981,7 +981,7 @@ void NetworkService::SetExplicitlyAllowe
    net::SetExplicitlyAllowedPorts(ports);
  }
  
@@ -29,7 +29,7 @@ $NetBSD$
  void NetworkService::SetGssapiLibraryLoadObserver(
      mojo::PendingRemote<mojom::GssapiLibraryLoadObserver>
          gssapi_library_load_observer) {
-@@ -1053,7 +1053,7 @@ NetworkService::CreateHttpAuthHandlerFac
+@@ -1063,7 +1063,7 @@ NetworkService::CreateHttpAuthHandlerFac
    );
  }
  

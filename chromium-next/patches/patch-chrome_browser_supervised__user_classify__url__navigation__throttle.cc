@@ -4,14 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/supervised_user/classify_url_navigation_throttle.cc
-@@ -218,7 +218,7 @@ void ClassifyUrlNavigationThrottle::OnIn
-     case SupervisedUserNavigationThrottle::kCancelWithInterstitial: {
-       CHECK(navigation_handle());
- // LINT.IfChange(cancel_with_interstitial)
+@@ -68,7 +68,7 @@ std::ostream& operator<<(std::ostream& s
+   }
+ }
+ 
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-       if (ShouldShowReAuthInterstitial(*navigation_handle(), is_main_frame)) {
+ bool ShouldShowReAuthInterstitial(
+     content::NavigationHandle& navigation_handle) {
+   Profile* profile = Profile::FromBrowserContext(
+@@ -230,7 +230,7 @@ void ClassifyUrlNavigationThrottle::OnIn
+     }
+     case InterstitialResultCallbackActions::kCancelWithInterstitial: {
+       CHECK(navigation_handle());
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+       if (ShouldShowReAuthInterstitial(*navigation_handle())) {
          // Show the re-authentication interstitial if the user signed out of
          // the content area, as parent's approval requires authentication.

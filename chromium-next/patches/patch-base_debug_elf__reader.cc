@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/elf_reader.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/debug/elf_reader.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/debug/elf_reader.cc
-@@ -50,6 +50,10 @@ using Xword = Elf64_Xword;
+@@ -49,6 +49,10 @@ using Xword = Elf64_Xword;
  
  constexpr char kGnuNoteName[] = "GNU";
  

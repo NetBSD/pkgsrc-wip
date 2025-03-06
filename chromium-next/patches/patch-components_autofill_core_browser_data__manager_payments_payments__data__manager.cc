@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.cc
-@@ -1150,7 +1150,7 @@ bool PaymentsDataManager::IsServerCard(c
+@@ -1168,7 +1168,7 @@ bool PaymentsDataManager::IsServerCard(c
  bool PaymentsDataManager::ShouldShowCardsFromAccountOption() const {
  // The feature is only for Linux, Windows, Mac, and Fuchsia.
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || \
@@ -15,7 +15,7 @@ $NetBSD$
    // This option should only be shown for users that have not enabled the Sync
    // Feature and that have server credit cards available.
    // TODO(crbug.com/40066949): Simplify once ConsentLevel::kSync and
-@@ -2005,7 +2005,7 @@ bool PaymentsDataManager::AreEwalletAcco
+@@ -2021,7 +2021,7 @@ bool PaymentsDataManager::AreEwalletAcco
  
  bool PaymentsDataManager::AreBnplIssuersSupported() const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

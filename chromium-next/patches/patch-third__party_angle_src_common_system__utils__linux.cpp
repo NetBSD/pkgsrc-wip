@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/system_utils_linux.cpp.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/angle/src/common/system_utils_linux.cpp.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
 @@ -15,10 +15,17 @@
  #include <sys/types.h>

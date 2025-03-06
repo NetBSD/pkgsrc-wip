@@ -125,16 +125,3 @@ Reported by un3xploitable && GF on 2024-12-11
 [$4000][390590778] Medium CVE-2025-1006: Use after free in Network.
 Reported by Tal Keren, Sam Agranat, Eran Rom, Edouard Bochin,
 Adam Hatsir of Palo Alto Networks on 2025-01-18
-
-* 133.0.6943.141
-This update includes 1 security fix. Please see the Chrome Security
-Page for more information.
-
-As usual, our ongoing internal security work was responsible for a
-wide range of fixes:
-[399107077]Various fixes from internal audits, fuzzing and other
-initiatives
-
-
-
-

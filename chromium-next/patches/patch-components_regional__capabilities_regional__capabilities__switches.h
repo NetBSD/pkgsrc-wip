@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/search_engines/search_engines_switches.h.orig	2025-02-17 21:09:38.000000000 +0000
-+++ components/search_engines/search_engines_switches.h
-@@ -113,7 +113,7 @@ BASE_DECLARE_FEATURE(kTemplateUrlReconci
- COMPONENT_EXPORT(SEARCH_ENGINES_SWITCHES)
- extern const base::FeatureParam<bool> kReconcileWithAllKnownEngines;
+--- components/regional_capabilities/regional_capabilities_switches.h.orig	2025-02-25 19:55:16.000000000 +0000
++++ components/regional_capabilities/regional_capabilities_switches.h
+@@ -25,7 +25,7 @@ inline constexpr char kSearchEngineChoic
+ inline constexpr char kDefaultListCountryOverride[] = "DEFAULT_EEA";
+ inline constexpr char kEeaListCountryOverride[] = "EEA_ALL";
  
 -#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -79,11 +79,11 @@ void* ThreadFunc(void* params) {
        base::DisallowSingleton();

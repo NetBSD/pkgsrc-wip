@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/browser_process_impl.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/browser_process_impl.h
-@@ -405,7 +405,7 @@ class BrowserProcessImpl : public Browse
+@@ -413,7 +413,7 @@ class BrowserProcessImpl : public Browse
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

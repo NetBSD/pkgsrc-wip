@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_commands.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/download/download_commands.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/download/download_commands.cc
-@@ -26,7 +26,7 @@
+@@ -27,7 +27,7 @@
  #include "ui/base/clipboard/scoped_clipboard_writer.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/browser.h"
  #include "chrome/browser/ui/browser_finder.h"
  #include "chrome/browser/ui/scoped_tabbed_browser_displayer.h"
-@@ -165,7 +165,7 @@ void DownloadCommands::ExecuteCommand(Co
+@@ -177,7 +177,7 @@ void DownloadCommands::ExecuteCommand(Co
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/certificate_manager_handler.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/certificate_manager_handler.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/certificate_manager_handler.cc
-@@ -216,7 +216,7 @@ CertificateManagerPageHandler::GetCertSo
+@@ -221,7 +221,7 @@ CertificateManagerPageHandler::GetCertSo
                  CERTIFICATE_TRUST_TYPE_DISTRUSTED,
              profile_, &remote_client_);
          break;

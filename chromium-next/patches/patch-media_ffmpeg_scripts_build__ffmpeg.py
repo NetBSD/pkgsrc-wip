@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2025-02-17 21:09:38.000000000 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2025-02-25 19:55:16.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'

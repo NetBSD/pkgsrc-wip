@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_device_queue.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- gpu/vulkan/vulkan_device_queue.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ gpu/vulkan/vulkan_device_queue.h
-@@ -179,7 +179,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanDev
+@@ -182,7 +182,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanDev
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_description.cc
-@@ -44,7 +44,7 @@
+@@ -45,7 +45,7 @@
  #include "third_party/blink/renderer/platform/wtf/text/string_hash.h"
  #include "third_party/blink/renderer/platform/wtf/text/string_hasher.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"
  #endif
  
-@@ -282,7 +282,7 @@ FontCacheKey FontDescription::CacheKey(
+@@ -284,7 +284,7 @@ FontCacheKey FontDescription::CacheKey(
        static_cast<unsigned>(fields_.orientation_) << 1 |            // bit 2-3
        static_cast<unsigned>(fields_.subpixel_text_position_);       // bit 1
  

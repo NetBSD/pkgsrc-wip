@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/detect_host_arch.py.orig	2025-02-17 21:09:38.000000000 +0000
+--- build/detect_host_arch.py.orig	2025-02-25 19:55:16.000000000 +0000
 +++ build/detect_host_arch.py
 @@ -20,6 +20,8 @@ def HostArch():
      host_arch = 'ia32'

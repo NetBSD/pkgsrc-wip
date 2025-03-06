@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -893,7 +893,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -889,7 +889,7 @@ void MaybeRegisterChromeFeaturePromos(
                           "defaulted to saved for the first time.")));
    }
  
@@ -15,7 +15,7 @@ $NetBSD$
    // kIPHSupervisedUserProfileSigninFeature
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -1134,7 +1134,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1143,7 +1143,7 @@ void MaybeRegisterChromeFeaturePromos(
                         "Triggered to inform users of the availability of the "
                         "new translate screen feature on the Lens Overlay.")));
  

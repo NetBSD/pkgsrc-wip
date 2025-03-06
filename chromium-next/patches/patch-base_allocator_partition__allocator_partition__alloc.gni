@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
-@@ -39,7 +39,7 @@ if (is_nacl) {
+@@ -89,7 +89,7 @@ if (is_nacl) {
  use_large_empty_slot_span_ring = true
  
  has_memory_tagging =
@@ -14,8 +14,8 @@ $NetBSD$
 +    current_cpu == "arm64" && is_clang && !is_asan && !is_bsd && (is_linux || is_android)
  
  declare_args() {
-   # Causes all the allocations to be routed via allocator_shim.cc. Usually,
-@@ -290,7 +290,7 @@ declare_args() {
+   # Debug configuration.
+@@ -347,7 +347,7 @@ declare_args() {
  declare_args() {
    # Shadow metadata is still under development and only supports Linux
    # for now.
@@ -24,7 +24,7 @@ $NetBSD$
  }
  
  declare_args() {
-@@ -433,7 +433,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+@@ -490,7 +490,7 @@ assert(!use_asan_backup_ref_ptr || use_r
  # dependencies that use partition_allocator are compiled in AOSP against a
  # version of glibc that does not include pkeys syscall numbers.
  is_pkeys_available =

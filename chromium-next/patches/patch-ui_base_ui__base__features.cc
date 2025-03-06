@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- ui/base/ui_base_features.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ ui/base/ui_base_features.cc
 @@ -133,7 +133,7 @@ BASE_FEATURE(kWaylandUiScale,
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -15,7 +15,7 @@ $NetBSD$
  // If this feature is enabled, users not specify --ozone-platform-hint switch
  // will get --ozone-platform-hint=auto treatment. https://crbug.com/40250220.
  COMPONENT_EXPORT(UI_BASE_FEATURES)
-@@ -209,7 +209,7 @@ BASE_FEATURE(kUiCompositorScrollWithLaye
+@@ -215,7 +215,7 @@ BASE_FEATURE(kUiCompositorUsesLayerLists
  // native apps on Windows.
  BASE_FEATURE(kExperimentalFlingAnimation,
               "ExperimentalFlingAnimation",

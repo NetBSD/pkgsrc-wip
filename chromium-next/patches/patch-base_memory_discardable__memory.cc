@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/discardable_memory.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- base/memory/discardable_memory.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ base/memory/discardable_memory.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kMadvFreeDiscardableMemory,
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kDiscardableMemoryBackingTrial,
               "DiscardableMemoryBackingTrial",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -38,7 +38,7 @@ BASE_FEATURE(kDiscardableMemoryBackingTr
+@@ -44,7 +44,7 @@ BASE_FEATURE_ENUM_PARAM(DiscardableMemor
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD$
  
  DiscardableMemoryBacking GetBackingForFieldTrial() {
    DiscardableMemoryTrialGroup trial_group =
-@@ -57,7 +57,7 @@ DiscardableMemoryBacking GetBackingForFi
+@@ -63,7 +63,7 @@ DiscardableMemoryBacking GetBackingForFi
  
  }  // namespace
  
@@ -33,7 +33,7 @@ $NetBSD$
  
  // Probe capabilities of this device to determine whether we should participate
  // in the discardable memory backing trial.
-@@ -89,7 +89,7 @@ DiscardableMemory::DiscardableMemory() =
+@@ -95,7 +95,7 @@ DiscardableMemory::DiscardableMemory() =
  DiscardableMemory::~DiscardableMemory() = default;
  
  DiscardableMemoryBacking GetDiscardableMemoryBacking() {

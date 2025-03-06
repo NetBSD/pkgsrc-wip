@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_posix.cc
 @@ -10,11 +10,12 @@
  #include "chrome/browser/media/router/discovery/discovery_network_list.h"

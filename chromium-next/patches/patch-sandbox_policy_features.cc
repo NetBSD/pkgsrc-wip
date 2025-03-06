@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- sandbox/policy/features.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ sandbox/policy/features.cc
 @@ -20,7 +20,11 @@ namespace sandbox::policy::features {
  // (Only causes an effect when feature kNetworkServiceInProcess is disabled.)

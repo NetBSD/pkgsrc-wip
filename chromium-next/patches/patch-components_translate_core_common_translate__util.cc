@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/translate/core/common/translate_util.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/translate/core/common/translate_util.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/translate/core/common/translate_util.cc
 @@ -21,7 +21,7 @@ const char kSecurityOrigin[] = "https://
  BASE_FEATURE(kTFLiteLanguageDetectionEnabled,

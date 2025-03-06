@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -326,6 +326,7 @@ void BrowserChildProcessHostImpl::Launch
        switches::kLogBestEffortTasks,
@@ -14,7 +14,7 @@ $NetBSD$
    };
    cmd_line->CopySwitchesFrom(browser_command_line, kForwardSwitches);
  
-@@ -655,7 +656,7 @@ void BrowserChildProcessHostImpl::OnProc
+@@ -690,7 +691,7 @@ void BrowserChildProcessHostImpl::OnProc
            ->child_process());
  #endif
  

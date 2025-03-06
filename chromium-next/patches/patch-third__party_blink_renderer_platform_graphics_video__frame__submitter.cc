@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/video_frame_submitter.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/video_frame_submitter.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/video_frame_submitter.cc
-@@ -431,7 +431,7 @@ void VideoFrameSubmitter::OnBeginFrame(
+@@ -421,7 +421,7 @@ void VideoFrameSubmitter::OnBeginFrame(
      auto& details = timing_details.find(frame_token)->value;
      auto& feedback = details.presentation_feedback;
  

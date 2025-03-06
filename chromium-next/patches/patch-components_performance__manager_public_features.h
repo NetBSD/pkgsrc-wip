@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/public/features.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- components/performance_manager/public/features.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ components/performance_manager/public/features.h
-@@ -21,7 +21,7 @@ BASE_DECLARE_FEATURE(kRunOnMainThreadSyn
+@@ -17,7 +17,7 @@ namespace performance_manager::features 
  
  #if !BUILDFLAG(IS_ANDROID)
  

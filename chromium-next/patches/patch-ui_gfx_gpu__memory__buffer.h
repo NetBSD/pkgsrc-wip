@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_memory_buffer.h.orig	2025-02-17 21:09:38.000000000 +0000
+--- ui/gfx/gpu_memory_buffer.h.orig	2025-02-25 19:55:16.000000000 +0000
 +++ ui/gfx/gpu_memory_buffer.h
-@@ -15,7 +15,7 @@
+@@ -17,7 +17,7 @@
  #include "ui/gfx/generic_shared_memory_id.h"
  #include "ui/gfx/geometry/rect.h"
  
@@ -15,8 +15,8 @@ $NetBSD$
  #include "ui/gfx/native_pixmap_handle.h"
  #elif BUILDFLAG(IS_APPLE)
  #include "ui/gfx/mac/io_surface.h"
-@@ -76,7 +76,7 @@ struct COMPONENT_EXPORT(GFX) GpuMemoryBu
-   base::UnsafeSharedMemoryRegion region;
+@@ -205,7 +205,7 @@ struct COMPONENT_EXPORT(GFX) GpuMemoryBu
+ 
    uint32_t offset = 0;
    uint32_t stride = 0;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)

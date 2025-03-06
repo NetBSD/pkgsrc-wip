@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/features/feature.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- extensions/common/features/feature.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ extensions/common/features/feature.cc
 @@ -29,6 +29,8 @@ Feature::Platform Feature::GetCurrentPla
    return WIN_PLATFORM;

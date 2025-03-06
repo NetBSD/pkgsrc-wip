@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2025-02-17 21:09:38.000000000 +0000
+--- media/base/video_frame.cc.orig	2025-02-25 19:55:16.000000000 +0000
 +++ media/base/video_frame.cc
-@@ -90,7 +90,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -92,7 +92,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
      case VideoFrame::STORAGE_SHMEM:
        return "SHMEM";
@@ -15,7 +15,7 @@ $NetBSD$
      case VideoFrame::STORAGE_DMABUFS:
        return "DMABUFS";
  #endif
-@@ -104,7 +104,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -106,7 +106,7 @@ std::string VideoFrame::StorageTypeToStr
  // static
  bool VideoFrame::IsStorageTypeMappable(VideoFrame::StorageType storage_type) {
    return
@@ -33,7 +33,7 @@ $NetBSD$
    bool is_native_buffer =
        gpu_memory_buffer
            ? (gpu_memory_buffer->GetType() != gfx::SHARED_MEMORY_BUFFER)
-@@ -906,7 +906,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -913,7 +913,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
@@ -42,7 +42,7 @@ $NetBSD$
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1592,7 +1592,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1598,7 +1598,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
    return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  
