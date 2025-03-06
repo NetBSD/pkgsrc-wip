@@ -15,6 +15,12 @@ ELECTRON=		electron${ELECTRON_MAJOR}
 # - "dependency" if the package uses electron as dependency
 USE_ELECTRON?=		electronpkg
 
+.if !empty(USE_ELECTRON:Melectronpkg) && empty(PKGBASE:M${ELECTRON})
+PKG_FAIL_REASON+=	"USE_ELECTRON not defined. Should be \"bundled\" or \"dependency\"."
+.elif !empty(PKGBASE:M${ELECTRON}) && empty(USE_ELECTRON:Melectronpkg)
+PKG_FAIL_REASON+=	"USE_ELECTRON is defined for ${PKGBASE} package."
+.endif
+
 TOOL_DEPENDS+=		nodejs-${NODE_VERSION_DEFAULT}.*:../../lang/nodejs${NODE_VERSION_DEFAULT}
 .if ${USE_ELECTRON} == "dependency"
 DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
@@ -40,9 +46,9 @@ FILES_SUBST+=		ELECTRONBIN=${ELECTRONBIN}
 .if ${USE_ELECTRON} == "bundled" || ${USE_ELECTRON} == "electronpkg"
 
 PLIST_VARS+=		swiftshader
-.if ${MACHINE_ARCH} == "x86_64"
+.  if ${MACHINE_ARCH} == "x86_64"
 PLIST.swiftshader=	yes
-.endif
+.  endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
