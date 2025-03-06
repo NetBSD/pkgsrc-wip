@@ -25,6 +25,8 @@ NODE_MODULES=			${ELECTRON}-node_modules-${ELECTRON_VER}.tar.gz
 SITES.${CHROMIUM_DISTFILE}.0=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v32.2.1/
 SITES.${CHROMIUM_DISTFILE}.1=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v32.2.1/
 SITES.${CHROMIUM_DISTFILE}.2=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v32.2.1/
+#NOTE: SITES.${NODE_MODULES} doesn't work
+MASTER_SITES+=			${MASTER_SITE_SOURCEFORGE:=kikadf/NetBSD/}
 DISTFILES+=			${CHROMIUM_DISTFILES}
 DISTFILES+=			${NODE_MODULES}
 DISTFILES+=			${DEFAULT_DISTFILES}
