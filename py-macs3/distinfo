@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (macs-3.0.2.tar.gz) = 8fdd0e375c0f2cb558f913fea85f384d54cff7e9ec645906b4e9c43c0843ff35
-SHA512 (macs-3.0.2.tar.gz) = 060e0f0f6a0ac8be4db0f0d947d9d784423a1a4bcc63f69abbd3566a4b190ed82d3b0f25f5ce946ea7d9a6fab74a114c108b59cd95ed7048321cd30edf4f4d08
-Size (macs-3.0.2.tar.gz) = 197484503 bytes
+BLAKE2s (macs-3.0.3.tar.gz) = 77303126120ce43d4a4342aa7d89d0314e2a10eb7848471052dc63cd46f27445
+SHA512 (macs-3.0.3.tar.gz) = cfd06979e0ebfdf1ec3a332aa946342bb268e0f7fe14b7db94e0d07031f84c5d69f6cebe94c62a353e9a22e447349811339e7fb3c93837534c430d3cd5c32b2a
+Size (macs-3.0.3.tar.gz) = 198064648 bytes
 SHA1 (patch-MACS3_fermi-lite_ksw.c) = 7df96d1d970a3e70c4611bd618d1aa539297dbcc
