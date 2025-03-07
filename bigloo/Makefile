@@ -20,9 +20,6 @@ INFO_FILES=	yes
 LDFLAGS+=	${COMPILER_RPATH_FLAG}
 
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc
-CONFIGURE_ARGS+=	--cflags=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--lflags=${LDFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--ldflags=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--customgc=no
 CONFIGURE_ARGS+=	--gccustominstall=skip
 CONFIGURE_ARGS+=	--gclibdir=${PREFIX}/lib
