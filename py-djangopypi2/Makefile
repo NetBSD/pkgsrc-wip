@@ -11,7 +11,7 @@ COMMENT=	Django application that emulates the Python Package Index
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.9:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	27 # py-docutils

@@ -11,7 +11,7 @@ COMMENT=	Django test runner that uses nose
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.1.2
 

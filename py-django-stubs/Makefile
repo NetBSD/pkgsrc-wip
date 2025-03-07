@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-mypy>=0.790:../../lang/py-mypy
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11.29:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11.29:../../www/py-django
 
 USE_LANGUAGES=	# none
 

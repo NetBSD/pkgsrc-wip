@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.dbunic.cnrs-gif.fr/helmholtz/
 COMMENT=	Framework for creating neuroscience databases
 LICENSE=	cecill-2.1
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 WRKSRC=		${WRKDIR}/Helmholtz-0.1.0
 

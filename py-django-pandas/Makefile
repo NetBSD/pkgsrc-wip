@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.14.1:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-semver>=2.10.1:../../devel/py-semver
 

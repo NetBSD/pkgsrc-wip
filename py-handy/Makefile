@@ -11,7 +11,7 @@ COMMENT=	Collection of tools to make your django life easier
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=	# none
 

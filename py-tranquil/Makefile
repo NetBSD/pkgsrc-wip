@@ -12,7 +12,7 @@ HOMEPAGE=	http://code.google.com/p/tranquil/
 COMMENT=	Integrating SQLAlchemy with Django
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=${SQLALCHEMYVERS}:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-django>=${DJANGOVERS}:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=${DJANGOVERS}:../../www/py-django
 
 USE_LANGUAGES=	# none
 

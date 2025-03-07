@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-celery>=4.1.0:../../net/py-celery
 DEPENDS+=	${PYPKGPREFIX}-click>=6.7:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-cssutils>=1.0.2:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11.11:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11.11:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-crispy-forms>=1.7.2:../../wip/py-django-crispy-forms
 DEPENDS+=	${PYPKGPREFIX}-django-jsonfield>=1.0.1:../../wip/py-django-jsonfield
 DEPENDS+=	${PYPKGPREFIX}-django-picklefield>=1.0.0:../../wip/py-django-picklefield

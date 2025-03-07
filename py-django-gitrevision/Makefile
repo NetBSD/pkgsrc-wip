@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/klen/django-gitrevision.git
 COMMENT=	Django git revision
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
 
 USE_LANGUAGES=	# none

@@ -12,7 +12,7 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/r/rdflib-django/
 COMMENT=	Store implementation for RDFlib using Django models as its backend
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-rdflib-[0-9]*:../../textproc/py-rdflib
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.dev-201210061248

@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.0:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.2<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04.9:../../textproc/py-Unidecode
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 WRKSRC=		${WRKDIR}/Booktype-1.5
 

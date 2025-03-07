@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/kaleidos/django-mathjax
 COMMENT=	MathJax easy integration with django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=	# none
 

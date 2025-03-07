@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/dcramer/django-uuidfield
 COMMENT=	UUIDField in Django
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.4.0
 

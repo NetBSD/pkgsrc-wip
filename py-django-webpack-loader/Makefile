@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11.29:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11.29:../../www/py-django
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

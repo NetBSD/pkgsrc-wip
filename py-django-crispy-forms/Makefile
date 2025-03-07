@@ -11,7 +11,7 @@ COMMENT=	Best way to have Django DRY forms
 LICENSE=	mit
 
 
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
 
 .include "../../lang/python/egg.mk"
 WRKSRC=		${WRKDIR}/django-crispy-forms-1.7.2

@@ -33,7 +33,7 @@ DEPENDS=	samtools>0:../../wip/samtools \
 		R-gtools>0:../../math/R-gtools \
 		${PYPKGPREFIX}-mistune>0:../../textproc/py-mistune \
 		${PYPKGPREFIX}-pandas>0:../../math/py-pandas \
-		${PYPKGPREFIX}-django>0:../../www/py-django3 \
+		${PYPKGPREFIX}-django>0:../../www/py-django \
 		${PYPKGPREFIX}-requests>0:../../devel/py-requests \
 		${PYPKGPREFIX}-bottle>0:../../www/py-bottle \
 		${PYPKGPREFIX}-psutil>0:../../sysutils/py-psutil \

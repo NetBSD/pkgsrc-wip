@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/Star2Billing/django-audiofield
 COMMENT=	Allows audio file upload and conversion to mp3, wav and ogg format
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-uuidfield>=0.4.0:../../wip/py-django-uuidfield
 
 WRKSRC=			${WRKDIR}/django-audiofield-0.4.6
