@@ -20,6 +20,9 @@ INFO_FILES=	yes
 LDFLAGS+=	${COMPILER_RPATH_FLAG}
 
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--cflags=${CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--cpicflags="-fPIC"
+CONFIGURE_ARGS+=	--ldflags=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--customgc=no
 CONFIGURE_ARGS+=	--gccustominstall=skip
 CONFIGURE_ARGS+=	--gclibdir=${PREFIX}/lib
@@ -29,11 +32,12 @@ CONFIGURE_ARGS+=	--disable-pcre
 CONFIGURE_ARGS+=	--disable-pcre2
 CONFIGURE_ARGS+=	--customunistring=no
 CONFIGURE_ARGS+=	--disable-libbacktrace
-CONFIGURE_ARGS+=	--no-share
+CONFIGURE_ARGS+=	--native=yes
+CONFIGURE_ARGS+=	--sharedcompiler=yes
+CONFIGURE_ARGS+=	--sharedbde=yes
+CONFIGURE_ARGS+=	--strip=no
 
-do-build:
-	cd ${WRKSRC} && LDFLAGS=${LDFLAGS:M*:Q} CFLAGS=${CFLAGS:M*:Q} ${GMAKE}
-
+BUILD_TARGET=	#empty
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
