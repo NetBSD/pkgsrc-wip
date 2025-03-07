@@ -1734,6 +1734,7 @@ SUBDIR+=	initware-git
 SUBDIR+=	innernet
 SUBDIR+=	input-ttf
 SUBDIR+=	intel-gpu-tools
+SUBDIR+=	interactsh
 SUBDIR+=	interbase-docs
 SUBDIR+=	intervaltree
 SUBDIR+=	inxi
