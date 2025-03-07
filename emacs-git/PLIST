@@ -3963,6 +3963,8 @@ share/emacs/${PKGVERSION}/lisp/term/vt100.el.gz
 share/emacs/${PKGVERSION}/lisp/term/vt100.elc
 share/emacs/${PKGVERSION}/lisp/term/vt200.el.gz
 share/emacs/${PKGVERSION}/lisp/term/vt200.elc
+share/emacs/${PKGVERSION}/lisp/term/w32-nt.el.gz
+share/emacs/${PKGVERSION}/lisp/term/w32-nt.elc
 share/emacs/${PKGVERSION}/lisp/term/w32-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/w32-win.elc
 share/emacs/${PKGVERSION}/lisp/term/w32console.el.gz
