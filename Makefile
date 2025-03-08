@@ -1557,7 +1557,6 @@ SUBDIR+=	hs-bindings-librrd
 SUBDIR+=	hs-blaze-builder-conduit
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal-query
-SUBDIR+=	hs-cairo
 SUBDIR+=	hs-carp
 SUBDIR+=	hs-categories
 SUBDIR+=	hs-cautious-file
