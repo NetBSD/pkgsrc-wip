@@ -1624,7 +1624,6 @@ SUBDIR+=	hs-largeword
 SUBDIR+=	hs-lazy-io
 SUBDIR+=	hs-markov-chain
 SUBDIR+=	hs-midi
-SUBDIR+=	hs-mime
 SUBDIR+=	hs-monad-peel
 SUBDIR+=	hs-monads-fd
 SUBDIR+=	hs-monads-tf
