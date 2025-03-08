@@ -1650,7 +1650,6 @@ SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-rosezipper1
 SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroupoid-extras
-SUBDIR+=	hs-shake
 SUBDIR+=	hs-storablevector
 SUBDIR+=	hs-stream-fusion
 SUBDIR+=	hs-strict-io
