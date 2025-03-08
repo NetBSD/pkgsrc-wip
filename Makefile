@@ -1579,7 +1579,6 @@ SUBDIR+=	hs-convertible-ascii
 SUBDIR+=	hs-convertible-text
 SUBDIR+=	hs-core
 SUBDIR+=	hs-cryptohash
-SUBDIR+=	hs-curl
 SUBDIR+=	hs-data-accessor
 SUBDIR+=	hs-data-accessor-monads-fd
 SUBDIR+=	hs-data-accessor-mtl
