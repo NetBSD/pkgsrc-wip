@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (dmarcaroni-server-0.1.0.0.tar.gz) = 454ee01cb6d12985763caea811495ca09c5831c94766e036e8916e5cbcee06f4
+SHA512 (dmarcaroni-server-0.1.0.0.tar.gz) = 484de3fa4cc374a28b35a149e3e073b393eb28d0d7b017504a918a07028c32926808dbc7b530dadc552336aab591bd04127ba3248b50b68dcde8b62ccb35b820
+Size (dmarcaroni-server-0.1.0.0.tar.gz) = 8400199 bytes
+SHA1 (patch-src_DMARC_Parsing_DomainFolio.hs) = b9e7bd539aabc97c7c8f7bd258253410bf775669

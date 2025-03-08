@@ -731,6 +731,7 @@ SUBDIR+=	dlt-daemon
 SUBDIR+=	dlt-viewer
 SUBDIR+=	dma
 SUBDIR+=	dmake
+SUBDIR+=	dmarcaroni-server
 SUBDIR+=	dmd
 SUBDIR+=	dmd-bin
 SUBDIR+=	dmenu-git

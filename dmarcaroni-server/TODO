@@ -1,0 +1,9 @@
+DMARCaroni appears to be at an early stage of development. There is no
+documentation on how to set it up properly. The resulting binary also seems
+to require files that are (A) in the source tree but aren't installed, or
+(B) not even in the source tree.
+
+The remaining thigs that this package ought to do but currently doesn't
+are:
+  * To install a default configuration file, and
+  * To install a default rc script.
