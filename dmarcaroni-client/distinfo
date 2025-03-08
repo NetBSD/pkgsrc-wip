@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (dmarcaroni-client-0.8alpha2025.02.01.tar.gz) = adb4f639ec51272ed66c8da2a3fe075ad9414f66a2a03eb7c010aff3f266a024
+SHA512 (dmarcaroni-client-0.8alpha2025.02.01.tar.gz) = 004e98bec2019041c069fcce6948a9d2c270c6e59f0ec29e159786c9dee4dcf6ae79ff4cd13b7388c1a93c34f0623cb608e85a14e623453ed2fa9f498b3b9f6d
+Size (dmarcaroni-client-0.8alpha2025.02.01.tar.gz) = 840062 bytes
+SHA1 (patch-dist_index.html) = 54586035a691ad5911609023d7907f94713cc9cd
+SHA1 (patch-src_Skeleton.elm) = 40dc52128344a571b37ff60c68126a1b30f31478

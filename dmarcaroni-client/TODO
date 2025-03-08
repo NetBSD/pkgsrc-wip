@@ -1,0 +1,4 @@
+DMARCaroni appears to be at an early stage of development. There is no
+documentation on how to set it up properly. This is a web frontend that
+obviously needs to talk to wip/dmarcaroni-server, but I (pho@) couldn't
+figure out what arrangement is required for that.

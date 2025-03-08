@@ -1,0 +1,6 @@
+mail/dmarcaroni-client: import 0.8
+
+DMARCaroni is a free and open source software to do DMARC monitoring.
+
+After running the DMARCaroni Haskell Server, view the index.html file to
+analyze your aggregated DMARC data.

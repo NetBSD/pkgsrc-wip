@@ -1,0 +1,6 @@
+@comment $NetBSD$
+share/dmarcaroni-client/assets/bulma.min.css
+share/dmarcaroni-client/assets/dmarcaroni.logo.svg
+share/dmarcaroni-client/assets/dmarcaroni.logo.svg.license
+share/dmarcaroni-client/index.html
+share/dmarcaroni-client/main.js
