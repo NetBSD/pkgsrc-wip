@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (bigloo-4.5b.tar.gz) = 4916b6d5eb9380d18d150e7a4173fadd68ecc4763cffd58c01e9c6ed23aaa6a2
-SHA512 (bigloo-4.5b.tar.gz) = 7810f9895ea373f716cd2c93a7b1072d289e2b333632b5b4f293a6317f31a56d2b098790763e96c2d15ce212dafb45c70ec6a7941a344fb8c53a3ef3c6b67feb
-Size (bigloo-4.5b.tar.gz) = 59015812 bytes
+BLAKE2s (bigloo-4.5b.tar.gz) = 4a66cd548a633ed4ce31f258d311e1e2cd5a07d7819f7fe1e6bbcf1150ed612e
+SHA512 (bigloo-4.5b.tar.gz) = db47d0dfb0d209468472cfbdc88cc93967543cdbef0f1d67e702d400144d5f3404a9b886f72be36d7571c1eb8f66091a750d396b9cf35f3e5e84e70c13a4630c
+Size (bigloo-4.5b.tar.gz) = 59015793 bytes
 SHA1 (patch-configure) = a342c9e7cd8a513d5ed8606a470a55fae995e804
