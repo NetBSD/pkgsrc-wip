@@ -1,0 +1,37 @@
+$NetBSD$
+
+Pretend NetBSD is Linux for the choice of components to build.
+XXX Maybe do this for *BSD, not just NetBSD.
+
+--- CMakeLists.txt.orig	2025-03-08 15:31:14.000000000 +0000
++++ CMakeLists.txt
+@@ -22,7 +22,7 @@ INCLUDE (FindPkgConfig)
+ 
+ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+ 	set(DEFAULT_EGL ON)
+ 	set(DEFAULT_GLX ON)
+ 	set(DEFAULT_WGL OFF)
+@@ -34,7 +34,11 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ 	set(DEFAULT_X11 ON)
+ 
+ 	set(DEFAULT_GLES_TESTS_BUILD ON)
++    if (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++	set(DEFAULT_VK_TESTS_BUILD OFF)
++    else()
+ 	set(DEFAULT_VK_TESTS_BUILD ON)
++    endif()
+ elseif(APPLE)
+ 	set(DEFAULT_EGL OFF)
+ 	set(DEFAULT_GLX OFF)
+@@ -230,7 +234,7 @@ if(PIGLIT_BUILD_WGL_TESTS)
+ 	add_definitions(-DPIGLIT_HAS_WGL)
+ endif()
+ 
+-IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+ 	pkg_check_modules(LIBDRM QUIET libdrm)
+ 	pkg_check_modules(XCB QUIET xcb)
+ 	pkg_check_modules(XCB_DRI2 QUIET xcb-dri2)
