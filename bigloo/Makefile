@@ -2,7 +2,7 @@
 
 DISTNAME=	bigloo-4.5b
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp-sop.inria.fr/indes/fp/Bigloo/
+MASTER_SITES=	https://www-sop.inria.fr/indes/fp/Bigloo/download/
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://www-sop.inria.fr/indes/fp/Bigloo/
