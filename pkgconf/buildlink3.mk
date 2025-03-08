@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pkgconf
 PKGCONF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pkgconf+=		pkgconf>=1.9.4
-BUILDLINK_PKGSRCDIR.pkgconf?=		../../devel/pkgconf
+BUILDLINK_PKGSRCDIR.pkgconf?=		../../wip/pkgconf
 .endif	# PKGCONF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pkgconf
