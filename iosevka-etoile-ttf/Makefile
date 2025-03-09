@@ -1,11 +1,12 @@
 # $NetBSD$
 
-PKGNAME=	iosevka-etoile-ttf-32.5.0
 DISTNAME=	SuperTTC-IosevkaEtoile-${PKGVERSION_NOREV}
+PKGNAME=	iosevka-etoile-ttf-33.0.1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
 GITHUB_PROJECT=	Iosevka
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://github.com/be5invis/Iosevka
@@ -13,7 +14,6 @@ COMMENT=	Slender typeface for code, from code
 LICENSE=	ofl-v1.1
 
 EXTRACT_DIR=	${WRKSRC}
-EXTRACT_SUFX=	.zip
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
