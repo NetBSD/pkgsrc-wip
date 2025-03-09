@@ -11,7 +11,7 @@ HOMEPAGE=	https://git.disroot.org/lnrs/dmarcaroni-client
 COMMENT=	Free and open source software to do DMARC monitoring
 LICENSE=	gnu-agpl-v3
 
-TOOL_DEPENDS+=	elm-[0-9]*:../../lang/elm
+TOOL_DEPENDS+=	elm-lang-[0-9]*:../../lang/elm-lang
 
 do-build:
 	cd ${WRKSRC} && elm make src/Main.elm --output="dist/main.js"
