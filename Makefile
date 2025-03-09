@@ -936,6 +936,7 @@ SUBDIR+=	fbpanel
 SUBDIR+=	fbsd2pkg
 SUBDIR+=	fceux
 SUBDIR+=	fcft
+SUBDIR+=	fcitx5-cskk
 SUBDIR+=	fdm_materials
 SUBDIR+=	feathercoin
 SUBDIR+=	felt
