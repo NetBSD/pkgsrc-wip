@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
@@ -29,6 +27,8 @@ RCD_SCRIPTS=		qemu-guest-agent
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,7 +50,6 @@ CONFIGURE_ARGS+=	--disable-bzip2
 CONFIGURE_ARGS+=	--disable-cap-ng
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 CONFIGURE_ARGS+=	--disable-curses
-#CONFIGURE_ARGS+=	--disable-docs
 CONFIGURE_ARGS+=	--disable-fdt
 CONFIGURE_ARGS+=	--disable-gcrypt
 CONFIGURE_ARGS+=	--disable-glusterfs
@@ -89,14 +88,14 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
 		ninja -j ${_MAKE_JOBS_N:U1} -C build install
 	# not needed for guest agent
-	${RM} -r ${DESTDIR}${PREFIX}/include/qemu-plugin.h
-	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qemu.1
-	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-block-drivers.7
-	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-cpu-models.7
-	${RM} -r ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-qmp-ref.7
-	${RM} -r ${DESTDIR}${PREFIX}/share/doc/qemu
-	${RM} -r ${DESTDIR}${PREFIX}/share/qemu/keymaps
-	${RM} -r ${DESTDIR}${PREFIX}/share/qemu/trace-events-all
+	${RM} -f ${DESTDIR}${PREFIX}/include/qemu-plugin.h
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qemu.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-block-drivers.7
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-cpu-models.7
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/qemu-qmp-ref.7
+	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/qemu
+	${RM} -rf ${DESTDIR}${PREFIX}/share/qemu/keymaps
+	${RM} -rf ${DESTDIR}${PREFIX}/share/qemu/trace-events-all
 
 # Some dependencies aren't correct and this tries to be re-made on install,
 # failing due to configure bugs.
