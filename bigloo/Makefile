@@ -36,15 +36,31 @@ CONFIGURE_ARGS+=	--native=yes
 CONFIGURE_ARGS+=	--sharedcompiler=yes
 CONFIGURE_ARGS+=	--sharedbde=yes
 CONFIGURE_ARGS+=	--strip=no
+CONFIGURE_ARGS+=	--enable-calendar
+CONFIGURE_ARGS+=	--enable-crypto
+CONFIGURE_ARGS+=	--enable-csv
+CONFIGURE_ARGS+=	--enable-mail
+CONFIGURE_ARGS+=	--enable-multimedia
+CONFIGURE_ARGS+=	--enable-packrat
+CONFIGURE_ARGS+=	--enable-phone
+CONFIGURE_ARGS+=	--enable-pkgcomp
+CONFIGURE_ARGS+=	--enable-pthread
+CONFIGURE_ARGS+=	--enable-srfi1
+CONFIGURE_ARGS+=	--enable-srfi18
+CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-text
+CONFIGURE_ARGS+=	--enable-upnp
+CONFIGURE_ARGS+=	--enable-web
+
 
 BUILD_TARGET=	#empty
 
-.include "../../databases/sqlite3/buildlink3.mk"
+.include "options.mk"
+
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/libuv/buildlink3.mk"
-.include "../../devel/pcre2/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=     opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
 $NetBSD$
 
 Don't override docdir when prefix is set
-Fixed the lack of build and host options.
+Fixed the lack of build, host, and --x-* options.
 It always failed to find patch even though it's there.
 
 --- configure.orig	2023-12-22 16:18:46.000000000 +0000
@@ -26,7 +26,7 @@ It always failed to find patch even though it's there.
      --enable-*)
        api="`echo $1 | sed 's/--[^-]*-//'`";
        add=1;
-@@ -1151,6 +1153,12 @@ while : ; do
+@@ -1151,6 +1153,15 @@ while : ; do
      --hostsh=*)
        hostsh="`echo $1 | sed 's/^[^=]*=//'`";;
  
@@ -36,10 +36,13 @@ It always failed to find patch even though it's there.
 +    --host=*)
 +      ;;
 +
++    --x-*=*)
++      ;;
++
      -*)
        if [ "$1" != "-h" -a "$1" != "-help" -a "$1" != "--help" ]; then
          echo "*** ERROR: unknown option \"$1\""
-@@ -2119,18 +2127,18 @@ if [ $action = "all" -o $action = "biglo
+@@ -2119,18 +2130,18 @@ if [ $action = "all" -o $action = "biglo
  fi
  
  # checking patch
@@ -48,10 +51,10 @@ It always failed to find patch even though it's there.
 -if [ "$patch " = " " ]; then
 -  patch=patch
 -fi
+-
+-$patch --help 2> /dev/null > /dev/null
 +#patch=$PATCH
  
--$patch --help 2> /dev/null > /dev/null
--
 -if [ $? != 0 ]; then
 -  $echo "*** ERROR: patch ($patch) command not found. Aborting..." >&2;
 -  exit 1;
@@ -69,7 +72,7 @@ It always failed to find patch even though it's there.
    
  #*---------------------------------------------------------------------*/
  #*    Executable names                                                 */
-@@ -2242,7 +2250,7 @@ else
+@@ -2242,7 +2253,7 @@ else
    fi
  
    if [ "$gcparallelmark " = "yes " ]; then
