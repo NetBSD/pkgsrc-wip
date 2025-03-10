@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.12 2024/11/24 10:44:23 wiz Exp $
 
-DISTNAME=	posting-2.4.0
+DISTNAME=	posting-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/posting/}
