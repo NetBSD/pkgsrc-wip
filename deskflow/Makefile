@@ -38,16 +38,20 @@ post-extract:
 	${MKDIR} -p ${WRKSRC}/${CMAKE_BUILD_DIR}/include/toml++
 	${MV} ${WRKDIR}/toml-${TOMLPP_VERSION}.hpp ${WRKSRC}/${CMAKE_BUILD_DIR}/include/toml++/toml.h
 
-
-
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CMAKE_INSTALL_PREFIX=	${PREFIX}/Applications
+PLIST_SRC=		PLIST.App
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../wip/libei/buildlink3.mk"
@@ -59,7 +63,6 @@ post-extract:
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
-.if ${OPSYS} != "Darwin"
-.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
