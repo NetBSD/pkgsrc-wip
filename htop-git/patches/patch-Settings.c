@@ -1,8 +1,10 @@
 $NetBSD$
 
-Include missing stdarg.h
+https://github.com/htop-dev/htop/pull/1634
 
---- Settings.c.orig	2024-06-29 01:19:30.776151045 +0000
+Fix build when using native curses.
+
+--- Settings.c.orig	2025-03-10 20:22:40.410153171 +0000
 +++ Settings.c
 @@ -14,6 +14,7 @@ in the source distribution for its full 
  #include <fcntl.h>
