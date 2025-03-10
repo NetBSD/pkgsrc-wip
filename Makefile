@@ -688,6 +688,7 @@ SUBDIR+=	denise
 SUBDIR+=	depsolver
 SUBDIR+=	descent3
 SUBDIR+=	deskcribe
+SUBDIR+=	deskflow
 SUBDIR+=	desktop-data-model
 SUBDIR+=	desktop-installer
 SUBDIR+=	desmume

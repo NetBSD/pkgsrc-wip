@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/deskflow
+bin/deskflow-client
+bin/deskflow-server
+share/applications/org.deskflow.deskflow.desktop
+share/icons/hicolor/512x512/apps/org.deskflow.deskflow.png
+share/licenses/deskflow/LICENSE
+share/licenses/deskflow/LICENSE_EXCEPTION
+share/metainfo/org.deskflow.deskflow.metainfo.xml
