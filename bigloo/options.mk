@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bigloo
-PKG_SUPPORTED_OPTIONS=	alsa avahi flac pgp gstreamer libuv mpg123 pulseaudio sqlite
+PKG_SUPPORTED_OPTIONS=	alsa avahi emacs flac pgp gstreamer libuv mpg123 pulseaudio sqlite
 PKG_SUGGESTED_OPTIONS=	libuv sqlite
 
 .include "../../mk/bsd.options.mk"
@@ -30,6 +30,20 @@ PLIST.avahi=	yes
 .else
 CONFIGURE_ARGS+=	--disable-avahi
 .endif
+
+###
+###  Add Full BEE and Emacs support
+###
+.if !empty(PKG_OPTIONS:Memacs)
+CONFIGURE_ARGS+=	--bee=full
+CONFIGURE_ARGS+=	--lispdir=${EMACS_LISPPREFIX}
+.include "../../editors/emacs/modules.mk"
+.include "../../audio/flac/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--emacs=no
+CONFIGURE_ARGS+=	--bee=partial
+.endif
+
 
 ###
 ###  Support FLAC audio file manipulation

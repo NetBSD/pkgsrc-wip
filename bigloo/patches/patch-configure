@@ -3,6 +3,8 @@ $NetBSD$
 Don't override docdir when prefix is set
 Fixed the lack of build, host, and --x-* options.
 It always failed to find patch even though it's there.
+Turn off dlopen for NetBSD which will cause the bigloo compiler to
+not work once built
 
 --- configure.orig	2023-12-22 16:18:46.000000000 +0000
 +++ configure
@@ -81,3 +83,12 @@ It always failed to find patch even though it's there.
    fi
  
    # thread local storage
+@@ -3478,7 +3489,7 @@ if [ $action = "all" -o $action = "biglo
+   fi
+ 
+   # Does the system have dlopen?
+-  if [ "$ldopt " != "no-share" ]; then
++  if [ "$ldopt " != "no-share" && "$hostos" != "NetBSD" ]; then
+     if [ "$hostos" = "mingw" ]; then
+       havedlopen=1
+       dlopen=""
