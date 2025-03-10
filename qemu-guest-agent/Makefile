@@ -1,6 +1,8 @@
 # $NetBSD: Makefile,v 1.340 2024/04/07 07:33:58 wiz Exp $
 
-DISTNAME=	qemu-9.2.2
+.include "../../emulators/qemu/version.mk"
+
+DISTNAME=	qemu-${QEMU_VERSION}
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
@@ -23,6 +25,7 @@ UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 PATCHDIR=		${.CURDIR}/../../emulators/qemu/patches
+DISTINFO_FILE=		${.CURDIR}/../../emulators/qemu/distinfo
 RCD_SCRIPTS=		qemu-guest-agent
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
