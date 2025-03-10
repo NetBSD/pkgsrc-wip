@@ -12,7 +12,7 @@ COMMENT=	Flatpak portal library
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	cmake pkg-config
 
 NOT_FOR_PLATFORM+=	Darwin-*-*
 
