@@ -2015,6 +2015,7 @@ SUBDIR+=	libdrm-dfbsd-meson
 SUBDIR+=	libdxfrw
 SUBDIR+=	libecc
 SUBDIR+=	libee
+SUBDIR+=	libei
 SUBDIR+=	libeio
 SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
