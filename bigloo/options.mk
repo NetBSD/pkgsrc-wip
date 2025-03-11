@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bigloo
 PKG_SUPPORTED_OPTIONS=	alsa emacs flac mpg123 pulseaudio
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
@@ -63,4 +63,3 @@ PLIST.pulseaudio=	yes
 .else
 CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
-
