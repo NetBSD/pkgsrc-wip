@@ -1,13 +1,12 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bigloo
-PKG_SUPPORTED_OPTIONS=	alsa avahi emacs flac pgp gstreamer libuv mpg123 pulseaudio sqlite
-PKG_SUGGESTED_OPTIONS=	libuv sqlite
+PKG_SUPPORTED_OPTIONS=	alsa emacs flac mpg123 pulseaudio
+PKG_SUGGESTED_OPTIONS=	
 
 .include "../../mk/bsd.options.mk"
 
-#PLIST_SRC=	PLIST
-PLIST_VARS=	alsa avahi pgp libuv pulseaudio sqlite
+PLIST_VARS=	alsa pulseaudio
 
 ###
 ###  Support ALSA
@@ -18,17 +17,6 @@ CONFIGURE_ARGS+=	--enable-alsa
 PLIST.alsa=	yes
 .else
 CONFIGURE_ARGS+=	--disable-alsa
-.endif
-
-###
-###  Support Avahi
-###
-.if !empty(PKG_OPTIONS:Mavahi)
-CONFIGURE_ARGS+=	--enable-avahi
-PLIST.avahi=	yes
-.include "../../net/avahi/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-avahi
 .endif
 
 ###
@@ -56,37 +44,6 @@ CONFIGURE_ARGS+=	--disable-flac
 .endif
 
 ###
-###  Support PGP
-###
-.if !empty(PKG_OPTIONS:Mpgp)
-CONFIGURE_ARGS+=	--enable-openpgp
-PLIST.pgp=		yes
-.else
-CONFIGURE_ARGS+=	--disable-openpgp
-.endif
-
-###
-###  Support gstreamer
-###
-.if !empty(PKG_OPTIONS:Mgstreamer)
-CONFIGURE_ARGS+=	--enable-gstreamer
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-gstreamer
-.endif
-
-###
-###  Support libuv
-###
-.if !empty(PKG_OPTIONS:Mlibuv)
-CONFIGURE_ARGS+=	--enable-libuv
-PLIST.libuv=	yes
-.include "../../devel/libuv/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libuv
-.endif
-
-###
 ###  Support mpg123
 ###
 .if !empty(PKG_OPTIONS:Mmpg123)
@@ -107,16 +64,3 @@ PLIST.pulseaudio=	yes
 CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 
-
-###
-###  Support SQLite
-###
-.if !empty(PKG_OPTIONS:Msqlite)
-CONFIGURE_ARGS+=	--enable-sqlite
-CONFIGURE_ARGS+=	--enable-pkglib
-PLIST.sqlite=	yes
-.include "../../databases/sqlite3/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-sqlite
-CONFIGURE_ARGS+=	--disable-pkglib
-.endif

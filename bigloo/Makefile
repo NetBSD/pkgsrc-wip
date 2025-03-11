@@ -13,7 +13,6 @@ CHECK_PORTABILITY_SKIP+=	api-contribs/bigloo-with-dbus/configure
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake autoconf automake pkg-config
-HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 
@@ -39,28 +38,37 @@ CONFIGURE_ARGS+=	--strip=no
 CONFIGURE_ARGS+=	--enable-calendar
 CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--enable-csv
+CONFIGURE_ARGS+=	--enable-libuv
 CONFIGURE_ARGS+=	--enable-mail
 CONFIGURE_ARGS+=	--enable-multimedia
+CONFIGURE_ARGS+=	--enable-openpgp
 CONFIGURE_ARGS+=	--enable-packrat
 CONFIGURE_ARGS+=	--enable-phone
 CONFIGURE_ARGS+=	--enable-pkgcomp
+CONFIGURE_ARGS+=	--enable-pkglib
 CONFIGURE_ARGS+=	--enable-pthread
+CONFIGURE_ARGS+=	--enable-sqlite
 CONFIGURE_ARGS+=	--enable-srfi1
 CONFIGURE_ARGS+=	--enable-srfi18
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-text
 CONFIGURE_ARGS+=	--enable-upnp
 CONFIGURE_ARGS+=	--enable-web
-
+# unsure how these APIs work or if they're useful
+CONFIGURE_ARGS+=	--disable-gstreamer
+CONFIGURE_ARGS+=	--disable-avahi
 
 BUILD_TARGET=	#empty
 
 .include "options.mk"
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=     opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
