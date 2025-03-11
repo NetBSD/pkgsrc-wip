@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (xiphos-4.2.1.tar.gz) = 544fef5c1324d5296da2ca81b2cfa4bdda41faa6d03660be87382d0c9e3193f1
+SHA512 (xiphos-4.2.1.tar.gz) = 7114a6b953f6f72e03c3e860c7f5b1b505005b95f97456ea9ab3343b559331bd461c6531b9889c372187c7b2089dbdb3ef560eddf1d560b19ace02bd811d7df0
+Size (xiphos-4.2.1.tar.gz) = 28379172 bytes
+SHA1 (patch-CMakeLists.txt) = 91af70f6531b36021fd279ed3befc075716e6f59
+SHA1 (patch-cmake_config.h.cmake.in) = e9628eb343aa9f443b2b4897738decae082849a0
+SHA1 (patch-src_backend_module__manager.cc) = aca4a2153e82a7b0d4de7d554aaa5309d1a586d9
+SHA1 (patch-src_editor_editor.c) = 7eb754d59af682190d2369ca26b4b3ab4cf8a8b5
+SHA1 (patch-src_editor_webkit__editor.c) = 95c2bb3bd3ddd00f411805fe0485c16090678378

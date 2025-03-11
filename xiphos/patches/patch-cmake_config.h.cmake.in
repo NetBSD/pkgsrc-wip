@@ -1,0 +1,14 @@
+$NetBSD$
+
+The min requirement for glib is actually 2.26 not what is set
+elsewhere in the project
+
+--- cmake/config.h.cmake.in.orig	2025-03-11 16:54:57.983568227 +0000
++++ cmake/config.h.cmake.in
+@@ -65,3 +65,5 @@
+ 
+ 
+ #endif
++
++#define GLIB_VERSION_MIN_REQUIRED (GLIB_VERSION_2_26)
+\ No newline at end of file
