@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=  	goon-linux-world-0.1.1
+DISTNAME=  	goon-linux-world-0.1.2
 CATEGORIES= 	devel	
 MASTER_SITES=	https://sourceforge.net/projects/goon-linux/files/
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://sourceforge.net/projects/goon-linux/
 COMMENT= 	goon's personal GNU/Linux distribution	
 LICENSE=	GPL	
 
-WRKSRC=		${WRKDIR}/goon-linux-world-0.1.1/
+WRKSRC=		${WRKDIR}/goon-linux-world-0.1.2/
 USE_LANGUAGES=  Python 
 
 INSTALLATION_DIRS=	bin
