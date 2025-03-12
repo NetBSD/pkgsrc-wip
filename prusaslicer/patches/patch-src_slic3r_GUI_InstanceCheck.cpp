@@ -2,9 +2,9 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/InstanceCheck.cpp.orig	2021-01-11 13:01:51.000000000 +0000
+--- src/slic3r/GUI/InstanceCheck.cpp.orig	2025-03-10 13:20:54.000000000 +0000
 +++ src/slic3r/GUI/InstanceCheck.cpp
-@@ -23,7 +23,7 @@
+@@ -31,7 +31,7 @@
  #include <strsafe.h>
  #endif //WIN32
  
@@ -13,16 +13,16 @@ Treat NetBSD like Linux.
  #include <dbus/dbus.h> /* Pull in all of D-Bus headers. */
  #endif //__linux__
  
-@@ -169,7 +169,7 @@ namespace instance_check_internal
+@@ -316,7 +316,7 @@ namespace instance_check_internal
  		return false;
  	}
  
 -#elif defined(__linux__)
 +#elif defined(__linux__) || defined(__NetBSD__)
  
- 	static bool  send_message(const std::string &message_text, const std::string &version)
+ 	static void list_matching_objects(const std::string& pattern, std::vector<std::string>& result) 
  	{
-@@ -257,7 +257,7 @@ bool instance_check(int argc, char** arg
+@@ -561,7 +561,7 @@ bool instance_check(int argc, char** arg
  	hashed_path = std::hash<std::string>{}(boost::filesystem::system_complete(argv[0]).string());
  #else
  	boost::system::error_code ec;

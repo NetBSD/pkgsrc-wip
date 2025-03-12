@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.9.0
+PKGVERSION=	2.9.1
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(alpha|beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -66,6 +66,7 @@ pre-configure:
 .include "../../math/imath/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
+.include "../../math/z3/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/heimdal/buildlink3.mk"

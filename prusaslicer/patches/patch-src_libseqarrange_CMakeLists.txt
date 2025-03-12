@@ -1,0 +1,15 @@
+$NetBSD$
+
+Allow Catch2 v3.7 rather than requiring v3.8.
+
+--- src/libseqarrange/CMakeLists.txt.orig	2025-03-12 04:09:58.055557278 +0000
++++ src/libseqarrange/CMakeLists.txt
+@@ -16,7 +16,7 @@ target_link_libraries(sequential_decimat
+ 
+ 
+ if (SLIC3R_BUILD_TESTS)
+-    find_package(Catch2 3.8 REQUIRED)
++    find_package(Catch2 3.7 REQUIRED)
+ 
+     add_executable(libseqarrange_tests test/prusaparts.cpp test/seq_test_polygon.cpp test/seq_test_sequential.cpp test/seq_test_preprocess.cpp test/seq_test_interface.cpp)
+     target_include_directories(libseqarrange_tests PRIVATE src )

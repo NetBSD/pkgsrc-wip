@@ -5,6 +5,15 @@ bin/prusa-slicer
 lib/udev/rules.d/90-3dconnexion.rules
 share/PrusaSlicer/data/embossed_text.obj
 share/PrusaSlicer/data/hints.ini
+share/PrusaSlicer/data/printer_gantries/geometries.json
+share/PrusaSlicer/data/printer_gantries/prusa3d_coreone_gantry.stl
+share/PrusaSlicer/data/printer_gantries/prusa3d_ht90_actuator.stl
+share/PrusaSlicer/data/printer_gantries/prusa3d_mini_gantry.stl
+share/PrusaSlicer/data/printer_gantries/prusa3d_mk3s_gantry.stl
+share/PrusaSlicer/data/printer_gantries/prusa3d_mk4_gantry.stl
+share/PrusaSlicer/data/printer_gantries/prusa3d_mk4s_gantry.stl
+share/PrusaSlicer/data/printer_gantries/prusa3d_xl_gantry.stl
+share/PrusaSlicer/data/sla_support.svg
 share/PrusaSlicer/fonts/NotoSans-Regular.ttf
 share/PrusaSlicer/fonts/NotoSansCJK-Regular.ttc
 share/PrusaSlicer/fonts/README.txt
@@ -276,6 +285,11 @@ share/PrusaSlicer/icons/sla_view_original.svg
 share/PrusaSlicer/icons/sla_view_processed.svg
 share/PrusaSlicer/icons/slice_all.svg
 share/PrusaSlicer/icons/snap.svg
+share/PrusaSlicer/icons/sphere_blueish.svg
+share/PrusaSlicer/icons/sphere_cyan.svg
+share/PrusaSlicer/icons/sphere_lightgray.svg
+share/PrusaSlicer/icons/sphere_orange.svg
+share/PrusaSlicer/icons/sphere_redish.svg
 share/PrusaSlicer/icons/spin_dec.svg
 share/PrusaSlicer/icons/spin_dec_act.svg
 share/PrusaSlicer/icons/spin_inc.svg
@@ -291,6 +305,8 @@ share/PrusaSlicer/icons/stl.icns
 share/PrusaSlicer/icons/support.svg
 share/PrusaSlicer/icons/support_blocker.svg
 share/PrusaSlicer/icons/support_enforcer.svg
+share/PrusaSlicer/icons/support_structure.svg
+share/PrusaSlicer/icons/support_structure_invisible.svg
 share/PrusaSlicer/icons/svg_modifier.svg
 share/PrusaSlicer/icons/svg_negative.svg
 share/PrusaSlicer/icons/svg_part.svg
@@ -579,6 +595,8 @@ share/PrusaSlicer/profiles/Creality/sermoond1.svg
 share/PrusaSlicer/profiles/Creality/sermoond1_bed.stl
 share/PrusaSlicer/profiles/Creality/sermoonv1.svg
 share/PrusaSlicer/profiles/Creality/sermoonv1_bed.stl
+share/PrusaSlicer/profiles/E2D.idx
+share/PrusaSlicer/profiles/E2D.ini
 share/PrusaSlicer/profiles/Elegoo.idx
 share/PrusaSlicer/profiles/Elegoo.ini
 share/PrusaSlicer/profiles/Elegoo/NEPTUNE1_thumbnail.png
@@ -719,6 +737,7 @@ share/PrusaSlicer/profiles/Print4Taste/MC2.0_texture.svg
 share/PrusaSlicer/profiles/Print4Taste/MC2.0_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch.idx
 share/PrusaSlicer/profiles/PrusaResearch.ini
+share/PrusaSlicer/profiles/PrusaResearch/COREONE_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MINIIS_ALPHA_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MINIIS_BETA_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MINIIS_thumbnail.png
@@ -758,6 +777,8 @@ share/PrusaSlicer/profiles/PrusaResearch/XLIS_alpha_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/XLIS_beta_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/XLIS_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/XL_thumbnail.png
+share/PrusaSlicer/profiles/PrusaResearch/coreone.svg
+share/PrusaSlicer/profiles/PrusaResearch/coreone_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/mini.svg
 share/PrusaSlicer/profiles/PrusaResearch/miniIS.svg
 share/PrusaSlicer/profiles/PrusaResearch/miniISbeta.svg
@@ -785,6 +806,8 @@ share/PrusaSlicer/profiles/PrusaResearchSLA/sl1.svg
 share/PrusaSlicer/profiles/PrusaResearchSLA/sl1_bed.stl
 share/PrusaSlicer/profiles/PrusaResearchSLA/sl1s.svg
 share/PrusaSlicer/profiles/PrusaResearchSLA/sl1s_bed.stl
+share/PrusaSlicer/profiles/QIDITechnology.idx
+share/PrusaSlicer/profiles/QIDITechnology.ini
 share/PrusaSlicer/profiles/RatRig.idx
 share/PrusaSlicer/profiles/RatRig.ini
 share/PrusaSlicer/profiles/RatRig/VC3_300_thumbnail.png
@@ -975,6 +998,8 @@ share/PrusaSlicer/shaders/110/mm_gouraud.fs
 share/PrusaSlicer/shaders/110/mm_gouraud.vs
 share/PrusaSlicer/shaders/110/printbed.fs
 share/PrusaSlicer/shaders/110/printbed.vs
+share/PrusaSlicer/shaders/110/tool_marker.fs
+share/PrusaSlicer/shaders/110/tool_marker.vs
 share/PrusaSlicer/shaders/110/toolpaths_cog.fs
 share/PrusaSlicer/shaders/110/toolpaths_cog.vs
 share/PrusaSlicer/shaders/110/variable_layer_height.fs
@@ -1006,6 +1031,8 @@ share/PrusaSlicer/shaders/140/mm_gouraud.fs
 share/PrusaSlicer/shaders/140/mm_gouraud.vs
 share/PrusaSlicer/shaders/140/printbed.fs
 share/PrusaSlicer/shaders/140/printbed.vs
+share/PrusaSlicer/shaders/140/tool_marker.fs
+share/PrusaSlicer/shaders/140/tool_marker.vs
 share/PrusaSlicer/shaders/140/toolpaths_cog.fs
 share/PrusaSlicer/shaders/140/toolpaths_cog.vs
 share/PrusaSlicer/shaders/140/variable_layer_height.fs
@@ -1036,6 +1063,8 @@ share/PrusaSlicer/shaders/ES/mm_gouraud.fs
 share/PrusaSlicer/shaders/ES/mm_gouraud.vs
 share/PrusaSlicer/shaders/ES/printbed.fs
 share/PrusaSlicer/shaders/ES/printbed.vs
+share/PrusaSlicer/shaders/ES/tool_marker.fs
+share/PrusaSlicer/shaders/ES/tool_marker.vs
 share/PrusaSlicer/shaders/ES/toolpaths_cog.fs
 share/PrusaSlicer/shaders/ES/toolpaths_cog.vs
 share/PrusaSlicer/shaders/ES/variable_layer_height.fs
