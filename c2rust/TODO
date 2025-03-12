@@ -1,30 +1,430 @@
-===> Building for c2rust-0.15.0
-   Compiling c2rust-ast-builder v0.15.0 (/scratch/wip/c2rust/work/c2rust-0.15.0/c2rust-ast-builder)
-   Compiling fake-simd v0.1.2
-   Compiling strum v0.16.0
-   Compiling json v0.12.0
-   Compiling pulldown-cmark v0.2.0
-   Compiling dtoa v0.4.4
-   Compiling diff v0.1.12
-   Compiling sequence_trie v0.3.6
-error[E0463]: can't find crate for `rustc`
- --> c2rust-ast-builder/src/lib.rs:2:1
+error[E0463]: can't find crate for `rustc_ast`
+ --> pdg/src/lib.rs:5:1
   |
-2 | extern crate rustc;
-  | ^^^^^^^^^^^^^^^^^^^ can't find crate
+5 | extern crate rustc_ast;
+  | ^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+  |
+  = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
 
-   Compiling slotmap v0.4.0
-   Compiling pulldown-cmark v0.6.1
-For more information about this error, try `rustc --explain E0463`.
-error: could not compile `c2rust-ast-builder` due to previous error
-warning: build failed, waiting for other jobs to finish...
+error[E0463]: can't find crate for `rustc_const_eval`
+ --> pdg/src/lib.rs:6:1
+  |
+6 | extern crate rustc_const_eval;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+  |
+  = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_data_structures`
+ --> pdg/src/lib.rs:7:1
+  |
+7 | extern crate rustc_data_structures;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+  |
+  = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_driver`
+ --> pdg/src/lib.rs:8:1
+  |
+8 | extern crate rustc_driver;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+  |
+  = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_hir`
+ --> pdg/src/lib.rs:9:1
+  |
+9 | extern crate rustc_hir;
+  | ^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+  |
+  = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_index`
+  --> pdg/src/lib.rs:10:1
+   |
+10 | extern crate rustc_index;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_interface`
+  --> pdg/src/lib.rs:11:1
+   |
+11 | extern crate rustc_interface;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_middle`
+  --> pdg/src/lib.rs:12:1
+   |
+12 | extern crate rustc_middle;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_mir_build`
+  --> pdg/src/lib.rs:13:1
+   |
+13 | extern crate rustc_mir_build;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_mir_transform`
+  --> pdg/src/lib.rs:14:1
+   |
+14 | extern crate rustc_mir_transform;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_serialize`
+  --> pdg/src/lib.rs:15:1
+   |
+15 | extern crate rustc_serialize;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_session`
+  --> pdg/src/lib.rs:16:1
+   |
+16 | extern crate rustc_session;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_span`
+  --> pdg/src/lib.rs:17:1
+   |
+17 | extern crate rustc_span;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0463]: can't find crate for `rustc_target`
+  --> pdg/src/lib.rs:18:1
+   |
+18 | extern crate rustc_target;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate
+   |
+   = help: maybe you need to install the missing components with: `rustup component add rust-src rustc-dev llvm-tools-preview`
+
+error[E0432]: unresolved imports `crate::graph::GraphId`, `crate::graph::NodeId`
+ --> pdg/src/builder.rs:1:27
+  |
+1 | use crate::graph::{Graph, GraphId, Graphs, Node, NodeId, NodeKind};
+  |                           ^^^^^^^                ^^^^^^ no `NodeId` in `graph`
+  |                           |
+  |                           no `GraphId` in `graph`
+  |
+help: a similar name exists in the module
+  |
+1 | use crate::graph::{Graph, Graph, Graphs, Node, NodeId, NodeKind};
+  |                           ~~~~~
+help: a similar name exists in the module
+  |
+1 | use crate::graph::{Graph, GraphId, Graphs, Node, Node, NodeKind};
+  |                                                  ~~~~
+
+error[E0432]: unresolved import `crate::graph::NodeId`
+ --> pdg/src/info.rs:1:41
+  |
+1 | use crate::graph::{Graph, Graphs, Node, NodeId, NodeKind};
+  |                                         ^^^^^^
+  |                                         |
+  |                                         no `NodeId` in `graph`
+  |                                         help: a similar name exists in the module: `Node`
+
+error[E0432]: unresolved import `crate::graph::NodeId`
+  --> pdg/src/query.rs:16:27
+   |
+16 | use crate::graph::{Graph, NodeId, NodeKind};
+   |                           ^^^^^^
+   |                           |
+   |                           no `NodeId` in `graph`
+   |                           help: a similar name exists in the module: `Node`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:182:24
+    |
+182 |     pub source: Option<NodeId>,
+    |                        ^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+158 | pub struct Node<NodeId> {
+    |                ++++++++
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:182:24
+    |
+182 |     pub source: Option<NodeId>,
+    |                        ^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:242:20
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+242 | impl Serialize for NodeId {
+    |                    ^^^^^^ help: a struct with a similar name exists: `Node`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:251:32
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+251 | impl<'de> Deserialize<'de> for NodeId {
+    |                                ^^^^^^ help: a struct with a similar name exists: `Node`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:252:50
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+252 |     fn deserialize<D>(deserializer: D) -> Result<NodeId, D::Error>
+    |                                                  ^^^^^^
+    |
+help: a struct with a similar name exists
+    |
+252 |     fn deserialize<D>(deserializer: D) -> Result<Node, D::Error>
+    |                                                  ~~~~
+help: you might be missing a type parameter
+    |
+251 | impl<'de, NodeId> Deserialize<'de> for NodeId {
+    |         ++++++++
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:262:23
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+262 | pub const _ROOT_NODE: NodeId = NodeId::from_u32(0);
+    |                       ^^^^^^ help: a struct with a similar name exists: `Node`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:264:18
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+264 | impl Display for NodeId {
+    |                  ^^^^^^ help: a struct with a similar name exists: `Node`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:271:9
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+271 |     id: NodeId,
+    |         ^^^^^^ help: a struct with a similar name exists: `Node`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:292:25
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+292 |     pub nodes: IndexVec<NodeId, Node>,
+    |                         ^^^^^^
+    |
+help: a struct with a similar name exists
+    |
+292 |     pub nodes: IndexVec<Node, Node>,
+    |                         ~~~~
+help: you might be missing a type parameter
+    |
+287 | pub struct Graph<NodeId> {
+    |                 ++++++++
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:292:25
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+292 |     pub nodes: IndexVec<NodeId, Node>,
+    |                         ^^^^^^ help: a struct with a similar name exists: `Node`
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:337:20
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+337 | impl Serialize for GraphId {
+    |                    ^^^^^^^ help: a struct with a similar name exists: `Graph`
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:346:32
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+346 | impl<'de> Deserialize<'de> for GraphId {
+    |                                ^^^^^^^ help: a struct with a similar name exists: `Graph`
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:347:50
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+347 |     fn deserialize<D>(deserializer: D) -> Result<GraphId, D::Error>
+    |                                                  ^^^^^^^
+    |
+help: a struct with a similar name exists
+    |
+347 |     fn deserialize<D>(deserializer: D) -> Result<Graph, D::Error>
+    |                                                  ~~~~~
+help: you might be missing a type parameter
+    |
+346 | impl<'de, GraphId> Deserialize<'de> for GraphId {
+    |         +++++++++
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:356:18
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+356 | impl Display for GraphId {
+    |                  ^^^^^^^ help: a struct with a similar name exists: `Graph`
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:368:26
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+368 |     pub graphs: IndexVec<GraphId, Graph>,
+    |                          ^^^^^^^
+    |
+help: a struct with a similar name exists
+    |
+368 |     pub graphs: IndexVec<Graph, Graph>,
+    |                          ~~~~~
+help: you might be missing a type parameter
+    |
+364 | pub struct Graphs<GraphId> {
+    |                  +++++++++
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:371:63
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+371 |     pub latest_assignment: HashMap<(FuncId, mir_loc::Local), (GraphId, NodeId)>,
+    |                                                               ^^^^^^^
+    |
+help: a struct with a similar name exists
+    |
+371 |     pub latest_assignment: HashMap<(FuncId, mir_loc::Local), (Graph, NodeId)>,
+    |                                                               ~~~~~
+help: you might be missing a type parameter
+    |
+364 | pub struct Graphs<GraphId> {
+    |                  +++++++++
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:371:72
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+371 |     pub latest_assignment: HashMap<(FuncId, mir_loc::Local), (GraphId, NodeId)>,
+    |                                                                        ^^^^^^
+    |
+help: a struct with a similar name exists
+    |
+371 |     pub latest_assignment: HashMap<(FuncId, mir_loc::Local), (GraphId, Node)>,
+    |                                                                        ~~~~
+help: you might be missing a type parameter
+    |
+364 | pub struct Graphs<NodeId> {
+    |                  ++++++++
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:368:26
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+368 |     pub graphs: IndexVec<GraphId, Graph>,
+    |                          ^^^^^^^ help: a struct with a similar name exists: `Graph`
+
+error[E0412]: cannot find type `GraphId` in this scope
+   --> pdg/src/graph.rs:371:63
+    |
+287 | pub struct Graph {
+    | ---------------- similarly named struct `Graph` defined here
+...
+371 |     pub latest_assignment: HashMap<(FuncId, mir_loc::Local), (GraphId, NodeId)>,
+    |                                                               ^^^^^^^ help: a struct with a similar name exists: `Graph`
+
+error[E0412]: cannot find type `NodeId` in this scope
+   --> pdg/src/graph.rs:371:72
+    |
+158 | pub struct Node {
+    | --------------- similarly named struct `Node` defined here
+...
+371 |     pub latest_assignment: HashMap<(FuncId, mir_loc::Local), (GraphId, NodeId)>,
+    |                                                                        ^^^^^^ help: a struct with a similar name exists: `Node`
+
 error[E0554]: `#![feature]` may not be used on the stable release channel
- --> /scratch/wip/c2rust/work/vendor/slotmap-0.4.0/src/lib.rs:4:35
+ --> pdg/src/lib.rs:1:1
   |
-4 | #![cfg_attr(feature = "unstable", feature(untagged_unions, try_reserve))]
-  |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1 | #![feature(min_specialization)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more information about this error, try `rustc --explain E0554`.
-error: build failed
+error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> pdg/src/lib.rs:2:1
+  |
+2 | #![feature(rustc_private)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> pdg/src/lib.rs:3:1
+  |
+3 | #![feature(map_try_insert)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0433]: failed to resolve: use of undeclared type `NodeId`
+   --> pdg/src/graph.rs:262:32
+    |
+262 | pub const _ROOT_NODE: NodeId = NodeId::from_u32(0);
+    |                                ^^^^^^
+    |                                |
+    |                                use of undeclared type `NodeId`
+    |                                help: a struct with a similar name exists: `Node`
+
+error[E0433]: failed to resolve: use of undeclared type `NodeId`
+   --> pdg/src/graph.rs:257:12
+    |
+257 |         Ok(NodeId::from_u32(raw))
+    |            ^^^^^^
+    |            |
+    |            use of undeclared type `NodeId`
+    |            help: a struct with a similar name exists: `Node`
+
+error[E0433]: failed to resolve: use of undeclared type `GraphId`
+   --> pdg/src/graph.rs:352:12
+    |
+352 |         Ok(GraphId::from_u32(raw))
+    |            ^^^^^^^
+    |            |
+    |            use of undeclared type `GraphId`
+    |            help: a struct with a similar name exists: `Graph`
+
+Some errors have detailed explanations: E0412, E0432, E0433, E0463, E0554.
+For more information about an error, try `rustc --explain E0412`.
+error: could not compile `c2rust-pdg` (lib) due to 48 previous errors
+warning: build failed, waiting for other jobs to finish...
 *** Error code 101
-
