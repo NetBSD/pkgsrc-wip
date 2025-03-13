@@ -5350,7 +5350,6 @@ SUBDIR+=	slideml
 SUBDIR+=	slime
 SUBDIR+=	slowhttptest
 SUBDIR+=	slune
-SUBDIR+=	slurm-wlm-devel
 SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
