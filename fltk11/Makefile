@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 SUPERSEDES+=	fltk<1.3.0
 CONFLICTS+=	fltk13-[0-9]*
+CONFLICTS+=	fltk2-[0-9]*
 CONFLICTS+=	fltk-[0-9]*
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
