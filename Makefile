@@ -4182,6 +4182,7 @@ SUBDIR+=	py-msgraph-core
 SUBDIR+=	py-msrest
 SUBDIR+=	py-mssql2
 SUBDIR+=	py-msumastro
+SUBDIR+=	py-mtp
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-multimethods
 SUBDIR+=	py-multiprocess
