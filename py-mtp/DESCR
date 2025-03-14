@@ -1,0 +1,5 @@
+Keys in One-time pad encryption (OTP) should only be used once, when
+they get reused we can do a Many-time pad attack.
+
+MTP Interactive uses automated cryptanalysis to present a partial
+decryption which can be solved interactively.

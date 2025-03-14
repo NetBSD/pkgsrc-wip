@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/cli.py
+bin/mtp${PYVERSSUFFIX}
+${PYSITELIB}/manytime/__init__.py
+${PYSITELIB}/manytime/__init__.pyc
+${PYSITELIB}/manytime/__init__.pyo
+${PYSITELIB}/manytime/analysis.py
+${PYSITELIB}/manytime/analysis.pyc
+${PYSITELIB}/manytime/analysis.pyo
+${PYSITELIB}/manytime/interactive.py
+${PYSITELIB}/manytime/interactive.pyc
+${PYSITELIB}/manytime/interactive.pyo
+${PYSITELIB}/manytime/keys.py
+${PYSITELIB}/manytime/keys.pyc
+${PYSITELIB}/manytime/keys.pyo
+${PYSITELIB}/manytime/models.py
+${PYSITELIB}/manytime/models.pyc
+${PYSITELIB}/manytime/models.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
