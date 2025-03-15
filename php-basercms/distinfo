@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (basercms-5.1.0.tar.gz) = 9cc749ece14bbb92ecf4b2ecdcbc941e92e5df9d86a1129cdee2e59c9fdf0c24
-SHA512 (basercms-5.1.0.tar.gz) = 1a1de134c6708ab393df20a74f8860f70ccdee0ab649c1d202b1172fcd2ae48f07f0644437c05f46b5a13a7cd17b457a2575cf72df1be83fcd630e08e99dc2e1
-Size (basercms-5.1.0.tar.gz) = 17040557 bytes
+BLAKE2s (basercms-5.1.5.tar.gz) = 18b916a8d865c9336da9eef6295581b01aaa3261dc7c8fb41876720330237898
+SHA512 (basercms-5.1.5.tar.gz) = c304254b445c8d6b1ab695907762a877d8c46b279d937a7297c6f21933c154a42224c495ebd898c39d755ae3df35b7dc25f8f953fa7b868be7d6904f13da0e3f
+Size (basercms-5.1.5.tar.gz) = 17143374 bytes
