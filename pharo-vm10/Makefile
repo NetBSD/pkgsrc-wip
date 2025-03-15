@@ -1,9 +1,10 @@
 # $NetBSD$
 
-PHAROVM_VER=	10.3.2
-PHAROVM_HASH=	b8793dd2
+PHAROVM_VER=	10.3.3
+PHAROVM_AHEAD=	0
+PHAROVM_HASH=	2926567
 
-DISTNAME=	PharoVM-${PHAROVM_VER}-${PHAROVM_HASH}-Linux-x86_64-c-src
+DISTNAME=	PharoVM-v${PHAROVM_VER}+${PHAROVM_AHEAD}.${PHAROVM_HASH}-Linux-x86_64-c-src
 PKGNAME=	pharo-vm10-${PHAROVM_VER}
 CATEGORIES=	lang
 MASTER_SITES=	http://files.pharo.org/vm/pharo-spur64-headless/Linux-x86_64/source/
