@@ -1,11 +1,13 @@
 $NetBSD: distinfo,v 1.29 2024/11/20 01:29:49 mef Exp $
 
-BLAKE2s (kicad-8.0.8.tar.bz2) = 35947997f46a3fd47961910b6acef6df4f014f2cdee06384d5e2b5a4a3220408
-SHA512 (kicad-8.0.8.tar.bz2) = 708e91fc9b338826b6c834ea674e68ff5b93cb7834faab5be6ae4062009ed0cae7500934bdb8f3ede2aefa6d0f6054194a857bc80293fc0dc1f62a6a87d16202
-Size (kicad-8.0.8.tar.bz2) = 73260686 bytes
+BLAKE2s (kicad-9.0.0.tar.bz2) = b6e6343f2ec2a223f07ebe716d0b62f3bc38a93012ea38a88c1db15e44821a30
+SHA512 (kicad-9.0.0.tar.bz2) = 3b6d346d9a8d42c0ed9185427a99d78fbd9d789170aed6b9a7c6983eb58e69a1c20a7ea1b98769aa3d8121f641ca05cd8540e67f33448da2f6202f4abbc6de16
+Size (kicad-9.0.0.tar.bz2) = 128194997 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
 SHA1 (patch-CMakeLists.txt) = c0d017d3b8b202004dff71386da451fd81ede969
+SHA1 (patch-api_proto_common_types_base__types.proto) = 63de1236017bc8d92dbb5ed5affc026f1585e8f9
 SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
+SHA1 (patch-common_api_api__handler__common.cpp) = 9c907cc0e155a759ac41e71317b601f678777e09
 SHA1 (patch-common_import__gfx_dxf__import__plugin.cpp) = 9ba67a398f9d9c0bd487b0cc5a8954be9cf8e274
 SHA1 (patch-cvpcb_CMakeLists.txt) = a839b465f73727786495dace80c1706d457b33e4
 SHA1 (patch-eeschema_CMakeLists.txt) = 89d5b25822f6d5856f827823e0646be80cbbfcb4

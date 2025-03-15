@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.108 2025/01/10 22:49:54 wiz Exp $
 
-V=		8.0.8
+V=		9.0.0
 DISTNAME=	kicad-${V}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
@@ -33,6 +33,14 @@ CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=ON
 CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=OFF
 .endif
 
+#SUBST_CLASSES+=		undef
+#SUBST_STAGE.undef=	post-configure
+#SUBST_MESSAGE.undef=    TODO: Conflict 'major' and 'minor' defined somewhere.
+#SUBST_FILES.undef=	cmake-pkgsrc-build/api/cpp/api/common/types/base_types.pb.h
+#SUBST_SED.undef=	-e "/^#include <string>$/a #undef major"
+#SUBST_SED.undef+=	-e "/^#include <string>$/a #undef minor"
+USE_CXX_FEATURES=	c++17
+
 PY_PATCHPLIST=		yes
 
 # The package tries to build a native .app bundle. This doesn't work
@@ -47,12 +55,14 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 
 # needs 64-bit CAS for std::atomic<size_t>
 .include "../../mk/atomic64.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../cad/occt/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libgit2/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
@@ -61,6 +71,7 @@ BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../net/nng/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
