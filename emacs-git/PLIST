@@ -1348,8 +1348,6 @@ share/emacs/${PKGVERSION}/lisp/cedet/ede/util.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/util.elc
 share/emacs/${PKGVERSION}/lisp/cedet/mode-local.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/mode-local.elc
-share/emacs/${PKGVERSION}/lisp/cedet/pulse.el.gz
-share/emacs/${PKGVERSION}/lisp/cedet/pulse.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/analyze.el.gz
@@ -3825,6 +3823,8 @@ share/emacs/${PKGVERSION}/lisp/ps-print.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-print.elc
 share/emacs/${PKGVERSION}/lisp/ps-samp.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-samp.elc
+share/emacs/${PKGVERSION}/lisp/pulse.el.gz
+share/emacs/${PKGVERSION}/lisp/pulse.elc
 share/emacs/${PKGVERSION}/lisp/recentf.el.gz
 share/emacs/${PKGVERSION}/lisp/recentf.elc
 share/emacs/${PKGVERSION}/lisp/rect.el.gz
