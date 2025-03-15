@@ -19,13 +19,12 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 USE_LANGUAGES+=		c c++
-#USE_TOOLS+=		bison flex makeinfo perl:build pod2man pkg-config
-USE_TOOLS+=		pkg-config perl:build
+USE_TOOLS+=		pkg-config perl
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
-PATCHDIR=		${.CURDIR}/../../emulators/qemu/patches
-DISTINFO_FILE=		${.CURDIR}/../../emulators/qemu/distinfo
+PATCHDIR=		../../emulators/qemu/patches
+DISTINFO_FILE=		../../emulators/qemu/distinfo
 RCD_SCRIPTS=		qemu-guest-agent
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
@@ -38,7 +37,7 @@ GCC_REQD+=		7
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--python=${TOOL_PYTHONBIN}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 ALL_ENV+=		MESON_RSP_THRESHOLD=262144
@@ -79,16 +78,19 @@ PKG_SYSCONFSUBDIR=	qemu
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
-TEST_TARGET=		check
-
 PYTHON_FOR_BUILD_ONLY=	tool
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+	${RUN}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		ninja -j ${_MAKE_JOBS_N:U1} -C build
 
+# Some dependencies aren't correct and this tries to be re-made on install,
+# failing due to configure bugs.
+post-build:
+	${TOUCH} ${WRKSRC}/config-host.mak
+
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
+	${RUN}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
 		ninja -j ${_MAKE_JOBS_N:U1} -C build install
 	# not needed for guest agent
 	${RM} -f ${DESTDIR}${PREFIX}/include/qemu-plugin.h
@@ -100,10 +102,9 @@ do-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/qemu/keymaps
 	${RM} -rf ${DESTDIR}${PREFIX}/share/qemu/trace-events-all
 
-# Some dependencies aren't correct and this tries to be re-made on install,
-# failing due to configure bugs.
-post-build:
-	${TOUCH} ${WRKSRC}/config-host.mak
+do-test:
+	${RUN}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TEST_ENV} \
+		ninja -j ${_MAKE_JOBS_N:U1} -C build test
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
