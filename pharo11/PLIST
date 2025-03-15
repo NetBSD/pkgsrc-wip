@@ -1,5 +1,5 @@
 @comment $NetBSD$
-share/pharo/${PHARO_VER}/Pharo${PHARO_VER}-${PHARO_ARCH}-${PHARO_SHA}.sources
 share/pharo/${PHARO_VER}/Pharo${PHARO_MAJOR}-SNAPSHOT-${PHARO_ARCH}-${PHARO_SHA}.changes
 share/pharo/${PHARO_VER}/Pharo${PHARO_MAJOR}-SNAPSHOT-${PHARO_ARCH}-${PHARO_SHA}.image
+share/pharo/${PHARO_VER}/Pharo${PHARO_VER}-${PHARO_ARCH}-${PHARO_SHA7}.sources
 share/pharo/${PHARO_VER}/pharo.version
