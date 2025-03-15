@@ -4987,7 +4987,6 @@ SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
 SUBDIR+=	qemu-git
 SUBDIR+=	qemu-guest-agent
-SUBDIR+=	qemu-virtfs-netbsd
 SUBDIR+=	qgis
 SUBDIR+=	qico
 SUBDIR+=	qiew
