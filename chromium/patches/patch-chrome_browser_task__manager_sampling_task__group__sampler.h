@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__group__sampler.h,v 1.1 2025/02/06 09:57:51 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

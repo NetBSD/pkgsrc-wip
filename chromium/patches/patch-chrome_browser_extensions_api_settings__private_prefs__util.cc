@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_extensions_api_settings__private_prefs__util.cc,v 1.1 2025/02/06 09:57:47 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

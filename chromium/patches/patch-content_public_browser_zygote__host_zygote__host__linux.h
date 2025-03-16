@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_public_browser_zygote__host_zygote__host__linux.h,v 1.1 2025/02/06 09:58:07 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_dawn_src_dawn_common_Platform.h,v 1.1 2025/02/06 09:58:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_send__tab__to__self_receiving__ui__handler__registry.cc,v 1.1 2025/02/06 09:57:51 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

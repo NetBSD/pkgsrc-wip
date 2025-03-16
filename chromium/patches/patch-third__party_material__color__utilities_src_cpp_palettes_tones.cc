@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_material__color__utilities_src_cpp_palettes_tones.cc,v 1.1 2025/02/06 09:58:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

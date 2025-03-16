@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_speech-dispatcher_libspeechd__version.h,v 1.1 2025/02/06 09:58:27 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

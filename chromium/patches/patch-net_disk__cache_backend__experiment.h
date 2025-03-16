@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-net_disk__cache_backend__experiment.h,v 1.1 2025/02/06 09:58:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

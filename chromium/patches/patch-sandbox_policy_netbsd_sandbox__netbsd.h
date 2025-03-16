@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-sandbox_policy_netbsd_sandbox__netbsd.h,v 1.1 2025/02/06 09:58:19 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_device_time__zone__monitor_time__zone__monitor__linux.cc,v 1.1 2025/02/06 09:58:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

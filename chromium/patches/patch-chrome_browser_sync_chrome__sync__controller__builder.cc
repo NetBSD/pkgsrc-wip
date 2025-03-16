@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_sync_chrome__sync__controller__builder.cc,v 1.1 2025/02/06 09:57:51 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

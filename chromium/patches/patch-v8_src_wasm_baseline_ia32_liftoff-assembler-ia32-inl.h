@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.1 2025/02/06 09:58:37 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

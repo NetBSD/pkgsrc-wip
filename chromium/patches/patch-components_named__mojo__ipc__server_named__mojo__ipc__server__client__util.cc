@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_named__mojo__ipc__server_named__mojo__ipc__server__client__util.cc,v 1.1 2025/02/06 09:58:00 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

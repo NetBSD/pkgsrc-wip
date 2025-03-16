@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_viz_test_mock__display__client.h,v 1.1 2025/02/06 09:58:04 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

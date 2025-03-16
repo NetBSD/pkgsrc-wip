@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_device__signals_core_browser_mock__signals__aggregator.h,v 1.1 2025/02/06 09:57:59 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

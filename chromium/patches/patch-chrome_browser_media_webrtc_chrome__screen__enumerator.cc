@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.1 2025/02/06 09:57:48 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

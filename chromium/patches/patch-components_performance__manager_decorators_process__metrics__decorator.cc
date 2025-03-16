@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_performance__manager_decorators_process__metrics__decorator.cc,v 1.1 2025/02/06 09:58:02 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

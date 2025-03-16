@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_safe__browsing_cloud__content__scanning_binary__upload__service.cc,v 1.1 2025/02/06 09:57:50 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

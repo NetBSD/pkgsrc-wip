@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_password__manager_core_browser_password__manager__switches.h,v 1.1 2025/02/06 09:58:01 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_eye__dropper_eye__dropper__view.cc,v 1.1 2025/02/06 09:57:59 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

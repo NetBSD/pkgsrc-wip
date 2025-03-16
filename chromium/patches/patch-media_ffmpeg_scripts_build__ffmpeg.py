@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.1 2025/02/06 09:58:12 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

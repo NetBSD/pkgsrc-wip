@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

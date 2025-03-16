@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_webrtc_rtc__base_byte__order.h,v 1.1 2025/02/06 09:58:29 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

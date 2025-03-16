@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_base_ime_text__input__client.h,v 1.1 2025/02/06 09:58:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

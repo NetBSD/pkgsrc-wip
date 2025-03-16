@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_ui_webui_about_about__ui.h,v 1.1 2025/02/06 09:57:55 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

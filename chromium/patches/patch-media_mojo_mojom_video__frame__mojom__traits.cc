@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.1 2025/02/06 09:58:13 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

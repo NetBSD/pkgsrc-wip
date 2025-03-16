@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-remoting_host_policy__watcher.cc,v 1.1 2025/02/06 09:58:18 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

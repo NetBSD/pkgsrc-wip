@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.cc,v 1.1 2025/02/06 09:58:12 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

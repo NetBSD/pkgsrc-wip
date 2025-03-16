@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-net_base_mock__network__change__notifier.cc,v 1.1 2025/02/06 09:58:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

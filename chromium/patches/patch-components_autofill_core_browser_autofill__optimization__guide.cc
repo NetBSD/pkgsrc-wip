@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_autofill_core_browser_autofill__optimization__guide.cc,v 1.1 2025/02/06 09:57:58 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

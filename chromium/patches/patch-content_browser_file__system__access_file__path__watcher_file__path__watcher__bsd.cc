@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_browser_file__system__access_file__path__watcher_file__path__watcher__bsd.cc,v 1.1 2025/02/06 09:58:05 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

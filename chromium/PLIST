@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.1 2025/02/06 09:57:37 wiz Exp $
 bin/chromedriver
 bin/chromium
 lib/chromium/chrome

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_storage__monitor_removable__device__constants.h,v 1.1 2025/02/06 09:58:03 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

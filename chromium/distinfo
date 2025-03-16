@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: distinfo,v 1.1 2025/02/06 09:57:37 wiz Exp $
 
 BLAKE2s (chromium-131.0.6778.204-testdata.tar.xz) = c8e99fa924e08b74fe4913b13ee1030ffe96b5dfb5da0f5afc0a8e0adcf22d29
 SHA512 (chromium-131.0.6778.204-testdata.tar.xz) = f6b71812815d0988f054d998a67ee95b9190cbdc4269ffb3fd99fa088ad6ce77b652a5f569f8078274c0aaaba1a8eecb4de84bf8d7dd360def152787640961ba

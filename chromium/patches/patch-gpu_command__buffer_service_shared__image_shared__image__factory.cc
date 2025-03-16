@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

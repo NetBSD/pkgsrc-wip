@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_libvpx_source_libvpx_vpx__ports_aarch64__cpudetect.c,v 1.1 2025/02/06 09:58:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

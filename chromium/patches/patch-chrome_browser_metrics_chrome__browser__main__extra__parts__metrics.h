@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.h,v 1.1 2025/02/06 09:57:49 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

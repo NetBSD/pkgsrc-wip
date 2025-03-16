@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__connector__service__factory.cc,v 1.1 2025/02/06 09:57:46 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

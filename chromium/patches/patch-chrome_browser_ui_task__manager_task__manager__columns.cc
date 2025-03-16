@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__columns.cc,v 1.1 2025/02/06 09:57:53 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

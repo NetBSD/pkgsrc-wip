@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_ozone_platform_wayland_host_zwp__text__input__wrapper__v1.cc,v 1.1 2025/02/06 09:58:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

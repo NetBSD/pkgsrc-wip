@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-sandbox_linux_services_init__process__reaper.cc,v 1.1 2025/02/06 09:58:18 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

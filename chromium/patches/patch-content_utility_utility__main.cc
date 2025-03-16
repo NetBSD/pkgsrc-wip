@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_utility_utility__main.cc,v 1.1 2025/02/06 09:58:08 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

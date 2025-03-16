@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_common_gpu__pre__sandbox__hook__bsd.h,v 1.1 2025/02/06 09:58:07 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

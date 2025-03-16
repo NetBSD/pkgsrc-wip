@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_notifications_notification__display__service__impl.cc,v 1.1 2025/02/06 09:57:49 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

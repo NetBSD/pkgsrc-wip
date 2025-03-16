@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_on__device__model_on__device__model__service.h,v 1.1 2025/02/06 09:58:21 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

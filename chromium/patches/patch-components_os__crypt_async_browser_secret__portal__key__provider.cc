@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_os__crypt_async_browser_secret__portal__key__provider.cc,v 1.1 2025/02/06 09:58:01 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

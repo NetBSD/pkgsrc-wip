@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chromecast_cast__core_runtime_browser_runtime__application__service__impl.cc,v 1.1 2025/02/06 09:57:58 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

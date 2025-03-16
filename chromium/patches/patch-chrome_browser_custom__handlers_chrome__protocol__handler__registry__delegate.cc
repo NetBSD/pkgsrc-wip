@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_custom__handlers_chrome__protocol__handler__registry__delegate.cc,v 1.1 2025/02/06 09:57:46 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

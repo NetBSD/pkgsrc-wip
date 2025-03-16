@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_browser_utility__process__host__receiver__bindings.cc,v 1.1 2025/02/06 09:58:06 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

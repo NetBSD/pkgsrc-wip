@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_web__applications_policy_web__app__policy__manager.cc,v 1.1 2025/02/06 09:57:56 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

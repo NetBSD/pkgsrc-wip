@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_platform__window_platform__window__delegate.cc,v 1.1 2025/02/06 09:58:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

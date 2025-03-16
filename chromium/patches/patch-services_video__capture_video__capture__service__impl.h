@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_video__capture_video__capture__service__impl.h,v 1.1 2025/02/06 09:58:21 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

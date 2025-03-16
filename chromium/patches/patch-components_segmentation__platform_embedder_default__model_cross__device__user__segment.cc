@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_segmentation__platform_embedder_default__model_cross__device__user__segment.cc,v 1.1 2025/02/06 09:58:03 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

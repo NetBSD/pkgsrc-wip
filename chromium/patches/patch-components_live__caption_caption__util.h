@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_live__caption_caption__util.h,v 1.1 2025/02/06 09:58:00 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

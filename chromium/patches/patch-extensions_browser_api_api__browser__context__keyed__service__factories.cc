@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-extensions_browser_api_api__browser__context__keyed__service__factories.cc,v 1.1 2025/02/06 09:58:09 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

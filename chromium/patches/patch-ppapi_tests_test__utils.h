@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ppapi_tests_test__utils.h,v 1.1 2025/02/06 09:58:16 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

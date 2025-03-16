@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux.h,v 1.1 2025/02/06 09:58:13 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

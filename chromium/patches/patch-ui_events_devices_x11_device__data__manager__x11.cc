@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_events_devices_x11_device__data__manager__x11.cc,v 1.1 2025/02/06 09:58:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

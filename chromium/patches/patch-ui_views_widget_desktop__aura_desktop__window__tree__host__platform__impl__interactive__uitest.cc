@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platform__impl__interactive__uitest.cc,v 1.1 2025/02/06 09:58:35 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

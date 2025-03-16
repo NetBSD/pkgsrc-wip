@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_pdfium_xfa_fxfa_parser_cxfa__timezoneprovider.cpp,v 1.1 2025/02/06 09:58:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

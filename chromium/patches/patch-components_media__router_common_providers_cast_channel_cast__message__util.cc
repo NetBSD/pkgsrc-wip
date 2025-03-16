@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_media__router_common_providers_cast_channel_cast__message__util.cc,v 1.1 2025/02/06 09:58:00 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

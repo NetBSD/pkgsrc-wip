@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_test_supervised__user_google__auth__state__waiter__mixin.cc,v 1.1 2025/02/06 09:57:58 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

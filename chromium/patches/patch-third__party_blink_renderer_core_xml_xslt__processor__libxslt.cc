@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_blink_renderer_core_xml_xslt__processor__libxslt.cc,v 1.1 2025/02/06 09:58:23 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

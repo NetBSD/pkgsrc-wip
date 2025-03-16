@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_angle_src_libANGLE_formatutils.cpp,v 1.1 2025/02/06 09:58:22 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

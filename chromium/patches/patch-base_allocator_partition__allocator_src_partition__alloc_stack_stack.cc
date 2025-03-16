@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_stack_stack.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

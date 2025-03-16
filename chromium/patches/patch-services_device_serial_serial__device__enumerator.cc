@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_device_serial_serial__device__enumerator.cc,v 1.1 2025/02/06 09:58:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

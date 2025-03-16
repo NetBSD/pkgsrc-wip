@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_ui_views_tabs_tab__hover__card__bubble__view.cc,v 1.1 2025/02/06 09:57:54 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

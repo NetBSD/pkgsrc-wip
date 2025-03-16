@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.1 2025/02/06 09:57:57 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
