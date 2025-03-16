@@ -4986,7 +4986,6 @@ SUBDIR+=	qFlipper
 SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
 SUBDIR+=	qemu-git
-SUBDIR+=	qemu-guest-agent
 SUBDIR+=	qgis
 SUBDIR+=	qico
 SUBDIR+=	qiew

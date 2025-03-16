@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/qemu-ga
-${PLIST.doc}man/man7/qemu-ga-ref.7
-${PLIST.doc}man/man8/qemu-ga.8
