@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd
 #.include "../../lang/tcl/Makefile.version"
 .include "Makefile.version"
 
+MAKE_JOBS_SAFE=	no
+
 WRKSRC=		${WRKDIR}/tcl${TCL_VERSION}
 
 USE_GCC_RUNTIME=	yes
