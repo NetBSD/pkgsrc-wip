@@ -13,6 +13,7 @@ SHA1 (patch-Source_WTF_wtf_InlineASM.h) = d2d6eff085c546b7bcedc4feff69c2f9b636f0
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = d11d941d8ca446b9cd8a452b1eda43497a44c3c9
 SHA1 (patch-Source_WTF_wtf_glib_FileSystemGlib.cpp) = a46ae871e2c0919da94bcb14a2b94d0e5a911922
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 1549a9bbbc11129e42995719d592ab747413eef6
+SHA1 (patch-Source_WebCore_platform_MediaSample.h) = 766b56a0e38e46487c33bfef1f9cc7895b22f696
 SHA1 (patch-Source_WebCore_rendering_RenderBox.h) = f3aa267788a218d9b5cb4d58715abbbc3444d2b6
 SHA1 (patch-Source_WebCore_rendering_shapes_ShapeOutsideInfo.cpp) = fd50d400a5410eb76810f838e4147295acc402ad
 SHA1 (patch-Source_WebKit_UIProcess_Launcher_glib_ProcessLauncherGLib.cpp) = deebf7ac3d75f55f2000f496702623661da4561a

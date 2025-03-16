@@ -24,12 +24,21 @@ USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
 # this doesn't seem to be using the pkg-config file, which would add this
-CXXFLAGS+=	-I${PREFIX}/lib/gstreamer-1.0/include
+CXXFLAGS+=	-I${PREFIX}/include/gstreamer-1.0
+
+# Avoid million warnings
+CFLAGS+=		-Wno-unused-parameter -Wno-undef
+CXXFLAGS+=		-Wno-unused-parameter -Wno-undef
+
+# From Arch Linux:
+# JITted code crashes when CET is used
+#CFLAGS+=		-fcf-protection=none
+#CXXFLAGS+=		-fcf-protection=none
 
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
 
-GCC_REQD+=		8
+GCC_REQD+=		11
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +54,7 @@ CMAKE_CONFIGURE_ARGS+=		-DENABLE_JOURNALD_LOG=OFF
 #CMAKE_CONFIGURE_ARGS+=		-DENABLE_DOCUMENTATION=OFF
 CMAKE_CONFIGURE_ARGS+=		-DUSE_SYSTEM_SYSPROF_CAPTURE=NO
 CMAKE_CONFIGURE_ARGS+=		-DUSE_SYSPROF_CAPTURE=OFF
-CMAKE_CONFIGURE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
+CMAKE_CONFIGURE_ARGS+=		-DUSE_GSTREAMER_GL=ON
 CMAKE_CONFIGURE_ARGS+=		-DUSE_GSTREAMER_TRANSCODER=OFF
 #CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBHYPHEN=OFF
 #CMAKE_CONFIGURE_ARGS+=		-DUSE_OPENJPEG=OFF
@@ -163,6 +172,8 @@ CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/libjxl/buildlink3.mk"
+# SkJpegCodec.cpp:210:58: error: 'JCS_RGB565' was not declared in this scope; did you mean 'JCS_RGB'?
+JPEG_ACCEPTED=		libjpeg-turbo
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
