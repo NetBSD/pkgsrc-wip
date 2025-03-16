@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			131.0.6778.204
-PKGREVISION=			4
+PKGREVISION=			5
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -278,7 +278,6 @@ INSTALLATION_DIRS+=	${ICONS_DIR${i}}
 CHROMIUM_LIBS+=		libEGL.so
 CHROMIUM_LIBS+=		libGLESv2.so
 CHROMIUM_LIBS+=		libVkICD_mock_icd.so
-CHROMIUM_LIBS+=		libvulkan.so.1
 .if ${MACHINE_ARCH} != "aarch64"
 CHROMIUM_LIBS+=		libvk_swiftshader.so
 CHROMIUM_LIBS+=		vk_swiftshader_icd.json
@@ -292,6 +291,7 @@ do-install:
 .for i in ${CHROMIUM_LIBS}
 	${INSTALL_LIB} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
+	${INSTALL_LIB} ${BUILDDIR}/libvulkan.so.1 ${DESTDIR}${PREFIX}/lib/${CHROMIUM}/libvulkan.so
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/resources/manpage.1.in \
 		 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${CHROMIUM}.1
 	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
@@ -308,7 +308,6 @@ do-install:
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
@@ -318,9 +317,6 @@ do-install:
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../devel/re2/buildlink3.mk"
-.include "../../devel/snappy/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
