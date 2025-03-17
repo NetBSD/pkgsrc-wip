@@ -75,6 +75,8 @@ SUBST_FILES.path+=	src/3rdparty/chromium/ui/qt/qt.gni
 SUBST_FILES.path+=	src/3rdparty/chromium/v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
+NOT_PAX_MPROTECT_SAFE+=	qt6/libexec/QtWebEngineProcess
+
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
 # with hooks to use them from the system.
