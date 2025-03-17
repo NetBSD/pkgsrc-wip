@@ -1,17 +1,19 @@
 $NetBSD$
 
-Support NetBSD.
-https://github.com/HenriWahl/Nagstamon/pull/747
+Fix paths for pkgsrc
 
---- setup.py.orig	2021-04-06 11:17:33.000000000 +0000
-+++ setup.py
-@@ -39,6 +39,9 @@ if OS not in ['Windows', 'Darwin']:
-     # platform.dist() returns "('', '', '')" on FreeBSD
-     elif OS == 'FreeBSD':
-         DIST, DIST_VERSION, DIST_NAME = ('', '', '')
-+    # platform.dist() does not exist on NetBSD
-+    elif OS == 'NetBSD':
-+        DIST, DIST_VERSION, DIST_NAME = ('', '', '')
-     else:
-         DIST, DIST_VERSION, DIST_NAME = platform.dist()
-     NAME = NAME.lower()
+--- setup.py.orig	2025-03-14 14:32:29.956473467 +0100
++++ setup.py	2025-03-14 14:37:36.786709617 +0100
+@@ -153,9 +153,9 @@
+                                   'resources/qui/*',
+                                   'resources/LICENSE',
+                                   'resources/CREDITS']},
+-      data_files=[('%s/share/man/man1' % sys.prefix, ['Nagstamon/resources/nagstamon.1.gz']),
+-                  ('%s/share/pixmaps' % sys.prefix, ['Nagstamon/resources/nagstamon.svg']),
+-                  ('%s/share/applications' % sys.prefix, ['Nagstamon/resources/nagstamon.desktop'])],
++      data_files=[('@PKGMANDIR@/man1', ['Nagstamon/resources/nagstamon.1.gz']),
++                  ('share/pixmaps', ['Nagstamon/resources/nagstamon.svg']),
++                  ('share/applications', ['Nagstamon/resources/nagstamon.desktop'])],
+       options=dict(build_exe=build_exe_options,
+                    bdist_mac=bdist_mac_options,
+                    bdist_dmg=bdist_dmg_options,
