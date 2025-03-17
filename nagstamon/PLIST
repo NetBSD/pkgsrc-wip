@@ -267,6 +267,6 @@ ${PYSITELIB}/nagstamon-3.16.2.dist-info/RECORD
 ${PYSITELIB}/nagstamon-3.16.2.dist-info/WHEEL
 ${PYSITELIB}/nagstamon-3.16.2.dist-info/top_level.txt
 bin/nagstamon.py
-man/man1/nagstamon.1.gz
+man/man1/nagstamon.1
 share/applications/nagstamon.desktop
 share/pixmaps/nagstamon.svg
