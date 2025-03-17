@@ -1,0 +1,6 @@
+devel/cargo-edit: update to 0.13.2
+
+0.13.2 - 2025-03-17
+Fixes
+
+ - (upgrade) Don't silence network errors

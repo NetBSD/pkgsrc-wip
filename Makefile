@@ -426,6 +426,7 @@ SUBDIR+=	cardpeek
 SUBDIR+=	cargo-about
 SUBDIR+=	cargo-c
 SUBDIR+=	cargo-deb
+SUBDIR+=	cargo-edit
 SUBDIR+=	carla
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
