@@ -1,3 +1,0 @@
-Dumps core on startup for me:
-https://github.com/HenriWahl/Nagstamon/issues/748
-Fixed with nagstamon 3.16.2 and python3.12 from pkgsrc-2024Q4
