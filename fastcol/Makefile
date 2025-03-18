@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=  	ruby-fast-colonization-0.3.22	
+DISTNAME=  	ruby-fast-colonization-0.4.1	
 CATEGORIES=	games	
 MASTER_SITES=	https://sourceforge.net/projects/ruby-fast-colonization/files/
 
