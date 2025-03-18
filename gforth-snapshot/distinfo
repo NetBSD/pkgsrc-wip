@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.14 2021/10/26 10:51:36 nia Exp $
+
+BLAKE2s (gforth-0.7.9_20250312.tar.gz) = 3bd1426ff0db5c66aa47ebf7e04c7b90389cca1db17a112816906d600b3ad465
+SHA512 (gforth-0.7.9_20250312.tar.gz) = d1f2fa3b1e6b332ab69d10b593569fefcc165178e9a3020efa7ff289707ce747253f17e23419231545a82e96b2dd807b32e6b17be6ff71579f046aee376692dc
+Size (gforth-0.7.9_20250312.tar.gz) = 2874363 bytes
+SHA1 (patch-engine_forth.h) = 1f2437e79af9d107ba17590b8055e06262f93e57
+SHA1 (patch-engine_support.c) = 7c7ec206f23857705f300e24bfdfb32b8fb0f994
