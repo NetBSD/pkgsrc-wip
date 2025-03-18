@@ -5858,7 +5858,6 @@ SUBDIR+=	vcftools
 SUBDIR+=	vcg
 SUBDIR+=	vcglib
 SUBDIR+=	vche
-SUBDIR+=	vcmi
 SUBDIR+=	vcsh
 SUBDIR+=	vee
 SUBDIR+=	velero

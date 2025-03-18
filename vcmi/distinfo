@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (vcmi-1.0.0.tar.gz) = 12563c2e88bb622ad5f2939ce14461508827c9a8794c5a887414eac104d5cd0c
-SHA512 (vcmi-1.0.0.tar.gz) = c88d307594dc73c2eb22b3c5237b9e37ea1e2f98cac2b10882a040a96fcf903ac6ec140f1cf031417c71c414e271a17d29409d4395402a669737573c6ee09ef0
-Size (vcmi-1.0.0.tar.gz) = 5885358 bytes
-SHA1 (patch-CI_get__package__name.sh) = cfe34215ce642bb65ce77915adb4b13d3018259c
