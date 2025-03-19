@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.115 2024/11/17 07:15:45 wiz Exp $
+# $NetBSD$
 
 DISTNAME=	libgweather-4.4.4
 PKGNAME=	${DISTNAME:S/weather/weather4/}
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/4.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgweather/4.4/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
