@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	SuperTTC-IosevkaCurly-${PKGVERSION_NOREV}
-PKGNAME=	iosevka-curly-ttf-33.0.1
+PKGNAME=	iosevka-curly-ttf-33.1.0
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
 GITHUB_PROJECT=	Iosevka
