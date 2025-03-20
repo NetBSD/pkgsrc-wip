@@ -15,11 +15,6 @@ DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
 WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
 CONFLICTS+=		digikam-[0-9]*
-# work/.buildlink/include/jasper/jas_config.h:116:6: error: "__STDC_VERSION__" is not defined, evaluates to 0 [-Werror=undef]
-# and more from x265.h
-# Reported upstream at
-# https://bugs.kde.org/show_bug.cgi?id=501769
-BUILDLINK_TRANSFORM+=	rm:-Werror=undef
 
 .include "../../meta-pkgs/kde/applications.mk"
 

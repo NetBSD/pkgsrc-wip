@@ -3,4 +3,6 @@ $NetBSD: distinfo,v 1.64 2025/02/07 21:58:54 wiz Exp $
 BLAKE2s (digiKam-8.6.0.tar.xz) = 66b1a67dca002e9ebcda778052a39b2484e11ce4b994160a51c5eab77fdc28d2
 SHA512 (digiKam-8.6.0.tar.xz) = fc9899eb9a291c2d88b5104c3b6fa86f8db67b26fdbb1328c714eb30407c9dbf13267433c5070f18451e4fb99d3530dba83bf404b26095ed336b348737d7cae2
 Size (digiKam-8.6.0.tar.xz) = 58958608 bytes
+SHA1 (patch-core_CMakeLists.txt) = b2f41549b336f1da6715b9db0da92177a6037405
+SHA1 (patch-core_dplugins_dimg_jpeg2000_dimgjpeg2000loader__p.h) = 65b7632b966c741817fd47e471287d6e13e00dc8
 SHA1 (patch-core_libs_video_QtAVPlayer_qavstream.cpp) = 529af7d24da3667fc50febdc604ac9e1935cf9ec
