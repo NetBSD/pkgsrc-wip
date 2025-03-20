@@ -1,9 +1,6 @@
 $NetBSD: distinfo,v 1.20 2024/07/23 13:50:32 taca Exp $
 
-BLAKE2s (bind-9.20.6.tar.xz) = e9bd08fb5fbea3d8e560adfed64f182d1efb2c6ad0dd0ec1712998990440c484
-SHA512 (bind-9.20.6.tar.xz) = 8582f0f0acde7898ade2aba30bdcf4ef71a3d45c938b815b70bdb06c604680c2213ff508d598472c3962f75741a926edbe2280581841f3f3c95c0cba1c56c96f
-Size (bind-9.20.6.tar.xz) = 5639720 bytes
-SHA1 (patch-bin_named_statschannel.c) = 0be5baa65ad129f5ed551ae239d49091c177d91d
+BLAKE2s (bind-9.20.7.tar.xz) = 4ce6a03fa14ce219f9fbc792eb9fd5742dc8a0ac8f613444c35c14a004a0573e
+SHA512 (bind-9.20.7.tar.xz) = b9570c0c6588819108017d30dc7fb5e2f34361f941186d29da3d2830bbe3333c8c16bdb6581f5bec4786d90b74db860a9cad5f66d4f1c65168eae69f401a9df0
+Size (bind-9.20.7.tar.xz) = 5655168 bytes
 SHA1 (patch-configure.ac) = f1f672271aa38c10b12d12d48455eb0af82d270c
-SHA1 (patch-lib_dns_include_dns_zone.h) = 14cc09f7ad1fa9cd29ec089c294111c48a403535
-SHA1 (patch-lib_dns_zone.c) = 4010551aa4b9d8c302137da94db96aa27285dde4
