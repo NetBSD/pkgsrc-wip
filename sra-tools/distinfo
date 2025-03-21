@@ -1,11 +1,11 @@
 $NetBSD$
 
-BLAKE2s (ncbi-ncbi-vdb-3.2.0.tar.gz) = eb3a98cb754ea78869adfc3651afce3f8e961e1f512e1f77427e9de85924ace2
-SHA512 (ncbi-ncbi-vdb-3.2.0.tar.gz) = badd63525eaaaeedb4de8bb0ab88b40cbeb388e0a0f93ac934c1af716da6f0fb2425eb2e1e95c198496a32fd9c04dfb8badf43b9b6f686b970411b18afec9ea2
-Size (ncbi-ncbi-vdb-3.2.0.tar.gz) = 19061110 bytes
-BLAKE2s (sra-tools-3.2.0.tar.gz) = 6afccc13740b972d483303db5040b0475484ebc6e62fb61f8e56e38f4946789c
-SHA512 (sra-tools-3.2.0.tar.gz) = ceddc5a2fd97c16ad56d130dc4469c6c8dd0f550825718b4fdd4c50d19e182bc42bc4c1681790ab3ea8912812fddb11dff03aca254999fc5b9e2c3fd39d42402
-Size (sra-tools-3.2.0.tar.gz) = 60313243 bytes
+BLAKE2s (ncbi-ncbi-vdb-3.2.1.tar.gz) = 2232e063c33166e3967bca2840c0a4badf6dde80190ae8a8e6bf9ceb3723c6b3
+SHA512 (ncbi-ncbi-vdb-3.2.1.tar.gz) = 1dfd80bdaf81cf5c0626a48ab20355ba06c38491da161837f2b0a8571e42466e2386ca95cff7ba0f3b51447ed90cf362a2e9dc93036f9dbab76dc3b2f0f5d4d9
+Size (ncbi-ncbi-vdb-3.2.1.tar.gz) = 19061776 bytes
+BLAKE2s (sra-tools-3.2.1.tar.gz) = 95f5f3ed1b63096e651b071bd0b2a74d88d5ac3a9e83c688448f3fbdc6bf49f8
+SHA512 (sra-tools-3.2.1.tar.gz) = c8f4b6c2d4746365598374369ba656cadd3af02739b3eaac4d6e298f1deb189b3a6d9eb8e2e7c5a0e4fc8b7530c7497f2db5f3070e7b957b20896e781cd96450
+Size (sra-tools-3.2.1.tar.gz) = 66684089 bytes
 SHA1 (patch-build_env.cmake) = 7c95dbe65c818ac638754ba6165eab1e613fe0eb
 SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = f49eb28f8bfeb528c1d7c2e9d184502b9eba273c
 SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
