@@ -1,0 +1,5 @@
+lang/freem: Update freem to 0.62.1
+
+Bring up to current pkgsrc-wip standards and satisfy pkglint
+
+Add support for shared memory, multi-environment support, and OO extensions
