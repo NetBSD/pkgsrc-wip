@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.50 2022/06/28 11:34:11 wiz Exp $
 
 DISTNAME=		gforth
-PKGNAME=		gforth-0.7.9pre20250319
+PKGNAME=		gforth-0.7.9pre20250321
 CATEGORIES=		lang
 #MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
 #MASTER_SITES+=		https://git.savannah.gnu.org/cgit/gforth.git/snapshot/
@@ -27,33 +27,11 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 USE_TOOLS+=		gmake m4 makeinfo gzip perl:build
-
-#MAKE_JOBS_SAFE=		no # fresh Gforth is required to build doc
-#BUILD_TARGET=		all info # doc
+TEXINFO_REQD+=		7.0
 TEST_TARGET=		check
 
-#CFLAGS+=		-Dunix
-#INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
-#			infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
-#			mandir=${PREFIX:Q}/${PKGMANDIR:Q}
+CONFIGURE_ARGS+=	EMACS=""
 
-#INSTALLATION_DIRS=	share/emacs/site-lisp
-
-# Kernel image filename is arch dependent
-#KERNEL_FI_cmd=								\
-#	if ${TEST} ! -f ${WRKSRC}/Makefile; then			\
-#		${ECHO} "__nonexistent__";				\
-#		exit 0;							\
-#	fi;								\
-#	cd ${WRKSRC} &&							\
-#	{ ${ECHO} 'prkern:';						\
-#	  ${ECHO} '	@${ECHO} $$(kernel_fi)';			\
-#	  ${ECHO} ;							\
-#	  ${CAT} Makefile; } | ${MAKE_PROGRAM} -f - prkern
-#PLIST_SUBST+=	KERNEL_FI=${KERNEL_FI_cmd:sh:Q}
-
-# XXX Need test.
-#.include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libffcall/buildlink3.mk"
