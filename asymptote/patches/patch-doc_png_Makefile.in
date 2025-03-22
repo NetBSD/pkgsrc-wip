@@ -1,0 +1,15 @@
+$NetBSD$
+
+long options need two dashes.
+
+--- doc/png/Makefile.in.orig	2025-02-23 20:39:21.000000000 +0000
++++ doc/png/Makefile.in
+@@ -1,7 +1,7 @@
+ ASYFILES = $(notdir $(filter-out $(wildcard ../latexusage-*.asy),$(wildcard ../*.asy)))
+ 
+ SOURCE = ../asymptote.texi ../version.texi ../options
+-ASY = ../asy -dir ../base -config "" -render=0
++ASY = ../asy --dir ../base --config "" --render=0
+ 
+ docdir = $(DESTDIR)@docdir@
+ infodir = $(DESTDIR)@infodir@

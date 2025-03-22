@@ -1,0 +1,107 @@
+$NetBSD: patch-configure,v 1.3 2016/09/30 11:54:00 wiz Exp $
+
+Handle TEXMFLOCAL having multiple elements.
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2025-02-23 20:39:23.000000000 +0000
++++ configure
+@@ -4728,7 +4728,7 @@ fi
+ 
+ 
+ if test "x$kpsewhich" = "xtrue"; then
+-  latexdir=`kpsewhich -expand-var='$TEXMFLOCAL'/tex/latex`
++  latexdir=`kpsewhich -expand-var='$TEXMFLOCAL' | sed -e 's/:.*//' -e 's:$:/tex/latex:'`
+ else
+   latexdir=$prefix/share/texmf/tex/latex
+   as_ac_File=`printf "%s\n" "ac_cv_file_$latexdir/base/latex.ltx" | $as_tr_sh`
+@@ -4837,7 +4837,7 @@ fi
+ 
+ 
+ if test "x$kpsewhich" = "xtrue"; then
+-  contextdir=`kpsewhich -expand-var='$TEXMFLOCAL'/tex/context/third`
++  contextdir=`kpsewhich -expand-var='$TEXMFLOCAL' | sed -e 's/:.*//' -e 's:$:/tex/context/third:'`
+ else
+   contextdir=$prefix/share/texmf/tex/context/third
+ fi
+@@ -8460,7 +8460,7 @@ then :
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs readline || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"readline"
+       echo will try linking with $PKG_FLAGS
+    fi
+@@ -8577,7 +8577,7 @@ else $as_nop
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.beam conftest.$ac_ext
+ 
+-   if test "x$readline" == "xno"; then
++   if test "x$readline" = "xno"; then
+      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: *** Could not find GNU readline 4.3 or later: will compile without readline support ***" >&5
+ printf "%s\n" "$as_me: *** Could not find GNU readline 4.3 or later: will compile without readline support ***" >&6;}
+      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for readline in -ledit" >&5
+@@ -8638,7 +8638,7 @@ CPPFLAGS="$CPPFLAGS "$(pkg-config --sile
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs tinfo || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"tinfo"
+       echo will try linking with $PKG_FLAGS
+    fi
+@@ -8773,7 +8773,7 @@ done
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs ncurses || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"ncurses"
+       echo will try linking with $PKG_FLAGS
+    fi
+@@ -8982,7 +8982,7 @@ fi
+ 
+ 
+ if test "x$enable_gc" != "xno" ; then
+-  if test "x$with_vcpkg" == "xno"; then
++  if test "x$with_vcpkg" = "xno"; then
+ 
+ printf "%s\n" "#define USEGC 1" >>confdefs.h
+ 
+@@ -9059,7 +9059,7 @@ then :
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs libcurl || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"curl"
+       echo will try linking with $PKG_FLAGS
+    fi
+@@ -9210,7 +9210,7 @@ then :
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs fftw3 || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"fftw3"
+       echo will try linking with $PKG_FLAGS
+    fi
+@@ -9469,7 +9469,7 @@ then :
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs gsl || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"gsl"
+       echo will try linking with $PKG_FLAGS
+    fi
+@@ -9978,7 +9978,7 @@ then :
+ 
+ PKG_FLAGS=" "$(pkg-config --silence-errors --libs libtirpc || echo)
+ 
+-   if test "x$PKG_FLAGS" == "x "; then
++   if test "x$PKG_FLAGS" = "x "; then
+       PKG_FLAGS=-l"tirpc"
+       echo will try linking with $PKG_FLAGS
+    fi

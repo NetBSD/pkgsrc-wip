@@ -1,0 +1,20 @@
+$NetBSD$
+
+long options need two dashes.
+
+--- tests/Makefile.orig	2025-02-23 20:39:21.000000000 +0000
++++ tests/Makefile
+@@ -10,11 +10,11 @@ all: $(TESTDIRS) $(EXTRADIRS)
+ 
+ $(TESTDIRS)::
+ 	@echo
+-	../asy -dir ../base $@/*.asy
++	../asy --dir ../base $@/*.asy
+ 
+ $(EXTRADIRS)::
+ 	@echo
+-	../asy -dir ../base $@/*.asy
++	../asy --dir ../base $@/*.asy
+ 
+ clean:  FORCE
+ 	rm -f *.eps

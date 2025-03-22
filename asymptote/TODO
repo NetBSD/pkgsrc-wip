@@ -1,0 +1,8 @@
+Doesn't finish building due to TeX problems.
+
+Uses getopt_long_only, but also options that start with a single
+dash instead of two, which is not the usual way for long options.
+
+Ignores --enable-gc=system and builds gc anyway.
+
+Doesn't build against system gc because it uses private symbols.

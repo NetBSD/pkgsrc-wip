@@ -1,0 +1,32 @@
+$NetBSD$
+
+long options need two dashes.
+
+--- doc/Makefile.in.orig	2025-02-23 20:39:21.000000000 +0000
++++ doc/Makefile.in
+@@ -1,7 +1,7 @@
+ MANFILES = asy.1 xasy.1x
+ ASYFILES = $(filter-out $(wildcard latexusage-*.asy),$(wildcard *.asy))
+ SOURCE = asymptote.texi version.texi options
+-ASY = ../asy -dir ../base -config "" -render=0
++ASY = ../asy --dir ../base --config "" --render=0
+ DOCFILES = asymptote.pdf asy-latex.pdf CAD.pdf TeXShopAndAsymptote.pdf \
+            asyRefCard.pdf
+ 
+@@ -39,14 +39,14 @@ faq:
+ 	$(ASY) -f eps $<
+ 
+ %.pdf:	%.asy
+-	$(ASY) -f pdf -noprc $<
++	$(ASY) -f pdf --noprc $<
+ 
+ latexusage.pdf: latexusage.tex asymptote.sty
+ 	rm -f latexusage-*
+ 	rm -f latexusage.pre
+ 	rm -f latexusage.aux
+ 	pdflatex latexusage
+-	$(ASY) -noprc latexusage-*.asy
++	$(ASY) --noprc latexusage-*.asy
+ 	pdflatex latexusage
+ 
+ options: ../settings.cc
