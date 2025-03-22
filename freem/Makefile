@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		freem-0.44.0
+DISTNAME=		freem-0.62.1
 CATEGORIES=		lang
 MASTER_SITES=		https://freem.coherent-logic.com/downloads/
 
-MAINTAINER=		jpw@coherent-logic.com
+MAINTAINER=		snw@coherent-logic.com
 HOMEPAGE=		https://freem.coherent-logic.com/
 COMMENT=		Implementation of the MUMPS programming language and database
 LICENSE=		gnu-agpl-v3
