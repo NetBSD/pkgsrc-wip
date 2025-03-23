@@ -10,6 +10,8 @@ HOMEPAGE=	https://litestream.io/
 COMMENT=	Streaming replication for SQLite
 LICENSE=	apache-2.0
 
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X main.Version=${GITHUB_TAG}'
 GO_BUILD_PATTERN+=	./cmd/litestream
 
 .include "go-modules.mk"
