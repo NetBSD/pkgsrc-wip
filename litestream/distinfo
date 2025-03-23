@@ -810,3 +810,4 @@ Size (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 26 bytes
 BLAKE2s (litestream-0.3.13.tar.gz) = 8c9872603ba542cce6786802829bfcb7ef8a4b61612a28f77f98c56decb3b2b8
 SHA512 (litestream-0.3.13.tar.gz) = 5b85a2cf7ccb3975ceea6f06925aac275435510c588405372f386267ea0ee2297f909554dee1d5e7ac62be745d0a973fbcb1f01491a5b58f07f14d70e5ee0ded
 Size (litestream-0.3.13.tar.gz) = 86613 bytes
+SHA1 (patch-cmd_litestream_main__notwindows.go) = 6daff913207a7a54e8a028b57011265e53b570aa

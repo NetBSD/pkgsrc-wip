@@ -14,6 +14,11 @@ GO_BUILD_PATTERN+=	-ldflags ' \
 			-X main.Version=${GITHUB_TAG}'
 GO_BUILD_PATTERN+=	./cmd/litestream
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths+=	cmd/litestream/main_notwindows.go
+SUBST_STAGE.paths=	post-configure
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
