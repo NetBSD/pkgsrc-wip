@@ -1,5 +1,8 @@
-lang/freem: Update freem to 0.62.1
+lang/freem: Update freem to 0.62.2
 
-Bring up to current pkgsrc-wip standards and satisfy pkglint
+No changes to packaging other than the version bump
 
-Add support for shared memory, multi-environment support, and OO extensions
+- Comply with MDC Type A extension X11/96-13 - Portable length of names
+- Fix reverse $QUERY polyfill
+- Silently truncate long NAME exprs in obsolete MDC dialects
+      

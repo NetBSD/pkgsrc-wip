@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		freem-0.62.1
+DISTNAME=		freem-0.62.2
 CATEGORIES=		lang
 MASTER_SITES=		https://freem.coherent-logic.com/downloads/
 
