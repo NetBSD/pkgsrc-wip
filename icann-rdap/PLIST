@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/rdap
+bin/rdap-srv
+bin/rdap-srv-data
+bin/rdap-srv-store
+bin/rdap-test

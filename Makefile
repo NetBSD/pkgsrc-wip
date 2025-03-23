@@ -1703,6 +1703,7 @@ SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	ibus-tutcode
 SUBDIR+=	ical2pcal
+SUBDIR+=	icann-rdap
 SUBDIR+=	icecat
 SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
