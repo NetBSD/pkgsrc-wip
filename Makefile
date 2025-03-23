@@ -2232,6 +2232,7 @@ SUBDIR+=	lisp-scripts
 SUBDIR+=	lisp-sound
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
+SUBDIR+=	litestream
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
 SUBDIR+=	llama.cpp
