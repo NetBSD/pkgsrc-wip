@@ -11,7 +11,7 @@ lib/chromium/libEGL.so
 lib/chromium/libGLESv2.so
 lib/chromium/libVkICD_mock_icd.so
 ${PLIST.swiftshader}lib/chromium/libvk_swiftshader.so
-lib/chromium/libvulkan.so.1
+lib/chromium/libvulkan.so
 lib/chromium/locales/af.pak
 lib/chromium/locales/af.pak.info
 lib/chromium/locales/am.pak
