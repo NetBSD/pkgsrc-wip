@@ -1,0 +1,574 @@
+sysutils/lnav: update to 0.12.4
+
+## lnav v0.12.4
+
+Features:
+* Log message timestamps are now represented with microsecond
+  precision internally instead of just millisecond.
+* The `log_time` and `log_level` fields can now be hidden.
+* The "Op ID:" overlay that is added when the `log_opid` field is
+  manually set on a message can now be hidden by hiding the
+  `log_opid` field.
+* Pasting a command snippet when the input focus is on the main
+  view will now execute it.
+  For this to work: the terminal must support "bracketed-paste"
+  mode, which most do;
+  and, the pasted content must also start with one of the sigils
+  for the desired operation (i.e. `:` for lnav commands, `;` for SQL
+  queries, `/` for searches, and `|` for scripts).
+* Added a `report-access-log` script that generates a report that
+  is similar to the output of the [goaccess](https://goaccess.io)
+  utility.
+* Added a `find-msg` script that can be used to find the
+  next/previous message with a field that matches the value of the
+  field in the focused message.
+* Added a `find-chained-msg` script that can be used to find the
+  next/previous message where a target field matches the value of
+  the source field in the focused message.
+* Scripts can now specify their output format using the
+  `@output-format:` documentation description.
+  This setting can affect the output of some commands, like
+  `:write-table-to` which will output Markdown tables when the
+  output is set to `text/markdown`.
+* Column alignment in Markdown tables is now supported.
+* Added ecs_log for the Elastic Common Schema from @ba-didi.
+* Added a Proxifier log format.
+* Escape sequences for 24-bit color are now handled.
+* The `-i` option for installing files will now copy `.lnav`
+  script files to the `formats/installed` directory.
+* Added `italic` and `strike` to the text styling configuration.
+* DB query results can now be styled on a row-by-row basis by
+  adding a column with the name `__lnav_style__`.
+* Added `format <format-name> test <path>` management command
+  to make it easier to test a format against a file.
+  This can be helpful for determining why a file is not being
+  recognized by particular format.
+* Added a "performance" section to the documentation.
+* Session exports now include `:hide-fields` and `:show-fields`
+  commands from the session.
+  They are currently commented out by default.
+* Added highlighting for Markdown syntax.
+
+Interface changes:
+* DB query results that start with a number are right justified
+  instead of only full numbers.
+* Left-clicking a local link in a Markdown document will jump to
+  that section of the document instead of opening the overlay
+  menu.
+  You can still open the overlay menu by right-clicking on the link.
+* Rows in a Markdown table are now highlighted with alternating
+  styles.
+* Long-running SQL queries in scripts are now mentioned in the UI
+  to make it easier to see what is going on.
+* Defining a value in a log format with the same name as one of
+  predefined columns in the log virtual tables will now generate
+  an error.
+* The DB view will now chart result columns that contain a number
+  with a unit, like "KB", "MB", "GB", etc...
+* When switching to the pretty view, the focused line should be
+  in the same position in the text as in the source view.
+* In the LOG view, you can now copy the value of a field by
+  pressing `c` when focused on a line in the parser details
+  overlay (activated by pressing `p`).
+* In the DB View, if there is a column named `log_level`, it
+  will be used as the level for the row and the hotkeys for
+  jumping to the next/previous error/warning will work.
+* In the DB View, columns can now be hidden/shown using the
+  `:hide-fields` / `:show-fields` commands.
+* In the DB View, pressing `p` now works for all rows and will
+  show all columns and not just JSON ones.
+  You can then press `c` while focused in the overlay to copy
+  the value of the column.
+  Pressing space while focused on a column in the overlay will
+  hide/show it.
+* If the terminal supports less than 256 colors, a help message
+  will be displayed to try setting `TERM` to `xterm-256color`.
+* Added `F1` as a hotkey to open the help view.
+* Fixed some issues with scrolling in the main view when:
+  word-wrap was enabled; log messages had tags/comments; or
+  if the parser details overlay was open.
+
+Breaking changes:
+* The `parse_url()` SQL function no longer raises an error for an
+  invalid URL.
+  Instead, it will return a JSON object with an object with the
+  following properties:
+  - `error` - An identifier for the error.
+  - `url` - The invalid URL itself.
+  - `reason` - A description of the error.
+
+Bug Fixes:
+* Reduced startup time.
+* Reduced indexing time for plain text and JSON-lines logs.
+* Reduced memory footprint.
+* Improved search performance.
+* Reduced DB view CPU and memory usage.
+* Reduce time to open help text.
+* Improved performance of log virtual tables when ordering the
+  result by `log_line DESC`.
+* Improved performance of the `spooky_hash()` SQL function.
+
+Maintenance:
+* Replaced ncurses with notcurses.
+* Added arm64 builds for Linux/macOS
+
+## lnav v0.12.3
+
+Features:
+* Files that contain a mixture of log messages from separate
+  services (e.g. docker logs) can now be automatically
+  de-multiplexed into separate files that lnav can digest.
+* The `log_opid` column on log vtables can now be `UPDATE`d
+  so that you can manually set an opid on log messages that
+  don't have one.  Setting an opid allows messages to show
+  up in the timeline view.
+* The Files panel now has a details view on the right side
+  that shows extra information about the selected file.
+  You can look here for details of why lnav selected a
+  particular log format.
+* Add support for GitHub Markdown Alerts.
+* Added the `:xopen` command that will open the given paths
+  using an external opener like `open` or `xdg-open`.
+* Clicking on a link in a markdown file will open the Actions
+  with the following options:
+  - opening the link target in lnav or, if it's an lnav script,
+    executing the script;
+  - opening the target with `:xopen`;
+  - or, copying the link to the clipboard.
+* Added a `crash upload` command to the management CLI that will
+  upload crash logs to a server for analysis.
+* Added a `:set-text-view-mode` command that controls whether
+  file contents, such as markdown, are rendered or shown in
+  their raw state.
+* Text files with lines longer than 1024 characters will be
+  automatically pretty-printed.  You can revert to the raw view
+  using the `:set-text-view-mode` command.  The character limit
+  can be adjusted with the
+  `/tuning/textfile/max-unformatted-line-length` configuration
+  setting.
+* Added a `pretty_print()` SQL function that provides the same
+  functionality as the PRETTY view.
+* Keymap definitions can now bind to a function key using an
+  identifier that starts with `f` followed by the number of the
+  function key.
+* Added log formats for the `env_logger` and `simple_logger` Rust
+  crates.
+* Timestamp formats can now use `%j` to capture day-of-year values.
+
+Interface Changes:
+* The "Gantt Chart" view has been renamed to "timeline."
+* In the timeline view, pressing `ENTER` will focus on
+  the preview pane, so you can scroll through messages
+  with the selected Op ID.
+* With mouse mode enabled, `CTRL` can be used as an alternate
+  to `SHIFT` when clicking/dragging in the main view to
+  highlight lines.  A few terminals capture shift+clicks as a
+  way to select text and do not pass them to the application.
+* Clicking on an internal link in a Markdown document will move
+  to that section.
+* Search duration is now reported in the bottom prompt line.
+
+Bug Fixes:
+* Log messages in formats with custom timestamp formats were
+  not being converted to the local timezone.
+* The timezone offset is now shown in the parser details
+  overlay for log messages.
+* If a theme does not define `cursor-line` or `selected-text`
+  styles, the styles from the default theme will be used.
+* The first argument to a script is now the full path of the
+  script and not just the script name.
+
+Maintenance:
+* You can now do an `UPDATE` on the `lnav_top_view` SQL view.
+  This makes it easier to write queries that manipulate the
+  current view.
+* Upgrade to C++17
+
+
+## lnav v0.12.2
+
+Features:
+* Added mouse support that can be toggled with `F2` or enabled
+  by default with: `:config /ui/mouse/mode enabled`.  With
+  mouse support enabled, many of the UI elements will respond to
+  mouse inputs:
+  - clicking on the main view will move the cursor to the given
+    row and dragging will scroll the view as needed;
+  - shift + clicking/dragging in the main view will highlight
+    lines and then toggle their bookmark status on release;
+  - double-clicking in the main view will select the underlying
+    text and drag-selecting within a line will select the given
+    text;
+  - when double-clicking text: if the mouse pointer is inside
+    a quoted string, the contents of the string will be selected;
+    if the mouse pointer is on the quote, the quote will be included
+    in the selection; if the mouse pointer is over a bracket
+    (e.g. [],{},()) where the matching bracket is on the same line,
+    the selection will span from one bracket to the other;
+  - when text is selected, a menu will pop up that can be used
+    to filter based on the current text, search for it, or copy
+    it to the clipboard;
+  - right-clicking the start of a log message in the main view
+    will open the parser details overlay;
+  - the parser details now displays a diamond next to fields to
+    indicate whether they are shown/hidden and this can be
+    clicked to toggle the state;
+  - the parser details will show a bar chart icon for fields with
+    values which, when clicked, will open either the spectrogram
+    view for the given field or open the DB query prompt with a
+    PRQL query to generate a histogram of the field values;
+  - clicking in the scroll area will move the view by a page,
+    double-clicking will move the view to that area, and
+    dragging the scrollbar will move the view to the given spot;
+  - clicking on the breadcrumb bar will select a crumb and
+    selecting a possibility from the popup will move to that
+    location in the view;
+  - clicking on portions of the bottom status bar will trigger
+    a relevant action (e.g. clicking the line number will open
+    the command prompt with `:goto <current-line>`);
+  - clicking on the configuration panel tabs (i.e. Files/Filters)
+    will open the selected panel and clicking parts of the
+    display in there will perform the relevant action (e.g.
+    clicking the diamond will enable/disable the file/filter);
+  - clicking in a prompt will move the cursor to the location;
+  - clicking on a column in the spectrogram view will select it.
+
+  (Note that this is new work, so there are likely to be some
+  glitches.)
+* Added a `journald://` URL handler that will call `journalctl`
+  and pass any query parameters as options.  For example, the
+  following command:
+
+  ```
+  $ lnav 'journal://?since=yesterday'
+  ```
+
+  Will execute the following and capture the output:
+
+  ```
+  journalctl --output=json -f --since=yesterday
+  ```
+* Added the "last-word" line-format field shortening algorithm
+  from @flicus.
+* Added a `stats.hist` PRQL transform that produces a histogram
+  of values over time.
+* The preview for the `:open` command will now show a listing
+  of archive contents.
+* Added `humanize_id` SQL function that colorizes a string using
+  ANSI escape codes.
+* Added a `selected_text` column to the `lnav_views` table that
+  reports information about text that was selected with a mouse.
+  This makes it possible to script operations that use the
+  selected text as an input.
+* Added `breadcrumb` as an option to the `:prompt` command so
+  that the breadcrumb hotkey can be configured.
+
+Interface changes:
+* The bar charts in the DB view have now been moved to their
+  individual columns instead of occupying the whole width of
+  the view.  The result is much cleaner, so the charts are
+  now enabled by default again.
+* Cursor mode in the main view is now the default instead of
+  using the top line as the focus.  You can change back by
+  running:
+
+  `:config /ui/movement/mode top`
+* In the parser details panel (opened by pressing `p`), you
+  can now hide/show fields by moving the cursor line to the
+  given field and pressing the space bar or by clicking on
+  the diamond with the mouse.
+* The `sv` keymap binds `§` to focus the breadcrumb bar.
+
+Bug Fixes:
+* With the recent xz backdoor shenanigans, it seems like a good
+  time to add some checks for data being hidden by escape codes:
+  - File names with escape sequences are now displayed in quotes
+    with backslash escapes.
+  - Text that has the same foreground and background colors will
+    have the background set to a contrasting color.
+* Sub-millisecond time values should now be preserved when
+  displaying JSON-lines logs.
+* A crash during initialization on Apple Silicon and MacOS 12
+  has been fixed.
+* A crash when previewing non-text files.
+* Optimized ANSI-escape processing.
+* Various fixes to make lnav usable as a `PAGER`.
+
+## lnav v0.12.1
+
+Features:
+* Database queries can now be written in
+  [PRQL](https://prql-lang.org).  When executing a query with `;`,
+  if the query starts with `from`, it will be treated as PRQL.
+  The pipeline structure of PRQL queries is more desirable for
+  interactive use since lnav can make better suggestions and
+  show previews of the stages of the pipeline.
+* Log partitions can automatically be created by defining a log
+  message pattern in a log format.  Under a format definition,
+  add an entry into the "partitions" object in a format definition.
+  The "pattern" property specifies the regular expression to match
+  against a line in a file that matches the format.  If a match is
+  found, the partition name will be set to the value(s) captured
+  by the regex.  To restrict matches to certain files, you can add
+  a "paths" array whose object elements contain a "glob" property
+  that will be matched against file names.
+
+Interface changes:
+* When using PRQL in the database query prompt (`;`),
+  the preview pane will show the results for the pipeline
+  stage the cursor is within along with the results of
+  the previous stage (if there is one).  The preview
+  works on a limited data set, so the preview results
+  may differ from the final results.
+* Changed the breadcrumb bar styling to space things out
+  more and make the divisions between items clearer.
+* The `ESC` key can now be used to exit the files/filters
+  configuration panel instead of `q`.  This should make
+  it easier to avoid accidentally exiting lnav.
+* Added some default help text for the command prompt.
+* Suggestions are now shown for some commands and can
+  be accepted by pressing the right arrow key.  For
+  example, after typing in `:filter-in` the current
+  search term for the view will be suggested (if
+  one is active).
+* The focused line should be preserved more reliably in
+  the LOG/TEXT views.
+* In the LOG view, the current partition name (as set
+  with the `:partition-name` command) is shown as the
+  first breadcrumb in the breadcrumb bar.  And, when
+  that breadcrumb is selected, you can select another
+  partition to jump to.
+* The `{` / `}` hotkeys, `:next-section`, and `:prev-section`
+  commands now work in the LOG view and take you to the
+  next/previous partition.
+* The DB view now defaults to not showing bar charts.
+
+Breaking changes:
+* Many of the lesser used column in the log format tables
+  (e.g. `log_tags`) have been moved to after the columns
+  defined by the format.  These columns are usually `NULL`
+  and are a distraction when previewing queries.
+
+## lnav v0.12.0
+
+Features:
+* Added a Gantt Chart view to visualize operations over time
+  based on the "opid" in log messages.  The view shows
+  the operation IDs, a description of the operation captured
+  from log messages, and a bar representing the period of
+  time that the operation was running.
+* Added the `:sh` command and `-e` option to execute a shell
+  command-line and display its output within **lnav**.   The
+  captured output will be displayed in the TEXT view.  The
+  lines from stdout and stderr are recorded separately so
+  that the lines from stderr can be shown in the theme's
+  "error" highlight.  The time that the lines were received
+  are also recorded internally so that the "time-offset"
+  display (enabled by pressing `Shift` + `T`) can be shown
+  and the "jump to slow-down" hotkeys (`s`/`Shift` + `S`)
+  work.  Since the line-by-line timestamps are recorded
+  internally, they will not interfere with timestamps that
+  are in the commands output.
+* Added a `:cd` command to change **lnav**'s current directory.
+* Added support for automatically converting files that are
+  in a format not natively supported by **lnav**.  The new
+  `converter` section in a log format definition allows you
+  to specify how a file type can be detected and converted.
+  The built-in PCAP support in **lnav** is implemented using
+  this mechanism.
+* Added a `shell_exec()` SQLite function that executes a
+  command-line with the user's `$SHELL` and returns the
+  output.
+* Added support for custom URL schemes that are handled by an
+  lnav script.  Schemes can be defined under
+  `/tuning/url-schemes`.  See the main docs for more details.
+* Added `docker://` and `podman://` URL schemes that can be
+  used to tail the logs for containers (e.g.
+  `docker://my-container`) or files within a container (e.g.
+  `docker://my-serv/var/log/dpkg.log`).  Containers mentioned
+  in a "Compose" configuration file can be tailed by using
+  `compose` as the host name with the path to the configuration
+  file (e.g. `docker://compose/compose.yaml`).
+* Added an `:annotate` command that can trigger a call-out
+  to a script to analyze a log message and generate an
+  annotation that is attached to the message.  The script
+  is executed asynchronously, so it will not block input
+  and the result is saved in the session.  Annotations are
+  defined in the `/log/annotations` configuration property.
+* Timestamps with numeric timezone offsets (or `Z`) are now
+  automatically converted to the local time zone.  For
+  example, a timestamp ending in `-03:00` will be treated
+  as three hours behind UTC and then adjusted to the local
+  timezone.  This feature can be disabled by setting the
+  `/log/date-time/convert-zoned-to-local` configuration
+  property to `false`. Timestamps without a zone or have
+  a symbolic zone name (e.g. `PDT`) are not converted.
+* Added the SQLite JSON functions to the online help.
+* Added `config get` and `config blame` management CLI
+  commands to get the current configuration and the file
+  locations where the configuration options came from.
+* When piping data into **lnav**'s stdin, the input used to
+  only be written to a single file without any rotation.
+  Now, the input is written to a directory of rotating files.
+  The same is true for the command-lines executed through the
+  new `:sh` command.  The piped data can be managed using the
+  new `piper` commands in the management CLI.
+* The `$LNAV_HOME_DIR` and `$LNAV_WORK_DIR` environment
+  variables are now defined inside **lnav** and refer to
+  the location of the user's configuration directory and
+  the directory where cached data is stored, respectively.
+* The `<pre>` and `<img>` tags are now recognized in
+  Markdown files.
+* The `style` attribute in `<span>` tags is now supported.
+  The following CSS properties and values are supported:
+  * `color` and `background-color` with CSS color names
+  * `font-weight` with a value of `bold` or `bolder`
+  * `text-decoration` with `underline`
+  * `border-left` and `border-right` with the `solid`,
+    `dashed` and `dotted` line styles and colors.
+* Added an `options` column to the `lnav_views` table
+  to allow more control over overlays.
+* Added a "Dracula" theme as described at:
+  https://draculatheme.com
+* Added the following styles for themes:
+  - `/ui/theme-defs/<theme_name>/syntax-styles/inline-code`
+  - `/ui/theme-defs/<theme_name>/syntax-styles/type`
+  - `/ui/theme-defs/<theme_name>/syntax-styles/function`
+  - `/ui/theme-defs/<theme_name>/syntax-styles/separators-references-accessors`
+* Multi-line block comments (i.e. `/* ... */`) and strings
+  are now recognized and styled as appropriate.
+* Added `error` and `data` columns to the `fstat()`
+  table-valued-function.  The `error` column is non-NULL
+  if there is a problem accessing the file.  The `data`
+  contains the contents of the file, as such, it is
+  hidden by default.
+* Added a log format for Redis.
+* The `:eval` command will now treat its argument(s) as a
+  script, allowing multiple commands to be executed.
+* Added a `timezone()` SQL function for converting a timestamp
+  to a target timezone.
+* Added a `:convert-time-to` command that converts the
+  timestamp of the focused log message to the given timezone.
+* Added the `:set-file-timezone` and `:clear-file-timezone`
+  commands to set the timezone for log messages that don't
+  include a zone in their timestamp.
+* Added the `options_path` and `options` columns to the
+  `lnav_file` table so you can see what options are applied
+  to a file.  Currently, the only option is the default
+  timezone that is set by the `:set-file-timezone` command.
+* Added the `config file-options` management command that
+  can be used to examine the options that will be applied
+  to a given file.
+* When viewing a diff, the sections of the diff for each
+  file is recognized and shown in the breadcrumb bar.  So,
+  you can see the file the focused line is in.  You can
+  also jump to a particular file by focusing on the
+  breadcrumb bar, selecting the crumb, and then selecting
+  the desired file.
+* Binary files are now displayed as a hex dump with ASCII
+  representation (where applicable).
+* Added a `log_msg_line()` SQL function that will return the
+  line number of the start of the currently focused
+  message in the log view.
+* Added a `log_msg_values` column to the `all_logs` SQL
+  table that contains a JSON object with the top 5 values
+  for the fields extracted from the log message.
+* Added `:next-section` and `:prev-section` commands for
+  moving to the next and previous section of a document.
+  For example, the next section in a man page or JSON
+  array.  The default keymap has been changed to bind
+  the curly brace keys to these commands.
+* Added Nextcloud log format from Adam Monsen.
+* Added GitHub Event Log format for files from gharchive.org.
+  It makes a good example of a JSON-Lines format.
+
+Bug Fixes:
+* Binary data piped into stdin should now be treated the same
+  as if it was in a file that was passed on the command-line.
+* The `-I` option is now recognized in the management CLI
+  (i.e. when you run **lnav** with the `-m` flag).
+* Fields in the bro and w3c log formats that were hidden are
+  now saved in the session and restored.
+* A warning will now be issued if a timestamp in a log format's
+  sample message does not match completely.  Warnings in the
+  configuration can be viewed by passing the `-W` flag.
+* Importing from regex101.com broke due to some changes in the
+  API.
+* The details overlay for a log message no longer shows keys
+  for unknown JSON properties.  These extra fields are now
+  shown with the proper `jget(log_raw_text, '/...')` SQL
+  expression needed to retrieve the value.
+* Improved text-wrapping when rendering Markdown.
+
+Interface changes:
+* The breadcrumb bar hotkey is moving to backtick `` ` ``
+  instead of `ENTER`.
+* The DB view now uses the "alt-text" theme style to draw
+  alternating rows instead of being hard-coded to bold.  The
+  alternation is also now done in groups of two rows instead
+  of only a single row.  Numbers are also rendered using the
+  "number" theme style as well.
+* The log message overlay in the LOG view is now limited
+  2/3rds of the height.  You can focus on the overlay panel
+  by pressing `CTRL-]`.  The "alt-text" theme style is also
+  used to draw the overlay contents now as well. (The
+  overlay is used to display the parser details, comments,
+  and annotations.)
+* The `{` and `}` keys have been changed from moving
+  through the "location history" to moving to the previous
+  and next section in a document.
+* Added indent guidelines when structured data is detected.
+
+Breaking changes:
+* Removed the `-w` command-line option.  This option was
+  useful when stdin was not automatically preserved.  Since
+  the data is now stored (and cleaned up) as well as being
+  spread across multiple files, this option doesn't make
+  sense anymore.
+* The `-t` command-line flag behaves a little differently
+  behind the scenes now.  Timestamps will always be
+  recorded for each line piped into lnav.  This flag means
+  that the data should be treated as a log file instead of
+  plain text.
+* Data piped into **lnav** is now stored in the work
+  directory instead of the `stdin-captures` dot-lnav
+  directory.
+* Changed the "Bunyan" log format name from `bunyan` to
+  `bunyan_log` to be consistent with other format names.
+
+## lnav v0.11.2
+
+Features:
+* A "cursor" mode has been added to the main view that can
+  be toggled by pressing CTRL-X.  While in cursor mode, any
+  operations that would normally work on the "top" line will
+  now operate on the focused line instead.
+* Added CTRL-D and CTRL-U hotkeys to move down/up by half
+  a page.
+* Added an `auto-width` flag to the elements of the
+  `line-format` array that indicates that the width of the
+  field should automatically be determined by the observed
+  values.
+* Added bunyan log format from Tobias Gruetzmacher.
+* Added cloudflare log format from @minusf.
+* Number fields used in a JSON log format `line-format`
+  array now default to being right-aligned.  Also, added
+  `prefix` and `suffix` to `line-format` elements so a
+  string can optionally be prepended/appended if the value
+  is not empty.
+* JSON log format detection has been improved to not rely
+  on matching the file name.  All possible formats are
+  tried and the one with the most available fields for a
+  given `line-format` is used.  For example, if the first
+  log message has 8 fields and format A contains 5 of
+  those fields in its `line-format` while format B only
+  contains 2 of those fields in its `line-format`, format
+  A will be used for the file.
+
+Changes:
+* For JSON-lines logs, line-feeds at the end of a value are
+  automatically stripped.
+
+Bug Fixes:
+* Hidden values in JSON logs are now hidden by default.
+* Text with ANSI-escapes is now filtered properly.

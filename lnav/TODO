@@ -1,0 +1,15 @@
+# Build fails on NetBSD
+
+```
+fs_util.cc: In function 'std::optional<std::filesystem::__cxx11::path> lnav::filesystem::self_path()':
+fs_util.cc:54:18: error: 'PROC_PIDPATHINFO_MAXSIZE' was not declared in this scope
+   54 |     char pathbuf[PROC_PIDPATHINFO_MAXSIZE];
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+fs_util.cc:56:33: error: 'pathbuf' was not declared in this scope
+```
+
+constant `PROC_PIDPATHINFO_MAXSIZE` not defined
+ - on macOS: `MacOSX.sdk/usr/include/sys/proc_info.h:#define PROC_PIDPATHINFO_MAXSIZE        (4*MAXPATHLEN)`
+method `proc_pidpath` not defined
+ - on macOS: `MacOSX.sdk/usr/include/libproc.h:int proc_pidpath(int pid, void * buffer, uint32_t  buffersize) __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);`
+

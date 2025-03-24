@@ -2241,6 +2241,7 @@ SUBDIR+=	lldb
 SUBDIR+=	llilc-git
 SUBDIR+=	llvm
 SUBDIR+=	lmdbg-current
+SUBDIR+=	lnav
 SUBDIR+=	lnd
 SUBDIR+=	lodepng-git
 SUBDIR+=	logcli
