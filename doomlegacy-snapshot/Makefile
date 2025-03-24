@@ -3,7 +3,7 @@
 VERS=		1.48.16
 #PKGNAME=	doomlegacy-${VERS}
 SVNVERS=	1713
-DISTNAME=	doomlegacy-devel-0r${SVNVERS}
+DISTNAME=	doomlegacy-snapshot-0r${SVNVERS}
 CATEGORIES=	games
 
 DISTFILES=			doomlegacy_${VERS}_common.zip
@@ -11,7 +11,7 @@ MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
 SVN_REPOSITORIES=		legacy_one
 SVN_REPO.legacy_one=		svn://svn.code.sf.net/p/doomlegacy/svn/legacy_one/trunk
 SVN_REVISION.legacy_one=	${SVNVERS}
-SVN_EXTRACTDIR.legacy_one=	doomlegacy-devel-0r${SVNVERS}
+SVN_EXTRACTDIR.legacy_one=	doomlegacy-snapshot-0r${SVNVERS}
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		http://doomlegacy.sourceforge.net/
