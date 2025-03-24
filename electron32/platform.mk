@@ -15,10 +15,15 @@ ELECTRON=		electron${ELECTRON_MAJOR}
 # - "dependency" if the package uses electron as dependency
 USE_ELECTRON?=		electronpkg
 
-.if !empty(USE_ELECTRON:Melectronpkg) && empty(PKGBASE:M${ELECTRON})
-PKG_FAIL_REASON+=	"USE_ELECTRON not defined. Should be \"bundled\" or \"dependency\"."
-.elif !empty(PKGBASE:M${ELECTRON}) && empty(USE_ELECTRON:Melectronpkg)
-PKG_FAIL_REASON+=	"USE_ELECTRON is defined for ${PKGBASE} package."
+.include "../../mk/bsd.prefs.mk"
+
+PACKAGE_NAME=		${PKGPATH:C/.*\///}
+
+.if !empty(USE_ELECTRON:Melectronpkg) && empty(PACKAGE_NAME:M${ELECTRON})
+PKG_FAIL_REASON+=	"USE_ELECTRON is not defined for ${PKGPATH}."
+PKG_FAIL_REASON+=	"Should be \"bundled\" or \"dependency\"."
+.elif !empty(PACKAGE_NAME:M${ELECTRON}) && empty(USE_ELECTRON:Melectronpkg)
+PKG_FAIL_REASON+=	"USE_ELECTRON is defined for ${PKGPATH} package."
 .endif
 
 TOOL_DEPENDS+=		nodejs-${NODE_VERSION_DEFAULT}.*:../../lang/nodejs${NODE_VERSION_DEFAULT}
@@ -27,8 +32,6 @@ DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .elif ${USE_ELECTRON} == "bundled"
 TOOL_DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 .for c_arch in x86_64 aarch64
 ONLY_FOR_PLATFORM+=	NetBSD-1[0-9].*-${c_arch}
