@@ -18,6 +18,6 @@ CARGO_FEATURES+=	sixel
 .include "../../graphics/libsixel/buildlink3.mk"
 
 # ensure libsixel is available to the rust compiler
-RUSTFLAGS+= -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsixel}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsixel}/lib
 
 .include "../../mk/bsd.pkg.mk"
