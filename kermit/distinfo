@@ -1,8 +1,7 @@
 $NetBSD: distinfo,v 1.28 2020/07/30 03:03:07 gutteridge Exp $
 
-BLAKE2s (cku405-beta10.tar.gz) = bc25564859d82edcbcd612eb656b298714660326019f92d0af4a6a0b6f3a7a9a
-SHA512 (cku405-beta10.tar.gz) = bfe52d8df02ee5a229603b8924757cf196258b64e5237b5552417275efbaa9b554b95d6b88f85b6c2bfb39433a4ff01e2f5a78e1428b875054d2803c40493dc1
-Size (cku405-beta10.tar.gz) = 2331103 bytes
+BLAKE2s (cku416-beta12.tar.gz) = 397b5d4a4b0e8cf851019740592b4b18499c41cf06bee35d5e7d64bdc77ace21
+SHA512 (cku416-beta12.tar.gz) = 670db9720ebf75e18f3baacb5899d1e1acc5fac812d8292a15d44a1fa38ca9ba40b9808681c378e6a826d8327ee8ac3b74b7a432584b984c0c8c039a4eceff5f
+Size (cku416-beta12.tar.gz) = 2353340 bytes
 SHA1 (patch-ckupty.c) = 97cb6cca9b90d4c9a3a2faf9161310cb51fd2a58
-SHA1 (patch-ckuusx.c) = 4482c383b25cac5382863b811b6e13b3a64c85c1
 SHA1 (patch-makefile) = 6d72725dc07bdbdab1ace45f8add3d578b9a2934

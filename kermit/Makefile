@@ -2,10 +2,11 @@
 
 # https://www.kermitproject.org/ftp/kermit/test/tar/index.html
 # https://www.kermitproject.org/ftp/kermit/test/tar/cku405-beta09.tar.gz
+# https://www.kermitproject.org/ftp/kermit/test/tar/cku416-beta12.tar.gz
 VERSION=	10.0
-VERSIONDIST=	405
+VERSIONDIST=	416
 VERSIONSEP=	-
-VERSIONRC=	beta10
+VERSIONRC=	beta12
 DISTNAME=	cku${VERSIONDIST}${VERSIONSEP}${VERSIONRC}
 PKGNAME=	kermit-${VERSION}${VERSIONRC}
 CATEGORIES=	comms
