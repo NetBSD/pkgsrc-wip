@@ -105,7 +105,7 @@ ALL_ENV+=		CARGO_HOME=${WRKDIR}
 #	# remove files cargo uses for tracking installations
 #	${RM} -f ${DESTDIR}${PREFIX}/.crates.toml
 #	${RM} -f ${DESTDIR}${PREFIX}/.crates2.json
-	
+
 #.if ${OPSYS} == "Darwin"
 #.PHONY: do-cargo-post-install-darwin-fix-rpath
 #post-install: do-cargo-post-install-darwin-fix-rpath

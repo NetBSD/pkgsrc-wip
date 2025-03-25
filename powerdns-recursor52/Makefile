@@ -1,31 +1,31 @@
 # $NetBSD$
 
-DISTNAME=      pdns-recursor-5.2.0
-CATEGORIES=    net
-MASTER_SITES=  https://downloads.powerdns.com/releases/
-EXTRACT_SUFX=  .tar.bz2
-PKGNAME=        powerdns-recursor-5.2.0
+DISTNAME=	pdns-recursor-5.2.0
+CATEGORIES=	net
+MASTER_SITES=	https://downloads.powerdns.com/releases/
+EXTRACT_SUFX=	.tar.bz2
+PKGNAME=	powerdns-recursor-5.2.0
 
-MAINTAINER=    drixter@e-utp.net
-HOMEPAGE=      https://downloads.powerdns.com/releases/
-COMMENT=       PowerDNS resolver
-LICENSE=       gnu-gpl-v2
+MAINTAINER=	drixter@e-utp.net
+HOMEPAGE=	https://downloads.powerdns.com/releases/
+COMMENT=	PowerDNS resolver
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=         yes
-USE_TOOLS+=            gmake pkg-config
-USE_LIBTOOL=           yes
-USE_LANGUAGES=         c c++
-USE_CXX_FEATURES+=     c++17
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=       --with-libsodium
-CONFIGURE_ARGS+=       --enable-dns-over-tls
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-libsodium
+CONFIGURE_ARGS+=	--enable-dns-over-tls
 
-CHECK_WRKREF_SKIP+= sbin/pdns_recursor
+CHECK_WRKREF_SKIP+=	sbin/pdns_recursor
 
-RCD_SCRIPTS=            pdns_recursor
+RCD_SCRIPTS=		pdns_recursor
 
-SMF_NAME=               pdns-recursor
-SMF_METHODS=            pdns_recursor
+SMF_NAME=		pdns-recursor
+SMF_METHODS=		pdns_recursor
 
 
 .include "cargo-depends.mk"

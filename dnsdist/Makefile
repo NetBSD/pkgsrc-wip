@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--with-lua
 CONFIGURE_ARGS+=	--with-nghttp2
 CONFIGURE_ARGS+=	--with-re2
 CONFIGURE_ARGS+=	--without-net-snmp
-CONFIGURE_ARGS+=        --enable-dns-over-https
+CONFIGURE_ARGS+=	--enable-dns-over-https
 
 CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.editlinereadline}/include"
 CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.editlinereadline}/lib ${BUILDLINK_LDADD.editlinereadline}"
