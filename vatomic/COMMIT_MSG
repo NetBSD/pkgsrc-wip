@@ -1,3 +1,6 @@
 devel/vatomic: Add vatomic version 2.3.1
 
+A formally verified, header-only library of atomics operations supporting ARMv7,
+ARMv8 (AArch32 and AArch64), RISC-V, and x86_64.
+
 Packaged in wip by db7

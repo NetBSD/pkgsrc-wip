@@ -13,6 +13,5 @@ LICENSE=	mit
 USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS=	-DVATOMIC_DEV=off
 
-
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -208,6 +208,7 @@ Suggested ready to import packages
 	o send-pr
 	o tqsllib
 	o trustedQSL
+	o vatomic
 	o vlevel
 	o xmms-skins [pkg/35666]
 
