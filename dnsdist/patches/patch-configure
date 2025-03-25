@@ -1,5 +1,7 @@
 $NetBSD$
 
+	        Fortify source fix.
+
 --- configure.orig	2024-12-17 09:14:59.000000000 +0000
 +++ configure
 @@ -25928,12 +25928,12 @@ fi

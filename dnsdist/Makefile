@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.28 2024/11/14 22:21:04 wiz Exp $
 
 DISTNAME=	dnsdist-1.9.8
-PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,9 +11,10 @@ HOMEPAGE=	https://dnsdist.org/
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++11
-USE_TOOLS+=	gmake pkg-config
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,6 +54,7 @@ RCD_SCRIPTS+=		dnsdist
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
+#.include "../../devel/libatomic/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../net/fstrm/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
