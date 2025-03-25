@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	presenterm-0.11.0
+DISTNAME=	presenterm-0.12.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mfontanini/}
 
@@ -14,6 +14,10 @@ USE_LANGUAGES=		c
 CARGO_FEATURES+=	sixel
 
 .include "cargo-depends.mk"
-.include "../../graphics/libsixel/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../graphics/libsixel/buildlink3.mk"
+
+# ensure libsixel is available to the rust compiler
+RUSTFLAGS+= -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsixel}/lib
+
 .include "../../mk/bsd.pkg.mk"
