@@ -1,5 +1,4 @@
-ICANN RDAP
-==========
+net/icann-rdap: Add icann-rdap version 0.0.21
 
 This repository contains open source code written by the Internet Corporation
 for Assigned Names and Numbers (ICANN) (https://www.icann.org). for use with
