@@ -60,8 +60,8 @@ CONFIGURE_ARGS+=	${ADD_CONFIGURE_ARGS}
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
-PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
-MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
+#PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
+#MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 
 # This should allow us to perform "offline" builds (so cargo doesn't fetch
 # dependencies during the build stage) but this isn't hooked up yet.

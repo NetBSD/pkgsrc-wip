@@ -1,6 +1,10 @@
 $NetBSD$
 
 support removal of WRKDIR references from config.h
+Also test a more specific -lexecinfo function, to allow
+configuration with CFLAGS+=-fsanitize=thread, because
+backtrace_symbols() is in /usr/lib/libtsan.so, so the
+"do we need -lexecinfo?" is otherwise mis-detected as "not needed".
 
 --- configure.ac.orig	2024-07-08 13:09:17.034283885 +0000
 +++ configure.ac
@@ -16,3 +20,12 @@ support removal of WRKDIR references from config.h
  
  AC_DEFINE([PACKAGE_BUILDER], ["make"], [make or Visual Studio])
  
+@@ -975,7 +978,7 @@ AC_SUBST([LIBSYSTEMD_LIBS])
+ # Check if the system supports glibc-compatible backtrace() function.
+ #
+ AC_CHECK_HEADERS([execinfo.h],
+-		 [AC_SEARCH_LIBS([backtrace_symbols], [execinfo],
++		 [AC_SEARCH_LIBS([backtrace_symbols_fd], [execinfo],
+ 				 [AC_CHECK_FUNCS([backtrace_symbols])])])
+ 
+ #

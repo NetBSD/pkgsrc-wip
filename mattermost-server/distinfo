@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mattermost-server-5.21.0/mattermost-server-5.21.0.tar.gz) = 57b8e3dec433db126877a0fb82c6ba7212eea301
-SHA512 (mattermost-server-5.21.0/mattermost-server-5.21.0.tar.gz) = 9e09a0ed7c5f9d12871d7009f7dd2b49eaf8ff2657cd9d04212a42d20b217f553326e739122e86ed0525713c6c1f70b118d5f9964c1f1e7f94956596466d186e
-Size (mattermost-server-5.21.0/mattermost-server-5.21.0.tar.gz) = 16785271 bytes
+BLAKE2s (mattermost-server-5.32.1/mattermost-server-5.32.1.tar.gz) = 227693d8d052906d15bf41889f1a77ef753ba2892224ab6717e7cd8d9b81e37e
+SHA512 (mattermost-server-5.32.1/mattermost-server-5.32.1.tar.gz) = e497d95199f018b7557e56f8ef9a51e7b7fe7cba1662ea4ff3120cbc68b4ba40104de376ee903323924de8ed0c0f745cab2888aaecdbabc87d54a3d33c012f9f
+Size (mattermost-server-5.32.1/mattermost-server-5.32.1.tar.gz) = 21723836 bytes
