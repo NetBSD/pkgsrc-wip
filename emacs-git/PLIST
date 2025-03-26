@@ -1,5 +1,4 @@
 @comment $NetBSD$
-bin/ctags
 bin/ebrowse
 bin/emacs
 bin/emacs-${PKGVERSION}
@@ -78,7 +77,6 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/emacs.pdmp
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
-man/man1/ctags.1
 man/man1/ebrowse.1
 man/man1/emacs.1
 man/man1/emacsclient.1
@@ -4116,6 +4114,8 @@ share/emacs/${PKGVERSION}/lisp/transient.el.gz
 share/emacs/${PKGVERSION}/lisp/transient.elc
 share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
 share/emacs/${PKGVERSION}/lisp/tree-widget.elc
+share/emacs/${PKGVERSION}/lisp/treesit-x.el.gz
+share/emacs/${PKGVERSION}/lisp/treesit-x.elc
 share/emacs/${PKGVERSION}/lisp/treesit.el.gz
 share/emacs/${PKGVERSION}/lisp/treesit.elc
 share/emacs/${PKGVERSION}/lisp/tty-tip.el.gz
