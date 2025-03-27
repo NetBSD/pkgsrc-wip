@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 NO_BUILD=		yes
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	sun-jdk7 openjdk7 oracle-jdk8 openjdk8
+PKG_JVMS_ACCEPTED=	openjdk7 openjdk8
 
 USE_TOOLS+=	unzip tar pax cp
 

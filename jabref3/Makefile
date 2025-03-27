@@ -13,7 +13,7 @@ LICENSE=	mit
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}
-PKG_JVMS_ACCEPTED=	openjdk8 oracle-jdk8
+PKG_JVMS_ACCEPTED=	openjdk8
 INSTALLATION_DIRS=	bin share/java
 
 SUBST_CLASSES+=		script
