@@ -282,7 +282,9 @@ man/man3/bl_fasta_set_seq_cpy.3
 man/man3/bl_fasta_set_seq_len.3
 man/man3/bl_fasta_write.3
 man/man3/bl_fastq_3p_trim.3
+man/man3/bl_fastq_5p_trim.3
 man/man3/bl_fastq_find_3p_low_qual.3
+man/man3/bl_fastq_find_5p_low_qual.3
 man/man3/bl_fastq_free.3
 man/man3/bl_fastq_init.3
 man/man3/bl_fastq_name_cmp.3
