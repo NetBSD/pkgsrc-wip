@@ -5675,7 +5675,6 @@ SUBDIR+=	tilix
 SUBDIR+=	timescaledb-tune
 SUBDIR+=	timewarrior
 SUBDIR+=	timg
-SUBDIR+=	tint2
 SUBDIR+=	tintin++
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
