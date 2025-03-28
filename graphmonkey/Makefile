@@ -29,5 +29,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../lang/mono/buildlink3.mk"
-.include "../../x11/gtk-sharp/buildlink3.mk"
+# gtk-sharp is no more
+#.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
