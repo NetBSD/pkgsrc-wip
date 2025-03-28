@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	${PKGNAME}-source
-PKGNAME=	subread-2.0.8
+PKGNAME=	subread-2.1.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=subread/}
 
@@ -20,7 +20,7 @@ NOT_FOR_PLATFORMS+=	NetBSD-*-*
 
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/subread-2.0.8-source/src
+WRKSRC=		${WRKDIR}/subread-${PKGVERSION_NOREV}-source/src
 
 CFLAGS+=	-fcommon
 MAKE_FILE=	${FILESDIR}/Makefile.pkg

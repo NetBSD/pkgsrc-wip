@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (subread-2.0.8-source.tar.gz) = ddf9b8e627210aa133e019496deb90fdba8a387585ca9403fa630192f44211ee
-SHA512 (subread-2.0.8-source.tar.gz) = 740c14243fbf24ccd7316966788575f8f310a442acd8bb978e330797805b9568fb719cde28afb9e747170c92835b1661c12ce045e3bf1452a71e0286d73a0ad7
-Size (subread-2.0.8-source.tar.gz) = 26074498 bytes
+BLAKE2s (subread-2.1.0-source.tar.gz) = 43f0701b6197ae56dd096a54d2102f1e216274d41251224289508f0de07f9f86
+SHA512 (subread-2.1.0-source.tar.gz) = 61848ae7a228129a3a1c9e0c47fcc7bc07ef5e8d4218a818d48c95161bd549e973b5b918e9830ca3d95266ebcda1c2a72690efe6ace34e2f398d185a12a6b672
+Size (subread-2.1.0-source.tar.gz) = 26090041 bytes
 SHA1 (patch-HelperFunctions.c) = fac250be541ec76fef1cb439a4849050fd8be420
 SHA1 (patch-core-junction.c) = 481cd069aa42d673bbc10c80bb9548547e808b0c
 SHA1 (patch-gene-algorithms.c) = 35667746d92a3060a70229d69cdefd862da1a4c1
