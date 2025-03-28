@@ -1,8 +1,10 @@
-lang/freem: Update freem to 0.62.2
+lang/freem: Update freem to 0.62.3
 
-No changes to packaging other than the version bump
+More example scripts included in the package to prepare for rc automation
 
-- Comply with MDC Type A extension X11/96-13 - Portable length of names
-- Fix reverse $QUERY polyfill
-- Silently truncate long NAME exprs in obsolete MDC dialects
+- Fix OO regression in method dispatch
+- Fix port for SCO OpenServer
+- Fix port for Tru64 UNIX
+- Port to OS/2 4.52+
+- Make systemd units friendlier to RPM packaging
       
