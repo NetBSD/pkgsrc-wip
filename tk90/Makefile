@@ -10,9 +10,7 @@ HOMEPAGE=	https://www.tcl.tk/
 COMMENT=	Graphical toolkit for TCL
 LICENSE=	2-clause-bsd
 
-# xxx
-#.include "../../x11/tk/Makefile.version"
-.include "../../x11/tk90/Makefile.version"
+.include "../../wip/tk90/Makefile.version"
 
 WRKSRC=			${WRKDIR}/tk${TK_VERSION}
 
@@ -63,7 +61,5 @@ post-install:
 		install install-binaries
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -fs wish${TK_BASEVER} wish
 
-# xxx
-#.include "../../lang/tcl/buildlink3.mk"
-.include "../../lang/tcl90/buildlink3.mk"
+.include "../../wip/tcl90/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
