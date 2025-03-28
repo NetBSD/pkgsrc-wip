@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/23 16:14:24 pin Exp $
-bin/alacritty
-man/man1/alacritty-msg.1
-man/man1/alacritty.1
-man/man5/alacritty-bindings.5
-man/man5/alacritty.5
-share/applications/Alacritty.desktop
-share/icons/hicolor/scalable/apps/alacritty-term.svg
