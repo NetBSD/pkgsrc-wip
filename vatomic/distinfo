@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (vatomic-2.3.0.tar.gz) = 5c4dc9bbb375445d4ebf06d7a54eca8ece97e4717fbd07b19b89e72aa1e089c7
-SHA512 (vatomic-2.3.0.tar.gz) = be4db53ca82261f4ec21b1e67b2b26e98aaa04aff3fd3c71aac4077f00e49223c8613d306afaa1a0b467838eac36d6d5808266a48b6013251d5a79ded2360f41
-Size (vatomic-2.3.0.tar.gz) = 159222 bytes
+BLAKE2s (vatomic-2.3.1.tar.gz) = 66f2feeb15aecde9d615f500c3aced54c31823a5919e077da472c33aa9d4fc97
+SHA512 (vatomic-2.3.1.tar.gz) = 4ba325634c7f83941216735ff039aed52b4a2b8c34322715a5b390d91893d5ed7ffe83b5608c6514efe26fc026d50efa7acbb0bf49ffb482eb6fd46a3ffa6fce
+Size (vatomic-2.3.1.tar.gz) = 175309 bytes
