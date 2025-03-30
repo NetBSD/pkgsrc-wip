@@ -7,6 +7,7 @@ LIBBGCODE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libbgcode+=	libbgcode>=20231123
 BUILDLINK_PKGSRCDIR.libbgcode?=		../../wip/libbgcode
+BUILDLINK_FILES.libbgcode+=		bin/bgcode
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

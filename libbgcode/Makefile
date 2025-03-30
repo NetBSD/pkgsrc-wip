@@ -11,13 +11,8 @@ HOMEPAGE=	https://www.github.com/prusa3d/libbgcode
 COMMENT=	Prusa Block & Binary G-code reader/writer/converter
 LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-#CMAKE_CONFIGURE_ARGS+=	-DLibBGCode_BUILD_DEPS=on
-
-# CMake goes looking for this binary. Make it happy.
-pre-configure:
-	${LN} -sf ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 
