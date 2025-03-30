@@ -5851,7 +5851,6 @@ SUBDIR+=	vamps
 SUBDIR+=	vanitygen
 SUBDIR+=	varnish-modules
 SUBDIR+=	varnish-slash
-SUBDIR+=	vatomic
 SUBDIR+=	vault
 SUBDIR+=	vaultwarden-web-vault
 SUBDIR+=	vcf-split
