@@ -33,11 +33,6 @@ BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
 CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 
-# CMake goes looking for these binaries. Make it happy.
-pre-configure:
-	${LN} -sf ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
-	${LN} -sf ${PREFIX}/bin/bgcode ${BUILDLINK_DIR}/bin/
-
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
@@ -62,7 +57,6 @@ pre-configure:
 .include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../math/eigen3/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
