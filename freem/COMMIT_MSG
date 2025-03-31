@@ -1,10 +1,4 @@
-lang/freem: Update freem to 0.62.3
+lang/freem: Update package to include init script and create system user/group
 
-More example scripts included in the package to prepare for rc automation
-
-- Fix OO regression in method dispatch
-- Fix port for SCO OpenServer
-- Fix port for Tru64 UNIX
-- Port to OS/2 4.52+
-- Make systemd units friendlier to RPM packaging
+No changes to upstream.
       
