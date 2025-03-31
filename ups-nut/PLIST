@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2024/04/03 17:42:53 gdt Exp $
+@comment $NetBSD$
 bin/nut-scanner
 bin/nutconf
 bin/upsc
@@ -151,6 +151,8 @@ man/man3/upscli_sendline_timeout.3
 man/man3/upscli_splitaddr.3
 man/man3/upscli_splitname.3
 man/man3/upscli_ssl.3
+man/man3/upscli_str_add_unique_token.3
+man/man3/upscli_str_contains_token.3
 man/man3/upscli_strerror.3
 man/man3/upscli_upserror.3
 man/man3/upsclient.3
@@ -270,6 +272,7 @@ share/doc/nut/detailed/packager-guide.txt
 share/doc/nut/detailed/release-notes.txt
 share/doc/nut/detailed/scheduling.txt
 share/doc/nut/detailed/security.txt
+share/doc/nut/detailed/sms-brazil-protocol.txt
 share/doc/nut/detailed/snmp-subdrivers.txt
 share/doc/nut/detailed/snmp.txt
 share/doc/nut/detailed/sock-protocol.txt
