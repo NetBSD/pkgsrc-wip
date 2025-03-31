@@ -37,5 +37,4 @@ do-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/libunwind/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
