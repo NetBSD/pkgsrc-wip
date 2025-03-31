@@ -76,6 +76,8 @@ share/APE/Languages/GO/language_opts
 share/APE/Languages/GO/syntax_highlighting
 share/APE/Languages/GRADES/language_opts
 share/APE/Languages/GRADES/syntax_highlighting
+share/APE/Languages/Gnuplot/language_opts
+share/APE/Languages/Gnuplot/syntax_highlighting
 share/APE/Languages/HTML/Macros/macros
 share/APE/Languages/HTML/Macros/menu.txt
 share/APE/Languages/HTML/language_opts
