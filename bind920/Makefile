@@ -35,6 +35,9 @@ CONFIGURE_ARGS+=		--disable-linux-caps
 
 # Compile with debug info
 CFLAGS+=	-g
+# Sadly, broken in -current, ref. PR#59189
+#CFLAGS+=	-g -fsanitize=thread
+#LDFLAGS+=	-g -fsanitize=thread
 
 CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
