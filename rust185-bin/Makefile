@@ -291,6 +291,10 @@ fix-relative-rpath:
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f;	\
 	done
 .  endfor
+# wrong architecture binary distributed, unused except on macOS
+# https://github.com/rust-lang/rust/issues/139195
+# https://github.com/rust-lang/rust/issues/138943
+	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/rust-objcopy
 .endif
 
 .include "../../mk/bsd.pkg.mk"
