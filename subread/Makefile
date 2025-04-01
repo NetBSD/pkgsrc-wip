@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 # of time to port libsysinfo to NetBSD since it's useful for other apps.
 # The libsysinfo package is only for SunOS at the time of this writing.
 # FreeBSD has a libsysinfo port that may serve as a model for NetBSD.
-NOT_FOR_PLATFORMS+=	NetBSD-*-*
+NOT_FOR_PLATFORM+=	NetBSD-*-*
 
 USE_TOOLS+=	gmake
 
