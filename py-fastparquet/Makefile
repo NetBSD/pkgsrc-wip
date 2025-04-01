@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dask/}
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/dask/fastparquet
-COMMENT=	Python implementation of the parquet format,
+COMMENT=	Python implementation of the parquet format
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
