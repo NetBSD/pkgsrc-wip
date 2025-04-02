@@ -5,6 +5,8 @@
 # XXX beginning with "XXX" should be removed.  Please do not commit
 # XXX unverified buildlink3.mk files.
 
+.if !empty(MACHINE_PLATFORM:MFreeBSD-*-*)
+
 BUILDLINK_TREE+=	libsysinfo
 
 .if !defined(LIBSYSINFO_BUILDLINK3_MK)
@@ -17,3 +19,5 @@ BUILDLINK_PKGSRCDIR.libsysinfo?=	../../wip/libsysinfo
 .endif	# LIBSYSINFO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libsysinfo
+
+.endif
