@@ -14,7 +14,7 @@ COMMENT=	Qt6 bindings for Python
 LICENSE=	gnu-gpl-v2
 
 PYTHON_VERSIONS_ACCEPTED=	311
-USE_TOOLS+=			pkg-config
+USE_TOOLS+=			pkg-config bash
 USE_LANGUAGES+=			c c++
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
 
@@ -24,6 +24,12 @@ PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
 REPLACE_PYTHON+=	sources/pyside-tools/pyside_tool.py
 REPLACE_PYTHON+=	sources/pyside-tools/qtpy2cpp_lib/tests/baseline/basic_test.py
 REPLACE_PYTHON+=	sources/shiboken6/shiboken_tool.py
+
+SUBST_CLASSES+=		bash
+SUBST_MESSAGE.bash=	Replace bash path in cmake generated wrapper
+SUBST_STAGE.bash=	post-extract
+SUBST_FILES.bash=	sources/shiboken6/cmake/ShibokenHelpers.cmake
+SUBST_SED.bash=		-e "s|\#!/bin/bash|\#!${BASH}|g"
 
 .include "../../devel/cmake/build.mk"
 
