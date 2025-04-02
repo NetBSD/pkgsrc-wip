@@ -1,0 +1,101 @@
+Coin 4.0.3
+
+This is a bugfix release.
+
+- Added support for building modern styled documentation.
+- Set minimum C++ standard needed to compile Coin to C++11.
+- Fixed LTOcompilation ODR error.
+- Fixed suspicious increment in SbProfilingData.cpp.
+- Fixed SbTri3f intersect calculation.
+- Improved auto clipping.
+- Fixed orthographic autoclipping by allowing negative farDistance.
+- Fixed rotating a VRMLBackground node with its ancestors' rotations.
+
+Coin 4.0.2
+
+This is a bugfix release.
+
+- ABI compatibility to version 4.0.0 was inadvertently changed and restored.
+- Fixed numerous typos found by Codespell.
+
+Coin 4.0.1
+
+This is a bugfix release.
+
+- Introduced COIN_GLX_PIXMAP_DIRECT_RENDERING environment variable to force direct rendering of offscreen contexts.
+- Introduced new COIN_DEBUG_CHECK_THREAD option.
+- Optimized mutex debugging.
+- Fix integer division issue.
+- Fix material and normal handling for indexed line set.
+- Fix resource lookup when HAVE_MULTIPLE_VERSION is enabled in CMake build script.
+- Fixed an transparency issue for indexed lineset.
+- Move constant data to read only data segment to reduce size of shared object
+  library (see https://randomascii.wordpress.com/2017/01/08/add-a-const-here-delete-a-const-there)
+- Fixed numerous issues detected by static code analysis.
+- The expat sources under coin/src/xml/expat were updated to version 2.2.10.
+- Fix linking with system installation of expat.
+- Fix broken ABI version on .so link.
+- Do not run programs for determining hash quoting to support cross compiling.
+- Fix testing for maximum texture size.
+- Removed obsolete ATI driver issue check. Do not check for ATI driver issues
+  fixed long time ago (see issue #412). We added environment variable
+  COIN_GLGLUE_DISABLE_VBO_IN_DISPLAYLIST for compatibility with the old behaviour.
+- Fix underlinking against X11 in CMake build scripts.
+- Set GLSL shader version to 120 to avoid rendering issues with fog.
+- Enable non power of two textures for ATi and Intel by default. For those who
+  are in need of the old behavior, an environment variable
+  COIN_GLGLUE_DISABLE_NON_POWER_OF_TWO_TEXTURES has been added.
+- Do not disable VBO rendering for Intel graphics drivers anymore. Recent Intel
+  graphics hardware is known to properly support VBO rendering. So we remove the
+  code for disabling it by default.
+- Fix GLX glue trying to use NULL display, i.e. when a unix platform has a
+  non-GLX context: usually Wayland, but also might be offscreen or maybe EGL-X11.
+- Fix operator arguments on some base types to use const references rather than copies.
+- Fixed incorrect rendering of SoFaceSet. Conditions when to render as
+  VertexArrayObject were not properly checked.
+- Fixed incorrect line ending handling for Windows CR/LF.
+- Fixed incorrect closest point calculation for bounding boxes.
+- Applied some distribution patches from Fedora, Rosa, and Gentoo.
+- Added some class documentation and fixed numerous documentation issues.
+- cpack.d was made optional and disabled by default (add -DCOIN_USE_CPACK=ON
+  to the cmake commandline to enable it).
+- Reference line for text rendered with the built-in default font was changed
+  (before: descender line, now: base line). Thus text rendered with default
+  font will appear a few pixels lower than before, but now consistent
+  with text using non-default fonts.
+  (see https://github.com/coin3d/coin/pull/368)
+- Fixed crash when call to cc_flww32_get_bitmap() failed.
+- Home of Coin3d organization has been changed from https://bitbucket.org/Coin3D
+  to https://github.com/coin3d due to Bitbucket ending Mercurial support.
+- Version control system has been changed from Mercurial to Git.
+
+Coin 4.0.0
+
+- Kongsberg Oil & Gas Technologies AS ended Coin as a commercial product
+  and re-licensed it under the BSD 3-clause license as a service to the
+  user community.
+- Build system was migrated from GNU Autotools to CMake.
+- Support for UNICODE text added.  Starting with Coin 4.0 strings are UTF-8
+  encoded.
+- New greater than and less than operators added to SbString.
+- New SoReversePerspectiveCamera node added.
+  View volume and projectors now support reverse perspective camera settings.
+- New getRadius method in SoRayPickAction.
+- New virtual method getPickedPointForStart in SoDragger to allow dragging
+  of (partially) covered objects by derived draggers.
+- New SoAlphaTest node to control alpha test settings.
+- New public API for converting geo coordinates created.
+- SoTextureCoordinateObject implemented for linear texture functions that
+  can be used for projective texture mapping.
+- In addition to Cg shaders support for GLSL/ARB shaders was added to
+  SoShaderStateMatrixParameter.
+- Support for linePatternScaleFactor was added to SoDrawStyle.
+- The DISABLE policy is now supported in SoSelection node.
+- API in SbMatrix, SoPickAction, SoEvent, SoSFTime, SbPList has changed to
+  improve conformance to Open Inventor 2.1 API.
+- Auto-linking to the Coin library when using Microsoft Visual C++ compilers.
+- The expat sources under coin/src/xml/expat were updated to version 2.2.6.
+- The local Boost includes under coin/include/Boost were removed and a new
+  configure option --with-boost was added to Autotools.
+- Support for BitBucket and AppVeyor as continuous integration service providers
+  has been added.
