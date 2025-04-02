@@ -5,7 +5,9 @@
 # XXX beginning with "XXX" should be removed.  Please do not commit
 # XXX unverified buildlink3.mk files.
 
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-*)
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${MACHINE_PLATFORM:MFreeBSD-*-*}
 
 BUILDLINK_TREE+=	libsysinfo
 
