@@ -1,0 +1,7 @@
+pkglint warnings like:
+
+WARN: PLIST:68: Redundant library found. The libtool library is in line 69.
+WARN: PLIST:71: Redundant library found. The libtool library is in line 69.
+WARN: PLIST:72: Redundant library found. The libtool library is in line 69.
+WARN: PLIST:73: Redundant library found. The libtool library is in line 69.
+

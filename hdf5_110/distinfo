@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.49 2023/08/31 11:57:27 adam Exp $
+
+BLAKE2s (hdf5-1.10.11.tar.bz2) = 28bd067d2ddce9ce980556ccec39f28b5f26ba5882ee030aa9034d3b955a6d35
+SHA512 (hdf5-1.10.11.tar.bz2) = 883a46eb82e248fa47f114d92519c45964ee72298cb32aa63a82cebea0c4827c864a87f13475c9cd725bab44309a9c480bc9672ba8a344b8fc978e4579cd71b7
+Size (hdf5-1.10.11.tar.bz2) = 15286914 bytes
+SHA1 (patch-configure) = e7f141d54c39cbee2f7d703ab7d6ff582158904e
+SHA1 (patch-tools_test_h5dump_testh5dump.sh.in) = 97c70174d10e6e3671975cf3b09c74add27ce9c5
+SHA1 (patch-tools_test_h5repack_h5repack.sh.in) = 7e6f3ce52d4d282f341a93ff4c8231ec8c04a37c
