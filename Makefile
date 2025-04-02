@@ -5285,6 +5285,7 @@ SUBDIR+=	self-git
 SUBDIR+=	semanticscuttle
 SUBDIR+=	semgrep
 SUBDIR+=	semgrep-core
+SUBDIR+=	semi
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	sent
