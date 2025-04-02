@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${EMACS_LISPPREFIX}/mail-mime-setup.el
+${EMACS_LISPPREFIX}/mail-mime-setup.elc
+${EMACS_LISPPREFIX}/mime-image.el
+${EMACS_LISPPREFIX}/mime-image.elc
+${EMACS_LISPPREFIX}/mime-setup.el
+${EMACS_LISPPREFIX}/mime-setup.elc
+${EMACS_LISPPREFIX}/mime-view.el
+${EMACS_LISPPREFIX}/mime-view.elc
+${EMACS_LISPPREFIX}/semi-def.el
+${EMACS_LISPPREFIX}/semi-def.elc
+${EMACS_LISPPREFIX}/semi-setup.el
+${EMACS_LISPPREFIX}/semi-setup.elc
+info/mime-ui-en.info
+info/mime-ui-ja.info
