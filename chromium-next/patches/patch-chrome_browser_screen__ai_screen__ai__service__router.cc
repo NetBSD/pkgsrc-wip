@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/screen_ai/screen_ai_service_router.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- chrome/browser/screen_ai/screen_ai_service_router.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ chrome/browser/screen_ai/screen_ai_service_router.cc
 @@ -316,7 +316,7 @@ void ScreenAIServiceRouter::LaunchIfNotR
    base::FilePath binary_path = state_instance->get_component_binary_path();

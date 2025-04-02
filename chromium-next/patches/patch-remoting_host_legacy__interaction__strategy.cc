@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/legacy_interaction_strategy.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- remoting/host/legacy_interaction_strategy.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ remoting/host/legacy_interaction_strategy.cc
 @@ -43,7 +43,7 @@
  #include "remoting/host/chromeos/mouse_cursor_monitor_aura.h"

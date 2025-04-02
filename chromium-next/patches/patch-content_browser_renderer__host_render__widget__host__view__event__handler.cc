@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_event_handler.cc
 @@ -602,7 +602,7 @@ bool RenderWidgetHostViewEventHandler::C
    if (event->type() == ui::EventType::kMouseExited) {

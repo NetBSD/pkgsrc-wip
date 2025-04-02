@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/video_capture_device_factory_v4l2.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- media/capture/video/linux/video_capture_device_factory_v4l2.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ media/capture/video/linux/video_capture_device_factory_v4l2.cc
 @@ -28,7 +28,7 @@
  #include "media/capture/video/linux/scoped_v4l2_device_fd.h"

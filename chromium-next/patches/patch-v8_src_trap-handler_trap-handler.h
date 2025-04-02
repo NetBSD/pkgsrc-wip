@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/trap-handler/trap-handler.h.orig	2025-02-25 19:55:16.000000000 +0000
+--- v8/src/trap-handler/trap-handler.h.orig	2025-03-20 19:11:33.000000000 +0000
 +++ v8/src/trap-handler/trap-handler.h
 @@ -18,7 +18,7 @@ namespace v8::internal::trap_handler {
  // X64 on Linux, Windows, MacOS, FreeBSD.

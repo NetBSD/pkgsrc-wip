@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -81,12 +81,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"

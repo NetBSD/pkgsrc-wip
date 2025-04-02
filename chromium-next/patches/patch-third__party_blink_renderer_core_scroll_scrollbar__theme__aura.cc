@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
 @@ -147,7 +147,7 @@ bool ScrollbarThemeAura::SupportsDragSna
  // Disable snapback on desktop Linux to better integrate with the desktop

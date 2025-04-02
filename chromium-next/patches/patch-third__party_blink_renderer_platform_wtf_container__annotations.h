@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2025-02-25 19:55:16.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2025-03-20 19:11:33.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/container_annotations.h
 @@ -12,7 +12,7 @@
  // TODO(ochang): Remove the ARCH_CPU_X86_64 condition to enable this for X86

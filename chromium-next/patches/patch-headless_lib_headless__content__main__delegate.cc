@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/headless_content_main_delegate.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- headless/lib/headless_content_main_delegate.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ headless/lib/headless_content_main_delegate.cc
 @@ -408,7 +408,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {

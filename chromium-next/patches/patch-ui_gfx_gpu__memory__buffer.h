@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_memory_buffer.h.orig	2025-02-25 19:55:16.000000000 +0000
+--- ui/gfx/gpu_memory_buffer.h.orig	2025-03-20 19:11:33.000000000 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -17,7 +17,7 @@
  #include "ui/gfx/generic_shared_memory_id.h"

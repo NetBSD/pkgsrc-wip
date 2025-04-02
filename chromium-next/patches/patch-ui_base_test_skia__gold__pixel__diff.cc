@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/test/skia_gold_pixel_diff.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- ui/base/test/skia_gold_pixel_diff.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ ui/base/test/skia_gold_pixel_diff.cc
 @@ -117,7 +117,7 @@ const char* GetPlatformName() {
    return "windows";

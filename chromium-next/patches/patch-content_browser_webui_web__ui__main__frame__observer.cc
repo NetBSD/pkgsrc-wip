@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/webui/web_ui_main_frame_observer.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- content/browser/webui/web_ui_main_frame_observer.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.cc
 @@ -47,7 +47,7 @@ std::string RedactURL(const GURL& url) {
  bool IsWebUIJavaScriptErrorReportingSupported() {

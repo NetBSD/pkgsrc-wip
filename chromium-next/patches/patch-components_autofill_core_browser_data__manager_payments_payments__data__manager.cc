@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.cc
 @@ -1168,7 +1168,7 @@ bool PaymentsDataManager::IsServerCard(c
  bool PaymentsDataManager::ShouldShowCardsFromAccountOption() const {

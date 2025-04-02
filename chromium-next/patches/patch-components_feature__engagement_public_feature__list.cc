@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
 @@ -165,7 +165,7 @@ const base::Feature* const kAllFeatures[
      &kIPHiOSReminderNotificationsOverflowMenuBubbleFeature,

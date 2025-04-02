@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ headless/lib/browser/headless_browser_main_parts_posix.cc
 @@ -27,13 +27,13 @@
  #include "content/public/browser/browser_thread.h"

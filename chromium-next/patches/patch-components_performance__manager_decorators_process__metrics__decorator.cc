@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ components/performance_manager/decorators/process_metrics_decorator.cc
 @@ -264,7 +264,7 @@ void ProcessMetricsDecorator::DidGetMemo
      // RSS and PMF to each node proportionally to its V8 heap size.

@@ -164,3 +164,37 @@ As usual, our ongoing internal security work was responsible for a
 wide range of fixes:
 [400559715] Various fixes from internal audits, fuzzing and other initiatives
 
+* 134.0.6998.88
+This update includes 5 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$7000][398065918] High CVE-2025-1920: Type Confusion in V8.
+Reported by Excello s.r.o. on 2025-02-21
+[TBD][400052777] High CVE-2025-2135: Type Confusion in V8.
+Reported by Zhenghang Xiao (@Kipreyyy) and Nan Wang (@eternalsakura13)
+on 2025-03-02
+[NA][401059730] High CVE-2025-24201: Out of bounds write in
+GPU on Mac. Reported by Apple Security Engineering and
+Architecture (SEAR) on 2025-03-05
+[$3000][395032416] Medium CVE-2025-2136: Use after free in
+Inspector. Reported by Sakana.S on 2025-02-10
+[$2000][398999390] Medium CVE-2025-2137: Out of bounds read in V8.
+Reported by zeroxiaobai@ on 2025-02-25
+
+Google is aware of reports that an exploit for CVE-2025-24201 exists in the wild.
+
+* 134.0.6998.117
+This update includes 2 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[TBD][401029609] Critical CVE-2025-2476: Use after free in Lens.
+Reported by SungKwon Lee of Enki Whitehat on 2025-03-05
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[404324707] Various fixes from internal audits, fuzzing and other initiatives
+
+* 134.0.6998.165
+This update doesn't include security fix.
+
+

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.h.orig	2025-02-25 19:55:16.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.h.orig	2025-03-20 19:11:33.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.h
 @@ -26,7 +26,7 @@ namespace autofill::prefs {
  inline constexpr std::string_view kAutofillAblationSeedPref =

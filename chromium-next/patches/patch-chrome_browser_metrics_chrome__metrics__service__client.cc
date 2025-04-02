@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
 @@ -201,11 +201,11 @@
  #include "chrome/browser/metrics/google_update_metrics_provider_mac.h"

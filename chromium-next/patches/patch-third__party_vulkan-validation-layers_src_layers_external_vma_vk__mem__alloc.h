@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-validation-layers/src/layers/external/vma/vk_mem_alloc.h.orig	2025-02-25 19:55:16.000000000 +0000
+--- third_party/vulkan-validation-layers/src/layers/external/vma/vk_mem_alloc.h.orig	2025-03-20 19:11:33.000000000 +0000
 +++ third_party/vulkan-validation-layers/src/layers/external/vma/vk_mem_alloc.h
 @@ -2971,7 +2971,7 @@ static void* vma_aligned_alloc(size_t al
  

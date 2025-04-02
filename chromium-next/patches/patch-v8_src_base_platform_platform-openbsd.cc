@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-openbsd.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- v8/src/base/platform/platform-openbsd.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ v8/src/base/platform/platform-openbsd.cc
 @@ -6,6 +6,9 @@
  // POSIX-compatible parts, the implementation is in platform-posix.cc.

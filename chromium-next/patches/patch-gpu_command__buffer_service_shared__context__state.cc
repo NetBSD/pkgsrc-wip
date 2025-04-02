@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.cc
 @@ -67,7 +67,7 @@
  #include "gpu/vulkan/vulkan_implementation.h"

@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			134.0.6998.35
+VERSION=			134.0.6998.165
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -335,7 +335,7 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 #.include "../../lang/rust/rust.mk"
-.include "../../wip/rust182/rust.mk"
+.include "../../wip/rust185/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"

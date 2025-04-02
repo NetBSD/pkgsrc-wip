@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ipcz/src/standalone/base/logging.cc.orig	2025-02-25 19:55:16.000000000 +0000
+--- third_party/ipcz/src/standalone/base/logging.cc.orig	2025-03-20 19:11:33.000000000 +0000
 +++ third_party/ipcz/src/standalone/base/logging.cc
 @@ -55,6 +55,9 @@ LogMessage::LogMessage(const char* file,
  #elif BUILDFLAG(IS_ANDROID)
