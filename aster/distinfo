@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (aster-full-src-14.6.0-1.noarch.tar.gz) = 5a5069ebe81cce10964c625277f6fa0bc7f67f8232fdca8ff6ed1270ef02066d
+SHA512 (aster-full-src-14.6.0-1.noarch.tar.gz) = 8853e303ed4fe0ae1bff8205f1c5ca2fee8f90c36133dd9f2af3f6976a2e47af7a634c204378f8a2138180bc6649f92b93277a50af1d0190fc2cca185abbaa15
+Size (aster-full-src-14.6.0-1.noarch.tar.gz) = 270695003 bytes
+SHA1 (patch-setup.py) = 291e5d8117d3d0110b2c46dad912595a0eb97b54

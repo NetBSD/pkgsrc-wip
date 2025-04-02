@@ -1,0 +1,6 @@
+aster: Structures and Thermomechanics Analysis for Studies and Research
+
+This package is the start of an attempt to compile all aster modules, as
+a dependency of FreeCAD - which only needs one module, "med".
+aster/Makefile.common exists to hold the common source of the aster
+modules, just in case additional modules are ever desired.
