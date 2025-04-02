@@ -3,4 +3,5 @@ $NetBSD$
 BLAKE2s (libsysinfo-0.0.3.tar.gz) = a4c2ed965e88a17c2499175bdb6e4bfb5d123fad7f493ca4496e9e85d2b3aff9
 SHA512 (libsysinfo-0.0.3.tar.gz) = 757123f7433d5d94def0103d79a6a4d5d58c0b19941968dd715aa4cbb701186e980c3155522979b0aeee9462c3edf14e77d72b8450618a4c555cf97533319fc7
 Size (libsysinfo-0.0.3.tar.gz) = 3623 bytes
+SHA1 (patch-Makefile) = 69a86aad9bfcad5af3489f0645e65c9e52deff5c
 SHA1 (patch-sysinfo.c) = a6ab878e0c9e7992f9923e781120add3c4f52101

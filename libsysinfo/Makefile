@@ -12,8 +12,6 @@
 #USE_LDCONFIG=	yes
 #SUB_FILES=	libsysinfo.pc
 #SUB_LIST=	PREFIX="${PREFIX}" PV="${PV}" COMMENT="${COMMENT}"
-#post-install:
-#	${INSTALL_DATA} ${WRKDIR}/libsysinfo.pc ${DESTDIR}${PREFIX}/libdata/pkgconfig/
 
 DISTNAME=	libsysinfo-0.0.3
 PKGNAME=	${DISTNAME}
@@ -30,7 +28,7 @@ ONLY_FOR_PLATFORM+=	FreeBSD-*-* NetBSD-*-*
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
-SUBST_SED.man+=		-e 's|man/man|${PKGMANPREFIX}/man|g'
+SUBST_SED.man+=		-e 's|man/man|${PKGMANDIR}/man|g'
 SUBST_FILES.man+=	${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,1 +1,4 @@
 @comment $NetBSD$
+include/sys/sysinfo.h
+lib/libsysinfo.a
+man/man3/sysinfo.3
