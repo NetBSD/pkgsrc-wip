@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS=	alsa pulseaudio
+PLIST_VARS=	alsa emacs pulseaudio
 
 ###
 ###  Support ALSA
@@ -25,6 +25,9 @@ CONFIGURE_ARGS+=	--disable-alsa
 .if !empty(PKG_OPTIONS:Memacs)
 CONFIGURE_ARGS+=	--bee=full
 CONFIGURE_ARGS+=	--lispdir=${EMACS_LISPPREFIX}
+BUILD_TARGET+=	compile-bee
+INSTALL_TARGET+=	install-bee
+PLIST.emacs=	yes
 .include "../../editors/emacs/modules.mk"
 .include "../../audio/flac/buildlink3.mk"
 .else

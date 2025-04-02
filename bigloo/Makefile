@@ -58,7 +58,9 @@ CONFIGURE_ARGS+=	--enable-web
 CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--disable-avahi
 
-BUILD_TARGET=	#empty
+MAKE_JOBS_SAFE=        no
+BUILD_TARGET=	boot
+INSTALL_TARGET=	install
 
 .include "options.mk"
 
