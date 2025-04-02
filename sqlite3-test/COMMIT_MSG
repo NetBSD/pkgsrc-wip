@@ -1,0 +1,10 @@
+sqlite3-test: New package for running sqlite3 automatic tests.
+
+This is a separate package because the sqlite3 autoconf distribution
+doesn't have any automatic tests itself.
+
+XXX This doesn't actually test the sqlite3 that was built and installed
+for pkgsrc -- it builds several of its own sqlite3 binaries, under
+different build configurations, and tests those instead.  To be fixed.
+
+PR pkg/59243: databases/sqlite3: missing test target

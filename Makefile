@@ -5413,6 +5413,7 @@ SUBDIR+=	spread4
 SUBDIR+=	spyder
 SUBDIR+=	sq
 SUBDIR+=	sqlc
+SUBDIR+=	sqlite3-test
 SUBDIR+=	sqlitewrite
 SUBDIR+=	sqlux
 SUBDIR+=	squeak3
