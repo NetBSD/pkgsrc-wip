@@ -2,3 +2,23 @@ Clean up the patches / redo them.
 
 This package has known vulnerabilities, please investigate and fix if possible:
  CVE-2021-45844, CVE-2021-45845
+
+Some mods are installed under "${PREFIX}/Mod/", some under "${PREFIX}/share/Mod/".
+Should these be moved? E.g. "${PREFIX}/freecad/Mod/"?
+
+Requires the following pkgsrc buildlink3.mk patch to build:
+
+diff --git a/x11/qt6-qtbase/buildlink3.mk b/x11/qt6-qtbase/buildlink3.mk
+index 30b7a1562e52..64414308d6ee 100644
+--- a/x11/qt6-qtbase/buildlink3.mk
++++ b/x11/qt6-qtbase/buildlink3.mk
+@@ -13,6 +13,9 @@ BUILDLINK_INCDIRS.qt6-qtbase+=	qt6/include
+ BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/lib
+ BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/plugins
+ 
++BUILDLINK_FILES.qt6-qtbase+=	qt6/bin/*
++BUILDLINK_FILES.qt6-qtbase+=	qt6/libexec/*
++
+ # \todo Fix duplication with prefix coded in Makefile.common
+ QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
+ CMAKE_PREFIX_PATH+=	${QTDIR}
