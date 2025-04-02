@@ -1,5 +1,4 @@
 # $NetBSD: $
-#
 
 DISTNAME=		SoQt-1.6.3
 PKGNAME=		${DISTNAME:tl}
@@ -26,8 +25,8 @@ REPLACE_PERL+=	cfg/gendsp.pl.in cfg/doxy4win.pl
 
 .include "../../devel/cmake/build.mk"
 
-.include "../../graphics/Coin/buildlink3.mk"
+.include "../../wip/Coin/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
