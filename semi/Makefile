@@ -63,7 +63,7 @@ post-install:
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
 	done
-	cd ${WRKSRC}; for f in mime-setup.el* mail-mime-setup.el* semi-setup.el* semi-def.el* semi-setup.el* mime-view* mime-image* ;  do	\
+	cd ${WRKSRC}; for f in mime-*.el* mail-mime-setup.el* semi-setup.el* semi-def.el* semi-setup.el* ;  do	\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_LISPPREFIX};	\
 	done

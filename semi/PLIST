@@ -1,15 +1,33 @@
 @comment $NetBSD$
+info/mime-ui-en.info
+info/mime-ui-ja.info
 ${EMACS_LISPPREFIX}/mail-mime-setup.el
 ${EMACS_LISPPREFIX}/mail-mime-setup.elc
+${EMACS_LISPPREFIX}/mime-edit.el
+${EMACS_LISPPREFIX}/mime-edit.elc
 ${EMACS_LISPPREFIX}/mime-image.el
 ${EMACS_LISPPREFIX}/mime-image.elc
+${EMACS_LISPPREFIX}/mime-mac.el
+${EMACS_LISPPREFIX}/mime-partial.el
+${EMACS_LISPPREFIX}/mime-partial.elc
+${EMACS_LISPPREFIX}/mime-pgp.el
+${EMACS_LISPPREFIX}/mime-pgp.elc
+${EMACS_LISPPREFIX}/mime-play.el
+${EMACS_LISPPREFIX}/mime-play.elc
 ${EMACS_LISPPREFIX}/mime-setup.el
 ${EMACS_LISPPREFIX}/mime-setup.elc
+${EMACS_LISPPREFIX}/mime-shr.el
+${EMACS_LISPPREFIX}/mime-shr.elc
+${EMACS_LISPPREFIX}/mime-signature.el
+${EMACS_LISPPREFIX}/mime-signature.elc
+${EMACS_LISPPREFIX}/mime-tnef.el
+${EMACS_LISPPREFIX}/mime-tnef.elc
+${EMACS_LISPPREFIX}/mime-vcard.el
 ${EMACS_LISPPREFIX}/mime-view.el
 ${EMACS_LISPPREFIX}/mime-view.elc
+${EMACS_LISPPREFIX}/mime-w3.el
 ${EMACS_LISPPREFIX}/semi-def.el
 ${EMACS_LISPPREFIX}/semi-def.elc
 ${EMACS_LISPPREFIX}/semi-setup.el
 ${EMACS_LISPPREFIX}/semi-setup.elc
-info/mime-ui-en.info
-info/mime-ui-ja.info
+@pkgdir ${EMACS_LISPPREFIX}/semi
