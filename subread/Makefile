@@ -27,4 +27,5 @@ MAKE_FILE=	${FILESDIR}/Makefile.pkg
 INSTALL_TARGET=	install-strip
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../wip/libsysinfo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
