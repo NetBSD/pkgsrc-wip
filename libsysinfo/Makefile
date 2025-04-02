@@ -5,14 +5,6 @@
 #              Mon Jan 20 10:37:16 CST 2025               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-# Unknown tool: USE_TOOLS=	uidfix
-#USE_LDCONFIG=	yes
-#SUB_FILES=	libsysinfo.pc
-#SUB_LIST=	PREFIX="${PREFIX}" PV="${PV}" COMMENT="${COMMENT}"
-
 DISTNAME=	libsysinfo-0.0.3
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
@@ -24,7 +16,7 @@ HOMEPAGE=	https://github.com/bsdimp/libsysinfo
 COMMENT=	GNU libc's sysinfo port for \${OPSYS}
 LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM+=	FreeBSD-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM+=	FreeBSD-*-*
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
