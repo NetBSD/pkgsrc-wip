@@ -1,0 +1,353 @@
+$NetBSD$
+
+- Fix bad shell equality tests
+- Fix broken hdf5 version extraction
+- Add h5dump version suffix
+
+--- configure.orig	2018-12-10 10:32:28.000000000 +0000
++++ configure
+@@ -7572,9 +7572,9 @@ _ACEOF
+       HDF5_VERSION="0"
+       if test -n "$HDF5_ABS_PATH" ; then
+          HDF5_USED_VER=` grep H5_VERS_INFO $HDF5_ABS_PATH | sed  's/\([^"]*\)\(".*"\)\([^"]*\)/\2/g' `
+-         H5_VER_MAJOR=`  grep '#define *H5_VERS_MAJOR' $HDF5_ABS_PATH | sed  's/^.*H5_VERS_MAJOR[[ \t]]*\([0-9]*\)[[ \t]]*.*$/\1/g' `
+-         H5_VER_MINOR=`  grep '#define *H5_VERS_MINOR' $HDF5_ABS_PATH | sed  's/^.*H5_VERS_MINOR[[ \t]]*\([0-9]*\)[[ \t]]*.*$/\1/g' `
+-         H5_VER_RELEASE=`grep '#define *H5_VERS_RELEASE' $HDF5_ABS_PATH | sed  's/^.*H5_VERS_RELEASE[[ \t]]*\([0-9]*\)[[ \t]]*.*$/\1/g' `
++         H5_VER_MAJOR=`  grep '#define *H5_VERS_MAJOR' $HDF5_ABS_PATH | sed  's/^.*H5_VERS_MAJOR *\([0-9]*\).*$/\1/' `
++         H5_VER_MINOR=`  grep '#define *H5_VERS_MINOR' $HDF5_ABS_PATH | sed  's/^.*H5_VERS_MINOR *\([0-9]*\).*$/\1/' `
++         H5_VER_RELEASE=`grep '#define *H5_VERS_RELEASE' $HDF5_ABS_PATH | sed  's/^.*H5_VERS_RELEASE *\([0-9]*\).*$/\1/' `
+          HDF5_VERSION=`  expr 10000 \* ${H5_VER_MAJOR} + 100 \* ${H5_VER_MINOR} + ${H5_VER_RELEASE} `
+          test "0${HDF5_VERSION}" -gt "11100" || test "0${HDF5_VERSION}" -lt "11002" && as_fn_error $? "
+ This HDF5 version ${H5_VER_MAJOR}.${H5_VER_MINOR}.${H5_VER_RELEASE} must not be used with med-fichier${MED_NUM_MAJEUR}.${MED_NUM_MINEUR}.${MED_NUM_RELEASE}.
+@@ -7696,7 +7696,7 @@ done
+ 
+       if test "x$with_hdf5_include" = "xno"; then
+         # Extract the first word of "h5dump", so it can be a program name with args.
+-set dummy h5dump; ac_word=$2
++set dummy h5dump-110; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+ $as_echo_n "checking for $ac_word... " >&6; }
+ if ${ac_cv_path_H5DUMP+:} false; then :
+@@ -7738,7 +7738,7 @@ fi
+ 
+       else
+         # Extract the first word of "h5dump", so it can be a program name with args.
+-set dummy h5dump; ac_word=$2
++set dummy h5dump-110; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+ $as_echo_n "checking for $ac_word... " >&6; }
+ if ${ac_cv_path_H5DUMP+:} false; then :
+@@ -29742,7 +29742,7 @@ variable to configure. See \`\`configure
+ 	# Check if you have distutils, else fail
+ 	#
+ #EF: Ajout
+-	 if test x"$python_arg_version_found" == x"False"; then :
++	 if test x"$python_arg_version_found" = x"False"; then :
+ 
+ 	 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the distutils Python package" >&5
+ $as_echo_n "checking for the distutils Python package... " >&6; }
+@@ -29766,7 +29766,7 @@ fi
+ 	# Check for Python include path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python include path" >&5
+ $as_echo_n "checking for Python include path... " >&6; }
+@@ -29795,7 +29795,7 @@ fi
+ 	# Check for Python library path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python library path" >&5
+ $as_echo_n "checking for Python library path... " >&6; }
+@@ -29885,7 +29885,7 @@ fi
+ 	# Check for site packages
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python site-packages path" >&5
+ $as_echo_n "checking for Python site-packages path... " >&6; }
+@@ -29904,7 +29904,7 @@ fi
+ 	# libraries which must be linked in when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra libraries" >&5
+ $as_echo_n "checking python extra libraries... " >&6; }
+@@ -29924,7 +29924,7 @@ fi
+ 	# linking flags needed when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra linking flags" >&5
+ $as_echo_n "checking python extra linking flags... " >&6; }
+@@ -29944,7 +29944,7 @@ fi
+ 	# final check to see if everything compiles alright
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking consistency of all components of python development environment" >&5
+ $as_echo_n "checking consistency of all components of python development environment... " >&6; }
+@@ -30028,7 +30028,7 @@ fi
+ 	#
+ 
+   # echo " ------ python_arg_version_not_found : $python_arg_version_not_found --------- "
+-  if test x"$python_arg_version_not_found" == "xTrue"; then :
++  if test x"$python_arg_version_not_found" = "xTrue"; then :
+ 
+ 
+ 	#
+@@ -30156,7 +30156,7 @@ variable to configure. See \`\`configure
+ 	# Check if you have distutils, else fail
+ 	#
+ #EF: Ajout
+-	 if test x"$python_arg_version_found" == x"False"; then :
++	 if test x"$python_arg_version_found" = x"False"; then :
+ 
+ 	 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the distutils Python package" >&5
+ $as_echo_n "checking for the distutils Python package... " >&6; }
+@@ -30180,7 +30180,7 @@ fi
+ 	# Check for Python include path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python include path" >&5
+ $as_echo_n "checking for Python include path... " >&6; }
+@@ -30209,7 +30209,7 @@ fi
+ 	# Check for Python library path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python library path" >&5
+ $as_echo_n "checking for Python library path... " >&6; }
+@@ -30299,7 +30299,7 @@ fi
+ 	# Check for site packages
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python site-packages path" >&5
+ $as_echo_n "checking for Python site-packages path... " >&6; }
+@@ -30318,7 +30318,7 @@ fi
+ 	# libraries which must be linked in when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra libraries" >&5
+ $as_echo_n "checking python extra libraries... " >&6; }
+@@ -30338,7 +30338,7 @@ fi
+ 	# linking flags needed when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra linking flags" >&5
+ $as_echo_n "checking python extra linking flags... " >&6; }
+@@ -30358,7 +30358,7 @@ fi
+ 	# final check to see if everything compiles alright
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking consistency of all components of python development environment" >&5
+ $as_echo_n "checking consistency of all components of python development environment... " >&6; }
+@@ -30446,7 +30446,7 @@ else
+   PYTHON_IS_VERSION_REF="yes"
+ fi
+   # echo "<---- python_arg_version_not_found : $python_arg_version_not_found --->"
+-  test x"$python_arg_version_not_found" == "xTrue" &&  as_fn_error $? "SWIG has been enabled, then we need python devel package with C development libraries. Neither the minimal version : >= '2.7' nor a version >= '3.0' has been found !" "$LINENO" 5
++  test x"$python_arg_version_not_found" = "xTrue" &&  as_fn_error $? "SWIG has been enabled, then we need python devel package with C development libraries. Neither the minimal version : >= '2.7' nor a version >= '3.0' has been found !" "$LINENO" 5
+    # echo "--- PYTHON_IS_VERSION_MIN=$PYTHON_IS_VERSION_MIN ; PYTHON_IS_VERSION_REF=$PYTHON_IS_VERSION_REF ---"
+ 
+ 
+@@ -30655,7 +30655,7 @@ variable to configure. See \`\`configure
+ 	# Check if you have distutils, else fail
+ 	#
+ #EF: Ajout
+-	 if test x"$python_arg_version_found" == x"False"; then :
++	 if test x"$python_arg_version_found" = x"False"; then :
+ 
+ 	 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the distutils Python package" >&5
+ $as_echo_n "checking for the distutils Python package... " >&6; }
+@@ -30679,7 +30679,7 @@ fi
+ 	# Check for Python include path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python include path" >&5
+ $as_echo_n "checking for Python include path... " >&6; }
+@@ -30708,7 +30708,7 @@ fi
+ 	# Check for Python library path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python library path" >&5
+ $as_echo_n "checking for Python library path... " >&6; }
+@@ -30798,7 +30798,7 @@ fi
+ 	# Check for site packages
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python site-packages path" >&5
+ $as_echo_n "checking for Python site-packages path... " >&6; }
+@@ -30817,7 +30817,7 @@ fi
+ 	# libraries which must be linked in when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra libraries" >&5
+ $as_echo_n "checking python extra libraries... " >&6; }
+@@ -30837,7 +30837,7 @@ fi
+ 	# linking flags needed when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra linking flags" >&5
+ $as_echo_n "checking python extra linking flags... " >&6; }
+@@ -30857,7 +30857,7 @@ fi
+ 	# final check to see if everything compiles alright
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking consistency of all components of python development environment" >&5
+ $as_echo_n "checking consistency of all components of python development environment... " >&6; }
+@@ -30941,7 +30941,7 @@ fi
+ 	#
+ 
+   # echo " ------ python_arg_version_not_found : $python_arg_version_not_found --------- "
+-  if test x"$python_arg_version_not_found" == "xTrue"; then :
++  if test x"$python_arg_version_not_found" = "xTrue"; then :
+ 
+ 
+ 	#
+@@ -31069,7 +31069,7 @@ variable to configure. See \`\`configure
+ 	# Check if you have distutils, else fail
+ 	#
+ #EF: Ajout
+-	 if test x"$python_arg_version_found" == x"False"; then :
++	 if test x"$python_arg_version_found" = x"False"; then :
+ 
+ 	 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the distutils Python package" >&5
+ $as_echo_n "checking for the distutils Python package... " >&6; }
+@@ -31093,7 +31093,7 @@ fi
+ 	# Check for Python include path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python include path" >&5
+ $as_echo_n "checking for Python include path... " >&6; }
+@@ -31122,7 +31122,7 @@ fi
+ 	# Check for Python library path
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python library path" >&5
+ $as_echo_n "checking for Python library path... " >&6; }
+@@ -31212,7 +31212,7 @@ fi
+ 	# Check for site packages
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Python site-packages path" >&5
+ $as_echo_n "checking for Python site-packages path... " >&6; }
+@@ -31231,7 +31231,7 @@ fi
+ 	# libraries which must be linked in when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra libraries" >&5
+ $as_echo_n "checking python extra libraries... " >&6; }
+@@ -31251,7 +31251,7 @@ fi
+ 	# linking flags needed when embedding
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking python extra linking flags" >&5
+ $as_echo_n "checking python extra linking flags... " >&6; }
+@@ -31271,7 +31271,7 @@ fi
+ 	# final check to see if everything compiles alright
+ 	#
+ #EF: Ajout
+-	if test x"$python_arg_version_not_found" == x"False"; then :
++	if test x"$python_arg_version_not_found" = x"False"; then :
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking consistency of all components of python development environment" >&5
+ $as_echo_n "checking consistency of all components of python development environment... " >&6; }
+@@ -31359,7 +31359,7 @@ else
+   PYTHON_IS_VERSION_REF="yes"
+ fi
+   # echo "<---- python_arg_version_not_found : $python_arg_version_not_found --->"
+-  test x"$python_arg_version_not_found" == "xTrue" &&  as_fn_error $? "SWIG has been enabled, then we need python devel package with C development libraries. Neither the minimal version : >= '2.7' nor a version >= '3.0' has been found !" "$LINENO" 5
++  test x"$python_arg_version_not_found" = "xTrue" &&  as_fn_error $? "SWIG has been enabled, then we need python devel package with C development libraries. Neither the minimal version : >= '2.7' nor a version >= '3.0' has been found !" "$LINENO" 5
+    # echo "--- PYTHON_IS_VERSION_MIN=$PYTHON_IS_VERSION_MIN ; PYTHON_IS_VERSION_REF=$PYTHON_IS_VERSION_REF ---"
+ 
+ 
+@@ -31367,11 +31367,11 @@ fi
+ 
+  test x"$WITH_SWIG" = x1 && test x"$enable_python" = xno && as_fn_error $? "python is needed because swig is activated." "$LINENO" 5
+ #La gestion des modules précompilés existe désormais en med_int=int|long
+-# test x"$WITH_SWIG" = x0 && test x"$enable_python" = xyes && test ! x"$LONG_OR_INT" == "xint" && AC_MSG_ERROR([Either use --disable-python or --with-swig=[yes|<swigdir>]. Swig is needed because embedded python interfaces has been generated for --with-med_int=int.])
+- test x"$WITH_SWIG" = x0 && test x"$enable_python" = xyes && test x"$BUILD_WITH_PMED" == "xyes" && as_fn_error $? "Either use --disable-python or --with-swig=yes|<swigdir>. Swig is needed because embedded python interfaces has been generated without MPI." "$LINENO" 5
++# test x"$WITH_SWIG" = x0 && test x"$enable_python" = xyes && test ! x"$LONG_OR_INT" = "xint" && AC_MSG_ERROR([Either use --disable-python or --with-swig=[yes|<swigdir>]. Swig is needed because embedded python interfaces has been generated for --with-med_int=int.])
++ test x"$WITH_SWIG" = x0 && test x"$enable_python" = xyes && test x"$BUILD_WITH_PMED" = "xyes" && as_fn_error $? "Either use --disable-python or --with-swig=yes|<swigdir>. Swig is needed because embedded python interfaces has been generated without MPI." "$LINENO" 5
+ #Si la version de python trouvée n'est pas compatible avec les interfaces générées embarquées, arrête la configuration
+ # PYTHON_IS_VERSION_REF est en fait >= VERSION_REF
+- test x"$WITH_SWIG" = x0 && test x"$enable_python" = xyes && test x"$PYTHON_IS_VERSION_REF" == "xno" && as_fn_error $? "Either use --disable-python, PYTHON_VERSION=, or --with-swig=yes|<swigdir>. Swig is needed because the detected python version is not compatible with the version used when generating the embedded interfaces." "$LINENO" 5
++ test x"$WITH_SWIG" = x0 && test x"$enable_python" = xyes && test x"$PYTHON_IS_VERSION_REF" = "xno" && as_fn_error $? "Either use --disable-python, PYTHON_VERSION=, or --with-swig=yes|<swigdir>. Swig is needed because the detected python version is not compatible with the version used when generating the embedded interfaces." "$LINENO" 5
+ #Si la version de swig trouvée n'est pas suffisante pour gérer la version de python, arrête la configuration
+ #En particulier Python3 et swig 2.0.8 ne fonctionne pas pour les absolute import
+ #mais fontionne à partir de swig 2.0.12
+@@ -31467,8 +31467,8 @@ x$ax_compare_version_B" | sed 's/^ *//' 
+ 
+ }
+ 
+-# AM_CONDITIONAL([MED_HAVE_PYTHON3],[test x"$PYTHON_IS_VERSION_REF" == "xyes"])
+- if test x`echo $ac_python_version |sed -n 's/^\(.\).*/\1/p'`  == "x3"; then
++# AM_CONDITIONAL([MED_HAVE_PYTHON3],[test x"$PYTHON_IS_VERSION_REF" = "xyes"])
++ if test x`echo $ac_python_version |sed -n 's/^\(.\).*/\1/p'`  = "x3"; then
+   MED_HAVE_PYTHON3_TRUE=
+   MED_HAVE_PYTHON3_FALSE='#'
+ else

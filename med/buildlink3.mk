@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	med
+
+.if !defined(MED_BUILDLINK3_MK)
+MED_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.med+=	med>=4.0.0
+BUILDLINK_ABI_DEPENDS.med+=	med>=4.0.0
+BUILDLINK_PKGSRCDIR.med?=	../../wip/med
+
+.endif # MED_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-med
