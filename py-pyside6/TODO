@@ -1,0 +1,5 @@
+Many lint warnings of the form:
+
+WARN: PLIST:7: The bin/ directory should not have subdirectories.
+WARN: PLIST:8: The bin/ directory should not have subdirectories.
+WARN: PLIST:9: The bin/ directory should not have subdirectories.
