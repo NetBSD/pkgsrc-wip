@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	fasda-0.1.5.57
+DISTNAME=	fasda-0.1.5.58
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	c080ebac7223e85f4cb424d4423b9b2e78c23259
+GITHUB_TAG=	0744c0376343164967278b0854ce1da96484e050
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/fasda
