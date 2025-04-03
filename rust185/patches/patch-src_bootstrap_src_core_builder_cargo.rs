@@ -35,7 +35,7 @@ https://github.com/rust-lang/rust/issues/133629
          }
  
 +	// added for pkgsrc libunwind or external LLVM
-+	rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX/lib");
++	rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
 +
          Cargo {
              command: cargo,
