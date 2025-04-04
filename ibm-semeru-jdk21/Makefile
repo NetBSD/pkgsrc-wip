@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	ibm-semeru-jdk21-21.0.6.0
 DISTNAME=	ibm-semeru-open-jdk_x64_linux_21.0.6_7_openj9-0.49.0
+PKGNAME=	ibm-semeru-jdk21-21.0.6.0
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibmruntimes/semeru21-binaries/}releases/download/jdk-21.0.6%2B7_openj9-0.49.0/
 
