@@ -21,6 +21,11 @@ USE_LANGUAGES=	c c++
 
 REPLACE_PERL+=	cfg/gendsp.pl.in cfg/doxy4win.pl
 
+SUBST_CLASSES=		cmake
+SUBST_STAGE.cmake=	post-install
+SUBST_FILES.cmake+=	cmake-pkgsrc-build/src/soqt-export.cmake
+SUBST_SED.cmake+=	-e 's|${WRKDIR}/.buildlink|${PREFIX}|g'
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/cmake/build.mk"
