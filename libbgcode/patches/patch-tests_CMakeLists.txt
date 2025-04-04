@@ -2,7 +2,9 @@ $NetBSD$
 
 Support Catch2 v3.
 
---- tests/CMakeLists.txt.orig	2024-04-06 07:20:41.918851648 +0000
+Remove empty binarize test which fails with Catch2 v3.8.0.
+
+--- tests/CMakeLists.txt.orig	2024-03-28 10:51:35.000000000 +0000
 +++ tests/CMakeLists.txt
 @@ -1,4 +1,4 @@
 -find_package(Catch2 2.9 REQUIRED)
@@ -19,8 +21,14 @@ Support Catch2 v3.
  
  if (EMSCRIPTEN)
      target_link_libraries(test_common INTERFACE nodefs.js noderawfs.js)
-@@ -30,4 +30,4 @@ endif()
+@@ -24,10 +24,6 @@ endif()
  
+ add_subdirectory(core)
+ 
+-if (${PROJECT_NAME}_BUILD_COMPONENT_Binarize)
+-    add_subdirectory(binarize)
+-endif()
+-
  if (${PROJECT_NAME}_BUILD_COMPONENT_Convert)
      add_subdirectory(convert)
 -endif ()
