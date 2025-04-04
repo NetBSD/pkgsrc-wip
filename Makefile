@@ -5997,6 +5997,7 @@ SUBDIR+=	wyrmsun
 SUBDIR+=	xace
 SUBDIR+=	xalan-c
 SUBDIR+=	xalan-c-1.10
+SUBDIR+=	xan
 SUBDIR+=	xapps
 SUBDIR+=	xar
 SUBDIR+=	xaralx-bin
