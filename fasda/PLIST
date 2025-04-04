@@ -3,14 +3,11 @@ bin/fasda
 libexec/fasda/abundance
 libexec/fasda/filter
 libexec/fasda/fold-change
-libexec/fasda/heatmap
-libexec/fasda/heatmap.py
 libexec/fasda/normalize
 libexec/fasda/pval-sim
 man/man1/fasda-abundance.1
 man/man1/fasda-filter.1
 man/man1/fasda-fold-change.1
-man/man1/fasda-heatmap.1
 man/man1/fasda-normalize.1
 man/man1/fasda-pval-sim.1
 man/man1/fasda.1
