@@ -915,6 +915,7 @@ SUBDIR+=	fallout2-ce
 SUBDIR+=	famsa
 SUBDIR+=	farsi-ttf
 SUBDIR+=	fasda
+SUBDIR+=	fasda-utils
 SUBDIR+=	fasm
 SUBDIR+=	fasta
 SUBDIR+=	fastahack

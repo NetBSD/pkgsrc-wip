@@ -1,0 +1,4 @@
+@comment $NetBSD$
+libexec/fasda/heatmap
+libexec/fasda/heatmap.py
+man/man1/fasda-heatmap.1
