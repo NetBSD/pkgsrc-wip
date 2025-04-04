@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/auerlab/fasda-utils
 COMMENT=	Fast and simple differential analysis extras
 LICENSE=	2-clause-bsd
 
-DEPENDS+=       ${PYPKGPREFIX}-seaborn>0:../../graphics/py-seaborn
-DEPENDS+=       ${PYPKGPREFIX}-fastcluster>0:../../wip/py-fastcluster
+DEPENDS+=	${PYPKGPREFIX}-seaborn>0:../../graphics/py-seaborn
+DEPENDS+=	${PYPKGPREFIX}-fastcluster>0:../../wip/py-fastcluster
 
 REPLACE_PYTHON=	Scripts/heatmap.py
 
