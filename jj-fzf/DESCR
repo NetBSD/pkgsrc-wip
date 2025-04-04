@@ -1,0 +1,13 @@
+JJ-FZF is a text UI for jj based on fzf, implemented as a bash
+shell script.
+
+The main view centers around `jj log`, providing previews for the
+`jj diff` or `jj obslog` of every revision.
+
+Several key bindings are available to quickly perform actions such
+as squashing, swapping, rebasing, splitting, branching, committing,
+abandoning revisions and more.
+
+A separate view for the operations log `jj op log` enables fast
+previews of old commit histories or diffs between operations, making
+it easy to `jj undo` any previous operation.
