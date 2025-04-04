@@ -599,16 +599,6 @@ do-install:
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
 		${TOOL_PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N}
-.if ${OPSYS} == "NetBSD"
-	for bin in ${PATCH_BINARIES}; do				\
-		f=${DESTDIR}${PREFIX}/$${bin};				\
-		if [ -f $$f ]; then					\
-cmd="${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f"; \
-			echo $$cmd; 					\
-			$$cmd;						\
-		fi; 							\
-	done
-.endif
 .if ${OPSYS} == "Darwin"
 	cd ${DESTDIR}${PREFIX}/lib && \
 	for lib in rustlib/*/lib/libstd-*.${SOEXT}; do \
