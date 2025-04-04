@@ -1,0 +1,10 @@
+# $NetBSD$
+
+o Needs adding to <mk/java-vm.mk> to become a selectable dependency
+
+o On the netbsd-10 linux emulation (both suse-13.1 and 15.5), java
+  fails with
+
+  Error: Port Library failed to initialize: -86
+  Error: Could not create the Java Virtual Machine.
+  Error: A fatal exception has occurred. Program will exit.

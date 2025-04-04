@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ibm-semeru-open-jdk_x64_linux_21.0.6_7_openj9-0.49.0.tar.gz) = 88ac97dedd77560c463016b3f8e399ce57b0f93680393cea35912ffb122923e5
+SHA512 (ibm-semeru-open-jdk_x64_linux_21.0.6_7_openj9-0.49.0.tar.gz) = 48741aba2c03d31c7f5e244f40a0f36b92cdf48eacb6d0cd9fe53bc6220711a1012808818cdf05ee2651686303db3b64f2a15f899f3f73f6d5f8643049965850
+Size (ibm-semeru-open-jdk_x64_linux_21.0.6_7_openj9-0.49.0.tar.gz) = 230760484 bytes
