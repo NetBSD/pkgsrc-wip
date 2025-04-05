@@ -1,4 +1,7 @@
-devel/cargo-c: update to 0.10.11
+devel/cargo-c: update to 0.10.12
+
+0.10.12
+ - cargo 0.87.0
 
 0.10.11
  - Use the correct minimum rust version
