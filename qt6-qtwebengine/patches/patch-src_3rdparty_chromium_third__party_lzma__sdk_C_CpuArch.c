@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/lzma_sdk/C/CpuArch.c.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/third_party/lzma_sdk/C/CpuArch.c.orig	2025-03-18 19:28:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/lzma_sdk/C/CpuArch.c
-@@ -412,12 +412,40 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
+@@ -854,6 +854,34 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  BoolInt CPU_IsSupported_AES (void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  
@@ -40,11 +40,4 @@ $NetBSD$
 +MY_HWCAP_CHECK_FUNC (AES)
  
  #else // __APPLE__
- 
- #include <sys/auxv.h>
- 
--#if !defined(ARMV8_OS_FUCHSIA)
-+#if !defined(ARMV8_OS_FUCHSIA) && !defined(__FreeBSD__) && !defined(__NetBSD__)
- #define USE_HWCAP
- #endif // !defined(ARMV8_OS_FUCHSIA)
  

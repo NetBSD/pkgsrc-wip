@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (qtwebengine-everywhere-src-6.8.2.tar.xz) = f785d92657498d6a0c5f55c966f8addecfdcc314f4a8b903e4714e4da743579d
-SHA512 (qtwebengine-everywhere-src-6.8.2.tar.xz) = 27590ec53845fa36f48a5a0506d505995850027d85bf33fe0413733cbde5c2744e8ea49f445c91d84b8d43454b9f12c1cf7005d614bbcae1a29d432fdacdc0e4
-Size (qtwebengine-everywhere-src-6.8.2.tar.xz) = 566518084 bytes
+BLAKE2s (qtwebengine-everywhere-src-6.8.3.tar.xz) = 084140048a7a3d5d9d68e3d260caa29ff55c024df795dac06bc6e1b979d5cc5c
+SHA512 (qtwebengine-everywhere-src-6.8.3.tar.xz) = 01e8988c76ff40ca5e38f76e90791d7ef708c29f2e9f8e83ca8604b6335fbecdee71473678a63633ec1edec85088256b20e56a618ca95748ccbe1e7b9673c298
+Size (qtwebengine-everywhere-src-6.8.3.tar.xz) = 566553436 bytes
 SHA1 (patch-cmake_Functions.cmake) = 1c82b1a1c9419a9ba8cc60886928e113160bcad6
 SHA1 (patch-configure.cmake) = 8319fa20deb916fda0ccc63afd45fb2d798df23d
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = a30601c51cc74ba0b1d6892396364d176a3d68b4
@@ -776,7 +776,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_libusb_BUILD.gn) = 60a7424fcb4445
 SHA1 (patch-src_3rdparty_chromium_third__party_libusb_src_libusb_core.c) = 155575c1c3aeeb5cd46cf859347a0ecc06f21275
 SHA1 (patch-src_3rdparty_chromium_third__party_libusb_src_libusb_os_threads__posix.c) = 3e8af30a02eca054b66c89ec56fcdf64d3000187
 SHA1 (patch-src_3rdparty_chromium_third__party_libvpx_source_libvpx_vpx__ports_aarch64__cpudetect.c) = 74e8149c3361eec09b8b776e6f6083fd7ab22e34
-SHA1 (patch-src_3rdparty_chromium_third__party_lzma__sdk_C_CpuArch.c) = c36888d5d42a76119a976e96de4efb55f46f589f
+SHA1 (patch-src_3rdparty_chromium_third__party_lzma__sdk_C_CpuArch.c) = 12a5b9fc3ab2b9e8e9ac2b4f67405c786314e785
 SHA1 (patch-src_3rdparty_chromium_third__party_material__color__utilities_src_cpp_palettes_tones.cc) = 1aefa7e80df8390175f74c70f27f77d65ed93bca
 SHA1 (patch-src_3rdparty_chromium_third__party_nasm_BUILD.gn) = 0b50568657bcc262e1c5ea4aae21a553d94b5b24
 SHA1 (patch-src_3rdparty_chromium_third__party_nasm_config_config-linux.h) = 5525eec5323dc2d61a7752edaa60d21a6bab26c8
