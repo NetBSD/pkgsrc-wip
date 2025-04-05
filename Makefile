@@ -1333,7 +1333,6 @@ SUBDIR+=	gnujump
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet-go
 SUBDIR+=	gnupoc-makesis
-SUBDIR+=	gnuradio-core
 SUBDIR+=	gnuradio-monolithic
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go-astilectron

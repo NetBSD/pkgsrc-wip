@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2015/11/26 20:53:52 wiedi Exp $
-include/gnuradio/audio/osx_impl.h
-share/gnuradio/examples/gr-audio-osx.conf

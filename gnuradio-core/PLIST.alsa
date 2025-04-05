@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.alsa,v 1.2 2015/11/26 20:57:48 wiedi Exp $
-share/gnuradio/examples/gr-audio-alsa.conf
