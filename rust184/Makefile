@@ -91,11 +91,6 @@ CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
-FORCE_RPATH=		--force-rpath
-.endif
-
 # Allow overriding MAKE_JOBS_SAFE
 # some may chose to mostly build faster,
 # and deal with any failures due to deadlocks
@@ -581,30 +576,11 @@ do-test:
 	${SETENV} ${MAKE_ENV}						\
 		${TOOL_PYTHONBIN} ./x.py test -j ${_MAKE_JOBS_N}
 
-PATCH_BINARIES+=	bin/cargo
-PATCH_BINARIES+=	bin/cargo-clippy
-PATCH_BINARIES+=	bin/clippy-driver
-PATCH_BINARIES+=	bin/rust-analyzer
-PATCH_BINARIES+=	bin/rustc
-PATCH_BINARIES+=	bin/rustdoc
-PATCH_BINARIES+=	bin/rustfmt
-PATCH_BINARIES+=	libexec/rust-analyzer-proc-macro-srv
-
 do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
 		${TOOL_PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N}
-.if ${OPSYS} == "NetBSD"
-	for bin in ${PATCH_BINARIES}; do				\
-		f=${DESTDIR}${PREFIX}/$${bin};				\
-		if [ -f $$f ]; then					\
-cmd="${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f"; \
-			echo $$cmd; 					\
-			$$cmd;						\
-		fi; 							\
-	done
-.endif
 
 SUBST_CLASSES+=		destdir
 SUBST_STAGE.destdir=	post-install
