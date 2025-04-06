@@ -1,0 +1,22 @@
+$NetBSD$
+
+Fix https://github.com/iains/gcc-darwin-arm64/issues/142
+Patch from https://github.com/iains/gcc-14-branch/commit/efb88eb
+
+--- gcc/c-family/c.opt.orig	2025-04-04 11:22:49.771960313 +0000
++++ gcc/c-family/c.opt
+@@ -1602,6 +1602,14 @@ static-libmpxwrappers
+ Driver WarnRemoved
+ Removed in GCC 9.  This switch has no effect.
+ 
++fallow-extended-attribute-placement
++C ObjC C++ ObjC++ LTO Var(flag_allow_ext_attr_placement) Init(0)
++Allow placement of attributes on function definitions.
++
++fallow-extra-keywords
++C ObjC C++ ObjC++ LTO Var(flag_allow_extra_keywords) Init(0)
++Allow additional C keywords in C++ and vice versa.
++
+ fcilkplus
+ C ObjC C++ ObjC++ LTO Undocumented Ignore
+ Removed in GCC 8.  This switch has no effect.
