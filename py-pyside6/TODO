@@ -3,3 +3,13 @@ Many lint warnings of the form:
 WARN: PLIST:7: The bin/ directory should not have subdirectories.
 WARN: PLIST:8: The bin/ directory should not have subdirectories.
 WARN: PLIST:9: The bin/ directory should not have subdirectories.
+
+Missing optional deps:
+
+- Qt6Pdf
+- Qt6PdfWidgets
+- Qt6SerialBus
+- Qt6DataVisualization
+- Qt6Graphs
+- Qt6WebEngineCore
+- Qt6WebEngineWidgets
