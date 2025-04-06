@@ -26,6 +26,11 @@ ICON_THEMES=		yes
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
+BUILDLINK_TRANSFORM+=		rm:-lTKXDESTEP
+BUILDLINK_TRANSFORM+=		rm:-lTKSTEP
+BUILDLINK_TRANSFORM+=		rm:-lTKSTEP209
+BUILDLINK_TRANSFORM+=		rm:-lTKSTEPAttr
+BUILDLINK_TRANSFORM+=		rm:-lTKSTEPBase
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -36,6 +41,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/asio/buildlink3.mk"
 .include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -50,6 +56,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
@@ -72,7 +79,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 .include "../../wip/libbgcode/buildlink3.mk"
 .include "../../wip/nanosvg/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
-.include "../../wip/occt/buildlink3.mk"
+.include "../../cad/occt/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
