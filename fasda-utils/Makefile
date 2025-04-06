@@ -16,6 +16,5 @@ REPLACE_PYTHON=	Scripts/heatmap.py
 
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR} VERSION=${PKGVERSION}
 
-.include "../../wip/biolibc/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
