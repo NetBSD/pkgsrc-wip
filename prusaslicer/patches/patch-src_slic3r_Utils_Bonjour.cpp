@@ -3,7 +3,7 @@ $NetBSD$
 Fix boost 1.87 compatibility.
 https://github.com/prusa3d/PrusaSlicer/issues/13799
 
---- src/slic3r/Utils/Bonjour.cpp.orig	2025-04-06 03:06:15.057212033 +0000
+--- src/slic3r/Utils/Bonjour.cpp.orig	2025-03-10 13:20:54.000000000 +0000
 +++ src/slic3r/Utils/Bonjour.cpp
 @@ -624,11 +624,11 @@ UdpSession::UdpSession(Bonjour::ReplyFn 
  	buffer.resize(DnsMessage::MAX_SIZE);
@@ -40,7 +40,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	// from boost documentation io_service::post:
  	// The io_service guarantees that the handler will only be called in a thread in which the run(), run_one(), poll() or poll_one() member functions is currently being invoked.
 -	io_service->post(boost::bind(&UdpSession::handle_receive, session, error, bytes));
-+	io_context->post(boost::bind(&UdpSession::handle_receive, session, error, bytes));
++        boost::asio::post(*io_context, boost::bind(&UdpSession::handle_receive, session, error, bytes));
  	// immediately accept new datagrams
  	async_receive();
  }
