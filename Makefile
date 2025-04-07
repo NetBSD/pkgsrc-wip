@@ -5020,6 +5020,7 @@ SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt6-qtwebengine
 SUBDIR+=	qtaccountsservice
+SUBDIR+=	qtcreator
 SUBDIR+=	qtfm
 SUBDIR+=	qtile
 SUBDIR+=	qtractor
