@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	pdns-recursor-5.2.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,11 @@ CONFIGURE_ARGS+=	--with-libsodium
 CONFIGURE_ARGS+=	--enable-dns-over-tls
 
 CHECK_WRKREF_SKIP+=	sbin/pdns_recursor
+
+EGDIR=			${PREFIX}/share/examples/powerdns-recursor52
+CONF_FILES=		${EGDIR}/recursor.yml-dist ${PKG_SYSCONFDIR}/recursor.yml
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 RCD_SCRIPTS=		pdns_recursor
 

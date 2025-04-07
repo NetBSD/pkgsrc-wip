@@ -85,33 +85,4 @@ CARGO_INSTALL_ARGS?=	install --path . --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO
 MAKE_ENV+=		RUSTFLAGS=${RUSTFLAGS:Q}
 ALL_ENV+=		CARGO_HOME=${WRKDIR}
 
-# PowerDNS Recursor is not pure rust application, disabling generic build commands
-#
-#.if !target(do-build)
-#do-build: do-cargo-build
-#.endif
-#
-#.PHONY: do-cargo-build
-#do-cargo-build:
-#	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${CARGO} ${CARGO_ARGS}
-#
-#.if !target(do-install) && ${GNU_CONFIGURE:Uno:tl} == no
-#do-install: do-cargo-install
-#.endif
-#
-#.PHONY: do-cargo-install
-#do-cargo-install:
-#	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${CARGO} ${CARGO_INSTALL_ARGS}
-#	# remove files cargo uses for tracking installations
-#	${RM} -f ${DESTDIR}${PREFIX}/.crates.toml
-#	${RM} -f ${DESTDIR}${PREFIX}/.crates2.json
-
-#.if ${OPSYS} == "Darwin"
-#.PHONY: do-cargo-post-install-darwin-fix-rpath
-#post-install: do-cargo-post-install-darwin-fix-rpath
-#do-cargo-post-install-darwin-fix-rpath:
-#	${RUN} cd ${DESTDIR};								\
-#	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do	\
-#	  install_name_tool -id /$$i $$i;						\
-#	done
-#.endif
+# PowerDNS Recursor is not pure rust application, removing generic build commands
