@@ -5270,6 +5270,7 @@ SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scrc
 SUBDIR+=	scrcpy
+SUBDIR+=	screen-4.9.1
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scummvm-bass
 SUBDIR+=	scummvm-fotaq
