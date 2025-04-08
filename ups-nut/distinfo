@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.41 2023/11/09 16:41:15 gdt Exp $
 
-BLAKE2s (nut-2.8.2.2628.tar.gz) = b1bb065931d25975b8dc22e1c283c4e8b993d36e57b7b5720d737484fc22a13d
-SHA512 (nut-2.8.2.2628.tar.gz) = 875f8b11f276040fbaeaa992beaf7e52e829d15bc1ddcec6ef733a6802a6ad0f057bb742fabf952cb670177994f87eca7400ba7b09c568edf236b09537d28fb1
-Size (nut-2.8.2.2628.tar.gz) = 6172034 bytes
+BLAKE2s (nut-2.8.2.2761.7.tar.gz) = 3085737185756eb5e6a1276da382a52bdee457a4c691b0f98f0e98601b4ed287
+SHA512 (nut-2.8.2.2761.7.tar.gz) = ad6c645477a202c6da99f485e9c73dcb15331eaa55fba296b9bff692dbd246f6961d78eeeecdf20b5275b17dcc9d7bf9101354a9bfaeb480a9088b3ca68b4f22
+Size (nut-2.8.2.2761.7.tar.gz) = 6202965 bytes
 SHA1 (patch-clients_upsclient.c) = 45eee24ed3cc06bbf5ec81344d0db62a3da3a827
 SHA1 (patch-conf_Makefile.in) = 8d02a0b05659cb210a77e863a28a3b9caa596dfc
 SHA1 (patch-drivers_libhid.c) = 8b4f773d9b32e4c43f7045a4a83854382b08cb5b
