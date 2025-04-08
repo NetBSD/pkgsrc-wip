@@ -1,6 +1,6 @@
 $NetBSD$
 
-	        Fortify source fix.
+Fix unportable test(1) operator.
 
 --- configure.orig	2024-12-17 09:14:59.000000000 +0000
 +++ configure
