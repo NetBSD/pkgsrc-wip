@@ -1,8 +1,0 @@
-devel/cargo-about: update to 0.7.1
-
-0.7.1
-    PR#279 updated crates, resolving #278.
-
-0.7.0
-    PR#275 updated crates.
-    PR#275 moved to edition 2024 and rust 1.85.0 as the MSRV.
