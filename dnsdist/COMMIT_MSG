@@ -1,2 +1,18 @@
 net/dnsdist Update to 1.9.8
+1.9.8
+Released: 17th of December 2024
+Improvements
+Add the ability to load a given TLS tickets key
+References: pull request 14877
+Custom metrics: better error messages, small doc improvements
+References: pull request 14978
+Add elapsed time to dq object (@phonedph1)
+References: pull request 14887
 
+Bug Fixes
+Fix ECS zero-scope caching with incoming DoH queries
+References: #14959, pull request 14977
+setTicketsKeyAddedHook: pass a std::string to the hook to avoid luawrapper to truncate content at potential null chars
+References: pull request 14878
+Allow resetting setWeightedBalancingFactor() to zero¶
+References: pull request 14929
