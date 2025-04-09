@@ -4,6 +4,7 @@ DISTNAME=		tc-2.99.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=makoto-fujiwara/}
 CATEGORIES=		inputmethod
+PKGREVISION=		1
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://openlab.ring.gr.jp/tcode/index.html
@@ -67,6 +68,18 @@ SUBST_MESSAGE.s2i=	string-to-int is an obsolete function; use `string-to-number'
 SUBST_STAGE.s2i=	post-patch
 SUBST_FILES.s2i=	lisp/eelll.el lisp/tc-is22.el lisp/tc-is20.el lisp/tc-is19.el lisp/tc-pre.el
 SUBST_SED.s2i=		-e s/string-to-int/string-to-number/g
+
+SUBST_CLASSES+=		l2e
+SUBST_MESSAGE.l2e=	last-command-char is an obsolete function; use `last-command-event' instead
+SUBST_STAGE.l2e=	post-patch
+SUBST_FILES.l2e=	\
+			lisp/tc-ja-alnum.el \
+			lisp/tc-mazegaki.el \
+			lisp/tc-util.el \
+			lisp/tc-is22.el \
+			lisp/tc-is20.el \
+			lisp/tc-is19.el
+SUBST_SED.l2e=		-e s/last-command-char/last-command-event/g
 
 .include "options.mk"
 
