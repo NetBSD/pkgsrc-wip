@@ -1,0 +1,129 @@
+Fails building keytar.
+
+warning Error running install script for optional dependency: "/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar: Command failed.
+Exit code: 1
+Command: prebuild-install || npm run build
+Arguments:
+Directory: /scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar
+Output:
+prebuild-install warn install EACCES: permission denied, mkdir '/home'
+
+> keytar@7.9.0 build
+> node-gyp rebuild
+
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.0.0
+gyp info using node@23.11.0 | netbsd | x64
+gyp info find Python using Python version 3.13.2 found at \"/scratch/wip/sapling/work/.buildlink/bin/python3\"
+
+gyp WARN EACCES current user (\"pbulk\") does not have permission to access the dev dir \"/home/pbulk/.cache/node-gyp/23.11.0\"
+gyp WARN EACCES attempting to reinstall using temporary dev dir \"/tmp/.node-gyp\"
+
+gyp info spawn /scratch/wip/sapling/work/.buildlink/bin/python3
+gyp info spawn args [
+gyp info spawn args '/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/.node-gyp/23.11.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/tmp/.node-gyp/23.11.0',
+gyp info spawn args '-Dnode_gyp_dir=/usr/pkg/lib/node_modules/npm/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/tmp/.node-gyp/23.11.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn gmake
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+gmake[3]: Entering directory '/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar/build'
+  CXX(target) Release/obj.target/keytar/src/async.o
+In file included from ../src/async.cc:4:
+../../node-addon-api/napi.h:4:10: fatal error: node_api.h: No such file or directory
+    4 | #include <node_api.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[3]: *** [keytar.target.mk:96: Release/obj.target/keytar/src/async.o] Error 1
+gmake[3]: Leaving directory '/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar/build'
+gyp ERR! build error
+gyp ERR! stack Error: `gmake` failed with exit code: 2
+gyp ERR! stack at ChildProcess.<anonymous> (/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:216:23)
+gyp ERR! System NetBSD 10.99.12
+gyp ERR! command \"/usr/pkg/bin/node\" \"/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js\" \"rebuild\"
+gyp ERR! cwd /scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/node_modules/keytar
+gyp ERR! node -v v23.11.0
+gyp ERR! node-gyp -v v11.0.0
+gyp ERR! not ok
+npm notice
+npm notice New major version of npm available! 10.9.2 -> 11.3.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+npm notice To update run: npm install -g npm@11.3.0
+npm notice"
+Done in 5.02s.
+Error: ENOENT: no such file or directory, open '/home/pbulk/.yarnrc'
+Traceback (most recent call last):
+  File "/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/build-tar.py", line 200, in <module>
+    main()
+    ~~~~^^
+  File "/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/build-tar.py", line 172, in main
+    run(yarn + ["--cwd", src_join(), "install", "--prefer-offline"])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/addons/build-tar.py", line 66, in run
+    subprocess.run(command, shell=(os.name == "nt"), check=True, cwd=cwd, env=env)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.13/subprocess.py", line 579, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['yarn', '--cwd', '.', 'install', '--prefer-offline']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/eden/scm/setup.py", line 1189, in <module>
+    setup(
+    ~~~~~^
+        name="sapling",
+        ^^^^^^^^^^^^^^^
+    ...<38 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/usr/pkg/lib/python3.13/site-packages/setuptools/_distutils/core.py", line 186, in setup
+    return run_commands(dist)
+  File "/usr/pkg/lib/python3.13/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+    dist.run_commands()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/usr/pkg/lib/python3.13/site-packages/setuptools/_distutils/dist.py", line 983, in run_commands
+    self.run_command(cmd)
+    ~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/pkg/lib/python3.13/site-packages/setuptools/dist.py", line 999, in run_command
+    super().run_command(command)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/pkg/lib/python3.13/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+    cmd_obj.run()
+    ~~~~~~~~~~~^^
+  File "/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/eden/scm/setup.py", line 738, in run
+    subprocess.run(
+    ~~~~~~~~~~~~~~^
+        [sys.executable, "build-tar.py", "-o", pjoin(scriptdir, "isl-dist.tar.xz")],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        env=env,
+        ^^^^^^^^
+    )
+    ^
+  File "/usr/pkg/lib/python3.13/subprocess.py", line 579, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/scratch/wip/sapling/work/.buildlink/bin/python3', 'build-tar.py', '-o', '/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/eden/scm/isl-dist.tar.xz']' returned non-zero exit status 1.
+gmake[2]: *** [Makefile:109: local] Error 1
+gmake[2]: Leaving directory '/scratch/wip/sapling/work/sapling-0.2.20241203-120811-a2174689/eden/scm'
+*** Error code 2
