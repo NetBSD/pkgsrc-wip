@@ -64,6 +64,8 @@ CONFIGURE_ARGS+=	${ADD_CONFIGURE_ARGS}
 # of executables. So instead we need these so that the bootstrap
 # compiler can be run out of the $RUST_BOOTSTRAP_PATH directory as
 # part of the initial part of the rust compiler build.
+# This problem is not present with the amd64 bootstrap bits,
+# which are built by our upstream and uses $ORIGIN/../lib in RPATH.
 MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 
