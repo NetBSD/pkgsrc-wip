@@ -36,7 +36,7 @@ DISTFILES+=			${crate}.crate
 .  if ${crate:M*+*}
 # E.g., for `curl-sys-0.4.75+curl-8.10.0', we use the URL:
 # https://crates.io/api/v1/crates/curl-sys/0.4.77+curl-8.10.1/download
-SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate:C/^.*-([0-9]+\.[0-9.]+.*\+.*-[0-9]+\.[0-9]+.*)$/\1/}/download
+SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate:C/^.*-([0-9]+\.[0-9.]+.*\+.*)$/\1/}/download
 .  else
 SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate:C/^.*-([0-9]+\.[0-9.]+.*)$/\1/}/download
 .  endif
