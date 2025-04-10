@@ -2680,7 +2680,6 @@ SUBDIR+=	ocaml-sedlex
 SUBDIR+=	ocaml-sha
 SUBDIR+=	ocaml-uunf
 SUBDIR+=	ocamlweb
-SUBDIR+=	occt
 SUBDIR+=	ocserv
 SUBDIR+=	odin
 SUBDIR+=	offpunk
