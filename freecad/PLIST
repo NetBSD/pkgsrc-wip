@@ -1989,7 +1989,7 @@ lib/libDriver.so
 lib/libDriverDAT.so
 lib/libDriverSTL.so
 lib/libDriverUNV.so
-lib/libE57Format.a
+lib/libE57Format.so
 lib/libFreeCADApp.so
 lib/libFreeCADBase.so
 lib/libFreeCADGui.so
