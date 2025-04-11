@@ -89,6 +89,8 @@ post-install:
 		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}/cables/; \
 	done
 
+TEST_TARGET=	check
+
 # nut-scanner needs libltdl, but this is not documented
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../lang/python/extension.mk"
