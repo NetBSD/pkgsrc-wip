@@ -787,7 +787,6 @@ SUBDIR+=	dune-geometry
 SUBDIR+=	dune-istl
 SUBDIR+=	dunst-git
 SUBDIR+=	duplo
-SUBDIR+=	dust
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvegas
 SUBDIR+=	dwarf_fortress
