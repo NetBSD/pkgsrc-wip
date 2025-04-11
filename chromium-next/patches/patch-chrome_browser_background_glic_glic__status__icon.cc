@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/launcher/glic_status_icon.cc.orig	2025-03-20 19:11:33.000000000 +0000
-+++ chrome/browser/glic/launcher/glic_status_icon.cc
-@@ -84,7 +84,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-03-31 15:23:48.000000000 +0000
++++ chrome/browser/background/glic/glic_status_icon.cc
+@@ -83,7 +83,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
    if (!status_icon_) {
      return;
    }
@@ -15,7 +15,7 @@ $NetBSD$
    //  Set a vector icon for proper themeing on Linux.
    status_icon_->SetIcon(
        GlicVectorIconManager::GetVectorIcon(IDR_GLIC_BUTTON_VECTOR_ICON));
-@@ -108,7 +108,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+@@ -113,7 +113,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
  GlicStatusIcon::~GlicStatusIcon() {
    context_menu_ = nullptr;
    if (status_icon_) {
@@ -24,7 +24,7 @@ $NetBSD$
      status_icon_->RemoveObserver(this);
  #endif
      std::unique_ptr<StatusIcon> removed_icon =
-@@ -196,7 +196,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+@@ -201,7 +201,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(
        IDC_GLIC_STATUS_ICON_MENU_REMOVE_ICON,
        l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_REMOVE_ICON));

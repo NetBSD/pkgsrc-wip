@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
-@@ -221,7 +221,7 @@
+@@ -224,7 +224,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <sys/resource.h>
  
  #include "components/services/font/public/mojom/font_service.mojom.h"  // nogncheck
-@@ -1086,7 +1086,7 @@ static constexpr size_t kUnknownPlatform
+@@ -1089,7 +1089,7 @@ static constexpr size_t kUnknownPlatform
  // to indicate failure and std::numeric_limits<size_t>::max() to indicate
  // unlimited.
  size_t GetPlatformProcessLimit() {
@@ -24,7 +24,7 @@ $NetBSD$
    struct rlimit limit;
    if (getrlimit(RLIMIT_NPROC, &limit) != 0)
      return kUnknownPlatformProcessLimit;
-@@ -1254,7 +1254,7 @@ RenderProcessHostImpl::IOThreadHostImpl:
+@@ -1257,7 +1257,7 @@ RenderProcessHostImpl::IOThreadHostImpl:
  
  void RenderProcessHostImpl::IOThreadHostImpl::SetPid(
      base::ProcessId child_pid) {
@@ -50,7 +50,7 @@ $NetBSD$
        switches::kDisableV8IdleTasks,
        switches::kDisableVideoCaptureUseGpuMemoryBuffer,
        switches::kDisableWebGLImageChromium,
-@@ -5229,7 +5230,7 @@ uint64_t RenderProcessHostImpl::GetPriva
+@@ -5220,7 +5221,7 @@ uint64_t RenderProcessHostImpl::GetPriva
    // - Win: https://crbug.com/707022 .
    uint64_t total_size = 0;
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

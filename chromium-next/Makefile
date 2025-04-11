@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			134.0.6998.165
+VERSION=			135.0.7049.52
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -41,7 +41,7 @@ CHECK_PORTABILITY_SKIP+=	third_party/rust-toolchain/lib/rustlib/src/rust/vendor/
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 
-TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
+TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
 TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib

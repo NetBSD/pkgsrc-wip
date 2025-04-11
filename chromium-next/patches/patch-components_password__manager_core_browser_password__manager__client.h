@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_client.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/password_manager/core/browser/password_manager_client.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/password_manager/core/browser/password_manager_client.h
 @@ -31,7 +31,7 @@
  #include "net/cert/cert_status_flags.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/i18n/rtl.h"
  #include "components/password_manager/core/browser/password_cross_domain_confirmation_popup_controller.h"
  #include "ui/gfx/geometry/rect_f.h"
-@@ -549,7 +549,7 @@ class PasswordManagerClient {
+@@ -550,7 +550,7 @@ class PasswordManagerClient {
        CredentialsCallback callback);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

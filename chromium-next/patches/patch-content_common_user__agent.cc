@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/user_agent.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- content/common/user_agent.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ content/common/user_agent.cc
 @@ -50,7 +50,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -24,7 +24,7 @@ $NetBSD$
    return "X11; Linux x86_64";
  #elif BUILDFLAG(IS_IOS)
    if (ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET) {
-@@ -301,6 +301,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -305,6 +305,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

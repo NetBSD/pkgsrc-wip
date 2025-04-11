@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ headless/lib/browser/headless_browser_main_parts_posix.cc
-@@ -27,13 +27,13 @@
+@@ -26,13 +26,13 @@
  #include "content/public/browser/browser_thread.h"
  #include "headless/lib/browser/headless_browser_impl.h"
  
@@ -22,7 +22,7 @@ $NetBSD$
  #include "device/bluetooth/dbus/bluez_dbus_manager.h"
  #endif
  
-@@ -167,7 +167,7 @@ class BrowserShutdownHandler {
+@@ -166,7 +166,7 @@ class BrowserShutdownHandler {
  
  }  // namespace
  
@@ -31,7 +31,7 @@ $NetBSD$
  constexpr char kProductName[] = "HeadlessChrome";
  #endif
  
-@@ -175,9 +175,9 @@ void HeadlessBrowserMainParts::PostCreat
+@@ -174,9 +174,9 @@ void HeadlessBrowserMainParts::PostCreat
    BrowserShutdownHandler::Install(base::BindOnce(
        &HeadlessBrowserImpl::ShutdownWithExitCode, browser_->GetWeakPtr()));
  

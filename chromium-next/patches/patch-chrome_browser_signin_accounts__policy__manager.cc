@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/accounts_policy_manager.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/signin/accounts_policy_manager.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/signin/accounts_policy_manager.cc
 @@ -41,7 +41,7 @@
  #include "chrome/browser/ui/webui/profile_helper.h"
@@ -33,7 +33,7 @@ $NetBSD$
    profile_pref_change_registrar_.RemoveAll();
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
    local_state_pref_registrar_.RemoveAll();
-@@ -341,7 +341,7 @@ void AccountsPolicyManager::OnUserConfir
+@@ -332,7 +332,7 @@ void AccountsPolicyManager::OnUserConfir
  }
  #endif  // defined(TOOLKIT_VIEWS) && !BUILDFLAG(IS_CHROMEOS)
  

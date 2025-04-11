@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_log.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/metrics/metrics_log.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/metrics/metrics_log.cc
 @@ -61,7 +61,7 @@
  #include "base/win/current_module.h"
@@ -24,7 +24,7 @@ $NetBSD$
  metrics::SystemProfileProto::OS::XdgSessionType ToProtoSessionType(
      base::nix::SessionType session_type) {
    switch (session_type) {
-@@ -435,7 +435,7 @@ void MetricsLog::RecordCoreSystemProfile
+@@ -441,7 +441,7 @@ void MetricsLog::RecordCoreSystemProfile
  // OperatingSystemVersion refers to the ChromeOS release version.
  #if BUILDFLAG(IS_CHROMEOS)
    os->set_kernel_version(base::SysInfo::KernelVersion());
@@ -33,7 +33,7 @@ $NetBSD$
    // Linux operating system version is copied over into kernel version to be
    // consistent.
    os->set_kernel_version(base::SysInfo::OperatingSystemVersion());
-@@ -452,7 +452,7 @@ void MetricsLog::RecordCoreSystemProfile
+@@ -458,7 +458,7 @@ void MetricsLog::RecordCoreSystemProfile
    os->set_build_number(base::SysInfo::GetIOSBuildNumber());
  #endif
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -299,7 +299,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the
@@ -15,7 +15,7 @@ $NetBSD$
  class HelpBubbleView::PrimaryWidgetObserver : public views::WidgetObserver {
   public:
    explicit PrimaryWidgetObserver(HelpBubbleView& help_bubble)
-@@ -772,7 +772,7 @@ HelpBubbleView::HelpBubbleView(
+@@ -774,7 +774,7 @@ HelpBubbleView::HelpBubbleView(
      event_relay_->Init(this);
    }
  

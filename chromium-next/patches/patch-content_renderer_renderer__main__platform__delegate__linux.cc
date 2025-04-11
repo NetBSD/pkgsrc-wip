@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ content/renderer/renderer_main_platform_delegate_linux.cc
 @@ -44,6 +44,7 @@ bool RendererMainPlatformDelegate::Enabl
    // any renderer has been started.

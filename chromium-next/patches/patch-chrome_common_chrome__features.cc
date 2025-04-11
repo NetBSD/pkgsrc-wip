@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/common/chrome_features.cc
-@@ -75,7 +75,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
+@@ -80,7 +80,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables or disables the Autofill survey triggered by opening a prompt to
  // save address info.
  BASE_FEATURE(kAutofillAddressSurvey,
-@@ -93,7 +93,7 @@ BASE_FEATURE(kAutofillPasswordSurvey,
+@@ -98,7 +98,7 @@ BASE_FEATURE(kAutofillPasswordSurvey,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  // Enables the Restart background mode optimization. When all Chrome UI is
  // closed and it goes in the background, allows to restart the browser to
  // discard memory.
-@@ -220,7 +220,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
+@@ -233,7 +233,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
  BASE_FEATURE(kDesktopPWAsRunOnOsLogin,
               "DesktopPWAsRunOnOsLogin",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -246,7 +246,7 @@ BASE_FEATURE(kDesktopPWAsTabStripSetting
+@@ -259,7 +259,7 @@ BASE_FEATURE(kDesktopPWAsTabStripSetting
               "DesktopPWAsTabStripSettings",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -42,7 +42,7 @@ $NetBSD$
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -817,7 +817,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
+@@ -834,7 +834,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
               "KAnonymityServiceStorage",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -51,7 +51,7 @@ $NetBSD$
  BASE_FEATURE(kLinuxLowMemoryMonitor,
               "LinuxLowMemoryMonitor",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -830,7 +830,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -847,7 +847,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

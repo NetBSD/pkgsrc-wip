@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc
-@@ -23,7 +23,7 @@
+@@ -22,7 +22,7 @@
  #include "components/policy/core/common/management/management_service.h"
  #include "content/public/browser/browser_context.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/enterprise/connectors/device_trust/attestation/browser/browser_attestation_service.h"
  #include "chrome/browser/enterprise/connectors/device_trust/attestation/browser/device_attester.h"
-@@ -54,7 +54,7 @@ bool IsProfileManaged(Profile* profile) 
+@@ -53,7 +53,7 @@ bool IsProfileManaged(Profile* profile) 
    return management_service && management_service->IsManaged();
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  policy::CloudPolicyStore* GetUserCloudPolicyStore(Profile* profile) {
    policy::CloudPolicyManager* user_policy_manager =
        profile->GetCloudPolicyManager();
-@@ -106,7 +106,7 @@ DeviceTrustServiceFactory::DeviceTrustSe
+@@ -105,7 +105,7 @@ DeviceTrustServiceFactory::DeviceTrustSe
    DependsOn(DeviceTrustConnectorServiceFactory::GetInstance());
    DependsOn(policy::ManagementServiceFactory::GetInstance());
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
-@@ -50,7 +50,7 @@ inline constexpr char kCredentialProvide
+@@ -59,7 +59,7 @@ inline constexpr char kCredentialProvide
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  // Boolean pref controlled by the DeletingUndecryptablePasswordsEnabled policy.
  // If set to false it blocks deleting undecryptable passwords, otherwise the
  // deletion can happen.
-@@ -359,7 +359,7 @@ inline constexpr char kPasswordChangeFlo
+@@ -357,7 +357,7 @@ inline constexpr char kPasswordChangeFlo
  inline constexpr char kPasswordSharingEnabled[] =
      "password_manager.password_sharing_enabled";
  

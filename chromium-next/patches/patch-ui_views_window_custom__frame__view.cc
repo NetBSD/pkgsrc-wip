@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/custom_frame_view.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- ui/views/window/custom_frame_view.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ui/views/window/custom_frame_view.cc
 @@ -279,7 +279,7 @@ int CustomFrameView::NonClientTopBorderH
  int CustomFrameView::CaptionButtonY() const {

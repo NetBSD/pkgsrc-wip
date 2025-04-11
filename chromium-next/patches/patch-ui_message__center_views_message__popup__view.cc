@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/message_center/views/message_popup_view.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ui/message_center/views/message_popup_view.cc
 @@ -153,7 +153,7 @@ std::unique_ptr<views::Widget> MessagePo
        views::Widget::InitParams::CLIENT_OWNS_WIDGET,

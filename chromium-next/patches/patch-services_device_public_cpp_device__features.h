@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- services/device/public/cpp/device_features.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ services/device/public/cpp/device_features.h
-@@ -51,7 +51,7 @@ extern const DEVICE_FEATURES_EXPORT
+@@ -53,7 +53,7 @@ extern const DEVICE_FEATURES_EXPORT
  
  DEVICE_FEATURES_EXPORT bool IsOsLevelGeolocationPermissionSupportEnabled();
  

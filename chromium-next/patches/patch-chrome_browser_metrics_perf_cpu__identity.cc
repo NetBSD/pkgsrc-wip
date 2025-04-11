@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/perf/cpu_identity.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/metrics/perf/cpu_identity.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/metrics/perf/cpu_identity.cc
-@@ -146,7 +146,7 @@ CPUIdentity GetCPUIdentity() {
+@@ -145,7 +145,7 @@ CPUIdentity GetCPUIdentity() {
    result.release =
- #if BUILDFLAG(IS_CHROMEOS_ASH)
+ #if BUILDFLAG(IS_CHROMEOS)
        base::SysInfo::KernelVersion();
--#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
        base::SysInfo::OperatingSystemVersion();
  #else
  #error "Unsupported configuration"

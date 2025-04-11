@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_preferences.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- net/http/http_auth_preferences.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ net/http/http_auth_preferences.cc
-@@ -39,7 +39,7 @@ std::string HttpAuthPreferences::AuthAnd
+@@ -38,7 +38,7 @@ std::string HttpAuthPreferences::AuthAnd
  }
  #endif  // BUILDFLAG(IS_ANDROID)
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/ui/webui/app_home/app_home_page_handler.cc
 @@ -62,7 +62,7 @@
  #include "ui/base/window_open_disposition_utils.h"

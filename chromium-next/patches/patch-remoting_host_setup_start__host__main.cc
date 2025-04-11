@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/start_host_main.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- remoting/host/setup/start_host_main.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ remoting/host/setup/start_host_main.cc
-@@ -43,7 +43,7 @@
+@@ -45,7 +45,7 @@
  #include <unistd.h>
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "remoting/host/setup/daemon_controller_delegate_linux.h"
  #include "remoting/host/setup/start_host_as_root.h"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -374,7 +374,7 @@ bool InitializeCloudMachineParams(HostSt
+@@ -369,7 +369,7 @@ bool InitializeCloudMachineParams(HostSt
  }  // namespace
  
  int StartHostMain(int argc, char** argv) {
@@ -24,7 +24,7 @@ $NetBSD$
    // Minimize the amount of code that runs as root on Posix systems.
    if (getuid() == 0) {
      return remoting::StartHostAsRoot(argc, argv);
-@@ -399,7 +399,7 @@ int StartHostMain(int argc, char** argv)
+@@ -394,7 +394,7 @@ int StartHostMain(int argc, char** argv)
  
    mojo::core::Init();
  

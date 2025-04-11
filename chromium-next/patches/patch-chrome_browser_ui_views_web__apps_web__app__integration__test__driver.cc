@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
 @@ -510,7 +510,7 @@ std::string GetFileExtension(FileExtensi
  }
@@ -60,7 +60,7 @@ $NetBSD$
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -4242,7 +4242,7 @@ base::FilePath WebAppIntegrationTestDriv
+@@ -4243,7 +4243,7 @@ base::FilePath WebAppIntegrationTestDriv
      base::FilePath shortcut_dir,
      const std::string& app_name,
      const webapps::AppId& app_id) {
@@ -69,7 +69,7 @@ $NetBSD$
    return override_registration_->test_override().GetShortcutPath(
        profile(), shortcut_dir, app_id, app_name);
  #else
-@@ -4442,7 +4442,7 @@ bool WebAppIntegrationTestDriver::IsShor
+@@ -4443,7 +4443,7 @@ bool WebAppIntegrationTestDriver::IsShor
      const webapps::AppId& id) {
    base::ScopedAllowBlockingForTesting allow_blocking;
    bool is_shortcut_and_icon_correct = false;
@@ -78,7 +78,7 @@ $NetBSD$
    bool is_shortcut_correct =
        override_registration_->test_override().IsShortcutCreated(profile, id,
                                                                  name);
-@@ -4486,7 +4486,7 @@ bool WebAppIntegrationTestDriver::DoIcon
+@@ -4487,7 +4487,7 @@ bool WebAppIntegrationTestDriver::DoIcon
      do_icon_colors_match =
          (expected_icon_pixel_color == shortcut_pixel_color_apps_folder.value());
    }

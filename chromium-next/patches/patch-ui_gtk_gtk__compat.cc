@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/gtk_compat.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- ui/gtk/gtk_compat.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ui/gtk/gtk_compat.cc
-@@ -62,27 +62,47 @@ auto DlCast(void* symbol) {
+@@ -64,27 +64,47 @@ auto DlCast(void* symbol) {
  }
  
  void* GetLibGio() {

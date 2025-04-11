@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_content_browser_client.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- headless/lib/browser/headless_content_browser_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ headless/lib/browser/headless_content_browser_client.cc
-@@ -56,7 +56,7 @@
+@@ -58,7 +58,7 @@
  #include "content/public/common/content_descriptors.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/os_crypt/sync/os_crypt.h"  // nogncheck
  #include "content/public/browser/network_service_util.h"
  #endif
-@@ -518,7 +518,7 @@ void HeadlessContentBrowserClient::Handl
+@@ -520,7 +520,7 @@ void HeadlessContentBrowserClient::Handl
  
  void HeadlessContentBrowserClient::SetEncryptionKey(
      ::network::mojom::NetworkService* network_service) {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.h
 @@ -27,7 +27,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDummyFeature);
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  FEATURE_CONSTANTS_DECLARE_FEATURE(kEsbDownloadRowPromoFeature);
  #endif
-@@ -295,7 +295,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kDefau
+@@ -303,7 +303,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kDefau
  
  #endif  // BUILDFLAG(IS_IOS)
  
@@ -24,7 +24,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  FEATURE_CONSTANTS_DECLARE_FEATURE(
      kIPHAutofillCardInfoRetrievalSuggestionFeature);
-@@ -353,7 +353,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHSc
+@@ -359,7 +359,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHSc
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHScalableIphGamingFeature);
  #endif
  
@@ -32,4 +32,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDesktopPWAsLinkCapturingLaunch);
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDesktopPWAsLinkCapturingLaunchAppInTab);
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHSupervisedUserProfileSigninFeature);

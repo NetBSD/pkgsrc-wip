@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/display/screen.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- ui/display/screen.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ui/display/screen.cc
 @@ -86,7 +86,7 @@ void Screen::SetDisplayForNewWindows(int
    display_id_for_new_windows_ = display_id;

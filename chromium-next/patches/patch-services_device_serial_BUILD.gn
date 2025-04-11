@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/BUILD.gn.orig	2025-03-20 19:11:33.000000000 +0000
+--- services/device/serial/BUILD.gn.orig	2025-03-31 15:23:48.000000000 +0000
 +++ services/device/serial/BUILD.gn
 @@ -4,7 +4,7 @@
  
  import("//build/config/features.gni")
  
--if (is_win || ((is_linux || is_chromeos) && use_udev) || is_mac) {
-+if (is_win || ((!is_bsd && is_linux || is_chromeos) && use_udev) || is_mac) {
+-if (is_win || ((is_linux || is_chromeos) && use_udev) || is_mac || is_android) {
++if (is_win || ((!is_bsd && is_linux || is_chromeos) && use_udev) || is_mac || is_android) {
    config("platform_support") {
      visibility = [ ":serial" ]
      if (is_win) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/channel_info_posix.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/common/channel_info_posix.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/common/channel_info_posix.cc
-@@ -95,7 +95,7 @@ std::string GetChannelSuffixForDataDir()
+@@ -94,7 +94,7 @@ std::string GetChannelSuffixForDataDir()
    }
  }
  
@@ -15,12 +15,12 @@ $NetBSD$
  std::string GetChannelSuffixForExtraFlagsEnvVarName() {
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    const auto channel_state = GetChannelImpl();
-@@ -123,7 +123,7 @@ std::string GetChannelSuffixForExtraFlag
+@@ -120,7 +120,7 @@ std::string GetChannelSuffixForExtraFlag
+ }
+ #endif  // BUILDFLAG(IS_LINUX)
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  std::string GetDesktopName(base::Environment* env) {
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    // Google Chrome packaged as a snap is a special case: the application name

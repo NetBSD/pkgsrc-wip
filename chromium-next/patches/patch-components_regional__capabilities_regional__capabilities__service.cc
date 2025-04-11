@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_service.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.cc
 @@ -85,7 +85,7 @@ void RegionalCapabilitiesService::Initia
        base::UmaHistogramEnumeration(kUnknownCountryIdStored,

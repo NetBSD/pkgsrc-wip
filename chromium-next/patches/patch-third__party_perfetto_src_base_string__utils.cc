@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/string_utils.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- third_party/perfetto/src/base/string_utils.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ third_party/perfetto/src/base/string_utils.cc
 @@ -39,7 +39,8 @@ namespace base {
  // Locale-independant as possible version of strtod.

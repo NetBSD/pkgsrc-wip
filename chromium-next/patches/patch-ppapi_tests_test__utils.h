@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ppapi/tests/test_utils.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- ppapi/tests/test_utils.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ppapi/tests/test_utils.h
 @@ -314,6 +314,8 @@ do { \
  #define PPAPI_OS_FREEBSD 1

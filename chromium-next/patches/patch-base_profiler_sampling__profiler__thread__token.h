@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/sampling_profiler_thread_token.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- base/profiler/sampling_profiler_thread_token.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ base/profiler/sampling_profiler_thread_token.h
 @@ -13,7 +13,7 @@
  
- #if BUILDFLAG(IS_ANDROID)
+ #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_APPLE)
  #include <pthread.h>
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -17,7 +17,7 @@ $NetBSD$
  
 @@ -27,7 +27,7 @@ struct SamplingProfilerThreadToken {
    PlatformThreadId id;
- #if BUILDFLAG(IS_ANDROID)
+ #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_APPLE)
    pthread_t pthread_id;
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

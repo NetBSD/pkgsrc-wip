@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
 @@ -101,7 +101,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/component_updater/wasm_tts_engine_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -258,12 +258,12 @@ void RegisterComponentsForUpdate() {
+@@ -261,12 +261,12 @@ void RegisterComponentsForUpdate() {
    RegisterCookieReadinessListComponent(cus);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ printing/sandbox/print_backend_sandbox_hook_linux.cc
 @@ -10,20 +10,27 @@
  #include "base/path_service.h"

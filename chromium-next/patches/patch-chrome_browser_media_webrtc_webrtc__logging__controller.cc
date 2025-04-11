@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -25,10 +25,10 @@
  #include "components/webrtc_logging/browser/text_log_list.h"
@@ -19,7 +19,7 @@ $NetBSD$
  
  using webrtc_event_logging::WebRtcEventLogManager;
  
-@@ -288,7 +288,7 @@ void WebRtcLoggingController::StartEvent
+@@ -304,7 +304,7 @@ void WebRtcLoggingController::StartEvent
        web_app_id, callback);
  }
  
@@ -28,7 +28,7 @@ $NetBSD$
  void WebRtcLoggingController::GetLogsDirectory(
      LogsDirectoryCallback callback,
      LogsDirectoryErrorCallback error_callback) {
-@@ -334,7 +334,7 @@ void WebRtcLoggingController::GrantLogsD
+@@ -350,7 +350,7 @@ void WebRtcLoggingController::GrantLogsD
        FROM_HERE,
        base::BindOnce(std::move(callback), file_system.id(), registered_name));
  }

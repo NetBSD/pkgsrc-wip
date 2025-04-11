@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h
-@@ -18,7 +18,7 @@
+@@ -19,7 +19,7 @@
  #include "components/keyed_service/core/keyed_service.h"
  #include "components/policy/core/common/cloud/cloud_policy_client.h"
  
@@ -15,16 +15,16 @@ $NetBSD$
  #include "components/device_signals/core/browser/signals_types.h"
  #endif
  
-@@ -112,7 +112,7 @@ class RealtimeReportingClient : public R
+@@ -118,7 +118,7 @@ class RealtimeReportingClient : public R
        const std::string& dm_token) override;
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(notyet)
-   void MaybeCollectDeviceSignalsAndReportEvent(
+   // DEPRECATED: Use MaybeCollectDeviceSignalsAndReportEvent(Event, ...).
+   void MaybeCollectDeviceSignalsAndReportEventDeprecated(
        base::Value::Dict event,
-       policy::CloudPolicyClient* client,
-@@ -151,7 +151,7 @@ class RealtimeReportingClient : public R
+@@ -168,7 +168,7 @@ class RealtimeReportingClient : public R
    base::WeakPtrFactory<RealtimeReportingClient> weak_ptr_factory_{this};
  };
  

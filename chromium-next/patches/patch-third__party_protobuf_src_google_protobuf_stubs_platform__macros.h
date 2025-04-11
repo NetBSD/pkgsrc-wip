@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ third_party/protobuf/src/google/protobuf/stubs/platform_macros.h
-@@ -122,7 +122,7 @@ GOOGLE_PROTOBUF_PLATFORM_ERROR
+@@ -99,7 +99,7 @@ GOOGLE_PROTOBUF_PLATFORM_ERROR
  
  #undef GOOGLE_PROTOBUF_PLATFORM_ERROR
  

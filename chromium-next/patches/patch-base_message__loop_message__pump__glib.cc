@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_glib.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,15 @@
  #include <glib.h>
@@ -36,7 +36,7 @@ $NetBSD$
 +#endif
 +#else
    auto pid = getpid();
-   auto tid = PlatformThread::CurrentId();
+   auto tid = PlatformThread::CurrentId().raw();
    return pid > 0 && tid > 0 && pid == tid;
 +#endif
  }

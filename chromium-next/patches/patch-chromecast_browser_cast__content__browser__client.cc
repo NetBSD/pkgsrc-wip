@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/browser/cast_content_browser_client.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chromecast/browser/cast_content_browser_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chromecast/browser/cast_content_browser_client.cc
-@@ -429,7 +429,7 @@ void CastContentBrowserClient::AppendExt
+@@ -434,7 +434,7 @@ void CastContentBrowserClient::AppendExt
                                            switches::kAudioOutputChannels));
      }
    } else if (process_type == switches::kGpuProcess) {

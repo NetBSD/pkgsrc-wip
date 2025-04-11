@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/vaapi/vaapi_wrapper.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- media/gpu/vaapi/vaapi_wrapper.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ media/gpu/vaapi/vaapi_wrapper.cc
-@@ -78,7 +78,7 @@
+@@ -79,7 +79,7 @@
  using media_gpu_vaapi::kModuleVa_prot;
  #endif
  

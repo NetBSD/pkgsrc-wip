@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/defaults.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/defaults.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/defaults.cc
-@@ -44,7 +44,7 @@ const bool kShowHelpMenuItemIcon = true;
+@@ -31,7 +31,7 @@ const bool kAlwaysCreateTabbedBrowserOnS
  const bool kShowHelpMenuItemIcon = false;
  #endif
  

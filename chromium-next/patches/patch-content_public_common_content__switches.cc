@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- content/public/common/content_switches.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ content/public/common/content_switches.cc
 @@ -342,6 +342,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables the type, downlinkMax attributes of the NetInfo API. Also, enables
  // triggering of change attribute of the NetInfo API when there is a change in
  // the connection type.
-@@ -954,7 +956,7 @@ const char kPreventResizingContentsForTe
+@@ -949,7 +951,7 @@ const char kPreventResizingContentsForTe
      "prevent-resizing-contents-for-testing";
  #endif
  

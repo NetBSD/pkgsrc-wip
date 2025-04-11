@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
-@@ -52,7 +52,7 @@ extern const base::FeatureParam<int> kMa
+@@ -47,7 +47,7 @@ extern const base::FeatureParam<int> kMa
  BASE_DECLARE_FEATURE(kExtensionsMenuInAppMenu);
  bool IsExtensionMenuInRootAppMenu();
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
  
-@@ -229,7 +229,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
+@@ -211,7 +211,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
  BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
  

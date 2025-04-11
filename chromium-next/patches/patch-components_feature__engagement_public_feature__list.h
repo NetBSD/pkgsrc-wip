@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
-@@ -291,7 +291,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSReminderNo
+@@ -302,7 +302,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSDownloadAu
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  DEFINE_VARIATION_PARAM(kEsbDownloadRowPromoFeature, "EsbDownloadRowPromo");
  #endif
-@@ -402,7 +402,8 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsSave
+@@ -415,7 +415,8 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -25,7 +25,7 @@ $NetBSD$
  DEFINE_VARIATION_PARAM(kIPHAutofillCreditCardBenefitFeature,
                         "IPH_AutofillCreditCardBenefit");
  
-@@ -496,7 +497,7 @@ DEFINE_VARIATION_PARAM(kIPHScalableIphHe
+@@ -509,7 +510,7 @@ DEFINE_VARIATION_PARAM(kIPHScalableIphHe
  DEFINE_VARIATION_PARAM(kIPHScalableIphGamingFeature, "IPH_ScalableIphGaming");
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -34,16 +34,16 @@ $NetBSD$
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
                         "IPH_DesktopPWAsLinkCapturingLaunch");
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -662,7 +663,7 @@ inline constexpr flags_ui::FeatureEntry:
-         VARIATION_ENTRY(kIPHiOSDefaultBrowserBannerPromoFeature),
-         VARIATION_ENTRY(kIPHiOSReminderNotificationsOverflowMenuBubbleFeature),
+@@ -682,7 +683,7 @@ inline constexpr flags_ui::FeatureEntry:
+             kIPHiOSReminderNotificationsOverflowMenuNewBadgeFeature),
+         VARIATION_ENTRY(kIPHiOSDownloadAutoDeletionFeature),
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
          VARIATION_ENTRY(kIPHBatterySaverModeFeature),
          VARIATION_ENTRY(kIPHCompanionSidePanelFeature),
          VARIATION_ENTRY(kIPHCompanionSidePanelRegionSearchFeature),
-@@ -722,7 +723,8 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -743,7 +744,8 @@ inline constexpr flags_ui::FeatureEntry:
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -53,7 +53,7 @@ $NetBSD$
          VARIATION_ENTRY(kIPHAutofillCreditCardBenefitFeature),
          VARIATION_ENTRY(kIPHAutofillCardInfoRetrievalSuggestionFeature),
          VARIATION_ENTRY(kIPHAutofillDisabledVirtualCardSuggestionFeature),
-@@ -774,7 +776,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -795,7 +797,7 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHScalableIphGamingFeature),
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -61,4 +61,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
          VARIATION_ENTRY(kIPHDesktopPWAsLinkCapturingLaunch),
          VARIATION_ENTRY(kIPHDesktopPWAsLinkCapturingLaunchAppInTab),
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+         VARIATION_ENTRY(kIPHSupervisedUserProfileSigninFeature),

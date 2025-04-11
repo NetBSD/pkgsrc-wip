@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/accelerator.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- ui/base/accelerators/accelerator.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ui/base/accelerators/accelerator.cc
-@@ -335,7 +335,7 @@ std::u16string Accelerator::ApplyLongFor
+@@ -336,7 +336,7 @@ std::u16string Accelerator::ApplyLongFor
      result = ApplyModifierToAcceleratorString(result, IDS_APP_SEARCH_KEY);
  #elif BUILDFLAG(IS_WIN)
      result = ApplyModifierToAcceleratorString(result, IDS_APP_WINDOWS_KEY);

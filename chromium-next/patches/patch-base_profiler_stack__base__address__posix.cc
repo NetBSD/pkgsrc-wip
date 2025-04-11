@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"
@@ -62,8 +62,8 @@ $NetBSD$
    // trying to work around the problem.
    return std::nullopt;
  #else
--  const bool is_main_thread = id == GetCurrentProcId();
-+  const bool is_main_thread = id == checked_cast<PlatformThreadId>(GetCurrentProcId());
+-  const bool is_main_thread = id.raw() == GetCurrentProcId();
++  const bool is_main_thread = id.raw() == (checked_cast<uint64_t>(GetCurrentProcId()));
    if (is_main_thread) {
  #if BUILDFLAG(IS_ANDROID)
      // The implementation of pthread_getattr_np() in Bionic reads proc/self/maps

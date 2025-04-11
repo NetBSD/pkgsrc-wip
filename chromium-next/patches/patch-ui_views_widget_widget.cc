@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- ui/views/widget/widget.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ ui/views/widget/widget.cc
 @@ -63,7 +63,7 @@
  #include "ui/views/window/custom_frame_view.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -2444,7 +2444,7 @@ const ui::NativeTheme* Widget::GetNative
+@@ -2452,7 +2452,7 @@ const ui::NativeTheme* Widget::GetNative
      return parent_->GetNativeTheme();
    }
  

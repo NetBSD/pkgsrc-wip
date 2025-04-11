@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h
 @@ -57,7 +57,7 @@ class COMPONENT_EXPORT(
    static std::vector<mojom::VmRegionPtr> GetProcessMemoryMaps(

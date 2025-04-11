@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/component_updater/widevine_cdm_component_installer.cc
 @@ -41,7 +41,7 @@
  #include "third_party/widevine/cdm/buildflags.h"
@@ -33,7 +33,7 @@ $NetBSD$
  // On Linux and ChromeOS the Widevine CDM is loaded at startup before the
  // zygote is locked down. To locate the Widevine CDM at startup, a hint file
  // is used. Update the hint file with the new Widevine CDM path.
-@@ -394,7 +394,7 @@ void WidevineCdmComponentInstallerPolicy
+@@ -392,7 +392,7 @@ void WidevineCdmComponentInstallerPolicy
      return;
    }
  

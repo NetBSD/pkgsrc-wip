@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -21,7 +21,7 @@
- #include "chrome/browser/glic/launcher/glic_background_mode_manager.h"  // nogncheck
+ #include "chrome/browser/glic/glic_profile_manager.h"  // nogncheck
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

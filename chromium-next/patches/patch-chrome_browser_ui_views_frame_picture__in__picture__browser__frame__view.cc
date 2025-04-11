@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc
 @@ -62,7 +62,7 @@
  #include "ui/aura/window.h"
@@ -33,7 +33,7 @@ $NetBSD$
      // Calculate input bounds for Linux. This is needed because the input bounds
      // is not necessary the same as the local bounds on Linux.
      if (pip_browser_frame_view_->ShouldDrawFrameShadow()) {
-@@ -649,7 +649,7 @@ PictureInPictureBrowserFrameView::Pictur
+@@ -618,7 +618,7 @@ PictureInPictureBrowserFrameView::Pictur
          AddChildView(std::move(auto_pip_setting_overlay));
    }
  
@@ -42,7 +42,7 @@ $NetBSD$
    auto* profile = browser_view->browser()->profile();
    auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile);
    auto* theme_service_factory = ThemeServiceFactory::GetForProfile(profile);
-@@ -873,7 +873,7 @@ void PictureInPictureBrowserFrameView::O
+@@ -843,7 +843,7 @@ void PictureInPictureBrowserFrameView::O
      view->SetIconColor(color_provider->GetColor(kColorPipWindowForeground));
    }
  
@@ -51,7 +51,7 @@ $NetBSD$
    // On Linux the top bar background will be drawn in OnPaint().
    top_bar_container_view_->SetBackground(views::CreateSolidBackground(
        color_provider->GetColor(kColorPipWindowTopBarBackground)));
-@@ -962,7 +962,7 @@ void PictureInPictureBrowserFrameView::R
+@@ -932,7 +932,7 @@ void PictureInPictureBrowserFrameView::R
    BrowserNonClientFrameView::RemovedFromWidget();
  }
  
@@ -60,7 +60,7 @@ $NetBSD$
  gfx::Insets
  PictureInPictureBrowserFrameView::RestoredMirroredFrameBorderInsets() const {
    auto border = FrameBorderInsets();
-@@ -1253,7 +1253,7 @@ void PictureInPictureBrowserFrameView::A
+@@ -1223,7 +1223,7 @@ void PictureInPictureBrowserFrameView::A
  // views::View implementations:
  
  void PictureInPictureBrowserFrameView::OnPaint(gfx::Canvas* canvas) {
@@ -69,7 +69,7 @@ $NetBSD$
    // Draw the PiP window frame borders and shadows, including the top bar
    // background.
    if (window_frame_provider_) {
-@@ -1408,7 +1408,7 @@ void PictureInPictureBrowserFrameView::U
+@@ -1378,7 +1378,7 @@ void PictureInPictureBrowserFrameView::U
  }
  
  gfx::Insets PictureInPictureBrowserFrameView::FrameBorderInsets() const {
@@ -78,7 +78,7 @@ $NetBSD$
    if (window_frame_provider_) {
      const auto insets = window_frame_provider_->GetFrameThicknessDip();
      const bool tiled = frame()->tiled();
-@@ -1426,7 +1426,7 @@ gfx::Insets PictureInPictureBrowserFrame
+@@ -1396,7 +1396,7 @@ gfx::Insets PictureInPictureBrowserFrame
  }
  
  gfx::Insets PictureInPictureBrowserFrameView::ResizeBorderInsets() const {
@@ -87,7 +87,7 @@ $NetBSD$
    return FrameBorderInsets();
  #elif !BUILDFLAG(IS_CHROMEOS)
    return gfx::Insets(kResizeBorder);
-@@ -1447,7 +1447,7 @@ gfx::Size PictureInPictureBrowserFrameVi
+@@ -1417,7 +1417,7 @@ gfx::Size PictureInPictureBrowserFrameVi
                     top_height + border_thickness.bottom());
  }
  

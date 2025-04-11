@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/browser_features.cc
-@@ -82,7 +82,7 @@ BASE_FEATURE(kContentUsesBrowserThemeCol
+@@ -81,7 +81,7 @@ BASE_FEATURE(kContentUsesBrowserThemeCol
               "ContentUsesBrowserThemeColorMode",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -15,16 +15,16 @@ $NetBSD$
  // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
  // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
  // disabled without losing data.
-@@ -104,7 +104,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyPro
+@@ -100,7 +100,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyPro
+ // the browser exits.
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
               "DestroyProfileOnBrowserClose",
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
--    BUILDFLAG(IS_CHROMEOS_LACROS)
-+    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -237,7 +237,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -233,7 +233,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
               "SandboxExternalProtocolBlockedWarning",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

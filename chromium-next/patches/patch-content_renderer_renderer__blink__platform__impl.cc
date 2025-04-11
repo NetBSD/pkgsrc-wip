@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
 @@ -129,7 +129,7 @@
  
@@ -31,7 +31,7 @@ $NetBSD$
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -224,7 +224,7 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -228,7 +228,7 @@ RendererBlinkPlatformImpl::RendererBlink
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -40,7 +40,7 @@ $NetBSD$
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -288,7 +288,7 @@ void RendererBlinkPlatformImpl::SetThrea
+@@ -292,7 +292,7 @@ void RendererBlinkPlatformImpl::SetThrea
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

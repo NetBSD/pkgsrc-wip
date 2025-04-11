@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/serial_device_enumerator.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- services/device/serial/serial_device_enumerator.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ services/device/serial/serial_device_enumerator.cc
 @@ -13,7 +13,7 @@
  #include "build/build_config.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "services/device/serial/serial_device_enumerator_linux.h"
  #elif BUILDFLAG(IS_MAC)
  #include "services/device/serial/serial_device_enumerator_mac.h"
-@@ -26,7 +26,7 @@ namespace device {
+@@ -28,7 +28,7 @@ namespace device {
  // static
  std::unique_ptr<SerialDeviceEnumerator> SerialDeviceEnumerator::Create(
      scoped_refptr<base::SingleThreadTaskRunner> ui_task_runner) {

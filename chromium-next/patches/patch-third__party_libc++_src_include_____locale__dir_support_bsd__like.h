@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2025-03-20 19:11:33.000000000 +0000
+--- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2025-03-31 15:23:48.000000000 +0000
 +++ third_party/libc++/src/include/__locale_dir/support/bsd_like.h
 @@ -24,7 +24,11 @@
  #  include <wctype.h>

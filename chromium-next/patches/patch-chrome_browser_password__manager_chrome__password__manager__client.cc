@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -637,7 +637,7 @@ void ChromePasswordManagerClient::
+@@ -642,7 +642,7 @@ void ChromePasswordManagerClient::
  bool ChromePasswordManagerClient::IsReauthBeforeFillingRequired(
      device_reauth::DeviceAuthenticator* authenticator) {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
    if (!GetLocalStatePrefs() || !GetPrefs() || !authenticator) {
      return false;
    }
-@@ -915,7 +915,7 @@ void ChromePasswordManagerClient::Notify
+@@ -920,7 +920,7 @@ void ChromePasswordManagerClient::Notify
  }
  
  void ChromePasswordManagerClient::NotifyKeychainError() {

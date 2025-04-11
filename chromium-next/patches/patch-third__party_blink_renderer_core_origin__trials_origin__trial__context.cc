@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/origin_trials/origin_trial_context.cc.orig	2025-03-20 19:11:33.000000000 +0000
+--- third_party/blink/renderer/core/origin_trials/origin_trial_context.cc.orig	2025-03-31 15:23:48.000000000 +0000
 +++ third_party/blink/renderer/core/origin_trials/origin_trial_context.cc
-@@ -566,7 +566,7 @@ bool OriginTrialContext::CanEnableTrialF
+@@ -573,7 +573,7 @@ bool OriginTrialContext::CanEnableTrialF
    }
  
    if (trial_name == "TranslationAPI") {
