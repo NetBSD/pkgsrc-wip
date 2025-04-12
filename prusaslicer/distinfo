@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.9.1.tar.gz) = ce0ff211f54bb85080da34b077afa10717b608d7e504949a76eb8f2b27de5cfa
-SHA512 (PrusaSlicer-2.9.1.tar.gz) = a7a7131fa0d04bbf63954e047c8db18fffd71e35650841d281b5f97ec23b8029324a187320a5b5f5abdc7da2ec44c2a757e4a67db22e17bbcc069756e59959d9
-Size (PrusaSlicer-2.9.1.tar.gz) = 76767199 bytes
+BLAKE2s (PrusaSlicer-2.9.2.tar.gz) = ce1b1f0703f08d5e08149617507585b420953b230f0c2cd2ad605e420801bd4f
+SHA512 (PrusaSlicer-2.9.2.tar.gz) = f43d6c2e639f029f91e722bcbac7db993ff4df69a850421e9acac4165bafeeb7f765a9ecab88d5bd5221524b3fbce78ae84f62d290a406406fd75644811440c1
+Size (PrusaSlicer-2.9.2.tar.gz) = 76992191 bytes
 SHA1 (patch-CMakeLists.txt) = 293c5116b1ec1c4fa733bf18f6e9ab8c19f7bad4
 SHA1 (patch-bundled__deps_CMakeLists.txt) = 9fad4b02132498a6bf06e0e53ed7626fa8b60b67
 SHA1 (patch-bundled__deps_avrdude_avrdude_arduino.c) = c03d11e4648054fc8e5028da3838400d61c27a95
