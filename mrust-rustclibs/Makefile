@@ -100,7 +100,7 @@ pre-build:
 
 do-build:
 	( cd ${WRKSRC}/run_rustc;					\
-          for targ in std panic_unwind; do				\
+          for targ in std panic_unwind proc_macro; do			\
 	    MRUSTC_PATH=${RUSTC_S} minicargo -j ${MAKE_JOBS:U1}		\
 	        --vendor-dir ${RUSTC_SRC_VEND}				\
 	        --script-overrides ${MR_OVERRIDES}			\

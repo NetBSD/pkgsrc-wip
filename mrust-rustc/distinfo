@@ -5,4 +5,5 @@ Size (mrustc/998dc164309d7d707e5c1c38dd61c0b95169cbcf-998dc164309d7d707e5c1c38dd
 
 SHA512 (mrustc/rustc-1.54.0-src.tar.gz) = f6a1d925e233ef40351193e5507d74b1aed13ce516679558c246e6b6955a6ef393d7e61e6c51a0c5696a7e40a9dcee026bea938b954f5ea5394854cc3ca67f90
 Size (mrustc/rustc-1.54.0-src.tar.gz) = 170480637 bytes
+SHA1 (patch-.._rustc-1.54.0-src_library_std_src_sys_unix_thread.rs) = 56f21806645071eebccfdbc0fdfdbfc071f59e9e
 SHA1 (patch-minicargo.mk) = ced7229e639261a080379a2155a298798f1b2945

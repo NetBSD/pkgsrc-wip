@@ -4,3 +4,4 @@ SHA512 (mrustc/998dc164309d7d707e5c1c38dd61c0b95169cbcf-998dc164309d7d707e5c1c38
 Size (mrustc/998dc164309d7d707e5c1c38dd61c0b95169cbcf-998dc164309d7d707e5c1c38dd61c0b95169cbcf.zip) = 1454068 bytes
 SHA1 (patch-Makefile) = 3ff1523b9475f4e5667c3a5c17026afef9ce2f90
 SHA1 (patch-src_hir__conv_constant__evaluation.cpp) = dae575bff16aa41aba4bfd80474b7b2054fadf84
+SHA1 (patch-src_main.cpp) = 1bf2a1f391ec15d39c5e56ce7eed42fbd47dc40a

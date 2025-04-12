@@ -8,6 +8,7 @@ lib/mrust/rustc/libhashbrown-0_11_0_H328.rlib
 lib/mrust/rustc/liblibc-0_2_95_H19.rlib
 lib/mrust/rustc/libpanic_abort.rlib
 lib/mrust/rustc/libpanic_unwind.rlib
+lib/mrust/rustc/libproc_macro.rlib
 lib/mrust/rustc/librustc_demangle-0_1_19_H3.rlib
 lib/mrust/rustc/librustc_std_workspace_alloc-1_99_0.rlib
 lib/mrust/rustc/librustc_std_workspace_core-1_99_0.rlib
