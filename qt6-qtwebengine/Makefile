@@ -6,7 +6,7 @@ COMMENT=	Qt6 webengine module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
-CMAKE_GENERATOR=		ninja
+CMAKE_GENERATOR=	ninja
 
 .include "../../x11/qt6-qtbase/Makefile.common"
 
@@ -80,17 +80,7 @@ NOT_PAX_MPROTECT_SAFE+=	qt6/libexec/QtWebEngineProcess
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
 # with hooks to use them from the system.
-###GN_SYSTEM_LIBS=        dav1d
-###GN_SYSTEM_LIBS=		fontconfig
-###GN_SYSTEM_LIBS+=	icu
-###GN_SYSTEM_LIBS+=        libaom
-GN_SYSTEM_LIBS=	libevent
-####GN_SYSTEM_LIBS+=       libjpeg # libjpeg-turbo
-###GN_SYSTEM_LIBS+=        libpng
-###GN_SYSTEM_LIBS+=        libvpx
-#GN_SYSTEM_LIBS+=	libxml
-#GN_SYSTEM_LIBS+=	libxslt
-#GN_SYSTEM_LIBS+=	openh264
+GN_SYSTEM_LIBS=		libevent
 GN_SYSTEM_LIBS+=	opus
 CHROMESRC=		${WRKSRC}/src/3rdparty/chromium
 
