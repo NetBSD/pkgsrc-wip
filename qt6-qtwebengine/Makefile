@@ -10,7 +10,7 @@ CMAKE_GENERATOR=		ninja
 
 .include "../../x11/qt6-qtbase/Makefile.common"
 
-TOOL_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=		gperf>=3.2:../../devel/gperf
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=		${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
