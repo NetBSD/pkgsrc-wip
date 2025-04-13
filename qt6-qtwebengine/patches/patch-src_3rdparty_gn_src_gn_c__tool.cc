@@ -1,5 +1,7 @@
 $NetBSD$
 
+support writing out -L/foo -Wl,-R/foo
+
 --- src/3rdparty/gn/src/gn/c_tool.cc.orig	2024-11-21 04:36:37.000000000 +0000
 +++ src/3rdparty/gn/src/gn/c_tool.cc
 @@ -28,6 +28,7 @@ CTool::CTool(const char* n)

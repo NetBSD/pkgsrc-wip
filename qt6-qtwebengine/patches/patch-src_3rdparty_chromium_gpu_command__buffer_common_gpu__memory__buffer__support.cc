@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
 --- src/3rdparty/chromium/gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-11-21 04:36:37.000000000 +0000
 +++ src/3rdparty/chromium/gpu/command_buffer/common/gpu_memory_buffer_support.cc
 @@ -182,7 +182,7 @@ uint32_t GetPlatformSpecificTextureTarge

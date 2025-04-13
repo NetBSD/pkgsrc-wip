@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
 --- src/3rdparty/chromium/services/device/geolocation/location_arbitrator.cc.orig	2025-01-24 10:49:20.000000000 +0000
 +++ src/3rdparty/chromium/services/device/geolocation/location_arbitrator.cc
 @@ -196,7 +196,7 @@ LocationArbitrator::NewNetworkLocationPr

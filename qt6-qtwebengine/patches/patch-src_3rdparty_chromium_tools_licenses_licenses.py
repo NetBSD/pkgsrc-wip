@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
 --- src/3rdparty/chromium/tools/licenses/licenses.py.orig	2024-11-21 04:36:37.000000000 +0000
 +++ src/3rdparty/chromium/tools/licenses/licenses.py
 @@ -816,6 +816,12 @@ def _GnBinary():

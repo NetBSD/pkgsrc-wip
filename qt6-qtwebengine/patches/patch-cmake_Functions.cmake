@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
 --- cmake/Functions.cmake.orig	2024-11-21 04:36:37.000000000 +0000
 +++ cmake/Functions.cmake
 @@ -416,7 +416,7 @@ function(add_linker_options target build

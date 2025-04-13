@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
 --- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_address_space.cc.orig	2025-01-24 10:49:20.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_address_space.cc
 @@ -421,7 +421,7 @@ void PartitionAddressSpace::UninitThread

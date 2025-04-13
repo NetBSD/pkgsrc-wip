@@ -1,5 +1,9 @@
 $NetBSD$
 
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+  - add sndio
+
 --- src/core/api/configure.cmake.orig	2024-11-21 04:36:37.000000000 +0000
 +++ src/core/api/configure.cmake
 @@ -11,6 +11,7 @@ if(NOT QT_CONFIGURE_RUNNING)
