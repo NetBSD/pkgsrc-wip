@@ -1,2 +1,4 @@
 @comment $NetBSD$
 bin/anubis
+share/examples/anubis/botPolicies.json
+share/examples/anubis/default.env
