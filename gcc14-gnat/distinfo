@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: distinfo,v 1.0 2025/04/14 13:25:00 dkazankov Exp $
 
 BLAKE2s (gcc-14.2.0.tar.xz) = 4cbc121d8d3982be05e1d0621363c6ec4cd34c78007a1af0599559370a93376e
 SHA512 (gcc-14.2.0.tar.xz) = 932bdef0cda94bacedf452ab17f103c0cb511ff2cec55e9112fc0328cbf1d803b42595728ea7b200e0a057c03e85626f937012e49a7515bc5dd256b2bf4bc396
@@ -63,7 +63,7 @@ SHA1 (patch-gcc_config_darwin-protos.h) = cdaa9848139da663d99c0ebe3b1607f81ad972
 SHA1 (patch-gcc_config_darwin.cc) = 8502f81a59ab598ca2c95bce48402eb0faa7142d
 SHA1 (patch-gcc_config_darwin.h) = 572f28da4ed7894a82bd0c26f38a1c3c2ce1b5f6
 SHA1 (patch-gcc_config_darwin.opt) = 1fe22bedc6ae111157506a400ba6835040d6c2fe
-SHA1 (patch-gcc_configure) = 06e3477adb4208aa454f0a4de4679c868e8e51b5
+SHA1 (patch-gcc_configure) = 994d5d8d55ab35c290340e5945ac6fba5f9c9455
 SHA1 (patch-gcc_configure.ac) = abef894c5b5b00a9a6f5a480d01b36e021f87bef
 SHA1 (patch-gcc_cp_decl2.cc) = a49d15680d627b7bae2833ca6eafabf109c2fa5f
 SHA1 (patch-gcc_cp_parser.cc) = 31a5e3ac6ae9fda1559358876b18770f064293cc

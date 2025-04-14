@@ -7,7 +7,7 @@ GCC14_GNAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14
 BUILDLINK_ABI_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14.1
-BUILDLINK_PKGSRCDIR.gcc14-gnat=		../../wip/gcc14-gnat
+BUILDLINK_PKGSRCDIR.gcc14-gnat=		../../lang/gcc14-gnat
 BUILDLINK_DEPMETHOD.gcc14-gnat?=	build
 
 PREPEND_PATH+=	${BUILDLINK_DIR}/gcc14-gnat/bin
@@ -29,8 +29,8 @@ BUILDLINK_LIBDIRS.gcc14-gnat+=	${ADALIB_PREFIX}
 BUILDLINK_LIBDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/adalib
 BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/${GNU_TARGET_MACHINE}/lib
 
-BUILDLINK_CONTENTS_FILTER.gcc14-gnat = ${EGREP} \
-    '(bin/.*|include/.*|lib/.*|libexec/.*|${GNU_TARGET_MACHINE}/lib/.*)'
+BUILDLINK_CONTENTS_FILTER.gcc14-gnat=	${EGREP} \
+					'(bin/.*|include/.*|lib/.*|libexec/.*|${GNU_TARGET_MACHINE}/lib/.*)'
 
 pkgbase := gcc14-gnat
 .include "../../mk/pkg-build-options.mk"

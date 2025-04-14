@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/03/08 13:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.0 2025/04/14 13:25:00 dkazankov Exp $
 
 GCC_PKGNAME=		gcc14
 GCC_DIST_VERSION=	14.2.0
@@ -10,7 +10,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
@@ -91,7 +91,7 @@ SUBST_FILES.fixinc=	gcc/Makefile.in
 SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-*}
 # on NetBSD, use the native SSP code in libc
 CONFIGURE_ARGS+=	--disable-libssp
 # Match base libstdc++ major

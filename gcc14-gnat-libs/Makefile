@@ -15,7 +15,7 @@ CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) support shared libraries
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3

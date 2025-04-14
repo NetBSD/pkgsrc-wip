@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/08 12:02:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.0 2025/04/14 13:25:00 dkazankov Exp $
 gcc14-gnat/bin/ada
 gcc14-gnat/bin/c++
 gcc14-gnat/bin/cpp
@@ -3622,6 +3622,7 @@ gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/cppdefault.h
 gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/cpplib.h
 gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/cselib.h
 gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/ctfc.h
+gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/cumulative-args.h
 gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/d/d-tree.def
 gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/data-streamer.h
 gcc14-gnat/lib/gcc/x86_64--netbsd/${PKGVERSION}/plugin/include/dbgcnt.def
