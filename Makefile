@@ -1,3 +1,4 @@
+
 # $NetBSD$
 
 COMMENT=	Work-in-progress packages
@@ -2337,6 +2338,7 @@ SUBDIR+=	mdbtools
 SUBDIR+=	mdpress
 SUBDIR+=	med
 SUBDIR+=	mediawiki-mode
+SUBDIR+=	megacmd
 SUBDIR+=	meka-git
 SUBDIR+=	melonds
 SUBDIR+=	memdump
