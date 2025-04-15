@@ -10,7 +10,7 @@ BUILDLINK_API_DEPENDS.gcc14-gnat-libs+=	gcc14-gnat-libs>=14.1.0
 .else
 BUILDLINK_API_DEPENDS.gcc14-gnat-libs+=	{gcc14-gnat,gcc14-gnat-libs}>=14.1.0
 .endif
-BUILDLINK_PKGSRCDIR.gcc14-gnat-libs=	../../wip/gcc14-gnat-libs
+BUILDLINK_PKGSRCDIR.gcc14-gnat-libs=	../../lang/gcc14-gnat-libs
 BUILDLINK_DEPMETHOD.gcc14-gnat-libs?=	full
 
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}

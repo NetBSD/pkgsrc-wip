@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD$: PLIST, v 1.0 2025/04/15 08:26:00 dkazankov Exp$
 gcc14-gnat/x86_64--netbsd/lib/ada_target_properties
 gcc14-gnat/x86_64--netbsd/lib/crtbegin.o
 gcc14-gnat/x86_64--netbsd/lib/crtbeginS.o
