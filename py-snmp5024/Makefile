@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/pysnmp/pysnmp
 COMMENT=	SNMP library for Python fixed to older version
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
+
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.2.3:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-smi-[0-9]*:../../wip/py-smi
 
