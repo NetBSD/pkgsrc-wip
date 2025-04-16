@@ -1,0 +1,4 @@
+This is a CFFI-based Python interface for the Net-SNMP C library,
+enabling efficient parallel SNMP communication with large amounts
+of devices from Python. It provides both asynchronous (asyncio)
+and synchronous interfaces.
