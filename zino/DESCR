@@ -1,0 +1,18 @@
+Zino Is Not OpenView.
+
+Zino is an SNMP network based monitor that began its life at Uninett
+in the mid 1990s. It was a home-grown system written in Tcl,
+specifically to monitor the state of the routers of the Norwegian
+national research network (NREN).  This is a re-implementation of
+the server side of this system in Python.
+
+Here's a quote about its features from the README file of the
+original Tcl codebase and which is re-implemented here:
+
+ o Trap-driven polling; receives and interprets traps.
+ o Periodic status polling (by default low frequency).
+ o A simplistic event handling system.
+ o A simple SMTP-like client/server protocol.
+
+Development of Zino 2.0 is fully sponsored by NORDUnet, on behalf
+of all the nordic NRENs.
