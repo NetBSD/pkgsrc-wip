@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pysnmp5024-5.0.24.tar.gz) = fd6ce38aaf7ddcfe27c45259a9c46aa6fcefac2a2a6db2e07f4c8007afe01a55
+SHA512 (pysnmp5024-5.0.24.tar.gz) = 21960c2ad4f9ba5433a5cb1a218b96b6590aa55bea41cde63e89bacb0e15a148ecd2636097ec85929f167ebc00244775e73e4e61e00c8b3e125b11246cbfdc59
+Size (pysnmp5024-5.0.24.tar.gz) = 436740 bytes
