@@ -1,0 +1,67 @@
+=> Checksum BLAKE2s OK for PyQt6_WebEngine-6.8.0.tar.gz
+=> Checksum SHA512 OK for PyQt6_WebEngine-6.8.0.tar.gz
+===> Installing dependencies for py312-PyQt6_WebEngine-6.8.0
+==========================================================================
+The following variables will affect the build process of this package,
+py312-PyQt6_WebEngine-6.8.0.  Their current value is shown below:
+
+        * JPEG_DEFAULT = libjpeg-turbo
+        * PYTHON_VERSION_DEFAULT = 312
+        * SSLBASE = /usr
+        * SSLCERTBUNDLE (not defined)
+        * SSLCERTS = /etc/openssl/certs
+        * SSLDIR = /etc/openssl
+        * SSLKEYS = /etc/openssl/private
+
+Based on these variables, the following variables have been set:
+
+        * JPEGBASE (defined, but empty)
+        * JPEG_TYPE = libjpeg-turbo
+        * PYPACKAGE = python312
+
+You may want to abort the process now with CTRL-C and change the value
+of variables in the first group before continuing.  Be sure to run
+`/usr/bin/make clean' after the changes.
+==========================================================================
+=> Tool dependency py312-sip6-[0-9]*: found py312-sip6-6.10.0nb1
+=> Tool dependency py312-qt-builder-[0-9]*: found py312-qt-builder-1.18.1nb2
+=> Tool dependency py312-build>=0: found py312-build-1.2.2.post1nb1
+=> Tool dependency py312-installer>=0.7.0nb1: found py312-installer-0.7.0nb3
+=> Tool dependency glib2-tools-[0-9]*: found glib2-tools-2.82.5
+=> Tool dependency cwrappers>=20150314: found cwrappers-20220403
+=> Tool dependency checkperms>=1.1: found checkperms-1.12
+=> Build dependency x11-links>=1.36: found x11-links-1.36
+=> Full dependency py312-qt6-[0-9]*: found py312-qt6-6.8.1nb1
+=> Full dependency python312>=3.12.0: found python312-3.12.10
+=> Full dependency qt6-qtbase>=6.8.1: found qt6-qtbase-6.8.3
+=> Full dependency qt6-qtdeclarative>=6.8.1: found qt6-qtdeclarative-6.8.3
+=> Full dependency qt6-qtlocation>=6.8.1: found qt6-qtlocation-6.8.3
+=> Full dependency qt6-qtwebchannel>=6.8.1: found qt6-qtwebchannel-6.8.3
+=> Full dependency qt6-qtwebengine>=6.8.2: found qt6-qtwebengine-6.8.3
+===> Skipping vulnerability checks.
+WARNING: No /usr/pkg/pkgdb/pkg-vulnerabilities file found.
+WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities'.
+===> Overriding tools for py312-PyQt6_WebEngine-6.8.0
+===> Extracting for py312-PyQt6_WebEngine-6.8.0
+===> Patching for py312-PyQt6_WebEngine-6.8.0
+===> Creating toolchain wrappers for py312-PyQt6_WebEngine-6.8.0
+===> Configuring for py312-PyQt6_WebEngine-6.8.0
+/bin/ln -sf /usr/pkg/qt6/bin/qmake /usr/pkgsrc/wip/py-qt6-webengine/work/.buildlink/bin/
+=> Checking for portability problems in extracted files
+===> Building for py312-PyQt6_WebEngine-6.8.0
+* Building wheel...
+Querying qmake about your Qt installation...
+These bindings will be built: QtWebEngineCore, QtWebEngineQuick, QtWebEngineWidgets.
+Generating the QtWebEngineCore bindings...
+Generating the QtWebEngineQuick bindings...
+Generating the QtWebEngineWidgets bindings...
+Generating the .pro file for the QtWebEngineCore module...
+Generating the .pro file for the QtWebEngineQuick module...
+Generating the .pro file for the QtWebEngineWidgets module...
+Generating the top-level .pro file...
+Generating the Makefiles...
+Compiling the project...
+_in_process.py: 'make' failed returning 1
+
+ERROR Backend subprocess exited when trying to invoke build_wheel
+*** Error code 1

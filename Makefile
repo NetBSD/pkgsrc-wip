@@ -4515,6 +4515,7 @@ SUBDIR+=	py-qrng
 SUBDIR+=	py-qstylizer
 SUBDIR+=	py-qsymm
 SUBDIR+=	py-qt-thread-updater
+SUBDIR+=	py-qt6-qtwebengine
 SUBDIR+=	py-qtawesome
 SUBDIR+=	py-qtconsole
 SUBDIR+=	py-qtpy
