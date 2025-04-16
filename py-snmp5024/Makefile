@@ -15,7 +15,7 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.2.3:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-smi-[0-9]*:../../wip/py-smi
 
-CONFLICTS+=	${PYPKGPREFIX}-pysnmp-[0-9]*
+CONFLICTS+=	${PYPKGPREFIX}-snmp-[0-9]*
 
 USE_LANGUAGES=	# none
 
