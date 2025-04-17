@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 
 USE_LANGUAGES=	c c++
 
+WHEEL_ARGS+=	-C=--verbose
+
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
