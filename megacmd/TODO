@@ -1,0 +1,4 @@
+/usr/pkgsrc/wip/megacmd/work/MEGAcmd-2.1.1_Linux/sdk/src/posix/fs.cpp: In member function 'virtual bool mega::PosixFileSystemAccess::getlocalfstype(const mega::LocalPath&, mega::FileSystemType&) const':
+/usr/pkgsrc/wip/megacmd/work/MEGAcmd-2.1.1_Linux/sdk/src/posix/fs.cpp:2485:61: warning: unused parameter 'path' [-Wunused-parameter]
+ 2485 | bool PosixFileSystemAccess::getlocalfstype(const LocalPath& path, FileSystemType& type) const
+      |                                            ~~~~~~~~~~~~~~~~~^~~~
