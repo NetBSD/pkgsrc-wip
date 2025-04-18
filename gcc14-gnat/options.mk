@@ -48,9 +48,9 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
-PREFER.iconv=		pkgsrc
+#PREFER.iconv=		pkgsrc
 .include "../../converters/libiconv/buildlink3.mk"
-PREFER.gettext=		pkgsrc
+#PREFER.gettext=		pkgsrc
 .include "../../devel/gettext-lib/buildlink3.mk"
 #PLIST_VARS+=	nls
 #PLIST.nls=	yes
