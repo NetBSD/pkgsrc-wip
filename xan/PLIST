@@ -63,8 +63,10 @@ share/doc/xan/cmd/url-join.md
 share/doc/xan/cmd/view.md
 share/doc/xan/cmd/vocab.md
 share/doc/xan/cookbook/dates.md
+share/doc/xan/cookbook/dedup.md
 share/doc/xan/cookbook/frequency_tables.md
 share/doc/xan/cookbook/misc.md
+share/doc/xan/cookbook/urls.md
 share/doc/xan/gazettes/1_2023_sep.md
 share/doc/xan/gazettes/2_2023_oct.md
 share/doc/xan/gazettes/3_2023_nov.md
