@@ -126,3 +126,40 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  #ifdef ENABLE_SYNC
  DirNotify* LinuxFileSystemAccess::newdirnotify(LocalNode& root,
      const LocalPath& rootPath,
+@@ -2526,18 +2540,26 @@ bool PosixFileSystemAccess::getlocalfsty
+     }
+ #endif /* __linux__ || __ANDROID__ */
+ 
+-#if defined(__APPLE__) || defined(USE_IOS)
++#if defined(__APPLE__) || defined(USE_IOS) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
++    defined(__NetBSD__) || defined(__DragonFly__)
+     static const map<string, FileSystemType> filesystemTypes = {
+         {"apfs",        FS_APFS},
+         {"exfat",       FS_EXFAT},
++        {"ext2fs",      FS_EXT},
++        {"ffs",         FS_FFS},
++        {"hammer",      FS_HAMMER},
++        {"hammer2",     FS_HAMMER},
+         {"hfs",         FS_HFS},
+         {"msdos",       FS_FAT32},
++        {"msdosfs",     FS_FAT32},
+         {"nfs",         FS_NFS},
+         {"ntfs",        FS_NTFS}, // Apple NTFS
+         {"smbfs",       FS_SMB},
+         {"tuxera_ntfs", FS_NTFS}, // Tuxera NTFS for Mac
++        {"ufs",         FS_UFS},
+         {"ufsd_NTFS",   FS_NTFS},  // Paragon NTFS for Mac
+         {"lifs",        FS_LIFS},  // on macos (in Ventura at least), external USB with exFAT are reported as "lifs"
++        {"zfs",         FS_ZFS},
+     }; /* filesystemTypes */
+ 
+     struct statfs statbuf;
+@@ -2555,7 +2577,7 @@ bool PosixFileSystemAccess::getlocalfsty
+         type = FS_UNKNOWN;
+         return true;
+     }
+-#endif /* __APPLE__ || USE_IOS */
++#endif /* __APPLE__ || USE_IOS || BSDs */
+ 
+     type = FS_UNKNOWN;
+     return false;
