@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (terminology-1.13.0.tar.xz) = e0e7d574b6bc9ade7c4467b698431511c1bf19929d84239c64132a40f113e45c
-SHA512 (terminology-1.13.0.tar.xz) = 95e8f8bdf51e63b07f7bc5bf1aead98b9bd34c58e13df29d4726f1a81e560d071119035aa94218632e840bc5146c3bc475641934eebd6c7e37e00bed94451beb
-Size (terminology-1.13.0.tar.xz) = 2765572 bytes
+BLAKE2s (terminology-1.14.0.tar.xz) = 624868aa6d4a7746def7d4763f97f071f1569565309cddfefbb588f7f45a282f
+SHA512 (terminology-1.14.0.tar.xz) = 872cf0b204d781ff3e284bd79ac82c3bf76444263c9786413d5ac8693bc7d9da5e1a68851c1d51fdcdaa4ccb19cee40b12f152f7a696766e37280c62da4f29e1
+Size (terminology-1.14.0.tar.xz) = 2781300 bytes
