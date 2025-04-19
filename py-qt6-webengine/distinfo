@@ -3,3 +3,5 @@ $NetBSD: distinfo,v 1.2 2022/12/02 15:34:17 wiz Exp $
 BLAKE2s (PyQt6_WebEngine-6.8.0.tar.gz) = 1e667c5d508fddada8c785b1af2864c641a4cd591f367812a5f9315f5f80f4f6
 SHA512 (PyQt6_WebEngine-6.8.0.tar.gz) = f48575829ccf9350ec6e743f2185975706c149dd37b8fbdf5c76bb65f606084b3d3c732ce39bfd35317d1e65659d5ec6e77b489a83c43971b5b3b3ce278bd8dc
 Size (PyQt6_WebEngine-6.8.0.tar.gz) = 34203 bytes
+SHA1 (patch-sip_QtWebEngineCore_qwebengineframe.sip) = bbbdef1ead6580a84ad0b1a25b1de6947802a123
+SHA1 (patch-sip_QtWebEngineCore_qwebenginepage.sip) = 3767edfa26446c53890099f1cbf4a19ac9508632
