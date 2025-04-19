@@ -72,6 +72,7 @@ include/enlightenment/e_gadcon_popup.h
 include/enlightenment/e_gesture.h
 include/enlightenment/e_grab_dialog.h
 include/enlightenment/e_grabinput.h
+include/enlightenment/e_graph.h
 include/enlightenment/e_hints.h
 include/enlightenment/e_icon.h
 include/enlightenment/e_ilist.h
@@ -242,9 +243,12 @@ lib/enlightenment/modules/conf_window_remembers/${PLATFORM}-${MACHINE_ARCH}-${PK
 lib/enlightenment/modules/connman/e-module-connman.edj
 lib/enlightenment/modules/connman/module.desktop
 lib/enlightenment/modules/connman/${PLATFORM}-${MACHINE_ARCH}-${PKGVERSION}/module.so
-${PLIST.cpufreq}lib/enlightenment/modules/cpufreq/e-module-cpufreq.edj
-${PLIST.cpufreq}lib/enlightenment/modules/cpufreq/${PLATFORM}-${MACHINE_ARCH}-${PKGVERSION}/module.so
-${PLIST.cpufreq}lib/enlightenment/modules/cpufreq/module.desktop
+lib/enlightenment/modules/convertible/e-module-convertible.edj
+lib/enlightenment/modules/convertible/${PLATFORM}-${MACHINE_ARCH}-${PKGVERSION}/module.so
+lib/enlightenment/modules/convertible/module.desktop
+${PLIST.linux}lib/enlightenment/modules/cpufreq/e-module-cpufreq.edj
+${PLIST.linux}lib/enlightenment/modules/cpufreq/${PLATFORM}-${MACHINE_ARCH}-${PKGVERSION}/module.so
+${PLIST.linux}lib/enlightenment/modules/cpufreq/module.desktop
 lib/enlightenment/modules/everything/e-module-everything-start.edj
 lib/enlightenment/modules/everything/e-module-everything.edj
 lib/enlightenment/modules/everything/module.desktop

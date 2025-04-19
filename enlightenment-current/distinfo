@@ -1,13 +1,15 @@
 $NetBSD$
 
-BLAKE2s (enlightenment-0.26.0.tar.xz) = fa6d959cd72ff14f34c2f86d2e0bae62853d8d11a84afc7dc630c679ea4afa28
-SHA512 (enlightenment-0.26.0.tar.xz) = 52a656b397348a4f6baa28b9da4b42c81160b06d28dba58c22bdf00bf749aed3a9b194e171a5ac349745a4c11afc8ae8c38f9bf8c31bacbc0d196cfb24b15a1e
-Size (enlightenment-0.26.0.tar.xz) = 409678784 bytes
+BLAKE2s (enlightenment-0.27.1.tar.xz) = 09c2e919c4670ff4ffb8192059c01520abe042ce6ce95ce93aef70a781235326
+SHA512 (enlightenment-0.27.1.tar.xz) = fadec65398c566cba37e1998373db1afb5476589916283b5a7d564bbfa4570ee11bb986546a813d9036e968e581f06bc25e5afc96b19d82b5dc42ccfdfefaf43
+Size (enlightenment-0.27.1.tar.xz) = 409707272 bytes
 SHA1 (patch-data_etc_meson.build) = da003d08faf0634549a264799313be6382956068
 SHA1 (patch-meson.build) = b753950d9ab5aa6d8b596fc7bba0f9dc54a7c197
 SHA1 (patch-src_bin_e__ckpasswd__main.c) = b15d94e48ce9fe377ea8355530f4317ebfa99450
+SHA1 (patch-src_bin_e__signals.c) = e9c5fa656a74d6f304cf15c9a88b62f90701c9f0
 SHA1 (patch-src_bin_e__sys__main.c) = fd525e5ea548cc5276e7624ba1be1df36cb4451b
 SHA1 (patch-src_bin_e__util__suid.h) = 7a1e0b9ccb45f46dae39cdfcd36ccded66193fb1
+SHA1 (patch-src_bin_system_e__system__acpi.c) = 29548d70094755d9727fe70c38cc42f55061fbbd
 SHA1 (patch-src_bin_system_e__system__main.c) = 9777e50cc4114100b8068112d067d69753c786a4
 SHA1 (patch-src_bin_system_e__system__power.c) = 2f53cf670a6eb0ea8d9dbc275454ad9932f524d9
 SHA1 (patch-src_modules_battery_e__mod__main.c) = 89682076005db945ba4aef0e909186ab7e0dc764
