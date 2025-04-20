@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Respect build env
+# Respect standard env vars
 
 --- Makefile.simde.orig	2025-04-18 17:41:47.000000000 +0000
 +++ Makefile.simde
@@ -22,7 +22,8 @@ $NetBSD$
 +		ksw2_exts2_simde.o ksw2_ll_simde.o jump.o
  PROG=		minimap2
  PROG_EXTRA=	sdust minimap2-lite
- LIBS=		-lm -lz -lpthread
+-LIBS=		-lm -lz -lpthread
++LDFLAGS+=	-lm -lz -lpthread
  
 +PREFIX?=	/usr/local
 +MAN1DIR?=	${PREFIX}/man/man1
@@ -35,8 +36,18 @@ $NetBSD$
  
  ifneq ($(arm_neon),) # if arm_neon is defined
  ifeq ($(aarch64),)   #if aarch64 is not defined
-@@ -26,7 +39,7 @@ ifneq ($(tsan),)
- 	LIBS+=-fsanitize=thread
+@@ -18,15 +31,15 @@ endif
+ 
+ ifneq ($(asan),)
+ 	CFLAGS+=-fsanitize=address
+-	LIBS+=-fsanitize=address
++	LDFLAGS+=-fsanitize=address
+ endif
+ 
+ ifneq ($(tsan),)
+ 	CFLAGS+=-fsanitize=thread
+-	LIBS+=-fsanitize=thread
++	LDFLAGS+=-fsanitize=thread
  endif
  
 -.PHONY:all extra clean depend
@@ -44,6 +55,19 @@ $NetBSD$
  .SUFFIXES:.c .o
  
  .c.o:
+@@ -37,10 +50,10 @@ all:$(PROG)
+ extra:all $(PROG_EXTRA)
+ 
+ minimap2:main.o libminimap2.a
+-		$(CC) $(CFLAGS) main.o -o $@ -L. -lminimap2 $(LIBS)
++		$(CC) $(CFLAGS) main.o -o $@ -L. -lminimap2 $(LDFLAGS)
+ 
+ minimap2-lite:example.o libminimap2.a
+-		$(CC) $(CFLAGS) $< -o $@ -L. -lminimap2 $(LIBS)
++		$(CC) $(CFLAGS) $< -o $@ -L. -lminimap2 $(LDFLAGS)
+ 
+ libminimap2.a:$(OBJS)
+ 		$(AR) -csru $@ $(OBJS)
 @@ -60,8 +73,27 @@ ksw2_extd2_simde.o:ksw2_extd2_sse.c ksw2
  ksw2_exts2_simde.o:ksw2_exts2_sse.c ksw2.h kalloc.h
  		$(CC) -c $(CFLAGS) -msse4.1 $(CPPFLAGS) $(INCLUDES) $< -o $@

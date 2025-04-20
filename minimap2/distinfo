@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (minimap2-2.29.tar.gz) = 9db51992b4fe24f57a1363d28c2ccb393abd59949543b711902dd1c178e6690e
 SHA512 (minimap2-2.29.tar.gz) = 5f299cf9a268fab2e58fb915ffac139bfc95b237da0dc084298ff085e39e064e8ffa3f4c1d9f7275feefa917ccded6c9e32a8306558a3fe29a3085581f93c69d
 Size (minimap2-2.29.tar.gz) = 269107 bytes
-SHA1 (patch-Makefile.simde) = 2fd6239d148be24692c876bdc44e371f6c1166d9
+SHA1 (patch-Makefile.simde) = 599fd3841a1d7c628c759fb6546dc985bb36a5a7
 SHA1 (patch-example.c) = ccf0c4addfece2e11b90f5a558a6de324f255d7c
