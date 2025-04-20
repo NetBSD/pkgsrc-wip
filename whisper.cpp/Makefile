@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	whisper.cpp-1.7.4
+DISTNAME=	whisper.cpp-1.7.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggerganov/}
 GITHUB_PROJECT=	whisper.cpp
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ggerganov/whisper.cpp/
 COMMENT=	OpenAI's Whisper LLM inference in C/C++
 LICENSE=	mit
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		git pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
