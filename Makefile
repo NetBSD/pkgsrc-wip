@@ -5032,6 +5032,7 @@ SUBDIR+=	quex
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
 SUBDIR+=	quiterss
+SUBDIR+=	qutebrowser
 SUBDIR+=	qwt6-qt4
 SUBDIR+=	qxmpp
 SUBDIR+=	r8s
