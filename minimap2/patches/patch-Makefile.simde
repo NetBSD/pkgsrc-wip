@@ -1,10 +1,10 @@
 $NetBSD$
 
-# Respect standard env vars
+# Respect build env
 
---- Makefile.simde.orig	2021-11-18 22:11:48 UTC
+--- Makefile.simde.orig	2025-04-18 17:41:47.000000000 +0000
 +++ Makefile.simde
-@@ -1,13 +1,26 @@
+@@ -1,12 +1,25 @@
 -CFLAGS=		-g -Wall -O2 -Wc++-compat #-Wextra
 -CPPFLAGS=	-DHAVE_KALLOC -DUSE_SIMDE -DSIMDE_ENABLE_NATIVE_ALIASES
 -INCLUDES=	-Ilib/simde
@@ -19,7 +19,7 @@ $NetBSD$
 +OBJS=		kthread.o kalloc.o misc.o bseq.o sketch.o sdust.o options.o \
 +		index.o lchain.o align.o hit.o map.o format.o pe.o seed.o \
 +		esterr.o splitidx.o ksw2_extz2_simde.o ksw2_extd2_simde.o \
-+		ksw2_exts2_simde.o ksw2_ll_simde.o
++		ksw2_exts2_simde.o ksw2_ll_simde.o jump.o
  PROG=		minimap2
  PROG_EXTRA=	sdust minimap2-lite
  LIBS=		-lm -lz -lpthread
@@ -27,15 +27,14 @@ $NetBSD$
 +PREFIX?=	/usr/local
 +MAN1DIR?=	${PREFIX}/man/man1
 +DATADIR?=	${PREFIX}/share/minimap2
- 
++
 +MKDIR?=		mkdir
 +CP?=		cp	
 +INSTALL?=	install
 +STRIP?=		strip
-+
+ 
  ifneq ($(arm_neon),) # if arm_neon is defined
  ifeq ($(aarch64),)   #if aarch64 is not defined
- 	CFLAGS+=-D_FILE_OFFSET_BITS=64 -mfpu=neon -fsigned-char
 @@ -26,7 +39,7 @@ ifneq ($(tsan),)
  	LIBS+=-fsanitize=thread
  endif
@@ -45,11 +44,15 @@ $NetBSD$
  .SUFFIXES:.c .o
  
  .c.o:
-@@ -61,6 +74,22 @@ ksw2_exts2_simde.o:ksw2_exts2_sse.c ksw2.h kalloc.h
+@@ -60,8 +73,27 @@ ksw2_extd2_simde.o:ksw2_extd2_sse.c ksw2
+ ksw2_exts2_simde.o:ksw2_exts2_sse.c ksw2.h kalloc.h
  		$(CC) -c $(CFLAGS) -msse4.1 $(CPPFLAGS) $(INCLUDES) $< -o $@
  
- # other non-file targets
++jump.o:jump.c ksw2.h kalloc.h
++		$(CC) -c $(CFLAGS) -msse4.1 $(CPPFLAGS) $(INCLUDES) $< -o $@
 +
+ # other non-file targets
+ 
 +
 +install: all
 +	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
@@ -65,6 +68,7 @@ $NetBSD$
 +	${STRIP} ${DESTDIR}${PREFIX}/bin/minimap2
 +	${STRIP} ${DESTDIR}${PREFIX}/bin/minimap2-lite
 +	${STRIP} ${DESTDIR}${PREFIX}/bin/sdust
- 
++
  clean:
  		rm -fr gmon.out *.o a.out $(PROG) $(PROG_EXTRA) *~ *.a *.dSYM build dist mappy*.so mappy.c python/mappy.c mappy.egg*
+ 
