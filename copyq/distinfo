@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2025/01/22 12:10:06 wiz Exp $
-
-BLAKE2s (copyq-10.0.0.tar.gz) = f42a4ec20e297e03e085fd62ec73f47ec9534fcf977ada4bd25ebdd37bb34b7b
-SHA512 (copyq-10.0.0.tar.gz) = e53254f2394b062955484bc176c002168a64b580159915bfab07f53a9227371821c4f8c7d66fab9a477c4613e5d50f47c19038a52828fa459f5a086ae64dba42
-Size (copyq-10.0.0.tar.gz) = 3456331 bytes
