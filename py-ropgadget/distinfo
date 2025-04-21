@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (ROPGadget-6.5.tar.gz) = 2cef9d9940125cd9c8e10d2af013ca89b208ced0
-SHA512 (ROPGadget-6.5.tar.gz) = 8d714160519189de6fcd9dfef6791283efe0dc82db163c071fa4faf31a4e47d6b4fecd2fbca2516a0b8cd76a86b9abc1e41a35482d13ce8440acc0f381aebccb
-Size (ROPGadget-6.5.tar.gz) = 22491 bytes
+BLAKE2s (ropgadget-7.6.tar.gz) = 21649e4e2f26d647f751c00531c3678caded540a1920532ed3d109dc815e6156
+SHA512 (ropgadget-7.6.tar.gz) = 1adbc9f6412b267862e8f89b694e8ffda2b3140a6c437db2a7025d8117d746f8928120c2f6ac4ae64d1b4c9c4b450539e6fb13678bfefad0af6a027a9193d273
+Size (ropgadget-7.6.tar.gz) = 25848 bytes
