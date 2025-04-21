@@ -3,11 +3,8 @@ bin/whisper-bench
 bin/whisper-cli
 bin/whisper-server
 include/whisper.h
-lib/cmake/ggml/ggml-config.cmake
-lib/cmake/ggml/ggml-version.cmake
 lib/cmake/whisper/whisper-config.cmake
 lib/cmake/whisper/whisper-version.cmake
-lib/libggml-cpu.so
 lib/libwhisper.so
 lib/libwhisper.so.1
 lib/libwhisper.so.${PKGVERSION}

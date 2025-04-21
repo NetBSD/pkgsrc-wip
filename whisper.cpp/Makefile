@@ -42,6 +42,10 @@ SUBST_MESSAGE.findblas=	Fixing libpci soname
 SUBST_FILES.findblas+=	ggml/src/ggml-blas/CMakeLists.txt
 SUBST_SED.findblas+=	-e 's,DepBLAS openblas64,DepBLAS ${BLAS_PC},'
 
+# avoid conflict with llama.cpp
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/lib/libggml-cpu.so
+
 #.include "../../devel/SDL2/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../wip/llama.cpp/buildlink3.mk"
