@@ -8278,11 +8278,11 @@ ${PYSITELIB}/pwnlib/util/web.pyo
 ${PYSITELIB}/pwnlib/version.py
 ${PYSITELIB}/pwnlib/version.pyc
 ${PYSITELIB}/pwnlib/version.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-pwntools.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-pwntools.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pwntools-doc/CHANGELOG.md
 ${PYSITELIB}/pwntools-doc/CONTRIBUTING.md

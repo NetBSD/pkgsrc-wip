@@ -2,6 +2,7 @@
 
 DISTNAME=	pwntools-4.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwntools/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://pwntools.com/
 COMMENT=	CTF framework and exploit development library
 LICENSE=	gnu-gpl-v3 AND 2-clause-bsd AND mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Socks-[0-9]*:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-capstone>=3.0.5:../../devel/py-capstone
