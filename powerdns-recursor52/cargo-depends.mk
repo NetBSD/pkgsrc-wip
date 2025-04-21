@@ -41,5 +41,5 @@ CARGO_CRATE_DEPENDS+=	windows_i686_gnullvm-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.6
-CARGO_CRATE_DEPENDS+=   serde_yaml-0.9.34+deprecated
-CARGO_CRATE_DEPENDS+=   unsafe-libyaml-0.2.11
+CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
+CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.11
