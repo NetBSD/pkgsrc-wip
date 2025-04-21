@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (pyasyncore/asyncore-v1.0.4.tar.gz) = 835fc3e1f979d488a7f31e5f6e7e5d22717bfb4a18c3a3fc991fcfbe86dbb2eb
-SHA512 (pyasyncore/asyncore-v1.0.4.tar.gz) = 726b9d757f242a0fae985d35c6abf7a042ea481bb1d4d1f9c7d842dfdb5f315b71f4dd907b69b8a14c040f8e6e3538da41508f7fc0cce1d06b3a159b6fc00c85
-Size (pyasyncore/asyncore-v1.0.4.tar.gz) = 16000 bytes
