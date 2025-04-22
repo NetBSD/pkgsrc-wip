@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.41 2022/12/11 03:51:54 mef Exp $
+
+BLAKE2s (gdb-16.2.tar.gz) = 258bcab1f0433adad5e4c27eb2559468b1461f67aea7ea78d7dd23203d4df880
+SHA512 (gdb-16.2.tar.gz) = c44a6cf6cdd6e92f1f4dda7d888ce3e7fdde65ca8736092e2b0a4c369ea09b499824a1d078f668f276fa6d00d311e9ec485231cb7b841479a4fabbfd65778084
+Size (gdb-16.2.tar.gz) = 41593955 bytes
+SHA1 (patch-gdb_ppc-netbsd-tdep.c) = ab66190b2098b3eb2888d602c86abfa8012270fe

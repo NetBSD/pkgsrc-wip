@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.6 2020/10/24 18:22:08 kamil Exp $
+lib/libinproctrace.so

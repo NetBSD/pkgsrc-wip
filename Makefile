@@ -1205,6 +1205,7 @@ SUBDIR+=	gconf-cleaner
 SUBDIR+=	gcr4
 SUBDIR+=	gcta
 SUBDIR+=	gdal-docs
+SUBDIR+=	gdb
 SUBDIR+=	gdb-git
 SUBDIR+=	gdb5
 SUBDIR+=	gdb6
