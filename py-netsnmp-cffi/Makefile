@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 
 .if ${MACHINE_PLATFORM:MNetBSD-*}
 TIME_T_CMD=	${CC} -E -dD - </dev/null | \
-		sed -n -e '/__UINT64_TYPE__/s/\#define __UINT64_TYPE__ //p'
+		sed -n -e '/__INT64_TYPE__/s/\#define __INT64_TYPE__ //p'
 TIME_T=		${TIME_T_CMD:sh}
 SUSECONDS_T=	int
 .else
