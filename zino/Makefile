@@ -14,13 +14,13 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.1:../../devel/py-setuptools
 
-DEPENDS+=	${PYPKGPREFIX}-apscheduler-[0-9]*:../../wip/py-apscheduler
-DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.7.0:../../devel/py-pydantic
-DEPENDS+=	${PYPKGPREFIX}-snmp5024-5.0.24{,nb*}:../../wip/py-snmp5024
+DEPENDS+=	${PYPKGPREFIX}-apscheduler>=3.11:../../wip/py-apscheduler
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.11:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-snmp5024>=5.0.24:../../wip/py-snmp5024
 DEPENDS+=	${PYPKGPREFIX}-aiodns-[0-9]*:../../net/py-aiodns
-DEPENDS+=	${PYPKGPREFIX}-netsnmp-cffi>=0.1.1:../../wip/py-netsnmp-cffi
+DEPENDS+=	${PYPKGPREFIX}-netsnmp-cffi>=0.1.1nb1:../../wip/py-netsnmp-cffi
 .if ${PYTHON_VERSION} >= 312
-DEPENDS+=	${PYPKGPREFIX}-pyasyncore-[0-9]*:../../devel/py-pyasyncore
+DEPENDS+=	${PYPKGPREFIX}-asyncore-[0-9]*:../../wip/py-asyncore
 .endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
