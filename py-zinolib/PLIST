@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/zinolib/__init__.py
+${PYSITELIB}/zinolib/__init__.pyc
+${PYSITELIB}/zinolib/__init__.pyo
+${PYSITELIB}/zinolib/ritz.py
+${PYSITELIB}/zinolib/ritz.pyc
+${PYSITELIB}/zinolib/ritz.pyo
+${PYSITELIB}/zinolib/utils.py
+${PYSITELIB}/zinolib/utils.pyc
+${PYSITELIB}/zinolib/utils.pyo
+${PYSITELIB}/zinolib/version.py
+${PYSITELIB}/zinolib/version.pyc
+${PYSITELIB}/zinolib/version.pyo
+${PYSITELIB}/zinolib/zino_emu.py
+${PYSITELIB}/zinolib/zino_emu.pyc
+${PYSITELIB}/zinolib/zino_emu.pyo

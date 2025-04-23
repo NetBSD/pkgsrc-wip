@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (zinolib-0.10.0.tar.gz) = 62aea741c41dad99837d4f3fc6f7c00312b8663662f2cadcec352d8479c16c63
+SHA512 (zinolib-0.10.0.tar.gz) = 6004f973f0316c0f472aa0856cf63816286cfe242e9a7c0b42b0b24cf33d1b311ce09c08a5aeeb37ff49f6c3872b3641851490886188bd6088f72ff1b41b1136
+Size (zinolib-0.10.0.tar.gz) = 26897 bytes
+SHA1 (patch-src_zinolib_utils.py) = 4ea505437b3ef5fa843448c3212362c1a8dd4cb9

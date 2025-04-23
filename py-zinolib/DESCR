@@ -1,0 +1,4 @@
+Python library to connect to zino data and notification channel.
+
+This module implements every function that zino provides via the
+data and notification channel.
