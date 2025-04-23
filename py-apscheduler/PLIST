@@ -1,11 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/apscheduler/__init__.py
 ${PYSITELIB}/apscheduler/__init__.pyc
 ${PYSITELIB}/apscheduler/__init__.pyo
@@ -21,9 +20,6 @@ ${PYSITELIB}/apscheduler/executors/asyncio.pyo
 ${PYSITELIB}/apscheduler/executors/base.py
 ${PYSITELIB}/apscheduler/executors/base.pyc
 ${PYSITELIB}/apscheduler/executors/base.pyo
-${PYSITELIB}/apscheduler/executors/base_py3.py
-${PYSITELIB}/apscheduler/executors/base_py3.pyc
-${PYSITELIB}/apscheduler/executors/base_py3.pyo
 ${PYSITELIB}/apscheduler/executors/debug.py
 ${PYSITELIB}/apscheduler/executors/debug.pyc
 ${PYSITELIB}/apscheduler/executors/debug.pyo
@@ -48,6 +44,9 @@ ${PYSITELIB}/apscheduler/jobstores/__init__.pyo
 ${PYSITELIB}/apscheduler/jobstores/base.py
 ${PYSITELIB}/apscheduler/jobstores/base.pyc
 ${PYSITELIB}/apscheduler/jobstores/base.pyo
+${PYSITELIB}/apscheduler/jobstores/etcd.py
+${PYSITELIB}/apscheduler/jobstores/etcd.pyc
+${PYSITELIB}/apscheduler/jobstores/etcd.pyo
 ${PYSITELIB}/apscheduler/jobstores/memory.py
 ${PYSITELIB}/apscheduler/jobstores/memory.pyc
 ${PYSITELIB}/apscheduler/jobstores/memory.pyo
@@ -99,6 +98,9 @@ ${PYSITELIB}/apscheduler/triggers/__init__.pyo
 ${PYSITELIB}/apscheduler/triggers/base.py
 ${PYSITELIB}/apscheduler/triggers/base.pyc
 ${PYSITELIB}/apscheduler/triggers/base.pyo
+${PYSITELIB}/apscheduler/triggers/calendarinterval.py
+${PYSITELIB}/apscheduler/triggers/calendarinterval.pyc
+${PYSITELIB}/apscheduler/triggers/calendarinterval.pyo
 ${PYSITELIB}/apscheduler/triggers/combining.py
 ${PYSITELIB}/apscheduler/triggers/combining.pyc
 ${PYSITELIB}/apscheduler/triggers/combining.pyo
