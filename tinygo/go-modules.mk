@@ -1,7 +1,7 @@
 # $NetBSD$
 
-GO_MODULE_FILES+=	github.com/aykevl/go-wasm/@v/v0.0.2-0.20240312204833-50275154210c.mod
-GO_MODULE_FILES+=	github.com/aykevl/go-wasm/@v/v0.0.2-0.20240312204833-50275154210c.zip
+GO_MODULE_FILES+=	github.com/aykevl/go-wasm/@v/v0.0.2-0.20240825160117-b76c3f9f0982.mod
+GO_MODULE_FILES+=	github.com/aykevl/go-wasm/@v/v0.0.2-0.20240825160117-b76c3f9f0982.zip
 GO_MODULE_FILES+=	github.com/blakesmith/ar/@v/v0.0.0-20150311145944-8bd4349a67f2.mod
 GO_MODULE_FILES+=	github.com/blakesmith/ar/@v/v0.0.0-20150311145944-8bd4349a67f2.zip
 GO_MODULE_FILES+=	github.com/chromedp/cdproto/@v/v0.0.0-20211126220118-81fa0469ad77.mod
@@ -67,5 +67,5 @@ GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.22.1-0.20240621165957-db513b091504.zi
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.zip
-GO_MODULE_FILES+=	tinygo.org/x/go-llvm/@v/v0.0.0-20240627184919-3b50c76783a8.mod
-GO_MODULE_FILES+=	tinygo.org/x/go-llvm/@v/v0.0.0-20240627184919-3b50c76783a8.zip
+GO_MODULE_FILES+=	tinygo.org/x/go-llvm/@v/v0.0.0-20250119132755-9dca92dfb4f9.mod
+GO_MODULE_FILES+=	tinygo.org/x/go-llvm/@v/v0.0.0-20250119132755-9dca92dfb4f9.zip

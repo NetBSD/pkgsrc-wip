@@ -1,8 +1,8 @@
 $NetBSD$
 
---- main.go.orig	2023-09-21 06:03:16.000000000 +0000
+--- main.go.orig	2025-03-19 06:32:48.000000000 +0000
 +++ main.go
-@@ -1039,6 +1039,31 @@ func findFATMounts(options *compileopts.
+@@ -1060,6 +1060,31 @@ func findFATMounts(options *compileopts.
  			})
  		}
  		return points, nil
@@ -33,8 +33,8 @@ $NetBSD$
 +		return points, nil
  	case "windows":
  		// Obtain a list of all currently mounted volumes.
- 		cmd := executeCommand(options, "wmic",
-@@ -1084,6 +1109,8 @@ func getDefaultPort(portFlag string, usb
+ 		cmd := executeCommand(options, "powershell", "-c",
+@@ -1104,6 +1129,8 @@ func getDefaultPort(portFlag string, usb
  	switch runtime.GOOS {
  	case "freebsd":
  		ports, err = filepath.Glob("/dev/cuaU*")
