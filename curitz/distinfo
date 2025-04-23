@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (curitz-0.9.21.tar.gz) = 4740d7d04e496aa051d02cb6c584f6c47c678a4f55fd8295fb03ce5f28173965
+SHA512 (curitz-0.9.21.tar.gz) = baf0f1c2b06d4acfa86509e6daf2f97a3f8715c6d2424af607e8a4aae0bca628e5087d350cb206299e3cc0caa7ca99a17eb7b2b5411f676574da4833f0d834e4
+Size (curitz-0.9.21.tar.gz) = 20462 bytes
