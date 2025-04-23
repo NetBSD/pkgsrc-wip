@@ -13,6 +13,7 @@ bin/auto-dreckly-prefix
 bin/auto-dreckly-remote-x11
 bin/auto-dreckly-setup
 bin/auto-dreckly-update
+bin/auto-dreckly-wip-checkout
 bin/auto-fastest-mirror
 bin/auto-fetch-install-media
 bin/auto-get-ip
