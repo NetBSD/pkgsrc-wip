@@ -1,0 +1,37 @@
+$NetBSD$
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/pkg/lib/python3.13/site-packages/installer/__main__.py", line 105, in <module>
+    _main(sys.argv[1:], "python -m installer")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.13/site-packages/installer/__main__.py", line 101, in _main
+    installer.install(source, destination, {})
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.13/site-packages/installer/_core.py", line 109, in install
+    record = destination.write_file(
+        scheme=scheme,
+    ...<2 lines>...
+        is_executable=is_executable,
+    )
+  File "/usr/pkg/lib/python3.13/site-packages/installer/destinations.py", line 203, in write_file
+    return self.write_to_fs(
+           ~~~~~~~~~~~~~~~~^
+        scheme, path_, stream_with_different_shebang, is_executable
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/pkg/lib/python3.13/site-packages/installer/destinations.py", line 167, in write_to_fs
+    raise FileExistsError(message)
+FileExistsError: File already exists: /scratch/mail/offlineimap3/work/.destdir/usr/pkg/bin/offlineimap
+
+--- pyproject.toml.orig	2025-04-23 15:36:44.841097452 +0000
++++ pyproject.toml
+@@ -51,6 +51,3 @@ keyring = ["keyring"]
+ cygwin = ["portalocker[cygwin]"]
+ kerberos = ["gssapi[kerberos]"]
+ testinternet = ["certifi~=2020.6.20"]
+-
+-[project.scripts]
+-offlineimap = "offlineimap.init:main"
