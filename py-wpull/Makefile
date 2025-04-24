@@ -21,10 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-yapsy-[0-9]*:../../wip/py-yapsy
 
 .include "../../wip/python/distutils.mk"
 
-.if ${PYVERSSUFFIX} == "3.4" || ${PYVERSSUFFIX} == "3.5"
-DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
-.endif
-
 PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

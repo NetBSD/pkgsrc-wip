@@ -17,17 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.18.5:../../devel/py-ruamel-yaml
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 39
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.4.0:../../devel/py-importlib-resources
-.endif
-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0:../../textproc/py-tomli
 .endif
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# only for Python 3
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
