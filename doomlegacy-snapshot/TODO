@@ -48,8 +48,9 @@ Part 31: Problem with melee attack
 
 Part 32: Most MBF21 maps crash the engine
 =========================================
-[ ] Segmentation fault
+[X] Segmentation fault
     => Reported in bug ticket #698
+    => Works now with SVN revision 1748 at least for some MBF21 maps
 
 
 EOF
