@@ -13,7 +13,7 @@ CMAKE_GENERATOR=	ninja
 AUDIOIO=			kikadf-chromium-audioio-v130.0.tar.gz
 DISTFILES+=			${DEFAULT_DISTFILES}
 DISTFILES+=			${AUDIOIO}
-SITES.${AUDIOIO}=		${MASTER_SITE_GITHUB:=kikadf/chromium-audioio/archive/v130.0.tat.gz}
+SITES.${AUDIOIO}=		${MASTER_SITE_GITHUB:=kikadf/chromium-audioio/archive/v130.0.tar.gz}
 EXTRACT_DIR.${AUDIOIO}=		${WRKSRC}/src/3rdparty/chromium/media/audio/audioio
 EXTRACT_OPTS_TAR.${AUDIOIO}=	--strip-components=1
 
