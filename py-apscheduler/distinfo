@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (apscheduler-3.11.0.tar.gz) = 8b4e31db754cafb69c76ae0f72d4d34243077e144a1516f8bf039dc41d9557bf
-SHA512 (apscheduler-3.11.0.tar.gz) = 356337e751a90c86344e073fb8b5c1ff9373b1ee9e77459b37edac7d6a60f9d4fe3521c85245e4e53b71ce7175f287f6f5b0c6cfc0d9863b416240e4b885121d
-Size (apscheduler-3.11.0.tar.gz) = 100883 bytes
+BLAKE2s (apscheduler-3.11.0.tar.gz) = 7524994666708af69cee5dc355e59325ea644bbf4a6776a5da243462c74d53f0
+SHA512 (apscheduler-3.11.0.tar.gz) = c66d87773d3fe353e5f0bbc4bc9ba05337b555db0810e42e2e384fd9717438fda501d0c724cd7180010b11e5d8db901922b79a163aec3a420a6a65eafb6f39f6
+Size (apscheduler-3.11.0.tar.gz) = 107347 bytes
