@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/sandbox/policy/sandbox_type.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/sandbox/policy/sandbox_type.cc.orig	2025-03-18 19:28:59.000000000 +0000
 +++ src/3rdparty/chromium/sandbox/policy/sandbox_type.cc
 @@ -38,7 +38,7 @@ bool IsUnsandboxedSandboxType(Sandbox sa
  #endif
@@ -105,7 +105,12 @@ $NetBSD$
      case Sandbox::kZygoteIntermediateSandbox:
  #endif
        NOTREACHED();
-@@ -392,11 +392,11 @@ sandbox::mojom::Sandbox UtilitySandboxTy
+@@ -388,15 +388,15 @@ sandbox::mojom::Sandbox UtilitySandboxTy
+   if (sandbox_string == switches::kScreenAISandbox)
+     return Sandbox::kScreenAI;
+ #endif
+-#if BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    if (sandbox_string == switches::kVideoCaptureSandbox)
      return Sandbox::kVideoCapture;
  #endif

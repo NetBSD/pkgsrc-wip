@@ -6,7 +6,7 @@ $NetBSD$
 
 --- src/3rdparty/chromium/sandbox/policy/freebsd/sandbox_freebsd.h.orig	2024-12-21 10:25:10.567580901 +0000
 +++ src/3rdparty/chromium/sandbox/policy/freebsd/sandbox_freebsd.h
-@@ -0,0 +1,276 @@
+@@ -0,0 +1,278 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -174,6 +174,8 @@ $NetBSD$
 +  // this returns what will actually happen once InitializeSandbox()
 +  // is called from inside these processes.
 +  int GetStatus();
++
++  static std::string GetSandboxTypeInEnglish(sandbox::mojom::Sandbox sandbox_type);
 +
 +  // Returns true if the current process is single-threaded or if the number
 +  // of threads cannot be determined.
