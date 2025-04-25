@@ -10,6 +10,13 @@ CMAKE_GENERATOR=	ninja
 
 .include "../../x11/qt6-qtbase/Makefile.common"
 
+AUDIOIO=			kikadf-chromium-audioio-v130.0.tar.gz
+DISTFILES+=			${DEFAULT_DISTFILES}
+DISTFILES+=			${AUDIOIO}
+SITES.${AUDIOIO}=		${MASTER_SITE_GITHUB:=kikadf/chromium-audioio/archive/v130.0.tat.gz}
+EXTRACT_DIR.${AUDIOIO}=		${WRKSRC}/src/3rdparty/chromium/media/audio/audioio
+EXTRACT_OPTS_TAR.${AUDIOIO}=	--strip-components=1
+
 TOOL_DEPENDS+=		gperf>=3.2:../../devel/gperf
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
@@ -33,6 +40,8 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineQuick.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineWidgets.pc
 
+.include "../../mk/bsd.prefs.mk"
+
 CMAKE_CONFIGURE_ARGS+=		-G Ninja
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_pdf_v8=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_proprietary_codecs=ON
@@ -49,6 +58,13 @@ CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_zlib=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_re2=OFF
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_kerberos=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_vulkan=OFF
+.if ${OPSYS} == "NetBSD"
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_audioio=ON
+.endif
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_sndio=ON
+.endif
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_pulseaudio=ON
 
 CONFIGURE_ENV+=			NINJAFLAGS=-j${_MAKE_JOBS_N:U1}
 
@@ -95,13 +111,12 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ninja -j ${_MAKE_JOBS_N:U1} ${INSTALL_TARGET}
 
-.include "../../mk/bsd.prefs.mk"
-
 .include "../../archivers/minizip/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../audio/libopus/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif

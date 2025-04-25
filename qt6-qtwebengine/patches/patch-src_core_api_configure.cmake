@@ -3,8 +3,9 @@ $NetBSD$
 * Based on OpenBSD's qt6-qtwebengine patches, and
   pkgsrc's qt5-qtwebengine patches
   - add sndio
+  - add audioio
 
---- src/core/api/configure.cmake.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/core/api/configure.cmake.orig	2025-03-18 19:28:59.000000000 +0000
 +++ src/core/api/configure.cmake
 @@ -11,6 +11,7 @@ if(NOT QT_CONFIGURE_RUNNING)
          pkg_check_modules(ALSA alsa IMPORTED_TARGET)
@@ -14,7 +15,7 @@ $NetBSD$
          pkg_check_modules(POPPLER_CPP poppler-cpp IMPORTED_TARGET)
          pkg_check_modules(GBM gbm)
          pkg_check_modules(LIBVA libva>=1.14)
-@@ -87,6 +88,11 @@ qt_feature("webengine-printing-and-pdf" 
+@@ -87,6 +88,16 @@ qt_feature("webengine-printing-and-pdf" 
      AUTODETECT NOT QT_FEATURE_webengine_embedded_build
      CONDITION TARGET Qt::PrintSupport AND QT_FEATURE_printer
  )
@@ -23,10 +24,15 @@ $NetBSD$
 +    AUTODETECT UNIX
 +    CONDITION SNDIO_FOUND
 +)
++qt_feature("webengine-system-audioio" PRIVATE
++    LABEL "Use audioio"
++    AUTODETECT UNIX
++    CONDITION AUDIOIO_FOUND
++)
  qt_feature("webengine-pepper-plugins" PRIVATE
      LABEL "Pepper Plugins"
      PURPOSE "Enables use of Pepper plugins."
-@@ -219,7 +225,10 @@ qt_configure_add_summary_entry(
+@@ -220,7 +231,13 @@ qt_configure_add_summary_entry(
  )
  qt_configure_add_summary_entry(
      ARGS "webengine-system-pulseaudio"
@@ -35,6 +41,9 @@ $NetBSD$
 +)
 +qt_configure_add_summary_entry(
 +    ARGS "webengine-system-sndio"
++)
++qt_configure_add_summary_entry(
++    ARGS "webengine-system-audioio"
  )
  qt_configure_add_summary_entry(ARGS "webengine-v8-context-snapshot")
  qt_configure_add_summary_entry(ARGS "webenginedriver")
