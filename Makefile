@@ -2342,6 +2342,7 @@ SUBDIR+=	mdpress
 SUBDIR+=	med
 SUBDIR+=	mediawiki-mode
 SUBDIR+=	megacmd
+SUBDIR+=	megatools
 SUBDIR+=	meka-git
 SUBDIR+=	melonds
 SUBDIR+=	memdump

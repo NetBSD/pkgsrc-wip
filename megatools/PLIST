@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.3 2020/04/07 14:14:55 maya Exp $
+bin/megacopy
+bin/megadf
+bin/megadl
+bin/megaexport
+bin/megaget
+bin/megals
+bin/megamkdir
+bin/megaput
+bin/megareg
+bin/megarm
+bin/megatest
+bin/megatools
+share/doc/megatools/LICENSE
+share/doc/megatools/NEWS
+share/doc/megatools/README
+share/doc/megatools/TODO
