@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (kaleido-1.0.0rc11.tar.gz) = d4cf4c22b64d33e07cfe48d24db19ca567cd6c53c83d1c0d35dde2ac535dcc6f
+SHA512 (kaleido-1.0.0rc11.tar.gz) = 6b45f3b712581be0a33952339e59fb7638b749812bc03f51be309aa353d5c806dcb4bf76ad4d55fbf71c40949154fd13440d38bb6e403f19c7a54cfb8b7d6283
+Size (kaleido-1.0.0rc11.tar.gz) = 45951 bytes
+SHA1 (patch-pyproject.toml) = 0144984420e812d1b8f46a3c57f15ae84be39164
