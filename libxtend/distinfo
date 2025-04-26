@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libxtend-0.2.0.46-a811befc4e694dbd4d7c8e6c01b033a057edaf7a.tar.gz) = d46f19c4ab247c3fbc8dcb617534843ecfcef8d0bfb38830e8c41b1440f68359
-SHA512 (libxtend-0.2.0.46-a811befc4e694dbd4d7c8e6c01b033a057edaf7a.tar.gz) = c21078902e47c8735010eca2c224ef25c2bd341badcf07a85e8f6a225a2c9ab268b1582f23ea3790ca90eb920fbc75e08c643d5ea9ad86a8fc3c5d1dc7120265
-Size (libxtend-0.2.0.46-a811befc4e694dbd4d7c8e6c01b033a057edaf7a.tar.gz) = 104776 bytes
+BLAKE2s (libxtend-0.2.1.tar.gz) = ad126a9e0f59896f7e89832d5c6b2b2b28503abc09ec5eb84494cd48d151d0c1
+SHA512 (libxtend-0.2.1.tar.gz) = 8d8ab2b3765d84e321d7c9c22a3912db32ca5d63fc1acd657eefc4f3f23a1c0d30b89df0c7f56f00ca275c2c2f619292e63fdd1cdcde5d152a7529ec837d2a8c
+Size (libxtend-0.2.1.tar.gz) = 105018 bytes
