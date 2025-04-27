@@ -2,6 +2,9 @@
 bin/deskflow
 bin/deskflow-client
 bin/deskflow-server
+man/man1/deskflow-client.1
+man/man1/deskflow-server.1
+man/man1/deskflow.1
 share/applications/org.deskflow.deskflow.desktop
 share/icons/hicolor/512x512/apps/org.deskflow.deskflow.png
 share/licenses/deskflow/LICENSE

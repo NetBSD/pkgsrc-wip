@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	deskflow-1.20.1
+DISTNAME=	deskflow-1.21.2
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,9 +28,8 @@ SITES.toml-${TOMLPP_VERSION}.hpp=	\
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	src/lib/arch/unix/ArchFileUnix.cpp
-SUBST_SED.paths=	-e 's,"/etc","${PKG_SYSCONFDIR}",g'
-SUBST_SED.paths+=	-e 's,"/usr/bin","${PREFIX}/bin",g'
+SUBST_FILES.paths=	src/lib/common/Settings.h
+SUBST_SED.paths=	-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/${CMAKE_BUILD_DIR}/include/CLI
