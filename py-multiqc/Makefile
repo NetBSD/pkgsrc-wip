@@ -14,8 +14,7 @@ LICENSE=	gnu-gpl-v3
 # kaleido dep choreographer only works with chrome as of 2024-11-24
 DEPENDS+=	${PYPKGPREFIX}-humanize-[0-9]*:../../textproc/py-humanize
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-orca-[0-9]*:../../devel/py-orca
-DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-kaleido-[0-9]*:../../wip/py-kaleido
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.7.0:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-typeguard-[0-9]*:../../devel/py-typeguard
