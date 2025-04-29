@@ -1,0 +1,14 @@
+ruff git dependencies need to be manually downloaded.
+
+Fails to build with
+
+   Compiling url v2.5.4
+error[E0554]: `#![feature]` may not be used on the stable release channel
+  --> /scratch/wip/py-pyrefly/work/vendor/static_interner-0.1.1/src/lib.rs:15:1
+   |
+15 | #![feature(offset_of)]
+   | ^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0554`.
+error: could not compile `static_interner` (lib) due to 1 previous error
+

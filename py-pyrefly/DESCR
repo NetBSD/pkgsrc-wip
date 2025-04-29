@@ -1,0 +1,6 @@
+Pyrefly is a static typechecker for Python that helps you catch
+type-related errors before your code runs. It analyzes your Python
+code to ensure type consistency throughout your codebase, making
+your applications more reliable and easier to maintain. Pyrefly
+supports both IDE integration and CLI usage, giving you flexibility
+in how you incorporate type checking into your workflow.
