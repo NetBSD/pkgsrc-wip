@@ -743,6 +743,7 @@ SUBDIR+=	dmd-bin
 SUBDIR+=	dmenu-git
 SUBDIR+=	dmt-ux
 SUBDIR+=	dnrd
+SUBDIR+=	dnsdist
 SUBDIR+=	dns2tcp
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
