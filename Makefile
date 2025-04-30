@@ -5030,6 +5030,7 @@ SUBDIR+=	qtfm
 SUBDIR+=	qtile
 SUBDIR+=	qtractor
 SUBDIR+=	quantlib
+SUBDIR+=	quassel
 SUBDIR+=	quarkcoin
 SUBDIR+=	quex
 SUBDIR+=	quickfix
