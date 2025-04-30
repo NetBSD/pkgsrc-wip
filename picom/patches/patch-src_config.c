@@ -5,7 +5,7 @@ $NetBSD$
   625 | void *parse_window_shader_prefix_with_cwd(const char *src, const char **end, void *) {
       |                                                                              ^~~~~~
 
---- src/config.c.orig	2025-04-30 22:28:32.936786751 +0000
+--- src/config.c.orig	2024-11-13 06:48:38.000000000 +0000
 +++ src/config.c
 @@ -622,7 +622,7 @@ void *parse_window_shader_prefix(const c
  	*end = endptr + 1;
