@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yshui/picom
 COMMENT=	Lightweight compositor for X11 (fork of Compton)
 LICENSE=	mpl-2.0 AND mit
