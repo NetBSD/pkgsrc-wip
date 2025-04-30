@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.29 2025/04/28 19:15:19 tnn Exp $
-
-BLAKE2s (nickle-2.103.tar.xz) = 69a14501cccdbee6317799edeaaa8e61b044f8030ba81caa55ebd9308acd5c19
-SHA512 (nickle-2.103.tar.xz) = e60fa993b0c4d732106fcddfd7139c32bbf8bb443f8032c1344ea668fa0ee3cec1852c9dc674791ddf31220f38da6093d7f7a444341baf107592aef42bd8b9b0
-Size (nickle-2.103.tar.xz) = 2190800 bytes
-SHA1 (patch-meson.build) = ddef6402062da4950d1bcb3fc1bb7102e1baa353
-SHA1 (patch-test_math-tables.sh) = 283036db256dfbc746d6321c1b2902a4cd728bdd
