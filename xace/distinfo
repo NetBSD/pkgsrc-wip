@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/03 17:20:36 bencollver Exp $
-
-RMD160 (xace-0.4.tar.gz) = 3f1b17c319cf36e23508527bc61ab73b0d6316f4
-Size (xace-0.4.tar.gz) = 37417 bytes
-SHA1 (patch-aa) = da18523d3eb902af5c78eafbe977b5ebd6c7d64e
