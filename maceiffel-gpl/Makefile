@@ -10,7 +10,7 @@ COMMENT=	A small Eiffel compiler system
 LICENSE=	(Nethack) General Public License	
 
 WRKSRC=		${WRKDIR}/MacEiffel
-USE_LANGUAGES=  C	
+USE_LANGUAGES=  C++	
 
 INSTALLATION_DIRS=	bin
 
