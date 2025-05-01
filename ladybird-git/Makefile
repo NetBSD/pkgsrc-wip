@@ -18,7 +18,7 @@ USE_TOOLS+=		pkg-config
 
 #CMAKE_CONFIGURE_ARGS+=		-S Ladybird
 # build broken with make
-#CMAKE_GENERATOR=	ninja
+CMAKE_GENERATORS_INCOMPATIBLE=	make
 # TODO: this needs fixing
 ALLOW_NETWORK_ACCESS=	1
 

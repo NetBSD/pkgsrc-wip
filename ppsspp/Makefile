@@ -37,11 +37,11 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_ZSTD=ON
 NOT_PAX_ASLR_SAFE+=	bin/PPSSPPSDL
 NOT_PAX_MPROTECT_SAFE+=	bin/PPSSPPSDL
 
-.include "../../mk/bsd.prefs.mk"
 # wiz 20240314:
 # the ninja generator has problems in some environments:
 # ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
-CMAKE_GENERATOR=	make
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
+
 .include "../../mk/compiler/clang.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"

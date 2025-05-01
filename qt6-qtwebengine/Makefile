@@ -6,7 +6,7 @@ COMMENT=	Qt6 webengine module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
-CMAKE_GENERATOR=	ninja
+CMAKE_GENERATORS_INCOMPATIBLE=	make
 
 .include "../../x11/qt6-qtbase/Makefile.common"
 
