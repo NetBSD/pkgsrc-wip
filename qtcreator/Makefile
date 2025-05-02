@@ -17,7 +17,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake perl
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_PCH=OFF
 
-REPLACE_BASH+=		scripts/deployqtHelper_mac.sh
 REPLACE_BASH+=		src/app/winicons/createicons.sh
 REPLACE_BASH+=		src/libs/qmljs/parser/gen-parser.sh
 REPLACE_BASH+=		src/shared/qbs/tests/auto/blackbox/testdata/badInterpreter/script-ok
@@ -29,8 +28,6 @@ REPLACE_PYTHON+=	tests/system/tools/findUnusedObjects.py
 REPLACE_PYTHON+=	tests/system/tools/objectsToTable.py
 REPLACE_PYTHON+=	scripts/checkInstalledFiles.py
 REPLACE_PYTHON+=	scripts/dependencyinfo.py
-REPLACE_PYTHON+=	scripts/deployqt.py
-REPLACE_PYTHON+=	scripts/packagePlugins.py
 REPLACE_PYTHON+=	scripts/uichanges.py
 
 REPLACE_PERL+=		doc/fixnavi.pl
