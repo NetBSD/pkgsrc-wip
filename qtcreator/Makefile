@@ -17,6 +17,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake perl
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_PCH=OFF
 
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/qtcreator/plugins ${COMPILER_RPATH_FLAG}${PREFIX}/lib/qtcreator
+
 REPLACE_BASH+=		src/app/winicons/createicons.sh
 REPLACE_BASH+=		src/libs/qmljs/parser/gen-parser.sh
 REPLACE_BASH+=		src/shared/qbs/tests/auto/blackbox/testdata/badInterpreter/script-ok
