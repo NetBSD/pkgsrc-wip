@@ -1,0 +1,4 @@
+The GeoIP Update program performs automatic updates of GeoIP2 and
+GeoLite2 binary databases.
+
+CSV databases are not supported.
