@@ -1226,6 +1226,7 @@ SUBDIR+=	genometools
 SUBDIR+=	genus2reduction
 SUBDIR+=	geocode-glib2
 SUBDIR+=	geodiff
+SUBDIR+=	geoipupdate
 SUBDIR+=	geoloc
 SUBDIR+=	gerris
 SUBDIR+=	gerris-snapshot
