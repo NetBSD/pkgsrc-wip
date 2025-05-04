@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (gromit-mpx-1.7.0.tar.gz) = 828d7483e15bdec3af7ca907dfebf506a5043f7ecd558aed50d66b6b7c5e43b7
 SHA512 (gromit-mpx-1.7.0.tar.gz) = 26baee4ec035eb6cd20faea96c6f6790dce2b6aaaed9578a1e975fb0d4b3a9062f0463607ca2ca53add8193aa0c7a2e94b730604d071dcea48a085aa8fdc4797
 Size (gromit-mpx-1.7.0.tar.gz) = 2165825 bytes
-SHA1 (patch-CMakeLists.txt) = 7c3908e3d4b14369f623168b05feb67a1db7d048
+SHA1 (patch-CMakeLists.txt) = 9b45afa4d42e2f2fc8808d11362681b77e4b24c2
 SHA1 (patch-src_coordlist__ops.c) = e3ff1e823b0ca8911d1707f6db12235a54ecc0d2
 SHA1 (patch-src_main.c) = d36a81c81606db81f79a959d47346221ffb1fd27
 SHA1 (patch-src_main.h) = 2335f833410caf5741266b16f64ca6509da02cae

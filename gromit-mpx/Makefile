@@ -13,6 +13,12 @@ USE_TOOLS+=	pkg-config
 
 USE_PKGLOCALEDIR=	yes
 
+BUILD_DEFS+=		PKG_SYSCONFBASE
+
+PKG_SYSCONFSUBDIR=	gromit-mpx
+CONF_FILES+=		${PREFIX}/share/examples/gromit-mpx/gromit-mpx.cfg \
+			${PKG_SYSCONFDIR}/gromit-mpx.cfg
+
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

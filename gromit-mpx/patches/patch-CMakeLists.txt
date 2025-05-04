@@ -1,8 +1,10 @@
 $NetBSD$
 
-Disable appindicator3 support to avoid dbus dependency.
+- Disable appindicator3 support to avoid dbus dependency.
 
-From OpenBSD ports.
+  From OpenBSD ports.
+- Install configuration files under examples directory so they can be handled
+  via pkgsrc properly.
 
 --- CMakeLists.txt.orig	2024-09-09 18:39:05.000000000 +0000
 +++ CMakeLists.txt
@@ -42,3 +44,12 @@ From OpenBSD ports.
      ${xinput_LIBRARIES}
      ${x11_LIBRARIES}
      ${lz4_LIBRARIES}
+@@ -88,7 +80,7 @@ GETTEXT_PROCESS_PO_FILES(pt_BR ALL PO_FI
+ 
+ install(TARGETS ${target_name} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+ install(FILES data/net.christianbeier.Gromit-MPX.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+-install(FILES data/gromit-mpx.cfg DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/gromit-mpx)
++install(FILES data/gromit-mpx.cfg DESTINATION ${CMAKE_INSTALL_DATADIR}/examples/gromit-mpx)
+ install(FILES README.md AUTHORS ChangeLog NEWS.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
+ install(FILES gromit-mpx.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ install(FILES data/net.christianbeier.Gromit-MPX.png data/net.christianbeier.Gromit-MPX.active.png DESTINATION ${CMAKE_INSTALL_DATADIR}/pixmaps)

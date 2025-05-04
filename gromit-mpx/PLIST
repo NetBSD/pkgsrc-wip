@@ -1,12 +1,12 @@
 @comment $NetBSD$
 bin/gromit-mpx
-etc/gromit-mpx/gromit-mpx.cfg
 man/man1/gromit-mpx.1
 share/applications/net.christianbeier.Gromit-MPX.desktop
 share/doc/gromit-mpx/AUTHORS
 share/doc/gromit-mpx/ChangeLog
 share/doc/gromit-mpx/NEWS.md
 share/doc/gromit-mpx/README.md
+share/examples/gromit-mpx/gromit-mpx.cfg
 share/icons/hicolor/scalable/apps/net.christianbeier.Gromit-MPX.active.svg
 share/icons/hicolor/scalable/apps/net.christianbeier.Gromit-MPX.svg
 share/locale/de/LC_MESSAGES/gromit-mpx.mo
