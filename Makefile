@@ -1415,6 +1415,7 @@ SUBDIR+=	greenbone-security-assistant
 SUBDIR+=	gretl
 SUBDIR+=	greybird-theme
 SUBDIR+=	grisbi
+SUBDIR+=	gromit-mpx
 SUBDIR+=	groovy
 SUBDIR+=	grpc-java
 SUBDIR+=	grpcui
