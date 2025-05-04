@@ -27,6 +27,12 @@ ${PYSITELIB}/epub_utils/exceptions.pyo
 ${PYSITELIB}/epub_utils/highlighters.py
 ${PYSITELIB}/epub_utils/highlighters.pyc
 ${PYSITELIB}/epub_utils/highlighters.pyo
-${PYSITELIB}/epub_utils/package.py
-${PYSITELIB}/epub_utils/package.pyc
-${PYSITELIB}/epub_utils/package.pyo
+${PYSITELIB}/epub_utils/package/__init__.py
+${PYSITELIB}/epub_utils/package/__init__.pyc
+${PYSITELIB}/epub_utils/package/__init__.pyo
+${PYSITELIB}/epub_utils/package/metadata.py
+${PYSITELIB}/epub_utils/package/metadata.pyc
+${PYSITELIB}/epub_utils/package/metadata.pyo
+${PYSITELIB}/epub_utils/toc.py
+${PYSITELIB}/epub_utils/toc.pyc
+${PYSITELIB}/epub_utils/toc.pyo

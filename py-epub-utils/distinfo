@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (epub_utils-0.0.0a2.tar.gz) = dc934336eb27fad6e5f25b5aaddc5b0465cf4c91ed2bae9f075cdebe8ff1aabf
-SHA512 (epub_utils-0.0.0a2.tar.gz) = 470e985ccb9e3d0f7b9a664012d79286fc3d3e63a17d0fe17389ad699952eebd46e828138c946c90248f075b75771556eed41e8c5585df8f68b226b47f963a15
-Size (epub_utils-0.0.0a2.tar.gz) = 11699 bytes
+BLAKE2s (epub_utils-0.0.0a3.tar.gz) = 1656ec0d2695dee32e1ebf40e014d7050457fb853842b3fdd08cde88a1a38239
+SHA512 (epub_utils-0.0.0a3.tar.gz) = be22f0eea56706595665fd05abcc798499abbfae91b8f93961ee93d6f023fd27227b708b7f5267282849501e38249ec24226529df26bbe216acf2a8200af8a96
+Size (epub_utils-0.0.0a3.tar.gz) = 13570 bytes

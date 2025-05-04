@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	epub_utils-0.0.0a2
+DISTNAME=	epub_utils-0.0.0a3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/epub_utils/}
