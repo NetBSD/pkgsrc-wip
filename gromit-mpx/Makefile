@@ -15,6 +15,7 @@ USE_PKGLOCALEDIR=	yes
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
