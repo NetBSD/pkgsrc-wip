@@ -1,0 +1,9 @@
+$NetBSD$
+
+Permit to disable appindicator3 support to avoid dbus dependency.
+Inspired by OpenBSD ports.
+
+--- CMakeOptions.txt.orig	2025-05-04 19:18:48.857093871 +0000
++++ CMakeOptions.txt
+@@ -0,0 +1 @@
++option(ENABLE_APPINDICATOR	"Build with appindicator3 support" ON)

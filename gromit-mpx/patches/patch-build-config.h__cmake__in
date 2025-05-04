@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- build-config.h_cmake_in.orig	2025-05-04 19:21:11.175864598 +0000
++++ build-config.h_cmake_in
+@@ -18,6 +18,9 @@
+ 
+ #define SYSCONFDIR "${CMAKE_INSTALL_FULL_SYSCONFDIR}"
+ 
++/* This is defined when appindicator is enabled. */
++#cmakedefine ENABLE_APPINDICATOR 1
++
+ /* This is defined when libappindicator is not libayatana-libappindicator. */
+ #cmakedefine APPINDICATOR_IS_LEGACY 1
+ 
