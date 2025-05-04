@@ -1,0 +1,11 @@
+Gromit-MPX is an on-screen annotation tool that works with any Unix
+desktop environment under X11 as well as Wayland.
+
+Its main use is for making presentations of some application.
+Normally, you would have to move the mouse pointer around the point of
+interest until hopefully everybody noticed it.  With Gromit-MPX, you
+can draw everywhere onto the screen, highlighting some button or area.
+
+The name stands for (GRaphics Over MIscellaneous Things -
+Multi-Pointer-EXtension). It is a multi-pointer port of the original
+Gromit annotation tool by Simon Budig.
