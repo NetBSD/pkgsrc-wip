@@ -1,0 +1,8 @@
+A Python CLI and utility library for manipulating EPUB files.
+
+## Features
+
+- Parse and validate EPUB container and package files
+- Extract metadata like title, author, and identifier
+- Command-line interface for quick file inspection
+- Syntax highlighted XML output

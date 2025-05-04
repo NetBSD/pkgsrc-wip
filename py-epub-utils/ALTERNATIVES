@@ -1,0 +1,1 @@
+bin/epub-utils @PREFIX@/bin/epub-utils-@PYVERSSUFFIX@
