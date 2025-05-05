@@ -1,6 +1,7 @@
 $NetBSD$
 
-BLAKE2s (pwntools-4.13.1.tar.gz) = 5f8183b17b825c518f5ee8adadce91f11a16efba6a1d696311d97941d2ca8b16
-SHA512 (pwntools-4.13.1.tar.gz) = cd4c9e13c27ab5343f0b1c26b03bf0e59dc755ede1ee0d1d2dc4f7a895c5474cefb0d03f581a6ad1b5f573ddd54134d0a9db63a7db6c8a44f2d229fb80f1fe9f
-Size (pwntools-4.13.1.tar.gz) = 5476226 bytes
-SHA1 (patch-pwnlib_tubes_process.py) = a37ab820ba954d638b374752d38c51b737d6cb44
+BLAKE2s (pwntools-4.14.1.tar.gz) = 65d3fc77bed58e87fb530b89cd1f1c334ea086604f54d6db2b96056a0aa7c134
+SHA512 (pwntools-4.14.1.tar.gz) = 7c04cf2f0dad1bfca21baeedd6c92d8c98874af1bb9aee0f78da6a11ca56eb102f0fe77bed7aa287bb2888f88a6d154e7a3327b067efa844fb738ecf4552abbf
+Size (pwntools-4.14.1.tar.gz) = 5612163 bytes
+SHA1 (patch-pwnlib_tubes_process.py) = 4aeaa5bfc2083c363227cef78efd71a9b92be2e8
+SHA1 (patch-pyproject.toml) = 24936c9e1e988109420732d5f37c9fbcbf0b2d34

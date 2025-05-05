@@ -8,17 +8,17 @@ Easily reproducible via:
 
  python3 -c 'import pwn; pwn.process("true")'
 
---- pwnlib/tubes/process.py.orig	2025-04-21 14:06:00.563442247 +0000
+--- pwnlib/tubes/process.py.orig	2025-03-24 12:20:18.000000000 +0000
 +++ pwnlib/tubes/process.py
-@@ -13,6 +13,7 @@ import subprocess
- import sys
+@@ -14,6 +14,7 @@ import sys
  import time
+ from collections import namedtuple
  
 +IS_NETBSD = sys.platform.startswith('netbsd')
  IS_WINDOWS = sys.platform.startswith('win')
  
  if IS_WINDOWS:
-@@ -306,7 +307,26 @@ class process(tube):
+@@ -307,7 +308,26 @@ class process(tube):
              # Create the PTY if necessary
              stdin, stdout, stderr, master, slave = self._handles(*handles)
  
