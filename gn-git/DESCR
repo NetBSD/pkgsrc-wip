@@ -1,0 +1,2 @@
+Generate Ninja is a meta-build system from Google that is currently
+in use by Chromium and some Chromium-related projects like Fuchsia and Skia.
