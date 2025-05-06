@@ -1,0 +1,24 @@
+@comment $NetBSD$
+share/zsh-powerlevel10k/config/p10k-classic.zsh
+share/zsh-powerlevel10k/config/p10k-lean-8colors.zsh
+share/zsh-powerlevel10k/config/p10k-lean.zsh
+share/zsh-powerlevel10k/config/p10k-pure.zsh
+share/zsh-powerlevel10k/config/p10k-rainbow.zsh
+share/zsh-powerlevel10k/config/p10k-robbyrussell.zsh
+share/zsh-powerlevel10k/gitstatus/build.info
+share/zsh-powerlevel10k/gitstatus/gitstatus.plugin.sh
+share/zsh-powerlevel10k/gitstatus/gitstatus.plugin.zsh
+share/zsh-powerlevel10k/gitstatus/gitstatus.prompt.sh
+share/zsh-powerlevel10k/gitstatus/gitstatus.prompt.zsh
+share/zsh-powerlevel10k/gitstatus/install
+share/zsh-powerlevel10k/gitstatus/usrbin/.gitkeep
+share/zsh-powerlevel10k/gitstatus/usrbin/gitstatusd
+share/zsh-powerlevel10k/internal/configure.zsh
+share/zsh-powerlevel10k/internal/icons.zsh
+share/zsh-powerlevel10k/internal/notes.md
+share/zsh-powerlevel10k/internal/p10k.zsh
+share/zsh-powerlevel10k/internal/parser.zsh
+share/zsh-powerlevel10k/internal/wizard.zsh
+share/zsh-powerlevel10k/internal/worker.zsh
+share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+share/zsh-powerlevel10k/powerlevel9k.zsh-theme
