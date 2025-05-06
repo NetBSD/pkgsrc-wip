@@ -1,6 +1,5 @@
 $NetBSD$
 
-BLAKE2s (doctest-2.4.11.tar.gz) = bd9ec768e3a70c479c9b9075b68f044f3292066d708aac38eecf9ef1270f321c
-SHA512 (doctest-2.4.11.tar.gz) = 04425686057079d3f1a6f767c487f1953050f553dbff9fc42b42dde1358fe26e46bf6219881bbfce625f15cb9c229474d82688120eb2cb2b1d8138db0cc91b3c
-Size (doctest-2.4.11.tar.gz) = 2183312 bytes
-SHA1 (patch-examples_executable__dll__and__plugin_CMakeLists.txt) = d708e0d5ef320682d99b12cf0366722691d83243
+BLAKE2s (doctest-2.4.12.tar.gz) = 575c26ff89f5ec11d09d566b6daf64fccbb67ab3fe03c299e7cf01d2a521a8ec
+SHA512 (doctest-2.4.12.tar.gz) = d55aae632e6d66add7b65d0e97bde5063cdae7512836f278613af35957c62dbc6b0b0febbe2eb1eddd334a7a5343faca7357a2eeebbf1428cafffeb5d18e610c
+Size (doctest-2.4.12.tar.gz) = 2188849 bytes
