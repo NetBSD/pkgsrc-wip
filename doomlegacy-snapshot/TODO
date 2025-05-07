@@ -1,30 +1,4 @@
 
-Features and bug fixes up to Part 26 were released with version 1.48.14
-(SVN revision 1660).
-
-
-Part 27: Some bossactions are not Vanilla-compatible
-====================================================
-[X] Player stuck in Atonement (map 01)
-    => Reported upstream in bug ticket #690
-    Proposed patch may break existing WAD files.
-
-
-Part 28: Viewfit setting "Fit_Height" does not work correctly
-=============================================================
-[X] Flats are rendered wrong
-    Setting "Fit_Width" and "Stretch" are not affected.
-    => Reported upstream in bug ticket #692
-    => Fixed with SVN revision 1667
-
-
-Part 29: Bossaction problem with enabled MBF21
-==============================================
-[X] Ultimate Doom map E2M8 does not end after Cyberdemon was killed
-    => Reported in bug ticket #693
-    => Fixed with release 1.48.16
-
-
 Features and bug fixes up to Part 29 were released with version 1.48.16
 (SVN revision 1704).
 
@@ -51,6 +25,10 @@ Part 32: Most MBF21 maps crash the engine
 [X] Segmentation fault
     => Reported in bug ticket #698
     => Works now with SVN revision 1748 at least for some MBF21 maps
+
+
+Features and bug fixes up to Part 32 were released with version 1.48.18
+(SVN revision 1749).
 
 
 EOF
