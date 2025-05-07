@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (aws-lc-1.51.0.tar.gz) = 9592b6a96be1d6a91dcd5dad1f3bc2bf59799fa6b96953d893cee7512bb24079
+SHA512 (aws-lc-1.51.0.tar.gz) = da8248d56fe138929680e00a5cae4f8039f8c79b1d11ab909a5af56d41c672bdaf885d9fd423fb2fe0b4510c010deb31611f79d7dfb038e7debd8b8809bfee02
+Size (aws-lc-1.51.0.tar.gz) = 126899526 bytes

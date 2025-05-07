@@ -271,6 +271,7 @@ SUBDIR+=	avrdude
 SUBDIR+=	awesome6-otf
 SUBDIR+=	awesome6-ttf
 SUBDIR+=	aws-iam-authenticator
+SUBDIR+=	aws-lc
 SUBDIR+=	aws-nuke
 SUBDIR+=	aws-session-manager-plugin
 SUBDIR+=	axe

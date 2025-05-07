@@ -1,0 +1,45 @@
+Test status:
+
+===> Testing for aws-lc-1.51.0
+[0/2] cd /scratch/security/aws-lc/work/aws-lc-1.51.0 && /usr/pkg/bin/cmake -E echo Running\ SSL\ tests && cd ssl/test/runner && /sc...rk/.buildlink/bin/go test -timeout 10m -shim-path /scratch/security/aws-lc/work/aws-lc-1.51.0/cmake-pkgsrc-build/ssl/test/bssl_shim
+Running SSL tests
+go: downloading golang.org/x/crypto v0.10.0
+go: downloading golang.org/x/sys v0.9.0
+0/0/968/1000/5078
+0/0/968/1000/5078
+0/0/969/1000/5078
+0/0/1968/2000/5078
+0/0/1968/2000/5078
+0/0/1968/2000/5078
+0/0/1968/2000/5078
+0/0/1969/2000/5078
+0/0/2968/3000/5078
+0/0/2968/3000/5078
+0/0/2969/3000/5078
+0/0/2970/3000/5078
+0/0/3968/4000/5078
+0/0/3968/4000/5078
+0/0/3969/4000/5078
+0/0/4968/5000/5078
+0/0/4968/5000/5078
+0/0/4969/5000/5078
+Error dispatching connection: shim ID 1355 not found
+FAILED (SignedCertificateTimestampList-Client-DTLS-TLS1)
+unexpected failure: local error 'context deadline exceeded', child error 'exit status 1', stdout:
+
+stderr:
+SSL error: SYSCALL
+Error occurred: errno = 32, description = Broken pipe
+Connection 1 failed.
+
+
+1/0/5078/5078/5078
+
+exit status 1
+FAIL    boringssl.googlesource.com/boringssl/ssl/test/runner    22.426s
+FAILED: CMakeFiles/run_ssl_runner_tests /scratch/security/aws-lc/work/aws-lc-1.51.0/cmake-pkgsrc-build/CMakeFiles/run_ssl_runner_tests
+cd /scratch/security/aws-lc/work/aws-lc-1.51.0 && /usr/pkg/bin/cmake -E echo Running\ SSL\ tests && cd ssl/test/runner && /scratch/security/aws-lc/work/.buildlink/bin/go test -timeout 10m -shim-path /scratch/security/aws-lc/work/aws-lc-1.51.0/cmake-pkgsrc-build/ssl
+/test/bssl_shim
+ninja: build stopped: subcommand failed.
+*** Error code 1
+
