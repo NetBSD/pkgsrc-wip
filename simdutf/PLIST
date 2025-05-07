@@ -14,8 +14,8 @@ lib/cmake/simdutf/simdutf-config.cmake
 lib/cmake/simdutf/simdutfTargets-release.cmake
 lib/cmake/simdutf/simdutfTargets.cmake
 lib/libsimdutf.so
-lib/libsimdutf.so.11
-lib/libsimdutf.so.11.0.0
+lib/libsimdutf.so.21
+lib/libsimdutf.so.21.0.0
 lib/pkgconfig/simdutf.pc
 share/doc/simdutf/LICENSE-APACHE
 share/doc/simdutf/LICENSE-MIT

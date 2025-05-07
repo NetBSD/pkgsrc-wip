@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	simdutf-5.6.0
+DISTNAME=	simdutf-7.0.0
 CATEGORIES=	converters textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simdutf/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
