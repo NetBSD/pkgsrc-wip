@@ -427,7 +427,6 @@ SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	carburetta
 SUBDIR+=	cardpeek
-SUBDIR+=	cargo-c
 SUBDIR+=	cargo-deb
 SUBDIR+=	carla
 SUBDIR+=	cartago
