@@ -1,0 +1,5 @@
+The GNU Compiler Collection (GCC) with Ada support
+
+This package contains GNAT compiler and Ada tools, as well as fronends
+for languages that are explicitly described in Annex B of Ada LRM,
+namely C, C++, Fortran, Cobol

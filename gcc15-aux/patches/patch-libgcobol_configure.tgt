@@ -1,0 +1,24 @@
+$NetBSD: patch-libgcobol_configure.tgt,v 1.1 2025/04/29 06:00:00 dkazankov Exp $
+
+Add NetBSD targets
+
+--- libgcobol/configure.tgt.orig	2025-04-25 08:18:04.000000000 +0000
++++ libgcobol/configure.tgt
+@@ -26,7 +26,7 @@
+ LIBGCOBOL_SUPPORTED=no
+ 
+ case "${target}" in
+-    aarch64*-*-linux*)
++    aarch64*-*-linux* | aarch*-*-netbsd*)
+ 	LIBGCOBOL_SUPPORTED=yes
+ 	;;
+     powerpc64le-*-linux*)
+@@ -39,7 +39,7 @@
+ 		LIBGCOBOL_SUPPORTED=yes
+ 	fi
+ 	;;
+-    x86_64-*-linux* | i?86-*-linux* | x86_64-*-darwin*)
++    x86_64-*-linux* | i?86-*-linux* | x86_64-*-darwin* | x86_64-*-netbsd* | i?86-*-netbsd*)
+ 	if test x$ac_cv_sizeof_void_p = x8; then
+ 		LIBGCOBOL_SUPPORTED=yes
+ 	fi
