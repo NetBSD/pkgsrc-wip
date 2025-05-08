@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (patch-Libraries_LibGfx_PaintingSurface.cpp) = 635e2084b3c5b448778f5a129f47ecc0b6595ac1
+SHA1 (patch-Libraries_LibGfx_SkiaBackendContext.cpp) = 22984a117c3bd98e5fdbd39bfd35b7eb2b00c3c6
+SHA1 (patch-Libraries_LibWeb_Painting_DisplayListPlayerSkia.cpp) = c54ce123363d56ef5f4f80625edececee9b8d8aa
+SHA1 (patch-Libraries_LibWeb_WebGL_Extensions_ANGLEInstancedArrays.cpp) = d663b17a196f590e2baaf6e71c89a81d7b88b3e6
+SHA1 (patch-Libraries_LibWeb_WebGL_Extensions_OESVertexArrayObject.cpp) = 0f78b1eb3f032349174480b330fd99d5456239e5
+SHA1 (patch-Libraries_LibWeb_WebGL_Extensions_WebGLDrawBuffers.cpp) = 6a6fecc6ff18948aa2e449481692ee5b1dc27eee

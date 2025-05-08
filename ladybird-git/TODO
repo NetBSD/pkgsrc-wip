@@ -1,4 +1,6 @@
-Needs skia package to build.
+PNGLoader.cpp:263:9: error: 'png_get_acTL' was not declared in this scope
+The solution for now is to build pkgsrc/graphics/png with this local patch:
+https://hg-edge.mozilla.org/mozilla-central/raw-file/tip/media/libpng/apng.patch
 
 Downloads files during build:
 -- Found Python3: /usr/pkg/bin/python3.11 (found version "3.11.8") found components: Interpreter
