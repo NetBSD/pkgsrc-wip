@@ -34,11 +34,6 @@ find_library(WebP_MUX_LIBRARY
     HINTS ${PC_WEBPMUX_LIBDIR} ${PC_WEBPMUX_LIBRARY_DIRS}
 )
 
-message(WARNING "${WebP_LIBRARY}")
-message(WARNING "${WebP_DECODER_LIBRARY}")
-message(WARNING "${WebP_DEMUX_LIBRARY}")
-message(WARNING "${WebP_MUX_LIBRARY}")
-
 if (WebP_LIBRARY AND NOT TARGET WebP::webp)
     add_library(WebP::webp UNKNOWN IMPORTED GLOBAL)
     set_target_properties(WebP::webp PROPERTIES
