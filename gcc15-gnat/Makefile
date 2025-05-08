@@ -17,8 +17,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
-#CHECK_PIE_SUPPORTED=	no
-#CHECK_RELRO_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
 
 # We really need gcc10-aux as bootstrap compiler only.
 # Although gcc6-aux can no longer be used for this.

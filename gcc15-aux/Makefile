@@ -123,8 +123,8 @@ CONFIGURE_ARGS+=	--enable-languages=ada,c,c++,cobol,fortran --enable-stage1-lang
 #CONFIGURE_ARGS+=	--with-static-standard-libraries
 # This will create slightly slower compiler
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-host-shared
-# Fortran compiler breaks to segmentation fault with --enable-host-pie and --enable-host-bind-now
+# Fortran compiler breaks to segmentation fault with next 3 enables
+#CONFIGURE_ARGS+=	--enable-host-shared
 #CONFIGURE_ARGS+=	--enable-host-pie
 #CONFIGURE_ARGS+=	--enable-host-bind-now
 #CONFIGURE_ARGS+=	--enable-default-pie
