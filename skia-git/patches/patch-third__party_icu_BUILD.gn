@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- third_party/icu/BUILD.gn.orig	2025-05-07 15:55:07.471994538 +0000
++++ third_party/icu/BUILD.gn
+@@ -10,6 +10,7 @@ import("icu.gni")
+ if (skia_use_system_icu) {
+   system("icu") {
+     libs = [ "icuuc" ]
++    include_dirs = [ "@BUILDLINK_PREFIX.icu@/include/unicode" ]
+     defines = [ "U_USING_ICU_NAMESPACE=0" ]
+   }
+ } else {

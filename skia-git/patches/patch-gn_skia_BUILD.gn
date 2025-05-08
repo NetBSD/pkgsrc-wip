@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- gn/skia/BUILD.gn.orig	2025-05-07 14:02:54.000000000 +0000
++++ gn/skia/BUILD.gn
+@@ -406,6 +406,11 @@ config("default") {
+     }
+   }
+ 
++  ldflags += [ "-L@X11BASE@/lib" ]
++  ldflags += [ "-Wl,-R@X11BASE@/lib" ]
++  ldflags += [ "-L/@PREFIX@/lib" ]
++  ldflags += [ "-Wl,-R@PREFIX@/lib" ]
++
+   cflags_objcc += cflags_cc
+ }
+ 

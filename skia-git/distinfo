@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (patch-gn_skia_BUILD.gn) = 39bca4b8dba757869ea6a40714c627f33eff3383
+SHA1 (patch-modules_skcms_BUILD.gn) = 064519f2fd7cfe3cfdae70779416c2aa204098a9
+SHA1 (patch-third__party_externals_piex_src_image__type__recognition_image__type__recognition__lite.cc) = 3f0d9416829866239cde6c2c8c2382d1dcd50002
+SHA1 (patch-third__party_harfbuzz_BUILD.gn) = a704d5deec6345717430b08c78820c01cface7f7
+SHA1 (patch-third__party_icu_BUILD.gn) = 20bfc1be2f919123ec53cd4edd7b9b4fb39fbf39
+SHA1 (patch-third__party_libwebp_BUILD.gn) = 171bafcb57dc7d5f7ba3b52c804d6e7bb8e043bd
+SHA1 (patch-third__party_piex_BUILD.gn) = f30a35c99e77f2d099459ac3fe71194a48efc056

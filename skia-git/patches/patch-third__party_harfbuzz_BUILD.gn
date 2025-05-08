@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/harfbuzz/BUILD.gn.orig	2025-05-07 15:07:01.739465160 +0000
++++ third_party/harfbuzz/BUILD.gn
+@@ -12,7 +12,7 @@ declare_args() {
+ 
+ if (skia_use_system_harfbuzz) {
+   system("harfbuzz") {
+-    include_dirs = [ "/usr/include/harfbuzz" ]
++    include_dirs = [ "@BUILDLINK_PREFIX.harfbuzz@/include/harfbuzz" ]
+     libs = [ "harfbuzz" ]
+     if (skia_pdf_subset_harfbuzz) {
+       libs += [ "harfbuzz-subset" ]

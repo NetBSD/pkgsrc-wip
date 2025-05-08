@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- modules/skcms/BUILD.gn.orig	2025-05-07 20:33:42.345317579 +0000
++++ modules/skcms/BUILD.gn
+@@ -85,12 +85,10 @@ static_library("skcms") {
+   if (!is_win || is_clang) {
+     cflags += [ "-std=c11" ]
+   }
+-  if (target_cpu != "x64" || target_os == "android") {
+-    defines = [
+-      "SKCMS_DISABLE_HSW",
+-      "SKCMS_DISABLE_SKX",
+-    ]
+-  }
++  defines = [
++    "SKCMS_DISABLE_HSW",
++    "SKCMS_DISABLE_SKX",
++  ]
+   public = skcms_public_headers
+   sources = skcms_public + skcms_TransformBaseline
+   deps = [

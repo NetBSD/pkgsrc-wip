@@ -5343,6 +5343,7 @@ SUBDIR+=	sipwitch
 SUBDIR+=	sis
 SUBDIR+=	siscone
 SUBDIR+=	sjg-mk-files
+SUBDIR+=	skia-git
 SUBDIR+=	skinlf
 SUBDIR+=	skint
 SUBDIR+=	skippy-xd

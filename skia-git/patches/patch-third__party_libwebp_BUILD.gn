@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- third_party/libwebp/BUILD.gn.orig	2025-05-07 15:38:00.891268166 +0000
++++ third_party/libwebp/BUILD.gn
+@@ -11,6 +11,7 @@ import("../third_party.gni")
+ 
+ if (skia_use_system_libwebp) {
+   system("libwebp") {
++    include_dirs = [ "@BUILDLINK_PREFIX.libwebp@/include" ]
+     libs = [
+       "webp",
+       "webpdemux",

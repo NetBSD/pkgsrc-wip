@@ -1,0 +1,11 @@
+prefix=@PREFIX@
+libdir=@PREFIX@/lib
+includedir=@PREFIX@/include/skia
+
+Name: skia
+Description: skia
+Version: @PKGVERSION_NOREV@
+
+Requires: fontconfig, harfbuzz, freetype2, gl, libjpeg, libwebp, libwebpdecoder, libwebpmux, zlib
+Libs: -L${libdir} -Wl,-R${libdir} -lskia -lpiex -lskcms
+Cflags: -I${includedir} -I${includedir}/include
