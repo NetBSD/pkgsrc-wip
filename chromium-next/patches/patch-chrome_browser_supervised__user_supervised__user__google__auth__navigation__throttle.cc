@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc
-@@ -34,12 +34,12 @@
+@@ -33,12 +33,12 @@
  #include "chrome/browser/supervised_user/child_accounts/child_account_service_android.h"
  #include "components/signin/public/identity_manager/identity_manager.h"
  #include "ui/android/view_android.h"
@@ -21,7 +21,7 @@ $NetBSD$
  namespace {
  bool IsYouTubeInfrastructureSubframe(content::NavigationHandle* handle) {
    if (handle->GetNavigatingFrameType() != content::FrameType::kSubframe) {
-@@ -161,7 +161,7 @@ SupervisedUserGoogleAuthNavigationThrott
+@@ -160,7 +160,7 @@ SupervisedUserGoogleAuthNavigationThrott
      return content::NavigationThrottle::DEFER;
    }
  

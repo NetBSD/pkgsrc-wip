@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/visited_url_ranking/public/url_visit_util.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/visited_url_ranking/public/url_visit_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/visited_url_ranking/public/url_visit_util.cc
-@@ -66,7 +66,7 @@ PlatformType GetPlatformInput() {
+@@ -67,7 +67,7 @@ PlatformType GetPlatformInput() {
    return PlatformType::kWindows;
  #elif BUILDFLAG(IS_MAC)
    return PlatformType::kMac;

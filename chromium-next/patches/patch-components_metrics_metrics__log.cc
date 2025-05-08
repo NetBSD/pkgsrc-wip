@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_log.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/metrics/metrics_log.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/metrics/metrics_log.cc
-@@ -61,7 +61,7 @@
+@@ -62,7 +62,7 @@
  #include "base/win/current_module.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #endif
-@@ -157,7 +157,7 @@ void RecordCurrentTime(
+@@ -158,7 +158,7 @@ void RecordCurrentTime(
    }
  }
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
-@@ -99,7 +99,7 @@ void OSExchangeDataProviderNonBacked::Se
+@@ -101,7 +101,7 @@ void OSExchangeDataProviderNonBacked::Se
  
  std::optional<std::u16string> OSExchangeDataProviderNonBacked::GetString()
      const {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -259,7 +259,7 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
@@ -24,7 +24,7 @@ $NetBSD$
  // How often to check if the persistent instance of Chrome needs to restart
  // to install an update.
  static const int kUpdateCheckIntervalHours = 6;
-@@ -1133,7 +1133,7 @@ void BrowserProcessImpl::RegisterPrefs(P
+@@ -1145,7 +1145,7 @@ void BrowserProcessImpl::RegisterPrefs(P
                                  GoogleUpdateSettings::GetCollectStatsConsent());
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingAllowed, true);
  
@@ -33,7 +33,7 @@ $NetBSD$
    os_crypt_async::SecretPortalKeyProvider::RegisterLocalPrefs(registry);
  #endif
  }
-@@ -1401,7 +1401,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1413,7 +1413,7 @@ void BrowserProcessImpl::PreMainMessageL
            local_state())));
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -42,7 +42,7 @@ $NetBSD$
    base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    if (cmd_line->GetSwitchValueASCII(password_manager::kPasswordStore) !=
        "basic") {
-@@ -1670,7 +1670,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1682,7 +1682,7 @@ void BrowserProcessImpl::Unpin() {
  }
  
  // Mac is currently not supported.

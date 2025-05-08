@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.cc
 @@ -10,7 +10,7 @@
  #include "chrome/browser/profiles/profile.h"

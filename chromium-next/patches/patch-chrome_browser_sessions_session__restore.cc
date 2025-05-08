@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sessions/session_restore.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/sessions/session_restore.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/sessions/session_restore.cc
 @@ -108,7 +108,7 @@
  #include "ui/wm/core/scoped_animation_disabler.h"

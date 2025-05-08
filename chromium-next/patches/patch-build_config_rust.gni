@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2025-03-31 15:23:48.000000000 +0000
+--- build/config/rust.gni.orig	2025-05-05 19:21:24.000000000 +0000
 +++ build/config/rust.gni
-@@ -177,7 +177,7 @@ if (is_linux || is_chromeos) {
+@@ -178,7 +178,7 @@ if (is_linux || is_chromeos) {
      rust_abi_target = "aarch64-unknown-linux-gnu"
      cargo_target_abi = ""
    } else if (current_cpu == "x86") {
@@ -15,7 +15,7 @@ $NetBSD$
      cargo_target_abi = ""
    } else if (current_cpu == "x64") {
      rust_abi_target = "x86_64-unknown-linux-gnu"
-@@ -297,6 +297,10 @@ if (is_linux || is_chromeos) {
+@@ -346,6 +346,10 @@ if (is_linux || is_chromeos) {
    }
  }
  

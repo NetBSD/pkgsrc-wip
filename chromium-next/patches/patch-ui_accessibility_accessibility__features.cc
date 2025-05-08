@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- ui/accessibility/accessibility_features.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/accessibility/accessibility_features.cc
-@@ -440,7 +440,7 @@ bool IsBlockRootWindowAccessibleNameChan
+@@ -472,7 +472,7 @@ bool IsBlockRootWindowAccessibleNameChan
  }
  #endif  // BUILDFLAG(IS_MAC)
  

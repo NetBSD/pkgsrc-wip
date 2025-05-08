@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/common/pref_names.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/common/pref_names.h
 @@ -1325,7 +1325,7 @@ inline constexpr char kGeminiSettings[] 
  inline constexpr char kAllowedDomainsForApps[] =
@@ -24,7 +24,7 @@ $NetBSD$
  // Boolean that is false if we should show window manager decorations.  If
  // true, we draw a custom chrome frame (thicker title bar and blue border).
  inline constexpr char kUseCustomChromeFrame[] = "browser.custom_chrome_frame";
-@@ -2120,7 +2120,7 @@ inline constexpr char kDownloadDefaultDi
+@@ -2129,7 +2129,7 @@ inline constexpr char kDownloadDefaultDi
  inline constexpr char kDownloadDirUpgraded[] = "download.directory_upgrade";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -33,7 +33,7 @@ $NetBSD$
  inline constexpr char kOpenPdfDownloadInSystemReader[] =
      "download.open_pdf_in_system_reader";
  #endif
-@@ -2613,14 +2613,14 @@ inline constexpr char kMediaStorageIdSal
+@@ -2622,14 +2622,14 @@ inline constexpr char kMediaStorageIdSal
  inline constexpr char kMediaCdmOriginData[] = "media.cdm.origin_data";
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -50,7 +50,7 @@ $NetBSD$
  // Records whether the user has seen an HTTP auth "negotiate" header.
  inline constexpr char kReceivedHttpAuthNegotiateHeader[] =
      "net.received_http_auth_negotiate_headers";
-@@ -2712,7 +2712,7 @@ inline constexpr char kIsolatedWebAppIns
+@@ -2721,7 +2721,7 @@ inline constexpr char kIsolatedWebAppIns
  inline constexpr char kIsolatedWebAppPendingInitializationCount[] =
      "profile.isolated_web_app.install.pending_initialization_count";
  
@@ -59,7 +59,7 @@ $NetBSD$
  // Boolean that specifies whether OK-AS-DELEGATE flag from KDC is respected
  // along with kAuthNegotiateDelegateAllowlist.
  inline constexpr char kAuthNegotiateDelegateByKdcPolicy[] =
-@@ -3236,7 +3236,7 @@ inline constexpr char kDeviceWeeklySched
+@@ -3240,7 +3240,7 @@ inline constexpr char kKioskChromeAppsFo
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -68,7 +68,7 @@ $NetBSD$
  // Defines administrator-set availability of Chrome for Testing.
  inline constexpr char kChromeForTestingAllowed[] = "chrome_for_testing.allowed";
  #endif
-@@ -3764,7 +3764,7 @@ inline constexpr char kScreenCaptureWith
+@@ -3763,7 +3763,7 @@ inline constexpr char kScreenCaptureWith
  inline constexpr char kSandboxExternalProtocolBlocked[] =
      "profile.sandbox_external_protocol_blocked";
  
@@ -77,7 +77,7 @@ $NetBSD$
  // Boolean that indicates if system notifications are allowed to be used in
  // place of Chrome notifications.
  inline constexpr char kAllowSystemNotifications[] =
-@@ -3960,7 +3960,7 @@ inline constexpr char kLensDesktopNTPSea
+@@ -3959,7 +3959,7 @@ inline constexpr char kLensDesktopNTPSea
      "policy.lens_desktop_ntp_search_enabled";
  #endif
  
@@ -86,7 +86,7 @@ $NetBSD$
  // A dict mapping the edition name with the major version it was shown.
  inline constexpr char kWhatsNewEditionUsed[] = "browser.whats_new.edition_used";
  // A list containing the features of each module in order of when they
-@@ -4057,7 +4057,7 @@ inline constexpr char kPrintingOAuth2Aut
+@@ -4056,7 +4056,7 @@ inline constexpr char kPrintingOAuth2Aut
      "printing.oauth2_authorization_servers";
  #endif
  

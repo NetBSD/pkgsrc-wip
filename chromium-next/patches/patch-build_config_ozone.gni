@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/ozone.gni.orig	2025-03-31 15:23:48.000000000 +0000
+--- build/config/ozone.gni.orig	2025-05-05 19:21:24.000000000 +0000
 +++ build/config/ozone.gni
-@@ -81,7 +81,19 @@ declare_args() {
+@@ -80,7 +80,19 @@ declare_args() {
        ozone_platform = "x11"
        ozone_platform_drm = true
        ozone_platform_x11 = true

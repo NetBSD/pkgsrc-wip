@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
-@@ -350,7 +350,7 @@
+@@ -358,7 +358,7 @@
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/idle/idle_service_factory.h"
  #endif
  
-@@ -392,7 +392,7 @@
+@@ -400,7 +400,7 @@
  #endif
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.h"
  #include "chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.h"
  #include "chrome/browser/enterprise/signals/user_permission_service_factory.h"
-@@ -400,7 +400,7 @@
+@@ -408,7 +408,7 @@
  #include "chrome/browser/ui/tabs/saved_tab_groups/saved_tab_group_utils.h"
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD$
  #include "chrome/browser/policy/messaging_layer/util/manual_test_heartbeat_event_factory.h"
  #endif
  
-@@ -408,7 +408,7 @@
+@@ -416,7 +416,7 @@
  #include "chrome/browser/history_embeddings/history_embeddings_service_factory.h"
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD$
  #include "chrome/browser/browser_switcher/browser_switcher_service_factory.h"
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #include "chrome/browser/enterprise/client_certificates/certificate_store_factory.h"
-@@ -722,7 +722,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -730,7 +730,7 @@ void ChromeBrowserMainExtraPartsProfiles
    DiceBoundSessionCookieServiceFactory::GetInstance();
  #endif
  #endif
@@ -51,7 +51,7 @@ $NetBSD$
    browser_switcher::BrowserSwitcherServiceFactory::GetInstance();
  #endif
    browser_sync::UserEventServiceFactory::GetInstance();
-@@ -779,7 +779,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -787,7 +787,7 @@ void ChromeBrowserMainExtraPartsProfiles
    commerce::ShoppingServiceFactory::GetInstance();
    ConsentAuditorFactory::GetInstance();
    ContentIndexProviderFactory::GetInstance();
@@ -60,9 +60,9 @@ $NetBSD$
    contextual_cueing::ContextualCueingServiceFactory::GetInstance();
  #endif
    CookieControlsServiceFactory::GetInstance();
-@@ -834,31 +834,31 @@ void ChromeBrowserMainExtraPartsProfiles
- #endif
+@@ -843,31 +843,31 @@ void ChromeBrowserMainExtraPartsProfiles
    enterprise_connectors::ConnectorsServiceFactory::GetInstance();
+   enterprise_connectors::ReportingEventRouterFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
@@ -98,7 +98,7 @@ $NetBSD$
    enterprise_signin::EnterpriseSigninServiceFactory::GetInstance();
  #endif
  #if BUILDFLAG(ENABLE_SESSION_SERVICE)
-@@ -985,7 +985,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -995,7 +995,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if BUILDFLAG(IS_ANDROID)
    MerchantViewerDataManagerFactory::GetInstance();
  #endif
@@ -107,7 +107,7 @@ $NetBSD$
    metrics::DesktopProfileSessionDurationsServiceFactory::GetInstance();
  #endif
  #if !BUILDFLAG(IS_ANDROID)
-@@ -1101,7 +1101,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1111,7 +1111,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if BUILDFLAG(IS_CHROMEOS)
    policy::PolicyCertServiceFactory::GetInstance();
  #endif
@@ -116,7 +116,7 @@ $NetBSD$
    policy::ProfileTokenPolicyWebSigninServiceFactory::GetInstance();
    policy::UserPolicyOidcSigninServiceFactory::GetInstance();
  #endif
-@@ -1147,7 +1147,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1157,7 +1157,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
    ProfileStatisticsFactory::GetInstance();
  #endif
@@ -125,7 +125,7 @@ $NetBSD$
    ProfileTokenWebSigninInterceptorFactory::GetInstance();
    OidcAuthenticationSigninInterceptorFactory::GetInstance();
  #endif
-@@ -1167,7 +1167,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1177,7 +1177,7 @@ void ChromeBrowserMainExtraPartsProfiles
    ReduceAcceptLanguageFactory::GetInstance();
    RendererUpdaterFactory::GetInstance();
    regional_capabilities::RegionalCapabilitiesServiceFactory::GetInstance();
@@ -134,7 +134,7 @@ $NetBSD$
    reporting::ManualTestHeartbeatEventFactory::GetInstance();
  #endif
  #if !BUILDFLAG(IS_ANDROID)
-@@ -1354,7 +1354,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1368,7 +1368,7 @@ void ChromeBrowserMainExtraPartsProfiles
    WebDataServiceFactory::GetInstance();
    webrtc_event_logging::WebRtcEventLogManagerKeyedServiceFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

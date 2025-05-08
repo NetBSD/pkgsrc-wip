@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/utility/services.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/utility/services.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/utility/services.cc
-@@ -49,7 +49,7 @@
+@@ -48,7 +48,7 @@
  #include "chrome/services/system_signals/mac/mac_system_signals_service.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/services/system_signals/linux/linux_system_signals_service.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -209,7 +209,7 @@ auto RunMacNotificationService(
+@@ -205,7 +205,7 @@ auto RunMacNotificationService(
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD$
  auto RunSystemSignalsService(
      mojo::PendingReceiver<device_signals::mojom::SystemSignalsService>
          receiver) {
-@@ -485,7 +485,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -479,7 +479,7 @@ void RegisterMainThreadServices(mojo::Se
    services.Add(RunWindowsIconReader);
  #endif  // BUILDFLAG(IS_WIN)
  

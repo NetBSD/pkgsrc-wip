@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/enterprise/connectors/core/realtime_reporting_client_base.cc
 @@ -190,7 +190,7 @@ void RealtimeReportingClientBase::Report
      event.mutable_time()->set_nanos((timestamp_millis % 1000) * 1000000);

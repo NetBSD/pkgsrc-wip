@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- printing/printing_features.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ printing/printing_features.h
-@@ -22,7 +22,7 @@ COMPONENT_EXPORT(PRINTING_BASE)
- BASE_DECLARE_FEATURE(kAddPrinterViaPrintscanmgr);
+@@ -24,7 +24,7 @@ COMPONENT_EXPORT(PRINTING_BASE)
+ BASE_DECLARE_FEATURE(kApiPrintingMarginsAndScale);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)

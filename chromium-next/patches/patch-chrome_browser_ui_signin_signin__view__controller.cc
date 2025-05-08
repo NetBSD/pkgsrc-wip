@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/ui/signin/signin_view_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.cc
-@@ -428,7 +428,7 @@ void SigninViewController::ShowModalSync
+@@ -443,7 +443,7 @@ void SigninViewController::ShowModalSync
  void SigninViewController::ShowModalManagedUserNoticeDialog(
      std::unique_ptr<signin::EnterpriseProfileCreationDialogParams>
          create_param) {

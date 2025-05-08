@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8config.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- v8/include/v8config.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ v8/include/v8config.h
 @@ -201,6 +201,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_FUCHSIA) \
@@ -49,7 +49,7 @@ $NetBSD$
  #ifdef V8_OS_MACOS
  # define V8_TARGET_OS_MACOS
  #endif
-@@ -382,6 +404,7 @@ path. Add it with -I<path> to the comman
+@@ -383,6 +405,7 @@ path. Add it with -I<path> to the comman
  #if (defined(_M_X64) || defined(__x86_64__)            /* x64 (everywhere) */  \
       || ((defined(__AARCH64EL__) || defined(_M_ARM64)) /* arm64, but ... */    \
           && !defined(_WIN32)))                         /* not on windows */    \

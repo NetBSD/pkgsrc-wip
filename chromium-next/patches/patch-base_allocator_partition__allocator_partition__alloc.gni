@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-03-31 15:23:48.000000000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
 @@ -89,7 +89,7 @@ if (is_nacl) {
+ # TODO(crbug.com/329199197): Clean this up when experiments are complete.
  use_large_empty_slot_span_ring = true
  
- has_memory_tagging =
--    current_cpu == "arm64" && is_clang && !is_asan && (is_linux || is_android)
-+    current_cpu == "arm64" && is_clang && !is_asan && !is_bsd && (is_linux || is_android)
+-has_memory_tagging = current_cpu == "arm64" && is_clang && !is_asan &&
++has_memory_tagging = current_cpu == "arm64" && is_clang && !is_asan && !is_bsd &&
+                      !is_hwasan && (is_linux || is_android)
  
  declare_args() {
-   # Debug configuration.
-@@ -347,7 +347,7 @@ declare_args() {
+@@ -348,7 +348,7 @@ declare_args() {
  declare_args() {
    # Shadow metadata is still under development and only supports Linux
    # for now.
@@ -24,7 +24,7 @@ $NetBSD$
  }
  
  declare_args() {
-@@ -490,7 +490,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+@@ -491,7 +491,7 @@ assert(!use_asan_backup_ref_ptr || use_r
  # dependencies that use partition_allocator are compiled in AOSP against a
  # version of glibc that does not include pkeys syscall numbers.
  is_pkeys_available =

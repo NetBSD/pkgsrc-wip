@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/supervised_user/google_auth_state_waiter_mixin.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/test/supervised_user/google_auth_state_waiter_mixin.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/test/supervised_user/google_auth_state_waiter_mixin.cc
 @@ -24,7 +24,7 @@ GoogleAuthStateWaiterMixin::GoogleAuthSt
  GoogleAuthStateWaiterMixin::~GoogleAuthStateWaiterMixin() = default;

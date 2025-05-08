@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h
 @@ -19,7 +19,7 @@
  #include "components/keyed_service/core/keyed_service.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/device_signals/core/browser/signals_types.h"
  #endif
  
-@@ -118,7 +118,7 @@ class RealtimeReportingClient : public R
+@@ -113,7 +113,7 @@ class RealtimeReportingClient : public R
        const std::string& dm_token) override;
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
    // DEPRECATED: Use MaybeCollectDeviceSignalsAndReportEvent(Event, ...).
    void MaybeCollectDeviceSignalsAndReportEventDeprecated(
        base::Value::Dict event,
-@@ -168,7 +168,7 @@ class RealtimeReportingClient : public R
+@@ -163,7 +163,7 @@ class RealtimeReportingClient : public R
    base::WeakPtrFactory<RealtimeReportingClient> weak_ptr_factory_{this};
  };
  

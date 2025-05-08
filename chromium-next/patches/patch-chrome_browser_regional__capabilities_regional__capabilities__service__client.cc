@@ -4,27 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/regional_capabilities/regional_capabilities_service_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/regional_capabilities/regional_capabilities_service_client.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/regional_capabilities/regional_capabilities_service_client.cc
-@@ -8,7 +8,7 @@
- #include "base/strings/string_util.h"
- #include "components/country_codes/country_codes.h"
- 
--#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- #include "components/variations/service/variations_service.h"
- #endif
- 
-@@ -20,7 +20,7 @@
- #endif
- 
- namespace regional_capabilities {
--#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- 
- RegionalCapabilitiesServiceClient::RegionalCapabilitiesServiceClient(
-     variations::VariationsService* variations_service)
-@@ -56,7 +56,7 @@ void RegionalCapabilitiesServiceClient::
+@@ -107,7 +107,7 @@ void RegionalCapabilitiesServiceClient::
        base::android::AttachCurrentThread(),
        reinterpret_cast<intptr_t>(heap_callback.release()));
  }
@@ -32,4 +14,4 @@ $NetBSD$
 +#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  void RegionalCapabilitiesServiceClient::FetchCountryId(
      CountryIdCallback on_country_id_fetched) {
-   std::move(on_country_id_fetched).Run(variations_country_id_);
+   std::move(on_country_id_fetched).Run(variations_latest_country_id_);

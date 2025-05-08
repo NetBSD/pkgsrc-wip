@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ash/display/mirror_window_controller.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- ash/display/mirror_window_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ash/display/mirror_window_controller.cc
 @@ -295,7 +295,11 @@ void MirrorWindowController::UpdateWindo
        if (!base::Contains(display_info_list, iter->first,

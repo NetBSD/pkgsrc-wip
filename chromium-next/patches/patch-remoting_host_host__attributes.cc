@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_attributes.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- remoting/host/host_attributes.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/host_attributes.cc
-@@ -105,7 +105,7 @@ std::string GetHostAttributes() {
+@@ -103,7 +103,7 @@ std::string GetHostAttributes() {
    if (media::InitializeMediaFoundation()) {
      result.push_back("HWEncoder");
    }

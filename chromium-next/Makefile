@@ -2,7 +2,7 @@
 
 DISTNAME=			chromium-${VERSION}
 PKGNAME=			${DISTNAME:S/chromium/chromium-next/}
-VERSION=			135.0.7049.52
+VERSION=			136.0.7103.92
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -125,7 +125,7 @@ GN_SYSTEM_LIBS=		dav1d
 GN_SYSTEM_LIBS+=	fontconfig
 GN_SYSTEM_LIBS+=	icu
 GN_SYSTEM_LIBS+=	libaom
-#GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
+GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
 GN_SYSTEM_LIBS+=	libpng
 GN_SYSTEM_LIBS+=	libvpx
 GN_SYSTEM_LIBS+=	libxml
@@ -335,9 +335,9 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 #.include "../../lang/rust/rust.mk"
-.include "../../wip/rust185/rust.mk"
+.include "../../wip/rust186/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
+.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"

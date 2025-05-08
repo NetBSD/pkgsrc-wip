@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/platform.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- third_party/angle/src/common/platform.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/angle/src/common/platform.h
-@@ -26,8 +26,19 @@
+@@ -23,8 +23,19 @@
  #elif defined(__linux__) || defined(EMSCRIPTEN)
  #    define ANGLE_PLATFORM_LINUX 1
  #    define ANGLE_PLATFORM_POSIX 1

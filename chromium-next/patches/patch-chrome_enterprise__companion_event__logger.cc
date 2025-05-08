@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/event_logger.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/enterprise_companion/event_logger.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/enterprise_companion/event_logger.cc
-@@ -124,7 +124,7 @@ proto::EnterpriseCompanionMetadata GetMe
+@@ -126,7 +126,7 @@ proto::EnterpriseCompanionMetadata GetMe
    metadata.set_application_arch(proto::ARM64);
  #endif
  

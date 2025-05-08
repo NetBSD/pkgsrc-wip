@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc
-@@ -31,7 +31,15 @@ bool CheckCmdlineForOrca(const std::stri
+@@ -32,7 +32,15 @@ bool CheckCmdlineForOrca(const std::stri
    std::string cmdline;
    std::stringstream ss(cmdline_all);
    while (std::getline(ss, cmdline, '\0')) {
@@ -22,22 +22,22 @@ $NetBSD$
      if (re2::RE2::PartialMatch(cmdline, orca_regex)) {
        return true;  // Orca was found
      }
-@@ -57,7 +65,9 @@ class BrowserAccessibilityStateImplAural
+@@ -42,6 +50,10 @@ bool CheckCmdlineForOrca(const std::stri
  
- void BrowserAccessibilityStateImplAuralinux::UpdateHistogramsOnOtherThread() {
-   BrowserAccessibilityStateImpl::UpdateHistogramsOnOtherThread();
--
+ // Returns true if Orca is active.
+ bool DiscoverOrca() {
 +#if BUILDFLAG(IS_BSD)
 +  NOTIMPLEMENTED();
++  return false;
 +#else
    // NOTE: this method is run from another thread to reduce jank, since
-   // there's no guarantee these system calls will return quickly. Code that
-   // needs to run in the UI thread can be run in
-@@ -105,6 +115,7 @@ void BrowserAccessibilityStateImplAurali
-   } else {
-     base::debug::ClearCrashKeyString(ax_orca_crash_key);
+   // there's no guarantee these system calls will return quickly.
+   std::unique_ptr<DIR, decltype(&CloseDir)> proc_dir(opendir("/proc"),
+@@ -79,6 +91,7 @@ bool DiscoverOrca() {
    }
+ 
+   return is_orca_active;
 +#endif
  }
  
- void BrowserAccessibilityStateImplAuralinux::UpdateUniqueUserHistograms() {
+ }  // namespace

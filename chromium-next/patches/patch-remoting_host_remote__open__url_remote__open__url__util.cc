@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/remote_open_url_util.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- remoting/host/remote_open_url/remote_open_url_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/remote_open_url/remote_open_url_util.cc
 @@ -29,7 +29,7 @@ const wchar_t kRegisteredApplicationsKey
  #endif  // BUILDFLAG(IS_WIN)

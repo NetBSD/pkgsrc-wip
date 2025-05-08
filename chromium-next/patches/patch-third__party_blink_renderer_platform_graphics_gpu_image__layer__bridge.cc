@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc
-@@ -48,7 +48,7 @@ scoped_refptr<StaticBitmapImage> MakeAcc
+@@ -47,7 +47,7 @@ scoped_refptr<StaticBitmapImage> MakeAcc
  
    const auto paint_image = source->PaintImageForCurrentFrame();
    const auto image_info = paint_image.GetSkImageInfo();

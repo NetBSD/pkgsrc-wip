@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
-@@ -25,7 +25,7 @@ namespace {
+@@ -26,7 +26,7 @@ namespace {
  
  const char* g_preinstalled_app_for_testing = nullptr;
  
@@ -15,7 +15,7 @@ $NetBSD$
  // TODO(b/268221237): Remove this allow-list.
  const char kDefaultAllowedExtensionIds[] =
      "alhngdkjgnedakdlnamimgfihgkmenbh,"
-@@ -107,7 +107,7 @@ bool IsExternalExtensionUninstalled(cont
+@@ -105,7 +105,7 @@ bool IsExternalExtensionUninstalled(cont
    return prefs && prefs->IsExternalExtensionUninstalled(extension_id);
  }
  

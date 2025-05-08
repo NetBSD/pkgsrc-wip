@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/async/browser/secret_portal_key_provider.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/os_crypt/async/browser/secret_portal_key_provider.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/os_crypt/async/browser/secret_portal_key_provider.cc
 @@ -5,7 +5,9 @@
  #include "components/os_crypt/async/browser/secret_portal_key_provider.h"

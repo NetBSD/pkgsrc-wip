@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_switches.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- ui/gl/gl_switches.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gl/gl_switches.cc
 @@ -13,7 +13,7 @@
  #include "base/android/build_info.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include <vulkan/vulkan_core.h>
  #include "third_party/angle/src/gpu_info_util/SystemInfo.h"  // nogncheck
  #endif
-@@ -314,7 +314,7 @@ bool IsDefaultANGLEVulkan() {
+@@ -319,7 +319,7 @@ bool IsDefaultANGLEVulkan() {
      return false;
    }
  #endif  // BUILDFLAG(IS_ANDROID)
@@ -24,7 +24,7 @@ $NetBSD$
    angle::SystemInfo system_info;
    {
      GPU_STARTUP_TRACE_EVENT("angle::GetSystemInfoVulkan");
-@@ -367,7 +367,7 @@ bool IsDefaultANGLEVulkan() {
+@@ -372,7 +372,7 @@ bool IsDefaultANGLEVulkan() {
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  

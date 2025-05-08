@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- remoting/host/chromoting_host.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/chromoting_host.h
 @@ -36,7 +36,7 @@
  #include "remoting/protocol/session_manager.h"
@@ -24,7 +24,7 @@ $NetBSD$
    // Starts running the ChromotingHostServices server and listening for incoming
    // IPC binding requests.
    // Currently only Linux runs the ChromotingHostServices server on the host
-@@ -220,7 +220,7 @@ class ChromotingHost : public ClientSess
+@@ -222,7 +222,7 @@ class ChromotingHost : public ClientSess
    // List of host extensions.
    std::vector<std::unique_ptr<HostExtension>> extensions_;
  

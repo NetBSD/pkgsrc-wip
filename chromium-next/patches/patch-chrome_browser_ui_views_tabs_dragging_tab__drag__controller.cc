@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
-@@ -189,7 +189,7 @@ bool IsWindowDragUsingSystemDragDropAllo
+@@ -190,7 +190,7 @@ bool IsWindowDragUsingSystemDragDropAllo
  
  void UpdateSystemDnDDragImage(TabDragContext* attached_context,
                                const gfx::ImageSkia& image) {
@@ -15,7 +15,7 @@ $NetBSD$
    VLOG(1) << __func__ << " image size=" << image.size().ToString();
    aura::Window* root_window =
        attached_context->GetWidget()->GetNativeWindow()->GetRootWindow();
-@@ -392,7 +392,7 @@ TabDragController::Liveness TabDragContr
+@@ -381,7 +381,7 @@ TabDragController::Liveness TabDragContr
    //     synchronous on desktop Linux, so use that.
    // - ChromeOS Ash
    //     Releasing capture on Ash cancels gestures so avoid it.
@@ -24,7 +24,7 @@ $NetBSD$
    ref->can_release_capture_ = false;
  #endif
    ref->start_point_in_screen_ =
-@@ -954,7 +954,7 @@ TabDragController::Liveness TabDragContr
+@@ -889,7 +889,7 @@ TabDragController::Liveness TabDragContr
        CHECK_EQ(SetCapture(target_context), Liveness::ALIVE);
      }
  
@@ -33,7 +33,7 @@ $NetBSD$
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2097,7 +2097,7 @@ void TabDragController::CompleteDrag() {
+@@ -1914,7 +1914,7 @@ void TabDragController::CompleteDrag() {
      }
  
      // If source window was maximized - maximize the new window as well.
@@ -42,7 +42,7 @@ $NetBSD$
      // Keeping maximized state breaks snap to Grid on Windows when dragging
      // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
      // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2527,7 +2527,7 @@ TabDragController::Liveness TabDragContr
+@@ -2331,7 +2331,7 @@ TabDragController::Liveness TabDragContr
      }
    }
  

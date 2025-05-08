@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- services/network/network_service.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ services/network/network_service.h
-@@ -249,7 +249,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -250,7 +250,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
        const std::vector<ContentSettingPatternSource>& settings) override;
  
    void SetExplicitlyAllowedPorts(const std::vector<uint16_t>& ports) override;
@@ -15,7 +15,7 @@ $NetBSD$
    void SetGssapiLibraryLoadObserver(
        mojo::PendingRemote<mojom::GssapiLibraryLoadObserver>
            gssapi_library_load_observer) override;
-@@ -275,7 +275,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -291,7 +291,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    std::unique_ptr<net::HttpAuthHandlerFactory> CreateHttpAuthHandlerFactory(
        NetworkContext* network_context);
  
@@ -24,7 +24,7 @@ $NetBSD$
    // This is called just before a GSSAPI library may be loaded.
    void OnBeforeGssapiLibraryLoad();
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -531,7 +531,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -547,7 +547,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    // leaking stale listeners between tests.
    std::unique_ptr<net::NetworkChangeNotifier> mock_network_change_notifier_;
  

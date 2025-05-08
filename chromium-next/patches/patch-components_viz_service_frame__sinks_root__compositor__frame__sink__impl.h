@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
-@@ -228,7 +228,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
-   // See comments on `EvictionHandler`.
-   EvictionHandler eviction_handler_;
+@@ -229,7 +229,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
+   base::TimeDelta preferred_frame_interval_ =
+       FrameRateDecider::UnspecifiedFrameInterval();
  
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)

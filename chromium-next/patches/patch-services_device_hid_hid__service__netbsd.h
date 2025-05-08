@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service_netbsd.h.orig	2025-04-11 13:05:49.380624177 +0000
+--- services/device/hid/hid_service_netbsd.h.orig	2025-05-08 12:01:57.804059488 +0000
 +++ services/device/hid/hid_service_netbsd.h
 @@ -0,0 +1,33 @@
 +// Copyright 2022 The Chromium Authors

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
 @@ -65,7 +65,7 @@
  namespace {

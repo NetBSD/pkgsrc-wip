@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/common/chrome_features.cc
 @@ -80,7 +80,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
@@ -42,7 +42,7 @@ $NetBSD$
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -834,7 +834,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
+@@ -898,7 +898,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
               "KAnonymityServiceStorage",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -51,7 +51,7 @@ $NetBSD$
  BASE_FEATURE(kLinuxLowMemoryMonitor,
               "LinuxLowMemoryMonitor",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -847,7 +847,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -911,7 +911,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

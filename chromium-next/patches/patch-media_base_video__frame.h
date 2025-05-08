@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- media/base/video_frame.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ media/base/video_frame.h
 @@ -42,7 +42,7 @@
  #include "ui/gfx/geometry/size.h"
@@ -24,7 +24,7 @@ $NetBSD$
      STORAGE_DMABUFS = 5,  // Each plane is stored into a DmaBuf.
  #endif
      STORAGE_GPU_MEMORY_BUFFER = 6,
-@@ -424,7 +424,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -435,7 +435,7 @@ class MEDIA_EXPORT VideoFrame : public b
        ReleaseMailboxAndGpuMemoryBufferCB mailbox_holder_and_gmb_release_cb,
        base::TimeDelta timestamp);
  
@@ -33,7 +33,7 @@ $NetBSD$
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -737,7 +737,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -748,7 +748,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // wait for the included sync point.
    scoped_refptr<gpu::ClientSharedImage> shared_image() const;
  
@@ -42,7 +42,7 @@ $NetBSD$
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -977,7 +977,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -988,7 +988,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
    bool is_mappable_si_enabled_ = false;
  

@@ -222,3 +222,56 @@ As usual, our ongoing internal security work was responsible for a
 wide range of fixes:
 [407621901]Various fixes from internal audits, fuzzing and other initiatives
 
+* 135.0.7049.84
+This update includes 2 security fixes. Below, we highlight fixes that
+were contributed by external researchers. Please see the Chrome Security
+Page for more information.
+[$4000][405140652] High CVE-2025-3066: Use after free in Site Isolation.
+Reported by Sven Dysthe (@svn-dys) on 2025-03-21
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[409114118] Various fixes from internal audits, fuzzing and other initiatives
+
+* 135.0.7049.95
+This update includes 2 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[TBD][409619251] Critical CVE-2025-3619: Heap buffer overflow
+in Codecs. Reported by Elias Hohl on 2025-04-09
+[TBD][405292639] High CVE-2025-3620: Use after free in USB.
+Reported by @retsew0x01 on 2025-03-21
+
+* 135.0.7049.114
+This update includes 1 security fix. Please see the Chrome Security Page
+for more information.
+Our ongoing internal security work was responsible for a wide range of fixes:
+[412443038] Various fixes from internal audits, fuzzing and other initiatives
+
+* 136.0.7103.59
+This update includes 8 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$5000][409911705] High CVE-2025-4096: Heap buffer overflow in HTML.
+Reported by Anonymous on 2025-04-11
+[$2000][409342999] Medium CVE-2025-4050: Out of bounds memory access
+in DevTools. Reported by Anonymous on 2025-04-09
+[$2000][404000989] Medium CVE-2025-4051: Insufficient data validation
+in DevTools. Reported by Daniel Fröjdendahl on 2025-03-16
+[$1000][401927528] Low CVE-2025-4052: Inappropriate implementation
+in DevTools. Reported by vanillawebdev on 2025-03-10
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[414433561]Various fixes from internal audits, fuzzing and other initiatives
+
+* 136.0.7103.92
+This update includes 2 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$7000][412057896] Medium CVE-2025-4372: Use after free in WebAudio.
+Reported by Huang Xilin of Ant Group Light-Year Security Lab on 2025-04-20
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[415837391] Various fixes from internal audits, fuzzing and other initiatives

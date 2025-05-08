@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/cdm/library_cdm/cdm_paths.gni.orig	2025-03-31 15:23:48.000000000 +0000
+--- media/cdm/library_cdm/cdm_paths.gni.orig	2025-05-05 19:21:24.000000000 +0000
 +++ media/cdm/library_cdm/cdm_paths.gni
 @@ -14,7 +14,7 @@ assert(enable_library_cdms)
  # Explicitly define what we use to avoid confusion.

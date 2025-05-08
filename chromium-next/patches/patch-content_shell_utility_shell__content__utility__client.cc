@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/utility/shell_content_utility_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- content/shell/utility/shell_content_utility_client.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/shell/utility/shell_content_utility_client.cc
 @@ -43,7 +43,7 @@
  #include "sandbox/policy/sandbox.h"

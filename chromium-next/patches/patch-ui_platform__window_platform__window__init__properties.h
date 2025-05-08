@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_init_properties.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- ui/platform_window/platform_window_init_properties.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/platform_window/platform_window_init_properties.h
 @@ -56,7 +56,7 @@ class WorkspaceExtensionDelegate;
  class ScenicWindowDelegate;
@@ -15,7 +15,7 @@ $NetBSD$
  class X11ExtensionDelegate;
  #endif
  
-@@ -121,7 +121,7 @@ struct COMPONENT_EXPORT(PLATFORM_WINDOW)
+@@ -120,7 +120,7 @@ struct COMPONENT_EXPORT(PLATFORM_WINDOW)
  
    PlatformWindowShadowType shadow_type = PlatformWindowShadowType::kDefault;
  

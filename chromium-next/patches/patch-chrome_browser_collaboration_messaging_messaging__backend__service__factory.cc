@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/collaboration/messaging/messaging_backend_service_factory.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/collaboration/messaging/messaging_backend_service_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/collaboration/messaging/messaging_backend_service_factory.cc
-@@ -100,7 +100,7 @@ MessagingBackendServiceFactory::BuildSer
+@@ -102,7 +102,7 @@ MessagingBackendServiceFactory::BuildSer
    // This configuration object allows us to control platform specific behavior.
    MessagingBackendConfiguration configuration;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

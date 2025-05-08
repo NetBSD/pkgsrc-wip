@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/trusted_vault/trusted_vault_connection_impl.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/trusted_vault/trusted_vault_connection_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/trusted_vault/trusted_vault_connection_impl.cc
-@@ -102,7 +102,7 @@ GetLocalPhysicalDeviceType() {
+@@ -103,7 +103,7 @@ GetLocalPhysicalDeviceType() {
    // currently used or even built on all platforms.
  #if BUILDFLAG(IS_CHROMEOS)
    return trusted_vault_pb::PhysicalDeviceMetadata::DEVICE_TYPE_CHROMEOS;

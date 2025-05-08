@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/component_updater/iwa_key_distribution_component_installer.cc
-@@ -56,7 +56,7 @@ void OnDemandUpdateCompleted(update_clie
+@@ -64,7 +64,7 @@ component_updater::OnDemandUpdater::Prio
  
  namespace component_updater {
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kIwaKeyDistributionComponent,
               "IwaKeyDistributionComponent",
  #if BUILDFLAG(IS_CHROMEOS)
-@@ -81,7 +81,7 @@ bool IwaKeyDistributionComponentInstalle
+@@ -89,7 +89,7 @@ bool IwaKeyDistributionComponentInstalle
    // the main IWA feature.
  #if BUILDFLAG(IS_WIN)
    return base::FeatureList::IsEnabled(features::kIsolatedWebApps);

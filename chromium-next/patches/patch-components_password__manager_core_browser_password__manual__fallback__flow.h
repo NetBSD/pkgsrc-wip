@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.h
-@@ -17,7 +17,7 @@
+@@ -19,7 +19,7 @@
  #include "components/password_manager/core/browser/ui/saved_passwords_presenter.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/password_manager/core/browser/password_cross_domain_confirmation_popup_controller.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -178,7 +178,7 @@ class PasswordManualFallbackFlow : publi
+@@ -180,7 +180,7 @@ class PasswordManualFallbackFlow : publi
    std::unique_ptr<device_reauth::DeviceAuthenticator> authenticator_;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

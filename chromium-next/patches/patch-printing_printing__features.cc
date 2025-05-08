@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- printing/printing_features.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ printing/printing_features.cc
-@@ -21,12 +21,12 @@ BASE_FEATURE(kAddPrinterViaPrintscanmgr,
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -26,12 +26,12 @@ BASE_FEATURE(kApiPrintingMarginsAndScale
+              base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
@@ -21,7 +21,7 @@ $NetBSD$
               base::FEATURE_DISABLED_BY_DEFAULT
  #else
               base::FEATURE_ENABLED_BY_DEFAULT
-@@ -69,7 +69,7 @@ BASE_FEATURE(kUseXpsForPrintingFromPdf,
+@@ -81,7 +81,7 @@ BASE_FEATURE(kUseXpsForPrintingFromPdf,
  // out-of-process.
  BASE_FEATURE(kEnableOopPrintDrivers,
               "EnableOopPrintDrivers",

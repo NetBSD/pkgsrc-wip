@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2025-03-31 15:23:48.000000000 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
-@@ -14187,7 +14187,7 @@ struct fts5_api {
+@@ -14486,7 +14486,7 @@ struct fts5_api {
  ** But _XOPEN_SOURCE define causes problems for Mac OS X, so omit
  ** it.
  */
@@ -15,7 +15,7 @@ $NetBSD$
  #  define _XOPEN_SOURCE 600
  #endif
  
-@@ -20633,6 +20633,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
+@@ -20962,6 +20962,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
  ** The alloca() routine never returns NULL.  This will cause code paths
  ** that deal with sqlite3StackAlloc() failures to be unreachable.
  */
@@ -25,7 +25,7 @@ $NetBSD$
  #ifdef SQLITE_USE_ALLOCA
  # define sqlite3StackAllocRaw(D,N)   alloca(N)
  # define sqlite3StackAllocRawNN(D,N) alloca(N)
-@@ -45183,6 +45186,11 @@ static int unixRandomness(sqlite3_vfs *N
+@@ -45387,6 +45390,11 @@ static int unixRandomness(sqlite3_vfs *N
    memset(zBuf, 0, nBuf);
    randomnessPid = osGetpid(0);
  #if !defined(SQLITE_TEST) && !defined(SQLITE_OMIT_RANDOMNESS)
@@ -37,7 +37,7 @@ $NetBSD$
    {
      int fd, got;
      fd = robust_open("/dev/urandom", O_RDONLY, 0);
-@@ -45199,6 +45207,7 @@ static int unixRandomness(sqlite3_vfs *N
+@@ -45403,6 +45411,7 @@ static int unixRandomness(sqlite3_vfs *N
      }
    }
  #endif

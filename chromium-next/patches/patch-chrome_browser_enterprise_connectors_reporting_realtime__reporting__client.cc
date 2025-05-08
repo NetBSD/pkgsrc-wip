@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
-@@ -55,7 +55,7 @@
+@@ -53,7 +53,7 @@
  #include "base/strings/utf_string_conversions.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/device_signals/core/browser/signals_aggregator.h"
-@@ -160,7 +160,7 @@ void RealtimeReportingClient::ReportPast
+@@ -158,7 +158,7 @@ void RealtimeReportingClient::ReportPast
                                       /*include_profile_user_name=*/false);
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  
  void AddCrowdstrikeSignalsToEvent(
      base::Value::Dict& event,
-@@ -196,7 +196,7 @@ std::string RealtimeReportingClient::Get
+@@ -194,7 +194,7 @@ std::string RealtimeReportingClient::Get
    username_ =
        identity_manager_ ? GetProfileEmail(identity_manager_) : std::string();
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (username_.empty()) {
      username_ = Profile::FromBrowserContext(context_)->GetPrefs()->GetString(
          enterprise_signin::prefs::kProfileUserEmail);
-@@ -248,7 +248,7 @@ std::string RealtimeReportingClient::Get
+@@ -246,7 +246,7 @@ std::string RealtimeReportingClient::Get
    return client_id;
  }
  

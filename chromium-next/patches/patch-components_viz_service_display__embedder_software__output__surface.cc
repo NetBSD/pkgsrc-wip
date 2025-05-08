@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
 @@ -115,7 +115,7 @@ void SoftwareOutputSurface::SwapBuffersC
    base::TimeTicks now = base::TimeTicks::Now();

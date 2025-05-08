@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- extensions/shell/browser/shell_extensions_api_client.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.h
-@@ -34,14 +34,14 @@ class ShellExtensionsAPIClient : public 
+@@ -36,14 +36,14 @@ class ShellExtensionsAPIClient : public 
        content::BrowserContext* browser_context) const override;
    std::unique_ptr<DisplayInfoProvider> CreateDisplayInfoProvider()
        const override;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/linux/strip_binary.py.orig	2025-03-31 15:23:48.000000000 +0000
+--- build/linux/strip_binary.py.orig	2025-05-05 19:21:24.000000000 +0000
 +++ build/linux/strip_binary.py
 @@ -10,6 +10,7 @@ import sys
  

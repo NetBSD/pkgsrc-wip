@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/websockets/websocket_basic_stream_adapters_test.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- net/websockets/websocket_basic_stream_adapters_test.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ net/websockets/websocket_basic_stream_adapters_test.cc
 @@ -1098,10 +1098,10 @@ TEST_F(WebSocketSpdyStreamAdapterTest,
         OnCloseOkShouldBeTranslatedToConnectionClose) {

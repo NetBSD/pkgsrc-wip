@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_sandbox_hook_linux.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- services/network/network_sandbox_hook_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ services/network/network_sandbox_hook_linux.cc
 @@ -15,11 +15,14 @@
  #include "sandbox/linux/syscall_broker/broker_file_permission.h"

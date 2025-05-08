@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_widget_types.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- ui/gfx/native_widget_types.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gfx/native_widget_types.h
-@@ -101,7 +101,7 @@ class ViewAndroid;
+@@ -104,7 +104,7 @@ class ViewAndroid;
  #endif
  class SkBitmap;
  
@@ -15,7 +15,7 @@ $NetBSD$
  extern "C" {
  struct _AtkObject;
  using AtkObject = struct _AtkObject;
-@@ -214,7 +214,7 @@ using NativeViewAccessible = id;
+@@ -194,7 +194,7 @@ using NativeViewAccessible = id;
  #else
  using NativeViewAccessible = struct objc_object*;
  #endif

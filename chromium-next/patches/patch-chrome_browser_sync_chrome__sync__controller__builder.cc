@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/chrome_sync_controller_builder.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/sync/chrome_sync_controller_builder.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/sync/chrome_sync_controller_builder.cc
 @@ -280,7 +280,7 @@ ChromeSyncControllerBuilder::Build(synce
  #if BUILDFLAG(ENABLE_SPELLCHECK)

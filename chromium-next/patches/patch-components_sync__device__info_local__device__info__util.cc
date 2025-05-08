@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/sync_device_info/local_device_info_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/sync_device_info/local_device_info_util.cc
 @@ -84,7 +84,7 @@ void OnMachineStatisticsLoaded(LocalDevi
  sync_pb::SyncEnums::DeviceType GetLocalDeviceType() {

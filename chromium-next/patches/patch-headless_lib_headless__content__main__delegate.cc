@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/headless_content_main_delegate.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- headless/lib/headless_content_main_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ headless/lib/headless_content_main_delegate.cc
-@@ -408,7 +408,7 @@ void HeadlessContentMainDelegate::InitCr
+@@ -407,7 +407,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {
      g_headless_crash_client.Pointer()->set_crash_dumps_dir(
          command_line.GetSwitchValuePath(switches::kCrashDumpsDir));

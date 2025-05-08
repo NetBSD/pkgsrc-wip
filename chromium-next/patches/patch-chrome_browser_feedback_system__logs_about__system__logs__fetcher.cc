@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc
-@@ -38,7 +38,7 @@
+@@ -37,7 +37,7 @@
  #include "chrome/browser/ash/system_logs/ui_hierarchy_log_source.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/feedback/system_logs/log_sources/ozone_platform_state_dump_source.h"
  #endif
  
-@@ -85,7 +85,7 @@ SystemLogsFetcher* BuildAboutSystemLogsF
+@@ -84,7 +84,7 @@ SystemLogsFetcher* BuildAboutSystemLogsF
    fetcher->AddSource(std::make_unique<KeyboardInfoLogSource>());
  #endif
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -121,7 +121,7 @@
  #include "ui/gfx/gdi_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    ui::BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1867,7 +1867,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -1882,7 +1882,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2843,7 +2843,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -2858,7 +2858,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -42,12 +42,12 @@ $NetBSD$
    return NeedsInputGrab();
  #else
    return false;
-@@ -3027,7 +3027,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -3042,7 +3042,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    auto* linux_ui = ui::LinuxUi::instance();
-   std::vector<ui::TextEditCommandAuraLinux> commands;
-   if (!event.skip_if_unhandled && linux_ui && event.os_event &&
+   if (!event.skip_if_unhandled && linux_ui && event.os_event) {
+     const auto command = linux_ui->GetTextEditCommandForEvent(

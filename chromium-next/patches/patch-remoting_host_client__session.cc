@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/client_session.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- remoting/host/client_session.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/client_session.cc
-@@ -187,7 +187,7 @@ void ClientSession::NotifyClientResoluti
+@@ -188,7 +188,7 @@ void ClientSession::NotifyClientResoluti
    if (effective_policies_.curtain_required.value_or(false)) {
      dpi_vector.set(resolution.x_dpi(), resolution.y_dpi());
    }

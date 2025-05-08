@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/common/chrome_paths.cc
-@@ -30,7 +30,7 @@
+@@ -32,7 +32,7 @@
  #include "base/apple/foundation_util.h"
  #endif
  
@@ -15,9 +15,9 @@ $NetBSD$
  #include "components/policy/core/common/policy_paths.h"
  #endif
  
-@@ -44,14 +44,14 @@
+@@ -48,14 +48,14 @@ namespace {
  
- namespace {
+ std::optional<bool> g_override_using_default_data_directory_for_testing;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -33,7 +33,7 @@ $NetBSD$
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -208,7 +208,7 @@ bool PathProvider(int key, base::FilePat
+@@ -212,7 +212,7 @@ bool PathProvider(int key, base::FilePat
        }
        break;
      case chrome::DIR_DEFAULT_DOWNLOADS_SAFE:
@@ -42,7 +42,7 @@ $NetBSD$
        if (!GetUserDownloadsDirectorySafe(&cur)) {
          return false;
        }
-@@ -500,13 +500,13 @@ bool PathProvider(int key, base::FilePat
+@@ -504,13 +504,13 @@ bool PathProvider(int key, base::FilePat
        break;
      }
  #endif
@@ -58,7 +58,7 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) && BUILDFLAG(CHROMIUM_BRANDING))
      case chrome::DIR_USER_EXTERNAL_EXTENSIONS: {
        if (!base::PathService::Get(chrome::DIR_USER_DATA, &cur)) {
-@@ -516,7 +516,7 @@ bool PathProvider(int key, base::FilePat
+@@ -520,7 +520,7 @@ bool PathProvider(int key, base::FilePat
        break;
      }
  #endif
@@ -67,7 +67,7 @@ $NetBSD$
      case chrome::DIR_STANDALONE_EXTERNAL_EXTENSIONS: {
        cur = base::FilePath(kFilepathSinglePrefExtensions);
        break;
-@@ -554,7 +554,7 @@ bool PathProvider(int key, base::FilePat
+@@ -558,7 +558,7 @@ bool PathProvider(int key, base::FilePat
        break;
  
  #if BUILDFLAG(ENABLE_EXTENSIONS) && \
@@ -76,7 +76,7 @@ $NetBSD$
      case chrome::DIR_NATIVE_MESSAGING:
  #if BUILDFLAG(IS_MAC)
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
-@@ -568,6 +568,9 @@ bool PathProvider(int key, base::FilePat
+@@ -572,6 +572,9 @@ bool PathProvider(int key, base::FilePat
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));

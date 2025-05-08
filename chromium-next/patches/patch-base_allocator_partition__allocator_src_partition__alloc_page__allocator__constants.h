@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h
 @@ -26,8 +26,8 @@
  #define PAGE_ALLOCATOR_CONSTANTS_DECLARE_CONSTEXPR __attribute__((const))

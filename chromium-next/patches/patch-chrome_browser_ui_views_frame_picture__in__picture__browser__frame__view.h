@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h
 @@ -30,7 +30,7 @@
  #include "ui/views/layout/flex_layout_view.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/window_frame_provider.h"
  #endif
  
-@@ -90,7 +90,7 @@ class PictureInPictureBrowserFrameView
+@@ -87,7 +87,7 @@ class PictureInPictureBrowserFrameView
    void Layout(PassKey) override;
    void AddedToWidget() override;
    void RemovedFromWidget() override;
@@ -24,7 +24,7 @@ $NetBSD$
    gfx::Insets RestoredMirroredFrameBorderInsets() const override;
    gfx::Insets GetInputInsets() const override;
    SkRRect GetRestoredClipRegion() const override;
-@@ -182,7 +182,7 @@ class PictureInPictureBrowserFrameView
+@@ -179,7 +179,7 @@ class PictureInPictureBrowserFrameView
    // Returns true if there's an overlay view that's currently shown.
    bool IsOverlayViewVisible() const;
  
@@ -33,7 +33,7 @@ $NetBSD$
    // Returns whether a client-side shadow should be drawn for the window.
    bool ShouldDrawFrameShadow() const;
  
-@@ -391,7 +391,7 @@ class PictureInPictureBrowserFrameView
+@@ -388,7 +388,7 @@ class PictureInPictureBrowserFrameView
    // `top_bar_color_animation_`.
    std::optional<SkColor> current_foreground_color_;
  

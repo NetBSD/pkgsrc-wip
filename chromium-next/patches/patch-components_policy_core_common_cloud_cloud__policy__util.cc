@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
-@@ -20,7 +20,7 @@
+@@ -21,7 +21,7 @@
  #include "base/win/wincred_shim.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <pwd.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -35,10 +35,15 @@
+@@ -36,10 +36,15 @@
  #import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD$
  #include <algorithm>
  #include <utility>
  
-@@ -83,7 +88,7 @@ namespace policy {
+@@ -84,7 +89,7 @@ namespace policy {
  namespace em = enterprise_management;
  
  std::string GetMachineName() {
@@ -41,7 +41,7 @@ $NetBSD$
    char hostname[HOST_NAME_MAX];
    if (gethostname(hostname, HOST_NAME_MAX) == 0)  // Success.
      return hostname;
-@@ -139,7 +144,7 @@ std::string GetMachineName() {
+@@ -140,7 +145,7 @@ std::string GetMachineName() {
  
  std::string GetOSVersion() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \
@@ -50,7 +50,7 @@ $NetBSD$
    return base::SysInfo::OperatingSystemVersion();
  #elif BUILDFLAG(IS_WIN)
    base::win::OSInfo::VersionNumber version_number =
-@@ -161,7 +166,7 @@ std::string GetOSArchitecture() {
+@@ -162,7 +167,7 @@ std::string GetOSArchitecture() {
  }
  
  std::string GetOSUsername() {

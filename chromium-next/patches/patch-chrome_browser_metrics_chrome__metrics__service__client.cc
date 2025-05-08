@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
-@@ -196,11 +196,11 @@
+@@ -197,11 +197,11 @@
  #include "chrome/browser/metrics/google_update_metrics_provider_mac.h"
  #endif
  
@@ -47,7 +47,7 @@ $NetBSD$
    // Register the environment with the crash reporter. Note that there is a
    // window from startup to this point during which crash reports will not have
    // an environment set.
-@@ -724,7 +724,7 @@ void ChromeMetricsServiceClient::Initial
+@@ -721,7 +721,7 @@ void ChromeMetricsServiceClient::Initial
          std::make_unique<metrics::dwa::DwaService>(this, local_state);
    }
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -56,7 +56,7 @@ $NetBSD$
    metrics::structured::Recorder::GetInstance()->SetUiTaskRunner(
        base::SequencedTaskRunner::GetCurrentDefault());
  #endif
-@@ -784,7 +784,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -781,7 +781,7 @@ void ChromeMetricsServiceClient::Registe
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::CPUMetricsProvider>());
  
@@ -65,7 +65,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::MotherboardMetricsProvider>());
  #endif
-@@ -873,7 +873,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -870,7 +870,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<GoogleUpdateMetricsProviderMac>());
  #endif
  

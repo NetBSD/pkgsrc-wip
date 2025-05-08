@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- media/base/media_switches.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ media/base/media_switches.cc
 @@ -19,7 +19,7 @@
  #include "ui/gl/gl_features.h"
@@ -67,7 +67,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -611,7 +636,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
+@@ -636,7 +661,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
  // Show toolbar button that opens dialog for controlling media sessions.
  BASE_FEATURE(kGlobalMediaControls,
               "GlobalMediaControls",
@@ -76,7 +76,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -634,7 +659,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
+@@ -659,7 +684,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
               "MediaRemotingWithoutFullscreen",
@@ -85,7 +85,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -646,7 +671,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
+@@ -671,7 +696,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
  BASE_FEATURE(kGlobalMediaControlsPictureInPicture,
               "GlobalMediaControlsPictureInPicture",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -94,7 +94,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -675,7 +700,7 @@ BASE_FEATURE(kUnifiedAutoplay,
+@@ -700,7 +725,7 @@ BASE_FEATURE(kUnifiedAutoplay,
               "UnifiedAutoplay",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -103,7 +103,7 @@ $NetBSD$
  // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
  // on chromeos, but needs an experiment on linux.
  BASE_FEATURE(kAcceleratedVideoDecodeLinux,
-@@ -775,7 +800,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
+@@ -800,7 +825,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
               "VSyncMjpegDecoding",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -112,8 +112,8 @@ $NetBSD$
  // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               "V4L2H264TemporalLayerHWEncoding",
-@@ -1347,7 +1372,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDe
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -1361,7 +1386,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
+ );
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -121,7 +121,7 @@ $NetBSD$
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1429,7 +1454,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
+@@ -1443,7 +1468,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
               "RecordWebAudioEngagement",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

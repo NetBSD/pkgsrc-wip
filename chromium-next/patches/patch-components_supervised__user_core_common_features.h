@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2025-03-31 15:23:48.000000000 +0000
+--- components/supervised_user/core/common/features.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/supervised_user/core/common/features.h
-@@ -19,7 +19,7 @@ BASE_DECLARE_FEATURE(kLocalWebApprovals)
+@@ -19,12 +19,12 @@ BASE_DECLARE_FEATURE(kLocalWebApprovals)
  BASE_DECLARE_FEATURE(kAllowSubframeLocalWebApprovals);
  
  #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,13 @@ $NetBSD$
  extern const base::FeatureParam<int> kLocalWebApprovalBottomSheetLoadTimeoutMs;
  #endif  // BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_WIN)
-@@ -36,7 +36,7 @@ BASE_DECLARE_FEATURE(
+ 
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ // Whether we show an error screen in case of failure of a local web approval.
+ BASE_DECLARE_FEATURE(kEnableLocalWebApprovalErrorDialog);
+ #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
+@@ -44,7 +44,7 @@ BASE_DECLARE_FEATURE(
  // Applies new informative strings during the parental extension approval flow.
  BASE_DECLARE_FEATURE(kUpdatedSupervisedUserExtensionApprovalStrings);
  
@@ -24,7 +30,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop);
  #endif
  
-@@ -54,7 +54,7 @@ BASE_DECLARE_FEATURE(kExposedParentalCon
+@@ -62,7 +62,7 @@ BASE_DECLARE_FEATURE(kExposedParentalCon
  bool IsSupervisedUserSkipParentApprovalToInstallExtensionsEnabled();
  #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
  
@@ -33,7 +39,7 @@ $NetBSD$
  // Enable different web sign in interception behaviour for supervised users:
  //
  // 1. Supervised user signs in to existing signed out Profile: show modal
-@@ -72,7 +72,7 @@ BASE_DECLARE_FEATURE(kShowKiteForSupervi
+@@ -80,7 +80,7 @@ BASE_DECLARE_FEATURE(kShowKiteForSupervi
  // unauthenticated (e.g. signed out of the content area) account.
  BASE_DECLARE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers);
  

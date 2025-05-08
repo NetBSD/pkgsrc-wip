@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -147,7 +147,7 @@
  #include "components/webui/about/credit_utils.h"
@@ -135,7 +135,7 @@ $NetBSD$
    // Zygote needs to call InitCrashReporter() in RunZygote().
    if (process_type != switches::kZygoteProcess &&
        !command_line.HasSwitch(switches::kDisableCrashpadForTesting)) {
-@@ -1532,13 +1532,13 @@ absl::variant<int, content::MainFunction
+@@ -1532,13 +1532,13 @@ std::variant<int, content::MainFunctionP
  #else
  
  #if BUILDFLAG(IS_MAC) || (BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && \

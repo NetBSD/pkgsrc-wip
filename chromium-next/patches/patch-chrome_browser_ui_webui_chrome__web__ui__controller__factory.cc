@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -114,16 +114,16 @@
+@@ -118,16 +118,16 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -26,7 +26,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -404,7 +404,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -408,7 +408,7 @@ base::RefCountedMemory* ChromeWebUIContr
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
    }
  
@@ -35,7 +35,7 @@ $NetBSD$
    if (page_url.host_piece() == chrome::kChromeUIWhatsNewHost) {
      return WhatsNewUI::GetFaviconResourceBytes(scale_factor);
    }
-@@ -438,7 +438,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -442,7 +442,7 @@ base::RefCountedMemory* ChromeWebUIContr
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

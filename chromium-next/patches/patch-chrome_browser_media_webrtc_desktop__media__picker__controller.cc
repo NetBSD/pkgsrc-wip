@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2025-03-31 15:23:48.000000000 +0000
+--- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/media/webrtc/desktop_media_picker_controller.cc
 @@ -89,7 +89,7 @@ bool DesktopMediaPickerController::IsSys
  #if BUILDFLAG(IS_MAC)
