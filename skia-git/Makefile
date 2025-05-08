@@ -27,6 +27,8 @@ GN_ARGS+=	is_official_build=true
 GN_ARGS+=	is_debug=false
 GN_ARGS+=	skia_system_freetype2_include_path="${BUILDLINK_PREFIX.freetype2}/include/freetype2"
 
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	third_party/harfbuzz/BUILD.gn
@@ -70,6 +72,7 @@ git-depends.mk:
 	${SETENV} REQUIRED_REPOS="${REQUIRED_REPOS}" ${AWK} -f ${FILESDIR}/gen-git-depends.awk < ${WRKSRC}/DEPS > ${.TARGET}.new
 	mv ${.TARGET}.new ${.TARGET}
 
+.include "../../lang/python/tool.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
