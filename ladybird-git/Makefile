@@ -12,8 +12,7 @@ LICENSE=	2-clause-bsd
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++20
-GCC_REQD+=		13
+USE_CXX_FEATURES+=	c++23
 USE_TOOLS+=		pkg-config
 
 #CMAKE_CONFIGURE_ARGS+=		-S Ladybird
@@ -47,6 +46,7 @@ post-extract:
 	${LN} -s ${FILESDIR}/FindWebP.cmake	\
 	  ${WRKSRC}/Meta/CMake/FindWebP.cmake
 
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/woff2/buildlink3.mk"
