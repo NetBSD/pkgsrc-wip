@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- tools/window/BUILD.gn.orig	2025-05-08 14:29:25.513455507 +0000
++++ tools/window/BUILD.gn
+@@ -38,7 +38,7 @@ skia_component("window") {
+       "android/WindowContextFactory_android.h",
+     ]
+     libs += [ "android" ]
+-  } else if (is_linux) {
++  } else if (is_linux || is_netbsd) {
+     sources += [
+       "unix/RasterWindowContext_unix.cpp",
+       "unix/RasterWindowContext_unix.h",
+@@ -72,7 +72,7 @@ skia_component("window") {
+     }
+     if (is_android) {
+       sources += [ "android/GLWindowContext_android.cpp" ]
+-    } else if (is_linux) {
++    } else if (is_linux || is_netbsd) {
+       sources += [
+         "unix/GaneshGLWindowContext_unix.cpp",
+         "unix/GaneshGLWindowContext_unix.h",
+@@ -178,7 +178,7 @@ skia_component("window") {
+   }
+ 
+   if (skia_use_dawn) {
+-    if (is_linux) {
++    if (is_linux || is_netbsd) {
+       if (dawn_enable_vulkan) {
+         defines = [ "VK_USE_PLATFORM_XCB_KHR" ]
+         libs += [ "X11-xcb" ]

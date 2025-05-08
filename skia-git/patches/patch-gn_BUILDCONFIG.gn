@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- gn/BUILDCONFIG.gn.orig	2025-05-08 12:56:51.035412725 +0000
++++ gn/BUILDCONFIG.gn
+@@ -68,6 +68,7 @@ is_fuchsia = current_os == "fuchsia"
+ is_ios = current_os == "ios" || current_os == "tvos"
+ is_tvos = current_os == "tvos"
+ is_linux = current_os == "linux"
++is_netbsd = current_os == "netbsd"
+ is_mac = current_os == "mac"
+ is_wasm = current_os == "wasm"
+ is_win = current_os == "win"

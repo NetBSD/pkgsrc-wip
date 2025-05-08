@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- modules/skunicode/BUILD.gn.orig	2025-05-08 14:36:23.810786729 +0000
++++ modules/skunicode/BUILD.gn
+@@ -84,7 +84,7 @@ if (skia_use_icu || skia_use_client_icu 
+       sources += skia_unicode_icu_sources
+ 
+       # only available for Android at the moment
+-      if (skia_use_runtime_icu && (is_android || is_linux)) {
++      if (skia_use_runtime_icu && (is_android || is_linux || is_netbsd)) {
+         sources += skia_unicode_runtime_icu_sources
+         defines += [ "SK_UNICODE_RUNTIME_ICU_AVAILABLE" ]
+         deps += [ "//third_party/icu:headers" ]

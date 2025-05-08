@@ -1,7 +1,11 @@
 $NetBSD$
 
-SHA1 (patch-gn_skia_BUILD.gn) = 39bca4b8dba757869ea6a40714c627f33eff3383
+SHA1 (patch-BUILD.gn) = 65847b9a0b1662097aed229d77aab4e99dca64b0
+SHA1 (patch-gn_BUILDCONFIG.gn) = d0cf799c3889dc70913f4d9fc8d52159b6900fd4
+SHA1 (patch-gn_skia.gni) = 49a8bf634e396a3b996886bbb5724eaea2796600
+SHA1 (patch-gn_skia_BUILD.gn) = bb08353e15c2d0d2b6ca59e4172cfe980588639b
 SHA1 (patch-modules_skcms_BUILD.gn) = 064519f2fd7cfe3cfdae70779416c2aa204098a9
+SHA1 (patch-modules_skunicode_BUILD.gn) = 235b7d30d1a793ed87c3af9cc0d228bf797b1552
 SHA1 (patch-src_gpu_ganesh_GrAutoLocaleSetter.h) = dfa8f3c6b501dde779b1e0a54398f8e825e11f21
 SHA1 (patch-third__party_externals_dng__sdk_source_RawEnvironment.h) = 6b122f837dd702676ac2b3c6de511f3499deba14
 SHA1 (patch-third__party_externals_piex_src_image__type__recognition_image__type__recognition__lite.cc) = 3f0d9416829866239cde6c2c8c2382d1dcd50002
@@ -9,3 +13,4 @@ SHA1 (patch-third__party_harfbuzz_BUILD.gn) = a704d5deec6345717430b08c78820c01cf
 SHA1 (patch-third__party_icu_BUILD.gn) = 20bfc1be2f919123ec53cd4edd7b9b4fb39fbf39
 SHA1 (patch-third__party_libwebp_BUILD.gn) = 171bafcb57dc7d5f7ba3b52c804d6e7bb8e043bd
 SHA1 (patch-third__party_piex_BUILD.gn) = f30a35c99e77f2d099459ac3fe71194a48efc056
+SHA1 (patch-tools_window_BUILD.gn) = c41fddc7b4254810d790aa8db9ace3692d82cae1
