@@ -5785,6 +5785,7 @@ SUBDIR+=	u-boot-full
 SUBDIR+=	u-boot-khadas-vim3
 SUBDIR+=	u-boot-mangopi-mq-pro
 SUBDIR+=	u-boot-nanopi-r2s
+SUBDIR+=	u-boot-omap4-panda
 SUBDIR+=	u-boot-orangepi-pc2
 SUBDIR+=	u-boot-pinebook-crust
 SUBDIR+=	u-boot-rock5b

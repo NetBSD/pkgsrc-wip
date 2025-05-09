@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/u-boot/omap4-panda/MLO
+share/u-boot/omap4-panda/installboot.plist
+share/u-boot/omap4-panda/u-boot.img
