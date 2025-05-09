@@ -10,7 +10,7 @@ BUILDLINK_API_DEPENDS.gcc15-gnat-libs+=	gcc15-gnat-libs>=15.1.0
 .else
 BUILDLINK_API_DEPENDS.gcc15-gnat-libs+=	{gcc15-gnat,gcc15-gnat-libs}>=15.1.0
 .endif
-BUILDLINK_PKGSRCDIR.gcc15-gnat-libs=	../../wip/gcc15-gnat-libs
+BUILDLINK_PKGSRCDIR.gcc15-gnat-libs?=	../../wip/gcc15-gnat-libs
 BUILDLINK_DEPMETHOD.gcc15-gnat-libs?=	full
 
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
@@ -19,9 +19,9 @@ TARGET_LIBDIR.gcc15-gnat-libs=	${PREFIX}/gcc15-gnat/${GCC_TARGET_MACHINE}/lib
 
 BUILDLINK_PASSTHRU_DIRS+=	${TARGET_LIBDIR.gcc15-gnat-libs}
 
-BUILDLINK_FILES.gcc15-gnat-libs=	#empty
+BUILDLINK_FILES.gcc15-gnat-libs?=	#empty
 BUILDLINK_AUTO_VARS.gcc15-gnat-libs=	no
-BUILDLINK_AUTO_DIRS.gcc15-gnat-libs=	no
+BUILDLINK_AUTO_DIRS.gcc15-gnat-libs?=	no
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

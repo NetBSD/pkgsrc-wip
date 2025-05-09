@@ -26,8 +26,9 @@ TOOL_DEPENDS+=	gcc10-aux-[0-9]*:../../lang/gcc10-aux
 
 USE_TOOLS+=		gmake makeinfo sed perl flex bison
 USE_TOOLS.NetBSD+=	gsed
-TEXINFO_REQD=		7.0
-BISON_REQD=		3.5
+# Built-in Texinfo can no longer process GCC 15's files
+TEXINFO_REQD+=		7.0
+BISON_REQD+=		3.5
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
@@ -56,13 +57,13 @@ BROKEN_ON_PLATFORM=	*-*-i386
 
 .include "options.mk"
 
-BOOTC_BASE=		${LOCALBASE}/gcc10-aux
+BOOTC_BASE=		${PREFIX}/gcc10-aux
 BOOTC_LD_LIBRARY_PATH=	${BOOTC_BASE}/lib:${BOOTC_BASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/10.3.0:${BOOTC_BASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/10.3.0/adalib
 
 CONFIGURE_ENV+=		CC_FOR_BUILD=${BOOTC_BASE}/bin/gcc
 CONFIGURE_ENV+=		CXX_FOR_BUILD=${BOOTC_BASE}/bin/g++
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${BOOTC_LD_LIBRARY_PATH}
+MAKE_ENV+=	LD_LIBRARY_PATH=${BOOTC_LD_LIBRARY_PATH:Q}
 
 ## Build outside ${WRKSRC}
 OBJDIR=			${WRKDIR}/build
@@ -133,14 +134,14 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-gxx-include-dir='${GCC_PREFIX}/include/c++'
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:Q}
-CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
+CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:M*:Q}
 # causes build errors even when using lang/gcc* to self host
 CONFIGURE_ARGS.SunOS+=	--disable-libsanitizer
 # multilib on Darwin requires fat-binaries
 CONFIGURE_ARGS.Darwin+=	--disable-multilib
 .if !empty(OSX_SDK_PATH)
-CONFIGURE_ARGS.Darwin+=	--with-sysroot=${OSX_SDK_PATH}
+CONFIGURE_ARGS.Darwin+=	--with-sysroot=${OSX_SDK_PATH:Q}
 .endif
 MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
 MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
@@ -210,19 +211,19 @@ BUILD_DEFS+=		GCC_TARGET_MACHINE
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		select
 SUBST_MESSAGE.select=	Replace select with __gnat_select in ${SUBST_FILES.select}
-SUBST_STAGE.select=	post-patch
+SUBST_STAGE.select=	pre-configure
 SUBST_FILES.select=	gcc/ada/libgnat/g-socthi.ads
 SUBST_SED.select=	-e "s,\"select\",\"__gnat_select\","
 
 SUBST_CLASSES+=			nanosleep
 SUBST_MESSAGE.nanosleep=	Replace nanosleep with __gnat_nanosleep in ${SUBST_FILES.nanosleep}
-SUBST_STAGE.nanosleep=		post-patch
+SUBST_STAGE.nanosleep=		pre-configure
 SUBST_FILES.nanosleep=		gcc/ada/libgnat/s-osprim__posix.adb
 SUBST_SED.nanosleep=		-e "s,\"nanosleep\",\"__gnat_nanosleep\","
 
 SUBST_CLASSES+=			gettimeofday
 SUBST_MESSAGE.gettimeofday=	Replace gettimeofday with __gnat_gettimeofday in ${SUBST_FILES.gettimeofday}
-SUBST_STAGE.gettimeofday=	post-patch
+SUBST_STAGE.gettimeofday=	pre-configure
 SUBST_FILES.gettimeofday=	gcc/ada/libgnat/s-osprim__posix.adb
 SUBST_SED.gettimeofday=		-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
 .endif
@@ -245,7 +246,7 @@ post-install:
 	${CHMOD} g-w ${DESTDIR}${GCC_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adainclude/standard.ads.h
 # Create old name that modern gnat no longer provides
 	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/gnat && \
-		( cd ${DESTDIR}${GCC_PREFIX}/bin ; ${LN} -f gnat ada )
+		( ${RUN} cd ${DESTDIR}${GCC_PREFIX}/bin ; ${LN} -f gnat ada )
 .if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
 	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32 || ${TRUE}
 	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64 || ${TRUE}

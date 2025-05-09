@@ -7,7 +7,7 @@ GCC15_GNAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15
 BUILDLINK_ABI_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15.1
-BUILDLINK_PKGSRCDIR.gcc15-gnat=		../../wip/gcc15-gnat
+BUILDLINK_PKGSRCDIR.gcc15-gnat?=	../../wip/gcc15-gnat
 BUILDLINK_DEPMETHOD.gcc15-gnat?=	build
 
 PREPEND_PATH+=	${BUILDLINK_DIR}/gcc15-gnat/bin

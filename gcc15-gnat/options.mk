@@ -9,11 +9,11 @@ PKG_SUGGESTED_OPTIONS=	gcc-graphite
 .if ${OPSYS} == "NetBSD"
 #PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	nls
+PKG_SUGGESTED_OPTIONS+=		nls
 .elif ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	nls
+PKG_SUGGESTED_OPTIONS+=		nls
 .elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
+PKG_SUGGESTED_OPTIONS+=		gcc-inplace-math
 .endif
 
 ###
