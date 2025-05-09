@@ -1734,6 +1734,7 @@ include/LibWeb/CSS/BooleanExpression.h
 include/LibWeb/CSS/CSS.h
 include/LibWeb/CSS/CSSAnimation.h
 include/LibWeb/CSS/CSSConditionRule.h
+include/LibWeb/CSS/CSSDescriptors.h
 include/LibWeb/CSS/CSSFontFaceDescriptors.h
 include/LibWeb/CSS/CSSFontFaceRule.h
 include/LibWeb/CSS/CSSGroupingRule.h
