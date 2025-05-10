@@ -1,0 +1,3 @@
+Speech Dispatcher project provides a high-level device independent layer
+for access to speech synthesis through a simple, stable and well documented
+interface.
