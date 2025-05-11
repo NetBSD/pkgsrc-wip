@@ -592,6 +592,7 @@ SUBDIR+=	cpdup
 SUBDIR+=	cpluff
 SUBDIR+=	cpm
 SUBDIR+=	cpqarrayd
+SUBDIR+=	cpuinfo
 SUBDIR+=	cpuminer-multi
 SUBDIR+=	cqlsh
 SUBDIR+=	crchack-git

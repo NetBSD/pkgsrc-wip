@@ -1,0 +1,540 @@
+[5/10] Linking CXX executable brand-string-test
+FAILED: brand-string-test
+: && /scratch/sysutils/cpuinfo/work/.cwrapper/bin/c++ -O2 -g -fstack-clash-protection -I/usr/pkg/include -Wl,-zrelro -Wl,-znow -L/usr/pkg/lib -Wl,-R/usr/pkg/lib   -Wl,--dependency-file=CMakeFiles/brand-string-test.dir/link.d CMakeFiles/brand-string-test.dir/test/name/brand-string.cc.o -o brand-string-test  libcpuinfo_internals.a  lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -pthread && :
+ld: CMakeFiles/brand-string-test.dir/test/name/brand-string.cc.o: in function `__static_initialization_and_destruction_0(int, int) [clone .constprop.0]':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/name/brand-string.cc:15:(.text.startup+0x110): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/name/brand-string.cc:150:(.text.startup+0x1e7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/name/brand-string.cc:207:(.text.startup+0x2be): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/name/brand-string.cc:355:(.text.startup+0x395): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/name/brand-string.cc:391:(.text.startup+0x46c): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: CMakeFiles/brand-string-test.dir/test/name/brand-string.cc.o:/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/name/brand-string.cc:397: more undefined references to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)' follow
+[7/10] Linking CXX executable init-test
+FAILED: init-test
+: && /scratch/sysutils/cpuinfo/work/.cwrapper/bin/c++ -O2 -g -fstack-clash-protection -I/usr/pkg/include -Wl,-zrelro -Wl,-znow -L/usr/pkg/lib -Wl,-R/usr/pkg/lib   -Wl,--dependency-file=CMakeFiles/init-test.dir/link.d CMakeFiles/init-test.dir/test/init.cc.o -o init-test  libcpuinfo.a  lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -pthread && :
+ld: CMakeFiles/init-test.dir/test/init.cc.o: in function `__static_initialization_and_destruction_0(int, int) [clone .constprop.0]':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/init.cc:5:(.text.startup+0x1c7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/init.cc:11:(.text.startup+0x2af): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/init.cc:17:(.text.startup+0x3a5): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/init.cc:25:(.text.startup+0x492): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/init.cc:38:(.text.startup+0x57f): undefined reference to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+ld: CMakeFiles/init-test.dir/test/init.cc.o:/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/test/init.cc:49: more undefined references to `testing::internal::MakeAndRegisterTestInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, char const*, char const*, testing::internal::CodeLocation, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)' follow
+[8/10] Building CXX object deps/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+FAILED: deps/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+/scratch/sysutils/cpuinfo/work/.cwrapper/bin/c++  -I/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include -I/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock -isystem /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googletest/include -isystem /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googletest -O2 -g -fstack-clash-protection -I/usr/pkg/include -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -MD -MT deps/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -MF deps/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d -o deps/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-all.cc
+In file included from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:145,
+                 from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock.h:59,
+                 from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-all.cc:39:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:405:37: error: 'IndexSequence' has not been declared
+  405 | auto ApplyImpl(F&& f, Tuple&& args, IndexSequence<Idx...>) -> decltype(
+      |                                     ^~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:405:50: error: expected ',' or '...' before '<' token
+  405 | auto ApplyImpl(F&& f, Tuple&& args, IndexSequence<Idx...>) -> decltype(
+      |                                                  ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:414:15: error: 'MakeIndexSequence' was not declared in this scope
+  414 |               MakeIndexSequence<std::tuple_size<
+      |               ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:414:15: error: 'MakeIndexSequence' was not declared in this scope
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:415:72: error: expected primary-expression before ')' token
+  415 |                   typename std::remove_reference<Tuple>::type>::value>())) {
+      |                                                                        ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h: In function 'decltype (testing::internal::ApplyImpl(forward<F>(f), forward<Tuple>(args), ((<expression error> < std::tuple_size<typename std::remove_reference<_Arg>::type>::value) > <expression error>))) testing::internal::Apply(F&&, Tuple&&)':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:417:20: error: 'MakeIndexSequence' was not declared in this scope
+  417 |                    MakeIndexSequence<std::tuple_size<
+      |                    ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:418:77: error: expected primary-expression before ')' token
+  418 |                        typename std::remove_reference<Tuple>::type>::value>());
+      |                                                                             ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:342:5: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  342 |     GTEST_DISALLOW_COPY_AND_ASSIGN_(FixedValueProducer);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:353:5: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  353 |     GTEST_DISALLOW_COPY_AND_ASSIGN_(FactoryValueProducer);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:427:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  427 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(ActionInterface);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:687:27: error: expected identifier before '!' token
+  687 |     GTEST_COMPILE_ASSERT_(!std::is_reference<Result>::value,
+      |                           ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:687:27: error: expected ',' or '...' before '!' token
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:687:5: error: ISO C++ forbids declaration of 'GTEST_COMPILE_ASSERT_' with no type [-fpermissive]
+  687 |     GTEST_COMPILE_ASSERT_(!std::is_reference<Result>::value,
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:694:5: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  694 |     GTEST_DISALLOW_COPY_AND_ASSIGN_(Impl);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: In member function 'testing::internal::ReturnAction<R>::operator testing::Action<Func>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:659:9: error: 'use_ReturnRef_instead_of_Return_to_return_a_reference' was not declared in this scope
+  659 |         use_ReturnRef_instead_of_Return_to_return_a_reference);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: In member function 'testing::internal::ReturnRefAction<T>::operator testing::Action<Func>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:763:27: error: 'use_Return_instead_of_ReturnRef_to_return_a_value' was not declared in this scope
+  763 |                           use_Return_instead_of_ReturnRef_to_return_a_value);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: In member function 'testing::internal::ReturnRefOfCopyAction<T>::operator testing::Action<Func>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:806:9: error: 'use_Return_instead_of_ReturnRefOfCopy_to_return_a_value' was not declared in this scope
+  806 |         use_Return_instead_of_ReturnRefOfCopy_to_return_a_value);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1041:32: error: 'IndexSequence' has not been declared
+ 1041 |   std::vector<ActionT> Convert(IndexSequence<I...>) const {
+      |                                ^~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1041:45: error: expected ',' or '...' before '<' token
+ 1041 |   std::vector<ActionT> Convert(IndexSequence<I...>) const {
+      |                                             ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: In member function 'testing::internal::DoAllAction<Actions>::operator testing::Action<R(Args ...)>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1062:19: error: 'MakeIndexSequence' was not declared in this scope
+ 1062 |                   MakeIndexSequence<sizeof...(Actions) - 1>()),
+      |                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1061:14: error: expected primary-expression before '{' token
+ 1061 |     return Op{Convert<Action<void(NonFinalType<Args>...)>>(
+      |              ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1061:14: error: expected ';' before '{' token
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1062:61: error: expected primary-expression before ')' token
+ 1062 |                   MakeIndexSequence<sizeof...(Actions) - 1>()),
+      |                                                             ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1063:56: error: expected ';' before '}' token
+ 1063 |               std::get<sizeof...(Actions) - 1>(actions)};
+      |                                                        ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1516:11: error: 'IndexSequence' has not been declared
+ 1516 |   R Apply(IndexSequence<arg_id...>, IndexSequence<excess_id...>,
+      |           ^~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1516:24: error: expected ',' or '...' before '<' token
+ 1516 |   R Apply(IndexSequence<arg_id...>, IndexSequence<excess_id...>,
+      |                        ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: In member function 'R testing::internal::ActionImpl<R(Args ...), Impl>::operator()(Args&& ...) const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1510:18: error: 'MakeIndexSequence' was not declared in this scope
+ 1510 |     return Apply(MakeIndexSequence<kMaxArgs>{},
+      |                  ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1510:45: error: expected primary-expression before '{' token
+ 1510 |     return Apply(MakeIndexSequence<kMaxArgs>{},
+      |                                             ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1511:50: error: expected primary-expression before '{' token
+ 1511 |                  MakeIndexSequence<10 - kMaxArgs>{},
+      |                                                  ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h: In member function 'R testing::internal::ActionImpl<R(Args ...), Impl>::Apply(int) const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-actions.h:1528:18: error: 'args' was not declared in this scope; did you mean 'Args'?
+ 1528 |         /*args=*/args, std::get<arg_id>(args)...,
+      |                  ^~~~
+      |                  Args
+In file included from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:75,
+                 from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-function-mocker.h:42,
+                 from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock.h:61:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:316:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  316 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(StringMatchResultListener);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:493:31: error: 'IndexSequence' has not been declared
+  493 |   ::testing::Matcher<F> Apply(IndexSequence<tuple_ids...>) const {
+      |                               ^~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:493:44: error: expected ',' or '...' before '<' token
+  493 |   ::testing::Matcher<F> Apply(IndexSequence<tuple_ids...>) const {
+      |                                            ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In member function 'testing::internal::MatcherBaseImpl<Derived<Ts ...> >::operator testing::Matcher<T>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:488:21: error: 'MakeIndexSequence' was not declared in this scope
+  488 |     return Apply<F>(MakeIndexSequence<sizeof...(Ts)>{});
+      |                     ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:488:53: error: expected primary-expression before '{' token
+  488 |     return Apply<F>(MakeIndexSequence<sizeof...(Ts)>{});
+      |                                                     ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In function 'testing::Matcher<T> testing::SafeMatcherCast(const Matcher<U>&)':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:538:7: error: 'cannot_convert_non_reference_arg_to_reference' was not declared in this scope
+  538 |       cannot_convert_non_reference_arg_to_reference);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:548:7: error: 'conversion_of_arithmetic_types_must_be_lossless' was not declared in this scope
+  548 |       conversion_of_arithmetic_types_must_be_lossless);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In function 'bool testing::internal::TupleMatches(const MatcherTuple&, const ValueTuple&)':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:683:25: error: 'matcher_and_value_have_different_numbers_of_fields' was not declared in this scope
+  683 |                         matcher_and_value_have_different_numbers_of_fields);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1168:53: error: 'AnyEq' was not declared in this scope; did you mean 'Any'?
+ 1168 | class Eq2Matcher : public PairMatchBase<Eq2Matcher, AnyEq> {
+      |                                                     ^~~~~
+      |                                                     Any
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1168:58: error: template argument 2 is invalid
+ 1168 | class Eq2Matcher : public PairMatchBase<Eq2Matcher, AnyEq> {
+      |                                                          ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1172:53: error: 'AnyNe' was not declared in this scope; did you mean 'Any'?
+ 1172 | class Ne2Matcher : public PairMatchBase<Ne2Matcher, AnyNe> {
+      |                                                     ^~~~~
+      |                                                     Any
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1172:58: error: template argument 2 is invalid
+ 1172 | class Ne2Matcher : public PairMatchBase<Ne2Matcher, AnyNe> {
+      |                                                          ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1176:53: error: 'AnyLt' was not declared in this scope; did you mean 'Any'?
+ 1176 | class Lt2Matcher : public PairMatchBase<Lt2Matcher, AnyLt> {
+      |                                                     ^~~~~
+      |                                                     Any
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1176:58: error: template argument 2 is invalid
+ 1176 | class Lt2Matcher : public PairMatchBase<Lt2Matcher, AnyLt> {
+      |                                                          ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1180:53: error: 'AnyGt' was not declared in this scope; did you mean 'Any'?
+ 1180 | class Gt2Matcher : public PairMatchBase<Gt2Matcher, AnyGt> {
+      |                                                     ^~~~~
+      |                                                     Any
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1180:58: error: template argument 2 is invalid
+ 1180 | class Gt2Matcher : public PairMatchBase<Gt2Matcher, AnyGt> {
+      |                                                          ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1184:53: error: 'AnyLe' was not declared in this scope; did you mean 'Any'?
+ 1184 | class Le2Matcher : public PairMatchBase<Le2Matcher, AnyLe> {
+      |                                                     ^~~~~
+      |                                                     Any
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1184:58: error: template argument 2 is invalid
+ 1184 | class Le2Matcher : public PairMatchBase<Le2Matcher, AnyLe> {
+      |                                                          ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1188:53: error: 'AnyGe' was not declared in this scope; did you mean 'Any'?
+ 1188 | class Ge2Matcher : public PairMatchBase<Ge2Matcher, AnyGe> {
+      |                                                     ^~~~~
+      |                                                     Any
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:1188:58: error: template argument 2 is invalid
+ 1188 | class Ge2Matcher : public PairMatchBase<Ge2Matcher, AnyGe> {
+      |                                                          ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2490:5: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+ 2490 |     GTEST_DISALLOW_COPY_AND_ASSIGN_(Impl);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2505:7: error: expected identifier before '!' token
+ 2505 |       !IsHashTable<GTEST_REMOVE_REFERENCE_AND_CONST_(RhsContainer)>::value,
+      |       ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2505:7: error: expected ',' or '...' before '!' token
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2504:3: error: ISO C++ forbids declaration of 'GTEST_COMPILE_ASSERT_' with no type [-fpermissive]
+ 2504 |   GTEST_COMPILE_ASSERT_(
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In member function 'testing::internal::PointwiseMatcher<TupleMatcher, RhsContainer>::operator testing::Matcher<T>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2527:9: error: 'use_UnorderedPointwise_with_hash_tables' was not declared in this scope
+ 2527 |         use_UnorderedPointwise_with_hash_tables);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2977:35: error: 'IndexSequence' has not been declared
+ 2977 | auto UnpackStructImpl(const T& t, IndexSequence<I...>, int)
+      |                                   ^~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2977:48: error: expected ',' or '...' before '<' token
+ 2977 | auto UnpackStructImpl(const T& t, IndexSequence<I...>, int)
+      |                                                ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:35: error: 'MakeIndexSequence' has not been declared
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:52: error: expected ',' or '...' before '<' token
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2991:35: error: 'MakeIndexSequence' has not been declared
+ 2991 | auto UnpackStructImpl(const T& t, MakeIndexSequence<2>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2991:52: error: expected ',' or '...' before '<' token
+ 2991 | auto UnpackStructImpl(const T& t, MakeIndexSequence<2>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2991:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 2991 | auto UnpackStructImpl(const T& t, MakeIndexSequence<2>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2996:35: error: 'MakeIndexSequence' has not been declared
+ 2996 | auto UnpackStructImpl(const T& t, MakeIndexSequence<3>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2996:52: error: expected ',' or '...' before '<' token
+ 2996 | auto UnpackStructImpl(const T& t, MakeIndexSequence<3>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2996:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 2996 | auto UnpackStructImpl(const T& t, MakeIndexSequence<3>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3001:35: error: 'MakeIndexSequence' has not been declared
+ 3001 | auto UnpackStructImpl(const T& t, MakeIndexSequence<4>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3001:52: error: expected ',' or '...' before '<' token
+ 3001 | auto UnpackStructImpl(const T& t, MakeIndexSequence<4>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3001:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3001 | auto UnpackStructImpl(const T& t, MakeIndexSequence<4>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3006:35: error: 'MakeIndexSequence' has not been declared
+ 3006 | auto UnpackStructImpl(const T& t, MakeIndexSequence<5>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3006:52: error: expected ',' or '...' before '<' token
+ 3006 | auto UnpackStructImpl(const T& t, MakeIndexSequence<5>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3006:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3006 | auto UnpackStructImpl(const T& t, MakeIndexSequence<5>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3011:35: error: 'MakeIndexSequence' has not been declared
+ 3011 | auto UnpackStructImpl(const T& t, MakeIndexSequence<6>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3011:52: error: expected ',' or '...' before '<' token
+ 3011 | auto UnpackStructImpl(const T& t, MakeIndexSequence<6>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3011:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3011 | auto UnpackStructImpl(const T& t, MakeIndexSequence<6>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3016:35: error: 'MakeIndexSequence' has not been declared
+ 3016 | auto UnpackStructImpl(const T& t, MakeIndexSequence<7>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3016:52: error: expected ',' or '...' before '<' token
+ 3016 | auto UnpackStructImpl(const T& t, MakeIndexSequence<7>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3016:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3016 | auto UnpackStructImpl(const T& t, MakeIndexSequence<7>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3021:35: error: 'MakeIndexSequence' has not been declared
+ 3021 | auto UnpackStructImpl(const T& t, MakeIndexSequence<8>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3021:52: error: expected ',' or '...' before '<' token
+ 3021 | auto UnpackStructImpl(const T& t, MakeIndexSequence<8>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3021:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3021 | auto UnpackStructImpl(const T& t, MakeIndexSequence<8>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3026:35: error: 'MakeIndexSequence' has not been declared
+ 3026 | auto UnpackStructImpl(const T& t, MakeIndexSequence<9>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3026:52: error: expected ',' or '...' before '<' token
+ 3026 | auto UnpackStructImpl(const T& t, MakeIndexSequence<9>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3026:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3026 | auto UnpackStructImpl(const T& t, MakeIndexSequence<9>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3031:35: error: 'MakeIndexSequence' has not been declared
+ 3031 | auto UnpackStructImpl(const T& t, MakeIndexSequence<10>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3031:52: error: expected ',' or '...' before '<' token
+ 3031 | auto UnpackStructImpl(const T& t, MakeIndexSequence<10>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3031:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3031 | auto UnpackStructImpl(const T& t, MakeIndexSequence<10>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3036:35: error: 'MakeIndexSequence' has not been declared
+ 3036 | auto UnpackStructImpl(const T& t, MakeIndexSequence<11>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3036:52: error: expected ',' or '...' before '<' token
+ 3036 | auto UnpackStructImpl(const T& t, MakeIndexSequence<11>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3036:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3036 | auto UnpackStructImpl(const T& t, MakeIndexSequence<11>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3041:35: error: 'MakeIndexSequence' has not been declared
+ 3041 | auto UnpackStructImpl(const T& t, MakeIndexSequence<12>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3041:52: error: expected ',' or '...' before '<' token
+ 3041 | auto UnpackStructImpl(const T& t, MakeIndexSequence<12>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3041:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3041 | auto UnpackStructImpl(const T& t, MakeIndexSequence<12>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3046:35: error: 'MakeIndexSequence' has not been declared
+ 3046 | auto UnpackStructImpl(const T& t, MakeIndexSequence<13>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3046:52: error: expected ',' or '...' before '<' token
+ 3046 | auto UnpackStructImpl(const T& t, MakeIndexSequence<13>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3046:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3046 | auto UnpackStructImpl(const T& t, MakeIndexSequence<13>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3051:35: error: 'MakeIndexSequence' has not been declared
+ 3051 | auto UnpackStructImpl(const T& t, MakeIndexSequence<14>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3051:52: error: expected ',' or '...' before '<' token
+ 3051 | auto UnpackStructImpl(const T& t, MakeIndexSequence<14>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3051:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3051 | auto UnpackStructImpl(const T& t, MakeIndexSequence<14>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3056:35: error: 'MakeIndexSequence' has not been declared
+ 3056 | auto UnpackStructImpl(const T& t, MakeIndexSequence<15>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3056:52: error: expected ',' or '...' before '<' token
+ 3056 | auto UnpackStructImpl(const T& t, MakeIndexSequence<15>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3056:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3056 | auto UnpackStructImpl(const T& t, MakeIndexSequence<15>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3061:35: error: 'MakeIndexSequence' has not been declared
+ 3061 | auto UnpackStructImpl(const T& t, MakeIndexSequence<16>, char) {
+      |                                   ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3061:52: error: expected ',' or '...' before '<' token
+ 3061 | auto UnpackStructImpl(const T& t, MakeIndexSequence<16>, char) {
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3061:6: error: redefinition of 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)'
+ 3061 | auto UnpackStructImpl(const T& t, MakeIndexSequence<16>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:2986:6: note: 'template<class T> auto testing::internal::UnpackStructImpl(const T&, int)' previously declared here
+ 2986 | auto UnpackStructImpl(const T& t, MakeIndexSequence<1>, char) {
+      |      ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3069:39: error: 'MakeIndexSequence' was not declared in this scope
+ 3069 |     -> decltype((UnpackStructImpl)(t, MakeIndexSequence<I>{}, 0)) {
+      |                                       ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3069:39: error: 'MakeIndexSequence' was not declared in this scope
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3069:59: error: expected primary-expression before '{' token
+ 3069 |     -> decltype((UnpackStructImpl)(t, MakeIndexSequence<I>{}, 0)) {
+      |                                                           ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In function 'decltype (testing::internal::UnpackStructImpl(t, <expression error>, 0)) testing::internal::UnpackStruct(const T&)':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3070:32: error: 'MakeIndexSequence' was not declared in this scope
+ 3070 |   return (UnpackStructImpl)(t, MakeIndexSequence<I>{}, 0);
+      |                                ^~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3070:52: error: expected primary-expression before '{' token
+ 3070 |   return (UnpackStructImpl)(t, MakeIndexSequence<I>{}, 0);
+      |                                                    ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3083:36: error: 'IndexSequence' was not declared in this scope
+ 3083 | class FieldsAreMatcherImpl<Struct, IndexSequence<I...>>
+      |                                    ^~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3083:51: error: expected parameter pack before '...'
+ 3083 | class FieldsAreMatcherImpl<Struct, IndexSequence<I...>>
+      |                                                   ^~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3083:51: error: template argument 2 is invalid
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3083:54: error: expected unqualified-id before '>' token
+ 3083 | class FieldsAreMatcherImpl<Struct, IndexSequence<I...>>
+      |                                                      ^~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In member function 'testing::internal::FieldsAreMatcher<Inner>::operator testing::Matcher<T>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3165:49: error: 'IndexSequenceFor' was not declared in this scope
+ 3165 |         new FieldsAreMatcherImpl<const Struct&, IndexSequenceFor<Inner...>>(
+      |                                                 ^~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3165:71: error: expected parameter pack before '...'
+ 3165 |         new FieldsAreMatcherImpl<const Struct&, IndexSequenceFor<Inner...>>(
+      |                                                                       ^~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3165:71: error: template argument 2 is invalid
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In member function 'testing::internal::ElementsAreMatcher<MatcherTuple>::operator testing::Matcher<T>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3565:9: error: 'use_UnorderedElementsAre_with_hash_tables' was not declared in this scope
+ 3565 |         use_UnorderedElementsAre_with_hash_tables);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h: In member function 'testing::internal::ElementsAreArrayMatcher<T>::operator testing::Matcher<T>() const':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:3615:9: error: 'use_UnorderedElementsAreArray_with_hash_tables' was not declared in this scope
+ 3615 |         use_UnorderedElementsAreArray_with_hash_tables);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:684:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  684 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(InSequence);  // NOLINT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:1239:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+ 1239 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(TypedExpectation);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:1420:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+ 1420 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(ActionResultHolder);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:1453:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+ 1453 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(ActionResultHolder);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h: In member function 'testing::internal::FunctionMocker<R(Args ...)>::Result testing::internal::FunctionMocker<R(Args ...)>::Invoke(Args ...)':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:1598:42: error: 'DownCast_' was not declared in this scope
+ 1598 |     std::unique_ptr<ResultHolder> holder(DownCast_<ResultHolder*>(
+      |                                          ^~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:1598:64: error: expected primary-expression before '*' token
+ 1598 |     std::unique_ptr<ResultHolder> holder(DownCast_<ResultHolder*>(
+      |                                                                ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-spec-builders.h:1598:65: error: expected primary-expression before '>' token
+ 1598 |     std::unique_ptr<ResultHolder> holder(DownCast_<ResultHolder*>(
+      |                                                                 ^
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h: At global scope:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:5260:3: error: 'GTEST_ATTRIBUTE_UNUSED_' does not name a type; did you mean 'GTEST_ATTRIBUTE_PRINTF_'?
+ 5260 |   GTEST_ATTRIBUTE_UNUSED_ inline name##Matcher name() { return {}; }           \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h:61:1: note: in expansion of macro 'MATCHER'
+   61 | MATCHER(IsEmpty, negation ? "isn't empty" : "is empty") {
+      | ^~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:5264:55: error: expected ',' or '...' before 'GTEST_ATTRIBUTE_UNUSED_'
+ 5264 |       ::testing::MatchResultListener* result_listener GTEST_ATTRIBUTE_UNUSED_) \
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h:61:1: note: in expansion of macro 'MATCHER'
+   61 | MATCHER(IsEmpty, negation ? "isn't empty" : "is empty") {
+      | ^~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:5260:3: error: 'GTEST_ATTRIBUTE_UNUSED_' does not name a type; did you mean 'GTEST_ATTRIBUTE_PRINTF_'?
+ 5260 |   GTEST_ATTRIBUTE_UNUSED_ inline name##Matcher name() { return {}; }           \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h:73:1: note: in expansion of macro 'MATCHER'
+   73 | MATCHER(IsTrue, negation ? "is false" : "is true") {
+      | ^~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:5264:55: error: expected ',' or '...' before 'GTEST_ATTRIBUTE_UNUSED_'
+ 5264 |       ::testing::MatchResultListener* result_listener GTEST_ATTRIBUTE_UNUSED_) \
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h:73:1: note: in expansion of macro 'MATCHER'
+   73 | MATCHER(IsTrue, negation ? "is false" : "is true") {
+      | ^~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:5260:3: error: 'GTEST_ATTRIBUTE_UNUSED_' does not name a type; did you mean 'GTEST_ATTRIBUTE_PRINTF_'?
+ 5260 |   GTEST_ATTRIBUTE_UNUSED_ inline name##Matcher name() { return {}; }           \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h:81:1: note: in expansion of macro 'MATCHER'
+   81 | MATCHER(IsFalse, negation ? "is true" : "is false") {
+      | ^~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-matchers.h:5264:55: error: expected ',' or '...' before 'GTEST_ATTRIBUTE_UNUSED_'
+ 5264 |       ::testing::MatchResultListener* result_listener GTEST_ATTRIBUTE_UNUSED_) \
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-more-matchers.h:81:1: note: in expansion of macro 'MATCHER'
+   81 | MATCHER(IsFalse, negation ? "is true" : "is false") {
+      | ^~~~~~~
+In file included from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock.h:65:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-nice-strict.h:172:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  172 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(NiceMock);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-nice-strict.h:213:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  213 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(NaggyMock);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/gmock-nice-strict.h:254:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+  254 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(StrictMock);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-all.cc:42:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-cardinalities.cc:90:3: error: ISO C++ forbids declaration of 'GTEST_DISALLOW_COPY_AND_ASSIGN_' with no type [-fpermissive]
+   90 |   GTEST_DISALLOW_COPY_AND_ASSIGN_(BetweenCardinalityImpl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-all.cc:43:
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-internal-utils.cc: In function 'void testing::internal::Log(LogSeverity, const std::string&, int)':
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-internal-utils.cc:182:46: error: invalid conversion from 'testing::UnitTest*' to 'int' [-fpermissive]
+  182 |              ::testing::UnitTest::GetInstance(), actual_to_skip);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+      |                                              |
+      |                                              testing::UnitTest*
+/scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/src/gmock-internal-utils.cc:181:65: error: too many arguments to function 'std::string testing::internal::GetCurrentOsStackTraceExceptTop(int)'
+  181 |          << ::testing::internal::GetCurrentOsStackTraceExceptTop(
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  182 |              ::testing::UnitTest::GetInstance(), actual_to_skip);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /scratch/sysutils/cpuinfo/work/.buildlink/include/gtest/gtest-printers.h:122,
+                 from /scratch/sysutils/cpuinfo/work/.buildlink/include/gtest/gtest-matchers.h:49,
+                 from /scratch/sysutils/cpuinfo/work/.buildlink/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /scratch/sysutils/cpuinfo/work/.buildlink/include/gtest/gtest-death-test.h:43,
+                 from /scratch/sysutils/cpuinfo/work/.buildlink/include/gtest/gtest.h:64,
+                 from /scratch/sysutils/cpuinfo/work/cpuinfo-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea/deps/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h:47:
+/scratch/sysutils/cpuinfo/work/.buildlink/include/gtest/internal/gtest-internal.h:806:24: note: declared here
+  806 | GTEST_API_ std::string GetCurrentOsStackTraceExceptTop(int skip_count);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.
+*** Error code 1
