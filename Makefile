@@ -1973,6 +1973,7 @@ SUBDIR+=	lebiniou
 SUBDIR+=	lebiniou-data
 SUBDIR+=	leo
 SUBDIR+=	leocad
+SUBDIR+=	lesspipe
 SUBDIR+=	lfe
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
