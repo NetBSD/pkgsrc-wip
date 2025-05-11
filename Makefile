@@ -2658,6 +2658,7 @@ SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
 SUBDIR+=	nvi2-git
 SUBDIR+=	nvidia-freebsd
+SUBDIR+=	nvimpager
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nyan
 SUBDIR+=	nyh-hoc
