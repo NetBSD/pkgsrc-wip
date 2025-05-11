@@ -1,0 +1,5 @@
+lesspipe.sh is an input filter for the pager less as described in
+less's man page. The script runs as a bash or zsh script and allows you
+to view files with binary content, compressed files, archives and files
+contained in archives. It supports many formats (both as plain and
+compressed files using gzip, bzip2 and other pack programs).

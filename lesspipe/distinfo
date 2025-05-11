@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (lesspipe-2.18.tar.gz) = 0cab16be32d54e2928d399dcc8f64101c12db70565b3fcfa2eb59b4d0ba1f2a3
+SHA512 (lesspipe-2.18.tar.gz) = c1f966460090f8a4b1022eadb7380f0e5c56306fecad4ef39dd971683291105fca05bb8adeed9772e75fc417587b7e869e5b98725e46c6b69cdfe5c5f06b0003
+Size (lesspipe-2.18.tar.gz) = 175489 bytes

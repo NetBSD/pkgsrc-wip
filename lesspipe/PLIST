@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/archive_color
+bin/code2color
+bin/lesscomplete
+bin/lesspipe.sh
+bin/sxw2txt
+bin/vimcolor
+man/man1/lesspipe.1
+share/bash-completion/less_completion
+share/zsh/site-functions/_less
