@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/nvimpager
+man/man1/nvimpager.1
+share/nvimpager/runtime/lua/nvimpager/ansi2highlight.lua
+share/nvimpager/runtime/lua/nvimpager/cat.lua
+share/nvimpager/runtime/lua/nvimpager/init.lua
+share/nvimpager/runtime/lua/nvimpager/options.lua
+share/nvimpager/runtime/lua/nvimpager/pager.lua
+share/nvimpager/runtime/lua/nvimpager/util.lua
+share/zsh/site-functions/_nvimpager

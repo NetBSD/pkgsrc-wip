@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (nvimpager-0.13.0.tar.gz) = 8269de0b306a4baba3e0a09b707da57730c3c3a8336395b0467effbe690410be
+SHA512 (nvimpager-0.13.0.tar.gz) = b6cd995d378dcb3f230b9dac2ae53b461ed48a2a355891414dfd151eda33e9e8b016f922955974fd6893332c6a5468814e8738c1f4eaba03717084f82688a48f
+Size (nvimpager-0.13.0.tar.gz) = 33459 bytes
+SHA1 (patch-makefile) = bedd200e5cd632061766b2faf585d604f3876a04

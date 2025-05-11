@@ -1,0 +1,2 @@
+nvimpager permits to use neovim as a pager to view man pages, git
+diffs, whatnot with neovim's syntax highlighting and mouse support.
