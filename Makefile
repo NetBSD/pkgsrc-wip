@@ -1399,7 +1399,6 @@ SUBDIR+=	gprlib
 SUBDIR+=	gpsdrive
 SUBDIR+=	gptfdisk
 SUBDIR+=	gpx2shp
-SUBDIR+=	gqrx
 SUBDIR+=	gr-fcdproplus
 SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-gsm
