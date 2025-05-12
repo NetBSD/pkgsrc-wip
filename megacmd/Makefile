@@ -23,7 +23,7 @@ FORCE_CXX_STD=		c++17
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 REPLACE_SH=		src/client/mega-*
-CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM -ggdb
+CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM
 INSTALL_UNSTRIPPED=	yes
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -46,7 +46,6 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"

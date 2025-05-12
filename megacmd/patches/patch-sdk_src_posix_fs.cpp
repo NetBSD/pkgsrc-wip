@@ -3,7 +3,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
 * Fix build on NetBSD, use statvfs
 * Don't use mntent features on BSDs
 * O_NOATIME not available on BSDs
-* BSDs use LinuxFileSystemAccess
+* Fallback funcs
 
 --- sdk/src/posix/fs.cpp.orig	2025-04-02 09:16:59.000000000 +0200
 +++ sdk/src/posix/fs.cpp
@@ -27,37 +27,43 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  #include <sys/types.h>
  #include <sys/utsname.h>
  #ifdef TARGET_OS_MAC
-@@ -821,7 +825,8 @@ PosixFileSystemAccess::PosixFileSystemAc
-     defaultfolderpermissions = 0700;
+@@ -1018,6 +1022,18 @@ int LinuxFileSystemAccess::checkevents([
+     return result;
  }
  
--#ifdef __linux__
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
-+    defined(__NetBSD__) || defined(__DragonFly__)
- #ifdef ENABLE_SYNC
++#elif defined(USE_PERIODIC)
++
++void FallbackFileSystemAccess::addevents([[maybe_unused]] Waiter* waiter, int /*flags*/)
++{
++    //Nothing
++}
++
++int FallbackFileSystemAccess::checkevents([[maybe_unused]] Waiter* waiter)
++{
++    return 0;
++}
++
+ #endif //  __linux__
  
- bool LinuxFileSystemAccess::initFilesystemNotificationSystem()
-@@ -881,7 +886,8 @@ bool PosixFileSystemAccess::cwd_static(L
  
- // wake up from filesystem updates
- 
--#ifdef __linux__
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
-+    defined(__NetBSD__) || defined(__DragonFly__)
- void LinuxFileSystemAccess::addevents([[maybe_unused]] Waiter* waiter, int /*flags*/)
- {
- #ifdef ENABLE_SYNC
-@@ -1640,7 +1646,8 @@ void PosixFileSystemAccess::statsid(stri
+@@ -1749,6 +1765,16 @@ void LinuxDirNotify::removeWatch(WatchMa
  }
  
- #if defined(ENABLE_SYNC)
--#if defined(__linux__)
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
-+    defined(__NetBSD__) || defined(__DragonFly__)
+ #endif // USE_INOTIFY
++
++#elif defined(USE_PERIODIC)
++
++FallbackDirNotify::FallbackDirNotify(const LocalPath& rootPath):
++    DirNotify(rootPath)
++{
++    // Let the engine know everything's ok.
++    setFailed(0, "");
++}
++
+ #endif // __linux__
  
- LinuxDirNotify::LinuxDirNotify(LinuxFileSystemAccess& owner,
-                                LocalNode& /*root*/,
-@@ -1805,8 +1812,8 @@ private:
+ #endif //ENABLE_SYNC
+@@ -1805,8 +1831,8 @@ private:
      // open with O_NOATIME if possible
      int open(const char *path)
      {
@@ -68,7 +74,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
          int fd = ::open(path, O_RDONLY) ;
  #else
          // for sync in particular, try to open without setting access-time
-@@ -2065,6 +2072,7 @@ ScanResult PosixFileSystemAccess::direct
+@@ -2065,6 +2091,7 @@ ScanResult PosixFileSystemAccess::direct
  }
  
  #ifndef __APPLE__
@@ -76,7 +82,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  
  // Determine which device contains the specified path.
  static std::string deviceOf(const std::string& database,
-@@ -2233,6 +2241,7 @@ static std::string deviceOf(const std::s
+@@ -2233,6 +2260,7 @@ static std::string deviceOf(const std::s
      // No database has a mapping for this path.
      return std::string();
  }
@@ -84,7 +90,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  
  // Compute legacy filesystem fingerprint.
  static std::uint64_t fingerprintOf(const std::string& path)
-@@ -2261,6 +2270,7 @@ static std::uint64_t fingerprintOf(const
+@@ -2261,6 +2289,7 @@ static std::uint64_t fingerprintOf(const
      return ++value;
  }
  
@@ -92,7 +98,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  // Determine the UUID of the specified device.
  static std::string uuidOf(const std::string& device)
  {
-@@ -2337,6 +2347,7 @@ static std::string uuidOf(const std::str
+@@ -2337,6 +2366,7 @@ static std::string uuidOf(const std::str
      // Couldn't determine device's UUID.
      return std::string();
  }
@@ -100,7 +106,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  
  fsfp_t FileSystemAccess::fsFingerprint(const LocalPath& path) const
  {
-@@ -2347,6 +2358,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
+@@ -2347,6 +2377,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
      if (!fingerprint)
          return fsfp_t();
  
@@ -108,7 +114,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
      // What device contains the specified path?
      auto device = deviceOf(path.localpath);
  
-@@ -2360,6 +2372,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
+@@ -2360,6 +2391,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
          if (!uuid.empty())
              return fsfp_t(fingerprint, std::move(uuid));
      }
@@ -116,17 +122,23 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
  
      // Couldn't determine filesystem UUID.
      return fsfp_t(fingerprint, std::string());
-@@ -2443,7 +2456,8 @@ unique_ptr<DirAccess>  PosixFileSystemAc
- #endif
+@@ -2452,6 +2484,15 @@ DirNotify* LinuxFileSystemAccess::newdir
+     return new LinuxDirNotify(*this, root, rootPath);
  }
+ #endif
++
++#elif defined(USE_PERIODIC)
++DirNotify* FallbackFileSystemAccess::newdirnotify(LocalNode& root,
++    const LocalPath& rootPath,
++    Waiter*)
++{
++    return new FallbackDirNotify(rootPath);
++}
++
+ #endif
  
--#ifdef __linux__
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
-+    defined(__NetBSD__) || defined(__DragonFly__)
- #ifdef ENABLE_SYNC
- DirNotify* LinuxFileSystemAccess::newdirnotify(LocalNode& root,
-     const LocalPath& rootPath,
-@@ -2526,18 +2540,26 @@ bool PosixFileSystemAccess::getlocalfsty
+ bool PosixFileSystemAccess::issyncsupported(const LocalPath& localpathArg, bool& isnetwork, SyncError& syncError, SyncWarning& syncWarning)
+@@ -2526,18 +2567,26 @@ bool PosixFileSystemAccess::getlocalfsty
      }
  #endif /* __linux__ || __ANDROID__ */
  
@@ -154,7 +166,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.3 2025/02/15 07:40:14 wiz Exp $
      }; /* filesystemTypes */
  
      struct statfs statbuf;
-@@ -2555,7 +2577,7 @@ bool PosixFileSystemAccess::getlocalfsty
+@@ -2555,7 +2604,7 @@ bool PosixFileSystemAccess::getlocalfsty
          type = FS_UNKNOWN;
          return true;
      }
