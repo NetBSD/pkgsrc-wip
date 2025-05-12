@@ -1,7 +1,8 @@
 $NetBSD$
 
-RMD160 (kamailio-5.3.3_src.tar.gz) = f2d25772de8418f887a3977f35554ee6ca5b36bf
-SHA512 (kamailio-5.3.3_src.tar.gz) = 99c0216a32a0b70ad7608dd9967890107a47a0692a1305bca98cbcecbdca8fe1ac6a1377a1d09ea6f1e99ba011b0fe2bd69a8bf4c92113b249e608fa14f66e3d
-Size (kamailio-5.3.3_src.tar.gz) = 12447194 bytes
-SHA1 (patch-src_Makefile.defs) = e3ceaa0e1ffd1520b5e64b59a9aba2867ad0e1ba
-SHA1 (patch-src_lib_srdb1_db__ut.c) = ecdc2d3185e9497127a4662794a8ec779cb20165
+BLAKE2s (kamailio-5.8.6_src.tar.gz) = d459955dba8a71cdf80a7884a29f8eb5577eecd55571b6f59856327c44b160ba
+SHA512 (kamailio-5.8.6_src.tar.gz) = 94a62d8c0d9b343cf4767811e217be13a5cb09cb569f982e72bf3fbb7b917572ca3cc43a7438cd3691b52b0c1e2cf69e0864a5b6a12014da903eeada97397b1b
+Size (kamailio-5.8.6_src.tar.gz) = 13027900 bytes
+SHA1 (patch-src_Makefile.defs) = e0599a9f44542e90afe14ca66d0abf8bb85c7652
+SHA1 (patch-src_lib_srdb1_db__ut.c) = 7609f63d400dde7d1a1a47572be246ca993ca1d9
+SHA1 (patch-src_modules_influxdbc_ic.c) = 66cc21454bf61d62e2de5eadcd4a68e83b673302
