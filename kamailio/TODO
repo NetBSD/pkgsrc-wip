@@ -1,9 +1,12 @@
-Fix libdir being lib64.
+- File patches upstream.
+  - libdir64
+  - visibility defines (recheck if really needed)
+  - errno.h
 
-Test.
+- Address ctype(3) UB with upstream.
 
-Read install instructions.
+- Read install instructions.
 
-Add options for at least pgsql.
+- Add options for at least pgsql.
 
-Consider adjusting DISTNAME/PKGNAME differently.
+- Test.
