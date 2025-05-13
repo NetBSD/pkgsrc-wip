@@ -32,13 +32,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-infopath=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--with-clash-detection
-CONFIGURE_ARGS+=	--with-mule
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-bignum=gmp
 CONFIGURE_ARGS+=	--without-msw
-CONFIGURE_ARGS+=	--with-pdump
-CONFIGURE_ARGS+=	--with-newgc
-CONFIGURE_ARGS+=	--with-kkcc
 CONFIGURE_ARGS+=	--with-postgresql=no
 
 CFLAGS+=		-Dunix
