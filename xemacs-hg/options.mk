@@ -129,9 +129,9 @@ CONFIGURE_ARGS+=	--with-canna
 CONFIGURE_ARGS+=	--without-canna
 .endif
 
-.if !empty(PKG_OPTIONS:Mdebug)
+###.if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug=yes --with-debug
 CONFIGURE_ARGS+=	--with-assertions --with-error-checking=all
 CFLAGS+=		-g3
 INSTALL_UNSTRIPPED=	yes
-.endif
+###.endif
