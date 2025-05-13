@@ -1,12 +1,12 @@
-$NetBSD: patch-base_rand__util.h,v 1.1 2025/02/06 09:57:42 wiz Exp $
+$NetBSD$
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/rand_util.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/rand_util.h
-@@ -147,7 +147,7 @@ void RandomShuffle(Itr first, Itr last) 
+@@ -213,7 +213,7 @@ void RandomShuffle(Itr first, Itr last) 
    std::shuffle(first, last, RandomBitGenerator());
  }
  

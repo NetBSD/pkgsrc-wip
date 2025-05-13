@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2025/02/18 10:33:22 wiz Exp $
+# $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			131.0.6778.204
-PKGREVISION=			6
+VERSION=			136.0.7103.92
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
 
-PROFILE_DISTFILES=		chromium-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
-SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
+#PROFILE_DISTFILES=		chromium-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
+#SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
-DISTFILES+=			${PROFILE_DISTFILES}
+#DISTFILES+=			${PROFILE_DISTFILES}
 
 # audioio source
 A_VERSION=			130.0
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
 
 # LLVM_MAJOR_VERSION
-LLVM_MV=			18
+LLVM_MV=			19
 
 MAINTAINER=			kikadf.01@gmail.com
-#MAINTAINER=			ryoon@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
 COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
@@ -86,14 +84,15 @@ SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	base/base_paths_posix.cc
 SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
+SUBST_FILES.path+=	build/rust/rust_bindgen_generator.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	chromium.sh
 SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
-SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
@@ -125,8 +124,7 @@ GN_SYSTEM_LIBS=		dav1d
 GN_SYSTEM_LIBS+=	fontconfig
 GN_SYSTEM_LIBS+=	icu
 GN_SYSTEM_LIBS+=	libaom
-GN_SYSTEM_LIBS+=	libevent
-#GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
+GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
 GN_SYSTEM_LIBS+=	libpng
 GN_SYSTEM_LIBS+=	libvpx
 GN_SYSTEM_LIBS+=	libxml
@@ -134,17 +132,18 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
+#GN_ARGS+=	chrome_pgo_phase=0
 GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
 GN_ARGS+=	enable_backup_ref_ptr_support=false
 GN_ARGS+=	enable_hangout_services_extension=true
-GN_ARGS+=	enable_log_error_not_reached=true
 GN_ARGS+=	enable_nacl=false
 GN_ARGS+=	enable_remoting=false
 GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	is_clang=true
+GN_ARGS+=	moc_qt6_path=\"${PREFIX}/qt6/libexec\"
 GN_ARGS+=	optimize_webui=true
 GN_ARGS+=	thin_lto_enable_optimizations=true
 GN_ARGS+=	treat_warnings_as_errors=false
@@ -156,6 +155,8 @@ GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
 GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	use_qt5=false
+GN_ARGS+=	use_qt6=true
 GN_ARGS+=	use_sndio=false
 GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
@@ -225,6 +226,8 @@ NOT_PAX_MPROTECT_SAFE+=	lib/chromium/chrome
 
 PKG_CC=			clang
 PKG_CXX=		clang++
+
+CONFLICTS=		chromium-[0-9]*
 
 post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
@@ -313,7 +316,6 @@ do-install:
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -331,7 +333,7 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
+.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
@@ -366,5 +368,5 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
