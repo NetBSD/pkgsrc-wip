@@ -1,4 +1,4 @@
-SHA1 (patch-Makefile.in.in) = 2de1c1859183cebc1699ff9ffee49b1949bb1a1c
+SHA1 (patch-Makefile.in.in) = 2f5f1b7fbc2796f768a94cfe0df6c43ec78f92d8
 SHA1 (patch-lib-src_Makefile.in.in) = 2ee85127cd953c858106143dea6d9f1367b1f36e
 SHA1 (patch-lib-src_fakemail.c) = fba9371ad10a66c1fd742f494a78a1eb35387b89
 SHA1 (patch-lwlib_Makefile.in.in) = 8d243f1c85122429187b8250c18221dee8423ed0

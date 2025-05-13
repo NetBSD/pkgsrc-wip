@@ -11,7 +11,7 @@ Prefix {c,e}tags to avoid conflicts.
 
 Make TAR settable, to work around shortcomings in base tar(1)
 
---- Makefile.in.in.orig	2025-01-06 18:59:57.709890754 +0000
+--- Makefile.in.in.orig	2025-05-13 13:04:47.523112997 +0000
 +++ Makefile.in.in
 @@ -67,7 +67,7 @@ LC_ALL = C
  RM = rm -f
@@ -35,7 +35,7 @@ Make TAR settable, to work around shortcomings in base tar(1)
  # endif /* CYGWIN */
  #endif /* WIN32_NATIVE */
  #ifdef HAVE_SHLIB
--	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.* $(DESTDIR)$(moduledir)
+-	$(INSTALL_DATA) modules/auto-autoloads.* $(DESTDIR)$(moduledir)
 +	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.el $(DESTDIR)$(moduledir)
 +	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
  #endif
