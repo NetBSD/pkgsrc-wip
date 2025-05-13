@@ -162,7 +162,7 @@ GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
 GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
-#GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
+GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
 GN_ARGS+=	use_udev=false
 GN_ARGS+=	use_vaapi=false
@@ -270,7 +270,8 @@ BUILDDIR=		${WRKSRC}/out/${BUILDTYPE}
 INSTALLATION_DIRS+=	lib/${CHROMIUM}
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	${PREFIX}/share/applications
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/doc/${CHROMIUM}
 
 ICON_SIZES=		22_mono 24 48 64 128 256
 .for i in ${ICON_SIZES}
@@ -289,6 +290,7 @@ CHROMIUM_LIBS+=		vk_swiftshader_icd.json
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${CHROMIUM}.sh ${DESTDIR}${PREFIX}/bin/${CHROMIUM}
 	${INSTALL_DATA} ${FILESDIR}/chromium-browser.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${FILESDIR}/README ${DESTDIR}${PREFIX}/share/doc/${CHROMIUM}
 	${INSTALL_PROGRAM} ${BUILDDIR}/chrome ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 	${INSTALL_PROGRAM} ${BUILDDIR}/chromedriver.unstripped  ${DESTDIR}${PREFIX}/bin/chromedriver
 .for i in ${CHROMIUM_LIBS}
