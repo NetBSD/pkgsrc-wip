@@ -329,13 +329,10 @@ do-install:
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
-#.include "../../lang/clang/buildlink3.mk"
-#.include "../../lang/compiler-rt/buildlink3.mk"
-.include "../../wip/clang/buildlink3.mk"
-.include "../../wip/compiler-rt/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-#.include "../../lang/rust/rust.mk"
-.include "../../wip/rust186/rust.mk"
+.include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
