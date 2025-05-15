@@ -16,7 +16,7 @@ USE_TOOLS+=	cmake bash gmake pax perl pkg-config
 
 USE_CXX_FEATURES+=	c++17
 
-DEPENDS+=		0ad-data-${PKGVERSION_NOREV}{,nb*}:../../games/0ad-data
+DEPENDS+=		0ad-data-${PKGVERSION_NOREV}{,nb*}:../../wip/0ad-data
 TOOL_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
