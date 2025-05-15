@@ -35,7 +35,9 @@ CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-bignum=gmp
 CONFIGURE_ARGS+=	--without-msw
+CONFIGURE_ARGS+=	--without-dump-in-exec
 CONFIGURE_ARGS+=	--with-postgresql=no
+
 
 CFLAGS+=		-Dunix
 
