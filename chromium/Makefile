@@ -227,8 +227,6 @@ NOT_PAX_MPROTECT_SAFE+=	lib/chromium/chrome
 PKG_CC=			clang
 PKG_CXX=		clang++
 
-CONFLICTS=		chromium-[0-9]*
-
 post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 

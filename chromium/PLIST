@@ -131,6 +131,7 @@ lib/chromium/v8_context_snapshot.bin
 ${PLIST.swiftshader}lib/chromium/vk_swiftshader_icd.json
 man/man1/chromium.1
 share/applications/chromium-browser.desktop
+share/doc/chromium/README
 share/icons/hicolor/128x128/apps/chromium.png
 share/icons/hicolor/22_monox22_mono/apps/chromium.png
 share/icons/hicolor/24x24/apps/chromium.png
