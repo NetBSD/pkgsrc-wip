@@ -12,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-attrs>=21.3:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-boltons>=21.0:../../devel/py-boltons
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-click-option-group>=0.5:../../wip/py-click-option-group
+DEPENDS+=	${PYPKGPREFIX}-click-option-group>=0.5:../../devel/py-click-option-group
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.0:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-glom>=0.4.0:../../wip/py-glom

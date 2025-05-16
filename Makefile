@@ -3558,7 +3558,6 @@ SUBDIR+=	py-cityhash
 SUBDIR+=	py-cli
 SUBDIR+=	py-cli_helpers
 SUBDIR+=	py-click-command-tree
-SUBDIR+=	py-click-option-group
 SUBDIR+=	py-clickatell
 SUBDIR+=	py-clid
 SUBDIR+=	py-cliff

@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-bincopy>=17.14.5:../../wip/py-bincopy
 DEPENDS+=	${PYPKGPREFIX}-bitstring>=3.1:../../devel/py-bitstring
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-command-tree>=0:../../wip/py-click-command-tree
-DEPENDS+=	${PYPKGPREFIX}-click-option-group>=0.3.0:../../wip/py-click-option-group
+DEPENDS+=	${PYPKGPREFIX}-click-option-group>=0.3.0:../../devel/py-click-option-group
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-commentjson>=0.9:../../wip/py-commentjson
 DEPENDS+=	${PYPKGPREFIX}-crcmod>=0:../../security/py-crcmod
