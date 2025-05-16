@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/magicka
+share/doc/MagickaBBS/README.md
+share/examples/MagickaBBS/ansis/bulletin0.ans
+share/examples/MagickaBBS/ansis/bulletin1.ans
+share/examples/MagickaBBS/ansis/doors.ans
+share/examples/MagickaBBS/ansis/filemenu.ans
+share/examples/MagickaBBS/ansis/goodbye.ans
+share/examples/MagickaBBS/ansis/issue.ans
+share/examples/MagickaBBS/ansis/mailmenu.ans
+share/examples/MagickaBBS/ansis/mainmenu.ans
+share/examples/MagickaBBS/ansis/newuser.ans
+share/examples/MagickaBBS/config/bbs.ini
+share/examples/MagickaBBS/config/doors.ini
+share/examples/MagickaBBS/config/filesgen.ini
+share/examples/MagickaBBS/config/illusionnet.ini
+share/examples/MagickaBBS/config/localmail.ini
+share/examples/MagickaBBS/config/s10.ini

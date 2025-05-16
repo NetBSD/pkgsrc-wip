@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add 'all' target.
+
+--- jamlib/Makefile.linux.orig	2025-05-16 12:41:51.544074942 +0000
++++ jamlib/Makefile.linux
+@@ -4,6 +4,8 @@ RM = rm -f
+ 
+ OBJS = crc32.o mbase.o message.o lastread.o subpack.o structrw.o
+ 
++all: jamlib.a
++
+ jamlib.a : $(OBJS) 
+ 	$(AR) jamlib.a $(OBJS)
+ 

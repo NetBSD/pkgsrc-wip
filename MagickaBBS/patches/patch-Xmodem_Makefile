@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add 'all' target.
+
+--- Xmodem/Makefile.orig	2025-05-16 12:43:29.498045499 +0000
++++ Xmodem/Makefile
+@@ -16,6 +16,8 @@ SRCS = crctab.c seriallog.c zmodem.c zmo
+ 
+ OBJS = $(SRCS:.c=.o)
+ 
++all: libzmodem.a
++
+ libzmodem.a: $(OBJS)
+ 	-rm -f libzmodem.a
+ 	$(AR) cru libzmodem.a $(OBJS)

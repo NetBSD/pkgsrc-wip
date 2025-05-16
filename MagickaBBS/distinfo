@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (MagickaBBS-0.2alpha1.tar.gz) = ccecf8d732f94b6ce178ab7911beb527991b21fa83d6434fae16d787c82636de
+SHA512 (MagickaBBS-0.2alpha1.tar.gz) = e2dc0896c8525ae0f024eecdf982c4398d60a541ac22c95aee7a88074dcde1ffa58291407666de6194993ef185227ff3f1e500cb89570c8c8ffda68c7fb51eeb
+Size (MagickaBBS-0.2alpha1.tar.gz) = 310556 bytes
+SHA1 (patch-Makefile.freebsd) = 91ddc64d8315fe19201f6e899bce1c6f00e4333d
+SHA1 (patch-Xmodem_Makefile) = 7c5776fe04dc010cd7cbe2539d18052d6d8c226b
+SHA1 (patch-jamlib_Makefile.linux) = c8d5e9b4cee12eee982c5b438e713b7057bc7073

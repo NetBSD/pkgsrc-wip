@@ -1,0 +1,3 @@
+Magicka is meant to be a modern BBS system, using modern technologies,
+like Sqlite3, IRC, long filenames, etc., while still retaining the
+classic BBS feel: ANSI & Telnet, and good old ZModem.

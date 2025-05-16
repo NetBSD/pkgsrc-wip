@@ -2,6 +2,8 @@
 
 COMMENT=	Work-in-progress packages
 
+SUBDIR+=	0ad
+SUBDIR+=	0ad-data
 SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
@@ -31,6 +33,7 @@ SUBDIR+=	LMtester
 SUBDIR+=	LuaJIT-git
 SUBDIR+=	LuaJIT2
 SUBDIR+=	LuaJIT21
+SUBDIR+=	MagickaBBS
 SUBDIR+=	MoleInvasion
 SUBDIR+=	NetworkManager
 SUBDIR+=	OpenGLUT

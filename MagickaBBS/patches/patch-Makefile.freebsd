@@ -1,0 +1,14 @@
+$NetBSD$
+
+Add 'all' target.
+
+--- Makefile.freebsd.orig	2025-05-16 12:41:15.897595927 +0000
++++ Makefile.freebsd
+@@ -9,6 +9,7 @@ OBJ = inih/ini.o bbs.o main.o users.o ma
+ %.o: %.c $(DEPS)
+ 	$(CC) -c -o $@ $< $(CFLAGS)
+ 
++all: magicka
+ magicka: $(OBJ) 
+ 	$(CC) -o magicka -o $@ $^ $(CFLAGS) -L/usr/local/lib -lsqlite3 $(JAMLIB) $(ZMODEM) $(LUA) -lutil -lm
+ 	
