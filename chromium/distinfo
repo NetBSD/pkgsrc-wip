@@ -1,11 +1,11 @@
 $NetBSD$
 
-BLAKE2s (chromium-136.0.7103.92-testdata.tar.xz) = 5c0f1bb395618d0a1c9b9ad3ee2badca9418ba8d072ffc389de059b049cad60e
-SHA512 (chromium-136.0.7103.92-testdata.tar.xz) = 82d1c3a01d3859a9f0b311d9b75421bd5d9cc01ae13cfd9c7d18efbfa90768b6eae5fdafa84142b42c455c797f02471aa0d42995b00fc5a4d6e8f81c0d48f626
-Size (chromium-136.0.7103.92-testdata.tar.xz) = 651393856 bytes
-BLAKE2s (chromium-136.0.7103.92.tar.xz) = d60bc473fcab6277415b41831a5d50b803c664a72b2f71200e3d93cf116ac790
-SHA512 (chromium-136.0.7103.92.tar.xz) = 63cf064de6e6a17bfd6e337a7c8ae66a503275e6be0f119317c1d923d78d56e0cc2a906e84a3d173d9e584c696dd5276533b156a4f8ab368e53b2f350bee480a
-Size (chromium-136.0.7103.92.tar.xz) = 7188412240 bytes
+BLAKE2s (chromium-136.0.7103.113-testdata.tar.xz) = 8fc7b7d4fcf71eef8f67b19693ef48eb0c0ecbe28a3fcae289a99a1bdd8728a1
+SHA512 (chromium-136.0.7103.113-testdata.tar.xz) = 5eedfa17054056d5f7110bb7becd4ca77dc73ab2bcc0b722dbb591acbe15d6e569f26c988c59661763a1b239e9a18955975fbae4d172536f42e081674fdbb8d6
+Size (chromium-136.0.7103.113-testdata.tar.xz) = 651614116 bytes
+BLAKE2s (chromium-136.0.7103.113.tar.xz) = cb075c691969e8f5b6576eb4c8f262dde5e87759d3f2cf38147923242c1ec444
+SHA512 (chromium-136.0.7103.113.tar.xz) = 4a946b0d99ca6ccf7035877dbf3e2de28fe7f30960362a3886faa93d86cc84150a43b27feb512ce4aef8d9533bdbe26dd9788666d4822ee1e2053c1269c441fe
+Size (chromium-136.0.7103.113.tar.xz) = 7196537592 bytes
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
 Size (kikadf-chromium-audioio-v130.0.tar.gz) = 7824 bytes
@@ -1382,6 +1382,7 @@ SHA1 (patch-ui_ozone_platform_headless_ozone__platform__headless.cc) = aa6d200c9
 SHA1 (patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc) = 89d8a85629d6f7696ef6f6ac4bdad8c9ab5ebfb2
 SHA1 (patch-ui_ozone_platform_wayland_common_wayland__util.cc) = 69e025754ab7c10f26fbed2ed35c3accfae1827a
 SHA1 (patch-ui_ozone_platform_wayland_gpu_vulkan__implementation__wayland.cc) = cc65a479fdfe5bfaa31e08a09d8ec45a9f4e5528
+SHA1 (patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc) = 09c9b3ce6558cda23e63d5815535ba6324259154
 SHA1 (patch-ui_ozone_platform_wayland_host_zwp__text__input__wrapper__v1.cc) = 5b94773ee9ccf9c0ff98f828951f192fac0df6b2
 SHA1 (patch-ui_ozone_platform_x11_vulkan__implementation__x11.cc) = 7fd972d2fb841b9f98821955cff78ac22f970204
 SHA1 (patch-ui_ozone_platform_x11_x11__screen__ozone.cc) = e4058fb8112205c81ea25e7db6cca66ce4e7600f

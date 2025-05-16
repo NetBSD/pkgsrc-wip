@@ -1,4 +1,4 @@
-www/chromium: update to ***
+www/chromium: update to 136.0.7103.113
 
 * 131.0.6778.264
 This update includes 4 security fixes. Below, we highlight
@@ -275,3 +275,18 @@ Reported by Huang Xilin of Ant Group Light-Year Security Lab on 2025-04-20
 As usual, our ongoing internal security work was responsible for a
 wide range of fixes:
 [415837391] Various fixes from internal audits, fuzzing and other initiatives
+
+* 136.0.7103.113
+This update includes 4 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[N/A][415810136] High CVE-2025-4664: Insufficient policy enforcement
+in Loader. Source: X post from @slonser_ on 2025-05-05
+[TBD][412578726] High CVE-2025-4609: Incorrect handle provided in
+unspecified circumstances in Mojo. Reported by Micky on 2025-04-22
+Google is aware of reports that an exploit for CVE-2025-4664 exists
+in the wild.
+
+As usual, our ongoing internal security work was responsible for a
+wide range of fixes:
+[417268830] Various fixes from internal audits, fuzzing and other initiatives
