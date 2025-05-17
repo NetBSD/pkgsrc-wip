@@ -2,4 +2,4 @@ Build with 'JPEG_DEFAULT=libjpeg-turbo' in /etc/mk.conf
 
 Test with $PREFIX/libexec/webkit2gtk-4.1/MiniBrowser:
 
-start, but pages not load: WebProcess CRASHED
+start, and works :)

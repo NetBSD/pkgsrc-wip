@@ -89,6 +89,7 @@ include/webkitgtk-4.1/webkit/WebKitWebContext.h
 include/webkitgtk-4.1/webkit/WebKitWebEditor.h
 include/webkitgtk-4.1/webkit/WebKitWebExtension.h
 include/webkitgtk-4.1/webkit/WebKitWebExtensionAutocleanups.h
+include/webkitgtk-4.1/webkit/WebKitWebExtensionMatchPattern.h
 include/webkitgtk-4.1/webkit/WebKitWebFormManager.h
 include/webkitgtk-4.1/webkit/WebKitWebHitTestResult.h
 include/webkitgtk-4.1/webkit/WebKitWebInspector.h
@@ -221,17 +222,18 @@ include/webkitgtk-4.1/webkitdom/webkitdomdefines.h
 lib/girepository-1.0/JavaScriptCore-4.1.typelib
 lib/girepository-1.0/WebKit2-4.1.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.1.typelib
-lib/libjavascriptcoregtk-4.1.so
+lib/libjavascriptcoregtk-4.1.${RUBY_DLEXT}
 lib/libjavascriptcoregtk-4.1.so.0
-lib/libjavascriptcoregtk-4.1.so.0.6.15
-lib/libwebkit2gtk-4.1.so
+lib/libjavascriptcoregtk-4.1.so.0.8.5
+lib/libwebkit2gtk-4.1.${RUBY_DLEXT}
 lib/libwebkit2gtk-4.1.so.0
-lib/libwebkit2gtk-4.1.so.0.16.8
+lib/libwebkit2gtk-4.1.so.0.17.7
 lib/pkgconfig/javascriptcoregtk-4.1.pc
 lib/pkgconfig/webkit2gtk-4.1.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.1.pc
-lib/webkit2gtk-4.1/injected-bundle/libwebkit2gtkinjectedbundle.so
+lib/webkit2gtk-4.1/injected-bundle/libwebkit2gtkinjectedbundle.${RUBY_DLEXT}
 libexec/webkit2gtk-4.1/MiniBrowser
+libexec/webkit2gtk-4.1/WebKitGPUProcess
 libexec/webkit2gtk-4.1/WebKitNetworkProcess
 libexec/webkit2gtk-4.1/WebKitWebProcess
 libexec/webkit2gtk-4.1/jsc
@@ -272,6 +274,7 @@ share/doc/javascriptcoregtk-4.1/callback.ClassGetPropertyFunction.html
 share/doc/javascriptcoregtk-4.1/callback.ClassHasPropertyFunction.html
 share/doc/javascriptcoregtk-4.1/callback.ClassSetPropertyFunction.html
 share/doc/javascriptcoregtk-4.1/callback.ExceptionHandler.html
+share/doc/javascriptcoregtk-4.1/callback.Executor.html
 share/doc/javascriptcoregtk-4.1/callback.OptionsFunc.html
 share/doc/javascriptcoregtk-4.1/class.Class.html
 share/doc/javascriptcoregtk-4.1/class.Context.html
@@ -307,6 +310,7 @@ share/doc/javascriptcoregtk-4.1/ctor.Value.new_functionv.html
 share/doc/javascriptcoregtk-4.1/ctor.Value.new_null.html
 share/doc/javascriptcoregtk-4.1/ctor.Value.new_number.html
 share/doc/javascriptcoregtk-4.1/ctor.Value.new_object.html
+share/doc/javascriptcoregtk-4.1/ctor.Value.new_promise.html
 share/doc/javascriptcoregtk-4.1/ctor.Value.new_string.html
 share/doc/javascriptcoregtk-4.1/ctor.Value.new_string_from_bytes.html
 share/doc/javascriptcoregtk-4.1/ctor.Value.new_typed_array.html
@@ -570,6 +574,10 @@ share/doc/webkit2gtk-4.1/ctor.UserStyleSheet.new_for_world.html
 share/doc/webkit2gtk-4.1/ctor.WebContext.new.html
 share/doc/webkit2gtk-4.1/ctor.WebContext.new_ephemeral.html
 share/doc/webkit2gtk-4.1/ctor.WebContext.new_with_website_data_manager.html
+share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_all_hosts_and_schemes.html
+share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_all_urls.html
+share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_with_scheme.html
+share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_with_string.html
 share/doc/webkit2gtk-4.1/ctor.WebView.new.html
 share/doc/webkit2gtk-4.1/ctor.WebView.new_with_context.html
 share/doc/webkit2gtk-4.1/ctor.WebView.new_with_related_view.html
@@ -609,6 +617,7 @@ share/doc/webkit2gtk-4.1/enum.UserScriptInjectionTime.html
 share/doc/webkit2gtk-4.1/enum.UserStyleLevel.html
 share/doc/webkit2gtk-4.1/enum.WebExtensionMode.html
 share/doc/webkit2gtk-4.1/enum.WebProcessTerminationReason.html
+share/doc/webkit2gtk-4.1/environment-variables.html
 share/doc/webkit2gtk-4.1/error.DownloadError.html
 share/doc/webkit2gtk-4.1/error.FaviconDatabaseError.html
 share/doc/webkit2gtk-4.1/error.JavascriptError.html
@@ -619,11 +628,13 @@ share/doc/webkit2gtk-4.1/error.PrintError.html
 share/doc/webkit2gtk-4.1/error.SnapshotError.html
 share/doc/webkit2gtk-4.1/error.UserContentFilterError.html
 share/doc/webkit2gtk-4.1/error.UserMessageError.html
+share/doc/webkit2gtk-4.1/error.WebExtensionMatchPatternError.html
 share/doc/webkit2gtk-4.1/flags.EditorTypingAttributes.html
 share/doc/webkit2gtk-4.1/flags.FindOptions.html
 share/doc/webkit2gtk-4.1/flags.HitTestResultContext.html
 share/doc/webkit2gtk-4.1/flags.InputHints.html
 share/doc/webkit2gtk-4.1/flags.SnapshotOptions.html
+share/doc/webkit2gtk-4.1/flags.WebExtensionMatchPatternOptions.html
 share/doc/webkit2gtk-4.1/flags.WebsiteDataTypes.html
 share/doc/webkit2gtk-4.1/fonts.css
 share/doc/webkit2gtk-4.1/func.CHECK_VERSION.html
@@ -1015,6 +1026,7 @@ share/doc/webkit2gtk-4.1/method.Settings.get_print_backgrounds.html
 share/doc/webkit2gtk-4.1/method.Settings.get_sans_serif_font_family.html
 share/doc/webkit2gtk-4.1/method.Settings.get_serif_font_family.html
 share/doc/webkit2gtk-4.1/method.Settings.get_user_agent.html
+share/doc/webkit2gtk-4.1/method.Settings.get_webrtc_udp_ports_range.html
 share/doc/webkit2gtk-4.1/method.Settings.get_zoom_text_only.html
 share/doc/webkit2gtk-4.1/method.Settings.set_allow_file_access_from_file_urls.html
 share/doc/webkit2gtk-4.1/method.Settings.set_allow_modal_dialogs.html
@@ -1079,6 +1091,7 @@ share/doc/webkit2gtk-4.1/method.Settings.set_sans_serif_font_family.html
 share/doc/webkit2gtk-4.1/method.Settings.set_serif_font_family.html
 share/doc/webkit2gtk-4.1/method.Settings.set_user_agent.html
 share/doc/webkit2gtk-4.1/method.Settings.set_user_agent_with_application_details.html
+share/doc/webkit2gtk-4.1/method.Settings.set_webrtc_udp_ports_range.html
 share/doc/webkit2gtk-4.1/method.Settings.set_zoom_text_only.html
 share/doc/webkit2gtk-4.1/method.URIRequest.get_http_headers.html
 share/doc/webkit2gtk-4.1/method.URIRequest.get_http_method.html
@@ -1183,6 +1196,16 @@ share/doc/webkit2gtk-4.1/method.WebContext.set_use_system_appearance_for_scrollb
 share/doc/webkit2gtk-4.1/method.WebContext.set_web_extensions_directory.html
 share/doc/webkit2gtk-4.1/method.WebContext.set_web_extensions_initialization_user_data.html
 share/doc/webkit2gtk-4.1/method.WebContext.set_web_process_count_limit.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_host.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_matches_all_hosts.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_matches_all_urls.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_path.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_scheme.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_string.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.matches_pattern.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.matches_url.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.ref.html
+share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.unref.html
 share/doc/webkit2gtk-4.1/method.WebInspector.attach.html
 share/doc/webkit2gtk-4.1/method.WebInspector.close.html
 share/doc/webkit2gtk-4.1/method.WebInspector.detach.html
@@ -1332,6 +1355,7 @@ share/doc/webkit2gtk-4.1/method.WindowProperties.get_resizable.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_scrollbars_visible.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_statusbar_visible.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_toolbar_visible.html
+share/doc/webkit2gtk-4.1/profiling.html
 share/doc/webkit2gtk-4.1/property.AutomationSession.id.html
 share/doc/webkit2gtk-4.1/property.ColorChooserRequest.rgba.html
 share/doc/webkit2gtk-4.1/property.Download.allow-overwrite.html
@@ -1434,6 +1458,7 @@ share/doc/webkit2gtk-4.1/property.Settings.print-backgrounds.html
 share/doc/webkit2gtk-4.1/property.Settings.sans-serif-font-family.html
 share/doc/webkit2gtk-4.1/property.Settings.serif-font-family.html
 share/doc/webkit2gtk-4.1/property.Settings.user-agent.html
+share/doc/webkit2gtk-4.1/property.Settings.webrtc-udp-ports-range.html
 share/doc/webkit2gtk-4.1/property.Settings.zoom-text-only.html
 share/doc/webkit2gtk-4.1/property.URIRequest.uri.html
 share/doc/webkit2gtk-4.1/property.URIResponse.content-length.html
@@ -1508,6 +1533,7 @@ share/doc/webkit2gtk-4.1/property.WindowProperties.resizable.html
 share/doc/webkit2gtk-4.1/property.WindowProperties.scrollbars-visible.html
 share/doc/webkit2gtk-4.1/property.WindowProperties.statusbar-visible.html
 share/doc/webkit2gtk-4.1/property.WindowProperties.toolbar-visible.html
+share/doc/webkit2gtk-4.1/remote-inspector.html
 share/doc/webkit2gtk-4.1/search.js
 share/doc/webkit2gtk-4.1/signal.AuthenticationRequest.authenticated.html
 share/doc/webkit2gtk-4.1/signal.AuthenticationRequest.cancelled.html
@@ -1609,6 +1635,7 @@ share/doc/webkit2gtk-4.1/struct.SecurityOrigin.html
 share/doc/webkit2gtk-4.1/struct.UserContentFilter.html
 share/doc/webkit2gtk-4.1/struct.UserScript.html
 share/doc/webkit2gtk-4.1/struct.UserStyleSheet.html
+share/doc/webkit2gtk-4.1/struct.WebExtensionMatchPattern.html
 share/doc/webkit2gtk-4.1/struct.WebViewSessionState.html
 share/doc/webkit2gtk-4.1/struct.WebsiteData.html
 share/doc/webkit2gtk-4.1/style.css
@@ -1628,6 +1655,8 @@ share/doc/webkit2gtk-4.1/type_func.SnapshotError.quark.html
 share/doc/webkit2gtk-4.1/type_func.UserContentFilterError.quark.html
 share/doc/webkit2gtk-4.1/type_func.UserMessageError.quark.html
 share/doc/webkit2gtk-4.1/type_func.WebContext.get_default.html
+share/doc/webkit2gtk-4.1/type_func.WebExtensionMatchPattern.register_custom_URL_scheme.html
+share/doc/webkit2gtk-4.1/type_func.WebExtensionMatchPatternError.quark.html
 share/doc/webkit2gtk-4.1/type_func.WebsiteDataManager.set_memory_pressure_settings.html
 share/doc/webkit2gtk-4.1/vfunc.Download.decide_destination.html
 share/doc/webkit2gtk-4.1/vfunc.InputMethodContext.committed.html

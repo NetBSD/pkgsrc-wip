@@ -3,7 +3,7 @@
 # Some environment variables that can help debugging this:
 # https://trac.webkit.org/wiki/EnvironmentVariables
 
-DISTNAME=	webkitgtk-2.46.6
+DISTNAME=	webkitgtk-2.48.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -158,6 +158,7 @@ CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 
 .include "options.mk"
 
+.include "../../audio/flite/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

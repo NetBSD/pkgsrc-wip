@@ -1,18 +1,24 @@
 $NetBSD$
 
-X11/X.h:#define Success                0    /* everything's okay */
+error: expected identifier Success
 
---- Source/bmalloc/bmalloc/EligibilityResult.h.orig	2024-11-07 09:18:27.511670291 +0000
+--- Source/bmalloc/bmalloc/EligibilityResult.h.orig	2025-05-17 12:08:50.761060597 +0000
 +++ Source/bmalloc/bmalloc/EligibilityResult.h
-@@ -29,6 +29,11 @@
- 
- #if !BUSE(LIBPAS)
- 
-+/* avoid conflict with symbol from X11 headers */
-+#ifdef Success
-+#undef Success
-+#endif
-+
+@@ -39,7 +39,7 @@
  namespace bmalloc {
  
  enum class EligibilityKind {
+-    Success,
++    BmSuccess,
+     Full,
+     OutOfMemory
+ };
+@@ -51,7 +51,7 @@ struct EligibilityResult {
+     EligibilityResult(EligibilityKind);
+     EligibilityResult(IsoPage<Config>*);
+     
+-    EligibilityKind kind { EligibilityKind::Success };
++    EligibilityKind kind { EligibilityKind::BmSuccess };
+     IsoPage<Config>* page { nullptr };
+ };
+ 
