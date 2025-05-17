@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.103 2023/09/03 18:31:52 pin Exp $
+
+BLAKE2s (dbus-1.16.2.tar.xz) = 3c0a3f816ad77f1866671498bd9d505deb81310149faefb28916b0910f27bee1
+SHA512 (dbus-1.16.2.tar.xz) = 5c26f52d85984bb9ae1dde8d7e73921eacbdf020a61ff15f00a4c240cb38a121553ee04bd66e62b28425ff9bc50f4f5e15135166573ac0888332a01a0db1faa2
+Size (dbus-1.16.2.tar.xz) = 1115644 bytes
