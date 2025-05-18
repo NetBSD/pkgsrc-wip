@@ -3060,7 +3060,6 @@ SUBDIR+=	pcp
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdcurses
 SUBDIR+=	pdfcrack
-SUBDIR+=	pdfjam3
 SUBDIR+=	pdfminer
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
