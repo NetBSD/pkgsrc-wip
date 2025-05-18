@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.243 2025/05/14 10:56:47 adam Exp $
+
+BLAKE2s (setuptools-80.7.1.tar.gz) = bb1fae14bc940bba9079db2c561bf769c75a9fceb25f9c973a5ad9095dd0e29f
+SHA512 (setuptools-80.7.1.tar.gz) = 831bc6d6c65c2febb8e907fe10d24b4463d15e085f13754dae284814262e7e16645141e839adc28941e53ecdcfefdd460bf8a79d9c4a05437c5b49466d4161c6
+Size (setuptools-80.7.1.tar.gz) = 1319188 bytes
