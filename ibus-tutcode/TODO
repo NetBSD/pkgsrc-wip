@@ -1,44 +1,15 @@
-1. the function is not tested
-2. following errors are shown at make package
+1. It seems that either with NetBSD/amd64 9.4 or with 10.99.14 this is packaged fine
+2. It can start Japanese input, but when switching back to
+   alphabetical input, it stops with error
 
+   | deactivate-input-method: Symbol's function definition is void: nil
 
-thinkc11@makoto 16:54:27/240720(..wip/ibus-tutcode)% make package
-=> Bootstrap dependency digest>=20211023: found digest-20220214
-===> Skipping vulnerability checks.
-WARNING: No /usr/pkg/pkgdb/pkg-vulnerabilities file found.
-WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities'.
-===> Installing for ibus-tutcode-1.0.2
-=> Generating pre-install file lists
-Making install in engine
- mkdir -p '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/libexec'
- /tmp/wip/ibus-tutcode/work/.tools/bin/install -c ibus-engine-tutcode '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/libexec'
- mkdir -p '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/share/ibus/component'
- /tmp/wip/ibus-tutcode/work/.tools/bin/install -c -m 644 tutcode.xml '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/share/ibus/component'
- mkdir -p '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/share/ibus-tutcode/engine'
- /tmp/wip/ibus-tutcode/work/.tools/bin/install -c -m 644 engine.py factory.py main.py tutcode.py skkdict.py tutcode_command.py tutcode_rule.py tcode_rule.py trycode_rule.py tutcode_bushudic.py '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/share/ibus-tutcode/engine'
-Byte-compiling python modules...
-engine.pyfactory.pymain.py  File "/usr/pkg/share/ibus-tutcode/engine/main.py", line 85
-    except getopt.GetoptError, err:
-           ^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: multiple exception types must be parenthesized
-
-tutcode.pyskkdict.py  File "/usr/pkg/share/ibus-tutcode/engine/skkdict.py", line 111
-    except IOError, OSError:
-           ^^^^^^^^^^^^^^^^
-SyntaxError: multiple exception types must be parenthesized
-
-tutcode_command.pytutcode_rule.pytcode_rule.pytrycode_rule.pytutcode_bushudic.py
-Byte-compiling python modules (optimized versions) ...
-engine.pyfactory.pymain.pytutcode.pyskkdict.pytutcode_command.pytutcode_rule.pytcode_rule.pytrycode_rule.pytutcode_bushudic.py
-Making install in setup
- mkdir -p '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/share/ibus-tutcode/setup'
- /tmp/wip/ibus-tutcode/work/.tools/bin/install -c -m 644 config.py '/tmp/wip/ibus-tutcode/work/.destdir/usr/pkg/share/ibus-tutcode/setup'
-Byte-compiling python modules...
-config.py  File "/usr/pkg/share/ibus-tutcode/setup/config.py", line 58
-    print "Can't read config file:", self.__config_path_unexpanded, sys.exc_info()[:1]
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
-
-
-Byte-compiling python modules (optimized versions) ...
-config.py
+3. To avoid this, put following lines in ~/.emacs
+   -------------------------
+   ;;; https://www.mail-archive.com/users-jp@freebsd.org/msg00229.html
+   ;; for uim-leim.el
+   (define-obsolete-variable-alias 'inactivate-current-input-method-function
+     'deactivate-current-input-method-function "24.3")
+   (define-obsolete-function-alias 'inactivate-input-method
+     'deactivate-input-method "24.3")
+   -------------------------
