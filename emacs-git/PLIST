@@ -3845,6 +3845,8 @@ share/emacs/${PKGVERSION}/lisp/reveal.el.gz
 share/emacs/${PKGVERSION}/lisp/reveal.elc
 share/emacs/${PKGVERSION}/lisp/rfn-eshadow.el.gz
 share/emacs/${PKGVERSION}/lisp/rfn-eshadow.elc
+share/emacs/${PKGVERSION}/lisp/ring-bell-fns.el.gz
+share/emacs/${PKGVERSION}/lisp/ring-bell-fns.elc
 share/emacs/${PKGVERSION}/lisp/rot13.el.gz
 share/emacs/${PKGVERSION}/lisp/rot13.elc
 share/emacs/${PKGVERSION}/lisp/rtree.el.gz
