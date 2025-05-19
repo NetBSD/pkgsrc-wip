@@ -1,0 +1,4 @@
+General purpose programming language incorporating concepts from Pascal,
+Ada, C, C++ and Java, with support for type arguments and for declaring
+new statements and operators. Contains a compiler, interpreter, and
+example programs.

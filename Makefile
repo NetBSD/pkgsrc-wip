@@ -5288,6 +5288,7 @@ SUBDIR+=	seafile-gui
 SUBDIR+=	seafile-server
 SUBDIR+=	seagull
 SUBDIR+=	sector-decomposition
+SUBDIR+=	seed7
 SUBDIR+=	seeks
 SUBDIR+=	segvcatch
 SUBDIR+=	self-git
