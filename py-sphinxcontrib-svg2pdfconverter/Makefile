@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6.3:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38	# py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	27 310	# py-sphinx
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
