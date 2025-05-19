@@ -1,8 +1,388 @@
-cad/kicad: Update to 9.0.0
+cad/kicad: Update to 9.0.2
+
+KiCad 9.0.2 (2025-05-07)
+
+General
+- Add tool framework to footprint preview widget. #17107 #19651
+- Don’t bleed settings between 3D viewer and 3D footprint
+  preview. #17353
+- Improve text alignment in grids and one-line Scintilla
+  controls. $16685
+- Include hidden fields when searching. #20370
+- Fix ambiguous data collection opt in dialog text. #20027
+- Handle home folder shortcut in jobset destinations. #20032
+- Refresh search when showing search panel. #20009
+- Add support for mixed state checkboxes in grids. #17730
+- Do not export unused copper layers in job set PDF output. #20460
+- Don’t assert or crash on shutdown. #20433
+- Update default schematic when creating a new project. #20448
+- Prevent empty job set type list. #20522
+- Don’t always pop up warning regardless of setting rendering engine
+  to fallback graphics. #20386 and #20544
+- Prevent project backup and archive from growing infinitely. #20431
+- Add menu item to control searching of hidden fields. #20370
+- Remove unnecessary tool tips from rules check dialog.
+- Fix too small angle increment when stroking arcs.
+- Allow multple line text in table cell. #20327
+- Use schematic editor default font setting for plot job.
+- Allow checking/unchecking of multiple rows' check boxes in library
+  configuraton window. #18843
+- Fix table and text box rotation and text justification. #20642,
+  #20643, #20644, and #20645
+- Allow embedded files to come from symbols and footprints. #20530 and
+  #20210
+- Fix copying embedded file URIs in grids. #20494
+- Exclude brackets at the end of a URL when linking from HTML. #20347
+- Retain use board center origin 3D model export job set
+  setting. #20752
+- Fix crash in footprint chooser. #20780
+- Don’t write unused part of the buffer into image data. #20698
+- Fix line width issue when plotting many pages in one PDF
+  file. #20805
+
+Schematic Editor
+- Allow context menus in footprint chooser.
+- Ensure text variable in link is substituted during PDF
+  export. #20340
+- Fix off by one error when dragging symbol fields table columns to
+  the left. #20307
+- Do not leave unwanted right-most vertical border when merging table
+  cells. #20350
+- Enable navigation controls on read only projects. #20378
+- Fix broken netlist output. #20394
+- Don’t use net/netclass colors for label graphic shapes. #19589
+- Test symbol outline collisions for rule areas not just bounding
+  boxes. #20383
+- Prevent duplicate sheet names on paste, #20357
+- Prevent crash when clicking link added by symbol field editor. #20511
+- Use clearer column title in symbol fields editor. #20509
+- Remove assert that fires when applying field table editor
+  preset. #20467
+- Don’t create invalid schematic in project path when linking sheet
+  shematic outside the project path. #20502
+- Do not plot text box shape twice. #20545
+- Prevent overwriting alias members when adding new rows in panel
+  setup. #20040
+- Fix simulation model dialog crash when no spice model library
+  loaded. #20599
+- Fix infinite recursion crash when building connect graph. #20596
+- Fix zoom on large schematic sizes. #20594
+- Fix broken label position in Eagle schematic importer. #20593
+- Do not allow property inspector to assign items to non-existent
+  symbol units. #20649
+- Match partial strings in symbol fields table editor. #20678
+- Properly expand variables when exporting BOM. #20417
+- Fix symbol chooser filtering with custom library. #20610
+- Fix LTSpice file import with minor version number.
+- LTSpice import fixes.
+- Do not allow illegal design block name characters. #20676
+- Ensure label dialog text is correctly auto-completed. #13508
+- Make paste annotation work correctly. #19828
+- Add junctions on LTSpice import. #20727
+- Do not duplicate resolved net classes. #20794.
+- Fix broken symbol arcs in Eagle importer. #20793
+- Don’t crash on missing symbols when importing LTSpice schematic.
+- Honor template field name visibility setting when adding
+  fields. #20575
+- Fix crash when loading a version 8.0 schematic. #20777
+- Add warning when the default library is not found when importing
+  LTSpice schematic.
+
+Board Editor
+- Plot the appropriate ${LAYER} tag when plotting to single document
+  PDF. #20352
+- Fix crash when changing units. #20380
+- Correctly rotate silk screen text on Eagle board import. #20271
+- Generate correct Gerber file names if the project name contains a
+  dot. #20065
+- Process non-copper keepouts in footprints. #20405
+- Properly mirror pad numbers when plotting. #20459
+- Correctly import settings from another board. #20484
+- Ensure PNS length tuning calculation uses correct layer ID. #20372
+- Add new DRC expression function isMemberOfSheetOrChildren. #20339
+- Prevent crash when using net inspector. #20521
+- Reset tool tip when aborting position interactive tool. #20489
+- Preserve text box size when rotating angles other than 90
+  degrees. #20529
+- Fix broken edge cut copy and paste. #20537
+- Improve performace for complex polygons. #17820
+- Always print the via hole. #20546
+- Improve pan performance when showing a large amount of through hole
+  pads. #20506
+- Fix false positive when performing footprint parity DRC. #15917
+- Restore visibility editing for fields. #20560
+- Prevent duplicate find results. #20569
+- Fix incorrect tool tip in rule area properties dialog. #20592
+- Improve zoom and pan performance with large number of through hole
+  pads. #20506
+- Resolve fonts for tablec ells. #20605
+- Fix broken table highlight colors. #20606
+- Use a better position for the DRC marker with arc tracks. #20636
+- Fix missing traces when exporting to STEP. #20515
+- Prevent tables from walking when flipping them to other side of
+  board. #20294
+- Remove artefacts after deleting appended board. #20314
+- Fix broken footprint chooser measurement tool behavior after
+  changing display modes. #20669
+- Remove horizontal/vertical constraints limitation from footprint
+  chooser. #20668
+- Fix broken Python demo script. #20538
+- Mark ODB++ as export only. #20493
+- Fix broken pads in GenCAD export. #20437
+- Avoid popping a dismabiguation menu after point selection
+  completes. #20680
+- Add sorting functionality for netclass assignments. #18819
+- Prevent tracks created by multi-channel tool from swapping groups on
+  save. #20665
+- Add dedicated anchor points for table. #20184
+- Correctly handle solder masks for tear drops on tracks with solder
+  masks. #20744
+- Export text box borders to STEP. #20763
+- Don’t reserve source pad number in array tool. #20722
+- Fix pad snapping on non front copper layer in high constrast
+  mode. #20674
+- Correctly match implicit composite netclass DRC rules. #20797
+- Fix arc winding and layers on GenCAD export.
+
+Footprint Editor
+- Check for silk screen to solder mask collisions in DRC. #19707
+- Ensure attribute deleted in schematic is deleted in board. #19988
+- Allow changing the default layer for text items. #20505
+- Be explicit about custom pad default anchor shape. #20551
+- Fix crash when deleting grouped text. #20589
+- Fix crash when loading Altium designer footprints with polygon pour
+  cut outs on plane layer. #20625
+- Correctly cleari thermal relief override (gap/spoke) in pad
+  properties dialog. #20709
+
+3D Viewer
+- Add missing user defined layers. #19417
+- Use custom layer names instead of canonical layer names. #20360
+- Reset colors when clicking properties dialog "Reset to Default
+  Settings" button. #20624
+- Fix look of some exposed copper pads. #20111
+- Account for aperture and track masks in plated copper calculations.
+
+Gerber Viewer
+- Fix issues when loading zip files. #20779
+- Fix crash when file load error log window overflows. #20799
+
+PCB Calculator
+- Add calculation of unit propagation delay.
+- Reset default units along with values.
+
+Command Line Interface
+- Correctly handle user defined layer names. #18773
+- Do not plot all gerber layers when an invalid layer list is
+  provided. #20555
+- Fix Gerber --output command help. #20298
+
+API
+- Fix crash updating reference designator. #20206
+
+Windows
+- Fix crash when closing some KiCad main windows. #20754
+
+macOS
+- Allow searching menu items. #10124
+
+Linux
+- Add support for Python 3.14 for Fedora 43.
+
+
+KiCad 9.0.1 (2025-03-30)
+
+General
+- Vertically center text in cells in job sets table.
+- Automatically recognize URLs in symbol and footprint properties
+  grids. #17066
+- Show URL button when hovering in field properties grids. #17745
+- Support bare hyperlinks in table cells and text boxes. #18832
+- Fix inconsistent capitalization in "Add New Job" dialog. #19770
+- Fix misleading label "output file" for some schematic output
+  jobs. #19868
+- Ensure project manager hotkeys appear in hotkeys list. #19989
+- Fixed description column naming when changing job sets. #20030
+- Support pinning/unpinning multiple libraries in the library
+  editors. #19726
+- Do not persist fallback canvas type due to OpenGL failure.
+- Prompt to enable IPC API when required by plugin. #20062
+- Fix project manager performance using projects tracked with
+  Git. #20078
+- Fix crash when accessing footprints of imported Altium *.IntLib
+  files. #20099
+- Show project manager hot keys in hot key list. #19989
+- Fix git clone project dialog layout issues. #20045
+- Properly restore panels for all editors. #20066
+- Fix crash on start when no git repository is present. #20152
+- Persist generate gerber job file setting. #20158
+- Prevent extra curves when importing certain SVG files. #20138
+- Persist some missing job set arguments. #20116
+- Use Gerber job settings not in job sets. #20214
+- Fix schematic plot to PDF for job sets. #19522
+- Fix button alignment in job set run log dialog. #20207
+- Support ctrl-delete for delete word forward. #20248
+- Fix opening embedded PDF files. #20006
+- Fix segfault when opening a project which has git repository with
+  SSH keys configured to GitHub. #20204
+- Fix a git2 related crash when closing KiCad. #20202
+
+Schematic Editor
+- Prevent image duplication when pasting from clipboard. #19973
+- Properly handle importing Altium harnesses. #16852
+- Resolve field references in symbol text items. #19983
+- Update instance reference from property inspector. #19932
+- Pretty print cross references in "Symbol Fields Table"
+  dialog. #19941
+- Remove prohibition from clearing value field in Symbol Fields Table
+  dialog. #19745
+- Do not load old symbols with all fields set to visible. #20017
+- Prevent crash when importing over existing project. #20004
+- Make exclude from simulation indicators more subtle.
+- Allow simulation models to reference embedded files. #20024
+- Correct mirror location of text box. #20021
+- Fix formatting of field file formatting that broke loading files
+  with 9.0.0. #20166
+- Ensure sheet file name color is respected. #20128
+- Don’t trigger ERC error when no connect is connected to a no
+  connect object. #20222
+- Fix multi-unit symbol when importing Altium schematics.
+- Ensure imported Altium schematic sheet names are unique. #19281
+- Don’t translate file dialog "All Files" filter string.
+- Fix loading schematic with embedded files. #20301
+- Don’t wait for mouse move to draw selection shadows. #20309
+- Do not print all pages with the first page border and title
+  block. #20318
+- Keep the full depth of the hierarchy in bookmarks when plotting to
+  PDF. #12154
+- Use stable sort ordering in ERC reports. #20333
+- Correctly handle duplicate entries in BOM presets. #20342
+- Fix schematic load failure. #20301
+
+Symbol Editor
+- Restore export symbol feature. #20070
+- Handle exporting symbols into existing libraries. #17840
+- Fix creation of a new symbol library due to an issue with write
+  permissions. #20228
+- Fix crash when deleting footprint filter when no filter
+  selected. #20320
+
+Spice Simulator
+- Fix net name quoting issue for user defined signals. #18598
+- Resolve hotkey conflicts. #18201
+- Fix crash when attempting to run IBIS simulation. #20268
+
+Board Editor
+- Improve performance of creepage DRC.
+- Add "Route Selected From Other End" action to edit context
+  menu. #19911
+- Don’t disable line styles on filled shapes. #19946
+- Add field 'Name' property to properties panel. #19706
+- Improve performance of teardrop generation.
+- Do not throw DRC error "unconnected end" when via has no net. #19737
+- Properly save "view board mirrored" preset setting. #19852
+- Fix incorrect plot of tables rotated +-90. #19985
+- Ensure drill layer pairs are created in ODB++. #20039
+- Fix broken report file stacking relationship. #20069
+- Reduce height of board setup dialog. #20106
+- Prevent invisible vias in dimmed inactive layer view mode from
+  auxiliary layers. #20093
+- Fix zone manager dialog layout issues. #20046
+- Prevent ignored violation "No-Mirrored text on back layer" from
+  displaying a red arrow after DRC. #20049
+- Prevent layer specific solder mask overrides as they are not
+  supported. #20053
+- Prevent duplicate Gerber output of linear dimension arrows. #20076
+- Fix export SVG mode logic. #20089
+- Fix crash related to git support. #20133
+- Do not remove solder mask relief when length matching tools are
+  used. #20085
+- Do not warn for all connected pads when modifying a single trace
+  width. #20084
+- Do not include fabrication values on silk screen gerber
+  output. #20144
+- Prevent orphaned track on a zone when connected to the net of the
+  zone. #20090
+- Ensure pad clearance lines are always drawn not only when footprint
+  is selected. #19896
+- Disable multiple via dragging. #20150
+- Fix plotting of tables with non-90 degree rotation angles.
+- Improve default sizes of appearance panels. #19965
+- User defined layer bug fixes. #20022
+- Prevent pad losing layers when footprint is flipped. #20169
+- Move arrow direction to more appropriate section of dimension
+  properties dialog. #20208
+- Printing should never hide small elements. #20226
+- Fix Specctra export for multiple netclasses.
+- Fix crash when placing certain footprints. #20235
+- Fix DRC memory leak. #20272
+- Add DRC for tables.
+- Prevent leaving vias behind after retreating from a PNS router
+  push. #19045
+- Fix crash in multiple drag PNS shove. #20075
+- Allow DRC rule to reduce the number of spokes. #20281
+- Don’t ignore tables on copper layer using PNS router. #20295
+- Fix false positive DRC error for zones with rotated tables. #20143
+- Fix stuttery zoom performance. #20060
+- Fix DRC exclusion for Edge.Cuts on layer legend after DRC
+  rerun. #20308
+- Prevent creepage DRC violation indicators from disappearing on
+  repeated runs. #20048
+- Prevent creepage DRC from only checking front copper layer. #20317
+- Use correct date format in misc/info file when exporting
+  ODB++. #20103
+- Update footprint properties even when footprint cannot be
+  updated. #18249
+- Fix DRC false positive when arc used as trace. #20336
+- Use user interface order for drill report stack up. #20069
+- Fix crash when attempting to place vias in differential routing
+  against pads. #20440
+- Correctly plot "Indicate DNP on fabrication layers". #20458
+- Use correct rectangle height and width after setting grid origin in
+  properties panel. #20468
+
+Footprint Editor
+- Do not allow renaming a footprint to silently overwrite existing
+  footprint. #19857
+- Fix crash on second "Edit Pad as Graphics Shapes" operation. #20129
+- Don’t disable first internal layer. #20246
+- Prevent false positive error message when creating fillet
+  line. #20326
+- Fix crash when increasing number of copper layers if board contains
+  a footprint with custom padstack. #20435
+
+Gerber Viewer
+- Ignore negative layers when exporting Gerbers to PCB. #16871
+
+3D Viewer
+- Don’t render thickness walls of text not being drawn. #20200
+- Put layers without defined board side on front of board. #20201
+- Allow default color settings to be reset. #18709
+- Correctly render tables. #19981
+
+PCB Calculator
+- Fix incorrect formula for strip line conductor loss.
+
+Command Line Interface
+- Fix broken PCB SVG output. #20023
+- Add IPC-D-356 export. #13951
+- Deprecate instead of remove --plot-invisible-text option from PCB
+  exporters. #20171
+- Restore the page size mode behavior. #20014
+
+Libraries
+- Added 200 new symbols and 252 new footprints
+- Regenerated over 10000 generated footprints in Version 9 format
+- 72% of all footprints in the library are now automatically generated
+
+API
+- Add serialization of footprint mounting style. kicad-python#19
+- Refresh board editor after changing selection. #20008
+- Add board origin setter and getter methods. kicad-python#20
+- Fix crash when updating reference designators via API. #20206
+- Fix build with protobuf 30. #20300
 
 KiCad 9.0.0 (2025-02-20)
-
-
 
 The KiCad project is proud to announce the release of the next major
 version of KiCad. Version 9 is packed with new features, improvements,

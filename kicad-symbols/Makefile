@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.16 2024/11/23 10:11:58 mef Exp $
 
-DISTNAME=	kicad-symbols-9.0.0
+DISTNAME=	kicad-symbols-9.0.2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}
 GITLAB_RELEASE=	${PKGVERSION_NOREV}
