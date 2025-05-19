@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.3 2014/12/31 14:17:17 thomasklausner Exp $
 
-BLAKE2s (showfont-1.0.6.tar.xz) = 2c9e39247ee2ea291e66c2f522056393c8072b599a5c1952e37d9ba2e3e55237
-SHA512 (showfont-1.0.6.tar.xz) = 21a318519492f4ba46a8bcb3590097fc5f96fe01fdb557257ae56bae813671952a2aad6c0df8cd69659e06708571c398e6d97969224cf692e22c8a35c8e6c363
-Size (showfont-1.0.6.tar.xz) = 121588 bytes
+BLAKE2s (showfont-1.0.7.tar.xz) = ed62567aaf62befc5768893b91e4832c79da24e2858ff6c8acc42a5c6abb2f75
+SHA512 (showfont-1.0.7.tar.xz) = 6c27b280976d22f35071136e139a654c7be41f5cca3b450a3aa36f8a026b151e700d4e386b0fde8deccef50f8d43338f5d105977a7d11861fccab6c05e480d70
+Size (showfont-1.0.7.tar.xz) = 125460 bytes
