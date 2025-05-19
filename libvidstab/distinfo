@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (vid.stab/release-0.98b.tar.gz) = 7a96f3f1eb38b0eca6b7e408005c6eab8f2c7dd7
-SHA512 (vid.stab/release-0.98b.tar.gz) = 44ed4396233fde1919cb1cb3ad9d7cc3c6d76fdc8c3c3313ed93377e8c3b8bd4766225b1a37d9004b50a9b5813c98dd4d435ce735bc8b7ea03a06d6432f2c5d4
-Size (vid.stab/release-0.98b.tar.gz) = 73582 bytes
+BLAKE2s (vid.stab/libvidstab-1.1.1.tar.gz) = 4a835d63c08292c87ae8ff9a100309565587632fe1bfbb489d40301a8c9a57d1
+SHA512 (vid.stab/libvidstab-1.1.1.tar.gz) = b27ac95ab5302e9500af5a52cb09f557b9dacbdc4dc57a9781e2f9ae65a6ffea396f9819bca1f6a103f9d1896bf3061f1cb647166b14b8de8e89a1b15f010e5c
+Size (vid.stab/libvidstab-1.1.1.tar.gz) = 80717 bytes
