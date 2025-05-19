@@ -2,6 +2,7 @@
 # used by wip/elmerfem/Makefile
 
 DISTNAME=	qwt-6.0.1
+PKGNAME=	${DISTNAME:S/qwt/qwt6-qt4/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2
