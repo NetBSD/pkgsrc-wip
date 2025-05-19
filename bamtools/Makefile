@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	bamtools-${PORTVERSION}
+DISTNAME=	bamtools-2.5.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pezmaster31/}
 GITHUB_PROJECT=	bamtools
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dsiercks@uwm.edu
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/pezmaster31/bamtools
 COMMENT=	API and toolkit for handling BAM files
 LICENSE=	mit
@@ -16,8 +16,6 @@ USE_CMAKE=	yes
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
-
-PORTVERSION=	2.5.1
 
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}/_build
