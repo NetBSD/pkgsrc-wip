@@ -6,11 +6,8 @@ BUILDLINK_TREE+=	gnat-glade
 GNAT_GLADE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnat-glade+=	gnat-glade>=6.0.1
-BUILDLINK_PKGSRCDIR.gnat-glade=	../../wip/gnat-glade
+BUILDLINK_PKGSRCDIR.gnat-glade?=	../../wip/gnat-glade
 BUILDLINK_DEPMETHOD.gnat-glade?=	build
-
-BUILDLINK_AUTO_VARS.gnat-glade=	no
-BUILDLINK_AUTO_DIRS.gnat-glade=	no
 
 .endif
 

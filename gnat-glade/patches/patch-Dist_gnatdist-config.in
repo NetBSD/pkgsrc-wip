@@ -4,8 +4,8 @@ Create configuration helper for building applications
 
 --- /dev/null
 +++ Dist/gnatdist-config.in
-@@ -0,0 +1,165 @@
-+#!/bin/sh
+@@ -0,0 +1,164 @@
++#!@SHELL@
 +
 +# This script provides tool chain command line switches used to build
 +# applications that use garlic.
@@ -169,4 +169,3 @@ Create configuration helper for building applications
 +if test x"$echo_exec_prefix" = x"true" ; then
 +  echo $exec_prefix
 +fi
-+

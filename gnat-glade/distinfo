@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.3 2024/05/02 14:00:00 dkazankov Exp $
 
-BLAKE2s (gnat-glade-code-r135-trunk.zip) = f2458d3696ce885fd2356461038b1bba102006aa5f24680cf601a1ba2da4865b
-SHA512 (gnat-glade-code-r135-trunk.zip) = feea72177d405c02378f32aff22f673cf57b9f629e5e82a0c51d537309507ff80e450838c3d19e1ba26fc90c6eccac8b1b7a2ee34ec98be0993d2462adc89b13
-Size (gnat-glade-code-r135-trunk.zip) = 3885324 bytes
+BLAKE2s (gnat-glade-6.0.1.tar.gz) = c975f8e27eab2eaec271f8d82a01eb4cb7edb99fcb7851960ce094448fb364b0
+SHA512 (gnat-glade-6.0.1.tar.gz) = d99852b7c1ef209a06b50b187db8ab5d4527722a52ea3234c727638e5680f1db867b37d6a49ce28e29d8f207c016d4c6bc7f190f8163833933327d079fd9660c
+Size (gnat-glade-6.0.1.tar.gz) = 3004733 bytes
 SHA1 (patch-Dist_Makefile.in) = 1c9a63dbe5e17e80c81647519d215b8887b544a4
 SHA1 (patch-Dist_config.sdefault) = 7fb3e662a2d565f0c40ad627cda74574ed3ebddd
-SHA1 (patch-Dist_gnatdist-config.in) = fa477f338c01ba6a9f81e0c3af84dbe2c8b1e76b
+SHA1 (patch-Dist_gnatdist-config.in) = 058e96f15d5642092ace7855274521d52fafedbe
 SHA1 (patch-Dist_xe.adb) = 163bf676015a40f5fc4187159c7e16086db22359
 SHA1 (patch-Dist_xe__back-garlic.adb) = 9a66d461624621843abba99f8e8f5df4aa75e457
 SHA1 (patch-Dist_xe__back-polyorb.adb) = b2ee5226af5d51af7ca0236fc02d7bcf0489a716
@@ -45,4 +45,4 @@ SHA1 (patch-Garlic_s-shasto.adb) = 2e76771ee23baa7a0cd5b24863fbe39ba89653f9
 SHA1 (patch-Garlic_s-shasto.ads) = f086c4f186143093b85f66fd5d5d7b88958d75d2
 SHA1 (patch-Garlic_s-stratt.adb) = 0684c2df09d7d74eb3f0141585875e13c31e2a6c
 SHA1 (patch-Garlic_select.c) = 0db5132fcc2184cc685cd6886b87645f73e31e04
-SHA1 (patch-configure) = 382ee31ce75432160186899ff81a18fba65ee245
+SHA1 (patch-configure) = d4486e11d338df24b573a5dc299f11ff49e9a0ca

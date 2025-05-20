@@ -26,19 +26,24 @@ Add configuration helper
  #
  # Check for maintainer mode
  #
-@@ -3522,7 +3521,10 @@
+@@ -3521,8 +3520,14 @@
+ 
  echo "$as_me:$LINENO: checking if the Ada compiler is recent enough" >&5
  echo $ECHO_N "checking if the Ada compiler is recent enough... $ECHO_C" >&6
- am_gnatls_date=`$GNATLS -v | $SED -ne 's/^GNATLS .*(\(........\).*$/\1/p'`
+-am_gnatls_date=`$GNATLS -v | $SED -ne 's/^GNATLS .*(\(........\).*$/\1/p'`
 -if test "20041007" -le "$am_gnatls_date"; then
++am_gnatls_date=`$GNATLS -v | $SED -ne 's/^GNATLS .*(\(........\)).*$/\1/p'`
 +if test -z "$am_gnatls_date"; then
++  echo "$as_me:$LINENO: result: yes" >&5
++  echo "${ECHO_T}yes" >&6
++elif test "release" -le "$am_gnatls_date"; then
 +  echo "$as_me:$LINENO: result: yes" >&5
 +  echo "${ECHO_T}yes" >&6
 +elif test "20041007" -le "$am_gnatls_date"; then
    echo "$as_me:$LINENO: result: yes" >&5
  echo "${ECHO_T}yes" >&6
  else
-@@ -3559,6 +3561,7 @@
+@@ -3559,6 +3564,7 @@
      *-linux*)          PLATFORM_SPECIFIC=l;;
      *-*-solaris2*)     PLATFORM_SPECIFIC=s;;
      sparc-sun-sunos4*) PLATFORM_SPECIFIC=u;;
@@ -46,7 +51,7 @@ Add configuration helper
      *)                 ;;
    esac
  
-@@ -3574,6 +3577,7 @@
+@@ -3574,6 +3580,7 @@
      g) PSNAME="SGI";;
      h) PSNAME="HP";;
      b) PSNAME="AIX";;
@@ -54,7 +59,7 @@ Add configuration helper
      e) PSNAME="Empty";;
      *) PSNAME="Unknown target (${target})";;
    esac
-@@ -3596,8 +3600,8 @@
+@@ -3596,8 +3603,8 @@
  
    PROCESS_BLOCKING_IO="no";
    case ${PLATFORM_SPECIFIC} in
@@ -65,7 +70,7 @@ Add configuration helper
      if ./isthrbio; then
        PROCESS_BLOCKING_IO="yes";
      fi;
-@@ -4054,7 +4058,7 @@
+@@ -4054,7 +4061,7 @@
  #
  # Output
  #
@@ -74,7 +79,7 @@ Add configuration helper
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
  # tests run on this system so they can be shared between configure
-@@ -4633,6 +4639,7 @@
+@@ -4633,6 +4640,7 @@
    "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
    "Dist/Makefile" ) CONFIG_FILES="$CONFIG_FILES Dist/Makefile" ;;
    "Dist/xe_defs-defaults.ads" ) CONFIG_FILES="$CONFIG_FILES Dist/xe_defs-defaults.ads" ;;
