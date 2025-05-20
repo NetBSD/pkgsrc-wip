@@ -20,18 +20,19 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
 
-# We really need gcc10-aux as bootstrap compiler only.
-# Although gcc6-aux can no longer be used for this.
-TOOL_DEPENDS+=	gcc10-aux-[0-9]*:../../lang/gcc10-aux
-
+USE_LANGUAGES=		c c++ ada
 USE_TOOLS+=		gmake makeinfo sed perl flex bison
 USE_TOOLS.NetBSD+=	gsed
 # Built-in Texinfo can no longer process GCC 15's files
 TEXINFO_REQD+=		7.0
 BISON_REQD+=		3.5
 
+INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
+
+USE_PKGSRC_GCC=		yes
+GCC_REQD+=		10
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
@@ -55,16 +56,6 @@ BROKEN_ON_PLATFORM=	*-*-i386
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "options.mk"
-
-BOOTC_BASE=		${PREFIX}/gcc10-aux
-BOOTC_LD_LIBRARY_PATH=	${BOOTC_BASE}/lib:${BOOTC_BASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/10.3.0:${BOOTC_BASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/10.3.0/adalib
-
-CONFIGURE_ENV+=		CC_FOR_BUILD=${BOOTC_BASE}/bin/gcc
-CONFIGURE_ENV+=		CXX_FOR_BUILD=${BOOTC_BASE}/bin/g++
-
-MAKE_ENV+=	LD_LIBRARY_PATH=${BOOTC_LD_LIBRARY_PATH:Q}
-
 ## Build outside ${WRKSRC}
 OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -72,7 +63,12 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
-INFO_FILES=		yes
+
+.include "options.mk"
+
+#CONFIGURE_ENV+=	CC_FOR_BUILD=${BOOTC_BASE}/bin/gcc
+#CONFIGURE_ENV+=	CXX_FOR_BUILD=${BOOTC_BASE}/bin/g++
+
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 STAGE1_LDFLAGS=		${LDFLAGS} -static
@@ -233,6 +229,12 @@ CTF_FILES_SKIP+=	*/gengtype	# CPU limit exceeded
 TEST_TARGET=	-j ${MAKE_JOBS} -k check || ${TRUE}
 TEST_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 
+.include "../../archivers/zstd/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
+
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
@@ -256,13 +258,4 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} ${GCC_SUBPREFIX} \( -type f -or -type l \) -print | ${SORT};
 
-.include "../../archivers/zstd/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
-
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
-
-# This should be here so we ensure that bootstrap compiler is at the beginning of the list
-PREPEND_PATH+=	${BOOTC_BASE}/bin
