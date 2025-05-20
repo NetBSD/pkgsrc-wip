@@ -1,11 +1,11 @@
 $NetBSD: patch-configure,v 1.0 2024/12/17 20:00:00 dkazankov Exp $
 
-Fix usage of old function
+Fix usage of old SSL function
 Fix later linker error when using SSL
 Fix $$ORIGIN substitution in LDFLAGS
 
 --- configure.orig	2024-08-23 19:03:44.000000000 +0300
-+++ configure	2025-01-24 10:12:03.567050383 +0200
++++ configure
 @@ -7859,8 +7859,8 @@
              # unset ac_cv_XXX to prevent reuse of cached results from a previous
              # iteration.
@@ -39,17 +39,17 @@ Fix $$ORIGIN substitution in LDFLAGS
 +    SSL_LINKER_OPTION1=$1
 +    case $SSL_LINKER_OPTION1 in
 +    -L*/)
-+	SSL_LINKER_OPTION1=${SSL_LINKER_OPTION1}
-+	;;
++    SSL_LINKER_OPTION1=${SSL_LINKER_OPTION1}
++    ;;
 +    -L*)
-+	SSL_LINKER_OPTION1=${SSL_LINKER_OPTION1}/
-+	;;
++    SSL_LINKER_OPTION1=${SSL_LINKER_OPTION1}/
++    ;;
 +    esac
 +    SSL_LINKER_OPTIONS="${SSL_LINKER_OPTIONS}\"${SSL_LINKER_OPTION1}\""
      if test $# -gt 1; then
        SSL_LINKER_OPTIONS="${SSL_LINKER_OPTIONS} & ASCII.NUL & "
      fi
-@@ -9457,6 +9468,9 @@
+@@ -9457,6 +9466,9 @@
      keylen = length(key)
      if (S_is_set[key]) {
        value = S[key]

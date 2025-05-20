@@ -5,12 +5,12 @@ BUILDLINK_TREE+=	polyorb
 .if !defined(POLYORB_BUILDLINK3_MK)
 POLYORB_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.polyorb+=	polyorb>=25.0
-BUILDLINK_PKGSRCDIR.polyorb=	../../wip/polyorb
+BUILDLINK_API_DEPENDS.polyorb+=	polyorb>=25.0.0
+BUILDLINK_PKGSRCDIR.polyorb?=	../../wip/polyorb
 BUILDLINK_DEPMETHOD.polyorb?=	build
 
-BUILDLINK_AUTO_VARS.polyorb=	no
-BUILDLINK_AUTO_DIRS.polyorb=	no
+pkgbase := polyorb
+.include "../../mk/pkg-build-options.mk"
 
 .endif
 
