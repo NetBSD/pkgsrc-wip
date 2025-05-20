@@ -3,7 +3,7 @@ $NetBSD: patch-gpr_src_gpr-version.ads,v 1.1 2024/03/19 13:20:35 wiz Exp $
 Fix incorrect version reporting
 
 --- gpr/src/gpr-version.ads.orig	2023-10-09 21:31:11.000000000 +0300
-+++ gpr/src/gpr-version.ads	2024-03-19 14:10:13.533689309 +0200
++++ gpr/src/gpr-version.ads
 @@ -30,17 +30,17 @@
  
  package GPR.Version is
