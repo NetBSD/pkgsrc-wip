@@ -3,7 +3,7 @@ $NetBSD: patch-configure,v 1.0 2024/05/14 13:00:00 dkazankov Exp $
 Fix cross compiling test
 
 --- configure.orig	2023-09-07 14:33:41.000000000 +0300
-+++ configure	2024-05-14 13:05:36.014895950 +0300
++++ configure
 @@ -1895,7 +1895,7 @@
  end Lib;
  EOF

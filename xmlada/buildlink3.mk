@@ -6,18 +6,15 @@ BUILDLINK_TREE+=	xmlada
 XMLADA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmlada+=	xmlada>=24.0.0
-BUILDLINK_PKGSRCDIR.xmlada=	../../wip/xmlada
+BUILDLINK_ABI_DEPENDS.xmlada+=	xmlada>=25.0.0
+BUILDLINK_PKGSRCDIR.xmlada?=	../../wip/xmlada
 BUILDLINK_DEPMETHOD.xmlada?=	build
-
-BUILDLINK_AUTO_VARS.xmlada=	no
-BUILDLINK_AUTO_DIRS.xmlada=	no
-
-BUILDLINK_FILES.xmlada=		lib/*
-BUILDLINK_FILES.xmlada=		include/xmlada/* lib/libxmlada* lib/xmlada/*
-BUILDLINK_FILES.xmlada+=	share/gpr/manifests/xmlada share/gpr/xmlada*.gpr
 
 BUILDLINK_CONTENTS_FILTER.xmlada=	\
 	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
+
+pkgbase := xmlada
+.include "../../mk/pkg-build-options.mk"
 
 .endif
 
