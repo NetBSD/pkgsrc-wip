@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+darkman
+=======
+
+A framework for dark-mode and light-mode transitions on Unix-like desktops.
+
+## Introduction
+
+`darkman` runs in the background and turns on dark mode at sundown, and turns it off
+again at sunrise. `darkman` is not designed to be used interactively: it's designed to
+be set up once, and run in the background.
+
+At sundown, it will look for scripts in `$XDG_DATA_DIRS/dark-mode.d/`.
+At sunrise, it will look for scripts in `$XDG_DATA_DIRS/light-mode.d/`.
+
+These scripts individually configure different components and applications.
+
+Sample and reference scripts are included in the `examples` directory, and
+further contributions for specific applications or environments are welcome.
+
+The complete documentation is included as a man page and is also [available
+...
