@@ -1,63 +1,82 @@
 # $NetBSD: options.mk,v 1.0 2024/05/13 15:00:00 dkazankov Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnatcoll-db
-PKG_SUPPORTED_OPTIONS=	gnatcoll_db2ada gnatcoll_postgres2ada gnatcoll_sqlite2ada gnatcoll_all2ada
-PKG_SUPPORTED_OPTIONS+=	gnatinspect postgres sql sqlite xref
-PKG_SUGGESTED_OPTIONS=	gnatcoll_db2ada gnatcoll_postgres2ada gnatcoll_sqlite2ada gnatcoll_all2ada
-PKG_SUGGESTED_OPTIONS+=	gnatinspect postgres sql sqlite xref
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gnatcoll-db
+PKG_SUPPORTED_OPTIONS=		gnatcoll-db2ada gnatcoll-postgres2ada gnatcoll-sqlite2ada gnatcoll-all2ada \
+				gnatcoll-gnatinspect gnatcoll-postgres gnatcoll-sql gnatcoll-sqlite gnatcoll-xref
+PKG_OPTIONS_OPTIONAL_GROUPS=	shared-libs
+PKG_OPTIONS_GROUP.shared-libs=	enable-shared-libs disable-shared-libs
+PKG_SUGGESTED_OPTIONS=		gnatcoll-db2ada gnatcoll-postgres2ada gnatcoll-sqlite2ada gnatcoll-all2ada \
+				gnatcoll-gnatinspect gnatcoll-postgres gnatcoll-sql gnatcoll-sqlite gnatcoll-xref
 
 .include "../../mk/bsd.fast.prefs.mk"
-
 .include "../../mk/bsd.options.mk"
 
-CONFIGURE_DIRS=
-BUILD_DIRS=
-INSTALL_DIRS=
+.if !empty(PKG_OPTIONS:Menable-shared-libs)
+CONFIGURE_FLAGS+=			ENABLE_SHARED=yes
+USE_GCC_RUNTIME=			yes
+BUILDLINK_DEPMETHOD.xmlada=		full
+BUILDLINK_DEPMETHOD.gprlib=		full
+BUILDLINK_DEPMETHOD.gnatcoll-core=	full
+.endif
+.if !empty(PKG_OPTIONS:Mdisable-shared-libs)
+CONFIGURE_FLAGS+=			ENABLE_SHARED=no
+.endif
+.if empty(PKG_OPTIONS:Menable-shared-libs) && empty(PKG_OPTIONS:Mdisable-shared-libs)
+USE_GCC_RUNTIME=			yes
+BUILDLINK_DEPMETHOD.xmlada=		full
+BUILDLINK_DEPMETHOD.gprlib=		full
+BUILDLINK_DEPMETHOD.gnatcoll-core=	full
+.endif
 
 # Build order is important
-
-.if !empty(PKG_OPTIONS:Msql)
-CONFIGURE_DIRS+=	sql
-BUILD_DIRS+=		sql
-INSTALL_DIRS+=		sql
+.if !empty(PKG_OPTIONS:Mgnatcoll-sql)
+PKG_BUILD_DIRS+=		sql
 .endif
 
-.if !empty(PKG_OPTIONS:Msqlite)
+.if !empty(PKG_OPTIONS:Mgnatcoll-sqlite)
 #.  include "../../databases/sqlite3/buildlink3.mk"
-CONFIGURE_DIRS+=	sqlite
-BUILD_DIRS+=		sqlite
-INSTALL_DIRS+=		sqlite
+PKG_BUILD_DIRS+=		sqlite
 .endif
 
-.if !empty(PKG_OPTIONS:Mpostgres)
+.if !empty(PKG_OPTIONS:Mgnatcoll-postgres)
+PKG_BUILD_DIRS+=		postgres
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-xref)
+PKG_BUILD_DIRS+=		xref
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-gnatinspect)
+PKG_BUILD_DIRS+=		gnatinspect
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-postgres) || !empty(PKG_OPTIONS:Mgnatcoll-xref) || \
+    !empty(PKG_OPTIONS:Mgnatcoll-gnatinspect)
 .  include "../../wip/gnatcoll-bindings/buildlink3.mk"
-CONFIGURE_DIRS+=	postgres
-BUILD_DIRS+=		postgres
-INSTALL_DIRS+=		postgres
 .endif
 
-.if !empty(PKG_OPTIONS:Mxref)
-.  include "../../wip/gnatcoll-bindings/buildlink3.mk"
-CONFIGURE_DIRS+=	xref
-BUILD_DIRS+=		xref
-INSTALL_DIRS+=		xref
+.if !empty(PKG_OPTIONS:Mgnatcoll-db2ada) || !empty(PKG_OPTIONS:Mgnatcoll-postgres2ada) || \
+    !empty(PKG_OPTIONS:Mgnatcoll-sqlite2ada) || !empty(PKG_OPTIONS:Mgnatcoll-all2ada)
+PKG_BUILD_DIRS+=		gnatcoll_db2ada
 .endif
 
-.if !empty(PKG_OPTIONS:Mgnatinspect)
-.  include "../../wip/gnatcoll-bindings/buildlink3.mk"
-CONFIGURE_DIRS+=	gnatinspect
-BUILD_DIRS+=		gnatinspect
-INSTALL_DIRS+=		gnatinspect
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnatcoll_db2ada) || !empty(PKG_OPTIONS:Mgnatcoll_postgres2ada) || \
-    !empty(PKG_OPTIONS:Mgnatcoll_sqlite2ada) || !empty(PKG_OPTIONS:Mgnatcoll_all2ada)
-CONFIGURE_DIRS+=	gnatcoll_db2ada
-BUILD_DIRS+=		gnatcoll_db2ada
-INSTALL_DIRS+=		gnatcoll_db2ada
-.endif
-
-.if !empty(PKG_OPTIONS:Mpostgres) || \
-    !empty(PKG_OPTIONS:Mgnatcoll_postgres2ada) || !empty(PKG_OPTIONS:Mgnatcoll_all2ada)
+.if !empty(PKG_OPTIONS:Mgnatcoll-postgres) || \
+    !empty(PKG_OPTIONS:Mgnatcoll-postgres2ada) || !empty(PKG_OPTIONS:Mgnatcoll-all2ada)
 .  include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-db2ada)
+DB_BACKENDS+=			db
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-postgres2ada)
+DB_BACKENDS+=			postgres
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-sqlite2ada)
+DB_BACKENDS+=			sqlite
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnatcoll-all2ada)
+DB_BACKENDS+=			all
 .endif

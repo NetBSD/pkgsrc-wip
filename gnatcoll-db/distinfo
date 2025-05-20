@@ -3,6 +3,7 @@ $NetBSD$
 BLAKE2s (gnatcoll-db-25.0.0.tar.gz) = 644f89eca578ab538daf7c90317a89cfa4736632f141e2d7db5a413d39c0c297
 SHA512 (gnatcoll-db-25.0.0.tar.gz) = 7cd37d33650a16fd72796adda375a62a6368c11b369209686194fe96ad72a8e49094076679824266f88aeb7b1bc592ac1be678fcfaad10b59c7e05f7dd512cf3
 Size (gnatcoll-db-25.0.0.tar.gz) = 2688678 bytes
+SHA1 (patch-Makefile) = 8bd30cf6a9af34bc24529fc1f51fdc41ce72420c
 SHA1 (patch-gnatcoll__db2ada_Makefile) = dbcec198253c682b952ecdbac4e839eb335c97ec
 SHA1 (patch-gnatcoll__db2ada_gnatcoll__all2ada.gpr) = e6198437023047531952e4e2c785d84b310382b3
 SHA1 (patch-gnatcoll__db2ada_gnatcoll__db2ada.gpr) = 4e14ba5302d45b5999e536071fddabebc8066711
