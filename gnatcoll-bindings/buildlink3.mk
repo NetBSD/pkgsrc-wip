@@ -6,14 +6,15 @@ BUILDLINK_TREE+=	gnatcoll-bindings
 GNATCOLL_BINDINGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnatcoll-bindings+=	gnatcoll-bindings>=24.0.0
-BUILDLINK_PKGSRCDIR.gnatcoll-bindings=		../../wip/gnatcoll-bindings
+BUILDLINK_ABI_DEPENDS.gnatcoll-bindings+=	gnatcoll-bindings>=25.0.0
+BUILDLINK_PKGSRCDIR.gnatcoll-bindings?=		../../wip/gnatcoll-bindings
 BUILDLINK_DEPMETHOD.gnatcoll-bindings?=		build
-
-BUILDLINK_FILES.gnatcoll-bindings=	include/gnatcoll_*/* lib/libgnatcoll* lib/gnatcoll_*/*
-BUILDLINK_FILES.gnatcoll-bindings+=	share/gpr/manifests/gnatcoll_* share/gpr/gnatcoll_*.gpr
 
 BUILDLINK_CONTENTS_FILTER.gnatcoll-bindings=	\
 	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatcoll.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr)'
+
+pkgbase := gnatcoll-bindings
+.include "../../mk/pkg-build-options.mk"
 
 .endif
 
