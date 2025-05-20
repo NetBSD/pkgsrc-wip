@@ -1,20 +1,22 @@
 $NetBSD: patch-Makefile,v 1.0 2024/08/12 23:00:00 dkazankov Exp $
 
 Add gprbuild and gprinstall options
+Make ALL_LIBRARY_TYPES externally settable
 
 --- Makefile.orig	2024-01-03 19:00:52.000000000 +0200
 +++ Makefile
-@@ -4,6 +4,9 @@
+@@ -4,19 +4,23 @@
  BUILD_DIR ?= .
  INSTALL_DIR ?= .
  
+-ALL_LIBRARY_TYPES = static static-pic relocatable
 +GPRBUILD_OPTIONS ?= -p -j$(PROCESSORS)
 +GPRINSTALL_OPTIONS =
 +
- ALL_LIBRARY_TYPES = static static-pic relocatable
++ALL_LIBRARY_TYPES ?= static static-pic relocatable
  
  .PHONY: lib
-@@ -11,12 +14,13 @@
+ lib:
  	gprbuild -k -P adasat.gpr -p -j$(PROCESSORS) \
  		--relocate-build-tree="$(BUILD_DIR)" \
  		-XLIBRARY_TYPE=$(LIBRARY_TYPE) \

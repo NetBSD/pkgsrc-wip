@@ -5,15 +5,16 @@ BUILDLINK_TREE+=	adasat
 .if !defined(ADASAT_BUILDLINK3_MK)
 ADASAT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.adasat+=	adasat>=24.0
-BUILDLINK_PKGSRCDIR.adasat=	../../wip/adasat
+BUILDLINK_API_DEPENDS.adasat+=	adasat>=24.0.0
+BUILDLINK_ABI_DEPENDS.adasat+=	adasat>=25.0.0
+BUILDLINK_PKGSRCDIR.adasat?=	../../wip/adasat
 BUILDLINK_DEPMETHOD.adasat?=	build
-
-BUILDLINK_FILES.adasat=		include/adasat*/* lib/libadasat* lib/adasat*/*
-BUILDLINK_FILES.adasat+=	share/gpr/manifests/adasat share/gpr/adasat.gpr
 
 BUILDLINK_CONTENTS_FILTER.adasat=	\
 	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
+
+pkgbase := adasat
+.include "../../mk/pkg-build-options.mk"
 
 .endif
 
