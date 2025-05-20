@@ -1,8 +1,14 @@
 # $NetBSD: Makefile,v 1.2 2024/05/31 14:00:00 dkazankov Exp $
 
-PKGNAME=	spark2014-13.0.0
-PKGREVISION=	1
+DISTNAME=	spark2014-${PKGVERSION_NOREV}
+PKGNAME=	spark2014-13.1.0
 CATEGORIES=	lang devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
+GITHUB_PROJECT=	spark2014
+# latest fsf-13 branch commit
+GITHUB_TAG=	12db22e854defa9d1c993ef904af1e72330a68ca
+DISTFILES=	${DEFAULT_DISTFILES}
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/spark2014
 COMMENT=	SPARK 2014 toolset
@@ -10,18 +16,14 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c ada
 USE_TOOLS+=	gmake
+# GNAT release must match SPARK2014 release
+GCC_REQD+=	13
+
 HAS_CONFIGURE=	yes
 
 MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
 
-DISTNAME=	spark2014-${PKGVERSION_NOREV}
-GITHUB_PROJECT=	spark2014
-MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
-DISTFILES=	${DEFAULT_DISTFILES}
-
-# latest fsf-13 branch commit
-GITHUB_TAG=		12db22e854defa9d1c993ef904af1e72330a68ca
 GITHUB_SUBMODULES+=	AdaCore	alt-ergo	be23b7992464438d6b654d9e36e6917748862130	alt-ergo
 GITHUB_SUBMODULES+=	AdaCore	cvc5	98b5fb70e8a94fd258bfc959c4a6fd0cc3537564	cvc5
 GITHUB_SUBMODULES+=	AdaCore	why3	52b6a590ba9bfc64aa0d22b41715358f26124a1f	why3
@@ -35,7 +37,7 @@ GCC_DISTFILE=		${GCC_DISTNAME}${GCC_EXTRACT_SUFFIX}
 DISTFILES+=		${GCC_DISTFILE}
 SITES.${GCC_DISTFILE}=	${MASTER_SITE_GNU:=gcc/${GCC_DISTNAME}/}
 
-GCC_REQD+=	13
+.include "../../mk/bsd.prefs.mk"
 
 CONFIG_SHELL=		${MAKE_PROGRAM}
 CONFIGURE_ARGS+=	DESTDIR=${DESTDIR} PREFIX=${PREFIX}
@@ -51,12 +53,6 @@ SUBST_FILES.interpreter=	benchmark_script/*
 SUBST_MESSAGE.interpreter=	Fix interpreter
 SUBST_SED.interpreter=		-e 's,/bin/bash,/bin/sh,g'
 
-GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-	${FIND} bin \( -type f -or -type l \) -print | ${SORT};
-
-.include "../../mk/bsd.prefs.mk"
-
 post-extract:
 # Link GNAT sources to main build tree
 	${RUN} cd ${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG} \
@@ -67,13 +63,17 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && \
 	${CHMOD} -R -P g-w ./*
 
-.include "../../wip/gprbuild/buildlink3.mk"
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} bin \( -type f -or -type l \) -print | ${SORT};
+
+.include "../../devel/gprbuild/buildlink3.mk"
 
 .include "../../wip/xmlada/buildlink3.mk"
 .include "../../wip/gprlib/buildlink3.mk"
 .include "../../wip/gnatcoll-core/buildlink3.mk"
 
-PYTHON_VERSIONS_ACCEPTED=	312 311 310 39 38
+#PYTHON_VERSIONS_ACCEPTED=	312 311 310 39 38
 .include "../../lang/python/tool.mk"
 
 BUILDLINK_DEPMETHOD.ocaml=			build
