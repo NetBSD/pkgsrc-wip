@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/arrow-file-to-stream
 bin/arrow-stream-to-file
+bin/parquet-dump-arrow-statistics
 bin/parquet-dump-footer
 bin/parquet-dump-schema
 bin/parquet-reader
@@ -198,6 +199,7 @@ include/arrow/testing/generator.h
 include/arrow/testing/gtest_compat.h
 include/arrow/testing/gtest_util.h
 include/arrow/testing/matchers.h
+include/arrow/testing/math.h
 include/arrow/testing/pch.h
 include/arrow/testing/process.h
 include/arrow/testing/random.h
@@ -390,6 +392,7 @@ include/parquet/platform.h
 include/parquet/printer.h
 include/parquet/properties.h
 include/parquet/schema.h
+include/parquet/size_statistics.h
 include/parquet/statistics.h
 include/parquet/stream_reader.h
 include/parquet/stream_writer.h
@@ -428,21 +431,21 @@ lib/cmake/Parquet/ParquetTargets-release.cmake
 lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
-lib/libarrow.so.1800
-lib/libarrow.so.1800.0.0
+lib/libarrow.so.2000
+lib/libarrow.so.2000.0.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
-lib/libarrow_acero.so.1800
-lib/libarrow_acero.so.1800.0.0
+lib/libarrow_acero.so.2000
+lib/libarrow_acero.so.2000.0.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
-lib/libarrow_dataset.so.1800
-lib/libarrow_dataset.so.1800.0.0
+lib/libarrow_dataset.so.2000
+lib/libarrow_dataset.so.2000.0.0
 lib/libparquet.a
 lib/libparquet.so
-lib/libparquet.so.1800
-lib/libparquet.so.1800.0.0
+lib/libparquet.so.2000
+lib/libparquet.so.2000.0.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -452,8 +455,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.1800.0.0-gdb.py
+share/arrow/gdb/libarrow.so.2000.0.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20241018/lib
+@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20250517/lib

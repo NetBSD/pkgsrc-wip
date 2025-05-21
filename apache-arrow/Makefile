@@ -15,16 +15,19 @@ LICENSE=	apache-2.0
 # They come from ./cpp/thirdparty/versions.txt
 XSIMD=		13.0.0.tar.gz
 JEMALLOC=	jemalloc-5.3.0.tar.bz2
+MIMALLOC=	mimalloc-v2.0.6.tar.gz
 SUBSTRAIT=	v0.44.0.tar.gz
 
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${XSIMD}
 DISTFILES+=		${JEMALLOC}
+DISTFILES+=		${MIMALLOC}
 DISTFILES+=		${SUBSTRAIT}
 
 SITES.${XSIMD}=		https://github.com/xtensor-stack/xsimd/archive/
 SITES.${SUBSTRAIT}=		https://github.com/substrait-io/substrait/archive/
 SITES.${JEMALLOC}=	${MASTER_SITE_GITHUB:=jemalloc/jemalloc/releases/download/5.3.0/}
+SITES.${MIMALLOC}=	https://apache.jfrog.io/artifactory/arrow/thirdparty/7.0.0/
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -67,6 +70,7 @@ CMAKE_CONFIGURE_ARGS+=	-Dxsimd_SOURCE=BUNDLED
 CONFIGURE_ENV+=	ARROW_JEMALLOC_URL=/${DISTDIR}/${JEMALLOC}
 CONFIGURE_ENV+=	ARROW_XSIMD_URL=/${DISTDIR}/${XSIMD}
 CONFIGURE_ENV+=	ARROW_SUBSTRAIT_URL=/${DISTDIR}/${SUBSTRAIT}
+CONFIGURE_ENV+=	ARROW_MIMALLOC_URL=/${DISTDIR}/${MIMALLOC}
 
 # To enable tests, devel/googletest needs -fPIE removed
 CMAKE_CONFIGURE_ARGS+=	-DARROW_BUILD_TESTS=OFF
