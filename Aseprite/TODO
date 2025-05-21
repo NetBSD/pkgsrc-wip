@@ -1,4 +1,5 @@
-TODO:
+Fix build.
+
 Clean up package so it doesn't build/install stuff it doesn't need.
 
 Make it start:

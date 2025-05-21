@@ -1,7 +1,5 @@
 $NetBSD$
 
-RMD160 (Aseprite-v1.2.16.2-Source.zip) = b5dc86159515cb83d0f6c72b0e91347c8c9a4a2d
-SHA512 (Aseprite-v1.2.16.2-Source.zip) = 88416796dfa0b3ea68bf98410e209a6f80a2649314f7558e54f295eb3db7f6c5c97027fac8845768a7c41b49890314af7c4e31b475b3b7332993908a34e02258
-Size (Aseprite-v1.2.16.2-Source.zip) = 24180655 bytes
-SHA1 (patch-CMakeLists.txt) = 51dde78d5566785d3457406dcf25a0054cd96132
-SHA1 (patch-third__party_CMakeLists.txt) = 24de2b311de5e46577f5bb3c355a849975406565
+BLAKE2s (Aseprite-v1.3.13-Source.zip) = fc8b6cc424b09a1af086d148452286503c7fb22c119d6a6d2f310000fe38ca5e
+SHA512 (Aseprite-v1.3.13-Source.zip) = 50b72593afe9bd136e283ed99ac37e7482d300da32e891ac4aefdf077f9f49dca1a1c3b57850d22ba72ed3d1ddb95306ceac209ead598aa77ba113015fd956f4
+Size (Aseprite-v1.3.13-Source.zip) = 73753124 bytes

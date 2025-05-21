@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	aseprite
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-DISTNAME=	Aseprite-v1.2.16.2-Source
+DISTNAME=	Aseprite-v1.3.13-Source
 PKGNAME=	${DISTNAME:S,-v,-,:S,-Source,,}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aseprite/}
+GITHUB_PROJECT=	aseprite
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,21 +14,13 @@ COMMENT=	Animated sprite editor & pixel art tool
 #LICENSE=	Aseprite-license
 
 WRKSRC=		${WRKDIR}
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-
-CONFIGURE_DIRS=	build
-CMAKE_CONFIGURE_ARGS+=	..
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
 
 PKGCONFIG_OVERRIDE+=	laf/third_party/googletest/googlemock/cmake/gmock.pc.in
 PKGCONFIG_OVERRIDE+=	laf/third_party/googletest/googlemock/cmake/gmock_main.pc.in
 PKGCONFIG_OVERRIDE+=	laf/third_party/googletest/googletest/cmake/gtest.pc.in
 PKGCONFIG_OVERRIDE+=	laf/third_party/googletest/googletest/cmake/gtest_main.pc.in
-PKGCONFIG_OVERRIDE+=	laf/third_party/stringencoders/src/stringencoders.pc.in
 PKGCONFIG_OVERRIDE+=	third_party/benchmark/cmake/benchmark.pc.in
 PKGCONFIG_OVERRIDE+=	third_party/cmark/src/libcmark.pc.in
 PKGCONFIG_OVERRIDE+=	third_party/harfbuzz/src/harfbuzz-gobject.pc.in
@@ -58,11 +50,12 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SHARED_PIXMAN=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SHARED_FREETYPE=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SHARED_HARFBUZZ=ON
 
-post-install:
+nopost-install:
 .for i in bin/bsd* include lib share/man
 	${RM} -rf ${DESTDIR}${PREFIX}/${i}
 .endfor
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -73,7 +66,8 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../textproc/cmark/buildlink3.mk"
-.include "../../textproc/tinyxml/buildlink3.mk"
+.include "../../textproc/tinyxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
