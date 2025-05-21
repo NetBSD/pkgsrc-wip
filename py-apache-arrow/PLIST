@@ -281,7 +281,6 @@ ${PYSITELIB}/pyarrow/include/arrow/python/common.h
 ${PYSITELIB}/pyarrow/include/arrow/python/csv.h
 ${PYSITELIB}/pyarrow/include/arrow/python/datetime.h
 ${PYSITELIB}/pyarrow/include/arrow/python/decimal.h
-${PYSITELIB}/pyarrow/include/arrow/python/deserialize.h
 ${PYSITELIB}/pyarrow/include/arrow/python/extension_type.h
 ${PYSITELIB}/pyarrow/include/arrow/python/filesystem.h
 ${PYSITELIB}/pyarrow/include/arrow/python/flight.h
@@ -305,7 +304,6 @@ ${PYSITELIB}/pyarrow/include/arrow/python/pyarrow_api.h
 ${PYSITELIB}/pyarrow/include/arrow/python/pyarrow_lib.h
 ${PYSITELIB}/pyarrow/include/arrow/python/python_test.h
 ${PYSITELIB}/pyarrow/include/arrow/python/python_to_arrow.h
-${PYSITELIB}/pyarrow/include/arrow/python/serialize.h
 ${PYSITELIB}/pyarrow/include/arrow/python/type_traits.h
 ${PYSITELIB}/pyarrow/include/arrow/python/udf.h
 ${PYSITELIB}/pyarrow/include/arrow/python/vendored/pythoncapi_compat.h
@@ -332,6 +330,7 @@ ${PYSITELIB}/pyarrow/include/arrow/testing/generator.h
 ${PYSITELIB}/pyarrow/include/arrow/testing/gtest_compat.h
 ${PYSITELIB}/pyarrow/include/arrow/testing/gtest_util.h
 ${PYSITELIB}/pyarrow/include/arrow/testing/matchers.h
+${PYSITELIB}/pyarrow/include/arrow/testing/math.h
 ${PYSITELIB}/pyarrow/include/arrow/testing/pch.h
 ${PYSITELIB}/pyarrow/include/arrow/testing/process.h
 ${PYSITELIB}/pyarrow/include/arrow/testing/random.h
@@ -521,7 +520,11 @@ ${PYSITELIB}/pyarrow/lib.pyx
 ${PYSITELIB}/pyarrow/lib.so
 ${PYSITELIB}/pyarrow/lib_api.h
 ${PYSITELIB}/pyarrow/libarrow_python.so
+${PYSITELIB}/pyarrow/libarrow_python.so.2000
+${PYSITELIB}/pyarrow/libarrow_python.so.2000.0.0
 ${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so
+${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so.2000
+${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so.2000.0.0
 ${PYSITELIB}/pyarrow/memory.pxi
 ${PYSITELIB}/pyarrow/orc.py
 ${PYSITELIB}/pyarrow/orc.pyc
@@ -557,8 +560,6 @@ ${PYSITELIB}/pyarrow/src/arrow/python/datetime.cc
 ${PYSITELIB}/pyarrow/src/arrow/python/datetime.h
 ${PYSITELIB}/pyarrow/src/arrow/python/decimal.cc
 ${PYSITELIB}/pyarrow/src/arrow/python/decimal.h
-${PYSITELIB}/pyarrow/src/arrow/python/deserialize.cc
-${PYSITELIB}/pyarrow/src/arrow/python/deserialize.h
 ${PYSITELIB}/pyarrow/src/arrow/python/extension_type.cc
 ${PYSITELIB}/pyarrow/src/arrow/python/extension_type.h
 ${PYSITELIB}/pyarrow/src/arrow/python/filesystem.cc
@@ -596,8 +597,6 @@ ${PYSITELIB}/pyarrow/src/arrow/python/python_test.cc
 ${PYSITELIB}/pyarrow/src/arrow/python/python_test.h
 ${PYSITELIB}/pyarrow/src/arrow/python/python_to_arrow.cc
 ${PYSITELIB}/pyarrow/src/arrow/python/python_to_arrow.h
-${PYSITELIB}/pyarrow/src/arrow/python/serialize.cc
-${PYSITELIB}/pyarrow/src/arrow/python/serialize.h
 ${PYSITELIB}/pyarrow/src/arrow/python/type_traits.h
 ${PYSITELIB}/pyarrow/src/arrow/python/udf.cc
 ${PYSITELIB}/pyarrow/src/arrow/python/udf.h
