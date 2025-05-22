@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	ephoto-1.6.0
+PKGREVISION=	1
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/ephoto/
 EXTRACT_SUFX=	.tar.xz

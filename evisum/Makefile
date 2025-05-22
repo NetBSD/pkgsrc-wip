@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	evisum-0.6.0
+PKGREVISION=	1
 CATEGORIES=	sysutils enlightenment
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/evisum/
 EXTRACT_SUFX=	.tar.xz
