@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (dask-2024.12.1.tar.gz) = 8b4fd1ba344238fddf7071fb091328bd3a395573f84dc76b15a278cf624e4436
-SHA512 (dask-2024.12.1.tar.gz) = bdf64fbe3d988eee8b4606bd561d3ba41f68a51d8d84fdc76987104574accaa5ddb1882d4bbc6fb8a6139b8bfbb6cc59a40e0deac96b07fba3ea45a60438c182
-Size (dask-2024.12.1.tar.gz) = 10701889 bytes
+BLAKE2s (dask-2025.5.1.tar.gz) = 12f3b3e5de031920d07975aefe9deb14bbc258a5c951382efaadf1c3f3c1380c
+SHA512 (dask-2025.5.1.tar.gz) = abd8f99388b3fbacfbe28b15e1619a2eea9730dd431cb994a18785038b3c9da8dc2cc7322fd83477700763d8e90a7881dc7035267dd5c134ecabf19d6e8e2dbe
+Size (dask-2025.5.1.tar.gz) = 10971933 bytes
 SHA1 (patch-pyproject.toml) = bae684c99d9ae6d0e83c6ac58eefccd3b8d2638d

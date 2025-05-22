@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dask-2024.12.1
+DISTNAME=	dask-2025.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 GITHUB_PROJECT=	dask
@@ -13,6 +13,7 @@ COMMENT=	Flexible parallel computing library for analytics
 LICENSE=	modified-bsd
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../lang/python/pyversion.mk"
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
@@ -39,9 +40,11 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-apache-arrow>=14.0.1:../../wip/py-apache-arrow
 DEPENDS+=	${PYPKGPREFIX}-bokeh>=2.4.2:../../wip/py-bokeh
+.if  ${PYTHON_VERSION} < 313
 DEPENDS+=	${PYPKGPREFIX}-cityhash-[0-9]*:../../wip/py-cityhash
+.endif
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.5.0:../../converters/py-cloudpickle
-DEPENDS+=	${PYPKGPREFIX}-dask_expr>=1.1.17:../../wip/py-dask_expr
+#DEPENDS+=	${PYPKGPREFIX}-dask_expr>=1.1.17:../../wip/py-dask_expr
 DEPENDS+=	${PYPKGPREFIX}-distributed>=${GITHUB_TAG}:../../wip/py-distributed
 DEPENDS+=	${PYPKGPREFIX}-fastavro>=1.1.0:../../wip/py-fastavro
 DEPENDS+=	${PYPKGPREFIX}-partd>=1.2.0:../../wip/py-partd
