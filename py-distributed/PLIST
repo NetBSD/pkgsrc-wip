@@ -443,9 +443,6 @@ ${PYSITELIB}/distributed/protocol/utils_test.pyo
 ${PYSITELIB}/distributed/publish.py
 ${PYSITELIB}/distributed/publish.pyc
 ${PYSITELIB}/distributed/publish.pyo
-${PYSITELIB}/distributed/pubsub.py
-${PYSITELIB}/distributed/pubsub.pyc
-${PYSITELIB}/distributed/pubsub.pyo
 ${PYSITELIB}/distributed/py.typed
 ${PYSITELIB}/distributed/pytest_resourceleaks.py
 ${PYSITELIB}/distributed/pytest_resourceleaks.pyc
