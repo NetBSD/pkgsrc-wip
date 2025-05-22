@@ -45,7 +45,6 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ###
 .if !empty(PKG_OPTIONS:Mnls)
 PLIST_VARS+=		nls
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}

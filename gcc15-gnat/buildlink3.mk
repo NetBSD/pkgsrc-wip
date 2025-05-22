@@ -12,11 +12,7 @@ BUILDLINK_DEPMETHOD.gcc15-gnat?=	build
 
 PREPEND_PATH+=	${BUILDLINK_DIR}/gcc15-gnat/bin
 
-GNU_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-
-ADALIB_PREFIX=	gcc15-gnat/lib/gcc/${GNU_TARGET_MACHINE}/15.1.0
-
-BUILDLINK_FILES.gcc15-gnat+=	gcc15-gnat/${GNU_TARGET_MACHINE}/lib/*
+ADALIB_PREFIX=	gcc15-gnat/lib/gcc/${MACHINE_GNU_PLATFORM}/15.1.0
 
 BUILDLINK_INCDIRS.gcc15-gnat+=	${ADALIB_PREFIX}/include
 BUILDLINK_INCDIRS.gcc15-gnat+=	${ADALIB_PREFIX}/adainclude
@@ -26,10 +22,10 @@ BUILDLINK_LIBDIRS.gcc15-gnat+=	${ADALIB_PREFIX}/adalib
 
 BUILDLINK_RPATHDIRS.gcc15-gnat+=	${ADALIB_PREFIX}
 BUILDLINK_RPATHDIRS.gcc15-gnat+=	${ADALIB_PREFIX}/adalib
-BUILDLINK_RPATHDIRS.gcc15-gnat+=	gcc15-gnat/${GNU_TARGET_MACHINE}/lib
+BUILDLINK_RPATHDIRS.gcc15-gnat+=	gcc15-gnat/${MACHINE_GNU_PLATFORM}/lib
 
 BUILDLINK_CONTENTS_FILTER.gcc15-gnat=	${EGREP} \
-					'(bin/.*|include/.*|lib/.*|libexec/.*|${GNU_TARGET_MACHINE}/lib/.*)'
+					'(bin/.*|include/.*|lib/.*|libexec/.*|${MACHINE_GNU_PLATFORM}/lib/.*)'
 
 pkgbase := gcc15-gnat
 .include "../../mk/pkg-build-options.mk"

@@ -21,6 +21,7 @@ CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
 
 USE_LANGUAGES=		c c++ ada
+GCC_REQD+=		10
 USE_TOOLS+=		gmake makeinfo sed perl flex bison
 USE_TOOLS.NetBSD+=	gsed
 # Built-in Texinfo can no longer process GCC 15's files
@@ -30,9 +31,6 @@ BISON_REQD+=		3.5
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
-
-USE_PKGSRC_GCC=		yes
-GCC_REQD+=		10
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
