@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.21 2017/09/11 20:56:28 wiz Exp $
 
-BLAKE2s (blis.tar.gz) = b71fc5e811f4cced67a73b9dcbf897aa68fb2cf1e7bf7e825f729a5b46285e9c
-SHA512 (blis.tar.gz) = 91cd2a2944762e584f11cb931ba11c4b296e93040b553f105ba8579d748a49cfcb6db8ae2ce1b5a537c0ae88182c9d212a4a5daa757ca4d0a7beee552d2eb55c
-Size (blis.tar.gz) = 15714356 bytes
+BLAKE2s (blis-1.1.tar.gz) = f26808980e9899d49b3e5c7cc02466ae1b3ade4a164828b5214501634de896c6
+SHA512 (blis-1.1.tar.gz) = 59d55f4731c97c92e4c3a09da33c8d45f57a000d035c3539bd5ed52ff9711903ecc5231cea0feb465b3fd9a80675a2237260947c09e6723f475e7b085a680527
+Size (blis-1.1.tar.gz) = 15706349 bytes
 SHA1 (patch-Makefile) = df30063e87bdd5faa55f23506519d8ed3cc39b27
