@@ -1,0 +1,15 @@
+$NetBSD$
+
+Skip generating catpages.
+
+--- Makefile.orig	2025-05-22 03:05:12.385782361 +0000
++++ Makefile
+@@ -187,7 +187,7 @@ compile ip.c fmt.h scan.h ip.h
+ 	./compile ip.c
+ 
+ it: \
+-man sntpclock taiclock taiclockd clockspeed clockadd clockview \
++sntpclock taiclock taiclockd clockspeed clockadd clockview \
+ install instcheck
+ 
+ leapsecs_add.o: \

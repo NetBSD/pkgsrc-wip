@@ -13,9 +13,9 @@ WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-DJB_SLASHPACKAGE=	YES
+FORCE_C_STD=		c89
 
-SUBST_CLASSES+=		djberrno
+DJB_SLASHPACKAGE=	YES
 
 DOCS=		package/CHANGES package/COPYING package/README doc/*.html
 USER_CMDS=	${CMDDIR}/tryto ${CMDDIR}/uncat
