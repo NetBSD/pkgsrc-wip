@@ -11,15 +11,10 @@ HOMEPAGE=	https://github.com/pezmaster31/bamtools
 COMMENT=	API and toolkit for handling BAM files
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
+USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_build
 
-post-extract:
-	${RUN} mkdir -p ${WRKSRC}/_build
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
