@@ -73,7 +73,6 @@ GENERATE_PLIST+= \
 .include "../../wip/gprlib/buildlink3.mk"
 .include "../../wip/gnatcoll-core/buildlink3.mk"
 
-#PYTHON_VERSIONS_ACCEPTED=	312 311 310 39 38
 .include "../../lang/python/tool.mk"
 
 BUILDLINK_DEPMETHOD.ocaml=			build
