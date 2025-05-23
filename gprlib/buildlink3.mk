@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gprlib?=	../../wip/gprlib
 BUILDLINK_DEPMETHOD.gprlib?=	build
 
 BUILDLINK_CONTENTS_FILTER.gprlib=	\
-	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatprj.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$|/gpr\.adb$$|/gpr-util-put_resource_usage__unix\.adb$$)'
+	${EGREP} '(include/.*\.ad.$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatprj.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$|/gpr\.adb$$|/gpr-util-put_resource_usage__unix\.adb$$)'
 
 pkgbase := gprlib
 .include "../../mk/pkg-build-options.mk"

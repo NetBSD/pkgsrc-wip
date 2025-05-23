@@ -18,24 +18,35 @@ USE_LANGUAGES=	c ada
 # See xmlada package for rationale
 GCC_REQD+=	13
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
+USE_GCC_RUNTIME=	yes
 
-MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD
+.include "../../mk/bsd.prefs.mk"
+
+USE_PKGSRC_GCC_RUNTIME?=	no
 
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		_ldl
-SUBST_MESSAGE._ldl=	Fix extra libs on NetBSD in ${SUBST_FILES._ldl}
-SUBST_STAGE._ldl=	pre-configure
-SUBST_FILES._ldl=	core/gnatcoll_core.gpr
-SUBST_SED._ldl=		-e "s,\"-ldl\",\"\","
+SUBST_CLASSES+=		ldl
+SUBST_MESSAGE.ldl=	Fix extra libs on NetBSD in ${SUBST_FILES.ldl}
+SUBST_STAGE.ldl=	pre-configure
+SUBST_FILES.ldl=	core/gnatcoll_core.gpr
+SUBST_SED.ldl=		-e "s,\"-ldl\",\"\","
 
 SUBST_CLASSES+=		opendir
 SUBST_MESSAGE.opendir=	Replace opendir with __gnatcoll_opendir in ${SUBST_FILES.opendir}
 SUBST_STAGE.opendir=	pre-configure
 SUBST_FILES.opendir=	core/src/os/unix/gnatcoll-os-libc-dirent.ads
 SUBST_SED.opendir=	-e "s,\"opendir\",\"__gnatcoll_opendir\","
+.endif
+
+MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+MAKE_FLAGS+=			ENABLE_SHARED=yes
+BUILDLINK_DEPMETHOD.xmlada=	full
+BUILDLINK_DEPMETHOD.gprlib=	full
+.else
+MAKE_FLAGS+=			ENABLE_SHARED=no
 .endif
 
 GENERATE_PLIST+= \

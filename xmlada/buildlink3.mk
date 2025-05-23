@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.xmlada?=	../../wip/xmlada
 BUILDLINK_DEPMETHOD.xmlada?=	build
 
 BUILDLINK_CONTENTS_FILTER.xmlada=	\
-	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
+	${EGREP} '(include/.*\.ad.$$|lib/.*\.ali$$|lib/.*\.a$$|lib/.*\.so.*$$|share/gpr/manifests/.*|share/gpr/.*\.gpr$$)'
 
 pkgbase := xmlada
 .include "../../mk/pkg-build-options.mk"

@@ -17,7 +17,12 @@ USE_LANGUAGES=	c c++ ada
 # See xmlada package for rationale
 GCC_REQD+=	13
 
+USE_GCC_RUNTIME=	yes
+
 .include "../../mk/bsd.prefs.mk"
+
+USE_PKGSRC_GCC_RUNTIME?=	no
+
 .include "options.mk"
 
 SUBST_CLASSES+=		fixver
@@ -26,12 +31,21 @@ SUBST_FILES.fixver=	version_information
 SUBST_SED.fixver=	-e 's,0.0,25.0,g'
 SUBST_MESSAGE.fixver=	Fix version information
 
+MAKE_FLAGS+=	BINDINGS=${BINDINGS:Q}
+MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+MAKE_FLAGS+=				ENABLE_SHARED=yes
+BUILDLINK_DEPMETHOD.xmlada=		full
+BUILDLINK_DEPMETHOD.gprlib=		full
+BUILDLINK_DEPMETHOD.gnatcoll-core=	full
+.else
+MAKE_FLAGS+=				ENABLE_SHARED=no
+.endif
+
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} include lib share \( -type f -or -type l \) -print | ${SORT};
-
-MAKE_FLAGS+=	BINDINGS=${BINDINGS:Q}
-MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD
 
 .include "../../devel/gprbuild/buildlink3.mk"
 .include "../../wip/xmlada/buildlink3.mk"

@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gnatcoll-core?=	../../wip/gnatcoll-core
 BUILDLINK_DEPMETHOD.gnatcoll-core?=	build
 
 BUILDLINK_CONTENTS_FILTER.gnatcoll-core=	\
-	${EGREP} '(include/.*\.ads$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatcoll.*$$|share/gpr/manifests/gnatcoll.*|share/gpr/gnatcoll.*\.gpr$$)'
+	${EGREP} '(include/.*\.ad.$$|lib/.*\.ali$$|lib/.*\.a$$|lib/libgnatcoll.*$$|share/gpr/manifests/gnatcoll.*|share/gpr/gnatcoll.*\.gpr$$)'
 
 pkgbase := gnatcoll-core
 .include "../../mk/pkg-build-options.mk"

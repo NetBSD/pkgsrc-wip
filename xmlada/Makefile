@@ -16,13 +16,17 @@ USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	ada
+
 # Xmlada 25 can still be built by GNAT 6, but other Adacore's 25 series libs can not.
-# So for uniformity and compatibility we use minimum version which can build all libs.
+# So for uniformity and compatibility we set minimum version which can build all libs.
+# Anyway usage of gcc6-aux with gprbuild requires modification of gcc6-aux package.
 GCC_REQD+=	13
+
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "options.mk"
+USE_PKGSRC_GCC_RUNTIME?=	no
 
 SUBST_CLASSES+=		fixver
 SUBST_STAGE.fixver=	pre-configure
@@ -31,6 +35,12 @@ SUBST_MESSAGE.fixver=	Fix version in configure
 SUBST_SED.fixver=	-e 's,18.0w,25.0w,g'
 
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+CONFIGURE_ARGS+=	--enable-shared
+.else
+CONFIGURE_ARGS+=	--disable-shared
+.endif
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \

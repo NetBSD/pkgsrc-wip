@@ -20,7 +20,12 @@ USE_LANGUAGES=	c ada
 # See xmlada package for rationale
 GCC_REQD+=	13
 
+USE_GCC_RUNTIME=	yes
+
 .include "../../mk/bsd.prefs.mk"
+
+USE_PKGSRC_GCC_RUNTIME?=	no
+
 .include "options.mk"
 
 SUBST_CLASSES+=		fixver
@@ -29,19 +34,28 @@ SUBST_FILES.fixver=	version_information
 SUBST_SED.fixver=	-e 's,0.0,25.0,g'
 SUBST_MESSAGE.fixver=	Fix version information
 
-GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-	${FIND} bin include lib share \( -type f -or -type l \) -print | ${SORT};
-
 CONFIGURE_ARGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD BUILD_DIRS=${PKG_BUILD_DIRS:Q} \
-	DB_BACKENDS=${DB_BACKENDS:Q}
+			DB_BACKENDS=${DB_BACKENDS:Q}
 MAKE_FLAGS+=		BUILD_DIRS=${PKG_BUILD_DIRS:Q} DB_BACKENDS=${DB_BACKENDS:Q}
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+CONFIGURE_ARGS+=			ENABLE_SHARED=yes
+BUILDLINK_DEPMETHOD.xmlada=		full
+BUILDLINK_DEPMETHOD.gprlib=		full
+BUILDLINK_DEPMETHOD.gnatcoll-core=	full
+.else
+CONFIGURE_ARGS+=			ENABLE_SHARED=no
+.endif
 
 do-configure:
 	${RUN}${_ULIMIT_CMD} \
 	cd ${WRKSRC} && \
 	${PKGSRC_SETENV} ${CONFIGURE_ENV} \
 	${MAKE_PROGRAM} ${CONFIGURE_ARGS} setup
+
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} bin include lib share \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../devel/gprbuild/buildlink3.mk"
 .include "../../wip/xmlada/buildlink3.mk"

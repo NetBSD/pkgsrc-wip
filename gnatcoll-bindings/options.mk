@@ -3,30 +3,11 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnatcoll-bindings
 PKG_SUPPORTED_OPTIONS=		gnatcoll-cpp gnatcoll-gmp gnatcoll-iconv gnatcoll-lzma gnatcoll-omp \
 				gnatcoll-python gnatcoll-python3 gnatcoll-readline gnatcoll-syslog gnatcoll-zlib
-PKG_OPTIONS_OPTIONAL_GROUPS=	shared-libs
-PKG_OPTIONS_GROUP.shared-libs=	enable-shared-libs disable-shared-libs
 PKG_SUGGESTED_OPTIONS=		gnatcoll-cpp gnatcoll-gmp gnatcoll-iconv gnatcoll-lzma gnatcoll-omp \
 				gnatcoll-python3 gnatcoll-readline gnatcoll-syslog gnatcoll-zlib
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Menable-shared-libs)
-MAKE_FLAGS+=				ENABLE_SHARED=yes
-USE_GCC_RUNTIME=			yes
-BUILDLINK_DEPMETHOD.xmlada=		full
-BUILDLINK_DEPMETHOD.gprlib=		full
-BUILDLINK_DEPMETHOD.gnatcoll-core=	full
-.endif
-.if !empty(PKG_OPTIONS:Mdisable-shared-libs)
-MAKE_FLAGS+=				ENABLE_SHARED=no
-.endif
-.if empty(PKG_OPTIONS:Menable-shared-libs) && empty(PKG_OPTIONS:Mdisable-shared-libs)
-USE_GCC_RUNTIME=			yes
-BUILDLINK_DEPMETHOD.xmlada=		full
-BUILDLINK_DEPMETHOD.gprlib=		full
-BUILDLINK_DEPMETHOD.gnatcoll-core=	full
-.endif
 
 .if !empty(PKG_OPTIONS:Mgnatcoll-cpp)
 BINDINGS+=	cpp

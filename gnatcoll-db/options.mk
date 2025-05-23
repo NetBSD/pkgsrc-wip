@@ -3,30 +3,11 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnatcoll-db
 PKG_SUPPORTED_OPTIONS=		gnatcoll-db2ada gnatcoll-postgres2ada gnatcoll-sqlite2ada gnatcoll-all2ada \
 				gnatcoll-gnatinspect gnatcoll-postgres gnatcoll-sql gnatcoll-sqlite gnatcoll-xref
-PKG_OPTIONS_OPTIONAL_GROUPS=	shared-libs
-PKG_OPTIONS_GROUP.shared-libs=	enable-shared-libs disable-shared-libs
 PKG_SUGGESTED_OPTIONS=		gnatcoll-db2ada gnatcoll-postgres2ada gnatcoll-sqlite2ada gnatcoll-all2ada \
 				gnatcoll-gnatinspect gnatcoll-postgres gnatcoll-sql gnatcoll-sqlite gnatcoll-xref
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Menable-shared-libs)
-CONFIGURE_FLAGS+=			ENABLE_SHARED=yes
-USE_GCC_RUNTIME=			yes
-BUILDLINK_DEPMETHOD.xmlada=		full
-BUILDLINK_DEPMETHOD.gprlib=		full
-BUILDLINK_DEPMETHOD.gnatcoll-core=	full
-.endif
-.if !empty(PKG_OPTIONS:Mdisable-shared-libs)
-CONFIGURE_FLAGS+=			ENABLE_SHARED=no
-.endif
-.if empty(PKG_OPTIONS:Menable-shared-libs) && empty(PKG_OPTIONS:Mdisable-shared-libs)
-USE_GCC_RUNTIME=			yes
-BUILDLINK_DEPMETHOD.xmlada=		full
-BUILDLINK_DEPMETHOD.gprlib=		full
-BUILDLINK_DEPMETHOD.gnatcoll-core=	full
-.endif
 
 # Build order is important
 .if !empty(PKG_OPTIONS:Mgnatcoll-sql)

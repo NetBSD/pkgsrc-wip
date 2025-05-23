@@ -18,10 +18,17 @@ USE_LANGUAGES=	ada
 # See xmlada package for rationale
 GCC_REQD+=	13
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
+USE_GCC_RUNTIME=	yes
 
-ALL_LIBRARY_TYPES?=	static static-pic relocatable
+.include "../../mk/bsd.prefs.mk"
+
+USE_PKGSRC_GCC_RUNTIME?=	no
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+ALL_LIBRARY_TYPES=	static static-pic relocatable
+.else
+ALL_LIBRARY_TYPES=	static static-pic
+.endif
 
 MAKE_FLAGS+=	BUILD_MODE=prod
 MAKE_FLAGS+=	ALL_LIBRARY_TYPES=${ALL_LIBRARY_TYPES:Q}

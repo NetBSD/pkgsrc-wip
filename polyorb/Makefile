@@ -19,10 +19,16 @@ GNU_CONFIGURE=	yes
 CHECK_PIE_SKIP+=	bin/*
 
 USE_LANGUAGES=	c ada
+
 # See xmlada package for rationale
 GCC_REQD+=	13
 
+USE_GCC_RUNTIME=	yes
+
 .include "../../mk/bsd.prefs.mk"
+
+USE_PKGSRC_GCC_RUNTIME?=	no
+
 .include "options.mk"
 
 OVERRIDE_RELEASE_PLACEHOLDER=	25.0w
@@ -40,6 +46,16 @@ CONFIGURE_ARGS+=	--with-proto-perso=${PROTOCOL_PERSONALITIES:Q}
 CONFIGURE_ARGS+=	--with-corba-services=${CORBA_SERVICES:Q}
 EXTRA_GNATMAKE_FLAGS+=	-eL -R -largs $${LDFLAGS} -margs
 CONFIGURE_ENV+=		EXTRA_GNATMAKE_FLAGS=${EXTRA_GNATMAKE_FLAGS:Q}
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+CONFIGURE_ARGS+=			--enable-shared
+CONFIGURE_ARGS+=			--with-gprbuild=gprbuild
+BUILDLINK_DEPMETHOD.xmlada=		full
+BUILDLINK_DEPMETHOD.gprlib=		full
+BUILDLINK_DEPMETHOD.gnatcoll-core=	full
+.else
+CONFIGURE_ARGS+=			--disable-shared
+.endif
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 

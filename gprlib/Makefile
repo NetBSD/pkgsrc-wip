@@ -16,13 +16,14 @@ USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes
 
 USE_LANGUAGES=	c ada
-
 # GPRLIB 25 uses -gnat2020 switch
 GCC_REQD+=	13
 
+USE_GCC_RUNTIME=	yes
+
 .include "../../mk/bsd.prefs.mk"
 
-.include "options.mk"
+USE_PKGSRC_GCC_RUNTIME?=	no
 
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
@@ -33,7 +34,14 @@ SUBST_FILES.getrusage=		gpr/src/gpr-util-put_resource_usage__unix.adb
 SUBST_SED.getrusage=		-e "s,\"getrusage\",\"__netbsd_getrusage\","
 .endif
 
-CONFIGURE_ARGS+=	prefix=${DESTDIR}${PREFIX}
+CONFIGURE_ARGS+=		prefix=${DESTDIR}${PREFIX}
+
+.if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
+CONFIGURE_ARGS+=		ENABLE_SHARED=yes
+BUILDLINK_DEPMETHOD.xmlada=	full
+.else
+CONFIGURE_ARGS+=		ENABLE_SHARED=no
+.endif
 
 do-configure:
 	${RUN}${_ULIMIT_CMD} \
@@ -41,8 +49,8 @@ do-configure:
 	${PKGSRC_SETENV} ${CONFIGURE_ENV} \
 	${MAKE_PROGRAM} ${CONFIGURE_ARGS} setup
 
-BUILD_TARGET=		libgpr.build
-INSTALL_TARGET=		libgpr.install
+BUILD_TARGET=			libgpr.build
+INSTALL_TARGET=			libgpr.install
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
