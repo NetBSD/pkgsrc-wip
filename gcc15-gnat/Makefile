@@ -20,8 +20,8 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
 
-USE_LANGUAGES=		c c++ ada
-GCC_REQD+=		10
+#USE_LANGUAGES=		c c++ ada
+#GCC_REQD+=		10
 USE_TOOLS+=		gmake makeinfo sed perl flex bison
 USE_TOOLS.NetBSD+=	gsed
 # Built-in Texinfo can no longer process GCC 15's files
@@ -54,6 +54,8 @@ BROKEN_ON_PLATFORM=	*-*-i386
 
 .include "../../mk/bsd.prefs.mk"
 
+TOOL_DEPENDS+=	gcc13-gnat>=13.1:../../lang/gcc13-gnat
+
 ## Build outside ${WRKSRC}
 OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -64,15 +66,17 @@ GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 
 .include "options.mk"
 
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
 #CONFIGURE_ENV+=	CC_FOR_BUILD=${BOOTC_BASE}/bin/gcc
 #CONFIGURE_ENV+=	CXX_FOR_BUILD=${BOOTC_BASE}/bin/g++
+.endif
 
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 STAGE1_LDFLAGS=		${LDFLAGS} -static
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
-LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
+#LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
 LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
