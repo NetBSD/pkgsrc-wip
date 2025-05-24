@@ -9,3 +9,6 @@ maybe make sure iptunnel is installed
 maybe make sure ipmaddr is installed
 
 add a HOMEPAGE
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-46836
