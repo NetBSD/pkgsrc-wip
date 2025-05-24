@@ -1,3 +1,24 @@
+(2025-05-25)
+
+1. With emacs29,
+   it seems that either with NetBSD/amd64 9.4 or with 10.99.14 this is packaged fine
+
+2. It can start Japanese input, but when switching back to
+   alphabetical input, it stops with error
+
+   | deactivate-input-method: Symbol's function definition is void: nil
+
+3. To avoid this, put following lines in ~/.emacs
+   -------------------------
+   ;;; https://www.mail-archive.com/users-jp@freebsd.org/msg00229.html
+   ;; for uim-leim.el
+   (define-obsolete-variable-alias 'inactivate-current-input-method-function
+     'deactivate-current-input-method-function "24.3")
+   (define-obsolete-function-alias 'inactivate-input-method
+     'deactivate-input-method "24.3")
+   -------------------------
+
+(2018-07-29)
 - Upstream code includes only upto emacs 24 (?)
   .. it is kind of beyond packaging 
   .. and may ignore for the moment.
