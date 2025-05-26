@@ -1,0 +1,50 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/common/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ content/common/BUILD.gn
+@@ -286,6 +286,7 @@ source_set("common") {
+     "//ui/shell_dialogs",
+     "//url",
+     "//url/ipc:url_ipc",
++    "//electron/build/config:generate_mas_config",
+   ]
+ 
+   defines = []
+@@ -385,19 +386,28 @@ source_set("common") {
+   }
+ 
+   if (is_linux || is_chromeos) {
+-    sources += [
+-      "gpu_pre_sandbox_hook_linux.cc",
+-      "gpu_pre_sandbox_hook_linux.h",
+-    ]
++    if (is_bsd) {
++      sources += [
++        "gpu_pre_sandbox_hook_bsd.cc",
++        "gpu_pre_sandbox_hook_bsd.h",
++      ]
++    } else {
++      sources += [
++        "gpu_pre_sandbox_hook_linux.cc",
++        "gpu_pre_sandbox_hook_linux.h",
++      ]
++    }
+     public_deps += [ "//sandbox/policy" ]
+     deps += [
+       ":sandbox_support_linux",
+       "//media/gpu:buildflags",
+       "//sandbox/linux:sandbox_services",
+-      "//sandbox/linux:seccomp_bpf",
+       "//sandbox/policy:chromecast_sandbox_allowlist_buildflags",
+       "//third_party/fontconfig",
+     ]
++    if (use_seccomp_bpf) {
++      deps += [ "//sandbox/linux:seccomp_bpf" ]
++    }
+     if (use_v4l2_codec) {
+       deps += [ "//media/gpu/v4l2" ]
+     }

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- build/config/linux/libdrm/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ build/config/linux/libdrm/BUILD.gn
+@@ -15,7 +15,7 @@ declare_args() {
+ }
+ 
+ if (use_system_libdrm) {
+-  assert(!is_linux, "System libdrm is not supported in linux")
++#  assert(!is_linux, "System libdrm is not supported in linux")
+   pkg_config("libdrm_config") {
+     packages = [ "libdrm" ]
+   }

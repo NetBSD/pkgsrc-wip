@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- gpu/ipc/service/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ gpu/ipc/service/BUILD.gn
+@@ -135,6 +135,7 @@ component("service") {
+       "QuartzCore.framework",
+     ]
+     defines += [ "GL_SILENCE_DEPRECATION" ]
++    deps += ["//electron/build/config:generate_mas_config"]
+   }
+   if (is_ios) {
+     sources += [ "image_transport_surface_ios.mm" ]

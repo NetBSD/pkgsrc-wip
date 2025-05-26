@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- .gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ .gn
+@@ -172,4 +172,8 @@ exec_script_whitelist =
+ 
+       "//tools/grit/grit_rule.gni",
+       "//tools/gritsettings/BUILD.gn",
++
++      "//electron/BUILD.gn",
++      "//third_party/electron_node/deps/base64/BUILD.gn",
++      "//third_party/electron_node/deps/base64/unofficial.gni",
+     ]

@@ -1,0 +1,30 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/boringssl/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/boringssl/BUILD.gn
+@@ -48,6 +48,21 @@ all_sources = bcm_internal_headers + bcm
+               crypto_sources + ssl_internal_headers + ssl_sources + pki_sources
+ all_headers = crypto_headers + ssl_headers + pki_headers + pki_internal_headers
+ 
++if (is_electron_build) {
++  # Needed to build a nodejs-compatible boringssl.
++  all_sources += [
++    "decrepit/evp/evp_do_all.c",
++    "decrepit/xts/xts.c",
++  ]
++
++  all_sources += [
++    "decrepit/blowfish/blowfish.c",
++    "decrepit/cfb/cfb.c",
++    "decrepit/ripemd/internal.h",
++    "decrepit/ripemd/ripemd.c",
++  ]
++}
++
+ if (enable_rust) {
+   rust_bindgen_generator("raw_bssl_sys_bindings") {
+     output_name = "bindgen"

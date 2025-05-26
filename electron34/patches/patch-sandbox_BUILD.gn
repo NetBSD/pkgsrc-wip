@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- sandbox/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ sandbox/BUILD.gn
+@@ -49,7 +49,7 @@ group("sandbox") {
+       "//sandbox/mac:system_services",
+       "//sandbox/mac/mojom",
+     ]
+-  } else if (is_linux || is_chromeos || is_android) {
++  } else if ((is_linux && !is_bsd) || is_chromeos || is_android) {
+     public_deps = [ "//sandbox/linux:sandbox" ]
+   }
+ }

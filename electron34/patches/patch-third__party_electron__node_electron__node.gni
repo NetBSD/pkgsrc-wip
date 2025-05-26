@@ -1,0 +1,13 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/electron_node/electron_node.gni.orig	2025-05-24 17:57:53.612207245 +0000
++++ third_party/electron_node/electron_node.gni
+@@ -0,0 +1,4 @@
++declare_args() {
++  # Allows embedders to override the NODE_MODULE_VERSION define
++  node_module_version = ""
++}

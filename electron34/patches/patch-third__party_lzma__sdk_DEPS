@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/lzma_sdk/DEPS.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/lzma_sdk/DEPS
+@@ -4,5 +4,6 @@
+ 
+ include_rules = [
+   "+base",
++  "+build",
+   "+testing",
+ ]

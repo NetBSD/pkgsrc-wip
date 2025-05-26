@@ -1,0 +1,27 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- components/printing/common/print.mojom.orig	2025-02-24 19:59:26.000000000 +0000
++++ components/printing/common/print.mojom
+@@ -303,7 +303,7 @@ union PrintWithParamsResult {
+ interface PrintRenderFrame {
+   // Tells the RenderFrame to switch the CSS to print media type, render every
+   // requested page, and then switch back the CSS to display media type.
+-  PrintRequestedPages();
++  PrintRequestedPages(mojo_base.mojom.DictionaryValue settings);
+ 
+   // Requests the frame to be printed with specified parameters. This is used
+   // to programmatically produce PDF by request from the browser (e.g. over
+@@ -392,6 +392,9 @@ interface PrintManagerHost {
+   [Sync]
+   ScriptedPrint(ScriptedPrintParams params) => (PrintPagesParams? settings);
+ 
++  // Tells the browser that there are invalid printer settings.
++  ShowInvalidPrinterSettingsError();
++
+   // Tells the browser printing failed.
+   PrintingFailed(int32 cookie, PrintFailureReason reason);
+ 

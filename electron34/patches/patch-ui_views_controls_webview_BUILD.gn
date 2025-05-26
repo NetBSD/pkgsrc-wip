@@ -1,0 +1,21 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/views/controls/webview/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/views/controls/webview/BUILD.gn
+@@ -46,6 +46,12 @@ component("webview") {
+     "//url",
+   ]
+ 
++  if (is_mac) {
++    deps += [
++      "//electron/build/config:generate_mas_config",
++    ]
++  }
++
+   public_deps = [
+     "//base",
+     "//content/public/browser",

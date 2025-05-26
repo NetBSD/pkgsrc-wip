@@ -1,0 +1,18 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/blink/public/mojom/dom_storage/storage_area.mojom.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/blink/public/mojom/dom_storage/storage_area.mojom
+@@ -50,7 +50,8 @@ struct KeyValue {
+ interface StorageArea {
+   // The quota for each storage area.
+   // This value is enforced in renderer processes and the browser process.
+-  const uint32 kPerStorageAreaQuota = 10485760; // 10 MiB
++  // Electron's dom_storage_limits.patch increased this value from 10MiB to 100MiB
++  const uint32 kPerStorageAreaQuota = 104857600; // 100 MiB
+ 
+   // In the browser process we allow some overage to
+   // accommodate concurrent writes from different renderers

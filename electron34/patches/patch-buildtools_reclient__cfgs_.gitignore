@@ -1,0 +1,14 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- buildtools/reclient_cfgs/.gitignore.orig	2025-02-24 19:59:26.000000000 +0000
++++ buildtools/reclient_cfgs/.gitignore
+@@ -1,4 +1,5 @@
+ /chromium-browser-clang/
+ /python/
++/naclXXX/
+ /win-cross/
+ reproxy.cfg

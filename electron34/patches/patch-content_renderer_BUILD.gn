@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/renderer/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ content/renderer/BUILD.gn
+@@ -334,6 +334,7 @@ target(link_target_type, "renderer") {
+     "//ui/surface",
+     "//url",
+     "//v8",
++    "//electron/build/config:generate_mas_config",
+   ]
+   allow_circular_includes_from = []
+ 

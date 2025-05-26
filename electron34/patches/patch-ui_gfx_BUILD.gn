@@ -1,0 +1,30 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/gfx/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/gfx/BUILD.gn
+@@ -329,6 +329,12 @@ component("gfx") {
+     "//ui/base:ui_data_pack",
+   ]
+ 
++  if (is_mac) {
++    deps += [
++      "//electron/build/config:generate_mas_config"
++    ]
++  }
++
+   if (!is_apple) {
+     sources += [
+       "platform_font_skia.cc",
+@@ -653,7 +659,7 @@ source_set("memory_buffer_sources") {
+     deps += [ "//build/config/linux/libdrm" ]
+   }
+ 
+-  if (is_linux || is_chromeos || is_android) {
++  if ((is_linux || is_chromeos || is_android) && !is_bsd) {
+     deps += [ "//third_party/libsync" ]
+   }
+ 

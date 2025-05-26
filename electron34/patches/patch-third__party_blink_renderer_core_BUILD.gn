@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/blink/renderer/core/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/blink/renderer/core/BUILD.gn
+@@ -408,6 +408,7 @@ component("core") {
+     "//ui/gfx/geometry",
+     "//ui/gfx/geometry:geometry_skia",
+     "//ui/strings",
++    "//electron/build/config:generate_mas_config",
+   ]
+ 
+   if (is_mac) {

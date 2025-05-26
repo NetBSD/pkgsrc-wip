@@ -1,0 +1,21 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- build/linux/unbundle/libevent.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ build/linux/unbundle/libevent.gn
+@@ -9,7 +9,12 @@ shim_headers("libevent_shim") {
+   headers = [ "event.h" ]
+ }
+ 
++config("system_libevent") {
++  defines = [ "USE_SYSTEM_LIBEVENT=1" ]
++}
++
+ source_set("libevent") {
+   deps = [ ":libevent_shim" ]
+   libs = [ "event" ]
++  public_configs = [ ":system_libevent" ]
+ }

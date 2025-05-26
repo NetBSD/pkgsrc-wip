@@ -1,0 +1,22 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/lzma_sdk/C/Util/SfxSetup/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/lzma_sdk/C/Util/SfxSetup/BUILD.gn
+@@ -3,12 +3,8 @@
+ # found in the LICENSE file.
+ 
+ source_set("7zS2_source") {
+-  sources = [
+-    "Precomp.h",
+-    "SfxSetup.c",
+-  ]
++  sources = [ "SfxSetup.c" ]
+   defines = [
+-    "_LZMA_PROB32",
+     "_WIN32",
+   ]
+   include_dirs = [

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/device/public/mojom/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ services/device/public/mojom/BUILD.gn
+@@ -98,7 +98,7 @@ mojom("device_service") {
+   enable_js_fuzzing = false
+ 
+   enabled_features = []
+-  if ((is_linux || is_chromeos) && use_udev) {
++  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
+     enabled_features += [ "enable_input_device_manager" ]
+   }
+ 

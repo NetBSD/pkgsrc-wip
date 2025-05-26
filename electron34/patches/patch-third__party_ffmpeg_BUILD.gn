@@ -1,0 +1,25 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/ffmpeg/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/ffmpeg/BUILD.gn
+@@ -350,7 +350,6 @@ target(link_target_type, "ffmpeg_interna
+       libs += [
+         "m",
+         "z",
+-        "rt",
+       ]
+     }
+     if (is_component_ffmpeg) {
+@@ -448,7 +447,7 @@ if (is_component_ffmpeg) {
+ 
+     if (!is_component_build) {
+       if (is_mac) {
+-        ldflags += [ "-Wl,-install_name,@rpath/libffmpeg.dylib" ]
++        ldflags += [ "-Wl,-install_name,@loader_path/libffmpeg.dylib" ]
+       } else if (is_linux) {
+         all_dependent_configs =
+             [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
