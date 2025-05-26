@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.97.1
+DISTNAME=		vscode-1.100.2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -25,7 +25,7 @@ USE_ELECTRON=		bundled
 
 DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
 
-.include "../../wip/electron32/platform.mk"
+.include "../../wip/electron34/platform.mk"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -193,6 +193,7 @@ do-install:
 .include "../../lang/python/tool.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-KRB5_DEFAULT=		mit-krb5
+KRB5_DEFAULT=	mit-krb5
+KRB5_ACCEPTED=	mit-krb5
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

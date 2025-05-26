@@ -1,12 +1,13 @@
 $NetBSD: distinfo,v 1.82 2024/12/21 15:30:31 schwarz Exp $
 
-BLAKE2s (vscode-1.97.1.tar.gz) = 87f8723bd4108287fed7720bd25fd96725ad7fa77f9d2501598a34646c9548bc
-SHA512 (vscode-1.97.1.tar.gz) = 0b2222bba50276df07fcea79dfe34232610505c890b519e150b08ab5274c505e698e4e5e9a781050eb112b2ecdb611a69e9c7e84ec2f08c339facb76ee2f88e3
-Size (vscode-1.97.1.tar.gz) = 23875640 bytes
-BLAKE2s (vscode-node_modules-1.97.1.tar.gz) = 038304c6af1426720367e1ffea22cd95f4939294ff0024c8bd2c7881b115cff6
-SHA512 (vscode-node_modules-1.97.1.tar.gz) = 446e0fe70a1cccfb4e72e13572fef3ba441bef01e9585e94723a03fa183cae3463a49a505925facfa95d1dfbd7681fc980e84c70f30cdf85c4c2dc02dddf29b9
-Size (vscode-node_modules-1.97.1.tar.gz) = 416491170 bytes
+BLAKE2s (vscode-1.100.2.tar.gz) = be05e9071838d4f465c0aae811341ae8d3af6a6dd2c7aba73b82bf611572aed7
+SHA512 (vscode-1.100.2.tar.gz) = 4f29f29e2184d6369da4e89d67e2de51327a13b091be6dda90edd5c0ca56dae6c0b6c294137070248179077ddb7a71a5fd59480f9f3c161d8d58c69fc4111f02
+Size (vscode-1.100.2.tar.gz) = 22647395 bytes
+BLAKE2s (vscode-node_modules-1.100.2.tar.gz) = effb4efa7b6ec861d731befcc9aa47f44355f96301dee808b79696223993b00f
+SHA512 (vscode-node_modules-1.100.2.tar.gz) = a157049466f380d7696d5dff886d769c1b823086e719f0345b2df2c3cd57d5823f04518eec3cf7bc0c560cb993709f0742752f6fd8671e0bde0ba9d1dcb60236
+Size (vscode-node_modules-1.100.2.tar.gz) = 400488024 bytes
 SHA1 (patch-build_lib_layersChecker.ts) = f7e07c4bf5d4f58ea37383aef61af71e2357f22a
+SHA1 (patch-build_lib_propertyInitOrderChecker.ts) = 8559891b75b3c8d84bcabd90cd1e15d15a9e681b
 SHA1 (patch-build_lib_snapshotLoader.ts) = 7203f8fec3bd86684e85b70f00825aa69661156b
 SHA1 (patch-extensions_emmet_src_test_testUtils.ts) = 9c4c756e44a191ab2ab660170cc27534fe838eef
 SHA1 (patch-extensions_vscode-api-tests_src_utils.ts) = 6d5ab29d490d52bb64635a5dcf2de89cd36ea5ab
@@ -29,3 +30,5 @@ SHA1 (patch-src_vs_platform_native_electron-main_nativeHostMainService.ts) = 781
 SHA1 (patch-src_vs_workbench_api_browser_mainThreadTask.ts) = 7e642866645295edd126c9984bab69d4cbfcf4e5
 SHA1 (patch-src_vs_workbench_services_actions_common_menusExtensionPoint.ts) = 6dbb9ffd7621f265871d27a395137b0f1572ad94
 SHA1 (patch-test_automation_src_electron.ts) = fc23124393f19d7af8c061d86b33141af05f3aa7
+SHA1 (patch-test_smoke_src_areas_task_task.test.ts) = d757d054287d959d8041e38241aaf36eae0e0c69
+SHA1 (patch-test_smoke_src_areas_terminal_terminal.test.ts) = 10a05952eb9e1e1af83971a7483eeb509396be20
