@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (bifrost-1.3.5.tar.gz) = c89466cbb4519bdc31709316b0cc784e6b88e3216c5b92f1739be1b41484a2fc
 SHA512 (bifrost-1.3.5.tar.gz) = 5e29b771a665dc93c523e51d2958dcf3bf4874fd9ac1c71b8a65131a00831e1a62b013126d92de112f63bc285dc2250d11a0fbcdcb15c3e54b959d322d49e8fb
 Size (bifrost-1.3.5.tar.gz) = 356701 bytes
-SHA1 (patch-CMakeLists.txt) = b67d3b9da75644d6c414988a1e034f4732d4ab5c
+SHA1 (patch-CMakeLists.txt) = ae698a80b3d251ad7b79a1fc8e5757ae7f5d63f9
 SHA1 (patch-src_DataStorage.tcc) = 5fb55d98a1d6ce2018ade2a268d6d82e6334110c
 SHA1 (patch-src_libpopcnt.h) = ebccf4b759d7cbfa25e88f4d1f016791eb87afee
 SHA1 (patch-src_strict__fstream.hpp) = d5a215d44bc48030291c7acc5f7550df38821011

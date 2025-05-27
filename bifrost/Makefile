@@ -6,6 +6,7 @@
 ###########################################################
 
 DISTNAME=	bifrost-1.3.5
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmelsted/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,12 +16,14 @@ HOMEPAGE=	https://github.com/pmelsted/bifrost
 COMMENT=	Parallel construction, indexing and querying of de Bruijn graphs
 LICENSE=	2-clause-bsd
 
-ONLY_FOR_PLATFORM=	 *-*-aarch64 *-*-x86_64 *-*-powerpc64 *-*-powerpc64le *-*-riscv64
+# Requires 64-bit processor
+ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-powerpc64 *-*-riscv64
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	cmake
-USE_CMAKE=	yes
-CMAKE_CONFIGURE_ARGS+=	-DCOMPILATION_ARCH=${CPUTYPE:UOFF}
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		cmake
+# FIXME: Why is this here?
+# CMAKE_CONFIGURE_ARGS+=	-DCOMPILATION_ARCH=${CPUTYPE:UOFF}
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
