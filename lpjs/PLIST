@@ -41,6 +41,7 @@ man/man1/lpjs-peak-mem.1
 man/man1/lpjs-reset-queue.1
 man/man1/lpjs-run-time.1
 man/man1/lpjs-submit.1
+man/man1/lpjs.1
 man/man8/lpjs-compd-disable.8
 man/man8/lpjs-compd-enable.8
 man/man8/lpjs-dispatchd-disable.8
