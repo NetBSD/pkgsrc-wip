@@ -1,5 +1,10 @@
 $NetBSD$
 
-BLAKE2s (llama.cpp-b4743.tar.gz) = 0280af04367584be943e3f20fad68e602661292aad0738fc16b50024537aea6d
-SHA512 (llama.cpp-b4743.tar.gz) = e093f4c7d4b2de425932bb4960683527a8a3bba242132c2f5e5bfed8480f0e336a06f97baf2d20ee591c6deee7535e159d40884a5e3f7caf0ae0967b8a046850
-Size (llama.cpp-b4743.tar.gz) = 20723735 bytes
+BLAKE2s (llama.cpp-b5541.tar.gz) = 7cab4b75c1165ab20af40c6f877fb3e767c8e0cf79a9c9c2d742920bc8b2aabf
+SHA512 (llama.cpp-b5541.tar.gz) = ae9cc84182a06f48ec2d298370518972adea5ff68999ab8ade07703f0ddf77dc01de3b6c903da5b8c4f5e7544d6b3ddda07970fa7d8fbab4d622a9a6c63019a9
+Size (llama.cpp-b5541.tar.gz) = 24929231 bytes
+SHA1 (patch-common_common.cpp) = 1655bf8b58bdddb5e9f6d2e00a23ad92869d305d
+SHA1 (patch-common_minja_minja.hpp) = 70e9079a80c840534633e980697ae86233a392c3
+SHA1 (patch-ggml_src_ggml-cpu_ggml-cpu.cpp) = cc5f9840919818b824eb52585a3c5a8ee40a2835
+SHA1 (patch-src_llama-chat.cpp) = ec70b79842f448472142f65205ebbbc9728b07b6
+SHA1 (patch-src_llama-vocab.cpp) = b97f36b85855ccf1385dfdd9fd5417e1abf77024
