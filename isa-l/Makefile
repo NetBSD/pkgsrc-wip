@@ -7,24 +7,20 @@
 
 DISTNAME=	isa-l-2.31.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 OWNER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/01org/isa-l
+HOMEPAGE=	https://github.com/intel/isa-l
 COMMENT=	Intel(R) Intelligent Storage Acceleration Libray
 LICENSE=	modified-bsd
-
-# From FreeBSD port.  Upstream seems to indicate that it should
-# work on any platform, though.
-# ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-powerpc64 *-*-powerpc
 
 SUBST_CLASSES+=	lt
 SUBST_STAGE.lt=	post-configure
 SUBST_SED.lt=	-e 's|--mode=compile|--tag=CC --mode=compile|g'
 SUBST_FILES.lt=	Makefile
 
-DEPENDS=	yasm>0:../../devel/yasm
+DEPENDS=	nasm>0:../../devel/nasm
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
 USE_LIBTOOL=	yes

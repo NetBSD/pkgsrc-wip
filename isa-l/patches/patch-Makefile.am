@@ -1,6 +1,10 @@
---- Makefile.am.orig	2025-05-30 12:38:07 UTC
+$NetBSD$
+
+# Unbreak build on aarch64 using portable base functions
+
+--- Makefile.am.orig	2025-01-08 15:33:59.000000000 +0000
 +++ Makefile.am
-@@ -71,12 +71,6 @@ endif
+@@ -71,12 +71,6 @@ libisal_la_SOURCES += ${lsrc_x86_32}
  other_tests += ${other_tests_x86_32}
  endif
  

@@ -1,4 +1,8 @@
---- configure.ac.orig	2025-05-30 12:36:27 UTC
+$NetBSD$
+
+# Unbreak build on aarch64 using portable base functions
+
+--- configure.ac.orig	2025-01-08 15:33:59.000000000 +0000
 +++ configure.ac
 @@ -27,14 +27,11 @@ AS_CASE([$host_cpu],
    [x86_64], [CPU="x86_64"],
