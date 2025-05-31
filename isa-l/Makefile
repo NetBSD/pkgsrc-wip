@@ -5,7 +5,7 @@
 #              Wed May 31 10:55:57 CDT 2023               #
 ###########################################################
 
-DISTNAME=	isa-l-2.30.0
+DISTNAME=	isa-l-2.31.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

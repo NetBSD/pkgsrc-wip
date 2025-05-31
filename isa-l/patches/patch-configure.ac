@@ -1,0 +1,17 @@
+--- configure.ac.orig	2025-05-30 12:36:27 UTC
++++ configure.ac
+@@ -27,14 +27,11 @@ AS_CASE([$host_cpu],
+   [x86_64], [CPU="x86_64"],
+   [amd64], [CPU="x86_64"],
+   [i?86], [CPU="x86_32"],
+-  [aarch64], [CPU="aarch64"],
+-  [arm64], [CPU="aarch64"],
+   [powerpc64le], [CPU="ppc64le"],
+   [ppc64le], [CPU="ppc64le"],
+ )
+ AM_CONDITIONAL([CPU_X86_64], [test "$CPU" = "x86_64"])
+ AM_CONDITIONAL([CPU_X86_32], [test "$CPU" = "x86_32"])
+-AM_CONDITIONAL([CPU_AARCH64], [test "$CPU" = "aarch64"])
+ AM_CONDITIONAL([CPU_PPC64LE], [test "$CPU" = "ppc64le"])
+ AM_CONDITIONAL([CPU_UNDEFINED], [test "x$CPU" = "x"])
+ 

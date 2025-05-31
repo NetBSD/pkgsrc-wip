@@ -1,7 +1,9 @@
 $NetBSD$
 
-BLAKE2s (isa-l-2.30.0.tar.gz) = 5e6b9b199aaa6b8ac2b5b2f812508541057167d31a9b104df7fe2a60df7f58d7
-SHA512 (isa-l-2.30.0.tar.gz) = d3ecfb7326097534b06a74b584100336509525ae7cadc6112d0c27e3d8704f3810e18f583d3cc33fa266bfec96db023607622b22ddbf17988ec4bf1bb3b3b9b2
-Size (isa-l-2.30.0.tar.gz) = 649389 bytes
+BLAKE2s (isa-l-2.31.1.tar.gz) = 8269f27432f7a7ce668f341b93ac48765acbcc685b36796e94e6e482adad81cb
+SHA512 (isa-l-2.31.1.tar.gz) = 65199d054af1edc26d477883f7878f25fd4db65622aa98247069f1296c5f07b75da24f0361a6c3889ddb3168d940b508cd2f6340548a62ff3157977179fd002d
+Size (isa-l-2.31.1.tar.gz) = 741732 bytes
+SHA1 (patch-Makefile.am) = 2c29e6c8ae32eb6e9928b02a09daecd685f218fe
+SHA1 (patch-configure.ac) = c829aa3be94d52c6fdc5cb95d3507b683ab0ca3f
 SHA1 (patch-igzip_igzip.c) = bccd90c8460ceb3c5c11ac4278e1bb7b26431d0a
 SHA1 (patch-igzip_igzip__inflate.c) = 8c1b0bc4711d4a2be63d8c063e917b50c1237a5f
