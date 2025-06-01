@@ -14,14 +14,12 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake grep
 
 USE_LANGUAGES=	c c++ ada
-# See xmlada package for rationale
+
 GCC_REQD+=	13
 
 USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_PKGSRC_GCC_RUNTIME?=	no
 
 .include "options.mk"
 

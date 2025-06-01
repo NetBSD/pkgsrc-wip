@@ -15,14 +15,11 @@ LICENSE=	apache-2.0
 USE_TOOLS+=	gmake
 
 USE_LANGUAGES=	ada
-# See xmlada package for rationale
 GCC_REQD+=	13
 
 USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_PKGSRC_GCC_RUNTIME?=	no
 
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
 ALL_LIBRARY_TYPES=	static static-pic relocatable

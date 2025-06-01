@@ -16,14 +16,15 @@ USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes
 
 USE_LANGUAGES=	c ada
-# GPRLIB 25 uses -gnat2020 switch
+
 GCC_REQD+=	13
+
+# GPRLIB 25 uses -gnat2020 switch
+USE_ADA_FEATURES=	gnat2020
 
 USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_PKGSRC_GCC_RUNTIME?=	no
 
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
