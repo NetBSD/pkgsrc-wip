@@ -17,7 +17,7 @@ USE_CXX_FEATURES=	c++17
 
 DEPENDS+=	${PYPKGPREFIX}-torch>=2.2:../../math/py-torch
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.25:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-gguf>=0.14:../../math/py-gguf
+#DEPENDS+=	${PYPKGPREFIX}-gguf>=0.14:../../math/py-gguf
 DEPENDS+=	${PYPKGPREFIX}-transformers>=4.35.2:../../math/py-transformers
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.0:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-sentencepiece>=0.1.98:../../textproc/py-sentencepiece
