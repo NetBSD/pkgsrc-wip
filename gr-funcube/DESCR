@@ -1,0 +1,4 @@
+gr-funcube is an oot-module for gnuradio to implement a funcube dongle
+and a funcube dongle pro+ source.
+
+To control the device the hidapi usb version is used.

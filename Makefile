@@ -1405,6 +1405,7 @@ SUBDIR+=	gptfdisk
 SUBDIR+=	gpx2shp
 SUBDIR+=	gr-fcdproplus
 SUBDIR+=	gr-fcdproplus-git
+SUBDIR+=	gr-funcube
 SUBDIR+=	gr-gsm
 SUBDIR+=	grabtitle-git
 SUBDIR+=	gradle

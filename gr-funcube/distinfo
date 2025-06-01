@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (gr-funcube/v3.10.0.rc3.tar.gz) = dd2f1957e31bd733435da47b51ce7d98051de95e10c2d443b1e8d245d34bd9ad
+SHA512 (gr-funcube/v3.10.0.rc3.tar.gz) = 851006850975e2de7ccdfb894a02f0b74c03b57c85c0be5c20f3a674e5dcf9b847ddb0d5ffc287c0cd3204aa6daa18355485c7907e1444bb08a344eaa11d8b34
+Size (gr-funcube/v3.10.0.rc3.tar.gz) = 112595 bytes
