@@ -1,5 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2014/10/06 15:10:50 makoto Exp $
 
+# Do not delete until gr-funcube works as this has bits that are
+# likely useful to steal.
+
 DISTNAME=		gr-fcdproplus-3.7
 CATEGORIES=		ham
 GIT_REPO=		https://github.com/dl1ksv/gr-fcdproplus

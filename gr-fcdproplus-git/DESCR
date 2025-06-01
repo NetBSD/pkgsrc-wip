@@ -5,3 +5,5 @@ This idea was taken from the osmosdr drivers.
 
 To control the device the hidraw code of the hidapi is used
 (This is git version).
+
+This version is unmaintained upstream.
