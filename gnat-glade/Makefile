@@ -4,15 +4,15 @@
 DISTNAME=	gnat-glade-${PKGVERSION_NOREV}
 PKGNAME=	gnat-glade-6.0.1
 CATEGORIES=	devel
+# Original sourceforge site periodically loses the snapshot,
+# so we use github clone
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dkazankov/}
 GITHUB_PROJECT=	gnat-glade
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-# Original sourceforge site periodically loses the snapshot,
-# so we use github clone
 #DISTFILES=	${PKG_DISTNAME}.zip
 #SITES.${PKG_DISTNAME}.zip=	-https://sourceforge.net/code-snapshots/svn/g/gn/gnat-glade/code/${PKG_DISTNAME}.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/gnat-glade/
 COMMENT=	GNAT Library for Ada Distributed Environment
 LICENSE=	gnu-gpl-v2
