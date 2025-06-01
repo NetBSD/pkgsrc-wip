@@ -20,14 +20,11 @@ CHECK_PIE_SKIP+=	bin/*
 
 USE_LANGUAGES=	c ada
 
-# See xmlada package for rationale
 GCC_REQD+=	13
 
 USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_PKGSRC_GCC_RUNTIME?=	no
 
 .include "options.mk"
 
