@@ -30,9 +30,15 @@ INSTALL_TARGET=	install-strip
 pre-configure:
 	(cd ${WRKSRC} && autoreconf --install --symlink -f -Wno-obsolete)
 
+.include "../../mk/bsd.prefs.mk"
+
 # FIXME: Why isn't the upstream Makefile installing these??
 post-install:
+.if ${OPSYS} == Darwin
+	${INSTALL_DATA} ${WRKSRC}/.libs/*.dylib ${DESTDIR}${PREFIX}/lib
+.else
 	${INSTALL_DATA} ${WRKSRC}/.libs/*.so* ${DESTDIR}${PREFIX}/lib
+.endif
 	${INSTALL_DATA} ${WRKSRC}/.libs/*.a ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
