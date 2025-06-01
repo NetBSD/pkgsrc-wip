@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (fastp-0.24.3.tar.gz) = 3f25bb88acf3ee7f5ce76cf7d72c836ff0f0db20a6183a9c505b4f0dea764a21
-SHA512 (fastp-0.24.3.tar.gz) = d307001de201db026a04eaa875eabec00ce4b6841782ced4cf31f22e89cb5f30c6d109002c9ded3a959f1669208d6eeff402290305b6e9b8864fde853b61909f
-Size (fastp-0.24.3.tar.gz) = 164518 bytes
+BLAKE2s (fastp-0.25.0.tar.gz) = 027dfe4280cff729827c9f340a988d2164c7b9c256feba989c71613a7a92bcc0
+SHA512 (fastp-0.25.0.tar.gz) = 7ada613602bef2216a5378692eefab134bd83cab73309e5665e793d751d31c412d650a34f9274b4cc76e4e288ac9d61580d0bb2763b40c95eccedd9806dd276b
+Size (fastp-0.25.0.tar.gz) = 164959 bytes
 SHA1 (patch-Makefile) = 97e7e159c94834535c42837923251344a9e5d667
 SHA1 (patch-src_main.cpp) = d28fb587c72b59f4c86bc51fd66874344a9dd43d
