@@ -33,12 +33,10 @@ pre-configure:
 .include "../../mk/bsd.prefs.mk"
 
 # FIXME: Why isn't the upstream Makefile installing these??
+.if ${OPSYS} == "Linux"
 post-install:
-.if ${OPSYS} == Darwin
-	${INSTALL_DATA} ${WRKSRC}/.libs/*.dylib ${DESTDIR}${PREFIX}/lib
-.else
 	${INSTALL_DATA} ${WRKSRC}/.libs/*.so* ${DESTDIR}${PREFIX}/lib
-.endif
 	${INSTALL_DATA} ${WRKSRC}/.libs/*.a ${DESTDIR}${PREFIX}/lib
+.endif
 
 .include "../../mk/bsd.pkg.mk"
