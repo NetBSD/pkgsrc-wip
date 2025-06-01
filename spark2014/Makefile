@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c ada
 USE_TOOLS+=	gmake
-# GNAT release must match SPARK2014 release
+# GNAT major release must match SPARK2014 major release
 GCC_REQD+=	13
 
 HAS_CONFIGURE=	yes
