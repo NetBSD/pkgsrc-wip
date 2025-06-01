@@ -1,8 +1,8 @@
 $NetBSD$
 
-# Respect build env
+# Respect build env, add destdir support
 
---- Makefile.orig	2025-05-31 20:40:16.035281359 +0000
+--- Makefile.orig	2025-05-28 22:47:44.000000000 +0000
 +++ Makefile
 @@ -15,15 +15,18 @@ TARGET := fastp
  BIN_TARGET := ${TARGET}
@@ -27,3 +27,13 @@ $NetBSD$
  
  static:${OBJ}
  	$(CXX) $(OBJ) -o ${BIN_TARGET} $(STATIC_LD_FLAGS)
+@@ -39,7 +42,8 @@ clean:
+ 	@rm -f $(TARGET)
+ 
+ install:
+-	install $(TARGET) $(BINDIR)/$(TARGET)
++	mkdir -p $(DESTDIR)$(BINDIR)
++	install $(TARGET) $(DESTDIR)$(BINDIR)
+ 	@echo "Installed."
+ 
+ -include $(OBJ:.o=.d)
