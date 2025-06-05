@@ -2680,7 +2680,6 @@ SUBDIR+=	ocaml-fieldslib
 SUBDIR+=	ocaml-gen
 SUBDIR+=	ocaml-gmetadom
 SUBDIR+=	ocaml-obuild
-SUBDIR+=	ocaml-ocplib-simplex
 SUBDIR+=	ocaml-odoc
 SUBDIR+=	ocaml-ounit
 SUBDIR+=	ocaml-ptmap
