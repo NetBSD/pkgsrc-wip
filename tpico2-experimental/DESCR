@@ -1,2 +1,5 @@
 The Pico language interpreter, version 2 - with experimental extensions
-See http://pico.vub.ac.be for documentation, see also tpico2 for the base interpreter
+such as SDL 1.2 and Curses libraries.
+See http://pico.vub.ac.be for documentation, see also tpico2 for the base interpreter.
+
+NOTE : This is a BSD licensed Pico language interpreter/REPL.
