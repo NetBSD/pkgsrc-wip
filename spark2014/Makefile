@@ -86,7 +86,7 @@ BUILDLINK_DEPMETHOD.ocaml-zarith=		build
 BUILDLINK_DEPMETHOD.ocaml-zip=			build
 .include "../../archivers/ocaml-zip/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocaml-ocplib-simplex=	build
-.include "../../wip/ocaml-ocplib-simplex/buildlink3.mk"
+.include "../../math/ocaml-ocplib-simplex/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocaml-num=	build
 .include "../../math/ocaml-num/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocaml-yojson=	build
