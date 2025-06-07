@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ggerganov/llama.cpp/
 COMMENT=	LLM inference in C/C++
 LICENSE=	mit
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		git pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
