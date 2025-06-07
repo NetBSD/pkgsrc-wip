@@ -1,0 +1,120 @@
+sysutils/yazi: update to 25.5.31
+
+v25.5.31
+This is a maintenance release, focusing on bug fixes.
+What's Changed
+
+    fix: expose ui.Wrap by @sxyazi in #2810
+    fix: forward --end-of-word of the input should consider the mode's delta by @sxyazi in #2811
+    fix: make every effort to carry hidden states for dummy files by @sxyazi in #2814
+
+v25.5.28
+Breaking Changes
+
+    [manager] is deprecated in favor of the new [mgr]. #2803
+    tab_width has been removed as it no longer needs to be set manually. #2745
+    tab_active and tab_inactive are moved under the new [tabs] section. #2745
+    sixel_fraction has been removed as it's no longer needed. #2707
+
+Deprecated
+
+    ya.mgr_emit(), ya.app_emit() and ya.input_emit() are deprecated. #2653
+    ya.preview_widgets() is deprecated. #2706
+    Command:args() is deprecated. #2752
+    The ya pack subcommand is deprecated. #2770
+    LEFT, CENTER, RIGHT on ui.Line, ui.Text are deprecated. #2802
+    NONE, TOP, RIGHT, BOTTOM, LEFT, ALL on ui.Bar, ui.Border are deprecated. #2802
+    WRAP_NO, WRAP, WRAP_TRIM on ui.Text are deprecated. #2802
+
+Redesign Tabs
+
+#2745 decouples tabs from the header into an independent tab bar component to enhance UX:
+
+    A standalone single-line component increases the available space for displaying tabs.
+    Tab titles are displayed by default to increase recognizability.
+    Supports switching tabs via mouse for easier navigation.
+
+The new tab bar is only shown when there is more than one tab, ensuring no space is wasted for users who don't use tabs.
+
+Calculate Real-Time Directory Size in Spotter
+
+#2695 adds directory sizes to the folder spotter. The size is computed dynamically in real time and asynchronously, which means:
+
+    Every time a user clicks <Tab> on a directory, the latest size is calculated.
+    For large directories, real-time changes in size are reported to the user, with "(?)" appended at the end to indicate that the calculation is in progress.
+    If the user closes the spotter or switches directories using the left/right arrow keys, any ongoing calculations will be canceled to avoid wasting resources.
+
+Also, the computed directory size will be updated in the file list:
+
+    If the user sets linemode = size, the latest size will be shown on the right of the file line.
+    If the user sets sort_by = size, the file list will be sorted by the latest sizes (if necessary).
+
+9x Faster Sixel Image Preview
+
+#2707 replaces the existing neural network quantization algorithm with Wu's Color Quantizer, which offers better performance while maintaining comparable quality.
+
+Old implementation (neural network via color_quant, with default sixel_fraction = 20) – average 189.5763999ms
+New implementation (Wu - sRGB via quantette) – average 20.9199916ms
+
+piper.yazi Plugin
+
+With piper.yazi, you can use the output of any shell command as preview content. This eliminates the need to write a separate plugin for each command, making the use of custom previewers much more convenient.
+
+Double Directory Size Calculation Speed
+
+#2683 greatly improves directory computation performance by dividing the task into chunks and reusing existing threads. Directory sorting and file trashing will be observably twice as fast.
+
+Run the benchmark script against a 10.16GB folder 5 times in release mode
+
+Input Component Now Supports Password Mode
+
+With #2675, a new obscure = true option is available
+
+Truncate Long Items in the File List
+
+#2754, #2759, and #2778 add truncation support for long filenames in the file list and archive preview, and display file extensions at the end, ensuring that even if a filename is truncated, you can still know what file type it is by its extension.
+
+types.yazi Plugin
+
+For a long time, Yazi lacked a type definition file, which made plugin development very painful. Now, it's here!
+
+types.yazi provides type definitions for Yazi's Lua API, empowering an efficient plugin development experience.
+Improved Built-In Previewers
+
+    The video previewer now supports displaying embedded video covers, #2640
+    The magick previewer will respect the user's image_alloc and image_bound settings, to limit its maximum resource usage, #2602, thanks to @ze0987
+    The video previewer will respect the user's max_width setting, #2560, thanks to @ze0987
+
+Improve Path Auto-Completion Results
+
+The auto-completion results for interactive cd (key: g => <Space>) will now more closely match the user's input keywords.
+
+What's Changed
+
+    fix: reverse the mixing order of theme and flavor configuration by @sxyazi in #2594
+    feat: limit memory usage for previewing large images by @ze0987 in #2602
+    fix: respect the user's max_width setting for the built-in video previewer by @ze0987 in #2560
+    feat: allow custom exit code with quit --code by @Nicholas42 in #2609
+    fix: ensure state synchronization even when the package update fails midway by @sxyazi in #2613
+    fix: do not change revision when package deployment fails by @sxyazi in #2627
+    feat: copy-on-write support for field caching by @sxyazi in #2629
+    feat: fall back to CSI 16 t when PowerShell OpenSSH returns a fake terminal size by @sxyazi in #2636
+    feat: support embedded cover for video preview by @sxyazi in #2640
+    fix: lazily update files to avoid triggering issues dependent on sort order by @sxyazi in #2643
+    feat: new ya.emit() API by @sxyazi in #2653
+    feat: fine-grained peek and watch by @sxyazi in #2655
+    feat: new --no-dummy option for reveal command by @sxyazi in #2664
+    feat: obscure input component for inputting passwords by @sxyazi in #2675
+    feat: increase the maximum allowed value of sixel_fraction to 30 by @sxyazi in #2682
+    perf: double directory size calculation speed by @sxyazi in #2683
+    feat: new fs.calc_size() API by @sxyazi in #2691
+    feat: promote Id to a first-class type by @sxyazi in #2692
+    feat: calculate real-time directory size in spotter by @sxyazi in #2695
+    feat: checks in ya pub and ya emit subcommands to verify receiver exists and has necessary abilities by @sxyazi in #2696
+    feat: add s and S keybinds in the input component by @hankertrix in #2678
+    fix: no title is set when starts the first time by @sxyazi in #2700
+    refactor: move tty to the new yazi-term crate by @sxyazi in #2701
+    feat: show error when image preview fails by @sxyazi in #2706
+    feat!: 9x faster Sixel image preview by @sxyazi in #2707
+    fix: reset the cursor position with arrow() after deleting files by @sxyazi in #2708
+    fix: ya pub-to 0 checks if any peer is able to receive the message ...
