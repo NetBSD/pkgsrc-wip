@@ -83,7 +83,7 @@ CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/org.gnome.SettingsDaemon.XSe
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .if ${OPSYS} == "Linux"
-.include "../../wip/libgudev/buildlink3.mk"
+.include "../../devel/libgudev/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../wip/libwacom/buildlink3.mk"
 .include "../../wip/NetworkManager/buildlink3.mk"
