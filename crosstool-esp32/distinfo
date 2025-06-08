@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (crosstool-NG/esp-1.26.x.zip) = e7581b948fe4f815d0d8b025b0ec2e00313179eec21369e42904e5a5584448d3
+SHA512 (crosstool-NG/esp-1.26.x.zip) = b62170497daef2163c77ed3935fbee4950a5bfa025a618723093ae1931e733308edd8f7c479f3c31d79e0d5670c4727f19a851f82bb3a78f2150f83a08faf53f
+Size (crosstool-NG/esp-1.26.x.zip) = 2935355 bytes
