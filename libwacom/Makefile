@@ -24,6 +24,6 @@ SUBST_SED.python=	-e 's|/usr/bin/env python3|${PYTHONBIN}|'
 
 .include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
-.include "../../wip/libgudev/buildlink3.mk"
+.include "../../devel/libgudev/buildlink3.mk"
 .include "../../wip/libevdev/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
