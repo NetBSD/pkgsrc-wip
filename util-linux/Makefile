@@ -36,7 +36,6 @@ PLIST_SRC=	PLIST
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/getopt
-	${RM} ${DESTDIR}${PREFIX}/man/man1/getopt.1
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
