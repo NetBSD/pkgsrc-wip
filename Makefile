@@ -5633,7 +5633,6 @@ SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
 SUBDIR+=	testssl
 SUBDIR+=	tetrinet
-SUBDIR+=	tex-attachfile-doc
 SUBDIR+=	tex-babel-japanese-doc
 SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-fancyref-doc
