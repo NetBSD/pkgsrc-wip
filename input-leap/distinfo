@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (input-leap-3.0.2.tar.gz) = 4ecea14f89cb5e0301967b168ed94a6befb6af0cb3dd3f18d3de62068cd7d6c8
+SHA512 (input-leap-3.0.2.tar.gz) = caadf17b64765c0732e94e6a38e17e560d050a2fa0252f26ec382f3f80af936aa9d0aa8172e29724b04223fd3b378b68b7afe7db41c336431b839331815774d9
+Size (input-leap-3.0.2.tar.gz) = 1764599 bytes
+SHA1 (patch-CMakeLists.txt) = 338bac4f282657cb50ff4ad8234e8799457d3d5d
+SHA1 (patch-src_client_CMakeLists.txt) = ee0542c354bda5f419476ac18a3f2c00af917124
+SHA1 (patch-src_server_CMakeLists.txt) = 9189acdbd3ac3482da909d94fc5900b9fae4bb97

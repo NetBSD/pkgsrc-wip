@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/input-leapc
+bin/input-leaps
+man/man1/input-leapc.1
+man/man1/input-leaps.1
+share/applications/io.github.input_leap.InputLeap.desktop
+share/examples/input-leap/input-leap.conf.example
+share/examples/input-leap/input-leap.conf.example-advanced
+share/examples/input-leap/input-leap.conf.example-barebones
+share/examples/input-leap/input-leap.conf.example-basic
+share/icons/hicolor/scalable/apps/io.github.input_leap.InputLeap.svg
+share/metainfo/io.github.input_leap.InputLeap.appdata.xml

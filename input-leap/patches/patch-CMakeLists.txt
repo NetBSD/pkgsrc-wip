@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install man files in ${PKGMANDIR}.
+
+--- CMakeLists.txt.orig	2025-06-07 16:43:15.941862591 +0000
++++ CMakeLists.txt
+@@ -285,7 +285,7 @@ if (APPLE)
+                       DEPENDS input-leap input-leaps input-leapc
+                       WORKING_DIRECTORY ${INPUTLEAP_BUNDLE_DIR})
+ elseif (UNIX AND NOT APPLE)
+-    install(FILES doc/input-leapc.1 doc/input-leaps.1 DESTINATION share/man/man1)
++    install(FILES doc/input-leapc.1 doc/input-leaps.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ 
+     install(FILES res/io.github.input_leap.InputLeap.appdata.xml DESTINATION share/metainfo)
+ 

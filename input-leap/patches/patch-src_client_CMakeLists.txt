@@ -1,0 +1,16 @@
+$NetBSD$
+
+Install executables files in /bin.
+
+--- src/client/CMakeLists.txt.orig	2024-10-12 23:18:55.000000000 +0000
++++ src/client/CMakeLists.txt
+@@ -53,8 +53,6 @@ target_link_libraries(input-leapc
+ 
+ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+     install(TARGETS input-leapc DESTINATION ${INPUTLEAP_BUNDLE_BINARY_DIR})
+-elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+-    install (TARGETS input-leapc DESTINATION bin)
+ else()
+-    install (TARGETS input-leapc DESTINATION .)
++    install (TARGETS input-leapc DESTINATION ${CMAKE_INSTALL_BINDIR})
+ endif()

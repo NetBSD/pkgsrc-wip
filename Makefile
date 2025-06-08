@@ -1741,6 +1741,7 @@ SUBDIR+=	infraarcana
 SUBDIR+=	inicpp
 SUBDIR+=	initware-git
 SUBDIR+=	innernet
+SUBDIR+=	input-leap
 SUBDIR+=	input-ttf
 SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interactsh
