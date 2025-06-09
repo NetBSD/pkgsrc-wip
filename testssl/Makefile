@@ -1,23 +1,25 @@
 # $NetBSD$
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	testssl-3.0rc5
+DISTNAME=	testssl.sh-3.2.0
+PKGNAME=	${DISTNAME:S/.sh//}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drwetter/}
-GITHUB_PROJECT=	testssl.sh
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://testssl.sh/
 COMMENT=	Checks servers for TLS/SSL flaws
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
 # Do we need more depends for runtime tools?
+# socat, hexdump, dig/host/drill/nslookup
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 # Tests are run with "prove" (which is provided with lang/perl5),
 # a number of tests fail right now + Test::More needs to be packaged.
-TEST_DEPENDS+=	perl5-[0-9]*:../../lang/perl5
+TEST_DEPENDS+=	perl-[0-9]*:../../lang/perl5
 TEST_DEPENDS+=	p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
 TEST_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 #TEST_DEPENDS+=	p5-Test-More-[0-9]*:../../devel/p5-Test-More
@@ -41,6 +43,6 @@ post-install:
 .endfor
 
 do-test:
-	( cd ${WRKSRC} && ${PREFIX}/bin/prove -v )
+	cd ${WRKSRC} && ${PREFIX}/bin/prove -v
 
 .include "../../mk/bsd.pkg.mk"

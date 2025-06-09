@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (testssl.sh-3.0rc5.tar.gz) = bd7911f2f8b57e99859d6731a6ac802fc0951533
-SHA512 (testssl.sh-3.0rc5.tar.gz) = 2ac175801e3242484d3b882ed49a3cdb7ea7613a4e3fe086b2cb94397decd8465e18db2e83a215b4a49d672d03c7b818ba689a40e7a4d69688e9a691a8722014
-Size (testssl.sh-3.0rc5.tar.gz) = 9181084 bytes
+BLAKE2s (testssl.sh-3.2.0.tar.gz) = 575f60ba4c4fb6c555dff869bfe27ec7d67a41c7067a4abe295c82ddceb0d152
+SHA512 (testssl.sh-3.2.0.tar.gz) = e1667e5273f58fac8f3a11a0a866ccc80c84e23d7508bbf9ab55b7a599326a68d385f65032600fcff0951eee4acd71df9813b093d76c1800e220b3bdd34a3ccb
+Size (testssl.sh-3.2.0.tar.gz) = 6976478 bytes
