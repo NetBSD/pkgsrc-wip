@@ -4436,6 +4436,7 @@ SUBDIR+=	py-pybitbucket
 SUBDIR+=	py-pycifrw
 SUBDIR+=	py-pydelay
 SUBDIR+=	py-pydenticon
+SUBDIR+=	py-pydeseq2
 SUBDIR+=	py-pydy
 SUBDIR+=	py-pydy-viz
 SUBDIR+=	py-pyec
