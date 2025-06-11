@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (scrcpy-1.24.tar.gz) = 3694b4ab1fa73eb5dd568006a396591e1ab338c4f1008c99dda6cff6dc8b79a3
-SHA512 (scrcpy-1.24.tar.gz) = 0eda7d6b0fb7339e1e32114d861194fd6bfce5ddb15d8d241f94278cb5800c2dd6c3bd69ea0b09b2bd5137757e85d679b2c789218e6933d83df4bc07dac09b2e
-Size (scrcpy-1.24.tar.gz) = 424970 bytes
-BLAKE2s (scrcpy-server-v1.24) = e43375caa0c1c1e508eb6483f82c07bcaa4cb8ee18d44ca64f7552dd8a3b4f2a
-SHA512 (scrcpy-server-v1.24) = 1bbc921e954c722307ef4fb2e1478954f6bf14544da362a9edeefd0f90def435bee409130d2ef2fddee98ec6255e12e9bda595507fec479f3feae0a57fb78236
-Size (scrcpy-server-v1.24) = 41159 bytes
+BLAKE2s (scrcpy-3.2.tar.gz) = 951d82cc71dc8f068770f9d2e0b2ae1f82675d025b78f7e84e2d4c0ed4266c62
+SHA512 (scrcpy-3.2.tar.gz) = f2c962193c290772017c7f83fb0872c7cc729a3179269e0ba2f716c7829e68e01609951e4cdf9dffa4877fbfe374ab452507871a677924f8def98bedbebc2b94
+Size (scrcpy-3.2.tar.gz) = 464967 bytes
+BLAKE2s (scrcpy-server-v3.2) = f6662973b314d0bcbe457155a3e159eb26767fff3a20ccd457333e69a6abf218
+SHA512 (scrcpy-server-v3.2) = c2d172c9866924c472d07d51b91914f02e8391b5dbaae99725ed5e44d42f2bbf92deaae4bfe27765a90382991234e44a02c18bc035d69fe4aa6493d2142dfec3
+Size (scrcpy-server-v3.2) = 90888 bytes
