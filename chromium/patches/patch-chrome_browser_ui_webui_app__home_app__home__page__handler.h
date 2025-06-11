@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/app_home/app_home_page_handler.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/webui/app_home/app_home_page_handler.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/ui/webui/app_home/app_home_page_handler.h
 @@ -24,7 +24,7 @@
  #include "mojo/public/cpp/bindings/receiver.h"

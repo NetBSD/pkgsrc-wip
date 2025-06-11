@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_web_contents_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- headless/lib/browser/headless_web_contents_impl.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ headless/lib/browser/headless_web_contents_impl.cc
 @@ -70,7 +70,7 @@ BASE_FEATURE(kPrerender2InHeadlessMode,
  namespace {

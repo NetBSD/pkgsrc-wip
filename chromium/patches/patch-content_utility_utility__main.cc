@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/utility/utility_main.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ content/utility/utility_main.cc
 @@ -36,18 +36,22 @@
  #include "services/tracing/public/cpp/trace_startup.h"

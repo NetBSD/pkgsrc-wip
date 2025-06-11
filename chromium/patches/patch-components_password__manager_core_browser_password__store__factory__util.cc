@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store_factory_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/password_manager/core/browser/password_store_factory_util.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/password_manager/core/browser/password_store_factory_util.cc
 @@ -29,7 +29,7 @@ namespace {
  LoginDatabase::DeletingUndecryptablePasswordsEnabled GetPolicyFromPrefs(

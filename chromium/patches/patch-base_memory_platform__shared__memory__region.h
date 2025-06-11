@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
 @@ -18,7 +18,7 @@
  #include "base/unguessable_token.h"
@@ -33,3 +33,12 @@ $NetBSD$
                                             ,
                                             bool executable = false
  #endif
+@@ -236,7 +236,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+ #if BUILDFLAG(IS_FUCHSIA)
+     kNotVmo,
+ #endif
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     kFcntlFailed,
+     kReadOnlyFdNotReadOnly,
+     kUnexpectedReadOnlyFd,

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_manager.cc
 @@ -756,7 +756,7 @@ bool SharedImageManager::SupportsScanout
    return true;

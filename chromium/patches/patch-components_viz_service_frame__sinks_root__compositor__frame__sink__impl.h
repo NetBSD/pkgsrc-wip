@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
-@@ -229,7 +229,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
+@@ -234,7 +234,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
    base::TimeDelta preferred_frame_interval_ =
        FrameRateDecider::UnspecifiedFrameInterval();
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/accelerator_table.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/accelerator_table.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/ui/views/accelerator_table.cc
-@@ -70,11 +70,11 @@ const AcceleratorMapping kAcceleratorMap
+@@ -69,11 +69,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},
      {ui::VKEY_9, ui::EF_PLATFORM_ACCELERATOR, IDC_SELECT_LAST_TAB},
      {ui::VKEY_NUMPAD9, ui::EF_PLATFORM_ACCELERATOR, IDC_SELECT_LAST_TAB},
@@ -20,7 +20,7 @@ $NetBSD$
      {ui::VKEY_NEXT, ui::EF_CONTROL_DOWN | ui::EF_SHIFT_DOWN, IDC_MOVE_TAB_NEXT},
      {ui::VKEY_PRIOR, ui::EF_CONTROL_DOWN | ui::EF_SHIFT_DOWN,
       IDC_MOVE_TAB_PREVIOUS},
-@@ -102,7 +102,7 @@ const AcceleratorMapping kAcceleratorMap
+@@ -101,7 +101,7 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_NUMPAD7, ui::EF_PLATFORM_ACCELERATOR, IDC_SELECT_TAB_6},
      {ui::VKEY_8, ui::EF_PLATFORM_ACCELERATOR, IDC_SELECT_TAB_7},
      {ui::VKEY_NUMPAD8, ui::EF_PLATFORM_ACCELERATOR, IDC_SELECT_TAB_7},
@@ -29,7 +29,7 @@ $NetBSD$
      {ui::VKEY_1, ui::EF_ALT_DOWN, IDC_SELECT_TAB_0},
      {ui::VKEY_NUMPAD1, ui::EF_ALT_DOWN, IDC_SELECT_TAB_0},
      {ui::VKEY_2, ui::EF_ALT_DOWN, IDC_SELECT_TAB_1},
-@@ -154,7 +154,7 @@ const AcceleratorMapping kAcceleratorMap
+@@ -153,7 +153,7 @@ const AcceleratorMapping kAcceleratorMap
       IDC_SHOW_AVATAR_MENU},
  
  // Platform-specific key maps.

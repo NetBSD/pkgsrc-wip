@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/base/ui_base_switches.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ ui/base/ui_base_switches.h
 @@ -22,11 +22,11 @@ COMPONENT_EXPORT(UI_BASE) extern const c
  COMPONENT_EXPORT(UI_BASE) extern const char kShowMacOverlayBorders[];

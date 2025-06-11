@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/browser_utils.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/device_signals/core/browser/browser_utils.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/device_signals/core/browser/browser_utils.h
-@@ -15,7 +15,7 @@ namespace device_signals {
+@@ -36,7 +36,7 @@ bool GetSiteIsolationEnabled();
  // Returns the hostname of the current machine.
  std::string GetHostName();
  
@@ -15,7 +15,7 @@ $NetBSD$
  // Returns the hostname of the current machine.
  std::vector<std::string> GetSystemDnsServers();
  
-@@ -23,7 +23,7 @@ std::vector<std::string> GetSystemDnsSer
+@@ -44,7 +44,7 @@ std::vector<std::string> GetSystemDnsSer
  SettingValue GetOSFirewall();
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  

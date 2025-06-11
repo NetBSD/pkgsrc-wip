@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/device_signals/core/common/linux/platform_utils_linux.cc
 @@ -4,11 +4,22 @@
  
@@ -29,7 +29,7 @@ $NetBSD$
  
  #include <algorithm>
  #include <optional>
-@@ -100,6 +111,7 @@ SettingValue GetScreenlockSecured() {
+@@ -98,6 +109,7 @@ SettingValue GetScreenlockSecured() {
  // Implements the logic from the native host installation script. First find the
  // root device identifier, then locate its parent and get its type.
  SettingValue GetDiskEncrypted() {
@@ -37,7 +37,7 @@ $NetBSD$
    struct stat info;
    // First figure out the device identifier. Fail fast if this fails.
    if (stat("/", &info) != 0) {
-@@ -122,11 +134,35 @@ SettingValue GetDiskEncrypted() {
+@@ -120,11 +132,35 @@ SettingValue GetDiskEncrypted() {
      }
      return SettingValue::UNKNOWN;
    }
@@ -73,7 +73,7 @@ $NetBSD$
    base::DirReaderPosix reader("/sys/class/net");
    if (!reader.IsValid()) {
      return result;
-@@ -151,6 +187,7 @@ std::vector<std::string> GetMacAddresses
+@@ -149,6 +185,7 @@ std::vector<std::string> GetMacAddresses
                                &address);
      result.push_back(address);
    }

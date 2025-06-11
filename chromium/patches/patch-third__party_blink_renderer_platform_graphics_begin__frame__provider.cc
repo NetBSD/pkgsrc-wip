@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/begin_frame_provider.cc
-@@ -71,8 +71,12 @@ void BeginFrameProvider::CreateComposito
+@@ -70,8 +70,12 @@ void BeginFrameProvider::CreateComposito
  
    // Once we are using RAF, this thread is driving user interactive display
    // updates. Update priority accordingly.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_child_thread.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/gpu/gpu_child_thread.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ content/gpu/gpu_child_thread.cc
 @@ -57,7 +57,7 @@
  #include "third_party/skia/include/ports/SkFontConfigInterface.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -11,7 +11,9 @@
  
@@ -16,7 +16,7 @@ $NetBSD$
  #include <unistd.h>
  
  #include <map>
-@@ -510,6 +512,7 @@ bool SettingGetterImplGSettings::CheckVe
+@@ -502,6 +504,7 @@ bool SettingGetterImplGSettings::CheckVe
  }
  #endif  // defined(USE_GIO)
  
@@ -24,7 +24,7 @@ $NetBSD$
  // Converts |value| from a decimal string to an int. If there was a failure
  // parsing, returns |default_value|.
  int StringToIntOrDefault(std::string_view value, int default_value) {
-@@ -1048,6 +1051,7 @@ class SettingGetterImplKDE : public Prox
+@@ -1039,6 +1042,7 @@ class SettingGetterImplKDE : public Prox
    // events on.
    scoped_refptr<base::SequencedTaskRunner> file_task_runner_;
  };
@@ -32,7 +32,7 @@ $NetBSD$
  
  }  // namespace
  
-@@ -1266,9 +1270,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
+@@ -1258,9 +1262,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
      case base::nix::DESKTOP_ENVIRONMENT_KDE4:
      case base::nix::DESKTOP_ENVIRONMENT_KDE5:
      case base::nix::DESKTOP_ENVIRONMENT_KDE6:

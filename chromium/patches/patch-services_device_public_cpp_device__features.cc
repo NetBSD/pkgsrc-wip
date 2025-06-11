@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- services/device/public/cpp/device_features.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ services/device/public/cpp/device_features.cc
-@@ -135,7 +135,7 @@ bool IsOsLevelGeolocationPermissionSuppo
+@@ -140,7 +140,7 @@ bool IsOsLevelGeolocationPermissionSuppo
  
  // Controls whether Chrome will try to automatically detach kernel drivers when
  // a USB interface is busy.

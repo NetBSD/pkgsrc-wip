@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_service.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.cc
-@@ -216,7 +216,7 @@ std::optional<CountryId> RegionalCapabil
+@@ -235,7 +235,7 @@ std::optional<CountryId> RegionalCapabil
      return persisted_country_id;
    }
  

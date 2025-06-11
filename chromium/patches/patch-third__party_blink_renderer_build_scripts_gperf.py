@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/build/scripts/gperf.py.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/build/scripts/gperf.py.orig	2025-05-26 15:57:59.000000000 +0000
 +++ third_party/blink/renderer/build/scripts/gperf.py
-@@ -28,24 +28,6 @@ def generate_gperf(gperf_path, gperf_inp
+@@ -28,27 +28,6 @@ def generate_gperf(gperf_path, gperf_inp
              stdout=subprocess.PIPE,
              universal_newlines=True)
          gperf_output = gperf.communicate(gperf_input)[0]
@@ -17,10 +17,13 @@ $NetBSD$
 -        # https://savannah.gnu.org/bugs/index.php?53028
 -        gperf_output = re.sub(r'\bregister ', '', gperf_output)
 -        # -Wimplicit-fallthrough needs an explicit fallthrough statement,
--        # so replace gperf's /*FALLTHROUGH*/ comment with the statement.
--        # https://savannah.gnu.org/bugs/index.php?53029
--        gperf_output = gperf_output.replace('/*FALLTHROUGH*/',
--                                            '  [[fallthrough]];')
+-        # so replace gperf 3.1's /*FALLTHROUGH*/ comment with the statement.
+-        # https://savannah.gnu.org/bugs/index.php?53029 (fixed in 3.2)
+-        if re.search(
+-                r'/\* C\+\+ code produced by gperf version 3\.[01](\.\d+)? \*/',
+-                gperf_output):
+-            gperf_output = gperf_output.replace('/*FALLTHROUGH*/',
+-                                                '  [[fallthrough]];')
 -        # -Wpointer-to-int-cast warns about casting pointers to smaller ints
 -        # Replace {(int)(long)&(foo), bar} with
 -        # {static_cast<int>(reinterpret_cast<uintptr_t>(&(foo)), bar}

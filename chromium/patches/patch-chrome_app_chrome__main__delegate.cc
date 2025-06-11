@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -147,7 +147,7 @@
  #include "components/webui/about/credit_utils.h"
@@ -81,7 +81,7 @@ $NetBSD$
    // On Linux, Chrome does not support running multiple copies under different
    // DISPLAYs, so the profile directory can be specified in the environment to
    // support the virtual desktop use-case.
-@@ -667,7 +667,7 @@ void RecordMainStartupMetrics(const Star
+@@ -669,7 +669,7 @@ void RecordMainStartupMetrics(const Star
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -90,7 +90,7 @@ $NetBSD$
    // Record the startup process creation time on supported platforms. On Android
    // this is recorded in ChromeMainDelegateAndroid.
    startup_metric_utils::GetCommon().RecordStartupProcessCreationTime(
-@@ -826,7 +826,7 @@ std::optional<int> ChromeMainDelegate::P
+@@ -828,7 +828,7 @@ std::optional<int> ChromeMainDelegate::P
  #if BUILDFLAG(IS_OZONE)
    // Initialize Ozone platform and add required feature flags as per platform's
    // properties.

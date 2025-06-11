@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
-@@ -208,7 +208,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
+@@ -206,7 +206,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    // EyeDropper/WidgetDelegate.
-   set_owned_by_client();
+   set_owned_by_client(OwnedByClientPassKey());
    SetPreferredSize(GetSize());
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

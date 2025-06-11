@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -318,7 +318,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -34,7 +34,16 @@ $NetBSD$
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -813,6 +816,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -660,7 +663,7 @@ blink::UserAgentMetadata GetUserAgentMet
+       base::StringPrintf("%d.%d.%d", major, minor, bugfix);
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // TODO(crbug.com/40245146): Remove this Blink feature
+   if (base::FeatureList::IsEnabled(
+           blink::features::kReduceUserAgentDataLinuxPlatformVersion)) {
+@@ -821,6 +824,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

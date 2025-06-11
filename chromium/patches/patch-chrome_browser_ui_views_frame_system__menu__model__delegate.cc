@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_delegate.cc
 @@ -20,7 +20,7 @@
  #include "chromeos/ui/frame/desks/move_to_desks_menu_model.h"
@@ -24,7 +24,7 @@ $NetBSD$
    if (command_id == IDC_USE_SYSTEM_TITLE_BAR) {
      PrefService* prefs = browser_->profile()->GetPrefs();
      return !prefs->GetBoolean(prefs::kUseCustomChromeFrame);
-@@ -59,7 +59,7 @@ bool SystemMenuModelDelegate::IsCommandI
+@@ -65,7 +65,7 @@ bool SystemMenuModelDelegate::IsCommandI
  }
  
  bool SystemMenuModelDelegate::IsCommandIdVisible(int command_id) const {

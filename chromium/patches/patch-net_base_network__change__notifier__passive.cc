@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier_passive.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- net/base/network_change_notifier_passive.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ net/base/network_change_notifier_passive.cc
-@@ -106,7 +106,7 @@ NetworkChangeNotifierPassive::GetAddress
+@@ -107,7 +107,7 @@ NetworkChangeNotifierPassive::GetAddress
  NetworkChangeNotifier::NetworkChangeCalculatorParams
  NetworkChangeNotifierPassive::NetworkChangeCalculatorParamsPassive() {
    NetworkChangeCalculatorParams params;

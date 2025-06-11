@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/native_theme.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/native_theme/native_theme.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ ui/native_theme/native_theme.h
 @@ -61,7 +61,7 @@ class COMPONENT_EXPORT(NATIVE_THEME) Nat
    // The part to be painted / sized.

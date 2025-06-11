@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/dialog_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/views/window/dialog_delegate.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ ui/views/window/dialog_delegate.cc
-@@ -106,7 +106,7 @@ Widget* DialogDelegate::CreateDialogWidg
+@@ -107,7 +107,7 @@ Widget* DialogDelegate::CreateDialogWidg
  
  // static
  bool DialogDelegate::CanSupportCustomFrame(gfx::NativeView parent) {

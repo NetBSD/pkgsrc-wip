@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/switches.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- remoting/host/base/switches.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ remoting/host/base/switches.cc
 @@ -23,13 +23,13 @@ const char kProcessTypeEvaluateCapabilit
  const char kProcessTypeFileChooser[] = "file_chooser";
@@ -19,6 +19,6 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- const char kEnableUtempter[] = "enable-utempter";
+ const char kEnableWtmpdb[] = "enable-wtmpdb";
  #endif
  

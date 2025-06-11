@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -316,7 +316,7 @@
+@@ -323,7 +323,7 @@
  #include "chrome/browser/devtools/devtools_window.h"
- #endif  // !BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_DESKTOP_ANDROID)
+ #endif  // BUILDFLAG(ENABLE_DEVTOOLS_FRONTEND)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -487,11 +487,11 @@
+@@ -494,11 +494,11 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -29,7 +29,7 @@ $NetBSD$
  #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
-@@ -519,7 +519,7 @@
+@@ -526,7 +526,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -38,7 +38,7 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1664,7 +1664,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1679,7 +1679,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
@@ -47,7 +47,7 @@ $NetBSD$
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1821,7 +1821,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1836,7 +1836,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -56,7 +56,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2177,12 +2177,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2200,12 +2200,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

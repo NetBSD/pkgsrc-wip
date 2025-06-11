@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/process/launch.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ base/process/launch.h
 @@ -7,6 +7,13 @@
  #ifndef BASE_PROCESS_LAUNCH_H_
@@ -20,7 +20,7 @@ $NetBSD$
  #include <limits.h>
  #include <stddef.h>
  
-@@ -241,7 +248,7 @@ struct BASE_EXPORT LaunchOptions {
+@@ -245,7 +252,7 @@ struct BASE_EXPORT LaunchOptions {
    bool clear_environment = false;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
  

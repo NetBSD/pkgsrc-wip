@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_memory_buffer.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/gfx/gpu_memory_buffer.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -17,7 +17,7 @@
  #include "ui/gfx/generic_shared_memory_id.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/gfx/native_pixmap_handle.h"
  #elif BUILDFLAG(IS_APPLE)
  #include "ui/gfx/mac/io_surface.h"
-@@ -47,7 +47,7 @@ enum GpuMemoryBufferType {
+@@ -58,7 +58,7 @@ enum GpuMemoryBufferType {
  #if BUILDFLAG(IS_APPLE)
    IO_SURFACE_BUFFER,
  #endif
@@ -24,7 +24,7 @@ $NetBSD$
    NATIVE_PIXMAP,
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -212,7 +212,7 @@ struct COMPONENT_EXPORT(GFX) GpuMemoryBu
+@@ -210,7 +210,7 @@ struct COMPONENT_EXPORT(GFX) GpuMemoryBu
  
    uint32_t offset = 0;
    uint32_t stride = 0;

@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2025-05-26 15:57:59.000000000 +0000
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
-@@ -39,6 +39,11 @@ double GetLocalTZA() {
-     return 0;
+@@ -41,6 +41,11 @@ double GetLocalTZA() {
+   }
    time_t t = 0;
    FXSYS_time(&t);
 +#ifdef __FreeBSD__
@@ -18,7 +18,7 @@ $NetBSD$
    FXSYS_localtime(&t);
  #if BUILDFLAG(IS_WIN)
    // In gcc 'timezone' is a global variable declared in time.h. In VC++, that
-@@ -47,6 +52,7 @@ double GetLocalTZA() {
+@@ -49,6 +54,7 @@ double GetLocalTZA() {
    _get_timezone(&timezone);
  #endif
    return (double)(-(timezone * 1000));

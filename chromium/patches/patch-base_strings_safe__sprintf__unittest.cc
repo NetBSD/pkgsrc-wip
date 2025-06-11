@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/strings/safe_sprintf_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ base/strings/safe_sprintf_unittest.cc
-@@ -743,6 +743,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
+@@ -746,6 +746,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif
  }
  
@@ -14,7 +14,7 @@ $NetBSD$
  TEST(SafeSPrintfTest, EmitNULL) {
    char buf[40];
  #if defined(__GNUC__)
-@@ -759,6 +760,7 @@ TEST(SafeSPrintfTest, EmitNULL) {
+@@ -762,6 +763,7 @@ TEST(SafeSPrintfTest, EmitNULL) {
  #pragma GCC diagnostic pop
  #endif
  }

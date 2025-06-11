@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- net/base/network_change_notifier.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ net/base/network_change_notifier.cc
-@@ -36,7 +36,7 @@
+@@ -38,7 +38,7 @@
  #include "net/base/network_change_notifier_linux.h"
  #elif BUILDFLAG(IS_APPLE)
  #include "net/base/network_change_notifier_apple.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "net/base/network_change_notifier_passive.h"
  #elif BUILDFLAG(IS_FUCHSIA)
  #include "net/base/network_change_notifier_fuchsia.h"
-@@ -323,6 +323,9 @@ std::unique_ptr<NetworkChangeNotifier> N
+@@ -325,6 +325,9 @@ std::unique_ptr<NetworkChangeNotifier> N
  #elif BUILDFLAG(IS_FUCHSIA)
    return std::make_unique<NetworkChangeNotifierFuchsia>(
        /*require_wlan=*/false);
@@ -25,7 +25,7 @@ $NetBSD$
  #else
    NOTIMPLEMENTED();
    return nullptr;
-@@ -519,7 +522,7 @@ base::cstring_view NetworkChangeNotifier
+@@ -521,7 +524,7 @@ base::cstring_view NetworkChangeNotifier
    return kConnectionTypeNames[type];
  }
  
@@ -34,7 +34,7 @@ $NetBSD$
  // static
  AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwner() {
    return g_network_change_notifier
-@@ -865,7 +868,7 @@ NetworkChangeNotifier::NetworkChangeNoti
+@@ -867,7 +870,7 @@ NetworkChangeNotifier::NetworkChangeNoti
    }
  }
  

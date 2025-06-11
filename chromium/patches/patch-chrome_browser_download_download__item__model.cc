@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_item_model.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -772,7 +772,7 @@ bool DownloadItemModel::IsCommandChecked
               download_crx_util::IsExtensionDownload(*download_);
@@ -24,7 +24,7 @@ $NetBSD$
        if (download_commands->CanOpenPdfInSystemViewer()) {
          prefs->SetShouldOpenPdfInSystemReader(!is_checked);
          SetShouldPreferOpeningInBrowser(is_checked);
-@@ -1206,7 +1206,7 @@ void DownloadItemModel::DetermineAndSetS
+@@ -1210,7 +1210,7 @@ void DownloadItemModel::DetermineAndSetS
      return;
    }
  

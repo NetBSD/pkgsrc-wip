@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/test/ui_controls.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/base/test/ui_controls.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ ui/base/test/ui_controls.h
 @@ -191,7 +191,7 @@ bool SendTouchEventsNotifyWhenDone(int a
                                     base::OnceClosure task);

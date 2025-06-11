@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/disk_cache/simple/simple_file_tracker.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- net/disk_cache/simple/simple_file_tracker.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ net/disk_cache/simple/simple_file_tracker.cc
 @@ -37,7 +37,17 @@ bool SimpleFileTracker::TrackedFiles::In
  }

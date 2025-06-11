@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2025-05-26 15:57:59.000000000 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -197,7 +197,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -33,7 +33,7 @@ $NetBSD$
  }
  
  # compiler ---------------------------------------------------------------------
-@@ -508,6 +511,10 @@ config("compiler") {
+@@ -509,6 +512,10 @@ config("compiler") {
      }
    }
  
@@ -44,7 +44,7 @@ $NetBSD$
    # Linux-specific compiler flags setup.
    # ------------------------------------
    if (use_icf && (!is_apple || use_lld)) {
-@@ -567,7 +574,7 @@ config("compiler") {
+@@ -569,7 +576,7 @@ config("compiler") {
      ldflags += [ "-Wl,-z,keep-text-section-prefix" ]
    }
  
@@ -53,7 +53,7 @@ $NetBSD$
      cflags += [ "-fcrash-diagnostics-dir=" + clang_diagnostic_dir ]
      if (save_reproducers_on_lld_crash && use_lld) {
        ldflags += [
-@@ -1212,7 +1219,7 @@ config("compiler_cpu_abi") {
+@@ -1227,7 +1234,7 @@ config("compiler_cpu_abi") {
          ]
        }
      } else if (current_cpu == "arm") {
@@ -62,7 +62,7 @@ $NetBSD$
          cflags += [ "--target=arm-linux-gnueabihf" ]
          ldflags += [ "--target=arm-linux-gnueabihf" ]
        }
-@@ -1227,7 +1234,7 @@ config("compiler_cpu_abi") {
+@@ -1242,7 +1249,7 @@ config("compiler_cpu_abi") {
        }
      } else if (current_cpu == "arm64") {
        if (is_clang && !is_android && !is_nacl && !is_fuchsia &&
@@ -71,7 +71,7 @@ $NetBSD$
          cflags += [ "--target=aarch64-linux-gnu" ]
          ldflags += [ "--target=aarch64-linux-gnu" ]
        }
-@@ -1561,7 +1568,7 @@ config("compiler_deterministic") {
+@@ -1576,7 +1583,7 @@ config("compiler_deterministic") {
      # different build directory like "out/feature_a" and "out/feature_b" if
      # we build same files with same compile flag.
      # Other paths are already given in relative, no need to normalize them.
@@ -80,16 +80,16 @@ $NetBSD$
        # TODO(https://crbug.com/1231236): Use -ffile-compilation-dir= here.
        cflags += [
          "-Xclang",
-@@ -1619,7 +1626,7 @@ config("compiler_deterministic") {
+@@ -1634,7 +1641,7 @@ config("compiler_deterministic") {
  }
  
  config("clang_revision") {
 -  if (is_clang && clang_base_path == default_clang_base_path &&
 +  if (is_clang && !is_bsd && clang_base_path == default_clang_base_path &&
        current_os != "zos") {
-     update_args = [
-       "--print-revision",
-@@ -1652,7 +1659,7 @@ config("clang_revision") {
+     _perform_consistency_checks = current_toolchain == default_toolchain
+     if (llvm_force_head_revision) {
+@@ -1719,7 +1726,7 @@ config("clang_revision") {
  # e.g. by setting in the the project's .gn file.
  config("clang_warning_suppression") {
    # Some build configs use older versions of clang that don't support WSMs
@@ -98,16 +98,7 @@ $NetBSD$
        !llvm_android_mainline && is_clang &&
        clang_warning_suppression_file != "") {
      from_build_root =
-@@ -1965,7 +1972,7 @@ config("default_warnings") {
-       "-Wno-unneeded-internal-declaration",
-     ]
- 
--    if (!is_nacl || is_nacl_saigo) {
-+    if (!is_bsd && !is_nacl || is_nacl_saigo) {
-       if (is_win) {
-         # TODO(thakis): https://crbug.com/617318
-         # Currently RBE can not handle case sensitiveness for windows well.
-@@ -1985,9 +1992,6 @@ config("default_warnings") {
+@@ -2053,9 +2060,6 @@ config("default_warnings") {
  
          # TODO(crbug.com/40284799): Fix and re-enable.
          "-Wno-thread-safety-reference-return",
@@ -117,7 +108,7 @@ $NetBSD$
        ]
  
        cflags_cc += [
-@@ -2326,7 +2330,7 @@ config("export_dynamic") {
+@@ -2387,7 +2391,7 @@ config("export_dynamic") {
  # 2. Remove the thin_archive config, so that the .a file actually contains all
  #    .o files, instead of just references to .o files in the build directoy
  config("thin_archive") {
@@ -126,7 +117,7 @@ $NetBSD$
      # The macOS and iOS linker ld64.ldd doesn't support thin archive without
      # symbol table, gcc on linux also throws the error `archive has no index`.
      # AIX does support -s option, not -S option.
-@@ -2776,7 +2780,7 @@ config("afdo_optimize_size") {
+@@ -2837,7 +2841,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -135,7 +126,7 @@ $NetBSD$
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -2803,7 +2807,7 @@ config("afdo") {
+@@ -2864,7 +2868,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }
@@ -144,7 +135,7 @@ $NetBSD$
      cflags = [ "-fauto-profile=${auto_profile_path}" ]
      inputs = [ auto_profile_path ]
    }
-@@ -2980,7 +2984,7 @@ config("symbols") {
+@@ -3041,7 +3045,7 @@ config("symbols") {
      cflags += [ "-gomit-unreferenced-methods" ]
    }
  

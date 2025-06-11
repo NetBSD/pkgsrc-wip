@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- printing/print_settings.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"
@@ -42,7 +42,7 @@ $NetBSD$
    AdvancedSettings& advanced_settings() { return advanced_settings_; }
    const AdvancedSettings& advanced_settings() const {
      return advanced_settings_;
-@@ -429,7 +429,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -434,7 +434,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
    // Number of pages per sheet.
    int pages_per_sheet_;
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ third_party/blink/renderer/core/page/context_menu_controller.cc
 @@ -641,7 +641,7 @@ bool ContextMenuController::ShowContextM
      if (potential_image_node != nullptr &&

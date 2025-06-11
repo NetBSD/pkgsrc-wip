@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
-@@ -72,7 +72,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
-   registry->RegisterIntegerPref(prefs::kDefaultBrowserDeclinedCount, 0);
-   registry->RegisterTimePref(prefs::kDefaultBrowserFirstShownTime,
-                              base::Time());
+@@ -64,7 +64,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
+   registry->RegisterTimePref(prefs::kPdfInfoBarLastShown, base::Time());
+   registry->RegisterIntegerPref(prefs::kPdfInfoBarTimesShown, 0);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    registry->RegisterStringPref(prefs::kEnterpriseCustomLabelForBrowser,

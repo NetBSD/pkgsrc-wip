@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/features.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/devtools/features.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/devtools/features.cc
-@@ -157,7 +157,7 @@ BASE_FEATURE(kDevToolsAiGeneratedTimelin
-              "DevToolsAiGeneratedTimelineLabels",
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -164,7 +164,7 @@ BASE_FEATURE(kDevToolsNewPermissionDialo
+              "DevToolsNewPermissionDialog",
+              base::FEATURE_ENABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

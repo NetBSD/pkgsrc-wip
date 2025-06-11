@@ -4,13 +4,13 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/ipc/memfd.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/perfetto/src/tracing/ipc/memfd.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ third_party/perfetto/src/tracing/ipc/memfd.cc
 @@ -20,7 +20,8 @@
  
  #define PERFETTO_MEMFD_ENABLED()             \
    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID) || \
--  PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX)
+-      PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX)
 +  (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) && \
 +  !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD))
  

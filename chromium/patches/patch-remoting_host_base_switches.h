@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/switches.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- remoting/host/base/switches.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ remoting/host/base/switches.h
 @@ -35,13 +35,13 @@ extern const char kProcessTypeRdpDesktop
  extern const char kProcessTypeEvaluateCapability[];
@@ -19,6 +19,6 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Used to record client sessions to utmp/wtmp.
- extern const char kEnableUtempter[];
+ // Used to record client sessions to wtmpd.
+ extern const char kEnableWtmpdb[];
  #endif

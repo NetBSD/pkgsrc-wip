@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_info_collector.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- gpu/config/gpu_info_collector.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ gpu/config/gpu_info_collector.cc
-@@ -349,7 +349,7 @@ void ReportWebGPUAdapterMetrics(dawn::na
+@@ -364,7 +364,7 @@ void ReportWebGPUAdapterMetrics(dawn::na
  void ReportWebGPUSupportMetrics(dawn::native::Instance* instance) {
    static BASE_FEATURE(kCollectWebGPUSupportMetrics,
                        "CollectWebGPUSupportMetrics",

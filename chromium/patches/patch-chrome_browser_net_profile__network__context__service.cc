@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/profile_network_context_service.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/net/profile_network_context_service.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/net/profile_network_context_service.cc
 @@ -135,7 +135,7 @@
  #include "extensions/common/constants.h"
@@ -24,7 +24,7 @@ $NetBSD$
  std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
      Profile* profile,
      std::unique_ptr<net::ClientCertStore> platform_store) {
-@@ -1228,7 +1228,7 @@ ProfileNetworkContextService::CreateClie
+@@ -1224,7 +1224,7 @@ ProfileNetworkContextService::CreateClie
        std::make_unique<net::ClientCertStoreNSS>(
            base::BindRepeating(&CreateCryptoModuleBlockingPasswordDelegate,
                                kCryptoModulePasswordClientAuth));

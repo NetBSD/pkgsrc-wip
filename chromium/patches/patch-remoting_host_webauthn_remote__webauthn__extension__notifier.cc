@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_extension_notifier.cc
-@@ -30,7 +30,7 @@
+@@ -31,7 +31,7 @@
  #include "base/task/thread_pool.h"
  #include "build/build_config.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #include "base/strings/string_util.h"
-@@ -75,14 +75,14 @@ static constexpr char kExtensionWakeupFi
+@@ -76,14 +76,14 @@ static constexpr char kExtensionWakeupFi
  // Caller should check if the directory exists before writing files to it. A
  // directory only exists if the corresponding Chrome version is installed.
  std::vector<base::FilePath> GetRemoteStateChangeDirPaths() {

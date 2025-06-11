@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/browser_process_impl.h.orig	2025-05-26 15:57:59.000000000 +0000
 +++ chrome/browser/browser_process_impl.h
-@@ -408,7 +408,7 @@ class BrowserProcessImpl : public Browse
+@@ -416,7 +416,7 @@ class BrowserProcessImpl : public Browse
  
    std::unique_ptr<BatteryMetrics> battery_metrics_;
  

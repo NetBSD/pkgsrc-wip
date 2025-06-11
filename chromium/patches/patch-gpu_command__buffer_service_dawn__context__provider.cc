@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/dawn_context_provider.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- gpu/command_buffer/service/dawn_context_provider.cc.orig	2025-05-26 15:57:59.000000000 +0000
 +++ gpu/command_buffer/service/dawn_context_provider.cc
-@@ -377,7 +377,7 @@ wgpu::BackendType DawnContextProvider::G
+@@ -383,7 +383,7 @@ wgpu::BackendType DawnContextProvider::G
    return base::FeatureList::IsEnabled(features::kSkiaGraphiteDawnUseD3D12)
               ? wgpu::BackendType::D3D12
               : wgpu::BackendType::D3D11;
