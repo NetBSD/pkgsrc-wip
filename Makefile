@@ -298,7 +298,6 @@ SUBDIR+=	bashtop
 SUBDIR+=	basic-stats
 SUBDIR+=	bastard
 SUBDIR+=	bats-core
-SUBDIR+=	bazel
 SUBDIR+=	bcf-score
 SUBDIR+=	bcftools
 SUBDIR+=	bcryptcpp
