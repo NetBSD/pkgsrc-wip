@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix paths to comply with pkgsrc.
+
+--- bin/ruby-build.orig	2025-06-12 05:04:30.397305127 +0000
++++ bin/ruby-build
+@@ -1370,7 +1370,7 @@ unset IPV6
+ unset EARLY_EXIT
+ unset APPEND_DEFINITION_TO_PREFIX
+ 
+-RUBY_BUILD_INSTALL_PREFIX="$(abs_dirname "$0")/.."
++RUBY_BUILD_INSTALL_PREFIX="@PREFIX@"
+ 
+ # shellcheck disable=SC2206
+ IFS=: RUBY_BUILD_DEFINITIONS=($RUBY_BUILD_DEFINITIONS ${RUBY_BUILD_ROOT:-$RUBY_BUILD_INSTALL_PREFIX}/share/ruby-build)
