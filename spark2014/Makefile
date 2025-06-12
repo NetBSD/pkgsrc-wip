@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2024/05/31 14:00:00 dkazankov Exp $
 
-DISTNAME=	spark2014-${PKGVERSION_NOREV}
-PKGNAME=	spark2014-13.1.0
+DISTNAME=	spark2014
+PKGNAME=	spark2014-13.3.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	spark2014
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	spark2014
 GITHUB_TAG=	12db22e854defa9d1c993ef904af1e72330a68ca
 DISTFILES=	${DEFAULT_DISTFILES}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/spark2014
 COMMENT=	SPARK 2014 toolset
 LICENSE=	gnu-gpl-v3
