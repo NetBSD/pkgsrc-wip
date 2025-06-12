@@ -22,6 +22,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 USE_TOOLS+=	pax
 
+# Workaround for PR pkg/58966
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
 

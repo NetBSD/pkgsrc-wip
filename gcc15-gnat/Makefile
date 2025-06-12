@@ -20,8 +20,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
 
-#USE_LANGUAGES=		c c++ ada
-#GCC_REQD+=		10
+USE_LANGUAGES=		c c++ ada
 USE_TOOLS+=		gmake makeinfo sed perl flex bison
 USE_TOOLS.NetBSD+=	gsed
 # Built-in Texinfo can no longer process GCC 15's files
@@ -32,29 +31,18 @@ INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
 
+USE_PKGSRC_GCC=		yes
+GCC_REQD+=		10
+
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
-# The following is added from gcc6-aux because gcc10-aux (GNAT bootstrap compiler for GNAT 13-15 packages)
-# can only be built with gcc6-aux. In turn, this limitation comes from the fact that bootstrap
-# compilers for gcc6-aux are only available for these platforms.
-ONLY_FOR_PLATFORM=	DragonFly-*-x86_64 \
-			FreeBSD-*-i386 \
-			FreeBSD-*-x86_64 \
-			SunOS-5.1[1-9]*-i386 \
-			SunOS-5.1[1-9]*-x86_64 \
-			NetBSD-*-i386 \
-			NetBSD-*-x86_64
-
-# *-i386 builds of gcc6-aux are broken for now (as on 2025/05/01)
-BROKEN_ON_PLATFORM=	*-*-i386
-
 .include "../../mk/bsd.prefs.mk"
 
-TOOL_DEPENDS+=	gcc13-gnat>=13.1:../../lang/gcc13-gnat
+#PATH=			${PREFIX}/gcc10-aux/bin:${PREFIX}/bin:/usr/bin
 
 ## Build outside ${WRKSRC}
 OBJDIR=			${WRKDIR}/build
@@ -66,31 +54,25 @@ GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 
 .include "options.mk"
 
-.if ${USE_CROSS_COMPILE:U:tl} == "yes"
-#CONFIGURE_ENV+=	CC_FOR_BUILD=${BOOTC_BASE}/bin/gcc
-#CONFIGURE_ENV+=	CXX_FOR_BUILD=${BOOTC_BASE}/bin/g++
-.endif
-
-CONFIGURE_ARGS+=	--disable-libstdcxx-pch
-
-STAGE1_LDFLAGS=		${LDFLAGS} -static
+LDFLAGS+=		-static
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 #LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
-## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GCC_PREFIX}/lib
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GCC_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
-
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
-BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
-BOOT_LDFLAGS+=		${LDFLAGS_FOR_TARGET}
+#LDFLAGS_FOR_TARGET=	-static-libstdc++ -static-libgcc
+LDFLAGS_FOR_TARGET=	#empty
+
+## The Library rpath to use in end programs.
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GCC_PREFIX}/lib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GCC_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
 # Needed on Darwin when LDFLAGS point to a SDK
 .if !empty(OSX_SDK_PATH)
-BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
+LDFLAGS_FOR_TARGET+=	${LDFLAGS:M-Wl,-syslibroot*}
 .endif
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
@@ -119,21 +101,28 @@ CONFIGURE_ARGS+=	--enable-libssp
 
 CONFIGURE_ARGS+=	--enable-languages=ada,c,c++ --enable-stage1-languages=c,c++,ada
 
-#CONFIGURE_ARGS+=	--with-static-standard-libraries
 # This will create slightly slower compiler
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
-CONFIGURE_ARGS+=	--enable-host-pie
-CONFIGURE_ARGS+=	--enable-host-bind-now
+#CONFIGURE_ARGS+=	--enable-host-pie
+#CONFIGURE_ARGS+=	--enable-host-bind-now
 #CONFIGURE_ARGS+=	--enable-default-pie
 #CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-gxx-include-dir='${GCC_PREFIX}/include/c++'
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:M*:Q}
+
+CONFIGURE_ARGS+=	--with-static-standard-libraries
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ARGS+=	--with-stage1-ldflags=${LDFLAGS_FOR_TARGET:M*:Q}
+.else
+CONFIGURE_ARGS+=	--with-stage1-ldflags=${LDFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--with-boot-ldflags=${LDFLAGS_FOR_TARGET:M*:Q}
+.endif
+
 # causes build errors even when using lang/gcc* to self host
 CONFIGURE_ARGS.SunOS+=	--disable-libsanitizer
 # multilib on Darwin requires fat-binaries
@@ -207,11 +196,11 @@ BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		select
-SUBST_MESSAGE.select=	Replace select with __gnat_select in ${SUBST_FILES.select}
-SUBST_STAGE.select=	pre-configure
-SUBST_FILES.select=	gcc/ada/libgnat/g-socthi.ads
-SUBST_SED.select=	-e "s,\"select\",\"__gnat_select\","
+SUBST_CLASSES+=			select
+SUBST_MESSAGE.select=		Replace select with __gnat_select in ${SUBST_FILES.select}
+SUBST_STAGE.select=		pre-configure
+SUBST_FILES.select=		gcc/ada/libgnat/g-socthi.ads
+SUBST_SED.select=		-e "s,\"select\",\"__gnat_select\","
 
 SUBST_CLASSES+=			nanosleep
 SUBST_MESSAGE.nanosleep=	Replace nanosleep with __gnat_nanosleep in ${SUBST_FILES.nanosleep}
