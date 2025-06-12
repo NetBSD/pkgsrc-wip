@@ -1,18 +1,21 @@
 $NetBSD: distinfo,v 1.25 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
-SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
-Size (cmake-19.1.7.src.tar.xz) = 9300 bytes
-BLAKE2s (libcxx-19.1.7.src.tar.xz) = 2b55587e75dc39ca13d12b5edd3bbb30a143a51ba34cd1fe4ae83365636f93f0
-SHA512 (libcxx-19.1.7.src.tar.xz) = 0b12b5e41ca6efda2f61a421084525de6c2726998907f641fc5d095579f858150cba0202f66a7c1f6010982610878c828bc80736c9e10ad2857fa7a3bc1dcc3c
-Size (libcxx-19.1.7.src.tar.xz) = 4718816 bytes
-BLAKE2s (libcxxabi-19.1.7.src.tar.xz) = d3e7a4d15ab26d9dca872b9f5b920f157e333b6535654203f030cc6ed4e2a19b
-SHA512 (libcxxabi-19.1.7.src.tar.xz) = 14b96835625f56fff34b2cebf7ed4dc9edb979ed4af3e0b685ea3f407ffd414e649182f8fba609a277d824cf1d092b8a26c99663c17ff4247367f0804df5bf95
-Size (libcxxabi-19.1.7.src.tar.xz) = 583696 bytes
-BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
-SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
-Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
-SHA1 (patch-src_CMakeLists.txt) = 40c51332059abcc93676eda029a41635d5c61583
-SHA1 (patch-src_charconv.cpp) = b8569ae77df4a5a7b627b3a9cb6691be73699dca
+BLAKE2s (cmake-20.1.6.src.tar.xz) = f72b52fc2d78065651175d7d654d1cf75799a4581641f85c63aebb1ea2bc8c60
+SHA512 (cmake-20.1.6.src.tar.xz) = 6606f362bc84d986bc54925ea67a9cdd3ca50b730a6a308949ce851ee43d137b62e1bad11292af071224f80313501c18b1f291bf1084ba08bfa27adc5627ab83
+Size (cmake-20.1.6.src.tar.xz) = 8644 bytes
+BLAKE2s (libc-20.1.6.src.tar.xz) = 93d1a15a4ce5df3c252d198fe5b199feb1bd358a2b55eee6fb1495cdc19fb4f4
+SHA512 (libc-20.1.6.src.tar.xz) = 4dd7ed552963aec46b5793f9545ca74e4a7cc785c7eaeb1c22742c41ffb3ee2ebec6387e15780a8b877b3084abb7fd79f0392a369e5a37ff4f97834ef9878320
+Size (libc-20.1.6.src.tar.xz) = 4605036 bytes
+BLAKE2s (libcxx-20.1.6.src.tar.xz) = 9eb39beab76613de4e8e9c38b2b01736939560d2e38faef7231781451bfc2606
+SHA512 (libcxx-20.1.6.src.tar.xz) = 68a6b82df520fae93134d09caa2e8f27b98b654afdebdb59b43d25bb1c8cb25e9f9ddd58421a101471da9da2f9ae2c5a6992e2cedb851c6a99402590b41e6207
+Size (libcxx-20.1.6.src.tar.xz) = 4455876 bytes
+BLAKE2s (libcxxabi-20.1.6.src.tar.xz) = d1ebde943d5aca59542b2b364a61d0f8c5aef2a9a4aab648d02091c122de86db
+SHA512 (libcxxabi-20.1.6.src.tar.xz) = bd5bfdcf1925cdf5ea97c73a5648d3ec7cfee0d3d44446652adefba02bd18433e08705ffbe9c1f9eea3cd366b2f02b685b34327b625eaa87e2d3e125f3936553
+Size (libcxxabi-20.1.6.src.tar.xz) = 585832 bytes
+BLAKE2s (runtimes-20.1.6.src.tar.xz) = d7560527b16ff68f15c50c0a5a59c6299cfa36252b5af947715a23c367348e3e
+SHA512 (runtimes-20.1.6.src.tar.xz) = 5155f8b9494596d08c7af06ace8b5c5193f001eb182f931ee84af11e834058e5ff8b8deb945ff0b72bb759c84bccd83de8086ddf973cd93d86b91f4c9bec3f18
+Size (runtimes-20.1.6.src.tar.xz) = 8332 bytes
+SHA1 (patch-src_CMakeLists.txt) = 4554c675b778d8d631f2fc664364f0d3ffc3ed5e
+SHA1 (patch-src_charconv.cpp) = 658a0727c6e2ddc051fbd22a536033bae19a22ba
 SHA1 (patch-src_filesystem_file__descriptor.h) = 44a64cb3eac4e94abb54170c355639642b8246c2
 SHA1 (patch-src_include_to__chars__floating__point.h) = 717ef2db570fc225ec0864027667c28791e6366f

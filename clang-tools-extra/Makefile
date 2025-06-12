@@ -1,6 +1,8 @@
 # $NetBSD: Makefile,v 1.24 2023/04/19 08:10:34 adam Exp $
 
 INSTALL_DIRS=	tools/extra
+# due to INSTALL_DIRS
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../wip/clang/Makefile.common"
 

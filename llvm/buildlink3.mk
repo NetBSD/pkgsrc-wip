@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	llvm
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=19.1.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=20.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../wip/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
@@ -27,8 +27,10 @@ BUILDLINK_FILES.llvm+=		bin/llvm-bitcode-strip
 BUILDLINK_FILES.llvm+=		bin/llvm-c-test
 BUILDLINK_FILES.llvm+=		bin/llvm-cat
 BUILDLINK_FILES.llvm+=		bin/llvm-cfi-verify
+BUILDLINK_FILES.llvm+=		bin/llvm-cgdata
 BUILDLINK_FILES.llvm+=		bin/llvm-config
 BUILDLINK_FILES.llvm+=		bin/llvm-cov
+BUILDLINK_FILES.llvm+=		bin/llvm-ctxprof-util
 BUILDLINK_FILES.llvm+=		bin/llvm-cvtres
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxdump
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxfilt

@@ -29,6 +29,14 @@ CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_INSTALL_PATH:STRING=lib/clang/${LLVM_MAJOR_
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS=OFF
 
+.include "../../mk/bsd.prefs.mk"
+
+# Not available to all platforms; see lib/tsan/rtl/tsan_platform_linux.cpp
+# TODO: exclude more platforms
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} != "x86_64"
+CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_BUILD_SANITIZERS=OFF
+.endif
+
 TEST_TARGET=	check-compiler-rt
 
 GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
@@ -36,10 +44,12 @@ GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
+.if ${OPSYS} == "Darwin"
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} lib/clang/${LLVM_MAJOR_VERSION} -type f -name '*.dylib' \
 		-exec install_name_tool -id ${PREFIX}/{} {} \;
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/googletest/buildlink3.mk"

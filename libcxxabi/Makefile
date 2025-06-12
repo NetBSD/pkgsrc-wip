@@ -24,7 +24,7 @@ SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		13	# must be in sync with libcxx
+GCC_REQD+=		14 # must be in sync with libcxx
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # "LIBCXXABI_USE_LLVM_UNWINDER is set to ON, but libunwind is not specified in LLVM_ENABLE_RUNTIMES."
@@ -42,7 +42,7 @@ CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
 # IMPORTANT: copy __assertion_handler and __config_site from partial build of libcxx.
-post-extract:
+pre-configure:
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 	${CP} ${FILESDIR}/__assertion_handler ${FILESDIR}/__config_site \
 		${WRKDIR}/${LIBCXX}/include/

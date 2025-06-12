@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	libunwind
 .if !defined(LIBUNWIND_BUILDLINK3_MK)
 LIBUNWIND_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libunwind+=	libunwind>=19.1.0
+BUILDLINK_API_DEPENDS.libunwind+=	libunwind>=20.1.0
 BUILDLINK_PKGSRCDIR.libunwind?=		../../wip/libunwind
 
 .endif	# LIBUNWIND_BUILDLINK3_MK

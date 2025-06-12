@@ -6,6 +6,8 @@ PKGNAME=	${DISTNAME:S/.src//}
 
 USE_TOOLS+=	perl:run
 
+# Certain header files are generated, and can only be generated
+# if llvm has support for the target.
 PLIST_VARS+=	RISCV
 .if ${PKG_BUILD_OPTIONS.llvm:Mllvm-target-riscv}
 PLIST.RISCV=	yes

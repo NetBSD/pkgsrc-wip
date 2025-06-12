@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/04/19 08:10:35 adam Exp $
+# $NetBSD: Makefile,v 1.111 2025/05/14 20:56:57 mef Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -34,10 +34,12 @@ HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 
-USE_CXX_FEATURES=	c++14
+POLICY_UPDATE_LIMITED=	abi
+
+USE_CXX_FEATURES=	c++17 charconv
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_FOR_BUILD_ONLY=	no
 
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	*-*-vax
@@ -82,21 +84,24 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# Fix the runtime Python path.
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-build
+SUBST_FILES.python=	${CMAKE_BUILD_DIR}/bin/llvm-lit
+SUBST_SED.python=	-e '1s,\#!.*python.*,\#!${PYTHONBIN},'
+.endif
+
 PLIST_VARS+=	notdylib
-.if ${SHLIB_TYPE} == "dylib"
-SOEXT=		dylib
-.else
-SOEXT=		so
+.if ${SHLIB_TYPE} != "dylib"
 PLIST.notdylib=	yes
 .endif
-PLIST_SUBST+=	SOEXT=${SOEXT}
-PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
 NOTDYLIBS=		LTO Remarks
 .for libname in ${NOTDYLIBS}
-PRINT_PLIST_AWK+=	/lib${libname}.${SOEXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SOEXT}\.${LLVM_MAJOR_VERSION}/, ".$${SOEXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
+PRINT_PLIST_AWK+=	/lib${libname}.${SHLIB_EXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SHLIB_EXT}\.${LLVM_MAJOR_VERSION}/, ".$${SHLIB_EXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
 .endfor
-PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
+PRINT_PLIST_AWK+=	{ gsub(/\.${SHLIB_EXT}/, ".$${SHLIB_EXT}") }
 
 # needs std::atomic with 64-bit CAS
 .if ${MACHINE_ARCH} == "i386"
@@ -128,7 +133,7 @@ CMAKE_CONFIGURE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 .endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
-TOOL_DEPENDS+=	${PKGNAME}:../../${PKGPATH}
+TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_TABLEGEN:STRING=${TOOLBASE:Q}/bin/llvm-tblgen
 .endif
 

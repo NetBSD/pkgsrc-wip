@@ -111,28 +111,25 @@ LIBCPP_CHECK=	NO
 CMAKE_CONFIGURE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
-# Enable full LLVM suite on SunOS
-.if ${OPSYS} == "SunOS"
-.include "../../wip/compiler-rt/buildlink3.mk"
-.include "../../wip/libcxx/buildlink3.mk"
-.include "../../wip/libcxxabi/buildlink3.mk"
-.include "../../wip/libunwind/buildlink3.mk"
-CMAKE_CONFIGURE_ARGS+=    -DCLANG_DEFAULT_RTLIB:STRING="compiler-rt"
-CMAKE_CONFIGURE_ARGS+=    -DCLANG_DEFAULT_CXX_STDLIB:STRING="libc++"
-.endif
+# On SunOS use the libraries from the GCC used to build clang rather than
+# aimlessly searching the file system for ones that might be incompatible.
+#
+SUBST_CLASSES.SunOS+=	sunos-gcc
+SUBST_STAGE.sunos-gcc=	pre-configure
+SUBST_FILES.sunos-gcc=	lib/Driver/ToolChains/Gnu.cpp
+SUBST_SED.sunos-gcc=	-e 's,@GCCBASEDIR@,${CCPATH:H:H},'
 
-# 3.8.0 -> 3.8
-LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
-PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
+# Not perfect, but should catch most common cases.  We can't simply use
+# gcc-libs as that doesn't ship the headers.
+#
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Mgcc}
+BUILDLINK_DEPMETHOD.${_GCC_PKGBASE}=	full
+.endif
 
 PLIST_VARS+=	notdylib
-.if ${SHLIB_TYPE} == "dylib"
-SOEXT=		dylib
-.else
-SOEXT=		so
+.if ${SHLIB_TYPE} != "dylib"
 PLIST.notdylib=	yes
 .endif
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
 PKG_SUPPORTED_OPTIONS=	tests z3
