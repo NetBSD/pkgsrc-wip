@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix paths to comply with pkgsrc.
+
+--- libexec/rbenv.orig	2025-06-12 14:50:01.743883372 +0000
++++ libexec/rbenv
+@@ -82,7 +82,7 @@ if [ ! "${libexec_dir%/*}"/rbenv.d -ef "
+   # Add rbenv's own `rbenv.d` unless rbenv was cloned to RBENV_ROOT
+   RBENV_HOOK_PATH="${RBENV_HOOK_PATH}:${libexec_dir%/*}/rbenv.d"
+ fi
+-RBENV_HOOK_PATH="${RBENV_HOOK_PATH}:/usr/etc/rbenv.d:/usr/local/etc/rbenv.d:/etc/rbenv.d:/usr/lib/rbenv/hooks"
++RBENV_HOOK_PATH="${RBENV_HOOK_PATH}:@PKG_SYSCONFDIR@/rbenv.d:@PREFIX@/libexec/rbenv/hooks"
+ for plugin_hook in "${RBENV_ROOT}/plugins/"*/etc/rbenv.d; do
+   RBENV_HOOK_PATH="${RBENV_HOOK_PATH}:${plugin_hook}"
+ done

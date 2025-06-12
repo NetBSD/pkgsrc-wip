@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (rbenv-1.3.2.tar.gz) = da43da9717a8b4aabce9bc1e744a64257578bc8215aa424dbccd97e000cf9200
+SHA512 (rbenv-1.3.2.tar.gz) = cf687b4c7b096587dcc48cf265bf049460cf96a874a55c4eb811ddd8781d8962a95f4c7e3d20fd3bc7f2357cc8002a0b1b72658c897c7352c7ed06af17d69037
+Size (rbenv-1.3.2.tar.gz) = 31736 bytes
+SHA1 (patch-libexec_rbenv) = 8853772d0cde3f392d6ddb5cbe5d85f45423970d

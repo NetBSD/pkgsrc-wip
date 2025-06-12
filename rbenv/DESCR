@@ -1,0 +1,11 @@
+rbenv is a version manager tool for the Ruby programming language on Unix-like
+systems. It is useful for switching between multiple Ruby versions on the same
+machine and for ensuring that each project you are working on always runs on
+the correct Ruby version.
+
+After rbenv injects itself into your PATH at installation time, any invocation
+of `ruby`, `gem`, `bundler`, or other Ruby-related executable will first
+activate rbenv. Then, rbenv scans the current project directory for a file
+named `.ruby-version`. If found, that file determines the version of Ruby that
+should be used within that directory. Finally, rbenv looks up that Ruby version
+among those installed under `~/.rbenv/versions/`.
