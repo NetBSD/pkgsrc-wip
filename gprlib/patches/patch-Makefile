@@ -30,7 +30,7 @@ Fix ENABLE_SHARED position
  INSTALLER=$(LIB_INSTALLER)
  EXEC_INSTALLER=$(INSTALLER) -XBUILD=${BUILD}
  
-@@ -61,32 +65,29 @@
+@@ -61,9 +65,6 @@
  MAKEPREFIX=$(SOURCE_DIR)/
  endif
  
@@ -40,9 +40,7 @@ Fix ENABLE_SHARED position
  ifeq ($(ENABLE_SHARED), yes)
     LIBGPR_TYPES=static shared static-pic
  else
--   LIBGPR_TYPES=static
-+   LIBGPR_TYPES=static static-pic
- endif
+@@ -72,21 +73,21 @@
  
  # Make sure Windows's "OS" environment variable does not cause
  # confusion for cross-Linux builds.

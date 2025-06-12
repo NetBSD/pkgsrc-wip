@@ -21,10 +21,11 @@ USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_PKGSRC_GCC_RUNTIME?=	no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
-ALL_LIBRARY_TYPES=	static static-pic relocatable
+ALL_LIBRARY_TYPES=		static static-pic relocatable
 .else
-ALL_LIBRARY_TYPES=	static static-pic
+ALL_LIBRARY_TYPES=		static
 .endif
 
 MAKE_FLAGS+=	BUILD_MODE=prod

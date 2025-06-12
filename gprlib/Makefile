@@ -37,6 +37,7 @@ SUBST_SED.getrusage=		-e "s,\"getrusage\",\"__netbsd_getrusage\","
 
 CONFIGURE_ARGS+=		prefix=${DESTDIR}${PREFIX}
 
+USE_PKGSRC_GCC_RUNTIME?=	no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
 CONFIGURE_ARGS+=		ENABLE_SHARED=yes
 BUILDLINK_DEPMETHOD.xmlada=	full

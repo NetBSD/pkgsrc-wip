@@ -30,10 +30,11 @@ SUBST_SED.fixver=	-e 's,18.0w,25.0w,g'
 
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
 
+USE_PKGSRC_GCC_RUNTIME?=	no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
-CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=		--enable-shared
 .else
-CONFIGURE_ARGS+=	--disable-shared
+CONFIGURE_ARGS+=		--disable-shared
 .endif
 
 GENERATE_PLIST+= \

@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--with-corba-services=${CORBA_SERVICES:Q}
 EXTRA_GNATMAKE_FLAGS+=	-eL -R -largs $${LDFLAGS} -margs
 CONFIGURE_ENV+=		EXTRA_GNATMAKE_FLAGS=${EXTRA_GNATMAKE_FLAGS:Q}
 
+USE_PKGSRC_GCC_RUNTIME?=		no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
 CONFIGURE_ARGS+=			--enable-shared
 CONFIGURE_ARGS+=			--with-gprbuild=gprbuild

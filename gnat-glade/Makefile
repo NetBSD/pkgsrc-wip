@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.0 2024/12/05 14:00:00 dkazankov Exp $
 
 #DISTNAME=	${PKG_DISTNAME}
-DISTNAME=	gnat-glade-${PKGVERSION_NOREV}
-PKGNAME=	gnat-glade-6.0.1
+DISTNAME=	gnat-glade-6.0.1
+PKGNAME=	gnat-glade-13.3.0
 CATEGORIES=	devel
 # Original sourceforge site periodically loses the snapshot,
 # so we use github clone
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dkazankov/}
 GITHUB_PROJECT=	gnat-glade
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v6.0.1
 #DISTFILES=	${PKG_DISTNAME}.zip
 #SITES.${PKG_DISTNAME}.zip=	-https://sourceforge.net/code-snapshots/svn/g/gn/gnat-glade/code/${PKG_DISTNAME}.zip
 

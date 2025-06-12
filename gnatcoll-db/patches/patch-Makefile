@@ -25,7 +25,7 @@ this directory.
 +ifeq ($(ENABLE_SHARED), yes)
 +   LIBRARY_TYPES=static,static-pic,relocatable
 +else
-+   LIBRARY_TYPES=static,static-pic
++   LIBRARY_TYPES=static
 +endif
 +
 +# Used to pass extra options to GPRBUILD, like -d for instance

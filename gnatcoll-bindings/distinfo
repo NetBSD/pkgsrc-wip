@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (gnatcoll-bindings-25.0.0.tar.gz) = 9b494fc8ac73012d939a6b8764242dd94462e1d3253aabd809ebb5e275e8e08d
 SHA512 (gnatcoll-bindings-25.0.0.tar.gz) = 0cc5b4a1e966b6e05dcfa15e60cb3960894ffe73b9348f0642a972f4d517e535c617893a4080d33095ee62779b14aeb6cdd8a8f0a8b5a6c8e81c94df132420b2
 Size (gnatcoll-bindings-25.0.0.tar.gz) = 299443 bytes
-SHA1 (patch-Makefile) = 28b966edeb5e3edb6b53ff09c34d40a518daa119
+SHA1 (patch-Makefile) = 26846a3ea97049f543e7c35bdf0565c94ea6afc4
 SHA1 (patch-setup__support.py) = c91171307d3d7781111c89ba3a38ced019eab4e2

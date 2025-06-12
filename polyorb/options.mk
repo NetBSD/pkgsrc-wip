@@ -9,7 +9,7 @@ PKG_OPTIONS_GROUP.opensslg=	openssl builtin-openssl
 PKG_SUGGESTED_OPTIONS=		ap-corba ap-dsa ap-moma \
 				pp-giop pp-soap pp-srp pp-dns \
 				cs-event cs-ir cs-naming cs-notification cs-time \
-				builtin-openssl gnatcoll
+				gnatcoll builtin-openssl
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/bsd.options.mk"

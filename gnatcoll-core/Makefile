@@ -39,6 +39,7 @@ SUBST_SED.opendir=	-e "s,\"opendir\",\"__gnatcoll_opendir\","
 
 MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} BUILD=PROD
 
+USE_PKGSRC_GCC_RUNTIME?=	no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
 MAKE_FLAGS+=			ENABLE_SHARED=yes
 BUILDLINK_DEPMETHOD.xmlada=	full
