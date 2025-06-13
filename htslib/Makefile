@@ -2,7 +2,7 @@
 
 # CAUTION: htslib should always be upgraded in conjunction with
 # samtools, bcftools, bio-mocha, and bcf-score
-DISTNAME=	htslib-1.21
+DISTNAME=	htslib-1.22
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

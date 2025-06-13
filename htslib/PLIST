@@ -2,6 +2,7 @@
 bin/annot-tsv
 bin/bgzip
 bin/htsfile
+bin/ref-cache
 bin/tabix
 include/htslib/bgzf.h
 include/htslib/cram.h
@@ -39,6 +40,7 @@ lib/pkgconfig/htslib.pc
 man/man1/annot-tsv.1
 man/man1/bgzip.1
 man/man1/htsfile.1
+man/man1/ref-cache.1
 man/man1/tabix.1
 man/man5/faidx.5
 man/man5/sam.5
