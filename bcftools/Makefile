@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.15 2022/06/30 11:18:04 nia Exp $
 
-DISTNAME=	bcftools-1.21
+DISTNAME=	bcftools-1.22
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
