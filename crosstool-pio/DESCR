@@ -1,0 +1,10 @@
+crosstool-pio uses Crosstool-NG to build tools for PlatformIO (pio).
+
+Crosstool-NG aims at building toolchains. Toolchains are an essential
+component in a software development project. It will compile, assemble and
+link the code that is being developed. Some pieces of the toolchain will
+eventually end up in the resulting binaries:  static libraries are but an
+example.
+
+Refer to (http://crosstool-ng.github.io/docs/) for more information on how
+to configure, install and use crosstool-NG.
