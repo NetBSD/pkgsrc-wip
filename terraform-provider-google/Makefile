@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	terraform-provider-google-6.20.0
+DISTNAME=	terraform-provider-google-6.39.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
