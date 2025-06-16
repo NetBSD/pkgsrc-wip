@@ -2,7 +2,7 @@ $NetBSD$
 
 # Respect standard env vars
 
---- Makefile.simde.orig	2025-04-18 17:41:47.000000000 +0000
+--- Makefile.simde.orig	2025-06-15 21:54:11.000000000 +0000
 +++ Makefile.simde
 @@ -1,12 +1,25 @@
 -CFLAGS=		-g -Wall -O2 -Wc++-compat #-Wextra
@@ -55,7 +55,7 @@ $NetBSD$
  .SUFFIXES:.c .o
  
  .c.o:
-@@ -37,10 +50,10 @@ all:$(PROG)
+@@ -37,16 +50,16 @@ all:$(PROG)
  extra:all $(PROG_EXTRA)
  
  minimap2:main.o libminimap2.a
@@ -68,6 +68,13 @@ $NetBSD$
  
  libminimap2.a:$(OBJS)
  		$(AR) -csru $@ $(OBJS)
+ 
+ sdust:sdust.c kalloc.o kalloc.h kdq.h kvec.h kseq.h ketopt.h sdust.h
+-		$(CC) -D_SDUST_MAIN $(CFLAGS) $< kalloc.o -o $@ -lz
++		$(CC) -D_SDUST_MAIN $(CFLAGS) $< kalloc.o -o $@ $(LDFLAGS)
+ 
+ ksw2_ll_simde.o:ksw2_ll_sse.c ksw2.h kalloc.h
+ 		$(CC) -c $(CFLAGS) -msse2 $(CPPFLAGS) $(INCLUDES) $< -o $@
 @@ -60,8 +73,27 @@ ksw2_extd2_simde.o:ksw2_extd2_sse.c ksw2
  ksw2_exts2_simde.o:ksw2_exts2_sse.c ksw2.h kalloc.h
  		$(CC) -c $(CFLAGS) -msse4.1 $(CPPFLAGS) $(INCLUDES) $< -o $@

@@ -1,3 +1,14 @@
 @comment $NetBSD$
 bin/minimap2
+bin/minimap2-lite
+bin/sdust
 man/man1/minimap2.1
+share/minimap2/test/MT-human.fa
+share/minimap2/test/MT-orang.fa
+share/minimap2/test/q-inv.fa
+share/minimap2/test/q2.fa
+share/minimap2/test/t-inv.fa
+share/minimap2/test/t2.fa
+share/minimap2/test/x3s-aln.txt
+share/minimap2/test/x3s-qry.fa
+share/minimap2/test/x3s-ref.fa
