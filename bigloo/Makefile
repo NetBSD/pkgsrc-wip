@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bigloo-4.5b
+DISTNAME=	bigloo-4.6a
 CATEGORIES=	lang
 MASTER_SITES=	https://www-sop.inria.fr/indes/fp/Bigloo/download/
 
