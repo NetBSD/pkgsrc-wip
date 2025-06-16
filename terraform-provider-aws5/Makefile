@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2021/03/19 17:37:03 bsiegert Exp $
 
-DISTNAME=	terraform-provider-aws-5.78.0
+DISTNAME=	terraform-provider-aws-5.100.0
 PKGNAME=	${DISTNAME:S/aws/aws5/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
