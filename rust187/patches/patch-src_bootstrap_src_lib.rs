@@ -18,7 +18,7 @@ FreeBSD has a particular C++ runtime library name
          // we want libc++ (more filled out than libstdc++), ensuring that
          // LLVM/etc are all properly compiled.
 -        if matches!(c, CLang::Cxx) && target.contains("apple-darwin") {
-+        if matches!(c, CLang::Cxx) && 
++        if matches!(c, CLang::Cxx) &&
 +            (target.contains("apple-darwin") || target.contains("freebsd")) {
              base.push("-stdlib=libc++".into());
          }
