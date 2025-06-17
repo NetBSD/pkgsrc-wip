@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
 .if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 # There may be compatibility issues with the base LLVM on e.g. NetBSD.
-.  if !empty(HAVE_LLVM) || ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+.  if !empty(HAVE_LLVM)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
 .endif
