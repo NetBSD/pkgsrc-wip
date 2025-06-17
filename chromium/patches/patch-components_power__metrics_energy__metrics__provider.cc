@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/power_metrics/energy_metrics_provider.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- components/power_metrics/energy_metrics_provider.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ components/power_metrics/energy_metrics_provider.cc
 @@ -9,6 +9,8 @@
  #include "components/power_metrics/energy_metrics_provider_win.h"

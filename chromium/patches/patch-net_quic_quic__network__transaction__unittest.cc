@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/quic/quic_network_transaction_unittest.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- net/quic/quic_network_transaction_unittest.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ net/quic/quic_network_transaction_unittest.cc
 @@ -5202,10 +5202,10 @@ TEST_P(QuicNetworkTransactionTest, RstSt
  

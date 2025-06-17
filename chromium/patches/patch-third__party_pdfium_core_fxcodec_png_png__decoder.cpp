@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/core/fxcodec/png/png_decoder.cpp.orig	2025-05-26 15:57:59.000000000 +0000
+--- third_party/pdfium/core/fxcodec/png/png_decoder.cpp.orig	2025-05-30 19:50:32.000000000 +0000
 +++ third_party/pdfium/core/fxcodec/png/png_decoder.cpp
 @@ -52,8 +52,8 @@ void _png_load_bmp_attribute(png_structp
                               CFX_DIBAttribute* pAttribute) {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/bluetooth/cast_bluetooth.gni.orig	2025-05-26 15:57:59.000000000 +0000
+--- device/bluetooth/cast_bluetooth.gni.orig	2025-05-30 19:50:32.000000000 +0000
 +++ device/bluetooth/cast_bluetooth.gni
 @@ -2,5 +2,5 @@ import("//build/config/features.gni")
  

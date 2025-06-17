@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
 @@ -190,7 +190,7 @@ bool IsWindowDragUsingSystemDragDropAllo
  

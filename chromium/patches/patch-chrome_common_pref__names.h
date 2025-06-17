@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/common/pref_names.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/common/pref_names.h
 @@ -451,7 +451,7 @@ inline constexpr char kPreinstalledAppsI
      "default_apps_install_state";

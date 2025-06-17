@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc
 @@ -38,7 +38,11 @@ bool VulkanImplementationWayland::Initia
  

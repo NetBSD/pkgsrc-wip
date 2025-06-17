@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
 @@ -141,7 +141,7 @@ RootCompositorFrameSinkImpl::Create(
    output_surface->SetNeedsSwapSizeNotifications(

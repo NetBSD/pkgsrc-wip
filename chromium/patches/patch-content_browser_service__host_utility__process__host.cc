@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_process_host.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- content/browser/service_host/utility_process_host.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ content/browser/service_host/utility_process_host.cc
 @@ -68,7 +68,7 @@
  #include "content/browser/v8_snapshot_files.h"

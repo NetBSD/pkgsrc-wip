@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/browser/cast_browser_main_parts.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chromecast/browser/cast_browser_main_parts.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chromecast/browser/cast_browser_main_parts.cc
 @@ -100,7 +100,7 @@
  #include "ui/ozone/public/ozone_platform.h"

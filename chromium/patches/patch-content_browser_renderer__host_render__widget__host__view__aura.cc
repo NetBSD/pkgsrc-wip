@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -121,7 +121,7 @@
  #include "ui/gfx/gdi_util.h"

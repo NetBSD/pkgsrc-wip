@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -49,7 +49,7 @@
  #include "printing/backend/cups_connection_pool.h"

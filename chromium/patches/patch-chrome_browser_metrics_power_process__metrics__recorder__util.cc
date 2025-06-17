@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_metrics_recorder_util.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/metrics/power/process_metrics_recorder_util.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/metrics/power/process_metrics_recorder_util.cc
 @@ -65,7 +65,7 @@ void RecordProcessHistograms(const char*
                               const ProcessMonitor::Metrics& metrics) {

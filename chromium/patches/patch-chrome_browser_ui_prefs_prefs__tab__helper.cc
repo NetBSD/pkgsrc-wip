@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/prefs_tab_helper.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/ui/prefs/prefs_tab_helper.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/ui/prefs/prefs_tab_helper.cc
 @@ -66,7 +66,7 @@
  #include <windows.h>

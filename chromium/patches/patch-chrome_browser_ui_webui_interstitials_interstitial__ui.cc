@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/ui/webui/interstitials/interstitial_ui.cc
 @@ -77,7 +77,7 @@
  #include "components/security_interstitials/content/captive_portal_blocking_page.h"

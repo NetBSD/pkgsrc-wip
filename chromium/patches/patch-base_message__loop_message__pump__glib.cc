@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_glib.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,15 @@
  #include <glib.h>

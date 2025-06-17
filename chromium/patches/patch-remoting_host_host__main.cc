@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- remoting/host/host_main.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ remoting/host/host_main.cc
 @@ -55,7 +55,7 @@ int FileChooserMain();
  int RdpDesktopSessionMain();

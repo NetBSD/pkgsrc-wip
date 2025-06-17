@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/node/node.py.orig	2025-05-26 15:57:59.000000000 +0000
+--- third_party/node/node.py.orig	2025-05-30 19:50:32.000000000 +0000
 +++ third_party/node/node.py
 @@ -20,6 +20,9 @@ def GetBinaryPath():
    return os_path.join(os_path.dirname(__file__), *{

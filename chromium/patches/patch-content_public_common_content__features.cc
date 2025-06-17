@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- content/public/common/content_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ content/public/common/content_features.cc
 @@ -80,7 +80,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
  // Runs the audio service in a separate process.

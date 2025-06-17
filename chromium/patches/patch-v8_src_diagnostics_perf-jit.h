@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/diagnostics/perf-jit.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- v8/src/diagnostics/perf-jit.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ v8/src/diagnostics/perf-jit.h
 @@ -31,7 +31,7 @@
  #include "include/v8config.h"

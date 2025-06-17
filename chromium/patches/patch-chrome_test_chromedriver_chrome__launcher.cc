@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/chrome_launcher.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/test/chromedriver/chrome_launcher.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/test/chromedriver/chrome_launcher.cc
 @@ -73,6 +73,7 @@
  #include <fcntl.h>

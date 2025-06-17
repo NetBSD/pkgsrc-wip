@@ -1,4 +1,4 @@
-www/chromium: update to 137.0.7151.55
+www/chromium: update to 137.0.7151.68
 
 * 137.0.7151.55
 This update includes 11 security fixes. Below, we highlight fixes
@@ -24,3 +24,16 @@ in Tab Strip. Reported by Khalil Zhani on 2023-10-17
 As usual, our ongoing internal security work was responsible for a
 wide range of fixes:
 [419294325] Various fixes from internal audits, fuzzing and other initiatives
+
+* 137.0.7151.68
+This update includes 3 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[N/A][420636529] High CVE-2025-5419: Out of bounds read and write
+in V8. Reported by Clement Lecigne and Benoît Sevens of Google Threat Analysis Group
+on 2025-05-27. This issue was mitigated on 2025-05-28 by a configuration change
+pushed out to Stable across all Chrome platforms.
+[$1000][409059706] Medium CVE-2025-5068: Use after free in Blink.
+Reported by Walkman on 2025-04-07
+Google is aware that an exploit for CVE-2025-5419 exists in the wild.
+

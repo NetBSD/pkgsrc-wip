@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- services/network/network_service.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ services/network/network_service.h
 @@ -251,7 +251,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
        const std::vector<ContentSettingPatternSource>& settings) override;

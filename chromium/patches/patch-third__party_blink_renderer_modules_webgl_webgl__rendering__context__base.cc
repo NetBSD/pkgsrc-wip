@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
 @@ -6334,7 +6334,7 @@ void WebGLRenderingContextBase::TexImage
    // unmultiply has been requested or we need to never premultiply for Image

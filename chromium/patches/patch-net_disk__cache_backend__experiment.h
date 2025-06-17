@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/disk_cache/backend_experiment.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- net/disk_cache/backend_experiment.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ net/disk_cache/backend_experiment.h
 @@ -14,7 +14,7 @@ namespace disk_cache {
  // default.

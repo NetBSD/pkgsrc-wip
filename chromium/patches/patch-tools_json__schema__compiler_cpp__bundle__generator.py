@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2025-05-26 15:57:59.000000000 +0000
+--- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2025-05-30 19:50:32.000000000 +0000
 +++ tools/json_schema_compiler/cpp_bundle_generator.py
 @@ -140,7 +140,7 @@ class CppBundleGenerator(object):
        elif platform == Platforms.FUCHSIA:

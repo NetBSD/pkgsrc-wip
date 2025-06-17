@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/cpuinfo/cpuinfo.gni.orig	2025-05-26 15:57:59.000000000 +0000
+--- third_party/cpuinfo/cpuinfo.gni.orig	2025-05-30 19:50:32.000000000 +0000
 +++ third_party/cpuinfo/cpuinfo.gni
 @@ -8,7 +8,7 @@ use_cpuinfo =
      current_cpu != "s390" && current_cpu != "s390x" &&

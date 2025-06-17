@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/accessibility/browser_accessibility_state_impl.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_state_impl.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_state_impl.cc
 @@ -181,7 +181,7 @@ BrowserAccessibilityStateImpl* BrowserAc
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/browser_features.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/browser_features.h
 @@ -38,7 +38,7 @@ BASE_DECLARE_FEATURE(kCertificateTranspa
  BASE_DECLARE_FEATURE(kCertVerificationNetworkTime);

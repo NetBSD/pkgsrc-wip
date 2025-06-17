@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/dir_reader_posix.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- base/files/dir_reader_posix.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ base/files/dir_reader_posix.h
 @@ -17,7 +17,7 @@
  // seems worse than falling back to enumerating all file descriptors so we will

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -22,7 +22,9 @@
  #include "content/public/common/result_codes.h"

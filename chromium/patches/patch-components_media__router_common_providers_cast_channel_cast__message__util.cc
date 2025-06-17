@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ components/media_router/common/providers/cast/channel/cast_message_util.cc
 @@ -168,7 +168,7 @@ int GetVirtualConnectPlatformValue() {
    return 4;

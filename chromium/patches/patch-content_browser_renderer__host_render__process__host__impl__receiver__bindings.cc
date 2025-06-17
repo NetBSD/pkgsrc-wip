@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -50,7 +50,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"

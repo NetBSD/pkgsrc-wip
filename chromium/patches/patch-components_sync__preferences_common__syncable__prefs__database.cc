@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_preferences/common_syncable_prefs_database.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- components/sync_preferences/common_syncable_prefs_database.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ components/sync_preferences/common_syncable_prefs_database.cc
 @@ -339,7 +339,7 @@ constexpr auto kCommonSyncablePrefsAllow
            PrefSensitivity::kNone, MergeBehavior::kNone}},

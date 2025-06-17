@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/flag_descriptions.cc
 @@ -617,7 +617,7 @@ const char kAutofillEnableAllowlistForBm
      "Autofill suggestions on the allowlisted merchant websites.";

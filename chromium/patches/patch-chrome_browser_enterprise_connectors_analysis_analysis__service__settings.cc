@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc
 @@ -151,7 +151,7 @@ AnalysisServiceSettings::AnalysisService
    const char* verification_key = kKeyWindowsVerification;

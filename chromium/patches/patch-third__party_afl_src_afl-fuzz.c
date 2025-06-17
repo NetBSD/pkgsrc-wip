@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/afl/src/afl-fuzz.c.orig	2025-05-26 15:57:59.000000000 +0000
+--- third_party/afl/src/afl-fuzz.c.orig	2025-05-30 19:50:32.000000000 +0000
 +++ third_party/afl/src/afl-fuzz.c
 @@ -58,7 +58,8 @@
  #include <sys/ioctl.h>

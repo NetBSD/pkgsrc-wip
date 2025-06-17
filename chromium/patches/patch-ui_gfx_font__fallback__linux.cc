@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_fallback_linux.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- ui/gfx/font_fallback_linux.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ ui/gfx/font_fallback_linux.cc
 @@ -32,6 +32,8 @@
  #include "ui/gfx/linux/fontconfig_util.h"

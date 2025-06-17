@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_hover_card_bubble_view.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/ui/views/tabs/tab_hover_card_bubble_view.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/ui/views/tabs/tab_hover_card_bubble_view.cc
 @@ -380,7 +380,7 @@ TabHoverCardBubbleView::TabHoverCardBubb
    // not become active. Setting this to false creates the need to explicitly

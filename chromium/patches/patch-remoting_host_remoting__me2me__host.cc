@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remoting_me2me_host.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- remoting/host/remoting_me2me_host.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ remoting/host/remoting_me2me_host.cc
 @@ -140,7 +140,7 @@
  #include "remoting/host/mac/permission_utils.h"

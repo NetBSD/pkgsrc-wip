@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -14,7 +14,7 @@
  #include "base/strings/utf_string_conversions.h"

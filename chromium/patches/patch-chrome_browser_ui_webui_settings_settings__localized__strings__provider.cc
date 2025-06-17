@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
 @@ -139,7 +139,7 @@
  #include "chrome/browser/ui/webui/settings/system_handler.h"

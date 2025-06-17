@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -135,7 +135,7 @@ SystemNetworkContextManager* g_system_ne
  // received a failed launch for a sandboxed network service.

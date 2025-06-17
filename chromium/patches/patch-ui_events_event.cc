@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/event.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- ui/events/event.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ ui/events/event.cc
 @@ -373,7 +373,7 @@ std::string LocatedEvent::ToString() con
  MouseEvent::MouseEvent(const PlatformEvent& native_event)

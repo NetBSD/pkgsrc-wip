@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/browser_signin_policy_handler.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/policy/browser_signin_policy_handler.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/policy/browser_signin_policy_handler.cc
 @@ -45,7 +45,7 @@ void BrowserSigninPolicyHandler::ApplyPo
        policies.GetValue(policy_name(), base::Value::Type::INTEGER);

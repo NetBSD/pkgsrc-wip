@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -23,7 +23,7 @@
  #include "chrome/browser/glic/host/glic_synthetic_trial_manager.h"  // nogncheck

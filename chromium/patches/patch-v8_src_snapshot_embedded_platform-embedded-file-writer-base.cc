@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc.orig	2025-05-26 15:57:59.000000000 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc.orig	2025-05-30 19:50:32.000000000 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc
 @@ -148,6 +148,8 @@ EmbeddedTargetOs ToEmbeddedTargetOs(cons
      return EmbeddedTargetOs::kStarboard;

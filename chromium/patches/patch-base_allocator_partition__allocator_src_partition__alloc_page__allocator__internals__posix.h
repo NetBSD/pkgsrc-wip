@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h
 @@ -317,8 +317,12 @@ bool TryRecommitSystemPagesInternal(
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -16,7 +16,7 @@
  #include "build/chromecast_buildflags.h"

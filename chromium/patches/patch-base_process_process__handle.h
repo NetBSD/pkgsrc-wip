@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- base/process/process_handle.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ base/process/process_handle.h
 @@ -86,7 +86,7 @@ BASE_EXPORT ProcessId GetCurrentProcId()
  // processes may be reused.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.h.orig	2025-05-26 15:57:59.000000000 +0000
+--- ui/base/ui_base_features.h.orig	2025-05-30 19:50:32.000000000 +0000
 +++ ui/base/ui_base_features.h
 @@ -126,7 +126,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
  BASE_DECLARE_FEATURE(kWaylandSessionManagement);
