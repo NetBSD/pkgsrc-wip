@@ -104,8 +104,8 @@ PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 # bootstrap compiler arguments and the stage1 libraries cannot be found.
 # Ideally this should be inserted only in the necessary points of the
 # bootstrap script.
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/build/aarch64-apple-darwin/stage1/lib
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=	DYLD_LIBRARY_PATH="${WRKSRC}/build/${MACHINE_ARCH}-apple-darwin/stage1/lib:${WRKSRC}/build/${MACHINE_ARCH}-apple-darwin/stage2/lib"
 .endif
 
 # Allow overriding MAKE_JOBS_SAFE
@@ -601,10 +601,6 @@ do-test:
 	${SETENV} ${MAKE_ENV}						\
 		${TOOL_PYTHONBIN} ./x.py test -j ${_MAKE_JOBS_N}
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-
 do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
@@ -612,7 +608,7 @@ do-install:
 		${TOOL_PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N}
 .if ${OPSYS} == "Darwin"
 	cd ${DESTDIR}${PREFIX}/lib && \
-	for lib in rustlib/*/lib/libstd-*.${SOEXT}; do \
+	for lib in rustlib/*/lib/libstd-*.${SHLIB_EXT}; do \
 		${LN} -f $${lib} $${lib##*/}; \
 	done
 .endif
