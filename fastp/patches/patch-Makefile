@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Respect build env, add destdir support
+
 --- Makefile.orig	2025-06-17 10:24:56.000000000 +0000
 +++ Makefile
 @@ -7,6 +7,8 @@ BINDIR ?= $(PREFIX)/bin

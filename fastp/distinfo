@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (fastp-1.0.1.tar.gz) = eb27c71cd7f68a53144c95fc627967d0393a46a05247bc1b618e97ce18f1d8e5
 SHA512 (fastp-1.0.1.tar.gz) = f0f8151a4c4ec27061a09ee4fec039d8b3e594d466e2f5335277032280bb3b5b2a181d607cef9c602735b9ecaab47b24ce17da90f09e8b9ca18b608970b504ea
 Size (fastp-1.0.1.tar.gz) = 167427 bytes
-SHA1 (patch-Makefile) = 37765e872ceb5b2c6fabb68116c54f34bdfa0758
+SHA1 (patch-Makefile) = f16276a2c479ad7bdc82afabfdb19948abe655c0
 SHA1 (patch-src_main.cpp) = d28fb587c72b59f4c86bc51fd66874344a9dd43d
