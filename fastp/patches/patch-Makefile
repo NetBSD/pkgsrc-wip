@@ -1,22 +1,31 @@
 $NetBSD$
 
-# Respect build env, add destdir support
-
---- Makefile.orig	2025-05-28 22:47:44.000000000 +0000
+--- Makefile.orig	2025-06-17 10:24:56.000000000 +0000
 +++ Makefile
-@@ -15,15 +15,18 @@ TARGET := fastp
+@@ -7,6 +7,8 @@ BINDIR ?= $(PREFIX)/bin
+ INCLUDE_DIRS ?=
+ LIBRARY_DIRS ?=
+ 
++STRIP	?= strip
++
+ SRC := $(wildcard ${DIR_SRC}/*.cpp)
+ OBJ := $(patsubst %.cpp,${DIR_OBJ}/%.o,$(notdir ${SRC}))
+ 
+@@ -15,15 +17,20 @@ TARGET := fastp
  BIN_TARGET := ${TARGET}
  
  CXX ?= g++
 -CXXFLAGS := -std=c++11 -pthread -g -O3 -MD -MP -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir)) ${CXXFLAGS}
 +# Optional flags that the user can override by setting CXXFLAGS in the
-+# env or make argument
-+CXXFLAGS ?= -g -O3
-+# Required flags
++# env or make argument.  -pthread is a link flag, and serves no purpose
++# in the compile command.  It is handled by -lpthread in LIBS.
++CXXFLAGS ?= -g -O3 -MD -MP
++# Append required flags to standard CXXFLAGS from env
 +CXXFLAGS += -std=c++11 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir))
  LIBS := -lisal -ldeflate -lpthread
  STATIC_FLAGS := -static -Wl,--no-as-needed -pthread
 -LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS) $(LD_FLAGS)
++# Append required flags to standard LDFLAGS from env
 +LDFLAGS += $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS)
  STATIC_LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(STATIC_FLAGS) $(LIBS) $(STATIC_LD_FLAGS)
  
@@ -27,13 +36,21 @@ $NetBSD$
  
  static:${OBJ}
  	$(CXX) $(OBJ) -o ${BIN_TARGET} $(STATIC_LD_FLAGS)
-@@ -39,7 +42,8 @@ clean:
+@@ -38,8 +45,16 @@ clean:
+ 	@rm -rf $(DIR_OBJ)
  	@rm -f $(TARGET)
  
++# Respect DESTDIR for staged installs (used by most package managers).
++# DESTDIR is empty by default, so this will install directly to BINDIR
++# unless DESTDIR is supplied by the user.
  install:
 -	install $(TARGET) $(BINDIR)/$(TARGET)
 +	mkdir -p $(DESTDIR)$(BINDIR)
 +	install $(TARGET) $(DESTDIR)$(BINDIR)
  	@echo "Installed."
  
++# Many package managers use install-strip target if debugging is not enabled
++install-strip: install
++	$(STRIP) $(DESTDIR)$(BINDIR)/$(TARGET)
++
  -include $(OBJ:.o=.d)
