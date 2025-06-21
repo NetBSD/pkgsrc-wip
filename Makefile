@@ -786,6 +786,7 @@ SUBDIR+=	dsniff-nox11
 SUBDIR+=	dstp
 SUBDIR+=	duali-data
 SUBDIR+=	dub
+SUBDIR+=	duc
 SUBDIR+=	duf
 SUBDIR+=	dumb
 SUBDIR+=	dune-common
