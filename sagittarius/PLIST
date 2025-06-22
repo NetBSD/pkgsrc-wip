@@ -139,6 +139,7 @@ lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/compile-sagittarius
 lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libsagittarius.so
 lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libsagittarius.so.${PKGVERSION}
 lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sagittarius
+lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sagittarius--atomic.so
 lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sagittarius--ec.so
 lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sagittarius--ffi.so
 lib/sagittarius/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sagittarius--filewatch.so
@@ -230,6 +231,7 @@ share/sagittarius/${PKGVERSION}/lib/rnrs/records/syntactic.scm
 share/sagittarius/${PKGVERSION}/lib/rnrs/sorting.scm
 share/sagittarius/${PKGVERSION}/lib/rnrs/syntax-case.scm
 share/sagittarius/${PKGVERSION}/lib/rnrs/unicode.scm
+share/sagittarius/${PKGVERSION}/lib/sagittarius/atomic.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/calendar.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/calendar/constants.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/calendar/gregorian.scm
@@ -259,6 +261,8 @@ share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/digests/cshake.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/digests/descriptors.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/digests/oid-map.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/kdfs.scm
+share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/kdfs/pbkdf-2.scm
+share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/kdfs/scrypt.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keys.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keys/operations.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keys/operations/asymmetric.scm
@@ -272,6 +276,7 @@ share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keys/operations/symmetric
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keys/types.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keystores.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/keystores/pkcs12.scm
+share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/logic/salsa.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/mac.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/mac/cmac.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/mac/gmac.scm
@@ -296,7 +301,9 @@ share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/modules/akp.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/modules/cms.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/modules/pbes.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/modules/pfx.scm
+share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/modules/scrypt.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/pbes.scm
+share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkcs/scrypt.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkix/algorithms.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkix/attributes.scm
 share/sagittarius/${PKGVERSION}/lib/sagittarius/crypto/pkix/certificate.scm
@@ -802,14 +809,20 @@ share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a17.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a17/generalized-set!.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a193.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a193/command-line.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a195.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a195/boxes.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a197.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a197/pipeline.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a2.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a2/and-let%2a.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a210.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a210/multiple-values.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a219.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a219/define.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a23.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a23/error.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a230.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a230/atomic.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a25.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a25/multi-dimensional-arrays.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/%3a25/srfi-25-reference.scm
@@ -938,10 +951,13 @@ share/sagittarius/${PKGVERSION}/sitelib/srfi/160/u64.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/160/u8.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/17.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/193.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/195.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/197.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/2.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/210.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/219.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/23.scm
+share/sagittarius/${PKGVERSION}/sitelib/srfi/230.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/25.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/26.scm
 share/sagittarius/${PKGVERSION}/sitelib/srfi/27.scm
@@ -1096,6 +1112,7 @@ share/sagittarius/${PKGVERSION}/sitelib/util/buffer.scm
 share/sagittarius/${PKGVERSION}/sitelib/util/bytevector.scm
 share/sagittarius/${PKGVERSION}/sitelib/util/concurrent.scm
 share/sagittarius/${PKGVERSION}/sitelib/util/concurrent/actor.scm
+share/sagittarius/${PKGVERSION}/sitelib/util/concurrent/atomic.scm
 share/sagittarius/${PKGVERSION}/sitelib/util/concurrent/completable-future.scm
 share/sagittarius/${PKGVERSION}/sitelib/util/concurrent/executor.scm
 share/sagittarius/${PKGVERSION}/sitelib/util/concurrent/fork-join-pool.scm

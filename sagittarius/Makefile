@@ -1,11 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	sagittarius-0.9.12
+DISTNAME=	sagittarius-0.9.13
 CATEGORIES=	lang
-MASTER_SITES=	https://bitbucket.org/ktakashi/sagittarius-scheme/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ktakashi/}
+GITHUB_PROJECT=	sagittarius-scheme
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ktakashi/sagittarius-scheme/wiki/Home
+HOMEPAGE=	https://ktakashi.github.io/
 COMMENT=	R6RS/R7RS Scheme system
 LICENSE=	2-clause-bsd
 
@@ -22,6 +24,7 @@ CMAKE_CONFIGURE_ARGS+=	-DMACHINE_GNU_PLATFORM:string=${MACHINE_GNU_PLATFORM}
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../devel/libatomic/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

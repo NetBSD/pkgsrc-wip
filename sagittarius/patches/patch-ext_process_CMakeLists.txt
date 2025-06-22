@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- ext/process/CMakeLists.txt.orig	2019-06-09 21:33:58.000000000 +0000
+--- ext/process/CMakeLists.txt.orig	2025-06-20 14:17:59.000000000 +0000
 +++ ext/process/CMakeLists.txt
 @@ -16,6 +16,8 @@ ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "Linux
    # For shm_open, shm_unlink
@@ -12,8 +12,8 @@ Add support for NetBSD.
 +  TARGET_LINK_LIBRARIES(sagittarius--process rt)
  ENDIF()
  
- 
-@@ -39,6 +41,9 @@ IF(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+@@ -44,6 +46,9 @@ IF(CMAKE_SYSTEM_NAME STREQUAL "Linux")
    # NB FreeBSD has it on libc
    TARGET_LINK_LIBRARIES(test-shm rt)
    TARGET_LINK_LIBRARIES(test-sem rt pthread)
