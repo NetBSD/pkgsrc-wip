@@ -1,10 +1,10 @@
 $NetBSD$
 
-# Add OpenBSD support
+# Add OpenBSD and SunOS support
 
---- include/unaligned.h.orig	2025-06-01 20:07:29.780618759 +0000
+--- include/unaligned.h.orig	2025-01-08 15:33:59.000000000 +0000
 +++ include/unaligned.h
-@@ -40,6 +40,12 @@
+@@ -40,11 +40,21 @@
  #define isal_bswap16(x) bswap16(x)
  #define isal_bswap32(x) bswap32(x)
  #define isal_bswap64(x) bswap64(x)
@@ -17,3 +17,12 @@ $NetBSD$
  #elif defined(__APPLE__)
  #include <libkern/OSByteOrder.h>
  #define isal_bswap16(x) OSSwapInt16(x)
+ #define isal_bswap32(x) OSSwapInt32(x)
+ #define isal_bswap64(x) OSSwapInt64(x)
++#elif defined(__sun)
++#define isal_bswap16(x) __builtin_bswap16(x)
++#define isal_bswap32(x) __builtin_bswap32(x)
++#define isal_bswap64(x) __builtin_bswap64(x)
+ #elif defined(__GNUC__) && !defined(__MINGW32__)
+ #include <byteswap.h>
+ #define isal_bswap16(x) bswap_16(x)

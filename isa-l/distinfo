@@ -5,4 +5,4 @@ SHA512 (isa-l-2.31.1.tar.gz) = 65199d054af1edc26d477883f7878f25fd4db65622aa98247
 Size (isa-l-2.31.1.tar.gz) = 741732 bytes
 SHA1 (patch-Makefile.am) = 26c1608f2e3124597fdb163fd42987094cebabd2
 SHA1 (patch-configure.ac) = 3ac2af6ffc9eaa3043b10e6986c03bdb8a084636
-SHA1 (patch-include_unaligned.h) = b8858ee267baf81fcf66147fba122611ebc04960
+SHA1 (patch-include_unaligned.h) = f0d9f10ac06f95d63e08b695464c77875122ab55
