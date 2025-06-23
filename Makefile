@@ -5553,6 +5553,7 @@ SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	ta-lib
 SUBDIR+=	tabbed-git
+SUBDIR+=	tabiew
 SUBDIR+=	tabixpp
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tagtool
