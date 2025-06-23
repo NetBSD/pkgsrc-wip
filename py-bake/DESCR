@@ -1,0 +1,10 @@
+mbake is a Makefile formatter and linter.
+
+Features:
+
+- Configurable rules via ~/.bake.toml
+- CI/CD integration with check mode
+- Extensible plugin architecture
+- Rich terminal output with progress indicators
+- Syntax validation before and after formatting
+- Smart .PHONY detection with automatic insertion

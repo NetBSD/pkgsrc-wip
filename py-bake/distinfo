@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bake-1.1.3.tar.gz) = 9c725e5c17516a930e5bd02c717ea419b7a3e311dd1cd060dc02c733eec82be3
+SHA512 (bake-1.1.3.tar.gz) = f3600f8092a0fbeecb9f27cfc81bc8a97ddcaaac98980f8a529ad05387499f0f1be2e3bf89af224dfb0e269574cafa8be72fc69c16a8d27a9ada9e0c1783a2ea
+Size (bake-1.1.3.tar.gz) = 2738449 bytes
