@@ -1,0 +1,15 @@
+$NetBSD$
+
+${PREFIX} (/usr) is default, don't add it.
+
+--- CMakeLists.txt.orig	2025-06-24 07:38:52.887363491 +0000
++++ CMakeLists.txt
+@@ -63,7 +63,7 @@ if (USE_PCAP)
+ endif()
+ 
+ # INSTALL TARGETS for portsentry program
+-install(TARGETS portsentry DESTINATION usr/sbin)
++install(TARGETS portsentry DESTINATION sbin)
+ install(FILES examples/portsentry.conf DESTINATION etc/portsentry)
+ install(FILES examples/portsentry.ignore DESTINATION etc/portsentry)
+ 

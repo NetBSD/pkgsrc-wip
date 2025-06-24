@@ -3274,6 +3274,7 @@ SUBDIR+=	portaudio
 SUBDIR+=	portfwd
 SUBDIR+=	portmidi
 SUBDIR+=	portscout
+SUBDIR+=	portsentry
 SUBDIR+=	posh
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch

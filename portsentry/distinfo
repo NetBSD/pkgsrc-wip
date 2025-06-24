@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.11 2021/10/26 11:17:39 nia Exp $
+
+BLAKE2s (portsentry-2.0.1-src.tar.xz) = 502358ee2ffc0fcb48803b051f7072da6d1b01c0280f60576d5efd0034da8153
+SHA512 (portsentry-2.0.1-src.tar.xz) = f94e1aba250104c4513ea0964c0470b60d3b761069342835bd521a1e2ebefdfe48d01acfee832da20a9c56e6b3610146c0c37eae357ca5ed1aa61d19f640f037
+Size (portsentry-2.0.1-src.tar.xz) = 138376 bytes
+SHA1 (patch-CMakeLists.txt) = 2d29551c44e78ea319aa82cf68d05002525d0cf3
