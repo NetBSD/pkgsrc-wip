@@ -5416,6 +5416,7 @@ SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia
 SUBDIR+=	soplex
 SUBDIR+=	soqt
+SUBDIR+=	sox_ng
 SUBDIR+=	spacefm
 SUBDIR+=	spai
 SUBDIR+=	spamassassin-cvs
