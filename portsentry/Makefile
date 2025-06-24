@@ -23,7 +23,7 @@ EGDIR=		${PREFIX}/share/examples/portsentry
 CONF_FILES=	${EGDIR}/portsentry.conf ${PKG_SYSCONFDIR}/portsentry.conf
 CONF_FILES+=	${EGDIR}/portsentry.ignore ${PKG_SYSCONFDIR}/portsentry.ignore
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/${PKG_SYSCONFSUBDIR}
+MAKE_DIRS+=	${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	portsentry
 
