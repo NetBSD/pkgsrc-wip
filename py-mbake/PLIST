@@ -34,6 +34,9 @@ ${PYSITELIB}/bake/core/rules/continuation.pyo
 ${PYSITELIB}/bake/core/rules/duplicate_targets.py
 ${PYSITELIB}/bake/core/rules/duplicate_targets.pyc
 ${PYSITELIB}/bake/core/rules/duplicate_targets.pyo
+${PYSITELIB}/bake/core/rules/final_newline.py
+${PYSITELIB}/bake/core/rules/final_newline.pyc
+${PYSITELIB}/bake/core/rules/final_newline.pyo
 ${PYSITELIB}/bake/core/rules/pattern_spacing.py
 ${PYSITELIB}/bake/core/rules/pattern_spacing.pyc
 ${PYSITELIB}/bake/core/rules/pattern_spacing.pyo
@@ -46,6 +49,9 @@ ${PYSITELIB}/bake/core/rules/phony_detection.pyo
 ${PYSITELIB}/bake/core/rules/phony_insertion.py
 ${PYSITELIB}/bake/core/rules/phony_insertion.pyc
 ${PYSITELIB}/bake/core/rules/phony_insertion.pyo
+${PYSITELIB}/bake/core/rules/recipe_validation.py
+${PYSITELIB}/bake/core/rules/recipe_validation.pyc
+${PYSITELIB}/bake/core/rules/recipe_validation.pyo
 ${PYSITELIB}/bake/core/rules/shell.py
 ${PYSITELIB}/bake/core/rules/shell.pyc
 ${PYSITELIB}/bake/core/rules/shell.pyo

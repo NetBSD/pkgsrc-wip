@@ -1,15 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	bake-1.1.3
+DISTNAME=	mbake-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=EbodShojaei/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mbake/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/EbodShojaei/bake/
 COMMENT=	Makefile formatter and linter
 LICENSE=	mit
+
+USE_TOOLS+=	gmake:run
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-typer>=0.9.0:../../wip/py-typer
@@ -17,7 +18,11 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=13.0.0:../../comms/py-rich
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-WHEEL_NAME=	m${DISTNAME}
+SUBST_CLASSES+=		make
+SUBST_FILES.make+=	bake/cli.py
+SUBST_SED.make+=	-e 's,"make","'${GMAKE}'",'
+SUBST_STAGE.make=	pre-build
+SUBST_MESSAGE.make=	Fix to use GNU make.
 
 .include "../../lang/python/pyversion.mk"
 
