@@ -1,16 +1,14 @@
 # $NetBSD: Makefile,v 1.21 2017/08/16 20:21:14 wiz Exp $
 
-DISTNAME=	portsentry-2.0.1-src
-PKGNAME=	${DISTNAME:S/-src//}
+DISTNAME=	portsentry-2.0.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=portsentry/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/portsentry/portsentry
 COMMENT=	Detects and respond to port scans against a target host in real-time
-LICENSE=	cpl-1.0
+LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 
@@ -28,6 +26,8 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}
 PKG_SYSCONFSUBDIR=	portsentry
 
 INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}/logrotate.d
+INSTALLATION_DIRS+=	${EGDIR}/systemd
 
 SUBST_CLASSES+=		prefix
 SUBST_SED.prefix+=	-e "s,/etc/portsentry,${PKG_SYSCONFDIR},"
@@ -37,6 +37,8 @@ SUBST_STAGE.prefix=	post-build
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/portsentry.* ${DESTDIR}${EGDIR}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/../logrotate.d/portsentry ${DESTDIR}${EGDIR}/logrotate.d
+	${MV} ${DESTDIR}${PREFIX}/lib/systemd/system//portsentry.service ${DESTDIR}${EGDIR}/systemd
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

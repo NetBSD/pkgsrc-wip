@@ -1,0 +1,49 @@
+## 2025-06-24 2.0.2
+
+### Improvements
+- Added multi-architecture build of docker containers
+- Improved documentation
+- Improved CMake install process with definable directories
+- Added CPack support for packaging
+- Moved man pages to build process
+- Improved systemd unit file with better handling of install paths and start conditions
+
+## 2025-05-24 2.0.1
+
+### Improvements
+- Added detailed usage instructions in docs/HOWTO-Use.md
+- Minor documentation updates
+- Added automatic package building and compile targets arm
+- Fixed architecture code issues for arm64 and armhf
+- Added unit testing
+
+## 2025-05-09 2.0.0
+
+### Bugfixes
+- Fixed bug where block and ignore file would be written to even though user has configured portsentry to not do any blocking
+- Fixed multiple potential race conditions which could manifest when running two portsentry instances
+- Fixed potential bug in state engine which could overflow and miss reporting on packets
+- Various smaller bugfixes
+
+### Features
+- Added libpcap support, which enables stealth mode on *BSD systems and increases performance
+- Added IPv6 support
+- Added Docker support and added portsentry registry on docker hub
+- Added fail2ban integration
+
+### Improvements
+- Significant disk usage reduction after parser redesign. Code no longer continually re-reads config file
+- Removed/consolidated several duplicate code/DRY violations, significantly reducing code size and potential errors
+- Fixed resource leak of socket file descriptors in connect mode in certain situations
+- Merged tcp/udp modes so both protocols can be monitored at the same time. No more dual processes
+- General code cleanup and removal of legacy code
+- Added more command line options in order to increase runtime flexibility
+- Change to runtime debug/verbose log output, additionally supporting stdout instead of only syslog and added distinction between log and error messages
+- Incorporated "advanced mode" features into both connect and stealth modes
+- Changed to CMake instead of hand written makefiles
+- Added Linting and Formating
+- Added integration tests
+- Added fuzzing tests
+- Added SAST testing
+- Added systemd unit
+- Updated and increased the amount of documentation

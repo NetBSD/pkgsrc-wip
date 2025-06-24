@@ -1,4 +1,23 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:36 joerg Exp $
+@comment $NetBSD$
+man/man8/portsentry.8
+man/man8/portsentry.conf.8
 sbin/portsentry
+share/doc/portsentry/Acknowledgement.md
+share/doc/portsentry/Changes.md
+share/doc/portsentry/Contributing.md
+share/doc/portsentry/HOWTO-Compile.md
+share/doc/portsentry/HOWTO-Docker.md
+share/doc/portsentry/HOWTO-Fail2Ban.md
+share/doc/portsentry/HOWTO-Logfile.md
+share/doc/portsentry/HOWTO-Use-Cases.md
+share/doc/portsentry/HOWTO-Use.md
+share/doc/portsentry/LICENSE
+share/doc/portsentry/Manual.md
+share/doc/portsentry/README.md
+share/doc/portsentry/images/PS-Enumeration.png
+share/doc/portsentry/images/PS-Int-Org.png
+share/doc/portsentry/portsentry.conf.md
+share/examples/portsentry/logrotate.d/portsentry
 share/examples/portsentry/portsentry.conf
 share/examples/portsentry/portsentry.ignore
+share/examples/portsentry/systemd/portsentry.service
