@@ -11,6 +11,8 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	sox.pc.in
 
@@ -21,7 +23,6 @@ SUBST_STAGE.gsm=	pre-configure
 
 .include "options.mk"
 
-.include "../../devel/cmake/build.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
