@@ -5020,6 +5020,7 @@ SUBDIR+=	qFlipper
 SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
 SUBDIR+=	qemu-git
+SUBDIR+=	qf
 SUBDIR+=	qgis
 SUBDIR+=	qico
 SUBDIR+=	qiew

@@ -1,0 +1,2 @@
+qf is a pager for grep, ag 1, rg 1, etc.  which allows jumping to
+matches in $EDITOR.
