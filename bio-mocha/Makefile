@@ -6,8 +6,8 @@ CATEGORIES=	biology
 MASTER_SITES=	https://software.broadinstitute.org/software/mocha/
 MASTER_SITES+=	https://github.com/samtools/bcftools/releases/download/${GH_TAG}/
 DISTFILES+=	bio-mocha_1.20-20240505.tar.gz
-DISTFILES+=	bcftools-1.21.tar.bz2
-GH_TAG=		1.21
+DISTFILES+=	bcftools-1.22.tar.bz2
+GH_TAG=		1.22
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://software.broadinstitute.org/software/mocha/
@@ -56,6 +56,7 @@ do-install:
 	(cd ${WRKSRC}/MoCha && pax -rw . ${DESTDIR}${DATADIR})
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/htslib/buildlink3.mk"
