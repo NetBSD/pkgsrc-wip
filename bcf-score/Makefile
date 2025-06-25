@@ -6,8 +6,8 @@ CATEGORIES=	biology
 MASTER_SITES=	https://software.broadinstitute.org/software/score/
 MASTER_SITES+=	https://github.com/samtools/bcftools/releases/download/${GH_TAG}/
 DISTFILES+=	score_1.20-20240505.tar.gz
-DISTFILES+=	bcftools-1.21.tar.bz2
-GH_TAG=		1.21
+DISTFILES+=	bcftools-1.22.tar.bz2
+GH_TAG=		1.22
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://software.broadinstitute.org/software/score/
@@ -66,9 +66,10 @@ do-install:
 	(cd ${WRKSRC}/bcf-score && pax -rw . ${DESTDIR}${DATADIR})
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../math/suitesparse/buildlink3.mk"
 .include "../../math/R/buildlink3.mk"
 # Needed on Linux, even though inherited from htslib
