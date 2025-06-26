@@ -39,3 +39,6 @@ Fix self tests so they succeed (or the relevant tests are skipped on NetBSD):
  * TestDataSourceVMware.test_no_data_access_method
    Exception: called subp. set self.allowed_subp=True to allow
    can't run dmidecode as unprivileged user
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2024-6174, CVE-2024-11584
