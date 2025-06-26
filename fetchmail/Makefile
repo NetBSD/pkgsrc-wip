@@ -1,19 +1,13 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.211 2025/04/19 07:58:01 wiz Exp $
 
-DISTNAME=	fetchmail-7.0alpha11
+# Note to updaters: mail/fetchmailconf reaches over here, make sure it builds.
+DISTNAME=	fetchmail-6.5.4
 CATEGORIES=	mail
-MASTER_SITES=	https://gitlab.com/fetchmail/fetchmail/-/archive/98215a5e/
-SHORT_TAG=	98215a5e
-LONG_TAG=	98215a5ee7847caf67f85972bdac63b84cbe50c9
-# Remnants of failed attempt at using gitlab.mk; it doesn't
-# end up trying to fetch the right file / url.
-#MASTER_SITES=	${MASTER_SITE_GITLAB:=fetchmail/}
-#GITLAB_TAG=	98215a5e
-#GITLAB_TYPE=	tag
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitlab.com/fetchmail/fetchmail
+HOMEPAGE=	https://www.fetchmail.info/
 COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 LICENSE=	gnu-gpl-v1 AND gnu-gpl-v2 AND modified-bsd AND public-domain AND gnu-lgpl-v2.1
 
@@ -22,12 +16,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 CONFIGURE_ENV+=		PYTHON=:
 LDFLAGS+=		${CFLAGS}
-USE_TOOLS+=		msgfmt tbl
-USE_TOOLS+=		autoconf automake
-AUTOCONF_REQD=  	2.69
+USE_TOOLS+=		autoconf msgfmt pkg-config tbl
 
 LDFLAGS.Darwin+=	-lresolv
 CFLAGS.Darwin+=		-DBIND_8_COMPAT -DHAVE_RESOLV_H
+
+.include "options.mk"
 
 TEST_TARGET=	check
 
@@ -36,26 +30,17 @@ RCD_SCRIPTS=	fetchmail
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
-post-extract:
-	${MV} ${WRKDIR}/${PKGBASE}-${SHORT_TAG}-${LONG_TAG} ${WRKSRC}
-
-pre-configure:
-	set -e -x; cd ${WRKSRC}; \
-	sh autogen.sh
-
 .include "../../devel/gettext-lib/buildlink3.mk"
+
 post-build:
 	${MV} ${WRKSRC}/fetchmail.man ${WRKSRC}/fetchmail.man.tbl &&	\
 	${TBL} ${WRKSRC}/fetchmail.man.tbl > ${WRKSRC}/fetchmail.man
 
 post-install:
-.for f in NEWS OLDNEWS \
-		README README.OAUTH2 README.NTLM README.PWMD 		\
-		README.SSL README.SSL-SERVER COPYING fetchmail-FAQ.html	\
-		fetchmail-features.html design-notes.html
+.for f in FAQ NOTES FEATURES README COPYING fetchmail-FAQ.html		\
+                 fetchmail-features.html design-notes.html
 	cd ${WRKSRC} &&							\
 	${INSTALL_DATA} ${f} ${DESTDIR}${DOCDIR}
 .endfor
 
-#.include "../../wip/mk/gitlab.mk"
 .include "../../mk/bsd.pkg.mk"

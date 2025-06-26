@@ -1,0 +1,43 @@
+fetchmail: Update to 6.5.4
+
+Packaged in wip by Frédéric Fauberteau
+
+upstream changes:
+-----------------
+
+fetchmail-6.5.4 (released 2025-06-17, 31208 LoC):
+
+## BUGFIXES:
+* socket: avoid crash when writing to a socket without SSL/TLS fails.
+  Reported by Andrea Venturoli via mailing list, fixes #71.
+* wolfSSL support: avoid fetchmail.c compilation failure in certain
+  configurations of wolfSSL (for instance, on FreeBSD's wolfssl-5.8.0_1
+  package), OpenSSL_version enables a newer 1.1.x compat API that passes its
+  argument to a wolfSSL API, with OPENSSL_DIR and OPENSSL_ENGINES_DIR, causing
+  related compiler failures.
+  See <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287435>.
+
+-------------------------------------------------------------------------------
+fetchmail-6.5.3 (released 2025-06-10, 31204 LoC):
+
+## BUGFIXES:
+* IMAP: Reinstate workaround for missing IDLE support if --idle is requested.
+  This had been a long-standing feature but got broken in fetchmail 6.4.22
+  (commit 616e8c70).  Thanks to Lukáš Tesař for the detailed report including
+  a Git bisect that identified this faulty commit.  Fixes Gitlab issue #69.
+* IMAP: Only print 'will idle after poll' if --idle is enabled
+  and either offered by the server, or forced through --forceidle.
+  This fixes a regression introduced in fetchmail 6.4.22 (commit 616e8c70).
+
+## TRANSLATIONS: fetchmail's translation was updated, courtesy of:
+* es:    Cristian Othón Martínez Vera [Spanish]
+
+-------------------------------------------------------------------------------
+fetchmail-6.5.2 (released 2024-12-30, 31200 LoC):
+
+## TRANSLATIONS: fetchmail's translations were updated, courtesy of:
+* cs:    Petr Pisar [Czech]
+* sr:    Мирослав Николић (Miroslav Nikolić) [Serbian]
+
+## CHANGES:
+* Minor documentation consistency fixes (versions, dates).
