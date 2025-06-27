@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.73 2025/02/12 06:44:29 ryoon Exp $
 
-DISTNAME=	sox_ng-14.6.0
+DISTNAME=	sox_ng-14.6.0.1
 CATEGORIES=	audio
 MASTER_SITES=	https://codeberg.org/sox_ng/sox_ng/releases/download/${DISTNAME}/
 
@@ -14,7 +14,7 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-PKGCONFIG_OVERRIDE+=	sox.pc.in
+PKGCONFIG_OVERRIDE+=	sox_ng.pc.in
 
 SUBST_CLASSES+=		gsm
 SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
