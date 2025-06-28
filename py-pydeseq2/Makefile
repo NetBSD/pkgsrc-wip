@@ -5,7 +5,7 @@
 #              Mon Jun  9 16:50:10 CDT 2025               #
 ###########################################################
 
-DISTNAME=	pydeseq2-0.5.1
+DISTNAME=	pydeseq2-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydeseq2/}
