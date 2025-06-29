@@ -1,19 +1,9 @@
 $NetBSD$
 
-Ensure that pkgsrc libraries are used.
 Backtrace support must be provided by libexecinfo.
 
 --- CMakeLists.txt.orig	2024-11-24 17:03:15.000000000 +0000
 +++ CMakeLists.txt
-@@ -5,7 +5,7 @@ include(TargetArch.cmake)
- 
- target_architecture(TARGET_ARCH)
- 
--set(USE_INTERNAL_LIBS ON)
-+set(USE_INTERNAL_LIBS OFF)
- if(USE_SYSTEM_LIBS)
- 	set(USE_INTERNAL_LIBS OFF)
- endif()
 @@ -202,6 +202,9 @@ if (NOT BUILD_NO_CLIENT)
  		target_link_libraries(openmohaa PRIVATE ${JPEG_LIBRARIES})
  	endif()

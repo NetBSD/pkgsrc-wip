@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	openmohaa-0.80.0
+DISTNAME=	openmohaa-0.81.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openmoh/}
 

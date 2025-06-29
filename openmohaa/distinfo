@@ -1,9 +1,9 @@
 $NetBSD$
 
-BLAKE2s (openmohaa-0.80.0.tar.gz) = ed6b3d2ead4ff41d52eae115113a8c46410f813d6b4bac5b662ed370e901b56a
-SHA512 (openmohaa-0.80.0.tar.gz) = 44c6b8ff4e70d9cc390fa10e6ab66163bad341d5a99784aadfd4bc5dd45d29cdde8020231b885c7de50bdfdf8dbcb99e283ce518b5f929010fe27418f0f072cd
-Size (openmohaa-0.80.0.tar.gz) = 35038966 bytes
-SHA1 (patch-CMakeLists.txt) = 4b2bf76c25bebad5d19c4fdce571ad9d9c2cc53c
+BLAKE2s (openmohaa-0.81.1.tar.gz) = afde4bc7807d01dc22a5e98a16e4bd62e73f92e18d93386db5ce8aa030b5059a
+SHA512 (openmohaa-0.81.1.tar.gz) = c1d07d66e711ba4425a162f18ce3cd1da0aa78b1bb9a98440f9f8124a99b8c117a162f1faa51743957ca7bdb43c6f8074e840dcaf247154d0c054b67dd49f5f0
+Size (openmohaa-0.81.1.tar.gz) = 34982085 bytes
+SHA1 (patch-CMakeLists.txt) = a7072bf903711982482f82ac3f1510d50485b343
 SHA1 (patch-code_client_cl__input.cpp) = 8a0305d028d38c159b3dd3c3a562e3ecdcc782bd
 SHA1 (patch-code_fgame_VehicleTank.cpp) = b881248148077a9aee7071f849f00b29f7a04d2b
 SHA1 (patch-code_fgame_actor.cpp) = d28b513056ed86580475499e42f059a56f4c044a
