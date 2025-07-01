@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2025/02/12 14:21:23 wiz Exp $
-bin/ya
-bin/yazi
-share/applications/yazi.desktop
-share/examples/yazi/keymap-default.toml
-share/examples/yazi/theme-dark.toml
-share/examples/yazi/theme-light.toml
-share/examples/yazi/yazi-default.toml
