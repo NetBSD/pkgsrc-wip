@@ -15,7 +15,7 @@ NO_BUILD=	yes
 USE_TOOLS=	bash
 USE_LANGUAGES=	# none
 
-DEPENDS+=	ruby-build-[0-9]*:../../local/ruby-build
+DEPENDS+=	ruby-build-[0-9]*:../../wip/ruby-build
 
 REPLACE_BASH=	libexec/rbenv* rbenv.d/exec/gem-rehash.bash
 
