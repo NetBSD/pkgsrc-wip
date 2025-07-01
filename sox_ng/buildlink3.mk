@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/10/19 16:34:18 abs Exp $
+# $NetBSD$
 
-BUILDLINK_TREE+=	sox
+BUILDLINK_TREE+=	sox_ng
 
-.if !defined(SOX_BUILDLINK3_MK)
-SOX_BUILDLINK3_MK:=
+.if !defined(SOX_NG_BUILDLINK3_MK)
+SOX_NG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.sox+=	sox>=14.3.1
-BUILDLINK_ABI_DEPENDS.sox+=	sox>=14.3.1
-BUILDLINK_PKGSRCDIR.sox?=	../../audio/sox
-.endif # SOX_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.sox_ng+=	sox_ng>=14.6.0.1
+BUILDLINK_PKGSRCDIR.sox_ng?=	../../wip/sox_ng
 
-BUILDLINK_TREE+=	-sox
+.endif	# SOX_NG_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-sox_ng

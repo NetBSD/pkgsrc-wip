@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/play_ng
 bin/rec_ng
-bin/samples
 bin/sox_ng
 bin/soxi_ng
 include/sox_ng.h

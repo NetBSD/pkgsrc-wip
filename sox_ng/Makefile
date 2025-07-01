@@ -21,6 +21,10 @@ SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
 SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
 SUBST_STAGE.gsm=	pre-configure
 
+# test program, should not be installed - upstream is informed
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/samples
+
 .include "options.mk"
 
 .include "../../audio/flac/buildlink3.mk"
