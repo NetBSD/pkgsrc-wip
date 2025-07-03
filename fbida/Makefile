@@ -26,9 +26,6 @@ post-extract:
 		cp jpeg-9c/$$f jpeg/90; \
 	    done
 
-# Depend on this, purely for fetching the distfile.
-DEPENDS+=	jpeg>=9c:../../graphics/jpeg
-
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
