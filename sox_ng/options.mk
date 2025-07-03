@@ -1,15 +1,9 @@
 # $NetBSD: options.mk,v 1.6 2017/01/07 21:30:26 maya Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.sox
-PKG_SUPPORTED_OPTIONS=	lame oss
-# lame has LICENSE= issues and thus should not be SUGGESTED.
-PKG_SUGGESTED_OPTIONS=
-.include "../../mk/bsd.options.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sox_ng
+PKG_SUPPORTED_OPTIONS=	oss
 
-.if !empty(PKG_OPTIONS:Mlame)
-# This is an option due to LICENSE= issues.
-.include "../../audio/lame/buildlink3.mk"
-.endif
+.include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Moss)
 LDFLAGS+=		-lossaudio

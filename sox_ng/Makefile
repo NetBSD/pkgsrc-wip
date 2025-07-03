@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.73 2025/02/12 06:44:29 ryoon Exp $
 
-DISTNAME=	sox_ng-14.6.0.1
+DISTNAME=	sox_ng-14.6.0.2
 CATEGORIES=	audio
 MASTER_SITES=	https://codeberg.org/sox_ng/sox_ng/releases/download/${DISTNAME}/
 
@@ -21,14 +21,11 @@ SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
 SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
 SUBST_STAGE.gsm=	pre-configure
 
-# test program, should not be installed - upstream is informed
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/samples
-
 .include "options.mk"
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
