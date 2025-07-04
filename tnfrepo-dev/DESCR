@@ -1,0 +1,5 @@
+Source repository configuration for The NetBSD Foundation.
+
+This package is meant to be used internally by The NetBSD Foundation.
+It may be useful for other purposes, and some components may be pushed
+upstream, but don't expect it to suit your needs if you're not TNF.

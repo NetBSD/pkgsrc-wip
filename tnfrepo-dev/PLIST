@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/netbsd_hghooks-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/netbsd_hghooks-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/netbsd_hghooks-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/netbsd_hghooks/__init__.py
+${PYSITELIB}/netbsd_hghooks/__init__.pyc
+${PYSITELIB}/netbsd_hghooks/__init__.pyo
+${PYSITELIB}/netbsd_hghooks/_version.py
+${PYSITELIB}/netbsd_hghooks/_version.pyc
+${PYSITELIB}/netbsd_hghooks/_version.pyo
+${PYSITELIB}/netbsd_hghooks/reject_bookmarks.py
+${PYSITELIB}/netbsd_hghooks/reject_bookmarks.pyc
+${PYSITELIB}/netbsd_hghooks/reject_bookmarks.pyo
+${PYSITELIB}/netbsd_hghooks/reject_new_heads.py
+${PYSITELIB}/netbsd_hghooks/reject_new_heads.pyc
+${PYSITELIB}/netbsd_hghooks/reject_new_heads.pyo
+${PYSITELIB}/netbsd_hghooks/reject_normcasecollision.py
+${PYSITELIB}/netbsd_hghooks/reject_normcasecollision.pyc
+${PYSITELIB}/netbsd_hghooks/reject_normcasecollision.pyo
+${PYSITELIB}/netbsd_hghooks/require_user_login.py
+${PYSITELIB}/netbsd_hghooks/require_user_login.pyc
+${PYSITELIB}/netbsd_hghooks/require_user_login.pyo
+share/tnfrepo/githooks/pre-receive.sh
+share/tnfrepo/githooks/reference-transaction.sh
+share/tnfrepo/githooks/update.sh
+share/tnfrepo/hgrc/draft
+share/tnfrepo/hgrc/public
