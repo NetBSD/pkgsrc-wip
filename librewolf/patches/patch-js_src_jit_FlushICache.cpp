@@ -23,12 +23,3 @@ NetBSD does not have the Linux-specific membarrier(2) syscall.
  }
  
  // These definitions come from the Linux kernel source, for kernels before 4.16
-@@ -92,6 +98,8 @@ bool CanFlushExecutionContextForAllThrea
- 
-   computed = true;
-   return kernelHasMembarrier;
-+#  elif defined(__NetBSD__)
-+  return false;
- #  else
-   // On other platforms, we assume that the syscall for flushing the icache
-   // will flush the execution context for other cores.
