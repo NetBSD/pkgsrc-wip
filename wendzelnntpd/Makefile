@@ -1,13 +1,13 @@
 # $NetBSD$
 
 #DISTNAME=		v2.1.3
-#PKGNAME=		wendzelnntpd-${DISTNAME:S/v//}
 DISTNAME=		wendzelnntpd-2.2.0git
+#PKGNAME=		wendzelnntpd-${DISTNAME:S/v//}
 CATEGORIES=		news
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wendzelnntpd/}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cdpxe/}
-#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GITHUB_TAG=		73d8e69871ff09444b6cf5aa089df5ce06112758
+#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		https://sourceforge.net/projects/wendzelnntpd
@@ -29,7 +29,8 @@ SUBST_SED.make+=	-e 's,$$(DESTDIR),$$(DESTDIR)$$(PREFIX),g'
 # Directory for example config file
 FAKECDIR=		${DESTDIR}${PREFIX}/share/examples/wendzelnntpd
 
-INSTALLATION_DIRS=	sbin share/doc/wendzelnntpd ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	sbin share/doc/wendzelnntpd ${PKGMANDIR}/man8 \
+			var/spool/news/wendzelnntpd
 SPECIAL_PERMS+=		sbin/wendzelnntpd \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 SPECIAL_PERMS+=		sbin/wendzelnntpadm \

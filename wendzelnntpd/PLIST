@@ -16,6 +16,8 @@ share/doc/wendzelnntpd/docs/docs.html
 share/doc/wendzelnntpd/docs/footnode.html
 share/doc/wendzelnntpd/docs/footnote.png
 share/doc/wendzelnntpd/docs/img1.png
+share/doc/wendzelnntpd/docs/img1.svg
+share/doc/wendzelnntpd/docs/img2.svg
 share/doc/wendzelnntpd/docs/index.html
 share/doc/wendzelnntpd/docs/index.png
 share/doc/wendzelnntpd/docs/next.png
@@ -28,3 +30,4 @@ share/doc/wendzelnntpd/docs/up_g.png
 share/doc/wendzelnntpd/mysql_db_struct.sql
 share/doc/wendzelnntpd/usenet.db_struct
 share/examples/wendzelnntpd/wendzelnntpd.conf
+var/spool/news/wendzelnntpd/usenet.db
