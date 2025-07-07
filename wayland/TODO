@@ -1,0 +1,8 @@
+NetBSD doesn't provide neither SO_PEERCRED nor LOCAL_PEERCRED
+but wayland 1.24.0 would like to get the socket peer credentials,
+leading to
+
+../src/wayland-os.c:129:2: error: #error "Don't know how to read ucred on this platform"
+  129 | #error "Don't know how to read ucred on this platform"
+      |  ^~~~~
+
