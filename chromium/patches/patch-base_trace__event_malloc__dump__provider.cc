@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -31,6 +31,8 @@
  
@@ -24,7 +24,7 @@ $NetBSD$
  void ReportMallinfoStats(ProcessMemoryDump* pmd,
                           size_t* total_virtual_size,
                           size_t* resident_size,
-@@ -370,6 +372,9 @@ bool MallocDumpProvider::OnMemoryDump(co
+@@ -367,6 +369,9 @@ bool MallocDumpProvider::OnMemoryDump(co
                       &allocated_objects_count);
  #elif BUILDFLAG(IS_FUCHSIA)
  // TODO(fuchsia): Port, see https://crbug.com/706592.

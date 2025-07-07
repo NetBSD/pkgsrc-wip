@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/host/gpu_host_impl.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- components/viz/host/gpu_host_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/viz/host/gpu_host_impl.cc
 @@ -135,7 +135,7 @@ GpuHostImpl::GpuHostImpl(Delegate* deleg
        mojom::GpuServiceCreationParams::New();

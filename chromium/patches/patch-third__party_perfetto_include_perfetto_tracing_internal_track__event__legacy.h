@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h
 @@ -249,7 +249,7 @@ class PERFETTO_EXPORT_COMPONENT LegacyTr
  // are different. E.g. on Mac size_t is considered a different type from

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/cpp/BUILD.gn.orig	2025-05-30 19:50:32.000000000 +0000
+--- services/network/public/cpp/BUILD.gn.orig	2025-06-30 06:54:11.000000000 +0000
 +++ services/network/public/cpp/BUILD.gn
-@@ -639,7 +639,7 @@ component("cpp_base") {
+@@ -654,7 +654,7 @@ component("cpp_base") {
      sources += [ "transferable_directory_fuchsia.cc" ]
    }
  
@@ -15,7 +15,7 @@ $NetBSD$
      sources += [
        "network_interface_change_listener_mojom_traits.cc",
        "network_interface_change_listener_mojom_traits.h",
-@@ -761,7 +761,7 @@ source_set("tests") {
+@@ -776,7 +776,7 @@ source_set("tests") {
      "x_frame_options_parser_unittest.cc",
    ]
  

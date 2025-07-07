@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders.cc
-@@ -81,7 +81,7 @@
+@@ -80,7 +80,7 @@
  #endif  // BUILDFLAG(ENABLE_UNHANDLED_TAP)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  void BindScreenAIAnnotator(
      content::RenderFrameHost* frame_host,
      mojo::PendingReceiver<screen_ai::mojom::ScreenAIAnnotator> receiver) {
-@@ -520,7 +520,7 @@ void PopulateChromeFrameBinders(
+@@ -522,7 +522,7 @@ void PopulateChromeFrameBinders(
  #endif  // BUILDFLAG(ENABLE_SPEECH_SERVICE)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

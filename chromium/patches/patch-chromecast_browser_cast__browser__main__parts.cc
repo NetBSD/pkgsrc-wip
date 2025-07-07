@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/browser/cast_browser_main_parts.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chromecast/browser/cast_browser_main_parts.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chromecast/browser/cast_browser_main_parts.cc
 @@ -100,7 +100,7 @@
  #include "ui/ozone/public/ozone_platform.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include <fontconfig/fontconfig.h>
  #include <signal.h>
  #include <sys/prctl.h>
-@@ -273,7 +273,7 @@ class CastViewsDelegate : public views::
+@@ -282,7 +282,7 @@ class CastViewsDelegate : public views::
  
  #endif  // defined(USE_AURA)
  
@@ -24,7 +24,7 @@ $NetBSD$
  
  base::FilePath GetApplicationFontsDir() {
    std::unique_ptr<base::Environment> env(base::Environment::Create());
-@@ -318,7 +318,7 @@ const DefaultCommandLineSwitch kDefaultS
+@@ -327,7 +327,7 @@ const DefaultCommandLineSwitch kDefaultS
      {switches::kDisableThreadedAnimation, ""},
  #endif  // BUILDFLAG(IS_ANDROID)
  #endif  // BUILDFLAG(IS_CAST_AUDIO_ONLY)
@@ -33,7 +33,7 @@ $NetBSD$
  #if defined(ARCH_CPU_X86_FAMILY)
      // This is needed for now to enable the x11 Ozone platform to work with
      // current Linux/NVidia OpenGL drivers.
-@@ -495,7 +495,7 @@ void CastBrowserMainParts::ToolkitInitia
+@@ -504,7 +504,7 @@ void CastBrowserMainParts::ToolkitInitia
      views_delegate_ = std::make_unique<CastViewsDelegate>();
  #endif  // defined(USE_AURA)
  

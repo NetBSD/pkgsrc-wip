@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
 @@ -54,7 +54,7 @@
  #include "net/ssl/client_cert_store_mac.h"
@@ -60,7 +60,7 @@ $NetBSD$
  std::unique_ptr<CertificateManagerPageHandler::CertSource>
  CreateProvisionedClientCertSource(Profile* profile) {
    return std::make_unique<ClientCertSource>(
-@@ -1156,7 +1156,7 @@ bool ClientCertManagementAccessControls:
+@@ -1157,7 +1157,7 @@ bool ClientCertManagementAccessControls:
  
    return client_cert_policy_ == ClientCertificateManagementPermission::kAll;
  }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc
 @@ -324,12 +324,12 @@ SupportedFormats GetSupportedFormatsInte
        supported_formats.profiles.push_back(profile.profile);

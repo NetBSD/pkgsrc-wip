@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/gamepad_provider.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- device/gamepad/gamepad_provider.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ device/gamepad/gamepad_provider.cc
-@@ -159,7 +159,7 @@ void GamepadProvider::Initialize(std::un
+@@ -155,7 +155,7 @@ void GamepadProvider::Initialize(std::un
  
    if (!polling_thread_)
      polling_thread_ = std::make_unique<base::Thread>("Gamepad polling thread");

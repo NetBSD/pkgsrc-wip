@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
-@@ -19,7 +19,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
- BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -28,7 +28,7 @@ bool IsOnDeviceStorageEnabled() {
+ }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -759,7 +759,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+@@ -793,7 +793,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
  
  #endif  // BUILDFLAG(IS_IOS)
  
@@ -24,7 +24,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  BASE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
               "IPH_AutofillBnplAffirmOrZipSuggestion",
-@@ -909,7 +909,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+@@ -943,7 +943,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

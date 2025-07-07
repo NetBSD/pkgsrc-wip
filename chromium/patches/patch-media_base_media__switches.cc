@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- media/base/media_switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/base/media_switches.cc
 @@ -19,7 +19,7 @@
  #include "ui/gl/gl_features.h"
@@ -112,7 +112,7 @@ $NetBSD$
  // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               "V4L2H264TemporalLayerHWEncoding",
-@@ -1340,7 +1365,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
+@@ -1355,7 +1380,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
  );
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
@@ -121,7 +121,7 @@ $NetBSD$
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1422,7 +1447,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
+@@ -1437,7 +1462,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
               "RecordWebAudioEngagement",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- services/device/usb/usb_service.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ services/device/usb/usb_service.cc
-@@ -21,12 +21,16 @@
+@@ -20,12 +20,16 @@
  
  #if BUILDFLAG(IS_ANDROID)
  #include "services/device/usb/usb_service_android.h"
@@ -24,7 +24,7 @@ $NetBSD$
  #endif
  
  namespace device {
-@@ -49,12 +53,14 @@ constexpr base::TaskTraits UsbService::k
+@@ -48,12 +52,14 @@ constexpr base::TaskTraits UsbService::k
  std::unique_ptr<UsbService> UsbService::Create() {
  #if BUILDFLAG(IS_ANDROID)
    return base::WrapUnique(new UsbServiceAndroid());

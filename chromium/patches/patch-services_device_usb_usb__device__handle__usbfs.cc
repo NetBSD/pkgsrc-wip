@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.cc
-@@ -39,7 +39,7 @@
+@@ -38,7 +38,7 @@
  #include "chromeos/dbus/permission_broker/permission_broker_client.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "services/device/public/cpp/device_features.h"
  #include "services/device/usb/usb_interface_detach_allowlist.h"
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-@@ -271,7 +271,7 @@ bool UsbDeviceHandleUsbfs::BlockingTaskR
+@@ -270,7 +270,7 @@ bool UsbDeviceHandleUsbfs::BlockingTaskR
    return true;
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  bool UsbDeviceHandleUsbfs::BlockingTaskRunnerHelper::DetachInterface(
      int interface_number,
      const CombinedInterfaceInfo& interface_info) {
-@@ -599,7 +599,7 @@ void UsbDeviceHandleUsbfs::ClaimInterfac
+@@ -598,7 +598,7 @@ void UsbDeviceHandleUsbfs::ClaimInterfac
      return;
    }
  #endif
@@ -33,7 +33,7 @@ $NetBSD$
    if (base::FeatureList::IsEnabled(features::kAutomaticUsbDetach)) {
      const mojom::UsbConfigurationInfo* config =
          device_->GetActiveConfiguration();
-@@ -945,7 +945,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
+@@ -944,7 +944,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
      return;
    }
  #endif

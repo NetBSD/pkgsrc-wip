@@ -1,4 +1,10 @@
-www/chromium: update to 137.0.7151.68
+www/chromium: update to 138.0.7204.96
+
+* Patchset changes:
+base/system/sys_info_netbsd.cc: fix SysInfo::AmountOfAvailablePhysicalMemoryImpl()
+v8/src/base/platform/platform-posix.cc: use pid instead of lid in OS::GetCurrentThreadIdInternal()
+
+* AudioIO: update to 138.0, apply changes from qt6-qtwebengine by Mark Davies
 
 * 137.0.7151.55
 This update includes 11 security fixes. Below, we highlight fixes
@@ -36,4 +42,45 @@ pushed out to Stable across all Chrome platforms.
 [$1000][409059706] Medium CVE-2025-5068: Use after free in Blink.
 Reported by Walkman on 2025-04-07
 Google is aware that an exploit for CVE-2025-5419 exists in the wild.
+
+* 137.0.7151.103
+This update includes 2 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$8000][420150619] High CVE-2025-5958: Use after free in Media.
+Reported by Huang Xilin of Ant Group Light-Year Security Lab on 2025-05-25
+[NA][422313191] High CVE-2025-5959: Type Confusion in V8.
+Reported by Seunghyun Lee as part of TyphoonPWN 2025 on 2025-06-04
+
+* 137.0.7151.119
+This update includes 3 security fixes.
+Below, we highlight fixes that were contributed by external researchers.
+Please see the Chrome Security Page for more information.
+[$7000][420697404] High CVE-2025-6191: Integer overflow in V8.
+Reported by Shaheen Fazim on 2025-05-27
+[$4000][421471016] High CVE-2025-6192: Use after free in Profiler.
+Reported by Chaoyuan Peng (@ret2happy) on 2025-05-31
+
+* 138.0.7204.49
+This update includes 11 security fixes.
+Below, we highlight fixes that were contributed by external researchers.
+Please see the Chrome Security Page for more information.
+[$4000][407328533] Medium CVE-2025-6555: Use after free in Animation.
+Reported by Lyra Rebane (rebane2001) on 2025-03-30
+[$1000][40062462] Low CVE-2025-6556: Insufficient policy enforcement in
+Loader. Reported by Shaheen Fazim on 2023-01-02
+[$1000][406631048] Low CVE-2025-6557: Insufficient data validation in
+DevTools. Reported by Ameen Basha M K on 2025-03-27
+
+* 138.0.7204.96
+This update includes 1 security fix. 
+Below, we highlight fixes that were contributed by external researchers. 
+Please see the Chrome Security Page for more information.
+[NA][427663123] High CVE-2025-6554: Type Confusion in V8. 
+Reported by Clément Lecigne of Google's Threat Analysis Group on 2025-06-25.
+This issue was mitigated on 2025-06-26 by a configuration change
+pushed out to Stable channel across all platforms.
+
+Google is aware that an exploit for CVE-2025-6554 exists in the wild.
+
 

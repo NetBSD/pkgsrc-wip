@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h
 @@ -51,8 +51,8 @@ static_assert(sizeof(void*) != 8, "");
  // POSIX is not only UNIX, e.g. macOS and other OSes. We do use Linux-specific
@@ -15,9 +15,9 @@ $NetBSD$
 +  ((PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS) || \
 +   PA_BUILDFLAG(IS_ANDROID)) && !PA_BUILDFLAG(IS_NETBSD))
  
- // If defined, enables zeroing memory on Free() with roughly 1% probability.
- // This applies only to normal buckets, as direct-map allocations are always
-@@ -170,7 +170,7 @@ constexpr bool kUseLazyCommit = false;
+ // Need TLS support.
+ #define PA_CONFIG_THREAD_CACHE_SUPPORTED() \
+@@ -164,7 +164,7 @@ constexpr bool kUseLazyCommit = false;
  // This may be required on more platforms in the future.
  #define PA_CONFIG_HAS_ATFORK_HANDLER()                 \
    (PA_BUILDFLAG(IS_APPLE) || PA_BUILDFLAG(IS_LINUX) || \
@@ -26,7 +26,7 @@ $NetBSD$
  
  // Enable shadow metadata.
  //
-@@ -233,7 +233,7 @@ constexpr bool kUseLazyCommit = false;
+@@ -227,7 +227,7 @@ constexpr bool kUseLazyCommit = false;
  // Also enabled on ARM64 macOS and iOS, as the 16kiB pages on this platform lead
  // to larger slot spans.
  #if PA_BUILDFLAG(IS_LINUX) || \

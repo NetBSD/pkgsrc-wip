@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/tab_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/ui/tabs/tab_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/tabs/tab_features.cc
-@@ -311,7 +311,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -340,7 +340,7 @@ void TabFeatures::Init(TabInterface& tab
    task_manager::WebContentsTags::CreateForTabContents(tab.GetContents());
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

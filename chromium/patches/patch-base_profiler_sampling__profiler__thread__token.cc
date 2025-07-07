@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/sampling_profiler_thread_token.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/profiler/sampling_profiler_thread_token.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/profiler/sampling_profiler_thread_token.cc
 @@ -6,7 +6,7 @@
  

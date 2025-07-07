@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/compiler_specific.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/compiler_specific.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/compiler_specific.h
-@@ -729,6 +729,7 @@ inline constexpr bool AnalyzerAssumeTrue
+@@ -733,6 +733,7 @@ inline constexpr bool AnalyzerAssumeTrue
  #if __has_cpp_attribute(clang::preserve_most) &&             \
      (defined(ARCH_CPU_ARM64) || defined(ARCH_CPU_X86_64)) && \
      !defined(COMPONENT_BUILD) &&                             \

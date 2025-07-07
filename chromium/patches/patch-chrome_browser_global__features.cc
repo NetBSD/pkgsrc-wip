@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/global_features.cc
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
  #include "chrome/browser/glic/host/glic_synthetic_trial_manager.h"  // nogncheck
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  // This causes a gn error on Android builds, because gn does not understand
  // buildflags, so we include it only on platforms where it is used.
  #include "chrome/browser/ui/webui/whats_new/whats_new_registrar.h"
-@@ -62,7 +62,7 @@ void GlobalFeatures::ReplaceGlobalFeatur
+@@ -70,7 +70,7 @@ void GlobalFeatures::ReplaceGlobalFeatur
  
  void GlobalFeatures::Init() {
    system_permissions_platform_handle_ = CreateSystemPermissionsPlatformHandle();
@@ -24,7 +24,7 @@ $NetBSD$
    whats_new_registry_ = CreateWhatsNewRegistry();
  #endif
  
-@@ -96,7 +96,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -120,7 +120,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/on_device_model_service.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- services/on_device_model/on_device_model_service.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ services/on_device_model/on_device_model_service.h
 @@ -31,6 +31,10 @@ class OnDeviceModelInternalImpl;
  class TsHolder;

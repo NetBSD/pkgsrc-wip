@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/mock_display_client.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- components/viz/test/mock_display_client.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/viz/test/mock_display_client.h
 @@ -45,7 +45,7 @@ class MockDisplayClient : public mojom::
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS)

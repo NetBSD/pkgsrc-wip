@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signin/interstitials/managed_profile_required_page.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/enterprise/signin/interstitials/managed_profile_required_page.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/enterprise/signin/interstitials/managed_profile_required_page.cc
 @@ -94,7 +94,7 @@ void ManagedProfileRequiredPage::Command
  

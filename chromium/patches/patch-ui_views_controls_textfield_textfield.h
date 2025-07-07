@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/views/controls/textfield/textfield.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/views/controls/textfield/textfield.h
 @@ -48,7 +48,7 @@
  #include "ui/views/view_observer.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include <vector>
  #endif
  
-@@ -475,7 +475,7 @@ class VIEWS_EXPORT Textfield : public Vi
+@@ -478,7 +478,7 @@ class VIEWS_EXPORT Textfield : public Vi
    // Set whether the text should be used to improve typing suggestions.
    void SetShouldDoLearning(bool value) { should_do_learning_ = value; }
  

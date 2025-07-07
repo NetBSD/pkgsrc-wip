@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/app/shell_main_delegate.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- extensions/shell/app/shell_main_delegate.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ extensions/shell/app/shell_main_delegate.cc
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
  #if BUILDFLAG(IS_WIN)
  #include "base/base_paths_win.h"
  #include "base/process/process_info.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/nix/xdg_util.h"
  #elif BUILDFLAG(IS_MAC)
  #include "base/base_paths_mac.h"
-@@ -60,7 +60,7 @@ base::FilePath GetDataPath() {
+@@ -61,7 +61,7 @@ base::FilePath GetDataPath() {
    }
  
    base::FilePath data_dir;

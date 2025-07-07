@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/BUILD.gn.orig	2025-05-30 19:50:32.000000000 +0000
+--- media/audio/BUILD.gn.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/audio/BUILD.gn
-@@ -275,10 +275,35 @@ source_set("audio") {
+@@ -286,10 +286,35 @@ source_set("audio") {
      deps += [ "//media/base/android:media_jni_headers" ]
    }
  

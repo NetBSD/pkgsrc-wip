@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/trap-handler/handler-inside-posix.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- v8/src/trap-handler/handler-inside-posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ v8/src/trap-handler/handler-inside-posix.cc
-@@ -27,7 +27,7 @@
+@@ -28,7 +28,7 @@
  
  #include <signal.h>
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <ucontext.h>
  #elif V8_OS_DARWIN
  #include <sys/ucontext.h>
-@@ -61,6 +61,10 @@ namespace trap_handler {
+@@ -62,6 +62,10 @@ namespace trap_handler {
  #define CONTEXT_REG(reg, REG) &uc->uc_mcontext->__ss.__##reg
  #elif V8_OS_FREEBSD
  #define CONTEXT_REG(reg, REG) &uc->uc_mcontext.mc_##reg
@@ -26,7 +26,7 @@ $NetBSD$
  #else
  #error "Unsupported platform."
  #endif
-@@ -80,8 +84,12 @@ bool IsKernelGeneratedSignal(siginfo_t* 
+@@ -81,8 +85,12 @@ bool IsKernelGeneratedSignal(siginfo_t* 
    // si_code at its default of 0 for signals that don’t originate in hardware.
    // The other conditions are only relevant for Linux.
    return info->si_code > 0 && info->si_code != SI_USER &&

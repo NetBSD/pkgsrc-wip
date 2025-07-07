@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/fontconfig/src/src/fccompat.c.orig	2025-05-30 19:50:32.000000000 +0000
+--- third_party/fontconfig/src/src/fccompat.c.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/fontconfig/src/src/fccompat.c
-@@ -184,7 +184,9 @@ FcRandom(void)
+@@ -175,7 +175,9 @@ FcRandom (void)
  {
      int32_t result;
  
@@ -15,5 +15,5 @@ $NetBSD$
 +    result = arc4random() & 0x7fffffff;
 +#elif HAVE_RANDOM_R
      static struct random_data fcrandbuf;
-     static char statebuf[256];
-     static FcBool initialized = FcFalse;
+     static char               statebuf[256];
+     static FcBool             initialized = FcFalse;

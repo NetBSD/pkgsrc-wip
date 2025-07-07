@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/base/ui_base_switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/base/ui_base_switches.cc
 @@ -24,13 +24,13 @@ const char kDisableModalAnimations[] = "
  const char kShowMacOverlayBorders[] = "show-mac-overlay-borders";
@@ -21,4 +21,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Specify the toolkit used to construct the Linux GUI.
  const char kUiToolkitFlag[] = "ui-toolkit";
- // Disables GTK IME integration.
+ // Specify the GTK version to be loaded.

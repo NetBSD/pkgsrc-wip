@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -148,18 +148,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
@@ -77,7 +77,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -752,7 +768,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
+@@ -763,7 +779,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
      unregister_thread_closure = base::HangWatcher::RegisterThread(
          base::HangWatcher::ThreadType::kMainThread);
      bool start_hang_watcher_now;
@@ -86,7 +86,7 @@ $NetBSD$
      // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
      // initialized, because the sandbox can't be started with multiple threads.
      // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
-@@ -865,11 +881,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -876,11 +892,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -100,7 +100,7 @@ $NetBSD$
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1050,10 +1065,22 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1073,10 +1088,22 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -123,7 +123,7 @@ $NetBSD$
    delegate_->SandboxInitialized(process_type);
  
  #if BUILDFLAG(USE_ZYGOTE)
-@@ -1151,6 +1178,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
+@@ -1177,6 +1204,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

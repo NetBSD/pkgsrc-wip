@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -35,7 +35,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiv
+@@ -38,7 +38,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiv
               "CloseOmniboxPopupOnInactiveAreaClick",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
  BASE_FEATURE(kFewerUpdateConfirmations,
-@@ -339,7 +339,7 @@ BASE_FEATURE(kViewsJSAppModalDialog,
+@@ -359,7 +359,7 @@ BASE_FEATURE(kViewsJSAppModalDialog,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

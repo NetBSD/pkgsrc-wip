@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/chrome_browser_main.cc
 @@ -150,7 +150,7 @@
  #endif
@@ -65,7 +65,7 @@ $NetBSD$
    // Set the global activation token sent as a command line switch by another
    // browser process. This also removes the switch after use to prevent any side
    // effects of leaving it in the command line after this point.
-@@ -1021,7 +1021,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1006,7 +1006,7 @@ int ChromeBrowserMainParts::PreCreateThr
        browser_creator_->AddFirstRunTabs(master_prefs_->new_tabs);
      }
  
@@ -74,7 +74,7 @@ $NetBSD$
      // Create directory for user-level Native Messaging manifest files. This
      // makes it less likely that the directory will be created by third-party
      // software with incorrect owner or permission. See crbug.com/725513 .
-@@ -1066,7 +1066,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1051,7 +1051,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -83,7 +83,7 @@ $NetBSD$
    metrics::DesktopSessionDurationTracker::Initialize();
    ProfileActivityMetricsRecorder::Initialize();
    TouchModeStatsTracker::Initialize(
-@@ -1262,7 +1262,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1247,7 +1247,7 @@ void ChromeBrowserMainParts::PostProfile
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -92,7 +92,7 @@ $NetBSD$
    // Delete the media history database if it still exists.
    // TODO(crbug.com/40177301): Remove this.
    base::ThreadPool::PostTask(
-@@ -1310,7 +1310,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1295,7 +1295,7 @@ void ChromeBrowserMainParts::PostProfile
        *UrlLanguageHistogramFactory::GetForBrowserContext(profile));
  #endif
  
@@ -101,7 +101,7 @@ $NetBSD$
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1419,7 +1419,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1404,7 +1404,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.
@@ -110,7 +110,7 @@ $NetBSD$
    if (headless::IsHeadlessMode()) {
      headless::HeadlessSelectFileDialogFactory::SetUp();
    }
-@@ -1964,7 +1964,7 @@ bool ChromeBrowserMainParts::ProcessSing
+@@ -1949,7 +1949,7 @@ bool ChromeBrowserMainParts::ProcessSing
  
    // Drop the request if headless mode is in effect or the request is from
    // a headless Chrome process.

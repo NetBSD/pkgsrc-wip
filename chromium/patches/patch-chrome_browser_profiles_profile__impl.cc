@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
-@@ -270,6 +270,10 @@
+@@ -269,6 +269,10 @@
  #include "chrome/browser/safe_browsing/safe_browsing_service.h"
  #endif
  
@@ -17,7 +17,7 @@ $NetBSD$
  using bookmarks::BookmarkModel;
  using content::BrowserThread;
  using content::DownloadManagerDelegate;
-@@ -594,7 +598,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -593,7 +597,7 @@ void ProfileImpl::LoadPrefsForNormalStar
    policy_provider = GetUserCloudPolicyManagerAsh();
  #else  // !BUILDFLAG(IS_CHROMEOS)
    {
@@ -26,7 +26,7 @@ $NetBSD$
      ProfileManager* profile_manager = g_browser_process->profile_manager();
      ProfileAttributesEntry* entry =
          profile_manager->GetProfileAttributesStorage()
-@@ -890,7 +894,17 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -889,7 +893,17 @@ void ProfileImpl::DoFinalInit(CreateMode
  }
  
  base::FilePath ProfileImpl::last_selected_directory() {

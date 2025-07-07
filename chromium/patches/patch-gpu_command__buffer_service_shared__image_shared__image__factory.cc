@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -48,7 +48,7 @@
  #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"
@@ -33,7 +33,7 @@ $NetBSD$
    return gfx::GpuMemoryBufferType::NATIVE_PIXMAP;
  #elif BUILDFLAG(IS_WIN)
    return gfx::GpuMemoryBufferType::DXGI_SHARED_HANDLE;
-@@ -326,7 +326,7 @@ SharedImageFactory::SharedImageFactory(
+@@ -294,7 +294,7 @@ SharedImageFactory::SharedImageFactory(
          context_state_, workarounds_);
      factories_.push_back(std::move(ozone_factory));
    }

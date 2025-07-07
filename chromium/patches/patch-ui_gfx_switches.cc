@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/switches.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/gfx/switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/gfx/switches.cc
-@@ -32,7 +32,7 @@ const char kForcePrefersNoReducedMotion[
- // Run in headless mode, i.e., without a UI or display server dependencies.
- const char kHeadless[] = "headless";
+@@ -36,7 +36,7 @@ const char kHeadless[] = "headless";
+ // See //components/headless/screen_info/README.md for more details.
+ const char kScreenInfo[] = "screen-info";
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

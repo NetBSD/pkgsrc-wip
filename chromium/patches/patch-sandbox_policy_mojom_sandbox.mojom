@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/mojom/sandbox.mojom.orig	2025-05-30 19:50:32.000000000 +0000
+--- sandbox/policy/mojom/sandbox.mojom.orig	2025-06-30 06:54:11.000000000 +0000
 +++ sandbox/policy/mojom/sandbox.mojom
 @@ -74,6 +74,15 @@ enum Sandbox {
    // Minimally privileged sandbox on Fuchsia.

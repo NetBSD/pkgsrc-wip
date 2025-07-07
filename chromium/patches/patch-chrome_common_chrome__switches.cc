@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/common/chrome_switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/chrome_switches.cc
-@@ -884,7 +884,7 @@ const char kAllowNaClSocketAPI[] = "allo
+@@ -892,7 +892,7 @@ const char kAllowNaClSocketAPI[] = "allo
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD$
  const char kEnableNewAppMenuIcon[] = "enable-new-app-menu-icon";
  
  // Causes the browser to launch directly in guest mode.
-@@ -913,7 +913,7 @@ const char kGlicDev[] = "glic-dev";
+@@ -921,7 +921,7 @@ const char kGlicDev[] = "glic-dev";
  const char kGlicHostLogging[] = "glic-host-logging";
  #endif
  

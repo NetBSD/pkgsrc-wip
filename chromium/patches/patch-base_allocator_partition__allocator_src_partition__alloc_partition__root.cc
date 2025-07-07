@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
 @@ -45,7 +45,7 @@
  #include "wow64apiset.h"
@@ -24,7 +24,7 @@ $NetBSD$
    // When fork() is called, only the current thread continues to execute in the
    // child process. If the lock is held, but *not* by this thread when fork() is
    // called, we have a deadlock.
-@@ -1118,7 +1118,7 @@ void PartitionRoot::Init(PartitionOption
+@@ -1110,7 +1110,7 @@ void PartitionRoot::Init(PartitionOption
      // apple OSes.
      PA_CHECK((internal::SystemPageSize() == (size_t{1} << 12)) ||
               (internal::SystemPageSize() == (size_t{1} << 14)));

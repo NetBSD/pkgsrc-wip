@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- sandbox/policy/switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ sandbox/policy/switches.cc
 @@ -37,7 +37,9 @@ const char kGpuSandboxFailuresFatal[] = 
  // Meant to be used as a browser-level switch for testing purposes only.

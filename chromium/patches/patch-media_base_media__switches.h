@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- media/base/media_switches.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/base/media_switches.h
 @@ -43,7 +43,7 @@ MEDIA_EXPORT extern const char kDisableB
  MEDIA_EXPORT extern const char kReportVp9AsAnUnsupportedMimeType[];
@@ -15,7 +15,7 @@ $NetBSD$
  MEDIA_EXPORT extern const char kAlsaInputDevice[];
  MEDIA_EXPORT extern const char kAlsaOutputDevice[];
  #endif
-@@ -334,13 +334,26 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kMedia
+@@ -336,13 +336,26 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kMedia
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPlaybackSpeedButton);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPreloadMediaEngagementData);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPreloadMetadataSuspend);
@@ -44,7 +44,7 @@ $NetBSD$
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kReduceHardwareVideoDecoderBuffers);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kResumeBackgroundVideo);
-@@ -354,7 +367,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kSuspe
+@@ -356,7 +369,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kSuspe
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUnifiedAutoplay);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseAndroidOverlayForSecureOnly);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseFakeDeviceForMediaStream);
@@ -53,7 +53,7 @@ $NetBSD$
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoDecodeLinux);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoDecodeLinuxGL);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoEncodeLinux);
-@@ -370,7 +383,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapi
+@@ -372,7 +385,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapi
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVp9SModeHWEncoding);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVSyncMjpegDecoding);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -62,7 +62,7 @@ $NetBSD$
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kV4L2H264TemporalLayerHWEncoding);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVideoBlitColorAccuracy);
-@@ -490,7 +503,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kBackg
+@@ -493,7 +506,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kBackg
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseOutOfProcessVideoDecoding);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  

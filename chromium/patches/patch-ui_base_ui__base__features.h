@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/base/ui_base_features.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/base/ui_base_features.h
-@@ -126,7 +126,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
+@@ -129,7 +129,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
  BASE_DECLARE_FEATURE(kWaylandSessionManagement);
  #endif  // BUILDFLAG(IS_OZONE)
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-06-11 15:58:18.866277011 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-07-03 13:12:11.711357753 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
-@@ -0,0 +1,392 @@
+@@ -0,0 +1,400 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -200,6 +200,7 @@ $NetBSD$
 +bool SandboxLinux::SetUnveil(const std::string process_type, sandbox::mojom::Sandbox sandbox_type) {
 +  FILE *fp;
 +  char *s = NULL, *cp = NULL, *home = NULL, **ap, *tokens[MAXTOKENS];
++  char *xdg_var = NULL;
 +  char path[PATH_MAX];
 +  const char *ufile;
 +  size_t len = 0, lineno = 0;
@@ -264,6 +265,13 @@ $NetBSD$
 +        strncpy(path, home, sizeof(path) - 1);
 +        path[sizeof(path) - 1] = '\0';
 +        strncat(path, tokens[0], sizeof(path) - 1 - strlen(path));
++      } else if (strncmp(tokens[0], "XDG_", 4) == 0) {
++        if ((xdg_var = getenv(tokens[0])) == NULL || *xdg_var == '\0') {
++          LOG(ERROR) << "failed to get " << tokens[0];
++          continue;
++	}
++        strncpy(path, xdg_var, sizeof(path) - 1);
++        path[sizeof(path) - 1] = '\0';
 +      } else {
 +        strncpy(path, tokens[0], sizeof(path) - 1);
 +        path[sizeof(path) - 1] = '\0';

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/base/ui_base_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/base/ui_base_features.cc
 @@ -119,7 +119,7 @@ BASE_FEATURE(kWaylandLinuxDrmSyncobj,
  // Controls whether support for Wayland's per-surface scaling is enabled.
@@ -33,7 +33,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -307,7 +307,7 @@ bool IsForcedColorsEnabled() {
+@@ -323,7 +323,7 @@ bool IsForcedColorsEnabled() {
  BASE_FEATURE(kEyeDropper,
               "EyeDropper",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

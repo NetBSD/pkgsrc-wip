@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/BUILD.gn.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/extensions/BUILD.gn.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/extensions/BUILD.gn
-@@ -1468,6 +1468,10 @@ source_set("extensions") {
+@@ -1479,6 +1479,10 @@ source_set("extensions") {
        deps += [ "//chrome/services/printing/public/mojom" ]
      }
  

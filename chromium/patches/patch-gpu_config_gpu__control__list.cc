@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_control_list.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- gpu/config/gpu_control_list.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ gpu/config/gpu_control_list.cc
-@@ -831,7 +831,7 @@ GpuControlList::OsType GpuControlList::G
+@@ -830,7 +830,7 @@ GpuControlList::OsType GpuControlList::G
    return kOsAndroid;
  #elif BUILDFLAG(IS_FUCHSIA)
    return kOsFuchsia;

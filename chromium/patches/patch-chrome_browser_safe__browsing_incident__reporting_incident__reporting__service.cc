@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc
-@@ -694,7 +694,7 @@ void IncidentReportingService::OnEnviron
+@@ -693,7 +693,7 @@ void IncidentReportingService::OnEnviron
  
  // Process::Current().CreationTime() is missing on some platforms.
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
-@@ -18,7 +18,7 @@
+@@ -19,7 +19,7 @@
  #include "base/unguessable_token.h"
  #include "build/build_config.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  namespace content {
  class SandboxIPCHandler;
  }
-@@ -85,7 +85,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -86,7 +86,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
      kMaxValue = GET_SHMEM_TEMP_DIR_FAILURE
    };
  
@@ -24,16 +24,7 @@ $NetBSD$
    // Structure to limit access to executable region creation.
    struct ExecutableRegion {
     private:
-@@ -217,7 +217,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
-                            CheckPlatformHandlePermissionsCorrespondToMode);
-   static PlatformSharedMemoryRegion Create(Mode mode,
-                                            size_t size
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-                                            ,
-                                            bool executable = false
- #endif
-@@ -236,7 +236,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -125,7 +125,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
  #if BUILDFLAG(IS_FUCHSIA)
      kNotVmo,
  #endif
@@ -42,3 +33,12 @@ $NetBSD$
      kFcntlFailed,
      kReadOnlyFdNotReadOnly,
      kUnexpectedReadOnlyFd,
+@@ -256,7 +256,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+                            CheckPlatformHandlePermissionsCorrespondToMode);
+   static PlatformSharedMemoryRegion Create(Mode mode,
+                                            size_t size
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+                                            ,
+                                            bool executable = false
+ #endif

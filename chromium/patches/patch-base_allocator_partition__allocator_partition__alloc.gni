@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-05-30 19:50:32.000000000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
 @@ -91,7 +91,7 @@ if (is_nacl) {
  # TODO(crbug.com/329199197): Clean this up when experiments are complete.
@@ -15,7 +15,7 @@ $NetBSD$
                       !is_hwasan && (is_linux || is_android)
  
  declare_args() {
-@@ -353,7 +353,7 @@ declare_args() {
+@@ -351,7 +351,7 @@ declare_args() {
  declare_args() {
    # Shadow metadata is still under development and only supports Linux
    # for now.
@@ -24,7 +24,7 @@ $NetBSD$
  }
  
  declare_args() {
-@@ -496,7 +496,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+@@ -494,7 +494,7 @@ assert(!use_asan_backup_ref_ptr || use_r
  # dependencies that use partition_allocator are compiled in AOSP against a
  # version of glibc that does not include pkeys syscall numbers.
  is_pkeys_available =

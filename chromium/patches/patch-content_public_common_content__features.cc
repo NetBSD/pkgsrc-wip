@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- content/public/common/content_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/public/common/content_features.cc
-@@ -80,7 +80,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
+@@ -87,7 +87,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
  // Runs the audio service in a separate process.
  BASE_FEATURE(kAudioServiceOutOfProcess,
               "AudioServiceOutOfProcess",
@@ -15,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1275,9 +1275,9 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -1268,9 +1268,9 @@ BASE_FEATURE(kWebAssemblyTiering,
  BASE_FEATURE(kWebAssemblyTrapHandler,
               "WebAssemblyTrapHandler",
  #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
@@ -27,7 +27,7 @@ $NetBSD$
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1334,7 +1334,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExten
+@@ -1327,7 +1327,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExten
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/fake_gpu_memory_buffer.cc.orig	2025-05-30 19:50:32.000000000 +0000
-+++ media/video/fake_gpu_memory_buffer.cc
-@@ -15,7 +15,7 @@
+--- gpu/command_buffer/client/fake_gpu_memory_buffer.cc.orig	2025-06-30 06:54:11.000000000 +0000
++++ gpu/command_buffer/client/fake_gpu_memory_buffer.cc
+@@ -14,7 +14,7 @@
  #include "media/base/format_utils.h"
  #include "media/base/video_frame.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <fcntl.h>
  #include <sys/stat.h>
  #include <sys/types.h>
-@@ -30,7 +30,7 @@ namespace media {
+@@ -29,7 +29,7 @@ namespace gpu {
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD$
  base::ScopedFD GetDummyFD() {
    base::ScopedFD fd(open("/dev/zero", O_RDWR));
    DCHECK(fd.is_valid());
-@@ -74,7 +74,7 @@ static base::AtomicSequenceNumber buffer
+@@ -41,7 +41,7 @@ static base::AtomicSequenceNumber buffer
  
  }  // namespace
  

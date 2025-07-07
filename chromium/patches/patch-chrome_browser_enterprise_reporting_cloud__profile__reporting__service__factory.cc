@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/reporting/cloud_profile_reporting_service_factory.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/enterprise/reporting/cloud_profile_reporting_service_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/enterprise/reporting/cloud_profile_reporting_service_factory.cc
 @@ -10,7 +10,7 @@
  #include "components/enterprise/browser/reporting/report_scheduler.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
-@@ -47,7 +47,7 @@ CloudProfileReportingServiceFactory::Clo
+@@ -48,7 +48,7 @@ CloudProfileReportingServiceFactory::Clo
                                   ProfileSelections::BuildForRegularProfile()) {
    DependsOn(enterprise::ProfileIdServiceFactory::GetInstance());
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ net/socket/udp_socket_posix.cc
-@@ -81,6 +81,32 @@ constexpr int kBindRetries = 10;
+@@ -75,6 +75,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
  constexpr int kPortEnd = 65535;
  
@@ -39,7 +39,7 @@ $NetBSD$
  int GetSocketFDHash(int fd) {
    return fd ^ 1595649551;
  }
-@@ -530,12 +556,17 @@ int UDPSocketPosix::SetRecvTos() {
+@@ -524,12 +550,17 @@ int UDPSocketPosix::SetRecvTos() {
  #endif  // BUILDFLAG(IS_APPLE)
    }
  
@@ -58,7 +58,7 @@ $NetBSD$
    if (confirm) {
      sendto_flags_ |= MSG_CONFIRM;
    } else {
-@@ -556,7 +587,7 @@ int UDPSocketPosix::SetBroadcast(bool br
+@@ -550,7 +581,7 @@ int UDPSocketPosix::SetBroadcast(bool br
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    int value = broadcast ? 1 : 0;
    int rv;

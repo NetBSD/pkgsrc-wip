@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_strip_combo_button.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/ui/views/tabs/tab_strip_combo_button.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/tabs/tab_strip_combo_button.cc
-@@ -97,7 +97,7 @@ TabStripComboButton::TabStripComboButton
+@@ -94,7 +94,7 @@ TabStripComboButton::TabStripComboButton
        base::BindRepeating(&TabStripComboButton::OnNewTabButtonStateChanged,
                            base::Unretained(this))));
  

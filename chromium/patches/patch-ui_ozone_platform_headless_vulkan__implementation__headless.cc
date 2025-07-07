@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/ozone/platform/headless/vulkan_implementation_headless.cc
 @@ -116,7 +116,7 @@ VulkanImplementationHeadless::ExportVkFe
  
@@ -30,6 +30,6 @@ $NetBSD$
    auto tiling = VK_IMAGE_TILING_OPTIMAL;
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (gmb_handle.native_pixmap_handle.modifier !=
+   if (gmb_handle.native_pixmap_handle().modifier !=
        gfx::NativePixmapHandle::kNoModifier) {
      tiling = VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT;

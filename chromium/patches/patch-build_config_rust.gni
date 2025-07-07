@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2025-05-30 19:50:32.000000000 +0000
+--- build/config/rust.gni.orig	2025-06-30 06:54:11.000000000 +0000
 +++ build/config/rust.gni
-@@ -188,7 +188,7 @@ if (is_linux || is_chromeos) {
+@@ -191,7 +191,7 @@ if (is_linux || is_chromeos) {
      rust_abi_target = "aarch64-unknown-linux-gnu"
      cargo_target_abi = ""
    } else if (current_cpu == "x86") {
@@ -15,14 +15,16 @@ $NetBSD$
      cargo_target_abi = ""
    } else if (current_cpu == "x64") {
      rust_abi_target = "x86_64-unknown-linux-gnu"
-@@ -361,6 +361,10 @@ if (is_linux || is_chromeos) {
+@@ -373,7 +373,11 @@ if (is_linux || is_chromeos) {
    }
  }
  
+-if (toolchain_has_rust) {
 +if (is_bsd) {
 +  rust_abi_target = string_replace(rust_abi_target, "linux-gnu", current_os)
 +}
 +
- assert(!toolchain_has_rust || rust_abi_target != "")
++if (toolchain_has_rust && !is_bsd) {
+   assert(rust_abi_target != "")
  
- # This variable is passed to the Rust libstd build.
+   _known_rust_target_triples_filepath = "//build/rust/known-target-triples.txt"

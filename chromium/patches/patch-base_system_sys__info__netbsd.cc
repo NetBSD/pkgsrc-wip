@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_netbsd.cc.orig	2025-06-11 15:58:18.715168575 +0000
+--- base/system/sys_info_netbsd.cc.orig	2025-07-03 13:12:11.565280398 +0000
 +++ base/system/sys_info_netbsd.cc
-@@ -0,0 +1,89 @@
+@@ -0,0 +1,98 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -18,6 +18,7 @@ $NetBSD$
 +#include <sys/param.h>
 +#include <sys/shm.h>
 +#include <sys/sysctl.h>
++#include <uvm/uvm_extern.h>
 +
 +#include "base/notreached.h"
 +#include "base/posix/sysctl.h"
@@ -56,7 +57,15 @@ $NetBSD$
 +
 +// static
 +uint64_t SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
-+  return AmountOfMemory(_SC_PHYS_PAGES);
++  // With NetBSD-11
++  //return AmountOfMemory(_SC_AVPHYS_PAGES);
++  struct uvmexp_sysctl uvmexp;
++  size_t len = sizeof(uvmexp);
++  int mib[] = { CTL_VM, VM_UVMEXP2 };
++  if (sysctl(mib, std::size(mib), &uvmexp, &len, NULL, 0) <0) {
++    NOTREACHED();
++  }
++  return static_cast<uint64_t>(uvmexp.free);
 +}
 +
 +// static

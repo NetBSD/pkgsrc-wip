@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.cc
 @@ -14,7 +14,7 @@
  #include "ui/gfx/mac/io_surface.h"
@@ -64,4 +64,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
      case Tag::kNativePixmapHandle:
        handle->type = gfx::NATIVE_PIXMAP;
-       return data.ReadNativePixmapHandle(&handle->native_pixmap_handle);
+       return data.ReadNativePixmapHandle(&handle->native_pixmap_handle_);

@@ -4,17 +4,8 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/common/pref_names.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/pref_names.h
-@@ -451,7 +451,7 @@ inline constexpr char kPreinstalledAppsI
-     "default_apps_install_state";
- 
- #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
--    BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // A list of extensions ids that have to be allowed to run in Incognito by the
- // user in order to use Incognito mode.
- inline constexpr char kMandatoryExtensionsForIncognitoNavigation[] =
 @@ -1334,7 +1334,7 @@ inline constexpr char kGeminiSettings[] 
  inline constexpr char kAllowedDomainsForApps[] =
      "settings.allowed_domains_for_apps";
@@ -24,7 +15,7 @@ $NetBSD$
  // Linux specific preference on whether we should match the system theme.
  inline constexpr char kSystemTheme[] = "extensions.theme.system_theme";
  #endif
-@@ -1511,7 +1511,7 @@ inline constexpr char kShowUpdatePromoti
+@@ -1504,7 +1504,7 @@ inline constexpr char kShowUpdatePromoti
      "browser.show_update_promotion_info_bar";
  #endif
  
@@ -33,7 +24,7 @@ $NetBSD$
  // Boolean that is false if we should show window manager decorations.  If
  // true, we draw a custom chrome frame (thicker title bar and blue border).
  inline constexpr char kUseCustomChromeFrame[] = "browser.custom_chrome_frame";
-@@ -2156,7 +2156,7 @@ inline constexpr char kDownloadDefaultDi
+@@ -2151,7 +2151,7 @@ inline constexpr char kDownloadDefaultDi
  inline constexpr char kDownloadDirUpgraded[] = "download.directory_upgrade";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -42,7 +33,7 @@ $NetBSD$
  inline constexpr char kOpenPdfDownloadInSystemReader[] =
      "download.open_pdf_in_system_reader";
  #endif
-@@ -2651,14 +2651,14 @@ inline constexpr char kMediaStorageIdSal
+@@ -2654,14 +2654,14 @@ inline constexpr char kMediaStorageIdSal
  inline constexpr char kMediaCdmOriginData[] = "media.cdm.origin_data";
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -59,7 +50,7 @@ $NetBSD$
  // Records whether the user has seen an HTTP auth "negotiate" header.
  inline constexpr char kReceivedHttpAuthNegotiateHeader[] =
      "net.received_http_auth_negotiate_headers";
-@@ -2750,7 +2750,7 @@ inline constexpr char kIsolatedWebAppIns
+@@ -2753,7 +2753,7 @@ inline constexpr char kIsolatedWebAppIns
  inline constexpr char kIsolatedWebAppPendingInitializationCount[] =
      "profile.isolated_web_app.install.pending_initialization_count";
  
@@ -68,7 +59,7 @@ $NetBSD$
  // Boolean that specifies whether OK-AS-DELEGATE flag from KDC is respected
  // along with kAuthNegotiateDelegateAllowlist.
  inline constexpr char kAuthNegotiateDelegateByKdcPolicy[] =
-@@ -3269,7 +3269,7 @@ inline constexpr char kKioskChromeAppsFo
+@@ -3271,7 +3271,7 @@ inline constexpr char kKioskChromeAppsFo
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -77,7 +68,7 @@ $NetBSD$
  // Defines administrator-set availability of Chrome for Testing.
  inline constexpr char kChromeForTestingAllowed[] = "chrome_for_testing.allowed";
  #endif
-@@ -3795,7 +3795,7 @@ inline constexpr char kScreenCaptureWith
+@@ -3797,7 +3797,7 @@ inline constexpr char kScreenCaptureWith
  inline constexpr char kSandboxExternalProtocolBlocked[] =
      "profile.sandbox_external_protocol_blocked";
  
@@ -86,7 +77,7 @@ $NetBSD$
  // Boolean that indicates if system notifications are allowed to be used in
  // place of Chrome notifications.
  inline constexpr char kAllowSystemNotifications[] =
-@@ -3991,7 +3991,7 @@ inline constexpr char kLensDesktopNTPSea
+@@ -3995,7 +3995,7 @@ inline constexpr char kLensDesktopNTPSea
      "policy.lens_desktop_ntp_search_enabled";
  #endif
  
@@ -95,7 +86,7 @@ $NetBSD$
  // A dict mapping the edition name with the major version it was shown.
  inline constexpr char kWhatsNewEditionUsed[] = "browser.whats_new.edition_used";
  // A list containing the features of each module in order of when they
-@@ -4088,7 +4088,7 @@ inline constexpr char kPrintingOAuth2Aut
+@@ -4092,7 +4092,7 @@ inline constexpr char kPrintingOAuth2Aut
      "printing.oauth2_authorization_servers";
  #endif
  

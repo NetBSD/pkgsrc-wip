@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/cdm_host_file_path.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/common/media/cdm_host_file_path.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/media/cdm_host_file_path.cc
 @@ -90,7 +90,7 @@ void AddCdmHostFilePaths(
    cdm_host_file_paths->emplace_back(chrome_framework_path,

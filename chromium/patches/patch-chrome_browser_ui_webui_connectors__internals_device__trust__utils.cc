@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/base64url.h"
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/policy/chrome_browser_policy_connector.h"
-@@ -38,7 +38,7 @@ namespace enterprise_connectors::utils {
+@@ -39,7 +39,7 @@ namespace enterprise_connectors::utils {
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD$
  
  connectors_internals::mojom::KeyTrustLevel ParseTrustLevel(
      BPKUR::KeyTrustLevel trust_level) {
-@@ -173,7 +173,7 @@ connectors_internals::mojom::Certificate
+@@ -176,7 +176,7 @@ connectors_internals::mojom::Certificate
  }  // namespace
  
  connectors_internals::mojom::KeyInfoPtr GetKeyInfo() {

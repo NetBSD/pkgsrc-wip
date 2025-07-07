@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
 @@ -173,7 +173,7 @@ class WebDragSourceAura : public content
    raw_ptr<aura::Window> window_;

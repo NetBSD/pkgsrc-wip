@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/chrome_features.cc
 @@ -81,7 +81,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
@@ -24,7 +24,7 @@ $NetBSD$
  // Enables the Restart background mode optimization. When all Chrome UI is
  // closed and it goes in the background, allows to restart the browser to
  // discard memory.
-@@ -231,7 +231,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
+@@ -249,7 +249,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
  BASE_FEATURE(kDesktopPWAsRunOnOsLogin,
               "DesktopPWAsRunOnOsLogin",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,8 +33,8 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -264,7 +264,7 @@ BASE_FEATURE(kDisplayEdgeToEdgeFullscree
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -282,7 +282,7 @@ BASE_FEATURE(kDisplayEdgeToEdgeFullscree
+              base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -42,7 +42,7 @@ $NetBSD$
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -1000,7 +1000,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
+@@ -995,7 +995,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
               "KAnonymityServiceStorage",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -51,7 +51,7 @@ $NetBSD$
  BASE_FEATURE(kLinuxLowMemoryMonitor,
               "LinuxLowMemoryMonitor",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1013,7 +1013,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -1008,7 +1008,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

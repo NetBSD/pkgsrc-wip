@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_monitor.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/metrics/power/process_monitor.cc
-@@ -65,7 +65,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
+@@ -64,7 +64,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
        process_metrics.GetPlatformIndependentCPUUsage());
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD$
    metrics.idle_wakeups = process_metrics.GetIdleWakeupsPerSecond();
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -83,7 +83,7 @@ void ScaleMetrics(ProcessMonitor::Metric
+@@ -82,7 +82,7 @@ void ScaleMetrics(ProcessMonitor::Metric
    }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -24,7 +24,7 @@ $NetBSD$
    metrics->idle_wakeups *= factor;
  #endif
  
-@@ -157,7 +157,7 @@ ProcessMonitor::Metrics& operator+=(Proc
+@@ -156,7 +156,7 @@ ProcessMonitor::Metrics& operator+=(Proc
    }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

@@ -4,9 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/enterprise/util/managed_browser_utils.cc
-@@ -222,7 +222,7 @@ void SetUserAcceptedAccountManagement(Pr
+@@ -213,7 +213,7 @@ void SetUserAcceptedAccountManagement(Pr
+   // The updated consent screen also ask the user for consent to share device
+   // signals.
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   if (accepted && base::FeatureList::IsEnabled(
+                       features::kEnterpriseUpdatedProfileCreationScreen)) {
+     profile->GetPrefs()->SetBoolean(
+@@ -225,7 +225,7 @@ void SetUserAcceptedAccountManagement(Pr
        profile_manager->GetProfileAttributesStorage()
            .GetProfileAttributesWithPath(profile->GetPath());
    if (entry) {
@@ -15,7 +24,7 @@ $NetBSD$
      SetEnterpriseProfileLabel(profile);
  #endif
      entry->SetUserAcceptedAccountManagement(accepted);
-@@ -341,7 +341,7 @@ bool CanShowEnterpriseProfileUI(Profile*
+@@ -344,7 +344,7 @@ bool CanShowEnterpriseProfileUI(Profile*
  }
  
  bool CanShowEnterpriseBadgingForNTPFooter(Profile* profile) {

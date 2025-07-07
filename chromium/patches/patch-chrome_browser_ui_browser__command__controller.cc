@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2025-05-30 19:50:32.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
 @@ -127,7 +127,7 @@
  #include "components/user_manager/user_manager.h"
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/ui/shortcuts/desktop_shortcuts_utils.h"
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -349,7 +349,7 @@ bool BrowserCommandController::IsReserve
+@@ -363,7 +363,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -612,7 +612,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -632,7 +632,7 @@ bool BrowserCommandController::ExecuteCo
        break;
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD$
      case IDC_MINIMIZE_WINDOW:
        browser_->window()->Minimize();
        break;
-@@ -829,7 +829,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -849,7 +849,7 @@ bool BrowserCommandController::ExecuteCo
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -51,7 +51,7 @@ $NetBSD$
        chrome::CreateDesktopShortcutForActiveWebContents(browser_);
  #else
        web_app::CreateWebAppFromCurrentWebContents(
-@@ -995,7 +995,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -1015,7 +1015,7 @@ bool BrowserCommandController::ExecuteCo
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
      case IDC_CHROME_WHATS_NEW:
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -60,7 +60,7 @@ $NetBSD$
        ShowChromeWhatsNew(browser_);
        break;
  #else
-@@ -1372,7 +1372,7 @@ void BrowserCommandController::InitComma
+@@ -1392,7 +1392,7 @@ void BrowserCommandController::InitComma
    command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
    command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
  #endif
@@ -69,12 +69,12 @@ $NetBSD$
    command_updater_.UpdateCommandEnabled(IDC_MINIMIZE_WINDOW, true);
    command_updater_.UpdateCommandEnabled(IDC_MAXIMIZE_WINDOW, true);
    command_updater_.UpdateCommandEnabled(IDC_RESTORE_WINDOW, true);
-@@ -1728,7 +1728,7 @@ void BrowserCommandController::UpdateCom
+@@ -1747,7 +1747,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    command_updater_.UpdateCommandEnabled(
-       IDC_CREATE_SHORTCUT, shortcuts::CanCreateDesktopShortcut(browser_));
- #else
+       IDC_CREATE_SHORTCUT,
+       shortcuts::CanCreateDesktopShortcut(current_web_contents));
