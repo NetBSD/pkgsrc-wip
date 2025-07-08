@@ -15,7 +15,7 @@
 #
 # libreswan: 5.0 5.0nb1 ...
 
-DISTNAME=	libreswan-5.2
+DISTNAME=	libreswan-5.3
 MASTER_SITES=   https://download.libreswan.org/
 
 CATEGORIES=	security
