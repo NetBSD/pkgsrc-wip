@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- base/files/file_path_watcher_bsd.cc.orig	2025-05-24 17:57:53.347893731 +0000
+--- base/files/file_path_watcher_bsd.cc.orig	2025-07-08 14:12:31.081278592 +0000
 +++ base/files/file_path_watcher_bsd.cc
 @@ -0,0 +1,54 @@
 +// Copyright 2021 The Chromium Authors. All rights reserved.

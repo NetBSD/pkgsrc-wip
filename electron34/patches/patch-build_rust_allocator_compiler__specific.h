@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/rust/allocator/compiler_specific.h.orig	2025-05-24 17:57:53.368427048 +0000
+--- build/rust/allocator/compiler_specific.h.orig	2025-07-08 14:12:31.099856043 +0000
 +++ build/rust/allocator/compiler_specific.h
 @@ -0,0 +1,38 @@
 +// Copyright 2023 The Chromium Authors

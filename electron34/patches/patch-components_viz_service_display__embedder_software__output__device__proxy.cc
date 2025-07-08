@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- components/viz/service/display_embedder/software_output_device_proxy.cc.orig	2025-05-24 17:57:53.463259741 +0000
+--- components/viz/service/display_embedder/software_output_device_proxy.cc.orig	2025-07-08 14:12:31.195262821 +0000
 +++ components/viz/service/display_embedder/software_output_device_proxy.cc
 @@ -0,0 +1,161 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.

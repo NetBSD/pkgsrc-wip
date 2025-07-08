@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/rust/allocator/immediate_crash.h.orig	2025-05-24 17:57:53.368560986 +0000
+--- build/rust/allocator/immediate_crash.h.orig	2025-07-08 14:12:31.099981887 +0000
 +++ build/rust/allocator/immediate_crash.h
 @@ -0,0 +1,171 @@
 +// Copyright 2021 The Chromium Authors

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/rust/allocator/DEPS.orig	2025-05-24 17:57:53.367438514 +0000
+--- build/rust/allocator/DEPS.orig	2025-07-08 14:12:31.098876851 +0000
 +++ build/rust/allocator/DEPS
 @@ -0,0 +1,9 @@
 +include_rules = [

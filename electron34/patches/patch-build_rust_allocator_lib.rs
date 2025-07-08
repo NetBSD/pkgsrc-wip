@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/rust/allocator/lib.rs.orig	2025-05-24 17:57:53.368701347 +0000
+--- build/rust/allocator/lib.rs.orig	2025-07-08 14:12:31.100118921 +0000
 +++ build/rust/allocator/lib.rs
 @@ -0,0 +1,119 @@
 +// Copyright 2025 The Chromium Authors

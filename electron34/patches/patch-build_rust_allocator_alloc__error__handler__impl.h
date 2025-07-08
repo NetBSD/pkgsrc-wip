@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/rust/allocator/alloc_error_handler_impl.h.orig	2025-05-24 17:57:53.367920703 +0000
+--- build/rust/allocator/alloc_error_handler_impl.h.orig	2025-07-08 14:12:31.099356268 +0000
 +++ build/rust/allocator/alloc_error_handler_impl.h
 @@ -0,0 +1,21 @@
 +// Copyright 2025 The Chromium Authors

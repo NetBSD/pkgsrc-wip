@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/blink/renderer/platform/audio/denormal_disabler_test.cc.orig	2025-05-24 17:57:53.599172464 +0000
+--- third_party/blink/renderer/platform/audio/denormal_disabler_test.cc.orig	2025-07-08 14:12:31.328400916 +0000
 +++ third_party/blink/renderer/platform/audio/denormal_disabler_test.cc
 @@ -0,0 +1,51 @@
 +// Copyright 2025 The Chromium Authors

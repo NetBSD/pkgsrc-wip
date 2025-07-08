@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/lzma_sdk/C/7zWindows.h.orig	2025-05-24 17:57:53.643950247 +0000
+--- third_party/lzma_sdk/C/7zWindows.h.orig	2025-07-08 14:12:31.373414416 +0000
 +++ third_party/lzma_sdk/C/7zWindows.h
 @@ -0,0 +1,101 @@
 +/* 7zWindows.h -- StdAfx

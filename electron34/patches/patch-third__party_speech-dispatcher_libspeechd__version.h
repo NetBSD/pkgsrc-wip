@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/speech-dispatcher/libspeechd_version.h.orig	2025-05-24 17:57:53.656605086 +0000
+--- third_party/speech-dispatcher/libspeechd_version.h.orig	2025-07-08 14:12:31.385854097 +0000
 +++ third_party/speech-dispatcher/libspeechd_version.h
 @@ -0,0 +1,29 @@
 +/*

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- services/device/hid/hid_service_freebsd.cc.orig	2025-05-24 17:57:53.567510357 +0000
+--- services/device/hid/hid_service_freebsd.cc.orig	2025-07-08 14:12:31.298078336 +0000
 +++ services/device/hid/hid_service_freebsd.cc
 @@ -0,0 +1,395 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/electron_node/tools/generate_gn_filenames_json.py.orig	2025-05-24 17:57:53.635416417 +0000
+--- third_party/electron_node/tools/generate_gn_filenames_json.py.orig	2025-07-08 14:12:31.364891265 +0000
 +++ third_party/electron_node/tools/generate_gn_filenames_json.py
 @@ -0,0 +1,117 @@
 +#!@PYTHONBIN@

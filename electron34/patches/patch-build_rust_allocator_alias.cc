@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- build/rust/allocator/alias.cc.orig	2025-05-24 17:57:53.367560759 +0000
+--- build/rust/allocator/alias.cc.orig	2025-07-08 14:12:31.098995941 +0000
 +++ build/rust/allocator/alias.cc
 @@ -0,0 +1,22 @@
 +// Copyright 2023 The Chromium Authors
