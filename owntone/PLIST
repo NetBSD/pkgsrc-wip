@@ -11,11 +11,19 @@ share/doc/owntone/docs/advanced/outputs-pulse.md
 share/doc/owntone/docs/advanced/radio-streams.md
 share/doc/owntone/docs/advanced/remote-access.md
 share/doc/owntone/docs/artwork.md
-share/doc/owntone/docs/clients/cli.md
-share/doc/owntone/docs/clients/mpd.md
-share/doc/owntone/docs/clients/remote.md
-share/doc/owntone/docs/clients/supported-clients.md
-share/doc/owntone/docs/clients/web-interface.md
+share/doc/owntone/docs/audio-outputs/airplay.md
+share/doc/owntone/docs/audio-outputs/chromecast.md
+share/doc/owntone/docs/audio-outputs/local-audio.md
+share/doc/owntone/docs/audio-outputs/mobile.md
+share/doc/owntone/docs/audio-outputs/roku.md
+share/doc/owntone/docs/audio-outputs/streaming.md
+share/doc/owntone/docs/audio-outputs/web.md
+share/doc/owntone/docs/building.md
+share/doc/owntone/docs/configuration.md
+share/doc/owntone/docs/control-clients/cli-api.md
+share/doc/owntone/docs/control-clients/desktop.md
+share/doc/owntone/docs/control-clients/mobile.md
+share/doc/owntone/docs/control-clients/web.md
 share/doc/owntone/docs/getting-started.md
 share/doc/owntone/docs/index.md
 share/doc/owntone/docs/installation.md
@@ -23,10 +31,7 @@ share/doc/owntone/docs/integrations/lastfm.md
 share/doc/owntone/docs/integrations/spotify.md
 share/doc/owntone/docs/json-api.md
 share/doc/owntone/docs/library.md
-share/doc/owntone/docs/outputs/airplay.md
-share/doc/owntone/docs/outputs/chromecast.md
-share/doc/owntone/docs/outputs/local-audio.md
-share/doc/owntone/docs/outputs/streaming.md
+share/doc/owntone/docs/media-clients.md
 share/doc/owntone/docs/playlists.md
 share/doc/owntone/docs/smart-playlists.md
 share/doc/owntone/scripts/pairinghelper.sh
@@ -43,3 +48,6 @@ share/owntone/htdocs/index.html
 share/owntone/htdocs/mstile-150x150.png
 share/owntone/htdocs/safari-pinned-tab.svg
 share/owntone/htdocs/site.webmanifest
+@pkgdir var/run
+@pkgdir var/log
+@pkgdir var/cache/owntone
