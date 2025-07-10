@@ -1,13 +1,13 @@
 $NetBSD: distinfo,v 1.35 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (cmake-20.1.6.src.tar.xz) = f72b52fc2d78065651175d7d654d1cf75799a4581641f85c63aebb1ea2bc8c60
-SHA512 (cmake-20.1.6.src.tar.xz) = 6606f362bc84d986bc54925ea67a9cdd3ca50b730a6a308949ce851ee43d137b62e1bad11292af071224f80313501c18b1f291bf1084ba08bfa27adc5627ab83
-Size (cmake-20.1.6.src.tar.xz) = 8644 bytes
-BLAKE2s (lldb-20.1.6.src.tar.xz) = cb83592ae0bee48a2c2caa0e2c5ecb0dc7f59d7167562ae8fac912bf6e0672f9
-SHA512 (lldb-20.1.6.src.tar.xz) = 0df0d08d45cf3108026c3ee33268c7f7b2309e075a6ed0fd40835d8a18342be3cf47927ee56f2d3f85d4fc8dcde13b4830091654513f3848cfaf014e4c533366
-Size (lldb-20.1.6.src.tar.xz) = 10855516 bytes
-BLAKE2s (runtimes-20.1.6.src.tar.xz) = d7560527b16ff68f15c50c0a5a59c6299cfa36252b5af947715a23c367348e3e
-SHA512 (runtimes-20.1.6.src.tar.xz) = 5155f8b9494596d08c7af06ace8b5c5193f001eb182f931ee84af11e834058e5ff8b8deb945ff0b72bb759c84bccd83de8086ddf973cd93d86b91f4c9bec3f18
-Size (runtimes-20.1.6.src.tar.xz) = 8332 bytes
+BLAKE2s (cmake-20.1.8.src.tar.xz) = 39070395d68854d6d9781a700093a638e304bbf68888ba1e6bfb07e2deb01b57
+SHA512 (cmake-20.1.8.src.tar.xz) = 0ff6018c0753f208e990e45403c4ae5764a0ac83a8d80d8db7d3c7dbface14a7c8339893d8f757ff2d7b3662253ba356cf157ae7072a0be170a9dc028f4d7a74
+Size (cmake-20.1.8.src.tar.xz) = 8652 bytes
+BLAKE2s (lldb-20.1.8.src.tar.xz) = 9061da36d8c3f1425dc7c55b0040a89b05ca0228484548ca4df177f305b82c5c
+SHA512 (lldb-20.1.8.src.tar.xz) = d36d407894001a0176e2644473ac2d963f17d729c0add9d728114bb190bfd3805b1af4ba585059bf891006f56ad688388149872b4393754c92925542493e1529
+Size (lldb-20.1.8.src.tar.xz) = 10854872 bytes
+BLAKE2s (runtimes-20.1.8.src.tar.xz) = 858d82c606feac6a09a6186eaa44676adc1145006735a58b3fe6576504da9e4f
+SHA512 (runtimes-20.1.8.src.tar.xz) = 6b6e4cbec4488632a2489b1073cc0a3b359e2239a16d791a8c111d45d3e41bf30211c8362cbcc2e5c174f95d2b521721adafb3ba0d8631dce032566b6eb96d3b
+Size (runtimes-20.1.8.src.tar.xz) = 8340 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 773d420c3fd2c9b4af6af9d42c5778e96a1ae52b
 SHA1 (patch-source_API_CMakeLists.txt) = 32840580507b3a7d05e76485da5830e92a76bb06

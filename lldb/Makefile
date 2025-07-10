@@ -22,6 +22,7 @@ GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_LIBCXX=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
@@ -73,6 +74,7 @@ NOT_FOR_PLATFORM+=	NetBSD-*-powerpc
 .include "../../devel/swig4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/clang/buildlink3.mk"
+.include "../../wip/libcxx/buildlink3.mk"
 .include "../../wip/llvm/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/application.mk"

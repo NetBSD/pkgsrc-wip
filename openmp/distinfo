@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.17 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-20.1.6.src.tar.xz) = f72b52fc2d78065651175d7d654d1cf75799a4581641f85c63aebb1ea2bc8c60
-SHA512 (cmake-20.1.6.src.tar.xz) = 6606f362bc84d986bc54925ea67a9cdd3ca50b730a6a308949ce851ee43d137b62e1bad11292af071224f80313501c18b1f291bf1084ba08bfa27adc5627ab83
-Size (cmake-20.1.6.src.tar.xz) = 8644 bytes
-BLAKE2s (openmp-20.1.6.src.tar.xz) = ec2bcd525aaab3689339cf69ecbff7a28b8564c19af2e33989d901e0ccba4165
-SHA512 (openmp-20.1.6.src.tar.xz) = 775632e46529d2396aaee69a3502987a71d2a09c3065965fc194232e4a41acd16e2cdfb9b0de776e4415aac109684f44079de67b137a18c88c271466d3eca1aa
-Size (openmp-20.1.6.src.tar.xz) = 1093988 bytes
-BLAKE2s (runtimes-20.1.6.src.tar.xz) = d7560527b16ff68f15c50c0a5a59c6299cfa36252b5af947715a23c367348e3e
-SHA512 (runtimes-20.1.6.src.tar.xz) = 5155f8b9494596d08c7af06ace8b5c5193f001eb182f931ee84af11e834058e5ff8b8deb945ff0b72bb759c84bccd83de8086ddf973cd93d86b91f4c9bec3f18
-Size (runtimes-20.1.6.src.tar.xz) = 8332 bytes
+BLAKE2s (cmake-20.1.8.src.tar.xz) = 39070395d68854d6d9781a700093a638e304bbf68888ba1e6bfb07e2deb01b57
+SHA512 (cmake-20.1.8.src.tar.xz) = 0ff6018c0753f208e990e45403c4ae5764a0ac83a8d80d8db7d3c7dbface14a7c8339893d8f757ff2d7b3662253ba356cf157ae7072a0be170a9dc028f4d7a74
+Size (cmake-20.1.8.src.tar.xz) = 8652 bytes
+BLAKE2s (openmp-20.1.8.src.tar.xz) = ed48fbe17f01e502e283a82a55d35e4b29cf44094d30bebbed85ec361bf61f8c
+SHA512 (openmp-20.1.8.src.tar.xz) = 79ed5737996c9f0806c610e5afaf104df136f8752169715bea913fe93e8d21700170559df421312c8202465d37cd7a7bdd4f9dc88022ac69e96f83dbaeb2f3ba
+Size (openmp-20.1.8.src.tar.xz) = 1093976 bytes
+BLAKE2s (runtimes-20.1.8.src.tar.xz) = 858d82c606feac6a09a6186eaa44676adc1145006735a58b3fe6576504da9e4f
+SHA512 (runtimes-20.1.8.src.tar.xz) = 6b6e4cbec4488632a2489b1073cc0a3b359e2239a16d791a8c111d45d3e41bf30211c8362cbcc2e5c174f95d2b521721adafb3ba0d8631dce032566b6eb96d3b
+Size (runtimes-20.1.8.src.tar.xz) = 8340 bytes
