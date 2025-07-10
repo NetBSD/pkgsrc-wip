@@ -16,7 +16,6 @@ LICENSE=	gnu-lgpl-v2
 
 WRKSRC=		${WRKDIR}
 
-PYTHON_VERSIONS_ACCEPTED=	311
 USE_LANGUAGES=			c c++
 USE_TOOLS+=			perl
 USE_TOOLS+=			gmake
