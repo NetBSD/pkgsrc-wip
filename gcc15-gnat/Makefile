@@ -1,21 +1,18 @@
 # $NetBSD: Makefile,v 1.1 2025/04/27 12:00:00 dkazankov Exp $
 
-GCC_PKGNAME=		gcc15-gnat
-GCC_DIST_VERSION=	15.1.0
-
-PKGNAME=	${GCC_PKGNAME}-${GCC_DIST_VERSION}
+DISTNAME=	gcc-${PKGVERSION_NOREV}
+PKGNAME=	gcc15-gnat-15.1.0
 COMMENT=	GNAT compiler and Ada tools
-DISTNAME=	gcc-${GCC_DIST_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-DISTFILES=		${DEFAULT_DISTFILES}
-EXTRACT_ONLY=		${DEFAULT_DISTFILES}
+#DISTFILES=		${DEFAULT_DISTFILES}
+#EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
@@ -31,9 +28,6 @@ INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
 
-USE_PKGSRC_GCC=		yes
-GCC_REQD+=		10
-
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
@@ -42,19 +36,69 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_PKGSRC_GCC?=	yes
+GCC_REQD+=		10
+
+GNAT_PKGBASE=		${PKGBASE}
+GNAT_PREFIX=		${PREFIX}/${GNAT_PKGBASE}
+GNAT_PKGSUFFIX=		gnat15
+BUILD_DEFS+=		GNAT_PKGBASE	GNAT_PREFIX	GNAT_PKGSUFFIX
+
 #PATH=			${PREFIX}/gcc10-aux/bin:${PREFIX}/bin:/usr/bin
 
 ## Build outside ${WRKSRC}
-OBJDIR=			${WRKDIR}/build
-CONFIGURE_DIRS=		${OBJDIR}
+#OBJDIR=			${WRKDIR}/build
+CONFIGURE_DIRS=		${WRKDIR}/build
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-GCC_SUBPREFIX=		${GCC_PKGNAME}
-GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
+GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
 
 .include "options.mk"
 
-LDFLAGS+=		-static
+# DO NOT REMOVE THIS SUBST.  If it fails, the corruption to
+# patch-gcc_Makefile.in chronicled in PR pkg/58963 `gcc:
+# LINK_LIBGCC_SPEC snafu' <https://gnats.NetBSD.org/58963> probably got
+# replicated yet again.  You must make sure that LINK_LIBGCC_SPEC is
+# appropriately set with @GCC_TARGET_MACHINE@ in patch-gcc_Makefile.in
+# or similar, or confirm with a discussion on tech-pkg@ that it is no
+# longer relevant before you remove this SUBST.
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	GCC_TARGET_MACHINE
+
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+BUILD_DEFS+=		GCC_TARGET_MACHINE
+
+# Use C preprocessed symbols on NetBSD
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=			select
+SUBST_MESSAGE.select=		Replace select with __gnat_select in ${SUBST_FILES.select}
+SUBST_STAGE.select=		pre-configure
+SUBST_FILES.select=		gcc/ada/libgnat/g-socthi.ads
+SUBST_SED.select=		-e "s,\"select\",\"__gnat_select\","
+
+SUBST_CLASSES+=			nanosleep
+SUBST_MESSAGE.nanosleep=	Replace nanosleep with __gnat_nanosleep in ${SUBST_FILES.nanosleep}
+SUBST_STAGE.nanosleep=		pre-configure
+SUBST_FILES.nanosleep=		gcc/ada/libgnat/s-osprim__posix.adb
+SUBST_SED.nanosleep=		-e "s,\"nanosleep\",\"__gnat_nanosleep\","
+
+SUBST_CLASSES+=			gettimeofday
+SUBST_MESSAGE.gettimeofday=	Replace gettimeofday with __gnat_gettimeofday in ${SUBST_FILES.gettimeofday}
+SUBST_STAGE.gettimeofday=	pre-configure
+SUBST_FILES.gettimeofday=	gcc/ada/libgnat/s-osprim__posix.adb
+SUBST_SED.gettimeofday=		-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
+.endif
+
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		ccs
+SUBST_STAGE.ccs=	pre-configure
+SUBST_FILES.ccs=	contrib/make_sunver.pl
+SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
+.endif
+
+#LDFLAGS+=		-static
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 #LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
@@ -66,8 +110,8 @@ LDFLAGS+=		-static
 LDFLAGS_FOR_TARGET=	#empty
 
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GCC_PREFIX}/lib
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GCC_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${GCC_TARGET_MACHINE}/${PKGVERSION_NOREV}/adalib
 LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 # Needed on Darwin when LDFLAGS point to a SDK
@@ -99,18 +143,18 @@ SUBST_SED.libstdc=	-e 's,libtool_VERSION=6:,libtool_VERSION=7:,g'
 CONFIGURE_ARGS+=	--enable-libssp
 .endif
 
-CONFIGURE_ARGS+=	--enable-languages=ada,c,c++ --enable-stage1-languages=c,c++,ada
+CONFIGURE_ARGS+=	--enable-languages=ada,c,c++ --enable-stage1-languages=ada,c,c++
 
 # This will create slightly slower compiler
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
-#CONFIGURE_ARGS+=	--enable-host-pie
-#CONFIGURE_ARGS+=	--enable-host-bind-now
+CONFIGURE_ARGS+=	--enable-host-pie
+CONFIGURE_ARGS+=	--enable-host-bind-now
 #CONFIGURE_ARGS+=	--enable-default-pie
-#CONFIGURE_ARGS+=	--with-newlib
+CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--enable-long-long
-CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-CONFIGURE_ARGS+=	--with-gxx-include-dir='${GCC_PREFIX}/include/c++'
+CONFIGURE_ARGS+=	--with-local-prefix=${GNAT_PREFIX}
+CONFIGURE_ARGS+=	--with-gxx-include-dir=${GNAT_PREFIX}/include/c++
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--enable-threads=posix
@@ -171,51 +215,30 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 FORTIFY_SUPPORTED=	no
 .endif
 
-.if ${OS_VARIANT} == "SmartOS"
-SUBST_CLASSES+=		ccs
-SUBST_STAGE.ccs=	pre-configure
-SUBST_FILES.ccs=	contrib/make_sunver.pl
-SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
-.endif
-
-# DO NOT REMOVE THIS SUBST.  If it fails, the corruption to
-# patch-gcc_Makefile.in chronicled in PR pkg/58963 `gcc:
-# LINK_LIBGCC_SPEC snafu' <https://gnats.NetBSD.org/58963> probably got
-# replicated yet again.  You must make sure that LINK_LIBGCC_SPEC is
-# appropriately set with @GCC_TARGET_MACHINE@ in patch-gcc_Makefile.in
-# or similar, or confirm with a discussion on tech-pkg@ that it is no
-# longer relevant before you remove this SUBST.
-SUBST_CLASSES+=		vars
-SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
-SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	gcc/Makefile.in
-SUBST_VARS.vars=	GCC_TARGET_MACHINE
-
-GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-BUILD_DEFS+=		GCC_TARGET_MACHINE
-
-# Use C preprocessed symbols on NetBSD
-.if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=			select
-SUBST_MESSAGE.select=		Replace select with __gnat_select in ${SUBST_FILES.select}
-SUBST_STAGE.select=		pre-configure
-SUBST_FILES.select=		gcc/ada/libgnat/g-socthi.ads
-SUBST_SED.select=		-e "s,\"select\",\"__gnat_select\","
-
-SUBST_CLASSES+=			nanosleep
-SUBST_MESSAGE.nanosleep=	Replace nanosleep with __gnat_nanosleep in ${SUBST_FILES.nanosleep}
-SUBST_STAGE.nanosleep=		pre-configure
-SUBST_FILES.nanosleep=		gcc/ada/libgnat/s-osprim__posix.adb
-SUBST_SED.nanosleep=		-e "s,\"nanosleep\",\"__gnat_nanosleep\","
-
-SUBST_CLASSES+=			gettimeofday
-SUBST_MESSAGE.gettimeofday=	Replace gettimeofday with __gnat_gettimeofday in ${SUBST_FILES.gettimeofday}
-SUBST_STAGE.gettimeofday=	pre-configure
-SUBST_FILES.gettimeofday=	gcc/ada/libgnat/s-osprim__posix.adb
-SUBST_SED.gettimeofday=		-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
-.endif
-
 CTF_FILES_SKIP+=	*/gengtype	# CPU limit exceeded
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${WRKDIR}/build
+
+post-test:
+	${RUN} cd ${WRKSRC} && cd ${WRKDIR}/build &&	\
+	${SHELL} ${WRKSRC}/contrib/test_summary >${WRKDIR}/test_summary.log
+	${INFO_MSG} "Test summary are available in ${WRKDIR}/test_summary.log"
+
+post-install:
+# Fix group write mode
+	${CHMOD} g-w ${DESTDIR}${GNAT_PREFIX}/lib/gcc/${GCC_TARGET_MACHINE}/${PKGVERSION_NOREV}/adainclude/standard.ads.h
+# Create old name that modern gnat no longer provides
+	${TEST} -f ${DESTDIR}${GNAT_PREFIX}/bin/gnat && \
+		( ${RUN} cd ${DESTDIR}${GNAT_PREFIX}/bin ; ${LN} -f gnat ada )
+.if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
+	${SH} files/values.c ${DESTDIR}${GNAT_PREFIX}/bin/gcc -m32 || ${TRUE}
+	${SH} files/values.c ${DESTDIR}${GNAT_PREFIX}/bin/gcc -m64 || ${TRUE}
+.endif
+
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} ${GNAT_PKGBASE} \( -type f -or -type l \) -print | ${SORT};
 
 TEST_TARGET=	-j ${MAKE_JOBS} -k check || ${TRUE}
 TEST_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
@@ -225,28 +248,5 @@ CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-pre-configure:
-	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
-
-post-test:
-	${RUN} cd ${WRKSRC} && cd ${OBJDIR} &&	\
-	${SHELL} ${WRKSRC}/contrib/test_summary >${WRKDIR}/test_summary.log
-	${INFO_MSG} "Test summary are available in ${WRKDIR}/test_summary.log"
-
-post-install:
-# Fix group write mode
-	${CHMOD} g-w ${DESTDIR}${GCC_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adainclude/standard.ads.h
-# Create old name that modern gnat no longer provides
-	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/gnat && \
-		( ${RUN} cd ${DESTDIR}${GCC_PREFIX}/bin ; ${LN} -f gnat ada )
-.if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
-	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32 || ${TRUE}
-	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64 || ${TRUE}
-.endif
-
-GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-	${FIND} ${GCC_SUBPREFIX} \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../mk/bsd.pkg.mk"

@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	gcc15-gnat
 .if !defined(GCC15_GNAT_BUILDLINK3_MK)
 GCC15_GNAT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15
-BUILDLINK_ABI_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15.1
+BUILDLINK_API_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15.1.0
+#BUILDLINK_ABI_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15.1.0
 BUILDLINK_PKGSRCDIR.gcc15-gnat?=	../../wip/gcc15-gnat
 BUILDLINK_DEPMETHOD.gcc15-gnat?=	build
 

@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc15-gnat
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
-PKG_SUGGESTED_OPTIONS=	gcc-graphite
+PKG_SUGGESTED_OPTIONS=	gcc-inplace-math gcc-graphite
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -43,8 +43,9 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ###
 ### Native Language Support
 ###
-.if !empty(PKG_OPTIONS:Mnls)
 PLIST_VARS+=		nls
+.if !empty(PKG_OPTIONS:Mnls)
+PLIST.nls=		yes
 USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
@@ -55,7 +56,6 @@ USE_BUILTIN.gettext=	no
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-PLIST.nls=		yes
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
