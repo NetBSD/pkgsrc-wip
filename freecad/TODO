@@ -22,3 +22,23 @@ index 30b7a1562e52..64414308d6ee 100644
  # \todo Fix duplication with prefix coded in Makefile.common
  QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
  CMAKE_PREFIX_PATH+=	${QTDIR}
+
+And the following pkgsrc Makefile fix:
+
+diff --git a/cad/occt/Makefile b/cad/occt/Makefile
+index a3e79082e05a..edab957b96ec 100644
+--- a/cad/occt/Makefile
++++ b/cad/occt/Makefile
+@@ -30,6 +30,12 @@ CXXFLAGS.SunOS+=		-DSOLARIS=1
+ LDFLAGS.SunOS+=			-lnsl
+ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+ 
++SUBST_CLASSES+=		unbl3
++SUBST_MESSAGE.unbl3=	Undoing buildlink3 paths in cmake exports.
++SUBST_STAGE.unbl3=	post-build
++SUBST_FILES.unbl3+=	${CMAKE_BUILD_DIR}/CMakeFiles/Export/*/OpenCASCADE*Targets.cmake
++SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}/lib,${PREFIX}/lib,g'
++
+ .include "../../mk/compiler.mk"
+ 
+ .if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
