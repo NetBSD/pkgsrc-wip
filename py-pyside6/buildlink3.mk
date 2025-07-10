@@ -9,8 +9,8 @@ PY_PYSIDE6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-pyside6+=	${PYPKGPREFIX}-pyside6>=6.0.0
 BUILDLINK_ABI_DEPENDS.py-pyside6+=	${PYPKGPREFIX}-pyside6>=6.0.0
-BUILDLINK_FILES.py-pyside6+=		lib/python3.11/site-packages/PySide6/*
-BUILDLINK_FILES.py-pyside6+=		lib/python3.11/site-packages/shiboken6/*
+BUILDLINK_FILES.py-pyside6+=		${PYSITELIB}/PySide6/*
+BUILDLINK_FILES.py-pyside6+=		${PYSITELIB}/shiboken6/*
 BUILDLINK_FILES.py-pyside6+=		share/PySide6/glue/*
 BUILDLINK_PKGSRCDIR.py-pyside6?=	../../wip/py-pyside6
 
