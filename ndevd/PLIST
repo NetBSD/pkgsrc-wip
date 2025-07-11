@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/ndevd.h
+libexec/ndevd-hooks/01-makedev
+libexec/ndevd-hooks/02-wedgenames
+libexec/ndevd-run-hooks
+man/man8/ndevd.8
+sbin/ndevd
+share/examples/rc.d/ndevd
