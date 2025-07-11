@@ -1,39 +1,24 @@
 "GNU gperf not found, but it's output appears to be present."
 
-It's using /usr/pkg/* for things like pid and db; not sure if that's
-correct.
+- it's using /usr/pkg/* for things like pid and db; not sure if that's
+  correct.
 
-Not sure that ffmpeg5 is correct
+- set ownership of db directory:
+    /usr/pkg/var/cache/owntone/
+  to `owntone`
 
-Need to figure out ALSA so mpd mode can be tested.
+- need to figure out ALSA so mpd mode can be tested
 
-Config file should be installed into share/examples/owntone and
-installed using CONF_FILES.
+- config file should be installed into share/examples/owntone and
+  installed using CONF_FILES.
 
-Build and install web interface (separate package?).
+- need to define the runtime dependency list
 
-Starts then stops?
+  had to also start avahi and dbus-daemon
 
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: OwnTone version 28.12 taking off
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: Built with:
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - ffmpeg
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - Spotify
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - librespot-c
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - LastFM
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - Without Chromecast
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - MPD
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - Websockets
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - ALSA
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - Webinterface
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: - Regex
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: mDNS init
-[2025-07-09 12:34:27] [FATAL] [            (-1)]     main: mDNS init failed
-[2025-07-09 12:34:27] [  LOG] [            (-1)]     main: Exiting.
+- build and install web interface (separate package?).
 
 Upstream bugs:
-
-- can't talk to amp
-  https://github.com/owntone/owntone-server/issues/1568
 
 - filescanner_ffmpeg.c needs patching
   https://github.com/owntone/owntone-server/issues/1901
