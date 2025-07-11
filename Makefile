@@ -1307,7 +1307,6 @@ SUBDIR+=	gmpc-lyricsplugin
 SUBDIR+=	gmrender-resurrect-git
 SUBDIR+=	gmrun
 SUBDIR+=	gn-git
-SUBDIR+=	gnat-glade
 SUBDIR+=	gnatcoll-bindings
 SUBDIR+=	gnatcoll-db
 SUBDIR+=	gnocchi
