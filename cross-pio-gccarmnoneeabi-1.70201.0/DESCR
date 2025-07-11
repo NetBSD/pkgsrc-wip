@@ -1,0 +1,5 @@
+cross-pio-gccarmnoneeabi-1.70201.0 is the packages/toolchain for
+platformio/platform-espressif32 and is for the esp32 arm processors.
+It is referenced in the .platformio installation tree at
+.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0
+

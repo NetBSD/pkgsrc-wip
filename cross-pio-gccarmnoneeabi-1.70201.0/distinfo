@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (gcc-arm-none-eabi-7-2018-q2-update-src.tar.bz2) = 4df05a3e992a71c6fb7d63ce8798f50b4043f81c39dedbf7d4ff5a8197717bba
+SHA512 (gcc-arm-none-eabi-7-2018-q2-update-src.tar.bz2) = d10c6d2cbaaa65869b388586895bd728eac6b6ddcd0de9b0896c5c61a000e7621eb9bd60c6ef5595de1befe1e61e3ef2573640d9ac74152b682825790a606717
+Size (gcc-arm-none-eabi-7-2018-q2-update-src.tar.bz2) = 170586363 bytes
