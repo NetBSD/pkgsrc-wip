@@ -1,0 +1,30 @@
+$NetBSD: patch-modes_Makefile.in,v 1.3 2022/01/24 18:05:58 micha Exp $
+
+Use INSTALL properly.
+First part was rejected by upstream.
+Second part is not suitable for upstream.
+
+--- modes/Makefile.in.orig	2021-12-17 04:47:25.000000000 +0000
++++ modes/Makefile.in
+@@ -633,7 +633,7 @@ install : install-program install-man in
+ 
+ install-program : xlock
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) $(INSTPGMFLAGS) $(UTILOBJDIR)xlock$(E) $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) $(UTILOBJDIR)xlock$(E) $(DESTDIR)$(bindir)
+ 	@MODULES@mkdir -p $(DESTDIR)$(DEF_MODULEPATH)
+ 	@MODULES@cp *.xlk $(DESTDIR)$(DEF_MODULEPATH)
+ 	@MODULES@cp glx/*.xlk $(DESTDIR)$(DEF_MODULEPATH)
+@@ -644,9 +644,10 @@ install-man :
+ 
+ install-ad :
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(xapploaddir)
+-	$(INSTALL_DATA) $(UTILDIR)XLock.ad $(DESTDIR)$(xapploaddir)/XLock
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)${datarootdir}/examples/xlock/app-defaults
++	$(INSTALL_DATA) $(UTILDIR)XLock.ad $(DESTDIR)${datarootdir}/examples/xlock/app-defaults/XLock
+ 	@FORTUNE@sed 's;^XLock.program: fortune;XLock.program: $(FORTUNE);' $(UTILDIR)XLock.ad > $(UTILOBJDIR)XLock.ad.tmp 
+-	@FORTUNE@$(INSTALL_DATA) $(UTILOBJDIR)XLock.ad.tmp $(DESTDIR)$(xapploaddir)/XLock
++	@FORTUNE@$(INSTALL_DATA) $(UTILOBJDIR)XLock.ad.tmp $(DESTDIR)${datarootdir}/examples/xlock/app-defaults/XLock
+ 	@FORTUNE@rm -f $(UTILOBJDIR)XLock.ad.tmp
+ 
+ install-sound :

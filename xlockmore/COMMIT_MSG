@@ -1,0 +1,12 @@
+x11/xlockmore: Update to 5.84
+
+5.84
+  New automata mode paterson added from same article as spirolateral.
+    Initial investigation by Paterson, Conway, and Beeler.
+
+5.83
+  spirolateral mode added thanks to Martin Gardner's book "Knotted
+    Donuts" chapter on "Worm Paths".  This generates simple and
+    complex spirolaterals.
+  Fixing -delay issue on VMS for x86-64.
+  Removed a warning in snprintf for Windows.
