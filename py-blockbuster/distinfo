@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (blockbuster-1.5.24.tar.gz) = 4c794ebaa1338cd4537dc692c7c1d4a4f63304d19e4e012ebb2215e37b170331
+SHA512 (blockbuster-1.5.24.tar.gz) = f286c1fad7236783aae81111480a43c946819264c7584fe9cdc466cdfff0c63c5076a9c74397e5f37782f5957c68834a1db7640a5aeae2bc0a2961fc472e7824
+Size (blockbuster-1.5.24.tar.gz) = 51245 bytes
