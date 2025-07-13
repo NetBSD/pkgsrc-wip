@@ -255,7 +255,6 @@ SUBDIR+=	auto-admin
 SUBDIR+=	auto-complete-git
 SUBDIR+=	auto-complete-mode
 SUBDIR+=	auto-dev
-SUBDIR+=	automake
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
 SUBDIR+=	autossh
