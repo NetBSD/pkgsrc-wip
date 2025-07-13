@@ -1,0 +1,7 @@
+Faster zlib and gzip compatible compression and decompression by
+providing Python bindings for the ISA-L library.
+
+This package provides Python bindings for the ISA-L library. The
+Intel(R) Intelligent Storage Acceleration Library (ISA-L) implements
+several key algorithms in assembly language. This includes a variety
+of functions to provide zlib/gzip-compatible compression.

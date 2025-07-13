@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (isal-1.7.2.tar.gz) = 29da61ca3f8bab0d513dbe5923eb76a1ba0408d6ac3a524753a60cc0e8b299e5
+SHA512 (isal-1.7.2.tar.gz) = 452350bca17b4243ecc6250ce6055b38de04a65a48ff3d549ae111e46cefed5bf5bcf5a3c1961179dd55956a543157260f1cb6e91e34bef4a4cccfa96fe295e6
+Size (isal-1.7.2.tar.gz) = 785694 bytes
