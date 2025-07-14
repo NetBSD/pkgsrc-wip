@@ -1,0 +1,234 @@
+graphics/graphviz: Update to 13.1.0
+
+## [13.1.0] – 2025-07-01
+
+### Added
+
+- A new command line option, `-Afoo=bar`, serves as a shorthand way of writing
+  `-Gfoo=bar -Nfoo=bar -Efoo=bar`. #2278
+
+### Fixed
+
+- Inter-cluster edges are no longer spuriously duplicated. #162, #258, #2615
+- When using the CMake build system, configuration no longer fails with syntax
+  errors when PangoCairo is unavailable. This was a regression in Graphviz
+  13.0.0. #2697
+
+## [13.0.1] – 2025-06-15
+
+### Changed
+
+- When using the CMake build system, the minimum required version of CMake has
+  been upgraded 3.14.1 → 3.21.
+- Building Graphviz from source now requires a C compiler with ISO C17 support.
+- Processing a graph with GVPR now makes explicit the default `"\N"` label for
+  nodes.
+
+### Fixed
+
+- Graphs with large weights no longer trigger double `free`s. #1494, #2331
+- `nop` preserves empty string labels. #2436
+- The order of programmatic calls to `gvContext`/`gvContextPlugin` and
+  `agmemread` no longer affects default node labels. #2434
+- Adjacency matrices are sparse and expanded on demand, removing out-of-bounds
+  accesses when computing these for some graphs. #1472
+
+## [13.0.0] – 2025-06-08
+
+### Added
+
+- Support for building the SWIG-generated Ruby language bindings has been
+  integrated into the CMake build system. This is controllable by the
+  `-DENABLE_RUBY={AUTO|ON|OFF}` option.
+- A new plugin for outputting ASCII art has been implemented, `-Tascii`. This
+  relies on [AA-lib](https://aa-project.sourceforge.net/aalib/) and is only
+  supported in the CMake build system. #2421
+- In gvpr, a new function `rename()` has been added for nodes. See `man gvpr`
+  for more information.
+
+### Changed
+
+- If Quartz is enabled on macOS, the autotools build will include support for it
+  as a built-in plugin for static builds, for dependency free i.e. PDF support.
+- Improved `agwrite` so it is much faster (linear not quadratic) when there are
+  many small subgraphs. #2593
+- **Breaking**: `rank_t.cache_nc` is now a `int64_t`.
+- **Breaking**: The `agreadline` function has been removed. #2558
+- **Breaking**: `gvRenderData` takes its `length` parameter as a `size_t *`. The
+  `GVJ_t` fields `output_data_allocated` and `output_data_position` have type
+  `size_t`.
+- The `GRAPHVIZ_CLI` variable in the CMake build system now additionally
+  controls whether the utilities `diffimg` and `prune` are built.
+- **Breaking**: The cgraph macros `agnew` and `agnnew` have been removed.
+- **Breaking**: The cgraph functions `agalloc`, `agrealloc`, and `agfree` have
+  been removed.
+- **Breaking**: The cdt queue types, `DT_QUEUE`, `Dtqueue`, `_Dtqueue` have been
+  removed.
+- **Breaking**: The cdt aliases `struct _dthold_s`, `struct _dtdata_s`,
+  `struct _dtmethod_s`, `struct _dtstat_s` have been removed.
+- **Breaking**: The cdt type `_Dttree` has been removed.
+- **Breaking**: The cdt aliases `struct _dtlink_s`, `struct _dtdisc_s`, and
+  `struct _dt_s` have been renamed to `struct dtlink_s_`, `struct dtdisc_s_`,
+  and `struct dt_s_` respectively.
+- **Breaking**: The cdt macro `DT_PRIME` has been removed.
+- **Breaking**: The cdt field `Dt_t.data` is now a `Dtdata_t` instead of
+  `Dtdata_t *`.
+- **Breaking**: `GVJ_t.imagedata` is now an `unsigned char *`.
+- The sandboxer implemented in Graphviz 12.2.1, `dot_sandbox`, supports macOS.
+- The baseline version of Autoconf required to build Graphviz from source has
+  been upgraded 2.61 → 2.69.
+- Building Graphviz from source now requires a C compiler with ISO C11 support.
+- GVPR programs are now able to print `char` and `unsigned` variables. #2587
+- CMake projects using Graphviz as a subproject (`add_subdirectory`) can now
+  link against and use `cgraph`, `pathplan`, and `xdot`.
+- CMake projects using Graphviz as an installed third-party dependency can now
+  discover its libraries with `find_package(graphviz)` and then use them as e.g.
+  `target_link_libraries(myapp PRIVATE graphviz::cgraph)`. #2598
+- Verbose `checkpath` warnings about ports not lying in their expected boxes
+  have been removed.
+- In verbose mode (`-v`) the dot layout algorithm now notes when it is entering
+  each layout phase. #2540
+- **Breaking**: The `EXPANDBP` macro has been removed.
+- **Breaking**: The `EXPANDBB` macro has been removed.
+- **Breaking**: `Agclos_t.strdict` is now an opaque pointer.
+- **Breaking**: `agstrfree` takes an extra parameter indicating whether the
+  string being freed is an HTML-like string.
+- **Breaking**: The `agcanon` function has been removed.
+- **Breaking**: The `Agiddisc_t.alloc` member has been removed.
+- **Breaking**: The `cflag` parameter to `agidsubg` has been removed.
+- The CMake build system now installs libgvpr.
+- The CMake build system now sets `DFLT_GVPRPATH` when compiling libgvpr.
+- The CMake build system now installs the included library of gvpr programs.
+- **Breaking**: The `all` parameter to `exclose` has been removed.
+- MinGW on 32-bit x86 (“mingw32”) is no longer supported as a platform.
+  Installers and release archives for this platform are no longer provided.
+  #2649
+- `gvgen` supports a new option, `-u<seed>`, for specifying the initial state of
+  the random number generator (RNG). The way in which the RNG is seeded has
+  slightly changed.
+- **Breaking**: libcgraph’s SO name has been updated 6 → 7.
+- The core plugin’s SVG output (`-Tsvg`, `-Tsvg_inline`) now sets
+  `xml:space="preserve"` on text elements for more accurate display.
+- **Breaking**: To duplicate strings, you now should distinguish between regular
+  text strings and HTML-like strings. Regular text strings are handled through
+  `agstrdup_text` and HTML-like strings are handled through `agstrdup_html`. The
+  The `agstrdup` function has been retained for backwards compatibility, but
+  should be avoided where possible due to its ambiguity with respect to the
+  caller’s intent. Similarly for string binding, `agstrbind` has gained two
+  variants `agstrbind_text` and `agstrbind_html`. These should be used in
+  preference to `agstrbind` whenever possible. Similarly for attribute
+  creation/lookup, `agattr` has gained two variants `agattr_text` and
+  `agattr_html`. These should be used in preference to `agattr` whenever
+  possible. Similarly for safe attribute creation/lookup, `agsafeset` has gained
+  two variants `agsafeset_text` and `agsafeset_html`. These should be used in
+  preference to `agsafeset` whenever possible. Similarly, `agxset` has gained
+  two variants `agxset_text` and `agxset_html`. These should be used in
+  preference to `agxset` whenever possible. Similarly, `agset` has gained two
+  variants `agset_text` and `agset_html`. These should be used in preference to
+  `agset` whenever possible. #2089, #2641
+- **Breaking**: The `EDGEOF` macro has been removed.
+- The Autotools build system enables large file support on 32-bit platforms.
+- **Breaking**: The Graphviz plugin version has been updated 6 → 8. A side
+  effect of this is the config6 file becoming config8.
+- The core plugin’s SVG output (`-Tsvg`, `-Tsvg_inline`) uses a `viewBox` that
+  matches the image’s dimensions. This reverts behavior introduced in Graphviz
+  2.38.0 to the behavior Graphviz 2.36.0 and prior had. The difference is most
+  apparent when using a non-default `dpi` setting. #2669
+- The Tcl bindings have been updated for compatibility with Tcl 9. #2668
+- The SVG output format (`-Tsvg`, `-Tsvg_inline`) no longer duplicates font
+  families.
+- **Breaking**: The function `aginternalmapclearlocalnames` has been removed.
+  #2664
+- In gvpr programs, the `#` and `in` operators now work on `ARGV`. #2582
+- **Breaking**: `xdot_color_stop.frac` is now a `double`.
+- The GD plugin’s PNG output (`-Tpng:cairo:gd`) now sets DPI in the written PNG.
+  #1617
+- The GDI+ plugin’s output (`-T*:cairo:gdiplus`) now sets DPI in the written
+  output. #1617
+- The Quartz plugin’s PNG output (`-Tpng:cairo:quartz`) now sets DPI in the
+  written PNG. #1617
+- **Breaking**: The `agconcat` function now takes an extra `filename` parameter.
+  If you are updating calling code, passing `NULL` for this parameter is a
+  reasonable migration strategy.
+- **Breaking**: The `agsetfile` function has been removed.
+- The GDK plugin’s output (`-T*:cairo:gdk`) now sets DPI in written JPEGs and
+  PNGs. #1617
+- **Breaking**: The `Agsym_t` struct has gained a new member, `owner`.
+
+### Fixed
+
+- Numeric overflows when computing the total crossings in a graph with a large
+  number of crossings have been avoided. #2621
+- A `free` of an invalid pointer has been fixed in the GD plugin. This was a
+  regression in Graphviz 12.1.1.
+- A double-`free` when using rotated images was fixed in the GD plugin. This was
+  a regression in Graphviz 2.26.0.
+- Guile 2.2 discovery has been restored in the Autotools build system. This was
+  a regression in Graphviz 12.2.0. #2624
+- Legacy information about memory disciplines has been removed from the cgraph
+  man page.
+- Some information in the gvc.3 man page that contradicted the gvc.h public
+  header has been corrected.
+- Smyrna is once again compilable on macOS. This was a regression in Graphviz
+  10.0.1. #2631
+- non-HTML (regular) strings and HTML-like strings are no longer considered
+  equivalent internally. This allows you to have a non-HTML string and an
+  HTML-like string with the same textual content. #2089
+- Smyrna no longer crashes when selecting `Edit→Attributes` with no open graph.
+  #2635
+- A bug in point map handling, where comparison of integer points were accessed
+  as doubles, has been corrected. The user facing consequences of this is
+  unknown, but could potentially lead to crashes, at least on 32-bit platforms.
+  Point maps are used by the neato layout engine. This was a regression in
+  Graphviz 12.0.0.
+- The executables in the Windows 64-bit Debug release artifacts were statically
+  linked, not dynamically linked like the 64-bit Release and all the 32-bit
+  executables. This has now been corrected. This was a regression in Graphviz
+  12.0.0. #2630
+- The `viewBox` attribute of an included SVG image no longer overrides the
+  `height` and `width` attributes, even when it precedes them. This was a
+  regression in Graphviz 2.30. #2636
+- The interpretation of `viewBox` attributes in included SVG images has been
+  corrected. #2636
+- Parsing of JPEG images used as node shapes has been corrected. This fixes a
+  problem where no or incorrectly sized images appeared in the output. Please
+  note that a bug in the GD plugin, which causes Graphviz to crash in Windows
+  Debug builds, now unfortunately seems to always occur when using the GD
+  plugin and JPEG images as node shapes. See
+  https://graphviz.org/docs/outputs/#image-formats for details. #2619
+- `twopi` no longer crashes when processing graphs with `splines="ortho"`. #2643
+- Network simplex functions have been refactored to avoid recursion. Now graphs
+  with deep node chains that previously caused stack overflows can be processed.
+  #2646
+- Calling the GVPR function `lock` with a second argument `> 2³¹ - 1` is no
+  longer misinterpreted as a negative number.
+- Out-of-bounds accesses during `gvgen` random tree generation have been fixed.
+  #2640
+- `gvmap` no longer reads out-of-bounds memory when processing the
+  `-c_opacity=…` command line option. This was a regression in Graphviz 2.49.0.
+- Using `rankdir=LR` in combination with `ltail` no longer causes crashes in
+  edge cases. #1949
+- Using `splines=curved` no longer causes crashes when cut points unexpectedly
+  do not intersect bounding boxes. #1453
+- In the CMake build system, the configuration step during installation
+  (`dot -c`) now anticipates that `$LD_LIBRARY_PATH` and `$DYLD_LIBRARY_PATH`
+  may be non-empty. #2676
+- Failures during installing nodes into ranks now results in a graceful exit
+  rather than referencing invalid memory. #1581
+- When using the Tcl bindings, deleting a graph no longer triggers a
+  use-after-free. This was a regression in Graphviz 2.30. #2618
+- The `layout` command in the Tcl bindings works once again. This was a
+  regression in Graphviz 2.42.0. #2618
+- In the CMake build system, configuring with
+  `-DENABLE_PYTHON=ON -DENABLE_SWIG=ON` no longer spuriously fails. #2675
+- An assertion failure when processing graphs with empty ranks has been fixed.
+  #1514
+- Using GVPR to set a default attribute on a subgraph whose root graph has no
+  default for that attribute no longer incorrectly sets the default on the root
+  graph. #2639
+- Mingle no longer crashes when doing Y coordinate search. This was a regression
+  in Graphviz 2.47.0. #2599
+- Smyrna no longer frees invalid pointers when processing xdot input. This was a
+  regression in Graphviz 2.50.0. #2687
+- Smyrna no longer crashes when processing xdot gradient colors or font
+  characters. This was a regression in Graphviz 2.34.0.

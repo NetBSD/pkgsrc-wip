@@ -1,0 +1,24 @@
+$NetBSD: patch-configure.ac,v 1.15 2024/07/05 10:34:12 micha Exp $
+
+Use the same path for all platforms in pkgsrc.
+
+--- configure.ac.orig	2024-02-10 22:00:40.000000000 +0000
++++ configure.ac
+@@ -92,8 +92,7 @@ if test -z "${LIBPOSTFIX++}"; then
+   case "${host_os}" in
+     *linux* )
+       case "${host_cpu}" in
+-        aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 | e2k )
+-          LIBPOSTFIX="64"
++        aarch64* | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 | e2k )
+           INTGOSIZE=64
+           ;;
+       esac
+@@ -101,7 +100,6 @@ if test -z "${LIBPOSTFIX++}"; then
+     *solaris* )
+       case "${host_cpu}" in
+         x86_64 | sparc64 )
+-          LIBPOSTFIX="/64"
+           INTGOSIZE=64
+           ;;
+       esac

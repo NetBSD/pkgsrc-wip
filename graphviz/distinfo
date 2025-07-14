@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.90 2025/04/28 13:19:49 adam Exp $
+
+BLAKE2s (graphviz-13.1.0.tar.xz) = ed8fcccbaf1d3f0c09b5a2824bc211e7253659f8f7257354464defe89c012c10
+SHA512 (graphviz-13.1.0.tar.xz) = 3bfe2bf975bbcf911b0e67c54449e3dcce4b485850abbfe9dda758dff6267f08893852de5f846541ccb3b1b13a940cc7e7fb3561a0e6a015bdd555e4c8e61859
+Size (graphviz-13.1.0.tar.xz) = 20949488 bytes
+SHA1 (patch-config_config__perl.pl) = 430acb7d7ee3e149de0af9832c5a29602884f83e
+SHA1 (patch-configure.ac) = dcb9fd2822d3eb5dddcda5a55746d51114f92d06
+SHA1 (patch-lib_gvc_Makefile.am) = 8a25c16a31923fc42138773f308f3b3fc5ee662b
+SHA1 (patch-lib_gvpr_actions.c) = d82023aa576ed4404e3a123ee063d58228ec2ea6
+SHA1 (patch-lib_gvpr_compile.h) = 5cf479c021783f74fc7e886faf1c0cf5b8e721de
+SHA1 (patch-plugin_gs_gvloadimage__gs.c) = 982ac1db252e3224633069db956c5dc803cd5ea9
