@@ -1194,6 +1194,7 @@ SUBDIR+=	gcc15-aux
 SUBDIR+=	gcc15-aux-libs
 SUBDIR+=	gcc15-gnat
 SUBDIR+=	gcc15-gnat-libs
+SUBDIR+=	gcc15-libjit
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
 SUBDIR+=	gcc44
