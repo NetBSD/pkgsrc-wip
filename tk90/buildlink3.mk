@@ -5,24 +5,17 @@ BUILDLINK_TREE+=	tk
 .if !defined(TK_BUILDLINK3_MK)
 TK_BUILDLINK3_MK:=
 
-# BUILDLINK_API_DEPENDS.tk+=	tk>=8.5.7
-# BUILDLINK_ABI_DEPENDS.tk+=	tk>=8.6.13nb1
-# BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk
-# xxx
 BUILDLINK_API_DEPENDS.tk+=	tk>=9.0.1
 BUILDLINK_ABI_DEPENDS.tk+=	tk>=9.0.1
-BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk90
+# xxx
+BUILDLINK_PKGSRCDIR.tk?=	../../wip/tk90
 
 BUILDLINK_FILES.tk+=	bin/wish*
 #
-# Make "-ltk" and "-ltk8.6" resolve into "-ltk86", so that we don't
+# Make "-ltk" resolve into "-ltk9.0", so that we don't
 # need to patch so many Makefiles.
 #
-# BUILDLINK_TRANSFORM+=	l:tk:tk86
-# BUILDLINK_TRANSFORM+=	l:tk8.6:tk86
-# xxx
-BUILDLINK_TRANSFORM+=	l:tk:tk90
-BUILDLINK_TRANSFORM+=	l:tk9.0:tk90
+BUILDLINK_TRANSFORM+=	l:tk:tk9.0
 
 TKCONFIG_SH?=	${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
@@ -43,7 +36,7 @@ pkgbase := tk
 .endif
 # xxx
 #.include "../../lang/tcl/buildlink3.mk"
-.include "../../lang/tcl90/buildlink3.mk"
+.include "../../wip/tcl90/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # TK_BUILDLINK3_MK
 

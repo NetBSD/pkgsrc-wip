@@ -5,10 +5,6 @@
 # used by lang/tcl-otcl/Makefile
 # used by x11/tk/Makefile
 
-#TK_SONUM=	86
-#TK_BASEVER=	8.6
-#TK_VERSION=	8.6.16
-
 TK_SONUM=	90
 TK_BASEVER=	9.0
 TK_VERSION=	9.0.1
