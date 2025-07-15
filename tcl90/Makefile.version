@@ -4,20 +4,11 @@
 # used by lang/tcl/Makefile
 # used by lang/tcl-otcl/Makefile
 
-#TCL_SONUM=	86
-#TCL_BASEVER=	8.6
-#TCL_VERSION=	8.6.16
-
-# Update bundled versions in lang/tcl/buildlink3.mk
-#ITCL_VERSION=		4.3.2
-#SQLITE3_VERSION=	3.47.2
-#TDBC_VERSION=		1.1.10
-#THREAD_VERSION=	2.8.11
-
 TCL_SONUM=	90
 TCL_BASEVER=	9.0
 TCL_VERSION=	9.0.1
 
+# Update bundled versions in lang/tcl/buildlink3.mk
 ITCL_VERSION=		4.3.2
 SQLITE3_VERSION=	3.47.2
 TDBC_VERSION=		1.1.10

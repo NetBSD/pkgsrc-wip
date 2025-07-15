@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.tcl.tk/
+HOMEPAGE=	https://www.tcl-lang.org/
 COMMENT=	Tool Command Language, a dynamic language
 LICENSE=	2-clause-bsd
 
@@ -29,7 +29,7 @@ USE_TOOLS+=		ln mkdir mv
 CONFIGURE_ARGS+=	--without-tzdata
 
 CONFIGURE_ARGS+=	--enable-zipfs
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+TOOL_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
 PKGCONFIG_OVERRIDE+=	unix/tcl.pc.in
 
@@ -81,7 +81,7 @@ EMB_SRC=	itcl-4.3.2 sqlite-3.47.2 tdbc-1.1.10 tdbcmysql-1.1.10 \
 		thread-3.0.1
 # xxx maybe add some kind of rule in mk/pkgformat/pkg/check.mk for
 # something like
-# 	${CHECK_BUNDLED_PKG_VULNERABILItIES} ${EMB_SRC}
+# 	${CHECK_BUNDLED_PKG_VULNERABILITIES} ${EMB_SRC}
 # or
 #	${AUDIT_PACKAGE} itcl-4.3.2
 #
@@ -89,7 +89,7 @@ EMB_SRC=	itcl-4.3.2 sqlite-3.47.2 tdbc-1.1.10 tdbcmysql-1.1.10 \
 VFILE=		${_EXTRACT_PKGVULNDIR:sh}/pkg-vulnerabilities
 pre-fetch:
 .if exists(${VFILE})
-.  if !empty(ALLOW_VULNERABLE_PACKAGES:tl:Mno)
+.  if ${ALLOW_VULNERABLE_PACKAGES:tl:Uno} == no
 	for i in ${EMB_SRC}; do \
 		${PKG_ADMIN} audit-pkg $$i || \
 		 { ${FAIL_MSG} "embedded source $$i has vulnerabilities. "\
