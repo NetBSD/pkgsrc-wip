@@ -17,4 +17,4 @@ if [ $# -eq 1 ]; then
  LAUNCH=$1
 fi
 
-exec ./launch_openmohaa_${LAUNCH}.@MACHINE_GNU_ARCH@
+exec ./launch_openmohaa_${LAUNCH}

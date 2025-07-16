@@ -2,7 +2,7 @@ $NetBSD$
 
 Include cstdlib for strtol(3)
 
---- code/parser/lex_source.txt.orig	2024-12-27 08:47:52.809968281 +0000
+--- code/parser/lex_source.txt.orig	2025-07-10 21:15:54.000000000 +0000
 +++ code/parser/lex_source.txt
 @@ -27,6 +27,7 @@
  #include "scriptcompiler.h"
@@ -11,4 +11,4 @@ Include cstdlib for strtol(3)
 +#include <cstdlib>
  #include <stdio.h>
  
- void fprintf2( FILE *f, const char *format, ... )
+ void fprintf2(FILE * f, const char *format, ...)
