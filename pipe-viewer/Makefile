@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pipe-viewer-0.5.3
+DISTNAME=	pipe-viewer-0.5.6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trizen/}
 
@@ -14,6 +14,7 @@ DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	yt-dlp-*:../../net/yt-dlp
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/WWW/PipeViewer/.packlist
