@@ -2,8 +2,7 @@
 
 .include "../../wip/llvm/version.mk"
 
-DISTNAME=	flang-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	flang-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

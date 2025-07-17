@@ -2,8 +2,11 @@
 
 .include "../../wip/llvm/version.mk"
 
-DISTNAME=	libcxxabi-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//:S/libcxxabi-/wasi-libcxx-/}
+EXTRACT_ELEMENTS+=	${DISTNAME}/libc
+EXTRACT_ELEMENTS+=	${DISTNAME}/libcxx
+EXTRACT_ELEMENTS+=	${DISTNAME}/libcxxabi
+
+PKGNAME=	wasi-libcxx-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,15 +15,6 @@ COMMENT=	C++ Standard Librares (libc++/libc++abi) for WASI/WebAssembly
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}
-
-# libcxx requires libcxxabi's cxxabi.h to build, but libcxxabi requires
-# libcxx's includes to build, so we have this unholy extra distfiles thing
-# in both of them to get them to build against each other without causing
-# circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
-LIBCXX=		libcxx-${LLVM_VERSION}.src
-EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
-SITES.${LIBCXX}${EXTRACT_SUFX}=	\
-	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
 TOOL_DEPENDS+=	lld-[0-9]*:../../wip/lld
 
@@ -149,8 +143,6 @@ CPPFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 post-extract:
 	${MKDIR} ${WRKDIR}/build_libcxx
 	${MKDIR} ${WRKDIR}/build_libcxxabi
-	${LN} -f -s ${WRKDIR}/${DISTNAME} ${WRKDIR}/libcxxabi
-	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 
 do-configure:
 	cd ${WRKSRC} && cd build_libcxx && \

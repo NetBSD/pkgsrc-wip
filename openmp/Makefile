@@ -2,8 +2,7 @@
 
 .include "../../wip/llvm/version.mk"
 
-DISTNAME=	openmp-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	openmp-${LLVM_VERSION}
 CATEGORIES=	parallel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

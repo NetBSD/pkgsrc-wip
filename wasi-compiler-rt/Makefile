@@ -2,8 +2,7 @@
 
 .include "../../wip/llvm/version.mk"
 
-DISTNAME=	compiler-rt-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//:S/compiler-rt-/wasi-compiler-rt-/}
+PKGNAME=	wasi-compiler-rt-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

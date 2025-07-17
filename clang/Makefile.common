@@ -4,12 +4,10 @@
 
 .include "../../wip/llvm/version.mk"
 
-DISTNAME=	clang-${LLVM_VERSION}.src
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://clang.llvm.org/
-COMMENT=	C language family frontend for LLVM
 LICENSE=	apache-2.0
 
 USE_CXX_FEATURES=	c++14

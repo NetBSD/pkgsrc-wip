@@ -2,8 +2,7 @@
 
 .include "../../wip/llvm/version.mk"
 
-DISTNAME=	polly-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	polly-${LLVM_VERSION}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

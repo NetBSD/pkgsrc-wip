@@ -1,16 +1,7 @@
 $NetBSD: distinfo,v 1.21 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-20.1.8.src.tar.xz) = 39070395d68854d6d9781a700093a638e304bbf68888ba1e6bfb07e2deb01b57
-SHA512 (cmake-20.1.8.src.tar.xz) = 0ff6018c0753f208e990e45403c4ae5764a0ac83a8d80d8db7d3c7dbface14a7c8339893d8f757ff2d7b3662253ba356cf157ae7072a0be170a9dc028f4d7a74
-Size (cmake-20.1.8.src.tar.xz) = 8652 bytes
-BLAKE2s (libcxx-20.1.8.src.tar.xz) = 4be07d74ddef5f84a7a14130b9089358f9e831d868100bfa79d7e3540f3bcbbc
-SHA512 (libcxx-20.1.8.src.tar.xz) = a5e36d99a44755c26d2056b60578f5fd5e4d3712bc971a065655879e0487011cfef9e3c4f13a748df8766cc72078e53cbed8e4ec811ac0460089e41366657ee3
-Size (libcxx-20.1.8.src.tar.xz) = 4455756 bytes
-BLAKE2s (libcxxabi-20.1.8.src.tar.xz) = e134570ab599d5787076c8f5c100228b27d8a7f929dfb591a8722d017913058c
-SHA512 (libcxxabi-20.1.8.src.tar.xz) = 900d8248ede4342bcd5d9974b6ccf7f2be3adb43cf644ce43aa453d2924a8cfa587adae6e9c6233372f3e8ce7c038f2675911b35272646cc38a65886c3f3418f
-Size (libcxxabi-20.1.8.src.tar.xz) = 585796 bytes
-BLAKE2s (runtimes-20.1.8.src.tar.xz) = 858d82c606feac6a09a6186eaa44676adc1145006735a58b3fe6576504da9e4f
-SHA512 (runtimes-20.1.8.src.tar.xz) = 6b6e4cbec4488632a2489b1073cc0a3b359e2239a16d791a8c111d45d3e41bf30211c8362cbcc2e5c174f95d2b521721adafb3ba0d8631dce032566b6eb96d3b
-Size (runtimes-20.1.8.src.tar.xz) = 8340 bytes
+BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
+SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
+Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes
 SHA1 (patch-src_CMakeLists.txt) = fcfadc20db2c0c9095b8ae9b25a5988384209115
 SHA1 (patch-src_demangle_Utility.h) = 7a4850869f9f4ce858d2cceeb999934c28292a95

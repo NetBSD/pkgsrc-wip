@@ -2,7 +2,9 @@
 
 .include "Makefile.common"
 
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	clang-${LLVM_VERSION}
+
+COMMENT=	C language family frontend for LLVM
 
 USE_TOOLS+=	perl:run
 

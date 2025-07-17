@@ -25,8 +25,7 @@
 
 .include "version.mk"
 
-DISTNAME=	llvm-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	llvm-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
