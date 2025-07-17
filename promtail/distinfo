@@ -4983,4 +4983,4 @@ Size (zombiezen.com_go_sqlite_@v_v1.4.0.mod) = 746 bytes
 BLAKE2s (zombiezen.com_go_sqlite_@v_v1.4.0.zip) = b7ced4e8ca97dab8fa3c877d80b4504bedec34fe60a132bbcdc55112c797aa2f
 SHA512 (zombiezen.com_go_sqlite_@v_v1.4.0.zip) = de84c8cbd055ef2dea3a8065e1118ac1e3935920388fff19821f98331016e005f5ce6e738b5cd5e134bee8f597450f1057b8efad97ec827b4fd6373e575a71db
 Size (zombiezen.com_go_sqlite_@v_v1.4.0.zip) = 141794 bytes
-SHA1 (patch-vendor_github.com_fsouza_fake-gcs-server_internal_backend_time__bsd.go) = db6bd35e8945d6802844bfc5c861fe32671db060
+SHA1 (patch-vendor_github.com_fsouza_fake-gcs-server_internal_backend_time__bsd.go) = f107dc9e63239823c6e0d90d68ed0f41527e3d00
