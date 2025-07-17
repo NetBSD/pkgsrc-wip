@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	loki-2.8.7
+DISTNAME=	loki-3.5.2
 PKGNAME=	${DISTNAME:S/loki/promtail/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
