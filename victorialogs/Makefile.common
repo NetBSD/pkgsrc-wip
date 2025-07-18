@@ -1,0 +1,24 @@
+# $NetBSD$
+#
+# used by wip/victorialogs/Makefile
+
+VICTORIALOGS_VERS=	1.26.0
+DISTNAME=		VictoriaLogs-${VICTORIALOGS_VERS}
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_GITHUB:=VictoriaMetrics/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/VictoriaMetrics/VictoriaLogs/
+LICENSE=	apache-2.0
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/victorialogs/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/victorialogs/patches
+
+MAKE_ENV+=	CGO_ENABLED=0
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+.include "${.CURDIR}/../../wip/victorialogs/go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
