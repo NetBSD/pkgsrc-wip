@@ -5879,6 +5879,7 @@ SUBDIR+=	verbiste
 SUBDIR+=	verilator
 SUBDIR+=	vhdtool-git
 SUBDIR+=	victorialogs
+SUBDIR+=	victorialogs-vlogscli
 SUBDIR+=	video-trimmer
 SUBDIR+=	video2x
 SUBDIR+=	vidrioclock
