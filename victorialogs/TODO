@@ -1,0 +1,8 @@
+Build fails because zstd could not be found:
+
+[...]
+... undefined reference to `ZDICT_isError'
+[...]
+
+Investigate what it is going on. Probably look how/if OpenBSD works.
+
