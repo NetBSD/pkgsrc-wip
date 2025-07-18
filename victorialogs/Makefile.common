@@ -1,6 +1,7 @@
 # $NetBSD$
 #
 # used by wip/victorialogs/Makefile
+# used by wip/victorialogs-vlogscli/Makefile
 
 VICTORIALOGS_VERS=	1.26.0
 DISTNAME=		VictoriaLogs-${VICTORIALOGS_VERS}
