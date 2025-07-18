@@ -1,0 +1,4 @@
+VictoriaLogs is open source user-friendly database for logs from
+VictoriaMetrics.
+
+This package contains vlogscli.
