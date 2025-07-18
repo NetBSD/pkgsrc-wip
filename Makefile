@@ -5878,6 +5878,7 @@ SUBDIR+=	venom
 SUBDIR+=	verbiste
 SUBDIR+=	verilator
 SUBDIR+=	vhdtool-git
+SUBDIR+=	victorialogs
 SUBDIR+=	video-trimmer
 SUBDIR+=	video2x
 SUBDIR+=	vidrioclock
