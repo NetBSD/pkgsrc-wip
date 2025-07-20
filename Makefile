@@ -5874,6 +5874,7 @@ SUBDIR+=	vcg
 SUBDIR+=	vcglib
 SUBDIR+=	vche
 SUBDIR+=	vcsh
+SUBDIR+=	vector
 SUBDIR+=	vee
 SUBDIR+=	velero
 SUBDIR+=	venom
