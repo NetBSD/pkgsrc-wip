@@ -1266,6 +1266,7 @@ SUBDIR+=	git-cinnabar
 SUBDIR+=	git-cinnabar-devel
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-extras
+SUBDIR+=	git-gitk
 SUBDIR+=	git-modes-git
 SUBDIR+=	git-multimail
 SUBDIR+=	git-spindle
