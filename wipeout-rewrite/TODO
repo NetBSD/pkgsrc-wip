@@ -1,0 +1,7 @@
+wipeout-rewrite TODO:
+
+*Extremely* dodgy LICENSE situation. The README says there "is no license" but
+the original author also has stipulations about how the code may be
+redistributed.
+
+    https://github.com/phoboslab/wipeout-rewrite/blob/master/README.md
