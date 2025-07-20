@@ -3880,6 +3880,8 @@ share/emacs/${PKGVERSION}/lisp/scroll-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/scroll-lock.elc
 share/emacs/${PKGVERSION}/lisp/select.el.gz
 share/emacs/${PKGVERSION}/lisp/select.elc
+share/emacs/${PKGVERSION}/lisp/send-to.el.gz
+share/emacs/${PKGVERSION}/lisp/send-to.elc
 share/emacs/${PKGVERSION}/lisp/server.el.gz
 share/emacs/${PKGVERSION}/lisp/server.elc
 share/emacs/${PKGVERSION}/lisp/ses.el.gz
