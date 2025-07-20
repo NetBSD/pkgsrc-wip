@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2025/03/05 02:13:13 scole Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
-PKGNAME=	tcl-${TCL_VERSION}
+PKGNAME=	tcl90-${TCL_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -10,8 +10,6 @@ HOMEPAGE=	https://www.tcl-lang.org/
 COMMENT=	Tool Command Language, a dynamic language
 LICENSE=	2-clause-bsd
 
-# xxx
-#.include "../../lang/tcl/Makefile.version"
 .include "Makefile.version"
 
 MAKE_JOBS_SAFE=	no
@@ -19,12 +17,34 @@ MAKE_JOBS_SAFE=	no
 WRKSRC=		${WRKDIR}/tcl${TCL_VERSION}
 
 USE_GCC_RUNTIME=	yes
-GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # because of the nested itcl
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 INSTALL_TARGET=		install
 USE_TOOLS+=		ln mkdir mv
+
+TCL_SUBDIR=		tcl/9.0
+.if !empty(TCL_SUBDIR)
+# Installation prefix is non-default.
+# needed for parallel installation with lang/tcl, which is 8.6
+# and 9.0 and 8.6 are not completely compatible
+# need to pass configure args manually, so don't set GNU_CONFIGURE
+HAS_CONFIGURE=			yes
+.  if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ARGS+=		--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
+.  else
+CONFIGURE_ARGS+=		--build=${MACHINE_GNU_PLATFORM:Q}
+.  endif
+CONFIGURE_ARGS+=		--host=${MACHINE_GNU_PLATFORM:Q}
+TCL_PREFIX=			${PREFIX}/${TCL_SUBDIR}
+CONFIGURE_ARGS+=		--prefix=${TCL_PREFIX:Q}
+CONFIGURE_ARGS+=		--infodir=${TCL_PREFIX:Q}/info
+CONFIGURE_ARGS+=		--mandir=${TCL_PREFIX:Q}/man
+BUILDLINK_PASSTHRU_DIRS+=	${TCL_PREFIX}
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${TCL_PREFIX}/lib
+.else
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # because of the nested itcl
+.endif
 
 CONFIGURE_ARGS+=	--without-tzdata
 
@@ -38,15 +58,13 @@ CHECK_PORTABILITY_SKIP=	win/configure
 # The test target gives better results when not run as root.
 TEST_TARGET=		test
 
-# xxx
-#.include "../../lang/tcl/options.mk"
 .include "options.mk"
 
 SUBST_CLASSES+=		tcl-config
 SUBST_STAGE.tcl-config=	post-build
 SUBST_FILES.tcl-config=	unix/tclConfig.sh
-SUBST_SED.tcl-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
-SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
+SUBST_SED.tcl-config+=	-e "s|${WRKSRC}/unix|${TCL_PREFIX}/lib|"
+SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${TCL_PREFIX}/include/tcl|"
 
 # Fix the exec path in bin/sqlite3_analyzer:
 #
@@ -57,7 +75,7 @@ SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
 SUBST_CLASSES+=		tclsh
 SUBST_STAGE.tclsh=	post-build
 SUBST_FILES.tclsh+=	pkgs/sqlite*/compat/sqlite3/spaceanal.tcl
-SUBST_SED.tclsh+=	-e '\|^\#! */bin/sh|,+2s|^exec tclsh |exec ${PREFIX}/bin/tclsh |'
+SUBST_SED.tclsh+=	-e '\|^\#! */bin/sh|,+2s|^exec tclsh |exec ${TCL_PREFIX}/bin/tclsh |'
 
 PLIST_SUBST+=		SONUM=${TCL_SONUM}
 PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
@@ -109,23 +127,23 @@ post-build:
 	      tdbcpostgres${TDBC_VERSION}/libtdbcpostgres${TDBC_VERSION}.dylib \
 	      tdbcsqlite${TDBC_VERSION}/libtdbcsqlite${TDBC_VERSION}.dylib \
 	      thread${THREAD_VERSION}/libthread${THREAD_VERSION}.dylib
-	install_name_tool -id ${PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
+	install_name_tool -id ${TCL_PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
 .  endfor
 .endif
 
 post-install:
 	cd ${WRKSRC}/unix && ${MAKE} \
-		BIN_INSTALL_DIR=${DESTDIR}${PREFIX}/bin \
-		LIB_INSTALL_DIR=${DESTDIR}${PREFIX}/lib \
-		CONFIG_INSTALL_DIR=${DESTDIR}${PREFIX}/lib \
-		SCRIPT_INSTALL_DIR=${DESTDIR}${PREFIX}/lib/tcl${TCL_BASEVER} \
-		INCLUDE_INSTALL_DIR=${DESTDIR}${PREFIX}/include \
-		PRIVATE_INCLUDE_INSTALL_DIR=${DESTDIR}${PREFIX}/include \
-		MAN_INSTALL_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR} \
+		BIN_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/bin \
+		LIB_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/lib \
+		CONFIG_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/lib \
+		SCRIPT_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/lib/tcl${TCL_BASEVER} \
+		INCLUDE_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/include \
+		PRIVATE_INCLUDE_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/include \
+		MAN_INSTALL_DIR=${DESTDIR}${TCL_PREFIX}/${PKGMANDIR} \
 		install-binaries install-libraries install-headers \
 		install-private-headers install-msgs
-	cd ${DESTDIR}${PREFIX}/bin && ${LN} -fs tclsh${TCL_BASEVER} tclsh
-	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && ${MV} Thread.3 Tcl_Thread.3
+	cd ${DESTDIR}${TCL_PREFIX}/bin && ${LN} -fs tclsh${TCL_BASEVER} tclsh
+	cd ${DESTDIR}${TCL_PREFIX}/${PKGMANDIR}/man3 && ${MV} Thread.3 Tcl_Thread.3
 
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=${SQLITE3_VERSION}
 .include "../../databases/sqlite3/buildlink3.mk"
