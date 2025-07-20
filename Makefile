@@ -2337,6 +2337,7 @@ SUBDIR+=	mccs
 SUBDIR+=	mce
 SUBDIR+=	mcl
 SUBDIR+=	mctcli
+SUBDIR+=	mctool-dev
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
