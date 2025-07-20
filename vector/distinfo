@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.62 2025/07/13 08:54:22 wiz Exp $
+
+BLAKE2s (vector-0.48.0.tar.gz) = 70178966d832d25b49a18fca3c8590e50bfb5fbbb17b04fb11cd5c223fb61e7d
+SHA512 (vector-0.48.0.tar.gz) = 5a19aedd9f225afb6592f371d390cd511da9ff89d5b6d0b4ac465c51d795b5f51bf058f116fb6ab5cd11480ae135e6783f166748c974f0e8a20061c489b4c6b9
+Size (vector-0.48.0.tar.gz) = 24414216 bytes

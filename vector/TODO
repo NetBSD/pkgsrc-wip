@@ -1,0 +1,4 @@
+Still do not pass "makesum" target:
+
+- several dependencies uses git+https schema that probably needs to be fetched
+  manually, investigate it!
