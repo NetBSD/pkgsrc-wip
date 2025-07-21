@@ -1,6 +1,8 @@
 $NetBSD$
 
-Fix use of click >= 8.2.0.
+Adjust click usage for >= 8.2.0, vs upstream's expecation of old click.
+
+https://github.com/espressif/esptool/pull/1104
 
 --- esptool/cli_util.py.orig	2025-07-19 20:28:53.595125845 +0000
 +++ esptool/cli_util.py

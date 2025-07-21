@@ -4,9 +4,12 @@ Packaged in wip by Frédéric Fauberteau
 
 pkgsrc changes:
 ---------------
-  * Add patch to break the upstream dependency requirement for click<8.2.0
-    since devel/py-click is at 8.2.1
-    (https://github.com/espressif/esptool/pull/1104).
+  * Adjust dependencies per upstream changes:
+    - require modern py-cryptography, dropping py-ecdsa
+    - add click and rich-click, dropping argcomplete
+  * Add patch to use up-to-date click (as found in pkgsrc), vs
+    upstream's expectation of old click.
+  * Adjust python versions; upstream requires >= 3.10
 
 upstream changes:
 -----------------
