@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (git-cola-4.13.0.tar.gz) = 9edf65f4cd03dd8632f7b1f964ed39ee453f273856a692862e8ea7bbf1175e86
+SHA512 (git-cola-4.13.0.tar.gz) = 57b74cf98b6ec72946d730a5e59fbe4e57edaefa7b935a1d757e43e4faea6bc5d1752fbf37767250120d7192cb131c6565b6577e1857c3c6ad48ab6518f21316
+Size (git-cola-4.13.0.tar.gz) = 1276304 bytes
