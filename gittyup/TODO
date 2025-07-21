@@ -1,0 +1,25 @@
+libgit2 can not be used, but building with libgit2 fails:
+
+CMake Error at dep/libgit2/CMakeLists.txt:37 (target_include_directories):
+  Cannot specify include directories for target "git2" which is not built by
+  this project.
+
+
+-- Checking for module 'libcmark'
+--   Found libcmark, version 0.31.1
+-- Found Lua: /scratch/wip/Gittyup/work/.buildlink/lib/liblua5.3.so;/usr/lib/libm.so (found version "5.3.6")
+-- Checking for module 'hunspell'
+--   Found hunspell, version 1.7.2
+CMake Error at src/util/CMakeLists.txt:1 (add_library):
+  add_library cannot create target "util" because another target with the
+  same name already exists.  The existing target is created in source
+  directory
+  "/scratch/wip/Gittyup/work/Gittyup-gittyup_v1.4.0/dep/libgit2/libgit2/src/util".
+  See documentation for policy CMP0002 for more details.
+
+
+CMake Error at src/util/CMakeLists.txt:3 (target_link_libraries):
+  Attempt to add link library "Qt5::Core" to target "util" which is not built
+  in this directory.
+
+  This is allowed only when policy CMP0079 is set to NEW.

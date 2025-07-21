@@ -1279,6 +1279,7 @@ SUBDIR+=	gitlab-assets
 SUBDIR+=	gitleaks
 SUBDIR+=	gitless
 SUBDIR+=	gitsome
+SUBDIR+=	gittyup
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gjs
