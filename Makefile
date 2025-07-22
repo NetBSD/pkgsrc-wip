@@ -3784,7 +3784,6 @@ SUBDIR+=	py-epub-utils
 SUBDIR+=	py-equation
 SUBDIR+=	py-errorhandler
 SUBDIR+=	py-escher
-SUBDIR+=	py-esptool
 SUBDIR+=	py-essm
 SUBDIR+=	py-ete3
 SUBDIR+=	py-etesync

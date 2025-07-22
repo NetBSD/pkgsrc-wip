@@ -1,5 +1,0 @@
-  - Understand/fix python version issues.  It's confusing what the
-    pkgsrc rules are, and what this package can cope with.
-  - test with an actual chip (gdt will do this)
-  - (probably) prune bugfixes, documentation, refactoring from
-    COMMIT_MSG as not belonging in NEWS
