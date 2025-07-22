@@ -1,0 +1,3 @@
+textproc/py-et_xmlfile: Add version 2.0.0
+Packaged in wip by mayuresh@acm.org
+Added to meet dependency of textproc/py-openpyxl
