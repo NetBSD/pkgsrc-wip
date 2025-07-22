@@ -10,6 +10,8 @@ HOMEPAGE=	https://foss.heptapod.net/openpyxl/et_xmlfile
 COMMENT=	Implementation of lxml.xmlfile for the standard library
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
