@@ -1,4 +1,13 @@
-net/powerdns-recursor52 Update to 5.2.0
+net/powerdns-recursor52 Update to 5.2.4
+5.2.4
+Released: 21st of July 2025
+Bug Fixes
+Fix PowerDNS Security Advisory 2025-04: A Recursor configured to send out ECS enabled queries can be sensitive to spoofing attempts.
+References: pull request 15851
+
+5.2.3
+Released: This version was never made available publicly.
+
 5.2.2
 Released: 9th of April 2025
 Improvements
