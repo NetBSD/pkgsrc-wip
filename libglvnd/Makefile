@@ -2,16 +2,20 @@
 
 DISTNAME=	libglvnd-v1.7.0
 PKGNAME=	${DISTNAME:S,-v,-,}
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	graphics
 MASTER_SITES=	https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v1.7.0/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org
+MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v1.7.0/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	The GL Vendor-Neutral Display library
+LICENSE=	modified-bsd
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# glvnd will conflict with MesaLib so we can tuck it in here for
+# safe keeping
+MESON_ARGS+=	--prefix=${PREFIX}/glvnd
 
 PKGCONFIG_OVERRIDE+=	libglvnd.pc.in
 PKGCONFIG_OVERRIDE+=	src/EGL/egl.pc.in

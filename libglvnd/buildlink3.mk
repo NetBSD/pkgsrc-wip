@@ -1,4 +1,4 @@
-# $NetBSD:$
+# $NetBSD$
 
 BUILDLINK_TREE+=	libglvnd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libglvnd
 LIBGLVND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libglvnd+=	libglvnd>=1.7.0
-BUILDLINK_PKGSRCDIR.libglvnd?=	../../wip/libglvnd
+BUILDLINK_PKGSRCDIR.libglvnd?=		../../wip/libglvnd
 
 .endif	# LIBGLVND_BUILDLINK3_MK
 
