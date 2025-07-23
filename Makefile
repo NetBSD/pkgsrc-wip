@@ -5839,6 +5839,7 @@ SUBDIR+=	unmo3
 SUBDIR+=	unnethack
 SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
+SUBDIR+=	unrest
 SUBDIR+=	unzip
 SUBDIR+=	uperf
 SUBDIR+=	uprof
