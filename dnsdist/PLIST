@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/dnsdist
+man/man1/dnsdist.1
+share/examples/dnsdist/dnsdist.conf-dist
