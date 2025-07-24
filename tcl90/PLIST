@@ -66,6 +66,7 @@ tcl/9.0/lib/tcl${BASEVER}/encoding/cp1255.enc
 tcl/9.0/lib/tcl${BASEVER}/encoding/cp1256.enc
 tcl/9.0/lib/tcl${BASEVER}/encoding/cp1257.enc
 tcl/9.0/lib/tcl${BASEVER}/encoding/cp1258.enc
+tcl/9.0/lib/tcl${BASEVER}/encoding/cp165.enc
 tcl/9.0/lib/tcl${BASEVER}/encoding/cp437.enc
 tcl/9.0/lib/tcl${BASEVER}/encoding/cp737.enc
 tcl/9.0/lib/tcl${BASEVER}/encoding/cp775.enc
@@ -380,6 +381,7 @@ tcl/9.0/man/man3/Tcl_ClassSetDestructor.3
 tcl/9.0/man/man3/Tcl_ClassSetMetadata.3
 tcl/9.0/man/man3/Tcl_ClearChannelHandlers.3
 tcl/9.0/man/man3/Tcl_Close.3
+tcl/9.0/man/man3/Tcl_CloseEx.3
 tcl/9.0/man/man3/Tcl_CommandComplete.3
 tcl/9.0/man/man3/Tcl_CommandTraceInfo.3
 tcl/9.0/man/man3/Tcl_Concat.3
@@ -638,6 +640,7 @@ tcl/9.0/man/man3/Tcl_GetRegExpFromObj.3
 tcl/9.0/man/man3/Tcl_GetReturnOptions.3
 tcl/9.0/man/man3/Tcl_GetServiceMode.3
 tcl/9.0/man/man3/Tcl_GetSizeFromStat.3
+tcl/9.0/man/man3/Tcl_GetSizeIntFromObj.3
 tcl/9.0/man/man3/Tcl_GetStackedChannel.3
 tcl/9.0/man/man3/Tcl_GetStartupScript.3
 tcl/9.0/man/man3/Tcl_GetStdChannel.3
@@ -725,6 +728,7 @@ tcl/9.0/man/man3/Tcl_MethodDeclarerObject.3
 tcl/9.0/man/man3/Tcl_MethodIsPrivate.3
 tcl/9.0/man/man3/Tcl_MethodIsPublic.3
 tcl/9.0/man/man3/Tcl_MethodIsType.3
+tcl/9.0/man/man3/Tcl_MethodIsType2.3
 tcl/9.0/man/man3/Tcl_MethodName.3
 tcl/9.0/man/man3/Tcl_MutexFinalize.3
 tcl/9.0/man/man3/Tcl_MutexLock.3
@@ -744,10 +748,12 @@ tcl/9.0/man/man3/Tcl_NewByteArrayObj.3
 tcl/9.0/man/man3/Tcl_NewDictObj.3
 tcl/9.0/man/man3/Tcl_NewDoubleObj.3
 tcl/9.0/man/man3/Tcl_NewInstanceMethod.3
+tcl/9.0/man/man3/Tcl_NewInstanceMethod2.3
 tcl/9.0/man/man3/Tcl_NewIntObj.3
 tcl/9.0/man/man3/Tcl_NewListObj.3
 tcl/9.0/man/man3/Tcl_NewLongObj.3
 tcl/9.0/man/man3/Tcl_NewMethod.3
+tcl/9.0/man/man3/Tcl_NewMethod2.3
 tcl/9.0/man/man3/Tcl_NewObj.3
 tcl/9.0/man/man3/Tcl_NewObjectInstance.3
 tcl/9.0/man/man3/Tcl_NewStringObj.3
@@ -1002,6 +1008,7 @@ tcl/9.0/man/mann/bgerror.n
 tcl/9.0/man/mann/binary.n
 tcl/9.0/man/mann/body.n
 tcl/9.0/man/mann/break.n
+tcl/9.0/man/mann/buildinfo.n
 tcl/9.0/man/mann/callback.n
 tcl/9.0/man/mann/catch.n
 tcl/9.0/man/mann/cd.n

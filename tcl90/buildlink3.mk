@@ -2,11 +2,11 @@
 
 BUILDLINK_TREE+=	tcl90
 
-.if !defined(TCL_BUILDLINK3_MK)
-TCL_BUILDLINK3_MK:=
+.if !defined(TCL90_BUILDLINK3_MK)
+TCL90_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tcl90+=	tcl90>=9.0.1
-BUILDLINK_ABI_DEPENDS.tcl90+=	tcl90>=9.0.1
+BUILDLINK_API_DEPENDS.tcl90+=	tcl90>=9.0.2
+BUILDLINK_ABI_DEPENDS.tcl90+=	tcl90>=9.0.2
 BUILDLINK_PKGSRCDIR.tcl90?=	../../wip/tcl90
 
 BUILDLINK_PASSTHRU_DIRS+=		${PREFIX}/tcl/9.0
@@ -28,11 +28,11 @@ _TOOLS_USE_PKGSRC.tclsh=	yes
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl90}/lib/tclConfig.sh
 TCLSH=			${BUILDLINK_PREFIX.tcl90}/bin/tclsh
 # Bundled library
-ITCL_VERSION=		4.3.2
-TDBC_VERSION=		1.1.10
+ITCL_VERSION=		4.3.3
+TDBC_VERSION=		1.1.11
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.endif # TCL_BUILDLINK3_MK
+.endif # TCL90_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-tcl90

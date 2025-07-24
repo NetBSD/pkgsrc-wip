@@ -22,7 +22,7 @@ BUILD_DIRS=		${CONFIGURE_DIRS}
 INSTALL_TARGET=		install
 USE_TOOLS+=		ln mkdir mv
 
-TCL_SUBDIR=		tcl/9.0
+TCL_SUBDIR=			tcl/9.0
 .if !empty(TCL_SUBDIR)
 # Installation prefix is non-default.
 # needed for parallel installation with lang/tcl, which is 8.6
@@ -42,8 +42,8 @@ CONFIGURE_ARGS+=		--mandir=${TCL_PREFIX:Q}/man
 BUILDLINK_PASSTHRU_DIRS+=	${TCL_PREFIX}
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${TCL_PREFIX}/lib
 .else
-GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # because of the nested itcl
+GNU_CONFIGURE=			yes
+GNU_CONFIGURE_STRICT=		no # because of the nested itcl
 .endif
 
 CONFIGURE_ARGS+=	--without-tzdata
