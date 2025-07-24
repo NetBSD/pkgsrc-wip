@@ -46,8 +46,6 @@ GNU_CONFIGURE=			yes
 GNU_CONFIGURE_STRICT=		no # because of the nested itcl
 .endif
 
-CONFIGURE_ARGS+=	--without-tzdata
-
 CONFIGURE_ARGS+=	--enable-zipfs
 TOOL_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
