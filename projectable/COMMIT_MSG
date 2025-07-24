@@ -1,0 +1,10 @@
+misc/projectable: update to 1.3.2
+
+What's Changed
+
+ - Add NetBSD by @0323pin in #27
+ - merge more config file settings into config by @aikomastboom in #28
+ - Merge entries within the 'commands' config by @warpfork in #29
+ - chore: update deps and msrv by @chenrui333 in #31
+ - feat: add dependabot by @chenrui333 in #32
+ - chore: update action deps and replace deprecated actions-rs/toolchain with actions-rust-lang/setup-rust-toolchain by @chenrui333 in #33
