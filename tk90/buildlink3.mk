@@ -2,8 +2,8 @@
 
 BUILDLINK_TREE+=	tk90
 
-.if !defined(TK_BUILDLINK3_MK)
-TK_BUILDLINK3_MK:=
+.if !defined(TK90_BUILDLINK3_MK)
+TK90_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tk90+=	tk90>=9.0.1
 BUILDLINK_ABI_DEPENDS.tk90+=	tk90>=9.0.1
@@ -42,6 +42,6 @@ pkgbase := tk90
 .endif
 .include "../../wip/tcl90/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.endif # TK_BUILDLINK3_MK
+.endif # TK90_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-tk90
