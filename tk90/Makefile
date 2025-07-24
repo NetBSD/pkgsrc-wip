@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.tcl.tk/
 COMMENT=	Graphical toolkit for TCL
 LICENSE=	2-clause-bsd
 
-.include "Makefile.version"
+.include "version.mk"
 
 WRKSRC=			${WRKDIR}/tk${TK_VERSION}
 
