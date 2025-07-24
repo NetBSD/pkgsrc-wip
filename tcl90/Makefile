@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.tcl-lang.org/
 COMMENT=	Tool Command Language, a dynamic language
 LICENSE=	2-clause-bsd
 
-.include "Makefile.version"
+.include "version.mk"
 
 MAKE_JOBS_SAFE=	no
 
