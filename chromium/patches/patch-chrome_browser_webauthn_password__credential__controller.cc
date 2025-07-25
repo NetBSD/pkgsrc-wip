@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/password_credential_controller.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/webauthn/password_credential_controller.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/webauthn/password_credential_controller.cc
 @@ -46,7 +46,7 @@ password_manager::PasswordManagerClient*
  }

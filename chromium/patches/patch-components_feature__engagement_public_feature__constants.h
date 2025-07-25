@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.h
 @@ -30,7 +30,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDummyFeature);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -50,13 +50,13 @@ BASE_DECLARE_FEATURE(kUseAdHocSigningFor
  #endif  // BUILDFLAG(IS_MAC)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
 @@ -102,7 +102,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)

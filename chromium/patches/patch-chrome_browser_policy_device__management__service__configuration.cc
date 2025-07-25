@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/device_management_service_configuration.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/policy/device_management_service_configuration.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/policy/device_management_service_configuration.cc
 @@ -22,7 +22,7 @@
  

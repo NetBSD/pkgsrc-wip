@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/BUILD.gn.orig	2025-06-30 06:54:11.000000000 +0000
+--- content/app/BUILD.gn.orig	2025-07-21 19:32:31.000000000 +0000
 +++ content/app/BUILD.gn
 @@ -90,9 +90,9 @@ source_set("content_main_runner_app") {
             "//third_party/tflite:buildflags",

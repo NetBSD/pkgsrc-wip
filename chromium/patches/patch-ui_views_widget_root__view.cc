@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/root_view.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/views/widget/root_view.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/views/widget/root_view.cc
 @@ -169,7 +169,7 @@ class AnnounceTextView : public View {
  #if BUILDFLAG(IS_CHROMEOS)

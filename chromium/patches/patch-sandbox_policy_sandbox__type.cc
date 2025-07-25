@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox_type.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -17,7 +17,7 @@
  #include "chromeos/ash/components/assistant/buildflags.h"

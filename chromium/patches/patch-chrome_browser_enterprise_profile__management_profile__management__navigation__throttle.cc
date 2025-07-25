@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc
 @@ -67,8 +67,8 @@ base::flat_map<std::string, SAMLProfileA
    // TODO(crbug.com/40267996): Add actual domains with attribute names.

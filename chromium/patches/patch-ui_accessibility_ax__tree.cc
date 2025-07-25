@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/accessibility/ax_tree.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/accessibility/ax_tree.cc
 @@ -867,7 +867,7 @@ bool AXTree::ComputeNodeIsIgnoredChanged
    return old_node_is_ignored != new_node_is_ignored;
@@ -24,7 +24,7 @@ $NetBSD$
    ClearExtraAnnouncementNodes();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -2181,7 +2181,7 @@ void AXTree::NotifyNodeAttributesWillCha
+@@ -2187,7 +2187,7 @@ void AXTree::NotifyNodeAttributesWillCha
                      new_data);
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  void AXTree::ClearExtraAnnouncementNodes() {
    if (!extra_announcement_nodes_) {
      return;
-@@ -2570,7 +2570,7 @@ bool AXTree::CreateNewChildVector(
+@@ -2576,7 +2576,7 @@ bool AXTree::CreateNewChildVector(
      AXTreeUpdateState* update_state) {
    DCHECK(GetTreeUpdateInProgressState());
    bool success = true;

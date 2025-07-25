@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/regional_capabilities/regional_capabilities_service_client.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/regional_capabilities/regional_capabilities_service_client.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/regional_capabilities/regional_capabilities_service_client.cc
 @@ -133,7 +133,7 @@ void RegionalCapabilitiesServiceClient::
        base::android::AttachCurrentThread(),

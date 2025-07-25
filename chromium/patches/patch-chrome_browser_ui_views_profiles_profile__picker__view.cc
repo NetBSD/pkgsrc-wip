@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_picker_view.cc
 @@ -84,7 +84,7 @@
  #include "chrome/browser/global_keyboard_shortcuts_mac.h"

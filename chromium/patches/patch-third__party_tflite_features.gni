@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/tflite/features.gni.orig	2025-06-30 06:54:11.000000000 +0000
+--- third_party/tflite/features.gni.orig	2025-07-21 19:32:31.000000000 +0000
 +++ third_party/tflite/features.gni
 @@ -8,7 +8,7 @@ import("//services/on_device_model/on_de
  

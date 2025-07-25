@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -48,20 +48,20 @@
  #include "content/public/browser/web_ui_controller_interface_binder.h"

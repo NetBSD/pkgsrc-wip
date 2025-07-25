@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_linux.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.h
 @@ -31,7 +31,7 @@ class ChromeBrowserMainPartsLinux : publ
  

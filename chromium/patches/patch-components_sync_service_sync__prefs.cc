@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_prefs.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/sync/service/sync_prefs.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/sync/service/sync_prefs.cc
 @@ -776,7 +776,7 @@ bool SyncPrefs::IsTypeSupportedInTranspo
        // transport mode everywhere.

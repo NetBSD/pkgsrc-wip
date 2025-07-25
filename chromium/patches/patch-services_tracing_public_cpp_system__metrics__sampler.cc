@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/system_metrics_sampler.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- services/tracing/public/cpp/system_metrics_sampler.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ services/tracing/public/cpp/system_metrics_sampler.cc
 @@ -166,8 +166,8 @@ void SystemMetricsSampler::ProcessSample
      TRACE_COUNTER(TRACE_DISABLED_BY_DEFAULT("system_metrics"),

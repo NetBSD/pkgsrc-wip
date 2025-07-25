@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- base/posix/unix_domain_socket.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ base/posix/unix_domain_socket.cc
 @@ -47,7 +47,7 @@ bool CreateSocketPair(ScopedFD* one, Sco
  

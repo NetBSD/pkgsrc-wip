@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_pref_names.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/policy/core/common/policy_pref_names.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/policy/core/common/policy_pref_names.cc
 @@ -191,7 +191,7 @@ const char kFloatingWorkspaceEnabled[] =
  // A boolean value indicating whether the built-in AI APIs are enabled.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -157,7 +157,8 @@ BASE_FEATURE(kPriceInsights,
               "PriceInsights",

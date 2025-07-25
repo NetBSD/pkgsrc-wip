@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.h
 @@ -365,7 +365,7 @@ class PaymentsDataManager : public Autof
    void SetAutofillHasSeenIban();

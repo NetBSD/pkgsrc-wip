@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc
 @@ -9,6 +9,10 @@
  

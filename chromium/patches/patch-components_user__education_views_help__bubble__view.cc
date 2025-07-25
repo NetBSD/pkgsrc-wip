@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -268,7 +268,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the

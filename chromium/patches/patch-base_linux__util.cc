@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/linux_util.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- base/linux_util.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ base/linux_util.cc
 @@ -163,10 +163,14 @@ void SetLinuxDistro(const std::string& d
  }

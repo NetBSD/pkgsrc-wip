@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/accessibility/accessibility_features.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/accessibility/accessibility_features.h
 @@ -347,7 +347,7 @@ AX_BASE_EXPORT BASE_DECLARE_FEATURE(kBlo
  AX_BASE_EXPORT bool IsBlockRootWindowAccessibleNameChangeEventEnabled();
