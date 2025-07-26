@@ -1,0 +1,4 @@
+divecmd TODO:
+
+- Upstream needs to update their code to be compatible with libdivecomputer
+  0.9.0, which is now the version in misc/libdivecomputer
