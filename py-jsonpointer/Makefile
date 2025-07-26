@@ -10,13 +10,10 @@ HOMEPAGE=	https://github.com/stefankoegl/python-json-pointer
 COMMENT=	Library to resolve JSON Pointers according to RFC 6901
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 USE_PYTEST=	no
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&					\
