@@ -23,8 +23,8 @@ CMAKE_CONFIGURE_ARGS+=	-DAUX_DATA=${PREFIX}/share/overgrowth
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cmake-pkgsrc-build/Overgrowth ${DESTDIR}${PREFIX}/bin/Overgrowth
-	${INSTALL_PROGRAM} ${WRKSRC}/cmake-pkgsrc-build/OvergrowthWorker ${DESTDIR}${PREFIX}/bin/OvergrowthWorker
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/Overgrowth ${DESTDIR}${PREFIX}/bin/Overgrowth
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/OvergrowthWorker ${DESTDIR}${PREFIX}/bin/OvergrowthWorker
 
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
