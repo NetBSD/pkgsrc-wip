@@ -19,16 +19,12 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_RAD_TELEMETRY=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_OGDA=OFF
 CMAKE_CONFIGURE_ARGS+=	-DAUX_DATA=${PREFIX}/share/overgrowth
-#CMAKE_ARG_PATH=	${WRKSRC}
 
 INSTALLATION_DIRS+=	bin
 
-pre-configure:
-	${MKDIR} ${WRKDIR}/build
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/build/Overgrowth ${DESTDIR}${PREFIX}/bin/Overgrowth
-	${INSTALL_PROGRAM} ${WRKDIR}/build/OvergrowthWorker ${DESTDIR}${PREFIX}/bin/OvergrowthWorker
+	${INSTALL_PROGRAM} ${WRKSRC}/cmake-pkgsrc-build/Overgrowth ${DESTDIR}${PREFIX}/bin/Overgrowth
+	${INSTALL_PROGRAM} ${WRKSRC}/cmake-pkgsrc-build/OvergrowthWorker ${DESTDIR}${PREFIX}/bin/OvergrowthWorker
 
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"

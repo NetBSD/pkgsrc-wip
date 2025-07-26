@@ -1,1 +1,3 @@
 - Get my NetBSD support branch integrated upstream
+
+- Actually add an install() directive to the CMake
