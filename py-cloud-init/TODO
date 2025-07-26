@@ -1,11 +1,6 @@
 Ref.
   https://bugs.launchpad.net/cloud-init/+bug/2006065
 
-Figure out how to install this thing.
- * Makefile insists on tests succeeding.
- * Makefile has no "install" target.
- * No "building" instructions in sight.
-
 Fix self tests so they succeed (or the relevant tests are skipped on NetBSD):
 
  * TestGetLinuxDistro.test_get_linux_distro_no_data

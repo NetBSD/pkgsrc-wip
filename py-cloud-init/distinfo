@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cloud-init-22.4.2.tar.gz) = 71d76f2773d2c94ad7e8b5b353b118016102d536b6d1ea06c990bf9f84e88135
-SHA512 (cloud-init-22.4.2.tar.gz) = b7d4629205ef2b184786908a3f922d635c811fed8f468649b1a892e93fbcbd54bc9eb366a49ceefb33acd32de1fc8d1a9a34c577c3b9d77825deb5f24e4fe18e
-Size (cloud-init-22.4.2.tar.gz) = 1511043 bytes
+BLAKE2s (cloud-init-25.1.3.tar.gz) = a378686e4fd3f6f671229d580f87a38c683e07ac307d01a021c0cbfc6f196e24
+SHA512 (cloud-init-25.1.3.tar.gz) = d60eb7312d03256745ee46236e32b6ff4ddf487e427d1f1cea452559e6ffd49286c9396dc618f4ae3aec3ec4e586cf5a9afc095274b3be7ff170772430e33c68
+Size (cloud-init-25.1.3.tar.gz) = 1896009 bytes

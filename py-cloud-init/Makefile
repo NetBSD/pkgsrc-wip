@@ -1,16 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	cloud-init-22.4.2
+DISTNAME=	cloud-init-25.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=canonical/}
+MASTER_SITES=	https://launchpad.net/cloud-init/trunk/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cloud-init.io/
 COMMENT=	Industry-standard cloud instance initialization
 LICENSE=	gnu-gpl-3 OR apache-2.0
-
-USE_TOOLS+=	gmake
 
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-oauthlib-[0-9]*:../../security/py-oauthlib
@@ -20,17 +18,18 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.10.4:../../net/py-netifaces
-# for testing:
-DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
+TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 
 # WIP pkgs:
 DEPENDS+=	${PYPKGPREFIX}-jsonpatch-[0-9]*:../../wip/py-jsonpatch
 
 MAKE_ENV+=	VARIANT=${OPSYS:tl}
 
-.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
