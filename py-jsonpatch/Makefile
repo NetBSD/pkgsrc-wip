@@ -10,14 +10,11 @@ HOMEPAGE=	https://github.com/stefankoegl/python-json-patch
 COMMENT=	Apply JSON Patches according to RFC 6902
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-jsonpointer>=1.9:../../wip/py-jsonpointer
+
 USE_LANGUAGES=	# none
 USE_PYTEST=	no
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-jsonpointer>=1.9:../../wip/py-jsonpointer
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&					\
