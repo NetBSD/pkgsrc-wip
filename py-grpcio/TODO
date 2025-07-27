@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/usr/pkg/lib/python3.13/site-packages/setuptools/_distutils/spawn.py", line 87, in spawn
-    subprocess.check_call(cmd, env=_inject_macos_ver(env))
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-

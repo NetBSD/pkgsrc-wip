@@ -3921,7 +3921,6 @@ SUBDIR+=	py-greenery
 SUBDIR+=	py-griddata
 SUBDIR+=	py-grimp
 SUBDIR+=	py-grip
-SUBDIR+=	py-grpcio
 SUBDIR+=	py-grpy
 SUBDIR+=	py-grtipy
 SUBDIR+=	py-gsl
