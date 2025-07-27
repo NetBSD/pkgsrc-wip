@@ -1,6 +1,7 @@
 $NetBSD$
 
 For size_t.
+https://github.com/soramimi/Guitar/pull/165
 
 --- src/common/rwfile.h.orig	2025-07-21 19:38:54.440889238 +0000
 +++ src/common/rwfile.h

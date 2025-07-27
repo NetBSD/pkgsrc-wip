@@ -1,6 +1,7 @@
 $NetBSD$
 
 For read() etc.
+https://github.com/soramimi/Guitar/pull/165
 
 --- src/zip/ziparchive.cpp.orig	2025-07-21 19:41:18.048472674 +0000
 +++ src/zip/ziparchive.cpp

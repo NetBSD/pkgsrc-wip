@@ -1,6 +1,6 @@
 $NetBSD$
 
-https://github.com/0-wiz-0/Guitar/commit/ad88334a0ba555585ea653924fb749c5805d9aa1
+https://github.com/soramimi/Guitar/commit/ad88334a0ba555585ea653924fb749c5805d9aa1
 
 --- src/common/jstream.h.orig	2025-07-21 19:46:10.990061174 +0000
 +++ src/common/jstream.h

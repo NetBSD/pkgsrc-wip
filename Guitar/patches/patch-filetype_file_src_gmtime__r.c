@@ -1,6 +1,7 @@
 $NetBSD$
 
 NetBSD provides gmtime_r().
+https://github.com/soramimi/Guitar/pull/165
 
 --- filetype/file/src/gmtime_r.c.orig	2025-07-27 08:17:07.378630293 +0000
 +++ filetype/file/src/gmtime_r.c

@@ -1,6 +1,7 @@
 $NetBSD$
 
 NetBSD does not provide gethostbyname_r.
+https://github.com/soramimi/Guitar/pull/165
 
 --- src/webclient.cpp.orig	2025-07-21 19:55:26.509062241 +0000
 +++ src/webclient.cpp
