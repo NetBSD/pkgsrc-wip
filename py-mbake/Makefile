@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mbake-1.2.2
+DISTNAME=	mbake-1.3.1.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mbake/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=13.0.0:../../comms/py-rich
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 SUBST_CLASSES+=		make
-SUBST_FILES.make+=	bake/cli.py
+SUBST_FILES.make+=	mbake/cli.py
 SUBST_SED.make+=	-e 's,"make","'${GMAKE}'",'
 SUBST_STAGE.make=	pre-build
 SUBST_MESSAGE.make=	Fix to use GNU make.

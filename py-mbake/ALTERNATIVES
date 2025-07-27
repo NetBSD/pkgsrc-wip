@@ -1,2 +1,1 @@
-bin/bake @PREFIX@/bin/bake-@PYVERSSUFFIX@
 bin/mbake @PREFIX@/bin/mbake-@PYVERSSUFFIX@
