@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.166 2024/11/23 13:59:40 wiz Exp $
 
 # master after 2.53.7.
-# This is the fix-linotify branch for now.
-DISTNAME=	unison-2.53.7.52
+# 2025-07-27
+DISTNAME=	unison-2.53.7.53
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	3b8d3d45129de2a8ce590040004f15fb747a73e8
+GITHUB_TAG=	aa11d8794640888cb96ac8213a7aa9ad6eae20fe
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
