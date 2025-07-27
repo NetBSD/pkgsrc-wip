@@ -3067,6 +3067,7 @@ SUBDIR+=	pdb2ldif
 SUBDIR+=	pdcurses
 SUBDIR+=	pdfcrack
 SUBDIR+=	pdfminer
+SUBDIR+=	pdfrip
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
