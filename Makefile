@@ -3612,6 +3612,7 @@ SUBDIR+=	py-constructive-geometries
 SUBDIR+=	py-contexttimer
 SUBDIR+=	py-continuum-mechanics
 SUBDIR+=	py-control
+SUBDIR+=	py-copyparty
 SUBDIR+=	py-coreapi
 SUBDIR+=	py-coreschema
 SUBDIR+=	py-corpus
