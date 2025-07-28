@@ -4595,7 +4595,6 @@ SUBDIR+=	py-repoze.who
 SUBDIR+=	py-repr
 SUBDIR+=	py-reproducible
 SUBDIR+=	py-reproject
-SUBDIR+=	py-requests-cache
 SUBDIR+=	py-requirementslib
 SUBDIR+=	py-resampy
 SUBDIR+=	py-resonance

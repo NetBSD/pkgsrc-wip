@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pyquery-[0-9]*:../../textproc/py-pyquery
-DEPENDS+=	${PYPKGPREFIX}-requests-cache-[0-9]*:../../wip/py-requests-cache
+DEPENDS+=	${PYPKGPREFIX}-requests-cache-[0-9]*:../../devel/py-requests-cache
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=		# none
