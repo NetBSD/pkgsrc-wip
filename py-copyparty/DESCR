@@ -1,0 +1,5 @@
+Turn almost any device into a file server with resumable
+uploads/downloads using any web browser.
+
+- server only needs Python, all dependencies optional
+- protocols: http // webdav // ftp // tftp // smb/cifs

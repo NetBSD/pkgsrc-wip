@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (copyparty-1.18.5.tar.gz) = 2e8875f73343aaca4fe59442cad8d34daf85cb7045db69d4724c568435049bd0
+SHA512 (copyparty-1.18.5.tar.gz) = ea2e1e184a0b9bc3f6445f41295fd23a654511b2c114592f9b1fff437f5ce0626e33267db4a0c200a9459bb6c6e95af1755cd8cf318b14e566cbefd511e1d48a
+Size (copyparty-1.18.5.tar.gz) = 905683 bytes
