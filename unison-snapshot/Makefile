@@ -2,11 +2,11 @@
 
 # master after 2.53.7.
 # 2025-07-27
-DISTNAME=	unison-2.53.7.53
-PKGREVISION=	2
+DISTNAME=	unison-2.53.7.54
+#PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	aa11d8794640888cb96ac8213a7aa9ad6eae20fe
+GITHUB_TAG=	23dc5341f50f501afe1bbc71b86f1ca45b9ef656
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
