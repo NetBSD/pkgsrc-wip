@@ -1,0 +1,22 @@
+$NetBSD$
+
+Determine if $^ is supported.
+
+Taken from a pending upstream patch.
+
+--- src/Makefile.orig	2025-07-26 12:17:25.000000000 +0000
++++ src/Makefile
+@@ -16,10 +16,11 @@ default: all
+ .PHONY: default
+
+ # Executed only by BSD make
+-.BEGIN:
++.BEGIN: FRC
+	@touch _mk.cfg
+-	@ocaml make_tools.ml conf > Makefile.cfg
++	@ocaml make_tools.ml conf BSD_HAS_CF="$^" BSD_HAS_GT="$>" > Makefile.cfg
+	@ocaml make_tools.ml conf2 > Makefile2.cfg
++FRC: ;
+
+ # Executed only by Solaris dmake
+ .INIT:
