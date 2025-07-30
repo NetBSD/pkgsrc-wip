@@ -18,11 +18,8 @@ SUBST_MESSAGE.providers-prefix=	Honor providers installed via pkgsrc
 SUBST_FILES.providers-prefix=	cmd/tofu/provider_source.go
 SUBST_VARS.providers-prefix=	PREFIX
 
-# Do not install auxiliary programs
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/loggraphdiff
-	${RM} ${DESTDIR}${PREFIX}/bin/main
-	${RM} ${DESTDIR}${PREFIX}/bin/protobuf-compile
+do-install:
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/${GOPATH_BIN}/tofu ${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
 
