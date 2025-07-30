@@ -1,0 +1,14 @@
+devel/muon: Update to 0.5.0
+
+- Fetch source archive from homepage (formerly the source archive was
+  fetched from sourcehut)
+- Execute pkg-config (formerly libpkgconf was used)
+
+Changelog
+=========
+- muon analyze now has an LSP mode
+- pkg-config-exec backend added. muon now supports shelling out to pkg-config
+  (or pkgconf)
+- bump meson support to 1.7
+- more builtin dependency handlers
+- lots of bug fixes
