@@ -1,15 +1,15 @@
 # $NetBSD:$
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		140.0
-MOZ_BRANCH_MINOR=	.2
+MOZ_BRANCH=		141.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	librewolf-${FIREFOX_VER}-1.source
 PKGNAME=	${DISTNAME:S/.source//:S/-1$//}
 CATEGORIES=	www
 MASTER_SITES=	https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${FIREFOX_VER}-1/
 
-NODEJSKIT=		nodejs-output-138.0.1.tgz
+NODEJSKIT=		nodejs-output-140.0.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -112,7 +112,6 @@ MOZILLA_BRANDING=	unofficial
 .endif
 
 pre-configure:
-	${ECHO} "THE PKGNAME: ${PKGNAME}"
 # As of 106.0, .in template files are not patched.
 #	cd ${WRKSRC} && autoconf
 #	cd ${WRKSRC}/js/src && autoconf

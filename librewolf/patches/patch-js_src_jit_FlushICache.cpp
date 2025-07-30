@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_jit_FlushICache.cpp,v 1.2 2023/08/20 09:31:24 tnn Exp $
+$NetBSD: patch-js_src_jit_FlushICache.cpp,v 1.4 2025/07/26 14:12:54 ryoon Exp $
 
 NetBSD does not have the Linux-specific membarrier(2) syscall.
 
---- js/src/jit/FlushICache.cpp.orig	2023-08-15 20:31:19.000000000 +0000
+--- js/src/jit/FlushICache.cpp.orig	2025-06-13 17:08:49.000000000 +0000
 +++ js/src/jit/FlushICache.cpp
 @@ -31,12 +31,18 @@
  #    elif defined(__android__)
@@ -23,3 +23,12 @@ NetBSD does not have the Linux-specific membarrier(2) syscall.
  }
  
  // These definitions come from the Linux kernel source, for kernels before 4.16
+@@ -112,6 +118,8 @@ bool CanFlushExecutionContextForAllThrea
+   MOZ_ASSERT(state != MemBarrierAvailable::Unset);
+   return state == MemBarrierAvailable::Yes;
+ 
++#  elif defined(__NetBSD__)
++  return false;
+ #  else
+   // On other platforms, we assume that the syscall for flushing the icache
+   // will flush the execution context for other cores.
