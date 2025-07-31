@@ -5711,6 +5711,7 @@ SUBDIR+=	tmw
 SUBDIR+=	tnfrepo-dev
 SUBDIR+=	tnt
 SUBDIR+=	todotxt-git
+SUBDIR+=	tofu-ls
 SUBDIR+=	tolua++
 SUBDIR+=	tome
 SUBDIR+=	tome2
