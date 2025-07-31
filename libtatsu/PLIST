@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/libtatsu/tatsu.h
+include/libtatsu/tss.h
+lib/libtatsu.la
+lib/pkgconfig/libtatsu-1.0.pc
