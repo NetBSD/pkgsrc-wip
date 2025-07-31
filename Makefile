@@ -609,6 +609,7 @@ SUBDIR+=	crossroads-io
 SUBDIR+=	crosstool-pio
 SUBDIR+=	crosswrench-git
 SUBDIR+=	crrcsim
+SUBDIR+=	crush
 SUBDIR+=	crust-firmware
 SUBDIR+=	cryptcat
 SUBDIR+=	crystal
