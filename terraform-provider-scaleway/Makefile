@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	terraform-provider-scaleway-2.8.0
+DISTNAME=	terraform-provider-scaleway-2.58.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scaleway/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
