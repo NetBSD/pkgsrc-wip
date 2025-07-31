@@ -3307,7 +3307,6 @@ SUBDIR+=	prodigal
 SUBDIR+=	progreiserfs
 SUBDIR+=	proj
 SUBDIR+=	proj-data
-SUBDIR+=	projectable
 SUBDIR+=	prometheus-lts
 SUBDIR+=	promtail
 SUBDIR+=	proplib
