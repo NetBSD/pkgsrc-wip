@@ -536,6 +536,7 @@ SUBDIR+=	cmoc
 SUBDIR+=	cockatrice
 SUBDIR+=	cockatrice-server
 SUBDIR+=	cockroach
+SUBDIR+=	codex
 SUBDIR+=	coin-or-lemon
 SUBDIR+=	collectd-unbound
 SUBDIR+=	colm-devel
