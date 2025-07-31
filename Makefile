@@ -1973,6 +1973,7 @@ SUBDIR+=	ldc017
 SUBDIR+=	ldc120
 SUBDIR+=	lde
 SUBDIR+=	ldtp
+SUBDIR+=	lean4
 SUBDIR+=	lebiniou
 SUBDIR+=	lebiniou-data
 SUBDIR+=	leo

@@ -1,0 +1,20 @@
+Linking fails with
+
+
+[100%] Built target lake_lib
+[    ] Building /usr/pkgsrc/wip/lean4/work/lean4-4.21.0/cmake-pkgsrc-build/stage0/lib/lean/libLake_shared.so
+ld: /usr/pkgsrc/wip/lean4/work/lean4-4.21.0/cmake-pkgsrc-build/stage0/lib/lean/libleanshared.so: warning: Warning: reference to the libc supplied alloca(3); this most likely will not work. Please use the compiler provide
+d version of alloca(3), by supplying the appropriate compiler flags (e.g. -std=gnu99).
+ld: /usr/pkgsrc/wip/lean4/work/lean4-4.21.0/cmake-pkgsrc-build/stage0/lib/lean/libleanshared.so: note: the message above does not take linker garbage collection into account
+[100%] Built target lake_shared
+[    ] Building /usr/pkgsrc/wip/lean4/work/lean4-4.21.0/cmake-pkgsrc-build/stage0/bin/lake
+ld: /usr/pkgsrc/wip/lean4/work/lean4-4.21.0/cmake-pkgsrc-build/stage0/lib/lean/libleanshared.so: warning: Warning: reference to the libc supplied alloca(3); this most likely will not work. Please use the compiler provide
+d version of alloca(3), by supplying the appropriate compiler flags (e.g. -std=gnu99).
+ld: ../../cmake-pkgsrc-build/stage0/lib/temp/LakeMain.o.export: in function `_lean_main':
+LakeMain.c:(.text+0x1e): undefined reference to `l_Lake_cli'
+ld: ../../cmake-pkgsrc-build/stage0/lib/temp/LakeMain.o.export: in function `initialize_LakeMain':
+LakeMain.c:(.text+0x162): undefined reference to `initialize_Lake'
+ld: LakeMain.c:(.text+0x181): undefined reference to `initialize_Lake_CLI'
+
+
+https://github.com/leanprover/lean4/issues/9650

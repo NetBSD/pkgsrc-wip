@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (lean4-4.21.0.tar.gz) = 157b378c1d1046f582dd80a44a3b0224cb5794f43e06a7776e6c00095dd54fe5
+SHA512 (lean4-4.21.0.tar.gz) = a44e0bc10ff60c68ef5079a86f4a34a4847236ec7bd4a2a3e964bc0e9bc9f3b047563e75617066e51499b1e482266297b0ad37882d09aff1b7425a7d13b40845
+Size (lean4-4.21.0.tar.gz) = 41491073 bytes
+SHA1 (patch-stage0_src_runtime_process.cpp) = d9d813a762c060e08ac3b5c4f400a8d561b0d447
