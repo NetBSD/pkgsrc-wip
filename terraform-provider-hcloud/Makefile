@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2021/03/19 17:37:03 bsiegert Exp $
 
-DISTNAME=	terraform-provider-hcloud-1.33.1
+DISTNAME=	terraform-provider-hcloud-1.52.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hetznercloud/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
