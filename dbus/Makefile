@@ -35,7 +35,8 @@ CHECK_PORTABILITY_SKIP+=	tools/cmake-format
 MESON_ARGS+=		-Ddbus_user=${DBUS_USER}
 MESON_ARGS+=		-Dlocalstatedir=${VARBASE}
 MESON_ARGS+=		-Dsystem_socket=${VARBASE}/run/dbus/system_bus_socket
-MESON_ARGS+=		-Dsystem_socket=${VARBASE}/run/dbus/pid
+MESON_ARGS+=		-Dsystem_pid_file=${VARBASE}/run/dbus/pid
+MESON_ARGS+=		-Ddoxygen_docs=disabled
 
 LDFLAGS.SunOS+=		-lnsl
 
