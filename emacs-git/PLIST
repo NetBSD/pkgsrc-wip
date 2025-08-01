@@ -839,6 +839,7 @@ share/emacs/${PKGVERSION}/etc/images/symbols/star_fill_16.svg
 share/emacs/${PKGVERSION}/etc/images/symbols/star_half_16.pbm
 share/emacs/${PKGVERSION}/etc/images/symbols/star_half_16.svg
 share/emacs/${PKGVERSION}/etc/images/tabs/README
+share/emacs/${PKGVERSION}/etc/images/tabs/close-modified.xpm
 share/emacs/${PKGVERSION}/etc/images/tabs/close.xpm
 share/emacs/${PKGVERSION}/etc/images/tabs/left-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/tabs/new.xpm
