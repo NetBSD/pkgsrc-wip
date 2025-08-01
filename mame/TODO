@@ -1,0 +1,27 @@
+Update started, doesn't build.
+
+In file included from ../../../../../src/devices/machine/macseconds.cpp:11:
+../../../../../src/emu/dirtc.h:44:1: error: expected class-name before '{' token
+   44 | {
+      | ^
+../../../../../src/emu/dirtc.h:47:36: error: 'machine_config' does not name a type
+   47 |         device_rtc_interface(const machine_config &mconfig, device_t &device);
+      |                                    ^~~~~~~~~~~~~~
+../../../../../src/emu/dirtc.h:47:61: error: 'device_t' has not been declared
+   47 |         device_rtc_interface(const machine_config &mconfig, device_t &device);
+      |                                                             ^~~~~~~~
+../../../../../src/emu/dirtc.h:54:37: error: 'system_time' does not name a type
+   54 |         void set_current_time(const system_time &systime);
+      |                                     ^~~~~~~~~~~
+../../../../../src/emu/dirtc.h:59:16: error: 'u8' does not name a type
+   59 |         static u8 convert_to_bcd(int val);
+      |                ^~
+../../../../../src/emu/dirtc.h:60:35: error: 'u8' has not been declared
+   60 |         static int bcd_to_integer(u8 val);
+      |                                   ^~
+../../../../../src/emu/dirtc.h:83:9: error: 'device_interface_enumerator' does not name a type
+   83 | typedef device_interface_enumerator<device_rtc_interface> rtc_interface_enumerator;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Reported upstream:
+https://github.com/mamedev/mame/issues/14012
