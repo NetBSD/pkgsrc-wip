@@ -1,0 +1,16 @@
+Needs ptsname_r support in libc (NetBSD does support ptsname_r, but rust libc doesn't yet):
+
+   Compiling shpool_pty v0.3.1
+error[E0425]: cannot find function `ptsname_r` in crate `libc`
+    --> /scratch/wip/shpool/work/vendor/shpool_pty-0.3.1/src/fork/pty/master/mod.rs:73:29
+     |
+73   |                 match libc::ptsname_r(fd, data as *mut libc::c_char, buf.len()) {
+     |                             ^^^^^^^^^ help: a function with a similar name exists: `ptsname`
+     |
+    ::: /scratch/wip/shpool/work/vendor/libc-0.2.155/src/unix/mod.rs:1395:5
+     |
+1395 |     pub fn ptsname(fd: ::c_int) -> *mut ::c_char;
+     |     --------------------------------------------- similarly named function `ptsname` defined here
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `shpool_pty` (lib) due to 1 previous error

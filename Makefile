@@ -5349,6 +5349,7 @@ SUBDIR+=	shotcut
 SUBDIR+=	shoutcast
 SUBDIR+=	showfont
 SUBDIR+=	showmesh
+SUBDIR+=	shpool
 SUBDIR+=	shtool
 SUBDIR+=	shttpd
 SUBDIR+=	shunt

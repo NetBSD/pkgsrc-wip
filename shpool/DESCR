@@ -1,0 +1,8 @@
+shpool is a service that enables session persistence by allowing
+the creation of named shell sessions owned by shpool so that the
+session is not lost if the connection drops. shpool can be thought
+of as a lighter weight alternative to tmux or GNU screen. While
+tmux and screen take over the whole terminal and provide window
+splitting and tiling features, shpool only provides persistent
+sessions. The biggest advantage of this approach is that shpool
+does not break native scrollback or copy-paste.
