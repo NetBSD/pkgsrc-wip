@@ -1,10 +1,11 @@
 $NetBSD: distinfo,v 1.41 2023/11/09 16:41:15 gdt Exp $
 
-BLAKE2s (nut-2.8.2.2878.tar.gz) = 6cfe8e7da4df9927ba204c0fb3d7dbd31d6cb0011e73da0179276c46abfa21d9
-SHA512 (nut-2.8.2.2878.tar.gz) = 70e928db59a19732b4b53c6cc5ee82b368395eebb16cca66001cea72560f9586e41dd49b1b9bf1a7bc1bc841222479b3b065b2f60a081e09a55504ca15851ac8
-Size (nut-2.8.2.2878.tar.gz) = 6223192 bytes
+BLAKE2s (nut-2.8.3.724.tar.gz) = b6a6f88fc7f1f807c9346b6074f3d8baa383ab0bb2a445601a2145049f6b2d53
+SHA512 (nut-2.8.3.724.tar.gz) = 62a336af305367002cc975d7d5221ae64477aa0ce724070d0b993f36181061350fff233dceec8d8051b9696fb9dac170e7108fa52455609b4b6de7745c02ff61
+Size (nut-2.8.3.724.tar.gz) = 5993270 bytes
 SHA1 (patch-clients_upsclient.c) = 45eee24ed3cc06bbf5ec81344d0db62a3da3a827
 SHA1 (patch-conf_Makefile.in) = 8d02a0b05659cb210a77e863a28a3b9caa596dfc
 SHA1 (patch-drivers_libhid.c) = 8b4f773d9b32e4c43f7045a4a83854382b08cb5b
 SHA1 (patch-drivers_libusb0.c) = bdd6fcb145386598b4ac5474d4c866ded5f6d5fa
 SHA1 (patch-drivers_libusb1.c) = 58d8ffe9507399802ad885c2e2627641978e5438
+SHA1 (patch-server_sockdebug.c) = 788efc0a519a6a0256b80156fff415d91a359098

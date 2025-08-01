@@ -7,5 +7,4 @@ There are additional ups-nut-* packages for cgi, SNMP, and USB
 support.
 
 This package tracks the NUT git repository, and sometimes includes
-proposed changes or experimental changes.  It is not suitable for
-production systems.
+proposed changes or experimental changes.

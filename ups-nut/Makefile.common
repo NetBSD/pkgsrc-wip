@@ -6,7 +6,7 @@
 # used by wip/p5-UPS-Nut/Makefile
 
 # 2.8.3-rc5
-DISTNAME=		nut-2.8.2.2878
+DISTNAME=		nut-2.8.3.724
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.NetBSD.org/~gdt/
@@ -23,6 +23,8 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/ups-nut/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/ups-nut/patches
 
 USE_TOOLS=		pkg-config
+# \todo File upstream bug. (email 20250801)
+USE_TOOLS+=		gsed
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
@@ -47,6 +49,8 @@ NUT_DATADIR=		${PREFIX}/share/nut
 NUT_DOCDIR=		${PREFIX}/share/doc/nut
 NUT_DRVDIR=		${PREFIX}/libexec/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
-# \todo Change to /var/run rather than /var/db
 NUT_STATEDIR?=		${VARBASE}/db/nut
+# \todo RUNDIR is used for pidfiles and socckets, and thus should be /var/run/nut.
+# Move creation from OWN_DIRS_PERMS into rc.d/upsd.
+NUT_RUNDIR?=		${VARBASE}/db/nut
 NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin

@@ -1,4 +1,4 @@
-$NetBSD: patch-drivers_libusb0.c,v 1.1 2022/04/26 23:28:25 gdt Exp $
+$NetBSD: patch-drivers_libusb0.c,v 1.2 2025/05/17 23:56:37 gdt Exp $
 
 --- drivers/libusb0.c.orig	2024-12-02 14:39:55.000000000 +0000
 +++ drivers/libusb0.c
