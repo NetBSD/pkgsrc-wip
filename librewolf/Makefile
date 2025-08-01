@@ -9,7 +9,7 @@ PKGNAME=	${DISTNAME:S/.source//:S/-1$//}
 CATEGORIES=	www
 MASTER_SITES=	https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${FIREFOX_VER}-1/
 
-NODEJSKIT=		nodejs-output-140.0.tgz
+NODEJSKIT=		nodejs-output-141.0.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
