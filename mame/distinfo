@@ -9,3 +9,5 @@ SHA1 (patch-makefile) = 865b1513a86567352570aeba5f12251486c65052
 SHA1 (patch-scripts_src_3rdparty.lua) = 906d1024907ff6577bcf232bf9e384f852535781
 SHA1 (patch-scripts_toolchain.lua) = df383dab4787f58348d62e1c5f25ddaa45eb8199
 SHA1 (patch-src_devices_machine_macseconds.cpp) = 34b2e2362064861ba4d18c47f3f41f33fcb032e6
+SHA1 (patch-src_devices_video_serialvfd.cpp) = c905e498fa01fb45ed06b1689e91ada7e15d1c9b
+SHA1 (patch-src_devices_video_serialvfd.h) = 2357ed604ba5c8aa45996fd4bf846e5165f329a5
