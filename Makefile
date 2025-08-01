@@ -669,7 +669,6 @@ SUBDIR+=	dates
 SUBDIR+=	davegnukem
 SUBDIR+=	davical-git
 SUBDIR+=	dbf
-SUBDIR+=	dbus
 SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcdis
