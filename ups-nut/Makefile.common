@@ -5,8 +5,8 @@
 # used by wip/ups-nut-usb/Makefile
 # used by wip/p5-UPS-Nut/Makefile
 
-# 2.8.3-rc5
-DISTNAME=		nut-2.8.3.724
+# 2.8.3-rcN
+DISTNAME=		nut-2.8.3.743.3
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.NetBSD.org/~gdt/
@@ -23,8 +23,6 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/ups-nut/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/ups-nut/patches
 
 USE_TOOLS=		pkg-config
-# \todo File upstream bug. (email 20250801)
-USE_TOOLS+=		gsed
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
