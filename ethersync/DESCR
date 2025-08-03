@@ -1,0 +1,12 @@
+Ethersync enables real-time collaborative editing of local text
+files. You can use it for pair programming or note-taking, for
+example. It's the missing real-time complement to Git!
+
+Features:
+
+- Edit files at the same time, across different text editors
+- See your peers' cursors and selections
+- Work on entire projects, the way you're used to
+- Encrypted peer-to-peer connections, no need for a server
+- Local-first: You always have full access, even offline
+- Simple JSON-RPC protocol for writing new editor plugins

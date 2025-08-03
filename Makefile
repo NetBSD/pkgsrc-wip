@@ -886,6 +886,7 @@ SUBDIR+=	es40-cvs
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
 SUBDIR+=	et
+SUBDIR+=	ethersync
 SUBDIR+=	ethtool
 SUBDIR+=	etoile
 SUBDIR+=	etoile-core
