@@ -29,6 +29,7 @@ SUBDIR+=	Geomyidae-git
 SUBDIR+=	HP-1973
 SUBDIR+=	HiGHS
 SUBDIR+=	I2util
+SUBDIR+=	ImageMagick6
 SUBDIR+=	LMtester
 SUBDIR+=	LuaJIT-git
 SUBDIR+=	LuaJIT2
