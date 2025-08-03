@@ -1,24 +1,8 @@
 www/chromium: update to 138.0.7204.168
 
-* 138.0.7204.157
-This update includes 6 security fixes. Below, we highlight fixes
-that were contributed by external researchers. Please see the
-Chrome Security Page for more information.
-[$7000][425583995] High CVE-2025-7656: Integer overflow in V8.
-Reported by Shaheen Fazim on 2025-06-17
-[NA][427162086] High CVE-2025-6558: Incorrect validation of
-untrusted input in ANGLE and GPU. Reported by Clément Lecigne
-and Vlad Stolyarov of Google's Threat Analysis Group on 2025-06-23
-[TBD][427681143] High CVE-2025-7657: Use after free in WebRTC.
-Reported by jakebiles on 2025-06-25
-
-Google is aware that an exploit for CVE-2025-6558 exists in the wild.
-
-* 138.0.7204.168
-This update includes 3 security fixes. Below, we highlight fixes
-that were contributed by external researchers. Please see the
-Chrome Security Page for more information.
-[$8000][430344952] High CVE-2025-8010: Type Confusion in V8.
-Reported by Shaheen Fazim on 2025-07-09
-[TBD][430572435] High CVE-2025-8011: Type Confusion in V8.
-Reported by Shaheen Fazim on 2025-07-09
+* 138.0.7204.183
+This update includes 4 security fixes. Below, we highlight
+fixes that were contributed by external researchers. Please
+see the Chrome Security Page for more information.
+[$8000][426054987] High CVE-2025-8292: Use after free in
+Media Stream. Reported by Anonymous on 2025-06-19
