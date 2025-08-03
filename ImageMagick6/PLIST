@@ -180,6 +180,7 @@ share/examples/ImageMagick6/thresholds.xml
 share/examples/ImageMagick6/type-apple.xml
 share/examples/ImageMagick6/type-dejavu.xml
 share/examples/ImageMagick6/type-ghostscript.xml
+share/examples/ImageMagick6/type-urw-base35-type1.xml
 share/examples/ImageMagick6/type-urw-base35.xml
 share/examples/ImageMagick6/type-windows.xml
 share/examples/ImageMagick6/type.xml

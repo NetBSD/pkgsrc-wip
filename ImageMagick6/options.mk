@@ -75,8 +75,8 @@ CONFIGURE_ARGS+=	--with-fpx
 CONFIGURE_ARGS+=	--without-fpx
 .endif
 
-.if !empty(PKG_OPTIONS:Mfpx)
-.include "../../graphics/pango/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mpango)
+.include "../../devel/pango/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pango
 .else
 CONFIGURE_ARGS+=	--without-pango

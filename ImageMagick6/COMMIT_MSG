@@ -1,0 +1,6 @@
+graphics/ImageMagick6: update to 6.9.13.26
+
+Fix for:
+CVE-2025-53014, https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-hm4x-r5hc-794f
+CVE-2025-53019, https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-cfh4-9f7v-fhrc
+CVE-2025-53101, https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-qh3h-j545-h8c9
