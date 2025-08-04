@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.10 2024/11/01 08:05:44 wiz Exp $
+
+BLAKE2s (svt-av1-3.0.0.tar.bz2) = 2bee443d5c8ab43ec6e13af396e4ccd1a52fb8ce8f4cc7696c9850169b936a12
+SHA512 (svt-av1-3.0.0.tar.bz2) = bfe4e2845d6842f48e3e7007a88c6c054b7fe3f20d41a947c05b7f85d0d21cf4e1957624ee5714b805f3b939f9a7d1ae68853fa35f2e45c90faa16abd9711767
+Size (svt-av1-3.0.0.tar.bz2) = 10177183 bytes
+SHA1 (patch-CMakeLists.txt) = c9bf8c9628c51b63f9455706400e348faebd6ba0
+SHA1 (patch-Source_App_app__config.c) = e12eb168735cc99d7c72d5d9ae29650d3f9fc9e7
+SHA1 (patch-Source_App_app__config.h) = e27dcd0af9494be4a400b025780b4058c2deb9a9

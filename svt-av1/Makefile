@@ -1,0 +1,29 @@
+# $NetBSD: Makefile,v 1.9 2024/11/01 08:05:44 wiz Exp $
+
+DISTNAME=	svt-av1-3.0.0
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_GITLAB:=AOMediaCodec/}
+#https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v3.0.0/SVT-AV1-v3.0.0.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gitlab.com/AOMediaCodec/SVT-AV1/
+COMMENT=	Scalable Video Technology for AV1 (SVT-AV1 Encoder and Decoder)
+LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+
+GITLAB_PROJECT=	SVT-AV1
+GITLAB_TAG=	v${PKGVERSION_NOREV}
+
+WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_TAG}
+
+USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+
+PKGCONFIG_OVERRIDE+=	Source/Lib/pkg-config.pc.in
+
+.include "../../devel/cmake/build.mk"
+.include "../../wip/cpuinfo/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
