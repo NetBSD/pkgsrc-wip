@@ -11,6 +11,7 @@ LICENSE=		gnu-gpl-v3
 
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Swordfish90/}
 GITHUB_SUBMODULES=	Swordfish90 qmltermwidget 63228027e1f97c24abb907550b22ee91836929c5 qmltermwidget
+EXTRACT_OPTS=		-X "${PKGDIR}/excludefile"
 
 SUBST_CLASSES+=		usrpath
 SUBST_STAGE.usrpath=	pre-configure
@@ -25,11 +26,25 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 MAKE_FLAGS+=		INSTALL_ROOT=${DESTDIR} sysconfdir=${PREFIX}/share
 
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
+
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${PREFIX}/qt5/qml/QMLTermWidget/libqmltermwidget.${SOEXT} \
+		${DESTDIR}${PREFIX}/qt5/qml/QMLTermWidget/libqmltermwidget.${SOEXT}
+.endif
+
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -39,7 +39,7 @@ qt5/qml/QMLTermWidget/kb-layouts/linux.keytab
 qt5/qml/QMLTermWidget/kb-layouts/macbook.keytab
 qt5/qml/QMLTermWidget/kb-layouts/solaris.keytab
 qt5/qml/QMLTermWidget/kb-layouts/vt420pc.keytab
-qt5/qml/QMLTermWidget/libqmltermwidget.so
+qt5/qml/QMLTermWidget/libqmltermwidget.${SOEXT}
 qt5/qml/QMLTermWidget/qmldir
 share/applications/cool-retro-term.desktop
 share/icons/hicolor/128x128/apps/cool-retro-term.png
