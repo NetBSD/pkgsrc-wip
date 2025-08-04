@@ -9,4 +9,4 @@ Size (cpuinfo-0.0.20250724-33ed0be77d7767d0e2010e2c3cf972ef36c7c307.tar.gz) = 35
 BLAKE2s (googletest-1.11.0.tar.gz) = 0b546cc02c7a8d6e15337b5dde02e2ff1c17bb5232212cba0b665ad47ff51eac
 SHA512 (googletest-1.11.0.tar.gz) = 6fcc7827e4c4d95e3ae643dd65e6c4fc0e3d04e1778b84f6e06e390410fe3d18026c131d828d949d2f20dde6327d30ecee24dcd3ef919e21c91e010d149f3a28
 Size (googletest-1.11.0.tar.gz) = 886330 bytes
-SHA1 (patch-CMakeLists.txt) = e341be310f3566092cb4196125336a022d4aaca9
+SHA1 (patch-CMakeLists.txt) = 607c0f8e3104634594493bbf251d0df084d17ff3

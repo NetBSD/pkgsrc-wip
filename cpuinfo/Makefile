@@ -42,6 +42,9 @@ post-install:
 
 
 .include "../../devel/cmake/build.mk"
+# Can't use
 #.include "../../benchmarks/google-benchmark/buildlink3.mk"
+# because of
+# https://github.com/pytorch/cpuinfo/issues/313
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
