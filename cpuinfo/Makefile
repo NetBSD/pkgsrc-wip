@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.1 2025/02/23 21:54:05 wiz Exp $
 
-DISTNAME=	cpuinfo-0.0.20250219
+DISTNAME=	cpuinfo-0.0.20250724
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pytorch/}
-GITHUB_TAG=	b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea
+GITHUB_TAG=	33ed0be77d7767d0e2010e2c3cf972ef36c7c307
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	benchmark-1.6.1.tar.gz
 DISTFILES+=	googletest-1.11.0.tar.gz
@@ -31,6 +31,6 @@ post-extract:
 	${MV} ${WRKDIR}/googletest-release-1.11.0 ${WRKSRC}/deps/googletest
 
 .include "../../devel/cmake/build.mk"
-.include "../../benchmarks/google-benchmark/buildlink3.mk"
-.include "../../devel/googletest/buildlink3.mk"
+#.include "../../benchmarks/google-benchmark/buildlink3.mk"
+#.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
