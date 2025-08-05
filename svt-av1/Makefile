@@ -25,5 +25,5 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 PKGCONFIG_OVERRIDE+=	Source/Lib/pkg-config.pc.in
 
 .include "../../devel/cmake/build.mk"
-.include "../../wip/cpuinfo/buildlink3.mk"
+.include "../../sysutils/cpuinfo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
