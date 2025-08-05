@@ -10,12 +10,11 @@ HOMEPAGE=	https://github.com/johnyf/astutils
 COMMENT=	Utilities for abstract syntax trees and parsing with PLY
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	ply>=3.4<=3.10:../../devel/ply
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.11:../../devel/py-test
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
