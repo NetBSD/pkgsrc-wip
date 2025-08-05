@@ -19,7 +19,7 @@ Find external libunwind on Linux.
  
      fn link_dylib_by_name(&mut self, name: &str, verbatim: bool, as_needed: bool) {
 +        if self.sess.target.os.contains("linux") && name == "unwind" {
-+            self.link_arg("-rpath,@PREFIX@/lib");
++            self.link_arg("-R@PREFIX@/lib");
 +            self.link_arg("-L@PREFIX@/lib");
 +        }
          if self.sess.target.os == "illumos" && name == "c" {
