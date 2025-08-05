@@ -1,8 +1,0 @@
-There is ssl.SSLCertVerificationError when the build tries to download cudd.
-Have worked around by doing the following in work/dd-0.6.0:
-
-	 wget --content-disposition https://sourceforge.net/projects/cudd-mirror/files/cudd-3.0.0.tar.gz/download
-
-More on this:
-
-http://mail-index.netbsd.org/pkgsrc-users/2023/12/31/msg038689.html
