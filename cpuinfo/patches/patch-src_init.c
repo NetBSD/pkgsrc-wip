@@ -1,8 +1,9 @@
 $NetBSD$
 
-Handle NetBSD.
+Add basic NetBSD support.
+https://github.com/pytorch/cpuinfo/pull/315
 
---- src/init.c.orig	2025-08-04 14:52:02.012913325 +0000
+--- src/init.c.orig	2025-07-24 17:36:24.000000000 +0000
 +++ src/init.c
 @@ -24,7 +24,7 @@ bool CPUINFO_ABI cpuinfo_initialize(void
  #if CPUINFO_ARCH_X86 || CPUINFO_ARCH_X86_64

@@ -1,6 +1,7 @@
 $NetBSD$
 
-Handle NetBSD like FreeBSD (compiles, does not work).
+Add basic NetBSD support.
+https://github.com/pytorch/cpuinfo/pull/315
 
 --- CMakeLists.txt.orig	2025-07-24 17:36:24.000000000 +0000
 +++ CMakeLists.txt
