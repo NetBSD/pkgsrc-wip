@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libbgcode-20231123
+DISTNAME=	libbgcode-20250220
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
 GITHUB_PROJECT=	libbgcode
-GITHUB_TAG=	8ae75bd0eea622f0e34cae311b3bd065b55eae9b
+GITHUB_TAG=	5041c093b33e2748e76d6b326f2251310823f3df
 
 MAINTAINER=	stix@stix.id.au
 HOMEPAGE=	https://www.github.com/prusa3d/libbgcode

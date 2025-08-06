@@ -1,9 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libbgcode-20231123-8ae75bd0eea622f0e34cae311b3bd065b55eae9b.tar.gz) = 98372297b33b6b225b92a9f4747b63d1e0d32b7c91dc24c67d14357a84546f3e
-SHA512 (libbgcode-20231123-8ae75bd0eea622f0e34cae311b3bd065b55eae9b.tar.gz) = 13d5fe20b1faee5068a3c385041a680de5cdcec7fc34bc3f28c52bdab4d6b9e6170ad5ce5bb78399e956fc7f3fb5409e8e4adf0ff4850be686b3caf4d76ee3aa
-Size (libbgcode-20231123-8ae75bd0eea622f0e34cae311b3bd065b55eae9b.tar.gz) = 456463 bytes
-SHA1 (patch-tests_CMakeLists.txt) = a81eccd0ef20b00fc6d1d1a73d7fd10e7e50efe5
-SHA1 (patch-tests_catch__main.hpp) = dd8f317807668849d89c18eb764707ef71d9efbc
-SHA1 (patch-tests_convert_convert__tests.cpp) = 9073e63140d41e3294cafa0d91b87c5fb7a7426b
-SHA1 (patch-tests_core_core__tests.cpp) = 9547e562564b5593cdc2873ea3d3078e7985b556
+BLAKE2s (libbgcode-20250220-5041c093b33e2748e76d6b326f2251310823f3df.tar.gz) = 6a38d35c53175fc23278bec6a9c337f2f5ec9ac4db691626258ddbd9af64dd6f
+SHA512 (libbgcode-20250220-5041c093b33e2748e76d6b326f2251310823f3df.tar.gz) = ab627d15788af3e3008c92d7d919da83629fc8b106398bab8214695c0a3332e9f9522ee30aca145d6de1722793e43e9a2c24a753bd1b8904d0d647f78adc90ce
+Size (libbgcode-20250220-5041c093b33e2748e76d6b326f2251310823f3df.tar.gz) = 529050 bytes
