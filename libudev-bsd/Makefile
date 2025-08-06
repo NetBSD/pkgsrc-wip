@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libudev-bsd-0.6.0.2
+DISTNAME=	libudev-bsd-0.6.0.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kikadf/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

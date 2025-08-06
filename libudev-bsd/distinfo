@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libudev-bsd-0.6.0.2.tar.gz) = 9e971f9d90a87370820e0b27929de9336b2d6ff6abbe8f75ecdce2e31315bc06
-SHA512 (libudev-bsd-0.6.0.2.tar.gz) = 9e0d9cef5bde885930fa66c5b51677a6f200a0d7e40a5fc7f4ccd4aa77a6516af03d4b825fdfe8ed3dcdfb69b31700153c1fc76f1e756b3fda288c5da03c1cd5
-Size (libudev-bsd-0.6.0.2.tar.gz) = 40064 bytes
+BLAKE2s (libudev-bsd-0.6.0.3.tar.gz) = ed11a101b940b0cc1f089d50bf7f46ccfa900eadc3c4eae0df6145a14d643c38
+SHA512 (libudev-bsd-0.6.0.3.tar.gz) = 0f2a4ca8fe30ea029676b93e28e0f604aaedb9e988d0e9e97a21a8b21e3245f45cb53ca2e1dc3da0d66820cab9ba150e7164cfa17ae42835f744d313f674d8db
+Size (libudev-bsd-0.6.0.3.tar.gz) = 40267 bytes
