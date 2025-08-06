@@ -43,10 +43,10 @@ CONFIGURE_ARGS+=	--without-dbus
 ###
 .if !empty(PKG_OPTIONS:Mlibgccjit)
 CONFIGURE_ARGS+=	--with-native-compilation
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc14-libjit}/gcc14/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc15-libjit}/gcc15/lib
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
         ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
-.  include "../../lang/gcc14-libjit/buildlink3.mk"
+.  include "../../lang/gcc15-libjit/buildlink3.mk"
 .endif
 
 ###
