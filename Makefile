@@ -2719,6 +2719,7 @@ SUBDIR+=	open-simh
 SUBDIR+=	open21xx
 SUBDIR+=	openafs-git
 SUBDIR+=	openaxiom-svn
+SUBDIR+=	openbabel
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openbox-themes-extra
