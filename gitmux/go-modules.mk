@@ -1,0 +1,19 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/arl/gitstatus/@v/v0.7.0.mod
+GO_MODULE_FILES+=	github.com/arl/gitstatus/@v/v0.7.0.zip
+GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.zip
+GO_MODULE_FILES+=	github.com/kr/pty/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/kr/text/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.14.1.mod
+GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.14.1.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.34.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.34.0.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.35.0.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.35.0.zip
+GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
+GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20180628173108-788fd7840127.mod
+GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20180628173108-788fd7840127.zip
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.zip
