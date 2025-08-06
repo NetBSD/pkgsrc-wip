@@ -1280,6 +1280,7 @@ SUBDIR+=	gitlab
 SUBDIR+=	gitlab-assets
 SUBDIR+=	gitleaks
 SUBDIR+=	gitless
+SUBDIR+=	gitmux
 SUBDIR+=	gitsome
 SUBDIR+=	gittyup
 SUBDIR+=	givaro
