@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	1.0.0
+VERSION=	1.0.2
 DISTNAME=	freecad_source
 PKGNAME=	freecad-${VERSION}
 CATEGORIES=	cad
