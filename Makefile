@@ -5605,7 +5605,6 @@ SUBDIR+=	telegram-desktop
 SUBDIR+=	telegram-purple
 SUBDIR+=	telepathy-butterfly
 SUBDIR+=	telepathy-logger
-SUBDIR+=	television
 SUBDIR+=	template-glib
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
