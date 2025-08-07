@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/tv
+man/man1/tv.1
+share/examples/television/files.toml
