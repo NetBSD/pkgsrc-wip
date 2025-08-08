@@ -1,0 +1,41 @@
+# $NetBSD: Makefile,v 1.67 2025/08/03 10:06:37 wiz Exp $
+
+DISTNAME=	docutils-0.22
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/docutils/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://docutils.sourceforge.io/
+COMMENT=	Python tool to generate documents
+LICENSE=	public-domain AND 2-clause-bsd
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments
+
+USE_LANGUAGES=	# none
+
+REPLACE_PYTHON+=	docutils/__main__.py
+REPLACE_PYTHON+=	docutils/utils/math/math2html.py
+REPLACE_PYTHON+=	docutils/utils/smartquotes.py
+REPLACE_PYTHON+=	docutils/writers/odf_odt/prepstyles.py
+REPLACE_PYTHON+=	docutils/writers/xetex/__init__.py
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} docutils docutils-${PYVERSSUFFIX} || ${TRUE}
+.for bin in rst2html rst2html4 rst2html5 rst2latex rst2man rst2odt \
+	rst2pseudoxml rst2s5 rst2xetex rst2xml
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
+# due to patches/patch-docutils_parsers_rst_states.py
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/docutils/parsers/rst/states.py.orig
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} test/alltests.py
+
+.include "../../lang/python/batteries-included.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.pkg.mk"

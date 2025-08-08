@@ -3748,6 +3748,7 @@ SUBDIR+=	py-docker-hub
 SUBDIR+=	py-docker-interface
 SUBDIR+=	py-docker-ssh
 SUBDIR+=	py-docplex
+SUBDIR+=	py-docutils
 SUBDIR+=	py-doh-proxy
 SUBDIR+=	py-dolo
 SUBDIR+=	py-dot2tex

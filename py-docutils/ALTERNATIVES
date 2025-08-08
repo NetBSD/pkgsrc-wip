@@ -1,0 +1,9 @@
+bin/docutils @PREFIX@/bin/docutils-@PYVERSSUFFIX@
+bin/rst2html.py @PREFIX@/bin/rst2html-@PYVERSSUFFIX@
+bin/rst2latex.py @PREFIX@/bin/rst2latex-@PYVERSSUFFIX@
+bin/rst2man.py @PREFIX@/bin/rst2man-@PYVERSSUFFIX@
+bin/rst2odt.py @PREFIX@/bin/rst2odt-@PYVERSSUFFIX@
+bin/rst2pseudoxml.py @PREFIX@/bin/rst2pseudoxml-@PYVERSSUFFIX@
+bin/rst2s5.py @PREFIX@/bin/rst2s5-@PYVERSSUFFIX@
+bin/rst2xetex.py @PREFIX@/bin/rst2xetex-@PYVERSSUFFIX@
+bin/rst2xml.py @PREFIX@/bin/rst2xml-@PYVERSSUFFIX@
