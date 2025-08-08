@@ -11,8 +11,9 @@ HOMEPAGE=	https://musescore.org/
 COMMENT=	Music notation and composition software
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++11
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
 
 CONFIGURE_DIRS=	bindir
 CMAKE_ARG_PATH=	..
