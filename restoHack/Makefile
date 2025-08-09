@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/Critlist/restoHack/
 COMMENT=	Modern version of the original Hack
 LICENSE=	public-domain AND modified-bsd
 
-LIBS.NetBSD+=	-lcurses
+# https://github.com/Critlist/restoHack/issues/4
+LDFLAGS.NetBSD+=	-lcurses
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/curses.buildlink3.mk"

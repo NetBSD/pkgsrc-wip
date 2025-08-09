@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (restoHack-1.0.2.tar.gz) = 54a4a67d52300ce893134963d47ae65fa77ad54d7e4a737c8cdf51d88138b6a2
 SHA512 (restoHack-1.0.2.tar.gz) = 8bc5777c1b0591d59d2be4f3ea9f9daa080a5ed18192bcd6be625a3003a9747fe64c18faf42de1b9de553e762dc84b0fb2504dfe125a514447228e5453fe0938
 Size (restoHack-1.0.2.tar.gz) = 210115 bytes
+SHA1 (patch-src_hack.unix.c) = f6f4b7ac4b3eefcfd2e14342508d65c59c9b07e5
