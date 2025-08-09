@@ -5,10 +5,6 @@ Release notes for NUT 2.8.4 - what's new since 2.8.3
 
 https://github.com/networkupstools/nut/milestone/9
 
- - (expected) Dynamic Mapping Files (DMF) feature supported, to allow
-   the driver binaries to be built once and data mappings to be loaded
-   and modernized on the fly (porting from 42ITy project)
-
  - New NUT drivers:
    * Introduced a `ve-direct` driver for Victron Energy UPS/solar panels
      monitoring. Most specific reported values are in an `experimental.*`
