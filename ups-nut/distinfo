@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (nut-2.8.4.tar.gz) = 39c286fa949a792843efb803ac7d6cffe809a89ac08ded2bf181c801ce5c22ea
-SHA512 (nut-2.8.4.tar.gz) = 6ba46ff1f469e61d1b78b20fde41766f654b9af1f71406bb8b555d949ec42b19c0d0c45bfa5ddc05b298b21875663011241a7d1fe3e2e552050ea427f2685d45
-Size (nut-2.8.4.tar.gz) = 6498633 bytes
+BLAKE2s (ups-nut-wip/nut-2.8.4.tar.gz) = 39c286fa949a792843efb803ac7d6cffe809a89ac08ded2bf181c801ce5c22ea
+SHA512 (ups-nut-wip/nut-2.8.4.tar.gz) = 6ba46ff1f469e61d1b78b20fde41766f654b9af1f71406bb8b555d949ec42b19c0d0c45bfa5ddc05b298b21875663011241a7d1fe3e2e552050ea427f2685d45
+Size (ups-nut-wip/nut-2.8.4.tar.gz) = 6498633 bytes
 SHA1 (patch-clients_upsclient.c) = 45eee24ed3cc06bbf5ec81344d0db62a3da3a827
 SHA1 (patch-conf_Makefile.in) = 8d02a0b05659cb210a77e863a28a3b9caa596dfc
 SHA1 (patch-drivers_libhid.c) = 8b4f773d9b32e4c43f7045a4a83854382b08cb5b

@@ -9,6 +9,8 @@ DISTNAME=		nut-2.8.4
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.NetBSD.org/~gdt/
+# Isolate gdt-built distfiles from pkgsrc proper
+DIST_SUBDIR=		ups-nut-wip
 
 MAINTAINER?=		gdt@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
