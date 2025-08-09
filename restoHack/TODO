@@ -1,0 +1,8 @@
+ld: CMakeFiles/hack.dir/src/hack.pri.c.o: in function `tmp_at':
+/scratch/games/restoHack/work/restoHack-1.0.2/src/hack.pri.c:104:(.text+0xbea): undefined reference to `delay_output'
+ld: CMakeFiles/hack.dir/src/hack.pri.c.o: in function `Tmp_at':
+/scratch/games/restoHack/work/restoHack-1.0.2/src/hack.pri.c:147:(.text+0xd5c): undefined reference to `delay_output'
+ld: CMakeFiles/hack.dir/src/hack.unix.c.o: in function `setrandom':
+/scratch/games/restoHack/work/restoHack-1.0.2/src/hack.unix.c:35:(.text+0x3): undefined reference to `srandomdev'
+
+https://github.com/Critlist/restoHack/issues/4

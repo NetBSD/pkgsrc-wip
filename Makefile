@@ -5110,6 +5110,7 @@ SUBDIR+=	reone
 SUBDIR+=	repeatmasker
 SUBDIR+=	reproc
 SUBDIR+=	resin
+SUBDIR+=	restoHack
 SUBDIR+=	retawq
 SUBDIR+=	retro68
 SUBDIR+=	reuse-tool
