@@ -1,0 +1,21 @@
+devel/cargo-c: update to 0.10.15
+
+NOTE: Whenever we can import this or, a newer version, the patches in
+devel/cargo-c should be applied again. These are not needed on amd64
+so, for now I'm not going to bother as these may change before the import.
+
+v0.10.5
+Fixes
+
+ - Fix non-POSIX paths in Libdir under Windows by @amyspark
+ - Fix static_libraries swallowing sequence of -framework flags by @amyspark
+ - Rust integration tests now can link and run fine by @lu-zero
+
+New features
+
+ - Allow disabling emission of library version constants in header files by @sd-collins
+
+Version Bumps
+
+ - implib 0.4.0
+ - cargo 0.90
