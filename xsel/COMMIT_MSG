@@ -1,0 +1,24 @@
+x11/xsel: update to 1.2.1
+
+* What's Changed:
+INCR transfer bug fixes by @ebiggers in #16
+Use XDG_CACHE_HOME for xsel.log by @valeth in #15
+Using markdown syntax by @gildasio in #9
+Plug memory leak in handle_targets in #18
+Fix segfault when stdin is empty by @mptre in #17
+Fix #19 segfault when --append to empty selection by @MaskRay in #20
+Do not modify HOME environment variable. by @e7appew in #21
+Perform fstat on stdin and stdout only if required. by @e7appew in #22
+Debian patches by @hyperair in #25
+Avoid passing NULL to vsnprintf() by @mptre in #27
+Avoid extra char copy in strncpy by @ony in #32
+Set timer value to 0 to stop timer, don't use a nullptr timer by @mckellyln in #31
+Remove interfering error message by @emendelson in #37
+Option: trim trailing newline from output by @aaaaaaaalex in #39
+In README file: updated link to ICCCM rant to one that works. by @andrep in #40
+Fix MULTIPLE conversion requests by @CyberShadow in #45
+Added option to add window name by @esturafd in #41
+Set WM_NAME and WM_CLASS window properties by @uosis in #35
+Modernize by @SoapGentoo in #50
+
+* Remove developer-merged patch from pkgsrc
