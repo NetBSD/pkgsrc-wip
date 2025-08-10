@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cmake
 CMAKE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cmake+=	cmake>=2.8.5nb1
-BUILDLINK_PKGSRCDIR.cmake?=	../../devel/cmake
+BUILDLINK_PKGSRCDIR.cmake?=	../../wip/cmake
 BUILDLINK_DEPMETHOD.cmake?=	build
 BUILDLINK_FILES.cmake+=		share/cmake-*/include/*
 .endif # CMAKE_BUILDLINK3_MK

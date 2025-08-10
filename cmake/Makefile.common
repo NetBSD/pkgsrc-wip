@@ -12,8 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cmake.org/
 LICENSE=	modified-bsd
 
-DISTINFO_FILE=	${.CURDIR}/../../devel/cmake/distinfo
-PATCHDIR=	${.CURDIR}/../../devel/cmake/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/cmake/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/cmake/patches
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
