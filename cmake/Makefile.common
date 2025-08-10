@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.6 2025/04/11 14:02:46 adam Exp $
+# used by devel/cmake-gui/Makefile
+# used by devel/cmake-mode/Makefile
+
+.include "version.mk"
+
+DISTNAME=	cmake-${CMAKE_VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	https://cmake.org/files/v${CMAKE_API}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.cmake.org/
+LICENSE=	modified-bsd
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/cmake/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/cmake/patches
+
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+
+# Workaround issue in NetBSD before stdio.h r1.35 (NetBSD 9_STABLE)
+CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE

@@ -531,6 +531,7 @@ SUBDIR+=	cloud-nuke
 SUBDIR+=	cloudflared
 SUBDIR+=	clustershell
 SUBDIR+=	cm-unicode-ttf
+SUBDIR+=	cmake
 SUBDIR+=	cmetrics
 SUBDIR+=	cmoc
 SUBDIR+=	cockatrice
