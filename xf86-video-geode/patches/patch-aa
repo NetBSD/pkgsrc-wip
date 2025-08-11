@@ -1,10 +1,10 @@
 $NetBSD: patch-aa,v 1.1.1.1 2009/08/09 22:08:24 thomasklausner Exp $
 
---- src/geode_msr.c.orig	2009-06-19 13:48:22.000000000 +0000
+--- src/geode_msr.c.orig	2025-08-11 18:37:47.000000000 +0000
 +++ src/geode_msr.c
-@@ -7,6 +7,14 @@
- #include "os.h"
- #include "geode.h"
+@@ -56,6 +56,14 @@
+ #define _PATH_MSRDEV	"/dev/cpu/0/msr"
+ #endif
  
 +#ifndef lseek64
 +#define lseek64 lseek

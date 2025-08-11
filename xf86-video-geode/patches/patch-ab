@@ -1,31 +1,29 @@
 $NetBSD: patch-ab,v 1.1.1.1 2009/08/09 22:08:24 thomasklausner Exp $
 
---- src/Makefile.in.orig	2009-06-19 13:52:09.000000000 +0000
+--- src/Makefile.in.orig	2025-08-11 18:38:02.000000000 +0000
 +++ src/Makefile.in
-@@ -67,11 +67,10 @@ am__vpath_adj = case $$p in \
-     *) f=$$p;; \
-   esac;
- am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+@@ -164,9 +164,8 @@ am__uninstall_files_from_dir = { \
+   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+        $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+   }
 -am__installdirs = "$(DESTDIR)$(geode_drv_ladir)" \
 -	"$(DESTDIR)$(ztv_drv_ladir)"
-+am__installdirs = "$(DESTDIR)$(geode_drv_ladir)"
- geode_drv_laLTLIBRARIES_INSTALL = $(INSTALL)
- ztv_drv_laLTLIBRARIES_INSTALL = $(INSTALL)
 -LTLIBRARIES = $(geode_drv_la_LTLIBRARIES) $(ztv_drv_la_LTLIBRARIES)
++am__installdirs = "$(DESTDIR)$(geode_drv_ladir)"
 +LTLIBRARIES = $(geode_drv_la_LTLIBRARIES)
  geode_drv_la_LIBADD =
- am_geode_drv_la_OBJECTS = geode_driver.lo geode_common.lo \
- 	geode_dcon.lo geode_ddc.lo geode_msr.lo gx_driver.lo \
-@@ -100,7 +99,7 @@ CCLD = $(CC)
- LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
- 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
- 	$(LDFLAGS) -o $@
+ am__geode_drv_la_SOURCES_DIST = cimarron.c cim_dev.h compat-api.h \
+ 	durango.c geode_blend.h geode_common.c geode_dcon.c \
+@@ -244,7 +243,7 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
+ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
+ am__v_CCLD_1 = 
 -SOURCES = $(geode_drv_la_SOURCES) $(ztv_drv_la_SOURCES)
 +SOURCES = $(geode_drv_la_SOURCES)
- DIST_SOURCES = $(geode_drv_la_SOURCES) $(ztv_drv_la_SOURCES)
- ETAGS = etags
- CTAGS = ctags
-@@ -597,7 +596,7 @@ check-am: all-am
+ DIST_SOURCES = $(am__geode_drv_la_SOURCES_DIST) \
+ 	$(am__ztv_drv_la_SOURCES_DIST)
+ am__can_run_installinfo = \
+@@ -782,7 +781,7 @@ check-am: all-am
  check: check-am
  all-am: Makefile $(LTLIBRARIES)
  installdirs:
