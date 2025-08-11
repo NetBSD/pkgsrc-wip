@@ -2426,7 +2426,6 @@ SUBDIR+=	modular-xorg-server-linux
 SUBDIR+=	modular-xorg-xspice
 SUBDIR+=	moe
 SUBDIR+=	mofilereader
-SUBDIR+=	molsketch
 SUBDIR+=	mona
 SUBDIR+=	monajat
 SUBDIR+=	mono
