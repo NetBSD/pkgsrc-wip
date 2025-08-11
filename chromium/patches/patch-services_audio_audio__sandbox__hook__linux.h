@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/audio/audio_sandbox_hook_linux.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- services/audio/audio_sandbox_hook_linux.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ services/audio/audio_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef SERVICES_AUDIO_AUDIO_SANDBOX_HOOK_LINUX_H_

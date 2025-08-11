@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/features/feature.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- extensions/common/features/feature.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ extensions/common/features/feature.cc
-@@ -29,6 +29,8 @@ Feature::Platform Feature::GetCurrentPla
-   return WIN_PLATFORM;
- #elif BUILDFLAG(IS_FUCHSIA)
+@@ -32,6 +32,8 @@ Feature::Platform Feature::GetCurrentPla
    return FUCHSIA_PLATFORM;
+ #elif BUILDFLAG(ENABLE_DESKTOP_ANDROID_EXTENSIONS)
+   return DESKTOP_ANDROID_PLATFORM;
 +#elif BUILDFLAG(IS_BSD)
 +  return LINUX_PLATFORM;
  #else

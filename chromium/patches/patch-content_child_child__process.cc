@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/child_process.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- content/child/child_process.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ content/child/child_process.cc
 @@ -31,7 +31,7 @@
  #include "content/common/android/cpu_time_metrics.h"

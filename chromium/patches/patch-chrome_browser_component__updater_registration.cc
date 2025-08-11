@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
-@@ -102,7 +102,7 @@
+@@ -96,7 +96,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  #include "components/component_updater/installer_policies/amount_extraction_heuristic_regexes_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-         // BUILDFLAG(IS_CHROMEOS)
-@@ -115,7 +115,7 @@
+         // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
+@@ -109,7 +109,7 @@
  #include "chrome/browser/component_updater/lacros_component_remover.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/component_updater/wasm_tts_engine_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -263,12 +263,12 @@ void RegisterComponentsForUpdate() {
+@@ -253,7 +253,7 @@ void RegisterComponentsForUpdate() {
    RegisterCookieReadinessListComponent(cus);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,6 +33,9 @@ $NetBSD$
    RegisterAmountExtractionHeuristicRegexesComponent(cus);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
+@@ -265,7 +265,7 @@ void RegisterComponentsForUpdate() {
+   }
+ #endif  // BUIDLFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

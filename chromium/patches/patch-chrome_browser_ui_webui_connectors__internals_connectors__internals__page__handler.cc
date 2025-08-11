@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/connectors_internals/connectors_internals_page_handler.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/webui/connectors_internals/connectors_internals_page_handler.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/webui/connectors_internals/connectors_internals_page_handler.cc
-@@ -81,7 +81,7 @@ connectors_internals::mojom::ClientIdent
+@@ -82,7 +82,7 @@ connectors_internals::mojom::ClientIdent
  }
  #endif  // BUILDFLAG(ENTERPRISE_CLIENT_CERTIFICATES)
  
@@ -15,7 +15,7 @@ $NetBSD$
  std::string GetStringFromTimestamp(base::Time timestamp) {
    return (timestamp == base::Time()) ? std::string()
                                       : base::UnlocalizedTimeFormatWithPattern(
-@@ -190,7 +190,7 @@ void ConnectorsInternalsPageHandler::Get
+@@ -191,7 +191,7 @@ void ConnectorsInternalsPageHandler::Get
  
  void ConnectorsInternalsPageHandler::GetSignalsReportingState(
      GetSignalsReportingStateCallback callback) {

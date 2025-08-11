@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/time.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- third_party/perfetto/include/perfetto/base/time.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ third_party/perfetto/include/perfetto/base/time.h
 @@ -227,6 +227,9 @@ inline TimeNanos GetTimeInternalNs(clock
  // Return ns from boot. Conversely to GetWallTimeNs, this clock counts also time

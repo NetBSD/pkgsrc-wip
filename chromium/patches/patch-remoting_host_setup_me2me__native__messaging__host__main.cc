@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/me2me_native_messaging_host_main.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- remoting/host/setup/me2me_native_messaging_host_main.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ remoting/host/setup/me2me_native_messaging_host_main.cc
 @@ -41,7 +41,7 @@
  #include "base/apple/scoped_nsautorelease_pool.h"

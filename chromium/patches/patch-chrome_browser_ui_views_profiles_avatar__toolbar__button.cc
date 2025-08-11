@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/avatar_toolbar_button.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/views/profiles/avatar_toolbar_button.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/views/profiles/avatar_toolbar_button.cc
-@@ -317,7 +317,7 @@ void AvatarToolbarButton::MaybeShowProfi
+@@ -331,7 +331,7 @@ void AvatarToolbarButton::MaybeShowProfi
    }
  }
  

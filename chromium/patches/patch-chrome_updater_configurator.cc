@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/configurator.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/updater/configurator.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/updater/configurator.cc
-@@ -91,7 +91,7 @@ Configurator::Configurator(scoped_refptr
+@@ -105,7 +105,7 @@ Configurator::Configurator(scoped_refptr
          return std::nullopt;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
        }()) {

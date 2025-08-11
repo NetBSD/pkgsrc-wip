@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
 @@ -127,7 +127,7 @@
  #include "components/user_manager/user_manager.h"
@@ -51,7 +51,7 @@ $NetBSD$
        chrome::CreateDesktopShortcutForActiveWebContents(browser_);
  #else
        web_app::CreateWebAppFromCurrentWebContents(
-@@ -1015,7 +1015,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -1018,7 +1018,7 @@ bool BrowserCommandController::ExecuteCo
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
      case IDC_CHROME_WHATS_NEW:
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -60,7 +60,7 @@ $NetBSD$
        ShowChromeWhatsNew(browser_);
        break;
  #else
-@@ -1392,7 +1392,7 @@ void BrowserCommandController::InitComma
+@@ -1395,7 +1395,7 @@ void BrowserCommandController::InitComma
    command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
    command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
  #endif

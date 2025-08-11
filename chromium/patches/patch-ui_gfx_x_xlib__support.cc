@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/xlib_support.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- ui/gfx/x/xlib_support.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ ui/gfx/x/xlib_support.cc
 @@ -39,10 +39,18 @@ void InitXlib() {
      return;

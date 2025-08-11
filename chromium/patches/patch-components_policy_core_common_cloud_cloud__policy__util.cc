@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -21,7 +21,7 @@
  #include "base/win/wincred_shim.h"

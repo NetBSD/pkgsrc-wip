@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- v8/src/api/api.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ v8/src/api/api.cc
-@@ -158,7 +158,7 @@
+@@ -159,7 +159,7 @@
  #include "src/objects/intl-objects.h"
  #endif  // V8_INTL_SUPPORT
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6400,7 +6400,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6466,7 +6466,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

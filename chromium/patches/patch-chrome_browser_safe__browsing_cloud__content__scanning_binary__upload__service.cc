@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc
 @@ -20,7 +20,7 @@
  #include "components/safe_browsing/core/common/safebrowsing_switches.h"

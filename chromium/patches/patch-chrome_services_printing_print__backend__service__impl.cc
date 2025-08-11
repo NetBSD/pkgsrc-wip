@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -48,7 +48,7 @@
  #include "printing/backend/cups_connection_pool.h"
@@ -42,7 +42,7 @@ $NetBSD$
    // Test framework already initializes the UI, so this should not go in
    // `InitCommon()`.  Additionally, low-level Linux UI is not needed when tests
    // are using `TestPrintingContext`.
-@@ -688,7 +688,7 @@ void PrintBackendServiceImpl::UpdatePrin
+@@ -676,7 +676,7 @@ void PrintBackendServiceImpl::UpdatePrin
    crash_keys_ = std::make_unique<crash_keys::ScopedPrinterInfo>(
        *printer_name, print_backend_->GetPrinterDriverInfo(*printer_name));
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -140,7 +140,7 @@ SystemNetworkContextManager* g_system_ne
  // received a failed launch for a sandboxed network service.
@@ -133,7 +133,7 @@ $NetBSD$
    gssapi_library_loader_observer_.Install(network_service);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -975,7 +975,7 @@ bool SystemNetworkContextManager::IsNetw
+@@ -980,7 +980,7 @@ bool SystemNetworkContextManager::IsNetw
        break;
    }
  

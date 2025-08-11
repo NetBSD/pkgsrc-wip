@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			138.0.7204.183
+VERSION=			139.0.7258.66
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -136,7 +136,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
 GN_ARGS+=	enable_backup_ref_ptr_support=false
 GN_ARGS+=	enable_hangout_services_extension=true
-GN_ARGS+=	enable_nacl=false
 GN_ARGS+=	enable_remoting=false
 GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false

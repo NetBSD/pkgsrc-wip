@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -157,7 +157,8 @@ BASE_FEATURE(kPriceInsights,
               "PriceInsights",
@@ -16,7 +16,7 @@ $NetBSD$
  BASE_FEATURE(kPriceInsightsRegionLaunched,
               "PriceInsightsRegionLaunched",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -230,7 +231,7 @@ BASE_FEATURE(kEnableDiscountInfoApi,
+@@ -235,7 +236,7 @@ BASE_FEATURE(kShoppingAlternateServer,
  const char kDiscountOnShoppyPageParam[] = "discount-on-shoppy-page";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -25,7 +25,7 @@ $NetBSD$
  const base::FeatureParam<bool> kDiscountOnShoppyPage{
      &kEnableDiscountInfoApi, kDiscountOnShoppyPageParam, true};
  #else
-@@ -239,7 +240,7 @@ const base::FeatureParam<bool> kDiscount
+@@ -244,7 +245,7 @@ const base::FeatureParam<bool> kDiscount
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -34,7 +34,7 @@ $NetBSD$
  BASE_FEATURE(kEnableDiscountInfoApiRegionLaunched,
               "EnableDiscountInfoApiRegionLaunched",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -254,7 +255,7 @@ const char kMerchantWideBehaviorParam[] 
+@@ -259,7 +260,7 @@ const char kMerchantWideBehaviorParam[] 
  const char kNonMerchantWideBehaviorParam[] = "non-merchant-wide-behavior";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ content/browser/file_system_access/file_system_access_local_path_watcher.cc
 @@ -67,7 +67,7 @@ void FileSystemAccessLocalPathWatcher::I
        .type = scope().IsRecursive() ? FilePathWatcher::Type::kRecursive

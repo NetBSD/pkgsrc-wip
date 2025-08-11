@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/video_capture_device_factory_v4l2.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- media/capture/video/linux/video_capture_device_factory_v4l2.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ media/capture/video/linux/video_capture_device_factory_v4l2.cc
-@@ -28,7 +28,7 @@
+@@ -29,7 +29,7 @@
  #include "media/capture/video/linux/scoped_v4l2_device_fd.h"
  #include "media/capture/video/linux/video_capture_device_linux.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <sys/videoio.h>
  #else
  #include <linux/videodev2.h>
-@@ -43,6 +43,7 @@ bool CompareCaptureDevices(const VideoCa
+@@ -44,6 +44,7 @@ bool CompareCaptureDevices(const VideoCa
    return a.descriptor < b.descriptor;
  }
  
@@ -23,7 +23,7 @@ $NetBSD$
  // USB VID and PID are both 4 bytes long.
  const size_t kVidPidSize = 4;
  const size_t kMaxInterfaceNameSize = 256;
-@@ -75,11 +76,24 @@ std::string ExtractFileNameFromDeviceId(
+@@ -76,11 +77,24 @@ std::string ExtractFileNameFromDeviceId(
    DCHECK(base::StartsWith(device_id, kDevDir, base::CompareCase::SENSITIVE));
    return device_id.substr(strlen(kDevDir), device_id.length());
  }
@@ -48,7 +48,7 @@ $NetBSD$
      const base::FilePath path("/dev/");
      base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                      "video*");
-@@ -87,9 +101,13 @@ class DevVideoFilePathsDeviceProvider
+@@ -88,9 +102,13 @@ class DevVideoFilePathsDeviceProvider
        const base::FileEnumerator::FileInfo info = enumerator.GetInfo();
        target_container->emplace_back(path.value() + info.GetName().value());
      }
@@ -62,7 +62,7 @@ $NetBSD$
      const std::string file_name = ExtractFileNameFromDeviceId(device_id);
      std::string usb_id;
      const std::string vid_path =
-@@ -106,9 +124,13 @@ class DevVideoFilePathsDeviceProvider
+@@ -107,9 +125,13 @@ class DevVideoFilePathsDeviceProvider
      }
  
      return usb_id;
@@ -76,7 +76,7 @@ $NetBSD$
      const std::string file_name = ExtractFileNameFromDeviceId(device_id);
      const std::string interface_path =
          base::StringPrintf(kInterfacePathTemplate, file_name.c_str());
-@@ -119,6 +141,7 @@ class DevVideoFilePathsDeviceProvider
+@@ -120,6 +142,7 @@ class DevVideoFilePathsDeviceProvider
        return std::string();
      }
      return display_name;
@@ -84,7 +84,7 @@ $NetBSD$
    }
  };
  
-@@ -224,7 +247,7 @@ void VideoCaptureDeviceFactoryV4L2::GetD
+@@ -225,7 +248,7 @@ void VideoCaptureDeviceFactoryV4L2::GetD
    std::move(callback).Run(std::move(devices_info));
  }
  
@@ -93,7 +93,7 @@ $NetBSD$
    return HANDLE_EINTR(v4l2_->ioctl(fd, request, argp));
  }
  
-@@ -284,6 +307,11 @@ std::vector<float> VideoCaptureDeviceFac
+@@ -285,6 +308,11 @@ std::vector<float> VideoCaptureDeviceFac
          frame_rates.push_back(
              frame_interval.discrete.denominator /
              static_cast<float>(frame_interval.discrete.numerator));

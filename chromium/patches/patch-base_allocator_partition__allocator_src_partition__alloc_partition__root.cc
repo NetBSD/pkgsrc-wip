@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
-@@ -45,7 +45,7 @@
+@@ -47,7 +47,7 @@
  #include "wow64apiset.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <pthread.h>
  #if PA_CONFIG(ENABLE_SHADOW_METADATA)
  #include <sys/mman.h>
-@@ -298,7 +298,7 @@ void PartitionAllocMallocInitOnce() {
+@@ -301,7 +301,7 @@ void PartitionAllocMallocInitOnce() {
      return;
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    // When fork() is called, only the current thread continues to execute in the
    // child process. If the lock is held, but *not* by this thread when fork() is
    // called, we have a deadlock.
-@@ -1110,7 +1110,7 @@ void PartitionRoot::Init(PartitionOption
+@@ -1073,7 +1073,7 @@ void PartitionRoot::Init(PartitionOption
      // apple OSes.
      PA_CHECK((internal::SystemPageSize() == (size_t{1} << 12)) ||
               (internal::SystemPageSize() == (size_t{1} << 14)));

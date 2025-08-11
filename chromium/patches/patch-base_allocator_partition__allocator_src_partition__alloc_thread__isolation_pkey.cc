@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc
 @@ -16,7 +16,7 @@
  #include "partition_alloc/partition_alloc_check.h"

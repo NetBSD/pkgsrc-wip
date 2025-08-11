@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- ui/accessibility/ax_node.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ ui/accessibility/ax_node.h
 @@ -587,7 +587,7 @@ class AX_EXPORT AXNode final {
    const std::vector<raw_ptr<AXNode, VectorExperimental>>* GetExtraMacNodes()
        const;
  
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    AXNode* GetExtraAnnouncementNode(
        ax::mojom::AriaNotificationPriority priority_property) const;
- #endif  // BUILDFLAG(IS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)

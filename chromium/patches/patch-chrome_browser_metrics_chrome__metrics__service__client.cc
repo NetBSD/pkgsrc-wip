@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
 @@ -202,11 +202,11 @@
  #include "chrome/browser/metrics/google_update_metrics_provider_mac.h"
@@ -29,7 +29,7 @@ $NetBSD$
  base::LazyInstance<ChromeMetricsServiceCrashReporter>::Leaky g_crash_reporter =
      LAZY_INSTANCE_INITIALIZER;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-@@ -542,7 +542,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -546,7 +546,7 @@ void ChromeMetricsServiceClient::Registe
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -38,7 +38,7 @@ $NetBSD$
    metrics::structured::StructuredMetricsService::RegisterPrefs(registry);
  
  #if !BUILDFLAG(IS_CHROMEOS)
-@@ -624,7 +624,7 @@ std::string ChromeMetricsServiceClient::
+@@ -628,7 +628,7 @@ std::string ChromeMetricsServiceClient::
  void ChromeMetricsServiceClient::OnEnvironmentUpdate(std::string* environment) {
    // TODO(https://bugs.chromium.org/p/crashpad/issues/detail?id=135): call this
    // on Mac when the Crashpad API supports it.
@@ -47,7 +47,7 @@ $NetBSD$
    // Register the environment with the crash reporter. Note that there is a
    // window from startup to this point during which crash reports will not have
    // an environment set.
-@@ -726,7 +726,7 @@ void ChromeMetricsServiceClient::Initial
+@@ -730,7 +730,7 @@ void ChromeMetricsServiceClient::Initial
          std::make_unique<metrics::dwa::DwaService>(this, local_state);
    }
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -56,7 +56,7 @@ $NetBSD$
    metrics::structured::Recorder::GetInstance()->SetUiTaskRunner(
        base::SequencedTaskRunner::GetCurrentDefault());
  #endif
-@@ -786,7 +786,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -790,7 +790,7 @@ void ChromeMetricsServiceClient::Registe
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::CPUMetricsProvider>());
  
@@ -65,7 +65,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::MotherboardMetricsProvider>());
  #endif
-@@ -875,7 +875,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -879,7 +879,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<GoogleUpdateMetricsProviderMac>());
  #endif
  
@@ -74,7 +74,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<DesktopPlatformFeaturesMetricsProvider>());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -984,7 +984,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -985,7 +985,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<PowerMetricsProvider>());
  #endif
  
@@ -83,7 +83,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        metrics::CreateDesktopSessionMetricsProvider());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX)
-@@ -1175,7 +1175,7 @@ bool ChromeMetricsServiceClient::Registe
+@@ -1176,7 +1176,7 @@ bool ChromeMetricsServiceClient::Registe
    }
  #endif
  
@@ -92,7 +92,7 @@ $NetBSD$
    // This creates the DesktopProfileSessionDurationsServices if it didn't exist
    // already.
    metrics::DesktopProfileSessionDurationsServiceFactory::GetForBrowserContext(
-@@ -1524,7 +1524,7 @@ void ChromeMetricsServiceClient::CreateS
+@@ -1525,7 +1525,7 @@ void ChromeMetricsServiceClient::CreateS
    recorder =
        base::MakeRefCounted<metrics::structured::AshStructuredMetricsRecorder>(
            cros_system_profile_provider_.get());

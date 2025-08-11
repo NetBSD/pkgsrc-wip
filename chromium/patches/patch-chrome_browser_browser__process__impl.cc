@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -256,7 +256,7 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
@@ -42,7 +42,7 @@ $NetBSD$
    base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    if (cmd_line->GetSwitchValueASCII(password_manager::kPasswordStore) !=
        "basic") {
-@@ -1720,7 +1720,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1716,7 +1716,7 @@ void BrowserProcessImpl::Unpin() {
  }
  
  // Mac is currently not supported.

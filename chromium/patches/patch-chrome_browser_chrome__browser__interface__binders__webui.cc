@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -48,20 +48,20 @@
  #include "content/public/browser/web_ui_controller_interface_binder.h"
@@ -30,7 +30,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
  #include "chrome/browser/ui/webui/on_device_translation_internals/on_device_translation_internals_ui.h"
  #include "chrome/browser/ui/webui/signin/history_sync_optin/history_sync_optin.mojom.h"
-@@ -460,7 +460,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -464,7 +464,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -39,7 +39,7 @@ $NetBSD$
    RegisterWebUIControllerInterfaceBinder<
        connectors_internals::mojom::PageHandler,
        enterprise_connectors::ConnectorsInternalsUI>(map);
-@@ -471,7 +471,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -475,7 +475,7 @@ void PopulateChromeWebUIFrameBinders(
                                           policy::DlpInternalsUI>(map);
  #endif
  
@@ -48,7 +48,7 @@ $NetBSD$
    RegisterWebUIControllerInterfaceBinder<
        app_management::mojom::PageHandlerFactory, WebAppSettingsUI>(map);
  
-@@ -609,14 +609,14 @@ void PopulateChromeWebUIFrameBinders(
+@@ -616,14 +616,14 @@ void PopulateChromeWebUIFrameBinders(
          HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
    }
  
@@ -65,7 +65,7 @@ $NetBSD$
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -1154,7 +1154,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -1166,7 +1166,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

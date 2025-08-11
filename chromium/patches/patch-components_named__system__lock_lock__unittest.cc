@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_system_lock/lock_unittest.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/named_system_lock/lock_unittest.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/named_system_lock/lock_unittest.cc
 @@ -18,7 +18,7 @@
  #include "build/build_config.h"

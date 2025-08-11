@@ -4,9 +4,20 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/system_cpu/cpu_probe.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/system_cpu/cpu_probe.cc
-@@ -30,6 +30,9 @@ std::unique_ptr<CpuProbe> CpuProbe::Crea
+@@ -20,6 +20,10 @@
+ #include "components/system_cpu/cpu_probe_mac.h"
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+ 
++#if BUILDFLAG(IS_BSD)
++#include "base/notimplemented.h"
++#endif
++
+ namespace system_cpu {
+ 
+ // static
+@@ -30,6 +34,9 @@ std::unique_ptr<CpuProbe> CpuProbe::Crea
    return CpuProbeWin::Create();
  #elif BUILDFLAG(IS_MAC)
    return CpuProbeMac::Create();

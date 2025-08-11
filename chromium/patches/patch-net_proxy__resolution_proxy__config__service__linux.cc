@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -11,7 +11,9 @@
  
@@ -32,7 +32,7 @@ $NetBSD$
  
  }  // namespace
  
-@@ -1258,9 +1262,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
+@@ -1259,9 +1263,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
      case base::nix::DESKTOP_ENVIRONMENT_KDE4:
      case base::nix::DESKTOP_ENVIRONMENT_KDE5:
      case base::nix::DESKTOP_ENVIRONMENT_KDE6:

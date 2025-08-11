@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/argument_spec.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- extensions/renderer/bindings/argument_spec.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ extensions/renderer/bindings/argument_spec.cc
 @@ -18,6 +18,8 @@
  #include "gin/data_object_builder.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/ppapi_plugin/ppapi_blink_platform_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- content/ppapi_plugin/ppapi_blink_platform_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ content/ppapi_plugin/ppapi_blink_platform_impl.cc
 @@ -21,7 +21,7 @@
  

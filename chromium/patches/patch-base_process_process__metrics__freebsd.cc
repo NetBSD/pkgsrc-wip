@@ -4,13 +4,13 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_freebsd.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,18 +3,37 @@
  // found in the LICENSE file.
  
  #include "base/process/process_metrics.h"
-+#include "base/notreached.h"
++#include "base/notimplemented.h"
  
  #include <stddef.h>
 +#include <sys/types.h>

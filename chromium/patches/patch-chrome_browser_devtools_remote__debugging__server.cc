@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/remote_debugging_server.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/devtools/remote_debugging_server.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/devtools/remote_debugging_server.cc
 @@ -109,7 +109,7 @@ IsRemoteDebuggingAllowed(const std::opti
          RemoteDebuggingServer::NotStartedReason::kDisabledByPolicy);

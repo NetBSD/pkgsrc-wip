@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
-@@ -268,7 +268,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
+@@ -269,7 +269,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the
  // primary window is minimized by closing the help bubble. Remove this code when
  // the issue is solved at the Views framework level.
@@ -15,7 +15,7 @@ $NetBSD$
  class HelpBubbleView::PrimaryWidgetObserver : public views::WidgetObserver {
   public:
    explicit PrimaryWidgetObserver(HelpBubbleView& help_bubble)
-@@ -743,7 +743,7 @@ HelpBubbleView::HelpBubbleView(
+@@ -733,7 +733,7 @@ HelpBubbleView::HelpBubbleView(
      event_relay_->Init(this);
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    primary_widget_observer_ = std::make_unique<PrimaryWidgetObserver>(*this);
  #endif
  
-@@ -855,7 +855,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
+@@ -845,7 +845,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,
                                                views::Widget* widget) const {
    BubbleDialogDelegateView::OnBeforeBubbleWidgetInit(params, widget);

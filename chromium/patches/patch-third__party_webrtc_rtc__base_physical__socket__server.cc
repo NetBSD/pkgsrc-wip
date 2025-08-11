@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ third_party/webrtc/rtc_base/physical_socket_server.cc
 @@ -65,7 +65,7 @@
  #include "rtc_base/synchronization/mutex.h"

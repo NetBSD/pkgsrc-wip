@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/custom_frame_view.cc.orig	2025-07-21 19:32:31.000000000 +0000
-+++ ui/views/window/custom_frame_view.cc
-@@ -279,7 +279,7 @@ int CustomFrameView::NonClientTopBorderH
- int CustomFrameView::CaptionButtonY() const {
+--- ui/views/window/default_frame_view.cc.orig	2025-07-29 22:51:44.000000000 +0000
++++ ui/views/window/default_frame_view.cc
+@@ -285,7 +285,7 @@ int DefaultFrameView::NonClientTopBorder
+ int DefaultFrameView::CaptionButtonY() const {
    // Maximized buttons start at window top so that even if their images aren't
    // drawn flush with the screen edge, they still obey Fitts' Law.
 -#if BUILDFLAG(IS_LINUX)

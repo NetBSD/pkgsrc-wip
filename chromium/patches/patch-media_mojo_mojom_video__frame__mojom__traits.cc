@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
-@@ -22,7 +22,7 @@
+@@ -23,7 +23,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"
  #include "ui/gfx/mojom/hdr_metadata_mojom_traits.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/posix/eintr_wrapper.h"
  #include "media/gpu/buffer_validation.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -159,7 +159,7 @@ media::mojom::VideoFrameDataPtr MakeVide
+@@ -160,7 +160,7 @@ media::mojom::VideoFrameDataPtr MakeVide
          media::mojom::OpaqueVideoFrameData::New());
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    if (input->storage_type() == media::VideoFrame::STORAGE_DMABUFS) {
      // Duplicates the DMA buffer FDs to a new vector since this cannot take
      // ownership of the FDs in |input| due to constness.
-@@ -190,7 +190,7 @@ media::mojom::VideoFrameDataPtr MakeVide
+@@ -191,7 +191,7 @@ media::mojom::VideoFrameDataPtr MakeVide
  
  }  // namespace
  
@@ -33,7 +33,7 @@ $NetBSD$
  // static
  bool StructTraits<
      media::mojom::ColorPlaneLayoutDataView,
-@@ -429,7 +429,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -430,7 +430,7 @@ bool StructTraits<media::mojom::VideoFra
      frame = media::VideoFrame::WrapTrackingToken(
          format, *metadata.tracking_token, coded_size, visible_rect,
          natural_size, timestamp);

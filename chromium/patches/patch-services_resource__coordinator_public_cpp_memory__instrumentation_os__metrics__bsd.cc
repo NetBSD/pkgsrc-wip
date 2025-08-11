@@ -4,14 +4,16 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2025-07-24 17:00:09.207351138 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2025-08-11 16:25:46.944606114 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
-@@ -0,0 +1,67 @@
+@@ -0,0 +1,69 @@
 +// Copyright 2022 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h"
++
++#include "base/notimplemented.h"
 +
 +#include "base/memory/page_size.h"
 +#include "base/process/process.h"

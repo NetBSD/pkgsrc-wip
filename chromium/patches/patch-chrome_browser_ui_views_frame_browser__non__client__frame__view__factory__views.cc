@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc
 @@ -15,7 +15,7 @@
  #include "chrome/browser/ui/views/frame/browser_frame_view_win.h"

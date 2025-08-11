@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/robo_lib/config.py.orig	2025-07-21 19:32:31.000000000 +0000
+--- media/ffmpeg/scripts/robo_lib/config.py.orig	2025-07-29 22:51:44.000000000 +0000
 +++ media/ffmpeg/scripts/robo_lib/config.py
 @@ -56,19 +56,13 @@ class RoboConfiguration:
          self._llvm_path = os.path.join(self.chrome_src(), "third_party",
@@ -34,11 +34,11 @@ $NetBSD$
 +        elif platform.machine() == "x86_64" or platform.machine() == "AMD64" or platform.machine() == "amd64":
              self._host_architecture = "x64"
 -        elif platform.machine() == "aarch64":
-+        elif platform.machine() == "aarch64" or platform.machine() == "arm64":
++        elif platform.machine() == "aarch64" or platform.machine() == "arm64" or platform.machine() == "evbarm":
              self._host_architecture = "arm64"
          elif platform.machine() == "mips32":
              self._host_architecture = "mipsel"
-@@ -224,6 +218,12 @@ class RoboConfiguration:
+@@ -228,6 +222,12 @@ class RoboConfiguration:
          elif platform.system() == "Windows" or "CYGWIN_NT" in platform.system(
          ):
              self._host_operating_system = "win"
@@ -51,7 +51,7 @@ $NetBSD$
          else:
              raise ValueError(f"Unsupported platform: {platform.system()}")
  
-@@ -232,8 +232,8 @@ class RoboConfiguration:
+@@ -236,8 +236,8 @@ class RoboConfiguration:
          wd = os.getcwd()
          # Walk up the tree until we find src/AUTHORS
          while wd != "/":

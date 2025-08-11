@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -326,7 +326,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
- #endif  // BUILDFLAG(IS_ANDROID)
+@@ -365,7 +365,7 @@ BASE_FEATURE(kDisableAutofillStrikeSyste
+              base::FEATURE_DISABLED_BY_DEFAULT);
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)

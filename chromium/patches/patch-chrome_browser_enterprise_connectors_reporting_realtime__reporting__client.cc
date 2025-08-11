@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -52,7 +52,7 @@
  #include "base/strings/utf_string_conversions.h"

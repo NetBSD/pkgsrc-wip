@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.h
-@@ -365,7 +365,7 @@ class PaymentsDataManager : public Autof
+@@ -370,7 +370,7 @@ class PaymentsDataManager : public Autof
    void SetAutofillHasSeenIban();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
    // Returns the value of the kAutofillHasSeenBnpl pref.
    bool IsAutofillHasSeenBnplPrefEnabled() const;
  
-@@ -685,7 +685,7 @@ class PaymentsDataManager : public Autof
+@@ -693,7 +693,7 @@ class PaymentsDataManager : public Autof
    void ClearAllCreditCardBenefits();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

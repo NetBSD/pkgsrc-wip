@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc
-@@ -218,7 +218,7 @@ CanvasResourceProvider* GPUCanvasContext
+@@ -224,7 +224,7 @@ CanvasResourceProvider* GPUCanvasContext
  
    scoped_refptr<WebGPUMailboxTexture> front_buffer_texture;
    if (source_buffer == kFrontBuffer) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/gl/gpu_service_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/viz/service/gl/gpu_service_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/viz/service/gl/gpu_service_impl.cc
-@@ -515,7 +515,7 @@ void GpuServiceImpl::InitializeWithHostI
+@@ -514,7 +514,7 @@ void GpuServiceImpl::InitializeWithHostI
  
    mojo::Remote<mojom::GpuHost> gpu_host(std::move(pending_gpu_host));
  
@@ -15,7 +15,7 @@ $NetBSD$
    gpu_extra_info_.is_gmb_nv12_supported = IsGMBNV12Supported();
  #endif
  
-@@ -1351,7 +1351,7 @@ bool GpuServiceImpl::OnBeginFrameDerived
+@@ -1372,7 +1372,7 @@ bool GpuServiceImpl::OnBeginFrameDerived
    return true;
  }
  
