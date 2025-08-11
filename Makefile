@@ -6119,7 +6119,6 @@ SUBDIR+=	xrdp
 SUBDIR+=	xrdp09
 SUBDIR+=	xroar
 SUBDIR+=	xsb
-SUBDIR+=	xsel
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
