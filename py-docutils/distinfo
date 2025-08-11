@@ -3,4 +3,4 @@ $NetBSD: distinfo,v 1.33 2025/08/03 10:06:37 wiz Exp $
 BLAKE2s (docutils-0.22.tar.gz) = 20d7b105f2af0a2417ab1e3800120565ef7c3fc77da8dd4ebef852624b7b3eaa
 SHA512 (docutils-0.22.tar.gz) = 09082eb3bdd5f9b3e977d356740efee47725a50fbaca7bf35c7fddff06003c2b2177a38d160a9956f9e96261f881c0d870c0aa9fef84f90d0cac079ccc73669d
 Size (docutils-0.22.tar.gz) = 2277984 bytes
-SHA1 (patch-docutils_parsers_rst_states.py) = b1c6bcd67d117267847d79516711f3c61dd11c3a
+SHA1 (patch-docutils_parsers_rst_states.py) = e355d56f6595f5f5b240f23eccaa7ce9da5677f8

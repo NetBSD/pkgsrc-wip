@@ -1,15 +1,46 @@
 $NetBSD$
 
 https://sourceforge.net/p/docutils/bugs/508/
+https://sourceforge.net/p/docutils/bugs/509/
 
 --- docutils/parsers/rst/states.py.orig	2025-07-29 14:37:37.894344600 +0000
 +++ docutils/parsers/rst/states.py
-@@ -331,30 +331,42 @@ class RSTState(StateWS):
+@@ -169,7 +169,6 @@ class RSTStateMachine(StateMachineWS):
+ 
+ 
+ class NestedStateMachine(StateMachineWS):
+-
+     """
+     StateMachine run from within other StateMachine runs, to parse nested
+     document structures.
+@@ -177,7 +176,7 @@ class NestedStateMachine(StateMachineWS)
+ 
+     def run(self, input_lines, input_offset, memo, node, match_titles=True):
+         """
+-        Parse `input_lines` and populate a `docutils.nodes.document` instance.
++        Parse `input_lines` and populate `node`.
+ 
+         Extend `StateMachineWS.run()`: set up document-wide data.
+         """
+@@ -326,35 +325,53 @@ class RSTState(StateWS):
+ 
+         When a new section is reached that isn't a subsection of the current
+         section, set `self.parent` to the new section's parent section
+-        (or the document if the new section is a top-level section).
++        (or the root node if the new section is a top-level section).
+         """
          title_styles = self.memo.title_styles
          parent_sections = self.parent.section_hierarchy()
-         # current section level: (0 document, 1 section, 2 subsection, ...)
+-        # current section level: (0 document, 1 section, 2 subsection, ...)
 -        mylevel = len(parent_sections)
 -        # Determine the level of the new section:
++        # Adding a new <section> at level "i" is done by appending to
++        # ``parent_sections[i-1].parent``.
++        # However, in nested parsing the root `node` may be a <section>.
++        # Then ``parent_sections[0]`` has no parent and must be discarded:
++        if parent_sections and parent_sections[0].parent is None:
++            parent_sections.pop(0)
++        # current section level: (0 root, 1 section, 2 subsection, ...)
 +        oldlevel = len(parent_sections)
 +        # new section level:
          try:  # check for existing title style
