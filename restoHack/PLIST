@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/hack
+man/man6/hack.6
 share/hack/data
 share/hack/help
 share/hack/hh
 share/hack/rumors
-share/man/man6/hack.6
