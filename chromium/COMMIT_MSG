@@ -1,8 +1,22 @@
-www/chromium: update to 138.0.7204.168
+www/chromium: update to 139.0.7258.66
 
-* 138.0.7204.183
-This update includes 4 security fixes. Below, we highlight
-fixes that were contributed by external researchers. Please
-see the Chrome Security Page for more information.
-[$8000][426054987] High CVE-2025-8292: Use after free in
-Media Stream. Reported by Anonymous on 2025-06-19
+* 139.0.7258.66
+This update includes 12 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$2000][414760982] Medium CVE-2025-8576: Use after free in Extensions.
+Reported by asnine on 2025-04-30
+[$1000][384050903] Medium CVE-2025-8577: Inappropriate implementation
+in Picture In Picture. Reported by Umar Farooq on 2024-12-14
+[TBD][423387026] Medium CVE-2025-8578: Use after free in Cast.
+Reported by Fayez on 2025-06-09
+[$10000][407791462] Low CVE-2025-8579: Inappropriate implementation in
+Gemini Live in Chrome. Reported by Alesandro Ortiz on 2025-04-02
+[$2000][411544197] Low CVE-2025-8580: Inappropriate implementation in
+Filesystems. Reported by Huuuuu on 2025-04-18
+[$2000][416942878] Low CVE-2025-8581: Inappropriate implementation in
+Extensions. Reported by Vincent Dragnea on 2025-05-11
+[$1000][40089450] Low CVE-2025-8582: Insufficient validation of
+untrusted input in DOM. Reported by Anonymous on 2017-10-31
+[$500][373794472] Low CVE-2025-8583: Inappropriate implementation in
+Permissions. Reported by Shaheen Fazim on 2024-10-16
