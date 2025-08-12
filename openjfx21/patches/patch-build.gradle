@@ -1,0 +1,83 @@
+$NetBSD$
+
+--- build.gradle.orig	2025-06-17 08:39:24.000000000 +0000
++++ build.gradle
+@@ -359,6 +359,7 @@ ext.IS_RISCV64 = OS_ARCH.toLowerCase().c
+ ext.IS_MAC = OS_NAME.contains("mac") || OS_NAME.contains("darwin")
+ ext.IS_WINDOWS = OS_NAME.contains("windows")
+ ext.IS_LINUX = OS_NAME.contains("linux")
++ext.IS_NETBSD = OS_NAME.contains("netbsd")
+ 
+ ext.MAVEN_GROUP_ID = "org.openjfx"
+ 
+@@ -366,12 +367,12 @@ ext.MAVEN_GROUP_ID = "org.openjfx"
+ // at present building on PI is not supported, but we would only need to make
+ // some changes on assumptions on what should be built (like SWT / Swing) and
+ // such and we could probably make it work.
+-if (!IS_MAC && !IS_WINDOWS && !IS_LINUX) fail("Unsupported build OS ${OS_NAME}")
++if (!IS_MAC && !IS_WINDOWS && !IS_LINUX && !IS_NETBSD) fail("Unsupported build OS ${OS_NAME}")
+ if (IS_WINDOWS && OS_ARCH != "x86" && OS_ARCH != "amd64") {
+     fail("Unknown and unsupported build architecture: $OS_ARCH")
+ } else if (IS_MAC && OS_ARCH != "x86_64" && OS_ARCH != "aarch64") {
+     fail("Unknown and unsupported build architecture: $OS_ARCH")
+-} else if (IS_LINUX && OS_ARCH != "i386" && OS_ARCH != "amd64" && !IS_AARCH64 && !IS_LOONGARCH64 && !IS_RISCV64) {
++} else if ((IS_LINUX || IS_NETBSD) && OS_ARCH != "i386" && OS_ARCH != "amd64" && !IS_AARCH64 && !IS_LOONGARCH64 && !IS_RISCV64) {
+     fail("Unknown and unsupported build architecture: $OS_ARCH")
+ }
+ 
+@@ -501,7 +502,9 @@ ext.SWT_FILE_NAME = IS_MAC ? "org.eclips
+     IS_WINDOWS && IS_64 ? "org.eclipse.swt.win32.win32.x86_64_3.105.3.v20170228-0512" :
+     IS_WINDOWS && !IS_64 ? "org.eclipse.swt.win32.win32.x86_3.105.3.v20170228-0512" :
+     IS_LINUX && IS_64 ? "org.eclipse.swt.gtk.linux.x86_64_3.105.3.v20170228-0512" :
+-    IS_LINUX && !IS_64 ? "org.eclipse.swt.gtk.linux.x86_3.105.3.v20170228-0512" : ""
++    IS_LINUX && !IS_64 ? "org.eclipse.swt.gtk.linux.x86_3.105.3.v20170228-0512" :
++    IS_NETBSD && IS_64 ? "org.eclipse.swt.gtk.netbsd.x86_64_3.105.3.v20170228-0512" :
++    IS_NETBSD && !IS_64 ? "org.eclipse.swt.gtk.netbsd.x86_3.105.3.v20170228-0512" : ""
+ 
+ // Specifies whether to run full tests (true) or smoke tests (false)
+ defineProperty("FULL_TEST", "false")
+@@ -666,7 +669,7 @@ defineProperty("MAVEN_VERSION", IS_MAVEN
+ // Check whether the COMPILE_TARGETS property has been specified (if so, it was done by
+ // the user and not by this script). If it has not been defined then default
+ // to building the normal desktop build for this machine
+-project.ext.set("defaultHostTarget", IS_MAC ? "mac" : IS_WINDOWS ? "win" : IS_LINUX ? "linux" : "");
++project.ext.set("defaultHostTarget", IS_MAC ? "mac" : IS_WINDOWS ? "win" : IS_LINUX ? "linux" : IS_NETBSD ? "netbsd" : "");
+ defineProperty("COMPILE_TARGETS", "$defaultHostTarget")
+ 
+ // Flag indicating whether to import cross compile tools
+@@ -820,7 +823,7 @@ void fetchExternalTools(String configNam
+                 def File pkgdir = file("$destdir/$basename")
+ 
+                 if (pkgname.endsWith(".tgz") || pkgname.endsWith("tar.gz")) {
+-                    if (IS_LINUX || IS_MAC) {
++                    if (IS_LINUX || IS_MAC || IS_NETBSD) {
+                         // use native tar to support symlinks
+                         pkgdir.mkdirs()
+                         exec {
+@@ -1308,7 +1311,7 @@ compileTargets { t ->
+     if (!targetProperties.containsKey('includeMonocle')) targetProperties.includeMonocle = false
+     if (!targetProperties.containsKey('includeEGL')) targetProperties.includeEGL = false
+ 
+-    if (!targetProperties.containsKey('includeGTK')) targetProperties.includeGTK = IS_LINUX
++    if (!targetProperties.containsKey('includeGTK')) targetProperties.includeGTK = IS_LINUX || IS_NETBSD
+ 
+     if (!targetProperties.containsKey('modLibDest')) targetProperties.modLibDest = targetProperties.libDest
+ 
+@@ -1440,7 +1443,7 @@ logger.quiet("minimum jdk version: ${jfx
+ logger.quiet("minimum jdk build number: ${jfxBuildJdkBuildnumMin}")
+ logger.quiet("Java target version: ${JAVA_TARGET_VERSION}")
+ 
+-if (IS_LINUX) {
++if (IS_LINUX || IS_NETBSD) {
+     logger.quiet("GCC version: ${jfxBuildLinuxGccVersion}")
+ } else if (IS_WINDOWS) {
+     logger.quiet("MSVC version: ${jfxBuildWindowsMsvcVersion}")
+@@ -4657,7 +4660,7 @@ configurations {
+ }
+ 
+ if (IS_STUB_RUNTIME_OPENJFX) {
+-    def String platform = IS_MAC ? "mac" : IS_WINDOWS ? "win" : IS_LINUX ? "linux" : ""
++    def String platform = IS_MAC ? "mac" : IS_WINDOWS ? "win" : IS_LINUX ? "linux" : IS_NETBSD ? "netbsd" : ""
+     dependencies {
+         openjfxStubs "org.openjfx:javafx-media:$STUB_RUNTIME_OPENJFX:$platform@jar"
+         openjfxStubs "org.openjfx:javafx-web:$STUB_RUNTIME_OPENJFX:$platform@jar"

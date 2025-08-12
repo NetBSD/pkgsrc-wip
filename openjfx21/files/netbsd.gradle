@@ -1,0 +1,296 @@
+/*
+ * Copyright (c) 2013, 2024, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+
+ext.NETBSD = [:]
+
+// Declare whether this particular target file applies to the current system
+NETBSD.canBuild = IS_NETBSD;
+if (!NETBSD.canBuild) return;
+
+// All desktop related packages should be built
+NETBSD.compileSwing = true;
+NETBSD.compileSWT = true;
+
+// Libraries end up in the lib/$OS_ARCH directory for Linux
+NETBSD.libDest = "lib"
+
+// Lambda for naming the generated libs
+NETBSD.library = { name -> return (IS_STATIC_BUILD ? "lib${name}.a" : "lib${name}.so") as String }
+
+// A set of common parameters to use for both compiling and linking
+def commonFlags = [
+        "-fno-strict-aliasing", "-fPIC", "-fno-omit-frame-pointer", // optimization flags
+        "-fstack-protector",
+        "-Wextra", "-Wall", "-Wformat-security", "-Wno-unused", "-Wno-parentheses", "-Werror=trampolines"] // warning flags
+
+if (OS_ARCH == "i386") {
+    commonFlags += "-m32"
+}
+
+if (IS_STATIC_BUILD) {
+    commonFlags += "-DSTATIC_BUILD"
+}
+
+// Specify the compilation parameters and link parameters
+def cppFlags = [
+        commonFlags, "-I$JDK_HOME/include", "-I$JDK_HOME/include/netbsd", "-c",
+        "-ffunction-sections", "-fdata-sections",
+        IS_DEBUG_NATIVE ? ["-ggdb", "-DVERBOSE"] : ["-O2", "-DNDEBUG"]].flatten()
+
+def cFlags = [cppFlags, "-Werror=implicit-function-declaration"].flatten()
+
+def ccFlagsGTK3 = cppFlags
+//ccFlags.addAll(["-Wnon-virtual-dtor", "-Woverloaded-virtual", "-std=c++0x"])
+def dynamicLinkFlags = ["-shared", commonFlags,
+                 "-z", "relro",
+                 "-Wl,--gc-sections"].flatten()
+
+def staticLinkFlags = [].flatten()
+
+def linkFlags = IS_STATIC_BUILD ? staticLinkFlags : dynamicLinkFlags;
+
+if (IS_DEBUG_NATIVE) {
+    linkFlags += "-g"
+}
+
+def toolchainDir
+if (hasProperty('toolchainDir')) {
+    toolchainDir = ext.toolchainDir + "/"
+} else {
+    toolchainDir = ""
+}
+
+def gtk3CCFlags = [ "-Wno-deprecated-declarations" ];
+def gtk3LinkFlags = [ ];
+
+setupTools("netbsd_gtk3",
+    { propFile ->
+        ByteArrayOutputStream results2 = new ByteArrayOutputStream();
+        exec {
+            commandLine("${toolchainDir}pkg-config", "--cflags", "gtk+-3.0", "gthread-2.0", "xtst", "gio-unix-2.0")
+            setStandardOutput(results2);
+        }
+        propFile << "cflagsGTK3=" << results2.toString().trim() << "\n";
+
+        ByteArrayOutputStream results4 = new ByteArrayOutputStream();
+        exec {
+            commandLine("${toolchainDir}pkg-config", "--libs", "gtk+-3.0", "gthread-2.0", "xtst", "gio-unix-2.0")
+            setStandardOutput(results4);
+        }
+        propFile << "libsGTK3=" << results4.toString().trim()  << "\n";
+
+    },
+    { properties ->
+        def cflagsGTK3 = properties.getProperty("cflagsGTK3")
+        def libsGTK3 = properties.getProperty("libsGTK3")
+        if (cflagsGTK3 && libsGTK3) {
+            gtk3CCFlags.addAll(cflagsGTK3.split(" "))
+            gtk3LinkFlags.addAll(libsGTK3.split(" "))
+        } else {
+            throw new IllegalStateException("GTK3 development packages not found. If GTK3 packages are installed, please remove the build directory and try again.")
+        }
+    }
+)
+
+def pangoCCFlags = ["-D_ENABLE_PANGO"];
+def pangoLinkFlags = [];
+setupTools("netbsd_pango_tools",
+    { propFile ->
+        ByteArrayOutputStream results = new ByteArrayOutputStream();
+        exec {
+            commandLine "${toolchainDir}pkg-config", "--cflags", "pangoft2"
+            standardOutput = results
+        }
+        propFile << "cflags=" << results.toString().trim() << "\n";
+
+        results = new ByteArrayOutputStream();
+        exec {
+            commandLine "${toolchainDir}pkg-config", "--libs", "pangoft2"
+            standardOutput = results
+        }
+        propFile << "libs=" << results.toString().trim();
+    },
+    { properties ->
+        def cflags = properties.getProperty("cflags")
+        def libs = properties.getProperty("libs")
+        if (cflags && libs) {
+            pangoCCFlags.addAll(cflags.split(" "))
+            pangoLinkFlags.addAll(libs.split(" "))
+        } else {
+            throw new IllegalStateException("Linux pango packages not found.\nIf pango packages are installed, please remove the build directory and try again.")
+        }
+    }
+)
+
+def freetypeCCFlags = [ext.IS_COMPILE_PANGO ? "-D_ENABLE_PANGO" :
+                       ext.IS_COMPILE_HARFBUZZ ? "-D_ENABLE_HARFBUZZ" : ""]
+def freetypeLinkFlags = []
+setupTools("netbsd_freetype_tools",
+    { propFile ->
+        ByteArrayOutputStream results = new ByteArrayOutputStream();
+        exec {
+            commandLine "${toolchainDir}pkg-config", "--cflags", "freetype2"
+            standardOutput = results
+        }
+        propFile << "cflags=" << results.toString().trim() << "\n";
+
+        results = new ByteArrayOutputStream();
+        exec {
+            commandLine "${toolchainDir}pkg-config", "--libs", "freetype2"
+            standardOutput = results
+        }
+        propFile << "libs=" << results.toString().trim();
+    },
+    { properties ->
+        def cflags = properties.getProperty("cflags")
+        def libs = properties.getProperty("libs")
+        if (cflags && libs) {
+            freetypeCCFlags.addAll(cflags.split(" "))
+            if (!IS_STATIC_BUILD) {
+                freetypeLinkFlags.addAll(libs.split(" "))
+            }
+        } else {
+            throw new IllegalStateException("Linux freetype packages not found.\nIf freetype packages are installed, please remove the build directory and try again.")
+        }
+    }
+)
+
+def compiler = IS_COMPILE_PARFAIT ? "parfait-gcc" : "${toolchainDir}gcc";
+def linker = IS_STATIC_BUILD ? "ar" : IS_COMPILE_PARFAIT ? "parfait-g++" : "${toolchainDir}g++";
+
+// Strip native .so shared libraries as a postprocess step when copying them
+NETBSD.strip = "${toolchainDir}strip"
+NETBSD.stripArgs = [ "-x" ]
+
+NETBSD.glass = [:]
+// glassgtk3 support is practically essential for NetBSD.
+NETBSD.glass.variants = ["glass", "glassgtk3"]
+
+FileTree ft_gtk_launcher = fileTree("${project(":graphics").projectDir}/src/main/native-glass/gtk/") {
+    include("**/launcher.c")
+}
+
+FileTree ft_gtk = fileTree("${project(":graphics").projectDir}/src/main/native-glass/gtk/") {
+    exclude("**/launcher.c")
+}
+
+NETBSD.glass.glass = [:]
+NETBSD.glass.glass.nativeSource = ft_gtk_launcher.getFiles()
+NETBSD.glass.glass.compiler = compiler
+NETBSD.glass.glass.ccFlags = [cppFlags, "-Werror"].flatten()
+NETBSD.glass.glass.linker = linker
+NETBSD.glass.glass.linkFlags = IS_STATIC_BUILD? linkFlags : [linkFlags, "-lX11"].flatten()
+NETBSD.glass.glass.lib = "glass"
+
+NETBSD.glass.glassgtk3 = [:]
+NETBSD.glass.glassgtk3.nativeSource =  ft_gtk.getFiles()
+NETBSD.glass.glassgtk3.compiler = compiler
+NETBSD.glass.glassgtk3.ccFlags = IS_STATIC_BUILD ?
+        ["-fno-threadsafe-statics", cppFlags, gtk3CCFlags].flatten() :
+        [cppFlags, gtk3CCFlags, "-Werror"].flatten()
+NETBSD.glass.glassgtk3.linker = linker
+NETBSD.glass.glassgtk3.linkFlags = IS_STATIC_BUILD ? linkFlags : [linkFlags, gtk3LinkFlags].flatten()
+NETBSD.glass.glassgtk3.lib = "glassgtk3"
+
+NETBSD.decora = [:]
+NETBSD.decora.compiler = compiler
+NETBSD.decora.ccFlags = [cppFlags, "-ffast-math"].flatten()
+NETBSD.decora.linker = linker
+NETBSD.decora.linkFlags = [linkFlags].flatten()
+NETBSD.decora.lib = "decora_sse"
+
+NETBSD.prism = [:]
+NETBSD.prism.nativeSource = file("${project(":graphics").projectDir}/src/main/native-prism")
+NETBSD.prism.compiler = compiler
+NETBSD.prism.ccFlags = [cFlags, "-DINLINE=inline"].flatten()
+NETBSD.prism.linker = linker
+NETBSD.prism.linkFlags = [linkFlags].flatten()
+NETBSD.prism.lib = "prism_common"
+
+NETBSD.prismSW = [:]
+NETBSD.prismSW.nativeSource = file("${project(":graphics").projectDir}/src/main/native-prism-sw")
+NETBSD.prismSW.compiler = compiler
+NETBSD.prismSW.ccFlags = [cFlags, "-DINLINE=inline"].flatten()
+NETBSD.prismSW.linker = linker
+NETBSD.prismSW.linkFlags = [linkFlags].flatten()
+NETBSD.prismSW.lib = "prism_sw"
+
+NETBSD.iio = [:]
+NETBSD.iio.nativeSource = [
+    file("${project("graphics").projectDir}/src/main/native-iio"),
+    file("${project("graphics").projectDir}/src/main/native-iio/libjpeg")]
+NETBSD.iio.compiler = compiler
+NETBSD.iio.ccFlags = [cFlags, "-fvisibility=hidden"].flatten()
+NETBSD.iio.linker = IS_STATIC_BUILD ? "ld" : linker
+NETBSD.iio.linkFlags = [linkFlags].flatten()
+NETBSD.iio.lib = "javafx_iio"
+
+NETBSD.prismES2 = [:]
+NETBSD.prismES2.nativeSource = [
+    file("${project("graphics").projectDir}/src/main/native-prism-es2"),
+    file("${project("graphics").projectDir}/src/main/native-prism-es2/GL"),
+    file("${project("graphics").projectDir}/src/main/native-prism-es2/x11")
+]
+NETBSD.prismES2.compiler = compiler
+NETBSD.prismES2.ccFlags = ["-DLINUX", cFlags].flatten()
+NETBSD.prismES2.linker = linker
+NETBSD.prismES2.linkFlags =IS_STATIC_BUILD ? linkFlags : [linkFlags, "-lX11", "-lXxf86vm", "-lGL"].flatten()
+NETBSD.prismES2.lib = "prism_es2"
+
+def closedDir = file("$projectDir/../rt-closed")
+NETBSD.font = [:]
+NETBSD.font.compiler = compiler
+NETBSD.font.nativeSource = [file("${project("graphics").projectDir}/src/main/native-font")]
+NETBSD.font.ccFlags = ["-DJFXFONT_PLUS", cppFlags].flatten()
+NETBSD.font.linker = linker
+NETBSD.font.linkFlags = [linkFlags].flatten()
+NETBSD.font.lib = "javafx_font"
+
+NETBSD.fontFreetype = [:]
+NETBSD.fontFreetype.nativeSource = ["src/main/native-font/freetype.c"]
+NETBSD.fontFreetype.compiler = compiler
+NETBSD.fontFreetype.ccFlags = ["-DJFXFONT_PLUS", cFlags, freetypeCCFlags].flatten()
+NETBSD.fontFreetype.linker = linker
+NETBSD.fontFreetype.linkFlags = IS_STATIC_BUILD ? linkFlags : [linkFlags, freetypeLinkFlags].flatten()
+NETBSD.fontFreetype.lib = "javafx_font_freetype"
+
+NETBSD.fontPango = [:]
+NETBSD.fontPango.nativeSource = ["src/main/native-font/pango.c"]
+NETBSD.fontPango.compiler = compiler
+NETBSD.fontPango.ccFlags = ["-DJFXFONT_PLUS", cFlags, pangoCCFlags].flatten()
+NETBSD.fontPango.linker = linker
+NETBSD.fontPango.linkFlags =IS_STATIC_BUILD ? linkFlags : [linkFlags, pangoLinkFlags].flatten()
+NETBSD.fontPango.lib = "javafx_font_pango"
+
+NETBSD.media = [:]
+NETBSD.media.compiler = compiler
+NETBSD.media.linker = linker
+NETBSD.media.ar = "${toolchainDir}ar"
+
+NETBSD.webkit = [:]
+NETBSD.webkit.compiler = compiler
+NETBSD.webkit.linker = linker
+NETBSD.webkit.ccFlags = commonFlags.flatten()
+NETBSD.webkit.linkFlags = linkFlags.flatten()

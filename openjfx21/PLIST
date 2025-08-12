@@ -1,0 +1,27 @@
+@comment $NetBSD$
+openjfx21/javafx-exports.zip
+openjfx21/jmods/javafx.base.jmod
+openjfx21/jmods/javafx.controls.jmod
+openjfx21/jmods/javafx.fxml.jmod
+openjfx21/jmods/javafx.graphics.jmod
+openjfx21/jmods/javafx.media.jmod
+openjfx21/jmods/javafx.swing.jmod
+openjfx21/jmods/javafx.web.jmod
+openjfx21/lib/javafx-swt.jar
+openjfx21/lib/javafx.base.jar
+openjfx21/lib/javafx.controls.jar
+openjfx21/lib/javafx.fxml.jar
+openjfx21/lib/javafx.graphics.jar
+openjfx21/lib/javafx.media.jar
+openjfx21/lib/javafx.properties
+openjfx21/lib/javafx.swing.jar
+openjfx21/lib/javafx.web.jar
+openjfx21/lib/libdecora_sse.so
+openjfx21/lib/libglass.so
+openjfx21/lib/libglassgtk3.so
+openjfx21/lib/libjavafx_font.so
+openjfx21/lib/libjavafx_iio.so
+openjfx21/lib/libprism_common.so
+openjfx21/lib/libprism_es2.so
+openjfx21/lib/libprism_sw.so
+openjfx21/src.zip
