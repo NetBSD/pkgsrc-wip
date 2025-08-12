@@ -12,3 +12,5 @@ webrtc-audio-processing.wrap
 wireplumber.wrap
 
 Investigate if we need to download these or can disable them.
+
+ALSA support is disabled yet.

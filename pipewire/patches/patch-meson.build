@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- meson.build.orig	2025-07-23 15:42:58.000000000 +0000
++++ meson.build
+@@ -526,7 +526,6 @@ summary({'Snapd-glib (Snap support)': sn
+ 
+ check_functions = [
+   ['gettid', '#include <unistd.h>', ['-D_GNU_SOURCE'], []],
+-  ['memfd_create', '#include <sys/mman.h>', ['-D_GNU_SOURCE'], []],
+   ['getrandom', '#include <stddef.h>\n#include <sys/random.h>', ['-D_GNU_SOURCE'], []],
+   ['random_r', '#include <stdlib.h>', ['-D_GNU_SOURCE'], []],
+   ['reallocarray', '#include <stdlib.h>', ['-D_GNU_SOURCE'], []],
+@@ -536,6 +535,10 @@ check_functions = [
+   ['malloc_info', '#include <malloc.h>', [], []],
+ ]
+ 
++if host_machine.system() in ['linux']
++  check_functions.append(['memfd_create', '#include <sys/mman.h>', ['-D_GNU_SOURCE'], []])
++endif
++
+ foreach f : check_functions
+   cdata.set('HAVE_' + f.get(0).to_upper(),
+             cc.has_function(f.get(0),
