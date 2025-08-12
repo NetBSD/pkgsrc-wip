@@ -1,0 +1,4 @@
+$ /usr/pkg/java/openjdk21/bin/javac --module-path /usr/pkg/openjfx21/lib --add-modules javafx.controls HelloFX.java
+$ /usr/pkg/java/openjdk21/bin/java --module-path /usr/pkg/openjfx21/lib --add-modules javafx.controls HelloFX
+GLib (gthread-posix.c): Unexpected error from C library during 'pthread_mutex_unlock': Operation not permitted.  Aborting.
+zsh: abort (core dumped)  /usr/pkg/java/openjdk21/bin/java --module-path /usr/pkg/openjfx21/lib
