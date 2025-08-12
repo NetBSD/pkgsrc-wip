@@ -2740,6 +2740,7 @@ SUBDIR+=	openfmod
 SUBDIR+=	openfortivpn
 SUBDIR+=	opengrok
 SUBDIR+=	openjdk8-openjfx-hg
+SUBDIR+=	openjfx21
 SUBDIR+=	openjfx23
 SUBDIR+=	openjkdf2
 SUBDIR+=	openlogos
