@@ -1,0 +1,27 @@
+@comment $NetBSD$
+openjfx23/javafx-exports.zip
+openjfx23/jmods/javafx.base.jmod
+openjfx23/jmods/javafx.controls.jmod
+openjfx23/jmods/javafx.fxml.jmod
+openjfx23/jmods/javafx.graphics.jmod
+openjfx23/jmods/javafx.media.jmod
+openjfx23/jmods/javafx.swing.jmod
+openjfx23/jmods/javafx.web.jmod
+openjfx23/lib/javafx-swt.jar
+openjfx23/lib/javafx.base.jar
+openjfx23/lib/javafx.controls.jar
+openjfx23/lib/javafx.fxml.jar
+openjfx23/lib/javafx.graphics.jar
+openjfx23/lib/javafx.media.jar
+openjfx23/lib/javafx.properties
+openjfx23/lib/javafx.swing.jar
+openjfx23/lib/javafx.web.jar
+openjfx23/lib/libdecora_sse.so
+openjfx23/lib/libglass.so
+openjfx23/lib/libglassgtk3.so
+openjfx23/lib/libjavafx_font.so
+openjfx23/lib/libjavafx_iio.so
+openjfx23/lib/libprism_common.so
+openjfx23/lib/libprism_es2.so
+openjfx23/lib/libprism_sw.so
+openjfx23/src.zip
