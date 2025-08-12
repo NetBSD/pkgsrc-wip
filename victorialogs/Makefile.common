@@ -3,7 +3,7 @@
 # used by wip/victorialogs/Makefile
 # used by wip/victorialogs-vlogscli/Makefile
 
-VICTORIALOGS_VERS=	1.26.0
+VICTORIALOGS_VERS=	1.27.0
 DISTNAME=		VictoriaLogs-${VICTORIALOGS_VERS}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=VictoriaMetrics/}
@@ -20,6 +20,6 @@ MAKE_ENV+=	CGO_ENABLED=0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-.include "${.CURDIR}/../../wip/victorialogs/go-modules.mk"
+#.include "${.CURDIR}/../../wip/victorialogs/go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
