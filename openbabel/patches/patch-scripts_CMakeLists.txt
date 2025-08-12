@@ -1,0 +1,12 @@
+$NetBSD$
+
+https://github.com/openbabel/openbabel/pull/2784
+
+--- scripts/CMakeLists.txt.orig	2024-12-21 00:24:53.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6.0)
++cmake_minimum_required(VERSION 3.10.0)
+ # Library versioning (used in Mac Python bindings)x
+ set(SOVERSION 4)
+ 
