@@ -8,7 +8,7 @@ GH_PROJECT=	CopyQ
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 # Fix build with Qt 6.9, remove after release>10.0.0
-PATCH_SITES=		https://github.com/hluk/CopyQ/commit/
+PATCH_SITES=		${MASTER_SITES}${GH_PROJECT}/commit/
 PATCH_DIST_STRIP=	-p1
 PATCHFILES=		f08c0d46a239362c5d3525ef9c3ba943bb00f734.patch
 
