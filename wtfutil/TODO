@@ -1,0 +1,6 @@
+Build fails with:
+
+ github.com/godbus/dbus
+ # github.com/godbus/dbus
+ ../.gopath/pkg/mod/github.com/godbus/dbus@v4.1.0+incompatible/transport_unix.go:51:10: cannot use t (variable of type *unixTransport) as transport value in return statement: *unixTransport does not implement transport (missing method SendNullByte)
+ ../.gopath/pkg/mod/github.com/godbus/dbus@v4.1.0+incompatible/transport_unix.go:57:10: cannot use t (variable of type *unixTransport) as transport value in return statement: *unixTransport does not implement transport (missing method SendNullByte)
