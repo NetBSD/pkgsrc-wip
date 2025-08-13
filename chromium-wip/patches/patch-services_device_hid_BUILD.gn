@@ -11,7 +11,7 @@ $NetBSD$
    ]
  
 -  if ((is_linux || is_chromeos) && use_udev) {
-+  if (is_openbsd) {
++  if (is_openbsd || is_netbsd) {
 +    sources += [
 +      "hid_connection_fido.cc",
 +      "hid_connection_fido.h",
@@ -30,12 +30,12 @@ $NetBSD$
 +    ]
 +  }
 +
-+  if (is_netbsd) {
-+    sources += [
-+      "hid_service_netbsd.cc",
-+      "hid_service_netbsd.h",
-+    ]
-+  }
++#  if (is_netbsd) {
++#    sources += [
++#      "hid_service_netbsd.cc",
++#      "hid_service_netbsd.h",
++#    ]
++#  }
 +
 +  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
      sources += [

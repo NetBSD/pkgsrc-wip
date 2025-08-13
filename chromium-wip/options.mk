@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.audio=	alsa pulseaudio sunaudio
 PKG_SUPPORTED_OPTIONS+=		debug
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		sunaudio
+PKG_SUGGESTED_OPTIONS+=		sunaudio debug
 .else
 PKG_SUGGESTED_OPTIONS+=		pulseaudio
 .endif
