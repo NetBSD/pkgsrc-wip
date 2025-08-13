@@ -580,6 +580,7 @@ SUBDIR+=	contacts
 SUBDIR+=	convertall
 SUBDIR+=	cool-retro-term
 SUBDIR+=	cops
+SUBDIR+=	copyq
 SUBDIR+=	copytape
 SUBDIR+=	coreclr-git
 SUBDIR+=	corefx-git
