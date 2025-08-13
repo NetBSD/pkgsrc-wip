@@ -2,11 +2,11 @@
 
 DISTNAME=	git-bug-0.10.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=MichaelMure/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=git-bug/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/MichaelMure/git-bug
+HOMEPAGE=	https://github.com/git-bug/git-bug
 COMMENT=	Distributed offline-first bug tracker embedded in git, with bridges
 LICENSE=	gnu-gpl-v3
 
