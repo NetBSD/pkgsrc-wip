@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
++++ third_party/blink/renderer/platform/BUILD.gn
+@@ -2057,7 +2057,7 @@ static_library("test_support") {
+   ]
+ 
+   # fuzzed_data_provider may not work with a custom toolchain.
+-  if (custom_toolchain == "" && is_clang) {
++  if ((custom_toolchain == "" && is_clang) && !is_bsd) {
+     sources += [
+       "testing/fuzzed_data_provider.cc",
+       "testing/fuzzed_data_provider.h",

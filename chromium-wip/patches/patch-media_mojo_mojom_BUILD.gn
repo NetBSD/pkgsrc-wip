@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/mojo/mojom/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
++++ media/mojo/mojom/BUILD.gn
+@@ -979,7 +979,7 @@ source_set("test_support") {
+   sources = []
+   deps = []
+ 
+-  if (is_linux || is_chromeos) {
++  if (!is_bsd && (is_linux || is_chromeos)) {
+     sources += [
+       "buffer_handle_test_util.cc",
+       "buffer_handle_test_util.h",

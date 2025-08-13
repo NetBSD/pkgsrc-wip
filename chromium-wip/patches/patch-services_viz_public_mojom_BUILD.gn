@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/viz/public/mojom/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
++++ services/viz/public/mojom/BUILD.gn
+@@ -57,7 +57,7 @@ mojom("mojom") {
+ 
+   # Used in thread.mojom
+   enabled_features = []
+-  if (is_fuchsia || is_apple) {
++  if (is_fuchsia || is_apple || is_bsd) {
+     enabled_features += [ "thread_id_is_64_bit" ]
+   } else {
+     enabled_features += [ "thread_id_is_32_bit" ]

@@ -1,0 +1,21 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
++++ media/BUILD.gn
+@@ -105,6 +105,12 @@ config("media_config") {
+       defines += [ "DLOPEN_PULSEAUDIO" ]
+     }
+   }
++  if (use_sndio) {
++    defines += [ "USE_SNDIO" ]
++  }
++#  if (use_audioio) {
++#    defines += [ "USE_AUDIOIO" ]
++#  }
+ }
+ 
+ # Internal grouping of the configs necessary to support sub-folders having their
