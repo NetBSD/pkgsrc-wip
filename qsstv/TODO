@@ -1,0 +1,12 @@
+Deal with these compilation errors, ex:
+
+--- MOTSlideShow.o ---
+In file included from drmtx/common/datadecoding/MOTSlideShow.h:33,
+                 from drmtx/common/datadecoding/MOTSlideShow.cpp:31:
+drmtx/common/datadecoding/DABMOT.h: In constructor 
+'CMOTDABEnc::CMOTDABEnc()':
+drmtx/common/datadecoding/DABMOT.h:510:5: error: 'txTransportID' was 
+not declared in this scope; did you mean 'TTransportID'?
+  510 |     txTransportID=0;
+      |     ^~~~~~~~~~~~~
+      |     TTransportID

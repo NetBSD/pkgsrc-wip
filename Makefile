@@ -5048,6 +5048,7 @@ SUBDIR+=	qn-x11
 SUBDIR+=	qq
 SUBDIR+=	qrint
 SUBDIR+=	qrq
+SUBDIR+=	qsstv
 SUBDIR+=	qstat
 SUBDIR+=	qstat214
 SUBDIR+=	qt-openzwave
