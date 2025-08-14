@@ -6,5 +6,3 @@ Size (krita-5.2.11.tar.xz) = 190966516 bytes
 SHA1 (patch-cmake_modules_FindLibMyPaint.cmake) = 4d2273db42e4427f1ec2f4f2e1c86d976c0e24f3
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
 SHA1 (patch-plugins_dockers_CMakeLists.txt) = 67623184a85eea82727e67eb076cc7b7c772d348
-SHA1 (patch-plugins_impex_heif_HeifExport.cpp) = 77f20d42440eb03c7061f3810e01e475dde36b87
-SHA1 (patch-plugins_impex_heif_HeifImport.cpp) = 0790d2b9864bc28327522fcbf7dd8d7e3dc12d5b
