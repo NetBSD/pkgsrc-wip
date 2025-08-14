@@ -1932,6 +1932,7 @@ SUBDIR+=	kodi
 SUBDIR+=	koha
 SUBDIR+=	konqueror
 SUBDIR+=	krename
+SUBDIR+=	krita
 SUBDIR+=	kronometer
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
