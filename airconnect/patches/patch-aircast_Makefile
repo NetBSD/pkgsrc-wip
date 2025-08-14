@@ -1,0 +1,52 @@
+$NetBSD$
+
+Link with external openssl and jansson.
+Don't bother building a single-arch "universal" binary on macOS.
+
+--- aircast/Makefile.orig	2024-02-01 09:13:45.000000000 +0000
++++ aircast/Makefile
+@@ -39,6 +39,7 @@ NANOPB		= nanopb
+ JANSSON		= libjansson/targets/$(HOST)/$(PLATFORM)
+ 
+ DEFINES 	+= -D_FILE_OFFSET_BITS=64 -DPB_FIELD_16BIT -DNDEBUG -D_GNU_SOURCE -DUPNP_STATIC_LIB
++DEFINES 	+= -DSSL_STATIC_LIB
+ CFLAGS  	+= -Wall -fPIC -ggdb -O2 $(DEFINES) -fdata-sections -ffunction-sections -std=gnu11
+ LDFLAGS 	+= -lpthread -ldl -lm -L. 
+ 
+@@ -55,7 +56,7 @@ INCLUDE = -I$(OPENSSL)/include \
+ 		  -I$(NANOPB) \
+ 		  -I$(JANSSON)/include
+ 		  		  
+-DEPS	= $(SRC)/aircast.h $(LIBRARY) $(LIBRARY_STATIC)
++DEPS	= $(SRC)/aircast.h
+ 				  
+ SOURCES = castcore.c castmessage.pb.c aircast.c cast_util.c cast_parse.c config_cast.c  \
+ 	  cross_util.c cross_log.c cross_net.c cross_thread.c platform.c \
+@@ -69,8 +70,7 @@ OBJECTS_STATIC 	= $(patsubst %.c,$(BUILD
+ LIBRARY		= $(RAOP)/$(HOST)/$(PLATFORM)/libraop.a \
+ 			  $(PUPNP)/libpupnp.a \
+ 			  $(CODECS)/$(HOST)/$(PLATFORM)/libcodecs.a \
+-			  $(MDNS)/$(HOST)/$(PLATFORM)/libmdns.a \
+-			  $(JANSSON)/libjansson.a
++			  $(MDNS)/$(HOST)/$(PLATFORM)/libmdns.a -lssl -lcrypto -ljansson
+ 				  
+ LIBRARY_STATIC 	= $(LIBRARY) $(OPENSSL)/libopenssl.a
+ 
+@@ -78,17 +78,9 @@ all: directory $(EXECUTABLE) $(EXECUTABL
+ 
+ $(EXECUTABLE): $(OBJECTS)
+ 	$(CC) $(OBJECTS) $(LIBRARY) $(CFLAGS) $(LDFLAGS) -o $@
+-ifeq ($(HOST),macos)
+-	rm -f $(CORE)
+-	lipo -create -output $(CORE) $$(ls $(CORE)* | grep -v '\-static')
+-endif
+ 
+ $(EXECUTABLE_STATIC): $(OBJECTS_STATIC)
+ 	$(CC) $(OBJECTS_STATIC) $(LIBRARY_STATIC) $(CFLAGS) $(LDFLAGS) $(LINKSTATIC) -o $@
+-ifeq ($(HOST),macos)
+-	rm -f $(CORE)-static
+-	lipo -create -output $(CORE)-static $(CORE)-*-static
+-endif
+ 
+ $(OBJECTS) $(OBJECTS_STATIC): $(DEPS)
+ 

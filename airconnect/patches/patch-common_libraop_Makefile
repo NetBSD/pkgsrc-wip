@@ -1,0 +1,17 @@
+$NetBSD$
+
+Don't bother building a single-arch "universal" binary on macOS.
+
+--- common/libraop/Makefile.orig	2025-08-14 18:46:08.772087842 +0000
++++ common/libraop/Makefile
+@@ -72,10 +72,6 @@ directory:
+ 
+ $(EXECUTABLE): $(SOURCES_BIN:%.c=$(BUILDDIR)/%.o) $(LIB) 
+ 	$(CC) $^ $(LIBRARY) $(CFLAGS) $(LDFLAGS) -o $@
+-ifeq ($(HOST),macos)
+-	rm -f $(CORE)
+-	lipo -create -output $(CORE) $$(ls $(CORE)* | grep -v '\-static')
+-endif	
+ 
+ $(LIB): $(OBJECTS)
+ 	$(AR) rcs $@ $^
