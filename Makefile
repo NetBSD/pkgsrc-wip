@@ -3280,7 +3280,6 @@ SUBDIR+=	polly
 SUBDIR+=	polyclipping
 SUBDIR+=	polylib
 SUBDIR+=	polymul
-SUBDIR+=	polyorb
 SUBDIR+=	ponyc
 SUBDIR+=	pooler
 SUBDIR+=	pop
