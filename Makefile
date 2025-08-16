@@ -1396,7 +1396,6 @@ SUBDIR+=	go-shellescape
 SUBDIR+=	go-tail
 SUBDIR+=	go-uilive
 SUBDIR+=	go-upspin
-SUBDIR+=	go125
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict
