@@ -1,0 +1,4 @@
+Sayonara is a small, clear and fast audio player written in C++,
+supported by the Qt framework. It uses GStreamer as audio backend.
+One of Sayonara's goals is intuitive and easy usability.
+Currently, it is only available for Linux and BSD.

@@ -1,0 +1,21 @@
+$NetBSD$
+
+* Fix man's path
+
+--- resources/CMakeLists.txt.orig	2025-08-16 15:43:44.975321263 +0200
++++ resources/CMakeLists.txt
+@@ -33,11 +33,11 @@ else ()
+     execute_process(COMMAND gzip -kf ${CMAKE_CURRENT_BINARY_DIR}/sayonara-query.1)
+ 
+     install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sayonara.1.gz"
+-            DESTINATION share/man/man1)
++            DESTINATION man/man1)
+     install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sayonara-ctl.1.gz"
+-            DESTINATION share/man/man1)
++            DESTINATION man/man1)
+     install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sayonara-query.1.gz"
+-            DESTINATION share/man/man1)
++            DESTINATION man/man1)
+ endif ()
+ 
+ install(FILES "com.sayonara-player.Sayonara.desktop"

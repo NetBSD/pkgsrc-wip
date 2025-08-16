@@ -5293,6 +5293,7 @@ SUBDIR+=	samtools
 SUBDIR+=	sapling
 SUBDIR+=	sara
 SUBDIR+=	sarf
+SUBDIR+=	sayonara
 SUBDIR+=	sbc
 SUBDIR+=	sbcl
 SUBDIR+=	sbcl-git
