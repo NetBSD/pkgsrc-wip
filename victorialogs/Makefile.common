@@ -20,6 +20,6 @@ MAKE_ENV+=	CGO_ENABLED=0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-#.include "${.CURDIR}/../../wip/victorialogs/go-modules.mk"
+.include "${.CURDIR}/../../wip/victorialogs/go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
