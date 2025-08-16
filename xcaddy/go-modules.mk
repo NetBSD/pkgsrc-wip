@@ -1,0 +1,20 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/!masterminds/semver/v3/@v/v3.4.0.mod
+GO_MODULE_FILES+=	github.com/!masterminds/semver/v3/@v/v3.4.0.zip
+GO_MODULE_FILES+=	github.com/akavel/rsrc/@v/v0.10.2.mod
+GO_MODULE_FILES+=	github.com/akavel/rsrc/@v/v0.10.2.zip
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.6.mod
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.mod
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.zip
+GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/josephspurrier/goversioninfo/@v/v1.5.0.mod
+GO_MODULE_FILES+=	github.com/josephspurrier/goversioninfo/@v/v1.5.0.zip
+GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.9.1.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.9.1.zip
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.mod
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.zip
+GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod

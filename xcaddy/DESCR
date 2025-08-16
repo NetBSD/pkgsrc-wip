@@ -1,0 +1,5 @@
+This command line tool and associated Go package makes it easy to make
+custom builds of the Caddy Web Server.
+
+It is used heavily by Caddy plugin developers as well as anyone who
+wishes to make custom caddy binaries (with or without plugins).
