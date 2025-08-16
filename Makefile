@@ -6039,6 +6039,7 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbnbt
 SUBDIR+=	xbps
 SUBDIR+=	xbsql
+SUBDIR+=	xcaddy
 SUBDIR+=	xcape
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
