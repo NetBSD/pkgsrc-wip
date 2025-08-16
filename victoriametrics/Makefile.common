@@ -1,0 +1,24 @@
+# $NetBSD$
+#
+# used by wip/victoriametrics/Makefile
+
+VICTORIAMETRICS_VERS=	1.123.0
+DISTNAME=		VictoriaMetrics-${VICTORIAMETRICS_VERS}
+CATEGORIES=		databases
+MASTER_SITES=		${MASTER_SITE_GITHUB:=VictoriaMetrics/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/VictoriaMetrics/VictoriaMetrics/
+LICENSE=	apache-2.0
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/victoriametrics/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/victoriametrics/patches
+
+MAKE_ENV+=	CGO_ENABLED=0
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+.include "${.CURDIR}/../../wip/victoriametrics/go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
