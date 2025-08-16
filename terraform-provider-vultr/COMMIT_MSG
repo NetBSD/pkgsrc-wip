@@ -1,3 +1,3 @@
-net/terraform-provider-vultr: import terraform-provider-vultr version 2.26.0
+net/terraform-provider-vultr: import terraform-provider-vultr version 2.27.1
 
 Packaged in wip by iquiw
