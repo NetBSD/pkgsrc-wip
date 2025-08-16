@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	SuperTTC-IosevkaEtoile-${PKGVERSION_NOREV}
-PKGNAME=	iosevka-etoile-ttf-33.2.7
+PKGNAME=	iosevka-etoile-ttf-33.2.8
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
 GITHUB_PROJECT=	Iosevka
