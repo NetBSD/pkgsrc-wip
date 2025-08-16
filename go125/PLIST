@@ -641,6 +641,10 @@ go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global2_fail.go
 go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global3_fail.go
 go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global4_fail.go
 go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global5.go
+go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/asm.s
+go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/main.go
+go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/asm.s
+go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/main.go
 go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/main.go
 go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/p/p.go
 go125/src/cmd/cgo/internal/testsanitizers/testdata/asan_unsafe_fail1.go
@@ -1004,6 +1008,13 @@ go125/src/cmd/compile/internal/ssa/_gen/go.mod
 go125/src/cmd/compile/internal/ssa/_gen/go.sum
 go125/src/cmd/compile/internal/ssa/_gen/main.go
 go125/src/cmd/compile/internal/ssa/_gen/rulegen.go
+go125/src/cmd/compile/internal/ssa/_gen/vendor/golang.org/x/tools/LICENSE
+go125/src/cmd/compile/internal/ssa/_gen/vendor/golang.org/x/tools/PATENTS
+go125/src/cmd/compile/internal/ssa/_gen/vendor/golang.org/x/tools/go/ast/astutil/enclosing.go
+go125/src/cmd/compile/internal/ssa/_gen/vendor/golang.org/x/tools/go/ast/astutil/imports.go
+go125/src/cmd/compile/internal/ssa/_gen/vendor/golang.org/x/tools/go/ast/astutil/rewrite.go
+go125/src/cmd/compile/internal/ssa/_gen/vendor/golang.org/x/tools/go/ast/astutil/util.go
+go125/src/cmd/compile/internal/ssa/_gen/vendor/modules.txt
 go125/src/cmd/compile/internal/ssa/addressingmodes.go
 go125/src/cmd/compile/internal/ssa/allocators.go
 go125/src/cmd/compile/internal/ssa/bench_test.go
@@ -1045,6 +1056,7 @@ go125/src/cmd/compile/internal/ssa/fuse_branchredirect.go
 go125/src/cmd/compile/internal/ssa/fuse_comparisons.go
 go125/src/cmd/compile/internal/ssa/fuse_test.go
 go125/src/cmd/compile/internal/ssa/generate.go
+go125/src/cmd/compile/internal/ssa/generate_test.go
 go125/src/cmd/compile/internal/ssa/html.go
 go125/src/cmd/compile/internal/ssa/id.go
 go125/src/cmd/compile/internal/ssa/layout.go
@@ -1126,6 +1138,9 @@ go125/src/cmd/compile/internal/ssa/testdata/i22558.go
 go125/src/cmd/compile/internal/ssa/testdata/i22600.dlv-dbg-race.nexts
 go125/src/cmd/compile/internal/ssa/testdata/i22600.gdb-dbg-race.nexts
 go125/src/cmd/compile/internal/ssa/testdata/i22600.go
+go125/src/cmd/compile/internal/ssa/testdata/i74576a.go
+go125/src/cmd/compile/internal/ssa/testdata/i74576b.go
+go125/src/cmd/compile/internal/ssa/testdata/i74576c.go
 go125/src/cmd/compile/internal/ssa/testdata/infloop.dlv-opt.nexts
 go125/src/cmd/compile/internal/ssa/testdata/infloop.gdb-opt.nexts
 go125/src/cmd/compile/internal/ssa/testdata/infloop.go
@@ -2864,6 +2879,7 @@ go125/src/cmd/go/testdata/script/test_match_only_subtests.txt
 go125/src/cmd/go/testdata/script/test_match_only_subtests_parallel.txt
 go125/src/cmd/go/testdata/script/test_match_only_tests.txt
 go125/src/cmd/go/testdata/script/test_minus_n.txt
+go125/src/cmd/go/testdata/script/test_multivcs.txt
 go125/src/cmd/go/testdata/script/test_n_cover_std.txt
 go125/src/cmd/go/testdata/script/test_no_run_example.txt
 go125/src/cmd/go/testdata/script/test_no_tests.txt
@@ -2903,6 +2919,7 @@ go125/src/cmd/go/testdata/script/testing_coverage.txt
 go125/src/cmd/go/testdata/script/testing_issue40908.txt
 go125/src/cmd/go/testdata/script/tool_build_as_needed.txt
 go125/src/cmd/go/testdata/script/tool_exename.txt
+go125/src/cmd/go/testdata/script/tool_n_issue72824.txt
 go125/src/cmd/go/testdata/script/toolexec.txt
 go125/src/cmd/go/testdata/script/tooltags.txt
 go125/src/cmd/go/testdata/script/trampoline_reuse_test.txt
@@ -3537,6 +3554,7 @@ go125/src/cmd/link/link_test.go
 go125/src/cmd/link/linkbig_test.go
 go125/src/cmd/link/main.go
 go125/src/cmd/link/script_test.go
+go125/src/cmd/link/testdata/dwarf/issue65405/main.go
 go125/src/cmd/link/testdata/dynimportvar/asm/a.go
 go125/src/cmd/link/testdata/dynimportvar/asm/a_amd64.s
 go125/src/cmd/link/testdata/dynimportvar/asm/a_arm64.s
@@ -4904,7 +4922,6 @@ go125/src/crypto/internal/fips140/subtle/constant_time.go
 go125/src/crypto/internal/fips140/subtle/constant_time_test.go
 go125/src/crypto/internal/fips140/subtle/xor.go
 go125/src/crypto/internal/fips140/subtle/xor_amd64.s
-go125/src/crypto/internal/fips140/subtle/xor_arm.s
 go125/src/crypto/internal/fips140/subtle/xor_arm64.s
 go125/src/crypto/internal/fips140/subtle/xor_asm.go
 go125/src/crypto/internal/fips140/subtle/xor_generic.go
@@ -5969,7 +5986,6 @@ go125/src/encoding/json/tables.go
 go125/src/encoding/json/tagkey_test.go
 go125/src/encoding/json/tags.go
 go125/src/encoding/json/tags_test.go
-go125/src/encoding/json/testdata/code.json.gz
 go125/src/encoding/json/v2/arshal.go
 go125/src/encoding/json/v2/arshal_any.go
 go125/src/encoding/json/v2/arshal_default.go
@@ -6299,6 +6315,10 @@ go125/src/go/doc/testdata/issue22856.0.golden
 go125/src/go/doc/testdata/issue22856.1.golden
 go125/src/go/doc/testdata/issue22856.2.golden
 go125/src/go/doc/testdata/issue22856.go
+go125/src/go/doc/testdata/issue62640.0.golden
+go125/src/go/doc/testdata/issue62640.1.golden
+go125/src/go/doc/testdata/issue62640.2.golden
+go125/src/go/doc/testdata/issue62640.go
 go125/src/go/doc/testdata/pkgdoc/doc.go
 go125/src/go/doc/testdata/predeclared.0.golden
 go125/src/go/doc/testdata/predeclared.1.golden
@@ -10259,6 +10279,7 @@ go125/src/runtime/tracemap.go
 go125/src/runtime/traceregion.go
 go125/src/runtime/traceruntime.go
 go125/src/runtime/tracestack.go
+go125/src/runtime/tracestack_test.go
 go125/src/runtime/tracestatus.go
 go125/src/runtime/tracestring.go
 go125/src/runtime/tracetime.go
@@ -10812,6 +10833,7 @@ go125/src/testing/slogtest/run_test.go
 go125/src/testing/slogtest/slogtest.go
 go125/src/testing/sub_test.go
 go125/src/testing/synctest/example_test.go
+go125/src/testing/synctest/helper_test.go
 go125/src/testing/synctest/run.go
 go125/src/testing/synctest/synctest.go
 go125/src/testing/synctest/synctest_test.go
@@ -13544,6 +13566,9 @@ go125/test/fixedbugs/issue73888.go
 go125/test/fixedbugs/issue73888b.go
 go125/test/fixedbugs/issue7405.go
 go125/test/fixedbugs/issue7419.go
+go125/test/fixedbugs/issue74379.go
+go125/test/fixedbugs/issue74379b.go
+go125/test/fixedbugs/issue74379c.go
 go125/test/fixedbugs/issue7525.go
 go125/test/fixedbugs/issue7525b.go
 go125/test/fixedbugs/issue7525c.go

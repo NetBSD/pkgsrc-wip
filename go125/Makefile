@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2025/02/25 20:09:16 bsiegert Exp $
 
-GO125_VERSION=	1.25rc1
+GO125_VERSION=	1.25.0
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	122
 .include "../../lang/go/bootstrap.mk"
