@@ -3,4 +3,3 @@ $NetBSD$
 BLAKE2s (VictoriaLogs-1.27.0.tar.gz) = e25c5e2a7584a4d8ff3340c0662a6c3a41202eb3071cbdbc28f2da9c67c9519f
 SHA512 (VictoriaLogs-1.27.0.tar.gz) = 6f030c94bc7868c92e02f45adc54091b154fd6a319725aef9989e25300b6dc83e2457e01ff7732e8c6e88da14c12b814d098617aae9ec126922565789f7610d1
 Size (VictoriaLogs-1.27.0.tar.gz) = 15497334 bytes
-SHA1 (patch-go.mod) = 7462b557ab461a063b04edb5383a33c0f04655fe
