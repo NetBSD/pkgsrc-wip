@@ -1220,7 +1220,6 @@ SUBDIR+=	gdb6
 SUBDIR+=	gdb8
 SUBDIR+=	gdcm
 SUBDIR+=	gde
-SUBDIR+=	gdk-pixbuf-jxl
 SUBDIR+=	gdm
 SUBDIR+=	gdm2
 SUBDIR+=	gdsreader
