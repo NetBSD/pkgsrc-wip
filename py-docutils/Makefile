@@ -29,8 +29,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
-# due to patches/patch-docutils_parsers_rst_states.py
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/docutils/parsers/rst/states.py.orig
+# due to patches
+	find ${DESTDIR}${PREFIX}/${PYSITELIB} -name *.orig -delete
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test/alltests.py
