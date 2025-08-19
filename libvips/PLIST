@@ -59,9 +59,9 @@ lib/libvips.so.42
 lib/libvips.so.42.18.0
 lib/pkgconfig/vips-cpp.pc
 lib/pkgconfig/vips.pc
-lib/vips-modules-8.16/vips-heif.so
-lib/vips-modules-8.16/vips-jxl.so
-lib/vips-modules-8.16/vips-poppler.so
+lib/vips-modules-8.16/vips-heif.${SHLIB_EXT}
+lib/vips-modules-8.16/vips-jxl.${SHLIB_EXT}
+lib/vips-modules-8.16/vips-poppler.${SHLIB_EXT}
 man/man1/vips.1
 man/man1/vipsedit.1
 man/man1/vipsheader.1
