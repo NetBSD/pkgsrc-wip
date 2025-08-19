@@ -2,7 +2,6 @@
 bin/vips
 bin/vipsedit
 bin/vipsheader
-bin/vipsprofile
 bin/vipsthumbnail
 include/vips/VConnection8.h
 include/vips/VError8.h
@@ -59,13 +58,13 @@ lib/libvips.so.42
 lib/libvips.so.42.18.0
 lib/pkgconfig/vips-cpp.pc
 lib/pkgconfig/vips.pc
-lib/vips-modules-8.16/vips-heif.${SHLIB_EXT}
-lib/vips-modules-8.16/vips-jxl.${SHLIB_EXT}
-lib/vips-modules-8.16/vips-poppler.${SHLIB_EXT}
+lib/vips-modules-8.17/vips-heif.${SHLIB_EXT}
+lib/vips-modules-8.17/vips-jxl.${SHLIB_EXT}
+lib/vips-modules-8.17/vips-poppler.${SHLIB_EXT}
 man/man1/vips.1
 man/man1/vipsedit.1
 man/man1/vipsheader.1
 man/man1/vipsprofile.1
 man/man1/vipsthumbnail.1
-share/locale/de/LC_MESSAGES/vips8.16.mo
-share/locale/en_GB/LC_MESSAGES/vips8.16.mo
+share/locale/de/LC_MESSAGES/vips8.17.mo
+share/locale/en_GB/LC_MESSAGES/vips8.17.mo

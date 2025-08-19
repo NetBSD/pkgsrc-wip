@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.16.0
+DISTNAME=	vips-8.17.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libvips/}
@@ -37,6 +37,7 @@ RELRO_SUPPORTED=		no
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/lerc/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libjxl/buildlink3.mk"
