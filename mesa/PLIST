@@ -26,6 +26,7 @@ include/KHR/khrplatform.h
 ${PLIST.kms}include/gbm.h
 @comment XXX should it be PLIST.kms?
 include/gbm_backend_abi.h
+${PLIST.arm}lib/dri/apple_dri.so
 ${PLIST.arm}lib/dri/armada-drm_dri.so
 ${PLIST.arm}lib/dri/exynos_dri.so
 ${PLIST.arm}lib/dri/gm12u320_dri.so
