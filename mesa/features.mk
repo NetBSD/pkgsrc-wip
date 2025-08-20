@@ -23,9 +23,6 @@ MESALIB_SUPPORTS_OSMESA?=	yes
 MESALIB_SUPPORTS_GLESv2?=	yes
 .  if ${MESALIB_SUPPORTS_DRI} == "yes"
 MESALIB_SUPPORTS_EGL?=		yes
-.    if ${_MESALIB_ARCH_SUPPORTS_XA} == "yes"
-MESALIB_SUPPORTS_XA?=		yes
-.    endif
 .  endif
 .else
 .  if exists(${X11BASE}/include/EGL/egl.h)

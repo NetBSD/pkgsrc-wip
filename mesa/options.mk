@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.85 2023/07/19 18:32:49 tnn Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mesa
 
 .include "features.mk"
 
@@ -96,6 +96,7 @@ MESON_ARGS+=		-Dllvm=disabled
 #
 PLIST_VARS+=		 vulkan vulkan_intel
 .if !empty(PKG_OPTIONS:Mvulkan)
+.include "../../wip/glslang/buildlink3.mk"
 VULKAN_DRIVERS+=	amd
 VULKAN_DRIVERS+=	swrast
 PLIST.vulkan=		yes

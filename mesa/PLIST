@@ -10,7 +10,6 @@ include/GL/glext.h
 ${PLIST.glx}include/GL/glx.h
 ${PLIST.glx}include/GL/glxext.h
 include/GL/internal/dri_interface.h
-include/GL/osmesa.h
 include/GLES/egl.h
 include/GLES/gl.h
 include/GLES/glext.h
@@ -25,9 +24,8 @@ include/GLES3/gl3ext.h
 include/GLES3/gl3platform.h
 include/KHR/khrplatform.h
 ${PLIST.kms}include/gbm.h
-${PLIST.xa}include/xa_composite.h
-${PLIST.xa}include/xa_context.h
-${PLIST.xa}include/xa_tracker.h
+@comment XXX should it be PLIST.kms?
+include/gbm_backend_abi.h
 ${PLIST.arm}lib/dri/armada-drm_dri.so
 ${PLIST.arm}lib/dri/exynos_dri.so
 ${PLIST.arm}lib/dri/gm12u320_dri.so
@@ -74,11 +72,13 @@ ${PLIST.arm}lib/dri/st7735r_dri.so
 ${PLIST.arm}lib/dri/sti_dri.so
 ${PLIST.arm}lib/dri/stm_dri.so
 ${PLIST.arm}lib/dri/sun4i-drm_dri.so
+@comment not on apple ?
 lib/dri/swrast_dri.so
 ${PLIST.arm}lib/dri/udl_dri.so
 ${PLIST.arm}lib/dri/vkms_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
 ${PLIST.arm}lib/dri/zynqmp-dpsub_dri.so
+@comment not on apple?
 lib/gbm/dri_gbm.so
 ${PLIST.kms}lib/libEGL.so
 ${PLIST.kms}lib/libEGL.so.1
@@ -92,32 +92,24 @@ lib/libGLESv1_CM.so.1.1.0
 lib/libGLESv2.so
 lib/libGLESv2.so.2
 lib/libGLESv2.so.2.0.0
-lib/libOSMesa.so
-lib/libOSMesa.so.8
-lib/libOSMesa.so.8.0.0
-lib/libgallium-24.3.4.so
+lib/libgallium-${PKGVERSION}.so
 ${PLIST.kms}lib/libgbm.so
 ${PLIST.kms}lib/libgbm.so.1
 ${PLIST.kms}lib/libgbm.so.1.0.0
-lib/libglapi.so
-lib/libglapi.so.0
-lib/libglapi.so.0.0.0
+@comment lib/libglapi.so
+@comment lib/libglapi.so.0
+@comment lib/libglapi.so.0.0.0
 ${PLIST.vulkan}${PLIST.arm}lib/libvulkan_broadcom.so
 ${PLIST.vulkan}${PLIST.arm}lib/libvulkan_freedreno.so
 ${PLIST.vulkan_intel}lib/libvulkan_intel.so
 ${PLIST.vulkan}lib/libvulkan_lvp.so
 ${PLIST.vulkan}lib/libvulkan_radeon.so
-${PLIST.xa}lib/libxatracker.so
-${PLIST.xa}lib/libxatracker.so.2
-${PLIST.xa}lib/libxatracker.so.2.5.0
 lib/pkgconfig/dri.pc
 ${PLIST.kms}lib/pkgconfig/egl.pc
 ${PLIST.kms}lib/pkgconfig/gbm.pc
 ${PLIST.glx}lib/pkgconfig/gl.pc
 lib/pkgconfig/glesv1_cm.pc
 lib/pkgconfig/glesv2.pc
-lib/pkgconfig/osmesa.pc
-${PLIST.xa}lib/pkgconfig/xatracker.pc
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0
@@ -134,6 +126,7 @@ ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so
 ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1
 ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0
 ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0.0
+${PLIST.vulkan}share/drirc.d/00-radv-defaults.conf
 share/examples/mesa/00-mesa-defaults.conf
 ${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/broadcom_icd.${MACHINE_ARCH}.json
 ${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/freedreno_icd.${MACHINE_ARCH}.json

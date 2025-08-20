@@ -1,12 +1,12 @@
 # $NetBSD: $
 
-#DISTNAME=	mesa-25.0.5
-DISTNAME=	mesa-24.3.4
+DISTNAME=	mesa-25.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
+MASTER_SITES+=	https://mesa3d.org/archive/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
@@ -42,7 +42,7 @@ PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
 PLIST_VARS+=		r300 svga nouveau iris
 
 # other features
-PLIST_VARS+=		arm kms vaapi xa
+PLIST_VARS+=		arm kms vaapi
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
@@ -52,14 +52,6 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
 .  endif
 MESON_ARGS+=		-Degl=enabled
 MESON_ARGS+=		-Dgbm=enabled
-.  if ${_MESALIB_ARCH_SUPPORTS_XA} == "yes"
-# XA state tracker requires at least one of the following gallium drivers:
-# nouveau, freedreno, i915, svga
-MESON_ARGS+=		-Dgallium-xa=enabled
-PLIST.xa=		yes
-.  else
-MESON_ARGS+=		-Dgallium-xa=disabled
-.  endif
 .  if ${X11_TYPE} == "native" && !exists(${X11BASE}/include/xcb/dri3.h)
 MESON_ARGS+=		-Ddri3=false
 .  endif
@@ -132,9 +124,6 @@ CXXFLAGS+=	-march=i586
 MESON_ARGS+=	-Dgles1=enabled
 MESON_ARGS+=	-Dgles2=enabled
 MESON_ARGS+=	-Dopengl=true
-MESON_ARGS+=	-Dosmesa=true
-MESON_ARGS+=	-Dshared-glapi=enabled
-#MESON_ARGS+=	-Dgallium-xvmc=disabled
 
 CPPFLAGS+=	-DHAVE_NOATEXIT
 CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
@@ -173,15 +162,14 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/glesv2.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/dri.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/gbm.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/egl.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/osmesa.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/xatracker.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/gl.pc
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 .if ${OPSYS} == "Darwin"
-	install_name_tool -id ${PREFIX}/lib/dri/swrast_dri.so \
-	    ${DESTDIR}${PREFIX}/lib/dri/swrast_dri.so
+#	install_name_tool -id ${PREFIX}/lib/dri/swrast_dri.so \
+#	    ${DESTDIR}${PREFIX}/lib/dri/swrast_dri.so
+	install_name_tool -change @rpath/libgallium-${PKGVERSION_NOREV}.dylib ${PREFIX}/lib/libgallium-${PKGVERSION_NOREV}.dylib ${DESTDIR}${PREFIX}/lib/libGL.1.dylib
 .endif
 
 .include "../../devel/meson/build.mk"
