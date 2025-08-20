@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (ndevd-25.08.06.tar.gz) = ff3ae59b4d6213b0df1ceb594438d4003095483799e3fbe46ea2f9348189431c
-SHA512 (ndevd-25.08.06.tar.gz) = d0fe2a3b1a4fbbfb938298c7c087ee3f2a2507ef893fc02562e60e859da6252fb2c3098f75de20a28edabb877f01827cdc90de03accbec35f1b3f7e75adb37c9
-Size (ndevd-25.08.06.tar.gz) = 7813 bytes
+BLAKE2s (ndevd-25.08.20.tar.gz) = cc59b2f1380e8b2ada8c83ff0fbc3004bc21e379f6e17f1536b885628e9d4b3d
+SHA512 (ndevd-25.08.20.tar.gz) = 88ab33633593fbcaa67760529df7062d17fc3c865ebf5d322e6bd1b0e8b4e2fab9ff87991de671a01d71096a5508b14ec13d4f51ae1c77c5da2c04b4e5075231
+Size (ndevd-25.08.20.tar.gz) = 8298 bytes
