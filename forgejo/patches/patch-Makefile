@@ -1,13 +1,15 @@
 $NetBSD$
 
---- Makefile.orig	2024-03-06 05:52:37.000000000 +0000
+go linker does not like -L/usr/pkg/lib.
+
+--- Makefile.orig	2025-08-20 15:55:58.802859832 +0000
 +++ Makefile
-@@ -91,7 +91,7 @@ VERSION = ${GITEA_VERSION}
- # SemVer
- FORGEJO_VERSION := 6.0.7+0-gitea-1.21.7
- 
--LDFLAGS := $(LDFLAGS) -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)" -X "code.gitea.io/gitea/routers/api/forgejo/v1.ForgejoVersion=$(FORGEJO_VERSION)" -X "main.ForgejoVersion=$(FORGEJO_VERSION)"
-+LDFLAGS := -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)" -X "code.gitea.io/gitea/routers/api/forgejo/v1.ForgejoVersion=$(FORGEJO_VERSION)" -X "main.ForgejoVersion=$(FORGEJO_VERSION)"
+@@ -111,7 +111,7 @@ STRIP ?= 1
+ ifeq ($(STRIP),1)
+ 	LDFLAGS := $(LDFLAGS) -s -w
+ endif
+-LDFLAGS := $(LDFLAGS) -X "main.ReleaseVersion=$(RELEASE_VERSION)" -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(FORGEJO_VERSION)" -X "main.Tags=$(TAGS)" -X "main.ForgejoVersion=$(FORGEJO_VERSION_API)"
++LDFLAGS := -X "main.ReleaseVersion=$(RELEASE_VERSION)" -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(FORGEJO_VERSION)" -X "main.Tags=$(TAGS)" -X "main.ForgejoVersion=$(FORGEJO_VERSION_API)"
  
  LINUX_ARCHS ?= linux/amd64,linux/386,linux/arm-5,linux/arm-6,linux/arm64
  
