@@ -20,7 +20,6 @@ USE_LANGUAGES=		c c++
 PYTHON_FOR_BUILD_ONLY=	tool
 REPLACE_PYTHON+=	cplusplus/gen-operators.py
 REPLACE_PYTHON+=	doc/gen-function-list.py
-REPLACE_PYTHON+=	tools/vipsprofile
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/vips-cpp.pc
