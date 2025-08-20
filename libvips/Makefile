@@ -1,19 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.17.1
-PKGNAME=	lib${DISTNAME}
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libvips/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
+DISTNAME=		vips-8.17.1
+PKGNAME=		lib${DISTNAME}
+CATEGORIES=		graphics
+MASTER_SITES=		${MASTER_SITE_GITHUB:=libvips/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=	base@atomicules.co.uk
-HOMEPAGE=	https://libvips.github.io/libvips/
-COMMENT=	Demand-driven, horizontally threaded image processing lib
-LICENSE=	gnu-lgpl-v2.1
+MAINTAINER=		base@atomicules.co.uk
+HOMEPAGE=		https://libvips.github.io/libvips/
+COMMENT=		Demand-driven, horizontally threaded image processing lib
+LICENSE=		gnu-lgpl-v2.1
 
 # disable examples and deprecated interfaces
-MESON_ARGS+=	-Ddeprecated=false -Dexamples=false
+MESON_ARGS+=		-Ddeprecated=false -Dexamples=false
 
 USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_LANGUAGES=		c c++
@@ -28,7 +28,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/vips.pc
 # disable relro otherwise it'll crash on NetBSD:
 # https://github.com/libvips/libvips/issues/3977 and
 # https://mail-index.netbsd.org/netbsd-bugs/2023/12/26/msg080904.html
-RELRO_SUPPORTED=		no
+RELRO_SUPPORTED=	no
 
 .include "options.mk"
 
