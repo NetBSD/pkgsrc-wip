@@ -129,6 +129,7 @@ CPPFLAGS+=	-DHAVE_NOATEXIT
 CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 
 BUILDLINK_TRANSFORM+=		rm:-Werror=incompatible-pointer-types
