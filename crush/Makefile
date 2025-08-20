@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	crush-0.1.8
+DISTNAME=	crush-0.6.2
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=charmbracelet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
