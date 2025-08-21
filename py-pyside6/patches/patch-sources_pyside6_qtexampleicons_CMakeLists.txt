@@ -1,0 +1,14 @@
+$NetBSD$
+
+Avoid using Qt::ExampleIconsPrivate which has problems in 6.9.1.
+
+--- sources/pyside6/qtexampleicons/CMakeLists.txt.orig	2025-08-21 09:44:25.683811555 +0000
++++ sources/pyside6/qtexampleicons/CMakeLists.txt
+@@ -37,7 +37,6 @@ target_include_directories(QtExampleIcon
+ get_property(SHIBOKEN_PYTHON_LIBRARIES GLOBAL PROPERTY shiboken_python_libraries)
+ 
+ target_link_libraries(QtExampleIcons PRIVATE
+-                      Qt::ExampleIconsPrivate
+                       ${SHIBOKEN_PYTHON_LIBRARIES})
+ 
+ set_target_properties(QtExampleIcons PROPERTIES

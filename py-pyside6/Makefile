@@ -31,6 +31,10 @@ SUBST_STAGE.bash=	post-extract
 SUBST_FILES.bash=	sources/shiboken6/cmake/ShibokenHelpers.cmake
 SUBST_SED.bash=		-e "s|\#!/bin/bash|\#!${BASH}|g"
 
+# expects ${BUILDLINK_DIR}/qt6/lib/objects-Release/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
+pre-configure:
+	${RM} -f ${BUILDLINK_DIR}/qt6/lib/cmake/Qt6ExampleIconsPrivate/*
+
 .include "../../devel/cmake/build.mk"
 
 .include "../../audio/qt6-qtspeech/buildlink3.mk"
