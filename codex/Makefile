@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	codex-0.10.0
+DISTNAME=	codex-0.23.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openai/}
 GITHUB_TAG=	rust-v${PKGVERSION_NOREV}
@@ -12,7 +12,14 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/codex-rust-v${PKGVERSION_NOREV}/codex-rs
 USE_LANGUAGES=	c
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config perl gmake
+
+# Depends on unpublished crates. Can't use cargo.mk to fetch them.
+RATATUI_REV=		9b2ad1298408c45918ee9f8241a6f95498cdbed2
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		ratatui-${RATATUI_REV}.tar.gz
+
+SITES.ratatui-${RATATUI_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=nornagon/}ratatui/archive/${RATATUI_REV}.tar.gz
 
 INSTALLATION_DIRS=	bin share/doc/codex
 

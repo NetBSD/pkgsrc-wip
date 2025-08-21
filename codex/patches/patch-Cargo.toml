@@ -1,0 +1,12 @@
+$NetBSD$
+
+Depends on unpublished crates. Can't use cargo.mk to fetch them.
+
+--- Cargo.toml.orig	2025-08-21 11:58:35.021764152 +0000
++++ Cargo.toml
+@@ -47,4 +47,4 @@ codegen-units = 1
+ 
+ [patch.crates-io]
+ # ratatui = { path = "../../ratatui" }
+-ratatui = { git = "https://github.com/nornagon/ratatui", branch = "nornagon-v0.29.0-patch" }
++ratatui = { path = "../../ratatui-9b2ad1298408c45918ee9f8241a6f95498cdbed2" }
