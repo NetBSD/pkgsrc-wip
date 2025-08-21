@@ -7,6 +7,7 @@ BLAKE2s (sra-tools-3.2.1.tar.gz) = 95f5f3ed1b63096e651b071bd0b2a74d88d5ac3a9e83c
 SHA512 (sra-tools-3.2.1.tar.gz) = c8f4b6c2d4746365598374369ba656cadd3af02739b3eaac4d6e298f1deb189b3a6d9eb8e2e7c5a0e4fc8b7530c7497f2db5f3070e7b957b20896e781cd96450
 Size (sra-tools-3.2.1.tar.gz) = 66684089 bytes
 SHA1 (patch-build_env.cmake) = 7c95dbe65c818ac638754ba6165eab1e613fe0eb
+SHA1 (patch-libs_kxml_xml.c) = 730d87cbf12c74652b0e236884b3a186029f2dec
 SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = f49eb28f8bfeb528c1d7c2e9d184502b9eba273c
 SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
 SHA1 (patch-ngs_ngs-python_examples_CMakeLists.txt) = a8a01d17a27c060c08311ab8571ae10af265781d
