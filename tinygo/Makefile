@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	tinygo-0.37.0
+DISTNAME=	tinygo-0.39.0
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tinygo-org/}
 
@@ -15,10 +15,10 @@ GITHUB_SUBMODULES+=	tinygo-org stm32-svd e6db8e32d5d42293a528434ec12e7f88479a864
 # musl: handled via distfile
 # binaryen: use devel/binaryen instead
 GITHUB_SUBMODULES+=	mingw-w64 mingw-w64 8526cb618269440a94810b94b77f8bd48c5c3396 lib/mingw-w64
-GITHUB_SUBMODULES+=	aykevl macos-minimal-sdk  9b69407cb59f8ccbb674bb77b358df7befcbb42b lib/macos-minimal-sdk
-GITHUB_SUBMODULES+=	tinygo-org net ca7cd08f851a1f3dde5fca2e217b7e06d17842ae src/net
+GITHUB_SUBMODULES+=	aykevl macos-minimal-sdk e7c72156eac3ebf29c34cc2faa71efcb1296663f lib/macos-minimal-sdk
+GITHUB_SUBMODULES+=	tinygo-org net 983d88dd7a8f73e888c6bf4b9eda3a6bd67b945d src/net
 GITHUB_SUBMODULES+=	WebAssembly wasi-cli 6ae82617096e83e6606047736e84ac397b788631 lib/wasi-cli
-GITHUB_SUBMODULES+=	ivmai bdwgc d1ff06cc503a74dca0150d5e988f2c93158b0cdf lib/bdwgc
+GITHUB_SUBMODULES+=	ivmai bdwgc 1166f11f7dee08d7ad369296b24cf8c9582f8789 lib/bdwgc
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://github.com/tinygo-org/tinygo/

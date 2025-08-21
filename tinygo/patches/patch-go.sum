@@ -1,8 +1,8 @@
 $NetBSD$
 
---- go.sum.orig	2024-12-01 18:58:03.749532174 +0000
+--- go.sum.orig	2025-08-19 12:03:57.000000000 +0000
 +++ go.sum
-@@ -50,8 +50,8 @@ github.com/stretchr/testify v1.8.4 h1:Cc
+@@ -52,8 +52,8 @@ github.com/stretchr/testify v1.8.4 h1:Cc
  github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
  github.com/tetratelabs/wazero v1.6.0 h1:z0H1iikCdP8t+q341xqepY4EWvHEw8Es7tlqiVzlP3g=
  github.com/tetratelabs/wazero v1.6.0/go.mod h1:0U0G41+ochRKoPKCJlh0jMg1CHkyfK8kDqiirMmKY8A=
@@ -10,6 +10,6 @@ $NetBSD$
 -go.bug.st/serial v1.6.0/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
 +github.com/tnn2/go-serial v0.0.0-20240808132751-d345e1ef8d6d h1:ETRP2BUPBgmvJburf5w+IXW5Uj38d6YgK/wKkuJuScM=
 +github.com/tnn2/go-serial v0.0.0-20240808132751-d345e1ef8d6d/go.mod h1:nofMJxTeNVny/m6+KaafC6vJGj3miwQZ6vW4BZUGJPI=
- golang.org/x/mod v0.18.0 h1:5+9lSbEzPSdWkH32vYPBwEpX8KwDbM52Ud9xBUvNlb0=
- golang.org/x/net v0.26.0 h1:soB7SVo0PWrY4vPW/+ay0jKDNScG2X9wFeYlXIvJsOQ=
- golang.org/x/net v0.26.0/go.mod h1:5YKkiSynbBIh3p6iOc/vibscux0x38BZDkn8sCUPxHE=
+ golang.org/x/mod v0.23.0 h1:Zb7khfcRGKk+kqfxFaP5tZqCnDZMjC5VtUBs87Hr6QM=
+ golang.org/x/mod v0.23.0/go.mod h1:6SkKJ3Xj0I0BrPOZoBy3bdMptDDU9oJrpohJ3eWZ1fY=
+ golang.org/x/net v0.35.0 h1:T5GQRQb2y08kTAByq9L4/bz8cipCdA8FbRTXewonqY8=

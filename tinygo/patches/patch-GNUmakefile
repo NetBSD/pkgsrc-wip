@@ -1,16 +1,15 @@
 $NetBSD$
 
-- Don't depend on git
 - fix PLIST issue with macOS cp(1)
 
---- GNUmakefile.orig	2025-03-19 06:32:48.000000000 +0000
+--- GNUmakefile.orig	2025-08-19 12:03:57.000000000 +0000
 +++ GNUmakefile
-@@ -1005,7 +1005,7 @@ endif
- 	@cp -rp lib/mingw-w64/mingw-w64-crt/lib-common/api-ms-win-crt-* build/release/tinygo/lib/mingw-w64/mingw-w64-crt/lib-common
- 	@cp -rp lib/mingw-w64/mingw-w64-crt/lib-common/kernel32.def.in  build/release/tinygo/lib/mingw-w64/mingw-w64-crt/lib-common
- 	@cp -rp lib/mingw-w64/mingw-w64-crt/stdio/ucrt_*                build/release/tinygo/lib/mingw-w64/mingw-w64-crt/stdio
+@@ -1029,7 +1029,7 @@ endif
+ 	@cp -rp lib/mingw-w64/mingw-w64-crt/math/x86                    build/release/tinygo/lib/mingw-w64/mingw-w64-crt/math
+ 	@cp -rp lib/mingw-w64/mingw-w64-crt/misc                        build/release/tinygo/lib/mingw-w64/mingw-w64-crt
+ 	@cp -rp lib/mingw-w64/mingw-w64-crt/stdio                       build/release/tinygo/lib/mingw-w64/mingw-w64-crt
 -	@cp -rp lib/mingw-w64/mingw-w64-headers/crt/                    build/release/tinygo/lib/mingw-w64/mingw-w64-headers
 +	@cp -rp lib/mingw-w64/mingw-w64-headers/crt                     build/release/tinygo/lib/mingw-w64/mingw-w64-headers
  	@cp -rp lib/mingw-w64/mingw-w64-headers/defaults/include        build/release/tinygo/lib/mingw-w64/mingw-w64-headers/defaults
+ 	@cp -rp lib/mingw-w64/mingw-w64-headers/include                 build/release/tinygo/lib/mingw-w64/mingw-w64-headers
  	@cp -rp lib/nrfx/*                   build/release/tinygo/lib/nrfx
- 	@cp -rp lib/picolibc/newlib/libc/ctype       build/release/tinygo/lib/picolibc/newlib/libc
