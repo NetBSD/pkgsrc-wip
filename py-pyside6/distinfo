@@ -4,5 +4,4 @@ BLAKE2s (pyside-setup-everywhere-src-6.8.2.tar.xz) = dce62323acc9c62bfcc1df71afe
 SHA512 (pyside-setup-everywhere-src-6.8.2.tar.xz) = cc522143974d08133d68d3259caa5127916534e16678693866d65965a546db98b5b1b07d92f7c0918b7c8fb10213d94ad50259b22cf9ebc2a63b985068d75452
 Size (pyside-setup-everywhere-src-6.8.2.tar.xz) = 16609596 bytes
 SHA1 (patch-sources_pyside6_cmake_Macros_PySideModules.cmake) = 64124611147d88a4134b258ac5a6112f1b02d00b
-SHA1 (patch-sources_pyside6_qtexampleicons_CMakeLists.txt) = 017b888dfa6dff54c0c354c8f5fc7de057bab5b9
 SHA1 (patch-sources_shiboken6_libshiboken_helper.h) = 493bcbebe2a2fbc77fc0bb8cceb837bfba712d90
