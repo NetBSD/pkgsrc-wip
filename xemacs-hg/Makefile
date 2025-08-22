@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-bignum=gmp
 CONFIGURE_ARGS+=	--without-msw
-#CONFIGURE_ARGS+=	--without-dump-in-exec
+CONFIGURE_ARGS+=	--without-dump-in-exec
 CONFIGURE_ARGS+=	--with-postgresql=no
 
 CFLAGS+=		-Dunix
@@ -54,9 +54,10 @@ CPPFLAGS+=	-DTERMINFO
 
 # Having the build path in the dumped emacs is not a problem.
 CHECK_WRKREF_SKIP+=	bin/xemacs*
+CHECK_WRKREF_SKIP+=	lib/xemacs-*/xemacs*.dmp
 
 # The portable dumper creates a dump file with a build ID in its name
-#PRINT_PLIST_AWK+=	{ gsub(/-[a-z0-9]+\.dmp$$/, "-$${XEMACS_DUMPID}.dmp"); }
+PRINT_PLIST_AWK+=	{ gsub(/-[a-z0-9]+\.dmp$$/, "-$${XEMACS_DUMPID}.dmp"); }
 PRINT_PLIST_AWK+=	{ gsub(/DOC-[a-z0-9]+$$/, "DOC-$${XEMACS_DUMPID}"); }
 PLIST_SUBST+=		XEMACS_DUMPID=${XEMACS_DUMPID:!${WRKSRC}/src/xemacs -sd!}
 
