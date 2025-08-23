@@ -20,6 +20,7 @@ include/gstreamer-1.0/gst/gl/glprototypes/fixedfunction.h
 include/gstreamer-1.0/gst/gl/glprototypes/gles.h
 include/gstreamer-1.0/gst/gl/glprototypes/gstgl_compat.h
 include/gstreamer-1.0/gst/gl/glprototypes/gstgl_gles2compat.h
+include/gstreamer-1.0/gst/gl/glprototypes/invalidate_subdata.h
 include/gstreamer-1.0/gst/gl/glprototypes/opengl.h
 include/gstreamer-1.0/gst/gl/glprototypes/query.h
 include/gstreamer-1.0/gst/gl/glprototypes/shaders.h
@@ -63,7 +64,7 @@ lib/gstreamer-1.0/include/gst/gl/gstglconfig.h
 lib/gstreamer-1.0/libgstopengl.so
 lib/libgstgl-1.0.so
 lib/libgstgl-1.0.so.0
-lib/libgstgl-1.0.so.0.2412.0
+lib/libgstgl-1.0.so.0.2605.0
 lib/pkgconfig/gstreamer-gl-1.0.pc
 lib/pkgconfig/gstreamer-gl-egl-1.0.pc
 lib/pkgconfig/gstreamer-gl-prototypes-1.0.pc
