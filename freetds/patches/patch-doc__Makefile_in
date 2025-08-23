@@ -1,0 +1,27 @@
+$NetBSD$
+
+--- doc/Makefile.in.orig	2025-06-25 16:26:05.000000000 +0000
++++ doc/Makefile.in
+@@ -378,11 +378,8 @@ man_MANS = freebcp.1 \
+ 		fisql.1 \
+ 		freetds.conf.5
+ 
+-noinst_DATA = $(DOCDIR)/reference/index.html $(DOCDIR)/userguide/index.html
+-INSTALLDIRS = $(TARGET_DOCDIR)/userguide    \
+-		$(TARGET_DOCDIR)/reference    \
+-		$(TARGET_DOCDIR)/images       \
+-		$(TARGET_DOCDIR)/images/callouts
++noinst_DATA =
++INSTALLDIRS =
+ 
+ DISTRIBUTED_UG_DIR = $(srcdir)/$(DOCDIR)/userguide
+ UG_STUB = <html> \
+@@ -669,7 +666,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-man
++install-data-am: install-man
+ 
+ install-dvi: install-dvi-am
+ 
