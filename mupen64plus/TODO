@@ -18,3 +18,6 @@ make: Leaving directory `/usr/pkgsrc/dev/wip/mupen64plus/work/mupen64plus-bundle
 *** Error code 2
 
   It's disabled for now.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-29366
