@@ -1,7 +1,3 @@
-  - update to 5.2.1
-  - explain and clean up the bdb stuff in lang/ocaml
-  - sort PLISTs consistently between lang/ocaml and this, to enable
-    understanding what is changed
   - create COMMIT_MESSAGE
     + explain why *all* the patches in lang/ocaml are missing
     + explain PLIST changes
