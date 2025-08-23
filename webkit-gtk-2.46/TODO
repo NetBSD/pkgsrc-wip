@@ -1,4 +1,4 @@
-Build with 'JPEG_DEFAULT=libjpeg-turbo' in /etc/mk.conf
+pkg_add: webkit-gtk-2.48.5: missing required library: /scratch/wip/webkit-gtk-2.46/work/.buildlink/lib/libsqlite3.so
 
 Test with $PREFIX/libexec/webkit2gtk-4.1/MiniBrowser:
 

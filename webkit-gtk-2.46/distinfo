@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (webkitgtk-2.48.2.tar.xz) = c3a05c85df4ee8bafde03a8b5cbb2af9a33c464e0a254ea5c149dcc19ca4dfa4
-SHA512 (webkitgtk-2.48.2.tar.xz) = 712342e2f8bfaa479dc846d91ca1e02008286b438115789555bfff1dd3b07e0887d6a2a064afd1a5e85d7ae85d68e59daf8b81888c93c1a7b40cfa9048b3b2da
-Size (webkitgtk-2.48.2.tar.xz) = 44168288 bytes
+BLAKE2s (webkitgtk-2.48.5.tar.xz) = 1cdfa9ed42b9ae1c1611b0d2043dc8bb1aefb5b136ba962950483040a55f5910
+SHA512 (webkitgtk-2.48.5.tar.xz) = 70ee8f58a354cf6d0b1345954ed07c1e49d886f353d4fab945a3d2fc03116726af05454d4b5460f0fe4f5c3d042bb921fc5b43a85474624545afd9acc1c0fc8d
+Size (webkitgtk-2.48.5.tar.xz) = 44131936 bytes
 SHA1 (patch-Source_JavaScriptCore_runtime_JSCBytecodeCacheVersion.cpp) = a3e2ddaceb3354069108b033f97ee8f2da2cb056
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_SimpleMutex.h) = 6cd83b9ec476ed39adecec6b30e898bda8e5b76d
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_platform.h) = 2fda057edc3dde3356f0663ec5aa52cb61fb1229
@@ -14,6 +14,8 @@ SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 35afdd5143f4a2df8a5554a0b0b35141a8784c
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = 905b2b4bf4b8c90cf91eb8ecf1d414013cc3bcbb
 SHA1 (patch-Source_WTF_wtf_glib_FileSystemGlib.cpp) = a46ae871e2c0919da94bcb14a2b94d0e5a911922
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 1549a9bbbc11129e42995719d592ab747413eef6
+SHA1 (patch-Source_WebCore_rendering_RenderBox.h) = 6a6fc94f1a057723ec404e67713f1f0025cae445
+SHA1 (patch-Source_WebCore_rendering_shapes_ShapeOutsideInfo.cpp) = 11e1efcbf2f1832b38c7b649db7a156c1fe2a2c8
 SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = dde292d5a8be48502253930e42126edee8f85460
 SHA1 (patch-Source_WebKit_UIProcess_Launcher_glib_ProcessLauncherGLib.cpp) = 45a215a2b7a913b6fba16ff91276e2c9779e06be
 SHA1 (patch-Source_WebKit_UIProcess_gtk_AcceleratedBackingStoreDMABuf.cpp) = c97c28f22b3792643b98f268e6b6bc247485a18a
