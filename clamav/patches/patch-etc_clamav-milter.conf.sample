@@ -1,0 +1,24 @@
+$NetBSD: patch-etc_clamav-milter.conf.sample,v 1.2 2020/09/19 13:41:42 taca Exp $
+
+Make this useable out of the box.
+
+--- etc/clamav-milter.conf.sample.orig	2025-06-17 03:41:15.000000000 +0200
++++ etc/clamav-milter.conf.sample	2025-08-23 16:32:49.923593020 +0200
+@@ -3,7 +3,7 @@
+ ##
+ 
+ # Comment or remove the line below.
+-Example
++# Example
+ 
+ 
+ ##
+@@ -65,7 +65,7 @@
+ # also owned by root to keep other users from tampering with it.
+ #
+ # Default: disabled
+-#PidFile /run/clamav/clamav-milter.pid
++PidFile @CLAMAV_DBDIR@/clamd.pid
+ 
+ # Optional path to the global temporary directory.
+ # Default: system specific (usually /tmp or /var/tmp).
