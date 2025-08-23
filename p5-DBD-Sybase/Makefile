@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		DBD-Sybase-1.24
+DISTNAME=		DBD-Sybase-1.26
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=
 CATEGORIES=		databases perl5
