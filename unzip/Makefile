@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.101 2025/07/03 09:59:10 jperkin Exp $
 
-DISTNAME=	unzip610b
-PKGNAME=	unzip-6.10b
+DISTNAME=	unzip60
+PKGNAME=	unzip-6.0
+PKGREVISION=	10
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/beta/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 LICENSE=	info-zip
@@ -29,10 +30,17 @@ CPPFLAGS+=	-DBSD
      ${OPSYS} == "OSF1"  || \
      ${OPSYS} == "AIX"  || \
      ${OPSYS} == "OpenBSD"  || \
-    (${OPSYS} == "Darwin" && !empty(OS_VERSION:M[01234678].*)))
+     ${OPSYS} == "Cygwin"  || \
+     ${OPSYS} == "UnixWare"  || \
+    (${OPSYS} == "Darwin" && !empty(OS_VERSION:M[01234678].*))) || \
+     ${OS_VARIANT} == "SCOOSR5" || \
+     ${OPSYS} == "Linux"
 CPPFLAGS+=	-DNO_LCHMOD
 .endif
-CPPFLAGS+=	-DLARGE_FILE_SUPPORT -DUNIX -Dunix -DUSE_UNSHRINK -I.
+CPPFLAGS+=	-DUNIX -Dunix -DUSE_UNSHRINK -I.
+.if !${MACHINE_PLATFORM:MSunOS-*-sparc}
+CPPFLAGS+=	-DLARGE_FILE_SUPPORT
+.endif
 
 MAKE_FLAGS+=	CF=${CPPFLAGS:Q}\ ${CFLAGS:Q}
 MAKE_FLAGS+=	LF2=${_STRIPFLAG_CC:Q}\ ${LDFLAGS:Q}\ -lz
