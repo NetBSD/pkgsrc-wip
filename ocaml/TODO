@@ -1,3 +1,4 @@
+  - update to 5.3.0
   - create COMMIT_MESSAGE
     + explain why *all* the patches in lang/ocaml are missing
     + explain PLIST changes
