@@ -2,7 +2,7 @@
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
