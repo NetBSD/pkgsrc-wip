@@ -5861,7 +5861,6 @@ SUBDIR+=	unnethack
 SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unrest
-SUBDIR+=	unzip
 SUBDIR+=	uperf
 SUBDIR+=	uprof
 SUBDIR+=	ups-monitor
