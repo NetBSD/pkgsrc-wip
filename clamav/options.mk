@@ -31,7 +31,9 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_EXPERIMENTAL=on
 .if ${PKG_OPTIONS:Mclamav-unit-test}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=on
 TEST_TARGET=			check
-ALLOW_NETWORK_ACCESS=		yes
+.if make(test)
+ALLOW_NETWORK_ACCESS=		yes                 
+.endif
 BUILDLINK_DEPMETHOD.check=	build
 .  include "../../devel/check/buildlink3.mk"
 .endif
