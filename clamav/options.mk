@@ -31,7 +31,6 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_EXPERIMENTAL=on
 .if ${PKG_OPTIONS:Mclamav-unit-test}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=on
 TEST_TARGET=			check
-# unit test's Makefile depends on gmake.
 BUILDLINK_DEPMETHOD.check=	build
 .  include "../../devel/check/buildlink3.mk"
 .endif
