@@ -16,27 +16,22 @@ PLIST_VARS+=	milter
 # libmilter as pkgsrc is capable of providing
 USE_BUILTIN.libmilter=	no
 .  include "../../mail/libmilter/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-milter
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_MILTER=on
 PLIST.milter=		yes
 CONF_SAMPLES+=		clamav-milter.conf
 SMF_INSTANCES+=		clamav-milter
 RCD_SCRIPTS+=		clamav-milter
-.else
-CONFIGURE_ARGS+=	--disable-milter
-# XXX --disable-milter doesn't work as expected, so we need this
-CONFIGURE_ENV+=		ac_cv_header_libmilter_mfapi_h=no
 .endif
 
 .if ${PKG_OPTIONS:Mclamav-experimental}
-CONFIGURE_ARGS+=	--enable-experimental
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_EXPERIMENTAL=on
 .endif
 
 # Enable unit test
 .if ${PKG_OPTIONS:Mclamav-unit-test}
-CONFIGURE_ARGS+=		--enable-check
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=on
 TEST_TARGET=			check
 # unit test's Makefile depends on gmake.
-USE_TOOLS+=			gmake
 BUILDLINK_DEPMETHOD.check=	build
 .  include "../../devel/check/buildlink3.mk"
 .endif
