@@ -51,6 +51,7 @@ GCC_REQD+=	12
       ${MACHINE_PLATFORM:MNetBSD-9.*-i386}
 GCC_REQD+=	10
 .  endif
+.endif
 
 # Fix for problem seen during rust-installer run w/rust 1.84.1 on macppc,
 # "of course" experienced near the end of the build process:
