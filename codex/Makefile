@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/codex-rust-v${PKGVERSION_NOREV}/codex-rs
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config perl gmake
 
-RUST_REQ=	1.88
+RUST_REQ=	1.89
 
 # Depends on unpublished crates. Can't use cargo.mk to fetch them.
 RATATUI_REV=		9b2ad1298408c45918ee9f8241a6f95498cdbed2
