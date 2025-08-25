@@ -117,7 +117,6 @@ SHA1 (patch-compiler_rustc__target_src_spec_targets_aarch64__be__unknown__netbsd
 SHA1 (patch-compiler_rustc__target_src_spec_targets_aarch64__unknown__netbsd.rs) = 1a02f2dd61a5f9cc4be1f66ac3404c961810c731
 SHA1 (patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs) = 0c5b7c31abe514e3394b910c6e601e40ebbd45c1
 SHA1 (patch-compiler_rustc__target_src_spec_targets_mipsel__unknown__netbsd.rs) = 7deeb7d1d3306e96891dec144ac90398b88c6ad4
-SHA1 (patch-libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c5cd529719daee44aead47ffd97e682ca9d9a1ae
 SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 9d5ef634c5a454e474ea5fee76da9bb768f5b3d9
 SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 8b18e1dbde59f3e8f20e93c7669618b2c7a13294
 SHA1 (patch-library_std_src_sys_pal_unix_mod.rs) = 2e68c3a71b221cb1bfeb313327f366758782fe51
@@ -139,6 +138,7 @@ SHA1 (patch-tests_assembly_targets_targets-elf.rs) = ee7d036c055ed2a2b3b303f381a
 SHA1 (patch-vendor_crossbeam-utils-0.8.18_no__atomic.rs) = d4d9288cb199af9bc7e321fbd2b42860aed954ec
 SHA1 (patch-vendor_libc-0.2.155_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 36d927a0c3fd6ef8d211da5389a981e077aedc29
 SHA1 (patch-vendor_libc-0.2.155_src_unix_solarish_mod.rs) = 97505b88875aa80fa2b5589b6090237c3786e143
+SHA1 (patch-vendor_libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c5cd529719daee44aead47ffd97e682ca9d9a1ae
 SHA1 (patch-vendor_libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = acbd63b911637fef336a92169a8130133eb64c8c
 SHA1 (patch-vendor_libc-0.2.168_src_unix_solarish_mod.rs) = edbb81319e5f685fd9c2ffe94138c377855a982d
 SHA1 (patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 02c4efefbf1e9e1bd98eb9524515677250ae7454

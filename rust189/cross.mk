@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.11 2023/07/10 12:01:24 he Exp $
+# $NetBSD: cross.mk,v 1.15 2025/08/25 17:51:11 wiz Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -20,8 +20,8 @@
 #CROSS_ROOT=		/u/evbarm64
 #CROSS_ROOT=		/u/evbarm64eb
 #CROSS_ROOT=		/u/i386
-#CROSS_ROOT=		/u/riscv64
 #CROSS_ROOT=		/u/mipsel
+#CROSS_ROOT=		/u/riscv64
 #CROSS_ROOT=		/
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
@@ -33,8 +33,8 @@
 #GNU_CROSS_TARGET=	aarch64--netbsd
 #GNU_CROSS_TARGET=	aarch64_be--netbsd
 #GNU_CROSS_TARGET=	i486--netbsdelf
-#GNU_CROSS_TARGET=	riscv64--netbsd
 #GNU_CROSS_TARGET=	mipsel--netbsd
+#GNU_CROSS_TARGET=	riscv64--netbsd
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
@@ -49,8 +49,8 @@
 #TARGET=		aarch64_be-unknown-netbsd
 #TARGET=		i686-unknown-netbsd
 #TARGET=		i586-unknown-netbsd
-#TARGET=		riscv64gc-unknown-netbsd
 #TARGET=		mipsel-unknown-netbsd
+#TARGET=		riscv64gc-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
