@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Cargo.toml.orig	2025-08-25 18:44:37.151871923 +0000
++++ Cargo.toml
+@@ -11,7 +11,7 @@ edition = "2024"
+ 
+ [patch.crates-io]
+ # Override IMAP protocol library for unreleased bugfix
+-imap-proto = { git = "https://github.com/djc/tokio-imap/" }
++imap-proto = { path = "../tokio-imap-55e6c27189c7086a5726fe8bf224ba5c24d19d0c/imap-proto" }
+ 
+ [dependencies]
+ axum = "0.8"
