@@ -1,10 +1,16 @@
 # $NetBSD: options.mk,v 1.6 2022/05/24 18:25:38 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml
-PKG_SUPPORTED_OPTIONS=	test
-PKG_SUGGESTED_OPTIONS=	test
+PKG_SUPPORTED_OPTIONS=	flambda test
+PKG_SUGGESTED_OPTIONS=	flambda test
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mflambda)
+CONFIGURE_ARGS+=	--enable-flambda
+.else
+CONFIGURE_ARGS+=	--disable-flambda
+.endif
 
 .if !empty(PKG_OPTIONS:Mtest)
 CONFIGURE_ARGS+=	--enable-ocamltest

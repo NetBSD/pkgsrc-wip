@@ -2,7 +2,7 @@
   - create COMMIT_MESSAGE
     + explain why *all* the patches in lang/ocaml are missing
     + explain PLIST changes
-    + explain why pic and flambda options are being removed
+    + explain why pic option is being removed
   - create meta-pkgs/bulk-test-ocaml and test
   - examine unresolved upstream 5.x issues
     + https://github.com/ocaml/ocaml/issues/11913
