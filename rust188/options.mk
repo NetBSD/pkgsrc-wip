@@ -40,6 +40,18 @@ GCC_REQD+=	12
 .  endif
 .endif
 
+# Apparently, using pkgsrc LLVM 19.x does not work on
+# NetBSD/x86_64 9.x and NetBSD/i386 9.x unless rust is built
+# with a newer gcc than the platform-included 7.5.0.  Ref.
+# https://gnats.netbsd.org/59435 and
+# https://mail-index.netbsd.org/pkgsrc-users/2025/05/20/msg041603.html
+# and following discussion.
+.if empty(PKG_OPTIONS:Mrust-internal-llvm)
+.  if ${MACHINE_PLATFORM:MNetBSD-9.*-x86_64} || \
+      ${MACHINE_PLATFORM:MNetBSD-9.*-i386}
+GCC_REQD+=	10
+.  endif
+
 # Fix for problem seen during rust-installer run w/rust 1.84.1 on macppc,
 # "of course" experienced near the end of the build process:
 # assertion "memcmp(mf_ptr(mf) - 1, mf_ptr(mf) - matches[i].dist - 2, matches[i].len) == 0" failed: file "xz-5.2/src/liblzma/lz/lz_encoder_mf.c", line 40, function "lzma_mf_find"
