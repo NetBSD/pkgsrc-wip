@@ -4,10 +4,3 @@
     . google openidconnect
 
 - No longer pull data from the network (see www/gitea)
-
-- Resolve chat/jitsi-meet/Makefile.common setting DISTINFO_FILE but
-  not PATCHDIR.  Makefile.common is partly for all jitsi-world
-  packages, and partly for things that use a specific distifile.
-  Perhaps that should be split into two fragments so that e.g. jicofo
-  would only include the larger-scope defines, and not have to undo
-  the jitsi-meet-specific settings.
