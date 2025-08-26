@@ -5,6 +5,10 @@
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 #PKGREVISION=
 
+# The jitsi-meet repo distributes files with the same name as
+# multiple other related repos, but with different contents.
+DIST_SUBDIR=	jitsi-meet
+
 USE_LANGUAGES+=	c++
 USE_TOOLS+=	gmake tar
 
