@@ -24,7 +24,8 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 # i.e. while we are updating the tree.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
 
-# cabal2pkg needs to invoke ${MAKE} at runtime.
+# cabal2pkg needs to invoke ${MAKE} at runtime. Tell it what is the
+# preferred flavour of ${MAKE}.
 ALL_ENV+=	MAKE=${MAKE:Q}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8
