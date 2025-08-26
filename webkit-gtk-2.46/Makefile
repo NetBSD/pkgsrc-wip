@@ -180,7 +180,7 @@ JPEG_ACCEPTED=		libjpeg-turbo
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../wip/gst-plugins1-gl/buildlink3.mk"
+.include "../../graphics/gst-plugins1-gl/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 #.include "../../sysutils/libnotify/buildlink3.mk"
