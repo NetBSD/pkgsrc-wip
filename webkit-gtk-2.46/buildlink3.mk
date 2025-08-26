@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	webkit-gtk
 WEBKIT_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=2.8
-BUILDLINK_ABI_DEPENDS.webkit-gtk?=	webkit-gtk>=2.36.8nb1
+BUILDLINK_ABI_DEPENDS.webkit-gtk+=	webkit-gtk>=2.36.8nb1
 BUILDLINK_PKGSRCDIR.webkit-gtk?=	../../wip/webkit-gtk-2.46
 
 # This is necessary to match the package requirement.
