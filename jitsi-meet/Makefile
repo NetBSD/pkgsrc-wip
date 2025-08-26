@@ -37,7 +37,7 @@ do-configure:
 # (old) 6000 MB: heavy paging, unclear if it would succeed
 # (old) 10000 MB: built ok with some paging
 # (old) 12000 MB: built without issues
-# 32G, WR
+# 32G: built without issues (19G SIZE, 8570MB RES)
 BUILD_TARGET=	compile
 
 INSTALL_TARGET=	deploy source-package
