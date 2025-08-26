@@ -3765,6 +3765,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/json-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/json-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ld-script.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ld-script.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/lua-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/lua-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/lua-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/lua-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/m4-mode.el.gz
