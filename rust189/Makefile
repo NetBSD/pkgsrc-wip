@@ -703,9 +703,9 @@ stage0-bootstrap: install
 		   libssl.so.3 libz.so.1 libzstd.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
-	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber.so.2 \
-		   libldap.so.2 liblzma.so.5 libnghttp2.so.14 libsasl2.so.3 \
-		   libssh2.so.1 libunistring.so.5 libxml2.so.16; do \
+	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 \
+		   liblzma.so.5 libnghttp2.so.14 \
+		   libunistring.so.5 libxml2.so.16; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
 	for f in ${BOOTSTRAP_TMPDIR}/bin/*; do \
