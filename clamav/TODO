@@ -1,3 +1,2 @@
-options.mk has not been ported to the new cmake build yet.
 The build has only been tested on netbsd-10
 Makefile needs more cleanup
