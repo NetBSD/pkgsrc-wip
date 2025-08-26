@@ -3,7 +3,7 @@
 .include "../../chat/jitsi-meet/Makefile.common"
 
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
-PKGREVISION=	1
+#PKGREVISION=
 
 # Makefile.common sets DISTINFO_FILE but not PATCHDIR.
 # Work around that for now
