@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/gkrellm2/gkrellmd-version.h
+include/gkrellm2/gkrellmd.h
+man/man8/gkrellmd.8
+sbin/gkrellmd
+share/examples/gkrellm-server/gkrellmd.conf

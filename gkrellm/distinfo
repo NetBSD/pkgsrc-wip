@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.49 2021/11/27 04:43:02 pho Exp $
+
+BLAKE2s (gkrellm-2.4.0.tar.bz2) = fe1062d50117f49eb846063e773d012cc6e1ad86e8a2208372880e1a73f36430
+SHA512 (gkrellm-2.4.0.tar.bz2) = 770acfe5ee23b74ffe5becc89d3735e9e8688ac338b052e1c2f86cb722b7867b1f8c262a969ef3140eb32912cf0426ac13bf3743e2a9149eec2a962655e05a9f
+Size (gkrellm-2.4.0.tar.bz2) = 790070 bytes
+SHA1 (patch-gkrellmd.1) = 579f6eac994ec5321645a21a117e621260be8a6c
+SHA1 (patch-server_Makefile) = a8194ddd9dc9f58cbacd0615914b53cc2af8a9b0
+SHA1 (patch-src_Makefile) = f9c9ebe1f25aa6560fe5034e8df705d0c90374eb
