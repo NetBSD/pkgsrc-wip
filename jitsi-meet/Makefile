@@ -5,10 +5,6 @@
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 #PKGREVISION=
 
-# Makefile.common sets DISTINFO_FILE but not PATCHDIR.
-# Work around that for now
-DISTINFO_FILE=         ${.CURDIR}/distinfo
-
 USE_LANGUAGES+=	c++
 USE_TOOLS+=	gmake tar
 
