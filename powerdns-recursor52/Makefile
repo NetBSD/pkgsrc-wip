@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	pdns-recursor-5.2.4
+DISTNAME=	pdns-recursor-5.2.5
 #PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
-PKGNAME=	powerdns-recursor-5.2.4
+PKGNAME=	powerdns-recursor-5.2.5
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://downloads.powerdns.com/releases/

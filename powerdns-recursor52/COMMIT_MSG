@@ -1,4 +1,18 @@
-net/powerdns-recursor52 Update to 5.2.4
+net/powerdns-recursor52 Update to 5.2.5
+
+5.2.5
+Released: 29th of July 2025
+Improvements
+Add a Lua function to get the config dir and name.
+References: #15435, pull request 15906
+Bug Fixes
+If a RPZ hit has a custom CNAME record, we should try harder to follow it.
+References: #15893, pull request 15908
+When using ZTC, do not store non-auth data if the name is subject to recursive forwarding.
+References: #15651, #15652, pull request 15907
+Fix generation of recursor config if PDNS_RECURSOR_API_KEY is set.¶
+References: #15367, #15368, pull request 15905
+
 5.2.4
 Released: 21st of July 2025
 Bug Fixes
