@@ -4,10 +4,10 @@ Hunk #1:
   Support building on DragonFly.
 
 Hunk #0, #2:
-  Add an explicit -lm for Solaris. Not sure why it's needed but we've been
-  doing this.
+  Add an explicit -lm for Solaris. Also avoid passing -Wl,-E to the Solaris
+  linker because it doesn't support the flag.
 
---- src/Makefile.orig	2025-08-25 12:22:48.901061537 +0000
+--- src/Makefile.orig	2025-01-19 16:02:37.000000000 +0000
 +++ src/Makefile
 @@ -82,6 +82,7 @@ ifneq ($(PACKAGE),gkrellm)
      FLAGS += -DPACKAGE=\"$(PACKAGE)\"
@@ -27,18 +27,19 @@ Hunk #0, #2:
  freebsd2:
  ifeq ($(HAVE_SSL),1)
  	$(MAKE) EXTRAOBJS= SYS_LIBS="-lkvm" gkrellm
-@@ -161,8 +165,13 @@ openbsd:
+@@ -161,8 +165,15 @@ openbsd:
  	$(MAKE) GTOP_LIBS= SYS_LIBS="-lkvm -pthread" gkrellm
  
  solaris:
--	$(MAKE) CFLAGS="-Wno-implicit-int" \
--		SYS_LIBS="-lkstat -lkvm -ldevinfo" gkrellm
 +ifeq ($(OS_RELEASE),5.8)
 +	$(MAKE) CFLAGS="-Wno-implicit-int -DSOLARIS_8" \
-+		SYS_LIBS="-lm -lkstat -lkvm -ldevinfo -lsocket -lnsl -lintl -lresolv" gkrellm
++		SYS_LIBS="-lm -lkstat -lkvm -ldevinfo -lsocket -lnsl -lintl -lresolv" \
++		LINK_FLAGS="" gkrellm
 +else
-+	$(MAKE) CFLAGS="-Wno-implicit-int -DSOLARIS_8" \
-+		SYS_LIBS="-lm -lkstat -lkvm -ldevinfo -lsocket -lnsl -lresolv" gkrellm
+ 	$(MAKE) CFLAGS="-Wno-implicit-int" \
+-		SYS_LIBS="-lkstat -lkvm -ldevinfo" gkrellm
++		SYS_LIBS="-lm -lkstat -lkvm -ldevinfo -lsocket -lnsl -lresolv" \
++		LINK_FLAGS="" gkrellm
 +endif
  
  windows: libgkrellm.a

@@ -5,4 +5,4 @@ SHA512 (gkrellm-2.4.0.tar.bz2) = 770acfe5ee23b74ffe5becc89d3735e9e8688ac338b052e
 Size (gkrellm-2.4.0.tar.bz2) = 790070 bytes
 SHA1 (patch-gkrellmd.1) = 579f6eac994ec5321645a21a117e621260be8a6c
 SHA1 (patch-server_Makefile) = a8194ddd9dc9f58cbacd0615914b53cc2af8a9b0
-SHA1 (patch-src_Makefile) = f9c9ebe1f25aa6560fe5034e8df705d0c90374eb
+SHA1 (patch-src_Makefile) = 6bfbcd0d33975671cbd1d60473a00b55a27eba2a
