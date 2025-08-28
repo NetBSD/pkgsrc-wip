@@ -35,6 +35,14 @@ UNLIMIT_RESOURCES=	stacksize
 .include "options.mk"
 .include "native.mk"
 
+.if ${OCAML_USE_OPT_COMPILER} == "yesTODOBROKEN"
+CONFIGURE_ARGS+=	--enable-native-compiler
+BUILD_TARGET=		world.opt
+.else
+CONFIGURE_ARGS+=	--disable-native-compiler
+BUILD_TARGET=		world
+.endif
+
 # configure: error: fma does not work, enable emulation with --enable-imprecise-c99-float-ops
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
     ${MACHINE_PLATFORM:MNetBSD-*-earm*}

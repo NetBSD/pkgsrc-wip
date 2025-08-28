@@ -43,13 +43,9 @@ PLIST_VARS+=	ocaml-opt
 # The opt compiler needs the C compiler suite
 USE_LANGUAGES+=		c
 PLIST.ocaml-opt=	yes
-CONFIGURE_ARGS+=	--enable-native-compiler
-BUILD_TARGET=		world.opt
 .else
 # If we're bytecode compiling, don't strip executables
 INSTALL_UNSTRIPPED=	yes
-CONFIGURE_ARGS+=	--disable-native-compiler
-BUILD_TARGET=		world
 .endif
 
 .endif # OCAML_NATIVE_MK
