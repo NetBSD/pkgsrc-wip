@@ -44,10 +44,6 @@ INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 
 INSTALLATION_DIRS=	share/doc/ocaml
 
-OPSYSVARS+=		EXTRA_RT_LIBS
-EXTRA_RT_LIBS.NetBSD=	-lcurses
-EXTRA_RT_LIBS.*=
-
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
 PRINT_PLIST_AWK+=	{ if (/\.opt$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
 PRINT_PLIST_AWK+=	{ if (/\.cmx$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
