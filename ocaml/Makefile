@@ -1,13 +1,36 @@
 # $NetBSD: Makefile,v 1.148 2023/04/09 07:28:27 wiz Exp $
 
-.include "Makefile.common"
+# Please do not update to ocaml 5.x without discussion, as the
+# consensus is mostly that those versions are not yet baked, and will
+# cause hard-to-debug problems.
+DISTNAME=	ocaml-5.3.0
+CATEGORIES=	lang
+# unreliable
+#MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-5.2/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+#MAINTAINER+=	gdt@NetBSD.org
+HOMEPAGE=	https://ocaml.org/
+COMMENT=	The latest implementation of the Caml dialect of ML
+LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES+=		c
+USE_CC_FEATURES+=	c99
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash gmake
+GNU_CONFIGURE=		yes
+
+MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=		INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
+
+# build failure on i386: "../ocamlopt.opt: text relocations"
+MKPIE_SUPPORTED=	no
 
 TEST_PROGRAM=		ocamltest
 UNLIMIT_RESOURCES=	stacksize
-
-USE_TOOLS+=		bash
-USE_LANGUAGES+=		c
-USE_LIBTOOL=		yes
 
 .include "options.mk"
 .include "native.mk"
@@ -31,6 +54,10 @@ CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 # is what ${SH} is on SunOS, doesn't exhibit this behaviour.
 .if ${OPSYS} == "SunOS"
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
+.endif
+
+.if ${OPSYS} == "Linux"
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 INSTALLATION_DIRS=	share/doc/ocaml
@@ -58,6 +85,8 @@ post-install: fix-man-extension
 fix-man-extension:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && for i in *.3o; do mv $$i $${i%%o}; done
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
