@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.557 2025/05/20 15:08:58 ryoon Exp $
 
-BLAKE2s (librewolf-141.0-1.source.tar.gz) = 94710830074ed2c7625aff6a38cd726100e6906bf97207bfcf2beb63266a7d61
-SHA512 (librewolf-141.0-1.source.tar.gz) = 4c64734f589cb66c8c7857d5888a8c7806e502fb0bb08d1b1e2045211ae5c4172d2e943527f52d7e3db7fb996c0ce58892026e87686001b5d332128d78934bf8
-Size (librewolf-141.0-1.source.tar.gz) = 1006119767 bytes
+BLAKE2s (librewolf-142.0-1.source.tar.gz) = 00d18bda44b24653ada3b2f4662c1f1dae283a9aea1101bdd7f63896df6b988f
+SHA512 (librewolf-142.0-1.source.tar.gz) = e594650da5500d1ec218092dc5b959c2dcd711a642800c487c3c9cb3bc5b13c6dd2162c77d1b8a623738777132685ca32d4d06b195f7953e58988e0a08eeee87
+Size (librewolf-142.0-1.source.tar.gz) = 1010392198 bytes
 BLAKE2s (nodejs-output-141.0.tgz) = ae2c7781fc62f30dc58d3de91fcaade286dc54c58fab5e4e7ff88355dc3e1d3b
 SHA512 (nodejs-output-141.0.tgz) = 55e13285f9ad33e4ce454918beb38cf6ff3bb3f2a413636f55ac768ac1f8a199eb2eb8601ed38bfd1f668eb72da1673b7b61107e5d9ff310f671d12e48d68e0e
 Size (nodejs-output-141.0.tgz) = 245533 bytes
@@ -36,7 +36,7 @@ SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) 
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc) = 47ba1a2b88b3fdfd16cd29da3eb1e4a218ecada8
-SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = d0454784eb72be49162f619579e060a0de3c480f
+SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = a4d9bc3a10e3150eb46cbab4477c434dcae7ee39
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = fc203b7a8c1557303e61cc598dc94c5cccf6f0a4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8831d477f14fd4f8f735ff0c1a322cba8c70e277
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc) = 8111952a107eb2cd665525ddd0e27c79eee3c1cd
