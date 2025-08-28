@@ -35,13 +35,21 @@ OCAML_USE_OPT_COMPILER?=	no
 # Things that get installed with the opt compiler
 PLIST_VARS+=	ocaml-opt
 
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
+# works when building outside of pkgsrc, breaks
+# when building inside
+# https://github.com/ocaml/ocaml/issues/14207#issuecomment-3228396849
+
+.if ${OCAML_USE_OPT_COMPILER} == "yesTODOBROKEN"
 # The opt compiler needs the C compiler suite
 USE_LANGUAGES+=		c
 PLIST.ocaml-opt=	yes
+CONFIGURE_ARGS+=	--enable-native-compiler
+BUILD_TARGET=		world.opt
 .else
 # If we're bytecode compiling, don't strip executables
 INSTALL_UNSTRIPPED=	yes
+CONFIGURE_ARGS+=	--disable-native-compiler
+BUILD_TARGET=		world
 .endif
 
 .endif # OCAML_NATIVE_MK

@@ -52,6 +52,7 @@ lib/ocaml/callback.mli
 lib/ocaml/caml/address_class.h
 lib/ocaml/caml/addrmap.h
 lib/ocaml/caml/alloc.h
+lib/ocaml/caml/asm.h
 lib/ocaml/caml/atomic_refcount.h
 lib/ocaml/caml/backtrace.h
 lib/ocaml/caml/backtrace_prim.h
@@ -61,6 +62,7 @@ lib/ocaml/caml/callback.h
 lib/ocaml/caml/camlatomic.h
 lib/ocaml/caml/codefrag.h
 lib/ocaml/caml/compare.h
+lib/ocaml/caml/compatibility.h
 lib/ocaml/caml/config.h
 lib/ocaml/caml/custom.h
 lib/ocaml/caml/debugger.h
@@ -233,6 +235,7 @@ lib/ocaml/compiler-libs/ast_mapper.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ast_mapper.cmx
 lib/ocaml/compiler-libs/ast_mapper.mli
 lib/ocaml/compiler-libs/asttypes.cmi
+lib/ocaml/compiler-libs/asttypes.cmt
 lib/ocaml/compiler-libs/asttypes.cmti
 lib/ocaml/compiler-libs/asttypes.mli
 lib/ocaml/compiler-libs/attr_helper.cmi
@@ -591,6 +594,10 @@ lib/ocaml/compiler-libs/errortrace.cmt
 lib/ocaml/compiler-libs/errortrace.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/errortrace.cmx
 lib/ocaml/compiler-libs/errortrace.mli
+lib/ocaml/compiler-libs/errortrace_report.cmi
+lib/ocaml/compiler-libs/errortrace_report.cmt
+lib/ocaml/compiler-libs/errortrace_report.cmti
+lib/ocaml/compiler-libs/errortrace_report.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/export_id.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/export_id.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/export_id.cmti
@@ -650,6 +657,10 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/flambda_utils.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/flambda_utils.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/flambda_utils.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/flambda_utils.mli
+lib/ocaml/compiler-libs/format_doc.cmi
+lib/ocaml/compiler-libs/format_doc.cmt
+lib/ocaml/compiler-libs/format_doc.cmti
+lib/ocaml/compiler-libs/format_doc.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/freshening.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/freshening.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/freshening.cmti
@@ -660,6 +671,10 @@ lib/ocaml/compiler-libs/genprintval.cmt
 lib/ocaml/compiler-libs/genprintval.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/genprintval.cmx
 lib/ocaml/compiler-libs/genprintval.mli
+lib/ocaml/compiler-libs/gprinttyp.cmi
+lib/ocaml/compiler-libs/gprinttyp.cmt
+lib/ocaml/compiler-libs/gprinttyp.cmti
+lib/ocaml/compiler-libs/gprinttyp.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/id_types.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/id_types.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/id_types.cmti
@@ -828,6 +843,10 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linkage_name.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linkage_name.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linkage_name.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linkage_name.mli
+lib/ocaml/compiler-libs/linkdeps.cmi
+lib/ocaml/compiler-libs/linkdeps.cmt
+lib/ocaml/compiler-libs/linkdeps.cmti
+lib/ocaml/compiler-libs/linkdeps.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linscan.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linscan.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linscan.cmti
@@ -962,6 +981,10 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/optmaindriver.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/optmaindriver.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/optmaindriver.cmx
 lib/ocaml/compiler-libs/optmaindriver.mli
+lib/ocaml/compiler-libs/out_type.cmi
+lib/ocaml/compiler-libs/out_type.cmt
+lib/ocaml/compiler-libs/out_type.cmti
+lib/ocaml/compiler-libs/out_type.mli
 lib/ocaml/compiler-libs/outcometree.cmi
 lib/ocaml/compiler-libs/outcometree.cmti
 lib/ocaml/compiler-libs/outcometree.mli
@@ -1103,6 +1126,10 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/projection.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/projection.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/projection.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/projection.mli
+lib/ocaml/compiler-libs/rawprinttyp.cmi
+lib/ocaml/compiler-libs/rawprinttyp.cmt
+lib/ocaml/compiler-libs/rawprinttyp.cmti
+lib/ocaml/compiler-libs/rawprinttyp.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ref_to_variables.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ref_to_variables.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ref_to_variables.cmti
@@ -2238,6 +2265,7 @@ man/man3/CamlinternalMenhirLib.Engine.Make.3
 man/man3/CamlinternalMenhirLib.EngineTypes.3
 man/man3/CamlinternalMenhirLib.EngineTypes.ENGINE.3
 man/man3/CamlinternalMenhirLib.EngineTypes.INCREMENTAL_ENGINE_START.3
+man/man3/CamlinternalMenhirLib.EngineTypes.LOG.3
 man/man3/CamlinternalMenhirLib.EngineTypes.MONOLITHIC_ENGINE.3
 man/man3/CamlinternalMenhirLib.EngineTypes.TABLE.3
 man/man3/CamlinternalMenhirLib.EngineTypes.TABLE.Log.3
@@ -2334,6 +2362,8 @@ man/man3/Float.3
 man/man3/Float.Array.3
 man/man3/Float.ArrayLabels.3
 man/man3/Format.3
+man/man3/Format_doc.3
+man/man3/Format_doc.Doc.3
 man/man3/Format_tutorial.3
 man/man3/Fun.3
 man/man3/Gc.3
@@ -2369,12 +2399,14 @@ man/man3/Lazy.3
 man/man3/Lazy_backtrack.3
 man/man3/Lexer.3
 man/man3/Lexing.3
+man/man3/Linkdeps.3
 man/man3/List.3
 man/man3/ListLabels.3
 man/man3/Load_path.3
 man/man3/Load_path.Dir.3
 man/man3/Local_store.3
 man/man3/Location.3
+man/man3/Location.Doc.3
 man/man3/Longident.3
 man/man3/Map.3
 man/man3/Map.Make.3
@@ -2395,6 +2427,7 @@ man/man3/Misc.Stdlib.String.Map.3
 man/man3/Misc.Stdlib.String.Set.3
 man/man3/Misc.Stdlib.String.Tbl.3
 man/man3/Misc.Style.3
+man/man3/Misc.Utf8_lexeme.3
 man/man3/MoreLabels.3
 man/man3/MoreLabels.Hashtbl.3
 man/man3/MoreLabels.Hashtbl.HashedType.3
@@ -2433,6 +2466,7 @@ man/man3/Parsetree.3
 man/man3/Parsing.3
 man/man3/Pparse.3
 man/man3/Pprintast.3
+man/man3/Pprintast.Doc.3
 man/man3/Printast.3
 man/man3/Printexc.3
 man/man3/Printexc.Slot.3

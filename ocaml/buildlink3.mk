@@ -8,7 +8,7 @@ OCAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.14.0
 BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.14.0
-BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
+BUILDLINK_PKGSRCDIR.ocaml?=	../../wip/ocaml
 #BUILDLINK_DEPMETHOD.ocaml?=	build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.ocaml}/lib/ocaml
