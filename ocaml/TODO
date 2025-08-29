@@ -1,6 +1,4 @@
-- create COMMIT_MESSAGE
-  + explain why *all* the patches in lang/ocaml are missing
-  + explain why pic option is being removed
+- improve COMMIT_MESSAGE
 - create meta-pkgs/bulk-test-ocaml and test
 - examine unresolved upstream 5.x issues
   + https://github.com/ocaml/ocaml/issues/11913
