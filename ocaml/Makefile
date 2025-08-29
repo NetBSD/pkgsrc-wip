@@ -35,7 +35,7 @@ UNLIMIT_RESOURCES=	stacksize
 .include "options.mk"
 .include "native.mk"
 
-.if ${OCAML_USE_OPT_COMPILER} == "yesTODOBROKEN"
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
 CONFIGURE_ARGS+=	--enable-native-compiler
 BUILD_TARGET=		world.opt
 .else

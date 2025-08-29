@@ -27,6 +27,11 @@ _DEF_VARS.ocaml=	\
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
      ${MACHINE_ARCH:M*arm*} || (${MACHINE_ARCH} == "aarch64") || \
      (${MACHINE_ARCH} == "aarch64eb") || (${MACHINE_ARCH} == "x86_64")
+# works when building outside of pkgsrc, breaks
+# when building inside
+# https://github.com/ocaml/ocaml/issues/14207#issuecomment-3228396849
+OCAML_USE_OPT_COMPILER?=	no
+
 OCAML_USE_OPT_COMPILER?=	yes
 .else
 OCAML_USE_OPT_COMPILER?=	no
@@ -35,11 +40,7 @@ OCAML_USE_OPT_COMPILER?=	no
 # Things that get installed with the opt compiler
 PLIST_VARS+=	ocaml-opt
 
-# works when building outside of pkgsrc, breaks
-# when building inside
-# https://github.com/ocaml/ocaml/issues/14207#issuecomment-3228396849
-
-.if ${OCAML_USE_OPT_COMPILER} == "yesTODOBROKEN"
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
 # The opt compiler needs the C compiler suite
 USE_LANGUAGES+=		c
 PLIST.ocaml-opt=	yes
