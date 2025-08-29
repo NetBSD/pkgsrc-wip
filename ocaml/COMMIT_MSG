@@ -1,0 +1,4 @@
+This package provides ocaml major version 5.
+
+It was started without any of the patches to find out
+if they were really needed, and it built fine without.
