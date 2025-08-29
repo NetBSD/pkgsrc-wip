@@ -10,6 +10,8 @@ HOMEPAGE=	https://wayland.freedesktop.org/
 COMMENT=	Display server protocol - development libraries
 LICENSE=	mit
 
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES=	c c++
@@ -43,5 +45,5 @@ CPPFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 .endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
