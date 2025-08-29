@@ -28,12 +28,7 @@ BUILD_MAKE_FLAGS+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 MAKE_ENV+=		MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-# Fix PR pkg/40047, Thanks to Ondrej Tuma
-.if ${OBJECT_FMT} == "ELF" && ${OPSYS} != "SunOS"
-LDFLAGS+=	-Wl,-export-dynamic
-.endif
-
-REQD_DIRS=	lib/gkrellm2/plugins lib/gkrellm2/themes
+REQD_DIRS=		lib/gkrellm2/plugins lib/gkrellm2/themes
 
 # Generate and install gkrellm.pc
 post-build:
