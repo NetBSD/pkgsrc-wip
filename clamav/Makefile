@@ -18,26 +18,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCLAMAV_GROUP=${CLAMAV_GROUP}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_EXTERNAL_MSPACK=on
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=off
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_MILTER=off
-#CMAKE_CONFIGURE_ARGS+=	-DJSONC_LIBRARY={BUILDLINK_PREFIX.json-c}/lib
-#CMAKE_CONFIGURE_ARGS+=	-DJSONC_INCLUDE_DIR={BUILDLINK_PREFIX.json-c}/include
-#CMAKE_CONFIGURE_ARGS+=	-DJSONC_LIBRARY={BUILDLINK_PREFIX.json-c}/lib
-#CMAKE_CONFIGURE_ARGS+=	-DCURL_INCLUDE_DIR={BUILDLINK_PREFIX.curl}/include
-#CMAKE_CONFIGURE_ARGS+=	-DCURL_LIBRARY={BUILDLINK_PREFIX.curl}/lib
-#CMAKE_CONFIGURE_ARGS+=	-D_INCLUDE_DIR={BUILDLINK_PREFIX.curl}/include
-#CMAKE_CONFIGURE_ARGS+=	-DCURL_LIBRARY={BUILDLINK_PREFIX.curl}/lib
-#CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
-#CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
-#CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-#CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre2}
-#CONFIGURE_ARGS+=	--with-system-libmspack=${BUILDLINK_PREFIX.libmspack}
-#CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
-#CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-# Linux only:
-#CONFIGURE_ARGS+=	--disable-clamonacc
-# Work around build failure PR pkg/54420
-#CONFIGURE_ARGS+=	--disable-unrar
-
-#CONFIGURE_ENV.SunOS+=	ac_cv_ld_version_script=no
 
 CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
@@ -102,11 +82,8 @@ post-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/libmspack/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-#.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-#.include "../../devel/gmp/buildlink3.mk"
-#.include "../../mail/libmilter/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
