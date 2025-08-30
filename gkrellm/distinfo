@@ -6,3 +6,4 @@ Size (gkrellm-2.4.0.tar.bz2) = 790070 bytes
 SHA1 (patch-gkrellmd.1) = 579f6eac994ec5321645a21a117e621260be8a6c
 SHA1 (patch-server_Makefile) = a8194ddd9dc9f58cbacd0615914b53cc2af8a9b0
 SHA1 (patch-src_Makefile) = 6bfbcd0d33975671cbd1d60473a00b55a27eba2a
+SHA1 (patch-src_sysdeps_freebsd.c) = 830c55f97cc374148f2e1fbf57e843bccc33ab00
