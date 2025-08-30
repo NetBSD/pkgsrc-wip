@@ -1,0 +1,6 @@
+devel/nextpnr-himbaechel: Add nextpnr-himbaechel-0.7nb2
+
+Nextpnr is a portable FPGA place and route tool.  Nextpnr aims to
+be a vendor neutral, timing driven, FOSS FPGA place and route tool.
+
+This is the package for the Gowin family of FPGAs.
