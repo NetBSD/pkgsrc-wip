@@ -1,6 +1,5 @@
 $NetBSD$
 
-BLAKE2s (harec/0.24.2.tar.gz) = cf1004a97988ee274cef80339d10263ec55c3112f066b3ef1f429c5eee358492
-SHA512 (harec/0.24.2.tar.gz) = 3b32e82df937de1fdd2af20a2162bc3754cb9178cd67e56f3e7bc7fc9eb9e9bad5609ca1c328d42ac5cdd527edf6d9c381dc384df72c2d7666c7ce5684871a17
-Size (harec/0.24.2.tar.gz) = 201789 bytes
-SHA1 (patch-scripts_version) = ba5b8f77fddada9fc02c85379bb9edefaa275058
+BLAKE2s (harec/0.25.2.tar.gz) = c5c2639319a38fcac3cc49eba36e926bb05c2958c5671a289a25c01a54370f2d
+SHA512 (harec/0.25.2.tar.gz) = 227fe4879a4c367e6cdbf85efc43797db012cce74fcaf30e08cc1ec49014ac426eadace650d2d566a9eb629a6bc87bf739613c1c1360dbf5d47b1aa51195cb9a
+Size (harec/0.25.2.tar.gz) = 205091 bytes
