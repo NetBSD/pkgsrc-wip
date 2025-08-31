@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	0.24.2
+DISTNAME=	0.25.2
 PKGNAME=	hare-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/hare/archive/
