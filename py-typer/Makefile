@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	typer-0.16.1
+DISTNAME=	typer-0.17.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typer/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=10.11.0:../../comms/py-rich
 
 USE_LANGUAGES=	# none
 
-# as of 0.16.0
+# as of 0.17.3
 # 5 errors
 # due to py-shellingham looking for /proc/R/stat
 
