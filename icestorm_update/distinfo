@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2024/03/02 23:07:59 thorpej Exp $
+
+BLAKE2s (icestorm-0.0.20250603-f31c39cc2eadd0ab7f29f34becba1348ae9f8721.tar.gz) = 4172e2f5ead590d262e699dce2372aba8454f9dddef6c762422f0302def221d9
+SHA512 (icestorm-0.0.20250603-f31c39cc2eadd0ab7f29f34becba1348ae9f8721.tar.gz) = 6c7d5f2a4b1f0f24dd97a0ad2f1a6b06431ed449258077f6ce376dd614340a07dce5b100a40611bd38cb91981f5046f38dccafed1999e93e3a02d3200cc39296
+Size (icestorm-0.0.20250603-f31c39cc2eadd0ab7f29f34becba1348ae9f8721.tar.gz) = 3975359 bytes
+SHA1 (patch-icebox_Makefile) = 2b99d8c0e780c3b22a0697bfbd9e5b0259e0839d

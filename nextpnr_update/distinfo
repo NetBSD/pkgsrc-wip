@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (nextpnr-0.8.tar.gz) = 67f2dee34a021bd76cc2ce630e9658a7e053a1b32a4b1d4329700d3e2ef04b1c
+SHA512 (nextpnr-0.8.tar.gz) = 6a05b6a8c8d378dc2309fbbaf96b49601472e8f56056774f936cbe353fa40c2a560642dbaff96af807469ff328f27d75630538f805a39122a94410405974fa48
+Size (nextpnr-0.8.tar.gz) = 4665005 bytes
+SHA1 (patch-CMakeLists.txt) = 0a6f86a0ab37de741c5498d8dfc5d381a501f917
