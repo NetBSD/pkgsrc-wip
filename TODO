@@ -20,7 +20,8 @@ Suggested package updates
 	o calligra-3.0.1
 	o chapel-1.32.0
 	o cinelerra-4.5
-	o crush-0.7.1 [needs go 1.25]
+	o codex-0.27.0
+	o crush-0.7.4
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o deadbeef-1.9.6
@@ -119,6 +120,7 @@ Suggested package updates
 	o py-rpyc-3.2.1
 	o py-sentry-23.7.1
 	o py-smop-0.29
+	o py-typer-0.17.3
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
 	o py-zeitgeist-0.9.16
