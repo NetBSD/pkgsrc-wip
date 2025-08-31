@@ -1079,7 +1079,7 @@ share/forgejo/public/.well-known/security.txt
 share/forgejo/public/assets/css/asciinema-player.41ec509e.css
 share/forgejo/public/assets/css/code-frequency-graph.55afbe7d.css
 share/forgejo/public/assets/css/colorpicker.ec78e358.css
-share/forgejo/public/assets/css/contributors-graph.971702d3.css
+share/forgejo/public/assets/css/contributors-graph.635e707f.css
 share/forgejo/public/assets/css/dropzone.5a752d14.css
 share/forgejo/public/assets/css/forgejoswagger.css
 share/forgejo/public/assets/css/index.css
@@ -1552,13 +1552,13 @@ share/forgejo/public/assets/js/citation-js-core-citation-js-formats-citation-js-
 share/forgejo/public/assets/js/citation-js-formats.306c145a.js
 share/forgejo/public/assets/js/code-frequency-graph.7d6d0c57.js
 share/forgejo/public/assets/js/colorpicker.f575076b.js
-share/forgejo/public/assets/js/contributors-graph.2ad03267.js
+share/forgejo/public/assets/js/contributors-graph.86876c01.js
 share/forgejo/public/assets/js/dropzone.eba86b32.js
 share/forgejo/public/assets/js/easymde.926ff5ec.js
 share/forgejo/public/assets/js/eventsource.sharedworker.js
 share/forgejo/public/assets/js/forgejoswagger.js
 share/forgejo/public/assets/js/index.js
-share/forgejo/public/assets/js/index.js.d043a342.map
+share/forgejo/public/assets/js/index.js.576cf26c.map
 share/forgejo/public/assets/js/katex.713b82cd.js
 share/forgejo/public/assets/js/mcaptcha-vanilla-glue.a1ccbf9d.js
 share/forgejo/public/assets/js/mermaid.02af38de.js
