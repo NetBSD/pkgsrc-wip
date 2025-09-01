@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (Gallery-2.33.0.tar.gz) = 3342bf7c43a2888e106c9b7a84cb3612a245c3e6
-SHA512 (Gallery-2.33.0.tar.gz) = e53d702f2db9e3f9819af8dad7a3a67c9d5cc6c1d42c293fc5678e8ce5889e3be58d82e1eaf369b736cb5ac72859187908470f3dc62e7d0b34303a0637c3a6c7
-Size (Gallery-2.33.0.tar.gz) = 169167 bytes
+BLAKE2s (Gallery-3.4.0.tar.gz) = 4c4cd62b238f07a5253441ec74298a4484bda76efa7cbe44e363e825ad032558
+SHA512 (Gallery-3.4.0.tar.gz) = 5548a03eb28cbab314489df88093a5e2a4dbe8a22c825a29c1788cd7abb52b3f3683a2bbd55f60ed34cb4aea3f18f358de443de37e3766639ad7e23a54f00217
+Size (Gallery-3.4.0.tar.gz) = 251182 bytes
