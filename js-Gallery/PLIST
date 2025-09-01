@@ -7,11 +7,18 @@ share/js-Gallery/css/blueimp-gallery.css
 share/js-Gallery/css/blueimp-gallery.min.css
 share/js-Gallery/css/blueimp-gallery.min.css.map
 share/js-Gallery/css/demo/demo.css
+share/js-Gallery/img/close.png
+share/js-Gallery/img/close.svg
 share/js-Gallery/img/error.png
 share/js-Gallery/img/error.svg
 share/js-Gallery/img/loading.gif
+share/js-Gallery/img/loading.svg
+share/js-Gallery/img/next.png
+share/js-Gallery/img/next.svg
 share/js-Gallery/img/play-pause.png
 share/js-Gallery/img/play-pause.svg
+share/js-Gallery/img/prev.png
+share/js-Gallery/img/prev.svg
 share/js-Gallery/img/video-play.png
 share/js-Gallery/img/video-play.svg
 share/js-Gallery/index.html
@@ -30,3 +37,4 @@ share/js-Gallery/js/jquery.blueimp-gallery.min.js
 share/js-Gallery/js/jquery.blueimp-gallery.min.js.map
 share/js-Gallery/js/vendor/jquery.js
 share/js-Gallery/package.json
+
