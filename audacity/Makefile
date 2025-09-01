@@ -8,7 +8,7 @@
 #   This should be disabled by default, Audacity is offline software.
 # - Please test usage on NetBSD.
 DISTNAME=	audacity-2.4.1
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
