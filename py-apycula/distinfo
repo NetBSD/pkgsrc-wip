@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (apycula-0.23.tar.gz) = 6ac5bfed5205463a61b320e63458dbe08b8e17d5f5ebe25e6afaa321bf68dc69
-SHA512 (apycula-0.23.tar.gz) = a0dc82232c0b5013825d2b8b1ef19df5406081072743cde56bc0cecee3bef1475c29ce5d56bbdca7695bfc42247e896deca0709a1487c3d4f7710ff4cb5fcc00
-Size (apycula-0.23.tar.gz) = 22422189 bytes
+BLAKE2s (apycula-0.24.tar.gz) = e37a33b9c35f6b4cceb21bbf5eaac94844a802d3926c71a4e1294643ca3363e9
+SHA512 (apycula-0.24.tar.gz) = 6d240467d1a0f25ad4ba1acc934be7b2080414b2b200f163023aa7cca3a2d3dbc0f5a04fc0ded903610de8a17a6806f59bbe4ea15c5a836d1534cc90e303bcfc
+Size (apycula-0.24.tar.gz) = 22467942 bytes

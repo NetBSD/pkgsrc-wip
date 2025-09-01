@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/nextpnr-himbaechel
-@pkgdir share/nextpnr/himbaechel/xilinx
-@pkgdir share/nextpnr/himbaechel/gowin
