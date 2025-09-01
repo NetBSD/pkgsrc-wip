@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.2 2019/02/10 17:14:42 nia Exp $
+
+Fix installation of binaries.
+
+--- Makefile.in.orig	2018-02-14 07:11:20.000000000 +0000
++++ Makefile.in
+@@ -1160,7 +1160,7 @@ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
+ 
+-install-exec-am: install-binPROGRAMS
++install-exec-am:
+ 
+ install-html: install-html-recursive
+ 
+@@ -1215,7 +1215,7 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	distclean-compile distclean-generic distclean-libtool \
+ 	distclean-tags distcleancheck distdir distuninstallcheck dvi \
+ 	dvi-am html html-am info info-am install install-am \
+-	install-binPROGRAMS install-data install-data-am \
++	install-data install-data-am \
+ 	install-dist_docDATA install-dist_pkgdataDATA install-dvi \
+ 	install-dvi-am install-exec install-exec-am install-html \
+ 	install-html-am install-info install-info-am install-man \
