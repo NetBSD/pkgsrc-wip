@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.5 2023/01/25 06:40:46 adam Exp $
+
+Do not save configure args; they reference workdir.
+
+--- configure.orig	2022-12-26 16:56:04.000000000 +0000
++++ configure
+@@ -30779,9 +30779,6 @@ MAGICK_API_LIBS=`echo $MAGICK_API_LIBS |
+ 
+ # Save configure/build parameters for later reference
+ 
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CONFIGURE_ARGS "$0 ${ac_configure_args}"
+-_ACEOF
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
