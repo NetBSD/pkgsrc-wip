@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (cockatrice-2.8.0.tar.gz) = 1dcf689bb58c2947eb835fb3090040a72920feca
-SHA512 (cockatrice-2.8.0.tar.gz) = e07cdee72c8bf4755d49cac69bd6a2ddb4c168d370ed4a1cbd341537184869ee8680fbf5e9d6b636c7c68888a8d00f474bae9cf245303d638b3aac8762f9fa8e
-Size (cockatrice-2.8.0.tar.gz) = 8589061 bytes
+BLAKE2s (cockatrice-2.10.2.tar.gz) = 1f833d63e10810efbc03df46426aaa385fabc657e3cbb6d54be2d05d1c7bc051
+SHA512 (cockatrice-2.10.2.tar.gz) = e510d1aa2bc12424ca7c57e5b62c398266c36e3d96b4f341bb3599f49f94572e11b7b5d8af4cb7abcfe396c8625ffffaf28e0d150573e21b0ec5d8f061401c2b
+Size (cockatrice-2.10.2.tar.gz) = 9862401 bytes
