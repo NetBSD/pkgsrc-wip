@@ -1,1 +1,3 @@
-graphics/facedetect: Facedetect is a face detector for batch processing (opencv)
+graphics/facedetect: Add a face detector for batch processing (opencv)
+
+Packaged in wip by ast
