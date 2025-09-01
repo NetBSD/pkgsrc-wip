@@ -2610,6 +2610,7 @@ SUBDIR+=	newsboat233
 SUBDIR+=	newsboat237
 SUBDIR+=	newt
 SUBDIR+=	nextpnr
+SUBDIR+=	nextpnr-himbaechel-gowin
 SUBDIR+=	nextpnr-ice40_update
 SUBDIR+=	nextpnr_update
 SUBDIR+=	nfcapdu

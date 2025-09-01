@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/nextpnr-himbaechel-gowin
+share/nextpnr/himbaechel/gowin/chipdb-GW1N-1.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW1N-4.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW1N-9.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW1N-9C.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW1NS-4.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW1NZ-1.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW2A-18.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW2A-18C.bin
+share/nextpnr/himbaechel/gowin/chipdb-GW5A-25A.bin
