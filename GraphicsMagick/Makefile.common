@@ -12,5 +12,5 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/}
 MASTER_SITES+=	ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/${GM_MAJOR_VER}/
 EXTRACT_SUFX=	.tar.xz
 
-DISTINFO_FILE=	${.CURDIR}/../../graphics/GraphicsMagick/distinfo
-PATCHDIR=	${.CURDIR}/../../graphics/GraphicsMagick/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/GraphicsMagick/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/GraphicsMagick/patches

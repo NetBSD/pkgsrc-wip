@@ -7,7 +7,7 @@ GRAPHICSMAGICK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.3.12nb6
 BUILDLINK_ABI_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.3.42nb13
-BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
+BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../wip/GraphicsMagick
 
 pkgbase := GraphicsMagick
 .include "../../mk/pkg-build-options.mk"
