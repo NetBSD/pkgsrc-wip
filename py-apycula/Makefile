@@ -12,7 +12,7 @@ COMMENT=	Open Source tools for Gowin FPGAs
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-crc>=0:../../wip/py-crc
+DEPENDS+=	${PYPKGPREFIX}-crc>=0:../../security/py-crc
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
