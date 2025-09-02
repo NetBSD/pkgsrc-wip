@@ -1,3 +1,0 @@
-This is a meta package providing the preferred version of Terraform.
-
-No package should depend on this package directly.
