@@ -1875,6 +1875,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/text-property-search.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/text-property-search.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/thunk.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/thunk.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/timeout.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/timeout.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/timer-list.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/timer-list.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/timer.el.gz
