@@ -39,7 +39,7 @@
 #
 #	Default: share/terraform/plugins/${OPENTOFU_PROVIDER_HOSTNAME}/${TERRAFORM_PROVIDER_NAMESPACE}/${TERRAFORM_PROVIDER_TYPE}/${TERRAFORM_PROVIDER_VERSION}/${GO_PLATFORM}
 #
-# Keywords: terraform
+# Keywords: opentofu terraform
 #
 
 .include "../../wip/terraform/version.mk"
