@@ -1,10 +1,11 @@
 #	$NetBSD$
 
-DISTNAME=	tnfrepo-0.0a20250704.dev6
+DISTNAME=	tnfrepo-0.0a20250823.dev17
+PKGREVISION=	2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
-HG_TAG=		ede88ba6608480522bf7ffcf78abc3b3fac69197
+HG_TAG=		2bf5e66553c82e4384a4f10a8c7988e359eb11f8
 
 MAINTAINER=	riastradh@NetBSD.org
 HOMEPAGE=	https://hg.mumble.net/campbell/tnfrepo
@@ -28,7 +29,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYSETUPSUBDIR=	hghooks
 USE_PYTEST=	no
 
+REPLACE_PYTHON=	bin/syncd.py
+
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX:Q}
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share
 
 pre-build:
 	${RUN}cd ${WRKSRC} && ${BUILD_MAKE_CMD}
@@ -48,6 +53,7 @@ do-test:
 	${RUN}cd ${WRKSRC} && \
 	cram-${PYVERSSUFFIX} --verbose tests/
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../wip/mk/hg-package.mk"
 .include "../../mk/bsd.pkg.mk"

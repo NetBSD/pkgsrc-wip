@@ -8,6 +8,9 @@ ${PYSITELIB}/netbsd_hghooks/__init__.pyo
 ${PYSITELIB}/netbsd_hghooks/_version.py
 ${PYSITELIB}/netbsd_hghooks/_version.pyc
 ${PYSITELIB}/netbsd_hghooks/_version.pyo
+${PYSITELIB}/netbsd_hghooks/gitmirror.py
+${PYSITELIB}/netbsd_hghooks/gitmirror.pyc
+${PYSITELIB}/netbsd_hghooks/gitmirror.pyo
 ${PYSITELIB}/netbsd_hghooks/reject_bookmarks.py
 ${PYSITELIB}/netbsd_hghooks/reject_bookmarks.pyc
 ${PYSITELIB}/netbsd_hghooks/reject_bookmarks.pyo
@@ -20,6 +23,7 @@ ${PYSITELIB}/netbsd_hghooks/reject_normcasecollision.pyo
 ${PYSITELIB}/netbsd_hghooks/require_user_login.py
 ${PYSITELIB}/netbsd_hghooks/require_user_login.pyc
 ${PYSITELIB}/netbsd_hghooks/require_user_login.pyo
+bin/syncd
 share/tnfrepo/githooks/pre-receive.sh
 share/tnfrepo/githooks/reference-transaction.sh
 share/tnfrepo/githooks/update.sh
