@@ -1932,7 +1932,6 @@ SUBDIR+=	koha
 SUBDIR+=	konqueror
 SUBDIR+=	krename
 SUBDIR+=	kronometer
-SUBDIR+=	krusader
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
