@@ -26,7 +26,6 @@ SUBDIR+=	GSAlign
 SUBDIR+=	GSCommander
 SUBDIR+=	GenericRepeatFinder
 SUBDIR+=	Geomyidae-git
-SUBDIR+=	GraphicsMagick
 SUBDIR+=	HP-1973
 SUBDIR+=	HiGHS
 SUBDIR+=	I2util
