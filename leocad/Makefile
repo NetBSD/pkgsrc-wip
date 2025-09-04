@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		leocad-23.03
+DISTNAME=		leocad-25.09
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=leozide/}
 GITHUB_PROJECT=		leocad
@@ -13,6 +13,8 @@ LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 MAKE_FLAGS+=		INSTALL_ROOT=${DESTDIR}
+# PCH doesn't seem to work, so we inject the main header here.
+CXXFLAGS+=		-include lc_global.h
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake \
