@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread_posix.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread_posix.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread_posix.cc
-@@ -18,7 +18,7 @@
+@@ -23,7 +23,7 @@
  #include "partition_alloc/partition_alloc_base/logging.h"
  #include "partition_alloc/partition_alloc_base/threading/platform_thread_internal_posix.h"
  

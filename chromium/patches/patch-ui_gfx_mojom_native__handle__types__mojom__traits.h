@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.h
 @@ -18,7 +18,7 @@
  #include "ui/gfx/gpu_memory_buffer_handle.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/gfx/native_pixmap_handle.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
  
-@@ -45,7 +45,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+@@ -49,7 +49,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
  };
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -24,7 +24,7 @@ $NetBSD$
  template <>
  struct COMPONENT_EXPORT(GFX_NATIVE_HANDLE_TYPES_SHARED_MOJOM_TRAITS)
      StructTraits<gfx::mojom::NativePixmapPlaneDataView,
-@@ -73,13 +73,13 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+@@ -77,13 +77,13 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
      return pixmap_handle.planes;
    }
  
@@ -40,7 +40,7 @@ $NetBSD$
    static bool supports_zero_copy_webgpu_import(
        const gfx::NativePixmapHandle& pixmap_handle) {
      return pixmap_handle.supports_zero_copy_webgpu_import;
-@@ -204,7 +204,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+@@ -207,7 +207,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
    static IOSurfaceHandle io_surface_handle(gfx::GpuMemoryBufferHandle& handle);
  #endif  // BUILDFLAG(IS_APPLE)
  

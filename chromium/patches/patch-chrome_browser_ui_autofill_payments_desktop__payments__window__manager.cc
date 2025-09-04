@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
 @@ -58,7 +58,7 @@ gfx::Rect GetPopupSizeForBnpl() {
  DesktopPaymentsWindowManager::DesktopPaymentsWindowManager(
@@ -15,7 +15,7 @@ $NetBSD$
    scoped_observation_.Observe(BrowserList::GetInstance());
  #endif  // BUILDFLAG(IS_LINUX)
  }
-@@ -144,7 +144,7 @@ void DesktopPaymentsWindowManager::WebCo
+@@ -151,7 +151,7 @@ void DesktopPaymentsWindowManager::WebCo
    }
  }
  

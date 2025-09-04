@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.cc
-@@ -104,7 +104,7 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -118,7 +118,7 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
    registry->RegisterBooleanPref(
        kAutofillBnplEnabled, true,
        user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
-@@ -298,7 +298,7 @@ bool IsFacilitatedPaymentsPixAccountLink
+@@ -360,7 +360,7 @@ void SetFacilitatedPaymentsA2ATriggeredO
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  void SetAutofillBnplEnabled(PrefService* prefs, bool value) {
    prefs->SetBoolean(kAutofillBnplEnabled, value);
  }
-@@ -307,7 +307,7 @@ void SetAutofillBnplEnabled(PrefService*
+@@ -369,7 +369,7 @@ void SetAutofillBnplEnabled(PrefService*
  
  bool IsAutofillBnplEnabled(const PrefService* prefs) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
    return prefs->GetBoolean(kAutofillBnplEnabled);
  #else
    return false;
-@@ -316,7 +316,7 @@ bool IsAutofillBnplEnabled(const PrefSer
+@@ -378,7 +378,7 @@ bool IsAutofillBnplEnabled(const PrefSer
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_metrics.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/threading/platform_thread_metrics.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/threading/platform_thread_metrics.h
 @@ -51,7 +51,7 @@ class BASE_EXPORT PlatformThreadMetrics 
        PlatformThreadHandle handle);

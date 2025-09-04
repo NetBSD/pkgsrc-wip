@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/startup_metric_utils/common/startup_metric_utils.cc
-@@ -94,7 +94,7 @@ base::TimeTicks CommonStartupMetricRecor
+@@ -95,7 +95,7 @@ base::TimeTicks CommonStartupMetricRecor
    // Enabling this logic on OS X causes a significant performance regression.
    // TODO(crbug.com/40464036): Remove IS_APPLE ifdef once utility processes
    // set their desired main thread priority.

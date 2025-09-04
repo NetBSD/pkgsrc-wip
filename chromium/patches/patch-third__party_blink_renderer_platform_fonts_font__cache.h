@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -55,7 +55,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"
@@ -39,10 +39,10 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   static AtomicString GetFamilyNameForCharacter(SkFontMgr*,
-                                                 UChar32,
-                                                 const FontDescription&,
-@@ -357,7 +357,7 @@ class PLATFORM_EXPORT FontCache final {
+   static const FontPlatformData* CreateFontPlatformDataForCharacter(
+       SkFontMgr*,
+       UChar32,
+@@ -358,7 +358,7 @@ class PLATFORM_EXPORT FontCache final {
    bool is_test_font_mgr_ = false;
  #endif  // BUILDFLAG(IS_WIN)
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/ui/webui/interstitials/interstitial_ui.cc
-@@ -77,7 +77,7 @@
+@@ -75,7 +75,7 @@
  #include "components/security_interstitials/content/captive_portal_blocking_page.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/supervised_user/supervised_user_verification_controller_client.h"
  #include "chrome/browser/supervised_user/supervised_user_verification_page_blocked_sites.h"
  #include "chrome/browser/supervised_user/supervised_user_verification_page_youtube.h"
-@@ -413,7 +413,7 @@ std::unique_ptr<EnterpriseWarnPage> Crea
+@@ -404,7 +404,7 @@ std::unique_ptr<EnterpriseWarnPage> Crea
  }
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  std::unique_ptr<SupervisedUserVerificationPageForYouTube>
  CreateSupervisedUserVerificationPageForYouTube(
      content::WebContents* web_contents,
-@@ -640,7 +640,7 @@ void InterstitialHTMLSource::StartDataRe
+@@ -631,7 +631,7 @@ void InterstitialHTMLSource::StartDataRe
      interstitial_delegate = CreateInsecureFormPage(web_contents);
    } else if (path_without_query == "/https_only") {
      interstitial_delegate = CreateHttpsOnlyModePage(web_contents);

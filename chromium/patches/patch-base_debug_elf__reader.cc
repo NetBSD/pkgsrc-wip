@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/elf_reader.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/debug/elf_reader.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/debug/elf_reader.cc
 @@ -49,6 +49,10 @@ using Xword = Elf64_Xword;
  

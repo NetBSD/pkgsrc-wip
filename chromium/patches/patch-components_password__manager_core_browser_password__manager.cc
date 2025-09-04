@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/password_manager/core/browser/password_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/password_manager/core/browser/password_manager.cc
-@@ -507,7 +507,7 @@ void PasswordManager::RegisterProfilePre
+@@ -586,7 +586,7 @@ void PasswordManager::RegisterProfilePre
        prefs::kAutofillableCredentialsAccountStoreLoginDatabase, false);
  #endif  // BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
    registry->RegisterBooleanPref(prefs::kPasswordSharingEnabled, true);
@@ -15,7 +15,7 @@ $NetBSD$
    registry->RegisterIntegerPref(prefs::kRelaunchChromeBubbleDismissedCounter,
                                  0);
  #endif
-@@ -520,7 +520,7 @@ void PasswordManager::RegisterProfilePre
+@@ -599,7 +599,7 @@ void PasswordManager::RegisterProfilePre
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

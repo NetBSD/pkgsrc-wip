@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/os_integration_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/web_applications/os_integration/os_integration_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/os_integration_manager.cc
 @@ -663,7 +663,7 @@ std::unique_ptr<ShortcutInfo> OsIntegrat
      }

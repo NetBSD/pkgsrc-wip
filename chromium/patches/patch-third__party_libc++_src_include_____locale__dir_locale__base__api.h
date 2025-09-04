@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/include/__locale_dir/locale_base_api.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/libc++/src/include/__locale_dir/locale_base_api.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/libc++/src/include/__locale_dir/locale_base_api.h
-@@ -115,7 +115,7 @@
+@@ -113,7 +113,7 @@
  
  #  if defined(__APPLE__)
  #    include <__locale_dir/support/apple.h>

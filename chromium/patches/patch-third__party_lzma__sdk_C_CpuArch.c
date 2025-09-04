@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/lzma_sdk/C/CpuArch.c.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/lzma_sdk/C/CpuArch.c.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/lzma_sdk/C/CpuArch.c
 @@ -854,6 +854,34 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }

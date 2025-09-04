@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/accounts_policy_manager.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/signin/accounts_policy_manager.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/signin/accounts_policy_manager.h
 @@ -13,7 +13,7 @@
  #include "components/signin/public/base/signin_metrics.h"

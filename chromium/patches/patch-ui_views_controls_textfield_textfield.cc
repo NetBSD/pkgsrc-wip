@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -86,7 +86,7 @@
  #include "base/win/win_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -790,7 +790,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -791,7 +791,7 @@ bool Textfield::OnKeyPressed(const ui::K
      return handled;
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (!handled) {
      if (auto* linux_ui = ui::LinuxUi::instance()) {
        const auto command =
-@@ -975,7 +975,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -976,7 +976,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD$
    // Skip any accelerator handling that conflicts with custom keybindings.
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      if (IsTextEditCommandEnabled(linux_ui->GetTextEditCommandForEvent(
-@@ -2063,7 +2063,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -2065,7 +2065,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  

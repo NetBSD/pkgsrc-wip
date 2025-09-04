@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/disk_cache/backend_experiment.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- net/disk_cache/backend_experiment.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ net/disk_cache/backend_experiment.h
-@@ -14,7 +14,7 @@ namespace disk_cache {
+@@ -15,7 +15,7 @@ namespace disk_cache {
  // default.
  constexpr bool IsSimpleBackendEnabledByDefaultPlatform() {
    return BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) ||

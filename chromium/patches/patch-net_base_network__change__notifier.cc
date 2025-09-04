@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- net/base/network_change_notifier.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ net/base/network_change_notifier.cc
 @@ -38,7 +38,7 @@
  #include "net/base/network_change_notifier_linux.h"
@@ -34,7 +34,7 @@ $NetBSD$
  // static
  AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwner() {
    return g_network_change_notifier
-@@ -867,7 +870,7 @@ NetworkChangeNotifier::NetworkChangeNoti
+@@ -868,7 +871,7 @@ NetworkChangeNotifier::NetworkChangeNoti
    }
  }
  

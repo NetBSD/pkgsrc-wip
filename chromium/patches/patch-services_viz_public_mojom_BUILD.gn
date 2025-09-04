@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/viz/public/mojom/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- services/viz/public/mojom/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ services/viz/public/mojom/BUILD.gn
-@@ -57,7 +57,7 @@ mojom("mojom") {
+@@ -51,7 +51,7 @@ mojom("mojom") {
  
    # Used in thread.mojom
    enabled_features = []

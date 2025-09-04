@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/geolocation/location_provider_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- services/device/geolocation/location_provider_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ services/device/geolocation/location_provider_manager.cc
 @@ -91,7 +91,7 @@ LocationProviderManager::LocationProvide
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- ui/accessibility/ax_node.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ ui/accessibility/ax_node.h
-@@ -587,7 +587,7 @@ class AX_EXPORT AXNode final {
+@@ -582,7 +582,7 @@ class AX_EXPORT AXNode final {
    const std::vector<raw_ptr<AXNode, VectorExperimental>>* GetExtraMacNodes()
        const;
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/raster_decoder_unittest_context_lost.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- gpu/command_buffer/service/raster_decoder_unittest_context_lost.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ gpu/command_buffer/service/raster_decoder_unittest_context_lost.cc
 @@ -15,6 +15,18 @@ using ::testing::Return;
  using ::testing::SaveArg;
