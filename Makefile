@@ -5269,6 +5269,7 @@ SUBDIR+=	rust-analyzer
 SUBDIR+=	rust-synapse-compress-state
 SUBDIR+=	rust189
 SUBDIR+=	rust189-bin
+SUBDIR+=	rustormy
 SUBDIR+=	s-nail
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
