@@ -9,7 +9,7 @@ EXTRACT_SUFX_C=			.tar.xz
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
 
 # audioio source
-A_VERSION=			138.0
+A_VERSION=			140.0
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
 
 # LLVM_MAJOR_VERSION

@@ -6,6 +6,15 @@ $NetBSD$
 
 --- net/base/network_change_notifier.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ net/base/network_change_notifier.h
+@@ -20,7 +20,7 @@
+ #include "net/base/network_handle.h"
+ #include "third_party/perfetto/include/perfetto/tracing/track.h"
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "net/base/address_map_linux.h"
+ #endif
+ 
 @@ -452,7 +452,7 @@ class NET_EXPORT NetworkChangeNotifier {
    // packets sent lazily.
    static bool IsDefaultNetworkActive();
