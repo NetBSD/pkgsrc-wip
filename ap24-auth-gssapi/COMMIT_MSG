@@ -1,0 +1,5 @@
+ap24-auth-gssapi: Import apache2.4 module mod_auth_gssapi-1.6.5
+
+This is a modern replacement for mod_auth_kerb (www/ap-auth-kerb),
+built with the standardized GSSAPI rather than with the not-quite-so
+standardized libkrb5.
