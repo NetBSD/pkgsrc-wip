@@ -1,9 +1,11 @@
 # $NetBSD: Makefile,v 1.74 2025/04/15 08:00:41 adam Exp $
 
-DISTNAME=	awscli-1.38.34
+DISTNAME=	awscli2-2.28.25
+GITHUB_PROJECT=	aws-cli
+GITHUB_TAG=	${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscli/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=aws/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://aws.amazon.com/cli/
@@ -17,6 +19,11 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.2:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-s3transfer>=0.11.0:../../net/py-s3transfer
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-awscrt-[0-9]*:../../wip/py-awscrt
+DEPENDS+=	${PYPKGPREFIX}-ruamel-base-[0-9]*:../../devel/py-ruamel-base
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml-[0-9]*:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit-[0-9]*:../../devel/py-prompt_toolkit
+DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 
 USE_LANGUAGES=	# none
 
