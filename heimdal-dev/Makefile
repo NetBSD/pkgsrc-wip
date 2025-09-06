@@ -136,12 +136,6 @@ PLIST.glob=		yes
 PTHREAD_AUTO_VARS=	yes
 .endif
 
-.if ${OPSYS} == "MirBSD"
-PLIST.vis=		yes
-# all of the tools need to link against pthread, force it.
-PTHREAD_AUTO_VARS=	yes
-.endif
-
 .if ${OPSYS} == "Minix"
 # all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes
