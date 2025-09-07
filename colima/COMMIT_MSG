@@ -1,0 +1,12 @@
+Add colima version 0.8.4
+
+Colima - container runtimes on macOS (and Linux) with minimal setup.
+
+Features:
+
+- Support for Intel and Apple Silicon Macs, and Linux
+- Simple CLI interface with sensible defaults
+- Automatic Port Forwarding
+- Volume mounts
+- Multiple instances
+- Support for multiple container runtimes: docker, containerd, incus
