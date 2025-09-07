@@ -1,4 +1,3 @@
 @comment $NetBSD$
 bin/docker
 share/bash-completion/completions/docker
-share/fish/completions/docker.fish
