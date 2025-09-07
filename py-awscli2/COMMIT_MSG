@@ -1,3 +1,0 @@
-py-awscli2: New package for version 2 of AWS CLI
-
-This package provides a unified command line interface to Amazon Web Services.
