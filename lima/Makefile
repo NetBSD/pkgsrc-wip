@@ -42,6 +42,8 @@ do-build:
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS} \
 			${BUILD_TARGET}
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/doc
+
 do-install:
 	${RUN} cd ${WRKSRC}/_output && ${PAX} -rw bin ${DESTDIR}${PREFIX}
 	${RUN} cd ${WRKSRC}/_output/share/man && ${PAX} -rw man1 ${DESTDIR}${PREFIX}/${PKGMANDIR}
