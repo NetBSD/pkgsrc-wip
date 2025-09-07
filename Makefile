@@ -389,6 +389,7 @@ SUBDIR+=	bub-n-bros
 SUBDIR+=	buddy
 SUBDIR+=	budgie-desktop
 SUBDIR+=	budgie-screensaver
+SUBDIR+=	buf
 SUBDIR+=	bugsx
 SUBDIR+=	bugzilla
 SUBDIR+=	bulk-test-llvm
