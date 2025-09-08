@@ -190,10 +190,10 @@ _GIT_CMD.checkout.${repo}= \
 	\
 	${STEP_MSG} "Updating Git working area $$extractdir.";		\
 	revision=${_GIT_REV.${repo}:Q};					\
-	rev_before=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" show-ref "$$revision"`; \
+	rev_before=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" rev-parse "$$revision"`; \
 	${_GIT_CMDLINE.${repo}} -C "$$extractdir"			\
 	  fetch ${_GIT_FETCH_FLAGS.${repo}};				\
-	rev_after=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" show-ref "$$revision"`; \
+	rev_after=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" rev-parse "$$revision"`; \
 	\
 	checkout_date=${CHECKOUT_DATE:Q};				\
 	if [ "$$checkout_date" ]; then					\
