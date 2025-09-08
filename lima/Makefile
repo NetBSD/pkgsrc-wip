@@ -18,23 +18,6 @@ MAKE_FLAGS+=	VERSION=${GITHUB_TAG}
 .include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
 
-#
-# XXX: When using UEFI instead of legacy BIOS on NetBSD with NVMM QEMU aborts as
-# XXX: follows:
-# XXX:
-# XXX: qemu-system-x86_64: NVMM: Mem Assist Failed [gpa=0xfffffff0]
-# XXX: qemu-system-x86_64: NVMM: Failed to execute a VCPU.
-# XXX:
-# XXX: Force legacy BIOS to avoid that.
-#
-.if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=			legacy-bios
-SUBST_STAGE.legacy-bios=	pre-configure
-SUBST_MESSAGE.legacy-bios=	Force to use legacy BIOS on NetBSD
-SUBST_FILES.legacy-bios+=	templates/default.yaml
-SUBST_SED.legacy-bios+=		-e 's/legacyBIOS: null/legacyBIOS: true/'
-.endif
-
 do-build:
 	cd ${WRKSRC} && \
 	${RUN} ${_ULIMIT_CMD} \
