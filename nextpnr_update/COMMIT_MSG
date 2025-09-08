@@ -1,7 +1,5 @@
-devel/nextpnr: Update nextpnr to 0.0.20250829
+devel/nextpnr: Update nextpnr to 0.9
 
-Update nextpnr to last git commit.
-
-Following versioning used by maintainer in other related ports
-(not what pkgsrc guide advices).
-Asked upstream to make a new release.
+* Adding support for gatemate FPGAs
+* Improvements to Gowin support
+* Miscellaneous small iCE40 and ECP5 bugfixes
