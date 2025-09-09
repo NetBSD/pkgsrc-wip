@@ -5664,6 +5664,7 @@ SUBDIR+=	terraform014
 SUBDIR+=	terraform015
 SUBDIR+=	terraform11
 SUBDIR+=	terraform13
+SUBDIR+=	terraform15
 SUBDIR+=	terrascan
 SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
