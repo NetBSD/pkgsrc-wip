@@ -1,8 +1,12 @@
 # $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
 
-DISTNAME=	terraform-0.13.6
+.include "../../wip/terraform/version.mk"
+
+DISTNAME=	terraform-${TERRAFORM013_VERSION}
+PKGNAME=	terraform013-${TERRAFORM013_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
+GITHUB_PROJECT=	terraform
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,12 +16,18 @@ LICENSE=	mpl-2.0
 
 GO_BUILD_PATTERN=	.
 
-CHECK_RELRO_SKIP+=	bin/terraform
+SUBST_CLASSES+=			providers-prefix
+SUBST_STAGE.providers-prefix=	pre-configure
+SUBST_MESSAGE.providers-prefix=	Honor providers installed via pkgsrc
+SUBST_FILES.providers-prefix=	provider_source.go
+SUBST_VARS.providers-prefix=	PREFIX
+
+WRKSRC=	${WRKDIR}/${DISTNAME}
 
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/terraform ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/terraform ${DESTDIR}${PREFIX}/bin/terraform013
 
 .include "go-modules.mk"
 
