@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/libevdev/libevdev.h
+lib/libevdev.a
+lib/libevdev.so
+lib/libevdev.so.0
+lib/libevdev.so.0.0
+lib/pkgconfig/libevdev.pc
