@@ -1,33 +1,31 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	Odin
-GITHUB_TAG=	f64139987006a40c0548cdc507c4aca72e1435ea
-DISTNAME=	odin-0.0.0.10843
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	odin-25.8.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=odin-lang/}
+GITHUB_PROJECT=	Odin
+GITHUB_TAG=	dev-2025-08 # Note that this is a different format from the pkgsrc version.
 
 MAINTAINER=		mail@andreasjonsson.se
 HOMEPAGE=		https://odin-lang.org/
 COMMENT=		General-purpose programming language
 LICENSE=		modified-bsd
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c11
 USE_CXX_FEATURES=	c++17
 USE_CWRAPPERS=		no
 
-CFLAGS+=	-Wno-unused-result -Wno-return-local-addr
-
-USE_TOOLS+=	bash pax
-TOOL_DEPENDS+=	git-2.*:../../devel/git
+USE_TOOLS+=	pax
 
 INSTALLATION_DIRS=	bin odin
-WRKSRC=			${WRKDIR}/Odin-${GITHUB_TAG}
+CFLAGS+=		-Wno-unused-result -Wno-return-local-addr
 
 do-build:
-	cd ${WRKSRC} && \
-		ODIN_ROOT=${WRKSRC} \
-		${BASH} ./build_odin.sh release
+	cd ${WRKSRC} && ./build_odin.sh release
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/odin ${DESTDIR}${PREFIX}/bin

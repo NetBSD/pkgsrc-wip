@@ -1,4 +1,4 @@
-lang/odin: Added snapshot of the Odin compiler
+lang/odin: Added the Odin compiler and language runtime
 
 Odin is a general-purpose programming language with distinct typing built for
 high performance, modern systems and data-oriented programming.

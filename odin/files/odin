@@ -3,4 +3,4 @@
 HERE="$(dirname "$(readlink -f "$0")")"
 export ODIN_ROOT="${ODIN_ROOT:=${HERE}/../odin}"
 
-exec "$ODIN_ROOT/odin" "$@"
+exec "${ODIN_ROOT}/odin" "$@"
