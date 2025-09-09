@@ -10,17 +10,3 @@ TERRAFORM014_VERSION=	0.14.11
 
 .include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
-
-TERRAFORM_VERSION_DEFAULT?=	015
-
-# FIXME: This is used in `do-install:' target and should be fixed in order to be
-# FIXME: able to install different terraform version without adjusting
-# FIXME: TERRAFORM_VERSION_DEFAULT. In some way we need a mapping between
-# FIXME: TERRAFORM_VERSION and TERRAFORMVERSSUFFIX.
-.if !empty(TERRAFORM_VERSION_DEFAULT)
-TERRAFORMVERSSUFFIX=		${TERRAFORM_VERSION_DEFAULT}
-.endif
-
-PLIST_SUBST+=	TERRAFORMVERSSUFFIX=${TERRAFORMVERSSUFFIX:Q}
-
-PRINT_PLIST_AWK+=	{ sub("${TERRAFORMVERSSUFFIX}", "$${TERRAFORMVERSSUFFIX}") }

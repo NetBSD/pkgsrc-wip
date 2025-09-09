@@ -27,7 +27,7 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/terraform ${DESTDIR}${PREFIX}/bin/terraform${TERRAFORMVERSSUFFIX}
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/terraform ${DESTDIR}${PREFIX}/bin/terraform11
 
 .include "go-modules.mk"
 
