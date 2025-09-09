@@ -1,6 +1,6 @@
 $NetBSD$
 
-Honors providers installed via pkgsrc.
+Honor providers installed via pkgsrc.
 
 --- provider_source.go.orig	2021-03-24 18:39:36.000000000 +0000
 +++ provider_source.go
