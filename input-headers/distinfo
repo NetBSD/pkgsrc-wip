@@ -5,7 +5,3 @@ SHA512 (input-headers-1.26.2-cf9699e76e41bf1b824c3820d06d36a2b0fbb8c1.tar.gz) = 
 Size (input-headers-1.26.2-cf9699e76e41bf1b824c3820d06d36a2b0fbb8c1.tar.gz) = 1057791 bytes
 SHA1 (patch-include_linux_input-event-codes.h) = 57a4efc3892638eeb7d15a7a03c686d4e602f938
 SHA1 (patch-include_linux_input.h) = 70b682671da5947e10411ebf5a0ffcd9b638e15a
-SHA1 (patch-meson.build) = 101c209a4009dcc4526c92c94abe3add4cc75838
-SHA1 (patch-src_libinput-private.h) = 5cd7e90b189d8e774e4d468261a0d1fdd3c6a831
-SHA1 (patch-src_libinput-util.h) = 26270e454c77a7299dafc441a5ffefee7aa6e57c
-SHA1 (patch-src_util-strings.h) = 569b41c73aa0ed03167c863bbe6c24889476bc6a
