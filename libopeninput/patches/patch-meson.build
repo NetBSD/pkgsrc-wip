@@ -1,0 +1,96 @@
+$NetBSD$
+
+* Add NetBSD support
+
+--- meson.build.orig	2025-08-17 15:49:37.000000000 +0000
++++ meson.build
+@@ -143,7 +143,7 @@ config_h.set10('HAVE_INSTALLED_TESTS', g
+ 
+ # Dependencies
+ pkgconfig = import('pkgconfig')
+-if host_machine.system() == 'openbsd'
++if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
+ 	dep_udev = dependency('libudev')
+ 	dep_mtdev = []
+ 	dep_libevdev = []
+@@ -164,7 +164,7 @@ includes_src = include_directories('src'
+ 
+ ############ libwacom configuration ############
+ 
+-if host_machine.system() == 'openbsd'
++if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
+ have_libwacom = false
+ else
+ have_libwacom = get_option('libwacom')
+@@ -177,7 +177,7 @@ else
+ endif
+ 
+ ############ udev bits ############
+-if host_machine.system() != 'openbsd'
++if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+ executable('libinput-device-group',
+ 	   'udev/libinput-device-group.c',
+ 	   dependencies : [dep_udev, dep_libwacom],
+@@ -314,7 +314,7 @@ src_libfilter = [
+ 		'src/filter-trackpoint.c',
+ 		'src/filter-trackpoint-flat.c',
+ ]
+-if host_machine.system() == 'openbsd'
++if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
+ 	dep_libfilter = []
+ else
+ libfilter = static_library('filter', src_libfilter,
+@@ -345,7 +345,7 @@ libquirks = static_library('quirks', src
+ dep_libquirks = declare_dependency(link_with : libquirks)
+ 
+ # Create /etc/libinput
+-if host_machine.system() != 'openbsd'
++if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+ if meson.version().version_compare('>= 0.60')
+ 	install_emptydir(dir_etc / 'libinput')
+ else
+@@ -355,7 +355,7 @@ endif
+ 
+ ############ libinput.so ############
+ install_headers('src/libinput.h')
+-if host_machine.system() == 'openbsd'
++if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
+ src_libinput = src_libfilter + [
+ 	'src/libinput_openbsd.c',
+ 	'src/libinput-private-config.c',
+@@ -470,7 +470,7 @@ endif
+ subdir('completion/zsh')
+ 
+ ############ tools ############
+-if host_machine.system() != 'openbsd'
++if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+ 
+ libinput_tool_path = dir_libexec
+ config_h.set_quoted('LIBINPUT_TOOL_PATH', libinput_tool_path)
+@@ -717,7 +717,7 @@ test('tools-builddir-lookup-installed',
+ 
+ endif
+ ############ tests ############
+-if host_machine.system() != 'openbsd'
++if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+ 
+ test('symbols-leak-test',
+      find_program('test/symbols-leak-test'),
+@@ -771,7 +771,7 @@ if get_option('tests')
+ 	config_h.set10('HAVE_GSTACK', gstack.found())
+ 
+ 	# for inhibit support during test run
+-if host_machine.system() != 'openbsd'
++if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+ 	dep_libsystemd = dependency('libsystemd', version : '>= 221', required : false)
+ 	config_h.set10('HAVE_LIBSYSTEMD', dep_libsystemd.found())
+ endif
+@@ -883,7 +883,7 @@ endif
+ 		'test/litest.c',
+ 	]
+ 
+-if host_machine.system() != 'openbsd'
++if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+ 	dep_dl = cc.find_library('dl')
+ 	deps_litest = [
+ 		dep_libinput,
