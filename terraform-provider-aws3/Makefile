@@ -22,6 +22,8 @@ TERRAFORM_PROVIDER_BIN=		terraform-provider-aws
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	aws
 
+TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
