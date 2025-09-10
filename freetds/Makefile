@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	freetds-1.5.4
+DISTNAME=	freetds-1.5.5
 PKGREVISION=
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://www.freetds.org/
 COMMENT=	Implementation of TDS protocol used by Sybase and MS-SQL servers
 LICENSE=	gnu-lgpl-v2
