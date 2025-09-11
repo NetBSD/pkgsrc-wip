@@ -2095,6 +2095,7 @@ SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
 SUBDIR+=	libkml
 SUBDIR+=	libks
+SUBDIR+=	libliftoff
 SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
 SUBDIR+=	libm4ri
