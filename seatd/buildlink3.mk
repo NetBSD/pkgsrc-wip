@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	seatd
+
+.if !defined(SEATD_BUILDLINK3_MK)
+SEATD_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.seatd+=	seatd>=0.9.1
+BUILDLINK_ABI_DEPENDS.seatd+=	seatd>=0.9.1
+BUILDLINK_PKGSRCDIR.seatd?=	../../wip/seatd
+
+.endif # SEATD_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-seatd

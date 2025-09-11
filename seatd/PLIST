@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/seatd
+bin/seatd-launch
+include/libseat.h
+lib/libseat.so
+lib/libseat.so.1
+lib/pkgconfig/libseat.pc
+man/man1/seatd-launch.1
+man/man1/seatd.1
