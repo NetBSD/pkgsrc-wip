@@ -1,0 +1,4 @@
+lang/ols: Add Odin language server
+
+ols is the default and defacto language server
+for the Odin programming language.

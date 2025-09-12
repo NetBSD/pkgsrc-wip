@@ -2712,6 +2712,7 @@ SUBDIR+=	offpunk
 SUBDIR+=	offset
 SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
+SUBDIR+=	ols
 SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
