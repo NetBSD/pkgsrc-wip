@@ -1,5 +1,8 @@
 $NetBSD$
 
-RMD160 (wlroots-0.10.1.zip) = e8068067fcfda47d641390c24606f3a83d25680b
-SHA512 (wlroots-0.10.1.zip) = 7e6c4ada2cf90ca4f1712488bc575656ac57c7efe6c34d0618312d6eca5d913b4c78f64a4b6e7f0bab7a91399bf73d9dcb34934f05c40457a68689d9fefceec7
-Size (wlroots-0.10.1.zip) = 629644 bytes
+BLAKE2s (wlroots-0.19.0.tar.gz) = ad5a7183ffe64a288074c7ea6540c7d1a35ae86eaa6454607f344e656db1d2a3
+SHA512 (wlroots-0.19.0.tar.gz) = 1d7492dd6acabc48606c588571099354119f811448f391fbc85c334fdd83e6e74be69774be8f2ce0cd328be6845ba061e47fa15c8f7bb0d936a066b839d36e5e
+Size (wlroots-0.19.0.tar.gz) = 669929 bytes
+SHA1 (patch-backend_libinput_meson.build) = 7f109761790191930828f280ca74db6bc95941e1
+SHA1 (patch-render_vulkan_vulkan.c) = adf215c6cc885909a51c534b0102c89a84f8ab27
+SHA1 (patch-util_shm.c) = 4bc2f6eefbe94539d03e1ce2f1e001ae97ab4c60

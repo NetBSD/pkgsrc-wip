@@ -1,1 +1,10 @@
-GLESv2 missing in basesystem's Mesa (NetBSD 9.99.44)
+* Can't build on NetBSD with native x11, libdrm is too old:
+
+Dependency libdrm found: NO. Found 2.4.109 but need: '>=2.4.122'
+WARNING: Found CMake '/usr/pkgsrc/wip/wlroots/work/.tools/bin/false' but couldn't run it
+Found CMake: NO
+Run-time dependency libdrm found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency libdrm
+ERROR: Subproject libdrm is buildable: NO
+
+* On NetBSD-10 with X11_TYPE=modular builds fine, but not tested yet
