@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/permissions/prediction_service/prediction_common.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/permissions/prediction_service/prediction_common.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/permissions/prediction_service/prediction_common.cc
 @@ -36,7 +36,7 @@ int BucketizeValue(int count) {
  

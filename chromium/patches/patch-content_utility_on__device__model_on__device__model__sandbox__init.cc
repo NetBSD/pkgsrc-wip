@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/on_device_model/on_device_model_sandbox_init.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- content/utility/on_device_model/on_device_model_sandbox_init.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/utility/on_device_model/on_device_model_sandbox_init.cc
 @@ -17,16 +17,20 @@
  #include "services/on_device_model/ml/gpu_blocklist.h"  // nogncheck

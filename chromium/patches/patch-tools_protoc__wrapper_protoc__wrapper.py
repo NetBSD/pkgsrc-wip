@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/protoc_wrapper/protoc_wrapper.py.orig	2025-08-29 18:50:09.000000000 +0000
+--- tools/protoc_wrapper/protoc_wrapper.py.orig	2025-09-08 23:21:33.000000000 +0000
 +++ tools/protoc_wrapper/protoc_wrapper.py
 @@ -227,15 +227,19 @@ def main(argv):
      if not options.exclude_imports:

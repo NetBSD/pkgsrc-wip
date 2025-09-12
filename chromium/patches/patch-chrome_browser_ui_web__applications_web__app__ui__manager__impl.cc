@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
 @@ -564,7 +564,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
      Browser* browser,

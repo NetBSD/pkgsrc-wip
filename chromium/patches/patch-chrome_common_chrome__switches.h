@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/common/chrome_switches.h
 @@ -275,7 +275,7 @@ extern const char kDebugPrint[];
  #endif

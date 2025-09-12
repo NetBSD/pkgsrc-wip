@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/browser/browser_child_process_host_impl_receiver_bindings.cc
 @@ -64,7 +64,7 @@ void BrowserChildProcessHostImpl::BindHo
      }

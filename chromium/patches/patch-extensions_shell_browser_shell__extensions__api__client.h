@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- extensions/shell/browser/shell_extensions_api_client.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.h
 @@ -42,14 +42,14 @@ class ShellExtensionsAPIClient : public 
        content::BrowserContext* browser_context) const override;

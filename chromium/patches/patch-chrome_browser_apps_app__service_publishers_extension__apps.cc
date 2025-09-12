@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/app_service/publishers/extension_apps.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/apps/app_service/publishers/extension_apps.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/apps/app_service/publishers/extension_apps.cc
 @@ -23,7 +23,7 @@ ExtensionApps::ExtensionApps(AppServiceP
  ExtensionApps::~ExtensionApps() = default;

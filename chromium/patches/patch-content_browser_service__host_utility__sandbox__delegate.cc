@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_sandbox_delegate.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- content/browser/service_host/utility_sandbox_delegate.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/browser/service_host/utility_sandbox_delegate.cc
 @@ -28,7 +28,7 @@
  #include "chromeos/ash/components/assistant/buildflags.h"

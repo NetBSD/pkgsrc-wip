@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -257,7 +257,7 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator_freebsd.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- base/process/process_iterator_freebsd.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/process/process_iterator_freebsd.cc
 @@ -18,7 +18,7 @@ namespace base {
  

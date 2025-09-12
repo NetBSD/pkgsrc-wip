@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
 @@ -275,7 +275,7 @@ void RenderViewHostImpl::GetPlatformSpec
        display::win::GetScreenWin()->GetSystemMetricsInDIP(SM_CYVSCROLL);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_interface_binders.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- content/browser/browser_interface_binders.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/browser/browser_interface_binders.cc
 @@ -234,7 +234,7 @@
  #include "content/browser/xr/webxr_internals/webxr_internals_ui.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.h
 @@ -197,7 +197,7 @@ struct PartitionOptions {
    // system to configure PartitionAlloc.

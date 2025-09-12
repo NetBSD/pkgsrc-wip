@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/features.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- third_party/blink/common/features.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ third_party/blink/common/features.cc
 @@ -683,7 +683,7 @@ BASE_FEATURE(kDevToolsImprovedNetworkErr
  

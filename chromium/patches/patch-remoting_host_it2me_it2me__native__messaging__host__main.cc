@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ remoting/host/it2me/it2me_native_messaging_host_main.cc
 @@ -29,7 +29,7 @@
  #include "remoting/host/resources.h"

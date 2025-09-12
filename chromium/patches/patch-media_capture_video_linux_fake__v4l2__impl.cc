@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/fake_v4l2_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- media/capture/video/linux/fake_v4l2_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.cc
 @@ -570,7 +570,7 @@ int FakeV4L2Impl::close(int fd) {
    return kSuccessReturnValue;
