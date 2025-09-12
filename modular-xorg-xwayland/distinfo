@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 08:45:19 wiz Exp $
+
+BLAKE2s (xwayland-24.1.8.tar.xz) = acdf29ff06043260371d917bb8cc0471b13c988e7f3c86ffae734c7b22b18a41
+SHA512 (xwayland-24.1.8.tar.xz) = 417498baa87e6bfc11a778d31788a2b2d381efa08f2ac8308cfd8b1828ea62ba1da43542f798f124c25b51e8229ad1bdffc252462c0abf51be8fa0337f26d7e2
+Size (xwayland-24.1.8.tar.xz) = 1303408 bytes

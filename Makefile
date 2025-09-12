@@ -2426,6 +2426,7 @@ SUBDIR+=	modular-xorg-server-dfbsd
 SUBDIR+=	modular-xorg-server-dfbsd-meson
 SUBDIR+=	modular-xorg-server-linux
 SUBDIR+=	modular-xorg-xspice
+SUBDIR+=	modular-xorg-xwayland
 SUBDIR+=	moe
 SUBDIR+=	mofilereader
 SUBDIR+=	mona
