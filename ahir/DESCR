@@ -1,0 +1,3 @@
+AHIR is a High-Level Synthesis framework from imperative language such as C to
+VHDL.  It accepts design entry in its own imperative specification language
+called Aa and also provides tools to convert from LLVM IR to Aa.
