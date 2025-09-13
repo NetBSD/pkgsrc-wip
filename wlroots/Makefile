@@ -6,14 +6,21 @@ MASTER_SITE_GITLAB=	https://gitlab.freedesktop.org/
 MASTER_SITES=		${MASTER_SITE_GITLAB:=wlroots/}
 GITLAB_TAG=		${PKGVERSION_NOREV}
 
-MAINTAINER=	kikadf.01@gmail.com
-HOMEPAGE=	https://gitlab.freedesktop.org/wlroots/wlroots
-COMMENT=	Wayland compositor library
-LICENSE=	mit
+MAINTAINER=		kikadf.01@gmail.com
+HOMEPAGE=		https://gitlab.freedesktop.org/wlroots/wlroots
+COMMENT=		Wayland compositor library
+LICENSE=		mit
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
 
-MESON_ARGS+=	-Dallocators=gbm
+MESON_ARGS+=		-Dallocators=gbm
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Fixing pathes
+SUBST_FILES.path+=	xcursor/xcursor.c
+SUBST_VARS.path+=	PREFIX X11BASE
+
 
 .include "../../devel/meson/build.mk"
 
