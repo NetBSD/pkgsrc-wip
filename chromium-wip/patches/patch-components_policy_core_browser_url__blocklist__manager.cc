@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/browser/url_blocklist_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/policy/core/browser/url_blocklist_manager.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/policy/core/browser/url_blocklist_manager.cc
 @@ -377,7 +377,7 @@ void URLBlocklistManager::RegisterProfil
        policy_prefs::kSafeSitesFilterBehavior,

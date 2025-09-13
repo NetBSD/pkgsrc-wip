@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- sandbox/policy/switches.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ sandbox/policy/switches.h
-@@ -23,7 +23,8 @@ SANDBOX_POLICY_EXPORT extern const char 
+@@ -24,7 +24,8 @@ SANDBOX_POLICY_EXPORT extern const char 
  SANDBOX_POLICY_EXPORT extern const char kGpuSandboxAllowSysVShm[];
  SANDBOX_POLICY_EXPORT extern const char kGpuSandboxFailuresFatal[];
  SANDBOX_POLICY_EXPORT extern const char kNoSandbox[];

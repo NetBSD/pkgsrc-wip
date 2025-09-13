@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits.cc
 @@ -19,7 +19,7 @@
  #include "base/numerics/safe_conversions.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "mojo/public/mojom/base/values.mojom.h"
  #endif
  
-@@ -162,7 +162,7 @@ bool StructTraits<
+@@ -217,7 +217,7 @@ bool StructTraits<
    }
  
    out->set_pages_per_sheet(data.pages_per_sheet());
@@ -24,7 +24,7 @@ $NetBSD$
    DCHECK(out->advanced_settings().empty());
    if (!data.ReadAdvancedSettings(&out->advanced_settings()))
      return false;
-@@ -239,7 +239,7 @@ bool StructTraits<
+@@ -294,7 +294,7 @@ bool StructTraits<
      if (system_print_dialog_data.size() != dictionary_entries) {
        return false;
      }

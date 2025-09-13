@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/chrome_authenticator_request_delegate.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/webauthn/chrome_authenticator_request_delegate.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/webauthn/chrome_authenticator_request_delegate.cc
-@@ -551,7 +551,7 @@ void ChromeAuthenticatorRequestDelegate:
+@@ -549,7 +549,7 @@ void ChromeAuthenticatorRequestDelegate:
      g_observer->ConfiguringCable(request_type);
    }
  

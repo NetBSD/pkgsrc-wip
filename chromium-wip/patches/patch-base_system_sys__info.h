@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/system/sys_info.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/system/sys_info.h
 @@ -360,6 +360,8 @@ class BASE_EXPORT SysInfo {
    static void ResetCpuSecurityMitigationsEnabledForTesting();

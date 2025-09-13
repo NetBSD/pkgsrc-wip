@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc
-@@ -18,6 +18,10 @@
+@@ -23,6 +23,10 @@
  #include <pthread.h>
  #endif
  
@@ -17,7 +17,7 @@ $NetBSD$
  #if PA_BUILDFLAG(PA_LIBC_GLIBC)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -50,6 +54,36 @@ void* GetStackTop() {
+@@ -55,6 +59,36 @@ void* GetStackTop() {
    return pthread_get_stackaddr_np(pthread_self());
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ gpu/ipc/service/gpu_memory_buffer_factory.cc
 @@ -14,7 +14,7 @@
  #include "gpu/ipc/service/gpu_memory_buffer_factory_io_surface.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "gpu/ipc/service/gpu_memory_buffer_factory_native_pixmap.h"
  #endif
  
-@@ -71,7 +71,7 @@ GpuMemoryBufferFactory::CreateNativeType
+@@ -65,7 +65,7 @@ GpuMemoryBufferFactory::CreateNativeType
    // to have a factory that vends invalid GMB handles rather than having no
    // factory at all.
    return std::make_unique<GpuMemoryBufferFactoryStub>();

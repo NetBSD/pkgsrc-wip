@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_device_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- media/capture/video/linux/v4l2_capture_device_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ media/capture/video/linux/v4l2_capture_device_impl.cc
 @@ -22,7 +22,7 @@ int V4L2CaptureDeviceImpl::close(int fd)
    return ::close(fd);

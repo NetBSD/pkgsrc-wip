@@ -4,14 +4,17 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/time/time_now_posix.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/time/time_now_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/time/time_now_posix.cc
-@@ -27,7 +27,7 @@
- #endif
+@@ -110,7 +110,11 @@ std::optional<TimeTicks> MaybeTimeTicksN
+ }
  
- // NaCl doesn't support CLOCK_MONOTONIC_COARSE.
--#if BUILDFLAG(IS_NACL)
-+#if BUILDFLAG(IS_NACL) || BUILDFLAG(IS_BSD)
- #define TIMETICKS_LOW_RESOLUTION_CLOCK CLOCK_MONOTONIC
- #else
- #define TIMETICKS_LOW_RESOLUTION_CLOCK CLOCK_MONOTONIC_COARSE
+ TimeTicks TimeTicksLowResolutionNowIgnoringOverride() {
++#if BUILDFLAG(IS_BSD)
++  return TimeTicks() + Microseconds(ClockNow(CLOCK_MONOTONIC));
++#else
+   return TimeTicks() + Microseconds(ClockNow(CLOCK_MONOTONIC_COARSE));
++#endif
+ }
+ }  // namespace subtle
+ 

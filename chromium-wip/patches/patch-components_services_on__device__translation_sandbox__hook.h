@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/services/on_device_translation/sandbox_hook.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/services/on_device_translation/sandbox_hook.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/services/on_device_translation/sandbox_hook.h
 @@ -5,7 +5,13 @@
  #ifndef COMPONENTS_SERVICES_ON_DEVICE_TRANSLATION_SANDBOX_HOOK_H_

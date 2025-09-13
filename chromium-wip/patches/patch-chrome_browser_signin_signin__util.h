@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/signin/signin_util.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/signin/signin_util.h
-@@ -168,7 +168,7 @@ bool IsSigninPending(signin::IdentityMan
- // Returns the current state of the primary account that is used in Chrome.
- SignedInState GetSignedInState(const signin::IdentityManager* identity_manager);
+@@ -171,7 +171,7 @@ SignedInState GetSignedInState(const sig
+ // Returns a string representation of `SignedInState`.
+ std::string SignedInStateToString(SignedInState state);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)

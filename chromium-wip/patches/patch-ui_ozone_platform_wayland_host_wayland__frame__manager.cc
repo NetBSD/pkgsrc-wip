@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_frame_manager.cc
-@@ -461,8 +461,10 @@ std::optional<bool> WaylandFrameManager:
+@@ -460,8 +460,10 @@ std::optional<bool> WaylandFrameManager:
    surface->UpdateBufferDamageRegion(
        gfx::ToEnclosingRectIgnoringError(surface_damage));
  

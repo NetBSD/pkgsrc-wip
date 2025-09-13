@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ services/network/shared_dictionary/shared_dictionary_writer_in_memory.h
 @@ -9,6 +9,8 @@
  #include <string>
@@ -14,4 +14,4 @@ $NetBSD$
 +
  #include "base/component_export.h"
  #include "base/functional/callback.h"
- #include "crypto/secure_hash.h"
+ #include "crypto/hash.h"

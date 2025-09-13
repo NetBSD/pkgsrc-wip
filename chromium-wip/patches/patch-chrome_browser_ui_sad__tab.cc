@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/sad_tab.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/sad_tab.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/ui/sad_tab.cc
 @@ -179,7 +179,7 @@ std::vector<int> SadTab::GetSubMessages(
        if (!web_contents_->GetBrowserContext()->IsOffTheRecord()) {

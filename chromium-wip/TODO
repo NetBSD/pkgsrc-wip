@@ -1,23 +1,17 @@
 To Do:
 
-Make HID workable on NetBSD.
+0) Build on NetBSD-10 amd64
 
-* Headache:
-1) Build with hid_*_fido: 
+1) Audio backends
+ a) NetBSD uses sunaudio (https://github.com/kikadf/chromium-audioio)
+ b) FreeBSD uses pulseaudio
 
-Program terminated with signal SIGSEGV, Segmentation fault.
-#0  0x00007c15ce5d58e2 in EVP_KEYMGMT_get0_provider () from /usr/lib/libcrypto.so.15
-(gdb) bt
-#0  0x00007c15ce5d58e2 in EVP_KEYMGMT_get0_provider () from /usr/lib/libcrypto.so.15
-#1  0x00007c15ce5c75e8 in OSSL_ENCODER_CTX_new_for_pkey () from /usr/lib/libcrypto.so.15
-#2  0x00007c15ce5ae6db in PEM_write_bio_PrivateKey_ex () from /usr/lib/libcrypto.so.15
-#3  0x00007c15ce5ae852 in PEM_write_bio_PrivateKey () from /usr/lib/libcrypto.so.15
-#4  0x0000000072d563ca in webrtc::OpenSSLKeyPair::PrivateKeyToPEMString() const ()
-   at ../../third_party/webrtc/rtc_base/openssl_key_pair.cc:147
+If pulseaudio not run, chromium can't start it, so no sound:
+VERBOSE1:pulse_util.cc(261)] Failed to connect to the context. Error: Connection refused
+WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
 
-On NetBSD fido built with openssl, while on OpenBSD with libressl.
-Openssl conflicts with chromium's internal boringssl, while libressl works.
-Pkgsrc's fido uses openssl as well.
+If pulseaudio already started, chromium can join it, and has sound.
+This is the workaround, see the files/chromium.sh.in launch wrapper.
 
-2) See how is working hid_*_freebsd
-
+2) HID doesn't work on NetBSD.
+NOTE: For this OpenBSD uses libudev-openbsd, FreeBSD uses devd.

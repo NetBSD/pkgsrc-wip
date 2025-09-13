@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/browser/child_thread_type_switcher_linux.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/browser/child_thread_type_switcher_linux.cc
 @@ -6,6 +6,7 @@
  

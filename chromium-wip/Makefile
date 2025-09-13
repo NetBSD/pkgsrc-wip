@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			139.0.7258.66
+VERSION=			140.0.7339.127
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -9,8 +9,11 @@ EXTRACT_SUFX_C=			.tar.xz
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
 
 # audioio source
-A_VERSION=			138.0
+A_VERSION=			140.0
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
+# HID support
+H_VERSION=			67bdbb470e207a13e9b2f550e59cf0855135b777
+GITHUB_SUBMODULES+=		kikadf chromium-hid-netbsd ${H_VERSION} services/device/hid
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			19
@@ -370,6 +373,5 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libudev-bsd=	build
 .include "../../wip/libudev-bsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

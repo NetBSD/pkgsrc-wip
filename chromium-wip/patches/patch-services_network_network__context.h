@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- services/network/network_context.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ services/network/network_context.h
-@@ -737,7 +737,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -738,7 +738,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
     public:
      explicit NetworkContextHttpAuthPreferences(NetworkService* network_service);
      ~NetworkContextHttpAuthPreferences() override;

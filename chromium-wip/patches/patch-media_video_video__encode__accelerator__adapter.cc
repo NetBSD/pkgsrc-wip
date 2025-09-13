@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
-@@ -470,7 +470,7 @@ void VideoEncodeAcceleratorAdapter::Init
+@@ -467,7 +467,7 @@ void VideoEncodeAcceleratorAdapter::Init
  
    auto format = PIXEL_FORMAT_I420;
    auto storage_type = VideoEncodeAccelerator::Config::StorageType::kShmem;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/channel_info.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/common/channel_info.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/common/channel_info.h
 @@ -11,7 +11,7 @@
  #include "build/branding_buildflags.h"

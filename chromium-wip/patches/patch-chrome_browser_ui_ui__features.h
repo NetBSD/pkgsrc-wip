@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -28,7 +28,7 @@ BASE_DECLARE_FEATURE(kAllowEyeDropperWGC
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
  
-@@ -311,7 +311,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
+@@ -292,7 +292,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
  BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
  

@@ -1,0 +1,11 @@
+www/chromium: update to 140.0.7339.127
+
+* 140.0.7339.127
+This update includes 2 security fixes.
+Below, we highlight fixes that were contributed by external researchers.
+Please see the Chrome Security Page for more information.
+[$43000][440454442] Critical CVE-2025-10200: Use after free in
+Serviceworker. Reported by Looben Yang on 2025-08-22
+[$30000][439305148] High CVE-2025-10201: Inappropriate implementation
+in Mojo. Reported by Sahan Fernando & Anon on 2025-08-18
+

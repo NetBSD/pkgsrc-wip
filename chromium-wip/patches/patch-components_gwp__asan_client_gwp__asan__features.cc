@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/gwp_asan_features.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/gwp_asan/client/gwp_asan_features.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/gwp_asan/client/gwp_asan_features.cc
 @@ -9,7 +9,7 @@
  namespace gwp_asan::internal {
@@ -15,3 +15,12 @@ $NetBSD$
      (BUILDFLAG(IS_ANDROID) && defined(ARCH_CPU_64_BITS))
  constexpr base::FeatureState kDefaultEnabled = base::FEATURE_ENABLED_BY_DEFAULT;
  #else
+@@ -72,7 +72,7 @@ GWP_ASAN_EXPORT extern const base::Featu
+     kGwpAsanMallocGpuAllocationSamplingRange{&kGwpAsanMalloc,
+                                              "GpuAllocationSamplingRange", 16};
+ 
+-#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ 
+ // Browser reservation params.
+ GWP_ASAN_EXPORT extern const base::FeatureParam<int>

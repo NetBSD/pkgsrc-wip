@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_device_queue.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- gpu/vulkan/vulkan_device_queue.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ gpu/vulkan/vulkan_device_queue.cc
 @@ -145,7 +145,7 @@ bool VulkanDeviceQueue::Initialize(
  

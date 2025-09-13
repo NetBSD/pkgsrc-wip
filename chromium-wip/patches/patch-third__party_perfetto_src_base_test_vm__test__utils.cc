@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ third_party/perfetto/src/base/test/vm_test_utils.cc
-@@ -93,7 +93,7 @@ bool IsMapped(void* start, size_t size) 
+@@ -92,7 +92,7 @@ bool IsMapped(void* start, size_t size) 
    // Fuchsia doesn't yet support paging (b/119503290).
    ignore_result(page_size);
    return true;

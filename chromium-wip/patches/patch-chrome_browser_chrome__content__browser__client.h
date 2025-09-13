@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
-@@ -587,7 +587,7 @@ class ChromeContentBrowserClient : publi
-   bool IsPluginAllowedToUseDevChannelAPIs(
-       content::BrowserContext* browser_context,
-       const GURL& url) override;
+@@ -571,7 +571,7 @@ class ChromeContentBrowserClient : publi
+       const GURL& site_url) override;
+   std::unique_ptr<content::TracingDelegate> CreateTracingDelegate() override;
+   bool IsSystemWideTracingEnabled() override;
 -#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_BSD)
    void GetAdditionalMappedFilesForChildProcess(
