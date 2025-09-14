@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/skint
 share/doc/${PKGNAME}/README.md
+share/doc/${PKGNAME}/syntax-rules.md
 share/${PKGNAME}/lib/README.md
 share/${PKGNAME}/lib/srfi/1.sld
 share/${PKGNAME}/lib/srfi/11.sld
