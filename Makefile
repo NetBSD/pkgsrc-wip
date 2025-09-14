@@ -2787,6 +2787,7 @@ SUBDIR+=	openzwave
 SUBDIR+=	opera60-bin
 SUBDIR+=	ophcrack
 SUBDIR+=	optional-lite
+SUBDIR+=	oq
 SUBDIR+=	oqtplayer
 SUBDIR+=	or-tools
 SUBDIR+=	or1ksim
