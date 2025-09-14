@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libminizinc-2.9.3.tar.gz) = 22397a1a3c591e278096dc1944f86999ee0ca4fa70b4434e51f80fd98fce4deb
+SHA512 (libminizinc-2.9.3.tar.gz) = ed0a7774d273ed302ddf7ffc71047122b5c1255eacd177fb6b22e68017724501eb692dbb3292702cc6f56ed3d489ecbfe324b2cafa0858d90626e8bbb171cc51
+Size (libminizinc-2.9.3.tar.gz) = 8077095 bytes
