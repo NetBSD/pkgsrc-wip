@@ -1,4 +1,4 @@
-lang/skint: import skint-0.5.2 as lang/skint
+lang/skint: import skint-0.6.5 as lang/skint
 
 Cheap and fast R7RS Scheme Interpreter
 

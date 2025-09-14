@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	skint-052
-PKGNAME=	skint-0.5.2
+DISTNAME=	skint-065
+PKGNAME=	skint-0.6.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=false-schemers/}
-GITHUB_TAG=	v052
+GITHUB_TAG=	v065
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/false-schemers/skint/
