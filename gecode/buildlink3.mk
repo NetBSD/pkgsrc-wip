@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	gecode
+
+.if !defined(GECODE_BUILDLINK3_MK)
+GECODE_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.gecode+=	gecode>=6.2.0
+BUILDLINK_PKGSRCDIR.gecode?=	../../wip/gecode
+.endif	# GECODE_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-gecode
