@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/01/11 09:07:15 fhajny Exp $
+$NetBSD$
 
-RMD160 (gecode-3.7.3.tar.gz) = ba7ab9a545dab5b4ff3feaa90e617be561614822
-Size (gecode-3.7.3.tar.gz) = 1643336 bytes
-SHA1 (patch-Makefile) = 7174d864e7b64ea92fd2a05c3edf01ad2a03ef8a
-SHA1 (patch-configure) = 041ea85f05b4ae4a7ca0a61b6dcd82bcb13485b5
+BLAKE2s (gecode-6.2.0.tar.gz) = 6993deaaeef6cab23d356f0709e21b7456399f997abdf39a6e81f59e859c6442
+SHA512 (gecode-6.2.0.tar.gz) = a763127ba786df86b33f4be1b25226f51bd5d059ea336912e7bd3ec5c54c2fed93f2e5a662793688723495193a42204c0db440b19de8614414ebbe5d2d2d51ed
+Size (gecode-6.2.0.tar.gz) = 3672525 bytes
+SHA1 (patch-gecode_search_cpprofiler_connector.hpp) = acdeb0104b134d3209aec2884ef8f3e1775e2081

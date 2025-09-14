@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.1 2013/01/10 13:47:27 fhajny Exp $
-#
+# $NetBSD$
 
-DISTNAME=	gecode-3.7.3
-CATEGORIES=	devel
-MASTER_SITES=	http://www.gecode.org/download/
+DISTNAME=	gecode-6.2.0
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Gecode/}
+GITHUB_PROJECT=	gecode
+GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gecode.org/
-COMMENT=	Toolkit for developing constraint-based systems
+HOMEPAGE=	https://github.com/Gecode/gecode/
+COMMENT=	Generic Constraint Development Environment
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/gecode-release-6.2.0
 USE_LANGUAGES=	c c++
-USE_TOOLS=	gmake perl bash
 
-CONFIG_SHELL=	${TOOLS_PATH.bash}
+# unused
+CHECK_PORTABILITY_SKIP=	configure
 
-CONFIGURE_ARGS+=	--enable-examples=no
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
