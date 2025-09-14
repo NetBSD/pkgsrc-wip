@@ -1,0 +1,32 @@
+$NetBSD$
+
+--- docutils/writers/latex2e/docutils.sty.orig	2025-07-29 14:37:37.623939000 +0000
++++ docutils/writers/latex2e/docutils.sty
+@@ -22,7 +22,7 @@
+ 
+ \NeedsTeXFormat{LaTeX2e}
+ \ProvidesPackage{docutils}
+-  [2024-09-24 macros for Docutils LaTeX output]
++  [2025-08-06 macros for Docutils LaTeX output]
+ 
+ % Helpers
+ % -------
+@@ -124,15 +124,15 @@
+ 
+ % footnotes::
+ 
+-% numerical or symbol footnotes with hyperlinks and backlinks
++% numbered or symbol footnotes with hyperlinks and backlinks
+ \providecommand*{\DUfootnotemark}[3]{%
+   \raisebox{1em}{\hypertarget{#1}{}}%
+-  \hyperlink{#2}{\textsuperscript{#3}}%
++  \hyperref[#2]{\textsuperscript{#3}}%
+ }
+ \providecommand{\DUfootnotetext}[4]{%
+   \begingroup%
+   \renewcommand{\thefootnote}{%
+-    \protect\raisebox{1em}{\protect\hypertarget{#1}{}}%
++    \protect\phantomsection\protect\label{#1}
+     \protect\hyperlink{#2}{#3}}%
+   \footnotetext{#4}%
+   \endgroup%

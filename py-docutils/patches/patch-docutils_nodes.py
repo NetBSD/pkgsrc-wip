@@ -2,9 +2,12 @@ $NetBSD$
 
 --- docutils/nodes.py.orig	2025-07-29 14:37:37.467805600 +0000
 +++ docutils/nodes.py
-@@ -820,18 +820,21 @@ class Element(Node):
+@@ -818,20 +818,23 @@ class Element(Node):
+         return self.parent[i-1] if i > 0 else None
+ 
      def section_hierarchy(self) -> list[section]:
-         """Return the element's section hierarchy.
+-        """Return the element's section hierarchy.
++        """Return the element's section anchestors.
  
 -        Return a list of all <section> elements containing `self`
 -        (including `self` if it is a <section>).
