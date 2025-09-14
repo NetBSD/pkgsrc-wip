@@ -3,3 +3,15 @@ $NetBSD$
 BLAKE2s (ahir/ahir-0.0.0.1608-2097969.tar.gz) = c70bf37497f4848b3d440e1ba09e7554c2300dadc5befb6c8f8b4991147a51a5
 SHA512 (ahir/ahir-0.0.0.1608-2097969.tar.gz) = 706131f78f630b79d337e85f0d8c2743014549bcb387fb07f38b9d1f7e4bb7a878aafda7c8ac0fad5a7c20f643204dc764260fa7be68652545864f5e04727a0e
 Size (ahir/ahir-0.0.0.1608-2097969.tar.gz) = 98789121 bytes
+BLAKE2s (ahir/mayureshw-ceptool-fa2b2fb.tar.gz) = af4bbd562a13030a215c03555691f7ae8952ecf9597bb88dc77b08d88c923bc8
+SHA512 (ahir/mayureshw-ceptool-fa2b2fb.tar.gz) = d680a6bfa89ea9ebb4e14e60c23344a90d243978c73e710d9859319f7d9b0d81b83d609fb613e931bc59fafacedce0303c6f013edfdd309e2935e3b35d51248c
+Size (ahir/mayureshw-ceptool-fa2b2fb.tar.gz) = 14182 bytes
+BLAKE2s (ahir/mayureshw-petrisimu-1baebbe.tar.gz) = c90ae1465478f45dd752e3346871bbe41cf712813482c079470100aa343a564f
+SHA512 (ahir/mayureshw-petrisimu-1baebbe.tar.gz) = 17d9288d4be9bd8123820b64d20b40b5edb384e13ca7878d80b174a6b23ef7668488586f6f33245f80f5f36ae5907d2d070f42901a0e5ed44f2b63ff7b414749
+Size (ahir/mayureshw-petrisimu-1baebbe.tar.gz) = 18888 bytes
+BLAKE2s (ahir/mayureshw-vctools-6c35689.tar.gz) = b53e76c75118cf0ce8182d6201b31a38f59a23ed2d49d125447aa7a6de8a0450
+SHA512 (ahir/mayureshw-vctools-6c35689.tar.gz) = 101b3ab7958d7e19929e5f360f3c0ebf6d5153274cf4e29ad7ad19ee175e36e888fcb8252e78fb0888db8adf2d193eab01469e344cd5fe70b75ed2fcef003411
+Size (ahir/mayureshw-vctools-6c35689.tar.gz) = 79122 bytes
+BLAKE2s (ahir/mayureshw-xsbcppif-d63a9f2.tar.gz) = 0f8a1d78e52fbac28cf01b36aae332e0e5ff03d7ed8b615506f5504dddfa4331
+SHA512 (ahir/mayureshw-xsbcppif-d63a9f2.tar.gz) = 366f19a30d1790d6c050d5ae47dc23c9ed224e6a3d54e6213285fcbe0259c7b5ef86fea0230b9e9d8be6b90da0ec35c87e53db0a820dba58ccf4d14caffcb790
+Size (ahir/mayureshw-xsbcppif-d63a9f2.tar.gz) = 6992 bytes
