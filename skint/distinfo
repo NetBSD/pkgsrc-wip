@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (skint-065.tar.gz) = 77ecb319e9ca49cc9f686f4c11976e5b6aa8a17273e733c4f88e0b5316e7f9d5
 SHA512 (skint-065.tar.gz) = fcc7736bf2171311535bcdd2daf1f33cad7268f08dd06a1662fbf4f61ae3f5d8ade30c2c2a62e9d27bb2678639ae0aded3215f0f19d76a73e71ddd136f0899de
 Size (skint-065.tar.gz) = 810939 bytes
-SHA1 (patch-Makefile) = 2b8cadf67b494ab49676ff1058c6417e9a031c9a
+SHA1 (patch-Makefile) = 5832bf217d1fa1a92c768c08b7c80703d71a8849
 SHA1 (patch-s.h) = eef592fe9fe3ea15bb064dc4b67ec8c5f87e7f1f

@@ -17,7 +17,7 @@ Use DESTDIR when installing.
  endif
  
  ifeq ($(OS),Windows_NT)
-@@ -115,8 +115,8 @@ realclean:
+@@ -115,14 +115,14 @@ realclean:
  distclean: realclean
  
  install:
@@ -27,4 +27,14 @@ Use DESTDIR when installing.
 +	$(INSTALL) $(exe) $(DESTDIR)$(PREFIX)/bin
  
  libinstall:
- 	$(MKPATH) $(LIBROOT)/lib
+-	$(MKPATH) $(LIBROOT)/lib
+-	$(CPR) lib/. $(LIBROOT)/lib/
+-	find $(LIBROOT) -type f -exec chmod 644 {} +
+-	find $(LIBROOT) -type d -exec chmod 755 {} +
++	$(MKPATH) $(DESTDIR)$(LIBROOT)/lib
++	$(CPR) lib/. $(DESTDIR)$(LIBROOT)/lib/
++	find $(DESTDIR)$(LIBROOT) -type f -exec chmod 644 {} +
++	find $(DESTDIR)$(LIBROOT) -type d -exec chmod 755 {} +
+ 
+ uninstall:
+ 	$(UNINSTALL) $(exe) $(PREFIX)/bin
