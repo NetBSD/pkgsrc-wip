@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (d2-v0.7.0.tar.gz) = b41195fa0720dab3364e0a80e8c1d7958750a623622fc6199092a05501d7a318
-SHA512 (d2-v0.7.0.tar.gz) = b1fca55be0437e1172592d16d6086c8761f795fafc6932de3e51db21e93fcb6e222df88d910ff7841ec7f4a34b25e133b7837695a0dc538483ef3612c9785cc3
-Size (d2-v0.7.0.tar.gz) = 27988924 bytes
+BLAKE2s (d2-v0.7.1.tar.gz) = c2b0c50a024a753af4a91427a89e8bcc1a6d0e32c4fa8576275e612f397dff3c
+SHA512 (d2-v0.7.1.tar.gz) = c0be2cd1179c03af7d6767fa928cc3c3f10c051b70c666f4e232a01cf92249b420f9a29bc0c2a9e5d6030eb67002a44099f4038bbb0116cba47e6e9403f90a18
+Size (d2-v0.7.1.tar.gz) = 29934835 bytes
 BLAKE2s (github.com__puerkito_bio_goquery_@v_v1.10.0.mod) = caa7ac090a31263ee1896e437251d861b0ff2ed3b22105019615600fbfeaa47c
 SHA512 (github.com__puerkito_bio_goquery_@v_v1.10.0.mod) = f182efa22de4aa0a770141485aa4511c0f08bf0a59fe74c350397d19cfdc50e7da0d053e3989bfe2f0f6ba4b95a0e4e7429195aee3d1b85c5c06ea871c8125c6
 Size (github.com__puerkito_bio_goquery_@v_v1.10.0.mod) = 126 bytes
@@ -15,6 +15,12 @@ Size (github.com_alecthomas_chroma_v2_@v_v2.14.0.mod) = 229 bytes
 BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.14.0.zip) = 487853738f99db999d9cbf847930a2432204e46a5964602883f3e23cffbdf3a7
 SHA512 (github.com_alecthomas_chroma_v2_@v_v2.14.0.zip) = 3fce081a45609544217cce5fd610c2acea5dff0481e4173e1ba4c8ec5aaf32239899590f82a8335464bfc9b62125e32c1b7990c4bdff1ea0d710186fcf77fff0
 Size (github.com_alecthomas_chroma_v2_@v_v2.14.0.zip) = 1380666 bytes
+BLAKE2s (github.com_andybalholm_brotli_@v_v1.2.0.mod) = 759a6ede6aef28cad053575b4d06d70d5c9a4640a713d3a4b5be20703ecf3b26
+SHA512 (github.com_andybalholm_brotli_@v_v1.2.0.mod) = 648b8e1b27160cb83fa7a513f6c0d671a5027fd7a36cad7b5c6b686c24b496633ee234b589e156a878c28bbc515ca443f8ef3d615aea5c8a3f97aa81768a7e6f
+Size (github.com_andybalholm_brotli_@v_v1.2.0.mod) = 151 bytes
+BLAKE2s (github.com_andybalholm_brotli_@v_v1.2.0.zip) = 9ea177a8df76c907a4585be9a34abe6097061004c5418e0ef5c0f32720be1e8f
+SHA512 (github.com_andybalholm_brotli_@v_v1.2.0.zip) = 598430e53d670e70be18f197a6a3e852e4f692277ecfbc8ffa7bb915ba446b8a43d8b2597287b8f55c727ae9739a98739bbed9fbd96e5fe18b592a25177ff014
+Size (github.com_andybalholm_brotli_@v_v1.2.0.zip) = 1886553 bytes
 BLAKE2s (github.com_andybalholm_cascadia_@v_v1.3.2.mod) = 47e364c36fbfebfbd027e3527c6450b5a8c8a37d558744eb58fb68d3d2d894d3
 SHA512 (github.com_andybalholm_cascadia_@v_v1.3.2.mod) = a8eaf475702969010385558de43466494f194f138c31bcec4a0b946f9dd1e37767f7dd0410315d00b5024b2cc6a295fe59c86720837382165827d2a4a3ee2c0f
 Size (github.com_andybalholm_cascadia_@v_v1.3.2.mod) = 81 bytes
@@ -504,12 +510,6 @@ Size (golang.org_x_xerrors_@v_v0.0.0-20240903120638-7835f813f4da.mod) = 37 bytes
 BLAKE2s (golang.org_x_xerrors_@v_v0.0.0-20240903120638-7835f813f4da.zip) = 2ade86b364353ddb9c09f850e6dc37a87d99c95cddb51fbd8849cad2f31cf48c
 SHA512 (golang.org_x_xerrors_@v_v0.0.0-20240903120638-7835f813f4da.zip) = 69855473bc1c2f811af1d81f6fb5a92862a98eb2f20f0b0e57b6c2c79b9ed22ba26db87e5428ba89bb2155401663bf5b97353fb5f01ecdbd695dad6620e08d7f
 Size (golang.org_x_xerrors_@v_v0.0.0-20240903120638-7835f813f4da.zip) = 21783 bytes
-BLAKE2s (gonum.org_v1_plot_@v_v0.14.0.mod) = d6514d0c2cc1a4324e28062444ac655f5b57601254416c7d8c78823ac5e535f1
-SHA512 (gonum.org_v1_plot_@v_v0.14.0.mod) = d18cbbb0ddc8c7935ec6bbe11d322b59c6674c9c04da3d3f3d89ee8965be205d5cd79d8262267a2817a8804984de799a9be2e08ea0138aeb94bf2e72f45cb8df
-Size (gonum.org_v1_plot_@v_v0.14.0.mod) = 1052 bytes
-BLAKE2s (gonum.org_v1_plot_@v_v0.14.0.zip) = ffbf011820ff837c005b83eba1fd4865386811260540803e1c4f433b5e1d9739
-SHA512 (gonum.org_v1_plot_@v_v0.14.0.zip) = 88c7848716be621a180c86b6f40f80c2ac517cc6fa9b71e1d7d56dada58e46dc2f560090b5e6da3b1241a1caf84152b6f21e0ccce2dfe30f3f478be6fb28faa6
-Size (gonum.org_v1_plot_@v_v0.14.0.zip) = 4368250 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 35cd1964700502d06b8c987979fb4dbddc41a5cda3368d037211b89d3587521f
 SHA512 (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 9ac0f80ef05881387cb2f48f81560f3207fe586ea16495383662e6d62e43d93fac01dfe72e1d0063d3ab065331dab3a8098d7da4f1830ba1aff6f27f8e1bc1b2
 Size (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 25 bytes
