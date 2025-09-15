@@ -960,6 +960,7 @@ share/emacs/${PKGVERSION}/etc/schema/dotnet-appconfig.rnc
 share/emacs/${PKGVERSION}/etc/schema/dotnet-packages-config.rnc
 share/emacs/${PKGVERSION}/etc/schema/dotnet-packages-props.rnc
 share/emacs/${PKGVERSION}/etc/schema/dotnet-resx.rnc
+share/emacs/${PKGVERSION}/etc/schema/dotnet-slnx.rnc
 share/emacs/${PKGVERSION}/etc/schema/locate.rnc
 share/emacs/${PKGVERSION}/etc/schema/msbuild.rnc
 share/emacs/${PKGVERSION}/etc/schema/nuget.rnc
