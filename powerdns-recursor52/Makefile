@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	pdns-recursor-5.2.5
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,7 @@ USE_CXX_FEATURES+=	c++17
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libsodium
 CONFIGURE_ARGS+=	--enable-dns-over-tls
+CONFIGURE_ARGS+=        --with-boost=${BUILDLINK_PREFIX.boost-headers}
 
 CHECK_WRKREF_SKIP+=	sbin/pdns_recursor
 
