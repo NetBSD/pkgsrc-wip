@@ -43,15 +43,12 @@ xsb-${PKGVERSION}.0/cmplib/tprog.xwam
 xsb-${PKGVERSION}.0/cmplib/useinfer.xwam
 xsb-${PKGVERSION}.0/cmplib/varproc.xwam
 xsb-${PKGVERSION}.0/cmplib/writeasm.xwam
+xsb-${PKGVERSION}.0/config/local
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/banner.msg
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/bin/gpp
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/bin/libxsb.so
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/bin/xsb
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/lib/xsb_configuration.xwam
-xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/lib/xsb_re_match.so
-xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/lib/xsb_re_match.xwam
-xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/lib/xsb_wildmatch.so
-xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/lib/xsb_wildmatch.xwam
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/xsb_config.h
 xsb-${PKGVERSION}.0/config/x86_64-unknown-netbsd10.1/xsb_debug.h
 xsb-${PKGVERSION}.0/emu/auxlry.h

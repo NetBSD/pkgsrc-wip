@@ -46,9 +46,12 @@ REMOVE_P+=		${XSB_PREFIXDIR}/config/${XSB_CONFIG_NAME}/lib/xsb_configuration.P
 REMOVE_P+=		${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
 REMOVE_P+=		${XSB_PREFIXDIR}/syslib/debugger_data.P
 
+# XSB uses config.guess at runtime, making it harder to make predictable paths
+# Hence we soft link the configuration with name 'local'
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
-	rm -rf ${XSB_PKGDIR} ${REMOVE_P}
+	${RM} -rf ${XSB_PKGDIR} ${REMOVE_P} && \
+	cd ${XSB_PREFIXDIR}/config && ${LN} -sf ${XSB_CONFIG_NAME} local
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
