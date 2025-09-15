@@ -4,7 +4,7 @@ DISTNAME=		gforth
 PKGNAME=		gforth-0.7.9pre20250321
 CATEGORIES=		lang
 #MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
-#MASTER_SITES+=		https://git.savannah.gnu.org/cgit/gforth.git/snapshot/
+#MASTER_SITES+=		https://git.git.savannah.gnu.org/cgit/gforth.git/snapshot/
 MASTER_SITES+=		https://www.complang.tuwien.ac.at/forth/gforth/Snapshots/current/
 DIST_SUBDIR=		gforth-${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.tar.xz

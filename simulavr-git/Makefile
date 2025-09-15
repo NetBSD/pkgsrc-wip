@@ -2,7 +2,7 @@
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
-GIT_REPO=		git://git.savannah.nongnu.org/simulavr.git
+GIT_REPO=		git://git.git.savannah.nongnu.org/simulavr.git
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.nongnu.org/simulavr/

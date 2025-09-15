@@ -3,7 +3,7 @@
 DISTNAME=	emacs-31.0.50
 PKGNAME=	${DISTNAME:S/emacs/emacs31/}
 CATEGORIES=	editors
-GIT_REPO=	git://git.savannah.gnu.org/emacs.git
+GIT_REPO=	git://git.git.savannah.gnu.org/emacs.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/

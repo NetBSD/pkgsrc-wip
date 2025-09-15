@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.complang.tuwien.ac.at/forth/gforth/
 COMMENT=	Fast interpreter for the Forth language
 
 GIT_REPOSITORIES=	gforth
-GIT_REPO.gforth=	git://git.savannah.gnu.org/gforth.git
+GIT_REPO.gforth=	git://git.git.savannah.gnu.org/gforth.git
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

@@ -7,12 +7,12 @@ JITTER_HASH=	a1fb50a93964676501c3530e4b73a22906d53a96
 PKGNAME=	poke-0.0.20210103
 DISTNAME=	poke-${POKE_HASH}
 CATEGORIES=	textproc devel
-MASTER_SITES=	https://git.savannah.gnu.org/cgit/poke.git/snapshot/
+MASTER_SITES=	https://git.git.savannah.gnu.org/cgit/poke.git/snapshot/
 DISTFILES=	poke-${POKE_HASH}.tar.gz
 DISTFILES+=	gnulib-${GNULIB_HASH}.tar.gz
 DISTFILES+=	jitter-${JITTER_HASH}.tar.gz
 SITES.gnulib-${GNULIB_HASH}.tar.gz= \
-		https://git.savannah.gnu.org/cgit/gnulib.git/snapshot/
+		https://git.git.savannah.gnu.org/cgit/gnulib.git/snapshot/
 SITES.jitter-${JITTER_HASH}.tar.gz= \
 		http://git.ageinghacker.net/jitter/snapshot/
 

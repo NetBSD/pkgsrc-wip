@@ -34,7 +34,7 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	potrace>=1.8:../../graphics/potrace
 
 GIT_REPOSITORIES=	lilypond
-GIT_REPO.lilypond=	git://git.savannah.gnu.org/lilypond.git
+GIT_REPO.lilypond=	git://git.git.savannah.gnu.org/lilypond.git
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES

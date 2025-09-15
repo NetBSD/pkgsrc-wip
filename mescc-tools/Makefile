@@ -3,7 +3,7 @@
 DISTNAME=	mescc-tools-Release_0.6.1
 PKGNAME=	${DISTNAME:S/Release_//}
 CATEGORIES=	devel
-MASTER_SITES=	http://git.savannah.nongnu.org/cgit/mescc-tools.git/snapshot/
+MASTER_SITES=	http://git.git.savannah.nongnu.org/cgit/mescc-tools.git/snapshot/
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/oriansj/mescc-tools/
