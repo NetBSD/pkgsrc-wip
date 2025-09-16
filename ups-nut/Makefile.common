@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.12 2022/04/26 23:28:25 gdt Exp $
+# $NetBSD: Makefile.common,v 1.21 2025/08/10 21:51:59 gdt Exp $
 # used by wip/ups-nut/Makefile
 # used by wip/ups-nut-cgi/Makefile
 # used by wip/ups-nut-snmp/Makefile
 # used by wip/ups-nut-usb/Makefile
 # used by wip/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.8.4
+DISTNAME=		nut-2.8.4.77
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.NetBSD.org/~gdt/
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--with-statepath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-htmlpath=${PREFIX:Q}/share/nut/html
 CONFIGURE_ARGS+=	--with-user=${NUT_USER}
 CONFIGURE_ARGS+=	--with-group=${NUT_GROUP}
+
+CONFIGURE_ARGS+=	--disable-docs-changelog
 
 CHECK_PORTABILITY_SKIP=	packaging/*
 

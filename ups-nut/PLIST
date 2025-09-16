@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.37 2025/09/16 12:23:20 gdt Exp $
 bin/nut-scanner
 bin/nutconf
 bin/upsc
@@ -298,6 +298,5 @@ share/examples/nut/upsmon.conf.sample
 share/examples/nut/upssched.conf.sample
 share/nut/cmdvartab
 share/nut/driver.list
-@pkgdir share/doc/nut/html-man
 @pkgdir share/doc/nut/drivers
 @pkgdir etc/nut
