@@ -34,3 +34,9 @@ panics with:
 ```
 
 This is probably the same of <https://github.com/lima-vm/lima/issues/84>.
+
+
+Should we split this package as suggested by upstream to separate and have
+lima-additional-guestagest?
+See "Hint for package maintainers" in
+<https://github.com/lima-vm/lima/releases/tag/v1.1.0>.
