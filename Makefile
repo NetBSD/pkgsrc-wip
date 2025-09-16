@@ -5362,6 +5362,7 @@ SUBDIR+=	shadow
 SUBDIR+=	shairport-sync
 SUBDIR+=	shaper
 SUBDIR+=	sharif-univ-ttf
+SUBDIR+=	sharpF
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
 SUBDIR+=	shellharden

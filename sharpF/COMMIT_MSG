@@ -1,0 +1,22 @@
+lang/sharpF: import sharpF-0.302 as lang/sharpF
+
+#F - A Minimalistic Scheme System
+                         
+#F (Sharp-F or False) is a portable compiler/runtime for a subset
+of the Scheme programming language. Its main purpose is to facilitate
+creation of specialized code fragments which use Scheme-like
+computational model (garbage-collected memory, proper tail recursion,
+call/cc, closures, multiple return values) and can be easily
+integrated with regular C code in a direct way (no FFI or "scripting
+language bindings").
+
+#F compiler (SFC) produces reasonably fast and very readable C code
+which can be tailored to fit into a regular C project with minimal
+effort. The main distinguishing feature of the #F system is its
+scalable runtime - the compiler itself has no embedded knowledge
+of any standard functions or data types, with a single exception
+- `#f` (hence the name).  The `#f` value (represented as immediate
+0) is hard-wired since SFC needs to compile traditional conditional
+forms; everything else should be explicitly defined before use. If
+one's code does not use lists or strings, they do not need to be
+implemented!
