@@ -8,6 +8,9 @@ ${PYSITELIB}/netbsd_hghooks/__init__.pyo
 ${PYSITELIB}/netbsd_hghooks/_version.py
 ${PYSITELIB}/netbsd_hghooks/_version.pyc
 ${PYSITELIB}/netbsd_hghooks/_version.pyo
+${PYSITELIB}/netbsd_hghooks/git_amend_topic.py
+${PYSITELIB}/netbsd_hghooks/git_amend_topic.pyc
+${PYSITELIB}/netbsd_hghooks/git_amend_topic.pyo
 ${PYSITELIB}/netbsd_hghooks/gitmirror.py
 ${PYSITELIB}/netbsd_hghooks/gitmirror.pyc
 ${PYSITELIB}/netbsd_hghooks/gitmirror.pyo
