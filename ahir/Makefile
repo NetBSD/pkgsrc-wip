@@ -7,7 +7,7 @@ GITHUB_PROJECT=	ahir
 GITHUB_TAG=	2097969
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-GITHUB_SUBMODULES+=	mayureshw vctools 626dd80 ../vctools
+GITHUB_SUBMODULES+=	mayureshw vctools 4d6693b ../vctools
 GITHUB_SUBMODULES+=	mayureshw petrisimu 1baebbe ../petrisimu
 GITHUB_SUBMODULES+=	mayureshw ceptool fa2b2fb ../ceptool
 GITHUB_SUBMODULES+=	mayureshw xsbcppif b46ea46 ../xsbcppif

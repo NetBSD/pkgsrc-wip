@@ -43,3 +43,7 @@ share/ahir/vhdl/aHiR_ieee_proposed.vhdl
 share/ahir/vhdl/ahir.vhdl
 share/ahir/vhdl/ahirForImage.vhdl
 share/ahir/vhdl/ahirXilinx.vhdl
+xsb-5.0.0/lib/dep2cep.xwam
+xsb-5.0.0/lib/exprf.xwam
+xsb-5.0.0/lib/unparsecpp.xwam
+xsb-5.0.0/lib/utils.xwam
