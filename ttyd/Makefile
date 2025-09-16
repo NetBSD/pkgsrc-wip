@@ -10,9 +10,8 @@ HOMEPAGE=	https://github.com/tsl0922/ttyd/
 COMMENT=	Simple command-line tool for sharing terminal over the web
 LICENSE=	mit
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../www/libwebsockets/buildlink3.mk"
-
-.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
