@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	XSB-5.0
+PKGNAME=	xsb-5.0
 CATEGORIES=	lang
 MASTER_SITES=	https://sourceforge.net/projects/xsb/files/xsb/5.0%20%28Green%20Tea%29/
 
@@ -24,6 +25,7 @@ XSB_VERSION_STR=	xsb-5.0.0
 CONFIGURE_ARGS.NetBSD+=	--with-cflags=-D_NETBSD_SOURCE
 CONFIGURE_ARGS+=	--with-site-prefix=${PREFIX}/${XSB_VERSION_STR}
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/${XSB_VERSION_STR}
+CONFIGURE_ARGS+=	--with-dynamic-libraries=${PREFIX}/lib/xsb
 
 REPLACE_BASH+=	${WRKDIR}/XSB/packages/xasp/makelinks.sh
 XSB_PREFIXDIR=	${DESTDIR}${PREFIX}/${XSB_VERSION_STR}
