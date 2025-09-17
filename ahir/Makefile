@@ -7,7 +7,7 @@ GITHUB_PROJECT=	ahir
 GITHUB_TAG=	2097969
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-GITHUB_SUBMODULES+=	mayureshw vctools 4d6693b ../vctools
+GITHUB_SUBMODULES+=	mayureshw vctools d1e8358 ../vctools
 GITHUB_SUBMODULES+=	mayureshw petrisimu 1baebbe ../petrisimu
 GITHUB_SUBMODULES+=	mayureshw ceptool fa2b2fb ../ceptool
 GITHUB_SUBMODULES+=	mayureshw xsbcppif b46ea46 ../xsbcppif
@@ -22,6 +22,8 @@ BUILD_DIRS+=	${AHIRDIR}/v2
 BUILD_DIRS+=	${WRKDIR}/vctools
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O0/}
 
 # Buildlink sets XSBDIR, XSBLIBDIR
 BUILDLINK_PASSTHRU_RPATHDIRS+=		${XSBLIBDIR}

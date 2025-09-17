@@ -43,7 +43,14 @@ share/ahir/vhdl/aHiR_ieee_proposed.vhdl
 share/ahir/vhdl/ahir.vhdl
 share/ahir/vhdl/ahirForImage.vhdl
 share/ahir/vhdl/ahirXilinx.vhdl
+xsb-5.0.0/lib/delaymodel.xwam
 xsb-5.0.0/lib/dep2cep.xwam
+xsb-5.0.0/lib/depgen.xwam
 xsb-5.0.0/lib/exprf.xwam
+xsb-5.0.0/lib/fileio.xwam
+xsb-5.0.0/lib/opf.xwam
+xsb-5.0.0/lib/pipeusage.xwam
+xsb-5.0.0/lib/props2cep.xwam
+xsb-5.0.0/lib/storeusage.xwam
 xsb-5.0.0/lib/unparsecpp.xwam
 xsb-5.0.0/lib/utils.xwam
