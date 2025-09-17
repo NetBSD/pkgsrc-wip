@@ -10,6 +10,9 @@ ${PYSITELIB}/netsnmpy/__init__.py
 ${PYSITELIB}/netsnmpy/__init__.pyc
 ${PYSITELIB}/netsnmpy/__init__.pyo
 ${PYSITELIB}/netsnmpy/_netsnmp.abi3.so
+${PYSITELIB}/netsnmpy/annotations.py
+${PYSITELIB}/netsnmpy/annotations.pyc
+${PYSITELIB}/netsnmpy/annotations.pyo
 ${PYSITELIB}/netsnmpy/constants.py
 ${PYSITELIB}/netsnmpy/constants.pyc
 ${PYSITELIB}/netsnmpy/constants.pyo
@@ -40,9 +43,6 @@ ${PYSITELIB}/netsnmpy/session.pyo
 ${PYSITELIB}/netsnmpy/trapsession.py
 ${PYSITELIB}/netsnmpy/trapsession.pyc
 ${PYSITELIB}/netsnmpy/trapsession.pyo
-${PYSITELIB}/netsnmpy/types.py
-${PYSITELIB}/netsnmpy/types.pyc
-${PYSITELIB}/netsnmpy/types.pyo
 ${PYSITELIB}/netsnmpy/version.py
 ${PYSITELIB}/netsnmpy/version.pyc
 ${PYSITELIB}/netsnmpy/version.pyo

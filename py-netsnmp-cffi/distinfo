@@ -1,7 +1,5 @@
 $NetBSD$
 
-BLAKE2s (netsnmp-cffi-0.1.1.tar.gz) = 10d75260cfca2be08f73f7ff0e8726a3eec2b351a6a6c8f136d0a4ddea087d37
-SHA512 (netsnmp-cffi-0.1.1.tar.gz) = 1f0be1e2af13364f3b93c7dc26e2f78d57e9f9120185fe4b85251e4b0a7417117a83dd3626abd2874a6b1ce99cbd1d7e42198b1159bd7b715b51084a9e121311
-Size (netsnmp-cffi-0.1.1.tar.gz) = 38212 bytes
-SHA1 (patch-src_netsnmp_trapsession.py) = 7293de0f01b9c59b82d92c8d5ec11b060ecd6900
-SHA1 (patch-src_netsnmpy_netsnmp__ffi.py) = e0b0c9348325f7aad2f8086a7048f74b2408575e
+BLAKE2s (netsnmp-cffi-0.1.3.tar.gz) = 9b123cf8f560c36ee8a7a7bf7fd731b231f8294f7eecd19aa591b50d7125b35c
+SHA512 (netsnmp-cffi-0.1.3.tar.gz) = 487a285067f440af4057a56f265a7c32a38feaec972b2c83388743743f2f8aab5b40f54661813c9a9126e5e5e090537c2ac5667c5ed609ac8b82ea61d37e2e94
+Size (netsnmp-cffi-0.1.3.tar.gz) = 39269 bytes
