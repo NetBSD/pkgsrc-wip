@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.67 2025/08/03 10:06:37 wiz Exp $
 
-DISTNAME=	docutils-0.22
+DISTNAME=	docutils-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docutils/}
@@ -29,8 +29,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
-# due to patches
-	find ${DESTDIR}${PREFIX}/${PYSITELIB} -name *.orig -delete
+	# bug in 0.22.1 distfile
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/docutils/.__init__.py.swp
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test/alltests.py

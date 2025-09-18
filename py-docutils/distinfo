@@ -1,21 +1,5 @@
 $NetBSD: distinfo,v 1.33 2025/08/03 10:06:37 wiz Exp $
 
-BLAKE2s (docutils-0.22.tar.gz) = 20d7b105f2af0a2417ab1e3800120565ef7c3fc77da8dd4ebef852624b7b3eaa
-SHA512 (docutils-0.22.tar.gz) = 09082eb3bdd5f9b3e977d356740efee47725a50fbaca7bf35c7fddff06003c2b2177a38d160a9956f9e96261f881c0d870c0aa9fef84f90d0cac079ccc73669d
-Size (docutils-0.22.tar.gz) = 2277984 bytes
-SHA1 (patch-docutils_____init____.py) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-docutils_frontend.py) = e36ef1bbc98c2b01ae45341636a93a93e712b757
-SHA1 (patch-docutils_nodes.py) = 77d1ef24f35ac59abef0a12ab4d6e2097d2bd248
-SHA1 (patch-docutils_parsers_rst_directives_body.py) = 6b596cfe394299cce7609b2c1c5b8833b97dd18f
-SHA1 (patch-docutils_parsers_rst_directives_misc.py) = 86ba1bdcb00309e7bcde5980fee15ad4036e0c99
-SHA1 (patch-docutils_parsers_rst_directives_parts.py) = 709edad294ecfefd1013eaee886c3382a46699ea
-SHA1 (patch-docutils_parsers_rst_states.py) = 0e3c1925ffc2f38c3dc8d63c1215bdf51d8edc13
-SHA1 (patch-docutils_statemachine.py) = fb3e42652d16de8d9c26e8b77e83aef0ff6d6bc4
-SHA1 (patch-docutils_transforms_references.py) = e2cf86dfb87930def33b8371a7851efeb96a12cb
-SHA1 (patch-docutils_writers___html__base.py) = f432c8222ea1ef1f7181439e39caf130f014fa03
-SHA1 (patch-docutils_writers_html4css1_____init____.py) = b1a13109b56f1ba6922b1a67a2a52b3b34ace689
-SHA1 (patch-docutils_writers_html5__polyglot_____init____.py) = 5324c969d44395627942e9036770e7174313e30a
-SHA1 (patch-docutils_writers_latex2e_____init____.py) = fe531918331bbacbe37d29503c43234fcfa2c30f
-SHA1 (patch-docutils_writers_latex2e_docutils.sty) = c1d1204f9e141dfb48f93dc8efa7649c80f4c514
-SHA1 (patch-docutils_writers_odf__odt_____init____.py) = 6244cfd4b2fa431afeb896116dd0a335d262df84
-SHA1 (patch-docutils_writers_xetex_____init____.py) = 4164cd7c8d9d8f1c501ba2d560a58ace6923abc1
+BLAKE2s (docutils-0.22.1.tar.gz) = 7217a7166d29c48320a798f7484228ae0e9a9d7e2b2f17a7d384e787e3ff3a3b
+SHA512 (docutils-0.22.1.tar.gz) = 9cf82e12e5b63bed33dd334a9282a565d6a65edd7b8ad0b62ffe2a05ce039f7947a935de8743acc4846a6334fd894d90533dd0bf931166dcdbab56bc93c92619
+Size (docutils-0.22.1.tar.gz) = 2291655 bytes
