@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=		sra-tools-3.2.1
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
 GITHUB_SUBMODULES+=	ncbi ncbi-vdb ${PKGVERSION_NOREV} ncbi-vdb
