@@ -43,6 +43,7 @@ ${PKGNAME}.0/cmplib/tprog.xwam
 ${PKGNAME}.0/cmplib/useinfer.xwam
 ${PKGNAME}.0/cmplib/varproc.xwam
 ${PKGNAME}.0/cmplib/writeasm.xwam
+${PKGNAME}.0/config/local
 ${PKGNAME}.0/config/${XSB_CONFIG_NAME}/banner.msg
 ${PKGNAME}.0/config/${XSB_CONFIG_NAME}/bin/gpp
 ${PKGNAME}.0/config/${XSB_CONFIG_NAME}/bin/libxsb.so

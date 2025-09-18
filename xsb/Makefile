@@ -51,7 +51,8 @@ PLIST_SUBST+=	XSB_CONFIG_NAME=${XSB_CONFIG_NAME}
 
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
-	${RM} -rf ${XSB_PKGDIR} ${REMOVE_P}
+	${RM} -rf ${XSB_PKGDIR} ${REMOVE_P} && \
+	cd ${XSB_PREFIXDIR}/config && ${LN} -sf ${XSB_CONFIG_NAME} local
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
