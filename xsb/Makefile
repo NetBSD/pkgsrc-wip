@@ -31,6 +31,13 @@ REPLACE_BASH+=	${WRKDIR}/XSB/packages/xasp/makelinks.sh
 XSB_PREFIXDIR=	${DESTDIR}${PREFIX}/${XSB_VERSION_STR}
 XSB_PKGDIR=	${XSB_PREFIXDIR}/packages
 
+# XSB uses config.guess at runtime, making it harder to make predictable paths
+# We override the script to use MACHINE_GNU_PLATFORM
+pre-configure:
+	${ECHO} '#!/bin/sh' > ${WRKSRC}/config.guess
+	${ECHO} 'echo ${MACHINE_GNU_PLATFORM}' >> ${WRKSRC}/config.guess
+	${CHMOD} +x ${WRKSRC}/config.guess
+
 do-build:
 	cd ${WRKSRC} && ./makexsb fast packages
 
@@ -48,12 +55,9 @@ REMOVE_P+=		${XSB_PREFIXDIR}/config/${XSB_CONFIG_NAME}/lib/xsb_configuration.P
 REMOVE_P+=		${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
 REMOVE_P+=		${XSB_PREFIXDIR}/syslib/debugger_data.P
 
-# XSB uses config.guess at runtime, making it harder to make predictable paths
-# Hence we soft link the configuration with name 'local'
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
-	${RM} -rf ${XSB_PKGDIR} ${REMOVE_P} && \
-	cd ${XSB_PREFIXDIR}/config && ${LN} -sf ${XSB_CONFIG_NAME} local
+	${RM} -rf ${XSB_PKGDIR} ${REMOVE_P}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
