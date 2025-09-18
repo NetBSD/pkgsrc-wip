@@ -1,10 +1,10 @@
 #	$NetBSD$
 
-DISTNAME=	tnfrepo-0.0a20250823.dev21
+DISTNAME=	tnfrepo-0.0a20250823.dev24
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
-HG_TAG=		cc7b76ed90b131e23055ab33b211fb3327d7bbfa
+HG_TAG=		158c36d0199f19a80626b7600c2e3be90fd98e7a
 
 MAINTAINER=	riastradh@NetBSD.org
 HOMEPAGE=	https://hg.mumble.net/campbell/tnfrepo
