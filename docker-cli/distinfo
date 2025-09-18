@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (docker-cli-24.0.6.tar.gz) = 347bf06e59bdab352a4b3a4b1c61d0bc1a103f8e275d8e8dfc6cb80d38248aef
-SHA512 (docker-cli-24.0.6.tar.gz) = 55c56ae08eb314cce5f4c93544c6748586eadb3abe502d39d4d297e14d274af37346b38695a20a91dcfe51d3d35a77ddd7aa69d170b525e5e6ba345161869cd8
-Size (docker-cli-24.0.6.tar.gz) = 6244014 bytes
-SHA1 (patch-cli-plugins_manager_manager__unix.go) = 2d17cd8c7dc958e14d23cef6e619c4d798cad5a7
+BLAKE2s (docker-cli-28.4.0.tar.gz) = 63660cba186a396a778f28a194b3a3ee029ad76ac53f4407f210531f591ecc49
+SHA512 (docker-cli-28.4.0.tar.gz) = ab35867bdcaa07909cfd24e9bc4f5cde10b6930fa42e87d61d4544bb20b365fff146713239483169ef989cacfae7d7493d7f42d269b0f37f86c0c14a9373b445
+Size (docker-cli-28.4.0.tar.gz) = 7612765 bytes
+SHA1 (patch-cli-plugins_manager_manager__unix.go) = 8b76699ad3a0d107e2a30f6da8e73af51b671593
