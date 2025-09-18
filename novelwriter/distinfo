@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (novelWriter-2.7.5.tar.gz) = e904da9087de6f5f3ebff5d482f06af7f5ee1ebdd63a9a6737032e4536d8d192
+SHA512 (novelWriter-2.7.5.tar.gz) = 72b2bf050fb242de72b3bcc064ec2cda3a73f6fba406f7fe345928dcad16d389115b7644e748baa6b346b8ad581aafe43fd1bc58917e23dfe71ddccb2953872b
+Size (novelWriter-2.7.5.tar.gz) = 5040534 bytes
