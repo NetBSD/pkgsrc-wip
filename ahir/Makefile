@@ -35,7 +35,7 @@ MAKE_ENV+=	PETRISIMUDIR=${WRKDIR}/petrisimu
 MAKE_ENV+=	CEPTOOLDIR=${WRKDIR}/ceptool
 MAKE_ENV+=	XSBCPPIFDIR=${WRKDIR}/xsbcppif
 
-PKG_JVMS_ACCEPTED=	openjdk21
+PKG_JVMS_ACCEPTED=	openjdk21 openjdk-bin
 
 .include "../../wip/xsb/buildlink3.mk"
 .include "../../wip/antlr/buildlink3.mk"
