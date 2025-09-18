@@ -23,20 +23,15 @@ USE_GNU_CONFIGURE_HOST=	no
 XSB_VERSION_STR=	xsb-5.0.0
 # The source uses P_tmpdir, u_long which are under _NETBSD_SOURCE flag in respective headers
 CONFIGURE_ARGS.NetBSD+=	--with-cflags=-D_NETBSD_SOURCE
-CONFIGURE_ARGS+=	--with-site-prefix=${PREFIX}/${XSB_VERSION_STR}
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/${XSB_VERSION_STR}
-CONFIGURE_ARGS+=	--with-dynamic-libraries=${PREFIX}/lib/xsb
 
 REPLACE_BASH+=	${WRKDIR}/XSB/packages/xasp/makelinks.sh
 XSB_PREFIXDIR=	${DESTDIR}${PREFIX}/${XSB_VERSION_STR}
 XSB_PKGDIR=	${XSB_PREFIXDIR}/packages
 
 # XSB uses config.guess at runtime, making it harder to make predictable paths
-# We override the script to use MACHINE_GNU_PLATFORM
-pre-configure:
-	${ECHO} '#!/bin/sh' > ${WRKSRC}/config.guess
-	${ECHO} 'echo ${MACHINE_GNU_PLATFORM}' >> ${WRKSRC}/config.guess
-	${CHMOD} +x ${WRKSRC}/config.guess
+# Hence we derive XSB_CONFIG_NAME
+XSB_CONFIG_NAME_CMD=	${WRKSRC}/config.sub `${WRKSRC}/config.guess`
+XSB_CONFIG_NAME=	${:!${XSB_CONFIG_NAME_CMD}!}
 
 do-build:
 	cd ${WRKSRC} && ./makexsb fast packages
@@ -49,11 +44,10 @@ do-build:
 # again in the installation area. To avoid this we delete the .P files from the
 # package. They are not needed as their compiled counterparts .xwam files are
 # already packaged.
-
-XSB_CONFIG_NAME=	`${WRKSRC}/config.guess`
 REMOVE_P+=		${XSB_PREFIXDIR}/config/${XSB_CONFIG_NAME}/lib/xsb_configuration.P
 REMOVE_P+=		${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
 REMOVE_P+=		${XSB_PREFIXDIR}/syslib/debugger_data.P
+PLIST_SUBST+=	XSB_CONFIG_NAME=${XSB_CONFIG_NAME}
 
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
