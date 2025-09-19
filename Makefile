@@ -2176,6 +2176,7 @@ SUBDIR+=	libs-gui
 SUBDIR+=	libscscp
 SUBDIR+=	libsearpc
 SUBDIR+=	libseccomp
+SUBDIR+=	libsfdo
 SUBDIR+=	libslab
 SUBDIR+=	libsml
 SUBDIR+=	libsocialweb
