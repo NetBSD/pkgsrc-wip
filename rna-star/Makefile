@@ -5,8 +5,8 @@
 #              Sun Jul 23 10:47:07 CDT 2023               #
 ###########################################################
 
-DISTNAME=	STAR-2.7.10b
-PKGNAME=	rna-star-2.7.10b
+DISTNAME=	STAR-${PKGVERSION_NOREV}
+PKGNAME=	rna-star-2.7.11b
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexdobin/}
 GITHUB_PROJECT=	STAR
@@ -31,6 +31,8 @@ SUBST_FILES.htslib+=	signalFromBAM.h
 
 # May work on other 64-bit processors, but untested
 ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-aarch64 *-*-powerpc64
+
+TOOL_DEPENDS=	vim-share>0:../../editors/vim-share
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
