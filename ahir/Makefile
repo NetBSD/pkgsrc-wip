@@ -7,10 +7,10 @@ GITHUB_PROJECT=	ahir
 GITHUB_TAG=	d0c06f7
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-GITHUB_SUBMODULES+=	mayureshw vctools 7f76d1f ../vctools
+GITHUB_SUBMODULES+=	mayureshw vctools 5ca442d ../vctools
 GITHUB_SUBMODULES+=	mayureshw petrisimu 1baebbe ../petrisimu
 GITHUB_SUBMODULES+=	mayureshw ceptool 61f00c7 ../ceptool
-GITHUB_SUBMODULES+=	mayureshw xsbcppif b46ea46 ../xsbcppif
+GITHUB_SUBMODULES+=	mayureshw xsbcppif 3a96d2b ../xsbcppif
 
 MAINTAINER=	mayuresh@acm.org
 HOMEPAGE=	https://github.com/mayureshw/ahir/
