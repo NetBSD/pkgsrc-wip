@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	ahir-0.0.0.1608
+DISTNAME=	ahir-0.0.0.1609
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mayureshw/}
 GITHUB_PROJECT=	ahir
-GITHUB_TAG=	2097969
+GITHUB_TAG=	d0c06f7
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 GITHUB_SUBMODULES+=	mayureshw vctools 7f76d1f ../vctools
@@ -17,14 +17,11 @@ HOMEPAGE=	https://github.com/mayureshw/ahir/
 COMMENT=	High-Level Synthesis toolset from C to VHDL
 #LICENSE=	Requested adding University of Illinois/NCSA Open Source License on pkgsrc mailing list
 
-AHIRDIR=	${WRKDIR}/ahir-20979697a8b64b6e880895cdf30c7ceefd7d3d40
+AHIRDIR=	${WRKDIR}/ahir-d0c06f712ecb6f03c007c17c714aac9d8ee8c12e
 BUILD_DIRS+=	${AHIRDIR}/v2
 BUILD_DIRS+=	${WRKDIR}/vctools
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-
-# Some tools suh as Aa2VC SEGV if -O is enabled
-CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O0/}
 
 # Buildlink sets XSBDIR, XSBLIBDIR
 BUILDLINK_PASSTHRU_RPATHDIRS+=		${XSBLIBDIR}
