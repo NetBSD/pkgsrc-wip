@@ -1,5 +1,11 @@
-devel/cargo-about: update to 0.8.1
+devel/cargo-about: update to 0.8.2
 
+v0.8.2
+Fixed
+
+ - PR#290 returns the behavior of allowing deprecated license identifiers in the accepted field.
+
+v0.8.1
 Fixed
 
  - PR#289 fixed deserialization of .cargo_vcs_info.json as the dirty field was only added in more recent versions.
