@@ -26,7 +26,6 @@ SUBST_VARS.path+=	PREFIX X11BASE
 
 # new packages
 .include "../../wip/glslang/buildlink3.mk"
-.include "../../wip/input-headers/buildlink3.mk"
 .include "../../wip/libopeninput/buildlink3.mk"
 .include "../../wip/libudev-bsd/buildlink3.mk"
 .include "../../wip/libliftoff/buildlink3.mk"
@@ -37,6 +36,7 @@ SUBST_VARS.path+=	PREFIX X11BASE
 .include "../../wip/wayland/buildlink3.mk"
 .include "../../wip/modular-xorg-xwayland/buildlink3.mk"
 
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
