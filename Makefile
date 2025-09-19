@@ -434,6 +434,7 @@ SUBDIR+=	carburetta
 SUBDIR+=	cardpeek
 SUBDIR+=	cargo-about
 SUBDIR+=	cargo-deb
+SUBDIR+=	cargo-nextest
 SUBDIR+=	carla
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
