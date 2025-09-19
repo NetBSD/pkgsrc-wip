@@ -43,18 +43,18 @@ ${PKGNAME}.0/cmplib/tprog.xwam
 ${PKGNAME}.0/cmplib/useinfer.xwam
 ${PKGNAME}.0/cmplib/varproc.xwam
 ${PKGNAME}.0/cmplib/writeasm.xwam
-${PKGNAME}.0/config/local
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/banner.msg
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/bin/gpp
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/bin/libxsb.so
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/bin/xsb
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/lib/xsb_configuration.xwam
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/lib/xsb_re_match.so
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/lib/xsb_re_match.xwam
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/lib/xsb_wildmatch.so
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/lib/xsb_wildmatch.xwam
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/xsb_config.h
-${PKGNAME}.0/config/${XSB_CONFIG_NAME}/xsb_debug.h
+${PKGNAME}.0/config/local/banner.msg
+${PKGNAME}.0/config/local/bin/gpp
+${PKGNAME}.0/config/local/bin/libxsb.so
+${PKGNAME}.0/config/local/bin/xsb
+${PKGNAME}.0/config/local/lib/xsb_configuration.xwam
+${PKGNAME}.0/config/local/lib/xsb_re_match.so
+${PKGNAME}.0/config/local/lib/xsb_re_match.xwam
+${PKGNAME}.0/config/local/lib/xsb_wildmatch.so
+${PKGNAME}.0/config/local/lib/xsb_wildmatch.xwam
+${PKGNAME}.0/config/local/xsb_config.h
+${PKGNAME}.0/config/local/xsb_debug.h
+${PKGNAME}.0/config/${XSB_CONFIG_NAME}
 ${PKGNAME}.0/emu/auxlry.h
 ${PKGNAME}.0/emu/basicdefs.h
 ${PKGNAME}.0/emu/basictypes.h
@@ -668,4 +668,4 @@ ${PKGNAME}.0/syslib/xsb_hook.xwam
 ${PKGNAME}.0/syslib/xsb_read.xwam
 ${PKGNAME}.0/syslib/xsb_writ.xwam
 ${PKGNAME}.0/syslib/xsbbrat.xwam
-@pkgdir ${PKGNAME}.0/config/${XSB_CONFIG_NAME}/saved.o
+@pkgdir ${PKGNAME}.0/config/local/saved.o

@@ -49,10 +49,11 @@ REMOVE_P+=		${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
 REMOVE_P+=		${XSB_PREFIXDIR}/syslib/debugger_data.P
 PLIST_SUBST+=	XSB_CONFIG_NAME=${XSB_CONFIG_NAME}
 
+# Buildlinks do not get created for symbolic links and need to be static names
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
 	${RM} -rf ${XSB_PKGDIR} ${REMOVE_P} && \
-	cd ${XSB_PREFIXDIR}/config && ${LN} -sf ${XSB_CONFIG_NAME} local
+	cd ${XSB_PREFIXDIR}/config && ${MV} ${XSB_CONFIG_NAME} local && ${LN} -sf local ${XSB_CONFIG_NAME}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

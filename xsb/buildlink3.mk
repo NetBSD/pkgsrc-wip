@@ -8,7 +8,7 @@ XSB_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.xsb+=	xsb>=5.0
 BUILDLINK_PKGSRCDIR.xsb?=	../../wip/xsb
 
-XSBDIR=			${BUILDLINK_PREFIX.xsb}/xsb-5.0.0
+XSBDIR=			xsb-5.0.0
 XSBARCHDIR=		${XSBDIR}/config/local
 XSBLIBDIR=		${XSBARCHDIR}/bin
 
