@@ -8,7 +8,7 @@ GITHUB_TAG=	cf9699e76e41bf1b824c3820d06d36a2b0fbb8c1
 
 MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/build-on-openbsd/
-COMMENT=	Input headers from libopeninpu
+COMMENT=	Input headers from libopeninput
 LICENSE=	mit
 
 USE_TOOLS+=	pax
