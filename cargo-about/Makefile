@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.10 2025/09/17 21:40:31 wiz Exp $
 
-DISTNAME=	cargo-about-0.8.1
+DISTNAME=	cargo-about-0.8.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EmbarkStudios/}
 
