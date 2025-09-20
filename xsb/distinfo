@@ -5,5 +5,5 @@ SHA512 (XSB-5.0.tar.gz) = 69db86a7b8e3525ae290d444ae66cc28418aa175b2a6bbfaad488a
 Size (XSB-5.0.tar.gz) = 16126384 bytes
 SHA1 (patch-.._emu_system__xsb.c) = 98324e692c76e8638603d809ba6765ce06950bc8
 SHA1 (patch-.._emu_thread__xsb.h) = dc54275912a6c5b0e25216a1cef5ab37f5524b2b
-SHA1 (patch-configure) = 24309aeee3cc35a904f38e983a65b61321ece983
+SHA1 (patch-configure) = b74095c2e16c6eac285f3269295fcf82e05a6b14
 SHA1 (patch-version.sh) = 2013e1c28dc61f8bee84460d5c24a1a5ed2521b6

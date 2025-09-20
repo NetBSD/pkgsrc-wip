@@ -1,14 +1,33 @@
 $NetBSD$
 
-1. Path to configvars.in should be from $topdir in development area, not from $prefix which is in install area
+1. configure script should never create anything in $prefix
 
-2. LDFLAGS require -lpthread on NetBSD
+2. Path to configvars.in should be from $topdir in development area, not from $prefix which is in install area
+
+3. LDFLAGS require -lpthread on NetBSD
 
 https://sourceforge.net/p/xsb/patches/9/
 
 --- configure.orig	2022-05-12 20:54:07.000000000 +0000
 +++ configure
-@@ -5204,7 +5204,7 @@ fi
+@@ -3522,6 +3522,8 @@ $as_echo "OK" >&6; }) \
+     || ({ $as_echo "$as_me:${as_lineno-$LINENO}: result: FAILED" >&5
+ $as_echo "FAILED" >&6; }; echo "+++Can't create  $arch_config_objlibdir" >> .missingdirs.tmp)
+ 
++if [ 1 = 0 ]
++then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking $site_libdir" >&5
+ $as_echo_n "checking $site_libdir... " >&6; } && \
+      ((test -d "$site_libdir" || mkdir -p "$site_libdir") && { $as_echo "$as_me:${as_lineno-$LINENO}: result: OK" >&5
+@@ -3633,6 +3635,7 @@ $as_echo_n "checking $install_prolog_inc
+ $as_echo "OK" >&6; }) \
+     || ({ $as_echo "$as_me:${as_lineno-$LINENO}: result: FAILED" >&5
+ $as_echo "FAILED" >&6; }; echo "+++Can't create  $install_prolog_includes" >> .missingdirs.tmp)
++fi
+ 
+ test -f .missingdirs.tmp && \
+     (cat .missingdirs.tmp; \
+@@ -5204,7 +5207,7 @@ fi
  
  # xsbpy package
  if test -d "$topdir/packages/xsbpy"; then
@@ -17,7 +36,7 @@ https://sourceforge.net/p/xsb/patches/9/
  
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
-@@ -5912,7 +5914,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+@@ -5912,7 +5917,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
  for ac_config_target in $ac_config_targets
  do
    case $ac_config_target in
@@ -26,7 +45,7 @@ https://sourceforge.net/p/xsb/patches/9/
  
    *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
    esac
-@@ -7457,6 +7459,17 @@ case "$canonical" in
+@@ -7457,6 +7462,17 @@ case "$canonical" in
                  ;;
                  esac
          ;;
@@ -44,7 +63,7 @@ https://sourceforge.net/p/xsb/patches/9/
      *freebsd* ) $as_echo "#define FREEBSD 1" >>confdefs.h
  
                  $as_echo "#define FOREIGN_ELF 1" >>confdefs.h
-@@ -8326,7 +8339,7 @@ ac_config_headers="$ac_config_headers '"
+@@ -8326,7 +8342,7 @@ ac_config_headers="$ac_config_headers '"
  
  
  
@@ -53,7 +72,7 @@ https://sourceforge.net/p/xsb/patches/9/
  
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
-@@ -9018,7 +9033,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+@@ -9018,7 +9036,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
  for ac_config_target in $ac_config_targets
  do
    case $ac_config_target in
@@ -62,7 +81,7 @@ https://sourceforge.net/p/xsb/patches/9/
      "'"${arch_config_prefix}/xsb_config.h"'") CONFIG_HEADERS="$CONFIG_HEADERS '"${arch_config_prefix}/xsb_config.h"':${config_dot_h_templ}" ;;
      "windows/xsb_config.h") CONFIG_HEADERS="$CONFIG_HEADERS windows/xsb_config.h:windows/def_config.in" ;;
      "windows/xsb_debug.h") CONFIG_HEADERS="$CONFIG_HEADERS windows/xsb_debug.h:def_debug.in" ;;
-@@ -9042,7 +9057,7 @@ do
+@@ -9042,7 +9060,7 @@ do
      "windows64/banner.msg") CONFIG_FILES="$CONFIG_FILES windows64/banner.msg:windows64/banner.in" ;;
      "windows/MSVC_mkfile.mak") CONFIG_FILES="$CONFIG_FILES windows/MSVC_mkfile.mak:windows/MSVC_mkfile.in" ;;
      "windows64/MSVC_mkfile.mak") CONFIG_FILES="$CONFIG_FILES windows64/MSVC_mkfile.mak:windows64/MSVC_mkfile.in" ;;
