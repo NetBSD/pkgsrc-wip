@@ -23,6 +23,7 @@ USE_GNU_CONFIGURE_HOST=	no
 XSB_VERSION_STR=	xsb-5.0.0
 # The source uses P_tmpdir, u_long which are under _NETBSD_SOURCE flag in respective headers
 CONFIGURE_ARGS.NetBSD+=	--with-cflags=-D_NETBSD_SOURCE
+CONFIGURE_ARGS+=	--with-site-prefix=${PREFIX}/${XSB_VERSION_STR}
 
 REPLACE_BASH+=	${WRKDIR}/XSB/packages/xasp/makelinks.sh
 XSB_PREFIXDIR=	${DESTDIR}${PREFIX}/${XSB_VERSION_STR}
