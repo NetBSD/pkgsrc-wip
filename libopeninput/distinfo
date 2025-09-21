@@ -1,12 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libopeninput-1.26.2-cf9699e76e41bf1b824c3820d06d36a2b0fbb8c1.tar.gz) = 1f6036108dd3f9d1179b7db3332d31221c37be2d38dd311ca1ba0478c4f2f29d
-SHA512 (libopeninput-1.26.2-cf9699e76e41bf1b824c3820d06d36a2b0fbb8c1.tar.gz) = 197402a36b9536823fd8c47ce328187503cfc45a6a850b823aedb28e0fae57d1f85952c35c5c6de59c7084c28f2a6a601385b55c1192c52b859736b54a331ed3
-Size (libopeninput-1.26.2-cf9699e76e41bf1b824c3820d06d36a2b0fbb8c1.tar.gz) = 1057791 bytes
-SHA1 (patch-include_linux_input-event-codes.h) = 57a4efc3892638eeb7d15a7a03c686d4e602f938
-SHA1 (patch-include_linux_input.h) = 70b682671da5947e10411ebf5a0ffcd9b638e15a
-SHA1 (patch-meson.build) = d02d88b9e001070eaf561390ed717db36c37faf0
-SHA1 (patch-src_libinput-private.h) = 5cd7e90b189d8e774e4d468261a0d1fdd3c6a831
-SHA1 (patch-src_libinput-util.h) = 26270e454c77a7299dafc441a5ffefee7aa6e57c
-SHA1 (patch-src_util-strings.h) = 569b41c73aa0ed03167c863bbe6c24889476bc6a
-SHA1 (patch-src_wscons.c) = 450658edab97988699169573f5c74afa00894166
+BLAKE2s (libopeninput-1.26.2-5e93d5c82d455c3901c2cb9b40dbbe5358a88e30.tar.gz) = 633e65ec1d232fb9311a2c9651017811c2c394ee66f48ee191879236dfdcc44b
+SHA512 (libopeninput-1.26.2-5e93d5c82d455c3901c2cb9b40dbbe5358a88e30.tar.gz) = 66bc91cc789a7fcd0b7e5c1ef8d35853f5f4c80adae9ca1c3db8984ccaede01757c904ac1a878c34e2eb0cfeff92114040821be6eed6d8874f9ffa2845c697fd
+Size (libopeninput-1.26.2-5e93d5c82d455c3901c2cb9b40dbbe5358a88e30.tar.gz) = 1058625 bytes
