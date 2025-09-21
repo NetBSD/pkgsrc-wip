@@ -63,9 +63,8 @@ DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 
 # FORTRAN
 USE_LANGUAGES+=	fortran77
-GFORTRAN_VERSION=	10
-# \todo Revisit the version, so e.g. the version matching native gcc
-# will be used on NetBSD-current.
+# Assume that mk/compiler/gfortran.mk will choose an appropriate
+# gfortran version based on base gcc, OS, and CPU.
 .include "../../mk/compiler/gfortran.mk"
 
 RUST_RUNTIME=	yes		# record a dependency
