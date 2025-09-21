@@ -1,11 +1,16 @@
-www/chromium: update to 140.0.7339.127
+www/chromium: update to 140.0.7339.185
 
-* 140.0.7339.127
-This update includes 2 security fixes.
-Below, we highlight fixes that were contributed by external researchers.
-Please see the Chrome Security Page for more information.
-[$43000][440454442] Critical CVE-2025-10200: Use after free in
-Serviceworker. Reported by Looben Yang on 2025-08-22
-[$30000][439305148] High CVE-2025-10201: Inappropriate implementation
-in Mojo. Reported by Sahan Fernando & Anon on 2025-08-18
+* 140.0.7339.185
+This update includes 4 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[NA][445380761] High CVE-2025-10585: Type Confusion in V8.
+Reported by Google Threat Analysis Group on 2025-09-16
+[$15000][435875050] High CVE-2025-10500: Use after free in Dawn.
+Reported by Giunash (Gyujeong Jin) on 2025-08-03
+[$10000][440737137] High CVE-2025-10501: Use after free in WebRTC.
+Reported by sherkito on 2025-08-23
+[TBD][438038775] High CVE-2025-10502: Heap buffer overflow in ANGLE.
+Reported by Google Big Sleep on 2025-08-12
 
+Google is aware that an exploit for CVE-2025-10585 exists in the wild.
