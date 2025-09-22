@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/tex/lualatex/seatingchart/seatingchart-tu-chemnitz.sc
+share/texmf-dist/tex/lualatex/seatingchart/seatingchart.lua
+share/texmf-dist/tex/lualatex/seatingchart/seatingchart.sty
