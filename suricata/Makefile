@@ -21,6 +21,8 @@ USE_TOOLS+=		pkg-config
 
 USE_LANGUAGES=		c c++
 
+LIBS.NetBSD+= -lm
+
 .include "../../mk/bsd.prefs.mk"
 
 #.include "options.mk"

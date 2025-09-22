@@ -8,3 +8,4 @@ SHA1 (patch-src_threads.h) = bd3764e1ac575d2b2c7b6b88ea2dbd93c3c5a4cb
 SHA1 (patch-src_tm-threads.c) = cf2e747c3c26f72844184baf8dbdbf1aa9407665
 SHA1 (patch-src_util-affinity.h) = a5ede16436ae6b1d28615726bf8afa4a94159694
 SHA1 (patch-src_util-byte.h) = 2f4dd27b60eccc55a684d513765346bdbd120552
+SHA1 (patch-src_util-ioctl.c) = 00b8a07ebeea7e386fc5a24b79bbca0d3bf0494c

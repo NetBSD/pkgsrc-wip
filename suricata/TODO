@@ -5,10 +5,16 @@
 - pkgconfig overrides for rust/vendor/libz-sys not enabled yet
   - probably needs patches
 
-* configure
+* Configure
 - libunwind and dev header not found
 - check not found includes, features that exists on NetBSD
   and add support
-  
-* Compile
-- Lots of compile errors :/
+
+* Build
+- revise creation and use of cpu sets
+
+* Tests
+- run tests, evaluate and fix them
+- run executables, fix errors
+
+* Install
