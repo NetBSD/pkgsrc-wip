@@ -68,6 +68,9 @@ func mounts() ([]Mount, []string, error) {
 		if stat.Flag&unix.MNT_SOFTDEP != 0 {
 			opts += ",softdep"
 		}
+		if stat.Flag&unix.MNT_LOG != 0 {
+			opts += ",log"
+		}
 		if stat.Flag&unix.MNT_NOATIME != 0 {
 			opts += ",noatime"
 		}
