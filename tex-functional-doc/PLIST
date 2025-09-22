@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/functional/README.txt
+share/texmf-dist/doc/latex/functional/functional.pdf
+share/texmf-dist/doc/latex/functional/functional.tex
