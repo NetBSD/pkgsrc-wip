@@ -5698,6 +5698,7 @@ SUBDIR+=	tex-platexcheat-doc
 SUBDIR+=	tex-ptex-manual-doc
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
+SUBDIR+=	tex-tabularray-doc
 SUBDIR+=	tex-texlive-ja-doc
 SUBDIR+=	tex-uptex-doc
 SUBDIR+=	textadept
