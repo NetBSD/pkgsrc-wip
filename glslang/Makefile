@@ -16,5 +16,5 @@ CMAKE_CONFIGURE_ARGS+=	-DALLOW_EXTERNAL_SPIRV_TOOLS=ON
 
 .include "../../devel/cmake/build.mk"
 
-.include "../../wip/spirv-tools/buildlink3.mk"
+.include "../../parallel/spirv-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

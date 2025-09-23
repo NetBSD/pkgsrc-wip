@@ -72,7 +72,7 @@ MESON_ARGS+=		-Dllvm=enabled
 .  include "../../devel/libelf/buildlink3.mk"
 .  include "../../lang/llvm/buildlink3.mk"
 .  include "../../wip/libclc/buildlink3.mk"
-.  include "../../wip/spirv-tools/buildlink3.mk"
+.  include "../../parallel/spirv-tools/buildlink3.mk"
 .  include "../../lang/libunwind/buildlink3.mk"
 .  include "../../lang/clang/buildlink3.mk"
 

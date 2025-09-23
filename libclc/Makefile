@@ -24,7 +24,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 PKGCONFIG_OVERRIDE+=	libclc.pc.in
 
 .include "../../devel/cmake/build.mk"
-.include "../../wip/spirv-tools/buildlink3.mk"
+.include "../../parallel/spirv-tools/buildlink3.mk"
 .include "../../parallel/spirv-llvm-translator/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
