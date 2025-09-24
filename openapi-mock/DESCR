@@ -1,0 +1,7 @@
+OpenAPI API mock server with random data generation by specified schemas.
+
+* OpenAPI 3.x support.
+* Load specification from a local file or URL.
+* JSON and YAML format supported.
+* Generates fake response data by provided schemas or by examples.
+* Content negotiation by Accept header.
