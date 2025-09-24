@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (thonny-4.1.7.tar.gz) = 45d371229eb4f5c949d87d6476f289530849ebe64a66b16e2bae7629e7b377b7
+SHA512 (thonny-4.1.7.tar.gz) = 8f263c0eb3430947bbd601090befad1181ae6990ea23f2962e3837aaf9dbf083f3f89eaae717e2db526d969311a28f170b76b7ccad2c8c269c253065eb8cfbb8
+Size (thonny-4.1.7.tar.gz) = 4085064 bytes

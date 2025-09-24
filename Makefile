@@ -5716,6 +5716,7 @@ SUBDIR+=	theama
 SUBDIR+=	thedarkmod
 SUBDIR+=	theforceengine
 SUBDIR+=	thepeg
+SUBDIR+=	thonny
 SUBDIR+=	thunderbird
 SUBDIR+=	thunderbird68-enigmail
 SUBDIR+=	ti99sim
