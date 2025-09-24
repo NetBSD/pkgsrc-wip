@@ -2,19 +2,20 @@
 #+title: TODO for Suricata 8 package
 
 * Makefile
-- pkgconfig overrides for rust/vendor/libz-sys not enabled yet
-  - probably needs patches
-
+- check rust/vendor/* need
+  
 * Configure
 - libunwind and dev header not found
 - check not found includes, features that exists on NetBSD
   and add support
 
-* Build
+* Build / porting
 - revise creation and use of cpu sets
-
+  
 * Tests
-- run tests, evaluate and fix them
+- enable and run tests, evaluate and fix them
 - run executables, fix errors
+
+* Package
 
 * Install

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/util-ioctl.c.orig	2025-09-22 18:04:28.981310802 +0000
+--- src/util-ioctl.c.orig	2025-09-16 02:07:13.000000000 +0000
 +++ src/util-ioctl.c
 @@ -196,6 +196,8 @@ int SetIfaceFlags(const char *ifname, in
  #ifdef OS_FREEBSD
