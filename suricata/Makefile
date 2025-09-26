@@ -21,11 +21,27 @@ USE_TOOLS+=		pkg-config
 
 USE_LANGUAGES=		c c++
 
-LIBS.NetBSD+= -lm
+LIBS.NetBSD+=		 -lm
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.suricata
+PKG_SUPPORTED_OPTIONS=	enable-unittests enable-debug enable-profiling
+#PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.prefs.mk"
 
-#.include "options.mk"
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Menable-unittests)
+CONFIGURE_ARGS+=	--enable-unittests
+.endif
+
+.if !empty(PKG_OPTIONS:Menable-debug)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Menable-profiling)
+CONFIGURE_ARGS+=	--enable-profiling
+.endif
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"

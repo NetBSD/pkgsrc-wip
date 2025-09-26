@@ -7,6 +7,7 @@ SHA1 (patch-configure) = 379edddcef392fecd2d1f3cb2a66b2223a0fca33
 SHA1 (patch-src_threads.h) = bd3764e1ac575d2b2c7b6b88ea2dbd93c3c5a4cb
 SHA1 (patch-src_tm-threads.c) = cf2e747c3c26f72844184baf8dbdbf1aa9407665
 SHA1 (patch-src_unix-manager.c) = d5e64cff26de3865c0939383aa72011dd1cbf8d2
+SHA1 (patch-src_util-affinity.c) = eae96313d1f1978836373d2db19aca5507d6bdc4
 SHA1 (patch-src_util-affinity.h) = a5ede16436ae6b1d28615726bf8afa4a94159694
 SHA1 (patch-src_util-byte.h) = 2f4dd27b60eccc55a684d513765346bdbd120552
 SHA1 (patch-src_util-fmemopen.c) = 49e52146820ff96dc6f257b1a348bf1805eed25b
