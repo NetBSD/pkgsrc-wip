@@ -16,12 +16,14 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
-#PKGCONFIG_OVERRIDE+=	rust/vendor/libz-sys/src/zlib-ng/zlib.pc.in
-#PKGCONFIG_OVERRIDE+=	rust/vendor/libz-sys/src/zlib/zlib.pc.in
-
 USE_LANGUAGES=		c c++
 
 LIBS.NetBSD+=		 -lm
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+EGDIR=                  ${PREFIX}/share/examples/suricata
+INSTALLATION_DIRS+=     ${EGDIR}
+INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.suricata
 PKG_SUPPORTED_OPTIONS=	enable-unittests enable-debug enable-profiling
@@ -42,6 +44,19 @@ CONFIGURE_ARGS+=	--enable-debug
 .if !empty(PKG_OPTIONS:Menable-profiling)
 CONFIGURE_ARGS+=	--enable-profiling
 .endif
+
+#
+# Generate and place some initial configuration files into EGDIR!
+# 
+post-install:
+	cd ${WRKSRC} \
+	&& env ${INSTALL_ENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} install-conf \
+			&& ${MV} ${DESTDIR}${PREFIX}/etc/suricata/* ${DESTDIR}${EGDIR} \
+				&& find ${DESTDIR}{EGDIR} -type f -print | sort \
+					> ${WRKDIR}/PLIST_DYNAMIC
+# plist gen helper
+PLIST.SRC+=	${WRKDIR}/PLIST_DYNAMIC
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"

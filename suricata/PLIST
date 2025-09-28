@@ -57,6 +57,10 @@ share/doc/suricata/README
 share/doc/suricata/Setting_up_IPSinline_for_Linux.txt
 share/doc/suricata/TODO
 share/doc/suricata/Third_Party_Installation_Guides.txt
+share/examples/suricata/classification.config
+share/examples/suricata/reference.config
+share/examples/suricata/suricata.yaml
+share/examples/suricata/threshold.config
 share/suricata/classification.config
 share/suricata/reference.config
 share/suricata/rules/app-layer-events.rules
@@ -86,3 +90,9 @@ share/suricata/rules/ssh-events.rules
 share/suricata/rules/stream-events.rules
 share/suricata/rules/tls-events.rules
 share/suricata/rules/websocket-events.rules
+@pkgdir var/run/suricata
+@pkgdir var/log/suricata/files
+@pkgdir var/log/suricata/certs
+@pkgdir var/lib/suricata/data
+@pkgdir var/lib/suricata/cache/sgh
+@pkgdir etc/suricata
