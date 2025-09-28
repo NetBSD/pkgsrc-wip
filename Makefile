@@ -3313,7 +3313,6 @@ SUBDIR+=	pounce
 SUBDIR+=	povray
 SUBDIR+=	powerdevil
 SUBDIR+=        powerdns
-SUBDIR+=	powerdns-recursor52
 SUBDIR+=	powerdns-recursor53
 SUBDIR+=	powerlevel10k
 SUBDIR+=	powerline
