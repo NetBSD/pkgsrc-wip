@@ -13,7 +13,6 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
 TEST_DEPENDS+=	${PYPKGPREFIX}-delegator>=0:../../wip/py-delegator
-TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect>=0:../../devel/py-pexpect
 
 USE_LANGUAGES=	# none
 

@@ -11,6 +11,7 @@ COMMENT=	Subprocesses for Humans 2.0
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.1.0:../../devel/py-pexpect
 
 WHEEL_NAME=	${DISTNAME:S/./_/}
 
