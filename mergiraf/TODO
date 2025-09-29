@@ -1,4 +1,0 @@
-uses unpublished crates, needs pkgsrc fixes for that:
-tree-sitter-go
-tree-sitter-xml
-tree-sitter-yaml

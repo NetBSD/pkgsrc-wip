@@ -1,16 +1,17 @@
 # $NetBSD$
 
-DISTNAME=	mergiraf-0.2.0
+DISTNAME=	mergiraf-0.14.0
 CATEGORIES=	devel
 MASTER_SITES=	-https://codeberg.org/mergiraf/mergiraf/archive/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mergiraf.org/
 COMMENT=	Sophisticated merge tool
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/mergiraf
 USE_LANGUAGES=		c c++
+WRKSRC=			${WRKDIR}/mergiraf
 
+.include "cargo-depends.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
