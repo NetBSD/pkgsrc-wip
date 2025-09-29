@@ -1,0 +1,2 @@
+Delegator.py is a simple library for dealing with subprocesses,
+inspired by both envoy and pexpect.

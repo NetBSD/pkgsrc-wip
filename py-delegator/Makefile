@@ -8,7 +8,11 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=d/delegator.py/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/delegator.py
 COMMENT=	Subprocesses for Humans 2.0
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+WHEEL_NAME=	${DISTNAME:S/./_/}
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
