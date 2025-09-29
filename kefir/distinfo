@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kefir-0.5.0.tar.gz) = 1b7c5a5d4fb632a8f10c3d5cb5cee76e4097fc12bc8a24c6ac7646bb07d78dad
+SHA512 (kefir-0.5.0.tar.gz) = f512980dae2299bd3f2181eaa76be04eb35b6f6e1bae23faa22d6a67a5cb2eb00f4c3c2b6f878ce85a4ba80ab342572f80b47037de5a7ec7d6c9ae6326cb7f26
+Size (kefir-0.5.0.tar.gz) = 2222618 bytes
