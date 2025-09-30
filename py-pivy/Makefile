@@ -16,6 +16,8 @@ LICENSE=	isc
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # kludge until fixed upstream
+
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 .include "../../devel/cmake/build.mk"
