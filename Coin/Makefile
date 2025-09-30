@@ -15,6 +15,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_CXX_FEATURES=	c++11
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # kludge until fixed upstream
+
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
