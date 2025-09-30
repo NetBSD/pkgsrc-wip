@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	curitz-0.9.21
+DISTNAME=	curitz-0.9.22
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uninett/}
 GITHUB_PROJECT=	curitz
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-DEPENDS+=	${PYPKGPREFIX}-zinolib-[0-9]*:../../wip/py-zinolib
+DEPENDS+=	${PYPKGPREFIX}-zinolib>=0.10.1<1.0:../../wip/py-zinolib
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 # Workaround for using github tarball:
