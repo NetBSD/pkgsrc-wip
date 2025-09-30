@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.9.2
+PKGVERSION=	2.9.3
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(alpha|beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -37,6 +37,7 @@ BUILDLINK_TRANSFORM+=		rm:-lTKSTEPBase
 
 CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # kludge until fixed upstream
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
@@ -73,7 +74,8 @@ CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 .include "../../security/heimdal/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/cgal/buildlink3.mk"
 .include "../../wip/libbgcode/buildlink3.mk"
