@@ -5,3 +5,6 @@ Some things that are optional but may be helpful:
 - Possibly create a uucp user and setuid the binaries to it (similar to uucp)
 
 - Create rc.d scripts for nncp-daemon, nncp-caller, maybe even nncp-toss
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-60020
