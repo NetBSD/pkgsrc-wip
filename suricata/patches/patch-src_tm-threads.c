@@ -2,7 +2,7 @@ $NetBSD$
 
 --- src/tm-threads.c.orig	2025-09-16 02:07:13.000000000 +0000
 +++ src/tm-threads.c
-@@ -65,13 +65,15 @@ thread_local uint64_t rwr_lock_wait_tick
+@@ -65,14 +65,16 @@ thread_local uint64_t rwr_lock_wait_tick
  thread_local uint64_t rwr_lock_cnt;
  #endif
  
@@ -14,11 +14,13 @@ $NetBSD$
  #include <sys/cpuset.h>
  #include <sys/thr.h>
  #define cpu_set_t cpuset_t
+-#endif /* OS_FREEBSD */
 +#elif defined __NetBSD__
 +#include <err.h>
- #endif /* OS_FREEBSD */
++#endif /* OS_FREEBSD __NetBSD__ */
  
  /* prototypes */
+ static int SetCPUAffinity(uint16_t cpu);
 @@ -705,6 +707,8 @@ static int SetCPUAffinitySet(cpu_set_t *
  #if defined OS_FREEBSD
      int r = cpuset_setaffinity(CPU_LEVEL_WHICH, CPU_WHICH_TID,
