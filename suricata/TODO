@@ -19,3 +19,6 @@
 * Package
 
 * Install
+
+* Possible vulnerabilities to investigate and fix if possible
+- CVE-2025-59147
