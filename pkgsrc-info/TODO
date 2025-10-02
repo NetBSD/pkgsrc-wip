@@ -1,0 +1,21 @@
+$ pkgsrc-info
+PKGSRC: pkgsrc-2025Q2 (NetBSD 10.1 x86_64)
+  from: yamato git 2025-08-29 18:32:05 +0000
+        (f63824d4522661effe8f96ce743c1390163102e0)
+
+DEFAULTS:
+  X11        = native
+  Emacs      = emacs29
+  Jpeg       = libjpeg-turbo
+  JVM        = openjdk17
+  Kerberos   = heimdal
+  Libusb     = compat
+  MySQL      = mariadb114
+  PostgreSQL = 16
+  Go         = 124
+  Lua        = 54
+  PHP        = 82
+  Python     = 312
+  Ruby       = 32
+  Rust       = src
+$

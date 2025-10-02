@@ -1,0 +1,51 @@
+#!/bin/sh
+
+main() {
+	echo "PKGSRC: @BRANCH@ (@HOST@)"
+	echo "  from: @HOSTNAME@ @VCS@ @CDATE@"
+	echo "        (@CREF@)"
+	echo ""
+	echo "DEFAULTS:"
+	echo "  X11        = @X11@"
+	echo "  Emacs      = @EMACS@"
+	echo "  Jpeg       = @JPEG@"
+	echo "  JVM        = @JVM@"
+	echo "  Kerberos   = @KRB5@"
+	echo "  Libusb     = @LIBUSB@"
+	echo "  MySQL      = @MYSQL@"
+	echo "  PostgreSQL = @PGSQL@"
+	echo "  Go         = @GO@"
+	echo "  Lua        = @LUA@"
+	echo "  PHP        = @PHP@"
+	echo "  Python     = @PYTHON@"
+	echo "  Ruby       = @RUBY@"
+	echo "  Rust       = @RUST@"
+}
+
+info() {
+	echo "pkgsrc-info is a small tool to display basic informations"
+	echo "about the pkgsrc tree where it was built. Without argument"
+	echo "prints all informations, the header is:"
+	echo ""
+	echo "PKGSRC: <pkgsrc branch> (<opsys> <osrelease> <arch>)"
+	echo "  from: <hostname> <pkgsrc distribution method> <date of last change>"
+	echo "        (<git/hg: hash of last change|cvs: last changed file>)"
+	echo ""
+	echo "With argument:"
+	echo " -q	quiet, only prints the branch of pkgsrc"
+	echo " -h	prints this help"
+}
+
+case "$1" in
+	-q)
+		echo "@BRANCH@"
+		;;
+	-h|--help|--info)
+		info
+		;;
+	*)
+		main
+		;;
+esac
+
+exit 0

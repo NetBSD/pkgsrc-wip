@@ -3260,6 +3260,7 @@ SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgmanager
+SUBDIR+=	pkgsrc-info
 SUBDIR+=	plank
 SUBDIR+=	plantri
 SUBDIR+=	plantuml

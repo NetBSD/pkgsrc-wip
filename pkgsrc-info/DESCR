@@ -1,0 +1,4 @@
+pkgsrc-info is a small tool to display basic informations
+about the pkgsrc tree where it was built. It prints branch,
+last commit, architecture, operating system, and the
+default versions of main components.
