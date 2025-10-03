@@ -18,10 +18,3 @@
 * Package / Install
 - fix localstatedir [PREFIX/var] and create subdirs
   - log/suricata
-
-
-* Possible vulnerabilities to investigate and fix if possible
-- CVE-2025-59147
-- CVE-2025-59148
-- CVE-2025-59149
-- CVE-2025-59150
