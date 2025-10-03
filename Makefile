@@ -4776,6 +4776,7 @@ SUBDIR+=	py-sqlalchemy-json
 SUBDIR+=	py-sqlalchemy-searchable
 SUBDIR+=	py-sqlalchemy-stubs
 SUBDIR+=	py-sqlelf
+SUBDIR+=	py-sqlite-fts4
 SUBDIR+=	py-sqlitedict
 SUBDIR+=	py-squarify
 SUBDIR+=	py-srpy
