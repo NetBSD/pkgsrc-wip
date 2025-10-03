@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sqlite-fts4-1.0.3.tar.gz) = 04ecbb3ceb4ecb54f7fde1314d4fde2cdf8cb82b65e41ab2aa2c0f779c5321fb
+SHA512 (sqlite-fts4-1.0.3.tar.gz) = fa958bba7b24e09554d8d384de3645070e75983608e13ddeaaa7db5eaf587463a56092e1275d7292c7fd3e873382a099b90c55dff99278528061eb0f9088f3cf
+Size (sqlite-fts4-1.0.3.tar.gz) = 9718 bytes
