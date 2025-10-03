@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sqlite_utils-3.38.tar.gz) = 926cbd306394baf2a5a523be127cdfde06019944a5ae6e4aff85c970a4c08141
+SHA512 (sqlite_utils-3.38.tar.gz) = 998d0c0a3eab7ea359d7986f24be0d387c839020314cb6e66534f9f9c0f868b3552290b3263ab881fc956e8dca3bc06fc9083a17f2cd1c89b50a8e00d1f7b86b
+Size (sqlite_utils-3.38.tar.gz) = 214449 bytes

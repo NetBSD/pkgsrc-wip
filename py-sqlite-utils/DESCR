@@ -1,0 +1,11 @@
+Python CLI utility and library for manipulating SQLite databases.
+
+This library and command-line utility helps create SQLite databases
+from an existing collection of data.
+
+Most of the functionality is available as either a Python API or
+through the sqlite-utils command-line tool.
+
+sqlite-utils is not intended to be a full ORM: the focus is utility
+helpers to make creating the initial database and populating it with
+data as productive as possible.
