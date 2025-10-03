@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (ahir/ahir-0.0.0.1609-d0c06f7.tar.gz) = de064fcf33c5d03e1de63b2cbe7f311e6c6e428744add4ab3422f10dcc95b134
-SHA512 (ahir/ahir-0.0.0.1609-d0c06f7.tar.gz) = 5ec06e4cdfc3959a8f44e83d014feba6fcf886a3f918e1807d8afdd23b2a8d66672c3be6978c15b99a730105a488800fdc5e57defbd0e1e06cc1edc57d5ec6ae
-Size (ahir/ahir-0.0.0.1609-d0c06f7.tar.gz) = 98786105 bytes
+BLAKE2s (ahir/ahir-0.0.0.1610-5e583cb5f2d7c89925abd116a97da7a1e257312b.tar.gz) = ab0a86c362a0045886e648fcc28ae7de2ea0b8fab1ad20d7d70c756fa7fd9f72
+SHA512 (ahir/ahir-0.0.0.1610-5e583cb5f2d7c89925abd116a97da7a1e257312b.tar.gz) = e1bda6c4985a763d988d5e7679aff71af17501823ed839361b58b3c40bc38799548d92885ec2fa0ba969177a4d1744411229660a233268c125ad05dc24ea9599
+Size (ahir/ahir-0.0.0.1610-5e583cb5f2d7c89925abd116a97da7a1e257312b.tar.gz) = 98788074 bytes
 BLAKE2s (ahir/mayureshw-ceptool-61f00c7.tar.gz) = b8b1b4aa5ac8fa237b2a925930ef9b12525c854e5e4e3e3aceb42dc9e90a300a
 SHA512 (ahir/mayureshw-ceptool-61f00c7.tar.gz) = 188e98c6578307fb91d34a5e514a33190a9368755e7421115a843d668a79663fa75bdb0765789243a69b84792568090459fe29f3cff1ce8b98987b9bf51eb4eb
 Size (ahir/mayureshw-ceptool-61f00c7.tar.gz) = 14192 bytes
@@ -15,3 +15,8 @@ Size (ahir/mayureshw-vctools-5ca442d.tar.gz) = 80090 bytes
 BLAKE2s (ahir/mayureshw-xsbcppif-3a96d2b.tar.gz) = c61c74f1016081bf7047f3579ea3917a4ea7aa65bc7a6c8bf726fdf494091424
 SHA512 (ahir/mayureshw-xsbcppif-3a96d2b.tar.gz) = a584648b76bdd57874de5bfcd1b6fae5cfa908e5e9808adb3e26fc78f99f2600a685de0c23ad99d29b6192343315fe76678f535e2bceeced889883ac4a4d8ab2
 Size (ahir/mayureshw-xsbcppif-3a96d2b.tar.gz) = 7018 bytes
+BLAKE2s (ahir/rutujaekatpure-AaGeneration-caf8a9d.tar.gz) = dbe3c62d98d35efa11780a078551074d5fe8f4f34abaf75a09eda71b74ec8ece
+SHA512 (ahir/rutujaekatpure-AaGeneration-caf8a9d.tar.gz) = c4e5be91a83db3667d9d2d716f773ed3562a24b9d2e0d89506a8412e4aad093bdde723fb3beadd5db5f8e5306a6eb8b0fca74ae21a7714ec7408b5913f4986cd
+Size (ahir/rutujaekatpure-AaGeneration-caf8a9d.tar.gz) = 129810 bytes
+SHA1 (patch-v2_AaGeneration_src_AaWriter.cpp) = 131377e91116a4c07ebfd599d581130319a81a4d
+SHA1 (patch-v2_AaGeneration_src_Utils.cpp) = ec99e2f12bb6e4725e509a8c28056e92625cc5c4

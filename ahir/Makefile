@@ -1,23 +1,24 @@
 # $NetBSD$
 
-DISTNAME=	ahir-0.0.0.1609
+DISTNAME=	ahir-0.0.0.1610
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mayureshw/}
 GITHUB_PROJECT=	ahir
-GITHUB_TAG=	d0c06f7
+GITHUB_TAG=	5e583cb5f2d7c89925abd116a97da7a1e257312b
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 GITHUB_SUBMODULES+=	mayureshw vctools 5ca442d ../vctools
 GITHUB_SUBMODULES+=	mayureshw petrisimu 1baebbe ../petrisimu
 GITHUB_SUBMODULES+=	mayureshw ceptool 61f00c7 ../ceptool
 GITHUB_SUBMODULES+=	mayureshw xsbcppif 3a96d2b ../xsbcppif
+GITHUB_SUBMODULES+=	rutujaekatpure AaGeneration caf8a9d v2/AaGeneration
 
 MAINTAINER=	mayuresh@acm.org
 HOMEPAGE=	https://github.com/mayureshw/ahir/
 COMMENT=	High-Level Synthesis toolset from C to VHDL
 #LICENSE=	Requested adding University of Illinois/NCSA Open Source License on pkgsrc mailing list
 
-AHIRDIR=	${WRKDIR}/ahir-d0c06f712ecb6f03c007c17c714aac9d8ee8c12e
+AHIRDIR=	${WRKDIR}/ahir-${GITHUB_TAG}
 BUILD_DIRS+=	${AHIRDIR}/v2
 BUILD_DIRS+=	${WRKDIR}/vctools
 USE_LANGUAGES=	c c++
@@ -34,8 +35,13 @@ MAKE_ENV+=	XSBCPPIFDIR=${WRKDIR}/xsbcppif
 
 PKG_JVMS_ACCEPTED=	openjdk21 openjdk-bin
 
+# AaGeneration duplicates the header. Once the two upstreams merge, this can be removed
+post-extract:
+	${RM} -f ${AHIRDIR}/v2/AaGeneration/include/BGLWrap.hpp
+
 .include "../../wip/xsb/buildlink3.mk"
 .include "../../wip/antlr/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
