@@ -29,6 +29,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.suricata
 PKG_SUPPORTED_OPTIONS=	enable-unittests enable-debug enable-profiling
 #PKG_SUGGESTED_OPTIONS=
 
+RCD_SCRIPTS+=		suricata
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.options.mk"
@@ -53,7 +55,7 @@ post-install:
 	&& env ${INSTALL_ENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} install-conf \
 			&& ${MV} ${DESTDIR}${PREFIX}/etc/suricata/* ${DESTDIR}${EGDIR} \
-				&& find ${DESTDIR}{EGDIR} -type f -print | sort \
+				&& find ${DESTDIR}${EGDIR} -type f -print | sort \
 					> ${WRKDIR}/PLIST_DYNAMIC
 # plist gen helper
 PLIST.SRC+=	${WRKDIR}/PLIST_DYNAMIC

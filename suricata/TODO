@@ -10,15 +10,15 @@
   and add support
 
 * Build / porting
-- revise creation and use of cpu sets
   
 * Tests
 - enable and run tests, evaluate and fix them
 - run executables, fix errors
 
-* Package
+* Package / Install
+- fix localstatedir [PREFIX/var] and create subdirs
+  - log/suricata
 
-* Install
 
 * Possible vulnerabilities to investigate and fix if possible
 - CVE-2025-59147
