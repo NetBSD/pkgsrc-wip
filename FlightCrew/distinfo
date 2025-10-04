@@ -5,6 +5,7 @@ SHA512 (FlightCrew-0.7.2-Code.zip) = 6933cd85bab0300ee2258106225cbf23474516c4993
 Size (FlightCrew-0.7.2-Code.zip) = 7794710 bytes
 SHA1 (patch-CMakeLists.txt) = 8423ab7b53fad354e04fdfd159b070a8f8bf61f9
 SHA1 (patch-src_FlightCrew_CMakeLists.txt) = 2c60cb722bb7613f007f2e3a644f1d9f8509f8ba
+SHA1 (patch-src_FlightCrew_Framework_ValidateEpub.cpp) = a8f78da3bef54ec2382e264b67b0910373799181
 SHA1 (patch-src_FlightCrew_Validators_Opf_ReachabilityAnalysis.cpp) = 53fbd6e1b1b9a11739f16383406f10ddaa253293
 SHA1 (patch-src_FlightCrew_Validators_SaxSchemaValidator.cpp) = 65b6fe9e04d4567449dd36039999d14bee1e7e61
 SHA1 (patch-src_FlightCrew_tests_CMakeLists.txt) = 934296b4cd2425d30d5e4926dfd8f835a5284953
