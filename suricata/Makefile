@@ -20,7 +20,7 @@ USE_LANGUAGES=		c c++
 
 LIBS.NetBSD+=		 -lm
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --localstatedir=${VARBASE}
 EGDIR=                  ${PREFIX}/share/examples/suricata
 INSTALLATION_DIRS+=     ${EGDIR}
 INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} sysconfdir=${EGDIR}
