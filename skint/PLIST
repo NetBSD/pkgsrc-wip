@@ -1,10 +1,11 @@
 @comment $NetBSD$
 bin/skint
+man/man1/skint.1
 share/doc/${PKGNAME}/README.md
-share/doc/${PKGNAME}/syntax-rules.md
 share/${PKGNAME}/lib/README.md
 share/${PKGNAME}/lib/srfi/1.sld
 share/${PKGNAME}/lib/srfi/11.sld
+share/${PKGNAME}/lib/srfi/111.sld
 share/${PKGNAME}/lib/srfi/113.sld
 share/${PKGNAME}/lib/srfi/115.sld
 share/${PKGNAME}/lib/srfi/116.sld
@@ -39,6 +40,7 @@ share/${PKGNAME}/lib/srfi/153.sld
 share/${PKGNAME}/lib/srfi/156.sld
 share/${PKGNAME}/lib/srfi/158.sld
 share/${PKGNAME}/lib/srfi/16.sld
+share/${PKGNAME}/lib/srfi/160.sld
 share/${PKGNAME}/lib/srfi/160/base.sld
 share/${PKGNAME}/lib/srfi/160/f32.sld
 share/${PKGNAME}/lib/srfi/160/f64.sld
@@ -56,6 +58,7 @@ share/${PKGNAME}/lib/srfi/172/functional.sld
 share/${PKGNAME}/lib/srfi/173.sld
 share/${PKGNAME}/lib/srfi/175.sld
 share/${PKGNAME}/lib/srfi/176.sld
+share/${PKGNAME}/lib/srfi/178.sld
 share/${PKGNAME}/lib/srfi/189.sld
 share/${PKGNAME}/lib/srfi/193.sld
 share/${PKGNAME}/lib/srfi/194.sld

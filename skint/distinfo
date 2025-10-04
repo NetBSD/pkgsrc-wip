@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (skint-065.tar.gz) = 77ecb319e9ca49cc9f686f4c11976e5b6aa8a17273e733c4f88e0b5316e7f9d5
-SHA512 (skint-065.tar.gz) = fcc7736bf2171311535bcdd2daf1f33cad7268f08dd06a1662fbf4f61ae3f5d8ade30c2c2a62e9d27bb2678639ae0aded3215f0f19d76a73e71ddd136f0899de
-Size (skint-065.tar.gz) = 810939 bytes
-SHA1 (patch-Makefile) = 5832bf217d1fa1a92c768c08b7c80703d71a8849
+BLAKE2s (skint-0.6.7.tar.gz) = a2ec7424cbd77a580e711daab13ed0acde59fe36a94771f0c4dfc8b278e97d59
+SHA512 (skint-0.6.7.tar.gz) = 1d56f7f266c4be7d56f4532ab8a2b71c839aa85ab257c6b90988a83a610df2108100559f3530c846ce1f31cee29c9627e2657ba48209346fce2f55fbeedbe5d8
+Size (skint-0.6.7.tar.gz) = 904618 bytes
+SHA1 (patch-Makefile) = 2680c856ee2ff3833cdc6fa0a37e93386dcdebd1
 SHA1 (patch-s.h) = eef592fe9fe3ea15bb064dc4b67ec8c5f87e7f1f
