@@ -1,0 +1,9 @@
+Starting with version 5.0.0, Recursor supports a new YAML syntax for configuration files. 
+A configuration using the old style syntax can be converted to a YAML configuration using
+the instructions in Conversion of old-style settings to YAML format. 
+Starting with version 5.2.0, parsing of old-style settings must be explicitly enabled using
+a command line argument --enable-old-settings. 
+In a future release support for the old-style settings described here will be dropped. 
+See PowerDNS Recursor New Style (YAML) Settings for details.
+https://doc.powerdns.com/recursor/settings.html
+
