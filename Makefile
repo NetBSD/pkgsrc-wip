@@ -773,7 +773,6 @@ SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin
 SUBDIR+=	doomlegacy-snapshot
 SUBDIR+=	doorman
-SUBDIR+=	dosbox-staging
 SUBDIR+=	dosbox-svn
 SUBDIR+=	dosemu2
 SUBDIR+=	dotproject
