@@ -16,7 +16,6 @@
 - run executables, fix errors
 
 * Package / Install
-- suricata executables should go into sbin
 - create /var subdirs
   - log/suricata
 - run suricata-update during install or disp message

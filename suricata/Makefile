@@ -18,12 +18,14 @@ USE_TOOLS+=		pkg-config
 
 USE_LANGUAGES=		c c++
 
-LIBS.NetBSD+=		 -lm
+LIBS.NetBSD+=		-lm
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --localstatedir=${VARBASE}
-EGDIR=                  ${PREFIX}/share/examples/suricata
-INSTALLATION_DIRS+=     ${EGDIR}
-INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} sysconfdir=${EGDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+# ! all execs go into sbin !
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
+
+BUILD_DEFS+=		VARBASE
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.suricata
 PKG_SUPPORTED_OPTIONS=	enable-unittests enable-debug enable-profiling
@@ -49,14 +51,13 @@ CONFIGURE_ARGS+=	--enable-profiling
 
 #
 # Generate and place some initial configuration files into EGDIR!
-# 
+#
 post-install:
 	cd ${WRKSRC} \
 	&& env ${INSTALL_ENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} install-conf \
-			&& ${MV} ${DESTDIR}${PREFIX}/etc/suricata/* ${DESTDIR}${EGDIR} \
-				&& find ${DESTDIR}${EGDIR} -type f -print | sort \
-					> ${WRKDIR}/PLIST_DYNAMIC
+			&& find ${DESTDIR}${PREFIX}/etc/suricata -type f -print | sort \
+				> ${WRKDIR}/PLIST_DYNAMIC
 # plist gen helper
 PLIST.SRC+=	${WRKDIR}/PLIST_DYNAMIC
 

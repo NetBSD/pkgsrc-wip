@@ -1,8 +1,8 @@
 @comment $NetBSD$
-bin/suricata
-bin/suricata-update
-bin/suricatactl
-bin/suricatasc
+etc/suricata/classification.config
+etc/suricata/reference.config
+etc/suricata/suricata.yaml
+etc/suricata/threshold.config
 lib/suricata/python/suricata/__init__.py
 lib/suricata/python/suricata/config/defaults.py
 lib/suricata/python/suricata/update/__init__.py
@@ -48,6 +48,10 @@ man/man1/suricata.1
 man/man1/suricatactl-filestore.1
 man/man1/suricatactl.1
 man/man1/suricatasc.1
+sbin/suricata
+sbin/suricata-update
+sbin/suricatactl
+sbin/suricatasc
 share/doc/suricata/AUTHORS
 share/doc/suricata/Basic_Setup.txt
 share/doc/suricata/GITGUIDE
@@ -57,10 +61,6 @@ share/doc/suricata/README
 share/doc/suricata/Setting_up_IPSinline_for_Linux.txt
 share/doc/suricata/TODO
 share/doc/suricata/Third_Party_Installation_Guides.txt
-share/examples/suricata/classification.config
-share/examples/suricata/reference.config
-share/examples/suricata/suricata.yaml
-share/examples/suricata/threshold.config
 share/suricata/classification.config
 share/suricata/reference.config
 share/suricata/rules/app-layer-events.rules
@@ -90,9 +90,3 @@ share/suricata/rules/ssh-events.rules
 share/suricata/rules/stream-events.rules
 share/suricata/rules/tls-events.rules
 share/suricata/rules/websocket-events.rules
-@pkgdir var/run/suricata
-@pkgdir var/log/suricata/files
-@pkgdir var/log/suricata/certs
-@pkgdir var/lib/suricata/data
-@pkgdir var/lib/suricata/cache/sgh
-@pkgdir etc/suricata
