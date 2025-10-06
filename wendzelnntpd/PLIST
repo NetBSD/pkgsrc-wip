@@ -1,6 +1,9 @@
 @comment $NetBSD$
+man/man5/wendzelnntpd.conf.5
+man/man8/create_certificate.8
 man/man8/wendzelnntpadm.8
 man/man8/wendzelnntpd.8
+sbin/create_certificate
 sbin/wendzelnntpadm
 sbin/wendzelnntpd
 share/doc/wendzelnntpd/AUTHORS
@@ -9,25 +12,8 @@ share/doc/wendzelnntpd/HISTORY
 share/doc/wendzelnntpd/INSTALL
 share/doc/wendzelnntpd/LICENSE
 share/doc/wendzelnntpd/README.md
-share/doc/wendzelnntpd/docs.pdf
-share/doc/wendzelnntpd/docs/contents.png
-share/doc/wendzelnntpd/docs/docs.css
-share/doc/wendzelnntpd/docs/docs.html
-share/doc/wendzelnntpd/docs/footnode.html
-share/doc/wendzelnntpd/docs/footnote.png
-share/doc/wendzelnntpd/docs/img1.png
-share/doc/wendzelnntpd/docs/img1.svg
-share/doc/wendzelnntpd/docs/img2.svg
-share/doc/wendzelnntpd/docs/index.html
-share/doc/wendzelnntpd/docs/index.png
-share/doc/wendzelnntpd/docs/next.png
-share/doc/wendzelnntpd/docs/next_g.png
-share/doc/wendzelnntpd/docs/nx_grp_g.png
-share/doc/wendzelnntpd/docs/prev.png
-share/doc/wendzelnntpd/docs/prev_g.png
-share/doc/wendzelnntpd/docs/up.png
-share/doc/wendzelnntpd/docs/up_g.png
-share/doc/wendzelnntpd/mysql_db_struct.sql
-share/doc/wendzelnntpd/usenet.db_struct
-share/examples/wendzelnntpd/wendzelnntpd.conf
-var/spool/news/wendzelnntpd/usenet.db
+share/examples/wendzelnntpd/wendzelnntpd/wendzelnntpd.conf
+share/wendzelnntpd/mysql_db_struct.sql
+share/wendzelnntpd/openssl.cnf
+share/wendzelnntpd/usenet.db_struct
+@pkgdir var/spool/news/wendzelnntpd

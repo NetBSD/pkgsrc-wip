@@ -1,57 +1,41 @@
 # $NetBSD$
 
-#DISTNAME=		v2.1.3
-DISTNAME=		wendzelnntpd-2.2.0git
-#PKGNAME=		wendzelnntpd-${DISTNAME:S/v//}
+DISTNAME=		wendzelnntpd-2.2.0alpha
 CATEGORIES=		news
-#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wendzelnntpd/}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cdpxe/}
-GITHUB_TAG=		73d8e69871ff09444b6cf5aa089df5ce06112758
-#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=		v2.2.0-alpha
 
 MAINTAINER=		micha@NetBSD.org
-HOMEPAGE=		https://sourceforge.net/projects/wendzelnntpd
+HOMEPAGE=		https://github.com/cdpxe/WendzelNNTPd
 COMMENT=		Free Usenet server with SQL backend and RBAC
 LICENSE=		gnu-gpl-v3
 
-USE_TOOLS+=		bison flex gmake
+USE_TOOLS+=		bison flex gmake bash:run
 USE_FEATURES=		err regcomp snprintf
 
 BUILD_DEFS+=		VARBASE
 
-# Build system expects PREFIX as part of DESTDIR
-SUBST_CLASSES+=		make
-SUBST_MESSAGE.make=	Adjust Makefile
-SUBST_STAGE.make=	pre-configure
-SUBST_FILES.make+=	Makefile
-SUBST_SED.make+=	-e 's,$$(DESTDIR),$$(DESTDIR)$$(PREFIX),g'
-
 # Directory for example config file
-FAKECDIR=		${DESTDIR}${PREFIX}/share/examples/wendzelnntpd
+EGDIR=			${PREFIX}/share/examples/wendzelnntpd
 
-INSTALLATION_DIRS=	sbin share/doc/wendzelnntpd ${PKGMANDIR}/man8 \
-			var/spool/news/wendzelnntpd
-SPECIAL_PERMS+=		sbin/wendzelnntpd \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
-SPECIAL_PERMS+=		sbin/wendzelnntpadm \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+RCD_SCRIPTS=		wendzelnntpd
+
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/wendzelnntpd \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/spool/news/wendzelnntpd \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
-CONF_FILES_PERMS=	${FAKECDIR}/wendzelnntpd.conf \
-			${PKG_SYSCONFDIR}/wendzelnntpd.conf \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
-WRKSRC=			${WRKDIR}/WendzelNNTPd-73d8e69871ff09444b6cf5aa089df5ce06112758
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+CONF_FILES_PERMS=	${EGDIR}/wendzelnntpd/wendzelnntpd.conf \
+			${PKG_SYSCONFDIR}/wendzelnntpd/wendzelnntpd.conf \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
+WRKSRC=			${WRKDIR}/WendzelNNTPd-2.2.0-alpha
 
-CONFIGURE_ENV+=		MYSQL=NO
-CONFIGURE_ENV+=		POSTGRES=NO
-CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		FAKECDIR=${FAKECDIR}
-CONFIGURE_ENV+=		DESTDIR=${DESTDIR}
+GNU_CONFIGURE=		YES
 
-do-configure:
-	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${CONFIG_SHELL} ./configure
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR} UDBDIR=${PREFIX}/var/spool/news/wendzelnntpd SQLITEINST=NO CREATE_CERTIFICATES=NO
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

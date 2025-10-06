@@ -1,7 +1,5 @@
 $NetBSD$
 
-BLAKE2s (wendzelnntpd-2.2.0git-73d8e69871ff09444b6cf5aa089df5ce06112758.tar.gz) = c012ea8fafe28b9d0260277c9a59a31f927bcd24f200c6447f3a815413bc8101
-SHA512 (wendzelnntpd-2.2.0git-73d8e69871ff09444b6cf5aa089df5ce06112758.tar.gz) = 0dc1ed9c9b9ee8b990029bbeaac3996d904d653392ce68b3d7b95f51027e0c594965dae109a7bb850a45bdcbb9db50eeb03b395f9c907c29c30d652644759c65
-Size (wendzelnntpd-2.2.0git-73d8e69871ff09444b6cf5aa089df5ce06112758.tar.gz) = 5194773 bytes
-SHA1 (patch-Makefile) = 0745c7754a8cab59dbff29177927f63aa3f637f7
-SHA1 (patch-configure) = 545200aa618f08b72ef35e18bc212b83ae30d0b3
+BLAKE2s (wendzelnntpd-2.2.0alpha.tar.gz) = d6f9c529f6182682ee69c3dd59f221c5102d98eb45b023f5af6a038ec7819522
+SHA512 (wendzelnntpd-2.2.0alpha.tar.gz) = e22c288f69250feb6122df86c9d3bcd5bf60f4b159fde05d71d333f4062a9b8e031bf4da8ec8436edd6d104a52841e741028dd9485158fec88f87ccb8c360062
+Size (wendzelnntpd-2.2.0alpha.tar.gz) = 5058299 bytes
