@@ -1,15 +1,17 @@
 $NetBSD$
 
-BLAKE2s (sddm-0.19.0.tar.xz) = 3388e772781c683366ef7d7f521bcee39f4b5edb65933f16e62b95d0fb1221ac
-SHA512 (sddm-0.19.0.tar.xz) = 0a40816bc105a1e930fec2d65fabff0ae7e27c641235d90e41f6fbaa86af4bb774a9e30f7548ce2c6c791e6d4f8195b02afddedca60a9e7c77447702e728edc3
-Size (sddm-0.19.0.tar.xz) = 3406056 bytes
-SHA1 (patch-CMakeLists.txt) = 339bb1d639824f035cc18f6fe299790d99003993
-SHA1 (patch-src_common_VirtualTerminal.cpp) = 68aa285501545111ee32e62831627ee4f0042e4a
-SHA1 (patch-src_common_VirtualTerminal__NetBSD.cpp) = 517cfdfdcfd273ae4def980d5835edcbc70d10e3
-SHA1 (patch-src_daemon_CMakeLists.txt) = 7a487d89ddf82d54a1d6c951978bebc464c4ee38
-SHA1 (patch-src_daemon_DaemonApp.cpp) = 12d86d2985cc3e96411d307ca4d724aae6494f13
-SHA1 (patch-src_daemon_Seat.cpp) = 310f1eb7b00a7c88fd431dcd391ef9860d0afac6
-SHA1 (patch-src_daemon_Seat.h) = b79641bcec9e4997a053db15ee3c5afee57b82ee
-SHA1 (patch-src_daemon_XorgDisplayServer.cpp) = aeb78b7cd321d78dd9b986b2cd0e2dd96da39aab
-SHA1 (patch-src_helper_HelperApp.cpp) = 5822c14b72dda8f92d427cec69272e6e3cf4f6b2
-SHA1 (patch-src_helper_UserSession.cpp) = 4da90793d4d1b535562273a5f85c14e156973a9b
+BLAKE2s (sddm-0.21.0.tar.gz) = 074acc30769f11b9efda7e0a6eb5a48603034170bbe4f175f9f0b579ed3e2c8e
+SHA512 (sddm-0.21.0.tar.gz) = 2e8e460e7f318f20a406dcbb1a9fa1dc78b6a5b8d888bfbbaae22b9c642dbc49cf2ac682b4ea9ed847bbafa9bdc361ba08795e59cad970088b370caaaa70f458
+Size (sddm-0.21.0.tar.gz) = 3557266 bytes
+SHA1 (patch-CMakeLists.txt) = d1110dd1eb5b30a1d888e154b65ab4bf21960162
+SHA1 (patch-data_man_sddm.conf.rst.in) = 07b99ddf63108353db0b9490521292bd38b6ed5e
+SHA1 (patch-data_themes_CMakeLists.txt) = 105647648b6b172c89cbe68e5d34136459b8e1da
+SHA1 (patch-services_CMakeLists.txt) = f271ae7044792b22d7ac7427c462400c2cb24d29
+SHA1 (patch-src_common_Configuration.h) = 67d0960dc3b8a01d3c80d3897a1fa3c7575635fe
+SHA1 (patch-src_common_VirtualTerminal.cpp) = fb3be92b0aab514abc883df6b046a0c29a9ef106
+SHA1 (patch-src_common_XAuth.cpp) = 0d828eb6adc19bf7dc69a1ca26e80b92bcc56722
+SHA1 (patch-src_daemon_LogindDBusTypes.cpp) = cd8773a37bdc89196bba67cdb0c41a8a4b416306
+SHA1 (patch-src_helper_Backend.cpp) = 7b9702880840723411b0eb19c45cb66e33b8700c
+SHA1 (patch-src_helper_CMakeLists.txt) = 5e2de779a05f6d7f9ee9d64e615c81b9c9afa409
+SHA1 (patch-src_helper_HelperApp.cpp) = 41e455b406ed948248411e746bf8e8efa65e6659
+SHA1 (patch-src_helper_UserSession.cpp) = 9f89dd07ae5d76a1c380191de1938480002f8cd5

@@ -1,16 +1,24 @@
 $NetBSD$
 
-shutdown commands are different on non-Linux.
+Update the minimum required cmake version to 3.5 to avoid build 
+errors on modern cmake versions. 
 
---- CMakeLists.txt.orig	2020-11-03 09:55:24.000000000 +0000
+Fix the shutdown command for NetBSD.
+
+--- CMakeLists.txt.orig	2025-10-03 11:58:46.078418066 +0000
 +++ CMakeLists.txt
-@@ -173,6 +173,9 @@ if (NOT ELOGIND_FOUND AND NOT SYSTEMD_FO
-     if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
-         set(MINIMUM_VT 9)
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.4)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(SDDM)
+ 
+@@ -155,7 +155,7 @@ if (NOT ELOGIND_FOUND AND NOT SYSTEMD_FO
+     # Set the VT on which sddm will normally appear, and the
+     # commands for shutdown and reboot. On FreeBSD, there are
+     # normally more getty's running than on Linux.
+-    if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
++    if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD" OR "${CMAKE_SYSTEM_NAME}" STREQUAL "NetBSD")
          set(HALT_COMMAND "/sbin/shutdown -p now")
-+    elseif (${CMAKE_SYSTEM} MATCHES "NetBSD")
-+        set(MINIMUM_VT 7)
-+        set(HALT_COMMAND "/sbin/shutdown -p now")
      else()
-         set(MINIMUM_VT 7)
          set(HALT_COMMAND "/sbin/shutdown -h -P now")
