@@ -21,7 +21,8 @@ USE_LANGUAGES=
 # weewx uses sqlite3
 .include "../../lang/python/batteries-included.mk"
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
+# poetry.masonry.api requires full poetry, not just core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=2.1.4:../../devel/py-poetry
 
 # pyproject.toml, in order:
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj

@@ -146,11 +146,11 @@ ${PYSITELIB}/weeutil/timediff.pyo
 ${PYSITELIB}/weeutil/weeutil.py
 ${PYSITELIB}/weeutil/weeutil.pyc
 ${PYSITELIB}/weeutil/weeutil.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/weewx/__init__.py
 ${PYSITELIB}/weewx/__init__.pyc
 ${PYSITELIB}/weewx/__init__.pyo
