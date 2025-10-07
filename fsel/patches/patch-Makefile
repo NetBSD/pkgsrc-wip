@@ -1,0 +1,13 @@
+$NetBSD$
+
+Fix build on NetBSD.
+
+--- Makefile.orig	2025-10-07 18:36:23.686122088 +0000
++++ Makefile
+@@ -1,5 +1,5 @@
+ CC = gcc
+-CFLAGS = -Wall -Wextra -std=c11 -D_XOPEN_SOURCE=500
++CFLAGS = -Wall -Wextra -std=c11
+ LDFLAGS =
+ LIBS = -lcrypto
+ PREFIX ?= /usr/local

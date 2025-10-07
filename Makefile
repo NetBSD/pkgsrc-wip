@@ -1062,6 +1062,7 @@ SUBDIR+=	frogatto
 SUBDIR+=	frp
 SUBDIR+=	fs2open
 SUBDIR+=	fs2open-git
+SUBDIR+=	fsel
 SUBDIR+=	fsharp
 SUBDIR+=	fslsfonts
 SUBDIR+=	fsom

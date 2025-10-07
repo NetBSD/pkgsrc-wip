@@ -1,0 +1,4 @@
+fsel is a CLI utility that manages file selections for batch
+operations on Unix.  Store, retrieve, and manipulate file lists
+across command runs.  Selections persist until you explicitly clear
+them.

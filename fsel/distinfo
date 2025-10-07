@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (fsel-0.1.0.tar.gz) = c8482174ddcdf90cc22b4ecdca88c2ba4b739f767892eed6c5edcb02c453f5ce
+SHA512 (fsel-0.1.0.tar.gz) = 3686c4e94df845573b03f38b7f6ede9e5098b01f0e0fa6017c777b0569f45c5fcdc393299136954e404db173802b4a6b81e76dc04e0489c7c82f4473b490542d
+Size (fsel-0.1.0.tar.gz) = 20460 bytes
+SHA1 (patch-Makefile) = 1e4f3a59e1118b3b6ae73a17005f495e58d2c1ab
