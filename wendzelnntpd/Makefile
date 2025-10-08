@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=		wendzelnntpd-2.2.0alpha
+DISTNAME=		v2.2.0-alpha
+PKGNAME=		wendzelnntpd-${DISTNAME:S/v//:S/-//}
 CATEGORIES=		news
-MASTER_SITES=		${MASTER_SITE_GITHUB:=cdpxe/}
-GITHUB_TAG=		v2.2.0-alpha
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wendzelnntpd/}
 
 MAINTAINER=		micha@NetBSD.org
-HOMEPAGE=		https://github.com/cdpxe/WendzelNNTPd
+HOMEPAGE=		https://sourceforge.net/projects/wendzelnntpd
 COMMENT=		Free Usenet server with SQL backend and RBAC
 LICENSE=		gnu-gpl-v3
 
@@ -27,7 +27,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/news/wendzelnntpd \
 CONF_FILES_PERMS=	${EGDIR}/wendzelnntpd/wendzelnntpd.conf \
 			${PKG_SYSCONFDIR}/wendzelnntpd/wendzelnntpd.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
-WRKSRC=			${WRKDIR}/WendzelNNTPd-2.2.0-alpha
+WRKSRC=			${WRKDIR}/cdpxe-WendzelNNTPd-bf144dc
 
 GNU_CONFIGURE=		YES
 
