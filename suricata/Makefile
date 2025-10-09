@@ -33,6 +33,11 @@ PKG_SUPPORTED_OPTIONS=	enable-unittests enable-debug enable-profiling
 
 RCD_SCRIPTS+=		suricata
 
+PKG_CONFIG=		yes
+OWN_DIRS+= 		${VARBASE}/log/suricata
+OWN_DIRS+=		${VARBASE}/lib/suricata/cache/sgh
+OWN_DIRS+=		${VARBASE}/lib/suricata/rules
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.options.mk"
@@ -50,14 +55,16 @@ CONFIGURE_ARGS+=	--enable-profiling
 .endif
 
 #
-# Generate and place some initial configuration files into EGDIR!
+# 1. Generate and place some initial configuration files into etc!
+# 2. Create some runtime directories in var
 #
 post-install:
 	cd ${WRKSRC} \
-	&& env ${INSTALL_ENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} install-conf \
-			&& find ${DESTDIR}${PREFIX}/etc/suricata -type f -print | sort \
-				> ${WRKDIR}/PLIST_DYNAMIC
+		&& env ${INSTALL_ENV} ${MAKE_ENV} \
+	${MAKE_PROGRAM} install-conf \
+		&& find ${DESTDIR}${PREFIX}/etc/suricata -type f -print | sort \
+			> ${WRKDIR}/PLIST_DYNAMIC
+
 # plist gen helper
 PLIST.SRC+=	${WRKDIR}/PLIST_DYNAMIC
 
