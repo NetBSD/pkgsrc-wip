@@ -1,6 +1,8 @@
-
 missing dependencies:
  - futexes
  - chromium port
  - wip/qt5-qtwebengine (chromium code)
  - https://www.riverbankcomputing.com/software/pyqtwebengine/download
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-62185, CVE-2025-62186, CVE-2025-62187
