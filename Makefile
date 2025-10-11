@@ -433,6 +433,7 @@ SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	carburetta
 SUBDIR+=	cardpeek
+SUBDIR+=	cargo-auditable
 SUBDIR+=	cargo-deb
 SUBDIR+=	cargo-nextest
 SUBDIR+=	carla

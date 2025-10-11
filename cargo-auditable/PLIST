@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/auditable2cdx
+bin/cargo-auditable
+man/man1/cargo-auditable.1
