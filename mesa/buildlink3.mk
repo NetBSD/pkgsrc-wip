@@ -20,7 +20,7 @@ pkgbase:= mesa
 
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.mesa:Mx11)
+.if ${PKG_BUILD_OPTIONS.mesa:Mx11}
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXdamage/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"

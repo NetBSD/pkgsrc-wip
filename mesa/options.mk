@@ -76,7 +76,7 @@ MESON_ARGS+=		-Dllvm=enabled
 .  include "../../lang/libunwind/buildlink3.mk"
 .  include "../../lang/clang/buildlink3.mk"
 
-GALLIUM_DRIVERS+=	llvmpipe
+GALLIUM_DRIVERS+=		llvmpipe
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 # This is the latest libdrm requirement for amdgpu.
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.107
@@ -150,4 +150,3 @@ MESA_PLATFORMS+=	wayland
 .  include "../../devel/wayland/buildlink3.mk"
 .  include "../../devel/wayland-protocols/buildlink3.mk"
 .endif
-

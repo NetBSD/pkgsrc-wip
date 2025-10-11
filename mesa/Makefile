@@ -72,7 +72,7 @@ PLIST.i965=		yes
 .  endif
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
 .  if ${OPSYS} != "FreeBSD"
-.    if empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+.    if !${MACHINE_PLATFORM:MNetBSD-*-powerpc}
 # nouveau not available on this platform
 PLIST.nouveau=		yes
 PLIST.nouveau_dri=	yes
@@ -80,15 +80,15 @@ GALLIUM_DRIVERS+=	nouveau
 DRI_DRIVERS+=		nouveau
 .    endif
 .  endif
-.  if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.  if ${MACHINE_PLATFORM:MLinux-*-x86_64}
 # qemu Linux guest driver
 # XXX test this
 #GALLIUM_DRIVERS+=	virgl
 #PLIST.virgl=		yes
 .  endif
 # theoretically cross platform PCI drivers
-.  if empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && \
-      empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
+.  if !${MACHINE_PLATFORM:MNetBSD-*-*arm*} && \
+      !${MACHINE_PLATFORM:MNetBSD-*-mipsel}
 DRI_DRIVERS+=		r100 r200
 GALLIUM_DRIVERS+=	r300
 PLIST.r100=		yes
