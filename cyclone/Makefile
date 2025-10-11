@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	cyclone-${GITHUB_TAG:S,^v,,}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justinethier/}
 GITHUB_TAG=	v0.36.0

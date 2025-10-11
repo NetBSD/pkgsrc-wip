@@ -7,6 +7,7 @@ SHA1 (patch-Makefile) = d5e8d8a25d9472601708778ec9e220a987da4128
 SHA1 (patch-Makefile.config) = 1cb1559cbe9779d5fa8bda998db14951af99716a
 SHA1 (patch-cyclone.scm) = e624dd62369d92b88501f8770d3504e78e311321
 SHA1 (patch-include_cyclone_types.h) = caf0f87ec67d42aad59d7041c50de12fac20c932
+SHA1 (patch-issue-560) = 8c46b08f5741622de75d26af6920d1f5ba31b39a
 SHA1 (patch-scheme_base.sld) = b9aaeb494572eb4fddecf25d30eae7cafe77163f
 SHA1 (patch-srfi_106.sld) = d8929991450c841fd00330d6b1e705a7290900bb
 SHA1 (patch-tests_macro-hygiene.scm) = 3e640ae4e4f67f0d3e3be7670559748758ac66bc
