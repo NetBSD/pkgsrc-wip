@@ -3,7 +3,7 @@
 # Please do not update to ocaml 5.x without discussion, as the
 # consensus is mostly that those versions are not yet baked, and will
 # cause hard-to-debug problems.
-DISTNAME=	ocaml-5.3.0
+DISTNAME=	ocaml-5.4.0
 CATEGORIES=	lang
 # unreliable
 #MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-5.2/
