@@ -2,3 +2,12 @@ Still do not pass "makesum" target:
 
 - several dependencies uses git+https schema that probably needs to be fetched
   manually, investigate it!
+
+List of git+https dependencies:
+
+tracing-tower = { git = "https://github.com/tokio-rs/tracing", default-features = false, rev = "e0642d949891546a3bb7e47080365ee7274f05cd" }
+greptimedb-ingester = { git = "https://github.com/GreptimeTeam/greptimedb-ingester-rust", rev = "f7243393808640f5123b0d5b7b798da591a4df6e", optional = true }
+heim = { git = "https://github.com/vectordotdev/heim.git", branch = "update-nix", default-features = false, features = ["disk"] }
+tokio-util = { git = "https://github.com/vectordotdev/tokio", branch = "tokio-util-0.7.13-framed-read-continue-on-error" }
+nix = { git = "https://github.com/vectordotdev/nix.git", branch = "memfd/gnu/musl" }
+ntapi = { git = "https://github.com/MSxDOS/ntapi.git", rev = "24fc1e47677fc9f6e38e5f154e6011dc9b270da6" }
