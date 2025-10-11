@@ -2792,6 +2792,7 @@ SUBDIR+=	openvdb
 SUBDIR+=	openvrml
 SUBDIR+=	openwsman
 SUBDIR+=	openxcom
+SUBDIR+=	openzl
 SUBDIR+=	openzwave
 SUBDIR+=	opera60-bin
 SUBDIR+=	ophcrack
