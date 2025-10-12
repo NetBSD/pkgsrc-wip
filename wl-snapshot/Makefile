@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/06/05 02:36:41 mef Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/24 22:09:52 wiz Exp $
 
-DATE=		2023.08.18
+VERSION=	2023.08.18
 DISTNAME=	wanderlust
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/wanderlust/wl-2.15.9.${DATE}/}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/wanderlust/wl-2.15.9.${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
 GITHUB_PROJECT=	wanderlust
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 LICENSE=	gnu-gpl-v2
 
-#SE_TOOLS+=	patch
 WRKSRC=		${WRKDIR}/wanderlust-${GITHUB_TAG}
 
 BUILD_TARGET=	all info
