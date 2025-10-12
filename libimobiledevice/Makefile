@@ -1,12 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libimobiledevice-1.3.0
+DISTNAME=	libimobiledevice-1.4.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
-#GITHUB_RELEASE=	${PKGVERSION_NOREV}
-#EXTRACT_SUFX=	.tar.bz2
-# post 1.3.0 release
-GITHUB_TAG=	c269d7e3a7c28ac33d05d5c3de6a8682f480abd0
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://www.libimobiledevice.org/

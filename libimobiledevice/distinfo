@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (libimobiledevice-1.3.0-c269d7e3a7c28ac33d05d5c3de6a8682f480abd0.tar.gz) = b30bdb3db2bef1d0e9b1ad3a5e2dd37942fd025cef22a7d78f760205f409abba
-SHA512 (libimobiledevice-1.3.0-c269d7e3a7c28ac33d05d5c3de6a8682f480abd0.tar.gz) = 429fabaf96bc80256212f3a63bcc09438bdab2c31ed8295d14d2ef313b19964d43a8fc189e9dadbf6ac75852c2d263ca2634812875c1211f4732c6c556887484
-Size (libimobiledevice-1.3.0-c269d7e3a7c28ac33d05d5c3de6a8682f480abd0.tar.gz) = 420574 bytes
+BLAKE2s (libimobiledevice-1.4.0.tar.bz2) = 9571a0f57d206760f52948b75799e4279a27f65892cba37238a858cd34eae815
+SHA512 (libimobiledevice-1.4.0.tar.bz2) = b71ad9ce9c79e13e5b0e39f451770399bf71837581ab4a5e5c695f3c33511b45df79e8ad58d71bde28a97c3f032b64669e078e6d1417f3db006f4afd74c48c89
+Size (libimobiledevice-1.4.0.tar.bz2) = 714628 bytes
 SHA1 (patch-src_lockdown.c) = 3058c45cc117f2b88b1360f9d8c81cee57bc4882

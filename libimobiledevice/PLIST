@@ -21,6 +21,7 @@ bin/idevicescreenshot
 bin/idevicesetlocation
 bin/idevicesyslog
 include/libimobiledevice/afc.h
+include/libimobiledevice/bt_packet_logger.h
 include/libimobiledevice/companion_proxy.h
 include/libimobiledevice/debugserver.h
 include/libimobiledevice/diagnostics_relay.h
