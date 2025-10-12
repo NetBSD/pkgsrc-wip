@@ -1772,6 +1772,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eldoc.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eldoc.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/elisp-scope.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/elisp-scope.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/elp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/elp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert-font-lock.el.gz
