@@ -3508,6 +3508,7 @@ SUBDIR+=	py-bcbio-gff
 SUBDIR+=	py-bctpy
 SUBDIR+=	py-beampy
 SUBDIR+=	py-beautysh
+SUBDIR+=	py-beets
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bibtexparser3
 SUBDIR+=	py-bicho
