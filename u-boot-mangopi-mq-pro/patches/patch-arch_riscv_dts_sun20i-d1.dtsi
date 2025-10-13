@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- arch/riscv/dts/sun20i-d1.dtsi.orig	2025-01-23 09:03:25.290896409 +0000
++++ arch/riscv/dts/sun20i-d1.dtsi
+@@ -1208,5 +1208,14 @@
+ 			#address-cells = <0>;
+ 			#interrupt-cells = <2>;
+ 		};
++
++		clint: clint@14000000 {
++			compatible = "allwinner,sun20i-d1-clint",
++				     "thead,c900-clint";
++			reg = <0x14000000 0xc000>;
++			reg-io-width = <4>;
++			interrupts-extended = <&cpu0_intc 3>,
++					      <&cpu0_intc 7>;
++		};
+ 	};
+ };
