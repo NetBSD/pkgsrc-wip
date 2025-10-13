@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	cuelang-0.14.1
+PKGNAME=	cuelang-0.14.2
 DISTNAME=	cue-${GITHUB_TAG}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cue-lang/}
