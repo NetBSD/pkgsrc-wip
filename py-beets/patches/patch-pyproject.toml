@@ -1,0 +1,16 @@
+$NetBSD$
+
+Disable automatic version detection -- needs .git directory.
+https://github.com/beetbox/beets/issues/6089
+
+--- pyproject.toml.orig	2025-10-13 12:22:04.122698682 +0000
++++ pyproject.toml
+@@ -158,7 +158,7 @@ beet = "beets.ui:main"
+ 
+ 
+ [tool.poetry-dynamic-versioning]
+-enable = true
++enable = false
+ vcs = "git"
+ format = "{base}.dev{distance}+{commit}"
+ 
