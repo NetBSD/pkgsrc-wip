@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2022/07/02 16:53:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.101 2025/04/24 14:13:20 wiz Exp $
 
-DISTNAME=	klayout-0.27.11
+DISTNAME=	klayout-0.29.12
 CATEGORIES=	cad
-MASTER_SITES=	http://www.klayout.org/downloads/source/
+MASTER_SITES=	https://www.klayout.org/downloads/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.klayout.de/
@@ -30,9 +30,11 @@ AUTO_MKDIRS=		yes
 INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
 INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib/klayout
 REL_DIR=		bin-release
-PLUGINS_DIR=		db_plugins lay_plugins pymod
+PLUGINS_DIRS=		db_plugins lay_plugins pymod
 
-PLIST_SUBST+=		PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)\.[0-9]*/\1/}
+PLIST_SUBST+=		PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)[.0-9]*/\1/}
+# temporarily for 0.28
+#PLIST_SUBST+=		PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV}.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,12 +55,13 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}/${REL_DIR} && \
-	${PAX} -wr libklayout* ${PLUGINS_DIR} ${INSTALL_LIBDIR}
+	${PAX} -wr libklayout* ${PLUGINS_DIRS} ${INSTALL_LIBDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/strm* \
 		${INSTALL_BINDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/klayout \
 		${INSTALL_BINDIR}
 
+.include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
