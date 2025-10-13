@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	browserpass-native-3.1.0
+DISTNAME=	browserpass-native-3.1.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=browserpass/}
 
@@ -11,7 +11,7 @@ LICENSE=	isc
 
 EXTRACT_USING=	bsdtar
 
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 .include "go-modules.mk"
 
