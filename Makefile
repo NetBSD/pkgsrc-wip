@@ -6216,6 +6216,7 @@ SUBDIR+=	zino
 SUBDIR+=	zip-devel
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
+SUBDIR+=	zk
 SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
