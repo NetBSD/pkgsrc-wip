@@ -10,7 +10,6 @@ HOMEPAGE=	https://beets.io/
 COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
-# https://github.com/beetbox/beets/issues/5596
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-dynamic-versioning>=0:../../devel/py-poetry-dynamic-versioning
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
@@ -43,6 +42,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
+MAKE_ENV+=	POETRY_DYNAMIC_VERSIONING_BYPASS=${PKGVERSION_NOREV}
+
 # as of 2.4.0
 # 1067 passed, 101 skipped, 1 warning
 .if make(test)
@@ -54,8 +55,8 @@ ALLOW_NETWORK_ACCESS=	yes
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 .endif
 
+# https://github.com/beetbox/beets/issues/5596
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/man/beet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/beet-${PYVERSSUFFIX}.1
 	${INSTALL_DATA} ${WRKSRC}/man/beetsconfig.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/beetsconfig-${PYVERSSUFFIX}.5
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}
