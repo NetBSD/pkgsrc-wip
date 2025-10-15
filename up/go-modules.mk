@@ -1,0 +1,23 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.mod
+GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/gdamore/tcell/@v/v1.4.0.mod
+GO_MODULE_FILES+=	github.com/gdamore/tcell/@v/v1.4.0.zip
+GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.0.3.mod
+GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.0.3.zip
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.3.mod
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.3.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.7.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.zip
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.3.mod
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.3.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190626150813-e07cf5db2756.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201029080932-201ba4db2418.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201029080932-201ba4db2418.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.4.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.4.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.zip
