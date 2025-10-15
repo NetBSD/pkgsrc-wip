@@ -17,10 +17,13 @@ LICENSE=	gnu-agpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-PKG_CC=		clang
-PKG_CXX=	clang++
+BUILDLINK_TRANSFORM+=	rm:-lc++
 
-.include "../../mk/compiler/clang.mk"
+INSTALLATION_DIRS+=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/stalwart ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/stalwart-cli ${DESTDIR}${PREFIX}/bin
 
 .include "cargo-depends.mk"
 .include "../../lang/clang/buildlink3.mk"
