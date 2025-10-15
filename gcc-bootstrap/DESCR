@@ -1,0 +1,6 @@
+GCC bootstrap builder (includes GNAT).
+
+Provides minimal set of GCC compilers (C, C++, Ada) that can bootstrap
+GNAT. It is not intended to be included in the main tree but to
+provide a reproducible build. This project replaces bootstrap
+compilers for pkgsrc's GNAT <= 6 which can not build newer GNAT >= 13.
