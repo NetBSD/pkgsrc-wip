@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+<p align="center">
+    <a href="https://stalw.art">
+    <img src="./img/logo-red.svg" height="150">
+    </a>
+</p>
+
+<h3 align="center">
+  Secure, scalable mail & collaboration server with comprehensive protocol support 🛡️ <br/>(IMAP, JMAP, SMTP, CalDAV, CardDAV, WebDAV)
+</h3>
+
+<br>
+
+<p align="center">
+  <a href="https://github.com/stalwartlabs/stalwart/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/stalwartlabs/stalwart/ci.yml?style=flat-square" alt="continuous integration"></a>
+  &nbsp;
+  <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg?label=license&style=flat-square" alt="License: AGPL v3"></a>
+  &nbsp;
+  <a href="https://stalw.art/docs/install/get-started"><img src="https://img.shields.io/badge/read_the-docs-red?style=flat-square" alt="Documentation"></a>
+</p>
+<p align="center">
+...
