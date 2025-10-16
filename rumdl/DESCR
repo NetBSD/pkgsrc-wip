@@ -1,2 +1,6 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+A high-performance Markdown linter, written in Rust.
+
+rumdl is a high-performance Markdown linter and formatter that helps
+ensure consistency and best practices in your Markdown files.
+Inspired by ruff 's approach to Python linting, rumdl brings similar
+speed and developer experience improvements to the Markdown ecosystem.

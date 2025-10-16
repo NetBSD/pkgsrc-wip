@@ -11,6 +11,7 @@ COMMENT=	Markdown Linter
 LICENSE=	mit
 
 RUST_REQ=	1.89.0
+USE_LANGUAGES+=	c c++
 
 .include "cargo-depends.mk"
 .include "../../lang/rust/cargo.mk"
