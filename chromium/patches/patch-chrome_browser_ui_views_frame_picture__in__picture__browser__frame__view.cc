@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.cc
-@@ -74,7 +74,7 @@
+@@ -75,7 +75,7 @@
  
  // Windows, Mac and CrOS do not clip child widgets to their parents, so we
  // don't have to worry about resizing quite as much.

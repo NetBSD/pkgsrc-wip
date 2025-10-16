@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
-@@ -376,7 +376,7 @@ TaskManagerTableModel::~TaskManagerTable
+@@ -374,7 +374,7 @@ TaskManagerTableModel::~TaskManagerTable
    // Note: system_total_time_ is used for both since there is no functional
    // difference between browser & system (they are essentially the same tab).
    // Instead, the data is routed to the platform appropriate bucket.
@@ -15,7 +15,7 @@ $NetBSD$
    task_manager::RecordTabSwitchEvent(CategoryRecord::kBrowser,
                                       system_total_time_);
  #elif BUILDFLAG(IS_CHROMEOS)
-@@ -509,7 +509,7 @@ std::u16string TaskManagerTableModel::Ge
+@@ -507,7 +507,7 @@ std::u16string TaskManagerTableModel::Ge
                   ? stringifier_->backgrounded_string()
                   : stringifier_->foregrounded_string();
  
@@ -24,7 +24,7 @@ $NetBSD$
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int fd_count = observed_task_manager()->GetOpenFdCount(tasks_[row]);
        return fd_count >= 0 ? base::FormatNumber(fd_count)
-@@ -667,7 +667,7 @@ int TaskManagerTableModel::CompareValues
+@@ -665,7 +665,7 @@ int TaskManagerTableModel::CompareValues
        return BooleanCompare(is_proc1_bg, is_proc2_bg);
      }
  
@@ -33,7 +33,7 @@ $NetBSD$
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int proc1_fd_count =
            observed_task_manager()->GetOpenFdCount(tasks_[row1]);
-@@ -979,7 +979,7 @@ void TaskManagerTableModel::UpdateRefres
+@@ -977,7 +977,7 @@ void TaskManagerTableModel::UpdateRefres
        type = REFRESH_TYPE_KEEPALIVE_COUNT;
        break;
  

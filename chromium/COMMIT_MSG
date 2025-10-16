@@ -1,16 +1,41 @@
-www/chromium: update to 140.0.7339.185
+www/chromium: update to 141.0.7390.54
 
-* 140.0.7339.185
-This update includes 4 security fixes. Below, we highlight fixes
+* 140.0.7339.207
+This update includes 3 security fixes. Below, we highlight fixes
 that were contributed by external researchers. Please see the
 Chrome Security Page for more information.
-[NA][445380761] High CVE-2025-10585: Type Confusion in V8.
-Reported by Google Threat Analysis Group on 2025-09-16
-[$15000][435875050] High CVE-2025-10500: Use after free in Dawn.
-Reported by Giunash (Gyujeong Jin) on 2025-08-03
-[$10000][440737137] High CVE-2025-10501: Use after free in WebRTC.
-Reported by sherkito on 2025-08-23
-[TBD][438038775] High CVE-2025-10502: Heap buffer overflow in ANGLE.
-Reported by Google Big Sleep on 2025-08-12
+[TBD][430336833] High CVE-2025-10890: Side-channel information
+leakage in V8. Reported by Mate Marjanović (SharpEdged) on 2025-07-09
+[N/A][443765373] High CVE-2025-10891: Integer overflow in V8.
+Reported by Google Big Sleep on 2025-09-09
+[N/A][444048019] High CVE-2025-10892: Integer overflow in V8.
+Reported by Google Big Sleep on 2025-09-10
 
-Google is aware that an exploit for CVE-2025-10585 exists in the wild.
+* 141.0.7390.54
+This update includes 21 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$25000][442444724] High CVE-2025-11205: Heap buffer overflow
+in WebGPU. Reported by Atte Kettunen of OUSPG on 2025-09-02
+[$4000][444755026] High CVE-2025-11206: Heap buffer overflow
+in Video. Reported by Elias Hohl on 2025-09-12
+[$5000][428189824] Medium CVE-2025-11207: Side-channel information
+leakage in Storage. Reported by Alesandro Ortiz on 2025-06-27
+[$3000][397878997] Medium CVE-2025-11208: Inappropriate implementation
+in Media. Reported by Kevin Joensen on 2025-02-20
+[$3000][438226517] Medium CVE-2025-11209: Inappropriate implementation
+in Omnibox. Reported by Hafiizh on 2025-08-13
+[$3000][440523110] Medium CVE-2025-11210: Side-channel information
+leakage in Tab. Reported by Umar Farooq  on 2025-08-22
+[$3000][441917796] Medium CVE-2025-11211: Out of bounds read in Media.
+Reported by Kosir Jakob on 2025-08-29
+[$2000][420734141] Medium CVE-2025-11212: Inappropriate implementation
+in Media. Reported by Ameen Basha M K on 2025-05-28
+[$1000][443408317] Medium CVE-2025-11213: Inappropriate implementation
+in Omnibox. Reported by Hafiizh on 2025-09-06
+[N/A][439758498] Medium CVE-2025-11215: Off by one error in V8.
+Reported by Google Big Sleep on 2025-08-19
+[$1000][419721056] Low CVE-2025-11216: Inappropriate implementation
+in Storage. Reported by Farras Givari on 2025-05-23
+[N/A][439772737] Low CVE-2025-11219: Use after free in V8.
+Reported by Google Big Sleep on 2025-08-19

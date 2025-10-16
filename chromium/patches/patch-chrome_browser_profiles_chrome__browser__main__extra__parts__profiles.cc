@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
-@@ -375,7 +375,7 @@
+@@ -378,7 +378,7 @@
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
+ #include "chrome/browser/enterprise/client_certificates/certificate_store_factory.h"
  #include "chrome/browser/enterprise/idle/idle_service_factory.h"
- #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
- #endif
-@@ -419,14 +419,14 @@
+@@ -424,14 +424,14 @@
  #endif
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -32,16 +32,25 @@ $NetBSD$
  #include "chrome/browser/policy/messaging_layer/util/manual_test_heartbeat_event_factory.h"
  #endif
  
-@@ -434,7 +434,7 @@
+@@ -439,7 +439,7 @@
  #include "chrome/browser/history_embeddings/history_embeddings_service_factory.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/browser_switcher/browser_switcher_service_factory.h"
- #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
- #include "chrome/browser/enterprise/client_certificates/certificate_store_factory.h"
-@@ -760,7 +760,7 @@ void ChromeBrowserMainExtraPartsProfiles
+ #include "chrome/browser/enterprise/signin/enterprise_signin_service_factory.h"
+ #include "chrome/browser/enterprise/signin/oidc_authentication_signin_interceptor_factory.h"
+@@ -664,7 +664,7 @@ void ChromeBrowserMainExtraPartsProfiles
+   AccountInvestigatorFactory::GetInstance();
+   AccountPasswordStoreFactory::GetInstance();
+   AccountReconcilorFactory::GetInstance();
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   AccountsPolicyManagerFactory::GetInstance();
+ #endif
+ #if !BUILDFLAG(IS_ANDROID)
+@@ -763,7 +763,7 @@ void ChromeBrowserMainExtraPartsProfiles
    DiceBoundSessionCookieServiceFactory::GetInstance();
  #endif
  #endif
@@ -50,7 +59,7 @@ $NetBSD$
    browser_switcher::BrowserSwitcherServiceFactory::GetInstance();
  #endif
    browser_sync::UserEventServiceFactory::GetInstance();
-@@ -821,13 +821,13 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -826,13 +826,13 @@ void ChromeBrowserMainExtraPartsProfiles
    collaboration::comments::CommentsServiceFactory::GetInstance();
    collaboration::messaging::MessagingBackendServiceFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -65,8 +74,8 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    contextual_cueing::ContextualCueingServiceFactory::GetInstance();
  #endif
-   CookieControlsServiceFactory::GetInstance();
-@@ -886,17 +886,17 @@ void ChromeBrowserMainExtraPartsProfiles
+   CookieSettingsFactory::GetInstance();
+@@ -884,17 +884,17 @@ void ChromeBrowserMainExtraPartsProfiles
    enterprise_connectors::ConnectorsServiceFactory::GetInstance();
    enterprise_connectors::ReportingEventRouterFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -87,7 +96,7 @@ $NetBSD$
    enterprise_idle::IdleServiceFactory::GetInstance();
    enterprise_signals::SignalsAggregatorFactory::GetInstance();
  #endif
-@@ -905,10 +905,10 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -903,10 +903,10 @@ void ChromeBrowserMainExtraPartsProfiles
  #endif
    enterprise_reporting::LegacyTechServiceFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -100,7 +109,7 @@ $NetBSD$
    enterprise_signin::EnterpriseSigninServiceFactory::GetInstance();
  #endif
  #if BUILDFLAG(ENABLE_SESSION_SERVICE)
-@@ -1044,7 +1044,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1043,7 +1043,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if BUILDFLAG(IS_ANDROID)
    MerchantViewerDataManagerFactory::GetInstance();
  #endif
@@ -109,7 +118,16 @@ $NetBSD$
    metrics::DesktopProfileSessionDurationsServiceFactory::GetInstance();
  #endif
  #if !BUILDFLAG(IS_ANDROID)
-@@ -1174,7 +1174,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1130,7 +1130,7 @@ void ChromeBrowserMainExtraPartsProfiles
+   PasswordCounterFactory::GetInstance();
+ #endif  // !BUILDFLAG(IS_ANDROID)
+ #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   PasswordManagerBlocklistPolicyFactory::GetInstance();
+ #endif
+   PasswordManagerSettingsServiceFactory::GetInstance();
+@@ -1175,7 +1175,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if BUILDFLAG(IS_CHROMEOS)
    policy::PolicyCertServiceFactory::GetInstance();
  #endif
@@ -118,7 +136,7 @@ $NetBSD$
    policy::ProfileTokenPolicyWebSigninServiceFactory::GetInstance();
    policy::UserPolicyOidcSigninServiceFactory::GetInstance();
  #endif
-@@ -1217,7 +1217,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1218,7 +1218,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
    ProfileStatisticsFactory::GetInstance();
  #endif
@@ -127,7 +145,7 @@ $NetBSD$
    ProfileTokenWebSigninInterceptorFactory::GetInstance();
    OidcAuthenticationSigninInterceptorFactory::GetInstance();
  #endif
-@@ -1237,7 +1237,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1238,7 +1238,7 @@ void ChromeBrowserMainExtraPartsProfiles
    ReduceAcceptLanguageFactory::GetInstance();
    RendererUpdaterFactory::GetInstance();
    regional_capabilities::RegionalCapabilitiesServiceFactory::GetInstance();

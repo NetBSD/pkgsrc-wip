@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/BUILD.gn.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/BUILD.gn.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/BUILD.gn
 @@ -216,7 +216,6 @@ test("components_unittests") {
      "//components/content_settings/core/browser:unit_tests",
@@ -14,7 +14,7 @@ $NetBSD$
      "//components/cross_device/logging:unit_tests",
      "//components/crx_file:unit_tests",
      "//components/data_sharing:unit_tests",
-@@ -625,7 +624,7 @@ test("components_unittests") {
+@@ -629,7 +628,7 @@ test("components_unittests") {
        "//components/user_data_importer/content:unit_tests",
      ]
  
@@ -23,7 +23,7 @@ $NetBSD$
        deps += [
          "//components/crash/content/browser:unit_tests",
          "//components/crash/core/app:unit_tests",
-@@ -784,7 +783,7 @@ test("components_unittests") {
+@@ -791,7 +790,7 @@ test("components_unittests") {
      deps += [ "//components/constrained_window:unit_tests" ]
    }
  

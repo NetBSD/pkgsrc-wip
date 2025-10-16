@@ -4,9 +4,36 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -345,7 +345,7 @@ BASE_FEATURE(kDisableAutofillStrikeSyste
+@@ -25,7 +25,7 @@ BASE_FEATURE(kAutofillEnableAllowlistFor
+ BASE_FEATURE(kAutofillEnableAmountExtraction,
+              "AutofillEnableAmountExtraction",
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -51,7 +51,7 @@ BASE_FEATURE(kAutofillEnableAmountExtrac
+ BASE_FEATURE(kAutofillEnableBuyNowPayLater,
+              "AutofillEnableBuyNowPayLater",
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -74,7 +74,7 @@ BASE_FEATURE(kAutofillEnableBuyNowPayLat
+ BASE_FEATURE(kAutofillEnableBuyNowPayLaterSyncing,
+              "AutofillEnableBuyNowPayLaterSyncing",
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -337,7 +337,7 @@ BASE_FEATURE(kDisableAutofillStrikeSyste
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {

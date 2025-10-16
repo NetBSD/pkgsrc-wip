@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter_test.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- media/video/video_encode_accelerator_adapter_test.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter_test.cc
 @@ -260,7 +260,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
        });
@@ -33,7 +33,7 @@ $NetBSD$
      expected_input_format = PIXEL_FORMAT_NV12;
  #endif
    const gfx::ColorSpace expected_color_space =
-@@ -674,7 +674,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
+@@ -714,7 +714,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
        });
  
    VideoPixelFormat expected_input_format = PIXEL_FORMAT_I420;

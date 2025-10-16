@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/net_watcher/net_watcher.cc.orig	2025-09-16 20:11:32.000000000 +0000
+--- net/tools/net_watcher/net_watcher.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ net/tools/net_watcher/net_watcher.cc
 @@ -31,7 +31,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"
@@ -24,7 +24,7 @@ $NetBSD$
  // Flag to specifies which network interfaces to ignore. Interfaces should
  // follow as a comma seperated list.
  const char kIgnoreNetifFlag[] = "ignore-netif";
-@@ -160,7 +160,7 @@ int main(int argc, char* argv[]) {
+@@ -179,7 +179,7 @@ int main(int argc, char* argv[]) {
  
    NetWatcher net_watcher;
  

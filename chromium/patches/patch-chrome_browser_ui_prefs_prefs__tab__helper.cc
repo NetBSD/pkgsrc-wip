@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/prefs_tab_helper.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/ui/prefs/prefs_tab_helper.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/ui/prefs/prefs_tab_helper.cc
-@@ -68,7 +68,7 @@
+@@ -64,7 +64,7 @@
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \

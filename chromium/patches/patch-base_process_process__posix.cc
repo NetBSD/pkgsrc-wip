@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/process/process_posix.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/process/process_posix.cc
 @@ -25,10 +25,15 @@
  #include "base/trace_event/trace_event.h"

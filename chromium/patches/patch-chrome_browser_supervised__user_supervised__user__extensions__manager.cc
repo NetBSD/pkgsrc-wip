@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_extensions_manager.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_extensions_manager.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_extensions_manager.cc
-@@ -350,7 +350,7 @@ void SupervisedUserExtensionsManager::
+@@ -345,7 +345,7 @@ void SupervisedUserExtensionsManager::
      ActivateManagementPolicyAndUpdateRegistration() {
    SetActiveForSupervisedUsers();
    UpdateManagementPolicyRegistration();
@@ -15,7 +15,7 @@ $NetBSD$
    MaybeMarkExtensionsLocallyParentApproved();
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  }
-@@ -449,7 +449,7 @@ bool SupervisedUserExtensionsManager::Sh
+@@ -444,7 +444,7 @@ bool SupervisedUserExtensionsManager::Sh
    return false;
  }
  

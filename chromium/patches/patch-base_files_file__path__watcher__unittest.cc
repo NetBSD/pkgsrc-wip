@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher_unittest.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/files/file_path_watcher_unittest.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/files/file_path_watcher_unittest.cc
 @@ -902,7 +902,7 @@ TEST_F(FilePathWatcherTest, WatchDirecto
    }

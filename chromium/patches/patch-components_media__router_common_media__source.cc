@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/media_source.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/media_router/common/media_source.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/media_router/common/media_source.cc
 @@ -62,7 +62,7 @@ bool IsSystemAudioCaptureSupported() {
  #if BUILDFLAG(IS_MAC)

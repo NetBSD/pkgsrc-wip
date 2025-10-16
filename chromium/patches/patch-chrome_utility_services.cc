@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/utility/services.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/utility/services.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/utility/services.cc
 @@ -50,7 +50,7 @@
  #include "chrome/services/system_signals/mac/mac_system_signals_service.h"

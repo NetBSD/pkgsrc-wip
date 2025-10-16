@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/browser_features.cc
-@@ -80,7 +80,7 @@ BASE_FEATURE(kClearUserDataUponProfileDe
+@@ -86,7 +86,7 @@ BASE_FEATURE(kClearUserDataUponProfileDe
               "ClearUserDataUponProfileDestruction",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
  // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
  // disabled without losing data.
-@@ -99,7 +99,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyPro
+@@ -105,7 +105,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyPro
  // the browser exits.
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
               "DestroyProfileOnBrowserClose",

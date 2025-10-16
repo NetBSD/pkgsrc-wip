@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_web_contents_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- headless/lib/browser/headless_web_contents_impl.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ headless/lib/browser/headless_web_contents_impl.cc
-@@ -70,7 +70,7 @@ BASE_FEATURE(kPrerender2InHeadlessMode,
+@@ -71,7 +71,7 @@ BASE_FEATURE(kPrerender2InHeadlessMode,
  namespace {
  
  void UpdatePrefsFromSystemSettings(blink::RendererPreferences* prefs) {

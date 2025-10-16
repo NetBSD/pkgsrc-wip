@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_context.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- remoting/host/chromoting_host_context.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ remoting/host/chromoting_host_context.cc
 @@ -335,7 +335,7 @@ std::unique_ptr<ChromotingHostContext> C
    // on a UI thread.

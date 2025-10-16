@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.cc
-@@ -71,7 +71,7 @@ namespace {
+@@ -67,7 +67,7 @@ namespace {
  
  #if BUILDFLAG(IS_MAC)
  const int kDesiredIconSizesForShortcut[] = {16, 32, 128, 256, 512};
@@ -15,7 +15,7 @@ $NetBSD$
  // Linux supports icons of any size. FreeDesktop Icon Theme Specification states
  // that "Minimally you should install a 48x48 icon in the hicolor theme."
  const int kDesiredIconSizesForShortcut[] = {16, 32, 48, 128, 256, 512};
-@@ -253,7 +253,7 @@ std::unique_ptr<ShortcutInfo> BuildShort
+@@ -249,7 +249,7 @@ std::unique_ptr<ShortcutInfo> BuildShort
  
  // TODO(crbug.com/40257107): Implement tests on Linux for using shortcuts_menu
  // actions.

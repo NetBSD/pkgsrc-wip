@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_netbsd.cc.orig	2025-09-12 07:32:06.300407396 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2025-10-12 06:55:37.617729950 +0000
 +++ base/process/process_metrics_netbsd.cc
 @@ -0,0 +1,173 @@
 +// Copyright 2013 The Chromium Authors
@@ -141,7 +141,7 @@ $NetBSD$
 +  return false;
 +}
 +
-+bool GetSystemMemoryInfo(SystemMemoryInfoKB* meminfo) {
++bool GetSystemMemoryInfo(SystemMemoryInfo* meminfo) {
 +  NOTIMPLEMENTED();
 +  return false;
 +}

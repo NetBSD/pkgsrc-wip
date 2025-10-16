@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/launcher/test_launcher.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -73,6 +73,7 @@
  #include "testing/gtest/include/gtest/gtest.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include <fcntl.h>
  
  #include "base/files/file_descriptor_watcher_posix.h"
-@@ -1832,6 +1833,10 @@ bool TestLauncher::Init(CommandLine* com
+@@ -1831,6 +1832,10 @@ bool TestLauncher::Init(CommandLine* com
    results_tracker_.AddGlobalTag("OS_OPENBSD");
  #endif
  

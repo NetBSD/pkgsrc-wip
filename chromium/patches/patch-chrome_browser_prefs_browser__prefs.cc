@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -326,7 +326,7 @@
+@@ -329,7 +329,7 @@
  #include "chrome/browser/devtools/devtools_window.h"
  #endif  // BUILDFLAG(ENABLE_DEVTOOLS_FRONTEND)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -493,11 +493,11 @@
+@@ -495,11 +495,11 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -29,7 +29,7 @@ $NetBSD$
  #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
-@@ -525,7 +525,7 @@
+@@ -527,7 +527,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -38,7 +38,7 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1705,7 +1705,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1785,7 +1785,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
@@ -47,7 +47,7 @@ $NetBSD$
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1860,7 +1860,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1937,7 +1937,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -56,13 +56,14 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2231,12 +2231,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2310,13 +2310,13 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    device_signals::RegisterProfilePrefs(registry);
+   ntp_tiles::EnterpriseShortcutsManagerImpl::RegisterProfilePrefs(registry);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
  

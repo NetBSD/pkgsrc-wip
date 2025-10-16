@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/system_cpu/cpu_probe.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/system_cpu/cpu_probe.cc
 @@ -20,6 +20,10 @@
  #include "components/system_cpu/cpu_probe_mac.h"

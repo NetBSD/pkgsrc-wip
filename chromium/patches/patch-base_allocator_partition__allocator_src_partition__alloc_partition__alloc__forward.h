@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_forward.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_forward.h.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_forward.h
 @@ -34,9 +34,13 @@ namespace internal {
  // the second one 16. We could technically return something different for

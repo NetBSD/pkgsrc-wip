@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.cc
 @@ -46,7 +46,7 @@ std::u16string GetUsernameFromLabel(cons
  }
@@ -15,7 +15,7 @@ $NetBSD$
  // Returns the password form corresponding to the `payload` data. In most
  // cases there is only one such form stored, but having more than one or no
  // forms is also possible. If there is more than one form, showing any of them
-@@ -300,7 +300,7 @@ void PasswordManualFallbackFlow::DidAcce
+@@ -304,7 +304,7 @@ void PasswordManualFallbackFlow::DidAcce
      }
      case autofill::SuggestionType::kViewPasswordDetails: {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD$
        std::optional<password_manager::PasswordForm> credentials =
            GetCorrespondingPasswordForm(
                suggestion.GetPayload<Suggestion::PasswordSuggestionDetails>(),
-@@ -436,7 +436,7 @@ void PasswordManualFallbackFlow::EnsureC
+@@ -440,7 +440,7 @@ void PasswordManualFallbackFlow::EnsureC
      const Suggestion::PasswordSuggestionDetails& payload,
      base::OnceClosure on_allowed) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

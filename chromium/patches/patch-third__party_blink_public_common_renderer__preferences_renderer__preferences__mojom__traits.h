@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2025-09-29 17:05:47.000000000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h
 @@ -185,7 +185,7 @@ struct BLINK_COMMON_EXPORT
      return data.send_subresource_notification;

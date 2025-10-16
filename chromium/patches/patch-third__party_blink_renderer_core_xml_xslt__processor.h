@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/xml/xslt_processor.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- third_party/blink/renderer/core/xml/xslt_processor.h.orig	2025-09-29 17:05:47.000000000 +0000
 +++ third_party/blink/renderer/core/xml/xslt_processor.h
-@@ -77,7 +77,11 @@ class XSLTProcessor final : public Scrip
+@@ -79,7 +79,11 @@ class XSLTProcessor final : public Scrip
  
    void reset();
  

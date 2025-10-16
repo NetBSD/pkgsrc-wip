@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/safe_browsing/content/common/file_type_policies_unittest.cc
 @@ -146,7 +146,7 @@ TEST_F(FileTypePoliciesTest, UnpackResou
    EXPECT_EQ(142, file_type.uma_value());

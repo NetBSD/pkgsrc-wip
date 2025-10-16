@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/user_education_internals/user_education_internals_page_handler_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/ui/webui/user_education_internals/user_education_internals_page_handler_impl.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/ui/webui/user_education_internals/user_education_internals_page_handler_impl.cc
 @@ -49,7 +49,7 @@
  #include "ui/base/l10n/l10n_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    return g_browser_process->GetFeatures()->whats_new_registry();
  #else
    return nullptr;
-@@ -912,7 +912,7 @@ void UserEducationInternalsPageHandlerIm
+@@ -913,7 +913,7 @@ void UserEducationInternalsPageHandlerIm
  }
  
  void UserEducationInternalsPageHandlerImpl::LaunchWhatsNewStaging() {

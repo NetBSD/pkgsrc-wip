@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/system_utils_linux.cpp.orig	2025-09-08 23:21:33.000000000 +0000
+--- third_party/angle/src/common/system_utils_linux.cpp.orig	2025-09-29 17:05:47.000000000 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
-@@ -15,10 +15,17 @@
+@@ -19,10 +19,17 @@
  #include <sys/types.h>
  #include <unistd.h>
  
@@ -24,7 +24,7 @@ $NetBSD$
  std::string GetExecutablePath()
  {
      // We cannot use lstat to get the size of /proc/self/exe as it always returns 0
-@@ -34,6 +41,7 @@ std::string GetExecutablePath()
+@@ -38,6 +45,7 @@ std::string GetExecutablePath()
      path[result] = '\0';
      return path;
  }
@@ -32,7 +32,7 @@ $NetBSD$
  
  std::string GetExecutableDirectory()
  {
-@@ -59,6 +67,12 @@ void SetCurrentThreadName(const char *na
+@@ -63,6 +71,12 @@ void SetCurrentThreadName(const char *na
      // There's a 15-character (16 including '\0') limit.  If the name is too big (and ERANGE is
      // returned), name will be ignored.
      ASSERT(strlen(name) < 16);

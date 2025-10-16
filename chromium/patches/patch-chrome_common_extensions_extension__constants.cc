@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/extension_constants.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/common/extensions/extension_constants.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/common/extensions/extension_constants.cc
 @@ -38,7 +38,7 @@ const char* const kBuiltInFirstPartyExte
      kGoogleSpeechSynthesisExtensionId,

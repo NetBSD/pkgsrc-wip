@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/widget/glic_widget.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/glic/widget/glic_widget.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/glic/widget/glic_widget.cc
-@@ -127,7 +127,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
+@@ -161,7 +161,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
    // Don't change this name. This is used by other code to identify the glic
    // window. See b/404947780.
    params.name = "GlicWidget";

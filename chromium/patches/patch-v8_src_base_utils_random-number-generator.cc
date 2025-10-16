@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/utils/random-number-generator.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- v8/src/base/utils/random-number-generator.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ v8/src/base/utils/random-number-generator.cc
 @@ -56,7 +56,7 @@ RandomNumberGenerator::RandomNumberGener
    DCHECK_EQ(0, result);

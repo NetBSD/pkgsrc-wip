@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/thread_delegate_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/profiler/thread_delegate_posix.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/profiler/thread_delegate_posix.cc
 @@ -15,7 +15,7 @@
  #include "base/process/process_handle.h"

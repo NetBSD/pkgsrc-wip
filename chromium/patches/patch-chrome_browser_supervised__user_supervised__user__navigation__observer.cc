@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_navigation_observer.cc
-@@ -48,7 +48,7 @@
+@@ -49,7 +49,7 @@
  #include "chrome/browser/supervised_user/android/supervised_user_web_content_handler_impl.h"
  #elif BUILDFLAG(IS_CHROMEOS)
  #include "chrome/browser/supervised_user/chromeos/supervised_user_web_content_handler_impl.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/supervised_user/linux_mac_windows/supervised_user_web_content_handler_impl.h"
  #endif
  
-@@ -68,7 +68,7 @@ std::unique_ptr<supervised_user::WebCont
+@@ -69,7 +69,7 @@ std::unique_ptr<supervised_user::WebCont
  #elif BUILDFLAG(IS_ANDROID)
    return std::make_unique<SupervisedUserWebContentHandlerImpl>(
        web_contents, frame_id, navigation_id);

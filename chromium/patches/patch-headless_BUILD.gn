@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/BUILD.gn.orig	2025-09-08 23:21:33.000000000 +0000
+--- headless/BUILD.gn.orig	2025-09-29 17:05:47.000000000 +0000
 +++ headless/BUILD.gn
-@@ -478,7 +478,7 @@ component("headless_non_renderer") {
+@@ -483,7 +483,7 @@ component("headless_non_renderer") {
      }
    }
  

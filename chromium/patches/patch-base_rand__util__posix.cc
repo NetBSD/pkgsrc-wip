@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/rand_util_posix.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/rand_util_posix.cc
 @@ -30,7 +30,7 @@
  #include "build/build_config.h"
@@ -34,7 +34,7 @@ $NetBSD$
  
  bool KernelSupportsGetRandom() {
    return base::SysInfo::KernelVersionNumber::Current() >=
-@@ -122,6 +124,7 @@ bool UseBoringSSLForRandBytes() {
+@@ -120,6 +122,7 @@ bool UseBoringSSLForRandBytes() {
  namespace {
  
  void RandBytesInternal(span<uint8_t> output, bool avoid_allocation) {
@@ -42,7 +42,7 @@ $NetBSD$
    // The BoringSSL experiment takes priority over everything else.
    if (!avoid_allocation && internal::UseBoringSSLForRandBytes()) {
      // BoringSSL's RAND_bytes always returns 1. Any error aborts the program.
-@@ -152,6 +155,9 @@ void RandBytesInternal(span<uint8_t> out
+@@ -150,6 +153,9 @@ void RandBytesInternal(span<uint8_t> out
    const int urandom_fd = GetUrandomFD();
    const bool success = ReadFromFD(urandom_fd, as_writable_chars(output));
    CHECK(success);
@@ -52,7 +52,7 @@ $NetBSD$
  }
  
  }  // namespace
-@@ -171,9 +177,11 @@ void RandBytes(span<uint8_t> output) {
+@@ -169,9 +175,11 @@ void RandBytes(span<uint8_t> output) {
    RandBytesInternal(output, /*avoid_allocation=*/false);
  }
  

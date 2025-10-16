@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.h
-@@ -131,7 +131,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerLog
- // Detects password reuse based on hashed password values.
- BASE_DECLARE_FEATURE(kReuseDetectionBasedOnPasswordHashes);
+@@ -138,7 +138,7 @@ BASE_DECLARE_FEATURE(kPasswordManualFall
+ // terminal.
+ BASE_DECLARE_FEATURE(kPasswordManagerLogToTerminal);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

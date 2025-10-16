@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/on_device_model/on_device_model_sandbox_init.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/utility/on_device_model/on_device_model_sandbox_init.h.orig	2025-09-29 17:05:47.000000000 +0000
 +++ content/utility/on_device_model/on_device_model_sandbox_init.h
 @@ -11,6 +11,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

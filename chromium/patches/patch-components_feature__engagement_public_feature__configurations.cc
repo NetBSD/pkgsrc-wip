@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
-@@ -100,7 +100,7 @@ std::optional<FeatureConfig> CreateNewUs
+@@ -95,7 +95,7 @@ std::optional<FeatureConfig> CreateNewUs
  
  std::optional<FeatureConfig> GetClientSideFeatureConfig(
      const base::Feature* feature) {
@@ -15,7 +15,7 @@ $NetBSD$
  
    // The IPH bubble for link capturing has a trigger set to ANY so that it
    // always shows up. The per app specific guardrails are independently stored
-@@ -119,7 +119,7 @@ std::optional<FeatureConfig> GetClientSi
+@@ -114,7 +114,7 @@ std::optional<FeatureConfig> GetClientSi
  
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
    if (kIPHPasswordsManagementBubbleAfterSaveFeature.name == feature->name) {
      FeatureConfig config;
      config.valid = true;
-@@ -1956,7 +1956,8 @@ std::optional<FeatureConfig> GetClientSi
+@@ -1979,7 +1979,8 @@ std::optional<FeatureConfig> GetClientSi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

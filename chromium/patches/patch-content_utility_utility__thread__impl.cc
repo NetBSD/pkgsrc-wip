@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_thread_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/utility/utility_thread_impl.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ content/utility/utility_thread_impl.cc
 @@ -31,7 +31,7 @@
  #include "mojo/public/cpp/bindings/pending_receiver.h"

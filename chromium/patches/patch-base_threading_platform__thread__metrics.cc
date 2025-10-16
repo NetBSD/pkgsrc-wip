@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_metrics.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/threading/platform_thread_metrics.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ base/threading/platform_thread_metrics.cc
-@@ -26,7 +26,7 @@ PlatformThreadMetrics::CreateForCurrentT
+@@ -55,7 +55,7 @@ PlatformThreadMetrics::CreateForCurrentT
  }
  
  #elif BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || \

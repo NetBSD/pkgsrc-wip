@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/app/chrome_main.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ chrome/app/chrome_main.cc
 @@ -28,11 +28,11 @@
  #include "chrome/app/chrome_main_mac.h"
@@ -38,7 +38,7 @@ $NetBSD$
    PossiblyDetermineFallbackChromeChannel(argv[0]);
  #endif
  
-@@ -181,7 +181,7 @@ int ChromeMain(int argc, const char** ar
+@@ -180,7 +180,7 @@ int ChromeMain(int argc, const char** ar
    SetUpBundleOverrides();
  #endif
  

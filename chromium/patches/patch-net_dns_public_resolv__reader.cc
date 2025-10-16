@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/resolv_reader.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- net/dns/public/resolv_reader.cc.orig	2025-09-29 17:05:47.000000000 +0000
 +++ net/dns/public/resolv_reader.cc
 @@ -34,7 +34,7 @@ std::unique_ptr<ScopedResState> ResolvRe
  }
