@@ -10,3 +10,5 @@ Upstream NEWS
 
   - minor build system improvements
   - upstream Makefile rototill, so that it works with BSD make
+  - [tell upstream to create NEWS and then steal it]
+  - experimental rename detection
