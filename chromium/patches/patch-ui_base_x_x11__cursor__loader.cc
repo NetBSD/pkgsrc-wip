@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -37,7 +37,7 @@
  #include "ui/gfx/x/connection.h"

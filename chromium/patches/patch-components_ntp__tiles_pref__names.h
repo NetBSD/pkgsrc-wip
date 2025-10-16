@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/ntp_tiles/pref_names.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- components/ntp_tiles/pref_names.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/ntp_tiles/pref_names.h
 @@ -48,7 +48,7 @@ inline constexpr char kCustomLinksInitia
  

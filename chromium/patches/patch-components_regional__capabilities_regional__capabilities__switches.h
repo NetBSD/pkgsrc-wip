@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_switches.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_switches.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_switches.h
 @@ -47,7 +47,7 @@ BASE_DECLARE_FEATURE(kMitigateLegacySear
  BASE_DECLARE_FEATURE(kResolveRegionalCapabilitiesFromDevice);

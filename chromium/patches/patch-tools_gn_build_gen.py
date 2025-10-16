@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/build/gen.py.orig	2025-09-29 17:05:47.000000000 +0000
+--- tools/gn/build/gen.py.orig	2025-10-13 21:41:26.000000000 +0000
 +++ tools/gn/build/gen.py
 @@ -94,6 +94,12 @@ class Platform(object):
    def is_solaris(self):

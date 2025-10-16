@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_content_browser_client.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- headless/lib/browser/headless_content_browser_client.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ headless/lib/browser/headless_content_browser_client.cc
 @@ -59,7 +59,7 @@
  #include "content/public/common/content_descriptors.h"

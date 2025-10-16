@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.h
 @@ -18,7 +18,7 @@
  #include "ui/gfx/gpu_memory_buffer_handle.h"

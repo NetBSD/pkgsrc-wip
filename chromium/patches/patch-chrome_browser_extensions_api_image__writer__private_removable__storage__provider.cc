@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc
 @@ -9,6 +9,8 @@
  #include "base/task/thread_pool.h"

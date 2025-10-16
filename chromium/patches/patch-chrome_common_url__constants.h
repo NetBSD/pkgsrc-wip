@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/url_constants.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/common/url_constants.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/common/url_constants.h
 @@ -997,7 +997,7 @@ inline constexpr char kOutdatedPluginLea
  inline constexpr char kPhoneHubPermissionLearnMoreURL[] =

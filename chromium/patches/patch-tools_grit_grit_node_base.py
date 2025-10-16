@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/grit/grit/node/base.py.orig	2025-09-29 17:05:47.000000000 +0000
+--- tools/grit/grit/node/base.py.orig	2025-10-13 21:41:26.000000000 +0000
 +++ tools/grit/grit/node/base.py
 @@ -491,7 +491,8 @@ class Node:
          value = defs

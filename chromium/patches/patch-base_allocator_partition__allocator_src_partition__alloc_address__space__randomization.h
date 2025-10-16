@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h
 @@ -43,7 +43,7 @@ AslrMask(uintptr_t bits) {
  

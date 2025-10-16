@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ gpu/ipc/service/gpu_memory_buffer_factory.cc
 @@ -14,7 +14,7 @@
  #include "gpu/ipc/service/gpu_memory_buffer_factory_io_surface.h"

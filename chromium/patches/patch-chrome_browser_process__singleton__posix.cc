@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/process_singleton_posix.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/process_singleton_posix.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/process_singleton_posix.cc
 @@ -102,7 +102,7 @@
  #include "ui/base/l10n/l10n_util.h"

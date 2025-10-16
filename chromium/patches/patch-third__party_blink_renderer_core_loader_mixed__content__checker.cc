@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/loader/mixed_content_checker.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- third_party/blink/renderer/core/loader/mixed_content_checker.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ third_party/blink/renderer/core/loader/mixed_content_checker.cc
 @@ -510,7 +510,7 @@ bool MixedContentChecker::ShouldBlockFet
    switch (context_type) {

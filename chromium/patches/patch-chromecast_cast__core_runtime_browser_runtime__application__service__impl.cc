@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc
 @@ -352,7 +352,7 @@ CastWebView::Scoped RuntimeApplicationSe
    params->force_720p_resolution =

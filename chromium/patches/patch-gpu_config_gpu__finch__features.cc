@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
 @@ -125,7 +125,8 @@ BASE_FEATURE(AllowHardwareBufferUsageFla
  // Android and Linux.

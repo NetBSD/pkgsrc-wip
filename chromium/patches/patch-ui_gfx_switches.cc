@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/switches.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- ui/gfx/switches.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ui/gfx/switches.cc
 @@ -36,7 +36,7 @@ const char kHeadless[] = "headless";
  // See //components/headless/screen_info/README.md for more details.

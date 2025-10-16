@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- extensions/shell/browser/shell_extensions_api_client.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.cc
 @@ -18,7 +18,7 @@
  #include "extensions/shell/browser/shell_extension_web_contents_observer.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_alloc_features.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- base/allocator/partition_alloc_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/allocator/partition_alloc_features.cc
 @@ -143,7 +143,7 @@ BASE_FEATURE(PartitionAllocEventuallyZer
  // Evaluated and positive stability and peformance-wise on Linux-based systems,

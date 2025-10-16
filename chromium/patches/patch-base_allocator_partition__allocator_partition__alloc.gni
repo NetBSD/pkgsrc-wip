@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-09-29 17:05:47.000000000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
 @@ -87,7 +87,7 @@ if (current_cpu == "x64" || current_cpu 
  # TODO(crbug.com/329199197): Clean this up when experiments are complete.

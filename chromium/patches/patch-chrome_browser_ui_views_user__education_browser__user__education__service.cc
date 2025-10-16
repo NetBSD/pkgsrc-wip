@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
 @@ -1125,7 +1125,7 @@ void MaybeRegisterChromeFeaturePromos(
                  "Triggered when a shared tab becomes the active tab.")));

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/enterprise/connectors/connectors_service.cc
 @@ -449,7 +449,7 @@ policy::PolicyScope ConnectorsService::G
  bool ConnectorsService::ConnectorsEnabled() const {

@@ -1,4 +1,4 @@
-www/chromium: update to 141.0.7390.54
+www/chromium: update to 141.0.7390.107
 
 * 140.0.7339.207
 This update includes 3 security fixes. Below, we highlight fixes
@@ -39,3 +39,21 @@ Reported by Google Big Sleep on 2025-08-19
 in Storage. Reported by Farras Givari on 2025-05-23
 [N/A][439772737] Low CVE-2025-11219: Use after free in V8.
 Reported by Google Big Sleep on 2025-08-19
+
+* 141.0.7390.65
+This update includes 3 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$5000][443196747] High CVE-2025-11458: Heap buffer overflow in Sync.
+Reported by raven at KunLun lab on 2025-09-05
+[TBD][446722008] High CVE-2025-11460: Use after free in Storage.
+Reported by Sombra on 2025-09-23
+[$3000][441917796] Medium CVE-2025-11211: Out of bounds read in
+WebCodecs. Reported by Jakob Košir on 2025-08-29
+
+* 141.0.7390.107
+This update includes 1 security fix. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$7000][447192722] High CVE-2025-11756: Use after free in
+Safe Browsing. Reported by asnine on 2025-09-25

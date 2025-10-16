@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/common/chrome_features.cc
 @@ -64,7 +64,7 @@ BASE_FEATURE(UseAdHocSigningForWebAppShi
  #endif  // BUILDFLAG(IS_MAC)
@@ -51,7 +51,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -997,7 +997,7 @@ BASE_FEATURE(KAnonymityServiceOHTTPReque
+@@ -1008,7 +1008,7 @@ BASE_FEATURE(KAnonymityServiceOHTTPReque
  // public keys.
  BASE_FEATURE(KAnonymityServiceStorage, base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -60,7 +60,7 @@ $NetBSD$
  BASE_FEATURE(LinuxLowMemoryMonitor, base::FEATURE_DISABLED_BY_DEFAULT);
  // Values taken from the low-memory-monitor documentation and also apply to the
  // portal API:
-@@ -1008,7 +1008,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -1019,7 +1019,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

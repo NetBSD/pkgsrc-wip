@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- services/network/network_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ services/network/network_service.cc
 @@ -108,11 +108,11 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"

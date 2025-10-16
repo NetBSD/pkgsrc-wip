@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/test/BUILD.gn.orig	2025-09-29 17:05:47.000000000 +0000
+--- content/test/BUILD.gn.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/test/BUILD.gn
 @@ -1836,7 +1836,7 @@ test("content_browsertests") {
      "--disable-crashpad-for-testing",

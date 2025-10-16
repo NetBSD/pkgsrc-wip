@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/color/color_provider_utils.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- ui/color/color_provider_utils.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ui/color/color_provider_utils.cc
 @@ -194,7 +194,7 @@ std::string_view SystemThemeName(ui::Sys
    switch (system_theme) {

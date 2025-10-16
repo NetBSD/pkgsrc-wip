@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc
 @@ -39,10 +39,12 @@ void MTPDeviceMapService::RegisterMTPFil
      // Note that this initializes the delegate asynchronously, but since

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/atom_cache.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- ui/gfx/x/atom_cache.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ui/gfx/x/atom_cache.cc
 @@ -157,6 +157,7 @@ constexpr auto kAtomsToCache = std::to_a
      "application/octet-stream",

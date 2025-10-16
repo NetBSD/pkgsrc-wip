@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/robo_lib/config.py.orig	2025-09-29 17:05:47.000000000 +0000
+--- media/ffmpeg/scripts/robo_lib/config.py.orig	2025-10-13 21:41:26.000000000 +0000
 +++ media/ffmpeg/scripts/robo_lib/config.py
 @@ -56,19 +56,13 @@ class RoboConfiguration:
          self._llvm_path = os.path.join(self.chrome_src(), "third_party",

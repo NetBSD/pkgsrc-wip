@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/enterprise/browser_management/browser_management_service.h
 @@ -41,7 +41,7 @@ class BrowserManagementService : public 
  

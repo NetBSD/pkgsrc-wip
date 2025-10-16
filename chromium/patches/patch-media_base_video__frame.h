@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- media/base/video_frame.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ media/base/video_frame.h
 @@ -41,7 +41,7 @@
  #include "ui/gfx/geometry/size.h"

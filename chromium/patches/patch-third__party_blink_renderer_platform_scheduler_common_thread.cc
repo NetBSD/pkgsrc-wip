@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ third_party/blink/renderer/platform/scheduler/common/thread.cc
 @@ -95,7 +95,7 @@ void Thread::CreateAndSetCompositorThrea
            // the program's lifetime once assigned.

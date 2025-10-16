@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/accelerator_table.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/ui/accelerator_table.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/ui/accelerator_table.cc
 @@ -72,11 +72,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},

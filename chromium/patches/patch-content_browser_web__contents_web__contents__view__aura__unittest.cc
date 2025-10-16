@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura_unittest.cc
 @@ -41,7 +41,7 @@
  #include "ui/base/dragdrop/os_exchange_data_provider_win.h"

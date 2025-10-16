@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
 @@ -99,7 +99,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
  #if BUILDFLAG(IS_FUCHSIA)

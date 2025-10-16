@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.h
 @@ -133,7 +133,7 @@ class WebRtcLoggingController
                           size_t web_app_id,

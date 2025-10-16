@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_configs.cc
 @@ -153,7 +153,7 @@
  #include "chrome/browser/ui/webui/conflicts/conflicts_ui.h"

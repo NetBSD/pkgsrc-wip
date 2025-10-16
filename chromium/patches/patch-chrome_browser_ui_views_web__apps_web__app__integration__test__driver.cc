@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
 @@ -515,7 +515,7 @@ std::string GetFileExtension(FileExtensi
  }

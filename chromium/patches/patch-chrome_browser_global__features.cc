@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -24,7 +24,7 @@
  #include "chrome/browser/glic/public/glic_enabling.h"               // nogncheck

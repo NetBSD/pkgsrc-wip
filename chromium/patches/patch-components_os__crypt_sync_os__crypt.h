@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2025-09-29 17:05:47.000000000 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -23,7 +23,7 @@ class Keychain;
  }

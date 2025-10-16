@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2025-09-29 17:05:47.000000000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
 @@ -329,7 +329,7 @@
  #include "chrome/browser/devtools/devtools_window.h"
@@ -38,7 +38,7 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1785,7 +1785,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1792,7 +1792,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
@@ -47,7 +47,7 @@ $NetBSD$
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1937,7 +1937,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1944,7 +1944,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -56,7 +56,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2310,13 +2310,13 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2317,13 +2317,13 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
