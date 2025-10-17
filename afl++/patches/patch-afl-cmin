@@ -1,0 +1,25 @@
+$NetBSD$
+
+* Use gawk instead of awk
+* Use getconf instead of nproc
+
+--- afl-cmin.orig	2025-10-01 07:45:10.000000000 +0000
++++ afl-cmin
+@@ -16,7 +16,7 @@ test "$SYS" = "Darwin" && {
+ export AFL_QUIET=1
+ export ASAN_OPTIONS=detect_leaks=0
+ export PATH="${THISPATH}:$PATH"
+-awk -f - -- ${@+"$@"} <<'EOF'
++gawk -f - -- ${@+"$@"} <<'EOF'
+ #!/usr/bin/awk -f
+ # awk script to minimize a test corpus of input files
+ #
+@@ -383,7 +383,7 @@ BEGIN {
+   }
+ 
+   if (threads) {
+-    cmd = "nproc"
++    cmd = "getconf NPROCESSORS_ONLN"
+     cmd | getline nproc
+     close(cmd)
+     if (threads == "all") {
