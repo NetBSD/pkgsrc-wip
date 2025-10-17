@@ -141,6 +141,7 @@ SUBDIR+=	aegis-devel
 SUBDIR+=	aegisub
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
+SUBDIR+=	afl++
 SUBDIR+=	afl-cov
 SUBDIR+=	agile
 SUBDIR+=	ags
