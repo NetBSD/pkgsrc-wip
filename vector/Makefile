@@ -20,6 +20,23 @@ GITHUB_SUBMODULES+=	vectordotdev tokio b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7 
 
 .include "cargo-depends.mk"
 
+# Depends on an unpublished crates. Can't use cargo.mk to fetch it.
+VRL_REV=			560dac8b6b494d722fa9a57d98ed2e7e36ee75f6
+TRACING-TOWER_REV=		e0642d949891546a3bb7e47080365ee7274f05cd
+GREPTIMEDB-INGESTER_REV=	f7243393808640f5123b0d5b7b798da591a4df6e
+HEIM_REV=			f3537d9b32e69a2a8ab19a0d42a1e6f5577a5a45
+
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	vrl-${VRL_REV}.tar.gz
+DISTFILES+=	tracing-tower-${TRACING-TOWER_REV}.tar.gz
+DISTFILES+=	greptimedb-ingester-${GREPTIMEDB-INGESTER_REV}.tar.gz
+DISTFILES+=	heim-${HEIM_REV}.tar.gz
+
+SITES.vrl-${VRL_REV}.tar.gz=					-${MASTER_SITE_GITHUB:=vectordotdev/}vrl/archive/${VRL_REV}.tar.gz
+SITES.tracing-tower-${TRACING-TOWER_REV}.tar.gz=		-${MASTER_SITE_GITHUB:=tokio-rs/}tracing/archive/${TRACING-TOWER_REV}.tar.gz
+SITES.greptimedb-ingester-${GREPTIMEDB-INGESTER_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=GreptimeTeam/}greptimedb-ingester-rust/archive/${GREPTIMEDB-INGESTER_REV}.tar.gz
+SITES.heim-${HEIM_REV}.tar.gz=					-${MASTER_SITE_GITHUB:=vectordotdev/}heim/archive/${HEIM_REV}.tar.gz
+
 RUST_REQ=	1.88.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
