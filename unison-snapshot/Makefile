@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.170 2025/08/30 22:46:06 wiz Exp $
 
 # master after 2.53.7
-# 2025-10-16: alpha1
-DISTNAME=	unison-2.53.7.71
+# 2025-10-16: alpha2
+DISTNAME=	unison-2.53.7.72
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	7516f58f29b097e2a0fbe2b272c9bb96387b220c
+GITHUB_TAG=	a34366f7474cb238f176ce6c04004cada5ef6978
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
@@ -20,10 +20,6 @@ MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	HOME=${WRKDIR:Q}
-
-# Reported upstream 20251016.  Race between creating new digest compat
-# file and using it, provoked with -j2.
-MAKE_JOBS_SAFE=	no
 
 .include "../../lang/ocaml/ocaml.mk"
 
