@@ -3321,7 +3321,6 @@ SUBDIR+=	postoffice
 SUBDIR+=	pounce
 SUBDIR+=	povray
 SUBDIR+=	powerdevil
-SUBDIR+=	powerdns
 SUBDIR+=	powerdns-recursor
 SUBDIR+=	powerlevel10k
 SUBDIR+=	powerline
