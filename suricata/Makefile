@@ -55,8 +55,7 @@ CONFIGURE_ARGS+=	--enable-profiling
 .endif
 
 #
-# 1. Generate and place some initial configuration files into etc!
-# 2. Create some runtime directories in var
+# Generate and place some initial configuration files into etc!
 #
 post-install:
 	cd ${WRKSRC} \

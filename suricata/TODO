@@ -2,12 +2,10 @@
 #+title: TODO for Suricata 8 package
 
 * Makefile
-- check rust/vendor/* need
-  
+
 * Configure
 - libunwind and dev header not found
-- check not found includes, features that exists on NetBSD
-  and add support
+- check not found includes
 
 * Build / porting
   
@@ -16,7 +14,5 @@
 - run executables, fix errors
 
 * Package / Install
-- create /var subdirs
-  - log/suricata
 - run suricata-update during install or disp message
   about it
