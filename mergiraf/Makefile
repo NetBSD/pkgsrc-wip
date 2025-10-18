@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mergiraf-0.14.0
+DISTNAME=	mergiraf-0.15.0
 CATEGORIES=	devel
 MASTER_SITES=	-https://codeberg.org/mergiraf/mergiraf/archive/v${PKGVERSION_NOREV}.tar.gz
 
