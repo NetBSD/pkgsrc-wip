@@ -11,16 +11,15 @@ COMMENT=	High-performance observability data pipeline
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=	cargo-nextest-[0-9]*:../../wip/cargo-nextest
-TOOL_DEPENDS+=	cargo-auditable-[0-9]*:../../wip/cargo-auditable
-
-GITHUB_SUBMODULES+=	MSxDOS ntapi 24fc1e47677fc9f6e38e5f154e6011dc9b270da6 ntapi
-GITHUB_SUBMODULES+=	vectordotdev nix 6c53a918d2d5bf4307fd60a19d9e10913ae71eeb memfd/gnu/musl
-GITHUB_SUBMODULES+=	vectordotdev tokio b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7 tokio-util-0.7.13-framed-read-continue-on-error
+#TOOL_DEPENDS+=	cargo-nextest-[0-9]*:../../wip/cargo-nextest
+#TOOL_DEPENDS+=	cargo-auditable-[0-9]*:../../wip/cargo-auditable
 
 .include "cargo-depends.mk"
 
 # Depends on an unpublished crates. Can't use cargo.mk to fetch it.
+NTAPI_REV=			24fc1e47677fc9f6e38e5f154e6011dc9b270da6
+NIX_REV=			6c53a918d2d5bf4307fd60a19d9e10913ae71eeb
+TOKIO-UTIL_REV=			b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7
 VRL_REV=			560dac8b6b494d722fa9a57d98ed2e7e36ee75f6
 TRACING-TOWER_REV=		e0642d949891546a3bb7e47080365ee7274f05cd
 GREPTIMEDB-INGESTER_REV=	f7243393808640f5123b0d5b7b798da591a4df6e
@@ -31,6 +30,9 @@ TRACING_REV=			e0642d949891546a3bb7e47080365ee7274f05cd
 GREPTIME-PROTO_REV=		396206c2801b5a3ec51bfe8984c66b686da910e6
 
 DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	ntapi-${NTAPI_REV}.tar.gz
+DISTFILES+=	nix-${NIX_REV}.tar.gz
+DISTFILES+=	tokio-util-${TOKIO-UTIL_REV}.tar.gz
 DISTFILES+=	vrl-${VRL_REV}.tar.gz
 DISTFILES+=	tracing-tower-${TRACING-TOWER_REV}.tar.gz
 DISTFILES+=	greptimedb-ingester-${GREPTIMEDB-INGESTER_REV}.tar.gz
@@ -40,6 +42,9 @@ DISTFILES+=	tracing-core-${TRACING-CORE_REV}.tar.gz
 DISTFILES+=	tracing-${TRACING_REV}.tar.gz
 DISTFILES+=	greptime-proto-${GREPTIME-PROTO_REV}.tar.gz
 
+SITES.ntapi-${NTAPI_REV}.tar.gz=				-${MASTER_SITE_GITHUB:=MSxDOS/}ntapi/archive/${NTAPI_REV}.tar.gz
+SITES.nix-${NIX_REV}.tar.gz=					-${MASTER_SITE_GITHUB:=vectordotdev/}nix/archive/${NIX_REV}.tar.gz
+SITES.tokio-util-${TOKIO-UTIL_REV}.tar.gz=			-${MASTER_SITE_GITHUB:=vectordotdev/}tokio/archive/${TOKIO-UTIL_REV}.tar.gz
 SITES.vrl-${VRL_REV}.tar.gz=					-${MASTER_SITE_GITHUB:=vectordotdev/}vrl/archive/${VRL_REV}.tar.gz
 SITES.tracing-tower-${TRACING-TOWER_REV}.tar.gz=		-${MASTER_SITE_GITHUB:=tokio-rs/}tracing/archive/${TRACING-TOWER_REV}.tar.gz
 SITES.greptimedb-ingester-${GREPTIMEDB-INGESTER_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=GreptimeTeam/}greptimedb-ingester-rust/archive/${GREPTIMEDB-INGESTER_REV}.tar.gz
@@ -67,6 +72,6 @@ RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/lua54/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+#.include "../../lang/lua54/buildlink3.mk"
+#.include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

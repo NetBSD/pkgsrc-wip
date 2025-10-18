@@ -1,0 +1,57 @@
+$NetBSD$
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- Cargo.toml.orig	2025-10-18 14:00:47.075518311 +0000
++++ Cargo.toml
+@@ -195,7 +195,7 @@ vector-lib = { path = "lib/vector-lib", 
+ vector-config = { path = "lib/vector-config" }
+ vector-config-common = { path = "lib/vector-config-common" }
+ vector-config-macros = { path = "lib/vector-config-macros" }
+-vrl = { git = "https://github.com/vectordotdev/vrl.git", branch = "main", features = ["arbitrary", "cli", "test", "test_framework"] }
++vrl = { path = "../vrl-560dac8b6b494d722fa9a57d98ed2e7e36ee75f6", features = ["arbitrary", "cli", "test", "test_framework"] }
+ 
+ [dependencies]
+ cfg-if.workspace = true
+@@ -239,7 +239,7 @@ tracing.workspace = true
+ tracing-core = { version = "0.1.26", default-features = false }
+ tracing-futures = { version = "0.2.5", default-features = false, features = ["futures-03"] }
+ tracing-subscriber = { workspace = true, features = ["ansi", "env-filter", "fmt", "json", "registry", "tracing-log"] }
+-tracing-tower = { git = "https://github.com/tokio-rs/tracing", default-features = false, rev = "e0642d949891546a3bb7e47080365ee7274f05cd" }
++tracing-tower = { path = "../tracing-e0642d949891546a3bb7e47080365ee7274f05cd", default-features = false }
+ 
+ # Metrics
+ metrics.workspace = true
+@@ -334,7 +334,7 @@ ratatui = { version = "0.29.0", optional
+ hex = { version = "0.4.3", default-features = false, optional = true }
+ 
+ # GreptimeDB
+-greptimedb-ingester = { git = "https://github.com/GreptimeTeam/greptimedb-ingester-rust", rev = "f7243393808640f5123b0d5b7b798da591a4df6e", optional = true }
++greptimedb-ingester = { path = "../greptimedb-ingester-rust-f7243393808640f5123b0d5b7b798da591a4df6e", optional = true }
+ 
+ # External libs
+ arc-swap = { version = "1.7", default-features = false, optional = true }
+@@ -428,7 +428,7 @@ arr_macro = { version = "0.2.1" }
+ 
+ # depending on fork for bumped nix dependency
+ # https://github.com/heim-rs/heim/pull/360
+-heim = { git = "https://github.com/vectordotdev/heim.git", branch = "update-nix", default-features = false, features = ["disk"] }
++heim = { path = "../heim-f3537d9b32e69a2a8ab19a0d42a1e6f5577a5a45", default-features = false, features = ["disk"] }
+ 
+ # make sure to update the external docs when the Lua version changes
+ mlua = { version = "0.10.5", default-features = false, features = ["lua54", "send", "vendored", "macros"], optional = true }
+@@ -483,11 +483,11 @@ zstd = { version = "0.13.0", default-fea
+ 
+ [patch.crates-io]
+ # The upgrade for `tokio-util` >= 0.6.9 is blocked on https://github.com/vectordotdev/vector/issues/11257.
+-tokio-util = { git = "https://github.com/vectordotdev/tokio", branch = "tokio-util-0.7.13-framed-read-continue-on-error" }
+-nix = { git = "https://github.com/vectordotdev/nix.git", branch = "memfd/gnu/musl" }
++tokio-util = { path = "../tokio-b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7" }
++nix = { path = "../nix-6c53a918d2d5bf4307fd60a19d9e10913ae71eeb" }
+ # The `heim` crates depend on `ntapi` 0.3.7 on Windows, but that version has an
+ # unaligned access bug fixed in the following revision.
+-ntapi = { git = "https://github.com/MSxDOS/ntapi.git", rev = "24fc1e47677fc9f6e38e5f154e6011dc9b270da6" }
++ntapi = { path = "../ntapi-24fc1e47677fc9f6e38e5f154e6011dc9b270da6" }
+ 
+ [features]
+ # Default features for *-unknown-linux-gnu and *-apple-darwin
