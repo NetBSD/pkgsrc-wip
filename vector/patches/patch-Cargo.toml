@@ -18,7 +18,7 @@ Depends on unpublished crates. Can't use cargo.mk to fetch it.
  tracing-futures = { version = "0.2.5", default-features = false, features = ["futures-03"] }
  tracing-subscriber = { workspace = true, features = ["ansi", "env-filter", "fmt", "json", "registry", "tracing-log"] }
 -tracing-tower = { git = "https://github.com/tokio-rs/tracing", default-features = false, rev = "e0642d949891546a3bb7e47080365ee7274f05cd" }
-+tracing-tower = { path = "../tracing-e0642d949891546a3bb7e47080365ee7274f05cd", default-features = false }
++tracing-tower = { path = "../tracing-e0642d949891546a3bb7e47080365ee7274f05cd/tracing-tower", default-features = false }
  
  # Metrics
  metrics.workspace = true
@@ -46,7 +46,7 @@ Depends on unpublished crates. Can't use cargo.mk to fetch it.
  # The upgrade for `tokio-util` >= 0.6.9 is blocked on https://github.com/vectordotdev/vector/issues/11257.
 -tokio-util = { git = "https://github.com/vectordotdev/tokio", branch = "tokio-util-0.7.13-framed-read-continue-on-error" }
 -nix = { git = "https://github.com/vectordotdev/nix.git", branch = "memfd/gnu/musl" }
-+tokio-util = { path = "../tokio-b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7" }
++tokio-util = { path = "../tokio-b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7/tokio-util" }
 +nix = { path = "../nix-6c53a918d2d5bf4307fd60a19d9e10913ae71eeb" }
  # The `heim` crates depend on `ntapi` 0.3.7 on Windows, but that version has an
  # unaligned access bug fixed in the following revision.

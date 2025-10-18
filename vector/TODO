@@ -1,11 +1,14 @@
 ===> Building for vector-0.50.0
-error: failed to load source for dependency `tokio-util`
+error: failed to get `heim` as a dependency of package `vector v0.50.0 (/usr/pkgsrc/wip/vector/work/vector-0.50.0)`
 
 Caused by:
-  Unable to update /usr/pkgsrc/wip/vector/work/tokio-b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7
+  failed to load source for dependency `heim`
 
 Caused by:
-  found a virtual manifest at `/usr/pkgsrc/wip/vector/work/tokio-b4bdfda8fe8aa24eba36de0d60063b14f30c7fe7/Cargo.toml` instead of a package manifest
+  Unable to update /usr/pkgsrc/wip/vector/work/heim-f3537d9b32e69a2a8ab19a0d42a1e6f5577a5a45
+
+Caused by:
+  found a virtual manifest at `/usr/pkgsrc/wip/vector/work/heim-f3537d9b32e69a2a8ab19a0d42a1e6f5577a5a45/Cargo.toml` instead of a package manifest
 *** Error code 101
 
 Stop.
