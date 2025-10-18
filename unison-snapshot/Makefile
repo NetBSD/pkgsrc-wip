@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2024/11/23 13:59:40 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/08/30 22:46:06 wiz Exp $
 
 # master after 2.53.7
 # 2025-10-16: alpha1

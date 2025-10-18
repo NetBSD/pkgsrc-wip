@@ -4,10 +4,14 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk libinotify
 PKG_SUGGESTED_OPTIONS=	lablgtk
 
-# monitor is a PLIST var for any of the reasons why unison-fsmonitor is built
+# gtk3 is true if unison-gui is built.
+# monitor is true if unison-fsmonitor is built.
 PLIST_VARS+=	gtk3 monitor
 
-# Extend to systems as they are tested to build fsmonitor
+# Extend to systems as they are tested to build fsmonitor.
+# \todo FreeBSD, Linux, macOS, OpenBSD, SunOS.
+# \todo Perhaps, just enable unless libinotify says NOT_FOR_PLATFORM.
+
 .if ${MACHINE_PLATFORM:MNetBSD-*}
 PKG_SUGGESTED_OPTIONS+=	libinotify
 .endif
@@ -26,6 +30,3 @@ PLIST.monitor=	yes
 
 .include "../../devel/libinotify/buildlink3.mk"
 .endif
-
-# \todo Probably, enable monitor on GNU/Linux.
-# \todo Probably, enable monitor on SunOS.
