@@ -64,6 +64,7 @@ PLIST_VARS+=	vdpau
 BUILDLINK_TRANSFORM+=	rm:-DUSE_ELF_TLS
 .endif
 
+PLIST_VARS+=	iris
 #
 # LLVM support
 #

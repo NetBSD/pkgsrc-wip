@@ -52,9 +52,9 @@ ${PLIST.arm}lib/dri/mediatek_dri.so
 ${PLIST.arm}lib/dri/meson_dri.so
 ${PLIST.arm}lib/dri/mi0283qt_dri.so
 ${PLIST.arm}lib/dri/mxsfb-drm_dri.so
-${PLIST.arm}lib/dri/panel-mipi-dbi_dri.so
 ${PLIST.nouveau}lib/dri/nouveau_dri.so
 ${PLIST.nouveau}${PLIST.vaapi}lib/dri/nouveau_drv_video.so
+${PLIST.arm}lib/dri/panel-mipi-dbi_dri.so
 ${PLIST.arm}lib/dri/panfrost_dri.so
 ${PLIST.arm}lib/dri/panthor_dri.so
 ${PLIST.arm}lib/dri/pl111_dri.so
@@ -111,6 +111,7 @@ ${PLIST.kms}lib/pkgconfig/gbm.pc
 ${PLIST.glx}lib/pkgconfig/gl.pc
 lib/pkgconfig/glesv1_cm.pc
 lib/pkgconfig/glesv2.pc
+${PLIST.glx}lib/pkgconfig/glx.pc
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0

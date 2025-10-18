@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=	mesa-25.2.2
+DISTNAME=	mesa-25.2.5
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
@@ -39,7 +39,7 @@ PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
 PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
-PLIST_VARS+=		r300 svga nouveau iris
+PLIST_VARS+=		r300 svga nouveau
 
 # other features
 PLIST_VARS+=		arm kms vaapi
@@ -164,6 +164,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/dri.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/gbm.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/egl.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/gl.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/glx.pc
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
