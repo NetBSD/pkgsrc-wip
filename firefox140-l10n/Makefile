@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox140
-LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 # as of 96.0.3
+LICENSE=	mpl-2.0 # as of 140.4.0esr
 
 DEPENDS+=	firefox140>=${PKGVERSION_NOREV}:../../wip/firefox140
 
