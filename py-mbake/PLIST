@@ -80,6 +80,9 @@ ${PYSITELIB}/mbake/core/rules/tabs.pyo
 ${PYSITELIB}/mbake/core/rules/target_spacing.py
 ${PYSITELIB}/mbake/core/rules/target_spacing.pyc
 ${PYSITELIB}/mbake/core/rules/target_spacing.pyo
+${PYSITELIB}/mbake/core/rules/target_validation.py
+${PYSITELIB}/mbake/core/rules/target_validation.pyc
+${PYSITELIB}/mbake/core/rules/target_validation.pyo
 ${PYSITELIB}/mbake/core/rules/whitespace.py
 ${PYSITELIB}/mbake/core/rules/whitespace.pyc
 ${PYSITELIB}/mbake/core/rules/whitespace.pyo
