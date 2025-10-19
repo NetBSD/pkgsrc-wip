@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.292 2025/07/23 13:58:25 ryoon Exp $
 
-FIREFOX_VER=	140.3.1esr
-PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
+FIREFOX_VER=	140.4.0esr
+PKGNAME=	firefox140-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
 #MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
@@ -9,10 +9,10 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
-COMMENT=	Language packs for www/firefox
+COMMENT=	Language packs for www/firefox140
 LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 # as of 96.0.3
 
-DEPENDS+=	firefox140>=${PKGVERSION_NOREV}:../../www/firefox140
+DEPENDS+=	firefox140>=${PKGVERSION_NOREV}:../../wip/firefox140
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${FIREFOX_LOCALES:=.xpi}
@@ -31,7 +31,7 @@ FIREFOX_LOCALES= \
 	pa-IN pl pt-BR pt-PT rm ro ru sat sc sco si sk skr sl son sq sr	\
 	sv-SE szl ta te th tl tr trs uk ur uz vi xh zh-CN zh-TW
 
-EXTENSIONS_DIR=		${PREFIX}/lib/firefox/distribution/extensions
+EXTENSIONS_DIR=		${PREFIX}/lib/firefox140/distribution/extensions
 
 do-install:
 .for locale in ${FIREFOX_LOCALES}
