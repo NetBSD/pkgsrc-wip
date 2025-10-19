@@ -6,3 +6,4 @@ Size (AFLplusplus-4.34c.tar.gz) = 3100867 bytes
 SHA1 (patch-GNUmakefile) = 7c628d33c5f542bbbcdeafcbad37a50ac3820dd3
 SHA1 (patch-GNUmakefile.llvm) = cf76d3b5bb81e17a331c531bbbb174f2c918ac04
 SHA1 (patch-afl-cmin) = 4c821a9a7efcf40f86737dcc04abd12e614dbdc8
+SHA1 (patch-src_afl-cc.c) = ce8b51060b94f8129a9ef08fa131d2c20acc8c53
