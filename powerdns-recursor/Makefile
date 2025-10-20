@@ -4,41 +4,43 @@ DISTNAME=	pdns-recursor-5.3.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.xz
-PKGNAME=        powerdns-recursor-5.3.0
+PKGNAME=	powerdns-recursor-5.3.0
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://downloads.powerdns.com/releases/
 COMMENT=	PowerDNS resolver
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=          yes
-USE_TOOLS+=             gmake pkg-config
-USE_LIBTOOL=            yes
-USE_LANGUAGES=          c c++
-USE_CXX_FEATURES+=      c++17
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=        --with-libsodium
-CONFIGURE_ARGS+=        --enable-dns-over-tls
-CONFIGURE_ARGS+=        --with-boost=${BUILDLINK_PREFIX.boost-headers}
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-libsodium
+CONFIGURE_ARGS+=	--enable-dns-over-tls
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
-CHECK_WRKREF_SKIP+=     sbin/pdns_recursor
+CHECK_WRKREF_SKIP+=	sbin/pdns_recursor
 
-EGDIR=                  ${PREFIX}/share/examples/powerdns-recursor52
-CONF_FILES=             ${EGDIR}/recursor.yml-dist ${PKG_SYSCONFDIR}/recursor.yml
-INSTALLATION_DIRS+=     ${EGDIR}
-INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} sysconfdir=${EGDIR}
+EGDIR=			${PREFIX}/share/examples/powerdns-recursor52
+CONF_FILES=		${EGDIR}/recursor.yml-dist ${PKG_SYSCONFDIR}/recursor.yml
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
-RCD_SCRIPTS=            pdns_recursor
+RCD_SCRIPTS=		pdns_recursor
 
-SMF_NAME=               pdns-recursor
-SMF_METHODS=            pdns_recursor
+SMF_NAME=		pdns-recursor
+SMF_METHODS=		pdns_recursor
 
+do-build:
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
 
+.include "cargo-depends.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "cargo-depends.mk"
-.include "cargo.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
