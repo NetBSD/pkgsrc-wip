@@ -1,12 +1,7 @@
 # $NetBSD: Makefile,v 1.148 2023/04/09 07:28:27 wiz Exp $
 
-# Please do not update to ocaml 5.x without discussion, as the
-# consensus is mostly that those versions are not yet baked, and will
-# cause hard-to-debug problems.
 DISTNAME=	ocaml-5.4.0
 CATEGORIES=	lang
-# unreliable
-#MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-5.2/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
@@ -64,6 +59,7 @@ CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
+# \todo Explain.
 .if ${OPSYS} == "Linux"
 INSTALL_UNSTRIPPED=	yes
 .endif
@@ -88,6 +84,7 @@ fix-darwin-install-name:
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
 .endif
+
 .PHONY: fix-man-extension
 post-install: fix-man-extension
 fix-man-extension:

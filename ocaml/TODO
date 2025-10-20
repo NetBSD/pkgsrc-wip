@@ -1,10 +1,17 @@
 - improve COMMIT_MESSAGE
+  + review dropped patches
+
 - create meta-pkgs/bulk-test-ocaml and test
+
 - examine unresolved upstream 5.x issues
-  + https://github.com/ocaml/ocaml/issues/11913
-  + https://github.com/ocaml/ocaml/issues/13262
+  + https://github.com/ocaml/ocaml/issues/11913 [stale]
   + https://github.com/ocaml/ocaml/pull/13320
-  in light of the prominent caution at
+
+- in light of the prominent caution at
     https://github.com/ocaml/ocaml/blob/trunk/README.adoc
-  - run tests and assess
+  run tests of ocaml programs:
+  + unison
+  + (call for tests on unison-users)
+
 - fix native compiler build
+  (it's not clear what this means, but test native code generation with unison)es

@@ -1,4 +1,70 @@
 This package provides ocaml major version 5.
 
-It was started without any of the patches to find out
-if they were really needed, and it built fine without.
+Packaging changes:
+
+  All of the patches from 4.14 were dropped, as an experiment to see
+  if they are really needed.  ocaml builds, appears to work, and
+  programs compiled with it appear to work, so no patches have been
+  carried forward.
+
+  \todo Look at the patches, and maybe drop them from 4.14 to see if
+  they are unnecessary there.
+
+Upstream NEWS, less bugfixes, minor improvements, and Windows things:
+
+* 5.4.0
+
+  Labelled tuples
+  Immutable arrays
+  Array literal syntax support for immutable arrays and floatarrays (through type-directed disambiguation)
+  Atomic record fields
+  Four new standard library modules: Pair, Pqueue, Repr, and Iarray
+  Restored "memory cleanup upon exit" mode
+
+* 5.3.0
+
+  Syntax for deep effect handlers
+  Re-introduced statistical memory profiling
+  More space-efficient implementation of Dynarray
+  utf-8 encoded Unicode source files and modest support of Unicode identifiers
+  Improved metadata on the pairs of declarations and definitions for merlin.
+
+* 5.2.0
+
+  [experimental]
+  Reintroduced GC compaction
+  Restored native backend for POWER 64 bits
+  ThreadSanitizer support
+  New Dynarray module
+  New -H flag for hidden include directories
+  Project-wide occurrence metadata support for developer tools
+  Raw identifiers
+  Local open in type expressions
+
+* 5.1.0
+
+  [experimental]
+  Many runtime performance regression and memory-leak fixes (dynlinking, weak array, weak hash sets, GC with idle domains, GC prefetching).
+  Restored support for native code generation on RISC-V and s390x architectures.
+  Restored Cygwin port.
+  Reduced installation size (50% reduction)
+  Compressed compilation artefacts (.cmi, .cmt, .cmti, .cmo, .cma files)
+
+* 5.0.0
+
+  [not marked experimental but clearly it is -gdt]
+  OCaml 5.0.0 introduces a completely new runtime system with support
+  for shared memory parallelism and effect handlers.
+
+  As a language, OCaml 5 is fully compatible with OCaml 4, down to the
+  performance characteristics of your programs. In other words, any
+  code that works with OCaml 4 should work the same with OCaml 5.
+
+  The currently known exceptions to this rule are:
+
+      The removal of many long-deprecated functions and modules
+      Changes to the internal runtime API
+      The performance of ephemerons is currently (and temporarily) strongly degraded
+
+  For a comprehensive list of changes and details on all new features,
+  bug fixes, optimisations, etc., please consult the changelog
