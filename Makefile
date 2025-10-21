@@ -2237,7 +2237,6 @@ SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
 SUBDIR+=	lilypond-git
 SUBDIR+=	lilyterm
-SUBDIR+=	lima
 SUBDIR+=	linbox
 SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
