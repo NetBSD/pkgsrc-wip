@@ -1,3 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/09/05 02:41:03 makoto Exp $
-
-SHA1 (patch-host_include_uhd_transport_nirio_nirio__driver__iface_h) = 2ba6c50f467515bfac9fe330572bb0154154a0ad
