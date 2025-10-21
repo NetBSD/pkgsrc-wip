@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/printing/printing_features.h.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/printing/printing_features.h.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/printing/printing_features.h
-@@ -21,7 +21,7 @@ namespace features {
- COMPONENT_EXPORT(PRINTING_BASE) BASE_DECLARE_FEATURE(kEnableBorderlessPrinting);
+@@ -22,7 +22,7 @@ COMPONENT_EXPORT(PRINTING_BASE)
+ BASE_DECLARE_FEATURE(kAddPrinterViaPrintscanmgr);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
--#if BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  COMPONENT_EXPORT(PRINTING_BASE) BASE_DECLARE_FEATURE(kCupsIppPrintingBackend);
- #endif  // BUILDFLAG(IS_MAC)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
  

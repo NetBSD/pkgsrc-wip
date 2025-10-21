@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/gfx/platform_font_skia.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/platform_font_skia.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/platform_font_skia.cc
-@@ -30,7 +30,7 @@
+@@ -29,7 +29,7 @@
  #include "ui/gfx/system_fonts_win.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -168,7 +168,7 @@ void PlatformFontSkia::EnsuresDefaultFon
+@@ -167,7 +167,7 @@ void PlatformFontSkia::EnsuresDefaultFon
    weight = system_font.GetWeight();
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -23,4 +23,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // On Linux, LinuxUi is used to query the native toolkit (e.g.
    // GTK) for the default UI font.
-   if (const auto* linux_ui = ui::LinuxUi::instance()) {
+   if (auto* linux_ui = ui::LinuxUi::instance()) {

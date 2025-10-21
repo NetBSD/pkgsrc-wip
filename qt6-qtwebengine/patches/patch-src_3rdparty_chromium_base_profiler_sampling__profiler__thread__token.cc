@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/profiler/sampling_profiler_thread_token.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/profiler/sampling_profiler_thread_token.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/profiler/sampling_profiler_thread_token.cc
 @@ -6,7 +6,7 @@
  
@@ -21,6 +21,6 @@ $NetBSD$
    return {id, pthread_self()};
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   absl::optional<uintptr_t> maybe_stack_base =
+   std::optional<uintptr_t> maybe_stack_base =
        GetThreadStackBaseAddress(id, pthread_self());
    return {id, maybe_stack_base};

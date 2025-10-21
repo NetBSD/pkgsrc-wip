@@ -4,41 +4,32 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-01-24 10:49:20.000000000 +0000
+--- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
-@@ -47,7 +47,7 @@
+@@ -44,7 +44,7 @@
  #include "wow64apiset.h"
  #endif
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
++#if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS) || PA_BUILDFLAG(IS_BSD)
  #include <pthread.h>
  #endif
  
-@@ -278,7 +278,7 @@ void PartitionAllocMallocInitOnce() {
+@@ -290,7 +290,7 @@ void PartitionAllocMallocInitOnce() {
      return;
    }
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
++#if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS) || PA_BUILDFLAG(IS_BSD)
    // When fork() is called, only the current thread continues to execute in the
    // child process. If the lock is held, but *not* by this thread when fork() is
    // called, we have a deadlock.
-@@ -377,7 +377,7 @@ static size_t PartitionPurgeSlotSpan(Par
-       (PartitionPageSize() * kMaxPartitionPagesPerRegularSlotSpan) /
-       MinPurgeableSlotSize();
- #elif BUILDFLAG(IS_APPLE) ||                           \
--    ((BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)) && \
-+    ((BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && \
-      defined(ARCH_CPU_ARM64))
-   // It's better for slot_usage to be stack-allocated and fixed-size, which
-   // demands that its size be constexpr. On IS_APPLE and Linux on arm64,
-@@ -942,7 +942,7 @@ void PartitionRoot::Init(PartitionOption
+@@ -1110,7 +1110,7 @@ void PartitionRoot::Init(PartitionOption
      // apple OSes.
      PA_CHECK((internal::SystemPageSize() == (size_t{1} << 12)) ||
               (internal::SystemPageSize() == (size_t{1} << 14)));
--#elif BUILDFLAG(IS_LINUX) && defined(ARCH_CPU_ARM64)
-+#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(ARCH_CPU_ARM64)
+-#elif PA_BUILDFLAG(IS_LINUX) && PA_BUILDFLAG(PA_ARCH_CPU_ARM64)
++#elif (PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_BSD)) && PA_BUILDFLAG(PA_ARCH_CPU_ARM64)
      // Check runtime pagesize. Though the code is currently the same, it is
-     // not merged with the IS_APPLE case above as a 1 << 16 case needs to be
-     // added here in the future, to allow 64 kiB pagesize. That is only
+     // not merged with the IS_APPLE case above as a 1 << 16 case is only
+     // supported on Linux on AArch64.

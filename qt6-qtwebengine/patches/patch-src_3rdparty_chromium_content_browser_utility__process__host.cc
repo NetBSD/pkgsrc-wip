@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/browser/utility_process_host.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/content/browser/utility_process_host.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/utility_process_host.cc
-@@ -61,7 +61,7 @@
+@@ -62,7 +62,7 @@
  #include "content/browser/v8_snapshot_files.h"
  #endif
  
@@ -33,26 +33,44 @@ $NetBSD$
  base::ScopedFD PassNetworkContextParentDirs(
      std::vector<base::FilePath> network_context_parent_dirs) {
    base::Pickle pickle;
-@@ -150,7 +150,7 @@ UtilityProcessHost::UtilityProcessHost(s
+@@ -151,7 +151,7 @@ UtilityProcessHost::UtilityProcessHost(s
        started_(false),
        name_(u"utility process"),
        file_data_(std::make_unique<ChildProcessLauncherFileData>()),
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+       allowed_gpu_(false),
        gpu_client_(nullptr, base::OnTaskRunnerDeleter(nullptr)),
  #endif
-       client_(std::move(client)) {
-@@ -373,7 +373,7 @@ bool UtilityProcessHost::StartProcess() 
-       switches::kMuteAudio,
-       switches::kUseFileForFakeAudioCapture,
+@@ -210,7 +210,7 @@ void UtilityProcessHost::SetPreloadLibra
+ #endif  // BUILDFLAG(IS_WIN)
+ 
+ void UtilityProcessHost::SetAllowGpuClient() {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+   allowed_gpu_ = true;
+ #endif
+ }
+@@ -315,7 +315,7 @@ bool UtilityProcessHost::StartProcess() 
+         network::switches::kIgnoreCertificateErrorsSPKIList,
+         network::switches::kTestThirdPartyCookiePhaseout,
+         sandbox::policy::switches::kNoSandbox,
+-#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && !BUILDFLAG(IS_CHROMEOS)
+         switches::kDisableDevShmUsage,
+ #endif
+ #if BUILDFLAG(IS_MAC)
+@@ -347,7 +347,7 @@ bool UtilityProcessHost::StartProcess() 
+         switches::kMuteAudio,
+         switches::kUseFileForFakeAudioCapture,
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
 -    BUILDFLAG(IS_SOLARIS)
 +    BUILDFLAG(IS_SOLARIS) || BUILDFLAG(IS_NETBSD)
-       switches::kAlsaInputDevice,
-       switches::kAlsaOutputDevice,
+         switches::kAlsaInputDevice,
+         switches::kAlsaOutputDevice,
  #endif
-@@ -435,7 +435,7 @@ bool UtilityProcessHost::StartProcess() 
-     file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload());
+@@ -409,7 +409,7 @@ bool UtilityProcessHost::StartProcess() 
+     file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -60,7 +78,7 @@ $NetBSD$
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -446,13 +446,13 @@ bool UtilityProcessHost::StartProcess() 
+@@ -420,13 +420,13 @@ bool UtilityProcessHost::StartProcess() 
      }
  #endif  // BUILDFLAG(IS_LINUX)
  

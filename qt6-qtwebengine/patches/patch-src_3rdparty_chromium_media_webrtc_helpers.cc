@@ -4,14 +4,22 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/media/webrtc/helpers.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/media/webrtc/helpers.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/media/webrtc/helpers.cc
-@@ -40,7 +40,7 @@ void ConfigAutomaticGainControl(const Au
-     apm_config.gain_controller2.enabled = false;
+@@ -41,14 +41,14 @@ void ConfigAutomaticGainControl(const Au
      return;
    }
+ 
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Use the Hybrid AGC setup, which combines the AGC1 input volume controller
-   // and the AGC2 digital adaptive controller.
+   const bool kInputVolumeAdjustmentOverrideAllowed = true;
+ #elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
+   const bool kInputVolumeAdjustmentOverrideAllowed = false;
+ #endif
  
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+   // Use AGC2 digital and input volume controller.
+   // TODO(crbug.com/40872787): Remove `kWebRtcAllowInputVolumeAdjustment` safely
+   // and set `input_volume_controller.enabled` true.

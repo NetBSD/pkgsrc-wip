@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/BUILD.gn
-@@ -856,7 +856,7 @@ if (is_clang_or_gcc || is_msvc || is_min
-         configs -= [ "//build/config/compiler:enable_arc" ]
+@@ -860,7 +860,7 @@ if (is_clang_or_gcc || is_msvc || is_min
+         configs -= [ partition_alloc_enable_arc_config ]
        }
      }
 -    if (is_chromeos || is_linux) {

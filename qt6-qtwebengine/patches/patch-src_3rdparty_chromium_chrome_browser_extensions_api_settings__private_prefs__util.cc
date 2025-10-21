@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -196,7 +196,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
-   (*s_allowlist)[::prefs::kSidePanelHorizontalAlignment] =
+@@ -211,7 +211,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+   (*s_allowlist)[tab_groups::prefs::kAutoPinNewTabGroups] =
        settings_api::PrefType::kBoolean;
  
 -#if BUILDFLAG(IS_LINUX)
@@ -15,9 +15,9 @@ $NetBSD$
    (*s_allowlist)[::prefs::kUseCustomChromeFrame] =
        settings_api::PrefType::kBoolean;
  #endif
-@@ -205,7 +205,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
-   // Appearance settings.
+@@ -223,7 +223,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kCurrentThemeID] = settings_api::PrefType::kString;
+   (*s_allowlist)[::prefs::kPinnedActions] = settings_api::PrefType::kList;
    (*s_allowlist)[::prefs::kPolicyThemeColor] = settings_api::PrefType::kNumber;
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

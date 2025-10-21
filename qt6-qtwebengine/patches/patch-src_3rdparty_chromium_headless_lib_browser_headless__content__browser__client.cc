@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/headless/lib/browser/headless_content_browser_client.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/headless/lib/browser/headless_content_browser_client.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/headless/lib/browser/headless_content_browser_client.cc
-@@ -48,7 +48,7 @@
+@@ -50,13 +50,13 @@
  #include "ui/base/ui_base_switches.h"
  #include "ui/gfx/switches.h"
  
@@ -15,16 +15,23 @@ $NetBSD$
  #include "components/crash/core/app/crash_switches.h"  // nogncheck
  #include "components/crash/core/app/crashpad.h"        // nogncheck
  #include "content/public/common/content_descriptors.h"
-@@ -66,7 +66,7 @@
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
- namespace headless {
+-#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)) && defined(HEADLESS_USE_PREFS)
++#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(HEADLESS_USE_PREFS)
+ #include "components/os_crypt/sync/os_crypt.h"  // nogncheck
+ #include "content/public/browser/network_service_util.h"
+ #endif
+@@ -75,7 +75,7 @@ namespace headless {
+ 
+ namespace {
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- namespace {
- 
  int GetCrashSignalFD(const base::CommandLine& command_line,
-@@ -164,7 +164,7 @@ HeadlessContentBrowserClient::GetGenerat
+                      const HeadlessBrowser::Options& options) {
+   int fd;
+@@ -196,7 +196,7 @@ HeadlessContentBrowserClient::GetGenerat
    return content::GeneratedCodeCacheSettings(true, 0, context->GetPath());
  }
  
@@ -33,12 +40,21 @@ $NetBSD$
  void HeadlessContentBrowserClient::GetAdditionalMappedFilesForChildProcess(
      const base::CommandLine& command_line,
      int child_process_id,
-@@ -183,7 +183,7 @@ void HeadlessContentBrowserClient::Appen
- 
-   command_line->AppendSwitch(::switches::kHeadless);
+@@ -217,7 +217,7 @@ void HeadlessContentBrowserClient::Appen
+     command_line->AppendSwitchASCII(::switches::kHeadless, "old");
+   }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    int fd;
    pid_t pid;
    if (crash_reporter::GetHandlerSocket(&fd, &pid)) {
+@@ -478,7 +478,7 @@ void HeadlessContentBrowserClient::Handl
+ 
+ void HeadlessContentBrowserClient::SetEncryptionKey(
+     ::network::mojom::NetworkService* network_service) {
+-#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)) && defined(HEADLESS_USE_PREFS)
++#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(HEADLESS_USE_PREFS)
+   // The OSCrypt keys are process bound, so if network service is out of
+   // process, send it the required key if it is available.
+   if (content::IsOutOfProcessNetworkService()

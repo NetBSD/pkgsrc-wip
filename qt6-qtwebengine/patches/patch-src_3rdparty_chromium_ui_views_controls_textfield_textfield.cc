@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/views/controls/textfield/textfield.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/ui/views/controls/textfield/textfield.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/ui/views/controls/textfield/textfield.cc
-@@ -84,7 +84,7 @@
+@@ -85,7 +85,7 @@
  #include "base/win/win_util.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -744,7 +744,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -761,7 +761,7 @@ bool Textfield::OnKeyPressed(const ui::K
    if (!textfield)
      return handled;
  
@@ -33,7 +33,7 @@ $NetBSD$
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
    if (!handled && linux_ui &&
-@@ -927,7 +927,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -944,7 +944,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,16 +42,16 @@ $NetBSD$
    // Skip any accelerator handling that conflicts with custom keybindings.
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
-@@ -1969,7 +1969,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -1994,7 +1994,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- // TODO(https://crbug.com/952355): Implement this method to support Korean IME
+ // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2465,14 +2465,14 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2500,14 +2500,14 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }

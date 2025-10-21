@@ -28,6 +28,8 @@ UNLIMIT_RESOURCES+=	datasize
 
 USE_CXX_FEATURES+=	c++20
 
+EXTRA_CXXFLAGS=		-I${BUILDLINK_DIR}/include/libepoll-shim
+
 # kill fatal warnings or QtPdf fails to build because of
 #  warning: libstdc++.so.9, needed by ... may conflict with libstdc++.so.7
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
@@ -89,7 +91,9 @@ SUBST_FILES.path+=	src/3rdparty/chromium/services/device/time_zone_monitor/time_
 SUBST_FILES.path+=	src/3rdparty/chromium/third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/ui/qt/qt.gni
 SUBST_FILES.path+=	src/3rdparty/chromium/v8/tools/run-paxctl.py
-SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
+SUBST_FILES.path+=	src/core/CMakeLists.txt
+SUBST_FILES.path+=	src/pdf/CMakeLists.txt
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN EXTRA_CXXFLAGS
 
 NOT_PAX_MPROTECT_SAFE+=	qt6/libexec/QtWebEngineProcess
 

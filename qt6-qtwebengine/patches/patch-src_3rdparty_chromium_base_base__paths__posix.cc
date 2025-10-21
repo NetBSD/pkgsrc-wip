@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/base_paths_posix.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/base_paths_posix.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>
@@ -29,32 +29,30 @@ $NetBSD$
  #elif BUILDFLAG(IS_SOLARIS) || BUILDFLAG(IS_AIX)
  #include <stdlib.h>
  #endif
-@@ -48,14 +53,22 @@ bool PathProviderPosix(int key, FilePath
+@@ -47,12 +52,20 @@ bool PathProviderPosix(int key, FilePath
        *result = bin_dir;
        return true;
  #elif BUILDFLAG(IS_FREEBSD)
 -      int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
--      absl::optional<std::string> bin_dir = StringSysctl(name, std::size(name));
-+      absl::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 });
-       if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
-         NOTREACHED() << "Unable to resolve path.";
-         return false;
-       }
-       *result = FilePath(bin_dir.value());
-       return true;
-+#elif BUILDFLAG(IS_NETBSD)
-+      absl::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC_ARGS, getpid(), KERN_PROC_PATHNAME });
+-      std::optional<std::string> bin_dir = StringSysctl(name, std::size(name));
++      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 });
 +      if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
 +        NOTREACHED() << "Unable to resolve path.";
-+        return false;
 +      }
 +      *result = FilePath(bin_dir.value());
-+      VLOG(1) << "PathProviderPosix result: " << bin_dir.value();
 +      return true;
++#elif BUILDFLAG(IS_NETBSD)
++      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC_ARGS, getpid(), KERN_PROC_PATHNAME });
+       if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
+         NOTREACHED() << "Unable to resolve path.";
++        return false;
+       }
+       *result = FilePath(bin_dir.value());
++      VLOG(1) << "PathProviderPosix result: " << bin_dir.value();
+       return true;
  #elif BUILDFLAG(IS_SOLARIS)
        char bin_dir[PATH_MAX + 1];
-       if (realpath(getexecname(), bin_dir) == NULL) {
-@@ -65,13 +78,65 @@ bool PathProviderPosix(int key, FilePath
+@@ -62,13 +75,65 @@ bool PathProviderPosix(int key, FilePath
        *result = FilePath(bin_dir);
        return true;
  #elif BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_AIX)

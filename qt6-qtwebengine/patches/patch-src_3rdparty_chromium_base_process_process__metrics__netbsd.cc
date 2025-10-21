@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_metrics_netbsd.cc.orig	2024-12-21 10:25:09.621647360 +0000
+--- src/3rdparty/chromium/base/process/process_metrics_netbsd.cc.orig   2025-05-08 12:01:57.637816950 +0000
 +++ src/3rdparty/chromium/base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,174 @@
+@@ -0,0 +1,175 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -29,7 +29,8 @@ $NetBSD$
 +
 +ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
 +
-+TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
++base::expected<TimeDelta, ProcessCPUUsageError>
++ProcessMetrics::GetCumulativeCPUUsage() {
 +  struct kinfo_proc2 info;
 +  size_t length = sizeof(struct kinfo_proc2);
 +  struct timeval tv;
@@ -38,13 +39,13 @@ $NetBSD$
 +                sizeof(struct kinfo_proc2), 1 };
 +
 +  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
-+    return TimeDelta();
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
 +  }
 +
 +  tv.tv_sec = info.p_rtime_sec;
 +  tv.tv_usec = info.p_rtime_usec;
 +
-+  return Microseconds(TimeValToMicroseconds(tv));
++  return base::ok(Microseconds(TimeValToMicroseconds(tv)));
 +}
 +
 +// static

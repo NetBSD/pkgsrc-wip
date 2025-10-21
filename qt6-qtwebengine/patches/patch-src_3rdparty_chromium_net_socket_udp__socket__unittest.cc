@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/socket/udp_socket_unittest.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/net/socket/udp_socket_unittest.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/net/socket/udp_socket_unittest.cc
-@@ -344,7 +344,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
+@@ -372,7 +372,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);
  }
  
@@ -15,34 +15,34 @@ $NetBSD$
  // - MacOS: requires root permissions on OSX 10.7+.
  // - Android: devices attached to testbots don't have default network, so
  // broadcasting to 255.255.255.255 returns error -109 (Address not reachable).
-@@ -655,7 +655,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
+@@ -683,7 +683,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = client.SetDoNotFragment();
 -#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_FUCHSIA)
 +#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
-     // TODO(crbug.com/945590): IP_MTU_DISCOVER is not implemented on Fuchsia.
+     // TODO(crbug.com/42050633): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
- #elif BUILDFLAG(IS_MAC)
-@@ -683,7 +683,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
+ #else
+@@ -705,7 +705,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = server.SetDoNotFragment();
 -#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_FUCHSIA)
 +#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
-     // TODO(crbug.com/945590): IP_MTU_DISCOVER is not implemented on Fuchsia.
+     // TODO(crbug.com/42050633): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
- #elif BUILDFLAG(IS_MAC)
-@@ -748,7 +748,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
+ #else
+@@ -764,7 +764,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
  
- // TODO(https://crbug.com/947115): failing on device on iOS 12.2.
- // TODO(https://crbug.com/1227554): flaky on Mac 11.
+ // TODO(crbug.com/40620614): failing on device on iOS 12.2.
+ // TODO(crbug.com/40189274): flaky on Mac 11.
 -#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  #define MAYBE_SharedMulticastAddress DISABLED_SharedMulticastAddress
  #else
  #define MAYBE_SharedMulticastAddress SharedMulticastAddress
-@@ -802,7 +802,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
+@@ -818,7 +818,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
                                  NetLogSource());
    ASSERT_THAT(client_socket.Connect(send_address), IsOk());
  

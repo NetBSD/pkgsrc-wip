@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/components/viz/service/display_embedder/skia_output_surface_impl.cc
-@@ -1549,7 +1549,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
-             ->GetDeviceQueue()
-             ->GetVulkanPhysicalDevice(),
-         VK_IMAGE_TILING_OPTIMAL, vk_format, yuv_color_space, ycbcr_info);
+@@ -1498,7 +1498,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
+                                             ->GetVulkanPhysicalDevice(),
+                                         VK_IMAGE_TILING_OPTIMAL, vk_format,
+                                         si_format, yuv_color_space, ycbcr_info);
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      // Textures that were allocated _on linux_ with ycbcr info came from

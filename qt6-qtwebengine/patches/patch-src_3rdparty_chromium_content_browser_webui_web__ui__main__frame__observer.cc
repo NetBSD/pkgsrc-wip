@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/browser/webui/web_ui_main_frame_observer.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/content/browser/webui/web_ui_main_frame_observer.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/webui/web_ui_main_frame_observer.cc
 @@ -13,7 +13,7 @@
  #include "content/public/browser/navigation_handle.h"
@@ -35,7 +35,7 @@ $NetBSD$
      blink::mojom::ConsoleMessageLevel log_level,
 @@ -167,7 +167,7 @@ void WebUIMainFrameObserver::ReadyToComm
  
- // TODO(crbug.com/1129544) This is currently disabled due to Windows DLL
+ // TODO(crbug.com/40149439) This is currently disabled due to Windows DLL
  // thunking issues. Fix & re-enable.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

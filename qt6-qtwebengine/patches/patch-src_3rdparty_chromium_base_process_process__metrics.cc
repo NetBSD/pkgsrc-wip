@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_metrics.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_metrics.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_metrics.cc
 @@ -17,7 +17,7 @@ namespace base {
  namespace {
@@ -41,16 +41,11 @@ $NetBSD$
  double ProcessMetrics::GetPlatformIndependentCPUUsage(
      TimeDelta cumulative_cpu) {
    TimeTicks time = TimeTicks::Now();
-@@ -126,7 +125,6 @@ double ProcessMetrics::GetPlatformIndepe
- double ProcessMetrics::GetPlatformIndependentCPUUsage() {
-   return GetPlatformIndependentCPUUsage(GetCumulativeCPUUsage());
+@@ -129,10 +128,9 @@ ProcessMetrics::GetPlatformIndependentCP
+     return GetPlatformIndependentCPUUsage(cpu_usage);
+   });
  }
 -#endif
- 
- #if BUILDFLAG(IS_WIN)
- double ProcessMetrics::GetPreciseCPUUsage(TimeDelta cumulative_cpu) {
-@@ -157,7 +155,7 @@ double ProcessMetrics::GetPreciseCPUUsag
- #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_AIX)

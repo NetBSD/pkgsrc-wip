@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_metrics_freebsd.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_metrics_freebsd.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_metrics_freebsd.cc
-@@ -3,20 +3,38 @@
+@@ -3,19 +3,37 @@
  // found in the LICENSE file.
  
  #include "base/process/process_metrics.h"
@@ -23,7 +23,6 @@ $NetBSD$
 +#include <libutil.h>
 +
  #include "base/memory/ptr_util.h"
- #include "base/process/process_metrics_iocounters.h"
 +#include "base/values.h"
  
  namespace base {
@@ -48,35 +47,70 @@ $NetBSD$
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -24,20 +42,17 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -23,21 +41,53 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
--double ProcessMetrics::GetPlatformIndependentCPUUsage() {
-+TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
-   struct kinfo_proc info;
+-base::expected<double, ProcessCPUUsageError>
+-ProcessMetrics::GetPlatformIndependentCPUUsage() {
+-  struct kinfo_proc info;
 -  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, process_};
 -  size_t length = sizeof(info);
-+  size_t length = sizeof(struct kinfo_proc);
-+  struct timeval tv;
++base::expected<ProcessMemoryInfo, ProcessUsageError>
++ProcessMetrics::GetMemoryInfo() const {
++  ProcessMemoryInfo memory_info;
++  kvm_t *kd = kvm_open(nullptr, "/dev/null", nullptr, O_RDONLY, "kvm_open");
++  struct kinfo_proc *pp;
++  int nproc;
  
 -  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
--    return 0;
-+  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process_ };
+-    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  if (kd == nullptr) {
++    return base::unexpected(ProcessUsageError::kSystemError);
++  }
++
++  if ((pp = kvm_getprocs(kd, KERN_PROC_PID, process_, &nproc)) == nullptr) {
++    kvm_close(kd);
++    return base::unexpected(ProcessUsageError::kProcessNotFound);
++  }
++
++  if (nproc > 0) {
++    memory_info.resident_set_bytes = pp->ki_rssize << GetPageShift();
++  } else {
++    kvm_close(kd);
++    return base::unexpected(ProcessUsageError::kProcessNotFound);
  
--  return (info.ki_pctcpu / FSCALE) * 100.0;
--}
-+  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
-+    return TimeDelta();
- 
--TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
--  NOTREACHED();
--  return TimeDelta();
-+  return Microseconds(info.ki_runtime)
+-  return base::ok(double{info.ki_pctcpu} / FSCALE * 100.0);
++  kvm_close(kd);
++  return memory_info;
  }
  
- bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
-@@ -67,4 +82,228 @@ size_t GetSystemCommitCharge() {
+ base::expected<TimeDelta, ProcessCPUUsageError>
+ ProcessMetrics::GetCumulativeCPUUsage() {
+-  NOTREACHED();
++  struct kinfo_proc info;
++  size_t length = sizeof(struct kinfo_proc);
++  struct timeval tv;
++
++  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process_ };
++
++  if (process_ == 0) {
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  }
++
++  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  }
++
++  if (length == 0) {
++    return base::unexpected(ProcessCPUUsageError::kProcessNotFound);
++  }
++
++  return base::ok(Microseconds(info.ki_runtime));
+ }
+ 
+ size_t GetSystemCommitCharge() {
+@@ -63,4 +113,228 @@ size_t GetSystemCommitCharge() {
    return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
  }
  

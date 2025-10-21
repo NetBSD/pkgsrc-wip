@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/mojo/public/tools/bindings/mojom.gni.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/mojo/public/tools/bindings/mojom.gni.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/mojo/public/tools/bindings/mojom.gni
-@@ -748,6 +748,21 @@ template("mojom") {
+@@ -776,6 +776,21 @@ template("mojom") {
        enabled_features += [ "is_apple" ]
      }
  
@@ -27,4 +27,4 @@ $NetBSD$
 +
      action(parser_target_name) {
        allow_remote = true
-       custom_processor = "mojom_parser"
+ 

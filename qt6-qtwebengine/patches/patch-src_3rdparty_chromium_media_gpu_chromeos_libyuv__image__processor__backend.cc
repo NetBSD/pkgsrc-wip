@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/media/gpu/chromeos/libyuv_image_processor_backend.cc
-@@ -47,7 +47,7 @@ static constexpr struct {
+@@ -53,7 +53,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \
    {Fourcc::in, Fourcc::out, Transform::trans, SupportResult::result}
      // Conversion.
@@ -15,16 +15,16 @@ $NetBSD$
      CONV(NV12, AR24, kConversion, Supported),
  #endif
      CONV(NV12, NV12, kConversion, Supported),
-@@ -430,7 +430,7 @@ int LibYUVImageProcessorBackend::DoConve
-           fr->GetWritableVisibleData(VideoFrame::kUVPlane)), \
-       fr->stride(VideoFrame::kUVPlane)
+@@ -420,7 +420,7 @@ int LibYUVImageProcessorBackend::DoConve
+           fr->GetWritableVisibleData(VideoFrame::Plane::kUV)), \
+       fr->stride(VideoFrame::Plane::kUV)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- #define ARGB_DATA(fr)                                 \
-   fr->GetWritableVisibleData(VideoFrame::kARGBPlane), \
-       fr->stride(VideoFrame::kARGBPlane)
-@@ -573,7 +573,7 @@ int LibYUVImageProcessorBackend::DoConve
+ #define ARGB_DATA(fr)                                   \
+   fr->GetWritableVisibleData(VideoFrame::Plane::kARGB), \
+       fr->stride(VideoFrame::Plane::kARGB)
+@@ -582,7 +582,7 @@ int LibYUVImageProcessorBackend::DoConve
      }
    }
  

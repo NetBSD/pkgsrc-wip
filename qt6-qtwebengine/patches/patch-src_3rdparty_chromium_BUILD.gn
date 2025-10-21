@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/BUILD.gn
-@@ -64,7 +64,7 @@ declare_args() {
+@@ -67,7 +67,7 @@ declare_args() {
    qtwebengine_target = "//tools/gn"
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
    # An official (maximally optimized!) component (optimized for build times)
    # build doesn't make sense and usually doesn't work.
    assert(!is_component_build)
-@@ -96,7 +96,6 @@ group("gn_all") {
+@@ -99,7 +99,6 @@ group("gn_all") {
        "//codelabs",
        "//components:components_unittests",
        "//components/gwp_asan:gwp_asan_unittests",
@@ -23,7 +23,7 @@ $NetBSD$
        "//net:net_unittests",
        "//sandbox:sandbox_unittests",
        "//services:services_unittests",
-@@ -426,7 +425,7 @@ group("gn_all") {
+@@ -438,7 +437,7 @@ group("gn_all") {
        }
      }
  
@@ -32,8 +32,8 @@ $NetBSD$
        deps += [
          "//third_party/breakpad:breakpad_unittests",
          "//third_party/breakpad:core-2-minidump",
-@@ -626,6 +625,15 @@ group("gn_all") {
-       }
+@@ -613,6 +612,15 @@ group("gn_all") {
+       ]
      }
  
 +    if (is_bsd) {
@@ -45,10 +45,10 @@ $NetBSD$
 +      ]
 +    }
 +
-     if (is_mac) {
+     if (is_linux || is_chromeos_lacros) {
        deps += [
-         "//third_party/breakpad:dump_syms",
-@@ -1093,7 +1101,7 @@ if (use_blink && !is_cronet_build) {
+         "//skia:filter_fuzz_stub",
+@@ -1159,7 +1167,7 @@ if (use_blink && !is_cronet_build) {
      ]
    }
  
@@ -56,4 +56,4 @@ $NetBSD$
 +  if (!is_chromeos_ash && !is_ios && !is_fuchsia && !is_android && !is_castos && !is_bsd) {
      script_test("chrome_wpt_tests") {
        script = "//third_party/blink/tools/run_wpt_tests.py"
-       args = [
+       args = _common_web_test_options + [ "--product=chrome" ]

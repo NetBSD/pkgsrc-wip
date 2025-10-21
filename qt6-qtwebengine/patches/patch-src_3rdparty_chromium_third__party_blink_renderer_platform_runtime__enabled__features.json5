@@ -4,36 +4,54 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -1944,7 +1944,7 @@
-       base_feature_status: "enabled",
-       copied_from_base_feature_if: "overridden",
-       origin_trial_feature_name: "FullscreenPopupWindows",
+@@ -384,7 +384,7 @@
+       name: "AppTitle",
+       status: "experimental",
+       origin_trial_feature_name: "AppTitle",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       base_feature: "WebAppEnableAppTitle",
+     },
+     {
+@@ -1805,7 +1805,7 @@
+       base_feature: "none",
+       public: true,
+       origin_trial_feature_name: "FedCmMultipleIdentityProviders",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1934,7 +1934,7 @@
+       depends_on: ["FileSystemAccess"],
+       status: "experimental",
+       origin_trial_feature_name: "FileSystemObserver",
 -      origin_trial_os: ["win", "mac", "linux", "chromeos"],
 +      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
      },
      {
-       name: "GamepadButtonAxisEvents",
-@@ -2866,7 +2866,7 @@
-       name: "PaymentHandlerMinimalHeaderUX",
-       origin_trial_feature_name: "PaymentHandlerMinimalHeaderUX",
-       origin_trial_allows_third_party: true,
+       // The unobserve function of the FileSystemObserver.
+@@ -3156,7 +3156,7 @@
+       // Tracking bug for the implementation: https://crbug.com/1462930
+       name: "PermissionElement",
+       origin_trial_feature_name: "PermissionElement",
 -      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
 +      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd", "netbsd"],
-       status: "stable",
-     },
-     {
-@@ -3052,7 +3052,7 @@
+       status: "experimental",
+       public: true,
+       base_feature_status: "enabled",
+@@ -3302,7 +3302,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
 -      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
 +      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd", "netbsd"],
-       status: "experimental",
+       status: "stable",
        public: true,
        base_feature: "none",
-@@ -3879,7 +3879,7 @@
+@@ -4313,7 +4313,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -42,7 +60,7 @@ $NetBSD$
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4047,7 +4047,7 @@
+@@ -4460,7 +4460,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -51,7 +69,7 @@ $NetBSD$
        status: "experimental",
        base_feature: "none",
      },
-@@ -4087,12 +4087,12 @@
+@@ -4503,7 +4503,7 @@
        status: "experimental",
        base_feature: "none",
        origin_trial_feature_name: "WebAppUrlHandling",
@@ -59,10 +77,4 @@ $NetBSD$
 +      origin_trial_os: ["win", "mac", "linux", "openbsd", "freebsd", "netbsd"],
      },
      {
-       name: "WebAppWindowControlsOverlay",
-       origin_trial_feature_name: "WebAppWindowControlsOverlay",
--      origin_trial_os: ["win", "mac", "linux", "chromeos"],
-+      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
-       status: "stable",
-       base_feature: "none",
-     },
+       // WebAssembly JS Promise Integration,

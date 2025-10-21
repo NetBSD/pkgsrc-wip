@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/gfx/switches.h.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/switches.h.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/switches.h
-@@ -18,7 +18,7 @@ GFX_SWITCHES_EXPORT extern const char kE
- GFX_SWITCHES_EXPORT extern const char kForcePrefersReducedMotion[];
+@@ -19,7 +19,7 @@ GFX_SWITCHES_EXPORT extern const char kF
+ GFX_SWITCHES_EXPORT extern const char kForcePrefersNoReducedMotion[];
  GFX_SWITCHES_EXPORT extern const char kHeadless[];
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

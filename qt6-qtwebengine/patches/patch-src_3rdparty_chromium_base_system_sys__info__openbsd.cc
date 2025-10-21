@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/system/sys_info_openbsd.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/system/sys_info_openbsd.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/system/sys_info_openbsd.cc
 @@ -12,6 +12,7 @@
  
@@ -30,7 +30,7 @@ $NetBSD$
    int ncpu;
    size_t size = sizeof(ncpu);
    if (sysctl(mib, std::size(mib), &ncpu, &size, NULL, 0) < 0) {
-@@ -41,7 +47,23 @@ int SysInfo::NumberOfProcessors() {
+@@ -40,7 +46,23 @@ int SysInfo::NumberOfProcessors() {
  
  // static
  uint64_t SysInfo::AmountOfPhysicalMemoryImpl() {
@@ -55,7 +55,7 @@ $NetBSD$
  }
  
  // static
-@@ -56,16 +78,28 @@ uint64_t SysInfo::MaxSharedMemorySize() 
+@@ -55,15 +77,27 @@ uint64_t SysInfo::MaxSharedMemorySize() 
    int mib[] = {CTL_KERN, KERN_SHMINFO, KERN_SHMINFO_SHMMAX};
    size_t limit;
    size_t size = sizeof(limit);
@@ -64,7 +64,6 @@ $NetBSD$
 +    goto out;
    if (sysctl(mib, std::size(mib), &limit, &size, NULL, 0) < 0) {
      NOTREACHED();
-     return 0;
    }
 -  return static_cast<uint64_t>(limit);
 +  shmmax = static_cast<uint64_t>(limit);

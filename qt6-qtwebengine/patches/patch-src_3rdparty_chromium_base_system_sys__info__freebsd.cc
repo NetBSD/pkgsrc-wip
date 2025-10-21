@@ -1,12 +1,12 @@
-$NetBSD$
+$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/system/sys_info_freebsd.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/system/sys_info_freebsd.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ src/3rdparty/chromium/base/system/sys_info_freebsd.cc
-@@ -9,25 +9,87 @@
+@@ -9,28 +9,103 @@
  #include <sys/sysctl.h>
  
  #include "base/notreached.h"
@@ -64,7 +64,7 @@ $NetBSD$
 +
 +  if (r == -1) {
      NOTREACHED();
-     return 0;
++    return 0;
    }
 -  return static_cast<int64_t>(pages) * page_size;
 +
@@ -99,8 +99,7 @@ $NetBSD$
 +
    if (sysctlbyname("kern.ipc.shmmax", &limit, &size, NULL, 0) < 0) {
      NOTREACHED();
-     return 0;
-@@ -35,4 +97,16 @@ uint64_t SysInfo::MaxSharedMemorySize() 
+   }
    return static_cast<uint64_t>(limit);
  }
  

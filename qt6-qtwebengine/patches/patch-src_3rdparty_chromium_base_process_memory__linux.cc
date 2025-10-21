@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/memory_linux.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/process/memory_linux.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);
  
@@ -30,7 +30,7 @@ $NetBSD$
    std::set_new_handler(&ReleaseReservationOrTerminate);
    // If we're using glibc's allocator, the above functions will override
 @@ -51,8 +54,10 @@ void EnableTerminationOnOutOfMemory() {
- #if BUILDFLAG(USE_ALLOCATOR_SHIM)
+ #if PA_BUILDFLAG(USE_ALLOCATOR_SHIM)
    allocator_shim::SetCallNewHandlerOnMallocFailure(true);
  #endif
 +#endif
@@ -40,11 +40,11 @@ $NetBSD$
  // ScopedAllowBlocking() has private constructor and it can only be used in
  // friend classes/functions. Declaring a class is easier in this situation to
  // avoid adding more dependency to thread_restrictions.h because of the
-@@ -112,6 +117,7 @@ bool AdjustOOMScoreHelper::AdjustOOMScor
+@@ -110,6 +115,7 @@ bool AdjustOOMScoreHelper::AdjustOOMScor
  bool AdjustOOMScore(ProcessId process, int score) {
    return AdjustOOMScoreHelper::AdjustOOMScore(process, score);
  }
 +#endif
  
  bool UncheckedMalloc(size_t size, void** result) {
- #if BUILDFLAG(USE_ALLOCATOR_SHIM)
+ #if PA_BUILDFLAG(USE_ALLOCATOR_SHIM)

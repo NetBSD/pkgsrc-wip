@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/os_crypt/sync/libsecret_util_linux.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/components/os_crypt/sync/libsecret_util_linux.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/components/os_crypt/sync/libsecret_util_linux.cc
-@@ -99,16 +99,22 @@ bool LibsecretLoader::EnsureLibsecretLoa
+@@ -185,16 +185,22 @@ bool LibsecretLoader::EnsureLibsecretLoa
  
  // static
  bool LibsecretLoader::LoadLibsecret() {
@@ -25,7 +25,7 @@ $NetBSD$
      // We wanted to use libsecret, but we couldn't load it. Warn, because
      // either the user asked for this, or we autodetected it incorrectly. (Or
      // the system has broken libraries, which is also good to warn about.)
-     // TODO(crbug.com/607435): Channel this message to the user-facing log
+     // TODO(crbug.com/40467093): Channel this message to the user-facing log
 -    VLOG(1) << "Could not load libsecret-1.so.0: " << dlerror();
 +    VLOG(1) << "Could not load " << kSecretLib << ": " << dlerror();
      return false;

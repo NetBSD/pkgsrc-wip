@@ -4,25 +4,35 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/v8/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/v8/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/v8/BUILD.gn
-@@ -1448,6 +1448,15 @@ config("toolchain") {
-   } else if (target_os == "chromeos") {
-     defines += [ "V8_HAVE_TARGET_OS" ]
-     defines += [ "V8_TARGET_OS_CHROMEOS" ]
-+  } else if (target_os == "openbsd") {
-+    defines += [ "V8_HAVE_TARGET_OS" ]
-+    defines += [ "V8_TARGET_OS_OPENBSD" ]
-+  } else if (target_os == "freebsd") {
-+    defines += [ "V8_HAVE_TARGET_OS" ]
-+    defines += [ "V8_TARGET_OS_FREEBSD" ]
-+  } else if (target_os == "netbsd") {
-+    defines += [ "V8_HAVE_TARGET_OS" ]
-+    defines += [ "V8_TARGET_OS_NETBSD" ]
-   }
+@@ -908,6 +908,9 @@ external_v8_defines = [
+   "V8_TARGET_OS_MACOS",
+   "V8_TARGET_OS_WIN",
+   "V8_TARGET_OS_CHROMEOS",
++  "V8_TARGET_OS_OPENBSD",
++  "V8_TARGET_OS_FREEBSD",
++  "V8_TARGET_OS_NETBSD",
+ ]
  
-   # TODO(infra): Support v8_enable_prof on Windows.
-@@ -2339,6 +2348,23 @@ action("generate_bytecode_builtins_list"
+ enabled_external_v8_defines = [
+@@ -984,6 +987,15 @@ if (target_os == "android") {
+ } else if (target_os == "chromeos") {
+   enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
+   enabled_external_v8_defines += [ "V8_TARGET_OS_CHROMEOS" ]
++} else if (target_os == "openbsd") {
++  enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
++  enabled_external_v8_defines += [ "V8_TARGET_OS_OPENBSD" ]
++} else if (target_os == "freebsd") {
++  enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
++  enabled_external_v8_defines += [ "V8_TARGET_OS_FREEBSD" ]
++} else if (target_os == "netbsd") {
++  enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
++  enabled_external_v8_defines += [ "V8_TARGET_OS_NETBSD" ]
+ }
+ 
+ disabled_external_v8_defines = external_v8_defines - enabled_external_v8_defines
+@@ -2413,6 +2425,23 @@ action("generate_bytecode_builtins_list"
    ]
  }
  
@@ -46,7 +56,7 @@ $NetBSD$
  # Template to generate different V8 snapshots based on different runtime flags.
  # Can be invoked with run_mksnapshot(<name>). The target will resolve to
  # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
-@@ -2357,7 +2383,11 @@ template("run_mksnapshot") {
+@@ -2431,7 +2460,11 @@ template("run_mksnapshot") {
      suffix = "_$name"
    }
    action("run_mksnapshot_" + name) {
@@ -56,10 +66,10 @@ $NetBSD$
 +    } else {
 +      deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
 +    }
- 
-     script = "tools/run.py"
- 
-@@ -2414,6 +2444,12 @@ template("run_mksnapshot") {
+     if (v8_verify_deterministic_mksnapshot) {
+       # We archive the snapshot executable when verifying snapshot
+       # determinism to ease debugging.
+@@ -2538,6 +2571,12 @@ template("run_mksnapshot") {
        if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
          args += [ "--reorder-builtins" ]
        }
@@ -71,8 +81,8 @@ $NetBSD$
 +      }
      }
  
-     # This is needed to distinguish between generating code for the simulator
-@@ -4417,7 +4453,7 @@ v8_header_set("v8_internal_headers") {
+     if (v8_enable_turboshaft_csa) {
+@@ -4648,7 +4687,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -81,7 +91,7 @@ $NetBSD$
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -5811,7 +5847,7 @@ v8_source_set("v8_base_without_compiler"
+@@ -6083,7 +6122,7 @@ v8_source_set("v8_base_without_compiler"
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -90,7 +100,7 @@ $NetBSD$
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -6423,7 +6459,7 @@ v8_component("v8_libbase") {
+@@ -6704,7 +6743,7 @@ v8_component("v8_libbase") {
      }
    }
  
@@ -99,7 +109,7 @@ $NetBSD$
      sources += [
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-linux.cc",
-@@ -6434,6 +6470,27 @@ v8_component("v8_libbase") {
+@@ -6715,6 +6754,27 @@ v8_component("v8_libbase") {
        "dl",
        "rt",
      ]

@@ -10,7 +10,7 @@ $NetBSD$
    if (getentropy(output, output_length) == 0) {
      return;
    }
-+#elif BUILDFLAG(IS_BSD)
++#elif PA_BUILDFLAG(IS_BSD)
 +  if (getentropy(output, output_length) == 0) {
 +    return;
 +  }

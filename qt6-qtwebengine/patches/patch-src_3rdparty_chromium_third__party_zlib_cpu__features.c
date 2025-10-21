@@ -4,18 +4,19 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/zlib/cpu_features.c.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/third_party/zlib/cpu_features.c.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/third_party/zlib/cpu_features.c
-@@ -35,7 +35,7 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
- 
+@@ -39,7 +39,8 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD
  
--#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS)
-+#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS) || defined(ARMV8_OS_OPENBSD) || defined(ARMV8_OS_FREEBSD)
+ #if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || \
+-    defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS)
++    defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS) || \
++    defined(ARMV8_OS_OPENBSD) || defined(ARMV8_OS_FREEBSD)
  #include <pthread.h>
  #endif
  
-@@ -52,6 +52,10 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
+@@ -56,6 +57,10 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #include <windows.h>
  #elif defined(ARMV8_OS_IOS)
  #include <sys/sysctl.h>
@@ -26,16 +27,16 @@ $NetBSD$
  #elif !defined(_MSC_VER)
  #include <pthread.h>
  #else
-@@ -62,7 +66,7 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
- static void _cpu_check_features(void);
- #endif
- 
--#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_MACOS) || defined(ARMV8_OS_FUCHSIA) || defined(X86_NOT_WINDOWS) || defined(ARMV8_OS_IOS) || defined(__ARM_NEON__) || defined(__ARM_NEON)
-+#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_MACOS) || defined(ARMV8_OS_FUCHSIA) || defined(X86_NOT_WINDOWS) || defined(ARMV8_OS_IOS) || defined(__ARM_NEON__) || defined(__ARM_NEON) || defined(ARMV8_OS_OPENBSD) || defined(ARMV8_OS_FREEBSD)
+@@ -81,7 +86,7 @@ void ZLIB_INTERNAL cpu_check_features(vo
+ #elif defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || \
+     defined(ARMV8_OS_MACOS) || defined(ARMV8_OS_FUCHSIA) || \
+     defined(X86_NOT_WINDOWS) || defined(ARMV8_OS_IOS) || \
+-    defined(RISCV_RVV) || defined(__ARM_NEON__) || defined(__ARM_NEON)
++    defined(RISCV_RVV) || defined(__ARM_NEON__) || defined(__ARM_NEON) || defined(ARMV8_OS_OPENBSD) || defined(ARMV8_OS_FREEBSD)
  #if !defined(ARMV8_OS_MACOS)
  // _cpu_check_features() doesn't need to do anything on mac/arm since all
  // features are known at build time, so don't call it.
-@@ -115,6 +119,17 @@ static void _cpu_check_features(void)
+@@ -122,6 +127,17 @@ static void _cpu_check_features(void)
      unsigned long features = getauxval(AT_HWCAP2);
      arm_cpu_enable_crc32 = !!(features & HWCAP2_CRC32);
      arm_cpu_enable_pmull = !!(features & HWCAP2_PMULL);

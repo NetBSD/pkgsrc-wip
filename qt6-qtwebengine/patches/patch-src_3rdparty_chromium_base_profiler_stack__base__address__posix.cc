@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/profiler/stack_base_address_posix.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/base/profiler/stack_base_address_posix.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"
@@ -21,7 +21,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -45,7 +53,21 @@ absl::optional<uintptr_t> GetAndroidMain
+@@ -45,7 +53,21 @@ std::optional<uintptr_t> GetAndroidMainT
  
  #if !BUILDFLAG(IS_LINUX)
  uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
@@ -58,9 +58,9 @@ $NetBSD$
    const uintptr_t base_address = reinterpret_cast<uintptr_t>(address) + size;
    return base_address;
  }
-@@ -80,7 +104,7 @@ absl::optional<uintptr_t> GetThreadStack
+@@ -80,7 +104,7 @@ std::optional<uintptr_t> GetThreadStackB
    // trying to work around the problem.
-   return absl::nullopt;
+   return std::nullopt;
  #else
 -  const bool is_main_thread = id == GetCurrentProcId();
 +  const bool is_main_thread = id == checked_cast<PlatformThreadId>(GetCurrentProcId());

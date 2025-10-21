@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
-@@ -279,7 +279,11 @@ bool ChromeRuntimeAPIDelegate::GetPlatfo
+@@ -288,7 +288,11 @@ bool ChromeRuntimeAPIDelegate::GetPlatfo
    } else if (strcmp(os, "linux") == 0) {
      info->os = extensions::api::runtime::PlatformOs::kLinux;
    } else if (strcmp(os, "openbsd") == 0) {
@@ -16,6 +16,6 @@ $NetBSD$
 +    info->os = extensions::api::runtime::PlatformOs::kLinux;
 +  } else if (strcmp(os, "netbsd") == 0) {
 +    info->os = extensions::api::runtime::PlatformOs::kLinux;
-   } else if (strcmp(os, "fuchsia") == 0) {
-     info->os = extensions::api::runtime::PlatformOs::kFuchsia;
    } else {
+     NOTREACHED_IN_MIGRATION() << "Platform not supported: " << os;
+     return false;

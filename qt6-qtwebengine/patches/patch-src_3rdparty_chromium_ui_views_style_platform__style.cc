@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/views/style/platform_style.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/ui/views/style/platform_style.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/ui/views/style/platform_style.cc
 @@ -17,7 +17,7 @@
  #include "ui/views/controls/focusable_border.h"
@@ -24,12 +24,12 @@ $NetBSD$
      false;
  #else
      true;
-@@ -58,7 +58,7 @@ const bool PlatformStyle::kAdjustBubbleI
- 
+@@ -59,7 +59,7 @@ const bool PlatformStyle::kAdjustBubbleI
  // static
- std::unique_ptr<ScrollBar> PlatformStyle::CreateScrollBar(bool is_horizontal) {
+ std::unique_ptr<ScrollBar> PlatformStyle::CreateScrollBar(
+     ScrollBar::Orientation orientation) {
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   return std::make_unique<OverlayScrollBar>(is_horizontal);
+   return std::make_unique<OverlayScrollBar>(orientation);
  #else
-   return std::make_unique<ScrollBarViews>(is_horizontal);
+   return std::make_unique<ScrollBarViews>(orientation);

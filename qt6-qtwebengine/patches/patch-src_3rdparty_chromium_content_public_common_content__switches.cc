@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/public/common/content_switches.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/content/public/common/content_switches.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/content/public/common/content_switches.cc
-@@ -366,6 +366,8 @@ const char kEnableIsolatedWebAppsInRende
+@@ -350,6 +350,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.
  const char kEnableLogging[]                 = "enable-logging";
  
@@ -15,9 +15,9 @@ $NetBSD$
  // Enables the type, downlinkMax attributes of the NetInfo API. Also, enables
  // triggering of change attribute of the NetInfo API when there is a change in
  // the connection type.
-@@ -1011,7 +1013,7 @@ const char kPreventResizingContentsForTe
+@@ -978,7 +980,7 @@ const char kPreventResizingContentsForTe
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

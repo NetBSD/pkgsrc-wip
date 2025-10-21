@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/build/config/clang/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/build/config/clang/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/build/config/clang/BUILD.gn
-@@ -173,6 +173,11 @@ clang_lib("compiler_builtins") {
-     # the Rust stdlib's intrinsics here.
+@@ -257,6 +257,11 @@ clang_lib("compiler_profile") {
+     # This is only used when `toolchain_has_rust` to support Rust linking.
      #
      # Don't define libname which makes this target do nothing.
 +  } else if (is_bsd) {
@@ -16,5 +16,5 @@ $NetBSD$
 +    #
 +    # Don't define libname which makes this target do nothing.
    } else if (is_mac) {
-     libname = "osx"
+     libname = "profile_osx"
    } else if (is_ios) {

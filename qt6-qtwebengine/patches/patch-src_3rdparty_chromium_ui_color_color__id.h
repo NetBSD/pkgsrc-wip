@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/color/color_id.h.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/ui/color/color_id.h.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/ui/color/color_id.h
-@@ -610,7 +610,7 @@
-   E_CPONLY(kColorNativeColor6) \
-   E_CPONLY(kColorNativeBaseColor) \
-   E_CPONLY(kColorNativeSecondaryColor)
+@@ -622,7 +622,7 @@
+   \
+   E_CPONLY(kColorCrosSysPositive) \
+   E_CPONLY(kColorCrosSysComplementVariant)
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #define PLATFORM_SPECIFIC_COLOR_IDS \

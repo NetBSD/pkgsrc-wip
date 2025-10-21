@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/gl/sync_control_vsync_provider.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/ui/gl/sync_control_vsync_provider.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/ui/gl/sync_control_vsync_provider.cc
 @@ -11,7 +11,7 @@
  #include "base/trace_event/trace_event.h"
@@ -30,10 +30,10 @@ $NetBSD$
    TRACE_EVENT0("gpu", "SyncControlVSyncProvider::GetVSyncParameters");
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // The actual clock used for the system time returned by glXGetSyncValuesOML
-   // is unspecified. In practice, the clock used is likely to be either
-   // CLOCK_REALTIME or CLOCK_MONOTONIC, so we compare the returned time to the
-@@ -159,7 +159,7 @@ bool SyncControlVSyncProvider::GetVSyncP
+   // The actual clock used for the system time returned by
+   // eglGetSyncValuesCHROMIUM is unspecified. In practice, the clock used is
+   // likely to be either CLOCK_REALTIME or CLOCK_MONOTONIC, so we compare the
+@@ -160,7 +160,7 @@ bool SyncControlVSyncProvider::GetVSyncP
  }
  
  bool SyncControlVSyncProvider::SupportGetVSyncParametersIfAvailable() const {

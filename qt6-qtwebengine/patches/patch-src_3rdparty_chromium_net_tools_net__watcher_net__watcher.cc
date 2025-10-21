@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/tools/net_watcher/net_watcher.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/net/tools/net_watcher/net_watcher.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/net/tools/net_watcher/net_watcher.cc
 @@ -32,7 +32,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"
@@ -17,7 +17,7 @@ $NetBSD$
  
 @@ -44,7 +44,7 @@ namespace {
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

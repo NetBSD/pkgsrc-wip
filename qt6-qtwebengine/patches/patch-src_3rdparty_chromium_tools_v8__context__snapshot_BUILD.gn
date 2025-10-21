@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn
-@@ -36,6 +36,24 @@ buildflag_header("buildflags") {
-   ]
+@@ -38,6 +38,26 @@ buildflag_header("buildflags") {
  }
  
+ if (use_v8_context_snapshot) {
 +action("run_paxctl_v8_context_snapshot_generator") {
-+  deps = [ ":v8_context_snapshot_generator($v8_snapshot_toolchain)" ]
++  deps = [ ":v8_context_snapshot_generator" ]
 +
 +  script = "//v8/tools/run-paxctl.py"
 +  stamp = "$target_gen_dir/paxctl_stamp"
@@ -27,14 +27,16 @@ $NetBSD$
 +    root_build_dir),
 +  ]
 +}
++}
 +
- if (use_v8_context_snapshot) {
++if (use_v8_context_snapshot) {
    if (v8_snapshot_toolchain == current_toolchain) {
      action("generate_v8_context_snapshot") {
-@@ -53,6 +71,9 @@ if (use_v8_context_snapshot) {
+       script = "//build/gn_run_binary.py"
+@@ -58,6 +78,9 @@ if (use_v8_context_snapshot) {
+         ":v8_context_snapshot_generator",
+         "//v8:run_mksnapshot_default",
        ]
- 
-       deps = [ ":v8_context_snapshot_generator" ]
 +      if (target_os == "netbsd") {
 +        deps += [ ":run_paxctl_v8_context_snapshot_generator" ]
 +      }

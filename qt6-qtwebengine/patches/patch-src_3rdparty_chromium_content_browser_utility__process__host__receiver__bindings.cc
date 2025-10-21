@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/browser/utility_process_host_receiver_bindings.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/content/browser/utility_process_host_receiver_bindings.cc.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/utility_process_host_receiver_bindings.cc
 @@ -10,12 +10,12 @@
  #include "content/public/browser/content_browser_client.h"
@@ -34,6 +34,6 @@ $NetBSD$
  #endif
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
-   if (auto gpu_receiver = receiver.As<viz::mojom::Gpu>()) {
-     gpu_client_ =
-         content::CreateGpuClient(std::move(gpu_receiver), base::DoNothing());
+   if (allowed_gpu_) {
+     // TODO(crbug.com/328099369) Remove once all clients get this directly.
+     if (auto gpu_receiver = receiver.As<viz::mojom::Gpu>()) {

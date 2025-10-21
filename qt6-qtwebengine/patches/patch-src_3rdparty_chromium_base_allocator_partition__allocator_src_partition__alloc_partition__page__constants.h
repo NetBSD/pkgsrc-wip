@@ -3,14 +3,14 @@ $NetBSD$
 * Based on OpenBSD's qt6-qtwebengine patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h.orig	2025-01-24 10:49:20.000000000 +0000
+--- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h
-@@ -16,7 +16,7 @@ namespace partition_alloc::internal {
- // (1 << 12 or 1 << 14), as checked in PartitionRoot::Init(). And
+@@ -17,7 +17,7 @@ namespace partition_alloc::internal {
  // PartitionPageSize() is 4 times the OS page size.
  static constexpr size_t kMaxSlotsPerSlotSpan = 4 * (1 << 14) / kSmallestBucket;
--#elif (BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)) && defined(ARCH_CPU_ARM64)
-+#elif (BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(ARCH_CPU_ARM64)
- // System page size can be 4, 16, or 64 kiB on Linux on arm64. 64 kiB is
- // currently (kMaxSlotsPerSlotSpanBits == 13) not supported by the code,
- // so we use the 16 kiB maximum (64 kiB will crash).
+ #elif defined(PARTITION_ALLOCATOR_CONSTANTS_POSIX_NONCONST_PAGE_SIZE) && \
+-    PA_BUILDFLAG(IS_LINUX) && \
++    (PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_BSD)) && \
+     (PA_BUILDFLAG(PA_ARCH_CPU_ARM64) || PA_BUILDFLAG(PA_ARCH_CPU_PPC64))
+ // System page size can be 4, 16, or 64 kiB on Linux on AArch64.
+ // System page size can be 4 or 64 kiB on Linux on ppc64.

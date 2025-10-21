@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/os_crypt/sync/os_crypt.h.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/components/os_crypt/sync/os_crypt.h.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/components/os_crypt/sync/os_crypt.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"
@@ -17,7 +17,7 @@ $NetBSD$
  
 @@ -23,7 +23,7 @@ class PrefRegistrySimple;
  class PrefService;
- #endif
+ #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)
@@ -73,6 +73,6 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Create the KeyStorage. Will be null if no service is found. A Config must
-   // be set before every call to this method.
-   std::unique_ptr<KeyStorageLinux> CreateKeyStorage();
+   // Returns a cached string of "peanuts". Is thread-safe.
+   crypto::SymmetricKey* GetPasswordV10();
+ 

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/BUILD.gn.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/net/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
 +++ src/3rdparty/chromium/net/BUILD.gn
-@@ -126,7 +126,7 @@ net_configs = [
+@@ -130,7 +130,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",
  ]
  
@@ -15,7 +15,7 @@ $NetBSD$
    net_configs += [ "//build/config/linux:libresolv" ]
  }
  
-@@ -1183,6 +1183,19 @@ component("net") {
+@@ -1294,6 +1294,23 @@ jumbo_component("net") {
      ]
    }
  
@@ -30,12 +30,16 @@ $NetBSD$
 +      "base/network_change_notifier_linux.cc",
 +      "base/network_interfaces_linux.cc",
 +    ]
++    jumbo_excluded_sources -= [
++      "base/address_tracker_linux.cc",
++      "base/network_interfaces_linux.cc",
++    ]
 +  }   
 +
    if (is_mac) {
      sources += [
        "base/network_notification_thread_mac.cc",
-@@ -1340,7 +1353,7 @@ component("net") {
+@@ -1458,7 +1471,7 @@ jumbo_component("net") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
@@ -44,16 +48,16 @@ $NetBSD$
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -1995,7 +2008,7 @@ static_library("test_support") {
-     "url_request/url_request_test_util.h",
-   ]
+@@ -2125,7 +2138,7 @@ static_library("test_support") {
+     ]
+   }
  
 -  if (is_linux || is_chromeos || is_android) {
-+  if ((is_linux || is_chromeos || is_android)  && !is_bsd) {
++  if ((is_linux || is_chromeos || is_android) && !is_bsd) {
      sources += [
        "base/address_tracker_linux_test_util.cc",
        "base/address_tracker_linux_test_util.h",
-@@ -2803,14 +2816,14 @@ test("net_unittests") {
+@@ -2934,14 +2947,14 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -70,7 +74,7 @@ $NetBSD$
      sources += [
        "base/address_tracker_linux_unittest.cc",
        "base/network_interfaces_linux_unittest.cc",
-@@ -2898,6 +2911,10 @@ test("net_unittests") {
+@@ -3034,6 +3047,10 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -79,9 +83,9 @@ $NetBSD$
 +  }
 +
    if (enable_websockets) {
-     deps += [ "//net/server:tests" ]
-   }
-@@ -2968,7 +2985,7 @@ test("net_unittests") {
+     sources += [
+       "server/http_connection_unittest.cc",
+@@ -3100,7 +3117,7 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -90,7 +94,7 @@ $NetBSD$
      sources += [ "tools/quic/quic_simple_server_test.cc" ]
    }
  
-@@ -3103,7 +3120,7 @@ test("net_unittests") {
+@@ -3239,7 +3256,7 @@ target(_test_target_type, "net_unittests
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
