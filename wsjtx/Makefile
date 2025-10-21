@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	wsjtx-2.5.4
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://sourceforge.net/projects/wsjt/files/wsjtx-2.5.4/wsjtx-2.5.4.tgz/
 # for 2.6.1
@@ -38,6 +39,8 @@ CMAKE_CONFIGURE_ARGS+=	-DLIBUSB_CFLAGS='-I ${PREFIX}/include/libusb-1.0 -lusb-1.
 CMAKE_CONFIGURE_ARGS+=	-DLIBUSB_LIBS='-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib'
 CMAKE_CONFIGURE_ARGS+=	-DLIBS='-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib'
 CMAKE_CONFIGURE_ARGS+=	-DQt5Test_DIR=${PREFIX}/qt5/lib/cmake/Qt5Test
+#MAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_DO_STRIP=0	# 1.2 MB (jt9)
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug	# 870 kB
 
 #IBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
 LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
