@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/electrum_ecc/__init__.py
+${PYSITELIB}/electrum_ecc/__init__.pyc
+${PYSITELIB}/electrum_ecc/__init__.pyo
+${PYSITELIB}/electrum_ecc/ecc_fast.py
+${PYSITELIB}/electrum_ecc/ecc_fast.pyc
+${PYSITELIB}/electrum_ecc/ecc_fast.pyo
+${PYSITELIB}/electrum_ecc/ecdsa_sigformat.py
+${PYSITELIB}/electrum_ecc/ecdsa_sigformat.pyc
+${PYSITELIB}/electrum_ecc/ecdsa_sigformat.pyo
+${PYSITELIB}/electrum_ecc/keys.py
+${PYSITELIB}/electrum_ecc/keys.pyc
+${PYSITELIB}/electrum_ecc/keys.pyo
+${PYSITELIB}/electrum_ecc/libsecp256k1.so
+${PYSITELIB}/electrum_ecc/util.py
+${PYSITELIB}/electrum_ecc/util.pyc
+${PYSITELIB}/electrum_ecc/util.pyo

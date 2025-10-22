@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (electrum_ecc-0.0.6.tar.gz) = 1d1a7e6be9cf6033e1d40eb85d8e367d2de3a9e9f9bcbd8aba8ee31fb9644a07
+SHA512 (electrum_ecc-0.0.6.tar.gz) = f20fecbb361badc920e2919df9e1cbb4d76fc13880c032c2909084177b57ae7a379e926f92fcc1ca8a10d096b12dbf7fd13c955541e642ea782b0c0cb245c738
+Size (electrum_ecc-0.0.6.tar.gz) = 2156345 bytes
+SHA1 (patch-setup.py) = 2ff10bc5c3ec2d69467b843b6d5042374c9c4767

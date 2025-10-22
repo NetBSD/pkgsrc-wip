@@ -1,0 +1,3 @@
+devel/py-electrum_ecc: Add electrum_ecc
+
+Pure python ctypes wrapper for libsecp256k1

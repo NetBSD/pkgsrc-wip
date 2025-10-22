@@ -1,0 +1,4 @@
+The current version uses libsecp256k1 bundled with the PyPI distribution and
+built together with the Python code. It would be more appropriate to link it
+against the library provided by pkgsrc. Unfortunately, however, the version 
+available in security/libsecp256k1 is too outdated.
