@@ -7,6 +7,6 @@ SHA1 (patch-CMakeLists.txt) = 8ebdc56e3679429863121d0e4739ab433a628743
 SHA1 (patch-CMake_Modules_FindUsb.cmake) = 6c9edbce838731a026d682ddd0a1174bbceb4e89
 SHA1 (patch-Radio.cpp) = a798fbf75deb3cd49c6a15cd1e74530bb955ee23
 SHA1 (patch-hamlib.patch) = 8d5cec646b0fe317a41da3ed66a299ea1510c87f
-SHA1 (patch-lib_shmem.cpp) = 064f5961a998e34f7d84032c28f5760bca90eb7f
+SHA1 (patch-lib_shmem.cpp) = 0520cc1972bdfd692f5fc9f046c7a8a2b8f8eff4
 SHA1 (patch-widgets_FrequencyDeltaLineEdit.cpp) = 61adc842a3b8fae64d9a4110bed1f8d209d3e5d7
 SHA1 (patch-widgets_FrequencyLineEdit.cpp) = a70cf22461eb6a54fcf052079c7e5de6e4085313
