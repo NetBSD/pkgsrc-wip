@@ -1,0 +1,7 @@
+[TaskChampion][1] is the task database [Taskwarrior][2] uses to store and sync
+tasks. [Taskchampion Sync-Server][3] implements a sync server against which
+Taskwarrior and other applications embedding TaskChampion can sync.
+
+[1]: https://github.com/GothenburgBitFactory/taskchampion
+[2]: https://github.com/GothenburgBitFactory/taskwarrior
+[3]: https://github.com/GothenburgBitFactory/taskchampion-sync-server

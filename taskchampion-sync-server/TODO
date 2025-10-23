@@ -1,0 +1,9 @@
+1. This builds and installs on NetBSD 9.4 AMD
+2. I was planning on using this to sync my taskwarrior 3 installs, but I might give up with that idea completely as it seems tricky so I might not actually need this package. Just mentioning that.
+3. From pkglint:
+
+    WARN: Makefile:5: Invalid identifier "refs/tags/v${DISTNAME}".
+    ERROR: Makefile:7: Invalid category "wip".
+    WARN: Makefile:10: PKGNAME should not be used in WRKSRC as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.
+    ERROR: Makefile:25: This comment indicates unfinished work (url2pkg).
+    
