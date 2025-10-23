@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.101 2025/04/24 14:13:20 wiz Exp $
 
-DISTNAME=	klayout-0.29.12
+DISTNAME=	klayout-0.30.4
 CATEGORIES=	cad
 MASTER_SITES=	https://www.klayout.org/downloads/source/
 
@@ -14,6 +14,10 @@ USE_TOOLS+=	gmake bash pax
 
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
 NO_CONFIGURE=	yes
+CXXFLAGS+=		-Wno-template-id-cdtor
+#SE_CXX_FEATURES+=	c++17
+# build time debug only
+MAKE_JOBS_SAFE=		no
 
 CHECK_SHLIBS_SKIP+=	lib/klayout/plugins/streamers/*/unit_tests/* \
 			lib/klayout/plugins/tools/net_tracer/unit_tests/*
