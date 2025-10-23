@@ -1,5 +1,12 @@
-powerdns-recursor53: PowerDNS Recursor 5.3.0
+powerdns-recursor: PowerDNS Recursor 5.3.1
 
+5.3.1
+Released: 22nd of October 2025
+Bug Fixes
+Fix PowerDNS Security Advisory 2025-06: Crafted delegations or IP fragments can poison cached delegations in Recursor.
+References: pull request 16339
+
+5.3.0
 Released: 28th of August 2025
 Improvements
 Path.unlink(True) requires python 3.8, rewrite so it works on older versions.
