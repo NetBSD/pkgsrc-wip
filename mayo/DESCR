@@ -1,0 +1,5 @@
+Mayo can read/write 3D files from/to STEP, IGES, STL and many other
+CAD formats
+
+Mayo 3D viewer supports clip planes, exploding of assemblies,
+measurement of shapes, show/hide parts, ...
