@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.7 2025/08/15 10:25:07 gdt Exp $
+
+BLAKE2s (occt/OCCT-7_9_2.tar.gz) = 5150116de02bbb8a9d3d5a6598a9d570bdb3c00ce10b84aab46e563089fab1f5
+SHA512 (occt/OCCT-7_9_2.tar.gz) = 58f9ab91c5119e0a99fb7599bce574f17ce3e3a802a9c503fa0464228d5b2141e3f5557ef68355b4921b572bd10d99bec0f31836a103d5e5fa98cd0d685610a2
+Size (occt/OCCT-7_9_2.tar.gz) = 48588929 bytes
+SHA1 (patch-src_OSD_OSD__Path.cxx) = 49d675af5aa6270b466e1fc3c2c50bbe1bbc04b7
+SHA1 (patch-src_Standard_Standard__CString.cxx) = f79878ee25e018f88a9a252b65e876ea998debc5
