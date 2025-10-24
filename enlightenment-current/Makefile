@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	The Enlightenment window manager
 LICENSE=	2-clause-bsd

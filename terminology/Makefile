@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/terminology/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.enlightenment.org/about-terminology
 COMMENT=	Enlightenment terminal
 LICENSE=	2-clause-bsd
