@@ -1,0 +1,3 @@
+devel/py-electrum_aionostr: Add electrum_aionostr version 0.0.11
+
+asyncio nostr client

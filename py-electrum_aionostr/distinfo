@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (electrum_aionostr-0.0.11.tar.gz) = 2973c6856ff719e014714f9194677d1e553153dec32984f0e0a44d5c2e3f20c2
+SHA512 (electrum_aionostr-0.0.11.tar.gz) = 8d1888c237ded63f8512f29d35f6da05eb3e7c2eaf6a16a1a503a09e6e224b15232e732da82775070e2fb4098982945deaa6eb6332ff0c9bd0d9e3828dfa962a
+Size (electrum_aionostr-0.0.11.tar.gz) = 22126 bytes
