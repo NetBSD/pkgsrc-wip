@@ -20,7 +20,6 @@ SUBDIR+=	CuraEngine
 SUBDIR+=	ETL
 SUBDIR+=	FLIF
 SUBDIR+=	FLIF-git
-SUBDIR+=	FlightCrew
 SUBDIR+=	FreeBASIC
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSAlign
