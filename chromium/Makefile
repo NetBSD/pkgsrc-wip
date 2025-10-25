@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.21 2025/09/30 16:07:40 wiz Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			141.0.7390.107
+VERSION=			141.0.7390.122
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -39,7 +39,6 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
-TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
@@ -198,6 +197,7 @@ PLIST_VARS+=		swiftshader
 .if ${MACHINE_ARCH} == "aarch64"
 FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
+TOOL_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 PLIST.swiftshader=	yes
 FFMPEG_TARGET=		x64
 .endif
@@ -239,7 +239,7 @@ pre-configure:
 	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${INSTALL_DATA_DIR} ${FFMPEG_CDIR}
 .for ffmpeg_part in config.h config.asm config_components.h libavcodec libavformat libavutil
-	cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
+	-cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
 .endfor
 
 	# Create symlink to NetBSD nodejs command.
