@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:13 nia Exp $
-
-BLAKE2s (AFLplusplus-4.34c.tar.gz) = 4d06625771850f7204b83c2b4f4866dbe00a87dc218272017e62be7f8119962b
-SHA512 (AFLplusplus-4.34c.tar.gz) = 42f8618f8da4bfd1b4e4dc97ba827cfab730b1e2755a6143dce41d9e256aadb0ff18c2f61b07ae50790612f090371f58cd1e434996373d9c799a8a00b867b574
-Size (AFLplusplus-4.34c.tar.gz) = 3100867 bytes
-SHA1 (patch-GNUmakefile) = 7c628d33c5f542bbbcdeafcbad37a50ac3820dd3
-SHA1 (patch-GNUmakefile.llvm) = cf76d3b5bb81e17a331c531bbbb174f2c918ac04
-SHA1 (patch-afl-cmin) = 4c821a9a7efcf40f86737dcc04abd12e614dbdc8
-SHA1 (patch-src_afl-cc.c) = ce8b51060b94f8129a9ef08fa131d2c20acc8c53
