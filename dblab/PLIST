@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/dblab
+bin/dbmigrate
+bin/seeder
