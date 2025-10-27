@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	1.3.0pre31
+FLNEWS_VERSION=	1.3.0pre34
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 TEST_TARGET=	test
 
 # https://reproducible-builds.org/specs/source-date-epoch/
-CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1714225440
+CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1761574602
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
@@ -82,11 +82,8 @@ TOOL_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-# OpenSSL 3 API is required for RFC 7919 FFDHE group negotiation
 .include "../../security/openssl/buildlink3.mk"
 # FLTK must be compiled with multithreading support
-# FLTK version 1.4 is supported (should be compiled with pango support)
-#.include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
