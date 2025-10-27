@@ -15,19 +15,18 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang
 DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
-CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_LIBCXX=ON
+#CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_LIBCXX=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=${PREFIX}/bin/clang
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=${PREFIX}/bin/clang++
 CMAKE_CONFIGURE_ARGS+=	-DHAVE_CXX_ATOMICS64_WITHOUT_LIB=ON
 CMAKE_CONFIGURE_ARGS+=	-DLLDB_CODESIGN_IDENTITY=""
-CMAKE_CONFIGURE_ARGS+=	-DLLDB_USE_SYSTEM_SIX=ON
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_HOME=${PREFIX}
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
@@ -73,7 +72,7 @@ NOT_FOR_PLATFORM+=	NetBSD-*-powerpc
 .include "../../devel/swig4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/clang/buildlink3.mk"
-.include "../../wip/libcxx/buildlink3.mk"
+#.include "../../wip/libcxx/buildlink3.mk"
 .include "../../wip/llvm/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/application.mk"
