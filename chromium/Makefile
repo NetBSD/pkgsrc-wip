@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/09/30 16:07:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/27 11:27:36 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			141.0.7390.122
@@ -194,11 +194,13 @@ GN_ARGS+=	enable_rust=true \
 		rustc_version=\"${RUSTC_VERSION:sh}\"
 
 PLIST_VARS+=		swiftshader
+FFMPEG_PARTS=		config.h config_components.h libavcodec libavformat libavutil
 .if ${MACHINE_ARCH} == "aarch64"
 FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 PLIST.swiftshader=	yes
+FFMPEG_PARTS+=		config.asm
 FFMPEG_TARGET=		x64
 .endif
 
@@ -238,8 +240,8 @@ pre-configure:
 		${LOWER_OPSYS} ${FFMPEG_TARGET} --config-only --branding=${FFMPEG_BRAND}
 	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${INSTALL_DATA_DIR} ${FFMPEG_CDIR}
-.for ffmpeg_part in config.h config.asm config_components.h libavcodec libavformat libavutil
-	-cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
+.for ffmpeg_part in ${FFMPEG_PARTS}
+	cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
 .endfor
 
 	# Create symlink to NetBSD nodejs command.
