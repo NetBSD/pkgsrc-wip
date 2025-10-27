@@ -9,5 +9,5 @@ PKG_SUGGESTED_OPTIONS=		x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 DEPENDS+=	${PYPKGPREFIX}-qt6>=6.9.0:../../x11/py-qt6
-#DEPENDS+=	${PYPKGPREFIX}-qdarkstyle>=3.2:../../wip/py-qdarkstyle
+DEPENDS+=	${PYPKGPREFIX}-qdarkstyle>=3.2:../../wip/py-qdarkstyle
 .endif

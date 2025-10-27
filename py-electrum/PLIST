@@ -1,11 +1,11 @@
 @comment $NetBSD$
 bin/electrum
-${PYSITELIB}/electrum-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/electrum-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/electrum-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/electrum-${PKGVERSION}.dist-info/licenses/AUTHORS
-${PYSITELIB}/electrum-${PKGVERSION}.dist-info/licenses/LICENCE
-${PYSITELIB}/electrum-${PKGVERSION}.dist-info/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/electrum/__init__.py
 ${PYSITELIB}/electrum/__init__.pyc
 ${PYSITELIB}/electrum/__init__.pyo

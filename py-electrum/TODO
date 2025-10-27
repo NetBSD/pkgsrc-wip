@@ -1,2 +1,1 @@
-* Dark theme support is currently unavailable, as the required dependency wip/py-qdarkstyle is presently broken.
 * Hardware wallets (Ledger, Trezor, KeepKey) are not yet supported due to the absence of several required dependencies.

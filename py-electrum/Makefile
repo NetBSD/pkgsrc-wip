@@ -2,6 +2,7 @@
 
 DISTNAME=	Electrum-4.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://download.electrum.org/4.6.2/
 
@@ -26,6 +27,8 @@ DEPENDS+=	${PYPKGPREFIX}-dns>=2.2:../../net/py-dns
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
+
+WHEEL_NAME=	${DISTNAME:tl}
 
 REPLACE_PYTHON=		*.py
 
