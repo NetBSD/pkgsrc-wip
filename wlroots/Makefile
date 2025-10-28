@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		wlroots-0.19.0
+DISTNAME=		wlroots-0.19.2
 CATEGORIES=		x11
 MASTER_SITE_GITLAB=	https://gitlab.freedesktop.org/
 MASTER_SITES=		${MASTER_SITE_GITLAB:=wlroots/}
@@ -33,7 +33,7 @@ SUBST_VARS.path+=	PREFIX X11BASE
 .include "../../wip/vulkan-loader/buildlink3.mk"
 
 # need update
-.include "../../wip/wayland/buildlink3.mk"
+#.include "../../wip/wayland/buildlink3.mk"
 .include "../../wip/modular-xorg-xwayland/buildlink3.mk"
 
 .include "../../devel/wayland/buildlink3.mk"
