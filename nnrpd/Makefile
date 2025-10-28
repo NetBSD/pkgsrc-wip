@@ -15,7 +15,7 @@ INSTALLATION_DIRS=	sbin libexec \
 			share/examples/nnrpd share/doc/nnrpd \
 			${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
-INN_DATA_DIR?=		/var/news
+INN_DATA_DIR?=		${CNEWSDATA}
 
 CONFLICTS+=		nntpclnt-[0-9]*
 CONFLICTS+=		inn-[0-9]*
@@ -35,7 +35,7 @@ FILES_SUBST+=		INNPREFIX=${PREFIX}
 FILES_SUBST+=		INNMANPREFIX=${PREFIX}
 
 # UBC brought read and mmap in sync
-.if ${OPSYS} == "NetBSD" && (${OS_VERSION:M1.[0-4]*} != "" || \
+.if ${OPSYS} == "NetBSD" && (${OS_VERSION:M1.[0-4].*} != "" || \
 		${OS_VERSION:M1.5} != "" || \
 		${OS_VERSION:M1.5[A-K]} != "")
 FILES_SUBST+=		INNACTSTYLE="READ"
@@ -44,7 +44,6 @@ FILES_SUBST+=		INNCFLAGS=${CFLAGS:M*:Q}
 FILES_SUBST+=		INNACTSTYLE="MMAP"
 FILES_SUBST+=		INNCFLAGS="${CFLAGS} -DOVERSCREAM"
 .endif
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
 MESSAGE_SUBST+=		NEWSUID=${NEWSUID}
 MESSAGE_SUBST+=		NEWSGID=${NEWSGID}
