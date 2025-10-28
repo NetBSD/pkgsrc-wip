@@ -9,6 +9,490 @@ Caused by:
 
 Caused by:
   found a virtual manifest at `/usr/pkgsrc/wip/vector/work/heim-f3537d9b32e69a2a8ab19a0d42a1e6f5577a5a45/Cargo.toml` instead of a package manifest
-*** Error code 101
 
-Stop.
+Please note that a stand alone build of the heim fork fails with "Unsupported OS".
+Leaving the build error here for reference:
+
+~> cargo build --no-default-features --features disk
+[...]
+   Compiling heim-derive v0.1.0-rc.1 (/home/pin/Git/heim/heim-derive)
+   Compiling heim-disk v0.1.0-rc.1 (/home/pin/Git/heim/heim-disk)
+   Compiling heim-cpu v0.1.0-rc.1 (/home/pin/Git/heim/heim-cpu)
+error: Unsupported OS
+  --> heim-disk/src/sys/mod.rs:22:9
+   |
+22 |         compile_error!("Unsupported OS");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: Unsupported target OS
+  --> heim-cpu/src/sys/mod.rs:20:9
+   |
+20 |         compile_error!("Unsupported target OS");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0425]: cannot find function `logical_count` in module `sys`
+ --> heim-cpu/src/count.rs:7:10
+  |
+7 |     sys::logical_count().await
+  |          ^^^^^^^^^^^^^ not found in `sys`
+  |
+help: consider importing this function through its public re-export
+  |
+1 + use crate::logical_count;
+  |
+help: if you import `logical_count`, refer to it directly
+  |
+7 -     sys::logical_count().await
+7 +     logical_count().await
+  |
+
+error[E0425]: cannot find function `physical_count` in module `sys`
+  --> heim-cpu/src/count.rs:16:10
+   |
+16 |     sys::physical_count().await
+   |          ^^^^^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::physical_count;
+   |
+help: if you import `physical_count`, refer to it directly
+   |
+16 -     sys::physical_count().await
+16 +     physical_count().await
+   |
+
+error[E0412]: cannot find type `CpuFrequency` in module `sys`
+ --> heim-cpu/src/freq.rs:9:30
+  |
+9 | pub struct CpuFrequency(sys::CpuFrequency);
+  |                              ^^^^^^^^^^^^ not found in `sys`
+  |
+help: consider importing this struct through its public re-export
+  |
+1 + use crate::CpuFrequency;
+  |
+help: if you import `CpuFrequency`, refer to it directly
+  |
+9 - pub struct CpuFrequency(sys::CpuFrequency);
+9 + pub struct CpuFrequency(CpuFrequency);
+  |
+
+error[E0412]: cannot find type `CpuFrequency` in module `sys`
+  --> heim-cpu/src/freq.rs:11:26
+   |
+11 | wrap!(CpuFrequency, sys::CpuFrequency);
+   |                          ^^^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::CpuFrequency;
+   |
+help: if you import `CpuFrequency`, refer to it directly
+   |
+11 - wrap!(CpuFrequency, sys::CpuFrequency);
+11 + wrap!(CpuFrequency, CpuFrequency);
+   |
+
+error[E0425]: cannot find function `frequency` in module `sys`
+  --> heim-cpu/src/freq.rs:63:10
+   |
+63 |     sys::frequency().await.map(Into::into)
+   |          ^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::frequency;
+   |
+help: if you import `frequency`, refer to it directly
+   |
+63 -     sys::frequency().await.map(Into::into)
+63 +     frequency().await.map(Into::into)
+   |
+
+error[E0412]: cannot find type `CpuStats` in module `sys`
+  --> heim-cpu/src/stats.rs:10:26
+   |
+10 | pub struct CpuStats(sys::CpuStats);
+   |                          ^^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::CpuStats;
+   |
+help: if you import `CpuStats`, refer to it directly
+   |
+10 - pub struct CpuStats(sys::CpuStats);
+10 + pub struct CpuStats(CpuStats);
+   |
+
+error[E0412]: cannot find type `CpuStats` in module `sys`
+  --> heim-cpu/src/stats.rs:12:22
+   |
+12 | wrap!(CpuStats, sys::CpuStats);
+   |                      ^^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::CpuStats;
+   |
+help: if you import `CpuStats`, refer to it directly
+   |
+12 - wrap!(CpuStats, sys::CpuStats);
+12 + wrap!(CpuStats, CpuStats);
+   |
+
+error[E0425]: cannot find function `stats` in module `sys`
+  --> heim-cpu/src/stats.rs:39:10
+   |
+39 |     sys::stats().await.map(Into::into)
+   |          ^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::stats;
+   |
+help: if you import `stats`, refer to it directly
+   |
+39 -     sys::stats().await.map(Into::into)
+39 +     stats().await.map(Into::into)
+   |
+
+error[E0412]: cannot find type `CpuTime` in module `sys`
+  --> heim-cpu/src/times.rs:16:25
+   |
+16 | pub struct CpuTime(sys::CpuTime);
+   |                         ^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::CpuTime;
+   |
+help: if you import `CpuTime`, refer to it directly
+   |
+16 - pub struct CpuTime(sys::CpuTime);
+16 + pub struct CpuTime(CpuTime);
+   |
+
+error[E0412]: cannot find type `CpuTime` in module `sys`
+  --> heim-cpu/src/times.rs:18:21
+   |
+18 | wrap!(CpuTime, sys::CpuTime);
+   |                     ^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::CpuTime;
+   |
+help: if you import `CpuTime`, refer to it directly
+   |
+18 - wrap!(CpuTime, sys::CpuTime);
+18 + wrap!(CpuTime, CpuTime);
+   |
+
+error[E0425]: cannot find function `time` in module `sys`
+  --> heim-cpu/src/times.rs:55:10
+   |
+55 |     sys::time().await.map(Into::into)
+   |          ^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::time;
+   |
+help: if you import `time`, refer to it directly
+   |
+55 -     sys::time().await.map(Into::into)
+55 +     time().await.map(Into::into)
+   |
+
+error[E0425]: cannot find function `times` in module `sys`
+  --> heim-cpu/src/times.rs:62:22
+   |
+62 |     let inner = sys::times().await?;
+   |                      ^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::times;
+   |
+help: if you import `times`, refer to it directly
+   |
+62 -     let inner = sys::times().await?;
+62 +     let inner = times().await?;
+   |
+
+error[E0425]: cannot find value `ST_MANDLOCK` in crate `libc`
+  --> heim-disk/src/os/unix/usage.rs:12:32
+   |
+12 |         const MANDLOCK = libc::ST_MANDLOCK;
+   |                                ^^^^^^^^^^^ not found in `libc`
+
+error[E0425]: cannot find value `ST_NOATIME` in crate `libc`
+    --> heim-disk/src/os/unix/usage.rs:20:31
+     |
+  20 |         const NOATIME = libc::ST_NOATIME;
+     |                               ^^^^^^^^^^ help: a constant with a similar name exists: `MNT_NOATIME`
+     |
+    ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:1707:1
+     |
+1707 | pub const MNT_NOATIME: c_int = 0x04000000;
+     | ---------------------------- similarly named constant `MNT_NOATIME` defined here
+
+error[E0425]: cannot find value `ST_NODEV` in crate `libc`
+   --> heim-disk/src/os/unix/usage.rs:28:29
+    |
+ 28 |         const NODEV = libc::ST_NODEV;
+    |                             ^^^^^^^^ help: a constant with a similar name exists: `MNT_NODEV`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/mod.rs:439:1
+    |
+439 | pub const MNT_NODEV: c_int = 0x00000010;
+    | -------------------------- similarly named constant `MNT_NODEV` defined here
+
+error[E0425]: cannot find value `ST_NODIRATIME` in crate `libc`
+  --> heim-disk/src/os/unix/usage.rs:36:34
+   |
+36 |         const NODIRATIME = libc::ST_NODIRATIME;
+   |                                  ^^^^^^^^^^^^^ not found in `libc`
+
+error[E0425]: cannot find value `ST_NOEXEC` in crate `libc`
+   --> heim-disk/src/os/unix/usage.rs:44:30
+    |
+ 44 |         const NOEXEC = libc::ST_NOEXEC;
+    |                              ^^^^^^^^^ help: a constant with a similar name exists: `MNT_NOEXEC`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/mod.rs:339:1
+    |
+339 | pub const MNT_NOEXEC: c_int = 0x00000004;
+    | --------------------------- similarly named constant `MNT_NOEXEC` defined here
+
+error[E0425]: cannot find value `ST_RELATIME` in crate `libc`
+    --> heim-disk/src/os/unix/usage.rs:59:32
+     |
+  59 |         const RELATIME = libc::ST_RELATIME;
+     |                                ^^^^^^^^^^^ help: a constant with a similar name exists: `MNT_RELATIME`
+     |
+    ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:1701:1
+     |
+1701 | pub const MNT_RELATIME: c_int = 0x00020000;
+     | ----------------------------- similarly named constant `MNT_RELATIME` defined here
+
+error[E0425]: cannot find value `ST_SYNCHRONOUS` in crate `libc`
+   --> heim-disk/src/os/unix/usage.rs:68:35
+    |
+ 68 |         const SYNCHRONOUS = libc::ST_SYNCHRONOUS;
+    |                                   ^^^^^^^^^^^^^^ help: a constant with a similar name exists: `MNT_SYNCHRONOUS`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/mod.rs:338:1
+    |
+338 | pub const MNT_SYNCHRONOUS: c_int = 0x00000002;
+    | -------------------------------- similarly named constant `MNT_SYNCHRONOUS` defined here
+
+error[E0412]: cannot find type `statfs` in crate `libc`
+   --> heim-disk/src/sys/unix/partitions.rs:38:17
+    |
+ 38 |   impl From<libc::statfs> for Partition {
+    |                   ^^^^^^ help: a struct with a similar name exists: `statvfs`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:795:1
+    |
+795 | / s_no_extra_traits! {
+796 | |     pub struct utmpx {
+797 | |         pub ut_name: [c_char; _UTX_USERSIZE],
+798 | |         pub ut_id: [c_char; _UTX_IDSIZE],
+...   |
+914 | | }
+    | |_- similarly named struct `statvfs` defined here
+
+error[E0412]: cannot find type `statfs` in crate `libc`
+   --> heim-disk/src/sys/unix/partitions.rs:39:25
+    |
+ 39 |       fn from(stat: libc::statfs) -> Partition {
+    |                           ^^^^^^ help: a struct with a similar name exists: `statvfs`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:795:1
+    |
+795 | / s_no_extra_traits! {
+796 | |     pub struct utmpx {
+797 | |         pub ut_name: [c_char; _UTX_USERSIZE],
+798 | |         pub ut_id: [c_char; _UTX_IDSIZE],
+...   |
+914 | | }
+    | |_- similarly named struct `statvfs` defined here
+
+error[E0412]: cannot find type `statfs` in crate `libc`
+   --> heim-disk/src/sys/unix/bindings/mod.rs:11:36
+    |
+ 11 |       fn getfsstat64(buf: *mut libc::statfs, bufsize: libc::c_int, flags: libc::c_int)
+    |                                      ^^^^^^ help: a struct with a similar name exists: `statvfs`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:795:1
+    |
+795 | / s_no_extra_traits! {
+796 | |     pub struct utmpx {
+797 | |         pub ut_name: [c_char; _UTX_USERSIZE],
+798 | |         pub ut_id: [c_char; _UTX_IDSIZE],
+...   |
+914 | | }
+    | |_- similarly named struct `statvfs` defined here
+
+error[E0412]: cannot find type `statfs` in crate `libc`
+   --> heim-disk/src/sys/unix/bindings/mod.rs:19:37
+    |
+ 19 |   pub fn mounts() -> Result<Vec<libc::statfs>> {
+    |                                       ^^^^^^ help: a struct with a similar name exists: `statvfs`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:795:1
+    |
+795 | / s_no_extra_traits! {
+796 | |     pub struct utmpx {
+797 | |         pub ut_name: [c_char; _UTX_USERSIZE],
+798 | |         pub ut_id: [c_char; _UTX_IDSIZE],
+...   |
+914 | | }
+    | |_- similarly named struct `statvfs` defined here
+
+error[E0412]: cannot find type `statfs` in crate `libc`
+   --> heim-disk/src/sys/unix/bindings/mod.rs:21:31
+    |
+ 21 |       let mut mounts: Vec<libc::statfs> = Vec::with_capacity(expected_len as usize);
+    |                                 ^^^^^^ help: a struct with a similar name exists: `statvfs`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:795:1
+    |
+795 | / s_no_extra_traits! {
+796 | |     pub struct utmpx {
+797 | |         pub ut_name: [c_char; _UTX_USERSIZE],
+798 | |         pub ut_id: [c_char; _UTX_IDSIZE],
+...   |
+914 | | }
+    | |_- similarly named struct `statvfs` defined here
+
+error[E0412]: cannot find type `statfs` in crate `libc`
+   --> heim-disk/src/sys/unix/bindings/mod.rs:25:34
+    |
+ 25 |               mem::size_of::<libc::statfs>() as libc::c_int * expected_len,
+    |                                    ^^^^^^ help: a struct with a similar name exists: `statvfs`
+    |
+   ::: /home/pin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/mod.rs:795:1
+    |
+795 | / s_no_extra_traits! {
+796 | |     pub struct utmpx {
+797 | |         pub ut_name: [c_char; _UTX_USERSIZE],
+798 | |         pub ut_id: [c_char; _UTX_IDSIZE],
+...   |
+914 | | }
+    | |_- similarly named struct `statvfs` defined here
+
+error[E0412]: cannot find type `IoCounters` in module `sys`
+  --> heim-disk/src/counters.rs:20:28
+   |
+20 | pub struct IoCounters(sys::IoCounters);
+   |                            ^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::IoCounters;
+   |
+help: if you import `IoCounters`, refer to it directly
+   |
+20 - pub struct IoCounters(sys::IoCounters);
+20 + pub struct IoCounters(IoCounters);
+   |
+
+error[E0412]: cannot find type `IoCounters` in module `sys`
+  --> heim-disk/src/counters.rs:22:24
+   |
+22 | wrap!(IoCounters, sys::IoCounters);
+   |                        ^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this struct through its public re-export
+   |
+ 1 + use crate::IoCounters;
+   |
+help: if you import `IoCounters`, refer to it directly
+   |
+22 - wrap!(IoCounters, sys::IoCounters);
+22 + wrap!(IoCounters, IoCounters);
+   |
+
+error[E0425]: cannot find function `io_counters` in module `sys`
+  --> heim-disk/src/counters.rs:72:22
+   |
+72 |     let inner = sys::io_counters().await?;
+   |                      ^^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::io_counters;
+   |
+help: if you import `io_counters`, refer to it directly
+   |
+72 -     let inner = sys::io_counters().await?;
+72 +     let inner = io_counters().await?;
+   |
+
+error[E0425]: cannot find function `io_counters_physical` in module `sys`
+  --> heim-disk/src/counters.rs:81:22
+   |
+81 |     let inner = sys::io_counters_physical().await?;
+   |                      ^^^^^^^^^^^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::io_counters_physical;
+   |
+help: if you import `io_counters_physical`, refer to it directly
+   |
+81 -     let inner = sys::io_counters_physical().await?;
+81 +     let inner = io_counters_physical().await?;
+   |
+
+error[E0433]: failed to resolve: use of unresolved module or unlinked crate `libc`
+ --> heim-cpu/src/sys/unix.rs:6:27
+  |
+6 |     let result = unsafe { libc::getloadavg(data.as_mut_ptr(), 3) };
+  |                           ^^^^ use of unresolved module or unlinked crate `libc`
+  |
+  = help: if you wanted to use a crate named `libc`, use `cargo add libc` to add it to your `Cargo.toml`
+
+error[E0433]: failed to resolve: use of unresolved module or unlinked crate `libc`
+ --> heim-cpu/src/sys/unix.rs:5:20
+  |
+5 |     let mut data: [libc::c_double; 3] = [0.0, 0.0, 0.0];
+  |                    ^^^^ use of unresolved module or unlinked crate `libc`
+  |
+  = help: if you wanted to use a crate named `libc`, use `cargo add libc` to add it to your `Cargo.toml`
+
+Some errors have detailed explanations: E0412, E0425, E0433.
+For more information about an error, try `rustc --explain E0412`.
+   Compiling heim-sensors v0.1.0-rc.1 (/home/pin/Git/heim/heim-sensors)
+error: could not compile `heim-cpu` (lib) due to 15 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: Unsupported target OS
+  --> heim-sensors/src/sys/mod.rs:15:9
+   |
+15 |         compile_error!("Unsupported target OS");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0425]: cannot find function `temperatures` in module `sys`
+  --> heim-sensors/src/temperatures.rs:66:10
+   |
+66 |     sys::temperatures()
+   |          ^^^^^^^^^^^^ not found in `sys`
+   |
+help: consider importing this function through its public re-export
+   |
+ 1 + use crate::temperatures;
+   |
+help: if you import `temperatures`, refer to it directly
+   |
+66 -     sys::temperatures()
+66 +     temperatures()
+   |
+
+Some errors have detailed explanations: E0412, E0425.
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `heim-disk` (lib) due to 18 previous errors
+error: could not compile `heim-sensors` (lib) due to 2 previous errors
