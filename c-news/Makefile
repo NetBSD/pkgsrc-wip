@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2015/02/01 21:01:33 hfath Exp $
+# $NetBSD$
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
 		ftp://ftp.funet.fi/pub/unix/news/cnews/ \
@@ -32,7 +32,7 @@ LICENSE=	c-news-license
 LICENSE_FILE=	c-news-license
 
 # Not yet 64 bit time_t safe
-NOT_FOR_PLATFORM=	NetBSD-5.99.*-* NetBSD-[6-9]*-*
+NOT_FOR_PLATFORM=	NetBSD-5.99.*-* NetBSD-[6-9].*-* NetBSD-[1-9][1-9].*-*
 
 MAKE_JOBS_SAFE=		no
 
@@ -53,18 +53,18 @@ INSTALL_UNSTRIPPED=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0123].*))
-DEPENDS+=	uucp-[1-9]*:../../net/uucp
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0123].*)
+DEPENDS+=	uucp-[0-9]*:../../net/uucp
 .endif
 
-.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+.if ${PKGSRC_RUN_TEST:U:tl} == yes
 TEST_TARGET=	regression
 .endif
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	${PGPVERIFY:Q}
 
-.if (${OPSYS} == "SunOS")
+.if ${OPSYS} == "SunOS"
 # groff & pic
 USE_TOOLS+=	groff
 PIC?=		gpic
@@ -93,6 +93,9 @@ DOCS=		guide.more guide.ps index.ps toc.ps
 NOTEBOOK=	locking.more makefiles.more locking.ps makefiles.ps
 
 PGPVERIFY?=	pgpverify-1.12
+
+INSTALLATION_DIRS+=	share/doc/cnews
+INSTALLATION_DIRS+=	share/examples/cnews
 
 pre-patch:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${PGPVERIFY:Q} ${WRKSRC}/${PGPVERIFY:Q}
@@ -148,7 +151,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/${i:Q} ${PREFIX}/${PKGMANDIR}/man8/${i:R:Q}.8
 .endfor
 	# install docs:
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cnews
 .for i in ${DOCS}
 	${INSTALL_MAN} ${WRKSRC}/doc/${i:Q} ${PREFIX}/share/doc/cnews
 .endfor
@@ -156,7 +158,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/notebook/${i:Q} ${PREFIX}/share/doc/cnews
 .endfor
 	# install sample config files
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cnews
 	set -e; \
 	for FILE in `ls -1 ${WRKSRC}/conf/*.eg` \
 		${WRKSRC}/conf/cron.proto ${WRKSRC}/conf/organization; do \
