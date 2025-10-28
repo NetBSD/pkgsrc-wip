@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 18:15:32 asau Exp $
+# $NetBSD$
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -10,10 +10,6 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/OLD/1.7/ \
 MAINTAINER=		hauke@NetBSD.org
 HOMEPAGE=		http://www.isc.org/sw/inn/
 COMMENT=		NNTP reader daemon from InterNet News (INN)
-
-INSTALLATION_DIRS=	sbin libexec \
-			share/examples/nnrpd share/doc/nnrpd \
-			${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 INN_DATA_DIR?=		${CNEWSDATA}
 
@@ -27,9 +23,6 @@ USE_TOOLS+=		perl
 .include "../../wip/c-news/Makefile.common"
 .include "options.mk"
 
-# Given foo=${bar}, replace @foo@ with ${bar}.
-#
-FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		INNDATA=${INN_DATA_DIR:Q}
 FILES_SUBST+=		INNPREFIX=${PREFIX}
 FILES_SUBST+=		INNMANPREFIX=${PREFIX}
@@ -61,6 +54,10 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/nnrpd/${inn_files} \
 .endfor
 
 BUILD_DEFS+=		INN_DATA_DIR
+
+INSTALLATION_DIRS+=	sbin libexec
+INSTALLATION_DIRS+=	share/examples/nnrpd share/doc/nnrpd
+INSTALLATION_DIRS+=	${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/config.data > \
