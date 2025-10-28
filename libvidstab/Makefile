@@ -12,7 +12,9 @@ HOMEPAGE=	http://public.hronopik.de/vid.stab/
 COMMENT=	Video stabilization library
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
