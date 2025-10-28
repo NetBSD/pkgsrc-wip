@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (Pharo12.0-SNAPSHOT.build.1567.sha.ee47bfdbe3.arch.64bit.zip) = 070d590f798a21d99b6ba8719a26abe301f01d8da7c50ffbddf883580cf94689
-SHA512 (Pharo12.0-SNAPSHOT.build.1567.sha.ee47bfdbe3.arch.64bit.zip) = 76b5aae2e8c9dc53e2022fc26838660d9be246e28c5dc411cca9061d697110c14b78e25b9bab4e0ca9a28699be236a1e3a9af7ec6e98af42f424bc4b83b8b22c
-Size (Pharo12.0-SNAPSHOT.build.1567.sha.ee47bfdbe3.arch.64bit.zip) = 22816487 bytes
+BLAKE2s (Pharo12.0-SNAPSHOT.build.1585.sha.83c728531a.arch.64bit.zip) = afe69ebfee38302a903f5c3e7add13a7c76a603c7cb42e174b7b78e091ef85c5
+SHA512 (Pharo12.0-SNAPSHOT.build.1585.sha.83c728531a.arch.64bit.zip) = 85002123d300744be300bf2dc84e241642025c4b777f6b3975c245939721c2582e2b4bb77208c8b33963057d8197ed7300cffee5f3b2d1b07628b21e8c74a5b2
+Size (Pharo12.0-SNAPSHOT.build.1585.sha.83c728531a.arch.64bit.zip) = 22934772 bytes
