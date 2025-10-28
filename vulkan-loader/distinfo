@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (Vulkan-Loader/vulkan-loader-1.3.296.tar.gz) = 54d2a4343ca548c234c6bb8179d3ceeca6d0495d5b91a46a80a7ae8283abffd6
-SHA512 (Vulkan-Loader/vulkan-loader-1.3.296.tar.gz) = 6a6a6ab8c50acf711b3ba7dfd7d6dffca83e1e7ee1bfa5ee79a2601dafae6e9fa2ae230a8a05db0ab0d4c93cdadf926e2636e8e21cf723c1c17532da3f40d61d
-Size (Vulkan-Loader/vulkan-loader-1.3.296.tar.gz) = 1719181 bytes
+BLAKE2s (Vulkan-Loader/vulkan-loader-1.4.321.0.tar.gz) = c1e062b7b1afa6d016b713e2a90a8c3e638cf2e857ac2cfd3ed217e697fb910e
+SHA512 (Vulkan-Loader/vulkan-loader-1.4.321.0.tar.gz) = 154d5e58f929511134b352f81e4bddc4f4f9aa04524060235b87161b0ca55e640720bb1c8bc7e0e71c445e13c3eeef3c2b5124e900db4f8ceeb98d81725babbd
+Size (Vulkan-Loader/vulkan-loader-1.4.321.0.tar.gz) = 1762904 bytes
