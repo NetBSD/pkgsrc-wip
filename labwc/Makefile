@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	labwc-0.9.1
+DISTNAME=	labwc-0.9.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -23,6 +23,9 @@ CONF_FILES+=	${EGDIR}/themerc ${PKG_SYSCONFDIR}/themerc
 
 PKG_SYSCONFSUBDIR=	xdg/labwc
 INSTALL_MAKE_FLAGS+=	rcdir=${EGDIR}
+
+# Fix: [../src/main.c:94] no fonts are available
+DEPENDS+=		nerd-fonts-Hack-[0-9]*:../../fonts/nerd-fonts-Hack
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
