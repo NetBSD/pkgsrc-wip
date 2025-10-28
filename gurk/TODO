@@ -1,0 +1,8 @@
+===> Building for gurk-0.7.1
+error: failed to load source for dependency `curve25519-dalek`
+
+Caused by:
+  Unable to update /usr/pkgsrc/wip/gurk/work/curve25519-dalek-fa033980129e3d7b806803b3f1a2a04399ea6fb7
+
+Caused by:
+  found a virtual manifest at `/usr/pkgsrc/wip/gurk/work/curve25519-dalek-fa033980129e3d7b806803b3f1a2a04399ea6fb7/Cargo.toml` instead of a package manifest

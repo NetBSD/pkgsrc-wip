@@ -30,12 +30,8 @@ SITES.presage-${PRESAGE_REV}.tar.gz=			-${MASTER_SITE_GITHUB:=whisperfish/}presa
 SITES.poksho-${POKSHO_REV}.tar.gz=			-${MASTER_SITE_GITHUB:=signalapp/}libsignal/archive/${POKSHO_REV}.tar.gz
 SITES.curve25519-dalek-${CURVE25519-DALEK_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=signalapp/}curve25519-dalek/archive/${CURVE25519-DALEK_REV}.tar.gz
 
-#MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-#RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
-#.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

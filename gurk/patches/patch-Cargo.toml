@@ -1,0 +1,23 @@
+$NetBSD$
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- Cargo.toml.orig	2025-10-28 06:41:49.452398627 +0000
++++ Cargo.toml
+@@ -28,8 +28,8 @@ debug = true
+ dev = ["prost", "base64"]
+ 
+ [dependencies]
+-presage = { git = "https://github.com/whisperfish/presage", rev = "0da7b5774" }
+-presage-store-sqlite = { git = "https://github.com/whisperfish/presage", rev = "0da7b5774" }
++presage = { path = "../presage-0da7b57746b827bfb310f98a10a29e73d508e742" }
++presage-store-sqlite = { path = "../presage-0da7b57746b827bfb310f98a10a29e73d508e742" }
+ 
+ # dev feature dependencies
+ prost = { version = "0.13.4", optional = true }
+@@ -128,4 +128,4 @@ harness = false
+ [patch.crates-io]
+ # signal-protocol uses a fork of this library via the patch mechanism of cargo.
+ # Since it is not transitive, we have to add the patch here explicitly.
+-"curve25519-dalek" = { git = 'https://github.com/signalapp/curve25519-dalek', tag = 'signal-curve25519-4.1.3' }
++"curve25519-dalek" = { path = '../curve25519-dalek-fa033980129e3d7b806803b3f1a2a04399ea6fb7' }
