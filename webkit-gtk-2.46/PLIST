@@ -224,10 +224,10 @@ lib/girepository-1.0/WebKit2-4.1.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.1.typelib
 lib/libjavascriptcoregtk-4.1.${RUBY_DLEXT}
 lib/libjavascriptcoregtk-4.1.so.0
-lib/libjavascriptcoregtk-4.1.so.0.8.8
+lib/libjavascriptcoregtk-4.1.so.0.9.6
 lib/libwebkit2gtk-4.1.${RUBY_DLEXT}
 lib/libwebkit2gtk-4.1.so.0
-lib/libwebkit2gtk-4.1.so.0.17.10
+lib/libwebkit2gtk-4.1.so.0.19.4
 lib/pkgconfig/javascriptcoregtk-4.1.pc
 lib/pkgconfig/webkit2gtk-4.1.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.1.pc
@@ -539,6 +539,7 @@ share/doc/webkit2gtk-4.1/const.EDITING_COMMAND_UNDO.html
 share/doc/webkit2gtk-4.1/const.MAJOR_VERSION.html
 share/doc/webkit2gtk-4.1/const.MICRO_VERSION.html
 share/doc/webkit2gtk-4.1/const.MINOR_VERSION.html
+share/doc/webkit2gtk-4.1/contributing.html
 share/doc/webkit2gtk-4.1/ctor.ApplicationInfo.new.html
 share/doc/webkit2gtk-4.1/ctor.ContextMenu.new.html
 share/doc/webkit2gtk-4.1/ctor.ContextMenu.new_with_items.html
@@ -1255,6 +1256,7 @@ share/doc/webkit2gtk-4.1/method.WebView.get_session_state.html
 share/doc/webkit2gtk-4.1/method.WebView.get_settings.html
 share/doc/webkit2gtk-4.1/method.WebView.get_snapshot.html
 share/doc/webkit2gtk-4.1/method.WebView.get_snapshot_finish.html
+share/doc/webkit2gtk-4.1/method.WebView.get_theme_color.html
 share/doc/webkit2gtk-4.1/method.WebView.get_title.html
 share/doc/webkit2gtk-4.1/method.WebView.get_tls_info.html
 share/doc/webkit2gtk-4.1/method.WebView.get_uri.html
@@ -1503,6 +1505,7 @@ share/doc/webkit2gtk-4.1/property.WebView.microphone-capture-state.html
 share/doc/webkit2gtk-4.1/property.WebView.page-id.html
 share/doc/webkit2gtk-4.1/property.WebView.related-view.html
 share/doc/webkit2gtk-4.1/property.WebView.settings.html
+share/doc/webkit2gtk-4.1/property.WebView.theme-color.html
 share/doc/webkit2gtk-4.1/property.WebView.title.html
 share/doc/webkit2gtk-4.1/property.WebView.uri.html
 share/doc/webkit2gtk-4.1/property.WebView.user-content-manager.html

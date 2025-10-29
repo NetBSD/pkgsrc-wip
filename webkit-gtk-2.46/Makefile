@@ -68,10 +68,15 @@ CMAKE_CONFIGURE_ARGS+=		-DUSER_AGENT_BRANDING="Linux ${MACHINE_ARCH}"
 
 # From OpenBSD ports:
 # we don't want an allocation of 1GB, it's above the "default" class ulimit
+# see Source/JavaScriptCore/jit/ExecutableAllocator.cpp for default values
 .if ${MACHINE_ARCH} == "x86_64"
-CXXFLAGS+=		-DFIXED_EXECUTABLE_MEMORY_POOL_SIZE_IN_MB=384
+CXXFLAGS+=		-DFIXED_EXECUTABLE_MEMORY_POOL_SIZE_IN_MB=512
 .endif
+# see Source/JavaScriptCore/runtime/StructureID.h for default values
 CXXFLAGS+=		-DSTRUCTURE_HEAP_ADDRESS_SIZE_IN_MB=256
+
+# For backtrace
+LDFLAGS.NetBSD+=	-lexecinfo
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 

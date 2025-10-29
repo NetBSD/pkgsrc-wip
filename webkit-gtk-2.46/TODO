@@ -1,25 +1,3 @@
-2.50.1: build failure:
-
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureAlignedMemoryAllocator::freeAlignedMemory(void*)':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_thread_local_cache.h:99:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0x32): undefined reference to `pas_thread_local_cache_pointer'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureAlignedMemoryAllocator::freeAlignedMemory(void*)':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_bitvector.h:78:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0x69): undefined reference to `bmalloc_megapage_table'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureAlignedMemoryAllocator::freeAlignedMemory(void*)':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_deallocate.h:209:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0xd3): undefined reference to `bmalloc_heap_config'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `pas_try_deallocate':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_deallocate.h:209:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0xec): undefined reference to `bmalloc_megapage_table'
-ld: /scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_deallocate.h:209:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0xe5): undefined reference to `pas_try_deallocate_slow_no_cache'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureAlignedMemoryAllocator::freeAlignedMemory(void*)':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_deallocate.h:174:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0x153): undefined reference to `bmalloc_heap_config_specialized_try_deallocate_not_small_exclusive_segregated'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureAlignedMemoryAllocator::freeAlignedMemory(void*)':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_thread_local_cache.h:403:(.text._ZN3JSC31StructureAlignedMemoryAllocator17freeAlignedMemoryEPv+0x257): undefined reference to `pas_thread_local_cache_append_deallocation_slow'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureMemoryManager::StructureMemoryManager()':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/Source/JavaScriptCore/heap/StructureAlignedMemoryAllocator.cpp:117:(.text._ZN3JSC22StructureMemoryManagerC2Ev[_ZN3JSC22StructureMemoryManagerC5Ev]+0xef): undefined reference to `bmalloc_force_auxiliary_heap_into_reserved_memory'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureMemoryManager::tryMallocStructureBlock()':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/pas_thread_local_cache.h:99:(.text._ZN3JSC22StructureMemoryManager23tryMallocStructureBlockEv[_ZN3JSC22StructureMemoryManager23tryMallocStructureBlockEv]+0x70): undefined reference to `pas_thread_local_cache_pointer'
-ld: Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/__/__/JavaScriptCore/DerivedSources/unified-sources/UnifiedSource-ee8a7a7a-7.cpp.o: in function `JSC::StructureMemoryManager::tryMallocStructureBlock()':
-/scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.1/cmake-pkgsrc-build/bmalloc/Headers/bmalloc/bmalloc_heap_inlines.h:117:(.text._ZN3JSC22StructureMemoryManager23tryMallocStructureBlockEv[_ZN3JSC22StructureMemoryManager23tryMallocStructureBlockEv]+0x17c): undefined reference to `bmalloc_try_allocate_auxiliary_with_alignment_casual'
-
 
 pkg_add: webkit-gtk-2.48.5: missing required library: /scratch/wip/webkit-gtk-2.46/work/.buildlink/lib/libsqlite3.so
 
