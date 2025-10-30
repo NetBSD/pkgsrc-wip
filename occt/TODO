@@ -1,6 +1,17 @@
   - Create COMMIT_MSG.
+    + explain why ~all patches are dropped (could be fine, but it's very surprising)
+    + explain why the vast withdrawal of includes is correct
+    + upstream NEWS
   - bl3: Redo options (see `pkglint -e` output)
   - options: Add comment about occt-draw with content for
     mk/defaults/options.description
   - Resolve rapidjson error message that stops build but apparently
     does not break it (N10/amd64).
+  - Resolve PLIST losing substitutions, perhaps with PRINT_PLIST_AWK
+      -bin/${OCCT_CUSTOM_COMPILER_DRIVER}
+      +bin/custom_gcc_64.sh
+      -bin/${OCCT_CUSTOM_COMPILER_DRIVER}
+      +bin/custom_gcc_64.sh
+      -lib/libTKXmlTObj.so.${MINOR_VERSION}
+      +lib/libTKXmlTObj.so.7.9
+  - Upstream bug reports and URLS for patches
