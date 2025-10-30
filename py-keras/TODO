@@ -1,2 +1,3 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2025-1550, CVE-2025-8747, CVE-2025-9905, CVE-2025-9906, CVE-2025-12058
+  CVE-2025-1550, CVE-2025-8747, CVE-2025-9905, CVE-2025-9906, CVE-2025-12058,
+  CVE-2025-12060
