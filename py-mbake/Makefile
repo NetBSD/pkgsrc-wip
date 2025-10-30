@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mbake-1.4.2.post1
+DISTNAME=	mbake-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mbake/}
@@ -24,8 +24,8 @@ SUBST_SED.make+=	-e 's,"make","'${GMAKE}'",'
 SUBST_STAGE.make=	pre-build
 SUBST_MESSAGE.make=	Fix to use GNU make.
 
-# as of 1.4.2.post1
-# 2 failed, 147 passed
+# as of 1.4.3
+# 2 failed, 170 passed
 
 .include "../../lang/python/pyversion.mk"
 

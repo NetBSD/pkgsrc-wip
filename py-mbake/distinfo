@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (mbake-1.4.2.post1.tar.gz) = 68cb5e32278fe967aa3511d3e4cc4982007606d0538b83f91884e440e042e1bc
-SHA512 (mbake-1.4.2.post1.tar.gz) = 7cf019ccd341b39804766de190b772ceca378bbf5488565d22fe77eb86677d4c3f3a295d4d38f5536136bfe195ac513a9de0f53fe9ee8bf12aa11612ea422e31
-Size (mbake-1.4.2.post1.tar.gz) = 2996603 bytes
+BLAKE2s (mbake-1.4.3.tar.gz) = 8ec39ad7f65a8f5c59c9e44ccb788e9c7a7688b01b8ddffc18c93c9d3309496e
+SHA512 (mbake-1.4.3.tar.gz) = 2dce523af621241cac4d68b6a77bd809c9568e47e65e1bdb7609984d5f7b2b78ef0723258e7baea6f80a94e1c5a688d6d0a418f093251cab820594d376cecc3b
+Size (mbake-1.4.3.tar.gz) = 3001136 bytes
