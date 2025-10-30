@@ -1,14 +1,14 @@
 # $NetBSD$
 
 DISTNAME=	pdns-recursor-5.3.1
+PKGNAME=	${DISTNAME:S/pdns/powerdns/}
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.xz
-PKGNAME=	powerdns-recursor-5.3.1
 
 MAINTAINER=	drixter@e-utp.net
-HOMEPAGE=	https://downloads.powerdns.com/releases/
-COMMENT=	PowerDNS resolver
+HOMEPAGE=	https://www.powerdns.com/
+COMMENT=	PowerDNS resolver/recursing nameserver
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
 CHECK_WRKREF_SKIP+=	sbin/pdns_recursor
 
-EGDIR=			${PREFIX}/share/examples/powerdns-recursor52
+EGDIR=			${PREFIX}/share/examples/powerdns-recursor
 CONF_FILES=		${EGDIR}/recursor.yml-dist ${PKG_SYSCONFDIR}/recursor.yml
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
