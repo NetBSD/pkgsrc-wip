@@ -1,0 +1,6 @@
+  - Create COMMIT_MSG.
+  - bl3: Redo options (see `pkglint -e` output)
+  - options: Add comment about occt-draw with content for
+    mk/defaults/options.description
+  - Resolve rapidjson error message that stops build but apparently
+    does not break it (N10/amd64).

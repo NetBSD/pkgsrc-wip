@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.occt?=	occt>=7.7.0nb1
 BUILDLINK_PKGSRCDIR.occt?=	../../wip/occt
 
 BUILDLINK_INCDIRS.occt+=	include/opencascade
-CMAKE_CONFIGURE_ARGS+=			-DOCC_INCLUDE_DIR=${BUILDLINK_PREFIX.occt}/include/opencascade
+CMAKE_CONFIGURE_ARGS+=		-DOCC_INCLUDE_DIR=${BUILDLINK_PREFIX.occt}/include/opencascade
 
 pkgbase := occt
 .include "../../mk/pkg-build-options.mk"
