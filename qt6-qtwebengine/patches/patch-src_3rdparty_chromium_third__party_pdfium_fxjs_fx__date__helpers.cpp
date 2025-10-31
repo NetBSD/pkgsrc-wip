@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2025-09-25 11:10:42.000000000 +0000
 +++ src/3rdparty/chromium/third_party/pdfium/fxjs/fx_date_helpers.cpp
 @@ -39,6 +39,11 @@ double GetLocalTZA() {
      return 0;
@@ -26,3 +26,21 @@ $NetBSD$
  }
  
  int GetDaylightSavingTA(double d) {
+@@ -264,7 +270,7 @@ double FX_MakeTime(int nHour, int nMin, 
+ }
+ 
+ double FX_MakeDate(double day, double time) {
+-  if (!isfinite(day) || !isfinite(time))
++  if (!std::isfinite(day) || !std::isfinite(time))
+     return nan("");
+ 
+   return day * 86400000 + time;
+@@ -543,7 +549,7 @@ ConversionStatus FX_ParseDateUsingFormat
+ 
+   dt = FX_MakeDate(FX_MakeDay(nYear, nMonth - 1, nDay),
+                    FX_MakeTime(nHour, nMin, nSec, 0));
+-  if (isnan(dt))
++  if (std::isnan(dt))
+     return ConversionStatus::kBadDate;
+ 
+   *result = dt;
