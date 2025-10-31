@@ -9,7 +9,7 @@ Fix xattr build.
  pub const ENOTRECOVERABLE: c_int = 59;
  pub const ENOSTR: c_int = 60;
 +// This is not supported but is required for xattr
-+pub const ENOATTR: ::c_int = ::ENODATA;
++pub const ENOATTR: c_int = ENODATA;
  pub const ENODATA: c_int = 61;
  pub const ETIME: c_int = 62;
  pub const ENOSR: c_int = 63;
