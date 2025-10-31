@@ -3,6 +3,7 @@ bin/fsview
 bin/kcreatewebarchive
 bin/kfmclient
 bin/konqueror
+etc/xdg/konqautofiltersrc
 include/KF6/konq_events.h
 include/KF6/konq_historyentry.h
 include/KF6/konq_historyprovider.h
@@ -690,8 +691,6 @@ share/konqueror/pics/indicator_connect.png
 share/konqueror/pics/indicator_empty.png
 share/konqueror/pics/indicator_noconnect.png
 share/konqueror/pics/indicator_viewactive.png
-share/konqueror/webengine_dictionaries/en_GB.bdic
-share/konqueror/webengine_dictionaries/en_NZ.bdic
 share/konqueror/webengine_dictionaries/en_US.bdic
 share/locale/af/LC_MESSAGES/babelfish.mo
 share/locale/af/LC_MESSAGES/dirfilterplugin.mo
