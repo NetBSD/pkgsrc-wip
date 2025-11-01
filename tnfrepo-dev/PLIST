@@ -8,6 +8,12 @@ ${PYSITELIB}/netbsd_hghooks/__init__.pyo
 ${PYSITELIB}/netbsd_hghooks/_version.py
 ${PYSITELIB}/netbsd_hghooks/_version.pyc
 ${PYSITELIB}/netbsd_hghooks/_version.pyo
+${PYSITELIB}/netbsd_hghooks/aclbranchpat.py
+${PYSITELIB}/netbsd_hghooks/aclbranchpat.pyc
+${PYSITELIB}/netbsd_hghooks/aclbranchpat.pyo
+${PYSITELIB}/netbsd_hghooks/enforce_topic.py
+${PYSITELIB}/netbsd_hghooks/enforce_topic.pyc
+${PYSITELIB}/netbsd_hghooks/enforce_topic.pyo
 ${PYSITELIB}/netbsd_hghooks/git_amend_topic.py
 ${PYSITELIB}/netbsd_hghooks/git_amend_topic.pyc
 ${PYSITELIB}/netbsd_hghooks/git_amend_topic.pyo
@@ -17,6 +23,9 @@ ${PYSITELIB}/netbsd_hghooks/gitmirror.pyo
 ${PYSITELIB}/netbsd_hghooks/reject_bookmarks.py
 ${PYSITELIB}/netbsd_hghooks/reject_bookmarks.pyc
 ${PYSITELIB}/netbsd_hghooks/reject_bookmarks.pyo
+${PYSITELIB}/netbsd_hghooks/reject_hgmeta.py
+${PYSITELIB}/netbsd_hghooks/reject_hgmeta.pyc
+${PYSITELIB}/netbsd_hghooks/reject_hgmeta.pyo
 ${PYSITELIB}/netbsd_hghooks/reject_new_heads.py
 ${PYSITELIB}/netbsd_hghooks/reject_new_heads.pyc
 ${PYSITELIB}/netbsd_hghooks/reject_new_heads.pyo
