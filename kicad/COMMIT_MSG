@@ -1,4 +1,718 @@
-cad/kicad: Update to 9.0.2
+cad/kicad: Update to 9.0.6
+
+KiCad 9.0.6 (2025-10-30)
+
+General
+
+- Ensure file write permissions copying edited library table. #21899
+- Ensure custom library table write path is correctly created. #18937
+  and #18938
+- Prevent always requesting keychain unlock when Git project is
+  opened. #20176
+- Ensures proper execution when running external application. #14261
+- Show all files in file tree when using git. #21583
+- Prevent Altium import error when schematic and/or PCB files are in
+  folder. #20161
+- Make sure ERC/DRC exclusion hotkey works when dialog has
+  focus. #21761
+- Support translation in tool context menus. #21859
+- Support translation of property grid enumerations. #13636 and #21859
+- Fix crash when importing Altium project. #21947
+
+Schematic Editor
+
+- Ensure new symbols obey the observed sheet number. #16632 and #19138
+  and #21637
+- Maintain units even when opening in standalone mode. #19361
+- Properly name Altium sub-sheets on import. #21173
+- Fix crash when updating symbol. #21995
+- Ensure symbol fields table and BOM export field values match using
+  shared sub-sheets. #21998
+- Fix missing description field when using HTTP libraries. #22043
+- Ensure ERC Exclusions are maintained. #21410
+
+Symbol Editor
+
+- Add bulk field editing to symbol field table dialog. #11506
+- Prompt for unsaved changes in the library symbol fields table
+  editor.
+- Prevent crash in changing item symbol unit in properties
+  panel. #21891
+- Set symbols modified flag (*) when library fields are changed.
+
+Simulator
+
+- Enforce spice valid net names when parsing. #18598
+- Improve right Y-axis label layout and power signals displaying
+  incorrect units on simulation plot. #21645
+
+Board Editor
+
+- Fix crash when pressing 'X' to begin routing. #21883
+- Fix crash when routing an empty board.
+- Correctly inherit track width when multiple net classes are
+  defined. #21819
+- Avoid OtherSideView when exporting IPC-2581B. #16286
+- Fix wrong netclass assignment when more than four net
+  classes. #21750
+- Prevent duplicate symbol names in ODB++ output. #21803
+- Fix broken PNS track dragging when constrain to H/V/45 mode is
+  turned on. #21892
+- Handle custom fields from netlist. #21648
+- Ensure Altium PCB import saves under the correct name. #13986
+- Fix crash when canceling zone refill after moving zone
+  points. #21896
+- Prevent zone and shape corners snap to 45/90 degree lines when the
+  option is disabled. #21897
+- Ensure moving objects with arrow keys is aligned to grid. #21682
+- Correct sort net classes in netclass inspector. #21345
+- Auto-convert numeric values in fields when referencing them in
+  expressions. #21723
+- Fix zone filling issues. #21930 and #21946
+- Import pad to die lengths when importing Altium board file.
+- Fix track length calculation inconsistencies. #21913
+- Improved multi-drag segment side/corner determination. #21972
+- Do not ignore grid snapping when movement constrained to horizontal,
+  vertical, or 45 degree mode. #21984
+- Fix constrained movement regression. #21981
+- Fix snapping issue with measurement tool. #22045
+- Fix horizontal, vertical, 45 degree toggle during move. #22025
+- Fix "Unroute Selected" when footprint is selected and select pads is
+  disabled. #22138
+
+Footprint Editor
+
+- Allow deleting multiple 3D models in footprint properties
+  dialog. #21894
+
+IPC API
+
+- Fix crash when setting padstack layers. #21743
+
+
+KiCad 9.0.5 (2025-10-02)
+
+
+General
+
+- Improve algorithm to calculate arcs.
+- Disable I-beam cursor setting for search fields on non-macOS
+  platforms.
+- Do not clear ERC/DRC errors when deleting all markers. #21113
+- Show errors before warnings in DRC/ERC.
+- Fix properties manager <Enter> key iteration ordering. #20651
+- Allow deletion of nested embedded files. #20581
+- Ensure reporter object indicates that any message got reported.
+- Prevent assertion when clearing grid rows ( Sentry KICAD-VM1).
+- Prevent read only autosave error from popping up multiple warning
+  dialogs. #21464
+- Prevent main KiCad window from expanding based on DPI events. #21602
+- Use combo-boxes for units in properties panel. #19904
+
+Schematic Editor
+
+- Fix crash when navigating legacy schematic. #21497
+- Prevent assertion due to missing commit screen object (Sentry
+  KICAD-YKY).
+- Fix hanging when updating symbols after loading legacy schematic
+  with missing symbols. #21536
+- Expose shape in property inspector for sheet pins. #21545
+- Update power filter for power symbols placement.
+- Properly handled exception when attempting to add a database library
+  using latest MariaDB connector. #21707
+- Support multiple footprints in HTTP libraries. #20750
+- Prevent invalid warning when updating other fields in schematic from
+  PCB. #21467
+- Fix broken connectivity with label at the intersection of two
+  nets. #21494
+- Fix broken intersheet wiring on root schematic that temporarily
+  breaks the netlist. #18297
+- Use combo-box for alternate body style in properties panel. #19905
+- Update properties to show units. #21685
+- Prevent graphic lines from drawing on netclass layers. #21731
+- Unify sheet name validators and apply to properties. #21698
+- Fix crash when adding text. #21380
+- Fix broken rotation during multi-label input. #21765
+
+Symbol Editor
+
+- Snap new pin to grid without requiring mouse movement. #16828
+- Show inherited fields in derived symbols. #11422
+- Fix crash when reducing the symbol unit count. #21631
+- Fix broken symbol field position. #21781
+- Fix incorrect handling of vertical position of fields in the library
+  symbol properties dialog. #21781
+
+Board Editor
+
+- Make enabling import teardrop checkbox in the "Import Settings"
+  dialog enable the import button. #21483
+- Fix issue with filled hole when PDF plotting drill marks using SWIG
+  API. #21474
+- Fix bug in private layer selection.
+- Fix crash in STEP export (Sentry KICAD-V8A).
+- Remove unnecessary newlines in STEP exporter logging.
+- Fix occasional failure to select for dragging. #21517
+- Fix reference designator ordering in arrays. #20935
+- Inline drag by track end even if cursor is slightly outside the
+  track shape.
+- Add green color indication to length tuning status popup.
+- Place component shape and marking on F_Fab on EasyEDA import.
+- Build basic courtyard for footprints on EasyEDA import.
+- Add footprint reference text on F_Fab layer on EasyEDA import.
+- Fix ODB++ export path creation.
+- Avoid creating duplicate entries in embedded file list when
+  embedding fonts. #20565
+- Don’t show locked shadow in pad preview.
+- Prevent divide by zero error in footprint coverage ratio
+  calculation.
+- Don’t double mirror groups. #8121 and #20465
+- Properly save and load violation severity 'Drilled hole too close to
+  other hole'. #21525
+- Improve performance of via place tool.
+- Fix snapping sensitivity issue of via placement with large
+  grids. #18626
+- Fix teardrop generation for pads having different shapes by
+  layer. #21560
+- Improve pad hit testing.
+- Do not generate unnecessary remove extra fields warnings when
+  updating from schematic.
+- Fix crash when generating DRC report. #21586
+- Add separate front and back silk screen and solder mask colors for
+  STEP export. #21593
+- Fix STEP export broken wire self interference using custom pad shape
+  on bottom side or board. #21589
+- Prevent redraw flicker when snapping to grid. #19947
+- Fix center dimension drawing issue. #21643
+- Allow removing solder paste relative clearance in footprint
+  properties dialog. #21662
+- Improve file stability when saving tables. #21652
+- Prevent crash using net ties with invalid layers.
+- Prevent pads from moving unexpectedly when footprint is
+  locked. #21626
+- Fix crash on right mouse button click in grid origin tool. #21615
+- Disable snap when moving with keyboard. #21235
+- Allow stitching of graphic shapes.
+- Set free vias to graphic net if available. #21578
+- Footprint library parity DRC warning when closing pad properties
+  dialog with no changes. #21520
+- Fix custom design rules in project with overlapping
+  courtyards. #21697
+- Fix broken behavior for deprecated Gerber commands IPPOS and
+  IPNEG. #21715
+- Fix crash when unfilling all zones (Ctrl+B). #21745
+- Don’t find footprints that have already been deleted. #21445
+- Only namespace components and layers when necessary when exporting
+  IPC-2581. #19914
+- Make move tool obey snap settings. #21192
+- Prevent assertions on tuning pattern layer change. #21476
+- Allow custom rule wildcard matching for netclass naming. #21455
+- Prevent PNS length calculations from being confused by overlapping
+  tracks. #7809
+- Improve display of measurement tool ruler at screen-edges. #11546
+- Allow solder mask bridging between net tie items. #19288
+- Add embed option to file dialog for 3D models. #20025
+- Correctly allow multiple pads with single pin in IPC-2581
+  export. #18688
+- Improve IPC-2581 export error and warning messages. #16314
+- Fix broken creepage DRC text with components on different
+  layers. #21523
+- 45 and 90 degree corner modes produce unnecessary parallel track and
+  break when routing. #10422
+- Space vias to account for hole to hole spacing when routing
+  differential pairs. #21240
+- Improve zoom and pan performance with many through hole pads. #20506
+- Maintain group membership when shoving tracks. #20862
+- Check tracks exiting pads for gaps in differential pair DRC. #21561
+- Fix broken net assignment in Eagle import. #21243
+- Fix zone fill chessboard pattern. #18176
+- Make expand connection respect the selection filter. #21581
+- Make properties panel obey free pads setting. #21591
+- Consider visibility when colliding in DRC. #21625
+- Prevent modifying teardrops on lock/unlock. #21342
+- Add vertical scroll bars to generate rule areas dialog. #20195
+- Correct save footprint chooser settings to prevent unexpected tree
+  expansions. #21818
+- Fix missing colors when exporting STEP models. #21865
+
+Footprint Editor
+
+- Show embed 3D model immediately. #19991
+- Prevent stale names in footprint browser. #9763
+
+3D Viewer
+
+- Remove noise from orthographic projection ray tracing. #8863
+
+Command Line Interface
+
+- Prevent jobs from affecting each other via reporters when running
+  job sets from CLI.
+- Prevent help option from failing erroneously. #21538
+
+Job Sets
+
+- Wrap command text control in execute command job dialog.
+- Record execute command job input and error streams in the log.
+- Increase default precision in ODB++ export job dialog.
+- Add --follow-pcb and --follow-plot-settings options to render job
+  settings. #21341
+- Fix incorrect inner layer links for GERBER jobs. #21569
+- Fix "Replace" button to overwrite existing files. #19900
+- Fix exporting CADSTAR netlist. #21730
+- Ensure archives defined without extension are given ".zip"
+  extension. #21423
+- Make ERC/DRC jobs default to fail on violation.
+- Skip missing 3D models with warning when exporting VRML.
+
+API
+
+- Add ability to set enabled board layers and copper layer count.
+
+Windows
+
+- Display the number of GDI objects in "About" dialog.
+- Don’t convert URI slashes to backslashes when embedding drawing
+  sheet file. https://gitlab.com/kicad/code/kicad/-/issu
+  es/20381[#20381]
+
+macOS
+
+- Add spacing for file dialog custom controls.
+- Make main project window appear in window list. #17596
+- Fix image pasting issue.
+- Fix standalone Pcbnew crash when switching between night and day
+  mode. #21317
+
+Linux
+
+- Fix for cursor rendering on EGL+Nvidia in accelerated graphics
+  mode. #12183
+- Prevent broken library tree scrolling behavior on search. #18000
+
+
+KiCad 9.0.4 (2025-08-18)
+
+
+General
+
+- Fix crash because the infobar button doesn’t have a parent window
+  yet (Sentry KICAD-X9Z).
+- Unbind the size event from the parent window while destructing the
+  child window (Sentry KICAD-RJA).
+- Add automatic completion for defined environment variables.
+- Fix design blocks memory leak.
+- Warp back from context menu before running command. #19560
+- Properly undo/redo moving hierarchical pins in a sheet block. #21111
+- Fix library tree pane destruction order crash (Sentry KICAD-6KC).
+- Don’t use EndModal() to cancel a modal dialog that hasn’t been
+  shown yet (Sentry KICAD-6YE).
+- Fix potential radius overflow issue in arc calculation (Sentry
+  KICAD-ARX).
+- Fix potential crash when closing current project.
+- Fix assertion when dragging selection area (Sentry KICAD-796).
+- Prevent crash when nested settings are not valid on save (Sentry
+  KICAD-AD).
+- Check file extensions before trying to open project file.
+- Prevent assertion when deleting selected row in design block library
+  table dialog (Sentry KICAD-BER).
+- Change title case to sentence case in Git preferences dialog. #20784
+- Fix updating embedded drawing sheet. #20800
+- Do not presume single symbol netlist in footprint chooser (Sentry
+  KICAD-XBW ).
+- Do not double delete panels (Sentry KICAD-22T).
+- Fix assertion attempting to update status bar while closing window
+  (KICAD-506).
+- Fix crash in project importer when editor window cannot be created
+  (Sentry S1B).
+- Prevent assertion when showing color panel context menu when no
+  color this selected (Sentry KICAD-8VP).
+- Fix assertion attempting to write to a non-editable grid cell
+  (Sentry KICAD-6JS).
+- Be more robust with file systems that don’t support timestamps
+  (KICAD-R7V).
+- Prevent excessive file load times due to large clipboard
+  pastes. #20732
+- Remove temporary file when saving. #21330
+- Fix HPGL command ordering for older interpreters (TRUMPF
+  laser). #21336
+- Fix the ever-growing window bug. #20120 #18543 #10609
+- Allow deleting configuration paths that begin with KICAD# that are
+  not the current version. #20486
+- Force trimming of white space in environment variables.
+- Support dash-dot-dot line style in DXF plot.
+- Improve hot key handling from search pane. #12474
+- Do not break grid snapping when "Warp mouse to origin of moved
+  object" is disabled. #18196
+- Allow multiple netclass assignments with the same pattern. #21316
+
+Schematic Editor
+
+- Fix crash when choosing footprint in symbol properties. #20958
+- Add Check/Uncheck All buttons to change footprints dialog. #21150
+- Add Check/Uncheck All buttons to update symbols dialog. #21137
+- Don’t allow repeat command when one is already running. #21145
+- Ensure correct duplicate or insert after adding symbol. #19805
+- Add undefined netclass to ERC severity list. #20373
+- Fix crash when automatically saving schematic (Sentry KICAD-78).
+- Embed fonts used in fields and text items. #20578
+- Don’t assert on automatic save when directory not writable (Sentry
+  KICAD-6ZA).
+- Prevent assertion when attempting to float on parent when there is
+  no parent (Sentry KICAD-GJS).
+- Prevent assertion when resolve symbol field text variables (Sentry
+  KICAD-QPF).
+- Prevent assertion when attempting to sort column not in fields grid
+  (Sentry KICAD-G74).
+- Prevent assertion attempting to navigate on non-existence schematic
+  (Sentry KICAD-G7S).
+- Ignore visibility and style attributes in instance data. #19734
+- Prevent DNP and exclude from simulation markers from flashing when
+  moving an object. #20483
+- Fix broken table row height property panel behavior. #21224
+- Do not allow entering spaces in label names. #21300
+- Prevent assertion when building hierarchy navigator tree (Sentry
+  KICAD-SYR).
+- Prevent assertion in symbol chooser (Sentry KICAD-BJ0).
+- Prevent assertion attempting to select non-existent symbol SPICE
+  model (Sentry KICAD-KWE).
+- Fix crash when opening footprint chooser in symbol properties
+  dialog. #21318
+- Fix page order when plotting schematic to PDF. #21296
+- Allow global labels to be created by clicking on a wire with an
+  existing local name. #21306
+- Make junctions filter selection the same as wires.
+- Fix crash when changing label type. #21391
+- Properly crop image when exporting drawing to clipboard. #20477
+- Fix crash in symbol properties dialog after closing footprint
+  chooser dialog. #20693
+- Don’t flag ERC for similar label names on different sheets. #21334
+- Increase number of digits when displaying millimeter units. #21357
+- Fix alternate pin icon current preference from resetting.
+- Fix outline drawing of plated through hole pads. #21448
+- Fix crash when moving parts of schematic. #21454
+
+Footprint Assignment Tool (CvPCB)
+
+- Prevent assertion when attempting to select a non-existent footprint
+  from the list (Sentry KICAD-8V9).
+
+Spice Simulator
+
+- Add grammar for SkyWater .subckt parameters. #20220
+- Fix assertion when trying to select items that don’t exist model
+  dialog (Sentry KICAD-J0X).
+- Do not assert when selecting node while net navigator is frozen
+  (Sentry VV8).
+- Don’t clear pin assignments when changing simulation model. #19533
+
+Symbol Editor
+
+- Escape/unescape symbol name in save as dialog. #21170
+- Fix crash if symbol library no longer exists (Sentry KICAD-74C).
+- Fix assertion when checking if library is read-only (Sentry
+  KICAD-6Z8).
+- Prevent assertion when automatically placing pins (Sentry
+  KICAD-JMA).
+- Fix assertion when attempting to save to missing library (Sentry
+  KICAD-81M).
+- Prevent assertion when symbol doesn’t have a library (Sentry
+  KICAD-74K).
+- Prevent assertion when removing selected row from pin alternate list
+  (Sentry KICAD-7BH).
+- Prevent assertion when attempting to remove symbol name not in
+  symbol properties dialog list (Sentry KICAD-QZ5).
+- Prevent assertion when library is updated outside KiCad (Sentry
+  KICAD-QZ9).
+- Improve "This position is already occupied by another pin" warning
+  message. #18466
+
+Board Editor
+
+- Prevent invalid layers in property editor.
+- Support arbitrary layer count in ODB++ output.
+- Add unique icon for constraints resolution. #21038
+- Improve moving footprint performance. #20711
+- Prefer the active layer when picking tuning patterns. #20963
+- Fix footprint locking. #21090
+- Don’t export negative layers to copper. #20949
+- Fix broken geographical annotation for locked footprints. #19977
+- Use courtyards for DNP cross-out sizes. #21115
+- Properly update clearance indicators on rule area change. #20734
+- Ensure any mapped layers are enabled on Eagle import. #21138
+- Prevent "Unroute Selected" icon disappearing from context menu for
+  certain selections. #21112
+- Allow move action when selection contains non-table-cells.
+- Fix assertion when calling boolean operations on polygons. #21209
+- Fix assertion caused by non-existent selections in setup tracks and
+  vias grid. (Sentry KICAD-J40).
+- Fix crash evaluating DRC rule condition when netclass is missing
+  (Sentry KICAD-SPF).
+- Prevent assertion when plotting pads with undefined layers (Sentry
+  KICAD-QOC).
+- Add table row height and column width to properties panel. #21224
+- Fix assertion when drawing zone (Sentry KICAD-FWF).
+- Fix assertion in DRC copper clearance test (Sentry KICAD-9RN).
+- Respect "exclude DNP" setting for Gerber X3. #21201
+- Fix assertion in layer mapping dialog when setting invalid sizer row
+  count (Sentry KICAD-7HS).
+- Prevent assertion in zone filler when arcs have not been cleared
+  before performing boolean operations (Sentry KICAD-9Z0).
+- Prevent overflow assertion when drawing ruler tick marks (Sentry
+  KICAD-9HV).
+- Prevent assertion when checking for pad collisions in DRC (Sentry
+  KICAD-R3Q).
+- Prevent assertion when setting tuning pattern with arcs (Sentry
+  KICAD-QXG).
+- Prevent assertion for pads having valid Dwg and Eco layers (Sentry
+  KICAD-RQE).
+- Prevent assertion in connectivity algorithm when removing via layers
+  (Sentry KICAD-FOY).
+- Prevent assertion when parsing empty dimension text (Sentry
+  KICAD-PMX).
+- Respect non-free-pads mode for move exactly. #21183
+- Prevent assertion when printing with non-existent color theme
+  (Sentry KICAD-A6F).
+- Show actual clearance for same net objects. #21261
+- Fix crash on undo after creating outset from selections. #21204
+- Properly align/distribute text items in footprints. #21207
+- Properly handle castellated pads on STEP export. #17404
+- Set the default thermal spoke angle to 90 degree for rounded
+  rectangle pads. #21271
+- Use correct icon for dimension tool. #21274
+- Fix polygon merge issue. #21134
+- Prevent DRC exclusion instability. #17429
+- Handle duplication of reference images for array tool (Sentry
+  KICAD-R7M).
+- Do not allow selection of excluded DRC markers when they are not
+  visible. #21265
+- Fix crash when imported properties not properly nulled (Sentry
+  KICAD-6BJ).
+- Prevent assertion when initializing zone settings (Sentry
+  KICAD-EYF).
+- Improve the subtract polygon tool. #19348
+- Fix slow PCB canvas redraw on DRC selection highlighting. #21332
+- Properly align imported Altium dimensions. #21329
+- Properly handle 3D model projection in Altium import. #18450
+- Remove context menu from interactive position tool.
+- Speed up massively slow outline conversion. #21352
+- Allow horizontal and vertical distribution to work with vias. #21337
+- Optimize zone to zone checks in zone filler. #21226
+- Fix crash importing Eagle file with unmapped layers. #21368
+- Fix highlight net keyboard shortcut with filled zone in a rule
+  area. #21381
+- Honour pad holes when hit testing. #21331
+- Honour board page information when plotting drill maps. #21393
+- Fix crash in copper clearance DRC test (Sentry KICAD-P7Q).
+- Break out of the zone tool on completion of zone. #21319
+- Optimize zone to zone clearance checks. #21353
+- Improve snapping with large grids. #21422
+- Select move origin by mouse instead of cursor. #10471
+- Fix grid visibility when using layer presets. #21409
+- Do not reset via tenting setting in PCB Design Rules after
+  re-opening. #20840
+- Fix crash in DRC when tuning pattern or arc exists on board. #21486
+
+Footprint Editor
+
+- Fix crash when saving footprint to board (Sentry KICAD-1R8).
+- Do not assert on inner layers (Sentry KICAD-STX).
+
+3D Viewer
+
+- Fix assertion when getting track width margin for degenerate arcs
+  (Sentry KICAD-ARX).
+- Ensure legacy colors always work.
+- Prevent assertion attempting to remove invalid layer preset from
+  list (Sentry KICAD-6VM).
+- Link copper layer color chooser swatches.
+- Correctly render back side user layers. #21284
+
+Bitmap to Component Tool
+
+- Adding file drag and drop.
+
+Command Line Interface
+
+- Add some individual flags for PCB render jobs. #20436
+- Add appearance preset selection options to PCB render jobs. #20682
+- Properly render global labels when default font is changed. #19031
+- Prevent inadvertent handling of dark mode. #21317
+- Do not show User.Drawings layer in 3D rendering when
+  disabled. #21428
+
+Job Sets
+
+- Fix off by one layer text variable output when running multiple page
+  PCB PDF output. #20959
+- Add progress reporting for Run Jobs. #19629
+- Fix crash when saving new jobset. #21227
+- Load appearances presets to PCB render job. #20660
+- Fix crash when adding new job and running all jobs. #21408
+
+API
+
+- Expose pad to die length. #21346
+
+Windows
+
+- Fix broken shift+middle click taskbar behavior. #21267
+- Add a -n arg for "new instance" to kicad.exe for use with the
+  relaunch command.
+- Fix erroneous hex parsing when opening legacy PCB files.
+- Fix disappearing top menu bar due to GDI object exhaustion. #21386
+
+
+KiCad 9.0.3 (2025-07-07)
+
+General
+
+- Implement Altium project importer. #2117
+- Show [read-only in the title bar based on the project’s state].
+- Don’t bypass empty visibility recovery due to migration.
+- Protect against concurrent wxPlatformInfo access at startup. #21002
+- Unset PCM button to avoid crash on close.
+- Prevent single-line Scintilla text edit control scrolling
+  bug. #19708
+- Prevent crash when zooming to preset in footprint chooser. #21203
+
+Schematic Editor
+
+- Support URLs in symbol chooser information panel. #20811
+- Set single units symbols correctly when importing Altium
+  schematics. #20663
+- Show nets in net navigator panel after enabling for first
+  time. #20648
+- Fix broken select connection (Ctrl-4) behavior. #19790
+- Test for hierarchical labels in root sheet when running ERC. #20810
+- Update search dialog. #12156 and #17102
+- Allow multiple label input for bulk assignment of net labels. #10950
+- Add ability to quickly move through nets in net navigator. #10911
+- Fix hidden fields remain visible after search and cannot be hidden
+  again. #20865
+- Make directive label text color behave like other labels.
+- Prevent table and rule areas from being swapped in schematic file
+  after save. #20918
+- Fix crash opening schematic with missing library symbol. #20986
+- Fix crash running "Increment Annotations From…​" tool. #20948
+- Add automatic completion for operating point ":power". 20984
+- Fix crash when defining nonsensical operating point labels. #20990
+- Print correct units in power operating point. #20982
+- Fix text disappearing in value field properties dialog. #14379
+- Prevent assertion when deleting field row from schematic sheet
+  properties dialog. #20747
+- Add field options for "Update PCB from Schematic". #21021
+- Read Altium’s "showName" property for fields. #20985
+- Improve Altium import performance.
+- Treat stacked pins as a single item in 4-way connection test. #20532
+- Honor escape key policy for sheet pin synchronization dialog.
+- Unable to load schematic created with previous KiCad version
+  containing | character in string. #21065
+- Fix crash when trying to edit a non symbol field using U,V or F hot
+  key. #21072
+- Fix Eagle import schematic description for page names
+  regression. #20957
+- Fix overly aggressive label auto-completion capitalization. #20943
+- Fix broken symbol chooser filtering for more than one filter
+  expression. #21220
+- Make sure initial focus of label properties dialog is the text input.
+- Make enter key close label properties dialog instead of opening the
+  drop down list. #21258
+
+Spice Simulator
+
+- Prevent crash on failure to load ngspice’s DLL. #20695
+- Fix reversed resistor simulation pins. #20590
+- Fix crash when back spacing in simulator user-defined signal name. #20991
+- Correctly netlist AM/SFFM current sources. #20994
+
+Symbol Editor
+
+- Fix incorrect size of the pin properties dialog when an information
+  bar is shown. #16761
+
+Board Editor
+
+- Fix errors in intersecting zones test. #20718
+- Restore groups after undoing global deletion. #20699
+- Save padstack shape and layer changes to pad in footprint
+  editor. #20567
+- Do not ignore differential pair gap min/max DRC rules. #19825
+- Correctly honor minimum width project settings and DRC. #20361
+- Do not trigger footprint does not match library errors when
+  footprint has rule area on inner layers. #20552
+- Fix footprint does not match copy in library issue. #20063
+- Correctly show hole to hole clearance highlight when dragging
+  vias. #20547
+- Properly handle arc coupled items. #20636
+- Prevent overriding existing track width. #20031
+- Fix DRC freeze on creepage test. #20947
+- Fix tuning pattern generators not being arrayed properly. #20617
+- Re-implement wildcard matches for netclass constituents in DRC
+  evaluation. #20955
+- Fix false DRC error regarding clearance violation between zone and
+  bezier curve, #20312
+- Re-implement wildcard matches for netclass constituents in DRC
+  evaluation. #20955
+- Don’t bypass empty visibility recovery due to migration.
+- Fix router issue Length where tuning path not is always computed
+  through vias. #20379
+- Fix router via placing issue. #20999
+- DRC net class and component class match improvements.
+- Fix incorrect text box properties dialog bitmap button sizes. #21050
+- Fix crash when loading footprints with bezier curves.
+- Pad set to "all copper layers" not present on all copper layers when
+  editing pad properties. #20980
+- Fix crash when changing the clearance of multiple zones to 0. #21081
+- Fix small segment rendering. #21083
+- Restore ability for moves to be asynchronous. #21047
+- Fix crash when placing footprints when grid list is empty. #21060
+- Fix position of rectangles after a rotate command.
+- Flip Y axis when exporting to Hyperlynx file. #18581
+- Ensure any mapped layers are enabled when importing from
+  Eagle. #21138
+- Allow parsing empty footprint fields when parsing net list. #20002
+- Prevent router from automatically deleting trace segments. #21019
+- Allow measurement tool to be dismissed under certain
+  conditions. #21016
+- Prevent differential router from changing trace width of routed
+  segments once partial segments are connected. #21078
+- Fix EasyEDA issue when importing board with consecutive arc
+  parameter sets. #21238
+
+Footprint Editor
+
+- Add prettifier support when exporting a footprint. #21071
+- Correctly open footprint datasheet URLs from menu and
+  toolbar. #21149
+
+3D Viewer
+
+- Do not allow changing to anything in the board shared by the
+  footprint editor. #20964
+- Fix broken visibility settings when opening from footprint
+  editor. #21053
+
+Command Line Interface
+
+- Fix kicad-cli pcb export pdf --mode-multipage command.
+
+Job Sets
+
+- Do not output undesired debug/progress information into console when
+  running PCB 3D model job in GUI. #20738
+- Set an environment variable when running jobs that points to the
+  temp folder for the jobset output.
+- Allow running jobsets in cli by description and uuid. #20033
+
+API
+
+- Use action wrapper for setting grid origin. kicad-python#47
+- Add symbol path for footprint instances. #kicad-python#37
+- Add FlashLayer() equivalent for pads, #20587
+- Use net names, not codes, and allow creating new nets. #21027
+- Prevent creating invalid arcs. #21035
+
 
 KiCad 9.0.2 (2025-05-07)
 
