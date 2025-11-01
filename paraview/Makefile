@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ParaView-v5.13.2
+DISTNAME=	ParaView-v6.0.1
 PKGNAME=	${DISTNAME:S/ParaView-v/paraview-/1}
 CATEGORIES=	math
 PV_VER=		${PKGVERSION_NOREV:C/\.[0-9]+$//}
