@@ -187,11 +187,12 @@ lib/gwyddion/modules/file/pixmap.la
 lib/gwyddion/modules/file/rhk-sm4.la
 lib/gwyddion/modules/file/spml.la
 lib/gwyddion/modules/file/surffile.la
+lib/gwyddion/modules/file/zyvex.la
 lib/gwyddion/modules/graph/graph.la
 lib/gwyddion/modules/layer/layer.la
 lib/gwyddion/modules/plugin-proxy.la
 lib/gwyddion/modules/process/process.la
-${PLIST.pygwy}lib/gwyddion/modules/pygwy.la
+lib/gwyddion/modules/pygwy.la
 lib/gwyddion/modules/tool/tools.la
 lib/gwyddion/modules/volume/volume.la
 lib/gwyddion/modules/xyz/xyz.la
@@ -210,7 +211,7 @@ lib/libgwydraw2.la
 lib/libgwymodule2.la
 lib/libgwyprocess2.la
 lib/pkgconfig/gwyddion.pc
-${PLIST.pygwy}${PYSITELIB}/gwy.la
+${PYSITELIB}/gwy.la
 man/man1/gwyddion-thumbnailer.1
 man/man1/gwyddion.1
 man/man3/Gwyddion::dump.3pm
@@ -274,6 +275,8 @@ share/gtk-doc/html/libgwyapp/api-index-2-61.html
 share/gtk-doc/html/libgwyapp/api-index-2-62.html
 share/gtk-doc/html/libgwyapp/api-index-2-63.html
 share/gtk-doc/html/libgwyapp/api-index-2-64.html
+share/gtk-doc/html/libgwyapp/api-index-2-67.html
+share/gtk-doc/html/libgwyapp/api-index-2-69.html
 share/gtk-doc/html/libgwyapp/api-index-2-7.html
 share/gtk-doc/html/libgwyapp/api-index-2-9.html
 share/gtk-doc/html/libgwyapp/api-index-all.html
@@ -352,6 +355,7 @@ share/gtk-doc/html/libgwyddion/api-index-2-61.html
 share/gtk-doc/html/libgwyddion/api-index-2-62.html
 share/gtk-doc/html/libgwyddion/api-index-2-63.html
 share/gtk-doc/html/libgwyddion/api-index-2-64.html
+share/gtk-doc/html/libgwyddion/api-index-2-67.html
 share/gtk-doc/html/libgwyddion/api-index-2-7.html
 share/gtk-doc/html/libgwyddion/api-index-2-8.html
 share/gtk-doc/html/libgwyddion/api-index-2-9.html
@@ -462,6 +466,7 @@ share/gtk-doc/html/libgwydgets/api-index-2-61.html
 share/gtk-doc/html/libgwydgets/api-index-2-62.html
 share/gtk-doc/html/libgwydgets/api-index-2-63.html
 share/gtk-doc/html/libgwydgets/api-index-2-64.html
+share/gtk-doc/html/libgwydgets/api-index-2-67.html
 share/gtk-doc/html/libgwydgets/api-index-2-7.html
 share/gtk-doc/html/libgwydgets/api-index-2-8.html
 share/gtk-doc/html/libgwydgets/api-index-all.html
@@ -703,6 +708,7 @@ share/gtk-doc/html/libgwydgets/gwy_tip_lateral_force-24.png
 share/gtk-doc/html/libgwydgets/gwy_tip_map-24.png
 share/gtk-doc/html/libgwydgets/gwy_tip_model-24.png
 share/gtk-doc/html/libgwydgets/gwy_tip_pid-24.png
+share/gtk-doc/html/libgwydgets/gwy_translate_periodically-24.png
 share/gtk-doc/html/libgwydgets/gwy_unrotate-24.png
 share/gtk-doc/html/libgwydgets/gwy_value_invert-24.png
 share/gtk-doc/html/libgwydgets/gwy_volume-24.png
@@ -883,6 +889,8 @@ share/gtk-doc/html/libgwyprocess/api-index-2-62.html
 share/gtk-doc/html/libgwyprocess/api-index-2-63.html
 share/gtk-doc/html/libgwyprocess/api-index-2-64.html
 share/gtk-doc/html/libgwyprocess/api-index-2-66.html
+share/gtk-doc/html/libgwyprocess/api-index-2-67.html
+share/gtk-doc/html/libgwyprocess/api-index-2-68.html
 share/gtk-doc/html/libgwyprocess/api-index-2-7.html
 share/gtk-doc/html/libgwyprocess/api-index-2-8.html
 share/gtk-doc/html/libgwyprocess/api-index-all.html
@@ -921,7 +929,7 @@ share/gtk-doc/html/libgwyprocess/right.png
 share/gtk-doc/html/libgwyprocess/style.css
 share/gtk-doc/html/libgwyprocess/up-insensitive.png
 share/gtk-doc/html/libgwyprocess/up.png
-${PLIST.pygwy}share/gtksourceview-2.0/language-specs/pygwy.lang
+share/gtksourceview-2.0/language-specs/pygwy.lang
 share/gwyddion/glmaterials/Alien-Alloy
 share/gwyddion/glmaterials/Black-Plastic
 share/gwyddion/glmaterials/Black-Rubber
@@ -964,6 +972,7 @@ share/gwyddion/gradients/Blue-Violet
 share/gwyddion/gradients/Blue-Yellow
 share/gwyddion/gradients/Body
 share/gwyddion/gradients/Caribbean
+share/gwyddion/gradients/Clusters
 share/gwyddion/gradients/Code-V
 share/gwyddion/gradients/Cold
 share/gwyddion/gradients/DFit
@@ -1251,6 +1260,7 @@ share/gwyddion/pixmaps/gwy_tip_lateral_force-24.png
 share/gwyddion/pixmaps/gwy_tip_map-24.png
 share/gwyddion/pixmaps/gwy_tip_model-24.png
 share/gwyddion/pixmaps/gwy_tip_pid-24.png
+share/gwyddion/pixmaps/gwy_translate_periodically-24.png
 share/gwyddion/pixmaps/gwy_unrotate-24.png
 share/gwyddion/pixmaps/gwy_value_invert-24.png
 share/gwyddion/pixmaps/gwy_volume-24.png
@@ -1279,7 +1289,7 @@ share/gwyddion/pixmaps/gwy_zoom_in-24.png
 share/gwyddion/pixmaps/gwy_zoom_out-24.png
 share/gwyddion/pixmaps/gwyddion.ico
 share/gwyddion/pixmaps/splash.png
-${PLIST.pygwy}share/gwyddion/pygwy/gwyutils.py
+share/gwyddion/pygwy/gwyutils.py
 share/gwyddion/ui/toolbox.xml
 share/gwyddion/user-guide-modules
 share/icons/hicolor/48x48/apps/gwyddion.png
