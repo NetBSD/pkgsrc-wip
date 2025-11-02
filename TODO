@@ -119,11 +119,9 @@ Suggested package updates
 	o ppp-2.5.2
 	o py-PyPE-2.9
 	o py-etmtk-3.2.31
-	o py-mbake-1.4.3
 	o py-rpyc-3.2.1
 	o py-sentry-23.7.1
 	o py-smop-0.29
-	o py-typer-0.20.0
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
 	o py-zeitgeist-0.9.16
