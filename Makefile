@@ -5613,6 +5613,7 @@ SUBDIR+=	tagtool
 SUBDIR+=	tailscale
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
+SUBDIR+=	tangled-git
 SUBDIR+=	tardy
 SUBDIR+=	taskchampion-sync-server
 SUBDIR+=	tasks
