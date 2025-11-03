@@ -453,6 +453,7 @@ SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
 SUBDIR+=	celluloid
+SUBDIR+=	cencli
 SUBDIR+=	centrifuge
 SUBDIR+=	cereal
 SUBDIR+=	cfiles
