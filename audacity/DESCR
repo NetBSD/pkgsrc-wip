@@ -1,0 +1,19 @@
+Audacity is an easy-to-use, multi-track audio editor and recorder.
+
+- Recording from any real or virtual audio device that is available
+  to the host system.
+- Export / Import a wide range of audio formats, extensible with
+  FFmpeg.
+- High quality using 32-bit float audio processing.
+- Plugin Support for multiple audio plugin formats, including VST,
+  LV2, and AU.
+- Macros for chaining commands and batch processing.
+- Scripting in Python, Perl, or any other language that supports
+  named pipes.
+- Nyquist a powerful built-in scripting language that may also be
+  used to create plugins.
+- Editing multi-track editing with sample accuracy and arbitrary
+  sample rates.
+- Accessibility for VI users.
+- Analysis and visualization tools to analyze audio or other signal
+  data.

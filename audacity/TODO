@@ -1,0 +1,249 @@
+=> Generating pkg-config file for builtin expat package.
+=> Generating pkg-config files for builtin xz package.
+=> Checking for portability problems in extracted files
+-- The ASM_NASM compiler identification is NASM
+-- Found assembler: /usr/pkg/bin/nasm
+-- Build Info:
+--   Host System: NetBSD-11.99.3
+--   Host System Name: NetBSD
+--   Host System Processor: x86_64
+--   Host System Version: 11.99.3
+--   Host System Architecture: 64-bit
+--
+--   Compiler: /scratch/wip/audacity/work/.cwrapper/bin/c++
+--   Compiler Version: 14.3.0
+--   Compiler Standard: 17
+--   Compiler Standard Required: ON
+--   Compiler Extensions:
+--
+--   Current Commit: unknown
+--
+-- ========== Using system version of ZLIB ==========
+-- ========== Using system version of PNG ==========
+-- ========== Using system version of JPEG ==========
+-- ========== Using system version of EXPAT ==========
+-- ========== Using system version of wxWidgets ==========
+-- ========== Using system version of libmp3lame ==========
+-- ========== Using system version of mpg123 ==========
+-- ========== Using system version of libid3tag ==========
+-- ========== Using system version of WavPack ==========
+-- ========== Using system version of Ogg ==========
+-- ========== Using system version of FLAC ==========
+-- ========== Using system version of Opus ==========
+-- ========== Using system version of opusfile ==========
+-- ========== Using system version of Vorbis ==========
+-- ========== Using system version of SndFile ==========
+-- ========== Using system version of PortAudio ==========
+-- ========== Using system version of RapidJSON ==========
+-- ========== Using system version of PortMidi ==========
+-- ========== Using system version of vst3sdk ==========
+-- Found libuuid:
+        libuuid_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+        libuuid_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libuuid.so
+wxWidgets_LIBRARIES=general;-L/usr/pkg/lib;general;-pthread;general;-Wl,-R/usr/pkg/lib;general;-lwx_baseu-3.2;general;-lwx_gtk3u_core-3.2;general;-lwx_gtk3u_html-3.2;general;-lwx_gtk3u_qa-3.2;general;-lwx_baseu_xml-3.2;general;-lwx_baseu_net-3.2
+wxWidgets_LIBRARY_DIRS=/usr/pkg/lib
+-- Found lame:
+        libmp3lame_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+        libmp3lame_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmp3lame.so
+-- Found mpg123:
+        mpg123_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+        mpg123_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmpg123.so
+-- Found libid3tag:
+        libid3tag_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+        libid3tag_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libid3tag.so
+-- Found wavpack:
+        wavpack_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+        wavpack_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libwavpack.so
+-- Found PortAudio:
+        PortAudio_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include/portaudio2
+        PortAudio_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/portaudio2/libportaudio.so
+-- RapidJSON found. Headers: /usr/pkg/include
+-- VST3SDK not found. Please set VST3SDK_DIR to the path to the vst3sdk directory.
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Trying to retrieve GTK version from general;-L/usr/pkg/lib;general;-pthread;general;-Wl,-R/usr/pkg/lib;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_core-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_html-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_qa-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu_xml-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu_net-3.2.so
+-- Found PkgConfig: /scratch/wip/audacity/work/.tools/bin/pkg-config (found version "2.4.3")
+-- Checking for module 'gtk+-3.0'
+--   Found gtk+-3.0, version 3.24.50
+-- Checking for module 'glib-2.0'
+--   Found glib-2.0, version 2.84.4
+-- Fixing up ZLib mess...
+-- ========== Configuring vamp ==========
+-- Checking for modules 'vamp >= 2.5;vamp-hostsdk >= 2.5'
+--   Package 'vamp' not found
+--   Package 'vamp-hostsdk' not found
+CMake Error at cmake-proxies/cmake-modules/AudacityFunctions.cmake:768 (find_package):
+  find_package called with invalid argument "vamp-hostsdk >= 2.5"
+Call Stack (most recent call first):
+  cmake-proxies/CMakeLists.txt:8 (addlib)
+
+
+-- Using 'vamp' local library
+-- ========== Configuring lv2 ==========
+-- Checking for modules 'lilv-0 >= 0.24.6;lv2 >= 1.16.0;serd-0 >= 0.30.2;sord-0 >= 0.16.4;sratom-0 >= 0.6.4;suil-0 >= 0.10.6'
+--   Package 'lilv-0' not found
+--   Package 'lv2' not found
+--   Package 'serd-0' not found
+--   Package 'sord-0' not found
+--   Package 'sratom-0' not found
+--   Package 'suil-0' not found
+CMake Error at cmake-proxies/cmake-modules/AudacityFunctions.cmake:768 (find_package):
+  find_package called with invalid argument "lv2 >= 1.16.0"
+Call Stack (most recent call first):
+  cmake-proxies/CMakeLists.txt:9 (addlib)
+
+
+-- Using 'lv2' local library
+-- Checking for module 'x11'
+--   Found x11, version 1.8.12
+-- Checking for module 'gtk+-2.0'
+--   Package 'gtk+-2.0' not found
+-- Checking for module 'gtk+-3.0'
+--   Found gtk+-3.0, version 3.24.50
+-- Checking for module 'gtk+-x11-2.0'
+--   Package 'gtk+-x11-2.0' not found
+-- Checking for module 'gtk+-x11-3.0'
+--   Found gtk+-x11-3.0, version 3.24.50
+-- Checking for module 'QtGui >= 4.4.0'
+--   Package 'QtGui' not found
+-- Checking for module 'Qt5Widgets >= 5.1.0'
+--   Package 'Qt5Widgets' not found
+-- ========== Configuring sbsms ==========
+-- Checking for module 'sbsms >= 2.2.0'
+--   Package 'sbsms' not found
+-- Using 'sbsms' local library
+-- Found Threads: TRUE
+-- ========== Configuring soundtouch ==========
+-- Checking for module 'soundtouch >= 1.7.1'
+--   Package 'soundtouch' not found
+-- Using 'soundtouch' local library
+-- ========== Configuring twolame ==========
+-- Checking for module 'twolame >= 0.3.13'
+--   Package 'twolame' not found
+-- Using 'twolame' local library
+-- Looking for pa_jack.h
+-- Looking for pa_jack.h - not found
+-- Looking for pa_linux_alsa.h
+-- Looking for pa_linux_alsa.h - not found
+-- ========== Configuring manual ==========
+-- ========== Configuring images ==========
+-- ========== Configuring lib-string-utils ==========
+-- ========== Configuring lib-strings ==========
+-- ========== Configuring lib-utility ==========
+-- ========== Configuring lib-uuid ==========
+-- ========== Configuring lib-components ==========
+-- ========== Configuring lib-basic-ui ==========
+-- ========== Configuring lib-exceptions ==========
+-- ========== Configuring lib-export-ui ==========
+-- ========== Configuring lib-preferences ==========
+-- ========== Configuring soxr ==========
+-- Checking for module 'soxr >= 0.1.1'
+--   Package 'soxr' not found
+-- Using 'soxr' local library
+-- Trying SIMD32 C flags:
+-- Performing Test DETECT_SIMD32_C_FLAGS
+-- Performing Test DETECT_SIMD32_C_FLAGS - Failed
+-- Trying SIMD32 C flags: /arch:SSE /fp:fast -D__SSE__
+-- Performing Test DETECT_SIMD32_C_FLAGS
+-- Performing Test DETECT_SIMD32_C_FLAGS - Failed
+-- Trying SIMD32 C flags: -msse -mfpmath=sse
+-- Performing Test DETECT_SIMD32_C_FLAGS
+-- Performing Test DETECT_SIMD32_C_FLAGS - Failed
+-- Trying SIMD32 C flags: -msse -mfpmath=sse
+-- Performing Test DETECT_SIMD32_C_FLAGS
+-- Performing Test DETECT_SIMD32_C_FLAGS - Failed
+-- Could NOT find SIMD32 (missing: SIMD32_C_FLAGS SIMD32_C_FLAGS)
+-- ========== Configuring lib-math ==========
+-- ========== Configuring lib-files ==========
+-- ========== Configuring lib-import-export ==========
+-- ========== Configuring lib-ipc ==========
+-- ========== Configuring lib-registries ==========
+-- ========== Configuring lib-xml ==========
+-- ========== Configuring lib-audio-devices ==========
+-- ========== Configuring lib-project ==========
+-- ========== Configuring lib-screen-geometry ==========
+-- ========== Configuring lib-project-rate ==========
+-- ========== Configuring lib-file-formats ==========
+-- ========== Configuring lib-theme ==========
+-- ========== Configuring lib-theme-resources ==========
+-- ========== Configuring lib-track ==========
+-- ========== Configuring lib-transactions ==========
+-- ========== Configuring lib-sample-track ==========
+-- ========== Configuring lib-module-manager ==========
+-- ========== Configuring lib-project-history ==========
+-- ========== Configuring lib-graphics ==========
+-- ========== Configuring lib-audio-graph ==========
+-- ========== Configuring lib-tags ==========
+-- ========== Configuring lib-realtime-effects ==========
+-- ========== Configuring lib-audio-io ==========
+-- ========== Configuring lib-wave-track ==========
+-- ========== Configuring lib-wave-track-settings ==========
+-- ========== Configuring lib-wave-track-paint ==========
+-- ========== Configuring lib-track-selection ==========
+-- ========== Configuring sqlite ==========
+-- Checking for module 'sqlite3 >= 3.31.1'
+--   Package 'sqlite3' not found
+-- Using 'sqlite' local library
+-- ========== Configuring lib-project-file-io ==========
+-- ========== Configuring lib-command-parameters ==========
+-- ========== Configuring lib-numeric-formats ==========
+-- ========== Configuring lib-effects ==========
+-- ========== Configuring lib-time-frequency-selection ==========
+-- ========== Configuring lib-wx-wrappers ==========
+-- ========== Configuring lib-shuttlegui ==========
+-- ========== Configuring lib-wx-init ==========
+-- ========== Configuring lib-time-track ==========
+-- ========== Configuring lib-vst3 ==========
+-- ========== Configuring lib-snapping ==========
+-- ========== Configuring lib-vst ==========
+-- ========== Configuring lib-ladspa ==========
+-- ========== Configuring lib-playable-track ==========
+-- ========== Configuring lib-time-and-pitch ==========
+-- ========== Configuring lib-mixer ==========
+-- ========== Configuring lib-channel ==========
+-- ========== Configuring lib-stretching-sequence ==========
+-- ========== Configuring lib-menus ==========
+-- ========== Configuring portsmf ==========
+-- Checking for module 'portSMF >= 0.1'
+--   Package 'portSMF' not found
+-- Using 'portsmf' local library
+-- ========== Configuring lib-note-track ==========
+-- ========== Configuring lib-viewport ==========
+-- ========== Configuring lib-music-information-retrieval ==========
+-- ========== Configuring lib-crypto ==========
+-- ========== Configuring lib-fft ==========
+-- ========== Configuring lib-concurrency ==========
+-- ========== Configuring lib-sqlite-helpers ==========
+-- ========== Configuring lib-preference-pages ==========
+-- ========== Configuring lib-dynamic-range-processor ==========
+-- ========== Configuring lib-audacity-application-logic ==========
+-- ========== Configuring lib-builtin-effects ==========
+-- ========== Configuring lib-label-track ==========
+-- ========== Configuring lib-wave-track-fft ==========
+-- ========== Configuring lib-lv2 ==========
+-- ========== Configuring lib-nyquist-effects ==========
+-- ========== Configuring locale ==========
+-- ========== Configuring Audacity ==========
+-- Looking for clock_gettime
+-- Looking for clock_gettime - not found
+-- Using precompiled headers
+-- ========== Configuring mod-null ==========
+-- ========== Configuring mod-mp3 ==========
+-- ========== Configuring mod-pcm ==========
+-- ========== Configuring mod-cl ==========
+-- ========== Configuring mod-lof ==========
+-- ========== Configuring mod-aup ==========
+-- ========== Configuring mod-ogg ==========
+-- ========== Configuring mod-flac ==========
+-- ========== Configuring mod-mp2 ==========
+-- ========== Configuring mod-wavpack ==========
+-- ========== Configuring mod-mpg123 ==========
+-- ========== Configuring lib-ffmpeg-support ==========
+-- ========== Configuring mod-ffmpeg ==========
+-- ========== Configuring mod-opus ==========
+-- ========== Configuring mod-midi-import-export ==========
+-- ========== Configuring mod-script-pipe ==========
+-- ========== Configuring mod-nyq-bench ==========
+-- ========== Configuring nyquist ==========
+-- ========== Configuring plug-ins ==========
+-- Configuring incomplete, errors occurred!
