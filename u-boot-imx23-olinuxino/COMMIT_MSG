@@ -1,0 +1,5 @@
+sysutils/u-boot-imx23-olinuxino: Add sysutils/u-boot-imx23-olinuxino version 2024.10
+
+Packaged in wip by Yuri Honegger
+
+Add a package that builds u-boot for the imx23-olinuxino.

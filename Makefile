@@ -5849,6 +5849,7 @@ SUBDIR+=	typhoon
 SUBDIR+=	typst-lsp
 SUBDIR+=	u-boot
 SUBDIR+=	u-boot-full
+SUBDIR+=	u-boot-imx23-olinuxino
 SUBDIR+=	u-boot-khadas-vim3
 SUBDIR+=	u-boot-mangopi-mq-pro
 SUBDIR+=	u-boot-nanopi-r2s
