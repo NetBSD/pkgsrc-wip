@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/enterprise/util/managed_browser_utils.cc
 @@ -300,7 +300,7 @@ void SetUserAcceptedAccountManagement(Pr
    // The updated consent screen also ask the user for consent to share device
@@ -24,7 +24,7 @@ $NetBSD$
      SetEnterpriseProfileLabel(profile);
  #endif
      entry->SetUserAcceptedAccountManagement(accepted);
-@@ -428,7 +428,7 @@ bool CanShowEnterpriseProfileUI(Profile*
+@@ -408,7 +408,7 @@ bool CanShowEnterpriseProfileUI(Profile*
  }
  
  bool CanShowEnterpriseBadgingForNTPFooter(Profile* profile) {
@@ -33,7 +33,7 @@ $NetBSD$
    BrowserManagementNoticeState management_notice_state =
        GetManagementNoticeStateForNTPFooter(profile);
    switch (management_notice_state) {
-@@ -446,7 +446,7 @@ bool CanShowEnterpriseBadgingForNTPFoote
+@@ -426,7 +426,7 @@ bool CanShowEnterpriseBadgingForNTPFoote
  
  BrowserManagementNoticeState GetManagementNoticeStateForNTPFooter(
      Profile* profile) {

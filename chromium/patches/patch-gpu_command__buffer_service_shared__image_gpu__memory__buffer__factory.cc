@@ -4,21 +4,21 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2025-10-13 21:41:26.000000000 +0000
-+++ gpu/ipc/service/gpu_memory_buffer_factory.cc
+--- gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
++++ gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory.cc
 @@ -14,7 +14,7 @@
- #include "gpu/ipc/service/gpu_memory_buffer_factory_io_surface.h"
+ #include "gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory_io_surface.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- #include "gpu/ipc/service/gpu_memory_buffer_factory_native_pixmap.h"
+ #include "gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory_native_pixmap.h"
  #endif
  
-@@ -65,7 +65,7 @@ GpuMemoryBufferFactory::CreateNativeType
-   // to have a factory that vends invalid GMB handles rather than having no
-   // factory at all.
-   return std::make_unique<GpuMemoryBufferFactoryStub>();
+@@ -36,7 +36,7 @@ GpuMemoryBufferFactory::CreateNativeType
+   // AHardwareBuffers), but the codebase is structured such that it is easier
+   // to create a dummy factory than create no factory.
+   return std::make_unique<GpuMemoryBufferFactory>();
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    return std::make_unique<GpuMemoryBufferFactoryNativePixmap>(

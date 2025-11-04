@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/drive_info_posix.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/files/drive_info_posix.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/files/drive_info_posix.cc
-@@ -24,7 +24,7 @@ namespace base {
+@@ -27,7 +27,7 @@ namespace base {
  
  std::optional<DriveInfo> GetFileDriveInfo(const FilePath& file_path) {
    DriveInfo drive_info;

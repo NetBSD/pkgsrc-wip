@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_weak_functions.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- printing/backend/cups_weak_functions.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ printing/backend/cups_weak_functions.h
 @@ -6,7 +6,7 @@
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_pref_names.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/policy/core/common/policy_pref_names.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/policy/core/common/policy_pref_names.h
-@@ -94,7 +94,7 @@ extern const char kFloatingWorkspaceEnab
+@@ -96,7 +96,7 @@ extern const char kFloatingWorkspaceEnab
  #endif
  extern const char kBuiltInAIAPIsEnabled[];
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \

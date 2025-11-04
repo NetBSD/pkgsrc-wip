@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/supervised_user/core/common/features.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -20,12 +20,12 @@ BASE_DECLARE_FEATURE(kLocalWebApprovals)
  BASE_DECLARE_FEATURE(kAllowSubframeLocalWebApprovals);

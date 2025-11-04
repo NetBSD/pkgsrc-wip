@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h
 @@ -208,7 +208,7 @@ class CustomizeChromePageHandler
    // value needs to be requeried by the page.

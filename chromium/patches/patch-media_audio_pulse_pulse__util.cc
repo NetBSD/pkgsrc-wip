@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/pulse/pulse_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- media/audio/pulse/pulse_util.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ media/audio/pulse/pulse_util.cc
 @@ -45,8 +45,12 @@ constexpr char kBrowserDisplayName[] = "
  

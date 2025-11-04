@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/paint_preview/browser/paint_preview_client.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/paint_preview/browser/paint_preview_client.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/paint_preview/browser/paint_preview_client.cc
-@@ -478,8 +478,8 @@ void PaintPreviewClient::CapturePaintPre
+@@ -464,8 +464,8 @@ void PaintPreviewClient::CapturePaintPre
    metadata->set_version(kPaintPreviewVersion);
    auto* chromeVersion = metadata->mutable_chrome_version();
    const auto& current_chrome_version = version_info::GetVersion();

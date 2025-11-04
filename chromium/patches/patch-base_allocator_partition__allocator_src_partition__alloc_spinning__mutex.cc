@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
-@@ -24,7 +24,16 @@
+@@ -25,7 +25,16 @@
  #endif
  
  #if PA_CONFIG(HAS_LINUX_KERNEL)
@@ -23,7 +23,7 @@ $NetBSD$
  #include <sys/syscall.h>
  #include <unistd.h>
  
-@@ -97,8 +106,19 @@ PA_ALWAYS_INLINE long FutexSyscall(volat
+@@ -155,8 +164,19 @@ PA_ALWAYS_INLINE long FutexSyscall(volat
    int saved_errno = errno;
    errno = 0;
  

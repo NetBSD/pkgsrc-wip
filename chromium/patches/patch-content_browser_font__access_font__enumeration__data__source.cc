@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/font_access/font_enumeration_data_source.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/browser/font_access/font_enumeration_data_source.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/browser/font_access/font_enumeration_data_source.cc
 @@ -16,7 +16,7 @@
  #include "content/browser/font_access/font_enumeration_data_source_win.h"

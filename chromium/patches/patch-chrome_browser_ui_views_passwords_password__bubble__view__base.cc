@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/views/passwords/password_bubble_view_base.cc
-@@ -43,7 +43,7 @@
+@@ -42,7 +42,7 @@
  #include "ui/base/metadata/metadata_impl_macros.h"
  #include "ui/views/controls/button/button.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/views/passwords/password_relaunch_chrome_view.h"
  #endif
  
-@@ -163,7 +163,7 @@ PasswordBubbleViewBase* PasswordBubbleVi
+@@ -158,7 +158,7 @@ PasswordBubbleViewBase* PasswordBubbleVi
    } else if (model_state ==
               password_manager::ui::NOTIFY_RECEIVED_SHARED_CREDENTIALS) {
      view = new SharedPasswordsNotificationView(web_contents, anchor_view);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -155,7 +155,7 @@ void InitializePlatformOverlaySettings(G
  

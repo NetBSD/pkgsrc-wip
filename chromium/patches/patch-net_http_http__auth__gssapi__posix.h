@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_gssapi_posix.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- net/http/http_auth_gssapi_posix.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ net/http/http_auth_gssapi_posix.h
 @@ -21,6 +21,9 @@
  #if BUILDFLAG(IS_APPLE)

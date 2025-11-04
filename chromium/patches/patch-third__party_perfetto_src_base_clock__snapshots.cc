@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/clock_snapshots.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/perfetto/src/base/clock_snapshots.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/perfetto/src/base/clock_snapshots.cc
 @@ -27,6 +27,7 @@ ClockSnapshotVector CaptureClockSnapshot
  #if !PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) && \

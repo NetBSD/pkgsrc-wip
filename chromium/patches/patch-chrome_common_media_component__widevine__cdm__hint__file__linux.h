@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
 @@ -14,7 +14,7 @@
  #error "This file only applies when Widevine used."

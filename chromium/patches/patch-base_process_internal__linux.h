@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/internal_linux.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/process/internal_linux.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/process/internal_linux.h
 @@ -146,6 +146,9 @@ TimeDelta ClockTicksToTimeDelta(int64_t 
  // arguments to the lambda.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_blink_platform_with_sandbox_support_impl.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/utility/utility_blink_platform_with_sandbox_support_impl.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/utility/utility_blink_platform_with_sandbox_support_impl.h
 @@ -34,7 +34,7 @@ class UtilityBlinkPlatformWithSandboxSup
  

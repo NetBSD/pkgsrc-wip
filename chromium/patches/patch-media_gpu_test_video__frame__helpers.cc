@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/video_frame_helpers.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- media/gpu/test/video_frame_helpers.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ media/gpu/test/video_frame_helpers.cc
 @@ -23,7 +23,7 @@
  #include "ui/gfx/buffer_format_util.h"

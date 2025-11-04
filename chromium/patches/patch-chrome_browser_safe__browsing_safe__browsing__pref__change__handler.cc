@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc
 @@ -12,7 +12,7 @@
  #include "content/public/browser/web_contents.h"
@@ -24,3 +24,12 @@ $NetBSD$
    if (!profile_ ||
        !base::FeatureList::IsEnabled(safe_browsing::kEsbAsASyncedSetting)) {
      return;
+@@ -186,7 +186,7 @@ void SafeBrowsingPrefChangeHandler::
+ }
+ 
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ void SafeBrowsingPrefChangeHandler::SetToastControllerForTesting(
+     ToastController* controller) {
+   toast_controller_for_testing_ = controller;

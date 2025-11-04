@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/session_policies_from_dict.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- remoting/host/session_policies_from_dict.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ remoting/host/session_policies_from_dict.cc
 @@ -75,7 +75,7 @@ std::optional<SessionPolicies> SessionPo
    session_policies.curtain_required =

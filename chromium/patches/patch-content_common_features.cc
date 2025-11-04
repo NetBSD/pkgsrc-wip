@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/common/features.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/common/features.cc
-@@ -170,7 +170,7 @@ BASE_FEATURE(kEmbeddingRequiresOptIn,
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -144,7 +144,7 @@ BASE_FEATURE(kDocumentPolicyNegotiation,
+ BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
-              "EnableDevToolsJsErrorReporting",
               base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

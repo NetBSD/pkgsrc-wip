@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/test/test_browser_ui.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/test/test_browser_ui.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/test/test_browser_ui.cc
-@@ -19,7 +19,7 @@
+@@ -21,7 +21,7 @@
  #include "ui/views/widget/widget.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/public/common/content_switches.h"
  #include "ui/base/test/skia_gold_matching_algorithm.h"
  #include "ui/compositor/compositor.h"
-@@ -33,7 +33,7 @@
+@@ -35,7 +35,7 @@
  #endif
  
  // TODO(crbug.com/40625383) support Mac for pixel tests.

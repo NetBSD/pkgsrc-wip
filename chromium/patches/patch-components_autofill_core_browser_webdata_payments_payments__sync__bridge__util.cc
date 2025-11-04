@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/webdata/payments/payments_sync_bridge_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/autofill/core/browser/webdata/payments/payments_sync_bridge_util.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/autofill/core/browser/webdata/payments/payments_sync_bridge_util.cc
 @@ -1262,7 +1262,7 @@ bool AreMaskedBankAccountSupported() {
  

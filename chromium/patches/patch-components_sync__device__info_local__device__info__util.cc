@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/sync_device_info/local_device_info_util.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/sync_device_info/local_device_info_util.cc
 @@ -84,7 +84,7 @@ void OnMachineStatisticsLoaded(LocalDevi
  sync_pb::SyncEnums::DeviceType GetLocalDeviceType() {
@@ -24,12 +24,3 @@ $NetBSD$
    return DeviceInfo::OsType::kLinux;
  #elif BUILDFLAG(IS_ANDROID)
    return DeviceInfo::OsType::kAndroid;
-@@ -126,7 +126,7 @@ DeviceInfo::OsType GetLocalDeviceOSType(
- 
- DeviceInfo::FormFactor GetLocalDeviceFormFactor() {
- #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
--    BUILDFLAG(IS_WIN)
-+    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   return DeviceInfo::FormFactor::kDesktop;
- #elif BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
-   return ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET

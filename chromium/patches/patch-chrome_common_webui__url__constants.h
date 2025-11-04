@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/common/webui_url_constants.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/common/webui_url_constants.h
-@@ -554,12 +554,12 @@ inline constexpr char kChromeUIOsUrlAppU
+@@ -556,12 +556,12 @@ inline constexpr char kChromeUIOsUrlAppU
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -21,7 +21,7 @@ $NetBSD$
  inline constexpr char kChromeUIWebAppSettingsHost[] = "app-settings";
  inline constexpr char kChromeUIWebAppSettingsURL[] = "chrome://app-settings/";
  inline constexpr char kChromeUIWhatsNewHost[] = "whats-new";
-@@ -571,11 +571,11 @@ inline constexpr char kChromeUILinuxProx
+@@ -573,11 +573,11 @@ inline constexpr char kChromeUILinuxProx
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -35,7 +35,7 @@ $NetBSD$
  inline constexpr char kChromeUIBrowserSwitchHost[] = "browser-switch";
  inline constexpr char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
  inline constexpr char kChromeUIIntroDefaultBrowserSubPage[] = "default-browser";
-@@ -600,7 +600,7 @@ inline constexpr char kChromeUIHistorySy
+@@ -602,7 +602,7 @@ inline constexpr char kChromeUIHistorySy
      "chrome://history-sync-optin/";
  #endif
  

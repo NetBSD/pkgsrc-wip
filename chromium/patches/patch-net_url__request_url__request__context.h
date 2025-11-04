@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- net/url_request/url_request_context.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ net/url_request/url_request_context.h
 @@ -86,7 +86,7 @@ class NET_EXPORT URLRequestContext final
    // session.

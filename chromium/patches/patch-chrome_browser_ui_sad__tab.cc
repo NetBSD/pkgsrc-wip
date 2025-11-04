@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/sad_tab.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/sad_tab.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/sad_tab.cc
-@@ -179,7 +179,7 @@ std::vector<int> SadTab::GetSubMessages(
+@@ -180,7 +180,7 @@ std::vector<int> SadTab::GetSubMessages(
        if (!web_contents_->GetBrowserContext()->IsOffTheRecord()) {
          message_ids.insert(message_ids.begin(), IDS_SAD_TAB_RELOAD_INCOGNITO);
        }

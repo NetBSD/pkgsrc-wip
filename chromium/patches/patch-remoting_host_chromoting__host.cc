@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- remoting/host/chromoting_host.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ remoting/host/chromoting_host.cc
 @@ -138,7 +138,7 @@ void ChromotingHost::Start(const std::st
        &ChromotingHost::OnIncomingSession, base::Unretained(this)));

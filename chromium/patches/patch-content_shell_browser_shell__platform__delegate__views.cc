@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_platform_delegate_views.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/shell/browser/shell_platform_delegate_views.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/shell/browser/shell_platform_delegate_views.cc
 @@ -373,7 +373,7 @@ void ShellPlatformDelegate::CreatePlatfo
        views::Widget::InitParams::NATIVE_WIDGET_OWNS_WIDGET);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signin/enterprise_signin_service.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/enterprise/signin/enterprise_signin_service.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/enterprise/signin/enterprise_signin_service.h
 @@ -9,7 +9,7 @@
  

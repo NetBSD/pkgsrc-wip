@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_browser_utils.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_browser_utils.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_browser_utils.h
 @@ -52,7 +52,7 @@ std::string GetAccountGivenName(Profile&
  // of the user.

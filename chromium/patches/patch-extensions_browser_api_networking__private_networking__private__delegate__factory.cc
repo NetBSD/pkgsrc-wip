@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ extensions/browser/api/networking_private/networking_private_delegate_factory.cc
 @@ -12,7 +12,7 @@
  

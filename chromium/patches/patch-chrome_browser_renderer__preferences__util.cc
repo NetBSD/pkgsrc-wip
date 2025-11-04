@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -38,7 +38,7 @@
  #include "ui/base/ui_base_features.h"
@@ -24,7 +24,7 @@ $NetBSD$
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
    prefs->focus_ring_color = BUILDFLAG(IS_MAC) ? SkColorSetRGB(0x00, 0x5F, 0xCC)
-@@ -125,7 +125,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -123,7 +123,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->inactive_selection_fg_color = SK_ColorBLACK;
  #endif
  

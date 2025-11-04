@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc
 @@ -16,7 +16,7 @@ namespace instance_id {
  // static

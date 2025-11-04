@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc.orig	2025-10-16 15:04:40.984789994 +0000
+--- content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc.orig	2025-11-03 16:55:48.288759789 +0000
 +++ content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc
 @@ -0,0 +1,60 @@
 +// Copyright 2024 The Chromium Authors

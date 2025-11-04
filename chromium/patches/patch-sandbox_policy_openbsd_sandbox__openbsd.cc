@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-10-16 15:04:41.121326145 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-11-03 16:55:48.343461527 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,396 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -67,7 +67,7 @@ $NetBSD$
 +#endif
 +
 +#include "third_party/boringssl/src/include/openssl/crypto.h"
-+#include "third_party/skia/experimental/rust_png/ffi/FFI.rs.h"
++#include "third_party/skia/rust/png/FFI.rs.h"
 +
 +#include <fontconfig/fontconfig.h>
 +#include "ui/gfx/linux/fontconfig_util.h"

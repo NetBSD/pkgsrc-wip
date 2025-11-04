@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/startup/startup_tab_provider.cc
 @@ -63,7 +63,7 @@
  #include "extensions/common/manifest_handlers/chrome_url_overrides_handler.h"

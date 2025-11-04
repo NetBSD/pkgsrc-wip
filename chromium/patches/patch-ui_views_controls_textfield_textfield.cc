@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -86,7 +86,7 @@
  #include "base/win/win_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -791,7 +791,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -794,7 +794,7 @@ bool Textfield::OnKeyPressed(const ui::K
      return handled;
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (!handled) {
      if (auto* linux_ui = ui::LinuxUi::instance()) {
        const auto command =
-@@ -976,7 +976,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -979,7 +979,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD$
    // Skip any accelerator handling that conflicts with custom keybindings.
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      if (IsTextEditCommandEnabled(linux_ui->GetTextEditCommandForEvent(
-@@ -2065,7 +2065,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -2070,7 +2070,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
@@ -51,7 +51,7 @@ $NetBSD$
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2581,7 +2581,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2586,7 +2586,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }
@@ -60,7 +60,7 @@ $NetBSD$
        // Only erase by line break on Linux and ChromeOS.
        if (shift) {
          return ui::TextEditCommand::DELETE_TO_BEGINNING_OF_LINE;
-@@ -2589,7 +2589,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2594,7 +2594,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
        return ui::TextEditCommand::DELETE_WORD_BACKWARD;
      case ui::VKEY_DELETE:

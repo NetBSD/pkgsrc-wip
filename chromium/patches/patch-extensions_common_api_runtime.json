@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/runtime.json.orig	2025-10-13 21:41:26.000000000 +0000
+--- extensions/common/api/runtime.json.orig	2025-10-24 16:42:30.000000000 +0000
 +++ extensions/common/api/runtime.json
 @@ -85,7 +85,9 @@
              {"name": "android", "description": "Specifies the Android operating system."},

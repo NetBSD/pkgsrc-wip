@@ -4,8 +4,8 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_widget_types.h.orig	2025-10-13 21:41:26.000000000 +0000
-+++ ui/gfx/native_widget_types.h
+--- ui/gfx/native_ui_types.h.orig	2025-10-24 16:42:30.000000000 +0000
++++ ui/gfx/native_ui_types.h
 @@ -101,7 +101,7 @@ class ViewAndroid;
  }  // namespace ui
  #endif
@@ -15,7 +15,7 @@ $NetBSD$
  extern "C" {
  struct _AtkObject;
  using AtkObject = struct _AtkObject;
-@@ -185,7 +185,7 @@ using NativeViewAccessible = IAccessible
+@@ -190,7 +190,7 @@ using NativeViewAccessible = IAccessible
  using NativeViewAccessible = base::apple::OwnedNSObject;
  #elif BUILDFLAG(IS_MAC)
  using NativeViewAccessible = base::apple::OwnedNSAccessibility;

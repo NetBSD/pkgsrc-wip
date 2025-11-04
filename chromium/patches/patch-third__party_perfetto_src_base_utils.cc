@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/utils.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/perfetto/src/base/utils.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/perfetto/src/base/utils.cc
 @@ -38,7 +38,8 @@
  #include <mach/vm_page_size.h>

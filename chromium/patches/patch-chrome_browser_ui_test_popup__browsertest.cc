@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/test/popup_browsertest.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/test/popup_browsertest.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/test/popup_browsertest.cc
 @@ -76,7 +76,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenLe
    const display::Display display = GetDisplayNearestBrowser(popup);

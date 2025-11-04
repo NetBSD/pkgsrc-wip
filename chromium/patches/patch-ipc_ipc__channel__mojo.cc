@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel_mojo.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- ipc/ipc_channel_mojo.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ipc/ipc_channel_mojo.cc
-@@ -104,7 +104,7 @@ class ThreadSafeChannelProxy : public mo
+@@ -72,7 +72,7 @@ class ThreadSafeChannelProxy : public mo
  };
  
  base::ProcessId GetSelfPID() {

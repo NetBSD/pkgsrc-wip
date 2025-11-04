@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2025-10-16 15:04:41.129206731 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2025-11-03 16:55:48.351118626 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
 @@ -0,0 +1,69 @@
 +// Copyright 2022 The Chromium Authors. All rights reserved.

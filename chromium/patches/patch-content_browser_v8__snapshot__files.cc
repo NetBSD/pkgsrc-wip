@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/v8_snapshot_files.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/browser/v8_snapshot_files.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/browser/v8_snapshot_files.cc
-@@ -35,7 +35,7 @@ void registerContextSnapshotAndroid(
+@@ -36,7 +36,7 @@ void registerContextSnapshotAndroid(
  std::map<std::string, std::variant<base::FilePath, base::ScopedFD>>
  GetV8SnapshotFilesToPreload(base::CommandLine& process_command_line) {
    std::map<std::string, std::variant<base::FilePath, base::ScopedFD>> files;

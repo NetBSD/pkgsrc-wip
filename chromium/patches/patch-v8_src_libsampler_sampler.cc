@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/libsampler/sampler.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- v8/src/libsampler/sampler.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ v8/src/libsampler/sampler.cc
 @@ -527,6 +527,16 @@ void SignalHandler::FillRegisterState(vo
    state->pc = reinterpret_cast<void*>(mcontext.__gregs[_REG_PC]);

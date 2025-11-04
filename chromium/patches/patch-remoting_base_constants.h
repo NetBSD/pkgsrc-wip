@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/constants.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- remoting/base/constants.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ remoting/base/constants.h
 @@ -27,7 +27,7 @@ const int kDefaultDpi = 96;
  // The video frame rate.

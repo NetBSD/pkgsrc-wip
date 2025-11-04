@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
-@@ -136,7 +136,7 @@ namespace web_app {
+@@ -135,7 +135,7 @@ GetPreinstalledWebAppsMappingForTesting(
+ namespace web_app {
  
  BASE_FEATURE(kDesktopPWAsForceUnregisterOSIntegration,
-              "DesktopPWAsForceUnregisterOSIntegration",
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT

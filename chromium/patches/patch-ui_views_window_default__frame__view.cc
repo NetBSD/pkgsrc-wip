@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/default_frame_view.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/views/window/default_frame_view.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/views/window/default_frame_view.cc
 @@ -285,7 +285,7 @@ int DefaultFrameView::NonClientTopBorder
  int DefaultFrameView::CaptionButtonY() const {
@@ -14,4 +14,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return FrameBorderThickness();
  #else
-   return frame_->IsMaximized() ? FrameBorderThickness() : kFrameShadowThickness;
+   return widget_->IsMaximized() ? FrameBorderThickness()

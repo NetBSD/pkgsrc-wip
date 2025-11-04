@@ -4,8 +4,8 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2025-10-13 21:41:26.000000000 +0000
-+++ chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc
+--- chrome/browser/ui/views/frame/browser_frame_view_factory_views.cc.orig	2025-10-24 16:42:30.000000000 +0000
++++ chrome/browser/ui/views/frame/browser_frame_view_factory_views.cc
 @@ -17,7 +17,7 @@
  #include "chrome/browser/ui/views/frame/browser_frame_view_win.h"
  #endif
@@ -22,5 +22,5 @@ $NetBSD$
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  std::unique_ptr<OpaqueBrowserFrameView> CreateOpaqueBrowserFrameViewLinux(
-     BrowserFrame* frame,
+     BrowserWidget* widget,
      BrowserView* browser_view) {

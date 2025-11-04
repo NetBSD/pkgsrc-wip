@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h
-@@ -249,7 +249,7 @@ class PERFETTO_EXPORT_COMPONENT LegacyTr
+@@ -253,7 +253,7 @@ class PERFETTO_EXPORT_COMPONENT LegacyTr
  // are different. E.g. on Mac size_t is considered a different type from
  // uint64_t even though it has the same size and signedness.
  // Below we add overloads for those types that are known to cause ambiguity.

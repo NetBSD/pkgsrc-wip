@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/aura/screen_ozone.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/aura/screen_ozone.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/aura/screen_ozone.h
 @@ -44,7 +44,7 @@ class AURA_EXPORT ScreenOzone : public d
    display::Display GetDisplayMatching(

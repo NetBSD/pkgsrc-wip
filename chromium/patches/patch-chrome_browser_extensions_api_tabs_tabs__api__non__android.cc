@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/tabs/tabs_api_non_android.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/extensions/api/tabs/tabs_api_non_android.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/extensions/api/tabs/tabs_api_non_android.cc
-@@ -663,7 +663,7 @@ ExtensionFunction::ResponseAction Window
+@@ -624,7 +624,7 @@ ExtensionFunction::ResponseAction Window
  // created as minimized.
  // TODO(crbug.com/40254339): Remove this workaround when linux is fixed.
  // TODO(crbug.com/40254339): Find a fix for wayland as well.
