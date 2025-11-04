@@ -5,8 +5,8 @@ CATEGORIES=	devel
 GIT_REPO=	https://tangled.org/@tangled.org/core
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tangled.org
-COMMENT=	tightly-knit social coding
+HOMEPAGE=	https://tangled.org/
+COMMENT=	Tightly-knit social coding
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/core
