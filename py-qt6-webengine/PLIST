@@ -27,6 +27,7 @@ ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebenginenotification.sip
 ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebenginepage.sip
 ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebenginepermission.sip
 ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebengineprofile.sip
+${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebengineprofilebuilder.sip
 ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebenginequotarequest.sip
 ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebengineregisterprotocolhandlerrequest.sip
 ${PYSITELIB}/PyQt6/bindings/QtWebEngineCore/qwebenginescript.sip

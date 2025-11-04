@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.19 2024/11/14 22:22:24 wiz Exp $
 
-DISTNAME=	PyQt6_WebEngine-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-qt6-webengine-6.8.0
+DISTNAME=	pyqt6_webengine-${PKGVERSION_NOREV}
+PKGNAME=	${PYPKGPREFIX}-qt6-webengine-6.9.0
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6-WebEngine/}
 
