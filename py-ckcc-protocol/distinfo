@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ckcc-protocol-1.5.0.tar.gz) = e8a9dd63a0c219aabff6b9372833af60f8fa9c36a3fd2e00423a9ef6aa5c74e2
+SHA512 (ckcc-protocol-1.5.0.tar.gz) = 8f56aec09ff83f45dc1695d785f7d45cae3c8f8bd648bd6dc83141fdceacd5baae3a67748099933473ec5ff6ed5981aa9b375cdf9be24bd65f634783b0e769f2
+Size (ckcc-protocol-1.5.0.tar.gz) = 38818 bytes

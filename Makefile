@@ -3602,6 +3602,7 @@ SUBDIR+=	py-ciabatta
 SUBDIR+=	py-cinfony
 SUBDIR+=	py-cito
 SUBDIR+=	py-cityhash
+SUBDIR+=	py-ckcc-protocol
 SUBDIR+=	py-cli
 SUBDIR+=	py-cli_helpers
 SUBDIR+=	py-click-command-tree

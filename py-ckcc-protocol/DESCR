@@ -1,0 +1,4 @@
+Coldcard is an affordable, ultra-secure and open-source hardware
+wallet for Bitcoin. Built for hardcore Bitcoin users who demand
+maximum security. This is the python code and command-line
+utilities you need to communicate with it over USB.
