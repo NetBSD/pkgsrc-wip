@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.5 2021/10/26 11:30:52 nia Exp $
 
-BLAKE2s (qutebrowser-3.5.0.tar.gz) = ed7381d9464ccdffa37fc6f43c5abee5187137ff4aaddef123180543c673e1ac
-SHA512 (qutebrowser-3.5.0.tar.gz) = e44943540022686883c5fa22ae4b9a1ec63021d69c1710276bec4f0582a402f9e843256094ee92a56a8461b78b09fd5daebb84e4d6d5302efe248681a5f678b9
-Size (qutebrowser-3.5.0.tar.gz) = 5454647 bytes
+BLAKE2s (qutebrowser-3.6.1.tar.gz) = 410a4091cb050e183a50c8f3564515b22e8fecf34ef7a6d3debc35825d683ca2
+SHA512 (qutebrowser-3.6.1.tar.gz) = d557358d1234481f169bff54c9067484f68288df7966e722507816ed4c5fd6a1dfa30991dc6e03385ca3cd282671877a7d1cfc5ff5ee3206e5a7bb32686789ae
+Size (qutebrowser-3.6.1.tar.gz) = 5468349 bytes

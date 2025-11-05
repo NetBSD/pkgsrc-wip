@@ -575,6 +575,9 @@ ${PYSITELIB}/qutebrowser/misc/throttle.pyo
 ${PYSITELIB}/qutebrowser/misc/utilcmds.py
 ${PYSITELIB}/qutebrowser/misc/utilcmds.pyc
 ${PYSITELIB}/qutebrowser/misc/utilcmds.pyo
+${PYSITELIB}/qutebrowser/misc/wmname.py
+${PYSITELIB}/qutebrowser/misc/wmname.pyc
+${PYSITELIB}/qutebrowser/misc/wmname.pyo
 ${PYSITELIB}/qutebrowser/qt/__init__.py
 ${PYSITELIB}/qutebrowser/qt/__init__.pyc
 ${PYSITELIB}/qutebrowser/qt/__init__.pyo

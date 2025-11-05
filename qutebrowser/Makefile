@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.32 2024/11/14 22:22:10 wiz Exp $
 
-DISTNAME=	qutebrowser-3.5.0
+DISTNAME=	qutebrowser-3.6.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
