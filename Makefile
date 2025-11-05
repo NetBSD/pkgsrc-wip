@@ -3517,6 +3517,7 @@ SUBDIR+=	py-bigfloat
 SUBDIR+=	py-bincopy
 SUBDIR+=	py-biofrills
 SUBDIR+=	py-bitsets
+SUBDIR+=	py-bitbox02
 SUBDIR+=	py-blake2
 SUBDIR+=	py-blaze
 SUBDIR+=	py-blessings

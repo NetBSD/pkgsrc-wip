@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bitbox02-7.0.0.tar.gz) = 0a0c19a6e71c99aca5c3ce197d0e37a667f906a0536742815ebb49735cdc1a6b
+SHA512 (bitbox02-7.0.0.tar.gz) = 4526d1949c67dff01ac7110fc42fe99baeed610e26f51c22b998616484b0912ab4ba3d586fc20061f10cda5d7a824ae999a38ba56b0f4de9211e0f6c3bafb599
+Size (bitbox02-7.0.0.tar.gz) = 66525 bytes
