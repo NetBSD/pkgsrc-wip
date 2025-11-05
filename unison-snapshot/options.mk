@@ -20,8 +20,8 @@ PKG_SUGGESTED_OPTIONS+=	libinotify
 
 .if !empty(PKG_OPTIONS:Mlablgtk)
 PLIST.gtk3=	yes
-DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
 
+DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
 .include "../../x11/ocaml-lablgtk3/buildlink3.mk"
 .endif
 
