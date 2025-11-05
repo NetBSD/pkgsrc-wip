@@ -14,7 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PYTHON_VERSIONS_INCOMPATIBLE= 27
 USE_LANGUAGES=	c
-USE_TOOLS+=	automake gmake
+USE_TOOLS+=	automake autoconf gmake
+USE_LIBTOOL=	yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
