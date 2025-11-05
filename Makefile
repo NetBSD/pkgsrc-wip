@@ -4310,6 +4310,7 @@ SUBDIR+=	py-nlib
 SUBDIR+=	py-node-semver
 SUBDIR+=	py-nodeenv
 SUBDIR+=	py-nodepy
+SUBDIR+=	py-noiseprotocol
 SUBDIR+=	py-nomadnet
 SUBDIR+=	py-nose-parameterized
 SUBDIR+=	py-nose-pathmunge
