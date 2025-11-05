@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (slip10-1.0.1.tar.gz) = d5fbb01bc5d51bc2a751464f21e1a9e59b8627adaef0fab5fde454681866d0eb
+SHA512 (slip10-1.0.1.tar.gz) = 968e8e71b7bd08e2c4cf68dbdda017a8fc7ee4dd461e8746a0f4ea0ed743336b95f6378b3c4a4c5d307565e463cadfd189ccd4eed7e69d2668749a615040457f
+Size (slip10-1.0.1.tar.gz) = 11164 bytes

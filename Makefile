@@ -4729,6 +4729,7 @@ SUBDIR+=	py-singer-target-csv
 SUBDIR+=	py-singletonify
 SUBDIR+=	py-sip4
 SUBDIR+=	py-sipvicious
+SUBDIR+=	py-slip10
 SUBDIR+=	py-slixmpp
 SUBDIR+=	py-smart-open
 SUBDIR+=	py-smcp
