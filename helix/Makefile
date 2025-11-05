@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.13 2024/11/30 20:31:07 wiz Exp $
 
-DISTNAME=	helix-23.10-source
+DISTNAME=	helix-25.07.1-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helix-editor/}
@@ -10,8 +10,6 @@ HOMEPAGE=	https://helix-editor.com/
 COMMENT=	Modal editor inspired by kakoune / neovim
 # Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
-
-BROKEN=		"Needs updating to work with rust 1.80"
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 
@@ -28,17 +26,18 @@ INSTALLATION_DIRS+=	share/helix/runtime/grammars
 .include "cargo-depends.mk"
 .include "tree-sitter-depends.mk"
 
+# Fix codeberg / prolog. Extracted dir doesn't contain rev
 post-extract:
 	${MKDIR} ${WRKSRC}/runtime/grammars/sources
 .for name rev url path in ${TS_FILES}
-	${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/runtime/grammars/sources/${path}
+	if [ "${name}" = "tree-sitter-prolog" ]; then ${LN} -s ${WRKDIR}/${name} ${WRKSRC}/runtime/grammars/sources/${path}; else ${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/runtime/grammars/sources/${path}; fi
 .endfor
 
 SUBST_CLASSES+=		datadir
 SUBST_STAGE.datadir=	pre-configure
-SUBST_MESSAGE.datadir=	Fixing datadir
-SUBST_FILES.datadir=	helix-loader/src/lib.rs
-SUBST_SED.datadir=	-e 's,@DATADIR@,${PREFIX}/share/helix,g'
+#SUBST_MESSAGE.datadir=	Fixing datadir
+#SUBST_FILES.datadir=	helix-loader/src/lib.rs
+#SUBST_SED.datadir=	-e 's,@DATADIR@,${PREFIX}/share/helix,g'
 
 .include "../../mk/bsd.prefs.mk"
 

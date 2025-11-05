@@ -8,6 +8,10 @@ BEGIN {
 	# Ensure lines are correctly delimited, e.g. rev="foo" -> rev = "foo"
 	gsub(/=/, " = ")
 
+	# Ensure spaces in braces (it rhymes!):
+	gsub(/{/, "{ ")
+	gsub(/}/, " }")
+
 	# Extract just the string inside quotemarks.
 	for (i = 1; i <= NF; i++) {
 		gsub(/^[^"]*"/, "", $i)
