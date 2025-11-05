@@ -22,5 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
+.include "../../devel/nss/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
