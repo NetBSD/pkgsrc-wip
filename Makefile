@@ -3994,6 +3994,7 @@ SUBDIR+=	py-hg-cinnabarclone
 SUBDIR+=	py-hg-git-devel
 SUBDIR+=	py-hgapi
 SUBDIR+=	py-hickle
+SUBDIR+=	py-hidapi
 SUBDIR+=	py-hidapi-git
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hiphive
