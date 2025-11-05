@@ -13,10 +13,8 @@ LICENSE=	mpl-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 
-TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pax
+USE_TOOLS+=	git pax
 MAKE_ENV+=	HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1
 
 INSTALLATION_DIRS+=	bin
