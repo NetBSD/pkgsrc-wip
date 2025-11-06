@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	ledger_bitcoin-0.4.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/ledger_bitcoin/}
 
