@@ -4107,6 +4107,7 @@ SUBDIR+=	py-lcapy
 SUBDIR+=	py-ld
 SUBDIR+=	py-lds
 SUBDIR+=	py-lea
+SUBDIR+=	py-ledger-bitcoin
 SUBDIR+=	py-ledgercomm
 SUBDIR+=	py-lemma
 SUBDIR+=	py-lempel-Ziv_Complexity

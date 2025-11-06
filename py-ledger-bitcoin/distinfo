@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ledger_bitcoin-0.4.0.tar.gz) = 0165d8ddd423c32586331504cf615a2989ec294451384ef31a9a86013a5fd73c
+SHA512 (ledger_bitcoin-0.4.0.tar.gz) = d6b65e687ef080b2abf767cb547bef978d76913cfe26d63eab2d3d078a279bfcddd2d33b2ff5ccbb1cdf481ed08cf2f2d7e26ed101d0880a0a95f0ddce87a468
+Size (ledger_bitcoin-0.4.0.tar.gz) = 107689 bytes
