@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ledgercomm-1.2.1.tar.gz) = 199a4ac4058e0760ff9c515fb3bcb5563c458a6eae597d5536e1a91e7fc2fdf4
+SHA512 (ledgercomm-1.2.1.tar.gz) = 271fd90d8e67929e2bdcdccbd68287c6ab39e25adbbfafb3d0f706af4d00376298b8cbd4c594a5019f89b2a6f2a165b9456629b924590471fe44c463eeac113e
+Size (ledgercomm-1.2.1.tar.gz) = 14245 bytes
