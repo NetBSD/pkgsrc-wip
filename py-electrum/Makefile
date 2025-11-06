@@ -2,8 +2,8 @@
 
 DISTNAME=	Electrum-4.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
-CATEGORIES=	finance
+PKGREVISION=	2
+CATEGORIES=	finance python
 MASTER_SITES=	https://download.electrum.org/4.6.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
