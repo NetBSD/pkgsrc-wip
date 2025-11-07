@@ -114,6 +114,7 @@ SHA1 (patch-compiler_rustc__target_src_spec_targets_mipsel__unknown__netbsd.rs) 
 SHA1 (patch-libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c5cd529719daee44aead47ffd97e682ca9d9a1ae
 SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 9d5ef634c5a454e474ea5fee76da9bb768f5b3d9
 SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 8b18e1dbde59f3e8f20e93c7669618b2c7a13294
+SHA1 (patch-library_std_src_sys_fs_unix.rs) = c5eb48f177f6c1b50903fb6690177058851c526c
 SHA1 (patch-src_bootstrap_bootstrap.py) = fb89adaaf01f558d636734db5d778af4a3c67fd6
 SHA1 (patch-src_bootstrap_src_core_build__steps_compile.rs) = e928203ed4734c93cc33c5a3f7879cf18dcecc83
 SHA1 (patch-src_bootstrap_src_core_build__steps_install.rs) = 00ceb941adbdd8fdb96f75dbcc50c2d2b3e55842
