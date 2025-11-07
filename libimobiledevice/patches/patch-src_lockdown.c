@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix ctype(3) usage.
+https://github.com/libimobiledevice/libimobiledevice/pull/1700
 
 --- src/lockdown.c.orig	2025-07-31 18:39:12.420822229 +0000
 +++ src/lockdown.c

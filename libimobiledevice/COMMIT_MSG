@@ -1,3 +1,5 @@
+misc/libimobiledevice: Import libimobiledevice-1.4.0
+
 libimobiledevice is a cross-platform software library that talks the
 protocols to support iPhone, iPod Touch, iPad and Apple TV devices.  Unlike
 other projects, it does not depend on using any existing proprietary

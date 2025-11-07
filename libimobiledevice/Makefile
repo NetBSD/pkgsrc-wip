@@ -19,7 +19,7 @@ USE_LANGUAGES+=	c c++
 PY_PATCHPLIST=	yes
 
 pre-configure:
-	echo ${PKGVERSION_NOREV} > ${WRKSRC}/.tarball-version
+	${ECHO} ${PKGVERSION_NOREV} > ${WRKSRC}/.tarball-version
 	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../devel/py-cython/tool.mk"
