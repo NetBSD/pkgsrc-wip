@@ -1,11 +1,12 @@
 $NetBSD$
 
 * POSIX shell portability
+https://github.com/libimobiledevice/usbmuxd/pull/270
 
---- configure.ac.orig	2014-10-17 20:27:35.000000000 +0000
+--- configure.ac.orig	2020-06-09 01:57:16.000000000 +0000
 +++ configure.ac
-@@ -37,7 +37,7 @@ if test "x$have_limd" = "xyes"; then
-     AC_SUBST(libimobiledevice_LIBS)
+@@ -49,7 +49,7 @@ if test "x$have_limd" = "xyes"; then
+     fi
    fi
  else
 -  if test "x$with_preflight" == "xyes"; then

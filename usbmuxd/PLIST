@@ -1,3 +1,3 @@
 @comment $NetBSD$
-man/man1/usbmuxd.1
+man/man8/usbmuxd.8
 sbin/usbmuxd

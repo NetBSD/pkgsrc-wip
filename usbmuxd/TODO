@@ -1,0 +1,26 @@
+<!-- -*- markdown -*- -->
+
+We can compile usbmuxd on NetBSD but it doesn't actually work. I (pho@)
+tried hard but figured that it wasn't straightforward at all. Here are
+reasons:
+
+1. Unlike Linux, NetBSD allows userland to directly access USB devices only
+   if the said devices are completely unknown to its USB
+   stack. Specifically, userland direct access is only possible when the
+   `ugen(4)` driver attaches to them.
+2. However, Apple mobile devices (iPhone, iPad, Apple Watch, ...) aren't
+   complete aliens. We have `uipad(4)` which prevents `ugen(4)` from
+   attaching. And even if we disable it, `uaudio(4)` recognizes them as
+   audio input devices. `uhidev(4)` also attaches for a reason I (pho@)
+   don't know.
+3. On NetBSD, `devel/libusb1` can only talk to devices with `ugen(4)`
+   attached. This is logical. Makes sense. But in this case it isn't
+   helpful to us. Devices without `ugen(4)` attached are simply ignored by
+   libusb.
+4. And since libusb ignores them, `usbmuxd` cannot discover them and
+   reports no applicable devices are found.
+
+In theory it *could* be possible to make `ugen(4)` steal only a specific
+interface from these devices, but I (pho@) don't know what interface to
+steal. Future travellers may find it useful to see what `usb_device_add()`
+in `${WRKSRC}/src/usb.c` does. I am bailing out, at least for now.

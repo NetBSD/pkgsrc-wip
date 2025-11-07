@@ -1,1 +1,7 @@
-A socket daemon to multiplex connections from and to iOS devices.
+usbmuxd stands for "USB multiplexing daemon". This daemon is in charge of
+multiplexing connections over USB to an iOS device.
+
+The usbmuxd daemon is running upon installing iTunes on Windows and Mac OS
+X. The libimobiledevice project provides an open-source reimplementation of
+the usbmuxd daemon to use on other OSes or as an alternative to communicate
+with iOS devices without the need to install iTunes.

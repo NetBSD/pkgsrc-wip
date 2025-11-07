@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Disable udev installation
+https://github.com/libimobiledevice/usbmuxd/pull/270
 
 --- Makefile.in.orig	2014-10-17 20:27:41.000000000 +0000
 +++ Makefile.in
