@@ -149,14 +149,14 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-#.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	powerpc-unknown-netbsd
-#DN:=		${DISTNAME}${NBSUF}
-#EXTRACT_SUFX=	.tar.xz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	${NETBSD_REPO}
-#.endif
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	powerpc-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-sparc64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
