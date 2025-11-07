@@ -1,0 +1,15 @@
+$NetBSD$
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- Cargo.toml.orig	2025-11-07 10:52:03.691633911 +0000
++++ Cargo.toml
+@@ -60,7 +60,7 @@ sysinfo = "0.32.0"
+ 
+ [dev-dependencies]
+ insta = "1.40.0"
+-packet-builder = { version = "0.7.0", git = "https://github.com/cyqsimon/packet_builder.git", branch = "patch-update" }
++packet-builder = { path="../packet_builder-bf5a89ba75795f5067bb03fa8de00b833ffe4eae" }
+ pnet_base = "0.34.0"
+ regex = "1.11.0"
+ rstest = "0.23.0"

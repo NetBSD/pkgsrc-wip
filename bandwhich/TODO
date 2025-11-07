@@ -1,0 +1,22 @@
+   Compiling trust-dns-resolver v0.23.2
+error[E0425]: cannot find value `get_open_sockets` in this scope
+   --> src/os/shared.rs:215:9
+    |
+215 |         get_open_sockets,
+    |         ^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `eperm_message` in this scope
+   --> src/os/shared.rs:178:17
+    |
+178 |                 eperm_message(),
+    |                 ^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `eperm_message` in this scope
+   --> src/os/shared.rs:184:17
+    |
+184 |                 eperm_message()
+    |                 ^^^^^^^^^^^^^ not found in this scope
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `bandwhich` (bin "bandwhich") due to 3 previous errors
+*** Error code 101
