@@ -203,5 +203,5 @@ else
 fi
 
 # Cannot echo to stdout, messes up e.g. "gcc -print-prog-name=ld" output...
-echo $cmd >> /tmp/gcc-wrap.log
+#echo $cmd >> /tmp/gcc-wrap.log
 exec $cmd
