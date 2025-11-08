@@ -1,0 +1,4 @@
+misc/libimobiledevice-glue: Import libimobiledevice-glue-1.3.2
+
+Library with common code used by the libraries and tools around
+the libimobiledevice project.

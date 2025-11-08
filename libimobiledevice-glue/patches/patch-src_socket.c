@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add NetBSD support.
+https://github.com/libimobiledevice/libimobiledevice-glue/pull/52
 
 --- src/socket.c.orig	2025-07-31 18:18:24.287306854 +0000
 +++ src/socket.c

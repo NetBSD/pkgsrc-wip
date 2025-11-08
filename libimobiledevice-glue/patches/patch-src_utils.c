@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix ctype(3) usage.
+https://github.com/libimobiledevice/libimobiledevice-glue/pull/52
 
 --- src/utils.c.orig	2025-07-31 18:18:48.354814064 +0000
 +++ src/utils.c
