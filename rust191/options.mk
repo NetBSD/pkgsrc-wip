@@ -94,7 +94,7 @@ BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 # where the linking of rust-analyzer fails because it's now too big
 # for 24-bit word-based PC-relative relocation offsets.
 # Apply on or for powerpc:
-.if ${MACHINE_PLATFORM:M*-powerpc} ||
+.if ${MACHINE_PLATFORM:M*-powerpc} || \
     (!empty(TARGET) && ${TARGET:Mpowerpc-*})
 CONFIGURE_ARGS+=	--tools="cargo,clippy,rustdoc,rustfmt,analysis,src,wasm-component-ld"
 # rust-analyzer dropped from list
