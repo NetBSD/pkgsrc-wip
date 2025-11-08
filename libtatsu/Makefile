@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libimobiledevice/libtatsu/
-COMMENT=	Library handling the communication with Apple's Tatsu Signing Server (TSS)
+COMMENT=	Library handling the communication with Apple's Tatsu Signing Server
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes

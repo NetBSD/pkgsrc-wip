@@ -1,3 +1,5 @@
+misc/libtatsu: Import libtatsu-1.0.5
+
 Library handling the communication with Apple's Tatsu Signing Server (TSS).
 
 This library is part of the libimobiledevice project. The main purpose of
