@@ -1,0 +1,29 @@
+$NetBSD: patch-pkgsrc_zebra.sh.in,v 1.2 2024/01/09 20:17:41 chopps Exp $
+
+Use correct configure values.
+
+--- pkgsrc/zebra.sh.in.orig	2025-08-02 07:08:42.000000000 +0000
++++ pkgsrc/zebra.sh.in	2025-10-23 01:56:36.814009973 +0000
+@@ -16,19 +16,19 @@
+ 
+ name="zebra"
+ rcvar=$name
+-required_files="@e_sysconfdir@/${name}.conf"
++required_files="@e_frr_sysconfdir@/${name}.conf"
+ command="@prefix@/sbin/${name}"
+ command_args="-d"
+ 
+ start_precmd="zebra_precmd"
+ stop_postcmd="zebra_postcmd"
+-socket_dir=@localstatedir@
++socket_dir="@e_frr_runstatedir@"
+ pidfile="${socket_dir}/${name}.pid"
+ 
+ zebra_precmd()
+ {
+     mkdir -p "${socket_dir}"
+-    chown quagga.quagga "${socket_dir}"
++    chown "@enable_user@:@enable_vty_group@" "${socket_dir}"
+     chmod 750 "${socket_dir}"
+     rc_flags="$(
+ 	set -- $rc_flags

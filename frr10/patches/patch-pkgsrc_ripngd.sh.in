@@ -1,0 +1,21 @@
+$NetBSD$
+
+Use correct configure values.
+
+--- pkgsrc/ripngd.sh.in.orig	2025-08-02 07:08:42.000000000 +0000
++++ pkgsrc/ripngd.sh.in	2025-10-23 01:56:33.609044596 +0000
+@@ -16,12 +16,12 @@
+ 
+ name="ripngd"
+ rcvar=$name
+-required_files="@e_sysconfdir@/${name}.conf"
++required_files="@e_frr_sysconfdir@/${name}.conf"
+ command="@prefix@/sbin/${name}"
+ command_args="-d"
+ 
+ start_precmd="zebra_precmd"
+-socket_dir=@localstatedir@
++socket_dir="@e_frr_runstatedir@"
+ pidfile="${socket_dir}/${name}.pid"
+ 
+ zebra_precmd()

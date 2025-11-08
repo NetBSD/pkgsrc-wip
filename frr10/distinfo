@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.9 2024/01/09 20:17:41 chopps Exp $
+
+BLAKE2s (frr-10.4.1.tar.gz) = 848f862b071c588c0a32f018ac2982eef5b2e30bc49c4d7f0b980d47898c731b
+SHA512 (frr-10.4.1.tar.gz) = c2903e4ddba0ff484872c0378c64dfbe5a92620d62d918c0a1330302d798ad04b7ce81e10f2dc693b37b8d651ad0c76d3f0a2c57db4c5676ff221610173b10c3
+Size (frr-10.4.1.tar.gz) = 11564121 bytes
+SHA1 (patch-configure.ac) = d10b406ff371ffab7ce8eb63392c856a87300aa3
+SHA1 (patch-lib_elf__py.c) = f719d4542f22a292b2625a19b5f73a2e107bd68b
+SHA1 (patch-lib_frr__pthread.c) = 566b2a54ebbcf79abaae7f39e563b4b83bd8f474
+SHA1 (patch-pkgsrc_bgpd.sh.in) = a86e4ebdb80d3b09b289ed8105aa9a597d9a7b10
+SHA1 (patch-pkgsrc_eigrpd.sh.in) = 3489c90131e07121e837d3fc785f1f381f24d1d5
+SHA1 (patch-pkgsrc_mgmtd.sh.in) = 2ad184fd002f07e3d2c33c80323975542faa0c10
+SHA1 (patch-pkgsrc_ospf6d.sh.in) = 13ecd222d80948eb0faaee8392b881a246e47f8a
+SHA1 (patch-pkgsrc_ospfd.sh.in) = 774b84905d9341294827f5affcc4fddec14f5a37
+SHA1 (patch-pkgsrc_ripd.sh.in) = a4960c0617d39ea9bf58e04eae2a93569fcea6e2
+SHA1 (patch-pkgsrc_ripngd.sh.in) = 296141e055e19cca4201b89c983f9b49ec4babc7
+SHA1 (patch-pkgsrc_zebra.sh.in) = 085796da772ea90b5bb35fb390abdcd0b29bcfbb
+SHA1 (patch-zebra_kernel__socket.c) = 118acf4a3d5424a45d1d1c037f1198f6162f4993

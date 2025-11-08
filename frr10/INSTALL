@@ -1,0 +1,37 @@
+# $NetBSD$
+
+FRR_VTY_GROUP="@FRR_VTY_GROUP@"
+FRR_USER="@FRR_USER@"
+
+message()
+{
+    "${CAT}" << EOM
+===========================================================================
+
+IMPORTANT:
+To complete the installation you need to add the user "${FRR_USER}"
+to the (secondary) group "${FRR_VTY_GROUP}".
+
+===========================================================================
+EOM
+}
+
+case ${STAGE} in
+POST-INSTALL)
+	found="${FALSE}"
+	for group in $("${ID}" -Gn "${FRR_USER}")
+	do
+	    case "${group}" in
+	    "${FRR_VTY_GROUP}")
+		found="${TRUE}"
+		break
+		;;
+	    esac
+	done
+	if ! "${found}"
+	then
+	    #"${USERMOD}" -G "${FRR_VTY_GROUP}" "${FRR_USER}"
+	    message
+	fi
+	;;
+esac
