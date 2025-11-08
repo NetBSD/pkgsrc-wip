@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add NetBSD support.
+https://github.com/libimobiledevice/libusbmuxd/pull/156
 
 --- src/libusbmuxd.c.orig	2025-07-31 18:22:11.292175556 +0000
 +++ src/libusbmuxd.c

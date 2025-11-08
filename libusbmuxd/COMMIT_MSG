@@ -1,3 +1,5 @@
+comms/libusbmuxd: Import libusbmuxd-2.1.1
+
 This project is a client library to multiplex connections from and to iOS
 devices alongside command-line utilities. It is primarily used by
 applications which use the libimobiledevice library to communicate with
