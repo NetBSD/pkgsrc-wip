@@ -1,5 +1,7 @@
 <!-- -*- markdown -*- -->
 
+# Doesn't work on NetBSD but it's not usbmuxd's fault
+
 We can compile usbmuxd on NetBSD but it doesn't actually work. I (pho@)
 tried hard but figured that it wasn't straightforward at all. Here are
 reasons:
@@ -24,3 +26,11 @@ In theory it *could* be possible to make `ugen(4)` steal only a specific
 interface from these devices, but I (pho@) don't know what interface to
 steal. Future travellers may find it useful to see what `usb_device_add()`
 in `${WRKSRC}/src/usb.c` does. I am bailing out, at least for now.
+
+
+# Tunneling
+
+If you have a machine running either Linux or macOS, you can run `usbmuxd`
+on that machine and connect to it from NetBSD by forwarding requests with
+an SSH tunnel. I wrote a shell script to automate the setup:
+https://github.com/depressed-pho/tunnel-usbmuxd
