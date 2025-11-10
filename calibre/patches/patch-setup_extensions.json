@@ -1,0 +1,22 @@
+$NetBSD: patch-setup_extensions.json,v 1.5 2022/01/23 16:17:13 rhialto Exp $
+
+Include libusb and libmtp for netbsd.
+
+--- setup/extensions.json.orig	2025-11-07 04:15:11.000000000 +0000
++++ setup/extensions.json
+@@ -236,13 +236,13 @@
+     },
+     {
+         "name": "libusb",
+-        "only": "macos linux haiku freebsd",
++        "only": "macos linux haiku freebsd netbsd",
+         "sources": "calibre/devices/libusb/libusb.c",
+         "libraries": "!usb_library"
+     },
+     {
+         "name": "libmtp",
+-        "only": "freebsd macos linux haiku",
++        "only": "freebsd macos linux haiku netbsd",
+         "sources": "calibre/devices/mtp/unix/devices.c calibre/devices/mtp/unix/libmtp.c",
+         "headers": "calibre/devices/mtp/unix/devices.h calibre/devices/mtp/unix/upstream/music-players.h calibre/devices/mtp/unix/upstream/device-flags.h",
+         "libraries": "mtp"
