@@ -10,6 +10,7 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 # Updates must be tested to not only build but actually function under
 # at least NetBSD 10/amd64 with actual UBNT hardware.
 MAINTAINER=	gdt@NetBSD.org
+#MAINTAINER+=	abs@NetBSD.org
 HOMEPAGE=	https://www.ubnt.com/download/unifi/
 # The content that belongs in NEWS are often in a blog.
 #BLOGPAGE=	https://community.ui.com/releases
