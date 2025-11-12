@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	git pax
 MAKE_ENV+=	HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1
+# Set per: https://docs.helix-editor.com/building-from-source.html#note-to-packagers
 MAKE_ENV+=	HELIX_DEFAULT_RUNTIME=${PREFIX}/share/helix/runtime
 
 INSTALLATION_DIRS+=	bin
@@ -34,6 +35,7 @@ post-extract:
 
 .include "../../mk/bsd.prefs.mk"
 
+# Cargo manifest since highest precedence: https://docs.helix-editor.com/building-from-source.html#multiple-runtime-directories
 post-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} CARGO_MANIFEST_DIR=${WRKSRC}/runtime \
 		./target/release/hx --grammar build
