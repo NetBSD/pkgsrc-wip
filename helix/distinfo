@@ -1657,5 +1657,4 @@ BLAKE2s (zlib-rs-0.5.0.crate) = 01f0f48c4c414fc797493e288fc2d20f2b46d6e210d0d672
 SHA512 (zlib-rs-0.5.0.crate) = 6cd49a69f7b515c3872ca10975d445badead076159b73d0c9298a2d52ca23d439e5e5408f4359d03f7728f081a50e2ce714f0028dc2ffa0de421c6e89e8d3096
 Size (zlib-rs-0.5.0.crate) = 191547 bytes
 SHA1 (patch-helix-loader_src_grammar.rs) = 4c417c2d50b038e0c2e9f2c8ad31256bcf9e83ac
-SHA1 (patch-helix-loader_src_lib.rs) = 11e213311ee0cc9c260651d4b849ab1deb93b03e
 SHA1 (patch-vendor_gix-index-0.40.0_src_fs.rs) = 9e2251407063d78ad11ec704e7d557a99b16a4eb

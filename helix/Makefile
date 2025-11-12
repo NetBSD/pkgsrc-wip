@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	git pax
 MAKE_ENV+=	HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1
+MAKE_ENV+=	HELIX_DEFAULT_RUNTIME=${PREFIX}/share/helix/runtime
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/examples/helix/completion
@@ -31,16 +32,10 @@ post-extract:
 	if [ "${name}" = "tree-sitter-prolog" ]; then ${LN} -s ${WRKDIR}/${name} ${WRKSRC}/runtime/grammars/sources/${path}; else ${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/runtime/grammars/sources/${path}; fi
 .endfor
 
-SUBST_CLASSES+=		datadir
-SUBST_STAGE.datadir=	pre-configure
-#SUBST_MESSAGE.datadir=	Fixing datadir
-#SUBST_FILES.datadir=	helix-loader/src/lib.rs
-#SUBST_SED.datadir=	-e 's,@DATADIR@,${PREFIX}/share/helix,g'
-
 .include "../../mk/bsd.prefs.mk"
 
 post-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} HELIX_RUNTIME=${WRKSRC}/runtime \
+	${RUN} cd ${WRKSRC} && ${SETENV} CARGO_MANIFEST_DIR=${WRKSRC}/runtime \
 		./target/release/hx --grammar build
 # not under ${PREFIX}/lib, or else lang/rust/cargo.mk would handle it
 .if ${OPSYS} == "Darwin"
