@@ -27,8 +27,11 @@ INSTALL_MAKE_FLAGS+=	rcdir=${EGDIR}
 # Fix: [../src/main.c:94] no fonts are available
 DEPENDS+=		nerd-fonts-Hack-[0-9]*:../../fonts/nerd-fonts-Hack
 
+CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
