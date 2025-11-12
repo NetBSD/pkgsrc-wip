@@ -1,5 +1,5 @@
-$NetBSD$
+$NetBSD: distinfo,v 1.8 2024/03/16 13:46:42 bacon Exp $
 
-BLAKE2s (cutadapt-4.7.tar.gz) = f5b03c53fc169c1c9398c40ffc34de0b54a79a082df3064035c0780aef5cde8f
-SHA512 (cutadapt-4.7.tar.gz) = 975a12899fc014b645839ab4ebc1cbb9df7c87d4c4bef67976a72b657d7c274a49edf08e7dfa935d893cf7af35027a0cc04ceb79be0766cbe9ca49c5a2a85c61
-Size (cutadapt-4.7.tar.gz) = 250893 bytes
+BLAKE2s (cutadapt-5.2.tar.gz) = 541d28c2c5f5c893af0b4fd8f86c7eb9493ac6f0f9005e1fb9a2e147b7438bdb
+SHA512 (cutadapt-5.2.tar.gz) = 9205e41d7f729eab31c5630788012b0c0d0eb726f3ae45552f0a39f90ac6a9dc1a07c5dc16db38aab873f626186583b3c969154a81574a18683c07494279c48c
+Size (cutadapt-5.2.tar.gz) = 253642 bytes

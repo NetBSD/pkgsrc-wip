@@ -1,6 +1,6 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.19 2025/10/09 07:57:24 wiz Exp $
 
-DISTNAME=	cutadapt-4.7
+DISTNAME=	cutadapt-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
@@ -10,19 +10,16 @@ HOMEPAGE=	https://cutadapt.readthedocs.io/en/stable/
 COMMENT=	Find and remove adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # needed for python 3.11 as of cutadapt 3.5 release
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.6.0:../../devel/py-xopen
-DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.10.0:../../wip/py-dnaio
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xopen
-
-USE_PKG_RESOURCES=	yes
+DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.10.0:../../biology/py-dnaio
 
 PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
