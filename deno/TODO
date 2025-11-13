@@ -1,6 +1,9 @@
 Tries to download file during build:
   Downloading (using Python) https://github.com/denoland/rusty_v8/releases/download/v140.2.0/librusty_v8_release_x86_64-unknown-netbsd.a.gz
 
+That project only supports Linux, macOS, Android, and iOS according to
+https://github.com/denoland/rusty_v8/blob/main/build.rs
+
 
 Later fails again with
   --- stderr
