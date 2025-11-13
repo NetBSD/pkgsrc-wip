@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.26 2025/11/10 13:53:33 wiz Exp $
+
+BLAKE2s (podofo-0.10.5.tar.gz) = 6f0aa993b6d3b1c302de19142cd8f343a7c2d078d96c41858f31c1fc484e00cb
+SHA512 (podofo-0.10.5.tar.gz) = 9b9921100c638d591e8796ec4bedb6eb4496bfe4fdb0d633ea6619da899451a1c0239b1f95fabc61b08572d1eab5a3f67c4a97f869520c8f2a1b89e060b8b3bb
+Size (podofo-0.10.5.tar.gz) = 1696209 bytes

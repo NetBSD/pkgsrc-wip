@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.53 2025/11/10 13:53:33 wiz Exp $
+
+DISTNAME=	podofo-0.10.5
+CATEGORIES=	print
+MASTER_SITES=	${MASTER_SITE_GITHUB:=podofo/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/podofo/podofo/
+COMMENT=	Library to work with the PDF file format (old 0.10 branch)
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
+
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+
+# cmake checks for this version
+GCC_REQD+=	9
+
+USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FT2BUILD:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
+CMAKE_CONFIGURE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FTHEADER:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2/config
+CMAKE_CONFIGURE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
+
+.include "../../devel/cmake/build.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

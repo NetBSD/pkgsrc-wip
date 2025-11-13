@@ -126,7 +126,8 @@ do-test:
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../archivers//bzip2/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../audio/espeak-ng/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.chmlib+=	chmlib>=0.40
 .include "../../devel/chmlib/buildlink3.mk"
@@ -144,7 +145,7 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 # because the setup.py is not the standard one and behaves differently.
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
 .include "../../multimedia/ffmpeg8/buildlink3.mk"
-.include "../../print/podofo/buildlink3.mk"
+.include "../../wip/podofo010/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
