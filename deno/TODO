@@ -1,0 +1,18 @@
+Tries to download file during build:
+  Downloading (using Python) https://github.com/denoland/rusty_v8/releases/download/v140.2.0/librusty_v8_release_x86_64-unknown-netbsd.a.gz
+
+
+Later fails again with
+  --- stderr
+  CMake Error at CMakeLists.txt:4 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 has been removed from CMake.
+
+    Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+    to tell CMake that the project requires at least <min> but has been updated
+    to work with policies introduced by <max> or earlier.
+
+    Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.
+
+
+
+  thread 'main' panicked at /scratch/wip/deno/work/vendor/cmake-0.1.50/src/lib.rs:1098:5:
