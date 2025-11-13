@@ -1742,6 +1742,7 @@ SUBDIR+=	icestorm_update
 SUBDIR+=	icmpchat
 SUBDIR+=	ics2txt
 SUBDIR+=	id3
+SUBDIR+=	ideviceinstaller
 SUBDIR+=	ifstat
 SUBDIR+=	ifuse
 SUBDIR+=	igal

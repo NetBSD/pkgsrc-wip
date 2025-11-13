@@ -1,0 +1,16 @@
+sysutils/ideviceinstaller: Import ideviceinstaller-1.2.0
+
+The ideviceinstaller application allows interacting with the app
+installation service of an iOS device.
+
+It makes use of the fabulous libimobiledevice library that allows
+communication with iOS devices.
+
+Some key features are:
+* Status: Install, upgrade, uninstall, and enumerate apps
+* Browse: Allows to retrieve a list of installed apps with filter options
+* Install: Supports app package, carrier bundle and developer .app
+  directory
+* Format: Allows command output in plist, XML, or JSON format
+* Compatibility: Supports latest device firmware releases
+* Cross-Platform: Tested on Linux, macOS, Windows and Android platforms
