@@ -38,6 +38,6 @@ CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
-.include "../../wip/libcxxabi/buildlink3.mk"
+#.include "../../wip/libcxxabi/buildlink3.mk"
 .include "../../wip/libunwind/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

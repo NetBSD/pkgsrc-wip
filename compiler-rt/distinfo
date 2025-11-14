@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.23 2023/03/03 09:53:14 wiz Exp $
 
-BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
-SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
-Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes
+BLAKE2s (llvm-project-21.1.5.src.tar.xz) = f2853f6eeeb23c2fc74d8cebbbaf1da72cb4a47d245de8d027ca08526315cb0b
+SHA512 (llvm-project-21.1.5.src.tar.xz) = 865ad44575c9288f06da8c48acbb60779f6c38aaf2ee85eac2002452f83892b704263f2ef51d3596abf06dccc1559f1d9dcdc89120363efd8ce1b1239ae83f6b
+Size (llvm-project-21.1.5.src.tar.xz) = 158957032 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
-SHA1 (patch-cmake_config-ix.cmake) = e3d2fef7542eda42a0c716b31c0d9b0a729d92e0
+SHA1 (patch-cmake_config-ix.cmake) = 1a67378de34b048477ef80237ab8a76272288a55

@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	llvm
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=20.1.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=21.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../wip/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config

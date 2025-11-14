@@ -10,6 +10,9 @@ PKGNAME=	clang-tools-extra-${LLVM_VERSION}
 
 COMMENT=	Extra Clang tools
 
+EXTRACT_ELEMENTS+=	${DISTNAME}/clang
+WRKSRC=			${WRKDIR}/${DISTNAME}/clang
+
 DEPENDS+=	clang>=${LLVM_VERSION}:../../wip/clang
 
 BUILD_TARGET=	clang-change-namespace clang-apply-replacements clang-doc
@@ -25,6 +28,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
 .PHONY: inject-clang-tools
 post-extract: inject-clang-tools
 inject-clang-tools:
-	${LN} -s ${WRKSRC} ${WRKSRC}/../clang/tools/extra
+	${LN} -s ${WRKDIR}/${DISTNAME}/clang-tools-extra ${WRKDIR}/${DISTNAME}/clang/tools/extra
 
 .include "../../mk/bsd.pkg.mk"

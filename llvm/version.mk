@@ -14,7 +14,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	20.1.8
+LLVM_VERSION=	21.1.5
 
 DISTNAME=	llvm-project-${LLVM_VERSION}.src
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
@@ -29,3 +29,4 @@ LLVM_MAJOR_VERSION=	${LLVM_VERSION:tu:C/\\.[[:digit:]\.]*//}
 EXTRACT_ELEMENTS=	${DISTNAME}/${PKGBASE:S/wasi-//}
 EXTRACT_ELEMENTS+=	${DISTNAME}/cmake
 EXTRACT_ELEMENTS+=	${DISTNAME}/runtimes
+EXTRACT_ELEMENTS+=	${DISTNAME}/third-party
