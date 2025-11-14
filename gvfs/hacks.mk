@@ -15,8 +15,9 @@ GVFS_HACKS_MK=	defined
 ### introduced on their own, Meson allocates a dummy rpath with the same
 ### length of install_rpath with every character replaced with 'X', like
 ### "-Wl,-rpath,XXXXXXXXXX", which doesn't begin with a '/' so our
-### cwrappers remove them! Meson and our cwrappers fight against each other
-### in a very indirect way, and the only around is to do this silly hack:
+### cwrappers remove it! Meson and our cwrappers fight against each other
+### in a very indirect way, and the only way around is to do this silly
+### hack:
 PKG_HACKS+=	rpath-fixup
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX:Q}/lib/gvfs
 
