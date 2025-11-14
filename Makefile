@@ -163,6 +163,7 @@ SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
 SUBDIR+=	amavis-logwatch
 SUBDIR+=	amlogic-meson-fwtools
+SUBDIR+=	amneziawg-go
 SUBDIR+=	analizo
 SUBDIR+=	angelscript
 SUBDIR+=	ansible-junos-stdlib
