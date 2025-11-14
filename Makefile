@@ -2139,6 +2139,7 @@ SUBDIR+=	libnestedsums
 SUBDIR+=	libneural
 SUBDIR+=	libnfc
 SUBDIR+=	libnfo
+SUBDIR+=	libnfs
 SUBDIR+=	libnl
 SUBDIR+=	libnl1
 SUBDIR+=	libnoise

@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libnfs
+
+.if !defined(LIBNFS_BUILDLINK3_MK)
+LIBNFS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libnfs+=	libnfs>=6.0.2
+BUILDLINK_PKGSRCDIR.libnfs?=	../../wip/libnfs
+.endif	# LIBNFS_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libnfs

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Improve portability: Directly check for getprotobyname(3) instead of
+guessing with OS-specific CPP macros.
+
+--- configure.ac.orig	2025-11-14 13:42:24.723919501 +0000
++++ configure.ac
+@@ -182,6 +182,7 @@ AC_CHECK_HEADERS([unistd.h])
+ # check for netdb.h
+ dnl Check for netdb.h
+ AC_CHECK_HEADERS([netdb.h])
++AC_CHECK_FUNCS([getprotobyname])
+ 
+ # check for utime.h
+ dnl Check for utime.h
