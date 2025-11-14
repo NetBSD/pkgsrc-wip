@@ -1,0 +1,16 @@
+<!-- -*- markdown -*- ->
+
+# Fairly untested
+
+This package needs to be tested further, before being imported back to the
+main pkgsrc tree. It especially needs to be build-tested (at least) on
+Linux where a lot of PLIST diffs are expected to happen there.
+
+# gvfsd-fuse is known not to work on NetBSD
+
+This is because NetBSD refuse(3) doesn't support non-root mounting but
+gvfsd(1) relies on this specific functionality. gvfsd(1) launches
+gvfsd-fuse(1) as a regular user, and it exits with an error. We should
+probably implement fusermount(1) as a part of refuse(3).
+
+Or maybe we can get away with just setuid-ing gvfsd-fuse?

@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.25 2015/11/04 01:32:16 agc Exp $
 
-RMD160 (gvfs-1.30.4.tar.xz) = 4ba199efe4361e657a03777a698ff4766176ea40
-SHA512 (gvfs-1.30.4.tar.xz) = 305b2abc8cfcb4bdea1fb84f5a7df4aac9697494f5d63d40ce1eb234b547aed497deb4d88a2cb17f9ab4fc188d49ff56033993a17cbfebae6d65a33dc84a633a
-Size (gvfs-1.30.4.tar.xz) = 1895304 bytes
-SHA1 (patch-configure) = 9baf399e5b3905dadd77173d2a8114cb5e49b528
-SHA1 (patch-configure.ac) = f53fb836c45ecd2d0c2a218ea90b0404cb1b19c4
+BLAKE2s (gvfs-1.58.0.tar.xz) = 9f9bbd4ed9fc3133a64a8a35bf7455cc0dfa0e5008d1bba59b180ae73f762e62
+SHA512 (gvfs-1.58.0.tar.xz) = b77e1d6184be7310ffad74a45598c07ebc9555d4a5b72d2c2be535e3258a7a2da73f68f74e4ff669988410688e5592e33cf68e30e5ac12d28e9b70d36a4a9b42
+Size (gvfs-1.58.0.tar.xz) = 1283696 bytes
+SHA1 (patch-daemon_ParseFTPList.c) = 50c38494cabb67c4c5047a1dc5a34f487f7349cf
+SHA1 (patch-meson.build) = f223d6dc97791da7ef96cf4cc099c1599c0e39b2
