@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	ifuse-1.1.3
+DISTNAME=	ifuse-1.2.0
 CATEGORIES=	filesystems
-MASTER_SITES=	http://www.libimobiledevice.org/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	charlotte@NetBSD.org
@@ -12,12 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	aclocal autoconf automake pkg-config
+USE_TOOLS+=	pkg-config
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf
-
-.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libplist/buildlink3.mk"
 .include "../../wip/libimobiledevice/buildlink3.mk"
 .include "../../wip/libusbmuxd/buildlink3.mk"

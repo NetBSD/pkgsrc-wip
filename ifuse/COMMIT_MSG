@@ -1,3 +1,5 @@
+filesystems/ifuse: Import ifuse-1.2.0
+
 A fuse filesystem implementation to access the contents of iOS devices.
 
 This project allows mounting various directories of an iOS device locally
