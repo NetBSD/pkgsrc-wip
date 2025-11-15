@@ -11,22 +11,28 @@ LICENSE=	isc
 
 HAS_CONFIGURE=	yes
 
-USE_TOOLS+=	gmake
+RCD_SCRIPTS=	sndio
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+PKG_USERS=		_sndio:_sndio
+PKG_GROUPS=		_sndio
+PKG_GECOS._sndio=	Sndio user
+PKG_SHELL._sndio=	${NOLOGIN}
+PKG_HOME._sndio=	/nonexistent
 
 PKGCONFIG_OVERRIDE=		libsndio/sndio.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
-RCD_SCRIPTS=	sndio
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Point to the correct OSS device.
+SUBST_FILES.oss+=	libsndio/sio_oss.c
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 
-SNDIO_USER=	_sndio
-SNDIO_GROUP=	_sndio
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--pkgconfdir=${PREFIX}/lib/pkgconfig
 
-PKG_USERS=			${SNDIO_USER}:${SNDIO_GROUP}
-PKG_GROUPS=			${SNDIO_GROUP}
-PKG_GECOS.${SNDIO_USER}=	Sndio user
+BUILD_DIRS+=		libsndio sndiod sndioctl aucat midicat
 
-
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

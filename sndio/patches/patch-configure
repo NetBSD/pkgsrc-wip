@@ -1,19 +1,37 @@
 $NetBSD$
 
-Create libsndio.so.${MAJ} on non-Linux platforms.
+* Create libsndio.so.${MAJ} on non-Linux platforms.
+* Enable OSS backend on NetBSD. 
 
 --- configure.orig	2024-08-01 15:36:54.000000000 +0000
 +++ configure
-@@ -97,7 +97,7 @@ case `uname` in
+@@ -71,7 +71,7 @@ case `uname` in
+ 		alsa=yes
+ 		ldadd="-lrt -lm"
+ 		user=sndiod
+-		so_link="libsndio.so libsndio.so.\${MAJ} libsndio.so.\${MAJ}.0"
++		so_link="libsndio.so libsndio.so.\${MAJ}"
+ 		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}"
+ 		defs='-D_GNU_SOURCE -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
+ 		;;
+@@ -95,17 +95,21 @@ case `uname` in
+ 		;;
+ 	NetBSD)
  		sun=no
++		oss=yes
++		ldadd="-lossaudio -lm"
  		rmidi=yes
  		user=_sndio
 -		so_link="libsndio.so"
++		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}"
 +		so_link="libsndio.so libsndio.so.\${MAJ}"
  		defs='-DHAVE_ARC4RANDOM -DHAVE_GETPEEREID -DHAVE_ISSETUGID \\\
- 		-DHAVE_STRLCAT -DHAVE_STRLCPY \\\
- 		-DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
-@@ -106,6 +106,7 @@ case `uname` in
+-		-DHAVE_STRLCAT -DHAVE_STRLCPY \\\
+-		-DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
++		-D_OPENBSD_SOURCE -DHAVE_STRLCAT -DHAVE_STRLCPY \\\
++		-DHAVE_STRTONUM -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
+ 		;;
+ 	OpenBSD)
  		sun=yes
  		rmidi=yes
  		user=_sndiop
@@ -21,7 +39,7 @@ Create libsndio.so.${MAJ} on non-Linux platforms.
  		defs='-DHAVE_ARC4RANDOM -DHAVE_GETPEEREID -DHAVE_ISSETUGID \\\
  		-DHAVE_STRLCAT -DHAVE_STRLCPY -DHAVE_STRTONUM \\\
  		-DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
-@@ -115,7 +116,7 @@ case `uname` in
+@@ -115,7 +119,7 @@ case `uname` in
  		umidi=yes
  		user=_sndio
  		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}.\${MIN}"
