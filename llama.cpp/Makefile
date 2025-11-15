@@ -4,7 +4,7 @@ DISTNAME=	llama.cpp-${GITHUB_TAG}
 PKGNAME=	${DISTNAME:S/-b/-0.0.2./}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
-GITHUB_TAG=	b5541
+GITHUB_TAG=	b6959
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ggerganov/llama.cpp/

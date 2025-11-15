@@ -1,8 +1,8 @@
 $NetBSD$
 
---- common/common.cpp.orig	2025-05-30 10:24:37.000000000 +0000
+--- common/common.cpp.orig	2025-09-28 06:38:37.000000000 +0000
 +++ common/common.cpp
-@@ -401,10 +401,10 @@ std::string string_format(const char * f
+@@ -410,10 +410,10 @@ std::string string_format(const char * f
  std::string string_strip(const std::string & str) {
      size_t start = 0;
      size_t end = str.size();
@@ -15,7 +15,7 @@ $NetBSD$
          end--;
      }
      return str.substr(start, end - start);
-@@ -849,7 +849,7 @@ std::string fs_get_cache_directory() {
+@@ -867,7 +867,7 @@ std::string fs_get_cache_directory() {
      if (getenv("LLAMA_CACHE")) {
          cache_directory = std::getenv("LLAMA_CACHE");
      } else {
@@ -23,4 +23,4 @@ $NetBSD$
 +#if defined(__linux__) || defined(__FreeBSD__) || defined(_AIX) || defined(__OpenBSD__) || defined(__NetBSD__)
          if (std::getenv("XDG_CACHE_HOME")) {
              cache_directory = std::getenv("XDG_CACHE_HOME");
-         } else {
+         } else if (std::getenv("HOME")) {
