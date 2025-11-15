@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (llama.cpp-b6959.tar.gz) = 2fc857bd5c6a2e53f79cbcd30e0d445e619f9801b337b483331561f865707289
+SHA512 (llama.cpp-b6959.tar.gz) = 2fccb2771664fc355cc0d23baf9d037ec6ac553a4e08cb3697f06e9226f8afac6ed8fb266b44fdd7017fa1012171d78bafea72637215e5cd468da36d2f6fc5a0
+Size (llama.cpp-b6959.tar.gz) = 26422088 bytes

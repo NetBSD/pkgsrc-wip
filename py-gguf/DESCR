@@ -1,0 +1,4 @@
+This is a Python package for writing binary files in the 'GGUF' (GGML
+Universal File) format.
+
+See 'convert_hf_to_gguf.py' as an example for its usage.
