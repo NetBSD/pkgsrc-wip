@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (sndio-1.10.0.tar.gz) = 39f92241015c931433dad456ee5ca965806c5b86e97950265d8a609ac38525a3
 SHA512 (sndio-1.10.0.tar.gz) = c35462976a1bffd128eacb185165964dac6b03505255e9ab9a933e24be5ed146cd9ac6995fd7af23247cb9133c010cce0876572db53b783ebabeb563fec7a1cf
 Size (sndio-1.10.0.tar.gz) = 162725 bytes
-SHA1 (patch-configure) = f0d2dadffe8ce50a38a4fe8305c3b776fbbd7aa6
-SHA1 (patch-libsndio_sio__oss.c) = 67d867de6dabe4b4b1beed0ef87652ca854dbc42
+SHA1 (patch-configure) = 4dfe4c8dccf0ee395ed6847e9e96a6c4cee9647d
+SHA1 (patch-libsndio_sio__oss.c) = ca220153f77b65659b490ef26bfbb2efaab67d74

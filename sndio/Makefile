@@ -11,28 +11,40 @@ LICENSE=	isc
 
 HAS_CONFIGURE=	yes
 
+BUILD_DEFS+=	VARBASE
+SNDIO_HOME=	${VARBASE}/run/sndio
+
+DEPENDS+=	daemonize-[0-9]*:../../sysutils/daemonize
+
 RCD_SCRIPTS=	sndio
 
 PKG_USERS=		_sndio:_sndio
 PKG_GROUPS=		_sndio
-PKG_GECOS._sndio=	Sndio user
+PKG_GECOS._sndio=	sndio user
 PKG_SHELL._sndio=	${NOLOGIN}
-PKG_HOME._sndio=	/nonexistent
+PKG_HOME._sndio=	${SNDIO_HOME}
 
 PKGCONFIG_OVERRIDE=		libsndio/sndio.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
-
-SUBST_CLASSES+=		oss
-SUBST_STAGE.oss=	pre-configure
-SUBST_MESSAGE.oss=	Point to the correct OSS device.
-SUBST_FILES.oss+=	libsndio/sio_oss.c
-SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--pkgconfdir=${PREFIX}/lib/pkgconfig
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS:M*BSD}
+.  include "../../mk/oss.buildlink3.mk"
+SUBST_CLASSES+=         oss
+SUBST_STAGE.oss=        pre-configure
+SUBST_MESSAGE.oss=      Point to the correct OSS device.
+SUBST_FILES.oss+=       libsndio/sio_oss.c
+SUBST_SED.oss+=         -e "s,/dev/dsp,${DEVOSSAUDIO},g"
+.elif ${OPSYS} == "Linux"
+.  include "../../devel/libbsd/buildlink3.mk"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
+
 BUILD_DIRS+=		libsndio sndiod sndioctl aucat midicat
 
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

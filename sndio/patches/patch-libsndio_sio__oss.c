@@ -2,16 +2,12 @@ $NetBSD$
 
 Add missing bits for ossaudio(3) on NetBSD.
 
---- libsndio/sio_oss.c.orig	2025-11-15 14:07:59.501355746 +0000
+--- libsndio/sio_oss.c.orig	2024-08-01 15:36:54.000000000 +0000
 +++ libsndio/sio_oss.c
-@@ -37,6 +37,26 @@
+@@ -37,6 +37,22 @@
  	sizeof(DEVPATH_PREFIX) - 1 +	\
  	sizeof(int) * 3)
  
-+#ifndef SNDCTL_DSP_LOW_WATER	/* Low water level control */
-+#define SNDCTL_DSP_LOW_WATER	_IOW ('P', 34, int)
-+#endif
-+
 +/*
 + * Additional OSS formats definitions.
 + */
@@ -31,3 +27,17 @@ Add missing bits for ossaudio(3) on NetBSD.
  struct sio_oss_fmt {
  	int fmt;
  	unsigned int bits;
+@@ -288,11 +304,13 @@ sio_oss_getfd(const char *str, unsigned 
+ 	}
+ 
+ 	val = 1;
++#if !defined(__NetBSD__)
+ 	if (ioctl(fd, SNDCTL_DSP_LOW_WATER, &val) == -1) {
+ 		DPERROR("sio_oss_start: LOW_WATER");
+ 		close(fd);
+ 		return -1;
+ 	}
++#endif
+ 	return fd;
+ }
+ 
