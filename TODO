@@ -21,7 +21,6 @@ Suggested package updates
 	o calligra-3.0.1
 	o chapel-1.32.0
 	o cinelerra-4.5
-	o codex-0.58.0
 	o crush-0.18.1
 	o d4x-2.5.7.1
 	o daphne-1.0
@@ -129,7 +128,7 @@ Suggested package updates
 	o rdup-1.1.13
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o rumdl-0.0.176
+	o rumdl-0.0.176 [needs rust 1.91]
 	o rygel-0.26.0
 	o samhain-4.2.4
 	o scantailor-0.9.11.1
