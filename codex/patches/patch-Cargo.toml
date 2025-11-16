@@ -2,16 +2,17 @@ $NetBSD$
 
 Depends on unpublished crates. Can't use cargo.mk to fetch them.
 
---- Cargo.toml.orig	2025-11-09 22:07:45.000000000 +0000
+--- Cargo.toml.orig	2025-11-13 17:39:01.000000000 +0000
 +++ Cargo.toml
-@@ -280,8 +280,8 @@ opt-level = 0
+@@ -279,8 +279,9 @@ opt-level = 0
  [patch.crates-io]
  # Uncomment to debug local changes.
  # ratatui = { path = "../../ratatui" }
--ratatui = { git = "https://github.com/nornagon/ratatui", branch = "nornagon-v0.29.0-patch" }
 -crossterm = { git = "https://github.com/nornagon/crossterm", branch = "nornagon/color-query" }
-+ratatui = { path = "../../ratatui-9b2ad1298408c45918ee9f8241a6f95498cdbed2" }
+-ratatui = { git = "https://github.com/nornagon/ratatui", branch = "nornagon-v0.29.0-patch" }
 +crossterm = { path = "../../crossterm-87db8bfa6dc99427fd3b071681b07fc31c6ce995" }
++ratatui = { path = "../../ratatui-9b2ad1298408c45918ee9f8241a6f95498cdbed2" }
++
  
  # Uncomment to debug local changes.
  # rmcp = { path = "../../rust-sdk/crates/rmcp" }
