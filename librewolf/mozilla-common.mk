@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.296 2025/05/25 12:42:05 manu Exp $
+# $NetBSD: mozilla-common.mk,v 1.304 2025/11/14 20:47:01 tsutsui Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -22,9 +22,8 @@ OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
 
-# XXX: As of 114.0.2
-# For nested constant initializer support in rlbox, requires 8.
-GCC_REQD+=		8
+# XXX: As of 145.0
+GCC_REQD+=		10
 
 TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
 
@@ -203,6 +202,7 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
 CONFIGURE_ENV+=		CPP=${CPP:Q}
 ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
+ALL_ENV+=		MOZ_APP_NAME=${MOZILLA}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
@@ -260,7 +260,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 BUILDLINK_API_DEPENDS.icu+=	icu>=76.1
 .include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.109
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.117
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -271,7 +271,7 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.76.0
+RUST_REQ=	1.82.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"

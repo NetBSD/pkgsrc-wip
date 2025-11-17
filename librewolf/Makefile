@@ -1,15 +1,16 @@
-# $NetBSD:$
+# $NetBSD: Makefile,v 1.650 2025/11/14 17:17:18 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		143.0.4
-MOZ_BRANCH_MINOR=	
+MOZ_BRANCH=		144.0
+MOZ_BRANCH_MINOR=	  .2
 
 DISTNAME=	librewolf-${FIREFOX_VER}-1.source
 PKGNAME=	${DISTNAME:S/.source//:S/-1$//}
 CATEGORIES=	www
 MASTER_SITES=	https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${FIREFOX_VER}-1/
+EXTRACT_SUFX=	.tar.gz
 
-NODEJSKIT=		nodejs-output-141.0.tgz
+NODEJSKIT=		nodejs-output-144.0.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -155,7 +156,6 @@ maintainer-files:
 .endif
 
 pre-patch:
-
 	for f in $$(find ${WRKSRC}/third_party/libwebrtc -name moz.build -type f) ; \
 	do \
 		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \

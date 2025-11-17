@@ -1,4 +1,4 @@
-@comment $NetBSD:$
+@comment $NetBSD: PLIST,v 1.191 2025/10/27 14:24:32 ryoon Exp $
 bin/librewolf
 lib/librewolf/application.ini
 lib/librewolf/browser/chrome/icons/default/default128.png
@@ -22,6 +22,7 @@ lib/librewolf/liblgpllibs.so
 ${PLIST.ffvpx}lib/librewolf/libmozavcodec.so
 ${PLIST.ffvpx}lib/librewolf/libmozavutil.so
 lib/librewolf/libmozgtk.so
+lib/librewolf/libmozinference.so
 lib/librewolf/libmozsqlite3.so
 ${PLIST.wayland}lib/librewolf/libmozwayland.so
 lib/librewolf/libxul.so
