@@ -16,6 +16,8 @@ TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 MESON_ARGS+=	-Dlibseat-logind=disabled
 MESON_ARGS+=	-Dlibseat-builtin=enabled
 
+SPECIAL_PERMS+=	bin/seatd-launch ${SETUID_ROOT_PERMS}
+
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
