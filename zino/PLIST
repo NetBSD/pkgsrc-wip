@@ -63,6 +63,9 @@ ${PYSITELIB}/zino/scheduler.pyo
 ${PYSITELIB}/zino/snmp/__init__.py
 ${PYSITELIB}/zino/snmp/__init__.pyc
 ${PYSITELIB}/zino/snmp/__init__.pyo
+${PYSITELIB}/zino/snmp/agent.py
+${PYSITELIB}/zino/snmp/agent.pyc
+${PYSITELIB}/zino/snmp/agent.pyo
 ${PYSITELIB}/zino/snmp/base.py
 ${PYSITELIB}/zino/snmp/base.pyc
 ${PYSITELIB}/zino/snmp/base.pyo
@@ -159,6 +162,12 @@ ${PYSITELIB}/zino/snmp/mibdumps/PIM-MIB.pyo
 ${PYSITELIB}/zino/snmp/mibdumps/TCP-MIB.py
 ${PYSITELIB}/zino/snmp/mibdumps/TCP-MIB.pyc
 ${PYSITELIB}/zino/snmp/mibdumps/TCP-MIB.pyo
+${PYSITELIB}/zino/snmp/mibdumps/UNINETT-SMI.py
+${PYSITELIB}/zino/snmp/mibdumps/UNINETT-SMI.pyc
+${PYSITELIB}/zino/snmp/mibdumps/UNINETT-SMI.pyo
+${PYSITELIB}/zino/snmp/mibdumps/ZINO-MIB.py
+${PYSITELIB}/zino/snmp/mibdumps/ZINO-MIB.pyc
+${PYSITELIB}/zino/snmp/mibdumps/ZINO-MIB.pyo
 ${PYSITELIB}/zino/snmp/mibs/BFD-STD-MIB
 ${PYSITELIB}/zino/snmp/mibs/BFD-TC-STD-MIB
 ${PYSITELIB}/zino/snmp/mibs/BGP4-MIB
@@ -198,6 +207,8 @@ ${PYSITELIB}/zino/snmp/mibs/SNMPv2-MIB
 ${PYSITELIB}/zino/snmp/mibs/SNMPv2-SMI
 ${PYSITELIB}/zino/snmp/mibs/SNMPv2-TC
 ${PYSITELIB}/zino/snmp/mibs/TCP-MIB
+${PYSITELIB}/zino/snmp/mibs/UNINETT-SMI.my
+${PYSITELIB}/zino/snmp/mibs/UNINETT-ZINO-MIB.my
 ${PYSITELIB}/zino/snmp/netsnmpy_backend.py
 ${PYSITELIB}/zino/snmp/netsnmpy_backend.pyc
 ${PYSITELIB}/zino/snmp/netsnmpy_backend.pyo
