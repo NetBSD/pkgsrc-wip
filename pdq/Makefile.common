@@ -8,7 +8,7 @@ MASTER_SITES=		http://pdq.sourceforge.net/ftp/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://pdq.sourceforge.net/
+HOMEPAGE=		https://pdq.sourceforge.net/
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/pdq/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/pdq/patches

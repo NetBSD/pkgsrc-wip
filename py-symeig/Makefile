@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mdp-toolkit/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://mdp-toolkit.sourceforge.net/symeig.html
+HOMEPAGE=	https://mdp-toolkit.sourceforge.net/symeig.html
 COMMENT=	Symmetrical eigenvalue routines for NumPy
 LICENSE=	modified-bsd
 

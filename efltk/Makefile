@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ede.sourceforge.net/
+HOMEPAGE=	https://ede.sourceforge.net/
 COMMENT=	Extended Fast Light Toolkit
 LICENSE=	gnu-lgpl-v2
 

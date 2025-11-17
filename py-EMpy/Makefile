@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=empy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://empy.sourceforge.net/
+HOMEPAGE=	https://empy.sourceforge.net/
 COMMENT=	Suite of numerical algorithms widely used in electromagnetism
 #LICENSE=	# TODO: (see mk/license.mk)
 

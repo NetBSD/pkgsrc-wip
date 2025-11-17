@@ -6,7 +6,7 @@ CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=noor/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://noor.sourceforge.net/
+HOMEPAGE=	https://noor.sourceforge.net/
 COMMENT=	Quran viewer
 LICENSE=	gnu-gpl-v3
 

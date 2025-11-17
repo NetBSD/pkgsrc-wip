@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pcp.sourceforge.net/
+HOMEPAGE=	https://pcp.sourceforge.net/
 COMMENT=	Machine learning program for pattern classification
 LICENSE=	mit
 

@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmk/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pmk.sourceforge.net/
+HOMEPAGE=	https://pmk.sourceforge.net/
 COMMENT=	Pre-make kit
 
 PKG_DESTDIR_SUPPORT=	destdir

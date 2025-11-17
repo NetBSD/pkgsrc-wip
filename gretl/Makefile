@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	asau@users.sourceforge.net
-HOMEPAGE=	http://gretl.sourceforge.net/
+HOMEPAGE=	https://gretl.sourceforge.net/
 COMMENT=	Gnu Regression, Econometrics and Time-series Library
 
 USE_LANGUAGES=		c fortran77	# problems with LAPACK

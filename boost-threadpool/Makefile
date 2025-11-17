@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=threadpool/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tonnerre@NetBSD.org
-HOMEPAGE=	http://threadpool.sourceforge.net/
+HOMEPAGE=	https://threadpool.sourceforge.net/
 COMMENT=	Cross-platform C++ thread pool library
 LICENSE=	boost-license
 

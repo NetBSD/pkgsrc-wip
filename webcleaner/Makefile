@@ -5,7 +5,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=webcleaner/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://webcleaner.sourceforge.net/
+HOMEPAGE=		https://webcleaner.sourceforge.net/
 COMMENT=		Filtering HTTP proxy
 
 DEPENDS+=		${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto

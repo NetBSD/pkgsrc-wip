@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=teng/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc@blackmouse.biz
-HOMEPAGE=	http://teng.sourceforge.net/
+HOMEPAGE=	https://teng.sourceforge.net/
 COMMENT=	Python binding for teng
 
 LICENSE=	gnu-lgpl-v2.1

@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=commonc++/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://cplusplus.sourceforge.net/
+HOMEPAGE=		https://cplusplus.sourceforge.net/
 COMMENT=		Portable and highly optimized class framework for C++
 LICENSE=		gnu-gpl-v2
 

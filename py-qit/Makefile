@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/qit/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://qit.sourceforge.net/
+HOMEPAGE=	https://qit.sourceforge.net/
 COMMENT=	Quantum Information Toolkit
 LICENSE=	gnu-gpl-v3
 

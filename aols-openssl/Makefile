@@ -8,7 +8,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aolserver/}
 
 MAINTAINER=		iharding@destinydata.com
-HOMEPAGE=		http://aolserver.sourceforge.net/
+HOMEPAGE=		https://aolserver.sourceforge.net/
 COMMENT=		OpenSSL module for aolserver
 
 

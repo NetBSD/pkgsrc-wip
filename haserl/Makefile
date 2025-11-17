@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=haserl/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	xmor61@users.sourceforge.net
-HOMEPAGE=	http://haserl.sourceforge.net/
+HOMEPAGE=	https://haserl.sourceforge.net/
 COMMENT=	CGI wrapper for mixing HTML with shell script
 
 GNU_CONFIGURE=	yes

@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mot-adms/}
 SUBDIR+=		adms
 
 MAINTAINER=		10.50@free.fr
-HOMEPAGE=		http://mot-adms.sourceforge.net/
+HOMEPAGE=		https://mot-adms.sourceforge.net/
 COMMENT=		Verilog to C code compiler
 LICENSE=		gnu-lgpl-v2
 

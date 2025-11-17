@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://flexbackup.sourceforge.net/tarball/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://flexbackup.sourceforge.net/
+HOMEPAGE=		https://flexbackup.sourceforge.net/
 COMMENT=		Flexible backup tool
 
 USE_TOOLS+=		perl:run

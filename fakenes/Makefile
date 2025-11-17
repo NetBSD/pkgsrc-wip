@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		zlib
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fakenes.sourceforge.net/
+HOMEPAGE=		https://fakenes.sourceforge.net/
 COMMENT=		Portable Open Source NES emulator
 
 TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm

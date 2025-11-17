@@ -7,7 +7,7 @@ SVN_REPO=	https://svn.code.sf.net/p/oorexx/code-0/main/trunk
 LICENSE=	gnu-gpl-v2 AND cpl-1.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://oorexx.sourceforge.net/
+HOMEPAGE=	https://oorexx.sourceforge.net/
 COMMENT=	Powerful typeless object-oriented scripting language
 
 CONFLICTS=	rexx-imc-[0-9]* rexx-regina-[0-9]*

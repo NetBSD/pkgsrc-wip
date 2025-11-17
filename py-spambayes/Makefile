@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=spambayes/}
 LICENSE=		python-software-foundation
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://spambayes.sourceforge.net/
+HOMEPAGE=		https://spambayes.sourceforge.net/
 COMMENT=		Bayesian anti-spam filter, initially based on the work of Paul Graham
 
 PY_PATCHPLIST=		yes

@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		domg@users.sourceforge.net
-HOMEPAGE=		http://hpoj.sourceforge.net/
+HOMEPAGE=		https://hpoj.sourceforge.net/
 COMMENT=		HP OfficeJet Linux driver; printing, scanning, and photo-card access
 
 # Add this DEPENDS for killall command

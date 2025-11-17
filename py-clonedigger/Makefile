@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/clonedigger/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://clonedigger.sourceforge.net/
+HOMEPAGE=	https://clonedigger.sourceforge.net/
 COMMENT=	Clone Digger aimed to detect similar code in Python
 LICENSE=	gnu-lgpl-v2
 

@@ -7,7 +7,7 @@ CATEGORIES=		audio devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dumb/}
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://dumb.sourceforge.net/
+HOMEPAGE=		https://dumb.sourceforge.net/
 COMMENT=		IT, XM, S3M and MOD player library
 #LICENSE=		dumb-license
 

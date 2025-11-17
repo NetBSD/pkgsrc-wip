@@ -8,7 +8,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=realtimebattle/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://realtimebattle.sourceforge.net/
+HOMEPAGE=		https://realtimebattle.sourceforge.net/
 COMMENT=		Programming robots game
 LICENSE=		gnu-gpl-v3
 

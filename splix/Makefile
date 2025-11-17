@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=splix/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://splix.sourceforge.net/
+HOMEPAGE=	https://splix.sourceforge.net/
 COMMENT=	Driver for SPL printers (Samsung and Xerox)
 LICENSE=	gnu-gpl-v2
 

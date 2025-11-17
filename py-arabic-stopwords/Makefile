@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Arabic_Stopwords/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://arabicstopwords.sourceforge.net/
+HOMEPAGE=	https://arabicstopwords.sourceforge.net/
 COMMENT=	Arabic Stop words: list and routins
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

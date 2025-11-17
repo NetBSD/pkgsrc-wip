@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnormalize/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gnormalize.sourceforge.net/
+HOMEPAGE=		https://gnormalize.sourceforge.net/
 COMMENT=		Gtk2::Perl frontend for audio conversion
 
 DEPENDS+=	p5-CDDB_get>=2.20:../../audio/p5-CDDB_get

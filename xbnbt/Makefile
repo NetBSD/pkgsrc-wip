@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbnbt/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	loic-hoguin@users.sourceforge.net
-HOMEPAGE=	http://xbnbt.sourceforge.net/
+HOMEPAGE=	https://xbnbt.sourceforge.net/
 COMMENT=	Alternative BitTorrent tracker written in C++
 LICENSE=	gnu-gpl-v2
 

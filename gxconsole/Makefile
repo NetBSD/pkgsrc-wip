@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxconsole/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://gxconsole.sourceforge.net/
+HOMEPAGE=	https://gxconsole.sourceforge.net/
 COMMENT=	Gxconsole is gtk-based reading system console messages like xconsole
 
 WRKSRC=		${WRKDIR}/gxconsole

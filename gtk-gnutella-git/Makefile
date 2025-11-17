@@ -7,7 +7,7 @@ MASTER_SITES=		# not defined
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
-HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
+HOMEPAGE=		https://gtk-gnutella.sourceforge.net/
 COMMENT=		GTK-based gnutella client, GIT snapshot
 
 

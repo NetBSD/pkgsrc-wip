@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stardict/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rxg@NetBSD.org
-HOMEPAGE=		http://stardict.sourceforge.net/
+HOMEPAGE=		https://stardict.sourceforge.net/
 COMMENT=		Cross-Platform and international dictionary written in Gtk2
 
 TOOL_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser

@@ -8,7 +8,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pycvf/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pycvf.sourceforge.net/
+HOMEPAGE=	https://pycvf.sourceforge.net/
 COMMENT=	Python Computer Vision Framework
 LICENSE=	gnu-lgpl-v3
 

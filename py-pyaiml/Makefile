@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyaiml/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pyaiml.sourceforge.net/
+HOMEPAGE=	https://pyaiml.sourceforge.net/
 COMMENT=	PyAIML is an interpreter for AIML
 #LICENSE=	# TODO: (see mk/license.mk)
 

@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=visionegg/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://visionegg.sourceforge.net/
+HOMEPAGE=		https://visionegg.sourceforge.net/
 COMMENT=		Demonstration programs for py-visionegg
 LICENSE=		gnu-lgpl-v2.1
 

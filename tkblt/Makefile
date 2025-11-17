@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=wjoye/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	brook@nmsu.edu
-HOMEPAGE=	http://blt.sourceforge.net/
+HOMEPAGE=	https://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
 
 WRKSRC=		${WRKDIR}/${DISTNAME}

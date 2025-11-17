@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyArabic/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pyarabic.sourceforge.net/
+HOMEPAGE=	https://pyarabic.sourceforge.net/
 COMMENT=	Arabic text tools for Python
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

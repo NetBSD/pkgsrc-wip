@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wmc2d/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wmc2d.sourceforge.net/
+HOMEPAGE=	https://wmc2d.sourceforge.net/
 COMMENT=	Dockapp to monitor coretemp temperature and cpufreq frequency
 LICENSE=	gnu-agpl-v3
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mingw-w64.sourceforge.net/
+HOMEPAGE=	https://mingw-w64.sourceforge.net/
 COMMENT=	C runtime for win32/64 cross-development
 #LICENSE=	# TODO: (see mk/license.mk)
 

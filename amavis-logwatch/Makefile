@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=logreporters/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://logreporters.sourceforge.net/
+HOMEPAGE=	https://logreporters.sourceforge.net/
 COMMENT=	Amavis log reporting utility
 LICENSE=	mit
 

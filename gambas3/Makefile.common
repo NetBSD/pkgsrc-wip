@@ -104,7 +104,7 @@ DISTNAME=		gambas-${GB_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		https://gitlab.com/gambas/gambas/-/archive/${GB_VERSION}/
 
-HOMEPAGE=		http://gambas.sourceforge.net/
+HOMEPAGE=		https://gambas.sourceforge.net/
 LICENSE=		gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/gambas3/distinfo

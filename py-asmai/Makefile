@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asmai/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://asmai.sourceforge.net/
+HOMEPAGE=	https://asmai.sourceforge.net/
 COMMENT=	Arabic semantic analysis library for Python
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

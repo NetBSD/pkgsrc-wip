@@ -7,7 +7,7 @@ CATEGORIES=		linux sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=acpid/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://acpid.sourceforge.net/
+HOMEPAGE=		https://acpid.sourceforge.net/
 COMMENT=		Linux ACPI event handler
 LICENSE=		gnu-gpl-v2
 

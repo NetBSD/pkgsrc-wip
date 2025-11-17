@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=portfwd/}
 
 MAINTAINER=	mbowie@buzmo.com
-HOMEPAGE=	http://portfwd.sourceforge.net/
+HOMEPAGE=	https://portfwd.sourceforge.net/
 COMMENT=	Port Forwarding Daemon
 LICENSE=	gnu-gpl-v1
 

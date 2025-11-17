@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		Azureus_2.2.0.2_linux.GTK.tar.bz2
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://azureus.sourceforge.net/
+HOMEPAGE=		https://azureus.sourceforge.net/
 COMMENT=		Bittorrent client written in java
 
 DEPENDS+=		bash-[0-9]*:../../shells/bash

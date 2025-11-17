@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=noiptun/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://noiptun.sourceforge.net/
+HOMEPAGE=		https://noiptun.sourceforge.net/
 COMMENT=		Allows communication with computers that do not have an IP address
 
 

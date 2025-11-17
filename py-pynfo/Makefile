@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pynfo.sourceforge.net/
+HOMEPAGE=	https://pynfo.sourceforge.net/
 COMMENT=	Nice, configureable info bot in Python
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=1.1.1rc1:../../net/py-twisted

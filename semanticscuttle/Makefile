@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=semanticscuttle/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	frederic@fauberteau.org
-HOMEPAGE=	http://semanticscuttle.sourceforge.net/
+HOMEPAGE=	https://semanticscuttle.sourceforge.net/
 COMMENT=	SemanticScuttle is a social bookmarking tool
 LICENSE=	gnu-gpl-v2
 

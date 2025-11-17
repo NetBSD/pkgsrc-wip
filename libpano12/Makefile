@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		kirtai@users.sourceforge.net
-HOMEPAGE=		http://panotools.sourceforge.net/
+HOMEPAGE=		https://panotools.sourceforge.net/
 COMMENT=		Panorama-tools is for making panoramic images from multiple pictures
 
 

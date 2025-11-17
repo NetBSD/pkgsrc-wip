@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pinball/}
 
 MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	http://pinball.sourceforge.net/
+HOMEPAGE=	https://pinball.sourceforge.net/
 COMMENT=	Pinball using the Allegro game library
 LICENSE=	gnu-gpl-v1
 

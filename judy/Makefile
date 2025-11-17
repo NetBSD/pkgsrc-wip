@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=judy/}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://judy.sourceforge.net/
+HOMEPAGE=	https://judy.sourceforge.net/
 COMMENT=	C library for efficient sparse arrays
 LICENSE=	gnu-lgpl-v2
 

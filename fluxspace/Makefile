@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fluxspace/}
 LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		poff@sixbit.org
-HOMEPAGE=		http://fluxspace.sourceforge.net/
+HOMEPAGE=		https://fluxspace.sourceforge.net/
 COMMENT=		Fluxbox workspace manager, environment
 
 

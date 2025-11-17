@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=plantuml/}
 EXTRACT_SUFX=	#none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://plantuml.sourceforge.net/
+HOMEPAGE=	https://plantuml.sourceforge.net/
 COMMENT=	Create some UML diagram using a simple description language
 LICENSE=	gnu-gpl-v3
 

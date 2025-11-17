@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jason/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://jason.sourceforge.net/Jason/Jason.html
+HOMEPAGE=	https://jason.sourceforge.net/Jason/Jason.html
 COMMENT=	Java-based interpreter for an extended version of AgentSpeak
 LICENSE=	gnu-lgpl-v2.1
 

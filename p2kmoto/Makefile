@@ -7,7 +7,7 @@ CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=moto4lin/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://moto4lin.sourceforge.net/
+HOMEPAGE=		https://moto4lin.sourceforge.net/
 COMMENT=		Support for p2k on Motorola phones
 
 

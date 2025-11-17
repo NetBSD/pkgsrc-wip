@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simpleparse/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://simpleparse.sourceforge.net/
+HOMEPAGE=	https://simpleparse.sourceforge.net/
 COMMENT=	SimpleParse is a Python providing a simple and fast parser generator
 #LICENSE=	# TODO: (see mk/license.mk)
 

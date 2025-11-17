@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crrcsim/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://crrcsim.sourceforge.net/apps/mediawiki/crrcsim/
+HOMEPAGE=	https://crrcsim.sourceforge.net/apps/mediawiki/crrcsim/
 COMMENT=	Crrcsim is a model-airplane flight simulation program
 LICENSE=	gnu-gpl-v2
 

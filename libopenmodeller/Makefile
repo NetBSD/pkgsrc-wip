@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmodeller/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://openmodeller.sourceforge.net/
+HOMEPAGE=		https://openmodeller.sourceforge.net/
 COMMENT=		Spatial distribution modelling library
 
 

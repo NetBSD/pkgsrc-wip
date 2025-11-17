@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/gfs/gerris/0.9.2/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://gfs.sourceforge.net/wiki/index.php/Main_Page
+HOMEPAGE=	https://gfs.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Software solution of the PDE describing fluid flow
 #LICENSE=	# TODO: (see mk/license.mk)
 

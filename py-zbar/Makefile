@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zbar/}
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	http://zbar.sourceforge.net/
+HOMEPAGE=	https://zbar.sourceforge.net/
 COMMENT=	Python bindings for the ZBar bar code reader
 LICENSE=	gnu-lgpl-v2.1
 

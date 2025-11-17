@@ -5,7 +5,7 @@ CATEGORIES=	finance kde
 MASTER_SITES=	#
 
 MAINTAINER=	gary@duzan.org
-HOMEPAGE=	http://kmymoney2.sourceforge.net/
+HOMEPAGE=	https://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for KDE 4, Subversion Snapshot
 LICENSE=	gnu-gpl-v2
 

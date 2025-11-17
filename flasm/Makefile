@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.nowrap.de/download/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		kh.p@no-log.org
-HOMEPAGE=		http://flasm.sourceforge.net/
+HOMEPAGE=		https://flasm.sourceforge.net/
 COMMENT=		Flasm is a assembler/disassembler of Flash ActionScript bytecode
 
 WRKSRC=			${WRKDIR}

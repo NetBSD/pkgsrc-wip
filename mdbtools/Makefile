@@ -7,7 +7,7 @@ CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mdbtools/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mdbtools.sourceforge.net/
+HOMEPAGE=		https://mdbtools.sourceforge.net/
 COMMENT=		Microsoft Access Database management tools
 LICENSE=		gnu-lgpl-v2 AND gnu-gpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://rolo.sourceforge.net/
+HOMEPAGE=		https://rolo.sourceforge.net/
 COMMENT=		VCard library
 
 USE_PKGLOCALEDIR=	yes

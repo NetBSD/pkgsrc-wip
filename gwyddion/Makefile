@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwyddion/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://gwyddion.sourceforge.net/
+HOMEPAGE=	https://gwyddion.sourceforge.net/
 COMMENT=	Gtk2 based SPM data visualization and analysis tool
 LICENSE=	gnu-gpl-v2
 

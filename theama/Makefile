@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=theama/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	francksys@free.fr
-HOMEPAGE=	http://theama.sourceforge.net/
+HOMEPAGE=	https://theama.sourceforge.net/
 COMMENT=	Theama is a curses-based version of the famous HangMan game
 LICENSE=	gnu-gpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lingoteach/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://lingoteach.sourceforge.net/
+HOMEPAGE=		https://lingoteach.sourceforge.net/
 COMMENT=		Lesson files for lingoteach
 
 DEPENDS+=		lingoteach-ui-[0-9]*:../../wip/lingoteach-ui

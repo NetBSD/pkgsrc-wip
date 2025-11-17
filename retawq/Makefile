@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://prdownloads.sourceforge.net/retawq/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://prdownloads.sourceforge.net/retawq/
+HOMEPAGE=	https://prdownloads.sourceforge.net/retawq/
 COMMENT=	Interactive, multi-threaded network client for text terminals
 LICENSE=	gnu-gpl-v2
 

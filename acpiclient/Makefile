@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=acpiclient/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://acpiclient.sourceforge.net/
+HOMEPAGE=	https://acpiclient.sourceforge.net/
 COMMENT=	Displays information about ACPI devices
 
 GNU_CONFIGURE=	yes

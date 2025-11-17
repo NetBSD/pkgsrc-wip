@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 DISTINFO_FILE=	${.CURDIR}/../../wip/ng-spice-dev/distinfo
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://ngspice.sourceforge.net/
+HOMEPAGE=	https://ngspice.sourceforge.net/
 LICENSE=	modified-bsd AND gnu-lgpl-v2.1 AND gnu-gpl-v2 AND mpl-2.0
 
 USE_LIBTOOL=	YES

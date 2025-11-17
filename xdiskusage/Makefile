@@ -8,7 +8,7 @@ MASTER_SITES=		http://xdiskusage.sourceforge.net/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ccatrian@eml.cc
-HOMEPAGE=		http://xdiskusage.sourceforge.net/
+HOMEPAGE=		https://xdiskusage.sourceforge.net/
 COMMENT=		Graphical space disk viewer
 LICENSE=		gnu-gpl-v2
 

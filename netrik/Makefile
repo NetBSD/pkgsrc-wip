@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netrik/}
 LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		lkundrak@skosi.org
-HOMEPAGE=		http://netrik.sourceforge.net/
+HOMEPAGE=		https://netrik.sourceforge.net/
 COMMENT=		Will be a really fancy text mode WWW browser
 
 

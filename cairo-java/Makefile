@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/cairo-java/1.0/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://java-gnome.sourceforge.net/
+HOMEPAGE=		https://java-gnome.sourceforge.net/
 COMMENT=		Cairo bindings for Java
 
 GNU_CONFIGURE=		yes

@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook2x/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://docbook2x.sourceforge.net/
+HOMEPAGE=	https://docbook2x.sourceforge.net/
 COMMENT=	Convert DocBook documents into traditional Unix man page format
 LICENSE=	mit
 

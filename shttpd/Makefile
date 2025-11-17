@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=shttpd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://shttpd.sourceforge.net/
+HOMEPAGE=	https://shttpd.sourceforge.net/
 COMMENT=	Lightweight, easy to use web server
 LICENSE=	gnu-gpl-v2
 

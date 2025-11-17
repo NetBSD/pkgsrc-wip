@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=hengband/10331/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://hengband.sourceforge.jp/en/index.html
+HOMEPAGE=	https://hengband.sourceforge.jp/en/index.html
 COMMENT=	Variant of ZAngband 2.2.8
 
 

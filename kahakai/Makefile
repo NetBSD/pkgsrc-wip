@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kahakai.sourceforge.net/
+HOMEPAGE=		https://kahakai.sourceforge.net/
 COMMENT=		Window manager with Python scripting
 
 

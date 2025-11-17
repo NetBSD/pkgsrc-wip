@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lasi/}
 LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	http://lasi.sourceforge.net/
+HOMEPAGE=	https://lasi.sourceforge.net/
 COMMENT=	C++ library for postscript stream output
 
 USE_CMAKE=	yes

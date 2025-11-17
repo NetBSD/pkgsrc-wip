@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maskouk_pysqlite/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://maskouk.sourceforge.net/
+HOMEPAGE=	https://maskouk.sourceforge.net/
 COMMENT=	Arabic Dictionary for Collocations
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

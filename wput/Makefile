@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wput/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wput.sourceforge.net/
+HOMEPAGE=	https://wput.sourceforge.net/
 COMMENT=	Wput is a command-line ftp-client that looks like wget
 LICENSE=	gnu-gpl-v2
 

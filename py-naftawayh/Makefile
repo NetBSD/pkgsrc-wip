@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=N/Naftawayh/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://naftawayh.sourceforge.net/
+HOMEPAGE=	https://naftawayh.sourceforge.net/
 COMMENT=	Naftawayh: Arabic word tagger
 LICENSE=	gnu-gpl-v3
 

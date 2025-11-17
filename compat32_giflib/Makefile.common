@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	compat${ABI}_${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://giflib.sourceforge.net/
+HOMEPAGE=	https://giflib.sourceforge.net/
 LICENSE=	mit
 
 #PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches

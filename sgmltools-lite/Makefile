@@ -6,7 +6,7 @@ CATEGORIES=	net www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sgmltools-lite/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sgmltools-lite.sourceforge.net/
+HOMEPAGE=	https://sgmltools-lite.sourceforge.net/
 COMMENT=	Friendly Python interface to SGML software
 LICENSE=	gnu-gpl-v2
 

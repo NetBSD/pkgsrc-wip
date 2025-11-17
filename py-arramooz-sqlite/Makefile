@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/arramooz_pysqlite/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://arramooz-pysqlite.sourceforge.net/
+HOMEPAGE=	https://arramooz-pysqlite.sourceforge.net/
 COMMENT=	Arabic Dictionary for Morphological analysis
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

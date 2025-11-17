@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kissme/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kissme.sourceforge.net/
+HOMEPAGE=		https://kissme.sourceforge.net/
 COMMENT=		Java Virtual Machine (JVM) freely available
 
 DEPENDS+=		classpath>=0.7:../../lang/classpath

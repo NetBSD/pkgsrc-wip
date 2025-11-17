@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xebece/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xebece.sourceforge.net/
+HOMEPAGE=	https://xebece.sourceforge.net/
 COMMENT=	Multipurpose tool for information visualization and organization
 LICENSE=	gnu-gpl-v2
 

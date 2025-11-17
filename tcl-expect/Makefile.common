@@ -7,7 +7,7 @@
 #   https://sourceforge.net/p/expect/bugs/107/
 DISTNAME=	expect${EXPECT_FNAME}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expect/}
-HOMEPAGE=	http://expect.sourceforge.net/
+HOMEPAGE=	https://expect.sourceforge.net/
 #HOMEPAGE+=	https://core.tcl-lang.org/expect/index
 
 EXPECT_FNAME=	5.45.4

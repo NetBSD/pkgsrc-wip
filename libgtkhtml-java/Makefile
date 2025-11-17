@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://java-gnome.sourceforge.net/
+HOMEPAGE=		https://java-gnome.sourceforge.net/
 COMMENT=		GtkHtml bindings for Java
 
 

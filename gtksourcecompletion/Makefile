@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtksourcecomple/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://gtksourcecomple.sourceforge.net/
+HOMEPAGE=	https://gtksourcecomple.sourceforge.net/
 COMMENT=	GtkSourceCompletion
 LICENSE=	gnu-gpl-v3
 

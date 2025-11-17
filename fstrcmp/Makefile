@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://fstrcmp.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fstrcmp.sourceforge.net/
+HOMEPAGE=	https://fstrcmp.sourceforge.net/
 COMMENT=	Library for fuzzy comparisons of strings
 LICENSE=	gnu-gpl-v3
 

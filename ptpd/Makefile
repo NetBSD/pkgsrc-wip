@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ptpd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ptpd.sourceforge.net/
+HOMEPAGE=	https://ptpd.sourceforge.net/
 COMMENT=	Precision Time Protocol Daemon
 LICENSE=	2-clause-bsd
 

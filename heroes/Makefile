@@ -9,7 +9,7 @@ DISTFILES=		${HEROES_DIRS:=.tar.bz2}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://heroes.sourceforge.net/
+HOMEPAGE=		https://heroes.sourceforge.net/
 COMMENT=		Feature-packed game, like Nibbles or Tron clone
 
 

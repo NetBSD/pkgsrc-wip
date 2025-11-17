@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mishkal/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://mishkal.sourceforge.net/
+HOMEPAGE=	https://mishkal.sourceforge.net/
 COMMENT=	Mishkal: Arabic text diacritization library for Python
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

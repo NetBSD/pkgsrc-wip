@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fbpanel/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bsd@cs.ubc.ca
-HOMEPAGE=		http://fbpanel.sourceforge.net/
+HOMEPAGE=		https://fbpanel.sourceforge.net/
 COMMENT=		Desktop panel with menu, pager, and other plugins
 
 

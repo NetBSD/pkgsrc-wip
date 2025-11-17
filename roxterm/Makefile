@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roxterm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://roxterm.sourceforge.net/
+HOMEPAGE=	https://roxterm.sourceforge.net/
 COMMENT=	ROXTerm is a terminal emulator
 LICENSE=	gnu-gpl-v3
 

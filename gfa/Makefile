@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gfa/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gfa.sourceforge.net/
+HOMEPAGE=	https://gfa.sourceforge.net/
 COMMENT=	Gfa a GTK+ fast address
 
 GNU_CONFIGURE=	yes

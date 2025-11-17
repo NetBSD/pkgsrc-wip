@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=Y/Yapsy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://yapsy.sourceforge.net/
+HOMEPAGE=	https://yapsy.sourceforge.net/
 COMMENT=	Yet another plugin system
 LICENSE=	2-clause-bsd
 

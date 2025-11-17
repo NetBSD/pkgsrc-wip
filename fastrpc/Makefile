@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fastrpc/}
 LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
-HOMEPAGE=	http://downloads.sourceforge.net/sourceforge/fastrpc/
+HOMEPAGE=	https://downloads.sourceforge.net/sourceforge/fastrpc/
 COMMENT=	Protocol based on the XML-RPC which uses binary format for data
 
 WRKSRC=		${WRKDIR}/fastrpc-1.0

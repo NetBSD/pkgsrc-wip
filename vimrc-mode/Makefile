@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=${PKGBASE}/}
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://${PKGBASE}.sourceforge.net/
+HOMEPAGE=	https://${PKGBASE}.sourceforge.net/
 COMMENT=	Emacs major mode for editing .vimrc configuration files
 LICENSE=	gnu-gpl-v2
 

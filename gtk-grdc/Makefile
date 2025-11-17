@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grdc/}
 
 MAINTAINER=	pkgsrc-users@netbsd.org
-HOMEPAGE=	http://grdc.sourceforge.net/
+HOMEPAGE=	https://grdc.sourceforge.net/
 COMMENT=	Grdc is a remote desktop client based on GTK+
 
 GNU_CONFIGURE=	yes

@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/adawat/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://adawat.sourceforge.net/
+HOMEPAGE=	https://adawat.sourceforge.net/
 COMMENT=	Adawat Arabic Language Toolkit
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

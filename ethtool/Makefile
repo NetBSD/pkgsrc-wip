@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkernel/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gkernel.sourceforge.net/
+HOMEPAGE=		https://gkernel.sourceforge.net/
 COMMENT=		Display or change ethernet card settings
 
 

@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drumpiler/}
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://drumpiler.sourceforge.net/
+HOMEPAGE=	https://drumpiler.sourceforge.net/
 COMMENT=	Drum machine compiler
 LICENSE=	gnu-gpl-v2
 

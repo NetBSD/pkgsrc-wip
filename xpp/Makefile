@@ -6,7 +6,7 @@ CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cups/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cups.sourceforge.net/xpp/index.html
+HOMEPAGE=	https://cups.sourceforge.net/xpp/index.html
 COMMENT=	X Printing Panel
 LICENSE=	gnu-gpl-v2
 

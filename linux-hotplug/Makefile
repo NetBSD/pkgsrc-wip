@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=linux-hotplug/}
 # XXX we should have a MASTER_SITE_LINUX definition
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://linux-hotplug.sourceforge.net/
+HOMEPAGE=		https://linux-hotplug.sourceforge.net/
 COMMENT=		Hardware autoconfiguration for Linux
 LICENSE=		gnu-gpl-v2
 

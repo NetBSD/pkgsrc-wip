@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dvbsnoop/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://dvbsnoop.sourceforge.net/
+HOMEPAGE=		https://dvbsnoop.sourceforge.net/
 COMMENT=		DVB / MPEG stream analyzer program
 LICENSE=		gnu-gpl-v2
 

@@ -8,4 +8,4 @@ DISTNAME=		html2latex-${HTML2LATEX_VERSION}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=html2latex/}
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://html2latex.sourceforge.net/
+HOMEPAGE=		https://html2latex.sourceforge.net/

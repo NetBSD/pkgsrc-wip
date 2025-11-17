@@ -10,7 +10,7 @@ MASTER_SITES=
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://freewnn.sourceforge.jp/
+HOMEPAGE=	https://freewnn.sourceforge.jp/
 COMMENT=	Japanese/Chinese/Korean input method (Japanese client library)
 WRKSRC=		${WRKDIR}/FreeWnn
 

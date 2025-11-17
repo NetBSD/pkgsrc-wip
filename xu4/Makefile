@@ -22,7 +22,7 @@ SITES.u4upgrad.zip= \
 #	-https://sourceforge.net/code-snapshots/git/o/ou/outguard/glv.git/outguard-glv-${GLV_GITHASH}.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xu4.sourceforge.net/
+HOMEPAGE=	https://xu4.sourceforge.net/
 COMMENT=	Remake of Ultima IV
 LICENSE=	gnu-gpl-v3
 

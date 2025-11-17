@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	https://sourceforge.net/projects/xsb/files/xsb/5.0%20%28Green%20Tea%29/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xsb.sourceforge.net/
+HOMEPAGE=	https://xsb.sourceforge.net/
 COMMENT=	Logic Programming and Deductive Database system
 LICENSE=	gnu-lgpl-v2
 

@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djplay/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://djplay.sourceforge.net/
+HOMEPAGE=	https://djplay.sourceforge.net/
 COMMENT=	DJ Console access library
 LICENSE=	gnu-gpl-v2
 

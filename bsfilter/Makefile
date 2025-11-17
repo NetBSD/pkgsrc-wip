@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=bsfilter/59804/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ura@jp.netbsd.org
-HOMEPAGE=	http://sourceforge.jp/projects/bsfilter/
+HOMEPAGE=	https://sourceforge.jp/projects/bsfilter/
 COMMENT=	Bayesian spam filter written in Ruby
 LICENSE=	gnu-gpl-v2
 

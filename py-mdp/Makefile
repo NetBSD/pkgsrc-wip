@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mdp-toolkit/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://mdp-toolkit.sourceforge.net/index.html
+HOMEPAGE=	https://mdp-toolkit.sourceforge.net/index.html
 COMMENT=	Modular toolkit for data processing
 LICENSE=	gnu-lgpl-v2
 

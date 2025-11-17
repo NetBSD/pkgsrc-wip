@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
 LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jcvm.sourceforge.net/
+HOMEPAGE=		https://jcvm.sourceforge.net/
 COMMENT=		Native java compiler using gcc
 
 

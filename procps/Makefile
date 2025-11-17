@@ -8,7 +8,7 @@ MASTER_SITES=		http://procps.sourceforge.net/
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://procps.sourceforge.net/
+HOMEPAGE=		https://procps.sourceforge.net/
 COMMENT=		The Linux /proc file system utilities
 
 # This uses Linux include/asm/page.h

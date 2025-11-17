@@ -7,7 +7,7 @@ CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cream/}
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://cream.sourceforge.net/
+HOMEPAGE=		https://cream.sourceforge.net/
 COMMENT=		Usability add-on for Vim
 LICENSE=		gnu-gpl-v3
 

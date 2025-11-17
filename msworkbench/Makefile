@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=msworkbench/}
 LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://msworkbench.sourceforge.net/
+HOMEPAGE=		https://msworkbench.sourceforge.net/
 COMMENT=		Set of tools for development of MapServer web mapping applications
 
 DEPENDS+=		mapserver-[0-9]*:../../geography/mapserver

@@ -6,7 +6,7 @@ MASTER_SITES=	https://svwh.dl.sourceforge.net/project/lanq/LanQ/0.6.3/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://lanq.sourceforge.net/
+HOMEPAGE=	https://lanq.sourceforge.net/
 COMMENT=	Quantum imperative programming language
 LICENSE=	gnu-gpl-v2
 

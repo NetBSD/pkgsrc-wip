@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygts/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pygts.sourceforge.net/
+HOMEPAGE=	https://pygts.sourceforge.net/
 COMMENT=	Python bindings for GNU Triangulated Surface Library
 LICENSE=	gnu-lgpl-v2
 

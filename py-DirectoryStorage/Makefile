@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 LICENSE=		gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://dirstorage.sourceforge.net/
+HOMEPAGE=		https://dirstorage.sourceforge.net/
 COMMENT=		Storage for ZODB, that uses files and directories
 
 NO_CONFIGURE=	yes

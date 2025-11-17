@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paida/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://paida.sourceforge.net/
+HOMEPAGE=	https://paida.sourceforge.net/
 COMMENT=	Pure Python scientific analysis package
 LICENSE=	python-software-foundation
 

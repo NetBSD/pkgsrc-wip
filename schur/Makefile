@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schur/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://schur.sourceforge.net/
+HOMEPAGE=	https://schur.sourceforge.net/
 COMMENT=	Calculating properties of Lie groups and symmetric functions
 LICENSE=	gnu-gpl-v2
 

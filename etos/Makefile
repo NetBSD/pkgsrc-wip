@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/etos/3.1/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://etos.sourceforge.net/
+HOMEPAGE=	https://etos.sourceforge.net/
 COMMENT=	Efficient technology of spike-sorting
 LICENSE=	gnu-gpl-v3
 

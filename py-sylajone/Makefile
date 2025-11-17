@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sylajone/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://sylajone.sourceforge.net/
+HOMEPAGE=	https://sylajone.sourceforge.net/
 COMMENT=	Sylajone: Arabic syntax Analyzer library
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 

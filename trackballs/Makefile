@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trackballs/}
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://trackballs.sourceforge.net/
+HOMEPAGE=	https://trackballs.sourceforge.net/
 COMMENT=	SDL-based Marble Madness clone
 LICENSE=	gnu-gpl-v2
 

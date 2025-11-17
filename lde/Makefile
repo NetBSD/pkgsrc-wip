@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lde/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lde.sourceforge.net
+HOMEPAGE=	https://lde.sourceforge.net
 COMMENT=	Curses based file system viewer/editor for Linux
 
 

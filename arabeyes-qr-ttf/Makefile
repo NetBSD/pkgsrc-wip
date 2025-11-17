@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://garr.dl.sourceforge.net/project/arabeyes/Quran/Fonts/
+HOMEPAGE=	https://garr.dl.sourceforge.net/project/arabeyes/Quran/Fonts/
 COMMENT=	Fonts to be used to display the Qur\'an text
 
 WRKSRC=		${WRKDIR}

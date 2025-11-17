@@ -7,7 +7,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=gpx2shp/13458/}
 
 MAINTAINER=	wenheping@gmail.com
-HOMEPAGE=	http://gpx2shp.sourceforge.jp/
+HOMEPAGE=	https://gpx2shp.sourceforge.jp/
 COMMENT=	Converts GPX to ESRI shapefile format
 LICENSE=	gnu-gpl-v2
 

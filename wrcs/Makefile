@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wrcs/}
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	http://wrcs.sourceforge.net/
+HOMEPAGE=	https://wrcs.sourceforge.net/
 COMMENT=	Wiki Revision Control System
 LICENSE=	gnu-gpl-v2
 

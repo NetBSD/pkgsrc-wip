@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pagetools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pagetools.sourceforge.net/
+HOMEPAGE=	https://pagetools.sourceforge.net/
 COMMENT=	Automatic deskew and bounding box determination for scanned pages
 LICENSE=	gnu-gpl-v2
 

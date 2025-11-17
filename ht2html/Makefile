@@ -6,7 +6,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ht2html/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ht2html.sourceforge.net/
+HOMEPAGE=		https://ht2html.sourceforge.net/
 COMMENT=		Simple web page templating system
 
 USE_TOOLS+=		pax

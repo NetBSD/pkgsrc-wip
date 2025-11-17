@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 LICENSE=	gnu-lgpl-v2.1 # or later
 
 MAINTAINER=	wenheping@gmail.com
-HOMEPAGE=	http://clustershell.sourceforge.net/
+HOMEPAGE=	https://clustershell.sourceforge.net/
 COMMENT=	Python library to execute commands on local or distant cluster nodes
 
 PYDISTUTILSPKG=	yes

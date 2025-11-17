@@ -8,7 +8,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://crm114.sourceforge.net/tarballs/
 
 MAINTAINER=		bsd@cs.ubc.ca
-HOMEPAGE=		http://crm114.sourceforge.net/
+HOMEPAGE=		https://crm114.sourceforge.net/
 COMMENT=		Fast and accurate learning classifier, good for spam
 LICENSE=		gnu-gpl-v2
 

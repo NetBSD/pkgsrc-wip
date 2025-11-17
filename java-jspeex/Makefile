@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jspeex.sourceforge.net/
+HOMEPAGE=	https://jspeex.sourceforge.net/
 COMMENT=	Java Implementation of Speex
 
 WRKSRC=		${WRKDIR}/jspeex

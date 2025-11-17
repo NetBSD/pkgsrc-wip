@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtksourceview.sourceforge.net/
+HOMEPAGE=	https://gtksourceview.sourceforge.net/
 COMMENT=	Text widget that extends GTK2's GtkTextView widget (v2)
 LICENSE=	gnu-gpl-v2
 

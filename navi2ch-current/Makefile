@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/navi2ch
 CONFLICTS+=	navi2ch-[0-9]*
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://navi2ch.sourceforge.net/
+HOMEPAGE=	https://navi2ch.sourceforge.net/
 COMMENT=	2ch BBS browser for Emacs (Git Current)
 LICENSE=	gnu-gpl-v2
 

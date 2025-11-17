@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csstidy/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		kh.p@no-log.org
-HOMEPAGE=		http://csstidy.sourceforge.net/
+HOMEPAGE=		https://csstidy.sourceforge.net/
 COMMENT=		Opensource CSS parser
 LICENSE=		gnu-lgpl-v2.1
 

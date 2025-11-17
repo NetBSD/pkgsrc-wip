@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=themanaworld/}
 
 MAINTAINER=	Pseudo.Statistic@gmail.com
-HOMEPAGE=	http://themanaworld.sourceforge.net/
+HOMEPAGE=	https://themanaworld.sourceforge.net/
 COMMENT=	Free open source 2D MMORPG in development
 
 

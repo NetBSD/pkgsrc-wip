@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lives/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lives.sourceforge.net/
+HOMEPAGE=	https://lives.sourceforge.net/
 COMMENT=	Linux Video Editing System
 LICENSE=	gnu-gpl-v3
 

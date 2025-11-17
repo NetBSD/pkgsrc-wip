@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opendchub/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://opendchub.sourceforge.net/
+HOMEPAGE=		https://opendchub.sourceforge.net/
 COMMENT=		Open source Direct Connect hub software
 
 GNU_CONFIGURE=		yes

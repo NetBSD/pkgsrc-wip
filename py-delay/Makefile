@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/pydelay/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pydelay.sourceforge.net/
+HOMEPAGE=	https://pydelay.sourceforge.net/
 COMMENT=	Python tool for solving delay differential equations
 LICENSE=	mit
 

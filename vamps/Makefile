@@ -5,7 +5,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vamps/}
 
 MAINTAINER=		rhialto@falu.nl
-HOMEPAGE=		http://vamps.sourceforge.net/
+HOMEPAGE=		https://vamps.sourceforge.net/
 COMMENT=		Requantizer for shrinking DVDs
 LICENSE=		gnu-gpl-v2
 
