@@ -16,4 +16,7 @@ libdrm's drmGetBusid() use DRM_IOCTL_GET_UNIQUE on render node, what is allowed
 with https://github.com/NetBSD/src/commit/003bb55d1d411ad2e8cf728c2e7a57f0348e97e6,
 available from netbsd-11
 
+2) vulkan render issue: vkCreateInstance fails with VK_ERROR_INCOMPATIBLE_DRIVER
+
+
 #NOTE: should restart on NetBSD-11 with native X11?
