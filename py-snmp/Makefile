@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	pysnmp-6.2.5
+DISTNAME=	pysnmp-6.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysnmp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/etingof/pysnmp
+HOMEPAGE=	https://github.com/lextudio/pysnmp
 COMMENT=	SNMP library for Python
 LICENSE=	2-clause-bsd
 
