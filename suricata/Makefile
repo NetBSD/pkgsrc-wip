@@ -2,7 +2,7 @@
 # Local variables:
 # coding: unix
 # End:
-DISTNAME=		suricata-8.0.1
+DISTNAME=		suricata-8.0.2
 PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		https://www.openinfosecfoundation.org/download/
