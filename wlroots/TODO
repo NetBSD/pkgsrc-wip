@@ -1,4 +1,4 @@
-* Can't build on NetBSD with native x11, libdrm is too old:
+* Can't build on NetBSD-10 with native x11, libdrm is too old:
 
 Dependency libdrm found: NO. Found 2.4.109 but need: '>=2.4.122'
 WARNING: Found CMake '/usr/pkgsrc/wip/wlroots/work/.tools/bin/false' but couldn't run it
@@ -7,4 +7,13 @@ Run-time dependency libdrm found: NO (tried pkgconfig and cmake)
 Looking for a fallback subproject for the dependency libdrm
 ERROR: Subproject libdrm is buildable: NO
 
-* On NetBSD-10 with X11_TYPE=modular builds fine, but not tested yet
+#NOTE: NetBSD-11 already has 2.4.124
+
+* On NetBSD-10 with X11_TYPE=modular (and pkgsrc's libdrm-2.4.128) builds fine, but: 
+
+1) egl render doesn't work on NetBSD-10:
+libdrm's drmGetBusid() use DRM_IOCTL_GET_UNIQUE on render node, what is allowed
+with https://github.com/NetBSD/src/commit/003bb55d1d411ad2e8cf728c2e7a57f0348e97e6,
+available from netbsd-11
+
+#NOTE: should restart on NetBSD-11 with native X11?
