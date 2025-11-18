@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	cargo-nextest-0.9.105
+DISTNAME=	cargo-nextest-0.9.113
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextest-rs/}
 GITHUB_PROJECT=	nextest
-GITHUB_TAG=	cargo-nextest-0.9.105
+GITHUB_TAG=	cargo-nextest-0.9.113
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nexte.st/
