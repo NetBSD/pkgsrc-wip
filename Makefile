@@ -5054,7 +5054,6 @@ SUBDIR+=	py-yaspin
 SUBDIR+=	py-yellowhiggs
 SUBDIR+=	py-yfinance
 SUBDIR+=	py-yt
-SUBDIR+=	py-yt-dlp-ejs
 SUBDIR+=	py-z2pack
 SUBDIR+=	py-zbar
 SUBDIR+=	py-zeitgeist

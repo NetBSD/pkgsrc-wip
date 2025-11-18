@@ -1,5 +1,0 @@
-(deno doesn't support NetBSD, so we use nodejs.)
-
-rollup does not support NetBSD
-
-https://github.com/yt-dlp/ejs/issues/32
