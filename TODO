@@ -202,14 +202,12 @@ Suggested ready to import packages
 	o pear-Net_URL2
 	o phalanx [kamil]
 	o pnmcurve
-	o presenterm
 	o py-csp [kamil; some tests hang but it seems good enough; need for wip/py-uuid]
 	o py-jswebkit
 	o rar4
 	o send-pr
 	o tqsllib
 	o trustedQSL
-	o vatomic
 	o vlevel
 	o xmms-skins [pkg/35666]
 
