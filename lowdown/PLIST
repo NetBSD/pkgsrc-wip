@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/lowdown
+bin/lowdown-diff
+man/man1/lowdown-diff.1
+man/man1/lowdown.1
+man/man5/lowdown.5
+share/lowdown/html/default.html
+share/lowdown/html/sblg.xml
+share/lowdown/latex/default.latex
+share/lowdown/man/default.man
+share/lowdown/ms/default.ms
+share/lowdown/odt/styles.xml
