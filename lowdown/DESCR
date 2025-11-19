@@ -1,4 +1,0 @@
-lowdown is a Markdown translator producing HTML5, roff documents in the ms and
-man formats, LaTeX, gemini (“gemtext”), OpenDocument, and ANSI/UTF8 terminal
-output. The open source C source code has no dependencies.
-
