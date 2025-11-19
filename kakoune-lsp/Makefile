@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	kakoune-lsp-18.1.1
+DISTNAME=	kakoune-lsp-18.2.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kakoune-lsp/}
 
