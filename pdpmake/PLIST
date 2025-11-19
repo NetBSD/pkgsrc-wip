@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/pdpmake
+man/man1/pdpmake.1

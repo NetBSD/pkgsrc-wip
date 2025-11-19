@@ -1,0 +1,7 @@
+# Public domain POSIX make
+
+This is an implementation of POSIX make:
+https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html).
+
+It should build on most modernish Unix-style systems.
+

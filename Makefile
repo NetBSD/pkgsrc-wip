@@ -3116,6 +3116,7 @@ SUBDIR+=	pdfminer
 SUBDIR+=	pdfrip
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
+SUBDIR+=	pdpmake
 SUBDIR+=	pdq
 SUBDIR+=	peak-classifier
 SUBDIR+=	pear
