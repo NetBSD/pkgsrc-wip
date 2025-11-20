@@ -1924,6 +1924,7 @@ SUBDIR+=	kdelibs1
 SUBDIR+=	kdenetwork1
 SUBDIR+=	kdetoys1
 SUBDIR+=	kdeutils1
+SUBDIR+=	kdsingleapplication
 SUBDIR+=	kea-git
 SUBDIR+=	keama-git
 SUBDIR+=	kefir
