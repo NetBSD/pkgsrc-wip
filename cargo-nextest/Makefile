@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cargo-nextest-0.9.113
+DISTNAME=	cargo-nextest-0.9.114
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextest-rs/}
 GITHUB_PROJECT=	nextest
@@ -13,6 +13,7 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.88.0
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
