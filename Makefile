@@ -2283,6 +2283,7 @@ SUBDIR+=	lldb
 SUBDIR+=	llilc-git
 SUBDIR+=	llvm
 SUBDIR+=	lmdbg-current
+SUBDIR+=	lmdbxx
 SUBDIR+=	lnav
 SUBDIR+=	lnd
 SUBDIR+=	lodepng-git

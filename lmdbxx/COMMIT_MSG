@@ -1,0 +1,3 @@
+databases/lmdbxx: add lmdbxx version 1.0.0
+
+C++ wrapper for the LMDB embedded database library.

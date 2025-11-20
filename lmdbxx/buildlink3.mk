@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	lmdbxx
+
+.if !defined(LMDBXX_BUILDLINK3_MK)
+LMDBXX_BUILDLINK3_MK:=
+
+BUILDLINK_DEPMETHOD.lmdbxx?=	build
+
+BUILDLINK_API_DEPENDS.lmdbxx+=	lmdbxx>=1.0.0
+BUILDLINK_PKGSRCDIR.lmdbxx?=	../../wip/lmdbxx
+.endif	# LMDBXX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-lmdbxx
