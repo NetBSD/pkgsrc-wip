@@ -552,6 +552,7 @@ SUBDIR+=	cockatrice
 SUBDIR+=	cockatrice-server
 SUBDIR+=	cockroach
 SUBDIR+=	codex
+SUBDIR+=	coeurl
 SUBDIR+=	coin-or-lemon
 SUBDIR+=	colima
 SUBDIR+=	collectd-unbound
