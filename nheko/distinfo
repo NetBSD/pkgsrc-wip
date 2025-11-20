@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (nheko-0.12.1.tar.gz) = 44e6493b327be02d847c732815bf209eb56c9d07d07c8aa09dedf560d6951950
+SHA512 (nheko-0.12.1.tar.gz) = 05177b3439713e4b3badcc0231c9fa37b5df7e7310db5af972ecc8e7b6e99d47005f7aa36de4b760429adcd0b9ae46897ffaf657da19e31a10d50d674d227f40
+Size (nheko-0.12.1.tar.gz) = 2143800 bytes
+SHA1 (patch-CMakeLists.txt) = 1d58dc9f814fef8b7fd589f41fb4a9812ef73777

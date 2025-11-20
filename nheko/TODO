@@ -1,0 +1,4 @@
+Known issues:
+
+- VoIP support is temporarily disabled because pkgsrc lacks several essential GStreamer plugins.
+- Closing the application on NetBSD results in a segmentation fault crash.
