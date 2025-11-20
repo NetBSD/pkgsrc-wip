@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Fix lib path in the icd.json file
+
+--- src/Vulkan/CMakeLists.txt.orig	2025-11-20 15:17:35.162469765 +0000
++++ src/Vulkan/CMakeLists.txt
+@@ -252,7 +252,7 @@ if(WIN32)
+     # The path is output to a JSON file, which requires backslashes to be escaped.
+     set(ICD_LIBRARY_PATH ".\\\\${ICD_LIBRARY_PATH}")
+ else()
+-    set(ICD_LIBRARY_PATH "./${ICD_LIBRARY_PATH}")
++    set(ICD_LIBRARY_PATH "@PREFIX@/lib/${ICD_LIBRARY_PATH}")
+ endif()
+ configure_file(
+     "vk_swiftshader_icd.json.tmpl"

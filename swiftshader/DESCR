@@ -1,0 +1,3 @@
+SwiftShader is a high-performance CPU-based implementation
+of the Vulkan graphics API. Its goal is to provide hardware
+independence for advanced 3D graphics.

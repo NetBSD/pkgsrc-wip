@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Add NetBSD support
+
+--- CMakeLists.txt.orig	2025-11-19 18:07:41.038317875 +0000
++++ CMakeLists.txt
+@@ -27,7 +27,7 @@ endif()
+ # Detect system
+ ###########################################################
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
++if(CMAKE_SYSTEM_NAME MATCHES "Linux|NetBSD")
+     set(LINUX TRUE)
+ elseif(CMAKE_SYSTEM_NAME MATCHES "Android")
+     set(ANDROID TRUE)

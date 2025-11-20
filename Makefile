@@ -5601,6 +5601,7 @@ SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	swift
 SUBDIR+=	swift-git
+SUBDIR+=	swiftshader
 SUBDIR+=	swig4
 SUBDIR+=	swinehub
 SUBDIR+=	swisseph

@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Fix link:
+undefined reference to llvm::sys::CompareAndSwap(unsigned int volatile*, unsigned int, unsigned int)' 
+undefined reference to llvm::sys::MemoryFence()' 
+
+--- third_party/llvm-10.0/CMakeLists.txt.orig	2025-11-20 13:42:02.031324847 +0000
++++ third_party/llvm-10.0/CMakeLists.txt
+@@ -563,6 +563,7 @@ set(LLVM_LIST
+     ${LLVM_DIR}/lib/Support/ABIBreak.cpp
+     ${LLVM_DIR}/lib/Support/APFloat.cpp
+     ${LLVM_DIR}/lib/Support/APInt.cpp
++    ${LLVM_DIR}/lib/Support/Atomic.cpp
+     ${LLVM_DIR}/lib/Support/ARMAttributeParser.cpp
+     ${LLVM_DIR}/lib/Support/ARMBuildAttrs.cpp
+     ${LLVM_DIR}/lib/Support/ARMTargetParser.cpp
