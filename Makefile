@@ -2511,6 +2511,7 @@ SUBDIR+=	mtop
 SUBDIR+=	mtpfs
 SUBDIR+=	mtr-graph
 SUBDIR+=	mtrack
+SUBDIR+=	mtxclient
 SUBDIR+=	mtrxmath
 SUBDIR+=	mu-cite
 SUBDIR+=	mudlet-301

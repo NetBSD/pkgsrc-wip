@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mtxclient-0.10.1.tar.gz) = cec4dc24d12592c0a8dee4b14f19d910bfe3122b2ebe80e89bf5c50a7405bd88
+SHA512 (mtxclient-0.10.1.tar.gz) = 9b56f3e8c022f9e5d569cbd959259315c0b070ef2220c288208c64f901491b5c7365ead12c538df2ddb9774f332cf48f10d02d20baced6d497bc969da16fbe87
+Size (mtxclient-0.10.1.tar.gz) = 636035 bytes
