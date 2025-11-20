@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/v8_target_cpu.gni.orig	2025-10-24 16:42:30.000000000 +0000
+--- build/config/v8_target_cpu.gni.orig	2025-11-14 20:31:45.000000000 +0000
 +++ build/config/v8_target_cpu.gni
 @@ -36,6 +36,10 @@ declare_args() {
  if (v8_target_cpu == "") {

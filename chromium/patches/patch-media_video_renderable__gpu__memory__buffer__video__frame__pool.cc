@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/renderable_gpu_memory_buffer_video_frame_pool.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- media/video/renderable_gpu_memory_buffer_video_frame_pool.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ media/video/renderable_gpu_memory_buffer_video_frame_pool.cc
 @@ -196,7 +196,7 @@ bool FrameResources::Initialize(VideoPix
  

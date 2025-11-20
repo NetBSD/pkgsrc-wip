@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ gpu/command_buffer/client/test_shared_image_interface.cc
 @@ -30,7 +30,7 @@
  #include "ui/gfx/gpu_fence.h"

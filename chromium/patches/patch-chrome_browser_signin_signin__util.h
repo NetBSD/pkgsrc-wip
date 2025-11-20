@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/signin/signin_util.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/signin/signin_util.h
 @@ -203,7 +203,7 @@ bool IsSyncingUserSelectableTypesAllowed
      const syncer::SyncService* sync_service,

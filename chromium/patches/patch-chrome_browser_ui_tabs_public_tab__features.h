@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/public/tab_features.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/ui/tabs/public/tab_features.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/ui/tabs/public/tab_features.h
 @@ -118,7 +118,7 @@ class TabContextualizationController;
  }  // namespace lens

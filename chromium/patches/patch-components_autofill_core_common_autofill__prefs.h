@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.h
 @@ -36,7 +36,7 @@ inline constexpr char kAutofillAiOptInSt
  inline constexpr char kAutofillAiLastVersionDeduped[] =

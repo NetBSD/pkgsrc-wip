@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/settings_strings.grdp.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/app/settings_strings.grdp.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/app/settings_strings.grdp
 @@ -240,11 +240,9 @@
    <message name="IDS_SETTINGS_RESET_TO_DEFAULT" desc="Name of the control which resets a browser setting back to the default value">

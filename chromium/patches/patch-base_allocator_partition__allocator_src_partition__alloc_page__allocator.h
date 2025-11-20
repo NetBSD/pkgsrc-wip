@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator.h
 @@ -278,7 +278,7 @@ bool DecommitAndZeroSystemPages(void* ad
  // recommitted. Do not assume that this will not change over time.

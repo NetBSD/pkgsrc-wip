@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/searchbox/searchbox_handler.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/ui/webui/searchbox/searchbox_handler.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/ui/webui/searchbox/searchbox_handler.cc
 @@ -157,7 +157,7 @@ const char* kMacShareIconResourceName =
  #elif BUILDFLAG(IS_WIN)

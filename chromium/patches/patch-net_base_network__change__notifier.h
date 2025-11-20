@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- net/base/network_change_notifier.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ net/base/network_change_notifier.h
 @@ -20,7 +20,7 @@
  #include "net/base/network_handle.h"

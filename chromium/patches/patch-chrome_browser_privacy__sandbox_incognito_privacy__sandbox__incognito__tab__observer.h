@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/privacy_sandbox/incognito/privacy_sandbox_incognito_tab_observer.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/privacy_sandbox/incognito/privacy_sandbox_incognito_tab_observer.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/privacy_sandbox/incognito/privacy_sandbox_incognito_tab_observer.h
 @@ -23,7 +23,7 @@ class PrivacySandboxIncognitoTabObserver
  

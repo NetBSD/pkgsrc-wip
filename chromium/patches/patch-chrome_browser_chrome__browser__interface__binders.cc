@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders.cc
 @@ -82,7 +82,7 @@
  #endif  // BUILDFLAG(ENABLE_UNHANDLED_TAP)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/performance_manager/decorators/process_metrics_decorator.cc
 @@ -266,7 +266,7 @@ void ProcessMetricsDecorator::DidGetMemo
      base::ByteCount process_rss =

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -94,7 +94,7 @@ bool IsExternalExtensionUninstalled(cont
    return prefs && prefs->IsExternalExtensionUninstalled(extension_id);

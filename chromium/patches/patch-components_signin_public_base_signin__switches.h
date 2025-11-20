@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
 @@ -77,7 +77,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kCctSignInPrompt);

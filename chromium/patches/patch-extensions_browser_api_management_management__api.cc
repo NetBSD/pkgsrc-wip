@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/management/management_api.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ extensions/browser/api/management/management_api.cc
 @@ -296,7 +296,7 @@ void AddExtensionInfo(const Extension* s
  

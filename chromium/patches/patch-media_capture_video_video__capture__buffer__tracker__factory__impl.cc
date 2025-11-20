@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/video_capture_buffer_tracker_factory_impl.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- media/capture/video/video_capture_buffer_tracker_factory_impl.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ media/capture/video/video_capture_buffer_tracker_factory_impl.cc
 @@ -13,7 +13,7 @@
  #include "media/capture/video/chromeos/gpu_memory_buffer_tracker_cros.h"

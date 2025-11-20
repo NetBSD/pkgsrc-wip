@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/BUILD.gn.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/BUILD.gn
 @@ -7144,6 +7144,13 @@ static_library("browser") {
            [ "//third_party/webrtc/modules/desktop_capture:pipewire_config" ]

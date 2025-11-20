@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/thread_type_switcher.mojom.orig	2025-10-24 16:42:30.000000000 +0000
+--- content/common/thread_type_switcher.mojom.orig	2025-11-14 20:31:45.000000000 +0000
 +++ content/common/thread_type_switcher.mojom
 @@ -10,6 +10,6 @@ import "mojo/public/mojom/base/thread_ty
  // occur in a child process due to its sandbox, e.g. on Linux and ChromeOS.

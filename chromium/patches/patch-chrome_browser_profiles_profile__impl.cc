@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
 @@ -268,6 +268,10 @@
  #include "chrome/browser/safe_browsing/safe_browsing_service.h"

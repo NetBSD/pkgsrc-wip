@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/slow_web_preference_cache.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- content/browser/web_contents/slow_web_preference_cache.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ content/browser/web_contents/slow_web_preference_cache.cc
 @@ -17,7 +17,7 @@
  

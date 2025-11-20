@@ -1,8 +1,12 @@
-www/chromium: update to 142.0.7444.162
+www/chromium: update to 142.0.7444.175
 
-* 142.0.7444.162
-This update includes 1 security fix. Below, we highlight fixes
+* 142.0.7444.175
+This update includes 2 security fixes. Below, we highlight fixes
 that were contributed by external researchers. Please see the
 Chrome Security Page for more information.
-[TBD][457351015] High CVE-2025-13042: Inappropriate implementation
-in V8. Reported by 303f06e3 on 2025-11-03
+[N/A][460017370] High CVE-2025-13223: Type Confusion in V8.
+Reported by Google Threat Analysis Group on 2025-11-12
+[N/A][450328966] High CVE-2025-13224: Type Confusion in V8.
+Reported by Google Big Sleep on 2025-10-09
+
+Google is aware that an exploit for CVE-2025-13223 exists in the wild.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -78,9 +78,11 @@
  #include <sys/syscall.h>

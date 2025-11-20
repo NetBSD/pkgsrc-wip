@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- ipc/ipc_channel.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ ipc/ipc_channel.cc
 @@ -22,7 +22,7 @@ namespace {
  // Global atomic used to guarantee channel IDs are unique.

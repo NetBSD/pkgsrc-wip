@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/password_manager/core/browser/password_manager.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/password_manager/core/browser/password_manager.cc
 @@ -590,7 +590,7 @@ void PasswordManager::RegisterProfilePre
    registry->RegisterListPref(prefs::kPasswordManagerPromoCardsList);
