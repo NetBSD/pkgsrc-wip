@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sqlite-web-0.6.5.tar.gz) = ad5243d3e9524090ce8b495d4e7d46fa90a52e5df4be1281235500e7143985ef
+SHA512 (sqlite-web-0.6.5.tar.gz) = c06e783998edab89e3343c8086e2133ed3a1982e232b34fca04a9f9c6fb33c3d288a94e911e7fd2f99904cc8a7b84aab908099ee4273700f8b6d2f906be311b5
+Size (sqlite-web-0.6.5.tar.gz) = 807898 bytes
