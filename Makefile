@@ -4678,6 +4678,7 @@ SUBDIR+=	py-rxpy3
 SUBDIR+=	py-sabctools
 SUBDIR+=	py-sabyenc3
 SUBDIR+=	py-safersympify
+SUBDIR+=	py-safetensors
 SUBDIR+=	py-safety
 SUBDIR+=	py-samplerate
 SUBDIR+=	py-sas7bdat
