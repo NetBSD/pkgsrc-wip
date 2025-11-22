@@ -2,6 +2,7 @@
 
 DISTNAME=	coeurl-v0.3.1
 PKGNAME=	${DISTNAME:S,-v,-,}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nheko.im/nheko-reborn/coeurl/-/archive/v0.3.1/
 
