@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (transformers-4.57.1.tar.gz) = c82c6304d71a58e37393cfbb5617026a9b612f21d06ebf997cb56777c1839b26
+SHA512 (transformers-4.57.1.tar.gz) = d82af3e64c3d1812a1e44e91d26bd1f610b88adb0d51bdc977df679801076b09248d16ca81fe668d96223c218a75f46b3aa25407886cedafcfa7c8823cded31a
+Size (transformers-4.57.1.tar.gz) = 10142511 bytes
