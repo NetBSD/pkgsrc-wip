@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	freetds-1.5.6
+DISTNAME=	freetds-1.5.9
 PKGREVISION=
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
