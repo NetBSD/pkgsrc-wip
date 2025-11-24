@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kubectl-1.34.1
+DISTNAME=	kubectl-1.34.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes/}
 GITHUB_PROJECT=	kubernetes
