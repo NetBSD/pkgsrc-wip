@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.wlroots?=	../../wip/wlroots
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+PREFER.MesaLib=	pkgsrc	# glesv2
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libdisplay-info/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"

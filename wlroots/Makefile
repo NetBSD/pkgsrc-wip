@@ -21,6 +21,7 @@ SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	xcursor/xcursor.c
 SUBST_VARS.path+=	PREFIX X11BASE
 
+PLIST_VARS+=		xwayland
 
 .include "../../devel/meson/build.mk"
 
@@ -32,13 +33,16 @@ SUBST_VARS.path+=	PREFIX X11BASE
 .include "../../wip/seatd/buildlink3.mk"
 .include "../../wip/vulkan-loader/buildlink3.mk"
 
+.if ${X11_TYPE} != "modular"
+PLIST.xwayland=		yes
 # need update
-#.include "../../wip/wayland/buildlink3.mk"
 .include "../../wip/modular-xorg-xwayland/buildlink3.mk"
+.endif
 
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+PREFER.MesaLib=	pkgsrc	# glesv2
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../sysutils/hwdata/buildlink3.mk"

@@ -114,7 +114,7 @@ include/wlroots-0.19/wlr/util/region.h
 include/wlroots-0.19/wlr/util/transform.h
 include/wlroots-0.19/wlr/version.h
 include/wlroots-0.19/wlr/xcursor.h
-include/wlroots-0.19/wlr/xwayland.h
+${PLIST.xwayland}include/wlroots-0.19/wlr/xwayland.h
 include/wlroots-0.19/wlr/xwayland/server.h
 include/wlroots-0.19/wlr/xwayland/shell.h
 include/wlroots-0.19/wlr/xwayland/xwayland.h

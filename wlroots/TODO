@@ -17,6 +17,6 @@ with https://github.com/NetBSD/src/commit/003bb55d1d411ad2e8cf728c2e7a57f0348e97
 available from netbsd-11
 
 2) vulkan render issue: vkCreateInstance fails with VK_ERROR_INCOMPATIBLE_DRIVER
+   No vulkan drivers on NetBSD, software renders (lavapipe, swiftshader) don't work
 
-
-#NOTE: should restart on NetBSD-11 with native X11?
+* On NetBSD-11 with X11_TYPE=native builds with pkgsrc's MesaLib (glesv2)
