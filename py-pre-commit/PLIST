@@ -1,10 +1,10 @@
 @comment $NetBSD$
 bin/pre-commit
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pre_commit/__init__.py
 ${PYSITELIB}/pre_commit/__init__.pyc
@@ -33,6 +33,9 @@ ${PYSITELIB}/pre_commit/commands/clean.pyo
 ${PYSITELIB}/pre_commit/commands/gc.py
 ${PYSITELIB}/pre_commit/commands/gc.pyc
 ${PYSITELIB}/pre_commit/commands/gc.pyo
+${PYSITELIB}/pre_commit/commands/hazmat.py
+${PYSITELIB}/pre_commit/commands/hazmat.pyc
+${PYSITELIB}/pre_commit/commands/hazmat.pyo
 ${PYSITELIB}/pre_commit/commands/hook_impl.py
 ${PYSITELIB}/pre_commit/commands/hook_impl.pyc
 ${PYSITELIB}/pre_commit/commands/hook_impl.pyo
@@ -141,15 +144,15 @@ ${PYSITELIB}/pre_commit/languages/ruby.pyo
 ${PYSITELIB}/pre_commit/languages/rust.py
 ${PYSITELIB}/pre_commit/languages/rust.pyc
 ${PYSITELIB}/pre_commit/languages/rust.pyo
-${PYSITELIB}/pre_commit/languages/script.py
-${PYSITELIB}/pre_commit/languages/script.pyc
-${PYSITELIB}/pre_commit/languages/script.pyo
 ${PYSITELIB}/pre_commit/languages/swift.py
 ${PYSITELIB}/pre_commit/languages/swift.pyc
 ${PYSITELIB}/pre_commit/languages/swift.pyo
-${PYSITELIB}/pre_commit/languages/system.py
-${PYSITELIB}/pre_commit/languages/system.pyc
-${PYSITELIB}/pre_commit/languages/system.pyo
+${PYSITELIB}/pre_commit/languages/unsupported.py
+${PYSITELIB}/pre_commit/languages/unsupported.pyc
+${PYSITELIB}/pre_commit/languages/unsupported.pyo
+${PYSITELIB}/pre_commit/languages/unsupported_script.py
+${PYSITELIB}/pre_commit/languages/unsupported_script.pyc
+${PYSITELIB}/pre_commit/languages/unsupported_script.pyo
 ${PYSITELIB}/pre_commit/logging_handler.py
 ${PYSITELIB}/pre_commit/logging_handler.pyc
 ${PYSITELIB}/pre_commit/logging_handler.pyo
