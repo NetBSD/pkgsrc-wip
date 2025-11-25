@@ -1,0 +1,25 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.0.mod
+GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.3.mod
+GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.3.zip
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.5.mod
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.mod
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.zip
+GO_MODULE_FILES+=	go.uber.org/multierr/@v/v1.11.0.mod
+GO_MODULE_FILES+=	go.uber.org/multierr/@v/v1.11.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.19.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.19.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.15.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.15.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.zip
+GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20231002182017-d307bd883b97.mod
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20231002182017-d307bd883b97.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.60.1.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.60.1.zip
+GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.26.0-rc.1.mod
+GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.26.0.mod
+GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.31.0.mod
+GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.31.0.zip
