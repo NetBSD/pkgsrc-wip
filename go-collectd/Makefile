@@ -1,5 +1,4 @@
 # $NetBSD$
-#
 
 DISTNAME=		go-collectd-0.6.0
 CATEGORIES=		sysutils
@@ -12,8 +11,7 @@ HOMEPAGE=		https://github.com/collectd/go-collectd
 COMMENT=		Go language bindings for collectd
 LICENSE=		modified-bsd
 
-GO_SRCPATH=		collectd.org
-GO_DIST_BASE=		${DISTNAME}
+MAKE_ENV+=		CGO_CFLAGS="-I${BUILDLINK_DIR}/include/collectd/core/daemon"
 
 .include "go-modules.mk"
 
