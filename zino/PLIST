@@ -48,6 +48,9 @@ ${PYSITELIB}/zino/flaps.pyo
 ${PYSITELIB}/zino/getuptime.py
 ${PYSITELIB}/zino/getuptime.pyc
 ${PYSITELIB}/zino/getuptime.pyo
+${PYSITELIB}/zino/job_tracker.py
+${PYSITELIB}/zino/job_tracker.pyc
+${PYSITELIB}/zino/job_tracker.pyo
 ${PYSITELIB}/zino/oid.py
 ${PYSITELIB}/zino/oid.pyc
 ${PYSITELIB}/zino/oid.pyo

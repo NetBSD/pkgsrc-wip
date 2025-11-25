@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	zino-2.3.0
+DISTNAME=	zino-2.3.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uninett/}
 GITHUB_PROJECT=	zino
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-apscheduler>=3.11:../../wip/py-apscheduler
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.11:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-snmp>=6.2.6<7:../../wip/py-snmp
 DEPENDS+=	${PYPKGPREFIX}-aiodns-[0-9]*:../../net/py-aiodns
-DEPENDS+=	${PYPKGPREFIX}-netsnmp-cffi>=0.1.2:../../wip/py-netsnmp-cffi
+DEPENDS+=	${PYPKGPREFIX}-netsnmp-cffi>=0.1.4:../../wip/py-netsnmp-cffi
 .if ${PYTHON_VERSION} >= 312
 DEPENDS+=	${PYPKGPREFIX}-pyasyncore-[0-9]*:../../devel/py-pyasyncore
 .endif
