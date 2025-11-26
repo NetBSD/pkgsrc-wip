@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:20 agc Exp $
+
+BLAKE2s (libvirt-11.9.0.tar.xz) = 503652697946acb0924fbc8218aba047a16d8083e143b1f78bdc90798bdd43ff
+SHA512 (libvirt-11.9.0.tar.xz) = b1965bdcf9c0c9e7977787451b44e5ffb509ce19f79c3d7a0eca1929c3db1e0f3417abf8e67a121efee8bf2a18000c8b11812c7a8582989af51e03450f6ba5c8
+Size (libvirt-11.9.0.tar.xz) = 10145112 bytes
+SHA1 (patch-meson.build) = 5e0ca1e8421e478b8f78b93b747fbdf74f89ed4a
+SHA1 (patch-src_meson.build) = 118584f643caccf804aa05eb61b87d39fa5a8823
+SHA1 (patch-src_rpc_virnetmessage.c) = 989ddb4a75544e5a4c241d75e6fa01eadb6367f8
+SHA1 (patch-src_util_virstring.c) = ab925631cf15c177f2818783299715b60c8c4b13
+SHA1 (patch-src_vbox_vbox__XPCOMCGlue.c) = 8e201d5230437adc8aa40ac94c7429a55ab9c61c
+SHA1 (patch-tests_meson.build) = bb03c31c0d2e1bcd70ab9e3219572217faea8f88

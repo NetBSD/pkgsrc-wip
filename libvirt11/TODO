@@ -1,0 +1,36 @@
+ (status at libvirt-5.8.0)
+- Seems to be unable to communicate with libvirtd via socket.
+  (Maybe take a look at systemd scripts for comparison)
+- Lots of --with-X=no, should have options.
+- Some files from PLIST missing on macOS.
+- _PATH_MOUNTED undefined in storage/storage_backend_fs.c with
+  musl-libc.
+- Update (= migrate to meson)
+- Config file list is outdated (missing files on install)
+
+(status at libvirt 11.8.0)
+- to avoid the following line, dl detection is disabled for now.
+
+   ld: cannot find -ldl: No such file or directory
+   ...
+   meson.build:964:16: ERROR: C shared or static library 'dl' not found
+
+- 
+Program rst2html5 rst2html5.py rst2html5-3 found: NO
+
+docs/meson.build:178:9: ERROR: Program 'rst2html5 rst2html5.py rst2html5-3' not found or not executable
+
+A full log can be found at /export/WRKOBJDIR/wip/libvirt11/work/libvirt-11.9.0/output/meson-logs/meson-log.txt
+*** Error code 1
+
+Program xgettext found: YES (/usr/pkg/bin/xgettext)
+Running command: /usr/pkg/bin/python3 /export/WRKOBJDIR/wip/libvirt11/work/libvirt-11.9.0/scripts/meson-timestamp.py
+--- stdout ---
+Wed Nov 26 21:45:14 2025 UTC
+
+--- stderr ---
+
+
+Program rst2html5 rst2html5.py rst2html5-3 found: NO
+
+

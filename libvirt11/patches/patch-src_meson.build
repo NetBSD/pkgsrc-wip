@@ -1,0 +1,16 @@
+$NetBSD$
+
+Configuring test_virtd.aug.tmp with command
+
+src/meson.build:331:4: ERROR: Unknown variable "dlopen_dep".
+
+--- src/meson.build.orig	2025-11-03 20:26:40.000000000 +0900
++++ src/meson.build	2025-11-26 23:06:18.353643203 +0900
+@@ -328,7 +328,6 @@ driver_lib = static_library(
+   ],
+   dependencies: [
+     curl_dep,
+-    dlopen_dep,
+     gnutls_dep,
+     rpc_dep,
+     src_dep,

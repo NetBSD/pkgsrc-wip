@@ -1,0 +1,14 @@
+$NetBSD$
+
+drop dlopen support
+
+--- tests/meson.build.orig	2025-11-03 20:26:40.000000000 +0900
++++ tests/meson.build	2025-11-26 23:11:56.613587887 +0900
+@@ -7,7 +7,6 @@ tests_dep = declare_dependency(
+   ] + coverage_flags + cc_flags_relaxed_frame_limit,
+   dependencies: [
+     apparmor_dep,
+-    dlopen_dep,
+     glib_dep,
+     gnutls_dep,
+     json_c_dep,
