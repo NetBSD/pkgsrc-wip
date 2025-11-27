@@ -39,8 +39,7 @@ RCD_SCRIPTS=		libvirtd
 SUBST_CLASSES=		prefix
 SUBST_FILES.prefix+=	meson.build
 SUBST_STAGE.prefix=	pre-configure
-#SUBST_VARS.prefix+=	PREFIX
-SUBST_SED.prefix+=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_VARS.prefix+=	PREFIX
 
 
 PKGCONFIG_OVERRIDE+=	libvirt.pc.in

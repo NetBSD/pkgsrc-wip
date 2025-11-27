@@ -1,6 +1,6 @@
 $NetBSD$
 
-2. 
+1.
 docs/meson.build:178:9: ERROR: Program 'rst2html5 rst2html5.py rst2html5-3' not found or not executable
 
 
@@ -15,8 +15,7 @@ ld: cannot find -ldl: No such file or directory
 ----------
 
 
- 
---- meson.build.orig	2025-11-27 19:37:43.438650006 +0900
+--- meson.build.orig 2025-11-27 19:37:43.438650006 +0900
 +++ meson.build	2025-11-27 19:33:52.275885864 +0900
 @@ -818,6 +818,7 @@ if host_machine.system() != 'windows'
      '/sbin',
