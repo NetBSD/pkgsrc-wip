@@ -1,7 +1,11 @@
 $NetBSD$
 
-Let me check with work around only for NetBSD (to avoid following issue)
+2. 
+docs/meson.build:178:9: ERROR: Program 'rst2html5 rst2html5.py rst2html5-3' not found or not executable
 
+
+2.
+Let me check with work around only for NetBSD (to avoid following issue)
 ----------
 meson.build:964:16: ERROR: C shared or static library 'dl' not found
 
@@ -11,9 +15,18 @@ ld: cannot find -ldl: No such file or directory
 ----------
 
 
---- meson.build.orig	2025-10-01 19:46:01.000000000 +0900
-+++ meson.build	2025-11-03 17:56:10.514682278 +0900
-@@ -960,14 +960,14 @@ if devmapper_dep.found()
+ 
+--- meson.build.orig	2025-11-27 19:37:43.438650006 +0900
++++ meson.build	2025-11-27 19:33:52.275885864 +0900
+@@ -818,6 +818,7 @@ if host_machine.system() != 'windows'
+     '/sbin',
+     '/usr/sbin',
+     '/usr/local/sbin',
++    '@PREFIX@/bin',
+   ]
+ endif
+ 
+@@ -960,14 +961,14 @@ if devmapper_dep.found()
    conf.set('WITH_DEVMAPPER', 1)
  endif
  

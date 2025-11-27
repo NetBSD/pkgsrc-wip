@@ -36,6 +36,12 @@ RCD_SCRIPTS=		libvirtd
 ## SUBST_SED.pyver+=	-e 's|python${PYVERSSUFFIX}_prog|python3|g'
 ## #SUBST_SED.pyver+=	-e 's|python3_prog|python${PYVERSSUFFIX}|g'
 
+SUBST_CLASSES=		prefix
+SUBST_FILES.prefix+=	meson.build
+SUBST_STAGE.prefix=	pre-configure
+#SUBST_VARS.prefix+=	PREFIX
+SUBST_SED.prefix+=	-e 's,@PREFIX@,${PREFIX},'
+
 
 PKGCONFIG_OVERRIDE+=	libvirt.pc.in
 PKGCONFIG_OVERRIDE+=	libvirt-admin.pc.in
