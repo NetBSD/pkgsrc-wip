@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/base/ui_base_switches.h.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/ui/base/ui_base_switches.h.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/ui/base/ui_base_switches.h
-@@ -27,11 +27,11 @@ COMPONENT_EXPORT(UI_BASE) extern const c
- COMPONENT_EXPORT(UI_BASE) extern const char kEnableResourcesFileSharing[];
+@@ -22,11 +22,11 @@ COMPONENT_EXPORT(UI_BASE) extern const c
+ COMPONENT_EXPORT(UI_BASE) extern const char kShowMacOverlayBorders[];
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

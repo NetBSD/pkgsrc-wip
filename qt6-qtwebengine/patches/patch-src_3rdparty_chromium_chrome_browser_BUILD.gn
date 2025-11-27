@@ -4,19 +4,19 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/BUILD.gn.orig	2025-11-14 07:55:10.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/BUILD.gn
-@@ -6980,6 +6980,13 @@ static_library("browser") {
+@@ -6751,6 +6751,13 @@ static_library("browser") {
+           [ "//third_party/webrtc/modules/desktop_capture:pipewire_config" ]
      }
-   }
  
-+  if (is_bsd) {
-+    sources -= [
-+      "metrics/bluetooth_metrics_provider.cc",
-+      "metrics/bluetooth_metrics_provider.h",
-+    ]
-+  }
++    if (is_bsd) {
++      sources -= [
++        "metrics/bluetooth_metrics_provider.cc",
++        "metrics/bluetooth_metrics_provider.h",
++      ]
++    }
 +
-   if (is_linux && use_dbus) {
-     sources += [
-       "dbus_memory_pressure_evaluator_linux.cc",
+     if (use_dbus) {
+       sources += [
+         "dbus_memory_pressure_evaluator_linux.cc",

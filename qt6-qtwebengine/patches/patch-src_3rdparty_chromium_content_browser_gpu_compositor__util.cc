@@ -4,23 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/browser/gpu/compositor_util.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/content/browser/gpu/compositor_util.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/gpu/compositor_util.cc
-@@ -153,7 +153,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
+@@ -152,7 +152,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
        "video_decode",
        SafeGetFeatureStatus(
            gpu_feature_info, gpu::GPU_FEATURE_TYPE_ACCELERATED_VIDEO_DECODE,
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-           !base::FeatureList::IsEnabled(media::kVaapiVideoDecodeLinux) ||
+           !base::FeatureList::IsEnabled(media::kAcceleratedVideoDecodeLinux) ||
  #endif  // BUILDFLAG(IS_LINUX)
                command_line.HasSwitch(switches::kDisableAcceleratedVideoDecode)),
-@@ -165,7 +165,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
+@@ -164,7 +164,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
        "video_encode",
        SafeGetFeatureStatus(
            gpu_feature_info, gpu::GPU_FEATURE_TYPE_ACCELERATED_VIDEO_ENCODE,
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-           !base::FeatureList::IsEnabled(media::kVaapiVideoEncodeLinux)),
+           !base::FeatureList::IsEnabled(media::kAcceleratedVideoEncodeLinux)),
  #else
            command_line.HasSwitch(switches::kDisableAcceleratedVideoEncode)),

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/sandbox/policy/features.h.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/sandbox/policy/features.h.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/sandbox/policy/features.h
 @@ -18,7 +18,7 @@ namespace sandbox::policy::features {
  #if defined(TOOLKIT_QT) || (!BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_FUCHSIA))
@@ -21,6 +21,6 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATURE(
-     kForceDisableSpectreVariant2MitigationInNetworkService);
+ SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATURE(kHigherRendererMemoryLimit);
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  

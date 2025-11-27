@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/prefs/browser_prefs.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/prefs/browser_prefs.cc.orig	2025-11-14 07:55:10.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/prefs/browser_prefs.cc
-@@ -313,7 +313,7 @@
- #include "components/user_notes/user_notes_prefs.h"
+@@ -318,7 +318,7 @@
+ #include "components/ntp_tiles/custom_links_manager_impl.h"
  #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -491,18 +491,18 @@
+@@ -488,18 +488,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -37,7 +37,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -537,7 +537,7 @@
+@@ -534,7 +534,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -46,16 +46,16 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1678,7 +1678,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1746,7 +1746,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
- #endif  // BUILDFLAG(IS_ANDROID)
+ #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1854,7 +1854,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1917,7 +1917,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -64,7 +64,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2213,12 +2213,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2282,12 +2282,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/supervised_user/core/common/pref_names.h.orig	2025-09-25 11:10:42.000000000 +0000
+--- src/3rdparty/chromium/components/supervised_user/core/common/pref_names.h.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/components/supervised_user/core/common/pref_names.h
-@@ -137,7 +137,7 @@ inline constexpr char kFirstTimeIntersti
-     "profile.managed.banner_state";
+@@ -129,7 +129,7 @@ inline constexpr char kDefaultSupervised
+     "profile.managed.default_filtering_behavior";
  
  #if BUILDFLAG(ENABLE_EXTENSIONS)
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

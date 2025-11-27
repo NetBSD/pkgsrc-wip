@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/services/device/serial/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/services/device/serial/BUILD.gn.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/services/device/serial/BUILD.gn
-@@ -5,7 +5,7 @@
- import("//build/config/chromeos/ui_mode.gni")
+@@ -4,7 +4,7 @@
+ 
  import("//build/config/features.gni")
  
 -if (is_win || ((is_linux || is_chromeos) && use_udev) || is_mac) {

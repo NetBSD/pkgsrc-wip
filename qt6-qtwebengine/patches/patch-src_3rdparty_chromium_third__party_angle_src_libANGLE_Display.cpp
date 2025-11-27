@@ -4,19 +4,19 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/angle/src/libANGLE/Display.cpp.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/third_party/angle/src/libANGLE/Display.cpp.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/third_party/angle/src/libANGLE/Display.cpp
-@@ -60,7 +60,7 @@
+@@ -58,7 +58,7 @@
+ #        include "libANGLE/renderer/gl/wgl/DisplayWGL.h"
+ #    elif ANGLE_ENABLE_CGL
  #        include "libANGLE/renderer/gl/cgl/DisplayCGL.h"
- #    elif ANGLE_ENABLE_EAGL
- #        include "libANGLE/renderer/gl/eagl/DisplayEAGL.h"
 -#    elif defined(ANGLE_PLATFORM_LINUX)
 +#    elif defined(ANGLE_PLATFORM_LINUX) || defined(ANGLE_PLATFORM_BSD)
  #        include "libANGLE/renderer/gl/egl/DisplayEGL.h"
  #        if defined(ANGLE_USE_X11)
  #            include "libANGLE/renderer/gl/glx/DisplayGLX_api.h"
-@@ -416,7 +416,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
-             impl = new rx::DisplayEAGL(state);
+@@ -422,7 +422,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+             impl = new rx::DisplayCGL(state);
              break;
  
 -#    elif defined(ANGLE_PLATFORM_LINUX)
@@ -24,7 +24,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == 0)
              {
-@@ -462,7 +462,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -468,7 +468,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
  #if defined(ANGLE_ENABLE_OPENGL)
  #    if defined(ANGLE_PLATFORM_WINDOWS)
              impl = new rx::DisplayWGL(state);
@@ -33,7 +33,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == 0)
              {
-@@ -513,7 +513,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -519,7 +519,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
                  impl = rx::CreateVulkanWin32Display(state);
              }
              break;
@@ -42,7 +42,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2112,7 +2112,7 @@ static ClientExtensions GenerateClientEx
+@@ -2139,7 +2139,7 @@ static ClientExtensions GenerateClientEx
      extensions.platformWaylandEXT = true;
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD$
      extensions.platformSurfacelessMESA = true;
  #endif
  
-@@ -2158,7 +2158,7 @@ static ClientExtensions GenerateClientEx
+@@ -2186,7 +2186,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

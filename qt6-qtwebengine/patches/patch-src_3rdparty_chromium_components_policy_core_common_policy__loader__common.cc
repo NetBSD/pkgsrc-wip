@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/policy/core/common/policy_loader_common.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/components/policy/core/common/policy_loader_common.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/components/policy/core/common/policy_loader_common.cc
 @@ -46,7 +46,7 @@ const char* kSensitivePolicies[] = {
      key::kDefaultSearchProviderEnabled,
@@ -13,9 +13,9 @@ $NetBSD$
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      key::kAutoOpenFileTypes,
+     key::kEnterpriseSearchAggregatorSettings,
      key::kHomepageIsNewTabPage,
-     key::kPasswordProtectionChangePasswordURL,
-@@ -56,7 +56,7 @@ const char* kSensitivePolicies[] = {
+@@ -57,7 +57,7 @@ const char* kSensitivePolicies[] = {
      key::kSafeBrowsingAllowlistDomains,
      key::kSiteSearchSettings,
  #endif

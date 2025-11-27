@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/renderer/renderer_blink_platform_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/content/renderer/renderer_blink_platform_impl.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/content/renderer/renderer_blink_platform_impl.cc
-@@ -127,7 +127,7 @@
+@@ -129,7 +129,7 @@
  
  #if BUILDFLAG(IS_MAC)
  #include "content/child/child_process_sandbox_support_impl_mac.h"
@@ -31,21 +31,21 @@ $NetBSD$
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -223,7 +223,7 @@ RendererBlinkPlatformImpl::RendererBlink
- #endif
+@@ -224,7 +224,7 @@ RendererBlinkPlatformImpl::RendererBlink
    }
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -284,7 +284,7 @@ void RendererBlinkPlatformImpl::SetThrea
- #endif
+@@ -288,7 +288,7 @@ void RendererBlinkPlatformImpl::SetThrea
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    return sandbox_support_.get();
  #else
    // These platforms do not require sandbox support.

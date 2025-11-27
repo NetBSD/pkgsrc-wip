@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2025-11-14 07:55:10.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc
-@@ -32,7 +32,7 @@
+@@ -40,7 +40,7 @@
  #include "components/reporting/util/statusor.h"
  #endif
  
@@ -15,8 +15,17 @@ $NetBSD$
  #include <optional>
  
  #include "base/strings/string_util.h"
-@@ -149,7 +149,7 @@ api::enterprise_reporting_private::Conte
-   return info;
+@@ -157,7 +157,7 @@ api::enterprise_reporting_private::Conte
+ }
+ 
+ bool AllowClientCertificateReportingForUsers() {
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return base::FeatureList::IsEnabled(
+       enterprise_signals::features::kAllowClientCertificateReportingForUsers);
+ #else
+@@ -170,7 +170,7 @@ bool IsProfilePrefManaged(Profile* profi
+   return pref && pref->IsManaged();
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -24,7 +33,7 @@ $NetBSD$
  
  device_signals::SignalsAggregationRequest CreateAggregationRequest(
      device_signals::SignalName signal_name) {
-@@ -210,7 +210,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
+@@ -232,7 +232,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
  
  // getPersistentSecret
  
@@ -33,7 +42,7 @@ $NetBSD$
  
  EnterpriseReportingPrivateGetPersistentSecretFunction::
      EnterpriseReportingPrivateGetPersistentSecretFunction() = default;
-@@ -636,7 +636,7 @@ void EnterpriseReportingPrivateEnqueueRe
+@@ -672,7 +672,7 @@ void EnterpriseReportingPrivateEnqueueRe
  }
  #endif
  

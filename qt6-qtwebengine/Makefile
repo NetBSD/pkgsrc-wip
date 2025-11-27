@@ -52,6 +52,7 @@ CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_icu=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_lcms2=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libevent=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_libvpx=ON
+CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_opus=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_minizip=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_zlib=ON
 # As pkgsrc abseil is built with FORCE_CXX_STD=c++14 it is incompatible
@@ -89,7 +90,7 @@ SUBST_FILES.path+=	src/3rdparty/chromium/sandbox/policy/openbsd/sandbox_openbsd.
 SUBST_FILES.path+=	src/3rdparty/chromium/services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/third_party/perfetto/src/base/utils.cc
-SUBST_FILES.path+=	src/3rdparty/chromium/ui/qt/qt.gni
+#SUBST_FILES.path+=	src/3rdparty/chromium/ui/qt/qt.gni
 SUBST_FILES.path+=	src/3rdparty/chromium/v8/tools/run-paxctl.py
 SUBST_FILES.path+=	src/core/CMakeLists.txt
 SUBST_FILES.path+=	src/pdf/CMakeLists.txt
@@ -100,14 +101,14 @@ NOT_PAX_MPROTECT_SAFE+=	qt6/libexec/QtWebEngineProcess
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
 # with hooks to use them from the system.
-GN_SYSTEM_LIBS=		libevent
-GN_SYSTEM_LIBS+=	opus
-CHROMESRC=		${WRKSRC}/src/3rdparty/chromium
+#GN_SYSTEM_LIBS=		libevent
+#GN_SYSTEM_LIBS+=	opus
+#CHROMESRC=		${WRKSRC}/src/3rdparty/chromium
 
-pre-configure:
-	cd ${CHROMESRC} && \
-		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
-	--system-libraries ${GN_SYSTEM_LIBS} || ${FALSE}
+#pre-configure:
+#	cd ${CHROMESRC} && \
+#		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
+#	--system-libraries ${GN_SYSTEM_LIBS} || ${FALSE}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -j ${_MAKE_JOBS_N:U1} ${BUILD_TARGET}
@@ -144,7 +145,7 @@ PYTHON_FOR_BUILD_ONLY=  tool
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
-#.include "../../multimedia/openh264/buildlink3.mk"
+.include "../../multimedia/openh264/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../sysutils/pciutils/libname.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
@@ -155,6 +156,7 @@ BUILDLINK_TRANSFORM+=   l:pci:${PCIUTILS_LIBNAME}
 #.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"

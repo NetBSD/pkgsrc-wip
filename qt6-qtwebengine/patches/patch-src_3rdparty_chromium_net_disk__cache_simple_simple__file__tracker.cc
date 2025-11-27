@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/disk_cache/simple/simple_file_tracker.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/net/disk_cache/simple/simple_file_tracker.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/net/disk_cache/simple/simple_file_tracker.cc
-@@ -35,7 +35,17 @@ void RecordFileDescripterLimiterOp(FileD
- }  // namespace
+@@ -37,7 +37,17 @@ bool SimpleFileTracker::TrackedFiles::In
+ }
  
  SimpleFileTracker::SimpleFileTracker(int file_limit)
 +#if defined(OS_OPENBSD)

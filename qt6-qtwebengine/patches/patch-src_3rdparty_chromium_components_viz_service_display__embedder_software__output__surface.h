@@ -4,23 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/viz/service/display_embedder/software_output_surface.h.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/components/viz/service/display_embedder/software_output_surface.h.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/components/viz/service/display_embedder/software_output_surface.h
-@@ -44,7 +44,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
+@@ -41,7 +41,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
+       UpdateVSyncParametersCallback callback) override;
+   void SetDisplayTransformHint(gfx::OverlayTransform transform) override {}
    gfx::OverlayTransform GetDisplayTransform() override;
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    void SetNeedsSwapSizeNotifications(
        bool needs_swap_size_notifications) override;
  #endif
-@@ -64,7 +64,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
+@@ -59,7 +59,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
+   base::TimeTicks refresh_timebase_;
+   base::TimeDelta refresh_interval_ = BeginFrameArgs::DefaultInterval();
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    bool needs_swap_size_notifications_ = false;
  #endif
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/v8/src/execution/isolate.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/v8/src/execution/isolate.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/v8/src/execution/isolate.cc
-@@ -168,6 +168,10 @@
+@@ -172,6 +172,10 @@
  #include "src/execution/simulator-base.h"
  #endif
  
@@ -17,7 +17,7 @@ $NetBSD$
  extern "C" const uint8_t v8_Default_embedded_blob_code_[];
  extern "C" uint32_t v8_Default_embedded_blob_code_size_;
  extern "C" const uint8_t v8_Default_embedded_blob_data_[];
-@@ -4996,6 +5000,13 @@ void Isolate::InitializeDefaultEmbeddedB
+@@ -5049,6 +5053,13 @@ void Isolate::InitializeDefaultEmbeddedB
    const uint8_t* data = DefaultEmbeddedBlobData();
    uint32_t data_size = DefaultEmbeddedBlobDataSize();
  
@@ -29,5 +29,5 @@ $NetBSD$
 +#endif
 +
    if (StickyEmbeddedBlobCode() != nullptr) {
-     base::MutexGuard guard(current_embedded_blob_refcount_mutex_.Pointer());
-     // Check again now that we hold the lock.
+     base::SpinningMutexGuard guard(
+         current_embedded_blob_refcount_mutex_.Pointer());

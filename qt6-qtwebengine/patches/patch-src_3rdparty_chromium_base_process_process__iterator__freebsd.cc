@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_iterator_freebsd.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_iterator_freebsd.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_iterator_freebsd.cc
 @@ -18,7 +18,7 @@ namespace base {
  
  ProcessIterator::ProcessIterator(const ProcessFilter* filter)
      : filter_(filter) {
--  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_UID, getuid() };
-+  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_UID, (int) getuid() };
+-  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_UID, getuid()};
++  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_UID, (int) getuid()};
  
    bool done = false;
    int try_num = 1;
@@ -33,15 +33,16 @@ $NetBSD$
          kinfo_procs_.resize(num_of_kinfo_proc);
          done = true;
        }
-@@ -68,18 +68,13 @@ bool ProcessIterator::CheckForNextProces
+@@ -68,19 +68,14 @@ bool ProcessIterator::CheckForNextProces
    for (; index_of_kinfo_proc_ < kinfo_procs_.size(); ++index_of_kinfo_proc_) {
      size_t length;
      struct kinfo_proc kinfo = kinfo_procs_[index_of_kinfo_proc_];
--    int mib[] = { CTL_KERN, KERN_PROC_ARGS, kinfo.ki_pid };
-+    int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_ARGS, kinfo.ki_pid };
+-    int mib[] = {CTL_KERN, KERN_PROC_ARGS, kinfo.ki_pid};
++    int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_ARGS, kinfo.ki_pid};
  
-     if ((kinfo.ki_pid > 0) && (kinfo.ki_stat == SZOMB))
+     if ((kinfo.ki_pid > 0) && (kinfo.ki_stat == SZOMB)) {
        continue;
+     }
  
 -    length = 0;
 -    if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0) {

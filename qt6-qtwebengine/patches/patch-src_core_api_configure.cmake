@@ -5,7 +5,7 @@ $NetBSD$
   - add sndio
   - add audioio
 
---- src/core/api/configure.cmake.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/core/api/configure.cmake.orig	2025-11-14 07:55:10.000000000 +0000
 +++ src/core/api/configure.cmake
 @@ -11,6 +11,7 @@ if(NOT QT_CONFIGURE_RUNNING)
          pkg_check_modules(ALSA alsa IMPORTED_TARGET)
@@ -15,7 +15,7 @@ $NetBSD$
          pkg_check_modules(GBM gbm)
          pkg_check_modules(LIBVA libva>=1.14)
          if(NOT GIO_FOUND)
-@@ -90,6 +91,16 @@ qt_feature("webengine-printing-and-pdf" 
+@@ -96,6 +97,16 @@ qt_feature("webengine-printing-and-pdf" 
      AUTODETECT NOT QT_FEATURE_webengine_embedded_build
      CONDITION TARGET Qt::PrintSupport AND QT_FEATURE_printer
  )
@@ -32,7 +32,7 @@ $NetBSD$
  qt_feature("webengine-pepper-plugins" PRIVATE
      LABEL "Pepper Plugins"
      PURPOSE "Enables use of Pepper plugins."
-@@ -112,7 +123,7 @@ qt_feature("webengine-kerberos" PRIVATE
+@@ -118,7 +129,7 @@ qt_feature("webengine-kerberos" PRIVATE
      LABEL "Kerberos Authentication"
      PURPOSE "Enables Kerberos Authentication Support"
      AUTODETECT WIN32
@@ -41,7 +41,7 @@ $NetBSD$
  )
  qt_feature("webengine-spellchecker" PUBLIC
      LABEL "Spellchecker"
-@@ -122,7 +133,7 @@ qt_feature("webengine-native-spellchecke
+@@ -128,7 +139,7 @@ qt_feature("webengine-native-spellchecke
      LABEL "Native Spellchecker"
      PURPOSE "Use the system's native spellchecking engine."
      AUTODETECT OFF
@@ -50,7 +50,7 @@ $NetBSD$
  )
  qt_feature("webengine-extensions" PUBLIC
      SECTION "WebEngine"
-@@ -171,7 +182,7 @@ qt_feature("webengine-vaapi" PRIVATE
+@@ -179,7 +190,7 @@ qt_feature("webengine-vaapi" PRIVATE
      PURPOSE "Enables support for VA-API hardware acceleration"
      AUTODETECT GBM_FOUND AND LIBVA_FOUND AND QT_FEATURE_vulkan
      # hardware accelerated encoding requires bundled libvpx
@@ -59,7 +59,7 @@ $NetBSD$
  )
  list(LENGTH CMAKE_OSX_ARCHITECTURES osx_arch_count)
  qt_feature("webenginedriver" PUBLIC
-@@ -196,7 +207,7 @@ qt_configure_add_summary_entry(ARGS "web
+@@ -204,7 +215,7 @@ qt_configure_add_summary_entry(ARGS "web
  qt_configure_add_summary_entry(ARGS "webengine-spellchecker")
  qt_configure_add_summary_entry(
      ARGS "webengine-native-spellchecker"
@@ -68,7 +68,7 @@ $NetBSD$
  )
  qt_configure_add_summary_entry(ARGS "webengine-webrtc")
  qt_configure_add_summary_entry(ARGS "webengine-webrtc-pipewire")
-@@ -214,15 +225,21 @@ qt_configure_add_summary_entry(
+@@ -222,15 +233,21 @@ qt_configure_add_summary_entry(
  )
  qt_configure_add_summary_entry(
      ARGS "webengine-vaapi"
@@ -91,9 +91,9 @@ $NetBSD$
 +qt_configure_add_summary_entry(
 +    ARGS "webengine-system-audioio"
  )
- qt_configure_add_summary_entry(ARGS "webengine-v8-context-snapshot")
- qt_configure_add_summary_entry(ARGS "webenginedriver")
-@@ -232,7 +249,7 @@ if(CMAKE_CROSSCOMPILING)
+ qt_configure_add_summary_entry(
+     ARGS "webengine-webrtc-system-openh264"
+@@ -244,7 +261,7 @@ if(CMAKE_CROSSCOMPILING)
      qt_configure_add_report_entry(
          TYPE WARNING
          MESSAGE "Thumb instruction set is required to build ffmpeg for QtWebEngine."
@@ -102,7 +102,7 @@ $NetBSD$
              AND NOT QT_FEATURE_webengine_system_ffmpeg
              AND TEST_architecture_arch MATCHES arm
              AND NOT armThumb
-@@ -251,5 +268,5 @@ qt_configure_add_report_entry(
+@@ -263,5 +280,5 @@ qt_configure_add_report_entry(
  qt_configure_add_report_entry(
      TYPE WARNING
      MESSAGE "System GBM is disabled. The bundled minigbm supports Intel only, you might need to install libgbm to avoid rendering issues."

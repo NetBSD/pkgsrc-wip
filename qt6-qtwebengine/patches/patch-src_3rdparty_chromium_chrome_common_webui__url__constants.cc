@@ -4,19 +4,15 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/common/webui_url_constants.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/chrome/common/webui_url_constants.cc.orig	2025-11-14 07:55:10.000000000 +0000
 +++ src/3rdparty/chromium/chrome/common/webui_url_constants.cc
-@@ -212,21 +212,21 @@ base::span<const base::cstring_view> Chr
+@@ -207,18 +207,18 @@ base::span<const base::cstring_view> Chr
        kChromeUIAssistantOptInHost,
- #endif
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_ASH)
-+    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
-       kChromeUIConnectorsInternalsHost,
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+       kChromeUIConnectorsInternalsHost,
        kChromeUIDiscardsHost,
  #endif
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -32,12 +28,3 @@ $NetBSD$
        kChromeUISandboxHost,
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -305,7 +305,7 @@ base::span<const base::cstring_view> Chr
-        blink::kChromeUIGpuJavaCrashURL,
-        kChromeUIJavaCrashURL,
- #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-        kChromeUIWebUIJsErrorURL,
- #endif
-        kChromeUIQuitURL,

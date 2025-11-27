@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2025-10-02 00:36:39.000000000 +0000
 +++ src/3rdparty/chromium/content/utility/utility_blink_platform_with_sandbox_support_impl.cc
 @@ -9,7 +9,7 @@
  
@@ -13,9 +13,9 @@ $NetBSD$
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "content/child/child_process_sandbox_support_impl_linux.h"
- #endif
- 
-@@ -17,7 +17,7 @@ namespace content {
+ #elif BUILDFLAG(IS_WIN)
+ #include "content/child/child_process_sandbox_support_impl_win.h"
+@@ -19,7 +19,7 @@ namespace content {
  
  UtilityBlinkPlatformWithSandboxSupportImpl::
      UtilityBlinkPlatformWithSandboxSupportImpl() {
@@ -24,12 +24,12 @@ $NetBSD$
    mojo::PendingRemote<font_service::mojom::FontService> font_service;
    UtilityThread::Get()->BindHostReceiver(
        font_service.InitWithNewPipeAndPassReceiver());
-@@ -35,7 +35,7 @@ UtilityBlinkPlatformWithSandboxSupportIm
- 
+@@ -40,7 +40,7 @@ UtilityBlinkPlatformWithSandboxSupportIm
  blink::WebSandboxSupport*
  UtilityBlinkPlatformWithSandboxSupportImpl::GetSandboxSupport() {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    return sandbox_support_.get();
  #else
    return nullptr;

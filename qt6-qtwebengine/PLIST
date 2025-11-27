@@ -68,6 +68,7 @@ qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebenginecont
 qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebenginecookiestore_p.h
 qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebenginedesktopmediarequest_p.h
 qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebenginedownloadrequest_p.h
+qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebengineextensioninfo_p.h
 qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebengineglobalsettings_p.h
 qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebenginehistory_p.h
 qt6/include/QtWebEngineCore/${PKGVERSION}/QtWebEngineCore/private/qwebenginemessagepumpscheduler_p.h
@@ -87,6 +88,8 @@ qt6/include/QtWebEngineCore/QWebEngineContextMenuRequest
 qt6/include/QtWebEngineCore/QWebEngineCookieStore
 qt6/include/QtWebEngineCore/QWebEngineDesktopMediaRequest
 qt6/include/QtWebEngineCore/QWebEngineDownloadRequest
+qt6/include/QtWebEngineCore/QWebEngineExtensionInfo
+qt6/include/QtWebEngineCore/QWebEngineExtensionManager
 qt6/include/QtWebEngineCore/QWebEngineFileSystemAccessRequest
 qt6/include/QtWebEngineCore/QWebEngineFindTextResult
 qt6/include/QtWebEngineCore/QWebEngineFrame
@@ -130,6 +133,8 @@ qt6/include/QtWebEngineCore/qwebenginecontextmenurequest.h
 qt6/include/QtWebEngineCore/qwebenginecookiestore.h
 qt6/include/QtWebEngineCore/qwebenginedesktopmediarequest.h
 qt6/include/QtWebEngineCore/qwebenginedownloadrequest.h
+qt6/include/QtWebEngineCore/qwebengineextensioninfo.h
+qt6/include/QtWebEngineCore/qwebengineextensionmanager.h
 qt6/include/QtWebEngineCore/qwebenginefilesystemaccessrequest.h
 qt6/include/QtWebEngineCore/qwebenginefindtextresult.h
 qt6/include/QtWebEngineCore/qwebengineframe.h
@@ -163,6 +168,7 @@ qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebeng
 qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebenginedialogrequests_p.h
 qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebenginefaviconprovider_p_p.h
 qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebengineforeigntypes_p.h
+qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebengineframe_p.h
 qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebenginenewwindowrequest_p.h
 qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebengineprofile_p.h
 qt6/include/QtWebEngineQuick/${PKGVERSION}/QtWebEngineQuick/private/qquickwebengineprofileprototype_p.h
@@ -335,14 +341,6 @@ qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlTargets
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlVersionlessTargets.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateConfig.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateConfigVersion.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateDependencies.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateTargets.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateVersionlessAliasTargets.cmake
-qt6/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6WebEngineQuickDelegatesQmlPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateConfig.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateConfigVersion.cmake
@@ -406,13 +404,13 @@ qt6/lib/pkgconfig/Qt6WebEngineWidgets.pc
 qt6/libexec/QtWebEngineProcess
 qt6/libexec/qwebengine_convert_dict
 qt6/libexec/webenginedriver
-qt6/metatypes/qt6pdf_release_metatypes.json
-qt6/metatypes/qt6pdfquick_release_metatypes.json
-qt6/metatypes/qt6pdfwidgets_release_metatypes.json
-qt6/metatypes/qt6webenginecore_release_metatypes.json
-qt6/metatypes/qt6webenginequick_release_metatypes.json
-qt6/metatypes/qt6webenginequickdelegatesqml_release_metatypes.json
-qt6/metatypes/qt6webenginewidgets_release_metatypes.json
+qt6/metatypes/qt6pdf_metatypes.json
+qt6/metatypes/qt6pdfquick_metatypes.json
+qt6/metatypes/qt6pdfwidgets_metatypes.json
+qt6/metatypes/qt6webenginecore_metatypes.json
+qt6/metatypes/qt6webenginequick_metatypes.json
+qt6/metatypes/qt6webenginequickdelegatesqml_metatypes.json
+qt6/metatypes/qt6webenginewidgets_metatypes.json
 qt6/mkspecs/modules/qt_lib_pdf.pri
 qt6/mkspecs/modules/qt_lib_pdf_private.pri
 qt6/mkspecs/modules/qt_lib_pdfquick.pri
@@ -424,7 +422,6 @@ qt6/mkspecs/modules/qt_lib_webenginecore_private.pri
 qt6/mkspecs/modules/qt_lib_webenginequick.pri
 qt6/mkspecs/modules/qt_lib_webenginequick_private.pri
 qt6/mkspecs/modules/qt_lib_webenginequickdelegatesqml.pri
-qt6/mkspecs/modules/qt_lib_webenginequickdelegatesqml_private.pri
 qt6/mkspecs/modules/qt_lib_webenginewidgets.pri
 qt6/mkspecs/modules/qt_lib_webenginewidgets_private.pri
 qt6/modules/Pdf.json

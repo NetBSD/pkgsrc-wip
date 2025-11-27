@@ -5,7 +5,7 @@ $NetBSD$
   - add sndio
   - add audioio
 
---- src/core/CMakeLists.txt.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/core/CMakeLists.txt.orig	2025-11-14 07:55:10.000000000 +0000
 +++ src/core/CMakeLists.txt
 @@ -21,7 +21,7 @@ add_subdirectory(tools/qwebengine_conver
  #   TOOLCHAIN SETUP
@@ -16,16 +16,16 @@ $NetBSD$
      setup_toolchains()
  endif()
  
-@@ -200,7 +200,7 @@ foreach(arch ${archs})
+@@ -212,7 +212,7 @@ foreach(arch ${archs})
                  accessibility_activation_observer.cpp accessibility_activation_observer.h
          )
  
 -        extend_gn_target(${buildGn} CONDITION LINUX
 +        extend_gn_target(${buildGn} CONDITION UNIX
              SOURCES
-                 ozone/gl_ozone_angle_qt.cpp ozone/gl_ozone_angle_qt.h
+                 ozone/gl_ozone_qt.cpp ozone/gl_ozone_qt.h
                  ozone/ozone_util_qt.cpp ozone/ozone_util_qt.h
-@@ -208,17 +208,17 @@ foreach(arch ${archs})
+@@ -220,17 +220,17 @@ foreach(arch ${archs})
                  ozone/surface_factory_qt.cpp ozone/surface_factory_qt.h
          )
  
@@ -46,15 +46,16 @@ $NetBSD$
              SOURCES
                  ozone/egl_helper.cpp ozone/egl_helper.h
          )
-@@ -319,6 +319,7 @@ foreach(arch ${archs})
+@@ -342,6 +342,8 @@ foreach(arch ${archs})
          append_pkg_config_setup(gnArgArg)
  
          list(APPEND gnArgArg
 +            extra_cxxflags="@EXTRA_CXXFLAGS@"
++            use_system_libdrm=true
              qtwebengine_target="${buildDir}/${config}/${arch}:QtWebEngineCore"
              build_dawn_tests=false
              build_with_tflite_lib=false
-@@ -438,7 +439,7 @@ foreach(arch ${archs})
+@@ -461,7 +462,7 @@ foreach(arch ${archs})
              CONDITION QT_FEATURE_webenginedriver
          )
  
@@ -63,7 +64,7 @@ $NetBSD$
              list(APPEND gnArgArg
                  angle_enable_gl=true
                  use_gtk=false # GTK toolkit bindings
-@@ -507,6 +508,14 @@ foreach(arch ${archs})
+@@ -530,6 +531,14 @@ foreach(arch ${archs})
                  CONDITION QT_FEATURE_webengine_system_pulseaudio
              )
              extend_gn_list(gnArgArg
