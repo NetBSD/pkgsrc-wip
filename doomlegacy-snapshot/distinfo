@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (doomlegacy_1.48.16_common.zip) = 45f00f88cdda87766a45b3545d2d04a5cc6307c912a76d4c4e4d40c02feb7501
-SHA512 (doomlegacy_1.48.16_common.zip) = 250d3ffec9124220e96bea6136704bfa77cfe714d2dc16249af08e48e099942c6470ff9799b3b9d40fa284912763c45e2a17c26177da248654773b03b04f69d9
-Size (doomlegacy_1.48.16_common.zip) = 1066414 bytes
+BLAKE2s (doomlegacy_1.48.18_common.zip) = 621f0ad2f941ce1def6a964d61e38c02f76ebfe62fa21cc4670148c159799996
+SHA512 (doomlegacy_1.48.18_common.zip) = 36235e52ec553b7b280485c725fb5a25759e04b4ecef7be472323d770c500ac3c22c628dbb0bc1a87bcb89d40bb7c0a98ae2e3f288f64617a31acb3c98280362
+Size (doomlegacy_1.48.18_common.zip) = 1104556 bytes
 SHA1 (patch-src_am__map.c) = 14b3c8b70c63778ad043827ab2f0b6f4fe07bcde
 SHA1 (patch-src_z__zone.c) = 13f4ff4a4af836f62779544b72e83b9eb109f7a5
