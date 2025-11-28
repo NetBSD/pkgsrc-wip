@@ -39,6 +39,9 @@ ${PYSITELIB}/zino/config/models.pyo
 ${PYSITELIB}/zino/config/polldevs.py
 ${PYSITELIB}/zino/config/polldevs.pyc
 ${PYSITELIB}/zino/config/polldevs.pyo
+${PYSITELIB}/zino/debug.py
+${PYSITELIB}/zino/debug.pyc
+${PYSITELIB}/zino/debug.pyo
 ${PYSITELIB}/zino/events.py
 ${PYSITELIB}/zino/events.pyc
 ${PYSITELIB}/zino/events.pyo
