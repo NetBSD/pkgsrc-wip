@@ -5,4 +5,4 @@ SHA512 (audacity-sources-3.7.5.tar.gz) = d253986c88b4004c4a9ebebde52ecb7e5c92a42
 Size (audacity-sources-3.7.5.tar.gz) = 64284764 bytes
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 1974b5a294503ebc03e9690e0182d81258853117
 SHA1 (patch-libraries_lib-basic-ui_BasicUI.cpp) = 31683629ac042af74d301a69d282743923a69266
-SHA1 (patch-libraries_lib-nyquist-effects_NyquistBase.cpp) = a86cf7a9e1a5d14659fa97b10121e738419a0792
+SHA1 (patch-libraries_lib-nyquist-effects_NyquistBase.cpp) = 0cb6e15e077360256e55a425be896dd5edfd9009
