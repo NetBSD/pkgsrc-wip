@@ -16,9 +16,8 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	packaging/portmidi.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.include "options.mk"
+CFLAGS.NetBSD+=	-DCLOCK_MONOTONIC_RAW=CLOCK_MONOTONIC
 
 .include "../../devel/cmake/build.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

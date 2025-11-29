@@ -6,7 +6,7 @@ lib/cmake/PortMidi/PortMidiConfig.cmake
 lib/cmake/PortMidi/PortMidiConfigVersion.cmake
 lib/cmake/PortMidi/PortMidiTargets-release.cmake
 lib/cmake/PortMidi/PortMidiTargets.cmake
-lib/libportmidi.2.0.3.dylib
-lib/libportmidi.2.dylib
-lib/libportmidi.dylib
+lib/libportmidi.so
+lib/libportmidi.so.2
+lib/libportmidi.so.2.0.3
 lib/pkgconfig/portmidi.pc
