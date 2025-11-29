@@ -3,4 +3,16 @@ $NetBSD$
 BLAKE2s (collectd-unbound-e751f863013753578f47d6528cea1b4f91a5f6c6.tar.gz) = 873899a8f03688cc933e695bd6ff63bebdc2af9d214cdce8cf0864e8a0b90bfc
 SHA512 (collectd-unbound-e751f863013753578f47d6528cea1b4f91a5f6c6.tar.gz) = 83fb4fce2a299049d7e63ff6b06d148ffcb00e5dcf1a515ecfdfd902c8a8960a8c4fee20ae81befb908df4a0f0151648ca49169020af8289bdaa213e3c42cd59
 Size (collectd-unbound-e751f863013753578f47d6528cea1b4f91a5f6c6.tar.gz) = 2639 bytes
+BLAKE2s (collectd.org_@v_v0.6.0.mod) = 44a06a84593a7ee1a7e1318402e997e8e5f04c6e55097a77ccfa6c974ffff2de
+SHA512 (collectd.org_@v_v0.6.0.mod) = 4868cb2d53e60c3f69f2b2ab56cdc4df9edbe9b6b2cbb3bbb59dc38bc46e51a1b3092060c5ac40c45dac59181720918b81fab7b8049c3477f70b531c42ac770b
+Size (collectd.org_@v_v0.6.0.mod) = 426 bytes
+BLAKE2s (collectd.org_@v_v0.6.0.zip) = 975b341a0f4623e8f43fa43a52c1720207a23062e63f7abf117804fb14d4279b
+SHA512 (collectd.org_@v_v0.6.0.zip) = 1303890dbf18137bc712920dc5035e051f79ea0b5bdea5effd9b456a524f582e95e5831daf4f219fa7269bb9b4081518f6fa4bce0bfe4041ebbab5ca5be7470e
+Size (collectd.org_@v_v0.6.0.zip) = 94993 bytes
+BLAKE2s (go.uber.org_multierr_@v_v1.11.0.mod) = af43db525fd91735162b6974a2d5fcd5f747aa82158a7bf08cb4bc6fc8c58ac5
+SHA512 (go.uber.org_multierr_@v_v1.11.0.mod) = f104d72db3ff0496329bf07fa55629a9e8d4f9833769aac37b37bc0b16bc3a88b14f0d249e44f669050275e878c54c35678470e9a99b2f42ae5eb2a2cece9b0e
+Size (go.uber.org_multierr_@v_v1.11.0.mod) = 228 bytes
+BLAKE2s (go.uber.org_multierr_@v_v1.11.0.zip) = 38cc533a0c9eea9b5cc6393d1d24d1c18c1a8e2cbd986575e627372fa23e7389
+SHA512 (go.uber.org_multierr_@v_v1.11.0.zip) = 68040fe6658ae4d8215b807c5ccb00df995cbf6bae56d68beef8335abb38d1008f2814abf71b196ccb1ccde10d5234de2da77055171ae87780816ac20521a662
+Size (go.uber.org_multierr_@v_v1.11.0.zip) = 25681 bytes
 SHA1 (patch-collectd-unbound.go) = 8c9b7aee55b78897fe49bdec46a28020ee409071

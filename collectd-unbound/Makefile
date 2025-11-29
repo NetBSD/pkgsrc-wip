@@ -19,6 +19,11 @@ GO_DIST_BASE=		${DISTNAME}-${GITHUB_TAG}*
 DEPENDS+=		go-collectd-[0-9]*:../../wip/go-collectd
 DEPENDS+=		collectd-[0-9]*:../../sysutils/collectd
 
+post-extract:
+	${CP} ${FILESDIR}/go* ${WRKSRC}
+
+.include "go-modules.mk"
+
 #.include "../../wip/go-collectd/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
