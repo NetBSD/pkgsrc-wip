@@ -3,3 +3,5 @@ $NetBSD$
 BLAKE2s (audacity-sources-3.7.5.tar.gz) = 732b45d3bbb14aca54b4a016de57f12cb93e7fc3124e848f5875bea55e4743b1
 SHA512 (audacity-sources-3.7.5.tar.gz) = d253986c88b4004c4a9ebebde52ecb7e5c92a42485a74041aa6eca0d314437875dc9573785c61005db65d2ae3e07c398b903aafca63406412612b6f748f937b1
 Size (audacity-sources-3.7.5.tar.gz) = 64284764 bytes
+SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 1974b5a294503ebc03e9690e0182d81258853117
+SHA1 (patch-libraries_lib-basic-ui_BasicUI.cpp) = 31683629ac042af74d301a69d282743923a69266

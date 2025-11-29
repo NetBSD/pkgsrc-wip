@@ -1,194 +1,104 @@
-===> Skipping vulnerability checks.
-===> Configuring for audacity-3.7.5
-=> Generating pkg-config file for builtin expat package.
-=> Generating pkg-config files for builtin xz package.
-=> Checking for portability problems in extracted files
--- The ASM_NASM compiler identification is NASM
--- Found assembler: /usr/pkg/bin/nasm
--- Build Info:
---   Host System: NetBSD-11.99.4
---   Host System Name: NetBSD
---   Host System Processor: x86_64
---   Host System Version: 11.99.4
---   Host System Architecture: 64-bit
--- 
---   Compiler: /scratch/wip/audacity/work/.cwrapper/bin/c++
---   Compiler Version: 14.3.0
---   Compiler Standard: 17
---   Compiler Standard Required: ON
---   Compiler Extensions: 
--- 
---   Current Commit: unknown
--- 
--- ========== Using system version of ZLIB ==========
--- ========== Using system version of PNG ==========
--- ========== Using system version of JPEG ==========
--- ========== Using system version of EXPAT ==========
--- ========== Using system version of wxWidgets ==========
--- ========== Using system version of libmp3lame ==========
--- ========== Using system version of mpg123 ==========
--- ========== Using system version of libid3tag ==========
--- ========== Using system version of WavPack ==========
--- ========== Using system version of Ogg ==========
--- ========== Using system version of FLAC ==========
--- ========== Using system version of Opus ==========
--- ========== Using system version of opusfile ==========
--- ========== Using system version of Vorbis ==========
--- ========== Using system version of SndFile ==========
--- ========== Using system version of PortAudio ==========
--- ========== Using system version of RapidJSON ==========
--- ========== Using system version of PortMidi ==========
--- ========== Using system version of vst3sdk ==========
--- Found libuuid: 
-	libuuid_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-	libuuid_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libuuid.so
--- Found lame: 
-	libmp3lame_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-	libmp3lame_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmp3lame.so
--- Found mpg123: 
-	mpg123_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-	mpg123_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmpg123.so
--- Found libid3tag: 
-	libid3tag_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-	libid3tag_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libid3tag.so
--- Found wavpack: 
-	wavpack_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-	wavpack_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libwavpack.so
--- Found PortAudio: 
-	PortAudio_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include/portaudio2
-	PortAudio_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/portaudio2/libportaudio.so
--- RapidJSON found. Headers: /usr/pkg/include
--- VST3SDK not found. Please set VST3SDK_DIR to the path to the vst3sdk directory.
--- Trying to retrieve GTK version from general;-L/usr/pkg/lib;general;-pthread;general;-Wl,-R/usr/pkg/lib;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_core-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_html-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_qa-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu_xml-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu_net-3.2.so
--- Fixing up ZLib mess...
--- ========== Configuring vamp ==========
--- Using 'vamp' system library
--- Interface libvamp:
-	include: 
-	Libraries: 
--- ========== Configuring lv2 ==========
--- Using 'lv2' local library
--- Checking for module 'QtGui >= 4.4.0'
---   Package 'QtGui' not found
--- Checking for module 'Qt5Widgets >= 5.1.0'
---   Package 'Qt5Widgets' not found
--- ========== Configuring sbsms ==========
--- Using 'sbsms' local library
--- ========== Configuring soundtouch ==========
--- Using 'soundtouch' system library
--- Interface soundtouch:
-	include: 
-	Libraries: 
--- ========== Configuring twolame ==========
--- Using 'twolame' system library
--- Interface twolame:
-	include: 
-	Libraries: 
--- ========== Configuring manual ==========
--- ========== Configuring images ==========
--- ========== Configuring lib-string-utils ==========
--- ========== Configuring lib-strings ==========
--- ========== Configuring lib-utility ==========
--- ========== Configuring lib-uuid ==========
--- ========== Configuring lib-components ==========
--- ========== Configuring lib-basic-ui ==========
--- ========== Configuring lib-exceptions ==========
--- ========== Configuring lib-export-ui ==========
--- ========== Configuring lib-preferences ==========
--- ========== Configuring soxr ==========
--- Using 'soxr' system library
--- Interface libsoxr:
-	include: 
-	Libraries: lib-string-utils;lib-strings;lib-utility;lib-uuid;lib-components;lib-basic-ui;lib-exceptions;lib-export-ui;lib-preferences;lib-math;lib-files;lib-import-export;lib-ipc;lib-registries;lib-xml;lib-audio-devices;lib-project;lib-screen-geometry;lib-project-rate;lib-file-formats;lib-theme;image-compiler;lib-theme-resources;lib-track;lib-transactions;lib-sample-track;lib-module-manager;lib-project-history;lib-graphics;lib-audio-graph;lib-tags;lib-realtime-effects;lib-audio-io;lib-wave-track;lib-wave-track-settings;lib-wave-track-paint;lib-track-selection;lib-project-file-io;lib-command-parameters;lib-numeric-formats;lib-effects;lib-time-frequency-selection;lib-wx-wrappers;lib-shuttlegui;lib-wx-init;lib-time-track;lib-vst3;lib-snapping;lib-vst;lib-ladspa;lib-audio-unit;lib-playable-track;lib-time-and-pitch;lib-mixer;lib-channel;lib-stretching-sequence;lib-menus;lib-note-track;lib-viewport;lib-music-information-retrieval;lib-crypto;lib-fft;lib-concurrency;lib-sqlite-helpers;lib-preference-pages;lib-dynamic-range-processor;lib-audacity-application-logic;lib-builtin-effects;lib-label-track;lib-wave-track-fft;lib-lv2;lib-nyquist-effects;lib-sentry-reporting
--- ========== Configuring lib-math ==========
--- ========== Configuring lib-files ==========
--- ========== Configuring lib-import-export ==========
--- ========== Configuring lib-ipc ==========
--- ========== Configuring lib-registries ==========
--- ========== Configuring lib-xml ==========
--- ========== Configuring lib-audio-devices ==========
--- ========== Configuring lib-project ==========
--- ========== Configuring lib-screen-geometry ==========
--- ========== Configuring lib-project-rate ==========
--- ========== Configuring lib-file-formats ==========
--- ========== Configuring lib-theme ==========
--- ========== Configuring lib-theme-resources ==========
--- ========== Configuring lib-track ==========
--- ========== Configuring lib-transactions ==========
--- ========== Configuring lib-sample-track ==========
--- ========== Configuring lib-module-manager ==========
--- ========== Configuring lib-project-history ==========
--- ========== Configuring lib-graphics ==========
--- ========== Configuring lib-audio-graph ==========
--- ========== Configuring lib-tags ==========
--- ========== Configuring lib-realtime-effects ==========
--- ========== Configuring lib-audio-io ==========
--- ========== Configuring lib-wave-track ==========
--- ========== Configuring lib-wave-track-settings ==========
--- ========== Configuring lib-wave-track-paint ==========
--- ========== Configuring lib-track-selection ==========
--- ========== Configuring sqlite ==========
--- Using 'sqlite' system library
--- Interface sqlite:
-	include: 
-	Libraries: lib-string-utils;lib-strings;lib-utility;lib-uuid;lib-components;lib-basic-ui;lib-exceptions;lib-export-ui;lib-preferences;lib-math;lib-files;lib-import-export;lib-ipc;lib-registries;lib-xml;lib-audio-devices;lib-project;lib-screen-geometry;lib-project-rate;lib-file-formats;lib-theme;image-compiler;lib-theme-resources;lib-track;lib-transactions;lib-sample-track;lib-module-manager;lib-project-history;lib-graphics;lib-audio-graph;lib-tags;lib-realtime-effects;lib-audio-io;lib-wave-track;lib-wave-track-settings;lib-wave-track-paint;lib-track-selection;lib-project-file-io;lib-command-parameters;lib-numeric-formats;lib-effects;lib-time-frequency-selection;lib-wx-wrappers;lib-shuttlegui;lib-wx-init;lib-time-track;lib-vst3;lib-snapping;lib-vst;lib-ladspa;lib-audio-unit;lib-playable-track;lib-time-and-pitch;lib-mixer;lib-channel;lib-stretching-sequence;lib-menus;lib-note-track;lib-viewport;lib-music-information-retrieval;lib-crypto;lib-fft;lib-concurrency;lib-sqlite-helpers;lib-preference-pages;lib-dynamic-range-processor;lib-audacity-application-logic;lib-builtin-effects;lib-label-track;lib-wave-track-fft;lib-lv2;lib-nyquist-effects;lib-sentry-reporting
--- ========== Configuring lib-project-file-io ==========
--- ========== Configuring lib-command-parameters ==========
--- ========== Configuring lib-numeric-formats ==========
--- ========== Configuring lib-effects ==========
--- ========== Configuring lib-time-frequency-selection ==========
--- ========== Configuring lib-wx-wrappers ==========
--- ========== Configuring lib-shuttlegui ==========
--- ========== Configuring lib-wx-init ==========
--- ========== Configuring lib-time-track ==========
--- ========== Configuring lib-vst3 ==========
--- ========== Configuring lib-snapping ==========
--- ========== Configuring lib-vst ==========
--- ========== Configuring lib-ladspa ==========
--- ========== Configuring lib-playable-track ==========
--- ========== Configuring lib-time-and-pitch ==========
--- ========== Configuring lib-mixer ==========
--- ========== Configuring lib-channel ==========
--- ========== Configuring lib-stretching-sequence ==========
--- ========== Configuring lib-menus ==========
--- ========== Configuring portsmf ==========
--- Using 'portsmf' local library
--- ========== Configuring lib-note-track ==========
--- ========== Configuring lib-viewport ==========
--- ========== Configuring lib-music-information-retrieval ==========
--- ========== Configuring lib-crypto ==========
--- ========== Configuring lib-fft ==========
--- ========== Configuring lib-concurrency ==========
--- ========== Configuring lib-sqlite-helpers ==========
--- ========== Configuring lib-preference-pages ==========
--- ========== Configuring lib-dynamic-range-processor ==========
--- ========== Configuring lib-audacity-application-logic ==========
--- ========== Configuring lib-builtin-effects ==========
--- ========== Configuring lib-label-track ==========
--- ========== Configuring lib-wave-track-fft ==========
--- ========== Configuring lib-lv2 ==========
--- ========== Configuring lib-nyquist-effects ==========
--- ========== Configuring locale ==========
--- ========== Configuring Audacity ==========
--- Using precompiled headers
--- ========== Configuring mod-null ==========
--- ========== Configuring mod-mp3 ==========
--- ========== Configuring mod-pcm ==========
--- ========== Configuring mod-cl ==========
--- ========== Configuring mod-lof ==========
--- ========== Configuring mod-aup ==========
--- ========== Configuring mod-ogg ==========
--- ========== Configuring mod-flac ==========
--- ========== Configuring mod-mp2 ==========
--- ========== Configuring mod-wavpack ==========
--- ========== Configuring mod-mpg123 ==========
--- ========== Configuring lib-ffmpeg-support ==========
--- ========== Configuring mod-ffmpeg ==========
--- ========== Configuring mod-opus ==========
--- ========== Configuring mod-midi-import-export ==========
--- ========== Configuring mod-script-pipe ==========
--- ========== Configuring mod-nyq-bench ==========
--- ========== Configuring nyquist ==========
--- ========== Configuring plug-ins ==========
--- Configuring done (0.9s)
--- Generating done (0.2s)
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::wxTabTraversalWrapper<wxWindow*&, wxString, wxString const&, wxString const&, wxString, long&, wxPoint const&, wxSize const&, wxString>(wxWindow*&, wxString&&, wxString const&, wxString const&, wxString&&, long&, wxPoint const&, wxSize const&, wxString&&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:27:(.text+0xb449): undefined reference to `FileDialog::FileDialog(wxWindow*, wxString const&, wxString const&, wxString const&, wxString const&, long, wxPoint const&, wxSize const&, wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o: in function `ApplyMacroDialog::OnApplyToFiles(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/BatchProcessDialog.cpp:368:(.text+0xb527): undefined reference to `FileDialog::SetFilterIndex(int)'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/BatchProcessDialog.cpp:369:(.text+0xb536): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/BatchProcessDialog.cpp:376:(.text+0xb57e): undefined reference to `FileDialog::GetPaths(wxArrayString&) const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0xc1bd): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0xc262): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text._ZN21wxTabTraversalWrapperI10FileDialogED2Ev[_ZN21wxTabTraversalWrapperI10FileDialogED5Ev]+0x32): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text._ZN21wxTabTraversalWrapperI10FileDialogED0Ev[_ZN21wxTabTraversalWrapperI10FileDialogED5Ev]+0x2c): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text._ZN17FileDialogWrapperD2Ev[_ZN17FileDialogWrapperD5Ev]+0x32): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22: more undefined references to `FileDialog::~FileDialog()' follow
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTI21wxTabTraversalWrapperI10FileDialogE[_ZTI21wxTabTraversalWrapperI10FileDialogE]+0x10): undefined reference to `typeinfo for FileDialog'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x20): undefined reference to `FileDialog::GetClassInfo() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x80): undefined reference to `FileDialog::GetEventTable() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x88): undefined reference to `FileDialog::GetEventHashTable() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x598): undefined reference to `FileDialog::DoSetSize(int, int, int, int, int)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x678): undefined reference to `FileDialog::AddChildGTK(wxWindow*)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x7a0): undefined reference to `FileDialog::ShowModal()'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x7f0): undefined reference to `FileDialog::SetMessage(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x7f8): undefined reference to `FileDialog::SetPath(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x800): undefined reference to `FileDialog::SetDirectory(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x808): undefined reference to `FileDialog::SetFilename(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x810): undefined reference to `FileDialog::SetWildcard(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x818): undefined reference to `FileDialog::SetFilterIndex(int)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x828): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x830): undefined reference to `FileDialog::GetPaths(wxArrayString&) const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x840): undefined reference to `FileDialog::GetFilename() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x848): undefined reference to `FileDialog::GetFilenames(wxArrayString&) const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x858): undefined reference to `FileDialog::GetFilterIndex() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV21wxTabTraversalWrapperI10FileDialogE[_ZTV21wxTabTraversalWrapperI10FileDialogE]+0x8a0): undefined reference to `FileDialog::SetFileExtension(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x20): undefined reference to `FileDialog::GetClassInfo() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x80): undefined reference to `FileDialog::GetEventTable() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x88): undefined reference to `FileDialog::GetEventHashTable() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x598): undefined reference to `FileDialog::DoSetSize(int, int, int, int, int)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x678): undefined reference to `FileDialog::AddChildGTK(wxWindow*)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x7a0): undefined reference to `FileDialog::ShowModal()'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x7f0): undefined reference to `FileDialog::SetMessage(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x7f8): undefined reference to `FileDialog::SetPath(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x800): undefined reference to `FileDialog::SetDirectory(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x808): undefined reference to `FileDialog::SetFilename(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x810): undefined reference to `FileDialog::SetWildcard(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x818): undefined reference to `FileDialog::SetFilterIndex(int)'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x828): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x830): undefined reference to `FileDialog::GetPaths(wxArrayString&) const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x840): undefined reference to `FileDialog::GetFilename() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x848): undefined reference to `FileDialog::GetFilenames(wxArrayString&) const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x858): undefined reference to `FileDialog::GetFilterIndex() const'
+ld: src/CMakeFiles/Audacity.dir/BatchProcessDialog.cpp.o:(.data.rel.ro._ZTV17FileDialogWrapper[_ZTV17FileDialogWrapper]+0x8a0): undefined reference to `FileDialog::SetFileExtension(wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/ProjectFileManager.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::wxTabTraversalWrapper<wxWindow*&, wxString, wxString const&, wxString const&, wxString, long&, wxPoint const&, wxSize const&, wxString>(wxWindow*&, wxString&&, wxString const&, wxString const&, wxString&&, long&, wxPoint const&, wxSize const&, wxString&&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:27:(.text+0x1f9b): undefined reference to `FileDialog::FileDialog(wxWindow*, wxString const&, wxString const&, wxString const&, wxString const&, long, wxPoint const&, wxSize const&, wxString const&)'
+ld: src/CMakeFiles/Audacity.dir/ProjectFileManager.cpp.o: in function `ProjectFileManager::ShowOpenDialog(FileNames::Operation, FileNames::FileType const&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/ProjectFileManager.cpp:879:(.text+0x20dd): undefined reference to `FileDialog::SetFilterIndex(int)'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/ProjectFileManager.cpp:881:(.text+0x20e5): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/ProjectFileManager.cpp:884:(.text+0x20f0): undefined reference to `FileDialog::GetFilterIndex() const'
+ld: src/CMakeFiles/Audacity.dir/ProjectFileManager.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0x2135): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/ProjectFileManager.cpp.o: in function `ProjectFileManager::ShowOpenDialog(FileNames::Operation, FileNames::FileType const&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/ProjectFileManager.cpp:892:(.text+0x21f9): undefined reference to `FileDialog::GetPaths(wxArrayString&) const'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/ProjectFileManager.cpp:895:(.text+0x2204): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/ProjectFileManager.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::wxTabTraversalWrapper<wxWindow*&, wxString, wxString const&, wxString const&, wxString, long&, wxPoint const&, wxSize const&, wxString>(wxWindow*&, wxString&&, wxString const&, wxString const&, wxString&&, long&, wxPoint const&, wxSize const&, wxString&&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:30:(.text.unlikely+0x25c): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/ProjectFileManager.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text.unlikely+0x349): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/effects/EqualizationCurvesDialog.cpp.o: in function `EqualizationCurvesDialog::OnImport(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/EqualizationCurvesDialog.cpp:438:(.text+0x25b6): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/EqualizationCurvesDialog.cpp:441:(.text+0x25d0): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/effects/EqualizationCurvesDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0x2813): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/effects/EqualizationCurvesDialog.cpp.o: in function `EqualizationCurvesDialog::OnExport(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/EqualizationCurvesDialog.cpp:455:(.text+0x73b9): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/EqualizationCurvesDialog.cpp:458:(.text+0x73d7): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/effects/EqualizationCurvesDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0x8241): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text.unlikely+0x303): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text.unlikely+0xbe6): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/effects/EqualizationCurvesDialog.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::wxTabTraversalWrapper<wxWindow*&, wxString, wxString const&, wxString const&, wxString, long&, wxPoint const&, wxSize const&, wxString>(wxWindow*&, wxString&&, wxString const&, wxString const&, wxString&&, long&, wxPoint const&, wxSize const&, wxString&&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:27:(.text._ZN17FileDialogWrapperC2EP8wxWindowRK18TranslatableStringRK8wxStringS7_RKSt6vectorIN9FileNames8FileTypeESaISA_EElRK7wxPointRK6wxSizeS4_[_ZN17FileDialogWrapperC5EP8wxWindowRK18TranslatableStringRK8wxStringS7_RKSt6vectorIN9FileNames8FileTypeESaISA_EElRK7wxPointRK6wxSizeS4_]+0x185): undefined reference to `FileDialog::FileDialog(wxWindow*, wxString const&, wxString const&, wxString const&, wxString const&, long, wxPoint const&, wxSize const&, wxString const&)'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:30:(.text._ZN17FileDialogWrapperC2EP8wxWindowRK18TranslatableStringRK8wxStringS7_RKSt6vectorIN9FileNames8FileTypeESaISA_EElRK7wxPointRK6wxSizeS4_[_ZN17FileDialogWrapperC5EP8wxWindowRK18TranslatableStringRK8wxStringS7_RKSt6vectorIN9FileNames8FileTypeESaISA_EElRK7wxPointRK6wxSizeS4_]+0x2a5): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `NyquistEffect::OnFileButton(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:803:(.text+0x2a59): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:813:(.text+0x2ad0): undefined reference to `FileDialog::GetPaths(wxArrayString&) const'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0x305e): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `NyquistEffect::OnFileButton(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:824:(.text+0x3144): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `NyquistEffect::OnLoad(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:634:(.text+0x6ed8): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:639:(.text+0x6eee): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0x70ff): undefined reference to `FileDialog::~FileDialog()'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `NyquistEffect::OnSave(wxCommandEvent&)':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:661:(.text+0x7af8): undefined reference to `FileDialog::ShowModal()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/src/effects/nyquist/Nyquist.cpp:666:(.text+0x7b0e): undefined reference to `FileDialog::GetPath() const'
+ld: src/CMakeFiles/Audacity.dir/effects/nyquist/Nyquist.cpp.o: in function `wxTabTraversalWrapper<FileDialog>::~wxTabTraversalWrapper()':
+/scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text+0x7d04): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text.unlikely+0x459): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text.unlikely+0xf55): undefined reference to `FileDialog::~FileDialog()'
+ld: /scratch/wip/audacity/work/audacity-sources-3.7.5/libraries/lib-wx-wrappers/wxPanelWrapper.h:22:(.text.unlikely+0x11f0): undefined reference to `FileDialog::~FileDialog()'
+ld: Debug/lib/audacity/lib-wx-wrappers.so: undefined reference to `FileDialog::~FileDialog()'
+ld: Debug/lib/audacity/lib-wx-wrappers.so: undefined reference to `FileDialog::FileDialog(wxWindow*, wxString const&, wxString const&, wxString const&, wxString const&, long, wxPoint const&, wxSize const&, wxString const&)'

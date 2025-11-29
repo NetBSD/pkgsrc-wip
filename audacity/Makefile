@@ -21,6 +21,10 @@ USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-Daudacity_conan_enabled=OFF
 #CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_zlib=system
 CMAKE_CONFIGURE_ARGS+=	-Daudacity_lib_preference=system
+# unpackaged
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_has_vst3=off
+# unpackaged
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_portsmf:STRING=local
 CMAKE_CONFIGURE_ARGS+=	-DPortAudio_INCLUDE_DIR=${BUILDLINK_DIR.portaudio}/include/portaudio2
 CMAKE_CONFIGURE_ARGS+=	-DPortAudio_LIBRARIES=${BUILDLINK_DIR.portaudio}/lib/portaudio2/libportaudio.so
 
@@ -42,11 +46,11 @@ PKGCONFIG_OVERRIDE+=	lib-src/soundtouch/soundtouch-1.4.pc.in
 PKGCONFIG_OVERRIDE+=	lib-src/soundtouch/soundtouch.pc.in
 PKGCONFIG_OVERRIDE+=	lib-src/twolame/twolame.pc.in
 
+# runs image-compiler during build which wants to find lib-theme.so
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib/audacity
+
 .include "../../lang/python/tool.mk"
 .include "../../devel/cmake/build.mk"
-
-# ========= Using system version of PortMidi ==========
-# ========= Using system version of vst3sdk ==========
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -60,6 +64,7 @@ PKGCONFIG_OVERRIDE+=	lib-src/twolame/twolame.pc.in
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../audio/soundtouch/buildlink3.mk"
+.include "../../audio/suil/buildlink3.mk"
 .include "../../audio/twolame/buildlink3.mk"
 .include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
@@ -71,5 +76,6 @@ PKGCONFIG_OVERRIDE+=	lib-src/twolame/twolame.pc.in
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/rapidjson/buildlink3.mk"
+.include "../../wip/portmidi/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
