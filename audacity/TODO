@@ -1,23 +1,25 @@
+===> Skipping vulnerability checks.
+===> Configuring for audacity-3.7.5
 => Generating pkg-config file for builtin expat package.
 => Generating pkg-config files for builtin xz package.
 => Checking for portability problems in extracted files
 -- The ASM_NASM compiler identification is NASM
 -- Found assembler: /usr/pkg/bin/nasm
 -- Build Info:
---   Host System: NetBSD-11.99.3
+--   Host System: NetBSD-11.99.4
 --   Host System Name: NetBSD
 --   Host System Processor: x86_64
---   Host System Version: 11.99.3
+--   Host System Version: 11.99.4
 --   Host System Architecture: 64-bit
---
+-- 
 --   Compiler: /scratch/wip/audacity/work/.cwrapper/bin/c++
 --   Compiler Version: 14.3.0
 --   Compiler Standard: 17
 --   Compiler Standard Required: ON
---   Compiler Extensions:
---
+--   Compiler Extensions: 
+-- 
 --   Current Commit: unknown
---
+-- 
 -- ========== Using system version of ZLIB ==========
 -- ========== Using system version of PNG ==========
 -- ========== Using system version of JPEG ==========
@@ -37,94 +39,51 @@
 -- ========== Using system version of RapidJSON ==========
 -- ========== Using system version of PortMidi ==========
 -- ========== Using system version of vst3sdk ==========
--- Found libuuid:
-        libuuid_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-        libuuid_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libuuid.so
-wxWidgets_LIBRARIES=general;-L/usr/pkg/lib;general;-pthread;general;-Wl,-R/usr/pkg/lib;general;-lwx_baseu-3.2;general;-lwx_gtk3u_core-3.2;general;-lwx_gtk3u_html-3.2;general;-lwx_gtk3u_qa-3.2;general;-lwx_baseu_xml-3.2;general;-lwx_baseu_net-3.2
-wxWidgets_LIBRARY_DIRS=/usr/pkg/lib
--- Found lame:
-        libmp3lame_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-        libmp3lame_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmp3lame.so
--- Found mpg123:
-        mpg123_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-        mpg123_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmpg123.so
--- Found libid3tag:
-        libid3tag_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-        libid3tag_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libid3tag.so
--- Found wavpack:
-        wavpack_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
-        wavpack_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libwavpack.so
--- Found PortAudio:
-        PortAudio_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include/portaudio2
-        PortAudio_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/portaudio2/libportaudio.so
+-- Found libuuid: 
+	libuuid_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+	libuuid_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libuuid.so
+-- Found lame: 
+	libmp3lame_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+	libmp3lame_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmp3lame.so
+-- Found mpg123: 
+	mpg123_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+	mpg123_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libmpg123.so
+-- Found libid3tag: 
+	libid3tag_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+	libid3tag_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libid3tag.so
+-- Found wavpack: 
+	wavpack_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include
+	wavpack_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/libwavpack.so
+-- Found PortAudio: 
+	PortAudio_INCLUDE_DIR: /scratch/wip/audacity/work/.buildlink/include/portaudio2
+	PortAudio_LIBRARIES: /scratch/wip/audacity/work/.buildlink/lib/portaudio2/libportaudio.so
 -- RapidJSON found. Headers: /usr/pkg/include
 -- VST3SDK not found. Please set VST3SDK_DIR to the path to the vst3sdk directory.
--- Check if compiler accepts -pthread
--- Check if compiler accepts -pthread - yes
 -- Trying to retrieve GTK version from general;-L/usr/pkg/lib;general;-pthread;general;-Wl,-R/usr/pkg/lib;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_core-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_html-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_gtk3u_qa-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu_xml-3.2.so;general;/scratch/wip/audacity/work/.buildlink/lib/libwx_baseu_net-3.2.so
--- Found PkgConfig: /scratch/wip/audacity/work/.tools/bin/pkg-config (found version "2.4.3")
--- Checking for module 'gtk+-3.0'
---   Found gtk+-3.0, version 3.24.50
--- Checking for module 'glib-2.0'
---   Found glib-2.0, version 2.84.4
 -- Fixing up ZLib mess...
 -- ========== Configuring vamp ==========
--- Checking for modules 'vamp >= 2.5;vamp-hostsdk >= 2.5'
---   Package 'vamp' not found
---   Package 'vamp-hostsdk' not found
-CMake Error at cmake-proxies/cmake-modules/AudacityFunctions.cmake:768 (find_package):
-  find_package called with invalid argument "vamp-hostsdk >= 2.5"
-Call Stack (most recent call first):
-  cmake-proxies/CMakeLists.txt:8 (addlib)
-
-
--- Using 'vamp' local library
+-- Using 'vamp' system library
+-- Interface libvamp:
+	include: 
+	Libraries: 
 -- ========== Configuring lv2 ==========
--- Checking for modules 'lilv-0 >= 0.24.6;lv2 >= 1.16.0;serd-0 >= 0.30.2;sord-0 >= 0.16.4;sratom-0 >= 0.6.4;suil-0 >= 0.10.6'
---   Package 'lilv-0' not found
---   Package 'lv2' not found
---   Package 'serd-0' not found
---   Package 'sord-0' not found
---   Package 'sratom-0' not found
---   Package 'suil-0' not found
-CMake Error at cmake-proxies/cmake-modules/AudacityFunctions.cmake:768 (find_package):
-  find_package called with invalid argument "lv2 >= 1.16.0"
-Call Stack (most recent call first):
-  cmake-proxies/CMakeLists.txt:9 (addlib)
-
-
 -- Using 'lv2' local library
--- Checking for module 'x11'
---   Found x11, version 1.8.12
--- Checking for module 'gtk+-2.0'
---   Package 'gtk+-2.0' not found
--- Checking for module 'gtk+-3.0'
---   Found gtk+-3.0, version 3.24.50
--- Checking for module 'gtk+-x11-2.0'
---   Package 'gtk+-x11-2.0' not found
--- Checking for module 'gtk+-x11-3.0'
---   Found gtk+-x11-3.0, version 3.24.50
 -- Checking for module 'QtGui >= 4.4.0'
 --   Package 'QtGui' not found
 -- Checking for module 'Qt5Widgets >= 5.1.0'
 --   Package 'Qt5Widgets' not found
 -- ========== Configuring sbsms ==========
--- Checking for module 'sbsms >= 2.2.0'
---   Package 'sbsms' not found
 -- Using 'sbsms' local library
--- Found Threads: TRUE
 -- ========== Configuring soundtouch ==========
--- Checking for module 'soundtouch >= 1.7.1'
---   Package 'soundtouch' not found
--- Using 'soundtouch' local library
+-- Using 'soundtouch' system library
+-- Interface soundtouch:
+	include: 
+	Libraries: 
 -- ========== Configuring twolame ==========
--- Checking for module 'twolame >= 0.3.13'
---   Package 'twolame' not found
--- Using 'twolame' local library
--- Looking for pa_jack.h
--- Looking for pa_jack.h - not found
--- Looking for pa_linux_alsa.h
--- Looking for pa_linux_alsa.h - not found
+-- Using 'twolame' system library
+-- Interface twolame:
+	include: 
+	Libraries: 
 -- ========== Configuring manual ==========
 -- ========== Configuring images ==========
 -- ========== Configuring lib-string-utils ==========
@@ -137,22 +96,10 @@ Call Stack (most recent call first):
 -- ========== Configuring lib-export-ui ==========
 -- ========== Configuring lib-preferences ==========
 -- ========== Configuring soxr ==========
--- Checking for module 'soxr >= 0.1.1'
---   Package 'soxr' not found
--- Using 'soxr' local library
--- Trying SIMD32 C flags:
--- Performing Test DETECT_SIMD32_C_FLAGS
--- Performing Test DETECT_SIMD32_C_FLAGS - Failed
--- Trying SIMD32 C flags: /arch:SSE /fp:fast -D__SSE__
--- Performing Test DETECT_SIMD32_C_FLAGS
--- Performing Test DETECT_SIMD32_C_FLAGS - Failed
--- Trying SIMD32 C flags: -msse -mfpmath=sse
--- Performing Test DETECT_SIMD32_C_FLAGS
--- Performing Test DETECT_SIMD32_C_FLAGS - Failed
--- Trying SIMD32 C flags: -msse -mfpmath=sse
--- Performing Test DETECT_SIMD32_C_FLAGS
--- Performing Test DETECT_SIMD32_C_FLAGS - Failed
--- Could NOT find SIMD32 (missing: SIMD32_C_FLAGS SIMD32_C_FLAGS)
+-- Using 'soxr' system library
+-- Interface libsoxr:
+	include: 
+	Libraries: lib-string-utils;lib-strings;lib-utility;lib-uuid;lib-components;lib-basic-ui;lib-exceptions;lib-export-ui;lib-preferences;lib-math;lib-files;lib-import-export;lib-ipc;lib-registries;lib-xml;lib-audio-devices;lib-project;lib-screen-geometry;lib-project-rate;lib-file-formats;lib-theme;image-compiler;lib-theme-resources;lib-track;lib-transactions;lib-sample-track;lib-module-manager;lib-project-history;lib-graphics;lib-audio-graph;lib-tags;lib-realtime-effects;lib-audio-io;lib-wave-track;lib-wave-track-settings;lib-wave-track-paint;lib-track-selection;lib-project-file-io;lib-command-parameters;lib-numeric-formats;lib-effects;lib-time-frequency-selection;lib-wx-wrappers;lib-shuttlegui;lib-wx-init;lib-time-track;lib-vst3;lib-snapping;lib-vst;lib-ladspa;lib-audio-unit;lib-playable-track;lib-time-and-pitch;lib-mixer;lib-channel;lib-stretching-sequence;lib-menus;lib-note-track;lib-viewport;lib-music-information-retrieval;lib-crypto;lib-fft;lib-concurrency;lib-sqlite-helpers;lib-preference-pages;lib-dynamic-range-processor;lib-audacity-application-logic;lib-builtin-effects;lib-label-track;lib-wave-track-fft;lib-lv2;lib-nyquist-effects;lib-sentry-reporting
 -- ========== Configuring lib-math ==========
 -- ========== Configuring lib-files ==========
 -- ========== Configuring lib-import-export ==========
@@ -181,9 +128,10 @@ Call Stack (most recent call first):
 -- ========== Configuring lib-wave-track-paint ==========
 -- ========== Configuring lib-track-selection ==========
 -- ========== Configuring sqlite ==========
--- Checking for module 'sqlite3 >= 3.31.1'
---   Package 'sqlite3' not found
--- Using 'sqlite' local library
+-- Using 'sqlite' system library
+-- Interface sqlite:
+	include: 
+	Libraries: lib-string-utils;lib-strings;lib-utility;lib-uuid;lib-components;lib-basic-ui;lib-exceptions;lib-export-ui;lib-preferences;lib-math;lib-files;lib-import-export;lib-ipc;lib-registries;lib-xml;lib-audio-devices;lib-project;lib-screen-geometry;lib-project-rate;lib-file-formats;lib-theme;image-compiler;lib-theme-resources;lib-track;lib-transactions;lib-sample-track;lib-module-manager;lib-project-history;lib-graphics;lib-audio-graph;lib-tags;lib-realtime-effects;lib-audio-io;lib-wave-track;lib-wave-track-settings;lib-wave-track-paint;lib-track-selection;lib-project-file-io;lib-command-parameters;lib-numeric-formats;lib-effects;lib-time-frequency-selection;lib-wx-wrappers;lib-shuttlegui;lib-wx-init;lib-time-track;lib-vst3;lib-snapping;lib-vst;lib-ladspa;lib-audio-unit;lib-playable-track;lib-time-and-pitch;lib-mixer;lib-channel;lib-stretching-sequence;lib-menus;lib-note-track;lib-viewport;lib-music-information-retrieval;lib-crypto;lib-fft;lib-concurrency;lib-sqlite-helpers;lib-preference-pages;lib-dynamic-range-processor;lib-audacity-application-logic;lib-builtin-effects;lib-label-track;lib-wave-track-fft;lib-lv2;lib-nyquist-effects;lib-sentry-reporting
 -- ========== Configuring lib-project-file-io ==========
 -- ========== Configuring lib-command-parameters ==========
 -- ========== Configuring lib-numeric-formats ==========
@@ -204,8 +152,6 @@ Call Stack (most recent call first):
 -- ========== Configuring lib-stretching-sequence ==========
 -- ========== Configuring lib-menus ==========
 -- ========== Configuring portsmf ==========
--- Checking for module 'portSMF >= 0.1'
---   Package 'portSMF' not found
 -- Using 'portsmf' local library
 -- ========== Configuring lib-note-track ==========
 -- ========== Configuring lib-viewport ==========
@@ -224,8 +170,6 @@ Call Stack (most recent call first):
 -- ========== Configuring lib-nyquist-effects ==========
 -- ========== Configuring locale ==========
 -- ========== Configuring Audacity ==========
--- Looking for clock_gettime
--- Looking for clock_gettime - not found
 -- Using precompiled headers
 -- ========== Configuring mod-null ==========
 -- ========== Configuring mod-mp3 ==========
@@ -246,4 +190,5 @@ Call Stack (most recent call first):
 -- ========== Configuring mod-nyq-bench ==========
 -- ========== Configuring nyquist ==========
 -- ========== Configuring plug-ins ==========
--- Configuring incomplete, errors occurred!
+-- Configuring done (0.9s)
+-- Generating done (0.2s)
