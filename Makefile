@@ -130,7 +130,6 @@ SUBDIR+=	ada_gnat
 SUBDIR+=	ada_xmlada
 SUBDIR+=	adamem
 SUBDIR+=	adept
-SUBDIR+=	adguardhome
 SUBDIR+=	adjustmtu
 SUBDIR+=	adms
 SUBDIR+=	admsmb

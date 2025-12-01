@@ -1,3 +1,0 @@
-@comment $NetBSD$
-sbin/adguardhome
-share/examples/rc.d/adguardhome
