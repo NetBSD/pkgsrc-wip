@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.21 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (llvm-project-21.1.6.src.tar.xz) = 20455e64705568e539408631758344c7487bcc1f53b17a267427c779d372a152
-SHA512 (llvm-project-21.1.6.src.tar.xz) = f9e6c84828e40cb0a7894258b07240468a9d555c11496a1725bf959444362277a90ea822eeb8c9b51b3b7fecd4dd0b213a28a2f2effefbf43efdd21084d10afc
-Size (llvm-project-21.1.6.src.tar.xz) = 158947864 bytes
+BLAKE2s (llvm-project-21.1.7.src.tar.xz) = 28c3b235070e74f525e7d7be33de0c5e2a3ad5e5a5673d5320e726a532f0139c
+SHA512 (llvm-project-21.1.7.src.tar.xz) = ae30a53ed929df979849f7433bf705bc3d540aa9e12a02a175eb2483d1a56f9ca1203c9b67795f6e84cf2407c28d46d5d5351b290d8735adb5206103fee6f379
+Size (llvm-project-21.1.7.src.tar.xz) = 158956584 bytes
 SHA1 (patch-src_CMakeLists.txt) = 4824994ca6f2f4f0ebc154fff7a17418660e5959
 SHA1 (patch-src_demangle_Utility.h) = 7a4850869f9f4ce858d2cceeb999934c28292a95

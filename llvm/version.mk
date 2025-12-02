@@ -14,7 +14,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	21.1.6
+LLVM_VERSION=	21.1.7
 
 DISTNAME=	llvm-project-${LLVM_VERSION}.src
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
