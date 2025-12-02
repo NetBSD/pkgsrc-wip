@@ -19,13 +19,19 @@ PKG_SUGGESTED_OPTIONS+=	inotify
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mlablgtk)
+BUILD_TARGET+=	gui
+
 PLIST.gtk3=	yes
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
 .include "../../x11/ocaml-lablgtk3/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Minotify)
+BUILD_TARGET+=	fsmonitor
+
 PLIST.monitor=	yes
 
 .include "../../devel/libinotify/buildlink3.mk"
