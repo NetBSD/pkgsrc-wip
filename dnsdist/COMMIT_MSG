@@ -1,0 +1,62 @@
+2.0.2
+Released: 2nd of December 2025
+New Features
+Add a selector to match the incoming protocol¶
+
+References: #14060, pull request 16328
+
+Improvements
+Include a Date: response header for rejected HTTP1 requests
+References: pull request 16430
+Make inserting to the in-memory rings a bit faster
+References: pull request 16315
+Change bogusV4/bogusV6 addresses to static constants to avoid parse in every call (delichik)
+References: pull request 16524
+Better performance when using recvmmsg
+References: pull request 16560
+Expose TimedIPSet to YAML-originated Lua contexts
+References: #16428, pull request 16562
+Update the Rust library version when generating a tarball
+References: #16137, pull request 16310
+Allow selecting a specific version of Lua with meson
+References: #16249, pull request 16316
+Make the round-robin LB policy internal counter atomic
+References: pull request 16320
+luawrapper: don't segfault on failure in traceback handler
+References: #15173, pull request 16345
+Refactor the FFI 'alternate name'interface
+References: pull request 16346
+Prevent copies of dnsheader_aligned objects
+References: pull request 16508
+Raise the maximum number of descriptors to 1M
+References: pull request 16559
+Alter the qname BPF filter to make it const
+References: pull request 16561
+
+Bug Fixes
+Fix a memory leak with OCSP and OpenSSL 3.6.0
+References: pull request 16431
+Fix setting meta keys on response, pass them from question to response
+References: pull request 16325
+Properly handle invalid regular expressions
+References: #16371, pull request 16439
+Fix a crash when a selector or policy cannot be found
+References: #16462, pull request 16507
+Fix query rules bypass after tagging from a dynblock
+References: pull request 16309
+ComboAddress: Fix 'unspecified address' test when the port is set
+References: #16248, pull request 16317
+Set up the dns header for timeout response rules
+References: #16221, pull request 16318
+Fix handling of large XSK frames (ednaq)
+References: #16242, pull request 16319
+Properly handle exceptions when processing timeout rules
+References: #16221, pull request 16322
+Initialize hash perturbation later, and only if needed
+References: #16139, pull request 16326
+Fix reentry issue in TCP downstream I/O on macOS/BSD (Karel Bilek)
+References: #16072, pull request 16327
+Store Lua's debug.traceback function before user can hide it from us
+References: #15173, pull request 16435
+
+

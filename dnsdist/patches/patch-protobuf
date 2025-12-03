@@ -1,3 +1,6 @@
+
+Fix: https://github.com/PowerDNS/pdns/pull/16584
+
 --- dnsdist-protobuf.cc
 +++ dnsdist-protobuf.cc
 @@ -25,6 +25,7 @@
