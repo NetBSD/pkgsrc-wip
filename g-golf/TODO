@@ -1,4 +1,5 @@
   - decide on g-golf vs guile-g-golf
-  - package guile-lib for guile 3, or flip it
+  - make guile-lib work on guile 3.0 (dual, or just change)
+  - make guile-cairo work on guile 3.0 (dual, or just change)
   - resolve installation path (in chosen guile vs separate)
   - test and make work

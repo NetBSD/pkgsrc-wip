@@ -38,6 +38,7 @@ guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/mem-alloc.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/misc-util-funcs.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/quarks.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/simple-xml-subset-parser.go
+guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/type-conversion.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/unix-utils.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/glib/version-information.go
 guile/3.0/lib/guile/3.0/site-ccache/g-golf/gobject.go
@@ -131,6 +132,7 @@ guile/3.0/share/guile/site/g-golf/glib/mem-alloc.scm
 guile/3.0/share/guile/site/g-golf/glib/misc-util-funcs.scm
 guile/3.0/share/guile/site/g-golf/glib/quarks.scm
 guile/3.0/share/guile/site/g-golf/glib/simple-xml-subset-parser.scm
+guile/3.0/share/guile/site/g-golf/glib/type-conversion.scm
 guile/3.0/share/guile/site/g-golf/glib/unix-utils.scm
 guile/3.0/share/guile/site/g-golf/glib/version-information.scm
 guile/3.0/share/guile/site/g-golf/gobject.scm
