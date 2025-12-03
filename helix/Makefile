@@ -30,7 +30,10 @@ INSTALLATION_DIRS+=	share/helix/runtime/grammars
 post-extract:
 	${MKDIR} ${WRKSRC}/runtime/grammars/sources
 .for name rev url path in ${TS_FILES}
-	if [ "${name}" = "tree-sitter-prolog" ]; then ${LN} -s ${WRKDIR}/${name} ${WRKSRC}/runtime/grammars/sources/${path}; else ${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/runtime/grammars/sources/${path}; fi
+	case "${url}" in \
+	"https://codeberg.org/"*) ${LN} -s ${WRKDIR}/${name} ${WRKSRC}/runtime/grammars/sources/${path} ;; \
+	*) ${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/runtime/grammars/sources/${path} ;; \
+	esac
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
