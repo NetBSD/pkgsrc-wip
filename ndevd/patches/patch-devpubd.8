@@ -1,0 +1,19 @@
+$NetBSD$
+
+Fix formatting; replace tabs with spaces.
+
+--- devpubd.8.orig	2025-08-19 18:13:10.000000000 +0000
++++ devpubd.8
+@@ -72,9 +72,9 @@ Additional scripts may be added for othe
+ .Pp
+ Since
+ .Xr drvctl 4
+-allows	only one active reader, ndevd multiplexes it, forwarding
+-all events to	the connected	clients. Clients connect by
+-opening the	SOCK_SEQPACKET Unix domain socket at /var/run/ndevd.socket.
++allows only one active reader, ndevd multiplexes it, forwarding all
++events to the connected	clients. Clients connect by opening the
++SOCK_SEQPACKET Unix domain socket at /var/run/ndevd.socket.
+ .Sh SEE ALSO
+ .Xr drvctl 8 ,
+ .Xr MAKEDEV 8

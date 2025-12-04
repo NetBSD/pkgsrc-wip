@@ -10,6 +10,12 @@ HOMEPAGE=	https://github.com/kikadf/ndevd/
 COMMENT=	NetBSD devpubd + event forwarding to clients
 LICENSE=	original-bsd
 
-CFLAGS+=	-g -O0
+USE_TOOLS+=	sed
 
+NO_CONFIGURE=	yes
+
+MAKE_FLAGS+=	PREFIX=${PREFIX} \
+		MANDIR=${PREFIX}/${PKGMANDIR}/man8
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

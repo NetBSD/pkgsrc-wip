@@ -3,3 +3,6 @@ $NetBSD$
 BLAKE2s (ndevd-25.08.20.tar.gz) = cc59b2f1380e8b2ada8c83ff0fbc3004bc21e379f6e17f1536b885628e9d4b3d
 SHA512 (ndevd-25.08.20.tar.gz) = 88ab33633593fbcaa67760529df7062d17fc3c865ebf5d322e6bd1b0e8b4e2fab9ff87991de671a01d71096a5508b14ec13d4f51ae1c77c5da2c04b4e5075231
 Size (ndevd-25.08.20.tar.gz) = 8298 bytes
+SHA1 (patch-Makefile) = dfdb57ec46ec4833bc3a5b53833ac773836d7e2c
+SHA1 (patch-devpubd.8) = 55e15bfd1cdee43e75e9287ae85125f73f4dff62
+SHA1 (patch-devpubd.c) = a68a7798bcc6d72c442a775e9bb3a75e04bc587a
