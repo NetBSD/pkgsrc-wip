@@ -3,3 +3,5 @@ $NetBSD$
 BLAKE2s (libudev-bsd-0.6.0.3.tar.gz) = ed11a101b940b0cc1f089d50bf7f46ccfa900eadc3c4eae0df6145a14d643c38
 SHA512 (libudev-bsd-0.6.0.3.tar.gz) = 0f2a4ca8fe30ea029676b93e28e0f604aaedb9e988d0e9e97a21a8b21e3245f45cb53ca2e1dc3da0d66820cab9ba150e7164cfa17ae42835f744d313f674d8db
 Size (libudev-bsd-0.6.0.3.tar.gz) = 40267 bytes
+SHA1 (patch-libudev.h) = c7204dcf1232e4e0f3bcefd9d11dea0535d9decb
+SHA1 (patch-udev-device.c) = 5dddf1cb1137030898e02f0194f2b5bfd78a07c8
