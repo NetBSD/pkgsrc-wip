@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/denise
+share/appdata/denise.appdata.xml
 share/applications/denise.desktop
 share/denise/data/Basic
 share/denise/data/Char
@@ -11,21 +12,27 @@ share/denise/data/VC1541-C
 share/denise/data/VC1541-II
 share/denise/data/VC1570
 share/denise/data/VC1571
+share/denise/data/VC1581
+share/denise/data/scpu64
 share/denise/fonts/C64_Pro-STYLE121.ttf
-share/denise/fonts/C64_Pro_Mono-STYLE.ttf
 share/denise/fonts/C64_Pro_Mono-STYLE121.ttf
+share/denise/fonts/SourceCodePro-Medium.ttf
+share/denise/fonts/SourceCodePro-Regular.ttf
+share/denise/fonts/SourceCodePro-Semibold.ttf
 share/denise/fonts/TopazPlus_a500_v1.0.ttf
 share/denise/fonts/Topaz_a500_v1.0.ttf
-share/denise/img/mediaSlot0.png
-share/denise/img/mediaSlot1.png
-share/denise/img/progress.png
-share/denise/img/startscreen.png
+share/denise/images/mediaSlot0.png
+share/denise/images/mediaSlot1.png
+share/denise/images/progress.png
+share/denise/images/startscreen.png
 share/denise/shader/amiga_svideo.slangp
 share/denise/shader/amiga_svideo_light.slangp
 share/denise/shader/amiga_svideo_scanlines.slangp
+share/denise/shader/amiga_yuv.slangp
 share/denise/shader/c64_svideo.slangp
 share/denise/shader/c64_svideo_light.slangp
 share/denise/shader/c64_svideo_scanlines.slangp
+share/denise/shader/c64_yuv.slangp
 share/denise/shader/lottes.slang
 share/denise/shader/resources/bandwidth.slang
 share/denise/shader/resources/bloomHorizontal.slang
@@ -45,6 +52,8 @@ share/denise/shader/resources/radialDistortion.slang
 share/denise/shader/resources/randomLineOffset.slang
 share/denise/shader/resources/scanlines.slang
 share/denise/shader/resources/vicGlitches.slang
+share/denise/shader/resources/yuvDecoding.slang
+share/denise/shader/resources/yuvEncoding.slang
 share/denise/shader/trinitron.slang
 share/denise/shader/trinitron2.slang
 share/denise/sounds/floppy/Amiga/extern/eject.wav
@@ -54,6 +63,13 @@ share/denise/sounds/floppy/Amiga/extern/spindown.wav
 share/denise/sounds/floppy/Amiga/extern/spinup.wav
 share/denise/sounds/floppy/Amiga/extern/step.wav
 share/denise/sounds/floppy/Amiga/extern/stepseek.wav
+share/denise/sounds/floppy/Amiga/intern/eject.wav
+share/denise/sounds/floppy/Amiga/intern/insert.wav
+share/denise/sounds/floppy/Amiga/intern/snatch.wav
+share/denise/sounds/floppy/Amiga/intern/spin.wav
+share/denise/sounds/floppy/Amiga/intern/spindown.wav
+share/denise/sounds/floppy/Amiga/intern/spinup.wav
+share/denise/sounds/floppy/Amiga/intern/step.wav
 share/denise/sounds/floppy/C64/1541-TrackersWorld/eject.wav
 share/denise/sounds/floppy/C64/1541-TrackersWorld/headbang.wav
 share/denise/sounds/floppy/C64/1541-TrackersWorld/insert.wav
@@ -156,17 +172,25 @@ share/denise/sounds/floppy/C64/1541-silent/spin.wav
 share/denise/sounds/floppy/C64/1541-silent/spindown.wav
 share/denise/sounds/floppy/C64/1541-silent/spinup.wav
 share/denise/sounds/floppy/C64/1541-silent/step.wav
-share/denise/sounds/tape/C64/low-cost/anybutton.wav
-share/denise/sounds/tape/C64/low-cost/eject.wav
-share/denise/sounds/tape/C64/low-cost/forwardspin.wav
-share/denise/sounds/tape/C64/low-cost/insert.wav
-share/denise/sounds/tape/C64/low-cost/playspin.wav
-share/denise/sounds/tape/C64/low-cost/playspinup.wav
-share/denise/sounds/tape/C64/low-cost/rewindspin.wav
-share/denise/sounds/tape/C64/low-cost/spindown.wav
-share/denise/sounds/tape/C64/low-cost/stopbutton.wav
+share/denise/sounds/floppy/C64/1581-amiga drive/eject.wav
+share/denise/sounds/floppy/C64/1581-amiga drive/insert.wav
+share/denise/sounds/floppy/C64/1581-amiga drive/spin.wav
+share/denise/sounds/floppy/C64/1581-amiga drive/spindown.wav
+share/denise/sounds/floppy/C64/1581-amiga drive/spinup.wav
+share/denise/sounds/floppy/C64/1581-amiga drive/step.wav
+share/denise/sounds/tape/C64/standard/anybutton.wav
+share/denise/sounds/tape/C64/standard/eject.wav
+share/denise/sounds/tape/C64/standard/forwardspin.wav
+share/denise/sounds/tape/C64/standard/insert.wav
+share/denise/sounds/tape/C64/standard/playspin.wav
+share/denise/sounds/tape/C64/standard/playspinup.wav
+share/denise/sounds/tape/C64/standard/rewindspin.wav
+share/denise/sounds/tape/C64/standard/spindown.wav
+share/denise/sounds/tape/C64/standard/stopbutton.wav
 share/denise/translation/english.png
 share/denise/translation/english.txt
+share/denise/translation/esperanto.png
+share/denise/translation/esperanto.txt
 share/denise/translation/french.png
 share/denise/translation/french.txt
 share/denise/translation/german.png
@@ -180,3 +204,6 @@ share/denise/translation/japanese.txt
 share/denise/translation/spanish.png
 share/denise/translation/spanish.txt
 share/icons/denise.png
+share/icons/hicolor/256x256/apps/denise.png
+share/icons/hicolor/32x32/apps/denise.png
+share/icons/hicolor/48x48/apps/denise.png
