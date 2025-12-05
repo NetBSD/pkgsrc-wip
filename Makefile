@@ -123,6 +123,7 @@ SUBDIR+=	acme-dns
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
 SUBDIR+=	act
+SUBDIR+=	act_runner
 SUBDIR+=	actionlint
 SUBDIR+=	actor-framework
 SUBDIR+=	ad2vcf
