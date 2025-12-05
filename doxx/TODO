@@ -1,4 +1,0 @@
-  cargo:warning=xz-5.2/src/common/mythread.h: In function 'mythread_condtime_set':
-  cargo:warning=xz-5.2/src/common/mythread.h:313:9: error: implicit declaration of function 'gettimeofday' [-Wimplicit-function-declaration]
-  cargo:warning=  313 |         gettimeofday(&now, NULL);
-  cargo:warning=      |         ^~~~~~~~~~~~
