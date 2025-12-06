@@ -1,0 +1,5 @@
+  - get 'make test' to finish running without hanging
+  - check tests, and fix failing ones or report upstream
+  - ponder examples if if they should be installed
+  
+  
