@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (aioxmpp-0.11.0.tar.gz) = 9208186778d8a6f1ac67cca2a1993ee51551a908
-SHA512 (aioxmpp-0.11.0.tar.gz) = afacd5968b484a43747979a38f2cd257ac58fa828c13f4e80f18fd160bf1c04025b44755cd7292d4f8eee7c51d1bb48217c165136e6dcf2c4eee2dbe7f9f6c92
-Size (aioxmpp-0.11.0.tar.gz) = 378562 bytes
+BLAKE2s (aioxmpp-0.12.0.tar.gz) = bf7be9c40ae335bbb4123a6a6e6ced466868ba3f659b32b9f6557db146cbdff2
+SHA512 (aioxmpp-0.12.0.tar.gz) = 411207c8c96a7923bbf52ae47efcbf6140bb9df7bb6b96a6e6f78e75aab2efbed2f159dd0b6ba4720c5231680f765f76846094ab4b1b5ddf8a2c381f6071f24a
+Size (aioxmpp-0.12.0.tar.gz) = 387031 bytes
