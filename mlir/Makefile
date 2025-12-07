@@ -24,4 +24,5 @@ BUILD_TARGET=	mlir-tblgen mlir-headers mlir-libraries
 
 .include "../../devel/cmake/build.mk"
 .include "../../wip/llvm/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
