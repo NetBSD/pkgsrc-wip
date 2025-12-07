@@ -1,0 +1,15 @@
+$NetBSD$
+
+changed man pages installation directory from share/man to man
+
+--- qucs-transcalc/CMakeLists.txt.orig	2025-09-06 14:06:28.000000000 +0000
++++ qucs-transcalc/CMakeLists.txt
+@@ -148,7 +148,7 @@ SET_TARGET_PROPERTIES(${QUCS_NAME}trans 
+ #ADD_SUBDIRECTORY( bitmaps ) -> added as resources
+ ADD_SUBDIRECTORY( examples )
+ 
+-#INSTALL( FILES qucstrans.1 DESTINATION share/man/man1 )
++#INSTALL( FILES qucstrans.1 DESTINATION man/man1 )
+ 
+ #
+ # Prepare the installation

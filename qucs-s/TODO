@@ -1,0 +1,4 @@
+This is my first attempt making a pkgsrc-wip package. It appears to work but
+not sure about the dependencies. It needs to be tested and revised but it 
+is a good starting point.
+

@@ -1,0 +1,15 @@
+$NetBSD$
+
+changed man pages installation directory from share/man to man
+
+--- qucs/CMakeLists.txt.orig	2025-09-06 14:06:28.000000000 +0000
++++ qucs/CMakeLists.txt
+@@ -334,7 +334,7 @@ ENDIF()
+ 
+ INSTALL( FILES ${SCRIPTS} DESTINATION bin/ )
+ 
+-INSTALL( FILES ${QUCS_NAME}.1 DESTINATION share/man/man1 )
++INSTALL( FILES ${QUCS_NAME}.1 DESTINATION man/man1 )
+ 
+ # Install wrapper scripts
+ IF(WIN32)

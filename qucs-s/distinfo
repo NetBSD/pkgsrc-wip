@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (qucs_s/qucs-s-25.2.0.tar.gz) = 25d6270e1ca9999a63797c3a38e8d19778849f6a9806bf9998ee7999e9c22b2c
+SHA512 (qucs_s/qucs-s-25.2.0.tar.gz) = 21161864a03fd120218657403caf51c962f612ee249d8635939eb1b225ae502b5e5f59ef8bcde417aa1783328dba406e2abbe37f75988a789b70d99529986172
+Size (qucs_s/qucs-s-25.2.0.tar.gz) = 4804075 bytes
+SHA1 (patch-contrib_CMakeLists.txt) = e39eccbabca217d35d076ba795e9bca5856b5c05
+SHA1 (patch-qucs-transcalc_CMakeLists.txt) = 9cc19f2990cc0549854e23ecbd808b548b49c3f2
+SHA1 (patch-qucs_CMakeLists.txt) = dff1be9887784fba4293e82d000973895d0dc474
+SHA1 (patch-qucsator__rf_doc_CMakeLists.txt) = af21363ffab36885e9e808ba20a19f9636cf21f3

@@ -1,0 +1,12 @@
+$NetBSD$
+
+changed man pages installation directory from share/man to man
+
+--- contrib/CMakeLists.txt.orig	2025-09-06 14:06:28.000000000 +0000
++++ contrib/CMakeLists.txt
+@@ -2,4 +2,4 @@
+ # Netlist preprocessor script and man page
+ INSTALL( FILES ps2sp DESTINATION bin/ )
+ 
+-INSTALL( FILES ps2sp.1 DESTINATION share/man/man1 )
++INSTALL( FILES ps2sp.1 DESTINATION man/man1 )

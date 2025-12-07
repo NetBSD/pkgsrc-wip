@@ -1,0 +1,12 @@
+$NetBSD$
+
+changed man pages installation directory from share/man to man
+
+--- qucsator_rf/doc/CMakeLists.txt.orig	2025-11-30 15:03:39.403049914 +0000
++++ qucsator_rf/doc/CMakeLists.txt
+@@ -2,4 +2,4 @@
+ 
+ set(MANPAGES qucsator_rf.1 qucsconv_rf.1)
+ 
+-install(FILES ${MANPAGES} DESTINATION share/man/man1)
++install(FILES ${MANPAGES} DESTINATION man/man1)

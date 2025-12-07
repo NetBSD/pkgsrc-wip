@@ -5126,6 +5126,7 @@ SUBDIR+=	qtractor
 SUBDIR+=	quantlib
 SUBDIR+=	quarkcoin
 SUBDIR+=	quassel
+SUBDIR+=	qucs-s
 SUBDIR+=	quex
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
