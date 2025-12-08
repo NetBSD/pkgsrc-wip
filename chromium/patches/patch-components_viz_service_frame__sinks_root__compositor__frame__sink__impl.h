@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
 @@ -222,7 +222,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
    base::TimeDelta display_frame_interval_ = BeginFrameArgs::DefaultInterval();

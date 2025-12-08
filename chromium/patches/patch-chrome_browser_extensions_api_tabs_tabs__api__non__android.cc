@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/tabs/tabs_api_non_android.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/extensions/api/tabs/tabs_api_non_android.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/extensions/api/tabs/tabs_api_non_android.cc
-@@ -624,7 +624,7 @@ ExtensionFunction::ResponseAction Window
+@@ -633,7 +633,7 @@ ExtensionFunction::ResponseAction Window
  // created as minimized.
  // TODO(crbug.com/40254339): Remove this workaround when linux is fixed.
  // TODO(crbug.com/40254339): Find a fix for wayland as well.
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
-   if (new_window->initial_show_state() ==
+   if (new_window->GetBrowserForMigrationOnly()->initial_show_state() ==
        ui::mojom::WindowShowState::kMinimized) {
-     new_window->window()->Minimize();
+     new_window->GetWindow()->Minimize();

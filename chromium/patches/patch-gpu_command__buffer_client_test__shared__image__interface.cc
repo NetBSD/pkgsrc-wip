@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ gpu/command_buffer/client/test_shared_image_interface.cc
-@@ -30,7 +30,7 @@
+@@ -29,7 +29,7 @@
  #include "ui/gfx/gpu_fence.h"
  #include "ui/gfx/gpu_memory_buffer_handle.h"
  
@@ -23,4 +23,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  gfx::GpuMemoryBufferHandle TestSharedImageInterface::CreatePixmapHandle(
      const gfx::Size& size,
-     gfx::BufferFormat format) {
+     viz::SharedImageFormat format) {

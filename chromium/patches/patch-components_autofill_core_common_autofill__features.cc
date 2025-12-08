@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/autofill/core/common/autofill_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/autofill/core/common/autofill_features.cc
 @@ -10,7 +10,7 @@ namespace autofill::features {
  
@@ -13,5 +13,5 @@ $NetBSD$
 -                                         BUILDFLAG(IS_LINUX) ||
 +                                         BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) ||
                                           BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN);
+ constexpr bool IS_WALLET_PASSES_SUPPORTED_PLATFORM = !BUILDFLAG(IS_IOS);
  }
- 

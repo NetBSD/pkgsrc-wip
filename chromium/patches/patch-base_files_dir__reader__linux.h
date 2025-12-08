@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/dir_reader_linux.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/files/dir_reader_linux.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/files/dir_reader_linux.h
 @@ -21,10 +21,16 @@
  #include "base/logging.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/providers/cast/channel/enum_table.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/media_router/common/providers/cast/channel/enum_table.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/media_router/common/providers/cast/channel/enum_table.h
 @@ -368,7 +368,12 @@ class EnumTable {
  

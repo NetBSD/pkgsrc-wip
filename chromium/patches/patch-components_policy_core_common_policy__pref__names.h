@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_pref_names.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/policy/core/common/policy_pref_names.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/policy/core/common/policy_pref_names.h
 @@ -96,7 +96,7 @@ extern const char kFloatingWorkspaceEnab
  #endif

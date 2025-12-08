@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_unittest.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/threading/platform_thread_unittest.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/threading/platform_thread_unittest.cc
 @@ -36,7 +36,7 @@
  #include "base/time/time.h"

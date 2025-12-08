@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c
 @@ -120,10 +120,24 @@ static int arm_get_cpu_caps(void) {
    return flags;

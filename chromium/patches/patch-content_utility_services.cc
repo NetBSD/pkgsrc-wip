@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/services.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/utility/services.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/utility/services.cc
-@@ -74,14 +74,14 @@
+@@ -68,14 +68,14 @@
  extern sandbox::TargetServices* g_utility_target_services;
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -23,7 +23,7 @@ $NetBSD$
  #include "services/shape_detection/public/mojom/shape_detection_service.mojom.h"  // nogncheck
  #include "services/shape_detection/shape_detection_service.h"  // nogncheck
  #endif  // BUILDFLAG(IS_WIN) || (BUILDFLAG(GOOGLE_CHROME_BRANDING) &&
-@@ -237,7 +237,7 @@ auto RunAudio(mojo::PendingReceiver<audi
+@@ -227,7 +227,7 @@ auto RunAudio(mojo::PendingReceiver<audi
        << "task_policy_set TASK_QOS_POLICY";
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD$
    auto* command_line = base::CommandLine::ForCurrentProcess();
    if (sandbox::policy::SandboxTypeFromCommandLine(*command_line) ==
        sandbox::mojom::Sandbox::kNoSandbox) {
-@@ -260,7 +260,7 @@ auto RunAudio(mojo::PendingReceiver<audi
+@@ -250,7 +250,7 @@ auto RunAudio(mojo::PendingReceiver<audi
  }
  
  #if BUILDFLAG(IS_WIN) || (BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -41,7 +41,7 @@ $NetBSD$
  auto RunShapeDetectionService(
      mojo::PendingReceiver<shape_detection::mojom::ShapeDetectionService>
          receiver) {
-@@ -436,7 +436,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -406,7 +406,7 @@ void RegisterMainThreadServices(mojo::Se
    }
  
  #if BUILDFLAG(IS_WIN) || (BUILDFLAG(GOOGLE_CHROME_BRANDING) && \

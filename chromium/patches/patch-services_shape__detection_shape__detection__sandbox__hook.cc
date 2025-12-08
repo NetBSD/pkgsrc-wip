@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/shape_detection/shape_detection_sandbox_hook.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/shape_detection/shape_detection_sandbox_hook.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/shape_detection/shape_detection_sandbox_hook.cc
 @@ -31,8 +31,10 @@ bool ShapeDetectionPreSandboxHook(
      DVLOG(1) << "Successfully opened Chrome Shape Detection shared library.";

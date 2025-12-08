@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_render_params_linux.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- ui/gfx/font_render_params_linux.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ ui/gfx/font_render_params_linux.cc
 @@ -24,7 +24,7 @@
  #include "ui/gfx/linux/fontconfig_util.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -224,7 +224,7 @@ FontRenderParams GetFontRenderParams(con
+@@ -233,7 +233,7 @@ FontRenderParams GetFontRenderParams(con
  
    // Start with the delegate's settings, but let Fontconfig have the final say.
    FontRenderParams params;

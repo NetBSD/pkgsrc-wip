@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-base.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-base.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-base.h
-@@ -36,6 +36,7 @@ enum class EmbeddedTargetOs {
+@@ -37,6 +37,7 @@ enum class EmbeddedTargetOs {
    kWin,
    kStarboard,
    kZOS,

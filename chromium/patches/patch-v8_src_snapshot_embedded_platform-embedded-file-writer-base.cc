@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc
-@@ -148,6 +148,8 @@ EmbeddedTargetOs ToEmbeddedTargetOs(cons
+@@ -150,6 +150,8 @@ EmbeddedTargetOs ToEmbeddedTargetOs(cons
      return EmbeddedTargetOs::kStarboard;
    } else if (string == "zos") {
      return EmbeddedTargetOs::kZOS;

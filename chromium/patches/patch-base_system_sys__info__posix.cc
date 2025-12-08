@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/system/sys_info_posix.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/system/sys_info_posix.cc
-@@ -142,7 +142,7 @@ void GetKernelVersionNumbers(int32_t* ma
+@@ -143,7 +143,7 @@ void GetKernelVersionNumbers(int32_t* ma
  
  namespace base {
  
@@ -15,7 +15,7 @@ $NetBSD$
  // static
  int SysInfo::NumberOfProcessors() {
  #if BUILDFLAG(IS_MAC)
-@@ -198,7 +198,7 @@ int SysInfo::NumberOfProcessors() {
+@@ -199,7 +199,7 @@ int SysInfo::NumberOfProcessors() {
  
    return cached_num_cpus;
  }
@@ -23,8 +23,8 @@ $NetBSD$
 +#endif  // !BUILDFLAG(IS_BSD)
  
  // static
- uint64_t SysInfo::AmountOfVirtualMemory() {
-@@ -286,6 +286,8 @@ std::string SysInfo::OperatingSystemArch
+ ByteCount SysInfo::AmountOfVirtualMemory() {
+@@ -289,6 +289,8 @@ std::string SysInfo::OperatingSystemArch
      arch = "x86";
    } else if (arch == "amd64") {
      arch = "x86_64";

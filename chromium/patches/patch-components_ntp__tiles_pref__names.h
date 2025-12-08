@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/ntp_tiles/pref_names.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/ntp_tiles/pref_names.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/ntp_tiles/pref_names.h
-@@ -48,7 +48,7 @@ inline constexpr char kCustomLinksInitia
+@@ -49,7 +49,7 @@ inline constexpr char kCustomLinksInitia
  
  // Prefs used to cache enterprise shortcuts.
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

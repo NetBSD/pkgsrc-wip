@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/searchbox/searchbox_handler.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/webui/searchbox/searchbox_handler.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/webui/searchbox/searchbox_handler.cc
-@@ -157,7 +157,7 @@ const char* kMacShareIconResourceName =
+@@ -160,7 +160,7 @@ const char* kMacShareIconResourceName =
  #elif BUILDFLAG(IS_WIN)
  const char* kWinShareIconResourceName =
      "//resources/cr_components/searchbox/icons/win_share.svg";
@@ -15,7 +15,7 @@ $NetBSD$
  const char* kLinuxShareIconResourceName =
      "//resources/cr_components/searchbox/icons/share.svg";
  #else
-@@ -217,7 +217,7 @@ static void DefineChromeRefreshRealboxIc
+@@ -220,7 +220,7 @@ static void DefineChromeRefreshRealboxIc
  #elif BUILDFLAG(IS_WIN)
    kWinShareIconResourceName =
        "//resources/cr_components/searchbox/icons/win_share_cr23.svg";
@@ -24,7 +24,7 @@ $NetBSD$
    kLinuxShareIconResourceName =
        "//resources/cr_components/searchbox/icons/share_cr23.svg";
  #else
-@@ -523,7 +523,7 @@ std::string SearchboxHandler::Autocomple
+@@ -539,7 +539,7 @@ std::string SearchboxHandler::Autocomple
    if (icon.name == omnibox::kShareWinChromeRefreshIcon.name) {
      return kWinShareIconResourceName;
    }

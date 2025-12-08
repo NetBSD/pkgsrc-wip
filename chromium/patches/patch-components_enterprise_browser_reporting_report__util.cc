@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/browser/reporting/report_util.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/enterprise/browser/reporting/report_util.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/enterprise/browser/reporting/report_util.cc
-@@ -197,7 +197,7 @@ std::string GetSecuritySignalsInReport(
+@@ -198,7 +198,7 @@ std::string GetSecuritySignalsInReport(
      signals_dict.Set("antivirus_info", std::move(anti_virus_list));
  
      signals_dict.Set("hotfixes", RepeatedFieldptrToList(os_report.hotfixes()));

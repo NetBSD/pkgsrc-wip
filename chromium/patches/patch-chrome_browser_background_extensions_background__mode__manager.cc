@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/extensions/background_mode_manager.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/background/extensions/background_mode_manager.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/background/extensions/background_mode_manager.cc
-@@ -879,7 +879,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
+@@ -877,7 +877,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
    }
  
    return family->CreateExact(size).AsImageSkia();

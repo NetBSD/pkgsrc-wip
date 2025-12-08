@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h
-@@ -208,7 +208,7 @@ class CustomizeChromePageHandler
+@@ -217,7 +217,7 @@ class CustomizeChromePageHandler
    // value needs to be requeried by the page.
    GURL last_source_url_{GURL(chrome::kChromeUINewTabPageURL)};
  

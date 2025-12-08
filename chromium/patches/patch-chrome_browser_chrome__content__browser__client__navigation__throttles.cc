@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client_navigation_throttles.cc
-@@ -126,7 +126,7 @@
+@@ -128,7 +128,7 @@
  #include "chrome/browser/captive_portal/captive_portal_service_factory.h"
  #endif  // BUILDFLAG(ENABLE_CAPTIVE_PORTAL_DETECTION)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/browser_switcher/browser_switcher_navigation_throttle.h"
  #include "chrome/browser/enterprise/profile_management/oidc_auth_response_capture_navigation_throttle.h"
  #include "chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.h"
-@@ -409,7 +409,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -421,7 +421,7 @@ void CreateAndAddChromeThrottlesForNavig
      TypedNavigationUpgradeThrottle::MaybeCreateAndAdd(registry);
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    WebAppSettingsNavigationThrottle::MaybeCreateAndAdd(registry);
    profile_management::ProfileManagementNavigationThrottle::MaybeCreateAndAdd(
        registry);
-@@ -427,7 +427,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -439,7 +439,7 @@ void CreateAndAddChromeThrottlesForNavig
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -33,8 +33,8 @@ $NetBSD$
    enterprise_connectors::DeviceTrustNavigationThrottle::MaybeCreateAndAdd(
        registry);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) ||
-@@ -459,7 +459,7 @@ void CreateAndAddChromeThrottlesForNavig
-   }
+@@ -478,7 +478,7 @@ void CreateAndAddChromeThrottlesForNavig
+       registry, ui_manager);
  #endif  // BUILDFLAG(SAFE_BROWSING_AVAILABLE)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

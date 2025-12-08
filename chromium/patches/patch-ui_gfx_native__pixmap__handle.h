@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- ui/gfx/native_pixmap_handle.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"
- #include "ui/gfx/buffer_types.h"
+ #include "components/viz/common/resources/shared_image_format.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

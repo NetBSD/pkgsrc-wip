@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_constants.cc
 @@ -89,12 +89,12 @@ const char kProfileReportingExtension[] 
  const char kProfileReportingPolicy[] = "profileReportingPolicy";

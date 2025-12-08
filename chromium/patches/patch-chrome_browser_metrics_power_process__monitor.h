@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_monitor.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/metrics/power/process_monitor.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/metrics/power/process_monitor.h
 @@ -76,7 +76,7 @@ class ProcessMonitor : public content::B
      std::optional<double> cpu_usage;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crabbyavif/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/crabbyavif/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/crabbyavif/BUILD.gn
-@@ -197,12 +197,11 @@ rust_static_library("crabbyavif") {
+@@ -198,12 +198,11 @@ rust_static_library("crabbyavif") {
      "dav1d",
      "libyuv",
      "capi",

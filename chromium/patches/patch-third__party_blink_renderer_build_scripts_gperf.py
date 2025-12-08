@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/build/scripts/gperf.py.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/blink/renderer/build/scripts/gperf.py.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/blink/renderer/build/scripts/gperf.py
 @@ -28,27 +28,6 @@ def generate_gperf(gperf_path, gperf_inp
              stdout=subprocess.PIPE,

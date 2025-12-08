@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/renderer/vulkan/DisplayVk_api.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/angle/src/libANGLE/renderer/vulkan/DisplayVk_api.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/angle/src/libANGLE/renderer/vulkan/DisplayVk_api.h
 @@ -23,7 +23,7 @@ bool IsVulkanWin32DisplayAvailable();
  DisplayImpl *CreateVulkanWin32Display(const egl::DisplayState &state);

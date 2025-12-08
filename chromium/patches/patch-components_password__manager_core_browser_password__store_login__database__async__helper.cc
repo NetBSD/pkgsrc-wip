@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database_async_helper.cc
 @@ -146,7 +146,7 @@ LoginsResultOrError LoginDatabaseAsyncHe
      std::vector<PasswordForm> matched_forms;
@@ -13,5 +13,5 @@ $NetBSD$
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
        return PasswordStoreBackendError(
-           OSCrypt::IsEncryptionAvailable()
+           is_encryption_available_
                ? PasswordStoreBackendErrorType::kUncategorized

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/build_config.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/perfetto/include/perfetto/base/build_config.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/perfetto/include/perfetto/base/build_config.h
 @@ -27,6 +27,7 @@
  #if defined(__ANDROID__)

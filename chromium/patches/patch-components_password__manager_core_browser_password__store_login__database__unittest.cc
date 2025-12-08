@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database_unittest.cc
-@@ -2278,7 +2278,7 @@ INSTANTIATE_TEST_SUITE_P(MigrationToVCur
-                                           testing::Bool()));
+@@ -2227,7 +2227,7 @@ INSTANTIATE_TEST_SUITE_P(MigrationToVCur
+                          testing::Values(1, 2, 3, 24));
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_IOS) || \
 -    BUILDFLAG(IS_WIN)

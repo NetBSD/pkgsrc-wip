@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/linux/pkg-config.py.orig	2025-11-14 20:31:45.000000000 +0000
+--- build/config/linux/pkg-config.py.orig	2025-11-19 21:40:05.000000000 +0000
 +++ build/config/linux/pkg-config.py
 @@ -108,7 +108,7 @@ def main():
    # If this is run on non-Linux platforms, just return nothing and indicate

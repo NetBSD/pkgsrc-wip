@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/desktop_session_type_util.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- remoting/host/webauthn/desktop_session_type_util.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ remoting/host/webauthn/desktop_session_type_util.cc
 @@ -11,7 +11,7 @@
  namespace remoting {

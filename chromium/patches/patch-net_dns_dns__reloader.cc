@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_reloader.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- net/dns/dns_reloader.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ net/dns/dns_reloader.cc
 @@ -10,6 +10,7 @@
  // - there's not guarantee it exists at all. :(

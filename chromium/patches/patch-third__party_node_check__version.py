@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/node/check_version.py.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/node/check_version.py.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/node/check_version.py
 @@ -17,11 +17,6 @@ def main(argv):
    parser.add_argument('--out_file', required=True)

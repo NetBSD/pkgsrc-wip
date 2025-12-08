@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/files/file_util_posix.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/files/file_util_posix.cc
-@@ -943,6 +943,7 @@ bool CreateNewTempDirectory(const FilePa
+@@ -943,6 +943,7 @@ bool CreateNewTempDirectory(FilePath::St
  bool CreateDirectoryAndGetError(const FilePath& full_path, File::Error* error) {
    ScopedBlockingCall scoped_blocking_call(
        FROM_HERE, BlockingType::MAY_BLOCK);  // For call to mkdir().

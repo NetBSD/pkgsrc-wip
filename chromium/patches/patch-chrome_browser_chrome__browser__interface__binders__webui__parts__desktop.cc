@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc
-@@ -110,7 +110,7 @@
+@@ -117,7 +117,7 @@
  #include "ui/webui/resources/js/browser_command/browser_command.mojom.h"
  #include "ui/webui/resources/js/tracked_element/tracked_element.mojom.h"  // nogncheck crbug.com/1125897
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/app_home/app_home.mojom.h"
  #include "chrome/browser/ui/webui/app_home/app_home_ui.h"
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
-@@ -331,14 +331,14 @@ void PopulateChromeWebUIFrameBindersPart
+@@ -335,14 +335,14 @@ void PopulateChromeWebUIFrameBindersPart
          HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
    }
  
@@ -32,9 +32,9 @@ $NetBSD$
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -525,7 +525,7 @@ void PopulateChromeWebUIFrameBindersPart
-   RegisterWebUIControllerInterfaceBinder<
-       guest_contents::mojom::GuestContentsHost, WebUIBrowserUI>(map);
+@@ -548,7 +548,7 @@ void PopulateChromeWebUIFrameBindersPart
+         OmniboxPopupUI>(map);
+   }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

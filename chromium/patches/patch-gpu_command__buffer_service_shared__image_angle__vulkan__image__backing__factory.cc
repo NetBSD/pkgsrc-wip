@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc
 @@ -20,7 +20,7 @@ namespace {
  // TODO(penghuang): verify the scanout is the right usage for video playback.
@@ -15,7 +15,7 @@ $NetBSD$
      SHARED_IMAGE_USAGE_SCANOUT |
  #endif
      SHARED_IMAGE_USAGE_GLES2_READ | SHARED_IMAGE_USAGE_GLES2_WRITE |
-@@ -121,7 +121,7 @@ bool AngleVulkanImageBackingFactory::IsG
+@@ -119,7 +119,7 @@ bool AngleVulkanImageBackingFactory::IsG
    switch (gmb_type) {
      case gfx::EMPTY_BUFFER:
        return true;

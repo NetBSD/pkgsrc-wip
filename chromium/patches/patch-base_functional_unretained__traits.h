@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/functional/unretained_traits.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/functional/unretained_traits.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/functional/unretained_traits.h
-@@ -90,7 +90,7 @@ struct SupportsUnretainedImpl {
+@@ -92,7 +92,7 @@ struct SupportsUnretainedImpl {
  // official builds, and then in non-test code as well.
  #if defined(FORCE_UNRETAINED_COMPLETENESS_CHECKS_FOR_TESTS) || \
      (!defined(UNIT_TEST) && !defined(OFFICIAL_BUILD) &&        \

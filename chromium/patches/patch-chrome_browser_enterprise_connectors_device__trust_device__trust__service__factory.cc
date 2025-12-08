@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc
 @@ -22,7 +22,7 @@
  #include "components/policy/core/common/management/management_service.h"

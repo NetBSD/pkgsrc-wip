@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.cc
 @@ -132,15 +132,17 @@ void MemoryUsageMonitorPosix::ResetFileD
  

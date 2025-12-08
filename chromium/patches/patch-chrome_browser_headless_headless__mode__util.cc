@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
 @@ -12,7 +12,7 @@
  // New headless mode is available on Linux, Windows and Mac platforms.

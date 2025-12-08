@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/download/download_prefs.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/download/download_prefs.h
 @@ -107,7 +107,7 @@ class DownloadPrefs {
    void DisableAutoOpenByUserBasedOnExtension(const base::FilePath& file_name);

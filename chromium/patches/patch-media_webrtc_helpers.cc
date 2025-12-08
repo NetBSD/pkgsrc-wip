@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/helpers.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- media/webrtc/helpers.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ media/webrtc/helpers.cc
-@@ -46,14 +46,14 @@ void ConfigAutomaticGainControl(const Au
+@@ -48,14 +48,14 @@ void ConfigAutomaticGainControl(const Au
      return;
    }
  

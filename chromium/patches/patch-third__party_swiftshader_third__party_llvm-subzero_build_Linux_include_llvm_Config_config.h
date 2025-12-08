@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h
 @@ -5,8 +5,6 @@
  #include "llvm/Config/llvm-config.h"

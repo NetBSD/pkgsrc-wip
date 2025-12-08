@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -317,7 +317,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -52,7 +52,7 @@ $NetBSD$
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -873,6 +876,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -868,6 +871,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

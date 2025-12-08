@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/audio/audio_sandbox_hook_linux.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/audio/audio_sandbox_hook_linux.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/audio/audio_sandbox_hook_linux.cc
 @@ -147,6 +147,7 @@ void AddPulseAudioFilePermissions(
  }

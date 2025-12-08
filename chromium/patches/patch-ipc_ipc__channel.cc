@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- ipc/ipc_channel.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ ipc/ipc_channel.cc
-@@ -22,7 +22,7 @@ namespace {
+@@ -41,7 +41,7 @@ namespace {
  // Global atomic used to guarantee channel IDs are unique.
  base::AtomicSequenceNumber g_last_id;
  
@@ -15,7 +15,16 @@ $NetBSD$
  
  int g_global_pid = 0;
  
-@@ -60,7 +60,7 @@ std::string Channel::GenerateUniqueRando
+@@ -83,7 +83,7 @@ class ThreadSafeChannelProxy : public mo
+ };
+ 
+ base::ProcessId GetSelfPID() {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   if (int global_pid = Channel::GetGlobalPid()) {
+     return global_pid;
+   }
+@@ -123,7 +123,7 @@ std::string Channel::GenerateUniqueRando
        base::RandInt(0, std::numeric_limits<int32_t>::max()));
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/viz/service/display_embedder/software_output_surface.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/viz/service/display_embedder/software_output_surface.h
 @@ -40,7 +40,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
        UpdateVSyncParametersCallback callback) override;

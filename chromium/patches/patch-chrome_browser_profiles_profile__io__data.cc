@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_io_data.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/profiles/profile_io_data.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/profiles/profile_io_data.cc
 @@ -17,7 +17,7 @@
  #include "url/gurl.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -57,7 +57,7 @@ bool ProfileIOData::IsHandledProtocol(co
+@@ -57,7 +57,7 @@ bool ProfileIOData::IsHandledProtocol(st
        url::kFileSystemScheme,
        chrome::kChromeSearchScheme,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

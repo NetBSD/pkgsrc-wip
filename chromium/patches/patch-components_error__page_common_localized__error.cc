@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/error_page/common/localized_error.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/error_page/common/localized_error.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/error_page/common/localized_error.cc
-@@ -902,7 +902,7 @@ void AddSuggestionsDetails(int error_cod
+@@ -896,7 +896,7 @@ void AddSuggestionsDetails(int error_cod
    if (suggestions & SUGGEST_PROXY_CONFIG) {
      // Custom body string.
      std::u16string inner =

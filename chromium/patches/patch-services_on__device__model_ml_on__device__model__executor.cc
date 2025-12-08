@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/ml/on_device_model_executor.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/on_device_model/ml/on_device_model_executor.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/on_device_model/ml/on_device_model_executor.cc
 @@ -34,6 +34,7 @@
  #include "services/on_device_model/public/mojom/on_device_model.mojom.h"

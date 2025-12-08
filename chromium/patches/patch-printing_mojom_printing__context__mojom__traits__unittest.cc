@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits_unittest.cc
 @@ -80,7 +80,7 @@ base::Value::Dict GenerateSampleSystemPr
      data.Set(kMacSystemPrintDialogDataDestinationLocation, "/foo/bar.pdf");

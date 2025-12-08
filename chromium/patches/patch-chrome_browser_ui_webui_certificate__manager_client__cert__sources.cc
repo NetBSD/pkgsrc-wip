@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
 @@ -56,7 +56,7 @@
  #include "net/ssl/client_cert_store_mac.h"
@@ -51,7 +51,7 @@ $NetBSD$
  // ChromeOS currently can use either Kcer or NSS for listing client certs, and
  // Linux uses NSS only. This interface provides an abstraction to hide that
  // from WritableClientCertSource. Currently this class only handles reading
-@@ -1052,7 +1052,7 @@ CreatePlatformClientCertSource(
+@@ -1054,7 +1054,7 @@ CreatePlatformClientCertSource(
      mojo::Remote<certificate_manager::mojom::CertificateManagerPage>*
          remote_client,
      Profile* profile) {
@@ -60,7 +60,7 @@ $NetBSD$
    return std::make_unique<WritableClientCertSource>(remote_client, profile);
  #else
    return std::make_unique<ClientCertSource>(
-@@ -1060,7 +1060,7 @@ CreatePlatformClientCertSource(
+@@ -1062,7 +1062,7 @@ CreatePlatformClientCertSource(
  #endif
  }
  
@@ -69,7 +69,7 @@ $NetBSD$
  std::unique_ptr<CertificateManagerPageHandler::CertSource>
  CreateProvisionedClientCertSource(Profile* profile) {
    return std::make_unique<ClientCertSource>(
-@@ -1110,7 +1110,7 @@ bool ClientCertManagementAccessControls:
+@@ -1112,7 +1112,7 @@ bool ClientCertManagementAccessControls:
  
    return client_cert_policy_ == ClientCertificateManagementPermission::kAll;
  }

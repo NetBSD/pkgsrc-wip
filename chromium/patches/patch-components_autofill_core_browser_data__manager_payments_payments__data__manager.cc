@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.cc
-@@ -479,7 +479,7 @@ void PaymentsDataManager::OnWebDataServi
+@@ -480,7 +480,7 @@ void PaymentsDataManager::OnWebDataServi
  
  bool PaymentsDataManager::ShouldShowBnplSettings() const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
    // Check `kAutofillEnableBuyNowPayLater` only if the user has seen a BNPL
    // suggestion before, or there are already linked issuers present, to avoid
    // unnecessary feature flag checks. The linked issuer check is due to the fact
-@@ -1014,7 +1014,7 @@ void PaymentsDataManager::SetPrefService
+@@ -1015,7 +1015,7 @@ void PaymentsDataManager::SetPrefService
            &PaymentsDataManager::OnAutofillPaymentsCardBenefitsPrefChange,
            base::Unretained(this)));
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
    pref_registrar_.Add(
        prefs::kAutofillBnplEnabled,
        base::BindRepeating(&PaymentsDataManager::OnBnplEnabledPrefChange,
-@@ -1088,7 +1088,7 @@ void PaymentsDataManager::SetAutofillHas
+@@ -1089,7 +1089,7 @@ void PaymentsDataManager::SetAutofillHas
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
  bool PaymentsDataManager::IsAutofillHasSeenBnplPrefEnabled() const {
    return prefs::HasSeenBnpl(pref_service_);
  }
-@@ -2125,7 +2125,7 @@ bool PaymentsDataManager::AreEwalletAcco
+@@ -2140,7 +2140,7 @@ bool PaymentsDataManager::AreEwalletAcco
  
  bool PaymentsDataManager::AreBnplIssuersSupported() const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -42,7 +42,7 @@ $NetBSD$
    return (app_locale_ == "en-US" || app_locale_ == "en-GB" ||
            app_locale_ == "en-CA") &&
           GetCountryCodeForExperimentGroup() == "US" &&
-@@ -2160,7 +2160,7 @@ void PaymentsDataManager::ClearAllCredit
+@@ -2175,7 +2175,7 @@ void PaymentsDataManager::ClearAllCredit
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

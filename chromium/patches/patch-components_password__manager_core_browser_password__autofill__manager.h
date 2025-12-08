@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_autofill_manager.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/password_manager/core/browser/password_autofill_manager.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/password_manager/core/browser/password_autofill_manager.h
 @@ -291,7 +291,7 @@ class PasswordAutofillManager : public a
  

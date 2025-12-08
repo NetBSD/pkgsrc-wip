@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/public/tab_features.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/tabs/public/tab_features.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/tabs/public/tab_features.h
-@@ -118,7 +118,7 @@ class TabContextualizationController;
+@@ -119,7 +119,7 @@ class TabContextualizationController;
  }  // namespace lens
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,8 +15,8 @@ $NetBSD$
  namespace wallet {
  class ChromeWalletablePassClient;
  }  // namespace wallet
-@@ -451,7 +451,7 @@ class TabFeatures {
-       bookmarkbar_preload_pipeline_manager_;
+@@ -468,7 +468,7 @@ class TabFeatures {
+       new_tab_page_preload_pipeline_manager_;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
