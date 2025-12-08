@@ -35,6 +35,9 @@ ${PYSITELIB}/netbsd_hghooks/reject_normcasecollision.pyo
 ${PYSITELIB}/netbsd_hghooks/require_user_login.py
 ${PYSITELIB}/netbsd_hghooks/require_user_login.pyc
 ${PYSITELIB}/netbsd_hghooks/require_user_login.pyo
+${PYSITELIB}/netbsd_hghooks/validdate.py
+${PYSITELIB}/netbsd_hghooks/validdate.pyc
+${PYSITELIB}/netbsd_hghooks/validdate.pyo
 bin/build-clonebundles
 bin/syncd
 share/tnfrepo/githooks/pre-receive.sh
