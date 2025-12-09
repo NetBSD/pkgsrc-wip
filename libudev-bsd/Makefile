@@ -12,6 +12,15 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
+ONLY_FOR_PLATFORM=	NetBSD-*-*
+ONLY_FOR_PLATFORM+=	OpenBSD-*-*
+ONLY_FOR_PLATFORM+=	FreeBSD-*-*
+ONLY_FOR_PLATFORM+=	DragonFly-*-*
+
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../devel/meson/build.mk"
+.if ${OPSYS} == "NetBSD"
 .include "../../wip/ndevd/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
