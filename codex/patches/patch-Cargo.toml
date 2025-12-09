@@ -2,15 +2,17 @@ $NetBSD$
 
 Depends on unpublished crates. Can't use cargo.mk to fetch them.
 
---- Cargo.toml.orig	2025-11-13 17:39:01.000000000 +0000
+--- Cargo.toml.orig	2025-12-09 14:53:28.746397747 +0000
 +++ Cargo.toml
-@@ -279,8 +279,9 @@ opt-level = 0
+@@ -288,9 +288,10 @@ opt-level = 0
  [patch.crates-io]
  # Uncomment to debug local changes.
  # ratatui = { path = "../../ratatui" }
 -crossterm = { git = "https://github.com/nornagon/crossterm", branch = "nornagon/color-query" }
+-portable-pty = { git = "https://github.com/pakrym/wezterm", branch = "PSUEDOCONSOLE_INHERIT_CURSOR" }
 -ratatui = { git = "https://github.com/nornagon/ratatui", branch = "nornagon-v0.29.0-patch" }
 +crossterm = { path = "../../crossterm-87db8bfa6dc99427fd3b071681b07fc31c6ce995" }
++portable-pty = { path = "../../wezterm-fe38df8409545a696909aa9a09e63438630f217d/pty" }
 +ratatui = { path = "../../ratatui-9b2ad1298408c45918ee9f8241a6f95498cdbed2" }
 +
  
