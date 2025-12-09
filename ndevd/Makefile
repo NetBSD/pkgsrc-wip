@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ndevd-25.08.20
+DISTNAME=	ndevd-25.12.09
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kikadf/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +16,8 @@ NO_CONFIGURE=	yes
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} \
 		MANDIR=${PREFIX}/${PKGMANDIR}/man8
+
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
