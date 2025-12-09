@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.5 2025/10/30 08:29:57 wiz Exp $
+bin/rec_control
+man/man1/pdns_recursor.1
+man/man1/rec_control.1
+sbin/pdns_recursor
+share/examples/powerdns-recursor/recursor.yml-dist
