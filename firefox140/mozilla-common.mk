@@ -2,7 +2,7 @@
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
-# used by www/firefox140/Makefile
+# used by wip/firefox140/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
