@@ -1,4 +1,4 @@
-$NetBSD: patch-js_public_Utility.h,v 1.2 2024/08/03 02:06:31 tsutsui Exp $
+$NetBSD: patch-js_public_Utility.h,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 - kludge to build on NetBSD/i386 10.0
   https://mail-index.netbsd.org/pkgsrc-users/2024/07/16/msg039900.html

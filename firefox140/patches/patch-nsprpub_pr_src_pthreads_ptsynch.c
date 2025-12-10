@@ -1,4 +1,4 @@
-$NetBSD: patch-nsprpub_pr_src_pthreads_ptsynch.c,v 1.3 2024/12/25 13:30:11 ryoon Exp $
+$NetBSD: patch-nsprpub_pr_src_pthreads_ptsynch.c,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 firefox: Workaround broken pthread_equal() usage
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_ots_src_name.cc,v 1.1 2025/07/26 14:12:54 ryoon Exp $
+$NetBSD: patch-gfx_ots_src_name.cc,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 --- gfx/ots/src/name.cc.orig	2025-07-26 13:25:22.747360576 +0000
 +++ gfx/ots/src/name.cc

@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_base_nscore.h,v 1.5 2019/03/19 16:11:28 ryoon Exp $
+$NetBSD: patch-xpcom_base_nscore.h,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 * Support llvm/clang
 

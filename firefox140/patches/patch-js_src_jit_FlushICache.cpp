@@ -1,4 +1,4 @@
-$NetBSD: patch-js_src_jit_FlushICache.cpp,v 1.3 2025/07/23 13:57:35 ryoon Exp $
+$NetBSD: patch-js_src_jit_FlushICache.cpp,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 NetBSD does not have the Linux-specific membarrier(2) syscall.
 

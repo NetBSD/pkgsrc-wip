@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_skia_skia_src_sksl_codegen_SkSLSPIRVCodeGenerator.cpp,v 1.1 2025/07/26 14:12:54 ryoon Exp $
+$NetBSD: patch-gfx_skia_skia_src_sksl_codegen_SkSLSPIRVCodeGenerator.cpp,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 --- gfx/skia/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.cpp.orig	2025-07-26 13:25:51.000473818 +0000
 +++ gfx/skia/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.cpp

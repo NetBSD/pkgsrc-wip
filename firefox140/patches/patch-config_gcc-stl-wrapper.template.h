@@ -1,4 +1,4 @@
-$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.4 2021/09/30 14:18:28 ryoon Exp $
+$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.1 2025/10/19 11:56:55 leot Exp $
 
 --- config/gcc-stl-wrapper.template.h.orig	2021-09-04 13:24:51.000000000 +0000
 +++ config/gcc-stl-wrapper.template.h

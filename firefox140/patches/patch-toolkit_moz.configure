@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.17 2023/08/22 13:48:17 tnn Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 * Enable ALSA for NetBSD too.
 * Support --enable-forkserver on NetBSD.

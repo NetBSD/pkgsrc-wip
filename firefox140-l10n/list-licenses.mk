@@ -1,4 +1,4 @@
-# $NetBSD: list-licenses.mk,v 1.1 2019/11/30 22:14:39 rillig Exp $
+# $NetBSD: list-licenses.mk,v 1.1 2025/10/19 11:57:41 leot Exp $
 #
 # list-licenses:
 #	Downloads the addon page of each language pack to determine the

@@ -1,4 +1,4 @@
-$NetBSD: patch-build_moz.configure_init.configure,v 1.5 2024/05/10 09:14:07 jperkin Exp $
+$NetBSD: patch-build_moz.configure_init.configure,v 1.1 2025/10/19 11:56:55 leot Exp $
 
 Support illumos triple.
 

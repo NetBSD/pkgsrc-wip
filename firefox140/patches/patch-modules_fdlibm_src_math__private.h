@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_fdlibm_src_math__private.h,v 1.3 2022/12/11 13:49:09 ryoon Exp $
+$NetBSD: patch-modules_fdlibm_src_math__private.h,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 * Fix PR pkg/56457, build failure on NetBSD/i386.
   Do not use FreeBSD-specific definition.

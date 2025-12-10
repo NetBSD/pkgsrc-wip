@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_python_dlmanager_check.py,v 1.1 2024/10/11 13:55:48 wiz Exp $
+$NetBSD: patch-third__party_python_dlmanager_check.py,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 Fix build with Python 3.13.
 

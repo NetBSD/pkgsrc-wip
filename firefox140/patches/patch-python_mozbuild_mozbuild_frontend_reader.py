@@ -1,4 +1,4 @@
-$NetBSD: patch-python_mozbuild_mozbuild_frontend_reader.py,v 1.1 2025/10/09 14:48:03 ryoon Exp $
+$NetBSD: patch-python_mozbuild_mozbuild_frontend_reader.py,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 * For Python 3.14 too.
 

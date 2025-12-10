@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.12 2022/07/04 14:34:08 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 Allow older libevent
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.15 2024/01/31 15:54:52 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 Make NetBSD/sparc64 use the same xptcall bindings as all other sparc64 ports
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.8 2023/01/07 23:36:39 ryoon Exp $
+$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 * Fix segfault on exit under NetBSD
 

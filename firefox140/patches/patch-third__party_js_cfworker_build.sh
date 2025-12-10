@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_js_cfworker_build.sh,v 1.1 2022/05/14 10:30:26 tnn Exp $
+$NetBSD: patch-third__party_js_cfworker_build.sh,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 shell portability
 

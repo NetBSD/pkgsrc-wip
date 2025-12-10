@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2021/08/21 22:53:00 mcf Exp $
+@comment $NetBSD: PLIST.Linux,v 1.1 2025/10/19 11:56:55 leot Exp $
 lib/firefox140/libmozsandbox.so

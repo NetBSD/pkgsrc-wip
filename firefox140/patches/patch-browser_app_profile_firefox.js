@@ -1,4 +1,4 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.23 2024/04/06 08:53:35 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.1 2025/10/19 11:56:55 leot Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.

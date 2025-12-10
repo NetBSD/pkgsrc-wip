@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.1 2025/10/19 11:57:41 leot Exp $
 lib/firefox140/distribution/extensions/langpack-ach@firefox.mozilla.org.xpi
 lib/firefox140/distribution/extensions/langpack-af@firefox.mozilla.org.xpi
 lib/firefox140/distribution/extensions/langpack-an@firefox.mozilla.org.xpi

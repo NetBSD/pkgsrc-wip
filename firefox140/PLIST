@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.190 2025/05/13 20:56:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.1 2025/10/19 11:56:55 leot Exp $
 bin/firefox140
 lib/firefox140/application.ini
 lib/firefox140/browser/chrome/icons/default/default128.png

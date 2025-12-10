@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc,v 1.1 2024/07/13 22:10:30 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 --- third_party/libwebrtc/rtc_base/physical_socket_server.cc.orig	2024-07-03 20:25:45.412396416 +0000
 +++ third_party/libwebrtc/rtc_base/physical_socket_server.cc

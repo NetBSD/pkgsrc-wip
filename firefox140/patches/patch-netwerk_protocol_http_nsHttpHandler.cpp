@@ -1,4 +1,4 @@
-$NetBSD: patch-netwerk_protocol_http_nsHttpHandler.cpp,v 1.5 2025/01/14 13:36:15 ryoon Exp $
+$NetBSD: patch-netwerk_protocol_http_nsHttpHandler.cpp,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 * Do not freeze user-agent string as Linux under NetBSD.
 

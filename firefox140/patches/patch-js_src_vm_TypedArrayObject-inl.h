@@ -1,4 +1,4 @@
-$NetBSD: patch-js_src_vm_TypedArrayObject-inl.h,v 1.2 2024/10/01 12:47:19 ryoon Exp $
+$NetBSD: patch-js_src_vm_TypedArrayObject-inl.h,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 - kludge to build on NetBSD/i386 10.0
   https://mail-index.netbsd.org/pkgsrc-users/2024/07/16/msg039900.html

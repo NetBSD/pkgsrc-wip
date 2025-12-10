@@ -1,4 +1,4 @@
-$NetBSD: patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp,v 1.2 2024/02/22 15:12:50 ryoon Exp $
+$NetBSD: patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 Add NetBSD support.
 

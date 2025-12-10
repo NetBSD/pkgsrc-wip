@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.1 2025/04/30 03:10:40 ryoon Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 * NetBSD has no DT_GNU_HASH definition.
 

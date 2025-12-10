@@ -1,4 +1,4 @@
-$NetBSD: patch-python_mozbuild_mozbuild_backend_recursivemake.py,v 1.2 2024/10/01 12:47:19 ryoon Exp $
+$NetBSD: patch-python_mozbuild_mozbuild_backend_recursivemake.py,v 1.1 2025/10/19 11:56:56 leot Exp $
 
 * As of 129.0, libxul.so is built with -Wl,-z,defs (no undefined references).
   Supply memalign() from fallback.cpp (Unified_cpp_memory_build0) for NetBSD.

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.292 2025/07/23 13:58:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/12 19:48:59 leot Exp $
 
-FIREFOX_VER=	140.4.0esr
+FIREFOX_VER=	140.5.0esr
 PKGNAME=	firefox140-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox140
 LICENSE=	mpl-2.0 # as of 140.4.0esr
 
-DEPENDS+=	firefox140>=${PKGVERSION_NOREV}:../../wip/firefox140
+DEPENDS+=	firefox140>=${PKGVERSION_NOREV}:../../www/firefox140
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${FIREFOX_LOCALES:=.xpi}

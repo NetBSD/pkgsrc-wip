@@ -1,4 +1,4 @@
-$NetBSD: patch-config_makefiles_rust.mk,v 1.14 2025/04/30 03:10:40 ryoon Exp $
+$NetBSD: patch-config_makefiles_rust.mk,v 1.1 2025/10/19 11:56:55 leot Exp $
 
 NetBSD doesn't get along with parallel rust builds (it causes issues
 with ld.so) which are the default. Force -j1.

@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc,v 1.2 2023/01/24 17:57:09 nia Exp $
+$NetBSD: patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc,v 1.1 2025/10/19 11:56:57 leot Exp $
 
 * Fix build under NetBSD 9 and older.
   The older NetBSD's sys/videoio.h does not have v4l2_capability.device_caps.

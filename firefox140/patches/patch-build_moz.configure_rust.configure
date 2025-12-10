@@ -1,4 +1,4 @@
-$NetBSD: patch-build_moz.configure_rust.configure,v 1.8 2020/12/17 09:53:15 ryoon Exp $
+$NetBSD: patch-build_moz.configure_rust.configure,v 1.1 2025/10/19 11:56:55 leot Exp $
 
 * Do not match rumprun toolchain for NetBSD,
   narrowed should be one not two.
