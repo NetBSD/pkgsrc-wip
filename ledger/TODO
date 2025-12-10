@@ -1,0 +1,2 @@
+1. This built and ran fine on NetBSD 10.1 amd64 with Boost 1.87 from Pkgsrc. Do
+   we need to state a minimum Boost version?
