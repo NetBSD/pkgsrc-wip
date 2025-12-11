@@ -1,0 +1,26 @@
+$NetBSD$
+
+BLAKE2s (v0.2.1.tar.gz) = f7b340b81f7fb9952b58129cb7dd95da20d7f3f8d9a3b11003360fc943e51bd7
+SHA512 (v0.2.1.tar.gz) = b1f6a35e4d93d099c5c92a8ea68f8a93429a614f1a63de7346e256437525bee5b87c1a5ad2e0dad2ff0bdc88b525cf1931f048e032bd1f1ff007b4d5eee90c59
+Size (v0.2.1.tar.gz) = 239042 bytes
+SHA1 (patch-src_basic_alloc-util.h) = 8f5f75d00485581a1fa23c1e8434bc21b68700e7
+SHA1 (patch-src_basic_fileio.h) = 7cae8213adfb4a639544ff9f4c283e5b87690885
+SHA1 (patch-src_basic_log.h) = 1ac89dd1a58c4021b3344b7538549790bf25f992
+SHA1 (patch-src_basic_macro.h) = b13a71ef8fa30770962776469001b406d2c3210e
+SHA1 (patch-src_basic_memfd-util.c) = 99d5ab110d10826246400ee59b53b8988099c66e
+SHA1 (patch-src_basic_missing.h) = c4665544b082e61154bd915d0d2ec1e95b6f7637
+SHA1 (patch-src_basic_socket-util.c) = 13d7327c2a0f187d55212f7a7e9e4a8b2e44c3e3
+SHA1 (patch-src_basic_socket-util.h) = 0bf7e0052b24efb3f7e455444be4deaaf4293e09
+SHA1 (patch-src_busctl_busctl.c) = 63e4b28608b675c01769cd46969f53c3dcf63c8c
+SHA1 (patch-src_libsystemd_sd-bus_bus-control.c) = 0c91b1382af5802ed0d69f225bc2ba8261033647
+SHA1 (patch-src_libsystemd_sd-bus_bus-dump.c) = 53f15df308ab7d80fecf4620a90963de6decf4e8
+SHA1 (patch-src_libsystemd_sd-bus_bus-gvariant.c) = 7f27d17b62d298f151657264d39c2a4df826a62d
+SHA1 (patch-src_libsystemd_sd-bus_bus-message.h) = 8dda2cf848234b8f9324da03939624cd79a0e7c1
+SHA1 (patch-src_libsystemd_sd-bus_bus-protocol.h) = 2f488c0a2ebb18f97ccd0bc9474b2be64a79e47e
+SHA1 (patch-src_libsystemd_sd-bus_bus-socket.c) = f31072a0388f6606772b631e1a2dab4c64be8a68
+SHA1 (patch-src_libsystemd_sd-bus_bus-track.c) = 4b063a1b7e703c04389fc200f75ab5ff80a70cdd
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-chat.c) = 2ac6d37be8ad546f55cd8830f5e0e27d03ce5bd5
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-creds.c) = 83b1d362713d5b5474211a2c60fb232de132c3e5
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-objects.c) = ea8e5ddb3c59c3c84d2762a20f1abaf30c664539
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-server.c) = 21d9b263e58d1d760105813afcd8ea8c4afcfa3b
+SHA1 (patch-src_test_tests.c) = 6f0edf8d0c555e60d28502f200add1860e386482
