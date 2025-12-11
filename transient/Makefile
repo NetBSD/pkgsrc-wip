@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 #AKE_ENV=	MANUAL_HTML_ARGS=
 
 NO_CONFIGURE=		yes
-USE_LANGUAGES=		#
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo
 #MAKE_JOBS_SAFE=	no
 
