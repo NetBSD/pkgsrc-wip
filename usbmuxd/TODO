@@ -34,3 +34,6 @@ If you have a machine running either Linux or macOS, you can run `usbmuxd`
 on that machine and connect to it from NetBSD by forwarding requests with
 an SSH tunnel. I wrote a shell script to automate the setup:
 https://github.com/depressed-pho/tunnel-usbmuxd
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-66004
