@@ -295,6 +295,7 @@ SUBDIR+=	ballerburg
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
 SUBDIR+=	bandwhich
+SUBDIR+=	bandwidthmon
 SUBDIR+=	bareos-webui
 SUBDIR+=	baresip
 SUBDIR+=	barony

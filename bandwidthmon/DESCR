@@ -1,0 +1,14 @@
+Real-time network bandwidth monitor with beautiful ASCII charts for the
+terminal.
+
+Features
+ - Beautiful ASCII Charts - Smooth line rendering with box-drawing characters
+ - Two Versions - Choose between rasciichart library or manual rendering
+ - Real-time Monitoring - Live bandwidth statistics with 1-second updates
+ - Smart Interface Matching - Partial and case-insensitive interface names
+ - Statistics - Track peak, average, and total bandwidth usage
+ - Colorful Output - Color-coded download/upload charts
+ - Interactive - Keyboard controls for easy navigation
+ - Flexible Filtering - Show download only, upload only, or both
+ - Auto-sizing - Charts automatically fit your terminal width
+ - Cross-platform - Works on Windows, Linux, macOS, and BSD
