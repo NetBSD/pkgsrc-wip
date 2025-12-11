@@ -19,5 +19,8 @@ MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 
 .include "cargo-depends.mk"
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/edit ${DESTDIR}${PREFIX}/bin/msedit
+
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
