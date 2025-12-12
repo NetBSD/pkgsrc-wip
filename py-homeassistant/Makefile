@@ -1,7 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.07
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.08
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -89,11 +88,12 @@ DEPENDS+=	openblas-[0-9]*:../../math/openblas
 # \todo Figure out if this is really needed.
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-# HA will build cryptography, Pillow and nacl, so depend on them to
-# force deps.
+# HA will build various python modules via pip; depend on them to
+# force dependencies to be installed.
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
+DEPENDS+=	${PYPKGPREFIX}-grpcio-[0-9]*:../../net/py-grpcio
 
 # generic and stream require PyAV which depends on ffmpeg >= 7.
 DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
