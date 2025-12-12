@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (crosstool-NG-esp-15.2.0_20251204-src.tar.xz) = a9d6dabc58695fce9b1c8e2a4520d87d1987d1fe36648e88ad3bea847d91562e
+SHA512 (crosstool-NG-esp-15.2.0_20251204-src.tar.xz) = 24b0e2bbd0781f10af4cbd80e2c0f7e79665fd77a76b41636c1e7f63ce8e03f11c043353d5436a091844fd44026f4695a25cd82c637a30be9fe9f44fe7d95cd7
+Size (crosstool-NG-esp-15.2.0_20251204-src.tar.xz) = 1141680 bytes
+BLAKE2s (espressif-binutils-gdb-esp-2.45.0_20251204.tar.gz) = 223c015b743527c131b24de230c1d6e9a594659b453d6a7923ef2dda3eff7bcf
+SHA512 (espressif-binutils-gdb-esp-2.45.0_20251204.tar.gz) = d74a1d6668f1b423d8c8e20096331008624a93d204f5e172a1e6aaa79b00b82435e58314f76323aadfd61b1c88e3769bc4110ebe6e96b3fa2fb60223049affcf
+Size (espressif-binutils-gdb-esp-2.45.0_20251204.tar.gz) = 70479080 bytes
+SHA1 (patch-bfd_xtensa-dynconfig.c) = 28bd24b957d2ec139e8eb353825ecee8acade82d
+SHA1 (patch-zlib_zutil.c) = e36f0298ebdfef1ff4b0a28ffc9e20bf8903b7df
