@@ -1,19 +1,13 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	rtl_433
-GITHUB_TAG=	25.12
-DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	rtl_433-25.12
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=merbanan/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://triq.org/rtl_433/
 COMMENT=	Generic data receiver and decoder using software defined radio
 LICENSE=	gnu-gpl-v2
-
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
