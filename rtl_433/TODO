@@ -1,6 +1,4 @@
-  - remove all MESSAGE files one way or the other
-
   - consider moving to a snapshot instead of a release, as rtl_433 does not have releases adequately often
-
-  - document or remove most CMAKE_CONFIGURE_ARGS as they look leftover from an earlier time
-  
+  - address \todo issues with upstream (or really, just fix them upstream)
+  - resolve 'make test' not running tests
+ 
