@@ -6,12 +6,16 @@ $NetBSD$
 
 --- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc
-@@ -89,7 +89,9 @@ void NamedMojoServerEndpointConnectorLin
+@@ -89,7 +89,13 @@ void NamedMojoServerEndpointConnectorLin
      PLOG(ERROR) << "getsockopt failed.";
      return;
    }
 +#if !BUILDFLAG(IS_OPENBSD)
++#if BUILDFLAG(IS_NETBSD)
++  info->pid = info->credentials.unp_pid;
++#else
    info->pid = info->credentials.pid;
++#endif
 +#endif
  
    mojo::PlatformChannelEndpoint endpoint(
