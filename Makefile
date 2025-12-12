@@ -6207,6 +6207,7 @@ SUBDIR+=	xspread
 SUBDIR+=	xssp
 SUBDIR+=	xtags
 SUBDIR+=	xtensa-esp32-elf-binutils
+SUBDIR+=	xtensa-esp32-elf-gcc
 SUBDIR+=	xtensa-lx106-elf-gcc10
 SUBDIR+=	xtensor
 SUBDIR+=	xtitle

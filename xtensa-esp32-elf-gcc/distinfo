@@ -1,0 +1,16 @@
+$NetBSD$
+
+BLAKE2s (crosstool-NG-esp-15.2.0_20251204-src.tar.xz) = a9d6dabc58695fce9b1c8e2a4520d87d1987d1fe36648e88ad3bea847d91562e
+SHA512 (crosstool-NG-esp-15.2.0_20251204-src.tar.xz) = 24b0e2bbd0781f10af4cbd80e2c0f7e79665fd77a76b41636c1e7f63ce8e03f11c043353d5436a091844fd44026f4695a25cd82c637a30be9fe9f44fe7d95cd7
+Size (crosstool-NG-esp-15.2.0_20251204-src.tar.xz) = 1141680 bytes
+BLAKE2s (espressif-gcc-15.2.0-esp-15.2.0_20251204.tar.gz) = 41f71f719394348aa6060827ebcf3fe177f74271b60894f043cd1abdbb21db17
+SHA512 (espressif-gcc-15.2.0-esp-15.2.0_20251204.tar.gz) = fee805c2081b59cbad4765d63754da386ad6dd034456b8915c9e62562929f7103ec616c2a7d5f98aad47db75646a10d3d936c033106ebf9e978dae1969f5ba7b
+Size (espressif-gcc-15.2.0-esp-15.2.0_20251204.tar.gz) = 152796076 bytes
+BLAKE2s (newlib-esp-4.5.0_20251204.tar.gz) = 5cee1c649a18c2d064866097d6baffe6a0fc13cbdc4b3d2bc9e8739924d710f1
+SHA512 (newlib-esp-4.5.0_20251204.tar.gz) = b41b9664b8be03781d425f9fcea15784376e248478ee3c65507ccc29cc65a4c8f879f58f689fb99c00458f97864902b777605b1264023081981fecb3384154f3
+Size (newlib-esp-4.5.0_20251204.tar.gz) = 12442007 bytes
+SHA1 (patch-gcc_config_xtensa_xtensa-dynconfig.cc) = 8d0de3278ca3d0d9a682b9c8b54a241b4d506d3b
+SHA1 (patch-libgcc_libgcov.h) = ed9fd122c5b9786c8a3476b13892a1c0c803509d
+SHA1 (patch-newlib_libc_posix_collate.c) = 105aa07ba8de71eb1b3c4459303ceba26ed9dadc
+SHA1 (patch-newlib_libc_posix_regcomp.c) = 8f2e669b338f638c041992fc051d119f0ae21445
+SHA1 (patch-zlib_zutil.c) = ac4f09acca50d86637da7ff95f337ea78a5999ea
