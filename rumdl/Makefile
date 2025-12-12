@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rumdl-0.0.169
-# rumdl >= 0.0.170 requires Rust >= 1.91
+DISTNAME=	rumdl-0.0.193
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rvben/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
