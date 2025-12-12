@@ -128,7 +128,6 @@ Suggested package updates
 	o rdup-1.1.13
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o rumdl-0.0.190 [needs rust 1.91]
 	o rygel-0.26.0
 	o samhain-4.2.4
 	o scantailor-0.9.11.1
@@ -148,7 +147,7 @@ Suggested package updates
 	o taglib-sharp-2.1.0.0
 	o taskcoach-1.3.14
 	o tmw-0.0.29.1
-	o tor-browser-15.0.2
+	o tor-browser-15.0.3
 	o torcs-1.3.6
 	o trinity-14.0.3
 	o umurmur-0.2.17
