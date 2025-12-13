@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/rvben/rumdl/
 COMMENT=	Markdown Linter
 LICENSE=	mit
 
-RUST_REQ=	1.89.0
+RUST_REQ=	1.91.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
 
