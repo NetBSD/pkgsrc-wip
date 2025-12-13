@@ -1,10 +1,19 @@
 @comment $NetBSD$
+bin/startsway
 bin/sway
 bin/swaybar
 bin/swaymsg
 bin/swaynag
-etc/sway/config
-etc/sway/security.d/00-defaults
+man/man1/sway.1
+man/man1/swaymsg.1
+man/man1/swaynag.1
+man/man5/sway-bar.5
+man/man5/sway-input.5
+man/man5/sway-output.5
+man/man5/sway.5
+man/man5/swaynag.5
+man/man7/sway-ipc.7
+man/man7/swaybar-protocol.7
 share/backgrounds/sway/Sway_Wallpaper_Blue_1136x640.png
 share/backgrounds/sway/Sway_Wallpaper_Blue_1136x640_Portrait.png
 share/backgrounds/sway/Sway_Wallpaper_Blue_1366x768.png
@@ -16,6 +25,7 @@ share/backgrounds/sway/Sway_Wallpaper_Blue_768x1024_Portrait.png
 share/bash-completion/completions/sway
 share/bash-completion/completions/swaybar
 share/bash-completion/completions/swaymsg
+share/examples/sway/config
 share/fish/vendor_completions.d/sway.fish
 share/fish/vendor_completions.d/swaymsg.fish
 share/fish/vendor_completions.d/swaynag.fish
