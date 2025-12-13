@@ -29,6 +29,10 @@ DEPENDS+=		nerd-fonts-Hack-[0-9]*:../../fonts/nerd-fonts-Hack
 
 CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 
+post-install:
+	${INSTALL_SCRIPT} ${FILESDIR}/startlabwc.sh \
+                ${DESTDIR}${PREFIX}/bin/startlabwc
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
@@ -42,5 +46,6 @@ CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 
 .include "../../wip/libsfdo/buildlink3.mk"
 .include "../../wip/wlroots/buildlink3.mk"
+.include "../../wip/seatd/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

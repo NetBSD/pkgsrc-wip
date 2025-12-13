@@ -2,6 +2,7 @@
 bin/lab-sensible-terminal
 bin/labnag
 bin/labwc
+bin/startlabwc
 man/man1/labnag.1
 man/man1/labwc.1
 man/man5/labwc-actions.5
