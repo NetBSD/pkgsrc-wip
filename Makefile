@@ -1463,6 +1463,7 @@ SUBDIR+=	gtk-doc
 SUBDIR+=	gtk-gnutella-git
 SUBDIR+=	gtk-grdc
 SUBDIR+=	gtk-imonc
+SUBDIR+=	gtk-layer-shell
 SUBDIR+=	gtk-server
 SUBDIR+=	gtk-theme-switch
 SUBDIR+=	gtk2-engines-aurora
