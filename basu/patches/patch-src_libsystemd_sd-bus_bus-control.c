@@ -1,5 +1,7 @@
 $NetBSD$
 
+* On NetBSD ucred is unpcbid
+
 --- src/libsystemd/sd-bus/bus-control.c.orig	2025-12-11 10:18:56.189627357 +0000
 +++ src/libsystemd/sd-bus/bus-control.c
 @@ -743,6 +743,22 @@ _public_ int sd_bus_get_owner_creds(sd_b

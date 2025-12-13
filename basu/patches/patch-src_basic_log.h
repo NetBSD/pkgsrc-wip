@@ -1,5 +1,7 @@
 $NetBSD$
 
+* On NetBSD %m is only allowed in syslog(3) like functions
+
 --- src/basic/log.h.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/basic/log.h
 @@ -103,3 +103,11 @@ void log_assert_failed_return_realm(

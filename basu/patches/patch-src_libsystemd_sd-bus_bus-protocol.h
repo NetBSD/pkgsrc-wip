@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Add NetBSD support
+
 --- src/libsystemd/sd-bus/bus-protocol.h.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/libsystemd/sd-bus/bus-protocol.h
 @@ -46,7 +46,9 @@ enum {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Use unpcbid as ucred on NetBSD
+
 --- src/basic/socket-util.h.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/basic/socket-util.h
 @@ -29,6 +29,9 @@ struct ucred {

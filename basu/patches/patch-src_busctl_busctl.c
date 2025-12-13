@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Fix logging, on NetBSD %m is only allowed in syslog(3) like function
+
 --- src/busctl/busctl.c.orig	2025-12-11 12:22:33.149441917 +0000
 +++ src/busctl/busctl.c
 @@ -57,11 +57,11 @@ static usec_t arg_timeout = 0;

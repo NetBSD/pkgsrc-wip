@@ -1,5 +1,7 @@
 $NetBSD$
 
+* F_ADD_SEALS available since NetBSD-11
+
 --- src/basic/memfd-util.c.orig	2025-12-11 16:20:23.258634161 +0000
 +++ src/basic/memfd-util.c
 @@ -9,7 +9,7 @@

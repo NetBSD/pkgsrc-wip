@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Fix logging, on NetBSD %m is only allowed in syslog(3) like function
+
 --- src/libsystemd/sd-bus/test-bus-creds.c.orig	2025-12-11 12:18:32.959056564 +0000
 +++ src/libsystemd/sd-bus/test-bus-creds.c
 @@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {

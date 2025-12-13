@@ -1,5 +1,7 @@
 $NetBSD$
 
+* On NetBSD ucred is unpcbid
+
 --- src/libsystemd/sd-bus/bus-socket.c.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/libsystemd/sd-bus/bus-socket.c
 @@ -20,6 +20,11 @@

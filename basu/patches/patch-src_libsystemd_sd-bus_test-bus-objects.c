@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Fix logging, on NetBSD %m is only allowed in syslog(3) like function
+
 --- src/libsystemd/sd-bus/test-bus-objects.c.orig	2025-12-11 12:20:54.789852232 +0000
 +++ src/libsystemd/sd-bus/test-bus-objects.c
 @@ -247,14 +247,14 @@ static void *server(void *p) {

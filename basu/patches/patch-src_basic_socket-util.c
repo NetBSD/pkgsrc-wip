@@ -1,5 +1,7 @@
 $NetBSD$
 
+* ucred is unpcpid on NetBSD
+
 --- src/basic/socket-util.c.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/basic/socket-util.c
 @@ -63,8 +63,13 @@ int getpeercred(int fd, struct ucred *uc

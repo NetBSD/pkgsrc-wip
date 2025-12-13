@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Define unknown errnos
+
 --- src/basic/missing.h.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/basic/missing.h
 @@ -70,10 +70,24 @@

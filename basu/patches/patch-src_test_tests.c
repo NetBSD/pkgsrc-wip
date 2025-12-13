@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Add NetBSD support
+* Fix logging, on NetBSD %m is only allowed in syslog(3) like function
+
 --- src/test/tests.c.orig	2022-12-16 10:13:02.000000000 +0000
 +++ src/test/tests.c
 @@ -1,12 +1,13 @@
