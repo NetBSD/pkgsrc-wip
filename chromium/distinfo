@@ -1,11 +1,11 @@
 $NetBSD$
 
-BLAKE2s (chromium-143.0.7499.40-lite.tar.xz) = d4b758a007bccdb4d486a28887baf3906b1b6161e41130dbf0bff908969bbd4e
-SHA512 (chromium-143.0.7499.40-lite.tar.xz) = 072aa649082313819a01445a9c89c569f74f95fda7b9d49c0f0452086a2ae24cfb17280bd12cb2f130f6bc17fbd00dca65193226c60a2e5fe61a7a255097e4f0
-Size (chromium-143.0.7499.40-lite.tar.xz) = 1137895952 bytes
-BLAKE2s (chromium-143.0.7499.40-testdata.tar.xz) = 705e4dc84a72f84ecd81ac9fc81529aedf85a9c004a23b2740a36a826ab21b12
-SHA512 (chromium-143.0.7499.40-testdata.tar.xz) = c605f9fb24059aa53fff1f9b1284ca42901cee121c874e73dd12e8fa105226ffe7b278e0c0ab556a23d204ef86bcd0484daaaee7e8b5d81c3fa6e12ab818c91b
-Size (chromium-143.0.7499.40-testdata.tar.xz) = 1200244664 bytes
+BLAKE2s (chromium-143.0.7499.109-lite.tar.xz) = 124a140069cd599ff0f8801933dd4a56cdbb286f4bddaf55f7cc59fab81b5441
+SHA512 (chromium-143.0.7499.109-lite.tar.xz) = 9d9a24f9e424b8121c73edc8c5ad685447ccfc67d29878cc3b248eed86273702a0f26eb91ed501d492f165de1319bfdaed7a4071f2a9e7cfd7551f845b066f65
+Size (chromium-143.0.7499.109-lite.tar.xz) = 1140751164 bytes
+BLAKE2s (chromium-143.0.7499.109-testdata.tar.xz) = 87dd2a2e96129a2a737f593a7856e9cd4686678e98d31062963dd9c40ade4059
+SHA512 (chromium-143.0.7499.109-testdata.tar.xz) = 124d847be8bd4e3acdc312e34e5a1c61c2c899677d91eab6dc668b7c93890e93bf5db4eb2b5aaeb523a87d59e25861382f16a046f514c72a679fc3a4d6d264d9
+Size (chromium-143.0.7499.109-testdata.tar.xz) = 1155272172 bytes
 BLAKE2s (kikadf-chromium-audioio-v140.0.tar.gz) = 063582b80823694cfa30c020d3378dae3c7dbb1d0b3ffc3b756ce26e9984504c
 SHA512 (kikadf-chromium-audioio-v140.0.tar.gz) = e986fd201969e2ce9e7c092497c34bca84771992a2c8d980556d2dc77002ff68f3d13b4144629e9a8bc41b8ad0d4d06650eafadbfde7c0fa91ed84fbcd74763b
 Size (kikadf-chromium-audioio-v140.0.tar.gz) = 8453 bytes
