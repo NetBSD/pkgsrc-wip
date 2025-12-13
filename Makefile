@@ -5688,6 +5688,7 @@ SUBDIR+=	tendra.org-sid
 SUBDIR+=	teng
 SUBDIR+=	tengwar-ttf
 SUBDIR+=	tenmado
+SUBDIR+=	term39
 SUBDIR+=	termbox
 SUBDIR+=	termdbms
 SUBDIR+=	terminology
