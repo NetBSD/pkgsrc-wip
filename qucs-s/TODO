@@ -2,3 +2,32 @@ This is my first attempt making a pkgsrc-wip package. It appears to work but
 not sure about the dependencies. It needs to be tested and revised but it 
 is a good starting point.
 
+
+  * Determine language variants of C and C++ that are needed and
+    encode them.  Check if the package adds --std, and if not file a
+    bug upstream and add FORCE_CXX_STD.
+  - File a bug upstream about CMAKE_MANDIR (or whatever it actually is
+    called) not being respected; add URL to one of the patchfiles.
+  - Fix DESCR (looks like cut/paste from html with mangling; should be clean UTF-8)
+  - Add desktopdb.mk
+  - Sort bl3, or comment why not
+  - USE_TOOLS probably doesn't need cmake, given build.mk
+  - Add comment about bison define; seems like it shouldn't be needed,
+    perhaps upstream bug.
+  - Adjust comment to match DESCR - is this the spice version?
+  - Clarify in DESCR if this includes spice or expects it to be
+    external, and if so, if it's a dependency.  The actual situatio is
+    probably ok, but hard to follow.  Are there other qucs-foo
+    distributions?
+  - Perhaps add a comment about cups, and that cups-libs is
+    intentionally not a dependency.  (This is not required by our
+    norms, but is gdt opinion about documented code to help the next
+    maintainer.)
+      Could NOT find Cups (missing: CUPS_LIBRARIES CUPS_INCLUDE_DIR)
+  - Perhaps understand, report upstream, or fix:
+      [175/798] Generating ui_searchdialog.h
+      Detected locale "C" with character encoding "646", which is not UTF-8.
+      Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+      If this causes problems, reconfigure your locale. See the locale(1) manual
+      for more information.
+  - Finish COMMIT_MSG, with version and at least a few lines from DESCR.
