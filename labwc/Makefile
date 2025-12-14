@@ -12,6 +12,12 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
 
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Fixing pathes
+SUBST_FILES.path+=	startlabwc.sh
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE
+
 EGDIR=		${PREFIX}/share/examples/labwc
 CONF_FILES=	${EGDIR}/autostart ${PKG_SYSCONFDIR}/autostart
 CONF_FILES+=	${EGDIR}/environment ${PKG_SYSCONFDIR}/environment
@@ -25,12 +31,15 @@ PKG_SYSCONFSUBDIR=	xdg/labwc
 INSTALL_MAKE_FLAGS+=	rcdir=${EGDIR}
 
 # Fix: [../src/main.c:94] no fonts are available
-DEPENDS+=		nerd-fonts-Hack-[0-9]*:../../fonts/nerd-fonts-Hack
+DEPENDS+=	nerd-fonts-Hack-[0-9]*:../../fonts/nerd-fonts-Hack
 
 CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 
+post-extract:
+	${CP} ${FILESDIR}/startlabwc.sh.in ${WRKSRC}/startlabwc.sh
+
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/startlabwc.sh \
+	${INSTALL_SCRIPT} ${WRKSRC}/startlabwc.sh \
                 ${DESTDIR}${PREFIX}/bin/startlabwc
 
 .include "../../devel/meson/build.mk"
