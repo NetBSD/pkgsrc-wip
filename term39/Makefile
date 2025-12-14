@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 
 CARGO_NO_DEFAULT_FEATURES=	yes
 
-.if ${OPSYS:M*BSD}
+.if ${OPSYS:M*BSD} || ${OPSYS} == "Darwin"
 CARGO_FEATURES+=	bsd
 .elif ${OPSYS} == "Linux"
 CARGO_FEATURES+=	full
@@ -25,5 +25,11 @@ CARGO_FEATURES+=	full
 CARGO_FEATURES+=	tty
 .endif
 
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.clang}/lib
+
+BUILDLINK_DEPMETHOD.clang=      build
+.include "../../lang/clang/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
