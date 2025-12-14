@@ -18,15 +18,7 @@ SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	startlabwc.sh
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE
 
-EGDIR=		${PREFIX}/share/examples/labwc
-CONF_FILES=	${EGDIR}/autostart ${PKG_SYSCONFDIR}/autostart
-CONF_FILES+=	${EGDIR}/environment ${PKG_SYSCONFDIR}/environment
-CONF_FILES+=	${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/menu.xml
-CONF_FILES+=	${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/rc.xml
-CONF_FILES+=	${EGDIR}/rc.xml.all ${PKG_SYSCONFDIR}/rc.xml.all
-CONF_FILES+=	${EGDIR}/shutdown ${PKG_SYSCONFDIR}/shutdown
-CONF_FILES+=	${EGDIR}/themerc ${PKG_SYSCONFDIR}/themerc
-
+EGDIR=			${PREFIX}/share/examples/labwc
 PKG_SYSCONFSUBDIR=	xdg/labwc
 INSTALL_MAKE_FLAGS+=	rcdir=${EGDIR}
 
