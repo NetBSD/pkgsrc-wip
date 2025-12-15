@@ -3795,6 +3795,7 @@ SUBDIR+=	py-dlx
 SUBDIR+=	py-dna-features-viewer
 SUBDIR+=	py-dnaio
 SUBDIR+=	py-dns-clientsubnetoption
+SUBDIR+=	py-dnslib
 SUBDIR+=	py-docker
 SUBDIR+=	py-docker-emperor
 SUBDIR+=	py-docker-hub
