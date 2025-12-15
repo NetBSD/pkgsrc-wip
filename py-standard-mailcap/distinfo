@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (standard_mailcap-3.13.0.tar.gz) = a155338c73e6517ae908482dd84a0092a340707ef1a5ecf709be3cb4cb84b4b1
+SHA512 (standard_mailcap-3.13.0.tar.gz) = f12b2aa996af995cfe5fc147fd50f9201c87f1c82edca6cae49194b1eb27ffa8a8d3dd9d8ba833f5461b11912e51db35cb4bffd8d1203ae0201c083313af2755
+Size (standard_mailcap-3.13.0.tar.gz) = 8797 bytes
