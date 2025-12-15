@@ -4821,6 +4821,7 @@ SUBDIR+=	py-srsly
 SUBDIR+=	py-ssh2
 SUBDIR+=	py-ssp
 SUBDIR+=	py-stache
+SUBDIR+=	py-standard-mailcap
 SUBDIR+=	py-statemint
 SUBDIR+=	py-statgrap
 SUBDIR+=	py-stats-arrays
