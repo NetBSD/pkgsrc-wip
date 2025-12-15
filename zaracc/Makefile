@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=  	zaracc-0.1.10
-CATEGORIES=	games	
+CATEGORIES=	lang	
 MASTER_SITES=	https://sourceforge.net/projects/zaracc/files/
 
 MAINTAINER=	goon.mage@yahoo.com
