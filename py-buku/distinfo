@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (buku-5.1.tar.gz) = 03cb0cb86ea34155e6c6a61a5c7840e00de76e52f9c8bda28db80e8f3bdfec81
+SHA512 (buku-5.1.tar.gz) = 85fd835836716b9681a30f1e93a015dfa7df5973773daaff92b3d3031dce2d64e18b7b5cf5d32f9f2171a9ae4635bfbf2b764ed50dea87332e18316256bd115b
+Size (buku-5.1.tar.gz) = 292496 bytes

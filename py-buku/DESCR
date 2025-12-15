@@ -1,0 +1,17 @@
+buku is a powerful bookmark manager and a personal textual mini-web.
+
+For those who prefer the GUI, bukuserver exposes a browsable
+front-end on a local web host server. See bukuserver page for config
+and screenshots.
+
+buku can import bookmarks from browser(s) or fetch the title, tags
+and description of a URL from the web. Use your favourite editor
+to add, compose and update bookmarks. Search bookmarks instantly
+with multiple search options, including regex and a deep scan mode
+(handy with URLs).
+
+It can look up broken links on the Wayback Machine. There's an
+Easter Egg to revisit random bookmarks.
+
+There's no tracking, hidden history, obsolete records, usage
+analytics or homing.
