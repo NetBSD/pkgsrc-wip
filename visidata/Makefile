@@ -13,7 +13,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.4:../../textproc/py-openpyxl
-#DEPENDS+=	${PYPKGPREFIX}-standard-mailcap-[0-9]*:../../wip/py-standard-mailcap
+DEPENDS+=	${PYPKGPREFIX}-standard-mailcap-[0-9]*:../../wip/py-standard-mailcap
 
 SUBST_CLASSES+=		setuppy
 SUBST_STAGE.setuppy=	pre-configure
