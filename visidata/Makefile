@@ -32,4 +32,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
