@@ -6,6 +6,10 @@ Not all curses support mouse, e.g. NetBSD curses(3).
 
 Related to upstream #2851.
 
+Shared upstream via:
+
+ <https://github.com/saulpw/visidata/pull/2913>
+
 --- visidata/_input.py.orig	2025-12-15 11:55:26.043085221 +0000
 +++ visidata/_input.py
 @@ -60,16 +60,18 @@ def acceptThenFunc(*longnames):
