@@ -5609,6 +5609,7 @@ SUBDIR+=	svt-vp9
 SUBDIR+=	swami
 SUBDIR+=	swarp
 SUBDIR+=	sway
+SUBDIR+=	swaybg
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	swift
