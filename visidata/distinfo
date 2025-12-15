@@ -3,3 +3,5 @@ $NetBSD$
 BLAKE2s (visidata-3.3.tar.gz) = d9d474f37c8084086d7b6b7ce00c125fbe8d885c153877e2161644e3da65963d
 SHA512 (visidata-3.3.tar.gz) = 262f12c17d18f0e58e6617bde37ba660199c7b3a078d70e774b65318b5f3daac9c85b2f6b4eaa9e232df85d37bad700b42fb764f9234d3eef3eab2e4e829d176
 Size (visidata-3.3.tar.gz) = 13248725 bytes
+SHA1 (patch-visidata___input.py) = 6da5b338e4d1105611c9e869914f095ac876929d
+SHA1 (patch-visidata_movement.py) = 90afb92b45538ef53cd90106eca9bd80c79045c7
