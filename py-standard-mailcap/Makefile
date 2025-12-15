@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	standard_mailcap-3.13.0
-PKGNAME=	${DISTNAME:S/_/-/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/standard_mailcap/}
 
