@@ -1,0 +1,3 @@
+- Needs testing for real
+   - probably mouse handling should be disabled for NetBSD curses(3) and/or make
+     it really optional
