@@ -11,6 +11,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
+DEPENDS+=	swaybg-[0-9]*:../../wip/swaybg
 
 EGDIR=		${PREFIX}/share/examples/sway
 OWN_DIRS+=	${PKG_SYSCONFDIR}/sway
