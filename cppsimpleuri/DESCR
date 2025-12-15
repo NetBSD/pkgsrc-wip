@@ -1,0 +1,5 @@
+cppsimpleuri is a C++ uri & query parser
+
+- According to RFC3986
+- Includes Query Parser & Builder
+- Includes percent-encoding & -decoding

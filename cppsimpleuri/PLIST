@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/salzaverde/detail/encoder.h
+include/salzaverde/query.h
+include/salzaverde/uri.h
+lib/libcppsimpleuri.a
