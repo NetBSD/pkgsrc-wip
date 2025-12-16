@@ -19,6 +19,12 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
+# Rust 1.92.0 needs llvm >= 20, so if we're still on older...
+LLVM_VERSION!=	awk '/^LLVM_VERSION/ { print $$2 }' ../../lang/llvm/version.mk
+.if !empty(LLVM_VERSION:M1[0-9].*)
+PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
+.endif
+
 PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 
 # Bundle OpenSSL and curl into the cargo binary when producing
