@@ -1,0 +1,12 @@
+- test installboot integration
+
+- this u-boot build might place the DTB in the BSS section:
+  https://mail-index.netbsd.org/port-arm/2025/12/14/msg009487.html
+
+  If we can't resolve this upstream, we might have to change the
+  boot command in the config to something like this:
+
+  env set fdt_high 0x41000000;
+  fatload mmc 0:2 0x41000000 imx23-olinuxino.dtb;
+  fatload mmc 0:2 0x42000000 uImage;
+  bootm 0x42000000 - 0x41000000;
