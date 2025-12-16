@@ -5415,6 +5415,7 @@ SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git
 SUBDIR+=	sfeed_curses-git
 SUBDIR+=	sflphoned
+SUBDIR+=	sftpgo
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
 SUBDIR+=	shadow
