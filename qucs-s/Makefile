@@ -13,17 +13,19 @@ COMMENT=	Circuit simulation program based on Qucs circuit simulator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison cmake
+FORCE_CXX_STD=	gnu++20
+USE_TOOLS+=	bison
 TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 CMAKE_CONFIGURE_ARGS+=	-DBISON_DIR=${PREFIX}/bin
-
+#THIS SHOULD NOT BE NEEDED, PERHAPS UPSTREAM BUG.
 
 .include "../../devel/cmake/build.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
-.include "../../x11/qt6-qtbase/buildlink3.mk"
-.include "../../graphics/qt6-qtsvg/buildlink3.mk"
-.include "../../graphics/qt6-qtcharts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/qt6-qtcharts/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

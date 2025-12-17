@@ -1,1 +1,7 @@
-cad/qucs_s: Add
+cad/qucs_s: Add 25.2.0 
+
+Qucs-S is a circuit simulation program based on Qucs circuit
+simulator.The "S" letter indicates SPICE. The purpose of the Qucs-S
+project is to use free circuit simulation kernels (Ngspice, Qucsator,
+Xyce) with the unified GUI based on Qt6 toolkit. It merges the
+power of SPICE and the simplicity of the Qucs GUI.
