@@ -6,18 +6,18 @@ Shared upstream via:
 
  <https://github.com/mitchellh/go-ps/pull/59>
 
---- go.sum.orig	2025-07-08 09:34:09.000000000 +0000
+--- go.sum.orig	2025-11-27 10:18:48.000000000 +0000
 +++ go.sum
-@@ -343,6 +343,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
+@@ -360,6 +360,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
  github.com/hashicorp/golang-lru/v2 v2.0.5/go.mod h1:QeFd9opnmA6QUJc5vARoKUSoFhyfM2/ZepoAG6RGpeM=
- github.com/homeport/dyff v1.7.1 h1:B3KJUtnU53H2UryxGcfYKQPrde8VjjbwlHZbczH3giQ=
- github.com/homeport/dyff v1.7.1/go.mod h1:iLe5b3ymc9xmHZNuJlNVKERE8L2isQMBLxFiTXcwZY0=
+ github.com/homeport/dyff v1.10.2 h1:XyB+D0KVwjbUFTZYIkvPtsImwkfh+ObH2CEdEHTqdr4=
+ github.com/homeport/dyff v1.10.2/go.mod h1:0kIjL/JOGaXigzrLY6kcl5esSStbAa99r6GzEvr7lrs=
 +github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23 h1:bOKbKZULjNQbnK+xXLXXa42TlFYELUNoyUTym+8KDvM=
 +github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23/go.mod h1:J4lOc8z8yJs6vUwklHw2XEIiT4z4C40KtWVN3nvg8Pg=
  github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
  github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
  github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOlocH6Fxy8MmwDt+yVQYULKfN0RoTN8A=
-@@ -410,8 +412,6 @@ github.com/mitchellh/copystructure v1.2.
+@@ -427,8 +429,6 @@ github.com/mitchellh/copystructure v1.2.
  github.com/mitchellh/copystructure v1.2.0/go.mod h1:qLl+cE2AmVv+CoeAwDPye/v+N2HKCj9FbZEVFJRxO9s=
  github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
  github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
