@@ -13,6 +13,8 @@ COMMENT=	Circuit simulation program based on Qucs circuit simulator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+# Upstream CMakeLists.txt select C++17 or C++20 depending on Qt version.
+# In pkgsrc-current, Qt >= 6.7 is used, which requires C++20
 FORCE_CXX_STD=	gnu++20
 USE_TOOLS+=	bison
 TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix

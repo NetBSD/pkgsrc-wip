@@ -3,11 +3,10 @@ to work but not sure about the dependencies. It needs to be tested
 and revised but it is a good starting point. Some missing points:
 
 
-  * Determine language variants of C and C++ that are needed and
-    encode them.  Check if the package adds --std, and if not file
-    a bug upstream and add FORCE_CXX_STD.  Asked upstream for
-    standard C and C++ requirements. In the meantime FORCE_CXX_STD=
-    gnu++20 is used.
+  - Asked upstream for standard C and C++ requirements. Upstream
+    CMakeLists.txt select C++17 or C++20 depending on Qt version.
+    In pkgsrc-current, Qt >= 6.7 is used, which requires C++20.
+    In the  meantime FORCE_CXX_STD=    gnu++20 is used.
 
   - File a bug upstream about CMAKE_MANDIR (or whatever it actually
     is called) not being respected; add URL to one of the patchfiles.
