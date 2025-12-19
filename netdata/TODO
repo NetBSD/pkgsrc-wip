@@ -1,0 +1,5 @@
+Gets through configure, but then fails with
+
+ninja: error: '/scratch/wip/netdata/work/netdata-2.8.3/src/aclk/aclk-schemas/proto/aclk/v1/lib.proto', needed by 'src/aclk/aclk-schemas/proto/aclk/v1/lib.pb.cc', missing and no known rule to make it
+
+/scratch/wip/netdata/work/netdata-2.8.3/src/aclk/aclk-schemas/ is an empty directory.

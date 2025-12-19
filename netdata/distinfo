@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (netdata-2.8.3.tar.gz) = 3cc3d7306e2c4a6a100b4b504b129ae5bad1a8fe98e2118b913cc00d11067718
+SHA512 (netdata-2.8.3.tar.gz) = 78d86b275029557b07a16ded21baa1af1df233512688f707436ed71bd23823051e89fc731be9e714a4800a784580cbd55095b471f4fcbc9941dc612c182bf3e7
+Size (netdata-2.8.3.tar.gz) = 15606863 bytes
+SHA1 (patch-aa) = b5615c043d603776926daceeaa60e9d0aa3ab4d7
