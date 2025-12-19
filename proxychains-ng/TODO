@@ -3,3 +3,6 @@ $NetBSD$
 - This package should probably eventually replace wip/proxychains/
   which uses a codebase that is apparently no longer maintained.
 - Lacks a manual page.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-34451
