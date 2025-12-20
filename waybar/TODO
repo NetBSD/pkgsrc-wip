@@ -1,0 +1,8 @@
+options:
+-audio visualizer: cava (need to port)
+-keyboard state: evdev, libinput (test: libevdev-chunk, libopeninput)
+-mpris media player remote interface: playerctl (need to port)
+-backlight: 
+-volume: pulse, jack, sndio (no audioio..)
+
+Not tested yet

@@ -6039,6 +6039,7 @@ SUBDIR+=	wasi-libc-git
 SUBDIR+=	wasi-libcxx
 SUBDIR+=	watch
 SUBDIR+=	watchman
+SUBDIR+=	waybar
 SUBDIR+=	wcstools
 SUBDIR+=	weatherman
 SUBDIR+=	web-mode
