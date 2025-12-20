@@ -11,6 +11,9 @@ ${PYSITELIB}/netbsd_hghooks/_version.pyo
 ${PYSITELIB}/netbsd_hghooks/aclbranchpat.py
 ${PYSITELIB}/netbsd_hghooks/aclbranchpat.pyc
 ${PYSITELIB}/netbsd_hghooks/aclbranchpat.pyo
+${PYSITELIB}/netbsd_hghooks/commitlint.py
+${PYSITELIB}/netbsd_hghooks/commitlint.pyc
+${PYSITELIB}/netbsd_hghooks/commitlint.pyo
 ${PYSITELIB}/netbsd_hghooks/enforce_topic.py
 ${PYSITELIB}/netbsd_hghooks/enforce_topic.pyc
 ${PYSITELIB}/netbsd_hghooks/enforce_topic.pyo
