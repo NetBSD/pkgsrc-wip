@@ -6,8 +6,8 @@ I admit to this entirely being based on "cargo cult" and based on
 what the compiler told me, but at least the rust compiler (cross-)builds
 for NetBSD/risc64 with this, whereas it did not earlier.
 
---- vendor/libc-0.2.175/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-11-02 16:57:14.244169978 +0000
-+++ vendor/libc-0.2.175/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
+--- vendor/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-11-02 16:57:14.244169978 +0000
++++ vendor/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
 @@ -1,24 +1,59 @@
 -use PT_FIRSTMACH;
 +use core::clone::Clone;
