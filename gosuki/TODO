@@ -1,12 +1,1 @@
-Build problem:
-
-# github.com/blob42/gosuki/pkg/browsers
-pkg/browsers/base.go:53:18: b.ExpandBaseDir undefined (type BrowserDef has no field or method ExpandBaseDir)
-pkg/browsers/base.go:54:3: undefined: log
-pkg/browsers/base.go:54:39: b.BaseDir undefined (type BrowserDef has no field or method BaseDir, but does have field baseDir)
-pkg/browsers/base.go:55:3: undefined: log
-pkg/browsers/base.go:57:3: undefined: log
-pkg/browsers/base.go:87:21: undefined: DefinedBrowsers
-
-Reported upstream at
-https://github.com/blob42/gosuki/issues/20
+Test.

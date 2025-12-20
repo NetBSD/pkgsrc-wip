@@ -14,6 +14,11 @@ LICENSE=	gnu-agpl-v3
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/gen
+	${RM} ${DESTDIR}${PREFIX}/bin/generate
+	${RM} ${DESTDIR}${PREFIX}/bin/scripts
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
