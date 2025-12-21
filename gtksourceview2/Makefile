@@ -17,6 +17,11 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 GNU_CONFIGURE=		yes
 
+# work arround for older style programming (for gcc-14.3.0)
+CFLAGS+=		-Wno-deprecated-declarations
+CFLAGS+=		-Wno-unused-but-set-variable
+CFLAGS+=		-Wno-incompatible-pointer-types
+
 PKGCONFIG_OVERRIDE=	gtksourceview-2.0.pc.in
 
 SUBST_CLASSES+=		ige-mac
