@@ -1,0 +1,4 @@
+Does not build because NetBSD does not provide uselocale().
+
+Reported upstream at
+https://github.com/i3/i3/issues/6567
