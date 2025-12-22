@@ -11,6 +11,3 @@ running WeeWX.
 
 Thousands of stations throughout the world run WeeWX, many of whom
 have opted-in to be shown on our station map.
-
-pkgsrc note: For now, this package is useful to install the
-dependencies; see the Makefile for configuration issues.

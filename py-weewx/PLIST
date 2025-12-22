@@ -1,18 +1,6 @@
 @comment $NetBSD$
 bin/weectl-${PYVERSSUFFIX}
 bin/weewxd-${PYVERSSUFFIX}
-${PYSITELIB}/schemas/__init__.py
-${PYSITELIB}/schemas/__init__.pyc
-${PYSITELIB}/schemas/__init__.pyo
-${PYSITELIB}/schemas/wview.py
-${PYSITELIB}/schemas/wview.pyc
-${PYSITELIB}/schemas/wview.pyo
-${PYSITELIB}/schemas/wview_extended.py
-${PYSITELIB}/schemas/wview_extended.pyc
-${PYSITELIB}/schemas/wview_extended.pyo
-${PYSITELIB}/schemas/wview_small.py
-${PYSITELIB}/schemas/wview_small.pyc
-${PYSITELIB}/schemas/wview_small.pyo
 ${PYSITELIB}/weecfg/__init__.py
 ${PYSITELIB}/weecfg/__init__.pyc
 ${PYSITELIB}/weecfg/__init__.pyo
@@ -235,6 +223,18 @@ ${PYSITELIB}/weewx/reportengine.pyo
 ${PYSITELIB}/weewx/restx.py
 ${PYSITELIB}/weewx/restx.pyc
 ${PYSITELIB}/weewx/restx.pyo
+${PYSITELIB}/weewx/schemas/__init__.py
+${PYSITELIB}/weewx/schemas/__init__.pyc
+${PYSITELIB}/weewx/schemas/__init__.pyo
+${PYSITELIB}/weewx/schemas/wview.py
+${PYSITELIB}/weewx/schemas/wview.pyc
+${PYSITELIB}/weewx/schemas/wview.pyo
+${PYSITELIB}/weewx/schemas/wview_extended.py
+${PYSITELIB}/weewx/schemas/wview_extended.pyc
+${PYSITELIB}/weewx/schemas/wview_extended.pyo
+${PYSITELIB}/weewx/schemas/wview_small.py
+${PYSITELIB}/weewx/schemas/wview_small.pyc
+${PYSITELIB}/weewx/schemas/wview_small.pyo
 ${PYSITELIB}/weewx/station.py
 ${PYSITELIB}/weewx/station.pyc
 ${PYSITELIB}/weewx/station.pyo
