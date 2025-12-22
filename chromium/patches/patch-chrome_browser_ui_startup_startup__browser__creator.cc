@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator.cc
 @@ -135,7 +135,7 @@
  #include "chrome/credential_provider/common/gcp_strings.h"

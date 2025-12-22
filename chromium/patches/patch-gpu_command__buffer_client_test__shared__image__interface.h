@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/test_shared_image_interface.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- gpu/command_buffer/client/test_shared_image_interface.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ gpu/command_buffer/client/test_shared_image_interface.h
 @@ -37,7 +37,7 @@ class TestSharedImageInterface : public 
   public:

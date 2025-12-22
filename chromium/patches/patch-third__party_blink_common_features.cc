@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/features.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/blink/common/features.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/blink/common/features.cc
 @@ -588,7 +588,7 @@ BASE_FEATURE_PARAM(base::TimeDelta,
  BASE_FEATURE(kDevToolsImprovedNetworkError, base::FEATURE_DISABLED_BY_DEFAULT);

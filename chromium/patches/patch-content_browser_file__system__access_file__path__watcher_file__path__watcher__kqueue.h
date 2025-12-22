@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_path_watcher/file_path_watcher_kqueue.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/browser/file_system_access/file_path_watcher/file_path_watcher_kqueue.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/browser/file_system_access/file_path_watcher/file_path_watcher_kqueue.h
 @@ -5,6 +5,7 @@
  #ifndef CONTENT_BROWSER_FILE_SYSTEM_ACCESS_FILE_PATH_WATCHER_FILE_PATH_WATCHER_KQUEUE_H_

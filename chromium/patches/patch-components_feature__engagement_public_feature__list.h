@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
 @@ -355,7 +355,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSAIHubNewBa
  #endif  // BUILDFLAG(IS_IOS)

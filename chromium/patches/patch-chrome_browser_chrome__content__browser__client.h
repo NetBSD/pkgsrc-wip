@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
 @@ -584,7 +584,7 @@ class ChromeContentBrowserClient : publi
        const GURL& site_url) override;

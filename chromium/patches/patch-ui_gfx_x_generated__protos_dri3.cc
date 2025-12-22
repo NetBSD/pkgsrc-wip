@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/generated_protos/dri3.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- ui/gfx/x/generated_protos/dri3.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ ui/gfx/x/generated_protos/dri3.cc
 @@ -27,6 +27,8 @@
  #include <xcb/xcb.h>

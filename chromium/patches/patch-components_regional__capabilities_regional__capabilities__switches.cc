@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_switches.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_switches.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_switches.cc
 @@ -23,7 +23,7 @@ BASE_FEATURE(kResolveRegionalCapabilitie
               base::FEATURE_ENABLED_BY_DEFAULT);

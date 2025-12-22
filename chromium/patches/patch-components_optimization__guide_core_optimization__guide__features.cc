@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/optimization_guide/core/optimization_guide_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/optimization_guide/core/optimization_guide_features.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/optimization_guide/core/optimization_guide_features.cc
 @@ -98,7 +98,7 @@ BASE_FEATURE(kOptimizationGuideModelExec
  // Whether to use the on device model service in optimization guide.

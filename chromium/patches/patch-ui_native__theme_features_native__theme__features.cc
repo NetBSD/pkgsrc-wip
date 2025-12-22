@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/features/native_theme_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- ui/native_theme/features/native_theme_features.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ ui/native_theme/features/native_theme_features.cc
 @@ -54,7 +54,7 @@ namespace ui {
  

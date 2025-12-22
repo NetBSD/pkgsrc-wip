@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/signals_features.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/device_signals/core/common/signals_features.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/device_signals/core/common/signals_features.h
 @@ -37,7 +37,7 @@ bool IsDetectedAgentSignalCollectionEnab
  bool IsSystemSignalCollectionImprovementEnabled();

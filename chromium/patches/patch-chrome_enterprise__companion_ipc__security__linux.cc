@@ -1,6 +1,10 @@
 $NetBSD$
 
---- chrome/enterprise_companion/ipc_security_linux.cc.orig	2025-12-12 14:50:20.711039985 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/enterprise_companion/ipc_security_linux.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/enterprise_companion/ipc_security_linux.cc
 @@ -15,7 +15,11 @@ namespace enterprise_companion {
  IpcTrustDecider CreateIpcTrustDecider() {

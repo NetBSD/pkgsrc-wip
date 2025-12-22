@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- apps/ui/views/app_window_frame_view.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- apps/ui/views/app_window_frame_view.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ apps/ui/views/app_window_frame_view.cc
 @@ -146,7 +146,7 @@ gfx::Rect AppWindowFrameView::GetBoundsF
  gfx::Rect AppWindowFrameView::GetWindowBoundsForClientBounds(

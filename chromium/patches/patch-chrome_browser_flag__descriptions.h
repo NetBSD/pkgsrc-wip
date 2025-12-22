@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/flag_descriptions.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
 @@ -8586,6 +8586,20 @@ inline constexpr char kHandleMdmErrorsFo
  inline constexpr char kHandleMdmErrorsForDasherAccountsDescription[] =

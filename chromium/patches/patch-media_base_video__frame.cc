@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- media/base/video_frame.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ media/base/video_frame.cc
 @@ -85,7 +85,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";

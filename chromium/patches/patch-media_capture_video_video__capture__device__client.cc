@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/video_capture_device_client.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- media/capture/video/video_capture_device_client.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ media/capture/video/video_capture_device_client.cc
 @@ -168,7 +168,7 @@ FourccAndFlip GetFourccAndFlipFromPixelF
        CHECK(!is_width_odd && !is_height_odd);

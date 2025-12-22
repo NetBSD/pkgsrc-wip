@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/libsecret_util_linux.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/os_crypt/sync/libsecret_util_linux.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/os_crypt/sync/libsecret_util_linux.cc
 @@ -184,16 +184,22 @@ bool LibsecretLoader::EnsureLibsecretLoa
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/perfetto/track_name_recorder.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- services/tracing/public/cpp/perfetto/track_name_recorder.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ services/tracing/public/cpp/perfetto/track_name_recorder.cc
 @@ -53,7 +53,7 @@ void FillThreadTrack(const perfetto::Thr
      desc.mutable_chrome_thread()->set_thread_type(

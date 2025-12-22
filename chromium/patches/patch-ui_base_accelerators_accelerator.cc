@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/accelerator.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- ui/base/accelerators/accelerator.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ ui/base/accelerators/accelerator.cc
 @@ -335,7 +335,7 @@ std::vector<std::u16string> Accelerator:
      modifiers.push_back(l10n_util::GetStringUTF16(IDS_APP_SEARCH_KEY));

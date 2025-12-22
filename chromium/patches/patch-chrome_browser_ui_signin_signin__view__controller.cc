@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/signin/signin_view_controller.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.cc
 @@ -472,7 +472,7 @@ void SigninViewController::ShowModalSync
        GetOnModalDialogClosedCallback());

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/platform_helpers.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/angle/src/common/platform_helpers.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/angle/src/common/platform_helpers.h
 @@ -62,7 +62,7 @@ inline constexpr bool IsIOS()
  
