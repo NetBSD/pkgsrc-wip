@@ -1726,6 +1726,7 @@ SUBDIR+=	hyperrogue
 SUBDIR+=	hztool
 SUBDIR+=	i2pd
 SUBDIR+=	i2pd-git
+SUBDIR+=	i3
 SUBDIR+=	i3-git
 SUBDIR+=	i686-elf-binutils
 SUBDIR+=	i686-elf-gcc
