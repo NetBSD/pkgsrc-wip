@@ -3,8 +3,8 @@ $NetBSD$
 BLAKE2s (waybar-0.14.0.tar.gz) = 11cff6a2a8923fdc41d055203c00e115c555e9ad45ac613c56ebcfa8c9bd8ad1
 SHA512 (waybar-0.14.0.tar.gz) = dc3d18f7117be8cce5979029110770699b0d9d737337c3cf27361d6ceda6fcde33dac9781e406a70eb24c9e0e95e3801d47e81d44bfb61c311510fb30dd975a7
 Size (waybar-0.14.0.tar.gz) = 341661 bytes
-SHA1 (patch-meson.build) = 0963fed3f36e52ceb2028c4a87714bbc0add6f90
-SHA1 (patch-src_modules_battery.cpp) = a50d16904dd9f9d229cb806f28416005eadae835
+SHA1 (patch-meson.build) = f954e53a9e904e8500044e764b78fbf61ad27ed6
+SHA1 (patch-src_modules_battery.cpp) = 99668d01253a9be6dcfe544899325a906ffb6a4b
 SHA1 (patch-src_modules_custom.cpp) = 644740e4862444b7ed33523affe5d97e5fcbdd32
 SHA1 (patch-src_modules_simpleclock.cpp) = 7ffa485e5cc9033e090d46133654243cbd1b3f8d
 SHA1 (patch-src_modules_user.cpp) = 7b9d5578a64d2b1fefbecd650549c5e9f8ea19ad

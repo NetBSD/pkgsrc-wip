@@ -43,7 +43,7 @@ $NetBSD$
      'resources/style.css',
 -    install_dir: sysconfdir / 'xdg/waybar'
 +    #install_dir: sysconfdir / 'xdg/waybar'
-+    install_dir: prefix / 'examples/waybar'
++    install_dir: prefix / 'share/examples/waybar'
  )
  
  scdoc = dependency('scdoc', version: '>=1.9.2', native: true, required: get_option('man-pages'))

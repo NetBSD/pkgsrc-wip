@@ -1,7 +1,5 @@
 @comment $NetBSD$
 bin/waybar
-examples/waybar/config.jsonc
-examples/waybar/style.css
 man/man5/waybar-battery.5
 man/man5/waybar-cffi.5
 man/man5/waybar-clock.5
@@ -40,3 +38,5 @@ man/man5/waybar-temperature.5
 man/man5/waybar-tray.5
 man/man5/waybar-wlr-taskbar.5
 man/man5/waybar.5
+share/examples/waybar/config.jsonc
+share/examples/waybar/style.css

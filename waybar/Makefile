@@ -15,7 +15,6 @@ USE_CXX_FEATURES+=	filesystem
 USE_LANGUAGES=		c c++
 
 USE_TOOLS+=	pkg-config gdbus-codegen
-#TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
 SUBST_CLASSES+=		nogit
 SUBST_STAGE.nogit=	pre-configure
@@ -25,23 +24,24 @@ SUBST_SED.nogit+=	-e 's/git =/\#git =/g'
 SUBST_SED.nogit+=	-e 's/git.found()/false/g'
 SUBST_SED.nogit+=	-e '/project_version/s/@0@/${PKGVERSION}/g'
 
-EGDIR=		${PREFIX}/share/examples/labwc
-CONF_FILES=	${EGDIR}/config.json ${PKG_SYSCONFDIR}/config.json
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_MESSAGE.conf=	Set SYSCONFDIR
+SUBST_FILES.conf+=	src/config.cpp
+SUBST_SED.conf+=	-e 's|SYSCONFDIR "|"${PKG_SYSCONFBASE}|g'
+
+EGDIR=		${PREFIX}/share/examples/waybar
+CONF_FILES=	${EGDIR}/config.jsonc ${PKG_SYSCONFDIR}/config.jsonc
 CONF_FILES+=	${EGDIR}/style.css ${PKG_SYSCONFDIR}/style.css
 
 PKG_SYSCONFSUBDIR=	xdg/waybar
-
-#INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-#post-install:
-#	scdoc < ${WRKSRC}/swaybg.1.scd > ${WRKSRC}/swaybg.1
-#	${INSTALL_MAN} ${WRKSRC}/swaybg.1 \
-#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/swaybg.1
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
 .include "../../wip/gtk-layer-shell/buildlink3.mk"
 
 .include "../../devel/meson/build.mk"
-.include "../../textproc/scdoc/tool.mk"
+#.include "../../textproc/scdoc/tool.mk"
+.include "../../wip/scdoc/tool.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/spdlog/buildlink3.mk"

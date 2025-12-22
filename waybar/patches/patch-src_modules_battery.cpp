@@ -66,7 +66,7 @@ $NetBSD$
 +}
 +
 +static bool stat_is_valid(prop_dictionary_t stat) {
-+  prop_object_t oBbj;
++  prop_object_t obj;
 +
 +  if ((stat == nullptr) ||
 +      ((obj = prop_dictionary_get(stat, "state")) == nullptr) || 
