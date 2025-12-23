@@ -28,7 +28,6 @@ bin/spa-inspect
 bin/spa-json-dump
 bin/spa-monitor
 bin/spa-resample
-etc/security/limits.d/25-pw-rlimits.conf
 include/pipewire-0.3/pipewire/array.h
 include/pipewire-0.3/pipewire/buffers.h
 include/pipewire-0.3/pipewire/client.h
@@ -308,6 +307,7 @@ lib/spa-0.2/support/libspa-dbus.so
 lib/spa-0.2/support/libspa-support.so
 lib/spa-0.2/videoconvert/libspa-videoconvert.so
 lib/spa-0.2/videotestsrc/libspa-videotestsrc.so
+share/examples/pipewire/25-pw-rlimits.conf
 share/locale/af/LC_MESSAGES/pipewire.mo
 share/locale/as/LC_MESSAGES/pipewire.mo
 share/locale/be/LC_MESSAGES/pipewire.mo

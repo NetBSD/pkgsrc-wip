@@ -1,0 +1,15 @@
+$NetBSD$
+
+install via examples dir
+
+--- src/modules/module-rt/meson.build.orig	2025-07-23 15:42:58.000000000 +0000
++++ src/modules/module-rt/meson.build
+@@ -7,7 +7,7 @@ rlimits_data.set('MEMLOCK', get_option('
+ configure_file(input: '25-pw-rlimits.conf.in',
+   output: '25-pw-rlimits.conf',
+   install: rlimits_install,
+-  install_dir: get_option('sysconfdir') / 'security' / 'limits.d',
++  install_dir: get_option('datadir') / 'examples' / 'pipewire',
+   configuration: rlimits_data)
+ summary({'RLIMITs': '@0@ limits.d file affecting matching PAM users'.format(rlimits_install ? 'with' : 'without')})
+ 

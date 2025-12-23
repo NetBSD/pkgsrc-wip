@@ -31,6 +31,10 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=format # %m in printf
 LDFLAGS+=	-L${PREFIX}/lib/pipewire-0.3
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/pipewire-0.3
 
+# Only relevant on linux, install clashes with /etc/security script on NetBSD
+#CONF_FILES+=	${PREFIX}/share/examples/pipewire/25-pw-rlimits.conf \
+#		${PKG_SYSCONFDIR}/security/limits.d/25-pw-rlimits.conf
+
 MESON_ARGS+=	-Dv4l2=disabled
 MESON_ARGS+=	-Dpipewire-v4l2=disabled
 MESON_ARGS+=	-Dsession-managers=disabled

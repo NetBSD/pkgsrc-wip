@@ -17,6 +17,7 @@ SHA1 (patch-src_modules_module-netjack2-manager.c) = 698a991a634fd603ec26d7f0b9a
 SHA1 (patch-src_modules_module-protocol-native_test-connection.c) = 26504b447acce99c7def1fd88e9b278ef58747f2
 SHA1 (patch-src_modules_module-protocol-pulse_utils.c) = f0d3009287376502db2f93315dacbeeed3dcc431
 SHA1 (patch-src_modules_module-rt.c) = c6b2370cd13a445747dbf52a6da53658557589a1
+SHA1 (patch-src_modules_module-rt_meson.build) = 2f77b98d6f0330e924bc5300c011e8b19cbd60dd
 SHA1 (patch-src_modules_module-rtp-sap.c) = c8dcbaf64dbc318046dc937ce471c249224174b6
 SHA1 (patch-src_modules_module-rtp-session.c) = bed76eceb46fa71fc7b836ac7b5de2ddf6a29efe
 SHA1 (patch-src_modules_module-rtp-source.c) = 6ea2fae1ae17c989150f3c7a932c28fcf59cd644
