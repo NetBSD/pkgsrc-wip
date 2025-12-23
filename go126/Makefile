@@ -1,10 +1,11 @@
 # $NetBSD: Makefile,v 1.3 2025/12/19 17:02:26 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
-GO_BOOTSTRAP_REQD=	122
+GO_BOOTSTRAP_REQD=	124
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	125
+GO126_VERSION=	1.26rc1
+GOVERSSUFFIX=	126
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
@@ -18,11 +19,6 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash perl pax
-
-# Patch to stop requiring /proc to be mounted on NetBSD
-PATCH_SITES=		https://github.com/golang/go/commit/
-PATCHFILES=		9ba0948172cbb05308fb2a9db823a720f8ffb9ad.patch
-PATCH_DIST_STRIP=	-p1
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp

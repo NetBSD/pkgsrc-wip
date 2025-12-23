@@ -1362,6 +1362,7 @@ SUBDIR+=	gnunet-go
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnuradio-monolithic
 SUBDIR+=	gnutls-guile
+SUBDIR+=	go126
 SUBDIR+=	go-astilectron
 SUBDIR+=	go-atomic
 SUBDIR+=	go-bin
