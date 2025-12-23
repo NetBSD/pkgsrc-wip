@@ -3297,6 +3297,7 @@ SUBDIR+=	plasma-integration
 SUBDIR+=	plasma-widget-menubar
 SUBDIR+=	plasma-workspace
 SUBDIR+=	plasma-workspace-wallpapers
+SUBDIR+=	plasma6-kpipewire
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
 SUBDIR+=	please
