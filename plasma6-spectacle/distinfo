@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2024/08/24 04:27:17 markd Exp $
+
+BLAKE2s (spectacle-6.5.2.tar.xz) = 13d2349219a00c2e8b3ba3495bb91b24ec88c6b8a22af90d7afe03d89ead1422
+SHA512 (spectacle-6.5.2.tar.xz) = a8ba81c6d381a79fdff721ae18714beb51c4fca97640a695b36a8eb7e1c29c4adf8d78465505ba5f2bf2430a169b29db06da18205239269c1a59c62116f83aa2
+Size (spectacle-6.5.2.tar.xz) = 1606128 bytes
