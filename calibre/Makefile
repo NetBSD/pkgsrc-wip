@@ -158,5 +158,5 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

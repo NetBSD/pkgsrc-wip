@@ -26,5 +26,5 @@ pre-configure:
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../geography/qt6-qtlocation/buildlink3.mk"
 .include "../../www/qt6-qtwebchannel/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

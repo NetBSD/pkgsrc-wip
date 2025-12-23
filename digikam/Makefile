@@ -53,7 +53,7 @@ USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../lang/qt6-qtscxml/buildlink3.mk"
 .include "../../security/qt6-qtnetworkauth/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../x11/kf6-kxmlgui/buildlink3.mk"
