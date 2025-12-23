@@ -1957,7 +1957,6 @@ SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
 SUBDIR+=	koha
-SUBDIR+=	konqueror
 SUBDIR+=	krename
 SUBDIR+=	kronometer
 SUBDIR+=	kscreen
