@@ -41,6 +41,7 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .if ${X11_TYPE} == "modular"

@@ -12,4 +12,6 @@ export XDG_CONFIG_DIRS XDG_DATA_DIRS
 
 [ -d "${XDG_RUNTIME_DIR}" ] || mkdir -p -m 700 "${XDG_RUNTIME_DIR}"
 
-exec /usr/pkg/bin/seatd-launch /usr/pkg/bin/labwc "$@"
+exec @PREFIX@/bin/seatd-launch \
+     @PREFIX@/bin/dbus-run-session \
+     @PREFIX@/bin/labwc "$@"
