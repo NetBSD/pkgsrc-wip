@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	labwc-0.9.2
+DISTNAME=	labwc-0.9.3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -51,5 +51,6 @@ post-install:
 .include "../../wip/libsfdo/buildlink3.mk"
 .include "../../wip/wlroots/buildlink3.mk"
 .include "../../wip/seatd/buildlink3.mk"
+.include "../../wip/scdoc/tool.mk"
 
 .include "../../mk/bsd.pkg.mk"

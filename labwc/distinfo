@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (labwc-0.9.2.tar.gz) = 4e636efbddacfe1b8436223cd83a9a75bafdc3a7faa2eed14f1c3c668dc4e86d
-SHA512 (labwc-0.9.2.tar.gz) = 4d58a7156886d80483eb16dcce4754de802910846cbfe640fae5048bf6a6c4a3803022f85e1e4fd4dd334f240cd91577b8be7563ed0f1a52e6369dd4ed2278b0
-Size (labwc-0.9.2.tar.gz) = 533516 bytes
+BLAKE2s (labwc-0.9.3.tar.gz) = 9e32b05ce97bbe5033f8785a5b9eecef480880d95ef30279a80cc80ad8afa5c5
+SHA512 (labwc-0.9.3.tar.gz) = 6c6b04659e22e27ff75e1a38cb03f47f46f490ec357b5fab591a33694e1e3c932715ce3a9fbb98dd627c9a2531dc3a5a39cf0aa20e3fcdf184526717c05e62e0
+Size (labwc-0.9.3.tar.gz) = 541257 bytes
 SHA1 (patch-docs_meson.build) = 0f84be326a5f0f3f6611476df344076d851236af
