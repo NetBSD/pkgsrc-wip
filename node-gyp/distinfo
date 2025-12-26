@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (node-gyp-12.1.0-dependencies.tar.gz) = bf7d77894feec1dc07eee7ab3b727812b0ee9c3c52c5677e139ef1345a0281ae
+SHA512 (node-gyp-12.1.0-dependencies.tar.gz) = 568bfafeec1b9e9bfa12298c90099c0e994c89a276c65f47436a454fc47f7dd2f7e6e0f4703c82d98ddb51817d0e4a626728266e115ffedff523261d17315e6b
+Size (node-gyp-12.1.0-dependencies.tar.gz) = 42901907 bytes
+BLAKE2s (node-gyp-12.1.0.tar.gz) = 2c70309572990548641d805e1310db5c9a558188c38bdaf51d8f282353df1b2e
+SHA512 (node-gyp-12.1.0.tar.gz) = af076ee04a9440ca7e7f5a7206709a1198a99aee187646fca57ef331cc583902981144464786227f079dd7a0871cbcb9c801eb35c9ac1eebda4ddea311d53742
+Size (node-gyp-12.1.0.tar.gz) = 579680 bytes

@@ -2677,6 +2677,7 @@ SUBDIR+=	nlopt
 SUBDIR+=	nncp
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
+SUBDIR+=	node-gyp
 SUBDIR+=	nodm
 SUBDIR+=	noip
 SUBDIR+=	noiptun

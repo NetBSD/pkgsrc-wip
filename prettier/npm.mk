@@ -37,7 +37,7 @@ ALLOW_NETWORK_ACCESS=	yes
 .endif
 
 .PHONY: update-cache
-update-cache: do-extract
+update-cache: configure
 	${RM} -rf ${WRKDIR}/npmcache
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm config set cache=${WRKDIR}/npmcache
 # use node-shrinkwrap.json to wire down dependencies
@@ -48,7 +48,8 @@ update-cache: do-extract
 			cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install --package-lock-only; \
 		fi; \
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm shrinkwrap; \
-		${CP} ${WRKSRC}/npm-shrinkwrap.json ${FILESDIR}; \
+		${MKDIR} ${FILESDIR} || ${TRUE}; \
+		${CP} ${WRKSRC}/npm-shrinkwrap.json ${FILESDIR}/; \
 	fi
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install --no-fund --no-audit
 	cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} tar -czf ${DISTNAME}-dependencies.tar.gz npmcache/_cacache
