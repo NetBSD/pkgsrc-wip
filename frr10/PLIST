@@ -277,6 +277,7 @@ ${PLIST.doc}share/doc/frr/html/_sources/vtysh.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/watchfrr.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/zebra.rst.txt
 ${PLIST.doc}share/doc/frr/html/_static/_sphinx_javascript_frameworks_compat.js
+${PLIST.doc}share/doc/frr/html/_static/base-stemmer.js
 ${PLIST.doc}share/doc/frr/html/_static/basic.css
 ${PLIST.doc}share/doc/frr/html/_static/css/badge_only.css
 ${PLIST.doc}share/doc/frr/html/_static/css/fonts/Roboto-Slab-Bold.woff
@@ -299,6 +300,7 @@ ${PLIST.doc}share/doc/frr/html/_static/css/fonts/lato-normal.woff2
 ${PLIST.doc}share/doc/frr/html/_static/css/theme.css
 ${PLIST.doc}share/doc/frr/html/_static/doctools.js
 ${PLIST.doc}share/doc/frr/html/_static/documentation_options.js
+${PLIST.doc}share/doc/frr/html/_static/english-stemmer.js
 ${PLIST.doc}share/doc/frr/html/_static/file.png
 ${PLIST.doc}share/doc/frr/html/_static/fonts/Lato/lato-bold.eot
 ${PLIST.doc}share/doc/frr/html/_static/fonts/Lato/lato-bold.ttf
