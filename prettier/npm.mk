@@ -57,6 +57,8 @@ update-cache: configure
 	${ECHO} then add it to DISTFILES and re-generate the distinfo file, and upload it for other users
 
 _VARGROUPS+=	npm
+_PKG_VARS.npm=	REPLACE_NODE
+_IGN_VARS.npm=	*
 
 # install a nodejs package to provide the npm binary
 .include "../../lang/nodejs/nodeversion.mk"
