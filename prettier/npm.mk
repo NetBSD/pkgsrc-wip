@@ -1,7 +1,5 @@
 # $NetBSD$
 
-INSTALL_DIRS?=	.
-
 USE_TOOLS+=	pax
 
 NODE_MODULES_NAME?=	${PKGBASE}
