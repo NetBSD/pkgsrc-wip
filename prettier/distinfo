@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (prettier-3.7.4-dependencies.tar.gz) = 9a114809c8ee9ac403356fcf0508089e23fe7d24813b65607a1a161b36b3a9bd
+SHA512 (prettier-3.7.4-dependencies.tar.gz) = 8242b9154181abed096cf04437dc210af992d46d32c6cb23b90b0b4628042451da17f219c939c6d38b71c126838201222a9e180341fbe07d0546712ead32c4bf
+Size (prettier-3.7.4-dependencies.tar.gz) = 98379098 bytes
+BLAKE2s (prettier-3.7.4.tar.gz) = 144c920d6d5dc36e027b3c9720b87c2f0225fecee4047f7e7e9c7a3c4c6a6c38
+SHA512 (prettier-3.7.4.tar.gz) = a83f157779897a77c956efbd34c9ab24e8d60271db34c89ae6d05c40bbcde2bb32a5d0341b7227a387d34e80901f2eff255920bbfe9ed1e1b1462913597f549f
+Size (prettier-3.7.4.tar.gz) = 5402139 bytes
