@@ -1,0 +1,64 @@
+UniFi Network Application 10.0.162 includes the bugfix listed below.
+
+Bugfixes
+
+- Fixed an issue where the WiFi blackout scheduler could incorrectly
+  select specified time ranges in rare cases.
+- Fixed an issue where LAG connections could fail to establish on
+  UXG-Enterprise/EFG in rare cases.
+- Fixed an issue where WAN monitoring wasn't working for DS-Lite
+  over PPPoE in rare cases.
+
+Additional information
+
+- Create a backup before upgrading your UniFi Network Application
+  if any issues are encountered.
+- See the UniFi Network Server Help Center article for more
+  information on self-hosting a server.
+- UniFi Network Application 7.5 and newer requires MongoDB 3.6 and
+  Java 17.
+- Version 7.5 to 8.0 supports up to MongoDB 4.4.
+- Version 8.1 and newer supports up to MongoDB 7.0.
+- Version 9.0 and newer supports up to MongoDB 8.0 and Java 17/21.
+- UniFi Network Application updates may cause your adopted devices
+  to be re-provisioned.
+- Existing UniFi Network Applications must be on one of the following
+  versions to upgrade directly to this version:
+  10.0.162 and earlier 10.0.x versions.
+  9.5.21 and earlier 9.5.x versions.
+  9.4.19 and earlier 9.4.x versions.
+  9.3.45 and earlier 9.3.x versions.
+  9.2.87 and earlier 9.2.x versions.
+  9.1.120 and earlier 9.1.x versions.
+  9.0.114 and earlier 9.0.x versions.
+  8.6.9 and earlier 8.6.x versions.
+  8.5.6 and earlier 8.5.x versions.
+  8.4.62 and earlier 8.4.x versions.
+  8.3.32 and earlier 8.3.x versions.
+  8.2.93 and earlier 8.2.x versions.
+  8.1.127 and earlier 8.1.x versions.
+  8.0.28 and earlier 8.0.x versions.
+  7.5.187 and earlier 7.5.x versions.
+  7.4.162 and earlier 7.4.x versions.
+  7.3.84 and earlier 7.3.x versions.
+  7.2.97 and earlier 7.2.x versions.
+  7.1.68 and earlier 7.1.x versions.
+  7.0.26 and earlier 7.0.x versions.
+  6.5.55 and earlier 6.5.x versions.
+  6.4.54 and earlier 6.4.x versions.
+  6.3.51 and earlier 6.3.x versions.
+  6.2.26 and earlier 6.2.x versions.
+  6.1.71 and earlier 6.1.x versions.
+  6.0.45 and earlier 6.0.x versions.
+  5.14.25 and earlier 5.14.x versions.
+  5.13.33 and earlier 5.13.x versions.
+  5.12.72 and earlier 5.12.x versions.
+  5.11.52 and earlier 5.11.x versions.
+  5.10.27 and earlier 5.10.x versions.
+  5.9.33 and earlier 5.9.x versions.
+  5.8.30 and earlier 5.8.x versions.
+  5.7.28 and earlier 5.7.x versions.
+  5.6.42 and earlier 5.6.x versions.
+
+  Most earlier versions are also supported for a direct upgrade,
+  going back to 3.1.0.
