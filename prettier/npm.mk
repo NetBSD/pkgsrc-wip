@@ -52,8 +52,8 @@ update-cache: do-extract
 	fi
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install --no-fund --no-audit
 	cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} tar -czf ${DISTNAME}-dependencies.tar.gz npmcache/_cacache
-	${ECHO} new tarball in ${WRKDIR}/${DISTNAME}-dependencies.tar.gz - please check it and moved it to ${DISTDIR}
-	${ECHO} then add it to DISTFILES and re-generate the distinfo file
+	${ECHO} new tarball in ${WRKDIR}/${DISTNAME}-dependencies.tar.gz - please check it and move it to ${DISTDIR}
+	${ECHO} then add it to DISTFILES and re-generate the distinfo file, and upload it for other users
 
 _VARGROUPS+=	npm
 
