@@ -42,7 +42,7 @@ update-cache: do-extract
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm config set cache=${WRKDIR}/npmcache
 # use node-shrinkwrap.json to wire down dependencies
 # make one if it doesn't exist, but prefer upstream package-lock.json to re-creating it
-# directly calling 'npm shrinkwrap' makes bigger files, but doesn't include all dependencies
+# directly calling 'npm shrinkwrap' doesn't work reliably
 	if ${TEST} ! -f  ${WRKSRC}/npm-shrinkwrap.json; then \
 		if ${TEST} ! -f ${WRKSRC}/package-lock.json; then \
 			cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install --package-lock-only; \
