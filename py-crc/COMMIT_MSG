@@ -1,9 +1,0 @@
-security/py-crc: Add py-crc-7.1.0
-
-CRC python library
-
-Calculate CRC checksums, verify CRC checksum, predefined CRC
-configurations, custom CRC configurations.
-
-The crc library comes with a small command line tool which can
-generate crc lookup tables if needed.
