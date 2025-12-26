@@ -1,0 +1,3 @@
+Builds, but
+- doesn't install
+- re2.node binary dumps core without a usable backtrace

@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# node-re2 [![NPM version][npm-img]][npm-url]
+
+[npm-img]: https://img.shields.io/npm/v/re2.svg
+[npm-url]: https://npmjs.org/package/re2
+
+This project provides Node.js bindings for [RE2](https://github.com/google/re2):
+a fast, safe alternative to backtracking regular expression engines written by [Russ Cox](http://swtch.com/~rsc/) in C++.
+To learn more about RE2, start with an overview
+[Regular Expression Matching in the Wild](http://swtch.com/~rsc/regexp/regexp3.html). More resources can be found
+at his [Implementing Regular Expressions](http://swtch.com/~rsc/regexp/) page.
+
+
+`RE2`'s regular expression language is almost a superset of what is provided by `RegExp`
+(see [Syntax](https://github.com/google/re2/wiki/Syntax)),
+but it lacks two features: backreferences and lookahead assertions. See below for more details.
+
+`RE2` always works in the [Unicode mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode), which means that all matches that use character codes are interpret as Unicode code points, not as binary values of UTF-16.
+See `RE2.unicodeWarningLevel` below for more details.
+
+
+...
