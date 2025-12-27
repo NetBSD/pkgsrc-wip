@@ -1,0 +1,5 @@
+Get the weather delivered to your command-line, or use as a
+Go package.
+
+The project uses Meteorologisk institutt's public API, and
+OpenStreetMap's Nominatim API.

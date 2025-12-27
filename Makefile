@@ -6250,6 +6250,7 @@ SUBDIR+=	you-get
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
+SUBDIR+=	yr
 SUBDIR+=	zabbix64-agent
 SUBDIR+=	zabbix64-frontend
 SUBDIR+=	zabbix64-java
