@@ -1,3 +1,40 @@
+Fails to link with:
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_bitfit_allocator.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_bitfit_allocator_finish_failing+0x269): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_bitfit_directory.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_bitfit_directory_get_first_free_view+0x1dc): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_bitfit_directory_take_last_empty+0x3a2): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_bitfit_directory_take_last_empty+0x47e): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_bitfit_size_class.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_bitfit_size_class_get_first_free_view+0x98): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_bitfit_size_class.c.o:/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966: more undefined references to `__atomic_compare_exchange_16' follow
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_lock_free_read_ptr_ptr_hashtable.c.o: in function `pas_atomic_store_pair':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1048:(.text.pas_lock_free_read_ptr_ptr_hashtable_set+0x297): undefined reference to `__atomic_store_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_page_sharing_pool.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_page_sharing_pool_add_at_index+0x57c): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_page_sharing_pool_did_create_delta+0x156): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_page_sharing_pool_take_least_recently_used+0x11c): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_page_sharing_pool_take_least_recently_used+0x28e): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_segregated_directory.c.o: in function `pas_atomic_load_pair_relaxed':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1023:(.text.pas_segregated_directory_get_use_epoch+0xf7): undefined reference to `__atomic_load_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_segregated_directory.c.o: in function `pas_compare_and_swap_pair_strong':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1010:(.text.pas_segregated_directory_update_first_eligible_after_search+0x7c): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_segregated_directory.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_segregated_directory_update_last_empty_plus_one_after_search+0x88): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_segregated_page.c.o: in function `pas_atomic_store_pair_relaxed':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1060:(.text.pas_segregated_page_construct+0xf0): undefined reference to `__atomic_store_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1060:(.text.pas_segregated_page_construct+0x29c): undefined reference to `__atomic_store_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1060:(.text.pas_segregated_page_construct+0x398): undefined reference to `__atomic_store_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:1060:(.text.pas_segregated_page_note_emptiness+0x62): undefined reference to `__atomic_store_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_segregated_shared_page_directory.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_segregated_shared_page_directory_find_first_eligible+0x766): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_segregated_shared_page_directory_take_last_empty+0x330): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_segregated_size_directory.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_segregated_size_directory_take_last_empty+0x3c1): undefined reference to `__atomic_compare_exchange_16'
+ld: /scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_segregated_size_directory_take_first_eligible+0x759): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_versioned_field.c.o: in function `pas_compare_and_swap_pair_weak':
+/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966:(.text.pas_versioned_field_minimize+0x7d): undefined reference to `__atomic_compare_exchange_16'
+ld: Source/bmalloc/CMakeFiles/bmalloc.dir/./libpas/src/libpas/pas_versioned_field.c.o:/scratch/wip/webkit-gtk-2.50/work/webkitgtk-2.50.4/Source/bmalloc/libpas/src/libpas/pas_utils.h:966: more undefined references to `__atomic_compare_exchange_16' follow
 
 pkg_add: webkit-gtk-2.48.5: missing required library: /scratch/wip/webkit-gtk-2.46/work/.buildlink/lib/libsqlite3.so
 
