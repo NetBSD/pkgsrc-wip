@@ -2790,6 +2790,7 @@ SUBDIR+=	openmohaa
 SUBDIR+=	openmp
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
+SUBDIR+=	openrdap
 SUBDIR+=	openrgb
 SUBDIR+=	openrw-git
 SUBDIR+=	openscad
