@@ -1,0 +1,22 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/alecthomas/kingpin/v2/@v/v2.3.2.mod
+GO_MODULE_FILES+=	github.com/alecthomas/kingpin/v2/@v/v2.3.2.zip
+GO_MODULE_FILES+=	github.com/alecthomas/units/@v/v0.0.0-20211218093645-b94a6e3cc137.mod
+GO_MODULE_FILES+=	github.com/alecthomas/units/@v/v0.0.0-20211218093645-b94a6e3cc137.zip
+GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
+GO_MODULE_FILES+=	github.com/jarcoal/httpmock/@v/v1.3.0.mod
+GO_MODULE_FILES+=	github.com/jarcoal/httpmock/@v/v1.3.0.zip
+GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.4.0.mod
+GO_MODULE_FILES+=	github.com/xhit/go-str2duration/v2/@v/v2.1.0.mod
+GO_MODULE_FILES+=	github.com/xhit/go-str2duration/v2/@v/v2.1.0.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.9.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.9.0.zip
+GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.mod
