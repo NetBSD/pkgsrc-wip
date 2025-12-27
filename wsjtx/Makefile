@@ -67,6 +67,11 @@ SUBST_STAGE.hamlib=	pre-configure
 SUBST_MESSAGE.hamlib=	fix PREFIX inside patch
 SUBST_VARS.hamlib=	PREFIX
 
+# Probably following line helps, not tested, ref:
+# https://mail-index.netbsd.org/pkgsrc-users/2025/12/23/msg042336.html
+
+# NOT_PAX_MPROTECT_SAFE+= bin/jt9
+
 .include "../../devel/cmake/build.mk"
 .include "../../math/fftw/buildlink3.mk"
 .if empty(PKG_BUILD_OPTIONS.fftw:Mfftw-fortran)
