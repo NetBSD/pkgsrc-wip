@@ -2,14 +2,14 @@ $NetBSD$
 
 Fix build.
 
---- libcxx/src/CMakeLists.txt.orig	2024-10-16 08:25:59.076000355 +0000
+--- libcxx/src/CMakeLists.txt.orig	2025-12-12 10:35:47.000000000 +0000
 +++ libcxx/src/CMakeLists.txt
-@@ -232,7 +232,7 @@ if (LIBCXX_ENABLE_SHARED)
-   # Maybe re-export symbols from libc++abi
-   # In particular, we don't re-export the symbols if libc++abi is merged statically
-   # into libc++ because in that case there's no dylib to re-export from.
--  if (APPLE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
-+  if (FALSE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
-             AND NOT LIBCXX_STATICALLY_LINK_ABI_IN_SHARED_LIBRARY)
-     target_link_libraries(cxx_shared PRIVATE cxxabi-reexports)
+@@ -209,7 +209,7 @@ endif()
  
+ # Maybe force some symbols to be weak, not weak or not exported.
+ # TODO: This shouldn't depend on the platform, and ideally it should be done in the sources.
+-if (APPLE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
++if (FALSE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
+           AND NOT LIBCXX_STATICALLY_LINK_ABI_IN_SHARED_LIBRARY)
+   target_link_libraries(cxx_shared PRIVATE
+     "-Wl,-force_symbols_not_weak_list,${CMAKE_CURRENT_SOURCE_DIR}/../lib/notweak.exp"

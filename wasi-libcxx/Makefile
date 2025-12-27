@@ -14,7 +14,7 @@ HOMEPAGE=	https://libcxxabi.llvm.org/
 COMMENT=	C++ Standard Librares (libc++/libc++abi) for WASI/WebAssembly
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 TOOL_DEPENDS+=	lld-[0-9]*:../../wip/lld
 
@@ -33,7 +33,7 @@ SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_LIBCXX_INCLUDES=${WRKDIR}/libcxx/include
+#CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_LIBCXX_INCLUDES=${WRKSRC}/libcxx/include
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1
@@ -133,7 +133,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_FLAGS=-fno-exceptions
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_FLAGS=-fno-exceptions
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi
-CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/libcxxabi/include
+CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKSRC}/libcxxabi/include
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/wasi
 
@@ -141,14 +141,14 @@ CMAKE_INSTALL_PREFIX=	${PREFIX}/wasi
 CPPFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
 post-extract:
-	${MKDIR} ${WRKDIR}/build_libcxx
-	${MKDIR} ${WRKDIR}/build_libcxxabi
+	${MKDIR} ${WRKSRC}/build_libcxx
+	${MKDIR} ${WRKSRC}/build_libcxxabi
 
 do-configure:
-	cd ${WRKSRC} && cd build_libcxx && \
+	cd ${WRKSRC}/build_libcxx && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
 		cmake ${CMAKE_CONFIGURE_ARGS} ../libcxx
-	cd ${WRKSRC} && cd build_libcxxabi && \
+	cd ${WRKSRC}/build_libcxxabi && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
 		cmake ${CMAKE_CONFIGURE_ARGS} ../libcxxabi
 
@@ -161,6 +161,7 @@ post-install:
 	${PREFIX}/bin/llvm-ranlib \
 	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasi/libc++abi.a
 
+.include "../../lang/python/tool.mk"
 .include "../../wip/llvm/buildlink3.mk"
 .include "../../wip/wasi-libc/buildlink3.mk"
 .include "../../wip/wasi-compiler-rt/buildlink3.mk"
