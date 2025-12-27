@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.43 2025/10/18 08:21:18 wiz Exp $
+# used by net/powerdns/backend.mk
+
+PDNS_VERSION=	5.0.2
+DISTNAME=	pdns-${PDNS_VERSION}
+CATEGORIES=	net
+MASTER_SITES=	http://downloads.powerdns.com/releases/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER?=	drixter@e-utp.net
+HOMEPAGE=	https://www.powerdns.com/
+LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=		ragel-[0-9]*:../../devel/ragel
+
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bison flex gmake pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
+CONFIGURE_ARGS+=	--with-lua=lua-${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
+
+USE_CXX_FEATURES+=	c++17 filesystem
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"

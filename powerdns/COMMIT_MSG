@@ -1,0 +1,24 @@
+net/powerdns: Update to version 5.0.2
+
+5.0.2
+Released: 11th of December 2025
+This is release 5.0.2 of the Authoritative Server. It contains bug fixes and a minor feature.
+Please review the Upgrade Notes before upgrading from versions < 5.0.x.
+
+New Features
+allow finer-grained rrset changes through the API
+References: #16589, pull request 16599
+
+Bug Fixes
+m4/pdns_check_libcrypto: fix ecdsa/eddsa includedir (famfo)
+References: #16538, pull request 16603
+add missing catch block for STL exceptions in createForward
+References: #16564, pull request 16566
+REST API: bring back 404 errors
+References: #16059, pull request 16532
+Give backends the ability to perform extra actions during zone rectify
+References: #15894, #16499, pull request 16512
+meson build: restore original binary names
+References: #16401, pull request 16486
+sdist: copy files as files, not as new dirs¶
+References: #16398, pull request 16466
