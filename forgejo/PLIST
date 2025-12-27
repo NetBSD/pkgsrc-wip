@@ -1021,6 +1021,8 @@ share/forgejo/options/locale/locale_sk-SK.ini
 share/forgejo/options/locale/locale_sl.ini
 share/forgejo/options/locale/locale_sr-SP.ini
 share/forgejo/options/locale/locale_sv-SE.ini
+share/forgejo/options/locale/locale_ta.ini
+share/forgejo/options/locale/locale_th.ini
 share/forgejo/options/locale/locale_tr-TR.ini
 share/forgejo/options/locale/locale_uk-UA.ini
 share/forgejo/options/locale/locale_uz.ini
@@ -1081,6 +1083,8 @@ share/forgejo/options/locale_next/locale_sk-SK.json
 share/forgejo/options/locale_next/locale_sl.json
 share/forgejo/options/locale_next/locale_sr-SP.json
 share/forgejo/options/locale_next/locale_sv-SE.json
+share/forgejo/options/locale_next/locale_ta.ini
+share/forgejo/options/locale_next/locale_th.ini
 share/forgejo/options/locale_next/locale_tr-TR.json
 share/forgejo/options/locale_next/locale_uk-UA.json
 share/forgejo/options/locale_next/locale_uz.json
@@ -1575,7 +1579,7 @@ share/forgejo/public/assets/js/easymde.8c1347ac.js
 share/forgejo/public/assets/js/eventsource.sharedworker.js
 share/forgejo/public/assets/js/forgejoswagger.js
 share/forgejo/public/assets/js/index.js
-share/forgejo/public/assets/js/index.js.f51b3e73.map
+share/forgejo/public/assets/js/index.js.619c1f31.map
 share/forgejo/public/assets/js/katex.61e90398.js
 share/forgejo/public/assets/js/mcaptcha-vanilla-glue.a64aa9ae.js
 share/forgejo/public/assets/js/mermaid.f833d3e1.js
