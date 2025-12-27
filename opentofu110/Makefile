@@ -2,9 +2,11 @@
 
 .include "../../wip/terraform/version.mk"
 
-DISTNAME=	opentofu-${OPENTOFU_VERSION}
+DISTNAME=	opentofu-${OPENTOFU110_VERSION}
+PKGNAME=	opentofu110-${OPENTOFU110_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
+GITHUB_PROJECT=	opentofu
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,7 +21,7 @@ SUBST_FILES.providers-prefix=	cmd/tofu/provider_source.go
 SUBST_VARS.providers-prefix=	PREFIX
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/${GOPATH_BIN}/tofu ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/${GOPATH_BIN}/tofu ${DESTDIR}${PREFIX}/bin/tofu110
 
 .include "go-modules.mk"
 
