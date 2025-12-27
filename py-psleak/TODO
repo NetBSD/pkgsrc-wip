@@ -1,0 +1,21 @@
+Self tests fail
+
+=================================================================================================== test session starts ====================================================================================================
+__________________________________________________________________________________________ ERROR collecting tests/test_c_leaks.py __________________________________________________________________________________________
+ImportError while importing test module '/scratch/sysutils/py-psleak/work/psleak-0.1.2/tests/test_c_leaks.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/pkg/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_c_leaks.py:8: in <module>
+    import test_ext as cext
+E   ModuleNotFoundError: No module named 'test_ext'
+collected 37 items / 1 error
+
+================================================================================================= short test summary info ==================================================================================================
+ERROR tests/test_c_leaks.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+===================================================================================================== 1 error in 0.09s =====================================================================================================
+
+https://github.com/giampaolo/psleak/issues/6

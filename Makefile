@@ -4496,6 +4496,7 @@ SUBDIR+=	py-proxy_tools
 SUBDIR+=	py-psamm
 SUBDIR+=	py-pseudopy
 SUBDIR+=	py-pseudorandom
+SUBDIR+=	py-psleak
 SUBDIR+=	py-psychopy
 SUBDIR+=	py-psygnal
 SUBDIR+=	py-ptex
