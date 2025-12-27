@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (xopen-2.0.1.tar.gz) = 215477b108a9a0677bb7c9afda336b79c2658a2b4e6e3cdf8a3e2a26e95a3014
-SHA512 (xopen-2.0.1.tar.gz) = 94bf20a18b2ccdaa7637dca2b01c43dd82747d12735a2d84c9fcc4c3022411007c1595a409142dbbfcb57de266d922eaf0c860a1cbe1e5d2ea99fe7c620eca0e
-Size (xopen-2.0.1.tar.gz) = 31954 bytes

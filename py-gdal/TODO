@@ -1,7 +1,0 @@
-  - Test
-
-  - Decide if py-gdal should be done this way.  Consult with upstream.
-
-  - Simplify Makefile.common by moving things to gdal/Makefile and
-    then stop resetting them here.
- 

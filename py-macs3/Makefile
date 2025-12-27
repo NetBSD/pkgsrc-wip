@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.1:../../math/py-scipy
 # cykhash>=2.0,<3.0
 DEPENDS+=	${PYPKGPREFIX}-cykhash>=2.0:../../devel/py-cykhash
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=1.3:../../math/py-scikit-learn
-DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3.2:../../wip/py-hmmlearn
+DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3.2:../../math/py-hmmlearn
 TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 USE_TOOLS+=	bash perl:test

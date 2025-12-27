@@ -1,3 +1,0 @@
-geography/py-gdal: Use the pypi distfile and avoid needing to run cmake
-
-The hope is that it will be less fragile.

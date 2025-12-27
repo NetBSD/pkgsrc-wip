@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (GDAL-3.9.0.tar.gz) = e399b159ec8874b53f696bab28a5e004cd3b2d0867b469be3b33a81735b873a9
-SHA512 (GDAL-3.9.0.tar.gz) = 3796caf113aa196b1cd268c30a21971d38258a4514460e6c0a217bbc2ca4130acb3a358615f6b7e41c46b1af2d0d375b0db97a0f38b59d5b59c8f2b7571ccb28
-Size (GDAL-3.9.0.tar.gz) = 839919 bytes
-SHA1 (patch-frmts_grib_degrib_degrib_myutil.c) = 0e046afa236d7e0d6186fe392cb2da05fa5b42c5
