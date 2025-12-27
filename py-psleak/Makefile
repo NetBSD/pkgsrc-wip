@@ -14,5 +14,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-instafail-[0-9]*:../../devel/py-test-instafail
 
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${MAKE} build test
+
 .include "../../lang/python/wheel.mk"
+# for test
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
