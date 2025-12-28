@@ -62,12 +62,6 @@ ${PYSITELIB}/mbake/core/rules/pattern_spacing.pyo
 ${PYSITELIB}/mbake/core/rules/phony.py
 ${PYSITELIB}/mbake/core/rules/phony.pyc
 ${PYSITELIB}/mbake/core/rules/phony.pyo
-${PYSITELIB}/mbake/core/rules/phony_detection.py
-${PYSITELIB}/mbake/core/rules/phony_detection.pyc
-${PYSITELIB}/mbake/core/rules/phony_detection.pyo
-${PYSITELIB}/mbake/core/rules/phony_insertion.py
-${PYSITELIB}/mbake/core/rules/phony_insertion.pyc
-${PYSITELIB}/mbake/core/rules/phony_insertion.pyo
 ${PYSITELIB}/mbake/core/rules/recipe_validation.py
 ${PYSITELIB}/mbake/core/rules/recipe_validation.pyc
 ${PYSITELIB}/mbake/core/rules/recipe_validation.pyo
