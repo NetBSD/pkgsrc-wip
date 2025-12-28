@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	codex-0.66.0
+DISTNAME=	codex-0.77.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openai/}
 GITHUB_TAG=	rust-v${PKGVERSION_NOREV}
@@ -27,7 +27,7 @@ DISTFILES+=		wezterm-${WEZTERM_REV}.tar.gz
 
 SITES.crossterm-${CROSSTERM_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=nornagon/}crossterm/archive/${CROSSTERM_REV}.tar.gz
 SITES.ratatui-${RATATUI_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=nornagon/}ratatui/archive/${RATATUI_REV}.tar.gz
-SITES.wezterm-${WEZTERM_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=pakrym/}wezterm/archive/${WEZTERM_REV}.tar.gz
+SITES.wezterm-${WEZTERM_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=pakrym/}wezterm/archive/${WEZTERM_REV}.tar.gz
 
 INSTALLATION_DIRS=	bin share/doc/codex
 
