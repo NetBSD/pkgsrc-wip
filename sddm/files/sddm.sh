@@ -5,10 +5,6 @@
 # PROVIDE: sddm
 # REQUIRE: DAEMON LOGIN wscons
 # KEYWORD: shutdown
-#
-# You will need to set some variables in /etc/rc.conf to start sddm:
-#
-# sddm=YES
 
 $_rc_subr_loaded . /etc/rc.subr
 
