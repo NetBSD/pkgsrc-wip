@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
-#DEPENDS+=	${PYPKGPREFIX}-freetype-py>=1.0.21:../../wip/py-freetype-py
+#DEPENDS+=	${PYPKGPREFIX}-freetype-py>=1.0.21:../../graphics/py-freetype-py
 DEPENDS+=	${PYPKGPREFIX}-wordpress-xmlrpc>=2.3:../../wip/py-wordpress-xmlrpc
 DEPENDS+=	${PYPKGPREFIX}-nevow>=0.11.1:../../www/py-nevow
 

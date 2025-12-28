@@ -3905,7 +3905,6 @@ SUBDIR+=	py-formex
 SUBDIR+=	py-formulaLab
 SUBDIR+=	py-forthon
 SUBDIR+=	py-fortpy
-SUBDIR+=	py-freetype-py
 SUBDIR+=	py-frida
 SUBDIR+=	py-frida-tools
 SUBDIR+=	py-fssa
