@@ -1074,7 +1074,6 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.translators
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.uk
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.zh
 share/emacs/${PKGVERSION}/etc/w32-feature.el
-share/emacs/${PKGVERSION}/etc/yow.lines
 share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
 share/emacs/${PKGVERSION}/lisp/abbrev.el.gz
