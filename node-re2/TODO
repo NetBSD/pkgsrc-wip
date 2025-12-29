@@ -1,3 +1,6 @@
-Builds, but
-- doesn't install
-- re2.node binary dumps core without a usable backtrace
+Builds, but re2.node binary dumps core without a usable backtrace
+Also, not found by 
+
+	var RE2 = require("re2");
+
+so not sure how useful this will be.

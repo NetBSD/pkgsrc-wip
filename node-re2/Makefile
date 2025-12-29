@@ -15,15 +15,25 @@ TOOL_DEPENDS+=	node-gyp-[0-9]*:../../wip/node-gyp
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
-#LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
+MAKE_ENV+=	PYTHON=${PYTHONBIN}
 
+NODE_MODULES_NAME=	re2
+
+# TODO: improve
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/*
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/*/*
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/*/*/*
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/*/*/*/*
+
+# uses pkgsrc packages instead of git submodules
 #GITHUB_SUBMODULES+=	abseil abseil-cpp d38452e1ee03523a208362186fd42248ff2609f6 vendor/abseil-cpp
 #GITHUB_SUBMODULES+=	google re2 927f5d53caf8111721e734cf24724686bb745f55 vendor/re2
 
 pre-configure:
-	 ${MV} ${BUILDLINK_DIR}/include/node/* ${BUILDLINK_DIR}/include
+	${MV} ${BUILDLINK_DIR}/include/node/* ${BUILDLINK_DIR}/include
 
 .include "../../wip/prettier/npm.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/nodejs/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
