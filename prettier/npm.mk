@@ -21,8 +21,8 @@ post-extract:
 
 # install dependencies from the cache
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} npm config set cache=${WRKDIR}/npmcache
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} npm ci --no-audit --no-fund
+	cd ${WRKSRC} && ${SETENV} ${BUILD_ENV} npm config set cache=${WRKDIR}/npmcache
+	cd ${WRKSRC} && ${SETENV} ${BUILD_ENV} npm ci --no-audit --no-fund
 
 # install the project into ${DESTDIR}
 # but this uses symlinks, so replace symlink with files
@@ -37,9 +37,11 @@ ALLOW_NETWORK_ACCESS=	yes
 .endif
 
 .PHONY: update-cache
-update-cache: configure
+update-cache:
 	${RM} -rf ${WRKDIR}/npmcache
+	${RM} -rf ${WRKSRC}/node_modules
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm config set cache=${WRKDIR}/npmcache
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm cache clean --force
 # use node-shrinkwrap.json to wire down dependencies
 # make one if it doesn't exist, but prefer upstream package-lock.json to re-creating it
 # directly calling 'npm shrinkwrap' doesn't work reliably
@@ -51,7 +53,9 @@ update-cache: configure
 		${MKDIR} ${FILESDIR} || ${TRUE}; \
 		${CP} ${WRKSRC}/npm-shrinkwrap.json ${FILESDIR}/; \
 	fi
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install --no-fund --no-audit
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install --no-fund --no-audit --dry-run > ${WRKDIR}/npm-dependencies
+	sed -En 's,add (.*) (.*),npm cache add \1@\2,p' ${WRKDIR}/npm-dependencies > ${WRKDIR}/npm-dependencies.commands
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} ${WRKDIR}/npm-dependencies.commands
 	cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} tar -czf ${DISTNAME}-dependencies.tar.gz npmcache/_cacache
 	${ECHO} new tarball in ${WRKDIR}/${DISTNAME}-dependencies.tar.gz - please check it and move it to ${DISTDIR}
 	${ECHO} then add it to DISTFILES and re-generate the distinfo file, and upload it for other users
