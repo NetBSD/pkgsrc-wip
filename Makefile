@@ -2215,7 +2215,6 @@ SUBDIR+=	libtls-bearssl
 SUBDIR+=	libtogl
 SUBDIR+=	libtxc_dxtn
 SUBDIR+=	libucl
-SUBDIR+=	libudev-bsd
 SUBDIR+=	libuna
 SUBDIR+=	libunwind
 SUBDIR+=	libunwind-git
