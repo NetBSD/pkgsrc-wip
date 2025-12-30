@@ -2586,7 +2586,6 @@ SUBDIR+=	ncbi-lib
 SUBDIR+=	ncnn
 SUBDIR+=	ncp
 SUBDIR+=	ncrack
-SUBDIR+=	ndevd
 SUBDIR+=	ndssdk
 SUBDIR+=	neateqn
 SUBDIR+=	neatmkfn

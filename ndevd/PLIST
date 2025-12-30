@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/ndevd.h
-man/man8/ndevd.8
-sbin/ndevd
-share/examples/rc.d/ndevd
