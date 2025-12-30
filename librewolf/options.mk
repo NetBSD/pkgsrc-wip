@@ -29,7 +29,7 @@ AUDIO_BACKENDS+=	alsa
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 CONFIGURE_ARGS+=	--enable-jemalloc
-CONFIGURE_ARGS+=	--enable-replace-malloc
+#CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
 #.include "../../devel/jemalloc/buildlink3.mk"

@@ -1,0 +1,15 @@
+$NetBSD$
+
+For some reason this replace-malloc is not supported anymore
+
+--- mozconfig.orig	2025-12-30 02:37:54.323471546 +0000
++++ mozconfig
+@@ -13,7 +13,7 @@ ac_add_options --enable-release
+ ac_add_options --enable-rust-simd
+ # allow replacing malloc manually, will not affect regular systems
+ # not compatible with ac_add_options --disable-jemalloc, which only works when preloading custom malloc
+-ac_add_options --enable-replace-malloc
++# ac_add_options --enable-replace-malloc
+ 
+ ac_add_options --with-app-name=librewolf
+ ac_add_options --with-branding=browser/branding/librewolf

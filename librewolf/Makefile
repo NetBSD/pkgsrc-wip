@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.650 2025/11/14 17:17:18 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		144.0
-MOZ_BRANCH_MINOR=	  .2
+MOZ_BRANCH=		146.0
+MOZ_BRANCH_MINOR=	  .1
 
 DISTNAME=	librewolf-${FIREFOX_VER}-1.source
 PKGNAME=	${DISTNAME:S/.source//:S/-1$//}
@@ -10,7 +10,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${FIREFOX_VER}-1/
 EXTRACT_SUFX=	.tar.gz
 
-NODEJSKIT=		nodejs-output-144.0.tgz
+NODEJSKIT=		nodejs-output-146.0.1.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
