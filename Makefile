@@ -490,6 +490,7 @@ SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium
 SUBDIR+=	chromium-depot_tools
+SUBDIR+=	chrono-date
 SUBDIR+=	chronograf
 SUBDIR+=	chrsh
 SUBDIR+=	chruby
