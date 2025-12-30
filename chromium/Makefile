@@ -11,6 +11,9 @@ DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 # audioio source
 A_VERSION=			140.0
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
+# HID support
+H_VERSION=			143.0
+GITHUB_SUBMODULES+=		kikadf chromium-hid-netbsd v${H_VERSION} services/device/hid
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			19
@@ -166,7 +169,7 @@ GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
 GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
-GN_ARGS+=	use_udev=false
+GN_ARGS+=	use_udev=true
 GN_ARGS+=	use_vaapi=false
 GN_ARGS+=	v8_enable_cet_ibt=true
 
@@ -234,14 +237,6 @@ post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 pre-configure:
-	# Prepare dawn_commit_hash.h
-#	${RUN}( \
-#		${ECHO} "#ifndef GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
-#		${ECHO} "#define GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
-#		${ECHO} "#define DAWN_COMMIT_HASH \""$$(cat ${WRKSRC}/gpu/webgpu/DAWN_VERSION)\""" ;\
-#		${ECHO} "#endif  // GPU_WEBGPU_DAWN_COMMIT_HASH_H_" \
-#	) > ${WRKSRC}/gpu/webgpu/dawn_commit_hash.h
-	# Prepare internal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHONBIN} scripts/build_ffmpeg.py \
 		${LOWER_OPSYS} ${FFMPEG_TARGET} --config-only --branding=${FFMPEG_BRAND}
@@ -326,6 +321,7 @@ do-install:
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
