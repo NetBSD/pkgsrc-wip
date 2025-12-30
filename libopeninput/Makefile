@@ -21,7 +21,7 @@ LDFLAGS+=	-levdev
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../wip/input-headers/buildlink3.mk"
 .include "../../wip/libevdev-chunk/buildlink3.mk"
-.include "../../wip/libudev-bsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

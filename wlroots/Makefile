@@ -28,7 +28,6 @@ PLIST_VARS+=		xwayland
 # new packages
 .include "../../wip/glslang/buildlink3.mk"
 .include "../../wip/libopeninput/buildlink3.mk"
-.include "../../wip/libudev-bsd/buildlink3.mk"
 .include "../../wip/libliftoff/buildlink3.mk"
 .include "../../wip/seatd/buildlink3.mk"
 .include "../../wip/vulkan-loader/buildlink3.mk"
@@ -39,6 +38,7 @@ PLIST.xwayland=		yes
 .include "../../wip/modular-xorg-xwayland/buildlink3.mk"
 .endif
 
+.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

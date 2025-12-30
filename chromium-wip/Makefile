@@ -320,6 +320,7 @@ do-install:
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -373,5 +374,4 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
-.include "../../wip/libudev-bsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
