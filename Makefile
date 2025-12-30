@@ -5361,7 +5361,6 @@ SUBDIR+=	sbcl-git
 SUBDIR+=	sblim-sfcc
 SUBDIR+=	scare
 SUBDIR+=	scc
-SUBDIR+=	scdoc
 SUBDIR+=	scheme48-sdl
 SUBDIR+=	schur
 SUBDIR+=	scilab
