@@ -17,6 +17,12 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TZ_LIB=ON
 
+SUBST_CLASSES+=		pc
+SUBST_STAGE.pc=		pre-configure
+SUBST_MESSAGE.pc=	Set pkg-config file
+SUBST_FILES.pc=		date.pc.in
+SUBST_SED.pc+=		-e 's|@VERSION@|${PKGVERSION_NOREV}|g'
+
 .include "../../devel/cmake/build.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

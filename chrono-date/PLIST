@@ -12,3 +12,4 @@ lib/cmake/date/dateTargets.cmake
 lib/libdate-tz.so
 lib/libdate-tz.so.3
 lib/libdate-tz.so.${PKGVERSION}
+lib/pkgconfig/date.pc
