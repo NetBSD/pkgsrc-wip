@@ -35,6 +35,7 @@ post-install:
                 ${DESTDIR}${PREFIX}/bin/startlabwc
 
 .include "../../devel/meson/build.mk"
+.include "../../textproc/scdoc/tool.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
@@ -51,6 +52,5 @@ post-install:
 .include "../../wip/libsfdo/buildlink3.mk"
 .include "../../wip/wlroots/buildlink3.mk"
 .include "../../wip/seatd/buildlink3.mk"
-.include "../../wip/scdoc/tool.mk"
 
 .include "../../mk/bsd.pkg.mk"

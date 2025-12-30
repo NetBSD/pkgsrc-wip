@@ -40,8 +40,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 .include "../../wip/gtk-layer-shell/buildlink3.mk"
 
 .include "../../devel/meson/build.mk"
-#.include "../../textproc/scdoc/tool.mk"
-.include "../../wip/scdoc/tool.mk"
+.include "../../textproc/scdoc/tool.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/spdlog/buildlink3.mk"
