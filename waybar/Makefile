@@ -38,6 +38,7 @@ PKG_SYSCONFSUBDIR=	xdg/waybar
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 .include "../../wip/gtk-layer-shell/buildlink3.mk"
+.include "../../wip/chrono-date/buildlink3.mk"
 
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"
