@@ -5386,7 +5386,6 @@ SUBDIR+=	scummvm-git
 SUBDIR+=	scx
 SUBDIR+=	scythe
 SUBDIR+=	sdd
-SUBDIR+=	sddm
 SUBDIR+=	sdict-tools
 SUBDIR+=	sdif-git
 SUBDIR+=	sdl-sopwith
