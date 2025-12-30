@@ -1,0 +1,14 @@
+We are pleased to announce the release of Unicode® ICU 78. It
+updates to Unicode 17, including new characters and scripts,
+emoji, collation & IDNA changes, and corresponding APIs and
+implementations.
+
+It also updates to CLDR 48 locale data with new locales, and various
+additions and corrections.
+
+In C++, there is a new set of APIs for Unicode string (UTF-8/16/32)
+code point iteration that works seamlessly with modern C++ iterators
+and ranges.
+
+The C++ implementation of MessageFormat 2.0 is at CLDR 47 level
+and remains in technology preview.

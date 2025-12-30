@@ -1,0 +1,34 @@
+$NetBSD: patch-configure.ac,v 1.10 2025/03/30 21:10:47 wiz Exp $
+
+* Detect NetBSD libatomic
+* test(1) portability fix
+
+--- configure.ac.orig	2024-10-24 18:24:00.000000000 +0000
++++ configure.ac
+@@ -426,6 +426,18 @@ if test "x$plugins" = "xtrue"; then
+ fi
+ 
+ 
++# check if sys/atomic.h is present.
++AC_CHECK_HEADERS([sys/atomic.h])
++case "${host}" in
++*-netbsd*)
++if test "x$ac_cv_header_sys_atomic_h" = "xyes"; then
++    CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_NETBSD_ATOMIC_OPS=1";
++fi
++;;
++*)
++;;
++esac
++
+ U_ENABLE_DYLOAD=1
+ enable=yes
+ AC_MSG_CHECKING([whether to enable dynamic loading of plugins. Ignored if plugins disabled.])
+@@ -1194,6 +1206,7 @@ case "${host}" in
+ 	*-*-haiku)	platform=U_HAIKU ;;
+ 	*-*-irix*)		platform=U_IRIX ;;
+ 	*-ncr-*)		platform=U_MPRAS ;;
++	*-*-sco3.2v5*)		platform=USCOOSR5 ;;
+ 	*) 		platform=U_UNKNOWN_PLATFORM ;;
+ esac
+ AC_SUBST(ICUDATA_CHAR)
