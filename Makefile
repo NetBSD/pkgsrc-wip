@@ -2280,6 +2280,7 @@ SUBDIR+=	litecoin
 SUBDIR+=	litestream
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
+SUBDIR+=	llama-swap
 SUBDIR+=	llama.cpp
 SUBDIR+=	lld
 SUBDIR+=	lldb

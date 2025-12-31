@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/benchmark-chatcompletion
+bin/llama-swap
+bin/process-cmd-test
+bin/simple-responder
+bin/wol-proxy
