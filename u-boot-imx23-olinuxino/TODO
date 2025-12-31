@@ -1,5 +1,3 @@
-- test installboot integration
-
 - this u-boot build might place the DTB in the BSS section:
   https://mail-index.netbsd.org/port-arm/2025/12/14/msg009487.html
 
