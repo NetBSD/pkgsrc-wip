@@ -13,9 +13,8 @@ HOMEPAGE=	https://github.com/Ultimaker/libArcus/
 COMMENT=	Creating a socket in a thread and using this socket to messages
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-FORCE_CXX_STD+=	c++14
+FORCE_CXX_STD=	c++17
 
 SUBST_CLASSES+=		sip
 SUBST_STAGE.sip=	pre-configure
@@ -25,11 +24,12 @@ SUBST_SED.sip=		-e 's|\(SIP_EXECUTABLE sip\)|\1${PYVERSSUFFIX}|'
 
 PY_PATCHPLIST=	YES
 
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 BUILDLINK_DEPMETHOD.py-sip4?=	build
 
-.include "../../lang/python/extension.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/protobuf/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../wip/py-sip4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
