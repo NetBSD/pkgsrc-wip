@@ -13,7 +13,6 @@ HOMEPAGE=	https://github.com/Ultimaker/Cura/
 COMMENT=	3D printer / slicing GUI built on top of the Uranium framework
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
@@ -35,10 +34,11 @@ SUBST_MESSAGE.fix-version=	Fixing Cura version.
 SUBST_FILES.fix-version=	CMakeLists.txt
 SUBST_SED.fix-version=		-e "s,\(CURA_VERSION\) \"master\",\1 \"${GITHUB_TAG}\",g"
 
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 PY_PATCHPLIST=	YES
 
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
