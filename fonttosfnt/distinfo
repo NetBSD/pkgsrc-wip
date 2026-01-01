@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.2 2009/11/09 19:40:18 tnn2 Exp $
 
-BLAKE2s (fonttosfnt-1.2.4.tar.xz) = 7a36b5071d9b5d12df47406057850bf1547bf686f8e1610becbdaeac3c8ed1e2
-SHA512 (fonttosfnt-1.2.4.tar.xz) = 37654d66e8d63abc4801c76d48082cc99dc3cc7813376e634c287d97207d17592323cefefd305328a504e432c94e102260b92308088d5e0bf3931a471cb4b851
-Size (fonttosfnt-1.2.4.tar.xz) = 143928 bytes
+BLAKE2s (fonttosfnt-1.2.5.tar.xz) = 9250f98b8217fcaa8217062081a3aa245a202b89a907a11155e8988977d48111
+SHA512 (fonttosfnt-1.2.5.tar.xz) = 3be2a625234175dfc8a637b13f2d273afc82126ccd624a38afcc7ef3e13814dac0e55c8ae0a0a713725cf52078f8b45f3e86d7b357b1a19a55def55f969d0640
+Size (fonttosfnt-1.2.5.tar.xz) = 144844 bytes
