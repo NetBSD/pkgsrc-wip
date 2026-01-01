@@ -1764,7 +1764,6 @@ SUBDIR+=	inetdxtra
 SUBDIR+=	inferno
 SUBDIR+=	influx-cli
 SUBDIR+=	influxdb
-SUBDIR+=	inform
 SUBDIR+=	infraarcana
 SUBDIR+=	inicpp
 SUBDIR+=	initware-git
