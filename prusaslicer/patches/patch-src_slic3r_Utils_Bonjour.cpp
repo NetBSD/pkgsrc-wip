@@ -3,9 +3,21 @@ $NetBSD$
 Fix boost 1.87 compatibility.
 https://github.com/prusa3d/PrusaSlicer/issues/13799
 
---- src/slic3r/Utils/Bonjour.cpp.orig	2025-03-10 13:20:54.000000000 +0000
+Fix boost 1.88 compatibility.
+https://github.com/prusa3d/PrusaSlicer/issues/14534
+
+--- src/slic3r/Utils/Bonjour.cpp.orig	2025-11-06 09:19:38.000000000 +0000
 +++ src/slic3r/Utils/Bonjour.cpp
-@@ -624,11 +624,11 @@ UdpSession::UdpSession(Bonjour::ReplyFn 
+@@ -17,6 +17,8 @@
+ #include <boost/log/trivial.hpp>
+ #include <boost/bind/bind.hpp>
+ 
++#include <boost/asio/deadline_timer.hpp>
++
+ using boost::optional;
+ using boost::system::error_code;
+ namespace endian = boost::endian;
+@@ -624,11 +626,11 @@ UdpSession::UdpSession(Bonjour::ReplyFn 
  	buffer.resize(DnsMessage::MAX_SIZE);
  }
  
@@ -20,7 +32,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  {
  	try {
  		// open socket
-@@ -658,11 +658,11 @@ UdpSocket::UdpSocket( Bonjour::ReplyFn r
+@@ -658,11 +660,11 @@ UdpSocket::UdpSocket( Bonjour::ReplyFn r
  }
  
  
@@ -35,7 +47,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  {
  	try {
  		// open socket
-@@ -714,7 +714,7 @@ void UdpSocket::receive_handler(SharedSe
+@@ -714,7 +716,7 @@ void UdpSocket::receive_handler(SharedSe
  	// let io_service to handle the datagram on session
  	// from boost documentation io_service::post:
  	// The io_service guarantees that the handler will only be called in a thread in which the run(), run_one(), poll() or poll_one() member functions is currently being invoked.
@@ -44,7 +56,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	// immediately accept new datagrams
  	async_receive();
  }
-@@ -871,13 +871,13 @@ void Bonjour::priv::lookup_perform()
+@@ -871,13 +873,13 @@ void Bonjour::priv::lookup_perform()
  {
  	service_dn = (boost::format("_%1%._%2%.local") % service % protocol).str();
  
@@ -60,7 +72,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	boost::system::error_code ec;
  	// ipv4 interfaces
  	auto results = resolver.resolve(udp::v4(), asio::ip::host_name(), "", ec);
-@@ -890,12 +890,12 @@ void Bonjour::priv::lookup_perform()
+@@ -890,12 +892,12 @@ void Bonjour::priv::lookup_perform()
  		// create ipv4 socket for each interface
  		// each will send to querry to for both ipv4 and ipv6
  		for (const auto& intrfc : interfaces) 		
@@ -75,7 +87,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	// ipv6 interfaces
  	interfaces.clear();
  	//udp::resolver::query query(host, PORT, boost::asio::ip::resolver_query_base::numeric_service);
-@@ -910,9 +910,9 @@ void Bonjour::priv::lookup_perform()
+@@ -910,9 +912,9 @@ void Bonjour::priv::lookup_perform()
  		// create ipv6 socket for each interface
  		// each will send to querry to for both ipv4 and ipv6
  		for (const auto& intrfc : interfaces)
@@ -87,7 +99,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	} else {
  		BOOST_LOG_TRIVIAL(info)<< "Failed to resolve ipv6 interfaces: " << ec.message();
  	}
-@@ -923,13 +923,13 @@ void Bonjour::priv::lookup_perform()
+@@ -923,13 +925,13 @@ void Bonjour::priv::lookup_perform()
  			socket->send();
  
  		// timer settings
@@ -103,7 +115,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  				if (completefn) {
  					completefn();
  				}
-@@ -947,7 +947,7 @@ void Bonjour::priv::lookup_perform()
+@@ -947,7 +949,7 @@ void Bonjour::priv::lookup_perform()
  		timer.expires_from_now(boost::posix_time::seconds(timeout));
  		timer.async_wait(timer_handler);
  		// start io_service, it will run until it has something to do - so in this case until stop is called in timer
@@ -112,7 +124,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	}
  	catch (std::exception& e) {
  		BOOST_LOG_TRIVIAL(error) << e.what();
-@@ -966,12 +966,12 @@ void Bonjour::priv::resolve_perform()
+@@ -966,12 +968,12 @@ void Bonjour::priv::resolve_perform()
  			rpls.push_back(reply);
  	};
  
@@ -127,7 +139,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	boost::system::error_code ec;
  	// ipv4 interfaces
  	auto results = resolver.resolve(udp::v4(), asio::ip::host_name(), "", ec);
-@@ -984,12 +984,12 @@ void Bonjour::priv::resolve_perform()
+@@ -984,12 +986,12 @@ void Bonjour::priv::resolve_perform()
  		// create ipv4 socket for each interface
  		// each will send to querry to for both ipv4 and ipv6
  		for (const auto& intrfc : interfaces)
@@ -142,7 +154,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  
  	// ipv6 interfaces
  	interfaces.clear();
-@@ -1003,9 +1003,9 @@ void Bonjour::priv::resolve_perform()
+@@ -1003,9 +1005,9 @@ void Bonjour::priv::resolve_perform()
  		// create ipv6 socket for each interface
  		// each will send to querry to for both ipv4 and ipv6
  		for (const auto& intrfc : interfaces) 
@@ -154,7 +166,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  	} else {
  		BOOST_LOG_TRIVIAL(info) << "Failed to resolve ipv6 interfaces: " << ec.message();
  	}
-@@ -1016,14 +1016,14 @@ void Bonjour::priv::resolve_perform()
+@@ -1016,14 +1018,14 @@ void Bonjour::priv::resolve_perform()
  			socket->send();
  
  		// timer settings
@@ -171,7 +183,7 @@ https://github.com/prusa3d/PrusaSlicer/issues/13799
  				if (replies_count > 0 && resolvefn) {
  					resolvefn(replies);
  				}
-@@ -1041,7 +1041,7 @@ void Bonjour::priv::resolve_perform()
+@@ -1041,7 +1043,7 @@ void Bonjour::priv::resolve_perform()
  		timer.expires_from_now(boost::posix_time::seconds(timeout));
  		timer.async_wait(timer_handler);
  		// start io_service, it will run until it has something to do - so in this case until stop is called in timer

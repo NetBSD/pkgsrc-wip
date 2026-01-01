@@ -3,7 +3,9 @@ $NetBSD$
 cmake file copied from OpenVDB 8.1.0 distribution, with unknown cmake
 function OPENVDB_GET_VERSION_DEFINE commented out.
 
---- cmake/modules/FindOpenVDB.cmake.orig	2021-12-17 14:00:02.000000000 +0000
+Fixed boost 1.89 compatibility, which removed boost_system component.
+
+--- cmake/modules/FindOpenVDB.cmake.orig	2025-11-06 09:19:38.000000000 +0000
 +++ cmake/modules/FindOpenVDB.cmake
 @@ -1,28 +1,5 @@
 -# Copyright (c) DreamWorks Animation LLC
@@ -531,7 +533,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
    if(NOT OpenVDB_ABI)
      message(WARNING "Unable to determine OpenVDB ABI version from OpenVDB "
        "installation. The library major version \"${OpenVDB_MAJOR_VERSION}\" "
-@@ -332,166 +446,209 @@ if(NOT OpenVDB_FIND_QUIETLY)
+@@ -332,166 +446,208 @@ if(NOT OpenVDB_FIND_QUIETLY)
  endif()
  
  # ------------------------------------------------------------------------
@@ -609,7 +611,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 +  set(Boost_USE_STATIC_LIBS OFF)
 +endif()
 +
-+find_package(Boost REQUIRED COMPONENTS iostreams system)
++find_package(Boost REQUIRED COMPONENTS iostreams)
 +
 +# Add deps for pyopenvdb
 +# @todo track for numpy
@@ -830,7 +832,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  
  set(_OPENVDB_VISIBLE_DEPENDENCIES
    Boost::iostreams
-   Boost::system
+-  Boost::system
 -  IlmBase::Half
  )
  
@@ -858,7 +860,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  endif()
  
  list(APPEND _OPENVDB_VISIBLE_DEPENDENCIES
-@@ -505,34 +662,26 @@ endif()
+@@ -505,34 +661,26 @@ endif()
  
  set(_OPENVDB_HIDDEN_DEPENDENCIES)
  
@@ -902,7 +904,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  set(OpenVDB_LIBRARY_DIRS "")
  foreach(LIB ${OpenVDB_LIB_COMPONENTS})
    get_filename_component(_OPENVDB_LIBDIR ${LIB} DIRECTORY)
-@@ -540,49 +689,102 @@ foreach(LIB ${OpenVDB_LIB_COMPONENTS})
+@@ -540,49 +688,102 @@ foreach(LIB ${OpenVDB_LIB_COMPONENTS})
  endforeach()
  list(REMOVE_DUPLICATES OpenVDB_LIBRARY_DIRS)
  
