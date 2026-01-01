@@ -13,8 +13,10 @@ COMMENT=	Polygon and line clipping and offsetting library
 LICENSE=	boost-license
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 WRKSRC=		${WRKDIR}/cpp
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
