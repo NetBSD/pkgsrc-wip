@@ -13,8 +13,9 @@ HOMEPAGE=	https://github.com/Ultimaker/libnest2d/
 COMMENT=	2D irregular bin packaging and nesting library written in modern C++
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -24,6 +25,7 @@ SUBST_FILES.fix-paths+=		cmake_modules/FindNLopt.cmake
 SUBST_SED.fix-paths=		-e "s,@prefix@,${PREFIX},g"
 
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../wip/nlopt/buildlink3.mk"
 .include "../../wip/polyclipping/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
