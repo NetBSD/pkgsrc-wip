@@ -13,7 +13,9 @@ HOMEPAGE=	https://github.com/Ultimaker/fdm_materials/
 COMMENT=	FDM Material database
 LICENSE=	cc0-1.0-universal
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	# none
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
