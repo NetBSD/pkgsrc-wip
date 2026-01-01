@@ -1,9 +1,4 @@
 @comment $NetBSD$
-${PYSITELIB}/backports.tarfile-${PKGVERSION}.dist-info/LICENSE
-${PYSITELIB}/backports.tarfile-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/backports.tarfile-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/backports.tarfile-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/backports.tarfile-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/backports/__init__.py
 ${PYSITELIB}/backports/__init__.pyc
 ${PYSITELIB}/backports/__init__.pyo
@@ -19,3 +14,8 @@ ${PYSITELIB}/backports/tarfile/compat/__init__.pyo
 ${PYSITELIB}/backports/tarfile/compat/py38.py
 ${PYSITELIB}/backports/tarfile/compat/py38.pyc
 ${PYSITELIB}/backports/tarfile/compat/py38.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
