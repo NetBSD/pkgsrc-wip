@@ -13,7 +13,6 @@ HOMEPAGE=	https://github.com/Ultimaker/Uranium/
 COMMENT=	Python framework for building 3D printing related applications
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
@@ -24,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 pre-install:
 	find ${WRKSRC} -type f -name "*.orig" | xargs ${RM}
 
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 PY_PATCHPLIST=YES
 
@@ -32,6 +31,7 @@ PY_PATCHPLIST=YES
 
 PLIST_SUBST+=	CMAKE_API=${CMAKE_API}
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../wip/libArcus/buildlink3.mk"
