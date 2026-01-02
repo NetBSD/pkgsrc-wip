@@ -1,10 +1,12 @@
 # $NetBSD: Makefile,v 1.1 2015/01/14 17:16:08 thomasklausner Exp $
 
-DISTNAME=	aegisub-3.4.2
+DISTNAME=	Aegisub-3.4.2
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TypesettingTools/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	Aegisub
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.aegisub.org/
@@ -18,10 +20,6 @@ USE_LANGUAGES=	c c++
 #Run-time dependency alsa found: NO (tried pkgconfig and cmake)
 #Run-time dependency portaudio-2.0 found: NO (tried pkgconfig and cmake)
 #Run-time dependency openal found: NO (tried pkgconfig and cmake)
-
-# needed by 3.4+
-pre-configure:
-	${CP} ${FILESDIR}/git_version.h ${WRKSRC}
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"

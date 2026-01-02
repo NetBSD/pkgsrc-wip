@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/01/14 17:16:09 thomasklausner Exp $
 
-BLAKE2s (aegisub-3.4.2.tar.gz) = 09d43dcfed03cd8cb64bdddf9646d31d7aeda282075021b1c38293ed39b34f87
-SHA512 (aegisub-3.4.2.tar.gz) = 225f97a59feda2ddd7a65e967c19eb074c2f961cbdfbd5e743e4b622f8fb54ec85b679e5b9f30333965e98a19bf6b56cd54cc10417f67771c9661999483dacca
-Size (aegisub-3.4.2.tar.gz) = 6602618 bytes
+BLAKE2s (Aegisub-3.4.2.tar.xz) = 3c5f7db64f893440ca89448f6841beea0d2baf95eb16c632a9ca36b30079a26b
+SHA512 (Aegisub-3.4.2.tar.xz) = ecc455c8f141c77840d23c9fb436d549b22ad28f9e78b25f356f27ae737a9bca300258fbe99cb59eae1da58dd03284ff82b0c4105df7a9190455b425d9917190
+Size (Aegisub-3.4.2.tar.xz) = 5370092 bytes
