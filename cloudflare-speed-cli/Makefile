@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	cloudflare-speed-cli-0.4.3
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kavehtehrani/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
