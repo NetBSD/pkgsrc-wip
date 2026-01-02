@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/ffmsindex
+include/ffms.h
+include/ffmscompat.h
+lib/libffms2.la
+lib/pkgconfig/ffms2.pc
+share/doc/ffms2/ffms2-api.md
+share/doc/ffms2/ffms2-changelog.md

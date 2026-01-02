@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ffms2-5.0.tar.gz) = 0efd1ee510c2f7c32417150c0eebe91b72c306a67138ce06e043e104b8a21087
+SHA512 (ffms2-5.0.tar.gz) = 0b75a0ad0a0ea466d1d19be55886eee5470e6b08ede8159a5099cd962ca0f41222044fc98119de64c72ecea8b64ec2e2abebb8c362f3f377b4d054ba77752348
+Size (ffms2-5.0.tar.gz) = 167985 bytes
