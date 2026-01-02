@@ -1,8 +1,8 @@
 $NetBSD$
 
---- go.sum.orig	2025-08-19 12:03:57.000000000 +0000
+--- go.sum.orig	2025-12-18 21:59:18.000000000 +0000
 +++ go.sum
-@@ -52,8 +52,8 @@ github.com/stretchr/testify v1.8.4 h1:Cc
+@@ -33,8 +33,8 @@ github.com/stretchr/testify v1.8.4 h1:Cc
  github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
  github.com/tetratelabs/wazero v1.6.0 h1:z0H1iikCdP8t+q341xqepY4EWvHEw8Es7tlqiVzlP3g=
  github.com/tetratelabs/wazero v1.6.0/go.mod h1:0U0G41+ochRKoPKCJlh0jMg1CHkyfK8kDqiirMmKY8A=
