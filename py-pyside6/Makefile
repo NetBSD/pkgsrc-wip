@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-VERSION=	6.8.2
+VERSION=	6.10.1
 DISTNAME=	pyside-setup-everywhere-src-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-pyside6-${VERSION}
 MASTER_SITES=	https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-${VERSION}-src/
@@ -13,7 +13,6 @@ HOMEPAGE=	https://wiki.qt.io/Qt_for_Python
 COMMENT=	Qt6 bindings for Python
 LICENSE=	gnu-gpl-v2
 
-#PYTHON_VERSIONS_ACCEPTED=	311
 USE_TOOLS+=			pkg-config bash
 USE_LANGUAGES+=			c c++
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"

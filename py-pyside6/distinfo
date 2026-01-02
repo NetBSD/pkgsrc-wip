@@ -1,7 +1,8 @@
 $NetBSD: $
 
-BLAKE2s (pyside-setup-everywhere-src-6.8.2.tar.xz) = dce62323acc9c62bfcc1df71afead3c96e32622e65700988373abb4d6d617aad
-SHA512 (pyside-setup-everywhere-src-6.8.2.tar.xz) = cc522143974d08133d68d3259caa5127916534e16678693866d65965a546db98b5b1b07d92f7c0918b7c8fb10213d94ad50259b22cf9ebc2a63b985068d75452
-Size (pyside-setup-everywhere-src-6.8.2.tar.xz) = 16609596 bytes
-SHA1 (patch-sources_pyside6_cmake_Macros_PySideModules.cmake) = 64124611147d88a4134b258ac5a6112f1b02d00b
-SHA1 (patch-sources_shiboken6_libshiboken_helper.h) = 493bcbebe2a2fbc77fc0bb8cceb837bfba712d90
+BLAKE2s (pyside-setup-everywhere-src-6.10.1.tar.xz) = caa08461fc98f6b5967c422912de03520ad758df0e1869ae0fe20103600764f2
+SHA512 (pyside-setup-everywhere-src-6.10.1.tar.xz) = fef31a1d39362d09c8e4c4621090851d42dc4566f2bd813361da64eed8af25a8bd9cf770dea2a26f9e00420ae19eb57ec2f5db11c1d86f39d26b6e8f7ebf6d21
+Size (pyside-setup-everywhere-src-6.10.1.tar.xz) = 17746968 bytes
+SHA1 (patch-sources_pyside6_cmake_Macros_PySideModules.cmake) = 191360f36a20c8566bea5bd6732db7b37ae63c0c
+SHA1 (patch-sources_pyside6_libpyside_CMakeLists.txt) = 567a06072402396e4237b20a7e2474e23bedaf40
+SHA1 (patch-sources_shiboken6_libshiboken_helper.cpp) = d29888da21d2a0b02a4e38f6b7114fb6a54efa81

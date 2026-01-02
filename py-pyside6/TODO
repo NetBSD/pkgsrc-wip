@@ -9,7 +9,7 @@ Missing optional deps:
 - Qt6Pdf
 - Qt6PdfWidgets
 - Qt6SerialBus
-- Qt6DataVisualization
 - Qt6Graphs
 - Qt6WebEngineCore
 - Qt6WebEngineWidgets
+- Qt6WebEngineQuick

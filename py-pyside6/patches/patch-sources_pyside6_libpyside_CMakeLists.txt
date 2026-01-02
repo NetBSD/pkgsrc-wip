@@ -1,0 +1,20 @@
+$NetBSD$
+
+Fix paths in installed cmake files.
+https://qt-project.atlassian.net/browse/PYSIDE-3210
+
+--- sources/pyside6/libpyside/CMakeLists.txt.orig	2026-01-01 23:30:15.593845919 +0000
++++ sources/pyside6/libpyside/CMakeLists.txt
+@@ -159,9 +159,9 @@ configure_package_config_file(
+ )
+ 
+ # Install-tree / wheel configuration
+-set(PYSIDE_PYTHONPATH "")
+-set(PYSIDE_TYPESYSTEMS "typesystems")
+-set(PYSIDE_GLUE "glue")
++#set(PYSIDE_PYTHONPATH "")
++#set(PYSIDE_TYPESYSTEMS "typesystems")
++#set(PYSIDE_GLUE "glue")
+ set(PYSIDE_SOVERSION "${pyside6_library_so_version}")
+ 
+ configure_package_config_file(
