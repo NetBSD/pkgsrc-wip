@@ -3,7 +3,7 @@
 DISTNAME=	cloudflare-speed-cli-0.4.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kavehtehrani/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://github.com/kavehtehrani/cloudflare-speed-cli/
