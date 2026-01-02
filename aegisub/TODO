@@ -1,2 +1,3 @@
-Needs boost built with icu support.
-pkgsrc default is no icu except on Solaris.
+Run-time dependency luajit found: YES 2.1.1713773202
+
+meson.build:335:12: ERROR: Problem encountered: System luajit found but not compiled in 5.2 mode
