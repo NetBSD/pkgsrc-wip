@@ -21,8 +21,6 @@ USE_GCC_RUNTIME=	yes
 # above line mentions c23 as default compiler for R, but c23 (gcc15) is N/A ?
 # USE_CC_FEATURES+=	c23
 
-# BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
-
 BUILD_TARGET=		all info
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
