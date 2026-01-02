@@ -1,3 +1,27 @@
+2.
+ (not fixed yet)
+
+=> Checking file-check results for R-4.4.3
+ERROR: ************************************************************
+ERROR: The following files are in the PLIST but not in /tmp/wip/R/work/.destdir/usr/pkg:
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-FAQ.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-admin.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-data.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-exts.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-intro.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-ints.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/info/R-lang.info
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-FAQ.html
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-admin.html
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-data.html
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-exts.html
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-intro.html
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-ints.html
+ERROR:         /tmp/wip/R/work/.destdir/usr/pkg/lib/R/doc/manual/R-lang.html
+*** Error code 1
+
+-- problem below has been fixed now --
+1.
 On NetBSD/amd64 9.3: I have Following configure problem:
 
 => Checking for portability problems in extracted files
