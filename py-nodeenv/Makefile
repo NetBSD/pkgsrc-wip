@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nodeenv-1.9.1
+DISTNAME=	nodeenv-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekalinin/}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
-TOOL_DEPENDS+= 	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 REPLACE_PYTHON=	nodeenv.py
 
