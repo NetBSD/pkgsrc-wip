@@ -5801,6 +5801,7 @@ SUBDIR+=	tofu-ls
 SUBDIR+=	tolua++
 SUBDIR+=	tome
 SUBDIR+=	tome2
+SUBDIR+=	tooi
 SUBDIR+=	tops-bin
 SUBDIR+=	tor-browser
 SUBDIR+=	tor-dev
