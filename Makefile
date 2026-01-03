@@ -4898,6 +4898,7 @@ SUBDIR+=	py-texext
 SUBDIR+=	py-texml
 SUBDIR+=	py-textblob
 SUBDIR+=	py-textdistance
+SUBDIR+=	py-textual-fspicker
 SUBDIR+=	py-textx
 SUBDIR+=	py-thLib
 SUBDIR+=	py-thermistor
