@@ -3307,6 +3307,7 @@ SUBDIR+=	plasma6-kwin
 SUBDIR+=	plasma6-kwin-x11
 SUBDIR+=	plasma6-plasma-desktop
 SUBDIR+=	plasma6-plasma-workspace
+SUBDIR+=	plasma6-powerdevil
 SUBDIR+=	plasma6-spectacle
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
