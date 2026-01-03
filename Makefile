@@ -3305,6 +3305,7 @@ SUBDIR+=	plasma-workspace-wallpapers
 SUBDIR+=	plasma6-kpipewire
 SUBDIR+=	plasma6-kwin
 SUBDIR+=	plasma6-kwin-x11
+SUBDIR+=	plasma6-plasma-workspace
 SUBDIR+=	plasma6-spectacle
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
