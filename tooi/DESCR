@@ -1,0 +1,5 @@
+tooi is a text-based user interface for Mastodon, Pleroma and friends.
+The name is a portmanteau of toot and TUI.
+
+tooi is a re-implementation of the TUI included with toot using the
+modern and more powerful Textual framework.
