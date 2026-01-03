@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (textual_image-0.8.5.tar.gz) = 63f350dc676a89d6fc031e7b473c01890d652069805079d1fbb41b6aff34c0ef
+SHA512 (textual_image-0.8.5.tar.gz) = d660c686a98d67854dd943d83af0f9ae0a1fc5d23d583e548c7fdcaa704e0e8ea41ab4b2513e2eff222251455613fb383114f2d147a57274f3943d2252888fa0
+Size (textual_image-0.8.5.tar.gz) = 109049 bytes

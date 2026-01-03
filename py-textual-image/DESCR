@@ -1,0 +1,4 @@
+textual-image offers both Rich renderables and Textual Widgets that
+leverage the Terminal Graphics Protocol (TGP) and Sixel protocols to
+display images in your terminal. For terminals that don't support these
+protocols, fallback rendering using Unicode characters is available.
