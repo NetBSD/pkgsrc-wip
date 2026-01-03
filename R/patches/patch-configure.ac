@@ -20,8 +20,8 @@ release    line #
 10.99.12   4770   withval=$with_blas; if test "${withval}" = no; then
  9.3       4392   withval=$with_blas; R_ARG_USE(blas)
 
---- configure.ac	2026-01-02 17:46:48.409027336 +0900
-+++ configure.ac	2026-01-02 17:46:48.409027336 +0900
+--- configure.ac	2026-01-03 17:00:22.984847292 +0900
++++ configure.ac	2026-01-03 17:00:22.984847292 +0900
 @@ -33,6 +33,7 @@
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
  AC_CONFIG_SRCDIR([src/include/Defn.h])
@@ -30,3 +30,12 @@ release    line #
  
  ### * Information on the package.
  
+@@ -317,6 +318,8 @@
+ ## As from R 3.2.0 split up -L... and -lR
+ if test "${want_R_shlib}" = yes; then
+   LIBR0="-L\"\$(R_HOME)/lib\$(R_ARCH)\""
++  LIBR0="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\"\$(R_HOME)/lib\$(R_ARCH)\""                                                                                       |
++  LIBR0="${COMPILER_RPATH_FLAG}\"\$(R_HOME)/lib\$(R_ARCH)\" -L\"\$(R_HOME)/lib\$(R_ARCH)\""                                                                        |
+   LIBR1=-lR
+ else
+   LIBR0=
