@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.15 2024/08/17 00:39:00 markd Exp $
+
+BLAKE2s (freerdp-3.19.0.tar.gz) = e338329c2ed01f1e9fefa7faffd3d9a869008a9e0b86c6293e9361e8ca50594e
+SHA512 (freerdp-3.19.0.tar.gz) = 17c8f6580eb3238cecc55896827c48918f1d08885c0a52eaac0f15682bb77ff0046f18a9ce16bbfe615b07286a00fa479d4d320417f4cd3813151bd36004dd55
+Size (freerdp-3.19.0.tar.gz) = 11364393 bytes
+SHA1 (patch-channels_rdpdr_client_rdpdr__main.c) = 489430152c645b2c8c5b1580c6cfe51fe518c333
+SHA1 (patch-client_Wayland_wlf__input.c) = 02442984ecd1a93b03591c35786067c46b41be6c
+SHA1 (patch-client_Wayland_wlfreerdp.c) = 1b97c01b1893f1364b9499f788560a41eaf61cd8
+SHA1 (patch-winpr_include_winpr_string.h) = 892a0ca736997240a0ea26b7030b00cd90396849
+SHA1 (patch-winpr_libwinpr_libwinpr_sspi_CMakeLists.txt) = 5e202a099a0888ad3c3787ca4bd428be31afbb9c
+SHA1 (patch-winpr_libwinpr_sysinfo_sysinfo.c) = 4d3ad2bfbdd4c567d3b6e61354afe11aff18c8bd
+SHA1 (patch-winpr_libwinpr_thread_thread.c) = 91d182d962ec9a957204b65bb30b8f7735e803dd

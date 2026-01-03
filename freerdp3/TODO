@@ -1,0 +1,2 @@
+NetBSD needs equivalent of sysinfo() uptime field for
+winpr/libwinpr/sysinfo/sysinfo.c to build.

@@ -1,0 +1,21 @@
+$NetBSD$
+
+Don't pass the kerberos libraries here as they somehow screw up the 
+link and pkgsrc is passing tehm anyway.
+
+--- winpr/libwinpr/sspi/CMakeLists.txt.orig	2025-06-16 02:54:51.232871196 +0000
++++ winpr/libwinpr/sspi/CMakeLists.txt
+@@ -67,10 +67,10 @@ if(WITH_KRB5)
+ 
+   winpr_system_include_directory_add(${KRB5_INCLUDEDIR})
+   winpr_system_include_directory_add(${KRB5_INCLUDE_DIRS})
+-  winpr_library_add_private(${KRB5_LIBRARIES})
+-  winpr_library_add_private(${KRB5_LIBRARY})
++#  winpr_library_add_private(${KRB5_LIBRARIES})
++#  winpr_library_add_private(${KRB5_LIBRARY})
+   winpr_library_add_compile_options(${KRB5_CFLAGS})
+-  winpr_library_add_link_options(${KRB5_LDFLAGS})
++#  winpr_library_add_link_options(${KRB5_LDFLAGS})
+   winpr_library_add_link_directory(${KRB5_LIBRARY_DIRS})
+ 
+   winpr_definition_add(WITH_KRB5)

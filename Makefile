@@ -1054,6 +1054,7 @@ SUBDIR+=	freegish-git
 SUBDIR+=	freej
 SUBDIR+=	freem
 SUBDIR+=	freemasterofmagic
+SUBDIR+=	freerdp3
 SUBDIR+=	freeserf
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freeswitch-music
