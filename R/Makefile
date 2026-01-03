@@ -14,8 +14,6 @@ COMMENT=	Statistical language for data analysis and graphics
 LICENSE=	gnu-gpl-v2
 
 USE_GCC_RUNTIME=	yes
-# uncomment following line helps packaging on 9.4
-# GCC_REQD+=		10
 
 # https://cran.r-project.org/doc/manuals/r-release/NEWS.pdf
 # above line mentions c23 as default compiler for R, but c23 (gcc15) is N/A ?
