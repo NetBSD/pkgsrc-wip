@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (textual_fspicker-0.6.0.tar.gz) = 47f546464664a44163cfa538304cb304ca31d663fed546771e0da2d87c099216
+SHA512 (textual_fspicker-0.6.0.tar.gz) = 5425734ffaf53154e719fca1a2415b8854c3727c713dbf1914cc81ba7c372c383b22eeb2c2db0f2fa05a1a768d2c8669cfbf9e3e7f507a3abd3277a4d90ba30b
+Size (textual_fspicker-0.6.0.tar.gz) = 16157 bytes
+SHA1 (patch-pyproject.toml) = 1cc90a1fb2fab2cb30b8e30499033e6c09dec611

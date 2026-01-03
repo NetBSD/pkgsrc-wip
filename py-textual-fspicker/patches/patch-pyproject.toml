@@ -1,0 +1,15 @@
+$NetBSD$
+
+Avoid too strict requirements.
+
+--- pyproject.toml.orig	2026-01-03 18:04:16.050364718 +0000
++++ pyproject.toml
+@@ -43,7 +43,7 @@ Issues = "https://github.com/davep/textu
+ Discussions = "https://github.com/davep/textual-fspicker/discussions"
+ 
+ [build-system]
+-requires = ["uv_build>=0.8.11,<0.9.0"]
++requires = ["uv_build>=0.8.11"]
+ build-backend = "uv_build"
+ 
+ [tool.uv]
