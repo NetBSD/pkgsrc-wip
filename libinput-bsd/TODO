@@ -1,0 +1,2 @@
+Currently has undefined reference to libevdev_event_type_from_name() and
+libevdev_property_from_name()
