@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (kde-cli-tools-5.27.10.tar.xz) = 3bea2575176f63d62f1747df4822e0e849a2945380bc8b17c177bbea24a912cb
-SHA512 (kde-cli-tools-5.27.10.tar.xz) = b8179525d15101568b879ace024f68005aef34b2ab6fe70a1237712b3ace5d3d6442c2090f3bcda2b29ad4ad1cc20a0ded96b23b55bd8e76546d513f4d6ca496
-Size (kde-cli-tools-5.27.10.tar.xz) = 667316 bytes
-SHA1 (patch-kdeeject_kdeeject) = 3742a827c4b18cde06828ff585d3130062803b9a
