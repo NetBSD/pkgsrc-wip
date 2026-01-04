@@ -1,0 +1,16 @@
+# $NetBSD: xorg.libXres,v 1.6 2014/05/03 21:31:10 ryoon Exp $
+#
+include/X11/extensions/XRes.h
+lib/libXRes.a
+lib/libXRes.1.0.0.dylib
+lib/libXRes.1.dylib
+lib/libXRes.dylib
+lib/libXRes.la
+lib/libXRes.so
+lib/libXRes.so.1
+lib/libXRes.so.1.0
+lib/libXRes.so.2
+lib/libXRes.so.2.0
+lib/libXRes.so.4.0
+lib/libXRes.so.5.0
+lib/pkgconfig/xres.pc

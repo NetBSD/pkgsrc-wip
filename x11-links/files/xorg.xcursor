@@ -1,0 +1,16 @@
+# $NetBSD: xorg.xcursor,v 1.5 2014/05/03 21:31:10 ryoon Exp $
+#
+include/X11/Xcursor/Xcursor.h
+lib/libXcursor.1.0.2.dylib
+lib/libXcursor.1.dylib
+lib/libXcursor.a
+lib/libXcursor.dylib
+lib/libXcursor.la
+lib/libXcursor.so
+lib/libXcursor.so.1
+lib/libXcursor.so.1.0.2
+lib/libXcursor.so.2
+lib/libXcursor.so.2.0
+lib/libXcursor.so.4.0
+lib/libXcursor.so.5.0
+lib/pkgconfig/xcursor.pc

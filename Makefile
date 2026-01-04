@@ -6093,6 +6093,7 @@ SUBDIR+=	wyeb-git
 SUBDIR+=	wyebadblock-git
 SUBDIR+=	wyrmgus
 SUBDIR+=	wyrmsun
+SUBDIR+=	x11-links
 SUBDIR+=	xalan-c
 SUBDIR+=	xalan-c-1.10
 SUBDIR+=	xapps

@@ -1,0 +1,4 @@
+# $NetBSD: xorg.xproxymanagementprotocol,v 1.3 2014/03/07 15:27:32 jperkin Exp $
+#
+lib/pkgconfig/xproxymngproto.pc
+share/pkgconfig/xproxymngproto.pc

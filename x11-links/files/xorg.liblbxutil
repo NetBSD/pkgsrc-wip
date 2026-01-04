@@ -1,0 +1,10 @@
+# $NetBSD: xorg.liblbxutil,v 1.4 2012/04/08 05:55:48 obache Exp $
+#
+lib/liblbxutil.a
+lib/liblbxutil.la
+lib/liblbxutil.so
+lib/liblbxutil.so.1
+lib/liblbxutil.so.1.0
+lib/liblbxutil.so.2
+lib/liblbxutil.so.2.0
+lib/pkgconfig/lbxutil.pc

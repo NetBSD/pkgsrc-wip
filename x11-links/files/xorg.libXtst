@@ -1,0 +1,15 @@
+# $NetBSD: xorg.libXtst,v 1.5 2014/05/03 21:31:10 ryoon Exp $
+lib/libXtst.6.1.0.dylib
+lib/libXtst.6.1.dylib
+lib/libXtst.6.dylib
+lib/libXtst.a
+lib/libXtst.la
+lib/libXtst.dylib
+lib/libXtst.so
+lib/libXtst.so.6
+lib/libXtst.so.6.1
+lib/libXtst.so.7
+lib/libXtst.so.7.0
+lib/libXtst.so.10.0
+lib/libXtst.so.11.0
+lib/pkgconfig/xtst.pc

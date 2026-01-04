@@ -1,0 +1,14 @@
+# $NetBSD: xorg.libXevie,v 1.5 2012/04/08 05:55:48 obache Exp $
+#
+include/X11/extensions/Xevie.h
+lib/libXevie.1.0.0.dylib
+lib/libXevie.1.dylib
+lib/libXevie.dylib
+lib/libXevie.a
+lib/libXevie.la
+lib/libXevie.so
+lib/libXevie.so.1
+lib/libXevie.so.1.0
+lib/libXevie.so.2
+lib/libXevie.so.2.0
+lib/pkgconfig/xevie.pc
