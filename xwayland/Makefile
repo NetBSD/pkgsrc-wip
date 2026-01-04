@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.20 2025/01/24 20:50:27 riastradh Exp $
 
 DISTNAME=	xwayland-24.1.8
-PKGNAME=	modular-xorg-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
@@ -42,7 +41,11 @@ post-install:
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
+.if ${X11_TYPE} == "modular"
 .include "../../x11/libXfont2/buildlink3.mk"
+.else
+.include "../../graphics/freetype2/buildlink3.mk"
+.endif
 .include "../../x11/libxcvt/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libei/buildlink3.mk"

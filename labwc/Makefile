@@ -45,9 +45,8 @@ post-install:
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-.if ${X11_TYPE} == "modular"
-.include "../../wip/modular-xorg-xwayland/buildlink3.mk"
-.endif
+# NOTYET
+#.include "../../wip/xwayland/buildlink3.mk"
 
 .include "../../wip/libsfdo/buildlink3.mk"
 .include "../../wip/wlroots/buildlink3.mk"

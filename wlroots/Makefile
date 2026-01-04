@@ -32,11 +32,10 @@ PLIST_VARS+=		xwayland
 .include "../../wip/seatd/buildlink3.mk"
 .include "../../wip/vulkan-loader/buildlink3.mk"
 
-.if ${X11_TYPE} == "modular"
-PLIST.xwayland=		yes
+# NOTYET
+#PLIST.xwayland=		yes
 # need update
-.include "../../wip/modular-xorg-xwayland/buildlink3.mk"
-.endif
+#.include "../../wip/xwayland/buildlink3.mk"
 
 .include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
