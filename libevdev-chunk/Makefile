@@ -12,6 +12,8 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/libevdev-openbsd
 
+PKGCONFIG_OVERRIDE+=	libevdev.pc.in
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	Makefile
