@@ -19,6 +19,9 @@ MESON_ARGS+=	-Dtests=false
 CFLAGS+=	-O0 -g
 LDFLAGS+=	-levdev
 
+PKGCONFIG_OVERRIDE+=		output/meson-private/libinput.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libudev-bsd/buildlink3.mk"
