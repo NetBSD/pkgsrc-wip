@@ -12,7 +12,7 @@ BUILDLINK_TREE+=	x11-links
 .if !defined(X11_LINKS_BUILDLINK3_MK)
 X11_LINKS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=1.36
+BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=1.37
 BUILDLINK_PKGSRCDIR.x11-links?=		../../pkgtools/x11-links
 BUILDLINK_DEPMETHOD.x11-links?=		build
 
