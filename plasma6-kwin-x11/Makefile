@@ -56,7 +56,7 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../x11/kf6-kwindowsystem/buildlink3.mk"
 .include "../../x11/kf6-kxmlgui/buildlink3.mk"
 .include "../../x11/libdisplay-info/buildlink3.mk"
-.include "../../wip/libinput-bsd-headers/buildlink3.mk"
+.include "../../wip/input-headers/buildlink3.mk"
 .include "../../x11/plasma6-kdecoration/buildlink3.mk"
 .include "../../x11/plasma6-kglobalacceld/buildlink3.mk"
 .include "../../x11/plasma6-kscreenlocker/buildlink3.mk"
