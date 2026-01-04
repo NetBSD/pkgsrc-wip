@@ -3279,6 +3279,7 @@ SUBDIR+=	plantri
 SUBDIR+=	plantuml
 SUBDIR+=	plasm
 SUBDIR+=	plasma-widget-menubar
+SUBDIR+=	plasma6-kdeplasma-addons
 SUBDIR+=	plasma6-kpipewire
 SUBDIR+=	plasma6-kwin
 SUBDIR+=	plasma6-kwin-x11
