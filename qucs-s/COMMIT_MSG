@@ -1,4 +1,4 @@
-cad/qucs_s: Add 25.2.0 
+cad/qucs-s: Add 25.2.0 
 
 Qucs-S is a circuit simulation program based on Qucs circuit
 simulator.The "S" letter indicates SPICE. The purpose of the Qucs-S
