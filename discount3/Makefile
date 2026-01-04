@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.20 2026/01/04 21:21:00 wiz Exp $
 
 DISTNAME=		discount-3.0.1.2
+PKGNAME=		${DISTNAME:S/discount/discount3/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Orc/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -10,8 +11,9 @@ HOMEPAGE=		https://www.pell.portland.or.us/~orc/Code/discount/
 COMMENT=		Markdown C implementation
 LICENSE=		modified-bsd
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${DISTNAME}
 
+CONFLICTS+=		discount-[0-9]*
 CONFLICTS+=		multimarkdown-[0-9]*
 
 HAS_CONFIGURE=		YES
