@@ -6179,6 +6179,7 @@ SUBDIR+=	xmms-volnorm
 SUBDIR+=	xmms2
 SUBDIR+=	xmoto
 SUBDIR+=	xnee
+SUBDIR+=	xnecview
 SUBDIR+=	xoo
 SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools

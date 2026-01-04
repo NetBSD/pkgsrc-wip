@@ -1,0 +1,5 @@
+ham/xnecview: Add 1.37
+
+Xnecview is a program for visualizing the input and output files
+of the NEC antenna simulation software. It runs on GNU/Linux and
+Unix systems with the X window system.
