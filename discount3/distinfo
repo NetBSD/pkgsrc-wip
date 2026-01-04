@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.20 2026/01/04 21:21:00 wiz Exp $
+
+BLAKE2s (discount-3.0.1.2.tar.gz) = 1b3c68f42ca437087dc71773134bfe130c709fb1dd0bc538a26b26daeb0d58e5
+SHA512 (discount-3.0.1.2.tar.gz) = ca10220e4a4f8cd5c3e849873d24a61f8bcbb85f230fe554537d9cdd4e3d4d23c5f5fbc9c917da379000e331c40473038b481f5ac2db29dfa7011a634526688a
+Size (discount-3.0.1.2.tar.gz) = 143419 bytes
+SHA1 (patch-Makefile.in) = 37d308d1c36f99d64d8a6d8b9da312f059a8d423
+SHA1 (patch-main.c) = dd6836bfdca2f031b16f0b3f0541a7c520531469

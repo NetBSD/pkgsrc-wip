@@ -744,6 +744,7 @@ SUBDIR+=	ding
 SUBDIR+=	dionysus
 SUBDIR+=	discident-glib
 SUBDIR+=	discordo
+SUBDIR+=	discount3
 SUBDIR+=	diskonaut
 SUBDIR+=	dispred
 SUBDIR+=	disque
