@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	xnecview-1.37
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	ham
 MASTER_SITES=	https://www.pa3fwm.nl/software/xnecview/
 EXTRACT_SUFX=	.tgz
 
