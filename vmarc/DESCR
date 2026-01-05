@@ -1,0 +1,4 @@
+VMA is a utility that allows you to list, extract, and/or create VMARC files as
+used on VM mainframes.  It consists of a command line version that should run
+just about anywhere and a GUI version that should run wherever wxWidgets is
+supported.

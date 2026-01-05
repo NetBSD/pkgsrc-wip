@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (vma-22.204a.tar.gz) = 83edc1acd02dcfe78089e51cd97d47516726adb08df376f96fd4a3ea2da59646
+SHA512 (vma-22.204a.tar.gz) = 131c2f1bc623e086a5b555d44a1abd9ab42a0394fc35081c4a434c38e1f9bb87a5a53b86b1f9b029accfd67e350161d53f27a559dd790f1432976385e995479c
+Size (vma-22.204a.tar.gz) = 81768 bytes
+SHA1 (patch-src_vma.c) = 970f7e0067636b48618ec31e25e68269f19ae83e
+SHA1 (patch-src_vmalib.c) = adf2d0febf086f1ca0437b12ec6cd3c4d981abe0
