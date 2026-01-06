@@ -3215,6 +3215,7 @@ SUBDIR+=	phoronix-test-suite
 SUBDIR+=	php-ast
 SUBDIR+=	php-basercms
 SUBDIR+=	php-dotclear
+SUBDIR+=	php-framadate
 SUBDIR+=	php-imagick-imagick6
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
