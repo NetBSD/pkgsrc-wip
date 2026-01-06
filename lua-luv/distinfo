@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (luv-1.43.0-0.tar.gz) = 9a7d0247373b79cffec08a44b103b8b0985a2f62ef6d4a7fd31e80ca20a175da
-SHA512 (luv-1.43.0-0.tar.gz) = f51d9b3c733dd5617fca49534fdd77dbb6a3d6f58263f453db8dcde21679f4a471e15d6f5b05bcb22a2552455df8beb238d33b0999306bf2a5ad6755da4044ff
-Size (luv-1.43.0-0.tar.gz) = 122337 bytes
