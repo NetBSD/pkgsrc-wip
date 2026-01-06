@@ -2,7 +2,7 @@
 
 DISTNAME=	framadate-1.1.19
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time www
 MASTER_SITES=	https://framagit.org/framasoft/framadate/framadate/-/archive/1.1.19/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,6 +32,7 @@ TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 PKG_USERS_VARS+=	APACHE_USER
 
 DOCDIR=		share/doc/framadate
+EGDIR=		share/examples/framadate
 WWWDIR=		share/framadate
 
 DOC_FILES=	AUTHORS.md CHANGELOG.md INSTALL.md LICENCE.fr.txt \
@@ -42,7 +43,7 @@ WWW_DIRS=	action admin app css fonts images js locale tpl tpl_c vendor
 MAKE_DIRS_PERMS+=	${WWWDIR}/tpl_c ${APACHE_USER} ${SHAREGRP} 0755
 MAKE_DIRS_PERMS+=	${WWWDIR}/app/inc ${APACHE_USER} ${SHAREGRP} 0755
 
-INSTALLATION_DIRS+=	${DOCDIR} ${WWWDIR}
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR} ${WWWDIR}
 
 REPLACE_SH+=	vendor/smarty/smarty/run-tests-for-all-php-versions.sh
 
@@ -70,6 +71,7 @@ do-install:
 	for f in ${DOC_FILES} ; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/${DOCDIR}; \
 	done
+	${INSTALL_DATA} files/httpd-framadate.conf ${DESTDIR}${PREFIX}/${EGDIR}; \
 	cd ${WRKSRC} && ${FIND} ${WWW_DIRS} *.php robots.txt -print | \
 		${PAX} -rw -pmp ${DESTDIR}${PREFIX}/${WWWDIR}
 	${RM} -rf ${DESTDIR}${PREFIX}/share/framadate/vendor/o80/i18n/.git

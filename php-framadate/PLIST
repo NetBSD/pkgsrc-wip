@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/05/21 15:00:55 taca Exp $
+@comment $NetBSD$
 share/doc/framadate/AUTHORS.md
 share/doc/framadate/CHANGELOG.md
 share/doc/framadate/INSTALL.md
@@ -7,6 +7,7 @@ share/doc/framadate/LICENSE.en.txt
 share/doc/framadate/README.md
 share/doc/framadate/TECHNICAL.md
 share/doc/framadate/TREEVIEW.md
+share/examples/framadate/httpd-framadate.conf
 share/framadate/.htaccess
 share/framadate/action/add_comment.php
 share/framadate/action/send_edit_link_by_email_action.php
@@ -1681,12 +1682,17 @@ share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoType.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ArrayShape.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ArrayShapeItem.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/CallableString.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/Conditional.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ConditionalForParameter.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ConstExpression.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/False_.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/FloatValue.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/HtmlEscapedString.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/IntMask.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/IntMaskOf.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/IntegerRange.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/IntegerValue.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/KeyOf.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ListShape.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ListShapeItem.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/List_.php
@@ -1701,11 +1707,13 @@ share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/NumericString
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/Numeric_.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ObjectShape.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ObjectShapeItem.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/OffsetAccess.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/PositiveInteger.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ShapeItem.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/StringValue.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/TraitString.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/True_.php
+share/framadate/vendor/phpdocumentor/type-resolver/src/PseudoTypes/ValueOf.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/Type.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/TypeResolver.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/Types/AbstractList.php
@@ -2862,7 +2870,9 @@ share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-count-paragraphs.md
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-count-sentences.md
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-count-words.md
+share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-count.md
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-date-format.md
+share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-debug-print-var.md
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-default.md
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-escape.md
 share/framadate/vendor/smarty/smarty/docs/designers/language-modifiers/language-modifier-from-charset.md
@@ -4710,6 +4720,7 @@ share/framadate/vendor/vimeo/psalm/stubs/pdo.phpstub
 share/framadate/vendor/vimeo/psalm/stubs/phpparser.phpstub
 share/framadate/vendor/vimeo/psalm/stubs/phpredis.phpstub
 share/framadate/vendor/vimeo/psalm/stubs/soap.phpstub
+share/framadate/vendor/webmozart/assert/.php-cs-fixer.php
 share/framadate/vendor/webmozart/assert/CHANGELOG.md
 share/framadate/vendor/webmozart/assert/LICENSE
 share/framadate/vendor/webmozart/assert/README.md
@@ -4731,3 +4742,4 @@ share/framadate/vendor/webmozart/path-util/src/Path.php
 share/framadate/vendor/webmozart/path-util/src/Url.php
 share/framadate/vendor/webmozart/path-util/tests/PathTest.php
 share/framadate/vendor/webmozart/path-util/tests/UrlTest.php
+@pkgdir share/framadate/vendor/symfony/string/Resources/bin
