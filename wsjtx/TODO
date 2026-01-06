@@ -27,4 +27,30 @@ This program needs two things:
 
    Thanks Riastradh@ to have figured out item 2 above 
 
-3. To find where to document above 2 notes
+3. 
+   sample rate issue:
+   You may need following setup for sound card to sync to necessary rate
+   ---------------------------------------
+    netbsd-nuc# audiocfg list 1
+    1: [*] audio3 @ uaudio1: USB audio
+            playback: 2ch, 44100Hz
+            record:   2ch, 48000Hz
+            (P-) slinear_le 16/16, 2ch, { 44100 }
+            (P-) slinear_le 16/16, 2ch, { 44100 }
+            (-R) slinear_le 16/16, 2ch, 8000-48000Hz
+
+    netbsd-nuc# audiocfg set 1 r slinear_le 16 2 44100
+    setting audio3 to slinear_le:16, 2ch, 44100Hz
+
+    netbsd-nuc# audiocfg list 1
+    1: [*] audio3 @ uaudio1: USB audio
+            playback: 2ch, 44100Hz
+            record:   2ch, 44100Hz
+            (P-) slinear_le 16/16, 2ch, { 44100 }
+            (P-) slinear_le 16/16, 2ch, { 44100 }
+            (-R) slinear_le 16/16, 2ch, 8000-48000Hz
+    ------------------------------------------------
+    Thanks Ramiro and Michael mlelstv@
+    Ref:
+       https://mail-index.netbsd.org/pkgsrc-users/2026/01/06/msg042409.html
+4. To find where to document above 2 and 3  notes
