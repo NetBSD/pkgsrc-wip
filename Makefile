@@ -740,6 +740,7 @@ SUBDIR+=	diffsitter-git
 SUBDIR+=	digestif
 SUBDIR+=	digikam
 SUBDIR+=	digitemp
+SUBDIR+=	dillo
 SUBDIR+=	ding
 SUBDIR+=	dionysus
 SUBDIR+=	discident-glib
