@@ -1,0 +1,6 @@
+This package should be changed to install a pre-determined
+list of dependencies, i.e.:
+
+- no 'composer update'
+
+Any dependencies should be downloaded by the pkgsrc framework.
