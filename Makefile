@@ -2304,6 +2304,7 @@ SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-luacheck
 SUBDIR+=	luabind
 SUBDIR+=	luakit-git
+SUBDIR+=	luarocks
 SUBDIR+=	lucene
 SUBDIR+=	lumina
 SUBDIR+=	lumina-desktop

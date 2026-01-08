@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (luarocks-3.12.2.tar.gz) = cc58fd4a470be9b3a50a46bec645c4dcc5b70ce80adb51cc3e2af96df30dd99a
+SHA512 (luarocks-3.12.2.tar.gz) = a1182c5f0ba87841014bb8063c170968659e35339d559a56fe8eb007ebfbe0ce356e4c4341bbfe4279986d9ca10f04a38e3fdbc80223251526d2de34b2849cc5
+Size (luarocks-3.12.2.tar.gz) = 441393 bytes

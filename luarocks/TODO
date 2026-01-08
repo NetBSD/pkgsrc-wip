@@ -1,0 +1,7 @@
+To import luarocks properly to pkgsrc, we should modify our infrastructure
+for installing Lua modules. Specifically, our lang/lua/module.mk should
+create INSTALL hooks for generating Rock metadata so that pkgsrc-installed
+Lua modules can be recognized by luarocks.
+
+See:
+https://github.com/luarocks/luarocks/blob/main/docs/integrating_distro_modules_with_luarocks.md
