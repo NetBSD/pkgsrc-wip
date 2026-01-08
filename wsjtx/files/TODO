@@ -1,4 +1,4 @@
-This program needs two things:
+This program needs several things
 
 1. When math/fftw is packaged,
    PKG_OPTIONS.fftw+=     fftw-fortran
@@ -27,9 +27,19 @@ This program needs two things:
 
    Thanks Riastradh@ to have figured out item 2 above 
 
-3. 
+3.  /dev/dtyU0 Permission
+   USB rig control will be done by serial device.
+   It usually be /dev/dtyU0. The permission may be -r--r--r--
+   which you can not send rig control. One work around is
+     chmod 644 /dev/dtyU0
+   If you run wsjtx by root, it communicates without permission change,
+   but in that case, audio selection may not appear.
+
+4.  Audio settings:
    sample rate issue:
    You may need following setup for sound card to sync to necessary rate
+   Following is just example. Please modify the first '1' to select audio
+   device correctly.
    ---------------------------------------
     netbsd-nuc# audiocfg list 1
     1: [*] audio3 @ uaudio1: USB audio
@@ -53,4 +63,18 @@ This program needs two things:
     Thanks Ramiro and Michael mlelstv@
     Ref:
        https://mail-index.netbsd.org/pkgsrc-users/2026/01/06/msg042409.html
-4. To find where to document above 2 and 3  notes
+
+5. If wsjtx stops by accident shared memory, a trace may be left out and in that
+   situation, you may get jt9 to crash.
+   Try
+      sudo ipcrm -m all
+   to remove the trace mentioned above.
+
+6. 40 m band USB or LSB.
+   It seems to me, if the band is changed to 40 m, the mode may be LSB,
+   but USB is required for that band, in the mean time, I would change it
+   manually.
+-- 
+
+   
+   

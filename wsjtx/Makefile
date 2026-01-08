@@ -69,7 +69,7 @@ SUBST_VARS.hamlib=	PREFIX
 
 # To avoid jt9 to crash
 # https://mail-index.netbsd.org/pkgsrc-users/2025/12/23/msg042336.html
-NOT_PAX_MPROTECT_SAFE+= bin/jt9
+NOT_PAX_MPROTECT_SAFE+=	bin/jt9
 
 .include "../../devel/cmake/build.mk"
 .include "../../math/fftw/buildlink3.mk"
