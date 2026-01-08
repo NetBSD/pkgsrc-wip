@@ -1,13 +1,11 @@
-www/chromium: update to 143.0.7499.169
+www/chromium: update to 143.0.7499.192
 
-* 143.0.7499.169
-This update doesn't include security fixes.
-
-* 143.0.7499.146
-This update includes 2 security fixes. Below, we highlight fixes
-that were contributed by external researchers.
+* 143.0.7499.192
+This update includes 1 security fix.
+Below, we highlight fixes that were contributed by external researchers. 
 Please see the Chrome Security Page for more information.
-[$10000][448294721] High CVE-2025-14765: Use after free in WebGPU.
-Reported by Anonymous on 2025-09-30
-[TBD][466786677] High CVE-2025-14766: Out of bounds read and write
-in V8. Reported by Shaheen Fazim on 2025-12-08
+[TBD][463155954] High CVE-2026-0628: Insufficient policy enforcement
+in WebView tag. Reported by Gal Weizman on 2025-11-23
+
+* HID support on NetBSD
+

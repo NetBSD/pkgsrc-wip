@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.24 2025/10/27 11:27:36 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			143.0.7499.169
+VERSION=			143.0.7499.192
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -126,7 +126,8 @@ TARGET=		chrome chromedriver
 # with hooks to use them from the system.
 GN_SYSTEM_LIBS=		dav1d
 GN_SYSTEM_LIBS+=	fontconfig
-GN_SYSTEM_LIBS+=	icu
+# As of 143.0.7499.169, icu-78.1 is incompatible.
+#GN_SYSTEM_LIBS+=	icu
 GN_SYSTEM_LIBS+=	libaom
 GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
 GN_SYSTEM_LIBS+=	libpng
@@ -355,7 +356,8 @@ BUILDLINK_DEPMETHOD.clang=	build
 # Use -lpciutils instead of -lpci for pkgsrc.
 BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+# As of 143.0.7499.169, icu-78.1 is incompatible.
+#.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

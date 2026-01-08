@@ -1,11 +1,11 @@
 $NetBSD$
 
-BLAKE2s (chromium-143.0.7499.169-lite.tar.xz) = 50dc55bd94ddbf59e3ac614bc8ba89abfed28325cd2f05257fdd98154db3e6d7
-SHA512 (chromium-143.0.7499.169-lite.tar.xz) = 783f5bb97e62f8866c99dfd554856192d559a9a5876ede9289e1000163a2dd6ceb0d5321e9c4298bd29a2b4b32dfed5121f106120754ccb15a9c8ac239b3510f
-Size (chromium-143.0.7499.169-lite.tar.xz) = 1140789336 bytes
-BLAKE2s (chromium-143.0.7499.169-testdata.tar.xz) = b2d8681725187adb10365d7c56c52415c053b907204cfdba36852fe52d7f7e01
-SHA512 (chromium-143.0.7499.169-testdata.tar.xz) = d608aaac28b01106e8af9391fccb7ce8b4d2b5414737fb5959d5f1aaf08f88553dab8f001819f16a8cfc29a768cec5848ba356253a31889ac71fe1e430eaa218
-Size (chromium-143.0.7499.169-testdata.tar.xz) = 1155268416 bytes
+BLAKE2s (chromium-143.0.7499.192-lite.tar.xz) = f7aba2cc60a770508bebfd82704af259110c6c40da195ab436c6f504771ce533
+SHA512 (chromium-143.0.7499.192-lite.tar.xz) = 5eb97b8559c6a141c93020f8b9a5835a926dd0ed3360ba975ba71c4bc9e1d97376332eac1eadaf224edfc9ab27c0c82ee74c6078e338aa8d0024fe4bf4353f9b
+Size (chromium-143.0.7499.192-lite.tar.xz) = 1140785448 bytes
+BLAKE2s (chromium-143.0.7499.192-testdata.tar.xz) = ef2e143311ea1d9a677a9c452032500342643bb6ba91ad89ee52ec673942ac22
+SHA512 (chromium-143.0.7499.192-testdata.tar.xz) = 9160cbc9062ff110c3ddb4f78b7412e3f932378dd89e17bfe8f3fb174c62d7a2112a2c453513355ff140152ffda6af15921f6e3ab6f83415b28baf32d7530393
+Size (chromium-143.0.7499.192-testdata.tar.xz) = 1155268448 bytes
 BLAKE2s (kikadf-chromium-audioio-v140.0.tar.gz) = 063582b80823694cfa30c020d3378dae3c7dbb1d0b3ffc3b756ce26e9984504c
 SHA512 (kikadf-chromium-audioio-v140.0.tar.gz) = e986fd201969e2ce9e7c092497c34bca84771992a2c8d980556d2dc77002ff68f3d13b4144629e9a8bc41b8ad0d4d06650eafadbfde7c0fa91ed84fbcd74763b
 Size (kikadf-chromium-audioio-v140.0.tar.gz) = 8453 bytes
@@ -551,12 +551,11 @@ SHA1 (patch-chrome_updater_util_posix__util.cc) = dcbd2cedea58f6180c9fd3044f25f3
 SHA1 (patch-chrome_utility_services.cc) = 14313d6ecabe0cffc53020ba5ff3c83497e0ec95
 SHA1 (patch-components_BUILD.gn) = 43897396bd18a16eeb86f4547fcb1706b781f976
 SHA1 (patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.cc) = f0d1f5eb9a42c7d39debfa001188b6803d44559d
-SHA1 (patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.h) = 4e18662a0f29d4b436ff5063f9849f561e857e94
+SHA1 (patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.h) = 63c2f1d676b7a2ea755f7ae342be6026c3c695e3
 SHA1 (patch-components_autofill_core_browser_foundations_browser__autofill__manager.cc) = 08bb92ad7fbccc2cb673adf412a8f4ac515649ae
 SHA1 (patch-components_autofill_core_browser_integrators_optimization__guide_autofill__optimization__guide__decider.cc) = 1e05b7482032d5c6ef935370264495945a1c2bb4
 SHA1 (patch-components_autofill_core_browser_payments_amount__extraction__manager.cc) = 085196736be847e36eb3622531287d2fb2a04dbd
 SHA1 (patch-components_autofill_core_browser_payments_bnpl__manager.cc) = d3ffa043e0e944dcf71c98c33aaa6285b339c520
-SHA1 (patch-components_autofill_core_browser_suggestions_payments_payments__suggestion__generator.cc) = d6205ae1b6efbaf458e2e439420f6baa0b44597c
 SHA1 (patch-components_autofill_core_browser_webdata_payments_payments__sync__bridge__util.cc) = 69d263ccfbee05acde6fe2f90f0975a743bce401
 SHA1 (patch-components_autofill_core_common_autofill__features.cc) = bd46333ee40da5e910050db6548939a58e914869
 SHA1 (patch-components_autofill_core_common_autofill__payments__features.cc) = d40dd1aea0ab7f9ac10b9569f5f2ac89cb716639
