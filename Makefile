@@ -4737,6 +4737,7 @@ SUBDIR+=	py-shp
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-shutilwhich
 SUBDIR+=	py-siginterrupt
+SUBDIR+=	py-silero-vad
 SUBDIR+=	py-sima
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
