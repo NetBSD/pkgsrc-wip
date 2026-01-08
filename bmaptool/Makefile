@@ -15,8 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-WHEEL_NAME=	bmaptool-${PKGVERSION_NOREV}
-
 CONFLICTS+=	bmap-tools-[0-9]*
 SUPERSEDES=	bmap-tools-[0-9]*
 
