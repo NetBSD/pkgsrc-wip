@@ -1,0 +1,21 @@
+jzIntv  -- Joe Zbiciak's Intellivision(TM) Emulator for Linux
+
+jzIntv is my attempt to write a complete Intellivision emulator
+from scratch. I've always wanted to write an emulator from scratch,
+and Intellivision seemed like a perfect choice: I enjoyed the
+Intellivision immensely while growing up, there are few Intellivision
+emulators around (and no GPL'd ones), and legitimate ROM images
+are available.
+
+The emulator's basic functions are mostly complete. CPU emulation
+is essentially 100% complete, Sound is about 99.44% complete,
+controller input is about 80% complete, and Graphics is about 50%
+complete. To be playable, I need to complete the graphics emulation.
+
+My goal is to produce the most accurate possible emulation of the
+Intellivision system, including all widely available (and some
+not-so-widely available) peripherals. This includes items such as
+the ECS, Intellivoice, and so on. I'd also like my emulator to be
+as portable as possible. I've already built versions under x86
+Linux, Sparc Solaris, and even DOS! (SDL will also let me target
+Windows and soon MacOS...) We'll see what happens.
