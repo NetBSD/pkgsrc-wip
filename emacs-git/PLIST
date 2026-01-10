@@ -1829,6 +1829,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/nadvice.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/nadvice.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/oclosure.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/oclosure.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-activate.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-activate.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-vc.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-vc.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package.el.gz
