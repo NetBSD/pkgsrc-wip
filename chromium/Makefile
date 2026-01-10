@@ -8,12 +8,9 @@ EXTRACT_SUFX_C=			.tar.xz
 
 DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 
-# audioio source
-A_VERSION=			140.0
-GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
-# HID support
-H_VERSION=			143.0
-GITHUB_SUBMODULES+=		kikadf chromium-hid-netbsd v${H_VERSION} services/device/hid
+# Sources to build on NetBSD
+NB_VERSION=			143.0
+GITHUB_SUBMODULES=		kikadf chromium-nb v${NB_VERSION} ./
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			19
