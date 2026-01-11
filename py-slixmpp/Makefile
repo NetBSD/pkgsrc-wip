@@ -6,7 +6,7 @@ CATEGORIES=	python # TODO: add primary category
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/slixmpp/}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://lab.louiz.org/poezio/slixmpp
+HOMEPAGE=	https://codeberg.org/poezio/slixmpp
 COMMENT=	Async Python library for XMPP (aka Jabber)
 LICENSE=	mit
 
