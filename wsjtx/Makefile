@@ -56,6 +56,11 @@ pre-patch:
 	)
 
 WRKSRC=		${WRKDIR}/wsjtx
+PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PKGDOCDIR}
+	${INSTALL_DATA} files/README ${DESTDIR}${PKGDOCDIR}/README.netbsd
 
 # debug only (checking log)
 #AKE_JOBS_SAFE=	no

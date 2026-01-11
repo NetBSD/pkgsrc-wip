@@ -26,6 +26,7 @@ share/doc/wsjtx/BUGS
 share/doc/wsjtx/COPYING
 share/doc/wsjtx/NEWS
 share/doc/wsjtx/README
+share/doc/wsjtx/README.netbsd
 share/doc/wsjtx/THANKS
 share/doc/wsjtx/changelog.gz
 share/doc/wsjtx/copyright
