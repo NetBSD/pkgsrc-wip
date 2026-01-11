@@ -27,7 +27,7 @@ This program needs several things
 
    Thanks Riastradh@ to have figured out item 2 above 
 
-3.  /dev/dtyU0 Permission
+3.  Rig control serial device  /dev/dtyU0 Permission
    USB rig control will be done by serial device.
    It usually be done with dev/dtyU0. The permission may be -r--r--r--
    which you can not send rig control. One work around is
@@ -37,10 +37,12 @@ This program needs several things
       File -> Settings -> Audio
 
 4.  Audio settings:
-   Sample rate issue:
+   Sample rate:
    You may need following setup for sound card to sync to necessary rate.
    Following is just an example. Please modify the first '1' to select audio
-   device correctly. Watch the 'record:' setting to sync decode part.
+   device correctly. That number is, I'd say, audiocfg reference number and 
+   it appears at the left most column at audiocfg list. See audiocfg(1). 
+   Watch the 'record:' setting to sync decode part at following operation.
    ---------------------------------------
     netbsd-nuc# audiocfg list 1
     1: [*] audio3 @ uaudio1: USB audio
@@ -65,16 +67,17 @@ This program needs several things
     Ref:
        https://mail-index.netbsd.org/pkgsrc-users/2026/01/06/msg042409.html
 
-5. If wsjtx stops by accident, a trace of shared memory may be left out and in that
+5. jt9 crash:
+   If wsjtx stops by accident, a trace of shared memory may be left out and in that
    situation, you may get jt9 to crash.
    Try
       sudo ipcrm -m all
    to remove the trace mentioned above.
 
 6. 40 m band USB or LSB.
-   It seems to me, if the band is changed to 40 m, the mode may be LSB,
-   but USB is required for that band, in that case, I would change it
-   manually to USB.
+   It seems to me, if the band is changed to 40 m, the mode may be set as LSB,
+   but USB is required for FT8, in that case, I would change it
+   manually on rig to USB.
 
 7. To decode correctly, the clock (time) is very important. Make sure
    ntpd is running correctly or run ntpdate at booting.
