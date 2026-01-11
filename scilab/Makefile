@@ -121,7 +121,7 @@ post-install:
 .endfor
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
+GCC_REQD+=		3
 .endif
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
