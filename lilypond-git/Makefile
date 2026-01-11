@@ -48,7 +48,7 @@ WRKSRC=			${WRKDIR}/lilypond
 .include "../../mk/bsd.prefs.mk"
 
 TEXINFO_REQD=		4.11
-GCC_REQD+=		3.0.5
+GCC_REQD+=		3.1
 
 GNU_CONFIGURE_INFODIR=	${PREFIX}/${PKGINFODIR}
 INFO_DIR=		${GNU_CONFIGURE_INFODIR}

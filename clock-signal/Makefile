@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 SCONS_ARGS+=	${_MAKE_JOBS}
 
 # C++17
-GCC_REQD+=	8.4.0
+GCC_REQD+=	8.4
 
 #TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
 

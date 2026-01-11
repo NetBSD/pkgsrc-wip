@@ -19,7 +19,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_METASERVER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_DOC=OFF
 
 # C++20
-GCC_REQD+=	9.3.0
+GCC_REQD+=	9.3
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

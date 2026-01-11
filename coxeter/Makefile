@@ -15,7 +15,7 @@ MAKE_FILE=	makefile
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
 
-GCC_REQD+=		3.3.5
+GCC_REQD+=		3.4
 ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-* SunOS-*-*
 
 INSTALLATION_DIRS=	bin

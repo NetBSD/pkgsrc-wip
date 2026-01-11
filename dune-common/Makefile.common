@@ -19,7 +19,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config perl
 USE_LANGUAGES=	c c++ fortran
 
-#GCC_REQD+=	4.1.*
+#GCC_REQD+=	4.1
 
 CONFIGURE_ARGS+=	--enable-fieldvector-size-is-method
 

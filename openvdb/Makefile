@@ -13,7 +13,7 @@ COMMENT=	Efficient storage and manipulation of sparse volumetric data
 LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	c c++
-GCC_REQD+=	11.2.1
+GCC_REQD+=	11.3
 USE_TOOLS+=	gmake pkg-config
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
