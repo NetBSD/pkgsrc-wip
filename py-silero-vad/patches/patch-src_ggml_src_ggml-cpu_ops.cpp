@@ -3,6 +3,7 @@ $NetBSD$
 Fix bare isnan to std::isnan
 
 https://github.com/rhasspy/pysilero-vad/issues/9
+https://github.com/rhasspy/pysilero-vad/pulls/11
 
 --- src/ggml/src/ggml-cpu/ops.cpp.orig	2026-01-08 15:48:03.312828141 +0000
 +++ src/ggml/src/ggml-cpu/ops.cpp

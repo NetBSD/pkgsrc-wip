@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (pysilero-vad/pysilero_vad-3.0.1.tar.gz) = 9c622231575e16c696b28cd5e356b3a513b2107ce0bf5e83da1de646e1d09087
 SHA512 (pysilero-vad/pysilero_vad-3.0.1.tar.gz) = 036b472a5189c16e009c85ceaeeec7d42d5792644557e47df054fe24ae22e8c94d9b952fb9c739a3168cc8ab86403ffccd7bfe7aa5fb8561c98789f06bfb4f10
 Size (pysilero-vad/pysilero_vad-3.0.1.tar.gz) = 1891026 bytes
-SHA1 (patch-src_ggml_src_ggml-cpu_ops.cpp) = 14135847b994bce4a72dac879f4c9dac5dfcfb46
+SHA1 (patch-src_ggml_src_ggml-cpu_ops.cpp) = 9c84caf46dc26e4cb7653e0cc27e0e1bc009f4f2
