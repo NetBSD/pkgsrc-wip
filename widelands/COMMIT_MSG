@@ -1,0 +1,16 @@
+games/widelands: Update to release 1.3
+
+Since the release of version 1.2, we implemented several hundreds of new
+features and bugfixes; for example, to name just a few of the highlights:
+
+- Market trading
+- Six new maps added and three old maps removed
+- Economy districts
+- Many improvements to the in-game Encyclopedia
+- Download website maps as add-ons
+- New visualisation modes in the editor
+- Many new capabilities for add-on developers
+
+Widelands 1.3 is translated completely into Czech, Durch, German, Hungarian,
+and Low German, and the translations for 9 other languages are more than 2/3
+complete.
