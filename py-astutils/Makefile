@@ -11,7 +11,7 @@ COMMENT=	Utilities for abstract syntax trees and parsing with PLY
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	ply>=3.4<=3.10:../../devel/ply
+DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.11:../../devel/py-test
 
 USE_LANGUAGES=	# none

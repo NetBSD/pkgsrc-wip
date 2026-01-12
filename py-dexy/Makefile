@@ -11,7 +11,7 @@ COMMENT=	Document Automation
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-chardet>=2.1.1:../../converters/py-chardet
-DEPENDS+=	ply>=3.3:../../devel/ply
+DEPENDS+=	${PYPKGPREFIX}-ply>=3.3:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.3:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-requests>=1.2.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
