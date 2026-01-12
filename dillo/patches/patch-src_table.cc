@@ -2,6 +2,9 @@ $NetBSD$
 
 Avoid ctype(3) undefined behaviours.
 
+Shared upstream via:
+<https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/>
+
 --- src/table.cc.orig	2026-01-06 16:25:07.244361847 +0000
 +++ src/table.cc
 @@ -51,7 +51,7 @@ void Html_tag_open_table(DilloHtml *html

@@ -2,6 +2,9 @@ $NetBSD$
 
 Avoid ctype(3) undefined behaviours.
 
+Shared upstream via:
+<https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/>
+
 --- src/keys.cc.orig	2026-01-06 16:25:07.236435264 +0000
 +++ src/keys.cc
 @@ -203,7 +203,7 @@ KeysCommand_t Keys::getKeyCmd()

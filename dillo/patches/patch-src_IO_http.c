@@ -2,6 +2,9 @@ $NetBSD$
 
 Avoid ctype(3) undefined behaviours.
 
+Shared upstream via:
+<https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/>
+
 --- src/IO/http.c.orig	2026-01-06 16:25:07.220765195 +0000
 +++ src/IO/http.c
 @@ -701,7 +701,7 @@ static char *Http_get_connect_str(const 

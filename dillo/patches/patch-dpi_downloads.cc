@@ -2,6 +2,9 @@ $NetBSD$
 
 Avoid ctype(3) undefined behaviours.
 
+Shared upstream via:
+<https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/>
+
 --- dpi/downloads.cc.orig	2026-01-06 16:25:07.202386354 +0000
 +++ dpi/downloads.cc
 @@ -513,7 +513,7 @@ void DLItem::log_text_add(const char *bu

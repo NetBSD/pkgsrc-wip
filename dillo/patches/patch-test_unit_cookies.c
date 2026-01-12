@@ -2,6 +2,9 @@ $NetBSD$
 
 Avoid ctype(3) undefined behaviours.
 
+Shared upstream via:
+<https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/>
+
 --- test/unit/cookies.c.orig	2026-01-06 16:25:07.246777391 +0000
 +++ test/unit/cookies.c
 @@ -126,7 +126,7 @@ static int Dpi_read_comm_keys(int *port)

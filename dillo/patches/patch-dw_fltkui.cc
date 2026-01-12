@@ -2,6 +2,9 @@ $NetBSD$
 
 Avoid ctype(3) undefined behaviours.
 
+Shared upstream via:
+<https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/>
+
 --- dw/fltkui.cc.orig	2026-01-06 16:25:07.215514321 +0000
 +++ dw/fltkui.cc
 @@ -365,14 +365,14 @@ int CustChoice::handle(int e)
