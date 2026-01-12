@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	typer-0.21.0
+DISTNAME=	typer-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typer/}
@@ -18,8 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=10.11.0:../../comms/py-rich
 
 USE_LANGUAGES=	# none
 
-# as of 0.21.0
-# 18 errors
+# as of 0.21.1
+# 34 errors
 # due to py-shellingham looking for /proc/R/stat
 
 .include "../../lang/python/wheel.mk"
