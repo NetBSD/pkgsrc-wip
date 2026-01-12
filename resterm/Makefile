@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	resterm-0.15.0
+DISTNAME=	resterm-0.16.3
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unkn0wn-root/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
