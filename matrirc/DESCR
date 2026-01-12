@@ -1,0 +1,9 @@
+Simple ircd bridging to matrix
+
+Features:
+
+- E2E encryption
+- client verification
+- properly prompts on room invitations
+- can accept encrypted files to local directory (`--media-dir`) and
+  give links if configured (`--media-url`, prefix up to file name)
