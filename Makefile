@@ -2350,6 +2350,7 @@ SUBDIR+=	mat
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	matiec-hg
+SUBDIR+=	matrirc
 SUBDIR+=	matrixssl
 SUBDIR+=	mattermost-server
 SUBDIR+=	mauliasproxy
