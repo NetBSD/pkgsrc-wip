@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cskk-3.1.5
+DISTNAME=	cskk-3.2.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naokiri/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,9 +11,6 @@ COMMENT=	Cobalt SKK library
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	cargo-c-[0-9]*:../../devel/cargo-c
-
-SITES.cargo-c-0.9.22+cargo-0.72.crate=	https://static.crates.io/crates/cargo-c/
-SITES.curl-sys-0.4.65+curl-8.2.1.crate=	https://static.crates.io/crates/curl-sys/
 
 .include "cargo-depends.mk"
 
