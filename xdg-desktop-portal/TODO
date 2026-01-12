@@ -1,1 +1,10 @@
-Needs pipewire package.
+Build warnings:
+/usr/pkgsrc/wip/xdg-desktop-portal/work/.buildlink/include/spa-0.2/spa/utils/string.h:274:9: warning: implicit declaration of function 'uselocale'; did you mean 'setlocale'? [-Wimplicit-function-declaration]
+  274 |  prev = uselocale(locale);
+      |         ^~~~~~~~~
+      |         setlocale
+/usr/pkgsrc/wip/xdg-desktop-portal/work/.buildlink/include/spa-0.2/spa/utils/string.h:274:7: warning: assignment to 'locale_t' {aka 'struct _locale *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  274 |  prev = uselocale(locale);
+      |       ^
+
+NOTE: from pipewire ^

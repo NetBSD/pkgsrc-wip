@@ -1,5 +1,12 @@
 $NetBSD$
 
-BLAKE2s (xdg-desktop-portal-1.18.4.tar.xz) = f39c5f5a8e4fb167e40fde66991155d035787ff945cd4993c2b3c797806b0038
-SHA512 (xdg-desktop-portal-1.18.4.tar.xz) = 482676777e8180752e13ff485acab91de117f4ecf2aefd313a6f596df800f37d7004ee4ba1040009eb69a6efc780efc7dcd7e46b3f59c47bd9f21aef48d346de
-Size (xdg-desktop-portal-1.18.4.tar.xz) = 699380 bytes
+BLAKE2s (xdg-desktop-portal-1.20.3.tar.gz) = e5ff13b3cc60e884018ea5599643d0e414fa6467d7b693f3f0e414fbc0edbc51
+SHA512 (xdg-desktop-portal-1.20.3.tar.gz) = a172deebdcf7924aa62d98bb77bab250796f8b2f2f3097933a57cca419edbdf5642f1042180849d8c9905debc519b5edf25dd61b755bd9fb99a8c690dd5620a0
+Size (xdg-desktop-portal-1.20.3.tar.gz) = 1337615 bytes
+SHA1 (patch-document-portal_meson.build) = de1def6921d0eb12224c9148d8e3518eddd483b1
+SHA1 (patch-document-portal_permission-db.c) = 883189abb9a0fe6816e23226644e12011aa316f0
+SHA1 (patch-src_pipewire.c) = bd381b746833f33f65cd546afaaa1075915f9a4d
+SHA1 (patch-src_xdp-app-info-flatpak.c) = bc07d637f355950321a6f281dfca3d90dd0bee2a
+SHA1 (patch-src_xdp-app-info.c) = cbfdc7ded0d68b90dc0d4036953673df90bd14c7
+SHA1 (patch-src_xdp-documents.c) = 3a53b1a30635a258f5b0445345a4272305df8665
+SHA1 (patch-src_xdp-sealed-fd.c) = 0703072a44a29eaa83fd47ed9fd3d8d060d26348
