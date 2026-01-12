@@ -6118,6 +6118,7 @@ SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdg
 SUBDIR+=	xdg-desktop-portal
+SUBDIR+=	xdg-desktop-portal-gtk
 SUBDIR+=	xdiskusage
 SUBDIR+=	xebece
 SUBDIR+=	xemacs-hg
