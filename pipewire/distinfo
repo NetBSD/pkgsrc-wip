@@ -6,6 +6,7 @@ Size (pipewire-1.4.7.tar.bz2) = 1928174 bytes
 SHA1 (patch-meson.build) = ce08fa4175f16228d93a2513d23d5d8d2323f4cb
 SHA1 (patch-pipewire-jack_src_pipewire-jack.c) = 84d1054ec44fe205bbeb9d83b3c83ae30a9d0cc4
 SHA1 (patch-spa_include_spa_utils_endian.h) = 4377e65a3cab0889c353d355bf4294529860cedf
+SHA1 (patch-spa_include_spa_utils_string.h) = e1fb8739e7197dab7f7ba660a900306912c0a1d9
 SHA1 (patch-spa_plugins_alsa_alsa-pcm.c) = 92903d37f6c825e798c0217cbd196bf12fc960fe
 SHA1 (patch-spa_plugins_filter-graph_filter-graph.c) = 264977f256e09aa9a1a07afb0ac759b9f4250725
 SHA1 (patch-spa_plugins_meson.build) = defc725affd4f598b7c0e02a6c1c01e151883188

@@ -16,7 +16,6 @@ USE_TOOLS+=		msgfmt pkg-config xgettext
 
 CPPFLAGS.NetBSD+=	-UHAVE_MEMFD_CREATE
 
-CFLAGS.NetBSD+=	-D__LOCALE_C_ONLY
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE #should be _POSIX_C_SOURCE or _XOPEN_COURCE
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -49,6 +48,10 @@ MESON_ARGS+=	-Dsdl2=disabled
 # Enable these for usual installation
 MESON_ARGS+=	-Dalsa=disabled
 MESON_ARGS+=	-Dpipewire-alsa=disabled
+
+post-install :
+	${RM} ${DESTDIR}${PREFIX}/include/spa-0.2/spa/utils/endian.h.orig
+	${RM} ${DESTDIR}${PREFIX}/include/spa-0.2/spa/utils/string.h.orig
 
 #.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"

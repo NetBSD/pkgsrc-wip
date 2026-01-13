@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pipewire
 PIPEWIRE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pipewire+=	pipewire>=1.2.5
-BUILDLINK_PKGSRCDIR.pipewire?=	../../multimedia/pipewire
+BUILDLINK_PKGSRCDIR.pipewire?=	../../wip/pipewire
 
 .endif	# PIPEWIRE_BUILDLINK3_MK
 

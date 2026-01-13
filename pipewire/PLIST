@@ -224,7 +224,6 @@ include/spa-0.2/spa/utils/defs.h
 include/spa-0.2/spa/utils/dict.h
 include/spa-0.2/spa/utils/dll.h
 include/spa-0.2/spa/utils/endian.h
-include/spa-0.2/spa/utils/endian.h.orig
 include/spa-0.2/spa/utils/enum-types.h
 include/spa-0.2/spa/utils/hook.h
 include/spa-0.2/spa/utils/json-core.h
