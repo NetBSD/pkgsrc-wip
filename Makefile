@@ -5158,6 +5158,7 @@ SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	remind
 SUBDIR+=	reone
+SUBDIR+=	reovim
 SUBDIR+=	repeatmasker
 SUBDIR+=	reproc
 SUBDIR+=	resin
