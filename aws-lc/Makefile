@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	aws-lc-1.51.0
+DISTNAME=	aws-lc-1.66.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aws/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,12 +22,14 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/libssl.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/openssl.pc.in
 
 REPLACE_BASH+=		tool-openssl/c_rehash.sh
-# needed for testing
+.if make(test)
 ALLOW_NETWORK_ACCESS=	yes
+.endif
 TEST_TARGET=		run_tests
 
 pre-configure:
 	${LN} -s ${PREFIX}/bin/go124 ${BUILDLINK_DIR}/bin/go
 
+.include "../../lang/go/version.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
