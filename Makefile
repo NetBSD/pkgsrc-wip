@@ -5304,7 +5304,6 @@ SUBDIR+=	ruby-vegas
 SUBDIR+=	ruby-versionomy
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
-SUBDIR+=	rumdl
 SUBDIR+=	runas
 SUBDIR+=	runcpm
 SUBDIR+=	rust-analyzer
