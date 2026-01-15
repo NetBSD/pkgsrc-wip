@@ -4418,7 +4418,6 @@ SUBDIR+=	py-pfsc-util
 SUBDIR+=	py-pg8000
 SUBDIR+=	py-pgmpy
 SUBDIR+=	py-pickleDB
-SUBDIR+=	py-picture-to-gds
 SUBDIR+=	py-pinout
 SUBDIR+=	py-pint
 SUBDIR+=	py-pipdeptree
