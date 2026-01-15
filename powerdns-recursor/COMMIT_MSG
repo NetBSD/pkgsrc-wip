@@ -15,9 +15,9 @@ Do not hash (or compare) OpenTelemetry Trace EDNS value for packetcache.
 References: #16098, pull request 16378
 
 Bug Fixes
-Fix parsing of webserver loglevel “none”.
+Fix parsing of webserver loglevel "none".
 References: #16461, pull request 16698
 Silence rust warning.
 References: #16251, pull request 16697
-Some error paths do no create thread 0 so don’t join it.
+Some error paths do no create thread 0 so don't join it.
 References: pull request 16377
