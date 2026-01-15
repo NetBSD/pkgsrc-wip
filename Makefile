@@ -5067,7 +5067,6 @@ SUBDIR+=	pydance
 SUBDIR+=	pydb
 SUBDIR+=	pympress
 SUBDIR+=	pypanel
-SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	pythia6
 SUBDIR+=	pythoncad
