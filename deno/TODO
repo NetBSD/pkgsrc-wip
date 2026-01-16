@@ -19,3 +19,7 @@ Later fails again with
 
 
   thread 'main' panicked at /scratch/wip/deno/work/vendor/cmake-0.1.50/src/lib.rs:1098:5:
+
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-22863, CVE-2026-22864
