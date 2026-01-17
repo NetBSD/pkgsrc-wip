@@ -35,6 +35,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 MAKE_ENV+=	USE_SYSTEM_BINARYEN=1
+MAKE_ENV+=	NINJA_EXTRA_ARGS="-j ${MAKE_JOBS:U1}"
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax
 

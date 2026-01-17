@@ -1,10 +1,20 @@
 $NetBSD$
 
+- honour MAKE_JOBS in llvm build
 - fix PLIST issue with macOS cp(1)
 
---- GNUmakefile.orig	2025-08-19 12:03:57.000000000 +0000
+--- GNUmakefile.orig	2025-12-18 21:59:18.000000000 +0000
 +++ GNUmakefile
-@@ -1029,7 +1029,7 @@ endif
+@@ -272,7 +272,7 @@ $(LLVM_BUILDDIR)/build.ninja:
+ 	mkdir -p $(LLVM_BUILDDIR) && cd $(LLVM_BUILDDIR) && cmake -G Ninja $(TINYGO_SOURCE_DIR)/$(LLVM_PROJECTDIR)/llvm "-DLLVM_TARGETS_TO_BUILD=X86;ARM;AArch64;AVR;Mips;RISCV;WebAssembly" "-DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=Xtensa" -DCMAKE_BUILD_TYPE=Release -DLIBCLANG_BUILD_STATIC=ON -DLLVM_ENABLE_TERMINFO=OFF -DLLVM_ENABLE_ZLIB=OFF -DLLVM_ENABLE_ZSTD=OFF -DLLVM_ENABLE_LIBEDIT=OFF -DLLVM_ENABLE_Z3_SOLVER=OFF -DLLVM_ENABLE_OCAMLDOC=OFF -DLLVM_ENABLE_LIBXML2=OFF -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_TOOL_CLANG_TOOLS_EXTRA_BUILD=OFF -DCLANG_ENABLE_STATIC_ANALYZER=OFF -DCLANG_ENABLE_ARCMT=OFF $(LLVM_OPTION)
+ 
+ $(LLVM_BUILDDIR): $(LLVM_BUILDDIR)/build.ninja ## Build LLVM
+-	cd $(LLVM_BUILDDIR) && ninja $(NINJA_BUILD_TARGETS)
++	cd $(LLVM_BUILDDIR) && ninja $(NINJA_EXTRA_ARGS) $(NINJA_BUILD_TARGETS)
+ 
+ ifneq ($(USE_SYSTEM_BINARYEN),1)
+ # Build Binaryen
+@@ -1056,7 +1056,7 @@ endif
  	@cp -rp lib/mingw-w64/mingw-w64-crt/math/x86                    build/release/tinygo/lib/mingw-w64/mingw-w64-crt/math
  	@cp -rp lib/mingw-w64/mingw-w64-crt/misc                        build/release/tinygo/lib/mingw-w64/mingw-w64-crt
  	@cp -rp lib/mingw-w64/mingw-w64-crt/stdio                       build/release/tinygo/lib/mingw-w64/mingw-w64-crt
