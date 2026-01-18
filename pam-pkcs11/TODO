@@ -10,4 +10,5 @@ non-optional.
 Update to 0.6.11
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  <https://www.x41-dsec.de/lab/advisories/x41-2018-003-pam_pkcs11/>
+  <https://www.x41-dsec.de/lab/advisories/x41-2018-003-pam_pkcs11/>,
+  CVE-2025-24531
