@@ -2,7 +2,7 @@ $NetBSD$
 
 support NetBSD/amd64
 
---- src/debugUnix.c.orig	2021-10-11 14:02:52.000000000 +0000
+--- src/debugUnix.c.orig	2023-03-30 10:55:45.000000000 +0000
 +++ src/debugUnix.c
 @@ -17,6 +17,12 @@
  
@@ -22,7 +22,7 @@ support NetBSD/amd64
  			regs->mc_eip);
  	return regs->mc_eip;
 +#elif __NetBSD__ && __x86_64__
-+	__greg_t *regs = &uap->uc_mcontext.__gregs;
++	__gregset_t *regs = &uap->uc_mcontext.__gregs;
 +	fprintf_impl(output,
 +			"\trax 0x%08llx rbx 0x%08llx rcx 0x%08llx rdx 0x%08llx\n"
 +			"\trdi 0x%08llx rsi 0x%08llx rbp 0x%08llx rsp 0x%08llx\n"

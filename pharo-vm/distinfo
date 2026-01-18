@@ -10,4 +10,4 @@ SHA1 (patch-include_pharovm_debug.h) = a305dc8b2915bd457df3b76053a5072c1c2f8228
 SHA1 (patch-packaging_linux_bin_launch.sh.in) = 116b5151e0bd58558a1af3691d1f546437d94eae
 SHA1 (patch-plugins.cmake) = b8eb5ad47d505c0b52a7601f86109cf8f6ccae40
 SHA1 (patch-plugins_UUIDPlugin_common_UUIDPlugin.c) = 20b9e7f850d662a8d79dc025e5d991b47358e3ad
-SHA1 (patch-src_debugUnix.c) = 5db80b0d0083cd1d4c471fe877ca7d65e69b97be
+SHA1 (patch-src_debugUnix.c) = 22f95610520b11f87a4e2de2e5c05b17a3f3445e

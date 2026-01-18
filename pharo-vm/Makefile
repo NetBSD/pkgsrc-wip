@@ -25,6 +25,9 @@ CMAKE_CONFIGURE_ARGS+=	-DALWAYS_INTERACTIVE=1
 CMAKE_CONFIGURE_ARGS+=	-DGENERATE_SOURCES=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPHARO_BIN_LOCATION=${PREFIX}/lib/pharo9
 
+CFLAGS+=	-Wno-error=int-conversion
+CFLAGS+=	-Wno-error=incompatible-pointer-types
+
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
