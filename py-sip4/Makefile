@@ -56,6 +56,8 @@ SUBST_STAGE.pyversfx=	pre-configure
 SUBST_FILES.pyversfx=	sipgen/sipgen.sbf
 SUBST_VARS.pyversfx=	PYVERSSUFFIX
 
+PYTHON_VERSIONS_ACCEPTED=	311 312
+
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
