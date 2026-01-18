@@ -1,0 +1,2 @@
+- Try to fetch capstone, qjs and sdb via Git.
+  Figure out how to stop doing that.
