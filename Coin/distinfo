@@ -1,7 +1,8 @@
 $NetBSD: distinfo,v 1.10 2021/10/26 10:45:53 nia Exp $
 
-BLAKE2s (Coin-4.0.3.tar.gz) = 7c8bc8be6253edfd8b7dc5bed6f5b0b0901074952572190a26f4745d349f0f68
-SHA512 (Coin-4.0.3.tar.gz) = c526c0545efa9852c647e163bbf69caae2e3a0eb4e99a8fc7a313172b8d1006e304a4d19bacbd8820443b0d4f90775ee31ca711da4ad2d432783ef5c8bc85074
-Size (Coin-4.0.3.tar.gz) = 6943086 bytes
+BLAKE2s (Coin-4.0.6.tar.gz) = 4e3caaf5060ca8e881724c5553cedc1bc6ffd75805df1d668e02b41a43e91624
+SHA512 (Coin-4.0.6.tar.gz) = 4594f1b23a32298b2fc3ce77287fba7c76c9912e17aa596f5f45aae300775fc2794e5c47720767a0116b981306a60c3ca70729fdab17d1476696834507d78c75
+Size (Coin-4.0.6.tar.gz) = 6954700 bytes
 SHA1 (patch-src_tidbits.cpp) = 00370f155dd38fdde8098fe99869c4bd4357298f
+SHA1 (patch-testsuite_TestSuiteMisc.h) = 42f703b5eec0047d996519f721e00fd63cda873e
 SHA1 (patch-testsuite_TestSuiteUtils.cpp) = a81d2a5193cfbeabdff21369d6a72f9d6faa9da6

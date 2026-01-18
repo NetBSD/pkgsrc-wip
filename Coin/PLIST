@@ -882,7 +882,7 @@ lib/cmake/${PKGNAME}/coin-export-release.cmake
 lib/cmake/${PKGNAME}/coin-export.cmake
 lib/libCoin.so
 lib/libCoin.so.80
-lib/libCoin.so.80.0.3
+lib/libCoin.so.80.0.6
 lib/pkgconfig/Coin.pc
 share/Coin/conf/coin-default.cfg
 share/Coin/draggerDefaults/centerballDragger.iv
