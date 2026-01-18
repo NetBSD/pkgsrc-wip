@@ -21,8 +21,6 @@ USE_TOOLS+=	autoreconf autoconf automake pkg-config bash pax
 AUTOCONF_REQD=	2.69
 USE_LIBTOOL=	yes
 
-NO_CONFIGURE=	yes
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.

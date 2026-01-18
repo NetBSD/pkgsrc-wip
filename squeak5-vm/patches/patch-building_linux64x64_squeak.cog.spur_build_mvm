@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- building/linux64x64/squeak.cog.spur/build/mvm.orig	2023-12-18 14:41:18.000000000 +0000
++++ building/linux64x64/squeak.cog.spur/build/mvm
+@@ -16,6 +16,11 @@ case $(uname -s) in
+            ;;
+ esac
+ 
++CFLAGS="${CFLAGS} -Wno-error=implicit-function-declaration"
++CFLAGS="${CFLAGS} -Wno-error=incompatible-pointer-types"
++CFLAGS="${CFLAGS} -Wno-error=int-conversion"
++#CFLAGS="${CFLAGS} -Wno-error=return-mismatch"
++
+ # Prefer clang over gcc, but use gcc if clang isn't available...
+ CC=gcc
+ if [ -x /usr/bin/clang ]; then CC=clang; fi

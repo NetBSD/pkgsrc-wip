@@ -1,13 +1,13 @@
 $NetBSD$
 
---- platforms/unix/vm/sqUnixMain.c.orig	2022-06-02 14:10:44.000000000 +0000
+--- platforms/unix/vm/sqUnixMain.c.orig	2025-12-16 16:09:40.000000000 +0000
 +++ platforms/unix/vm/sqUnixMain.c
-@@ -999,6 +999,19 @@ printRegisterState(FILE *file,ucontext_t
+@@ -1042,6 +1042,19 @@ printRegisterState(FILE *file,ucontext_t
  			v(regs[REG_R12]),v(regs[REG_R13]),v(regs[REG_R14]),v(regs[REG_R15]),
  			v(regs[REG_RIP]));
  	return v(regs[REG_RIP]);
 +#elif __NetBSD__ && __x86_64__
-+	__greg_t *regs = &uap->uc_mcontext.__gregs;
++	__gregset_t *regs = &uap->uc_mcontext.__gregs;
 +	printf(	"\trax 0x%08lx rbx 0x%08lx rcx 0x%08lx rdx 0x%08lx\n"
 +			"\trdi 0x%08lx rsi 0x%08lx rbp 0x%08lx rsp 0x%08lx\n"
 +			"\tr8  0x%08lx r9  0x%08lx r10 0x%08lx r11 0x%08lx\n"
