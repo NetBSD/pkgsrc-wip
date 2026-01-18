@@ -20,6 +20,8 @@ LICENSE=	gnu-agpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_ACCEPTED=	311
+
 pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/stb
 	${LN} -sf ${WRKDIR}/${STB_IMAGE_H} ${BUILDLINK_DIR}/include/stb/
