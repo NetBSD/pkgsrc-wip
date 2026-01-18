@@ -13,22 +13,13 @@ abuses.
 
 See: https://lists.mailman3.com/hyperkitty/list/dillo-dev@mailman3.com/thread/L6QLXSD6UBDK3M5CMXQMRWD6ZB4C65MR/
 
---- dlib/dlib.c.orig	2025-01-18 10:51:30.000000000 +0000
-+++ dlib/dlib.c
-@@ -24,7 +24,6 @@
+--- dw/style.cc.orig	2025-01-18 10:51:30.000000000 +0000
++++ dw/style.cc
+@@ -20,7 +20,6 @@
+ #include <stdio.h>
  #include <string.h>
  #include <unistd.h>
- #include <errno.h>
 -#include <ctype.h>
- #include <time.h>
+ #include <math.h>
  
- #include "dlib.h"
-@@ -525,7 +524,7 @@ const char *dStr_printable(Dstr *in, int
-       out = dStr_sized_new(in->len);
- 
-    for (i = 0; (i < in->len) && (out->len < maxlen); ++i) {
--      if (isprint(in->str[i]) || (in->str[i] == '\n')) {
-+      if (dIsprint(in->str[i]) || (in->str[i] == '\n')) {
-          dStr_append_c(out, in->str[i]);
-       } else {
-          dStr_append_l(out, "\\x", 2);
+ #include "dlib/dlib.h"
