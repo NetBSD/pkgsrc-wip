@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.13 2024/11/10 17:58:56 leot Exp $
 bin/r2
 bin/r2agent
 bin/r2p
@@ -363,24 +363,11 @@ share/doc/radare2/vlang-example.v
 share/doc/radare2/windbg.md
 share/doc/radare2/windows.md
 share/doc/radare2/yara.md
-share/radare2/${R2VERSION}/charsets/arabic_iso.sdb
-share/radare2/${R2VERSION}/charsets/arabic_windows.sdb
 share/radare2/${R2VERSION}/charsets/ascii.sdb
-share/radare2/${R2VERSION}/charsets/ascii_ansi.sdb
-share/radare2/${R2VERSION}/charsets/ascii_oem.sdb
-share/radare2/${R2VERSION}/charsets/big5.sdb
-share/radare2/${R2VERSION}/charsets/cyrillic_iso.sdb
-share/radare2/${R2VERSION}/charsets/cyrillic_windows.sdb
 share/radare2/${R2VERSION}/charsets/ebcdic37.sdb
-share/radare2/${R2VERSION}/charsets/greek_iso.sdb
-share/radare2/${R2VERSION}/charsets/greek_windows.sdb
-share/radare2/${R2VERSION}/charsets/hebrew_iso.sdb
-share/radare2/${R2VERSION}/charsets/hebrew_windows.sdb
 share/radare2/${R2VERSION}/charsets/hiragana.sdb
 share/radare2/${R2VERSION}/charsets/iso8859_1.sdb
-share/radare2/${R2VERSION}/charsets/iso_646.sdb
 share/radare2/${R2VERSION}/charsets/katakana.sdb
-share/radare2/${R2VERSION}/charsets/macintosh.sdb
 share/radare2/${R2VERSION}/charsets/pokered.sdb
 share/radare2/${R2VERSION}/cons/ayu
 share/radare2/${R2VERSION}/cons/basic
@@ -430,7 +417,6 @@ share/radare2/${R2VERSION}/fcnsign/cc-ppc-64.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-riscv-64.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-s390-64.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-sparc-32.sdb
-share/radare2/${R2VERSION}/fcnsign/cc-stm8-16.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-v850-32.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-x86-16.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-x86-32.sdb
@@ -695,14 +681,6 @@ share/radare2/${R2VERSION}/platform/nes-fini.r2
 share/radare2/${R2VERSION}/platform/nes-init.r2
 share/radare2/${R2VERSION}/platform/stm8-fini.r2
 share/radare2/${R2VERSION}/platform/stm8-init.r2
-share/radare2/${R2VERSION}/scripts/il2cpp.r2.js
-share/radare2/${R2VERSION}/scripts/ipsw-kernel-symbolicate.r2.js
-share/radare2/${R2VERSION}/scripts/licenses.r2.js
-share/radare2/${R2VERSION}/scripts/parseplug.r2.js
-share/radare2/${R2VERSION}/scripts/r2sptrace.py
-share/radare2/${R2VERSION}/scripts/tags.r2.js
-share/radare2/${R2VERSION}/scripts/unzip.r2.js
-share/radare2/${R2VERSION}/scripts/vsmap.r2.js
 share/radare2/${R2VERSION}/syscall/darwin-arm-32.sdb
 share/radare2/${R2VERSION}/syscall/darwin-arm-64.sdb
 share/radare2/${R2VERSION}/syscall/darwin-x86-32.sdb

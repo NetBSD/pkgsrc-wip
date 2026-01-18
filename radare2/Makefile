@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2024/11/14 22:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/01/07 08:46:45 wiz Exp $
 
-DISTNAME=	radare2-5.9.8
+DISTNAME=	radare2-5.9.6
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -23,8 +24,6 @@ CONFIGURE_ARGS+=	--with-syscapstone
 CONFIGURE_ARGS+=	--with-syszip
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
 USE_TOOLS+=		gmake patch pkg-config perl
-
-REPLACE_SH+=		scripts/licenses.r2.js
 
 # node
 CHECK_INTERPRETER_SKIP+=	share/radare2/${PKGVERSION_NOREV}/www/m/fonts/iconjar-map.js
