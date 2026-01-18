@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.52 2026/01/07 08:46:45 wiz Exp $
 
-DISTNAME=	radare2-5.9.6
-PKGREVISION=	3
+DISTNAME=	radare2-6.0.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -19,9 +18,10 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--with-sysmagic
 CONFIGURE_ARGS+=	--with-syscapstone
+CONFIGURE_ARGS+=	--with-sysmagic
 CONFIGURE_ARGS+=	--with-syszip
+CONFIGURE_ARGS+=	--without-qjs
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
 USE_TOOLS+=		gmake patch pkg-config perl
 
