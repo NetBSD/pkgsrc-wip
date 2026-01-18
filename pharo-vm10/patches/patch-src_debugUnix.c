@@ -2,7 +2,7 @@ $NetBSD$
 
 support NetBSD/amd64
 
---- src/debugUnix.c.orig	2023-03-10 09:04:12.000000000 +0000
+--- src/debugUnix.c.orig	2025-11-17 14:10:09.000000000 +0000
 +++ src/debugUnix.c
 @@ -23,6 +23,12 @@
  
@@ -17,12 +17,12 @@ support NetBSD/amd64
  #ifdef HAVE_EXECINFO_H
  # include <execinfo.h>
  #endif
-@@ -272,6 +278,20 @@ void * printRegisterState(ucontext_t *ua
+@@ -279,6 +285,20 @@ void * printRegisterState(ucontext_t *ua
  			regs->mc_edi, regs->mc_edi, regs->mc_ebp, regs->mc_esp,
  			regs->mc_eip);
  	return regs->mc_eip;
 +#elif __NetBSD__ && __x86_64__
-+	__greg_t *regs = &uap->uc_mcontext.__gregs;
++	__gregset_t *regs = &uap->uc_mcontext.__gregs;
 +	fprintf_impl(output,
 +			"\trax 0x%08llx rbx 0x%08llx rcx 0x%08llx rdx 0x%08llx\n"
 +			"\trdi 0x%08llx rsi 0x%08llx rbp 0x%08llx rsp 0x%08llx\n"
@@ -38,7 +38,7 @@ support NetBSD/amd64
  #elif __linux__ && __x86_64__
  	greg_t *regs = uap->uc_mcontext.gregs;
  	fprintf_impl(output,
-@@ -435,6 +455,9 @@ void reportStackState(const char *msg, c
+@@ -442,6 +462,9 @@ void reportStackState(const char *msg, c
  # elif __FreeBSD__ && __x86_64__
  			void *fp = (void *)(uap ? uap->uc_mcontext.mc_rbp: 0);
  			void *sp = (void *)(uap ? uap->uc_mcontext.mc_rsp: 0);
