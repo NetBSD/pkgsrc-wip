@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc
-@@ -112,7 +112,7 @@ RTLookupRequest::OSType GetRTLookupReque
+@@ -115,7 +115,7 @@ RTLookupRequest::OSType GetRTLookupReque
    return RTLookupRequest::OS_TYPE_CHROME_OS;
  #elif BUILDFLAG(IS_IOS)
    return RTLookupRequest::OS_TYPE_IOS;

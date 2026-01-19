@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/scoped_file.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/files/scoped_file.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/files/scoped_file.cc
 @@ -32,7 +32,7 @@ void ScopedFDCloseTraits::Free(int fd) {
    int ret = IGNORE_EINTR(close(fd));

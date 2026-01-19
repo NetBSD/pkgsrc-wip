@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc
 @@ -89,7 +89,13 @@ void NamedMojoServerEndpointConnectorLin
      PLOG(ERROR) << "getsockopt failed.";

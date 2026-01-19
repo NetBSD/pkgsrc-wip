@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/file_descriptor_shuffle.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/posix/file_descriptor_shuffle.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/posix/file_descriptor_shuffle.h
 @@ -26,6 +26,8 @@
  #include "base/base_export.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/print_backend_cups.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- printing/backend/print_backend_cups.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ printing/backend/print_backend_cups.h
 @@ -17,7 +17,7 @@
  #include "printing/mojom/print.mojom.h"

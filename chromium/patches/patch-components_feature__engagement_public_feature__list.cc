@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -202,7 +202,7 @@ const base::Feature* const kAllFeatures[
+@@ -204,7 +204,7 @@ const base::Feature* const kAllFeatures[
      &kIPHiOSReaderModeOptionsFeature,
  #endif  // BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -277,7 +277,7 @@ const base::Feature* const kAllFeatures[
+@@ -282,7 +282,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -24,7 +24,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
      &kIPHAutofillAiOptInFeature,
      &kIPHAutofillAiValuablesFeature,
-@@ -336,7 +336,7 @@ const base::Feature* const kAllFeatures[
+@@ -341,7 +341,7 @@ const base::Feature* const kAllFeatures[
      &kIPHScalableIphGamingFeature,
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

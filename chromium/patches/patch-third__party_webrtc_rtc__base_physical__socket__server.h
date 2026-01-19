@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/physical_socket_server.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/webrtc/rtc_base/physical_socket_server.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/webrtc/rtc_base/physical_socket_server.h
 @@ -22,7 +22,7 @@
- #include "rtc_base/third_party/sigslot/sigslot.h"
+ #include "rtc_base/socket_address.h"
  
  #if defined(WEBRTC_POSIX)
 -#if defined(WEBRTC_LINUX)

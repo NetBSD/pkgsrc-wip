@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/channel_info_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/common/channel_info_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/common/channel_info_posix.cc
-@@ -95,7 +95,7 @@ std::string GetChannelSuffixForDataDir()
+@@ -92,7 +92,7 @@ std::string GetChannelSuffixForDataDir()
    }
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  std::string GetChannelSuffixForExtraFlagsEnvVarName() {
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    const auto channel_state = GetChannelImpl();
-@@ -121,7 +121,7 @@ std::string GetChannelSuffixForExtraFlag
+@@ -117,7 +117,7 @@ std::string GetChannelSuffixForExtraFlag
  }
  #endif  // BUILDFLAG(IS_LINUX)
  

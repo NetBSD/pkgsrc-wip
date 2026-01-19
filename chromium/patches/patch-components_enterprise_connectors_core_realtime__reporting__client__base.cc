@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/enterprise/connectors/core/realtime_reporting_client_base.cc
 @@ -191,7 +191,7 @@ void RealtimeReportingClientBase::Report
      *event.mutable_time() = ToProtoTimestamp(base::Time::Now());

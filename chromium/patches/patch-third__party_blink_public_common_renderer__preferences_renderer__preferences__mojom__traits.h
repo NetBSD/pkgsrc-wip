@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h
 @@ -185,7 +185,7 @@ struct BLINK_COMMON_EXPORT
      return data.send_subresource_notification;
@@ -15,3 +15,12 @@ $NetBSD$
    static const std::string& system_font_family_name(
        const ::blink::RendererPreferences& data) {
      return data.system_font_family_name;
+@@ -199,7 +199,7 @@ struct BLINK_COMMON_EXPORT
+   }
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   static const bool& middle_click_paste_allowed(
+       const ::blink::RendererPreferences& data) {
+     return data.middle_click_paste_allowed;

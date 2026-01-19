@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.h
 @@ -38,7 +38,7 @@ bool OpenExtensionApplicationWindow(Prof
  content::WebContents* OpenExtensionApplicationTab(Profile* profile,

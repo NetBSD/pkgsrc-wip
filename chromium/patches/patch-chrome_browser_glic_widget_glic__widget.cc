@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/widget/glic_widget.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/glic/widget/glic_widget.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/glic/widget/glic_widget.cc
-@@ -48,7 +48,7 @@
+@@ -51,7 +51,7 @@
  #include "ui/views/win/hwnd_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/shell_integration_linux.h"
  #endif
  
-@@ -283,7 +283,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
+@@ -391,7 +391,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
  #if BUILDFLAG(IS_MAC)
    params.animation_enabled = true;
  #endif  // BUILDFLAG(IS_MAC)

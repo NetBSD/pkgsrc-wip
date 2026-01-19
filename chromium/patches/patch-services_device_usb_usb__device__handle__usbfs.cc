@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.cc
 @@ -34,7 +34,7 @@
  #include "chromeos/dbus/permission_broker/permission_broker_client.h"

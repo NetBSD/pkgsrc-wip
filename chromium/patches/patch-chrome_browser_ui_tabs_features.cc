@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/features.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/ui/tabs/features.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/ui/tabs/features.cc
-@@ -50,7 +50,7 @@ bool CanShowTabSearchPositionSetting() {
+@@ -28,7 +28,7 @@ bool CanShowTabSearchPositionSetting() {
    }
  // Mac and other platforms will always have the tab search position in the
  // correct location, cros/linux/win git the user the option to change.

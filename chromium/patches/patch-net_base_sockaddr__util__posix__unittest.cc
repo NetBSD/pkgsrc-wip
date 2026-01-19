@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/sockaddr_util_posix_unittest.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/base/sockaddr_util_posix_unittest.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/base/sockaddr_util_posix_unittest.cc
 @@ -77,7 +77,8 @@ TEST(FillUnixAddressTest, AbstractLinuxA
    SockaddrStorage storage;

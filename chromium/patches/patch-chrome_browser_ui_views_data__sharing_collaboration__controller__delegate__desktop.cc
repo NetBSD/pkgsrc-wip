@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc
-@@ -94,7 +94,7 @@ DialogText GetPromptDialogTextFromStatus
+@@ -95,7 +95,7 @@ DialogText GetPromptDialogTextFromStatus
        break;
    }
  
@@ -15,7 +15,7 @@ $NetBSD$
    if (base::FeatureList::IsEnabled(
            syncer::kReplaceSyncPromosWithSignInPromos) &&
        status.signin_status != collaboration::SigninStatus::kSigninDisabled) {
-@@ -421,7 +421,7 @@ void CollaborationControllerDelegateDesk
+@@ -436,7 +436,7 @@ void CollaborationControllerDelegateDesk
        chrome::ShowBrowserModal(browser_, std::move(dialog_model));
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  void CollaborationControllerDelegateDesktop::
      MaybeShowSignInUiForHistorySyncOptin() {
    collaboration::ServiceStatus status = GetServiceStatus();
-@@ -510,7 +510,7 @@ void CollaborationControllerDelegateDesk
+@@ -521,7 +521,7 @@ void CollaborationControllerDelegateDesk
    }
  
    AccountInfo account_for_promo =
@@ -33,7 +33,7 @@ $NetBSD$
        signin_ui_util::GetSingleAccountForPromos(
            IdentityManagerFactory::GetForProfile(browser_->profile()));
  #else
-@@ -545,7 +545,7 @@ void CollaborationControllerDelegateDesk
+@@ -556,7 +556,7 @@ void CollaborationControllerDelegateDesk
                .SetLabel(dialog_text.ok_button_text)
                .SetEnabled(true));
  
@@ -42,7 +42,7 @@ $NetBSD$
    if (base::FeatureList::IsEnabled(
            syncer::kReplaceSyncPromosWithSignInPromos)) {
      dialog_builder.SetFootnote(ui::DialogModelLabel(dialog_text.footnote));
-@@ -598,7 +598,7 @@ void CollaborationControllerDelegateDesk
+@@ -607,7 +607,7 @@ void CollaborationControllerDelegateDesk
          .Run(CollaborationControllerDelegate::Outcome::kSuccess);
    }
  

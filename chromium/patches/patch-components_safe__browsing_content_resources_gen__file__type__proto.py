@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/safe_browsing/content/resources/gen_file_type_proto.py
 @@ -37,6 +37,8 @@ def PlatformTypes():
          "chromeos":

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/window_sizer/window_sizer.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/ui/window_sizer/window_sizer.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/ui/window_sizer/window_sizer.cc
 @@ -227,7 +227,7 @@ void WindowSizer::GetBrowserWindowBounds
        browser, window_bounds, show_state);

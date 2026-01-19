@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/platform_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/perfetto/src/tracing/platform_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/perfetto/src/tracing/platform_posix.cc
-@@ -110,12 +110,13 @@ std::unique_ptr<base::TaskRunner> Platfo
+@@ -111,13 +111,15 @@ std::unique_ptr<base::TaskRunner> Platfo
  }
  
  std::string PlatformPosix::GetCurrentProcessName() {
@@ -18,8 +18,10 @@ $NetBSD$
    std::string cmdline;
    base::ReadFile("/proc/self/cmdline", &cmdline);
    return cmdline.substr(0, cmdline.find('\0'));
--#elif PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE)
-+#elif PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) || PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
+ #elif PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) || \
+-    PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
++    PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) || \
++    PERFETTO_BUILDFLAG(PERFETTO_OS_OPENBSD)
    return std::string(getprogname());
  #else
    return "unknown_producer";

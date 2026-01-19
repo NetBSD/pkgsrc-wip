@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.h
-@@ -378,7 +378,7 @@ class PaymentsDataManager : public Autof
-   void SetAutofillHasSeenIban();
+@@ -379,7 +379,7 @@ class PaymentsDataManager : public Autof
  
+   // TODO(crbug.com/430575808): Remove build flags.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    // Returns the value of the kAutofillHasSeenBnpl pref.
-   bool IsAutofillHasSeenBnplPrefEnabled() const;
+   virtual bool IsAutofillHasSeenBnplPrefEnabled() const;
  
-@@ -726,7 +726,7 @@ class PaymentsDataManager : public Autof
+@@ -727,7 +727,7 @@ class PaymentsDataManager : public Autof
    void ClearAllCreditCardBenefits();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

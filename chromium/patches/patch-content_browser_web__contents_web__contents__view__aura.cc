@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
 @@ -176,7 +176,7 @@ class WebDragSourceAura : public content
    raw_ptr<aura::Window> window_;
@@ -24,7 +24,7 @@ $NetBSD$
    // We set the file contents before the URL because the URL also sets file
    // contents (to a .URL shortcut).  We want to prefer file content data over
    // a shortcut so we add it first.
-@@ -1344,7 +1344,7 @@ void WebContentsViewAura::OnMouseEvent(u
+@@ -1350,7 +1350,7 @@ void WebContentsViewAura::OnMouseEvent(u
      // Linux window managers like to handle raise-on-click themselves.  If we
      // raise-on-click manually, this may override user settings that prevent
      // focus-stealing.

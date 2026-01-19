@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/screen_ai_service_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- services/screen_ai/screen_ai_service_impl.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ services/screen_ai/screen_ai_service_impl.cc
 @@ -34,7 +34,7 @@
  #include "ui/accessibility/ax_tree_id.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "partition_alloc/buildflags.h"
  
  #if PA_BUILDFLAG( \
-@@ -237,7 +237,7 @@ ScreenAIService::ScreenAIService(
+@@ -240,7 +240,7 @@ ScreenAIService::ScreenAIService(
      : factory_receiver_(this, std::move(receiver)),
        ocr_receiver_(this),
        main_content_extraction_receiver_(this) {

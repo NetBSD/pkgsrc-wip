@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/audio_output_proxy_unittest.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- media/audio/audio_output_proxy_unittest.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ media/audio/audio_output_proxy_unittest.cc
-@@ -443,7 +443,11 @@ class AudioOutputProxyTest : public test
+@@ -445,7 +445,11 @@ class AudioOutputProxyTest : public test
      // |stream| is closed at this point. Start() should reopen it again.
      EXPECT_CALL(manager(), MakeAudioOutputStream(_, _, _))
          .Times(2)

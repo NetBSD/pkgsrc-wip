@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/app/app_uninstall.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/updater/app/app_uninstall.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/updater/app/app_uninstall.cc
-@@ -181,7 +181,7 @@ void UninstallInThreadPool(UpdaterScope 
+@@ -182,7 +182,7 @@ void UninstallInThreadPool(UpdaterScope 
              }
              if (int result = UninstallOtherVersions(scope);
                  result != kErrorOk) {

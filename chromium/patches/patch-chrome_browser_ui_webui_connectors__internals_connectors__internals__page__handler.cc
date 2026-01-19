@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/connectors_internals/connectors_internals_page_handler.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/ui/webui/connectors_internals/connectors_internals_page_handler.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/ui/webui/connectors_internals/connectors_internals_page_handler.cc
 @@ -85,7 +85,7 @@ connectors_internals::mojom::ClientIdent
  #endif  // BUILDFLAG(ENTERPRISE_CLIENT_CERTIFICATES)

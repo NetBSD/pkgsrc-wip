@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/address_sorter_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/dns/address_sorter_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/dns/address_sorter_posix.cc
-@@ -33,6 +33,7 @@
+@@ -29,6 +29,7 @@
  #include "net/dns/netinet_in_var_ios.h"
  #else
  #include <netinet/in_var.h>

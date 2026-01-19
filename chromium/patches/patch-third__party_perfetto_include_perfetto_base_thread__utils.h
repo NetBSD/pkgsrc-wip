@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/perfetto/include/perfetto/base/thread_utils.h
 @@ -37,6 +37,7 @@ __declspec(dllimport) unsigned long __st
  #include <sys/syscall.h>
@@ -14,7 +14,7 @@ $NetBSD$
  #else
  #include <pthread.h>
  #endif
-@@ -50,6 +51,11 @@ using PlatformThreadId = pid_t;
+@@ -53,6 +54,11 @@ using PlatformThreadId = pid_t;
  inline PlatformThreadId GetThreadId() {
    return gettid();
  }

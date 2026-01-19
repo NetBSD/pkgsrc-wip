@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp
-@@ -49,13 +49,17 @@ public:
+@@ -50,13 +50,17 @@ public:
  	{
  		pthread_mutexattr_t mattr;
  		pthread_mutexattr_init(&mattr);

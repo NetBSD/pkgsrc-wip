@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.cc
 @@ -212,6 +212,12 @@ bool XServerPixelBuffer::Init(XAtomCache
  void XServerPixelBuffer::InitShm(const XWindowAttributes& attributes) {

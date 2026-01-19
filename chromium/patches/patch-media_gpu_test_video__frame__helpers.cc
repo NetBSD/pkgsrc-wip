@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/video_frame_helpers.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- media/gpu/test/video_frame_helpers.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ media/gpu/test/video_frame_helpers.cc
 @@ -22,7 +22,7 @@
  #include "third_party/libyuv/include/libyuv.h"

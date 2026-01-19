@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.cc
-@@ -572,7 +572,7 @@ void CustomizeChromePageHandler::UpdateF
+@@ -575,7 +575,7 @@ void CustomizeChromePageHandler::UpdateF
        side_panel::mojom::ManagementNoticeState::New();
    management_notice_state->can_be_shown = false;
    management_notice_state->enabled_by_policy = false;

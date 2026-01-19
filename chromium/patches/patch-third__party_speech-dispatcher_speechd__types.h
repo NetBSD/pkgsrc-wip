@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/speech-dispatcher/speechd_types.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/speech-dispatcher/speechd_types.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/speech-dispatcher/speechd_types.h
 @@ -119,4 +119,139 @@ typedef struct {
  	SPDVoice voice;

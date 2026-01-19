@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/rand_util_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/rand_util_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/rand_util_posix.cc
 @@ -107,6 +107,10 @@ void RandBytes(void* output, size_t outp
    if (getentropy(output, output_length) == 0) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/common/chrome_switches.h
-@@ -284,7 +284,7 @@ extern const char kDebugPrint[];
+@@ -291,7 +291,7 @@ extern const char kDebugPrint[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,8 +15,8 @@ $NetBSD$
  extern const char kEnableNewAppMenuIcon[];
  extern const char kGuest[];
  extern const char kForceNtpMobilePromo[];
-@@ -304,7 +304,7 @@ extern const char kGlicHostLogging[];
- extern const char kGlicAdminRedirectPatterns[];
+@@ -312,7 +312,7 @@ extern const char kGlicAdminRedirectPatt
+ extern const char kGlicAlwaysShowWebActuationToggle[];
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

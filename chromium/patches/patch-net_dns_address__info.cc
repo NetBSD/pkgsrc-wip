@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/address_info.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/dns/address_info.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/dns/address_info.cc
-@@ -78,8 +78,12 @@ AddressInfo::AddressInfoAndResult Addres
+@@ -74,8 +74,12 @@ AddressInfo::AddressInfoAndResult Addres
      // error.
      // http://crbug.com/134142
      err = ERR_NAME_NOT_RESOLVED;

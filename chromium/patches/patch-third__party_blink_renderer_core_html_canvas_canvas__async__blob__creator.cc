@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc
-@@ -52,7 +52,7 @@ constexpr base::TimeDelta kEncodeRowSlac
+@@ -47,7 +47,7 @@ constexpr base::TimeDelta kEncodeRowSlac
  
  /* The value is based on user statistics on Nov 2017. */
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

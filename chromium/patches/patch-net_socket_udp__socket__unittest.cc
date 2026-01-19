@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_unittest.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/socket/udp_socket_unittest.cc
 @@ -396,7 +396,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);
@@ -42,7 +42,7 @@ $NetBSD$
  #define MAYBE_SharedMulticastAddress DISABLED_SharedMulticastAddress
  #else
  #define MAYBE_SharedMulticastAddress SharedMulticastAddress
-@@ -849,7 +849,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
+@@ -846,7 +846,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
                                  NetLogSource());
    ASSERT_THAT(client_socket.Connect(send_address), IsOk());
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ipc/ipc_channel.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ipc/ipc_channel.cc
 @@ -41,7 +41,7 @@ namespace {
  // Global atomic used to guarantee channel IDs are unique.
@@ -24,7 +24,7 @@ $NetBSD$
    if (int global_pid = Channel::GetGlobalPid()) {
      return global_pid;
    }
-@@ -123,7 +123,7 @@ std::string Channel::GenerateUniqueRando
+@@ -120,7 +120,7 @@ std::string Channel::GenerateUniqueRando
        base::RandInt(0, std::numeric_limits<int32_t>::max()));
  }
  

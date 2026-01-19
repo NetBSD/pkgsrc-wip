@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/headless_surface_factory.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/ozone/platform/headless/headless_surface_factory.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/ozone/platform/headless/headless_surface_factory.cc
 @@ -35,7 +35,7 @@
  #include "ui/ozone/platform/headless/headless_window_manager.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/ozone/platform/headless/vulkan_implementation_headless.h"
  #endif
  
-@@ -285,7 +285,7 @@ std::unique_ptr<gpu::VulkanImplementatio
+@@ -282,7 +282,7 @@ std::unique_ptr<gpu::VulkanImplementatio
  HeadlessSurfaceFactory::CreateVulkanImplementation(
      bool use_swiftshader,
      bool allow_protected_memory) {

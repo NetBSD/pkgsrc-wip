@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc
 @@ -57,7 +57,7 @@
  #include "chrome/browser/policy/browser_dm_token_storage_mac.h"

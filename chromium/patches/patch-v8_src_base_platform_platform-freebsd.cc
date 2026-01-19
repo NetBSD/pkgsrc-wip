@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-freebsd.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- v8/src/base/platform/platform-freebsd.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ v8/src/base/platform/platform-freebsd.cc
 @@ -43,14 +43,10 @@ TimezoneCache* OS::CreateTimezoneCache()
    return new PosixDefaultTimezoneCache();

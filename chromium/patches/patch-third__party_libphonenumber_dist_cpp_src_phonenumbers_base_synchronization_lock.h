@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
 @@ -22,7 +22,8 @@
  #elif (__cplusplus >= 201103L) && defined(I18N_PHONENUMBERS_USE_STDMUTEX)

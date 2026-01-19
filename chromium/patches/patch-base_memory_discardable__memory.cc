@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/discardable_memory.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/memory/discardable_memory.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/memory/discardable_memory.cc
 @@ -20,7 +20,7 @@ namespace features {
  BASE_FEATURE(kMadvFreeDiscardableMemory, base::FEATURE_DISABLED_BY_DEFAULT);

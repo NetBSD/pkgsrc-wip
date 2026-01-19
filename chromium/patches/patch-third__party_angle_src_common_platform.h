@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/platform.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/angle/src/common/platform.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/angle/src/common/platform.h
 @@ -23,8 +23,19 @@
  #elif defined(__linux__) || defined(EMSCRIPTEN)

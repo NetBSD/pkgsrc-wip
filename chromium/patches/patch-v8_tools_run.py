@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run.py.orig	2025-12-17 23:05:18.000000000 +0000
+--- v8/tools/run.py.orig	2026-01-07 00:50:30.000000000 +0000
 +++ v8/tools/run.py
 @@ -21,7 +21,7 @@ if cmd and cmd[0] == '--redirect-stdout'
    kwargs = dict(stdout=subprocess.PIPE)

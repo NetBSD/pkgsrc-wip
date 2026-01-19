@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/fido/features.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- device/fido/features.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ device/fido/features.cc
 @@ -37,7 +37,7 @@ namespace device {
  // comment.
@@ -13,5 +13,5 @@ $NetBSD$
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // Not yet enabled by default.
- BASE_FEATURE(kPasskeyUnlockErrorUi, base::FEATURE_DISABLED_BY_DEFAULT);
- #endif
+ BASE_FEATURE(kPasskeyUnlockManager, base::FEATURE_DISABLED_BY_DEFAULT);
+ 

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/sync/extension_sync_service.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/extensions/sync/extension_sync_service.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/extensions/sync/extension_sync_service.cc
-@@ -593,7 +593,7 @@ void ExtensionSyncService::ApplySyncData
+@@ -594,7 +594,7 @@ void ExtensionSyncService::ApplySyncData
      AccountExtensionTracker::Get(profile_)->OnExtensionSyncDataReceived(id);
    }
  

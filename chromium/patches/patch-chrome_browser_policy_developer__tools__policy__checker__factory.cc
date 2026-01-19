@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/developer_tools_policy_checker_factory.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/policy/developer_tools_policy_checker_factory.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/policy/developer_tools_policy_checker_factory.cc
 @@ -58,7 +58,7 @@ void DeveloperToolsPolicyCheckerFactory:
        static_cast<int>(DeveloperToolsPolicyHandler::Availability::

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/blink/renderer/core/page/context_menu_controller.cc
-@@ -650,7 +650,7 @@ bool ContextMenuController::ShowContextM
+@@ -656,7 +656,7 @@ bool ContextMenuController::ShowContextM
      if (potential_image_node != nullptr &&
          IsA<HTMLCanvasElement>(potential_image_node)) {
        data.media_type = mojom::blink::ContextMenuDataMediaType::kCanvas;

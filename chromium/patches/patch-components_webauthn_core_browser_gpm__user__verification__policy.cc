@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/gpm_user_verification_policy.cc.orig	2025-12-17 23:05:18.000000000 +0000
-+++ chrome/browser/webauthn/gpm_user_verification_policy.cc
+--- components/webauthn/core/browser/gpm_user_verification_policy.cc.orig	2026-01-07 00:50:30.000000000 +0000
++++ components/webauthn/core/browser/gpm_user_verification_policy.cc
 @@ -17,7 +17,7 @@ bool GpmWillDoUserVerification(device::U
-       return platform_has_biometrics;
- #elif BUILDFLAG(IS_MAC)
+     case device::UserVerificationRequirement::kPreferred:
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_IOS)
        return platform_has_biometrics;
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

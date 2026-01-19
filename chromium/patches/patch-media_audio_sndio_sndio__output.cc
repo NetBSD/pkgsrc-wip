@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/sndio_output.cc.orig	2025-12-30 13:49:36.351241857 +0000
+--- media/audio/sndio/sndio_output.cc.orig	2026-01-19 14:53:54.680049475 +0000
 +++ media/audio/sndio/sndio_output.cc
-@@ -0,0 +1,188 @@
+@@ -0,0 +1,189 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -15,6 +15,7 @@ $NetBSD$
 +#include "base/time/time.h"
 +#include "base/time/default_tick_clock.h"
 +#include "media/audio/audio_manager_base.h"
++#include "media/base/audio_bus.h"
 +#include "media/base/audio_sample_types.h"
 +#include "media/base/audio_timestamp_helper.h"
 +#include "media/audio/sndio/sndio_output.h"

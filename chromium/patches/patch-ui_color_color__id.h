@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/color/color_id.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/color/color_id.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/color/color_id.h
-@@ -652,7 +652,7 @@
+@@ -657,7 +657,7 @@
    E_CPONLY(kColorCrosSysPositive) \
    E_CPONLY(kColorCrosSysComplementVariant) \
    E_CPONLY(kColorCrosSysInputFieldOnBase)

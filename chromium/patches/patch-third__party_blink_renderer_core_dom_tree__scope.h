@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/dom/tree_scope.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/blink/renderer/core/dom/tree_scope.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/blink/renderer/core/dom/tree_scope.h
 @@ -28,6 +28,7 @@
  #define THIRD_PARTY_BLINK_RENDERER_CORE_DOM_TREE_SCOPE_H_
@@ -13,4 +13,4 @@ $NetBSD$
 +#include "third_party/blink/renderer/core/css/css_style_sheet.h"
  #include "third_party/blink/renderer/core/dom/tree_ordered_map.h"
  #include "third_party/blink/renderer/core/html/forms/radio_button_group_scope.h"
- #include "third_party/blink/renderer/core/layout/hit_test_request.h"
+ #include "third_party/blink/renderer/platform/bindings/exception_state.h"

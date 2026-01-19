@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/madv_free_discardable_memory_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/memory/madv_free_discardable_memory_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/memory/madv_free_discardable_memory_posix.cc
 @@ -297,6 +297,10 @@ void MadvFreeDiscardableMemoryPosix::Set
  

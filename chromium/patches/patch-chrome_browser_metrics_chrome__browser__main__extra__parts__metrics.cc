@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
 @@ -80,7 +80,7 @@
  #endif
@@ -33,7 +33,7 @@ $NetBSD$
  #include "components/power_metrics/system_power_monitor.h"
  #endif
  
-@@ -888,7 +888,7 @@ void RecordStartupMetrics() {
+@@ -884,7 +884,7 @@ void RecordStartupMetrics() {
  
    // Record whether Chrome is the default browser or not.
    // Disabled on Linux due to hanging browser tests, see crbug.com/1216328.
@@ -42,7 +42,7 @@ $NetBSD$
    shell_integration::DefaultWebClientState default_state =
        shell_integration::GetDefaultBrowser();
    base::UmaHistogramEnumeration("DefaultBrowser.State", default_state,
-@@ -1119,11 +1119,11 @@ void ChromeBrowserMainExtraPartsMetrics:
+@@ -1115,11 +1115,11 @@ void ChromeBrowserMainExtraPartsMetrics:
        std::make_unique<web_app::SamplingMetricsProvider>();
  #endif  // !BUILDFLAG(IS_ANDROID)
  

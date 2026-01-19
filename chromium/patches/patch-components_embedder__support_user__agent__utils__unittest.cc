@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
 @@ -152,7 +152,7 @@ void CheckUserAgentStringOrdering(bool m
    ASSERT_EQ("CrOS", pieces[0]);
@@ -24,7 +24,7 @@ $NetBSD$
          "X11; Linux x86_64";
  #elif BUILDFLAG(IS_MAC)
          "Macintosh; Intel Mac OS X 10_15_7";
-@@ -720,7 +720,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
+@@ -722,7 +722,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
  #endif
  #elif BUILDFLAG(IS_ANDROID)
    EXPECT_EQ(metadata.platform, "Android");

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sql/database.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- sql/database.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ sql/database.cc
-@@ -106,7 +106,7 @@ bool FilePathIsFixedSSD(const base::File
+@@ -110,7 +110,7 @@ bool FilePathIsFixedSSD(const base::File
  
    return !drive_info->has_seek_penalty.value_or(false)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

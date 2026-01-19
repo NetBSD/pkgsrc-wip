@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_posix.cc
-@@ -10,11 +10,12 @@
+@@ -5,11 +5,12 @@
  #include "chrome/browser/media/router/discovery/discovery_network_list.h"
  
  #include <ifaddrs.h>
@@ -21,7 +21,7 @@ $NetBSD$
  
  #include <algorithm>
  
-@@ -23,7 +24,7 @@
+@@ -19,7 +20,7 @@
  #include "chrome/browser/media/router/discovery/discovery_network_list_wifi.h"
  #include "net/base/net_errors.h"
  
@@ -30,7 +30,7 @@ $NetBSD$
  #include <netpacket/packet.h>
  #else
  #include <net/if_dl.h>
-@@ -32,7 +33,7 @@
+@@ -28,7 +29,7 @@
  namespace media_router {
  namespace {
  
@@ -39,7 +39,7 @@ $NetBSD$
  using sll = struct sockaddr_ll;
  #define SOCKET_ARP_TYPE(s) ((s)->sll_hatype)
  #define SOCKET_ADDRESS_LEN(s) ((s)->sll_halen)
-@@ -45,6 +46,12 @@ using sll = struct sockaddr_dl;
+@@ -41,6 +42,12 @@ using sll = struct sockaddr_dl;
  #define SOCKET_ADDRESS(s) (LLADDR(s))
  #endif
  

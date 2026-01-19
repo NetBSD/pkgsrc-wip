@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/url_request/url_request_context.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/url_request/url_request_context.cc
-@@ -128,7 +128,7 @@ const HttpNetworkSessionContext* URLRequ
+@@ -129,7 +129,7 @@ const HttpNetworkSessionContext* URLRequ
    return &network_session->context();
  }
  

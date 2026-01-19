@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_buffer_manager_host.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_buffer_manager_host.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_buffer_manager_host.cc
 @@ -45,9 +45,13 @@ std::string NumberToString(uint32_t numb
  }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc
 @@ -214,7 +214,7 @@ bool WrappedSkImageBacking::Initialize(c
  

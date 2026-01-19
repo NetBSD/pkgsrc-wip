@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/shape_detection/shape_detection_sandbox_hook.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- services/shape_detection/shape_detection_sandbox_hook.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ services/shape_detection/shape_detection_sandbox_hook.h
 @@ -5,7 +5,13 @@
  #ifndef SERVICES_SHAPE_DETECTION_SHAPE_DETECTION_SANDBOX_HOOK_H_

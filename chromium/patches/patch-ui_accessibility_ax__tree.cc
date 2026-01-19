@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/accessibility/ax_tree.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/accessibility/ax_tree.cc
 @@ -700,7 +700,7 @@ struct AXTreeUpdateState {
    // (crrev.com/c/2892259).
@@ -51,7 +51,7 @@ $NetBSD$
  void AXTree::ClearExtraAnnouncementNodes() {
    if (!extra_announcement_nodes_) {
      return;
-@@ -2598,7 +2598,7 @@ bool AXTree::CreateNewChildVector(
+@@ -2589,7 +2589,7 @@ bool AXTree::CreateNewChildVector(
      AXTreeUpdateState* update_state) {
    DCHECK(GetTreeUpdateInProgressState());
    bool success = true;

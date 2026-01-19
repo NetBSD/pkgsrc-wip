@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/traffic_annotation/network_traffic_annotation.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/traffic_annotation/network_traffic_annotation.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/traffic_annotation/network_traffic_annotation.h
-@@ -369,7 +369,7 @@ struct MutablePartialNetworkTrafficAnnot
+@@ -365,7 +365,7 @@ struct MutablePartialNetworkTrafficAnnot
  }  // namespace net
  
  // Placeholder for unannotated usages.
@@ -15,7 +15,7 @@ $NetBSD$
  #define TRAFFIC_ANNOTATION_WITHOUT_PROTO(ANNOTATION_ID) \
    net::DefineNetworkTrafficAnnotation(ANNOTATION_ID, "No proto yet.")
  #endif
-@@ -380,7 +380,7 @@ struct MutablePartialNetworkTrafficAnnot
+@@ -376,7 +376,7 @@ struct MutablePartialNetworkTrafficAnnot
  //
  // On Linux and Windows, use MISSING_TRAFFIC_ANNOTATION or
  // TRAFFIC_ANNOTATION_FOR_TESTS.

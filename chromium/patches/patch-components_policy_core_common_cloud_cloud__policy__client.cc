@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_client.cc
-@@ -767,7 +767,7 @@ void CloudPolicyClient::FetchPolicy(Poli
+@@ -779,7 +779,7 @@ void CloudPolicyClient::FetchPolicy(Poli
          fetch_request->set_invalidation_payload(invalidation_payload_);
        }
      }
@@ -14,4 +14,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      // Only set browser device identifier for CBCM Chrome cloud policy on
      // desktop.
-     if (type_to_fetch.first ==
+     if (type_to_fetch.policy_type() ==
