@@ -1,11 +1,11 @@
 @comment $NetBSD$
 bin/pywhat${PYVERSSUFFIX}
 bin/what${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pywhat/Data/file_signatures.json
 ${PYSITELIB}/pywhat/Data/mac_vendors.json
 ${PYSITELIB}/pywhat/Data/mastercard_companies.json
