@@ -1,5 +1,0 @@
-chat/quassel: add rc.d script to quasselcore
-
-Add patch to send only warning when check SSL support of Qt5,
-instead of error. Qt5 of pkgsrc has SSL support, but
-quassel can't detect at configure time.
