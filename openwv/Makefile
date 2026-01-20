@@ -19,7 +19,7 @@ post-extract:
 	# Adjust for vendor handling of cargo.mk
 	cd ${WRKSRC} && \
 		${MV} vendor ..
-	# Copy embedded.wvd file ${WRKSRC} manually.
+	# Copy embedded.wvd file to ${WRKSRC} manually.
 	#cd ${WRKSRC} && \
 	#	${CP} ${SOMEWHERE}/keydive.wvd ${WRKSRC}/embedded.wvd
 
