@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/05/13 14:49:26 wiz Exp $
 
 * Qt5 of pkgsrc has SSL support, but cmake can't detect
 
