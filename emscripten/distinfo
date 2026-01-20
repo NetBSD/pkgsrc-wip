@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (emscripten/4.0.23.tar.gz) = 64eefbae7621ee02826e1fcf07d11a45b0e14c34311bf9f73912fb74ab09d2a9
+SHA512 (emscripten/4.0.23.tar.gz) = 94636d393d2dd2e38b12292bc9ca3cd004efb81c47d509a61ec235f6e4338beee79ef0a69440b24b63ea9f4415108fb834e4fabf66067c4ff35831da504b55a3
+Size (emscripten/4.0.23.tar.gz) = 34282527 bytes

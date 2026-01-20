@@ -1,0 +1,10 @@
+Emscripten is a toolchain for compiling to asm.js and WebAssembly, built using
+LLVM, that lets you run C and C++ on the web at near-native speed without
+plugins.
+
+Emscripten compiles C and C++ to WebAssembly using LLVM and Binaryen Emscripten
+output can run on the Web, in Node.js, and in wasm runtimes
+
+Emscripten provides Web support for popular portable APIs such as OpenGL and
+SDL2, allowing complex graphical native applications to be ported, such as the
+Unity game engine.
