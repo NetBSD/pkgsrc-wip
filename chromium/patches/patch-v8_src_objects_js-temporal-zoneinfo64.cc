@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-v8_src_objects_js-temporal-zoneinfo64.cc,v 1.6 2026/01/19 16:14:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

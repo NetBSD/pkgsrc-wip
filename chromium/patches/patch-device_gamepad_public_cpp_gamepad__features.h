@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-device_gamepad_public_cpp_gamepad__features.h,v 1.1 2026/01/19 16:14:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

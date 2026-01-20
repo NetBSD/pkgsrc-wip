@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_feed_core_v2_proto__util__unittest.cc,v 1.14 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

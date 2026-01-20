@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_pdfium_core_fxge_linux_fx__linux__impl.cpp,v 1.14 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

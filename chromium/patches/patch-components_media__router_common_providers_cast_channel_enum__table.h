@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_media__router_common_providers_cast_channel_enum__table.h,v 1.14 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

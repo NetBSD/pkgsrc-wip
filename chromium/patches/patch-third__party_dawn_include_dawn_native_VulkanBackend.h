@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_dawn_include_dawn_native_VulkanBackend.h,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

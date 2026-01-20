@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-google__apis_gcm_engine_heartbeat__manager.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

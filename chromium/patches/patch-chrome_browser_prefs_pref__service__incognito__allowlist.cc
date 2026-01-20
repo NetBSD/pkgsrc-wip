@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_prefs_pref__service__incognito__allowlist.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

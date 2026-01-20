@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.h,v 1.12 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

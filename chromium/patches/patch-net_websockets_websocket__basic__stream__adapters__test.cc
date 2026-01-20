@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-net_websockets_websocket__basic__stream__adapters__test.cc,v 1.13 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

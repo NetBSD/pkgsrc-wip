@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-v8_src_trap-handler_handler-inside-posix.cc,v 1.14 2026/01/19 16:14:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

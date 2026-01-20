@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_browser_font__access_font__enumeration__data__source.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

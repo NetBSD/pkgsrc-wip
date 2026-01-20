@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_ozone_test_mock__platform__window__delegate.h,v 1.14 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

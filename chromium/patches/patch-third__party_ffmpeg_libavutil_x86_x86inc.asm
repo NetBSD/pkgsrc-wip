@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_ffmpeg_libavutil_x86_x86inc.asm,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

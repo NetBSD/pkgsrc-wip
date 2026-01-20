@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_blink_renderer_core_page_context__menu__controller.cc,v 1.13 2026/01/19 16:14:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

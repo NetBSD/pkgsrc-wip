@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.10 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

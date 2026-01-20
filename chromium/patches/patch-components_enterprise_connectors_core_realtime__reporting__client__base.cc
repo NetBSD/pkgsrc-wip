@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_enterprise_connectors_core_realtime__reporting__client__base.cc,v 1.13 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

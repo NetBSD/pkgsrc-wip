@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-media_ffmpeg_scripts_robo__lib_config.py,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

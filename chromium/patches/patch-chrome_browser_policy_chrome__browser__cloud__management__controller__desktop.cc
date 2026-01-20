@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__controller__desktop.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

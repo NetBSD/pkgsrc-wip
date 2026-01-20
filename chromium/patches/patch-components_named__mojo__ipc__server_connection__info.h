@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.14 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

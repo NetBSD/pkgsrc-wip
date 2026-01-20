@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_renderer_renderer__main__platform__delegate__linux.cc,v 1.14 2026/01/19 16:14:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

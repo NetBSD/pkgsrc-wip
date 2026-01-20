@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-remoting_host_base_switches.h,v 1.14 2026/01/19 16:14:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

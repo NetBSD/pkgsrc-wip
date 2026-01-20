@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_tracing_public_cpp_system__metrics__sampler.cc,v 1.13 2026/01/19 16:14:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

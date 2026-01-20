@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_vulkan_generated_vk__function__pointers.cpp,v 1.14 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

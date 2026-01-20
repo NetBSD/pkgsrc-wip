@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_message__center_views_message__popup__view.cc,v 1.14 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

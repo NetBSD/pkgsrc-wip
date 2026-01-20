@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2016/08/20 11:17:32 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2025/07/07 09:23:23 kikadf Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio

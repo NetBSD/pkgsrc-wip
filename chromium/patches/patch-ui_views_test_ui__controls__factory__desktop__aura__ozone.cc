@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_views_test_ui__controls__factory__desktop__aura__ozone.cc,v 1.14 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

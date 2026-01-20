@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_metrics_private__metrics_puma__service.cc,v 1.1 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

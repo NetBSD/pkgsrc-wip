@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-base_threading_platform__thread__metrics.cc,v 1.10 2026/01/19 16:14:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

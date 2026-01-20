@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_proxy__config_proxy__config__pref__names.h,v 1.1 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

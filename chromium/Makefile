@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/10/27 11:27:36 kikadf Exp $
+# $NetBSD: Makefile,v 1.37 2026/01/19 16:14:05 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			144.0.7559.59

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_views_style_platform__style.h,v 1.13 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

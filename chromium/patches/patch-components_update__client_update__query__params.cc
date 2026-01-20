@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_update__client_update__query__params.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

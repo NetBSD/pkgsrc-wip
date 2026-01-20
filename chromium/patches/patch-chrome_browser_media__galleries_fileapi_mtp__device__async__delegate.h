@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_media__galleries_fileapi_mtp__device__async__delegate.h,v 1.1 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

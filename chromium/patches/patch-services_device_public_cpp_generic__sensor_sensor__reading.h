@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_device_public_cpp_generic__sensor_sensor__reading.h,v 1.14 2026/01/19 16:14:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

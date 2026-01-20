@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_blink_renderer_platform_widget_compositing_blink__categorized__worker__pool__delegate.cc,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

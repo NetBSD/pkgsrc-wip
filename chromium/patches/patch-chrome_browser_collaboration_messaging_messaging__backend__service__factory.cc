@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_collaboration_messaging_messaging__backend__service__factory.cc,v 1.13 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_perfetto_src_trace__processor_importers_ftrace_v4l2__tracker.cc,v 1.14 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

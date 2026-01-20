@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platform.cc,v 1.14 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

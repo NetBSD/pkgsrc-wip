@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_native__theme_features_native__theme__features.cc,v 1.13 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_safe__browsing_content_resources_gen__file__type__proto.py,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

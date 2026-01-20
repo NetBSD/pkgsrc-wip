@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_viz_service_frame__sinks_root__compositor__frame__sink__impl.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

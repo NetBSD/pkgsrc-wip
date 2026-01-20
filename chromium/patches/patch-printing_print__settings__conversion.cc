@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-printing_print__settings__conversion.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

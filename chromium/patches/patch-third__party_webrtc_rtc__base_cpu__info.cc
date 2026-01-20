@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.10 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

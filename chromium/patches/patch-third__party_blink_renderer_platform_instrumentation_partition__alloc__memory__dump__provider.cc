@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_blink_renderer_platform_instrumentation_partition__alloc__memory__dump__provider.cc,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

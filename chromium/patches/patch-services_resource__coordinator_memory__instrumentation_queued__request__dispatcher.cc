@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.14 2026/01/19 16:14:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

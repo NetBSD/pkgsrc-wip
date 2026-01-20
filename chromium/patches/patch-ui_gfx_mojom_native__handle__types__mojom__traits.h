@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.h,v 1.14 2026/01/19 16:14:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

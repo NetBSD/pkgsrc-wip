@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_upgrade__detector_version__history__client.cc,v 1.13 2026/01/19 16:14:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

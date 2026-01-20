@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_perfetto_src_base_scoped__sched__boost.cc,v 1.10 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

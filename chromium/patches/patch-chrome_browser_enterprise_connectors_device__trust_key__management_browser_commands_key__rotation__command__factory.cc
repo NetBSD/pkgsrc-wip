@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_key__management_browser_commands_key__rotation__command__factory.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

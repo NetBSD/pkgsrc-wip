@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_supervised__user_core_browser_child__account__service.cc,v 1.10 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

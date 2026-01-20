@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.14 2026/01/19 16:14:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

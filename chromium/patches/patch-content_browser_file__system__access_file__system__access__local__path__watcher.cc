@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_browser_file__system__access_file__system__access__local__path__watcher.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

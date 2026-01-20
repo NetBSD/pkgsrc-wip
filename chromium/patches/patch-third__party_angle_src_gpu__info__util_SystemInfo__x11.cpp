@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__x11.cpp,v 1.14 2026/01/19 16:14:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

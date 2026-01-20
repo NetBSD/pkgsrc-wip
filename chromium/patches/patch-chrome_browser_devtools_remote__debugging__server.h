@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.h,v 1.10 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

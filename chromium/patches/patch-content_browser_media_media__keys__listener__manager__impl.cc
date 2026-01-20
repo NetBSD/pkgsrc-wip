@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-content_browser_media_media__keys__listener__manager__impl.cc,v 1.14 2026/01/19 16:14:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

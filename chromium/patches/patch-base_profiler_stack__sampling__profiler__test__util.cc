@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-base_profiler_stack__sampling__profiler__test__util.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

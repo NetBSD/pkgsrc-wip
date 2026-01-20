@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_sync__bookmarks_bookmark__model__view.cc,v 1.6 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.12 2026/01/19 16:14:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

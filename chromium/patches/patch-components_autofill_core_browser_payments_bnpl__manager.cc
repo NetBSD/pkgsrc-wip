@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-components_autofill_core_browser_payments_bnpl__manager.cc,v 1.13 2026/01/19 16:14:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

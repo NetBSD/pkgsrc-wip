@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_enterprise__reporting__private__api.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

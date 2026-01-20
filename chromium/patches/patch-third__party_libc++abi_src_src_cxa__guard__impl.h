@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-third__party_libc++abi_src_src_cxa__guard__impl.h,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

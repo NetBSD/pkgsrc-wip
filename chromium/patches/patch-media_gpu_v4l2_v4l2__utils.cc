@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.6 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
