@@ -50,6 +50,15 @@ lib/emscripten/emstrip
 lib/emscripten/emstrip.py
 lib/emscripten/emsymbolizer
 lib/emscripten/emsymbolizer.py
+lib/emscripten/media/Emscripten_logo_full.svg
+lib/emscripten/media/logo.png
+lib/emscripten/media/logo.svg
+lib/emscripten/media/powered_by_logo.png
+lib/emscripten/media/powered_by_logo.svg
+lib/emscripten/media/powered_by_logo_mini.svg
+lib/emscripten/media/powered_by_logo_shell.png
+lib/emscripten/media/switch_logo.png
+lib/emscripten/media/switch_logo.svg
 lib/emscripten/site/.gitignore
 lib/emscripten/site/Makefile
 lib/emscripten/site/source/_static/Emscripten_logo_full.png

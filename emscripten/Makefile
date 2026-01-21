@@ -76,7 +76,7 @@ PY_WRAPPERS=		emar
 # Borrowed and adopted from FreeBSD port
 # See https://github.com/emscripten-core/emscripten/issues/17193
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools docs \
+	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools docs media \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}/
 	${FIND} ${DESTDIR}${PREFIX}/lib/${PKGBASE} \( -name "*.bat" -o -name "*.orig" \) -delete
 	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/lib/emscripten
