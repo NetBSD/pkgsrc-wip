@@ -20,8 +20,7 @@ post-extract:
 	cd ${WRKSRC} && \
 		${MV} vendor ..
 	# Copy embedded.wvd file to ${WRKSRC} manually.
-	#cd ${WRKSRC} && \
-	#	${CP} ${SOMEWHERE}/keydive.wvd ${WRKSRC}/embedded.wvd
+	#${CP} ${SOMEWHERE}/keydive.wvd ${WRKSRC}/embedded.wvd
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/target/release/libwidevinecdm.so \
