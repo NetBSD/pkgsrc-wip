@@ -57,10 +57,16 @@ SUBST_STAGE.wrappers=	post-install
 SUBST_FILES.wrappers=	${WRAPPER_SCRIPTS:S,^,${DESTDIR}${PREFIX}/bin/,}
 SUBST_VARS.wrappers+=	PREFIX PKGBASE
 
+SUBST_CLASSES+=		pywrappers
+SUBST_STAGE.pywrappers=	post-install
+SUBST_FILES.pywrappers=	${PY_WRAPPERS:S,^,${DESTDIR}${PREFIX}/lib/${PKGBASE}/,}
+SUBST_VARS.pywrappers+=	PREFIX PKGBASE
+
 do-build:
 
 INSTALLATION_DIRS+=	lib/${PKGBASE} bin
 WRAPPER_SCRIPTS=	emcc em++
+PY_WRAPPERS=		emar
 
 # Borrowed and adopted from FreeBSD port
 # See https://github.com/emscripten-core/emscripten/issues/17193
@@ -74,6 +80,9 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/emscripten/third_party/ply/test/testlex.py
 .for s in ${WRAPPER_SCRIPTS}
 	${INSTALL_SCRIPT} ${FILESDIR}/${s} ${DESTDIR}${PREFIX}/bin/${s}
+.endfor
+.for s in ${PY_WRAPPERS}
+	${INSTALL_SCRIPT} ${FILESDIR}/${s} ${DESTDIR}${PREFIX}/lib/${PKGBASE}/${s}
 .endfor
 
 .include "../../lang/nodejs/application.mk"

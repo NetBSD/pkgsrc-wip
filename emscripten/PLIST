@@ -20,6 +20,7 @@ lib/emscripten/docs/splashpres.pdf
 lib/emscripten/em++
 lib/emscripten/em++.py
 lib/emscripten/em-config.py
+lib/emscripten/emar
 lib/emscripten/emar.py
 lib/emscripten/embuilder.py
 lib/emscripten/emcc
