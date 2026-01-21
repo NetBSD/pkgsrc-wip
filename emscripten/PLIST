@@ -7,6 +7,16 @@ lib/emscripten/cmake/Modules/FindOpenAL.cmake
 lib/emscripten/cmake/Modules/FindOpenGL.cmake
 lib/emscripten/cmake/Modules/Platform/Emscripten.cmake
 lib/emscripten/cmake/Modules/TestBigEndian.cmake
+lib/emscripten/docs/EMSCRIPTEN_explicit_uniform_binding.txt
+lib/emscripten/docs/EMSCRIPTEN_explicit_uniform_location.txt
+lib/emscripten/docs/emcc.txt
+lib/emscripten/docs/emscripten_powered_by_logo.svg
+lib/emscripten/docs/graph.png
+lib/emscripten/docs/packaging.md
+lib/emscripten/docs/paper.pdf
+lib/emscripten/docs/paper.tex
+lib/emscripten/docs/process.md
+lib/emscripten/docs/splashpres.pdf
 lib/emscripten/em++
 lib/emscripten/em++.py
 lib/emscripten/em-config.py

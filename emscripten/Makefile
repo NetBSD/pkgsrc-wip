@@ -65,7 +65,7 @@ WRAPPER_SCRIPTS=	emcc em++
 # Borrowed and adopted from FreeBSD port
 # See https://github.com/emscripten-core/emscripten/issues/17193
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools \
+	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools docs \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}/
 	${FIND} ${DESTDIR}${PREFIX}/lib/${PKGBASE} -name "*.bat" -delete
 	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/lib/emscripten
