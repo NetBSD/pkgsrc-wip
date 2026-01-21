@@ -52,27 +52,29 @@ PKGCONFIG_OVERRIDE+=	test/third_party/poppler/poppler-splash.pc.in
 PKGCONFIG_OVERRIDE+=	test/third_party/poppler/poppler.pc.in
 PKGCONFIG_OVERRIDE+=	test/third_party/zlib/zlib.pc.in
 
+SUBST_CLASSES+=		wrappers
+SUBST_STAGE.wrappers=	post-install
+SUBST_FILES.wrappers=	${WRAPPER_SCRIPTS:S,^,${DESTDIR}${PREFIX}/bin/,}
+SUBST_VARS.wrappers+=	PREFIX PKGBASE
+
 do-build:
 
-INSTALLATION_DIRS+=	lib/${PKGBASE}
+INSTALLATION_DIRS+=	lib/${PKGBASE} bin
+WRAPPER_SCRIPTS=	emcc em++
 
 # Borrowed and adopted from FreeBSD port
-do-install: # the native install target installs files into root, see https://github.com/emscripten-core/emscripten/issues/17193
-	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools ${DESTDIR}${PREFIX}/lib/${PKGBASE}/
-	${FIND} ${DESTDIR}${PREFIX}/lib/${PKGBASE} \( -name "*.bat" -o -name "*.orig" \) -delete
-.for s in ${PYSCRIPTS}
-	(${ECHO} "#!/bin/sh"; \
-	  ${ECHO} ""; \
-	  ${ECHO} "${PYTHON_CMD} ${PREFIX}/lib/${PKGBASE}/${s}.py \"$$"@"\"" \
-	) > ${DESTDIR}${PREFIX}/lib/${PKGBASE}/${s}
-	${CHMOD} +x ${DESTDIR}${PREFIX}/lib/${PKGBASE}/${s}
-	${RLN} ${DESTDIR}${PREFIX}/lib/${PKGBASE}/${s} ${DESTDIR}${PREFIX}/bin/${s}
-.endfor
+# See https://github.com/emscripten-core/emscripten/issues/17193
+do-install:
+	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools \
+		${DESTDIR}${PREFIX}/lib/${PKGBASE}/
+	${FIND} ${DESTDIR}${PREFIX}/lib/${PKGBASE} -name "*.bat" -delete
 	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/lib/emscripten
 	${CHMOD} -x \
 		${DESTDIR}${PREFIX}/lib/emscripten/system/lib/libcxx/readme.txt \
 		${DESTDIR}${PREFIX}/lib/emscripten/third_party/ply/test/testlex.py
-
+.for s in ${WRAPPER_SCRIPTS}
+	${INSTALL_SCRIPT} ${FILESDIR}/${s} ${DESTDIR}${PREFIX}/bin/${s}
+.endfor
 
 .include "../../lang/nodejs/application.mk"
 .include "../../lang/python/application.mk"

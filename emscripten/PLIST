@@ -1,4 +1,6 @@
 @comment $NetBSD$
+bin/em++
+bin/emcc
 lib/emscripten/cmake/Modules/CheckTypeSize.c.in
 lib/emscripten/cmake/Modules/CheckTypeSize.cmake
 lib/emscripten/cmake/Modules/FindOpenAL.cmake
