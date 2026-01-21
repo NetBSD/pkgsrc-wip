@@ -2793,7 +2793,6 @@ SUBDIR+=	openvas-scanner
 SUBDIR+=	openvdb
 SUBDIR+=	openvrml
 SUBDIR+=	openwsman
-SUBDIR+=	openwv
 SUBDIR+=	openxcom
 SUBDIR+=	openzl
 SUBDIR+=	openzwave

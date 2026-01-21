@@ -1,4 +1,0 @@
-@comment $NetBSD$
-share/openwv/libwidevinecdm.so
-share/openwv/manifest-chromium.json
-share/openwv/manifest-firefox.json
