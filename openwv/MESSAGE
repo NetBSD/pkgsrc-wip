@@ -1,6 +1,8 @@
 ===========================================================================
 $NetBSD: MESSAGE,v 1.1 2011/03/03 10:51:59 ryoon Exp $
 
+For Firefox web browser:
+
 (1) Open about:support in www/firefox and get profile name.
 (2) Create gmp-widevinecdm/openwv directory under profile directory.
 $ mkdir -p ~/.mozilla/<profile>/gmp-widevinecdm/openwv
