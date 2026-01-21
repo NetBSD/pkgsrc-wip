@@ -22,3 +22,6 @@ Upstream bugs:
 
 - filescanner_ffmpeg.c needs patching
   https://github.com/owntone/owntone-server/issues/1901
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-57155, CVE-2025-57156, CVE-2025-63647, CVE-2025-63648
