@@ -1,11 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	4.0.23
+# NOTE: Read when upgrading. emscripten is very touchy about the LLVM version.
+# Check tools/shared.py for EXPECTED_LLVM_VERSION and ensure that it is met
+
+DISTNAME=	3.1.64
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emscripten-core/}
 GITHUB_PROJECT=	emscripten
-GITHUB_TAG=	refs/tags/4.0.23
+GITHUB_TAG=	refs/tags/${DISTNAME}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +16,7 @@ HOMEPAGE=	https://github.com/emscripten-core/emscripten/
 COMMENT=	LLVM-to-WebAssembly Compiler
 LICENSE=	mit # or University of Illinois/NCSA Open Source License (requested in license.mk)
 
-WRKSRC=		${WRKDIR}/emscripten-4.0.23
+WRKSRC=		${WRKDIR}/emscripten-${DISTNAME}
 USE_TOOLS+=	pkg-config bash pax
 USE_LANGUAGES=	c c++
 
@@ -23,9 +26,11 @@ DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 REPLACE_BASH+=		./system/lib/libcxxabi/src/demangle/cp-to-llvm.sh
 REPLACE_NODEJS+=	tools/*.mjs
+REPLACE_NODEJS+=	src/*.mjs
 REPLACE_PYTHON+=	./*.py
 REPLACE_PYTHON+=	./site/source/*.py
 REPLACE_PYTHON+=	./system/lib/*.py
+REPLACE_PYTHON+=	./system/bin/*.py
 REPLACE_PYTHON+=	./test/*.py
 REPLACE_PYTHON+=	./test/benchmark/*.py
 REPLACE_PYTHON+=	./test/third_party/freetype/src/tools/*.py

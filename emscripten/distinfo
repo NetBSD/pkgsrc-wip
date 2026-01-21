@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (emscripten/4.0.23.tar.gz) = 64eefbae7621ee02826e1fcf07d11a45b0e14c34311bf9f73912fb74ab09d2a9
-SHA512 (emscripten/4.0.23.tar.gz) = 94636d393d2dd2e38b12292bc9ca3cd004efb81c47d509a61ec235f6e4338beee79ef0a69440b24b63ea9f4415108fb834e4fabf66067c4ff35831da504b55a3
-Size (emscripten/4.0.23.tar.gz) = 34282527 bytes
-SHA1 (patch-tools_config.py) = 69dcdb50c52429d3140a2b236d5074d0b27ab560
+BLAKE2s (emscripten/3.1.64.tar.gz) = 5e9b54d3257e984bfbd27e91bf2564c4c16f517e6e456e349afd76876f1b8afe
+SHA512 (emscripten/3.1.64.tar.gz) = c9fda319d48e241b1f6f2e1e6ca7c60af669908e1012c1c2766f62d181a1a45de0361d592861a593d55e585dfbc82da4ba3d9d86fbf45d2a23a86bed7b6ec43c
+Size (emscripten/3.1.64.tar.gz) = 29562286 bytes
+SHA1 (patch-tools_config.py) = bf5ab7d6ae3ec4f5cfcc0a440b48d6b1501aacc8
