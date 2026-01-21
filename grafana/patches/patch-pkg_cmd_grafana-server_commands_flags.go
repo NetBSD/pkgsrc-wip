@@ -5,7 +5,7 @@ from: patch-pkg_cmd_grafana-server_main.go,v 1.1 2020/08/27 13:05:20 jperkin Exp
 
 --- pkg/cmd/grafana-server/commands/flags.go.orig	2023-11-20 09:27:24.000000000 +0000
 +++ pkg/cmd/grafana-server/commands/flags.go
-@@ -21,22 +21,25 @@ var (
+@@ -28,22 +28,25 @@ var (
  var commonFlags = []cli.Flag{
  	&cli.StringFlag{
  		Name:        "config",

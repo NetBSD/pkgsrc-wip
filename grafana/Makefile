@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.123 2024/07/03 06:59:35 bsiegert Exp $
 
-DISTNAME=	grafana-11.1.3
+DISTNAME=	grafana-12.3.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,7 @@ COMMENT=	Metrics dashboard and graph editor
 LICENSE=	gnu-agpl-v3 AND apache-2.0 AND mit
 
 ARGMAX_REQ=	524288
+DIST_SUBDIR=	${PKGBASE}
 DISTFILES=	${DEFAULT_DISTFILES}
 
 # We don't have suitable infrastructure in pkgsrc for generating frontend
@@ -88,7 +89,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-cli ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-server ${DESTDIR}${PREFIX}/bin/
-	cd ${WRKDIR}/linux/grafana-${GITHUB_TAG}/public && \
+	cd ${WRKDIR}/linux/grafana-${PKGVERSION_NOREV}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
