@@ -67,7 +67,7 @@ WRAPPER_SCRIPTS=	emcc em++
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw em* cmake site src system third_party tools docs \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}/
-	${FIND} ${DESTDIR}${PREFIX}/lib/${PKGBASE} -name "*.bat" -delete
+	${FIND} ${DESTDIR}${PREFIX}/lib/${PKGBASE} \( -name "*.bat" -o -name "*.orig" \) -delete
 	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/lib/emscripten
 	${CHMOD} -x \
 		${DESTDIR}${PREFIX}/lib/emscripten/system/lib/libcxx/readme.txt \
