@@ -1,11 +1,10 @@
-www/chromium: update to 143.0.7499.192
+www/chromium: update to 144.0.7559.96
 
-* 143.0.7499.192
-This update includes 1 security fix.
-Below, we highlight fixes that were contributed by external researchers. 
-Please see the Chrome Security Page for more information.
-[TBD][463155954] High CVE-2026-0628: Insufficient policy enforcement
-in WebView tag. Reported by Gal Weizman on 2025-11-23
+* 144.0.7559.96
+This update includes 1 security fix. Below, we highlight fixes that were
+contributed by external researchers. Please see the Chrome Security Page
+for more information.
+[TBD][473851441] High CVE-2026-1220: Race in V8.
+Reported by @p1nky4745 on 2026-01-07
 
-* HID support on NetBSD
-
+* Pkgsrc: enable widevine
