@@ -60,7 +60,7 @@ go126/lib/fips140/fips140.sum
 go126/lib/fips140/inprocess.txt
 go126/lib/fips140/v1.0.0-c2097c7c.zip
 go126/lib/fips140/v1.0.0.txt
-go126/lib/fips140/v1.1.0-rc1.zip
+go126/lib/fips140/v1.26.0.zip
 go126/lib/hg/goreposum.py
 go126/lib/time/README
 go126/lib/time/mkzip.go
@@ -433,6 +433,8 @@ go126/src/cmd/cgo/internal/test/issue6997_linux.c
 go126/src/cmd/cgo/internal/test/issue6997_linux.go
 go126/src/cmd/cgo/internal/test/issue7234_test.go
 go126/src/cmd/cgo/internal/test/issue76023.go
+go126/src/cmd/cgo/internal/test/issue76861.go
+go126/src/cmd/cgo/internal/test/issue76861/a.go
 go126/src/cmd/cgo/internal/test/issue8148.c
 go126/src/cmd/cgo/internal/test/issue8148.go
 go126/src/cmd/cgo/internal/test/issue8331.h
@@ -1525,6 +1527,7 @@ go126/src/cmd/compile/testdata/script/embedbad.txt
 go126/src/cmd/compile/testdata/script/issue70173.txt
 go126/src/cmd/compile/testdata/script/issue73947.txt
 go126/src/cmd/compile/testdata/script/issue75461.txt
+go126/src/cmd/compile/testdata/script/issue77033.txt
 go126/src/cmd/compile/testdata/script/script_test_basics.txt
 go126/src/cmd/covdata/argsmerge.go
 go126/src/cmd/covdata/covdata.go
@@ -4724,7 +4727,7 @@ go126/src/crypto/cipher/ctr_test.go
 go126/src/crypto/cipher/example_test.go
 go126/src/crypto/cipher/fuzz_test.go
 go126/src/crypto/cipher/gcm.go
-go126/src/crypto/cipher/gcm_fips140v2.0_test.go
+go126/src/crypto/cipher/gcm_fips140v1.26_test.go
 go126/src/crypto/cipher/gcm_test.go
 go126/src/crypto/cipher/io.go
 go126/src/crypto/cipher/modes_test.go
@@ -4772,8 +4775,8 @@ go126/src/crypto/hkdf/hkdf_test.go
 go126/src/crypto/hmac/hmac.go
 go126/src/crypto/hmac/hmac_test.go
 go126/src/crypto/hpke/aead.go
-go126/src/crypto/hpke/aead_fipsv1.0.go
-go126/src/crypto/hpke/aead_fipsv2.0.go
+go126/src/crypto/hpke/aead_fips140v1.0.go
+go126/src/crypto/hpke/aead_fips140v1.26.go
 go126/src/crypto/hpke/hpke.go
 go126/src/crypto/hpke/hpke_test.go
 go126/src/crypto/hpke/kdf.go
@@ -5094,17 +5097,18 @@ go126/src/crypto/internal/fips140deps/time/time.go
 go126/src/crypto/internal/fips140deps/time/time_windows.go
 go126/src/crypto/internal/fips140hash/hash.go
 go126/src/crypto/internal/fips140only/fips140only.go
+go126/src/crypto/internal/fips140only/fips140only_test.go
 go126/src/crypto/internal/fips140test/acvp_capabilities.entropy.json
 go126/src/crypto/internal/fips140test/acvp_capabilities_fips140v1.0.json
-go126/src/crypto/internal/fips140test/acvp_capabilities_fips140v2.0.json
+go126/src/crypto/internal/fips140test/acvp_capabilities_fips140v1.26.json
 go126/src/crypto/internal/fips140test/acvp_fips140v1.0_test.go
-go126/src/crypto/internal/fips140test/acvp_fips140v2.0_test.go
+go126/src/crypto/internal/fips140test/acvp_fips140v1.26_test.go
 go126/src/crypto/internal/fips140test/acvp_test.go
 go126/src/crypto/internal/fips140test/acvp_test_fips140v1.0.config.json
-go126/src/crypto/internal/fips140test/acvp_test_fips140v2.0.config.json
+go126/src/crypto/internal/fips140test/acvp_test_fips140v1.26.config.json
 go126/src/crypto/internal/fips140test/alias_test.go
 go126/src/crypto/internal/fips140test/cast_fips140v1.0_test.go
-go126/src/crypto/internal/fips140test/cast_fips140v2.0_test.go
+go126/src/crypto/internal/fips140test/cast_fips140v1.26_test.go
 go126/src/crypto/internal/fips140test/cast_test.go
 go126/src/crypto/internal/fips140test/check_test.go
 go126/src/crypto/internal/fips140test/cmac_test.go
@@ -5120,8 +5124,8 @@ go126/src/crypto/internal/fips140test/sshkdf_test.go
 go126/src/crypto/internal/fips140test/xaes_test.go
 go126/src/crypto/internal/impl/impl.go
 go126/src/crypto/internal/rand/rand.go
-go126/src/crypto/internal/rand/rand_fipsv1.0.go
-go126/src/crypto/internal/rand/rand_fipsv2.0.go
+go126/src/crypto/internal/rand/rand_fips140v1.0.go
+go126/src/crypto/internal/rand/rand_fips140v1.26.go
 go126/src/crypto/internal/randutil/randutil.go
 go126/src/crypto/internal/sysrand/internal/seccomp/seccomp_linux.go
 go126/src/crypto/internal/sysrand/internal/seccomp/seccomp_unsupported.go
@@ -8001,6 +8005,7 @@ go126/src/internal/types/testdata/check/cycles3.go
 go126/src/internal/types/testdata/check/cycles4.go
 go126/src/internal/types/testdata/check/cycles5.go
 go126/src/internal/types/testdata/check/cycles5a.go
+go126/src/internal/types/testdata/check/cycles6.go
 go126/src/internal/types/testdata/check/decls0.go
 go126/src/internal/types/testdata/check/decls1.go
 go126/src/internal/types/testdata/check/decls2/decls2a.go
@@ -10203,9 +10208,11 @@ go126/src/runtime/runtime_unix_test.go
 go126/src/runtime/rwmutex.go
 go126/src/runtime/rwmutex_test.go
 go126/src/runtime/secret.go
+go126/src/runtime/secret/alloc_test.go
 go126/src/runtime/secret/asm_amd64.s
 go126/src/runtime/secret/asm_arm64.s
 go126/src/runtime/secret/crash_test.go
+go126/src/runtime/secret/doc.go
 go126/src/runtime/secret/export.go
 go126/src/runtime/secret/secret.go
 go126/src/runtime/secret/secret_test.go
@@ -14059,6 +14066,7 @@ go126/test/fixedbugs/issue7648.go
 go126/test/fixedbugs/issue76709.go
 go126/test/fixedbugs/issue7675.go
 go126/test/fixedbugs/issue7690.go
+go126/test/fixedbugs/issue76950.go
 go126/test/fixedbugs/issue7740.go
 go126/test/fixedbugs/issue7742.go
 go126/test/fixedbugs/issue7746.go
