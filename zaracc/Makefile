@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=  	zaracc-0.1.10
+DISTNAME=  	zaracc-0.2.2
 CATEGORIES=	lang	
 MASTER_SITES=	https://sourceforge.net/projects/zaracc/files/
 
