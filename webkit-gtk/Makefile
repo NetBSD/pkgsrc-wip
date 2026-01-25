@@ -115,17 +115,32 @@ REPLACE_BASH+=		Source/WebKit/Scripts/copy-webcontent-resources-to-private-heade
 REPLACE_BASH+=		Source/WebKit/Scripts/process-entitlements.sh
 REPLACE_BASH+=		Tools/gtk/install-dependencies
 
+REPLACE_RUBY+=		Source/JavaScriptCore/Scripts/postprocess-asm
+REPLACE_RUBY+=		Source/JavaScriptCore/Scripts/resolve-asm-file-conflicts.rb
 REPLACE_RUBY+=		Source/JavaScriptCore/b3/air/*.rb
 REPLACE_RUBY+=		Source/JavaScriptCore/offlineasm/*.rb
+REPLACE_RUBY+=		Source/WTF/Scripts/GeneratePreferences.rb
+REPLACE_RUBY+=		Source/WebCore/Scripts/GenerateSettings.rb
 REPLACE_RUBY+=		Source/WebCore/domjit/*.rb
 REPLACE_RUBY+=		Source/WebInspectorUI/Scripts/*.rb
 REPLACE_RUBY+=		Source/WebKit/Scripts/*.rb
+REPLACE_RUBY+=		Source/bmalloc/libpas/export.rb
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python+=	Source/WebInspectorUI/Scripts/copy-user-interface-resources.pl
 SUBST_SED.python+=	-e 's,"python3","${PYTHONBIN}",'
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python binary.
+
+SUBST_CLASSES+=		ruby
+SUBST_FILES.ruby+=	Source/bmalloc/libpas/scripts/tally_verifier_output
+SUBST_FILES.ruby+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
+SUBST_FILES.ruby+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
+SUBST_FILES.ruby+=	Source/WebCore/Scripts/generate-unified-sources.sh
+SUBST_FILES.ruby+=	Source/WebKit/Scripts/generate-unified-sources.sh
+SUBST_SED.ruby+=	-e 's,env ruby,env ${RUBY},'
+SUBST_STAGE.ruby=	pre-configure
+SUBST_MESSAGE.ruby=	Fixing path to ruby binary.
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/replace.mk"
