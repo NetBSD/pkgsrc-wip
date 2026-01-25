@@ -4598,7 +4598,6 @@ SUBDIR+=	py-qubovert
 SUBDIR+=	py-quhep
 SUBDIR+=	py-qupulse
 SUBDIR+=	py-qutip
-SUBDIR+=	py-qutrub
 SUBDIR+=	py-radontea
 SUBDIR+=	py-rainbownum
 SUBDIR+=	py-randomdict
