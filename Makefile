@@ -5187,7 +5187,6 @@ SUBDIR+=	rng-tools
 SUBDIR+=	rnp
 SUBDIR+=	roadfighter
 SUBDIR+=	rocksdb
-SUBDIR+=	rofi
 SUBDIR+=	rolo
 SUBDIR+=	rom64
 SUBDIR+=	romblast
