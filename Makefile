@@ -4626,7 +4626,6 @@ SUBDIR+=	py-recordclass
 SUBDIR+=	py-redbaron
 SUBDIR+=	py-redis-cluster
 SUBDIR+=	py-reducer
-SUBDIR+=	py-registry
 SUBDIR+=	py-regress
 SUBDIR+=	py-releases
 SUBDIR+=	py-remctl
