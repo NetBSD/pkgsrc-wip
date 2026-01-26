@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/rga
-bin/rga-fzf
-bin/rga-fzf-open
-bin/rga-preproc

@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/bandwidthmon
-bin/bandwidthmon2
-bin/bandwidthmon3
