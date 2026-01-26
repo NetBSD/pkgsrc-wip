@@ -101,7 +101,6 @@ REPLACE_PYTHON+=	Source/JavaScriptCore/yarr/generateYarrCanonicalizeUnicode
 REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/compiler/translator/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/libANGLE/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/gtest/test/*.py
-REPLACE_PYTHON+=	Source/WebCore/css/*.py
 REPLACE_PYTHON+=	Source/WebCore/html/parser/create-html-entity-table
 REPLACE_PYTHON+=	Source/WebCore/platform/network/create-http-header-name-table
 REPLACE_PYTHON+=	Source/WebKit/Scripts/*.py
@@ -123,7 +122,6 @@ REPLACE_RUBY+=		Source/WTF/Scripts/GeneratePreferences.rb
 REPLACE_RUBY+=		Source/WebCore/Scripts/GenerateSettings.rb
 REPLACE_RUBY+=		Source/WebCore/domjit/*.rb
 REPLACE_RUBY+=		Source/WebInspectorUI/Scripts/*.rb
-REPLACE_RUBY+=		Source/WebKit/Scripts/*.rb
 REPLACE_RUBY+=		Source/bmalloc/libpas/export.rb
 
 SUBST_CLASSES+=		python
