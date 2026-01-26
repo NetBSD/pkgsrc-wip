@@ -150,9 +150,6 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 
 CXXFLAGS.SunOS+=	-fpermissive
 
-# This does not disable optimisations, merely avoids #error if there are none.
-CFLAGS+=	-DRELEASE_WITHOUT_OPTIMIZATIONS
-
 # Needed for JavaScript JIT
 #NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.1/MiniBrowser
 NOT_PAX_MPROTECT_SAFE+=		libexec/webkit2gtk-4.1/WebKitWebProcess
@@ -161,16 +158,16 @@ NOT_PAX_MPROTECT_SAFE+=		libexec/webkit2gtk-4.1/jsc
 
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/create-symlink-to-altroot.sh
-CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
+#CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/create-symlink-to-altroot.sh
-CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/generate-unified-sources.sh
+#CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/create-symlink-to-altroot.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
-CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-unified-sources.sh
+#CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/check-xcfilelists.sh
-CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
+#CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 
 .include "options.mk"
 

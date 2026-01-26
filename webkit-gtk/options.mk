@@ -47,6 +47,8 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_JIT=OFF
 .if !empty(PKG_OPTIONS:Mdebug)
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 INSTALL_UNSTRIPPED=	yes
+# This does not disable optimisations, merely avoids #error if there are none.
+#CFLAGS+=		-DRELEASE_WITHOUT_OPTIMIZATIONS
 .else
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .endif
