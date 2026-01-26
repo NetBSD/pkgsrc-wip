@@ -2,8 +2,8 @@
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
-PKG_SUPPORTED_OPTIONS=	debug opengl webkit-jit wayland
-PKG_SUGGESTED_OPTIONS=	opengl
+PKG_SUPPORTED_OPTIONS=	debug webkit-jit wayland
+PKG_SUGGESTED_OPTIONS=
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 PKG_SUGGESTED_OPTIONS+=	wayland
@@ -39,15 +39,6 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_JIT=ON
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_C_LOOP=OFF
 .else
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_JIT=OFF
-.endif
-
-#
-# OpenGL support: enable support for GLX, WebGL and accelerated compositing
-#
-.if !empty(PKG_OPTIONS:Mopengl)
-CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL_OR_ES=ON
-.else
-CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL_OR_ES=OFF
 .endif
 
 #
