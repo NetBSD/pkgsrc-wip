@@ -1,12 +1,11 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	1.3.0pre34
+FLNEWS_VERSION=	1.3.0
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
-MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	micha@NetBSD.org
@@ -19,7 +18,7 @@ USE_LANGUAGES=	c c++
 TEST_TARGET=	test
 
 # https://reproducible-builds.org/specs/source-date-epoch/
-CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1761574602
+CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1769370240
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
