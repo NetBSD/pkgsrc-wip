@@ -10,6 +10,9 @@ HOMEPAGE=	https://github.com/cry-inc/dmarc-report-viewer/
 COMMENT=	Lightweight Standalone DMARC Report Viewer with IMAP Client
 LICENSE=	mit
 
+# bindgen needs libclang
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
+
 USE_LANGUAGES=	c
 USE_TOOLS+=	cmake
 
@@ -23,5 +26,4 @@ SITES.tokio-imap-${TOKIO_IMAP_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=djc/}tokio-im
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
