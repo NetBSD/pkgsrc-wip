@@ -1,0 +1,16 @@
+$NetBSD$
+
+Depends on unpublished crates. Can't use cargo.mk to fetch them.
+
+--- ../../tokio-tungstenite-2ae536b0de793f3ddf31fc2f22d445bf1ef2023d/Cargo.toml.orig	2026-01-08 03:24:32.000000000 +0000
++++ ../../tokio-tungstenite-2ae536b0de793f3ddf31fc2f22d445bf1ef2023d/Cargo.toml
+@@ -35,8 +35,7 @@ tokio = { version = "1.0.0", default-features = false,
+ tokio = { version = "1.0.0", default-features = false, features = ["io-util"] }
+ 
+ [dependencies.tungstenite]
+-git = "ssh://git@github.com/JakkuSakura/tungstenite-rs.git"
+-branch = "proxy-support"
++path = "../tungstenite-rs-f514de8644821113e5d18a027d6d28a5c8cc0a6e"
+ default-features = false
+ 
+ [dependencies.native-tls-crate]

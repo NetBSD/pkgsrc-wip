@@ -2,17 +2,23 @@ $NetBSD$
 
 Depends on unpublished crates. Can't use cargo.mk to fetch them.
 
---- Cargo.toml.orig	2025-12-21 05:06:39.000000000 +0000
+--- Cargo.toml.orig	2026-01-25 16:52:47.000000000 +0000
 +++ Cargo.toml
-@@ -293,8 +293,9 @@ opt-level = 0
+@@ -300,12 +300,12 @@ opt-level = 0
  [patch.crates-io]
  # Uncomment to debug local changes.
  # ratatui = { path = "../../ratatui" }
 -crossterm = { git = "https://github.com/nornagon/crossterm", branch = "nornagon/color-query" }
 -ratatui = { git = "https://github.com/nornagon/ratatui", branch = "nornagon-v0.29.0-patch" }
+-tokio-tungstenite = { git = "https://github.com/JakkuSakura/tokio-tungstenite", rev = "2ae536b0de793f3ddf31fc2f22d445bf1ef2023d" }
 +crossterm = { path = "../../crossterm-87db8bfa6dc99427fd3b071681b07fc31c6ce995" }
 +ratatui = { path = "../../ratatui-9b2ad1298408c45918ee9f8241a6f95498cdbed2" }
-+
++tokio-tungstenite = { path = "../../tokio-tungstenite-2ae536b0de793f3ddf31fc2f22d445bf1ef2023d" }
  
  # Uncomment to debug local changes.
  # rmcp = { path = "../../rust-sdk/crates/rmcp" }
+ 
+-[patch."ssh://git@github.com/JakkuSakura/tungstenite-rs.git"]
+-tungstenite = { git = "https://github.com/JakkuSakura/tungstenite-rs", rev = "f514de8644821113e5d18a027d6d28a5c8cc0a6e" }
++#[patch."ssh://git@github.com/JakkuSakura/tungstenite-rs.git"]
++tungstenite = { path = "../../tungstenite-rs-f514de8644821113e5d18a027d6d28a5c8cc0a6e" }
