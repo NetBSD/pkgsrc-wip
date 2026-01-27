@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.46 2025/09/16 12:23:20 gdt Exp $
 
-BLAKE2s (ups-nut-wip/nut-2.8.4.1239.tar.gz) = 469f3ae41aa3da4d9c5dcdf9512a3cf691850278df5803abcbba761c149b73a6
-SHA512 (ups-nut-wip/nut-2.8.4.1239.tar.gz) = 1822f4297fc9abb93927d7b18829c3ba250f1090b0e763bdaa2fe8e0ad0d76485312f21769ca8f8d1666a00621420ef427737600c1e7d6ead41a5a92340ff5fa
-Size (ups-nut-wip/nut-2.8.4.1239.tar.gz) = 6288369 bytes
+BLAKE2s (ups-nut-wip/nut-2.8.4.1239.tar.gz) = bd135b2efed68d615eb74044e7e9a9ffd25fb2bc39b52df401d3f0baf5603d26
+SHA512 (ups-nut-wip/nut-2.8.4.1239.tar.gz) = 11c2a39c29fa222401d71da8d363aff8c953f9c87a0aa87b6a049bd530727872c4f40193103c0cda58e7fe14a82e75c19d0d764be71f7aed8bb4572946f77be6
+Size (ups-nut-wip/nut-2.8.4.1239.tar.gz) = 6300416 bytes
 SHA1 (patch-clients_upsclient.c) = 45eee24ed3cc06bbf5ec81344d0db62a3da3a827
 SHA1 (patch-configure) = b1c2f7e57ecb4e4a94985f5b40afe5a00a9e9458
 SHA1 (patch-drivers_libhid.c) = 8b4f773d9b32e4c43f7045a4a83854382b08cb5b
