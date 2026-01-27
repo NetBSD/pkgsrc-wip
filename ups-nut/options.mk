@@ -8,6 +8,8 @@ PKG_SUGGESTED_OPTIONS=		python openssl
 
 .include "../../mk/bsd.options.mk"
 
+## NSS
+
 .if !empty(PKG_OPTIONS:Mnss)
 CONFIGURE_ARGS+=	--with-ssl=nss --with-nss --without-openssl
 .  include "../../devel/nss/buildlink3.mk"
@@ -18,10 +20,13 @@ CONFIGURE_ARGS+=	--with-ssl=openssl --without-nss --with-openssl
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 
+## PYTHON
+
+PLIST_VARS+=		python
+CONFIGURE_ARGS+=	--without-python2
 .if !empty(PKG_OPTIONS:Mpython)
 # Force only our chosen python3 (see Makefile comment for --without-python2)
 CONFIGURE_ARGS+=	--with-python3=${PYTHONBIN}
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 PLIST.python=		yes
 # \todo Move to split package.
 .else

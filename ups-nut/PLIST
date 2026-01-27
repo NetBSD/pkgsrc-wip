@@ -52,6 +52,7 @@ libexec/nut/liebert
 libexec/nut/liebert-esp2
 libexec/nut/liebert-gxe
 libexec/nut/masterguard
+libexec/nut/meanwell_ntu
 libexec/nut/metasys
 libexec/nut/mge-shut
 libexec/nut/mge-utalk
@@ -198,6 +199,7 @@ man/man8/liebert-esp2.8
 man/man8/liebert-gxe.8
 man/man8/liebert.8
 man/man8/masterguard.8
+man/man8/meanwell_ntu.8
 man/man8/metasys.8
 man/man8/mge-shut.8
 man/man8/mge-utalk.8
@@ -208,7 +210,7 @@ man/man8/nut-scanner.8
 man/man8/nutconf.8
 man/man8/nutdrv_hashx.8
 man/man8/nutdrv_qx.8
-man/man8/nutdrv_siemens_sitop.8
+man/man8/nutdrv_siemens-sitop.8
 man/man8/nutupsdrv.8
 man/man8/oneac.8
 man/man8/optiups.8

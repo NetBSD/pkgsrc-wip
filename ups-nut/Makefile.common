@@ -5,7 +5,7 @@
 # used by wip/ups-nut-usb/Makefile
 # used by wip/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.8.4.77
+DISTNAME=		nut-2.8.4.1239
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.NetBSD.org/~gdt/
@@ -27,7 +27,9 @@ USE_TOOLS=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-cgipath=${NUT_CGIDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}
+CONFIGURE_ARGS+=	--with-confdir-examples=${NUT_EGDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${NUT_DATADIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-statepath=${NUT_STATEDIR:Q}

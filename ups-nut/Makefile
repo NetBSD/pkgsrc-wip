@@ -5,8 +5,6 @@
 PKGNAME=		ups-${DISTNAME}
 COMMENT=		Network UPS Tools
 
-PLIST_VARS+=		python
-
 SUBST_CLASSES+=		man-so
 SUBST_MESSAGE.man-so=	Fixing manpage .so references.
 SUBST_STAGE.man-so=	pre-build
@@ -86,7 +84,6 @@ INSTALLATION_DIRS+=	${NUT_DOCDIR}/drivers
 CHECK_INTERPRETER_SKIP+=	share/nut/solaris-init/nut
 
 post-install:
-	${MV} ${DESTDIR}${NUT_CONFDIR}/*.sample ${DESTDIR}${NUT_EGDIR}
 	for f in AUTHORS COPYING ChangeLog NEWS.adoc README.adoc UPGRADING.adoc; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${NUT_DOCDIR}; \
 	done
