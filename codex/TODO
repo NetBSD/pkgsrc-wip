@@ -1,12 +1,1 @@
 Untested.
-
-Needs rust > 1.86:
-
-error[E0658]: `let` expressions in this position are unstable
-   --> protocol/src/protocol.rs:335:24
-    |
-335 |                     && let Some(tmpdir) = std::env::var_os("TMPDIR")
-    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    |
-    = note: see issue #53667 <https://github.com/rust-lang/rust/issues/53667> for more information
-

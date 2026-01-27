@@ -10,6 +10,9 @@ HOMEPAGE=	https://github.com/openai/codex/
 COMMENT=	Lightweight coding agent that runs in your terminal
 LICENSE=	apache-2.0
 
+# bindgen (for rama-boring-sys) needs libclang
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
+
 WRKSRC=		${WRKDIR}/codex-rust-v${PKGVERSION_NOREV}/codex-rs
 USE_LANGUAGES=	c
 USE_TOOLS+=	git pkg-config perl gmake
@@ -46,7 +49,5 @@ do-install:
 
 .include "cargo-depends.mk"
 .include "../../lang/rust/cargo.mk"
-# for rama-boring-sys
-.include "../../lang/clang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
