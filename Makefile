@@ -1534,7 +1534,6 @@ SUBDIR+=	heaptrack
 SUBDIR+=	heatshrink
 SUBDIR+=	heimdal-dev
 SUBDIR+=	heimdall
-SUBDIR+=	helix
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
