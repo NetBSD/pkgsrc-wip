@@ -16,3 +16,7 @@
 * Package / Install
 - run suricata-update during install or disp message
   about it
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-22258, CVE-2026-22259, CVE-2026-22260, CVE-2026-22261,
+  CVE-2026-22262, CVE-2026-22263, CVE-2026-22264
