@@ -1,0 +1,15 @@
+$NetBSD$
+
+Allow pkgsrc to set CC
+
+--- makefile.cvc64.orig	2023-07-16 21:42:51.000000000 +0000
++++ makefile.cvc64
+@@ -115,7 +115,7 @@ CFLAGS= $(ARCHFLGS) -pipe $(WARNS) $(INC
+ # CFLAGS= $(ARCHFLGS) -pipe $(WARNS) $(INCS) -D__DBMALLOC__ $(CVCCFLGS) -g 
+ 
+ # select gcc version to use - for older Linux systems may need older compiler
+-CC=gcc
++CC?=gcc
+ 
+ # this is ld equivalent of gcc -m32 so not used here
+ # LD=ld -m elf_i386

@@ -4,4 +4,6 @@ BLAKE2s (open-src-cvc/b3e7fded6d4d79491886de40aec3a780efdd9d4e-b3e7fded6d4d79491
 SHA512 (open-src-cvc/b3e7fded6d4d79491886de40aec3a780efdd9d4e-b3e7fded6d4d79491886de40aec3a780efdd9d4e.tar.gz) = c099a96ebbdbf2e3a4ed99ec5f808c787403736ef915b8a91d128739475a27cceec9122d2bac749d9287a3ff532480424fe99c79ed22174c0a67afb517bcfc02
 Size (open-src-cvc/b3e7fded6d4d79491886de40aec3a780efdd9d4e-b3e7fded6d4d79491886de40aec3a780efdd9d4e.tar.gz) = 5404140 bytes
 SHA1 (patch-config.h) = 889582aa4ba3cd3cf055f3b93eacf3db1c65cc4c
-SHA1 (patch-v__asmlnk.c) = 023bbcb85e6f105f4b93d9dc078d27925418f62b
+SHA1 (patch-makefile.cvc64) = 8a3c00e9c1ae0fb418377bfc48de22736f078ee2
+SHA1 (patch-v__asmlnk.c) = 24e09744414870f52eff73db5658c8373a0b9415
+SHA1 (patch-v__dpi.c) = 663003f5487e463657ab784bfdad5806cf32fd8a

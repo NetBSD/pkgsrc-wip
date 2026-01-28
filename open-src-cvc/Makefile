@@ -20,11 +20,11 @@ USE_TOOLS+=	gmake
 MKPIE_SUPPORTED=	no
 INSTALLATION_DIRS=	bin
 
-do-build:
-	cd ${WRKSRC} && ${MAKE_PROGRAM} -f makefile.cvc64
+MAKE_FILE=	makefile.cvc64
+BUILD_TARGET=	cvc64
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cvc64 ${DESTDIR}${PREFIX}/bin/cvc64
+	${INSTALL_PROGRAM} ${WRKSRC}/cvc64 ${DESTDIR}${PREFIX}/bin/cvc
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:Q}
