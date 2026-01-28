@@ -1,0 +1,30 @@
+WARN: ../../doc/TODO:473: Invalid package name "beancount".
+ERROR: Makefile: Each package must define its LICENSE.
+
+	To take a good guess on the license of a package, run "make
+	guess-license".
+
+ERROR: patches/patch-config.h:3: Each patch must be documented.
+
+	Pkgsrc tries to have as few patches as possible. Therefore, each
+	patch must document why it is necessary. Typical reasons are
+	portability or security. A typical documented patch looks like this:
+
+		$NetBSD$
+
+		Portability fixes for GCC 4.8 on Linux.
+		See https://github.com/org/repo/issues/7
+
+		--- old/file
+		+++ new/file
+
+	Patches that are related to a security issue should mention the
+	corresponding CVE identifier.
+
+	Each patch should be sent to the upstream maintainers of the
+	package, so that they can include it in future versions. After
+	submitting a patch upstream, the corresponding bug report should be
+	mentioned in this file, to prevent duplicate work.
+
+ERROR: patches/patch-v__asmlnk.c:3: Each patch must be documented.
+3 errors and 1 warning found.

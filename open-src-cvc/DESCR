@@ -1,0 +1,8 @@
+Description from OpenLane Documentation
+
+Unfortunately, popular open-source Verilog simulators don't have support for
+SDF (Verilator) or have limited support that is not entirely useful (iverilog).
+However, there is a less popular free-of-charge Verilog simulator called CVC by
+Tachyon DA that has decent support for timing simulation using SDF files. CVC
+is a proprietary shared source simulator, but its license allows using it
+freely for non-commercial designs.
