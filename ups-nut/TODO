@@ -1,5 +1,6 @@
-  - Check all patches and comment and send upstream
-  - Resolve manpage building
-  - Test forced shutdown and uncomment upsdrvctl shutdown
- 
-  - Document why altqd is in files/upskillpower.sh
+  - Debug PLIST.Darwin not working.
+  - Check all patches and comment and send upstream.
+  - Resolve manpage building.
+  - Think about uncommenting upsdrvctl shutdown.
+  - Document why altqd is in files/upskillpower.sh, or remove.
+
