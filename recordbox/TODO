@@ -1,0 +1,6 @@
+libseccomp detection disabled, but this will probably break the build later.
+
+Currently fails with:
+Program blueprint-compiler found: NO
+Fallback to subproject blueprint-compiler which provides program blueprint-compiler
+ERROR: Subproject blueprint-compiler is buildable: NO

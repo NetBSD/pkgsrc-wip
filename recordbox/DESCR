@@ -1,0 +1,20 @@
+Recordbox is yet another music player for Linux, built with GTK
+and Libadwaita for the GNOME desktop.
+
+Features
+
+- Flexible library navigation. Browse albums filtered by either
+  artist or genre, with the option to further group the album list
+  to then browse by artist-genre-album or genre-artist-album.
+- Playback of music using GStreamer, with gapless playback and
+  ReplayGain support.
+- Viewing and editing of lyrics, for both embedded and external
+  lyrics.
+- Integration with GNOME's global search-find and play music directly
+  from the overview.
+- Dynamic UI recoloring with a gradient background derived from
+  the playing song's album art.
+- Detection and display of embedded or external album and track
+  cover art.
+- MPRIS support for controlling Recordbox from other applications.
+- A fully responsive interface using GTK and Libadwaita.

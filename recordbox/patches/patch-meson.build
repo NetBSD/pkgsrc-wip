@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- meson.build.orig	2026-01-28 11:08:45.025264784 +0000
++++ meson.build
+@@ -29,7 +29,7 @@ dependency('lcms2', version: '>= 2.12.0')
+ 
+ # glycin dependencies
+ dependency('lcms2', version: '>= 2.12.0')
+-dependency('libseccomp', version: '>= 2.5.0')
++#dependency('libseccomp', version: '>= 2.5.0')
+ 
+ find_program('glib-compile-resources')
+ glib_compile_schemas = find_program('glib-compile-schemas')

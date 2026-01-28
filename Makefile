@@ -5138,6 +5138,7 @@ SUBDIR+=	realpath
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	recidivm
+SUBDIR+=	recordbox
 SUBDIR+=	recutils
 SUBDIR+=	redfang
 SUBDIR+=	redict
