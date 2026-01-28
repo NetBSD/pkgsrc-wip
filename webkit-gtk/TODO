@@ -1,10 +1,5 @@
-1. fails to build:
-[4/28] Generate bindings (WebCoreTestSupportBindings)
-...
- Command '['/tmp/wip/webkit-gtk/work/webkitgtk-2.50.4/tmp-introspecttz1ub1ts/WebKit2WebExtension-4.1', '--introspect-dump=/tmp/wip/webkit-gtk/work/webkitgtk-2.50.4/tmp-introspecttz1ub1ts/functions.txt,/tmp/wip/webkit-gtk/work/webkitgtk-2.50.4/tmp-introspecttz1ub1ts/dump.xml']' died with <Signals.SIGSEGV: 11>.
+pkg_add: webkit-gtk-2.50.4: missing required library: /tmp/wip/webkit-gtk/work/.buildlink/lib/libsqlite3.so
 
-2. pkg_add: webkit-gtk-2.48.5: missing required library: /scratch/wip/webkit-gtk-2.46/work/.buildlink/lib/libsqlite3.so
-
-3. Test with $PREFIX/libexec/webkit2gtk-4.1/MiniBrowser:
+Test with $PREFIX/libexec/webkit2gtk-4.1/MiniBrowser:
 
 start, but often gets 'WebProcess CRASHED' error

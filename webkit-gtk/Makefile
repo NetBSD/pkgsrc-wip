@@ -30,6 +30,9 @@ CXXFLAGS+=	-I${PREFIX}/include/gstreamer-1.0
 CFLAGS+=		-Wno-unused-parameter -Wno-undef
 CXXFLAGS+=		-Wno-unused-parameter -Wno-undef
 
+# g-ir-scanner dumps core with full RELRO
+RELRO_SUPPORTED=	partial
+
 # From Arch Linux:
 # JITted code crashes when CET is used
 #CFLAGS+=		-fcf-protection=none
@@ -156,18 +159,19 @@ NOT_PAX_MPROTECT_SAFE+=		libexec/webkit2gtk-4.1/WebKitWebProcess
 #NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.1/WebKitNetworkProcess
 NOT_PAX_MPROTECT_SAFE+=		libexec/webkit2gtk-4.1/jsc
 
+# TODO: fix shell portability issues in these files
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/create-symlink-to-altroot.sh
-#CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
+CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/create-symlink-to-altroot.sh
-#CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/generate-unified-sources.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/create-symlink-to-altroot.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
-#CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-unified-sources.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/check-xcfilelists.sh
-#CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
+CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 
 .include "options.mk"
 
