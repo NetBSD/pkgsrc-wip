@@ -1,10 +1,9 @@
-www/chromium: update to 144.0.7559.96
+www/chromium: update to 144.0.7559.109
 
-* 144.0.7559.96
-This update includes 1 security fix. Below, we highlight fixes that were
-contributed by external researchers. Please see the Chrome Security Page
-for more information.
-[TBD][473851441] High CVE-2026-1220: Race in V8.
-Reported by @p1nky4745 on 2026-01-07
-
-* Pkgsrc: enable widevine
+* 144.0.7559.109
+This update includes 1 security fix. Below, we highlight fixes that
+were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$3000][474435504] High CVE-2026-1504: Inappropriate implementation
+in Background Fetch API.
+Reported by Luan Herrera (@lbherrera_) on 2026-01-09

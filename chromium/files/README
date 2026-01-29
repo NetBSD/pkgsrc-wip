@@ -23,3 +23,6 @@ Some notes on chromium:
   you should enable the ndevd service (a devpubd drop-in replacement)
   in /etc/rc.conf.
 
+5) Widevine support
+  Install the multimedia/openwv package and follow the instructions
+  in its README.chromium file. 
