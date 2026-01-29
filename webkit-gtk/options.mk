@@ -2,7 +2,7 @@
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
-PKG_SUPPORTED_OPTIONS=	debug webkit-jit wayland
+PKG_SUPPORTED_OPTIONS=	debug wayland
 PKG_SUGGESTED_OPTIONS=
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
@@ -26,7 +26,7 @@ WEBKIT_JIT_MACHINE_PLATFORMS+=	Linux-*-aarch64 Linux-*-mips*
 WEBKIT_JIT_MACHINE_PLATFORMS+=	NetBSD-*-x86_64 NetBSD-*-aarch64
 
 .if !empty(WEBKIT_JIT_MACHINE_PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@)
-PKG_SUGGESTED_OPTIONS+=	webkit-jit
+#PKG_SUGGESTED_OPTIONS+=	webkit-jit
 .endif
 
 .include "../../mk/bsd.options.mk"
