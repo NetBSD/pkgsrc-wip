@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (psleak-0.1.2.tar.gz) = 5ebf53f2aec2e685670ea4b1108dc1dd61147f4abb2b67dbe9180e379d7d7287
-SHA512 (psleak-0.1.2.tar.gz) = 3723f7f1ed9e63f9c5fa66403ba7bfa057787ace6fd7c04e7a0f069e65a9524c8bc694b72419ab39b68f8452424a9241d6ec58db529d170d3df16efbe095c38f
-Size (psleak-0.1.2.tar.gz) = 24552 bytes
