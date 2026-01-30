@@ -31,7 +31,8 @@ REPLACE_BASH+=		gdb/gstack-1.in
 # If ever necessary, this should be fixed using REPLACE_BASH.
 CHECK_PORTABILITY_SKIP+=	sim/testsuite/sim/bfin/run-tests.sh
 
-DISTINFO_FILE?=	${.CURDIR}/../../cross/common-gnu-toolchain/distinfo-${DISTNAME}
+DISTINFO_FILE?=	${.CURDIR}/../../wip/common-gnu-toolchain/distinfo-${DISTNAME}
+PATCHDIR?=	${.CURDIR}/../../wip/common-gnu-toolchain/patches-${DISTNAME}
 
 .include "gdb-options.mk"
 .include "../../mk/bsd.prefs.mk"

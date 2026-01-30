@@ -5,5 +5,5 @@ TARGET=		riscv64-none-elf
 MAINTAINER=	port-riscv@NetBSD.org
 COMMENT=	Cross binutils for bare metal RISC-V 64-bit and 32-bit ELF
 
-.include "../common-gnu-toolchain/binutils.mk"
+.include "../../wip/common-gnu-toolchain/binutils.mk"
 .include "../../mk/bsd.pkg.mk"

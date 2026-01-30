@@ -8,5 +8,5 @@ COMMENT=		GCC for bare metal RISC-V 32/64 bit little-endian ELF
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/config/nvptx/gen-opt.sh
 
-.include "../common-gnu-toolchain/gcc.mk"
+.include "../../wip/common-gnu-toolchain/gcc.mk"
 .include "../../mk/bsd.pkg.mk"

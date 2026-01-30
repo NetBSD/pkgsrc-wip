@@ -30,8 +30,8 @@ TOOLCHAIN_PREFIX=	${PREFIX}/cross-${TARGET}
 
 GNU_CONFIGURE_PREFIX=	${TOOLCHAIN_PREFIX}
 
-DISTINFO_FILE?=	${.CURDIR}/../../cross/common-gnu-toolchain/distinfo-binutils
-PATCHDIR?=	${.CURDIR}/../../cross/common-gnu-toolchain/patches-binutils
+DISTINFO_FILE?=	${.CURDIR}/../../wip/common-gnu-toolchain/distinfo-binutils
+PATCHDIR?=	${.CURDIR}/../../wip/common-gnu-toolchain/patches-binutils
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}

@@ -7,5 +7,5 @@ COMMENT=		GCC for bare metal ARM EABI
 
 CONFIGURE_ARGS+=	--with-multilib-list=aprofile,rmprofile
 
-.include "../common-gnu-toolchain/gcc.mk"
+.include "../../wip/common-gnu-toolchain/gcc.mk"
 .include "../../mk/bsd.pkg.mk"

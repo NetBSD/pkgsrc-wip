@@ -5,5 +5,5 @@ TARGET=		mipsel-none-elf
 MAINTAINER=	port-mips@NetBSD.org
 COMMENT=	Cross binutils for bare metal 32-bit little-endian ELF
 
-.include "../common-gnu-toolchain/binutils.mk"
+.include "../../wip/common-gnu-toolchain/binutils.mk"
 .include "../../mk/bsd.pkg.mk"

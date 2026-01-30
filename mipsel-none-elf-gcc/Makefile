@@ -9,5 +9,5 @@ COMMENT=		GCC for bare metal MIPS 32-bit little-endian ELF
 # Relocations result in a linker error.
 MKPIE_SUPPORTED=	no
 
-.include "../common-gnu-toolchain/gcc.mk"
+.include "../../wip/common-gnu-toolchain/gcc.mk"
 .include "../../mk/bsd.pkg.mk"

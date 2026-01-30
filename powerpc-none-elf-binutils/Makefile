@@ -5,5 +5,5 @@ TARGET=		powerpc-none-elf
 MAINTAINER=	port-powerpc@NetBSD.org
 COMMENT=	Cross binutils for bare metal PowerPC ELF
 
-.include "../common-gnu-toolchain/binutils.mk"
+.include "../../wip/common-gnu-toolchain/binutils.mk"
 .include "../../mk/bsd.pkg.mk"

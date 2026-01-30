@@ -4,10 +4,10 @@ GCC_VERSION?=		14.3.0
 
 .if ${GCC_VERSION} == 14.3.0
 NEWLIBVER?=		4.5.0.20241231
-DEPENDS+=		cross-${TARGET}-binutils>=2.45:../../cross/${TARGET}-binutils
+DEPENDS+=		cross-${TARGET}-binutils>=2.45:../../wip/${TARGET}-binutils
 .elif ${GCC_VERSION} == 13.2.0
 NEWLIBVER=		4.3.0.20230120
-DEPENDS+=		cross-${TARGET}-binutils>=2.42:../../cross/${TARGET}-binutils
+DEPENDS+=		cross-${TARGET}-binutils>=2.42:../../wip/${TARGET}-binutils
 .endif
 
 DISTNAME?=		gcc-${GCC_VERSION}
@@ -43,7 +43,6 @@ USE_TOOLS+=		bash gmake gsed makeinfo perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CHECK_PORTABILITY_SKIP+=contrib/*
-MKPIE_SUPPORTED=	no # relocation errors on netbsd-9 aarch64
 
 GNU_CONFIGURE_PREFIX=	${TOOLCHAIN_PREFIX}
 
@@ -64,8 +63,8 @@ INFO_FILES=		yes
 # PLIST.libcpp=	yes
 # .endif
 
-DISTINFO_FILE?=	${.CURDIR}/../../cross/common-gnu-toolchain/distinfo-${DISTNAME}
-PATCHDIR?=	${.CURDIR}/../../cross/common-gnu-toolchain/patches-${DISTNAME}
+DISTINFO_FILE?=	${.CURDIR}/../../wip/common-gnu-toolchain/distinfo-${DISTNAME}
+PATCHDIR?=	${.CURDIR}/../../wip/common-gnu-toolchain/patches-${DISTNAME}
 
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/newlib ${WRKSRC}/newlib

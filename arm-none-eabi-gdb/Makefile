@@ -5,5 +5,5 @@ TARGET=			arm-none-eabi
 MAINTAINER=		ryoon@NetBSD.org
 COMMENT=		Cross GDB for bare metal ARM EABI
 
-.include "../common-gnu-toolchain/gdb.mk"
+.include "../../wip/common-gnu-toolchain/gdb.mk"
 .include "../../mk/bsd.pkg.mk"

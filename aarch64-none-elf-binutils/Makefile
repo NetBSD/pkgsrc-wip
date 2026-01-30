@@ -5,5 +5,5 @@ TARGET=		aarch64-none-elf
 MAINTAINER=	port-arm@NetBSD.org
 COMMENT=	Cross binutils for bare metal AArch64 ELF
 
-.include "../common-gnu-toolchain/binutils.mk"
+.include "../../wip/common-gnu-toolchain/binutils.mk"
 .include "../../mk/bsd.pkg.mk"
