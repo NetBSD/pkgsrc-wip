@@ -2325,7 +2325,6 @@ SUBDIR+=	makepp
 SUBDIR+=	maker
 SUBDIR+=	malaga
 SUBDIR+=	maloc
-SUBDIR+=	mame
 SUBDIR+=	man
 SUBDIR+=	man-db
 SUBDIR+=	manatee
