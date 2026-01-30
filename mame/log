@@ -1,0 +1,28 @@
+Are you ready for the first MAME release of 2026? MAME 0.285 is
+out now! We’ve added support for an early, unreleased version of
+Atari’s Relief Pitcher running on their System 1 platform. Moon
+Raker, a Nichibutsu shooter from the late ’70s, has also been found
+and emulated. Sega’s Waku Waku series has been further filled out
+with the addition of Waku Waku Jumbo. And for something completely
+different, Apple’s first computer built around the WIMP paradigm,
+the Lisa, is starting the year in substantially better shape.
+
+If you play arcade games that utilised lightguns, you’ll no doubt
+be aware that pulling the trigger while aiming the gun away from
+the screen was a common way to reload. You may also be aware that
+MAME had an option to make this a bit easier if you’re using a
+lightgun to play. That option has been removed, with a new plugin
+taking its place. The great news is that the plugin works even if
+you aren’t using a lightgun. That’s right, you can now assign a
+button to reload when you’re playing Virtua Cop or Lethal Enforcers
+with a keyboard, mouse or trackball. Check the plugin documentation
+for more details.
+
+The Hanimex Pencil II computer has had a bit of an overhaul, which
+should make more software usable. A few more of the many BBC Micro
+peripherals have been emulated. Other improvements this month
+include better Apple IIgs periodic interrupt emulation, another
+working Apple II clone from behind the Iron Curtain, better
+representation of base Grid Compass hardware configurations, and
+better default sound routing for people using Apple notebook
+computers.
