@@ -1,0 +1,1 @@
+bin/riscv64-none-elf-gdb @PREFIX@/cross-riscv64-none-elf/bin/riscv64-none-elf-gdb

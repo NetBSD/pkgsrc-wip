@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.12 2021/10/26 10:07:50 nia Exp $
+
+BLAKE2s (binutils-2.45.tar.xz) = cb7c92ac2441421d9a054d8585456dba6e714aa6cb7392cdf561d55879bf24a8
+SHA512 (binutils-2.45.tar.xz) = c7b10a7466d9fd398d7a0b3f2a43318432668d714f2ec70069a31bdc93c86d28e0fe83792195727167743707fbae45337c0873a0786416db53bbf22860c16ce7
+Size (binutils-2.45.tar.xz) = 27868232 bytes
+SHA1 (patch-ld_emulparams_elf32lriscv-defs.sh) = 90510e37518d4944c8fc50c458342eaf086f0323
+SHA1 (patch-zlib_zutil.c) = 00db854685510b1f52bdc62f996fb792bd46bd63

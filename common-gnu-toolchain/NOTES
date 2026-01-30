@@ -1,0 +1,16 @@
+All of the U-Boot architectures have been switched to use these common
+makefiles for their toolchain.
+
+* cross/arm-none-eabi
+* cross/aarch64-none-elf
+* cross/riscv64-none-elf
+* cross/mipsel-none-elf
+* cross/powerpc-none-elf
+
+powerpc and mipsel cross compilers are still using GCC 13.2 because
+newlib for those platforms has K&R code for testing the linker and it
+won't compile with a newer GCC. Upstream is working on that problem.
+
+GDB for riscv64 has been added.
+
+TODO: GDB python option fixes in PLIST

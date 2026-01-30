@@ -1,0 +1,8 @@
+U-Boot Architectures
+
+* cross-arm-none-eabi-gcc-[0-9]*:../../cross/arm-none-eabi-gcc
+* cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
+* cross-riscv64-none-elf-gcc-[0-9]*:../../cross/riscv64-none-elf-gcc
+* cross-mipsel-none-elf-gcc-[0-9]*:../../cross/mipsel-none-elf-gcc
+* cross-powerpc-none-elf-gcc-[0-9]*:../../cross/powerpc-none-elf-gcc
+

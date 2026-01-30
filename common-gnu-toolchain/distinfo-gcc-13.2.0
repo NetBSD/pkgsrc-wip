@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.5 2022/04/15 17:16:08 tnn Exp $
+
+BLAKE2s (gcc-13.2.0.tar.xz) = 89847ac474d00cde32fbcae20154f8aedff9c66158faf95ad7a78cc9a190d4c4
+SHA512 (gcc-13.2.0.tar.xz) = d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
+Size (gcc-13.2.0.tar.xz) = 87858592 bytes
+BLAKE2s (newlib-4.3.0.20230120.tar.gz) = 968219962893eac031420e21126ffec27a81fbe1b9c5105cae8fdb1ee8f4020b
+SHA512 (newlib-4.3.0.20230120.tar.gz) = 4a06309d36c2255fef8fc8f2d133cafa850f1ed2eddfb27b5d45f5d16af69e0fca829a0b4c9b34af4ed3a28c6fcc929761e0ee823a4229f35c2853d432b5e7ef
+Size (newlib-4.3.0.20230120.tar.gz) = 8832922 bytes
+SHA1 (patch-gcc_config_aarch64_aarch64.h) = 001fd95223b08791a07c016b9222eda2475d7de1
+SHA1 (patch-gcc_config_arm_arm.h) = 2209c88f457bf8be72410f12ea899f8757ed0ada
+SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
+SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-libiberty_Makefile.in) = 7ea2578b5b77cb4adcd4afe3d63739efc68a1540
+SHA1 (patch-zlib_zutil.c) = 33a75b615f4d43c628450f8f3743a00a1a050c3e

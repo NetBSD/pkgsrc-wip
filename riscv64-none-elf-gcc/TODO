@@ -1,6 +1,0 @@
-berte:
-If you are using bash-shell you may get an error during libgcc compilation. I haven't found a solution for this yet. 
-
-Workaround:
-
-Using a shell program other than bash
