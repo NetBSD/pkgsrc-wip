@@ -8,3 +8,4 @@ SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb4
 SHA1 (patch-makefile) = 865b1513a86567352570aeba5f12251486c65052
 SHA1 (patch-scripts_src_3rdparty.lua) = 906d1024907ff6577bcf232bf9e384f852535781
 SHA1 (patch-scripts_toolchain.lua) = df383dab4787f58348d62e1c5f25ddaa45eb8199
+SHA1 (patch-src_devices_cpu_sharc_sharcops__table.cpp) = 83b87cc8353a7b6771966f927f41ee17be63bd36
