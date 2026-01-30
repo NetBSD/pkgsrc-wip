@@ -43,6 +43,7 @@ USE_TOOLS+=		bash gmake gsed makeinfo perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CHECK_PORTABILITY_SKIP+=contrib/*
+MKPIE_SUPPORTED=	no	# relocation errors on various NetBSDs
 
 GNU_CONFIGURE_PREFIX=	${TOOLCHAIN_PREFIX}
 

@@ -6,8 +6,5 @@ GCC_VERSION=		13.2.0
 MAINTAINER=		port-powerpc@NetBSD.org
 COMMENT=		GCC for bare metal PowerPC ELF
 
-# Relocations result in a linker error.
-MKPIE_SUPPORTED=	no
-
 .include "../../wip/common-gnu-toolchain/gcc.mk"
 .include "../../mk/bsd.pkg.mk"
