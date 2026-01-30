@@ -3,3 +3,5 @@ $NetBSD$
 BLAKE2s (libopeninput-1.26.2-5e93d5c82d455c3901c2cb9b40dbbe5358a88e30.tar.gz) = 633e65ec1d232fb9311a2c9651017811c2c394ee66f48ee191879236dfdcc44b
 SHA512 (libopeninput-1.26.2-5e93d5c82d455c3901c2cb9b40dbbe5358a88e30.tar.gz) = 66bc91cc789a7fcd0b7e5c1ef8d35853f5f4c80adae9ca1c3db8984ccaede01757c904ac1a878c34e2eb0cfeff92114040821be6eed6d8874f9ffa2845c697fd
 Size (libopeninput-1.26.2-5e93d5c82d455c3901c2cb9b40dbbe5358a88e30.tar.gz) = 1058625 bytes
+SHA1 (patch-src_wscons.c) = a8c69a31f222aa4684b3dfac475fba0a002afe82
+SHA1 (patch-src_wscons.h) = 23dfb69f63dab9130337ea5738a99f95be3b0498
