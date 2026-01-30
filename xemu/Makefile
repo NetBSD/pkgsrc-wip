@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2021/11/06 16:40:06 rhialto Exp $
 
-DISTNAME=	xemu-0.0.2025.04.23
+DISTNAME=	xemu-0.0.2026.01.29
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lgblgblgb/}
 GITHUB_PROJECT=	xemu
-GITHUB_TAG=	84a7e25401f93aa18e449c710467e9d493e586f6
+GITHUB_TAG=	40dfef0d1d5f56be2469492715c12bdb32c75b67
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/lgblgblgb/xemu
