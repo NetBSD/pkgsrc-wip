@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.569 2025/11/14 17:17:18 ryoon Exp $
 
-BLAKE2s (librewolf-147.0.1-3.source.tar.gz) = d6d675b0ea215bc9d5e4cdd6aab7c256b369235608e747d86c8a3827b582696c
-SHA512 (librewolf-147.0.1-3.source.tar.gz) = cfc1db13cd48000428c9d291a3450350e4dbe5536a89c543a8bd3547e1fb9d4e415f9e4f61c80915a9d9ecd7682bf3ebcb175da07ebfe742921f2aaaaec1d554
-Size (librewolf-147.0.1-3.source.tar.gz) = 1038136560 bytes
-BLAKE2s (nodejs-output-146.0.1.tgz) = 325dc3d29b5fa5492bfd77905caf0030db0b61b8b8db6317cf4097d236435714
-SHA512 (nodejs-output-146.0.1.tgz) = 847a32df3759e2650b6897794a66036c99ed727849f39a545671d47385de3610766e64f5f329e5d35d0bdf261d585db1b1bc0815900b3558a4db184833c71699
-Size (nodejs-output-146.0.1.tgz) = 249292 bytes
+BLAKE2s (librewolf-147.0.2-1.source.tar.gz) = 4301693564b615fb830043fcaf2613e82700e2235b10728f4a05f04d762cd806
+SHA512 (librewolf-147.0.2-1.source.tar.gz) = 56b4b1917efeadc8f3c1f35f861c3f3ede0c096d92102078d1cf44d37f21369dcd1f7f2c3e5d21935502435c41660e2184854e5a81cdade809e8224c4cf4fb0e
+Size (librewolf-147.0.2-1.source.tar.gz) = 1038117721 bytes
+BLAKE2s (nodejs-output-147.0.tgz) = e88c1c8c5117fbfb4fd089267b9a0a6882520ed7bcc1dc494b734b491b448892
+SHA512 (nodejs-output-147.0.tgz) = e99a5de23ad0aa5ab0f040bfe400c1ed210547421fa19026efe280c522773faa8b76106952bbc42c7bb765349c6a3ca9cc3b76d8cfcbbff5d72db65054e44339
+Size (nodejs-output-147.0.tgz) = 249306 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
