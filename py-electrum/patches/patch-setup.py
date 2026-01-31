@@ -2,7 +2,7 @@ $NetBSD$
 
 Unconditional installation of data files.
 
---- setup.py.orig	2025-10-24 15:49:25.764050171 +0000
+--- setup.py.orig	2000-11-11 11:11:11.000000000 +0000
 +++ setup.py
 @@ -30,15 +30,11 @@ version_spec = importlib.util.spec_from_
  version_module = version = importlib.util.module_from_spec(version_spec)

@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	Electrum-4.6.2
+VERSION=	4.7.0
+DISTNAME=	Electrum-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	finance python
-MASTER_SITES=	https://download.electrum.org/4.6.2/
+MASTER_SITES=	https://download.electrum.org/${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://download.electrum.org/4.6.2/
+HOMEPAGE=	https://electrum.org/
 COMMENT=	Free non-custodial cryptocurrency wallet for Bitcoin
 LICENSE=	mit
 
@@ -30,7 +30,13 @@ USE_LANGUAGES=	# none
 
 WHEEL_NAME=	${DISTNAME:tl}
 
-REPLACE_PYTHON=		*.py
+REPLACE_PYTHON+=	electrum/electrum
+REPLACE_PYTHON+=	electrum/scripts/*.py
+REPLACE_PYTHON+=	electrum/locale/update.py
+
+post-extract:
+	# remove protobuf source files
+	${RM} -fr ${WRKSRC}/electrum/plugins/keepkey/keepkeylib/device-protocol
 
 .include "options.mk"
 .include "../../lang/python/application.mk"

@@ -1,7 +1,6 @@
 $NetBSD$
 
-BLAKE2s (Electrum-4.6.2.tar.gz) = 789e9da18af40ccd9e6b1257c42c675fd04b05ca06d731d6e8e0f51745f20569
-SHA512 (Electrum-4.6.2.tar.gz) = 890c1fae4cd2da5f1fea3f07c1c6b537f9557177b86e23c40333ec83743ed46182ec74e43a27416a3eaa9704d87d0a1702d0a789b23467bcc68a17d638b43655
-Size (Electrum-4.6.2.tar.gz) = 15020844 bytes
-SHA1 (patch-electrum_plugins_coldcard_coldcard.py) = c6aa1a4960cd6b88cd74252b425b4ef88c9e04ff
-SHA1 (patch-setup.py) = f047112c899ae240fbbf50df14f16e90d79dbec6
+BLAKE2s (Electrum-4.7.0.tar.gz) = 227696193dfff453bdc213cc9190b8df1ca1aa1edb49dd0b9bc59e7711273981
+SHA512 (Electrum-4.7.0.tar.gz) = 65eb30b70504953612e081763b9d0039eb4692d28b17cc25adf174f76ac51088b7f46b47fcbd7274bb377d77dbf3dab81fd8cfbc23fdf04b8afc0a8872227af5
+Size (Electrum-4.7.0.tar.gz) = 13905990 bytes
+SHA1 (patch-setup.py) = b0173c6a764b41a29370222b15f441f6d1294797
