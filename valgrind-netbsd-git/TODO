@@ -1,0 +1,3 @@
+checking for a supported OS... no (netbsd)
+configure: error: Valgrind is operating system specific. Sorry.
+*** Error code 1
