@@ -1,3 +1,133 @@
+cad/kicad: Update to 9.0.7
+
+KiCad 9.0.7 (2026-01-01)
+
+General
+
+- Improve rotation field parsing on Eagle import.
+- Fix EasyEDA Pro v2.2 import compatibility. #22239
+- Support Autodesk Fusion urn format for Eagle import. #22394
+- Fix broken non-English language font rendering. #22402
+- Add rule check exclusion comment to JSON report. #22330
+- Fix polygon filling in PDF export.
+- Fix crash due to measurement tool in footprint chooser
+  window. #21929
+- Fix incorrect bitmap positions in SVG plotter. #22326
+- Fix broken SVG import of degenerate splines. #22556
+- Fix crash when project tree files disappear. #22568
+
+Schematic Editor
+
+- Fix selection box offset with custom fonts. #21802
+- Fix regression with resolving text variables in symbol fields
+  table. #19978
+- Fix image rotation direction. #22254
+- Add hierarchical path support to component classes.
+- Adding row or column to symbol fields table now respects formatting.
+- Allow picking "Global Net Name" from symbol when importing EasyEDA
+  Pro schematic. #19734
+- Change from Arial to default font when importing EasyEDA Pro
+  schematic.
+- Improve text sizing when importing EasyEDA Pro schematic.
+- Fix symbol pin name and number when importing from EasyEDA Pro V3.
+- Fix broken net label copy after creation. #22373
+- Fix initial focus in label properties dialog.
+- Resolve text variables when resolving netclasses. #22413
+- Ensure multiple label placement generates unique IDs for each
+  label. #22529
+
+Symbol Editor
+
+- Prevent unhandled exception when trying to change "unit" of element
+  in multi-part symbol. #21966
+- Resolve text variables in descriptions and keywords. #22146
+- Load correct body style names for De Morgan variants. #22303
+
+Simulator
+
+- Fix assertion when opening main window (Sentry KICAD-XS2).
+
+Board Editor
+
+- Fix broken table output. #21934
+- Fix error in collision logic for arc to rectangle.
+- Fix broken copper to hole DRC constraint. #21941
+- Do not force manual assignment of field names if they do not
+  exist. #21928
+- Fix position file alignment when text contains UTF-8
+  characters. #21982
+- Do not sound bell when duplicating. #22158
+- Resolve track drag collision first before showing "Track violates
+  DRC" when routing.
+- Apply custom design rule clearance outlines immediately. #22203
+- Use drill hole dimensions instead of copper pad shape when exporting
+  to IPC-2581. #22145
+- Work around a bug in JLCEDA V1 format export where SMD pads specify
+  zero sized hole.
+- Fix plot pad issue with solder paste layer when using a percentage
+  for clearance. #22306
+- Fix loading of shape offset and delta for complex padstacks. #21691
+- Use active layer when pasting text from clipboard. #22370
+- Fix broken Hyperlynx arc export. #22178
+- Prevent crash when placing free vias (Fixes Sentry KICAD-ZY6).
+- Update changes list when checkboxes changed in "Update PCB from
+  Schematic" dialog. #22467
+- Fix accidentally broken text mirroring direction. #22479
+- Fix layer mapping regression in Altium importer.
+- Don’t snap to invisible footprint anchors.
+- Fix broken font rendering. #22524
+- Fix potential crash when multichannel tool can’t find any rule
+  areas. #22535
+- Do not start geographical annotation with a 0 index if there are no
+  footprints on the top layer. #22552
+- Fix assertion when exporting DSN footprint arcs (Sentry KICAD-PG4).
+
+Footprint Editor
+
+- Refresh library tree when saving an editable footprint copy. #22247
+- Fix broken footprint rule area size and corner count display. #22352
+- Make footprint offset from hole persistent for custom layers. #22464
+
+3D Viewer
+
+- Fix broken hole fills when two holes overlap on opposite sides of
+  the board. #17317
+
+Gerber Viewer
+
+- Improve load performance when zip archive has extra ASCII files.
+
+- Fix assertion when opening non-ASCII files (Sentry KICAD-KEV).
+
+Drawing Sheet Editor
+
+- Fix crash when using interactive delete tool. #22428
+
+Calculator Tool
+
+- Fix minimum window size issue. #22385
+
+Python API
+
+- Handle Python multi-phase initialization support in swig 4.4.0.
+
+IPC API
+
+- Preserve linked symbol properties in footprints. #21655
+- Fix serialization of footprint rule overrides and add missing
+  allow_soldermask_bridges attribute. #21674
+- Ensure new footprints have unique child UUIDs. #21340
+
+Command Line Interface
+
+- Prevent pcb render command from enforcing stackup over preset
+  colors. #21950
+
+Windows
+
+- Warn about Controlled folder access.
+
+
 cad/kicad: Update to 9.0.6
 
 KiCad 9.0.6 (2025-10-30)

@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.29 2024/11/20 01:29:49 mef Exp $
 
-BLAKE2s (kicad-9.0.6.tar.bz2) = fb02741e3c555a0eeaaecd47a31564feb2bb27a45d0614780af249a295174376
-SHA512 (kicad-9.0.6.tar.bz2) = 1ca320a04c65067e05d02c525596af4b5de360fdcbe179b45086bf6033e2c6159e5a21bc21e2cf05bd149331c00eb6699579dffcb780683df24d721f2079ade4
-Size (kicad-9.0.6.tar.bz2) = 127707066 bytes
+BLAKE2s (kicad-9.0.7.tar.bz2) = 303055874c2a27fdf41360a3745f25f4c9398324aeaeb6771e2ecf2236a337a3
+SHA512 (kicad-9.0.7.tar.bz2) = 9e6a597c76872b33bb34625262a7dd44eff338d7e16c25345226c25fa4cdb8088336d0f46d10b19a85b8296f336a6ac441115a0db5b9c720588b09d04a41e966
+Size (kicad-9.0.7.tar.bz2) = 127868232 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
 SHA1 (patch-CMakeLists.txt) = c0d017d3b8b202004dff71386da451fd81ede969
 SHA1 (patch-api_proto_common_types_base__types.proto) = 63de1236017bc8d92dbb5ed5affc026f1585e8f9
