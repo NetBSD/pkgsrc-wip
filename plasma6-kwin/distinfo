@@ -4,6 +4,7 @@ BLAKE2s (kwin-6.5.2.tar.xz) = 0b1bcaf1ab42abe75f75eb2900293da3b66fedbceb93791db9
 SHA512 (kwin-6.5.2.tar.xz) = 547a276c0f2d4e5d806bd6917f490a576c975fbd08e4dd59f78697c5903332eef51a46be7454f56025c5a9e8faa3766323beb19a9970f265f27651e9f19d8cce
 Size (kwin-6.5.2.tar.xz) = 8797584 bytes
 SHA1 (patch-cmake_modules_Findhwdata.cmake) = bcd738a30acc86a95787da05bcd7e8630043de81
+SHA1 (patch-src_plugins_qpa_integration.cpp) = 1d535e7ac99f4ea2bd71872eeca1338ef5e016c6
 SHA1 (patch-src_plugins_screencast_pipewirecore.cpp) = 3544fa634925177a77c057fe1eb860935611cd88
 SHA1 (patch-src_utils_CMakeLists.txt) = 70c474c5d6d50530be5ca2c0bf31eb7165098ac1
 SHA1 (patch-src_utils_ramfile.cpp) = c7dc38ba2cc2fb5ccdb4a5c77a0361cddfcf7b6f
