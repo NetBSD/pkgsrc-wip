@@ -4,7 +4,7 @@ DISTNAME=	xssstate-1.1
 CATEGORIES=	x11
 MASTER_SITES=	https://dl.suckless.org/tools/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://tools.suckless.org/x/xssstate/
 COMMENT=	Simple tool to retrieve the X screensaver state
 LICENSE=	mit
