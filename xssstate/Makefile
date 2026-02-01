@@ -9,7 +9,7 @@ HOMEPAGE=	https://tools.suckless.org/x/xssstate/
 COMMENT=	Simple tool to retrieve the X screensaver state
 LICENSE=	mit
 
-USE_LANGUAGES=	c99
+USE_CC_FEATURES=	c99
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure
