@@ -1,6 +1,221 @@
-multimedia/streamlink: update to streamlink-7.1.1
+multimedia/streamlink: update to streamlink-8.1.2
 
 Changelog:
+
+== streamlink 8.1.2 (2026-01-18)
+
+- Fixed: warnings when parsing HLS playlists with private-use language
+         subtags (#6780)
+- Updated plugins:
+  - youtube: fixed live streams (#6777)
+
+
+== streamlink 8.1.1 (2026-01-17)
+
+- Fixed: `--stream-segmented-queue-deadline` not being applied
+         correctly to the Streamlink session options (#6758)
+- Changed: `--hls-segment-ignore-names` to not hardcode `.ts` HLS
+           segment file name extensions (#6747)
+- Updated plugins:
+  - dailymotion: fixed 403 HLS playlist responses (#6773)
+  - pluto: fixed url matchers and ad detection (#6767)
+  - soop: fixed CDN mapping for `ld_cdn` based regions (#6749)
+- Build: removed unneeded `wheel` dependency from
+         `build-system.requires` and the `build` dependency
+         group (#6754)
+
+
+== streamlink 8.1.0 (2025-12-14)
+
+- Deprecated: `--hls-segment-queue-threshold` in favor of
+              `--stream-segmented-queue-deadline` (#6734)
+- Improved: debug logging of segmented streams (#6730)
+- Updated plugins:
+  - twitch: fixed clips GQL API query (#6744)
+- Tests: removed accidental `pytest_cov` dependency when running
+         tests (#6727)
+
+
+== streamlink 8.0.0 (2025-11-11)
+
+- BREAKING: dropped support for [EOL Python 3.9]
+- BREAKING/API: removed deprecated `url_master` from
+                `HLSStream`/`MuxedHLSStream`
+- BREAKING/dependencies: bumped version requirement of
+                         `urllib3` to `>=2.0.0`
+- Added: `--stream-segmented-duration` in favor of `--hls-duration`
+         (now deprecated), which affects HLS, DASH and other
+         segmented stream types
+- Added: `duration` parameter to `dash://` streams (`DASHStream`)
+- Added: `--ffmpeg-validation-timeout` for being able to increase
+         the time for validating the FFmpeg executable
+         (`--ffmpeg-ffmpeg`)
+- Added: Flatpak player detection for VLC and mpv
+- Refactored: parts of the internal `SegmentedStream`, `HLSStream` and
+              `DASHStream` implementations (WIP)
+- Updated plugins:
+  - aloula: fixed livestream schema
+  - btv: rewritten and fixed plugin
+  - chzzk: added support for in-progress VODs via live-rewind streams
+  - dlive: fixed streams expiring after 5 minutes
+  - goodgame: updated matches, switched API endpoints
+  - nhkworld: removed plugin
+  - rtve: fixed validation schema
+  - twitch: fixed access token acquirement and various persisted
+            GraphQL query IDs
+  - twitch: added `--twitch-supported-codecs` for access to higher
+            quality streams
+- Dependencies: dropped optional `zstandard` dependency on
+                Python 3.14 and above
+- Tests: bumped version requirement of `pytest` to `>=8.4.0`
+- Docs: refactored docs config and custom Sphinx extensions, added
+        `make` options for disabling various components for offline
+        building
+- Docs: fixed compatibility with `docutils==0.22.2`
+
+
+== streamlink 7.6.0 (2025-09-08)
+
+- Added: official support for Python 3.14
+- Added: `--skip` for stopping on existing file outputs without user
+         prompts
+- Added: `CDPClientSession.{apply,retrieve}_cookies()` for copying
+         cookies between Streamlink's HTTP session and the web browser
+- Updated plugins:
+  - chzzk: added support for live streams with a wider content
+           availability window
+  - indihometv: removed plugin
+  - kick: added `--kick-low-latency`
+  - lrt: fixed plugin
+  - mediaklikk: fixed plugin
+  - vkvideo: renamed to vkvideolive, added VOD support
+- Docs: fixed compatibility with `docutils>=0.22` (transitive
+        dependency)
+
+
+== streamlink 7.5.0 (2025-07-08)
+
+- Added: `--no-plugin-sideloading` for disabling plugin sideloading
+         from the default location
+- Added: `--no-plugin-cache` for disabling cache file I/O of the
+         plugin key-value store
+- Improved: cache file I/O of the plugin key-value store
+- Changed: default log format on the `trace`/`all` log level, with
+           included thread name
+- Fixed: missing thread names for various segmented and muxed streams
+- Fixed: pipe write error log messages when muxing streams
+- Updated plugins:
+  - aloula: updated plugin matchers to support new URLs
+  - goodgame: fixed HLS stream URLs
+  - mitele: removed plugin
+  - nowtvtr: restored plugin
+  - twitcasting: updated plugin to filter out preroll ads
+  - twitch: changed plugin to always filter out ads,
+            deprecated `--twitch-disable-ads`
+  - twitch: forced default User-Agent on access token API request
+  - twitch: fixed clips validation schema
+- Docs: rearranged CLI arguments that are related to the plugin system
+- Build: removed `{dev,docs}-requirements.txt` in favor of PEP 735
+- Build: bumped `lxml` requirement to `>=4.6.4,<7` (`lxml>=6` now
+         supports free-threaded mode)
+- Tests: fixed test failures on Python 3.14.0b3
+- Tests: fixed test failures in free-threaded mode
+
+
+== streamlink 7.4.0 (2025-06-08)
+
+- Added: `encoding` keyword to all HTTP request methods to override
+         the response content encoding
+- Added: debug log message for the available DASH periods (id or
+         index)
+- Fixed: `LookupError` when selecting an invalid DASH period
+- Updated plugins:
+  - blasttv: new plugin
+  - kick: fixed 403 API responses by solving the JS challenge using
+          the webbrowser API
+  - nicolive: fixed plugin metadata by forcing UTF-8 encoding
+  - picarto: fixed validation schema and fixed multi-stream selection
+  - tvp: rewritten and fixed plugin
+  - twitcasting: fixed plugin by switching to new websocket+HLS streams
+  - vtvgo: removed plugin
+- Tests: fixed py314 test failures
+- Tests: fixed some HLS tests failing in rare cases
+
+
+== streamlink 7.3.0 (2025-04-26)
+
+- Changed: download progress to use the console output stream rather
+           than always `stderr`, which previously caused log and
+           progress messages to be interweaved
+- Changed: download progress output to be a status message line at
+           the bottom of the console output, unless `--progress=force`
+           is set in non-interactive or unsupported environments,
+           in which case less frequent regular progress messages
+           are written
+- Fixed: potential division by zero error when formatting progress
+         output
+- Build: bumped `setuptools` requirement from `>=65.6` to `>=77`
+         and switched to PEP 639 project license metadata format
+
+
+== streamlink 7.2.0 (2025-04-04)
+
+- Added: `decompress` extras marker to Streamlink's optional
+         dependencies for installing `brotli` and `zstandard`,
+         which were previously implied optional dependencies
+         via the transitive dependency `urllib3`
+- Changed: `--retry-streams` to allow a value of `0`, so it can
+           be unset again if set previously
+- Changed: `--quiet` to suppress all text output including errors,
+           not just log output
+- Fixed: `--logfile` affecting the console output stream
+- Fixed: broken user input prompt behavior on missing or
+         non-interactive I/O streams
+- Fixed: `Plugin` classes not requiring a matching matcher
+- Fixed: `--hls-audio-select` not being case-insensitive and only
+         comparing input values rather than resolved language codes
+- Updated: Chrome Devtool Protocol interfaces, to match recent
+           Chromium versions
+- Updated plugins:
+  - euronews: rewritten and fixed plugin
+  - kick: refactored plugin, fixed clip matcher and 403 API responses
+  - nicolive: fixed plugin not loading cookies from WebSocket messages
+  - nicolive: made the plugin always filter out blank HLS segments
+  - nowtvtr: removed plugin
+  - okru: canonicalize mobile URLs
+  - tf1: fixed stream matcher
+
+
+== streamlink 7.1.3 (2025-02-14)
+
+- Fixed: `validate.contains()` to allow all kinds of `Container` object inputs
+- Updated plugins:
+  - ceskatelevize: rewritten and fixed plugin
+  - nos: fixed validation schema, updated matcher
+  - pandalive: fixed user_id retieval, updated matcher
+  - pluzz: fixed video ID schemas
+  - streamable: removed plugin
+  - tv4play: removed plugin
+  - twitch: refactored TwitchAPI class and access token retrieval
+  - wwenetwork: rewritten and fixed plugin
+- Docs: replaced Windows and Linux AppImage nightly builds with
+        preview builds triggered on each commit to `master`
+- Docs: added optional/secondary Linux AppImage builds with FFmpeg
+        being bundled
+- Tests: bumped `freezegun` requirement to `>=1.5.0`
+
+
+== streamlink 7.1.2 (2025-01-08)
+
+- Updated plugins:
+  - various: fixed access of URL matcher regex capture groups, affecting
+             abematv, ard_mediathek, bbiplayer, dailymotion, picarto, streann
+  - chzzk: added support for clips
+  - dailymotion: added support for lequipe.fr
+  - kick: fixed 403 HTTP errors, fixed VOD URL matcher
+  - nicolive: fixed authentication
+  - tiktok: rewritten plugin, fixed live streams, added VODs
+
 
 == streamlink 7.1.1 (2024-12-28)
 

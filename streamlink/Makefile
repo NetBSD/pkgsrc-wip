@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.41 2023/11/07 22:38:02 wiz Exp $
 
-DISTNAME=	streamlink-7.1.1
+DISTNAME=	streamlink-8.1.2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 DEPENDS+=	${PYPKGPREFIX}-trio-websocket-[0-9]*:../../wip/py-trio-websocket
 DEPENDS+=	${PYPKGPREFIX}-websocket-client>=1.2.1:../../www/py-websocket-client
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioningit>=1.1.1:../../devel/py-versioningit
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-import-order-[0-9]*:../../devel/py-flake8-import-order
