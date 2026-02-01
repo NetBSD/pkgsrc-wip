@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.3 2025/11/10 13:40:23 adam Exp $
 
-BLAKE2s (pytokens-0.4.0.tar.gz) = 28c169cc782865c69b9a5b55dd33c7b941d02a9bcd5328664343b2eaaf17ac4c
-SHA512 (pytokens-0.4.0.tar.gz) = 81d98687e10f4c80424b94c80921b9231cf690a94865ba2bc61c1672d914d21325105e227782eb4fbf8362b0a29cb1169465f3f8d23e361cf4bcd3879d660ff3
-Size (pytokens-0.4.0.tar.gz) = 15039 bytes
+BLAKE2s (pytokens-0.4.1.tar.gz) = 20ef3d95a407cea3710959809f7a9b5cdc4402c1c29ba1eccb727e720c9767a0
+SHA512 (pytokens-0.4.1.tar.gz) = 9af0d79983a886b761b226aab1bb9dbd178bb71d74b274da528aa0879782d6634c77c30890d8213fac1eda85056a937cce376edea77e5db5b4cd7287b13e0a7c
+Size (pytokens-0.4.1.tar.gz) = 23015 bytes
