@@ -1,3 +1,5 @@
+https://github.com/paulfloyd/valgrind-netbsd/issues/2
+
 --- m_debuginfo/libcoregrind_amd64_netbsd_a-readelf.o ---
 m_debuginfo/readelf.c: In function 'find_buildid':
 m_debuginfo/readelf.c:1244:54: error: 'ELF_NOTE_GNU' undeclared (first use in this function)

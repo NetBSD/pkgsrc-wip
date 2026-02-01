@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix unportable test(1) operator.
+https://github.com/paulfloyd/valgrind-netbsd/issues/2
 
 --- configure.ac.orig	2026-02-01 10:49:24.573755226 +0000
 +++ configure.ac
