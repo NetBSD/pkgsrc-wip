@@ -20,9 +20,6 @@ USE_CXX_FEATURES+=	c++23
 # libinput_tablet_pad_mode_group_has_dial
 LDFLAGS+=	-Wl,--warn-unresolved-symbols
 
-# for pipewire
-CFLAGS.NetBSD+=	-D__LOCALE_C_ONLY
-
 TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
