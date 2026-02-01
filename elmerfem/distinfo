@@ -1,6 +1,5 @@
 $NetBSD$
 
-BLAKE2s (elmerfem/release-9.0.tar.gz) = a3615ca55caa28bb8c2f3ecbb561663f70b53afaad671f772faf93b80b04afcf
-SHA512 (elmerfem/release-9.0.tar.gz) = 0affb0420b674ebf4d089c4039ba78dd29650f0daf956eab59bd7bea1c466ba6dfdf17c1ca6c953f36bbf95ed127dc9e6e025ee3edb1d2a56e55e61e24e97254
-Size (elmerfem/release-9.0.tar.gz) = 64060003 bytes
-SHA1 (patch-fem_src_modules_DCRComplexSolve.F90) = 374863211b038abf507818641ec4b6cafc9c904a
+BLAKE2s (elmerfem/release-26.1.tar.gz) = c4adc6bbca4ceb82bdb1741a6f4f4a61a2b5aeee43114dfba199c37a5b68f42a
+SHA512 (elmerfem/release-26.1.tar.gz) = f6926f6ec09b66c3bb090b2b65c72eaa3ab24aaf5b9d49176260a5fcae15f40d80a1529555036102c67d191d5e40702d39ca2cf6dd0297f28aae72450aa0a7b9
+Size (elmerfem/release-26.1.tar.gz) = 65856314 bytes
