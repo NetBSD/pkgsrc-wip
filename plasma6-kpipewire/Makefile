@@ -11,9 +11,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgmerge pkg-config
 
-# otherwise pipewire tries to use uselocale()
-CFLAGS.NetBSD+=	-D__LOCALE_C_ONLY
-
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
