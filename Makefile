@@ -6198,6 +6198,7 @@ SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xssp
+SUBDIR+=	xssstate
 SUBDIR+=	xtags
 SUBDIR+=	xtensa-esp32-elf-binutils
 SUBDIR+=	xtensa-esp32-elf-gcc
