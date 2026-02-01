@@ -13,3 +13,4 @@ ${PYSITELIB}/trio_websocket/_impl.pyo
 ${PYSITELIB}/trio_websocket/_version.py
 ${PYSITELIB}/trio_websocket/_version.pyc
 ${PYSITELIB}/trio_websocket/_version.pyo
+${PYSITELIB}/trio_websocket/py.typed

@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	trio-websocket-0.11.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	trio_websocket-0.12.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/trio_/trio-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio-websocket/}
 
