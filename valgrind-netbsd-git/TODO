@@ -1,3 +1,6 @@
-checking for a supported OS... no (netbsd)
-configure: error: Valgrind is operating system specific. Sorry.
-*** Error code 1
+--- m_debuginfo/libcoregrind_amd64_netbsd_a-readelf.o ---
+m_debuginfo/readelf.c: In function 'find_buildid':
+m_debuginfo/readelf.c:1244:54: error: 'ELF_NOTE_GNU' undeclared (first use in this function)
+ 1244 |                if (ML_(img_strcmp_c)(img, name_ioff, ELF_NOTE_GNU) == 0
+      |                                                      ^~~~~~~~~~~~
+m_debuginfo/readelf.c:1244:54: note: each undeclared identifier is reported only once for each function it appears in

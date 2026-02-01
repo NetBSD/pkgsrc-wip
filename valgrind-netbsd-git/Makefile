@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	valgrind-netbsd-0.0.20260131
+DISTNAME=	valgrind-netbsd-0.0.20260201
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=paulfloyd/}
-GITHUB_TAG=	a2555d14c3156d039e25037b6e03d3489f2a505c
+# head of branch of 'fosdem26' as of date above
+GITHUB_TAG=	5b8a5e38549de9c93e35c2eb26cc5947da398a5e
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/paulfloyd/valgrind-netbsd
