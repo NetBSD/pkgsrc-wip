@@ -5025,6 +5025,7 @@ SUBDIR+=	py-wheel-inspect
 SUBDIR+=	py-whelk
 SUBDIR+=	py-wifite
 SUBDIR+=	py-willow
+SUBDIR+=	py-woob
 SUBDIR+=	py-word2vec
 SUBDIR+=	py-wordpress-xmlrpc
 SUBDIR+=	py-workerpool
