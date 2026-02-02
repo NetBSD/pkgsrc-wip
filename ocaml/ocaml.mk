@@ -127,7 +127,7 @@ OCAML_USE_OPAM?=	no
 
 # Configure stuff for OPAM
 .if ${OCAML_USE_OPAM} == "yes"
-.include "../../misc/ocaml-opaline/buildlink3.mk"
+TOOL_DEPENDS+=	ocaml-opaline-[0-9]*:../../misc/ocaml-opaline
 OCAML_USE_FINDLIB=	yes
 .endif
 
