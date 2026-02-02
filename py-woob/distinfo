@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (woob-3.7.tar.gz) = e811b5b78eaaed3095a42a24964a2a0524a4bed0816dd3f4b04a270eb4bcbf83
+SHA512 (woob-3.7.tar.gz) = 6ce2c4ae6c468850614fd930b369fb34cb1b7753411f67d567ffbebf840ee271437d5e9c44b85462dd6f900c3902ed70fa40aa87429e274244b0fd0eb12085cf
+Size (woob-3.7.tar.gz) = 357409 bytes
+SHA1 (patch-pwnlib_tubes_process.py) = 4aeaa5bfc2083c363227cef78efd71a9b92be2e8
+SHA1 (patch-pyproject.toml) = 24936c9e1e988109420732d5f37c9fbcbf0b2d34
