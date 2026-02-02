@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	epson-inkjet-printer-escpr2-1.1.28
+DISTNAME=	epson-inkjet-printer-escpr2-1.1.62
 CATEGORIES=	print
-MASTER_SITES=	https://download3.ebz.epson.net/dsc/f/03/00/12/53/90/d1e131ed737c58decf9bbb097775901c3e9dd8d8/
-DISTFILES=	epson-inkjet-printer-escpr2-1.1.28-1lsb3.2.src.rpm
+MASTER_SITES=	https://download3.ebz.epson.net/dsc/f/03/00/14/47/10/84d0ad36f1333fb1cae822976df1f611b7c2f6a0/
+DISTFILES=	epson-inkjet-printer-escpr2-1.1.62-1lsb3.2.src.rpm
 
 MAINTAINER=	stix@stix.id.au
 HOMEPAGE=	https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
