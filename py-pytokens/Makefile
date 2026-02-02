@@ -11,10 +11,10 @@ COMMENT=	Fast, spec compliant Python 3.12+ tokenizer
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/wheel.mk"
+.include "../../lang/py-mypy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
