@@ -4564,7 +4564,6 @@ SUBDIR+=	py-python-gnutls
 SUBDIR+=	py-python-igraph
 SUBDIR+=	py-python-omega
 SUBDIR+=	py-pytkgen
-SUBDIR+=	py-pytokens
 SUBDIR+=	py-pytools
 SUBDIR+=	py-pytrends
 SUBDIR+=	py-pyvista
