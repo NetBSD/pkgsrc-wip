@@ -5018,7 +5018,6 @@ SUBDIR+=	py-webflash
 SUBDIR+=	py-webhelpers
 SUBDIR+=	py-webkit
 SUBDIR+=	py-weblib
-SUBDIR+=	py-weboob
 SUBDIR+=	py-websocket
 SUBDIR+=	py-weewx
 SUBDIR+=	py-wheel-inspect
