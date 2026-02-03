@@ -33,6 +33,7 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/dovecot/conf.d
 
 REPLACE_BASH+=		src/util/dovecot-sysreport
 REPLACE_BASH+=		src/util/health-check.sh
+REPLACE_PYTHON+=	src/lib-settings/settings-history.py
 
 .PHONY: enable-manz-by-replacing-roff-includes-with-symlinks
 enable-manz-by-replacing-roff-includes-with-symlinks:
@@ -47,4 +48,6 @@ post-install: enable-manz-by-replacing-roff-includes-with-symlinks
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
 
+# Just for REPLACE_PYTHON but it pulls in the whole Python...
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
