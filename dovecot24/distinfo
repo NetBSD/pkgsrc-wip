@@ -4,3 +4,4 @@ BLAKE2s (dovecot-2.4.2.tar.gz) = a8356102681d217d8f51c72a366ac0596341cfefe2c6304
 SHA512 (dovecot-2.4.2.tar.gz) = 0524695341abe711d3a811c56156889d6fef7a09becc684c6f1dc1e5add605969ca8794eb7d44bfbc49f70515f22e8640b5828443addecfe4798fb8b174670ae
 Size (dovecot-2.4.2.tar.gz) = 7807240 bytes
 SHA1 (patch-src_lib-var-expand-crypt_Makefile.in) = af912cfaeab81e8948ef9cb9e35629b8ad66b7b2
+SHA1 (patch-src_lib_lib.h) = cac10ddeb45cf4de4f1d3d15d568ae72f403dc7b
