@@ -1,0 +1,4 @@
+mail/dovecot24: Add version 2.4.2
+
+Originally packaged by Sad Clouds based on mail/dovecot2, and then
+modified by many in wip.
