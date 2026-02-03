@@ -1,8 +1,8 @@
 $NetBSD$
 
-* Add NetBSD support
+* NetBSD support
 
---- src/libsystemd/sd-bus/bus-message.h.orig	2022-12-16 10:13:02.000000000 +0000
+--- src/libsystemd/sd-bus/bus-message.h.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/libsystemd/sd-bus/bus-message.h
 @@ -3,6 +3,8 @@
  

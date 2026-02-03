@@ -1,24 +1,48 @@
 $NetBSD$
 
-* ucred is unpcpid on NetBSD
+* NetBSD support
+* Fix getpeercred on NetBSD
 
---- src/basic/socket-util.c.orig	2022-12-16 10:13:02.000000000 +0000
+--- src/basic/socket-util.c.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/basic/socket-util.c
-@@ -63,8 +63,13 @@ int getpeercred(int fd, struct ucred *uc
-                 return -EIO;
+@@ -8,6 +8,8 @@
+ #ifdef __FreeBSD__
+ #include <sys/ucred.h>
+ #include <sys/un.h>
++#elif defined(__NetBSD__)
++#include <sys/un.h>
+ #endif
  
-         /* Check if the data is actually useful and not suppressed due to namespacing issues */
-+#ifdef __NetBSD__
-+        if (!pid_is_valid(u.unp_pid))
-+                return -ENODATA;
-+#else
-         if (!pid_is_valid(u.pid))
-                 return -ENODATA;
-+#endif
+ int fd_inc_sndbuf(int fd, size_t n) {
+@@ -47,6 +49,27 @@ int getpeercred(int fd, struct ucred *uc
+         };
  
-         /* Note that we don't check UID/GID here, as namespace translation works differently there: instead of
-          * receiving in "invalid" user/group we get the overflow UID/GID. */
-@@ -75,7 +80,7 @@ int getpeercred(int fd, struct ucred *uc
+         *ucred = u;
++#elif defined(__NetBSD__)
++        struct unpcbid cred;
++        socklen_t len = sizeof(cred);
++
++        assert(fd >= 0);
++        assert(ucred);
++
++        if (getsockopt(fd, 0, LOCAL_PEEREID, &cred, &len) == -1) {
++                return -errno;
++        }
++
++        struct ucred u = {
++                .pid = -1,
++                .uid = cred.unp_euid,
++                .gid = cred.unp_egid,
++        };
++
++        if (len != sizeof(cred))
++                return -EIO;
++
++        *ucred = u;
+ #else
+         socklen_t n = sizeof(struct ucred);
+         struct ucred u;
+@@ -75,7 +98,7 @@ int getpeercred(int fd, struct ucred *uc
  }
  
  int getpeersec(int fd, char **ret) {

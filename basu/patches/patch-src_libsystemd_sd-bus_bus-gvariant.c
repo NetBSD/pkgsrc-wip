@@ -2,7 +2,7 @@ $NetBSD$
 
 * NetBSD support
 
---- src/libsystemd/sd-bus/bus-gvariant.c.orig	2022-12-16 10:13:02.000000000 +0000
+--- src/libsystemd/sd-bus/bus-gvariant.c.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/libsystemd/sd-bus/bus-gvariant.c
 @@ -2,6 +2,8 @@
  

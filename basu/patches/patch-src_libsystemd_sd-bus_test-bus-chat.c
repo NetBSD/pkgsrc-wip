@@ -2,14 +2,14 @@ $NetBSD$
 
 * Fix logging, on NetBSD %m is only allowed in syslog(3) like function
 
---- src/libsystemd/sd-bus/test-bus-chat.c.orig	2025-12-11 11:56:24.257167499 +0000
+--- src/libsystemd/sd-bus/test-bus-chat.c.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/libsystemd/sd-bus/test-bus-chat.c
 @@ -30,7 +30,7 @@ static int object_callback(sd_bus_messag
  
                  r = sd_bus_reply_method_return(m, NULL);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to send reply: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                        return log_error_errno(r, "Failed to send reply");
  
                  return 1;
          }
@@ -18,21 +18,21 @@ $NetBSD$
          r = sd_bus_open_user_with_description(&bus, "my bus!");
          if (r < 0) {
 -                log_error_errno(r, "Failed to connect to user bus: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to connect to user bus", r));
++                log_error_errno(r, "Failed to connect to user bus");
                  goto fail;
          }
  
          r = sd_bus_get_bus_id(bus, &id);
          if (r < 0) {
 -                log_error_errno(r, "Failed to get server ID: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to get server ID", r));
++                log_error_errno(r, "Failed to get server ID");
                  goto fail;
          }
  
          r = sd_bus_get_unique_name(bus, &unique);
          if (r < 0) {
 -                log_error_errno(r, "Failed to get unique name: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to get unique name", r));
++                log_error_errno(r, "Failed to get unique name");
                  goto fail;
          }
  
@@ -41,28 +41,28 @@ $NetBSD$
          r = sd_bus_request_name(bus, "org.freedesktop.systemd.test", 0);
          if (r < 0) {
 -                log_error_errno(r, "Failed to acquire name: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to acquire name", r));
++                log_error_errno(r, "Failed to acquire name");
                  goto fail;
          }
  
          r = sd_bus_add_fallback(bus, NULL, "/foo/bar", object_callback, NULL);
          if (r < 0) {
 -                log_error_errno(r, "Failed to add object: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to add object", r));
++                log_error_errno(r, "Failed to add object");
                  goto fail;
          }
  
          r = sd_bus_match_signal(bus, NULL, NULL, NULL, "foo.bar", "Notify", match_callback, NULL);
          if (r < 0) {
 -                log_error_errno(r, "Failed to request match: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to request match", r));
++                log_error_errno(r, "Failed to request match");
                  goto fail;
          }
  
          r = sd_bus_add_match(bus, NULL, "type='signal',interface='org.freedesktop.DBus',member='NameOwnerChanged'", match_callback, NULL);
          if (r < 0) {
 -                log_error_errno(r, "Failed to add match: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to add match", r));
++                log_error_errno(r, "Failed to add match");
                  goto fail;
          }
  
@@ -71,7 +71,7 @@ $NetBSD$
                  r = sd_bus_process(bus, &m);
                  if (r < 0) {
 -                        log_error_errno(r, "Failed to process requests: %m");
-+                        log_error_errno(r, LOG_ERR_FMT("Failed to process requests", r));
++                        log_error_errno(r, "Failed to process requests");
                          goto fail;
                  }
  
@@ -79,7 +79,7 @@ $NetBSD$
                          r = sd_bus_wait(bus, (uint64_t) -1);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to wait: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to wait", r));
++                                log_error_errno(r, "Failed to wait");
                                  goto fail;
                          }
  
@@ -88,7 +88,7 @@ $NetBSD$
                          r = sd_bus_message_read(m, "s", &hello);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to get parameter: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to get parameter", r));
++                                log_error_errno(r, "Failed to get parameter");
                                  goto fail;
                          }
  
@@ -97,7 +97,7 @@ $NetBSD$
                          r = sd_bus_reply_method_return(m, "s", lowercase);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to send reply: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                                log_error_errno(r, "Failed to send reply");
                                  goto fail;
                          }
                  } else if (sd_bus_message_is_method_call(m, "org.freedesktop.systemd.test", "ExitClient1")) {
@@ -105,7 +105,7 @@ $NetBSD$
                          r = sd_bus_reply_method_return(m, NULL);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to send reply: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                                log_error_errno(r, "Failed to send reply");
                                  goto fail;
                          }
  
@@ -114,7 +114,7 @@ $NetBSD$
                          r = sd_bus_reply_method_return(m, NULL);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to send reply: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                                log_error_errno(r, "Failed to send reply");
                                  goto fail;
                          }
  
@@ -123,7 +123,7 @@ $NetBSD$
                          r = sd_bus_reply_method_return(m, NULL);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to send reply: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                                log_error_errno(r, "Failed to send reply");
                                  goto fail;
                          }
  
@@ -132,7 +132,7 @@ $NetBSD$
                          r = sd_bus_message_read(m, "h", &fd);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to get parameter: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to get parameter", r));
++                                log_error_errno(r, "Failed to get parameter");
                                  goto fail;
                          }
  
@@ -140,7 +140,7 @@ $NetBSD$
  
                          if (write(fd, &x, 1) < 0) {
 -                                log_error_errno(errno, "Failed to write to fd: %m");
-+                                log_error_errno(errno, LOG_ERR_FMT("Failed to write to fd", r));
++                                log_error_errno(errno, "Failed to write to fd");
                                  safe_close(fd);
                                  goto fail;
                          }
@@ -148,7 +148,7 @@ $NetBSD$
                          r = sd_bus_reply_method_return(m, NULL);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to send reply: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                                log_error_errno(r, "Failed to send reply");
                                  goto fail;
                          }
  
@@ -157,7 +157,7 @@ $NetBSD$
                                          &SD_BUS_ERROR_MAKE_CONST(SD_BUS_ERROR_UNKNOWN_METHOD, "Unknown method."));
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to send reply: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to send reply", r));
++                                log_error_errno(r, "Failed to send reply");
                                  goto fail;
                          }
                  }
@@ -166,7 +166,7 @@ $NetBSD$
          r = sd_bus_open_user(&bus);
          if (r < 0) {
 -                log_error_errno(r, "Failed to connect to user bus: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to connect to user bus", r));
++                log_error_errno(r, "Failed to connect to user bus");
                  goto finish;
          }
  
@@ -175,14 +175,14 @@ $NetBSD$
                          "HELLO");
          if (r < 0) {
 -                log_error_errno(r, "Failed to issue method call: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to issue method call", r));
++                log_error_errno(r, "Failed to issue method call");
                  goto finish;
          }
  
          r = sd_bus_message_read(reply, "s", &hello);
          if (r < 0) {
 -                log_error_errno(r, "Failed to get string: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to get string", r));
++                log_error_errno(r, "Failed to get string");
                  goto finish;
          }
  
@@ -190,7 +190,7 @@ $NetBSD$
  
          if (pipe2(pp, O_CLOEXEC|O_NONBLOCK) < 0) {
 -                log_error_errno(errno, "Failed to allocate pipe: %m");
-+                log_error_errno(errno, LOG_ERR_FMT("Failed to allocate pipe", errno));
++                log_error_errno(errno, "Failed to allocate pipe");
                  r = -errno;
                  goto finish;
          }
@@ -199,7 +199,7 @@ $NetBSD$
                          pp[1]);
          if (r < 0) {
 -                log_error_errno(r, "Failed to issue method call: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to issue method call", r));
++                log_error_errno(r, "Failed to issue method call");
                  goto finish;
          }
  
@@ -208,7 +208,7 @@ $NetBSD$
                                  "ExitClient1");
                  if (r < 0)
 -                        log_error_errno(r, "Failed to allocate method call: %m");
-+                        log_error_errno(r, LOG_ERR_FMT("Failed to allocate method call", r));
++                        log_error_errno(r, "Failed to allocate method call");
                  else
                          sd_bus_send(bus, q, NULL);
  
@@ -217,7 +217,7 @@ $NetBSD$
          bool *x = userdata;
  
 -        log_error_errno(sd_bus_message_get_errno(m), "Quit callback: %m");
-+        log_error_errno(sd_bus_message_get_errno(m), LOG_ERR_FMT("Quit callback", sd_bus_message_get_errno(m)));
++        log_error_errno(sd_bus_message_get_errno(m), "Quit callback");
  
          *x = 1;
          return 1;
@@ -226,7 +226,7 @@ $NetBSD$
          r = sd_bus_open_user(&bus);
          if (r < 0) {
 -                log_error_errno(r, "Failed to connect to user bus: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to connect to user bus", r));
++                log_error_errno(r, "Failed to connect to user bus");
                  goto finish;
          }
  
@@ -235,7 +235,7 @@ $NetBSD$
                          "Foobar");
          if (r < 0) {
 -                log_error_errno(r, "Failed to allocate method call: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to allocate method call", r));
++                log_error_errno(r, "Failed to allocate method call");
                  goto finish;
          }
  
@@ -244,7 +244,7 @@ $NetBSD$
                          "Notify");
          if (r < 0) {
 -                log_error_errno(r, "Failed to allocate signal: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to allocate signal", r));
++                log_error_errno(r, "Failed to allocate signal");
                  goto finish;
          }
  
@@ -253,7 +253,7 @@ $NetBSD$
                          "GetMachineId");
          if (r < 0) {
 -                log_error_errno(r, "Failed to allocate method call: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to allocate method call", r));
++                log_error_errno(r, "Failed to allocate method call");
                  goto finish;
          }
  
@@ -262,7 +262,7 @@ $NetBSD$
          r = sd_bus_message_read(reply, "s", &mid);
          if (r < 0) {
 -                log_error_errno(r, "Failed to parse machine ID: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to parse machine ID", r));
++                log_error_errno(r, "Failed to parse machine ID");
                  goto finish;
          }
  
@@ -271,7 +271,7 @@ $NetBSD$
                          "Slow");
          if (r < 0) {
 -                log_error_errno(r, "Failed to allocate method call: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to allocate method call", r));
++                log_error_errno(r, "Failed to allocate method call");
                  goto finish;
          }
  
@@ -280,7 +280,7 @@ $NetBSD$
                          "Slow");
          if (r < 0) {
 -                log_error_errno(r, "Failed to allocate method call: %m");
-+                log_error_errno(r, LOG_ERR_FMT("Failed to allocate method call", r));
++                log_error_errno(r, "Failed to allocate method call");
                  goto finish;
          }
  
@@ -289,14 +289,14 @@ $NetBSD$
                  r = sd_bus_process(bus, NULL);
                  if (r < 0) {
 -                        log_error_errno(r, "Failed to process requests: %m");
-+                        log_error_errno(r, LOG_ERR_FMT("Failed to process requests", r));
++                        log_error_errno(r, "Failed to process requests");
                          goto finish;
                  }
                  if (r == 0) {
                          r = sd_bus_wait(bus, (uint64_t) -1);
                          if (r < 0) {
 -                                log_error_errno(r, "Failed to wait: %m");
-+                                log_error_errno(r, LOG_ERR_FMT("Failed to wait", r));
++                                log_error_errno(r, "Failed to wait");
                                  goto finish;
                          }
                  }
@@ -305,7 +305,7 @@ $NetBSD$
                                  "ExitClient2");
                  if (r < 0) {
 -                        log_error_errno(r, "Failed to allocate method call: %m");
-+                        log_error_errno(r, LOG_ERR_FMT("Failed to allocate method call", r));
++                        log_error_errno(r, "Failed to allocate method call");
                          goto finish;
                  }
  

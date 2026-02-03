@@ -17,6 +17,9 @@ REPLACE_PYTHON=	src/basic/generate-gperfs.py
 MESON_ARGS+=	-Daudit=disabled
 MESON_ARGS+=	-Dlibcap=disabled
 
+#CFLAGS+=		-O0 -g
+#INSTALL_UNSTRIPPED=	yes
+
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -2,14 +2,17 @@ $NetBSD$
 
 * F_ADD_SEALS available since NetBSD-11
 
---- src/basic/memfd-util.c.orig	2025-12-11 16:20:23.258634161 +0000
+--- src/basic/memfd-util.c.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/basic/memfd-util.c
-@@ -9,7 +9,7 @@
+@@ -7,9 +7,10 @@
+ 
+ #include "alloc-util.h"
  #include "memfd-util.h"
++#include "missing.h"
  
  int memfd_set_sealed(int fd) {
 -#if defined(__FreeBSD__) && __FreeBSD__ < 13
-+#if (defined(__FreeBSD__) && __FreeBSD__ < 13) || (defined(__NetBSD__) && __NetBSD__ < 11)
++#if defined(__FreeBSD__) && __FreeBSD__ < 13 || (defined(__NetBSD__) && __NetBSD__ < 11)
          return 0;
  #else
          int r;

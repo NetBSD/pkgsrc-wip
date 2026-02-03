@@ -1,16 +1,19 @@
 $NetBSD$
 
-* Use unpcbid as ucred on NetBSD
+* Use own ucred struct on NetBSD
 
---- src/basic/socket-util.h.orig	2022-12-16 10:13:02.000000000 +0000
+--- src/basic/socket-util.h.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/basic/socket-util.h
-@@ -29,6 +29,9 @@ struct ucred {
+@@ -29,6 +29,12 @@ struct ucred {
          uint32_t uid;
          uint32_t gid;
  };
 +#elif defined(__NetBSD__)
-+#define ucred unpcbid
-+#define SO_PEERCRED LOCAL_PEEREID
++struct ucred {
++        pid_t pid;
++        uid_t uid;
++        gid_t gid;
++};
  #endif
  
  int fd_inc_sndbuf(int fd, size_t n);

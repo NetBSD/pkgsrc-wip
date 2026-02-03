@@ -2,7 +2,7 @@ $NetBSD$
 
 * Use custom macros
 
---- src/basic/macro.h.orig	2022-12-16 10:13:02.000000000 +0000
+--- src/basic/macro.h.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/basic/macro.h
 @@ -70,7 +70,7 @@
  #define ALIGN4(l) (((l) + 3) & ~3)

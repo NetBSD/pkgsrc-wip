@@ -2,19 +2,19 @@ $NetBSD$
 
 * Fix logging, on NetBSD %m is only allowed in syslog(3) like function
 
---- src/busctl/busctl.c.orig	2025-12-11 12:22:33.149441917 +0000
+--- src/busctl/busctl.c.orig	2022-12-16 11:13:02.000000000 +0100
 +++ src/busctl/busctl.c
 @@ -57,11 +57,11 @@ static usec_t arg_timeout = 0;
  #define NAME_IS_ACTIVATABLE INT_TO_PTR(2)
  
  static int bus_log_parse_error(int r) {
 -        return log_error_errno(r, "Failed to parse bus message: %m");
-+        return log_error_errno(r, LOG_ERR_FMT("Failed to parse bus message", r));
++        return log_error_errno(r, "Failed to parse bus message");
  }
  
  static int bus_log_create_error(int r) {
 -        return log_error_errno(r, "Failed to create bus message: %m");
-+        return log_error_errno(r, LOG_ERR_FMT("Failed to create bus message", r));
++        return log_error_errno(r, "Failed to create bus message");
  }
  
  static int acquire_bus(bool set_monitor, sd_bus **ret) {
@@ -23,39 +23,39 @@ $NetBSD$
          r = sd_bus_new(&bus);
          if (r < 0)
 -                return log_error_errno(r, "Failed to allocate bus: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to allocate bus", r));
++                return log_error_errno(r, "Failed to allocate bus");
  
          if (set_monitor) {
                  r = sd_bus_set_monitor(bus, true);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to set monitor mode: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to set monitor mode", r));
++                        return log_error_errno(r, "Failed to set monitor mode");
  
                  r = sd_bus_negotiate_creds(bus, true, _SD_BUS_CREDS_ALL);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to enable credentials: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to enable credentials", r));
++                        return log_error_errno(r, "Failed to enable credentials");
  
                  r = sd_bus_negotiate_timestamp(bus, true);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to enable timestamps: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to enable timestamps", r));
++                        return log_error_errno(r, "Failed to enable timestamps");
  
                  r = sd_bus_negotiate_fds(bus, true);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to enable fds: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to enable fds", r));
++                        return log_error_errno(r, "Failed to enable fds");
          }
  
          r = sd_bus_set_bus_client(bus, true);
          if (r < 0)
 -                return log_error_errno(r, "Failed to set bus client: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to set bus client", r));
++                return log_error_errno(r, "Failed to set bus client");
  
          r = sd_bus_set_watch_bind(bus, arg_watch_bind);
          if (r < 0)
 -                return log_error_errno(r, "Failed to set watch-bind setting to '%s': %m", yes_no(arg_watch_bind));
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to set watch-bind setting to '%s'", r, yes_no(arg_watch_bind)));
++                return log_error_errno(r, "Failed to set watch-bind setting to '%s'", yes_no(arg_watch_bind));
  
          if (arg_address)
                  r = sd_bus_set_address(bus, arg_address);
@@ -64,12 +64,12 @@ $NetBSD$
          }
          if (r < 0)
 -                return log_error_errno(r, "Failed to set address: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to set address", r));
++                return log_error_errno(r, "Failed to set address");
  
          r = sd_bus_start(bus);
          if (r < 0)
 -                return log_error_errno(r, "Failed to connect to bus: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to connect to bus", r));
++                return log_error_errno(r, "Failed to connect to bus");
  
          *ret = TAKE_PTR(bus);
  
@@ -78,7 +78,7 @@ $NetBSD$
          r = sd_bus_list_names(bus, (arg_acquired || arg_unique) ? &acquired : NULL, arg_activatable ? &activatable : NULL);
          if (r < 0)
 -                return log_error_errno(r, "Failed to list names: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to list names", r));
++                return log_error_errno(r, "Failed to list names");
  
          names = hashmap_new(&string_hash_ops);
          if (!names)
@@ -87,7 +87,7 @@ $NetBSD$
                  r = hashmap_put(names, *i, NAME_IS_ACQUIRED);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to add to hashmap: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to add to hashmap", r));
++                        return log_error_errno(r, "Failed to add to hashmap");
          }
  
          STRV_FOREACH(i, activatable) {
@@ -96,7 +96,7 @@ $NetBSD$
                  r = hashmap_put(names, *i, NAME_IS_ACTIVATABLE);
                  if (r < 0 && r != -EEXIST)
 -                        return log_error_errno(r, "Failed to add to hashmap: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to add to hashmap", r));
++                        return log_error_errno(r, "Failed to add to hashmap");
          }
  
          merged = new(char*, hashmap_size(names) + 1);
@@ -105,7 +105,7 @@ $NetBSD$
                  r = sd_bus_list_names(bus, &names, NULL);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to get name list: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to get name list", r));
++                        return log_error_errno(r, "Failed to get name list");
  
                  STRV_FOREACH(i, names) {
                          int q;
@@ -114,7 +114,7 @@ $NetBSD$
          r = sd_bus_get_unique_name(bus, &unique_name);
          if (r < 0)
 -                return log_error_errno(r, "Failed to get unique name: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to get unique name", r));
++                return log_error_errno(r, "Failed to get unique name");
  
          log_info("Monitoring bus message stream.");
  
@@ -123,7 +123,7 @@ $NetBSD$
                  r = sd_bus_process(bus, &m);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to process bus: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to process bus", r));
++                        return log_error_errno(r, "Failed to process bus");
  
                  if (!is_monitor) {
                          const char *name;
@@ -132,7 +132,7 @@ $NetBSD$
                          r = sd_bus_message_read(m, "s", &name);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to read lost name: %m");
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to read lost name", r));
++                                return log_error_errno(r, "Failed to read lost name");
  
                          if (streq(name, unique_name))
                                  is_monitor = true;
@@ -141,7 +141,7 @@ $NetBSD$
                  r = sd_bus_wait(bus, (uint64_t) -1);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to wait for bus: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to wait for bus", r));
++                        return log_error_errno(r, "Failed to wait for bus");
          }
  }
  
@@ -150,7 +150,7 @@ $NetBSD$
  
          if (r < 0)
 -                return log_error_errno(r, "Failed to get credentials: %m");
-+                return log_error_errno(r, LOG_ERR_FMT("Failed to get credentials", r));
++                return log_error_errno(r, "Failed to get credentials");
  
          bus_creds_dump(creds, NULL, false);
          return 0;
@@ -159,7 +159,7 @@ $NetBSD$
                          r = parse_boolean(v);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as boolean: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as boolean", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as boolean", v);
  
                          r = sd_bus_message_append_basic(m, t, &r);
                          break;
@@ -168,7 +168,7 @@ $NetBSD$
                          r = safe_atou8(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as byte (unsigned 8bit integer): %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as byte (unsigned 8bit integer)", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as byte (unsigned 8bit integer)", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -177,7 +177,7 @@ $NetBSD$
                          r = safe_atoi16(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as signed 16bit integer: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as signed 16bit integer", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as signed 16bit integer", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -186,7 +186,7 @@ $NetBSD$
                          r = safe_atou16(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as unsigned 16bit integer: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as unsigned 16bit integer", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as unsigned 16bit integer", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -195,7 +195,7 @@ $NetBSD$
                          r = safe_atoi32(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as signed 32bit integer: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as signed 32bit integer", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as signed 32bit integer", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -204,7 +204,7 @@ $NetBSD$
                          r = safe_atou32(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as unsigned 32bit integer: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as unsigned 32bit integer", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as unsigned 32bit integer", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -213,7 +213,7 @@ $NetBSD$
                          r = safe_atoi64(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as signed 64bit integer: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as signed 64bit integer", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as signed 64bit integer", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -222,7 +222,7 @@ $NetBSD$
                          r = safe_atou64(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as unsigned 64bit integer: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as unsigned 64bit integer", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as unsigned 64bit integer", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -231,7 +231,7 @@ $NetBSD$
                          r = safe_atod(v, &z);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' as double precision floating point: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' as double precision floating point", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' as double precision floating point", v);
  
                          r = sd_bus_message_append_basic(m, t, &z);
                          break;
@@ -240,12 +240,12 @@ $NetBSD$
                          r = safe_atou32(v, &n);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse '%s' number of array entries: %m", v);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse '%s' number of array entries", r, v));
++                                return log_error_errno(r, "Failed to parse '%s' number of array entries", v);
  
                          r = signature_element_length(signature, &k);
                          if (r < 0)
 -                                return log_error_errno(r, "Invalid array signature: %m");
-+                                return log_error_errno(r, LOG_ERR_FMT("Invalid array signature", r));
++                                return log_error_errno(r, "Invalid array signature");
  
                          {
                                  unsigned i;
@@ -254,7 +254,7 @@ $NetBSD$
                          r = signature_element_length(signature, &k);
                          if (r < 0)
 -                                return log_error_errno(r, "Invalid struct/dict entry signature: %m");
-+                                return log_error_errno(r, LOG_ERR_FMT("Invalid struct/dict entry signature", r));
++                                return log_error_errno(r, "Invalid struct/dict entry signature");
  
                          {
                                  char s[k-1];
@@ -263,7 +263,7 @@ $NetBSD$
                  r = json_variant_new_unsigned(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform byte: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform byte", r));
++                        return log_error_errno(r, "Failed to transform byte");
  
                  break;
          }
@@ -272,7 +272,7 @@ $NetBSD$
                  r = json_variant_new_boolean(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform boolean: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform boolean", r));
++                        return log_error_errno(r, "Failed to transform boolean");
  
                  break;
          }
@@ -281,7 +281,7 @@ $NetBSD$
                  r = json_variant_new_integer(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform int16: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform int16", r));
++                        return log_error_errno(r, "Failed to transform int16");
  
                  break;
          }
@@ -290,7 +290,7 @@ $NetBSD$
                  r = json_variant_new_unsigned(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform uint16: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform uint16", r));
++                        return log_error_errno(r, "Failed to transform uint16");
  
                  break;
          }
@@ -299,7 +299,7 @@ $NetBSD$
                  r = json_variant_new_integer(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform int32: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform int32", r));
++                        return log_error_errno(r, "Failed to transform int32");
  
                  break;
          }
@@ -308,7 +308,7 @@ $NetBSD$
                  r = json_variant_new_unsigned(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform uint32: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform uint32", r));
++                        return log_error_errno(r, "Failed to transform uint32");
  
                  break;
          }
@@ -317,7 +317,7 @@ $NetBSD$
                  r = json_variant_new_integer(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform int64: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform int64", r));
++                        return log_error_errno(r, "Failed to transform int64");
  
                  break;
          }
@@ -326,7 +326,7 @@ $NetBSD$
                  r = json_variant_new_unsigned(&v, b);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform uint64: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform uint64", r));
++                        return log_error_errno(r, "Failed to transform uint64");
  
                  break;
          }
@@ -335,7 +335,7 @@ $NetBSD$
                  r = json_variant_new_real(&v, d);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform double: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform double", r));
++                        return log_error_errno(r, "Failed to transform double");
  
                  break;
          }
@@ -344,7 +344,7 @@ $NetBSD$
                  r = json_variant_new_string(&v, s);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform double: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform double", r));
++                        return log_error_errno(r, "Failed to transform double");
  
                  break;
          }
@@ -353,7 +353,7 @@ $NetBSD$
                  r = json_variant_new_null(&v);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to transform fd: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to transform fd", r));
++                        return log_error_errno(r, "Failed to transform fd");
  
                  break;
  
@@ -362,7 +362,7 @@ $NetBSD$
                  r = sd_bus_send(bus, m, NULL);
                  if (r < 0)
 -                        return log_error_errno(r, "Failed to send message: %m");
-+                        return log_error_errno(r, LOG_ERR_FMT("Failed to send message", r));
++                        return log_error_errno(r, "Failed to send message");
  
                  return 0;
          }
@@ -371,7 +371,7 @@ $NetBSD$
                          r = parse_boolean(optarg);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse --expect-reply= parameter '%s': %m", optarg);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse --expect-reply= parameter '%s'", r, optarg));
++                                return log_error_errno(r, "Failed to parse --expect-reply= parameter '%s'", optarg);
  
                          arg_expect_reply = r;
                          break;
@@ -380,7 +380,7 @@ $NetBSD$
                          r = parse_boolean(optarg);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse --auto-start= parameter '%s': %m", optarg);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse --auto-start= parameter '%s'", r, optarg));
++                                return log_error_errno(r, "Failed to parse --auto-start= parameter '%s'", optarg);
  
                          arg_auto_start = r;
                          break;
@@ -389,7 +389,7 @@ $NetBSD$
                          r = parse_boolean(optarg);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse --allow-interactive-authorization= parameter '%s': %m", optarg);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse --allow-interactive-authorization= parameter '%s'", r, optarg));
++                                return log_error_errno(r, "Failed to parse --allow-interactive-authorization= parameter '%s'", optarg);
  
                          arg_allow_interactive_authorization = r;
                          break;
@@ -398,7 +398,7 @@ $NetBSD$
                          r = parse_sec(optarg, &arg_timeout);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse --timeout= parameter '%s': %m", optarg);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse --timeout= parameter '%s'", r, optarg));
++                                return log_error_errno(r, "Failed to parse --timeout= parameter '%s'", optarg);
  
                          break;
  
@@ -406,7 +406,7 @@ $NetBSD$
                          r = parse_boolean(optarg);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse --augment-creds= parameter '%s': %m", optarg);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse --augment-creds= parameter '%s'", r, optarg));
++                                return log_error_errno(r, "Failed to parse --augment-creds= parameter '%s'", optarg);
  
                          arg_augment_creds = r;
                          break;
@@ -415,7 +415,7 @@ $NetBSD$
                          r = parse_boolean(optarg);
                          if (r < 0)
 -                                return log_error_errno(r, "Failed to parse --watch-bind= parameter '%s': %m", optarg);
-+                                return log_error_errno(r, LOG_ERR_FMT("Failed to parse --watch-bind= parameter '%s'", r, optarg));
++                                return log_error_errno(r, "Failed to parse --watch-bind= parameter '%s'", optarg);
  
                          arg_watch_bind = r;
                          break;
