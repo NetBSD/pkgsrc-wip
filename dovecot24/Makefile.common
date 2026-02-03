@@ -1,0 +1,73 @@
+# when updating to a new release, update ABI depends in
+# the buildlink3.mk file as well, since the plugins' version
+# must match (see PR 49563).
+#
+# used by mail/dovecot24/Makefile
+# used by mail/dovecot24-gssapi/Makefile
+# used by mail/dovecot24-ldap/Makefile
+# used by mail/dovecot24-mysql/Makefile
+# used by mail/dovecot24-pgsql/Makefile
+# used by mail/dovecot24-sqlite/Makefile
+
+DISTNAME=	dovecot-2.4.2
+CATEGORIES=	mail
+MASTER_SITES=	https://dovecot.org/releases/2.4/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.dovecot.org/
+COMMENT=	Secure IMAP and POP3 server
+LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
+
+#DISTINFO_FILE=	${.CURDIR}/../../mail/dovecot24/distinfo
+#PATCHDIR=	${.CURDIR}/../../mail/dovecot24/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/dovecot24/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/dovecot24/patches
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config rpcgen bash:run
+GNU_CONFIGURE=		yes
+
+BUILD_DEFS+=		VARBASE
+
+.include "../../mk/bsd.prefs.mk"
+
+#.if "${PKGPATH}" != "mail/dovecot24"
+.if "${PKGPATH}" != "wip/dovecot24"
+#DEPENDS+=		dovecot>=${PKGVERSION_NOREV}{nb*,}:../../mail/dovecot24
+DEPENDS+=		dovecot>=${PKGVERSION_NOREV}{nb*,}:../../wip/dovecot24
+.endif
+
+# Uncomment for verbose build messages
+#CONFIGURE_ARGS+=	--disable-silent-rules
+
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
+CONFIGURE_ARGS+=	--without-gssapi
+CONFIGURE_ARGS+=	--without-ldap
+
+# Leave pkgsrc to enable compiler security features as appropriate.
+CONFIGURE_ARGS+=	--disable-hardening
+
+# Enable generic SQL backend support
+CONFIGURE_ARGS+=	--with-sql
+
+TEST_TARGET=	check
+
+# Explicitly disable epoll/inotify on illumos, dovecot assumes Linux-specific
+# implementation details.
+CONFIGURE_ARGS.SunOS+=	--with-ioloop=poll
+CONFIGURE_ARGS.SunOS+=	--with-notify=none
+
+# Enable platform specific extensions
+CFLAGS.NetBSD+=  -D_NETBSD_SOURCE
+CFLAGS.FreeBSD+= -D__BSD_VISIBLE -D__XSI_VISIBLE
+CFLAGS.OpenBSD+= -D__BSD_VISIBLE -D__XSI_VISIBLE
+CFLAGS.SunOS+=   -D__EXTENSIONS__
+
+.include "options.mk"
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"

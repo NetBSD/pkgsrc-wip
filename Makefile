@@ -790,6 +790,7 @@ SUBDIR+=	dosemu2
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot-antispam
 SUBDIR+=	dovecot2-fts-xapian
+SUBDIR+=	dovecot24
 SUBDIR+=	downtimed
 SUBDIR+=	doxy2man
 SUBDIR+=	dpic

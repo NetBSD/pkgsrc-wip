@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/lib-var-expand-crypt/Makefile.in.orig	2026-02-01 12:39:47.838422302 +0000
++++ src/lib-var-expand-crypt/Makefile.in
+@@ -545,7 +545,7 @@ test_libs = \
+ test_var_expand_crypt_SOURCES = test-var-expand-crypt.c
+ test_var_expand_crypt_LDADD = $(test_libs)
+ test_var_expand_crypt_DEPENDENCIES = $(module_LTLIBRARIES)
+-@HAVE_WHOLE_ARCHIVE_TRUE@test_var_expand_crypt_LDFLAGS = -export-dynamic -Wl,$(LD_WHOLE_ARCHIVE),../lib/.libs/liblib.a,../lib-json/.libs/libjson.a,../lib-ssl-iostream/.libs/libssl_iostream.a,$(LD_NO_WHOLE_ARCHIVE)
++@HAVE_WHOLE_ARCHIVE_TRUE@test_var_expand_crypt_LDFLAGS = -static -export-dynamic -Wl,$(LD_WHOLE_ARCHIVE),../lib/.libs/liblib.a,../lib-json/.libs/libjson.a,../lib-ssl-iostream/.libs/libssl_iostream.a,$(LD_NO_WHOLE_ARCHIVE)
+ test_var_expand_crypt_CFLAGS = $(AM_CFLAGS) \
+ 	-DDCRYPT_BUILD_DIR=\"$(top_builddir)/src/lib-dcrypt\"
+ 
