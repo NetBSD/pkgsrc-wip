@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config gmake bash
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-MAKE_FLAGS+=	SHELL=${PREFIX}/bin/bash
+MAKE_FLAGS+=	SHELL=${TOOLS_PLATFORM.bash}
 
 PKGCONFIG_OVERRIDE+=	daemons/dmeventd/libdevmapper-event.pc.in
 PKGCONFIG_OVERRIDE+=	libdm/libdevmapper.pc.in
