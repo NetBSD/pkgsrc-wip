@@ -46,6 +46,9 @@ CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-ldap
 
+CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
+CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
+
 # Leave pkgsrc to enable compiler security features as appropriate.
 CONFIGURE_ARGS+=	--disable-hardening
 
@@ -71,3 +74,4 @@ CFLAGS.SunOS+=   -D__EXTENSIONS__
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"

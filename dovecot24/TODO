@@ -1,5 +1,5 @@
-=> Checking for non-existent script interpreters in dovecot-2.4.2
-ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/tmp/pkgsrc/wip/dovecot24/default/.destdir/usr/pkg/libexec/dovecot/settings-history.py" is not allowed.
-*** Error code 1
-
 --with-ssl seems to be an non-existing option for configure.
+It looks like dovecot-2.4.2/m4/ssl.m4 says ssl is not optional, and it has to
+be OpenSSL.
+
+--with-libwrap seems to be an non-existing option for configure.
