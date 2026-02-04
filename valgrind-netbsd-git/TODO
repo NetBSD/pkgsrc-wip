@@ -1,15 +1,4 @@
 https://github.com/paulfloyd/valgrind-netbsd/issues/2
 
-Build succeeds, test fails with:
-mv -f $depbase.Tpo $depbase.Po
-../../../drd/tests/pth_detached3.c: In function 'main':
-../../../drd/tests/pth_detached3.c:32:40: error: passing argument 1 of '__libc_thr_detach' makes pointer from integer without a cast [-Wint-conversion]
-   32 |   pthread_detach((unsigned long)thread + 8);
-      |                  ~~~~~~~~~~~~~~~~~~~~~~^~~
-      |                                        |
-      |                                        long unsigned int
-In file included from ../../../drd/tests/pth_detached3.c:5:
-/usr/include/pthread.h:341:27: note: expected 'pthread_t' {aka 'struct __pthread_st *'} but argument is of type 'long unsigned int'
-  341 | int     __libc_thr_detach(pthread_t);
-      |                           ^~~~~~~~~
-
+Build succeeds, test status:
+== 777 tests, 742 stderr failures, 188 stdout failures, 11 stderrB failures, 16 stdoutB failures, 37 post failures ==
