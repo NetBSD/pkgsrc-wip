@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/xfr
-man/man1/xfr.1
-share/examples/xfr/config.toml

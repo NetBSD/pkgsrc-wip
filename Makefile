@@ -6126,7 +6126,6 @@ SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86-video-wsfb-dfbsd
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-wm-dfbsd
-SUBDIR+=	xfr
 SUBDIR+=	xfs
 SUBDIR+=	xhyve
 SUBDIR+=	xine-plugin
