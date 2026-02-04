@@ -1,12 +1,15 @@
 https://github.com/paulfloyd/valgrind-netbsd/issues/2
 
---- memcheck-amd64-netbsd ---
-../coregrind/link_tool_exe_netbsd  0x38000000  gcc  -O2 -g -fstack-clash-protection  -Wl,-zrelro -Wl,-znow -Wl,-R/usr/pkg/lib -o memcheck-amd64-netbsd    -m64  -O2 -g -Wall -Wmissing-prototypes -Wshadow  -Wpointer-arith
--Wstrict-prototypes -Wmissing-declarations  -Wno-unused-result -Wcast-align -Wcast-qual  -Wwrite-strings -Wempty-body -Wformat  -Wformat-signedness   -Wignored-qualifiers -Wmissing-parameter-type  -Wlogical-op -Wenum-con
-version  -Wimplicit-fallthrough=2 -Wold-style-declaration  -finline-functions -fno-stack-protector  -fno-strict-aliasing -fno-builtin     -fomit-frame-pointer -O2  -static -nodefaultlibs -nostartfiles -u _start -Wl,--bui
-ld-id=none -m64  -Wl,--whole-archive  ../coregrind/libcoregrind-sysident-amd64-netbsd.a  -Wl,--no-whole-archive memcheck_amd64_netbsd-mc_leakcheck.o  memcheck_amd64_netbsd-mc_malloc_wrappers.o  memcheck_amd64_netbsd-mc_m
-ain.o  memcheck_amd64_netbsd-mc_main_asm.o  memcheck_amd64_netbsd-mc_translate.o  memcheck_amd64_netbsd-mc_machine.o  memcheck_amd64_netbsd-mc_errors.o ../coregrind/libcoregrind-amd64-netbsd.a  ../VEX/libvex-amd64-netbsd
-.a  -lgcc ../coregrind/libgcc-sup-amd64-netbsd.a
-ld: ../coregrind/libcoregrind-amd64-netbsd.a(libcoregrind_amd64_netbsd_a-dispatch-amd64-netbsd.o): relocation R_X86_64_32S against symbol `vgPlain_stats__n_xIndirs_32' can not be used when making a PIE object; recompile
-with -fPIE
-ld: failed to set dynamic section sizes: bad value
+Build succeeds, test fails with:
+mv -f $depbase.Tpo $depbase.Po
+../../../drd/tests/pth_detached3.c: In function 'main':
+../../../drd/tests/pth_detached3.c:32:40: error: passing argument 1 of '__libc_thr_detach' makes pointer from integer without a cast [-Wint-conversion]
+   32 |   pthread_detach((unsigned long)thread + 8);
+      |                  ~~~~~~~~~~~~~~~~~~~~~~^~~
+      |                                        |
+      |                                        long unsigned int
+In file included from ../../../drd/tests/pth_detached3.c:5:
+/usr/include/pthread.h:341:27: note: expected 'pthread_t' {aka 'struct __pthread_st *'} but argument is of type 'long unsigned int'
+  341 | int     __libc_thr_detach(pthread_t);
+      |                           ^~~~~~~~~
+
