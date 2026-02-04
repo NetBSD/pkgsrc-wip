@@ -2,7 +2,6 @@ Prepare COMMIT_MSG.
 
 Reduce diffs to mail/dovecot to ease review:
   $NetBSD$ lines
-  Don't comment out mail->wip changes, just change them.
   Check and maybe reduce all other diffs
 
 --with-ssl seems to be an non-existing option for configure.

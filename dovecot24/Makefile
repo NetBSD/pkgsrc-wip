@@ -1,4 +1,3 @@
-#.include "../../mail/dovecot24/Makefile.common"
 .include "../../wip/dovecot24/Makefile.common"
 
 RCD_SCRIPTS=		dovecot

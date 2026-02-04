@@ -18,8 +18,6 @@ HOMEPAGE=	https://www.dovecot.org/
 COMMENT=	Secure IMAP and POP3 server
 LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
 
-#DISTINFO_FILE=	${.CURDIR}/../../mail/dovecot24/distinfo
-#PATCHDIR=	${.CURDIR}/../../mail/dovecot24/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/dovecot24/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/dovecot24/patches
 
@@ -33,7 +31,6 @@ BUILD_DEFS+=		VARBASE
 
 #.if "${PKGPATH}" != "mail/dovecot24"
 .if "${PKGPATH}" != "wip/dovecot24"
-#DEPENDS+=		dovecot>=${PKGVERSION_NOREV}{nb*,}:../../mail/dovecot24
 DEPENDS+=		dovecot>=${PKGVERSION_NOREV}{nb*,}:../../wip/dovecot24
 .endif
 
