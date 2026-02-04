@@ -6,6 +6,7 @@ Size (webkitgtk-2.50.4.tar.xz) = 45280588 bytes
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 20d09e1c226cfff707659ffa35a2c2c3f1cdb617
 SHA1 (patch-Source_JavaScriptCore_runtime_JSCBytecodeCacheVersion.cpp) = 5c96cbf6c426b75fe808f6cb4acc9075a264796a
 SHA1 (patch-Source_JavaScriptCore_runtime_JSCJSValueInlines.h) = 4d0a96c42f4532d0e5b385e75421df1968860a1b
+SHA1 (patch-Source_JavaScriptCore_runtime_MathCommon.cpp) = 4535d1aed5e92da2d459097516ee01d9faddfd0d
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_SimpleMutex.h) = 6cd83b9ec476ed39adecec6b30e898bda8e5b76d
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_platform.h) = 2fda057edc3dde3356f0663ec5aa52cb61fb1229
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_system__utils__linux.cpp) = ec16428e501a85281a288dc38c1da12485a1b746
