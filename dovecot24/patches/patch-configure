@@ -1,0 +1,19 @@
+$NetBSD$
+
+If imap-hibernate executable is not built, dovecot fails to start with:
+Fatal: service(imap-hibernate) access(/usr/pkg/libexec/dovecot/imap-hibernate) failed: No such file or directory
+
+--- configure.orig	2026-02-03 16:30:19.646993359 +0000
++++ configure
+@@ -22860,9 +22860,9 @@ fi
+ 
+ case "$notify" in #(
+   none) :
+-    BUILD_IMAP_HIBERNATE=0 ;; #(
++    BUILD_IMAP_HIBERNATE=1 ;; #(
+   kqueue) :
+-    BUILD_IMAP_HIBERNATE=0 ;; #(
++    BUILD_IMAP_HIBERNATE=1 ;; #(
+   *) :
+     BUILD_IMAP_HIBERNATE=1 ;;
+ esac
