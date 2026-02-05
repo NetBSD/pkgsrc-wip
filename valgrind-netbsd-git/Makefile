@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	valgrind-netbsd-0.0.20260204
+DISTNAME=	valgrind-netbsd-0.0.20260205
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=paulfloyd/}
 # head of branch of 'fosdem26' as of date above
-GITHUB_TAG=	35a3b79088ac71e83a3dc2d118967e0aefd7541f
+GITHUB_TAG=	d47a2efa1c806e6f9f020a0b70e44ed68cdf3ad9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/paulfloyd/valgrind-netbsd
@@ -30,7 +30,12 @@ CHECK_RELRO_SKIP+=	libexec/valgrind/massif-amd64-netbsd
 CHECK_RELRO_SKIP+=	libexec/valgrind/memcheck-amd64-netbsd
 CHECK_RELRO_SKIP+=	libexec/valgrind/none-amd64-netbsd
 
-PKGSRC_MKPIE=	no
+PKGSRC_MKPIE=		no
+PKGSRC_USE_STACK_CHECK=	no
+# this is not enough
+PKGSRC_USE_SSP=		no
+# so claim that this platform doesn't support SSP
+SSP_SUPPORTED=		no
 
 REPLACE_PERL+=		callgrind/callgrind_annotate.in
 REPLACE_PERL+=		callgrind/callgrind_control.in

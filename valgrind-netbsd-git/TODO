@@ -1,4 +1,3 @@
 https://github.com/paulfloyd/valgrind-netbsd/issues/2
 
-Build succeeds, test status:
-== 777 tests, 742 stderr failures, 188 stdout failures, 11 stderrB failures, 16 stdoutB failures, 37 post failures ==
+Build succeeds, test suite hangs.
