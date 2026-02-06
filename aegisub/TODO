@@ -1,2 +1,3 @@
 Check audio situation.
-Test.
+
+Does nothing on startup, not even show a window.
