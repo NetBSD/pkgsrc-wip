@@ -12,4 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
+BUILDLINK_TRANSFORM=	rm:-Werror
+FORCE_C_STD=    	 c89
+
 .include "../../mk/bsd.pkg.mk"
