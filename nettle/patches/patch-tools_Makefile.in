@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_Makefile.in,v 1.4 2015/08/23 14:22:10 wiz Exp $
+
+Use LIBTOOL.
+
+--- tools/Makefile.in.orig	2014-06-07 06:15:01.000000000 +0000
++++ tools/Makefile.in
+@@ -75,7 +75,7 @@ check:
+ install: $(TARGETS)
+ 	$(MKDIR_P) $(DESTDIR)$(bindir)
+ 	for f in $(TARGETS) ; do \
+-	  $(INSTALL_PROGRAM) $$f $(DESTDIR)$(bindir) ; \
++	  ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$f $(DESTDIR)$(bindir) ; \
+ 	done
+ 
+ uninstall:

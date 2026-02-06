@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.2 2024/12/31 17:42:57 adam Exp $
+
+Support NetBSD.
+Portability fix.
+
+--- configure.orig	2013-05-28 16:21:53.000000000 +0200
++++ configure	2013-11-26 10:12:32.000000000 +0100
+@@ -4903,6 +4903,7 @@
+ 	solaris*)	CCPIC="-fPIC" ;;
+ 	cygwin*)	CCPIC="" ;;
+ 	mingw32*)	CCPIC="" ;;
++	*netbsd*)	CCPIC="-fPIC" ;;
+ 	*)		CCPIC="-fpic" ;;
+       esac
+     else
+@@ -7187,7 +7188,7 @@
+     enable_documentation=yes
+ 
+   else
+-    if test "x$enable_documentation" == "xauto" ; then
++    if test "x$enable_documentation" = "xauto" ; then
+       enable_documentation=no
+     else
+       as_fn_error $? "Cannot find 'makeinfo', required for documentation." "$LINENO" 5

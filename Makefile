@@ -2615,6 +2615,7 @@ SUBDIR+=	netlogo
 SUBDIR+=	netmask
 SUBDIR+=	netquery-git
 SUBDIR+=	netrik
+SUBDIR+=	nettle
 SUBDIR+=	netwib
 SUBDIR+=	netwmpager
 SUBDIR+=	netwox
