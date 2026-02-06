@@ -5107,14 +5107,14 @@ go126/src/crypto/internal/fips140test/acvp_test.go
 go126/src/crypto/internal/fips140test/acvp_test_fips140v1.0.config.json
 go126/src/crypto/internal/fips140test/acvp_test_fips140v1.26.config.json
 go126/src/crypto/internal/fips140test/alias_test.go
-go126/src/crypto/internal/fips140test/cast_fips140v1.0_test.go
-go126/src/crypto/internal/fips140test/cast_fips140v1.26_test.go
 go126/src/crypto/internal/fips140test/cast_test.go
 go126/src/crypto/internal/fips140test/check_test.go
 go126/src/crypto/internal/fips140test/cmac_test.go
 go126/src/crypto/internal/fips140test/ctrdrbg_test.go
 go126/src/crypto/internal/fips140test/edwards25519_test.go
 go126/src/crypto/internal/fips140test/entropy_test.go
+go126/src/crypto/internal/fips140test/fips140v1.0_test.go
+go126/src/crypto/internal/fips140test/fips140v1.26_test.go
 go126/src/crypto/internal/fips140test/fips_test.go
 go126/src/crypto/internal/fips140test/indicator_test.go
 go126/src/crypto/internal/fips140test/mldsa_test.go
@@ -9210,6 +9210,7 @@ go126/src/os/exec/internal/fdtest/exists_test.go
 go126/src/os/exec/internal/fdtest/exists_unix.go
 go126/src/os/exec/internal/fdtest/exists_windows.go
 go126/src/os/exec/internal_test.go
+go126/src/os/exec/lookpath.go
 go126/src/os/exec/lp_linux_test.go
 go126/src/os/exec/lp_plan9.go
 go126/src/os/exec/lp_test.go
@@ -11851,6 +11852,7 @@ go126/test/escape5.go
 go126/test/escape6.go
 go126/test/escape_alias.go
 go126/test/escape_array.go
+go126/test/escape_bloop.go
 go126/test/escape_calls.go
 go126/test/escape_closure.go
 go126/test/escape_field.go

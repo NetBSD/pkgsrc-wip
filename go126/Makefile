@@ -4,7 +4,7 @@
 GO_BOOTSTRAP_REQD=	124
 .include "../../lang/go/bootstrap.mk"
 
-GO126_VERSION=	1.26rc2
+GO126_VERSION=	1.26rc3
 GOVERSSUFFIX=	126
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
