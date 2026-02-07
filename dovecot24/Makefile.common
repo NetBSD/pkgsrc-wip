@@ -29,7 +29,6 @@ BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if "${PKGPATH}" != "mail/dovecot24"
 .if "${PKGPATH}" != "wip/dovecot24"
 DEPENDS+=		dovecot>=${PKGVERSION_NOREV}{nb*,}:../../wip/dovecot24
 .endif
@@ -60,7 +59,6 @@ CONFIGURE_ARGS.SunOS+=	--with-ioloop=poll
 CONFIGURE_ARGS.SunOS+=	--with-notify=none
 
 # Enable platform specific extensions
-CFLAGS.NetBSD+=  -D_NETBSD_SOURCE
 CFLAGS.FreeBSD+= -D__BSD_VISIBLE -D__XSI_VISIBLE
 CFLAGS.OpenBSD+= -D__BSD_VISIBLE -D__XSI_VISIBLE
 CFLAGS.SunOS+=   -D__EXTENSIONS__

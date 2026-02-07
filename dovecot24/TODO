@@ -26,6 +26,22 @@ upstream bug that some XOPEN visibility define is set, and that turns
 everything else off.  Consider if avoiding defining that is adequate,
 and/or patching, and filing upstream.
 
+    src/lib/lib.h has the dubious setting of a bunch of these flags:
+
+    #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+    #  define __BSD_VISIBLE 1
+    #elif defined(__APPLE__)
+    #  define _DARWIN_C_SOURCE 1
+    #endif
+    #define _BSD_SOURCE 1
+    #define _DEFAULT_SOURCE 1
+    #define _POSIX_C_SOURCE 200809L
+    #define _XOPEN_SOURCE 700
+
+    After disabling the lot of them, it still builds and my quick runtime test
+    also works.
+
+
 Address the strategy of a lot of config files.  Does dovecot really
 need all those files?  Installed config should be minimal and the user
 is welcome to steal from examples.
