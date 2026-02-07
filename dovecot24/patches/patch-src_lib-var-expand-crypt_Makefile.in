@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix linking errors on non-Linux platforms for a test binary
 
---- src/lib-var-expand-crypt/Makefile.in.orig	2026-02-01 12:39:47.838422302 +0000
+--- src/lib-var-expand-crypt/Makefile.in.orig	2025-10-29 06:58:58.000000000 +0000
 +++ src/lib-var-expand-crypt/Makefile.in
 @@ -545,7 +545,7 @@ test_libs = \
  test_var_expand_crypt_SOURCES = test-var-expand-crypt.c

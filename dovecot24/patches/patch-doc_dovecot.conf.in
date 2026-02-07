@@ -1,0 +1,15 @@
+$NetBSD$
+
+Default to passwd, not pam, for passdb. (NEEDS CHECKING!)
+
+--- doc/dovecot.conf.in.orig	2026-02-07 14:16:52.447076681 +0000
++++ doc/dovecot.conf.in
+@@ -41,7 +41,7 @@ namespace inbox {
+ }
+ 
+ # Authenticate as system users:
+-passdb pam {
++passdb passwd {
+ }
+ 
+ ssl_server {

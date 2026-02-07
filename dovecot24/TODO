@@ -3,12 +3,18 @@ Prepare COMMIT_MSG.
 Reduce diffs to mail/dovecot to ease review:
   $NetBSD$ lines
   Check and maybe reduce all other diffs
+    
+    I checked all other diffs, and most of them seem to be applied already.
+    Except for several additions of #include <sys/time.h>, but that doesn't
+    seem to break the build, so I'll assume those patches are no longer needed.
 
 --with-ssl seems to be an non-existing option for configure.
 It looks like dovecot-2.4.2/m4/ssl.m4 says ssl is not optional, and it has to
 be OpenSSL.
 
 --with-libwrap seems to be an non-existing option for configure.
+
+    I wonder if adding libwrap support back is easy?
 
 Add comments to both patches, and upstream URL or argument that the
 patch does not belong upstream.
@@ -23,3 +29,7 @@ and/or patching, and filing upstream.
 Address the strategy of a lot of config files.  Does dovecot really
 need all those files?  Installed config should be minimal and the user
 is welcome to steal from examples.
+
+    Currently it doesn't install a whole conf.d directory of config file
+    fragements any more. This difference is actually annoying when upgrading
+    from the previous version, which did do that.
