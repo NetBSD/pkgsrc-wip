@@ -2,7 +2,7 @@
 
 DISTNAME=	tllist-1.1.0
 CATEGORIES=	devel
-MASTER_SITES=	https://codeberg.org/dnkl/tllist/releases/download/${PKGVERSION_NOREV}
+MASTER_SITES=	https://codeberg.org/dnkl/tllist/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://codeberg.org/dnkl/tllist/
