@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	foot-1.17.0
+DISTNAME=	foot-1.25.0
 CATEGORIES=	x11
 MASTER_SITES=	https://codeberg.org/dnkl/foot/releases/download/${PKGVERSION_NOREV}/
 
@@ -11,21 +11,28 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
+MESON_ARGS+=	-Dtests=false
+
+EGDIR=		${PREFIX}/share/examples/foot
+OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/foot
+CONF_FILES=	${EGDIR}/foot.ini ${PKG_SYSCONFDIR}/xdg/foot/foot.ini
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/terminfo
 
 .include "../../devel/meson/build.mk"
+.include "../../textproc/scdoc/tool.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
-#.include "../../devel/libepoll-shim/buildlink3.mk"
+CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
+.include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/application.mk"
+#.include "../../lang/python/application.mk"
 .include "../../wip/fcft/buildlink3.mk"
 .include "../../wip/tllist/buildlink3.mk"
+.include "../../wip/input-headers/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
