@@ -9,4 +9,4 @@ gguf>=0.1.0
 protobuf>=4.21.0,<5.0.0
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2025-49847, CVE-2025-52566, CVE-2026-21869
+  CVE-2025-49847, CVE-2025-52566, CVE-2026-21869, CVE-2026-2069
