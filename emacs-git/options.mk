@@ -166,7 +166,6 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 APPLICATIONS_DIR=	Applications
 PLIST_SRC+=		PLIST.cocoa
 CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
-CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/libexec/Emacs.pdmp
 .  else
 .include "../../x11/gnustep-gui/buildlink3.mk"
 MAKE_FILE=		Makefile
