@@ -1,2 +1,4 @@
-Fix security/capabilities
-Add support for pkgsrc CONF_FILES
+Minimal requirements to testing sway:
+- NetBSD >= 11
+- sway
+- wip/foot
