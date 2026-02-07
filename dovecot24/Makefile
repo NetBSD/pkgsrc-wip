@@ -1,3 +1,5 @@
+# $NetBSD: Makefile,v 1.112 2024/08/19 09:29:56 adam Exp $
+
 .include "../../wip/dovecot24/Makefile.common"
 
 RCD_SCRIPTS=		dovecot
@@ -20,7 +22,7 @@ EGDIR=			${PREFIX}/share/examples/dovecot
 
 CNFS_cmd=		${SED} -ne "s,^share/examples/dovecot/,,p" PLIST
 CNFS=			${CNFS_cmd:sh}
-CONF_FILES=             ${EGDIR}/dovecot.conf ${PKG_SYSCONFDIR}/dovecot/dovecot.conf
+CONF_FILES=		${EGDIR}/dovecot.conf ${PKG_SYSCONFDIR}/dovecot/dovecot.conf
 .for file in ${CNFS}
 CONF_FILES+=		${EGDIR}/${file:Q} ${PKG_SYSCONFDIR}/dovecot/${file:Q}
 .endfor
@@ -47,6 +49,8 @@ post-install: enable-manz-by-replacing-roff-includes-with-symlinks
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
 
-# Just for REPLACE_PYTHON but it pulls in the whole Python...
+# \todo Decide if dovecot should depend on python, and explain whether
+# settings-history.py is important enough to warrant a python
+# dependency.
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

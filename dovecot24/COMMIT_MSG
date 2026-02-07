@@ -2,3 +2,20 @@ mail/dovecot24: Add version 2.4.2
 
 Originally packaged by Sad Clouds based on mail/dovecot2, and then
 modified by many in wip.
+
+While a separate package, this is logically an update to mail/dovecot2
+2.3.21.1.
+
+Packaging changes:
+
+  - \todo Explain dropped patches (one by one, even if very briefly),
+    so that a reviewer can be sure each removal is appropriate.
+  - \todo Explain why xz is dropped.
+  - openssl is no longer optional upstream, so the option is removed
+
+Upstream NEWS:
+  
+  - ?? wiki no longer included
+  - ?? change in installed default configs (beyond actual config changes)
+
+\todo

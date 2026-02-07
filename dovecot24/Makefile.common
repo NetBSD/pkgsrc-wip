@@ -1,3 +1,5 @@
+# $NetBSD: Makefile.common,v 1.53 2024/08/19 09:29:56 adam Exp $
+#
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
 # must match (see PR 49563).
@@ -58,6 +60,9 @@ TEST_TARGET=	check
 CONFIGURE_ARGS.SunOS+=	--with-ioloop=poll
 CONFIGURE_ARGS.SunOS+=	--with-notify=none
 
+# \todo This is a change from dovecot2, so keeping it requires
+# justification (vs the view that removing it from the working copy
+# needs justification).
 # Enable platform specific extensions
 CFLAGS.FreeBSD+= -D__BSD_VISIBLE -D__XSI_VISIBLE
 CFLAGS.OpenBSD+= -D__BSD_VISIBLE -D__XSI_VISIBLE
@@ -69,4 +74,5 @@ CFLAGS.SunOS+=   -D__EXTENSIONS__
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+# \todo Explain why every program that uses Makefile.common needs this, vs only the server.
 .include "../../security/openssl/buildlink3.mk"
