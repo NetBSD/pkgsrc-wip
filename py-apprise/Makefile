@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	apprise-1.9.3
+DISTNAME=	apprise-1.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apprise/}
