@@ -1,0 +1,6 @@
+Convos is a multiuser chat application that runs in your web browser.
+
+The supported chat protocol is currently IRC, but Convos can be extended to
+support other protocols as well.
+
+See https://convos.chat for more details.

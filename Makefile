@@ -595,6 +595,7 @@ SUBDIR+=	conky
 SUBDIR+=	consul
 SUBDIR+=	contacts
 SUBDIR+=	convertall
+SUBDIR+=	convos
 SUBDIR+=	cool-retro-term
 SUBDIR+=	cops
 SUBDIR+=	copytape
