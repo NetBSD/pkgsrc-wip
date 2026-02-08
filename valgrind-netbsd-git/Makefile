@@ -11,6 +11,9 @@ HOMEPAGE=	https://github.com/paulfloyd/valgrind-netbsd
 COMMENT=	NetBSD port of Valgrind
 LICENSE=	gnu-gpl-v2
 
+# for xmllint
+TEST_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+
 WRKSRC=		${WRKDIR}/valgrind-netbsd-${GITHUB_TAG}
 
 GNU_CONFIGURE=	yes
