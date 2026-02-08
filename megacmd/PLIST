@@ -6,6 +6,7 @@ bin/mega-cat
 bin/mega-cd
 bin/mega-cmd
 bin/mega-cmd-server
+bin/mega-configure
 bin/mega-confirm
 bin/mega-confirmcancel
 bin/mega-cp
