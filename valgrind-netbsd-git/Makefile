@@ -32,10 +32,16 @@ CHECK_RELRO_SKIP+=	libexec/valgrind/none-amd64-netbsd
 
 PKGSRC_MKPIE=		no
 PKGSRC_USE_STACK_CHECK=	no
+PKGSRC_USE_FORTIFY=	no
 # this is not enough
+PKGSRC_USE_RELRO=	no
 PKGSRC_USE_SSP=		no
-# so claim that this platform doesn't support SSP
+# so claim that this platform doesn't support SSP & RELRO
 SSP_SUPPORTED=		no
+RELRO_SUPPORTED=	no
+
+# -O2 strips code from the test cases
+CFLAGS+=		-O0
 
 REPLACE_PERL+=		callgrind/callgrind_annotate.in
 REPLACE_PERL+=		callgrind/callgrind_control.in
