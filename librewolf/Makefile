@@ -2,12 +2,13 @@
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		147.0
-MOZ_BRANCH_MINOR=	  .2
+MOZ_BRANCH_MINOR=	  .3
+MOZ_BRANCH_HYPHEN=	  2
 
-DISTNAME=	librewolf-${FIREFOX_VER}-1.source
-PKGNAME=	${DISTNAME:S/.source//:S/-1$//}
+DISTNAME=	librewolf-${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}.source
+PKGNAME=	${DISTNAME:S/.source//:S/-${MOZ_BRANCH_HYPHEN}$//}
 CATEGORIES=	www
-MASTER_SITES=	https://codeberg.org/api/packages/librewolf/generic/librewolf-source/${FIREFOX_VER}-1/
+MASTER_SITES=	https://codeberg.org/api/packages/librewolf/generic/librewolf-source/${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}/
 EXTRACT_SUFX=	.tar.gz
 
 NODEJSKIT=		nodejs-output-147.0.tgz
