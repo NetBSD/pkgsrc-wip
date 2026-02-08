@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sayonara-1.11.0_stable2
+DISTNAME=	sayonara-1.11.0_stable1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITLAB:=luciocarreras/}
 GITLAB_PROJECT=	sayonara-player

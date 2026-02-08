@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (sayonara-1.11.0_stable2.tar.gz) = cfb1d5a6cbca73c72efd5bfab3524d6e90770fdd6cd3d8f54480c860b9a2439d
-SHA512 (sayonara-1.11.0_stable2.tar.gz) = ed33681d7fa13cc669daec13bebf26f6d8d911d7c2f8329736cc1bc03f430dbab9643a3548c533c4a6d0c338e0ccb8f11bd842d1fdacc99a328bf41a1de9587f
-Size (sayonara-1.11.0_stable2.tar.gz) = 2297011 bytes
+BLAKE2s (sayonara-1.11.0_stable1.tar.gz) = 5715c30566c6c379a110c4322487edc88886c264715f37144c1b93edb8954efd
+SHA512 (sayonara-1.11.0_stable1.tar.gz) = bcfd7d197e81ab35509e3409fe0a5882bf3274cfb17bafd76ac89b2c9f0b6155b863b1bcf22186d526734e1c472768f02d13c9b88751857c5df194a2677719c8
+Size (sayonara-1.11.0_stable1.tar.gz) = 2297012 bytes
 SHA1 (patch-resources_CMakeLists.txt) = 1a6077fe63075fbecb3cbc3ecdba4362e084bf3b
 SHA1 (patch-src_Gui_Plugins_Engine_GUI__LevelPainter.cpp) = 81d20234434b90b1ecf8ffd1fe23ff9b3bf5ad23
