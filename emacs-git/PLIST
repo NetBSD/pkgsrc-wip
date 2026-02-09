@@ -1246,8 +1246,6 @@ share/emacs/${PKGVERSION}/lisp/calendar/cal-x.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-x.elc
 share/emacs/${PKGVERSION}/lisp/calendar/calendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/calendar.elc
-share/emacs/${PKGVERSION}/lisp/calendar/diary-icalendar.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/diary-icalendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.el.gz
@@ -1256,18 +1254,6 @@ share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-ast.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-ast.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-macs.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-macs.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-mode.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-parser.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-parser.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-recur.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-recur.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-utils.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-utils.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/iso8601.el.gz
