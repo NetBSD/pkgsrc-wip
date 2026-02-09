@@ -41,6 +41,9 @@ ${PYSITELIB}/mbake/core/formatter.pyo
 ${PYSITELIB}/mbake/core/rules/__init__.py
 ${PYSITELIB}/mbake/core/rules/__init__.pyc
 ${PYSITELIB}/mbake/core/rules/__init__.pyo
+${PYSITELIB}/mbake/core/rules/assignment_alignment.py
+${PYSITELIB}/mbake/core/rules/assignment_alignment.pyc
+${PYSITELIB}/mbake/core/rules/assignment_alignment.pyo
 ${PYSITELIB}/mbake/core/rules/assignment_spacing.py
 ${PYSITELIB}/mbake/core/rules/assignment_spacing.pyc
 ${PYSITELIB}/mbake/core/rules/assignment_spacing.pyo
