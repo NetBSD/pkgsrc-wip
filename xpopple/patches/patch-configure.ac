@@ -2,9 +2,9 @@ $NetBSD$
 
 Add check for libXpm.
 
---- configure.ac.orig	2022-09-28 11:53:00.000000000 +0000
+--- configure.ac.orig	2026-02-09 10:22:46.000000000 +0000
 +++ configure.ac
-@@ -69,6 +69,12 @@ PKG_CHECK_MODULES([XT], [xt x11])
+@@ -109,6 +109,12 @@ PKG_CHECK_MODULES([XT], [xt x11])
  CPPFLAGS="$CPPFLAGS $XT_CFLAGS"
  LIBS="$LIBS $XT_LIBS"
  

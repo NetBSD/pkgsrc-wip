@@ -1,4 +1,4 @@
 $NetBSD$
 
-SHA1 (patch-configure.ac) = 1d19b970d55a2c8ac5ebb53189aade38fa55811d
-SHA1 (patch-xpdf_XPDFViewer.cc) = ca5921db6c0bb297409dce24141437acb4a40972
+SHA1 (patch-configure.ac) = 651cb9d1b9dd68c24e4fb18986588b996bb19568
+SHA1 (patch-xpdf_XPDFViewer.cc) = 9de36d76f71558d5a8bd9c329500c2ae1c1360e4

@@ -3,8 +3,7 @@
 DISTNAME=	xpopple-3.04.0
 CATEGORIES=	print
 GIT_REPO=	http://offog.org/git/xpopple.git
-GIT_BRANCH=	master
-GIT_REVISION=	0aa7a917fd5999521f8117fe3384dbcb3c8828ad
+GIT_REVISION=	f110e3e00731011dfb6487e33c23f93ed77397c4
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://offog.org/code/xpopple/
