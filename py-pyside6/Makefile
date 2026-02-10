@@ -1,6 +1,7 @@
 # $NetBSD: $
 
 VERSION=	6.10.1
+PKGREVISION=	1
 DISTNAME=	pyside-setup-everywhere-src-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-pyside6-${VERSION}
 MASTER_SITES=	https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-${VERSION}-src/
@@ -29,6 +30,12 @@ SUBST_MESSAGE.bash=	Replace bash path in cmake generated wrapper
 SUBST_STAGE.bash=	post-extract
 SUBST_FILES.bash=	sources/shiboken6/cmake/ShibokenHelpers.cmake
 SUBST_SED.bash=		-e "s|\#!/bin/bash|\#!${BASH}|g"
+
+SUBST_CLASSES+=		unbl3
+SUBST_STAGE.unbl3=	post-build
+SUBST_FILES.unbl3=	${CMAKE_BUILD_DIR}/sources/shiboken6/generator/CMakeFiles/Export/*/*.cmake
+SUBST_SED.unbl3=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
+SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 
 .include "../../devel/cmake/build.mk"
 
