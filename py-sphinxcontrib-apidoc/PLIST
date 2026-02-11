@@ -5,9 +5,9 @@ ${PYSITELIB}/sphinxcontrib/apidoc/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/apidoc/ext.py
 ${PYSITELIB}/sphinxcontrib/apidoc/ext.pyc
 ${PYSITELIB}/sphinxcontrib/apidoc/ext.pyo
-${PYSITELIB}/sphinxcontrib_apidoc-${PKGVERSION}-py3.12-nspkg.pth
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/sphinxcontrib_apidoc-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL

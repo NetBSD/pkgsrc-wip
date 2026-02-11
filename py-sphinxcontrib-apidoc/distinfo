@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (sphinxcontrib-apidoc-0.5.0.tar.gz) = 12087587d1884c1f6080801886273a5fa04a1a915dfff9472637c7e1ee214c93
-SHA512 (sphinxcontrib-apidoc-0.5.0.tar.gz) = 36858dab0915f4aac48b2bab1aeea830e35e1e865ff5f4726df0c9f9c2917d450ed1e27b1db9d143fade09369201b1b6b72f0264e674130f62a67df494c8f646
-Size (sphinxcontrib-apidoc-0.5.0.tar.gz) = 16117 bytes
+BLAKE2s (sphinxcontrib_apidoc-0.6.0.tar.gz) = f66b58e49112485c90952ded4a67d16d9a9216008d29492cfcfcc1becf127a18
+SHA512 (sphinxcontrib_apidoc-0.6.0.tar.gz) = 5bc7750d92d911e77daaa0023f8c4de00dcd68ce6fc82b0cd69fa902c3b9296605958cef0151f26537ada23aae49d76beb579a254ec0c604694f39f12f6100ae
+Size (sphinxcontrib_apidoc-0.6.0.tar.gz) = 16790 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sphinxcontrib-apidoc-0.5.0
+DISTNAME=	sphinxcontrib_apidoc-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-apidoc/}
