@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/i3blocks
+etc/i3blocks.conf
+man/man1/i3blocks.1
+share/bash-completion/completions/i3blocks
