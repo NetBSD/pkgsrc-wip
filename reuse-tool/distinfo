@@ -4,3 +4,4 @@ BLAKE2s (reuse-tool-6.2.0.tar.gz) = b19c192d95dc2960f98e0424ce3a2be15183941d80b4
 SHA512 (reuse-tool-6.2.0.tar.gz) = 946b3a1e908976c3c54749a77c8dbff2e7cffdfd44e92c208aee2faeec5ac79bfe29e28f630b58fe7dd9b4e27945f91b176d984de8575593087d22f7e6b3ec3f
 Size (reuse-tool-6.2.0.tar.gz) = 507943 bytes
 SHA1 (patch-docs_conf.py) = e93a4109cdb7dc47c48d17081c0d31aac5c13228
+SHA1 (patch-docs_index.rst) = 74eab8eea3814898cb2380b9bb57cb387e1d6e7e
