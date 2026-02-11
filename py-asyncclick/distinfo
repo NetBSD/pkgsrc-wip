@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.32 2025/11/16 07:58:04 adam Exp $
+
+BLAKE2s (asyncclick-8.3.0.7.tar.gz) = e6780ef34bc0e7e1ff8ccc0430d6872d9f4300d719c7b00ea26babdeac1a1b3e
+SHA512 (asyncclick-8.3.0.7.tar.gz) = f6711789610882e8dd2ef6a05adf5d67c4992fa78b3757825e25071ee9839d096788b2b95e1ac7a468cec88f63734b945591dec738604f328cd6480fe5ddba7d
+Size (asyncclick-8.3.0.7.tar.gz) = 277634 bytes
