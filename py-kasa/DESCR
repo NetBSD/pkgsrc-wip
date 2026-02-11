@@ -1,0 +1,5 @@
+python-kasa is a Python library to control TPLink's smart home devices
+(plugs, wall switches, power strips, and bulbs).
+
+This is a voluntary, community-driven effort and is not affiliated,
+sponsored, or endorsed by TPLink.

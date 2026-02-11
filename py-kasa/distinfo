@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (python_kasa-0.10.2.tar.gz) = 57d6066dd4fda007583d3c5d174437da6184da5c14a627e83f803bc85a1df47b
+SHA512 (python_kasa-0.10.2.tar.gz) = e69f770c49fa19fd0e364440cd5c328db3fd4951ae92365ce07e8e7091f01960d4f750649c5db9a1e07241a0a237ac9b73636d286aa4ae2db739dbf3a5301bc7
+Size (python_kasa-0.10.2.tar.gz) = 458421 bytes
