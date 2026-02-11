@@ -4,4 +4,4 @@
 [X] Verify whether MKPIE must still be disabled
 
 [ ] Test with real hardware
-[ ] Test with upcoming avr-libc 2.2.0
+[ ] Test with avr-libc 2.3.1

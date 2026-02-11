@@ -1,12 +1,58 @@
-cross/avr-gcc: Update to 14.1.0
+cross/avr-gcc: Update to 15.2.0
 
 Remove pkgsrc patches that were merged upstream.
+
+
+Full changelog can be found here:
+<https://gcc.gnu.org/gcc-15/changes.html>
+
+Changes for AVR architecture in GCC 15
+======================================
+- Support has been added for the signal(num) and interrupt(num) function
+  attributes that allow to specify the interrupt vector number num as an
+  argument. It allows to use static functions as interrupt handlers, and
+  also functions defined in a C++ namespace.
+- Support has been added for the noblock function attribute. It can be
+  specified together with the signal attribute to indicate that the
+  interrupt service routine should start with a SEI instruction to
+  globally re-enable interrupts. The difference to the interrupt
+  attribute is that the noblock attribute just acts like a flag and does
+  not impose a specific function name.
+- Support has been added for the __builtin_avr_mask1 built-in function.
+  It can be used to compute some bit masks when code like 1 << offset is
+  not fast enough.
+- Support has been added for a new 24-bit named address space __flashx.
+  It is similar to the __memx address space introduced in GCC 4.7,
+  but reading is more efficient since it only supports reading from
+  program memory. Objects in the __flashx address space are located
+  in the .progmemx.data section. The address space is available when
+  the feature-test macro __FLASHX is defined.
+- Apart from the built-in types __int24 and __uint24 supported since
+  GCC 4.7, support has been added for the signed __int24 and
+  unsigned __int24 types.
+- Code generation for the 32-bit integer shifts with constant offset
+  has been improved. The code size may slightly increase even when
+  optimizing for code size with -Os.
+- Support has been added for a compact vector table as supported by
+  some AVR devices. It can be activated by the new command-line
+  option -mcvt. It links crtmcu-cvt.o as startup code which is supported
+  since AVR-LibC v2.3.
+- Support has been added for the new option -mno-call-main. Instead of
+  calling main, it will be located in section .init9.
+- New AVR specific optimizations have been added. They can be controlled
+  by the new command-line options -mfuse-move, -msplit-ldst,
+  -msplit-bit-shift and -muse-nonzero-bits.
+- Support for the following devices has been added:
+  AVR32DA28S, AVR32DA32S, AVR32DA48S, AVR64DA28S, AVR64DA32S,
+  AVR64DA48S, AVR64DA64S, AVR128DA28S, AVR128DA32S, AVR128DA48S,
+  AVR128DA64S.
+
 
 Full changelog can be found here:
 <https://gcc.gnu.org/gcc-14/changes.html>
 
-Changes for AVR architecture
-============================
+Changes for AVR architecture in GCC 14
+======================================
 - On AVR64* and AVR128* devices, read-only data is now located in
   program memory per default and no longer in RAM.
   - Only a 32Â KiB block of program memory can be used to store and
@@ -16,7 +62,7 @@ Changes for AVR architecture
     which takes precedence over __flmap. For example, linking with
     -Wl,--defsym,__RODATA_FLASH_START__=32k chooses the second 32Â KiB
     block.
-  - The default uses the last 32Â KiB block, which is also the hardware
+  - The default uses the last 32 KiB block, which is also the hardware
     default for bit-field NVMCTRL_CTRLB.FLMAP.
   - When a non-default block is used, then NVMCTRL_CTRLB.FLMAP must be
     initialized accordingly by hand, or AVR-LibC v2.2 that implements
@@ -26,7 +72,7 @@ Changes for AVR architecture
   - When AVR-LibC with #931 is used, then defining the symbol
     __flmap_lock to a non-zero value will set bit
     NVMCTRL_CTRLB.FLMAPLOCK. This will protect NVMCTRL_CTRLB.FLMAP from
-    any further changes â which would be Undefined Behaviour in C/C++.
+    any further changes which would be Undefined Behaviour in C/C++.
     If you prefer to define the symbol in a C/C++ file, an asm statement
     can be used:
         __asm (".global __flmap_lock"  "\n\t"
