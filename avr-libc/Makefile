@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		avr-libc-2.2.0
+DISTNAME=		avr-libc-2.3.1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GITHUB:=avrdudes/}
 GITHUB_PROJECT=		avr-libc
-GITHUB_RELEASE=		avr-libc-2_2_0-release
+GITHUB_RELEASE=		${DISTNAME:S/./_/g}-release
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		micha@NetBSD.org
@@ -39,8 +39,8 @@ SUBST_SED.demo=		-e 's|@@@PATH@@@|${PREFIX}/bin:${PATH:Q}|g'
 
 .include "options.mk"
 
-.include "../../cross/avr-binutils/buildlink3.mk"
-.include "../../cross/avr-gcc/buildlink3.mk"
+.include "../../wip/avr-binutils/buildlink3.mk"
+.include "../../wip/avr-gcc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Not to be overridden as --mandir=${PREFIX}, put the line here.

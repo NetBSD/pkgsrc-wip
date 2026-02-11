@@ -1,2 +1,3 @@
-[] Fix option "doc"
-   LaTeX documentation is broken (Issue #966)
+[ ] Fix option "doc"
+    LaTeX documentation is broken (Issue #966)
+[ ] Test with real hardware
