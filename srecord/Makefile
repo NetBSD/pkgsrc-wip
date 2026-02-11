@@ -12,8 +12,6 @@ HOMEPAGE=	https://srecord.sourceforge.net/
 COMMENT=	Manipulate EPROM load files
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	groff
-
 USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/srecord-${PKGVER}
