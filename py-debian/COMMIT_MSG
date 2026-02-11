@@ -1,0 +1,4 @@
+devel/py-debian: Add py-debian version 1.1.0
+
+Work with Debian-related data formats, providing a means to read data
+from files involved in Debian packaging.

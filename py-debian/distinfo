@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (python-debian-0.1.38.tar.gz) = 8c6788482eafb8256b6aed257fcb7f68398e9ab0
-SHA512 (python-debian-0.1.38.tar.gz) = 4d6fcf48183214ad52a47593dc7d70a9ba540c87b10fa9ca0cdd3ef076f9fbf70686957f1f9c9b5f21333de467dd6105c91996a40a502e7c2528296d8f532132
-Size (python-debian-0.1.38.tar.gz) = 62973 bytes
+BLAKE2s (python_debian-1.1.0.tar.gz) = 98c338ee87d85e03f3d819787507a368d041312fec210852ee8ded95b7fd8d60
+SHA512 (python_debian-1.1.0.tar.gz) = 6d432cd8c382ffc33953b3a72b27b784edc6d65134b2f4c7d27a2301d4cb3e0664df288a24cc69718995f0cdb401637eeeefcc689f5b13eea43de0c8de16dace
+Size (python_debian-1.1.0.tar.gz) = 127848 bytes
