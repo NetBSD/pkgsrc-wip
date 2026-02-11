@@ -1,4 +1,9 @@
 $NetBSD: distinfo,v 1.2 2013/01/19 13:17:41 othyro Exp $
 
-RMD160 (srecord-1.61.tar.gz) = d583d8ef9e9d64b1f3fa3397cf8daa0e49cb209b
-Size (srecord-1.61.tar.gz) = 916174 bytes
+BLAKE2s (v1.65.tar.gz) = 3c986175c657d6f2ee2b182e545405cb6d19ec64f5e3b75f721894d424fb0bb4
+SHA512 (v1.65.tar.gz) = cdc18c21bf9607987b91d31d7ee76d19901ab81776943cc72b46ca92bbdb29f99b644da038c2903cd42473411e6e19e5b67c3225599ea874d40fb635dc0b84ed
+Size (v1.65.tar.gz) = 809393 bytes
+SHA1 (patch-CMakeLists.txt) = 8ba2422b80185398fdcf09717171efea1e5e307b
+SHA1 (patch-doc_CMakeLists.txt) = e28ee822f25148225859d95036100444c30d20af
+SHA1 (patch-etc_packaging.cmake) = 1e7aeca847a551937805efadb87a0c2a1c78a6c7
+SHA1 (patch-srecord_CMakeLists.txt) = f989f9ad1ca5127e2d4bf596281fd0bc888e7b03

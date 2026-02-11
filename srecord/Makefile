@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2013/01/19 13:17:41 othyro Exp $
+# $NetBSD$
 #
 
-DISTNAME=	srecord-1.61
+DISTNAME=	v${PKGVER}
+PKGNAME=	srecord-${PKGVER}
+PKGVER=		1.65
 CATEGORIES=	devel
-MASTER_SITES=	http://srecord.sourceforge.net/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=sierrafoxtrot/srecord/archive/refs/tags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://srecord.sourceforge.net/
 COMMENT=	Manipulate EPROM load files
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
+USE_TOOLS+=	groff
 
-.include "../../devel/boost-libs/buildlink3.mk"
+USE_LANGUAGES=	c c++
+
+WRKSRC=		${WRKDIR}/srecord-${PKGVER}
+
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+
 .include "../../mk/bsd.pkg.mk"

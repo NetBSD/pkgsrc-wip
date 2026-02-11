@@ -1,0 +1,26 @@
+$NetBSD$
+
+Do not generate HTML and PDF documentation
+Since upstream does not provide any knobs, this would need to be a
+separate package
+
+--- srecord/CMakeLists.txt.orig	2026-02-11 14:47:16.084002498 +0000
++++ srecord/CMakeLists.txt
+@@ -33,17 +33,8 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE
+         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+         FILES_MATCHING PATTERN "*.h")
+ 
+-# Install the Doxygen output for the website
+-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html
+-        DESTINATION ${CMAKE_INSTALL_DOCDIR}/htdocs/srecord
+- 	COMPONENT website)
+-
+ # Generate config.h to suit local environment
+ configure_file(config.h.in config.h @ONLY)
+ configure_file(patchlevel.h.in patchlevel.h @ONLY)
+ include_directories(${CMAKE_CURRENT_BINARY_DIR})
+ 
+-# Generate doxygen content
+-doxygen_add_docs(doxygen
+-                 ${LIB_SRECORD_HDR}
+-		 ALL)
