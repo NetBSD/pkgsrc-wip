@@ -4,10 +4,13 @@ Disable "apidoc" (not required for building man pages).
 Disable "intersphinx_mapping" (wants do fetch stuff from network).
 pkgsrc-wip package for py-furo is broken (not required for building man pages).
 
---- docs/conf.py.orig	2024-11-14 09:32:08.000000000 +0000
+--- docs/conf.py.orig	2025-10-27 15:21:36.000000000 +0000
 +++ docs/conf.py
-@@ -52,29 +52,15 @@ extensions = [
-     "sphinx.ext.intersphinx",
+@@ -49,35 +49,17 @@ language = "en"
+ extensions = [
+     "myst_parser",
+     "sphinx.ext.autodoc",
+-    "sphinx.ext.intersphinx",
      "sphinx.ext.viewcode",
      "sphinx.ext.napoleon",
 -    "sphinxcontrib.apidoc",
@@ -28,6 +31,9 @@ pkgsrc-wip package for py-furo is broken (not required for building man pages).
 -autodoc_member_order = "bysource"
 -
 -intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
+-
+-# Auto-generate header anchors up to 3 headings deep.
+-myst_heading_anchors = 3
 -
  # -- Options for HTML output -------------------------------------------------
  # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

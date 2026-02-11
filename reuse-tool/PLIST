@@ -1,10 +1,10 @@
 @comment $NetBSD$
 bin/reuse
-${PYSITELIB}/reuse-${PKGVERSION}.dist-info/AUTHORS.rst
-${PYSITELIB}/reuse-${PKGVERSION}.dist-info/LICENSES/Apache-2.0.txt
-${PYSITELIB}/reuse-${PKGVERSION}.dist-info/LICENSES/CC-BY-SA-4.0.txt
-${PYSITELIB}/reuse-${PKGVERSION}.dist-info/LICENSES/CC0-1.0.txt
-${PYSITELIB}/reuse-${PKGVERSION}.dist-info/LICENSES/GPL-3.0-or-later.txt
+${PYSITELIB}/reuse-${PKGVERSION}.dist-info/licenses/AUTHORS.rst
+${PYSITELIB}/reuse-${PKGVERSION}.dist-info/licenses/LICENSES/Apache-2.0.txt
+${PYSITELIB}/reuse-${PKGVERSION}.dist-info/licenses/LICENSES/CC-BY-SA-4.0.txt
+${PYSITELIB}/reuse-${PKGVERSION}.dist-info/licenses/LICENSES/CC0-1.0.txt
+${PYSITELIB}/reuse-${PKGVERSION}.dist-info/licenses/LICENSES/GPL-3.0-or-later.txt
 ${PYSITELIB}/reuse-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/reuse-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/reuse-${PKGVERSION}.dist-info/WHEEL
@@ -87,6 +87,7 @@ ${PYSITELIB}/reuse/i18n.pyo
 ${PYSITELIB}/reuse/lint.py
 ${PYSITELIB}/reuse/lint.pyc
 ${PYSITELIB}/reuse/lint.pyo
+${PYSITELIB}/reuse/locale/aln/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/cs/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/de/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/eo/LC_MESSAGES/reuse.mo
@@ -94,12 +95,15 @@ ${PYSITELIB}/reuse/locale/es/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/fr/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/gl/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/it/LC_MESSAGES/reuse.mo
+${PYSITELIB}/reuse/locale/ja/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/nl/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/pt/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/ru/LC_MESSAGES/reuse.mo
+${PYSITELIB}/reuse/locale/sq/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/sv/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/tr/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/locale/uk/LC_MESSAGES/reuse.mo
+${PYSITELIB}/reuse/locale/zh_Hant/LC_MESSAGES/reuse.mo
 ${PYSITELIB}/reuse/project.py
 ${PYSITELIB}/reuse/project.pyc
 ${PYSITELIB}/reuse/project.pyo
