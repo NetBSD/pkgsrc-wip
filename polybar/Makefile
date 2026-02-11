@@ -18,10 +18,11 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DSPHINX_BUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
-# uses inotify
-ONLY_FOR_PLATFORM=	Linux-*-*
+# doc generation not parallel make safe
+MAKE_JOBS_SAFE=	no
 
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
