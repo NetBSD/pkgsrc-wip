@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mashumaro-3.20.tar.gz) = c5efc9304fd9ac5741c0f71f8d485e6e259d0673ead445a07f5cdb755cc29097
+SHA512 (mashumaro-3.20.tar.gz) = 04676fb28c1a9ff521109842464b762d71a071950b2f62f0e9ce98b9081964235fb8f6e4b051ac014c591eccef7662deac5322d5b0d1afdcba986f566e541004
+Size (mashumaro-3.20.tar.gz) = 191643 bytes

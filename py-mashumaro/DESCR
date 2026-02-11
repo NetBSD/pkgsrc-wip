@@ -1,0 +1,4 @@
+In Python, you often need to dump and load objects based on the schema
+you have. It can be a dataclass model, a list of third-party generic
+classes or whatever. Mashumaro not only lets you save and load things
+in different ways, but it also does it super quick.
