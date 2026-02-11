@@ -4184,6 +4184,7 @@ SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain
 SUBDIR+=	py-marshmallow
 SUBDIR+=	py-marshmallow-enum
+SUBDIR+=	py-mashumaro
 SUBDIR+=	py-maskouk-sqlite
 SUBDIR+=	py-math-braid
 SUBDIR+=	py-math-snappy
