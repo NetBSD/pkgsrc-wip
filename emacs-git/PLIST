@@ -3940,6 +3940,8 @@ share/emacs/${PKGVERSION}/lisp/subr.el.gz
 share/emacs/${PKGVERSION}/lisp/subr.elc
 share/emacs/${PKGVERSION}/lisp/svg.el.gz
 share/emacs/${PKGVERSION}/lisp/svg.elc
+share/emacs/${PKGVERSION}/lisp/system-sleep.el.gz
+share/emacs/${PKGVERSION}/lisp/system-sleep.elc
 share/emacs/${PKGVERSION}/lisp/system-taskbar.el.gz
 share/emacs/${PKGVERSION}/lisp/system-taskbar.elc
 share/emacs/${PKGVERSION}/lisp/t-mouse.el.gz
