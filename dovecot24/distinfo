@@ -3,7 +3,6 @@ $NetBSD$
 BLAKE2s (dovecot-2.4.2.tar.gz) = a8356102681d217d8f51c72a366ac0596341cfefe2c630464865322f58b7b2fb
 SHA512 (dovecot-2.4.2.tar.gz) = 0524695341abe711d3a811c56156889d6fef7a09becc684c6f1dc1e5add605969ca8794eb7d44bfbc49f70515f22e8640b5828443addecfe4798fb8b174670ae
 Size (dovecot-2.4.2.tar.gz) = 7807240 bytes
-SHA1 (patch-configure) = 6adc141ed30241300c4e51b07488c3d65ceacfca
 SHA1 (patch-doc_dovecot.conf.in) = cad98a01a577b1f253b8d783e5105c22bfd964cd
 SHA1 (patch-src_lib-storage_mail-storage.c) = ef9d6ad2198be3fbe274f860a00d2dcb4f4beeaa
 SHA1 (patch-src_lib-var-expand-crypt_Makefile.in) = 5e7a03ea899bf81e70431f64cf21289cf33ea357

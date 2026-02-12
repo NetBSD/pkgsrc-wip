@@ -49,3 +49,18 @@ is welcome to steal from examples.
     Currently it doesn't install a whole conf.d directory of config file
     fragements any more. This difference is actually annoying when upgrading
     from the previous version, which did do that.
+
+Get libinotify to work.
+=======================
+
+With current patches, it will be used, but the un-hibernating will fail with a
+permission error.
+
+1. In dovecot.conf: imap_hibernate_timeout = 10 secs
+2. In mutt:         :set imap_idle=yes
+
+With this, the hibernation step appears to work (at least no error is logged)
+but the un-hibernating fails:
+
+Feb 12 18:31:42 murthe dovecot: imap-hibernate(rhialto)<3278><b0YR26NK0PsAAAAAAAAAAAAAAAAAAAAB>: Error: Failed to unhibernate client: net_connect_unix(/var/run/dovecot/imap-master) failed: Permission denied
+Feb 12 18:31:42 murthe dovecot: imap-hibernate(rhialto)<3278><b0YR26NK0PsAAAAAAAAAAAAAAAAAAAAB>: Disconnected: Failed to unhibernate client in=133 out=290740 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0

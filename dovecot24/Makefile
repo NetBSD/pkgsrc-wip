@@ -49,6 +49,12 @@ post-install: enable-manz-by-replacing-roff-includes-with-symlinks
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
 
+# The "hibernate" functionality only works with inotify, not kqueue.
+CONFIGURE_ARGS+=	--with-notify=inotify
+LDFLAGS.NetBSD+=	-linotify
+LDFLAGS.FreeBSD+=	-linotify
+.include "../../devel/libinotify/buildlink3.mk"
+
 # \todo Decide if dovecot should depend on python, and explain whether
 # settings-history.py is important enough to warrant a python
 # dependency.
