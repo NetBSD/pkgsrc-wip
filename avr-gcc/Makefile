@@ -18,10 +18,8 @@ DEPENDS+=		avr-binutils>=2.42:../../cross/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES=			c c++
-USE_CXX_FEATURES+=		c++14
-# Required for ISL with option "gcc-inplace-math"
-FORCE_CXX_STD=			c++14
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++14
 
 USE_LIBTOOL=			yes
 USE_TOOLS+=			bash gmake gsed:run perl
@@ -45,6 +43,8 @@ CONFIGURE_ARGS+=	--disable-lto
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--with-system-zlib
+# XXX: Disabled because of C++ version mismatch problems
+CONFIGURE_ARGS+=	--without-isl
 
 # XXX: Workaround for configure error:
 #    checking dependency style of c++... none
