@@ -10,20 +10,22 @@ HOMEPAGE=		https://sourceforge.net/projects/wendzelnntpd
 COMMENT=		Free Usenet server with SQL backend and RBAC
 LICENSE=		gnu-gpl-v3
 
+GNU_CONFIGURE=		YES
 USE_TOOLS+=		bison flex gmake bash:run
 USE_FEATURES=		err regcomp snprintf
 
-GNU_CONFIGURE=		YES
-
 REPLACE_BASH=		create_certificate_raw
 
-BUILD_DEFS+=		VARBASE
+SUBST_CLASSES+=		openssl
+SUBST_MESSAGE.openssl=	Insert absolute path for openssl binary.
+SUBST_STAGE.openssl=	pre-configure
+SUBST_FILES.openssl=	create_certificate_raw
+SUBST_SED.openssl=	-e 's,openssl ,${PREFIX}/bin/openssl ,g'
 
 # Directory for example config file
 EGDIR=			${PREFIX}/share/examples/wendzelnntpd
-
-RCD_SCRIPTS=		wendzelnntpd
-
+WRKSRC=			${WRKDIR}/cdpxe-WendzelNNTPd-bf144dc
+BUILD_DEFS+=		VARBASE
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/wendzelnntpd \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/spool/news/wendzelnntpd \
@@ -31,11 +33,11 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/news/wendzelnntpd \
 CONF_FILES_PERMS=	${EGDIR}/wendzelnntpd/wendzelnntpd.conf \
 			${PKG_SYSCONFDIR}/wendzelnntpd/wendzelnntpd.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
-WRKSRC=			${WRKDIR}/cdpxe-WendzelNNTPd-bf144dc
-
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR} \
 			UDBDIR=${PREFIX}/var/spool/news/wendzelnntpd \
 			SQLITEINST=NO CREATE_CERTIFICATES=NO
+
+RCD_SCRIPTS=		wendzelnntpd
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"

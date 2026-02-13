@@ -6,12 +6,12 @@ POST-INSTALL)
     if [ ! -e @PKG_SYSCONFDIR@/wendzelnntpd/ssl/server.crt ] \
         || [ ! -e @PKG_SYSCONFDIR@/ssl/server.key ] \
         || [ ! -e @PKG_SYSCONFDIR@/ssl/ca.crt ]; then
-        bash create_certificate --environment local
+        @PREFIX@/sbin/create_certificate --environment local
     fi
 
     # initialize sqlite database
     if [ ! -e @VARBASE@/spool/news/wendzelnntpd/usenet.db ]; then
         cat @PREFIX@/share/wendzelnntpd/usenet.db_struct | sqlite3 @VARBASE@/spool/news/wendzelnntpd/usenet.db
-        wendzelnntpadm addgroup alt.wendzelnntpd.test y
+        @PREFIX@/sbin/wendzelnntpadm addgroup alt.wendzelnntpd.test y
     fi
 esac

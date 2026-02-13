@@ -1,4 +1,6 @@
 Not ready for import.
 
 [X] Fix interpreter path for bash
+[X] Fix INSTALL script
+[X] Use absolute path for openssl binary in create_certificate script
 [ ] Test on NetBSD
