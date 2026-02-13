@@ -912,6 +912,7 @@ share/emacs/${PKGVERSION}/etc/org/README
 share/emacs/${PKGVERSION}/etc/org/csl/README
 share/emacs/${PKGVERSION}/etc/org/csl/chicago-author-date.csl
 share/emacs/${PKGVERSION}/etc/org/csl/locales-en-US.xml
+share/emacs/${PKGVERSION}/etc/package-autosuggest.eld
 share/emacs/${PKGVERSION}/etc/package-keyring.gpg
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
