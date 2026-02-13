@@ -1,6 +1,0 @@
-net/powerdns-recursor: Update to version 5.3.5
-
-5.3.5
-Released: 9th of February 2026
-Bug Fixes
-Fix PowerDNS Security Advisory 2026-01: Crafted zones can lead to increased resource usage in Recursor.

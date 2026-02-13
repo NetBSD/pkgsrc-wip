@@ -3335,7 +3335,6 @@ SUBDIR+=	postgresql-pgvector
 SUBDIR+=	postoffice
 SUBDIR+=	pounce
 SUBDIR+=	povray
-SUBDIR+=	powerdns-recursor
 SUBDIR+=	powerlevel10k
 SUBDIR+=	powerline
 SUBDIR+=	powerpc-none-elf-binutils
