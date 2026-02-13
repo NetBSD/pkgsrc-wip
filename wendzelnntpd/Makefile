@@ -13,6 +13,10 @@ LICENSE=		gnu-gpl-v3
 USE_TOOLS+=		bison flex gmake bash:run
 USE_FEATURES=		err regcomp snprintf
 
+GNU_CONFIGURE=		YES
+
+REPLACE_BASH=		create_certificate_raw
+
 BUILD_DEFS+=		VARBASE
 
 # Directory for example config file
@@ -29,9 +33,9 @@ CONF_FILES_PERMS=	${EGDIR}/wendzelnntpd/wendzelnntpd.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 WRKSRC=			${WRKDIR}/cdpxe-WendzelNNTPd-bf144dc
 
-GNU_CONFIGURE=		YES
-
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR} UDBDIR=${PREFIX}/var/spool/news/wendzelnntpd SQLITEINST=NO CREATE_CERTIFICATES=NO
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR} \
+			UDBDIR=${PREFIX}/var/spool/news/wendzelnntpd \
+			SQLITEINST=NO CREATE_CERTIFICATES=NO
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"

@@ -1,2 +1,4 @@
 Not ready for import.
-Needs testing.
+
+[X] Fix interpreter path for bash
+[ ] Test on NetBSD
