@@ -16,6 +16,8 @@ EGDIR=			${PREFIX}/share/examples/sftpgo
 USE_LANGUAGES=		c
 USE_TOOLS=		tar
 
+DEPENDS+=		daemonize>=1.7.8:../../sysutils/daemonize
+
 GO_BUILD_PATTERN=
 
 CONF_FILES=		${EGDIR}/sftpgo.json ${PKG_SYSCONFDIR}/sftpgo.json
@@ -42,6 +44,9 @@ SUBST_FILES.set-path=	sftpgo.json
 SUBST_SED.set-path=	-e 's|"openapi"|"${PREFIX}/share/sftpgo/openapi"|g'
 SUBST_SED.set-path+=	-e 's|"static"|"${PREFIX}/share/sftpgo/static"|g'
 SUBST_SED.set-path+=	-e 's|"templates"|"${PREFIX}/share/sftpgo/templates"|g'
+
+RCD_SCRIPTS+=		sftpgo
+FILES_SUBST+=		SFTPGO_USER=${SFTPGO_USER:Q}
 
 .include "go-modules.mk"
 
