@@ -912,7 +912,6 @@ share/emacs/${PKGVERSION}/etc/org/README
 share/emacs/${PKGVERSION}/etc/org/csl/README
 share/emacs/${PKGVERSION}/etc/org/csl/chicago-author-date.csl
 share/emacs/${PKGVERSION}/etc/org/csl/locales-en-US.xml
-share/emacs/${PKGVERSION}/etc/package-autosuggest.eld
 share/emacs/${PKGVERSION}/etc/package-keyring.gpg
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
@@ -1247,8 +1246,6 @@ share/emacs/${PKGVERSION}/lisp/calendar/cal-x.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-x.elc
 share/emacs/${PKGVERSION}/lisp/calendar/calendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/calendar.elc
-share/emacs/${PKGVERSION}/lisp/calendar/diary-icalendar.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/diary-icalendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.el.gz
@@ -1257,18 +1254,6 @@ share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-ast.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-ast.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-macs.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-macs.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-mode.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-parser.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-parser.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-recur.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-recur.elc
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-utils.el.gz
-share/emacs/${PKGVERSION}/lisp/calendar/icalendar-utils.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/iso8601.el.gz
@@ -3941,8 +3926,6 @@ share/emacs/${PKGVERSION}/lisp/subr.el.gz
 share/emacs/${PKGVERSION}/lisp/subr.elc
 share/emacs/${PKGVERSION}/lisp/svg.el.gz
 share/emacs/${PKGVERSION}/lisp/svg.elc
-share/emacs/${PKGVERSION}/lisp/system-sleep.el.gz
-share/emacs/${PKGVERSION}/lisp/system-sleep.elc
 share/emacs/${PKGVERSION}/lisp/system-taskbar.el.gz
 share/emacs/${PKGVERSION}/lisp/system-taskbar.elc
 share/emacs/${PKGVERSION}/lisp/t-mouse.el.gz
