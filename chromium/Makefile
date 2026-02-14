@@ -293,7 +293,7 @@ do-build: do-cargo-build
 	cd ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup && \
 	${CP} ${WRKSRC}/rollup/rust/target/release/libbindings_napi.so \
 		rollup-${LOWER_OPSYS}/rollup.${LOWER_OPSYS}.node && \
-		echo '{ "main": "./rollup.${LOWER_OPSYS}.node" }' > rollup-${LOWER_OPSYS}/package.json
+		${ECHO} '{ "main": "./rollup.${LOWER_OPSYS}.node" }' > rollup-${LOWER_OPSYS}/package.json
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out/${BUILDTYPE} ${TARGET}
 
