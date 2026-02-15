@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cloudflare-speed-cli-0.4.3
+DISTNAME=	cloudflare-speed-cli-0.6.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kavehtehrani/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
