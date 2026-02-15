@@ -5606,7 +5606,6 @@ SUBDIR+=	swinehub
 SUBDIR+=	swisseph
 SUBDIR+=	sxcs
 SUBDIR+=	sxemacs
-SUBDIR+=	sxid
 SUBDIR+=	sylfilter
 SUBDIR+=	sylvan
 SUBDIR+=	symbolic++
