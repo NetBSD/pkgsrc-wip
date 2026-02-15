@@ -1477,6 +1477,7 @@ SUBDIR+=	gtk2-engines-galaxy
 SUBDIR+=	gtk2-engines-magicchicken
 SUBDIR+=	gtk2-murrina-fancy-clearlooks
 SUBDIR+=	gtk2-theme-pack
+SUBDIR+=	gtk4
 SUBDIR+=	gtkada
 SUBDIR+=	gtkaml
 SUBDIR+=	gtkglextmm

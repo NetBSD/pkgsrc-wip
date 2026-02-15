@@ -1,0 +1,14 @@
+# $NetBSD: immodules.tmpl,v 1.2 2025/11/23 13:38:20 ryoon Exp $
+#
+# Rebuild the GTK4 immodules database.
+#
+
+GTK4_IMMODULES_DB="@GTK4_IMMODULES_DB@"
+
+case ${STAGE} in
+DEINSTALL)
+	[ "${PKGBASE}" = "gtk4" ] && ${RM} -f ${GTK4_IMMODULES_DB}
+	;;
+*)
+	;;
+esac
