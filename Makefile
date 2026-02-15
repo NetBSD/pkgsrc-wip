@@ -5471,7 +5471,6 @@ SUBDIR+=	smocker
 SUBDIR+=	smplayer
 SUBDIR+=	smproxy
 SUBDIR+=	smstools
-SUBDIR+=	smtp-gated
 SUBDIR+=	smtp.proxy
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
