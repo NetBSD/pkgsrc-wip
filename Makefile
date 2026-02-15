@@ -3922,7 +3922,6 @@ SUBDIR+=	py-genesis
 SUBDIR+=	py-gensim
 SUBDIR+=	py-geocoder
 SUBDIR+=	py-geographiclib
-SUBDIR+=	py-geoip
 SUBDIR+=	py-geom
 SUBDIR+=	py-geometry-utils
 SUBDIR+=	py-geopandas
