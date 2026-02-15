@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.3 2023/07/25 01:09:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk4
-PKG_SUPPORTED_OPTIONS=	cups debug
+PKG_SUPPORTED_OPTIONS=	cups debug wayland
 
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		x11
@@ -12,25 +12,27 @@ PKG_SUGGESTED_OPTIONS+=	quartz
 .else
 PKG_SUGGESTED_OPTIONS+=	x11
 .endif
+.include "../../devel/wayland/platform.mk"
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=	wayland
+.endif
 
 PKG_SUGGESTED_OPTIONS+=	cups
 
 .include "../../mk/bsd.options.mk"
 
-## wayland option requires gdk/wayland/tablet-unstable-v2-client-protocol.h
-## and I cannot fint it in pkgsrc.
 #PKG_SUPPORTED_OPTIONS+=	wayland
-#PLIST_VARS+=		wayland
-#.if !empty(PKG_OPTIONS:Mwayland)
-#PLIST.wayland=		yes
-#.include "../../devel/wayland/buildlink3.mk"
-#.include "../../devel/wayland-protocols/buildlink3.mk"
-#.include "../../fonts/fontconfig/buildlink3.mk"
-#.include "../../x11/libxkbcommon/buildlink3.mk"
-#MESON_ARGS+=		-Dwayland-backend=true
-#.else
+PLIST_VARS+=		wayland
+.if !empty(PKG_OPTIONS:Mwayland)
+PLIST.wayland=		yes
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+MESON_ARGS+=		-Dwayland-backend=true
+.else
 MESON_ARGS+=		-Dwayland-backend=false
-#.endif
+.endif
 
 PLIST_VARS+=		quartz
 .if !empty(PKG_OPTIONS:Mquartz)

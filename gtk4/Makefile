@@ -2,7 +2,7 @@
 
 DISTNAME=	gtk-4.20.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -35,6 +35,7 @@ MESON_ARGS+=		-Dvulkan=disabled
 MESON_ARGS+=		-Df16c=disabled
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-wayland.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-x11.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-unix-print.pc
 

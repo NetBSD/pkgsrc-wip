@@ -25,6 +25,11 @@ pkgbase := gtk4
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .endif
+.if ${PKG_BUILD_OPTIONS.gtk4:Mwayland}
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.endif # PKG_BUILD_OPTIONS.gtk4:Mwayland
 
 .endif	# GTK4_BUILDLINK3_MK
 
