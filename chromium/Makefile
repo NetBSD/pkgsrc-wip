@@ -9,7 +9,7 @@ EXTRACT_SUFX_C=			.tar.xz
 DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 
 # Sources to build on NetBSD
-NB_VERSION=			de4860c7f3a4748dfe28bbefcef4969b008f520a
+NB_VERSION=			v145.1
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
@@ -30,7 +30,7 @@ COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
-TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
+#TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
 CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
@@ -272,7 +272,7 @@ pre-configure:
 
 do-configure:
 	cd ${WRKSRC}/esbuild && \
-		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
+		${RUN} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
 		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild --neutral
 	${RM} -rf ${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild
 	${LN} -sf ${WRKSRC}/esbuild/npm/esbuild \
