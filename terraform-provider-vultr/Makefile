@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	terraform-provider-vultr-2.28.0
+DISTNAME=	terraform-provider-vultr-2.29.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
