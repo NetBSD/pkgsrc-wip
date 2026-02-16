@@ -1,10 +1,10 @@
 #	$NetBSD$
 
-DISTNAME=	tnfrepo-0.0a20250823.dev92
+DISTNAME=	tnfrepo-0.0a20250823.dev95
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
-HG_TAG=		26450a7f308280b2113e3b2fa02fbe5f00763da7
+HG_TAG=		ba3213b7505147d9f499042d9595347350361223
 
 MAINTAINER=	riastradh@NetBSD.org
 HOMEPAGE=	https://hg.mumble.net/campbell/tnfrepo
@@ -29,6 +29,8 @@ PYSETUPSUBDIR=	hghooks
 USE_PYTEST=	no
 
 REPLACE_PYTHON=	bin/syncd.py
+
+MAKE_FLAGS+=	prefix=${PREFIX:Q}
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX:Q}
 INSTALLATION_DIRS+=	bin

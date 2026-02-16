@@ -43,8 +43,9 @@ ${PYSITELIB}/netbsd_hghooks/validdate.pyc
 ${PYSITELIB}/netbsd_hghooks/validdate.pyo
 bin/build-clonebundles
 bin/syncd
-share/tnfrepo/githooks/pre-receive.sh
-share/tnfrepo/githooks/reference-transaction.sh
-share/tnfrepo/githooks/update.sh
+share/tnfrepo/gitconfig/config
+share/tnfrepo/githooks/pre-receive
+share/tnfrepo/githooks/reference-transaction
+share/tnfrepo/githooks/update
 share/tnfrepo/hgrc/draft
 share/tnfrepo/hgrc/public
