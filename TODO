@@ -22,7 +22,6 @@ Suggested package updates
 	o chapel-1.32.0
 	o cinelerra-4.5
 	o codex-0.98.0
-	o crush-0.43.0
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o deadbeef-1.9.6
@@ -130,7 +129,7 @@ Suggested package updates
 	o qmc2-0.59
 	o qupzilla-2.2.1
 	o rdup-1.1.13
-	o resterm-0.22.0
+	o resterm-0.23.1 [broken by modernc-1.39.0: https://gitlab.com/cznic/sqlite/-/issues/246]
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
 	o rygel-0.26.0
