@@ -124,7 +124,6 @@ Suggested package updates
 	o py-rpyc-3.2.1
 	o py-sentry-23.7.1
 	o py-smop-0.29
-	o py-typer-0.23.1
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
 	o py-zeitgeist-0.9.16
@@ -163,7 +162,7 @@ Suggested package updates
 	o vidalia-devel-0.3.3
 	o virtualbox-7.2
 	o wkhtmltopdf-0.12.4
-	o wlroots-0.18
+	o wlroots-0.20
 	o xaralx-bin-0.7.1692
 	o xdg-desktop-portal-1.19.1
 	o xf86-input-libinput-1.5.0
