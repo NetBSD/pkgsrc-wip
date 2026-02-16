@@ -20,7 +20,7 @@ SUBST_CLASSES+=		openssl
 SUBST_MESSAGE.openssl=	Insert absolute path for openssl binary.
 SUBST_STAGE.openssl=	pre-configure
 SUBST_FILES.openssl=	create_certificate_raw
-SUBST_SED.openssl=	-e 's,openssl ,${PREFIX}/bin/openssl ,g'
+SUBST_SED.openssl=	-e 's,openssl ,${BUILDLINK_PREFIX.openssl}/bin/openssl ,g'
 
 # Directory for example config file
 EGDIR=			${PREFIX}/share/examples/wendzelnntpd
