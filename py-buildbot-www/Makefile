@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-www/}
 COMMENT=	Web frontend for the buildbot CI system
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../wip/py-buildbot-pkg
+DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../wip/py-buildbot
 
 USE_LANGUAGES=	# none
 

@@ -5,6 +5,7 @@
 # used by wip/py-buildbot-waterfall-view/Makefile
 # used by wip/py-buildbot-worker/Makefile
 # used by wip/py-buildbot-www/Makefile
+# used by wip/py-buildbot-badges/Makefile
 
 BBVERSION=	4.3.0
 MAINTAINER=	root@zta.lk
