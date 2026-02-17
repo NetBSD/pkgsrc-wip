@@ -1,4 +1,10 @@
 # $NetBSD$
+# used by wip/py-buildbot-console-view/Makefile
+# used by wip/py-buildbot-grid-view/Makefile
+# used by wip/py-buildbot-pkg/Makefile
+# used by wip/py-buildbot-waterfall-view/Makefile
+# used by wip/py-buildbot-worker/Makefile
+# used by wip/py-buildbot-www/Makefile
 
 BBVERSION=	4.3.0
 MAINTAINER=	root@zta.lk
@@ -7,4 +13,3 @@ PKGNAME?=	${PYPKGPREFIX}-${DISTNAME}
 LICENSE=	gnu-gpl-v2
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/bsd.pkg.mk"

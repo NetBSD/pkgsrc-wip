@@ -6,10 +6,10 @@ CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-waterfall-view/}
 
 COMMENT=	Waterfall Plugin for the buildbot CI system
-LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../wip/py-buildbot-pkg
 
 USE_LANGUAGES=	# none
 
 .include "../../wip/py-buildbot/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

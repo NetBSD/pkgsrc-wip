@@ -43,11 +43,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-markdown>=3:../../textproc/py-markdown
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	git:test
 
 TEST_ENV+=	PYTHONPATH=.
 
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 # as of 4.3.0
-# FAILED (skips=40, errors=421, successes=653)
+# FAILED (skips=45, errors=420, successes=651)
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} trial-${PYVERSSUFFIX} buildbot.test
 
@@ -57,3 +61,4 @@ post-install:
 	${MV} buildbot_windows_service buildbot_windows_service-${PYVERSSUFFIX} || ${TRUE}
 
 .include "Makefile.common"
+.include "../../mk/bsd.pkg.mk"

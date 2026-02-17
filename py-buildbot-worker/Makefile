@@ -22,9 +22,10 @@ post-install:
 	${MV} buildbot-worker buildbot-worker-${PYVERSSUFFIX} && \
 	${MV} buildbot_worker_windows_service buildbot_worker_windows_service-${PYVERSSUFFIX} || ${TRUE}
 
-TEST_ENV+=      PYTHONPATH=.
+TEST_ENV+=	PYTHONPATH=.
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} trial-${PYVERSSUFFIX} buildbot_worker.test
 
 .include "../../wip/py-buildbot/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

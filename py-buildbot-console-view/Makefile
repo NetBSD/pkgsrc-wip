@@ -12,3 +12,4 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../wip/py-buildbot-pkg
 USE_LANGUAGES=	# none
 
 .include "../../wip/py-buildbot/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

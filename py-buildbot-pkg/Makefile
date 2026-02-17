@@ -15,3 +15,4 @@ USE_LANGUAGES=	# none
 MAKE_ENV+=	BUILDBOT_VERSION=${PKGVERSION_NOREV}
 
 .include "../../wip/py-buildbot/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
