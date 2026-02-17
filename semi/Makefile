@@ -1,10 +1,11 @@
 # $NetBSD: Makefile,v 1.40 2023/12/24 14:24:52 zafer Exp $
 DISTNAME=	semi-1.14.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	9
+# greater than proper
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
-GITHUB_TAG=	85a52b899ac89be504d9e38d8d406bba98f4b0b3
+GITHUB_TAG=	8264b478c4f6367ff4cea0c2f13abfda152a13d0
 
 
 # This fix will be unnecessary for the next release.
