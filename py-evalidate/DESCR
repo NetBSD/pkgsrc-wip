@@ -1,2 +1,0 @@
-Evalidate is simple python module for safe and very fast eval()'uating
-user-supplied (possible malicious) Python expressions.
