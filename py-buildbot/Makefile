@@ -11,7 +11,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=17.9.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-treq>=20.9:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.6.0:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-croniter>=1.3.0:../../wip/py-croniter
+DEPENDS+=	${PYPKGPREFIX}-croniter>=1.3.0:../../time/py-croniter
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.1.1:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.0:../../databases/py-alembic

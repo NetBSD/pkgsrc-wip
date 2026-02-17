@@ -3682,7 +3682,6 @@ SUBDIR+=	py-country-converter
 SUBDIR+=	py-coverage-badge
 SUBDIR+=	py-cppimport
 SUBDIR+=	py-cracklib
-SUBDIR+=	py-croniter
 SUBDIR+=	py-crossbar
 SUBDIR+=	py-cryptg
 SUBDIR+=	py-cryptoim
