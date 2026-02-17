@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (python-unidiff-0.5.4.tar.gz) = 2e4c45e197d8431cca3652a933cc45a4ac8ec332
-SHA512 (python-unidiff-0.5.4.tar.gz) = c597795d77166dfd788cbe30d7b12c7b37d2e2bd0f078a22ff5f95f067e3060f70727c87262af688860bb2fa6303b67ac149c4c2eff418168e084056ff53cd2e
-Size (python-unidiff-0.5.4.tar.gz) = 12155 bytes
+BLAKE2s (python-unidiff-0.7.5.tar.gz) = efc397e2350f276c97890d1ca3ec5c75bfc446175f826d60280a58aa92db6b33
+SHA512 (python-unidiff-0.7.5.tar.gz) = 50955aae18e9f16f515c539ef19a0238010003fc2ecf20d61c0f291a65719f90fb3aac1210f30a9b1ff47cda58d1e0bd92b2c23e5c0e380120a22dd57e9230fc
+Size (python-unidiff-0.7.5.tar.gz) = 18334 bytes
