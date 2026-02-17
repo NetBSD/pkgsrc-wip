@@ -3559,6 +3559,7 @@ SUBDIR+=	py-brython
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-bson
 SUBDIR+=	py-buildbot
+SUBDIR+=	py-buildbot-badges
 SUBDIR+=	py-buildbot-console-view
 SUBDIR+=	py-buildbot-grid-view
 SUBDIR+=	py-buildbot-pkg
