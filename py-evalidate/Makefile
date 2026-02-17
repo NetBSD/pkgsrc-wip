@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/evalidate/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/yaroslaff/evalidate
+HOMEPAGE=	https://github.com/yaroslaff/evalidate
 COMMENT=	Validation and secure evaluation of untrusted python expressions
 LICENSE=	mit
 
