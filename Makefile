@@ -3855,7 +3855,6 @@ SUBDIR+=	py-etesync
 SUBDIR+=	py-etk-docking
 SUBDIR+=	py-etmtk
 SUBDIR+=	py-euclidean
-SUBDIR+=	py-evalidate
 SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-executor

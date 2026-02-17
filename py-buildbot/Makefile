@@ -31,6 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard-[0-9]*:../../archivers/py-zstandard
 DEPENDS+=	${PYPKGPREFIX}-evalidate-[0-9]*:../../devel/py-evalidate
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
+TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../wip/py-buildbot-pkg
 TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-worker-[0-9]*:../../wip/py-buildbot-worker
 TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-www-[0-9]*:../../wip/py-buildbot-www
 TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-console-view-[0-9]*:../../wip/py-buildbot-console-view
@@ -50,8 +51,10 @@ TEST_ENV+=	PYTHONPATH=.
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 4.3.0
-# FAILED (skips=45, errors=420, successes=651)
+# as of 4.3.0, with Python 3.14
+# FAILED (skips=45, errors=48, successes=651)
+# with Python 3.13
+# PASSED (skips=39, successes=657)
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} trial-${PYVERSSUFFIX} buildbot.test
 
