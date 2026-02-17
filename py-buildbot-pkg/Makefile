@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.8 2020/02/19 19:07:19 adam Exp $
 
-DISTNAME=	buildbot-pkg-${BBVERSION}
+DISTNAME=	buildbot_pkg-${BBVERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-pkg/}
 

@@ -1,10 +1,10 @@
-BBVERSION=	3.9.2
+# $NetBSD$
+
+BBVERSION=	4.3.0
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://buildbot.net/
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME?=	${PYPKGPREFIX}-${DISTNAME}
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -25,8 +25,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zope.component>=4.0:../../devel/py-zope.component
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 post-install:
 .for file in pdistreport prequest proutes pserve pshell ptweens pviews
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} ${file} ${file}-${PYVERSSUFFIX}

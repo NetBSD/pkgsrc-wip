@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.7 2020/02/19 19:07:18 adam Exp $
 
-BLAKE2s (buildbot-console-view-3.9.2.tar.gz) = a6acfc38ba38af9522bf169f8ece815b407874c99a9b01ff1b07a680975c9656
-SHA512 (buildbot-console-view-3.9.2.tar.gz) = 212bbf50280f7deb177bf755b1789175eff2e90324e55aa55fd8bef5183bae2732b746089011d437f29ea724f164ad284e048d8d662af0bbd877bcc781febbe9
-Size (buildbot-console-view-3.9.2.tar.gz) = 19002 bytes
+BLAKE2s (buildbot_console_view-4.3.0.tar.gz) = bb05d2247d35d6943cf6fcc414cf62cc27a5a489e9ac83bc4ddefdb77448e695
+SHA512 (buildbot_console_view-4.3.0.tar.gz) = aa5ea115383ef54fa234aed7fdb6c6b104940641ad950e7525ae7c29e62acb6d4e805e108cdae171565b9abc4b020d47ddbd795481a3bec0e48d001e7d607ccd
+Size (buildbot_console_view-4.3.0.tar.gz) = 22361 bytes

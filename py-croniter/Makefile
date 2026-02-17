@@ -1,0 +1,20 @@
+# $NetBSD$
+
+DISTNAME=	croniter-6.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	time python
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/croniter/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://github.com/kiorky/croniter
+COMMENT=	Iteration for datetime object with cron like format
+LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-pytz>2021.1:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=0:../../time/py-dateutil
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.pkg.mk"

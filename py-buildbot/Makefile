@@ -6,29 +6,50 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot/}
 
 COMMENT=	Continuous integration system
 
-DEPENDS+=	${PYPKGPREFIX}-JWT-[0-9]*:../../textproc/py-JWT
-DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.16.0:../../www/py-autobahn
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.1:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=8.0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2.0<1.4:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-migrate>=0.13:../../databases/py-sqlalchemy-migrate
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.9.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-txaio>=2.2.2:../../devel/py-txaio
-DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.1.1:../../devel/py-zope.interface
-DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.0:../../databases/py-alembic
+DEPENDS+=	${PYPKGPREFIX}-treq>=20.9:../../devel/py-treq
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.6.0:../../devel/py-msgpack
-TEST_DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
-TEST_DEPENDS+=	${PYPKGPREFIX}-jade-[0-9]*:../../textproc/py-jade
-TEST_DEPENDS+=	${PYPKGPREFIX}-lz4-[0-9]*:../../archivers/py-lz4
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-moto-[0-9]*:../../net/py-moto
-TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
-TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
+DEPENDS+=	${PYPKGPREFIX}-croniter>=1.3.0:../../wip/py-croniter
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.1.1:../../devel/py-zope.interface
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.0:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.0:../../databases/py-alembic
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-txaio>=2.2.2:../../devel/py-txaio
+DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.16.0:../../www/py-autobahn
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-JWT-[0-9]*:../../textproc/py-JWT
+DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-unidiff>=0.7.5:../../wip/py-unidiff
+# optional
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
+DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
+DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
+DEPENDS+=	${PYPKGPREFIX}-zstandard-[0-9]*:../../archivers/py-zstandard
+DEPENDS+=	${PYPKGPREFIX}-evalidate-[0-9]*:../../wip/py-evalidate
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
+TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-worker-[0-9]*:../../wip/py-buildbot-worker
+TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-www-[0-9]*:../../wip/py-buildbot-www
+TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-console-view-[0-9]*:../../wip/py-buildbot-console-view
+TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-grid-view-[0-9]*:../../wip/py-buildbot-grid-view
+TEST_DEPENDS+=	${PYPKGPREFIX}-buildbot-waterfall-view-[0-9]*:../../wip/py-buildbot-waterfall-view
+TEST_DEPENDS+=	${PYPKGPREFIX}-pugjs-[0-9]*:../../wip/py-pugjs
+TEST_DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
+TEST_DEPENDS+=	${PYPKGPREFIX}-moto-[0-9]*:../../net/py-moto
+TEST_DEPENDS+=	${PYPKGPREFIX}-markdown>=3:../../textproc/py-markdown
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 USE_LANGUAGES=	# none
+
+TEST_ENV+=	PYTHONPATH=.
+
+# as of 4.3.0
+# FAILED (skips=40, errors=421, successes=653)
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} trial-${PYVERSSUFFIX} buildbot.test
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

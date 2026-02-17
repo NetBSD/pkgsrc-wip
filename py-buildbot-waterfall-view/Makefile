@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.8 2020/02/19 19:07:19 adam Exp $
 
-DISTNAME=	buildbot-waterfall-view-${BBVERSION}
+DISTNAME=	buildbot_waterfall_view-${BBVERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-waterfall-view/}
 
