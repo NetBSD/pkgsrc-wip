@@ -6,7 +6,7 @@ CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/croniter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/kiorky/croniter
+HOMEPAGE=	https://github.com/pallets-eco/croniter
 COMMENT=	Iteration for datetime object with cron like format
 LICENSE=	mit
 
