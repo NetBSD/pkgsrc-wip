@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-coala_utils-[0-9]*:../../wip/py-coala_utils
 DEPENDS+=	${PYPKGPREFIX}-colorlog-[0-9]*:../../wip/py-colorlog
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-unidiff-[0-9]*:../../wip/py-unidiff
+DEPENDS+=	${PYPKGPREFIX}-unidiff-[0-9]*:../../devel/py-unidiff
 DEPENDS+=	${PYPKGPREFIX}-libclang-py3-[0-9]*:../../wip/py-libclang-py3
 DEPENDS+=	${PYPKGPREFIX}-dependency_management-[0-9]*:../../wip/py-dependency_management
 

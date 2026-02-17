@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.16.0:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-JWT-[0-9]*:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-unidiff>=0.7.5:../../wip/py-unidiff
+DEPENDS+=	${PYPKGPREFIX}-unidiff>=0.7.5:../../devel/py-unidiff
 # optional
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
