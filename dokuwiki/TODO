@@ -1,4 +1,4 @@
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2014-8761, CVE-2014-8762, CVE-2014-8763, CVE-2014-8764,
   http://secunia.com/advisories/63566, CVE-2017-12583, CVE-2017-12979,
-  CVE-2017-12980, CVE-2017-18123, CVE-2023-34408, CVE-2025-61224
+  CVE-2017-12980, CVE-2017-18123, CVE-2019-25338, CVE-2023-34408, CVE-2025-61224
