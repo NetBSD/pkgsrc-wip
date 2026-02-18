@@ -1,20 +1,17 @@
-$NetBSD: distinfo,v 1.10 2024/12/20 09:29:10 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2025/12/15 04:39:26 maya Exp $
 
-BLAKE2s (gcc-12.4.0.diff) = ff17898717cb3781dd802a3376ce9a659df97d7d4a3ec3c4bd26279755ab752b
-SHA512 (gcc-12.4.0.diff) = 1e5df17525c13ff3b79117ffb426726c47a9bbb1ffb8555a75083eff5b2134c728decf765be24e4e0bb21685e60973211e359027e9b90f298e24b501cbc899aa
-Size (gcc-12.4.0.diff) = 667262 bytes
-BLAKE2s (gcc-12.4.0-Darwin-x86_64.diff) = 657396d893235af7940672e6a77e9edc489de194cdb7a654c73bceadad714f05
-SHA512 (gcc-12.4.0-Darwin-x86_64.diff) = 591cb2cff8310ba09babafea39dad87b2ab5431dcd22083df858a6010081a794d78b7d01d3dbda2262e910e3e8f4a63ae492b2fa892f16224e0b916db177f805
-Size (gcc-12.4.0-Darwin-x86_64.diff) = 6489 bytes
-BLAKE2s (gcc-12.4.0-patch-libgcc_config.host) = 7c2643ff3143b619e556dc710bd3993bc523a22f709375fe3ca8e8a8644c77cf
-SHA512 (gcc-12.4.0-patch-libgcc_config.host) = 96fa0f067d382807793a7fcb83036db32b46728bf7a3f5c60dfcbe02712345293bde641c8bbc3edb5c121d1f73c7e72aea15739c57b5e53ff375712c969e843b
-Size (gcc-12.4.0-patch-libgcc_config.host) = 3279 bytes
-BLAKE2s (gcc-12.4.0.tar.xz) = cf7717fff3e77f79f41e2cd298df81b5836e002b5abac1867a1d7d2a55314148
-SHA512 (gcc-12.4.0.tar.xz) = 5bd29402cad2deb5d9388d0236c7146414d77e5b8d5f1c6c941c7a1f47691c3389f08656d5f6e8e2d6717bf2c81f018d326f632fb468f42925b40bd217fc4853
-Size (gcc-12.4.0.tar.xz) = 83377372 bytes
+BLAKE2s (gcc-12.5.0.diff) = 37de4c2df06457eda7e277e776fffb0f7c260c6e920fa73ede252ae70427c3cf
+SHA512 (gcc-12.5.0.diff) = 14f8e682946b37bf4a259dea79782736683bcde387e24877b364e770489bb1a7d1fbb49dc6d7c7b98dcd1aca16c1f98a8b924cfde2fec1a111913d4f13d9ce6c
+Size (gcc-12.5.0.diff) = 664993 bytes
+BLAKE2s (gcc-12.5.0.tar.xz) = 403e8a3b4dc15a2e49f6ebf206d8b4b5d7f3b69d2ebcf6d901addf58ac259991
+SHA512 (gcc-12.5.0.tar.xz) = c76020e4c844b53485502cb8a4e295221c9d37487d66c9f4559031fb14c85de20602e6387310005386cb0ef25e55067d2cfef141423bb445f3b77e7456a23533
+Size (gcc-12.5.0.tar.xz) = 85897368 bytes
 BLAKE2s (isl-0.16.1.tar.bz2) = 01c3fc657326e81414986eb7ede6f73e540b97009745ced125cdf7f4a8d80f61
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
+SHA1 (patch-fixincludes_fixincl.x) = b233e8ae9589ee7e40523e7af1d195afc142742b
+SHA1 (patch-fixincludes_inclhack.def) = 6c1a88850153b9de44c62607adeb638cbb9dcbca
+SHA1 (patch-fixincludes_tests_base_math.h) = 2897678edae52784b19398d368f6634189fc8cd0
 SHA1 (patch-gcc_Makefile.in) = a31ddc27f1092cfdf5ac896ca79c8590b5aceb47
 SHA1 (patch-gcc_config.gcc) = 260f187048260e539e928bb04594b6394bb03912
 SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
@@ -30,8 +27,10 @@ SHA1 (patch-gcc_targhooks.cc) = 3bd54b7c3efc310aa2277f33cbd87b4a877cafea
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 919bbe094e3ce547a0186eeaddb20a662595f79a
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
+SHA1 (patch-libgcc_config.host) = d40d4d08c807eeff98cc246d1ea756b5b2c749b0
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
 SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = c8169d28f25c57ba89ffe8c9f897313bb8644382
+SHA1 (patch-zlib_zutil.h) = 10ee1a925a6d4c54e92f81402192cb6a21a82c27

@@ -1,0 +1,5 @@
+lang/gcc12: Fix build on Darwin for macOS 26.2
+
+Update prepared in wip by Frédéric Fauberteau
+
+It adds patches that fix build on Darwin aarch64 with last macOS SDK (26.2).

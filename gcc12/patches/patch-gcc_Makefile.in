@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_Makefile.in,v 1.1 2022/06/16 15:43:55 adam Exp $
+$NetBSD: patch-gcc_Makefile.in,v 1.2 2025/01/07 19:55:38 riastradh Exp $
 
 Ensure libgcc from this GCC is found before others.  Note that there must
 not be a whitespace between $(LINKER_RPATH_FLAG) and the path.  Otherwise
