@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.5 2006/12/03 16:59:13 dhowland Exp $
 
-RMD160 (leo-4-4-2-1-final.zip) = e516e2dfa4101c504bf1dc8bc7d50ff6b2420dce
-SHA512 (leo-4-4-2-1-final.zip) = 66fe5121efdb49ab5c4d07ffe35d4431bb9b46db97b277596bd2bb45d2243d9338c6828e273245b461f95ad5a298fd0d8d7278312f777806fe7566312acc299b
-Size (leo-4-4-2-1-final.zip) = 4882513 bytes
-SHA1 (patch-aa) = 631f8cf26737c88d906392d39deda6a14eb0ceb3
+BLAKE2s (leo-editor-6.8.7.tar.gz) = 472f6e54be7264ec9bde6cd70e7baadb73901e9e83a12c0e1d34881360749ba9
+SHA512 (leo-editor-6.8.7.tar.gz) = 6bacd2af512e5e083ff14a92007598ef821f325ea6da72ff3d9478f91209a92ae64075b79f40c665bc9a2004cb5f42ae24b8d0a5f86c8c3d874919d10fc7c224
+Size (leo-editor-6.8.7.tar.gz) = 16439110 bytes

@@ -1,0 +1,16 @@
+Rename to leo-editor?
+Requires https://github.com/flexxui/flexx
+
+Check SyntaxWarning
+=> Generating pre-install file lists
+/usr/pkg/lib/python3.13/site-packages/leo/doc/plugin_catalog.py:45: SyntaxWarning: invalid escape sequence '\*'
+/usr/pkg/lib/python3.13/site-packages/leo/doc/plugin_catalog.py:45: SyntaxWarning: invalid escape sequence '\*'
+/usr/pkg/lib/python3.13/site-packages/leo/scripts/win/elevate.py:5: SyntaxWarning: invalid escape sequence '\p'
+/usr/pkg/lib/python3.13/site-packages/leo/scripts/win/elevate.py:5: SyntaxWarning: invalid escape sequence '\p'
+/usr/pkg/lib/python3.13/site-packages/leo/unittests/py3_test_grammar.py:664: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+/usr/pkg/lib/python3.13/site-packages/leo/unittests/py3_test_grammar.py:665: SyntaxWarning: "is not" with 'int' literal. Did you mean "!="?
+/usr/pkg/lib/python3.13/site-packages/leo/unittests/py3_test_grammar.py:668: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+/usr/pkg/lib/python3.13/site-packages/leo/unittests/py3_test_grammar.py:664: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+/usr/pkg/lib/python3.13/site-packages/leo/unittests/py3_test_grammar.py:665: SyntaxWarning: "is not" with 'int' literal. Did you mean "!="?
+/usr/pkg/lib/python3.13/site-packages/leo/unittests/py3_test_grammar.py:668: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+
