@@ -1,1 +1,4 @@
 Nothing, I think.  It seems to work properly.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2025-14340
