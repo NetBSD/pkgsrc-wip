@@ -28,6 +28,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
 TEST_DEPENDS+=	geckodriver-[0-9]*:../../www/geckodriver
 TEST_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
