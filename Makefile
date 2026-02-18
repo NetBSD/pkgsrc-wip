@@ -1220,7 +1220,6 @@ SUBDIR+=	gcc-bootstrap
 SUBDIR+=	gcc10-aux
 SUBDIR+=	gcc10snapshot
 SUBDIR+=	gcc12
-SUBDIR+=	gcc12-darwin
 SUBDIR+=	gcc13
 SUBDIR+=	gcc14
 SUBDIR+=	gcc15-aux
