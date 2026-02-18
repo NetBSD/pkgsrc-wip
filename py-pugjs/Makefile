@@ -2,7 +2,7 @@
 
 DISTNAME=	pypugjs-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	www lang python
+CATEGORIES=	textproc lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypugjs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
