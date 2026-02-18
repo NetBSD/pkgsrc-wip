@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (sfwbar-1.0_beta16.1-d30db7c77fde25093f55eae8203f5a4995768152.tar.gz) = a02801bb12d28d3917fbf0a3e70571741dbb81ff380ea9ae162326d2991a5ce7
+SHA512 (sfwbar-1.0_beta16.1-d30db7c77fde25093f55eae8203f5a4995768152.tar.gz) = a55c9c3b982ec1d452fa666cf664d760b45e45c990bcbe62d3e6eeebf0ba0e9fe2fd4707c3c5d311942103ff296bf1cdff239c9811dcdfaf8a6f9b7a45ccefbc
+Size (sfwbar-1.0_beta16.1-d30db7c77fde25093f55eae8203f5a4995768152.tar.gz) = 515619 bytes
+SHA1 (patch-modules_network.c) = 91f29ad52ddfb0e5acfe34eb3fa613629afe34e1
