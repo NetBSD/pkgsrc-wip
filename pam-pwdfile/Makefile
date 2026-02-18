@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.7 2012/10/04 19:44:06 asau Exp $
 #
 
-DISTNAME=		pam_pwdfile-0.99
-PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		2
+DISTNAME=		libpam-pwdfile-0.99
+PKGNAME=		${DISTNAME:S/lib//}
+PKGREVISION=		3
 CATEGORIES=		security
-MASTER_SITES=		http://cpbotha.net/files/pam_pwdfile/
+MASTER_SITES=		https://git.tiwe.de/libpam-pwdfile.git/snapshot/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://cpbotha.net/pam_pwdfile.html
+HOMEPAGE=		https://git.tiwe.de/libpam-pwdfile.git
 COMMENT=		PAM module for authenticating with text password files
 LICENSE=		modified-bsd
 

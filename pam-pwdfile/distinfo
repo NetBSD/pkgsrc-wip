@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/02/21 09:25:27 bartoszkuzma Exp $
 
-RMD160 (pam_pwdfile-0.99.tar.gz) = e8e4d540cc7fcb391a72110312eb1e01ed5716ea
-SHA512 (pam_pwdfile-0.99.tar.gz) = 2a2a4ac37e76bb521beb5bd7c8344819c1909a3d939d91b91f6dd85acf8d7ad2760f0a5cd47eb38c45f877fd1be8aee419c199f5e2d8af70dad3be55a595cb0f
-Size (pam_pwdfile-0.99.tar.gz) = 16994 bytes
+BLAKE2s (libpam-pwdfile-0.99.tar.gz) = 3751d251873f85ac9f64a1055afc3feda3bfd1240e3801eae0be78880b3f50e3
+SHA512 (libpam-pwdfile-0.99.tar.gz) = 05837eeebc2e557aaeecb228f84ffc8c64610ae807838a0a7d17886cb8e7688d74b40d71500027156560a5b014a53c58a77eb7665528cc6d3042eda42a5fd15a
+Size (libpam-pwdfile-0.99.tar.gz) = 16655 bytes
 SHA1 (patch-aa) = c890d486e9f3d0648c3e761776173aa3d2428911
 SHA1 (patch-ab) = 3f7b1e33634ac243482137343fb68e1db6137988
