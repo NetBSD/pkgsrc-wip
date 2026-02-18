@@ -4491,7 +4491,6 @@ SUBDIR+=	py-ptpython
 SUBDIR+=	py-ptrace
 SUBDIR+=	py-ptyx
 SUBDIR+=	py-ptyx-mcq
-SUBDIR+=	py-pugjs
 SUBDIR+=	py-pulp
 SUBDIR+=	py-pulsar
 SUBDIR+=	py-pweave

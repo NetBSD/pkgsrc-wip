@@ -1,3 +1,0 @@
-PyPugJS is a high performance port of PugJS for python, that converts
-any .pug source into different Template-languages (Django, Jinja2,
-Mako or Tornado).
