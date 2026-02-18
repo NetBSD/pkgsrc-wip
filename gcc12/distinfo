@@ -1,17 +1,14 @@
 $NetBSD: distinfo,v 1.14 2025/12/15 04:39:26 maya Exp $
 
-BLAKE2s (gcc-12.5.0.diff) = 37de4c2df06457eda7e277e776fffb0f7c260c6e920fa73ede252ae70427c3cf
-SHA512 (gcc-12.5.0.diff) = 14f8e682946b37bf4a259dea79782736683bcde387e24877b364e770489bb1a7d1fbb49dc6d7c7b98dcd1aca16c1f98a8b924cfde2fec1a111913d4f13d9ce6c
-Size (gcc-12.5.0.diff) = 664993 bytes
+BLAKE2s (gcc-12.5.0.diff) = 2e5b0c6e8cececdddf451c07f55a47e693410cb4c50aedb8534ec345810d05c6
+SHA512 (gcc-12.5.0.diff) = 6137995194e2c5b1bbedef6efd1083018ee03cadbb29c2e1a8bda7ef49a76b13c307749f5a1ee4284d399d200a5a46aa888feacc2bfaf743de25f16b00640c76
+Size (gcc-12.5.0.diff) = 650426 bytes
 BLAKE2s (gcc-12.5.0.tar.xz) = 403e8a3b4dc15a2e49f6ebf206d8b4b5d7f3b69d2ebcf6d901addf58ac259991
 SHA512 (gcc-12.5.0.tar.xz) = c76020e4c844b53485502cb8a4e295221c9d37487d66c9f4559031fb14c85de20602e6387310005386cb0ef25e55067d2cfef141423bb445f3b77e7456a23533
 Size (gcc-12.5.0.tar.xz) = 85897368 bytes
 BLAKE2s (isl-0.16.1.tar.bz2) = 01c3fc657326e81414986eb7ede6f73e540b97009745ced125cdf7f4a8d80f61
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
-SHA1 (patch-fixincludes_fixincl.x) = b233e8ae9589ee7e40523e7af1d195afc142742b
-SHA1 (patch-fixincludes_inclhack.def) = 6c1a88850153b9de44c62607adeb638cbb9dcbca
-SHA1 (patch-fixincludes_tests_base_math.h) = 2897678edae52784b19398d368f6634189fc8cd0
 SHA1 (patch-gcc_Makefile.in) = a31ddc27f1092cfdf5ac896ca79c8590b5aceb47
 SHA1 (patch-gcc_config.gcc) = 260f187048260e539e928bb04594b6394bb03912
 SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
@@ -33,4 +30,3 @@ SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
 SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = c8169d28f25c57ba89ffe8c9f897313bb8644382
-SHA1 (patch-zlib_zutil.h) = 10ee1a925a6d4c54e92f81402192cb6a21a82c27
