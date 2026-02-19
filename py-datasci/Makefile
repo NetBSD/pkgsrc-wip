@@ -5,10 +5,7 @@ CATEGORIES=	meta-pkgs
 COMMENT=	Meta package in the spirit of a popular Python distribution
 META_PACKAGE=	yes
 
-
 MAINTAINER=	matthewd@fastmail.us
-
-PYTHON_VERSIONS_ACCEPTED=	314 313 312 311
 
 .include "../../lang/python/pyversion.mk"
 .include "../../wip/py-datasci/packages.mk"
