@@ -57,8 +57,8 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-PATCHFILES=		gcc-12.5.0.diff
-PATCH_SITES=		https://ftp.netbsd.org/pub/pkgsrc/misc/triaxx/
+PATCHFILES=		gcc-12.5.0-1.diff
+PATCH_SITES=		https://ftp.NetBSD.org/pub/pkgsrc/misc/triaxx/
 #PATCH_SITES=		https://ftp.netbsd.org/pub/pkgsrc/misc/maya/
 #PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/ca7047dad38f16fb02eb63bd4447e17d0b68b3bb/gcc/
 PATCH_DIST_STRIP=	-p1
