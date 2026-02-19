@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	dask-2025.5.1
+DISTNAME=	dask-2026.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-GITHUB_PROJECT=	dask
-GITHUB_TAG=	${PKGVERSION_NOREV}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=dask/}
+#GITHUB_PROJECT=	dask
+#GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dask/}
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/dask/dask/
@@ -40,11 +40,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-apache-arrow>=14.0.1:../../wip/py-apache-arrow
 DEPENDS+=	${PYPKGPREFIX}-bokeh>=2.4.2:../../wip/py-bokeh
-.if  ${PYTHON_VERSION} < 313
-DEPENDS+=	${PYPKGPREFIX}-cityhash-[0-9]*:../../wip/py-cityhash
-.endif
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.5.0:../../converters/py-cloudpickle
-#DEPENDS+=	${PYPKGPREFIX}-dask_expr>=1.1.17:../../wip/py-dask_expr
+DEPENDS+=	${PYPKGPREFIX}-dask_expr>=1.1.17:../../wip/py-dask_expr
 DEPENDS+=	${PYPKGPREFIX}-distributed>=${GITHUB_TAG}:../../wip/py-distributed
 DEPENDS+=	${PYPKGPREFIX}-fastavro>=1.1.0:../../wip/py-fastavro
 DEPENDS+=	${PYPKGPREFIX}-partd>=1.2.0:../../wip/py-partd
