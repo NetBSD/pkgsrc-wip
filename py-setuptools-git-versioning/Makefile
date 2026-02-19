@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	setuptools-git-versioning-2.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	setuptools_git_versioning-3.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools-git-versioning/}
 
@@ -19,7 +19,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

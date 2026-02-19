@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (setuptools-git-versioning-2.0.0.tar.gz) = fec816b59092cd5455d8a4b4cf2c7a5f096b9b44dc056a63bbe753e7e1584bfb
-SHA512 (setuptools-git-versioning-2.0.0.tar.gz) = 94aa15123b7fdbf2488036a09cd17d9a031635f38760d11d9f3959f90e473321436e89a0d48cb7ade2214ac9a89a851098236869c69e6be4e92f206eef0d48b1
-Size (setuptools-git-versioning-2.0.0.tar.gz) = 10608 bytes
+BLAKE2s (setuptools_git_versioning-3.0.1.tar.gz) = 604b81550db5755fa3b655b53cbe039ae488266b5d56da2ad1488ba73c7f1f6e
+SHA512 (setuptools_git_versioning-3.0.1.tar.gz) = 34d5c29cb8c8978c82624ba40aec25c6c22e53145883f2088c1baf28af655ecc6c35b342e36b25362949b76454632df5179b3cbbeb6ef36d6724120169d65090
+Size (setuptools_git_versioning-3.0.1.tar.gz) = 13932 bytes
