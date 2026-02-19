@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.10 2024/08/06 13:39:40 nia Exp $
 
-BLAKE2s (picom-12.5.tar.gz) = f6dea7e1c86386eb68905d43a3371ae339fa7d90367b95995f2317bd4c0231f5
-SHA512 (picom-12.5.tar.gz) = e4e8d8d6edc5fd5115ee880ee36e3b217b07336e09c457a3eb9a4824c19ac4f98ae807c3a902f327e7a2d036e2ae2d1ab2a5da8bdee47e33e49faebf4893a78b
-Size (picom-12.5.tar.gz) = 674165 bytes
+BLAKE2s (picom-13.tar.gz) = 54311540ef65959b6db7f579a0aebde1edd7bc75b30a506d80e294c6f0017601
+SHA512 (picom-13.tar.gz) = 8b5a096b20f3dde86145917d38409a081f26f22a90be5b658308af1fcd06b068b2fb3db70efc45f2f42b32a38c82a28a8835838308addcebcfc5409a934dc22a
+Size (picom-13.tar.gz) = 656067 bytes

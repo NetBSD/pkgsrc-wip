@@ -4,6 +4,8 @@ bin/compton-trans
 bin/picom
 bin/picom-inspect
 bin/picom-trans
+include/picom/api.h
+include/picom/backend.h
 lib/pkgconfig/picom-api.pc
 man/man1/picom-inspect.1
 man/man1/picom-trans.1
