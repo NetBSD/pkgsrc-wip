@@ -1,9 +1,0 @@
-@comment $NetBSD$
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/dask_expr/__init__.py
-${PYSITELIB}/dask_expr/__init__.pyc
-${PYSITELIB}/dask_expr/__init__.pyo

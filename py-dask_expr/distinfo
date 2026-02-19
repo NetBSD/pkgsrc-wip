@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (dask_expr-2.0.0.tar.gz) = 392070adcd05eb825c14d8346fcc9e52a87eaf421221e600e7a7a9441e81cae1
-SHA512 (dask_expr-2.0.0.tar.gz) = 46b1a43b8d04039df9b25854b3358fcbb00ebac161ec8b64e8346f2378cf5fbf0ad93582cc4f97bcf1f0cc0168dca93f8c065f38f41ecbe2deb62a039e6763fe
-Size (dask_expr-2.0.0.tar.gz) = 3781 bytes
