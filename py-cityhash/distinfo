@@ -1,6 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cityhash-0.4.7.tar.gz) = a0216b710b261afccf0372cd3a6e231278d93ce672441bf7319897d0f2a76ce0
-SHA512 (cityhash-0.4.7.tar.gz) = c3f58ba6581cca8b25c8a0bbfeb80fcbc23b156d90b6b65d65fe18d555453028e17d92666a942a516132fb5e93afc581756b99c02e58cee079297c13ff4f8d58
-Size (cityhash-0.4.7.tar.gz) = 329465 bytes
-SHA1 (patch-setup.py) = a201e915bf7cc0cd62635c6da940ec2c4d79c588
+BLAKE2s (cityhash-0.4.10.tar.gz) = 40ae7a4da74fdfeb6ed6ee28ccf69e85289955d9bb013ade4dd3b0551f910f74
+SHA512 (cityhash-0.4.10.tar.gz) = de2d260fb380ffaa1b863e013da13f9ec40508dabe24db4fdb48e197a8ba8079ef6b59590e40dfa5d2b39b61dfc32b53f7de16e38c5bdb38cd83b819e71a510e
+Size (cityhash-0.4.10.tar.gz) = 274911 bytes
