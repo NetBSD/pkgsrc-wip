@@ -90,9 +90,6 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_NLOHMANN_JSON=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_QTWEBENGINE=FALSE
 # ? DEPENDS+= ../../www/qt6-qtwebengine
 
-# \todo gc if not needed
-#CMAKE_CONFIGURE_ARGS+=		-DWITH_QTWEBKIT=FALSE
-
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
 # Upstream installs in an OS-specific place by default, but
 # we want the pkgsrc place on all systems.
@@ -117,7 +114,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/pgsql.buildlink3.mk"
 
-# ? DEPENDS+= ../../not-in-pkgsrc/laz-perf
+# ?bl3 or DEPENDS: ../../not-in-pkgsrc/laz-perf
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
@@ -147,6 +144,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 .include "../../x11/qt6-qscintilla/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/qt6-qtserialport/buildlink3.mk"
-# \todo Package?
+# \todo package
 #.include "../../x11/qwt6-qt6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
