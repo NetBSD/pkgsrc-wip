@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
+${PYSITELIB}/heapdict-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/heapdict-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/heapdict-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/heapdict-${PKGVERSION}.dist-info/licenses/LICENSE
+${PYSITELIB}/heapdict-${PKGVERSION}.dist-info/top_level.txt
+${PYSITELIB}/heapdict-${PKGVERSION}.dist-info/zip-safe
 ${PYSITELIB}/heapdict.py
 ${PYSITELIB}/heapdict.pyc
 ${PYSITELIB}/heapdict.pyo
