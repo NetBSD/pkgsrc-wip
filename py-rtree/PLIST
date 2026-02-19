@@ -1,9 +1,9 @@
 @comment $NetBSD$
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/rtree-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/rtree-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/rtree-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/rtree-${PKGVERSION}.dist-info/licenses/LICENSE.txt
+${PYSITELIB}/rtree-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/rtree/__init__.py
 ${PYSITELIB}/rtree/__init__.pyc
 ${PYSITELIB}/rtree/__init__.pyo
