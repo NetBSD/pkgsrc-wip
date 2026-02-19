@@ -13,9 +13,9 @@ LICENSE=	apache-2.0
 # These packages are built within arrow, and it
 # looks difficult to decouple them
 # They come from ./cpp/thirdparty/versions.txt
-XSIMD=		13.0.0.tar.gz
+XSIMD=		14.0.0.tar.gz
 JEMALLOC=	jemalloc-5.3.0.tar.bz2
-MIMALLOC=	mimalloc-v2.0.6.tar.gz
+MIMALLOC=	v3.1.5.tar.gz
 SUBSTRAIT=	v0.44.0.tar.gz
 
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
@@ -27,7 +27,7 @@ DISTFILES+=		${SUBSTRAIT}
 SITES.${XSIMD}=		https://github.com/xtensor-stack/xsimd/archive/
 SITES.${SUBSTRAIT}=		https://github.com/substrait-io/substrait/archive/
 SITES.${JEMALLOC}=	${MASTER_SITE_GITHUB:=jemalloc/jemalloc/releases/download/5.3.0/}
-SITES.${MIMALLOC}=	https://apache.jfrog.io/artifactory/arrow/thirdparty/7.0.0/
+SITES.${MIMALLOC}=	${MASTER_SITE_GITHUB:=microsoft/mimalloc/archive/}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,7 +93,8 @@ post-install:
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../devel/googletest/buildlink3.mk"
-.include "../../devel/flatbuffers/buildlink3.mk"
+# as of v21.0.0 they use an internal version of flatbuffers
+#.include "../../devel/flatbuffers/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
