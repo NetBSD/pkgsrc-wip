@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2025.5.1
+DISTNAME=	distributed-2026.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
-GITHUB_PROJECT=	distributed
-MASTER_SITES=	${MASTER_SITE_GITHUB:=dask/}
+#GITHUB_PROJECT=	distributed
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/distributed/}
 
 
 MAINTAINER=	matthewd@fastmail.us
@@ -29,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-toolz>=0.10.0:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.0.4:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.24.3:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-zict>=3.0.0:../../wip/py-zict
+DEPENDS+=	${PYPKGPREFIX}-dask>=2026.1.1:../../wip/py-dask
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-lz4>=3.1.10:../../archivers/py-lz4
 TEST_DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard

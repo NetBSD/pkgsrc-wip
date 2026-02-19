@@ -2,12 +2,11 @@
 bin/dask-scheduler-${PYVERSSUFFIX}
 bin/dask-ssh-${PYVERSSUFFIX}
 bin/dask-worker-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/distributed/__init__.py
 ${PYSITELIB}/distributed/__init__.pyc
@@ -300,6 +299,7 @@ ${PYSITELIB}/distributed/http/static/css/base.css
 ${PYSITELIB}/distributed/http/static/css/gpu.css
 ${PYSITELIB}/distributed/http/static/css/individual-cluster-map.css
 ${PYSITELIB}/distributed/http/static/css/sortable.min.css
+${PYSITELIB}/distributed/http/static/css/sortable.min.css.map
 ${PYSITELIB}/distributed/http/static/css/status.css
 ${PYSITELIB}/distributed/http/static/images/__init__.py
 ${PYSITELIB}/distributed/http/static/images/__init__.pyc
@@ -444,9 +444,6 @@ ${PYSITELIB}/distributed/publish.py
 ${PYSITELIB}/distributed/publish.pyc
 ${PYSITELIB}/distributed/publish.pyo
 ${PYSITELIB}/distributed/py.typed
-${PYSITELIB}/distributed/pytest_resourceleaks.py
-${PYSITELIB}/distributed/pytest_resourceleaks.pyc
-${PYSITELIB}/distributed/pytest_resourceleaks.pyo
 ${PYSITELIB}/distributed/queues.py
 ${PYSITELIB}/distributed/queues.pyc
 ${PYSITELIB}/distributed/queues.pyo
