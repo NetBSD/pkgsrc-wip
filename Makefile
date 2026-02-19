@@ -5086,6 +5086,7 @@ SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
 SUBDIR+=	qemu-git
 SUBDIR+=	qf
+SUBDIR+=	qgis
 SUBDIR+=	qgis-mac
 SUBDIR+=	qico
 SUBDIR+=	qiew
