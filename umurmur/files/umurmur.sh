@@ -13,7 +13,7 @@ rcvar=$name
 pidfile="@VARBASE@/run/umurmurd.pid"
 command="@PREFIX@/sbin/umurmurd"
 command_args="-p ${pidfile}"
-required_files="@PKG_SYSCONFDIR@/umurmur.conf"
+required_files="@PKG_SYSCONFDIR@/umurmur/umurmur.conf"
 
 load_rc_config $name
 run_rc_command "$1"
