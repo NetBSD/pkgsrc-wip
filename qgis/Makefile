@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.267 2026/02/06 10:04:56 wiz Exp $
 
 # This package tracks what ought to be a/b/rc of 4.0.
-DISTNAME=	qgis-3.99.0
+DISTNAME=	qgis-3.99.2
 CATEGORIES=	geography
 #MASTER_SITES=	https://qgis.org/downloads/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qgis/}
 GITHUB_PROJECT=	QGIS
-GITHUB_TAG=	a6644ddc2e269e32f6e622f327e5c000774d4759
+GITHUB_TAG=	3d3f7187fef84dcd1b79aa837ccd8b32cf62073f
 DIST_SUBDIR=	qgis-snapshot
 
 MAINTAINER=	gdt@NetBSD.org
@@ -94,6 +94,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
 # Upstream installs in an OS-specific place by default, but
 # we want the pkgsrc place on all systems.
 CMAKE_CONFIGURE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
+.include "../../www/fcgi/buildlink3.mk"
 
 # \todo Consider (optional?) dependency on GRASS.
 # \todo Consider (optional?) dependency on SAGA.
