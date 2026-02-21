@@ -22,4 +22,4 @@ Later fails again with
 
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2026-22863, CVE-2026-22864
+  CVE-2026-22863, CVE-2026-22864, CVE-2026-27190
