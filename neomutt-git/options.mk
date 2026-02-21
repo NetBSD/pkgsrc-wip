@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.18 2022/09/20 17:13:24 nikita Exp $
+# $NetBSD: options.mk,v 1.26 2026/02/21 15:22:59 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
+PKG_OPTIONS_GROUP.display=	curses ncurses
 PKG_SUPPORTED_OPTIONS=		tokyocabinet lmdb
-PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=		notmuch lua
-PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
+PKG_SUGGESTED_OPTIONS=		gpgme gssapi ncurses sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
 
 .include "../../mk/bsd.options.mk"
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
 ### ncurses
 ###
 .if !empty(PKG_OPTIONS:Mncurses)
-USE_NCURSES=		yes
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 .endif
@@ -49,19 +48,6 @@ LDFLAGS.SunOS+=			${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
 .endif
 
 ###
-### ncursesw
-###
-.if !empty(PKG_OPTIONS:Mncursesw)
-.  include "../../devel/ncursesw/buildlink3.mk"
-.else
-SUBST_CLASSES+=		curse
-SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw
-SUBST_STAGE.curse=	pre-configure
-SUBST_FILES.curse=	configure.ac
-SUBST_SED.curse=	-e 's,for lib in ncurses ncursesw,for lib in ncurses,'
-.endif
-
-###
 ### SSL
 ###
 .if !empty(PKG_OPTIONS:Mssl)
@@ -77,7 +63,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
-REPLACE_PERL+=		*/*.pl contrib/smime_keys
+REPLACE_PERL+=		smime/smime_keys
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--smime
 PLIST.smime=		yes
@@ -112,16 +98,6 @@ CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
 .endif
 
 ###
-### Internationalized Domain Names
-###
-.if !empty(PKG_OPTIONS:Midn)
-.  include "../../devel/libidn/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-idn=${BUILDLINK_PREFIX.libidn}
-.else
-CONFIGURE_ARGS+=	--disable-idn
-.endif
-
-###
 ### Enable debugging support
 ###
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -133,7 +109,7 @@ CFLAGS+=	-g
 ###
 .if !empty(PKG_OPTIONS:Mgpgme)
 CONFIGURE_ARGS+=	--gpgme
-.include "../../security/gpgme/buildlink3.mk"
+.  include "../../security/gpgme/buildlink3.mk"
 .endif
 
 ###

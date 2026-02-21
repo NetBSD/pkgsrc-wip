@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2021/05/24 19:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/01/06 17:09:42 wiz Exp $
 
-DISTNAME=		neomutt-20230227
+DISTNAME=		neomutt-20260105
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 #GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -18,7 +18,6 @@ TOOL_DEPENDS+=		w3m-[0-9]*:../../www/w3m
 DEPENDS+=		mime-types-[0-9]*:../../misc/mime-types
 
 USE_TOOLS+=		msgfmt gmake perl:build pkg-config
-CONFLICTS=		neomutt-[0-9]*
 
 HAS_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar
@@ -31,6 +30,9 @@ EGDIR=			${PREFIX}/share/examples/neomutt
 CONF_FILES=		${EGDIR}/neomuttrc ${PKG_SYSCONFDIR}/neomuttrc
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
+
+USE_CC_FEATURES+=	c11
+GCC_REQD+=		8
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -52,6 +54,7 @@ SUBST_SED.interpreter+=		-e "s,\#! */usr/bin/env *python3,\#!${PYTHONBIN},"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/mk/git-package.mk"
