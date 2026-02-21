@@ -115,6 +115,7 @@ Suggested package updates
 	o perl5-devel-5.39.4
 	o pessulus-2.30.4
 	o pike-7.8.700
+	o pipewire-1.6
 	o ppp-2.5.2
 	o py-PyPE-2.9
 	o py-etmtk-3.2.31
@@ -157,6 +158,7 @@ Suggested package updates
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
 	o virtualbox-7.2
+	o weston-15.0
 	o wkhtmltopdf-0.12.4
 	o wlroots-0.20
 	o xaralx-bin-0.7.1692
