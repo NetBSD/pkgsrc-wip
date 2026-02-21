@@ -14,8 +14,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
-# "lxml >= 5.2.1, < 7",  # Ubuntu 24.04 LTS
-DEPENDS+=	${PYPKGPREFIX}-lxml>=5.2.1:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-lxml>=5.2.1<7:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=43.0.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2023.11.17:../../security/py-certifi
 
