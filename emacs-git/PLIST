@@ -1041,6 +1041,7 @@ share/emacs/${PKGVERSION}/etc/themes/modus-vivendi-deuteranopia-theme.el
 share/emacs/${PKGVERSION}/etc/themes/modus-vivendi-theme.el
 share/emacs/${PKGVERSION}/etc/themes/modus-vivendi-tinted-theme.el
 share/emacs/${PKGVERSION}/etc/themes/modus-vivendi-tritanopia-theme.el
+share/emacs/${PKGVERSION}/etc/themes/newcomers-presets-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tsdh-dark-theme.el
