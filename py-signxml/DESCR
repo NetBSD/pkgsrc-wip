@@ -1,0 +1,6 @@
+SignXML is an implementation of the W3C XML Signature standard in Python.
+This standard (also known as "XMLDSig") is used to provide payload security
+in SAML 2.0, XAdES, EBICS, and WS-Security, among other uses. The standard
+is defined in the W3C Recommendation XML Signature Syntax and Processing
+Version 1.1. SignXML implements all of the required components of the
+Version 1.1 standard, and most recommended ones.

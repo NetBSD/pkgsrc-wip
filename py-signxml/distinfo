@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (signxml-4.3.1.tar.gz) = 998d52bc74f080e71937ede884800e2eed13e08097191a0b19c901103f7c9a5c
+SHA512 (signxml-4.3.1.tar.gz) = aedea932479ceb6926f4a0542984e60ea57e606d32b9354a000459a14a16250af2dd401eee031c89ced61287b9f9dea599e52979f4abfc7c0c865938495a5113
+Size (signxml-4.3.1.tar.gz) = 1621262 bytes
+SHA1 (patch-pyproject.toml) = e752c2481f93bab99ee927f97476f32f8ba79f01
