@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.50 2025/10/23 20:37:17 wiz Exp $
 
-PKGVERSION=	1.3
+PKGVERSION=	1.3.1
 PKGNAME=	widelands-${PKGVERSION}
 DISTNAME=	v${PKGVERSION:C/rc/-rc/}
 CATEGORIES=	games
-MASTER_SITES=	https://codeberg.org/wl/widelands/archive/
+MASTER_SITES=	https://github.com/widelands/widelands/archive/refs/tags/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.widelands.org/
@@ -32,7 +32,7 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/widelands
 
 DIST_SUBDIR=	widelands
-WRKSRC=		${WRKDIR}/widelands
+WRKSRC=		${WRKDIR}/widelands-${PKGVERSION}
 
 .include "../../mk/bsd.prefs.mk"
 
