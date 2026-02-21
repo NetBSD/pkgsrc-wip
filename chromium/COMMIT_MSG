@@ -1,45 +1,11 @@
-www/chromium: update to 145.0.7632.75
+www/chromium: update to 145.0.7632.109
 
-* 144.0.7559.132
-This update includes 2 security fixes. Below, we highlight fixes
-that were contributed by external researchers. Please see the
+* 144.0.7559.109
+This update includes 3 security fixes. Please see the
 Chrome Security Page for more information.
-[N/A][478942410] High CVE-2026-1861: Heap buffer overflow in libvpx.
-Reported by Google on 2026-01-26
-[TBD][479726070] High CVE-2026-1862: Type Confusion in V8.
-Reported by Chaoyuan Peng (@ret2happy) on 2026-01-29
-
-* 145.0.7632.45
-This update includes 11 security fixes. Please see the
-Chrome Security Page for more information.
-[$8000][467297219] High CVE-2026-2313: Use after free in CSS.
-Reported by Han Zheng (HexHive), Wenhao Fang (University of St. Andrews),
-and Qinying Wang (HexHive) on 2025-12-09
-[N/A][478560268] High CVE-2026-2314: Heap buffer overflow in Codecs.
-Reported by Google on 2026-01-26
-[N/A][479242793] High CVE-2026-2315: Inappropriate implementation in
-WebGPU. Reported by Google on 2026-01-27
-[$5000][422531206] Medium CVE-2026-2316: Insufficient policy enforcement
-in Frames. Reported by Luan Herrera (@lbherrera_) on 2025-06-05
-[$2000][464173573] Medium CVE-2026-2317: Inappropriate implementation
-in Animation. Reported by Brendan Draper on 2025-11-28
-[$1000][363930141] Medium CVE-2026-2318: Inappropriate implementation
-in PictureInPicture. Reported by Shaheen Fazim on 2024-09-02
-[$1000][40071155] Medium CVE-2026-2319: Race in DevTools.
-Reported by Anonymous on 2023-09-01
-[TBD][435684924] Medium CVE-2026-2320: Inappropriate implementation
-in File input. Reported by Alesandro Ortiz on 2025-08-02
-[N/A][461877477] Medium CVE-2026-2321: Use after free in Ozone.
-Reported by Google on 2025-11-18
-[$1000][470928605] Low CVE-2026-2322: Inappropriate implementation in
-File input. Reported by Robbe Van Roey | PinkDraconian on 2025-12-22
-[$500][467442136] Low CVE-2026-2323: Inappropriate implementation in
-Downloads. Reported by Hafiizh on 2025-12-10
-
-* 144.0.7559.75
-This update includes 1 security fix. Please see the Chrome Security
-Page for more information.
-[TBD][483569511] High CVE-2026-2441: Use after free in CSS.
-Reported by Shaheen Fazim on 2026-02-11
-
-* Pkgsrc: use external rollup and esbuild to fix build
+[TBD][477033835] High CVE-2026-2648: Heap buffer overflow
+in PDFium. Reported by soiax on 2026-01-19
+[TBD][481074858] High CVE-2026-2649: Integer overflow in V8.
+Reported by JunYoung Park(@candymate) of KAIST Hacking Lab on 2026-02-03
+[N/A][476461867] Medium CVE-2026-2650: Heap buffer overflow
+in Media. Reported by Google on 2026-01-18
