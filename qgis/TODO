@@ -1,20 +1,19 @@
 # normal TODO
 
   - Write COMMIT_MSG.
-  - Test with a project.
-  - Redo patch for overload ambiguity per Even's gcc12 bug hint.
   - Go over cmake configure output and check dependencies.
+  - Grasp/fix lack of secret storage access.
 
 # \todo in makefile
 
-  - Test with BSD make.
   - Grasp qca2-qt6-ossl and package or decide it isn't needed.
+  - Package qwt-qt6 and and re-add QWT_DIR patch and cmake arg.
+  - Package and add qtwebengine.
+  - Package/add laz-perf.
   - Redo apple bundle exclusion.
   - Leave note about making apple bundle an option.
+  - Test with BSD make.
   - Recheck precompiled headers exclusion.
   - Recheck having to set bindings on.
   - Recheck having to disable internal markupsafe, nlohmann_json.
-  - Package qwt-qt6 and and re-add QWT_DIR patch and cmake arg.
-  - Package and add qtwebengine.
   - Maybe check python 310, 311, 312, 314.
-  - Package/add laz-perf.
