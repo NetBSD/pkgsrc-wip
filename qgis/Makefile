@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.267 2026/02/06 10:04:56 wiz Exp $
 
 # This package tracks what ought to be a/b/rc of 4.0.
-DISTNAME=	qgis-3.99.2
+DISTNAME=	qgis-3.99.3
 CATEGORIES=	geography
 #MASTER_SITES=	https://qgis.org/downloads/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qgis/}
 GITHUB_PROJECT=	QGIS
-GITHUB_TAG=	3d3f7187fef84dcd1b79aa837ccd8b32cf62073f
+GITHUB_TAG=	7d2ca374f2db34eef5b433d9dbf46ae894ada937
 DIST_SUBDIR=	qgis-snapshot
 
 MAINTAINER=	gdt@NetBSD.org

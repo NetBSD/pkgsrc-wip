@@ -1,12 +1,8 @@
 $NetBSD: distinfo,v 1.87 2026/02/02 10:54:45 gdt Exp $
 
-BLAKE2s (qgis-snapshot/qgis-3.99.2-3d3f7187fef84dcd1b79aa837ccd8b32cf62073f.tar.gz) = 8cdf1503a014f14de5cd884541ee6856eae702f006aeceecdbc58084160a5815
-SHA512 (qgis-snapshot/qgis-3.99.2-3d3f7187fef84dcd1b79aa837ccd8b32cf62073f.tar.gz) = a32d12083708d4b6bc1bc8162c2b58cf2b7d8e5d718749d2f5e84ebd4eadae1a13dda2fd662935e487e672db54fa4cc56ef08afaf988f1dc9a885e74018d3848
-Size (qgis-snapshot/qgis-3.99.2-3d3f7187fef84dcd1b79aa837ccd8b32cf62073f.tar.gz) = 232034760 bytes
+BLAKE2s (qgis-snapshot/qgis-3.99.3-7d2ca374f2db34eef5b433d9dbf46ae894ada937.tar.gz) = 0dccbfd81bfc42247d0a1be730e9364075018e90288065095529cddcef74beed
+SHA512 (qgis-snapshot/qgis-3.99.3-7d2ca374f2db34eef5b433d9dbf46ae894ada937.tar.gz) = eab8ae0291242bb178a2a2af265f6cce603dbb0103a0aab8805f50cf4ab36696d1ff39f0ec9ebb433bb2c155b78b0a8b9722d957bcff0fee8fdbcaf13c7eb94c
+Size (qgis-snapshot/qgis-3.99.3-7d2ca374f2db34eef5b433d9dbf46ae894ada937.tar.gz) = 232040665 bytes
 SHA1 (patch-cmake_FindQwt.cmake) = 245463bc44fb4f2cb4aa61a8b86931e95e4ac820
 SHA1 (patch-external_nmea_tok.c) = 94b9ce398787170250fc5fbd8835d7d7fa1cd013
 SHA1 (patch-src_crssync_CMakeLists.txt) = 7269ba6dce3ca41f5d63d36ffc02ffc6d0cea5d8
-SHA1 (patch-tests_src_core_geometry_testqgsgeometrycollection.cpp) = 11d961ffddd3e2a8a0da84371b442bb7f5ed549d
-SHA1 (patch-tests_src_core_geometry_testqgslinestring.cpp) = 90fda0ff44dab94f9d59063cfc2f08c6f57d7b25
-SHA1 (patch-tests_src_core_geometry_testqgspoint.cpp) = 3cc41eb72ba1c75558d8dd2d1d04e79c9a1f54a4
-SHA1 (patch-tests_src_core_geometry_testqgspolygon.cpp) = 56dd2af308a0596691542fe2239bf5e912b3e996
