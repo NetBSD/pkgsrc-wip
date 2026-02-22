@@ -22,6 +22,7 @@ Suggested package updates
 	o chapel-1.32.0
 	o cinelerra-4.5
 	o codex-0.98.0
+	o crush-0.43.4
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o deadbeef-1.9.6
@@ -122,6 +123,7 @@ Suggested package updates
 	o py-rpyc-3.2.1
 	o py-sentry-23.7.1
 	o py-smop-0.29
+	o py-typer-0.24.1
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
 	o py-zeitgeist-0.9.16
@@ -129,6 +131,7 @@ Suggested package updates
 	o qupzilla-2.2.1
 	o rdup-1.1.13
 	o resterm-0.23.1 [broken by modernc-1.39.0: https://gitlab.com/cznic/sqlite/-/issues/246]
+	o resterm-0.23.3
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
 	o rygel-0.26.0
