@@ -1,6 +1,6 @@
 www/chromium: update to 145.0.7632.109
 
-* 144.0.7559.109
+* 145.0.7632.109
 This update includes 3 security fixes. Please see the
 Chrome Security Page for more information.
 [TBD][477033835] High CVE-2026-2648: Heap buffer overflow
