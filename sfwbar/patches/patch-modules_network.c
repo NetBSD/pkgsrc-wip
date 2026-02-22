@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Add NetBSD support
+
 --- modules/network.c.orig	2026-02-15 14:18:39.000000000 +0000
 +++ modules/network.c
 @@ -374,7 +374,7 @@ static gboolean net_rt_parse (GIOChannel
