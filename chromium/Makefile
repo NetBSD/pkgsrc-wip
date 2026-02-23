@@ -271,8 +271,8 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup/rollup-${LOWER_OPSYS}
 
 do-configure:
-	cd ${WRKSRC}/esbuild && \
-		${RUN} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
+	${RUN} cd ${WRKSRC}/esbuild && \
+		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
 		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild --neutral
 	${RM} -rf ${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild
 	${LN} -sf ${WRKSRC}/esbuild/npm/esbuild \
