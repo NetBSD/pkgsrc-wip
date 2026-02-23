@@ -6184,6 +6184,7 @@ SUBDIR+=	xorriso
 SUBDIR+=	xoscope
 SUBDIR+=	xournalpp-git
 SUBDIR+=	xpde
+SUBDIR+=	xpdf4
 SUBDIR+=	xpdq
 SUBDIR+=	xpi-quick_locale_switcher
 SUBDIR+=	xpilot-ng
