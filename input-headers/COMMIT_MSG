@@ -1,0 +1,5 @@
+Add devel/input-headers
+
+The input header files from libopeninput to avoid
+circular dependency between libevdev-chunk and
+libopeninput.
