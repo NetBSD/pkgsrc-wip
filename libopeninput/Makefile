@@ -12,6 +12,10 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
+# wscons
+ONLY_FOR_PLATFORM=	NetBSD-*-*
+ONLY_FOR_PLATFORM+=	OpenBSD-*-*
+
 MESON_ARGS+=	-Dlibwacom=false
 MESON_ARGS+=	-Ddocumentation=false
 MESON_ARGS+=	-Dtests=false
