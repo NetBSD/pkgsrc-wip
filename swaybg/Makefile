@@ -11,7 +11,6 @@ COMMENT=	Wallpaper tool for Wayland compositors
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
-TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
 SUBST_CLASSES+=		nogit
 SUBST_STAGE.nogit=	pre-configure
@@ -21,17 +20,10 @@ SUBST_SED.nogit+=	-e 's/git =/\#git =/g'
 SUBST_SED.nogit+=	-e 's/git.found()/false/g'
 SUBST_SED.nogit+=	-e '/project_version/s/@0@/${PKGVERSION}/g'
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-post-install:
-	scdoc < ${WRKSRC}/swaybg.1.scd > ${WRKSRC}/swaybg.1
-	${INSTALL_MAN} ${WRKSRC}/swaybg.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/swaybg.1
-
-
 .include "../../devel/meson/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../textproc/scdoc/tool.mk"
 .include "../../mk/bsd.pkg.mk"
