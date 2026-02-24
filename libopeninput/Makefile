@@ -1,14 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	libopeninput-1.26.2
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=sizeofvoid/}
-GITHUB_TAG=	5e93d5c82d455c3901c2cb9b40dbbe5358a88e30
+.include "Makefile.common"
 
-MAINTAINER=	kikadf.01@gmail.com
-HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/build-on-openbsd/
+DISTNAME=	libopeninput-${VERSION}
 COMMENT=	Wscons(4) and kqueue(2) based port of libinput
-LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
