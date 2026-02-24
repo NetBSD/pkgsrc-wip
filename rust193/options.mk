@@ -71,7 +71,7 @@ GCC_REQD+=	14
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=18.0.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=20.0.0
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
