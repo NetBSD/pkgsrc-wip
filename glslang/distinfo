@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (glslang-15.0.0.tar.gz) = dc47a06660e67da1039bc4258cab42b40d9f19394b98c944709ff7718091f075
-SHA512 (glslang-15.0.0.tar.gz) = b246c6f280891b7c9b6cd0b5e85e03ccf1fe173cdfc40e566339a5698176cbcfe23eb7aeaba277f071222d76b9f2a00376d790d4d604aedad82e6196fab7fc70
-Size (glslang-15.0.0.tar.gz) = 3864508 bytes
+BLAKE2s (glslang-16.2.0.tar.gz) = 75bde0b8dae7bdbe81ba08ea0e100b2e5071cd3d8a07d0d103ec0f10b1ae90f2
+SHA512 (glslang-16.2.0.tar.gz) = 68b00bb3c84e5ecfa1ca2ba50bf1bd3e9fe6e04ffb09fbfbd54274e9eea5c3aa5ea8d229fcd834f92d6dd11c52c77264ceb80b8461591eb4b062bf87aa7f0619
+Size (glslang-16.2.0.tar.gz) = 4294235 bytes

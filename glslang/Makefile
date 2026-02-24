@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	glslang-15.0.0
+DISTNAME=	glslang-16.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 

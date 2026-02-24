@@ -1,2 +1,2 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2025-3010
+  CVE-2025-3010: Pull Req to fix: https://github.com/KhronosGroup/glslang/pull/4169
