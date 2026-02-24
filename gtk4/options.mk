@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.3 2023/07/25 01:09:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk4
-PKG_SUPPORTED_OPTIONS=	cups debug wayland
+PKG_SUPPORTED_OPTIONS=	cups debug
 
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		x11
@@ -10,6 +10,9 @@ PKG_OPTIONS_GROUP.gui=		x11
 PKG_OPTIONS_GROUP.gui+=	quartz
 PKG_SUGGESTED_OPTIONS+=	quartz
 .else
+# Wayland option is outside the gui group
+# since it can be enabled with x11.
+PKG_SUPPORTED_OPTIONS+=	wayland
 PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 .include "../../devel/wayland/platform.mk"
@@ -21,7 +24,6 @@ PKG_SUGGESTED_OPTIONS+=	cups
 
 .include "../../mk/bsd.options.mk"
 
-#PKG_SUPPORTED_OPTIONS+=	wayland
 PLIST_VARS+=		wayland
 .if !empty(PKG_OPTIONS:Mwayland)
 PLIST.wayland=		yes
@@ -60,9 +62,7 @@ MESON_ARGS+=		-Dx11-backend=true
 MESON_ARGS+=		-Dx11-backend=false
 .endif
 
-PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-PLIST.cups=		yes
 MESON_ARGS+=		-Dprint-cups=enabled
 .include "../../print/libcups/buildlink3.mk"
 .else
