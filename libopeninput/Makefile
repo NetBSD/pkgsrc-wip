@@ -16,7 +16,6 @@ MESON_ARGS+=	-Dlibwacom=false
 MESON_ARGS+=	-Ddocumentation=false
 MESON_ARGS+=	-Dtests=false
 
-CFLAGS+=	-O0 -g
 LDFLAGS+=	-levdev
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libinput.pc
