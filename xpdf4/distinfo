@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2024/04/02 18:27:55 rhialto Exp $
-
-BLAKE2s (xpdf-4.06.tar.gz) = d9f883b3a90c52d08aeae22f1b3c4dc24658c0b51f0c1c388daf05e2342bd8c6
-SHA512 (xpdf-4.06.tar.gz) = ace2d2c006411ef40f3510fe34809e6ed5fd4a2367ac11a75e9d4795aa5054e72f12e307165d11a25b12609d33b279b9b99d9c072442e98308a77ad022bc8355
-Size (xpdf-4.06.tar.gz) = 999317 bytes
-SHA1 (patch-cmake-config.txt) = a2c25a258c8c72494c3b53854cabf2e51db0c32d
-SHA1 (patch-doc_sample-xpdfrc) = c16f4355efa279e79b9f27bc256e7569a348f13d
-SHA1 (patch-xpdf-qt_XpdfWidgetPrint.cc) = 8d05b6e95228f07cc571b176ec821f5b535424e8
-SHA1 (patch-xpdf_GlobalParams.cc) = a0322fda0b8977afc8b7ea2d7855395e59fd837d
