@@ -17,10 +17,9 @@ USE_TOOLS+=		gmake
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DMLIR_INSTALL_AGGREGATE_OBJECTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DMLIR_BUILD_MLIR_C_DYLIB=ON
-
-# FIXME: ld: library 'MLIR' not found
-
-BUILD_TARGET=	mlir-tblgen mlir-headers mlir-libraries
+# Fix for: lib 'MLIR' not found.
+# MLIR_LINK_MLIR_DYLIB defaults to LLVM_LINK_LLVM_DYLIB, but libMLIR.so is not built.
+CMAKE_CONFIGURE_ARGS+=  -DMLIR_LINK_MLIR_DYLIB=OFF
 
 .include "../../devel/cmake/build.mk"
 .include "../../wip/llvm/buildlink3.mk"

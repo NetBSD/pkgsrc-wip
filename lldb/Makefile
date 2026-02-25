@@ -20,8 +20,7 @@ USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
-# FIXME: currenly build fails when libcxx is also installed.
-
+# FIXME: currently build fails when libcxx is also installed.
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 #CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_LIBCXX=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -37,7 +36,7 @@ LUA_VERSIONS_ACCEPTED=	53
 PLIST_SUBST+=		LUA_VERSION=${LUA_VERSION:R}
 
 REPLACE_PERL+=		scripts/disasm-gdb-remote.pl
- 
+
 REPLACE_PYTHON+=	bindings/python/get-python-config.py
 REPLACE_PYTHON+=	bindings/python/lldb-python
 REPLACE_PYTHON+=	scripts/analyze-project-deps.py
