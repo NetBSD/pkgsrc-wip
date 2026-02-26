@@ -1,9 +1,7 @@
 # $NetBSD: Makefile,v 1.16 2021/01/27 15:35:58 leot Exp $
 
-.include "../../wip/terraform/version.mk"
-
-DISTNAME=	terraform-${TERRAFORM15_VERSION}
-PKGNAME=	terraform15-${TERRAFORM15_VERSION}
+DISTNAME=	terraform-1.5.7
+PKGNAME=	terraform15-1.5.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	terraform

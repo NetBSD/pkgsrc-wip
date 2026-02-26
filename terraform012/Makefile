@@ -2,8 +2,8 @@
 
 .include "../../wip/terraform/version.mk"
 
-DISTNAME=	terraform-${TERRAFORM012_VERSION}
-PKGNAME=	terraform012-${TERRAFORM012_VERSION}
+DISTNAME=	terraform-0.12.31
+PKGNAME=	terraform012-0.12.31
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	terraform

@@ -1,9 +1,7 @@
 # $NetBSD$
 
-.include "../../wip/terraform/version.mk"
-
-DISTNAME=	terraform-${TERRAFORM015_VERSION}
-PKGNAME=	terraform015-${TERRAFORM015_VERSION}
+DISTNAME=	terraform-0.15.5
+PKGNAME=	terraform015-0.15.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	terraform

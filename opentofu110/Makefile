@@ -1,9 +1,7 @@
 # $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
 
-.include "../../wip/terraform/version.mk"
-
-DISTNAME=	opentofu-${OPENTOFU110_VERSION}
-PKGNAME=	opentofu110-${OPENTOFU110_VERSION}
+DISTNAME=	opentofu-1.10.6
+PKGNAME=	opentofu110-1.10.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
 GITHUB_PROJECT=	opentofu
