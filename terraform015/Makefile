@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	terraform-0.15.5
-PKGNAME=	terraform015-0.15.5
+PKGNAME=	${DISTNAME:S/terraform/&015/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	terraform

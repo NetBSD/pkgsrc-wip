@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
 
 DISTNAME=	terraform-0.12.31
-PKGNAME=	terraform012-0.12.31
+PKGNAME=	${DISTNAME:S/terraform/&012/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	terraform
