@@ -906,7 +906,6 @@ SUBDIR+=	erlang-git
 SUBDIR+=	err113
 SUBDIR+=	es40-cvs
 SUBDIR+=	es40-firmware
-SUBDIR+=	esbuild
 SUBDIR+=	esdl
 SUBDIR+=	et
 SUBDIR+=	ethersync
