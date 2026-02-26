@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.terraform.io/
 COMMENT=	Infrastructure orchestration tool
 LICENSE=	mpl-2.0
 
+# Previous net/terraform (0.12.x) did not have any version suffix
 SUPERSEDES+=	terraform-[0-9]*
 
 GO_BUILD_PATTERN=	.
