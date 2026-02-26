@@ -1,0 +1,2 @@
+- Add SUPERSEDES for net/terraform-provider-aws due having extra version suffix
+  number for the major version
