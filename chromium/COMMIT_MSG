@@ -1,11 +1,11 @@
-www/chromium: update to 145.0.7632.109
+www/chromium: update to 145.0.7632.116
 
-* 145.0.7632.109
+* 145.0.7632.116
 This update includes 3 security fixes. Please see the
 Chrome Security Page for more information.
-[TBD][477033835] High CVE-2026-2648: Heap buffer overflow
-in PDFium. Reported by soiax on 2026-01-19
-[TBD][481074858] High CVE-2026-2649: Integer overflow in V8.
-Reported by JunYoung Park(@candymate) of KAIST Hacking Lab on 2026-02-03
-[N/A][476461867] Medium CVE-2026-2650: Heap buffer overflow
-in Media. Reported by Google on 2026-01-18
+[TBD][482862710] High CVE-2026-3061: Out of bounds read in Media.
+Reported by Luke Francis on 2026-02-09
+[TBD][483751167] High CVE-2026-3062: Out of bounds read and write
+in Tint. Reported by cinzinga on 2026-02-11
+[TBD][485287859] High CVE-2026-3063: Inappropriate implementation
+in DevTools. Reported by M. Fauzan Wijaya (Gh05t666nero) on 2026-02-17
