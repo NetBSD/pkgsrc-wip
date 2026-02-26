@@ -12,6 +12,8 @@ HOMEPAGE=	https://www.terraform.io/
 COMMENT=	Infrastructure orchestration tool
 LICENSE=	mpl-2.0
 
+SUPERSEDES+=	terraform-[0-9]*
+
 GO_BUILD_PATTERN=	.
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
