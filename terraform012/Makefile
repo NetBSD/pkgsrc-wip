@@ -1,7 +1,5 @@
 # $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
 
-.include "../../wip/terraform/version.mk"
-
 DISTNAME=	terraform-0.12.31
 PKGNAME=	terraform012-0.12.31
 CATEGORIES=	net
