@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/neatvnc.h
+lib/libneatvnc.so
+lib/libneatvnc.so.0
+lib/libneatvnc.so.0.0.0
+lib/pkgconfig/neatvnc.pc

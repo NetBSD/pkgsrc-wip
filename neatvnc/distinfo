@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (neatvnc-0.9.5-8c646d0ecc3edadb5677c639b40ed2f9eb7e1033.tar.gz) = 0bda4de2f00270aec8ddd3599ce71d4fa144fe075f84c67a88c26ad75b0bd4a7
+SHA512 (neatvnc-0.9.5-8c646d0ecc3edadb5677c639b40ed2f9eb7e1033.tar.gz) = 73903d26527dbb96e0eedf4a6899d955f40ab7e96decd9509bc59f6b829f52aed78d054238441472fd3af9aa7e2672da5206b1a6dca589c43c4ffd8e66ca93d1
+Size (neatvnc-0.9.5-8c646d0ecc3edadb5677c639b40ed2f9eb7e1033.tar.gz) = 841076 bytes

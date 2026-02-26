@@ -1,0 +1,7 @@
+This is a liberally licensed VNC server library that's intended to
+be fast and neat.
+
+## Goals
+ * Speed.
+ * Clean interface.
+ * Interoperability with the Freedesktop.org ecosystem.
