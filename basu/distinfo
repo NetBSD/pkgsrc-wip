@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (v0.2.1.tar.gz) = f7b340b81f7fb9952b58129cb7dd95da20d7f3f8d9a3b11003360fc943e51bd7
-SHA512 (v0.2.1.tar.gz) = b1f6a35e4d93d099c5c92a8ea68f8a93429a614f1a63de7346e256437525bee5b87c1a5ad2e0dad2ff0bdc88b525cf1931f048e032bd1f1ff007b4d5eee90c59
-Size (v0.2.1.tar.gz) = 239042 bytes
+BLAKE2s (basu-0.2.1.tar.gz) = b189091a1ab5ea413ad4608ebfbd43361cdef3c16e2ef0786b501ec4729079a9
+SHA512 (basu-0.2.1.tar.gz) = b8017bbfdb5b408bd380e3b1cb1443321863ed8c9487ab0c8c80860c2ffb0c0403c81daf7e87f815027e9a826d08aa82a54c496bc87527209933e0d007b0c9ea
+Size (basu-0.2.1.tar.gz) = 239178 bytes
 SHA1 (patch-src_basic_alloc-util.h) = 7ada7a5df59b1f1ec2751a7bcb50b26f0368feae
 SHA1 (patch-src_basic_fileio.h) = 6398bbead3c315fbfc6a7ec3bb7bda22a4a10d1b
 SHA1 (patch-src_basic_log.h) = 7bd42dd43f6ae2c4ccce8b1c76f0fb346d0aa33f
