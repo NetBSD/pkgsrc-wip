@@ -3,7 +3,6 @@
 DISTNAME=	seatd-0.9.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.sr.ht/~kennylevinsen/seatd/archive/
-DISTFILES=	${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~kennylevinsen/seatd/
