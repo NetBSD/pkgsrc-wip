@@ -9,8 +9,9 @@ HOMEPAGE=	https://codeberg.org/dnkl/fcft/
 COMMENT=	Simple library for font loading and glyph rasterization
 LICENSE=	mit
 
-USE_TOOLS+=	pkg-config
+TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
+USE_TOOLS+=	pkg-config
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
