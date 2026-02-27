@@ -9,8 +9,6 @@ HOMEPAGE=	https://git.sr.ht/~kennylevinsen/seatd/
 COMMENT=	Seat management daemon and library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
-
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
