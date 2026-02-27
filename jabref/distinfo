@@ -1,4 +1,5 @@
 $NetBSD: distinfo,v 1.2 2015/03/14 21:12:49 jihbed Exp $
 
-RMD160 (JabRef-2.10.jar) = 9065c2c765902f4d1cecb97280c87a1e5d5afdc5
-Size (JabRef-2.10.jar) = 15223054 bytes
+BLAKE2s (JabRef-2.11.1.jar) = f0f3b2349f6a30546d91d14951e967e916df066c20a4b2b71ac19a6b06a6ac6f
+SHA512 (JabRef-2.11.1.jar) = 515b97f0bdc2a3067260912a3f1fd7b866f420b13e04f66dac99e05b0a9682fead5edf964e7a697f7fdedead7b56011f6822f9610e8533c715486d7fd7b9abb1
+Size (JabRef-2.11.1.jar) = 20375475 bytes
