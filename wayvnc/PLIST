@@ -1,3 +1,5 @@
 @comment $NetBSD$
 bin/wayvnc
 bin/wayvncctl
+man/man1/wayvnc.1
+man/man1/wayvncctl.1

@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/wayvnc-7ee86054c680b3429137069712e38fcba61ebae7
 USE_TOOLS+=	pkg-config
 
 .include "../../devel/meson/build.mk"
+.include "../../textproc/scdoc/tool.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../wip/aml/buildlink3.mk"
