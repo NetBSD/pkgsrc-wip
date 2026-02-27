@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (netsnmp-cffi-0.1.4.tar.gz) = 99aa0ce357d31b5558179feafa25db647079245684fb1cbd13950da59a21b49a
-SHA512 (netsnmp-cffi-0.1.4.tar.gz) = fc20562ec764b59f03b8ee24540c3de020e34c96b8fbd89844b84d7eaf1a23e4bfed2ac183769997b003a7e291819988dc3834a16221ae354bfaa06758c257cf
-Size (netsnmp-cffi-0.1.4.tar.gz) = 39400 bytes
+BLAKE2s (netsnmp-cffi-0.1.5.tar.gz) = 3031ab36b483d20e07568354a6bfb0af433b6e7ad38425028e2659882f640b9b
+SHA512 (netsnmp-cffi-0.1.5.tar.gz) = 6de82622c53d2eda44ea20591bace44557775132abc78eecd3c9feeb61d6c0325c90f3c3f4a7aa4777f5477966376958484ad9284d4a113e3c25ae20903bc6e6
+Size (netsnmp-cffi-0.1.5.tar.gz) = 39875 bytes

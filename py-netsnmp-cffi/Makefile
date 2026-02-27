@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	netsnmp-cffi-0.1.4
+DISTNAME=	netsnmp-cffi-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uninett/}
