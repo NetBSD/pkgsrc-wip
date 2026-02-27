@@ -12,13 +12,11 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 MESON_ARGS+=	-Dtests=false
+MESON_ARGS+=	-Dterminfo=disabled
 
 EGDIR=		${PREFIX}/share/examples/foot
 OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/foot
 CONF_FILES=	${EGDIR}/foot.ini ${PKG_SYSCONFDIR}/xdg/foot/foot.ini
-
-post-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/share/terminfo
 
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"
