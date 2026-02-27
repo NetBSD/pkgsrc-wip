@@ -3,7 +3,7 @@
 DISTNAME=	JabRef-2.10
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	misc
-MASTER_SITES=	http://sourceforge.net/projects/jabref/files/jabref/2.10/
+MASTER_SITES=	http://sourceforge.net/projects/jabref/files/v1.0%20to%20v2.11.1/2.10/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pouya@san-serriffe.org
