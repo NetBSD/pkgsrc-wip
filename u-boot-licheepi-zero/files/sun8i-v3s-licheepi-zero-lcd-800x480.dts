@@ -1,0 +1,43 @@
+/*
+ * Copyright (C) 2018 Icenowy Zheng <icenowy@aosc.io>
+ *
+ * SPDX-License-Identifier: (GPL-2.0+ OR X11)
+ */
+
+/ {
+	panel: panel {
+		compatible = "urt,umsh-8596md-t", "simple-panel";
+		backlight = <&backlight>;
+
+		bpc = <6>;
+		width-mm = <152>;
+		height-mm = <91>;
+
+		port {
+			panel_input: endpoint {
+				remote-endpoint = <&tcon0_out_lcd>;
+			};
+		};
+
+		display-timings {
+			timing0: timing0 {
+				clock-frequency = <33000000>;
+				hactive = <800>;
+				vactive = <480>;
+
+				hfront-porch = <209>;
+				hsync-len = <30>;
+				hback-porch = <16>;
+
+				vback-porch = <22>;
+				vsync-len = <1>;
+				vfront-porch = <22>;
+
+				hsync-active = <0>;
+				vsync-active = <0>;
+				de-active = <1>;
+				pixelclk-active = <0>;
+			};
+		};
+	};
+};

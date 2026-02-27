@@ -5877,6 +5877,7 @@ SUBDIR+=	u-boot
 SUBDIR+=	u-boot-full
 SUBDIR+=	u-boot-imx23-olinuxino
 SUBDIR+=	u-boot-khadas-vim3
+SUBDIR+=	u-boot-licheepi-zero
 SUBDIR+=	u-boot-mangopi-mq-pro
 SUBDIR+=	u-boot-nanopi-r2s
 SUBDIR+=	u-boot-omap4-panda

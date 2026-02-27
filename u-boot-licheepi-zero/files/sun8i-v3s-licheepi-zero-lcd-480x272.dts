@@ -1,0 +1,38 @@
+/*
+ * Copyright (C) 2018 Icenowy Zheng <icenowy@aosc.io>
+ *
+ * SPDX-License-Identifier: (GPL-2.0+ OR X11)
+ */
+
+/ {
+	panel: panel {
+		compatible = "qiaodian,qd43003c0-40", "simple-panel";
+		backlight = <&backlight>;
+
+		bpc = <8>;
+		width-mm = <95>;
+		height-mm = <53>;
+
+		port {
+			panel_input: endpoint {
+				remote-endpoint = <&tcon0_out_lcd>;
+			};
+		};
+
+		display-timings {
+			timing0: timing0 {
+				clock-frequency = <9000000>;
+				hactive = <480>;
+				vactive = <272>;
+
+				hfront-porch = <8>;
+				hsync-len = <4>;
+				hback-porch = <39>;
+
+				vback-porch = <2>;
+				vsync-len = <10>;
+				vfront-porch = <4>;
+			};
+		};
+	};
+};

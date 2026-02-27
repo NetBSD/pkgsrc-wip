@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- arch/arm/mach-sunxi/Kconfig.orig	2018-11-14 16:10:06.000000000 +0000
++++ arch/arm/mach-sunxi/Kconfig
+@@ -258,6 +258,7 @@ config MACH_SUN8I_V3S
+ 	select CPU_V7_HAS_NONSEC
+ 	select CPU_V7_HAS_VIRT
+ 	select ARCH_SUPPORT_PSCI
++	select SUNXI_DE2
+ 	select SUNXI_GEN_SUN6I
+ 	select SUNXI_DRAM_DW
+ 	select SUNXI_DRAM_DW_16BIT

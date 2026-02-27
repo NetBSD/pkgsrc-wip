@@ -1,0 +1,110 @@
+$NetBSD$
+
+--- arch/arm/dts/sun8i-v3s-licheepi-zero.dts.orig	2018-11-14 16:10:06.000000000 +0000
++++ arch/arm/dts/sun8i-v3s-licheepi-zero.dts
+@@ -41,6 +41,7 @@
+  */
+ 
+ /dts-v1/;
++#include "sun8i-v3s-licheepi-zero-lcd.dts"
+ #include "sun8i-v3s.dtsi"
+ #include "sunxi-common-regulators.dtsi"
+ 
+@@ -55,10 +56,87 @@
+ 	chosen {
+ 		stdout-path = "serial0:115200n8";
+ 	};
++
++	leds {
++		compatible = "gpio-leds";
++
++		blue_led {
++			label = "licheepi:blue:usr";
++			gpios = <&pio 6 1 GPIO_ACTIVE_LOW>; /* PG1 */
++		};
++
++		green_led {
++			label = "licheepi:green:usr";
++			gpios = <&pio 6 0 GPIO_ACTIVE_LOW>; /* PG0 */
++			default-state = "on";
++		};
++
++		red_led {
++			label = "licheepi:red:usr";
++			gpios = <&pio 6 2 GPIO_ACTIVE_LOW>; /* PG2 */
++		};
++	};
++
++	backlight: backlight {
++		compatible = "pwm-backlight";
++		pwms = <&pwm 0 1000000 0>;
++		brightness-levels = <0 30 40 50 60 70 100>;
++		default-brightness-level = <6>;
++		enable-gpios = <&pio 1 4 GPIO_ACTIVE_HIGH>; /* PB4 */
++	};
++};
++
++&pio {
++	lcd_pins: lcd-pins {
++		pins = "PE0", "PE1", "PE2", "PE3", "PE4", "PE5",
++		       "PE6", "PE7", "PE8", "PE9", "PE10", "PE11",
++		       "PE12", "PE13", "PE14", "PE15", "PE16", "PE17",
++		       "PE18", "PE19", "PE23", "PE24";
++		function = "lcd";
++	};
++};
++
++&codec {
++	allwinner,audio-routing =
++		"Headphone", "HP",
++		"Headphone", "HPCOM",
++		"MIC1", "Mic",
++		"Mic",  "HBIAS";
++	status = "okay";
++};
++
++&emac {
++	phy-handle = <&int_mii_phy>;
++	phy-mode = "mii";
++	allwinner,leds-active-low;
++	status = "okay";
++};
++
++&de {
++	status = "okay";
++};
++
++&pwm {
++	pinctrl-names = "default";
++	pinctrl-0 = <&pwm0_pin>;
++	status = "okay";
++};
++
++&tcon0 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&lcd_pins>;
++	status = "okay";
++};
++
++&tcon0_out {
++	tcon0_out_lcd: endpoint@0 {
++		reg = <0>;
++		remote-endpoint = <&panel_input>;
++	};
+ };
+ 
+ &mmc0 {
+-	pinctrl-0 = <&mmc0_pins_a>;
++	pinctrl-0 = <&mmc0_pins>;
+ 	pinctrl-names = "default";
+ 	broken-cd;
+ 	bus-width = <4>;
+@@ -67,7 +145,7 @@
+ };
+ 
+ &uart0 {
+-	pinctrl-0 = <&uart0_pins_a>;
++	pinctrl-0 = <&uart0_pb_pins>;
+ 	pinctrl-names = "default";
+ 	status = "okay";
+ };
