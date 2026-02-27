@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (zino-2.4.0.tar.gz) = d7314f20d95eaa78e8052ccec56f5374d50fe58a86e93c47eaf72a386e1d876a
-SHA512 (zino-2.4.0.tar.gz) = 01e3cc9f1649891625e3fa772170ff4f0203f0b74c9ae6310e2854bcf83bb23d39a8d8f4da86ede5722834eda92e9b751b1da5d38487f8848b2517fee7af58b7
-Size (zino-2.4.0.tar.gz) = 577661 bytes
+BLAKE2s (zino-2.4.1.tar.gz) = daacb2dcb0ea1a87dddd4e5e4e3da7a9c9235a473bc542b71b6932d44faf3602
+SHA512 (zino-2.4.1.tar.gz) = d75301a4bda507685dcf4dbd43e702494978ee0ed9215980c91abfd8bb6ba01ebc4dc98ca502744350eb8036ed5d0c85eb94b5802156bfa19e4fffa93c0add97
+Size (zino-2.4.1.tar.gz) = 578140 bytes
