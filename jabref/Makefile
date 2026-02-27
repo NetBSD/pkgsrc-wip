@@ -12,6 +12,7 @@ COMMENT=	JabRef is an advanced reference manager uses the BibTeX format
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}
+PKG_JVMS_ACCEPTED=	openjdk8
 
 INSTALLATION_DIRS=	bin lib/java
 
