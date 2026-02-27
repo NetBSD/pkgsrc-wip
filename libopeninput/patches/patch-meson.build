@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Use external libevdev.h
+
+--- meson.build.orig	2026-02-27 15:47:49.719316226 +0100
++++ meson.build
+@@ -146,7 +146,7 @@ pkgconfig = import('pkgconfig')
+ if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
+ 	dep_udev = dependency('libudev')
+ 	dep_mtdev = []
+-	dep_libevdev = []
++	dep_libevdev = dependency('libevdev')
+ else
+ 	dep_udev = dependency('libudev')
+ 	dep_mtdev = dependency('mtdev', version : '>= 1.1.0')

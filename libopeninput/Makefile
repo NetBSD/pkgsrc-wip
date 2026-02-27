@@ -20,6 +20,10 @@ LDFLAGS+=	-levdev
 PKGCONFIG_OVERRIDE+=		output/meson-private/libinput.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
+post-extract:
+	# remove internal libevdev header
+	${RM} -rf ${WRKSRC}/include/libevdev
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libudev-bsd/buildlink3.mk"
