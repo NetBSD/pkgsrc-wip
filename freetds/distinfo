@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (freetds-1.5.11.tar.bz2) = c6911f409d8fa8d6846300f80a141f43ed60877558fe2a5b5cdebf55e10d7988
-SHA512 (freetds-1.5.11.tar.bz2) = 115ea971fb9ef07c1d5e85461103143b783c0bfaa90b1e995fc730cbab0bbf5068742e8e2e7ad670f63fdd0ae39c58ff530c54f3156c8158696633b6ea7c612b
-Size (freetds-1.5.11.tar.bz2) = 2444502 bytes
+BLAKE2s (freetds-1.5.13.tar.bz2) = 49e74e62084539de1195e132cbcd55185ec2e186e2763a5ce563fc3b4b933141
+SHA512 (freetds-1.5.13.tar.bz2) = 8f86ac8e49050c8a8f6b2155872f1266d9ed9b1a256ee8f0f8a8a035d200c3f4a83bde3fc23045541afa087de24b60fe7439bae08f8a8e143630f064e2b7d7cb
+Size (freetds-1.5.13.tar.bz2) = 2443981 bytes
 SHA1 (patch-doc__Makefile_in) = 5bd412133f6d81a09a004adc463c3491f41a6cea
 SHA1 (patch-include_freetds_thread.h) = 3723f3a8aed8f2932ec382d8937a2a7a6b19d222
 SHA1 (patch-src_apps_Makefile.in) = 0826569571ff16473964f8651bbdeae27f496842
