@@ -5,7 +5,7 @@ DISTNAME=	Horde_Stream_Filter-1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Stream filters for horde
 LICENSE=	gnu-lgpl-v2.1

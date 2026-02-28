@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=chirpstack/}
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PKGBASE}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.chirpstack.io/
 COMMENT=	Open-source LoRaWAN Network Server
 LICENSE=	mit

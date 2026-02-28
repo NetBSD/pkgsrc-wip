@@ -4,7 +4,7 @@ DISTNAME=	jack-example-tools-4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jackaudio/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jackaudio.org/
 COMMENT=	JACK example clients and tools
 LICENSE=	gnu-gpl-v2

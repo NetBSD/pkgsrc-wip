@@ -5,7 +5,7 @@ DISTNAME=	Horde_ActiveSync-1.2.6
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	ActiveSync server
 LICENSE=	gnu-gpl-v2

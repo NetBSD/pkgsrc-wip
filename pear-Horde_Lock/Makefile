@@ -5,7 +5,7 @@ DISTNAME=	Horde_Lock-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Locking system for horde
 LICENSE=	gnu-lgpl-v2.1

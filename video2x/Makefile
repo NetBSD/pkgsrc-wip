@@ -23,7 +23,7 @@ SITES.librealcugan-ncnn-vulkan-${REALCUGAN_TAG}.tar.gz= \
 SITES.librife-ncnn-vulkan-${RIFE_TAG}.tar.gz= \
 	-https://github.com/k4yt3x/librife-ncnn-vulkan/archive/${RIFE_TAG}.tar.gz
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/k4yt3x/video2x/
 COMMENT=	Machine learning-based lossless video super resolution framework
 LICENSE=	gnu-gpl-v3

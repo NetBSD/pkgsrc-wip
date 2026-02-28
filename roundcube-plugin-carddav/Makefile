@@ -9,7 +9,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	https://www.benjamin-schieder.de/carddav.html
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CardDAV adapter for Roundcube
 LICENSE=	gnu-gpl-v2
 

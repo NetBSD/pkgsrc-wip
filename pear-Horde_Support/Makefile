@@ -5,7 +5,7 @@ DISTNAME=	Horde_Support-1.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Support classes
 LICENSE=	2-clause-bsd

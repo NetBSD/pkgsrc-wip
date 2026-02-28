@@ -5,7 +5,7 @@ DISTNAME=	Horde_Compress-1.0.7
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	API for compression
 LICENSE=	gnu-lgpl-v2.1

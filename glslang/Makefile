@@ -4,7 +4,7 @@ DISTNAME=	glslang-16.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/glslang/
 COMMENT=	Front end for GLSL/ESSL, HLSL (partial) and SPIR-V generator
 LICENSE=	modified-bsd AND 2-clause-bsd AND mit AND apache-2.0 AND gnu-gpl-v3

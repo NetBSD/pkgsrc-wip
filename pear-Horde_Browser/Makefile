@@ -5,7 +5,7 @@ DISTNAME=	Horde_Browser-1.0.6
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Browser informations
 LICENSE=	gnu-lgpl-v2.1

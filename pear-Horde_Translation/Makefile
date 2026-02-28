@@ -5,7 +5,7 @@ DISTNAME=	Horde_Translation-1.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Translation wrappers
 LICENSE=	gnu-lgpl-v2.1

@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rbenv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rbenv.org/
 COMMENT=	Ruby version manager
 LICENSE=	mit

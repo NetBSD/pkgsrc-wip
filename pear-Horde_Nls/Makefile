@@ -5,7 +5,7 @@ DISTNAME=	Horde_Nls-1.1.6
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	TODO: Short description of the package
 LICENSE=	gnu-lgpl-v2.1

@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tencent/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Tencent/ncnn/
 COMMENT=	Neural network inference computing framework
 LICENSE=	modified-bsd AND zlib AND 2-clause-bsd

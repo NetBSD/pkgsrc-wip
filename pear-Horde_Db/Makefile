@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	frederic@fauberteau.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Database abstraction for horde
 LICENSE=	2-clause-bsd

@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
 		https://download.dotclear.org/attic/
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dotclear.org/
 COMMENT=	Open-source web publising software
 LICENSE=	gnu-gpl-v2

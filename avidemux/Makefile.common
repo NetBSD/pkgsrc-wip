@@ -7,7 +7,7 @@ DISTNAME=	avidemux_2.8.1
 CATEGORIES?=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avidemux/}
 
-MAINTAINER?=	triaxx@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://fixounet.free.fr/avidemux/
 LICENSE?=	gnu-gpl-v2
 

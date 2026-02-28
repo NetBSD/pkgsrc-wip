@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DIST_SUBDIR=	influxdata
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/influxdata/influx-cli/
 COMMENT=	CLI for managing resources in InfluxDB v2
 LICENSE=	mit
