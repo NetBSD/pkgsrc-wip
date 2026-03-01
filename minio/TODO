@@ -4,3 +4,6 @@ This package has known vulnerabilities, please investigate and fix if possible:
 
 This program is unmaintained:
 https://github.com/minio/minio/commit/7aac2a2c5b7c882e68c1ce017d8256be2feea27f
+
+Possibly use this fork:
+https://github.com/pgsty/minio
