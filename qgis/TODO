@@ -3,17 +3,19 @@
   - Write COMMIT_MSG.
   - Go over cmake configure output and check dependencies.
   - Grasp/fix lack of secret storage access.
+  - Create a default-off option to qtwebengine.  It's at best beastly,
+    and didn't build for me on NetBSD 10 amd64.  It's not clear what
+    having it in qgis gains.
 
 # \todo in makefile
 
+This section omits things that were \todo in geography/qgis, or aren't
+reasons the upgrade isn't ready.  (e.g., BSD make) 
+
   - Grasp qca2-qt6-ossl and package or decide it isn't needed.
-  - Package qwt-qt6 and and re-add QWT_DIR patch and cmake arg.
-  - Package and add qtwebengine.
-  - Package/add laz-perf.
   - Redo apple bundle exclusion.
   - Leave note about making apple bundle an option.
-  - Test with BSD make.
+  - Package/add laz-perf.
   - Recheck precompiled headers exclusion.
   - Recheck having to set bindings on.
-  - Recheck having to disable internal markupsafe, nlohmann_json.
-  - Maybe check python 310, 311, 312, 314.
+  - Package qwt-qt6 and and re-add QWT_DIR patch and cmake arg.

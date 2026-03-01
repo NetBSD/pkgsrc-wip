@@ -68,17 +68,21 @@ SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic6 /s,"pyuic6,&-${PYVERSSUFFIX},'
 # because it is only examined when there are failures.
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE=TRUE
 
-# qgis looks for ccache and uses it, which does not play well with wrappers.
-# Plus, there's something buggy about ccache, precompiled headers, and gcc.
+# qgis looks for ccache and uses it, which does not play well with
+# wrappers.  Disable, so pkgsrc controls if ccache is used.
 CMAKE_CONFIGURE_ARGS+=		-DUSE_CCACHE:BOOL=FALSE
 
 # Precompiled headers are buggy in the presence of ASLR.
 #   https://gcc.gnu.org/bugzilla/show_bug.cgi?id=71934
 #   https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=59746
+# \todo Recheck and perhaps limit.
 CMAKE_CONFIGURE_ARGS+=		-DUSE_PRECOMPILED_HEADERS:BOOL=FALSE
 
+# \todo Check if needed; should be default.
 CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 
+# Disable vendored code, to guard against silent failure to accept
+# pkgsrc-provided versions.
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_NLOHMANN_JSON=OFF
 
@@ -86,9 +90,8 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_NLOHMANN_JSON=OFF
 # We patch cmake to look only in QWT_DIR, so provide it.
 #CMAKE_CONFIGURE_ARGS+=		-DQWT_DIR=${QWT_DIR}
 
-# \todo Understand and fix
 CMAKE_CONFIGURE_ARGS+=		-DWITH_QTWEBENGINE=FALSE
-# ? DEPENDS+= ../../www/qt6-qtwebengine
+# DEPENDS+= ../../www/qt6-qtwebengine
 
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
 # Upstream installs in an OS-specific place by default, but
@@ -110,11 +113,11 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 .include "../../lang/python/pyversion.mk"
-# qgis 4 has not been tested with 311, 312, 314.
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+ooPYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/pgsql.buildlink3.mk"
 
+# \todo package
 # ?bl3 or DEPENDS: ../../not-in-pkgsrc/laz-perf
 
 .include "../../archivers/libzip/buildlink3.mk"
