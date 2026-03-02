@@ -12,6 +12,9 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/aws/
 COMMENT=	Terraform provider for Amazon Web Services
 LICENSE=	mpl-2.0
 
+# Previous net/terraform-provider-aws (3.x) did not have any version suffix
+SUPERSEDES+=	terraform-provider-aws-[0-9]*
+
 GO_BUILD_PATTERN=	.
 
 UNLIMIT_RESOURCES=	datasize virtualsize
