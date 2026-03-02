@@ -10,20 +10,14 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/null/
 COMMENT=	Terraform provider for nothing
 LICENSE=	mpl-2.0
 
-UNLIMIT_RESOURCES=	datasize virtualsize
-
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
-
-GO_BUILD_PATTERN=	${GO_SRCPATH}/.
-
-USE_TOOLS+=	bash
-REPLACE_BASH+=	scripts/*.sh
-
 TERRAFORM_PROVIDER_BIN=		terraform-provider-null
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	null
 
-.include "../../lang/go/go-package.mk"
+TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
+
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../wip/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
