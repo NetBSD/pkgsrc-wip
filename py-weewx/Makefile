@@ -27,7 +27,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=2.1.4:../../devel/py-poetry
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.1:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=5.2:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-ephem>=4.1:../../math/py-ephem
+# should be >= 4.1
+DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-pymysql>=1.0:../../databases/py-pymysql
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.2:../../devel/py-usb
