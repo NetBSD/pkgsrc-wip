@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (qman-1.5.1.tar.gz) = 77288acaa32ca215dc2642d42da687b3b1ce71d566a8e17af1b211452f16f08b
+SHA512 (qman-1.5.1.tar.gz) = b6eeb7f69fac7c08146fd0083a0f7e052d5bb5e01397330e1a4bb804832f0500254e564e9c6c63e8666cc6edfa0ac88b438fe4419af9a326f19d1edcc71ea3d2
+Size (qman-1.5.1.tar.gz) = 956756 bytes

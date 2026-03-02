@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/qman
+man/man1/qman.1
+share/doc/qman/README.md
+share/doc/qman/config/README.md
+share/doc/qman/doc/BUILDING.md
+share/doc/qman/doc/CONTRIBUTING.md
+share/doc/qman/doc/DEBUGGING.md
+share/doc/qman/doc/OS_SPECIFIC.md
+share/doc/qman/doc/PACKAGES.md
+share/doc/qman/doc/TESTING.md
+share/doc/qman/doc/TROUBLESHOOTING.md
+share/examples/qman/qman.conf
+share/examples/qman/themes/adwaita-light.conf
+share/examples/qman/themes/adwaita.conf
+share/examples/qman/themes/catppuccin_latte.conf
+share/examples/qman/themes/modernity-light.conf
+share/examples/qman/themes/modernity.conf
