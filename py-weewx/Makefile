@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
-DISTNAME=	weewx-5.2.0
+DISTNAME=	weewx-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
@@ -25,9 +25,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=2.1.4:../../devel/py-poetry
 
 # pyproject.toml, in order:
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0:../../devel/py-configobj
-DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.4:../../devel/py-cheetah3
+DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.1:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=5.2:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.6.0:../../math/py-ephem
+DEPENDS+=	${PYPKGPREFIX}-ephem>=4.1:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-pymysql>=1.0:../../databases/py-pymysql
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.2:../../devel/py-usb
@@ -36,21 +36,14 @@ DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.2:../../devel/py-usb
 #   mqtt
 DEPENDS+=	${PYPKGPREFIX}-paho-mqtt>=2:../../net/py-paho-mqtt
 
-REPLACE_PYTHON+=	src/weewx_data/util/i18n/i18n-report
+REPLACE_PYTHON+=		src/weewx_data/util/i18n/i18n-report
 
 # Ignore perl rather than depend on it.  For now, don't even consider
 # a split package.
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/weewx_data/util/logwatch/scripts/services/weewx
 
 DOCDIR=			${PREFIX}/share/doc/weewx-${PYVERSSUFFIX}
-
 INSTALLATION_DIRS=	${DOCDIR}
-
-# weewx 4.x had code and data in the same dir, and setup.py install
-# would merge config file changes.  weewx 5.x does not appear to do
-# this, and the user is left to manually adjust or not, as is the
-# usual custom.  This comment is a caution that the config file
-# behavior is not entirely understood.  This also applies to skins.
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/LICENSE.txt

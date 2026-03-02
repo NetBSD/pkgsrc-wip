@@ -374,6 +374,7 @@ ${PYSITELIB}/weewx_data/skins/Seasons/lang/en_CA.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/en_GB.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/en_NZ.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/es.conf
+${PYSITELIB}/weewx_data/skins/Seasons/lang/fi.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/fr.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/gr.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/it.conf
