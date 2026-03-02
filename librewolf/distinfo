@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.569 2025/11/14 17:17:18 ryoon Exp $
 
-BLAKE2s (librewolf-147.0.4-1.source.tar.gz) = 52a50003c6bcd2192dea21cdd4f8f7e4a56109fc5d62effaf2c3d4c110856d2c
-SHA512 (librewolf-147.0.4-1.source.tar.gz) = e2d0cc0d79a0c58c9dd8fc358ba47d3e5953f0b0ba16664c7a95bdb7d3fac8c93dbb4ed2e6ed5ea589e7f0c68b4060aa60a870829c50e9aee9a9dc93b497e254
-Size (librewolf-147.0.4-1.source.tar.gz) = 1038514876 bytes
+BLAKE2s (librewolf-148.0-1.source.tar.gz) = 31a02d8ea6627dba644b05fccdccf27e13080d54c74d819fa2b3588aa1719a63
+SHA512 (librewolf-148.0-1.source.tar.gz) = a2400372a6a17e180fd730b77f25d783000f229debb963941e56eb71478e32a86428a68924f49aed791c4459edb87a24e722c10669700e09a3a4042027557a88
+Size (librewolf-148.0-1.source.tar.gz) = 1047397023 bytes
 BLAKE2s (nodejs-output-147.0.tgz) = e88c1c8c5117fbfb4fd089267b9a0a6882520ed7bcc1dc494b734b491b448892
 SHA512 (nodejs-output-147.0.tgz) = e99a5de23ad0aa5ab0f040bfe400c1ed210547421fa19026efe280c522773faa8b76106952bbc42c7bb765349c6a3ca9cc3b76d8cfcbbff5d72db65054e44339
 Size (nodejs-output-147.0.tgz) = 249306 bytes
