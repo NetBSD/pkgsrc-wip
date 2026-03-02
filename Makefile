@@ -5550,7 +5550,6 @@ SUBDIR+=	stonx
 SUBDIR+=	stormlib
 SUBDIR+=	stracciatella
 SUBDIR+=	stratagus
-SUBDIR+=	streamlink
 SUBDIR+=	stress
 SUBDIR+=	stress-ng
 SUBDIR+=	stringtie
