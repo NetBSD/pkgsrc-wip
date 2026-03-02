@@ -16,12 +16,6 @@ TERRAFORM_PROVIDER_TYPE=	random
 
 TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
-
-USE_TOOLS+=	bash
-REPLACE_BASH+=	scripts/*.sh
-
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
