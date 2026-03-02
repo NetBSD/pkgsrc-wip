@@ -4,6 +4,6 @@ BLAKE2s (cyclone-bootstrap/v0.36.0.tar.gz) = 24afeaa923381ea26a001f720556429a292
 SHA512 (cyclone-bootstrap/v0.36.0.tar.gz) = 477534602baa4acbae0450e664617ad70302a79c552005741080c4e4d2993805ff1d25703bd2c43c82764a477a4b26fb4b88c8787a82e99fa5a6fc88d9f914f2
 Size (cyclone-bootstrap/v0.36.0.tar.gz) = 3967729 bytes
 SHA1 (patch-Makefile) = ba2033dda259957f2a5f86f786888621193cc51c
-SHA1 (patch-Makefile.config) = 26e1276fdf8084327ecd883e62c838fbc3437e07
+SHA1 (patch-Makefile.config) = 29567ad5cda996d0dc598fcde21ca61d4dadfa3f
 SHA1 (patch-gc.c) = ef28c26e399d3572239895b89375d85f9133fd07
 SHA1 (patch-include_cyclone_types.h) = 22f4ac2fd4cfb63729d5620006dc40143cf2a09b
