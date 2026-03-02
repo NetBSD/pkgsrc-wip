@@ -1,0 +1,2 @@
+- According changelog the only incompatibility is with Terraform 0.11.x so it
+  should be safe to bump it to the latest 2.x version

@@ -16,6 +16,8 @@ TERRAFORM_PROVIDER_BIN=		terraform-provider-local
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	local
 
+TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
