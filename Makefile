@@ -5708,6 +5708,7 @@ SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-oci
 SUBDIR+=	terraform-provider-postgresql
+SUBDIR+=	terraform-provider-random2
 SUBDIR+=	terraform-provider-random3
 SUBDIR+=	terraform-provider-scaleway
 SUBDIR+=	terraform-provider-template
