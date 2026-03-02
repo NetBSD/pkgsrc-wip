@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.20 2025/01/24 20:50:27 riastradh Exp $
 
-DISTNAME=	xwayland-24.1.8
+DISTNAME=	xwayland-24.1.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
@@ -49,6 +49,7 @@ post-install:
 .include "../../x11/libxcvt/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libei/buildlink3.mk"
+.include "../../x11/xkbcomp/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
