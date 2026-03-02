@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	seatd-0.9.2
+DISTNAME=	seatd-0.9.3
 CATEGORIES=	sysutils
-MASTER_SITES=	https://git.sr.ht/~kennylevinsen/seatd/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kennylevinsen/}
 
 MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~kennylevinsen/seatd/
