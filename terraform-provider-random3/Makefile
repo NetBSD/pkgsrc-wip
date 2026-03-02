@@ -1,8 +1,10 @@
 # $NetBSD: Makefile,v 1.13 2021/02/01 16:54:00 tpaul Exp $
 
 DISTNAME=	terraform-provider-random-3.6.2
+PKGNAME=	${DISTNAME:S/terraform-provider-random/&3/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
+GITHUB_PROJECT=	terraform-provider-random
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
