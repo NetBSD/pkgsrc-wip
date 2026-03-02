@@ -14,8 +14,6 @@ LICENSE=	mpl-2.0
 
 GO_BUILD_PATTERN=	.
 
-UNLIMIT_RESOURCES=	datasize virtualsize
-
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
 TERRAFORM_PROVIDER_BIN=		terraform-provider-aws

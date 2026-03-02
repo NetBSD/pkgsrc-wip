@@ -12,8 +12,6 @@ LICENSE=	mpl-2.0
 
 GO_BUILD_PATTERN=	.
 
-UNLIMIT_RESOURCES=	datasize virtualsize
-
 TERRAFORM_PROVIDER_BIN=		terraform-provider-local
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	local

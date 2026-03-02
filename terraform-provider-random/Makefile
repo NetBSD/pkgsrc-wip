@@ -10,8 +10,6 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/random/
 COMMENT=	Terraform provider for randomness
 LICENSE=	mpl-2.0
 
-UNLIMIT_RESOURCES=	datasize virtualsize
-
 TERRAFORM_PROVIDER_BIN=		terraform-provider-random
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	random

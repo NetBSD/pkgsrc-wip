@@ -10,8 +10,6 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/kubernetes/
 COMMENT=	Terraform provider for Kubernetes (K8S)
 LICENSE=	mpl-2.0
 
-UNLIMIT_RESOURCES=	datasize virtualsize
-
 GO_BUILD_PATTERN=	.
 
 TERRAFORM_PROVIDER_BIN=		terraform-provider-kubernetes
