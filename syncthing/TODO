@@ -1,0 +1,8 @@
+Fails to start on NetBSD with
+
+/usr/pkg/bin/syncthing: text relocations
+/usr/pkg/bin/syncthing: Cannot write-enable text segment: Permission denied
+
+Adding NOT_PAX_MPROTECT_SAFE to test just gets a segfault
+
+Could be related to the switch to sqlite?
