@@ -2793,6 +2793,7 @@ SUBDIR+=	openssl110
 SUBDIR+=	opensubdiv
 SUBDIR+=	opensurge
 SUBDIR+=	opentofu110
+SUBDIR+=	opentofu16
 SUBDIR+=	opentomb
 SUBDIR+=	opentracker-cvs
 SUBDIR+=	openttd
