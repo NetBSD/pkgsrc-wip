@@ -16,6 +16,8 @@ TERRAFORM_PROVIDER_BIN=		terraform-provider-vultr
 TERRAFORM_PROVIDER_NAMESPACE=	vultr
 TERRAFORM_PROVIDER_TYPE=	vultr
 
+TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
