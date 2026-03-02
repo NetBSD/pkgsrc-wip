@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	labwc-0.9.3
+DISTNAME=	labwc-0.9.4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	https://labwc.github.io/
