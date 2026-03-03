@@ -10,8 +10,6 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/local/
 COMMENT=	Terraform provider for local resources
 LICENSE=	mpl-2.0
 
-GO_BUILD_PATTERN=	.
-
 TERRAFORM_PROVIDER_BIN=		terraform-provider-local
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	local
