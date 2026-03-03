@@ -6,3 +6,8 @@ Fails to start on NetBSD with
 Adding NOT_PAX_MPROTECT_SAFE to test just gets a segfault
 
 Could be related to the switch to sqlite?
+
+"GOFLAGS+=-buildmode=pie" did not seem to help. I tried a quick brute
+force test of also adding "CFLAGS+=-fPIC" and "LDFLAGS+=-pie" (which
+probably gives a clear idea of how vague my understanding is :), which
+also did not help :(
