@@ -1,0 +1,9 @@
+terraform-provider-aws3: Import terraform-provider-aws3 as net/terraform-provider-aws3
+
+Replace net/terraform-provider-aws by adding a suffix version so multiple aws
+providers can coexists.
+
+Adapt to terraform/provider.mk so that the provider can be used with
+Terraform and OpenTofu.
+Please note that now it no longer depends on terraform or opentofu so
+the desired version should be manually installed.
