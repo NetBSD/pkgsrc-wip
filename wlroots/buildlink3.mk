@@ -26,6 +26,12 @@ PREFER.MesaLib=	pkgsrc	# glesv2
 .include "../../wip/libliftoff/buildlink3.mk"
 .include "../../wip/libopeninput/buildlink3.mk"
 
+pkgbase := wlroots
+.include "../../mk/pkg-build-options.mk"
+.if ${PKG_BUILD_OPTIONS.wlroots:Mxwayland}
+.include "../../wip/xwayland/buildlink3.mk"
+.endif
+
 .endif	# WLROOTS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-wlroots

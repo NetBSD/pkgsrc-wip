@@ -21,22 +21,16 @@ SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	xcursor/xcursor.c
 SUBST_VARS.path+=	PREFIX X11BASE
 
-PLIST_VARS+=		xwayland
+.include "options.mk"
 
 .include "../../devel/meson/build.mk"
-
 # new packages
 .include "../../wip/glslang/buildlink3.mk"
 .include "../../wip/libopeninput/buildlink3.mk"
 .include "../../wip/libliftoff/buildlink3.mk"
 .include "../../wip/seatd/buildlink3.mk"
 .include "../../wip/vulkan-loader/buildlink3.mk"
-
-# NOTYET
-#PLIST.xwayland=		yes
-# need update
-#.include "../../wip/xwayland/buildlink3.mk"
-
+# end
 .include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
@@ -52,5 +46,4 @@ PREFER.MesaLib=	pkgsrc	# glesv2
 .include "../../x11/xcb-util-errors/buildlink3.mk"
 .include "../../x11/xcb-util-renderutil/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
