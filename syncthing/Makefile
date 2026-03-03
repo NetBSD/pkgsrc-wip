@@ -21,6 +21,10 @@ LICENSE=	mpl-2.0
 # The 'zillode' dependency calls the compiler on certain archs.
 USE_LANGUAGES=		c
 
+# v2.0.14 fail with go1.26 after a few minutes with
+# "panic: crypto/tls bug: where's my session ticket?"
+GO_VERSION_REQD=	125
+
 # Otherwise binary fails to start with "Cannot write-enable text segment"
 MKPIE_SUPPORTED=	no
 
