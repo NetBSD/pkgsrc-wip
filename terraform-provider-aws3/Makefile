@@ -15,11 +15,7 @@ LICENSE=	mpl-2.0
 # Previous net/terraform-provider-aws (3.x) did not have any version suffix
 SUPERSEDES+=	terraform-provider-aws-[0-9]*
 
-GO_BUILD_PATTERN=	.
-
 UNLIMIT_RESOURCES=	datasize virtualsize
-
-WRKSRC=	${WRKDIR}/${DISTNAME}
 
 TERRAFORM_PROVIDER_BIN=		terraform-provider-aws
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
