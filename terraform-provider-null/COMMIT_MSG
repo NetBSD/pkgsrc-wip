@@ -1,2 +1,20 @@
+terraform-provider-null: Update to 3.0.0 and switch to terraform/provider.mk
+
+pkgsrc changes:
 - According changelog the only incompatibility is with Terraform 0.11.x so it
-  should be safe to bump it to the latest 3.x version
+  should be safe to bump it to the latest 2.x version
+- Adapt to terraform/provider.mk so that the provider can be used with
+  Terraform and OpenTofu.
+  Please note that now it no longer depends on terraform or opentofu so
+  the desired version should be manually installed.
+
+
+Changes:
+3.0.0
+Binary releases of this provider now include the linux-arm64 platform.
+
+BREAKING CHANGES:
+- Upgrade to version 2 of the Terraform Plugin SDK, which drops
+  support for Terraform 0.11. This provider will continue to work as
+  expected for users of Terraform 0.11, which will not download the
+  new version.
