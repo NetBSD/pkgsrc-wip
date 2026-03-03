@@ -22,3 +22,5 @@ The key features of OpenTofu are:
   mentioned execution plan and resource graph, you know exactly what
   OpenTofu will change and in what order, avoiding many possible human
   errors.
+
+This package tracks OpenTofu 1.6.x version.
