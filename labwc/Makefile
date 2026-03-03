@@ -33,6 +33,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/startlabwc.sh \
                 ${DESTDIR}${PREFIX}/bin/startlabwc
 
+.include "options.mk"
+
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -43,9 +45,6 @@ post-install:
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
-# NOTYET
-#.include "../../wip/xwayland/buildlink3.mk"
 
 .include "../../wip/libsfdo/buildlink3.mk"
 .include "../../wip/wlroots/buildlink3.mk"
