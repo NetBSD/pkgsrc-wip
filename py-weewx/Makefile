@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
-DISTNAME=	weewx-5.3.0
+DISTNAME=	weewx-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
