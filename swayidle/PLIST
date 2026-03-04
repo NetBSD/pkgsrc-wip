@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/swayidle
+man/man1/swayidle.1
+share/bash-completion/completions/swayidle
+share/fish/vendor_completions.d/swayidle.fish
+share/zsh/site-functions/_swayidle
