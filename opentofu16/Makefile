@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
 GITHUB_PROJECT=	opentofu
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://opentofu.org/
 COMMENT=	Open source infrastructure as code
 LICENSE=	mpl-2.0

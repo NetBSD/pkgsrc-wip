@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	terraform
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.terraform.io/
 COMMENT=	Infrastructure orchestration tool
 LICENSE=	mpl-2.0
