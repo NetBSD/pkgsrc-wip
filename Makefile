@@ -1449,6 +1449,7 @@ SUBDIR+=	grc
 SUBDIR+=	greenbone-security-assistant
 SUBDIR+=	gretl
 SUBDIR+=	greybird-theme
+SUBDIR+=	grim
 SUBDIR+=	grisbi
 SUBDIR+=	gromit-mpx
 SUBDIR+=	groovy
