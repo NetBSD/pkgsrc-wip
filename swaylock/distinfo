@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (swaylock-1.8.4.tar.gz) = 24bd2bbf3ddfa03d6ba7ecb58fcc978fdc4f4c61f1a9fa1fdd0792b8d16e51d5
+SHA512 (swaylock-1.8.4.tar.gz) = 6f8fd52fe94dfcafc6faa976a4933594c1714d21c6d0b78f0ba903222be07456db44c9c51b852c4a2175ca4c1b0cce1f71027edfffca9d7fffa2a32aecab2c61
+Size (swaylock-1.8.4.tar.gz) = 33819 bytes
