@@ -1,11 +1,25 @@
-www/chromium: update to 145.0.7632.116
+www/chromium: update to 145.0.7632.159
 
-* 145.0.7632.116
-This update includes 3 security fixes. Please see the
+* 145.0.7632.159
+This update includes 10 security fixes. Please see the
 Chrome Security Page for more information.
-[TBD][482862710] High CVE-2026-3061: Out of bounds read in Media.
-Reported by Luke Francis on 2026-02-09
-[TBD][483751167] High CVE-2026-3062: Out of bounds read and write
-in Tint. Reported by cinzinga on 2026-02-11
-[TBD][485287859] High CVE-2026-3063: Inappropriate implementation
-in DevTools. Reported by M. Fauzan Wijaya (Gh05t666nero) on 2026-02-17
+[$33,000][485622239] Critical CVE-2026-3536: Integer overflow in ANGLE.
+Reported by cinzinga on 2026-02-18
+[$32,000][474266014] Critical CVE-2026-3537: Object lifecycle issue
+in PowerVR. Reported by Zhihua Yao of KunLun Lab on 2026-01-08
+[TBD][484983991] Critical CVE-2026-3538: Integer overflow in Skia.
+Reported by Symeon Paraschoudis on 2026-02-17
+[TBD][483853098] High CVE-2026-3539: Object lifecycle issue in DevTools.
+Reported by Zhenpeng (Leo) Lin at depthfirst on 2026-02-12
+[TBD][484088917] High CVE-2026-3540: Inappropriate implementation
+in WebAudio. Reported by Davi Antônio Cruz on 2026-02-14
+[TBD][484811719] High CVE-2026-3541: Inappropriate implementation
+in CSS. Reported by Syn4pse on 2026-02-16
+[TBD][485152421] High CVE-2026-3542: Inappropriate implementation
+in WebAssembly. Reported by qymag1c on 2026-02-17
+[TBD][485267831] High CVE-2026-3543: Inappropriate implementation
+in V8. Reported by qymag1c on 2026-02-18
+[TBD][485683110] High CVE-2026-3544: Heap buffer overflow in WebCodecs.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-19
+[TBD][487383169] High CVE-2026-3545: Insufficient data validation
+in Navigation. Reported by Google on 2026-02-24
