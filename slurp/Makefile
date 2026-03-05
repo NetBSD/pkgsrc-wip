@@ -17,5 +17,6 @@ USE_TOOLS+=	pkg-config
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../wip/input-headers/buildlink3.mk"
 .include "../../textproc/scdoc/tool.mk"
 .include "../../mk/bsd.pkg.mk"
