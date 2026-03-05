@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	labwc-0.9.4
+DISTNAME=	labwc-0.9.5
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
 
