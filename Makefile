@@ -1364,7 +1364,6 @@ SUBDIR+=	gnucash-devel
 SUBDIR+=	gnujump
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet-go
-SUBDIR+=	gnupg25
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnuradio-monolithic
 SUBDIR+=	gnutls-guile
