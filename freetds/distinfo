@@ -1,9 +1,10 @@
 $NetBSD$
 
-BLAKE2s (freetds-1.5.13.tar.bz2) = 49e74e62084539de1195e132cbcd55185ec2e186e2763a5ce563fc3b4b933141
-SHA512 (freetds-1.5.13.tar.bz2) = 8f86ac8e49050c8a8f6b2155872f1266d9ed9b1a256ee8f0f8a8a035d200c3f4a83bde3fc23045541afa087de24b60fe7439bae08f8a8e143630f064e2b7d7cb
-Size (freetds-1.5.13.tar.bz2) = 2443981 bytes
+BLAKE2s (freetds-1.5.14.tar.bz2) = 52b53b1d3df222fd8c3225e05c53682c7d25b2d1e74c858ade9374df6989155f
+SHA512 (freetds-1.5.14.tar.bz2) = 4f53ee06676311b2e358a1ad7dd63249328b9061b465aabfee092360725a429997bad035f36874e678800470c7fd5038070794988ee647ec213b73d07c3d6e6b
+Size (freetds-1.5.14.tar.bz2) = 2442921 bytes
 SHA1 (patch-doc__Makefile_in) = 5bd412133f6d81a09a004adc463c3491f41a6cea
 SHA1 (patch-include_freetds_thread.h) = 3723f3a8aed8f2932ec382d8937a2a7a6b19d222
 SHA1 (patch-src_apps_Makefile.in) = 0826569571ff16473964f8651bbdeae27f496842
+SHA1 (patch-src_tds_gssapi.c) = 9adc4084c2e6e47a2dccb4bf2c0d4eae84b5f500
 SHA1 (patch-src_tds_tls.c) = 015c2637a84a44b11cc11ba5685d90f1c5a4739f
