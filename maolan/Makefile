@@ -17,7 +17,12 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.lilv}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.suil}/lib
 
 .include "cargo-depends.mk"
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
 .include "../../audio/lilv/buildlink3.mk"
+.endif
 .include "../../audio/suil/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
