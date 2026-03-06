@@ -22,8 +22,9 @@
 #CROSS_ROOT=		/u/i386
 #CROSS_ROOT=		/u/mipsel
 #CROSS_ROOT=		/u/riscv64
+#CROSS_ROOT=		/u/m68k
 #CROSS_ROOT=		/
-#MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
+MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
@@ -35,6 +36,7 @@
 #GNU_CROSS_TARGET=	i486--netbsdelf
 #GNU_CROSS_TARGET=	mipsel--netbsd
 #GNU_CROSS_TARGET=	riscv64--netbsd
+#GNU_CROSS_TARGET=	m68k--netbsdelf
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
@@ -51,6 +53,7 @@
 #TARGET=		i586-unknown-netbsd
 #TARGET=		mipsel-unknown-netbsd
 #TARGET=		riscv64gc-unknown-netbsd
+#TARGET= 		m68k-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
