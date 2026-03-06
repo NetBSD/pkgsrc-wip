@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_TOOLS+=	gmake:run
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-typer>=0.9.0:../../wip/py-typer
+DEPENDS+=	${PYPKGPREFIX}-typer>=0.9.0:../../devel/py-typer
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.0.0:../../comms/py-rich
 
 WRKSRC=		${WRKDIR}/${DISTNAME}

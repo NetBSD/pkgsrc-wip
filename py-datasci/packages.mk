@@ -568,7 +568,7 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets-[0-9]*:../../devel/py-traitlets  # traitlets 
 DEPENDS+=	${PYPKGPREFIX}-truststore-[0-9]*:../../security/py-truststore  # truststore 0.10.1
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted  # twisted 25.5.0
 # twisted-iocpsupport nan is missing
-DEPENDS+=	${PYPKGPREFIX}-typer-[0-9]*:../../wip/py-typer  # typer 0.20.0
+DEPENDS+=	${PYPKGPREFIX}-typer-[0-9]*:../../devel/py-typer  # typer 0.20.0
 # typer-slim 0.20.0 is missing
 # typer-slim-standard 0.20.0 is missing
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions  # typing-extensions 4.15.0
