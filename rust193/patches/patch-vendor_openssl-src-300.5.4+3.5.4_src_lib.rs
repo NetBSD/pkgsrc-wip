@@ -16,7 +16,7 @@ Make this build on NetBSD for armv6, mipsel and m68k as well.
              "i686-uwp-windows-msvc" => "VC-WIN32-UWP",
              "loongarch64-unknown-linux-gnu" => "linux-generic64",
              "loongarch64-unknown-linux-musl" => "linux-generic64",
-+            "m68k-unknown-netbsd" => NetBSD-generic32",
++            "m68k-unknown-netbsd" => "NetBSD-generic32",
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
              "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
