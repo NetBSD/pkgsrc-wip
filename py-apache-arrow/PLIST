@@ -502,10 +502,10 @@ ${PYSITELIB}/pyarrow/lib.so
 ${PYSITELIB}/pyarrow/lib_api.h
 ${PYSITELIB}/pyarrow/libarrow_python.so
 ${PYSITELIB}/pyarrow/libarrow_python.so.2300
-${PYSITELIB}/pyarrow/libarrow_python.so.2300.0.0
+${PYSITELIB}/pyarrow/libarrow_python.so.2300.1.0
 ${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so
 ${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so.2300
-${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so.2300.0.0
+${PYSITELIB}/pyarrow/libarrow_python_parquet_encryption.so.2300.1.0
 ${PYSITELIB}/pyarrow/memory.pxi
 ${PYSITELIB}/pyarrow/orc.py
 ${PYSITELIB}/pyarrow/orc.pyc
