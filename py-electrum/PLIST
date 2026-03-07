@@ -122,7 +122,6 @@ ${PYSITELIB}/electrum/gui/fonts/PTMono.LICENSE
 ${PYSITELIB}/electrum/gui/icons/Electrum_512.png
 ${PYSITELIB}/electrum/gui/icons/Electrum_square_512.png
 ${PYSITELIB}/electrum/gui/icons/add.png
-${PYSITELIB}/electrum/gui/icons/anchor.png
 ${PYSITELIB}/electrum/gui/icons/android_electrum_icon_background.png
 ${PYSITELIB}/electrum/gui/icons/android_electrum_icon_foreground.png
 ${PYSITELIB}/electrum/gui/icons/android_electrum_icon_legacy.png
@@ -725,6 +724,7 @@ ${PYSITELIB}/electrum/lnwire/peer_wire.csv
 ${PYSITELIB}/electrum/lnworker.py
 ${PYSITELIB}/electrum/lnworker.pyc
 ${PYSITELIB}/electrum/lnworker.pyo
+${PYSITELIB}/electrum/locale/.cirrus.yml
 ${PYSITELIB}/electrum/locale/.gitignore
 ${PYSITELIB}/electrum/locale/README.md
 ${PYSITELIB}/electrum/locale/locale/ar_SA/LC_MESSAGES/electrum.mo
@@ -793,6 +793,7 @@ ${PYSITELIB}/electrum/locale/locale/sl_SI/LC_MESSAGES/electrum.mo
 ${PYSITELIB}/electrum/locale/locale/sl_SI/electrum.po
 ${PYSITELIB}/electrum/locale/locale/sr_CS/LC_MESSAGES/electrum.mo
 ${PYSITELIB}/electrum/locale/locale/sr_CS/electrum.po
+${PYSITELIB}/electrum/locale/locale/stats.json
 ${PYSITELIB}/electrum/locale/locale/sv_SE/LC_MESSAGES/electrum.mo
 ${PYSITELIB}/electrum/locale/locale/sv_SE/electrum.po
 ${PYSITELIB}/electrum/locale/locale/ta_IN/LC_MESSAGES/electrum.mo
