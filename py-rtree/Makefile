@@ -1,16 +1,15 @@
 # $NetBSD$
 
-DISTNAME=	Rtree-1.4.1
+DISTNAME=	rtree-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Rtree/}
+PKGREVISION=	1
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/Toblerity/rtree
 COMMENT=	R-Tree spatial index for Python GIS
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
