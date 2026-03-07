@@ -70,7 +70,7 @@ DEPENDS+=	${PYPKGPREFIX}-bottleneck-[0-9]*:../../math/py-bottleneck  # bottlenec
 DEPENDS+=	${PYPKGPREFIX}-brotlicffi-[0-9]*:../../archivers/py-brotlicffi  # brotlicffi 1.1.0.0
 DEPENDS+=	bzip2-[0-9]*:../../archivers/bzip2  # bzip2 1.0.8
 # c-ares 1.34.5 is missing
-# c-blosc2 2.17.1 is missing
+DEPENDS+=	blosc2-[0-9]*:../../devel/blosc2  # c-blosc2 2.17.1
 DEPENDS+=	ca-certificates-[0-9]*:../../security/ca-certificates  # ca-certificates 2025.11.4
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools  # cachetools 5.5.1
 DEPENDS+=	cairo-[0-9]*:../../graphics/cairo  # cairo 1.18.4
@@ -121,7 +121,7 @@ DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro  # distro 1.9.0
 DEPENDS+=	${PYPKGPREFIX}-docstring-to-markdown-[0-9]*:../../textproc/py-docstring-to-markdown  # docstring-to-markdown 0.17
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils  # docutils 0.21.2
 DEPENDS+=	${PYPKGPREFIX}-et_xmlfile-[0-9]*:../../textproc/py-et_xmlfile  # et_xmlfile 2.0.0
-# evalidate 2.0.3 is missing
+DEPENDS+=	${PYPKGPREFIX}-evalidate-[0-9]*:../../devel/py-evalidate  # evalidate 2.0.3
 DEPENDS+=	${PYPKGPREFIX}-executing-[0-9]*:../../lang/py-executing  # executing 2.2.1
 DEPENDS+=	expat-[0-9]*:../../textproc/expat  # expat 2.7.3
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock  # filelock 3.20.0
@@ -231,7 +231,7 @@ DEPENDS+=	brotli-[0-9]*:../../archivers/brotli  # libbrotlicommon 1.0.9
 DEPENDS+=	libcups-[0-9]*:../../print/libcups  # libcups 2.4.2
 # libcxx nan is missing
 DEPENDS+=	libdeflate-[0-9]*:../../devel/libdeflate  # libdeflate 1.22
-DEPENDS+=	libdrm-[0-9]*:../../wip/libdrm  # libdrm 2.4.124
+# libdrm 2.4.124 is skipped
 DEPENDS+=	editline-[0-9]*:../../devel/editline  # libedit 3.1.20230828
 # libegl 1.7.0 is missing
 DEPENDS+=	libev-[0-9]*:../../devel/libev  # libev 4.33
