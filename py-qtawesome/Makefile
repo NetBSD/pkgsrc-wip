@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	QtAwesome-1.3.1
+DISTNAME=	qtawesome-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=Q/QtAwesome/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-QtPy>=2.2.0:../../wip/py-qtpy
+DEPENDS+=	${PYPKGPREFIX}-qtpy>=2.2.0:../../wip/py-qtpy
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
