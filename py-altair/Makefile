@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	altair-5.4.1
+DISTNAME=	altair-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altair/}
