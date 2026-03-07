@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	dask-2026.1.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math python
+DISTNAME=		dask-2026.1.2
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=		math python
 #GITHUB_PROJECT=	dask
-#GITHUB_TAG=	${PKGVERSION_NOREV}
-MASTER_SITES=	${MASTER_SITE_PYPI:=d/dask/}
+#GITHUB_TAG=		${PKGVERSION_NOREV}
+MASTER_SITES=		${MASTER_SITE_PYPI:=d/dask/}
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/dask/dask/
@@ -15,6 +15,8 @@ LICENSE=	modified-bsd
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/python/pyversion.mk"
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=9:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
