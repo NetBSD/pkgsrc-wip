@@ -118,6 +118,9 @@ ${PYSITELIB}/qtconsole/tests/test_completion_widget.pyo
 ${PYSITELIB}/qtconsole/tests/test_frontend_widget.py
 ${PYSITELIB}/qtconsole/tests/test_frontend_widget.pyc
 ${PYSITELIB}/qtconsole/tests/test_frontend_widget.pyo
+${PYSITELIB}/qtconsole/tests/test_inprocess_kernel.py
+${PYSITELIB}/qtconsole/tests/test_inprocess_kernel.pyc
+${PYSITELIB}/qtconsole/tests/test_inprocess_kernel.pyo
 ${PYSITELIB}/qtconsole/tests/test_jupyter_widget.py
 ${PYSITELIB}/qtconsole/tests/test_jupyter_widget.pyc
 ${PYSITELIB}/qtconsole/tests/test_jupyter_widget.pyo

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	qtconsole-5.4.0
+DISTNAME=	qtconsole-5.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/qtconsole/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.10.0:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=4.1:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-ipykernel>=4.1:../../devel/py-ipykernel
-DEPENDS+=	${PYPKGPREFIX}-QtPy>=2.0.1:../../wip/py-qtpy
+DEPENDS+=	${PYPKGPREFIX}-qtpy>=2.0.1:../../wip/py-qtpy
 DEPENDS+=	${PYPKGPREFIX}-zmq>=17.1:../../net/py-zmq
 
 USE_LANGUAGES=	# none
