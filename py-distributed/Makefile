@@ -13,6 +13,8 @@ COMMENT=	Distributed is the parallel scheduler for dask
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=9:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
