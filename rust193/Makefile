@@ -659,10 +659,11 @@ do-install:
 .endif
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
+USE_TOOLS+=	paxctl
 # Turn off Address space layout randomization
 # so that we can build firefox natively:
 post-install:
-	paxctl +a ${DESTDIR}${PREFIX}/bin/rustc
+	${TOOLS_PLATFORM.paxctl} +a ${DESTDIR}${PREFIX}/bin/rustc
 .endif
 
 SUBST_CLASSES+=		destdir
