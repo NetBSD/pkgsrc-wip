@@ -87,6 +87,8 @@
 
 USE_TOOLS+=		git
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 # Defaults for package-settable variables
 DISTFILES?=		# empty
 .if defined(CHECKOUT_DATE)
