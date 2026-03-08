@@ -667,7 +667,8 @@ do-install:
 		${TOOL_PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N}
 .if ${OPSYS} == "Darwin"
 	cd ${DESTDIR}${PREFIX}/lib && \
-	for lib in rustlib/*/lib/libstd-*.${SHLIB_EXT}; do \
+	for lib in rustlib/*/lib/lib*.${SHLIB_EXT}; do \
+		install_name_tool -id ${PREFIX}/lib/$${lib##*/} $${lib}; \
 		${LN} -f $${lib} $${lib##*/}; \
 	done
 .endif
