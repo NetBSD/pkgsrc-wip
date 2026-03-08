@@ -83,6 +83,14 @@ CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 CONFIGURE_ARGS+=	--set rust.lld=false
 .endif
 
+# Rust bumps into NetBSD's limit of 256 TLS keys per process, at least
+# on aarch64 with "fatal runtime error: out of TLS keys, aborting"
+# (for some incomprehensible reason this isn't triggered on NetBSD/amd64 10.1)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
+# So try to bump that per-process limit:
+MAKE_ENV+=		PTHREAD_KEYS_MAX=512
+.endif
+
 #
 # Link cargo statically against "native" libraries.
 # (openssl and curl specifically).
