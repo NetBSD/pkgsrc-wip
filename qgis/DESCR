@@ -5,5 +5,7 @@ daily GIS data viewing and editing needs. QGIS supports a number of raster
 and vector data formats, with new support easily added using the plugin
 architecture.
 
-This package is qgis git master, which is more less an unacknowledged
-alpha for 4.0.  It uses qt6 and is not yet known to be reliable.
+This package tracks the 4.0 stable branch.  NB: 4.0 is labeled "Very
+Early Adopter.  It uses qt6. Some plugins are unavailable, and more or
+less everything isn't adequately well tested yet.
+
