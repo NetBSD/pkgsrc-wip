@@ -1,6 +1,6 @@
 # $NetBSD$
 #
-BLIS_VERSION=	1.1
+BLIS_VERSION=	2.0
 DISTNAME=	blis-${BLIS_VERSION}
 PKGNAME=	blis-${BLIS_VERSION}
 GITHUB_TAG=	${BLIS_VERSION}
@@ -33,6 +33,8 @@ MAKE_ENV=	V=1
 
 # needs to be the last commandline argument
 CONFIGURE_ARGS+=	auto
+
+REPLACE_BASH+= configure
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} gmake test
