@@ -1,0 +1,2 @@
+Dumps core on startup because of ctype(3) problem.
+https://github.com/LibreSprite/LibreSprite/issues/596

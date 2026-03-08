@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (LibreSprite/SOURCE.CODE.+.submodules.tar.gz) = c80b79c173a5a090b3cd2e483cc0cdd8a594869fc4f7d00fdf5411ab951f418d
+SHA512 (LibreSprite/SOURCE.CODE.+.submodules.tar.gz) = 6f79423a98b931e7538acd4d0362ce09890bc6f8877b2a4d77a217ac8bd1fc9f24220eba40203c83bfab504e9bcd1510c4fbea065d63587078596ecaad513f6e
+Size (LibreSprite/SOURCE.CODE.+.submodules.tar.gz) = 15228038 bytes
+SHA1 (patch-src_she_sdl2_she.cpp) = 6a94a2e38d06417bade20939e437410d473c5047
