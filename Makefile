@@ -5161,6 +5161,7 @@ SUBDIR+=	recordbox
 SUBDIR+=	recutils
 SUBDIR+=	redfang
 SUBDIR+=	redict
+SUBDIR+=	redox
 SUBDIR+=	reduze
 SUBDIR+=	reflectionhle
 SUBDIR+=	regexxer
