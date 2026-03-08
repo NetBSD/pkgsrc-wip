@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (toolshed-2.2.tar.gz) = 8a1cb22d333ca2cf2e87666cd8d79b30470f9d32fad100874bc423ee53d8310d
+SHA512 (toolshed-2.2.tar.gz) = e27b22900e60902a684d84a111a9ad3fa641fffb057173aaabb30da0152634f26456314ef4e04b33012c7dc31e901a78151a4ff88af783b17caa466fb2ea8421
+Size (toolshed-2.2.tar.gz) = 2256278 bytes
+SHA1 (patch-build_unix_Makefile) = 3a0de60a80dce78b9473d1ffa18f48d6961ef890
+SHA1 (patch-libdecb_libdecbsrec.c) = 585c298c45674ef676362b7e7b08d7f93524fea9
+SHA1 (patch-libnative_libnativegs.c) = 6c724c6839045f3c754cce4147c2c79039adab27
+SHA1 (patch-libnative_libnativess.c) = 0306b1d97fda847e19d0b73c1e43cb18be44f67b
+SHA1 (patch-makewav_makewav.c) = 51022ed0505dc4f4e40ad482573890561ae85ff2

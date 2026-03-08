@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/ar2
+bin/cecb
+bin/decb
+bin/makewav
+bin/mamou
+bin/os9
+bin/tocgen
+share/doc/toolshed/ToolShed.html

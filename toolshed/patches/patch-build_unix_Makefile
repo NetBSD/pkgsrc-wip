@@ -1,0 +1,17 @@
+$NetBSD$
+
+Fix installation dirs under prefix.
+
+--- build/unix/Makefile.orig	2026-03-08 02:05:53.879656219 +0000
++++ build/unix/Makefile
+@@ -5,8 +5,8 @@ vpath %.c ../../mamou:../../os9
+ 
+ PACKAGENAME	= toolshed-$(VERSION).tgz
+ ifneq ($(DESTDIR),)
+-INSTALLDIR	= $(DESTDIR)/usr/bin
+-DOCDIR		= $(DESTDIR)/usr/share/doc/toolshed
++INSTALLDIR	= $(DESTDIR)$(PREFIX)/bin
++DOCDIR		= $(DESTDIR)$(PREFIX)/share/doc/toolshed
+ else
+ INSTALLDIR	= /usr/local/bin
+ DOCDIR		= /usr/local/share/toolshed

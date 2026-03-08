@@ -1,0 +1,5 @@
+emulators/toolshed: Add ToolShed 2.2, a Tandy Color Computer Cross-Development Toolset
+
+ToolShed is a package of utilities to perform cross-development from Windows,
+Linux or Mac OS X computers to the Tandy Color Computer and Dragon
+microcomputers.
