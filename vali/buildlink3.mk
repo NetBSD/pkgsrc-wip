@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	vali
+
+.if !defined(VALI_BUILDLINK3_MK)
+VALI_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.vali+=	vali>=0.1.1
+BUILDLINK_PKGSRCDIR.vali?=	../../wip/vali
+
+.endif	# VALI_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-vali

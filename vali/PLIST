@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/vali
+include/vali.h
+lib/libvali.so
+lib/libvali.so.${PKGVERSION}
+lib/libvali.so.1
+lib/pkgconfig/vali.pc

@@ -5956,6 +5956,7 @@ SUBDIR+=	vala-panel-appmenu
 SUBDIR+=	vale-current
 SUBDIR+=	valgrind-netbsd
 SUBDIR+=	valgrind-netbsd-git
+SUBDIR+=	vali
 SUBDIR+=	vamp
 SUBDIR+=	vamps
 SUBDIR+=	vanitygen
