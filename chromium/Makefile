@@ -30,7 +30,7 @@ COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
-#TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
+TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
 CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
@@ -53,7 +53,6 @@ TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=			rust-bindgen-[0-9]*:../../devel/rust-bindgen
 
 DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
@@ -245,6 +244,8 @@ NOT_PAX_MPROTECT_SAFE+=	lib/chromium/chrome
 PKG_CC=			clang
 PKG_CXX=		clang++
 
+UNLIMIT_RESOURCES=	datasize
+
 post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
@@ -367,6 +368,8 @@ do-install:
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/compiler-rt/buildlink3.mk"
+BUILDLINK_DEPMETHOD.nodejs=	build
+.include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
