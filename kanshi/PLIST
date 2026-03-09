@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/kanshi
+man/man1/kanshi.1
+man/man5/kanshi.5
