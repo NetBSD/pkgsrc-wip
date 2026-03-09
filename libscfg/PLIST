@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/scfg.h
+lib/libscfg.so
+lib/libscfg.so.${PKGVERSION}
+lib/libscfg.so.2
+lib/pkgconfig/scfg.pc

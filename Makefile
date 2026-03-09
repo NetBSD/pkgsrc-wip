@@ -2184,6 +2184,7 @@ SUBDIR+=	libretro-yabause
 SUBDIR+=	librewolf
 SUBDIR+=	librocket
 SUBDIR+=	libs-gui
+SUBDIR+=	libscfg
 SUBDIR+=	libscscp
 SUBDIR+=	libsearpc
 SUBDIR+=	libseccomp

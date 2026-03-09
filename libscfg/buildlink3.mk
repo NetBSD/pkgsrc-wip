@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libscfg
+
+.if !defined(LIBSCFG_BUILDLINK3_MK)
+LIBSCFG_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libscfg+=	libscfg>=0.2.0
+BUILDLINK_PKGSRCDIR.libscfg?=	../../wip/libscfg
+.endif	# LIBSCFG_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libscfg
