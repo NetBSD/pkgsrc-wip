@@ -18,7 +18,6 @@ SUBST_MESSAGE.nogit=	Set version
 SUBST_FILES.nogit+=	meson.build
 SUBST_SED.nogit+=	-e 's/git =/\#git =/g'
 SUBST_SED.nogit+=	-e 's/git.found()/false/g'
-SUBST_SED.nogit+=	-e '/project_version/s/@0@/${PKGVERSION}/g'
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
