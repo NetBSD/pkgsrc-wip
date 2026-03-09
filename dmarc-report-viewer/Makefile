@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dmarc-report-viewer-2.4.0
+DISTNAME=	dmarc-report-viewer-2.4.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cry-inc/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
