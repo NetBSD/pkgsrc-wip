@@ -1,2 +1,3 @@
 wants to download stb and use its headers
 https://github.com/nothings/stb
+in ${CMAKE_BUILD_DIR}/_deps/stb-src
