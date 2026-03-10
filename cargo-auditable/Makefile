@@ -12,7 +12,7 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=		1.94.0
+#RUST_REQ=		1.91.0
 #Upstream does not state the required MSRV.
 #This package is confirmed to build with Rust 1.94.0 on amd64
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
