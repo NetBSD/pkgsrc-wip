@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	cargo-auditable-0.6.6
-CATEGORIES=	devel
+DISTNAME=	cargo-auditable-0.7.4
+CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-secure-code/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -12,12 +12,13 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=		1.94.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.94.0 on amd64
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cargo-auditable \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/auditable2cdx \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cargo-auditable/cargo-auditable.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/cargo-auditable.1
