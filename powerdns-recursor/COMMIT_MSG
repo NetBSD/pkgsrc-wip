@@ -1,0 +1,234 @@
+net/powerdns-recursor: Update to version 5.4.0
+
+Changelogs for 5.4.X
+Before upgrading, it is advised to read the Upgrade Guide.
+
+5.4.0
+Released: 9th of March 2026 with no changes since 5.4.0-rc1 except the version.
+
+5.4.0-rc1
+Released: 17th of February 2026
+Improvements
+Harmonize with dnsdist PR #16741 with respect to OpenTelemetry instance name.
+References: pull request 16756
+Coverity 1644498 Variable copied when it could be moved.
+References: pull request 16784
+Opentelemetry: add flags field in TRACEPARENT EDNS option.
+References: pull request 16786
+No longer allow passing the api-key as a query argument.
+References: #16785, pull request 16790
+Base64 tidy and unit test fix.
+References: #16805, pull request 16817
+Drop usage of libboost-system library (Chris Hofstaedtler).
+References: pull request 16826
+Allowed names should not include names from CNAMEs that cannot be reached (SA 2026-01).
+References: pull request 16836
+Limit amount of work done for a single client query in new ways (SA 2026-01).
+References: pull request 16837
+Limit packet and record cache entry size (SA 2026-01).
+References: pull request 16838
+Bug Fixes
+Correctly compute DNSSEC public key exponent lengths when larger than 255.
+References: pull request 16810
+
+5.4.0-beta1
+Released: 27th of January 2026
+Improvements
+Print irrelevant entries in cookie dump more nicely.
+References: pull request 16651
+Make code boost 1.66 compatible again.
+References: pull request 16655
+Harden SVCB record parsing.
+References: pull request 16710
+dnsrecords: Add RESINFO DNS Record (RFC 9606).
+References: #14983, pull request 16711
+Add REST interface for manipulating Open Telemetry Trace Conditions.
+References: pull request 16727
+Bug Fixes
+Add acquire/release in broadcast pipes to fix TSAN issues seen on trixie.
+References: pull request 16662, pull request 16736
+Handle applicable dynamic parts of YAML-only config when reloading Lua config.
+References: #16673, pull request 16709
+EDNS cookies: fix timestamp handling.
+References: pull request 16730
+
+5.4.0-alpha1
+Released: 16th of December 2025
+Improvements
+Format rust IOErrors in a nicer way instead of using the default formatter.
+References: pull request 16627
+Move away from rustls-pemfile including update of Rust dependencies.
+References: #16606, pull request 16624
+Coverity 20251203.
+References: pull request 16587
+Kill a handful of clang++ warnings, mostly comparing unsigned to a signed constant.
+References: pull request 16588
+Switch trivial usage of boost::optional to std::optional.
+References: pull request 16487
+Always do ANY queries using TCP.
+References: pull request 16553
+Rewrite all unwrap calls in web.rs.
+References: pull request 16570
+Run clippy when CARGO_USE_DEV and CARGO_USE_CLIPPY are set.
+References: #16557, pull request 16565
+Build our Rust lib in dev profile when CARGO_USE_DEV is set.
+References: #16544, pull request 16546
+Remove first set of unused imports (Josh Soref).
+References: pull request 16447
+Tidy tcounter related code.
+References: pull request 16496
+Spelling (Josh Soref).
+References: pull request 16531
+Fix mixed implicit and explicit returns (Josh Soref).
+References: pull request 16530
+Remove unused assignment (Josh Soref).
+References: pull request 16516, pull request 16526
+Remove redundant assignment (Josh Soref).
+References: pull request 16515
+Update to coverallsapp github-action v2.3.7 (Josh Soref).
+References: #16483, pull request 16523
+Remove horrible unused argument with default value (Josh Soref).
+References: pull request 16495
+Use immediate class parent for super (Josh Soref).
+References: pull request 16502
+Fix with open(…) as f: (Josh Soref).
+References: #16500, pull request 16509
+Improve reading of operator expression (Josh Soref).
+References: pull request 16484
+Use with open(…) as f: to ensure file is always closed (Josh Soref).
+References: pull request 16500
+Stop mixing implicit and explicit returns (Josh Soref).
+References: pull request 16501
+Codeql unused loop iterator name (Josh Soref).
+References: pull request 16494
+Fix coverity 1635199, 1643012, 1643013.
+References: pull request 16497
+Codeql use identifiers (Josh Soref).
+References: pull request 16498
+Do not mutate default values (Josh Soref).
+References: pull request 16490
+Only import doqclient once (Josh Soref).
+References: pull request 16491
+Drop unused format argument (Josh Soref).
+References: pull request 16493
+Use assertNotEqual (Josh Soref).
+References: pull request 16492
+Do not catch KeyboardInterrupt or SystemExit (Josh Soref).
+References: pull request 16489
+Do not call sys.exit with a void return (Josh Soref).
+References: pull request 16488
+Convert metrics_table.py to a module (Josh Soref).
+References: pull request 16479
+Switch TestRuleMetricsDefault to pass (Josh Soref).
+References: pull request 16480
+Codeql imprecise assert (Josh Soref).
+References: pull request 16481
+Drop useless lambda (Josh Soref).
+References: pull request 16483
+Fix duplicate key in dict literal (Josh Soref).
+References: pull request 16478
+Contrib/ProtobufLogger.py: Fix syntax error that crept in with 16458.
+References: pull request 16476
+Prep, but do not actually move to C++20.
+References: #14734, pull request 16077
+Implement new feature to only generate OpenTelemetry Traces on certain conditions.
+References: pull request 16362
+rec_control get-parameter: print runtime settings in YAML format if YAML config is active.
+References: pull request 16427
+Chore: Clean up unused variables (Josh Soref).
+References: pull request 16454
+Clean up unreachable code (Josh Soref).
+References: pull request 16457
+Fix try/except/as notation (Josh Soref).
+References: #15336, pull request 16459
+Avoid warning about mixed explicit/implicit returns (Josh Soref).
+References: #16458, pull request 16460
+Cleanup endianness determining code.
+References: #16091, pull request 16440
+Use map for getAppliedPolicyTypeAsString (Josh Soref).
+References: pull request 16458
+Remove options that were deprecated a long time ago.
+References: pull request 16438
+Remember if an answer was received over TCP in record cache.
+References: pull request 16384
+rec-lua-conf.* tidy.
+References: pull request 16426
+Don’t use a vector of string for internal public suffix list.
+References: pull request 16394
+Make version number in rust lib confirm to Rust specifics.
+References: pull request 16392
+Explicit disabling/enabling of tls-gnutls for full and least configs and packages.
+References: pull request 16307
+Allow selecting a specific version of Lua with meson.
+References: pull request 16259
+Fix a few Coverity found issues, all low severity move optimizations.
+References: pull request 16308
+OT tracing: define more Spans with actual duration and add more attributes.
+References: pull request 16190
+Allow ability to validate certificates (and more) for outgoing DoT connections.
+References: pull request 16232
+Move test-protozero-trace.cc to toplevel and add it in the autotools build where it was missing.
+References: pull request 16220
+ProtobufLogger: print OpenTelemetry IDs in hex, add proper command arg parser.
+References: pull request 16219
+Silence rust warning.
+References: pull request 16251
+Docs: Indent list (Josh Soref).
+References: pull request 16236
+Docs: Add trailing period (Josh Soref).
+References: pull request 16237
+Do not include dnsseckeeper.hh and ueberbackend.hh in rec.
+References: pull request 16227
+We need a usable cargo for sdist so do not download (and install) rust but use package.
+References: pull request 16204
+Fix a few issues reported by coverity, all minor.
+References: pull request 16200
+Rework command dispatcher to be table based.
+References: pull request 16194
+Fix release builds by updating the locked Rust lib version.
+References: #16180, pull request 16188
+Move help text to a table so it’s easier to maintain.
+References: pull request 16175
+Update the Rust library version when generating a tarball.
+References: pull request 16167
+Add a few fields in protobuf logs: ede, edeText and OpenTelemetryTraceID.
+References: pull request 16138
+Better error message when reload-yaml fails.
+References: pull request 16104
+Implement DNS cookie support for outgoing requests.
+References: pull request 15412, pull request 16131
+Update cargos for rec and dnsdist.
+References: #16101, pull request 16106
+Warn on passwordless webserver startup and extends docs.
+References: pull request 16103
+Do not hash (or compare) OpenTelemetry Trace EDNS value for packetcache.
+References: pull request 16098
+Some error paths do no create thread 0 so don’t join it.
+References: pull request 16094
+pubsuffix: tidy and use C++ strings.
+References: pull request 15945
+Add tc flag in answer log (zhaojs).
+References: pull request 15943
+Remove SLOG macro usage in rec specific code.
+References: pull request 15997
+Assorted tidy.
+References: pull request 15949
+Reorder fields of record cache entry by size (saves 8 bytes per entry on 64-bit systems).
+References: pull request 15950
+Bug Fixes
+Do proper validation of TCP notifies.
+References: pull request 16615
+Ensure authRecords is empty, as handleHit checks that.
+References: pull request 16614
+Move g_logRPZChanges to proper spot.
+References: #16572, pull request 16580
+fix parsing of webserver loglevel “none”.
+References: #16455, pull request 16461
+Tighten delegation accept.
+References: pull request 16338
+Prevent a potential race condition in cache cleaning.
+References: pull request 16288
+Fix Boost system lib req: it is no longer a lib for boost >= 1.89.
+References: #15972, pull request 15991
+Rec and dnsdist: properly set up env vars for rust build.
+References: #15896, pull request 15915
