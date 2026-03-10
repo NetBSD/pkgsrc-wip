@@ -1,15 +1,45 @@
 $NetBSD$
 
 * Use external libevdev.h
+* Reenable quirks
 
---- meson.build.orig	2026-02-27 15:47:49.719316226 +0100
+--- meson.build.orig	2026-03-08 12:38:09.000000000 +0000
 +++ meson.build
-@@ -146,7 +146,7 @@ pkgconfig = import('pkgconfig')
- if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
- 	dep_udev = dependency('libudev')
- 	dep_mtdev = []
+@@ -163,11 +163,7 @@ endif
+ # Dependencies
+ pkgconfig = import('pkgconfig')
+ dep_udev = dependency('libudev')
+-if host_machine.system() == 'openbsd' or host_machine.system() == 'netbsd'
 -	dep_libevdev = []
-+	dep_libevdev = dependency('libevdev')
- else
- 	dep_udev = dependency('libudev')
- 	dep_mtdev = dependency('mtdev', version : '>= 1.1.0')
+-else
+-	dep_libevdev = dependency('libevdev', version: '>= 1.10.0')
+-endif
++dep_libevdev = dependency('libevdev', version: '>= 1.10.0')
+ 
+ dep_lm = cc.find_library('m', required : false)
+ dep_rt = cc.find_library('rt', required : false)
+@@ -374,6 +370,7 @@ src_libinput_util = [
+ 	'src/util-list.c',
+ 	'src/util-ratelimit.c',
+ 	'src/util-strings.c',
++	'src/util-prop-parsers.c',
+ ]
+ libinput_util = static_library('libinput-util',
+ 			       src_libinput_util,
+@@ -415,13 +412,9 @@ install_subdir('quirks',
+ 	       install_dir : dir_data,
+ 	       strip_directory : true)
+ 
+-if host_machine.system() != 'openbsd' and host_machine.system() != 'netbsd'
+-	src_libquirks = [
+-		'src/quirks.c',
+-	]
+-else
+-	src_libquirks = []
+-endif
++src_libquirks = [
++	'src/quirks.c',
++]
+ 
+ deps_libquirks = [dep_udev, dep_libwacom, dep_libinput_util]
+ libquirks = static_library('quirks', src_libquirks,

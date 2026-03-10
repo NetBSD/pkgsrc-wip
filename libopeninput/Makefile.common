@@ -2,12 +2,12 @@
 # used by devel/libopeninput/Makefile
 # used by devel/input-headers/Makefile
 
-VERSION=	1.26.2
+VERSION=	1.30.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sizeofvoid/}
 GITHUB_PROJECT=	libopeninput
-GITHUB_TAG=	5e93d5c82d455c3901c2cb9b40dbbe5358a88e30
+GITHUB_TAG=	eced8d4e2f2b27ec8e4d3974275bfc87e7db02e2
 
 MAINTAINER=	kikadf.01@gmail.com
-HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/build-on-openbsd/
+HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/libopeninput/
 LICENSE=	mit
