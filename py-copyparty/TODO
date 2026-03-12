@@ -3,4 +3,4 @@ Packages fine, untested.
 Rename binaries and add ALTERNATIVES file.
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2026-30974
+  CVE-2026-30974, CVE-2026-32108, CVE-2026-32109
