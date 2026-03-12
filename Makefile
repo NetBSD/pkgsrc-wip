@@ -3344,6 +3344,7 @@ SUBDIR+=	postgresql-pgvector
 SUBDIR+=	postoffice
 SUBDIR+=	pounce
 SUBDIR+=	povray
+SUBDIR+=	powerdns-recursor
 SUBDIR+=	powerlevel10k
 SUBDIR+=	powerline
 SUBDIR+=	powerpc-none-elf-binutils
@@ -5328,6 +5329,7 @@ SUBDIR+=	rust192-bin
 SUBDIR+=	rust193
 SUBDIR+=	rust193-bin
 SUBDIR+=	rust194
+SUBDIR+=	rust194-bin
 SUBDIR+=	s-nail
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
@@ -6285,7 +6287,6 @@ SUBDIR+=	zodiac
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
 SUBDIR+=	zuse
-SUBDIR+=	zxing-cpp
 SUBDIR+=	zynaddsubfx
 
 ${.CURDIR}/PKGDB:
