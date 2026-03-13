@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_client.cc
-@@ -791,11 +791,11 @@ void CloudPolicyClient::FetchPolicyInter
+@@ -849,11 +849,11 @@ void CloudPolicyClient::FetchPolicyInter
  
    // Build policy fetch requests.
    em::DevicePolicyRequest* policy_request = request->mutable_policy_request();

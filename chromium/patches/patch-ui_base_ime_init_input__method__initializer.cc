@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/init/input_method_initializer.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/base/ime/init/input_method_initializer.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/base/ime/init/input_method_initializer.cc
 @@ -9,7 +9,7 @@
  #include "base/trace_event/trace_event.h"

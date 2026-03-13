@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h
 @@ -9,7 +9,7 @@
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/base/ui_base_types.h"
  #endif
  
-@@ -88,7 +88,7 @@ class OpaqueBrowserFrameViewLayoutDelega
+@@ -83,7 +83,7 @@ class OpaqueBrowserFrameViewLayoutDelega
    // Returns true if a client-side shadow should be drawn for restored windows.
    virtual bool ShouldDrawRestoredFrameShadow() const = 0;
  

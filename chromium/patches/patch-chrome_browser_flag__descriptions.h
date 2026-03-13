@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/flag_descriptions.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -8430,6 +8430,20 @@ inline constexpr char kEnableOktaSSOName
+@@ -8306,6 +8306,20 @@ inline constexpr char kEnableOktaSSOName
  inline constexpr char kEnableOktaSSODescription[] =
      "Enables native support for Okta SSO on managed MacOS devices.";
  

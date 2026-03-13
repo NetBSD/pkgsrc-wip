@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/browser_utils.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/device_signals/core/browser/browser_utils.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/device_signals/core/browser/browser_utils.h
 @@ -38,7 +38,7 @@ bool GetSiteIsolationEnabled();
  std::string GetHostName();

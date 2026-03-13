@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/peerconnection/webrtc_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/blink/renderer/platform/peerconnection/webrtc_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/blink/renderer/platform/peerconnection/webrtc_util.cc
 @@ -23,7 +23,7 @@
  namespace blink {
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables H.264 CBP encode acceleration.
  BASE_FEATURE(kPlatformH264CbpEncoding,
  #if BUILDFLAG(IS_WIN)
-@@ -126,7 +126,7 @@ ConvertToOptionalTimeDelta(std::optional
+@@ -123,7 +123,7 @@ ConvertToOptionalTimeDelta(std::optional
  bool PLATFORM_EXPORT
  IsH264ConstrainedBaselineProfileAvailableForAcceleratedEncoder() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

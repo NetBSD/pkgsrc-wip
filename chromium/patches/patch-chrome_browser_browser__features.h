@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/browser_features.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/browser_features.h
 @@ -41,7 +41,7 @@ BASE_DECLARE_FEATURE(kCertificateTranspa
  BASE_DECLARE_FEATURE(kCertVerificationNetworkTime);
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kDbusSecretPortal);
  #endif
  
-@@ -84,7 +84,7 @@ BASE_DECLARE_FEATURE(kRestartNetworkServ
+@@ -86,7 +86,7 @@ BASE_DECLARE_FEATURE(kRestartNetworkServ
  BASE_DECLARE_FEATURE(kSandboxExternalProtocolBlocked);
  BASE_DECLARE_FEATURE(kSandboxExternalProtocolBlockedWarning);
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
 @@ -121,7 +121,7 @@
  #include "content/child/child_process_sandbox_support_impl_win.h"

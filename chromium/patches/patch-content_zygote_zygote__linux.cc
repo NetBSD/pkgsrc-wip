@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/zygote/zygote_linux.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/zygote/zygote_linux.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
  // Copyright 2012 The Chromium Authors
@@ -14,7 +14,7 @@ $NetBSD$
  
  #include "content/zygote/zygote_linux.h"
  
-@@ -717,3 +718,4 @@ void Zygote::HandleReinitializeLoggingRe
+@@ -714,3 +715,4 @@ void Zygote::HandleReinitializeLoggingRe
  }
  
  }  // namespace content

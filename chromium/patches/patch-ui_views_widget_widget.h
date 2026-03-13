@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/views/widget/widget.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/views/widget/widget.h
 @@ -489,7 +489,7 @@ class VIEWS_EXPORT Widget : public inter
      bool force_system_menu_for_frameless = false;

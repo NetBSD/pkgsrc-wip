@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -208,7 +208,7 @@ const base::Feature* const kAllFeatures[
-     &kIPHiOSGeminiImageRemixFeature,
+@@ -212,7 +212,7 @@ const base::Feature* const kAllFeatures[
+     &kIPHiOSPinMostVisitedSiteFeature,
  #endif  // BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -287,7 +287,7 @@ const base::Feature* const kAllFeatures[
+@@ -290,7 +290,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -24,7 +24,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
      &kIPHAutofillAiOptInFeature,
      &kIPHAutofillAiValuablesFeature,
-@@ -314,7 +314,7 @@ const base::Feature* const kAllFeatures[
+@@ -317,7 +317,7 @@ const base::Feature* const kAllFeatures[
      &kIPHLauncherSearchHelpUiFeature,
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

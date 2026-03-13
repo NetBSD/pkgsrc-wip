@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/chrome_pages.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.h
 @@ -39,7 +39,7 @@ namespace signin {
  enum class ConsentLevel;
@@ -15,7 +15,7 @@ $NetBSD$
  namespace web_app {
  enum class AppSettingsPageEntryPoint;
  }  // namespace web_app
-@@ -185,7 +185,7 @@ void ShowShortcutCustomizationApp(Profil
+@@ -186,7 +186,7 @@ void ShowShortcutCustomizationApp(Profil
                                    const std::string& category);
  #endif
  

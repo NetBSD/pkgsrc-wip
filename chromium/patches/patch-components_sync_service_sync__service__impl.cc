@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_service_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/sync/service/sync_service_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/sync/service/sync_service_impl.cc
-@@ -1433,7 +1433,7 @@ void SyncServiceImpl::ReconfigureDataTyp
+@@ -1393,7 +1393,7 @@ void SyncServiceImpl::ReconfigureDataTyp
  
  void SyncServiceImpl::PassphraseTypeChanged(PassphraseType passphrase_type) {
    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);

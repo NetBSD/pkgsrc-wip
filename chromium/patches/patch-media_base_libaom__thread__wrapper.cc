@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/libaom_thread_wrapper.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/base/libaom_thread_wrapper.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/base/libaom_thread_wrapper.cc
 @@ -5,17 +5,21 @@
  #include "base/logging.h"

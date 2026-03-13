@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -52,7 +52,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
@@ -24,7 +24,7 @@ $NetBSD$
  #include "components/services/font_data/font_data_service_impl.h"
  #endif
  
-@@ -340,7 +340,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -341,7 +341,7 @@ void RenderProcessHostImpl::IOThreadHost
      }
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (features::IsFontDataServiceEnabled()) {
      if (auto font_data_receiver =
              receiver.As<font_data_service::mojom::FontDataService>()) {
-@@ -351,7 +351,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -352,7 +352,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD$
    if (auto font_receiver = receiver.As<font_service::mojom::FontService>()) {
      ConnectToFontService(std::move(font_receiver));
      return;
-@@ -379,7 +379,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -380,7 +380,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  

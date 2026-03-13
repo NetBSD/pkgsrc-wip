@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_delegate.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/capture/video/linux/v4l2_capture_delegate.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.h
 @@ -22,7 +22,7 @@
  #include "media/capture/video/linux/v4l2_capture_device_impl.h"

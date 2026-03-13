@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/dummy_text_input_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/base/ime/dummy_text_input_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/base/ime/dummy_text_input_client.cc
 @@ -175,7 +175,7 @@ bool DummyTextInputClient::ShouldDoLearn
    return false;

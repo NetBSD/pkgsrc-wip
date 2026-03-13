@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_libpci.cpp.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_libpci.cpp.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_libpci.cpp
 @@ -13,6 +13,11 @@
  #include <unistd.h>

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
 @@ -701,7 +701,7 @@ void ChromePasswordManagerClient::Contin
  bool ChromePasswordManagerClient::IsReauthBeforeFillingRequired(
@@ -24,7 +24,7 @@ $NetBSD$
    PasswordsClientUIDelegate* manage_passwords_ui_controller =
        PasswordsClientUIDelegateFromWebContents(web_contents());
    if (manage_passwords_ui_controller) {
-@@ -2028,7 +2028,7 @@ void ChromePasswordManagerClient::HideFi
+@@ -2029,7 +2029,7 @@ void ChromePasswordManagerClient::HideFi
  bool ChromePasswordManagerClient::IsPasswordManagementEnabledForCurrentPage(
      const GURL& url) const {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
    if (IsPasswordManagerForUrlDisallowedByPolicy(url)) {
      return false;
    }
-@@ -2067,7 +2067,7 @@ bool ChromePasswordManagerClient::IsPass
+@@ -2068,7 +2068,7 @@ bool ChromePasswordManagerClient::IsPass
  }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \

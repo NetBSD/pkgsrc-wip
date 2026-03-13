@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -32,7 +32,7 @@ bool IsOnDeviceStorageEnabled() {
  }
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -878,7 +878,7 @@ BASE_FEATURE(kIPHiOSGeminiImageRemixFeat
+@@ -887,7 +887,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  BASE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
               "IPH_AutofillBnplAffirmOrZipSuggestion",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -940,7 +940,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
+@@ -954,7 +954,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  

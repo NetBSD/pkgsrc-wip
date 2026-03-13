@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/child_process.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/child/child_process.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/child/child_process.cc
-@@ -37,7 +37,7 @@
+@@ -36,7 +36,7 @@
  #include "content/common/android/cpu_time_metrics.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
  
-@@ -215,7 +215,7 @@ void ChildProcess::set_main_thread(Child
+@@ -204,7 +204,7 @@ void ChildProcess::set_main_thread(Child
    main_thread_.reset(thread);
  }
  

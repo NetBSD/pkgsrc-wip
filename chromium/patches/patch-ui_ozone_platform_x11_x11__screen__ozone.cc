@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/ozone/platform/x11/x11_screen_ozone.cc
 @@ -22,7 +22,7 @@
  #include "ui/ozone/platform/x11/x11_window.h"

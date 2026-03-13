@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_helper.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- printing/backend/cups_helper.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ printing/backend/cups_helper.h
 @@ -32,7 +32,7 @@ constexpr int kCupsTimeoutMs = 3000;
  constexpr cups_ptype_t kDestinationsFilterMask =

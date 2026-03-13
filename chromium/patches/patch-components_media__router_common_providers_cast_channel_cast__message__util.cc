@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/media_router/common/providers/cast/channel/cast_message_util.cc
-@@ -168,7 +168,7 @@ int GetVirtualConnectPlatformValue() {
+@@ -167,7 +167,7 @@ int GetVirtualConnectPlatformValue() {
    return 4;
  #elif BUILDFLAG(IS_CHROMEOS)
    return 5;

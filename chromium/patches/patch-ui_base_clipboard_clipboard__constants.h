@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_constants.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/base/clipboard/clipboard_constants.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/base/clipboard/clipboard_constants.h
 @@ -44,7 +44,7 @@ inline constexpr char kMimeTypeWindowDra
  
@@ -15,7 +15,7 @@ $NetBSD$
  inline constexpr char kMimeTypeLinuxUtf8String[] = "UTF8_STRING";
  inline constexpr char kMimeTypeLinuxString[] = "STRING";
  inline constexpr char kMimeTypeLinuxText[] = "TEXT";
-@@ -52,7 +52,7 @@ inline constexpr char kMimeTypeLinuxText
+@@ -57,7 +57,7 @@ inline constexpr char kMimeTypePortalFil
          // BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \

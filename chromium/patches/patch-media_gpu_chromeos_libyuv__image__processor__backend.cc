@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
-@@ -52,7 +52,7 @@ static constexpr struct {
+@@ -48,7 +48,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \
    {Fourcc::in, Fourcc::out, Transform::trans, SupportResult::result}
      // Conversion.
@@ -15,7 +15,7 @@ $NetBSD$
      CONV(NV12, AR24, kConversion, Supported),
  #endif
      CONV(NV12, NV12, kConversion, Supported),
-@@ -411,7 +411,7 @@ int LibYUVImageProcessorBackend::DoConve
+@@ -409,7 +409,7 @@ int LibYUVImageProcessorBackend::DoConve
            fr->GetWritableVisibleData(VideoFrame::Plane::kUV)), \
        fr->stride(VideoFrame::Plane::kUV)
  
@@ -24,7 +24,7 @@ $NetBSD$
  #define ARGB_DATA(fr)                                   \
    fr->GetWritableVisibleData(VideoFrame::Plane::kARGB), \
        fr->stride(VideoFrame::Plane::kARGB)
-@@ -573,7 +573,7 @@ int LibYUVImageProcessorBackend::DoConve
+@@ -571,7 +571,7 @@ int LibYUVImageProcessorBackend::DoConve
      }
    }
  

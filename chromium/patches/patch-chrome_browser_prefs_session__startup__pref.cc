@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/session_startup_pref.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/prefs/session_startup_pref.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/prefs/session_startup_pref.cc
-@@ -71,7 +71,7 @@ SessionStartupPref::Type SessionStartupP
+@@ -70,7 +70,7 @@ SessionStartupPref::Type SessionStartupP
  #if BUILDFLAG(IS_CHROMEOS)
    return SessionStartupPref::LAST;
  #else

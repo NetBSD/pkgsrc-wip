@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc
-@@ -371,7 +371,7 @@ void BrowserViewAppLayoutImpl::DoPostLay
+@@ -386,7 +386,7 @@ void BrowserViewAppLayoutImpl::DoPostLay
+ #elif BUILDFLAG(IS_WIN)
      label.SetSubpixelRenderingEnabled(false);
-     label.SetHorizontalAlignment(gfx::ALIGN_LEFT);
      label.SetAutoColorReadabilityEnabled(false);
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      label.SetSubpixelRenderingEnabled(false);
-     label.SetHorizontalAlignment(gfx::ALIGN_LEFT);
  #endif
+   }

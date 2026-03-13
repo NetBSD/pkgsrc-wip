@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/ext/base/event_fd.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/perfetto/include/perfetto/ext/base/event_fd.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/perfetto/include/perfetto/ext/base/event_fd.h
 @@ -58,6 +58,8 @@ class EventFd {
    // On Mac and other non-Linux UNIX platforms a pipe-based fallback is used.

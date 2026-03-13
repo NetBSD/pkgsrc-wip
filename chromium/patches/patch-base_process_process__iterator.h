@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- base/process/process_iterator.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ base/process/process_iterator.h
 @@ -25,7 +25,7 @@
  #include <windows.h>
@@ -15,7 +15,7 @@ $NetBSD$
  #include <sys/sysctl.h>
  #elif BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
-@@ -117,7 +117,11 @@ class BASE_EXPORT ProcessIterator {
+@@ -113,7 +113,11 @@ class BASE_EXPORT ProcessIterator {
    HANDLE snapshot_;
    bool started_iteration_ = false;
  #elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)

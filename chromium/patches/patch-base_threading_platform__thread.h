@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- base/threading/platform_thread.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ base/threading/platform_thread.h
-@@ -60,6 +60,8 @@ class BASE_EXPORT PlatformThreadId {
+@@ -61,6 +61,8 @@ class BASE_EXPORT PlatformThreadId {
    using UnderlyingType = zx_koid_t;
  #elif BUILDFLAG(IS_APPLE)
    using UnderlyingType = uint64_t;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/public/browser_window_features.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/browser_window/public/browser_window_features.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/browser_window/public/browser_window_features.h
-@@ -107,7 +107,7 @@ class PinInfoBarController;
+@@ -109,7 +109,7 @@ class PinInfoBarController;
  }  // namespace default_browser
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  class ProfileCustomizationBubbleSyncController;
  namespace session_restore_infobar {
  class SessionRestoreInfobarController;
-@@ -450,7 +450,7 @@ class BrowserWindowFeatures {
+@@ -457,7 +457,7 @@ class BrowserWindowFeatures {
      return browser_select_file_dialog_controller_.get();
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    ProfileCustomizationBubbleSyncController*
    profile_customization_bubble_sync_controller() {
      return profile_customization_bubble_sync_controller_.get();
-@@ -643,7 +643,7 @@ class BrowserWindowFeatures {
+@@ -647,7 +647,7 @@ class BrowserWindowFeatures {
    std::unique_ptr<BrowserSelectFileDialogController>
        browser_select_file_dialog_controller_;
  

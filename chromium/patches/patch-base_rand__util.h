@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- base/rand_util.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ base/rand_util.h
-@@ -222,7 +222,7 @@ decltype(auto) RandomChoice(Range&& r) {
+@@ -225,7 +225,7 @@ decltype(auto) RandomChoice(Range&& r) {
    return r[base::RandGenerator(r.size())];
  }
  

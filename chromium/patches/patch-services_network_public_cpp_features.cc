@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/cpp/features.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- services/network/public/cpp/features.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ services/network/public/cpp/features.cc
 @@ -93,7 +93,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
  // Enable usage of hardcoded DoH upgrade mapping for use in automatic mode.
@@ -12,15 +12,6 @@ $NetBSD$
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
 +    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -366,7 +366,7 @@ BASE_FEATURE(kAvoidResourceRequestCopies
- // https://github.com/WICG/document-isolation-policy
- BASE_FEATURE(kDocumentIsolationPolicy,
- #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \
--    BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT

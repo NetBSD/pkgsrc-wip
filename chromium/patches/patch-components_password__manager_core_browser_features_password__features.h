@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.h
-@@ -171,7 +171,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerLog
- // classifications.
- BASE_DECLARE_FEATURE(kProactivelyDownloadModelForPasswordChange);
+@@ -164,7 +164,7 @@ BASE_DECLARE_FEATURE(kProactivelyDownloa
+ // control locale/country server side.
+ BASE_DECLARE_FEATURE(kReduceRequirementsForPasswordChange);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

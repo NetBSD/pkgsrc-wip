@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/resources/signin/signin_shared.css.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/resources/signin/signin_shared.css.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/resources/signin/signin_shared.css
-@@ -54,7 +54,7 @@ a {
-   border-radius: var(--scrollbar-width);
- }
- 
+@@ -39,7 +39,7 @@ a {
+   justify-content: flex-end;
+ </if>
+   padding: var(--action-container-padding);
 -<if expr="is_macosx or is_linux or is_chromeos">
 +<if expr="is_macosx or is_posix or is_chromeos">
- .action-container {
    flex-flow: row-reverse;
    justify-content: flex-start;
+ </if>

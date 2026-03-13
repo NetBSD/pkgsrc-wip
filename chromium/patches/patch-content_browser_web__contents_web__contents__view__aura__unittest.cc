@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura_unittest.cc
 @@ -42,7 +42,7 @@
  #include "ui/base/dragdrop/os_exchange_data_provider_win.h"
  #endif
  
--#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
+-#if BUILDFLAG(IS_LINUX) && BUILDFLAG(SUPPORTS_OZONE_X11)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(SUPPORTS_OZONE_X11)
  #include "ui/base/x/selection_utils.h"
  #include "ui/base/x/x11_os_exchange_data_provider.h"
  #include "ui/gfx/x/atom_cache.h"
@@ -73,8 +73,8 @@ $NetBSD$
  
    auto data = std::make_unique<ui::OSExchangeData>();
  
--#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
+-#if BUILDFLAG(IS_LINUX) && BUILDFLAG(SUPPORTS_OZONE_X11)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(SUPPORTS_OZONE_X11)
    // FileContents drag-drop in X relies on XDragDropClient::InitDrag() setting
    // window property 'XdndDirectSave0' to filename. Since XDragDropClient is not
    // created in this unittest, we will set this property manually to allow

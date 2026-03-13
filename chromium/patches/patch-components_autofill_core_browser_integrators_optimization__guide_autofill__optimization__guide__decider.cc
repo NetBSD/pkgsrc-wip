@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc
-@@ -210,7 +210,7 @@ void AddOptimizationTypesForBnplIssuers(
+@@ -207,7 +207,7 @@ void AddOptimizationTypesForBnplIssuers(
      base::flat_set<optimization_guide::proto::OptimizationType>&
          optimization_types) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -14,4 +14,4 @@ $NetBSD$
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    auto bnpl_issuer_allowlist_can_be_loaded =
        [&bnpl_issuers](BnplIssuer::IssuerId issuer_id) {
-         return base::Contains(bnpl_issuers, issuer_id, &BnplIssuer::issuer_id);
+         return std::ranges::contains(bnpl_issuers, issuer_id,

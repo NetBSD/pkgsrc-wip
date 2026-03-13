@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/param_traits_utils.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- ipc/param_traits_utils.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ipc/param_traits_utils.h
 @@ -173,7 +173,7 @@ struct ParamTraits<unsigned int> {
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller_delegate.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/signin/signin_view_controller_delegate.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller_delegate.h
 @@ -50,7 +50,7 @@ class SigninViewControllerDelegate {
        SyncConfirmationStyle style,

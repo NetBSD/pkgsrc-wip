@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc
 @@ -45,7 +45,7 @@
  #include "services/network/public/cpp/shared_url_loader_factory.h"

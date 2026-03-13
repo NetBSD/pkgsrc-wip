@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- remoting/host/chromoting_host_services_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ remoting/host/chromoting_host_services_client.cc
 @@ -139,7 +139,7 @@ bool ChromotingHostServicesClient::Ensur
    if (session_services_remote_.is_bound()) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_unittest.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- base/process/process_unittest.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ base/process/process_unittest.cc
-@@ -202,7 +202,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
+@@ -147,7 +147,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
    // was spawned and a time recorded after it was spawned. However, since the
    // base::Time and process creation clocks don't match, tolerate some error.
    constexpr base::TimeDelta kTolerance =

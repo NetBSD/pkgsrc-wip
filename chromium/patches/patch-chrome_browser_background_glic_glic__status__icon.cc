@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
-@@ -111,7 +111,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+@@ -128,7 +128,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
      return;
    }
  
@@ -15,8 +15,8 @@ $NetBSD$
    // Set a vector icon for proper theming on Linux.
    status_icon_->SetIcon(
        GlicVectorIconManager::GetVectorIcon(IDR_GLIC_BUTTON_VECTOR_ICON));
-@@ -166,7 +166,7 @@ GlicStatusIcon::~GlicStatusIcon() {
- 
+@@ -169,7 +169,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+ GlicStatusIcon::~GlicStatusIcon() {
    context_menu_ = nullptr;
    if (status_icon_) {
 -#if !BUILDFLAG(IS_LINUX)
@@ -24,7 +24,7 @@ $NetBSD$
      status_icon_->RemoveObserver(this);
  #endif
      std::unique_ptr<StatusIcon> removed_icon =
-@@ -304,7 +304,7 @@ void GlicStatusIcon::UpdateHotkey(const 
+@@ -306,7 +306,7 @@ void GlicStatusIcon::UpdateHotkey(const 
  }
  
  void GlicStatusIcon::UpdateVisibilityOfExitInContextMenu() {
@@ -33,7 +33,7 @@ $NetBSD$
    if (context_menu_) {
      const bool is_visible = GlobalBrowserCollection::GetInstance()->IsEmpty();
      const std::optional<size_t> index =
-@@ -382,7 +382,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+@@ -389,7 +389,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_SETTINGS,
                  l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_SETTINGS));
  

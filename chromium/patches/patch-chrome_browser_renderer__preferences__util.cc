@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -37,12 +37,12 @@
  #include "ui/base/ui_base_features.h"

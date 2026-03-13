@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_shm_image_pool.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/base/x/x11_shm_image_pool.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/base/x/x11_shm_image_pool.cc
 @@ -16,6 +16,7 @@
  #include "base/functional/callback.h"

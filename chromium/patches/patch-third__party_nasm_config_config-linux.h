@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/nasm/config/config-linux.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/nasm/config/config-linux.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/nasm/config/config-linux.h
 @@ -209,7 +209,7 @@
  #define HAVE_DECL_STRSEP 1

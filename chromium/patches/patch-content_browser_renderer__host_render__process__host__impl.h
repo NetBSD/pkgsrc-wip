@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
 @@ -104,7 +104,7 @@
  #include "media/fuchsia_media_codec_provider_impl.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/browser/child_thread_type_switcher_linux.h"
  #include "media/mojo/mojom/video_encode_accelerator.mojom.h"
  #endif
-@@ -1029,7 +1029,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -1027,7 +1027,7 @@ class CONTENT_EXPORT RenderProcessHostIm
      mojo::Remote<media::mojom::VideoEncodeAcceleratorProviderFactory>
          video_encode_accelerator_factory_remote_;
  #endif
@@ -24,7 +24,7 @@ $NetBSD$
      ChildThreadTypeSwitcher child_thread_type_switcher_;
  #endif
    };
-@@ -1291,7 +1291,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -1283,7 +1283,7 @@ class CONTENT_EXPORT RenderProcessHostIm
    // if the request isn't handled on the IO thread.
    void OnBindHostReceiver(mojo::GenericPendingReceiver receiver);
  

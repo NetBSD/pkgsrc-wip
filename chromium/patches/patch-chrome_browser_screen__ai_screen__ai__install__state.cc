@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
 @@ -30,7 +30,7 @@ bool IsDeviceCompatible() {
    // TODO(crbug.com/381256355): Update when ScreenAI library is compatible with

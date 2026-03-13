@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/renderable_gpu_memory_buffer_video_frame_pool.cc.orig	2026-02-03 22:07:10.000000000 +0000
-+++ media/video/renderable_gpu_memory_buffer_video_frame_pool.cc
-@@ -196,7 +196,7 @@ bool FrameResources::Initialize(VideoPix
+--- media/video/renderable_mappable_shared_image_video_frame_pool.cc.orig	2026-03-11 22:12:25.000000000 +0000
++++ media/video/renderable_mappable_shared_image_video_frame_pool.cc
+@@ -198,7 +198,7 @@ bool FrameResources::Initialize(VideoPix
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
    buffer_usage = gfx::BufferUsage::SCANOUT_VEA_CPU_READ;

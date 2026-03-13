@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/v4l2/v4l2_utils.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/gpu/v4l2/v4l2_utils.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/gpu/v4l2/v4l2_utils.cc
 @@ -18,7 +18,7 @@
  #include <map>
@@ -15,7 +15,7 @@ $NetBSD$
  #include <drm_fourcc.h>
  #endif
  
-@@ -244,7 +244,7 @@ std::optional<VideoFrameLayout> V4L2Form
+@@ -243,7 +243,7 @@ std::optional<VideoFrameLayout> V4L2Form
    }
    const VideoPixelFormat video_format = video_fourcc->ToVideoPixelFormat();
    uint64_t modifiers = gfx::NativePixmapHandle::kNoModifier;

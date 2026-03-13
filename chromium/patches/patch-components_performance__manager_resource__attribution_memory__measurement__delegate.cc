@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/resource_attribution/memory_measurement_delegate.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/performance_manager/resource_attribution/memory_measurement_delegate.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/performance_manager/resource_attribution/memory_measurement_delegate.cc
 @@ -100,7 +100,7 @@ void MemoryMeasurementDelegateImpl::OnMe
                  base::KiBU(process_dump.os_dump().resident_set_kb),

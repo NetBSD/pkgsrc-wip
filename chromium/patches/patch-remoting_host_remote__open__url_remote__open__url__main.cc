@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/remote_open_url_main.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- remoting/host/remote_open_url/remote_open_url_main.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ remoting/host/remote_open_url/remote_open_url_main.cc
 @@ -27,7 +27,7 @@
  #include "remoting/host/usage_stats_consent.h"

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/common/webui_url_constants.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/common/webui_url_constants.cc
-@@ -137,7 +137,7 @@ base::span<const base::cstring_view> Chr
+@@ -138,7 +138,7 @@ base::span<const base::cstring_view> Chr
        kChromeUITermsHost,
  #endif
        kChromeUITranslateInternalsHost,
@@ -15,7 +15,7 @@ $NetBSD$
        kChromeUIUpdaterHost,
  #endif
        kChromeUIUsbInternalsHost,
-@@ -205,17 +205,17 @@ base::span<const base::cstring_view> Chr
+@@ -206,17 +206,17 @@ base::span<const base::cstring_view> Chr
        kChromeUIInternetDetailDialogHost,
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

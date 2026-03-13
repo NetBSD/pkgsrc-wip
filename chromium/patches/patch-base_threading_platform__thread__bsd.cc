@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_bsd.cc.orig	2026-02-14 15:42:44.582489103 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2026-03-13 16:54:16.060201677 +0000
 +++ base/threading/platform_thread_bsd.cc
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,40 @@
 +// Copyright 2023 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -19,8 +19,7 @@ $NetBSD$
 +namespace internal {
 +
 +void SetCurrentThreadTypeImpl(ThreadType thread_type,
-+                              MessagePumpType pump_type_hint,
-+                              bool may_change_affinity) {
++                              MessagePumpType pump_type_hint) {
 +  NOTIMPLEMENTED();
 +  return;
 +}

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/gl_image_processor_backend.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/gpu/chromeos/gl_image_processor_backend.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/gpu/chromeos/gl_image_processor_backend.cc
 @@ -28,6 +28,10 @@
  #include "ui/ozone/public/ozone_platform.h"

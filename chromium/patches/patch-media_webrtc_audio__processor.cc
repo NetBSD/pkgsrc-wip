@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/audio_processor.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/webrtc/audio_processor.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/webrtc/audio_processor.cc
 @@ -516,7 +516,7 @@ std::optional<double> AudioProcessor::Pr
    // controller.

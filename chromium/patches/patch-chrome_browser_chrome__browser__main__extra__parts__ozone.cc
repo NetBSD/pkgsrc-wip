@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_extra_parts_ozone.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/chrome_browser_main_extra_parts_ozone.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/chrome_browser_main_extra_parts_ozone.cc
 @@ -28,7 +28,7 @@ void ChromeBrowserMainExtraPartsOzone::P
  }

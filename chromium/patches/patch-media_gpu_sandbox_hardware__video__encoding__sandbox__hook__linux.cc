@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc
 @@ -18,12 +18,15 @@
  #include "media/gpu/v4l2/v4l2_device.h"

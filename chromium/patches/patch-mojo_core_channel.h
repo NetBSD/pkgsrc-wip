@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- mojo/core/channel.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ mojo/core/channel.h
 @@ -167,7 +167,7 @@ class MOJO_SYSTEM_IMPL_EXPORT Channel
        } v2;

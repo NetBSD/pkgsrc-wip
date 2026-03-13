@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/scheduler/responsiveness/native_event_observer.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/scheduler/responsiveness/native_event_observer.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/scheduler/responsiveness/native_event_observer.h
 @@ -16,7 +16,7 @@
  #include "content/public/browser/native_event_processor_observer_mac.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/gfx/native_pixmap_handle.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"

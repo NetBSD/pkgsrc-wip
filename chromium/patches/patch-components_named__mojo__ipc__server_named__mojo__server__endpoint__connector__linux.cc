@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc
-@@ -7,6 +7,10 @@
- #include <sys/socket.h>
+@@ -8,6 +8,10 @@
+ #include <sys/stat.h>
  #include <sys/types.h>
  
 +#if BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
@@ -17,7 +17,7 @@ $NetBSD$
  #include <memory>
  #include <utility>
  
-@@ -84,12 +88,24 @@ void NamedMojoServerEndpointConnectorLin
+@@ -86,12 +90,24 @@ void NamedMojoServerEndpointConnectorLin
  
    auto info = std::make_unique<ConnectionInfo>();
    socklen_t len = sizeof(info->credentials);

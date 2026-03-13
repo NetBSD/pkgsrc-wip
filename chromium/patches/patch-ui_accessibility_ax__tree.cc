@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/accessibility/ax_tree.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/accessibility/ax_tree.cc
 @@ -699,7 +699,7 @@ struct AXTreeUpdateState {
    // (crrev.com/c/2892259).

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/actions/chrome_action_id.h
-@@ -525,7 +525,7 @@
+@@ -530,7 +530,7 @@
  #if BUILDFLAG(IS_CHROMEOS)
  #define CHROME_PLATFORM_SPECIFIC_ACTION_IDS \
    E(kToggleMultitaskMenu, IDC_TOGGLE_MULTITASK_MENU)

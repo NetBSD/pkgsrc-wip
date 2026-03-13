@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_manager_impl.cc
 @@ -232,7 +232,7 @@ void TaskManagerImpl::GetUSERHandles(Tas
  }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/discardable_memory_internal.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- base/memory/discardable_memory_internal.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ base/memory/discardable_memory_internal.h
 @@ -12,7 +12,7 @@
  #include "base/metrics/field_trial_params.h"

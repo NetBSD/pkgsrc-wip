@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/renderer/shell_content_renderer_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/shell/renderer/shell_content_renderer_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/shell/renderer/shell_content_renderer_client.cc
-@@ -50,7 +50,7 @@
- #include "media/base/media_switches.h"
- #endif
+@@ -56,7 +56,7 @@
+ #include "components/surface_embed/renderer/create_plugin.h"
+ #endif  // BUILDFLAG(ENABLE_SURFACE_EMBED)
  
 -#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && \

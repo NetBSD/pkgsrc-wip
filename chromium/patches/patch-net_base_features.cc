@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/features.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- net/base/features.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ net/base/features.cc
 @@ -29,7 +29,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
  
@@ -15,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -301,7 +301,7 @@ inline constexpr auto kMigrateSessionsOn
+@@ -297,7 +297,7 @@ inline constexpr auto kMigrateSessionsOn
  BASE_FEATURE(kMigrateSessionsOnNetworkChangeV2,
               kMigrateSessionsOnNetworkChangeV2Default);
  
@@ -24,7 +24,7 @@ $NetBSD$
  BASE_FEATURE(kAddressTrackerLinuxIsProxied, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -415,7 +415,7 @@ BASE_FEATURE(kReportingApiEnableEnterpri
+@@ -409,7 +409,7 @@ BASE_FEATURE(kReportingApiEnableEnterpri
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  BASE_FEATURE(kSimdutfBase64Support,
@@ -33,7 +33,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -508,7 +508,7 @@ BASE_FEATURE(kHttpCacheMappedFileFlushWi
+@@ -517,7 +517,7 @@ BASE_FEATURE(kHttpCacheMappedFileFlushWi
  
  BASE_FEATURE(kHttpCacheNoVarySearch,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

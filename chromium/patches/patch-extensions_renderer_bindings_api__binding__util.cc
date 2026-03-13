@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
 @@ -142,7 +142,7 @@ void InvalidateContext(v8::Local<v8::Con
  std::string GetPlatformString() {

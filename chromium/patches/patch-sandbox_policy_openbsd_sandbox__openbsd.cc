@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-02-14 15:42:44.747593954 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-03-13 16:54:16.319235284 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,445 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -230,7 +230,7 @@ $NetBSD$
 +      ufile = _UNVEIL_CDM;
 +      break;
 +    default:
-+      unveil("/dev/null", "r");
++      unveil("/dev/null", "rw");
 +      goto done;
 +  }
 +
@@ -354,7 +354,7 @@ $NetBSD$
 +      break;
 +    case sandbox::mojom::Sandbox::kGpu:
 +    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
-+      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd tmppath unix", NULL);
++      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd unix", NULL);
 +      break;
 +    case sandbox::mojom::Sandbox::kAudio:
 +      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_audio");

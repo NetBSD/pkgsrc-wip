@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/component_updater/wasm_tts_engine_component_installer.cc
 @@ -14,7 +14,7 @@
  #include "components/prefs/pref_registry_simple.h"
@@ -62,7 +62,7 @@ $NetBSD$
        pref_service_->GetTime(prefs::kAccessibilityReadAnythingDateLastOpened);
 @@ -225,7 +225,7 @@ void WasmTtsEngineComponentInstallerPoli
  bool WasmTtsEngineComponentInstallerPolicy::VerifyInstallation(
-     const base::Value::Dict& /* manifest */,
+     const base::DictValue& /* manifest */,
      const base::FilePath& install_dir) const {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
