@@ -19,8 +19,8 @@ TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 TOOL_DEPENDS+=	unifdef-[0-9]*:../../devel/unifdef
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
 # this doesn't seem to be using the pkg-config file, which would add this
@@ -63,6 +63,9 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_GSTREAMER_GL=ON
 CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBBACKTRACE=OFF
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_WEBDRIVER=OFF
 CMAKE_CONFIGURE_ARGS+=		-DUSE_GTK4=OFF
+.if ${OPSYS} == "Darwin"
+CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
+.endif
 # otherwise, libsqlite3.so from ${BUILDLINK_DIR} is hardcoded into some binaries
 CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
 
@@ -189,7 +192,9 @@ CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
+.if ${PKGSRC_COMPILER} == "gcc"
 .include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"
