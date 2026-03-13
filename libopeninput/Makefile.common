@@ -6,8 +6,11 @@ VERSION=	1.30.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sizeofvoid/}
 GITHUB_PROJECT=	libopeninput
-GITHUB_TAG=	2f41609216e7655ea567279adfd2214fc585667f
+GITHUB_TAG=	1db645a4a690088135ba34a70efd7b764ecd8c0f
 
 MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/libopeninput/
 LICENSE=	mit
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/libopeninput/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/libopeninput/patches
