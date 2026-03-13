@@ -3,7 +3,7 @@
 # Some environment variables that can help debugging this:
 # https://trac.webkit.org/wiki/EnvironmentVariables
 
-DISTNAME=	webkitgtk-2.50.5
+DISTNAME=	webkitgtk-2.50.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/

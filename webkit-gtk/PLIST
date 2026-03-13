@@ -222,12 +222,12 @@ include/webkitgtk-4.1/webkitdom/webkitdomdefines.h
 lib/girepository-1.0/JavaScriptCore-4.1.typelib
 lib/girepository-1.0/WebKit2-4.1.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.1.typelib
-lib/libjavascriptcoregtk-4.1.${RUBY_DLEXT}
+lib/libjavascriptcoregtk-4.1.so
 lib/libjavascriptcoregtk-4.1.so.0
-lib/libjavascriptcoregtk-4.1.so.0.9.10
-lib/libwebkit2gtk-4.1.${RUBY_DLEXT}
+lib/libjavascriptcoregtk-4.1.so.0.9.11
+lib/libwebkit2gtk-4.1.so
 lib/libwebkit2gtk-4.1.so.0
-lib/libwebkit2gtk-4.1.so.0.19.8
+lib/libwebkit2gtk-4.1.so.0.19.9
 lib/pkgconfig/javascriptcoregtk-4.1.pc
 lib/pkgconfig/webkit2gtk-4.1.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.1.pc
