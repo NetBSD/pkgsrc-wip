@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/camel_converter/__init__.py
+${PYSITELIB}/camel_converter/__init__.pyc
+${PYSITELIB}/camel_converter/__init__.pyo
+${PYSITELIB}/camel_converter/_version.py
+${PYSITELIB}/camel_converter/_version.pyc
+${PYSITELIB}/camel_converter/_version.pyo
+${PYSITELIB}/camel_converter/decorators.py
+${PYSITELIB}/camel_converter/decorators.pyc
+${PYSITELIB}/camel_converter/decorators.pyo
+${PYSITELIB}/camel_converter/py.typed
+${PYSITELIB}/camel_converter/pydantic_base.py
+${PYSITELIB}/camel_converter/pydantic_base.pyc
+${PYSITELIB}/camel_converter/pydantic_base.pyo

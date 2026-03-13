@@ -1,0 +1,3 @@
+In JSON keys are frequently in camelCase format, while variable names
+in Python are typically snake_case. The purpose of this package is to
+help convert between the two formats.

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (polyfactory-3.3.0.tar.gz) = d4f7bd8a4d57c7de4ccc75592dd896ce8a54d7bfeff222bf7296f440c668f69d
+SHA512 (polyfactory-3.3.0.tar.gz) = 05c15a0e254a8fd641a4cb8958fcb402b0342f97de245faef4803ecaa50e2a1f2add94c637734dd71e0063924d948898e5133be6fb9aa3880ce4845699ef5314
+Size (polyfactory-3.3.0.tar.gz) = 350779 bytes

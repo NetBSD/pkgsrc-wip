@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ksef2-0.8.1
+DISTNAME=	ksef2-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=artpods56/}
@@ -14,6 +14,8 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+# How to mark python > 3.12?
+
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12.5:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=44.0.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-signxml>=4.0:../../wip/py-signxml
@@ -24,6 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.5:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-xsdata-pydantic>=24.5:../../wip/py-xsdata-pydantic
 DEPENDS+=	${PYPKGPREFIX}-weasyprint>=63.0:../../print/py-weasyprint
 DEPENDS+=	${PYPKGPREFIX}-tenacity>=9.0:../../devel/py-tenacity
+DEPENDS+=	${PYPKGPREFIX}-polyfactory>=3.3.0:../../wip/py-polyfactory
+DEPENDS+=	${PYPKGPREFIX}-beartype>=0.22.9:../../wip/py-beartype
+DEPENDS+=	${PYPKGPREFIX}-camel-converter>=5.1.0:../../wip/py-camel-converter
 
 USE_LANGUAGES=	# none
 
