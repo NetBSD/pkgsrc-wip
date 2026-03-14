@@ -2,7 +2,7 @@
 
 .include "../../wip/libopeninput/Makefile.common"
 
-DISTNAME=	input-headers-${VERSION}
+PKGNAME=	input-headers-${VERSION}
 COMMENT=	Input headers from libopeninput
 
 USE_TOOLS+=	pax
