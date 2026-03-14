@@ -2,6 +2,7 @@
 # used by devel/libopeninput/Makefile
 # used by devel/input-headers/Makefile
 
+DISTNAME=	libopeninput-${VERSION}
 VERSION=	1.30.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sizeofvoid/}

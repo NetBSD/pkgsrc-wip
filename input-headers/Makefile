@@ -6,7 +6,6 @@ PKGNAME=	input-headers-${VERSION}
 COMMENT=	Input headers from libopeninput
 
 USE_TOOLS+=	pax
-WRKSRC=		${WRKDIR}/libopeninput-${GITHUB_TAG}
 
 INSTALLATION_DIRS+=	include/linux
 
