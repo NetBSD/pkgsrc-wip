@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service_fake.cc.orig	2026-03-13 16:54:16.323633582 +0000
+--- services/device/usb/usb_service_fake.cc.orig	2026-03-14 12:24:26.693696953 +0000
 +++ services/device/usb/usb_service_fake.cc
-@@ -0,0 +1,50 @@
+@@ -0,0 +1,49 @@
 +// Copyright 2014 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -21,7 +21,6 @@ $NetBSD$
 +#include <utility>
 +
 +#include "base/barrier_closure.h"
-+#include "base/containers/contains.h"
 +#include "base/location.h"
 +#include "base/notimplemented.h"
 +#include "base/memory/ref_counted_memory.h"

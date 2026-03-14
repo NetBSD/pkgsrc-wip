@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run-paxctl.py.orig	2026-03-13 16:54:16.427384944 +0000
+--- v8/tools/run-paxctl.py.orig	2026-03-14 12:24:26.804462558 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
 +#!@PYTHONBIN@
