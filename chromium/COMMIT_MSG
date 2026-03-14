@@ -1,79 +1,9 @@
-www/chromium: update to 146.0.7680.75
+www/chromium: update to 146.0.7680.80
 
-* 146.0.7680.75
-This update includes 2 security fixes. Please see the
+* 146.0.7680.80
+This update includes 1 security fixes. Please see the
 Chrome Security Page for more information.
 [N/A][491421267] High CVE-2026-3909: Out of bounds write in Skia.
-Reported by Google on 2026-03-10
-[N/A][491410818] High CVE-2026-3910: Inappropriate implementation
-in V8. Reported by Google on 2026-03-10
+Reported by Google Threat Analysis Group on 2026-03-10
 
-Google is aware that exploits for both CVE-2026-3909 & CVE-2026-3910
-exist in the wild.
-
-* 146.0.7680.71
-This update includes 29 security fixes. Please see the
-Chrome Security Page for more information.
-[$33000][483445078] Critical CVE-2026-3913: Heap buffer overflow
-in WebML. Reported by Tobias Wienand on 2026-02-10
-[$43000][481776048] High CVE-2026-3914: Integer overflow in WebML.
-Reported by cinzinga on 2026-02-04
-[$43000][483971526] High CVE-2026-3915: Heap buffer overflow
-in WebML. Reported by Tobias Wienand on 2026-02-12
-[$36000][482828615] High CVE-2026-3916: Out of bounds read in
-Web Speech. Reported by Grischa Hauser on 2026-02-09
-[$11000][483569512] High CVE-2026-3917: Use after free in Agents.
-Reported by Syn4pse on 2026-02-11
-[$10000][483853103] High CVE-2026-3918: Use after free in WebMCP.
-Reported by Syn4pse on 2026-02-12
-[$2000][444176961] High CVE-2026-3919: Use after free in Extensions.
-Reported by Huinian Yang (@vmth6) of Amber Security Lab,
-OPPO Mobile Telecommunications Corp. Ltd. on 2025-09-10
-[TBD][482875307] High CVE-2026-3920: Out of bounds memory access
-in WebML. Reported by Google on 2026-02-09
-[TBD][484946544] High CVE-2026-3921: Use after free in TextEncoding.
-Reported by Pranamya Keshkamat & Cantina.xyz on 2026-02-17
-[TBD][485397139] High CVE-2026-3922: Use after free in MediaStream.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-18
-[TBD][485935314] High CVE-2026-3923: Use after free in WebMIDI.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-20
-[TBD][487338366] High CVE-2026-3924: Use after free in WindowDialog.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-25
-[$10000][418214610] Medium CVE-2026-3925: Incorrect security UI in
-LookalikeChecks. Reported by NDevTK and Alesandro Ortiz on 2025-05-17
-[$7000][478659010] Medium CVE-2026-3926: Out of bounds read in V8.
-Reported by qymag1c on 2026-01-26
-[$3000][474948986] Medium CVE-2026-3927: Incorrect security UI in
-PictureInPicture. Reported by Barath Stalin K on 2026-01-11
-[$2000][435980394] Medium CVE-2026-3928: Insufficient policy
-enforcement in Extensions. Reported by portsniffer443 on 2025-08-03
-[$2000][477180001] Medium CVE-2026-3929: Side-channel information
-leakage in ResourceTiming. Reported by Povcfe of Tencent Security
-Xuanwu Lab on 2026-01-20
-[$1000][476898368] Medium CVE-2026-3930: Unsafe navigation in
-Navigation. Reported by Povcfe of Tencent Security Xuanwu Lab
-on 2026-01-19
-[TBD][417599694] Medium CVE-2026-3931: Heap buffer overflow in Skia.
-Reported by Huinian Yang (@vmth6) of Amber Security Lab,
-OPPO Mobile Telecommunications Corp. Ltd. on 2025-05-14
-[TBD][478296121] Medium CVE-2026-3932: Insufficient policy
-enforcement in PDF. Reported by Ayato Shitomi on 2026-01-23
-[TBD][478783560] Medium CVE-2026-3934: Insufficient policy
-enforcement in ChromeDriver. Reported by Povcfe of Tencent
-Security Xuanwu Lab on 2026-01-26
-[TBD][479326680] Medium CVE-2026-3935: Incorrect security UI in
-WebAppInstalls. Reported by Barath Stalin K on 2026-01-28
-[TBD][481920229] Medium CVE-2026-3936: Use after free in WebView.
-Reported by Am4deu$ on 2026-02-05
-[$3000][473118648] Low CVE-2026-3937: Incorrect security UI in Downloads.
-Reported by Abhishek Kumar on 2026-01-03
-[$2000][474763968] Low CVE-2026-3938: Insufficient policy enforcement
-in Clipboard. Reported by vicevirus on 2026-01-10
-[$1000][40058077] Low CVE-2026-3939: Insufficient policy enforcement
-in PDF. Reported by NDevTK on 2021-11-30
-[$1000][470574526] Low CVE-2026-3940: Insufficient policy enforcement
-in DevTools. Reported by Jorian Woltjer, Mian, bug_blitzer on 2025-12-21
-[$1000][474670215] Low CVE-2026-3941: Insufficient policy enforcement
-in DevTools. Reported by Lyra Rebane (rebane2001) on 2026-01-10
-[N/A][475238879] Low CVE-2026-3942: Incorrect security UI in
-PictureInPicture. Reported by Barath Stalin K on 2026-01-12
+Google is aware that an exploit for CVE-2026-3909 exists in the wild.
