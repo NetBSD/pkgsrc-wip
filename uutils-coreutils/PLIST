@@ -1,2 +1,4 @@
 @comment $NetBSD$
 bin/coreutils
+bin/uu-yes
+uutils-coreutils/bin/yes
