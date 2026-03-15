@@ -13,8 +13,12 @@ LICENSE=	mit
 
 RUST_REQ=	1.88.0
 
-# TODO: fill in PROGS
-PROGS+=		yes
+PROGS+=		base32 base64 basename basenc cat cksum b2sum md5sum sha1sum sha224sum sha256sum \
+		sha384sum sha512sum comm cp csplit cut date dd df dir dircolors dirname du echo \
+		env expand expr factor false fmt fold head join link ln ls mkdir mktemp more mv nl \
+		numfmt od paste pr printenv printf ptx pwd readlink realpath rm rmdir seq shred \
+		shuf sleep sort split sum tac tail tee test touch tr true truncate tsort unexpand \
+		uniq unlink vdir wc yes
 
 INSTALLATION_DIRS+=	uutils-coreutils/bin
 
