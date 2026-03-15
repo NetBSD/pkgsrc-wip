@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (ksef2-0.9.0.tar.gz) = 5ad0912f0f42e4d16f7293175a254c2acede814d0d4ce08812ba62730d02c2b5
-SHA512 (ksef2-0.9.0.tar.gz) = 6dc4cebff7fb40b92610b108b3774625cc47f9a5e26c619c5c44770ae24988d85b7588fe4afafe2bd35163f34bfa1c3f31c23a2054b2eb2aebf879c3e2911e27
-Size (ksef2-0.9.0.tar.gz) = 1934788 bytes
+BLAKE2s (ksef2-0.9.2.tar.gz) = 381cb75baa4f77e38f5f8993e02bb92907a26f971bf8fafe6e92dcd47529dab7
+SHA512 (ksef2-0.9.2.tar.gz) = c0d70309c2c828be6778bb754cf728ed0981e87c5b345bc7a64c17a8445ae3b1e7bbe7e71c8ca7d6c0a38c560939cebb26fb0b09de442608d5333a0e24ea928e
+Size (ksef2-0.9.2.tar.gz) = 1935499 bytes
