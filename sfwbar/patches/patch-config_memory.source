@@ -20,7 +20,7 @@ $NetBSD$
  Set XMemCache = If(!Ident(BSDCtl),MemCache,Val(BSDCtl("vm.stats.vm.v_inactive_count"))*XPageSize)
  Set XMemBuff = If(!Ident(BSDCtl),MemBuff,Val(BSDCtl("vm.stats.vm_laundry_count"))*XPageSize)
 -Set XMemUtilization = (XMemTotal-XMemFree-XMemCache-XMemBuff)/XMemTotal
-+Set XMemUtil_NetBSD = (XMemTotal-XMemFree-XMemCache)/XMemTotal
++Set XMemUtil_NetBSD = (XMemTotal-XMemFree)/XMemTotal
 +Set XMemUtil = (XMemTotal-XMemFree-XMemCache-XMemBuff)/XMemTotal
 +Set XMemUtilization = If(IsNetBSD,XMemUtil_NetBSD,XMemUtil)
  Set XMemPresent = If(Ident(BSDCtl),$XPageSize!="",MemTotal.count)
