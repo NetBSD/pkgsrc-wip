@@ -56,9 +56,7 @@ include/clc/cl_khr_local_int32_extended_atomics/atom_min.h
 include/clc/cl_khr_local_int32_extended_atomics/atom_or.h
 include/clc/cl_khr_local_int32_extended_atomics/atom_xor.h
 include/clc/clc.h
-include/clc/clcfunc.h
 include/clc/clcmacros.h
-include/clc/clctypes.h
 include/clc/common/degrees.h
 include/clc/common/degrees.inc
 include/clc/common/mix.h
@@ -84,7 +82,6 @@ include/clc/geometric/fast_length.h
 include/clc/geometric/fast_length.inc
 include/clc/geometric/fast_normalize.h
 include/clc/geometric/fast_normalize.inc
-include/clc/geometric/floatn.inc
 include/clc/geometric/length.h
 include/clc/geometric/length.inc
 include/clc/geometric/normalize.h
@@ -100,7 +97,6 @@ include/clc/integer/add_sat.inc
 include/clc/integer/clz.h
 include/clc/integer/clz.inc
 include/clc/integer/definitions.h
-include/clc/integer/gentype.inc
 include/clc/integer/hadd.h
 include/clc/integer/hadd.inc
 include/clc/integer/integer-gentype.inc
@@ -133,7 +129,6 @@ include/clc/math/atan2.h
 include/clc/math/atan2pi.h
 include/clc/math/atanh.h
 include/clc/math/atanpi.h
-include/clc/math/binary_decl.inc
 include/clc/math/binary_decl_tt.inc
 include/clc/math/cbrt.h
 include/clc/math/ceil.h
@@ -158,7 +153,6 @@ include/clc/math/fract.h
 include/clc/math/fract.inc
 include/clc/math/frexp.h
 include/clc/math/frexp.inc
-include/clc/math/gentype.inc
 include/clc/math/half_cos.h
 include/clc/math/half_divide.h
 include/clc/math/half_exp.h
@@ -229,18 +223,14 @@ include/clc/math/sqrt.h
 include/clc/math/tan.h
 include/clc/math/tanh.h
 include/clc/math/tanpi.h
-include/clc/math/ternary_decl.inc
 include/clc/math/tgamma.h
 include/clc/math/trunc.h
-include/clc/math/unary_decl.inc
 include/clc/misc/shuffle.h
 include/clc/misc/shuffle2.h
 include/clc/relational/all.h
 include/clc/relational/any.h
-include/clc/relational/binary_decl.inc
 include/clc/relational/bitselect.h
 include/clc/relational/bitselect.inc
-include/clc/relational/floatn.inc
 include/clc/relational/isequal.h
 include/clc/relational/isfinite.h
 include/clc/relational/isgreater.h
@@ -255,9 +245,7 @@ include/clc/relational/isnotequal.h
 include/clc/relational/isordered.h
 include/clc/relational/isunordered.h
 include/clc/relational/select.h
-include/clc/relational/select.inc
 include/clc/relational/signbit.h
-include/clc/relational/unary_decl.inc
 include/clc/shared/clamp.h
 include/clc/shared/clamp.inc
 include/clc/shared/max.h
@@ -327,6 +315,8 @@ share/clc/gfx1151-amdgcn--.bc
 share/clc/gfx1151-amdgcn-mesa-mesa3d.bc
 share/clc/gfx1152-amdgcn--.bc
 share/clc/gfx1152-amdgcn-mesa-mesa3d.bc
+share/clc/gfx1153-amdgcn--.bc
+share/clc/gfx1153-amdgcn-mesa-mesa3d.bc
 share/clc/gfx1200-amdgcn--.bc
 share/clc/gfx1200-amdgcn-mesa-mesa3d.bc
 share/clc/gfx1201-amdgcn--.bc

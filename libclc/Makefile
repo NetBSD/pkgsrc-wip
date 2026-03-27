@@ -1,6 +1,9 @@
 # $NetBSD: $
 
 .include "../../lang/llvm/version.mk"
+# undo version.mk assumptions:
+EXTRACT_ELEMENTS=	# default
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 DISTNAME=	libclc-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
