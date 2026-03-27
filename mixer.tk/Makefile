@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2012/11/23 22:33:42 othyro Exp $
-#
+# $NetBSD$
 
-DISTNAME=	mixer.tk-0.4
+DISTNAME=	mixer.tk-0.5
 CATEGORIES=	audio
 MASTER_SITES=	http://gnorw.net/netbsd/
 
-MAINTAINER=	jaka.jejcic@gmail.com
-HOMEPAGE=	https://gnorw.net/netbsd/mixer.tk-0.4/
+MAINTAINER=	jaka@nan.si
+HOMEPAGE=	https://gnorw.net/netbsd/mixer.tk-0.5/
 COMMENT=	Tcl/Tk audio mixer using mixerctl utility
+LICENSE=	mit
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
