@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.203 2026/03/02 15:02:33 abs Exp $
 
-DISTNAME=	syncthing-source-v2.0.14
+DISTNAME=	syncthing-source-v2.0.15
 PKGNAME=	${DISTNAME:S,source-v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
@@ -20,10 +20,6 @@ LICENSE=	mpl-2.0
 
 # The 'zillode' dependency calls the compiler on certain archs.
 USE_LANGUAGES=		c
-
-# v2.0.14 fail with go1.26 after a few minutes with
-# "panic: crypto/tls bug: where's my session ticket?"
-GO_VERSION_REQD=	125
 
 # Otherwise binary fails to start with "Cannot write-enable text segment"
 MKPIE_SUPPORTED=	no
