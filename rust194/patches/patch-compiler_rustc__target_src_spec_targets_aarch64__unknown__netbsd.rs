@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_aarch64__unknown__netbsd.rs,v 1.3 2025/08/25 17:51:12 wiz Exp $
 
 NetBSD aarch64 has a bug in the thread-local storage implementation,
 ref. PR#58154.  Turn it off for now.

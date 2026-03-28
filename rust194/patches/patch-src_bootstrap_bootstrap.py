@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.28 2026/01/13 20:48:23 wiz Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Use @PREFIX@ and not $ORIGIN in rpath.

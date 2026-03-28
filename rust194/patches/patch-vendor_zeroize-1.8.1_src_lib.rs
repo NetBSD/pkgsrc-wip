@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_zeroize-1.8.1_src_lib.rs,v 1.2 2025/08/25 17:51:14 wiz Exp $
 
 Don't try to use the NEON-specific module in big-endian mode.
 

@@ -24,7 +24,7 @@
 #CROSS_ROOT=		/u/riscv64
 #CROSS_ROOT=		/u/m68k
 #CROSS_ROOT=		/
-MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
+#MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf

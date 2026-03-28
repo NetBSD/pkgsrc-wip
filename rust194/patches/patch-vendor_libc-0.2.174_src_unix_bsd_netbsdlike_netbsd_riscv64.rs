@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_libc-0.2.174_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2025/10/18 17:14:35 he Exp $
 
 Unbreak this module.
 

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_memchr-2.7.4_src_arch_aarch64_mod.rs,v 1.3 2025/08/25 17:51:13 wiz Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 

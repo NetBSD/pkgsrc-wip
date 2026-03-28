@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-tests_assembly-llvm_targets_targets-elf.rs,v 1.1 2025/10/18 17:14:35 he Exp $
 
 Fix test suite for mips64el-unknown-netbsd.
 

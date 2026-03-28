@@ -19,12 +19,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
-# Rust 1.92.0 needs llvm >= 20, so if we're still on older...
-LLVM_VERSION!=			awk '/^LLVM_VERSION/ { print $$2 }' ../../lang/llvm/version.mk
-.if !empty(LLVM_VERSION:M1[0-9].*)
-PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
-.endif
-
 PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 
 # Bundle OpenSSL and curl into the cargo binary when producing
@@ -71,14 +65,13 @@ GCC_REQD+=	14
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=20.0.0
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-libunwind=system
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 # Also turn off build of the internal LLD, as the external LLVM
-# may be older (e.g. 18) than the internal LLD (now 19.x), ref.
+# may be older (e.g., 18) than the internal LLD (now 19.x), ref.
 # https://github.com/rust-lang/rust/issues/131291
 CONFIGURE_ARGS+=	--set rust.lld=false
 .endif
@@ -86,7 +79,7 @@ CONFIGURE_ARGS+=	--set rust.lld=false
 # Rust bumps into NetBSD's limit of 256 TLS keys per process, at least
 # on aarch64 with "fatal runtime error: out of TLS keys, aborting"
 # (for some incomprehensible reason this isn't triggered on NetBSD/amd64 10.1)
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*}
 # So try to bump that per-process limit:
 MAKE_ENV+=		PTHREAD_KEYS_MAX=512
 .endif
