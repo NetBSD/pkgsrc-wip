@@ -1896,6 +1896,7 @@ SUBDIR+=	js-Gallery
 SUBDIR+=	jsl
 SUBDIR+=	json2tsv-git
 SUBDIR+=	jsoncpp-git
+SUBDIR+=	jsongrep
 SUBDIR+=	jsonrpc-glib
 SUBDIR+=	judy
 SUBDIR+=	julia
