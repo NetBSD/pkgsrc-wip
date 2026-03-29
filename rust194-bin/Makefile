@@ -287,7 +287,8 @@ fix-relative-rpath:
 .  if ${OPSYS} == "Linux"
 .    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-link llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
-	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
+	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld \
+	   self-contained/llvm-bitcode-linker wasm-component-ld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 	   ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .    endfor
