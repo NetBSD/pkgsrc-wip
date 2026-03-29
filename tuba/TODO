@@ -1,3 +1,5 @@
 Needs some keyring support, read
 https://github.com/GeopJr/Tuba/wiki/keyring-issues
 and add missing dependencies?
+
+Import textproc/libspelling and uncomment bl3 line in Makefile.
