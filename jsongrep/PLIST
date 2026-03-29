@@ -1,8 +1,0 @@
-@comment $NetBSD$
-bin/jg
-man/man1/jg-generate-man.1
-man/man1/jg-generate-shell.1
-man/man1/jg-generate.1
-man/man1/jg.1
-share/bash-completion/completions/jg
-share/zsh/site-functions/_jg

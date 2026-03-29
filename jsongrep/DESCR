@@ -1,2 +1,0 @@
-jsongrep is a command-line tool and Rust library for fast querying of JSON
-documents using regular path expressions.
