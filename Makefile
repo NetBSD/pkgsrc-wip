@@ -1360,7 +1360,6 @@ SUBDIR+=	gnome-tweaks
 SUBDIR+=	gnome40
 SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
-SUBDIR+=	gnucash
 SUBDIR+=	gnucash-devel
 SUBDIR+=	gnujump
 SUBDIR+=	gnump3d
