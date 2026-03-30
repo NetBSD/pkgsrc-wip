@@ -2,9 +2,7 @@
 
 DISTNAME=		fancyref.doc
 PKGNAME=		tex-${DISTNAME:S/./-/}-0.9c
-TEXLIVE_REV=		15878
-TEXLIVE_USE_CTAN=	yes
-TEXLIVE_UNVERSIONED=	yes
+TEXLIVE_REV=		77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fancyref

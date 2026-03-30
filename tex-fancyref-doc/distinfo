@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (tex-fancyref-15878/fancyref.doc.tar.xz) = 4056d5987ffbd6ecd788a94a4e34866d7b075d74
-SHA512 (tex-fancyref-15878/fancyref.doc.tar.xz) = cbe4e20ffea267dc15c81e75a2a013b6c02e4eb4e1603fc85cd15ff6568bd9a21f57300940b977a918cea42f8b40dd70181dfede076b5da4c97b51d9ba57cacd
-Size (tex-fancyref-15878/fancyref.doc.tar.xz) = 104292 bytes
+BLAKE2s (fancyref.doc.r77682.tar.xz) = 9c124c142de9a3f06e65c61ba9c878b24787d5b40643c54289431b92511e2662
+SHA512 (fancyref.doc.r77682.tar.xz) = 6b6829b1d6f63a50799d5c3636c4fd9a33a752065d7d1890ce32e871e6d7417d29933e583122b117050970a665bac225ee02e8de9e41671a92d6ebfb105090f9
+Size (fancyref.doc.r77682.tar.xz) = 104292 bytes
