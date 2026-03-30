@@ -27,7 +27,6 @@ lib/librewolf/libmozsqlite3.so
 ${PLIST.wayland}lib/librewolf/libmozwayland.so
 lib/librewolf/libxul.so
 lib/librewolf/omni.ja
-lib/librewolf/pingsender
 lib/librewolf/platform.ini
 lib/librewolf/removed-files
 ${PLIST.v4l2_decode}lib/librewolf/v4l2test
