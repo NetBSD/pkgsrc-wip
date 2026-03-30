@@ -13,6 +13,7 @@ LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 BUILDLINK_FILES.llvm+=		bin/FileCheck
 BUILDLINK_FILES.llvm+=		bin/UnicodeNameMappingGenerator
 BUILDLINK_FILES.llvm+=		bin/bugpoint
+BUILDLINK_FILES.llvm+=		bin/clang-offload-packager
 BUILDLINK_FILES.llvm+=		bin/count
 BUILDLINK_FILES.llvm+=		bin/dsymutil
 BUILDLINK_FILES.llvm+=		bin/llc

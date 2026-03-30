@@ -6,7 +6,7 @@ PKGNAME=	mlir-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mlir.llvm.org/
+HOMEPAGE=	https://mlir.llvm.org/
 COMMENT=	Multi-Level Intermediate Representation
 LICENSE=	apache-2.0
 
@@ -19,7 +19,7 @@ CMAKE_CONFIGURE_ARGS+=	-DMLIR_INSTALL_AGGREGATE_OBJECTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DMLIR_BUILD_MLIR_C_DYLIB=ON
 # Fix for: lib 'MLIR' not found.
 # MLIR_LINK_MLIR_DYLIB defaults to LLVM_LINK_LLVM_DYLIB, but libMLIR.so is not built.
-CMAKE_CONFIGURE_ARGS+=  -DMLIR_LINK_MLIR_DYLIB=OFF
+CMAKE_CONFIGURE_ARGS+=	-DMLIR_LINK_MLIR_DYLIB=OFF
 
 .include "../../devel/cmake/build.mk"
 .include "../../wip/llvm/buildlink3.mk"

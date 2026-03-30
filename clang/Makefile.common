@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://clang.llvm.org/
 LICENSE=	apache-2.0
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 

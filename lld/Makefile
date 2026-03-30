@@ -10,7 +10,7 @@ HOMEPAGE=	https://lld.llvm.org/
 COMMENT=	The LLVM Linker
 LICENSE=	apache-2.0
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 

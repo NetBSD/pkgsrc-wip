@@ -11,7 +11,7 @@ CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libcxxabi.llvm.org/
-COMMENT=	C++ Standard Librares (libc++/libc++abi) for WASI/WebAssembly
+COMMENT=	C++ Standard Libraries (libc++/libc++abi) for WASI/WebAssembly
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -22,8 +22,8 @@ TOOL_DEPENDS+=	lld-[0-9]*:../../wip/lld
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
 
-BUILD_DIRS+=		build_libcxx
-BUILD_DIRS+=		build_libcxxabi
+BUILD_DIRS+=		${WRKDIR}/build_libcxx
+BUILD_DIRS+=		${WRKDIR}/build_libcxxabi
 INSTALL_DIRS+=		${BUILD_DIRS}
 
 USE_LANGUAGES=	c c++
@@ -141,16 +141,16 @@ CMAKE_INSTALL_PREFIX=	${PREFIX}/wasi
 CPPFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
 post-extract:
-	${MKDIR} ${WRKSRC}/build_libcxx
-	${MKDIR} ${WRKSRC}/build_libcxxabi
+	${MKDIR} ${WRKDIR}/build_libcxx
+	${MKDIR} ${WRKDIR}/build_libcxxabi
 
 do-configure:
-	cd ${WRKSRC}/build_libcxx && \
+	cd ${WRKDIR}/build_libcxx && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
-		cmake ${CMAKE_CONFIGURE_ARGS} ../libcxx
-	cd ${WRKSRC}/build_libcxxabi && \
+		cmake ${CMAKE_CONFIGURE_ARGS} ${WRKSRC}/libcxx
+	cd ${WRKDIR}/build_libcxxabi && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
-		cmake ${CMAKE_CONFIGURE_ARGS} ../libcxxabi
+		cmake ${CMAKE_CONFIGURE_ARGS} ${WRKSRC}/libcxxabi
 
 # Run llvm-ranlib again on the archives. Fixes mystery build failure
 # in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
