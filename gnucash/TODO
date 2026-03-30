@@ -1,0 +1,10 @@
+Build failure:
+
+ice-9/boot-9.scm:1705:22: In procedure raise-exception:
+In procedure dlopen: file "libtest-core-guile.so", message "/tmp/finance/gnucash/work/gnucash-5.15/cmake-pkgsrc-build/lib/libgnc-core-utils.so: Undefined PLT symbol \"_ZN5boost10filesystem6detail4copyERKNS0_4pathES4_NS0_12copy_optionsEPNS_6system10error_codeE\" (symnum = 17)"
+Segmentation fault
+
+
+filed upstream as
+
+https://bugs.gnucash.org/show_bug.cgi?id=799757
