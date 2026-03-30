@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.20 2025/03/14 13:21:07 abs Exp $
 share/doc/unifi/README.mongodb
 unifi/bin/mongod
 unifi/dl/firmware/bundles.json
