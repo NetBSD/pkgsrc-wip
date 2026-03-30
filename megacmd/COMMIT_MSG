@@ -1,8 +1,0 @@
-net/megacmd: update to 2.5.1
-
-Tue Mar 24 09:36:34 CET 2026 - linux@mega.co.nz
-- Update to version 2.5.1:
-  * Fixed syncrhonizing updated empty files
-  * WSL bash completion speedup
-  
-- Use builtin megasdk-10.8.1
