@@ -1,3 +1,4 @@
 @comment $NetBSD$
-share/texmf-dist/doc/latex/setspace/README
-share/texmf-dist/doc/latex/setspace/setspace-test.tex
+share/texmf-dist/doc/latex/setspace/README.md
+share/texmf-dist/doc/latex/setspace/setspace-doc.pdf
+share/texmf-dist/doc/latex/setspace/setspace-doc.tex

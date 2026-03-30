@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (tex-setspace-24881/setspace.doc.tar.xz) = e8a36863343647af29166feeab10bf434cfafe86
-SHA512 (tex-setspace-24881/setspace.doc.tar.xz) = e3d24f3296714c405ba6e01cb8d5f09765f68c29bed84ce3040be3e1ed32e9c413399c63347d4a0463f2dd9be634e2ca08b5caf8b474166a2f8d6c06a2418b81
-Size (tex-setspace-24881/setspace.doc.tar.xz) = 936 bytes
+BLAKE2s (setspace.doc.r77682.tar.xz) = d4d16aa4947c9ca8ce5ee11f51c3e5b6d23510c25a050d6931bd40f8523b9fcb
+SHA512 (setspace.doc.r77682.tar.xz) = 85371993318d9dafeba9b2293fa34b2aa0bbc4fbda9d8ab678abe1f7864068672dbef4b74123515742320924be968a7c14cec18a3f509a9b804384ac62ade607
+Size (setspace.doc.r77682.tar.xz) = 196928 bytes
