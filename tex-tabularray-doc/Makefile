@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	tabularray.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2025B
-TEXLIVE_REV=	76184
+DISTNAME=		tabularray.doc
+PKGNAME=		tex-${DISTNAME:S/./-/}-2025C
+TEXLIVE_REV=		78251
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tabularray
