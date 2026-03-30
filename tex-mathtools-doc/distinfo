@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (tex-mathtools-38833/mathtools.doc.tar.xz) = 2ed8b1cfc11e3f3aab528dc365a27c254a0ceaf0
-SHA512 (tex-mathtools-38833/mathtools.doc.tar.xz) = 9444d6c6aafe6028174918055bad914dc21bc8f1b6d512ce72b86587f3af90795fd5cf4aa43bee0f98ecef85ab362691b8c68da39e6138bf0c8272eb5dae6472
-Size (tex-mathtools-38833/mathtools.doc.tar.xz) = 961848 bytes
+BLAKE2s (mathtools.doc.r78251.tar.xz) = de9361968475c100b1a54dfc799273a2396eae7bd2db9143e4f6b61c9a7f71f0
+SHA512 (mathtools.doc.r78251.tar.xz) = 9e384a03db00763c06e09751230b30854f3f86bbdfb7428360b414bbe8bdaae62604daa2b90809998a9d9abfba3d464ce946e7a4540ef92dab85f218a0b59dc7
+Size (mathtools.doc.r78251.tar.xz) = 1134164 bytes
