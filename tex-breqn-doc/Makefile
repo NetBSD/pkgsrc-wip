@@ -1,10 +1,8 @@
 # $NetBSD$
 
 DISTNAME=		breqn.doc
-PKGNAME=		tex-${DISTNAME:S/./-/}-0.98c
-TEXLIVE_REV=		38099
-TEXLIVE_USE_CTAN=	yes
-TEXLIVE_UNVERSIONED=	yes
+PKGNAME=		tex-${DISTNAME:S/./-/}-0.98l
+TEXLIVE_REV=		77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-breqn
