@@ -1,0 +1,10 @@
+$NetBSD: $
+
+BLAKE2s (2c86ef534c55d9b1e9290cbafb30c4e3227ffc82.tar.gz) = ee16ec80c8ec7d43bc84dbfbece3b1d8fdb843a7fb92263207314924dea5959f
+SHA512 (2c86ef534c55d9b1e9290cbafb30c4e3227ffc82.tar.gz) = 05d098672960885797f0da7f9a014b670d87f874f5baa593ab33768c05577e9ef7175a491b3feb498c03e5e9850005783183798bd4bef7016df163acdf29a49b
+Size (2c86ef534c55d9b1e9290cbafb30c4e3227ffc82.tar.gz) = 14560445 bytes
+SHA1 (patch-Makefile) = 1a6c0f7db80b599b1c6f37f2742da12558d4b94f
+SHA1 (patch-auto_configure) = f12b0ff8f80740289edee0002c49a056c8b08a20
+SHA1 (patch-configure) = 4514af45a71309dabfecb8aae019fdc2e36e45b6
+SHA1 (patch-feature.h) = a6cd7ae6267cb7e28d2a174226ccebb94b49dc16
+SHA1 (patch-link.sh) = 24db881cea873330a8a3bf672f6135d0835651fd

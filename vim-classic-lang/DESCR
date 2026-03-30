@@ -1,0 +1,8 @@
+Vim-Classic is a fork of Vim8.2.  It is an almost compatible version
+of the UNIX editor Vi.  Many new features have been added: multi
+level undo, syntax highlighting, command line history, on-line
+help, filename completion, block operations, etc.
+
+This package is only a shared data-package for the `actual'
+vim-classic packages.  You also have to install vim-classic to get
+a working editor.
