@@ -16,7 +16,7 @@ FORTIFY_SUPPORTED=	no
 .include "../../mk/bsd.prefs.mk"
 
 MAINTAINER=		
-HOMEPAGE=		https://git.sr.ht/~sircmpwn/vim-classic
+HOMEPAGE=		https://vim-classic.org/
 LICENSE=		vim-license OR gnu-gpl-v2
 
 CONFLICTS+=		vim-kde-[0-9]*
