@@ -5756,7 +5756,6 @@ SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-seatingchart
 SUBDIR+=	tex-seatingchart-doc
 SUBDIR+=	tex-setspace-doc
-SUBDIR+=	tex-tabularray-doc
 SUBDIR+=	tex-texlive-ja-doc
 SUBDIR+=	tex-uptex-doc
 SUBDIR+=	textadept
