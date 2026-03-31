@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/tabto-ltx/README
+share/texmf-dist/doc/latex/tabto-ltx/tabto-doc.pdf
+share/texmf-dist/doc/latex/tabto-ltx/tabto-doc.tex
