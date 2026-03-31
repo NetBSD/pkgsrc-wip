@@ -1,0 +1,42 @@
+net/dnsdist: Update to version 2.0.3
+
+Released: 31st of March 2026
+Improvements
+Add a metric for the latency of the latest health-check
+References: pull request 16863
+Export DNS flags via ProtoBuf
+References: pull request 16865
+Add a histogram of health-check latencies for backends
+References: pull request 16883
+
+Bug Fixes
+CVE-2026-0396: An attacker might be able to inject HTML content into the internal web dashboard by sending crafted DNS queries to a DNSdist instance where domain-based dynamic rules have been enabled via either "DynBlockRulesGroup:setSuffixMatchRule" or "DynBlockRulesGroup:setSuffixMatchRuleFFI"
+References: pull request 17065
+CVE-2026-0397: When the internal webserver is enabled (default is disabled), an attacker might be able to trick an administrator logged into the dashboard into visiting a malicious website and extract information about the running configuration from the dashboard
+References: pull request 17066
+CVE-2026-24028: An attacker might be able to trigger an out-of-bounds read by sending a crafted DNS response packet, when custom Lua code uses "newDNSPacketOverlay" to parse DNS packets
+References: pull request 17067
+CVE-2026-24029: When the "early_acl_drop" ("earlyACLDrop" in Lua) option is disabled (default is enabled) on a DNS over HTTPs frontend using the "nghttp2" provider, the ACL check is skipped, allowing all clients to send DoH queries regardless of the configured ACL
+References: pull request 17068
+CVE-2026-24030: An attacker might be able to trick DNSdist into allocating too much memory while processing DNS over QUIC or DNS over HTTP/3 payloads, resulting in denial of service
+References: pull request 17069
+CVE-2026-27853: An attacker might be able to trigger an out-of-bounds write by sending crafted DNS responses to a DNSdist using the "DNSQuestion:changeName" or "DNSResponse:changeName" methods in custom Lua code. In some cases the rewritten packet might become larger than the initial response and even exceed 65535 bytes, potentially leading to a crash resulting in denial of service
+References: pull request 17071
+CVE-2026-27854: Denial of service when using "DNSQuestion:getEDNSOptions" method in custom Lua code
+References: pull request 17070
+Fix wrong address being inserted in the rings for responses
+References: pull request 16851
+Work around Quiche not dealing well with removed congestion algorithms
+References: pull request 16867
+Fix build error when only protobuf is enabled
+References: pull request 16584
+Add missing #if statements to dnsdist-lua.cc
+References: pull request 16592
+Do not keep stale cache entries around for empty pools
+References: pull request 16850
+Fix handling of IP-only TLS certificates
+References: pull request 16860
+Handle escaped values in YAML SpoofRaw parameters
+References: pull request 16866
+Don't start the NetworkListener thread in config check mode
+References: pull request 16900
