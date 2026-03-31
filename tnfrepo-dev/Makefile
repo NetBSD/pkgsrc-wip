@@ -1,10 +1,10 @@
 #	$NetBSD$
 
-DISTNAME=	tnfrepo-0.0a20250823.dev95
+DISTNAME=	tnfrepo-0.0a20250823.dev112
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
-HG_TAG=		ba3213b7505147d9f499042d9595347350361223
+HG_TAG=		b8ee702da5753ffc996a6e655f21b9977884f4c5
 
 MAINTAINER=	riastradh@NetBSD.org
 HOMEPAGE=	https://hg.mumble.net/campbell/tnfrepo
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-hg-evolve>=11.1.4:../../devel/py-hg-evolve
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.8.1:../../devel/py-mercurial
 DEPENDS+=	git-base>=2.47.1:../../devel/git-base
 DEPENDS+=	git-cinnabar>=0.7.0beta1:../../devel/git-cinnabar
+DEPENDS+=	rsync>0:../../net/rsync
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cram>=0.7:../../devel/py-cram
 

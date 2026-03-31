@@ -42,8 +42,12 @@ ${PYSITELIB}/netbsd_hghooks/validdate.py
 ${PYSITELIB}/netbsd_hghooks/validdate.pyc
 ${PYSITELIB}/netbsd_hghooks/validdate.pyo
 bin/build-clonebundles
+bin/cvsmirror
+bin/git-cvsmirror
 bin/syncd
+share/tnfrepo/gitconfig/anongit
 share/tnfrepo/gitconfig/config
+share/tnfrepo/githooks/post-update
 share/tnfrepo/githooks/pre-receive
 share/tnfrepo/githooks/reference-transaction
 share/tnfrepo/githooks/update
