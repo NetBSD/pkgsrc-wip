@@ -2209,3 +2209,4 @@ BLAKE2s (zvariant_utils-2.1.0.crate) = b142d63425365aedf109bafac551bf52a32897836
 SHA512 (zvariant_utils-2.1.0.crate) = 345b70d1106b37df41426efdb1ba49bf270e00898381c2a8021b5761c59efdea55def45cb2e2598b130b6cba8733503f3997a55578bca90867ab3e8f2346f80e
 Size (zvariant_utils-2.1.0.crate) = 7043 bytes
 SHA1 (patch-Cargo.toml) = 8dc1fdccd70431cfd3950c0326236e243432a19d
+SHA1 (patch-deps_freetype_build.rs) = c5d0cd6e6cdad0d0e2c8399da986eda0ac733ec8
