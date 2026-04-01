@@ -1244,10 +1244,10 @@ lib/cmake/clang/ClangConfigVersion.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang-cpp.${SHLIB_EXT}
-${PLIST.notdylib}lib/libclang-cpp.so.21.1
+${PLIST.notdylib}lib/libclang-cpp.so.22.1
 lib/libclang.${SHLIB_EXT}
 ${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.${PKGVERSION}
-${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.21.1
+${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.22.1
 lib/libclangAPINotes.a
 lib/libclangAST.a
 lib/libclangASTMatchers.a
