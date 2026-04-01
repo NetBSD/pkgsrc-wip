@@ -1,0 +1,2 @@
+bin/git-bayesect @PREFIX@/bin/git-bayesect-@PYVERSSUFFIX@
+bin/git_bayesect @PREFIX@/bin/git_bayesect-@PYVERSSUFFIX@

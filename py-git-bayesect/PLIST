@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/git-bayesect-${PYVERSSUFFIX}
+bin/git_bayesect-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/git_bayesect.py
+${PYSITELIB}/git_bayesect.pyc
+${PYSITELIB}/git_bayesect.pyo

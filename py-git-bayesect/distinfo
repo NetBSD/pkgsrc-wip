@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (git_bayesect-1.2.tar.gz) = 2e39449c9a951c2d9b8794eb8be47d9fb4a24638d3ec88f1bfabd51789bb9385
+SHA512 (git_bayesect-1.2.tar.gz) = 305689695373f96976c565518895e2b72314a03c4ce76e680d535e31bdb2cf2f874031a1f80603eba004e7958952cab99012a9be10844ca7f76177f3ac23c6d2
+Size (git_bayesect-1.2.tar.gz) = 12768 bytes
