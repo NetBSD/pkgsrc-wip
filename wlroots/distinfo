@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (wlroots-0.19.2.tar.gz) = aff6485d67841535c2bac5fda24cb8b0f6449ec841a344caa9df3641cd2548e0
-SHA512 (wlroots-0.19.2.tar.gz) = a48e71bc7ebcd2ca3bcbc1b20034b50ed230ecdd270fa4a6362e19e24b3fb60ea2e0a9631fa1b7ebadf4fc0f433a7cd9525f57e6130f7fede0a239ba1d1aba29
-Size (wlroots-0.19.2.tar.gz) = 670517 bytes
+BLAKE2s (wlroots-0.20.0.tar.gz) = d50158aa89a1ccfced52a46aff985f05dfcae3b8185aa89dcf89a0f536615cf5
+SHA512 (wlroots-0.20.0.tar.gz) = 64e0809374e333e134c900f5d42fab8b6561a974f277975457ff387c3b87aa1da7483d2abcb31b84c5d63e756277821771f419839aa8e1ab548708c5f632a184
+Size (wlroots-0.20.0.tar.gz) = 700049 bytes
 SHA1 (patch-backend_libinput_meson.build) = 7f109761790191930828f280ca74db6bc95941e1
 SHA1 (patch-render_allocator_allocator.c) = ca1f468d6e253fea5ae4d739172d4e94a07a4be6
 SHA1 (patch-render_drm__syncobj.c) = 70708836fe3fd7e4f55e128edbe9d3ad50f66916
