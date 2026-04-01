@@ -7,14 +7,14 @@ In file included from /scratch/wip/webkit-gtk-2.46/work/webkitgtk-2.50.0/cmake-p
       |                                                 ^~~~~~~~~~~~~~~
 
 
---- Source/JavaScriptCore/runtime/JSCBytecodeCacheVersion.cpp.orig	2025-09-23 16:42:34.984982333 +0000
+--- Source/JavaScriptCore/runtime/JSCBytecodeCacheVersion.cpp.orig	2026-02-23 14:40:52.423317200 +0000
 +++ Source/JavaScriptCore/runtime/JSCBytecodeCacheVersion.cpp
-@@ -66,7 +66,7 @@ uint32_t computeJSCBytecodeCacheVersion(
+@@ -68,7 +68,7 @@ uint32_t computeJSCBytecodeCacheVersion()
          }
          cacheVersion.construct(0);
          dataLogLnIf(JSCBytecodeCacheVersionInternal::verbose, "Failed to get UUID for JavaScriptCore framework");
--#elif OS(UNIX) && !PLATFORM(PLAYSTATION) && !OS(HAIKU)
-+#elif OS(UNIX) && !PLATFORM(PLAYSTATION) && !OS(HAIKU) && !OS(NETBSD)
+-#elif OS(UNIX) && !PLATFORM(PLAYSTATION) && !OS(HAIKU) && !OS(QNX)
++#elif OS(UNIX) && !PLATFORM(PLAYSTATION) && !OS(HAIKU) && !OS(QNX) && !OS(NETBSD)
          auto result = ([&] -> std::optional<uint32_t> {
              Dl_info info { };
              if (!dladdr(jsFunctionAddr, &info))

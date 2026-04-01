@@ -1,18 +1,18 @@
 $NetBSD$
 
---- Source/WebCore/platform/graphics/gbm/MemoryMappedGPUBuffer.cpp.orig	2025-10-29 09:54:43.774761997 +0000
+--- Source/WebCore/platform/graphics/gbm/MemoryMappedGPUBuffer.cpp.orig	2026-03-08 22:16:59.683749700 +0000
 +++ Source/WebCore/platform/graphics/gbm/MemoryMappedGPUBuffer.cpp
-@@ -35,7 +35,9 @@
- #include "PlatformDisplay.h"
+@@ -36,7 +36,9 @@
+ #include "VivanteSuperTiledTextureInlines.h"
  #include <epoxy/egl.h>
  #include <fcntl.h>
 +#ifdef __linux__
  #include <linux/dma-buf.h>
 +#endif
  #include <sys/ioctl.h>
+ #include <sys/mman.h>
  #include <wtf/SafeStrerror.h>
- #include <wtf/StdLibExtras.h>
-@@ -342,6 +344,7 @@ std::unique_ptr<MemoryMappedGPUBuffer::A
+@@ -406,6 +408,7 @@ bool MemoryMappedGPUBuffer::performDMABufSyncSystemCal
  
  bool MemoryMappedGPUBuffer::performDMABufSyncSystemCall(OptionSet<DMABufSyncFlag> flags)
  {
@@ -20,7 +20,7 @@ $NetBSD$
      constexpr unsigned maxRetries = 10;
  
      struct dma_buf_sync sync;
-@@ -371,6 +374,9 @@ bool MemoryMappedGPUBuffer::performDMABu
+@@ -435,6 +438,9 @@ bool MemoryMappedGPUBuffer::performDMABufSyncSystemCal
      }
  
      return true;

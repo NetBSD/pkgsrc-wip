@@ -2,12 +2,12 @@ $NetBSD$
 
 ShapeOutsideInfo.cpp:140:16: error: 'isnan' was not declared in this scope; did you mean 'std::isnan'?
 
---- Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp.orig	2025-08-08 09:17:55.564470500 +0000
+--- Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp.orig	2026-02-23 14:40:55.846298500 +0000
 +++ Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp
-@@ -257,7 +257,7 @@ Ref<const LayoutShape> makeShapeForShape
+@@ -257,7 +257,7 @@ Ref<const LayoutShape> makeShapeForShapeOutside(const 
  
      auto logicalMargin = [&] {
-         auto shapeMargin = Style::evaluate(style.shapeMargin(), containingBlock.contentBoxLogicalWidth()).toFloat();
+         auto shapeMargin = Style::evaluate<LayoutUnit>(style.shapeMargin(), containingBlock.contentBoxLogicalWidth(), Style::ZoomNeeded { }).toFloat();
 -        return isnan(shapeMargin) ? 0.0f : shapeMargin;
 +        return std::isnan(shapeMargin) ? 0.0f : shapeMargin;
      }();
