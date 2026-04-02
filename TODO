@@ -159,6 +159,7 @@ Suggested package updates
 	o virtualbox-7.2
 	o weston-15.0
 	o wkhtmltopdf-0.12.4
+	o wlroots-0.20
 	o xaralx-bin-0.7.1692
 	o xdg-desktop-portal-1.19.1
 	o xf86-input-libinput-1.5.0

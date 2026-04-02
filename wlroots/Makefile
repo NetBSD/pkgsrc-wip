@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		wlroots-0.20.0
+DISTNAME=		wlroots-0.19.2
 CATEGORIES=		x11
 MASTER_SITE_GITLAB=	https://gitlab.freedesktop.org/
 MASTER_SITES=		${MASTER_SITE_GITLAB:=wlroots/}
