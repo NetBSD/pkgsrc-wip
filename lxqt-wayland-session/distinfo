@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.21 2025/11/11 03:06:15 gutteridge Exp $
+
+BLAKE2s (lxqt-wayland-session-0.3.2.tar.xz) = 735daa82a0444a6c8bb22b78662453955f7b3370bf26135efb4d8fa459a7adb5
+SHA512 (lxqt-wayland-session-0.3.2.tar.xz) = 163dddbce60f169132244e964ce1325d0abb433721eef3cfa99bd411401be9f7ca57ec2003d616205d8c5affd615d27b23eda1de09f2bc32f81eb6969ea35e15
+Size (lxqt-wayland-session-0.3.2.tar.xz) = 362556 bytes
+SHA1 (patch-CMakeLists.txt) = ac056ec132567156f66544520b5f14d9c16b4e4a
