@@ -1,25 +1,83 @@
 NEW in 2.52.1:
 
-[183/8757] Building CXX object Source/WTF/wtf/CMakeFiles/WTF.dir/glib/FileSystemGlib.cpp.o
-FAILED: [code=1] Source/WTF/wtf/CMakeFiles/WTF.dir/glib/FileSystemGlib.cpp.o
-/tmp/wip/webkit-gtk/work/.cwrapper/bin/c++ -DBUILDING_GTK__=1 -DBUILDING_WEBKIT=1 -DBUILDING_WITH_CMAKE=1 -DBUILDING_WTF -DGETTEXT_PACKAGE=\"WebKitGTK-4.1\" -DHAVE_CONFIG_H=1 -DJSC_GLIB_API_ENABLED -DPAS_BMALLOC=1 -DUSER_AGENT_BRANDING="\"Linux x86_64\"" -D_GLIBCXX_ASSERTIONS=1 -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WTF/DerivedSources -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/dtoa -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/fast_float -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/persistence -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/simdutf -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/icu -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/threads -I/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/unicode -isystem /usr/pkg/include -isystem /usr/pkg/include/glib-2.0 -isystem /usr/pkg/lib/glib-2.0/include -fdiagnostics-color=always -Wextra -Wall -pipe -fmax-errors=20 -Wno-odr -Wno-stringop-overread -Wno-stringop-overflow -Wno-nonnull -Wno-array-bounds -Wno-expansion-to-defined -Wno-noexcept-type -Wno-subobject-linkage -Wno-psabi -Wno-misleading-indentation -Wno-maybe-uninitialized -Wundef -Wpointer-arith -Wmissing-format-attribute -Wformat-security -Wcast-align -Wno-tautological-compare -fasynchronous-unwind-tables -O2 -Wno-unused-parameter -Wno-undef -gdwarf64 -fstack-clash-protection -I/usr/include -I/usr/pkg/include/python3.14 -I/usr/pkg/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/pkg/include/gstreamer-1.0 -I/usr/pkg/include/libxml2 -I/usr/pkg/include/libdrm -I/usr/pkg/include/gstreamer-1.0 -Wno-unused-parameter -Wno-undef -gdwarf64 -DFIXED_EXECUTABLE_MEMORY_POOL_SIZE_IN_MB=512 -DSTRUCTURE_HEAP_ADDRESS_SIZE_IN_MB=256 -fno-strict-aliasing -fno-exceptions -fno-rtti -fcoroutines -ffunction-sections -fdata-sections -DNDEBUG -std=c++23 -fPIC -fvisibility=hidden -I/usr/pkg/include -pthread -I/usr/pkg/include/glib-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/include -MD -MT Source/WTF/wtf/CMakeFiles/WTF.dir/glib/FileSystemGlib.cpp.o -MF Source/WTF/wtf/CMakeFiles/WTF.dir/glib/FileSystemGlib.cpp.o.d -o Source/WTF/wtf/CMakeFiles/WTF.dir/glib/FileSystemGlib.cpp.o -c /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/glib/FileSystemGlib.cpp
-/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/glib/FileSystemGlib.cpp: In function 'WTF::CString WTF::FileSystemImpl::currentExecutablePath()':
-/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/glib/FileSystemGlib.cpp:99:44: error: call of overloaded 'CString(<brace-enclosed initializer list>)' is ambiguous
-   99 |     return CString({readLinkBuffer, result});
-      |                                            ^
-In file included from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/StringView.h:33,
-                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/StringConcatenate.h:34,
-                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/AtomString.h:349,
-                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/WTFString.h:605,
-                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/FileSystem.h:43,
-                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/glib/FileSystemGlib.cpp:24:
-/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/CString.h:136:8: note: candidate: 'WTF::CString::CString(const std::string&)'
-  136 | inline CString::CString(const std::string& value)
-      |        ^~~~~~~
-/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WTF/wtf/text/CString.h:75:24: note: candidate: 'WTF::CString::CString(std::span<const char>)'
-   75 |     WTF_EXPORT_PRIVATE CString(std::span<const char>); // Any encoding
-      |                        ^~~~~~~
-[198/8757] Building CXX object Source/WTF/wtf/CMakeFiles/WTF.dir/generic/MemoryPressureHandlerGeneric.cpp.o
+In file included from /usr/pkg/include/X11/Xlib.h:44,
+                 from /usr/pkg/include/EGL/eglplatform.h:134,
+                 from /usr/pkg/include/epoxy/egl_generated.h:11,
+                 from /usr/pkg/include/epoxy/egl.h:46,
+                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/skia/PlatformDisplaySkia.cpp:42,
+                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/DerivedSources/unified-sources/UnifiedSource-3c72abbe-66.cpp:4:
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:57:27: error: expected identifier before numeric constant
+   57 | enum class MemoryLedger { None, Default, Network, Media, Graphics, Neural };
+      |                           ^~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:57:27: error: expected '}' before numeric constant
+In file included from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:33,
+                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/skia/ShareableBitmapSkia.cpp:27,
+                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/DerivedSources/unified-sources/UnifiedSource-3c72abbe-66.cpp:5:
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:57:25: note: to match this '{'
+   57 | enum class MemoryLedger { None, Default, Network, Media, Graphics, Neural };
+      |                         ^
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:57:27: error: expected unqualified-id before numeric constant
+   57 | enum class MemoryLedger { None, Default, Network, Media, Graphics, Neural };
+      |                           ^~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:96:47: error: 'MemoryLedger' has not been declared
+   96 |     WEBCORE_EXPORT void takeOwnershipOfMemory(MemoryLedger) const;
+      |                                               ^~~~~~~~~~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:98:79: error: 'MemoryLedger' has not been declared
+   98 |     WEBCORE_EXPORT void setOwnershipOfMemory(const WebCore::ProcessIdentity&, MemoryLedger) const;
+      |                                                                               ^~~~~~~~~~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/SharedMemory.h:169:1: error: expected declaration before '}' token
+  169 | } // namespace WebCore
+      | ^
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:61:139: error: expected unqualified-id before numeric constant
+   61 |     WEBCORE_EXPORT ShareableBitmapConfiguration(const IntSize&, std::optional<DestinationColorSpace> = std::nullopt, Headroom = Headroom::None, bool isOpaque = false);
+      |                                                                                                                                           ^~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:105:37: error: expected unqualified-id before numeric constant
+  105 |     Headroom m_headroom { Headroom::None };
+      |                                     ^~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:105:37: error: expected '}' before numeric constant
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:105:25: note: to match this '{'
+  105 |     Headroom m_headroom { Headroom::None };
+      |                         ^
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:105:37: error: could not convert '{<expression error>}' from '<brace-enclosed initializer list>' to 'WebCore::Headroom'
+  105 |     Headroom m_headroom { Headroom::None };
+      |                                     ^~~~
+      |                                     |
+      |                                     <brace-enclosed initializer list>
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/ShareableBitmap.h:105:37: error: expected ';' before numeric constant
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:99:39: error: expected unqualified-id before numeric constant
+   99 |         Headroom headroom { Headroom::None };
+      |                                       ^~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:99:39: error: expected '}' before numeric constant
+In file included from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageSource.h:28,
+                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/BitmapImage.h:31,
+                 from /tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/Source/WebCore/platform/graphics/skia/ShareableBitmapSkia.cpp:29:
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:99:27: note: to match this '{'
+   99 |         Headroom headroom { Headroom::None };
+      |                           ^
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:99:39: error: could not convert '{<expression error>}' from '<brace-enclosed initializer list>' to 'WebCore::Headroom'
+   99 |         Headroom headroom { Headroom::None };
+      |                                       ^~~~
+      |                                       |
+      |                                       <brace-enclosed initializer list>
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:99:39: error: expected ';' before numeric constant
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:151:69: error: expected unqualified-id before numeric constant
+  151 |     ImageOrientation m_orientation { ImageOrientation::Orientation::None };
+      |                                                                     ^~~~
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:151:69: error: expected '}' before numeric constant
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:151:36: note: to match this '{'
+  151 |     ImageOrientation m_orientation { ImageOrientation::Orientation::None };
+      |                                    ^
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:151:69: error: could not convert '{<expression error>}' from '<brace-enclosed initializer list>' to 'WebCore::ImageOrientation'
+  151 |     ImageOrientation m_orientation { ImageOrientation::Orientation::None };
+      |                                                                     ^~~~
+      |                                                                     |
+      |                                                                     <brace-enclosed initializer list>
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:151:69: error: expected ';' before numeric constant
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h: In member function 'void WebCore::ImageFrame::Source::clear()':
+/tmp/wip/webkit-gtk/work/webkitgtk-2.52.1/cmake-pkgsrc-build/WebCore/PrivateHeaders/WebCore/ImageFrame.h:118:38: error: expected unqualified-id before numeric constant
+  118 |                 headroom = Headroom::None;
+      |                                      ^~~~
+compilation terminated due to -fmax-errors=20.
 
 
 

@@ -8,14 +8,14 @@ webkitgtk-2.46.3/Source/WTF/wtf/glib/FileSystemGlib.cpp:83:42: error: no matchin
       |                                          ^
 
 
---- Source/WTF/wtf/glib/FileSystemGlib.cpp.orig	2024-08-19 06:28:38.571296700 +0000
+--- Source/WTF/wtf/glib/FileSystemGlib.cpp.orig	2026-02-23 14:40:54.578305500 +0000
 +++ Source/WTF/wtf/glib/FileSystemGlib.cpp
-@@ -80,7 +80,7 @@ CString currentExecutablePath()
+@@ -96,7 +96,7 @@ CString currentExecutablePath()
      ssize_t result = readlink("/proc/curproc/file", readLinkBuffer, PATH_MAX);
      if (result == -1)
          return { };
 -    return CString(readLinkBuffer, result);
-+    return CString({readLinkBuffer, result});
++    return CString(unsafeMakeSpan(readLinkBuffer, static_cast<size_t>(result)));
  }
  #elif OS(WINDOWS)
  CString currentExecutablePath()
