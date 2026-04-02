@@ -2599,7 +2599,6 @@ SUBDIR+=	nedit-ng
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
 SUBDIR+=	neomutt-git
-SUBDIR+=	neovim
 SUBDIR+=	neovim-git
 SUBDIR+=	neovim-qt
 SUBDIR+=	nessoundstudio
