@@ -1,0 +1,12 @@
+www/esbuild: update to 0.27.5
+
+* 0.27.5
+- Fix for an async generator edge case (#4401, #4417)
+- Fix a regression when metafile is enabled (#4420, #4418)
+- Use define semantics for TypeScript parameter properties (#4421)
+- Allow es2025 as a target in tsconfig.json (#4432)
+
+* 0.27.4
+- Fix a regression with CSS media queries (#4395, #4405, #4406)
+- Fix an edge case with the inject feature (#4407)
+- Attempt to improve API handling of huge metafiles (#4329, #4415)
