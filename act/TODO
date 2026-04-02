@@ -1,2 +1,5 @@
 - Improve DESCR by writing more information but at the same time
   avoiding "marketing"-ish like stuffs that are in upstream README.md
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-34041, CVE-2026-34042
