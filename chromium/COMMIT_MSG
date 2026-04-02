@@ -1,22 +1,49 @@
-www/chromium: update to 146.0.7680.164
+www/chromium: update to 146.0.7680.177
 
-* 146.0.7680.164
-This update includes 8 security fixes. Please see the
+* 146.0.7680.177
+This update includes 21 security fixes. Please see the
 Chrome Security Page for more information.
-[$7000][485397284] High CVE-2026-4673: Heap buffer overflow in WebAudio.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-18
-[TBD][488188166] High CVE-2026-4674: Out of bounds read in CSS.
-Reported by Syn4pse on 2026-02-27
-[TBD][488270257] High CVE-2026-4675: Heap buffer overflow in WebGL.
-Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-02-27
-[TBD][488613135] High CVE-2026-4676: Use after free in Dawn.
- Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-01
-[TBD][490533968] High CVE-2026-4677: Out of bounds read in WebAudio.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-07
-[TBD][491164019] High CVE-2026-4678: Use after free in WebGPU.
-Reported by Google on 2026-03-10
-[TBD][491516670] High CVE-2026-4679: Integer overflow in Fonts.
-Reported by GF, Un3xploitable Of DeadSec on 2026-03-11
-[TBD][491869946] High CVE-2026-4680: Use after free in FedCM.
-Reported by Shaheen Fazim on 2026-03-12
+[TBD][493952652] High CVE-2026-5273: Use after free in CSS.
+Reported by Anonymous on 2026-03-18
+[TBD][491732188] High CVE-2026-5272: Heap buffer overflow in GPU.
+Reported by inspector-ambitious on 2026-03-11
+[TBD][488596746] High CVE-2026-5274: Integer overflow in Codecs.
+Reported by heapracer (@heapracer) on 2026-03-01
+[TBD][489494022] High CVE-2026-5275: Heap buffer overflow in ANGLE.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-04
+[TBD][489711638] High CVE-2026-5276: Insufficient policy enforcement
+in WebUSB. Reported by Ariel Simon on 2026-03-04
+[TBD][489791424] High CVE-2026-5277: Integer overflow in ANGLE.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-05
+[TBD][490254128] High CVE-2026-5278: Use after free in Web MIDI.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-06
+[TBD][490642836] High CVE-2026-5279: Object corruption in V8.
+Reported by Hyeonjun Ahn (@_deayzl) on 2026-03-08
+[TBD][491515787] High CVE-2026-5280: Use after free in WebCodecs.
+Reported by heapracer (@heapracer) on 2026-03-11
+[TBD][491518608] High CVE-2026-5281: Use after free in Dawn.
+Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-10
+[TBD][491655161] High CVE-2026-5282: Out of bounds read in WebCodecs.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-11
+[TBD][492131521] High CVE-2026-5283: Inappropriate implementation
+in ANGLE. Reported by sweetchip on 2026-03-12
+[TBD][492139412] High CVE-2026-5284: Use after free in Dawn.
+Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-12
+[TBD][492228019] High CVE-2026-5285: Use after free in WebGL.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-13
+[TBD][493900619] High CVE-2026-5286: Use after free in Dawn.
+Reported by sweetchip on 2026-03-18
+[TBD][494644471] High CVE-2026-5287: Use after free in PDF.
+Reported by Syn4pse on 2026-03-21
+[NA][495507390] High CVE-2026-5288: Use after free in WebView.
+Reported by Google on 2026-03-23
+[NA][495931147] High CVE-2026-5289: Use after free in Navigation.
+Reported by Google on 2026-03-25
+[NA][496205576] High CVE-2026-5290: Use after free in Compositing.
+Reported by Google on 2026-03-25
+[TBD][490118036] Medium CVE-2026-5291: Inappropriate implementation
+in WebGL. Reported by heapracer (@heapracer) on 2026-03-06
+[NA][492213293] Medium CVE-2026-5292: Out of bounds read in WebCodecs.
+Reported by Google on 2026-03-12
 
+Google is aware that an exploit for CVE-2026-5281 exists in the wild.

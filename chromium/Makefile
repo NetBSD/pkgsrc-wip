@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.37 2026/01/19 16:14:05 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			146.0.7680.164
+VERSION=			146.0.7680.177
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -22,7 +22,7 @@ EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
-LLVM_MV=			19
+LLVM_MV=			20
 
 MAINTAINER=			kikadf@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
