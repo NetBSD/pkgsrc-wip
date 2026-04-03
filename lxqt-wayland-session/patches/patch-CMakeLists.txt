@@ -2,7 +2,7 @@ $NetBSD$
 
 * Fix pathes, see x11/lxqt-session/patches/patch-CMakeLists.txt
 
---- CMakeLists.txt.orig	2026-04-02 14:23:43.220857863 +0000
+--- CMakeLists.txt.orig	2026-03-05 17:53:50.000000000 +0000
 +++ CMakeLists.txt
 @@ -43,8 +43,8 @@ set(PREDEF_XDG_DATA_DIRS "$XDG_DATA_HOME
  if(NOT("${LXQT_DATA_DIR}" MATCHES "^/usr(/local)?/share$"))

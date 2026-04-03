@@ -29,4 +29,5 @@ DEPENDS+=	lxqt-session-[0-9]*:../../x11/lxqt-session
 
 .include "../../x11/plasma6-layer-shell-qt/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../wip/seatd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
