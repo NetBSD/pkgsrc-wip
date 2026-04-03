@@ -4,4 +4,4 @@ BLAKE2s (lxqt-wayland-session-0.3.2.tar.xz) = 735daa82a0444a6c8bb22b78662453955f
 SHA512 (lxqt-wayland-session-0.3.2.tar.xz) = 163dddbce60f169132244e964ce1325d0abb433721eef3cfa99bd411401be9f7ca57ec2003d616205d8c5affd615d27b23eda1de09f2bc32f81eb6969ea35e15
 Size (lxqt-wayland-session-0.3.2.tar.xz) = 362556 bytes
 SHA1 (patch-CMakeLists.txt) = 811adcb99934f2c4dc239b898ceed3113abd1eb9
-SHA1 (patch-startlxqtwayland.in) = e8f3773dd18f20e8f83c1af2ee609a6048ab878b
+SHA1 (patch-startlxqtwayland.in) = 451ddce6ca9e13cd293a49967df899e43ec24072

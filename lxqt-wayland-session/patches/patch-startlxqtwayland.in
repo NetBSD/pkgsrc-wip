@@ -13,7 +13,7 @@ $NetBSD$
 +    export XDG_RUNTIME_DIR="/tmp/$(id -un)-runtime"
 +fi
 +
-+if [ -d "$XDG_RUNTIME_DIR" ]; then
++if [ ! -d "$XDG_RUNTIME_DIR" ]; then
 +    mkdir -p -m 700 "$XDG_RUNTIME_DIR"
 +fi
 +
