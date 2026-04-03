@@ -1,0 +1,80 @@
+$NetBSD$
+
+Add sums for NetBSD supported gio and gio-shader.
+Also fix some discrepancies with other sums.
+
+--- editor/go.sum.orig	2025-12-26 16:08:24.000000000 +0000
++++ editor/go.sum
+@@ -1,14 +1,6 @@ eliasnaur.com/font v0.0.0-20230308162249-dd43949cb42d/
+ eliasnaur.com/font v0.0.0-20230308162249-dd43949cb42d h1:ARo7NCVvN2NdhLlJE9xAbKweuI9L6UgfTbYb0YwPacY=
+ eliasnaur.com/font v0.0.0-20230308162249-dd43949cb42d/go.mod h1:OYVuxibdk9OSLX8vAqydtRPP87PyTFcT9uH3MlEGBQA=
+-gioui.org v0.8.0 h1:QV5p5JvsmSmGiIXVYOKn6d9YDliTfjtLlVf5J+BZ9Pg=
+-gioui.org v0.8.0/go.mod h1:vEMmpxMOd/iwJhXvGVIzWEbxMWhnMQ9aByOGQdlQ8rc=
+ gioui.org/cpu v0.0.0-20210808092351-bfe733dd3334/go.mod h1:A8M0Cn5o+vY5LTMlnRoK3O5kG+rH0kWfJjeKd9QpBmQ=
+-gioui.org/cpu v0.0.0-20210817075930-8d6a761490d2 h1:AGDDxsJE1RpcXTAxPG2B4jrwVUJGFDjINIPi1jtO6pc=
+-gioui.org/cpu v0.0.0-20210817075930-8d6a761490d2/go.mod h1:A8M0Cn5o+vY5LTMlnRoK3O5kG+rH0kWfJjeKd9QpBmQ=
+-gioui.org/cpu v0.0.0-20220412190645-f1e9e8c3b1f7 h1:tNJdnP5CgM39PRc+KWmBRRYX/zJ+rd5XaYxY5d5veqA=
+-gioui.org/cpu v0.0.0-20220412190645-f1e9e8c3b1f7/go.mod h1:A8M0Cn5o+vY5LTMlnRoK3O5kG+rH0kWfJjeKd9QpBmQ=
+-gioui.org/shader v1.0.8 h1:6ks0o/A+b0ne7RzEqRZK5f4Gboz2CfG+mVliciy6+qA=
+-gioui.org/shader v1.0.8/go.mod h1:mWdiME581d/kV7/iEhLmUgUK5iZ09XR5XpduXzbePVM=
+ github.com/alecthomas/chroma v0.10.0 h1:7XDcGkCQopCNKjZHfYrNLraA+M7e0fMiJ/Mfikbfjek=
+ github.com/alecthomas/chroma v0.10.0/go.mod h1:jtJATyUxlIORhUOFNA9NZDWGAQ8wpxQQqNSB4rjA/1s=
+ github.com/alecthomas/chroma/v2 v2.0.0-alpha4 h1:6s0y/julsg565meUfJd/aDv5nR4srI3Z3RgyId8w3Ro=
+@@ -25,24 +17,20 @@ github.com/flopp/go-findfont v0.1.0/go.mod h1:wKKxRDjD
+ github.com/dlclark/regexp2 v1.11.0/go.mod h1:DHkYz0B9wPfa6wondMfaivmHpzrQ3v9q8cnmRbL6yW8=
+ github.com/flopp/go-findfont v0.1.0 h1:lPn0BymDUtJo+ZkV01VS3661HL6F4qFlkhcJN55u6mU=
+ github.com/flopp/go-findfont v0.1.0/go.mod h1:wKKxRDjD024Rh7VMwoU90i6ikQRCr+JTHB5n4Ejkqvw=
+-github.com/go-text/typesetting v0.1.2 h1:KmZOfoxrrYgghohzXgNY7aQPgQ4W+QeKPeRI8yqpDDE=
+-github.com/go-text/typesetting v0.1.2/go.mod h1:2+owI/sxa73XA581LAzVuEBZ3WEEV2pXeDswCH/3i1I=
+ github.com/go-text/typesetting v0.2.1 h1:x0jMOGyO3d1qFAPI0j4GSsh7M0Q3Ypjzr4+CEVg82V8=
+ github.com/go-text/typesetting v0.2.1/go.mod h1:mTOxEwasOFpAMBjEQDhdWRckoLLeI/+qrQeBCTGEt6M=
+-github.com/go-text/typesetting-utils v0.0.0-20240317173224-1986cbe96c66 h1:GUrm65PQPlhFSKjLPGOZNPNxLCybjzjYBzjfoBGaDUY=
+-github.com/go-text/typesetting-utils v0.0.0-20240317173224-1986cbe96c66/go.mod h1:DDxDdQEnB70R8owOx3LVpEFvpMK9eeH1o2r0yZhFI9o=
++github.com/go-text/typesetting-utils v0.0.0-20241103174707-87a29e9e6066 h1:qCuYC+94v2xrb1PoS4NIDe7DGYtLnU2wWiQe9a1B1c0=
++github.com/go-text/typesetting-utils v0.0.0-20241103174707-87a29e9e6066/go.mod h1:DDxDdQEnB70R8owOx3LVpEFvpMK9eeH1o2r0yZhFI9o=
++github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
++github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
+ github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
+ github.com/gorilla/websocket v1.5.3/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
+ github.com/jeffwilliams/boyermoore v0.0.0-20220817021623-63ad6ff520f8 h1:ZluQEnWkhVmv80+uMYh2pQCni9gKPvgJMizVIZudZfM=
+ github.com/jeffwilliams/boyermoore v0.0.0-20220817021623-63ad6ff520f8/go.mod h1:8hshlfDS6OTACtPiQ+qI16nHUsoy37NNrY2I29gfONs=
+ github.com/jeffwilliams/flamegraph v0.0.0-20250329145236-fe0961e541c0 h1:l/Rg6ztFXjPomqxUrA12WJvbyQsgWJo+1nDJ9yIPEXI=
+ github.com/jeffwilliams/flamegraph v0.0.0-20250329145236-fe0961e541c0/go.mod h1:+JpeDJcsSsX3MLZ0lbZqG62c5kEFkDXgs4vJCQmj9lk=
+-github.com/jeffwilliams/gio v0.7.2 h1:iXO6NLTql2J3EyKCg6KIoD33XTdnTxrvSN4N4OehNQg=
+-github.com/jeffwilliams/gio v0.7.2/go.mod h1:Zf0nzfbXaoqCuT2EQ/FkQF4mhdhF3OnpxU3ZCk2hrM4=
+ github.com/jeffwilliams/go-x-crypto v0.0.0-20240728132943-bda27f7d305d h1:AhacBTFGS3PKTLG6FZgTiLMnwkGpT14YYdlEoqb4I5E=
+ github.com/jeffwilliams/go-x-crypto v0.0.0-20240728132943-bda27f7d305d/go.mod h1:T+wALwcMOSE0kXgUAnPAHqTLW+XHgcELELW8VaDgm/M=
+-github.com/jeffwilliams/syn v0.1.7 h1:BLVEm4vsopA6c0n/gKGIYixkwTAJ0am7dVEv5sJyip0=
+-github.com/jeffwilliams/syn v0.1.7/go.mod h1:NDUr5EurEEMf0+OQewhlKZHLxrMg1WO20x8n5DLE2Hc=
+ github.com/jeffwilliams/syn v0.1.8 h1:unlYWkgNKJztvgTIUcnwpqfogCobz+dGXkaKd/Emedc=
+ github.com/jeffwilliams/syn v0.1.8/go.mod h1:NDUr5EurEEMf0+OQewhlKZHLxrMg1WO20x8n5DLE2Hc=
+ github.com/jszwec/csvutil v1.6.0 h1:QORXquCT0t8nUKD7utAD4HDmQMgG0Ir9WieZXzpa7ms=
+@@ -51,6 +39,10 @@ github.com/matryer/is v1.4.0/go.mod h1:8I/i5uYgLzgsgEl
+ github.com/leaanthony/go-ansi-parser v1.6.1/go.mod h1:+vva/2y4alzVmmIEpk9QDhA7vLC5zKDTRwfZGOp3IWU=
+ github.com/matryer/is v1.4.0 h1:sosSmIWwkYITGrxZ25ULNDeKiMNzFSr4V/eqBQP0PeE=
+ github.com/matryer/is v1.4.0/go.mod h1:8I/i5uYgLzgsgEloJE1U6xx5HkBQpAZvepWuujKwMRU=
++github.com/nuclearkev/gio v0.8.1 h1:5BWmpZD2J9H9iDqvf7NC7IythiM6YQAVvS+FOMKdRS0=
++github.com/nuclearkev/gio v0.8.1/go.mod h1:vEMmpxMOd/iwJhXvGVIzWEbxMWhnMQ9aByOGQdlQ8rc=
++github.com/nuclearkev/gio-shader v1.0.9 h1:5Zvm2uKAjQpVy2J9KDA88Z36iIrtuOBK+t4+XsvoTbM=
++github.com/nuclearkev/gio-shader v1.0.9/go.mod h1:mWdiME581d/kV7/iEhLmUgUK5iZ09XR5XpduXzbePVM=
+ github.com/ogier/pflag v0.0.1 h1:RW6JSWSu/RkSatfcLtogGfFgpim5p7ARQ10ECk5O750=
+ github.com/ogier/pflag v0.0.1/go.mod h1:zkFki7tvTa0tafRvTBIZTvzYyAu6kQhPZFnshFFPE+g=
+ github.com/pelletier/go-toml v1.9.5 h1:4yBQzkHv+7BHq2PQUZF3Mx0IYxG7LsP222s7Agd3ve8=
+@@ -62,9 +54,9 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rw
+ github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=
+ github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
+ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
++github.com/stretchr/objx v0.5.2 h1:xuMeJ0Sdp5ZMRXx/aWO6RZxdr3beISkG5/G/aIRr3pY=
++github.com/stretchr/objx v0.5.2/go.mod h1:FRsXN1f5AsAjCGJKqEizvkpNtU+EGNCLh3NxZ/8L+MA=
+ github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+-github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
+-github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
+ github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
+ github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
+ github.com/timtadh/data-structures v0.6.2 h1:zybDnU5NLjJ7WKMDJpvVwczQuf1wSLBgdRHZ9O4AqJ0=
+@@ -88,3 +80,5 @@ gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64
+ gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
+ gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
+ gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
++golang.org/x/net v0.21.0 h1:AQyQV4dYCvJ7vGmJyKki9+PBdyvhkSd8EIx/qb0AYv4=
++golang.org/x/net v0.21.0/go.mod h1:bIjVDfnllIU7BJ2DNgfnXvpSvtn8VRwhlsaeUTyUS44=

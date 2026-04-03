@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	anvil-src-v0.3
+DISTNAME=	anvil-src-v0.7
 PKGNAME=	${DISTNAME:S,-src-v,-,}
 CATEGORIES=	editors
 MASTER_SITES=	http://anvil-editor.net/releases/
@@ -11,48 +11,47 @@ COMMENT=	Plan 9 acme-like editor written in Go
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	zip
+USE_TOOLS+=	zip bash
 
-GO_VERSION_REQD+=	123
-GO_MODULES_FILES=	${WRKSRC}/anvil/src/anvil/go.mod
-GO_LDFLAGS+=		-r ${X11BASE}/lib
+GO_VERSION_REQD+=	124
+GO_LDFLAGS+=		-r ${X11BASE}/lib:${PREFIX}/lib
 
-PATCH_DIST_STRIP=	-p1
-
-WRKSRC=	${WRKDIR}/${DISTNAME}/anvil/src/anvil
+WRKSRC=	${WRKDIR}/${DISTNAME}/anvil
 
 INSTALLATION_DIRS+=	bin
 
-post-extract:
-	${CP} ${WRKSRC}/fs_linux.go ${WRKSRC}/fs_netbsd.go
+# post-extract:
+# 	${CP} ${WRKSRC}/fs_linux.go ${WRKSRC}/fs_netbsd.go
 
-pre-build:
-	cd ${WRKDIR}/.goproxy/gioui.org/\@v/ && \
-	unzip v0.6.0.zip && \
-	cd gioui.org\@v0.6.0 && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__wayland.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_egl__x11.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_internal_xkb_xkb__unix.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__unix.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__wayland.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-app_os__x11.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-gpu_headless_headless__egl.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_egl_egl.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_egl_egl__unix.go && \
-	patch ${PATCH_DIST_ARGS} < ${PKGDIR}/kev-patches/patch-internal_gl_gl__unix.go && \
-        cd .. && zip -r v0.6.0.zip gioui.org\@v0.6.0
+
+GO_BUILD_TAGS+=	-tags noegl
+
+GO_CMD=	GOPATH=${WRKDIR}/.gopath ${GO} ${GOFLAGS} build
+GO_CMD+=	${GO_BUILD_TAGS} -ldflags=${GO_LDFLAGS:Q}
+
+SUBST_CLASSES+=		build
+SUBST_STAGE.build=		pre-configure
+SUBST_MESSAGE.build=	Use the pkgsrc go command
+SUBST_FILES.build+=	build.sh
+SUBST_SED.conf=		-e 's|@GO_CMD@|${GO_CMD:Q}|g'
+SUBST_VARS.build+=		GO_CMD
+
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
 
 do-build:
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}    \
-		GOPATH=${WRKDIR}/.gopath ${GO} ${GOFLAGS} build ${GO_BUILD_TAGS} -ldflags=${GO_LDFLAGS:Q} -o anvil
+	# TODO: doesn't compile on NetBSD
+	${RM} -rf ${WRKSRC}/extras/cmd/awin
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${BASH} build.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/anvil ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/build/anvil ${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
+.include "extra-go-modules.mk"
+.include "work-go-modules.mk"
 
 .include "../../devel/wayland/buildlink3.mk"
-#.include "../../wip/libglvnd/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../x11/libX11/buildlink3.mk"
