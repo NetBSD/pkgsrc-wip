@@ -22,10 +22,10 @@ DEPENDS+=	roboto-fonts-[0-9]*:../../fonts/roboto-fonts
 DEPENDS+=	noto-emoji-ttf-[0-9]*:../../fonts/noto-emoji-ttf
 
 # wezterm just takes HEAD, but that will lead to distfile problems; hardcode the heads as of 20260328
-GITHUB_SUBMODULES+=	harfbuzz harfbuzz a0ec979e391eb740b6d43548a4432d7c67a14221 deps/harfbuzz/harfbuzz
-GITHUB_SUBMODULES+=	pnggroup libpng ef378794235277f3116860c2fa0d356659b05441 deps/freetype/libpng
-GITHUB_SUBMODULES+=	madler zlib f9dd6009be3ed32415edf1e89d1bc38380ecb95d deps/freetype/zlib
-GITHUB_SUBMODULES+=	freetype freetype 07d8d50a63a45a7446b2fc44732baecc685f3e4c deps/freetype/freetype2
+#GITHUB_SUBMODULES+=	harfbuzz harfbuzz a0ec979e391eb740b6d43548a4432d7c67a14221 deps/harfbuzz/harfbuzz
+#GITHUB_SUBMODULES+=	pnggroup libpng ef378794235277f3116860c2fa0d356659b05441 deps/freetype/libpng
+#GITHUB_SUBMODULES+=	madler zlib f9dd6009be3ed32415edf1e89d1bc38380ecb95d deps/freetype/zlib
+#GITHUB_SUBMODULES+=	freetype freetype 07d8d50a63a45a7446b2fc44732baecc685f3e4c deps/freetype/freetype2
 # xcb-imdkit-rs _also_ needs a submodule
 GITHUB_SUBMODULES+=	fcitx xcb-imdkit 44f5c8219bcae9e6afc2391dc50486efcf0bdf06 ../xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}/deps/xcb-imdkit
 
@@ -100,7 +100,10 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
