@@ -1,6 +1,0 @@
-@comment $NetBSD$
-share/texmf-dist/tex/latex/nag/nag-abort.cfg
-share/texmf-dist/tex/latex/nag/nag-experimental.cfg
-share/texmf-dist/tex/latex/nag/nag-l2tabu.cfg
-share/texmf-dist/tex/latex/nag/nag-orthodox.cfg
-share/texmf-dist/tex/latex/nag/nag.sty
