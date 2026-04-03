@@ -5749,7 +5749,6 @@ SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lshort-japanese-doc
-SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-mendex-doc-doc
 SUBDIR+=	tex-platexcheat-doc
 SUBDIR+=	tex-ptex-manual-doc
