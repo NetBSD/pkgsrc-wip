@@ -4,4 +4,7 @@ To Do:
 1) Successful building and packaging, not tested yet
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2025-55305
+  CVE-2025-55305, CVE-2026-34766, CVE-2026-34767, CVE-2026-34768,
+  CVE-2026-34769, CVE-2026-34770, CVE-2026-34771, CVE-2026-34772,
+  CVE-2026-34773, CVE-2026-34774, CVE-2026-34775, CVE-2026-34776,
+  CVE-2026-34777, CVE-2026-34778, CVE-2026-34779, CVE-2026-34780
