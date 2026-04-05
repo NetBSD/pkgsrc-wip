@@ -1,19 +1,19 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: vnstatd.sh,v 1.1.1.1 2009/11/19 15:48:19 sborrill Exp $
+# $NetBSD$
 #
 
-# PROVIDE: vnstatd
+# PROVIDE: vnstat
 # REQUIRE: network mountcritlocal
 
 $_rc_subr_loaded . /etc/rc.subr
 
-name="vnstatd"
+name="vnstat"
 rcvar=$name
-command="@PREFIX@/sbin/${name}"
+command="@PREFIX@/sbin/${name}d"
 pidfile="/var/run/${name}/${name}.pid"
 command_args="-d"
-required_files="@PKG_SYSCONFDIR@/vnstat.conf"
+required_files="@PKG_SYSCONFDIR@/${name}.conf"
 
 load_rc_config $name
 run_rc_command "$1"

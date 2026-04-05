@@ -5,7 +5,7 @@ CONFIGURE_ARGS+=	--disable-image-output
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 INSTALLATION_DIRS=	bin ${EGDIR} ${PKGMANDIR}/man1 \
 			${PKGMANDIR}/man5 ${PKGMANDIR}/man8
-RCD_SCRIPTS=		vnstatd
+RCD_SCRIPTS=		vnstat
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vnstat.conf \
