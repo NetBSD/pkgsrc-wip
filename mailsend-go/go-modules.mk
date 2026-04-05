@@ -1,6 +1,6 @@
 # $NetBSD$
 
-GO_MODULE_FILES+=	gopkg.in/alexcesaro/quotedprintable.v3/@v/v3.0.0-20150716171945-2caba252f4dc.mod
-GO_MODULE_FILES+=	gopkg.in/alexcesaro/quotedprintable.v3/@v/v3.0.0-20150716171945-2caba252f4dc.zip
-GO_MODULE_FILES+=	gopkg.in/gomail.v2/@v/v2.0.0-20160411212932-81ebce5c23df.mod
-GO_MODULE_FILES+=	gopkg.in/gomail.v2/@v/v2.0.0-20160411212932-81ebce5c23df.zip
+GO_MODULE_FILES+=	github.com/muquit/gomail/@v/v0.0.0-20250704205629-a34fa7a15a08.mod
+GO_MODULE_FILES+=	github.com/muquit/gomail/@v/v0.0.0-20250704205629-a34fa7a15a08.zip
+GO_MODULE_FILES+=	github.com/muquit/quotedprintable/@v/v0.0.0-20250204043250-71206103869d.mod
+GO_MODULE_FILES+=	github.com/muquit/quotedprintable/@v/v0.0.0-20250204043250-71206103869d.zip
