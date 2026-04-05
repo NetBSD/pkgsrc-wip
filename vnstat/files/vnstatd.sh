@@ -13,7 +13,6 @@ rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}/${name}.pid"
 command_args="-d"
-required_dirs="@VARBASE@/db/vnstat"
 required_files="@PKG_SYSCONFDIR@/vnstat.conf"
 
 load_rc_config $name
