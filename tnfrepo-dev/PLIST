@@ -45,6 +45,7 @@ bin/build-clonebundles
 bin/cvsmirror
 bin/git-cvsmirror
 bin/syncd
+bin/withlogin
 share/tnfrepo/gitconfig/anongit
 share/tnfrepo/gitconfig/config
 share/tnfrepo/githooks/post-update

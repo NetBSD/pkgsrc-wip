@@ -1,10 +1,10 @@
 #	$NetBSD$
 
-DISTNAME=	tnfrepo-0.0a20250823.dev112
+DISTNAME=	tnfrepo-0.0a20250823.dev119
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
-HG_TAG=		b8ee702da5753ffc996a6e655f21b9977884f4c5
+HG_TAG=		bef20795413db8818b53436246febf9a3630dbb4
 
 MAINTAINER=	riastradh@NetBSD.org
 HOMEPAGE=	https://hg.mumble.net/campbell/tnfrepo
@@ -17,11 +17,12 @@ DEPENDS+=	${PYPKGPREFIX}-hg-evolve>=11.1.4:../../devel/py-hg-evolve
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.8.1:../../devel/py-mercurial
 DEPENDS+=	git-base>=2.47.1:../../devel/git-base
 DEPENDS+=	git-cinnabar>=0.7.0beta1:../../devel/git-cinnabar
+DEPENDS+=	git-perlscripts>=2.47.1:../../devel/git-perlscripts
 DEPENDS+=	rsync>0:../../net/rsync
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cram>=0.7:../../devel/py-cram
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
