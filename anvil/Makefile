@@ -48,8 +48,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/anvil ${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
-.include "extra-go-modules.mk"
-.include "work-go-modules.mk"
+.include "go-modules-extra.mk"
+.include "go-modules-work.mk"
 
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
