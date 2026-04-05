@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.7 2024/10/10 19:56:01 nia Exp $
+
+BLAKE2s (vnstat-2.13.tar.gz) = 5def825fa8dc8ee5b50bce73847691ea6b0028287f9881374c8330c3ccb3038e
+SHA512 (vnstat-2.13.tar.gz) = 9b5d7b5085ab2ae39fd6b0d59afe56eb927b6e4ca1ca30ee7710afe2a412c4a1a8d756e095e9c3c81d182e3d6bb2efcd9a2a266e0048cac249477a09c1368969
+Size (vnstat-2.13.tar.gz) = 336647 bytes
+SHA1 (patch-src_cfg.c) = 8cbc8247fb2431f385afda806516d360a9ce69d8
+SHA1 (patch-src_common.h) = abd8b9f44cb7b5acc3a0952a7caddaf66a01d4bf

@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/vnstat
+man/man1/vnstat.1
+man/man5/vnstat.conf.5
+man/man8/vnstatd.8
+sbin/vnstatd
+share/examples/vnstat/vnstat.conf
