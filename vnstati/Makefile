@@ -9,6 +9,7 @@ DESCR_SRC=		../../wip/vnstat/DESCR DESCR
 
 CONFLICTS+=		vnstat<2.13
 
+BUILD_TARGET=		vnstati
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
