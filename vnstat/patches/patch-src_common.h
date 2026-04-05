@@ -1,10 +1,10 @@
-$NetBSD: patch-src_common.h,v 1.1 2024/10/10 19:56:02 nia Exp $
+$NetBSD$
 
 Include <fcntl.h> for open(2).
 
---- src/common.h.orig	2024-10-10 19:54:21.793147584 +0000
-+++ src/common.h
-@@ -5,6 +5,7 @@
+--- src/common.h.orig	2025-01-08 21:19:22.000000000 +0000
++++ src/common.h	2026-04-05 21:31:12.885893036 +0000
+@@ -6,6 +6,7 @@
  #include <stdlib.h>
  #include <stdint.h>
  #include <unistd.h>

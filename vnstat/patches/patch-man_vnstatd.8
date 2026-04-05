@@ -1,0 +1,39 @@
+$NetBSD$
+
+Add npflog0 to ignored interfaces.
+
+--- man/vnstatd.8.orig	2025-02-08 13:11:48.000000000 +0000
++++ man/vnstatd.8	2026-04-05 21:41:02.030965144 +0000
+@@ -55,8 +55,8 @@
+ in the database directory that has been specified in the configuration
+ file. By default, if no database is found, a database will be created
+ during startup with entries for all available interfaces excluding pseudo
+-interfaces lo, lo0 and sit0. This automatic database entry creation behaviour
+-can be disabled using the
++interfaces lo, lo0, npflog0, and sit0. This automatic database entry creation
++behaviour can be disabled using the
+ .B --noadd
+ option. Alternatively, the
+ .B --alwaysadd
+@@ -92,8 +92,8 @@
+ Enable automatic creation of new database entries for interfaces not currently in
+ the database even if the database file already exists when the daemon is started. New
+ database entries will also get created for new interfaces seen while the daemon is
+-running. Pseudo interfaces lo, lo0 and sit0 are always excluded from getting added.
+-Using the option without
++running. Pseudo interfaces lo, lo0, npflog0, and sit0 are always excluded from
++getting added. Using the option without
+ .I mode
+ defined or with
+ .I mode
+@@ -150,8 +150,8 @@
+ disable the automatic creation of new database entries for all currently available
+ interfaces when the daemon is started with no existing database or with a database
+ containing zero interfaces. The daemon will still create an empty database if one doesn't
+-already exist. Pseudo interfaces lo, lo0 and sit0 are always excluded from getting
+-added regardless of this option.
++already exist. Pseudo interfaces lo, lo0, npflog0, and sit0 are always excluded from
++getting added regardless of this option.
+ 
+ .IP
+ When used in combination with
