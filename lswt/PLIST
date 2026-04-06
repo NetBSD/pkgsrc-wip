@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/lswt
+man/man1/lswt.1
+share/bash-completion/completions/lswt
