@@ -6061,6 +6061,7 @@ SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
 SUBDIR+=	wev
+SUBDIR+=	wf-recorder
 SUBDIR+=	wgrib2
 SUBDIR+=	whatscli
 SUBDIR+=	which
