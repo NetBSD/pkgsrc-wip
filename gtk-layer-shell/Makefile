@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gtk-layer-shell-0.10.0
+DISTNAME=	gtk-layer-shell-0.10.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wmww/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
