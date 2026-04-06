@@ -9,6 +9,8 @@ HOMEPAGE=	https://www.salome-platform.org/user-section/about/med
 COMMENT=	Modelisation et Echanges de Donnees
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	tk-[0-9]*:../../x11/tk
+
 USE_LANGUAGES=		fortran c c++
 USE_TOOLS+=		gmake tar
 USE_LIBTOOL=		yes
@@ -31,9 +33,5 @@ REPLACE.wish.new=	${PREFIX}/bin/wish
 REPLACE_FILES.wish=	tools/mdump/xmdump2.in tools/mdump/xmdump3.in
 
 .include "../../wip/aster/Makefile.common"
-
-.include "../../mk/bsd.prefs.mk"
-
 .include "../../wip/hdf5_110/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
