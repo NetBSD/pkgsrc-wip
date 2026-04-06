@@ -79,7 +79,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/jt9
 .include "../../devel/cmake/build.mk"
 .include "../../math/fftw/buildlink3.mk"
 .if empty(PKG_BUILD_OPTIONS.fftw:Mfftw-fortran)
-PKG_FAIL_REASON+=      'You need to set PKG_OPTIONS.fftw+= fftw-fortran, at its compile time.'
+PKG_FAIL_REASON+=      'You need to set PKG_BUILD_OPTIONS.fftw+= fftw-fortran, at its compile time.'
 .endif
 
 .include "../../graphics/openexr/buildlink3.mk"
