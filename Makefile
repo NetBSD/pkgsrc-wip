@@ -6093,6 +6093,7 @@ SUBDIR+=	wlopm
 SUBDIR+=	wlr-randr
 SUBDIR+=	wlrctl
 SUBDIR+=	wlroots
+SUBDIR+=	wlsunset
 SUBDIR+=	wmbattery
 SUBDIR+=	wmc2d
 SUBDIR+=	wmii-devel
