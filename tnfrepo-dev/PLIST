@@ -44,6 +44,7 @@ ${PYSITELIB}/netbsd_hghooks/validdate.pyo
 bin/build-clonebundles
 bin/cvsmirror
 bin/git-cvsmirror
+bin/github-mirror
 bin/syncd
 bin/withlogin
 share/tnfrepo/gitconfig/anongit

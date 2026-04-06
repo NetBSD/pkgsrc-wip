@@ -1,10 +1,10 @@
 #	$NetBSD$
 
-DISTNAME=	tnfrepo-0.0a20250823.dev119
+DISTNAME=	tnfrepo-0.0a20250823.dev127
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
-HG_TAG=		bef20795413db8818b53436246febf9a3630dbb4
+HG_TAG=		606fbb7a64fa46237f9da78edbc27e54022c622b
 
 MAINTAINER=	riastradh@NetBSD.org
 HOMEPAGE=	https://hg.mumble.net/campbell/tnfrepo
@@ -19,6 +19,13 @@ DEPENDS+=	git-base>=2.47.1:../../devel/git-base
 DEPENDS+=	git-cinnabar>=0.7.0beta1:../../devel/git-cinnabar
 DEPENDS+=	git-perlscripts>=2.47.1:../../devel/git-perlscripts
 DEPENDS+=	rsync>0:../../net/rsync
+
+# For anonymous server -- consider splitting into a separate
+# (meta-)package if we don't end up using this for the authenticated
+# server.  Mainly so we don't have to bake py311-uwsgi, or py312-uwsgi,
+# or, I mean, py314-uwsgi into the image build scripts...
+DEPENDS+=	${PYPKGPREFIX}-uwsgi>=0:../../www/py-uwsgi
+DEPENDS+=	cgit>=0:../../www/cgit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cram>=0.7:../../devel/py-cram
 
