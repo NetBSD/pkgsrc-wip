@@ -6060,6 +6060,7 @@ SUBDIR+=	wendzelnntpd
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
+SUBDIR+=	wev
 SUBDIR+=	wgrib2
 SUBDIR+=	whatscli
 SUBDIR+=	which
