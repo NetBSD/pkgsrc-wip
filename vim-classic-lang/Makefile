@@ -8,6 +8,8 @@ COMMENT=	Language files for the vim-classic editor (vi clone)
 
 DEPENDS+=	vim-classic-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../wip/vim-classic-share
 
+CONFLICTS+=		vim-lang-[0-9]*
+
 USE_TOOLS+=	msgfmt
 BUILD_TARGET=	languages
 INSTALL_TARGET=	install-languages

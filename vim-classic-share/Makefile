@@ -5,6 +5,8 @@ COMMENT=		Data files for the vim-classic editor (vi clone)
 
 .include		"Makefile.common"
 
+CONFLICTS+=		vim-share-[0-9]*
+
 CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--without-x
 

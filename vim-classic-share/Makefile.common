@@ -15,7 +15,7 @@ FORTIFY_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-MAINTAINER=		
+MAINTAINER=		thatguy@jeff-frasca.name
 HOMEPAGE=		https://vim-classic.org/
 LICENSE=		vim-license OR gnu-gpl-v2
 
