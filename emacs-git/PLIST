@@ -3332,6 +3332,8 @@ share/emacs/${PKGVERSION}/lisp/org/ob-comint.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-comint.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-core.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-core.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-csharp.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-csharp.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-css.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-css.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-ditaa.el.gz
