@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=  	freemasterofmagic-cpp-0.1.3
+DISTNAME=  	freemasterofmagic-cpp-0.2.1
 CATEGORIES=	games	
 MASTER_SITES=	https://sourceforge.net/projects/freemasterofmagic/files/
 
