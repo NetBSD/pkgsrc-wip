@@ -5330,6 +5330,7 @@ SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runas
 SUBDIR+=	runcpm
 SUBDIR+=	rust-analyzer
+SUBDIR+=	rust-beta
 SUBDIR+=	rust-synapse-compress-state
 SUBDIR+=	rust193
 SUBDIR+=	rust193-bin
