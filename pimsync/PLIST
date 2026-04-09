@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/pimsync
+man/man1/pimsync.1
+man/man5/pimsync.conf.5
+man/man7/pimsync-migration.7
+share/zsh/site-functions/_pimsync
