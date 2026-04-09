@@ -6,7 +6,7 @@
 # Regenerating checksums may be needed to build the current rust-beta.
 
 DISTNAME=	rustc-beta-src
-PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGNAME=	rust-1.95.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 EXTRACT_SUFX=	.tar.xz
