@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/enterprise/connectors/core/realtime_reporting_client_base.cc
-@@ -191,7 +191,7 @@ void RealtimeReportingClientBase::Report
+@@ -198,7 +198,7 @@ void RealtimeReportingClientBase::Report
      *event.mutable_time() = ToProtoTimestamp(base::Time::Now());
    }
  
@@ -15,7 +15,7 @@ $NetBSD$
    MaybeCollectDeviceSignalsAndReportEvent(std::move(event), client, settings);
  #else
    // Regardless of collecting device signals or not, upload the security event
-@@ -240,7 +240,7 @@ void RealtimeReportingClientBase::Report
+@@ -306,7 +306,7 @@ void RealtimeReportingClientBase::Report
    if (include_profile_user_name) {
      event.Set(kKeyProfileUserName, GetProfileUserName());
    }

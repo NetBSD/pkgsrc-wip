@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/libvpx_thread_wrapper.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- media/base/libvpx_thread_wrapper.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ media/base/libvpx_thread_wrapper.cc
 @@ -5,11 +5,14 @@
  #include "media/base/libvpx_thread_wrapper.h"

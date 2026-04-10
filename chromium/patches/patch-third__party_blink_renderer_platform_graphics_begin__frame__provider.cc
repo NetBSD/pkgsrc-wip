@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/begin_frame_provider.cc
 @@ -71,7 +71,11 @@ void BeginFrameProvider::CreateComposito
  
@@ -13,7 +13,7 @@ $NetBSD$
 +  // pledge(2)
 +  // stop this baloney
 +#if !defined(OS_OPENBSD)
-   base::PlatformThread::SetCurrentThreadType(base::ThreadType::kPresentation);
+   lease_.emplace(base::ThreadType::kPresentation);
 +#endif
  
    mojo::Remote<mojom::blink::EmbeddedFrameSinkProvider> provider;

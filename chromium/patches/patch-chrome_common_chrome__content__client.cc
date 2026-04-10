@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_content_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/common/chrome_content_client.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/common/chrome_content_client.cc
 @@ -61,12 +61,12 @@
  #include "url/url_constants.h"

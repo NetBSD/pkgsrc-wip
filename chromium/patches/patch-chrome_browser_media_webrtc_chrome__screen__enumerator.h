@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.h
 @@ -18,7 +18,7 @@
  namespace aura {

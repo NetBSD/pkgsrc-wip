@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/gpu/gpu_main.cc
 @@ -108,10 +108,14 @@
  #include "sandbox/win/src/sandbox.h"

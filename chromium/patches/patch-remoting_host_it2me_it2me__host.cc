@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_host.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- remoting/host/it2me/it2me_host.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ remoting/host/it2me/it2me_host.cc
 @@ -73,7 +73,7 @@
  #include "remoting/host/chromeos/features.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "remoting/host/linux/gnome_remote_desktop_session.h"
  #include "remoting/host/linux/portal_remote_desktop_session.h"
  #endif
-@@ -285,7 +285,7 @@ void It2MeHost::ConnectOnNetworkThread(
+@@ -284,7 +284,7 @@ void It2MeHost::ConnectOnNetworkThread(
  
    SetState(It2MeHostState::kStarting, ErrorCode::OK);
  

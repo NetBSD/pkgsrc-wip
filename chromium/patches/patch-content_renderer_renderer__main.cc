@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_main.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/renderer/renderer_main.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/renderer/renderer_main.cc
-@@ -196,7 +196,7 @@ int RendererMain(MainFunctionParams para
+@@ -180,7 +180,7 @@ int RendererMain(MainFunctionParams para
  
    InitializeSkia();
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- sandbox/policy/sandbox.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ sandbox/policy/sandbox.cc
 @@ -20,6 +20,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

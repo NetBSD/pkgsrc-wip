@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/freebsd/sandbox_freebsd.cc.orig	2026-03-14 12:24:26.688636107 +0000
+--- sandbox/policy/freebsd/sandbox_freebsd.cc.orig	2026-04-10 13:22:11.366474680 +0000
 +++ sandbox/policy/freebsd/sandbox_freebsd.cc
 @@ -0,0 +1,210 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

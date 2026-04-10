@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- services/network/network_context.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ services/network/network_context.cc
-@@ -637,7 +637,7 @@ NetworkContext::NetworkContextHttpAuthPr
+@@ -638,7 +638,7 @@ NetworkContext::NetworkContextHttpAuthPr
  NetworkContext::NetworkContextHttpAuthPreferences::
      ~NetworkContextHttpAuthPreferences() = default;
  
@@ -15,7 +15,7 @@ $NetBSD$
  bool NetworkContext::NetworkContextHttpAuthPreferences::AllowGssapiLibraryLoad()
      const {
    if (network_service_) {
-@@ -2617,7 +2617,7 @@ void NetworkContext::OnHttpAuthDynamicPa
+@@ -2660,7 +2660,7 @@ void NetworkContext::OnHttpAuthDynamicPa
        http_auth_dynamic_network_service_params->android_negotiate_account_type);
  #endif  // BUILDFLAG(IS_ANDROID)
  

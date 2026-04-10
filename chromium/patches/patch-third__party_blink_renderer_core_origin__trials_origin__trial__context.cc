@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/origin_trials/origin_trial_context.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/blink/renderer/core/origin_trials/origin_trial_context.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/blink/renderer/core/origin_trials/origin_trial_context.cc
-@@ -563,7 +563,7 @@ bool OriginTrialContext::CanEnableTrialF
+@@ -559,7 +559,7 @@ bool OriginTrialContext::CanEnableTrialF
  
    if (trial_name == "WebAppInstallation") {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

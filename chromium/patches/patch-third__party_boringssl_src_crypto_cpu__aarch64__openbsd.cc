@@ -1,8 +1,10 @@
 $NetBSD$
 
-Add NetBSD support.
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc.orig	2026-03-20 23:29:56.000000000 +0000
+--- third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc
 @@ -43,3 +43,67 @@ void bssl::OPENSSL_cpuid_setup() {
  }

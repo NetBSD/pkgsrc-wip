@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
-@@ -363,7 +363,11 @@ bool ChromeRuntimeAPIDelegate::GetPlatfo
+@@ -366,7 +366,11 @@ bool ChromeRuntimeAPIDelegate::GetPlatfo
    } else if (os == "linux") {
      info->os = extensions::api::runtime::PlatformOs::kLinux;
    } else if (os == "openbsd") {

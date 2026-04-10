@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/raw_video.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- media/gpu/test/raw_video.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ media/gpu/test/raw_video.cc
 @@ -60,7 +60,7 @@ std::unique_ptr<base::MemoryMappedFile> 
                               base::File::FLAG_READ | base::File::FLAG_WRITE

@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc
-@@ -8,7 +8,7 @@
- #include "components/enterprise/buildflags/buildflags.h"
+@@ -9,7 +9,7 @@
+ #include "components/enterprise/connectors/core/connectors_internals_utils.h"
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_ANDROID)
 +    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
- #include "base/base64url.h"
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/policy/chrome_browser_policy_connector.h"
-@@ -42,7 +42,7 @@ namespace enterprise_connectors::utils {
+ #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
+@@ -31,7 +31,7 @@ namespace enterprise_connectors::utils {
  namespace {
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD$
  
  connectors_internals::mojom::KeyTrustLevel ParseTrustLevel(
      BPKUR::KeyTrustLevel trust_level) {
-@@ -181,7 +181,7 @@ connectors_internals::mojom::Certificate
+@@ -74,7 +74,7 @@ connectors_internals::mojom::KeyManagerP
  
  connectors_internals::mojom::KeyInfoPtr GetKeyInfo() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database.cc
-@@ -1043,7 +1043,7 @@ bool ShouldDeleteUndecryptablePasswords(
+@@ -1031,7 +1031,7 @@ bool ShouldDeleteUndecryptablePasswords(
      bool is_enabled_by_policy,
      IsAccountStore is_account_store,
      const os_crypt_async::Encryptor* encryptor) {
@@ -15,7 +15,7 @@ $NetBSD$
    std::unique_ptr<base::Environment> environment(base::Environment::Create());
    // On Linux user data directory ca be specified using an env variable. If it
    // exists, passwords shouldn't be deleted.
-@@ -1061,7 +1061,7 @@ bool ShouldDeleteUndecryptablePasswords(
+@@ -1049,7 +1049,7 @@ bool ShouldDeleteUndecryptablePasswords(
      return false;
    }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/compositor/viz_process_transport_factory.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/browser/compositor/viz_process_transport_factory.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/browser/compositor/viz_process_transport_factory.cc
 @@ -101,7 +101,7 @@ class HostDisplayClient : public viz::Ho
    HostDisplayClient& operator=(const HostDisplayClient&) = delete;

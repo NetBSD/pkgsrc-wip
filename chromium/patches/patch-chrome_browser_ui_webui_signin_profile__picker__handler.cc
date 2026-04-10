@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
-@@ -177,7 +177,7 @@ base::DictValue CreateProfileState(const
+@@ -178,7 +178,7 @@ base::DictValue CreateProfileState(const
        IDS_PROFILE_PICKER_PROFILE_CARD_LABEL, local_profile_name);
    if (entry->GetIsManaged() == signin::Tribool::kTrue) {
      profile_entry.Set("avatarBadge", "cr:domain");

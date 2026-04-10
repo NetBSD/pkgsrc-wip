@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc
-@@ -55,7 +55,7 @@ proto::os_state::RunOnOsLogin::Mode Conv
+@@ -54,7 +54,7 @@ proto::os_state::RunOnOsLogin::Mode Conv
  // different from other platforms, see web_app_run_on_os_login_manager.h for
  // more info.
  bool DoesRunOnOsLoginRequireExecution() {

@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/url_constants.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/common/url_constants.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/common/url_constants.h
-@@ -1009,7 +1009,7 @@ inline constexpr char kOutdatedPluginLea
- inline constexpr char kPhoneHubPermissionLearnMoreURL[] =
-     "https://support.google.com/chromebook?p=multidevice";
+@@ -776,7 +776,7 @@ inline constexpr char kOutdatedPluginLea
+     "https://support.google.com/chrome?p=ib_outdated_plugin";
+ #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

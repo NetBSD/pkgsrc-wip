@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/compositor/compositor.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/compositor/compositor.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/compositor/compositor.cc
-@@ -990,7 +990,7 @@ void Compositor::OnResume() {
+@@ -993,7 +993,7 @@ void Compositor::OnResume() {
      obs.ResetIfActive();
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/global_features.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/global_features.h
 @@ -19,7 +19,7 @@ class GlobalBrowserCollection;
  namespace system_permission_settings {
@@ -15,7 +15,7 @@ $NetBSD$
  namespace whats_new {
  class WhatsNewRegistry;
  }  // namespace whats_new
-@@ -128,7 +128,7 @@ class GlobalFeatures {
+@@ -129,7 +129,7 @@ class GlobalFeatures {
    system_permissions_platform_handle() {
      return system_permissions_platform_handle_.get();
    }
@@ -24,7 +24,7 @@ $NetBSD$
    whats_new::WhatsNewRegistry* whats_new_registry() {
      return whats_new_registry_.get();
    }
-@@ -204,7 +204,7 @@ class GlobalFeatures {
+@@ -201,7 +201,7 @@ class GlobalFeatures {
  
    virtual std::unique_ptr<system_permission_settings::PlatformHandle>
    CreateSystemPermissionsPlatformHandle();
@@ -33,7 +33,7 @@ $NetBSD$
    virtual std::unique_ptr<whats_new::WhatsNewRegistry> CreateWhatsNewRegistry();
  #endif
  
-@@ -216,7 +216,7 @@ class GlobalFeatures {
+@@ -213,7 +213,7 @@ class GlobalFeatures {
  
    std::unique_ptr<system_permission_settings::PlatformHandle>
        system_permissions_platform_handle_;

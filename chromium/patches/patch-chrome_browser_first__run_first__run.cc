@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/first_run/first_run.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/first_run/first_run.cc
 @@ -319,7 +319,7 @@ void SetupInitialPrefsFromInstallPrefs(
      out_prefs->confirm_to_quit = true;

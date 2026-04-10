@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc
 @@ -24,7 +24,7 @@
  #include "base/win/registry.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #endif
-@@ -264,7 +264,7 @@ base::FilePath GetEndpointVerificationDi
+@@ -274,7 +274,7 @@ base::FilePath GetEndpointVerificationDi
    bool got_path = false;
  #if BUILDFLAG(IS_WIN)
    got_path = base::PathService::Get(base::DIR_LOCAL_APP_DATA, &path);
@@ -24,9 +24,9 @@ $NetBSD$
    std::unique_ptr<base::Environment> env(base::Environment::Create());
    path = base::nix::GetXDGDirectory(env.get(), base::nix::kXdgConfigHomeEnvVar,
                                      base::nix::kDotConfigDir);
-@@ -275,7 +275,7 @@ base::FilePath GetEndpointVerificationDi
-   if (!got_path)
+@@ -286,7 +286,7 @@ base::FilePath GetEndpointVerificationDi
      return path;
+   }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

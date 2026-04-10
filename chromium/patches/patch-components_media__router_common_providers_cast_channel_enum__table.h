@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/providers/cast/channel/enum_table.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/media_router/common/providers/cast/channel/enum_table.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/media_router/common/providers/cast/channel/enum_table.h
 @@ -364,7 +364,12 @@ class EnumTable {
  
@@ -17,5 +17,5 @@ $NetBSD$
 +  alignas(hardware_destructive_interference_size)
 +#endif
  #endif
-       std::initializer_list<Entry> data_;
-   bool is_sorted_;
+       // Constructed from an std::initializer_list pointing at static read only
+       // data.

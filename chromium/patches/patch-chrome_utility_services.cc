@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/utility/services.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/utility/services.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/utility/services.cc
 @@ -51,7 +51,7 @@
  #include "services/proxy_resolver_mac/mac_system_proxy_resolver_impl.h"

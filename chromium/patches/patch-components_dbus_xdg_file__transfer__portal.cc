@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/dbus/xdg/file_transfer_portal.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/dbus/xdg/file_transfer_portal.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/dbus/xdg/file_transfer_portal.cc
 @@ -28,6 +28,10 @@
  #include "dbus/object_path.h"

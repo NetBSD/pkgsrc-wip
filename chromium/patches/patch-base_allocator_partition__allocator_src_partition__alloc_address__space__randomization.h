@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h
 @@ -38,7 +38,7 @@ AslrMask(uintptr_t bits) {
  
@@ -15,7 +15,7 @@ $NetBSD$
  
      // We shouldn't allocate system pages at all for sanitizer builds. However,
      // we do, and if random hint addresses interfere with address ranges
-@@ -125,7 +125,7 @@ AslrMask(uintptr_t bits) {
+@@ -142,7 +142,7 @@ AslrMask(uintptr_t bits) {
          return AslrAddress(0x20000000ULL);
        }
      #elif PA_BUILDFLAG(PA_ARCH_CPU_ARM64)

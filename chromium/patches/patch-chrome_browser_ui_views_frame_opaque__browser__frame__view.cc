@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.cc
-@@ -57,7 +57,7 @@
+@@ -58,7 +58,7 @@
  #include "ui/views/window/vector_icons/vector_icons.h"
  #include "ui/views/window/window_shape.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/views/controls/menu/menu_runner.h"
  #endif
  
-@@ -587,7 +587,7 @@ bool OpaqueBrowserFrameView::IsFrameCond
+@@ -588,7 +588,7 @@ bool OpaqueBrowserFrameView::IsFrameCond
  
  OpaqueBrowserFrameView::FrameButtonStyle
  OpaqueBrowserFrameView::GetFrameButtonStyle() const {
@@ -24,7 +24,7 @@ $NetBSD$
    return FrameButtonStyle::kMdButton;
  #else
    return FrameButtonStyle::kImageButton;
-@@ -606,7 +606,7 @@ bool OpaqueBrowserFrameView::ShouldDrawR
+@@ -607,7 +607,7 @@ bool OpaqueBrowserFrameView::ShouldDrawR
    return false;
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  bool OpaqueBrowserFrameView::IsTiled() const {
    return browser_widget()->tiled();
  }
-@@ -840,7 +840,7 @@ gfx::Rect OpaqueBrowserFrameView::GetIco
+@@ -848,7 +848,7 @@ gfx::Rect OpaqueBrowserFrameView::GetIco
  }
  
  void OpaqueBrowserFrameView::WindowIconPressed() {

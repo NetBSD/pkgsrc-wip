@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/SkMemory_new_handler.cpp.orig	2026-03-11 22:12:25.000000000 +0000
+--- skia/ext/SkMemory_new_handler.cpp.orig	2026-04-06 16:25:54.000000000 +0000
 +++ skia/ext/SkMemory_new_handler.cpp
-@@ -24,7 +24,7 @@
+@@ -22,7 +22,7 @@
  #include <windows.h>
  #elif BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -15,7 +15,7 @@ $NetBSD$
  #include <malloc.h>
  #endif
  
-@@ -110,7 +110,7 @@ static void* malloc_nothrow(size_t size,
+@@ -108,7 +108,7 @@ static void* malloc_nothrow(size_t size,
    // TODO(b.kelemen): we should always use UncheckedMalloc but currently it
    // doesn't work as intended everywhere.
    void* result;

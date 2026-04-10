@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
-@@ -69,7 +69,7 @@
+@@ -70,7 +70,7 @@
  #include "ui/base/l10n/l10n_util.h"
  #include "ui/base/webui/web_ui_util.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signals/user_permission_service_factory.h"
  #include "components/device_signals/core/browser/user_permission_service.h"  // nogncheck
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -381,7 +381,7 @@ void ManagementUIHandler::AddReportingIn
+@@ -382,7 +382,7 @@ void ManagementUIHandler::AddReportingIn
        report_sources->Append(std::move(data));
      }
  
@@ -24,7 +24,7 @@ $NetBSD$
      auto device_signal_data = GetDeviceSignalGrantedMessage();
      if (!device_signal_data.empty()) {
        report_sources->Append(std::move(device_signal_data));
-@@ -403,7 +403,7 @@ void ManagementUIHandler::AddReportingIn
+@@ -404,7 +404,7 @@ void ManagementUIHandler::AddReportingIn
        report_sources->Append(std::move(data));
      }
  
@@ -33,7 +33,7 @@ $NetBSD$
      auto device_signal_data = GetDeviceSignalGrantedMessage();
      if (!device_signal_data.empty()) {
        report_sources->Append(std::move(device_signal_data));
-@@ -592,7 +592,7 @@ policy::PolicyService* ManagementUIHandl
+@@ -593,7 +593,7 @@ policy::PolicyService* ManagementUIHandl
        ->policy_service();
  }
  

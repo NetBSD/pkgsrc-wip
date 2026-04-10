@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- v8/src/api/api.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ v8/src/api/api.cc
-@@ -163,7 +163,7 @@
+@@ -165,7 +165,7 @@
  
  #include "src/strings/string-hasher-inl.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6337,7 +6337,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6353,7 +6353,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

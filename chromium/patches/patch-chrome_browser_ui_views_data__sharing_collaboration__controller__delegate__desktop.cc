@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc
-@@ -95,7 +95,7 @@ DialogText GetPromptDialogTextFromStatus
+@@ -96,7 +96,7 @@ DialogText GetPromptDialogTextFromStatus
        break;
    }
  

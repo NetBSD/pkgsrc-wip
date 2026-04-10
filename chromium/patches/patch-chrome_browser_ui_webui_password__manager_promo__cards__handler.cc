@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards_handler.cc
 @@ -31,7 +31,7 @@
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)

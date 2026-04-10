@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/views/test/ui_controls_factory_desktop_aura_ozone.cc
 @@ -237,7 +237,7 @@ bool SendMouseClick(MouseButton type, gf
                           window_hint);

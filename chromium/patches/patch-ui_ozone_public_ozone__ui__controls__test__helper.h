@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/public/ozone_ui_controls_test_helper.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/ozone/public/ozone_ui_controls_test_helper.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/ozone/public/ozone_ui_controls_test_helper.h
 @@ -62,7 +62,7 @@ class OzoneUIControlsTestHelper {
    // aura::Window.

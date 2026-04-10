@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/hats/survey_config.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/hats/survey_config.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/hats/survey_config.cc
-@@ -559,7 +559,7 @@ std::vector<hats::SurveyConfig> GetAllSu
+@@ -548,7 +548,7 @@ std::vector<hats::SurveyConfig> GetAllSu
        &features::kHappinessTrackingSurveysForWallpaperSearch,
        kHatsSurveyTriggerWallpaperSearch);
  

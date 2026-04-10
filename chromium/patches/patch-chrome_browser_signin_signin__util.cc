@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/signin/signin_util.cc
 @@ -49,7 +49,7 @@
  #include "services/network/public/mojom/cookie_manager.mojom.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/security_key/remote_security_key_main.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- remoting/host/security_key/remote_security_key_main.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ remoting/host/security_key/remote_security_key_main.cc
 @@ -24,7 +24,7 @@
  #include "remoting/host/security_key/security_key_message_handler.h"
