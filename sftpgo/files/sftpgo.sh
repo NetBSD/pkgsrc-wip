@@ -25,7 +25,7 @@ command_args="-p ${pidfile} \
 	${task} ${task_args}"
 
 if [ -f @SYSCONFBASE@/rc.subr ]; then
-    	. @SYSCONFBASE@/rc.subr
+	. @SYSCONFBASE@/rc.subr
 
 	rcvar=${name}
 	pidfile="@VARBASE@/run/${name}.pid"
@@ -33,7 +33,7 @@ if [ -f @SYSCONFBASE@/rc.subr ]; then
 	load_rc_config ${name}
 	run_rc_command "$1"
 else
-        @ECHO@ -n " ${name}"
+	@ECHO@ -n " ${name}"
 
 	${command} ${command_args}
 fi
