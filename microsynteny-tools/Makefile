@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	c471264f8df1fd73621973737d74f4f48e8eb9d1
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
 COMMENT=	Tools for exploring microsyntenic differences among species
 LICENSE=	2-clause-bsd

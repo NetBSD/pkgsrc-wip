@@ -5,7 +5,7 @@ DISTNAME=	libdoom-umapinfo-${VERSION}
 CATEGORIES=	games
 MASTER_SITES=	https://micha.freeshell.org/libdoom-umapinfo/src/
 
-OWNER=		micha@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://micha.freeshell.org/libdoom-umapinfo/
 COMMENT=	Parser for Doom UMAPINFO data
 LICENSE=	2-clause-bsd

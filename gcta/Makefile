@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jianyangqt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_SUBMODULES+=	zhilizheng plink-ng 3744540 plink/submods/plink-ng
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://cnsgenomics.com/software/gcta/index.html
 COMMENT=	Genome-wide Complex Trait Analysis
 LICENSE=	gnu-gpl-v3

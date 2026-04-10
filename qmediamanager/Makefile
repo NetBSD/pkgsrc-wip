@@ -4,7 +4,7 @@ DISTNAME=	qmediamanager-0.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/qmediamanager
 COMMENT=	GUI tool for managing removable media
 LICENSE=	2-clause-bsd

@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openmopac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openmopac.net/
 COMMENT=	Semi-empirical (MNDO, etc.) molecular orbital calculation
 LICENSE=	gnu-gpl-v3

@@ -4,7 +4,7 @@ DISTNAME=	biolibc-tools-0.1.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc-tools
 COMMENT=	High-performance bioinformatics tools based on biolibc
 LICENSE=	2-clause-bsd

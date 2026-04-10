@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydeseq2/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/owkin/PyDESeq2
 COMMENT=	Python implementation of the popular DESeq2 R package
 LICENSE=	mit

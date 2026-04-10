@@ -6,7 +6,7 @@ CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
 GITHUB_SUBMODULES+=	ncbi ncbi-vdb ${PKGVERSION_NOREV} ncbi-vdb
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
 COMMENT=	NCBI's toolkit for handling data in INSDC Sequence Read Archives
 LICENSE=	public-domain AND gnu-lgpl-v2.1

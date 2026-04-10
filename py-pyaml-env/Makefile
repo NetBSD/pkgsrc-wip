@@ -16,7 +16,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyaml-env/}
 
-OWNER=		pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mkaranasou/pyaml_env
 COMMENT=	Provides yaml file parsing with environment variable resolution
 LICENSE=	mit

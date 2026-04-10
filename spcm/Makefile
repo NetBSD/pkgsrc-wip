@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	3d3d33100fe8075f5a5215231a4d9d68e37aa41c
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/SPCM
 COMMENT=	Simple, portable cluster management
 LICENSE=	2-clause-bsd

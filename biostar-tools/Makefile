@@ -4,7 +4,7 @@
 PKGNAME=	biostar-tools-1.10.1
 CATEGORIES=	biology meta-pkgs
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Meta-package for Biostar Handbook tools
 
 WWW=            https://www.biostarhandbook.com

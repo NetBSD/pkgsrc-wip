@@ -19,7 +19,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kaleido/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 # Replace PYPI pages with upstream
 HOMEPAGE=	https://pypi.python.org/project/kaleido/
 COMMENT=	Cross-platform library for generating static images for Plotly

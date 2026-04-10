@@ -10,7 +10,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	f887cd6d8c923d4f6b78a74ef5ba366ea28aeaf8
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/auto-dev/
 COMMENT=	Tools for automating code development and documentation
 LICENSE=	2-clause-bsd

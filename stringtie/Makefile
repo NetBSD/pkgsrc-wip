@@ -9,7 +9,7 @@ DISTNAME=	stringtie-2.1.1
 CATEGORIES=	biology
 MASTER_SITES=	http://ccb.jhu.edu/software/stringtie/dl/
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.ccb.jhu.edu/software/stringtie/
 COMMENT=	Transcript assembly and quantification for RNA-seq
 LICENSE=	mit

@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	95377771d1d26a6f47a5eddbb61ef2e50fae475b
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/peak-classifier
 COMMENT=	Classify ChIP/ATAC-Seq peaks based on features provided in a GFF
 LICENSE=	2-clause-bsd

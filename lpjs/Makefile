@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
 GITHUB_TAG=	2117b07bce96d5c87729a4791ca0409abdc81d88
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
 COMMENT=	Lightweight, Portable Job Scheduler
 LICENSE=	2-clause-bsd

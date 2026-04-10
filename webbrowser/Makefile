@@ -4,7 +4,7 @@ DISTNAME=	webbrowser-0.4.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/webbrowser/
 COMMENT=	Proxy script for launching "best" available web browser
 LICENSE=	2-clause-bsd

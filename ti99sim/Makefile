@@ -10,7 +10,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	5c027150ecdc41a6f444e208d14efe569ecf098e
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.mrousseau.org/programs/ti99sim/
 COMMENT=	SDL-based TI-99/4a simulator
 LICENSE=	gnu-gpl-v3

@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	ab3da2eb8492f960ceb8832a4959a23f4f97e556
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/libpare
 COMMENT=	Pointer Array Regular Expressions
 LICENSE=	2-clause-bsd

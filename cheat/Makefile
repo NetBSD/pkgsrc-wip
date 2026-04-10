@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Tuplanolla/}
 GITHUB_PROJECT=	cheat
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-OWNER=		micha@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://github.com/Tuplanolla/cheat/
 COMMENT=	Convenient unit testing framework for the C programming language
 LICENSE=	2-clause-bsd

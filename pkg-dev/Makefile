@@ -5,7 +5,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	b68e649699e62395675ed88c2dd059fe62e98581
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/pkg-dev
 COMMENT=	Scripts to automate common tasks in pkgsrc development
 LICENSE=	2-clause-bsd

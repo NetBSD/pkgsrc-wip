@@ -7,7 +7,7 @@ DISTNAME=	rna-seq-1.3.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Core tools needed for RNA-Seq analysis
 
 DEPENDS+=	sra-tools>0:../../wip/sra-tools

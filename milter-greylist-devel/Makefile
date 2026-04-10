@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
 LICENSE=	modified-bsd
 
-OWNER=		pettai@nordu.net
+MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail devel snapshot
 

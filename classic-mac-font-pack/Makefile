@@ -42,7 +42,7 @@ SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
 #DISTFILES+=		Mottek.zip
 #SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
 
-OWNER=		christtrekker@users.sourceforge.net
+MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://68kmla.org/wiki/index.php/User:ChristTrekker/Choosing_Mac_fonts_for_the_web
 COMMENT=	Outline fonts modeled after those of the vintage 68k Macintosh era
 LICENSE=	generic-nonlicense

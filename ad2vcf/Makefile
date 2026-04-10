@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	51c419e6c5b55e3973f1a9229dc5a95a4f1a8919
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/ad2vcf
 COMMENT=	Add allelic depth info from a SAM stream to a VCF file
 LICENSE=	2-clause-bsd

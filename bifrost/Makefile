@@ -11,7 +11,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmelsted/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/pmelsted/bifrost
 COMMENT=	Parallel construction, indexing and querying of de Bruijn graphs
 LICENSE=	2-clause-bsd

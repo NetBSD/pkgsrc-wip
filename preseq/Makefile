@@ -9,7 +9,7 @@ DISTNAME=	preseq-3.2.0
 CATEGORIES=	biology
 MASTER_SITES=	https://github.com/smithlabcode/preseq/releases/download/v${PKGVERSION_NOREV}/
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/smithlabcode/preseq
 COMMENT=	Predict yield of distinct reads from a genomic library
 LICENSE=	gnu-gpl-v3

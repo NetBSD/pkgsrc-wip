@@ -15,7 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 
 COMMENT=	The Asterisk Software PBX
-OWNER=		alberto.m@futurelinkcorporation.com
+MAINTAINER=	alberto.m@futurelinkcorporation.com
 HOMEPAGE=	https://www.asterisk.org/
 LICENSE=	gnu-gpl-v2
 

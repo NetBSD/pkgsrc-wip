@@ -9,7 +9,7 @@ DISTFILES+=	score_1.20-20240505.tar.gz
 DISTFILES+=	bcftools-1.22.tar.bz2
 GH_TAG=		1.22
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://software.broadinstitute.org/software/score/
 COMMENT=	Bcftools plugin for mosaic chromosomal alteration analysis
 LICENSE=	mit

@@ -12,7 +12,7 @@ MASTER_SITES=	https://downloads.sourceforge.net/project/readseq/readseq/2.1.19/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.jar
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/readseq
 COMMENT=	Read and reformat biosequences, Java command-line version
 LICENSE=	public-domain

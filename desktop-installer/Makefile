@@ -4,7 +4,7 @@ DISTNAME=	desktop-installer-1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/desktop-installer/tree/master/NetBSD
 COMMENT=	Quickly configure a NetBSD desktop system
 LICENSE=	2-clause-bsd

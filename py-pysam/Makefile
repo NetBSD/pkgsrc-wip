@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-pysam-0.21.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysam/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/pysam-developers/pysam
 COMMENT=	Python module for reading, manipulating and writing genomic data sets
 LICENSE=	mit

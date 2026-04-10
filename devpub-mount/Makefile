@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	79ac5973407703780bd82e07be9289778a75c83b
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/devpub-mount/
 COMMENT=	NetBSD devpubd-based automounter
 LICENSE=	2-clause-bsd

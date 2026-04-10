@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-pyBigWig-0.3.22
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyBigWig/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/pyBigWig/
 COMMENT=	Python access to bigWig files using libBigWig
 LICENSE=	mit

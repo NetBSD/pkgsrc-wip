@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	8f3998572c360c74be44d47258659bbd00374286
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf2hap
 COMMENT=	Generate .hap file from VCF for haplohseq
 LICENSE=	2-clause-bsd

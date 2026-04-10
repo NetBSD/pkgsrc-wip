@@ -11,7 +11,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexdobin/}
 GITHUB_PROJECT=	STAR
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/alexdobin/STAR
 COMMENT=	Spliced Transcripts Alignment to a Reference
 LICENSE=	gnu-gpl-v3

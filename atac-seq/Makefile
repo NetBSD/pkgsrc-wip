@@ -9,7 +9,7 @@ DISTNAME=	atac-seq-1.5.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Core tools needed for ATAC-Seq analysis
 
 DEPENDS+=	sra-tools>0:../../wip/sra-tools

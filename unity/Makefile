@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ThrowTheSwitch/}
 GITHUB_PROJECT=	Unity
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		micha@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.throwtheswitch.org/unity
 COMMENT=	Unit testing framework built for C
 LICENSE=	mit

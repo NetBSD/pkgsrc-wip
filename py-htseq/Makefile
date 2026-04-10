@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-HTSeq-2.0.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=H/HTSeq/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/project/htseq/
 COMMENT=	Python library to facilitate programmatic analysis of sequence data
 LICENSE=	gnu-gpl-v3

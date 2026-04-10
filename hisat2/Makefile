@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaehwanKimLab/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://ccb.jhu.edu/software/hisat2/index.shtml
 COMMENT=	Alignment program for mapping next-generation sequencing reads
 LICENSE=	gnu-gpl-v3

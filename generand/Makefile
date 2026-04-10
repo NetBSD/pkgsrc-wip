@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	502772efafca1212922bb6170d4de673df16ecb4
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/generand
 COMMENT=	Generate random genomic data in FASTA/FASTQ, SAM, or VCF format
 LICENSE=	2-clause-bsd
