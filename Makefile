@@ -1762,7 +1762,6 @@ SUBDIR+=	ilbc-rfc3951
 SUBDIR+=	ilohamail
 SUBDIR+=	imgui
 SUBDIR+=	imonc
-SUBDIR+=	include-what-you-use
 SUBDIR+=	incron
 SUBDIR+=	inetdxtra
 SUBDIR+=	influx-cli
