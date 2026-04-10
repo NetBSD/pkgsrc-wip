@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		sftpgo-2.7.0
+DISTNAME=		sftpgo-2.7.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=drakkan/}
 GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}
