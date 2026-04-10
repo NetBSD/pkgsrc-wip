@@ -1,0 +1,10 @@
+www/esbuild: update to 0.28.0
+
+* 0.28.0
+- Add support for with { type: 'text' } imports (#4435)
+- Add integrity checks to fallback download path (#4343)
+- Update the Go compiler from 1.25.7 to 1.26.1
+
+* 0.27.7
+- Fix lowering of define semantics for TypeScript parameter properties (#4421)
+
