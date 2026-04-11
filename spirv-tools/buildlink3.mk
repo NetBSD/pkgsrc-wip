@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	spirv-tools
 .if !defined(SPIRV_TOOLS_BUILDLINK3_MK)
 SPIRV_TOOLS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.spirv-tools+=	spirv-tools>=2025.4
+BUILDLINK_API_DEPENDS.spirv-tools+=	spirv-tools>=1.4.341.0
 BUILDLINK_PKGSRCDIR.spirv-tools?=	../../parallel/spirv-tools
 BUILDLINK_FILES.spirv-tools?=					\
 					bin/spirv-as		\
