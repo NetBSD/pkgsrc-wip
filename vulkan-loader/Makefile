@@ -1,11 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	vulkan-loader-1.4.335.0 # matches vulkan-headers
+.include "../../graphics/vulkan-headers/Makefile.common"
+
+DISTNAME=	vulkan-loader-${SDK_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_PROJECT=	Vulkan-Loader
-GITHUB_TAG=	vulkan-sdk-${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	nros@NetBSD.org
@@ -15,7 +14,6 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
 LIBVERSION=	${PKGVERSION_NOREV:R}
 PLIST_SUBST+=	LIBVERSION=${LIBVERSION}
