@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../graphics/vulkan-headers/Makefile.common"
+.include "../../wip/vulkan-headers/Makefile.common"
 
 DISTNAME=	vulkan-loader-${SDK_VERSION}
 CATEGORIES=	graphics
