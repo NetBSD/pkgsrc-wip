@@ -1,0 +1,12 @@
+$NetBSD$
+
+Replace the deprecated poetry backend.
+
+--- pyproject.toml.orig	2026-04-12 08:11:43.424528978 +0000
++++ pyproject.toml
+@@ -23,4 +23,4 @@ bpytop = "bpytop:main"
+ 
+ [build-system]
+ requires = ["poetry>=0.12"]
+-build-backend = "poetry.masonry.api"
++build-backend = "poetry.core.masonry.api"

@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (bpytop-1.0.68.tar.gz) = 611ecaea4a8c7850c8c5685b854d773bf94d10cd33a899ba553c992028d6e76a
 SHA512 (bpytop-1.0.68.tar.gz) = 3525a3cce9b039c4ffe310d829866570119b3d36da4a73e5a0c94cc22e1044ce710ad02d205bef9d52cfdf6fabd434523d7d753c5950f160c8594627dcdbed6f
 Size (bpytop-1.0.68.tar.gz) = 78658 bytes
+SHA1 (patch-pyproject.toml) = 1d550b1d146de7b24d43ee71ac84d89dcb171abc
