@@ -1056,6 +1056,7 @@ share/forgejo/options/locale_next/locale_fa-IR.json
 share/forgejo/options/locale_next/locale_fi-FI.json
 share/forgejo/options/locale_next/locale_fil.json
 share/forgejo/options/locale_next/locale_fr-FR.json
+share/forgejo/options/locale_next/locale_fur.ini
 share/forgejo/options/locale_next/locale_ga.json
 share/forgejo/options/locale_next/locale_gl.json
 share/forgejo/options/locale_next/locale_he.json
@@ -1074,6 +1075,7 @@ share/forgejo/options/locale_next/locale_ko-KR.json
 share/forgejo/options/locale_next/locale_la.json
 share/forgejo/options/locale_next/locale_lt.json
 share/forgejo/options/locale_next/locale_lv-LV.json
+share/forgejo/options/locale_next/locale_mic.ini
 share/forgejo/options/locale_next/locale_ml-IN.json
 share/forgejo/options/locale_next/locale_nb_NO.json
 share/forgejo/options/locale_next/locale_nds.json
@@ -1583,7 +1585,7 @@ share/forgejo/public/assets/js/---.d30e78bc.js
 share/forgejo/public/assets/js/-.b8eeb965.js
 share/forgejo/public/assets/js/activity-heatmap.43fc6632.js
 share/forgejo/public/assets/js/asciinema-player.21f07482.js
-share/forgejo/public/assets/js/citation-information.3ee4c38e.js
+share/forgejo/public/assets/js/citation-information.52cb5fa9.js
 share/forgejo/public/assets/js/code-frequency-graph.d6608dec.js
 share/forgejo/public/assets/js/codemirror----------------.5163e9c0.js
 share/forgejo/public/assets/js/codemirror-------.232b0360.js
@@ -1599,7 +1601,7 @@ share/forgejo/public/assets/js/easymde.cc410684.js
 share/forgejo/public/assets/js/eventsource.sharedworker.js
 share/forgejo/public/assets/js/forgejoswagger.js
 share/forgejo/public/assets/js/index.js
-share/forgejo/public/assets/js/index.js.0138576e.map
+share/forgejo/public/assets/js/index.js.c0fe33f6.map
 share/forgejo/public/assets/js/katex.b3ce25c9.js
 share/forgejo/public/assets/js/mcaptcha-vanilla-glue.a64aa9ae.js
 share/forgejo/public/assets/js/mermaid.19fc0555.js
