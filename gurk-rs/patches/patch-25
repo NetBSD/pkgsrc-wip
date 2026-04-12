@@ -8,7 +8,7 @@ $NetBSD$
  boring-signal = { git = "https://github.com/signalapp/boring", tag = "signal-v5.0.2", package = "boring", default-features = false }
 -curve25519-dalek-signal = { git = 'https://github.com/signalapp/curve25519-dalek', package = "curve25519-dalek", tag = 'signal-curve25519-4.1.3' }
 -spqr = { git = "https://github.com/signalapp/SparsePostQuantumRatchet.git", tag = "v1.4.0" }
-+curve25519-dalek-signal = { path = "../curve25519-dalek-fa033980129e3d7b806803b3f1a2a04399ea6fb7/curve25519-dalek" }
++curve25519-dalek-signal = { path = "../curve25519-dalek-7c6d34756355a3566a704da84dce7b1c039a6572/curve25519-dalek" }
 +spqr = { path = "../SparsePostQuantumRatchet-d310c99c57a046549be205b9ce50d80dcbe5f3e4" }
  tokio-boring-signal = { git = "https://github.com/signalapp/boring", tag = "signal-v5.0.2", package = "tokio-boring" }
  
