@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2026/04/08 11:33:52 tnn Exp $
-
-BLAKE2s (SPIRV-Tools-1.4.341.0.tar.gz) = fee37d5dccb256bd8a175a219e4d1bed75914a3ed3ebd0956689f1631bc1431d
-SHA512 (SPIRV-Tools-1.4.341.0.tar.gz) = 429954f382e3a4006c012642509d0530001eb56e802686f35b1dd33a21167e08e2b164cb2f32e8acdd66da7f5bea6046aa184945d7138d3b0b929e512437c40d
-Size (SPIRV-Tools-1.4.341.0.tar.gz) = 3455701 bytes
-SHA1 (patch-source_opt_decoration__manager.cpp) = 5be7a27f891d421f92ab77ccfac69585f04c49f4

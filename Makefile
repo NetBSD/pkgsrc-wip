@@ -5521,7 +5521,6 @@ SUBDIR+=	spidermonkey31
 SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
 SUBDIR+=	spirv-tools
-SUBDIR+=	splix
 SUBDIR+=	spot
 SUBDIR+=	spread4
 SUBDIR+=	spyder
