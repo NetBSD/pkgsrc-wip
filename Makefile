@@ -1423,6 +1423,7 @@ SUBDIR+=	gorilla-audio
 SUBDIR+=	gosec
 SUBDIR+=	gosuki
 SUBDIR+=	gotify
+SUBDIR+=	gotop
 SUBDIR+=	goyq
 SUBDIR+=	gp-toric
 SUBDIR+=	gpak
