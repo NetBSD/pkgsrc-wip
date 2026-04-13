@@ -1,15 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	glslang-16.2.0
+.include "../../graphics/vulkan-headers/Makefile.common"
+
+DISTNAME=	glslang-${SDK_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/glslang/
 COMMENT=	Front end for GLSL/ESSL, HLSL (partial) and SPIR-V generator
 LICENSE=	modified-bsd AND 2-clause-bsd AND mit AND apache-2.0 AND gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 CMAKE_CONFIGURE_ARGS+=	-DALLOW_EXTERNAL_SPIRV_TOOLS=ON
 
