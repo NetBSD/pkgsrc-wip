@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	electrum_ecc-0.0.6
+DISTNAME=	electrum_ecc-0.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/electrum_ecc/}

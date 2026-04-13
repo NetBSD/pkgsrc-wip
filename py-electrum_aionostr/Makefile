@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	electrum_aionostr-0.0.11
+DISTNAME=	electrum_aionostr-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/electrum_aionostr/}
