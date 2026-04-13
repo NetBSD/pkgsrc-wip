@@ -6236,7 +6236,6 @@ SUBDIR+=	xtrkcad
 SUBDIR+=	xu4
 SUBDIR+=	xwallpaper
 SUBDIR+=	xwax
-SUBDIR+=	xwayland
 SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	yabar
