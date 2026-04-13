@@ -2138,7 +2138,6 @@ SUBDIR+=	libnsl
 SUBDIR+=	libntfs
 SUBDIR+=	libode
 SUBDIR+=	liboglappth
-SUBDIR+=	libopeninput
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libopenshot
 SUBDIR+=	libopenshot-audio
