@@ -2054,7 +2054,6 @@ SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
 SUBDIR+=	libeps
 SUBDIR+=	libevdev
-SUBDIR+=	libevdev-chunk
 SUBDIR+=	libevhtp
 SUBDIR+=	libexact
 SUBDIR+=	libfirm-git
