@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.25 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (llvm-project-22.1.2.src.tar.xz) = b27c89d1cd0491af4e474737f6ef43dabbb94ffb2a855d5c9f87d9e0bbd2bdc0
-SHA512 (llvm-project-22.1.2.src.tar.xz) = d5adfbb8e5026b845f8251f5f490b4646ccd2ecaf81a2b80091d1c71044f5c7726f2df6680a95589f2dedc614bdd9cdd88febcce6d5fc92f638f616d503b8066
-Size (llvm-project-22.1.2.src.tar.xz) = 167026580 bytes
+BLAKE2s (llvm-project-22.1.3.src.tar.xz) = db0665f4960b9432a6d2e5206b89409c7f2845848268b96c146fa1c3679ba0af
+SHA512 (llvm-project-22.1.3.src.tar.xz) = 3557a955d55471671ae2f7b9c809affd59a29a6fb1e70a2a5d040dc1c6376246deb0635be8ca36cae09112981760e9afb128c822e5554bd722589fb8dee3f0df
+Size (llvm-project-22.1.3.src.tar.xz) = 167045212 bytes
 SHA1 (patch-src_CMakeLists.txt) = 4554c675b778d8d631f2fc664364f0d3ffc3ed5e
 SHA1 (patch-src_charconv.cpp) = 658a0727c6e2ddc051fbd22a536033bae19a22ba
 SHA1 (patch-src_filesystem_file__descriptor.h) = 44a64cb3eac4e94abb54170c355639642b8246c2
