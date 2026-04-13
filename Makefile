@@ -6025,7 +6025,6 @@ SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vscode
 SUBDIR+=	vsearch
-SUBDIR+=	vulkan-headers
 SUBDIR+=	vulkan-loader
 SUBDIR+=	vulkan-tools
 SUBDIR+=	w3c-httpd
