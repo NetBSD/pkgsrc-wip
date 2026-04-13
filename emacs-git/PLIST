@@ -1268,6 +1268,8 @@ share/emacs/${PKGVERSION}/lisp/calendar/icalendar-parser.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar-parser.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar-recur.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar-recur.elc
+share/emacs/${PKGVERSION}/lisp/calendar/icalendar-shortdoc.el.gz
+share/emacs/${PKGVERSION}/lisp/calendar/icalendar-shortdoc.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar-utils.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar-utils.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
