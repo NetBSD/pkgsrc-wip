@@ -2112,7 +2112,6 @@ SUBDIR+=	libjingle
 SUBDIR+=	libkml
 SUBDIR+=	libks
 SUBDIR+=	liblfds
-SUBDIR+=	libliftoff
 SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
 SUBDIR+=	libm4ri
