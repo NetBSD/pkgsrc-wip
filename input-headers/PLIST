@@ -1,7 +1,0 @@
-@comment $NetBSD$
-include/linux/freebsd/input-event-codes.h
-include/linux/freebsd/input.h
-include/linux/input-event-codes.h
-include/linux/input.h
-include/linux/linux/input-event-codes.h
-include/linux/linux/input.h
