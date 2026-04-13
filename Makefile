@@ -1503,7 +1503,6 @@ SUBDIR+=	guile-sjson
 SUBDIR+=	guile-stis-parser
 SUBDIR+=	gunison
 SUBDIR+=	gupnp-ui
-SUBDIR+=	gurk
 SUBDIR+=	gurlchecker
 SUBDIR+=	gvariant
 SUBDIR+=	gvfs
