@@ -1,8 +1,0 @@
-error: no matching package named `curve25519-dalek-signal` found
-location searched: /tmp/wip/gurk-rs/work/curve25519-dalek-7c6d34756355a3566a704da84dce7b1c039a6572/curve25519-dalek
-required by package `zkgroup v0.9.0 (/tmp/wip/gurk-rs/work/libsignal-38514bdc8acaaffbccd5c96515c68deb2019abe0/rust/zkgroup)`
-    ... which satisfies path dependency `zkgroup` of package `libsignal-service v0.1.0 (/tmp/wip/gurk-rs/work/libsignal-service-rs-3d07d8df33482b2d191c075fdc2b750738a89384)`
-    ... which satisfies path dependency `libsignal-service` of package `presage v0.8.0-dev (/tmp/wip/gurk-rs/work/presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage)`
-    ... which satisfies path dependency `presage` of package `gurk v0.9.1 (/tmp/wip/gurk-rs/work/gurk-rs-0.9.1)`
-As a reminder, you're using offline mode (--offline) which can sometimes cause surprising resolution failures, if this error is too confusing you may wish to retry without `--offline`.
-*** Error code 101

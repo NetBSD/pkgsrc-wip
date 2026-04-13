@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use pkgsrc distfile instead of fetch during build.
+
 --- ../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage/Cargo.toml.orig	2026-04-11 21:18:07.027602337 +0000
 +++ ../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage/Cargo.toml
 @@ -12,7 +12,7 @@ cdsi = ["libsignal-service/cdsi"]

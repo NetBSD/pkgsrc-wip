@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	gurk-rs-0.9.1
+PKGNAME=	${DISTNAME:S/-rs//}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=boxdot/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +13,8 @@ LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config gmake perl
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 # Depends on an unpublished crates. Can't use cargo.mk to fetch it.
 CURVE25519-DALEK_REV=		7c6d34756355a3566a704da84dce7b1c039a6572
@@ -41,6 +44,11 @@ SITES.poksho-${POKSHO_REV}.tar.gz=				-${MASTER_SITE_GITHUB:=signalapp/}libsigna
 SITES.presage-${PRESAGE_REV}.tar.gz=				-${MASTER_SITE_GITHUB:=whisperfish/}presage/archive/${PRESAGE_REV}.tar.gz
 SITES.spqr-${SPQR_REV}.tar.gz=					-${MASTER_SITE_GITHUB:=signalapp/}SparsePostQuantumRatchet/archive/${SPQR_REV}.tar.gz
 SITES.sqlx-${SQLX_REV}.tar.gz=					-${MASTER_SITE_GITHUB:=gferon/}sqlx/archive/${SQLX_REV}.tar.gz
+
+INSTALLATION_DIRS+=	share/doc/gurk
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/gurk
 
 .include "cargo-depends.mk"
 
