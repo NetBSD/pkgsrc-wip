@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	4.7.1
+VERSION=	4.7.2
 DISTNAME=	Electrum-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	finance python
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiorpcX>=0.25:../../net/py-aiorpcX
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.20:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-qrcode>=8.2:../../graphics/py-qrcode
 DEPENDS+=	${PYPKGPREFIX}-electrum_ecc>=0.0.6:../../wip/py-electrum_ecc
-DEPENDS+=	${PYPKGPREFIX}-electrum_aionostr>=0.0.11:../../wip/py-electrum_aionostr
+DEPENDS+=	${PYPKGPREFIX}-electrum_aionostr>=0.1.0:../../wip/py-electrum_aionostr
 DEPENDS+=	${PYPKGPREFIX}-jsonpatch>=1.33:../../wip/py-jsonpatch
 DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-dns>=2.2:../../net/py-dns
