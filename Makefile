@@ -5386,7 +5386,6 @@ SUBDIR+=	seafile-client
 SUBDIR+=	seafile-gui
 SUBDIR+=	seafile-server
 SUBDIR+=	seagull
-SUBDIR+=	seatd
 SUBDIR+=	sector-decomposition
 SUBDIR+=	seed7
 SUBDIR+=	seeks
