@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	wayland
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mwayland)
-.include "../../wip/input-headers/buildlink3.mk"
+.include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .else

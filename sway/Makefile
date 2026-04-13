@@ -23,10 +23,10 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/startsway
 
 
-.include "../../wip/wlroots/buildlink3.mk"
-.include "../../wip/libevdev-chunk/buildlink3.mk"
+.include "../../wayland/wlroots/buildlink3.mk"
+.include "../../devel/libevdev-chunk/buildlink3.mk"
 .include "../../wip/basu/buildlink3.mk"
-.include "../../wip/seatd/buildlink3.mk"
+.include "../../sysutils/seatd/buildlink3.mk"
 
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"

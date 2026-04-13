@@ -19,5 +19,5 @@ WRKSRC=		${WRKDIR}/wlrctl-v${PKGVERSION_NOREV}
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
-.include "../../wip/input-headers/buildlink3.mk"
+.include "../../devel/input-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

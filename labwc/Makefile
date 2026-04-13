@@ -47,7 +47,7 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../wip/libsfdo/buildlink3.mk"
-.include "../../wip/wlroots/buildlink3.mk"
-.include "../../wip/seatd/buildlink3.mk"
+.include "../../wayland/wlroots/buildlink3.mk"
+.include "../../sysutils/seatd/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

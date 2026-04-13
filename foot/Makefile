@@ -30,7 +30,7 @@ CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 #.include "../../lang/python/application.mk"
 .include "../../wip/fcft/buildlink3.mk"
 .include "../../wip/tllist/buildlink3.mk"
-.include "../../wip/input-headers/buildlink3.mk"
+.include "../../devel/input-headers/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -35,5 +35,5 @@ CFLAGS+=	-I/usr/pkg/include/libepoll-shim
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../textproc/scdoc/tool.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
-.include "../../wip/input-headers/buildlink3.mk"
+.include "../../devel/input-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
