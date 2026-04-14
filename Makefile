@@ -311,7 +311,6 @@ SUBDIR+=	bashdb
 SUBDIR+=	bashtop
 SUBDIR+=	basic-stats
 SUBDIR+=	bastard
-SUBDIR+=	basu
 SUBDIR+=	bats-core
 SUBDIR+=	bcf-score
 SUBDIR+=	bcftools
