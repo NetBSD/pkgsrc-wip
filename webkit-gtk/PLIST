@@ -89,7 +89,6 @@ include/webkitgtk-4.1/webkit/WebKitWebContext.h
 include/webkitgtk-4.1/webkit/WebKitWebEditor.h
 include/webkitgtk-4.1/webkit/WebKitWebExtension.h
 include/webkitgtk-4.1/webkit/WebKitWebExtensionAutocleanups.h
-include/webkitgtk-4.1/webkit/WebKitWebExtensionMatchPattern.h
 include/webkitgtk-4.1/webkit/WebKitWebFormManager.h
 include/webkitgtk-4.1/webkit/WebKitWebHitTestResult.h
 include/webkitgtk-4.1/webkit/WebKitWebInspector.h
@@ -104,6 +103,7 @@ include/webkitgtk-4.1/webkit/WebKitWebsiteDataAccessPermissionRequest.h
 include/webkitgtk-4.1/webkit/WebKitWebsiteDataManager.h
 include/webkitgtk-4.1/webkit/WebKitWebsitePolicies.h
 include/webkitgtk-4.1/webkit/WebKitWindowProperties.h
+include/webkitgtk-4.1/webkit/WebKitXRPermissionRequest.h
 include/webkitgtk-4.1/webkit2/webkit-web-extension.h
 include/webkitgtk-4.1/webkit2/webkit2.h
 include/webkitgtk-4.1/webkitdom/WebKitDOMAttr.h
@@ -224,14 +224,14 @@ lib/girepository-1.0/WebKit2-4.1.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.1.typelib
 lib/libjavascriptcoregtk-4.1.so
 lib/libjavascriptcoregtk-4.1.so.0
-lib/libjavascriptcoregtk-4.1.so.0.9.11
+lib/libjavascriptcoregtk-4.1.so.0.10.10
 lib/libwebkit2gtk-4.1.so
 lib/libwebkit2gtk-4.1.so.0
-lib/libwebkit2gtk-4.1.so.0.19.9
+lib/libwebkit2gtk-4.1.so.0.21.6
 lib/pkgconfig/javascriptcoregtk-4.1.pc
 lib/pkgconfig/webkit2gtk-4.1.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.1.pc
-lib/webkit2gtk-4.1/injected-bundle/libwebkit2gtkinjectedbundle.${RUBY_DLEXT}
+lib/webkit2gtk-4.1/injected-bundle/libwebkit2gtkinjectedbundle.so
 libexec/webkit2gtk-4.1/MiniBrowser
 libexec/webkit2gtk-4.1/WebKitGPUProcess
 libexec/webkit2gtk-4.1/WebKitNetworkProcess
@@ -526,6 +526,7 @@ share/doc/webkit2gtk-4.1/class.WebsiteDataAccessPermissionRequest.html
 share/doc/webkit2gtk-4.1/class.WebsiteDataManager.html
 share/doc/webkit2gtk-4.1/class.WebsitePolicies.html
 share/doc/webkit2gtk-4.1/class.WindowProperties.html
+share/doc/webkit2gtk-4.1/class.XRPermissionRequest.html
 share/doc/webkit2gtk-4.1/classes_hierarchy.html
 share/doc/webkit2gtk-4.1/const.EDITING_COMMAND_COPY.html
 share/doc/webkit2gtk-4.1/const.EDITING_COMMAND_CREATE_LINK.html
@@ -575,10 +576,6 @@ share/doc/webkit2gtk-4.1/ctor.UserStyleSheet.new_for_world.html
 share/doc/webkit2gtk-4.1/ctor.WebContext.new.html
 share/doc/webkit2gtk-4.1/ctor.WebContext.new_ephemeral.html
 share/doc/webkit2gtk-4.1/ctor.WebContext.new_with_website_data_manager.html
-share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_all_hosts_and_schemes.html
-share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_all_urls.html
-share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_with_scheme.html
-share/doc/webkit2gtk-4.1/ctor.WebExtensionMatchPattern.new_with_string.html
 share/doc/webkit2gtk-4.1/ctor.WebView.new.html
 share/doc/webkit2gtk-4.1/ctor.WebView.new_with_context.html
 share/doc/webkit2gtk-4.1/ctor.WebView.new_with_related_view.html
@@ -618,6 +615,7 @@ share/doc/webkit2gtk-4.1/enum.UserScriptInjectionTime.html
 share/doc/webkit2gtk-4.1/enum.UserStyleLevel.html
 share/doc/webkit2gtk-4.1/enum.WebExtensionMode.html
 share/doc/webkit2gtk-4.1/enum.WebProcessTerminationReason.html
+share/doc/webkit2gtk-4.1/enum.XRSessionMode.html
 share/doc/webkit2gtk-4.1/environment-variables.html
 share/doc/webkit2gtk-4.1/error.DownloadError.html
 share/doc/webkit2gtk-4.1/error.FaviconDatabaseError.html
@@ -635,8 +633,8 @@ share/doc/webkit2gtk-4.1/flags.FindOptions.html
 share/doc/webkit2gtk-4.1/flags.HitTestResultContext.html
 share/doc/webkit2gtk-4.1/flags.InputHints.html
 share/doc/webkit2gtk-4.1/flags.SnapshotOptions.html
-share/doc/webkit2gtk-4.1/flags.WebExtensionMatchPatternOptions.html
 share/doc/webkit2gtk-4.1/flags.WebsiteDataTypes.html
+share/doc/webkit2gtk-4.1/flags.XRSessionFeatures.html
 share/doc/webkit2gtk-4.1/fonts.css
 share/doc/webkit2gtk-4.1/func.CHECK_VERSION.html
 share/doc/webkit2gtk-4.1/func.DECLARE_TYPE.html
@@ -709,6 +707,7 @@ share/doc/webkit2gtk-4.1/method.ContextMenu.get_event.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.get_item_at_position.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.get_items.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.get_n_items.html
+share/doc/webkit2gtk-4.1/method.ContextMenu.get_position.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.get_user_data.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.insert.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.last.html
@@ -719,8 +718,10 @@ share/doc/webkit2gtk-4.1/method.ContextMenu.remove_all.html
 share/doc/webkit2gtk-4.1/method.ContextMenu.set_user_data.html
 share/doc/webkit2gtk-4.1/method.ContextMenuItem.get_action.html
 share/doc/webkit2gtk-4.1/method.ContextMenuItem.get_gaction.html
+share/doc/webkit2gtk-4.1/method.ContextMenuItem.get_gaction_target.html
 share/doc/webkit2gtk-4.1/method.ContextMenuItem.get_stock_action.html
 share/doc/webkit2gtk-4.1/method.ContextMenuItem.get_submenu.html
+share/doc/webkit2gtk-4.1/method.ContextMenuItem.get_title.html
 share/doc/webkit2gtk-4.1/method.ContextMenuItem.is_separator.html
 share/doc/webkit2gtk-4.1/method.ContextMenuItem.set_submenu.html
 share/doc/webkit2gtk-4.1/method.CookieManager.add_cookie.html
@@ -1017,6 +1018,7 @@ share/doc/webkit2gtk-4.1/method.Settings.get_hardware_acceleration_policy.html
 share/doc/webkit2gtk-4.1/method.Settings.get_javascript_can_access_clipboard.html
 share/doc/webkit2gtk-4.1/method.Settings.get_javascript_can_open_windows_automatically.html
 share/doc/webkit2gtk-4.1/method.Settings.get_load_icons_ignoring_image_load_setting.html
+share/doc/webkit2gtk-4.1/method.Settings.get_math_font_family.html
 share/doc/webkit2gtk-4.1/method.Settings.get_media_content_types_requiring_hardware_support.html
 share/doc/webkit2gtk-4.1/method.Settings.get_media_playback_allows_inline.html
 share/doc/webkit2gtk-4.1/method.Settings.get_media_playback_requires_user_gesture.html
@@ -1081,6 +1083,7 @@ share/doc/webkit2gtk-4.1/method.Settings.set_hardware_acceleration_policy.html
 share/doc/webkit2gtk-4.1/method.Settings.set_javascript_can_access_clipboard.html
 share/doc/webkit2gtk-4.1/method.Settings.set_javascript_can_open_windows_automatically.html
 share/doc/webkit2gtk-4.1/method.Settings.set_load_icons_ignoring_image_load_setting.html
+share/doc/webkit2gtk-4.1/method.Settings.set_math_font_family.html
 share/doc/webkit2gtk-4.1/method.Settings.set_media_content_types_requiring_hardware_support.html
 share/doc/webkit2gtk-4.1/method.Settings.set_media_playback_allows_inline.html
 share/doc/webkit2gtk-4.1/method.Settings.set_media_playback_requires_user_gesture.html
@@ -1197,16 +1200,6 @@ share/doc/webkit2gtk-4.1/method.WebContext.set_use_system_appearance_for_scrollb
 share/doc/webkit2gtk-4.1/method.WebContext.set_web_extensions_directory.html
 share/doc/webkit2gtk-4.1/method.WebContext.set_web_extensions_initialization_user_data.html
 share/doc/webkit2gtk-4.1/method.WebContext.set_web_process_count_limit.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_host.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_matches_all_hosts.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_matches_all_urls.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_path.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_scheme.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.get_string.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.matches_pattern.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.matches_url.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.ref.html
-share/doc/webkit2gtk-4.1/method.WebExtensionMatchPattern.unref.html
 share/doc/webkit2gtk-4.1/method.WebInspector.attach.html
 share/doc/webkit2gtk-4.1/method.WebInspector.close.html
 share/doc/webkit2gtk-4.1/method.WebInspector.detach.html
@@ -1272,8 +1265,10 @@ share/doc/webkit2gtk-4.1/method.WebView.go_to_back_forward_list_item.html
 share/doc/webkit2gtk-4.1/method.WebView.is_controlled_by_automation.html
 share/doc/webkit2gtk-4.1/method.WebView.is_editable.html
 share/doc/webkit2gtk-4.1/method.WebView.is_ephemeral.html
+share/doc/webkit2gtk-4.1/method.WebView.is_immersive_mode_enabled.html
 share/doc/webkit2gtk-4.1/method.WebView.is_loading.html
 share/doc/webkit2gtk-4.1/method.WebView.is_playing_audio.html
+share/doc/webkit2gtk-4.1/method.WebView.leave_immersive_mode.html
 share/doc/webkit2gtk-4.1/method.WebView.load_alternate_html.html
 share/doc/webkit2gtk-4.1/method.WebView.load_bytes.html
 share/doc/webkit2gtk-4.1/method.WebView.load_html.html
@@ -1357,6 +1352,14 @@ share/doc/webkit2gtk-4.1/method.WindowProperties.get_resizable.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_scrollbars_visible.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_statusbar_visible.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_toolbar_visible.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_consent_optional_features.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_consent_required_features.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_granted_features.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_optional_features_requested.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_required_features_requested.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_security_origin.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.get_session_mode.html
+share/doc/webkit2gtk-4.1/method.XRPermissionRequest.set_granted_optional_features.html
 share/doc/webkit2gtk-4.1/profiling.html
 share/doc/webkit2gtk-4.1/property.AutomationSession.id.html
 share/doc/webkit2gtk-4.1/property.ColorChooserRequest.rgba.html
@@ -1450,6 +1453,7 @@ share/doc/webkit2gtk-4.1/property.Settings.hardware-acceleration-policy.html
 share/doc/webkit2gtk-4.1/property.Settings.javascript-can-access-clipboard.html
 share/doc/webkit2gtk-4.1/property.Settings.javascript-can-open-windows-automatically.html
 share/doc/webkit2gtk-4.1/property.Settings.load-icons-ignoring-image-load-setting.html
+share/doc/webkit2gtk-4.1/property.Settings.math-font-family.html
 share/doc/webkit2gtk-4.1/property.Settings.media-content-types-requiring-hardware-support.html
 share/doc/webkit2gtk-4.1/property.Settings.media-playback-allows-inline.html
 share/doc/webkit2gtk-4.1/property.Settings.media-playback-requires-user-gesture.html
@@ -1497,6 +1501,7 @@ share/doc/webkit2gtk-4.1/property.WebView.estimated-load-progress.html
 share/doc/webkit2gtk-4.1/property.WebView.favicon.html
 share/doc/webkit2gtk-4.1/property.WebView.is-controlled-by-automation.html
 share/doc/webkit2gtk-4.1/property.WebView.is-ephemeral.html
+share/doc/webkit2gtk-4.1/property.WebView.is-immersive-mode-enabled.html
 share/doc/webkit2gtk-4.1/property.WebView.is-loading.html
 share/doc/webkit2gtk-4.1/property.WebView.is-muted.html
 share/doc/webkit2gtk-4.1/property.WebView.is-playing-audio.html
@@ -1638,7 +1643,6 @@ share/doc/webkit2gtk-4.1/struct.SecurityOrigin.html
 share/doc/webkit2gtk-4.1/struct.UserContentFilter.html
 share/doc/webkit2gtk-4.1/struct.UserScript.html
 share/doc/webkit2gtk-4.1/struct.UserStyleSheet.html
-share/doc/webkit2gtk-4.1/struct.WebExtensionMatchPattern.html
 share/doc/webkit2gtk-4.1/struct.WebViewSessionState.html
 share/doc/webkit2gtk-4.1/struct.WebsiteData.html
 share/doc/webkit2gtk-4.1/style.css
@@ -1658,7 +1662,6 @@ share/doc/webkit2gtk-4.1/type_func.SnapshotError.quark.html
 share/doc/webkit2gtk-4.1/type_func.UserContentFilterError.quark.html
 share/doc/webkit2gtk-4.1/type_func.UserMessageError.quark.html
 share/doc/webkit2gtk-4.1/type_func.WebContext.get_default.html
-share/doc/webkit2gtk-4.1/type_func.WebExtensionMatchPattern.register_custom_URL_scheme.html
 share/doc/webkit2gtk-4.1/type_func.WebExtensionMatchPatternError.quark.html
 share/doc/webkit2gtk-4.1/type_func.WebsiteDataManager.set_memory_pressure_settings.html
 share/doc/webkit2gtk-4.1/vfunc.Download.decide_destination.html
@@ -2200,6 +2203,7 @@ share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.get_event.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.get_item_at_position.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.get_items.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.get_n_items.html
+share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.get_position.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.get_user_data.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.insert.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.last.html
@@ -2210,8 +2214,10 @@ share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.remove_all.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenu.set_user_data.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.get_action.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.get_gaction.html
+share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.get_gaction_target.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.get_stock_action.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.get_submenu.html
+share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.get_title.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.is_separator.html
 share/doc/webkit2gtk-web-extension-4.1/method.ContextMenuItem.set_submenu.html
 share/doc/webkit2gtk-web-extension-4.1/method.DOMAttr.get_local_name.html
@@ -4147,6 +4153,7 @@ share/locale/id/LC_MESSAGES/WebKitGTK-4.1.mo
 share/locale/it/LC_MESSAGES/WebKitGTK-4.1.mo
 share/locale/ja/LC_MESSAGES/WebKitGTK-4.1.mo
 share/locale/ka/LC_MESSAGES/WebKitGTK-4.1.mo
+share/locale/kk/LC_MESSAGES/WebKitGTK-4.1.mo
 share/locale/kn/LC_MESSAGES/WebKitGTK-4.1.mo
 share/locale/ko/LC_MESSAGES/WebKitGTK-4.1.mo
 share/locale/lt/LC_MESSAGES/WebKitGTK-4.1.mo

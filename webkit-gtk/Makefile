@@ -3,7 +3,7 @@
 # Some environment variables that can help debugging this:
 # https://trac.webkit.org/wiki/EnvironmentVariables
 
-DISTNAME=	webkitgtk-2.52.1
+DISTNAME=	webkitgtk-2.52.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -192,7 +192,7 @@ CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-.if ${PKGSRC_COMPILER} == "gcc"
+.if ${PKGSRC_COMPILER:Mgcc}
 .include "../../devel/libatomic/buildlink3.mk"
 .endif
 .include "../../devel/pango/buildlink3.mk"
