@@ -5590,7 +5590,6 @@ SUBDIR+=	svt-vp9
 SUBDIR+=	swami
 SUBDIR+=	swappy
 SUBDIR+=	swarp
-SUBDIR+=	swaylock
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	swift

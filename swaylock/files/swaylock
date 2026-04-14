@@ -1,2 +1,0 @@
-# $NetBSD: $
-auth	required	@PREFIX@/lib/security/pam_pwauth_suid.so
