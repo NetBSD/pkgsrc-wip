@@ -1,6 +1,7 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.2 2024/01/17 23:43:02 gdt Exp $
 bin/s-nail
-libexec/s-nail-dotlock
+libexec/s-nail-dotlock-helper
+libexec/s-nail-oauth-helper.py
 man/man1/s-nail.1
+man/man7/s-nail-config.7
 share/examples/s-nail/s-nail.rc
-@comment etc/s-nail.rc

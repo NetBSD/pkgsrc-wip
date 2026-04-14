@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:54:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/06/28 13:01:31 ktnb Exp $
 
-BLAKE2s (s-nail-14.9.24.tar.gz) = 649bd9205d714677bcdefdef0d5370432025d20858d06f99d3a0cb728c815a0d
-SHA512 (s-nail-14.9.24.tar.gz) = 15101019a9c14fef8162fbce1a15133d2c70f27476b08a7f183d195fb52ed2854731984f833236c543fd681e299c3d93ec508154573b5897d707a0ec5c216575
-Size (s-nail-14.9.24.tar.gz) = 1105199 bytes
-SHA1 (patch-mk_make-install.sh) = a7537f2e6b65fc32a6257f1def5b06bc39e2fe91
+BLAKE2s (s-nail-v14.10.0-alpha.tar.xz) = 595f9388322d50249354a955acf7d6b751a71ec2078d91f8d785f1650baa35f9
+SHA512 (s-nail-v14.10.0-alpha.tar.xz) = 6a274b6a1b1709fa39a3420a4a0a62ba64ea0c1bab01b9825e1009c01122722605d7a69c19aff2593e83ab7513adad2441e5c120b71b518ffaccb657729cbcd0
+Size (s-nail-v14.10.0-alpha.tar.xz) = 1045516 bytes
+SHA1 (patch-mk_make-install.sh) = be64d86b1403a8d6bd22e19454466b0e7e086898
+SHA1 (patch-src_mx_iconv.c) = 6c484ac54eb97096aa2719ea4af94f90ff4eed3f
