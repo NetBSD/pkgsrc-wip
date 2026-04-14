@@ -5397,7 +5397,6 @@ SUBDIR+=	sfeed-git
 SUBDIR+=	sfeed_curses-git
 SUBDIR+=	sflphoned
 SUBDIR+=	sftpgo
-SUBDIR+=	sfwbar
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
 SUBDIR+=	shadow
