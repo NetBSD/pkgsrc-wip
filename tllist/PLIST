@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/tllist.h
-lib/pkgconfig/tllist.pc
-share/doc/tllist/LICENSE
-share/doc/tllist/README.md
