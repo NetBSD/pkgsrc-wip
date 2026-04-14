@@ -5596,7 +5596,6 @@ SUBDIR+=	svt-vp9
 SUBDIR+=	swami
 SUBDIR+=	swappy
 SUBDIR+=	swarp
-SUBDIR+=	sway
 SUBDIR+=	swaybg
 SUBDIR+=	swayidle
 SUBDIR+=	swaylock
