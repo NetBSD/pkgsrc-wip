@@ -1,10 +1,11 @@
 # $NetBSD$
 
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	cffi-lua-0.2.3
-PKGNAME=	lua-cffi-0.2.3
+DISTNAME=	cffi-lua-0.2.4
+PKGNAME=	${DISTNAME:S/cffi-lua/lua-cffi/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=q66/}
+GITHUB_PROJECT=	cffi-lua
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/q66/cffi-lua/

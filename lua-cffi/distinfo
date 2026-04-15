@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cffi-lua-0.2.3.tar.gz) = ec1e2fb5732124a87d8774238b6d2a58a0f3b6e32cfafdda08cf2b166ceacc5c
-SHA512 (cffi-lua-0.2.3.tar.gz) = e67db0b3834566500db76a8d006d7f9575500a0513de98842d8582452e89cd0bf052ffd69c198b389b42915cf8f5aa522aa6b2db176069add5598d5d7f965914
-Size (cffi-lua-0.2.3.tar.gz) = 116042 bytes
+BLAKE2s (cffi-lua-0.2.4.tar.gz) = 3dfee25ecaad80693e10a00330afdc197e808c224046d570c5978f0aa4ff018c
+SHA512 (cffi-lua-0.2.4.tar.gz) = cebbfcdd2f5aa55d5e792ef775f0463260dd0781dce44a75248d9a7938486f21d06fe8daa69a0fad2486c6bcb001e1db2d59f86a835f27ca2ca13e76aad90352
+Size (cffi-lua-0.2.4.tar.gz) = 116870 bytes
