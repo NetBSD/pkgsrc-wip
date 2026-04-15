@@ -5384,6 +5384,7 @@ SUBDIR+=	serendipity
 SUBDIR+=	serious-engine-tfe-git
 SUBDIR+=	serious-engine-tse-git
 SUBDIR+=	service
+SUBDIR+=	setrixtui
 SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git
 SUBDIR+=	sfeed_curses-git
