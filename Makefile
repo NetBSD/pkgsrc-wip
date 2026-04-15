@@ -2276,7 +2276,6 @@ SUBDIR+=	lpdsrv
 SUBDIR+=	lpjs
 SUBDIR+=	lrslib
 SUBDIR+=	lsw
-SUBDIR+=	lswt
 SUBDIR+=	lsyncd
 SUBDIR+=	ltc-tools
 SUBDIR+=	ltl2ba
