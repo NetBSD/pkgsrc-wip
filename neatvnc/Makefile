@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/neatvnc.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 .include "../../devel/meson/build.mk"
-.include "../../wip/aml/buildlink3.mk"
+.include "../../devel/aml/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

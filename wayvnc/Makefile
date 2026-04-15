@@ -20,7 +20,7 @@ USE_TOOLS+=	pkg-config
 .include "../../textproc/scdoc/tool.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
-.include "../../wip/aml/buildlink3.mk"
+.include "../../devel/aml/buildlink3.mk"
 .include "../../devel/input-headers/buildlink3.mk"
 .include "../../wip/neatvnc/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
