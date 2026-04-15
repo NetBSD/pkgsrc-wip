@@ -6074,7 +6074,6 @@ SUBDIR+=	wrcs
 SUBDIR+=	wsjtx
 SUBDIR+=	wsmake
 SUBDIR+=	wtfutil
-SUBDIR+=	wvkbd
 SUBDIR+=	wvstreams
 SUBDIR+=	wxmaxima-git
 SUBDIR+=	wyeb-git
