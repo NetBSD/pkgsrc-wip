@@ -97,7 +97,7 @@ MESON_ARGS+=		-Dllvm=disabled
 #
 PLIST_VARS+=		 vulkan vulkan_intel
 .if !empty(PKG_OPTIONS:Mvulkan)
-.include "../../wip/glslang/buildlink3.mk"
+.include "../../graphics/glslang/buildlink3.mk"
 VULKAN_DRIVERS+=	amd
 VULKAN_DRIVERS+=	swrast
 PLIST.vulkan=		yes

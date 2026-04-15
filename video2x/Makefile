@@ -55,6 +55,6 @@ post-extract:
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../wip/ncnn/buildlink3.mk"
 BUILDLINK_FILES.glslang+=	bin/glslang bin/spirv-remap
-.include "../../wip/glslang/buildlink3.mk"
-.include "../../wip/vulkan-loader/buildlink3.mk"
+.include "../../graphics/glslang/buildlink3.mk"
+.include "../../graphics/vulkan-loader/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

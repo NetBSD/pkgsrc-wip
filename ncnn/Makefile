@@ -21,8 +21,8 @@ CMAKE_CONFIGURE_ARGS+=	-DNCNN_VULKAN=ON
 .include "../../devel/cmake/build.mk"
 
 .include "../../graphics/opencv/buildlink3.mk"
-.include "../../wip/vulkan-loader/buildlink3.mk"
+.include "../../graphics/vulkan-loader/buildlink3.mk"
 BUILDLINK_FILES.glslang+=	bin/glslang bin/spirv-remap
-.include "../../wip/glslang/buildlink3.mk"
+.include "../../glslang/glslang/buildlink3.mk"
 .include "../../parallel/spirv-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
