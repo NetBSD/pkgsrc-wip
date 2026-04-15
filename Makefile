@@ -6024,7 +6024,6 @@ SUBDIR+=	wendzelnntpd
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
-SUBDIR+=	wf-recorder
 SUBDIR+=	wgrib2
 SUBDIR+=	whatscli
 SUBDIR+=	which

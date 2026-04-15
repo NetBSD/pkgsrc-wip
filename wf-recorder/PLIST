@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/wf-recorder
-man/man1/wf-recorder.1
-share/fish/vendor_completions.d/wf-recorder.fish
