@@ -164,7 +164,6 @@ SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
 SUBDIR+=	amavis-logwatch
-SUBDIR+=	aml
 SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amneziawg-go
 SUBDIR+=	analizo
