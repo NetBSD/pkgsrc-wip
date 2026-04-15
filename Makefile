@@ -5586,7 +5586,6 @@ SUBDIR+=	svnup
 SUBDIR+=	svrcore
 SUBDIR+=	svt-vp9
 SUBDIR+=	swami
-SUBDIR+=	swappy
 SUBDIR+=	swarp
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
