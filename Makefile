@@ -812,7 +812,6 @@ SUBDIR+=	dumb
 SUBDIR+=	dune-common
 SUBDIR+=	dune-geometry
 SUBDIR+=	dune-istl
-SUBDIR+=	dunst
 SUBDIR+=	dunst-git
 SUBDIR+=	duplo
 SUBDIR+=	dvbsnoop
