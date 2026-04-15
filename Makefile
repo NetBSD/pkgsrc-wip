@@ -6056,7 +6056,6 @@ SUBDIR+=	wl-git
 SUBDIR+=	wl-snapshot
 SUBDIR+=	wla-dx
 SUBDIR+=	wla-dx-git
-SUBDIR+=	wlopm
 SUBDIR+=	wlsunset
 SUBDIR+=	wmbattery
 SUBDIR+=	wmc2d

@@ -1,3 +1,0 @@
-wlopm is a simple client implementing wlr-output-power-management-v1.
-If no operations are defined, wlopm will list all outputs and their
-current power modes.
