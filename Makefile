@@ -1540,6 +1540,7 @@ SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
 SUBDIR+=	hercules-server
 SUBDIR+=	hercules4aethra
+SUBDIR+=	heretek
 SUBDIR+=	heroes
 SUBDIR+=	herwig
 SUBDIR+=	hex

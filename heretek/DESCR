@@ -1,0 +1,2 @@
+GDB TUI Dashboard inspired by gef, designed to seamlessly connect to remote
+targets even without a functioning gdbserver.
