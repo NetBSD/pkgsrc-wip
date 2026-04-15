@@ -1901,7 +1901,6 @@ SUBDIR+=	kakoune-lsp
 SUBDIR+=	kallisto
 SUBDIR+=	kamailio
 SUBDIR+=	kannel-gateway
-SUBDIR+=	kanshi
 SUBDIR+=	kapacitor
 SUBDIR+=	kapow
 SUBDIR+=	kawa
