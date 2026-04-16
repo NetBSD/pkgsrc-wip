@@ -1,12 +1,12 @@
 # $NetBSD$
 DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
-DISTVERSION=		5.1-20241228
+DISTVERSION=		5.1-20260331
 #DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
 DISTREVISION=		1
 CATEGORIES=		multimedia
-REV=			c92ff91450d5a66e8bef72a103ae13002144953c # git revision
-MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
-DISTFILES=		cinelerra-c92ff91.tar.gz
+#REV=			c92ff91450d5a66e8bef72a103ae13002144953c # git revision
+MASTER_SITES=		https://download.cinelerra-gg.org/download.php?file=src%2F
+DISTFILES=		cin_5.1.20260331-src.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Professional video editing and compositing environment
@@ -16,18 +16,18 @@ LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-x86_64 NetBSD-*-i386
 
-#CHECK_PORTABILITY_SKIP=cinelerra-5.1/configure
+CHECK_PORTABILITY_SKIP=configure
 
 USE_LANGUAGES=		c c++
 
-USE_TOOLS+=	bash:run pkg-config
+USE_TOOLS+=	bash:run pkg-config perl
 
-REPLACE_PERL=cinelerra-5.1/doc/ContextManual.pl
+REPLACE_PERL=doc/ContextManual.pl
 
 USE_TOOLS+=	pkg-config gmake aclocal autoconf automake makeinfo
 GNU_CONFIGURE=	yes
 
-REPLACE_BASH=   cinelerra-5.1/inst.sh cinelerra-5.1/doc/RenderMux.sh
+REPLACE_BASH=   inst.sh doc/RenderMux.sh doc/brender_tmp_delete.sh
 
 CFLAGS+=		-fpermissive
 
@@ -55,8 +55,8 @@ CONFIGURE_ARGS+=	--without-commercial
 CONFIGURE_ARGS+=	--without-thirdparty
 CONFIGURE_ARGS+=	--with-jobs=${MAKE_JOBS:U1}
 
-WRKSRC=			${WRKDIR}/cinelerra-${REV:C/(.......).*/\1/}
-CONFIGURE_DIRS=		${WRKSRC}/cinelerra-5.1
+WRKSRC=			${WRKDIR}/cinelerra-5.1
+CONFIGURE_DIRS=		${WRKSRC}/
 
 post-patch:
 
