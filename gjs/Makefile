@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.32 2024/11/17 07:16:19 wiz Exp $
 
-DISTNAME=	gjs-1.82.1
+DISTNAME=	gjs-1.82.3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gjs@sha:${WRKSRC}/output/gjs-jsapi@sta:${WRKSRC}/output/gjs-console@exe
 MESON_ARGS+=	-Dinstalled_tests=false
 MESON_ARGS+=	-Dprofiler=disabled
+MESON_ARGS+=	-Db_pch=false
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -24,6 +25,10 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 CHECK_PORTABILITY_SKIP+=	tools/run_iwyu.sh
 
+NOT_PAX_MPROTECT_SAFE+=	bin/gjs
+NOT_PAX_MPROTECT_SAFE+=	bin/gjs-console
+
+.include "../../mk/pax.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
