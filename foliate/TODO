@@ -1,0 +1,3 @@
+This package can be build only once webkit-gtk is built with webkitgtk-6.0.
+
+check wip/webkit-gtk for details.
