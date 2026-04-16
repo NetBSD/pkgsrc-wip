@@ -2696,7 +2696,6 @@ SUBDIR+=	nyan
 SUBDIR+=	nyh-hoc
 SUBDIR+=	nyxt
 SUBDIR+=	nzbget
-SUBDIR+=	oatbar
 SUBDIR+=	obfuscate
 SUBDIR+=	objfw-fossil
 SUBDIR+=	obmenu

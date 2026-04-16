@@ -1,9 +1,0 @@
-error: Support for this target OS is not implemented yet!
-        You may want to create an issue: https://github.com/svartalf/rust-battery/issues/new
-  --> /tmp/wm/oatbar/work/vendor/battery-0.7.8/src/platform/mod.rs:27:9
-
-https://github.com/svartalf/rust-battery/issues/20
-
-and
-
-https://github.com/igor-petruk/oatbar/issues/38
