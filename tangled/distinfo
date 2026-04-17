@@ -1,5 +1,8 @@
 $NetBSD$
 
+BLAKE2s (core-v1.13.0-alpha.tar.gz) = f9629c1ca3511d728bf3581e5625b5c513d4841b11f6d7435f14af5ab72252d2
+SHA512 (core-v1.13.0-alpha.tar.gz) = fbc95bd45cce9a0ee7dbb2fd20ff3773022a6d3f76208c9681a91910e519781b60f121576dc933517ab744b3890cba5f9185b01a2d796c96bee619dbd30b2421
+Size (core-v1.13.0-alpha.tar.gz) = 841442 bytes
 BLAKE2s (dario.cat_mergo_@v_v1.0.1.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.1.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
 Size (dario.cat_mergo_@v_v1.0.1.mod) = 65 bytes
