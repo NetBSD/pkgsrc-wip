@@ -1,10 +1,10 @@
 $NetBSD$
 
-BLAKE2s (webkitgtk-2.52.2.tar.xz) = 20724024679b0f049c772157a27d74828ae31d493a9f73867feea292862923b0
-SHA512 (webkitgtk-2.52.2.tar.xz) = bdbcc0e928c9b0f4047ba0c2f4690d42176d78a75954984c73215c091d1407488ab8392d7acf1686a7e7acf3fe27621b3c1e5e84239753f5990c39962c73b273
-Size (webkitgtk-2.52.2.tar.xz) = 65056988 bytes
+BLAKE2s (webkitgtk-2.52.3.tar.xz) = 85736abab7a2f7f35e41afe72a91aab865822407bd85d67e7bc4858930bc0953
+SHA512 (webkitgtk-2.52.3.tar.xz) = 8007688e4eb5b465a6f50e05e89858f970f7bbaed45844b8f97175de1fb24e41e6d88f4f6b6299d5ae2ad4e19483da371ac16257d787626da29de7551fbd2a3c
+Size (webkitgtk-2.52.3.tar.xz) = 65052268 bytes
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 20d09e1c226cfff707659ffa35a2c2c3f1cdb617
-SHA1 (patch-Source_JavaScriptCore_bytecode_InlineCacheCompiler.h) = e80bdf4401eee80923c5dce347adefe788260865
+SHA1 (patch-Source_JavaScriptCore_runtime_DefinePropertyAttributes.h) = 47d75f1204d7cde49e5fe56de856d585f1181343
 SHA1 (patch-Source_JavaScriptCore_runtime_JSCBytecodeCacheVersion.cpp) = 946356c2c8e74a245b4fdd06f6a9a44cfa8af8f0
 SHA1 (patch-Source_JavaScriptCore_runtime_MathCommon.cpp) = 4535d1aed5e92da2d459097516ee01d9faddfd0d
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_SimpleMutex.h) = 6cd83b9ec476ed39adecec6b30e898bda8e5b76d
@@ -15,8 +15,10 @@ SHA1 (patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h) = 6a854b
 SHA1 (patch-Source_ThirdParty_skia_src_ports_SkMemory__malloc.cpp) = e277d988eeaacb7ec8b7f051342b77c5e8ac06a7
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 35afdd5143f4a2df8a5554a0b0b35141a8784c6c
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = 905b2b4bf4b8c90cf91eb8ecf1d414013cc3bcbb
+SHA1 (patch-Source_WebCore_css_values_CSSValueAggregates.h) = 708e2f7a48ff31c4a8ef50f87680452532a2f66c
 SHA1 (patch-Source_WebCore_editing_FontAttributes.h) = 7a768d0e467a4e36122beaa612e65f806452d011
 SHA1 (patch-Source_WebCore_editing_FrameSelection.h) = f23da5ffb29e900bd1dd517a6ba765d68edac273
+SHA1 (patch-Source_WebCore_loader_cache_CachedResource.h) = 404b807d386e545f2893274745d8dfaba567289a
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 40a1c832e0df382e39cecb6c57527731e7c63c52
 SHA1 (patch-Source_WebCore_platform_SharedMemory.h) = 5c96105b99f6fd9cd94342b9cf0fa727d3664893
 SHA1 (patch-Source_WebCore_platform_graphics_gbm_MemoryMappedGPUBuffer.cpp) = 3e95b73709a3a39cd130dcaf4bf440e9c0195fa5
