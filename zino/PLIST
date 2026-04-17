@@ -302,6 +302,9 @@ ${PYSITELIB}/zino/trapd/netsnmpy_backend.pyo
 ${PYSITELIB}/zino/trapd/pysnmp_backend.py
 ${PYSITELIB}/zino/trapd/pysnmp_backend.pyc
 ${PYSITELIB}/zino/trapd/pysnmp_backend.pyo
+${PYSITELIB}/zino/trapd/straps_backend.py
+${PYSITELIB}/zino/trapd/straps_backend.pyc
+${PYSITELIB}/zino/trapd/straps_backend.pyo
 ${PYSITELIB}/zino/trapobservers/__init__.py
 ${PYSITELIB}/zino/trapobservers/__init__.pyc
 ${PYSITELIB}/zino/trapobservers/__init__.pyo
