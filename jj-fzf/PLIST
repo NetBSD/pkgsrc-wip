@@ -1,3 +1,18 @@
 @comment $NetBSD$
 bin/jj-fzf
+libexec/jj-fzf
+libexec/lib/bookmarks.sh
+libexec/lib/check-unfinished.sh
+libexec/lib/draft.sh
+libexec/lib/editor.sh
+libexec/lib/evolog.sh
+libexec/lib/exectool.sh
+libexec/lib/oplog.sh
+libexec/lib/popfile.sh
+libexec/lib/rebase.sh
+libexec/lib/reparent.sh
+libexec/lib/setup.sh
+libexec/preflight.sh
+libexec/sfx.sh
+libexec/version.sh
 share/doc/jj-fzf/README.md
