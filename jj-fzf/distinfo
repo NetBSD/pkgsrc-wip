@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (jj-fzf-0.25.0.tar.gz) = 9f8793b0c542af600a45bdbe70dc7af286f391e8bf5c1f47056de59292f62c1e
-SHA512 (jj-fzf-0.25.0.tar.gz) = 13838921e4e89ddf8865998a75b3a526e0d636af4f73cebb1bca8a8cd2c6ff8d3729b7f2698a8da5f547fb1ce7bc050ac3f472eca9a8fed21566db6df9afea20
-Size (jj-fzf-0.25.0.tar.gz) = 44967 bytes
+BLAKE2s (jj-fzf-0.38.0.tar.gz) = 49b28c2d44983eeff14413bae7e6a66e17ebbdd59342e57017a6f95832a8e514
+SHA512 (jj-fzf-0.38.0.tar.gz) = 87d9174eb1ae284b40b302dc0c46ef22b643c3904f9df9f13c389c52e5eb977b4966b1702dab3dcfec515a45d4fe42120c4962f72e795c5dcc0bf569f79586e5
+Size (jj-fzf-0.38.0.tar.gz) = 65367 bytes

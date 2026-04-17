@@ -1,0 +1,3 @@
+This crashes on startup with:
+
+/usr/pkg/bin/jj-fzf: line 8: /usr/pkg/bin/lib/setup.sh: no such file or directory
