@@ -36,11 +36,9 @@ CONF_FILES+=	${EGDIR}/style.css ${PKG_SYSCONFDIR}/style.css
 PKG_SYSCONFSUBDIR=	xdg/waybar
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
-.include "../../wip/gtk-layer-shell/buildlink3.mk"
-.include "../../wip/chrono-date/buildlink3.mk"
-
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"
+.include "../../devel/chrono-date/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/spdlog/buildlink3.mk"
@@ -50,6 +48,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../wayland/gtk-layer-shell/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
