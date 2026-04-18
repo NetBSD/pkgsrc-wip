@@ -8,7 +8,7 @@ VERSION=	1.30.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sizeofvoid/}
 GITHUB_PROJECT=	libopeninput
-GITHUB_TAG=	1db645a4a690088135ba34a70efd7b764ecd8c0f
+GITHUB_TAG=	dcf8584ec3f5cde2a2098de25276242d2d815cc7
 
 MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/libopeninput/
