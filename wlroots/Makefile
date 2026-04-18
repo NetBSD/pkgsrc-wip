@@ -43,6 +43,7 @@ PREFER.MesaLib=	pkgsrc	# glesv2
 .include "../../sysutils/hwdata/buildlink3.mk"
 .include "../../sysutils/seatd/buildlink3.mk"
 .include "../../x11/libdisplay-info/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.129
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
