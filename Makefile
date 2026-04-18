@@ -372,6 +372,7 @@ SUBDIR+=	bore
 SUBDIR+=	boringssl
 SUBDIR+=	boron
 SUBDIR+=	botan3-git
+SUBDIR+=	bottom
 SUBDIR+=	bowtie2
 SUBDIR+=	box2d
 SUBDIR+=	bpcscripts
