@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/btm
+man/man1/btm.1
+share/bash-completion/completions/btm
+share/fish/vendor_completions.d/btm.fish
+share/zsh/site-functions/_btm
