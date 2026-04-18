@@ -21,19 +21,6 @@
 
 ## HIGH PRIORITY — Likely needed for a working GTK 6.0 build on NetBSD
 
-### ~~`Source/JavaScriptCore/runtime/MachineContext.h`~~ — NOT NEEDED
-**OpenBSD patch:** `patch-Source_JavaScriptCore_runtime_MachineContext_h`
-
-**Verified not applicable.** The upstream WebKit source already contains
-complete `OS(NETBSD)` blocks for all six register-extraction functions
-(`stackPointerImpl`, `framePointerImpl`, `instructionPointerImpl`,
-`argumentPointer<1>`, `wasmInstancePointer`, `llintInstructionPointer`),
-covering x86_64, ARM, and ARM64. The OpenBSD patch only adds new `OS(OPENBSD)`
-blocks alongside the existing NetBSD ones; it does not modify any NetBSD code.
-No patch is required for NetBSD.
-
----
-
 ### `Source/JavaScriptCore/assembler/ARM64Assembler.h` — NEEDS IMPROVEMENT
 **OpenBSD patch:** `patch-Source_JavaScriptCore_assembler_ARM64Assembler_h`  
 **NetBSD patch:** `patch-Source_JavaScriptCore_assembler_ARM64Assembler.h` (exists but incomplete)
@@ -91,17 +78,6 @@ installed library during the build.
 
 ## MODERATE PRIORITY — Platform correctness issues that may surface at runtime
 
-### ~~`Source/WTF/wtf/PlatformEnable.h`~~ — ALREADY PATCHED
-**OpenBSD patch:** `patch-Source_WTF_wtf_PlatformEnable_h`  
-**NetBSD patch:** `patch-Source_WTF_wtf_PlatformEnable.h` (covers this)
-
-**Verified not needed as a separate patch.** The unpatched source at line 792
-gates DFG JIT enablement on a list that already includes `OS(NETBSD)` after the
-existing NetBSD patch is applied. The OpenBSD patch adds `OS(OPENBSD)` to the
-same list, but the NetBSD patch already handles the NetBSD case correctly.
-
----
-
 ### `Source/WTF/wtf/glib/FileSystemGlib.cpp` — MISSING
 **OpenBSD patch:** `patch-Source_WTF_wtf_glib_FileSystemGlib_cpp`  
 **NetBSD patch:** none
@@ -112,18 +88,6 @@ same list, but the NetBSD patch already handles the NetBSD case correctly.
 and return garbage. OpenBSD's patch returns an empty `CString` on OpenBSD;
 NetBSD likely needs the same treatment, returning empty rather than attempting
 a procfs read that will fail.
-
----
-
-### ~~`Source/WTF/wtf/posix/FileSystemPOSIX.cpp`~~ — NOT NEEDED
-**OpenBSD patch:** `patch-Source_WTF_wtf_posix_FileSystemPOSIX_cpp`
-
-**Verified not applicable.** The unpatched source at line 112 already has a
-combined `#elif OS(DARWIN) || OS(OPENBSD) || OS(NETBSD) || OS(FREEBSD)` guard
-that uses `st_birthtime` (without double-underscore). NetBSD follows the
-Darwin/FreeBSD convention and uses `st_birthtime` directly, not
-`__st_birthtime`. The OpenBSD patch changes that guard specifically for
-OpenBSD's `__st_birthtime` variant, which does not apply to NetBSD.
 
 ---
 
@@ -224,18 +188,17 @@ wip/webkit-gtk60 package:
 
 ---
 
+---
+
 ## Summary
 
 | File | Priority | Status |
 |---|---|---|
-| `JavaScriptCore/runtime/MachineContext.h` | HIGH | Not needed — upstream already handles NetBSD |
 | `JavaScriptCore/assembler/ARM64Assembler.h` | HIGH | Needs improvement — NetBSD patch suppresses error; should implement `__clear_cache()` |
 | `cmake/WebKitCommon.cmake` | HIGH | Missing — `CheckIncludeFile` fix, Ruby 3.3 |
 | `cmake/WebKitCompilerFlags.cmake` | HIGH | Missing — `--no-undefined` still active |
 | `cmake/OptionsCommon.cmake` | HIGH | Missing — internal lib dir prepend absent |
-| `WTF/wtf/PlatformEnable.h` | MODERATE | Already patched by NetBSD |
 | `WTF/wtf/glib/FileSystemGlib.cpp` | MODERATE | Missing — `/proc` fallback will fail on NetBSD |
-| `WTF/wtf/posix/FileSystemPOSIX.cpp` | MODERATE | Not needed — upstream already uses `st_birthtime` for NetBSD |
 | `WTF/wtf/unix/MemoryPressureHandlerUnix.cpp` | MODERATE | Missing — no NetBSD sysctl/struct handling |
 | `WebCore/platform/network/DNS.h` | MODERATE | Missing — `sys/socket.h` not included |
 | `libpas/pas_probabilistic_guard_malloc_allocator.c` | MODERATE | Missing — backtrace not guarded for NetBSD |
@@ -244,6 +207,4 @@ wip/webkit-gtk60 package:
 | `WTF/wtf/RawHex.h` | LOW | Missing — `int32_t`/`int64_t` constructor guards absent |
 
 **Actionable missing patches: 10**  
-**Patches needing improvement: 1** (`ARM64Assembler.h`)  
-**Verified not needed: 3**  
-**Already covered by existing NetBSD patches: 1**
+**Patches needing improvement: 1** (`ARM64Assembler.h`)
