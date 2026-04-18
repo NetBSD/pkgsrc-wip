@@ -2128,6 +2128,7 @@ SUBDIR+=	libntfs
 SUBDIR+=	libode
 SUBDIR+=	liboglappth
 SUBDIR+=	libopenmodeller
+SUBDIR+=	libopeninput
 SUBDIR+=	libopenshot
 SUBDIR+=	libopenshot-audio
 SUBDIR+=	libopensync-dev
