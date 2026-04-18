@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ClementTsang/}
 GITHUB_TAG=	ae425d09d81fe79538b703cb08382ef417f3afed
 
 MAINTAINER=	fox@NetBSD.org
-HOMEPAGE=	https://github.com/ClementTsang/bottom
+HOMEPAGE=	https://bottom.pages.dev/
 COMMENT=	Yet another cross-platform graphical process/system monitor.
 LICENSE=	mit
 
