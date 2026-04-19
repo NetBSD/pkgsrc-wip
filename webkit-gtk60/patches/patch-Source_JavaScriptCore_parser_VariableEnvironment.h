@@ -1,0 +1,19 @@
+$NetBSD$
+
+Undefine X11 macro that conflicts with enum value.
+X11/X.h defines Success=0, which breaks PrivateDeclarationResult enum.
+
+--- Source/JavaScriptCore/parser/VariableEnvironment.h.orig	2026-04-19 05:55:05.008914400 +0000
++++ Source/JavaScriptCore/parser/VariableEnvironment.h
+@@ -32,6 +32,11 @@
+ #include <wtf/PackedRefPtr.h>
+ #include <wtf/TZoneMalloc.h>
+ 
++// X11/X.h defines Success as 0, conflicting with our enum value
++#ifdef Success
++#undef Success
++#endif
++
+ namespace JSC {
+ 
+ struct VariableEnvironmentEntry {
