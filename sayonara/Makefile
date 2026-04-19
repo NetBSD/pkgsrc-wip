@@ -44,5 +44,7 @@ DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt5-qttools= build
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
