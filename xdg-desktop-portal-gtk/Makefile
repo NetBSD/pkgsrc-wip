@@ -9,10 +9,10 @@ HOMEPAGE=	https://github.com/flatpak/xdg-desktop-portal-gtk/
 COMMENT=	Gtk implementation of xdg-desktop-portal
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	pkg-config
-
+USE_TOOLS+=	pkg-config gdbus-codegen
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 #.include "../../devel/libportal/buildlink3.mk"
 #.include "../../geography/geoclue/buildlink3.mk"
