@@ -6,9 +6,9 @@ Shared upstream via:
 
  <https://github.com/mitchellh/go-ps/pull/59>
 
---- go.sum.orig	2025-11-27 10:18:48.000000000 +0000
+--- go.sum.orig	2026-04-07 17:29:07.000000000 +0000
 +++ go.sum
-@@ -360,6 +360,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
+@@ -351,6 +351,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
  github.com/hashicorp/golang-lru/v2 v2.0.5/go.mod h1:QeFd9opnmA6QUJc5vARoKUSoFhyfM2/ZepoAG6RGpeM=
  github.com/homeport/dyff v1.10.2 h1:XyB+D0KVwjbUFTZYIkvPtsImwkfh+ObH2CEdEHTqdr4=
  github.com/homeport/dyff v1.10.2/go.mod h1:0kIjL/JOGaXigzrLY6kcl5esSStbAa99r6GzEvr7lrs=
@@ -17,8 +17,8 @@ Shared upstream via:
  github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
  github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
  github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOlocH6Fxy8MmwDt+yVQYULKfN0RoTN8A=
-@@ -427,8 +429,6 @@ github.com/mitchellh/copystructure v1.2.
- github.com/mitchellh/copystructure v1.2.0/go.mod h1:qLl+cE2AmVv+CoeAwDPye/v+N2HKCj9FbZEVFJRxO9s=
+@@ -414,8 +416,6 @@ github.com/mattn/go-shellwords v1.0.12/g
+ github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
  github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
  github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 -github.com/mitchellh/go-ps v1.0.0 h1:i6ampVEEF4wQFF+bkYfwYgY+F/uYJDktmvLPf7qIgjc=
