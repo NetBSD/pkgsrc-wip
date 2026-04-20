@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/flatpak/xdg-desktop-portal/
 COMMENT=	Desktop integration portal (from Flatpak)
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gdbus-codegen
 
 # tests require umockdev
 MESON_ARGS+=	-Dtests=disabled
