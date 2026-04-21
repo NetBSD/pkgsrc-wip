@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-BLAKE2s (llvm-project-22.1.3.src.tar.xz) = db0665f4960b9432a6d2e5206b89409c7f2845848268b96c146fa1c3679ba0af
-SHA512 (llvm-project-22.1.3.src.tar.xz) = 3557a955d55471671ae2f7b9c809affd59a29a6fb1e70a2a5d040dc1c6376246deb0635be8ca36cae09112981760e9afb128c822e5554bd722589fb8dee3f0df
-Size (llvm-project-22.1.3.src.tar.xz) = 167045212 bytes
-SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 167045212
-SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 167045212
+BLAKE2s (llvm-project-22.1.4.src.tar.xz) = 2f38cdad0dc6f38d5698ad80dbf9de252e64146546979aef5cd29a0da98d9a69
+SHA512 (llvm-project-22.1.4.src.tar.xz) = 9f9e84110a4bb0f0dd296eaed4acb4fd3a58838efe62bb88671399440ba4750ba8bd7e6d072e61a9946e38e5c9d5e50575b95964850769c51cd517bdf7425bb8
+Size (llvm-project-22.1.4.src.tar.xz) = 167028880 bytes
+SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = ec96152743be4c33231899399f9e7cde5655b321
+SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 7b78acbf8a85443f2cc3f13786bbbda25b0b8d74
