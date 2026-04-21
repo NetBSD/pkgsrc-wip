@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- remoting/host/host_main.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ remoting/host/host_main.cc
 @@ -47,7 +47,7 @@ namespace remoting {
  // Known entry points.

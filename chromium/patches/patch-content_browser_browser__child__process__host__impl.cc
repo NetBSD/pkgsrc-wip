@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -292,6 +292,7 @@ void BrowserChildProcessHostImpl::Launch
        switches::kIPCConnectionTimeout,

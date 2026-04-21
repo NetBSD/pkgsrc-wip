@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
 @@ -25,7 +25,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"

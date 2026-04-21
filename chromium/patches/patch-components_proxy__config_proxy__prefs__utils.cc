@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/proxy_prefs_utils.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/proxy_config/proxy_prefs_utils.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/proxy_config/proxy_prefs_utils.cc
 @@ -60,7 +60,7 @@ net::ProxyChain ProxyOverrideRuleProxyFr
  

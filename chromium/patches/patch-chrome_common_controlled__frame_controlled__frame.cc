@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/controlled_frame/controlled_frame.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/common/controlled_frame/controlled_frame.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/common/controlled_frame/controlled_frame.cc
 @@ -20,7 +20,7 @@
  #include "third_party/blink/public/common/features.h"

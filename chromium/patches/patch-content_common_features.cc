@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- content/common/features.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ content/common/features.cc
 @@ -177,7 +177,7 @@ BASE_FEATURE(kDocumentPolicyNegotiation,
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);

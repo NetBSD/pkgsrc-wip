@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_fence.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/gfx/gpu_fence.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/gfx/gpu_fence.cc
 @@ -14,6 +14,10 @@
  #include <sync/sync.h>

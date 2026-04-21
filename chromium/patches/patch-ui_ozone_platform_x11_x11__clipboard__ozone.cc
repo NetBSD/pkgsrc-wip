@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_clipboard_ozone.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/ozone/platform/x11/x11_clipboard_ozone.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/ozone/platform/x11/x11_clipboard_ozone.cc
 @@ -14,7 +14,7 @@
  #include "ui/base/clipboard/clipboard_constants.h"

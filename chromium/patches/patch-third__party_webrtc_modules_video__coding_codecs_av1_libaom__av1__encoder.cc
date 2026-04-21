@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc
 @@ -67,6 +67,10 @@
  #define AOM_EFLAG_CALCULATE_PSNR (1 << 3)

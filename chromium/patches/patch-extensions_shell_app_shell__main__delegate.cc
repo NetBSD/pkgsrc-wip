@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/app/shell_main_delegate.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- extensions/shell/app/shell_main_delegate.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ extensions/shell/app/shell_main_delegate.cc
 @@ -32,7 +32,7 @@
  #if BUILDFLAG(IS_WIN)

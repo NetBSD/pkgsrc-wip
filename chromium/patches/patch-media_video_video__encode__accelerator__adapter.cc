@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -468,7 +468,7 @@ void VideoEncodeAcceleratorAdapter::Init
  #endif  // BUILDFLAG(USE_PROPRIETARY_CODECS)

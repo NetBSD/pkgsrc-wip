@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/messaging/message_service.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- extensions/browser/api/messaging/message_service.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ extensions/browser/api/messaging/message_service.cc
 @@ -89,7 +89,7 @@ const char kReceivingEndIncompatibleMess
      "Could not establish connection. Receiving end uses different message "

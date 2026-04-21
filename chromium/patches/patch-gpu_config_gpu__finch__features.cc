@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ gpu/config/gpu_finch_features.cc
 @@ -110,7 +110,7 @@ const base::FeatureParam<std::string>
  // of associating with an unused IPC::Channel.

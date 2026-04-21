@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util_unittest.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/feed/core/v2/proto_util_unittest.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/feed/core/v2/proto_util_unittest.cc
 @@ -42,8 +42,8 @@ TEST(ProtoUtilTest, CreateClientInfo) {
    feedwire::ClientInfo result = CreateClientInfo(request_metadata);

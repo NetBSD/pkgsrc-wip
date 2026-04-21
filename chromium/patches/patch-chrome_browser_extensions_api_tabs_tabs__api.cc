@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/tabs/tabs_api.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/extensions/api/tabs/tabs_api.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/extensions/api/tabs/tabs_api.cc
 @@ -1210,7 +1210,7 @@ ExtensionFunction::ResponseValue Windows
  // created as minimized.

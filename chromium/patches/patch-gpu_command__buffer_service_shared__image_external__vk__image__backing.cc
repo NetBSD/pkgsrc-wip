@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing.cc
 @@ -52,7 +52,7 @@
  #include "ui/gl/gl_version_info.h"

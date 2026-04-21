@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/extension_constants.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/common/extensions/extension_constants.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/common/extensions/extension_constants.h
 @@ -296,7 +296,7 @@ inline constexpr char kReadingModeGDocsH
  inline constexpr base::FilePath::CharType

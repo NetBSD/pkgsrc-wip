@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc
 @@ -65,7 +65,7 @@ void OnResponse(
  

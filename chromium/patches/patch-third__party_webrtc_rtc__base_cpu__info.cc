@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/cpu_info.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/webrtc/rtc_base/cpu_info.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/webrtc/rtc_base/cpu_info.cc
 @@ -37,9 +37,13 @@
  #include <intrin.h>

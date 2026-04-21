@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/protocol/system_info_handler.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- content/browser/devtools/protocol/system_info_handler.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ content/browser/devtools/protocol/system_info_handler.cc
 @@ -52,7 +52,7 @@ std::unique_ptr<SystemInfo::Size> GfxSiz
  // 1046598, and 1153667.

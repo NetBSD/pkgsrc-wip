@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/renderer/shell_content_renderer_client.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- content/shell/renderer/shell_content_renderer_client.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ content/shell/renderer/shell_content_renderer_client.cc
 @@ -56,7 +56,7 @@
  #include "components/surface_embed/renderer/create_plugin.h"

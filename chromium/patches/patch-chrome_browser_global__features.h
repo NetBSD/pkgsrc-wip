@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/global_features.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/global_features.h
 @@ -19,7 +19,7 @@ class GlobalBrowserCollection;
  namespace system_permission_settings {

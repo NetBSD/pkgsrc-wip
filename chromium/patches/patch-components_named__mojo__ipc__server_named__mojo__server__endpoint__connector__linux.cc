@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc
 @@ -8,6 +8,10 @@
  #include <sys/stat.h>
@@ -42,12 +42,3 @@ $NetBSD$
  
    mojo::PlatformChannelEndpoint endpoint(
        mojo::PlatformHandle(std::move(connection_fd)));
-@@ -116,7 +132,7 @@ bool NamedMojoServerEndpointConnectorLin
-   if (!options_.require_same_peer_user) {
-     // Allow any user to write to the UDS. fchmod doesn't work after bind(), so
-     // we need to call chmod on the socket filename, which is the server name.
--    if (chmod(options_.server_name.c_str(), 0o666) != 0) {
-+    if (chmod(options_.server_name.c_str(), 0666) != 0) {
-       PLOG(ERROR) << "chmod failed";
-       return false;
-     }

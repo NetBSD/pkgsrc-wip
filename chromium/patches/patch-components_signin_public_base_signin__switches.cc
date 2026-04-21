@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/signin/public/base/signin_switches.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/signin/public/base/signin_switches.cc
 @@ -80,7 +80,7 @@ base::TimeDelta GetAvatarSyncPromoFeatur
  #endif

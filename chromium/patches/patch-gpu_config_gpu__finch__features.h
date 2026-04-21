@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- gpu/config/gpu_finch_features.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ gpu/config/gpu_finch_features.h
 @@ -107,7 +107,7 @@ GPU_CONFIG_EXPORT BASE_DECLARE_FEATURE(k
  

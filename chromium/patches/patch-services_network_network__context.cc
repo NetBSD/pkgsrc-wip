@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- services/network/network_context.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ services/network/network_context.cc
 @@ -638,7 +638,7 @@ NetworkContext::NetworkContextHttpAuthPr
  NetworkContext::NetworkContextHttpAuthPreferences::

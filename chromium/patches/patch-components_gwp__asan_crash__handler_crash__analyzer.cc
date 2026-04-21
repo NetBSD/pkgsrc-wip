@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
 @@ -36,7 +36,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"

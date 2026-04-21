@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/SkMemory_new_handler.cpp.orig	2026-04-06 16:25:54.000000000 +0000
+--- skia/ext/SkMemory_new_handler.cpp.orig	2026-04-14 23:31:37.000000000 +0200
 +++ skia/ext/SkMemory_new_handler.cpp
 @@ -22,7 +22,7 @@
  #include <windows.h>

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/background/glic/glic_status_icon.cc
 @@ -118,7 +118,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
  GlicStatusIcon::~GlicStatusIcon() {

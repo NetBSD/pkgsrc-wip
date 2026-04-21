@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ gpu/command_buffer/service/gles2_cmd_decoder.cc
 @@ -2854,7 +2854,7 @@ std::unique_ptr<GLES2Decoder> GLES2Decod
    }

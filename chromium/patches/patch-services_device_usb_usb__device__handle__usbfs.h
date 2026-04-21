@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ services/device/usb/usb_device_handle_usbfs.h
 @@ -20,7 +20,7 @@
  #include "base/threading/sequence_bound.h"

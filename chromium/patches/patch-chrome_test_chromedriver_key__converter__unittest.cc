@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/key_converter_unittest.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/test/chromedriver/key_converter_unittest.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/test/chromedriver/key_converter_unittest.cc
 @@ -248,7 +248,7 @@ TEST(KeyConverter, ToggleModifiers) {
    CheckEventsReleaseModifiers(keys, key_events);

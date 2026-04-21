@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_monitor.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/metrics/power/process_monitor.cc
 @@ -65,7 +65,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
        process_metrics.GetPlatformIndependentCPUUsage());

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/screen_ai_service_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- services/screen_ai/screen_ai_service_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ services/screen_ai/screen_ai_service_impl.cc
 @@ -34,7 +34,7 @@
  #include "ui/accessibility/ax_tree_id.h"

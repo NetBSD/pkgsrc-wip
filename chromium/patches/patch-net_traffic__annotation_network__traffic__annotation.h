@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/traffic_annotation/network_traffic_annotation.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- net/traffic_annotation/network_traffic_annotation.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ net/traffic_annotation/network_traffic_annotation.h
 @@ -363,7 +363,7 @@ struct MutablePartialNetworkTrafficAnnot
  }  // namespace net

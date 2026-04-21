@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- remoting/host/ipc_constants.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ remoting/host/ipc_constants.h
 @@ -39,7 +39,7 @@ extern const char kAgentProcessBrokerMes
  const mojo::NamedPlatformChannel::ServerName& GetAgentProcessBrokerServerName();

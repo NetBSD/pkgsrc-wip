@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/webrtc/rtc_base/physical_socket_server.cc
 @@ -65,7 +65,7 @@
  #undef SetPort

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_prefs.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/sync/service/sync_prefs.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/sync/service/sync_prefs.cc
 @@ -868,7 +868,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
            update_selected_types_dict->EnsureDict(
