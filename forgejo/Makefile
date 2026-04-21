@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	forgejo-src-14.0.3
+DISTNAME=	forgejo-src-15.0.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	www devel
 MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/v${DISTNAME:S/forgejo-src-//}/
@@ -11,6 +11,7 @@ COMMENT=	Git hosting software
 LICENSE=	mit
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+TEST_DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 .include "../../lang/go/go-vars.mk"
 .include "options.mk"
