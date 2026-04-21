@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.15 2026/04/02 19:06:34 wiz Exp $
+$NetBSD$
 
 No logging to 'install.log'.
 Do not create 'uninstall.sh'.
@@ -9,9 +9,9 @@ pattern matching and substitution in the install phase using "grep"
 and "sed" when shell builtin "case" and "omit shortest match" ops
 should do just fine.
 
---- src/tools/rust-installer/install-template.sh.orig	2023-12-21 16:55:28.000000000 +0000
+--- src/tools/rust-installer/install-template.sh.orig	2026-04-17 09:42:40.347445849 +0000
 +++ src/tools/rust-installer/install-template.sh
-@@ -6,20 +6,12 @@ set -u
+@@ -6,20 +6,12 @@ init_logging() {
  init_logging() {
      local _abs_libdir="$1"
      local _logfile="$_abs_libdir/$TEMPLATE_REL_MANIFEST_DIR/install.log"
@@ -32,28 +32,6 @@ should do just fine.
  }
  
  msg() {
-@@ -433,8 +425,8 @@ uninstall_components() {
-             local _directive
-             while read _directive; do
- 
--            local _command=`echo $_directive | cut -f1 -d:`
--            local _file=`echo $_directive | cut -f2 -d:`
-+            local _command="${_directive%%:*}"
-+            local _file="${_directive#*:}"
- 
-             # Sanity checks
-             if [ ! -n "$_command" ]; then critical_err "malformed installation directive"; fi
-@@ -541,8 +533,8 @@ install_components() {
-     local _directive
-     while read _directive; do
- 
--        local _command=`echo $_directive | cut -f1 -d:`
--        local _file=`echo $_directive | cut -f2 -d:`
-+        local _command="${_directive%%:*}"
-+        local _file="${_directive#*:}"
- 
-         # Sanity checks
-         if [ ! -n "$_command" ]; then critical_err "malformed installation directive"; fi
 @@ -628,7 +620,6 @@ install_components() {
  
              verbose_msg "copying directory $_file_install_path"
@@ -62,7 +40,7 @@ should do just fine.
  
              run cp -R "$_src_dir/$_component/$_file" "$_file_install_path"
              critical_need_ok "failed to copy directory"
-@@ -977,7 +968,6 @@ write_to_file "$TEMPLATE_RUST_INSTALLER_
+@@ -977,7 +968,6 @@ critical_need_ok "failed to write installer version"
  critical_need_ok "failed to write installer version"
  
  # Install the uninstaller
