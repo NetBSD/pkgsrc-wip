@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (portmidi-2.0.4.tar.gz) = a2ed4a0e5b0d209c9e273a68d199c486370953424faa481b00237b41fd682b7e
-SHA512 (portmidi-2.0.4.tar.gz) = d9f22d161e1dd9a4bde1971bb2b6e5352da51545f4fe5ecad11c55e7a535f0d88efce18d1c8fd91e93b70a7926150f86a0f53972ad92370e86556a8dd72dc194
-Size (portmidi-2.0.4.tar.gz) = 263225 bytes
+BLAKE2s (portmidi-2.0.7.tar.gz) = 32ddba5242b8d36b484a7cb33cc82c2395adaa80899b6b27e567560061714e87
+SHA512 (portmidi-2.0.7.tar.gz) = da5c8ccdbd47c7318fffc26f2fa812c0ab8365ffd6e5b6cb25260b9d2dc42ecb41a0cf1de224e28b1ca99ce3b53773f7a16e7cce5c90a89975ef6a7d03c77638
+Size (portmidi-2.0.7.tar.gz) = 190701 bytes

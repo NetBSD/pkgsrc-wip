@@ -1,0 +1,53 @@
+$NetBSD$
+
+On Darwin, don't build application bundle.
+Install into lib/, not lib/audacity/ for consistent linking (needed on Darwin).
+
+--- CMakeLists.txt.orig	2025-12-11 15:41:59.000000000 +0000
++++ CMakeLists.txt
+@@ -83,7 +83,7 @@ cmake_policy( SET CMP0072 NEW )
+ cmake_policy( SET CMP0075 NEW )
+ 
+ # Definitions that must happen before the project() command
+-if( APPLE )
++if(FALSE)
+    # CMAKE_HOST_SYSTEM_PROCESSOR is empty before the project() command
+    execute_process(
+       COMMAND uname -m
+@@ -437,7 +437,7 @@ set( _DEST "${_DESTDIR}" )
+ set( INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}" )
+ set( _LIBDIR "${CMAKE_INSTALL_LIBDIR}" )
+ set( _DATADIR "${CMAKE_INSTALL_DATADIR}" )
+-set( _PKGLIB "${_LIBDIR}/audacity" )
++set( _PKGLIB "${_LIBDIR}" )
+ set( _PKGDATA "${_DATADIR}/audacity/" )
+ set( _MANDIR "${CMAKE_INSTALL_MANDIR}" )
+ set( _MODDIR "${_PKGLIB}/modules" )
+@@ -451,16 +451,11 @@ set( CMAKE_INSTALL_RPATH_USE_LINK_PATH F
+ 
+ # Adjust them for the Mac
+ if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+-   set( _APPDIR "Audacity.app/Contents" )
+-   set( _DEST "${_DESTDIR}/${_APPDIR}" )
+-   set( _EXEDIR "${_APPDIR}/MacOS" )
+-   set( _MODDIR "${_APPDIR}/modules" )
+-   set( _PKGLIB "${_APPDIR}/Frameworks" )
+ 
+    set( CMAKE_MACOSX_RPATH OFF )
+-   set( CMAKE_INSTALL_RPATH "@loader_path/../Frameworks" )
++   #set( CMAKE_INSTALL_RPATH "@loader_path/../Frameworks" )
+    set( CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
+-   set( CMAKE_INSTALL_NAME_DIR "@loader_path/../Frameworks" )
++   #set( CMAKE_INSTALL_NAME_DIR "@loader_path/../Frameworks" )
+    set( CMAKE_BUILD_WITH_INSTALL_RPATH ON )
+ elseif( WIN32 )
+    set( _EXEDIR "" )
+@@ -586,7 +581,7 @@ if( NOT CMAKE_INSTALL_LIBDIR STREQUAL "l
+ endif()
+ 
+ # Define Audacity's name
+-if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
++if(FALSE)
+    set( AUDACITY_NAME "Audacity" )
+ else()
+    set( AUDACITY_NAME "audacity" )

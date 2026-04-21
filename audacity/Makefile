@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	audacity-sources-3.7.5
+DISTNAME=	audacity-sources-3.7.7
 PKGNAME=	${DISTNAME:S/-sources//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
@@ -14,9 +14,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 # AND Creative Commons-Attribution 3.0 Unport
 
 TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
-USE_TOOLS+=		pkg-config
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-Daudacity_conan_enabled=OFF
 #CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_zlib=system
@@ -26,7 +26,7 @@ CMAKE_CONFIGURE_ARGS+=	-Daudacity_has_vst3=off
 # unpackaged
 CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_portsmf:STRING=local
 CMAKE_CONFIGURE_ARGS+=	-DPortAudio_INCLUDE_DIR=${BUILDLINK_DIR.portaudio}/include/portaudio2
-CMAKE_CONFIGURE_ARGS+=	-DPortAudio_LIBRARIES=${BUILDLINK_DIR.portaudio}/lib/portaudio2/libportaudio.so
+CMAKE_CONFIGURE_ARGS+=	-DPortAudio_LIBRARIES=${BUILDLINK_DIR.portaudio}/lib/portaudio2/libportaudio.${SHLIB_EXT}
 
 PKGCONFIG_OVERRIDE+=	lib-src/libsbsms/sbsms.pc.in
 PKGCONFIG_OVERRIDE+=	lib-src/libscorealign/scorealign.pc.in
@@ -47,10 +47,12 @@ PKGCONFIG_OVERRIDE+=	lib-src/soundtouch/soundtouch.pc.in
 PKGCONFIG_OVERRIDE+=	lib-src/twolame/twolame.pc.in
 
 # runs image-compiler during build which wants to find lib-theme.so
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib/audacity
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib
+# for Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib
 
-.include "../../lang/python/tool.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/tool.mk"
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"

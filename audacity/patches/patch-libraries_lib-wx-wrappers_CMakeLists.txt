@@ -1,0 +1,15 @@
+$NetBSD$
+
+Support NetBSD.
+
+--- libraries/lib-wx-wrappers/CMakeLists.txt.orig	2026-04-21 08:21:17.985986999 +0000
++++ libraries/lib-wx-wrappers/CMakeLists.txt
+@@ -25,7 +25,7 @@ set( SOURCES
+       FileDialog/mac/FileDialogPrivate.mm
+       FileDialog/mac/FileDialogPrivate.h
+    >
+-   $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,CYGWIN>:
++   $<$<PLATFORM_ID:Linux,FreeBSD,NetBSD,OpenBSD,CYGWIN>:
+       FileDialog/gtk/FileDialogPrivate.cpp
+       FileDialog/gtk/FileDialogPrivate.h
+    >

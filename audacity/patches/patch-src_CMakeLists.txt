@@ -1,0 +1,47 @@
+$NetBSD$
+
+On Darwin, don't build application bundle.
+
+--- src/CMakeLists.txt.orig	2025-12-11 15:41:59.000000000 +0000
++++ src/CMakeLists.txt
+@@ -1079,6 +1079,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows"
+       POST_BUILD
+    )
+ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
++if(FALSE)
+    # Bug 2400 workaround
+    #
+    # Replaces the SDK version in the built executable with 10.13 to
+@@ -1116,6 +1117,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwi
+          RESOURCE "${MAC_RESOURCES};${RESOURCES}"
+    )
+    set_target_property_all( ${TARGET} RUNTIME_OUTPUT_DIRECTORY "${_DESTDIR}" )
++endif()
+ 
+    # These sources must be compiled as Objective C++ and excluded
+    # from precompiled header usage
+@@ -1169,6 +1171,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwi
+       POST_BUILD
+    )
+ 
++if(FALSE)
+    fix_bundle( ${TARGET} )
+ 
+    # Because the wrapper is copied into the bundle, we need to
+@@ -1186,6 +1189,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwi
+          POST_BUILD
+       )
+    endif()
++endif()
+ else()
+    set_target_properties(
+       ${TARGET}
+@@ -1414,7 +1418,7 @@ if( "${CMAKE_GENERATOR}" MATCHES "Xcode|
+       PATTERN "riff-test-util.exe" EXCLUDE
+    )
+ else()
+-   if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
++   if(FALSE)
+       install( TARGETS ${TARGET}
+                DESTINATION "."
+                RESOURCE DESTINATION "${_APPDIR}/Resources" )
