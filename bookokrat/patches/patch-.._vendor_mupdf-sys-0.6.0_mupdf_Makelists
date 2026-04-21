@@ -1,0 +1,15 @@
+$NetBSD: patch-Makelists,v 1.5 2026/03/03 21:49:01 yhardy Exp $
+
+* Disable JPEX XR support.
+
+--- ../vendor/mupdf-sys-0.6.0/mupdf/Makelists.orig	2026-02-18 16:24:19.000000000 +0000
++++ ../vendor/mupdf-sys-0.6.0/mupdf/Makelists
+@@ -140,7 +140,7 @@ JPEGXR_CFLAGS += -Ithirdparty/jpegxr/Software
+ 
+ JPEGXR_CFLAGS += -Ithirdparty/jpegxr
+ JPEGXR_CFLAGS += -Ithirdparty/jpegxr/Software
+-JPEGXR_CFLAGS += -DHAVE_JPEGXR
++#JPEGXR_CFLAGS += -DHAVE_JPEGXR
+ 
+ JPEGXR_BUILD_CFLAGS += -Wno-tautological-compare
+ 

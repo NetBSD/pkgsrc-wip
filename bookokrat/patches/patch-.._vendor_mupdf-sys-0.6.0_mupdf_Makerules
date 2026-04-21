@@ -1,0 +1,83 @@
+$NetBSD: patch-Makerules,v 1.3 2026/03/03 21:49:01 yhardy Exp $
+
+- Handle the various operating systems in the same way avoiding hardcoding
+- Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
+  `USE_TOOLS+= objcopy' the objcopy-ing fails as follow:
+    OBJCOPY build/release/resources/fonts/urw/Dingbats.cff.o
+    build/release/resources/fonts/urw/Dingbats.cff.o:1: warning: NUL character seen; rest of line ignored
+    build/release/resources/fonts/urw/Dingbats.cff.o:1: *** missing separator.  Stop.
+  (also for other fonts)).  This needs to be investigated further.
+- Avoid internal version of freeglut and try to pick it up via pkg-config and
+  set SYS_GLUT_{CFLAGS,LIBS} accordingly.
+
+--- ../vendor/mupdf-sys-0.6.0/mupdf/Makerules.orig	2026-02-18 16:24:19.000000000 +0000
++++ ../vendor/mupdf-sys-0.6.0/mupdf/Makerules
+@@ -100,19 +100,6 @@ endif
+ 
+ # System specific features
+ 
+-ifeq ($(findstring -fembed-bitcode,$(XCFLAGS)),)
+-  # clang does not support these in combination with -fembed-bitcode
+-  CFLAGS += -ffunction-sections -fdata-sections
+-endif
+-
+-ifeq ($(OS),Darwin)
+-  LDREMOVEUNREACH := -Wl,-dead_strip
+-  SO := dylib
+-else
+-  LDREMOVEUNREACH := -Wl,--gc-sections
+-  SO := so
+-endif
+-
+ SANITIZE_FLAGS += -fsanitize=address
+ SANITIZE_FLAGS += -fsanitize=leak
+ 
+@@ -212,38 +199,8 @@ endif
+   CFLAGS += -DCLUSTER
+ endif
+ 
+-ifeq ($(OS),Darwin)
+-  HAVE_GLUT := yes
+-  SYS_GLUT_CFLAGS := -Wno-deprecated-declarations
+-  SYS_GLUT_LIBS := -framework GLUT -framework OpenGL
+-  CC = xcrun cc
+-  AR = xcrun ar
+-  LD = xcrun ld
+-  RANLIB = xcrun ranlib
++HAVE_OBJCOPY := no
+ 
+-  ifneq ($(ARCHFLAGS),)
+-    $(warning "MacOS with ARCHFLAGS set. Assuming we are building for arm64, and setting HAVE_LIBCRYPTO to no.")
+-    HAVE_LIBCRYPTO := no
+-  else ifeq (, $(shell command -v pkg-config))
+-    $(warning "No pkg-config found, install it for proper integration of libcrypto")
+-  else
+-    HAVE_LIBCRYPTO := $(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)
+-    ifeq ($(HAVE_LIBCRYPTO),yes)
+-      LIBCRYPTO_CFLAGS := $(shell pkg-config --cflags libcrypto) -DHAVE_LIBCRYPTO
+-      LIBCRYPTO_LIBS := $(shell pkg-config --libs libcrypto)
+-    endif
+-  endif
+-
+-else
+-
+-  ifeq ($(OS),Linux)
+-    HAVE_OBJCOPY := yes
+-  endif
+-
+-  ifeq ($(OS),OpenBSD)
+-    LDFLAGS += -pthread
+-  endif
+-
+   ifeq ($(shell pkg-config --exists 'freetype2 >= 18.3.12' && echo yes),yes)
+     SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
+     SYS_FREETYPE_LIBS := $(shell pkg-config --libs freetype2)
+@@ -343,8 +300,6 @@ else
+     PTHREAD_CFLAGS :=
+     PTHREAD_LIBS := -lpthread
+   endif
+-
+-endif
+ 
+ # The following section has various cross compilation configurations.
+ #
