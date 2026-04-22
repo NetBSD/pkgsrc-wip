@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.24 2026/03/31 13:31:02 wiz Exp $
+
+BLAKE2s (dnsdist-2.0.4.tar.xz) = 181da87d4cc7efe00bb4471e811e86be6714c1aeeecfb6fc8aec1591fa3bd887
+SHA512 (dnsdist-2.0.4.tar.xz) = abad5eb6d95202700e419e090bde64b9f4117214c0b21df472262a29a066a179a8d93b8684d066f52a4a2a82cba184927be6f8501bffab2a0e89ebe66e881592
+Size (dnsdist-2.0.4.tar.xz) = 2287608 bytes
+SHA1 (patch-configure) = d9ec9f3416862f471a3029168681b9512ced68b9
