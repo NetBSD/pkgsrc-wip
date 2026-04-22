@@ -848,6 +848,7 @@ SUBDIR+=	efibootmgr
 SUBDIR+=	efl
 SUBDIR+=	efltk
 SUBDIR+=	eic
+SUBDIR+=	eilmeldung
 SUBDIR+=	eiskaltdcpp
 SUBDIR+=	ekermit
 SUBDIR+=	eksctl
