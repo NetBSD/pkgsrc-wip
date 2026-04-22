@@ -405,6 +405,7 @@ SUBDIR+=	budgie-screensaver
 SUBDIR+=	bugsx
 SUBDIR+=	bugzilla
 SUBDIR+=	bulk-test-llvm
+SUBDIR+=	bulletty
 SUBDIR+=	bun
 SUBDIR+=	bup-git
 SUBDIR+=	bupstash
