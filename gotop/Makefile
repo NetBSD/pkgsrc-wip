@@ -4,7 +4,7 @@ DISTNAME=	gotop-4.2.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fraggerfox/}
 CATEGORIES=	sysutils
 DIST_SUBDIR=    ${PKGBASE}
-GITHUB_TAG=	d6bb0f0a85413d20b39d5e29c8cf0abb4898ac72
+GITHUB_TAG=	528b0ca6d73a9974db8acbeb7f96b7c640aa395e
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/xxxserxxx/gotop
