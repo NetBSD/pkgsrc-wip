@@ -1,5 +1,8 @@
 # $NetBSD: Makefile,v 1.37 2025/03/14 13:21:07 abs Exp $
 
+# WARNING Critical remote security issue
+# https://community.ui.com/releases/Security-Advisory-Bulletin-062-062/c29719c0-405e-4d4a-8f26-e343e99f931b
+
 DISTNAME=	unifi-8.6.9
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
