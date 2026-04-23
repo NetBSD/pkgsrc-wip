@@ -49,7 +49,7 @@ INSTALLATION_DIRS=	unifi share/doc/unifi
 # Emulated JDK doesn't work due to epoll issues.  Also, would require
 # matching emulated native libraries, and we only compile actual
 # native libaries.
-PKG_JVMS_ACCEPTED=	openjdk21
+PKG_JVMS_ACCEPTED=	openjdk21 openjdk17
 PKGSRC_MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
