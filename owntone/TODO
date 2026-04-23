@@ -25,4 +25,5 @@ Upstream bugs:
 
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2025-44560, CVE-2025-57155, CVE-2025-57156, CVE-2025-63647,
-  CVE-2025-63648, CVE-2026-26828, CVE-2026-26829
+  CVE-2025-63648, CVE-2026-26828, CVE-2026-26829, CVE-2026-41457,
+  CVE-2026-41458
