@@ -16,6 +16,8 @@ HOMEPAGE=	https://www.rust-lang.org/
 COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
 
+# This package actually conflicts with lang/rust itself and with any stable wip
+# version of it. Either use stable or beta, not both.
 CONFLICTS+=	rust-bin-[0-9]*
 
 # LLVM uses -std=c++17
