@@ -1,4 +1,28 @@
-net/dnsdist: Update to version 2.0.4
+net/dnsdist: Update to version 2.0.5
+
+2.0.5
+Released: 23rd of April 2026
+Improvements
+Do not keep the parsed EDNS options around
+References: pull request 17165
+
+Bug Fixes
+Hardened DoQ internal error handling for cross-protocol queries
+References: pull request 17170
+Give TCP thread as default for definition USE_SINGLE_ACCEPTOR_THREAD
+References: #17109, pull request 17168
+Hardened DoH3 internal error handling for cross-protocol queries
+References: pull request 17173
+Handle missing X-Forwarded-For on existing DoH connection
+References: pull request 17176
+Fix handling of long HTTP/2 Date headers, handle non-POSIX locales
+References: pull request 17178
+Do not oversize the received buffer with recvmmsg
+References: pull request 17166
+meson: Add missing checks for TLS_client_method, gnutls_transport_set_fastopen
+References: pull request 17179
+Fix the StatNode::fullname issue introduced in 2.0.4
+References: pull request 17207
 
 2.0.4
 Released: 22nd of April 2026
