@@ -1,8 +1,0 @@
-net/powerdns-recursor: Update to version 5.4.1
-
-5.4.1
-Released: 22th of April 2026
-Bug Fixes
-Fix PowerDNS Security Advisory 2026-03 for PowerDNS Recursor: Multiple Issues
-
-References: pull request TBD
