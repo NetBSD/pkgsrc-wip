@@ -17,7 +17,7 @@ COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
 
 # This package actually conflicts with lang/rust itself and with any stable wip
-# version of it. Either use stable or beta, not both.
+# version of it. Use either stable or beta, not both.
 CONFLICTS+=	rust-bin-[0-9]*
 
 # LLVM uses -std=c++17
@@ -74,11 +74,11 @@ CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-# Getting RPATH with $ORIGIN into the bootstrap binaries is
-# problematic, since pkgsrc refuses to put $ORIGIN into RPATHs
-# of executables.  So instead we need these so that the bootstrap
-# compiler can be run out of the $RUST_BOOTSTRAP_PATH directory as
-# part of the initial part of the rust compiler build.
+# Getting RPATH with $ORIGIN into the bootstrap binaries is problematic,
+# since pkgsrc refuses to put $ORIGIN into RPATHs of executables.
+# So instead we need these so that the bootstrap compiler can be run out
+# of the $RUST_BOOTSTRAP_PATH directory as part of the initial part of the
+# rust compiler build.
 # This problem is not present with the amd64 bootstrap bits,
 # which are built by upstream and uses $ORIGIN/../lib in RPATH.
 MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
