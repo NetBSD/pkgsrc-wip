@@ -2785,6 +2785,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/slovak.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/slovak.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/symbol-ksc.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/symbol-ksc.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/syriac.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/syriac.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/tamil-dvorak.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/tamil-dvorak.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/thai.el.gz
