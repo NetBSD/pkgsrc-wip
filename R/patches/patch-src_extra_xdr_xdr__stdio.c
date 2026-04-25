@@ -1,4 +1,4 @@
-$NetBSD: patch-src_extra_xdr_xdr__stdio.c,v 1.1 2025/01/20 21:26:02 he Exp $
+$NetBSD: patch-src_extra_xdr_xdr__stdio.c,v 1.2 2026/02/16 23:44:02 mef Exp $
 
 Don't do the ntohl() / htonl() dance on NetBSD.
 

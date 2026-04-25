@@ -1,4 +1,4 @@
-$NetBSD: patch-src_include_R__ext_Error.h,v 1.3 2025/03/02 11:38:51 mef Exp $
+$NetBSD: patch-src_include_R__ext_Error.h,v 1.5 2026/02/16 23:44:02 mef Exp $
 
 Fix building with C++.
 

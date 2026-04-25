@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_library_grDevices_src_devPS.c,v 1.1 2026/02/16 23:44:02 mef Exp $
 
 devPS.c: In function 'PDF_endfile':
 devPS.c:8173:9: error: implicit declaration of function 'unlink' [-Wimplicit-function-declaration]
