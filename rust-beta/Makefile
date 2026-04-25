@@ -74,13 +74,17 @@ CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-# Getting RPATH with $ORIGIN into the bootstrap binaries is problematic,
-# since pkgsrc refuses to put $ORIGIN into RPATHs of executables.
-# So instead we need these so that the bootstrap compiler can be run out
-# of the $RUST_BOOTSTRAP_PATH directory as part of the initial part of the
-# rust compiler build.
+# Getting RPATH with $ORIGIN into the bootstrap binaries is
+# problematic, since pkgsrc refuses to put $ORIGIN into RPATHs
+# of executables. So instead we need these so that the bootstrap
+# compiler can be run out of the $RUST_BOOTSTRAP_PATH directory as
+# part of the initial part of the rust compiler build.
 # This problem is not present with the amd64 bootstrap bits,
-# which are built by upstream and uses $ORIGIN/../lib in RPATH.
+# which are built by our upstream and uses $ORIGIN/../lib in RPATH.
+#
+# The above is only true on NetBSD, for other bootstrap kits (e.g. illumos)
+# the binaries are made to be relocatable after the build using elfedit or
+# similar.  It is unclear why this approach is not used by NetBSD too.
 MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 
