@@ -158,8 +158,8 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #TOOL_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
 #TOOL_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 #TOOL_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
-TOOL_DEPENDS+=	  	p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
-TOOL_DEPENDS+=	   	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
+TOOL_DEPENDS+=		p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
+TOOL_DEPENDS+=		p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
