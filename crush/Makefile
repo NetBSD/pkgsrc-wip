@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	crush-0.60.0
+DISTNAME=	crush-0.62.1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=charmbracelet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,9 @@ COMMENT=	Glamourous AI coding agent for your favourite terminal
 LICENSE=	fsl-1.1-mit-license
 
 USE_LANGUAGES=	c
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/example
 
 .include "go-modules.mk"
 
