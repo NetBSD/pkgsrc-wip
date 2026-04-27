@@ -16,9 +16,17 @@ USE_TOOLS+=	pkg-config
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS+=	bin
-INSTALL_MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/bin
+#INSTALL_MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/bin
 
 TEST_TARGET=	check
+
+# #   install  /tmp/wip/mctool-dev/work/.destdir/usr/pkg/bin/mctool
+# install  -c  -r -o root -g wheel -m 555   mctool /tmp/wip/mctool-dev/work/.destdir/usr/pkg/bin/mctool
+# install: /tmp/wip/mctool-dev/work/.destdir/usr/pkg/bin/mctool.inst.92mbrc: chown/chgrp: Operation not permitted
+# *** Error code 1
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/mctool ${DESTDIR}${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

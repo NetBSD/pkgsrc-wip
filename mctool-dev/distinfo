@@ -1,0 +1,5 @@
+$NetBSD$
+
+SHA1 (patch-bin_cmd__fetch.c) = eba81c51fe123bf46c272864e10b3cd46c178ba0
+SHA1 (patch-lib_distinfo.c) = e8e8742b374f988f128340abd6fd66bc407b9ac0
+SHA1 (patch-test_readdistinfo_t__readdistinfo.c) = f353984af5d65ca9c3a17235b5c957bbcd06c3d3
