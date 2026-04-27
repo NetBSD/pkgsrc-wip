@@ -1039,6 +1039,7 @@ SUBDIR+=	foliate
 SUBDIR+=	folly
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
+SUBDIR+=	forge
 SUBDIR+=	forgejo
 SUBDIR+=	fossil1
 SUBDIR+=	fox
