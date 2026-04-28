@@ -5060,6 +5060,7 @@ SUBDIR+=	py-zbar
 SUBDIR+=	py-zelda
 SUBDIR+=	py-zeliard
 SUBDIR+=	py-zenity
+SUBDIR+=	py-zensical
 SUBDIR+=	py-zict
 SUBDIR+=	py-zinolib
 SUBDIR+=	py-zlmdb
