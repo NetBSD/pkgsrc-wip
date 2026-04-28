@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	pymdown-extensions-8.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	pymdown_extensions-10.21.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymdown-extensions/}
 
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/facelessuser/pymdown-extensions
 COMMENT=	Extension pack for Python Markdown
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-markdown>=3.6:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
