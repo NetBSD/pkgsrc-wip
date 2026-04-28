@@ -1,19 +1,91 @@
 In addition to wip/ versions of packages, this package may need:
 
 - patch to wxGTK32 (https://github.com/wxWidgets/wxWidgets/issues/26410):
+  Backport fix of EGL 1.4 for X11:
+  https://github.com/wxWidgets/wxWidgets/commit/8a41fd01d1c08e97ef38701d556ed128efd2e53c
 
---- glegl.cpp.orig	2025-12-08 09:59:42.000000000 +1100
-+++ glegl.cpp	2026-04-27 13:51:53.927602321 +1000
-@@ -569,7 +569,7 @@
-                                                       void* window,
-                                                       EGLAttrib const* attrib_list);
+--- include/wx/unix/glegl.h.orig	2025-12-07 22:59:42.000000000 +0000
++++ include/wx/unix/glegl.h
+@@ -136,9 +136,26 @@ private:
+     // fall back on eglCreateWindowSurface() otherwise.
+     //
+     // This function uses m_display and m_config which must be initialized
+-    // before using it and should be passed either m_xwindow or m_wlEGLWindow
+-    // depending on whether we are using X11 or Wayland.
+-    EGLSurface CallCreatePlatformWindowSurface(void *window) const;
++    // before using it.
++    //
++    // Window parameter is passed twice because some of the functions above
++    // take it by value while others take it by pointer and this depends on
++    // whether we use X11 or Wayland. Use wrappers below taking correct window
++    // type instead of calling this function directly.
++    EGLSurface
++    DoCallCreatePlatformWindowSurface(wxUIntPtr windowID, void* windowPtr) const;
++
++    // This one is for X11.
++    EGLSurface CallCreatePlatformWindowSurface(wxUIntPtr xwindow) const
++    {
++        return DoCallCreatePlatformWindowSurface(xwindow, &xwindow);
++    }
++
++    // And this one is for Wayland.
++    EGLSurface CallCreatePlatformWindowSurface(struct wl_egl_window* window) const
++    {
++        return DoCallCreatePlatformWindowSurface(wxPtrToUInt(window), window);
++    }
  
--    if ( gs_eglMajor > 1 || (gs_eglMajor == 1 && gs_eglMinor >= 5) )
-+    if ( gs_eglMajor > 1 || (gs_eglMajor == 1 && gs_eglMinor >= 4) )
-     {
-         // EGL 1.5 or later: use eglCreatePlatformWindowSurface() which must be
-         // available.
+ 
+     EGLConfig *m_config;
 
+
+--- src/unix/glegl.cpp.orig	2025-12-07 22:59:42.000000000 +0000
++++ src/unix/glegl.cpp
+@@ -561,7 +561,9 @@ static void gtk_glcanvas_scale_factor_no
+ } // extern "C"
+ #endif // GDK_WINDOWING_WAYLAND
+ 
+-EGLSurface wxGLCanvasEGL::CallCreatePlatformWindowSurface(void *window) const
++EGLSurface
++wxGLCanvasEGL::DoCallCreatePlatformWindowSurface(wxUIntPtr windowID,
++                                                 void* windowPtr) const
+ {
+     // Type of eglCreatePlatformWindowSurface[EXT]().
+     typedef EGLSurface (*CreatePlatformWindowSurface)(EGLDisplay display,
+@@ -585,7 +587,7 @@ EGLSurface wxGLCanvasEGL::CallCreatePlat
+         if ( s_eglCreatePlatformWindowSurface )
+         {
+             return s_eglCreatePlatformWindowSurface(m_display, *m_config,
+-                                                    window,
++                                                    windowPtr,
+                                                     NULL);
+         }
+     }
+@@ -607,14 +609,12 @@ EGLSurface wxGLCanvasEGL::CallCreatePlat
+     if ( s_eglCreatePlatformWindowSurfaceEXT )
+     {
+         return s_eglCreatePlatformWindowSurfaceEXT(m_display, *m_config,
+-                                                   window,
++                                                   windowPtr,
+                                                    NULL);
+     }
+     else
+     {
+-        return eglCreateWindowSurface(m_display, *m_config,
+-                                      reinterpret_cast<EGLNativeWindowType>(window),
+-                                      NULL);
++        return eglCreateWindowSurface(m_display, *m_config, windowID, NULL);
+     }
+ }
+ 
+@@ -638,7 +638,7 @@ bool wxGLCanvasEGL::CreateSurface()
+         }
+ 
+         m_xwindow = GDK_WINDOW_XID(window);
+-        m_surface = CallCreatePlatformWindowSurface(&m_xwindow);
++        m_surface = CallCreatePlatformWindowSurface(m_xwindow);
+     }
+ #endif
+ #ifdef GDK_WINDOWING_WAYLAND
 
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2020-28595, CVE-2020-28596
