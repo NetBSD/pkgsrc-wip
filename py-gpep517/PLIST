@@ -1,0 +1,25 @@
+@comment $NetBSD$
+bin/gpep517-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/gpep517/__init__.py
+${PYSITELIB}/gpep517/__init__.pyc
+${PYSITELIB}/gpep517/__init__.pyo
+${PYSITELIB}/gpep517/__main__.py
+${PYSITELIB}/gpep517/__main__.pyc
+${PYSITELIB}/gpep517/__main__.pyo
+${PYSITELIB}/gpep517/build.py
+${PYSITELIB}/gpep517/build.pyc
+${PYSITELIB}/gpep517/build.pyo
+${PYSITELIB}/gpep517/install.py
+${PYSITELIB}/gpep517/install.pyc
+${PYSITELIB}/gpep517/install.pyo
+${PYSITELIB}/gpep517/qa.py
+${PYSITELIB}/gpep517/qa.pyc
+${PYSITELIB}/gpep517/qa.pyo
+${PYSITELIB}/gpep517/utils.py
+${PYSITELIB}/gpep517/utils.pyc
+${PYSITELIB}/gpep517/utils.pyo

@@ -3951,6 +3951,7 @@ SUBDIR+=	py-gosam
 SUBDIR+=	py-gotran
 SUBDIR+=	py-goulib
 SUBDIR+=	py-gpaw
+SUBDIR+=	py-gpep517
 SUBDIR+=	py-gpkit
 SUBDIR+=	py-gpxpy
 SUBDIR+=	py-gpy
