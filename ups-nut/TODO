@@ -1,7 +1,6 @@
-  - Write COMMIT_MSG.
+# required for next import
+
+# someday
 
   - Debug PLIST.Darwin not working.
-  - Check all patches and comment and send upstream.
-  - Resolve manpage building.
-  - Think about uncommenting upsdrvctl shutdown.
   - Document why altqd is in files/upskillpower.sh, or remove.
