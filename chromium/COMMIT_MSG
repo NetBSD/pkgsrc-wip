@@ -1,68 +1,77 @@
-www/chromium: update to 147.0.7727.101
+www/chromium: update to 147.0.7727.137
 
-* 147.0.7727.101
-This update includes 31 security fixes. Please see the
+* 147.0.7727.116
+This update includes 19 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
 Chrome Security Page for more information.
-[$90000][490170083] Critical CVE-2026-6296: Heap buffer overflow in ANGLE.
-Reported by cinzinga on 2026-03-05
-[$10000][493628982] Critical CVE-2026-6297: Use after free in Proxy.
-Reported by heapracer on 2026-03-17
-[TBD][495700484] Critical CVE-2026-6298: Heap buffer overflow in Skia.
-Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-24
-[N/A][497053588] Critical CVE-2026-6299: Use after free in Prerender.
-Reported by Google on 2026-03-28
-[TBD][497724498] Critical CVE-2026-6358: Use after free in XR.
-Reported by Jihyeon Jeong (Compsec Lab, Seoul National University /
-Research Intern) on 2026-03-30
-[TBD][490251701] High CVE-2026-6359: Use after free in Video.
-Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-06
-[TBD][491994185] High CVE-2026-6300: Use after free in CSS.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-12
-[TBD][495273999] High CVE-2026-6301: Type Confusion in Turbofan.
-Reported by qymag1c on 2026-03-23
-[TBD][495477995] High CVE-2026-6302: Use after free in Video.
-Reported by Syn4pse on 2026-03-24
-[N/A][496282147] High CVE-2026-6303: Use after free in Codecs.
+[TBD][493652473] High CVE-2026-6919: Use after free in DevTools.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-18
+[TBD][499891888] High CVE-2026-6920: Out of bounds read in GPU.
+Reported by tatiwari of Microsoft on 2026-04-06
+[TBD][493315759] Medium CVE-2026-6921: Race in GPU.
+Reported by soiax on 2026-03-17
+
+* 147.0.7727.137
+This update includes 30 security fixes. Below, we highlight fixes
+that were contributed by external researchers. Please see the
+Chrome Security Page for more information.
+[$7000][494352590] Critical CVE-2026-7363: Use after free in Canvas.
+Reported by heapracer on 2026-03-19
+[N/A][493221953] Critical CVE-2026-7361: Use after free in iOS.
+Reported by Google on 2026-03-16
+[N/A][503419515] Critical CVE-2026-7344: Use after free in Accessibility.
+Reported by Google on 2026-04-16
+[N/A][503645680] Critical CVE-2026-7343: Use after free in Views.
+Reported by Google on 2026-04-17
+[$16000][493955227] High CVE-2026-7333: Use after free in GPU.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-19
+[N/A][495852034] High CVE-2026-7360: Insufficient validation of untrusted
+input in Compositing. Reported by Google on 2026-03-24
+[N/A][496284494] High CVE-2026-7359: Use after free in ANGLE.
 Reported by Google on 2026-03-25
-[N/A][496393742] High CVE-2026-6304: Use after free in Graphite.
-Reported by Google on 2026-03-26
-[TBD][496618639] High CVE-2026-6305: Heap buffer overflow in PDFium.
-Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-26
-[TBD][496907110] High CVE-2026-6306: Heap buffer overflow in PDFium.
-Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-27
-[TBD][497404188] High CVE-2026-6307: Type Confusion in Turbofan.
-Reported by Project WhatForLunch (@pjwhatforlunch) on 2026-03-29
-[N/A][497412658] High CVE-2026-6308: Out of bounds read in Media.
-Reported by Google on 2026-03-29
-[N/A][497846428] High CVE-2026-6309: Use after free in Viz.
+[N/A][496285281] High CVE-2026-7358: Use after free in Animation.
+Reported by Google on 2026-03-25
+[TBD][496456528] High CVE-2026-7334: Use after free in Views.
+Reported by Batuhan Eşref KOÇ on 2026-03-26
+[N/A][497047552] High CVE-2026-7357: Use after free in GPU.
+Reported by Google on 2026-03-27
+[N/A][497769116] High CVE-2026-7356: Use after free in Navigation.
 Reported by Google on 2026-03-30
-[TBD][497880137] High CVE-2026-6360: Use after free in FileSystem.
-Reported by asjidkalam on 2026-03-31
-[N/A][497969820] High CVE-2026-6310: Use after free in Dawn.
-Reported by Google on 2026-03-31
-[N/A][498201025] High CVE-2026-6311: Uninitialized Use in Accessibility.
-Reported by Google on 2026-03-31
-[N/A][498269651] High CVE-2026-6312: Insufficient policy enforcement in Passwords.
-Reported by Google on 2026-03-31
-[N/A][498765210] High CVE-2026-6313: Insufficient policy enforcement in CORS.
+[N/A][498746519] High CVE-2026-7354: Out of bounds read and write in Angle.
+Reported by Google on 2026-04-01
+[N/A][498809718] High CVE-2026-7353: Heap buffer overflow in Skia.
+Reported by Google on 2026-04-01
+[N/A][499023054] High CVE-2026-7352: Use after free in Media.
 Reported by Google on 2026-04-02
-[N/A][498782145] High CVE-2026-6314: Out of bounds write in GPU.
+[N/A][499119490] High CVE-2026-7351: Race in MHTML.
 Reported by Google on 2026-04-02
-[N/A][499247910] High CVE-2026-6315: Use after free in Permissions.
-Reported by Google on 2026-04-03
-[N/A][499384399] High CVE-2026-6316: Use after free in Forms.
-Reported by Google on 2026-04-03
-[N/A][500036290] High CVE-2026-6361: Heap buffer overflow in PDFium.
+[N/A][500018484] High CVE-2026-7350: Use after free in WebMIDI.
 Reported by Google on 2026-04-06
-[TBD][500066234] High CVE-2026-6362: Use after free in Codecs.
-Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-04-07
-[N/A][500091052] High CVE-2026-6317: Use after free in Cast.
+[N/A][500034684] High CVE-2026-7349: Use after free in Cast.
 Reported by Google on 2026-04-06
-[N/A][495751197] Medium CVE-2026-6363: Type Confusion in V8.
-Reported by Google on 2026-03-24
-[TBD][495996858] Medium CVE-2026-6318: Use after free in Codecs.
-Reported by Syn4pse on 2026-03-25
-[TBD][499018889] Medium CVE-2026-6319: Use after free in Payments.
-Reported by pwn2addr on 2026-04-02
-[N/A][502103414] Medium CVE-2026-6364: Out of bounds read in Skia.
-Reported by Google Threat Intelligence on 2026-04-13
+[N/A][500104917] High CVE-2026-7348: Use after free in Codecs.
+Reported by Google on 2026-04-06
+[TBD][500387779] High CVE-2026-7335: Use after free in media.
+Reported by Jungwoo Lee (@physicube) and Wongi Lee (@_qwerty_po) on 2026-04-07
+[TBD][500767595] High CVE-2026-7336: Use after free in WebRTC.
+Reported by Mozilla on 2026-04-09
+[TBD][500880819] High CVE-2026-7337: Type Confusion in V8.
+Reported by q@calif.io on 2026-04-09
+[N/A][501722605] High CVE-2026-7347: Use after free in Chromoting.
+Reported by Google on 2026-04-11
+[N/A][502206907] High CVE-2026-7346: Inappropriate implementation in Tint.
+Reported by Google on 2026-04-13
+[N/A][502248774] High CVE-2026-7345: Insufficient validation of untrusted
+input in Feedback. Reported by Google on 2026-04-13
+[TBD][502449857] High CVE-2026-7338: Use after free in Cast.
+Reported by Krace on 2026-04-14
+[N/A][503889643] High CVE-2026-7342: Use after free in WebView.
+Reported by Google on 2026-04-17
+[N/A][504586599] High CVE-2026-7341: Use after free in WebRTC.
+Reported by Google on 2026-04-20
+[$4000][493957495] Medium CVE-2026-7339: Heap buffer overflow in WebRTC.
+Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-19
+[$3000][497896137] Medium CVE-2026-7340: Integer overflow in ANGLE.
+Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-30
+[N/A][498285711] Medium CVE-2026-7355: Use after free in Media.
+Reported by Google on 2026-03-31
