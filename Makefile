@@ -2733,6 +2733,7 @@ SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
 SUBDIR+=	oneloop
+SUBDIR+=	onnxruntime
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx-svn

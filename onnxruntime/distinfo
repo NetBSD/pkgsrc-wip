@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (onnxruntime-1.25.1.tar.gz) = bcadf787d989160f8c071cb3226e2cffa4a4f58ebd9e9718bf501386bb1f04f5
+SHA512 (onnxruntime-1.25.1.tar.gz) = df760e30f1027b024d5a67aa3f36a6508609a58acc37e5e1066f919eaa42f9568c1c8218fbc80eeee0b9ec10307ea4778575b9ed3a1b312690f394b35d036e61
+Size (onnxruntime-1.25.1.tar.gz) = 284862475 bytes
+SHA1 (patch-onnxruntime_test_python_transformers_benchmark__mha.sh) = 59d8bd8409265cdea0df7700f0bba893626f1c60
