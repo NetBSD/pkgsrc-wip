@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.173 2025/11/05 00:21:39 gdt Exp $
+# $NetBSD: Makefile,v 1.179 2026/05/01 00:40:59 gdt Exp $
 
-# 2.54.0rc1
+# This remains in wip because it will very soon advance along upstream master.
 DISTNAME=	unison-2.54.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	v2.54.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison

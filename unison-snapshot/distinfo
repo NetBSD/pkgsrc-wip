@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2025/11/05 00:21:39 gdt Exp $
+$NetBSD: distinfo,v 1.44 2026/05/01 00:40:59 gdt Exp $
 
 BLAKE2s (unison-2.54.0.tar.gz) = a211563340b5a594667076f4f25446fc44c96c32d82ab2a4a2d9d3ccad97a6d8
 SHA512 (unison-2.54.0.tar.gz) = 7d1fea12b11e7a4bf2a5dbd9064d3c5104ca21df88fae0ead098f1ec8b7b935abcc7cdff74799fd2d9f5b23cc06eaa7f262bb71270511fb9c2ff4aac74c7ff11
