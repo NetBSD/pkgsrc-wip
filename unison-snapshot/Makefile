@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.173 2025/11/05 00:21:39 gdt Exp $
 
 # 2.54.0rc1
-DISTNAME=	unison-2.53.91
+DISTNAME=	unison-2.54.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	b1a49141e7eb5334e31efcf4d08073c192d6c1ae
+GITHUB_TAG=	v2.54.0
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
