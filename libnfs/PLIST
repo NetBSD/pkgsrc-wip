@@ -13,7 +13,12 @@ include/nfsc/libnfs-raw-rquota.h
 include/nfsc/libnfs-raw.h
 include/nfsc/libnfs-zdr.h
 include/nfsc/libnfs.h
-lib/libnfs.la
+lib/cmake/libnfs/FindNFS.cmake
+lib/cmake/libnfs/libnfs-config-release.cmake
+lib/cmake/libnfs/libnfs-config-version.cmake
+lib/cmake/libnfs/libnfs-config.cmake
+lib/libnfs.so
+lib/libnfs.so.16.2.0
 lib/pkgconfig/libnfs.pc
 man/man1/nfs-cat.1
 man/man1/nfs-cp.1

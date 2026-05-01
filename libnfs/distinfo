@@ -3,7 +3,9 @@ $NetBSD$
 BLAKE2s (libnfs-6.0.2.tar.gz) = 0932b7a35afda2e6d819113448bf4f0355e516f06111325f2f0fd09389ec7e2c
 SHA512 (libnfs-6.0.2.tar.gz) = 539790ab98aac7b2f25755b745d1f5e016518f1adb3748b8c58df187048bc31e091915d59e6359bb95c49dd986361cbbf2536edcda02598b0fac236762b61a46
 Size (libnfs-6.0.2.tar.gz) = 338988 bytes
-SHA1 (patch-configure.ac) = 57b3a9158a7cfcd94bd197a25e3555a6cf4b1acb
+SHA1 (patch-CMakeLists.txt) = b997d2e9cab237bca6ca8f283f7573ae43e51158
+SHA1 (patch-cmake_ConfigureChecks.cmake) = 45d3185755b5c37b60a31695e8bdf0d01793776e
+SHA1 (patch-cmake_config.h.cmake) = c3e1fd72dc1c3ec21666128961ef25e266c36b23
 SHA1 (patch-include_libnfs-multithreading.h) = b83c7e448823f3943174ecc290e7f10a0eac51f8
 SHA1 (patch-lib_libnfs-sync.c) = e038e91cfbe2d2392452b0c81e7284ed77cfdff6
 SHA1 (patch-lib_libnfs.c) = de2e55d0d29762e7e8cb800e2337a2db2b88ffb5
