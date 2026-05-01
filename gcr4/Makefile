@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2024/12/03 10:26:24 jperkin Exp $
+# $NetBSD$
 
-DISTNAME=	gcr-4.3.0
-PKGNAME=	${DISTNAME:S/gcr-/gcr4-/}
+DISTNAME=	gcr-4.4.0.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gcr/4.3/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gcr/4.4/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,36 +10,37 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Library for crypto UI and related tasks
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
-USE_TOOLS+=	gdbus-codegen intltool msgfmt perl pkg-config readlink
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gck
-TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gck
+USE_TOOLS+=	bash:test gdbus-codegen intltool msgfmt pkg-config
+
+USE_PKGLOCALEDIR=	yes
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=		-lsocket
 
-PKGCONFIG_OVERRIDE+=	gck-1.pc.in
-PKGCONFIG_OVERRIDE+=	gcr-base-3.pc.in
-PKGCONFIG_OVERRIDE+=	gcr-ui.pc.in
-PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
+REPLACE_BASH=		gcr/fixtures/gnupg-mock/mock-status-and-attribute
 
-PYTHON_FOR_BUILD_ONLY=	tool
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gck
+TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/output/gc
 
-REPLACE_PYTHON=		meson_post_install.py
+MESON_ARGS+=		-Dgpg_path=${PREFIX}/bin/gpg2 \
+			-Dssh_agent=true \
+			-Dsystemd=disabled
+
+.include "options.mk"
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/gck-2.pc \
+				output/meson-private/gcr-base-4.pc \
+				output/meson-private/gcr-ui-4.pc \
+				output/meson-private/gcr-4.pc
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/meson/build.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/vala/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
-.include "../../x11/gtk4/buildlink3.mk"
-.include "../../security/libsecret/buildlink3.mk"
+
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
