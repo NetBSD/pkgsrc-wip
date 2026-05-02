@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/xvega-bindings/utils.hpp
+include/xvega-bindings/xvega_bindings.hpp
+include/xvega-bindings/xvega_bindings_config.hpp
+lib/cmake/xvega-bindings/xvega-bindingsConfig.cmake
+lib/cmake/xvega-bindings/xvega-bindingsConfigVersion.cmake
+lib/cmake/xvega-bindings/xvega-bindingsTargets.cmake

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xvega-bindings-0.1.2.tar.gz) = 31fa18f8dfb9567d4c6fab18cdee81f86694fc192e7429eb4119dbf515aa29a7
+SHA512 (xvega-bindings-0.1.2.tar.gz) = 810b9c9c08d24aafdbe146c754bc66ce9e5f1b2da5e07e9841fd0aeb7b9ac37a8e63335fb9e55140059f93d9c4c4df1a1fadbcbbeeb4ae6f1c33e728e99e592f
+Size (xvega-bindings-0.1.2.tar.gz) = 10213 bytes
