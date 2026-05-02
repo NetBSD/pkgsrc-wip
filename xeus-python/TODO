@@ -1,0 +1,2 @@
+* Set PYTHONHOME and PYTHON_EXECUTABLE in the kernel.json or in main.cpp
+* Support installing for more than one version of python?

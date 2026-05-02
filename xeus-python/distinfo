@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xeus-python-0.19.0.tar.gz) = 35c861793aa670cef5edec9086e92c63f1d2d0d3c012999b35390676a4774a23
+SHA512 (xeus-python-0.19.0.tar.gz) = 125ae0eacbb3630d7ff6cec0dab0f847a78b9a92c1443cdff6b4227634ebf206d8bef6438015d368f39b6fd6bf85c90d9eac25fdb5027c9f713279b2405ceccb
+Size (xeus-python-0.19.0.tar.gz) = 4088819 bytes

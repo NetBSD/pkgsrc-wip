@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/xpython-${PYVERSSUFFIX}
+include/xeus-python/xaserver.hpp
+include/xeus-python/xdebugger.hpp
+include/xeus-python/xeus_python_config.hpp
+include/xeus-python/xinterpreter.hpp
+include/xeus-python/xinterpreter_raw.hpp
+include/xeus-python/xpaths.hpp
+include/xeus-python/xtraceback.hpp
+include/xeus-python/xutils.hpp
+lib/cmake/xeus-python/xeus-pythonConfig.cmake
+lib/cmake/xeus-python/xeus-pythonConfigVersion.cmake
+lib/cmake/xeus-python/xeus-pythonTargets-noconfig.cmake
+lib/cmake/xeus-python/xeus-pythonTargets.cmake
+lib/libxeus-python.a
+lib/libxeus-python.so
+lib/libxeus-python.so.0
+lib/libxeus-python.so.${PKGVERSION}
+share/jupyter/kernels/xpython-raw/kernel.json
+share/jupyter/kernels/xpython-raw/logo-32x32.png
+share/jupyter/kernels/xpython-raw/logo-64x64.png
+share/jupyter/kernels/xpython-raw/logo-svg.svg
+share/jupyter/kernels/xpython/kernel.json
+share/jupyter/kernels/xpython/logo-32x32.png
+share/jupyter/kernels/xpython/logo-64x64.png
+share/jupyter/kernels/xpython/logo-svg.svg
