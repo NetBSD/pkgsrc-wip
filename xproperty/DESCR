@@ -1,0 +1,12 @@
+`xproperty` is a C++ library providing traitlets-style properties.
+
+`xproperty` provides an implementation of the observer patterns relying on C++
+template and preprocessor metaprogramming techniques.
+
+Properies of observed objects have no additional memory footprint than the
+value they hold. The assignment of a new value is simply replaced at compiled
+time by:
+
+- the call to the validator for that property
+- the actual underlying assigment
+- the call to the observor for that property.

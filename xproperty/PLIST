@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/xproperty/xjson.hpp
+include/xproperty/xobserved.hpp
+include/xproperty/xproperty.hpp
+include/xproperty/xproperty_config.hpp
+lib/cmake/xproperty/xpropertyConfig.cmake
+lib/cmake/xproperty/xpropertyConfigVersion.cmake
+lib/cmake/xproperty/xpropertyTargets.cmake
