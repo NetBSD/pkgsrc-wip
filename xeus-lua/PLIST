@@ -1,0 +1,15 @@
+@comment $NetBSD$
+bin/xlua
+include/xeus-lua/xeus_lua_config.hpp
+include/xeus-lua/xinterpreter.hpp
+lib/cmake/xeus-lua/xeus-luaConfig.cmake
+lib/cmake/xeus-lua/xeus-luaConfigVersion.cmake
+lib/cmake/xeus-lua/xeus-luaTargets-noconfig.cmake
+lib/cmake/xeus-lua/xeus-luaTargets.cmake
+lib/libxeus-lua.so
+lib/libxeus-lua.so.0
+lib/libxeus-lua.so.${PKGVERSION}
+share/jupyter/kernels/xlua/kernel.json
+share/jupyter/kernels/xlua/logo-32x32.png
+share/jupyter/kernels/xlua/logo-64x64.png
+share/jupyter/kernels/xlua/xeus_small.svg

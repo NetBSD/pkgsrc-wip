@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xeus-lua-0.10.1.tar.gz) = 0a5b4ac6479932f2a4a3a44ebb47ec4eee2349276005853e9e73c04cc171a207
+SHA512 (xeus-lua-0.10.1.tar.gz) = e481e82e256edc52edd1b3de242eff1cd752c8c996a7fd6e6a47f39c4cd40493574c8bae192f8f79f66a7b10b2d5810efb0480a5cb0ee9d2ebfd8841dc05b5a7
+Size (xeus-lua-0.10.1.tar.gz) = 20318266 bytes
