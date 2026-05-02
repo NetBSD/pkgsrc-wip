@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (tabulate-1.5.tar.gz) = 01dd5b316835fdc7b254189b6b25cba74438609430d0d2d4abe6a0822e9156b5
+SHA512 (tabulate-1.5.tar.gz) = 324c9f2427d4d0e568b63fcd7bd81f4eee6743d7106af5ead134f81d637f190f77122f28cc42b9e95f7782f5058492b1903eadb44e1c3061a636b32bb93d0ed2
+Size (tabulate-1.5.tar.gz) = 2546549 bytes
