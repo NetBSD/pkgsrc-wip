@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xvega-0.1.3.tar.gz) = 7e484359da258f0ee64f7db363c0d2207fa716b1bb32309c52492b61834ab2ea
+SHA512 (xvega-0.1.3.tar.gz) = d66f6168014ca224ef199509968d850e515ebf581ac38fe61d9abe83fef46228d09f1dd59679cfc0c134bbfa4e48ef355364c1bbb93e62378cfddd7e86a23ec7
+Size (xvega-0.1.3.tar.gz) = 53659 bytes
