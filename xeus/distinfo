@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xeus-6.0.2.tar.gz) = af08dcd23ccc39cf72b759c3790d14afe393b49efc0b095394dd652bab9b0bb4
+SHA512 (xeus-6.0.2.tar.gz) = f96232db1f2eb321178b20c024f225004cbcd16c8dd3a9f259d52991c98d5b862f2c7fa20813d4ff027b3befed57c20b0f6ac7895420906317878e2f9efc89b4
+Size (xeus-6.0.2.tar.gz) = 9051382 bytes

@@ -1,0 +1,8 @@
+xeus is a library meant to facilitate the implementation of kernels for
+Jupyter. It takes the burden of implementing the Jupyter Kernel protocol
+so developers can focus on implementing the interpreter part of the
+kernel.
+
+Several Jupyter kernels are built upon xeus, such as xeus-cling, a
+kernel for the C++ programming language, and xeus-python,
+an alternative Python kernel for Jupyter.
