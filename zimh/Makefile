@@ -5,7 +5,7 @@ PKGNAME=	zimh-0.0.0.2026.05.02
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmetzger/}
 GITHUB_PROJECT=	zimh
-GITHUB_TAG=	67e1b9ab7d39d18ffd4ae7290bf0b3f0ed3ff2b0
+GITHUB_TAG=	7c6bd72539a1fd9aebcbcbe65ab4182b3ac10d0d
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	rhialto@NetBSD.org
@@ -31,6 +31,7 @@ DEPENDS+=       dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+#.include "../../net/libslirp/buildlink3.mk"
 .include "../../wip/libslirp491/buildlink3.mk"
 #.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
