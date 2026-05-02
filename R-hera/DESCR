@@ -1,0 +1,4 @@
+Set of R functions to be coupled with the 'xeus-r' 'jupyter' kernel in
+order to drive execution of code in notebook input cells, how R
+objects are to be displayed in output cells, and handle two way
+communication with the front end through comms.
