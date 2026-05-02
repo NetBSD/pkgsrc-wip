@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/pybind11_json/pybind11_json.hpp
+share/cmake/pybind11_json/pybind11_jsonConfig.cmake
+share/cmake/pybind11_json/pybind11_jsonConfigVersion.cmake
+share/cmake/pybind11_json/pybind11_jsonTargets.cmake
