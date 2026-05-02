@@ -1,6 +1,7 @@
 #	$NetBSD$
 
 DISTNAME=	tnfrepo-0.0a20250823.dev127
+PKGREVISION=	1
 PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
@@ -24,6 +25,7 @@ DEPENDS+=	rsync>0:../../net/rsync
 # (meta-)package if we don't end up using this for the authenticated
 # server.  Mainly so we don't have to bake py311-uwsgi, or py312-uwsgi,
 # or, I mean, py314-uwsgi into the image build scripts...
+DEPENDS+=	${PYPKGPREFIX}-acme-tiny>=0:../../security/py-acme-tiny
 DEPENDS+=	${PYPKGPREFIX}-uwsgi>=0:../../www/py-uwsgi
 DEPENDS+=	cgit>=0:../../www/cgit
 
