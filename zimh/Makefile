@@ -22,6 +22,7 @@ TOOL_DEPENDS+=	cmocka>=1.1.8:../../devel/cmocka
 DEPENDS+=       dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 .include "../../devel/cmake/build.mk"
+.include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
