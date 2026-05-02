@@ -5818,7 +5818,6 @@ SUBDIR+=	trackballs
 SUBDIR+=	tracy
 SUBDIR+=	transient
 SUBDIR+=	trayion
-SUBDIR+=	tree-sitter-cli
 SUBDIR+=	tree-sitter-query
 SUBDIR+=	tree-sitter-vim
 SUBDIR+=	tree-sitter-vimdoc
