@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (xeus-r-0.10.1.tar.gz) = 47f3b3ed23ce0a423fb7b5a4736217a64bf7913689de23a919966666c6a13c9b
+SHA512 (xeus-r-0.10.1.tar.gz) = 34a4f1600b0f61cb61f3b9bd4de82ab3293b85adf0864b540b6e26fd76fd25c1d623029e87963ad3022b2ba4bf692e6ba4ae4b278e661f5aac581affac708843
+Size (xeus-r-0.10.1.tar.gz) = 58805 bytes
+SHA1 (patch-CMakeLists.txt) = 9ff5fe379f88ef1335ae4edafe2bdbb720bac234

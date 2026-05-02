@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/xr
+include/xeus-r/xeus_r_config.hpp
+include/xeus-r/xinterpreter.hpp
+lib/cmake/xeus-r/xeus-rConfig.cmake
+lib/cmake/xeus-r/xeus-rConfigVersion.cmake
+lib/cmake/xeus-r/xeus-rTargets-noconfig.cmake
+lib/cmake/xeus-r/xeus-rTargets.cmake
+lib/libxeus-r.a
+lib/libxeus-r.so
+lib/libxeus-r.so.0
+lib/libxeus-r.so.${PKGVERSION}
+share/jupyter/kernels/xr/kernel.json
+share/jupyter/kernels/xr/logo-32x32.png
+share/jupyter/kernels/xr/logo-64x64.png
+share/jupyter/kernels/xr/logo-svg.svg

@@ -1,0 +1,46 @@
+$NetBSD$
+
+Explicitly disable the automatic download of the Hera R package
+
+--- CMakeLists.txt.orig	2026-04-24 14:42:06.000000000 +0000
++++ CMakeLists.txt
+@@ -97,27 +97,6 @@ message(STATUS "R_VERSION_MINOR  = ${R_V
+ message(STATUS "R_COMMAND        = ${R_COMMAND}")
+ message(STATUS "R_SCRIPT_COMMAND = ${R_SCRIPT_COMMAND}")
+ 
+-# Install R package hera
+-# ======================
+-
+-# When cross-compiling, hera should be installed before building the project
+-if(XEUS_R_CROSS_COMPILING)
+-    if(NOT EXISTS "${R_HOME}/library/hera")
+-        message(FATAL_ERROR "R 📦 hera is not installed")
+-    endif()
+-else()
+-    message(STATUS "Installing R 📦 hera to ${R_HOME}/library")
+-    execute_process(COMMAND ${R_COMMAND} CMD INSTALL
+-        --preclean --no-staged-install --build ${CMAKE_CURRENT_SOURCE_DIR}/hera
+-        RESULT_VARIABLE hera_result
+-    )
+-    execute_process(COMMAND ${R_SCRIPT_COMMAND} -e "writeLines(paste('Installed 📦 hera version', as.character(packageVersion('hera'))))")
+-
+-    if(NOT hera_result EQUAL "0")
+-        message(FATAL_ERROR "Hera installation failed with return code ${hera_result}")
+-    endif()
+-endif()
+-
+ # Configuration
+ # =============
+ 
+@@ -275,9 +254,9 @@ macro(xeus_r_create_target target_name l
+     if (EMSCRIPTEN)
+         link_directories(${R_HOME}/lib)
+         target_link_libraries(${target_name} PUBLIC ${XEUS_R_XEUS_TARGET}
+-            PRIVATE ${R_LIBRARY_BASE} ${R_LIBRARY_BLAS} ${R_LIBRARY_LAPACK})
++	PRIVATE ${R_LDFLAGS} ${R_LIBRARY_BASE} ${R_LIBRARY_BLAS} ${R_LIBRARY_LAPACK})
+     else ()
+-        target_link_libraries(${target_name} PUBLIC ${XEUS_R_XEUS_TARGET} PRIVATE ${R_LIBRARY_BASE})
++	    target_link_libraries(${target_name} PUBLIC ${XEUS_R_XEUS_TARGET} PUBLIC ${R_LIBRARY_BASE})
+     endif ()
+ 
+     if (WIN32 OR CYGWIN)
