@@ -553,6 +553,7 @@ SUBDIR+=	clustershell
 SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	cmoc
+SUBDIR+=	cmocka201
 SUBDIR+=	cockatrice
 SUBDIR+=	cockatrice-server
 SUBDIR+=	cockroach

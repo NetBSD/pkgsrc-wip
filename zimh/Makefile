@@ -16,11 +16,13 @@ LICENSE=	mit
 USE_TOOLS+=	bison git pkg-config
 
 TOOL_DEPENDS+=  ninja-build-[0-9]*:../../devel/ninja-build
-TOOL_DEPENDS+=	cmocka>=1.1.8:../../devel/cmocka
+#TOOL_DEPENDS+=	cmocka>=1.1.8:../../devel/cmocka
+#TOOL_DEPENDS+=	cmocka>=2.0.1:../../wip/cmocka201
 DEPENDS+=       dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 .include "../../devel/cmake/build.mk"
 #.include "../../devel/cmocka/buildlink3.mk"  # enabling this makes cmake find cmocka, but also to a build failure.
+#.include "../../wip/cmocka201/buildlink3.mk"  # enabling this makes cmake find cmocka, but also to a different build failure.
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

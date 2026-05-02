@@ -7,3 +7,8 @@ At least:
 even though the Makefile has "TOOL_DEPENDS+=	cmocka>=1.1.8:../../devel/cmocka"
 
 Do we need ".include "../../mk/dlopen.buildlink3.mk"" ?
+
+Get ../libslirp491 into main pkgsrc, since installing it conflicts with e.g.
+qemu.
+
+Get ../cmocka201 into main pkgsrc.
