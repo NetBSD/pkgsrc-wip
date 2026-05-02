@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.7 2022/11/06 17:21:41 triaxx Exp $
+
+BLAKE2s (libslirp-4.9.1.tar.xz) = 7e5fd6ef9f54b6b7f47bf46fc39de456d6de00219334aab1fe08f7ee8e270818
+SHA512 (libslirp-4.9.1.tar.xz) = a251b0a03b1503e81a18409b869ec4b1025328fa369e9170122a4c00d4c71ec9937f45223731399cc12130dc541cb769d0a49ebb7069f1f75586ad5b0a76f197
+Size (libslirp-4.9.1.tar.xz) = 132200 bytes

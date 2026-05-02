@@ -1,0 +1,21 @@
+ZIMH Historical Computer Simulator
+
+ZIMH (which stands for "ZIMH Implements Machine History"), is a
+software emulator for important computer systems and peripherals from
+the history of computing. It provides a mechanism by which modern
+users can run and experience what it was like to use old computers
+that have not been made in many decades, or use software that was
+intended for systems that no longer exist.
+
+(It is of course possible to also use the ZIMH framework to simulate
+more recent or even current machines, though this has not been the
+typical use case.)
+
+ZIMH is a hard fork of SIMH, a simulator created by Bob Supnik and
+extended over many years by the SIMH team. We are grateful to Bob and
+the SIMH contributors for all of their work over the years. Without
+their efforts, none of this would be possible.
+
+The development track of ZIMH is substantially different from that of
+the original SIMH project. In particular, this project is pursuing:
+...

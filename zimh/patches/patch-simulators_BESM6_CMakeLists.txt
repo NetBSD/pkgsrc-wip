@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- simulators/BESM6/CMakeLists.txt.orig	2026-05-02 11:32:28.514415734 +0000
++++ simulators/BESM6/CMakeLists.txt
+@@ -15,6 +15,7 @@ set(cand_fonts
+       "tahoma.ttf")
+ set(cand_fontdirs
+       "/usr/share/fonts"
++      "/usr/pkg/share/fonts/X11/TTF"
+       "/usr/lib/jvm"
+       "/Library/Fonts"
+       "/System/Library/Fonts"

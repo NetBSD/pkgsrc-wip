@@ -1,0 +1,11 @@
+TODO:
+
+check if BUILDLINK_API_DEPENDS.libslirp in buildlink3.mk needs updating
+check if users of the library work with the updated version:
+
+    ./emulators/dosbox-staging/options.mk:.  include "../../net/libslirp/buildlink3.mk"
+    ./emulators/dosbox-x/Makefile:.include "../../net/libslirp/buildlink3.mk"
+    ./emulators/nono/Makefile:.include "../../net/libslirp/buildlink3.mk"
+    ./emulators/qemu/Makefile:.include "../../net/libslirp/buildlink3.mk"
+    ./emulators/qemu7/Makefile:.include "../../net/libslirp/buildlink3.mk"
+
