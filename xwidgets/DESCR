@@ -1,0 +1,8 @@
+`xwidgets` is a C++ implementation of the Jupyter interactive widgets protocol.
+The Python reference implementation is available in the
+[ipywidgets](https://github.com/jupyter-widgets/ipywidgets) project.
+
+`xwidgets` enables the use of the Jupyter interactive widgets in the C++
+notebook, powered by the `xeus-cpp` kernel and the `clang-repl` C++
+interpreter. `xwidgets` can also be used to create applications making use
+of the Jupyter interactive widgets without the C++ kernel *per se*.

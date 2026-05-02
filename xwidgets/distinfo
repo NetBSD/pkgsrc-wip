@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xwidgets-0.30.0.tar.gz) = 72ee928c76ffe4a6165ba3a165ef556d33e67e9e055390e98de9c8ca36b174e7
+SHA512 (xwidgets-0.30.0.tar.gz) = 4c0b43eed88abb1097f0ac96418c3ac214cd69bcbe758bf744d11438825486ca0386a35f22f3019beca1ed8a6ef70425b02f6be2ab294e23181b4a36e460399b
+Size (xwidgets-0.30.0.tar.gz) = 3840815 bytes
