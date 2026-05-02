@@ -1,0 +1,10 @@
+xeus-sql is a Jupyter kernel for general SQL implementations based on the
+native implementation of the Jupyter protocol and SOCI, a database access
+library for C++.
+
+xeus-sql supports the following SQL implementations:
+
+* DB2
+* Firebird
+* MySQL
+* ODBC (generic backend)

@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/xsql
+include/xeus-sql/soci_handler.hpp
+include/xeus-sql/xeus_sql_config.hpp
+include/xeus-sql/xeus_sql_interpreter.hpp
+lib/cmake/xeus-sql/xeus-sqlConfig.cmake
+lib/cmake/xeus-sql/xeus-sqlConfigVersion.cmake
+lib/cmake/xeus-sql/xeus-sqlTargets-release.cmake
+lib/cmake/xeus-sql/xeus-sqlTargets.cmake
+lib/libxeus-sql.a
+lib/libxeus-sql.so
+lib/libxeus-sql.so.0
+lib/libxeus-sql.so.${PKGVERSION}
+share/jupyter/kernels/xsql/kernel.json
+share/jupyter/kernels/xsql/logo-32x32.png
+share/jupyter/kernels/xsql/logo-64x64.png

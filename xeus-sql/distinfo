@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xeus-sql-0.4.0.tar.gz) = bae07b9a5641e61eec926f9cb21e4b01896c540ac8d3b1423f746924dd9e15e6
+SHA512 (xeus-sql-0.4.0.tar.gz) = 9d028fbac6da6116ccf116d63d00dd672d1534c3b9c2db904b53ebac204308cbb571598c28730e01abca12e8af046b1330f35967e7d60eac00fc71e4716e525c
+Size (xeus-sql-0.4.0.tar.gz) = 4772867 bytes
