@@ -13,3 +13,6 @@ http://shadow.netbsd.org/pub/pkgsrc/packages/reports/HEAD/NetBSD-10.0-x86_64/202
         (mix 1.17.2) lib/mix/utils.ex:576: anonymous fn/2 in Mix.Utils.read_path/2
         (elixir 1.17.2) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
         (elixir 1.17.2) lib/task/supervised.ex:36: Task.Supervised.reply/4
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-32148
