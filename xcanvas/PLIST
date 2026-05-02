@@ -1,0 +1,12 @@
+@comment $NetBSD$
+include/xcanvas/xcanvas.hpp
+include/xcanvas/xcanvas_config.hpp
+include/xcanvas/xcanvas_config_cling.hpp
+lib/cmake/xcanvas/xcanvasConfig.cmake
+lib/cmake/xcanvas/xcanvasConfigVersion.cmake
+lib/cmake/xcanvas/xcanvasTargets-release.cmake
+lib/cmake/xcanvas/xcanvasTargets.cmake
+lib/libxcanvas.a
+lib/libxcanvas.so
+lib/libxcanvas.so.4
+lib/libxcanvas.so.4.0.0

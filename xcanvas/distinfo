@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xcanvas-0.7.0.tar.gz) = 0fa31fd93e441a66734bf7fbc790e05021677bc290319e8f8487d7715ed15135
+SHA512 (xcanvas-0.7.0.tar.gz) = 2322888139cdaa59f0ecf4d37a7f7bf2bd2b84e352733d60c5e94aaecd547c7d4f819a648cab352c0e4ccfcf3fa04a7a1477d0906ec1cc43f8fc2ca3e8192323
+Size (xcanvas-0.7.0.tar.gz) = 491188 bytes
