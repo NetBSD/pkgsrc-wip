@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/xsqlite
+include/xeus-sqlite/xeus_sqlite_config.hpp
+include/xeus-sqlite/xeus_sqlite_interpreter.hpp
+include/xeus-sqlite/xvega_sqlite.hpp
+lib/cmake/xeus-sqlite/xeus-sqliteConfig.cmake
+lib/cmake/xeus-sqlite/xeus-sqliteConfigVersion.cmake
+lib/cmake/xeus-sqlite/xeus-sqliteTargets-release.cmake
+lib/cmake/xeus-sqlite/xeus-sqliteTargets.cmake
+lib/libxeus-sqlite.a
+lib/libxeus-sqlite.so
+lib/libxeus-sqlite.so.0
+lib/libxeus-sqlite.so.${PKGVERSION}
+share/jupyter/kernels/xsqlite/kernel.json
+share/jupyter/kernels/xsqlite/logo-32x32.png
+share/jupyter/kernels/xsqlite/logo-64x64.png

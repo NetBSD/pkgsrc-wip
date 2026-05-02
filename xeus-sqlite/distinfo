@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xeus-sqlite-0.10.0.tar.gz) = a905550cb79ee70ed34c9a08ab9a385e59cea970d1e9c5dce97b2e217bde2085
+SHA512 (xeus-sqlite-0.10.0.tar.gz) = f3aa9abb812b81817792d2b50bd1532cece5d4463d5df43234f2523c8225923ac5462d6ffd53b57f2e6866d700dbeaf454e008b1df84a9f0ec3984d0470da77d
+Size (xeus-sqlite-0.10.0.tar.gz) = 375197 bytes
