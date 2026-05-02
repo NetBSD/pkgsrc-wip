@@ -2296,7 +2296,6 @@ SUBDIR+=	lwc
 SUBDIR+=	lwtools
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
-SUBDIR+=	lxqt-wayland-session
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
 SUBDIR+=	mac-icon-standard
