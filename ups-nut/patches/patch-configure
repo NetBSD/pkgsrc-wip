@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2025/09/10 11:08:57 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2026/05/03 16:39:13 gdt Exp $
 
 Disable special manual page handling on SunOS.
 
