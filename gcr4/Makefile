@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	gcr-4.4.0.1
+PKGNAME=	${DISTNAME:S/gcr/gcr4/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gcr/4.4/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +25,8 @@ REPLACE_BASH=		gcr/fixtures/gnupg-mock/mock-status-and-attribute
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gck
 TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/output/gc
 
-MESON_ARGS+=		-Dgpg_path=${PREFIX}/bin/gpg2 \
+MESON_ARGS+=		--localedir=${PKGLOCALEDIR}/locale \
+			-Dgpg_path=${PREFIX}/bin/gpg2 \
 			-Dssh_agent=true \
 			-Dsystemd=disabled
 

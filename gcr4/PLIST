@@ -41,10 +41,10 @@ lib/libgck-2.so.2
 lib/libgck-2.so.2.4.0
 lib/libgcr-4.so
 lib/libgcr-4.so.4
-lib/libgcr-4.so.4.0
+lib/libgcr-4.so.4.4.0
 lib/pkgconfig/gck-2.pc
 lib/pkgconfig/gcr-4.pc
-libexec/gcr-ssh-agent
+libexec/gcr4-ssh-agent
 libexec/gcr4-ssh-askpass
 ${PLIST.doc}share/doc/gck-2/RedHatDisplay-Black.woff
 ${PLIST.doc}share/doc/gck-2/RedHatDisplay-Black.woff2

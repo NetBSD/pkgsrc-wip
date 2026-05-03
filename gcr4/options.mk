@@ -1,12 +1,12 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gcr
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gcr4
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	crypto
 PKG_OPTIONS_GROUP.crypto=	libgcrypt gnutls
 
 PKG_SUPPORTED_OPTIONS=	doc gtk4 introspection vapi
-PKG_SUGGESTED_OPTIONS+=	libgcrypt introspection vapi
+PKG_SUGGESTED_OPTIONS+=	gtk4 introspection vapi libgcrypt
 
 .include "../../mk/bsd.options.mk"
 

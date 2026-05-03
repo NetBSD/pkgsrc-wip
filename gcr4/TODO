@@ -1,16 +1,3 @@
-It would be better to update security/gcr using this wip package
-instead, again, of having two major branches ofg the same software in
-the main tree.
-
-Upstream has no plan of maintaining gcr 3.x.
-
-It should be noted on the other side that gcr3 and gcr4 can be 
-installed alongisde each other, as their PLIST do not conflict (almost).
-
-What is currently stopping this from being imported:
-
-- gcr4 expects gtk4 and won't build with gtk3. The gtk frontend can,
-  however be toggled off and made optional (as it is currently). 
-- gcr4 hasn't been tested on any platform but NetBSD.
-- Additional testing has to be performed on software depending on this
-  package.
+Package is ready to be imported.
+gcr4 should be imported alongside security/gcr, as software may alternatively
+require gcr-3 or gcr-4. 
