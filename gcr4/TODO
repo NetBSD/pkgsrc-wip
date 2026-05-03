@@ -1,3 +1,0 @@
-Package is ready to be imported.
-gcr4 should be imported alongside security/gcr, as software may alternatively
-require gcr-3 or gcr-4. 

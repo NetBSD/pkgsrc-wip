@@ -1234,7 +1234,6 @@ SUBDIR+=	gcc47-libs
 SUBDIR+=	gcc7-contrib
 SUBDIR+=	gcc9snapshot
 SUBDIR+=	gconf-cleaner
-SUBDIR+=	gcr4
 SUBDIR+=	gcta
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdb
