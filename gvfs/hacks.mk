@@ -19,6 +19,6 @@ GVFS_HACKS_MK=	defined
 ### in a very indirect way, and the only way around is to do this silly
 ### hack:
 PKG_HACKS+=	rpath-fixup
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX:Q}/lib/gvfs
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gvfs
 
 .endif # GVFS_HACKS_MK

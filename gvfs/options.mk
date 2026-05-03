@@ -1,21 +1,55 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
-PKG_SUPPORTED_OPTIONS=	dnssd libgdata samba gcr secret
-PKG_SUGGESTED_OPTIONS=	dnssd secret
+PKG_SUPPORTED_OPTIONS=	bluray cdda dnssd fuse goa gcr gphoto idevice libgdata \
+			libmtp polkit samba secret udev
+PKG_SUGGESTED_OPTIONS=	gcr dnssd secret
 
-.include "../../mk/bsd.fast.prefs.mk"
-.include "../../mk/bsd.options.mk"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=	samba
+.endif
+
+.if ${OPSYS} == "Linux" || (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099993)
+PKG_SUGGESTED_OPTIONS+=	fuse
+.endif
+
+# Some options expect gudev support:
+# use the GUDEV_REQUIRED variable to handle them.
+GUDEV_REQUIRED?=	# empty
+
+# Gnome Online Accounts support:
+# some users might have a reason not to want it by default.
+GOA_REQUIRED?=		# empty
+
+# Check for a working udev implementation.
+# If available, enable some options which depend on it.
+.include "../../mk/udev.buildlink3.mk"
+.if ${UDEV_TYPE} != "none"
+PKG_SUGGESTED_OPTIONS+=	udev
+PKG_SUGGESTED_OPTIONS+=	cdda libmtp
+.endif
 
 .if ${OPSYS} == "Linux"
 # polkit itself is cross-platform but gvfs also requires libcap, which is
 # only available on Linux.
-PKG_SUPPORTED_OPTIONS+=	polkit
 PKG_SUGGESTED_OPTIONS+=	polkit
 .endif
 
-GUDEV_REQUIRED=	no
-GOA_REQUIRED=	no
+.include "../../mk/bsd.options.mk"
+
+###
+### afc://{UUID}
+###  Apple File Conduit; allow to exchange files with iOS devices
+###
+PLIST_VARS+=	afc
+.if !empty(PKG_OPTIONS:Midevice)
+MESON_ARGS+=    -Dafc=true
+PLIST.afc=	yes
+.  include "../../comms/libimobiledevice/buildlink3.mk"
+.  include "../../textproc/libplist/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dafc=false
+.endif
 
 ###
 ### admin:///
@@ -32,6 +66,30 @@ MESON_ARGS+=	-Dadmin=false
 .endif
 
 ###
+#### Blu-Ray metadata support.
+###
+.if !empty(PKG_OPTIONS:Mbluray)
+MESON_ARGS+=    -Dbluray=true
+.  include "../../multimedia/libbluray/buildlink3.mk"
+.else
+MESON_ARGS+=    -Dbluray=false
+.endif
+
+###
+###  cdda://{DEVICE}
+###    Access audio discs.
+###
+PLIST_VARS+=    cdda
+.if !empty(PKG_OPTIONS:Mcdda)
+MESON_ARGS+=    -Dcdda=true
+GUDEV_REQUIRED= yes
+.  include "../../misc/libcdio-paranoia/buildlink3.mk"
+PLIST.cdda=     yes
+.else
+MESON_ARGS+=    -Dcdda=false
+.endif
+
+###
 ### dns-sd://{DOMAIN}
 ###   DNS-SD shares on the local network.
 ###
@@ -45,17 +103,79 @@ MESON_ARGS+=	-Ddnssd=false
 .endif
 
 ###
+### FUSE support.
+###
+PLIST_VARS+=	fuse
+.if !empty(PKG_OPTIONS:Mfuse)
+BUILDLINK_API_DEPENDS.fuse+=    fuse>=2.8
+.include "../../mk/fuse.buildlink3.mk"
+MESON_ARGS+=	-Dfuse=true
+PLIST.fuse=             yes
+.else
+MESON_ARGS+=	-Dfuse=false
+.endif
+
+###
+### GCR certificate support.
+###
+.if !empty(PKG_OPTIONS:Mgcr)
+MESON_ARGS+=    -Dgcr=true
+.  include "../../security/gcr4/buildlink3.mk"
+.else
+MESON_ARGS+=    -Dgcr=false
+.endif
+
+###
 ### google-drive://{USER}@{HOST}
 ###   Access Google Drive.
 ###
-PLIST_VARS+=	google
+PLIST_VARS+=	gdata
 .if !empty(PKG_OPTIONS:Mlibgdata)
-MESON_ARGS+=	-Dgoogle=true
-PLIST.google=	yes
 GOA_REQUIRED=	yes
+MESON_ARGS+=	-Dgoogle=true
+PLIST.gdata=	yes
 .  include "../../net/libgdata/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dgoogle=false
+.endif
+
+###
+### GOA (Gnome Online Accounts).
+### Required for Google Drive support.
+###
+.if !empty(PKG_OPTIONS:Mgoa) || ${GOA_REQUIRED:tl} == "yes"
+MESON_ARGS+=    -Dgoa=true
+.  include "../../net/gnome-online-accounts/buildlink3.mk"
+.else
+MESON_ARGS+=    -Dgoa=false
+.endif
+
+###
+### gphoto2://{ID_SERIAL}, gphoto2://[usb:bus,dev]
+###   Access digital cameras.
+###
+PLIST_VARS+=    gphoto
+.if !empty(PKG_OPTIONS:Mgphoto)
+MESON_ARGS+=    -Dgphoto2=true
+GUDEV_REQUIRED= yes
+PLIST.gphoto=  yes
+.  include "../../devel/libgphoto2/buildlink3.mk"
+.else
+MESON_ARGS+=    -Dgphoto2=false
+.endif
+
+###
+### mtp://{ID_SERIAL}, mtp://[usb:bus,dev]
+###   Access digital audio/media players.
+###
+.if !empty(PKG_OPTIONS:Mlibmtp)
+PLIST_VARS+=    mtp
+MESON_ARGS+=    -Dmtp=true
+GUDEV_REQUIRED= yes
+.  include "../../devel/libmtp/buildlink3.mk"
+PLIST.mtp=      yes
+.else
+MESON_ARGS+=    -Dmtp=false
 .endif
 
 ###
@@ -72,16 +192,6 @@ MESON_ARGS+=	-Dsmb=false
 .endif
 
 ###
-### GCR support.
-###
-.if !empty(PKG_OPTIONS:Mgcr)
-MESON_ARGS+=	-Dgcr=true
-.  include "../../wip/gcr4/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dgcr=false
-.endif
-
-###
 ### GNOME Keyring support.
 ###
 .if !empty(PKG_OPTIONS:Msecret)
@@ -89,4 +199,14 @@ MESON_ARGS+=	-Dkeyring=true
 .  include "../../security/libsecret/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dkeyring=false
+.endif
+
+###
+### GUdev device support.
+###
+.if !empty(PKG_OPTIONS:Mudev) || ${GUDEV_REQUIRED:tl} == "yes"
+MESON_ARGS+=    -Dgudev=true
+.  include "../../devel/libgudev/buildlink3.mk"
+.else
+MESON_ARGS+=    -Dgudev=false
 .endif

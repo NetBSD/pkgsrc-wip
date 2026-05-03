@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.79 2016/08/03 10:23:24 adam Exp $
 #
 
-DISTNAME=	gvfs-1.58.0
+DISTNAME=	gvfs-1.60.0
 CATEGORIES?=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/${PKGVERSION_NOREV:S/./ /g:[1..2]:ts.}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,152 +11,107 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/gvfs
 COMMENT=	Userspace virtual filesystem
 LICENSE=	gnu-lgpl-v2
 
-# TODO: Remove this line. Dunno why but mk/tools/replace.mk dies without it.
-USE_TOOLS+=	gm4
-
 USE_TOOLS+=	pkg-config
 
-.include "options.mk"
+USE_PKGLOCALEDIR=	yes
+
+.include "../../mk/compiler.mk"
+
+CFLAGS.NetBSD+=	-DNETBSD_SOURCE
+
+.if !empty(PKGSRC_COMPILER:Mclang) || ${CC_VERSION:Mgcc-[6-9]*} || ${CC_VERSION:Mgcc-1[0-9].*}
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+.else
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=500 -D__EXTENSIONS__
+.endif
+
+# Enforce some defaults to prevent PLIST issues witnessed in some environments.
+MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+		--localedir=${PKGLOCALEDIR}/locale
+
+# Disable meson's default of using "-Wl,--as-needed" on ld.bfd arches,
+# to prevent build failures due to undefined references.
+MESON_ARGS+=	-Db_asneeded=false
+
+# Disable some options which currently have no support on pkgsrc,
+# and are otherwise only available on Linux.
+MESON_ARGS+=	-Dlogind=false \
+		-Donedrive=false \
+		-Dudisks2=false
+
+# Generate man pages; requires docbook-xsl.
+TOOL_DEPENDS+=		docbook-xsl-ns-[0-9]*:../../textproc/docbook-xsl
+DOCBOOK_MANPAGE_XSL=	${PREFIX}/share/xsl/docbook/manpages/docbook.xsl
+MESON_ARGS+=		-Dman=true
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man=	man/meson.build
+SUBST_VARS.man+=	DOCBOOK_MANPAGE_XSL
+
 .include "../../mk/bsd.fast.prefs.mk"
 
-# SystemD support is obviously only for Linux.
+# Turn on some settings by default.
+
+## afp://[user@]host[:port][/share]
+##   Apple Filing Protocol.
+MESON_ARGS+=	-Dafp=true
+
+## archive://{URL-ENCODED-URI}
+##   Access archive files.
+MESON_ARGS+=	-Darchive=true
+.include "../../archivers/libarchive/buildlink3.mk"
+
+## burn://{DEVICE}
+##   Virtual filesystem for file managers to help them implement burning
+##   optical discs.
+MESON_ARGS+=	-Dburn=true
+
+## http://, https://
+##   HTTP protocol support.
+MESON_ARGS+=	-Dhttp=true
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
+
+## libgcrypt support.
+MESON_ARGS+=    -Dgcrypt=true
+.include "../../security/libgcrypt/buildlink3.mk"
+
+## libusb interruption support: not available on DragonFly.
+.if ${OPSYS} != "DragonFly"
+.  include "../../devel/libusb1/buildlink3.mk"
+MESON_ARGS+=    -Dlibusb=true
+.else
+MESON_ARGS+=    -Dlibusb=false
+.endif
+
+## nfs://{HOST}/{SHARE}
+##   NFS v2 and v3 protocols.
+MESON_ARGS+=	-Dnfs=true
+.include "../../net/libnfs/buildlink3.mk"
+
+## sftp://[user@]host[:port], ssh://[user@]host[:port]
+##   SFTP protocol support.
+MESON_ARGS+=	-Dsftp=true
+
+## SystemD support: obviously only for Linux.
 .if ${OPSYS} != "Linux"
 MESON_ARGS+=	-Dsystemduserunitdir=no
 MESON_ARGS+=	-Dtmpfilesdir=no
 .endif
 
-# afc://{UUID}
-#   Apple File Conduit; allow to exchange files with iOS devices
-MESON_ARGS+=	-Dafc=true
-.include "../../wip/libimobiledevice/buildlink3.mk"
-.include "../../textproc/libplist/buildlink3.mk"
-
-# afp://[user@]host[:port][/share]
-#   Apple Filing Protocol.
-MESON_ARGS+=	-Dafp=true
-
-# archive://{URL-ENCODED-URI}
-#   Access archive files.
-MESON_ARGS+=	-Darchive=true
-.include "../../archivers/libarchive/buildlink3.mk"
-
-# burn://{DEVICE}
-#   Virtual filesystem for file managers to help them implement burning
-#   optical discs.
-MESON_ARGS+=	-Dburn=true
-
-# cdda://{DEVICE}
-#   Access audio discs.
-PLIST_VARS+=	cdda
-.if ${OPSYS} == "Linux"
-MESON_ARGS+=	-Dcdda=true
-PLIST.cdda=	yes
-# libcdio-paranoia is a cross-platform library but the gvfs backend relies
-# on udev, which is only available on Linux.
-GUDEV_REQUIRED=	yes
-.  include "../../misc/libcdio-paranoia/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dcdda=false
-.endif
-
-# gphoto2://{ID_SERIAL}, gphoto2://[usb:bus,dev]
-#   Access digital cameras.
-PLIST_VARS+=	gphoto2
-.if ${OPSYS} == "Linux"
-MESON_ARGS+=	-Dgphoto2=true
-PLIST.gphoto2=	yes
-GUDEV_REQUIRED=	yes
-.  include "../../devel/libgphoto2/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dgphoto2=false
-.endif
-
-# mtp://{ID_SERIAL}, mtp://[usb:bus,dev]
-#   Access digital audio/media players.
-PLIST_VARS+=	mtp
-.if ${OPSYS} == "Linux"
-MESON_ARGS+=	-Dmtp=true
-PLIST.mtp=	yes
-GUDEV_REQUIRED=	yes
-.  include "../../devel/libmtp/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dmtp=false
-.endif
-
-# http://, https://
-#   HTTP protocol support.
-MESON_ARGS+=	-Dhttp=true
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../net/libsoup3/buildlink3.mk"
-
-# nfs://{HOST}/{SHARE}
-#   NFS v2 and v3 protocols.
-MESON_ARGS+=	-Dnfs=true
-.include "../../wip/libnfs/buildlink3.mk"
-
-# OneDrive support requires libmsgraph-1 but we haven't packaged it
-# yet. Nobody would want to use it anyway.
-MESON_ARGS+=	-Donedrive=false
-
-# sftp://[user@]host[:port], ssh://[user@]host[:port]
-#   SFTP protocol support.
-MESON_ARGS+=	-Dsftp=true
-
-# ufisks2 support requires libudisks2 but we haven't packaged it yet. It's
-# only for Linux anyway.
-MESON_ARGS+=	-Dudisks2=false
-
-# wsdd:///
-#   Access Web Service Discovery Daemon.
+## wsdd:///
+##   Access Web Service Discovery Daemon.
 MESON_ARGS+=	-Dwsdd=true
 
-# Blu-Ray metadata support.
-MESON_ARGS+=	-Dbluray=true
-.include "../../multimedia/libbluray/buildlink3.mk"
-
-# FUSE support.
-MESON_ARGS+=	-Dfuse=true
-.include "../../mk/fuse.buildlink3.mk"
-
-# libgcrypt support.
-MESON_ARGS+=	-Dgcrypt=true
-.include "../../security/libgcrypt/buildlink3.mk"
-
-# logind support requires libelogind but we haven't packaged it yet. It's
-# only for Linux anyway.
-MESON_ARGS+=	-Dlogind=false
-
-# libusb-1 support: Not available on DragonFly.
-.if ${OPSYS} == "DragonFly"
-MESON_ARGS+=	-Dlibusb=false
-.else
-MESON_ARGS+=	-Dlibusb=true
-.  include "../../devel/libusb1/buildlink3.mk"
-.endif
-
-# Generate man pages.
-MESON_ARGS+=	-Dman=true
-
-# Some options require libgudev, which is only available on Linux.
-.if ${GUDEV_REQUIRED:tl} == "yes"
-MESON_ARGS+=	-Dgudev=true
-.  include "../../devel/libgudev/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dgudev=false
-.endif
-
-# Some options require gnome-online-accounts, which is supposedly
-# universally available but users would have a reason not to want it by
-# default.
-.if ${GOA_REQUIRED:tl} == "yes"
-MESON_ARGS+=	-Dgoa=true
-.  include "../../net/gnome-online-accounts/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dgoa=false
-.endif
+.include "options.mk"
 
 .include "../../devel/glib2/modules.mk"
-.include "../../devel/meson/build.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../textproc/libxslt/xsltproc-nonet.mk"
+
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
