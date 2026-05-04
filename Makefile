@@ -5724,7 +5724,6 @@ SUBDIR+=	tex-ptex-manual-doc
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
 SUBDIR+=	tex-texlive-ja-doc
-SUBDIR+=	tex-tikz-timing
 SUBDIR+=	tex-uptex-doc
 SUBDIR+=	textadept
 SUBDIR+=	textile-mode
