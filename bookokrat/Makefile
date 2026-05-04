@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bookokrat-0.3.9
+DISTNAME=	bookokrat-0.3.10
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bugzmanov/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
