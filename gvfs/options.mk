@@ -55,10 +55,10 @@ MESON_ARGS+=	-Dafc=false
 ### admin:///
 ###   Access local filesystem as a root user.
 ###
-PLIST_VARS+=	admin
+PLIST_VARS+=	polkit
 .if !empty(PKG_OPTIONS:Mpolkit)
 MESON_ARGS+=	-Dadmin=true
-PLIST.admin=	yes
+PLIST.polkit=	yes
 .  include "../../sysutils/libcap/buildlink3.mk"
 .  include "../../security/polkit/buildlink3.mk"
 .else

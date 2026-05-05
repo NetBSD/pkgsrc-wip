@@ -7,7 +7,7 @@ ${PLIST.afc}libexec/gvfs-afc-volume-monitor
 ${PLIST.gphoto}libexec/gvfs-gphoto2-volume-monitor
 ${PLIST.mtp}libexec/gvfs-mtp-volume-monitor
 libexec/gvfsd
-${PLIST.admin}libexec/gvfsd-admin
+${PLIST.polkit}libexec/gvfsd-admin
 ${PLIST.afc}libexec/gvfsd-afc
 libexec/gvfsd-afp
 libexec/gvfsd-afp-browse
@@ -48,7 +48,7 @@ ${PLIST.dnssd}share/glib-2.0/schemas/org.gnome.system.dns_sd.gschema.xml
 share/glib-2.0/schemas/org.gnome.system.gvfs.enums.xml
 ${PLIST.smb}share/glib-2.0/schemas/org.gnome.system.smb.gschema.xml
 share/glib-2.0/schemas/org.gnome.system.wsdd.gschema.xml
-${PLIST.admin}share/gvfs/mounts/admin.mount
+${PLIST.polkit}share/gvfs/mounts/admin.mount
 ${PLIST.afc}share/gvfs/mounts/afc.mount
 share/gvfs/mounts/afp-browse.mount
 share/gvfs/mounts/afp.mount
@@ -159,3 +159,5 @@ share/locale/vi/LC_MESSAGES/gvfs.mo
 share/locale/zh_CN/LC_MESSAGES/gvfs.mo
 share/locale/zh_HK/LC_MESSAGES/gvfs.mo
 share/locale/zh_TW/LC_MESSAGES/gvfs.mo
+${PLIST.polkit}share/polkit-1/actions/org.gtk.vfs.file-operations.policy
+${PLIST.polkit}share/polkit-1/rules.d/org.gtk.vfs.file-operations.rules

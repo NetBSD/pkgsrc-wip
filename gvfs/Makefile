@@ -39,8 +39,13 @@ MESON_ARGS+=	-Dlogind=false \
 		-Donedrive=false \
 		-Dudisks2=false
 
+# Disable systemd support by default, as we currently lack a way to check for
+# builtin systemd on Linux.
+MESON_ARGS+=	-Dsystemduserunitdir=no \
+		-Dtmpfilesdir=no
+
 # Generate man pages; requires docbook-xsl.
-TOOL_DEPENDS+=		docbook-xsl-ns-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DOCBOOK_MANPAGE_XSL=	${PREFIX}/share/xsl/docbook/manpages/docbook.xsl
 MESON_ARGS+=		-Dman=true
 
@@ -93,12 +98,6 @@ MESON_ARGS+=	-Dnfs=true
 ## sftp://[user@]host[:port], ssh://[user@]host[:port]
 ##   SFTP protocol support.
 MESON_ARGS+=	-Dsftp=true
-
-## SystemD support: obviously only for Linux.
-.if ${OPSYS} != "Linux"
-MESON_ARGS+=	-Dsystemduserunitdir=no
-MESON_ARGS+=	-Dtmpfilesdir=no
-.endif
 
 ## wsdd:///
 ##   Access Web Service Discovery Daemon.
