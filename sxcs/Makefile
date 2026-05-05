@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sxcs-1.1.0
+DISTNAME=	sxcs-1.2.1
 CATEGORIES=	x11
 MASTER_SITES=	-https://codeberg.org/NRK/sxcs/archive/v${PKGVERSION_NOREV}.tar.gz
 
