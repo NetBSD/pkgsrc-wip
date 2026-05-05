@@ -83,9 +83,12 @@ CXXFLAGS+=		-DSTRUCTURE_HEAP_ADDRESS_SIZE_IN_MB=256
 # For backtrace
 LDFLAGS.NetBSD+=	-lexecinfo
 
+PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoreglib.pc.in
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
-PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk.pc.in
-PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit/WPEPlatform/wpe-platform-uninstalled.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit/WPEPlatform/wpe-platform.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkitgtk-web-process-extension.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkitgtk.pc.in
 
 REPLACE_PERL+=		Source/JavaScriptCore/Scripts/*.pl
 REPLACE_PERL+=		Source/JavaScriptCore/create_hash_table
