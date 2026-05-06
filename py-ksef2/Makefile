@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ksef2-0.9.2
+DISTNAME=	ksef2-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=artpods56/}
@@ -29,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-tenacity>=9.0:../../devel/py-tenacity
 DEPENDS+=	${PYPKGPREFIX}-polyfactory>=3.3.0:../../wip/py-polyfactory
 DEPENDS+=	${PYPKGPREFIX}-beartype>=0.22.9:../../wip/py-beartype
 DEPENDS+=	${PYPKGPREFIX}-camel-converter>=5.1.0:../../wip/py-camel-converter
+DEPENDS+=	${PYPKGPREFIX}-xsdata>=26.1:../../wip/py-xsdata
 
 USE_LANGUAGES=	# none
 
