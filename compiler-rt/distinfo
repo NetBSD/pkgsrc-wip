@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.23 2023/03/03 09:53:14 wiz Exp $
 
-BLAKE2s (llvm-project-22.1.4.src.tar.xz) = 2f38cdad0dc6f38d5698ad80dbf9de252e64146546979aef5cd29a0da98d9a69
-SHA512 (llvm-project-22.1.4.src.tar.xz) = 9f9e84110a4bb0f0dd296eaed4acb4fd3a58838efe62bb88671399440ba4750ba8bd7e6d072e61a9946e38e5c9d5e50575b95964850769c51cd517bdf7425bb8
-Size (llvm-project-22.1.4.src.tar.xz) = 167028880 bytes
+BLAKE2s (llvm-project-22.1.5.src.tar.xz) = cdd00fb021d9bc5769a585168e11841802368b88ff9b936c6cd846f3f606f131
+SHA512 (llvm-project-22.1.5.src.tar.xz) = 68de113906ec0c843a9346ecd06bff352146869f1f28b5600ff907125d77202692b6f68bd169bcd74ae5b82e0ad5548ea99c2405540abea36880d80e373744ff
+Size (llvm-project-22.1.5.src.tar.xz) = 167058820 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 1a67378de34b048477ef80237ab8a76272288a55
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cpp) = bc04e2d792c8eaffb26b60fdaceef261ffe03371
