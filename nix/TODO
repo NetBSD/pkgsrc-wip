@@ -44,4 +44,4 @@ gmake: *** [mk/patterns.mk:3: src/libmain/stack.o] Error 1
 *** Error code 2
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2026-39860
+  CVE-2026-39860, CVE-2026-44028, CVE-2026-44029
