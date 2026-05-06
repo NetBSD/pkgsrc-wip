@@ -1,0 +1,13 @@
+Pitchfork is a CLI for managing daemons with a focus on developer experience.
+
+- Start services once - Only start daemons if they have not already been started
+- Auto start/stop - Shell hook starts daemons when entering a project directory, stops when leaving
+- Ready checks - Delay, output regex, HTTP endpoint, TCP port, or custom command
+- Dependency management - Topological start ordering with parallel execution
+- File watching - Auto-restart daemons when source files change
+- Cron scheduling - Schedule recurring tasks with configurable retrigger modes
+- Lifecycle hooks - Run commands on ready, fail, retry, stop, and exit events
+- Resource limits - Enforce memory and CPU limits per daemon
+- TUI & Web UI - Interactive terminal dashboard and browser-based interface
+- MCP server - Expose daemon management to AI assistants (Claude, Cursor, etc.)
+- Container mode - Run as PID 1 with zombie reaping and signal forwarding

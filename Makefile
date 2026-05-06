@@ -3258,6 +3258,7 @@ SUBDIR+=	pipe-viewer
 SUBDIR+=	pipes-c
 SUBDIR+=	pipewire
 SUBDIR+=	piranha
+SUBDIR+=	pitchfork
 SUBDIR+=	piwik
 SUBDIR+=	pizza
 SUBDIR+=	pjproject

@@ -1,0 +1,104 @@
+https://github.com/endevco/pitchfork/discussions/428
+
+error: pitchfork boot management is only supported on macOS, Linux, and Windows
+   --> src/boot_manager.rs:100:9
+    |
+100 |         compile_error!("pitchfork boot management is only supported on macOS, Linux, and Windows");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0425]: cannot find value `current` in this scope
+   --> src/boot_manager.rs:110:19
+    |
+ 32 |     current: AutoLaunch,
+    |     ------- a field by that name exists in `Self`
+...
+110 |         Ok(Self { current, other })
+    |                   ^^^^^^^
+    |
+help: consider importing this function
+    |
+  1 + use std::thread::current;
+    |
+
+error[E0425]: cannot find value `other` in this scope
+   --> src/boot_manager.rs:110:28
+    |
+ 34 |     other: AutoLaunch,
+    |     ----- a field by that name exists in `Self`
+...
+110 |         Ok(Self { current, other })
+    |                            ^^^^^
+
+warning: unused import: `AutoLaunchBuilder`
+ --> src/boot_manager.rs:6:33
+  |
+6 | use auto_launcher::{AutoLaunch, AutoLaunchBuilder};
+  |                                 ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:121:25
+    |
+121 |         Ok(self.current.is_enabled().into_diagnostic()?
+    |                         ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:122:27
+    |
+122 |             || self.other.is_enabled().into_diagnostic()?)
+    |                           ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:127:22
+    |
+127 |         self.current.is_enabled().into_diagnostic()
+    |                      ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:141:20
+    |
+141 |         self.other.is_enabled().into_diagnostic()
+    |                    ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:183:41
+    |
+183 |         let other_conflict = self.other.is_enabled().into_diagnostic()?;
+    |                                         ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `enable` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:193:22
+    |
+193 |         self.current.enable().into_diagnostic()?;
+    |                      ^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:207:25
+    |
+207 |         if self.current.is_enabled().into_diagnostic()? {
+    |                         ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `disable` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:208:26
+    |
+208 |             self.current.disable().into_diagnostic()?;
+    |                          ^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `is_enabled` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:210:23
+    |
+210 |         if self.other.is_enabled().into_diagnostic()? {
+    |                       ^^^^^^^^^^ method not found in `AutoLaunch`
+
+error[E0599]: no method named `disable` found for struct `AutoLaunch` in the current scope
+   --> src/boot_manager.rs:211:24
+    |
+211 |             self.other.disable().into_diagnostic()?;
+    |                        ^^^^^^^ method not found in `AutoLaunch`
+
+Some errors have detailed explanations: E0425, E0599.
+For more information about an error, try `rustc --explain E0425`.
+warning: `pitchfork-cli` (lib) generated 1 warning
+error: could not compile `pitchfork-cli` (lib) due to 13 previous errors; 1 warning emitted
+*** Error code 101
