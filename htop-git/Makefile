@@ -1,15 +1,17 @@
 # $NetBSD$
 
-DISTNAME=	htop-3.4.0.20250310
+DISTNAME=	htop-3.5.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htop-dev/}
 GITHUB_PROJECT=	htop
-GITHUB_TAG=     325e6a47bf42c8feebe07263f7c60f181c1a8f1f
+GITHUB_TAG=     31b1a15fe54b6e7e5bc1cf35b579854f85bd7e3d
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://htop.dev/
 COMMENT=	Enhanced version of top utility
 LICENSE=	gnu-gpl-v2
+
+GIT_REPO=      https://github.com/htop-dev/htop.git
 
 CONFLICTS=	htop-[0-9]*
 
@@ -25,4 +27,5 @@ pre-configure:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
