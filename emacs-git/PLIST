@@ -4067,6 +4067,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/less-css-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/less-css-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/markdown-ts-mode-x.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/markdown-ts-mode-x.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/markdown-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/markdown-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/mhtml-mode.el.gz
