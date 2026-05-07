@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_libc-0.2.177_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2026/04/02 19:06:34 wiz Exp $
 
 Use __pthread_spin_t to define pthread_spin_t, not c_uchar which
 isn't universally this type on the various NetBSD targets.

@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.5 2026/04/02 19:06:35 wiz Exp $
 
 Add the various NetBSD targets.
 

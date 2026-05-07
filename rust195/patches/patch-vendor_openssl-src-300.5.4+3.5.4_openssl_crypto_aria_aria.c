@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_openssl-src-300.5.4+3.5.4_openssl_crypto_aria_aria.c,v 1.1 2026/04/02 19:06:35 wiz Exp $
 
 Make this build also if bswap32 is already defined, as for NetBSD/i586.
 

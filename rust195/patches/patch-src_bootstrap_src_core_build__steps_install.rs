@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_bootstrap_src_core_build__steps_install.rs,v 1.5 2026/04/02 19:06:34 wiz Exp $
 
 Drop "docs" from installation (takes forever), add "rust".
 

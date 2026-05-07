@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_libc-0.2.177_src_unix_bsd_netbsdlike_netbsd_m68k.rs,v 1.1 2026/04/02 19:06:34 wiz Exp $
 
 Add cpu-specific file for m68k on NetBSD.
 

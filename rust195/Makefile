@@ -79,6 +79,7 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 MAKE_ENV.SunOS+=	AR=gar
+MAKE_ENV.SunOS+=	BOOTSTRAP_SKIP_TARGET_SANITY=1
 
 # Debugging of crate resolution
 # Annoyingly, this makes the powerpc build succeed...

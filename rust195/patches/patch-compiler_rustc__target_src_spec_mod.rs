@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.17 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.18 2026/04/02 19:06:34 wiz Exp $
 
 Add entry for NetBSD/mips64el and NetBSD/m68k
 

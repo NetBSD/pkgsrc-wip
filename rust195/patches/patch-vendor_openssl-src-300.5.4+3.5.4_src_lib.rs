@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_openssl-src-300.5.4+3.5.4_src_lib.rs,v 1.1 2026/04/02 19:06:35 wiz Exp $
 
 Make this build on NetBSD for armv6, mipsel and m68k as well.
 

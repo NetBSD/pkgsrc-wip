@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.22 2026/04/02 19:06:34 wiz Exp $
 
 Do not use @rpath on Darwin.
 Find external libunwind on Linux.
