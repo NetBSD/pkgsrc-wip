@@ -2178,7 +2178,6 @@ SUBDIR+=	libslirp491
 SUBDIR+=	libsml
 SUBDIR+=	libsocialweb
 SUBDIR+=	libspt
-SUBDIR+=	libsquish
 SUBDIR+=	libstacktrace
 SUBDIR+=	libstrophe
 SUBDIR+=	libsysinfo
