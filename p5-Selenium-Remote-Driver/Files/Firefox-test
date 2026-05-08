@@ -1,0 +1,12 @@
+#!/usr/pkg/bin/perl
+
+use Selenium::Firefox;
+use Selenium::Remote::Driver;
+    
+my	      $driver = Selenium::Firefox->new( marionette_enabled => 1 );
+              $driver -> get('http://www.google.com');
+        print $driver -> get_title();
+ 	print "\n";
+	      $driver -> quit();
+__END__
+
