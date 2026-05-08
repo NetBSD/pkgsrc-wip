@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	Selenium-Remote-Driver-1.50
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://cpan.metacpan.org/authors/id/T/TE/TEODESIAN/
 
