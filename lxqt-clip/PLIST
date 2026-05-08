@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/lxqt-clip
+share/applications/lxqt-clip.desktop
+share/icons/hicolor/128x128/apps/lxqt-clip.png
+share/lxqt/lxqt-clip/translations/lxqt-clip_ca.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_cs.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_de.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_es.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_it.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_ja.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_lt.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_pl.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_pt.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_sr.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_sv.qm
+share/lxqt/lxqt-clip/translations/lxqt-clip_zh_CN.qm
