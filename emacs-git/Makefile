@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	emacs-31.0.50
-PKGNAME=	${DISTNAME:S/emacs/emacs31/}
+DISTNAME=	emacs-32.0.50
+PKGNAME=	${DISTNAME:S/emacs/emacs32/}
 CATEGORIES=	editors
 GIT_REPO=	git://git.git.savannah.gnu.org/emacs.git
 GIT_BRANCH=	master
