@@ -82,6 +82,7 @@ bin/zimh-vaxstation4000vlc
 share/doc/zimh/articles/simulators_acm_queue_2004.md
 share/doc/zimh/developers/adding_io_devices.md
 share/doc/zimh/developers/breakpoints.md
+share/doc/zimh/developers/testing_device_libraries.md
 share/doc/zimh/developers/writing_a_simulator.md
 share/doc/zimh/history/0readmeAsynchIO.txt
 share/doc/zimh/history/0readme_39.txt
