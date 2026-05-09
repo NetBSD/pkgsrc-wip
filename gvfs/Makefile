@@ -17,13 +17,15 @@ USE_PKGLOCALEDIR=	yes
 
 .include "../../mk/compiler.mk"
 
-CFLAGS.NetBSD+=	-DNETBSD_SOURCE
+CFLAGS.NetBSD+=	-DNETBSD_SOURCE	# string.h
 
 .if !empty(PKGSRC_COMPILER:Mclang) || ${CC_VERSION:Mgcc-[6-9]*} || ${CC_VERSION:Mgcc-1[0-9].*}
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .else
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=500 -D__EXTENSIONS__
 .endif
+
+LDFLAGS.SunOS+=	-lsocket	# if_indextoname()
 
 # Enforce some defaults to prevent PLIST issues witnessed in some environments.
 MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \

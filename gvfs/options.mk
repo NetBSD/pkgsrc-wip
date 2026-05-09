@@ -168,12 +168,12 @@ MESON_ARGS+=    -Dgphoto2=false
 ### mtp://{ID_SERIAL}, mtp://[usb:bus,dev]
 ###   Access digital audio/media players.
 ###
-.if !empty(PKG_OPTIONS:Mlibmtp)
 PLIST_VARS+=    mtp
-MESON_ARGS+=    -Dmtp=true
-GUDEV_REQUIRED= yes
+.if !empty(PKG_OPTIONS:Mlibmtp)
+GUDEV_REQUIRED=	yes
+MESON_ARGS+=	-Dmtp=true
 .  include "../../devel/libmtp/buildlink3.mk"
-PLIST.mtp=      yes
+PLIST.mtp=	yes
 .else
 MESON_ARGS+=    -Dmtp=false
 .endif

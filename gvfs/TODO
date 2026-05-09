@@ -1,11 +1,5 @@
 <!-- -*- markdown -*- ->
 
-# Fairly untested
-
-This package needs to be tested further, before being imported back to the
-main pkgsrc tree. It especially needs to be build-tested (at least) on
-Linux where a lot of PLIST diffs are expected to happen there.
-
 # gvfsd-fuse is known not to work on NetBSD
 
 This is because NetBSD refuse(3) doesn't support non-root mounting but
