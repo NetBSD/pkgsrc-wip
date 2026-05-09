@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.267 2026/02/06 10:04:56 wiz Exp $
 
 # This package tracks the qgis 4.0 stable branch
-DISTNAME=	qgis-4.0.0.0
+DISTNAME=	qgis-4.0.2.18
 CATEGORIES=	geography
 #MASTER_SITES=	https://qgis.org/downloads/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qgis/}
 GITHUB_PROJECT=	QGIS
-GITHUB_TAG=	f2317a9ab1b8b0ab95c88d0cb0a2e53530812076
+GITHUB_TAG=	9e5d52a1edb67d45ae558a6aeb30f0aba56d9f1a
 DIST_SUBDIR=	qgis-snapshot
 
 MAINTAINER=	gdt@NetBSD.org
@@ -31,7 +31,7 @@ BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include/minizip
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
 TOOL_DEPENDS+=		${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
 
-# \todo Grasp/fix.
+# \todo Grasp/fix.  Perhaps qca2-qt6 does not need an ossl plugin because it is built in?
 #DEPENDS+=		qca2-qt6-ossl-[0-9]*:../../security/qca2-qt6-ossl
 DEPENDS+=		${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 DEPENDS+=		${PYPKGPREFIX}-qt6-qscintilla-[0-9]*:../../x11/py-qt6-qscintilla
@@ -42,9 +42,9 @@ CMAKE_PREFIX_PATH+=	${QTDIR}
 # This could be used if we want to build pdf doc, which is currently false
 #TOOL_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
 
+# Disable building of QGIS.app.  \todo Consider building it.
 # \todo Adapt to upstream rototill of mac bundle in 4.0. This is
 # likely just one file now.
-# Disable building of QGIS.app.  \todo Consider building it.
 SUBST_CLASSES+=		xapple
 SUBST_STAGE.xapple=	pre-configure
 SUBST_MESSAGE.xapple=	Disabling APPLE App in cmake scripts
@@ -86,10 +86,14 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_NLOHMANN_JSON=OFF
 
-# \todo Find/package qwt and re-enable.
+# \todo One of
+#    - find/package qwt6-qt6 and re-enable
+#    - decide that it's built in to qt6
+#    - decide that it's not necesary
 # We patch cmake to look only in QWT_DIR, so provide it.
 #CMAKE_CONFIGURE_ARGS+=		-DQWT_DIR=${QWT_DIR}
 
+# \todo Move to options.mk as default off; it seems unusual to want it.
 CMAKE_CONFIGURE_ARGS+=		-DWITH_QTWEBENGINE=FALSE
 # DEPENDS+= ../../www/qt6-qtwebengine
 
@@ -113,7 +117,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 .include "../../lang/python/pyversion.mk"
-ooPYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/pgsql.buildlink3.mk"
 
