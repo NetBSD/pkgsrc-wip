@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pimsync-v0.5.7
+DISTNAME=	pimsync-v0.5.8
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	time net
 # doesn't allow direct downloads
@@ -10,12 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pimsync.whynothugo.nl/index.html
 COMMENT=	Synchronise calendars and contacts between different storages
 LICENSE=	eupl-v1.2
-
-HASHIFY_REV=	242c78f03ce1eea42c273912395e880c72d69b23
-HASHIFY_TGZ=	hashify-${HASHIFY_REV}.tar.gz
-DISTFILES=	${DEFAULT_DISTFILES} ${HASHIFY_TGZ}
-
-SITES.${HASHIFY_TGZ}=	-${MASTER_SITE_GITHUB:=WhyNotHugo/}hashify/archive/${HASHIFY_REV}.tar.gz
 
 RUST_REQ+=	1.88.0
 
