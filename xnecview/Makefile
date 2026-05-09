@@ -18,9 +18,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xnecview \
 		${DESTDIR}${PREFIX}/bin/xnecview
 	${INSTALL_MAN} ${WRKSRC}/xnecview.1x \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xnecview.1x
-
-
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xnecview.1
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
