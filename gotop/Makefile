@@ -1,10 +1,10 @@
 # $NetBSD$
 
 DISTNAME=	gotop-4.2.0
-MASTER_SITES=	${MASTER_SITE_GITHUB:=fraggerfox/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=xxxserxxx/}
 CATEGORIES=	sysutils
 DIST_SUBDIR=    ${PKGBASE}
-GITHUB_TAG=	42e8669ece7e2259ec0055544765a1872e9ac975
+GITHUB_TAG=	2872dab02cffc1dcc621b87a0a0f1dc4dac2ec6e
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/xxxserxxx/gotop
