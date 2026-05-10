@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/data_controls/core/browser/rule.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/enterprise/data_controls/core/browser/rule.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/enterprise/data_controls/core/browser/rule.cc
-@@ -534,7 +534,7 @@ bool Rule::AddUnsupportedAttributeErrors
+@@ -542,7 +542,7 @@ bool Rule::AddUnsupportedAttributeErrors
                },
            },
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
            {
                Restriction::kFileDownload,
                {
-@@ -617,7 +617,7 @@ bool Rule::AddUnsupportedRestrictionErro
+@@ -625,7 +625,7 @@ bool Rule::AddUnsupportedRestrictionErro
            },
  #endif  // BUILDFLAG(ENTERPRISE_SCREENSHOT_PROTECTION)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

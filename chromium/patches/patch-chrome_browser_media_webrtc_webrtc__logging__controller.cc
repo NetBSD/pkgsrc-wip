@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -30,7 +30,7 @@
  #include "net/base/schemeful_site.h"

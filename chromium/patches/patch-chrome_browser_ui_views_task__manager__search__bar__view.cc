@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/task_manager_search_bar_view.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/views/task_manager_search_bar_view.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/views/task_manager_search_bar_view.cc
 @@ -29,7 +29,7 @@ TaskManagerSearchBarView::TaskManagerSea
      const gfx::Insets& margins,

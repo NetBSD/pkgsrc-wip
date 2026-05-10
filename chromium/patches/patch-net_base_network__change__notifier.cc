@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- net/base/network_change_notifier.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ net/base/network_change_notifier.cc
 @@ -38,7 +38,7 @@
  #include "third_party/abseil-cpp/absl/container/flat_hash_set.h"

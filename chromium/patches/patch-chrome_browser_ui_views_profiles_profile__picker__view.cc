@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/views/profiles/profile_picker_view.cc
-@@ -83,7 +83,7 @@
+@@ -88,7 +88,7 @@
  #include "chrome/browser/global_keyboard_shortcuts_mac.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/shell_integration_linux.h"
  #endif
  
-@@ -108,7 +108,7 @@ class ProfilePickerWidget : public views
+@@ -113,7 +113,7 @@ class ProfilePickerWidget : public views
      views::Widget::InitParams params(
          views::Widget::InitParams::NATIVE_WIDGET_OWNS_WIDGET);
      params.delegate = profile_picker_view;

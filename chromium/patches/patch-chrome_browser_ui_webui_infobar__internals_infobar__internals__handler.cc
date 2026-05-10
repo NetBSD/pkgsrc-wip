@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc
 @@ -26,7 +26,7 @@
  #include "chrome/browser/win/installer_downloader/installer_downloader_pref_names.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/native_theme_base.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/native_theme/native_theme_base.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/native_theme/native_theme_base.cc
 @@ -169,7 +169,7 @@ void NativeThemeBase::PaintImpl(cc::Pain
                      std::get<ButtonExtraParams>(extra_params), dark_mode,

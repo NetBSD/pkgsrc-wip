@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/system_metrics_sampler.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- services/tracing/public/cpp/system_metrics_sampler.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ services/tracing/public/cpp/system_metrics_sampler.cc
-@@ -176,8 +176,8 @@ void SystemMetricsSampler::ProcessSample
+@@ -177,8 +177,8 @@ void SystemMetricsSampler::ProcessSample
      TRACE_COUNTER(TRACE_DISABLED_BY_DEFAULT("system_metrics"),
                    "PhysicalMemoryFootprint",
                    memory_info->physical_footprint_bytes);

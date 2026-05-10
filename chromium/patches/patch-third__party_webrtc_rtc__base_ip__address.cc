@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/ip_address.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- third_party/webrtc/rtc_base/ip_address.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ third_party/webrtc/rtc_base/ip_address.cc
 @@ -22,7 +22,8 @@
  #include "rtc_base/string_utils.h"

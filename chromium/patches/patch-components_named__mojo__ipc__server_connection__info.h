@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/named_mojo_ipc_server/connection_info.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/named_mojo_ipc_server/connection_info.h
-@@ -12,7 +12,12 @@
+@@ -13,7 +13,12 @@
  #include "base/win/scoped_handle.h"
  #elif BUILDFLAG(IS_MAC)
  #include <bsm/libbsm.h>
@@ -20,17 +20,17 @@ $NetBSD$
  #include <sys/socket.h>
  #endif
  
-@@ -29,8 +34,12 @@ struct ConnectionInfo {
+@@ -30,8 +35,12 @@ struct ConnectionInfo {
    base::ProcessId pid{};
  #if BUILDFLAG(IS_MAC)
    audit_token_t audit_token{};
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_OPENBSD)
    ucred credentials{};
-+#elif BUILDFLAG(IS_NETBSD)
-+  unpcbid credentials{};
 +#elif BUILDFLAG(IS_FREEBSD)
 +  xucred credentials{};
- #endif
- };
- 
++#elif BUILDFLAG(IS_NETBSD)
++  unpcbid credentials{};
+ #elif BUILDFLAG(IS_WIN)
+   // The process of the peer. Only valid if `include_peer_process_info` is true
+   // in EndpointOptions.

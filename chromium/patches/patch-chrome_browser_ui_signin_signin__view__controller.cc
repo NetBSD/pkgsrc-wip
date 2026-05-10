@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/signin/signin_view_controller.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/signin/signin_view_controller.cc
 @@ -524,7 +524,7 @@ void SigninViewController::ShowModalSync
        GetOnModalDialogClosedCallback());
@@ -15,7 +15,7 @@ $NetBSD$
  void SigninViewController::ShowModalHistorySyncOptInDialog(
      bool should_close_modal_dialog,
      HistorySyncOptinHelper::FlowCompletedCallback callback) {
-@@ -542,7 +542,7 @@ void SigninViewController::ShowModalHist
+@@ -541,7 +541,7 @@ void SigninViewController::ShowModalHist
  void SigninViewController::ShowModalManagedUserNoticeDialog(
      std::unique_ptr<signin::EnterpriseProfileCreationDialogParams>
          create_param) {

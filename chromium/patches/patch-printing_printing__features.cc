@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- printing/printing_features.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ printing/printing_features.cc
 @@ -23,7 +23,7 @@ BASE_FEATURE(kApiPrintingMarginsAndScale
  BASE_FEATURE(kAlignPdfDefaultPrintSettingsWithHTML,

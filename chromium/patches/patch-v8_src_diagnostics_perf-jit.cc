@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/diagnostics/perf-jit.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- v8/src/diagnostics/perf-jit.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ v8/src/diagnostics/perf-jit.cc
 @@ -31,7 +31,7 @@
  #include "src/flags/flags.h"

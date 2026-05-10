@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
-@@ -84,7 +84,7 @@ void SystemMenuModelBuilder::BuildMenu(u
+@@ -87,7 +87,7 @@ void SystemMenuModelBuilder::BuildMenu(u
  
  void SystemMenuModelBuilder::BuildSystemMenuForBrowserWindow(
      ui::SimpleMenuModel* model) {
@@ -15,7 +15,7 @@ $NetBSD$
    model->AddItemWithStringId(IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU);
    model->AddItemWithStringId(IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU);
    model->AddItemWithStringId(IDC_RESTORE_WINDOW, IDS_RESTORE_WINDOW_MENU);
-@@ -150,7 +150,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -177,7 +177,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER_CONTEXT_MENU, IDS_TASK_MANAGER);
    }
@@ -24,7 +24,7 @@ $NetBSD$
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    bool supports_server_side_decorations = true;
  #if BUILDFLAG(IS_OZONE) && !BUILDFLAG(IS_CHROMEOS)
-@@ -225,7 +225,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -252,7 +252,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER, IDS_TASK_MANAGER);
    }

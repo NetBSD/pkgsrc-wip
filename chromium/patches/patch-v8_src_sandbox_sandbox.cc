@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/sandbox/sandbox.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- v8/src/sandbox/sandbox.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ v8/src/sandbox/sandbox.cc
 @@ -60,7 +60,7 @@ static Address DetermineAddressSpaceLimi
    }

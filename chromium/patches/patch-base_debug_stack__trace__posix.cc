@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- base/debug/stack_trace_posix.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ base/debug/stack_trace_posix.cc
 @@ -46,8 +46,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
@@ -75,7 +75,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
  
-@@ -775,6 +783,7 @@ class SandboxSymbolizeHelper {
+@@ -777,6 +785,7 @@ class SandboxSymbolizeHelper {
      return -1;
    }
  
@@ -83,7 +83,7 @@ $NetBSD$
    // This class is copied from
    // third_party/crashpad/crashpad/util/linux/scoped_pr_set_dumpable.h.
    // It aims at ensuring the process is dumpable before opening /proc/self/mem.
-@@ -867,11 +876,15 @@ class SandboxSymbolizeHelper {
+@@ -869,11 +878,15 @@ class SandboxSymbolizeHelper {
        r.base = cur_base;
      }
    }
@@ -99,7 +99,7 @@ $NetBSD$
      // Reads /proc/self/maps.
      std::string contents;
      if (!ReadProcMaps(&contents)) {
-@@ -889,6 +902,7 @@ class SandboxSymbolizeHelper {
+@@ -891,6 +904,7 @@ class SandboxSymbolizeHelper {
  
      is_initialized_ = true;
      return true;

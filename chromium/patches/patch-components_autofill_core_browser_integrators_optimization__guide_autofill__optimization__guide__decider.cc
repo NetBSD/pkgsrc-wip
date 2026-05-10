@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc
 @@ -207,7 +207,7 @@ void AddOptimizationTypesForBnplIssuers(
      base::flat_set<optimization_guide::proto::OptimizationType>&

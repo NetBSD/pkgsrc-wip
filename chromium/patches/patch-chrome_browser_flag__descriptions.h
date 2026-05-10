@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/flag_descriptions.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/flag_descriptions.h
-@@ -8413,6 +8413,20 @@ inline constexpr char kEnableOktaSSOName
- inline constexpr char kEnableOktaSSODescription[] =
-     "Enables native support for Okta SSO on managed MacOS devices.";
+@@ -8453,6 +8453,20 @@ inline constexpr char kAndroidEntraSsoDe
+     "Enables native support for Entra SSO on Android provided by selected "
+     "Authentication Brokers.";
  
 +#if BUILDFLAG(IS_BSD)
 +inline constexpr char kAudioBackendName[] =

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ services/device/public/cpp/generic_sensor/sensor_reading.h
 @@ -8,6 +8,8 @@
  #include <stddef.h>

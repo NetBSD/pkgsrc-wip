@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- remoting/host/chromoting_host.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ remoting/host/chromoting_host.h
-@@ -36,7 +36,7 @@
+@@ -37,7 +37,7 @@
  #include "remoting/protocol/session_manager.h"
  #include "remoting/protocol/transport_context.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "remoting/host/chromoting_host_services_server.h"
  #endif
  
-@@ -113,7 +113,7 @@ class ChromotingHost : public ClientSess
+@@ -122,7 +122,7 @@ class ChromotingHost : public ClientSess
    // This method can only be called once during the lifetime of this object.
    void Start(const std::string& host_owner);
  
@@ -24,7 +24,7 @@ $NetBSD$
    // Starts running the ChromotingHostServices server and listening for incoming
    // IPC binding requests.
    // Currently only Linux runs the ChromotingHostServices server on the host
-@@ -229,7 +229,7 @@ class ChromotingHost : public ClientSess
+@@ -242,7 +242,7 @@ class ChromotingHost : public ClientSess
    // List of host extensions.
    std::vector<std::unique_ptr<HostExtension>> extensions_;
  

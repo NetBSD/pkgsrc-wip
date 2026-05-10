@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_factory.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/base/x/x11_cursor_factory.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/base/x/x11_cursor_factory.cc
 @@ -13,7 +13,7 @@
  #include "ui/gfx/geometry/point.h"

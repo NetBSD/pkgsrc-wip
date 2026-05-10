@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/actions/chrome_action_id.h
 @@ -532,7 +532,7 @@
  #if BUILDFLAG(IS_CHROMEOS)

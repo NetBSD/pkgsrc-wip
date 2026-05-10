@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/feed/core/v2/feed_network_impl_unittest.cc
-@@ -746,8 +746,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
+@@ -749,8 +749,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
  
    EXPECT_EQ(feedwire::ClientInfo::CHROME_ANDROID, client_info.app_type());
    EXPECT_EQ(feedwire::Version::RELEASE, client_info.app_version().build_type());

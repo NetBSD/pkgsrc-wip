@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_sandbox_hook_linux.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- services/network/network_sandbox_hook_linux.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ services/network/network_sandbox_hook_linux.h
 @@ -6,7 +6,11 @@
  #define SERVICES_NETWORK_NETWORK_SANDBOX_HOOK_LINUX_H_

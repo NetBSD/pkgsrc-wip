@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/infobar_utils.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/startup/infobar_utils.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/startup/infobar_utils.cc
-@@ -46,7 +46,7 @@
+@@ -45,7 +45,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_controller.h"
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_model.h"
  #endif
-@@ -221,7 +221,7 @@ void AddInfoBarsIfNecessary(BrowserWindo
+@@ -219,7 +219,7 @@ void AddInfoBarsIfNecessary(BrowserWindo
      return;
    }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_preferences.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- net/http/http_auth_preferences.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ net/http/http_auth_preferences.cc
 @@ -38,7 +38,7 @@ std::string HttpAuthPreferences::AuthAnd
  }

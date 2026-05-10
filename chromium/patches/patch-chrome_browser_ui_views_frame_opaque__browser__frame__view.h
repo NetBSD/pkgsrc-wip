@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.h
 @@ -103,7 +103,7 @@ class OpaqueBrowserFrameView : public Br
    FrameButtonStyle GetFrameButtonStyle() const override;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/vertical/vertical_tab_group_header_view.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/views/tabs/vertical/vertical_tab_group_header_view.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/views/tabs/vertical/vertical_tab_group_header_view.cc
-@@ -293,7 +293,7 @@ void VerticalTabGroupHeaderView::OnMouse
+@@ -321,7 +321,7 @@ void VerticalTabGroupHeaderView::OnMouse
  }
  
  void VerticalTabGroupHeaderView::OnMouseExited(const ui::MouseEvent& event) {

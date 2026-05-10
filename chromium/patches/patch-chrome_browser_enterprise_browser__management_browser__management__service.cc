@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/enterprise/browser_management/browser_management_service.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/enterprise/browser_management/browser_management_service.cc
 @@ -50,7 +50,7 @@ GetManagementStatusProviders(Profile* pr
  
@@ -15,7 +15,7 @@ $NetBSD$
    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
        FROM_HERE,
        base::BindOnce(&BrowserManagementService::UpdateManagementIconForProfile,
-@@ -74,7 +74,7 @@ BrowserManagementService::BrowserManagem
+@@ -75,7 +75,7 @@ BrowserManagementService::BrowserManagem
  }
  
  ui::ImageModel* BrowserManagementService::GetManagementIconForProfile() {
@@ -24,7 +24,7 @@ $NetBSD$
    return management_icon_for_profile_.IsEmpty() ? nullptr
                                                  : &management_icon_for_profile_;
  #else
-@@ -83,7 +83,7 @@ ui::ImageModel* BrowserManagementService
+@@ -84,7 +84,7 @@ ui::ImageModel* BrowserManagementService
  }
  
  gfx::Image* BrowserManagementService::GetManagementIconForBrowser() {
@@ -33,7 +33,7 @@ $NetBSD$
    return management_icon_for_browser_.IsEmpty() ? nullptr
                                                  : &management_icon_for_browser_;
  #else
-@@ -96,7 +96,7 @@ void BrowserManagementService::TriggerPo
+@@ -97,7 +97,7 @@ void BrowserManagementService::TriggerPo
    OnPolicyStatusChanged();
  }
  
@@ -42,7 +42,7 @@ $NetBSD$
  void BrowserManagementService::SetBrowserManagementIconForTesting(
      const gfx::Image& management_icon) {
    CHECK_IS_TEST();
-@@ -185,7 +185,7 @@ void BrowserManagementService::SetManage
+@@ -186,7 +186,7 @@ void BrowserManagementService::SetManage
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  void BrowserManagementService::OnPolicyStatusChanged() {

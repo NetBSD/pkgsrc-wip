@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- base/posix/unix_domain_socket.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ base/posix/unix_domain_socket.cc
 @@ -16,6 +16,7 @@
  #include "base/files/scoped_file.h"
@@ -59,10 +59,19 @@ $NetBSD$
        // macOS does not support SCM_CREDENTIALS.
        if (cmsg->cmsg_level == SOL_SOCKET &&
            cmsg->cmsg_type == SCM_CREDENTIALS) {
-@@ -195,6 +196,9 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -195,6 +196,18 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
      if (getsockopt(fd, SOL_LOCAL, LOCAL_PEERPID, &pid, &pid_size) != 0) {
        pid = -1;
      }
++#elif BUILDFLAG(IS_NETBSD)
++    struct unpcbid cred;
++    socklen_t len = sizeof(cred);
++    if (getsockopt(fd, 0, LOCAL_PEEREID, &cred, &len) == 0) {
++      pid = cred.unp_pid;
++    } else {
++      DPLOG(ERROR) << "getsockopt LOCAL_PEEREID failed";
++      pid = -1;
++    }
 +#elif BUILDFLAG(IS_BSD)
 +    NOTIMPLEMENTED();
 +    pid = -1;

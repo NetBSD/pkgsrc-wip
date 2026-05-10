@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ media/video/mappable_shared_image_video_frame_pool.cc
-@@ -685,7 +685,7 @@ void MappableSharedImageVideoFramePool::
+@@ -686,7 +686,7 @@ void MappableSharedImageVideoFramePool::
    }
  
    bool is_software_backed_video_frame = !video_frame->HasSharedImage();
@@ -15,12 +15,12 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1093,7 +1093,7 @@ scoped_refptr<VideoFrame> MappableShared
-       media::IOSurfaceIsWebGPUCompatible(handle.io_surface().get());
+@@ -1099,7 +1099,7 @@ scoped_refptr<VideoFrame> MappableShared
+           gpu::SHARED_IMAGE_USAGE_WEBGPU_READ);
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // TOOD(crbug.com/425634684): Check for webgpu support from
-   // SharedImageCapabilities, once this metadata is compatible.
-   is_webgpu_compatible =
+   // Gate this on SharedImage usage as ScopedAccess now CHECKs for it.
+   // TOOD(crbug.com/425634684, crbug.com/413659843): Check for webgpu support
+   // from SharedImageCapabilities, once this metadata is compatible.

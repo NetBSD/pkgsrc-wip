@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_image.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- gpu/vulkan/vulkan_image.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ gpu/vulkan/vulkan_image.h
 @@ -86,7 +86,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanIma
        VkImageUsageFlags usage,

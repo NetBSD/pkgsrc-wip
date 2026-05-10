@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/scheduler/responsiveness/native_event_observer.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/scheduler/responsiveness/native_event_observer.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/scheduler/responsiveness/native_event_observer.cc
 @@ -15,7 +15,7 @@
  
@@ -15,12 +15,12 @@ $NetBSD$
  #include "ui/events/platform/platform_event_source.h"
  #endif
  
-@@ -38,7 +38,7 @@ NativeEventObserver::~NativeEventObserve
-   DeregisterObserver();
+@@ -38,7 +38,7 @@ BrowserUINativeEventObserver::~BrowserUI
+   UnregisterObserver();
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- void NativeEventObserver::RegisterObserver() {
+ void BrowserUINativeEventObserver::RegisterObserver() {
    CHECK(ui::PlatformEventSource::GetInstance());
    ui::PlatformEventSource::GetInstance()->AddPlatformEventObserver(this);

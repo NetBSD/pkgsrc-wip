@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/base/ui_base_switches.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/base/ui_base_switches.h
 @@ -37,13 +37,13 @@ inline constexpr char kDisableModalAnima
  inline constexpr char kShowMacOverlayBorders[] = "show-mac-overlay-borders";

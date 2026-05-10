@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch_posix.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- base/process/launch_posix.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ base/process/launch_posix.cc
 @@ -218,6 +218,8 @@ static const char kFDDir[] = "/dev/fd";
  static const char kFDDir[] = "/dev/fd";

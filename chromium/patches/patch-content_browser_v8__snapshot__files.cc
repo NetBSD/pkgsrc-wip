@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/v8_snapshot_files.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/v8_snapshot_files.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/v8_snapshot_files.cc
 @@ -41,7 +41,7 @@ void registerContextSnapshotAndroid(
  std::map<std::string, std::variant<base::FilePath, base::ScopedFD>>

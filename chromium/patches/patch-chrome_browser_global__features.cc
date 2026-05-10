@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/global_features.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/global_features.cc
 @@ -36,7 +36,7 @@
  #include "chrome/browser/background/glic/glic_background_mode_manager.h"  // nogncheck
@@ -24,7 +24,7 @@ $NetBSD$
    // TODO(crbug.com/463742800): Migrate WhatsNewRegistry (and other non-core
    // features) to Init().
    whats_new_registry_ = CreateWhatsNewRegistry();
-@@ -223,7 +223,7 @@ void GlobalFeatures::PostMainMessageLoop
+@@ -224,7 +224,7 @@ void GlobalFeatures::PostMainMessageLoop
  
    application_advanced_protection_status_detector_.reset();
  
@@ -33,7 +33,7 @@ $NetBSD$
    DefaultBrowserPromptManager::GetInstance()->CloseAllPrompts(
        DefaultBrowserPromptManager::CloseReason::kDismiss);
  #endif
-@@ -244,7 +244,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -245,7 +245,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

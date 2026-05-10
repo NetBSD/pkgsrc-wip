@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/url_formatter/spoof_checks/idn_spoof_checker.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/url_formatter/spoof_checks/idn_spoof_checker.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/url_formatter/spoof_checks/idn_spoof_checker.cc
 @@ -305,7 +305,7 @@ IDNSpoofChecker::IDNSpoofChecker() {
    // The ideal fix would be to change the omnibox font used for Thai. In

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/BUILD.gn.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/BUILD.gn.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/BUILD.gn
-@@ -2636,6 +2636,14 @@ source_set("browser") {
+@@ -2647,6 +2647,14 @@ source_set("browser") {
      ]
    }
  
@@ -21,7 +21,7 @@ $NetBSD$
    if (is_linux || is_chromeos) {
      sources -=
          [ "file_system_access/file_path_watcher/file_path_watcher_stub.cc" ]
-@@ -2687,6 +2695,15 @@ source_set("browser") {
+@@ -2698,6 +2706,15 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom" ]
    }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_system_lock/lock.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/named_system_lock/lock.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/named_system_lock/lock.h
 @@ -38,7 +38,7 @@ class ScopedLock {
    // may acquire that lock. The lock name has different meanings per platform:

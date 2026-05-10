@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/app/content_main_runner_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/app/content_main_runner_impl.cc
 @@ -152,18 +152,21 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"

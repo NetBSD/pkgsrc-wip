@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_test_config.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- gpu/config/gpu_test_config.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ gpu/config/gpu_test_config.cc
 @@ -27,7 +27,7 @@ namespace {
  GPUTestConfig::OS GetCurrentOS() {

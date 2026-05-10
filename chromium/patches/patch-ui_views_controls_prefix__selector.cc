@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/prefix_selector.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/views/controls/prefix_selector.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/views/controls/prefix_selector.cc
 @@ -193,7 +193,7 @@ bool PrefixSelector::ShouldDoLearning() 
    return false;

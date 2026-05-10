@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/endpoint_options.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/named_mojo_ipc_server/endpoint_options.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/named_mojo_ipc_server/endpoint_options.h
 @@ -65,7 +65,7 @@ struct EndpointOptions {
    std::wstring security_descriptor;

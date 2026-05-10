@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/scoped_res_state.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- net/dns/public/scoped_res_state.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ net/dns/public/scoped_res_state.h
 @@ -5,6 +5,7 @@
  #ifndef NET_DNS_PUBLIC_SCOPED_RES_STATE_H_

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-validation-layers/src/layers/vulkan/generated/vk_function_pointers.cpp.orig	2026-04-14 23:31:37.000000000 +0200
+--- third_party/vulkan-validation-layers/src/layers/vulkan/generated/vk_function_pointers.cpp.orig	2026-04-28 23:05:57.000000000 +0200
 +++ third_party/vulkan-validation-layers/src/layers/vulkan/generated/vk_function_pointers.cpp
 @@ -53,7 +53,8 @@ static void *get_proc_address(dl_handle 
      assert(name);

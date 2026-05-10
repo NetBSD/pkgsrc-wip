@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ printing/mojom/printing_context_mojom_traits_unittest.cc
 @@ -81,7 +81,7 @@ base::DictValue GenerateSampleSystemPrin
               "file:///foo/bar.pdf");

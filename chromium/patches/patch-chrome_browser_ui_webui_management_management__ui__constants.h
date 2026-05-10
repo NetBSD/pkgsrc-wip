@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_constants.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/webui/management/management_ui_constants.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/webui/management/management_ui_constants.h
-@@ -7,14 +7,14 @@
- 
+@@ -9,14 +9,14 @@
  #include "build/build_config.h"
+ #include "extensions/buildflags/buildflags.h"
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
@@ -18,8 +18,8 @@ $NetBSD$
  extern const char kManagementScreenCaptureData[];
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE))
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE)) || BUILDFLAG(IS_BSD)
  extern const char kManagementDeviceSignalsDisclosure[];
- #endif  // #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ #endif  // #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE))
  

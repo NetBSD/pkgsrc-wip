@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/ui_features.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/ui_features.h
 @@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(kBrowserWidgetCache
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kDseIntegrity);
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
-@@ -66,7 +66,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
+@@ -68,7 +68,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
  BASE_DECLARE_FEATURE_PARAM(int, kSeparateDefaultAndPinPromptMessageVersion);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -24,21 +24,12 @@ $NetBSD$
  // When enabled, user may see the session restore UI flow.
  BASE_DECLARE_FEATURE(kSessionRestoreInfobar);
  
-@@ -285,7 +285,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
+@@ -257,7 +257,7 @@ BASE_DECLARE_FEATURE(kWebUITabStripConte
  BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  BASE_DECLARE_FEATURE(kUsePortalAccentColor);
- #endif
- 
-@@ -390,7 +390,7 @@ BASE_DECLARE_FEATURE(kTabGroupsFocusing)
- BASE_DECLARE_FEATURE_PARAM(bool, kTabGroupsFocusingPinnedTabs);
- BASE_DECLARE_FEATURE_PARAM(bool, kTabGroupsFocusingDefaultToFocused);
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_DECLARE_FEATURE(kUpdaterUI);
  #endif
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc
-@@ -17,7 +17,7 @@
+@@ -19,7 +19,7 @@
  #include "content/public/browser/web_contents.h"
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/browser_finder.h"
  #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
  #include "chrome/browser/ui/toasts/api/toast_id.h"
-@@ -64,7 +64,7 @@ SafeBrowsingPrefChangeHandler::~SafeBrow
+@@ -73,7 +73,7 @@ bool SafeBrowsingPrefChangeHandler::Supp
  void SafeBrowsingPrefChangeHandler::
      MaybeShowEnhancedProtectionSettingChangeNotification() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
@@ -24,7 +24,7 @@ $NetBSD$
    if (!profile_ ||
        !base::FeatureList::IsEnabled(safe_browsing::kEsbAsASyncedSetting)) {
      return;
-@@ -227,7 +227,7 @@ void SafeBrowsingPrefChangeHandler::
+@@ -243,7 +243,7 @@ void SafeBrowsingPrefChangeHandler::
  }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \

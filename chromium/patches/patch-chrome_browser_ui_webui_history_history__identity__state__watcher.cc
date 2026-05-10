@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/history/history_identity_state_watcher.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/webui/history/history_identity_state_watcher.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/webui/history/history_identity_state_watcher.cc
-@@ -124,7 +124,7 @@ HistoryIdentityStateWatcher::GetSyncStat
+@@ -122,7 +122,7 @@ HistoryIdentityStateWatcher::GetSyncStat
    }
    const signin_util::SignedInState signed_in_state =
        signin_util::GetSignedInState(identity_manager_);
