@@ -40,6 +40,7 @@ Suggested package updates
 	o firebird-3.0
 	o flc-1.12
 	o flowblade-2.14
+	o forge-0.5.0
 	o freecad-1.1
 	o gambas2-3.7.1
 	o gcc42-4.2.4
@@ -125,9 +126,11 @@ Suggested package updates
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
 	o py-zeitgeist-0.9.16
+	o py-zensical-0.0.41
 	o qmc2-0.59
 	o qupzilla-2.2.1
 	o rdup-1.1.13
+	o resterm-0.37.1
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
 	o rygel-0.26.0
