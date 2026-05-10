@@ -6,6 +6,5 @@ and vector data formats, with new support easily added using the plugin
 architecture.
 
 This package tracks the 4.0 stable branch.  NB: 4.0 is labeled "Very
-Early Adopter.  It uses qt6. Some plugins are unavailable, and more or
-less everything isn't adequately well tested yet.
-
+Early Adopter.  It uses qt6.  Some plugins are unavailable, and more
+or less everything isn't adequately well tested yet.
