@@ -2,6 +2,7 @@
 
 DISTNAME=	tnfrepo-0.0a20250823.dev140
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 HG_REPO=	https://hg.mumble.net/campbell/tnfrepo
 HG_TAG=		c13abf2089b3c28edfdb6dbb573e19a8722075bb
@@ -14,7 +15,7 @@ LICENSE=	2-clause-bsd AND gnu-gpl-v2
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.12.0:../../devel/py-flit_core
 
 DEPENDS+=	${PYPKGPREFIX}-hg-evolve>=11.1.4:../../devel/py-hg-evolve
-DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.8.1:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.9:../../devel/py-mercurial
 DEPENDS+=	git-base>=2.47.1:../../devel/git-base
 DEPENDS+=	git-cinnabar>=0.7.0beta1:../../devel/git-cinnabar
 DEPENDS+=	git-perlscripts>=2.47.1:../../devel/git-perlscripts
