@@ -54,4 +54,7 @@ share/tnfrepo/githooks/pre-receive
 share/tnfrepo/githooks/reference-transaction
 share/tnfrepo/githooks/update
 share/tnfrepo/hgrc/draft
+share/tnfrepo/hgrc/mirror
 share/tnfrepo/hgrc/public
+share/tnfrepo/hgrc/rodraft
+share/tnfrepo/hgrc/ropublic
