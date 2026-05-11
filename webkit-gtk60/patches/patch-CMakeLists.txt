@@ -1,0 +1,19 @@
+$NetBSD$
+
+The release tarball does not ship the PerformanceTests directory, so guard
+the add_subdirectory() call against its absence.
+https://github.com/WebKit/WebKit/pull/64697
+
+--- CMakeLists.txt.orig	2025-03-05 09:38:04.000000000 +0000
++++ CMakeLists.txt
+@@ -50,7 +50,9 @@ if (ENABLE_TOOLS)
+ endif ()
+ 
+ if (DEVELOPER_MODE)
+-    add_subdirectory(PerformanceTests)
++    if (EXISTS "${CMAKE_SOURCE_DIR}/PerformanceTests")
++        add_subdirectory(PerformanceTests)
++    endif ()
+ endif ()
+ 
+ # -----------------------------------------------------------------------------

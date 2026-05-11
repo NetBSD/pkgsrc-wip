@@ -28,7 +28,7 @@ CXXFLAGS+=	-I${PREFIX}/include/gstreamer-1.0
 
 # Avoid million warnings
 CFLAGS+=		-Wno-unused-parameter -Wno-undef
-CXXFLAGS+=		-Wno-unused-parameter -Wno-undef
+CXXFLAGS+=		-Wno-unused-parameter -Wno-undef -Wno-narrowing
 
 # g-ir-scanner dumps core with full RELRO
 RELRO_SUPPORTED=	partial
@@ -67,6 +67,18 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
 .endif
 # otherwise, libsqlite3.so from ${BUILDLINK_DIR} is hardcoded into some binaries
 CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
+
+# DEVELOPER_MODE enables WEBKIT_EXEC_PATH env var so MiniBrowser can be run
+# from the build tree without installing; also auto-discovers helpers next to
+# the MiniBrowser binary itself.
+CMAKE_CONFIGURE_ARGS+=		-DDEVELOPER_MODE=ON
+# DEVELOPER_MODE defaults ENABLE_API_TESTS and ENABLE_LAYOUT_TESTS to ON, but
+# the release tarball does not ship those test sources; disable them explicitly.
+# CLANGD_AUTO_SETUP is also enabled by DEVELOPER_MODE but requires Tools/clangd/
+# scripts not present in the tarball.
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_API_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_LAYOUT_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DCLANGD_AUTO_SETUP=OFF
 
 # required for faking a better user-agent
 CMAKE_CONFIGURE_ARGS+=		-DUSER_AGENT_BRANDING="Linux ${MACHINE_ARCH}"
