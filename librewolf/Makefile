@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.650 2025/11/14 17:17:18 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		148.0
-MOZ_BRANCH_MINOR=	  .2
-MOZ_BRANCH_HYPHEN=	  3
+MOZ_BRANCH=		150.0
+MOZ_BRANCH_MINOR=	.2
+MOZ_BRANCH_HYPHEN=	  1
 
 DISTNAME=	librewolf-${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}.source
 PKGNAME=	${DISTNAME:S/.source//:S/-${MOZ_BRANCH_HYPHEN}$//}
@@ -11,7 +11,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://codeberg.org/api/packages/librewolf/generic/librewolf-source/${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}/
 EXTRACT_SUFX=	.tar.gz
 
-NODEJSKIT=		nodejs-output-148.0.tgz
+NODEJSKIT=		nodejs-output-149.0.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -100,6 +100,7 @@ CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
+CHECK_PORTABILITY_SKIP+=	third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
 
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/omni.ja
 
