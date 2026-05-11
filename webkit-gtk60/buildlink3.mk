@@ -14,10 +14,7 @@ GCC_REQD+=	11
 pkgbase := webkit-gtk60
 .include "../../mk/pkg-build-options.mk"
 
-.if ${PKG_BUILD_OPTIONS.webkit-gtk60:Menchant}
 .include "../../textproc/enchant2/buildlink3.mk"
-.endif
-
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
