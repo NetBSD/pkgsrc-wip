@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.108 2025/01/10 22:49:54 wiz Exp $
 
-V=		9.0.7
+V=		10.0.1
 DISTNAME=	kicad-${V}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
@@ -77,4 +77,6 @@ BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../wip/libspnav/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
