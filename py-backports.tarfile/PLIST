@@ -14,8 +14,8 @@ ${PYSITELIB}/backports/tarfile/compat/__init__.pyo
 ${PYSITELIB}/backports/tarfile/compat/py38.py
 ${PYSITELIB}/backports/tarfile/compat/py38.pyc
 ${PYSITELIB}/backports/tarfile/compat/py38.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/backports_tarfile-0.0.0.dist-info/METADATA
+${PYSITELIB}/backports_tarfile-0.0.0.dist-info/RECORD
+${PYSITELIB}/backports_tarfile-0.0.0.dist-info/WHEEL
+${PYSITELIB}/backports_tarfile-0.0.0.dist-info/licenses/LICENSE
+${PYSITELIB}/backports_tarfile-0.0.0.dist-info/top_level.txt
