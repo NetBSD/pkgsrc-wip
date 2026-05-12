@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/huggingface/transformers
 COMMENT=	State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 #TOOL_DEPENDS+=	# TODO: GitPython<3.1.19>=0
 #TOOL_DEPENDS+=	# TODO: GitPython<3.1.19>=0
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
@@ -117,5 +118,6 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.27:../../misc/py-tqdm
 
 USE_LANGUAGES=	c++
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
