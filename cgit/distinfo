@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.9 2026/02/24 21:06:53 wiz Exp $
+
+BLAKE2s (cgit-1.3.tar.xz) = 5135eca7d59787ac49423089b323b5d1ab17d5cd34ce0fc66f5877a8f2efeedf
+SHA512 (cgit-1.3.tar.xz) = 28b7e1867809cafed6190e1984b059a7aaac3a92d8eb38bc925a58fd344347b86662309be44b6ce6625312cb127540aadd7a22b7561e96c8440144ea5eade02e
+Size (cgit-1.3.tar.xz) = 92248 bytes
+BLAKE2s (git-2.53.0.tar.xz) = 2d85a0c30ebaf0b0f613b30e3dd206e27ea22f6ae4908e22a7afe7d268b49261
+SHA512 (git-2.53.0.tar.xz) = f9c0c0f527e10fe3eb524e368b1a24088bfd41097d8cac7854dae7ff21ab8ab2a1716384be53ea6174023ca5a2af3eeddca1d9feb57e447713f82e061df55c8d
+Size (git-2.53.0.tar.xz) = 7993096 bytes
+SHA1 (patch-cgitrc) = a363a2b22f237c507cab7d164e91389d02734372
+SHA1 (patch-git-Makefile) = d70e1778a0f3d6b72268e300357190b25fe5a023
+SHA1 (patch-git_ci_run-test-slice.sh) = 760e6ed63ff3a52e98a721ddf605da87de598cfc

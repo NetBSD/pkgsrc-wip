@@ -1,0 +1,9 @@
+@comment $NetBSD$
+libexec/cgi-bin/cgit.cgi
+libexec/cgit/filters/commit-links.sh
+libexec/cgit/filters/syntax-highlighting.sh
+man/man5/cgitrc.5
+share/examples/cgitrc
+share/httpd/htdocs/cgit/cgit.css
+share/httpd/htdocs/cgit/cgit.js
+share/httpd/htdocs/cgit/cgit.png

@@ -1,0 +1,26 @@
+$NetBSD: patch-git-Makefile,v 1.4 2026/02/24 21:06:53 wiz Exp $
+
+Don't put HOME into binaries.
+
+--- git/Makefile.orig	2026-02-02 02:26:11.000000000 +0000
++++ git/Makefile
+@@ -627,7 +627,7 @@ include shared.mak
+ #   perllibdir
+ # This can help installing the suite in a relocatable way.
+ 
+-prefix = $(HOME)
++prefix = $(PREFIX)
+ bindir = $(prefix)/bin
+ mandir = $(prefix)/share/man
+ infodir = $(prefix)/share/info
+@@ -963,8 +963,8 @@ endif
+ # tweaked by config.* below as well as the command-line, both of
+ # which'll override these defaults.
+ # Older versions of GCC may require adding "-std=gnu99" at the end.
+-CFLAGS = -g -O2 -Wall
+-LDFLAGS =
++# CFLAGS = -g -O2 -Wall
++# LDFLAGS =
+ CC_LD_DYNPATH = -Wl,-rpath,
+ BASIC_CFLAGS = -I.
+ BASIC_LDFLAGS =
