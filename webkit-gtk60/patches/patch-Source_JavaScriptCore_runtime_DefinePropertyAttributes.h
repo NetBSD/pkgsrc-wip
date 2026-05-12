@@ -8,25 +8,15 @@ In file included from /usr/pkg/include/EGL/eglplatform.h:134,
 /tmp/wip/webkit-gtk60/work/webkitgtk-2.52.3/cmake-pkgsrc-build/JavaScriptCore/PrivateHeaders/JavaScriptCore/DefinePropertyAttributes.h:35:51: error: expected unqualified-id before numeric constant
    35 |     static_assert(!static_cast<uint8_t>(TriState::False), "TriState::False is 0.");
       |                                                   ^~~~~
-...
-/tmp/wip/webkit-gtk60/work/webkitgtk-2.52.3/cmake-pkgsrc-build/JavaScriptCore/PrivateHeaders/JavaScriptCore/DefinePropertyAttributes.h: In member function 'std::optional<bool> JSC::DefinePropertyAttributes::writable() const':
-/tmp/wip/webkit-gtk60/work/webkitgtk-2.52.3/cmake-pkgsrc-build/JavaScriptCore/PrivateHeaders/JavaScriptCore/DefinePropertyAttributes.h:106:60: error: expected unqualified-id before numeric constant
-  106 |         return extractTriState(WritableShift) == TriState::True;
-      |                                                            ^~~~
 
-
---- Source/JavaScriptCore/runtime/DefinePropertyAttributes.h.orig	2026-04-17 08:09:15.234936601 +0000
+--- Source/JavaScriptCore/runtime/DefinePropertyAttributes.h.orig	2026-05-11 22:44:47.752626610 +0000
 +++ Source/JavaScriptCore/runtime/DefinePropertyAttributes.h
-@@ -28,6 +28,14 @@
+@@ -28,6 +28,10 @@
  #include <optional>
  #include <wtf/TriState.h>
  
 +#ifdef False
 +#undef False
-+#endif
-+
-+#ifdef True
-+#undef True
 +#endif
 +
  namespace JSC {
