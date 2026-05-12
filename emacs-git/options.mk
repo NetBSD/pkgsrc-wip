@@ -2,7 +2,7 @@
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick libgccjit libotf libwebp svg tree-sitter xaw3d xml
+PKG_SUPPORTED_OPTIONS=			dbus gmp gnutls imagemagick libgccjit libotf libwebp svg tree-sitter xaw3d xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -18,7 +18,8 @@ PKG_OPTIONS_GROUP.toolkit=		gtk3 xaw
 # imagemagick is disabled because of stability/security
 # svg is omitted because it is rarely needed and heavyweight due to the rust dependency
 # xaw3d is omitted because it is only valid with xaw
-PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 libotf libwebp tree-sitter xml x11
+# libotf is omitted because harfbuzz is on by default and a replacement
+PKG_SUGGESTED_OPTIONS=	dbus gmp gnutls gtk3 libwebp tree-sitter xml x11
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -76,6 +77,16 @@ BUILDLINK_API_DEPENDS.libxml2+= libxml2>=2.6.17
 .include "../../textproc/libxml2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-xml2
+.endif
+
+###
+### Support gmp
+###
+.if !empty(PKG_OPTIONS:Mgmp)
+.include "../../devel/gmp/buildlink3.mk"
+USE_TOOLS+=		pkg-config
+.else
+CONFIGURE_ARGS+=	--without-libgmp
 .endif
 
 ###
