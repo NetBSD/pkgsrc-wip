@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pimsync-v0.5.8
+DISTNAME=	pimsync-v0.5.9
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	time net
 # doesn't allow direct downloads
