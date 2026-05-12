@@ -9,6 +9,8 @@ In file included from /usr/pkg/include/EGL/eglplatform.h:134,
    35 |     static_assert(!static_cast<uint8_t>(TriState::False), "TriState::False is 0.");
       |                                                   ^~~~~
 
+https://github.com/WebKit/WebKit/pull/64743
+
 --- Source/JavaScriptCore/runtime/DefinePropertyAttributes.h.orig	2026-05-11 22:44:47.752626610 +0000
 +++ Source/JavaScriptCore/runtime/DefinePropertyAttributes.h
 @@ -28,6 +28,10 @@

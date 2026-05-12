@@ -2,6 +2,7 @@ $NetBSD$
 
 Undefine X11 macro that conflicts with enum value.
 X11/X.h defines Success=0, which breaks PrivateDeclarationResult enum.
+https://github.com/WebKit/WebKit/pull/64743
 
 --- Source/JavaScriptCore/parser/VariableEnvironment.h.orig	2026-04-19 05:55:05.008914400 +0000
 +++ Source/JavaScriptCore/parser/VariableEnvironment.h

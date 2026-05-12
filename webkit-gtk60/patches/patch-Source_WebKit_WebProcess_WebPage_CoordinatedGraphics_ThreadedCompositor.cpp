@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://github.com/WebKit/WebKit/pull/64743
+
 --- Source/WebKit/WebProcess/WebPage/CoordinatedGraphics/ThreadedCompositor.cpp.orig	2026-05-11 22:43:24.758132262 +0000
 +++ Source/WebKit/WebProcess/WebPage/CoordinatedGraphics/ThreadedCompositor.cpp
 @@ -53,6 +53,19 @@

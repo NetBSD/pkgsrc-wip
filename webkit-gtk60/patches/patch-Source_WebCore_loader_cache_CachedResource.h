@@ -9,6 +9,8 @@ In file included from /usr/pkg/include/EGL/eglplatform.h:134,
   120 |     enum Status : uint8_t {
       |          ^~~~~~
 
+https://github.com/WebKit/WebKit/pull/64743
+
 --- Source/WebCore/loader/cache/CachedResource.h.orig	2026-04-17 08:44:48.754804603 +0000
 +++ Source/WebCore/loader/cache/CachedResource.h
 @@ -45,6 +45,10 @@

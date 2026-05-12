@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://github.com/WebKit/WebKit/pull/64743
+
 --- Source/WebCore/platform/graphics/skia/PlatformDisplaySkia.cpp.orig	2026-05-11 22:05:44.502856896 +0000
 +++ Source/WebCore/platform/graphics/skia/PlatformDisplaySkia.cpp
 @@ -59,6 +59,10 @@ WTF_IGNORE_WARNINGS_IN_THIRD_PARTY_CODE_BEGIN
