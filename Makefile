@@ -2176,6 +2176,7 @@ SUBDIR+=	libslab
 SUBDIR+=	libslirp491
 SUBDIR+=	libsml
 SUBDIR+=	libsocialweb
+SUBDIR+=	libspnav
 SUBDIR+=	libspt
 SUBDIR+=	libstacktrace
 SUBDIR+=	libstrophe
