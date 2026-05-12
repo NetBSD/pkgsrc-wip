@@ -15,6 +15,8 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.11.1:../../devel/py-setuptools-rust
 
+DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
+
 USE_LANGUAGES=	c c++
 
 .include "cargo-depends.mk"
