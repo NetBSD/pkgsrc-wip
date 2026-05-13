@@ -5991,6 +5991,7 @@ SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vscode
 SUBDIR+=	vsearch
+SUBDIR+=	vulkan-headers
 SUBDIR+=	w3c-httpd
 SUBDIR+=	wackamole
 SUBDIR+=	wadgadget
