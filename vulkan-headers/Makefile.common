@@ -7,7 +7,7 @@
 # used by parallel/spirv-headers/Makefile
 # used by parallel/spirv-tools/Makefile
 
-SDK_VERSION=	1.4.341.0
+SDK_VERSION=	1.4.350.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	vulkan-sdk-${SDK_VERSION}
 
