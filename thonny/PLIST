@@ -4,8 +4,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/thonny/VERSION
 ${PYSITELIB}/thonny/__init__.py
 ${PYSITELIB}/thonny/__init__.pyc
@@ -61,10 +59,12 @@ ${PYSITELIB}/thonny/jedi_utils.pyo
 ${PYSITELIB}/thonny/languages.py
 ${PYSITELIB}/thonny/languages.pyc
 ${PYSITELIB}/thonny/languages.pyo
-${PYSITELIB}/thonny/locale/ar_AR/LC_MESSAGES/thonny.mo
-${PYSITELIB}/thonny/locale/ar_AR/LC_MESSAGES/thonny.po
+${PYSITELIB}/thonny/locale/ar_SA/LC_MESSAGES/thonny.mo
+${PYSITELIB}/thonny/locale/ar_SA/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/be_BY/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/be_BY/LC_MESSAGES/thonny.po
+${PYSITELIB}/thonny/locale/bg_BG/LC_MESSAGES/thonny.mo
+${PYSITELIB}/thonny/locale/bg_BG/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/ca_ES/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/ca_ES/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/compile_mo.bat
@@ -106,10 +106,16 @@ ${PYSITELIB}/thonny/locale/fr_FR/HELP_CONTENT/shell.rst
 ${PYSITELIB}/thonny/locale/fr_FR/HELP_CONTENT/turtle.rst
 ${PYSITELIB}/thonny/locale/fr_FR/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/fr_FR/LC_MESSAGES/thonny.po
+${PYSITELIB}/thonny/locale/hi_IN/LC_MESSAGES/thonny.mo
+${PYSITELIB}/thonny/locale/hi_IN/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/hu_HU/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/hu_HU/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/hy_AM/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/hy_AM/LC_MESSAGES/thonny.po
+${PYSITELIB}/thonny/locale/id_ID/LC_MESSAGES/thonny.mo
+${PYSITELIB}/thonny/locale/id_ID/LC_MESSAGES/thonny.po
+${PYSITELIB}/thonny/locale/is_IS/LC_MESSAGES/thonny.mo
+${PYSITELIB}/thonny/locale/is_IS/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/it_IT/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/it_IT/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/ja_JP/LC_MESSAGES/thonny.mo
@@ -131,6 +137,8 @@ ${PYSITELIB}/thonny/locale/ko_KR/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/ko_KR/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/lt_LT/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/lt_LT/LC_MESSAGES/thonny.po
+${PYSITELIB}/thonny/locale/ml_IN/LC_MESSAGES/thonny.mo
+${PYSITELIB}/thonny/locale/ml_IN/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/nb_NO/HELP_CONTENT/debugging.rst
 ${PYSITELIB}/thonny/locale/nb_NO/HELP_CONTENT/errors.rst
 ${PYSITELIB}/thonny/locale/nb_NO/HELP_CONTENT/index.rst
@@ -186,6 +194,9 @@ ${PYSITELIB}/thonny/locale/tr_TR/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/uk_UA/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/uk_UA/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/update_pot.bat
+${PYSITELIB}/thonny/locale/update_translations.py
+${PYSITELIB}/thonny/locale/update_translations.pyc
+${PYSITELIB}/thonny/locale/update_translations.pyo
 ${PYSITELIB}/thonny/locale/vi_VN/LC_MESSAGES/thonny.mo
 ${PYSITELIB}/thonny/locale/vi_VN/LC_MESSAGES/thonny.po
 ${PYSITELIB}/thonny/locale/zh_CN/LC_MESSAGES/thonny.mo
@@ -371,6 +382,7 @@ ${PYSITELIB}/thonny/plugins/circuitpython/cirpy_back.pyo
 ${PYSITELIB}/thonny/plugins/circuitpython/cirpy_front.py
 ${PYSITELIB}/thonny/plugins/circuitpython/cirpy_front.pyc
 ${PYSITELIB}/thonny/plugins/circuitpython/cirpy_front.pyo
+${PYSITELIB}/thonny/plugins/circuitpython/devices.json
 ${PYSITELIB}/thonny/plugins/clean_ui_themes.py
 ${PYSITELIB}/thonny/plugins/clean_ui_themes.pyc
 ${PYSITELIB}/thonny/plugins/clean_ui_themes.pyo
@@ -1229,6 +1241,7 @@ ${PYSITELIB}/thonny/test/plugins/test_pip_gui.pyo
 ${PYSITELIB}/thonny/test/test_common.py
 ${PYSITELIB}/thonny/test/test_common.pyc
 ${PYSITELIB}/thonny/test/test_common.pyo
+${PYSITELIB}/thonny/test/what_to_test.txt
 ${PYSITELIB}/thonny/tktextext.py
 ${PYSITELIB}/thonny/tktextext.pyc
 ${PYSITELIB}/thonny/tktextext.pyo

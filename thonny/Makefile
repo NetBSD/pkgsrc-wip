@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	thonny-4.1.7
+DISTNAME=	thonny-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thonny/}
@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-pylint>=2.4:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=45.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-uv-build>=0:../../devel/py-uv-build
 DEPENDS+=	${PYPKGPREFIX}-Tk>=3:../../x11/py-Tk
 
 USE_PKGLOCALEDIR=	yes
