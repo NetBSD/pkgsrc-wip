@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/03/14 13:21:07 abs Exp $
+# $NetBSD: Makefile,v 1.39 2026/04/23 17:55:56 abs Exp $
 
 DISTNAME=	unifi-10.1.89
 CATEGORIES=	net
