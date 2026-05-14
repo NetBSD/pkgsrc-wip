@@ -42,34 +42,37 @@ SUBST_STAGE.libdirs=	pre-configure
 SUBST_FILES.libdirs+=	girepository/gitypelib.c
 SUBST_VARS.libdirs+=	PREFIX
 
-NTARGETS+=	girepository/introspection/GIRepository-3.0.gir
-NTARGETS+=	girepository/introspection/GIRepository-3.0.typelib
-NTARGETS+=	girepository/introspection/GLib-2.0.gir
-NTARGETS+=	girepository/introspection/GLib-2.0.typelib
-NTARGETS+=	girepository/introspection/GLibUnix-2.0.gir
-NTARGETS+=	girepository/introspection/GLibUnix-2.0.typelib
-NTARGETS+=	girepository/introspection/GModule-2.0.gir
-NTARGETS+=	girepository/introspection/GModule-2.0.typelib
-NTARGETS+=	girepository/introspection/GObject-2.0.gir
-NTARGETS+=	girepository/introspection/GObject-2.0.typelib
-NTARGETS+=	girepository/introspection/Gio-2.0.gir
-NTARGETS+=	girepository/introspection/Gio-2.0.typelib
-NTARGETS+=	girepository/introspection/GioUnix-2.0.gir
-NTARGETS+=	girepository/introspection/GioUnix-2.0.typelib
+GIR_TARGETS+=		girepository/introspection/GIRepository-3.0.gir
+GIR_TARGETS+=		girepository/introspection/GLibUnix-2.0.gir
+TYPELIB_TARGETS+=	girepository/introspection/GIRepository-3.0.typelib
+TYPELIB_TARGETS+=	girepository/introspection/GLibUnix-2.0.typelib
+# part of gobject-introspection package:
+#GIR_TARGETS+=		girepository/introspection/GLib-2.0.gir
+#GIR_TARGETS+=		girepository/introspection/GModule-2.0.gir
+#GIR_TARGETS+=		girepository/introspection/GObject-2.0.gir
+#GIR_TARGETS+=		girepository/introspection/Gio-2.0.gir
+#GIR_TARGETS+=		girepository/introspection/GioUnix-2.0.gir
+#TYPELIB_TARGETS+=	girepository/introspection/GLib-2.0.typelib
+#TYPELIB_TARGETS+=	girepository/introspection/GModule-2.0.typelib
+#TYPELIB_TARGETS+=	girepository/introspection/GObject-2.0.typelib
+#TYPELIB_TARGETS+=	girepository/introspection/Gio-2.0.typelib
+#TYPELIB_TARGETS+=	girepository/introspection/GioUnix-2.0.typelib
 
-MESON_BUILD_TARGET=	${NTARGETS}
-
-MESON_INSTALL=	no
+MESON_BUILD_TARGET=	${GIR_ARGETS} ${TYPELIB_TARGETS}
+MESON_INSTALL=		no
 
 INSTALLATION_DIRS=	lib/girepository-1.0 share/gir-1.0
 
+# avoid mixture of headers from ${PREFIX} and the source code itself
+pre-configure:
+	${RM} -rf ${BUILDLINK_DIR}/include/glib-2.0
+
 do-install:
-.for f in ${NTARGETS}
-.  if ${f:Mgir}
+.for f in ${GIR_TARGETS}
 	${INSTALL_DATA} ${WRKSRC}/output/${f} ${DESTDIR}${PREFIX}/share/gir-1.0/
-.  else
+.endfor
+.for f in ${TYPELIB_TARGETS}
 	${INSTALL_DATA} ${WRKSRC}/output/${f} ${DESTDIR}${PREFIX}/lib/girepository-1.0/
-.  endif
 .endfor
 
 .include "../../devel/meson/build.mk"
