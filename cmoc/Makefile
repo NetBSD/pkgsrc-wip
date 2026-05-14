@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	cmoc-0.1.80
+DISTNAME=	cmoc-0.1.98
 CATEGORIES=	cross
-MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
+MASTER_SITES=	http://sarrazip.com/dev/
 
 MAINTAINER=	stix@stix.id.au
-HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/cmoc.html
+HOMEPAGE=	http://sarrazip.com/dev/cmoc.html
 COMMENT=	6809-generating cross-compiler for a large subset of the C language
 LICENSE=	gnu-gpl-v3
 
