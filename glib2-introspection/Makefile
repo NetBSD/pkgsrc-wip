@@ -10,6 +10,8 @@ COMMENT=	GLib2 introspection data (GLibUnix and GIRepository typelibs)
 TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	glib2>=2.88.1:../../devel/glib2
 
+CONFLICTS+=	gobject-introspection<1.86.0nb2
+
 MESON_ARGS+=	-Ddtrace=disabled
 MESON_ARGS+=	-Dglib_debug=disabled
 MESON_ARGS+=	-Dintrospection=enabled
@@ -43,20 +45,19 @@ SUBST_FILES.libdirs+=	girepository/gitypelib.c
 SUBST_VARS.libdirs+=	PREFIX
 
 GIR_TARGETS+=		girepository/introspection/GIRepository-3.0.gir
+GIR_TARGETS+=		girepository/introspection/GLib-2.0.gir
 GIR_TARGETS+=		girepository/introspection/GLibUnix-2.0.gir
+GIR_TARGETS+=		girepository/introspection/GModule-2.0.gir
+GIR_TARGETS+=		girepository/introspection/GObject-2.0.gir
+GIR_TARGETS+=		girepository/introspection/Gio-2.0.gir
+GIR_TARGETS+=		girepository/introspection/GioUnix-2.0.gir
 TYPELIB_TARGETS+=	girepository/introspection/GIRepository-3.0.typelib
+TYPELIB_TARGETS+=	girepository/introspection/GLib-2.0.typelib
 TYPELIB_TARGETS+=	girepository/introspection/GLibUnix-2.0.typelib
-# part of gobject-introspection package:
-#GIR_TARGETS+=		girepository/introspection/GLib-2.0.gir
-#GIR_TARGETS+=		girepository/introspection/GModule-2.0.gir
-#GIR_TARGETS+=		girepository/introspection/GObject-2.0.gir
-#GIR_TARGETS+=		girepository/introspection/Gio-2.0.gir
-#GIR_TARGETS+=		girepository/introspection/GioUnix-2.0.gir
-#TYPELIB_TARGETS+=	girepository/introspection/GLib-2.0.typelib
-#TYPELIB_TARGETS+=	girepository/introspection/GModule-2.0.typelib
-#TYPELIB_TARGETS+=	girepository/introspection/GObject-2.0.typelib
-#TYPELIB_TARGETS+=	girepository/introspection/Gio-2.0.typelib
-#TYPELIB_TARGETS+=	girepository/introspection/GioUnix-2.0.typelib
+TYPELIB_TARGETS+=	girepository/introspection/GModule-2.0.typelib
+TYPELIB_TARGETS+=	girepository/introspection/GObject-2.0.typelib
+TYPELIB_TARGETS+=	girepository/introspection/Gio-2.0.typelib
+TYPELIB_TARGETS+=	girepository/introspection/GioUnix-2.0.typelib
 
 MESON_BUILD_TARGET=	${GIR_ARGETS} ${TYPELIB_TARGETS}
 MESON_INSTALL=		no
