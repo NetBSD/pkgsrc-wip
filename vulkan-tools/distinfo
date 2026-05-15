@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2026/04/13 13:17:59 kikadf Exp $
-
-BLAKE2s (vulkan-tools-1.4.350.0.tar.gz) = 1ff991985ffa7aead517a63eea9e9f592cb2631a56324ffaa824c0e07a4d07d6
-SHA512 (vulkan-tools-1.4.350.0.tar.gz) = 2d2afbcb06bb1ee08ffb3cbe133b531fe6341e90fa0dca4d5459dbdedf201521e798226768a7e307f8b6c08b388114a34a9a581a294f6226ca7a2fcd6f63f813
-Size (vulkan-tools-1.4.350.0.tar.gz) = 811196 bytes
-SHA1 (patch-cube_cube.c) = 662d641041852e2fc049abba57623ca52a88eb5b
-SHA1 (patch-cube_cube.cpp) = 8e960de47586bf0bc8e148b1c3b288d305c58831
