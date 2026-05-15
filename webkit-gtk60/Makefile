@@ -15,6 +15,7 @@ COMMENT=	GTK4 port of the WebKit browser engine (API 6.0)
 LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 
 TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 # uses 'unifdef -x1'
 TOOL_DEPENDS+=	unifdef-[0-9]*:../../devel/unifdef
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
