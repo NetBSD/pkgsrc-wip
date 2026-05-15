@@ -1,5 +1,0 @@
-GLib2 GIRepository-3.0 introspection data.
-
-This package builds glib2 with introspection enabled and installs only
-the GIRepository-3.0 typelib and gir file required by pygobject3 and
-other packages using the new libgirepository-2.0 API.
