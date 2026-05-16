@@ -1,9 +1,6 @@
 # $NetBSD$
 
-VERSION_DIST=	0.8.5
-VERSION_PKG=	0.8.5
-DISTNAME=	g-golf-${VERSION_DIST}
-PKGNAME=	g-golf-${VERSION_PKG}
+DISTNAME=	g-golf-0.8.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=g-golf/}
 
@@ -23,7 +20,6 @@ INFO_FILES=	yes
 PKGCONFIG_OVERRIDE+=	meta/g-golf-1.0.pc.in
 
 TEST_TARGET=	check
-# \todo need guile-lib
 TEST_DEPENDS+=	guile-lib>0:../../devel/guile-lib
 TEST_DEPENDS+=	gtk3+>=3:../../x11/gtk3
 # example depends: 
