@@ -5,7 +5,7 @@ CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=romkatv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTFILES+=	${DEFAULT_DISTFILES} libgit2-${LIBGIT2_VERSION}.tar.gz
-SITES.libgit2-${LIBGIT2_VERSION}.tar.gz= -${MASTER_SITE_GITHUB:=romkatv/}libgit2/archive/${LIBGIT2_VERSION}.tar.gz
+SITES.libgit2-tag-2ecf33948a4df9ef45a66c68b8ef24a5e60eaac6.tar.gz= -https://github.com/romkatv/libgit2/archive/refs/tags/${LIBGIT2_VERSION}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/romkatv/powerlevel10k/

@@ -1,0 +1,18 @@
+$NetBSD$
+
+Enable rquickjs bindgen feature on NetBSD where pre-generated bindings
+are not available, same as the existing FreeBSD workaround.
+
+--- crates/fresh-core/Cargo.toml.orig
++++ crates/fresh-core/Cargo.toml
+@@ -19,6 +19,10 @@ rquickjs-serde = { workspace = true, optional = true }
+ # rquickjs-sys has no pre-generated bindings for FreeBSD
+ [target.'cfg(target_os = "freebsd")'.dependencies]
+ rquickjs = { workspace = true, optional = true, features = ["bindgen"] }
++
++# rquickjs-sys has no pre-generated bindings for NetBSD either
++[target.'cfg(target_os = "netbsd")'.dependencies]
++rquickjs = { workspace = true, optional = true, features = ["bindgen"] }
+
+ [dev-dependencies]
+ proptest = "1.9"

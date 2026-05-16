@@ -1,0 +1,6 @@
+editors/fresh: Add fresh version 0.3.7
+
+Packaged in wip by Chavdar Ivanov and Claude Code.
+
+Fresh is a new, Rust-based text editor that focuses on simplicity and speed.
+It features syntax highlighting, a plugin system, and an intuitive interface.
