@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (dbgpu-2025.12.tar.gz) = beab51edbe22f60e15b4b493453f488e859316325c24325397c323a730bf13f9
+SHA512 (dbgpu-2025.12.tar.gz) = bf8c9fdf0013f9e469a01b861d1c2786b4c0636a4e8215f78be19198cf5c81e549ae78a0bc31fe8b5dd84cbaa3f2c8736a1d3ae09ed5aace53d9f4a99170e68e
+Size (dbgpu-2025.12.tar.gz) = 225653 bytes
