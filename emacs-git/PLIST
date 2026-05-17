@@ -2199,8 +2199,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-cloud.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cloud.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cus.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-dbus.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-dbus.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-delay.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-delay.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-demon.el.gz
@@ -3226,6 +3224,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/elint.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/elint.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/gnus-dbus.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/gnus-dbus.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
