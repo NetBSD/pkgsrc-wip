@@ -36,9 +36,6 @@ ${PYSITELIB}/zensical/collectors/snippets.pyo
 ${PYSITELIB}/zensical/compat/__init__.py
 ${PYSITELIB}/zensical/compat/__init__.pyc
 ${PYSITELIB}/zensical/compat/__init__.pyo
-${PYSITELIB}/zensical/compat/autorefs.py
-${PYSITELIB}/zensical/compat/autorefs.pyc
-${PYSITELIB}/zensical/compat/autorefs.pyo
 ${PYSITELIB}/zensical/compat/mkdocstrings.py
 ${PYSITELIB}/zensical/compat/mkdocstrings.pyc
 ${PYSITELIB}/zensical/compat/mkdocstrings.pyo
@@ -48,6 +45,9 @@ ${PYSITELIB}/zensical/config.pyo
 ${PYSITELIB}/zensical/extensions/__init__.py
 ${PYSITELIB}/zensical/extensions/__init__.pyc
 ${PYSITELIB}/zensical/extensions/__init__.pyo
+${PYSITELIB}/zensical/extensions/autorefs.py
+${PYSITELIB}/zensical/extensions/autorefs.pyc
+${PYSITELIB}/zensical/extensions/autorefs.pyo
 ${PYSITELIB}/zensical/extensions/context.py
 ${PYSITELIB}/zensical/extensions/context.pyc
 ${PYSITELIB}/zensical/extensions/context.pyo
@@ -16484,7 +16484,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zyte.svg
 ${PYSITELIB}/zensical/templates/404.html
 ${PYSITELIB}/zensical/templates/assets/images/favicon.png
 ${PYSITELIB}/zensical/templates/assets/javascripts/LICENSE
-${PYSITELIB}/zensical/templates/assets/javascripts/bundle.dbc0afdc.min.js
+${PYSITELIB}/zensical/templates/assets/javascripts/bundle.6e5f0216.min.js
 ${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.e2d2d235.min.js
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.a2001754.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.7dc9a0ad.min.css

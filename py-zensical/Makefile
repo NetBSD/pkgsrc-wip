@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	zensical-0.0.41
+DISTNAME=	zensical-0.0.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zensical/}
