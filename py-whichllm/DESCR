@@ -1,0 +1,4 @@
+Find the best local LLM that actually runs on your hardware.
+
+Auto-detects your GPU/CPU/RAM and ranks the top models from
+HuggingFace that fit your system.
