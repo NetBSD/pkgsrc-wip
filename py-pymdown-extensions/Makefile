@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pymdown_extensions-10.21.2
+DISTNAME=	pymdown_extensions-10.21.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymdown-extensions/}
