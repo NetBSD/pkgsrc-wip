@@ -224,6 +224,7 @@ DEPENDS+=	tree-sitter-jsdoc-[0-9]*:../../textproc/tree-sitter-jsdoc
 DEPENDS+=	tree-sitter-json-[0-9]*:../../textproc/tree-sitter-json
 DEPENDS+=	tree-sitter-lua-[0-9]*:../../textproc/tree-sitter-lua
 DEPENDS+=	tree-sitter-markdown-[0-9]*:../../textproc/tree-sitter-markdown
+DEPENDS+=	tree-sitter-markdown-inline-[0-9]*:../../textproc/tree-sitter-markdown-inline
 DEPENDS+=	tree-sitter-php-[0-9]*:../../textproc/tree-sitter-php
 DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
 DEPENDS+=	tree-sitter-ruby-[0-9]*:../../textproc/tree-sitter-ruby
