@@ -1,0 +1,9 @@
+# Markless TODO
+
+## UI Hang on NetBSD (2026-05-18)
+
+**Problem:** With `--theme auto` (the default), background thread in `query_terminal_background()` (`main.rs:137`) gets stuck in `read()` on `/dev/tty` when terminal doesn't send proper OSC 11 response, blocking UI.
+
+**Temporary fix:** Pass `--theme dark` (or `--theme light`) to skip background detection.
+
+**Proper fix needed:** Add read timeout or non-blocking I/O to background reader thread, or change default to `dark` via patch.
