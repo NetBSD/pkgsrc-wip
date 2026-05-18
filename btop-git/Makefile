@@ -26,7 +26,7 @@ USE_CXX_FEATURES+=	c++20
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 CXXFLAGS+=	-DNDEBUG
-MAKE_ENV+=	STRIP=true VERBOSE=true
+MAKE_ENV+=	STRIP=false VERBOSE=true DEBUG=true
 
 SUBST_CLASSES+=		themes
 SUBST_SED.themes+=	-e 's,/usr/local/share/btop/themes,${PREFIX}/share/btop/themes,'
