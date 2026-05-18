@@ -1,3 +1,19 @@
-This package can be build only once webkit-gtk is built with webkitgtk-6.0.
+# Building and Installing
 
-check wip/webkit-gtk for details.
+This package can be build only once webkit-gtk is installed with webkitgtk-6.0.
+
+check wip/webkit-gtk60 for details.
+
+# Runs and Crashes
+
+The application opens up correctly, sometimes when opening up a file for reading the follow stacktrace is produced. This also happens more frequently if you try to browse the catalog.
+
+** (com.github.johnfactotum.Foliate:12659): WARNING **: 05:38:49.371: webkit_settings_set_enable_hyperlink_auditing is deprecated and does nothing.
+
+(com.github.johnfactotum.Foliate:12659): com.github.johnfactotum.Foliate-CRITICAL **: 05:38:57.574: My name is Oh-No-WebKit-Crashed, bug of bugs!
+
+(com.github.johnfactotum.Foliate:12659): com.github.johnfactotum.Foliate-CRITICAL **: 05:38:57.574: Look on this line, Developer -- despair!
+
+This is because webkit-gtk60 is crashing behind the scenes and it will produce a core dump in the directly foliate was invoked from.
+
+In addition to this, when browsing catalog, the panel is not refreshed correctly resulting in text being overwritten.
