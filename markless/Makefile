@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	markless-0.9.28
+DISTNAME=	markless-0.9.29
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jvanderberg/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
