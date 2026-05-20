@@ -6242,7 +6242,6 @@ SUBDIR+=	zbackup
 SUBDIR+=	zdbsp
 SUBDIR+=	zed
 SUBDIR+=	zeek
-SUBDIR+=	zellij
 SUBDIR+=	zephyr-lsmalltalk
 SUBDIR+=	zephyr-smalltalk
 SUBDIR+=	zero-epwing-git
