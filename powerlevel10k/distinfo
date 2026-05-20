@@ -6,3 +6,5 @@ Size (libgit2-tag-2ecf33948a4df9ef45a66c68b8ef24a5e60eaac6.tar.gz) = 1518446 byt
 BLAKE2s (powerlevel10k-1.20.0.tar.gz) = 1f0127857467f421316df63e92f30f5cad2712e0eeb526cc126763c884ef4959
 SHA512 (powerlevel10k-1.20.0.tar.gz) = edfcd461e01ba3a88c52e52275f0fdeefce412df717f950cb786d46f98371853ce48542f987ed3020223fd18098da9e7d146653f370bd31baaad0221b9fa924b
 Size (powerlevel10k-1.20.0.tar.gz) = 385278 bytes
+SHA1 (patch-gitstatus_src_index.cc) = aab4ceb0165fd5f82297d1bff27c78f0cffbb115
+SHA1 (patch-gitstatus_src_tag_db.cc) = 8895e40b25e0daefb802681367e5946a33955494
