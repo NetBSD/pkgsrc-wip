@@ -738,8 +738,10 @@ share/PrusaSlicer/profiles/Print4Taste/MC2.0_texture.svg
 share/PrusaSlicer/profiles/Print4Taste/MC2.0_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch.idx
 share/PrusaSlicer/profiles/PrusaResearch.ini
+share/PrusaSlicer/profiles/PrusaResearch/COREONELMMU3_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/COREONEL_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/COREONEMMU3_thumbnail.png
+share/PrusaSlicer/profiles/PrusaResearch/COREONEOAK_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/COREONE_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MINIIS_ALPHA_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MINIIS_BETA_thumbnail.png
@@ -784,6 +786,7 @@ share/PrusaSlicer/profiles/PrusaResearch/coreone.svg
 share/PrusaSlicer/profiles/PrusaResearch/coreone_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/coreonel.svg
 share/PrusaSlicer/profiles/PrusaResearch/coreonel_bed.stl
+share/PrusaSlicer/profiles/PrusaResearch/coreoneoak.svg
 share/PrusaSlicer/profiles/PrusaResearch/mini.svg
 share/PrusaSlicer/profiles/PrusaResearch/miniIS.svg
 share/PrusaSlicer/profiles/PrusaResearch/miniISbeta.svg
@@ -975,6 +978,11 @@ share/PrusaSlicer/profiles/Voron/Voron_v2_300_afterburner_thumbnail.png
 share/PrusaSlicer/profiles/Voron/Voron_v2_300_thumbnail.png
 share/PrusaSlicer/profiles/Voron/Voron_v2_350_afterburner_thumbnail.png
 share/PrusaSlicer/profiles/Voron/Voron_v2_350_thumbnail.png
+share/PrusaSlicer/profiles/Voron/bedmodel_120x120.stl
+share/PrusaSlicer/profiles/Voron/bedmodel_250x250.stl
+share/PrusaSlicer/profiles/Voron/bedmodel_252x241.stl
+share/PrusaSlicer/profiles/Voron/bedmodel_300x300.stl
+share/PrusaSlicer/profiles/Voron/bedmodel_350x350.stl
 share/PrusaSlicer/profiles/Voron/bedtexture-SW-250x210.png
 share/PrusaSlicer/profiles/Voron/bedtexture-v0-120.png
 share/PrusaSlicer/profiles/Voron/bedtexture-v1-250.png
@@ -982,6 +990,11 @@ share/PrusaSlicer/profiles/Voron/bedtexture-v1-300.png
 share/PrusaSlicer/profiles/Voron/bedtexture-v2-250.png
 share/PrusaSlicer/profiles/Voron/bedtexture-v2-300.png
 share/PrusaSlicer/profiles/Voron/bedtexture-v2-350.png
+share/PrusaSlicer/profiles/Voron/bedtexture_120x120-dark.png
+share/PrusaSlicer/profiles/Voron/bedtexture_250x250-dark.png
+share/PrusaSlicer/profiles/Voron/bedtexture_252x241-dark.png
+share/PrusaSlicer/profiles/Voron/bedtexture_300x300-dark.png
+share/PrusaSlicer/profiles/Voron/bedtexture_350x350-dark.png
 share/PrusaSlicer/profiles/Voron/printbed-SW-MK52.stl
 share/PrusaSlicer/profiles/Voron/printbed-v0-120.stl
 share/PrusaSlicer/profiles/Voron/printbed-v1-250.stl
@@ -990,6 +1003,14 @@ share/PrusaSlicer/profiles/Voron/printbed-v1-350.stl
 share/PrusaSlicer/profiles/Voron/printbed-v2-250.stl
 share/PrusaSlicer/profiles/Voron/printbed-v2-300.stl
 share/PrusaSlicer/profiles/Voron/printbed-v2-350.stl
+share/PrusaSlicer/profiles/Voron/thumbnail_v0.png
+share/PrusaSlicer/profiles/Voron/thumbnail_v0_miniab.png
+share/PrusaSlicer/profiles/Voron/thumbnail_v2.png
+share/PrusaSlicer/profiles/Voron/thumbnail_v2_afterburner.png
+share/PrusaSlicer/profiles/Voron/thumbnail_vs.png
+share/PrusaSlicer/profiles/Voron/thumbnail_vs_afterburner.png
+share/PrusaSlicer/profiles/Voron/thumbnail_vt.png
+share/PrusaSlicer/profiles/Voron/thumbnail_vt_afterburner.png
 share/PrusaSlicer/profiles/Zonestar.idx
 share/PrusaSlicer/profiles/Zonestar.ini
 share/PrusaSlicer/profiles/Zonestar/150_texture.svg
@@ -1150,6 +1171,7 @@ share/PrusaSlicer/web/connect_loading.html
 share/PrusaSlicer/web/error_no_reload.html
 share/PrusaSlicer/web/other_error.html
 share/PrusaSlicer/web/other_loading.html
+share/PrusaSlicer/workflows/workflows.json
 share/applications/PrusaGcodeviewer.desktop
 share/applications/PrusaSlicer.desktop
 share/icons/hicolor/128x128/apps/PrusaSlicer-gcodeviewer.png
