@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/deepseek
+bin/deepseek-app-server
+bin/deepseek-tui

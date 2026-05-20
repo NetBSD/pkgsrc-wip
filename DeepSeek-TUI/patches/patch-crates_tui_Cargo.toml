@@ -1,0 +1,18 @@
+$NetBSD$
+
+Fix build on NetBSD: upgrade portable-pty from 0.8 to 0.9.
+portable-pty-0.8.1 depends on serial-unix which depends on termios-0.2.2,
+which has no NetBSD support. portable-pty-0.9.0 uses serial2 instead.
+
+
+--- crates/tui/Cargo.toml.orig
++++ crates/tui/Cargo.toml
+@@ -63,7 +63,7 @@
+ shlex = "1.3.0"
+ starlark = "0.13.0"
+ tiny_http = "0.12"
+-portable-pty = "0.8"
++portable-pty = "0.9"
+ zeroize = "1.8.2"
+ ignore = "0.4"
+ image = { version = "0.25", default-features = false, features = ["png"] }

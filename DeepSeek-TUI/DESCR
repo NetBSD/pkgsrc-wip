@@ -1,0 +1,12 @@
+DeepSeek TUI
+
+DeepSeek TUI is a coding agent that runs in your terminal. It can:
+   - read and edit files;
+   - run shell commands;
+   - search the web;
+   - manage git;
+   - coordinate sub-agents from a keyboard-driven TUI.
+
+It is built around DeepSeek V4 (deepseek-v4-pro / deepseek-v4-flash),
+including 1M-token context windows, streaming reasoning blocks,
+and prefix-cache-aware cost reporting.

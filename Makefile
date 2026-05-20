@@ -17,6 +17,7 @@ SUBDIR+=	Bear
 SUBDIR+=	Chinput
 SUBDIR+=	Coin
 SUBDIR+=	CuraEngine
+SUBDIR+=	DeepSeek-TUI
 SUBDIR+=	ETL
 SUBDIR+=	FLIF
 SUBDIR+=	FLIF-git
