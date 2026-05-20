@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-hidapi>=0.14.0:../../wip/py-hidapi
 DEPENDS+=	${PYPKGPREFIX}-semver>=2.8.1:../../devel/py-semver
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.2:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-noiseprotocol>=0.3:../../wip/py-noiseprotocol
+DEPENDS+=	${PYPKGPREFIX}-noiseprotocol>=0.3:../../security/py-noiseprotocol
 
 USE_LANGUAGES=	# none
 
