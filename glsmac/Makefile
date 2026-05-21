@@ -1,13 +1,10 @@
 # $NetBSD: Makefile,v 1.240 2022/11/23 16:19:06 lubo Exp $
 #
-# Some environment variables that can help debugging this:
-# https://trac.webkit.org/wiki/EnvironmentVariables
 
 DISTNAME=	development
 PKGNAME=	${DISTNAME:S/glsmac/glsmac/}
 CATEGORIES=	games
-MASTER_SITES=	https://github.com/afwbkbc/glsmac/releases
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=afwbkbc/} #https://github.com/afwbkbc/glsmac/releases
 
 MAINTAINER=	zr90004@gmail.com
 HOMEPAGE=	https://github.com/afwbkbc/glsmac
