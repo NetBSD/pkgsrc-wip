@@ -3,8 +3,8 @@
 # Some environment variables that can help debugging this:
 # https://trac.webkit.org/wiki/EnvironmentVariables
 
-DISTNAME=	glsmac-git
-PKGNAME=	${DISTNAME:S/development/development/}
+DISTNAME=	development
+PKGNAME=	${DISTNAME:S/glsmac/glsmac/}
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/afwbkbc/glsmac/releases
 EXTRACT_SUFX=	.tar.gz
@@ -36,5 +36,3 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
 .endif
 
 CXXFLAGS.SunOS+=	-fpermissive
-
-.include "options.mk"
