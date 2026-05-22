@@ -1,0 +1,47 @@
+net/powerdns: Update to version 5.0.5
+
+5.0.5
+Released: 20th of May 2026
+This is release 5.0.5 of the Authoritative Server. It contains bug fixes and security fixes.
+
+Please review the Upgrade Notes before upgrading from versions < 4.9.x.
+
+Bug Fixes
+Fix PowerDNS Security Advisory 2026-06 for PowerDNS Authoritative Server: Multiple Issues
+References: pull request 17443
+
+use less inefficient code in web server
+References: #17284, pull request 17296
+
+harden xfr*BitInt writers
+References: #17240, pull request 17294
+
+perform axfr immediately when creating an autosecondary domain
+References: #16636, pull request 17259
+
+Actually install binaries when building with meson
+References: #16671, pull request 17261
+
+web: stricter control of statistics rings changes
+References: #16731, pull request 17263
+
+stricter handing of the Lua DNS update policy
+References: #16831, pull request 17264
+
+correctly delete ENT records from the API
+References: #17000, pull request 17266
+
+lua: one more bad case of createForward
+References: #17126, pull request 17268
+
+minor pdns_control bugfixes
+References: #17130, pull request 17270
+
+webserver: correctly split the basic authorization cookie
+References: #17149, pull request 17273
+
+fixes to AXFR in Bind backend
+References: #17152, pull request 17275
+
+dnsupdate handling buglet
+References: #17155, pull request 17277
