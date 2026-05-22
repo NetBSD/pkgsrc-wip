@@ -2,14 +2,14 @@
 
 DISTNAME=	v0.3-595d19a
 PKGNAME=	${DISTNAME:S,^v,,}
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afwbkbc/glsmac/releases/tag/development/}
 EXTRACT_SUFX=	# none
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org
+MAINTAINER=	zr90004@gmail.com
 HOMEPAGE=	https://github.com/afwbkbc/glsmac/releases/tag/development/ # TODO: check
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	NetBSD port of glsmac game from github
+LICENSE=	gnu-agpl-v3# TODO: (see mk/license.mk)
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
