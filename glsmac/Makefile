@@ -22,7 +22,7 @@ CXXFLAGS+=		-Wno-unused-parameter -Wno-undef
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 #CTF_SUPPORTED=	no
 
-GCC_REQD+=		17
+GCC_REQD+=		11
 
 .include "../../mk/bsd.prefs.mk"
 
