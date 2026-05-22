@@ -9,7 +9,7 @@ EXTRACT_SUFX=	# none
 MAINTAINER=	zr90004@gmail.com
 HOMEPAGE=	https://github.com/afwbkbc/glsmac/releases/tag/development/ # TODO: check
 COMMENT=	NetBSD port of glsmac game from github
-LICENSE=	gnu-agpl-v3# TODO: (see mk/license.mk)
+LICENSE=	gnu-agpl-v3 # TODO: (see mk/license.mk)
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
