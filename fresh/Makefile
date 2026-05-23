@@ -1,19 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	fresh-editor-0.3.7-source
-PKGNAME=	fresh-0.3.7  # This creates a simpler package name 'fresh'
+DISTNAME=	fresh-editor-0.3.8-source
+PKGNAME=	fresh-0.3.8  # This creates a simpler package name 'fresh'
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sinelaw/}
 GITHUB_PROJECT=	fresh
-# GITHUB_TAG=	v${PKGVERSION_NOREV}  # This will use v0.3.7
-GITHUB_RELEASE=	v0.3.7
+# GITHUB_TAG=	v${PKGVERSION_NOREV}  # This will use v0.3.8
+GITHUB_RELEASE=	v0.3.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://getfresh.dev/
 COMMENT=	Terminal-based IDE and text editor with zero configuration
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/fresh-0.3.7
+WRKSRC=		${WRKDIR}/fresh-0.3.8
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 
