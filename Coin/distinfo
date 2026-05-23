@@ -3,6 +3,7 @@ $NetBSD: distinfo,v 1.10 2021/10/26 10:45:53 nia Exp $
 BLAKE2s (Coin-4.0.6.tar.gz) = 4e3caaf5060ca8e881724c5553cedc1bc6ffd75805df1d668e02b41a43e91624
 SHA512 (Coin-4.0.6.tar.gz) = 4594f1b23a32298b2fc3ce77287fba7c76c9912e17aa596f5f45aae300775fc2794e5c47720767a0116b981306a60c3ca70729fdab17d1476696834507d78c75
 Size (Coin-4.0.6.tar.gz) = 6954700 bytes
+SHA1 (patch-src_glue_gl.cpp) = c21290dd11e4c18d30d6a990313523566e02d1f1
 SHA1 (patch-src_tidbits.cpp) = 00370f155dd38fdde8098fe99869c4bd4357298f
 SHA1 (patch-testsuite_TestSuiteMisc.h) = 42f703b5eec0047d996519f721e00fd63cda873e
 SHA1 (patch-testsuite_TestSuiteUtils.cpp) = a81d2a5193cfbeabdff21369d6a72f9d6faa9da6
