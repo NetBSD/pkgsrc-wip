@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (freecad-1.0.2/freecad_source.tar.gz) = 70d2feca68ab0fa2119665c6b082b7d84e5974d31a71ba36e17ddd15bb0a2e9f
-SHA512 (freecad-1.0.2/freecad_source.tar.gz) = bc27d6dc31786d99609b6998f2e7e4bdcb58096a97cab9f959678e170e5734899b2b170a700e6376136add3130ffdf05c5ebbda155382d8f54ba8d0812790b96
-Size (freecad-1.0.2/freecad_source.tar.gz) = 97214151 bytes
-SHA1 (patch-cMake_FreeCAD__Helpers_SetupBoost.cmake) = c8487a4b3a97b1dcfae55a119a701fc6de6093fc
-SHA1 (patch-src_App_Application.cpp) = 5a86b727878e77cd5ce7f0634b0d8802e71204ed
+BLAKE2s (freecad_source_1.1.1.tar.gz) = e91bd2dbde90bd351cfe8e16542e4b2a4b87838fda74a6785f95fe2972be338c
+SHA512 (freecad_source_1.1.1.tar.gz) = f549d1dd26031ea3909e08839d4267f19d19e61d66138bfaa6a77bc0b1877c7c63f26eaa0ec1792ac10d6524b108fa6fef348f9a3c2d3ef1b2f6a38d63d25a57
+Size (freecad_source_1.1.1.tar.gz) = 98159711 bytes
+SHA1 (patch-src_App_Application.cpp) = ed1a23d643d67063bbe5e4bede3a04f1a516ed12
+SHA1 (patch-src_App_ApplicationDirectories.cpp) = c188c7cd0d85779d1c060b5eb1e9cd58a7f3ecc7

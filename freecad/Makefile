@@ -1,13 +1,12 @@
 # $NetBSD$
 
-VERSION=	1.0.2
-DISTNAME=	freecad_source
+VERSION=	1.1.1
+DISTNAME=	freecad_source_${VERSION}
 PKGNAME=	freecad-${VERSION}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FreeCAD/}
 GITHUB_PROJECT=	FreeCAD
 GITHUB_RELEASE=	${VERSION}
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	rumko@NetBSD.org
 HOMEPAGE=	http://www.freecadweb.org/
@@ -19,7 +18,7 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=			c c++
 USE_TOOLS+=			perl
 USE_TOOLS+=			gmake
-USE_CXX_FEATURES=		c++17
+USE_CXX_FEATURES=		c++20
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 ICON_THEMES=			yes
 
@@ -31,7 +30,6 @@ CMAKE_CONFIGURE_ARGS+=		-DCMAKE_CXX_FLAGS=${CXXFLAGS:Q}
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_SHARED_LINKER_FLAGS=${LDFLAGS:Q}
 CMAKE_CONFIGURE_ARGS+=		-DFREECAD_QT_VERSION="6"
 CMAKE_CONFIGURE_ARGS+=		-DPYTHON_PACKAGES_PATH=${PYSITELIB}
-CMAKE_CONFIGURE_ARGS+=		-DXDG_DATADIR="${PREFIX}/share"
 CMAKE_CONFIGURE_ARGS+=		-DXDG_DATADIR="${PREFIX}/share"
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_ASSEMBLY="ON"
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_DESIGNER_PLUGIN="ON"
@@ -52,14 +50,6 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_CUDA="OFF"
 CMAKE_CONFIGURE_ARGS+=		-DUSE_OPENCV="OFF"
 CMAKE_CONFIGURE_ARGS+=		-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
-# Workaround for med's hdf5_110 version requirement, borrowed from freebsd ports.
-CMAKE_CONFIGURE_ARGS+=		-DHDF5_CFLAGS="-I${BUILDLINK_DIR}/include"
-CMAKE_CONFIGURE_ARGS+=		-DHDF5_FOUND=TRUE
-CMAKE_CONFIGURE_ARGS+=		-DHDF5_VERSION="1.10.11"
-CMAKE_CONFIGURE_ARGS+=		-DHDF5_INCLUDE_DIRS="${BUILDLINK_DIR}/include/hdf5-110"
-CMAKE_CONFIGURE_ARGS+=		-DHDF5_LIBRARIES="-L${BUILDLINK_DIR}/lib -lhdf5-110"
-CMAKE_CONFIGURE_ARGS+=		-DHDF5_LIBRARY_DIRS="${BUILDLINK_DIR}/lib"
-
 SUBST_CLASSES+=		eol
 SUBST_MESSAGE.eol=	Removing DOS line-ends
 SUBST_STAGE.eol=	post-extract
@@ -70,6 +60,7 @@ REPLACE_PYTHON+=	src/Tools/wiki2qhelp.py src/Tools/PythonToCPP.py src/Tools/gith
 REPLACE_PYTHON+=	src/Tools/generateBase/generateModel_Module.py src/Tools/generateBase/generateDS.py
 REPLACE_PYTHON+=	src/Mod/Test/testmakeWireString.py src/Mod/Test/testPathArray.py src/Mod/Test/testPathArraySel.py src/Mod/Test/unittestgui.py
 REPLACE_PYTHON+=	src/Mod/Robot/MovieTool.py src/Mod/OpenSCAD/prototype.py
+REPLACE_PYTHON+=	src/Tools/freecad-thumbnailer.in
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
@@ -91,6 +82,7 @@ SUBST_SED.datadir=	-e "s|CMAKE_INSTALL_DATAROOTDIR|XDG_DATADIR|g"
 #DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-boost-[0-9]*:../../devel/py-boost
 
+.include "../../archivers/libaec/buildlink3.mk"
 .include "../../cad/occt/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/py-boost/buildlink3.mk"
@@ -108,7 +100,7 @@ DEPENDS+=	${PYPKGPREFIX}-boost-[0-9]*:../../devel/py-boost
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
-.include "../../wip/hdf5_110/buildlink3.mk"
+.include "../../devel/hdf5/buildlink3.mk"
 .include "../../wip/med/buildlink3.mk"
 .include "../../wip/orocos-kdl/buildlink3.mk"
 .include "../../wip/py-pyside6/buildlink3.mk"
