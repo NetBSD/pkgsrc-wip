@@ -1,0 +1,6 @@
+Rio is a hardware-accelerated GPU terminal emulator written in Rust.
+It uses wgpu for cross-platform GPU rendering of text and UI elements.
+Supports X11 on Unix systems with full Sixel, iTerm2 image protocol,
+and Unicode rendering.
+
+Primary platform targets: BSD, Linux, macOS, Windows.

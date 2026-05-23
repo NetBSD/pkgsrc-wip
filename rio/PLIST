@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/rio
+share/applications/rio.desktop
+share/icons/hicolor/scalable/apps/rio.svg
