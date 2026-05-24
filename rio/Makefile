@@ -39,6 +39,42 @@ INSTALLATION_DIRS=	bin \
 			share/applications \
 			share/icons/hicolor/scalable/apps
 
+# Patch vendor crates to enable wgpu GLES backend on NetBSD.
+#
+# wgpu and wgpu-core have explicit platform allowlists (Windows/Linux/Android/Apple)
+# for their Vulkan and GLES backends.  Each patched file is followed by a checksum
+# reset ("files":{}) so Cargo skips per-file verification of the modified entries.
+pre-configure:
+	# wgpu/build.rs: add NetBSD to vulkan and gles cfg platform conditions
+	${SED} -i \
+	    -e 's|target_os = "android"), feature = "vulkan")|target_os = "android", target_os = "netbsd"), feature = "vulkan")|' \
+	    -e 's|target_os = "android", Emscripten), feature = "gles")|target_os = "android", Emscripten, target_os = "netbsd"), feature = "gles")|' \
+	    ${WRKDIR}/vendor/wgpu-25.0.2/build.rs
+	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
+	    ${WRKDIR}/vendor/wgpu-25.0.2/.cargo-checksum.json
+	# wgpu-core/build.rs: add NetBSD to windows_linux_android alias
+	${SED} -i \
+	    -e 's|target_os = "android") }|target_os = "android", target_os = "netbsd") }|' \
+	    ${WRKDIR}/vendor/wgpu-core-25.0.2/build.rs
+	# wgpu-core/Cargo.toml: add NetBSD to target dep + activate wgpu-hal features directly
+	${SED} -i \
+	    -e "s|'cfg(any(windows, target_os = \"linux\", target_os = \"android\"))'\.dependencies\.wgpu-core-deps|'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"netbsd\"))'.dependencies.wgpu-core-deps|" \
+	    -e 's|vulkan = \["wgpu-core-deps-windows-linux-android/vulkan"\]|vulkan = ["wgpu-core-deps-windows-linux-android/vulkan", "wgpu-hal/vulkan"]|' \
+	    ${WRKDIR}/vendor/wgpu-core-25.0.2/Cargo.toml
+	${AWK} '/"wgpu-core-deps-emscripten\/gles",$/ { print; print "    \"wgpu-hal/gles\","; next } { print }' \
+	    ${WRKDIR}/vendor/wgpu-core-25.0.2/Cargo.toml > \
+	    ${WRKDIR}/vendor/wgpu-core-25.0.2/Cargo.toml.new
+	${MV} ${WRKDIR}/vendor/wgpu-core-25.0.2/Cargo.toml.new \
+	    ${WRKDIR}/vendor/wgpu-core-25.0.2/Cargo.toml
+	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
+	    ${WRKDIR}/vendor/wgpu-core-25.0.2/.cargo-checksum.json
+	# wgpu-core-deps-windows-linux-android/Cargo.toml: unconditional wgpu-hal dependency
+	${SED} -i \
+	    -e "s|\[target\.'cfg(any(windows, target_os = \"linux\", target_os = \"android\"))'\.dependencies\.wgpu-hal\]|[dependencies.wgpu-hal]|" \
+	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-25.0.0/Cargo.toml
+	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
+	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-25.0.0/.cargo-checksum.json
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rio \
 		${DESTDIR}${PREFIX}/bin/rio

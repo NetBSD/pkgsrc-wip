@@ -1,0 +1,23 @@
+$NetBSD$
+
+Wrap Exec with env EGL_LOG_LEVEL=fatal to suppress the harmless Mesa DRI2
+authentication warning that appears on systems using software EGL (e.g. VMs
+without a DRI2-capable X driver).
+
+--- misc/rio.desktop.orig
++++ misc/rio.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Type=Application
+ TryExec=rio
+-Exec=rio
++Exec=env EGL_LOG_LEVEL=fatal rio
+ Icon=rio
+ Terminal=false
+ Categories=System;TerminalEmulator;
+@@ -14,4 +14,4 @@
+ 
+ [Desktop Action New]
+ Name=New Terminal
+-Exec=rio
++Exec=env EGL_LOG_LEVEL=fatal rio

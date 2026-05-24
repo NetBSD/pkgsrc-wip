@@ -2,7 +2,9 @@ $NetBSD$
 
 Add NetBSD support to teletypewriter: TIOCSWINSZ constant (same value as
 FreeBSD), BSD termios branch, and exclude NetBSD from the Linux/macOS-only
-IUTF8 flag (not defined in NetBSD libc).
+IUTF8 flag (not defined in NetBSD libc).  Also set B38400 baud rate in the
+PTY termios to prevent NetBSD tty.c B0 hangup semantics (c_ospeed=0 triggers
+ttysig(SIGHUP) to the session leader via the kernel PTY path).
 
 --- teletypewriter/src/unix/mod.rs.orig
 +++ teletypewriter/src/unix/mod.rs
@@ -15,7 +17,7 @@ IUTF8 flag (not defined in NetBSD libc).
  
  #[link(name = "util")]
  extern "C" {
-@@ -289,7 +291,7 @@
+@@ -289,25 +291,25 @@
          c_line: 0,
      };
  
@@ -24,8 +26,20 @@ IUTF8 flag (not defined in NetBSD libc).
      let mut term = libc::termios {
          c_iflag: libc::ICRNL | libc::IXON | libc::IXANY | libc::IMAXBEL | libc::BRKINT,
          c_oflag: libc::OPOST | libc::ONLCR,
-@@ -307,7 +309,7 @@
-         c_ospeed: Default::default(),
+         c_cflag: libc::CREAD | libc::CS8 | libc::HUPCL,
+         c_lflag: libc::ICANON
+             | libc::ISIG
+             | libc::IEXTEN
+             | libc::ECHO
+             | libc::ECHOE
+             | libc::ECHOK
+             | libc::ECHOKE
+             | libc::ECHOCTL,
+         c_cc: Default::default(),
+-        c_ispeed: Default::default(),
+-        c_ospeed: Default::default(),
++        c_ispeed: libc::B38400 as libc::c_int,
++        c_ospeed: libc::B38400 as libc::c_int,
      };
  
 -    #[cfg(not(target_os = "freebsd"))]
