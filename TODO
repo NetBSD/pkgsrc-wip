@@ -16,12 +16,14 @@ Suggested package updates
 	o blam-1.8.12
 	o bleachbit-0.9.6
 	o blink-2.0.0
+	o bookokrat-0.3.11
 	o cairo-dock-3.6.0
 	o cairo-java-1.0.8
 	o calligra-3.0.1
 	o chapel-1.32.0
 	o cinelerra-4.5
 	o codex-0.98.0
+	o crush-0.71.0
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o deadbeef-1.9.6
@@ -41,6 +43,7 @@ Suggested package updates
 	o firebird-3.0
 	o flc-1.12
 	o flowblade-2.14
+	o forge-0.5.1
 	o freecad-1.1
 	o gambas2-3.7.1
 	o gcc42-4.2.4
@@ -129,6 +132,7 @@ Suggested package updates
 	o qmc2-0.59
 	o qupzilla-2.2.1
 	o rdup-1.1.13
+	o resterm-0.39.5
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
 	o rygel-0.26.0
