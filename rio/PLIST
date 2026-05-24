@@ -2,3 +2,8 @@
 bin/rio
 share/applications/rio.desktop
 share/icons/hicolor/scalable/apps/rio.svg
+share/terminfo/r/rio+base
+share/terminfo/x/xterm-rio
+${PLIST.man}man/man1/rio.1
+${PLIST.man}man/man5/rio-bindings.5
+${PLIST.man}man/man5/rio.5

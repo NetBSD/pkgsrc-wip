@@ -25,6 +25,8 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
 
+.include "options.mk"
+
 # Force pkg-config to see only buildlink'd .pc files so fontconfig-sys picks
 # up pkgsrc's libfontconfig.so.1 instead of X11R7's .so.2.
 PKGSRC_MAKE_ENV+=	PKG_CONFIG_LIBDIR=${BUILDLINK_DIR}/lib/pkgconfig
@@ -35,9 +37,18 @@ RUSTFLAGS+=	-C link-arg=-Wl,-rpath,/usr/X11R7/lib
 
 ICON_THEMES=	yes
 
-INSTALLATION_DIRS=	bin \
+# Substitute PREFIX into the .desktop Exec line so TERMINFO_DIRS points to
+# the installed terminfo directory at runtime.
+SUBST_CLASSES+=			terminfo-dirs
+SUBST_STAGE.terminfo-dirs=	post-patch
+SUBST_FILES.terminfo-dirs=	misc/rio.desktop
+SUBST_VARS.terminfo-dirs=	PREFIX
+
+INSTALLATION_DIRS+=	bin \
 			share/applications \
-			share/icons/hicolor/scalable/apps
+			share/icons/hicolor/scalable/apps \
+			share/terminfo
+
 
 # Patch vendor crates to enable wgpu GLES backend on NetBSD.
 #
@@ -82,6 +93,18 @@ do-install:
 		${DESTDIR}${PREFIX}/share/applications/rio.desktop
 	${INSTALL_DATA} ${WRKSRC}/misc/logo.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/rio.svg
+	# Install terminfo so programs inside rio recognise TERM=xterm-rio.
+	${LOCALBASE}/bin/tic -x -o ${DESTDIR}${PREFIX}/share/terminfo \
+		${WRKSRC}/misc/rio.terminfo
+.if !empty(PKG_OPTIONS:Mman)
+	# Build and install man pages from scdoc source in extra/man/.
+	${SCDOC} < ${WRKSRC}/extra/man/rio.1.scd > \
+		${DESTDIR}${PREFIX}/man/man1/rio.1
+	${SCDOC} < ${WRKSRC}/extra/man/rio.5.scd > \
+		${DESTDIR}${PREFIX}/man/man5/rio.5
+	${SCDOC} < ${WRKSRC}/extra/man/rio-bindings.5.scd > \
+		${DESTDIR}${PREFIX}/man/man5/rio-bindings.5
+.endif
 
 .include "cargo-depends.mk"
 

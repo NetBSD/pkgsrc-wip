@@ -1,0 +1,30 @@
+$NetBSD$
+
+Remove the "rio" terminfo entry from the source.  pkgsrc ncurses already
+ships share/terminfo/r/rio (and rio-direct); compiling it here would cause
+a PLIST conflict at pkg_add time.  The rio+base and xterm-rio entries are
+unique to this package and are compiled normally.
+
+--- misc/rio.terminfo.orig
++++ misc/rio.terminfo
+@@ -1,20 +1,6 @@
+ xterm-rio,
+     use=rio+base,
+ 
+-rio,
+-    use=xterm-rio,
+-    rs1=\Ec\E]104\007,
+-    ccc,
+-    colors#0x100, pairs#0x7FFF,
+-    initc=\E]4;%p1%d;rgb\:%p2%{255}%*%{1000}%/%2.2X/%p3%{255}%*
+-          %{1000}%/%2.2X/%p4%{255}%*%{1000}%/%2.2X\E\\,
+-    oc=\E]104\007,
+-    setab=\E[%?%p1%{8}%<%t4%p1%d%e%p1%{16}%<%t10%p1%{8}%-%d%e48;
+-          5;%p1%d%;m,
+-    setaf=\E[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5
+-          ;%p1%d%;m,
+-    setb@, setf@,
+-
+ rio+base,
+     OTbs, am, bce, km, mir, msgr, xenl, AX, XT,
+     colors#8, cols#80, it#8, lines#24, pairs#64,

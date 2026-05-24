@@ -6,6 +6,11 @@ IUTF8 flag (not defined in NetBSD libc).  Also set B38400 baud rate in the
 PTY termios to prevent NetBSD tty.c B0 hangup semantics (c_ospeed=0 triggers
 ttysig(SIGHUP) to the session leader via the kernel PTY path).
 
+On NetBSD, $SHELL in graphical sessions is often inherited from the display
+manager (/bin/ksh) rather than reflecting the user's configured login shell.
+Override with pw_shell from getpwuid_r so rio always starts the shell from
+/etc/passwd, matching the documented "user's login shell" behaviour.
+
 --- teletypewriter/src/unix/mod.rs.orig
 +++ teletypewriter/src/unix/mod.rs
 @@ -34,6 +34,8 @@
@@ -47,3 +52,17 @@ ttysig(SIGHUP) to the session leader via the kernel PTY path).
      {
          // Enable utf8 support if requested
          if utf8 {
+@@ -381,6 +381,13 @@
+             },
+         };
+ 
++        #[cfg(target_os = "netbsd")]
++        if let Ok(ref pw) = pw {
++            if !pw.shell.is_empty() {
++                shell = pw.shell.to_owned();
++            }
++        }
++
+         Ok(Self { user, home, shell })
+     }
+ }
