@@ -1,0 +1,3 @@
+Android unofficial platform-tools, a CMake-based extraction of the
+modern AOSP adb, fastboot, mkbootimg and image utilities.  Tracks
+Google's SDK Platform-Tools releases.

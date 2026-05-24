@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/adb
+bin/append2simg
+bin/avbtool
+bin/ext2simg
+bin/fastboot
+bin/img2simg
+bin/lpadd
+bin/lpdump
+bin/lpflash
+bin/lpmake
+bin/lpunpack
+bin/make_f2fs
+bin/mkbootimg
+bin/mkdtboimg
+bin/mke2fs.android
+bin/repack_bootimg
+bin/simg2img
+bin/sload_f2fs
+bin/unpack_bootimg
+man/man1/adb.1
+share/android-tools/completions/adb
+share/android-tools/completions/fastboot
+share/android-tools/mkbootimg/gki/generate_gki_certificate.py
+share/android-tools/mkbootimg/mkbootimg.py
+share/bash-completion/completions/adb
+share/bash-completion/completions/fastboot

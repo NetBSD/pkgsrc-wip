@@ -1,0 +1,13 @@
+- Linux smoke build. Package has been built and stage-installed
+  cleanly on darwin/arm64 only. Confirm Linux before committing -
+  the PLIST/PLIST.adb-only split assumes Linux works equivalently.
+
+- NetBSD/other BSD: fastboot's USB backend uses Linux usbfs ioctls
+  and epoll, and adb's fdevent loop uses epoll. PLIST.adb-only
+  exists but has not been exercised; adb on NetBSD likely needs
+  patches porting fdevent to kqueue.
+
+- Reverse-CONFLICTS in devel/android-tools-adb. Add
+    CONFLICTS+= android-tools-[0-9]*
+  to that Makefile so install order doesn't matter and pkg_admin
+  reports the conflict from either direction.

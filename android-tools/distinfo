@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (android-tools-35.0.2.tar.xz) = 094cf25230baf2319ef022c892bb2c5b4f0e7183a62c20efc432a7250d55e956
+SHA512 (android-tools-35.0.2.tar.xz) = 391ce4d638b274d7bbae24a3df8de8b5812a982570f29b2aef37d12a3ba7ed6f66b5c0b7f908759e0b0da30d152b5319af0fef16c54bdc3b9f4074fb22f80d10
+Size (android-tools-35.0.2.tar.xz) = 18847376 bytes
+SHA1 (patch-vendor_extras_libjsonpb_parse_jsonpb.cpp) = 477a8b03280b6fdb0f09578d4e6a4cb49f083b42
