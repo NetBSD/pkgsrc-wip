@@ -24,6 +24,7 @@ CARGO_FEATURES=			x11
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
+DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
 
 .include "options.mk"
 
