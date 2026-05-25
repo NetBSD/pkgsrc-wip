@@ -48,7 +48,8 @@ SUBST_VARS.terminfo-dirs=	PREFIX
 INSTALLATION_DIRS+=	bin \
 			share/applications \
 			share/icons/hicolor/scalable/apps \
-			share/terminfo
+			share/terminfo \
+			share/doc/rio
 
 
 # Patch vendor crates to enable wgpu GLES backend on NetBSD.
@@ -97,6 +98,8 @@ do-install:
 	# Install terminfo so programs inside rio recognise TERM=xterm-rio.
 	${LOCALBASE}/bin/tic -x -o ${DESTDIR}${PREFIX}/share/terminfo \
 		${WRKSRC}/misc/rio.terminfo
+	${INSTALL_DATA} ${FILESDIR}/README.NetBSD \
+		${DESTDIR}${PREFIX}/share/doc/rio/README.NetBSD
 .if !empty(PKG_OPTIONS:Mman)
 	# Build and install man pages from scdoc source in extra/man/.
 	${SCDOC} < ${WRKSRC}/extra/man/rio.1.scd > \

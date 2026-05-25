@@ -1,0 +1,26 @@
+$NetBSD$
+
+TERMINAL TYPE
+  Rio installs xterm-rio and rio+base terminfo entries under
+  ${PREFIX}/share/terminfo.  These are found by pkgsrc ncurses-linked
+  programs.  Base-system programs (/usr/bin/vi, /usr/bin/tmux, etc.)
+  link against NetBSD's libterminfo, which reads only
+  /usr/share/misc/terminfo.cdb and ignores TERMINFO_DIRS.  They will
+  report "unknown terminal type" with TERM=xterm-rio.
+
+  To use a universally-known terminal type, add to ~/.config/rio/config.toml:
+
+    env-vars = ["TERM=xterm-256color"]
+
+SHELL DETECTION
+  Rio reads the login shell from /etc/passwd.  Some display managers
+  (including MATE) inherit a different $SHELL into the X session.  If
+  rio starts the wrong shell, set it explicitly in config.toml:
+
+    [shell]
+    program = "/usr/pkg/bin/zsh"   # adjust to your login shell
+    args = ["--login"]
+
+THEMES
+  No themes ship with this package.  User themes belong in
+  ~/.config/rio/themes/; see the upstream documentation for the format.
