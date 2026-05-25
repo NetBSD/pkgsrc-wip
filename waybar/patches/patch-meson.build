@@ -3,8 +3,20 @@ $NetBSD$
 * Build battery on NetBSD, link with -lprop
 * Config files to examples
 
---- meson.build.orig	2025-08-08 07:15:22.000000000 +0000
+--- meson.build.orig	2026-02-06 20:15:03.000000000 +0000
 +++ meson.build
+@@ -26,9 +26,9 @@ elif compiler.has_link_argument('-lstdc+
+     cpp_link_args += ['-lstdc++fs']
+ endif
+ 
+-git = find_program('git', native: true, required: false)
++########################git = find_program('git', native: true, required: false)
+ 
+-if not git.found()
++if not false
+     add_project_arguments('-DVERSION="@0@"'.format(meson.project_version()), language: 'cpp')
+ else
+     git_path = run_command(git, 'rev-parse', '--show-toplevel', check: false).stdout().strip()
 @@ -58,15 +58,19 @@ if compiler.links(code, name : 'nl_langi
      add_project_arguments('-DHAVE_LANGINFO_1STDAY', language: 'cpp')
  endif
@@ -27,7 +39,7 @@ $NetBSD$
 +
  thread_dep = dependency('threads')
  fmt = dependency('fmt', version : ['>=8.1.1'], fallback : ['fmt', 'fmt_dep'])
- spdlog = dependency('spdlog', version : ['>=1.10.0'], fallback : ['spdlog', 'spdlog_dep'], default_options : ['external_fmt=enabled', 'std_format=disabled', 'tests=disabled'])
+ spdlog = dependency('spdlog', version : ['>=1.15.2'], fallback : ['spdlog', 'spdlog_dep'], default_options : ['std_format=disabled', 'tests=disabled'])
 @@ -245,7 +249,7 @@ elif is_dragonfly or is_freebsd or is_ne
          'man/waybar-cpu.5.scd',
          'man/waybar-memory.5.scd',
@@ -37,7 +49,7 @@ $NetBSD$
          src_files += files('src/modules/battery.cpp')
          man_files += files('man/waybar-battery.5.scd')
      endif
-@@ -563,7 +567,8 @@ executable(
+@@ -572,7 +576,8 @@ executable(
  install_data(
      'resources/config.jsonc',
      'resources/style.css',
