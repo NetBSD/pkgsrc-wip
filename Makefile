@@ -1327,6 +1327,7 @@ SUBDIR+=	glkgit
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globalprotect-openconnect
+SUBDIR+=	glsmac
 SUBDIR+=	glulxe
 SUBDIR+=	glusterfs
 SUBDIR+=	gm2calc
