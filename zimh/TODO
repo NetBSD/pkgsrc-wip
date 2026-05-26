@@ -1,11 +1,5 @@
 At least:
 
--- Checking for module 'cmocka'
---   Package 'cmocka' not found
--- Host-side unit tests requested but cmocka was not found
-
-even though the Makefile has "TOOL_DEPENDS+=	cmocka>=1.1.8:../../devel/cmocka"
-
 Do we need ".include "../../mk/dlopen.buildlink3.mk"" ?
 
 Get ../libslirp491 into main pkgsrc, since installing it conflicts with e.g.

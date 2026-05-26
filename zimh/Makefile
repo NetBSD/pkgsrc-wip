@@ -4,11 +4,11 @@
 # no releases yet. Typically, to get the latest version, you just need to update
 # the GITHUB_TAG and put the correct date in PKGNAME's version part.
 DISTNAME=	zimh-0.0.0
-PKGNAME=	zimh-0.0.0.2026.05.09.00  # date + seqnr per day
+PKGNAME=	zimh-0.0.0.2026.05.25.00  # date + seqnr per day
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmetzger/}
 GITHUB_PROJECT=	zimh
-GITHUB_TAG=	ce0bfeac101ca289ff97e91aa8bbf36d99ef837c
+GITHUB_TAG=	32cf6c24209f7b4607252f9a5f84a5e0401ee84b
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	rhialto@NetBSD.org
