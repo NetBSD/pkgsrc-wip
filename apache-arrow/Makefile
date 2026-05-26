@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 # They come from ./cpp/thirdparty/versions.txt
 XSIMD=		14.0.0.tar.gz
 JEMALLOC=	jemalloc-5.3.0.tar.bz2
-MIMALLOC=	v3.1.5.tar.gz
+MIMALLOC=	v3.2.7.tar.gz
 SUBSTRAIT=	v0.44.0.tar.gz
 
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}

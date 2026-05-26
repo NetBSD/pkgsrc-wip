@@ -120,7 +120,9 @@ include/arrow/extension/bool8.h
 include/arrow/extension/fixed_shape_tensor.h
 include/arrow/extension/json.h
 include/arrow/extension/opaque.h
+include/arrow/extension/parquet_variant.h
 include/arrow/extension/uuid.h
+include/arrow/extension/variable_shape_tensor.h
 include/arrow/extension_type.h
 include/arrow/filesystem/api.h
 include/arrow/filesystem/azurefs.h
@@ -270,7 +272,6 @@ include/arrow/util/rows_to_batches.h
 include/arrow/util/secure_string.h
 include/arrow/util/simd.h
 include/arrow/util/small_vector.h
-include/arrow/util/span.h
 include/arrow/util/string.h
 include/arrow/util/string_util.h
 include/arrow/util/task_group.h
@@ -335,6 +336,7 @@ include/parquet/arrow/writer.h
 include/parquet/benchmark_util.h
 include/parquet/bloom_filter.h
 include/parquet/bloom_filter_reader.h
+include/parquet/bloom_filter_writer.h
 include/parquet/column_page.h
 include/parquet/column_reader.h
 include/parquet/column_scanner.h
@@ -362,6 +364,7 @@ include/parquet/file_reader.h
 include/parquet/file_writer.h
 include/parquet/geospatial/statistics.h
 include/parquet/hasher.h
+include/parquet/index_location.h
 include/parquet/level_comparison.h
 include/parquet/level_comparison_inc.h
 include/parquet/level_conversion.h
@@ -380,6 +383,7 @@ include/parquet/stream_writer.h
 include/parquet/test_util.h
 include/parquet/type_fwd.h
 include/parquet/types.h
+include/parquet/visit_type_inline.h
 include/parquet/windows_compatibility.h
 include/parquet/windows_fixup.h
 include/parquet/xxhasher.h
@@ -416,25 +420,25 @@ lib/cmake/Parquet/ParquetTargets-release.cmake
 lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
-lib/libarrow.so.2300
-lib/libarrow.so.2300.1.0
+lib/libarrow.so.2400
+lib/libarrow.so.2400.0.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
-lib/libarrow_acero.so.2300
-lib/libarrow_acero.so.2300.1.0
+lib/libarrow_acero.so.2400
+lib/libarrow_acero.so.2400.0.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_compute.a
 lib/libarrow_compute.so
-lib/libarrow_compute.so.2300
-lib/libarrow_compute.so.2300.1.0
+lib/libarrow_compute.so.2400
+lib/libarrow_compute.so.2400.0.0
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
-lib/libarrow_dataset.so.2300
-lib/libarrow_dataset.so.2300.1.0
+lib/libarrow_dataset.so.2400
+lib/libarrow_dataset.so.2400.0.0
 lib/libparquet.a
 lib/libparquet.so
-lib/libparquet.so.2300
-lib/libparquet.so.2300.1.0
+lib/libparquet.so.2400
+lib/libparquet.so.2400.0.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -444,8 +448,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.2300.1.0-gdb.py
+share/arrow/gdb/libarrow.so.2400.0.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20251110/lib
+@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.2026Q1/lib
