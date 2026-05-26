@@ -18,21 +18,26 @@ PATCHDIR=	${.CURDIR}/../../wip/apache-arrow/patches
 USE_LANGUAGES=	c c++
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0:../../devel/py-scikit-build-core
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 #CONFIGURE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 
 DEPENDS+=	apache-arrow>=${APACHE_ARROW_VERSION}:../../wip/apache-arrow
+DEPENDS+=	${PYPKGPREFIX}-libcst>=0:../../lang/py-libcst
 DEPENDS+=	bash>=5.0:../../shells/bash
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-fixture
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-pandas>=2.0.0:../../math/py-pandas
-USE_TOOLS=	cmake gmake pkg-config
+USE_TOOLS=	cmake ninja pkg-config
 
 MAKE_ENV+=	PYARROW_PARALLEL=${MAKE_JOBS}
+MAKE_ENV+=	ARROW_HOME=${PREFIX}
+MAKE_ENV+=	CMAKE_GENERATOR=Ninja
 MAKE_ENV+=	PYARROW_WITH_ACERO=1
+MAKE_ENV+=	PYARROW_WITH_DATASET=1
 MAKE_ENV+=	PYARROW_WITH_DATASET=1
 # Running make test aborts with flight enabled
 MAKE_ENV+=  PYARROW_WITH_FLIGHT=0
@@ -53,17 +58,15 @@ MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 
 REPLACE_BASH=	python/cmake_modules/aws_sdk_cpp_generate_variables.sh
 do-build:
-	${RM} -rf ${WRKSRC}/python/.eggs
-	${RUN} cd ${WRKSRC}/python && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build_ext --build-type=relwithdebinfo bdist_wheel
+	cd ${WRKSRC}/python  && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m build  --sdist . --wheel --no-isolation -Cbuild-dir=pkgsrc-build -C cmake.build-type=Debug -vv 
 
 do-test:
 	# Build the extension inplace, and run tests directly.  Otherwise
 	# py-test-runner gets upset about missing imports
-	cd ${WRKSRC}/python  && ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py build_ext -i
+	cd ${WRKSRC}/python  && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pip  install --no-build-isolation --editable . -Cbuild-dir=pkgsrc-build 
 	cd ${WRKSRC}/python  && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
 
 
-MAKE_ENV+=	PYARROW_WITH_DATASET=1
 
 
 .include "../../converters/utf8proc/buildlink3.mk"
