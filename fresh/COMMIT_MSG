@@ -1,4 +1,4 @@
-editors/fresh: Update to version 0.3.8
+editors/fresh: Update to version 0.3.9
 
 Packaged in wip by Chavdar Ivanov and Claude Code.
 
@@ -6,12 +6,24 @@ Fresh is a modern terminal-based IDE and text editor with zero configuration,
 familiar keybindings, mouse support, and IDE-level features like LSP,
 multi-cursor, and a command palette.
 
-Changes in 0.3.8:
-- LSP over SSH runs language server on remote host
-- Open dialog scoped to current project by default
-- Settings UI: number fields accept direct typing, inline list editing
-- Next/Previous Window commands, Move File Explorer to Other Side
-- Templ (.templ) syntax highlighting
-- editor.confirm_quit setting
-- Built-in editor.httpFetch(url, path)
-- Various terminal, git log, and theming bug fixes
+Changes in 0.3.9:
+- Universal search overlay: live grep across project files, open buffers, and
+  terminal scrollback, with word/regex modes and clickable toolbar
+- Orchestrator: attach sessions to existing git worktrees with auto-discovery,
+  multi-select bulk actions, worktree ordering, and filter toggle
+- Editor: Move to Next/Previous Paragraph actions
+- Language support: C3 (.c3) syntax highlighting and LSP
+- Plugins: new getWorkingDataDir(), getTerminalDir(), overlay toolbar widget
+  APIs (Toggle/Button controls, toggleOverlayToolbarWidget)
+- Dashboard no longer auto-opens on startup (re-enable via Settings)
+- Simplified Homebrew installation: brew install fresh-editor
+- Fix: getCursorLine() plugin API returning 0 instead of actual cursor position
+- Fix: reduced serial-console lag (eliminate repaints on non-visual async events)
+- Fix: custom theme colors not applied to UI fields
+- Fix: PageDown/PageUp overshoot on single soft-wrapped lines
+- Fix: workspace restore mixing tabs from multiple projects
+- Fix: Live Grep resume preserves query; improved undo/redo, buffer scope fixes
+- Fix: getKeybindingLabel resolution for bound plugin actions
+
+pkgsrc notes: upstream moved the Cargo workspace root to the repo root in
+this release; CARGO_WRKSRC and CARGO_INSTALL_ARGS updated accordingly.
