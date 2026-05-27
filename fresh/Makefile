@@ -18,6 +18,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 
 CARGO_WRKSRC=	${WRKSRC}
+CARGO_INSTALL_ARGS=	install --path crates/fresh-editor --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 
 DISTFILES=	${DEFAULT_DISTFILES} ratatui-wgpu-cdcf5c6.tar.gz
 SITES.ratatui-wgpu-cdcf5c6.tar.gz= \
