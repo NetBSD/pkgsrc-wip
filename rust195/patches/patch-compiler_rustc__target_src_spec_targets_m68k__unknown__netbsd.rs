@@ -4,7 +4,7 @@ Add a target description for NetBSD/m68k.
 
 --- /dev/null	2026-02-24 21:43:45.067063051 +0000
 +++ compiler/rustc_target/src/spec/targets/m68k_unknown_netbsd.rs	2026-02-24 21:48:57.106967890 +0000
-@@ -0,0 +1,31 @@
+@@ -0,0 +1,34 @@
 +use rustc_abi::Endian;
 +
 +use crate::spec::{Arch, LinkSelfContainedDefault, Target, TargetMetadata, TargetOptions, base};
@@ -13,6 +13,9 @@ Add a target description for NetBSD/m68k.
 +    let mut base = base::netbsd::opts();
 +    base.cpu = "M68020".into();
 +    base.max_atomic_width = Some(32);
++
++    base.relocation_model = RelocModel::Pic;
++    base.code_model = Some(CodeModel::Medium);
 +
 +    Target {
 +        llvm_target: "m68k-unknown-netbsd".into(),
@@ -23,7 +26,7 @@ Add a target description for NetBSD/m68k.
 +            std: Some(true),
 +        },
 +        pointer_width: 32,
-+        data_layout: "E-m:e-p:32:16:32-i8:8:8-i16:16:16-i32:16:32-n8:16:32-a:0:16-S16".into(),
++        data_layout: "E-m:e-p:32:16:32-i8:8:8-i16:16:16-i32:32:32-n8:16:32-a:0:32-S32".into(),
 +        arch: Arch::M68k,
 +        options: TargetOptions {
 +            endian: Endian::Big,
