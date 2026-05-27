@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.569 2025/11/14 17:17:18 ryoon Exp $
 
-BLAKE2s (librewolf-150.0.2-1.source.tar.gz) = 96287e875e589e52225bff9a3dcbdb2979f9d62f209ec72a1cc7ef3104849451
-SHA512 (librewolf-150.0.2-1.source.tar.gz) = ea60785a9023ffea7fb56f72d842178e3f07beec0467b5e525585d8230b46c6f86353212d3c5413fec4a563a0eba71f1c301cb8091f9114a160fcf66bf9b44a2
-Size (librewolf-150.0.2-1.source.tar.gz) = 1096945406 bytes
+BLAKE2s (librewolf-151.0.1-2.source.tar.gz) = f80f80641ae135634757b7ef819a5c139b88bac55e0552b73ed83443656fad2b
+SHA512 (librewolf-151.0.1-2.source.tar.gz) = 0cb52807e7b19ae85beaf146aa0203b71879bba88b439171f469aa0e2596fcbb76664c23ab5170870348e93ab030ff48a4c1d5b3f739ed4d1231dbfd7a7bcf90
+Size (librewolf-151.0.1-2.source.tar.gz) = 1132988415 bytes
 BLAKE2s (nodejs-output-149.0.tgz) = 01166fb4cb652505925e4697b2b6574768bc8b8af4f97de3c8ac3478a6c9562b
 SHA512 (nodejs-output-149.0.tgz) = f8cf9daf454849fad48f0def830929c306d76a088d17aa10aa20675c186a2ce3e1087ed9e8a4e309901305a9395561028c8751b822a29316474e9eade1394e94
 Size (nodejs-output-149.0.tgz) = 249417 bytes
@@ -32,11 +32,9 @@ SHA1 (patch-js_src_editline_editline.c) = ba44a33cc19d19aeaa777548ac74fc7144ea7d
 SHA1 (patch-js_src_jit_FlushICache.cpp) = f5d1fcb391c36a29fb71a78dbf731ee6a1cb17b6
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
-SHA1 (patch-media_ffvpx_libavcodec_parser__list.c) = b1a7fbcc596a5e95cd8e23bc092aad44d9bc3c7f
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = d0bdc30d23447bd56185eb9dc5c86de591f9cc02
 SHA1 (patch-media_libpng_pngpriv.h) = ee952a703ee08e8ff2269c7178e55e00b12faa29
 SHA1 (patch-memory_build_mozjemalloc__types.h) = af87ef935653cb845a6b702af2f5645a6ada27db
-SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-mozconfig) = f19ca510341e62d1115adde18dc181e75c135749
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
