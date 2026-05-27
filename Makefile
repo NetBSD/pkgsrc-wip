@@ -1968,6 +1968,7 @@ SUBDIR+=	kvirc
 SUBDIR+=	kyototycoon
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
+SUBDIR+=	labwc
 SUBDIR+=	ladybird-git
 SUBDIR+=	lambertw
 SUBDIR+=	lander

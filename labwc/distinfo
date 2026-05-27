@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2026/04/18 09:31:41 kikadf Exp $
+
+BLAKE2s (labwc-0.9.7.tar.gz) = ee1dee5d646cee18196e626fb4cdc70179c18c260053ef65e5516a5fae6ff114
+SHA512 (labwc-0.9.7.tar.gz) = 299b6b46961450d60355b45d8e5565d64800abc58e2ef95d6c8f27b9665ff45712108611d4272450761c962d3943de2b73c9de55a2d1189a061eb24985ccfbe6
+Size (labwc-0.9.7.tar.gz) = 548483 bytes
+SHA1 (patch-docs_meson.build) = 0f84be326a5f0f3f6611476df344076d851236af
