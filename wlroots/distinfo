@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2026/04/13 17:20:09 kikadf Exp $
 
-BLAKE2s (wlroots-0.20.0.tar.gz) = d50158aa89a1ccfced52a46aff985f05dfcae3b8185aa89dcf89a0f536615cf5
-SHA512 (wlroots-0.20.0.tar.gz) = 64e0809374e333e134c900f5d42fab8b6561a974f277975457ff387c3b87aa1da7483d2abcb31b84c5d63e756277821771f419839aa8e1ab548708c5f632a184
-Size (wlroots-0.20.0.tar.gz) = 700049 bytes
+BLAKE2s (wlroots-0.20.1.tar.gz) = 8700f73c61ea8bc9f3ce7a505f6f9a4357132296f515c60417f578d693f8ce89
+SHA512 (wlroots-0.20.1.tar.gz) = 871ff06c1910ed7e6d17e67f56220a68c8ad1a7346fd2792094a8dd661015c726e65974df4a266a44f28e2fdf305a07d4671d3a3dc4b5aed44886d6ba98e549a
+Size (wlroots-0.20.1.tar.gz) = 700387 bytes
 SHA1 (patch-backend_libinput_meson.build) = 7f109761790191930828f280ca74db6bc95941e1
 SHA1 (patch-render_allocator_allocator.c) = ca1f468d6e253fea5ae4d739172d4e94a07a4be6
 SHA1 (patch-render_drm__syncobj.c) = 70708836fe3fd7e4f55e128edbe9d3ad50f66916
