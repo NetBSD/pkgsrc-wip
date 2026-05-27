@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (fsbl-sophgo-4.1.6.tar.gz) = eb8d7287c3d3161508b2ff7f65902334523b16b07f9145fd0e59e4ea7b81491d
+SHA512 (fsbl-sophgo-4.1.6.tar.gz) = e109a9d84036994a2c3ebba6ea5c03056cdb449c70e4196fe83bdcdd109f99e1d844aefb07f295dce826e8c6b90ca67bc2823305c98858d2f3b6754c6232c73c
+Size (fsbl-sophgo-4.1.6.tar.gz) = 1473645 bytes
+SHA1 (patch-make__helpers_build__macros.mk) = b2760fa5851748e98ff54988c9048efd57646704

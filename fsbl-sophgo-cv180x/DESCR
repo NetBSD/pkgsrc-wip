@@ -1,0 +1,2 @@
+FSBL is First Stage Boot Loader. Act as ATF BL2. This package is used for the
+Sophgo cv18xx series SoCs.
