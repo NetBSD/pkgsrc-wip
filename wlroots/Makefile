@@ -6,12 +6,13 @@ MASTER_SITE_GITLAB=	https://gitlab.freedesktop.org/
 MASTER_SITES=		${MASTER_SITE_GITLAB:=wlroots/}
 GITLAB_TAG=		${PKGVERSION_NOREV}
 
-MAINTAINER=		kikadf.01@gmail.com
+MAINTAINER=		kikadf@NetBSD.org
 HOMEPAGE=		https://gitlab.freedesktop.org/wlroots/wlroots
 COMMENT=		Wayland compositor library
 LICENSE=		mit
 
 USE_TOOLS+=		pkg-config
+UDEV_REQUIRED=		yes
 
 MESON_ARGS+=		-Dallocators=gbm
 
@@ -30,7 +31,6 @@ PKG_FAIL_REASON+=	"DRM_IOCTL_GET_UNIQUE is not allowed on render nodes"
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/libopeninput/buildlink3.mk"
-.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
@@ -50,4 +50,5 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.129
 .include "../../x11/xcb-util-errors/buildlink3.mk"
 .include "../../x11/xcb-util-renderutil/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../mk/udev.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
