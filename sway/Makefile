@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2026/04/14 11:32:14 kikadf Exp $
 
-DISTNAME=	sway-1.11
+DISTNAME=	sway-1.12
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 
