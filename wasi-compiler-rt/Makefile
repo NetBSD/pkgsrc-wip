@@ -16,7 +16,7 @@ DISTINFO_FILE=	${.CURDIR}/../../wip/compiler-rt/distinfo
 NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=	lld-${LLVM_VERSION}*:../../devel/lld
+TOOL_DEPENDS+=	lld-${LLVM_VERSION}*:../../wip/lld
 
 USE_LANGUAGES=	c99 c++17
 USE_TOOLS+=	ggrep
