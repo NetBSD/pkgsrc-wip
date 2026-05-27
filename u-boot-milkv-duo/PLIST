@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/u-boot/milkv-duo/cv1800b_milkv_duo_sd.dtb
+share/u-boot/milkv-duo/cvi_board_memmap.h
+share/u-boot/milkv-duo/u-boot.bin

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (milkv-duo-u-boot-2021.10_64mb.tar.gz) = 36cef4e2c6b534736ced711a8966f4459df88fa53427955213895f9b495bca14
+SHA512 (milkv-duo-u-boot-2021.10_64mb.tar.gz) = 45ed555a33e48a0dbd72a70e54ccbede0b047c24fa88aa0c6ec4131cb6bbb92062829bf8a9fec341b8bac51b79d4bef87bac02a5e4e2bbeabbb02e925e12a308
+Size (milkv-duo-u-boot-2021.10_64mb.tar.gz) = 22519593 bytes
+SHA1 (patch-configs_cvitek__cv1800b__milkv__duo__sd__defconfig) = 1cdeb4c732d07246f1301618ffcac48e2172381d

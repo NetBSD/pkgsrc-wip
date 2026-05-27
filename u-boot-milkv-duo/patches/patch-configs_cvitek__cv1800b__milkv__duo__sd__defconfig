@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- configs/cvitek_cv1800b_milkv_duo_sd_defconfig.orig	2024-10-26 09:15:12.136486987 +0000
++++ configs/cvitek_cv1800b_milkv_duo_sd_defconfig
+@@ -30,6 +30,7 @@ CONFIG_BOOTM_OPENRTOS=y
+ # CONFIG_BOOTM_PLAN9 is not set
+ # CONFIG_BOOTM_RTEMS is not set
+ # CONFIG_BOOTM_VXWORKS is not set
++CONFIG_CMD_BOOTEFI=y
+ # CONFIG_CMD_ELF is not set
+ # CONFIG_CMD_FDT is not set
+ # CONFIG_CMD_GO is not set
+@@ -76,7 +77,7 @@ CONFIG_FAT_WRITE=y
+ # CONFIG_REGEX is not set
+ CONFIG_LZMA=y
+ # CONFIG_GZIP is not set
+-# CONFIG_EFI_LOADER is not set
++CONFIG_EFI_LOADER=y
+ # CONFIG_TOOLS_LIBCRYPTO is not set
+ # CONFIG_ENV_SUPPORT is not set
+ # CONFIG_ENV_OVERWRITE is not set
