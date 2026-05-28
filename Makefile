@@ -766,7 +766,6 @@ SUBDIR+=	dlt-daemon
 SUBDIR+=	dlt-viewer
 SUBDIR+=	dma
 SUBDIR+=	dmake
-SUBDIR+=	dmarc-report-viewer
 SUBDIR+=	dmarcaroni-client
 SUBDIR+=	dmarcaroni-server
 SUBDIR+=	dmd
