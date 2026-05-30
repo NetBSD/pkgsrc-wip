@@ -1,0 +1,12 @@
+@comment $NetBSD$
+share/locale/cy_GB/LC_MESSAGES/xtrkcad.mo
+share/locale/de_DE/LC_MESSAGES/xtrkcad.mo
+share/locale/fi/LC_MESSAGES/xtrkcad.mo
+share/locale/fr_FR/LC_MESSAGES/xtrkcad.mo
+share/locale/pt_BR/LC_MESSAGES/xtrkcad.mo
+share/locale/ru/LC_MESSAGES/xtrkcad.mo
+share/xtrkcad/applications/xtrkcad.desktop
+share/xtrkcad/applications/xtrkcad.xml
+share/xtrkcad/pixmaps/xtrkcad.png
+share/xtrkcad/xdg-open
+share/xtrkcad/xtrkcad-setup

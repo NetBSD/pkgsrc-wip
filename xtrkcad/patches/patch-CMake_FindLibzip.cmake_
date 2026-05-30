@@ -1,0 +1,36 @@
+$NetBSD$
+
+UNIX AND NOT APPLE does not imply we are a linux system. Pick up the libzip path
+from pkgsrc
+
+
+
+
+
+--- CMake/FindLibzip.cmake.orig	2025-10-13 19:24:28.000000000 +0000
++++ CMake/FindLibzip.cmake
+@@ -36,22 +36,8 @@ else(WIN32)
+     NAMES zipconf.h
+     HINTS ${PC_LIBZIP_INCLUDE_DIRS})
+ 
+-  if(UNIX AND NOT APPLE)
+-    find_library(LIBZIP_LIBRARY
+-      NAMES libzip.a zip
+-      PATHS
+-		/usr/lib64
+-		/usr/lib
+-		/usr/local/lib64
+-		/usr/local/lib
+-		/sw/lib
+-		/opt/local/lib
+-		${CMAKE_CURRENT_SOURCE_DIR}/app/tools/lib/linux
+-	)
+-  else()
+-    find_library(LIBZIP_LIBRARY
+-      NAMES zip)
+-  endif()
++  find_library(LIBZIP_LIBRARY
++    NAMES zip)
+ endif(WIN32)
+ 
+ include(FindPackageHandleStandardArgs)

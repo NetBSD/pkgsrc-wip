@@ -1,0 +1,39 @@
+$NetBSD$
+
+Convert SVGs to PNGs using librsvg instead of inkscape since inkscape requires
+a desktop session even in batch mode.
+
+
+
+
+--- app/bin/bitmaps/CMakeLists.txt.orig	2026-05-25 13:57:55.478511954 +0000
++++ app/bin/bitmaps/CMakeLists.txt
+@@ -87,14 +87,14 @@ if ( EXISTS "${CMAKE_CURRENT_SOURCE_DIR}
+ endif()
+ 
+ # Find the conversion tool 
+-find_package(Inkscape)
++find_package(RsvgConverter)
+ 
+-if( NOT Inkscape_FOUND )
+-	message( STATUS "Inkscape not found." )
++if( NOT RsvgConverter_FOUND )
++	message( STATUS "rsvg-converter not found." )
+ 	return()
+ else()
+-	message(STATUS "Inkscape is: ${Inkscape_EXECUTABLE}")
+-	message(STATUS "Export option is: ${Inkscape_EXPORT}")
++	message(STATUS "RsvgConverter is: ${RsvgConverter_EXECUTABLE}")
++	message(STATUS "Export option is: ${RsvgConverter_EXPORT}")
+ endif()
+ 
+ 
+@@ -115,7 +115,7 @@ foreach(img3 ${IMG3S})
+ 				OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/png/${img3}${pix}.png
+ 				DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/svg/${img3}.svg
+ 				COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/png/
+-				COMMAND ${Inkscape_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/svg/${img3}.svg -h ${pix} ${Inkscape_EXPORT}${CMAKE_CURRENT_BINARY_DIR}/png/${img3}${pix}.png
++				COMMAND ${RsvgConverter_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/svg/${img3}.svg -h ${pix} -o ${RsvgConverter_EXPORT}${CMAKE_CURRENT_BINARY_DIR}/png/${img3}${pix}.png
+ 			)
+ 		endif()
+ 		if(UNIX)

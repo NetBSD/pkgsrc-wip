@@ -1,0 +1,6 @@
+cad/xtrkcad: update to version 5.3.1GA
+
+Fixes in pkgsrc:
+- build using librsvg instead of inkscape so we don't need a desktop environment
+  for a build
+- don't link against linux-only static libraries stored in the source code
