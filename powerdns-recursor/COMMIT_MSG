@@ -1,0 +1,4 @@
+net/pdns-recursor-5.4.1nb3
+
+More POSIX compatible, will be fixed by upstream in major newer version
+https://github.com/PowerDNS/pdns/issues/17241
