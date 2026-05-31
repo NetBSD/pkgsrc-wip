@@ -1,0 +1,8 @@
+net/dnscontrol: Update to v4.40.0
+
+Release highlights:
+NEW PROVIDER: DNSControl now supports Tencent Cloud DNS (TENCENTDNS)! Thanks and welcome to @cylonchau who joins the project as its maintainer. We look forward to great things!
+Automated testing now includes: AZURE_PRIVATE_DNS, CLOUDFLAREAPI!
+NAMECHEAP now supports more than 20 zones/domains!
+ORACLE now reliably supports NO_PURGE and IGNORE*()
+dnscontrol init now supports GIDINET and ROUTE53 support is improved!
