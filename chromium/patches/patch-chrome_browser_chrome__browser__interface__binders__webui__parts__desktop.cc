@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc
 @@ -139,7 +139,7 @@
  #include "ui/webui/resources/js/browser_command/browser_command.mojom.h"

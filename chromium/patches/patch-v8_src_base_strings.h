@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/strings.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- v8/src/base/strings.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ v8/src/base/strings.h
 @@ -8,6 +8,9 @@
  #include "src/base/base-export.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc
 @@ -48,7 +48,7 @@
  #include "ui/ozone/platform/wayland/host/wayland_window.h"

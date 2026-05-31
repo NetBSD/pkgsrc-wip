@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/init_process_reaper.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- sandbox/linux/services/init_process_reaper.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ sandbox/linux/services/init_process_reaper.cc
 @@ -2,6 +2,7 @@
  // Use of this source code is governed by a BSD-style license that can be

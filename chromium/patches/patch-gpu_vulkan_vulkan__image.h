@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_image.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- gpu/vulkan/vulkan_image.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ gpu/vulkan/vulkan_image.h
 @@ -86,7 +86,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanIma
        VkImageUsageFlags usage,
@@ -15,7 +15,7 @@ $NetBSD$
    static std::unique_ptr<VulkanImage> CreateWithExternalMemoryAndModifiers(
        VulkanDeviceQueue* device_queue,
        const gfx::Size& size,
-@@ -198,7 +198,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanIma
+@@ -210,7 +210,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanIma
        VkImageTiling image_tiling,
        uint32_t queue_family_index);
  

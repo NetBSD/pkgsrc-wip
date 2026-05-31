@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- services/device/public/cpp/device_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ services/device/public/cpp/device_features.cc
-@@ -135,11 +135,11 @@ bool IsOsLevelGeolocationPermissionSuppo
+@@ -152,11 +152,11 @@ bool IsOsLevelGeolocationPermissionSuppo
  // a USB interface is busy.
  #if BUILDFLAG(IS_ANDROID)
  BASE_FEATURE(kAutomaticUsbDetach, base::FEATURE_ENABLED_BY_DEFAULT);

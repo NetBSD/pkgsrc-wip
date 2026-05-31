@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/periodic_task.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/perfetto/src/base/periodic_task.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/perfetto/src/base/periodic_task.cc
 @@ -24,9 +24,10 @@
  #include "perfetto/base/time.h"

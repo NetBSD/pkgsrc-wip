@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- remoting/host/chromoting_host.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ remoting/host/chromoting_host.h
 @@ -37,7 +37,7 @@
  #include "remoting/protocol/session_manager.h"

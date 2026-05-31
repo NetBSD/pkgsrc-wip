@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/password_manager/core/browser/features/password_features.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.h
 @@ -201,7 +201,7 @@ BASE_DECLARE_FEATURE(kReduceRequirements
  // This flag is only for the prototype version.

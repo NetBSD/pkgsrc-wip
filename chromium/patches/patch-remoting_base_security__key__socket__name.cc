@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/security_key_socket_name.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- remoting/base/security_key_socket_name.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ remoting/base/security_key_socket_name.cc
 @@ -25,7 +25,7 @@ base::FilePath GetDefaultSecurityKeySock
    if (!GetSocketNameOverride().empty()) {

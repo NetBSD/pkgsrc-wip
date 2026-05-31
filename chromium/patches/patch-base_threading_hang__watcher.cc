@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/hang_watcher.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- base/threading/hang_watcher.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ base/threading/hang_watcher.cc
 @@ -236,7 +236,7 @@ bool ThreadTypeLoggingLevelGreaterOrEqua
  

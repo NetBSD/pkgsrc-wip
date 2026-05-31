@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- rollup/rust/bindings_napi/src/lib.rs.orig	2024-09-21 08:00:56.000000000 +0200
+--- rollup/rust/bindings_napi/src/lib.rs.orig	2024-09-21 06:00:56.000000000 +0000
 +++ rollup/rust/bindings_napi/src/lib.rs
 @@ -4,6 +4,9 @@ use parse_ast::parse_ast;
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -2471,7 +2471,7 @@ void BrowserView::ToolbarSizeChanged(boo
+@@ -2473,7 +2473,7 @@ void BrowserView::ToolbarSizeChanged(boo
  }
  
  void BrowserView::TabDraggingStatusChanged(bool is_dragging) {
@@ -15,7 +15,7 @@ $NetBSD$
    UpdateFastResizeForContentViews(is_dragging);
  
    if (!is_dragging) {
-@@ -5978,7 +5978,7 @@ void BrowserView::MaybeShowProfileSwitch
+@@ -5996,7 +5996,7 @@ void BrowserView::MaybeShowProfileSwitch
  }
  
  void BrowserView::MaybeShowSupervisedUserProfileSignInIPH() {
@@ -24,7 +24,7 @@ $NetBSD$
    if (!ShouldShowAvatarToolbarIPH()) {
      return;
    }
-@@ -5988,7 +5988,7 @@ void BrowserView::MaybeShowSupervisedUse
+@@ -6006,7 +6006,7 @@ void BrowserView::MaybeShowSupervisedUse
  }
  
  void BrowserView::MaybeShowSignInBenefitsIPH() {

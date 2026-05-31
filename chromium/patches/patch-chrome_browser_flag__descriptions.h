@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- chrome/browser/flag_descriptions.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -8453,6 +8453,20 @@ inline constexpr char kAndroidEntraSsoDe
+@@ -8465,6 +8465,20 @@ inline constexpr char kAndroidEntraSsoDe
      "Enables native support for Entra SSO on Android provided by selected "
      "Authentication Brokers.";
  

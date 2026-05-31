@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/foundations/browser_autofill_manager.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/autofill/core/browser/foundations/browser_autofill_manager.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/autofill/core/browser/foundations/browser_autofill_manager.cc
 @@ -938,7 +938,7 @@ BrowserAutofillManager::GetAmountExtract
  

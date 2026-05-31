@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/watermarking/watermark.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/enterprise/watermarking/watermark.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/enterprise/watermarking/watermark.cc
 @@ -29,7 +29,7 @@ gfx::Font WatermarkFont(int font_size) {
        "Segoe UI",

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/commands/launch_web_app_command.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- chrome/browser/web_applications/commands/launch_web_app_command.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ chrome/browser/web_applications/commands/launch_web_app_command.cc
 @@ -110,7 +110,7 @@ void LaunchWebAppCommand::StartWithLock(
      // OsIntegrationTestOverride can use the xdg install command to detect

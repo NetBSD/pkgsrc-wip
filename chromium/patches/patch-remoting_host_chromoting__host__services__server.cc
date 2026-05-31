@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_server.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- remoting/host/chromoting_host_services_server.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ remoting/host/chromoting_host_services_server.cc
 @@ -16,7 +16,7 @@
  #include "remoting/host/mojo_caller_security_checker.h"

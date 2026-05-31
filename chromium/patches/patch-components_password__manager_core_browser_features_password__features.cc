@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/password_manager/core/browser/features/password_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
 @@ -78,7 +78,7 @@ BASE_FEATURE(kClearUndecryptablePassword
  BASE_FEATURE(kClearUndecryptablePasswordsOnSync,
@@ -15,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -174,7 +174,7 @@ BASE_FEATURE(kReduceRequirementsForPassw
+@@ -180,7 +180,7 @@ BASE_FEATURE(kReduceRequirementsForPassw
  
  BASE_FEATURE(kPasswordCheckupPrototype, base::FEATURE_DISABLED_BY_DEFAULT);
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- gpu/command_buffer/service/shared_context_state.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.h
 @@ -242,7 +242,7 @@ class GPU_GLES2_EXPORT SharedContextStat
      return &memory_type_tracker_;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context_builder.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- net/url_request/url_request_context_builder.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ net/url_request/url_request_context_builder.cc
 @@ -447,7 +447,7 @@ std::unique_ptr<URLRequestContext> URLRe
    }

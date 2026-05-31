@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_refresh_scheduler.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/policy/core/common/cloud/cloud_policy_refresh_scheduler.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_refresh_scheduler.cc
 @@ -26,7 +26,7 @@ namespace policy {
  
