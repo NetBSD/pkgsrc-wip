@@ -1,4 +1,4 @@
-editors/fresh: Update to version 0.3.9
+editors/fresh: Update to version 0.3.10
 
 Packaged in wip by Chavdar Ivanov and Claude Code.
 
@@ -6,24 +6,33 @@ Fresh is a modern terminal-based IDE and text editor with zero configuration,
 familiar keybindings, mouse support, and IDE-level features like LSP,
 multi-cursor, and a command palette.
 
-Changes in 0.3.9:
-- Universal search overlay: live grep across project files, open buffers, and
-  terminal scrollback, with word/regex modes and clickable toolbar
-- Orchestrator: attach sessions to existing git worktrees with auto-discovery,
-  multi-select bulk actions, worktree ordering, and filter toggle
-- Editor: Move to Next/Previous Paragraph actions
-- Language support: C3 (.c3) syntax highlighting and LSP
-- Plugins: new getWorkingDataDir(), getTerminalDir(), overlay toolbar widget
-  APIs (Toggle/Button controls, toggleOverlayToolbarWidget)
-- Dashboard no longer auto-opens on startup (re-enable via Settings)
-- Simplified Homebrew installation: brew install fresh-editor
-- Fix: getCursorLine() plugin API returning 0 instead of actual cursor position
-- Fix: reduced serial-console lag (eliminate repaints on non-visual async events)
-- Fix: custom theme colors not applied to UI fields
-- Fix: PageDown/PageUp overshoot on single soft-wrapped lines
-- Fix: workspace restore mixing tabs from multiple projects
-- Fix: Live Grep resume preserves query; improved undo/redo, buffer scope fixes
-- Fix: getKeybindingLabel resolution for bound plugin actions
+Changes in 0.3.10:
+- Live Grep: previews highlight all matches and center on the match in
+  wrapped documents; keyboard nav re-reveals selection after a wheel scroll;
+  new suggestion_fg theme key makes the prompt readable on all themes
+- Workspace Trust prompt and env-manager plugin now localized in all 14
+  supported languages
+- Session model reworked: one session per directory, windows.json dropped,
+  only the foreground window materialized at startup, base session can be
+  deleted like any other
+- Orchestrator picker hides empty / single-file sessions by default with
+  a toggle
+- Live Grep => Quickfix list is now a Finder dock panel: Enter navigates,
+  dock stays open when jumping, live_grep_export_quickfix bound by default
+- Fix: mouse-wheel scrolling in File Explorer, Live Grep, Git Log panels
+- Fix: search highlights no longer grow over adjacent typing; stale
+  matches clear after edits inside a match
+- Fix: Search/Replace panel no longer stuck on "Searching..." with zero
+  matches; works for unnamed buffers and files outside workspace root
+- Fix: LSP diagnostics display in Markdown compose/preview;
+  workspace/configuration answered per-server; new servers default to
+  auto_start = true
+- Fix: Diagnostics panel q/a/r shortcuts work again
+- Fix: Review Diff Discard hunk succeeds for files with unterminated final line
+- Fix: Macro replay is a single undo unit instead of per-char
+- Fix: File Explorer Ctrl+O works and keeps focus on opened buffer
+- Fix: Settings text fields commit and advance focus on Enter; Ctrl+U clears
+- Fix: Gutter no longer eats text width with line numbers off
 
-pkgsrc notes: upstream moved the Cargo workspace root to the repo root in
-this release; CARGO_WRKSRC and CARGO_INSTALL_ARGS updated accordingly.
+pkgsrc notes: no crate dependency changes from 0.3.9; both NetBSD patches
+(rquickjs bindgen on netbsd, dashboard.ts df -h without -P) apply unchanged.
