@@ -6,7 +6,7 @@
 # Regenerating checksums may be needed to build the current rust-beta.
 
 DISTNAME=	rustc-beta-src
-PKGNAME=	rust-1.96.0beta.9
+PKGNAME=	rust-1.97.0beta.2
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +19,10 @@ LICENSE=	mit OR apache-2.0
 # This package actually conflicts with lang/rust itself and with any stable wip
 # version of it. Use either stable or beta, not both.
 CONFLICTS+=	rust-bin-[0-9]*
+
+# One crate dependency hasn't been declared for 1.97.0-beta.2
+# Check if the situation has changed when the next iteration is released.
+ALLOW_NETWORK_ACCESS=   yes
 
 # LLVM uses -std=c++17
 USE_CXX_FEATURES+=	c++17
@@ -49,6 +53,7 @@ CONFIGURE_ARGS+=	--set dist.vendor=false
 REPLACE_BASH+=		library/portable-simd/subtree-sync.sh
 CB=			library/compiler-builtins
 REPLACE_BASH+=		${CB}/ci/bench-icount.sh
+REPLACE_BASH+=		${CB}/ci/install-bench-deps.sh
 REPLACE_BASH+=		${CB}/ci/miri.sh
 REPLACE_BASH+=		${CB}/ci/run-docker.sh
 REPLACE_BASH+=		${CB}/ci/run-extensive.sh
@@ -109,7 +114,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 # does not need any special post-processing.
 DISTFILES:=		${DEFAULT_DISTFILES}
 
-RUST_STAGE0_VER=	1.95.0
+RUST_STAGE0_VER=	1.96.0
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
