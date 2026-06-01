@@ -22,7 +22,7 @@ https://github.com/llvm/llvm-project/issues/199826
 +  // the 16-bit alignment of pointer and i32 is perhaps a linuxism...
 +  // For now treat NetBSD specially.
 +
-+  if (! TT.IsOSNetBSD()) {
++  if (! TT.isOSNetBSD()) {
 +    // M68k pointers are always 32 bit wide even for 16-bit CPUs.
 +    // The ABI only specifies 16-bit alignment.
 +    // On at least the 68020+ with a 32-bit bus, there is a performance benefit
