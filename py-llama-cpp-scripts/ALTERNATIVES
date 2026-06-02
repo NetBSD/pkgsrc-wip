@@ -1,0 +1,4 @@
+bin/llama-convert-hf-to-gguf         @PREFIX@/bin/llama-convert-hf-to-gguf-@PYVERSSUFFIX@
+bin/llama-convert-llama-ggml-to-gguf @PREFIX@/bin/llama-convert-llama-ggml-to-gguf-@PYVERSSUFFIX@
+bin/llama-convert-lora-to-gguf       @PREFIX@/bin/llama-convert-lora-to-gguf-@PYVERSSUFFIX@
+bin/llama-ggml-vk-generate-shaders   @PREFIX@/bin/llama-ggml-vk-generate-shaders-@PYVERSSUFFIX@

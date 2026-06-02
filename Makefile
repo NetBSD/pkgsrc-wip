@@ -4144,6 +4144,7 @@ SUBDIR+=	py-lingpy
 SUBDIR+=	py-linop
 SUBDIR+=	py-lire
 SUBDIR+=	py-litecli
+SUBDIR+=	py-llama-cpp-scripts
 SUBDIR+=	py-llfuse
 SUBDIR+=	py-locket
 SUBDIR+=	py-locky

@@ -2,6 +2,7 @@
 #
 # used by wip/llama.cpp/Makefile
 # used by wip/py-gguf/Makefile
+# used by wip/py-llama-cpp-scripts/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
