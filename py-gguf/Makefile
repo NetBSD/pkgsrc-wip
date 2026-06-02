@@ -1,21 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	llama.cpp-${GITHUB_TAG}
+.include "../../wip/llama.cpp/Makefile.common"
+
 PKGNAME=	${PYPKGPREFIX}-gguf-${GITHUB_TAG:S/b/${GGUF_VER}./}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
-GITHUB_PROJECT=	llama.cpp
-GITHUB_TAG=	b6959
-GGUF_VER=	0.17.1
+GGUF_VER=	0.19.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/gguf/
 COMMENT=	Read and write ML models in GGUF for GGML
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
-
 USE_LANGUAGES=	# none
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 PYSETUPSUBDIR=	gguf-py

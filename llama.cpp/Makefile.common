@@ -1,6 +1,7 @@
 # $NetBSD$
 #
 # used by wip/llama.cpp/Makefile
+# used by wip/py-gguf/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
