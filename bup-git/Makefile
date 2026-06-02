@@ -44,29 +44,20 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 TEST_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
-
 DIST_MANPAGES=		${WRKDIR}/${MAN_UNPACK}
 
 ALL_ENV+=	BUP_PYTHON_CONFIG=${LOCALBASE}/bin/python${PYVERSSUFFIX}-config
-
-# Note that tests 1) will fail on a fs mounted noatime and 2) need a
-# lot of space, perhaps 1 GB.
-# Tests fail on netbsd-9 because of non-portable use of script(1)
-# introduced in 0.33.9.  Reported upstream by email 20250830.
-TEST_TARGET=	test
-# \todo Pass MAKE_JOBS into "gmake test" via -j.
-TEST_ENV+=	TZ=UTC
 
 MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	PREFIX=${LOCALBASE}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-# Even if converters/pandoc is installed, pretend as if it weren't.
+# Even if converters/pandoc is installed, pretend as if it isn't
 MAKE_FLAGS+=	PANDOC=
 
 # find work/ -type f |xargs egrep 'env.*bash'|awk -F: '{print $1}' | sed -e s,work/bup-5f9cf697b3daa3d4d6899f9366ebc1fd64161a32/,,
+# and merge to the list
 REPLACE_BASH+=		configure
 REPLACE_BASH+=		dev/checksum
 REPLACE_BASH+=		dev/compare-trees
@@ -158,6 +149,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "options.mk"
+
+# Note that tests 1) will fail on a fs mounted noatime, 2) need a lot
+# of space, perhaps 1 GB, and 3) can fail with test data at the DST
+# boundary because of what I believe is a bug in NetBSD libc.
+TEST_TARGET=	test
+# \todo Pass MAKE_JOBS into "gmake test" via -j.
+TEST_ENV+=	TZ=UTC
 
 # \todo Investigate "bup ftp" crash with NetBSD editline and resolve.
 .include "../../devel/readline/buildlink3.mk"
