@@ -1,0 +1,227 @@
+math/py-huggingface-hub: Update to 1.17.0
+
+v1.17.0 (2026-05-28)
+  Cross-repo copies, ssh to Spaces, smarter CLI tables
+
+v1.16.4 (2026-05-26)
+  hot fix: Fix `typer>=0.26.0` compatibility
+
+v1.16.1 (2026-05-21)
+  [Hot-fix] [Inference] Remove Together ASR task to drop urllib3 dependency
+
+v1.16.0 (2026-05-21)
+  Together goes multimodal on Inference Providers, CLI improvements,
+  and token security
+
+v1.15.0 (2026-05-14)
+  Region-aware buckets & repos, `hf skills list`, polished CLI help and more
+
+v1.14.0 (2026-05-06)
+  Handle Spaces secrets & variables from CLI and other improvements
+
+v1.13.0 (2026-04-30)
+  new CLI commands and formatting, and HF URI parsing
+
+v1.12.2 (2026-04-29)
+  Add DeepInfra support for Inference Providers
+
+v1.12.0 (2026-04-24)
+  Unified CLI output, bucket search, and more
+
+v1.11.0 (2026-04-16)
+  Semantic Spaces search, Space logs, and more
+
+v1.10.2 (2026-04-14)
+  Fix reference cycle in hf_raise_for_status
+
+v1.10.1 (2026-04-09)
+  Fix copy file to folder
+
+v1.10.0 (2026-04-09)
+  Instant file copy and new Kernel repo type
+
+v1.9.2 (2026-04-08)
+  Fix set_space_volume / delete_space_volume return types
+
+v1.9.1 (2026-04-07)
+  Fix: `set_space_volumes` sending bare array instead of object
+
+v1.9.0 (2026-04-03)
+  Agent-Aware CLI, Spaces Volumes, and more
+
+v1.8.0 (2026-03-26)
+  Mounted volumes on Jobs, complete papers CLI, and more
+
+v1.7.2 (2026-03-20)
+  `hf` CLI skill improvements, `uv` extension installs & bug fixes
+
+v1.7.0 (2026-03-13)
+  pip-installable CLI extensions and multiple QoL improvements
+
+v1.6.0 (2026-03-06)
+  New CLI commands, Bucket fsspec support, and more
+
+v1.5.0 (2026-02-27)
+  Buckets API, Agent-first CLI, Spaces Hot-Reload and more
+
+v1.4.1 (2026-02-06)
+  Fix file corruption when server ignores Range header on download retry
+
+v1.4.0 (2026-02-04)
+  Building the HF CLI for You and your AI Agents
+
+v1.3.7 (2026-02-02)
+  Log 'x-amz-cf-id' on http error if no request id
+
+v1.3.5 (2026-01-29)
+  Configurable default timeout for HTTP calls
+
+v1.3.4 (2026-01-26)
+  Fix `CommitUrl._endpoint` default to None
+
+v1.3.3 (2026-01-22)
+  List Jobs Hardware & Bug Fixes
+
+v1.3.2 (2026-01-14)
+  Zai provider support for `text-to-image` and fix custom endpoint not
+  forwarded
+
+v1.3.1 (2026-01-09)
+  Add `dimensions` & `encoding_format` parameters to feature
+  extraction (embeddings) task
+
+v1.3.0 (2026-01-09)
+  New CLI Commands for Hub Discovery, Jobs Monitoring and more!
+
+v1.2.4 (2026-01-06)
+  Various fixes: use dataclass_transform, fix hf-xet reqs, fix custom
+  endpoint in Jobs API
+
+v1.2.3 (2025-12-13)
+  Fix `private` default value in CLI
+
+v1.2.2 (2025-12-10)
+  Fix unbound local error in local folder metadata + fix `hf auth
+  list` logs
+
+v1.2.1 (2025-12-05)
+  Smarter Rate Limit Handling, Daily Papers API and more QoL
+  improvements!
+
+v1.1.7 (2025-12-01)
+  Make `hffs` accessible at root-level
+
+v1.1.6 (2025-11-28)
+  Fix incomplete file listing in `snapshot_download` + other bugfixes
+
+v1.1.5 (2025-11-21)
+  Welcoming OVHcloud AI Endpoints as a new Inference Provider & More
+
+v1.1.4 (2025-11-13)
+  Paginated results in list_user_access
+
+v1.1.3 (2025-11-13)
+  Avoid HTTP 429 on downloads + fix missing arguments in download API
+
+v1.1.0 (2025-11-05)
+  Faster Downloads, new CLI features and more!
+
+v1.0.1 (2025-10-28)
+  Remove `aiohttp` from extra dependencies
+
+v1.0 (2025-10-24)
+  Building for the Next Decade
+
+v0.36.0 (2025-10-23)
+  Last Stop Before 1.0
+
+v0.35.3 (2025-09-29)
+  Fix `image-to-image` target size parameter mapping & tiny agents
+  allow tools list bug
+
+v0.35.2 (2025-09-29)
+  Welcoming Z.ai as Inference Providers!
+
+v0.35.1 (2025-09-23)
+  Do not retry on 429 and skip forward ref in strict dataclass
+
+v0.35.0 (2025-09-16)
+  Announcing Scheduled Jobs: run cron jobs on GPU on the Hugging Face
+  Hub!
+
+v0.34.6 (2025-09-16)
+  Welcoming PublicAI as Inference Providers!
+
+v0.34.5 (2025-09-15)
+  Welcoming Scaleway as Inference Providers!
+
+v0.34.4 (2025-08-08)
+  Support Image to Video inference + QoL in jobs API, auth and
+  utilities
+
+v0.34.3 (2025-07-29)
+  Jobs improvements and `whoami` user prefix
+
+v0.34.2 (2025-07-28)
+  Bug fixes: Windows path handling & resume download size fix
+
+v0.34.1 (2025-07-25)
+  [CLI] print help if no command provided
+
+v0.34.0 (2025-07-24)
+  Announcing Jobs: a new way to run compute on Hugging Face!
+
+v0.33.5 (2025-07-24)
+  [Inference] Fix a `UserWarning` when streaming with
+  `AsyncInferenceClient`
+
+v0.33.4 (2025-07-11)
+  [Tiny-Agent]: Fix schema validation error for default MCP tools
+
+v0.33.3 (2025-07-11)
+  [Tiny-Agent]: Update tiny-agents example
+
+v0.33.2 (2025-07-02)
+  [Tiny-Agent]: Switch to VSCode MCP format
+
+v0.33.1 (2025-06-25)
+  Inference Providers Bug Fixes, Tiny-Agents Message handling
+  Improvement, and Inference Endpoints Health Check Update
+
+v0.33.0 (2025-06-11)
+  Welcoming Featherless.AI and Groq as Inference Providers!
+
+v0.32.6 (2025-06-11)
+  [Upload large folder] fix for wrongly saved upload_mode/remote_oid
+
+v0.32.5 (2025-06-11)
+  [Tiny-Agents] inject environment variables in headers
+
+v0.32.4 (2025-06-03)
+  Bug fixes in `tiny-agents`, and fix input handling for
+  question-answering task.
+
+v0.32.3 (2025-05-30)
+  Handle env variables in `tiny-agents`, better CLI exit and handling
+  of MCP tool calls arguments
+
+v0.32.2 (2025-05-27)
+  Add endpoint support in Tiny-Agent + fix `snapshot_download` on
+  large repos
+
+v0.32.1 (2025-05-26)
+  hot-fix: Fix tiny agents on Windows
+
+v0.32.0 (2025-05-23)
+  MCP Client, Tiny Agents CLI and more!
+
+v0.31.4 (2025-05-19)
+  strict dataclasses, support `DTensor` saving & some bug fixes
+
+v0.31.2 (2025-05-13)
+  Hot-fix: make `hf-xet` optional again and bump the min version of
+  the package
+
+v0.31.0 (2025-05-07)
+  LoRAs with Inference Providers, `auto` mode for provider selection,
+  embeddings models and more

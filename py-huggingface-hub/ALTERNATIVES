@@ -1,0 +1,3 @@
+bin/hf              @PREFIX@/bin/hf-@PYVERSSUFFIX@
+bin/huggingface-cli @PREFIX@/bin/huggingface-cli-@PYVERSSUFFIX@
+bin/tiny-agents     @PREFIX@/bin/tiny-agents-@PYVERSSUFFIX@
