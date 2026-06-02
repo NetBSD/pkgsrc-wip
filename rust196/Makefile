@@ -296,18 +296,12 @@ RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-#
-# The SunOS target defaults to illumos as that's what the current bootstraps
-# are built on.  If you wish to target Oracle Solaris you'll need to create an
-# x86_64-sun-solaris bootstrap and comment out the overrides.
-#
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.94.1
+RUST_STAGE0_VER=	1.95.0
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-SITES.${RUST_STAGE0}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
-RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # Override default "x86_64-sun-solaris" selection
 CONFIGURE_ARGS+=	--set=target.${RUST_ARCH}.llvm-config=${LLVM_CONFIG_PATH}
 CONFIGURE_ARGS+=	--build=${RUST_ARCH}
@@ -762,7 +756,7 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
-	for lib in libLLVM.so.20.1 libcrypto.so.3 libcurl.so.4 \
+	for lib in libLLVM.so.21.1 libcrypto.so.3 libcurl.so.4 \
 		   libssl.so.3 libz.so.1 libzstd.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
