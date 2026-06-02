@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--disable-ninja
 CONFIGURE_ARGS+=	--dist-compression-formats=xz
 CONFIGURE_ARGS+=	--set dist.vendor=false
 
+CGC=			compiler/rustc_codegen_cranelift
+REPLACE_BASH+=		${CGC}/.github/scripts/free-disk-space.sh
 REPLACE_BASH+=		library/portable-simd/subtree-sync.sh
 CB=			library/compiler-builtins
 REPLACE_BASH+=		${CB}/ci/bench-icount.sh
@@ -131,7 +133,6 @@ CHECK_INTERPRETER_SKIP+=	${RUSTC_CG_CRANELIFT}/scripts/filter_profile.rs
 CHECK_INTERPRETER_SKIP+=	${RUSTC_CG_CRANELIFT}/scripts/rustup.sh
 CHECK_INTERPRETER_SKIP+=	${RUSTC_CG_CRANELIFT}/scripts/test_bootstrap.sh
 CHECK_INTERPRETER_SKIP+=	${RUSTC_CG_CRANELIFT}/scripts/test_rustc_tests.sh
-CHECK_INTERPRETER_SKIP+=	${RUSTC_CG_CRANELIFT}/.github/scripts/free-disk-space.sh
 CHECK_INTERPRETER_SKIP+=	${RUSTLIB_COMPILER}/rustc_codegen_gcc/y.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/core/src/unicode/printable.py
