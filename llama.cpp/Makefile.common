@@ -1,0 +1,10 @@
+# $NetBSD$
+#
+# used by wip/llama.cpp/Makefile
+
+.include "../../mk/bsd.prefs.mk"
+
+DISTNAME=	llama.cpp-${GITHUB_TAG}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
+GITHUB_PROJECT=	llama.cpp
+GITHUB_TAG=	b9405
