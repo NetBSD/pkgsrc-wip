@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.267 2026/02/06 10:04:56 wiz Exp $
 
 # This package tracks the qgis 4.0 stable branch
-DISTNAME=	qgis-4.0.2.18
+DISTNAME=	qgis-4.0.3
 CATEGORIES=	geography
 #MASTER_SITES=	https://qgis.org/downloads/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qgis/}
 GITHUB_PROJECT=	QGIS
-GITHUB_TAG=	9e5d52a1edb67d45ae558a6aeb30f0aba56d9f1a
+GITHUB_TAG=	final-4_0_3
 DIST_SUBDIR=	qgis-snapshot
 
 MAINTAINER=	gdt@NetBSD.org
