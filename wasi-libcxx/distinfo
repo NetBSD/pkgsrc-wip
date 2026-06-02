@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.8 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (llvm-project-22.1.6.src.tar.xz) = f2b152daaa06705a7d8bedb994c709d8fe7b9fce2c7fd435aa052bc5d7899cce
-SHA512 (llvm-project-22.1.6.src.tar.xz) = 39ee3a66b92abe4eed5f9db086f6279faa72d8a3fe1beee8897da2dcc8b6982d169054b394995090c9cc6519f50a03a7fc465905dda3c61eb1063b9ba4696b0c
-Size (llvm-project-22.1.6.src.tar.xz) = 167043464 bytes
+BLAKE2s (llvm-project-22.1.7.src.tar.xz) = 945d26cf73942720be9ef7571c3ac401f4ebed857dfda1a346fc24ba92b90856
+SHA512 (llvm-project-22.1.7.src.tar.xz) = b7e56121cd6cb24085185ca0b621fec272dd9aa237c49a901043a9a4c31fdbc1ff33e650891d9786cd9495c006e87d4553ac36b518c864c75e99a80e40771bfd
+Size (llvm-project-22.1.7.src.tar.xz) = 167066344 bytes
 SHA1 (patch-libcxx_include_CMakeLists.txt) = 6f6a65619f7d283a40e3511a309199d0c28e02d8
 SHA1 (patch-libcxx_src_CMakeLists.txt) = c4707f5b0b5eacc0ab02f25dfc7281a484507cc5
 SHA1 (patch-libcxxabi_src_CMakeLists.txt) = deaa2a57f409ac215eb6b9d219086cc3f72b0d7d

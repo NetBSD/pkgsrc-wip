@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (llvm-project-22.1.6.src.tar.xz) = f2b152daaa06705a7d8bedb994c709d8fe7b9fce2c7fd435aa052bc5d7899cce
-SHA512 (llvm-project-22.1.6.src.tar.xz) = 39ee3a66b92abe4eed5f9db086f6279faa72d8a3fe1beee8897da2dcc8b6982d169054b394995090c9cc6519f50a03a7fc465905dda3c61eb1063b9ba4696b0c
-Size (llvm-project-22.1.6.src.tar.xz) = 167043464 bytes
+BLAKE2s (llvm-project-22.1.7.src.tar.xz) = 945d26cf73942720be9ef7571c3ac401f4ebed857dfda1a346fc24ba92b90856
+SHA512 (llvm-project-22.1.7.src.tar.xz) = b7e56121cd6cb24085185ca0b621fec272dd9aa237c49a901043a9a4c31fdbc1ff33e650891d9786cd9495c006e87d4553ac36b518c864c75e99a80e40771bfd
+Size (llvm-project-22.1.7.src.tar.xz) = 167066344 bytes
 SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
