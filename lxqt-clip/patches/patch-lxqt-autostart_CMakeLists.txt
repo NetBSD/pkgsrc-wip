@@ -1,0 +1,14 @@
+$NetBSD$
+
+Install config file to proper location
+
+--- lxqt-autostart/CMakeLists.txt.orig	2026-06-02 13:35:56.153816840 +0000
++++ lxqt-autostart/CMakeLists.txt
+@@ -10,6 +10,6 @@ install(FILES
+ 
+ install(FILES
+     ${DESKTOP_FILES}
+-    DESTINATION "${LXQT_ETC_XDG_DIR}/autostart"
++    DESTINATION "share/examples/autostart"
+     COMPONENT Runtime
+ )
