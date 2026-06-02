@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	transformers-4.57.1
+DISTNAME=	transformers-5.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/transformers/}
@@ -105,18 +105,26 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 #TOOL_DEPENDS+=	# TODO: unidic_lite>=1.0.7
 #TOOL_DEPENDS+=	# TODO: urllib3<2.0.0>=0
 
-DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-huggingface-hub-[0-9]*:../../math/py-huggingface-hub
+#DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-huggingface-hub>1.5.0:../../wip/py-huggingface-hub
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+#DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-safetensors>=0.4.3:../../wip/py-safetensors
 DEPENDS+=	${PYPKGPREFIX}-tokenizers>=0.22:../../wip/py-tokenizers
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.27:../../misc/py-tqdm
 
 USE_LANGUAGES=	c++
+
+SCRIPTS=	transformers
+
+post-install:
+.for script in ${SCRIPTS}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} ${script} ${script}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
