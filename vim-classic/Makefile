@@ -1,7 +1,5 @@
 # $NetBSD: $
 
-PKGNAME=		vim-classic-${VIM_VERSION}.${VIM_PATCHLEVEL}
-
 COMMENT=		Vim-Classic editor (vi clone) without GUI
 
 .include		"../../wip/vim-classic-share/Makefile.common"

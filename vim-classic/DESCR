@@ -7,4 +7,4 @@ If you are building the package from source you may want to enable some
 features such as a perl or python interpreter which are not enabled by
 default.
 
-This version does not contain a gui. 
+This version does not contain a gui.

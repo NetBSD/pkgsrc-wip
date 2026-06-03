@@ -1,5 +1,7 @@
 $NetBSD: $
 
+Remove iconv from lib list NOTE: this was inherited from the 2022Q2 packaging
+
 --- src/link.sh.orig	2012-05-25 09:25:48.000000000 +0000
 +++ src/link.sh
 @@ -53,7 +53,7 @@ else

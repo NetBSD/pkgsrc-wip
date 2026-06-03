@@ -1,5 +1,7 @@
 $NetBSD: $
 
+Patch feature.h to allow pkgsrc to retarget system config to the install tree
+
 --- src/feature.h.orig	2019-12-03 21:59:23.000000000 +0000
 +++ src/feature.h
 @@ -814,7 +814,7 @@

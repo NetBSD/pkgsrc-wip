@@ -1,0 +1,5 @@
+editors/vim-classic-lang: Add vim-classic-lang version 8.3.0
+
+Packaged in wip by Jeff Frasca
+
+Adapt the vim packaging from 2022Q2 to build the vim-classic, a fork of vim-8.2

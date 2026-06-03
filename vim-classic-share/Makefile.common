@@ -5,10 +5,10 @@
 .include "../../wip/vim-classic-share/version.mk"
 
 DISTNAME=		vim-classic-${VIM_VERSION}.${VIM_PATCHLEVEL}
-CATEGORIES=		wip
+CATEGORIES=		editors
 MASTER_SITES=		https://git.sr.ht/~sircmpwn/vim-classic/archive/
-DISTFILES=		2c86ef534c55d9b1e9290cbafb30c4e3227ffc82.tar.gz
-EXTRACT_OPTS_TAR=	-s /2c86ef534c55d9b1e9290cbafb30c4e3227ffc82/8.2.5172/
+DISTFILES=		v8.3.0.tar.gz
+EXTRACT_OPTS_TAR=	-s /v8.3.0/8.3.0/
 
 # vim disables it, sometimes unsuccessfully.
 FORTIFY_SUPPORTED=	no
@@ -23,7 +23,8 @@ CONFLICTS+=		vim-kde-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c99
+USE_LANGUAGES+=		c
+USE_CC_FEATURES=	c99
 
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
 CHECK_INTERPRETER_SKIP=	share/vim/${VIM_SUBDIR}/tools/vim132

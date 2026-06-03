@@ -4,9 +4,9 @@ Handle Xaw support appropiately.
 
 Fix GNUmakeism by not depending on $< in non-suffix rules.
 
---- src/Makefile.orig	2026-03-28 09:43:14.000000000 -0000
-+++ src/Makefile
-@@ -2364,7 +2364,7 @@
+--- src/Makefile.orig	2026-06-03 10:43:57.910250937 -0700
++++ src/Makefile	2026-06-03 10:41:42.141184327 -0700
+@@ -2406,7 +2406,7 @@
  		mv -f tags tags.dist; fi
  	@echo generating help tags
  	-@cd $(HELPSOURCE); if test -z "$(CROSS_COMPILING)"; then \
@@ -15,7 +15,7 @@ Fix GNUmakeism by not depending on $< in non-suffix rules.
  	cd $(HELPSOURCE); \
  		files=`ls *.txt tags`; \
  		files="$$files `ls *.??x tags-?? 2>/dev/null || true`"; \
-@@ -2507,32 +2507,32 @@
+@@ -2549,35 +2549,35 @@
  	      fi
  	-chmod $(FILEMOD) $(DEST_TOOLS)/*
  # replace the path in some tools
@@ -47,6 +47,9 @@ Fix GNUmakeism by not depending on $< in non-suffix rules.
 -	-$(SHELL) ./installman.sh xxd $(DEST_MAN_PL_U) "-pl.UTF-8" $(INSTALLMANARGS)
 -	-$(SHELL) ./installman.sh xxd $(DEST_MAN_RU) "-ru" $(INSTALLMANARGS)
 -	-$(SHELL) ./installman.sh xxd $(DEST_MAN_RU_U) "-ru.UTF-8" $(INSTALLMANARGS)
+-	-$(SHELL) ./installman.sh xxd $(DEST_MAN_TR) "-tr" $(INSTALLMANARGS)
+-	-$(SHELL) ./installman.sh xxd $(DEST_MAN_TR_I) "-tr" $(INSTALLMANARGS)
+-	-$(SHELL) ./installman.sh xxd $(DEST_MAN_TR_U) "-tr.UTF-8" $(INSTALLMANARGS)
 +	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_DA) "-da" $(INSTALLMANARGS)
 +	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_DA_I) "-da" $(INSTALLMANARGS)
 +	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_DA_U) "-da.UTF-8" $(INSTALLMANARGS)
@@ -65,6 +68,9 @@ Fix GNUmakeism by not depending on $< in non-suffix rules.
 +	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_PL_U) "-pl.UTF-8" $(INSTALLMANARGS)
 +	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_RU) "-ru" $(INSTALLMANARGS)
 +	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_RU_U) "-ru.UTF-8" $(INSTALLMANARGS)
++	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_TR) "-tr" $(INSTALLMANARGS)
++	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_TR_I) "-tr" $(INSTALLMANARGS)
++	#-$(SHELL) ./installman.sh xxd $(DEST_MAN_TR_U) "-tr.UTF-8" $(INSTALLMANARGS)
+ 
  
  # install the language specific files, if they were unpacked
- install-languages: languages $(DEST_LANG) $(DEST_KMAP)

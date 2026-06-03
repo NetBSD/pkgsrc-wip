@@ -1,7 +1,7 @@
 # $NetBSD: $
 
-PKG_SUPPORTED_OPTIONS+=	ruby python perl lua luajit
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim-classic
+PKG_SUPPORTED_OPTIONS+=	ruby python perl lua luajit
 
 .include "../../mk/bsd.options.mk"
 
