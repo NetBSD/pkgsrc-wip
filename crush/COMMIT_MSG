@@ -1,0 +1,27 @@
+Bug fixin'
+This is a maintenance release which fixes a couple small bugs.
+
+Hyper OAuth fix
+We fixed a bug where the Hyper OAuth dialog could appear mid-session, in case you had multiple Crush sessions that attempted to refresh the access token at the very same time.
+
+Fixed rare startup bug
+This is a rare edge-case, but we fixed a bug that could prevent Crush from starting in case it can't find a default large or small model for a provider, due to it being removed.
+
+That's all for today. Stay tuned! 
+
+Changelog
+New!
+f6b8592: feat: prepare alibaba migration to /messages (#3067) (@andreynering)
+Fixed
+3cd88ac: fix(agent): add 401 retry and reauth notification to sub-agent runs (@taciturnaxolotl)
+9019775: fix(agent): centralize 401 retry logic and fix notify-on-success bug (@taciturnaxolotl)
+23157b6: fix(agent): move reauth notification from agent to coordinator (@taciturnaxolotl)
+5b5f7b6: fix(config): sort SetConfigFields keys, remove redundant MkdirAll, rename test (@taciturnaxolotl)
+d87a632: fix(oauth): harden IsExpired with minimum buffer and ExpiresIn guard (@taciturnaxolotl)
+c83418d: fix(oauth): stop fabricating token lifetime when expires_in is missing (@taciturnaxolotl)
+ffaeec1: fix: avoid startup crash if unable to find default models (#3066) (@andreynering)
+Other stuff
+3570ea6: chore: auto-update files (@charmcli)
+81170ce: refactor(config): replace reload booleans with reloadMu mutex (@taciturnaxolotl)
+7ce0936: refactor(lock): add canonical internal/lock package, migrate db and cmd callers (@taciturnaxolotl)
+
