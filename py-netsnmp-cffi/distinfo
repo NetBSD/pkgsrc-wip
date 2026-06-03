@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (netsnmp-cffi-0.2.0.tar.gz) = a87fbf85f8cba66c59c27cdf014825319cb9d55dff2df122a6684739dbd54887
 SHA512 (netsnmp-cffi-0.2.0.tar.gz) = 069029ef0162fdf81a5c1ca9dbfcdf0b831933f948f7800320a91060c126c7565277b64aa622fb29f105137ef331f62a5d42950044984e8e91774dea6706083b
 Size (netsnmp-cffi-0.2.0.tar.gz) = 40943 bytes
+SHA1 (patch-src_netsnmpy_netsnmp__ffi.py) = abdf0e87e8cfc53748517785f904f021564a6325
