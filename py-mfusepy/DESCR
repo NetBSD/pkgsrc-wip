@@ -1,0 +1,7 @@
+mfusepy is a Python module that provides a simple interface to FUSE
+and macFUSE. It's just one file and is implemented using ctypes to use
+libfuse.
+
+mfusepy is a fork of fusepy (named py-fuse-bindings in pkgsrc).  The
+main differences are support for the FUSE 3 API and efficiency
+improvements.

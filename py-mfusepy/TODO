@@ -1,0 +1,3 @@
+  - prepare COMMIT_MSG
+  - resolve ioctl test failure
+  - test more

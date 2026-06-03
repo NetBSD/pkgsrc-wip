@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (mfusepy-3.1.1.tar.gz) = a72506eb624ee8750863452c0c8c493f9ce40ddb0c27f2a196270d6f7953eece
+SHA512 (mfusepy-3.1.1.tar.gz) = 3d2b2d7531998bccd2b218e31983efd0b1d0854c9f4af3a88922fb89a55cd5c4e6972fa50031cae29f553b599686ad9dd1cb84134989fb876a9fa3b34f64547f
+Size (mfusepy-3.1.1.tar.gz) = 34549 bytes
+SHA1 (patch-mfusepy.py) = 35cb85c125ea95264e8fbabf88409870e6901d3d
