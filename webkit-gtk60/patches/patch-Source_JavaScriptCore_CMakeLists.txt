@@ -1,0 +1,48 @@
+$NetBSD$
+
+Fix:
+
+CMake Error at Source/cmake/WebKitMacros.cmake:156 (add_dependencies):
+  The dependency target "bmalloc_CopyHeaders" of target
+  "LLIntSettingsExtractor" does not exist.
+Call Stack (most recent call first):
+  Source/cmake/WebKitMacros.cmake:185 (_WEBKIT_TARGET_SETUP)
+  Source/cmake/WebKitMacros.cmake:406 (_WEBKIT_TARGET)
+  Source/JavaScriptCore/CMakeLists.txt:417 (WEBKIT_EXECUTABLE)
+
+
+CMake Error at Source/cmake/WebKitMacros.cmake:156 (add_dependencies):
+  The dependency target "bmalloc_CopyHeaders" of target
+  "LLIntOffsetsExtractor" does not exist.
+Call Stack (most recent call first):
+  Source/cmake/WebKitMacros.cmake:185 (_WEBKIT_TARGET_SETUP)
+  Source/cmake/WebKitMacros.cmake:406 (_WEBKIT_TARGET)
+  Source/JavaScriptCore/CMakeLists.txt:444 (WEBKIT_EXECUTABLE)
+
+
+--- Source/JavaScriptCore/CMakeLists.txt.orig	2026-06-04 22:18:48.692971314 +0000
++++ Source/JavaScriptCore/CMakeLists.txt
+@@ -412,8 +412,10 @@ set(LLIntSettingsExtractor_DEPENDENCIES
+     JavaScriptCore_CopyHeaders
+     JavaScriptCore_CopyPrivateHeaders
+     WTF_CopyHeaders
+-    bmalloc_CopyHeaders
+ )
++if (NOT USE_SYSTEM_MALLOC)
++    list(APPEND LLIntSettingsExtractor_DEPENDENCIES bmalloc_CopyHeaders)
++endif ()
+ WEBKIT_EXECUTABLE(LLIntSettingsExtractor)
+ 
+ # LLIntSettingsExtractor target needs to have a direct or indirect
+@@ -439,8 +441,10 @@ set(LLIntOffsetsExtractor_DEPENDENCIES
+     JavaScriptCore_CopyHeaders
+     JavaScriptCore_CopyPrivateHeaders
+     WTF_CopyHeaders
+-    bmalloc_CopyHeaders
+ )
++if (NOT USE_SYSTEM_MALLOC)
++    list(APPEND LLIntOffsetsExtractor_DEPENDENCIES bmalloc_CopyHeaders)
++endif ()
+ WEBKIT_EXECUTABLE(LLIntOffsetsExtractor)
+ 
+ # The build system will execute asm.rb every time LLIntOffsetsExtractor's mtime is newer than

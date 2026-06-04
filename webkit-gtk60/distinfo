@@ -1,9 +1,9 @@
 $NetBSD$
 
-BLAKE2s (webkitgtk-2.52.3.tar.xz) = 85736abab7a2f7f35e41afe72a91aab865822407bd85d67e7bc4858930bc0953
-SHA512 (webkitgtk-2.52.3.tar.xz) = 8007688e4eb5b465a6f50e05e89858f970f7bbaed45844b8f97175de1fb24e41e6d88f4f6b6299d5ae2ad4e19483da371ac16257d787626da29de7551fbd2a3c
-Size (webkitgtk-2.52.3.tar.xz) = 65052268 bytes
-SHA1 (patch-CMakeLists.txt) = 63a133cb37da466c684958988dd63c354585f5d3
+BLAKE2s (webkitgtk-2.52.4.tar.xz) = 5ac7ff787488a717677553441dc74221efbad8f0b8dd23f221b2d6ba47ed8831
+SHA512 (webkitgtk-2.52.4.tar.xz) = 0500660199cc00477d4c89b513a4ac772593ea5c490d6ebc97c693761bacd024c80c75df7e826cd1a7c292206d4ab0da2b0d91d0a4790069e575fa58bba7be02
+Size (webkitgtk-2.52.4.tar.xz) = 65093228 bytes
+SHA1 (patch-Source_JavaScriptCore_CMakeLists.txt) = 488fde5936817a926fd27df8263cb332ecbe04db
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 20d09e1c226cfff707659ffa35a2c2c3f1cdb617
 SHA1 (patch-Source_JavaScriptCore_parser_VariableEnvironment.h) = 817d8d635c5bcf1ee6d1fbd79ff789cd73d6420f
 SHA1 (patch-Source_JavaScriptCore_runtime_DefinePropertyAttributes.h) = 35e5e1080b6c24ffbe00e099b3293c626c7a207b
@@ -17,12 +17,11 @@ SHA1 (patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h) = 6a854b
 SHA1 (patch-Source_ThirdParty_skia_src_ports_SkMemory__malloc.cpp) = e277d988eeaacb7ec8b7f051342b77c5e8ac06a7
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 35afdd5143f4a2df8a5554a0b0b35141a8784c6c
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = 905b2b4bf4b8c90cf91eb8ecf1d414013cc3bcbb
-SHA1 (patch-Source_WTF_wtf_glib_FileSystemGlib.cpp) = b404226996b90bf01e7d275204a6c7a4d2f73bae
 SHA1 (patch-Source_WebCore_loader_cache_CachedResource.h) = 5d82e4797336f3dc0af9f313ac80f3a72be9a22a
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 40a1c832e0df382e39cecb6c57527731e7c63c52
 SHA1 (patch-Source_WebCore_platform_graphics_gbm_MemoryMappedGPUBuffer.cpp) = 3e95b73709a3a39cd130dcaf4bf440e9c0195fa5
 SHA1 (patch-Source_WebCore_platform_graphics_skia_PlatformDisplaySkia.cpp) = 86f9d65402a6066a19f6385753d7c33e56cdfcd9
-SHA1 (patch-Source_WebCore_platform_graphics_x11_XErrorTrapper.h) = 6560e245d0f639f459464936ec588accd78590f2
+SHA1 (patch-Source_WebCore_platform_graphics_x11_XErrorTrapper.h) = 09292f96d3fe8e5cdacaff9e22dd14fe51508493
 SHA1 (patch-Source_WebCore_rendering_RenderBox.h) = 88bcb40bef0331b7d3c095ec9d0daab0dcaac6c4
 SHA1 (patch-Source_WebCore_rendering_shapes_ShapeOutsideInfo.cpp) = ad3370c031b58778b069685a6bbdd038bc09b424
 SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = 365873c1dc93cf77d9b5eb28800d2b63f4e9da57
@@ -41,4 +40,3 @@ SHA1 (patch-Source_bmalloc_libpas_src_libpas_pas__platform.h) = d832e7a7a1bbf8e8
 SHA1 (patch-Source_bmalloc_libpas_src_libpas_pas__random.h) = 161cec597118672f8a7cc4575ff2318284ce13e7
 SHA1 (patch-Source_cmake_FindFlite.cmake) = 83925123ffbac5620865df0fcf2f8e8dfbd3aa57
 SHA1 (patch-Source_cmake_WebKitFeatures.cmake) = 6811f5c3f000900c0404be59a149657fa6b6443b
-SHA1 (patch-Tools_PlatformGTK.cmake) = 043870090fa5a4c7a9c6094323fb8a397600564b

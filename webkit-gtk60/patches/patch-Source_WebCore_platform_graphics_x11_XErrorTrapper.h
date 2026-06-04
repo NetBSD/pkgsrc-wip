@@ -13,9 +13,9 @@ across the codebase. Undefine Success since we don't currently need it.
 Additional ones in
 https://github.com/WebKit/WebKit/pull/64743
 
---- Source/WebCore/platform/graphics/x11/XErrorTrapper.h.orig	2026-05-11 20:03:47.552553397 +0000
+--- Source/WebCore/platform/graphics/x11/XErrorTrapper.h.orig	2026-05-17 18:13:35.817512800 +0000
 +++ Source/WebCore/platform/graphics/x11/XErrorTrapper.h
-@@ -27,6 +27,21 @@
+@@ -27,8 +27,20 @@
  
  #if PLATFORM(X11)
  #include <X11/Xlib.h>
@@ -28,12 +28,11 @@ https://github.com/WebKit/WebKit/pull/64743
 +#ifdef Below
 +#undef Below
 +#endif
-+#ifdef Success
-+#undef Success
+ #ifdef Success
+ #undef Success
 +#endif
 +#ifdef True
 +#undef True
-+#endif
+ #endif
  #include <wtf/Vector.h>
  
- namespace WebCore {
