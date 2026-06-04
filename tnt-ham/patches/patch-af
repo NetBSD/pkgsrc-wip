@@ -1,0 +1,113 @@
+$NetBSD$
+
+Fix buffer corruption and unsafe string handling in open_sendfile().
+
+There is no active upstream maintainer.  The original source is at
+http://www.baycom.org/~tom/ham/tnt/  The author's QRZ page suggests
+he may be reachable but no upstream bug tracker exists.
+
+* src/file.c: In open_sendfile(), the original code called
+  strcpy(file_str, file_str+1) to strip a leading slash from an
+  absolute filename.  Because source and destination overlap, this
+  is undefined behaviour and corrupted the input buffer, causing
+  crashes when subsequent commands (such as //HELP) attempted to
+  parse it.
+
+  Fix by introducing a const pointer adjusted_file_str that skips
+  the leading slash without modifying the original buffer.
+
+  Additionally replace unbounded strcpy/strcat used to build
+  tx_file[channel].name with snprintf, and replace
+  strcpy/strcat used for the HOME path with snprintf, to prevent
+  buffer overflows if path components are unusually long.
+
+  Replace sprintf with snprintf in the ABIN protocol header
+  construction to prevent overflow into ans_str[80].
+
+  Fix sign-compare warnings where int loop variables were compared
+  against strlen() return values (size_t).
+
+  Add missing #include <time.h> for the time() call in open_logfile().
+
+
+--- src/file.c.orig
++++ src/file.c
+@@ -13,6 +13,7 @@
+ #ifndef DPBOXT
+ #include "xmon.h"
+ #endif
++#include <time.h>
+ 
+ #ifdef TNT_SOLARIS 
+ /* this is maybe well for all others too ?? - oe1smc */ 
+@@ -1529,6 +1530,11 @@
+ 
+   path_num=0;
+ 
++  /* adjusted_file_str skips the leading '/' for absolute paths without
++   * modifying file_str in place; the original strcpy(file_str, file_str+1)
++   * caused overlapping-buffer corruption that crashed subsequent commands. */
++  const char *adjusted_file_str = (file_str[0] == '/') ? file_str + 1 : file_str;
++
+   /* Received a remote-request (//SEND, //SENDABIN, etc.) */
+   if ((mode == M_REMOTE) && (par2 == 0)) {
+     if (strchr(file_str,'/') != NULL) {
+@@ -1543,22 +1549,22 @@
+     if(file_str[0] == '/') {
+       strcpy(path_str[path_num], "/");
+       path_num++;
+-      strcpy(file_str, file_str+1);
+     }
+     else {
+       strcpy(path_str[path_num],upload_dir);
+       path_num++;
+       strcpy(path_str[path_num],download_dir);
+       path_num++;
+-      strcpy(path_str[path_num],getenv("HOME"));
+-      strcat(path_str[path_num], "/");
++      snprintf(path_str[path_num], sizeof(path_str[path_num]), "%s/", getenv("HOME"));
+       path_num++;
+     }
+   }
+ 
+   for(i=0;i<path_num;i++) { /* DH3MB: Search in several paths for the file */
+-    strcpy(tx_file[channel].name, path_str[i]);
+-    strcat(tx_file[channel].name, file_str);
++    /* Construct path safely; if path+filename exceeds the 160-byte name
++     * buffer, snprintf truncates -- acceptable for very long paths. */
++    snprintf(tx_file[channel].name, sizeof(tx_file[channel].name),
++             "%s%s", path_str[i], adjusted_file_str);
+ 
+     drop_priv(mode,channel,&uid,&gid);
+     tx_file[channel].fd = open(tx_file[channel].name,O_RDONLY); 
+@@ -1567,7 +1573,7 @@
+     if (tx_file[channel].fd == -1) {
+       /* file does not exist: change all chars to lower case and try again */
+       if (errno != EACCES) {
+-        for (j = strlen(path_str[i]); j < strlen(tx_file[channel].name); j++) {
++        for (j = (int)strlen(path_str[i]); j < (int)strlen(tx_file[channel].name); j++) {
+           ch = *(tx_file[channel].name+j);
+           if ((ch > 0x40) && (ch < 0x5b)) {
+             ch |= 0x20;
+@@ -1625,7 +1631,7 @@
+   case TX_ABINQ:
+     if (res == 2) {
+       if (strcmp(tmpstr,"`") != 0) {
+-        sprintf(ans_str,"//WPRG %s\015",tmpstr);
++        snprintf(ans_str, sizeof(ans_str), "//WPRG %.71s\015", tmpstr);
+         rem_data_display(channel,ans_str);
+         queue_cmd_data(channel,X_DATA,strlen(ans_str),flag1,ans_str);
+       }
+@@ -1654,10 +1660,10 @@
+       slashptr = tx_file[channel].name;
+     else
+       slashptr++;
+-    for (i=0;i<strlen(slashptr);i++)
++    for (i=0;i<(int)strlen(slashptr);i++)
+       filename[i] = toupper(slashptr[i]);
+     filename[strlen(slashptr)] = '\0';
+-    sprintf(ans_str,"#BIN#%d#|%d#$1EDEADF0#%s\015",file_len,crc,filename);
++    snprintf(ans_str, sizeof(ans_str), "#BIN#%d#|%d#$1EDEADF0#%.40s\015", file_len, crc, filename);
+     rem_data_display(channel,ans_str);
+     queue_cmd_data(channel,X_DATA,strlen(ans_str),flag1,ans_str);
+     break;
