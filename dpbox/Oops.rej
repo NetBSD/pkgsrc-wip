@@ -1,9 +1,0 @@
-@@ -11,7 +10,7 @@
- 
--WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
-+WRKSRC=		${WRKDIR}/dpbox-6.1.0/source
- USE_TOOLS+=	gmake
- ...
- 
- post-build:
- 	${SED} -e 's#@prefix@#${PREFIX}#g' \
