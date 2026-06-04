@@ -1,0 +1,33 @@
+$NetBSD$
+
+Workaround optimization-triggered crash in dpbox on NetBSD.
+
+There is no active upstream maintainer and no upstream bug tracker.
+The original source is available via pkgsrc ham/dpbox.
+
+* source/Makefile.netbsd: Reduce optimization level from -O2/-O3 to
+  -O0 and add -g debug symbols as a workaround for a crash that occurs
+  with optimization enabled on 64-bit NetBSD.  The root cause has not
+  yet been identified; this change allows the package to run correctly
+  while investigation continues.  Remove -s (strip) from LDFLAGS to
+  allow debug symbols to be retained in the binary for diagnosis.
+
+  NOTE: This patch should be removed once the root cause of the
+  optimization crash is identified and fixed.
+
+--- Makefile.netbsd.orig	2026-05-26 03:08:33.749067175 +0000
++++ Makefile.netbsd	2026-05-26 03:08:33.765721049 +0000
+@@ -35,10 +35,10 @@
+ DEFS		= $(SYSTEM) $(NOSHELL)
+ CC		= gcc
+ CPP		= $(CC) -E
+-CFLAGS		= -Wall -O2 -funsigned-char -fomit-frame-pointer -fno-strength-reduce
+-CRAWLERCFLAGS	= -Wall -O3 -funsigned-char -fomit-frame-pointer -fno-strength-reduce
++CFLAGS		= -Wall -O0 -g -funsigned-char -fomit-frame-pointer -fno-strength-reduce
++CRAWLERCFLAGS	= -Wall -O0 -g -funsigned-char -fomit-frame-pointer -fno-strength-reduce
+ LD		= $(CC)
+-LDFLAGS		= -s
++LDFLAGS		= 
+ LIBS		= -lm
+ 
+ HDRS		= filesys.h box.h box_file.h box_mem.h box_send.h box_sf.h \

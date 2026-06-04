@@ -1,0 +1,32 @@
+$NetBSD$
+
+Update version strings to reflect 64-bit modernization fork v6.1.1.
+
+There is no active upstream maintainer and no upstream bug tracker.
+The original source is available via pkgsrc ham/dpbox.
+
+* source/main.c: Update DP_VNR from "6.00" to "6.11" to reflect the
+  new release. Update DP_VNR_SUB from ".00" to " KQ6UP" to identify
+  the maintainer of this fork. Update DP_DATE from "27.04.2000" to
+  "2026" to reflect the year of the 64-bit modernization work.
+
+  This produces:
+  SID:     [DP-6.11-...]
+  VERSION: dpbox (NetBSD) v6.11 KQ6UP
+  Console: DigiPoint Box v6.11 KQ6UP 2026 (NetBSD) successfully started
+
+--- main.c.orig	2026-05-29 13:54:02.379471743 +0000
++++ main.c	2026-05-29 13:54:22.019413618 +0000
+@@ -8,9 +8,9 @@
+ 
+ /* definition of version-number */
+ 
+-#define DP_DATE		"27.04.2000"
+-#define DP_VNR		"6.00"
+-#define DP_VNR_SUB	".00"
++#define DP_DATE		"2026"
++#define DP_VNR		"6.11"
++#define DP_VNR_SUB	" KQ6UP"
+ 
+ 
+ #ifdef __macos__
