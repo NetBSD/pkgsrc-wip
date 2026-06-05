@@ -1,4 +1,4 @@
-editors/fresh: Update to version 0.3.10
+editors/fresh: Update to version 0.3.12
 
 Packaged in wip by Chavdar Ivanov and Claude Code.
 
@@ -6,33 +6,40 @@ Fresh is a modern terminal-based IDE and text editor with zero configuration,
 familiar keybindings, mouse support, and IDE-level features like LSP,
 multi-cursor, and a command palette.
 
-Changes in 0.3.10:
-- Live Grep: previews highlight all matches and center on the match in
-  wrapped documents; keyboard nav re-reveals selection after a wheel scroll;
-  new suggestion_fg theme key makes the prompt readable on all themes
-- Workspace Trust prompt and env-manager plugin now localized in all 14
-  supported languages
-- Session model reworked: one session per directory, windows.json dropped,
-  only the foreground window materialized at startup, base session can be
-  deleted like any other
-- Orchestrator picker hides empty / single-file sessions by default with
-  a toggle
-- Live Grep => Quickfix list is now a Finder dock panel: Enter navigates,
-  dock stays open when jumping, live_grep_export_quickfix bound by default
-- Fix: mouse-wheel scrolling in File Explorer, Live Grep, Git Log panels
-- Fix: search highlights no longer grow over adjacent typing; stale
-  matches clear after edits inside a match
-- Fix: Search/Replace panel no longer stuck on "Searching..." with zero
-  matches; works for unnamed buffers and files outside workspace root
-- Fix: LSP diagnostics display in Markdown compose/preview;
-  workspace/configuration answered per-server; new servers default to
-  auto_start = true
-- Fix: Diagnostics panel q/a/r shortcuts work again
-- Fix: Review Diff Discard hunk succeeds for files with unterminated final line
-- Fix: Macro replay is a single undo unit instead of per-char
-- Fix: File Explorer Ctrl+O works and keeps focus on opened buffer
-- Fix: Settings text fields commit and advance focus on Enter; Ctrl+U clears
-- Fix: Gutter no longer eats text width with line numbers off
+This update spans two upstream releases (0.3.11 and 0.3.12).
 
-pkgsrc notes: no crate dependency changes from 0.3.9; both NetBSD patches
-(rquickjs bindgen on netbsd, dashboard.ts df -h without -P) apply unchanged.
+Changes in 0.3.11 / 0.3.12:
+- Orchestrator Dock: persistent left-column session switcher (Alt+O) with
+  arrow navigation, working/idle status indicators, project/branch info,
+  and PR badges
+- Create SSH sessions from the UI via the Orchestrator dialog, with full
+  remote support (filesystem, LSP running on the remote host, process
+  spawners, terminal)
+- Kubernetes sessions (experimental): connect over kubectl exec with
+  keepalive heartbeat and reconnect
+- Go to LSP Symbol: symbol finder with live preview, precise line/column
+  jumping, source snippets, and symbol-under-cursor preselection
+- Terminal tab auto-naming follows the foreground process and OSC title
+  (editor.terminal_auto_title)
+- Open file from diff: Enter opens the working-tree file in a new pane, or
+  the read-only HEAD version in the old pane, at the target line
+- Rainbow bracket colorization across the viewport
+- Minimal static musl Linux binaries (x86_64 and aarch64)
+- Async clipboard paste no longer freezes the editor on a hung clipboard owner
+- Nested Fresh launches ($EDITOR, git commit) open in the parent editor
+- Python auto-dedent after return/pass/raise/break/continue
+- Terminal scrollback survives resize, clear, and alternate-screen programs
+- Environment-manager plugin detects/activates .venv, .envrc, mise.toml
+- Workspace Trust foundation: per-project trust level (enforcement off by default)
+- editor.confirm_quit setting; built-in editor.httpFetch replaces bundled curl
+- Templ and C3 syntax highlighting
+- Fix: inlay hints participate in line wrapping and horizontal scroll
+- Fix: LSP dynamic capability registration and workspace/configuration
+- Fix: no crash on malformed mouse input; failed remote connections report errors
+- Fix: stuck keyboard input after terminal use
+- Fix: client/server freeze when copying large scrollback selections
+- Fix: marker-tree corruption that could lose edits
+
+pkgsrc notes: no crate dependency changes from 0.3.10 (Cargo.lock identical,
+cargo-depends.mk unchanged); both NetBSD patches (rquickjs bindgen on netbsd,
+dashboard.ts df -h without -P) apply unchanged.
