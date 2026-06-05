@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.42 2024/08/14 17:25:21 wiz Exp $
 
-DISTNAME=	offlineimap3-8.0.0.2024.08.26
+VERSION=	8.0.2
+DISTNAME=	offlineimap3-${VERSION}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
-# 8.0.0 is 4 years old, so use snapshot
-GITHUB_TAG=	db347452273bb0f1b1a8ea952f6fb46cf95fedbf
+GITHUB_TAG=	v${VERSION}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	me@wbrawner.com
 HOMEPAGE=	https://github.com/OfflineIMAP/offlineimap3
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support (v3)
 LICENSE=	gnu-gpl-v2 # or later
@@ -25,7 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/offlineimap/${f}
 .endfor
 
-WHEEL_NAME=	offlineimap-8.0.0
+WHEEL_NAME=	offlineimap-${VERSION}
 
 # needs imap credentials for testing:
 # as of 8.0.0.2024.08.26
