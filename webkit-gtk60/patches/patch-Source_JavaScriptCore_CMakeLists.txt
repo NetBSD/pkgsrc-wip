@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://github.com/WebKit/WebKit/commit/5de06e39b421b2db74d30eb0ea76f8b754f8546b
+
 Fix:
 
 CMake Error at Source/cmake/WebKitMacros.cmake:156 (add_dependencies):
