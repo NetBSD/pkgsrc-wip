@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	DeepSeek-TUI-0.8.39
+DISTNAME=	CodeWhale-0.8.53
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hmbown/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/Hmbown/DeepSeek-TUI/
-COMMENT=	Terminal UI for DeepSeek AI models
+HOMEPAGE=	https://github.com/Hmbown/CodeWhale/
+COMMENT=	Terminal-based AI coding agent (formerly DeepSeek-TUI)
 LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/${DISTNAME}

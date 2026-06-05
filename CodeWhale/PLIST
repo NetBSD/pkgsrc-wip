@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/codew
+bin/codewhale
+bin/codewhale-app-server
+bin/codewhale-tui
+bin/deepseek
+bin/deepseek-tui

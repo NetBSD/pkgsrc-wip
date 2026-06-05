@@ -1,0 +1,17 @@
+CodeWhale (formerly DeepSeek-TUI) is a coding agent that runs in your
+terminal. It can:
+   - read and edit files;
+   - run shell commands;
+   - search the web;
+   - manage git;
+   - coordinate sub-agents from a keyboard-driven TUI.
+
+It is built around DeepSeek V4 (deepseek-v4-pro / deepseek-v4-flash),
+including 1M-token context windows, streaming reasoning blocks, and
+prefix-cache-aware cost reporting, but is provider-agnostic: it also
+supports OpenRouter, NVIDIA NIM, Fireworks, SiliconFlow, Ollama, and
+other OpenAI-compatible endpoints.
+
+The codewhale command is the primary entry point; the deepseek and
+deepseek-tui binaries remain as legacy aliases and are scheduled for
+removal in v0.9.0.
