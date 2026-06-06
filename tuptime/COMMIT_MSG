@@ -1,0 +1,7 @@
+sysutils/tuptime: Add tuptime version 5.2.6
+
+Packaged in wip by Ricardo Fraile.
+
+tuptime reports historical and statistical real time of the system,
+preserving it between restarts. Like uptime, but with extended
+information about the system startups, shutdowns and up/down times.

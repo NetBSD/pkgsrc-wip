@@ -5844,6 +5844,7 @@ SUBDIR+=	ttytter
 SUBDIR+=	tuareg-mode
 SUBDIR+=	tuba
 SUBDIR+=	tudu
+SUBDIR+=	tuptime
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server
