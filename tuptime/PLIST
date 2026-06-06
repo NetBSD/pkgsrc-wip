@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/tuptime
-man/man1/tuptime.1
-share/doc/tuptime/README.pkgsrc
-share/doc/tuptime/tuptime-manual.txt
-share/examples/rc.d/tuptime

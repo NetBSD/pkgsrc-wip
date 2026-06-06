@@ -1,4 +1,0 @@
-tuptime is feature-complete and ready for import to sysutils/tuptime.
-
-Verified on NetBSD 10.0/i386: pkglint clean, "make package" OK, runs at
-runtime (Python 3.13 with built-in sqlite3, no extra dependency needed).
