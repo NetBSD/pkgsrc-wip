@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/iwa_key_distribution_component_installer.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/component_updater/iwa_key_distribution_component_installer.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/component_updater/iwa_key_distribution_component_installer.h
 @@ -26,7 +26,7 @@ class IwaKeyDistributionInfoProvider;
  

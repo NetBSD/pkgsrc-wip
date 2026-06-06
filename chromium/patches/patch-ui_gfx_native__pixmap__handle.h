@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/gfx/native_pixmap_handle.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"
@@ -16,8 +16,8 @@ $NetBSD$
  #endif
  
 @@ -34,7 +34,7 @@ struct COMPONENT_EXPORT(GFX) NativePixma
-   NativePixmapPlane(int stride,
-                     int offset,
+   NativePixmapPlane(uint32_t stride,
+                     uint64_t offset,
                      uint64_t size
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

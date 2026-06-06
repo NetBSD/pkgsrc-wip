@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/views/compose/compose_dialog_view.cc
 @@ -160,7 +160,7 @@ void ComposeDialogView::OnBeforeBubbleWi
      views::Widget::InitParams* params,
@@ -14,4 +14,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // In linux, windows may be clipped to their anchors' bounds,
    // resulting in visual errors, unless they use accelerated rendering. See
-   // crbug.com/1445770 for details.
+   // crbug.com/40912626 for details.

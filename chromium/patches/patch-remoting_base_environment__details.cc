@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/environment_details.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- remoting/base/environment_details.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ remoting/base/environment_details.cc
 @@ -9,7 +9,7 @@
  #include "build/build_config.h"

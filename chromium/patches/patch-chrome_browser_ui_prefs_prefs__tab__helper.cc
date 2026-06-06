@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/prefs_tab_helper.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/prefs/prefs_tab_helper.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/prefs/prefs_tab_helper.cc
-@@ -65,7 +65,7 @@
+@@ -66,7 +66,7 @@
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  // If a font name in prefs default values starts with a comma, consider it's a
  // comma-separated font list and resolve it to the first available font.
  #define PREFS_FONT_LIST 1
-@@ -152,7 +152,7 @@ constexpr auto kFontDefaults = std::to_a
+@@ -153,7 +153,7 @@ constexpr auto kFontDefaults = std::to_a
      {prefs::kWebKitFantasyFontFamily, IDS_FANTASY_FONT_FAMILY},
      {prefs::kWebKitMathFontFamily, IDS_MATH_FONT_FAMILY},
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/macros.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- v8/src/base/macros.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ v8/src/base/macros.h
 @@ -224,7 +224,7 @@ V8_INLINE constexpr Dest bit_cast(Source
  

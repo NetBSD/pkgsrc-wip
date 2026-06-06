@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
-@@ -6481,7 +6481,7 @@ void WebGLRenderingContextBase::TexImage
+@@ -6601,7 +6601,7 @@ void WebGLRenderingContextBase::TexImage
        params.function_id == kTexImage2D ||
        (params.function_id == kTexSubImage2D &&
         base::FeatureList::IsEnabled(kAllowGpuUploadForTexSubImageOnAndroid));

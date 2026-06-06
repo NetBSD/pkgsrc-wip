@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -36,7 +36,7 @@
  #include "chrome/browser/background/glic/glic_background_mode_manager.h"  // nogncheck
@@ -15,7 +15,7 @@ $NetBSD$
  // This causes a gn error on Android builds, because gn does not understand
  // buildflags, so we include it only on platforms where it is used.
  #include "chrome/browser/default_browser/default_browser_manager.h"
-@@ -156,7 +156,7 @@ void GlobalFeatures::PreBrowserProcessIn
+@@ -164,7 +164,7 @@ void GlobalFeatures::PostBrowserProcessI
  
  void GlobalFeatures::PostBrowserProcessInitCore() {
    system_permissions_platform_handle_ = CreateSystemPermissionsPlatformHandle();
@@ -24,7 +24,7 @@ $NetBSD$
    // TODO(crbug.com/463742800): Migrate WhatsNewRegistry (and other non-core
    // features) to Init().
    whats_new_registry_ = CreateWhatsNewRegistry();
-@@ -224,7 +224,7 @@ void GlobalFeatures::PostMainMessageLoop
+@@ -238,7 +238,7 @@ void GlobalFeatures::PostMainMessageLoop
  
    application_advanced_protection_status_detector_.reset();
  
@@ -33,7 +33,7 @@ $NetBSD$
    DefaultBrowserPromptManager::GetInstance()->CloseAllPrompts(
        DefaultBrowserPromptManager::CloseReason::kDismiss);
  #endif
-@@ -245,7 +245,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -257,7 +257,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

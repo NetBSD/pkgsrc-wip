@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.cc
 @@ -48,7 +48,7 @@ bool ShouldCreateCustomLinksManager() {
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/file_utils.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/perfetto/src/base/file_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/perfetto/src/base/file_utils.cc
 @@ -60,8 +60,11 @@
  #include <unistd.h>
@@ -20,7 +20,7 @@ $NetBSD$
  // For inotify. QNX doesn't have full support for inotify_init1().
  #include <sys/inotify.h>
  #endif
-@@ -637,8 +640,11 @@ std::optional<uint64_t> GetFileSize(Plat
+@@ -640,8 +643,11 @@ std::optional<uint64_t> GetFileSize(Plat
  
  // LinuxFileWatch
  

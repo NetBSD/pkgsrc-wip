@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/proc_maps_linux.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/debug/proc_maps_linux.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/debug/proc_maps_linux.cc
 @@ -20,7 +20,7 @@
  #include "base/strings/string_split.h"

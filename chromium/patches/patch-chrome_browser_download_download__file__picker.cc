@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_file_picker.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/download/download_file_picker.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/download/download_file_picker.cc
 @@ -18,7 +18,7 @@
  #include "content/public/browser/web_contents.h"
@@ -18,7 +18,7 @@ $NetBSD$
 @@ -83,7 +83,7 @@ DownloadFilePicker::DownloadFilePicker(d
    // dialog in Linux (See SelectFileImpl() in select_file_dialog_linux_gtk.cc).
    // and windows.Here we make owning_window host to browser current active
-   // window if it is null. https://crbug.com/1301898
+   // window if it is null. https://crbug.com/40825014
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    if (!owning_window || !owning_window->GetHost()) {

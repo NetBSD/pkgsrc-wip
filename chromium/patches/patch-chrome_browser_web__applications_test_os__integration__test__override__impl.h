@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.h
 @@ -41,7 +41,7 @@ class ShellLinkItem;
  
@@ -24,7 +24,7 @@ $NetBSD$
    bool DeleteDesktopDirOnLinux();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -271,7 +271,7 @@ class OsIntegrationTestOverrideImpl : pu
+@@ -276,7 +276,7 @@ class OsIntegrationTestOverrideImpl : pu
    base::FilePath chrome_apps_folder() override;
    void EnableOrDisablePathOnLogin(const base::FilePath& file_path,
                                    bool enable_on_login) override;
@@ -33,7 +33,7 @@ $NetBSD$
    base::FilePath desktop();
    base::FilePath startup();
    base::FilePath applications();
-@@ -344,7 +344,7 @@ class OsIntegrationTestOverrideImpl : pu
+@@ -349,7 +349,7 @@ class OsIntegrationTestOverrideImpl : pu
    base::ScopedTempDir chrome_apps_folder_;
    std::map<base::FilePath, bool> startup_enabled_;
  

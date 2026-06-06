@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/rust/png/FFI.rs.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/skia/rust/png/FFI.rs.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/skia/rust/png/FFI.rs
 @@ -222,6 +222,7 @@ mod ffi {
          type StreamWriter;

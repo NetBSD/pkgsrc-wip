@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.h
 @@ -33,7 +33,7 @@ namespace enterprise_management {
  class GetUserEligiblePromotionsResponse;

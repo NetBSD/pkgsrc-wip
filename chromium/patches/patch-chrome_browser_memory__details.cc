@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/memory_details.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/memory_details.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/memory_details.cc
-@@ -333,7 +333,7 @@ void MemoryDetails::CollectChildInfoOnUI
+@@ -334,7 +334,7 @@ void MemoryDetails::CollectChildInfoOnUI
            });
      }
  

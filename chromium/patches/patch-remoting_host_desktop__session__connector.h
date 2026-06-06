@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_session_connector.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- remoting/host/desktop_session_connector.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ remoting/host/desktop_session_connector.h
 @@ -57,7 +57,7 @@ class DesktopSessionConnector : public m
    // connections.
@@ -13,5 +13,5 @@ $NetBSD$
 -#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX)
 +#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
    // Notifies the network process that |terminal_id| is now attached to
-   // a desktop integration process. |session_id| is the id of the desktop
-   // session being attached. |desktop_pipe| is the client end of the pipe opened
+   // a desktop integration process. |desktop_pipe| is the client end of the pipe
+   // opened by the desktop process.

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.cc
-@@ -7,7 +7,7 @@
+@@ -8,7 +8,7 @@
  #include "components/enterprise/buildflags/buildflags.h"
  #include "content/public/browser/browser_thread.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
      BUILDFLAG(ENTERPRISE_LOCAL_CONTENT_ANALYSIS)
  #include "chrome/browser/enterprise/connectors/analysis/content_analysis_sdk_manager.h"  // nogncheck
  #include "chrome/browser/enterprise/connectors/connectors_service.h"  // nogncheck
-@@ -53,7 +53,7 @@ ChromeBrowserMainExtraPartsEnterprise::C
+@@ -54,7 +54,7 @@ ChromeBrowserMainExtraPartsEnterprise::C
  ChromeBrowserMainExtraPartsEnterprise::
      ~ChromeBrowserMainExtraPartsEnterprise() = default;
  

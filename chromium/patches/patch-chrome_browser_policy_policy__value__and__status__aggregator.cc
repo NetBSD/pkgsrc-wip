@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/policy/policy_value_and_status_aggregator.cc
 @@ -53,7 +53,7 @@
  #include "chrome/browser/policy/value_provider/extension_policies_value_provider.h"
- #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
+ #endif  // BUILDFLAG(ENABLE_EXTENSIONS_CORE)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.cc
 @@ -19,7 +19,7 @@
  #include "extensions/common/constants.h"
@@ -13,8 +13,8 @@ $NetBSD$
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/browser.h"
- #include "chrome/browser/ui/browser_navigator.h"
  #include "chrome/browser/ui/browser_window.h"
+ #include "chrome/browser/ui/navigator/browser_navigator.h"
 @@ -86,7 +86,7 @@ bool OpenExtensionApplicationWindow(Prof
    if (launch_container == LaunchContainer::kLaunchContainerTab)
      return false;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/src/chrono.cpp.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/libc++/src/src/chrono.cpp.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/libc++/src/src/chrono.cpp
-@@ -38,7 +38,7 @@
+@@ -37,7 +37,7 @@
  // OpenBSD and GPU do not have a fully conformant suite of POSIX timers, but
  // it does have clock_gettime and CLOCK_MONOTONIC which is all we need.
  #if defined(__APPLE__) || defined(__gnu_hurd__) || defined(__OpenBSD__) || defined(__AMDGPU__) ||                      \

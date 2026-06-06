@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/browser_child_process_host_impl_receiver_bindings.cc
 @@ -38,7 +38,7 @@
  #include "content/public/common/font_cache_win.mojom.h"
@@ -24,7 +24,7 @@ $NetBSD$
    if (auto r = receiver.As<mojom::ThreadTypeSwitcher>()) {
      child_thread_type_switcher_.Bind(std::move(r));
      return;
-@@ -111,7 +111,7 @@ void BrowserChildProcessHostImpl::BindHo
+@@ -114,7 +114,7 @@ void BrowserChildProcessHostImpl::BindHo
    }
  #endif
  

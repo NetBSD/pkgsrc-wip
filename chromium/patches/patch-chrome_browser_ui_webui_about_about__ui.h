@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/about/about_ui.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/webui/about/about_ui.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/webui/about/about_ui.h
 @@ -43,7 +43,7 @@ class TermsUIConfig : public AboutUIConf
  };

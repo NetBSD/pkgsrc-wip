@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/browser_features.cc
 @@ -66,7 +66,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
  BASE_FEATURE(kClearUserDataUponProfileDestruction,

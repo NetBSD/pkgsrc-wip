@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/host/glic_page_handler.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/glic/host/glic_page_handler.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/glic/host/glic_page_handler.cc
-@@ -195,7 +195,7 @@ mojom::FormFactor GetGlicFormFactor(ui::
+@@ -194,7 +194,7 @@ mojom::FormFactor GetGlicFormFactor(ui::
  constexpr mojom::Platform kPlatform = mojom::Platform::kMacOS;
  #elif BUILDFLAG(IS_WIN)
  constexpr mojom::Platform kPlatform = mojom::Platform::kWindows;

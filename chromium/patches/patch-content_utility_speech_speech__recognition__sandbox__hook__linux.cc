@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/utility/speech/speech_recognition_sandbox_hook_linux.cc
 @@ -12,11 +12,14 @@
  #include "sandbox/linux/syscall_broker/broker_command.h"
@@ -32,8 +32,8 @@ $NetBSD$
 +#if !BUILDFLAG(IS_BSD)
  #if BUILDFLAG(ENABLE_SODA_INTEGRATION_TESTS)
    base::FilePath test_binary_path = GetSodaTestBinaryPath();
-   DVLOG(0) << "SODA test binary path: " << test_binary_path.value().c_str();
-@@ -75,6 +80,7 @@ bool SpeechRecognitionPreSandboxHook(
+   DCHECK(base::PathExists(test_binary_path));
+@@ -74,6 +79,7 @@ bool SpeechRecognitionPreSandboxHook(
                                 }),
                                 GetSodaFilePermissions(), options);
    instance->EngageNamespaceSandboxIfPossible();

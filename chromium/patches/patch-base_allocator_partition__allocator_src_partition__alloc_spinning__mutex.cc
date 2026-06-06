@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -20,7 +20,16 @@
  #endif
@@ -42,4 +42,4 @@ $NetBSD$
 +#endif
    if (retval == -1) {
      // These are programming errors, check them.
-     PA_DCHECK((errno != EPERM) || (errno != EACCES) || (errno != EINVAL) ||
+     [[maybe_unused]] const int futex_errno = errno;

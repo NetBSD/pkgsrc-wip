@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_event_handler.cc
-@@ -618,7 +618,7 @@ bool RenderWidgetHostViewEventHandler::C
+@@ -617,7 +617,7 @@ bool RenderWidgetHostViewEventHandler::C
    if (event->type() == ui::EventType::kMouseExited) {
      if (mouse_locked || selection_popup)
        return false;

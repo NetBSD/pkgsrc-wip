@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/paint_preview/player/player_compositor_delegate.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/paint_preview/player/player_compositor_delegate.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/paint_preview/player/player_compositor_delegate.cc
 @@ -395,8 +395,8 @@ void PlayerCompositorDelegate::ValidateP
    auto chrome_version = capture_result_->proto.metadata().chrome_version();

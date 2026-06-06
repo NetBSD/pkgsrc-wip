@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/devtools-frontend/src/node_modules/rollup/dist/native.js.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/devtools-frontend/src/node_modules/rollup/dist/native.js.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/devtools-frontend/src/node_modules/rollup/dist/native.js
 @@ -13,6 +13,18 @@ const bindingsByPlatformAndArch = {
  		arm64: { base: 'darwin-arm64' },

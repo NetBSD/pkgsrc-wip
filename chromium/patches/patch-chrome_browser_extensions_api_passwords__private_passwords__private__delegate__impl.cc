@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc
 @@ -663,7 +663,7 @@ void PasswordsPrivateDelegateImpl::OnFet
  }

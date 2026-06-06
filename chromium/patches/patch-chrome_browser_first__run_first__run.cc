@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/first_run/first_run.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/first_run/first_run.cc
-@@ -319,7 +319,7 @@ void SetupInitialPrefsFromInstallPrefs(
+@@ -309,7 +309,7 @@ void SetupInitialPrefsFromInstallPrefs(
      out_prefs->confirm_to_quit = true;
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,7 @@ $NetBSD$
    install_prefs.GetBool(installer::initial_preferences::kRequireEula,
                          &out_prefs->eula_required);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -468,7 +468,7 @@ ProcessInitialPreferencesResult ProcessI
+@@ -458,7 +458,7 @@ ProcessInitialPreferencesResult ProcessI
    return FIRST_RUN_PROCEED;
  }
  

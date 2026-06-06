@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
-@@ -220,7 +220,7 @@ BrowserView* GetBrowserViewForContext(co
+@@ -219,7 +219,7 @@ BrowserView* GetBrowserViewForContext(co
  
  void UpdateSystemDnDDragImage(TabDragContext* attached_context,
                                const gfx::ImageSkia& image) {
@@ -15,7 +15,7 @@ $NetBSD$
    VLOG(1) << __func__ << " image size=" << image.size().ToString();
    aura::Window* root_window =
        attached_context->GetWidget()->GetNativeWindow()->GetRootWindow();
-@@ -430,7 +430,7 @@ TabDragController::Liveness TabDragContr
+@@ -429,7 +429,7 @@ TabDragController::Liveness TabDragContr
    //     synchronous on desktop Linux, so use that.
    // - ChromeOS Ash
    //     Releasing capture on Ash cancels gestures so avoid it.
@@ -24,7 +24,7 @@ $NetBSD$
    ref->can_release_capture_ = false;
  #endif
    ref->start_point_in_screen_ =
-@@ -1036,7 +1036,7 @@ TabDragController::Liveness TabDragContr
+@@ -1035,7 +1035,7 @@ TabDragController::Liveness TabDragContr
        CHECK_EQ(SetCapture(target_context), Liveness::kAlive);
      }
  
@@ -33,16 +33,16 @@ $NetBSD$
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2259,7 +2259,7 @@ void TabDragController::CompleteDrag() {
+@@ -2270,7 +2270,7 @@ void TabDragController::CompleteDrag() {
      }
  
      // If source window was maximized - maximize the new window as well.
 -#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_MAC)
 +#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_BSD)
      // Keeping maximized state breaks snap to Grid on Windows when dragging
-     // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
+     // tabs from maximized windows. TODO:(crbug.com/41321838) Explore doing this
      // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2694,7 +2694,7 @@ TabDragController::Liveness TabDragContr
+@@ -2698,7 +2698,7 @@ TabDragController::Liveness TabDragContr
      }
    }
  

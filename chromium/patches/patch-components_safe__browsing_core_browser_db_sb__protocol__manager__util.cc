@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2026-05-26 20:39:02.000000000 +0000
-+++ components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc
-@@ -112,7 +112,7 @@ std::ostream& operator<<(std::ostream& o
+--- components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
++++ components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
+@@ -121,7 +121,7 @@ std::ostream& operator<<(std::ostream& o
  PlatformType GetCurrentPlatformType() {
  #if BUILDFLAG(IS_WIN)
    return WINDOWS_PLATFORM;

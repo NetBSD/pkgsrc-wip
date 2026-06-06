@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- headless/lib/browser/headless_browser_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ headless/lib/browser/headless_browser_impl.cc
-@@ -36,7 +36,7 @@
+@@ -37,7 +37,7 @@
  #include "components/os_crypt/async/browser/keychain_key_provider.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/command_line.h"
  #include "components/os_crypt/async/browser/freedesktop_secret_key_provider.h"
  #include "components/password_manager/core/browser/password_manager_switches.h"  // nogncheck
-@@ -410,7 +410,7 @@ void HeadlessBrowserImpl::CreateOSCryptA
+@@ -411,7 +411,7 @@ void HeadlessBrowserImpl::CreateOSCryptA
    providers.emplace_back(std::make_pair(
        /*precedence=*/10u,
        std::make_unique<os_crypt_async::KeychainKeyProvider>()));

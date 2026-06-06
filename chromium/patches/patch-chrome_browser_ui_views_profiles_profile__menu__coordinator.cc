@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_menu_coordinator.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_coordinator.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_coordinator.cc
-@@ -76,7 +76,7 @@ void ProfileMenuCoordinator::ShowWithPro
+@@ -82,7 +82,7 @@ void ProfileMenuCoordinator::ShowWithPro
        ->NotifyFeaturePromoFeatureUsed(
            feature_engagement::kIPHProfileSwitchFeature,
            FeaturePromoFeatureUsedAction::kClosePromoIfPresent);

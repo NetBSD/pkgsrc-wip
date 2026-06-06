@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/channel_info_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/common/channel_info_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/common/channel_info_posix.cc
 @@ -92,7 +92,7 @@ std::string GetChannelSuffixForDataDir()
    }

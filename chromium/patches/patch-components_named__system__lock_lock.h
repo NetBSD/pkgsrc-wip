@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_system_lock/lock.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/named_system_lock/lock.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/named_system_lock/lock.h
-@@ -38,7 +38,7 @@ class ScopedLock {
+@@ -36,7 +36,7 @@ class ScopedLock {
    // may acquire that lock. The lock name has different meanings per platform:
    // Linux: A shared memory object name starting with `/`. E.g. `/MyApp.lock`.
    // Mac: A bootstrap service name (see `man bootstrap_check_in`).

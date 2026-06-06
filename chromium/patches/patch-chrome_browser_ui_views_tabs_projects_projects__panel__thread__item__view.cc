@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/projects/projects_panel_thread_item_view.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/views/tabs/projects/projects_panel_thread_item_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/views/tabs/projects/projects_panel_thread_item_view.cc
 @@ -116,7 +116,7 @@ void ProjectsPanelThreadItemView::OnMous
  }
