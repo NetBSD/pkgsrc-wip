@@ -1,17 +1,17 @@
 $NetBSD$
 
-BLAKE2s (github.com_muquit_gomail_@v_v0.0.0-20250704205629-a34fa7a15a08.mod) = c0e9999f7c8a67ece0c90139b4653cb1aca5ccaf40f3b7927188d0c1e2c4b404
-SHA512 (github.com_muquit_gomail_@v_v0.0.0-20250704205629-a34fa7a15a08.mod) = ec635bfb081d2d134bed10ed133fef16d7e2e0d096b0231fdefb369e91f666a8fe2418da5bb66cb62178c6f64f4106be0e9c05e1b95ed95f66a268fbc7ba487c
-Size (github.com_muquit_gomail_@v_v0.0.0-20250704205629-a34fa7a15a08.mod) = 141 bytes
-BLAKE2s (github.com_muquit_gomail_@v_v0.0.0-20250704205629-a34fa7a15a08.zip) = d39511f51bfb6607a41bdf06003e36f4aed21a4b189013626a6fbf31faafcbe2
-SHA512 (github.com_muquit_gomail_@v_v0.0.0-20250704205629-a34fa7a15a08.zip) = acb7bf29adaf6187b3c123435533f3b94945b80bc660f403b82a16e701b16af2534f96a9d1653e4f8c48563f097acf6cd64747e83430f22ae9c1c440824cdefc
-Size (github.com_muquit_gomail_@v_v0.0.0-20250704205629-a34fa7a15a08.zip) = 25315 bytes
+BLAKE2s (github.com_muquit_gomail_@v_v1.0.2.mod) = ef9a7eb39f00f4809b9d03282cb0e7ef123c0d58ff7cc99da6170cf0bdf8a834
+SHA512 (github.com_muquit_gomail_@v_v1.0.2.mod) = d0c65b3decdc60cad630a08ad2903618d7185b4f58f16a81d27c717958f21753bc5fcd7c53ca51c8d0277a8f4b90250c0641e2c53405991169018a3f042feab5
+Size (github.com_muquit_gomail_@v_v1.0.2.mod) = 121 bytes
+BLAKE2s (github.com_muquit_gomail_@v_v1.0.2.zip) = 05b7b316bcd510dc25c6f82711ef3305463308d46b002bb474d98b775b9b7cd1
+SHA512 (github.com_muquit_gomail_@v_v1.0.2.zip) = 7b0f99b53c32dfe0133cf45b95bf4ae43e99df89943f64f5da69d97c69a462cc14316df001e8d3f93d8e034b78ee23c2ff55aceff7bc54aa6663d9a91e58f836
+Size (github.com_muquit_gomail_@v_v1.0.2.zip) = 28350 bytes
 BLAKE2s (github.com_muquit_quotedprintable_@v_v0.0.0-20250204043250-71206103869d.mod) = 266dad5321cefa01b7d71a4d18013d589b550953e0655c13b2c6afef358ac9b8
 SHA512 (github.com_muquit_quotedprintable_@v_v0.0.0-20250204043250-71206103869d.mod) = ed95d3b35b7e0c9e9ee3d8f05f88bde1d0d39258bcfb65f62e83eef1e1220d0a15d0e235243aacd9b4968b5fbb3fdb11ee1667f1a4b7f285d3a4e0e85e6efe28
 Size (github.com_muquit_quotedprintable_@v_v0.0.0-20250204043250-71206103869d.mod) = 52 bytes
 BLAKE2s (github.com_muquit_quotedprintable_@v_v0.0.0-20250204043250-71206103869d.zip) = 2a0fd955716953f6ad816b1c260f239a5ed841fce81ad9f3cadf9bca39178ddc
 SHA512 (github.com_muquit_quotedprintable_@v_v0.0.0-20250204043250-71206103869d.zip) = ba43b3b55a3c93e93857cfa9d4c1f99aba71725328d6e88a443ff6b19997f60ad81f82556c48873784edc20c198cd7c94ffa584090b40ddb69e6e19ba90a1dfd
 Size (github.com_muquit_quotedprintable_@v_v0.0.0-20250204043250-71206103869d.zip) = 14384 bytes
-BLAKE2s (mailsend-go-1.0.11.tar.gz) = 1109d0cff5ab77f6c36c30fe62f3c59579810e3575cf5d39a63d8921927b0d6f
-SHA512 (mailsend-go-1.0.11.tar.gz) = 7b947b3748e7d80fb2d0afbd36cd96dd025fbb4306f63331cd8be0590fb6241d074222bf4c8c0c4a785115d4121611551f4f5ad681f22f6099d6b2b046bdaa0b
-Size (mailsend-go-1.0.11.tar.gz) = 263925 bytes
+BLAKE2s (mailsend-go-1.0.12.tar.gz) = c86375e1c6b8c3198b151a83107c0dd095f2ff53f6a5d17a6a5075dfd15835b8
+SHA512 (mailsend-go-1.0.12.tar.gz) = af82b83acc672c3a5b036d86fb7ae4aadb08f43ff9fae1b9bf6a9e02aeef6f530b2c8099d2b39562690bd7250de4a13f00fef0d47c526aebe37b0f3ac503e61a
+Size (mailsend-go-1.0.12.tar.gz) = 263275 bytes
