@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/jsonnet
+bin/jsonnet-deps
+bin/jsonnetfmt
