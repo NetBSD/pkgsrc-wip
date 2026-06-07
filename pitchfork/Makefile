@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pitchfork-2.10.0
+DISTNAME=	pitchfork-2.12.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=endevco/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
