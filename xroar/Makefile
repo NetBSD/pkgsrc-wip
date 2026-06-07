@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.17 2024/04/06 08:05:20 wiz Exp $
 
-DISTNAME=	xroar-1.6.6
+DISTNAME=	xroar-1.11
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.6809.org.uk/xroar/dl/
 

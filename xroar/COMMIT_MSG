@@ -1,4 +1,80 @@
-emulators/xroar: Update to 1.6.6
+emulators/xroar: Update to 1.11
+
+Verison 1.11, Tue 12 May 2026
+
+ * New option -trap-trace-n N turns on trace mode for N instruction
+ * Fix trap address range check
+ * Windows: try to use consoles more intelligently
+ * Mac OS X+: fail gracefully when system audio channels > 2 [Steve Clamage]
+ * Option -no-cart disables cartridge for first running machine
+ * Support loading Motorola S19 records
+ * Fix command-line loading of HEX and S19
+
+Version 1.10, Fri 21 Nov 2025
+
+ * Fixed some 6809/6309 indexed instruction behaviour
+ * Fix some arming of NMI in 6809/6309
+ * Implement some more 6809 undocumented behaviour
+ * Disable vsync by default
+ * New option -vo-vsync to re-enable vsync
+
+Version 1.9, Sat 30 Aug 2025
+
+ * Trap-triggered traces now include trap instruction
+ * SDL: don't disable screensaver in windowed mode [Grgori Harbs]
+ * Windows: explicitly map Pause in automatic keyboard lang [Grgori Harbs]
+ * Include profile for Prolgica CP-400
+ * SAMx8 support (specify -ram 512 for a Dragon 64)
+ * Fix second mouse button joystick mapping [Jim Mullis]
+ * Fix CoCo 3/GIME IRQ issues highlighted by Tim Lindner's test code
+ * Fix -ram-init set
+
+Version 1.8.2, Fri 14 Feb 2025
+
+ * SDL build fix [by Andrea Musuruane]
+
+Version 1.8.1, Sun  2 Feb 2025
+
+ * Fix Mac OS X+ build under more modern compilers [Chad Krokosh]
+ * Fix Windows UI zoom in/out [Erico Monteiro]
+
+Version 1.8, Thu 30 Jan 2025
+
+ * Fix mouse virtual joystick on resize in SDL builds [Richard Kelly]
+ * New manual and automatic configuration saving from GUI
+ * Manage HD mounting from drive control dialog
+ * New MCX128 cartridge support for MC-10
+ * Fix some of the compatibility modes in GIME emulation
+ * Assert monitor detect line on CoCo 3 when RGB output selected
+ * Reduce write latency using Becker port [Ron Klein]
+ * Add some more flexible command-line trap options
+
+Version 1.7.3, Fri 29 Nov 2024
+
+ * Fix built-in configs with non-default CPUs
+ * Fix direct loading of DragonDOS binaries
+
+Version 1.7.2, Tue 26 Nov 2024
+
+ * Fix GIME issue when loading from snapshot
+ * Fix Becker port status polling [Pierre Sarrazin]
+
+Version 1.7.1, Fri 22 Nov 2024
+
+ * Reduce memory use when reading gamepad mappings file
+ * Include missing files in tarball distribution [Rui Chen]
+
+Version 1.7, Thu 21 Nov 2024
+
+ * Avoid calling xroar_screenshot() when not supported [with Paul Ripke]
+ * Avoid X11 keyboard init when SDL not built with X11 support [Paul Ripke]
+ * SDL joystick module supports hotplug where possible
+ * SDL joystick module creates Left & Right stick profiles if found
+ * Support reading a SDL gamepad DB file for non-SDL joystick modules
+ * New -joy-db-file option specifies SDL-compatible gamepad DB file
+ * New Linux evdev joystick module (hotplug, internal SDL DB, L/R profiles)
+ * Large changes to underlying UI mechanisms
+ * New features backported to GTK+ 2 UI
 
 Version 1.6.6, Tue 15 Oct 2024
 
