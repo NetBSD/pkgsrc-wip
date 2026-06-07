@@ -1,15 +1,16 @@
+===> Extracting for crush-0.76.0
 # $NetBSD$
 
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.zip
 GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.7.mod
 GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.7.zip
-GO_MODULE_FILES+=	charm.land/catwalk/@v/v0.44.7.mod
-GO_MODULE_FILES+=	charm.land/catwalk/@v/v0.44.7.zip
+GO_MODULE_FILES+=	charm.land/catwalk/@v/v0.44.13.mod
+GO_MODULE_FILES+=	charm.land/catwalk/@v/v0.44.13.zip
 GO_MODULE_FILES+=	charm.land/fang/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	charm.land/fang/v2/@v/v2.0.1.zip
-GO_MODULE_FILES+=	charm.land/fantasy/@v/v0.29.0.mod
-GO_MODULE_FILES+=	charm.land/fantasy/@v/v0.29.0.zip
+GO_MODULE_FILES+=	charm.land/fantasy/@v/v0.31.0.mod
+GO_MODULE_FILES+=	charm.land/fantasy/@v/v0.31.0.zip
 GO_MODULE_FILES+=	charm.land/glamour/v2/@v/v2.0.0.mod
 GO_MODULE_FILES+=	charm.land/glamour/v2/@v/v2.0.0.zip
 GO_MODULE_FILES+=	charm.land/lipgloss/v2/@v/v2.0.3.mod

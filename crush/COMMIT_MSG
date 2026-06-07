@@ -1,27 +1,41 @@
-Bug fixin'
-This is a maintenance release which fixes a couple small bugs.
+Friday patch
+Shipping a couple small things for those who will keep crushing during the weekend.
 
-Hyper OAuth fix
-We fixed a bug where the Hyper OAuth dialog could appear mid-session, in case you had multiple Crush sessions that attempted to refresh the access token at the very same time.
+Permissions UX fix
+We made a change to avoid accidental interactions when the permission dialog shows. Crush will now ignore key presses up to 350ms after the dialog is shown. This will prevent you from accepting or denying something by mistake when you're typing when the dialog appears.
 
-Fixed rare startup bug
-This is a rare edge-case, but we fixed a bug that could prevent Crush from starting in case it can't find a default large or small model for a provider, due to it being removed.
+crush models fix
+crush models will not shown all models, and not only the configured ones.
 
-That's all for today. Stay tuned! 
+More client-server
+And more and more fixes for the experimental client-server architecture are merged. This will power Crush to do really nice things once finished!
+
+That's for this week. Enjoy your weekend!
+Charm 
 
 Changelog
 New!
-f6b8592: feat: prepare alibaba migration to /messages (#3067) (@andreynering)
+90b1a2a: feat(server): make server prompts independent of client connections (@meowgorithm)
+363ffec: feat: discover skills from git root in monorepos (#3078) (@taigrr)
 Fixed
-3cd88ac: fix(agent): add 401 retry and reauth notification to sub-agent runs (@taciturnaxolotl)
-9019775: fix(agent): centralize 401 retry logic and fix notify-on-success bug (@taciturnaxolotl)
-23157b6: fix(agent): move reauth notification from agent to coordinator (@taciturnaxolotl)
-5b5f7b6: fix(config): sort SetConfigFields keys, remove redundant MkdirAll, rename test (@taciturnaxolotl)
-d87a632: fix(oauth): harden IsExpired with minimum buffer and ExpiresIn guard (@taciturnaxolotl)
-c83418d: fix(oauth): stop fabricating token lifetime when expires_in is missing (@taciturnaxolotl)
-ffaeec1: fix: avoid startup crash if unable to find default models (#3066) (@andreynering)
+6292bfa: fix(cli): show all providers in crush models, not just configured ones (@meowgorithm)
+7da9695: fix(permissions): ignore all keys briefly after dialog opens (#3055) (@taciturnaxolotl)
+d7a814c: fix(server): close a queued-prompt cancel race (@meowgorithm)
+d411ab5: fix(server): complete background prompts that fail early (@meowgorithm)
+cbec491: fix(server): complete queued prompts independently (@meowgorithm)
+a6a8459: fix(server): ignore background errors from unrelated prompts (@meowgorithm)
+34995e9: fix(server): prevent cancels from affecting future prompts (@meowgorithm)
+6ec75f9: fix(ui): fix session rename rendering (#3071) (@taciturnaxolotl)
 Other stuff
-3570ea6: chore: auto-update files (@charmcli)
-81170ce: refactor(config): replace reload booleans with reloadMu mutex (@taciturnaxolotl)
-7ce0936: refactor(lock): add canonical internal/lock package, migrate db and cmd callers (@taciturnaxolotl)
-
+ee94df0: chore(server): acknowledge accepted prompts with HTTP 202 (@meowgorithm)
+d2e9e51: chore(server): apply asynchronous prompt contract to clients (@meowgorithm)
+4347015: chore(server): honor cancels immediately after prompt acceptance (@meowgorithm)
+0a97743: chore(server): report background prompt failures via events (@meowgorithm)
+8b242c5: chore(server): run accepted server prompts in the background (@meowgorithm)
+3c06193: chore(server,tesst): cover multi-client prompt cancellation flows (@meowgorithm)
+5aaa709: chore(server,tests): cover async cancellation cleanup behavior (@meowgorithm)
+c6d1590: chore(server,tests): cover the accepted-prompt cancel race end to end (@meowgorithm)
+b5fd4c0: chore: auto-update files (@charmcli)
+84bcc3c: chore: update fantasy and catwalk (#3087) (@andreynering)
+0e8b879: refactor(commands): centralise skill discovery (@Amolith)
+8d7166e: refactor(server): share prompt validation before background dispatch (@meowgorithm)
