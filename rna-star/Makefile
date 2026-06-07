@@ -52,7 +52,15 @@ do-install:
 # Maybe a libomp package would suffice?
 .if ${OPSYS} == Darwin
 SUBST_CLASSES+=		openmp
-SUBST_SED.openmp=	-e 's|-fopenmp|-Xpreprocessor &|g'
+
+# https://projects.blender.org/blender/blender/pulls/136816
+.include "../../mk/compiler/clang.mk"
+.if ${_CC_MAJOR} >= 17
+SUBST_SED.openmp=	-e 's|-fopenmp|-Xpreprocessor -fopenmp=libiomp5|g'
+.else
+SUBST_SED.openmp=	-e 's|-fopenmp|-Xpreprocessor -fopenmp|g'
+.endif
+
 SUBST_STAGE.openmp=	pre-configure
 SUBST_FILES.openmp=	Makefile
 LDFLAGS+= 		-L${PREFIX}/lib -lomp -lm
