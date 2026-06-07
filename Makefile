@@ -1398,6 +1398,7 @@ SUBDIR+=	go-incremental
 SUBDIR+=	go-jennifer
 SUBDIR+=	go-jettison
 SUBDIR+=	go-jira
+SUBDIR+=	go-jsonnet
 SUBDIR+=	go-jsonparser
 SUBDIR+=	go-junit-report
 SUBDIR+=	go-ksuid
