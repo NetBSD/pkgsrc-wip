@@ -1,4 +1,3 @@
-===> Extracting for crush-0.76.0
 # $NetBSD$
 
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.mod
