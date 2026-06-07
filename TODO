@@ -16,13 +16,14 @@ Suggested package updates
 	o blam-1.8.12
 	o bleachbit-0.9.6
 	o blink-2.0.0
+	o bookokrat-0.3.12
 	o cairo-dock-3.6.0
 	o cairo-java-1.0.8
 	o calligra-3.0.1
 	o chapel-1.32.0
 	o cinelerra-4.5
 	o codex-0.98.0
-	o crush-0.74.1
+	o crush-0.76.0
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o deadbeef-1.9.6
@@ -118,6 +119,7 @@ Suggested package updates
 	o pessulus-2.30.4
 	o pike-7.8.700
 	o pipewire-1.6
+	o pitchfork-2.12.1
 	o ppp-2.5.2
 	o py-PyPE-2.9
 	o py-etmtk-3.2.31
@@ -127,6 +129,7 @@ Suggested package updates
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
 	o py-zeitgeist-0.9.16
+	o py-zensical-0.0.44
 	o qmc2-0.59
 	o qupzilla-2.2.1
 	o rdup-1.1.13
