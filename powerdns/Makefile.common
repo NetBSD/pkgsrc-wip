@@ -1,7 +1,7 @@
 # $NetBSD: Makefile.common,v 1.47 2026/05/25 14:07:14 wiz Exp $
 # used by net/powerdns/backend.mk
 
-PDNS_VERSION=	5.1.0
+PDNS_VERSION=	5.1.1
 DISTNAME=	pdns-${PDNS_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/
