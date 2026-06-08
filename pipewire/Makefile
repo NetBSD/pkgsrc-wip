@@ -49,7 +49,7 @@ MESON_ARGS+=	-Dsdl2=disabled
 MESON_ARGS+=	-Dalsa=disabled
 MESON_ARGS+=	-Dpipewire-alsa=disabled
 
-post-install :
+post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/spa-0.2/spa/utils/endian.h.orig
 	${RM} ${DESTDIR}${PREFIX}/include/spa-0.2/spa/utils/string.h.orig
 
