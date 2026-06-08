@@ -3333,7 +3333,6 @@ SUBDIR+=	postoffice
 SUBDIR+=	postsrsd
 SUBDIR+=	pounce
 SUBDIR+=	povray
-SUBDIR+=	powerdns
 SUBDIR+=	powerlevel10k
 SUBDIR+=	powerline
 SUBDIR+=	powerpc-none-elf-binutils
