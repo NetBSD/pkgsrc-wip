@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.114 2026/05/28 23:16:38 thorpej Exp $
+
+BLAKE2s (lsof-4.99.6.tar.gz) = 7982b981b9f10b4df0d1293873f4f7681606752fb76c4cca8146687beadef6e5
+SHA512 (lsof-4.99.6.tar.gz) = 025317f98b585f266e8cbd02cf7e17dcbd5c630bf927fd710e1700f393464eeebd54de8277955ad6e2d849ebc67ebd7e0ed9bbbc53d4b3754e13cecb29a1f28e
+Size (lsof-4.99.6.tar.gz) = 1145434 bytes

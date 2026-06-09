@@ -2283,6 +2283,7 @@ SUBDIR+=	lpc55-host
 SUBDIR+=	lpdsrv
 SUBDIR+=	lpjs
 SUBDIR+=	lrslib
+SUBDIR+=        lsof
 SUBDIR+=	lsw
 SUBDIR+=	lsyncd
 SUBDIR+=	ltc-tools
