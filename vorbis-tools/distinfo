@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.33 2024/06/18 08:49:33 markd Exp $
+
+BLAKE2s (vorbis-tools-1.4.3.tar.gz) = 6a88419c12bbbdb718be51781aa24d13e355756704fe12bc94eb9c14f5001053
+SHA512 (vorbis-tools-1.4.3.tar.gz) = 096cb82073ca697fd3556e11c09e8296f60d4abc3cdfee6296fe8643f2e39edcf093704453901fe34d03c7818f59d665d665504a217c1399079df1d936d763e4
+Size (vorbis-tools-1.4.3.tar.gz) = 1804238 bytes
