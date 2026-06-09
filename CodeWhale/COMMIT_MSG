@@ -1,27 +1,8 @@
-misc/CodeWhale: rename from DeepSeek-TUI, update to 0.8.53
+misc/CodeWhale: rename from DeepSeek-TUI, update to 0.8.55
 
-Packaged in wip by Chavdar Ivanov and Claude Code.
+Packaged in wip by Chavdar Ivanov.
 
-Upstream (Hmbown) renamed the project from DeepSeek-TUI to CodeWhale.
-The repository, distfile, and primary command are now codewhale; the
-deepseek and deepseek-tui commands remain as legacy shims and are
-scheduled for removal upstream in v0.9.0.
-
-This is a git rename of wip/DeepSeek-TUI to wip/CodeWhale plus an update
-from 0.8.39 to 0.8.53.
-
-Notable changes since 0.8.39:
-- Provider-agnostic: in addition to DeepSeek V4, supports OpenRouter,
-  NVIDIA NIM, Fireworks, SiliconFlow, Ollama and other OpenAI-compatible
-  endpoints.
-- New primary binaries codewhale and codewhale-tui (plus the short codew
-  alias and codewhale-app-server); deepseek / deepseek-tui kept as shims.
-
-pkgsrc notes:
-- Both NetBSD patches (patch-Cargo.lock and patch-crates_tui_Cargo.toml,
-  which bumped portable-pty 0.8 -> 0.9 for NetBSD termios support) are
-  dropped: upstream 0.8.53 ships portable-pty 0.9.0 natively with the
-  identical lockfile checksum.
-- cargo-depends.mk regenerated; only +qrcode-0.14.1, tar 0.4.45 -> 0.4.46
-  and thiserror/thiserror-impl 2.0.17 -> 2.0.18 changed.
-- PLIST regenerated for the new binary names.
+Removed the deprecated deepseek and deepseek-tui binary shims from the v0.9.0 Cargo crates
+and GitHub release artifact matrix. The canonical codewhale, codew, and codewhale-tui entry
+points remain, the private deprecated npm/deepseek-tui notice package stays unpublished,
+and DeepSeek provider/model/env/config compatibility remains first-class.
