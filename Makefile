@@ -4352,6 +4352,7 @@ SUBDIR+=	py-numericalunits
 SUBDIR+=	py-numpoly
 SUBDIR+=	py-numpy-quaternion
 SUBDIR+=	py-nupic
+SUBDIR+=	py-nvchecker
 SUBDIR+=	py-nxos
 SUBDIR+=	py-nxpd
 SUBDIR+=	py-nzmath
