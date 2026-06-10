@@ -1,0 +1,33 @@
+net/bftpd: Update to version 6.6
+
+Jesse Smith <jessefrgsmith@yahoo.ca> -> 6.6
+        - Add "211 End" reponse to SITE command's output to
+          make sure some FTP clients do not hang while waiting for additional
+          lines.
+
+        - Remove check for working GCC as it no longer works with modern versions of
+          GCC. Now we just check for a compiler and assume it can create binary files.
+
+
+Jesse Smith <jessefrgsmith@yahoo.ca> -> 6.5
+	- Fixed possible denial of service attack where child
+          file descriptors are not cleaned up by the parent quickly enough.
+          Fix provided by Alexander Trifa.
+
+Jesse Smith <jessefrgsmith@yahoo.ca> -> 6.4
+	- Directory listings are now shown in alphabetical order.
+	  Permissions on files are more accurate.
+	  Patch provided by Karl Tark.
+
+Jesse Smith <jessefrgsmith@yahoo.ca> -> 6.3
+	- Implemented the MLST and MSLD functions for sending file and
+	  directory information in machine-readable format.
+          Requested by Daneil Bedrenko for VLC mobile app.
+
+
+Jesse Smith <jessefrgsmith@yahoo.ca> -> 6.2
+       - When Bftpd is run with the -n flag (no configuration file)
+          default ratio settings prevented files from downloading.
+          Samuel Hsu has patched Bftpd to assume no ratio ("") is
+          treated the same as "none" or no restrictions.
+          This was fixed prior (in 5.6) and reverted. Re-adding it.
