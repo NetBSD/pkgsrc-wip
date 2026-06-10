@@ -16,8 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build-[0-9]*:../../devel/py-uv-build
 
 PY_RENAME_BINARIES=	extra-platforms
 
-# TODO: Extract dependencies from pyproject.toml
-
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
