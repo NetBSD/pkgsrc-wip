@@ -13,7 +13,17 @@ COMMENT=	brush (Bo(u)rn(e) RUsty SHell) is a modern bash- and POSIX- compatible 
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/brush-brush-shell-v0.4.0
-USE_LANGUAGES+=	c
+
+RUST_REQ=	1.88.0
+USE_TOOLS+=	pkg-config
+
+INSTALLATION_DIRS=	bin
+
+PKG_SHELL=	bin/brush
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/brush \
+		${DESTDIR}${PREFIX}/bin
 
 .include "cargo-depends.mk"
 
