@@ -1,0 +1,23 @@
+brush-shell: Update to v0.4.0
+
+Some key highlights:
+
+A meaningful step forward in bash compatibility. 
+Major bash language features are now implemented or substantially expanded, 
+e.g.: set -e, set -u, pipefail, failglob, the ERR trap, coprocesses, and a great deal more.
+Improved robustness across edge cases. 
+Closed pipes, broken stdout, unusual file-descriptor states, non-UTF8 history files, 
+and platform corner cases are now handled gracefully. 
+A systematic audit also removed an entire class of avoidable failure modes.
+Broader platform support. Using brush as a login shell on macOS is now supported, 
+Windows path handling is overhauled, FreeBSD, Android and 32-bit targets build cleanly again, 
+and wasm32-wasip2 is now exercised in CI.
+A more capable interactive shell. Optional TOML config, 
+zsh-style preexec/precmd hooks, experimental terminal integration, 
+expanded readline-macro support, and many completion improvements.
+API improvements and foundations for what's next. Scaffolding for
+a winnow-based parser, a generic Shell<Extensions> for embedders, 
+an opt-in bundled-coreutils build, and serde features for both AST and shell state. 
+This work has required breaking changes to API surface, mostly to brush-core. 
+Some changes were also made to brush-parser's API but we expect migration for 
+parser-only consumers to be straightforward and relatively minimal. 

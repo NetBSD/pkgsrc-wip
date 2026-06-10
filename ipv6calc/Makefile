@@ -11,20 +11,14 @@ HOMEPAGE=	https://www.deepspace6.net/projects/ipv6calc.html
 COMMENT=	Manipulates IPv6 addresses
 LICENSE=	gnu-gpl-v2
 
-# This package does not set or evaluate IPV6_READY, but it should still
-# be listed in README-IPv6.html. Leave this comment here to make it so!
-#
-BUILD_DEFS+=	IPV6_READY
-
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
 
-MAKE_FLAGS+=    CFLAGS="${CFLAGS} -Wno-error=char-subscripts -Wno-char-subscripts"
+MAKE_FLAGS+=	CFLAGS="${CFLAGS} -Wno-error=char-subscripts -Wno-char-subscripts"
 
-
-REPLACE_PERL+=  \
-    tools/ipv6calc-create-registry-list-ipv4.pl \
-    tools/ipv6calc-create-registry-list-ipv6.pl
+REPLACE_PERL+= \
+	tools/ipv6calc-create-registry-list-ipv4.pl \
+	tools/ipv6calc-create-registry-list-ipv6.pl
 
 .include "../../mk/bsd.pkg.mk"
