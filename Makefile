@@ -1466,7 +1466,6 @@ SUBDIR+=	grsync
 SUBDIR+=	grub2-current
 SUBDIR+=	gscan2pdf
 SUBDIR+=	gsdpdf
-SUBDIR+=	gsettings-desktop-schemas
 SUBDIR+=	gsmartcontrol
 SUBDIR+=	gst-plugins1-svt-vp9
 SUBDIR+=	gstat
