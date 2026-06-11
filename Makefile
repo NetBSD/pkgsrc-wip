@@ -6004,7 +6004,6 @@ SUBDIR+=	vncselector
 SUBDIR+=	vnstat
 SUBDIR+=	vnstati
 SUBDIR+=	volctl
-SUBDIR+=	vorbis-tools
 SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vscode
