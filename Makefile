@@ -392,7 +392,6 @@ SUBDIR+=	brogue
 SUBDIR+=	brogue-ce
 SUBDIR+=	browserpass-native
 SUBDIR+=	brumbrumrally
-SUBDIR+=	brush-shell
 SUBDIR+=	bsa
 SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
