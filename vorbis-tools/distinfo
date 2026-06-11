@@ -5,4 +5,3 @@ SHA512 (vorbis-tools-1.4.3.tar.gz) = 096cb82073ca697fd3556e11c09e8296f60d4abc3cd
 Size (vorbis-tools-1.4.3.tar.gz) = 1804238 bytes
 SHA1 (patch-configure) = ede9f755ae5d125325da50948d54367ae6c30d7b
 SHA1 (patch-ogg123_status.c) = 906cf9a5a19afc69cdafdf7d9f98f79072553520
-SHA1 (patch-share_Makefile.in) = 0ee4b3d2289c5fe89cecfed8257fb0ae07da2b9f

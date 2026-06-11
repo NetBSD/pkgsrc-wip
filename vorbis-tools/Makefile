@@ -27,6 +27,6 @@ PTHREAD_OPTS+=	require
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
+.include "../../multimedia/libkate/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
