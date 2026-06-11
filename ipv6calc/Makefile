@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.39 2020/01/26 17:31:50 rillig Exp $
-#
 
 DISTNAME=	ipv6calc-4.4.0
 CATEGORIES=	net
@@ -18,17 +17,15 @@ USE_TOOLS+=	bash
 
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -Wno-error=char-subscripts -Wno-char-subscripts"
 
-REPLACE_PERL+= \
-	tools/ipv6calc-create-registry-list-ipv4.pl \
-	tools/ipv6calc-create-registry-list-ipv6.pl
+REPLACE_PERL+=	tools/ipv6calc-create-registry-list-ipv4.pl
+REPLACE_PERL+=	tools/ipv6calc-create-registry-list-ipv6.pl
 
-REPLACE_BASH+= \
-	ipv6calcweb/create_ipv6calcweb-cgi.sh \
-	tools/DBIP-update.sh.in \
-	tools/GeoIP-update.sh.in \
-	tools/IP2Location-update.sh.in \
-	tools/ipv6calc-create-update-ipset.sh \
-	tools/ipv6calc-db-update-support.sh \
-	tools/ipv6calc-db-update.sh.in
+REPLACE_BASH+=	ipv6calcweb/create_ipv6calcweb-cgi.sh
+REPLACE_BASH+=	tools/DBIP-update.sh.in
+REPLACE_BASH+=	tools/GeoIP-update.sh.in
+REPLACE_BASH+=	tools/IP2Location-update.sh.in
+REPLACE_BASH+=	tools/ipv6calc-create-update-ipset.sh
+REPLACE_BASH+=	tools/ipv6calc-db-update-support.sh
+REPLACE_BASH+=	tools/ipv6calc-db-update.sh.in
 
 .include "../../mk/bsd.pkg.mk"
