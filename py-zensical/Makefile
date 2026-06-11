@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-deepmerge-[0-9]*:../../devel/py-deepmerge
 DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-pymdown-extensions-[0-9]*:../../wip/py-pymdown-extensions
+DEPENDS+=	${PYPKGPREFIX}-pymdown-extensions-[0-9]*:../../textproc/py-pymdown-extensions
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 

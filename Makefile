@@ -4530,7 +4530,6 @@ SUBDIR+=	py-pylith
 SUBDIR+=	py-pyls-spyder
 SUBDIR+=	py-pymatgen
 SUBDIR+=	py-pymbolic
-SUBDIR+=	py-pymdown-extensions
 SUBDIR+=	py-pymigemo
 SUBDIR+=	py-pymvpa
 SUBDIR+=	py-pynest2d
