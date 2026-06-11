@@ -22,7 +22,13 @@ REPLACE_PERL+= \
 	tools/ipv6calc-create-registry-list-ipv4.pl \
 	tools/ipv6calc-create-registry-list-ipv6.pl
 
-REPLACE_BASH+=	ipv6calcweb/create_ipv6calcweb-cgi.sh
-
+REPLACE_BASH+= \
+	ipv6calcweb/create_ipv6calcweb-cgi.sh \
+	tools/DBIP-update.sh.in \
+	tools/GeoIP-update.sh.in \
+	tools/IP2Location-update.sh.in \
+	tools/ipv6calc-create-update-ipset.sh \
+	tools/ipv6calc-db-update-support.sh \
+	tools/ipv6calc-db-update.sh.in
 
 .include "../../mk/bsd.pkg.mk"
