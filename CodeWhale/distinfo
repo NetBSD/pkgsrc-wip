@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (CodeWhale-0.8.55.tar.gz) = 5117f5d4bd27a501761aaae861997c6e4c76f2d2febc38005788f2a69ec9db08
-SHA512 (CodeWhale-0.8.55.tar.gz) = 7fcb48841ee1f01612ab669f94cdf8531c4aae1fe137c325dc504a8448a7e589f6a53d19787c4129ff54cbf1f8a080227131e4ac624559ebcb694dbc397c87a0
-Size (CodeWhale-0.8.55.tar.gz) = 3646863 bytes
+BLAKE2s (CodeWhale-0.8.58.tar.gz) = ca6fc0796fc81b48644308d0bcf9fc927a18f178680f19af4120bb40e39129cc
+SHA512 (CodeWhale-0.8.58.tar.gz) = b2a2e14f7220e1356c7a676b38c5fee12e0d918bd8bbbdb87eba1493f4ecae8421e83272ddf8c5e20cec5f2f6bcfa98e8d4815d69205b52515b5abe5a7f32a65
+Size (CodeWhale-0.8.58.tar.gz) = 3606742 bytes
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
 Size (Inflector-0.11.4.crate) = 17438 bytes
@@ -291,9 +291,6 @@ Size (cpufeatures-0.3.0.crate) = 14156 bytes
 BLAKE2s (crc32fast-1.5.0.crate) = 6e59f675b6404c35e422facb545e38c3e519f2a1268066914b7111ffc2ed6409
 SHA512 (crc32fast-1.5.0.crate) = 80d473960f004148e14e5fe2f23aa0d1b8c36e96237f49a6765ef713030e8326dbc0250a561afcfc49d8733f5a6d4f9f4677451cc13e2426ffed61f8c00cd81e
 Size (crc32fast-1.5.0.crate) = 40723 bytes
-BLAKE2s (crossbeam-channel-0.5.15.crate) = 3fd3c1657f5002717436a0e45e3a2053b12c27bf7beccd4391a476f975e084db
-SHA512 (crossbeam-channel-0.5.15.crate) = b5174329fbdb2a742992b3450a6b11e4330e1d542132acd22d0aebaf49332aad8ceb6eb4e52ccaf8617eb02f191f881b011e5521098082919672f06ac70a4e5b
-Size (crossbeam-channel-0.5.15.crate) = 92716 bytes
 BLAKE2s (crossbeam-deque-0.8.6.crate) = cf67e0c05e52f690d685df9a3b6fd861d6f2b4f21fa09ac997bb32c26946c8c5
 SHA512 (crossbeam-deque-0.8.6.crate) = 9368c0c224c4b84356f1d422d8869a5ab4bfb36b0ff69244a9e7a7304ed51f034001cd9b2bc35849df874d36ed34285c66574943573522ea32bbdc5a05df6989
 Size (crossbeam-deque-0.8.6.crate) = 22471 bytes
@@ -1536,9 +1533,6 @@ Size (tower-service-0.3.3.crate) = 6950 bytes
 BLAKE2s (tracing-0.1.44.crate) = c8b96501c5de427e26fd8b39c09146b04d6d62a501295fccdbad9e6f2f30e41c
 SHA512 (tracing-0.1.44.crate) = 383404a78c9bcb9dee947140082420673688dabc54eff334460222abddfc246b0256996ecb456d5b6325c029fcb2e641c95ff659a08366089b8b79784cb28869
 Size (tracing-0.1.44.crate) = 463135 bytes
-BLAKE2s (tracing-appender-0.2.4.crate) = 54670da5652ccd1d47f6d07c0d8931e604a0bdaafc847ba1db0f694da5ab8284
-SHA512 (tracing-appender-0.2.4.crate) = 0b7485ad5bab1ed99fc2ea909971d2271b86750cde107212de1cb0aa7ad14b79dbef7e07545d406e04db1c078b6235afe759526d09f17ddd67ad0f32102cdbb8
-Size (tracing-appender-0.2.4.crate) = 29738 bytes
 BLAKE2s (tracing-attributes-0.1.31.crate) = 69a82fa5f0a7f44b019d18f8e7cd65124d878bc67471ed620bfd94e5bd2baf34
 SHA512 (tracing-attributes-0.1.31.crate) = 6954ce397903cfced12ef495d46885e8320233cb631116b0c35731c89c51d2cf2532c77ed02d9b708375b5555f3580a197dd63ad6899a32c87e34e2da2733bfa
 Size (tracing-attributes-0.1.31.crate) = 39733 bytes
