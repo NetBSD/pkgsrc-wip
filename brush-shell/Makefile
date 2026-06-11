@@ -5,14 +5,12 @@ PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reubeno/}
 GITHUB_PROJECT=	brush
-GITHUB_TAG=	refs/tags/brush-shell-v0.4.0
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/reubeno/brush/
-COMMENT=	brush (Bo(u)rn(e) RUsty SHell) written in Rust
+COMMENT=	POSIX- and bash-compatible shell written in Rust
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/brush-brush-shell-v0.4.0
 
 RUST_REQ=	1.88.0
 USE_TOOLS+=	pkg-config
