@@ -14,11 +14,15 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
+USE_TOOLS+=	bash
 
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -Wno-error=char-subscripts -Wno-char-subscripts"
 
 REPLACE_PERL+= \
 	tools/ipv6calc-create-registry-list-ipv4.pl \
 	tools/ipv6calc-create-registry-list-ipv6.pl
+
+REPLACE_BASH+=	ipv6calcweb/create_ipv6calcweb-cgi.sh
+
 
 .include "../../mk/bsd.pkg.mk"
