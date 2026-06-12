@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
+${PERL5_SUB_INSTALLVENDORLIB}/Email/Stuffer.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Email/Stuffer/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Email::Stuffer.3
