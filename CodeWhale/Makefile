@@ -13,6 +13,7 @@ LICENSE=	mit
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c
+USE_TOOLS+=	pkg-config
 
 CARGO_INSTALL_ARGS=	install --path crates/tui --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 
@@ -23,5 +24,6 @@ post-install:
 
 .include "cargo-depends.mk"
 
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
