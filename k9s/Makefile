@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	k9s-0.50.18
+DISTNAME=	k9s-0.51.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=derailed/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://k9scli.io/
 COMMENT=	Kubernetes CLI
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GO_BUILD_PATTERN+=	-ldflags '-s -w \
 			-X github.com/derailed/k9s/cmd.version=${GITHUB_TAG} \
 			-X github.com/derailed/k9s/cmd.commit= \
 			-X github.com/derailed/k9s/cmd.date='
