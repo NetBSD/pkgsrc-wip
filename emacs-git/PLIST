@@ -11,8 +11,15 @@ info/bovine.info.gz
 info/calc.info.gz
 info/ccmode.info.gz
 info/cl.info.gz
+info/cons-1.png
+info/cons-2.png
+info/cons-2a.png
+info/cons-3.png
+info/cons-4.png
+info/cons-5.png
 info/dbus.info.gz
 info/dired-x.info.gz
+info/drawers.png
 info/ebrowse.info.gz
 info/ede.info.gz
 info/ediff.info.gz
@@ -23,7 +30,6 @@ info/eieio.info.gz
 info/eintr.info.gz
 info/elisp.info.gz
 info/elisp_type_hierarchy.jpg
-info/elisp_type_hierarchy.txt
 info/emacs-gnutls.info.gz
 info/emacs-mime.info.gz
 info/emacs.info.gz
@@ -40,6 +46,9 @@ info/htmlfontify.info.gz
 info/idlwave.info.gz
 info/ido.info.gz
 info/info.info.gz
+info/lambda-1.png
+info/lambda-2.png
+info/lambda-3.png
 info/mairix-el.info.gz
 info/message.info.gz
 info/mh-e.info.gz
