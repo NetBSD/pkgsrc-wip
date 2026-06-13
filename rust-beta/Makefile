@@ -6,7 +6,7 @@
 # Regenerating checksums may be needed to build the current rust-beta.
 
 DISTNAME=	rustc-beta-src
-PKGNAME=	rust-1.97.0beta.3
+PKGNAME=	rust-1.97.0beta.4
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 EXTRACT_SUFX=	.tar.xz
@@ -20,7 +20,7 @@ LICENSE=	mit OR apache-2.0
 # version of it. Use either stable or beta, not both.
 CONFLICTS+=	rust-bin-[0-9]*
 
-# One crate dependency hasn't been declared for 1.97.0-beta.2 and beta.3
+# One crate dependency hasn't been declared for 1.97.0-beta.2, beta.3 and beta.4
 # Check if the situation has changed when the next iteration is released.
 ALLOW_NETWORK_ACCESS=   yes
 
