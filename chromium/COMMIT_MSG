@@ -1,6 +1,11 @@
-www/chromium: update to 149.0.7827.53
+www/chromium: update to 149.0.7827.114
 
-* 149.0.7827.53
-This update includes 429 security fixes. Below, we highlight fixes
+* 149.0.7827.114
+This update includes 28 security fixes. Below, we highlight fixes
+that were contributed by external researchers.
+Please see the Chrome Security Page for more information.
+
+* 149.0.7827.102
+This update includes 74 security fixes. Below, we highlight fixes
 that were contributed by external researchers.
 Please see the Chrome Security Page for more information.
