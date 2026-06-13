@@ -4,7 +4,7 @@ DISTNAME=	sway-1.12
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://swaywm.org/
 COMMENT=	Tilling, i3-compatible Wayland compositor
 LICENSE=	mit
