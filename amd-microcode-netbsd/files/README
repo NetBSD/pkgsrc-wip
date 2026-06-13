@@ -1,0 +1,5 @@
+$NetBSD: $
+
+To use ${PKGNAME} to update your system's microcode,
+be sure that sysctl hw.firmware.path includes your pkgsrc prefix.
+

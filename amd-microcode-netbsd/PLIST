@@ -1,0 +1,9 @@
+@comment $NetBSD$
+libdata/firmware/amd-ucode/README
+libdata/firmware/amd-ucode/microcode_amd.bin
+libdata/firmware/amd-ucode/microcode_amd_fam15h.bin
+libdata/firmware/amd-ucode/microcode_amd_fam16h.bin
+libdata/firmware/amd-ucode/microcode_amd_fam17h.bin
+libdata/firmware/amd-ucode/microcode_amd_fam19h.bin
+libdata/firmware/amd-ucode/microcode_amd_fam1ah.bin
+share/doc/amd-microcode-netbsd/README
