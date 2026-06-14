@@ -27,8 +27,8 @@ post-install:
 
 WHEEL_NAME=	offlineimap-${VERSION}
 
+# as of 8.0.2
 # needs imap credentials for testing:
-# as of 8.0.0.2024.08.26
 # 1 warning, 1 error
 
 .include "../../lang/python/batteries-included.mk"
