@@ -6279,6 +6279,7 @@ SUBDIR+=	ziparchive
 SUBDIR+=	zipios
 SUBDIR+=	zk
 SUBDIR+=	zlua
+SUBDIR+=	zls
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zpaq

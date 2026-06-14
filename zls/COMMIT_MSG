@@ -1,0 +1,4 @@
+devel/zls: update to 0.16.0
+
+* zls-0.16.0 built with zig-0.16.0.
+* PIE enabled with a patch for build.zig.
