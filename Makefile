@@ -5923,7 +5923,6 @@ SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unnethack
 SUBDIR+=	unpaper
-SUBDIR+=        unrar
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unrest
 SUBDIR+=	up
