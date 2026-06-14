@@ -1952,7 +1952,6 @@ SUBDIR+=	kmscube
 SUBDIR+=	kmscube-git
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
-SUBDIR+=	knot
 SUBDIR+=	kodi
 SUBDIR+=	koha
 SUBDIR+=	krename
