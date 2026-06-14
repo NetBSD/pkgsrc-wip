@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cloudflared-2024.11.1
+DISTNAME=	cloudflared-2026.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cloudflare/}
 GITHUB_PROJECT=	cloudflared
@@ -13,10 +13,10 @@ LICENSE=	apache-2.0
 .include "go-modules.mk"
 
 GO_BUILD_DATE_cmd=	${DATE} -u '+%Y-%m-%d-%H%M UTC'
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS=		-ldflags ' \
 			-X "main.Version=${PKGVERSION_NOREV}" \
 			-X "main.BuildTime=${GO_BUILD_DATE_cmd:sh}"'
-GO_BUILD_PATTERN+=	github.com/cloudflare/cloudflared/cmd/cloudflared
+GO_BUILD_PATTERN=	github.com/cloudflare/cloudflared/cmd/cloudflared
 
 INSTALLATION_DIRS+=	bin
 
