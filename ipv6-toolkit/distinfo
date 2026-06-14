@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.12 2021/10/26 11:17:10 nia Exp $
+
+BLAKE2s (ipv6toolkit-2.2.tar.gz) = 380610181c047df5f35830d73fb976c60e917c43f8a6ca74dc0430a65ace6397
+SHA512 (ipv6toolkit-2.2.tar.gz) = 10cd9e4ab5fa6c31b30f374fee064ab54581dc785ec42f9994d4efa7567240263aec84e2394c82a0c95f0175dbcd257f64858bfcb172c362b477a0eb52019056
+Size (ipv6toolkit-2.2.tar.gz) = 1003009 bytes

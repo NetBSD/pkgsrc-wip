@@ -1,0 +1,123 @@
+security/ipv6-toolkit: Update to v2.2
+
+SI6 Networks IPv6 Toolkit 2.2
+   * All: Ensure consistency in version numbers across tools and documentation.
+   * path6: Fix bug that prevented setting TCP flags
+   * blackhole6: Fixed bug that lead to errors for paths >= 10 hops
+   * blackhole6: Polished the code
+     Removed unnecessary comments, and prevented some internal errors to make it
+     to the tool output.
+   * blackhole6: Set different default destination port numbers for TCP and UDP
+     The default UDP destination port has been changed to port 53.
+
+SI6 Networks IPv6 Toolkit v2.1 (Jan)
+   * addr6: Add support for accepting only one address per prefix
+     Option '--block-dup-preflen' was added
+   * scan6: Fix bug in smart scan
+     There was a bug in the generation of low-byte and pattern-byte addresses.
+   * scan6: Improve VMWare scans
+     We have now added vSphere and ESX server entries
+   * scan6: Fix bug in default ports
+     When port-scanning, if not range was specified, the tool would not scan
+     any ports.
+   * script6: Add alias for "get-alexa-domains"
+     Some documents were using the "get-alexa" script name (rather than
+     "get-alexa-domains") but the short name of the script had been removed.
+     Now added.
+
+SI6 Networks IPv6 Toolkit v2.0 (Guille)
+   * path6: New tool
+     Added a fully-IPv6-capable traceroute tool, named path6.
+   * script6: New tool
+     Added a new tool which incorporates new functionality and also provides
+     a shortcut to other existing tools.
+   * blackhole6: New tool
+     Added a new tool isolates IPv6 blackholes.
+   * udp6: New tool
+     Added a new tool that can send arbirary UDP/IPv6 packets.
+   * All: Fix bug when reading packets
+     lipcap "internals" together with select() would cause (at times)
+     delays when reading packets.
+   * All: Add support for Solaris
+     Solaris is now a supported platform.
+   * All: Fix bug in next hop determination
+     A bug caused, in some scenarios, the tools to fail with "cannot find
+     next hop".
+   * All: Fix support for loopback interface
+     The tools failed to set the "virtual" "Ether Proto" for packets sent
+     on the loopback interface, and hence they were discarded.
+   * All: Add support for domain names
+     All tools now support domain names in their "-d" options.
+   * addr6: Fix bug in address scope filtering
+     A bug caused address scope filters to behave incorrectly.
+   * addr6: Fix error in manual page
+     Some of the long-option names were incorrect.
+   * scan6: Fixes bug in address range computation
+     Prefixes that were not multiple of 16 resulted in bogus address ranges.
+   * scan6: Add support for port scanning
+     scan6 now implements several techniques for TCP and UDP port scanning.
+   * scan6: Add support for heuristic host scanning
+     scan6 can now automatically infer the IID type of a target and reduce
+     the search space accordingly (just "-d example.com/64" or
+     "-d IPV6ADDRESS/64".
+   * tcp6: Add TCP probe mode
+     Probe mode allows you to employ tcp6 for simple probing (e.g.,
+     port scanning)
+   * tcp6: Add "--open-mode" and "--close-mode" options
+     These two options allow you to cause a TCP connection at a remote
+     node to transition to any specific state (and hene perform e.g.,
+     FIN-WAIT-2 floods)
+   * tcp6: Add "--data" option
+     This options allows to set a specific TCP payload from the
+     command-line (e.g., an HTTP "GET" command).
+   * script6: Fix bug in get-aaaa, get-ns, and get-mx
+     Domains that had a CNAME would be skipped.
+   * frag6: Fix bug in Frag ID assessment
+     Probes are now sent every 10ms rather than in batches, to minimize packet
+     reordering.
+
+SI6 Networks IPv6 Toolkit v1.5.3
+
+   * All: Fix packet size issues
+     Many tools were using a (sometimes non-initialized) max_packet_size
+     variable, instead of the corresponding member of the idata structure.
+   * All: Add support for some Mac OS version
+     The toolkit would not compile on Lion (10.7.5) or Snow Leopard (10.6.8),
+     as a result of inconsistencies of how BYTE_ORDER-related constants were
+     (not) set in those versions of Mac OS.
+
+SI6 Networks IPv6 Toolkit v1.5.2
+
+   * All: Add support for GNU Debian/kfreebsd
+     The toolkit would not build on GNU Debian/kfreebsd before this release.
+   * tcp6: Add support for TCP/IPv6 probes
+     tcp6 can now send TCP/IPv6 packets ("--probe-mode" option), and read the
+     TCP response packets, if any. This can be leveraged for port scans, and
+     miscellaneous measurements.
+
+SI6 Networks IPv6 Toolkit v1.5.1
+   * Fix Mac OS breakage
+     libipv6.h had incorrect definitions for "struct tcp_hdr".
+
+SI6 Networks IPv6 Toolkit v1.5
+
+   * All: Improved the next-hop determination
+     Since the toolkit employs libpcap (as there is no portable way to forge
+     IPv6 addresses and do other tricks), it was relying on the user specifying
+     a network interface ("-i" was mandatory for all tools) and that routers
+     would send Router Advertisements on the local links. This not only was
+     rather inconvenient for users (specifying a network interface was not
+     warranted), but also meant that in setups where RAs where not available
+     (e.g., manual configuration), the tools would fail. The toolkit now
+     employs routing sockets (in BSDs) or Netlink (in Linux), and only uses
+     "sending RAs" as a fall-back in case of failure (IPv6 not configured on
+     the local host).
+   * All: Improved source address selection
+     This is closely related to the previous bullet.
+   * All: More code moved to libipv6
+     More and more code was moved to libipv6 and removed to the individual tool
+     source files. As with some of the above, this was painful and
+     time-consuming, but was necessary -- and in the long run it will make
+     code maintenance easier.
+   * All: libipv6 used throughout all tools
+     This was rather painful and non-exciting, but necessary.

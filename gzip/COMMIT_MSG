@@ -1,0 +1,43 @@
+archivers/gzip: Update to version 1.14
+
+* Noteworthy changes in release 1.14 (2025-04-09) [stable]
+
+** Bug fixes
+  'gzip -d' no longer omits the last partial output buffer when the
+  input ends unexpectedly on an IBM Z platform.
+  [bug introduced in gzip-1.11]
+  'gzip -l' no longer misreports lengths of multimember inputs.
+  [bug introduced in gzip-1.12]
+  'gzip -S' now rejects suffixes containing '/'.
+  [bug present since the beginning]
+
+** Changes in behavior
+  The GZIP environment variable is now silently ignored except for the
+  options -1 (--fast) through -9 (--best), --rsyncable, and --synchronous.
+  This brings gzip into line with more-cautious compressors like zstd
+  that limit environment variables' effect to relatively innocuous
+  performance issues.  You can continue to use scripts to specify
+  whatever gzip options you like.
+  'zmore' is no longer installed on platforms lacking 'more'.
+
+** Performance improvements
+  gzip now decompresses significantly faster by computing CRCs via a
+  slice by 8 algorithm, and faster yet on x86-64 platforms that
+  support pclmul instructions.
+
+* Noteworthy changes in release 1.13 (2023-08-19) [stable]
+
+** Changes in behavior
+  zless now diagnoses gzip failures, if using less 623 or later.
+  When SIGPIPE is ignored, gzip now exits with status 2 (warning)
+  instead of status 1 (error) when writing to a broken pipe.  This is
+  more useful with programs like 'less' that treat gzip exit status 2
+  as a non-failure.
+
+** Bug fixes
+  'gzip -d' no longer fails to report invalid compressed data
+  that uses a dictionary distance outside the input window.
+  [bug present since the beginning]
+  Port to C23, which does not allow K&R-style function definitions
+  with parameters, and which does not define __alignas_is_defined.
+

@@ -1,0 +1,58 @@
+www/litehtml: Update v0.10
+
+
+What's Changed
+Refactoring for zero warnings by @tordex in #288
+Add specifying a working directory for tests by @u-235 in #289
+Linux container: added support for borders style by @tordex in #290
+Fixed: Negative top margin changes block height #284 by @tordex in #292
+Fix windows build issues. by @tordex in #294
+fix min/max compilation errors on Windows by @stasoid in #299
+-Wpedantic in g++ makes lots of warnings by @m32 in #300
+Common cairo container by @tordex in #302
+flex: bug in processing box-sizing in flex items (#295) by @tordex in #303
+Support standard HTML character encodings by @stasoid in #305
+Implement "prescan the byte stream to determine its encoding" by @stasoid in #307
+Gradients support by @tordex in #312
+Fix: one brake tag is 'eaten' in line with double break by @tordex in #313
+Support for default value of the var() function. by @tordex in #316
+container_cairo_pango: select font from list of available fonts by @tordex in #317
+Fixed compiler warnings produced by gcc/clang at -Wall -Wextra levels by @kobalicek in #321
+Add standard-compliant CSS parser by @stasoid in #322
+fix type selector case-sensitivity issue by @stasoid in #323
+Fix crash in html_tag::draw_background() when is_root & clip is nullptr by @asmaloney in #324
+Modernize some code based on static analysis by @asmaloney in #331
+{haiku} Fix debug output in LiteHtmlView::draw_borders() by @asmaloney in #337
+{style} Prefer brace list returns by @asmaloney in #340
+{style} Use "= default" where possible by @asmaloney in #341
+Ensure border style is initialized by @asmaloney in #342
+Add media query tests, support images in test_container by @stasoid in #348
+Tracking of mouse enter/leave events on elements via a new document_container::on_mouse_event function by @tordex in #361
+Move tests to the another repository by @tordex in #363
+Add support for the "appearance" CSS property by @juddc in #367
+update to gumbo-parser 0.12.3 by @txgk in #382
+Support for text-decoration CSS properties by @tordex in #391
+Fixed memory leaks and possible crashes by @tordex in #393
+Optimizing remove_whitespace performance by @solomonwzs in #398
+feat: Implements image click event and optimized click event logic. by @NiuGuohui in #390
+Support 'text-emphasis' css properties. by @NiuGuohui in #395
+fix: issue with border radius for inline elements calculating by @tordex in #399
+Includes refactoring using clangd by @tordex in #400
+fixed: elements with 'position:fixed' have issue with draw by @tordex in #401
+Some small fixes by @tordex in #403
+Added documentation by @tordex in #406
+Conic gradient support for the container_cairo by @tordex in #407
+Fix: url fragment is not processed correctly by @tordex in #410
+fix: incorrect baseline calculation and list markers position by @tordex in #414
+Allow building with Clang using MSVC ABI by @cristianadam in #418
+Enable processing pixel lengths as float by @DRKV333 in #415
+Fix the issue where on_button_cancel does not work when hovering by @NiuGuohui in #421
+Improve flex layout free space distribution by @DRKV333 in #422
+Fix: incorrect hover position for vertically algned elements by @tordex in #431
+Support for elements scrolling by @tordex in #442
+Fix: incorect rendering of blocks with own formatting context by @tordex in #444
+Floating engine refactor by @tordex in #457
+Fix flex item with percentage max-width collapsing below its main size (#459) by @kleuter in #460
+Fix: crash in encoding detection with clang (#454) by @tordex in #462
+Rebuild the render tree in media_changed() so display changes across breakpoints take effect by @kleuter in #461
+Do not justify the last line of a block by @tordex in #464
