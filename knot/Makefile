@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.98 2026/05/14 16:41:45 ryoon Exp $
 
-DISTNAME=	knot-3.5.4
+DISTNAME=	knot-3.5.5
 CATEGORIES=	net
 MASTER_SITES=	https://knot-dns.nic.cz/release/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.knot-dns.cz/
 COMMENT=	CZ.NIC Knot (auth) DNS server
 LICENSE=	gnu-gpl-v2

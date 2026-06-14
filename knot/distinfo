@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.52 2026/02/02 12:56:21 ryoon Exp $
 
-BLAKE2s (knot-3.5.4.tar.xz) = c015b8a28d91c7db4bdeb7b79b039be7fbec6509fcf0a6e70b27ce6a88518bbc
-SHA512 (knot-3.5.4.tar.xz) = 2dd51cc2d5c80a9570a8cd89cf094e7445ba60cc44df8152a932da5be2e8734a4c3916d6c36e6dea74031afab5d2af52e64bc7ce9efb93efe752c54ad5a3a818
-Size (knot-3.5.4.tar.xz) = 1767940 bytes
+BLAKE2s (knot-3.5.5.tar.xz) = 5d0ca7a4f3414c95a99adce6a9bb47ec785ded8287a889cfaca3bba7cc71864b
+SHA512 (knot-3.5.5.tar.xz) = 983789c7fbbb191d4bd8e9f13050a5d5310a8bc69184b6d3440711fff88fa631ca6703b0800dd5581bd84850b4253dddfb36c2bdd46f6f158333b5ad934fdfdc
+Size (knot-3.5.5.tar.xz) = 1734192 bytes
 SHA1 (patch-samples_Makefile.in) = 499b8742dbd948e489b01d512bc7a8d8e4fe2e7b

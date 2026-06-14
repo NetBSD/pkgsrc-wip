@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 2013/09/01 08:28:08 wiz Exp $
+bin/unrar
+share/doc/unrar/license.txt
+share/doc/unrar/readme.txt
