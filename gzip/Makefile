@@ -16,4 +16,6 @@ MAKE_FLAGS+=	manlinks=so
 INFO_FILES=	yes
 CHECK_PERMS=	no	# can't depend on checkperms; its distfile is gzipped
 
+CFLAGS+=	-Wno-implicit-function-declaration
+
 .include "../../mk/bsd.pkg.mk"
