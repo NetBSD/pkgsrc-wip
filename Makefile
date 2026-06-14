@@ -5412,7 +5412,6 @@ SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	sharpF
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
-SUBDIR+=        shellcheck
 SUBDIR+=	shellharden
 SUBDIR+=	shotcut
 SUBDIR+=	shoutcast
