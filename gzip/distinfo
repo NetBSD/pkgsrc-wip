@@ -3,3 +3,4 @@ $NetBSD: distinfo,v 1.13 2022/04/08 06:24:00 wiz Exp $
 BLAKE2s (gzip-1.14.tar.gz) = 5de6cb26d527288b50752441a56f4665fde652ea3460ee0b238ebe1b8ac98b44
 SHA512 (gzip-1.14.tar.gz) = 65db6f01d982a976c431d33e9725dab84fcb991c9603cb2a492a2d578a58f9ac03a14ade4b91af49e9e877d81afec61dea563cf1e599f5b2eee2087613a2d368
 Size (gzip-1.14.tar.gz) = 1369513 bytes
+SHA1 (patch-lib_utimens.h) = fba5ec8e9fcb87642247a68ee6a4568a00d4f413
