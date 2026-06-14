@@ -2496,7 +2496,6 @@ SUBDIR+=	mtdev
 SUBDIR+=	mtf
 SUBDIR+=	mtop
 SUBDIR+=	mtpfs
-SUBDIR+=        mtr
 SUBDIR+=	mtr-graph
 SUBDIR+=	mtrack
 SUBDIR+=	mtrxmath
