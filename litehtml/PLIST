@@ -70,8 +70,6 @@ include/litehtml/web_color.h
 lib/cmake/litehtml/litehtmlConfig.cmake
 lib/cmake/litehtml/litehtmlTargets-noconfig.cmake
 lib/cmake/litehtml/litehtmlTargets.cmake
-lib/liblitehtml.so
-lib/liblitehtml.so.0
-lib/liblitehtml.so.0.0.0
+lib/liblitehtml.a
 share/doc/litehtml/LICENSE
 share/doc/litehtml/README.md
