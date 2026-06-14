@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2026/01/07 08:47:23 wiz Exp $
 
-DISTNAME=		vips-8.18.2
+DISTNAME=		vips-8.18.3
 PKGNAME=		lib${DISTNAME}
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libvips/}
