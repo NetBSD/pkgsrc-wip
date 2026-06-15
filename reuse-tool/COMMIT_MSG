@@ -1,3 +1,4 @@
 devel/reuse-tool: Add reuse-tool version 6.2.0
 
-Tool for compliance with the REUSE recommendations.
+Tool to check compliance with the REUSE specification:
+https://reuse.software/spec/
