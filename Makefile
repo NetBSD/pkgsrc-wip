@@ -2026,6 +2026,7 @@ SUBDIR+=	libbsd-solaris10
 SUBDIR+=	libbtctl
 SUBDIR+=	libc++
 SUBDIR+=	libc++-abi
+SUBDIR+=	libcanlock
 SUBDIR+=	libcdata
 SUBDIR+=	libcerror
 SUBDIR+=	libcfile
