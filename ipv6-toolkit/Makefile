@@ -17,13 +17,13 @@ USE_TOOLS+=	perl
 REPLACE_PERL+=	tools/blackhole6 tools/script6 tools/messi
 
 post-install:
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/man/man1
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/man/man5
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/man/man7
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 
-	${INSTALL_MAN} ${WRKSRC}/manuals/*.1 ${DESTDIR}${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/manuals/*.5 ${DESTDIR}${PREFIX}/man/man5/
-	${INSTALL_MAN} ${WRKSRC}/manuals/*.7 ${DESTDIR}${PREFIX}/man/man7/
+	${INSTALL_MAN} ${WRKSRC}/manuals/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/manuals/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
+	${INSTALL_MAN} ${WRKSRC}/manuals/*.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/
 
 
 .include "../../net/libpcap/buildlink3.mk"
