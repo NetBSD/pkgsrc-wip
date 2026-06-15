@@ -5,7 +5,7 @@ CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fgont/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
-MAINTAINER=	drixter@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	http://www.si6networks.com/tools/ipv6toolkit
 COMMENT=	IPv6 security assessment and troubleshooting tool
 LICENSE=	gnu-gpl-v3
