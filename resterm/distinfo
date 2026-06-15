@@ -789,5 +789,5 @@ Size (sigs.k8s.io_yaml_@v_v1.6.0.mod) = 162 bytes
 BLAKE2s (sigs.k8s.io_yaml_@v_v1.6.0.zip) = 8b92c92dfe4db5eaba71c57ef400ecffa2e0c42a6bfa3847c8a7c074670a1504
 SHA512 (sigs.k8s.io_yaml_@v_v1.6.0.zip) = 73e59bbf4443467f89ca6d891c9cd3eaa9bbbd920721bd9a032a34db7969b179bc1d5c98b8457ba3ce1633cd16dc8e0361cc41955e0c51cf50d1165551e9819a
 Size (sigs.k8s.io_yaml_@v_v1.6.0.zip) = 60719 bytes
-SHA1 (patch-go.mod) = 078c86983c05d85070ba521d87350fec274e80ac
-SHA1 (patch-go.sum) = 3f2e245a67847794bb6f5ad75851639847713676
+SHA1 (patch-go.mod) = b25161efcbe099f3cef61089c4d6f1adc6c83cae
+SHA1 (patch-go.sum) = 3ded3c8e38e3eca65bc269f2587efb3f355cef24

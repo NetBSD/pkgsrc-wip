@@ -12,11 +12,6 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
 
-
-pre-build:
-	cd ${WRKSRC} && ${GO} mod tidy
-
-
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
