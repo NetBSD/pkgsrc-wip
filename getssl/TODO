@@ -2,3 +2,6 @@
 - Change installation to `USE_TOOLS+=gmake` to get the helper scripts too?
 - Turn off the auto-update feature
 - Anything else someone who actually uses this would notice
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-10303
