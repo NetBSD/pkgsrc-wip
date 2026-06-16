@@ -14,17 +14,22 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	cmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+DEPENDS+=	daemonize-[0-9]*:../../sysutils/daemonize
 
-#RCD_SCRIPTS=	knot-resolver
+RCD_SCRIPTS=	kresd
 
-EGDIR=			${PREFIX}/etc/knot-resolver
-#PKG_SYSCONFSUBDIR=	knot-resolver
+CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/icann-ca.pem  ${PKG_SYSCONFDIR}/knot-resolver/icann-ca.pem
+CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.hints    ${PKG_SYSCONFDIR}/knot-resolver/root.hints
+CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.keys     ${PKG_SYSCONFDIR}/knot-resolver/root.keys
 
-CONF_FILES+=	${EGDIR}/icann-ca.pem  ${PKG_SYSCONFDIR}/icann-ca.pem
-CONF_FILES+=	${EGDIR}/root.hints ${PKG_SYSCONFDIR}/knot-resolver/root.hints
-CONF_FILES+=	${EGDIR}/root.keys ${PKG_SYSCONFDIR}/knot-resolver/root.keys
+INSTALLATION_DIRS+=	share/examples/knot-resolver
 
-INSTALLATION_DIRS=	${EGDIR}
+post-install:
+	${MKDIR} ${DESTDIR}${PREFIX}/share/examples/knot-resolver
+	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/icann-ca.pem ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
+	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/root.hints ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
+	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/root.keys ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
+	${RMDIR} ${DESTDIR}${PREFIX}/etc/knot-resolver
 
 .include "../../net/knot/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"

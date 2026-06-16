@@ -112,6 +112,7 @@ share/doc/knot-resolver/examples/config.isp
 share/doc/knot-resolver/examples/config.personal
 share/doc/knot-resolver/examples/config.privacy
 share/doc/knot-resolver/examples/config.splitview
-etc/knot-resolver/icann-ca.pem
-etc/knot-resolver/root.hints
-etc/knot-resolver/root.keys
+share/examples/knot-resolver/icann-ca.pem
+share/examples/knot-resolver/root.hints
+share/examples/knot-resolver/root.keys
+@pkgdir etc/knot-resolver
