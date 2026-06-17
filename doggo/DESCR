@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h2 align="center">doggo</h2>
+  <p align="center">
+    🐶 <i>Command-line DNS client for humans</i>
+    <br/>
+  </p>
+  <p align="center">
+    <a href="https://doggo.mrkaran.dev/" target="_blank">Web Interface</a>
+    ·
+    <a href="https://doggo.mrkaran.dev/docs/" target="_blank">Documentation</a>
+  </p>
+  <img src="www/static/doggo.png" alt="doggo CLI usage">
+</p>
+
+---
+
+**doggo** is a modern command-line DNS client (like _dig_) written in Golang. It outputs information in a neat concise manner and supports protocols like DoH, DoT, DoQ, and DNSCrypt as well.
+
+...
