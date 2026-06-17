@@ -1,7 +1,5 @@
 $NetBSD$
 
-RMD160 (qtile-0.11.1.tar.gz) = 1b71498ba6adf008bc02fb994f6e25b4c26941fa
-SHA512 (qtile-0.11.1.tar.gz) = 9cc2cdf5a01495c680fae62d23348d68cca456ce2c31848bef23825c943a5e8aebcc3ea70879388af06d222ab703dd410db14e6a9bd4180d90f57651b9dbaed5
-Size (qtile-0.11.1.tar.gz) = 442026 bytes
-SHA1 (patch-libqtile_widget_battery.py) = c3c6197ec92d8cd8d46276df7db4f81a7c02cb80
-SHA1 (patch-setup.py) = a00b26ba5e8114307e55c5e5328681039fd94df4
+BLAKE2s (qtile-0.36.0.tar.gz) = aa047352e2a2ecff8909d916faab1f4dc82ba24d5b5dc0eed470591b0d2a31ff
+SHA512 (qtile-0.36.0.tar.gz) = 60c10c685dc789b20389694fb73cd688ebe3b1855a6d599cc5c13438c457f9950437df0f2a2647f0d1192298dabc5ae111dbda7a9ae8ee9699fe032f843d0c3d
+Size (qtile-0.36.0.tar.gz) = 967422 bytes
