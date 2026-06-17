@@ -8,17 +8,16 @@ GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mr-karan/doggo/
 COMMENT=	Connamd Line DNS client
-LICENSE=	gpl3
+LICENSE=	gnu-gpl-v3
 
-# USE_TOOLS+=		gmake 
+USE_LANGUAGES=	c
 
-GO_BUILD_PATTERN=./cmd/doggo
+GO_BUILD_PATTERN=	./cmd/doggo
+GOFLAGS=		-ldflags="-X 'main.buildVersion=${PKGVERSION_NOREV}' -X 'main.buildDate=2026-01-01 00:00:00'"
 
 .include "go-modules.mk"
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
-
-USE_LANGUAGES=	go c
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
