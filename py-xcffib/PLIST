@@ -1,16 +1,12 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xcffib/__init__.py
 ${PYSITELIB}/xcffib/__init__.pyc
 ${PYSITELIB}/xcffib/__init__.pyo
-${PYSITELIB}/xcffib/_ffi.py
-${PYSITELIB}/xcffib/_ffi.pyc
-${PYSITELIB}/xcffib/_ffi.pyo
 ${PYSITELIB}/xcffib/bigreq.py
 ${PYSITELIB}/xcffib/bigreq.pyc
 ${PYSITELIB}/xcffib/bigreq.pyo
@@ -20,6 +16,9 @@ ${PYSITELIB}/xcffib/composite.pyo
 ${PYSITELIB}/xcffib/damage.py
 ${PYSITELIB}/xcffib/damage.pyc
 ${PYSITELIB}/xcffib/damage.pyo
+${PYSITELIB}/xcffib/dbe.py
+${PYSITELIB}/xcffib/dbe.pyc
+${PYSITELIB}/xcffib/dbe.pyo
 ${PYSITELIB}/xcffib/dpms.py
 ${PYSITELIB}/xcffib/dpms.pyc
 ${PYSITELIB}/xcffib/dpms.pyo
@@ -29,9 +28,9 @@ ${PYSITELIB}/xcffib/dri2.pyo
 ${PYSITELIB}/xcffib/dri3.py
 ${PYSITELIB}/xcffib/dri3.pyc
 ${PYSITELIB}/xcffib/dri3.pyo
-${PYSITELIB}/xcffib/ffi_build.py
-${PYSITELIB}/xcffib/ffi_build.pyc
-${PYSITELIB}/xcffib/ffi_build.pyo
+${PYSITELIB}/xcffib/ffi.py
+${PYSITELIB}/xcffib/ffi.pyc
+${PYSITELIB}/xcffib/ffi.pyo
 ${PYSITELIB}/xcffib/ge.py
 ${PYSITELIB}/xcffib/ge.pyc
 ${PYSITELIB}/xcffib/ge.pyo
@@ -41,6 +40,7 @@ ${PYSITELIB}/xcffib/glx.pyo
 ${PYSITELIB}/xcffib/present.py
 ${PYSITELIB}/xcffib/present.pyc
 ${PYSITELIB}/xcffib/present.pyo
+${PYSITELIB}/xcffib/py.typed
 ${PYSITELIB}/xcffib/randr.py
 ${PYSITELIB}/xcffib/randr.pyc
 ${PYSITELIB}/xcffib/randr.pyo
@@ -68,6 +68,9 @@ ${PYSITELIB}/xcffib/sync.pyo
 ${PYSITELIB}/xcffib/testing.py
 ${PYSITELIB}/xcffib/testing.pyc
 ${PYSITELIB}/xcffib/testing.pyo
+${PYSITELIB}/xcffib/wrappers.py
+${PYSITELIB}/xcffib/wrappers.pyc
+${PYSITELIB}/xcffib/wrappers.pyo
 ${PYSITELIB}/xcffib/xc_misc.py
 ${PYSITELIB}/xcffib/xc_misc.pyc
 ${PYSITELIB}/xcffib/xc_misc.pyo
@@ -89,6 +92,12 @@ ${PYSITELIB}/xcffib/xinerama.pyo
 ${PYSITELIB}/xcffib/xinput.py
 ${PYSITELIB}/xcffib/xinput.pyc
 ${PYSITELIB}/xcffib/xinput.pyo
+${PYSITELIB}/xcffib/xkb.py
+${PYSITELIB}/xcffib/xkb.pyc
+${PYSITELIB}/xcffib/xkb.pyo
+${PYSITELIB}/xcffib/xprint.py
+${PYSITELIB}/xcffib/xprint.pyc
+${PYSITELIB}/xcffib/xprint.pyo
 ${PYSITELIB}/xcffib/xproto.py
 ${PYSITELIB}/xcffib/xproto.pyc
 ${PYSITELIB}/xcffib/xproto.pyo

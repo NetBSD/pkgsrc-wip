@@ -1,18 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	xcffib-0.6.0
+DISTNAME=	xcffib-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	x11 devel python
+CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xcffib/}
 
-HOMEPAGE=	https://pypi.org/project/xcffib/
-COMMENT=	Python binding to the X Window System protocol via libxcb
+HOMEPAGE=	https://github.com/tych0/xcffib
+COMMENT=	XCB binding for Python
 LICENSE=	apache-2.0
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1.0:../../devel/py-cffi
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
