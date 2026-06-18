@@ -3,4 +3,5 @@ $NetBSD: distinfo,v 1.4 2024/02/10 11:03:14 wiz Exp $
 BLAKE2s (litehtml-0.10.tar.gz) = 921fc2d6edc973d5c9781deedb2ea6c9c3bf9c1220a1a619b4c7b1dca2019aac
 SHA512 (litehtml-0.10.tar.gz) = e561ae14711d740a966255a2d0a392864181829f8fc24891d337b8fd892368e0c34f2be617a5437b034cc42474ad770f63774d4e27640fa43f794b9d03f660fc
 Size (litehtml-0.10.tar.gz) = 820656 bytes
+SHA1 (patch-CMakeLists.txt) = 78417c46188b97d99d05f73ce6f74bf92e55692c
 SHA1 (patch-cmake_litehtmlConfig.cmake) = 0b84f06f87a0c386eefe01d98c8829a122152d98
