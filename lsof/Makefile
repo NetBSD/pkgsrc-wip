@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	lsof-4.99.6
+DISTNAME=	lsof-4.99.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lsof-org/}
 GITHUB_PROJECT=	lsof
-GITHUB_RELEASE=	4.99.6
+GITHUB_RELEASE=	4.99.7
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/lsof-org/lsof/
