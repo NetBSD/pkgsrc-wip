@@ -68,8 +68,6 @@ share/sftpgo/static/vendor/fonts/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7S
 share/sftpgo/static/vendor/fonts/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2
 share/sftpgo/static/vendor/fonts/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2
 share/sftpgo/static/vendor/fonts/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2
-share/sftpgo/static/vendor/glightbox/glightbox.min.css
-share/sftpgo/static/vendor/glightbox/glightbox.min.js
 share/sftpgo/static/vendor/humanize-duration/humanize-duration.min.js
 share/sftpgo/static/vendor/i18next/i18next.min.js
 share/sftpgo/static/vendor/i18next/i18nextBrowserLanguageDetector.min.js
@@ -77,6 +75,8 @@ share/sftpgo/static/vendor/i18next/i18nextChainedBackend.min.js
 share/sftpgo/static/vendor/i18next/i18nextHttpBackend.min.js
 share/sftpgo/static/vendor/i18next/i18nextLocalStorageBackend.min.js
 share/sftpgo/static/vendor/i18next/jquery-i18next.min.js
+share/sftpgo/static/vendor/imageviewer/imageviewer.css
+share/sftpgo/static/vendor/imageviewer/imageviewer.js
 share/sftpgo/static/vendor/papaparse/papaparse.min.js
 share/sftpgo/static/vendor/pdfobject/pdfobject.min.js
 share/sftpgo/templates/common/base.html
