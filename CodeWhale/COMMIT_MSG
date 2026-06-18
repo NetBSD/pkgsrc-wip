@@ -1,8 +1,5 @@
-misc/CodeWhale: rename from DeepSeek-TUI, update to 0.8.55
+misc/CodeWhale: update to 0.8.62
 
-Packaged in wip by Chavdar Ivanov.
-
-Removed the deprecated deepseek and deepseek-tui binary shims from the v0.9.0 Cargo crates
-and GitHub release artifact matrix. The canonical codewhale, codew, and codewhale-tui entry
-points remain, the private deprecated npm/deepseek-tui notice package stays unpublished,
-and DeepSeek provider/model/env/config compatibility remains first-class.
+Routine upstream version bump from 0.8.61. Cargo.lock dependency set
+is unchanged, so cargo-depends.mk and the crate checksums are identical;
+only the main distfile checksum and size changed.
