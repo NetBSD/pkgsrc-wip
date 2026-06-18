@@ -3,14 +3,12 @@
 DISTNAME=	CodeWhale-0.8.62
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hmbown/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Hmbown/CodeWhale/
-COMMENT=	DeepSeek V4 harness
+COMMENT=	Local-first coding-agent harness for DeepSeek V4
 LICENSE=	mit
-
-WRKSRC=	${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
