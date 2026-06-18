@@ -34,12 +34,4 @@ post-install:
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 
-# Fix crate download URLs: cargo.mk constructs paths in the CDN format
-# {name}/{name}-{version}.crate but sets MASTER_SITE_CRATESIO to the
-# API host https://crates.io/api/v1/crates/ which returns 400 Bad Request.
-# Override each SITES.*.crate entry to use the CDN directly.
-.for crate in ${CARGO_CRATE_DEPENDS}
-SITES.${crate}.crate=	-https://static.crates.io/crates/${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate}.crate
-.endfor
-
 .include "../../mk/bsd.pkg.mk"
