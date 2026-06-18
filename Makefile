@@ -2638,6 +2638,7 @@ SUBDIR+=	newt
 SUBDIR+=	nextpnr
 SUBDIR+=	nextpnr-himbaechel-gowin
 SUBDIR+=	nextpnr-ice40_update
+SUBDIR+=	nextvi
 SUBDIR+=	nfcapdu
 SUBDIR+=	nfstrace
 SUBDIR+=	ng-spice-dev

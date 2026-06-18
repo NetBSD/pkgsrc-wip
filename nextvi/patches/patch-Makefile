@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2026-05-31 18:18:04.818630007 +0000
++++ Makefile
+@@ -12,8 +12,6 @@ CFLAGS := \
+ CFLAGS += -D_POSIX_C_SOURCE=200809L -D_DEFAULT_SOURCE
+ CFLAGS += -MMD
+ 
+-CC = c99
+-
+ prefix = /usr/local
+ bindir := ${prefix}/bin
+ 
