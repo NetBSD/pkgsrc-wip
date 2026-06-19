@@ -201,7 +201,6 @@ GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
 GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
-GN_ARGS+=	use_system_libffi=true
 GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
 GN_ARGS+=	use_udev=true
@@ -390,14 +389,11 @@ do-install:
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
-.include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../devel/wayland/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
