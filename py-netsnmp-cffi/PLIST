@@ -1,11 +1,11 @@
 @comment $NetBSD$
 bin/asnmpget
-${PYSITELIB}/netsnmp_cffi-0.0.0.dist-info/METADATA
-${PYSITELIB}/netsnmp_cffi-0.0.0.dist-info/RECORD
-${PYSITELIB}/netsnmp_cffi-0.0.0.dist-info/WHEEL
-${PYSITELIB}/netsnmp_cffi-0.0.0.dist-info/entry_points.txt
-${PYSITELIB}/netsnmp_cffi-0.0.0.dist-info/licenses/LICENSE
-${PYSITELIB}/netsnmp_cffi-0.0.0.dist-info/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/netsnmpy/__init__.py
 ${PYSITELIB}/netsnmpy/__init__.pyc
 ${PYSITELIB}/netsnmpy/__init__.pyo
@@ -43,3 +43,6 @@ ${PYSITELIB}/netsnmpy/session.pyo
 ${PYSITELIB}/netsnmpy/trapsession.py
 ${PYSITELIB}/netsnmpy/trapsession.pyc
 ${PYSITELIB}/netsnmpy/trapsession.pyo
+${PYSITELIB}/netsnmpy/version.py
+${PYSITELIB}/netsnmpy/version.pyc
+${PYSITELIB}/netsnmpy/version.pyo
