@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/zino
 bin/zinoconv
+bin/zping
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -332,3 +333,6 @@ ${PYSITELIB}/zino/version.pyo
 ${PYSITELIB}/zino/zino.py
 ${PYSITELIB}/zino/zino.pyc
 ${PYSITELIB}/zino/zino.pyo
+${PYSITELIB}/zino/zping.py
+${PYSITELIB}/zino/zping.pyc
+${PYSITELIB}/zino/zping.pyo
