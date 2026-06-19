@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (renpy-6.99.12.4-source.tar.bz2) = e47ac5d6c2fe87cf6417bcfb6f96f654df057772e4c63c0aaba99db4cc191e6d
+SHA512 (renpy-6.99.12.4-source.tar.bz2) = 375b67e15630fc21915136e70bc93db6da7c2da192d39b1256822513ae44974124522c85f1976f2af62df27b5fa11493af488b02abcf0081eeae03e1a69dfca5
+Size (renpy-6.99.12.4-source.tar.bz2) = 18192453 bytes
+SHA1 (patch-renpybidicore.c) = 63a27a9279aeb509cc950b5586cde0b394abc13f
+SHA1 (patch-setup.py) = b2bd5341975a19cdd446c3c458c76a940674f1be
