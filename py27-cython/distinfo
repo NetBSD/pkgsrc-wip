@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (Cython-0.26.tar.gz) = a0da30f9375e09a543b424323cad51c4b46441fd1abb86ae92c6b10beb56f5e5
+SHA512 (Cython-0.26.tar.gz) = 58b7dbdca3b1bdfcb8b968cb1b59826b793656bb7f1203a80b59b3fae2d3174cc99f19f88fc2ec175aa98c9daeca0eb3c52674a7889ba1e914fd20d19ef92aed
+Size (Cython-0.26.tar.gz) = 1692039 bytes
