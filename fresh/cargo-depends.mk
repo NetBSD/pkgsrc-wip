@@ -416,6 +416,7 @@ CARGO_CRATE_DEPENDS+=	ratatui-0.30.0
 CARGO_CRATE_DEPENDS+=	ratatui-core-0.1.0
 CARGO_CRATE_DEPENDS+=	ratatui-crossterm-0.1.0
 CARGO_CRATE_DEPENDS+=	ratatui-termwiz-0.1.0
+CARGO_CRATE_DEPENDS+=	ratatui-wgpu-0.4.1
 CARGO_CRATE_DEPENDS+=	ratatui-widgets-0.3.0
 CARGO_CRATE_DEPENDS+=	raw-window-handle-0.6.2
 CARGO_CRATE_DEPENDS+=	recvmsg-1.0.0
