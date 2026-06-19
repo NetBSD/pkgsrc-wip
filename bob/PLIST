@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/bob
-share/examples/bob/config.lua

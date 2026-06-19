@@ -363,7 +363,6 @@ SUBDIR+=	bmap
 SUBDIR+=	bmaptool
 SUBDIR+=	bmp-docklet
 SUBDIR+=	boa
-SUBDIR+=	bob
 SUBDIR+=	bogomips
 SUBDIR+=	boinc-git
 SUBDIR+=	bolt-lmm
