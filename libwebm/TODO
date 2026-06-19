@@ -1,0 +1,4 @@
+Finished.
+
+The user I packaged it for needs a pkg-config or cmake file for
+detection, which upstream doesn't provide.

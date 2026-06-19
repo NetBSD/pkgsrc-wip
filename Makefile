@@ -2220,6 +2220,7 @@ SUBDIR+=	libvirt11
 SUBDIR+=	libvpx-git
 SUBDIR+=	libwacom
 SUBDIR+=	libwbxml2-patched
+SUBDIR+=	libwebm
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
 SUBDIR+=	libxml++3

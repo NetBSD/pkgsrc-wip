@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libwebm
+
+.if !defined(LIBWEBM_BUILDLINK3_MK)
+LIBWEBM_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libwebm+=	libwebm>=1.0.0.32
+BUILDLINK_PKGSRCDIR.libwebm?=	../../wip/libwebm
+.endif	# LIBWEBM_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libwebm

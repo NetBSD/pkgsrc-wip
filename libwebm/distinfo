@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libwebm-1.0.0.32.tar.gz) = d6d39705c5dd0c7f39d9f2166959b0b0f1d2d5f482496db0c8fb1a0c608a4001
+SHA512 (libwebm-1.0.0.32.tar.gz) = 9da60f3e7243fb78e0c02e0b6bf8e628552c5b54631960e34bacdf0349ce690984ff9432b8ffa495051858ecc2f4e4a4c1e0b290666058298abf94c3ad99670f
+Size (libwebm-1.0.0.32.tar.gz) = 501689 bytes
