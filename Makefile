@@ -5546,6 +5546,7 @@ SUBDIR+=	ssid
 SUBDIR+=	ssiv-git
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
+SUBDIR+=	stable-diffusion.cpp
 SUBDIR+=	stackdriver-collectd
 SUBDIR+=	stacks
 SUBDIR+=	stalwart

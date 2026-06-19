@@ -1,0 +1,3 @@
+Diffusion model (SD, Flux, Wan, ...) inference in pure C/C++
+
+This supports LLMs for creating pictures and videos.

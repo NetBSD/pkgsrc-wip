@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/sd-cli
+bin/sd-server
+include/stable-diffusion.h
+lib/libstable-diffusion.a
