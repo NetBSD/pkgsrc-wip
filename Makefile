@@ -5846,6 +5846,7 @@ SUBDIR+=	trigger-rally
 SUBDIR+=	trimadap
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
+SUBDIR+=	trivy
 SUBDIR+=	trurl
 SUBDIR+=	tscrape-git
 SUBDIR+=	tsh
