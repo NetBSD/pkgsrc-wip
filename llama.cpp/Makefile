@@ -5,6 +5,8 @@
 PKGNAME=	${DISTNAME:S/-b/-${LLAMA_CPP_VAR}./}
 CATEGORIES=	devel
 LLAMA_CPP_VAR=	0.0.2
+DISTFILES=	${DEFAULT_DISTFILES} llama-${GITHUB_TAG}-ui.tar.gz
+SITES.llama-${GITHUB_TAG}-ui.tar.gz=	https://github.com/ggml-org/llama.cpp/releases/download/${GITHUB_TAG}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ggerganov/llama.cpp/
@@ -34,6 +36,9 @@ SUBST_STAGE.findblas=	pre-configure
 SUBST_MESSAGE.findblas=	Fixing libpci soname
 SUBST_FILES.findblas+=	ggml/src/ggml-blas/CMakeLists.txt
 SUBST_SED.findblas+=	-e 's,DepBLAS openblas64,DepBLAS ${BLAS_PC},'
+
+post-extract:
+	${LN} -s ${WRKDIR}/llama-${GITHUB_TAG} ${WRKSRC}/tools/ui/dist
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
