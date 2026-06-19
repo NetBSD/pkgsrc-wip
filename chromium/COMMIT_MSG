@@ -1,11 +1,41 @@
-www/chromium: update to 149.0.7827.114
+www/chromium: update to 149.0.7827.155
 
-* 149.0.7827.114
-This update includes 28 security fixes. Below, we highlight fixes
+* 149.0.7827.155
+This update includes 33 security fixes. Below, we highlight fixes
 that were contributed by external researchers.
 Please see the Chrome Security Page for more information.
 
-* 149.0.7827.102
-This update includes 74 security fixes. Below, we highlight fixes
-that were contributed by external researchers.
-Please see the Chrome Security Page for more information.
+[N/A][516496659] Critical CVE-2026-12437: Use after free in WebShare. Reported by Google on 2026-05-25
+[N/A][516947912] Critical CVE-2026-12438: Inappropriate implementation in WebView. Reported by Google on 2026-05-27
+[N/A][519728275] Critical CVE-2026-12439: Use after free in Digital Credentials. Reported by Google on 2026-06-03
+[N/A][519731619] Critical CVE-2026-12440: Use after free in DigitalCredentials. Reported by Google on 2026-06-03
+[N/A][520157118] Critical CVE-2026-12441: Use after free in File Input. Reported by Google on 2026-06-05
+[N/A][521950423] Critical CVE-2026-12442: Use after free in Passwords. Reported by Google on 2026-06-09
+[N/A][522566295] Critical CVE-2026-12443: Use after free in Web Authentication. Reported by Google on 2026-06-11
+[N/A][513160088] High CVE-2026-12444: Out of bounds read in Chromoting. Reported by Google on 2026-05-14
+[N/A][513199795] High CVE-2026-12445: Use after free in Extensions. Reported by Google on 2026-05-14
+[N/A][513313107] High CVE-2026-12446: Insufficient data validation in Passwords. Reported by Google on 2026-05-14
+[N/A][513405023] High CVE-2026-12447: Heap buffer overflow in WebRTC. Reported by Google on 2026-05-15
+[N/A][513458233] High CVE-2026-12448: Inappropriate implementation in WebView. Reported by Google on 2026-05-15
+[N/A][513480539] High CVE-2026-12449: Use after free in Chromoting. Reported by Google on 2026-05-15
+[N/A][514531776] High CVE-2026-12450: Inappropriate implementation in Media. Reported by Zhixin Tu on 2026-05-19
+[N/A][514741076] High CVE-2026-12451: Use after free in DigitalCredentials. Reported by Google on 2026-05-19
+[N/A][515462244] High CVE-2026-12452: Use after free in Downloads. Reported by Google on 2026-05-21
+[N/A][516448843] High CVE-2026-12453: Insufficient validation of untrusted input in Input. Reported by Google on 2026-05-25
+[N/A][516926968] High CVE-2026-12454: Race in Safe Browsing. Reported by Google on 2026-05-27
+[N/A][517069848] High CVE-2026-12455: Use after free in Tab Strip. Reported by Google on 2026-05-27
+[N/A][517124587] High CVE-2026-12456: Insufficient validation of untrusted input in Extensions. Reported by Google on 2026-05-27
+[N/A][517153117] High CVE-2026-12457: Insufficient data validation in Extensions. Reported by Google on 2026-05-27
+[N/A][517258337] High CVE-2026-12458: Incorrect security UI in Passwords. Reported by Google on 2026-05-27
+[N/A][517406035] High CVE-2026-12459: Inappropriate implementation in Serial. Reported by Google on 2026-05-28
+[N/A][517484284] High CVE-2026-12460: Insufficient policy enforcement in File System Access. Reported by Google on 2026-05-28
+[N/A][517727318] High CVE-2026-12461: Out of bounds read in WebRTC. Reported by Google on 2026-05-29
+[N/A][517916024] High CVE-2026-12462: Use after free in Media. Reported by Google on 2026-05-29
+[N/A][518042749] High CVE-2026-12463: Inappropriate implementation in Views. Reported by Google on 2026-05-30
+[N/A][519358344] High CVE-2026-12464: Use after free in Browser. Reported by Google on 2026-06-03
+[N/A][520189702] High CVE-2026-12465: Insufficient validation of untrusted input in Metrics. Reported by Google on 2026-06-05
+[N/A][520199394] High CVE-2026-12466: Heap buffer overflow in WebRTC. Reported by Google on 2026-06-05
+[N/A][520202726] High CVE-2026-12467: Use after free in Extensions. Reported by Google on 2026-06-05
+[N/A][521485244] High CVE-2026-12468: Inappropriate implementation in Updater. Reported by Google on 2026-06-08
+[N/A][521618871] High CVE-2026-12469: Uninitialized Use in GPU. Reported by Google on 2026-06-09
+
