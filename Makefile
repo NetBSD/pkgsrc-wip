@@ -5082,6 +5082,7 @@ SUBDIR+=	py-zict
 SUBDIR+=	py-zinolib
 SUBDIR+=	py-zlmdb
 SUBDIR+=	py-zmqrpc
+SUBDIR+=	py27-cython
 SUBDIR+=	py27-libusb1
 SUBDIR+=	py34-html-docs
 SUBDIR+=	py35-html-docs
