@@ -4,11 +4,11 @@ bin/gguf-dump
 bin/gguf-editor-gui
 bin/gguf-new-metadata
 bin/gguf-set-metadata
-${PYSITELIB}/gguf-${GGUF_VER}.dist-info/METADATA
-${PYSITELIB}/gguf-${GGUF_VER}.dist-info/RECORD
-${PYSITELIB}/gguf-${GGUF_VER}.dist-info/WHEEL
-${PYSITELIB}/gguf-${GGUF_VER}.dist-info/entry_points.txt
-${PYSITELIB}/gguf-${GGUF_VER}.dist-info/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/gguf/__init__.py
 ${PYSITELIB}/gguf/__init__.pyc
 ${PYSITELIB}/gguf/__init__.pyo

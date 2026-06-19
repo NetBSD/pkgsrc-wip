@@ -147,6 +147,9 @@ ${PYSITELIB}/conversion/maincoder.pyo
 ${PYSITELIB}/conversion/mamba.py
 ${PYSITELIB}/conversion/mamba.pyc
 ${PYSITELIB}/conversion/mamba.pyo
+${PYSITELIB}/conversion/mellum.py
+${PYSITELIB}/conversion/mellum.pyc
+${PYSITELIB}/conversion/mellum.pyo
 ${PYSITELIB}/conversion/mimo.py
 ${PYSITELIB}/conversion/mimo.pyc
 ${PYSITELIB}/conversion/mimo.pyo
@@ -255,9 +258,9 @@ ${PYSITELIB}/convert_llama_ggml_to_gguf.pyo
 ${PYSITELIB}/convert_lora_to_gguf.py
 ${PYSITELIB}/convert_lora_to_gguf.pyc
 ${PYSITELIB}/convert_lora_to_gguf.pyo
-${PYSITELIB}/llama_cpp_scripts-${LLAMA_VER}.dist-info/METADATA
-${PYSITELIB}/llama_cpp_scripts-${LLAMA_VER}.dist-info/RECORD
-${PYSITELIB}/llama_cpp_scripts-${LLAMA_VER}.dist-info/WHEEL
-${PYSITELIB}/llama_cpp_scripts-${LLAMA_VER}.dist-info/entry_points.txt
-${PYSITELIB}/llama_cpp_scripts-${LLAMA_VER}.dist-info/licenses/AUTHORS
-${PYSITELIB}/llama_cpp_scripts-${LLAMA_VER}.dist-info/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
