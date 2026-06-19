@@ -5085,6 +5085,7 @@ SUBDIR+=	py-zmqrpc
 SUBDIR+=	py27-cython
 SUBDIR+=	py27-game_sdl2
 SUBDIR+=	py27-libusb1
+SUBDIR+=	py27-renpy
 SUBDIR+=	py34-html-docs
 SUBDIR+=	py35-html-docs
 SUBDIR+=	pydance
