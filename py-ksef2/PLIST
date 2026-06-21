@@ -15,6 +15,12 @@ ${PYSITELIB}/ksef2/__version__.pyo
 ${PYSITELIB}/ksef2/clients/__init__.py
 ${PYSITELIB}/ksef2/clients/__init__.pyc
 ${PYSITELIB}/ksef2/clients/__init__.pyo
+${PYSITELIB}/ksef2/clients/_async_session.py
+${PYSITELIB}/ksef2/clients/_async_session.pyc
+${PYSITELIB}/ksef2/clients/_async_session.pyo
+${PYSITELIB}/ksef2/clients/_metadata_pagination.py
+${PYSITELIB}/ksef2/clients/_metadata_pagination.pyc
+${PYSITELIB}/ksef2/clients/_metadata_pagination.pyo
 ${PYSITELIB}/ksef2/clients/async_auth.py
 ${PYSITELIB}/ksef2/clients/async_auth.pyc
 ${PYSITELIB}/ksef2/clients/async_auth.pyo
@@ -219,6 +225,9 @@ ${PYSITELIB}/ksef2/domain/models/batch.pyo
 ${PYSITELIB}/ksef2/domain/models/certificates.py
 ${PYSITELIB}/ksef2/domain/models/certificates.pyc
 ${PYSITELIB}/ksef2/domain/models/certificates.pyo
+${PYSITELIB}/ksef2/domain/models/compression.py
+${PYSITELIB}/ksef2/domain/models/compression.pyc
+${PYSITELIB}/ksef2/domain/models/compression.pyo
 ${PYSITELIB}/ksef2/domain/models/encryption.py
 ${PYSITELIB}/ksef2/domain/models/encryption.pyc
 ${PYSITELIB}/ksef2/domain/models/encryption.pyo
@@ -692,9 +701,6 @@ ${PYSITELIB}/ksef2/services/async_batch.pyo
 ${PYSITELIB}/ksef2/services/async_invoices.py
 ${PYSITELIB}/ksef2/services/async_invoices.pyc
 ${PYSITELIB}/ksef2/services/async_invoices.pyo
-${PYSITELIB}/ksef2/services/auth.py
-${PYSITELIB}/ksef2/services/auth.pyc
-${PYSITELIB}/ksef2/services/auth.pyo
 ${PYSITELIB}/ksef2/services/batch.py
 ${PYSITELIB}/ksef2/services/batch.pyc
 ${PYSITELIB}/ksef2/services/batch.pyo
@@ -773,6 +779,9 @@ ${PYSITELIB}/ksef2/services/builders/fa3/sub/settlement.pyo
 ${PYSITELIB}/ksef2/services/builders/fa3/sub/transaction.py
 ${PYSITELIB}/ksef2/services/builders/fa3/sub/transaction.pyc
 ${PYSITELIB}/ksef2/services/builders/fa3/sub/transaction.pyo
+${PYSITELIB}/ksef2/services/export_parts.py
+${PYSITELIB}/ksef2/services/export_parts.pyc
+${PYSITELIB}/ksef2/services/export_parts.pyo
 ${PYSITELIB}/ksef2/services/invoices.py
 ${PYSITELIB}/ksef2/services/invoices.pyc
 ${PYSITELIB}/ksef2/services/invoices.pyo
