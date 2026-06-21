@@ -1,26 +1,8 @@
-crush: Update to v0.78.0
+crush: Update to v0.79.1
 
 Changelog
-
-New!
-98d79e9: feat(clipboard): migrate clipboard to golang.design/x/clipboard (@taciturnaxolotl)
-f6a841e: feat(dialog): track last closed dialog in open with grace (@taciturnaxolotl)
-0f27905: feat(enricher): add litellm enricher (@taciturnaxolotl)
-3c4e654: feat(enricher): add lmstudio enricher (@taciturnaxolotl)
-9299ad4: feat(enricher): add ollama enricher (@taciturnaxolotl)
-89b680d: feat(enricher): add omlx enricher (@taciturnaxolotl)
-ac4bd9c: feat(scrolling): move to delta coalescing filter (#3135) (@taciturnaxolotl)
-f45712a: feat(ui): extract hypercredits from fantasy (@taciturnaxolotl)
-99a5fad: feat: add bang mode for direct shell command execution (#3013) (@taigrr)
-9886d22: feat: add support for fireworks provider (@andreynering)
-7303158: feat: auto-discover models from openai-compat providers (@taciturnaxolotl)
 Fixed
-4bd0116: fix(clipboard): support platforms without clipboard access (@taciturnaxolotl)
-f98791e: fix(server): show LSP status in client-server mode (@meowgorithm)
-d3af321: fix(shell): isolate child processes from Crush's session (#3097) (@taciturnaxolotl)
-1cfa9a1: fix(subagents): fixed subagents returning empty responses (#3125) (@taoeffect)
-46c1799: fix(title): fallback title generation (@taciturnaxolotl)
-Docs
-70ef707: docs: add auto discovery to readme (@taciturnaxolotl)
-Other stuff
-ffd4796: chore: auto-update files (@charmcli)
+1166201: fix(bangmode): activate bang mode when ! is preceded by whitespace (@meowgorithm)
+7e4bd6a: fix(bangmode): engage bang mode when pasting text starting with ! (@meowgorithm)
+f342edf: fix(bangmode): include bang commands in history (@meowgorithm)
+d20e29a: fix(bangmode): sync bang mode with external editor (@meowgorithm)
