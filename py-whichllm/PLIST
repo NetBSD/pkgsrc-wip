@@ -155,6 +155,9 @@ ${PYSITELIB}/whichllm/output/formatting.pyo
 ${PYSITELIB}/whichllm/output/json_output.py
 ${PYSITELIB}/whichllm/output/json_output.pyc
 ${PYSITELIB}/whichllm/output/json_output.pyo
+${PYSITELIB}/whichllm/output/markdown.py
+${PYSITELIB}/whichllm/output/markdown.pyc
+${PYSITELIB}/whichllm/output/markdown.pyo
 ${PYSITELIB}/whichllm/output/plan.py
 ${PYSITELIB}/whichllm/output/plan.pyc
 ${PYSITELIB}/whichllm/output/plan.pyo
