@@ -40,19 +40,32 @@ NetBSD specific functions
  #[cfg(target_os = "macos")]
  fn get_default_interface(family: Option<IpFamily>) -> Option<String> {
      // `route -n get -inet6 default` for IPv6; the v4 default otherwise.
-@@ -357,6 +386,11 @@ fn check_if_wireless(iface: &str) -> Opt
+@@ -357,6 +386,24 @@ fn check_if_wireless(iface: &str) -> Opt
      Some(is_wireless)
  }
  
 +#[cfg(target_os = "netbsd")]
-+fn check_if_wireless(_iface: &str) -> Option<bool> {
++fn check_if_wireless(iface: &str) -> Option<bool> {
++    if let Ok(output) = Command::new("ifconfig").arg(iface).output() {
++        if output.status.success() {
++            if let Ok(output_str) = String::from_utf8(output.stdout) {
++                for line in output_str.lines() {
++                    let line = line.trim();
++                    if line.starts_with("ssid ") {
++                        return Some(true);
++                    }
++                }
++            }
++        }
++    }
++
 +    Some(false)
 +}
 +
  #[cfg(target_os = "macos")]
  fn check_if_wireless(iface: &str) -> Option<bool> {
      // Parse `networksetup -listallhardwareports` to check if the interface is Wi-Fi
-@@ -477,6 +511,11 @@ fn get_wireless_ssid(iface: &str) -> Opt
+@@ -477,6 +524,11 @@ fn get_wireless_ssid(iface: &str) -> Opt
      None
  }
  
@@ -64,7 +77,7 @@ NetBSD specific functions
  #[cfg(target_os = "macos")]
  fn get_wireless_ssid(iface: &str) -> Option<String> {
      // Try `networksetup -getairportnetwork <iface>` (public API)
-@@ -576,6 +615,26 @@ fn get_interface_mac(iface: &str) -> Opt
+@@ -576,6 +628,26 @@ fn get_interface_mac(iface: &str) -> Opt
      None
  }
  
