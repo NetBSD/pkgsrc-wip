@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.75 2026/01/29 00:35:05 gdt Exp $
 
-DISTNAME=	bup-0.33.51.811
+DISTNAME=	bup-0.33.51.838
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
-GITHUB_TAG=	5f9cf697b3daa3d4d6899f9366ebc1fd64161a32
+GITHUB_TAG=	ea40773e6c8cb5efa1d750a2680fd531e5f46c89
 # bup has two problems that make packaging difficult.  One is that
 # building man pages requires non-portable tools (pandoc).  The other
 # is that it is hosted on github, which makes hosting tarballs
