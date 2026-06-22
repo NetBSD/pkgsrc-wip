@@ -22,11 +22,9 @@ CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/icann-ca.pem  ${PKG_SYSCONFD
 CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.hints    ${PKG_SYSCONFDIR}/knot-resolver/root.hints
 CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.keys     ${PKG_SYSCONFDIR}/knot-resolver/root.keys
 
-#INSTALLATION_DIRS+=	share/examples/knot-resolver
 AUTO_MKDIRS=		yes
 
 post-install:
-#	${MKDIR} ${DESTDIR}${PREFIX}/share/examples/knot-resolver
 	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/icann-ca.pem ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
 	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/root.hints ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
 	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/root.keys ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
