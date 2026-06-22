@@ -18,9 +18,12 @@ EXTRACT_USING=	bsdtar
 
 USE_LANGUAGES=	c c++
 # Upstream declares that c++17 is required in librecad.pro and adds -std.
-# Some subdirectories apparently use -std=gnu++1z.
+# Some subdirectories apparently use -std=gnu++1z.  This is a
+# deprecated name for gnu++17.  We do not actually support using gnu
+# variants in # USE_CXX_FEATURES, so we'll hope that a compiler that
+# supports c++17 will support gnu++17 and additionally recognize the
+# gnu++1z variant.
 USE_CXX_FEATURES+=	c++17
-USE_CXX_FEATURES+=	gnu++1z
 
 USE_TOOLS+=	pax pkg-config
 USE_LIBTOOL=	yes
