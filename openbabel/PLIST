@@ -66,6 +66,7 @@ include/openbabel3/openbabel/kekulize.h
 include/openbabel3/openbabel/kinetics.h
 include/openbabel3/openbabel/lineend.h
 include/openbabel3/openbabel/locale.h
+include/openbabel3/openbabel/macrocycle.h
 include/openbabel3/openbabel/math/align.h
 include/openbabel3/openbabel/math/erf.h
 include/openbabel3/openbabel/math/matrix3x3.h
@@ -114,11 +115,11 @@ lib/cmake/openbabel3/OpenBabel3ConfigVersion.cmake
 lib/cmake/openbabel3/OpenBabel3_EXPORTS-release.cmake
 lib/cmake/openbabel3/OpenBabel3_EXPORTS.cmake
 lib/libinchi.so
-lib/libinchi.so.0
-lib/libinchi.so.0.4.1
+lib/libinchi.so.1
+lib/libinchi.so.1.07.4
 lib/libopenbabel.so
-lib/libopenbabel.so.7
-lib/libopenbabel.so.7.0.0
+lib/libopenbabel.so.8
+lib/libopenbabel.so.8.0.0
 lib/openbabel/${PKGVERSION}/APIInterface.so
 lib/openbabel/${PKGVERSION}/CSRformat.so
 lib/openbabel/${PKGVERSION}/MCDLformat.so
@@ -182,6 +183,7 @@ lib/openbabel/${PKGVERSION}/gulpformat.so
 lib/openbabel/${PKGVERSION}/hinformat.so
 lib/openbabel/${PKGVERSION}/inchiformat.so
 lib/openbabel/${PKGVERSION}/jaguarformat.so
+lib/openbabel/${PKGVERSION}/ketformat.so
 lib/openbabel/${PKGVERSION}/lmpdatformat.so
 lib/openbabel/${PKGVERSION}/lpmdformat.so
 lib/openbabel/${PKGVERSION}/maeformat.so

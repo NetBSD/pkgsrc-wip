@@ -1,42 +1,10 @@
 $NetBSD$
 
-First two chunks:
-https://github.com/openbabel/openbabel/pull/2784
+Remove obsolete variable.
 
-rest:
-Remove obsolete variable and bump minor version.
-
---- CMakeLists.txt.orig	2024-12-21 00:24:53.000000000 +0000
+--- CMakeLists.txt.orig	2026-06-22 05:11:30.535235428 +0000
 +++ CMakeLists.txt
-@@ -1,6 +1,6 @@
--# Please ensure that any changes remain compliant with 3.1.
-+# Please ensure that any changes remain compliant with 3.10.
- if(NOT EMBED_OPENBABEL)
--  cmake_minimum_required(VERSION 3.1)
-+  cmake_minimum_required(VERSION 3.10)
- endif()
- 
- project(openbabel)
-@@ -10,9 +10,6 @@ set (CMAKE_CXX_STANDARD 11)
- 
- if(COMMAND cmake_policy)
-   cmake_policy(SET CMP0003 NEW)
--  if(POLICY CMP0042)
--    cmake_policy(SET CMP0042 OLD)
--  endif()
- endif()
- 
- include (CheckCXXCompilerFlag)
-@@ -24,7 +21,7 @@ include (CheckCXXCompilerFlag)
- # had too many 1.100.1 releases. :-)
- set(BABEL_MAJ_VER   3)
- set(BABEL_MIN_VER   1)
--set(BABEL_PATCH_VER 1)
-+set(BABEL_PATCH_VER 2)
- 
- # This should be phased out in preference for just using the target name
- set(BABEL_LIBRARY openbabel)
-@@ -317,7 +314,7 @@ endif()
+@@ -318,7 +318,7 @@ find_package(Boost COMPONENTS program_options iostream
  
  find_package(Boost COMPONENTS program_options iostreams)
    if(Boost_FOUND)
@@ -45,7 +13,7 @@ Remove obsolete variable and bump minor version.
   endif()
  
  # Intel C++ Compiler
-@@ -438,7 +435,7 @@ endif()
+@@ -482,7 +482,7 @@ if(Boost_FOUND)
  
  find_package(Boost COMPONENTS filesystem iostreams unit_test_framework)
  if(Boost_FOUND)

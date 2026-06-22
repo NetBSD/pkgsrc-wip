@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.79 2025/04/24 14:13:19 wiz Exp $
 
-DISTNAME=	openbabel-3.1.2
+DISTNAME=	openbabel-3.2.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbabel/}
-GITHUB_TAG=	889c350feb179b43aa43985799910149d4eaa2bc
+GITHUB_TAG=	openbabel-${PKGVERSION_NOREV:S/./-/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openbabel.org/

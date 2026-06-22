@@ -2,9 +2,9 @@ $NetBSD$
 
 Remove obsolete variable.
 
---- tools/CMakeLists.txt.orig	2025-08-06 11:04:19.454854216 +0000
+--- tools/CMakeLists.txt.orig	2026-06-22 05:15:09.677983564 +0000
 +++ tools/CMakeLists.txt
-@@ -5,7 +5,7 @@ if(MINIMAL_BUILD)
+@@ -5,7 +5,7 @@ else(MINIMAL_BUILD)
  else(MINIMAL_BUILD)
    find_package(Boost COMPONENTS program_options iostreams)
    if(Boost_FOUND)

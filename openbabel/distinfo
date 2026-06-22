@@ -1,10 +1,7 @@
 $NetBSD: distinfo,v 1.15 2025/01/31 15:49:47 wiz Exp $
 
-BLAKE2s (openbabel-3.1.2-889c350feb179b43aa43985799910149d4eaa2bc.tar.gz) = 850a95cf66818ba949d04a5099d91f822b3e3a0eb2674978e190415827ac83c1
-SHA512 (openbabel-3.1.2-889c350feb179b43aa43985799910149d4eaa2bc.tar.gz) = 44340c3d08b22783cf6a702c192480869b73fef21104641feaf5cbcd51f693fd17bb05ad31a3520f330aa57733d6f4be707b3c1243b3010d6ceccca8974e732f
-Size (openbabel-3.1.2-889c350feb179b43aa43985799910149d4eaa2bc.tar.gz) = 36864825 bytes
-SHA1 (patch-CMakeLists.txt) = ca891ea9fbe94fc1329038daa5e799b723b7451f
-SHA1 (patch-doc_examples_static__executable_CMakeLists.txt) = bb856e98c870e91d8e7047eaf3654c5951dc27f4
-SHA1 (patch-scripts_CMakeLists.txt) = 0ceae9b607a985492a001f21d706482ae48c936a
-SHA1 (patch-test_CMakeLists.txt) = f9d7a528c5476dd2f53346b2ab820211c6bdc385
-SHA1 (patch-tools_CMakeLists.txt) = bcdaea1a9cd19b5c25e85d87b619433a1cec0ad0
+BLAKE2s (openbabel-3.2.0.tar.gz) = 5e6cb4f6678823547d520163da22c6afdf32bce4c8555562a332026b0ef705b5
+SHA512 (openbabel-3.2.0.tar.gz) = 0def0b8c6185ec648c41b32c9c2963329f764b57105efe895fa435fd2ee4878b70141b0ac9e80dddbc82e2ca95281955f612a21ba0dd5c0e7ef715061acf8234
+Size (openbabel-3.2.0.tar.gz) = 37815471 bytes
+SHA1 (patch-CMakeLists.txt) = 8344c3e5cf318fb0f117f499837ebcf86370fb9f
+SHA1 (patch-tools_CMakeLists.txt) = e938dc4459e991e8654b69e10207ca925ab1827d

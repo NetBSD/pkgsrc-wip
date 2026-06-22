@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	openbabel
 OPENBABEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openbabel+=	openbabel>=3.0.0nb1
-BUILDLINK_ABI_DEPENDS.openbabel?=	openbabel>=3.1.1nb35
-BUILDLINK_PKGSRCDIR.openbabel?=		../../wip/openbabel
+BUILDLINK_ABI_DEPENDS.openbabel?=	openbabel>=3.2.0
+BUILDLINK_PKGSRCDIR.openbabel?=		../../biology/openbabel
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
