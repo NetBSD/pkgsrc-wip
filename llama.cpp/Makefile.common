@@ -4,9 +4,7 @@
 # used by wip/py-gguf/Makefile
 # used by wip/py-llama-cpp-scripts/Makefile
 
-.include "../../mk/bsd.prefs.mk"
-
 DISTNAME=	llama.cpp-${GITHUB_TAG}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
 GITHUB_PROJECT=	llama.cpp
-GITHUB_TAG=	b9722
+GITHUB_TAG=	b9756
