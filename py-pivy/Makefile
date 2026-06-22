@@ -21,8 +21,10 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # kludge until fixed u
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 .include "../../devel/cmake/build.mk"
+.include "../../devel/swig4/buildlink3.mk"
 
 .include "../../wip/Coin/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../wip/soqt/buildlink3.mk"
