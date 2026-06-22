@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--without-framework
 .include "../../devel/cmake/build.mk"
 
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/simage/buildlink3.mk"
