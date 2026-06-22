@@ -1,5 +1,3 @@
-misc/CodeWhale: update to 0.8.62
+misc/CodeWhale: update to 0.8.64
 
-Routine upstream version bump from 0.8.61. Cargo.lock dependency set
-is unchanged, so cargo-depends.mk and the crate checksums are identical;
-only the main distfile checksum and size changed.
+Routine upstream version bump from 0.8.62.
