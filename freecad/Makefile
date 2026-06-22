@@ -56,8 +56,7 @@ SUBST_STAGE.eol=	post-extract
 SUBST_FILES.eol=	src/App/Application.cpp src/App/FreeCADInit.py src/Main/Main*.cpp src/Mod/Inspection/CMakeLists.txt
 SUBST_FILTER_CMD.eol=	${TR} -d '\r'
 
-REPLACE_PYTHON+=	src/Tools/wiki2qhelp.py src/Tools/PythonToCPP.py src/Tools/githubstats.py src/Tools/updatefromcrowdin.py src/Tools/updatecrowdin.py src/Tools/updateppa.py
-REPLACE_PYTHON+=	src/Tools/generateBase/generateModel_Module.py src/Tools/generateBase/generateDS.py
+REPLACE_PYTHON+=	src/Tools/PythonToCPP.py src/Tools/githubstats.py src/Tools/updatecrowdin.py
 REPLACE_PYTHON+=	src/Mod/Test/testmakeWireString.py src/Mod/Test/testPathArray.py src/Mod/Test/testPathArraySel.py src/Mod/Test/unittestgui.py
 REPLACE_PYTHON+=	src/Mod/Robot/MovieTool.py src/Mod/OpenSCAD/prototype.py
 REPLACE_PYTHON+=	src/Tools/freecad-thumbnailer.in
