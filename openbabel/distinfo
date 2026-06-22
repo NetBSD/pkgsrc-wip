@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.15 2025/01/31 15:49:47 wiz Exp $
-
-BLAKE2s (openbabel-3.2.0.tar.gz) = 5e6cb4f6678823547d520163da22c6afdf32bce4c8555562a332026b0ef705b5
-SHA512 (openbabel-3.2.0.tar.gz) = 0def0b8c6185ec648c41b32c9c2963329f764b57105efe895fa435fd2ee4878b70141b0ac9e80dddbc82e2ca95281955f612a21ba0dd5c0e7ef715061acf8234
-Size (openbabel-3.2.0.tar.gz) = 37815471 bytes
-SHA1 (patch-CMakeLists.txt) = 8344c3e5cf318fb0f117f499837ebcf86370fb9f
-SHA1 (patch-tools_CMakeLists.txt) = e938dc4459e991e8654b69e10207ca925ab1827d
