@@ -1,26 +1,8 @@
-v0.43.1
+v0.43.2
 
-IntelliSense
-Context-aware completions as you type in the Editor (insert mode), 
-computed entirely from your open file and active environment.
+Fix: autocomplete Esc handler
 
-HTTP methods (including WS / WSS / GRPC) and URL
- schemes (http://, https://, ws://, wss://)
+Esc now closes the autocomplete popup without leaving Insert mode:
 
-@ directives and their options (e.g. @auth bearer, @k8s target=)
-
-Header names + values for well-known headers like Content-Type
-
-{{ variables }} in scope (file/global/request, @const, current environment) 
-and dynamic builtins ($uuid, $timestamp, …)
-
-Environment names for @compare and matching profile names for use= on @apply / @ssh / @k8s
-Popup keys: arrows up/down (or Ctrl+P/Ctrl+N) to move, Tab/Enter to accept, -> or ? for details, 
-Esc to dismiss. Styling via the editor_hint_* theme keys.
-
-Remote OpenAPI import
---from-openapi now accepts an http(s) URL, not just a local file:
-
-resterm --from-openapi https://petstore3.swagger.io/api/v3/openapi.json --http-out petstore.http
-Relative servers URLs resolve against the spec URL, --openapi-resolve-refs follows external $refs 
-over HTTP and the fetch honors the global --insecure and --proxy flags.
+First Esc closes the popup (or the preview panel, if it's open) and keeps you in Insert mode.
+Press Esc again to leave Insert mode, as before.
