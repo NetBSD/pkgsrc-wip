@@ -1316,7 +1316,6 @@ SUBDIR+=	gitleaks
 SUBDIR+=	gitless
 SUBDIR+=	gitmux
 SUBDIR+=	gitsome
-SUBDIR+=	gitte
 SUBDIR+=	gittyup
 SUBDIR+=	givaro
 SUBDIR+=	gjs
