@@ -16,7 +16,7 @@ knotresolver_command="@PREFIX@/sbin/kresd -n -c @PKG_SYSCONFDIR@/kresd.conf @PKG
 
 pidfile="/var/run/${name}.pid"
 command="@PREFIX@/sbin/daemonize"
-command_args="-p ${pidfile} -u ${knotresolver_user} -o /var/log/knotresolver.log -- ${knotresolver_command}"
+command_args="-p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/knotresolver.log -- ${knotresolver_command}"
 
 procname="@PREFIX@/sbin/kresd"
 

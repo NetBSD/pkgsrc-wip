@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (knot-resolver-6.3.0.tar.xz) = 2b706102cce8fe9919069651b7840c0f31480f120cfaa6e0fa857e04ee1cb9e3
-SHA512 (knot-resolver-6.3.0.tar.xz) = eafc8f1875561346cf06b13717a96041e5e6d63e02dea85525ff7afa6e7271a8e37048f9596f17d826cc37e157dff666ee8b55eb2c18bae069ca19d3377dceeb
-Size (knot-resolver-6.3.0.tar.xz) = 2366488 bytes
+BLAKE2s (knot-resolver-6.4.0.tar.xz) = 29437878e674cdb80ee4d23b4521aee7fdf1014f3edf68ac5d49d6973a5cf177
+SHA512 (knot-resolver-6.4.0.tar.xz) = 3992a014e64899c1867773714d5505b44f714bab511af2b7657456c79706b75eae0ba1f9f93017dd5648793fbbf32baf48208a5789422d2e42a1a361b0d91311
+Size (knot-resolver-6.4.0.tar.xz) = 2367316 bytes
