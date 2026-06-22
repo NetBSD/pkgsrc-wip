@@ -738,6 +738,7 @@ SUBDIR+=	devkitARM-tools
 SUBDIR+=	devpub-mount
 SUBDIR+=	dfam
 SUBDIR+=	dhcpd-snmp
+SUBDIR+=        di
 SUBDIR+=	diablo
 SUBDIR+=	dict-client-current
 SUBDIR+=	dict-est-rus
