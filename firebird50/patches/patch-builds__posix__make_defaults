@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- builds/posix/make.defaults.orig	2026-02-18 04:06:43.566366223 +0000
++++ builds/posix/make.defaults
+@@ -207,8 +207,8 @@ ifeq ($(PLATFORM),DARWIN)
+ LIB_LINK = $(CXX) $(GLOB_OPTIONS) $(CXXFLAGS) $(WLDFLAGS)
+ EXE_LINK = $(CXX) $(GLOB_OPTIONS) $(CXXFLAGS) $(WLDFLAGS)
+ else
+-LIB_LINK = $(CXX) $(GLOB_OPTIONS) $(CXXFLAGS) $(WLDFLAGS) -static-libstdc++
+-EXE_LINK = $(CXX) $(GLOB_OPTIONS) $(CXXFLAGS) $(WLDFLAGS) -static-libstdc++
++LIB_LINK = $(CXX) $(GLOB_OPTIONS) $(CXXFLAGS) $(WLDFLAGS)
++EXE_LINK = $(CXX) $(GLOB_OPTIONS) $(CXXFLAGS) $(WLDFLAGS)
+ endif
+ 
+ STATICLIB_LINK = $(AR) crus

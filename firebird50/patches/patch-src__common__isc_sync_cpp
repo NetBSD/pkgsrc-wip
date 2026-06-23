@@ -1,0 +1,28 @@
+$NetBSD$
+
+--- src/common/isc_sync.cpp.orig	2025-08-10 08:15:38.243745665 +0000
++++ src/common/isc_sync.cpp
+@@ -622,8 +622,10 @@ int SharedMemoryBase::eventInit(event_t*
+ #ifdef PTHREAD_PROCESS_SHARED
+ 	if (!isSandboxed())
+ 	{
++#ifndef __NetBSD__
+ 		PTHREAD_ERROR(pthread_mutexattr_setpshared(&mattr, PTHREAD_PROCESS_SHARED));
+ 		PTHREAD_ERROR(pthread_condattr_setpshared(&cattr, PTHREAD_PROCESS_SHARED));
++#endif
+ 	}
+ #else
+ #error Your system must support PTHREAD_PROCESS_SHARED to use firebird.
+@@ -1401,8 +1403,11 @@ SharedMemoryBase::SharedMemoryBase(const
+ 
+ 				PTHREAD_ERR_RAISE(pthread_mutexattr_init(&mattr));
+ #ifdef PTHREAD_PROCESS_SHARED
+-				if (!isSandboxed())
++				if (!isSandboxed()) {
++#ifndef __NetBSD__
+ 					PTHREAD_ERR_RAISE(pthread_mutexattr_setpshared(&mattr, PTHREAD_PROCESS_SHARED));
++#endif
++				}
+ #else
+ #error Your system must support PTHREAD_PROCESS_SHARED to use pthread shared futex in Firebird.
+ #endif

@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- src/common/common.h.orig	2025-08-10 04:35:07.925119400 +0000
++++ src/common/common.h
+@@ -323,19 +323,19 @@
+ #define FB_OS OsNetBsd
+ #define FB_CC CcGcc
+ 
+-#if defined(__i386__)
+-
++#define UNIX
+ #define IEEE
++
++/* TODO */
++#if defined(__i386__)
+ #define I386
+ #define FB_CPU CpuIntel
+-
+-#define QUADFORMAT "ll"
+-#define QUADCONST(n) (n##LL)
+ #else /* !__i386__ */
+-#error Please add support for other ports
++#define FB_CPU CpuAmd
+ #endif
+ 
+-#define UNIX
++#define QUADFORMAT "ll"
++#define QUADCONST(n) (n##LL)
+ #define NO_NFS					/* no MTAB_OPEN or MTAB_CLOSE in isc_file.c */
+ 
+ #endif /* NETBSD */
+@@ -348,7 +348,7 @@
+ 
+ #define NO_NFS					/* no MTAB_OPEN or MTAB_CLOSE in isc_file.c */
+ 
+-#endif /* NETBSD */
++#endif /* ANDROID */
+ 
+ 
+ /*****************************************************

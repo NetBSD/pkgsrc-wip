@@ -1,0 +1,3 @@
+- Client only due to missing implementation of
+  pthread_mutexattr_getpshared() and pthread_mutexattr_setpshared()
+- Tested only with p5-DBD-Firebird and Firebird 2.0.7 server

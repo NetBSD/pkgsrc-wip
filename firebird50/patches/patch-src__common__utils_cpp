@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/common/utils.cpp.orig	2025-08-10 05:34:10.521870398 +0000
++++ src/common/utils.cpp
+@@ -1047,7 +1047,7 @@ SINT64 query_performance_counter()
+ 
+ 	// Use high-resolution clock
+ 	struct timespec tp;
+-	if (clock_gettime(CLOCK_MONOTONIC_RAW, &tp) != 0)
++	if (clock_gettime(CLOCK_MONOTONIC, &tp) != 0)
+ 		return 0;
+ 
+ 	return static_cast<SINT64>(tp.tv_sec) * BILLION + tp.tv_nsec;

@@ -1,0 +1,24 @@
+$NetBSD$
+
+--- src/remote/inet.cpp.orig	2025-08-09 04:39:17.218907549 +0000
++++ src/remote/inet.cpp
+@@ -97,6 +97,10 @@
+ 
+ #endif // !WIN_NT
+ 
++#if !defined(SOL_TCP) && defined(IPPROTO_TCP)
++#define SOL_TCP IPPROTO_TCP
++#endif
++
+ const int INET_RETRY_CALL = 5;
+ 
+ #include "../remote/remote.h"
+@@ -967,7 +971,7 @@ rem_port* INET_connect(const TEXT* name,
+ #endif
+ 
+ 	gai_hints.ai_flags =
+-#ifndef ANDROID
++#ifdef AI_V4MAPPED
+ 		((af == AF_UNSPEC) ? AI_V4MAPPED : 0) |
+ #endif
+ 			AI_ADDRCONFIG | (packet ? 0 : AI_PASSIVE);

@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.11 2008/08/29 22:41:04 hoka_adam Exp $
+
+BLAKE2s (Firebird-5.0.4.1812-0-source.tar.xz) = 40add0e366dfc2b6528b20f3fd5f5d9922420d5dd18092d8aa358a1170028460
+SHA512 (Firebird-5.0.4.1812-0-source.tar.xz) = b0680584487b8f25c11ed6ee8cc7df67494f2aceb341e368054743eafd20b6d00e83d4e70733d028751c6830bf772d8e79953ff075628833718600d7e5827540
+Size (Firebird-5.0.4.1812-0-source.tar.xz) = 29758832 bytes
+SHA1 (patch-builds__install__arch-specific__netbsd__install_sh_in) = 132f2e3c4b0c58966181854d3ad728c991190cbf
+SHA1 (patch-builds__posix__make_defaults) = c2e17b5d8c8da91d444d9c69d33f2126b3ec194b
+SHA1 (patch-configure) = e9efff3560ced4bcf14c0b6a0e7994dffbe84aa1
+SHA1 (patch-src__common__common_h) = 1037c27568933148b7ab5aab8cbbffba739c1857
+SHA1 (patch-src__common__isc_sync_cpp) = bef07c34617a0f5721b6d8406b1845fad059c52c
+SHA1 (patch-src__common__utils_cpp) = a38123528cf98cf8265dd7a7bc9ab05b35548101
+SHA1 (patch-src__remote__SockAddr_h) = 7658ef900604e1370c1250ceef18a9e1228d8fd9
+SHA1 (patch-src__remote__inet_cpp) = 76c54540702acb4975a7ef2d2bc8d87db53f337c

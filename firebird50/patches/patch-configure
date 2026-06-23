@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- configure.orig	2025-08-10 08:47:13.170088793 +0000
++++ configure
+@@ -24210,7 +24210,7 @@ ac_config_files="$ac_config_files gen/$f
+ if test "$CLIENT_ONLY_FLG" = "N"; then
+ ac_config_files="$ac_config_files gen/$fb_tgt/firebird/databases.conf:builds/install/misc/databases.conf gen/$fb_tgt/firebird/fbtrace.conf:src/utilities/ntrace/fbtrace.conf gen/$fb_tgt/firebird/replication.conf:builds/install/misc/replication.conf"
+ 
+-if test "x$fb_tgt" != "xNative" && [[ x$CROSS = xandroid* ]]; then
++if test "x$fb_tgt" != "xNative" && [ x$(echo $CROSS | cut -c 1-7) = xandroid ]; then
+ ac_config_files="$ac_config_files gen/$fb_tgt/firebird/fbintl.conf:builds/install/misc/fbintl.conf"
+ 
+ else
+@@ -24225,7 +24225,7 @@ ac_config_files="$ac_config_files gen/ma
+ 
+ fi
+ 
+-if [[ x$CROSS != xandroid* ]]; then
++if [ x$(echo $CROSS | cut -c 1-7) != xandroid ]; then
+ ac_config_files="$ac_config_files gen/Release/firebird/bin/fb_config:builds/install/posix-common/fb_config.in gen/Release/firebird/bin/posixLibrary.sh:builds/install/posix-common/posixLibrary.sh.in gen/Release/firebird/bin/install.sh:builds/install/posix-common/install.sh.in gen/Release/firebird/bin/FirebirdUninstall.sh:builds/install/posix-common/FirebirdUninstall.sh.in gen/Release/firebird/bin/changeServerMode.sh:builds/install/posix-common/changeServerMode.sh.in gen/Release/firebird/bin/registerDatabase.sh:builds/install/posix-common/registerDatabase.sh.in"
+ 
+ fi
+@@ -24243,7 +24243,7 @@ case "$PLATFORM" in
+     ac_config_files="$ac_config_files gen/install/makeInstallImage.sh:builds/install/arch-specific/linux/makeInstallImage.sh.in gen/install/misc/firebird.init.d.generic:builds/install/arch-specific/linux/firebird.init.d.generic.in gen/install/misc/firebird.init.d.mandrake:builds/install/arch-specific/linux/firebird.init.d.mandrake.in gen/install/misc/firebird.init.d.suse:builds/install/arch-specific/linux/firebird.init.d.suse.in gen/install/misc/firebird.init.d.debian:builds/install/arch-specific/linux/firebird.init.d.debian.in gen/install/misc/firebird.init.d.gentoo:builds/install/arch-specific/linux/firebird.init.d.gentoo.in gen/install/misc/firebird.init.d.slackware:builds/install/arch-specific/linux/firebird.init.d.slackware.in gen/install/misc/rc.config.firebird:builds/install/arch-specific/linux/rc.config.firebird.in gen/install/misc/firebird.service:builds/install/arch-specific/linux/firebird.service.in"
+ 
+ 
+-    if [[ x$CROSS != xandroid* ]]; then
++    if [ x$(echo $CROSS | cut -c 1-7) != xandroid ]; then
+         ac_config_files="$ac_config_files gen/Release/firebird/bin/linuxLibrary.sh:builds/install/arch-specific/linux/linuxLibrary.sh.in"
+ 
+     fi
+@@ -25385,7 +25385,7 @@ for fb_tgt in \$FB_TARGETS; do
+ 	echo "Creating \$fb_tgt directories"
+ 
+ 
+-	if test "x\$fb_tgt" = "xNative" || [[ x$CROSS != xandroid* ]]; then
++	if test "x\$fb_tgt" = "xNative" || [ x$(echo $CROSS | cut -c 1-7) != xandroid ]; then
+ 		mkdir -p gen/\$fb_tgt/firebird/bin
+ 		mkdir -p gen/\$fb_tgt/firebird/lib
+ 		mkdir -p gen/\$fb_tgt/firebird/tests

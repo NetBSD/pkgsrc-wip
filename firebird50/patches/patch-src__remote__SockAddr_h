@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- src/remote/SockAddr.h.orig	2025-08-09 04:35:37.575900839 +0000
++++ src/remote/SockAddr.h
+@@ -112,11 +112,13 @@ public:
+ 
+ #define AF_INET6_POSIX		10
+ #define AF_INET6_WINDOWS	23
++#define AF_INET6_NETBSD		24
+ #define AF_INET6_FREEBSD	28
+ #define AF_INET6_DARWIN		30
+ 
+ #if AF_INET6 == AF_INET6_POSIX
+ #elif AF_INET6 == AF_INET6_WINDOWS
++#elif AF_INET6 == AF_INET6_NETBSD
+ #elif AF_INET6 == AF_INET6_FREEBSD
+ #elif AF_INET6 == AF_INET6_DARWIN
+ #else
+@@ -133,6 +135,7 @@ inline void SockAddr::checkAndFixFamily(
+ 
+ 	case AF_INET6_POSIX:
+ 	case AF_INET6_WINDOWS:
++	case AF_INET6_NETBSD:
+ 	case AF_INET6_FREEBSD:
+ 	case AF_INET6_DARWIN:
+ 		data.sock.sa_family = AF_INET6;

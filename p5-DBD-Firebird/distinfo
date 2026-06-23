@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (DBD-Firebird-1.39.tar.gz) = 6e8a88eb615a6099acf4d7226d0677309c7864cd70239eb90c1c6b246bb729cd
+SHA512 (DBD-Firebird-1.39.tar.gz) = 5902fc7bed25f67fdec70709b9853752a25f18405a8ebf307531502e309c888068fc58c962353b46041295cce92534a8e517de56da4c98f2bc8ea03fe1b0b32b
+Size (DBD-Firebird-1.39.tar.gz) = 109753 bytes
+SHA1 (patch-Makefile.PL) = bfe06633fbd9c73771a7a9b44db3097fefd10825
