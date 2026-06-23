@@ -5393,7 +5393,6 @@ SUBDIR+=	seed7
 SUBDIR+=	seeks
 SUBDIR+=	segvcatch
 SUBDIR+=	self-git
-SUBDIR+=	sem
 SUBDIR+=	semanticscuttle
 SUBDIR+=	semgrep
 SUBDIR+=	semgrep-core
