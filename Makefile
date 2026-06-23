@@ -4932,6 +4932,7 @@ SUBDIR+=	py-toeplitz
 SUBDIR+=	py-tokenizers
 SUBDIR+=	py-toleranceinterval
 SUBDIR+=	py-topkapi
+SUBDIR+=	py-toposort
 SUBDIR+=	py-toro
 SUBDIR+=	py-toronado
 SUBDIR+=	py-toscawidgets

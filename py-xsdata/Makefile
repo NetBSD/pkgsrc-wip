@@ -12,10 +12,10 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-toposort>=1.9:../../wip/py-toposort
 TEST_DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 TEST_DEPENDS+=	${PYPKGPREFIX}-lxml>=5.0:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
-# toposort
 
 USE_LANGUAGES=	# none
 
