@@ -2266,7 +2266,6 @@ SUBDIR+=	lisp-scripts
 SUBDIR+=	lisp-sound
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
-SUBDIR+=	litehtml
 SUBDIR+=	litestream
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
