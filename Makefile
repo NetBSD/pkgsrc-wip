@@ -5183,7 +5183,6 @@ SUBDIR+=	reone
 SUBDIR+=	repeatmasker
 SUBDIR+=	reproc
 SUBDIR+=	resin
-SUBDIR+=	resterm
 SUBDIR+=	restoHack
 SUBDIR+=	retawq
 SUBDIR+=	retro68

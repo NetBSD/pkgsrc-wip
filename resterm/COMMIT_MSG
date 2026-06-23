@@ -1,8 +1,0 @@
-v0.43.2
-
-Fix: autocomplete Esc handler
-
-Esc now closes the autocomplete popup without leaving Insert mode:
-
-First Esc closes the popup (or the preview panel, if it's open) and keeps you in Insert mode.
-Press Esc again to leave Insert mode, as before.
