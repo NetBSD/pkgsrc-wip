@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (iterated-dynamics-1.4.1.tar.gz) = 74e9102099fa2a9e4fa34ff7582ce385ce987e690709e2a08c37ce396c257577
+SHA512 (iterated-dynamics-1.4.1.tar.gz) = fbbf5d52c4d473f701c3470b1f1f67316ca4eac9529e6ec027e2b07dbc924aee43db9c3655fd819f1510817bf1cd625bf7832df88746b9780436f6248220b456
+Size (iterated-dynamics-1.4.1.tar.gz) = 29817463 bytes
+SHA1 (patch-libid_CMakeLists.txt) = 18d4e48663c8f6c62f14fe97fbca60afbce75bbf
+SHA1 (patch-libid_include_engine_random__seed.h) = 74cd9a4a9a11e1ec0853f958678d44c2ca25f856
+SHA1 (patch-tests_libid_CMakeLists.txt) = 4613e604144379c03809a111fa9489cfb48bd4ff
+SHA1 (patch-x11_CMakeLists.txt) = c38957b22f83926f891ef784fd7e6e8357b3c921

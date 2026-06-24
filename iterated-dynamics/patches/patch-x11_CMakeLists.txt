@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- x11/CMakeLists.txt.orig	2026-06-21 02:27:06.000000000 +0000
++++ x11/CMakeLists.txt
+@@ -34,7 +34,4 @@ install(TARGETS id
+ vs_debugger_directory(id "${CMAKE_SOURCE_DIR}/home")
+ install(TARGETS id
+     DESTINATION .
+-    RUNTIME_DEPENDENCIES
+-        PRE_EXCLUDE_REGEXES "api-ms-.*" "ext-ms-.*"
+-        POST_EXCLUDE_REGEXES ".*system32/.*\\.dll"
+ )

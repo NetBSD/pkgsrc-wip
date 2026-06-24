@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- tests/libid/CMakeLists.txt.orig	2026-06-21 02:27:06.000000000 +0000
++++ tests/libid/CMakeLists.txt
+@@ -2,7 +2,6 @@ include(GoogleTest)
+ #
+ include(GoogleTest)
+ 
+-find_package(boost_endian CONFIG REQUIRED)
+ find_package(GTest CONFIG REQUIRED)
+ 
+ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}")

@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- libid/CMakeLists.txt.orig	2026-06-21 02:27:06.000000000 +0000
++++ libid/CMakeLists.txt
+@@ -1,9 +1,7 @@
+ # SPDX-License-Identifier: GPL-3.0-only
+ #
+-find_package(boost_endian CONFIG REQUIRED)
+ find_package(fmt CONFIG REQUIRED)
+ prefer_vcpkg_gif()
+-find_package(cpuid CONFIG REQUIRED)
+ 
+ set(ID_MAKE_MIG_SCRIPT_SOURCE ui/make_mig_script_unix.cpp)
+ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+@@ -298,6 +296,6 @@ endif()
+ if(WIN32)
+     target_link_libraries(libid PRIVATE shell32.lib)
+ endif()
+-target_link_libraries(libid PUBLIC help-defs config algos Boost::endian GIF::GIF cpuid::cpuid)
++target_link_libraries(libid PUBLIC help-defs config algos GIF::GIF)
+ target_folder(libid "Libraries")
+ add_dependencies(libid native-help)

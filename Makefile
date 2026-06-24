@@ -1830,6 +1830,7 @@ SUBDIR+=	isa-l
 SUBDIR+=	ised
 SUBDIR+=	islamic-menus
 SUBDIR+=	ispell-dictionaries
+SUBDIR+=	iterated-dynamics
 SUBDIR+=	itools
 SUBDIR+=	ivtools
 SUBDIR+=	ja-freewnn-cvs

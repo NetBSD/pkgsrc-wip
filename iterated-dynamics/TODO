@@ -1,0 +1,14 @@
+[133/244] Building CXX object libid/CMakeFiles/libid.dir/io/make_mig.cpp.o
+FAILED: [code=1] libid/CMakeFiles/libid.dir/io/make_mig.cpp.o
+/tmp/wip/iterated-dynamics/work/.cwrapper/bin/c++ -DFMT_HEADER_ONLY=1 -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/libid/include -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/helpcom/include -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/config/include -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/cmake-pkgsrc-build/config/include -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/x11/include -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/cmake-pkgsrc-build/include -I/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/algos/include -O2 -g -fstack-clash-protection -pthread -I/usr/pkg/include -I/usr/include -g -std=gnu++17 -Werror -MD -MT libid/CMakeFiles/libid.dir/io/make_mig.cpp.o -MF libid/CMakeFiles/libid.dir/io/make_mig.cpp.o.d -o libid/CMakeFiles/libid.dir/io/make_mig.cpp.o -c /tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/libid/io/make_mig.cpp
+/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/libid/io/make_mig.cpp: In member function 'int id::io::OutputGif::spew()':
+/tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/libid/io/make_mig.cpp:130:33: error: too few arguments to function 'int EGifSpew(GifFileType*, int*)'
+  130 |         m_spew_result = EGifSpew(m_gif);
+      |                         ~~~~~~~~^~~~~~~
+In file included from /tmp/wip/iterated-dynamics/work/iterated-dynamics-1.4.1/libid/io/make_mig.cpp:9:
+/tmp/wip/iterated-dynamics/work/.buildlink/include/gif_lib.h:132:5: note: declared here
+  132 | int EGifSpew(GifFileType *GifFile, int *ErrorCode);
+      |     ^~~~~~~~
+[148/244] Building CXX object libid/CMakeFiles/libid.dir/io/path_match.cpp.o
+ninja: build stopped: subcommand failed.
+*** Error code 1
