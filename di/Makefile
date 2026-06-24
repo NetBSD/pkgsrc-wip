@@ -13,6 +13,8 @@ USE_LANGUAGES=		c
 USE_TOOLS+=		msgfmt pkg-config sed tr grep sh
 USE_PKGLOCALEDIR=	yes
 
+PKGCONFIG_OVERRIDE=	di.pc.in
+
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
