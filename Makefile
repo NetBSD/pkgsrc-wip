@@ -5937,6 +5937,7 @@ SUBDIR+=	uprof
 SUBDIR+=	ups-nut
 SUBDIR+=	uptimed
 SUBDIR+=	uqwk
+SUBDIR+=	urlgrabber
 SUBDIR+=	urlwatch
 SUBDIR+=	urw-base35-ttf
 SUBDIR+=	usbmuxd

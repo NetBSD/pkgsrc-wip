@@ -1,0 +1,12 @@
+urlgrabber: Update to version v4.0.0
+
+
+2019-02-25 Neal Gompa <ngompa13@gmail.com>
+
+	* Port to Python 3
+	* Add curl_obj option to grabber
+	* Throw an obvious error message when urlgrabber-ext-down
+	  is missing when attempting to use external downloader
+	* Use setuptools for setup.py instead of distutils
+	* bump version to 4.0.0
+

@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/urlgrabber
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/urlgrabber/__init__.py
+${PYSITELIB}/urlgrabber/__init__.pyc
+${PYSITELIB}/urlgrabber/__init__.pyo
+${PYSITELIB}/urlgrabber/byterange.py
+${PYSITELIB}/urlgrabber/byterange.pyc
+${PYSITELIB}/urlgrabber/byterange.pyo
+${PYSITELIB}/urlgrabber/grabber.py
+${PYSITELIB}/urlgrabber/grabber.pyc
+${PYSITELIB}/urlgrabber/grabber.pyo
+${PYSITELIB}/urlgrabber/mirror.py
+${PYSITELIB}/urlgrabber/mirror.pyc
+${PYSITELIB}/urlgrabber/mirror.pyo
+${PYSITELIB}/urlgrabber/progress.py
+${PYSITELIB}/urlgrabber/progress.pyc
+${PYSITELIB}/urlgrabber/progress.pyo
+libexec/urlgrabber-ext-down
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/TODO
