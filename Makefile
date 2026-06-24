@@ -535,6 +535,7 @@ SUBDIR+=	classgen
 SUBDIR+=	classic-mac-font-pack
 SUBDIR+=	claws-mail-fancy
 SUBDIR+=	clearsans-ttf
+SUBDIR+=	clex
 SUBDIR+=	clfswm
 SUBDIR+=	clhep
 SUBDIR+=	cli-git
