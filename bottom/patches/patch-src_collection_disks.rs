@@ -20,7 +20,7 @@ Disable catch-all for disks in NetBSD.
          }
      }
 -    not(target_os = "freebsd") => {
-+    not(all(target_os = "freebsd", target_os = "netbsd")) => {
++    not(any(target_os = "freebsd", target_os = "netbsd")) => {
          use crate::collection::DataCollector;
          pub fn get_io_usage(_collector: &DataCollector) -> anyhow::Result<IoHarvest> {
              anyhow::bail!("Unsupported OS");
