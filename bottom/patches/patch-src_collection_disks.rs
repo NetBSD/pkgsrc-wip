@@ -10,7 +10,7 @@ Disable catch-all for disks in NetBSD.
      }
 +    target_os = "netbsd" => {
 +        mod netbsd;
-+        pub(crate) use self::unix::*;
++        pub(crate) use self::netbsd::*;
 +    }    
      _ => {
          mod other;
