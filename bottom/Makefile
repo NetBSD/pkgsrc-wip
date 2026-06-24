@@ -1,16 +1,16 @@
 # $NetBSD: Makefile,v 1.37 2024/08/29 07:37:41 fox Exp $
 
-DISTNAME=	bottom-0.12.3
+DISTNAME=	bottom-0.14.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ClementTsang/}
-GITHUB_TAG=	ae425d09d81fe79538b703cb08382ef417f3afed
+GITHUB_TAG=	0.14.1
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://bottom.pages.dev/
 COMMENT=	Yet another cross-platform graphical process/system monitor.
 LICENSE=	mit
 
-RUST_REQ=	1.85.0
+RUST_REQ=	1.95.0
 
 .include "cargo-depends.mk"
 
