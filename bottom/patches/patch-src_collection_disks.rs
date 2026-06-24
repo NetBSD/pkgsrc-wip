@@ -1,6 +1,6 @@
 $NetBSD$
 
-Disable catch-all for disks in NetBSD.
+Add NetBSD support.
 
 --- src/collection/disks.rs.orig	2026-06-22 06:25:54.000000000 +0000
 +++ src/collection/disks.rs
@@ -8,10 +8,10 @@ Disable catch-all for disks in NetBSD.
          mod unix;
          pub(crate) use self::unix::*;
      }
-+    target_os = "netbsd" => {
++   target_os = "netbsd" => {
 +        mod netbsd;
 +        pub(crate) use self::netbsd::*;
-+    }    
++    }
      _ => {
          mod other;
          pub(crate) use self::other::*;

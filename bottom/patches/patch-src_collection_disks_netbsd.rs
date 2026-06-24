@@ -2,18 +2,34 @@ $NetBSD$
 
 Implement basic disk parsing for NetBSD.
 
---- src/collection/disks/netbsd.rs.orig	2026-06-24 12:25:02.110444670 +0000
+--- src/collection/disks/netbsd.rs.orig	2026-06-24 22:13:37.483045145 +0000
 +++ src/collection/disks/netbsd.rs
-@@ -0,0 +1,50 @@
+@@ -0,0 +1,66 @@
 +//! Disk stats for NetBSD, parsed from `df -P`.
 +
 +use rustc_hash::FxHashMap as HashMap;
 +
-+use super::{DiskHarvest, IoHarvest, keep_disk_entry};
++use super::{DiskHarvest, IoData, IoHarvest, keep_disk_entry};
 +use crate::collection::{DataCollector, error::CollectionResult};
 +
 +pub fn get_io_usage(collector: &DataCollector) -> CollectionResult<IoHarvest> {
-+    Ok(HashMap::default())
++    let io_harvest: HashMap<String, Option<IoData>> = collector
++        .sys
++        .disks
++        .iter()
++        .map(|disk| {
++            let usage = disk.usage();
++            (
++                disk.mount_point().to_string_lossy().to_string(),
++                Some(IoData {
++                    read_bytes: usage.read_bytes,
++                    write_bytes: usage.written_bytes,
++                }),
++            )
++        })
++        .collect();
++
++    Ok(io_harvest)
 +}
 +
 +pub fn get_disk_usage(collector: &DataCollector) -> CollectionResult<Vec<DiskHarvest>> {
