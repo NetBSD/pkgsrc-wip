@@ -25,9 +25,15 @@ ${PLIST.ocaml-opt}bin/ocamlopt.opt
 ${PLIST.ocaml-opt}bin/ocamloptp
 bin/ocamlprof
 bin/ocamlrun
+bin/ocamlrun-a100
 bin/ocamlrund
+bin/ocamlrund-a100
 bin/ocamlruni
+bin/ocamlruni-a100
 bin/ocamlyacc
+bin/x86_64--netbsd-ocamlrun-a100
+bin/x86_64--netbsd-ocamlrund-a100
+bin/x86_64--netbsd-ocamlruni-a100
 lib/ocaml/Makefile.config
 lib/ocaml/arg.ml
 lib/ocaml/arg.mli
@@ -308,6 +314,10 @@ lib/ocaml/compiler-libs/bytepackager.cmt
 lib/ocaml/compiler-libs/bytepackager.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/bytepackager.cmx
 lib/ocaml/compiler-libs/bytepackager.mli
+lib/ocaml/compiler-libs/byterntm.cmi
+lib/ocaml/compiler-libs/byterntm.cmt
+lib/ocaml/compiler-libs/byterntm.cmti
+lib/ocaml/compiler-libs/byterntm.mli
 lib/ocaml/compiler-libs/bytesections.cmi
 lib/ocaml/compiler-libs/bytesections.cmt
 lib/ocaml/compiler-libs/bytesections.cmti
@@ -1233,6 +1243,10 @@ lib/ocaml/compiler-libs/signature_group.cmt
 lib/ocaml/compiler-libs/signature_group.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/signature_group.cmx
 lib/ocaml/compiler-libs/signature_group.mli
+lib/ocaml/compiler-libs/signature_matching.cmi
+lib/ocaml/compiler-libs/signature_matching.cmt
+lib/ocaml/compiler-libs/signature_matching.cmti
+lib/ocaml/compiler-libs/signature_matching.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/simple_value_approx.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/simple_value_approx.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/simple_value_approx.cmti
@@ -1271,6 +1285,10 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/split.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/split.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/split.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/split.mli
+lib/ocaml/compiler-libs/stable_matching.cmi
+lib/ocaml/compiler-libs/stable_matching.cmt
+lib/ocaml/compiler-libs/stable_matching.cmti
+lib/ocaml/compiler-libs/stable_matching.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/stackframe.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/stackframe.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/stackframe.cmti
@@ -1652,6 +1670,7 @@ ${PLIST.ocaml-opt}lib/ocaml/libasmrun_pic.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_shared.so
 ${PLIST.ocaml-opt}lib/ocaml/libasmrund.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmruni.a
+lib/ocaml/libcamlrun-x86_64--netbsd-a100.so
 lib/ocaml/libcamlrun.a
 lib/ocaml/libcamlrun_pic.a
 lib/ocaml/libcamlrun_shared.so
@@ -2165,12 +2184,12 @@ lib/ocaml/string.ml
 lib/ocaml/string.mli
 lib/ocaml/stringLabels.ml
 lib/ocaml/stringLabels.mli
-lib/ocaml/stublibs/dllcamlruntime_eventsbyt.so
+lib/ocaml/stublibs/dllcamlruntime_eventsbyt-x86_64--netbsd-a100.so
 ${PLIST.ocaml-opt}lib/ocaml/stublibs/dllcamlruntime_eventsnat.so
-lib/ocaml/stublibs/dllcamlstrbyt.so
+lib/ocaml/stublibs/dllcamlstrbyt-x86_64--netbsd-a100.so
 ${PLIST.ocaml-opt}lib/ocaml/stublibs/dllcamlstrnat.so
-lib/ocaml/stublibs/dllthreads.so
-lib/ocaml/stublibs/dllunixbyt.so
+lib/ocaml/stublibs/dllthreads-x86_64--netbsd-a100.so
+lib/ocaml/stublibs/dllunixbyt-x86_64--netbsd-a100.so
 ${PLIST.ocaml-opt}lib/ocaml/stublibs/dllunixnat.so
 lib/ocaml/sys.ml
 lib/ocaml/sys.ml.in
@@ -2279,6 +2298,7 @@ man/man3/Bytes.3
 man/man3/BytesLabels.3
 man/man3/Callback.3
 man/man3/CamlinternalFormat.3
+man/man3/CamlinternalFormat.Args.3
 man/man3/CamlinternalFormatBasics.3
 man/man3/CamlinternalLazy.3
 man/man3/CamlinternalMenhirLib.3
@@ -2388,12 +2408,14 @@ man/man3/Float.3
 man/man3/Float.Array.3
 man/man3/Float.ArrayLabels.3
 man/man3/Format.3
+man/man3/Format.Args.3
 man/man3/Format_doc.3
 man/man3/Format_doc.Doc.3
 man/man3/Format_tutorial.3
 man/man3/Fun.3
 man/man3/Gc.3
 man/man3/Gc.Memprof.3
+man/man3/Gc.Tweak.3
 man/man3/Hashtbl.3
 man/man3/Hashtbl.HashedType.3
 man/man3/Hashtbl.Make.3
@@ -2423,6 +2445,7 @@ man/man3/Int32.3
 man/man3/Int64.3
 man/man3/Int_replace_polymorphic_compare.3
 man/man3/Lazy.3
+man/man3/Lazy.Mutexed.3
 man/man3/Lazy_backtrack.3
 man/man3/Lexer.3
 man/man3/Lexing.3
@@ -2445,6 +2468,7 @@ man/man3/Misc.Color.3
 man/man3/Misc.Error_style.3
 man/man3/Misc.Int_literal_converter.3
 man/man3/Misc.Magic_number.3
+man/man3/Misc.RuntimeID.3
 man/man3/Misc.Stdlib.3
 man/man3/Misc.Stdlib.Array.3
 man/man3/Misc.Stdlib.List.3
@@ -2484,6 +2508,7 @@ man/man3/Obj.Extension_constructor.3
 man/man3/Ocaml_operators.3
 man/man3/Oo.3
 man/man3/Option.3
+man/man3/Option.Syntax.3
 man/man3/Out_channel.3
 man/man3/Pair.3
 man/man3/Parse.3
@@ -2510,6 +2535,7 @@ man/man3/Printast.3
 man/man3/Printexc.3
 man/man3/Printexc.Slot.3
 man/man3/Printf.3
+man/man3/Printf.Args.3
 man/man3/Profile.3
 man/man3/Queue.3
 man/man3/Random.3
@@ -2532,6 +2558,8 @@ man/man3/Set.3
 man/man3/Set.Make.3
 man/man3/Set.OrderedType.3
 man/man3/Set.S.3
+man/man3/Stable_matching.3
+man/man3/Stable_matching.Item.3
 man/man3/Stack.3
 man/man3/StdLabels.3
 man/man3/StdLabels.Array.3

@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.148 2023/04/09 07:28:27 wiz Exp $
 
-DISTNAME=	ocaml-5.4.0
+DISTNAME=	ocaml-5.5.0
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
