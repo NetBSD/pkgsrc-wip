@@ -1,4 +1,4 @@
-Libreswan: import version 5.1
+Libreswan: import version 5.3.1
 
 Libreswan is an Internet Key Exchange (IKE) daemon for managing IPsec.
 
@@ -11,4 +11,3 @@ Linux, Libreswan uses the XFRM IPsec stack.
 
 Libreswan was forked from Openswan 2.6.38, which was forked from
 FreeS/WAN 2.04. See the CREDITS files for contributor acknowledgments.
-
