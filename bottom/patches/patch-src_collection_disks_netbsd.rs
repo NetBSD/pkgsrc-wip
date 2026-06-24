@@ -2,7 +2,7 @@ $NetBSD$
 
 Implement basic disk parsing for NetBSD.
 
---- src/collection/disks/netbsd.rs.orig	2026-04-18 02:12:40.206164770 +0000
+--- src/collection/disks/netbsd.rs.orig	2026-06-24 12:25:02.110444670 +0000
 +++ src/collection/disks/netbsd.rs
 @@ -0,0 +1,50 @@
 +//! Disk stats for NetBSD, parsed from `df -P`.
@@ -12,7 +12,7 @@ Implement basic disk parsing for NetBSD.
 +use super::{DiskHarvest, IoHarvest, keep_disk_entry};
 +use crate::collection::{DataCollector, error::CollectionResult};
 +
-+pub fn get_io_usage() -> CollectionResult<IoHarvest> {
++pub fn get_io_usage(collector: &DataCollector) -> CollectionResult<IoHarvest> {
 +    Ok(HashMap::default())
 +}
 +

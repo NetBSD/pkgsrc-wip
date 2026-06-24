@@ -691,5 +691,5 @@ BLAKE2s (zmij-1.0.19.crate) = e6857f8f672ab60cba6575bda0b64bfd4898ee7c34cb1f7998
 SHA512 (zmij-1.0.19.crate) = aa191ba286f10d59727981e68f7fb0214d53b02d6c28951e6f16670433cd79abc4615384b3b1e1f74adc81a3f51c15d906fda0340b03938984693332feeac2cc
 Size (zmij-1.0.19.crate) = 23948 bytes
 SHA1 (patch-src_collection_disks.rs) = 6ddb2276a665ef419268e94719a75eefff5e39f5
-SHA1 (patch-src_collection_disks_netbsd.rs) = 07bf336ec347df5eb8a344c11c10041cac674f70
+SHA1 (patch-src_collection_disks_netbsd.rs) = 7888cbc6db17743783375f6a6e59f7fbe90121a8
 SHA1 (patch-src_collection_processes.rs) = 9c6ac1c1402526252ec3559fa64015ed8ee6d8fd
