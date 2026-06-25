@@ -2424,6 +2424,7 @@ SUBDIR+=	mini18n
 SUBDIR+=	minimap2
 SUBDIR+=	minio
 SUBDIR+=	minio-client
+SUBDIR+=	miniserve
 SUBDIR+=	minizip192
 SUBDIR+=	mintotp
 SUBDIR+=	minuit2
