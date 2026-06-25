@@ -1,8 +1,26 @@
-crush: Update to v0.79.1
+crush: Update to v0.80.0
 
 Changelog
+New!
+c1a4822: feat(providers): add llamacpp enricher (@taciturnaxolotl)
+81cb9d9: feat(ui): optimize model ui rendering (@taciturnaxolotl)
+4be77c5: feat: log provider warnings from fantasy step results (@taciturnaxolotl)
 Fixed
-1166201: fix(bangmode): activate bang mode when ! is preceded by whitespace (@meowgorithm)
-7e4bd6a: fix(bangmode): engage bang mode when pasting text starting with ! (@meowgorithm)
-f342edf: fix(bangmode): include bang commands in history (@meowgorithm)
-d20e29a: fix(bangmode): sync bang mode with external editor (@meowgorithm)
+de67920: fix(auth): stop two Crush instances from invalidating each other's login (@taciturnaxolotl)
+b10f890: fix(config): make concurrent config access race-free via copy-on-write (@taciturnaxolotl)
+af76fa7: fix(docs): set proper auto discovery models flag (@taciturnaxolotl)
+67f5001: fix(glob): keep file search fast and bounded on large directories (@taciturnaxolotl)
+bb44fb1: fix(hooks): bridge Claude Code additionalContext onto HookResult.Context (@ken-jo)
+7206981: fix(scrolling): stale scrolling acceleration (#3197) (@chardoncs)
+cfdca35: fix: correct model discovery enrichment for local providers (@taciturnaxolotl)
+1bb945c: fix: prevent flaky diffview golden tests on Windows CI (@taciturnaxolotl)
+1350167: fix: render pills box reliably when todos or queue appear mid-session (@taciturnaxolotl)
+21a457d: fix: validate tool call JSON before storing to prevent stuck conversations (@taciturnaxolotl)
+Other stuff
+a5896b4: chore: auto-update files (@charmcli)
+aa3bded: chore: bump fantasy to 0.33.2 (@taciturnaxolotl)
+7f7eb60: chore: bump golangci version to fix lint issues in ci (@taciturnaxolotl)
+6b68930: chore: fix lint on interp.ExecHandler (#3200) (@taciturnaxolotl)
+f5b996b: perf(config): make model selection and config reload fast (@taciturnaxolotl)
+173b2be: perf(ui): skip theme rebuild when provider keeps the same theme (@taciturnaxolotl)
+
