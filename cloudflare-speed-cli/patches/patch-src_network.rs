@@ -65,19 +65,45 @@ NetBSD specific functions
  #[cfg(target_os = "macos")]
  fn check_if_wireless(iface: &str) -> Option<bool> {
      // Parse `networksetup -listallhardwareports` to check if the interface is Wi-Fi
-@@ -477,6 +524,11 @@ fn get_wireless_ssid(iface: &str) -> Opt
+@@ -477,6 +524,37 @@ fn get_wireless_ssid(iface: &str) -> Opt
      None
  }
  
 +#[cfg(target_os = "netbsd")]
-+fn get_wireless_ssid(_iface: &str) -> Option<String> {
++fn get_wireless_ssid(iface: &str) -> Option<String> {
++    if let Ok(output) = Command::new("ifconfig").arg(iface).output() {
++        if output.status.success() {
++            if let Ok(output_str) = String::from_utf8(output.stdout) {
++                for line in output_str.lines() {
++                    let line = line.trim();
++                    if line.starts_with("ssid ") {
++                        let line = match line.find(" nwkey ") {
++                            Some(pos) => &line[..pos],
++                            None => line,
++                        };
++                        let line = match line.find("ssid ") {
++                            Some(pos) => &line[pos + "ssid ".len()..],
++                            None => line,
++                        };
++
++                        let ssid = line.trim().to_string();
++                        let ssid = ssid.trim_matches('"').to_string();
++                        if !ssid.is_empty() {
++                            return Some(ssid);
++                        }
++                    }
++                }
++            }
++        }
++    }
++
 +    None
 +}
 +
  #[cfg(target_os = "macos")]
  fn get_wireless_ssid(iface: &str) -> Option<String> {
      // Try `networksetup -getairportnetwork <iface>` (public API)
-@@ -576,6 +628,26 @@ fn get_interface_mac(iface: &str) -> Opt
+@@ -576,6 +654,26 @@ fn get_interface_mac(iface: &str) -> Opt
      None
  }
  

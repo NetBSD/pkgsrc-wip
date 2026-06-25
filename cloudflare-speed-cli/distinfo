@@ -966,4 +966,4 @@ Size (zune-core-0.4.12.crate) = 17355 bytes
 BLAKE2s (zune-jpeg-0.4.21.crate) = f3bbaa5d70d1efc8c02a3b5d446e3eeab9896bd3d1e3ba619b1bdb8579929eb6
 SHA512 (zune-jpeg-0.4.21.crate) = 838ed690fc2d026f40feaaef9c88d85f9a80b186e95f23e5be01c632816942660a89cb0524f2346902fa92235d5de2228485daa67019fcf06ef60ae147b4073c
 Size (zune-jpeg-0.4.21.crate) = 68268 bytes
-SHA1 (patch-src_network.rs) = b84072fedd58234c5ac20cef9813b71113b5f0f9
+SHA1 (patch-src_network.rs) = b4dee790e42fab4cb403b589fcfb6f0c10f3d92e
