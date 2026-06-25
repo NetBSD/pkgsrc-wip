@@ -7,4 +7,8 @@
 DISTNAME=	llama.cpp-${GITHUB_TAG}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
 GITHUB_PROJECT=	llama.cpp
-GITHUB_TAG=	b9756
+GITHUB_TAG=	b${LLAMA_BUILD_NUMBER}
+
+# embedded in version string in binary
+LLAMA_BUILD_NUMBER=	9789
+LLAMA_BUILD_COMMIT=	b3ce5cedf4c007b78a45befe839fa3abada03c0b
