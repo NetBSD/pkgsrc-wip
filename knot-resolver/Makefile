@@ -18,6 +18,16 @@ DEPENDS+=	daemonize-[0-9]*:../../sysutils/daemonize
 
 RCD_SCRIPTS=	kresd
 
+BUILD_DEFS+=			KRESD_USER KRESD_GROUP VARBASE
+KRESD_USER?=			kresd
+KRESD_GROUP?=			kresd
+PKG_GROUPS+=			${KRESD_GROUP}
+PKG_USERS+=			${KRESD_USER}:${KRESD_GROUP}
+PKG_GECOS.${KRESD_USER}=	kresd daemon user
+PKG_GROUPS_VARS+=		KRESD_GROUP
+PKG_USERS_VARS=			KRESD_USER
+
+
 CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/icann-ca.pem  ${PKG_SYSCONFDIR}/knot-resolver/icann-ca.pem
 CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.hints    ${PKG_SYSCONFDIR}/knot-resolver/root.hints
 CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.keys     ${PKG_SYSCONFDIR}/knot-resolver/root.keys

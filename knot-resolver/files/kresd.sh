@@ -11,12 +11,12 @@
 name="kresd"
 rcvar="kresd_enable"
 
-knotresolver_user="root"
+knotresolver_user="kresd"
 knotresolver_command="@PREFIX@/sbin/kresd -n -c @PKG_SYSCONFDIR@/kresd.conf @PKG_SYSCONFDIR@/knot-resolver"
 
 pidfile="/var/run/${name}.pid"
 command="@PREFIX@/sbin/daemonize"
-command_args="-p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/knotresolver.log -- ${knotresolver_command}"
+command_args="-p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/kresd.log -- ${knotresolver_command}"
 
 procname="@PREFIX@/sbin/kresd"
 
