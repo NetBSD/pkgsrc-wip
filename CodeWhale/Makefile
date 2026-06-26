@@ -31,5 +31,6 @@ post-install:
 
 .include "cargo-depends.mk"
 
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
