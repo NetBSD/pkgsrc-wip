@@ -27,7 +27,7 @@ kresd_precmd()
 
 pidfile="/var/run/${name}.pid"
 command="@PREFIX@/sbin/daemonize"
-command_args="-p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/${name}/${name}.log -- ${knotresolver_command}"
+command_args="-a -p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/${name}/${name}.log -e @VARBASE@/log/${name}/${name}.log -- ${knotresolver_command}"
 
 procname="@PREFIX@/sbin/${name}"
 
