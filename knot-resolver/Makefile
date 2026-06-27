@@ -34,6 +34,8 @@ CONF_FILES+=	${PREFIX}/share/examples/knot-resolver/root.keys     ${PKG_SYSCONFD
 
 AUTO_MKDIRS=		yes
 
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/knot-resolver ${KRESD_USER} ${KRESD_GROUP} 0755
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/icann-ca.pem ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
 	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/root.hints ${DESTDIR}${PREFIX}/share/examples/knot-resolver/

@@ -11,15 +11,28 @@
 name="kresd"
 rcvar="kresd_enable"
 
-knotresolver_user="kresd"
-knotresolver_command="@PREFIX@/sbin/kresd -n -c @PKG_SYSCONFDIR@/kresd.conf @PKG_SYSCONFDIR@/knot-resolver"
+knotresolver_user="${name}"
+knotresolver_command="@PREFIX@/sbin/${name} -n -c @PKG_SYSCONFDIR@/${name}.conf @PKG_SYSCONFDIR@/knot-resolver"
+
+kresd_precmd()
+{
+    if [ ! -d "@VARBASE@/log/${name}/" ]; then
+        install -d -o ${name} -g ${name} -m 755 "@VARBASE@/log/${name}/"
+    fi
+
+    if [ ! -e "@VARBASE@/log/${name}/${name}.log" ]; then
+        install -o ${name} -g ${name} -m 644 /dev/null "@VARBASE@/log/${name}/${name}.log"
+    fi
+}
 
 pidfile="/var/run/${name}.pid"
 command="@PREFIX@/sbin/daemonize"
-command_args="-p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/kresd.log -- ${knotresolver_command}"
+command_args="-p ${pidfile} -u ${knotresolver_user} -o @VARBASE@/log/${name}/${name}.log -- ${knotresolver_command}"
 
-procname="@PREFIX@/sbin/kresd"
+procname="@PREFIX@/sbin/${name}"
 
 load_rc_config $name
+start_precmd="kresd_precmd"
+
 run_rc_command "$1"
 
