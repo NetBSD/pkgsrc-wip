@@ -11,6 +11,7 @@ COMMENT=	Knot (resolver) DNS server
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
+USE_TOOLS+=	bash
 USE_TOOLS+=	cmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
