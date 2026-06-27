@@ -4,7 +4,7 @@
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.6.0
+DISTNAME=	R-4.6.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,6 +38,7 @@ PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
+CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
@@ -55,8 +56,8 @@ CONFIGURE_ARGS+=	--enable-long-double=no
 CONFIGURE_ARGS+=	--disable-nls
 .endif
 
-.if ${OPSYS} != "Linux"
-USE_GNU_ICONV=		yes		# latin1 support, iconvlist
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "Linux"
+USE_GNU_ICONV=		yes	# latin1 support, iconvlist
 .endif
 
 PLIST_VARS+=		x11

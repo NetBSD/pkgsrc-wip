@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.16 2026/04/14 10:33:41 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.17 2026/05/14 13:50:46 mef Exp $
 
 Do not add any system paths to R_LD_LIBRARY_PATH, it conflicts at runtime
 with what has been correctly written to the RPATH.
@@ -26,8 +26,8 @@ release    line #
  9.3       4392   withval=$with_blas; R_ARG_USE(blas)
 
 --- configure.ac.orig	2026-03-27 08:02:02.000000000 +0900
-+++ configure.ac	2026-05-14 00:06:25.314689723 +0900
-@@ -33,6 +33,7 @@
++++ configure.ac	2026-05-14 21:35:51.308108681 +0900
+@@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
  AC_CONFIG_SRCDIR([src/include/Defn.h])
  AC_CONFIG_AUX_DIR([tools])
@@ -35,7 +35,7 @@ release    line #
  
  ### * Information on the package.
  
-@@ -328,6 +329,8 @@
+@@ -322,6 +323,8 @@ AC_ARG_ENABLE([BLAS-shlib],
  ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
    LIBR0="-L\"\$(R_HOME)/lib\$(R_ARCH)\""
@@ -44,7 +44,7 @@ release    line #
    LIBR1=-lR
  else
    LIBR0=
-@@ -942,7 +945,7 @@
+@@ -936,7 +939,7 @@ case "${host_os}" in
      ## Not so bad in later versions of Darwin, 
      ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
      ;;
@@ -53,7 +53,7 @@ release    line #
      for arg in ${LDFLAGS}; do
        case "${arg}" in
          -L*)
-@@ -1874,8 +1877,8 @@
+@@ -1864,8 +1867,8 @@ dnl     ;;
      DYLIB_EXT=".dylib"
      dylib_ldflags="${darwin_dylib_ldflags}"
      MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[[\.]][[1-9]]$/.0/"` 
@@ -64,7 +64,7 @@ release    line #
      ## don't use version in libRblas so we can replace it with any BLAS implementation
      RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
      ;;
-@@ -1961,7 +1964,7 @@
+@@ -1961,7 +1964,7 @@ if test -z "${CXX20}"; then
    use_CXX20=no
  fi
  if test -n "${CXX}" && test -z "${CXXSTD}"; then
@@ -73,7 +73,7 @@ release    line #
  dnl Set default C++ compiler to C++20 as available
      CXX=${CXX20}
      CXXSTD=${CXX20STD}
-@@ -2912,7 +2915,7 @@
+@@ -2895,7 +2898,7 @@ for arg in ${LDFLAGS} ${FLIBS} ${BLAS_LI
    case "${arg}" in
      -L*)
        lib=`echo ${arg} | sed "s/^-L//"`

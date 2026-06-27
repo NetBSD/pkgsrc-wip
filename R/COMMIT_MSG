@@ -1,70 +1,64 @@
-(math/R) Updated 4.5.2 to 4.5.3
+(math/R) Updated 4.6.0 to 4.6.1, build with clang is Now OK
 
-CHANGES IN R 4.5.3:
+Changes in R 4.6.1:
 
-  UTILITIES:
+  New Features:
 
-    * tools/fetch-recommended can be used instead of
-      tools/rsync-recommended to fetch recommended packages into R
-      sources using curl on systems without rsync or behind firewalls.
+         * The LaTeX class 'jss' bundled in
+           'share/texmf/tex/latex/jss.cls' has been updated to work
+           with 'hyperref' version 7.01q (2026/04/24).
 
-  PACKAGE INSTALLATION:
+         * Plain-text (and legacy HTML) conversion for a simple Rd
+           \eqn{} now handles \geq, \leq, \neq and \ne in addition to
+           \ge and \le (PR#19070).
 
-    * C++ standard specifications (CXX_STD = in src/Makevars* and in
-      the SystemRequirements field of the DESCRIPTION file) are now
-      checked more thoroughly.  Invalid values are still ignored but
-      now give a warning, as do contradictory specifications.
+  Bug Fixes:
 
-    * (Preliminary) support for C++26 has been extended to Windows.
+         * 'abbreviate(<non-ASCII>)' now works better, using
+           'iswlower()' and '*upper()' to treat "wide" characters,
+           thanks to Kevin's PR#19058.
 
-    * A non-zero exit status from cleanup, cleanup.win or cleanup.ucrt,
-      if requested via options --clean or --preclean, is now reported
-      with a warning.
+         * 'cut(1:11, {})' now signals an error for the invalid
+           'breaks', fixing PR#19057, thanks to Kevin Ushey.
 
-  BUG FIXES:
+         * 'all(<symbol>)' signals an error now, as some similar
+           coercions; previously, the coercion of the symbol resulted
+           in 'NULL' internally, raised a warning, and could access
+           illegal memory; thanks to Kevin Ushey's PR#19054.
 
-    * all.equal(obj, simple, check.class=FALSE) now is true, also when
-      simple is a bare atomic vector and obj has a simple class, fixing
-      the first part of PR#18971 thanks to Jan Gorecki.
+         * 'stl()' now checks its 3 x 3 tuning parameters on the R
+           level; 'stl(*, s.window = 0)' now "works" instead dumping
+           core, 'stl(*, s.window = 1)' "works" correctly, too.  Also,
+           the 'summary()' method mentions the robustness 'weights'
+           only if any robustness iterations happened.
 
-    * str(x, give.attr=FALSE) no longer shows attributes when x is a
-      zero length "Date" or "POSIXt" object.
+           Further, 'stl()' is now based on C code, translated from
+           previous Fortran, triggered by a flang 22 compiler
+           optimization bug ('-O2').
 
-    * Tweaks to binning for bw.SJ() and bw.ucv() in the very rare case
-      of data which have an extremely small range compared to their
-      absolute values, e.g., x <- 6e9 + 6:9.
+         * The border case 'zapsmall(x, digits=Inf)' where 'x' contains
+           an 'Inf' entry no longer returns all 'NaN' but rather 'x'.
+           The improved help page now has more non-default examples.
 
-    * Formatting book-type bibentry objects now converts LaTeX accents
-      also in the publisher and series fields.
+         * 'wilcox.test(x, exact=FALSE, correct = k)''s p-value
+           computation got a missing 'dnorm(z)' factor, and so did the
+           2-sample case, in addition to more fixes.
 
-    * model.frame(~1, list(), na.action=na.pass) and similar
-      "border-line" uses no longer produce invalid data frames, fixing
-      PR#18977, reported with patch by Mikael Jagan.
+         * The data part of 'getGenerics()' listed package names for
+           generic functions defined in more than one package.  Now it
+           lists generic function names, as intended.  Thanks to
+           Michael Chirico for report and patch proposal (PR#19080).
 
-    * length(<POSIXlt>) <- v is more careful about balancing, notably
-      when v is not integer, thanks to Suharto Anggono's remarks on the
-      mailing list R-devel.
+         * Overly long 'dyn.load()' error messages (C level
+           'dlerror()'), should no longer corrupt its state, thanks to
+           Ivan Krylov's PR#19029 report and patch.
 
-    * approx(<x_with_ties>, <y_with_NA>, na.rm = FALSE) now should
-      always call the ties() function, fixing PR#17604 reported by Bill
-      Dunlap.
+         * 'as.matrix(<POSIXlt>)' again produces a _numeric_ matrix,
+           and the 'c()' and subassignment methods for 'POSIXlt'
+           objects work correctly more often, e.g., without a '"tzone"'
+           attribute, back porting a few of the PR#18989 fixes from
+           R-devel, both thanks to Suharto Anggono.
 
-    * besselJ(1, 1e-15) and similar now give correct results, thanks to
-      Leo Mada and other "R-help"ers.
-
-    * vignette(<pkg>::<topic>) is now a documented usage variant and
-      confines vignette retrieval to the specified package.
-
-    * pretty(ch) again correctly works with ch a character vector of
-      numbers.
-
-    * persp() labels the three axes correctly also when C level
-      atan2pi() is available, fixing PR#19007 by Klaus Schliep.
-
-    * Large (tall) subscripts in plotmath expressions are now
-      positioned correctly.  They were being positioned too high.
-
-    * Ops group (Arith, Compare,..) methods for matrix-"ts" now do
-      return (zero length) matrices even when the two series do not
-      overlap, a very partial fix of PR#18972 which is to be fully
-      addressed later.
+         * In 'methods', 'as()' now correctly coerces S4 objects to S4
+           superclasses extending old-style classes, instead of
+           returning only the S3 part.
