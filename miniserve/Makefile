@@ -3,7 +3,7 @@
 DISTNAME=	miniserve-0.35.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=svenstaro/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://github.com/svenstaro/miniserve/
