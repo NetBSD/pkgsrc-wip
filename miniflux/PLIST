@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2025/10/05 20:41:43 wiz Exp $
-bin/miniflux.app
-man/man1/miniflux.1
