@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- Cargo.toml.orig	2026-06-28 12:49:35.108741174 +0000
++++ Cargo.toml
+@@ -50,4 +50,4 @@ rand = "0.10"
+ [patch.crates-io]
+ # Fork with updated dependencies.
+ # Patch was sent upstream; will switch to it once patch it released.
+-digest_auth = { git = "https://git.sr.ht/~whynothugo/digest_auth_rs", rev = "3383b863d1d770bbab1d6690929a7f6a3e8c1a93" }
++digest_auth = { path="../digest_auth_rs-3383b863d1d770bbab1d6690929a7f6a3e8c1a93/" }

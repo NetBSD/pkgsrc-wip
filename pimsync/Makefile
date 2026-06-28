@@ -1,10 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	pimsync-v0.5.9
+DISTNAME=	pimsync-v0.5.11
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	time net
 # doesn't allow direct downloads
 #MASTER_SITES=	https://git.sr.ht/~whynothugo/pimsync/archive/
+DISTFILES=	${DEFAULT_DISTFILES} digest_auth_rs-3383b863d1d770bbab1d6690929a7f6a3e8c1a93.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pimsync.whynothugo.nl/index.html
