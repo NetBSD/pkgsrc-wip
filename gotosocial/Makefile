@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.60 2026/06/05 10:21:54 bsiegert Exp $
 
 DISTNAME=	gotosocial-0.21.3-source-code
-PKGNAME=        ${DISTNAME:S/-source-code//}
+PKGNAME=	${DISTNAME:S/-source-code//}
 CATEGORIES=	www
 MASTER_SITES=	https://codeberg.org/superseriousbusiness/gotosocial/releases/download/v${PKGVERSION_NOREV}/
 SRC_DISTFILE=	gotosocial-${PKGVERSION_NOREV}-source-code.tar.gz
@@ -17,8 +17,8 @@ USE_TOOLS+=	pax tar
 ASSETS=		gotosocial_${PKGVERSION_NOREV}_web-assets.tar.gz
 DISTFILES=	${SRC_DISTFILE} ${ASSETS}
 
-EXTRACT_ONLY=   ${SRC_DISTFILE} ${ASSETS}
-EXTRACT_DIR=    ${WRKSRC}
+EXTRACT_ONLY=	${SRC_DISTFILE} ${ASSETS}
+EXTRACT_DIR=	${WRKSRC}
 
 MAKE_ENV+=	VERSION=${PKGVERSION_NOREV}
 BUILD_DEFS+=	VARBASE
@@ -26,7 +26,6 @@ BUILD_DEFS+=	VARBASE
 # Set compilation flags inspired from gotosocial's build.sh
 GOFLAGS+=		-trimpath -tags=osusergo,nomsgpack,stdlibjson -ldflags='-s -w -X main.Version=v${PKGVERSION}'
 MAKE_ENV+=		CGO_ENABLED=0
-INSTALL_UNSTRIPPED=	no
 
 .include "go-modules.mk"
 
@@ -58,7 +57,7 @@ CONF_FILES+=		${EGDIR}/config.yaml ${PKG_SYSCONFDIR}/config.yaml
 SUBST_CLASSES+=		cfg
 SUBST_MESSAGE.cfg=	Fixing default paths in config
 SUBST_STAGE.cfg=	post-configure
-SUBST_FILES.cfg=	${WRKSRC}/example/config.yaml
+SUBST_FILES.cfg=	example/config.yaml
 SUBST_SED.cfg=		-e "s,\./web/template/,${GOTOSOCIAL_DATA}/template/,g"
 SUBST_SED.cfg+=		-e "s,\./web/assets/,${GOTOSOCIAL_DATA}/assets/,g"
 SUBST_SED.cfg+=		-e "s,/gotosocial/storage,${GOTOSOCIAL_DB}/storage,g"
@@ -66,12 +65,12 @@ SUBST_SED.cfg+=		-e "s,/gotosocial/storage,${GOTOSOCIAL_DB}/storage,g"
 SUBST_CLASSES+=			systemdpaths
 SUBST_MESSAGE.systemdpaths=	Fixing paths in systemd file
 SUBST_STAGE.systemdpaths=	post-configure
-SUBST_FILES.systemdpaths=	${WRKSRC}/example/gotosocial.service
+SUBST_FILES.systemdpaths=	example/gotosocial.service
 SUBST_SED.systemdpaths=		-e 's,/gotosocial/gotosocial,${PREFIX}/bin/gotosocial,g'
 SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 
 post-install:
-	${MKDIR} ${DESTDIR}/${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/example/config.yaml ${DESTDIR}/${EGDIR}/config.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/docker-compose/docker-compose.yaml ${DESTDIR}/${EGDIR}/docker-compose.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/gotosocial.service ${DESTDIR}/${EGDIR}/gotosocial.service
