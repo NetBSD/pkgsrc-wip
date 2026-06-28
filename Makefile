@@ -2001,7 +2001,6 @@ SUBDIR+=	lde
 SUBDIR+=	lean4
 SUBDIR+=	lebiniou
 SUBDIR+=	lebiniou-data
-SUBDIR+=	ledger
 SUBDIR+=	leo
 SUBDIR+=	leocad
 SUBDIR+=	lesspipe
