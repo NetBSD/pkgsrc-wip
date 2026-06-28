@@ -60,7 +60,7 @@ include/ledger/value.h
 include/ledger/xact.h
 lib/libledger.so
 lib/libledger.so.3
-${PYSITELIB}/ledger.so
+${PLIST.python}${PYSITELIB}/ledger.so
 man/man1/ledger.1
 share/contrib/README
 share/contrib/bal
