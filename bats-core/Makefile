@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		bats-core-1.12.0
+DISTNAME=		bats-core-1.13.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bats-core/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
