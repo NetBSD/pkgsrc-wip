@@ -6123,7 +6123,6 @@ SUBDIR+=	xcanvas
 SUBDIR+=	xcape
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
-SUBDIR+=	xclock
 SUBDIR+=	xdg
 SUBDIR+=	xdg-desktop-portal
 SUBDIR+=	xdg-desktop-portal-gtk
