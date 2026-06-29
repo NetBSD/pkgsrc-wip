@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/blogc
+man/man1/blogc.1
+man/man7/blogc-pagination.7
+man/man7/blogc-source.7
+man/man7/blogc-template.7
+man/man7/blogc-toctree.7
+@pkgdir man/man5
