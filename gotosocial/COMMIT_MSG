@@ -1,0 +1,16 @@
+gotosocial: Update to 0.22.0
+
+Changes:
+- Update go modules depencies.
+
+Pkglint: passed.
+
+Package built and tested tested on NetBSD 10.1 amd64.
+
+
+WARNING:
+- Configuration changes and database schema changes.
+- Before starting this new release, first adapt the configuration file,
+then do not interrupt as a database migration will take some time.
+See https://codeberg.org/superseriousbusiness/gotosocial/releases/tag/v0.22.0
+for upgrade instructions.
