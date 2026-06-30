@@ -46,7 +46,6 @@ GN_ARGS+=	use_pulseaudio=false
 
 .if !empty(PKG_OPTIONS:Mwayland)
 GN_ARGS+=	use_system_libffi=true
-.include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .else
