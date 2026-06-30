@@ -1,26 +1,28 @@
-crush: Update to v0.80.0
+crush: Update to v0.81.0
 
 Changelog
 New!
-c1a4822: feat(providers): add llamacpp enricher (@taciturnaxolotl)
-81cb9d9: feat(ui): optimize model ui rendering (@taciturnaxolotl)
-4be77c5: feat: log provider warnings from fantasy step results (@taciturnaxolotl)
+b39a85e: feat(herdr): add herdr socket integration (@taciturnaxolotl)
+b72f9aa: feat(ui): add scrollbar to chat view (#3018) (@andreynering)
+db8add7: feat(ui): allow expanding toolcall names (@taciturnaxolotl)
+
 Fixed
-de67920: fix(auth): stop two Crush instances from invalidating each other's login (@taciturnaxolotl)
-b10f890: fix(config): make concurrent config access race-free via copy-on-write (@taciturnaxolotl)
-af76fa7: fix(docs): set proper auto discovery models flag (@taciturnaxolotl)
-67f5001: fix(glob): keep file search fast and bounded on large directories (@taciturnaxolotl)
-bb44fb1: fix(hooks): bridge Claude Code additionalContext onto HookResult.Context (@ken-jo)
-7206981: fix(scrolling): stale scrolling acceleration (#3197) (@chardoncs)
-cfdca35: fix: correct model discovery enrichment for local providers (@taciturnaxolotl)
-1bb945c: fix: prevent flaky diffview golden tests on Windows CI (@taciturnaxolotl)
-1350167: fix: render pills box reliably when todos or queue appear mid-session (@taciturnaxolotl)
-21a457d: fix: validate tool call JSON before storing to prevent stuck conversations (@taciturnaxolotl)
+f75435a: fix(agent): fall back to first reasoning level when default is unset (#3218) (@syf2211)
+d3d6804: fix(agent): prevent session bricking when non-vision models receive tool result media (@taciturnaxolotl)
+a08e332: fix(bash): keep TruncateOutput from splitting UTF-8 characters (@feizhuzheng)
+1535ebb: fix(config): prevent stale ReasoningEffort from leaking across providers (#3209) (@huaiyuWangh)
+d4dc84e: fix(config): prevent startup deadlock when configured model ID is invalid (@taciturnaxolotl)
+188dea6: fix(fsext): DirTrim renders wrong character for non-ASCII directory names (#3214) (@feizhuzheng)
+a07d304: fix(hyper): refresh hyper oauth token before fetching credits (#3212) (@andreynering)
+a1b19eb: fix(prompts): unindent heredoc (@taciturnaxolotl)
+a9e3a57: fix(shell): skip persistence when session no longer exists (@syf2211)
+3a99992: fix(ui): ansi.truncate instead of byte slicing in todos (@taciturnaxolotl)
+9c61c7d: fix(ui): use ansi.truncate everywhere (@taciturnaxolotl)
+3295a08: fix: cache streaming thinking renders to avoid CPU burn during long reasoning traces (@taciturnaxolotl)
+
 Other stuff
-a5896b4: chore: auto-update files (@charmcli)
-aa3bded: chore: bump fantasy to 0.33.2 (@taciturnaxolotl)
-7f7eb60: chore: bump golangci version to fix lint issues in ci (@taciturnaxolotl)
-6b68930: chore: fix lint on interp.ExecHandler (#3200) (@taciturnaxolotl)
-f5b996b: perf(config): make model selection and config reload fast (@taciturnaxolotl)
-173b2be: perf(ui): skip theme rebuild when provider keeps the same theme (@taciturnaxolotl)
+5c934c3: chore: auto-update files (@charmcli)
+f645040: chore: auto-update files (@charmcli)
+fcccdfe: chore: auto-update files (@charmcli)
+358d75d: chore: regen golden files (@taciturnaxolotl)
 
