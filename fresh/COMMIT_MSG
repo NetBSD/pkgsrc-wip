@@ -1,7 +1,9 @@
-editors/fresh: Update to version 0.4.1
+editors/fresh: Update to version 0.4.2
 
 Packaged in wip by Chavdar Ivanov.
 
 Fresh is a modern terminal-based IDE and text editor with zero configuration,
 familiar keybindings, mouse support, and IDE-level features like LSP,
 multi-cursor, and a command palette.
+
+Regular fresh upgrade. Remove git-versioned crate scaffold - ratatui-wgpu comes from crates.io now. 
