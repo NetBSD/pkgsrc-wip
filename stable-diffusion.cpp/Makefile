@@ -30,6 +30,7 @@ GITHUB_SUBMODULES+=	leejet ggml 3af5f5760e19a96427f5f7a93b79cbdf3d4b265b ggml
 GITHUB_SUBMODULES+=	leejet sdcpp-webui c4bce3d6b3f236614cca21014f076083b7270ba8 examples/server/frontend
 GITHUB_SUBMODULES+=	webmproject libwebm 6184f4484a826724b5293837134ab9492261b941 thirdparty/libwebm
 
+BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.6.0nb2
 .include "../../graphics/libwebp/buildlink3.mk"
 #.include "../../wip/libwebm/buildlink3.mk"
 .include "../../wip/ggml/buildlink3.mk"
