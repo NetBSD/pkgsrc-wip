@@ -3,5 +3,6 @@ $NetBSD$
 BLAKE2s (freecad_source_1.1.1.tar.gz) = e91bd2dbde90bd351cfe8e16542e4b2a4b87838fda74a6785f95fe2972be338c
 SHA512 (freecad_source_1.1.1.tar.gz) = f549d1dd26031ea3909e08839d4267f19d19e61d66138bfaa6a77bc0b1877c7c63f26eaa0ec1792ac10d6524b108fa6fef348f9a3c2d3ef1b2f6a38d63d25a57
 Size (freecad_source_1.1.1.tar.gz) = 98159711 bytes
+SHA1 (patch-cMake_FreeCAD__Helpers_SetupSalomeSMESH.cmake) = 2d8e3ce0c1a08d3dfb9ca96141fe025ae922fce5
 SHA1 (patch-src_App_Application.cpp) = ed1a23d643d67063bbe5e4bede3a04f1a516ed12
 SHA1 (patch-src_App_ApplicationDirectories.cpp) = c188c7cd0d85779d1c060b5eb1e9cd58a7f3ecc7
