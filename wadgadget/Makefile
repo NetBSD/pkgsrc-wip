@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	wadgadget-0.1
+DISTNAME=	wadgadget-0.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fragglet/}
 GITHUB_TAG=	${DISTNAME}
@@ -16,17 +16,15 @@ LICENSE=	gnu-gpl-v2
 USE_CC_FEATURES=	c99
 USE_TOOLS+=		gmake pkg-config
 
-WRKSRC=			${WRKDIR}/WadGadget-wadgadget-0.1/src
-REPLACE_PYTHON=		help/make_help.py
+WRKSRC=			${WRKDIR}/WadGadget-wadgadget-0.2
 INSTALLATION_DIRS=	bin
 
 MAKE_FILE=		GNUmakefile
-BUILD_TARGET=		wadgadget
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wadgadget ${DESTDIR}${PREFIX}/bin/
+#do-install:
+#	${INSTALL_PROGRAM} ${WRKSRC}/wadgadget ${DESTDIR}${PREFIX}/bin/
 
-PYTHON_VERSIONS_ACCEPTED=	312 311 310
+PYTHON_VERSIONS_ACCEPTED=	313 312 311 310
 .include "../../lang/python/tool.mk"
 
 .include "../../audio/libsndfile/buildlink3.mk"

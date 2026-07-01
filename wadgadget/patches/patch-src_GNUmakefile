@@ -1,0 +1,27 @@
+$NetBSD$
+
+Honor DESTDIR, PREFIX, CFLAGS and LDFLAGS.
+
+--- src/GNUmakefile.orig	2025-12-09 03:51:38.000000000 +0000
++++ src/GNUmakefile
+@@ -1,6 +1,6 @@
+ 
+-DESTDIR =
+-PREFIX = /usr/local
++#DESTDIR =
++#PREFIX = /usr/local
+ 
+ LIBSIXEL_CFLAGS = \
+     $(shell pkg-config --silence-errors --cflags libsixel \
+@@ -29,9 +29,9 @@ CURSES_LDFLAGS = \
+ endif
+ 
+ REQUIRED_PKGS = sndfile libpng
+-CFLAGS := -g -MMD -Wall -I. -O2 $(shell pkg-config --cflags $(REQUIRED_PKGS)) \
++CFLAGS := $(CFLAGS) -MMD -Wall -I. -O2 $(shell pkg-config --cflags $(REQUIRED_PKGS)) \
+           $(LIBSIXEL_CFLAGS) $(CURSES_CFLAGS)
+-LDFLAGS := $(shell pkg-config --libs $(REQUIRED_PKGS)) \
++LDFLAGS := $(LDFLAGS) $(shell pkg-config --libs $(REQUIRED_PKGS)) \
+            $(LIBSIXEL_LDFLAGS) $(CURSES_LDFLAGS)
+ 
+ IWYU = iwyu

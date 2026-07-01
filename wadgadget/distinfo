@@ -1,6 +1,14 @@
 $NetBSD$
 
-BLAKE2s (wadgadget-0.1.tar.gz) = c5087bf6af3c9a12c9799e9086fda6e0e2a727b6c8fed72bd4a62d51e9844932
-SHA512 (wadgadget-0.1.tar.gz) = 69daa63d471739c99448765c608e416f48fc261dce3aed550c6ba6e0bf4ac1992561b6799b560693205e631bc0add350075394f51a9da647a388c608fb586973
-Size (wadgadget-0.1.tar.gz) = 402256 bytes
-SHA1 (patch-GNUmakefile) = 43e0fe57ffec847120ef0d952fcf6cb4f02a465c
+BLAKE2s (wadgadget-0.2.tar.gz) = e668a4f73d934ddc076d5a08f3ac5e70207e871cab8f96683ac69a1f94bcdd93
+SHA512 (wadgadget-0.2.tar.gz) = 6d7992e92f83f695b110139b690b9fe74a47ea209661e5aa1d0582894f92262ce2777617483d79e9bb9ee5e8aec9269f29b531ec7eb25774be2dc3c0c882f968
+Size (wadgadget-0.2.tar.gz) = 427892 bytes
+SHA1 (patch-src_GNUmakefile) = 32c59dc3120aea280000798acaeddc4273e794e5
+SHA1 (patch-src_fs_file__set.c) = 7ce3479ecce150e315de1019481ffd50902268cd
+SHA1 (patch-src_fs_wad__file.c) = 7f6f0ab5a9f8bb8204b2cbbbdfad0f1dce927c64
+SHA1 (patch-src_pager_help.c) = d4ea91c06ab068821e542f882703bbcb4dc094cf
+SHA1 (patch-src_pager_pager.c) = 54b2c18ca70653f522b398b0c44bdaa5e8769dc2
+SHA1 (patch-src_stringlib.c) = 2ff783d66f0e04d32ea9e172ceccb4502b44f39f
+SHA1 (patch-src_textures_config.c) = 24eeb8f5717fe2d20cba8d38d010a41e3ed44dea
+SHA1 (patch-src_textures_pnames.c) = eefbd3d938adacbed910e5be19e10362c1234e37
+SHA1 (patch-src_textures_textures.c) = 17e9d3e124dc2adf63f006f9fe886dfc2a434faa
