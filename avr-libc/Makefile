@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		avr-libc-2.3.1
+DISTNAME=		avr-libc-2.3.2
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GITHUB:=avrdudes/}
 GITHUB_PROJECT=		avr-libc
@@ -18,6 +18,7 @@ USE_GNU_CONFIGURE_HOST=	no
 
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=avr
+CONFIGURE_ARGS+=	--disable-doc
 CONFIGURE_ARGS+=	--disable-versioned-doc
 CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
 CONFIGURE_ARGS+=	CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/avr/include"
@@ -37,11 +38,6 @@ SUBST_MESSAGE.demo=	Add cross/bin on PATH for OBJCOPY (avr-objcopy) etc
 SUBST_FILES.demo=	doc/Makefile.in
 SUBST_SED.demo=		-e 's|@@@PATH@@@|${PREFIX}/bin:${PATH:Q}|g'
 
-.include "options.mk"
-
 .include "../../wip/avr-binutils/buildlink3.mk"
 .include "../../wip/avr-gcc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# Not to be overridden as --mandir=${PREFIX}, put the line here.
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/doc/avr-libc/man
