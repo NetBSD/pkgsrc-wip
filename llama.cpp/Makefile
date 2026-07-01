@@ -18,35 +18,20 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
-BLAS_INDEX64=		yes
-BLAS_ACCEPTED=		openblas_pthread #openblas_openmp
-BLAS_C_INTERFACE=	yes
-
 PKGCONFIG_OVERRIDE+=	cmake/llama.pc.in
 
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_NUMBER=${LLAMA_BUILD_NUMBER}
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_COMMIT=${LLAMA_BUILD_COMMIT}
-CMAKE_CONFIGURE_ARGS+=	-DGGML_BLAS=ON
-CMAKE_CONFIGURE_ARGS+=	-DGGML_BLAS_VENDOR=OpenBLAS
-CMAKE_CONFIGURE_ARGS+=	-DBLAS_LIBRARIES=${CBLAS_LIBS:Q}
-CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_TESTS=no
-CMAKE_CONFIGURE_ARGS+=	-DGGML_OPENCL_EMBED_KERNELS=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGGML_OPENCL_PROFILING=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGGML_OPENCL_USE_ADRENO_KERNELS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_TESTS=NO
+CMAKE_CONFIGURE_ARGS+=	-DLLAMA_USE_SYSTEM_GGML=YES
 
 PRINT_PLIST_AWK+=	/lib\/.*\.so/ { sub(/${LLAMA_BUILD_NUMBER}/, "$${LLAMA_BUILD_NUMBER}") }
 PLIST_SUBST+=		LLAMA_BUILD_NUMBER=${LLAMA_BUILD_NUMBER}
-
-SUBST_CLASSES+=		findblas
-SUBST_STAGE.findblas=	pre-configure
-SUBST_MESSAGE.findblas=	Fixing libpci soname
-SUBST_FILES.findblas+=	ggml/src/ggml-blas/CMakeLists.txt
-SUBST_SED.findblas+=	-e 's,DepBLAS openblas64,DepBLAS ${BLAS_PC},'
 
 post-extract:
 	${LN} -s ${WRKDIR}/llama-${GITHUB_TAG} ${WRKSRC}/tools/ui/dist
 
 .include "../../www/curl/buildlink3.mk"
+.include "../../wip/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
