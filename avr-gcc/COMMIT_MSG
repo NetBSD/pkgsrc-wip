@@ -4,6 +4,14 @@ Remove pkgsrc patches that were merged upstream.
 
 
 Full changelog can be found here:
+<https://gcc.gnu.org/gcc-16/changes.html>
+
+Changes for AVR architecture in GCC 16
+======================================
+No AVR specific changes.
+
+
+Full changelog can be found here:
 <https://gcc.gnu.org/gcc-15/changes.html>
 
 Changes for AVR architecture in GCC 15

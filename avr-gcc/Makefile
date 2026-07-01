@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gcc-15.2.0
+DISTNAME=		gcc-16.1.0
 PKGNAME=		${DISTNAME:C/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 # Required at least on AMD64
 MKPIE_SUPPORTED=	no
 
-DEPENDS+=		avr-binutils>=2.42:../../cross/avr-binutils
+DEPENDS+=		avr-binutils>=2.45:../../wip/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 

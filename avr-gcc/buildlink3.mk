@@ -7,7 +7,7 @@ AVR_GCC_BUILDLINK3_MK:=
 
 USE_CXX_FEATURES+=	c++14
 
-BUILDLINK_API_DEPENDS.avr-gcc+=	avr-gcc>=15.2.0
+BUILDLINK_API_DEPENDS.avr-gcc+=	avr-gcc>=16.1.0
 BUILDLINK_PKGSRCDIR.avr-gcc?=	../../wip/avr-gcc
 .endif	# AVR_GCC_BUILDLINK3_MK
 
