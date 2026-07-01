@@ -1287,6 +1287,7 @@ SUBDIR+=	gfontview
 SUBDIR+=	gforth-git
 SUBDIR+=	gforth-snapshot
 SUBDIR+=	gfsview-snapshot
+SUBDIR+=	ggml
 SUBDIR+=	ggobi
 SUBDIR+=	gh-dash
 SUBDIR+=	ghc-core
