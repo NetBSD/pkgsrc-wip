@@ -99,6 +99,7 @@ DEPENDS+=	${PYPKGPREFIX}-boost-[0-9]*:../../devel/py-boost
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
+.include "../../textproc/utf8-cpp/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../wip/med/buildlink3.mk"
 .include "../../wip/orocos-kdl/buildlink3.mk"
