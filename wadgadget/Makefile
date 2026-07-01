@@ -13,16 +13,12 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_CC_FEATURES=	c99
+FORCE_C_STD=		c99
 USE_TOOLS+=		gmake pkg-config
 
-WRKSRC=			${WRKDIR}/WadGadget-wadgadget-0.2
 INSTALLATION_DIRS=	bin
 
 MAKE_FILE=		GNUmakefile
-
-#do-install:
-#	${INSTALL_PROGRAM} ${WRKSRC}/wadgadget ${DESTDIR}${PREFIX}/bin/
 
 PYTHON_VERSIONS_ACCEPTED=	313 312 311 310
 .include "../../lang/python/tool.mk"
