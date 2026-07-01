@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		muon-v0.5.0
+DISTNAME=		muon-v0.6.0
 PKGNAME=		${DISTNAME:S/v//}
 CATEGORIES=		devel
 MASTER_SITES=		https://muon.build/releases/${DISTNAME:S/muon-//}/
@@ -56,7 +56,5 @@ do-test:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/output/muon ${DESTDIR}${PREFIX}/bin/muon
 	${INSTALL_MAN} ${WRKDIR}/man/muon.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
-.include "../../lang/python/tool.mk"
 
 .include "../../mk/bsd.pkg.mk"
