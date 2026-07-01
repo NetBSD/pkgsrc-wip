@@ -1,7 +1,6 @@
 # $NetBSD$
 #
 # used by wip/llama.cpp/Makefile
-# used by wip/py-gguf/Makefile
 # used by wip/py-llama-cpp-scripts/Makefile
 
 DISTNAME=	llama.cpp-${GITHUB_TAG}
