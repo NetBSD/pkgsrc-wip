@@ -1,19 +1,17 @@
 $NetBSD$
 
-Patches Makefile to not use -D argument to install.
+Install files with defined permissions.
 
---- Makefile.orig	2024-04-29 11:26:30.346342899 -0400
-+++ Makefile	2024-04-29 11:26:49.024153733 -0400
-@@ -34,8 +34,10 @@
- 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJECTS)
- 
+--- Makefile.orig	2025-10-14 23:02:24.000000000 +0000
++++ Makefile
+@@ -49,8 +49,8 @@ $(EXECUTABLE): $(OBJECTS)
  install:
--	install -D wadptr $(DESTDIR)$(PREFIX)/bin/wadptr
--	install -D wadptr.1 $(DESTDIR)$(PREFIX)/share/man/man1/wadptr.1
-+	mkdir -p $(DESTDIR)$(PREFIX)/bin
-+	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
-+	install wadptr $(DESTDIR)$(PREFIX)/bin/wadptr
-+	install wadptr.1 $(DESTDIR)$(PREFIX)/share/man/man1/wadptr.1
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	mkdir -p $(DESTDIR)$(MANPATH)/man1
+-	install wadptr $(DESTDIR)$(PREFIX)/bin/wadptr
+-	install wadptr.1 $(DESTDIR)$(MANPATH)/man1/wadptr.1
++	install -m 755 wadptr $(DESTDIR)$(PREFIX)/bin/wadptr
++	install -m 644 wadptr.1 $(DESTDIR)$(MANPATH)/man1/wadptr.1
  
- clean:
- 	$(DELETE) $(EXECUTABLE)
+ uninstall:
+ 	rm -f $(DESTDIR)$(PREFIX)/bin/wadptr
