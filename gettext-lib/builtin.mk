@@ -1,0 +1,141 @@
+# $NetBSD: builtin.mk,v 1.50 2023/06/29 08:24:19 adam Exp $
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+BUILTIN_PKG:=	gettext
+
+BUILTIN_FIND_LIBS:=				intl
+BUILTIN_FIND_HEADERS_VAR:=			H_GETTEXT H_GENTOO_GETTEXT \
+						H_NGETTEXT_GETTEXT \
+						H_OPNSVR5_GETTEXT
+BUILTIN_FIND_HEADERS.H_GETTEXT=			libintl.h
+BUILTIN_FIND_GREP.H_GETTEXT=			\#define[ 	]*__USE_GNU_GETTEXT
+BUILTIN_FIND_HEADERS.H_GENTOO_GETTEXT=		libintl.h
+BUILTIN_FIND_GREP.H_GENTOO_GETTEXT=		gentoo-multilib/.*/libintl.h
+BUILTIN_FIND_HEADERS.H_NGETTEXT_GETTEXT=	libintl.h
+BUILTIN_FIND_GREP.H_NGETTEXT_GETTEXT=		char.*ngettext
+BUILTIN_FIND_HEADERS.H_OPNSVR5_GETTEXT=		libintl.h
+BUILTIN_FIND_GREP.H_OPNSVR5_GETTEXT=		libgnuintl.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
+#
+# Gentoo Linux has an unusual scheme where /usr/include/libintl.h
+# pulls in gentoo-multilib/$ARCH/libintl.h, where the latter is the
+# real libintl.h file.  We can safely assume that this is GNU gettext
+# (in glibc).
+#
+# SCO OpenServer 5.0.7/3.2 has an unusual scheme where /usr/include/libintl.h
+# pulls in /usr/include/libgnuintl.h, where the latter is the real libintl.h.
+#
+# By default, assume that the native gettext implementation is good
+# enough to replace GNU gettext if it supplies ngettext().
+#
+.if !defined(IS_BUILTIN.gettext)
+IS_BUILTIN.gettext=	no
+.  if (empty(H_GETTEXT:M__nonexistent__) && \
+       empty(H_GETTEXT:M${LOCALBASE}/*)) || \
+      (empty(H_GENTOO_GETTEXT:M__nonexistent__) && \
+       empty(H_GENTOO_GETTEXT:M${LOCALBASE}/*)) || \
+      (empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
+       empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)) || \
+      (empty(H_OPNSVR5_GETTEXT:M__nonexistent__) && \
+       empty(H_OPNSVR5_GETTEXT:M${LOCALBASE}/*))
+IS_BUILTIN.gettext=	yes
+.  endif
+.endif
+MAKEVARS+=		IS_BUILTIN.gettext
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+.if !defined(USE_BUILTIN.gettext)
+.  if ${PREFER.gettext} == "pkgsrc"
+USE_BUILTIN.gettext=	no
+.  else
+USE_BUILTIN.gettext=	${IS_BUILTIN.gettext}
+.    if defined(BUILTIN_PKG.gettext) && \
+	${IS_BUILTIN.gettext:tl} == yes
+USE_BUILTIN.gettext=	yes
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.gettext}
+.        if ${USE_BUILTIN.gettext:tl} == yes
+USE_BUILTIN.gettext!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gettext}; then	\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+#
+#
+# Some platforms don't have a gettext implementation that can replace
+# GNU gettext.
+#
+_INCOMPAT_GETTEXT?=	SunOS-*-*	# XXX move to mk/platforms/SunOS.mk
+.    for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+USE_BUILTIN.gettext=	no
+.      endif
+.    endfor
+.  endif  # PREFER.gettext
+.endif
+MAKEVARS+=		USE_BUILTIN.gettext
+
+# Define BUILTIN_LIBNAME.gettext to be the base name of the built-in
+# gettext library.
+#
+.if ${BUILTIN_LIB_FOUND.intl:U:tl} == yes
+BUILTIN_LIBNAME.gettext=	intl
+.else
+BUILTIN_LIBNAME.gettext=	# empty (part of the C library)
+.endif
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.gettext?=	no
+.if ${CHECK_BUILTIN.gettext:tl} == no
+
+.  if ${USE_BUILTIN.gettext:tl} == yes
+BUILDLINK_LIBNAME.gettext=	${BUILTIN_LIBNAME.gettext}
+.    if ${OS_VARIANT} == SCOOSR5
+BUILDLINK_PREFIX.gettext=	/usr/gnu
+.    endif
+.    if empty(BUILTIN_LIBNAME.gettext)
+BUILDLINK_TRANSFORM+=		rm:-lintl
+.    endif
+.  endif
+
+# If using a built-in libintl that isn't from GNU gettext, then set up
+# some GNU configure variables that are checked by modern gettext.m4
+# so that it will detect "GNU gettext" in the existing libintl.
+#
+.  if defined(GNU_CONFIGURE)
+.    if ${USE_BUILTIN.gettext:tl} == yes
+.      if ${BUILTIN_LIB_FOUND.intl:U:tl} == yes
+CONFIGURE_ENV+=		gt_cv_func_gnugettext_libintl="yes"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
+.        if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
+	    empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
+CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl="yes"
+.        endif
+.      else
+CONFIGURE_ENV+=		gt_cv_func_gnugettext_libc="yes"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libc="yes"
+.        if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
+	    empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
+CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libc="yes"
+.        endif
+.      endif
+.    endif
+.  endif
+
+.endif	# CHECK_BUILTIN.gettext

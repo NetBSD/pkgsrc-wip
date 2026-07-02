@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.21 2020/01/23 11:42:16 nia Exp $
+share/gettext/ABOUT-NLS
+share/gettext/config.rpath
+share/gettext/projects/GNOME/team-address
+share/gettext/projects/GNOME/teams.html
+share/gettext/projects/GNOME/teams.url
+share/gettext/projects/GNOME/trigger
+share/gettext/projects/KDE/team-address
+share/gettext/projects/KDE/teams.html
+share/gettext/projects/KDE/teams.url
+share/gettext/projects/KDE/trigger
+share/gettext/projects/TP/team-address
+share/gettext/projects/TP/teams.html
+share/gettext/projects/TP/teams.url
+share/gettext/projects/TP/trigger
+share/gettext/projects/index
+share/gettext/projects/team-address

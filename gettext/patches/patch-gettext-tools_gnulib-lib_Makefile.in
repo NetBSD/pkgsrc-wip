@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.14 2023/12/30 15:47:03 wiz Exp $
+
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2023-11-19 20:23:04.000000000 +0000
++++ gettext-tools/gnulib-lib/Makefile.in
+@@ -6571,7 +6571,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-pkgdataDATA
++install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 
