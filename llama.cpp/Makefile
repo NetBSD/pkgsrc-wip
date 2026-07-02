@@ -32,6 +32,6 @@ post-extract:
 	${LN} -s ${WRKDIR}/llama-${GITHUB_TAG} ${WRKSRC}/tools/ui/dist
 
 .include "../../www/curl/buildlink3.mk"
-.include "../../wip/ggml/buildlink3.mk"
+.include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

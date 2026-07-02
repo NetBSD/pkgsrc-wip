@@ -29,7 +29,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWHISPER_USE_SYSTEM_GGML=ON
 #.include "../../devel/SDL2/buildlink3.mk"
 .include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../wip/llama.cpp/buildlink3.mk"
-.include "../../wip/ggml/buildlink3.mk"
+.include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

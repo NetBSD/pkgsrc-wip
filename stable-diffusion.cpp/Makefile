@@ -33,6 +33,6 @@ GITHUB_SUBMODULES+=	webmproject libwebm 6184f4484a826724b5293837134ab9492261b941
 BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.6.0nb2
 .include "../../graphics/libwebp/buildlink3.mk"
 #.include "../../wip/libwebm/buildlink3.mk"
-.include "../../wip/ggml/buildlink3.mk"
+.include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
