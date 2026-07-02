@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gglm
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ggml
 PKG_SUPPORTED_OPTIONS=	vulkan
-PKG_SUGGESTED_OPTIONS= 	# empty
+PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.options.mk"
 
