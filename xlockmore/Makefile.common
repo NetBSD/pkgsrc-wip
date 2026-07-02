@@ -23,10 +23,10 @@ USE_CC_FEATURES=	c23
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 .endif
 
-DISTINFO_FILE?=		${.CURDIR}/../../x11/xlockmore/distinfo
-PATCHDIR?=		${.CURDIR}/../../x11/xlockmore/patches
-PLIST_SRC?=		${.CURDIR}/../../x11/xlockmore/PLIST
-FILESDIR?=		${.CURDIR}/../../x11/xlockmore/files
+DISTINFO_FILE?=		${.CURDIR}/../../wip/xlockmore/distinfo
+PATCHDIR?=		${.CURDIR}/../../wip/xlockmore/patches
+PLIST_SRC?=		${.CURDIR}/../../wip/xlockmore/PLIST
+FILESDIR?=		${.CURDIR}/../../wip/xlockmore/files
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xlockmore
 PKG_SUPPORTED_OPTIONS=		xlockmore-allow-root xlockmore-dpms pam
