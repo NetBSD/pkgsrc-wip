@@ -2070,6 +2070,8 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-sasl.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-sasl.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-services.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-services.elc
+share/emacs/${PKGVERSION}/lisp/erc/erc-settings.el.gz
+share/emacs/${PKGVERSION}/lisp/erc/erc-settings.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-sound.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-sound.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-speedbar.el.gz
