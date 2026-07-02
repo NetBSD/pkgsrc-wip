@@ -5416,7 +5416,6 @@ SUBDIR+=	sflphoned
 SUBDIR+=	sftpgo
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
-SUBDIR+=	shaderc
 SUBDIR+=	shadow
 SUBDIR+=	shairport-sync
 SUBDIR+=	shaper
