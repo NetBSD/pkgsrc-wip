@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.11 2022/01/24 18:05:58 micha Exp $
+bin/play.sh
+${LITE}bin/xglock
+bin/xlock
+man/man1/xlock.1
+share/doc/xlockmore/INSTALL.pkgsrc
+share/examples/xlock/app-defaults/XLock
+share/examples/xlock/pam.d/xlock-NetBSD
+share/xlock/sounds/complete.au
+share/xlock/sounds/identify-please.au
+share/xlock/sounds/not-programmed.au
+share/xlock/sounds/thank-you.au
+${LITE}share/xlock/xglockrc

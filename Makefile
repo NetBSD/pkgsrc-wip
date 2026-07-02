@@ -6168,6 +6168,7 @@ SUBDIR+=	xinetd
 SUBDIR+=	xinput_calibrator
 SUBDIR+=	xinvaders3d
 SUBDIR+=	xiphos
+SUBDIR+=	xlockmore
 SUBDIR+=	xlossage-git
 SUBDIR+=	xmail
 SUBDIR+=	xmatchview
