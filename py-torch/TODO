@@ -1,0 +1,16 @@
+Only installs the Python files, not the headers and libraries.
+
+This leads to:
+
+ERROR: lib/python3.14/site-packages/torch/_C.so: missing library: libtorch_python.so
+ERROR: lib/python3.14/site-packages/torch/bin/torch_shm_manager: missing library: libshm.so
+ERROR: lib/python3.14/site-packages/torch/bin/torch_shm_manager: missing library: libc10.so
+ERROR: lib/python3.14/site-packages/torch/lib/libshm.so: missing library: libtorch_cpu.so
+ERROR: lib/python3.14/site-packages/torch/lib/libshm.so: missing library: libc10.so
+ERROR: lib/python3.14/site-packages/torch/lib/libtorch.so: missing library: libtorch_cpu.so
+ERROR: lib/python3.14/site-packages/torch/lib/libtorch_cpu.so: missing library: libc10.so
+ERROR: lib/python3.14/site-packages/torch/lib/libtorch_python.so: missing library: libtorch.so
+ERROR: lib/python3.14/site-packages/torch/lib/libtorch_python.so: missing library: libshm.so
+ERROR: lib/python3.14/site-packages/torch/lib/libtorch_python.so: missing library: libtorch_cpu.so
+ERROR: lib/python3.14/site-packages/torch/lib/libtorch_python.so: missing library: libc10.so
+*** Error code 1

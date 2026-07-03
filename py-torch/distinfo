@@ -1,0 +1,29 @@
+$NetBSD$
+
+BLAKE2s (pytorch-v2.12.1.tar.gz) = e838105c3feba32caead605d7257c9324b8a8b500e06062ad7f36e115c068169
+SHA512 (pytorch-v2.12.1.tar.gz) = f8112bbd5c2884530b0121dd4cf574e77d1d60b53cca4b5949a951babc348970b0ca7e2bdaf6b17fc871966600f0a08c744bcaf9c098cec24b26fafb0a90f47a
+Size (pytorch-v2.12.1.tar.gz) = 430918199 bytes
+SHA1 (patch-c10_test_core_Scalar__test.cpp) = 7b3908b286e90c5b94f82a4ebf6cdca629f6ad0d
+SHA1 (patch-cmake_Dependencies.cmake) = d524cb2a811788d801f086a3a84625f4c3dc3bf8
+SHA1 (patch-cmake_Modules_FindBLAS.cmake) = fd29b5e717eda52f249ee3cff04e6fdd6c398cc2
+SHA1 (patch-cmake_public_mkldnn.cmake) = 3cd077c540c0923a689d403ba92dc2c206b7f937
+SHA1 (patch-third__party_FP16_CMakeLists.txt) = f747d3dd15ed38316b5accea883fb86253730e7c
+SHA1 (patch-third__party_cpuinfo_CMakeLists.txt) = 55643335b5fc63898b9f6b18822bad2d6b5e521a
+SHA1 (patch-third__party_cpuinfo_src_cpuinfo_internal-api.h) = fbdfd4ae278b570514a4473e651d61c3fe2b6ecc
+SHA1 (patch-third__party_cpuinfo_src_init.c) = c57d05229b4eaa0287ed567478de33834b300d68
+SHA1 (patch-third__party_cpuinfo_src_netbsd_api.h) = 018be10b2cb520f870fcc479610bf5200b977bc9
+SHA1 (patch-third__party_cpuinfo_src_netbsd_topology.c) = 5138bf2355bc70042f5ce9f7a019d315be038bca
+SHA1 (patch-third__party_cpuinfo_src_x86_netbsd_init.c) = 52bcc18d780736b6f56f478b90dd81eede2fb499
+SHA1 (patch-third__party_fbgemm_external_cpuinfo_src_init.c) = 8f75ada97904b6d904686d94d93a3caafae8cacf
+SHA1 (patch-third__party_kineto_libkineto_src_ThreadUtil.cpp) = 86d3cb8a1db0ccb09971684313348f76d5a621cd
+SHA1 (patch-third__party_protobuf_cmake_CMakeLists.txt) = 20926b73cb40cde56170dd15c0abd9830ec50c3e
+SHA1 (patch-third__party_protobuf_post__process__dist.sh) = b27d6497f8649491441ef3a2bfc9eb5fa22ba474
+SHA1 (patch-third__party_psimd_CMakeLists.txt) = 8c1a0b0ed20b01585fa49115a98611877c8218be
+SHA1 (patch-third__party_tensorpipe_tensorpipe_common_system.cc) = 6f714d89681c245d531809fbf64b2b9c77fce84d
+SHA1 (patch-third__party_tensorpipe_third__party_libuv_CMakeLists.txt) = f9fed7fa15e860f670f309fc4f763b36acd0be54
+SHA1 (patch-tools_build__pytorch__libs.py) = c728f36ecd3289a780dba860a89d99098a52ae74
+SHA1 (patch-tools_optional__submodules.py) = f8340a926eef1512664b0dcc0d88f35370d110ac
+SHA1 (patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp) = a0d8ff016d732b11ce5e372d2e3c3e6b191859d5
+SHA1 (patch-torch_csrc_distributed_c10d_socket.cpp) = cace5d33d59bb8fec1933e74223049e5d63aa0a9
+SHA1 (patch-torch_csrc_utils_byte__order.h) = 089495773fbd7e7340dbd7545341c56d2f4de9b3
+SHA1 (patch-torch_headeronly_macros_Macros.h) = f72fbd8e306b9436cf8a8c7853458b4f1228afe1
