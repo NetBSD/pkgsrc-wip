@@ -6,8 +6,8 @@ MASTER_SITES=	https://sourceforge.net/projects/tpico2-experimental/files/
 
 MAINTAINER=	goon.mage@yahoo.com
 HOMEPAGE=	https://sourceforge.net/projects/tpico2-experimental/
-COMMENT=	The Pico language interpreter with extensions such as SDL 1.2 and Curses libraries	
-LICENSE=	BSD	
+COMMENT=	The Pico language interpreter with extensions such as SDL 1.2
+LICENSE=	GPL	
 
 WRKSRC=		${WRKDIR}/tpico2-experimental
 USE_LANGUAGES= 	C
