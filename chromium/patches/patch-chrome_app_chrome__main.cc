@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/app/chrome_main.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/app/chrome_main.cc
-@@ -29,11 +29,11 @@
+@@ -33,11 +33,11 @@
  #include "chrome/common/mac/detect_inappropriate_exit.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include "chrome/app/chrome_main_linux.h"
  #endif
  
-@@ -86,7 +86,7 @@ int ChromeMain(int argc, const char** ar
+@@ -107,7 +107,7 @@ int ChromeMain(int argc, const char** ar
  #error Unknown platform.
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD$
    PossiblyDetermineFallbackChromeChannel(argv[0]);
  #endif
  
-@@ -153,7 +153,7 @@ int ChromeMain(int argc, const char** ar
+@@ -180,7 +180,7 @@ int ChromeMain(int argc, const char** ar
    SetUpBundleOverrides();
  #endif
  

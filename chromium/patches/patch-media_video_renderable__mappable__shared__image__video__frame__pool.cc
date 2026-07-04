@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/renderable_mappable_shared_image_video_frame_pool.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/video/renderable_mappable_shared_image_video_frame_pool.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/video/renderable_mappable_shared_image_video_frame_pool.cc
 @@ -199,7 +199,7 @@ bool FrameResources::Initialize(VideoPix
  

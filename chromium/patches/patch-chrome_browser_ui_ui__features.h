@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
-@@ -23,7 +23,7 @@ BASE_DECLARE_FEATURE(kAllowEyeDropperWGC
+@@ -28,7 +28,7 @@ BASE_DECLARE_FEATURE(kCreateNewTabGroupA
  
- BASE_DECLARE_FEATURE(kCreateNewTabGroupAppMenuTopLevel);
+ BASE_DECLARE_FEATURE(kCtrlTabMru);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_DECLARE_FEATURE(kDseIntegrity);
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
-@@ -64,7 +64,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
+@@ -74,7 +74,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
  BASE_DECLARE_FEATURE_PARAM(int, kSeparateDefaultAndPinPromptMessageVersion);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD$
  // When enabled, user may see the session restore UI flow.
  BASE_DECLARE_FEATURE(kSessionRestoreInfobar);
  
-@@ -243,7 +243,7 @@ BASE_DECLARE_FEATURE(kManagedProfileRequ
+@@ -260,7 +260,7 @@ BASE_DECLARE_FEATURE(kManagedProfileRequ
  BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
  

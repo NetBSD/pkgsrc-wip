@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -30,7 +30,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
  #endif
@@ -15,7 +15,7 @@ $NetBSD$
  const int kLocalWebApprovalBottomSheetLoadTimeoutDefaultValueMs = 5000;
  
  const base::FeatureParam<int> kLocalWebApprovalBottomSheetLoadTimeoutMs{
-@@ -75,7 +75,7 @@ bool IsLocalWebApprovalsEnabledForSubfra
+@@ -68,7 +68,7 @@ bool IsLocalWebApprovalsEnabledForSubfra
    return base::FeatureList::IsEnabled(kAllowSubframeLocalWebApprovals);
  }
  

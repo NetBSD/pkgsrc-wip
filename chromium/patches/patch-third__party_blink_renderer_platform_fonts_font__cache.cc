@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
-@@ -80,7 +80,7 @@ const char kMonoEmojiLocale[] = "und-Zsy
+@@ -82,7 +82,7 @@ const char kMonoEmojiLocale[] = "und-Zsy
  extern const char kNotoColorEmojiCompat[] = "Noto Color Emoji Compat";
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  float FontCache::device_scale_factor_ = 1.0;
  #endif
  
-@@ -112,7 +112,7 @@ const FontPlatformData* FontCache::Syste
+@@ -114,7 +114,7 @@ const FontPlatformData* FontCache::Syste
      const FontDescription& font_description) {
    const AtomicString& family = FontCache::SystemFontFamily();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \

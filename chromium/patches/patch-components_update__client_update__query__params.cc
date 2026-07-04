@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/update_client/update_query_params.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/update_client/update_query_params.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/update_client/update_query_params.cc
 @@ -39,6 +39,10 @@ constexpr std::string_view kOs =
      "fuchsia";

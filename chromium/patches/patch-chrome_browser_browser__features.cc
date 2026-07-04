@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/browser_features.cc
-@@ -66,7 +66,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
+@@ -62,7 +62,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
  BASE_FEATURE(kClearUserDataUponProfileDestruction,
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD$
  // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
  // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
  // disabled without losing data.
-@@ -76,7 +76,7 @@ BASE_FEATURE(kDbusSecretPortal, base::FE
+@@ -72,7 +72,7 @@ BASE_FEATURE(kDbusSecretPortal, base::FE
  // Destroy profiles when their last browser window is closed, instead of when
  // the browser exits.
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
@@ -24,7 +24,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -175,7 +175,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -171,7 +171,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
  BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
               base::FEATURE_ENABLED_BY_DEFAULT);
  

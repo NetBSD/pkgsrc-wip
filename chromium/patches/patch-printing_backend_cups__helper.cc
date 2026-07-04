@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_helper.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- printing/backend/cups_helper.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ printing/backend/cups_helper.cc
 @@ -8,7 +8,7 @@
  #include "base/time/time.h"
@@ -47,7 +47,7 @@ $NetBSD$
  // Helper wrapper around http_t structure, with connection and cleanup
  // functionality.
  HttpConnectionCUPS::HttpConnectionCUPS(const GURL& print_server_url,
-@@ -966,7 +966,7 @@ ScopedHttpPtr HttpConnect2(const char* h
+@@ -970,7 +970,7 @@ ScopedHttpPtr HttpConnect2(const char* h
                             int blocking,
                             int msec,
                             int* cancel) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/video/mappable_shared_image_video_frame_pool.cc
-@@ -690,7 +690,7 @@ void MappableSharedImageVideoFramePool::
+@@ -689,7 +689,7 @@ void MappableSharedImageVideoFramePool::
    }
  
    bool is_software_backed_video_frame = !video_frame->HasSharedImage();
@@ -15,7 +15,7 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1118,7 +1118,7 @@ scoped_refptr<VideoFrame> MappableShared
+@@ -1117,7 +1117,7 @@ scoped_refptr<VideoFrame> MappableShared
            gpu::SHARED_IMAGE_USAGE_WEBGPU_READ);
  #endif
  

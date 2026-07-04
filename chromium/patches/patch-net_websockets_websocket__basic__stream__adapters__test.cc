@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/websockets/websocket_basic_stream_adapters_test.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- net/websockets/websocket_basic_stream_adapters_test.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ net/websockets/websocket_basic_stream_adapters_test.cc
-@@ -1102,10 +1102,10 @@ TEST_F(WebSocketSpdyStreamAdapterTest,
+@@ -1103,10 +1103,10 @@ TEST_F(WebSocketSpdyStreamAdapterTest,
         OnCloseOkShouldBeTranslatedToConnectionClose) {
    spdy::SpdySerializedFrame response_headers(
        spdy_util_.ConstructSpdyResponseHeaders(1, ResponseHeaders(), false));

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/public/tab_features.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/tabs/public/tab_features.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/tabs/public/tab_features.h
-@@ -155,7 +155,7 @@ class TabContextualizationController;
+@@ -157,7 +157,7 @@ class TabContextualizationController;
  }  // namespace lens
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  namespace wallet {
  class ChromeWalletablePassClient;
  }  // namespace wallet
-@@ -563,7 +563,7 @@ class TabFeatures {
+@@ -558,7 +558,7 @@ class TabFeatures {
        skills_ui_tab_controller_;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
    std::unique_ptr<wallet::ChromeWalletablePassClient> walletable_pass_client_;
  #endif
  
-@@ -574,7 +574,7 @@ class TabFeatures {
+@@ -569,7 +569,7 @@ class TabFeatures {
    std::unique_ptr<skills::SkillsUpdateObserver> skills_update_observer_;
  #endif  //  !BUILDFLAG(IS_ANDROID)
  

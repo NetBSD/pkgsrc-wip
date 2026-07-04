@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/autofill/core/browser/payments/amount_extraction_manager.cc
-@@ -284,7 +284,7 @@ void AmountExtractionManager::OnCheckout
+@@ -298,7 +298,7 @@ void AmountExtractionManager::OnCheckout
                                               /*timeout_reached=*/false);
    }
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
@@ -15,7 +15,7 @@ $NetBSD$
      if (base::FeatureList::IsEnabled(
              ::autofill::features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The result of amount extraction on domain "
-@@ -372,7 +372,7 @@ void AmountExtractionManager::OnTimeoutR
+@@ -386,7 +386,7 @@ void AmountExtractionManager::OnTimeoutR
    }
  
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
@@ -24,7 +24,7 @@ $NetBSD$
      if (base::FeatureList::IsEnabled(
              ::autofill::features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The amount extraction on domain "
-@@ -392,7 +392,7 @@ AmountExtractionManager::CheckEligibilit
+@@ -406,7 +406,7 @@ AmountExtractionManager::CheckEligibilit
  
    // Check eligibility of BNPL feature.
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||

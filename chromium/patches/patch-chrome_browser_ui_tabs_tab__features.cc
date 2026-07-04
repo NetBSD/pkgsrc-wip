@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/tab_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/tabs/tab_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/tabs/tab_features.cc
-@@ -101,7 +101,7 @@
+@@ -103,7 +103,7 @@
  #include "components/multistep_filter/core/features.h"
  #include "components/skills/features.h"
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/contextual_tasks/contextual_tasks_tab_visit_tracker.h"
  #include "chrome/browser/record_replay/chrome_record_replay_client.h"
  #include "chrome/browser/ui/views/location_bar/record_replay_page_action_controller.h"
-@@ -485,7 +485,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -503,7 +503,7 @@ void TabFeatures::Init(TabInterface& tab
    task_manager::WebContentsTags::CreateForTabContents(tab.GetContents());
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
    inactive_window_mouse_event_controller_ =
        std::make_unique<InactiveWindowMouseEventController>();
  
-@@ -562,7 +562,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -590,7 +590,7 @@ void TabFeatures::Init(TabInterface& tab
          std::make_unique<back_to_opener::BackToOpenerController>(tab);
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (base::FeatureList::IsEnabled(enterprise_reporting::kSaasUsageReporting)) {
      saas_usage_navigation_observer_ =
          std::make_unique<enterprise_reporting::SaasUsageNavigationObserver>(
-@@ -571,7 +571,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -599,7 +599,7 @@ void TabFeatures::Init(TabInterface& tab
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \

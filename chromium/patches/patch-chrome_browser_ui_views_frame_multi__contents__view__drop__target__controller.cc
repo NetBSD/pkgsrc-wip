@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/multi_contents_view_drop_target_controller.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/frame/multi_contents_view_drop_target_controller.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/frame/multi_contents_view_drop_target_controller.cc
-@@ -35,7 +35,7 @@ static constexpr base::TimeDelta kShowNu
+@@ -36,7 +36,7 @@ static constexpr base::TimeDelta kShowNu
  static constexpr int kDropTargetHideForOSWidth =
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN)
      32;

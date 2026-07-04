@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/keycodes/dom/keycode_converter.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/events/keycodes/dom/keycode_converter.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.h
-@@ -64,7 +64,7 @@ class KeycodeConverter {
+@@ -65,7 +65,7 @@ class KeycodeConverter {
    // Convert a DomCode into a native keycode.
    static int DomCodeToNativeKeycode(DomCode code);
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
-@@ -71,6 +71,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
+@@ -59,6 +59,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
      }
    }
  
@@ -14,7 +14,7 @@ $NetBSD$
    auto* instance = sandbox::policy::SandboxLinux::GetInstance();
  
    std::vector<BrokerFilePermission> permissions{
-@@ -92,6 +93,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
+@@ -80,6 +81,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
                              sandbox::syscall_broker::COMMAND_OPEN}),
        permissions, options);
    instance->EngageNamespaceSandboxIfPossible();

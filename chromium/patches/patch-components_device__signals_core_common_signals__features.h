@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/signals_features.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/device_signals/core/common/signals_features.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/device_signals/core/common/signals_features.h
 @@ -42,7 +42,7 @@ bool IsCertificateCollectionEnabled();
  bool IsContentBindingVersioningEnabled();

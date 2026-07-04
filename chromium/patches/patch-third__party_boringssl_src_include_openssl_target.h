@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/boringssl/src/include/openssl/target.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/boringssl/src/include/openssl/target.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/boringssl/src/include/openssl/target.h
 @@ -177,6 +177,10 @@
  #define OPENSSL_OPENBSD

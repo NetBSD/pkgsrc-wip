@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/common/webui_url_constants.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/common/webui_url_constants.h
-@@ -457,12 +457,12 @@ bool IsSystemWebUIHost(std::string_view 
+@@ -467,12 +467,12 @@ bool IsSystemWebUIHost(std::string_view 
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -21,7 +21,7 @@ $NetBSD$
  inline constexpr char kChromeUIDefaultBrowserModalURL[] =
      "chrome://default-browser-modal/";
  inline constexpr char kChromeUIDefaultBrowserModalHost[] =
-@@ -478,11 +478,11 @@ inline constexpr char kChromeUILinuxProx
+@@ -495,11 +495,11 @@ inline constexpr char kChromeUILinuxProx
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -35,7 +35,7 @@ $NetBSD$
  inline constexpr char kChromeUIBrowserSwitchHost[] = "browser-switch";
  inline constexpr char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
  inline constexpr char kChromeUIIntroDefaultBrowserSubPage[] = "default-browser";
-@@ -514,7 +514,7 @@ inline constexpr char kChromeUIUpdaterHo
+@@ -535,7 +535,7 @@ inline constexpr char kChromeUIUpdaterHo
  inline constexpr char kChromeUIUpdaterURL[] = "chrome://updater/";
  #endif
  

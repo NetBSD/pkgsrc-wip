@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_service.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.cc
-@@ -413,7 +413,7 @@ bool RegionalCapabilitiesService::IsInSe
+@@ -420,7 +420,7 @@ bool RegionalCapabilitiesService::IsInAn
        .choice_screen_eligibility_config.has_value();
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // static
- bool RegionalCapabilitiesService::IsInSearchEngineChoiceScreenRegion(
+ bool RegionalCapabilitiesService::IsInAnySearchEngineChoiceScreenRegion(
      Client& client) {

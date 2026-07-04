@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/url_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/startup/url_util.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/startup/url_util.cc
 @@ -13,7 +13,7 @@
  #include "url/gurl.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/headless/headless_mode_util.h"
  #endif
  
-@@ -39,7 +39,7 @@ bool ValidateLaunchUrl(const GURL& url) 
+@@ -59,7 +59,7 @@ bool ValidateLaunchUrlWebUnsafe(const GU
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
    bool url_scheme_is_chrome = false;

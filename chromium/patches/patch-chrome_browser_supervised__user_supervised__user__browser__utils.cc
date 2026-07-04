@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_browser_utils.cc
-@@ -40,7 +40,7 @@
+@@ -38,7 +38,7 @@
  #include "chrome/browser/ash/profiles/profile_helper.h"
  #include "components/user_manager/user.h"
  #include "components/user_manager/user_type.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/supervised_user/supervised_user_verification_controller_client.h"
  #include "chrome/browser/supervised_user/supervised_user_verification_page_blocked_sites.h"
  #include "chrome/browser/supervised_user/supervised_user_verification_page_youtube.h"
-@@ -157,7 +157,7 @@ void AssertChildStatusOfTheUser(Profile*
+@@ -155,7 +155,7 @@ void AssertChildStatusOfTheUser(Profile*
  #endif
  }
  

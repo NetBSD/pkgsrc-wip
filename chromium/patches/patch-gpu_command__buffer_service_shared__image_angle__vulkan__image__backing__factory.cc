@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc
 @@ -20,7 +20,7 @@ namespace {
  // TODO(penghuang): verify the scanout is the right usage for video playback.
@@ -15,7 +15,7 @@ $NetBSD$
      SHARED_IMAGE_USAGE_SCANOUT |
  #endif
      SHARED_IMAGE_USAGE_GLES2_READ | SHARED_IMAGE_USAGE_GLES2_WRITE |
-@@ -124,7 +124,7 @@ bool AngleVulkanImageBackingFactory::IsG
+@@ -103,7 +103,7 @@ bool AngleVulkanImageBackingFactory::IsG
      // usage?
      case gfx::EMPTY_BUFFER:
        return HasGLES2ReadOrWriteUsage(usage);

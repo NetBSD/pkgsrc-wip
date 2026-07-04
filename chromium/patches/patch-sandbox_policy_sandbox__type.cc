@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox_type.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -13,7 +13,7 @@
  #include "sandbox/policy/mojom/sandbox.mojom.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/motherboard.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/metrics/motherboard.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/metrics/motherboard.cc
 @@ -1,6 +1,7 @@
  // Copyright 2022 The Chromium Authors

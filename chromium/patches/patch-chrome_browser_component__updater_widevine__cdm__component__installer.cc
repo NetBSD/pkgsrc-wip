@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/component_updater/widevine_cdm_component_installer.cc
 @@ -41,7 +41,7 @@
  #include "third_party/widevine/cdm/buildflags.h"

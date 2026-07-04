@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/named_mojo_ipc_server/connection_info.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
 @@ -15,7 +15,12 @@
  #include "base/win/scoped_handle.h"

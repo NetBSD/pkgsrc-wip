@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/identity_manager/account_capabilities.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/signin/public/identity_manager/account_capabilities.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/signin/public/identity_manager/account_capabilities.cc
-@@ -145,7 +145,7 @@ signin::Tribool AccountCapabilities::can
- }
+@@ -146,7 +146,7 @@ signin::Tribool AccountCapabilities::can
  #endif
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_IOS)
++    BUILDFLAG(IS_IOS) || BUILDFLAG(IS_BSD)
  signin::Tribool AccountCapabilities::can_submit_feedback() const {
    return GetCapabilityByName(kCanSubmitFeedbackInChromeCapabilityName);
  }

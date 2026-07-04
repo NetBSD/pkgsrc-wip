@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_unittest.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/system/sys_info_unittest.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/system/sys_info_unittest.cc
-@@ -305,12 +305,16 @@ TEST_F(SysInfoTest, GetHardwareInfo) {
+@@ -306,12 +306,16 @@ TEST_F(SysInfoTest, GetHardwareInfo) {
    EXPECT_TRUE(IsStringUTF8(hardware_info->model));
    bool empty_result_expected =
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_WIN) || \

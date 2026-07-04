@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/service/glic_instance_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/glic/service/glic_instance_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/glic/service/glic_instance_impl.cc
 @@ -18,7 +18,7 @@
  #include "chrome/browser/actor/actor_keyed_service_factory.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/reporting/saas_usage/saas_usage_reporting_controller_factory.h"
  #endif
  #include "chrome/browser/glic/common/future_browser_features.h"
-@@ -141,7 +141,7 @@ EmbedderKey CreateSidePanelEmbedderKey(t
+@@ -132,7 +132,7 @@ EmbedderKey CreateSidePanelEmbedderKey(t
  
  enterprise_reporting::SaasUsageReportingController*
  GetSaasUsageReportingController(Profile* profile) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/app_browser_controller.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/web_applications/app_browser_controller.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/web_applications/app_browser_controller.cc
-@@ -541,7 +541,7 @@ std::u16string AppBrowserController::Get
+@@ -557,7 +557,7 @@ std::u16string AppBrowserController::Get
    // web bundle. The flash text is not needed on platforms that already display
    // the app name in the title bar (e.g. Mac, Windows, and Linux).
    if (IsIsolatedWebApp()) {

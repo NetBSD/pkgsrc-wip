@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/discardable_memory/service/discardable_shared_memory_manager.cc
-@@ -172,6 +172,8 @@ uint64_t GetDefaultMaxBytes() {
+@@ -177,6 +177,8 @@ uint64_t GetDefaultMaxBytes() {
  #if BUILDFLAG(IS_ANDROID)
    // Limits the number of FDs used to 32, assuming a 4MB allocation size.
    uint64_t default_max_bytes = 128 * kMegabyte;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc
 @@ -404,7 +404,7 @@ void BrowserViewAppLayoutImpl::DoPostLay
  #elif BUILDFLAG(IS_WIN)

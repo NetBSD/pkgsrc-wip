@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/peerconnection/rtc_data_channel.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/blink/renderer/modules/peerconnection/rtc_data_channel.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/blink/renderer/modules/peerconnection/rtc_data_channel.cc
 @@ -567,6 +567,7 @@ void RTCDataChannel::send(Blob* data, Ex
    pending_messages_.push_back(message);

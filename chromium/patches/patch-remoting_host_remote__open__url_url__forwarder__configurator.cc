@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/remote_open_url/url_forwarder_configurator.cc
 @@ -13,7 +13,7 @@ UrlForwarderConfigurator::UrlForwarderCo
  

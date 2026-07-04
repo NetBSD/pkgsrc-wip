@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/ipc_desktop_environment.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.h
-@@ -128,7 +128,7 @@ class IpcDesktopEnvironmentFactory : pub
+@@ -130,7 +130,7 @@ class IpcDesktopEnvironmentFactory : pub
        int terminal_id,
        mojo::ScopedMessagePipeHandle desktop_pipe) override;
    void OnTerminalDisconnected(int terminal_id) override;
@@ -15,7 +15,7 @@ $NetBSD$
    void OnSessionServicesClientConnected(
        int terminal_id,
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
-@@ -170,7 +170,7 @@ class IpcDesktopEnvironmentFactory : pub
+@@ -172,7 +172,7 @@ class IpcDesktopEnvironmentFactory : pub
    // the same email address reconnects, the desktop session will be reused and
    // the desktop process will be requested to send a new desktop pipe.
    // TODO: yuweih - see if it makes sense to enable it on Windows.

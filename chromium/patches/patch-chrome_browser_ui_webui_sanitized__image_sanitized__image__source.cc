@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/sanitized_image/sanitized_image_source.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/sanitized_image/sanitized_image_source.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/sanitized_image/sanitized_image_source.cc
-@@ -320,7 +320,7 @@ void SanitizedImageSource::OnAnimationDe
+@@ -350,7 +350,7 @@ void SanitizedImageSource::OnAnimationDe
    }
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

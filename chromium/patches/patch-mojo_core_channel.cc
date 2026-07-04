@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -74,7 +74,11 @@ const size_t kMaxAttachedHandles = 64;
  const size_t kMaxAttachedHandles = 253;
@@ -18,7 +18,7 @@ $NetBSD$
  Channel::AlignedBuffer MakeAlignedBuffer(size_t size) {
    // Generic allocators (such as malloc) return a pointer that is suitably
    // aligned for storing any type of object with a fundamental alignment
-@@ -267,7 +271,7 @@ bool ShouldRecordSubsampledHistograms() 
+@@ -268,7 +272,7 @@ bool ShouldRecordSubsampledHistograms() 
  }  // namespace
  
  #if BUILDFLAG(IS_ANDROID) || \
@@ -27,7 +27,7 @@ $NetBSD$
  
  namespace {
  
-@@ -1313,7 +1317,7 @@ bool Channel::OnControlMessage(Message::
+@@ -1317,7 +1321,7 @@ bool Channel::OnControlMessage(Message::
  }
  
  // Currently only CrOs, Linux, and Android support upgrades.

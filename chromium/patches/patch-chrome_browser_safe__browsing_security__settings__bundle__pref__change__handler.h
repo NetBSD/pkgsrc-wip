@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/security_settings_bundle_pref_change_handler.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/safe_browsing/security_settings_bundle_pref_change_handler.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/safe_browsing/security_settings_bundle_pref_change_handler.h
 @@ -8,7 +8,7 @@
  #include "base/memory/raw_ptr.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/lock.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/enterprise_companion/lock.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/enterprise_companion/lock.cc
 @@ -18,7 +18,7 @@
  

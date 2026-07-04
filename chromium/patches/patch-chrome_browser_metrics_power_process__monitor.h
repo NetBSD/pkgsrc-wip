@@ -4,9 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_monitor.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/metrics/power/process_monitor.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/metrics/power/process_monitor.h
-@@ -88,7 +88,7 @@ class ProcessMonitor : public content::B
+@@ -47,7 +47,7 @@ class ProcessMetricsDelegate {
+   GetPlatformIndependentCPUUsage() = 0;
+ 
+ #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_AIX)
++    BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
+   virtual int GetIdleWakeupsPerSecond() = 0;
+ #endif
+ 
+@@ -109,7 +109,7 @@ class ProcessMonitor : public content::B
      std::optional<double> cpu_usage;
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

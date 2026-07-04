@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- content/utility/utility_main.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ content/utility/utility_main.cc
 @@ -38,22 +38,31 @@
  #include "services/on_device_model/public/mojom/on_device_model_service.mojom.h"

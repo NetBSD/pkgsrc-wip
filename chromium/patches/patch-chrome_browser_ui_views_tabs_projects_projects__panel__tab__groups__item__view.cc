@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/projects/projects_panel_tab_groups_item_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/tabs/projects/projects_panel_tab_groups_item_view.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/tabs/projects/projects_panel_tab_groups_item_view.cc
-@@ -243,7 +243,7 @@ void ProjectsPanelTabGroupsItemView::OnM
+@@ -249,7 +249,7 @@ void ProjectsPanelTabGroupsItemView::OnM
  
  void ProjectsPanelTabGroupsItemView::OnMouseExited(
      const ui::MouseEvent& event) {

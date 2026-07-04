@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_freebsd.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,18 +3,37 @@
  // found in the LICENSE file.

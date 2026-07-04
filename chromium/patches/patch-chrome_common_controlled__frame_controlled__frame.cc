@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/controlled_frame/controlled_frame.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/common/controlled_frame/controlled_frame.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/common/controlled_frame/controlled_frame.cc
-@@ -20,7 +20,7 @@
+@@ -21,7 +21,7 @@
  #include "third_party/blink/public/common/features.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -91,7 +91,7 @@ bool AvailabilityCheck(const std::string
+@@ -97,7 +97,7 @@ bool AvailabilityCheck(const std::string
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

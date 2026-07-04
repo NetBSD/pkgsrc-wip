@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/files/file_util_posix.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/files/file_util_posix.cc
-@@ -936,6 +936,7 @@ bool CreateNewTempDirectory(FilePath::St
+@@ -938,6 +938,7 @@ bool CreateNewTempDirectory(FilePath::St
  bool CreateDirectoryAndGetError(const FilePath& full_path, File::Error* error) {
    ScopedBlockingCall scoped_blocking_call(
        FROM_HERE, BlockingType::MAY_BLOCK);  // For call to mkdir().
@@ -14,7 +14,7 @@ $NetBSD$
  
    // Avoid checking subdirs if directory already exists.
    if (DirectoryExists(full_path)) {
-@@ -945,8 +946,8 @@ bool CreateDirectoryAndGetError(const Fi
+@@ -947,8 +948,8 @@ bool CreateDirectoryAndGetError(const Fi
    // Collect a list of all missing directories.
    std::vector<FilePath> missing_subpaths({full_path});
    FilePath last_path = full_path;
@@ -25,7 +25,7 @@ $NetBSD$
      if (DirectoryExists(path)) {
        break;
      }
-@@ -964,21 +965,14 @@ bool CreateDirectoryAndGetError(const Fi
+@@ -966,21 +967,14 @@ bool CreateDirectoryAndGetError(const Fi
      }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

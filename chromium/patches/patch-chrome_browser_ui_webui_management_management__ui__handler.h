@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.h
 @@ -33,7 +33,7 @@ namespace enterprise_management {
  class GetUserEligiblePromotionsResponse;
@@ -15,7 +15,7 @@ $NetBSD$
  namespace device_signals {
  class UserPermissionService;
  }  // namespace device_signals
-@@ -90,7 +90,7 @@ class ManagementUIHandler : public conte
+@@ -91,7 +91,7 @@ class ManagementUIHandler : public conte
    base::ListValue GetManagedWebsitesInfo(Profile* profile) const;
    base::ListValue GetApplicationsInfo(Profile* profile) const;
    virtual policy::PolicyService* GetPolicyService();

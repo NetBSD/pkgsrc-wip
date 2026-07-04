@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/shared_image_stub.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- gpu/ipc/service/shared_image_stub.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ gpu/ipc/service/shared_image_stub.cc
 @@ -48,7 +48,7 @@ SharedImageStub::SharedImageStub(GpuChan
        command_buffer_id_(

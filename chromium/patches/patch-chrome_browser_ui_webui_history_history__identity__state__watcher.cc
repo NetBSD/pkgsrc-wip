@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/history/history_identity_state_watcher.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/history/history_identity_state_watcher.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/history/history_identity_state_watcher.cc
 @@ -122,7 +122,7 @@ HistoryIdentityStateWatcher::GetSyncStat
    }

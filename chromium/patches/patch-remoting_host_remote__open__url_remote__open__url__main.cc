@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/remote_open_url_main.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/remote_open_url/remote_open_url_main.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/remote_open_url/remote_open_url_main.cc
-@@ -23,7 +23,7 @@
+@@ -22,7 +22,7 @@
  #include "remoting/host/usage_stats_consent.h"
  #include "ui/base/l10n/l10n_util.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "remoting/base/crash/crash_reporting_crashpad.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -47,7 +47,7 @@ int RemoteOpenUrlMain(int argc, char** a
+@@ -46,7 +46,7 @@ int RemoteOpenUrlMain(int argc, char** a
  
  #if defined(REMOTING_ENABLE_CRASH_REPORTING)
    if (IsUsageStatsAllowed()) {

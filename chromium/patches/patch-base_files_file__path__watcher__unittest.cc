@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher_unittest.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/files/file_path_watcher_unittest.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/files/file_path_watcher_unittest.cc
-@@ -902,7 +902,7 @@ TEST_F(FilePathWatcherTest, WatchDirecto
+@@ -914,7 +914,7 @@ TEST_F(FilePathWatcherTest, WatchDirecto
    }
    delegate.RunUntilEventsMatch(event_expecter);
  
@@ -15,7 +15,7 @@ $NetBSD$
    ASSERT_TRUE(WriteFile(file1, "content v2"));
    // Mac implementation does not detect files modified in a directory.
    // TODO(crbug.com/40263777): Expect that no events are fired on Mac.
-@@ -1848,7 +1848,7 @@ namespace {
+@@ -1866,7 +1866,7 @@ namespace {
  
  enum Permission { Read, Write, Execute };
  
@@ -24,7 +24,7 @@ $NetBSD$
  bool ChangeFilePermissions(const FilePath& path, Permission perm, bool allow) {
    struct stat stat_buf;
  
-@@ -1882,7 +1882,7 @@ bool ChangeFilePermissions(const FilePat
+@@ -1900,7 +1900,7 @@ bool ChangeFilePermissions(const FilePat
  
  }  // namespace
  

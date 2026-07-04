@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
 @@ -59,7 +59,7 @@ inline constexpr char kCredentialProvide
  #endif

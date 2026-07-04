@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/BUILD.gn.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/crash/core/app/BUILD.gn.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/crash/core/app/BUILD.gn
 @@ -72,6 +72,10 @@ static_library("app") {
      ]
@@ -46,4 +46,4 @@ $NetBSD$
 -
      if (is_mac && (is_component_build || is_asan || is_ubsan_any)) {
        ldflags = [
-         # The handler is in
+         # The handler is in Chromium.app/Contents/Frameworks/Chromium

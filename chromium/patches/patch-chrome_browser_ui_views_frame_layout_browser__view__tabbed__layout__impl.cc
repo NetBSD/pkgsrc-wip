@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/layout/browser_view_tabbed_layout_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/frame/layout/browser_view_tabbed_layout_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/frame/layout/browser_view_tabbed_layout_impl.cc
-@@ -170,7 +170,7 @@ int BrowserViewTabbedLayoutImpl::GetHori
+@@ -250,7 +250,7 @@ int BrowserViewTabbedLayoutImpl::GetHori
  }
  
  bool BrowserViewTabbedLayoutImpl::AvoidCrackingForFractionalDisplay() const {

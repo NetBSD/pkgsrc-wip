@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/avatar_toolbar_button.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/profiles/avatar_toolbar_button.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/profiles/avatar_toolbar_button.h
-@@ -67,7 +67,7 @@ class AvatarToolbarButton : public Toolb
-   // void UpdateIcon() also overrides ToolbarButton
-   void UpdateText() override;
+@@ -70,7 +70,7 @@ class AvatarToolbarButton : public Toolb
+   void SetAnnounceCallbackForTesting(
+       base::OnceCallback<void(std::u16string)> callback) override;
    void MaybeShowProfileSwitchIPH() override;
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

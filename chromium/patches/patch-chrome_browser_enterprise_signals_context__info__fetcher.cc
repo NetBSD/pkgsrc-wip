@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/context_info_fetcher.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/enterprise/signals/context_info_fetcher.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/enterprise/signals/context_info_fetcher.cc
 @@ -184,6 +184,8 @@ std::vector<std::string> ContextInfoFetc
  SettingValue ContextInfoFetcher::GetOSFirewall() {
