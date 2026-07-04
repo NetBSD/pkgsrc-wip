@@ -350,7 +350,6 @@ SUBDIR+=	bleachbit
 SUBDIR+=	blink
 SUBDIR+=	blink-git
 SUBDIR+=	blis
-SUBDIR+=	blogc
 SUBDIR+=	blueprint-compiler
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez
