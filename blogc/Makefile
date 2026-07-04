@@ -9,7 +9,7 @@ GITHUB_RELEASE=	v${VERSION}
 
 MAINTAINER=	kj4ntv@gmail.com
 HOMEPAGE=	https://blogc.rgm.io/
-COMMENT=	Blog compiler
+COMMENT=	Single-page blog compiler
 LICENSE=	modified-bsd
 
 USE_CC_FEATURES+=	c99
