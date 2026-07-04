@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (pytorch-v2.12.1.tar.gz) = e838105c3feba32caead605d7257c9324b8a8b500e06062ad7f36e115c068169
 SHA512 (pytorch-v2.12.1.tar.gz) = f8112bbd5c2884530b0121dd4cf574e77d1d60b53cca4b5949a951babc348970b0ca7e2bdaf6b17fc871966600f0a08c744bcaf9c098cec24b26fafb0a90f47a
 Size (pytorch-v2.12.1.tar.gz) = 430918199 bytes
-SHA1 (patch-c10_test_core_Scalar__test.cpp) = 7b3908b286e90c5b94f82a4ebf6cdca629f6ad0d
+SHA1 (patch-c10_core_Scalar.h) = bcc847bab505e1079cdc92c1af5aa69d961630bc
 SHA1 (patch-cmake_Dependencies.cmake) = d524cb2a811788d801f086a3a84625f4c3dc3bf8
 SHA1 (patch-cmake_Modules_FindBLAS.cmake) = fd29b5e717eda52f249ee3cff04e6fdd6c398cc2
 SHA1 (patch-cmake_public_mkldnn.cmake) = 3cd077c540c0923a689d403ba92dc2c206b7f937
