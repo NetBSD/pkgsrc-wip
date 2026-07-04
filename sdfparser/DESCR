@@ -1,0 +1,2 @@
+This is Sdf (Standard Delay Format) parser library that supports full IEEE
+1497-2001 and generates a corresponding syntax tree.

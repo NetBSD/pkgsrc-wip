@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/Sdf
+include/Sdf/SdfErrors.h
+include/Sdf/SdfFileCache.h
+include/Sdf/SdfLexer.h
+include/Sdf/SdfParser.h
+include/Sdf/SdfSynTree.h
+include/Sdf/SdfToken.h
+include/Sdf/SdfTokenType.h
+lib/libSdf.a
