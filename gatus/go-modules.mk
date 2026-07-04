@@ -1,4 +1,3 @@
-===> Extracting for gatus-5.36.0
 # $NetBSD$
 
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.20.0.mod
