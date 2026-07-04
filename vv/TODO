@@ -1,4 +1,0 @@
-127/135] Linking CXX executable exrconv
-FAILED: [code=1] exrconv
-: && /tmp/wip/vv/work/.cwrapper/bin/c++ -O2 -g -fstack-clash-protection -I/usr/pkg/include -I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/pkg/include/libxml2 -g -Wl,-zrelro -Wl,-znow -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -Wl,--dependency-file=CMakeFiles/exrconv.dir/link.d CMakeFiles/exrconv.dir/src/tools/exrconv/exrconv.cpp.o -o exrconv  libmcoreimage.so  _deps/tracy-build/libTracyClient.a  libmcoreutil.so  -lpthread && :
-ld: libmcoreutil.so: undefined reference to `backtrace'

@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
 GITHUB_PROJECT=	moderncore
 #GITHUB_TAG=	${DISTNAME:S/moderncore-//}
-GITHUB_TAG=	5058c9d55e13c1c5047b1129f7c1f069d10a84a1
+GITHUB_TAG=	c84fe419ca4be928505b0e1af67a87e61b0aa525
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wolfpld/moderncore/
@@ -19,7 +19,7 @@ USE_CXX_FEATURES+=	c++20
 # needs <format> which was added in 13, despite being in C++ 20
 GCC_REQD+=		13
 USE_TOOLS+=		git pkg-config
-INSTALLATION_DIRS+=	bin share/doc/vv
+INSTALLATION_DIRS+=	share/doc/vv
 
 # https://github.com/wolfpld/vv/issues/14#issuecomment-2660992164
 JPEG_ACCEPTED=		libjpeg-turbo
@@ -31,20 +31,23 @@ CMAKE_CONFIGURE_ARGS+=	-DCPM_tracy_SOURCE=${WRKSRC}/tracy
 GITHUB_SUBMODULES+=	nothings stb f1c79c02822848a9bed4315b12c8c8f3761e1296 stb
 CMAKE_CONFIGURE_ARGS+=	-DCPM_stb_SOURCE=${WRKSRC}/stb
 
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH=OFF
 # don't build wayland-using iv viewer
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_IV=OFF
 
 # Turn off -march=native that is enabled by default.
 CMAKE_CONFIGURE_ARGS+=	-DMARCH_NATIVE:BOOL=OFF
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/vv ${DESTDIR}${PREFIX}/bin
+pre-configure:
+	${ECHO} ${GITHUB_TAG:C/(.......).*/\1/} > ${WRKSRC}/git-commit-id
+
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/vv/
 
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../converters/aklomp-base64/buildlink3.mk"
-.include "../../devel/catch2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
