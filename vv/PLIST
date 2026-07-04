@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/exrconv
-bin/vv
-lib/libmcoreimage.so
-lib/libmcoreutil.so
-share/doc/vv/README.md
