@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.19 2026/06/23 09:37:02 wiz Exp $
 
 # not a release, but we want the change to allow disabling iv
-DISTNAME=	moderncore-20260504
+DISTNAME=	moderncore-20260704
 PKGNAME=	${DISTNAME:S/moderncore-/vv-3.2./}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
 GITHUB_PROJECT=	moderncore
 #GITHUB_TAG=	${DISTNAME:S/moderncore-//}
-GITHUB_TAG=	48305c3954cce830720b8b3f6826a36b12ae7e9b
+GITHUB_TAG=	5058c9d55e13c1c5047b1129f7c1f069d10a84a1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wolfpld/moderncore/
