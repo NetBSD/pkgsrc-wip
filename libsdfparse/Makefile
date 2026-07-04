@@ -1,7 +1,6 @@
 # $NetBSD$
 
 DISTNAME=	libsdfparse-0.0.0.44
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	cad devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kmurray/}
 GITHUB_PROJECT=	libsdfparse
