@@ -4,8 +4,8 @@ Extract device name correctly.
 
 Patch not yet upstreamed.
 
---- ../vendor/sysinfo-0.39.3/src/unix/bsd/netbsd/disk.rs.orig	2026-07-04 11:34:38.984915123 +0000
-+++ ../vendor/sysinfo-0.39.3/src/unix/bsd/netbsd/disk.rs
+--- ../vendor/sysinfo-0.39.5/src/unix/bsd/netbsd/disk.rs.orig	2026-07-04 11:34:38.984915123 +0000
++++ ../vendor/sysinfo-0.39.5/src/unix/bsd/netbsd/disk.rs
 @@ -223,7 +223,15 @@ impl GetValues for DiskInner {
  }
  

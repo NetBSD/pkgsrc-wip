@@ -4,8 +4,8 @@ Extract proper read / write statistics.
 
 Patch not yet upstreamed.
 
---- ../vendor/sysinfo-0.39.3/src/unix/bsd/netbsd/process.rs.orig	2026-07-04 11:34:38.991541351 +0000
-+++ ../vendor/sysinfo-0.39.3/src/unix/bsd/netbsd/process.rs
+--- ../vendor/sysinfo-0.39.5/src/unix/bsd/netbsd/process.rs.orig	2026-07-04 11:34:38.991541351 +0000
++++ ../vendor/sysinfo-0.39.5/src/unix/bsd/netbsd/process.rs
 @@ -44,10 +44,10 @@ impl ProcessInner {
  
      pub(crate) fn disk_usage(&self) -> DiskUsage {

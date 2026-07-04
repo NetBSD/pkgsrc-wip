@@ -2,8 +2,8 @@ $NetBSD$
 
 Upstream patch: https://github.com/rust-lang/libc/pull/5243
 
---- ../vendor/libc-0.2.180/src/unix/mod.rs.orig	2026-07-04 11:20:16.882281039 +0000
-+++ ../vendor/libc-0.2.180/src/unix/mod.rs
+--- ../vendor/libc-0.2.186/src/unix/mod.rs.orig	2026-07-04 11:20:16.882281039 +0000
++++ ../vendor/libc-0.2.186/src/unix/mod.rs
 @@ -1567,8 +1567,10 @@ extern "C" {
      pub fn sem_trywait(sem: *mut sem_t) -> c_int;
      pub fn sem_post(sem: *mut sem_t) -> c_int;

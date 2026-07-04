@@ -2,9 +2,31 @@ $NetBSD$
 
 Add NetBSD support.
 
---- src/collection.rs.orig	2026-06-22 06:25:54.000000000 +0000
+--- src/collection.rs.orig	2026-07-04 06:55:31.000000000 +0000
 +++ src/collection.rs
-@@ -357,7 +357,7 @@ impl DataCollector {
+@@ -136,13 +136,20 @@ impl Default for SysinfoSource {
+     fn default() -> Self {
+         use sysinfo::*;
+ 
++        #[cfg(not(any(target_os = "linux", target_os = "macos")))]
++        let disks = {
++            let mut d = Disks::new();
++            d.refresh(true);
++            d
++        };
++
+         Self {
+             system: System::new(),
+             network: Networks::new(),
+             #[cfg(not(target_os = "linux"))]
+             temps: Components::new(),
+             #[cfg(not(any(target_os = "linux", target_os = "macos")))]
+-            disks: Disks::new(),
++            disks,
+             #[cfg(target_os = "windows")]
+             users: Users::new(),
+         }
+@@ -357,7 +364,7 @@ impl DataCollector {
                  }
              }
  
