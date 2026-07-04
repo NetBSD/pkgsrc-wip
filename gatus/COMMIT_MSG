@@ -1,13 +1,9 @@
-gatus: Update to 5.36.0
+gatus: Add version 5.36.0
 
-What's Changed
-perf: Add PostgreSQL indexes for ~15x performance improvement by @ozanonurtek in #1541
-fix(alerting): Remove square brackets from email subject by @jaydeethree in #1586
-fix(security): Do not allow invalid security configs by @PythonGermany in #1531
-fix: return error from rdapQuery when no expiration event found by @majiayu000 in #1603
-fix(ci): regenerate-static-assets workflow reporting false errors on success by @Copilot in #1614
-feat(ui): Add customizable OIDC login screen branding by @hluaces in #1583
-fix(test): Remove t.Parallel() from tests racing on injectedHTTPClient by @Copilot in #1630
-fix(storage): close rows before nested queries to prevent PostgreSQL driver error by @osalloum in #1503
-docs: Document remote.client configuration by @surdaft in #1637
-fix: update lib/pq to v1.11.2 to fix Supabase PostgreSQL connection regression by @wahajahmed010 in #1644
+Gatus is a developer-oriented health dashboard that gives you the
+ability to monitor your services using HTTP, ICMP, TCP, and even DNS
+queries as well as evaluate the result of said queries by using a list
+of conditions on values like the status code, the response time, the
+certificate expiration, the body and many others. The icing on top is
+that each of these health checks can be paired with alerting via
+Slack, Teams, PagerDuty, Discord, Twilio and many more.

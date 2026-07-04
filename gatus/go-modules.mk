@@ -255,6 +255,5 @@ GO_MODULE_FILES+=	modernc.org/memory/@v/v1.11.0.mod
 GO_MODULE_FILES+=	modernc.org/memory/@v/v1.11.0.zip
 GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.50.1.mod
 GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.50.1.zip
-GO_MODULE_FILES+=       modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.mod
-GO_MODULE_FILES+=       modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.zip
-
+GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.mod
+GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.zip
