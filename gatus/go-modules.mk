@@ -1,3 +1,4 @@
+===> Extracting for gatus-5.36.0
 # $NetBSD$
 
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.20.0.mod
@@ -247,11 +248,14 @@ GO_MODULE_FILES+=	gopkg.in/mail.v2/@v/v2.3.1.mod
 GO_MODULE_FILES+=	gopkg.in/mail.v2/@v/v2.3.1.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.zip
-GO_MODULE_FILES+=	modernc.org/libc/@v/v1.72.3.mod
-GO_MODULE_FILES+=	modernc.org/libc/@v/v1.72.3.zip
+GO_MODULE_FILES+=	modernc.org/libc/@v/v1.73.3.mod
+GO_MODULE_FILES+=	modernc.org/libc/@v/v1.73.3.zip
 GO_MODULE_FILES+=	modernc.org/mathutil/@v/v1.7.1.mod
 GO_MODULE_FILES+=	modernc.org/mathutil/@v/v1.7.1.zip
 GO_MODULE_FILES+=	modernc.org/memory/@v/v1.11.0.mod
 GO_MODULE_FILES+=	modernc.org/memory/@v/v1.11.0.zip
 GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.50.1.mod
 GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.50.1.zip
+GO_MODULE_FILES+=       modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.mod
+GO_MODULE_FILES+=       modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.zip
+
