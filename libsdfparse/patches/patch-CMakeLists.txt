@@ -1,0 +1,12 @@
+$NetBSD$
+
+Old package, works with cmake>=3.5, not replacing 2.8.12 causes cmake error
+
+--- CMakeLists.txt.orig	2026-07-04 09:29:26.251243294 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project("sdfparse")
+ 

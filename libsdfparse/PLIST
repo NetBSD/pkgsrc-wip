@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/sdfparse_demo
+include/sdf_data.hpp
+include/sdf_data_fwd.hpp
+include/sdf_loader.hpp
+include/sdfparse.hpp
+lib/libsdfparse.a

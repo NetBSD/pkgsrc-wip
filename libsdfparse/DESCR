@@ -1,0 +1,4 @@
+This is a simple C++ parser for Standard Delay Format (SDF) files.
+
+The parser supports a small subset of the SDF format which suffices to load
+basic delay information.

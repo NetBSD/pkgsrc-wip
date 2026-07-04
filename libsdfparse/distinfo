@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (libsdfparse/libsdfparse-0.0.0.44-97218ddf4c4a30479838844440c28c99d6265862.tar.gz) = 74dd5ff4dc5120be85c07cec85c0024e098e0326d748dd7408b49783581c58fb
+SHA512 (libsdfparse/libsdfparse-0.0.0.44-97218ddf4c4a30479838844440c28c99d6265862.tar.gz) = d39df7917f4573b0d6f75b5033af7ed26f1982c18d81c7eadaae2a23053e647bdb7a67a2ba1b04a6904055a446c6af53643d75df41fc2afeb4a6af5cf42c2f51
+Size (libsdfparse/libsdfparse-0.0.0.44-97218ddf4c4a30479838844440c28c99d6265862.tar.gz) = 13738 bytes
+SHA1 (patch-CMakeLists.txt) = e66bfa694eda9be5fede01137f5e393a8a105cf2
