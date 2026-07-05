@@ -1,0 +1,27 @@
+$NetBSD$
+
+Fix man pages path
+
+--- Makefile.orig	2026-07-05 16:30:58.158119256 +0000
++++ Makefile
+@@ -1047,15 +1047,15 @@ tinysshnoneauthd: tinysshd
+ 
+ install: $(BINARIES) $(LINKS)
+ 	mkdir -p $(DESTDIR)$(PREFIX)/sbin
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man8
++	mkdir -p $(DESTDIR)$(PREFIX)/man/man8
+ 	$(INSTALL) -m 0755 tinysshd $(DESTDIR)$(PREFIX)/sbin/tinysshd
+ 	$(INSTALL) -m 0755 tinysshd-makekey $(DESTDIR)$(PREFIX)/sbin/tinysshd-makekey
+ 	$(INSTALL) -m 0755 tinysshd-printkey $(DESTDIR)$(PREFIX)/sbin/tinysshd-printkey
+ 	$(INSTALL) -m 0755 tinysshnoneauthd $(DESTDIR)$(PREFIX)/sbin/tinysshnoneauthd
+-	$(INSTALL) -m 0644 man/tinysshd.8 $(DESTDIR)$(PREFIX)/share/man/man8/tinysshd.8
+-	$(INSTALL) -m 0644 man/tinysshd-makekey.8 $(DESTDIR)$(PREFIX)/share/man/man8/tinysshd-makekey.8
+-	$(INSTALL) -m 0644 man/tinysshd-printkey.8 $(DESTDIR)$(PREFIX)/share/man/man8/tinysshd-printkey.8
+-	$(INSTALL) -m 0644 man/tinysshnoneauthd.8 $(DESTDIR)$(PREFIX)/share/man/man8/tinysshnoneauthd.8
++	$(INSTALL) -m 0644 man/tinysshd.8 $(DESTDIR)$(PREFIX)/man/man8/tinysshd.8
++	$(INSTALL) -m 0644 man/tinysshd-makekey.8 $(DESTDIR)$(PREFIX)/man/man8/tinysshd-makekey.8
++	$(INSTALL) -m 0644 man/tinysshd-printkey.8 $(DESTDIR)$(PREFIX)/man/man8/tinysshd-printkey.8
++	$(INSTALL) -m 0644 man/tinysshnoneauthd.8 $(DESTDIR)$(PREFIX)/man/man8/tinysshnoneauthd.8
+ 
+ clean:
+ 	rm -f *.log libs $(OBJLIB) $(OBJALL) $(BINARIES) $(TESTCRYPTOBINARIES) $(LINKS) $(AUTOHEADERS) $(TESTOUT)
