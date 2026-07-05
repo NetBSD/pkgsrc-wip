@@ -1219,7 +1219,6 @@ SUBDIR+=	gambatte-dev
 SUBDIR+=	gappa
 SUBDIR+=	garage
 SUBDIR+=	gat
-SUBDIR+=	gatus
 SUBDIR+=	gauche
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
