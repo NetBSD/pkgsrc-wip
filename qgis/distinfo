@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.87 2026/02/02 10:54:45 gdt Exp $
 
-BLAKE2s (qgis-snapshot/qgis-4.0.3.tar.gz) = d104f5e65e0a3539c855a2df54ba3201c644f9a88f733407cedb494f6257e4f4
-SHA512 (qgis-snapshot/qgis-4.0.3.tar.gz) = 661387b8efa42344d6827753eec9e7af2505662789b90954f47dc9b5b70f6d13c518c677519343ea15996a03f89280af0564628c5c11b568973716c24f077186
-Size (qgis-snapshot/qgis-4.0.3.tar.gz) = 221526983 bytes
+BLAKE2s (qgis-snapshot/qgis-4.2.0.tar.gz) = e8dffef5517407e660752339cd4e88b60f6bb5a8f7f6854ed01724a51683afb8
+SHA512 (qgis-snapshot/qgis-4.2.0.tar.gz) = 91b8949c5d19ec33d9dd33a0b119f3e97caf7de8642197774d851ffb0a70d23695d80fbd2f047d288bc50faabfb5886a4b1d93839f3d1d494a9056de4591e61b
+Size (qgis-snapshot/qgis-4.2.0.tar.gz) = 242133574 bytes
 SHA1 (patch-cmake_FindQwt.cmake) = 245463bc44fb4f2cb4aa61a8b86931e95e4ac820
 SHA1 (patch-external_nmea_tok.c) = 94b9ce398787170250fc5fbd8835d7d7fa1cd013
 SHA1 (patch-src_crssync_CMakeLists.txt) = 7269ba6dce3ca41f5d63d36ffc02ffc6d0cea5d8
