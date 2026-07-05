@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.75 2026/05/14 16:41:59 ryoon Exp $
 
-DISTNAME=	modsecurity-v2.9.13
-PKGNAME=	${APACHE_PKG_PREFIX}-modsecurity-2.9.13
+DISTNAME=	modsecurity-v2.9.14
+PKGNAME=	${APACHE_PKG_PREFIX}-modsecurity-2.9.14
 CATEGORIES=	www security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=owasp-modsecurity/ModSecurity/releases/download/v${PKGVERSION_NOREV}/}
 
@@ -40,13 +40,13 @@ CONF_FILES=		${PREFIX}/${EGDIR}/modsecurity.conf-recommended \
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/mod_security2.so
-	${INSTALL_DATA} ${WRKSRC}/modsecurity.conf-recommended \
-			${DESTDIR}${PREFIX}/${EGDIR}
-	cd ${WRKSRC}/doc && \
-		pax -rw . ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/README.txt  ${DESTDIR}${PREFIX}/${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/modsecurity.conf-recommended ${DESTDIR}${PREFIX}/${EGDIR}/
+	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/${DOCDIR}/README.pkgsrc
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/lua51/buildlink3.mk"
+.include "../../devel/yajl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

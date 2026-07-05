@@ -1,10 +1,5 @@
 @comment $NetBSD$
 lib/httpd/mod_security2.so
-share/doc/ap-modsecurity/Makefile.am
-share/doc/ap-modsecurity/Makefile.in
+share/doc/ap-modsecurity/README.pkgsrc
 share/doc/ap-modsecurity/README.txt
-share/doc/ap-modsecurity/doxygen-apache.in
-share/doc/ap-modsecurity/doxygen-iis.in
-share/doc/ap-modsecurity/doxygen-logo.png
-share/doc/ap-modsecurity/doxygen-standalone.in
 share/examples/ap-modsecurity/modsecurity.conf-recommended
