@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/25 13:12:48 ahp-nils Exp $
+@comment $NetBSD$
+etc/zmap/blocklist.conf
+etc/zmap/zmap.conf
+man/man1/zblocklist.1
+man/man1/ziterate.1
+man/man1/zmap.1
+man/man1/ztee.1
+sbin/zblocklist
+sbin/ziterate
 sbin/zmap
-share/man/man1/zmap.1
+sbin/ztee

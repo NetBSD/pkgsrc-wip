@@ -1,1 +1,8 @@
 Started packaging on NetBSD, but too Linux-specific.
+
+Jul 05 19:24:41.208 [INFO] zmap: By default, ZMap will output the unique IP addresses of hosts that respond successfully (e.g., SYN-ACK packet). This is equivalent to running ZMap with the following flags: --output-module=csv --output-fields=saddr --output-filter='success=1 && repeat=0' --no-header-row. If you want all responses, explicitly set an output module or set --output-filter="".
+Jul 05 19:24:41.208 [INFO] dedup: Response deduplication method is full
+assertion "zconf.iface" failed: file "/usr/pkgsrc/wip/zmap/work/zmap-4.4.0/src/zmap.c", line 142, function "network_config_init"
+Abort (core dumped)
+
+Configuration files must not be registered in the PLIST.

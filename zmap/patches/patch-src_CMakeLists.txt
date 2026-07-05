@@ -1,15 +1,32 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.2 2014/04/25 13:37:48 ahp-nils Exp $
+$NetBSD$
 
-byacc in pkgsrc is just yacc.
+Use pkgsrc byacc
+Fix man pages dir
 
---- src/CMakeLists.txt.orig	2014-03-10 17:37:37.000000000 +0000
+--- src/CMakeLists.txt.orig	2026-05-29 06:33:05.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -96,7 +96,7 @@ add_custom_command(OUTPUT lexer.c
- 	)
+@@ -198,17 +198,10 @@ add_custom_command(OUTPUT lexer.c
+     DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/lexer.l"
+ )
  
+-if(NetBSD)
+-add_custom_command(OUTPUT parser.c
+-    COMMAND yacc -d -o "${CMAKE_CURRENT_BINARY_DIR}/parser.c" "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
+-    DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
+-)
+-else()
  add_custom_command(OUTPUT parser.c
--	COMMAND byacc -d -o "${CMAKE_CURRENT_BINARY_DIR}/parser.c" "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
-+	COMMAND yacc -d -o "${CMAKE_CURRENT_BINARY_DIR}/parser.c" "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
- 	DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
- 	)
+     COMMAND byacc -d -o "${CMAKE_CURRENT_BINARY_DIR}/parser.c" "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
+     DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/parser.y"
+ )
+-endif()
  
+ add_custom_target(manpages ronn "${CMAKE_CURRENT_SOURCE_DIR}/zmap.1.ronn" --organization="ZMap" --manual="zmap"
+     COMMAND ronn "${CMAKE_CURRENT_SOURCE_DIR}/zblocklist.1.ronn" --organization="ZMap" --manual="zblocklist"
+@@ -284,5 +277,5 @@ install(
+     zblocklist.1
+     ziterate.1
+     ztee.1
+-    DESTINATION share/man/man1
++    DESTINATION man/man1
+ )

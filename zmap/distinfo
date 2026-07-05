@@ -1,6 +1,8 @@
 $NetBSD: distinfo,v 1.6 2015/01/20 12:02:10 ahp-nils Exp $
 
-RMD160 (zmap-1.2.1.tar.gz) = 1b15b7ce0702ef25129d6566dd44521dfc1e8fb3
-SHA512 (zmap-1.2.1.tar.gz) = 1b3d7fa41bb75c859463f3ec8bcde31778f5d91a6f561aa9638ba93be97dacdba89493574581ce52aebcf093a86b042dcce41cffe6cb0849bb76a6005b714be2
-Size (zmap-1.2.1.tar.gz) = 99840 bytes
-SHA1 (patch-src_CMakeLists.txt) = 482ba413114f4928a721b2a372015ff02c5daa40
+BLAKE2s (zmap-4.4.0.tar.gz) = 31ddce18f6a25870e3c1fe5b500c5e06318f6ea365ea6485add5683b556282e3
+SHA512 (zmap-4.4.0.tar.gz) = daff8819cd64ee591d8301c8945083a072f4f781ac4f692c44c870860b60cacd2b47360ad536ca80afb5ac5053a72f19f84084aaa8e3fbee9d6d1110a45236b3
+Size (zmap-4.4.0.tar.gz) = 219020 bytes
+SHA1 (patch-lib_logger.h) = c336ce00b3409d50329ab7247cfbf620a2655736
+SHA1 (patch-src_CMakeLists.txt) = b0de1ba301d5bea7e88d22b43b7899302ac22e45
+SHA1 (patch-src_get__gateway-bsd.h) = 4154fbb188d30b99b02f900605c219047a709cab
