@@ -10,7 +10,7 @@ $NetBSD$
  #error "Unsupported Windows platform."
  #endif
  
-+#elif defined(__OpenBSD__) || defined(__FreeBSD__)
++#elif defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__)
 +#define DAWN_PLATFORM_IS_LINUX 1
 +#define DAWN_PLATFORM_IS_BSD 1
 +#define DAWN_PLATFORM_IS_POSIX 1
