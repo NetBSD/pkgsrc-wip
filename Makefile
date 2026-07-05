@@ -211,6 +211,7 @@ SUBDIR+=	apk-tools
 SUBDIR+=	apple-codesign
 SUBDIR+=	apstget
 SUBDIR+=	apvlv
+SUBDIR+=	ap-modsecurity2
 SUBDIR+=	aqemu
 SUBDIR+=	aquaria
 SUBDIR+=	aquatone
