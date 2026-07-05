@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2018/01/29 09:48:45 he Exp $
+
+In order to use this module in your Apache installation, you will need
+to add the following to your httpd.conf file:
+
+  LoadModule security2_module lib/httpd/mod_security2.so
+
+In addition to this you will need to specify mod_security configuration
+directives in your httpd.conf.  This can be achieved by adding the
+following to your httpd.conf:
+
+  <IfModule mod_security2.c>
+      Include ${PKG_SYSCONFDIR}/httpd/modsecurity.conf
+  </IfModule>
+
+Example configuration files for modsecurity are available:
+
+  ${PREFIX}/share/examples/ap-modsecurity/
+
+In order to use the XML support in your Apache installation, you will need
+to add the following to your httpd.conf file:
+
+  LoadFile ${PREFIX}/lib/libxml2.so
+
+===========================================================================

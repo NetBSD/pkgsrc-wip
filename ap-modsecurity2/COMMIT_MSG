@@ -1,0 +1,8 @@
+ap-modsecurity: Update to version2.9.14
+
+Full list of changes:
+
+chore: fix cppcheck issues with v2.21.0
+fix: ctl:ruleRemoveTargetByTag not removing XML attribute targets
+Remove deprecated REQBODY_PROCESSOR_ERROR and REQBODY_PROCESSOR_ERROR_MSG
+Re-apply lost fix 4f33f5b: collection_unpack value_len underflow regression
