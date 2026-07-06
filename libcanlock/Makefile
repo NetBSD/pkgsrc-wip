@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libcanlock-3.3.2rc1
+DISTNAME=	libcanlock-3.3.2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
