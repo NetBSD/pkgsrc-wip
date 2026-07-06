@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	neatvnc
 .if !defined(NEATVNC_BUILDLINK3_MK)
 NEATVNC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.neatvnc+=	neatvnc>=0.9.5
+BUILDLINK_API_DEPENDS.neatvnc+=	neatvnc>=1.0.0
 BUILDLINK_PKGSRCDIR.neatvnc?=	../../wip/neatvnc
 
 .include "../../devel/aml/buildlink3.mk"
