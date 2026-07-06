@@ -1,5 +1,0 @@
-@comment $NetBSD$
-lib/httpd/mod_security2.so
-share/doc/ap-modsecurity/README.pkgsrc
-share/doc/ap-modsecurity/README.txt
-share/examples/ap-modsecurity/modsecurity.conf-recommended

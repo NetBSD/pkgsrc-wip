@@ -183,7 +183,6 @@ SUBDIR+=	aols-freetds
 SUBDIR+=	aols-openssl
 SUBDIR+=	aols-postgres
 SUBDIR+=	aolserver4
-SUBDIR+=	ap-modsecurity2
 SUBDIR+=	ap2-auth-imap
 SUBDIR+=	ap2-auth-pam
 SUBDIR+=	ap2-evasive
