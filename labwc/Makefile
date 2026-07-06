@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2026/04/18 09:31:41 kikadf Exp $
 
-DISTNAME=	labwc-0.20.0
+DISTNAME=	labwc-0.20.1
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
 
@@ -47,5 +47,6 @@ post-install:
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/seatd/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wayland/wlroots/buildlink3.mk"
+BUILDLINK_API_DEPENDS.wlroots+=	wlroots>=0.20
+.include "../../wip/wlroots/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
