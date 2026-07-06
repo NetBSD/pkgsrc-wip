@@ -28,8 +28,16 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 TEST_TARGET=	test
 
+# https://github.com/fkenmar/opencv/commit/142801f769ed4946a161f62738bac5a5fe56a60f
+post-extract:
+	${RM} -f ${WRKSRC}/modules/dnn/misc/caffe/opencv-caffe.pb.cc
+	${RM} -f ${WRKSRC}/modules/dnn/misc/caffe/opencv-caffe.pb.h
+	${RM} -f ${WRKSRC}/modules/dnn/src/caffe/caffe_io.cpp
+	cd ${WRKSRC} && ${MV} modules/dnn/src/caffe/glog_emulator.hpp modules/dnn/src/glog_emulator.hpp
+	cd ${WRKSRC} && ${MV} modules/dnn/src/caffe/caffe_io.hpp modules/dnn/src/protobuf_io.hpp
+
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/licenses/opencv4 ${DESTDIR}${PREFIX}/share/opencv4/licenses
+	${MV} ${DESTDIR}${PREFIX}/share/licenses/opencv5 ${DESTDIR}${PREFIX}/share/opencv5/licenses
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -7,7 +7,7 @@ OPENCV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencv+=	opencv>=3.0.0
 BUILDLINK_ABI_DEPENDS.opencv+=	opencv>=4.13.0nb6
-BUILDLINK_PKGSRCDIR.opencv?=	../../graphics/opencv
+BUILDLINK_PKGSRCDIR.opencv?=	../../wip/opencv
 
 BUILDLINK_INCDIRS.opencv+=	include/opencv4
 
