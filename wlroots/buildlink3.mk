@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wlroots
 WLROOTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wlroots+=	wlroots>=0.19.2
-BUILDLINK_PKGSRCDIR.wlroots?=	../../wayland/wlroots
+BUILDLINK_PKGSRCDIR.wlroots?=	../../wip/wlroots
 
 .include "../../devel/libopeninput/buildlink3.mk"
 .include "../../devel/libudev-bsd/buildlink3.mk"
