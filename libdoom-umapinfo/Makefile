@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	1.0.0
+VERSION=	1.1.0
 DISTNAME=	libdoom-umapinfo-${VERSION}
 CATEGORIES=	games
 MASTER_SITES=	https://micha.freeshell.org/libdoom-umapinfo/src/
@@ -15,7 +15,7 @@ PLIST_SUBST+=	VERS="${VERSION}"
 PKGCONFIG_OVERRIDE+=		output/.muon/libdoom-umapinfo-1.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
-MUON_REQD+=	0.3.0
+MUON_REQD+=	0.6.0
 .include "../../devel/muon/build.mk"
 
 .include "../../mk/bsd.pkg.mk"

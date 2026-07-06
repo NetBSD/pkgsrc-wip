@@ -6,3 +6,4 @@ lib/libdoom-umapinfo.so
 lib/libdoom-umapinfo.so.1
 lib/libdoom-umapinfo.so.${VERS}
 lib/pkgconfig/libdoom-umapinfo-1.pc
+man/man1/doom-umapinfo-cli.1

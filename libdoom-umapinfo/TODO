@@ -1,0 +1,2 @@
+[ ] Testsuite: 'build_rpath' does not work with muon 0.6.0
+    Works with meson
