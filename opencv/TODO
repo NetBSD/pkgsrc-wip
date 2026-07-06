@@ -1,0 +1,133 @@
+Needs unapplied-patch merging to modules/videoio/src/cap_v4l.cpp
+
+Doesn't build.
+
+[80/1213] Building CXX object modules/core/CMakeFiles/opencv_core.dir/src/hal_internal.cpp.o
+FAILED: [code=1] modules/core/CMakeFiles/opencv_core.dir/src/hal_internal.cpp.o
+/tmp/graphics/opencv/work/.cwrapper/bin/c++ -DCVAPI_EXPORTS -DOPENCV_ALLOCATOR_STATS_COUNTER_TYPE="long long" -DOPENCV_WITH_ITT=1 -D_USE_MATH_DEFINES -D__OPENCV_BUILD=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_
+_STDC_LIMIT_MACROS -I/tmp/graphics/opencv/work/opencv-5.0.0/3rdparty/dlpack/include -I/tmp/graphics/opencv/work/opencv-5.0.0/cmake-pkgsrc-build -I/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/include -I/tmp/graphic
+s/opencv/work/opencv-5.0.0/cmake-pkgsrc-build/modules/core -I/tmp/graphics/opencv/work/opencv-5.0.0/3rdparty/include/opencl/1.2 -I/tmp/graphics/opencv/work/opencv-5.0.0/3rdparty/ittnotify/include -O2 -g -fstack-clash-pro
+tection -I/usr/include -I/usr/pkg/include/python3.14 -I/usr/pkg/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz
+ -I/usr/pkg/include/libdrm -g   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-pro
+mo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -
+msse3 -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG  -DNDEBUG -std=c++17 -fPIC -MD -MT modules/core/CMakeFiles/opencv_core.dir/src/hal_internal.cpp.o -MF modules/core/CMakeFiles/opencv_core.dir/src/hal_interna
+l.cpp.o.d -o modules/core/CMakeFiles/opencv_core.dir/src/hal_internal.cpp.o -c /tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp
+In file included from /tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:50:
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp: In function 'int lapack_gemm_c(const fptype*, size_t, const fptype*, size_t, fptype, const fptype*, size_t, fptype, fptype*, size_t, int, int, int
+, int)':
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:540:48: error: expected unqualified-id before '_Complex'
+  540 |     int ldsrc1 = (int)(src1_step / sizeof(std::complex<fptype>));
+      |                                                ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:540:46: error: expected ')' before '_Complex'
+  540 |     int ldsrc1 = (int)(src1_step / sizeof(std::complex<fptype>));
+      |                                          ~   ^
+      |                                              )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:540:65: error: expected ')' before ';' token
+  540 |     int ldsrc1 = (int)(src1_step / sizeof(std::complex<fptype>));
+      |                       ~                                         ^
+      |                                                                 )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:541:48: error: expected unqualified-id before '_Complex'
+  541 |     int ldsrc2 = (int)(src2_step / sizeof(std::complex<fptype>));
+      |                                                ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:541:46: error: expected ')' before '_Complex'
+  541 |     int ldsrc2 = (int)(src2_step / sizeof(std::complex<fptype>));
+      |                                          ~   ^
+      |                                              )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:541:65: error: expected ')' before ';' token
+  541 |     int ldsrc2 = (int)(src2_step / sizeof(std::complex<fptype>));
+      |                       ~                                         ^
+      |                                                                 )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:542:48: error: expected unqualified-id before '_Complex'
+  542 |     int ldsrc3 = (int)(src3_step / sizeof(std::complex<fptype>));
+      |                                                ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:542:46: error: expected ')' before '_Complex'
+  542 |     int ldsrc3 = (int)(src3_step / sizeof(std::complex<fptype>));
+      |                                          ~   ^
+      |                                              )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:542:65: error: expected ')' before ';' token
+  542 |     int ldsrc3 = (int)(src3_step / sizeof(std::complex<fptype>));
+      |                       ~                                         ^
+      |                                                                 )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:543:46: error: expected unqualified-id before '_Complex'
+  543 |     int lddst = (int)(dst_step / sizeof(std::complex<fptype>));
+      |                                              ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:543:44: error: expected ')' before '_Complex'
+  543 |     int lddst = (int)(dst_step / sizeof(std::complex<fptype>));
+      |                                        ~   ^
+      |                                            )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:543:63: error: expected ')' before ';' token
+  543 |     int lddst = (int)(dst_step / sizeof(std::complex<fptype>));
+      |                      ~                                        ^
+      |                                                               )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:546:10: error: expected unqualified-id before '_Complex'
+  546 |     std::complex<fptype> cAlpha(alpha, 0.0);
+      |          ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:547:10: error: expected unqualified-id before '_Complex'
+  547 |     std::complex<fptype> cBeta(beta, 0.0);
+      |          ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:597:29: error: expected unqualified-id before '_Complex'
+  597 |             transpose((std::complex<fptype>*)src3, ldsrc3, (std::complex<fptype>*)dst, lddst, c_m, c_n);
+      |                             ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:597:27: error: expected ')' before '_Complex'
+  597 |             transpose((std::complex<fptype>*)src3, ldsrc3, (std::complex<fptype>*)dst, lddst, c_m, c_n);
+      |                       ~   ^
+      |                           )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:599:31: error: expected unqualified-id before '_Complex'
+  599 |             copy_matrix((std::complex<fptype>*)src3, ldsrc3, (std::complex<fptype>*)dst, lddst, c_m, c_n);
+      |                               ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:599:29: error: expected ')' before '_Complex'
+  599 |             copy_matrix((std::complex<fptype>*)src3, ldsrc3, (std::complex<fptype>*)dst, lddst, c_m, c_n);
+      |                         ~   ^
+      |                             )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:604:25: error: expected unqualified-id before '_Complex'
+  604 |         set_value((std::complex<fptype>*)dst, lddst, std::complex<fptype>(0.0, 0.0), d_m, d_n);
+      |                         ^~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:604:23: error: expected ')' before '_Complex'
+  604 |         set_value((std::complex<fptype>*)dst, lddst, std::complex<fptype>(0.0, 0.0), d_m, d_n);
+      |                   ~   ^
+      |                       )
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:625:106: error: 'cAlpha' was not declared in this scope; did you mean 'alpha'?
+  625 |         cblas_cgemm(CblasRowMajor, transA, transB, a_m, d_n, a_n, (float*)reinterpret_cast<fptype(&)[2]>(cAlpha), (float*)src1, ldsrc1, (float*)src2, ldsrc2, (float*)reinterpret_cast<fptype(&)[2]>(cBeta), (float*
+)dst, lddst);
+      |                                                                                                          ^~~~~~
+      |                                                                                                          alpha
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:625:198: error: 'cBeta' was not declared in this scope
+  625 |         cblas_cgemm(CblasRowMajor, transA, transB, a_m, d_n, a_n, (float*)reinterpret_cast<fptype(&)[2]>(cAlpha), (float*)src1, ldsrc1, (float*)src2, ldsrc2, (float*)reinterpret_cast<fptype(&)[2]>(cBeta), (float*
+)dst, lddst);
+      |                                                                                                                                                                                                      ^~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:627:107: error: 'cAlpha' was not declared in this scope; did you mean 'alpha'?
+  627 |         cblas_zgemm(CblasRowMajor, transA, transB, a_m, d_n, a_n, (double*)reinterpret_cast<fptype(&)[2]>(cAlpha), (double*)src1, ldsrc1, (double*)src2, ldsrc2, (double*)reinterpret_cast<fptype(&)[2]>(cBeta), (do
+uble*)dst, lddst);
+      |                                                                                                           ^~~~~~
+      |                                                                                                           alpha
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:627:202: error: 'cBeta' was not declared in this scope
+  627 |         cblas_zgemm(CblasRowMajor, transA, transB, a_m, d_n, a_n, (double*)reinterpret_cast<fptype(&)[2]>(cAlpha), (double*)src1, ldsrc1, (double*)src2, ldsrc2, (double*)reinterpret_cast<fptype(&)[2]>(cBeta), (do
+uble*)dst, lddst);
+      |                                                                                                                                                                                                          ^~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp: In instantiation of 'int lapack_gemm_c(const fptype*, size_t, const fptype*, size_t, fptype, const fptype*, size_t, fptype, fptype*, size_t, int,
+int, int, int) [with fptype = float; size_t = long unsigned int]':
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:711:25:   required from here
+  711 |     return lapack_gemm_c(src1, src1_step, src2, src2_step, alpha, src3, src3_step, beta, dst, dst_step, m, n, k, flags);
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:542:9: warning: unused variable 'ldsrc3' [-Wunused-variable]
+  542 |     int ldsrc3 = (int)(src3_step / sizeof(std::complex<fptype>));
+      |         ^~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:537:98: warning: unused parameter 'alpha' [-Wunused-parameter]
+  537 | lapack_gemm_c(const fptype *src1, size_t src1_step, const fptype *src2, size_t src2_step, fptype alpha,
+      |                                                                                           ~~~~~~~^~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp: In instantiation of 'int lapack_gemm_c(const fptype*, size_t, const fptype*, size_t, fptype, const fptype*, size_t, fptype, fptype*, size_t, int,
+int, int, int) [with fptype = double; size_t = long unsigned int]':
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:718:25:   required from here
+  718 |     return lapack_gemm_c(src1, src1_step, src2, src2_step, alpha, src3, src3_step, beta, dst, dst_step, m, n, k, flags);
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:542:9: warning: unused variable 'ldsrc3' [-Wunused-variable]
+  542 |     int ldsrc3 = (int)(src3_step / sizeof(std::complex<fptype>));
+      |         ^~~~~~
+/tmp/graphics/opencv/work/opencv-5.0.0/modules/core/src/hal_internal.cpp:537:98: warning: unused parameter 'alpha' [-Wunused-parameter]
+  537 | lapack_gemm_c(const fptype *src1, size_t src1_step, const fptype *src2, size_t src2_step, fptype alpha,
+      |                                                                                           ~~~~~~~^~~~~
+[95/1213] Building CXX object modules/core/CMakeFiles/opencv_core.dir/src/dxt.cpp.o
+ninja: build stopped: subcommand failed.
+*** Error code 1
+
+https://github.com/opencv/opencv/issues/29452

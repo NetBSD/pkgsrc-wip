@@ -2774,6 +2774,7 @@ SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
+SUBDIR+=	opencv
 SUBDIR+=	opendbx
 SUBDIR+=	opendchub
 SUBDIR+=	opendkim
