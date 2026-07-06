@@ -1,9 +1,11 @@
 # $NetBSD: Makefile,v 1.75 2026/05/14 16:41:59 ryoon Exp $
 
 DISTNAME=	modsecurity-v2.9.14
-PKGNAME=	${APACHE_PKG_PREFIX}-modsecurity-2.9.14
+PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/-v/-/}
 CATEGORIES=	www security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=owasp-modsecurity/ModSecurity/releases/download/v${PKGVERSION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=owasp-modsecurity/}
+GITHUB_PROJECT=	ModSecurity
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/owasp-modsecurity/ModSecurity/
