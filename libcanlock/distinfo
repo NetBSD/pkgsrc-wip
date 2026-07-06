@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2024/05/31 10:47:15 micha Exp $
-
-BLAKE2s (libcanlock-3.3.2.tar.bz2) = c5e6e82cafe6dd7c799592686928cf636e978e861342871b3431c0fdbec56cd5
-SHA512 (libcanlock-3.3.2.tar.bz2) = 127db2bae573fbc18b05df1a0d59c4b607a6376c46f48bb38ee2051b2cd8d7080982dac44fd4384720f5beeeda965d2452863541e6f65ff3862e343b3cf39f98
-Size (libcanlock-3.3.2.tar.bz2) = 640366 bytes
