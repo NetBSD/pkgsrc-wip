@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	CodeWhale-0.8.65
+DISTNAME=	CodeWhale-0.8.67
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hmbown/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -21,6 +21,17 @@ USE_TOOLS+=	pkg-config
 CARGO_INSTALL_ARGS=	install \
 			--path crates/tui \
 			--root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
+
+# rquickjs-sys lacks pre-generated bindings for NetBSD targets.
+# The Linux bindings are ABI-identical for QuickJS on the same CPU arch.
+post-extract:
+	${RUN} for f in ${WRKDIR}/vendor/rquickjs-sys-0.12.0/src/bindings/*-linux-gnu.rs; do \
+		target=`${BASENAME} "$$f" | ${SED} 's/-linux-gnu/-netbsd/'`; \
+		dest="${WRKDIR}/vendor/rquickjs-sys-0.12.0/src/bindings/$$target"; \
+		if [ ! -f "$$dest" ]; then \
+			${CP} "$$f" "$$dest"; \
+		fi; \
+		done
 
 post-install:
 	cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${CARGO} install \
