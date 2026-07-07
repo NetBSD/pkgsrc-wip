@@ -13,6 +13,9 @@ COMMENT=	Amateur packet radio terminal program for TNC2, AEA PK232 and PK88
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
 
 USE_TOOLS+=		gmake
+# TNT is K&R-era C; GCC 14 makes implicit-int and
+# implicit-function-declaration hard errors by default.
+CFLAGS+=	-Wno-error=implicit-int -Wno-error=implicit-function-declaration
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
