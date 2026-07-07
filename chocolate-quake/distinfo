@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (chocolate-quake-2.1.0.tar.gz) = 00316fd7dec428cf4c74cde24864a3f7a9d0e7c49aec3372ddcfac6ef84a75ab
+SHA512 (chocolate-quake-2.1.0.tar.gz) = 81c1dcbea56c015e6712ca79a7b9aecf1c9623e9cfe2cd1f4bceeb0e2307269edd1901f475a12a09add0a15b4527ec06a57d89734b1b31a5794d72e8787d2c29
+Size (chocolate-quake-2.1.0.tar.gz) = 938771 bytes
+SHA1 (patch-CMakeLists.txt) = 66d0a8cc39ece28db86a91a1e9741f8807c1689c
+SHA1 (patch-src_net_src_net__udp.c) = a0142c12aa09c9938d1ff88602d306624715cca9

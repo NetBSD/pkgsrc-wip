@@ -492,6 +492,7 @@ SUBDIR+=	chip-seq
 SUBDIR+=	chirpstack
 SUBDIR+=	chkugenids
 SUBDIR+=	chntpw
+SUBDIR+=	chocolate-quake
 SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium
