@@ -1,9 +1,9 @@
 # $NetBSD$
 #
 
-DISTNAME=	dpbox-6.1.0
+DISTNAME=	dpbox-6.1.1
 CATEGORIES=	ham
-MASTER_SITES=	-https://github.com/kq6up/dpbox/archive/refs/tags/v6.1.0.tar.gz
+MASTER_SITES=	-https://github.com/kq6up/dpbox/archive/refs/tags/v6.1.1.tar.gz
 DIST_SUBDIR=	dpbox
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/kq6up/dpbox
 COMMENT=	Multi-Protocol Amateur Packet Radio BBS
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/dpbox-6.1.0/source
+WRKSRC=		${WRKDIR}/dpbox-6.1.1/source
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.netbsd
 
@@ -72,6 +72,6 @@ CONF_FILES=	${EGDIR}/dpbox.ini ${PKG_SYSCONFDIR}/dpbox.ini \
 
 post-build:
 	${SED} -e 's#@prefix@#${PREFIX}#g' \
-	< ${FILESDIR}/dpbox.ini > ${WRKDIR}/dpbox-6.1.0/dpbox.ini
+	< ${FILESDIR}/dpbox.ini > ${WRKDIR}/dpbox-6.1.1/dpbox.ini
 
 .include "../../mk/bsd.pkg.mk"
