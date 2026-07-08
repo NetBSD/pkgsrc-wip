@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.9.5.tar.gz) = 4bc0386e0fa2d47710fa38df9d3b7ebf08bd986fc6c16d02bd839400a9291bc5
-SHA512 (PrusaSlicer-2.9.5.tar.gz) = 6a183f180ff3127df2b679132ba77e910a30aaf1f384bc7c9d8ae7969f24964e147e478d2dcf69af6df10011784b8bb60073a81ad03a6a79662233fe523128ca
-Size (PrusaSlicer-2.9.5.tar.gz) = 80570562 bytes
+BLAKE2s (PrusaSlicer-2.9.6.tar.gz) = 9d0b0808fd8bb060a6aff9c867815d46ff4353acbffbf546edcb528979aba983
+SHA512 (PrusaSlicer-2.9.6.tar.gz) = ac65ebceed1f1d87cb5955166ee70472181c18566d6e74a45930ad4578764305f627f4a3513e11bd308af1482b5a7dccf51324433ba583aaa29302576ff00404
+Size (PrusaSlicer-2.9.6.tar.gz) = 82103739 bytes
 SHA1 (patch-CMakeLists.txt) = 12f45e04b2cf7a5fb7a2ff9b37e51025c066a180
 SHA1 (patch-bundled__deps_CMakeLists.txt) = 9fad4b02132498a6bf06e0e53ed7626fa8b60b67
 SHA1 (patch-bundled__deps_avrdude_avrdude_arduino.c) = c03d11e4648054fc8e5028da3838400d61c27a95
@@ -31,7 +31,7 @@ SHA1 (patch-src_slic3r_GUI_ConfigWizard.cpp) = a8bd1d621f73ae6464b1ba4a5cb1db965
 SHA1 (patch-src_slic3r_GUI_DesktopIntegrationDialog.cpp) = 35ccd8882313eb3270e88c47d496d62db96f4d36
 SHA1 (patch-src_slic3r_GUI_DesktopIntegrationDialog.hpp) = c8760f69fac22d1a4cf8c7843fb96b12fdb69def
 SHA1 (patch-src_slic3r_GUI_EditGCodeDialog.cpp) = 4a66003e5eb8f78961560cdf5f4805e7f6b10e0f
-SHA1 (patch-src_slic3r_GUI_ExtraRenderers.cpp) = ac803510123ff016b8fa6f22d491c898166e0929
+SHA1 (patch-src_slic3r_GUI_ExtraRenderers.cpp) = e0ff9be6ad7c7df57c56ba266497fdcff9c45496
 SHA1 (patch-src_slic3r_GUI_Field.cpp) = a0901064c68aa5e6c2396ccec36018e45f92fbcb
 SHA1 (patch-src_slic3r_GUI_FirmwareDialog.cpp) = bf86d0f4e4aed49c4ffd0ecd49ec57fbe4884afa
 SHA1 (patch-src_slic3r_GUI_GLCanvas3D.cpp) = 11e42a87d7124ac92027af9e385533f0455d788b
@@ -63,7 +63,7 @@ SHA1 (patch-src_slic3r_GUI_UnsavedChangesDialog.hpp) = 0bd01147f0b654d1905349597
 SHA1 (patch-src_slic3r_GUI_UpdateDialogs.cpp) = 7fdcc609e66c619c110db2da18b24ddfd0ffe2a2
 SHA1 (patch-src_slic3r_GUI_UserAccountCommunication.cpp) = 1467c25ad13aae19bf6e1cdeb3c60c12d0d17071
 SHA1 (patch-src_slic3r_GUI_WipeTowerDialog.cpp) = fc6fd1bfee7001c268bf50209bcfd1cb96f6a9ad
-SHA1 (patch-src_slic3r_GUI_wxExtensions.cpp) = d6e807f3dd1f18fa9c703798067fa1e808112891
+SHA1 (patch-src_slic3r_GUI_wxExtensions.cpp) = 33829948cf1429934d4f0742b068d06294180532
 SHA1 (patch-src_slic3r_GUI_wxExtensions.hpp) = 356da6dbd7ca7f60fa8a73c51533a1c1ad1530c1
 SHA1 (patch-src_slic3r_Utils_Bonjour.cpp) = 88971521ac0b197ba7e7defd590b9b9fb9d5df28
 SHA1 (patch-src_slic3r_Utils_Bonjour.hpp) = 698bfb239d07da387846c64f42e671d1df71e36f

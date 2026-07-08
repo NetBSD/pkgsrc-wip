@@ -2,10 +2,10 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/ExtraRenderers.cpp.orig	2021-12-17 14:00:02.000000000 +0000
+--- src/slic3r/GUI/ExtraRenderers.cpp.orig	2026-06-25 15:30:20.000000000 +0000
 +++ src/slic3r/GUI/ExtraRenderers.cpp
-@@ -320,7 +320,7 @@ wxWindow* BitmapChoiceRenderer::CreateEd
-     c_editor->SetSelection(atoi(data.GetText().c_str()));
+@@ -370,7 +370,7 @@ wxWindow* BitmapChoiceRenderer::CreateEd
+     }
  
      
 -#ifdef __linux__
