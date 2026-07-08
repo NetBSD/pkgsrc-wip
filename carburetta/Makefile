@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	carburetta-v0.8.20
+DISTNAME=	carburetta-v0.8.28
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kingletbv/}

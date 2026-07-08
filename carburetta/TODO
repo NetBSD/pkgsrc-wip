@@ -1,1 +1,7 @@
-- Fix segfault while building on NetBSD
+[ ] Fix segfault while building on NetBSD
+
+    mkdir -p build/objs/calc
+    build/carburetta examples/calc/calc.cbrt --c build/objs/calc/calc.c
+    examples/calc/calc.cbrt
+    gmake: *** [Makefile:39: build/objs/calc/calc.c] Segmentation fault
+    *** Error code 2
