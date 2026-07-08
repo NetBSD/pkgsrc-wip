@@ -85,8 +85,8 @@ lib/modules/mod-pcm.so
 lib/modules/mod-script-pipe.so
 lib/modules/mod-wavpack.so
 man/man1/audacity.1
-share/applications/audacity.desktop
-share/audacity/EffectsMenuDefaults.xml
+${PLIST.desktop}share/applications/audacity.desktop
+${PLIST.desktop}share/audacity/EffectsMenuDefaults.xml
 share/audacity/nyquist/aud-do-support.lsp
 share/audacity/nyquist/dspprims.lsp
 share/audacity/nyquist/envelopes.lsp

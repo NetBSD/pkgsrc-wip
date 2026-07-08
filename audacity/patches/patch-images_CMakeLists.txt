@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- images/CMakeLists.txt.orig	2026-07-05 11:26:54.036816176 +0000
++++ images/CMakeLists.txt
+@@ -15,7 +15,6 @@ set( PIXMAPS
+    ${_SRCDIR}/icons/48x48/audacity.xpm
+ )
+ 
+-if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+    if( NOT "${CMAKE_GENERATOR}" MATCHES "Visual Studio*")
+       install( FILES "${_SRCDIR}/audacity.svg"
+                DESTINATION "${_DATADIR}/icons/hicolor/scalable/apps" )
+@@ -25,5 +24,4 @@ if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwi
+       install( FILES ${PIXMAPS}
+                DESTINATION "${_DATADIR}/pixmaps" )
+    endif()
+-endif()
+ 

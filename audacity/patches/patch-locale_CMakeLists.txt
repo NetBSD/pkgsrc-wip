@@ -1,0 +1,42 @@
+$NetBSD$
+
+--- locale/CMakeLists.txt.orig	2026-07-05 11:24:32.425945951 +0000
++++ locale/CMakeLists.txt
+@@ -27,7 +27,7 @@ if( NOT DEFINED msgfmt )
+    return()
+ endif()
+ 
+-if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
++if(FALSE)
+    set( locale "${_DEST}/Resources" )
+ elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
+    set( locale "${_DEST}/Languages" )
+@@ -39,7 +39,7 @@ set( OUTPUTS )
+ foreach( source ${SOURCES} )
+    get_filename_component( lang "${source}" NAME_WE )
+ 
+-   if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
++   if(FALSE)
+       set( dst "${locale}/${lang}.lproj" )
+    elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
+       set( dst "${locale}/${lang}" )
+@@ -64,7 +64,7 @@ foreach( source ${SOURCES} )
+    # Always make sure there's an empty English folder.  Otherwise, some menu
+    # items will be translated to the next language listed in System
+    # Preferences/Language & Text
+-   if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
++   if(FALSE)
+       add_custom_command(
+          COMMAND
+             ${CMAKE_COMMAND} -E make_directory "${_DEST}/Resources/en.lproj"
+@@ -79,10 +79,8 @@ endforeach()
+ 
+ add_custom_target( "${TARGET}" ALL DEPENDS ${OUTPUTS} SOURCES "${SOURCES}" )
+ 
+-if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+    if( NOT "${CMAKE_GENERATOR}" MATCHES "Visual Studio*")
+       install( DIRECTORY ${locale}/
+                TYPE LOCALE )
+    endif()
+-endif()
+ 

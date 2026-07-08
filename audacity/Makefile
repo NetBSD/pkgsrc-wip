@@ -1,6 +1,6 @@
 # $NetBSD$
-
-DISTNAME=	audacity-sources-3.7.7
+ 
+DISTNAME=	audacity-sources-3.7.8
 PKGNAME=	${DISTNAME:S/-sources//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
@@ -14,10 +14,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 # AND Creative Commons-Attribution 3.0 Unport
 
 TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-Daudacity_conan_enabled=OFF
 #CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_zlib=system
 CMAKE_CONFIGURE_ARGS+=	-Daudacity_lib_preference=system
@@ -47,12 +49,16 @@ PKGCONFIG_OVERRIDE+=	lib-src/soundtouch/soundtouch.pc.in
 PKGCONFIG_OVERRIDE+=	lib-src/twolame/twolame.pc.in
 
 # runs image-compiler during build which wants to find lib-theme.so
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Release/lib
 # for Darwin
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Release/lib
 
-.include "../../devel/cmake/build.mk"
-.include "../../lang/python/tool.mk"
+PLIST_VARS+=	desktop
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+PLIST.desktop=	yes
+.endif
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -71,13 +77,16 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/Debug/lib
 .include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/rapidjson/buildlink3.mk"
 .include "../../wip/portmidi/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

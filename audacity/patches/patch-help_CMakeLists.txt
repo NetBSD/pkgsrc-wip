@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- help/CMakeLists.txt.orig	2026-07-05 11:27:46.887282476 +0000
++++ help/CMakeLists.txt
+@@ -56,7 +56,6 @@ if( ${_OPT}package_manual )
+    endif()
+ endif()
+ 
+-if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+    if( NOT "${CMAKE_GENERATOR}" MATCHES "Visual Studio*")
+       install( DIRECTORY "${dst}" OPTIONAL
+                DESTINATION "${_DATADIR}/audacity/help" )
+@@ -65,4 +64,3 @@ if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwi
+       install( FILES "${_SRCDIR}/audacity.appdata.xml"
+                DESTINATION "${_DATADIR}/metainfo" )
+    endif()
+-endif()

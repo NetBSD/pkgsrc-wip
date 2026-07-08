@@ -1,13 +1,18 @@
 $NetBSD$
 
-BLAKE2s (audacity-sources-3.7.7.tar.gz) = f82f482134b26b043f4200d86cc4bd37024fadd9fb6bf48198f3409aaea35dc1
-SHA512 (audacity-sources-3.7.7.tar.gz) = 6871b2d6508c2fcf7e20f2d2d2a003cc62768c9ff09c8d5a96fc1971b0c1f3f2f1b2d48f71ee0b1da1a6ea6a9b8d930bca9a64c8003c67cb46b22c3e21af90f4
-Size (audacity-sources-3.7.7.tar.gz) = 64575292 bytes
+BLAKE2s (audacity-sources-3.7.8.tar.gz) = cc391a18efadadf9180f24227d48832b4b92ad0e20f7f5b8bce182f47617033a
+SHA512 (audacity-sources-3.7.8.tar.gz) = 7b0ef1d393ae20b734f04c5b796b5f85240a89cd84cf1f8ab39b1fbfb1fe6da183833469fe89b96e85efea866a7cb83c7bfe3bb7256d2024ff3b83a69af96e8c
+Size (audacity-sources-3.7.8.tar.gz) = 67556613 bytes
 SHA1 (patch-CMakeLists.txt) = 7bdc2406ca9356742ed775c60aac8a748a90ecbf
 SHA1 (patch-cmake-proxies_cmake-modules_AudacityFunctions.cmake) = be6fc260ab5c192dbbd743428a7880d4a253b9fb
 SHA1 (patch-cmake-proxies_cmake-modules_dependencies_rapidjson.cmake) = 905782babb8da1e1493af6856ce2394db51a930c
+SHA1 (patch-help_CMakeLists.txt) = f848ccad94ac45687502ae1e815738a3d02e9110
+SHA1 (patch-images_CMakeLists.txt) = 20fe208f2d67f2cd8f422e94e764bd7c6b29afba
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 1974b5a294503ebc03e9690e0182d81258853117
 SHA1 (patch-libraries_lib-basic-ui_BasicUI.cpp) = 31683629ac042af74d301a69d282743923a69266
 SHA1 (patch-libraries_lib-nyquist-effects_NyquistBase.cpp) = 0cb6e15e077360256e55a425be896dd5edfd9009
 SHA1 (patch-libraries_lib-wx-wrappers_CMakeLists.txt) = 361afeca9be2c67df1bac65e552f15edcb4ca363
-SHA1 (patch-src_CMakeLists.txt) = 7c70022c467ccca9bab7d33fc863e2408b9a3479
+SHA1 (patch-locale_CMakeLists.txt) = a1e5084661aa2ce179a071e9df38dcae30257c43
+SHA1 (patch-nyquist_CMakeLists.txt) = cb738fa4c2af9d018277e9c403bdf809ef504440
+SHA1 (patch-plug-ins_CMakeLists.txt) = eb1803359cdaaef8ab6fb1e4771ef7cb25b8b0ee
+SHA1 (patch-src_CMakeLists.txt) = 5d28e790bbb3443c8447b88b2aeadad218d95672
