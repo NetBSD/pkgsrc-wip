@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/chocolate-quake-chocolate-quake-2.1.0
 
 .include "../../devel/cmake/build.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
