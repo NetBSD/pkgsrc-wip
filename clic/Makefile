@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2018/02/28 16:32:56 leot Exp $
 
-DISTNAME=	clic-v1.1.3
+DISTNAME=	clic-v1.1.5
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/clic/
