@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/suggestions/payments/credit_card_suggestion_generator.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/autofill/core/browser/suggestions/payments/credit_card_suggestion_generator.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/autofill/core/browser/suggestions/payments/credit_card_suggestion_generator.cc
 @@ -55,7 +55,7 @@ using SuggestionDataSource = SuggestionG
  

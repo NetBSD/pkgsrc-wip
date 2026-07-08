@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/base/config.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/abseil-cpp/absl/base/config.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/abseil-cpp/absl/base/config.h
 @@ -412,7 +412,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
  #ifdef ABSL_HAVE_SCHED_YIELD

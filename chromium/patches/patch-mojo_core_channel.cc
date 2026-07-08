@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -74,7 +74,11 @@ const size_t kMaxAttachedHandles = 64;
  const size_t kMaxAttachedHandles = 253;

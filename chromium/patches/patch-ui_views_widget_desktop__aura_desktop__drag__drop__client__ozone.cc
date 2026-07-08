@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.cc
 @@ -225,7 +225,7 @@ DragOperation DesktopDragDropClientOzone
    return selected_operation_;

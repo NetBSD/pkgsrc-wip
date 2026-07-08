@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.52 2026/04/10 17:31:46 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			150.0.7871.46
+VERSION=			150.0.7871.100
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -22,7 +22,9 @@ CARGO_WRKSRC=			${WRKSRC}/rollup/rust
 
 # esbuild
 EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
-GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
+EB_VER=				${EB_DISTNAME:sh:C/^.*-//}
+GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
+#GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			21
@@ -69,8 +71,9 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/cppgc/test_cmake.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
+TOOL_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
-TOOL_DEPENDS+=			esbuild-[0-9]*:../../www/esbuild
+TOOL_DEPENDS+=			esbuild-${EB_VER}:../../www/esbuild
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
@@ -124,6 +127,7 @@ SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	third_party/test_fonts/fontconfig/BUILD.gn
+SUBST_FILES.path+=	third_party/vulkan-loader/src/BUILD.gn
 SUBST_FILES.path+=	third_party/wayland/BUILD.gn
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN

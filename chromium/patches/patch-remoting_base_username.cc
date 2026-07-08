@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/username.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/base/username.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/base/username.cc
 @@ -86,7 +86,7 @@ std::string GetUsername() {
  #endif  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID)

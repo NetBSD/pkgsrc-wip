@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- base/process/launch.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ base/process/launch.h
 @@ -7,6 +7,13 @@
  #ifndef BASE_PROCESS_LAUNCH_H_

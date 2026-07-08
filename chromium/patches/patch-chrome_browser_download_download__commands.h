@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_commands.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/download/download_commands.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/download/download_commands.h
 @@ -66,7 +66,7 @@ class DownloadCommands {
    void ExecuteCommand(Command command);

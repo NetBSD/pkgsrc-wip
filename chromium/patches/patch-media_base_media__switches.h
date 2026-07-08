@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- media/base/media_switches.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ media/base/media_switches.h
 @@ -88,7 +88,7 @@ MEDIA_EXPORT extern const char kMinVideo
  #endif  // BUILDFLAG(IS_FUCHSIA)

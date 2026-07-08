@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/gcc_solink_wrapper.py.orig	2026-06-23 23:37:18.000000000 +0000
+--- build/toolchain/gcc_solink_wrapper.py.orig	2026-07-06 22:58:46.000000000 +0000
 +++ build/toolchain/gcc_solink_wrapper.py
 @@ -39,7 +39,7 @@ def CollectDynSym(args):
    """Replaces: nm --format=posix -g -D -p $sofile | cut -f1-2 -d' '"""

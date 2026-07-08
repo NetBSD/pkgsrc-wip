@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc
 @@ -466,7 +466,7 @@ class AudioWorkletThreadPriorityTest
      // acquire SCHED_RR, so the thread remains in SCHED_NORMAL. However,

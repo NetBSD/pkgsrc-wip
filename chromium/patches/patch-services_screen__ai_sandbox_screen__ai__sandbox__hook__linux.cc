@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
 @@ -59,6 +59,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
      }

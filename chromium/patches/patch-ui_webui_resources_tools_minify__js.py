@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/webui/resources/tools/minify_js.py.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/webui/resources/tools/minify_js.py.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/webui/resources/tools/minify_js.py
 @@ -32,7 +32,7 @@ def main(argv):
    # Spawn a NodeJS script to use the programmatic Terser API, since the CLI API

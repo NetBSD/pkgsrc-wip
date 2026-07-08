@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/fido/public/features.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- device/fido/public/features.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ device/fido/public/features.cc
 @@ -46,7 +46,7 @@ namespace device {
  // comment.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- services/device/public/cpp/device_features.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ services/device/public/cpp/device_features.h
 @@ -64,11 +64,11 @@ extern const DEVICE_FEATURES_EXPORT
  

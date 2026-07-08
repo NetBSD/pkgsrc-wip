@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
 @@ -138,7 +138,7 @@ namespace {
  tab_groups::TabGroupSyncService* GetTabGroupSyncService(Profile* profile) {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/allocator/lib.rs.orig	2026-06-23 23:37:18.000000000 +0000
+--- build/rust/allocator/lib.rs.orig	2026-07-06 22:58:46.000000000 +0000
 +++ build/rust/allocator/lib.rs
 @@ -108,6 +108,12 @@ mod both_allocators {
          0

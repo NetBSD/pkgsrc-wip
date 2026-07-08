@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_render_params_linux.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/gfx/font_render_params_linux.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/gfx/font_render_params_linux.cc
 @@ -24,7 +24,7 @@
  #include "ui/gfx/linux/fontconfig_util.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/updater/browser_updater_client_util.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/updater/browser_updater_client_util.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/updater/browser_updater_client_util.h
 @@ -20,7 +20,7 @@ namespace updater {
  extern const char kUpdaterName[];

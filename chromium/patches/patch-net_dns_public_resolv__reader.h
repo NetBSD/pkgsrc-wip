@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/resolv_reader.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- net/dns/public/resolv_reader.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ net/dns/public/resolv_reader.h
 @@ -5,6 +5,7 @@
  #ifndef NET_DNS_PUBLIC_RESOLV_READER_H_

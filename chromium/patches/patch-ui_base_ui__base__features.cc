@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/base/ui_base_features.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/base/ui_base_features.cc
 @@ -142,7 +142,7 @@ BASE_FEATURE(kWaylandExternalBeginFrameS
               base::FEATURE_DISABLED_BY_DEFAULT);

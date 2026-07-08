@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_data_manager_impl_private.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.cc
 @@ -1751,7 +1751,7 @@ void GpuDataManagerImplPrivate::RecordCo
    UMA_HISTOGRAM_ENUMERATION("GPU.CompositingMode", compositing_mode);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc
 @@ -21,7 +21,7 @@
  #include "ui/gfx/geometry/resize_utils.h"

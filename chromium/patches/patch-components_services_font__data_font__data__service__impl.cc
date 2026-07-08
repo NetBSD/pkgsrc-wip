@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/services/font_data/font_data_service_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/services/font_data/font_data_service_impl.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/services/font_data/font_data_service_impl.cc
 @@ -121,7 +121,7 @@ std::tuple<base::File, uint64_t> FontDat
    typeface.getResourceName(&font_path);

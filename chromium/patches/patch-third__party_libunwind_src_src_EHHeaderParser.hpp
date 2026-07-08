@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/EHHeaderParser.hpp.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/libunwind/src/src/EHHeaderParser.hpp.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/libunwind/src/src/EHHeaderParser.hpp
 @@ -161,6 +161,10 @@ bool EHHeaderParser<A>::findFDE(A &addre
  

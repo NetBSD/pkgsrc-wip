@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/host/ipc_constants.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/host/ipc_constants.h
 @@ -31,7 +31,7 @@ bool GetInstalledBinaryPath(const base::
  const mojo::NamedPlatformChannel::ServerName&

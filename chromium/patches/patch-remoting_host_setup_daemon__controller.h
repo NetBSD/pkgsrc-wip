@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/daemon_controller.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/host/setup/daemon_controller.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/host/setup/daemon_controller.h
 @@ -152,13 +152,13 @@ class DaemonController : public base::Re
      // unprivileged.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/discardable_memory/service/discardable_shared_memory_manager.cc
 @@ -177,6 +177,8 @@ uint64_t GetDefaultMaxBytes() {
  #if BUILDFLAG(IS_ANDROID)

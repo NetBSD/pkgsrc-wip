@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ media/gpu/chromeos/mailbox_video_frame_converter.cc
 @@ -238,7 +238,7 @@ MailboxVideoFrameConverter::GenerateShar
                             VideoPixelFormatToString(origin_frame->format()));

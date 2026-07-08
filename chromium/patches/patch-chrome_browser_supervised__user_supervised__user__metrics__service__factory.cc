@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc
 @@ -19,7 +19,7 @@
  #include "components/supervised_user/core/browser/supervised_user_service.h"

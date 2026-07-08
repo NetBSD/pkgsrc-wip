@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/tools/magi-mode/tests/testdata/mock_app.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/tools/magi-mode/tests/testdata/mock_app.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/tools/magi-mode/tests/testdata/mock_app.cc
 @@ -14,7 +14,7 @@
  #include "file_manager_win.h"

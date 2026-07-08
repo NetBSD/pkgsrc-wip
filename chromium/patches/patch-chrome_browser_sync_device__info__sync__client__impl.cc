@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/sync/device_info_sync_client_impl.cc
 @@ -39,7 +39,7 @@ DeviceInfoSyncClientImpl::~DeviceInfoSyn
  std::string DeviceInfoSyncClientImpl::GetSigninScopedDeviceId() const {

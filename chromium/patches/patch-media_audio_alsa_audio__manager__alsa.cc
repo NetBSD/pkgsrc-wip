@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -106,7 +106,9 @@ bool AudioManagerAlsa::GetAlsaAudioDevic
    // Loop through the physical sound cards to get ALSA device hints.

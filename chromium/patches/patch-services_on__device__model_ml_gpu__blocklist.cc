@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/ml/gpu_blocklist.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- services/on_device_model/ml/gpu_blocklist.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ services/on_device_model/ml/gpu_blocklist.cc
 @@ -24,7 +24,7 @@ const base::FeatureParam<std::string> kG
      &optimization_guide::features::kOnDeviceModelPerformanceParams,

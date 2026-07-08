@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
 @@ -1776,7 +1776,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreateP
        backend_types = {wgpu::BackendType::D3D12};

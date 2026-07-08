@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libvpx/source/config/linux/arm64/vpx_dsp_rtcd.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/libvpx/source/config/linux/arm64/vpx_dsp_rtcd.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/libvpx/source/config/linux/arm64/vpx_dsp_rtcd.h
 @@ -885,32 +885,26 @@ uint32_t vpx_sub_pixel_avg_variance8x8_n
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/child_process.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- content/child/child_process.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ content/child/child_process.h
 @@ -81,7 +81,7 @@ class CONTENT_EXPORT ChildProcess {
      return io_thread_runner_.get();

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/cpu.c.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/ffmpeg/libavutil/cpu.c.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/ffmpeg/libavutil/cpu.c
 @@ -38,10 +38,7 @@
  #if HAVE_GETPROCESSAFFINITYMASK || HAVE_WINRT

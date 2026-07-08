@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_harfbuzz.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/gfx/render_text_harfbuzz.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/gfx/render_text_harfbuzz.cc
 @@ -184,7 +184,7 @@ const char* GetPlatformColorEmojiFontNam
    return "Segoe UI Emoji";

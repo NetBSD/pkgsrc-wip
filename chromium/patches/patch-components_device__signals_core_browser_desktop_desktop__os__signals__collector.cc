@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/desktop/desktop_os_signals_collector.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/device_signals/core/browser/desktop/desktop_os_signals_collector.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/device_signals/core/browser/desktop/desktop_os_signals_collector.cc
 @@ -44,7 +44,7 @@ std::unique_ptr<OsSignalsResponse> AddAs
      os_signals_response->disk_encryption = device_signals::GetDiskEncrypted();

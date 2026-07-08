@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/client_session.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/host/client_session.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/host/client_session.cc
 @@ -222,7 +222,7 @@ void ClientSession::NotifyClientResoluti
    if (effective_policies_.curtain_required.value_or(false)) {

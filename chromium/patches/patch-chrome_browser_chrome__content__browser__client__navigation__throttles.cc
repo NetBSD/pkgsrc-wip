@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client_navigation_throttles.cc
 @@ -146,7 +146,7 @@
  #include "chrome/browser/captive_portal/captive_portal_service_factory.h"

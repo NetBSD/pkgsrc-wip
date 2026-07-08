@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/url_constants.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/common/url_constants.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/common/url_constants.h
 @@ -732,7 +732,7 @@ inline constexpr char kOutdatedPluginLea
      "https://support.google.com/chrome?p=ib_outdated_plugin";

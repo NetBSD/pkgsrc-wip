@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/third_party/renderdoc/renderdoc/api/app/renderdoc_app.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/dawn/third_party/renderdoc/renderdoc/api/app/renderdoc_app.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/dawn/third_party/renderdoc/renderdoc/api/app/renderdoc_app.h
 @@ -35,7 +35,7 @@
  

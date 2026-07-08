@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -56,7 +56,7 @@
  #include "content/browser/renderer_host/p2p/socket_dispatcher_host.h"

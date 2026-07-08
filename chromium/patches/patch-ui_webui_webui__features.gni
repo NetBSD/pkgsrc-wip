@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/webui/webui_features.gni.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/webui/webui_features.gni.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/webui/webui_features.gni
 @@ -44,7 +44,8 @@ if (enable_cast_receiver || is_cast_andr
      # Enable the WebUI version of the New Tab Page.

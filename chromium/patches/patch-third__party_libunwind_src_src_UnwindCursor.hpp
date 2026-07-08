@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/UnwindCursor.hpp.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/libunwind/src/src/UnwindCursor.hpp.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/libunwind/src/src/UnwindCursor.hpp
 @@ -114,6 +114,8 @@ extern "C" _Unwind_Reason_Code __libunwi
  

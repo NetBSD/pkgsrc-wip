@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/signin/internal/identity_manager/account_capabilities_list.h
 @@ -72,7 +72,7 @@ ACCOUNT_CAPABILITY(
      "accountcapabilities/gi2tklldmfya")

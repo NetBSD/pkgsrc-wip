@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
 @@ -364,7 +364,7 @@ TaskManagerTableModel::~TaskManagerTable
    // Note: system_total_time_ is used for both since there is no functional

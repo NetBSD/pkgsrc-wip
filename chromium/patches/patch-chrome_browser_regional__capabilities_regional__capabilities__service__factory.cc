@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/regional_capabilities/regional_capabilities_service_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/regional_capabilities/regional_capabilities_service_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/regional_capabilities/regional_capabilities_service_factory.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/regional_capabilities/regional_capabilities_service_client_chromeos.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/crash_reporting_context.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/crash_reporting_context.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/crash_reporting_context.h
 @@ -11,7 +11,7 @@
  #include "chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.h"

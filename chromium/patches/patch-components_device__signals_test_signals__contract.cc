@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/test/signals_contract.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/device_signals/test/signals_contract.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/device_signals/test/signals_contract.cc
 @@ -216,7 +216,7 @@ GetSignalsContract() {
        base::BindRepeating(VerifyUnset, names::kCrowdStrike);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/webapps/browser/web_app_url_config.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/webapps/browser/web_app_url_config.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/webapps/browser/web_app_url_config.cc
 @@ -35,7 +35,7 @@ bool IsUrlEligibleForWebApp(const GURL& 
    }

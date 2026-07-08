@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_drag_context.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/base/x/x11_drag_context.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/base/x/x11_drag_context.h
 @@ -17,7 +17,7 @@
  #include "ui/gfx/x/event.h"

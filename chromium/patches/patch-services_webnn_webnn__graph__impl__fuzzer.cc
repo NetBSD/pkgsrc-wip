@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/webnn_graph_impl_fuzzer.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- services/webnn/webnn_graph_impl_fuzzer.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ services/webnn/webnn_graph_impl_fuzzer.cc
 @@ -1053,7 +1053,7 @@ std::optional<Conv2dDescriptors> SetUpCo
      params.groups = params.input_channels;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -138,7 +138,7 @@ enum class NetworkSandboxState {
  // The global instance of the SystemNetworkContextManager.

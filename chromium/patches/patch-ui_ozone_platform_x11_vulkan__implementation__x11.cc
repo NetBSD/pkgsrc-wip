@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/vulkan_implementation_x11.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/ozone/platform/x11/vulkan_implementation_x11.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/ozone/platform/x11/vulkan_implementation_x11.cc
 @@ -59,7 +59,11 @@ bool VulkanImplementationX11::Initialize
  
