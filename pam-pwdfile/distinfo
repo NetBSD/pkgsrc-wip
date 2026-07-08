@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/02/21 09:25:27 bartoszkuzma Exp $
 
-BLAKE2s (libpam-pwdfile-0.99.tar.gz) = 3751d251873f85ac9f64a1055afc3feda3bfd1240e3801eae0be78880b3f50e3
-SHA512 (libpam-pwdfile-0.99.tar.gz) = 05837eeebc2e557aaeecb228f84ffc8c64610ae807838a0a7d17886cb8e7688d74b40d71500027156560a5b014a53c58a77eb7665528cc6d3042eda42a5fd15a
-Size (libpam-pwdfile-0.99.tar.gz) = 16655 bytes
-SHA1 (patch-aa) = c890d486e9f3d0648c3e761776173aa3d2428911
-SHA1 (patch-ab) = 3f7b1e33634ac243482137343fb68e1db6137988
+BLAKE2s (libpam-pwdfile-2.0.tar.gz) = a60dcafd80f3d9310f5eb2ed102ff76919c2f39346eceeb501fa1e023124f060
+SHA512 (libpam-pwdfile-2.0.tar.gz) = a2b84690a0004fb191e81fecf12e2071090ca6be3fb3f759f521e2c43b0876a3fd1e1d59dbdf95cc069dc901cc4dfbf4caf0f115d28598d5e1149f47932efd21
+Size (libpam-pwdfile-2.0.tar.gz) = 8063 bytes
+SHA1 (patch-pam__pwdfile.c) = c5d1540e0b5963c25e9345132b95eee4c9ae2ff6
