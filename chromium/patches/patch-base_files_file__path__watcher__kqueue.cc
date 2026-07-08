@@ -31,9 +31,8 @@ $NetBSD$
 +#else
    const int last_entry_int = checked_cast<int>(last_entry);
    int count = HANDLE_EINTR(kevent(kqueue_, &events_[0], last_entry_int,
--                                  &responses[0], last_entry_int, NULL));
-+                                  &responses[0], last_entry_int, NULL))
-+#endif;
+                                   &responses[0], last_entry_int, NULL));
++#endif
    if (!AreKeventValuesValid(&responses[0], count)) {
      // Calling Cancel() here to close any file descriptors that were opened.
      // This would happen in the destructor anyways, but FilePathWatchers tend to
@@ -43,7 +42,7 @@ $NetBSD$
    struct timespec timeout = {0, 0};
 +#if BUILDFLAG(IS_NETBSD)
 +  int count = HANDLE_EINTR(kevent(kqueue_, NULL, 0, &updates[0],
-+                                  updates.size()), &timeout));
++                                  updates.size(), &timeout));
 +#else
    int count = HANDLE_EINTR(kevent(kqueue_, NULL, 0, &updates[0],
                                    checked_cast<int>(updates.size()), &timeout));
