@@ -24,7 +24,6 @@ CARGO_WRKSRC=			${WRKSRC}/rollup/rust
 EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 EB_VER=				${EB_DISTNAME:sh:C/^.*-//}
 GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
-#GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			21
