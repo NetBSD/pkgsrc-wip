@@ -75,3 +75,4 @@ SHA1 (patch-src_slic3r_Utils_WifiScanner.cpp) = a7c8d6dfb43ddaca651df13b487b43dd
 SHA1 (patch-src_slic3r_Utils_WxFontUtils.cpp) = 75d657b3c8af52eee7aa130a895760c4203fef78
 SHA1 (patch-tests_CMakeLists.txt) = 654e13b89f1c3575dcd4f9ff0e3cf2fb353c3944
 SHA1 (patch-tests_libslic3r_test__emboss.cpp) = fef38a4f927f6e4b2620b85a336eb8e2df8b2db1
+SHA1 (patch-tests_sla__print_sla__test__utils.hpp) = 96db8df510743582d34c4ae2e3e1297aa36a6cd7
