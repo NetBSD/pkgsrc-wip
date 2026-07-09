@@ -2,12 +2,12 @@
 
 DISTNAME=	whisper.cpp-1.9.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ggerganov/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
 GITHUB_PROJECT=	whisper.cpp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://github.com/ggerganov/whisper.cpp/
+HOMEPAGE=	https://github.com/ggml-org/whisper.cpp
 COMMENT=	OpenAI's Whisper LLM inference in C/C++
 LICENSE=	mit
 
