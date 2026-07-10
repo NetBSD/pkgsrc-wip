@@ -5,11 +5,12 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnfactotum/}
 EXTRACT_USING=	bsdtar
 
-
 MAINTAINER=	fox@NetBSD.org
 COMMENT=	Simple and modern GTK eBook viewer
 HOMEPAGE=	https://johnfactotum.github.io/foliate/
 LICENSE=	gnu-gpl-v3
+
+CONFLICTS=	foliate-[0-9]*
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
