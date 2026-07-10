@@ -1,19 +1,21 @@
 # $NetBSD$
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
-PKGNAME=	odin-25.8.0
+PKGNAME=	odin-26.7.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=odin-lang/}
 GITHUB_PROJECT=	Odin
-GITHUB_TAG=	dev-2025-08 # Note that this is a different format from the pkgsrc version.
+# GITHUB_TAG=	refs/tags/dev-2026-07
+GITHUB_TAG=	dev-2026-07 # Note that this is a different format from the pkgsrc version.
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=		mail@andreasjonsson.se
 HOMEPAGE=		https://odin-lang.org/
 COMMENT=		General-purpose programming language
 LICENSE=		modified-bsd
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-
+WRKSRC=			${WRKDIR}/Odin-dev-2026-07
+USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c11
 USE_CXX_FEATURES=	c++17
