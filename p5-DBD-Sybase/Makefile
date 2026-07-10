@@ -1,13 +1,12 @@
 # $NetBSD$
 
-DISTNAME=		DBD-Sybase-1.26
+DISTNAME=		DBD-Sybase-1.27
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=
 CATEGORIES=		databases perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ME/MEWP/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.peppler.org/freeware/dbd-sybase.html
+HOMEPAGE=		https://github.com/mpeppler/DBD-Sybase
 COMMENT=		Perl DBI/DBD driver for Sybase/MS-SQL databases
 LICENSE=		${PERL5_LICENSE}
 
