@@ -11,18 +11,18 @@ By caching the UID->username mappings, we minimize the number of getpwuid()
 calls, reducing the window where the thread can get stuck in a non-cancellable
 state.
 
---- src/netbsd/btop_collect.cpp.orig	2026-05-06 15:50:33.000000000 +0000
+--- src/netbsd/btop_collect.cpp.orig	2026-07-06 07:53:49.000000000 +0000
 +++ src/netbsd/btop_collect.cpp
-@@ -1091,7 +1091,7 @@
+@@ -1091,7 +1091,7 @@ namespace Net {
  namespace Proc {
-
+ 
  	vector<proc_info> current_procs;
 -	std::unordered_map<string, string> uid_user;
 +	std::unordered_map<uid_t, string> uid_user;
  	string current_sort;
  	string current_filter;
  	bool current_rev = false;
-@@ -1248,9 +1248,22 @@
+@@ -1248,9 +1248,22 @@ namespace Proc {
  					}
  					new_proc.ppid = kproc->p_ppid;
  					new_proc.cpu_s = round(kproc->p_ustart_sec);

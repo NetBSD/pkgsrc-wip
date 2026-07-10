@@ -3,7 +3,7 @@
 DISTNAME=	btop-1.4.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
-GITHUB_TAG=	6e39144aaf5a6bc01b9f795010b0914431067183
+GITHUB_TAG=	9527231dfbcbe697f8eb80849e267377194e6ca8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/aristocratos/btop
@@ -15,6 +15,8 @@ GIT_REPO=      https://github.com/aristocratos/btop.git
 # gcc 10 support was removed from the code base.
 # https://github.com/aristocratos/btop/pull/1106
 GCC_REQD+=	14
+
+CONFLICTS=      btop-[0-9]*
 
 TOOL_DEPENDS+=	lowdown-[0-9]*:../../textproc/lowdown
 

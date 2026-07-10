@@ -9,7 +9,7 @@ Fix pthread_cancel deadlocks on NetBSD:
    sem_wait doesn't automatically wake on cancellation
 4. Check for cancellation in semaphore acquire loop
 
---- src/btop.cpp.orig	2026-05-06 15:50:33.000000000 +0000
+--- src/btop.cpp.orig	2026-07-06 07:53:49.000000000 +0000
 +++ src/btop.cpp
 @@ -44,6 +44,8 @@ tab-size = 4
  #include <chrono>
@@ -20,7 +20,7 @@ Fix pthread_cancel deadlocks on NetBSD:
  
  #ifdef __APPLE__
  	#include <CoreFoundation/CoreFoundation.h>
-@@ -370,8 +372,21 @@ namespace Runner {
+@@ -364,8 +366,21 @@ namespace Runner {
  	}
  
  	//* Setup semaphore for triggering thread to do work
@@ -44,7 +44,7 @@ Fix pthread_cancel deadlocks on NetBSD:
  	inline void thread_wait() { do_work.acquire(); }
  	inline void thread_trigger() { do_work.release(); }
  
-@@ -458,6 +473,12 @@ namespace Runner {
+@@ -452,6 +467,12 @@ namespace Runner {
  		}
  	}
  
@@ -57,7 +57,7 @@ Fix pthread_cancel deadlocks on NetBSD:
  	//? ------------------------------- Secondary thread: async launcher and drawing ----------------------------------
  	static void * _runner(void *) {
  		//? Block some signals in this thread to avoid deadlock from any signal handlers trying to stop this thread
-@@ -468,8 +489,10 @@ namespace Runner {
+@@ -462,8 +483,10 @@ namespace Runner {
  		sigaddset(&mask, SIGTERM);
  		pthread_sigmask(SIG_BLOCK, &mask, nullptr);
  
@@ -70,7 +70,7 @@ Fix pthread_cancel deadlocks on NetBSD:
  
  		//* ----------------------------------------------- THREAD LOOP -----------------------------------------------
  		while (not Global::quitting) {
-@@ -725,12 +748,22 @@ namespace Runner {
+@@ -719,12 +742,22 @@ namespace Runner {
  
  			//? If overlay isn't empty, print output without color and then print overlay on top
  			const bool term_sync = Config::getB("terminal_sync");
@@ -93,13 +93,3 @@ Fix pthread_cancel deadlocks on NetBSD:
  		return {};
  	}
  	//? ------------------------------------------ Secondary thread end -----------------------------------------------
-@@ -744,6 +777,9 @@ namespace Runner {
- 			// exit(1);
- 			pthread_cancel(Runner::runner_id);
- 
-+			//? Wake thread from sem_wait so it can process the cancellation
-+			thread_trigger();
-+
- 			// Wait for the thread to actually terminate before creating a new one
- 			void* thread_result;
- 			int join_result = pthread_join(Runner::runner_id, &thread_result);
