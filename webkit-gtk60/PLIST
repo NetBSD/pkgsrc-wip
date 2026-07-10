@@ -101,10 +101,10 @@ lib/girepository-1.0/WebKit-6.0.typelib
 lib/girepository-1.0/WebKitWebProcessExtension-6.0.typelib
 lib/libjavascriptcoregtk-6.0.${RUBY_DLEXT}
 lib/libjavascriptcoregtk-6.0.so.1
-lib/libjavascriptcoregtk-6.0.so.1.7.12
+lib/libjavascriptcoregtk-6.0.so.1.7.13
 lib/libwebkitgtk-6.0.${RUBY_DLEXT}
 lib/libwebkitgtk-6.0.so.4
-lib/libwebkitgtk-6.0.so.4.16.8
+lib/libwebkitgtk-6.0.so.4.16.9
 lib/pkgconfig/javascriptcoregtk-6.0.pc
 lib/pkgconfig/webkitgtk-6.0.pc
 lib/pkgconfig/webkitgtk-web-process-extension-6.0.pc
