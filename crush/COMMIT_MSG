@@ -1,28 +1,20 @@
-crush: Update to v0.81.0
+crush: Update to 0.84.0
+
+v0.84.0 Latest
 
 Changelog
 New!
-b39a85e: feat(herdr): add herdr socket integration (@taciturnaxolotl)
-b72f9aa: feat(ui): add scrollbar to chat view (#3018) (@andreynering)
-db8add7: feat(ui): allow expanding toolcall names (@taciturnaxolotl)
-
+ebd845c: feat(agent): send session hash in header for cache affinity (@meowgorithm)
 Fixed
-f75435a: fix(agent): fall back to first reasoning level when default is unset (#3218) (@syf2211)
-d3d6804: fix(agent): prevent session bricking when non-vision models receive tool result media (@taciturnaxolotl)
-a08e332: fix(bash): keep TruncateOutput from splitting UTF-8 characters (@feizhuzheng)
-1535ebb: fix(config): prevent stale ReasoningEffort from leaking across providers (#3209) (@huaiyuWangh)
-d4dc84e: fix(config): prevent startup deadlock when configured model ID is invalid (@taciturnaxolotl)
-188dea6: fix(fsext): DirTrim renders wrong character for non-ASCII directory names (#3214) (@feizhuzheng)
-a07d304: fix(hyper): refresh hyper oauth token before fetching credits (#3212) (@andreynering)
-a1b19eb: fix(prompts): unindent heredoc (@taciturnaxolotl)
-a9e3a57: fix(shell): skip persistence when session no longer exists (@syf2211)
-3a99992: fix(ui): ansi.truncate instead of byte slicing in todos (@taciturnaxolotl)
-9c61c7d: fix(ui): use ansi.truncate everywhere (@taciturnaxolotl)
-3295a08: fix: cache streaming thinking renders to avoid CPU burn during long reasoning traces (@taciturnaxolotl)
+5b61432: fix(release): drop broken .termux.deb artifact (#2848) (@Ricardo-M-L)
+e3074f1: fix(server): show update notices in client-server mode (@meowgorithm)
 
+v0.83.0 Latest
+
+Changelog
+New!
+d0dc9fc: feat: prepare for gpt-5.6 (#3270) (@andreynering)
+Fixed
+cb12920: fix(bangmode): don't add extra ! when browsing history (@meowgorithm)
 Other stuff
-5c934c3: chore: auto-update files (@charmcli)
-f645040: chore: auto-update files (@charmcli)
-fcccdfe: chore: auto-update files (@charmcli)
-358d75d: chore: regen golden files (@taciturnaxolotl)
-
+72c5668: system prompt: avoid emdashes in source code (@meowgorithm)
