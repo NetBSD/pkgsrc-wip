@@ -26,10 +26,9 @@ CMAKE_CONFIGURE_ARGS+=	-DWHISPER_COMMON_FFMPEG=ON
 CMAKE_CONFIGURE_ARGS+=	-DWHISPER_SDL2=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWHISPER_USE_SYSTEM_GGML=ON
 
+.include "../../devel/cmake/build.mk"
 #.include "../../devel/SDL2/buildlink3.mk"
 .include "../../multimedia/ffmpeg8/buildlink3.mk"
-.include "../../wip/llama.cpp/buildlink3.mk"
 .include "../../math/ggml/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
