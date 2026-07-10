@@ -14,8 +14,6 @@ USE_LANGUAGES=	c
 
 CARGO_WRKSRC=	${WRKSRC}/crates/teamtype
 
-# WRKSRC=		${WRKDIR}/${DISTNAME}/daemon
-
 INSTALLATION_DIRS+=	share/doc/teamtype
 
 post-install:
