@@ -1,1 +1,3 @@
-Odin language server including the odinfmt tool.
+Language server for Odin. This project is still in early development.
+
+Note: This project is made to be up to date with the master branch of Odin.
