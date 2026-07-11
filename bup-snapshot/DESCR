@@ -20,5 +20,5 @@ know which backup is based on which other one - even if the backups are made
 from two different computers that don't even know about each other. You just
 tell bup to back stuff up, and it saves only the minimum amount of data needed.
 
-This package tracks bup's master branch from git.  It exists for
-testing and is not recommended for production use.
+This package tracks bup's main branch.  It exists for testing and is
+not recommended for production use.
