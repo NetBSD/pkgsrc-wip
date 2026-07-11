@@ -1,0 +1,75 @@
+zutils: Upgrade to 1.16
+
+2026-02-07  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 1.16 released.
+	* zcmp.cc (getnum): Accept underscore separators ('_').
+	  Print large numbers with underscore separators ('_').
+	* zgrep.cc: Assign short option name '-?' to '--help'.
+	* *.cc: (show_help): Print "*Exit status*" for section in man page.
+	* Makefile.in (install-bin): Warn of changes in /etc/zutils.conf.
+
+2025-05-27  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 1.15 released.
+	* zcat, ztest, zupdate: New option '-x, --exclude'.
+	* zgrep: New option '--exclude'.
+	* zgrep.cc: Exit with status 2 if write error on stdout.
+
+2025-01-05  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 1.14 released.
+	* zupdate.cc: '-r -d' now keeps last component of dir arguments.
+	* zutils.texi: New chapter 'Syntax of command-line arguments'.
+	* check.sh: Use 'cp' instead of 'cat'.
+
+2024-01-23  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 1.13 released.
+	* zutils.cc (test_format): Fix detection of bzip2 with no blocks.
+	* rc.h (format_order): Put fmt_gz before fmt_bz2.
+	* zcmpdiff.cc (open_other_instream): Try also other compressed formats.
+	* zcmp.cc (cmp): Report EOF on empty file like GNU cmp.
+	* zupdate.cc: Reformat file diagnostics as 'PROGRAM: FILE: MESSAGE'.
+	* Replace 'verify' with 'check'.
+	* configure, Makefile.in: New variable 'MAKEINFO'.
+
+2023-01-07  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 1.12 released.
+	* zutilsrc: Rename to zutils.conf. Search for it in $XDG_CONFIG_HOME.
+	  (Suggested by Adam Tuja).
+	* Allow '-O, --force-format' force also uncompressed format.
+	* zcmp.cc: New option '-H, --hexadecimal'.
+	  Change long name of option '-s' to '--script'.
+	  (Following a similar change made to GNU ed).
+	  Assign short name '-q' to options '--quiet' and '--silent'.
+	  Separate option '-l, --list' from '-v, --verbose'.
+	  (cmp): Print byte and line in EOF message like GNU cmp.
+	* zgrep.cc: New options '-G, --basic-regexp', '--label=<label>',
+	  '--line-buffered', '-P, --perl-regexp', '--silent',
+	  '-T, --initial-tab', '-U, --binary'. (Reported by Chris Jamboretz).
+	  New option '-Z, --null'. (Reported by Leah Neukirchen).
+	* ztest.cc: Exit with status 2 if a file has wrong extension.
+	* zupdate.cc: New options '-d, --destdir', '-e, --expand-extensions',
+	  '-i, --ignore-errors'. ('-i' suggested by Antoni Sawicki).
+	  (zupdate_file): Pass '-q -s' to zcmp if verbosity < 0.
+	* Support compress'd (.Z) files through gzip in all utilities.
+	* rc.cc (show_version): Print the versions of the compressors used.
+	  (show_option_error): New function showing argument and option name.
+	* zutils.texi: Document that format is detected by its magic bytes.
+	* check.sh: Test tarlz (if available) as compressor for zupdate.
+
+2022-01-25  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 1.11 released.
+	* zcmp.cc, zdiff.cc (main): Fix race returning 1 instead of 2 when a
+	  compressor is not found or when the wrong format is forced.
+	* zcmp.cc (getnum): Show option name and valid range if error.
+	* All utilities: Show option name if error in option argument.
+	* Add support for zstd format to all utilities.
+	* 'zdiff -v -V' now prints the version of the diff program used.
+	* 'zgrep --verbose -V' now prints the version of the grep program used.
+	* zutils.texi: Document recompression of read-only files by linking.
+	* zutils.texi: Change GNU Texinfo category to 'Compression'.
+	  (Reported by Alfred M. Szmidt).
