@@ -1,20 +1,5 @@
-crush: Update to 0.84.0
-
-v0.84.0 Latest
+crush: Update to 0.84.1
 
 Changelog
-New!
-ebd845c: feat(agent): send session hash in header for cache affinity (@meowgorithm)
-Fixed
-5b61432: fix(release): drop broken .termux.deb artifact (#2848) (@Ricardo-M-L)
-e3074f1: fix(server): show update notices in client-server mode (@meowgorithm)
+5a7899e chore(deps): bump fantasy (0.35.2 -> 0.36.0) (@coloryourlife)
 
-v0.83.0 Latest
-
-Changelog
-New!
-d0dc9fc: feat: prepare for gpt-5.6 (#3270) (@andreynering)
-Fixed
-cb12920: fix(bangmode): don't add extra ! when browsing history (@meowgorithm)
-Other stuff
-72c5668: system prompt: avoid emdashes in source code (@meowgorithm)
