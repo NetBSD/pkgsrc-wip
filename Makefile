@@ -607,6 +607,7 @@ SUBDIR+=	copytape
 SUBDIR+=	coreclr-git
 SUBDIR+=	corefx-git
 SUBDIR+=	corert-git
+SUBDIR+=	corrosion
 SUBDIR+=	cortex-var
 SUBDIR+=	cortextool
 SUBDIR+=	cosmo-engine
