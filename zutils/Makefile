@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.13 2021/02/12 07:27:48 nia Exp $
-#
 
 DISTNAME=	zutils-1.16
 CATEGORIES=	archivers
@@ -19,21 +18,16 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 USE_LANGUAGES=		c++
-AUTO_MKDIRS=		yes
 USE_TOOLS+=		gmake
 
 INFO_FILES=		yes
 
-CONF_FILES+= \
-	${PREFIX}/share/examples/zutils/zutils.conf \
-	${PKG_SYSCONFDIR}/zutils.conf
+CONF_FILES+=	${PREFIX}/share/examples/zutils/zutils.conf ${PKG_SYSCONFDIR}/zutils.conf
 
-EGDIR=	${PREFIX}/share/examples/zutils
+EGDIR=			${PREFIX}/share/examples/zutils
+INSTALLATION_DIRS=	${EGDIR}
 
 post-install:
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/zutils.conf
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/zutils.conf ${DESTDIR}${EGDIR}/zutils.conf
-
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/zutils.conf ${DESTDIR}${EGDIR}/zutils.conf
 
 .include "../../mk/bsd.pkg.mk"
