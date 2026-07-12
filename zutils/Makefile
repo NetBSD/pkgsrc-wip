@@ -32,7 +32,6 @@ EGDIR=	${PREFIX}/share/examples/zutils
 
 post-install:
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/zutils.conf
-
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/zutils.conf ${DESTDIR}${EGDIR}/zutils.conf
 
