@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/ed
+bin/red
+info/ed.info
+man/man1/ed.1
+man/man1/red.1
