@@ -6304,7 +6304,6 @@ SUBDIR+=	zodiac
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
 SUBDIR+=	zuse
-SUBDIR+=	zutils
 SUBDIR+=	zynaddsubfx
 
 ${.CURDIR}/PKGDB:
