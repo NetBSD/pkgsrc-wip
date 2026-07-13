@@ -2,4 +2,7 @@
 bin/sd-cli
 bin/sd-server
 include/stable-diffusion.h
+lib/cmake/stable-diffusion/stable-diffusion-config.cmake
+lib/cmake/stable-diffusion/stable-diffusion-version.cmake
 lib/libstable-diffusion.a
+lib/pkgconfig/stable-diffusion.pc
