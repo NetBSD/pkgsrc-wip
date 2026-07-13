@@ -101,6 +101,7 @@ Suggested package updates
 	o mupen64-0.5
 	o mythtv-0.28.0
 	o nautilus-open-terminal-0.19
+	o neatvnc-1.0.1
 	o nscde-2.3
 	o offpunk-3.0
 	o ogmrip-1.0.0
@@ -155,6 +156,7 @@ Suggested package updates
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
 	o virtualbox-7.2
+	o wayvnc-0.10.1
 	o weston-15.0
 	o wkhtmltopdf-0.12.4
 	o xaralx-bin-0.7.1692
