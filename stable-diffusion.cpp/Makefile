@@ -17,24 +17,24 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DSD_USE_SYSTEM_WEBP=ON
-CMAKE_CONFIGURE_ARGS+=	-DSD_USE_SYSTEM_GGML=ON
-# the libwebm source code provides neither .pc nor .cmake files for auto-detection
-# so we need to use the git submodule
-#CMAKE_CONFIGURE_ARGS+=	-DSD_USE_SYSTEM_WEBM=ON
-#CMAKE_CONFIGURE_ARGS+=	-DWEBM_INCLUDE_DIR=${BUILDLINK_PREFIX.libwebm}/include
-#CMAKE_CONFIGURE_ARGS+=	-DWEBM_LIBRARY=${BUILDLINK_PREFIX.libwebm}/lib/libwebm.so
+#CMAKE_CONFIGURE_ARGS+=	-DSD_USE_SYSTEM_GGML=ON
+CMAKE_CONFIGURE_ARGS+=	-DSD_USE_SYSTEM_WEBM=ON
 
 # upstream always uses the latest commit; for pkgsrc use git head
 # commits as of packaging date, update them when updating this package
-GITHUB_SUBMODULES+=	leejet ggml 3af5f5760e19a96427f5f7a93b79cbdf3d4b265b ggml
+GITHUB_SUBMODULES+=	leejet ggml eced84c86f8b012c752c016f7fe789adea168e1e ggml
 GITHUB_SUBMODULES+=	leejet sdcpp-webui c4bce3d6b3f236614cca21014f076083b7270ba8 examples/server/frontend
-GITHUB_SUBMODULES+=	webmproject libwebm 6184f4484a826724b5293837134ab9492261b941 thirdparty/libwebm
 
 PKGCONFIG_OVERRIDE+=	cmake/stable-diffusion.pc.in
 
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libggml*
+
 BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.6.0nb2
 .include "../../graphics/libwebp/buildlink3.mk"
-#.include "../../wip/libwebm/buildlink3.mk"
-.include "../../math/ggml/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libwebm+=	libwebm>=1.0.0.32nb1
+.include "../../wip/libwebm/buildlink3.mk"
+# uses: #include "ggml/src/ggml-impl.h" so needs internal copy
+#.include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
