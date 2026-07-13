@@ -17,3 +17,4 @@ include/webm/reader.h
 include/webm/status.h
 include/webm/webm_parser.h
 lib/libwebm.so
+lib/pkgconfig/libwebm.pc
