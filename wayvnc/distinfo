@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (wayvnc-0.10.0.tar.gz) = 0ae8d7a5afb4785e5ec9c548774068d1085eabee536029cc4c8ba7bb901ee02b
-SHA512 (wayvnc-0.10.0.tar.gz) = 4714807754142603d781ad3dff02cfbd9b03ec608e87a4b7cc361212d42c9d8d03ce8c440c0866ab38878847efd4e15063b08ae985d606410419162bbd23b06f
-Size (wayvnc-0.10.0.tar.gz) = 141451 bytes
+BLAKE2s (wayvnc-0.10.1.tar.gz) = 67695c3ac3bb75b75190eb8cfd9bbb6bae81a0750927857890886d3ca7b01c02
+SHA512 (wayvnc-0.10.1.tar.gz) = 62aa6d620cffc7a9bd493a86d413ea89ef6e4d9e97bcfb9bbbe13a89e88d84d6a0b6300656c9237957852ac8b8abbbc31e1c617ebf99b2ca9e283ced6325c82e
+Size (wayvnc-0.10.1.tar.gz) = 141664 bytes
