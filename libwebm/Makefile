@@ -16,6 +16,8 @@ USE_LANGUAGES=	c++
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
+# upstream doesn't provide a pkg-config file, so make one
+# https://issues.webmproject.org/issues/534208996
 SUBST_CLASSES+=		pc
 SUBST_FILES.pc+=	libwebm.pc
 SUBST_VARS.pc+=		PREFIX
