@@ -841,7 +841,6 @@ SUBDIR+=	ecb
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	eclipse
 SUBDIR+=	ecrire
-SUBDIR+=	ed
 SUBDIR+=	edb-debugger
 SUBDIR+=	edb-debugger-git
 SUBDIR+=	ede21
