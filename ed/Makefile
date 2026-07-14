@@ -32,6 +32,4 @@ post-install:
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
 
-
-
 .include "../../mk/bsd.pkg.mk"
