@@ -1,0 +1,18 @@
+$NetBSD$
+
+https://github.com/linux-test-project/lcov/issues/496
+
+--- Makefile.orig	2026-07-15 16:08:48.387376806 +0000
++++ Makefile
+@@ -190,9 +190,9 @@ endif
+ 	done
+ endif
+ 	for d in example tests ; do \
+-		( cd $$d ; make clean ) ; \
++		( cd $$d ; $(MAKE) clean ) ; \
+ 		find $$d -type d -exec mkdir -p -m 755 "$(SHARE_INST_DIR)/{}" \; ; \
+-		find $$d -type f -exec $(INSTALL) -Dm 644 "{}" "$(SHARE_INST_DIR)/{}" \; ; \
++		find $$d -type f -exec $(INSTALL) -m 644 "{}" "$(SHARE_INST_DIR)/{}" \; ; \
+ 	done
+ 	@chmod -R ugo+x $(SHARE_INST_DIR)/tests/bin
+ 	@find $(SHARE_INST_DIR)/tests \( -name '*.sh' -o -name '*.pl' \) -exec chmod ugo+x {} \;

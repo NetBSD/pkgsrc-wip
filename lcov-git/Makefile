@@ -20,6 +20,9 @@ DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
 USE_TOOLS+=	bash:run gmake perl
 
+# c, but c++ for testing
+USE_LANGUAGES=	c c++
+
 BUILD_TARGET=	doc_finished
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
@@ -27,19 +30,26 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	CFG_INST_DIR=${DESTDIR}${PREFIX}/share/examples/lcov
+MAKE_FLAGS+=	SHELL=bash
 
 CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
 REPLACE_BASH+=	bin/checkstyle.sh
 REPLACE_BASH+=	bin/copy_dates.sh
+REPLACE_BASH+=	bin/get_changes.sh
+REPLACE_BASH+=	bin/get_version.sh
+REPLACE_BASH+=	tests/*/*.sh
+REPLACE_BASH+=	tests/*/*/*.sh
+REPLACE_BASH+=	tests/bin/test_run
+REPLACE_BASH+=	tests/bin/test_skip
+REPLACE_BASH+=	tests/bin/testsuite_exit
+REPLACE_BASH+=	tests/bin/testsuite_init
 REPLACE_PERL+=	bin/fix.pl
 REPLACE_PERL+=	bin/gendesc
 REPLACE_PERL+=	bin/genhtml
 REPLACE_PERL+=	bin/geninfo
 REPLACE_PERL+=	bin/genpng
-REPLACE_BASH+=	bin/get_changes.sh
-REPLACE_BASH+=	bin/get_version.sh
 REPLACE_PERL+=	bin/lcov
 REPLACE_PERL+=	bin/llvm2lcov
 REPLACE_PERL+=	bin/perl2lcov
@@ -53,14 +63,27 @@ REPLACE_PERL+=	scripts/gitdiff
 REPLACE_PERL+=	scripts/gitversion
 REPLACE_PERL+=	scripts/p4annotate
 REPLACE_PERL+=	scripts/p4udiff
+REPLACE_PERL+=	tests/bin/check_counts
+REPLACE_PERL+=	tests/bin/checkdeps
+REPLACE_PERL+=	tests/bin/mkinfo
+REPLACE_PERL+=	tests/genhtml/filter/filter.pl
+# should be *.pl
+# https://github.com/linux-test-project/lcov/issues/496
+REPLACE_PERL+=	tests/genhtml/insensitive/annotate.sh
+REPLACE_PERL+=	tests/genhtml/insensitive/version.sh
+REPLACE_PERL+=	tests/genhtml/simple/annotate.sh
+REPLACE_PERL+=	tests/lcov/demangle/simplify.pl
 
 REPLACE_PYTHON+=	bin/py2lcov
 REPLACE_PYTHON+=	bin/xml2lcov
 REPLACE_PYTHON+=	bin/xml2lcovutil.py
 REPLACE_PYTHON+=	scripts/*.py
+REPLACE_PYTHON+=	tests/bin/cleantests.py
+REPLACE_PYTHON+=	tests/bin/common.py
+REPLACE_PYTHON+=	tests/bin/runtests.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/tool.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/tool.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
