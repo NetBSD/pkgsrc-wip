@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.35 2026/01/05 02:53:36 wiz Exp $
+
+BLAKE2s (opencv-5.0.0.tar.gz) = 42d24b05b62365d961781149deaa7726357ba39cdea6e87c0cb93ff7b8168c13
+SHA512 (opencv-5.0.0.tar.gz) = 37143de2ba76a9af351d6901358635b42b671b5fbe3ccc75d4d27133b0a6c6a0400564e6eaf228fc1705e25a2af09c8e2638039ca9af0ce9428da253dd31d3e0
+Size (opencv-5.0.0.tar.gz) = 81594270 bytes
+BLAKE2s (opencv-5.0.0_face_landmark_model.dat) = 27a36ff06273b7bf77d3a01742348482c129788e6baaa08c07d4d5b3803e57b0
+SHA512 (opencv-5.0.0_face_landmark_model.dat) = c16e60a6c4bb4de3ab39b876ae3c3f320ea56f69c93e9303bd2dff8760841dcd71be4161fff8bc71e8fe4fe8747fa8465d49d6bd8f5ebcdaea161f4bc2da7c93
+Size (opencv-5.0.0_face_landmark_model.dat) = 72368157 bytes
+BLAKE2s (opencv_contrib-5.0.0.tar.gz) = c0ff9f09c9a0aaab65cbd8a24757c32e096f2a2243a598703d837944c311b8be
+SHA512 (opencv_contrib-5.0.0.tar.gz) = 09841f4637f6a51a5e12a5516710e61a3cedd2622455366004cd9e35484a6d03cc9c12de52edae4072dc37af104d7fd9099201effee82c52dd40b8a58c51fdc5
+Size (opencv_contrib-5.0.0.tar.gz) = 72465981 bytes
+SHA1 (patch-.._opencv__contrib-5.0.0_modules_face_CMakeLists.txt) = 9b8ac02fefd731bec7ced79cd8707336e30fa988
+SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
+SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
+SHA1 (patch-modules_core_src_hal__internal.cpp) = 0f243428337a6e60a8f72cd579941099081d2ecd
+SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
+SHA1 (patch-modules_imgproc_src_resize.cpp) = e842d5960c4c00162a34f46cb45cf69d0e9f21ce
+SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = 362fe667a8b5ee9d556036ef97121eb5ff503602

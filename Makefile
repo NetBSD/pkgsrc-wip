@@ -2774,6 +2774,7 @@ SUBDIR+=	openca
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
 SUBDIR+=	opencv
+SUBDIR+=	opencv-contrib-face
 SUBDIR+=	opendbx
 SUBDIR+=	opendchub
 SUBDIR+=	opendkim
