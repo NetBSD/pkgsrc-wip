@@ -1,0 +1,30 @@
+$NetBSD$
+
+Demote GCC 14 hard errors back to warnings for this K&R-era codebase.
+
+There is no active upstream maintainer and no upstream bug tracker.
+The original source is available via pkgsrc ham/dpbox.
+
+GCC 14 promotes implicit-int, implicit-function-declaration, and
+int-conversion from warnings to hard errors by default.  dpbox predates
+ANSI C prototypes in many places (old-style K&R function definitions
+with untyped parameters, calls to library functions without prototypes,
+and char*/unsigned char* mismatches), which stops the build cold on
+modern toolchains.  Add -Wno-error= for those three categories to both
+CFLAGS and CRAWLERCFLAGS so the package builds while the source is
+gradually modernized upstream.  The warnings remain visible; only their
+error status is suppressed.
+
+--- Makefile.netbsd.orig	2026-07-08 00:22:54.058653992 +0000
++++ Makefile.netbsd	2026-07-08 00:22:54.073512826 +0000
+@@ -35,8 +35,8 @@
+ DEFS		= $(SYSTEM) $(NOSHELL)
+ CC		= gcc
+ CPP		= $(CC) -E
+-CFLAGS		= -Wall -O2 -funsigned-char -fomit-frame-pointer -fno-strength-reduce
+-CRAWLERCFLAGS	= -Wall -O3 -funsigned-char -fomit-frame-pointer -fno-strength-reduce
++CFLAGS		= -Wall -O2 -funsigned-char -fomit-frame-pointer -fno-strength-reduce -Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-error=int-conversion
++CRAWLERCFLAGS	= -Wall -O3 -funsigned-char -fomit-frame-pointer -fno-strength-reduce -Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-error=int-conversion
+ LD		= $(CC)
+ LDFLAGS		= -s
+ LIBS		= -lm
