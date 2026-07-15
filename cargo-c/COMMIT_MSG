@@ -1,0 +1,4 @@
+devel/cargo-c: update to 0.10.24
+
+ - cargo 0.98
+ - itertools 0.15
