@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (elinks-0.18.0.tar.gz) = 067ce5a7ebb5459441a562f327bfd46d02256369d81292d1e9aa0519abc51b7c
-SHA512 (elinks-0.18.0.tar.gz) = ee9d11c0a85e52c389fcc5f9652d16a327f80157f901c615ea5d164fe25ee067c41483cdd2d04398c7362b683bc826825dbfbd4e973de66360b17be0f8707f42
-Size (elinks-0.18.0.tar.gz) = 4165154 bytes
+BLAKE2s (elinks-0.19.1.tar.gz) = fbcd1e11a1558597e797f7310e2ef83a1994a7855c1c8286c2459bbb8d9ecb08
+SHA512 (elinks-0.19.1.tar.gz) = c8636353638a777f78d901b1a5a5fe83dfb379ed26757cc7a2414aec68f7e072ff5e07dcb015e52efdfb00995f7d967928aaa92e7896e8fc7979d2bd6e88c08f
+Size (elinks-0.19.1.tar.gz) = 4361600 bytes
 SHA1 (patch-src_util_memory.c) = ed647d98044ad8bb519412b0ac99ac718514d3b5
