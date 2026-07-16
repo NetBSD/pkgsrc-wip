@@ -17,6 +17,8 @@ USE_TOOLS+=	perl gmake
 
 .include "cargo-depends.mk"
 
+RCD_SCRIPTS=	taskchampion_sync_server
+
 INSTALLATION_DIRS=	bin
 
 do-install:
