@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (Electrum-4.7.2.tar.gz) = 95a9a07aac1a8b6d0f4618bed1ce7654211813cf402aac7414c5f750a8682972
-SHA512 (Electrum-4.7.2.tar.gz) = 7ecd72df4e2c26c42287ab7a68459dcfd2afe96d5288995f358a5aea51097e4537595209962c3940651d2aa22914961fa2d681f34c7cd19eceaf2a19f9c76282
-Size (Electrum-4.7.2.tar.gz) = 11887365 bytes
+BLAKE2s (Electrum-4.8.0.tar.gz) = acb26f1a7d13c04747f42956f9fbd79c91b07569e832608eca530f280fef200e
+SHA512 (Electrum-4.8.0.tar.gz) = a92f19becc2ecae048db5d8d8c945dee5231b9fef1728441dc754906aea2019e96edd69ae005688c5b694bc47d16c9e5007dc04039ad2e45795081ab2e79aace
+Size (Electrum-4.8.0.tar.gz) = 12063498 bytes
 SHA1 (patch-setup.py) = b0173c6a764b41a29370222b15f441f6d1294797
