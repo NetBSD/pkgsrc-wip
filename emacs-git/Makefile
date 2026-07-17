@@ -1,8 +1,5 @@
 # $NetBSD$
 
-# https://lists.gnu.org/archive/html/bug-gnu-emacs/2026-07/msg00428.html
-MAKE_JOBS_SAFE=	no
-
 DISTNAME=	emacs-32.0.50
 PKGNAME=	${DISTNAME:S/emacs/emacs32/}
 CATEGORIES=	editors
