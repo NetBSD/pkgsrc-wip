@@ -1,14 +1,13 @@
-- platforms other than NetBSD (Linux, and FreeBSD)?
+- build package on platforms other than NetBSD
 
   PFKEYV2 and XFRM are pretty esoteric.
 
   Libreswan builds on Fedora, Debian, Alpine (they each have their own
   packaing quirks), FreeBSD, NetBSD, OpenBSD.
 
-  not sure about this package
-
 - add following entries to pkg-vulnerabilities
 
+libreswan<5.3.2		denial-of-service	https://libreswan.org/security/CVE-2026-14957/CVE-2026-14957.txt
 libreswan<5.3.1		denial-of-service	https://libreswan.org/security/CVE-2026-12413/CVE-2026-12413.txt
 libreswan<5.3.1		denial-of-service	https://libreswan.org/security/CVE-2026-50721/CVE-2026-50721.txt
 libreswan<5.3.1		denial-of-service	https://libreswan.org/security/CVE-2026-50722/CVE-2026-50722.txt
