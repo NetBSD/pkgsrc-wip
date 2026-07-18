@@ -2187,6 +2187,7 @@ SUBDIR+=	libretro-px68k
 SUBDIR+=	libretro-tyrquake
 SUBDIR+=	libretro-yabause
 SUBDIR+=	librewolf
+SUBDIR+=	librist
 SUBDIR+=	librocket
 SUBDIR+=	libs-gui
 SUBDIR+=	libscscp
