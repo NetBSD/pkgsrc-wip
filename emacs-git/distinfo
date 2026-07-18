@@ -1,3 +1,4 @@
 $NetBSD$
 
-SHA1 (patch-Makefile.in) = 1babbbeda525935718778225ccc0cc2d0e118454
+SHA1 (patch-lib_getopt-pfx-ext.h) = 2a7a18a5fd467a0217eff4e983f237f42ec9281c
+SHA1 (patch-lib_getopt1.c) = 1aa0c9571db526b9cf7c980b725aefa88587c525
