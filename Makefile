@@ -5551,6 +5551,7 @@ SUBDIR+=	squirrelmail-vlogin
 SUBDIR+=	sra-tools
 SUBDIR+=	src
 SUBDIR+=	srecord
+SUBDIR+=	srt
 SUBDIR+=	srvx
 SUBDIR+=	sselp
 SUBDIR+=	ssh_ping

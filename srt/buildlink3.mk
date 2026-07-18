@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	srt
+
+.if !defined(SRT_BUILDLINK3_MK)
+SRT_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.srt+=	srt>=1.5.5
+BUILDLINK_ABI_DEPENDS.srt+=	srt>=1.5.5
+BUILDLINK_PKGSRCDIR.srt?=	../../wip/srt
+
+.endif # SRT_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-srt

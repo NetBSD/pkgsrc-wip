@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (srt-1.5.5.tar.gz) = 5e1e6d8e3903ae92e70ff94b56b2cdecdc5743852d08564d1d3019be9d26429e
+SHA512 (srt-1.5.5.tar.gz) = afb35de76be5c1b8558b3956586b8b7b044aa7709d7ce1b99b6b55e54f72c604eea50ae44962985c68ef681a69accb0a2a7f6a8678b8165e2aeee93632a0ff2f
+Size (srt-1.5.5.tar.gz) = 1776410 bytes

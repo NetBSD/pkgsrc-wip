@@ -1,0 +1,11 @@
+Secure Reliable Transport (SRT) is a transport protocol for ultra low
+(sub-second) latency live video and audio streaming, as well as for
+generic bulk data transfer.
+
+SRT is applied to contribution and distribution endpoints as part of a
+video stream workflow to deliver the best quality and lowest latency video
+at all times.
+
+Secure:	Encrypts video streams
+Reliable: Recovers from severe packet loss
+Transport: Dynamically adapts to changing network conditions
