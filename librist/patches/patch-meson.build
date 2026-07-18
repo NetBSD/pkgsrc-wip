@@ -1,0 +1,17 @@
+$NetBSD$
+
+Add NetBSD
+
+--- meson.build.orig	2026-07-16 13:46:37.557395415 +0000
++++ meson.build
+@@ -154,6 +154,10 @@ void test(void) {
+ 			platform_files += 'compat/android/ifaddrs.c'
+ 			inc += include_directories('compat/android')
+ 		endif
++	elif host_machine.system() == 'netbsd'
++		platform_files += 'src/tun_netbsd.c'
++		test_args += '-D_NETBSD_SOURCE'
++		add_project_arguments('-D_NETBSD_SOURCE', language: 'c')
+ 	elif host_machine.system() == 'darwin'
+ 		platform_files += 'src/tun_darwin.c'
+ 		test_args += '-D_DARWIN_C_SOURCE'

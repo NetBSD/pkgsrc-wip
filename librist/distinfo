@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (librist-v0.2.18.tar.gz) = 693988ac9c99f6b38e8e21864cc81212ce00f449e626309ed0b59761948dd7df
+SHA512 (librist-v0.2.18.tar.gz) = f561e48bb0949e702ee1765f9998fdce191dfda2011855b089ae0f3552618bb5599b1b9a1c73355d1d1e8fffd1100eb8e64365d140d1c5958127738536c72704
+Size (librist-v0.2.18.tar.gz) = 3420093 bytes
+SHA1 (patch-meson.build) = 77db82d2c82f22f65abae49fcbcc2011a672543c
+SHA1 (patch-src_udpsocket.c) = 7aa97d4327f1c38a13d21a9b123f49f31d834573
