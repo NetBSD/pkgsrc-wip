@@ -4500,6 +4500,7 @@ SUBDIR+=	py-promise
 SUBDIR+=	py-property-manager
 SUBDIR+=	py-propyte
 SUBDIR+=	py-proxy_tools
+SUBDIR+=	py-prysk
 SUBDIR+=	py-psamm
 SUBDIR+=	py-pseudopy
 SUBDIR+=	py-pseudorandom

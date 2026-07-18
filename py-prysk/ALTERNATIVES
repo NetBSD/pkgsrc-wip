@@ -1,0 +1,1 @@
+bin/prysk @PREFIX@/bin/prysk-@PYVERSSUFFIX@
