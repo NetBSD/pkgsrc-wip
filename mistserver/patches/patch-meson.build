@@ -1,0 +1,14 @@
+$NetBSD$
+
+Add libexecinfo to linker
+
+--- meson.build.orig	2026-07-15 02:32:00.001123045 +0000
++++ meson.build
+@@ -131,6 +131,7 @@ endif
+ 
+ if ccpp.has_header('execinfo.h')
+   option_defines += '-DHASEXECINFO'
++  mist_deps += ccpp.find_library('execinfo', required : true)
+ endif
+ 
+ if ccpp.has_header('sys/wait.h')

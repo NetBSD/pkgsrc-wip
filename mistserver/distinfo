@@ -1,5 +1,10 @@
 $NetBSD$
 
-RMD160 (mistserver-2.18.1.tar.gz) = ef038e7afc611ba67fea9fc1c6c02d7422bb1d2a
-SHA512 (mistserver-2.18.1.tar.gz) = 671574687ecabf9b8134f2eef033b66fd13cc4463e2edcf34fe69ff9221b30ddb7ce6a6db3d82708c21fad0910bd0225c483060d36058e0ba778eadd5b8c6e82
-Size (mistserver-2.18.1.tar.gz) = 8506200 bytes
+BLAKE2s (mistserver-3.10.tar.gz) = 6dcb7b0b5de28ff8de7e98c922967c19e001a80bd8b987af479a44396e83e8ed
+SHA512 (mistserver-3.10.tar.gz) = 836b7e9903333cb6d333fb2d0f48a727a3cd233e50103e933d1a76385f2fc6fea3b6d7f573bb7b58dab7b7f98194a56e17bb461a05f1d95fc7b6e250231c7950
+Size (mistserver-3.10.tar.gz) = 5381968 bytes
+SHA1 (patch-lib_defines.h) = b33dba125fd161629010978c95633a19b215b69e
+SHA1 (patch-lib_procs.cpp) = 4dc0e0d3fd7e6050015aa8fc1069278a57e951b9
+SHA1 (patch-lib_socket.cpp) = 51e4468c1f74146575a99c758571f515c6468444
+SHA1 (patch-lib_socket__srt.cpp) = 0252d091650f0cd9d6a77cf6f6e155de2f32cf43
+SHA1 (patch-meson.build) = 5c5c827d9e505d709d6d039af8a0b1a25ca67b17

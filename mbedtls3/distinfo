@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2025/04/24 17:14:50 hauke Exp $
+
+BLAKE2s (mbedtls-3.6.3.tar.bz2) = 3832be62732ff5bc620812706e01a9913dd137920e0dada64201a32b972ca356
+SHA512 (mbedtls-3.6.3.tar.bz2) = 2bde64f2581347ac01d3d0c50dc8fc7ff09ceb11d44ba24e54f137a05316a326c97c792286a4d81b6335c10b1fa4c21962a6b75f8bb7c29ca514e7fc545da7da
+Size (mbedtls-3.6.3.tar.bz2) = 5138248 bytes
+SHA1 (patch-include_mbedtls_mbedtls__config.h) = e887770cca9f97bde359415342f65ab8536645f3
