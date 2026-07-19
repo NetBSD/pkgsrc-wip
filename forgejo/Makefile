@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	forgejo-src-15.0.2
+DISTNAME=	forgejo-src-16.0.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	www devel
 MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/v${DISTNAME:S/forgejo-src-//}/
