@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	master-775-b5d8120
+DISTNAME=	master-782-b290693
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/master-//:C/-[0-9a-z]*$//}
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leejet/}
