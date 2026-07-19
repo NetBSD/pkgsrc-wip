@@ -1,9 +1,12 @@
 # $NetBSD$
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.axel
-PKG_SUPPORTED_OPTIONS=		nls ssl
-PKG_SUGGESTED_OPTIONS=		nls ssl
+
+PKG_SUPPORTED_OPTIONS=		nls
+PKG_SUGGESTED_OPTIONS=		nls openssl
+
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
-PKG_OPTIONS_GROUP.ssl=		openssl libressl
+PKG_OPTIONS_GROUP.ssl=		openssl libressl wolfssl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -16,16 +19,18 @@ PLIST_SRC+=		PLIST.nls
 CONFIGURE_ARGS+=	--disable-nls
 .endif
 
-PKG_SUGGESTED_OPTIONS+=	${PKG_OPTIONS_GROUP.ssl:[1]}
-.if empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--without-ssl
-PKG_OPTIONS:=		${PKG_OPTIONS:N*ssl}
+###
+### SSL support
+###
+.if !empty(PKG_OPTIONS:Mopenssl)
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ssl=openssl
+.elif !empty(PKG_OPTIONS:Mlibressl)
+.  include "../../security/libressl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ssl=openssl
+.elif !empty(PKG_OPTIONS:Mwolfssl)
+.  include "../../security/wolfssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ssl=wolfssl
 .else
-.  if empty(PKG_OPTIONS:M*?ssl)
-PKG_OPTIONS+=		${PKG_OPTIONS_GROUP.ssl:[1]}
-.  endif
-LIBSSL:=		${PKG_OPTIONS:M*?ssl}
-.  include "../../security/${LIBSSL}/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.${LIBSSL}}
-USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=       --without-ssl
 .endif
