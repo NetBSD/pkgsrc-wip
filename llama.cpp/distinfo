@@ -6,5 +6,5 @@ Size (llama-b10068-ui.tar.gz) = 2865832 bytes
 BLAKE2s (llama.cpp-b10068.tar.gz) = f2d99b9916a6dacd408b88ecd2f068a32976d581b4367878de17ff8057c87682
 SHA512 (llama.cpp-b10068.tar.gz) = b23d154942f8e57ba37f6edff94951940665024ff6bd6d10e658d9f1e065cd56266125994269a469af928324a55d4a4b2695b73731c3dff6d9a6276a4620cba4
 Size (llama.cpp-b10068.tar.gz) = 35932327 bytes
-SHA1 (patch-common_common.cpp) = 57a375ff17c8c97cfadd4196b3a368b6abd65ce6
-SHA1 (patch-src_llama-vocab.cpp) = b97f36b85855ccf1385dfdd9fd5417e1abf77024
+SHA1 (patch-common_common.cpp) = b05147e49fceee8f54b3c40a6db120aa2c8fc9dd
+SHA1 (patch-src_llama-vocab.cpp) = cb99e8705a9c64fabc7bd4c70db0c5f5db919b0b

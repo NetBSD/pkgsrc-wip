@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix ctype(3) usage.
+https://github.com/ggml-org/llama.cpp/pull/25888
+
 --- src/llama-vocab.cpp.orig	2025-05-16 09:52:44.723654390 +0000
 +++ src/llama-vocab.cpp
 @@ -2264,7 +2264,7 @@ void llama_vocab::impl::tokenizer_st_par

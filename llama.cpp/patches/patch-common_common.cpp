@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix ctype(3) usage.
+https://github.com/ggml-org/llama.cpp/pull/25888
+
 --- common/common.cpp.orig	2026-05-29 05:46:11.000000000 +0000
 +++ common/common.cpp
 @@ -436,10 +436,10 @@ std::string string_format(const char * f
