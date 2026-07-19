@@ -1,4 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/06/19 09:12:09 poppnk Exp $
 
-RMD160 (unix2tcp-0.8.2.tar.gz) = b94098f77471f95ec7e2df7fd21244afa971fdb0
-Size (unix2tcp-0.8.2.tar.gz) = 31647 bytes
+BLAKE2s (unix2tcp-0.8.3.tar.gz) = e228ffcf80e37a58438253b79bddec4882481c106f8fd6bb475f2ebf9eacfffd
+SHA512 (unix2tcp-0.8.3.tar.gz) = 413e6a81457f9758f2c0a87e61ff7f4cd34db08266017f2f75360a20354bccf5edad294181c97ca051a2f5c209ecf88e2f053d1eb234cb38e8f2ed5e3a0b9f61
+Size (unix2tcp-0.8.3.tar.gz) = 32000 bytes
