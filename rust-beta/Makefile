@@ -6,7 +6,7 @@
 # Regenerating checksums may be needed to build the current rust-beta.
 
 DISTNAME=	rustc-beta-src
-PKGNAME=	rust-1.97.0beta.4
+PKGNAME=	rust-1.98.0beta.5
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 EXTRACT_SUFX=	.tar.xz
@@ -20,9 +20,9 @@ LICENSE=	mit OR apache-2.0
 # version of it. Use either stable or beta, not both.
 CONFLICTS+=	rust-bin-[0-9]*
 
-# One crate dependency hasn't been declared for 1.97.0-beta.2, beta.3 and beta.4
+# One crate dependency hasn't been declared and needs to be fetched at compile time.
 # Check if the situation has changed when the next iteration is released.
-ALLOW_NETWORK_ACCESS=   yes
+#ALLOW_NETWORK_ACCESS=   yes
 
 # LLVM uses -std=c++17
 USE_CXX_FEATURES+=	c++17
@@ -116,7 +116,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 # does not need any special post-processing.
 DISTFILES:=		${DEFAULT_DISTFILES}
 
-RUST_STAGE0_VER=	1.96.0
+RUST_STAGE0_VER=	1.97.1
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
