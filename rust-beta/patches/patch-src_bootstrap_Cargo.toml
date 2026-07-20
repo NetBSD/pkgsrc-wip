@@ -1,0 +1,18 @@
+$NetBSD$
+
+Treat linker-messages as warn-by-default.
+Make sure to remove this when no longer needed.
+See: https://github.com/rust-lang/rust/pull/153968
+
+--- src/bootstrap/Cargo.toml.orig	2026-07-20 14:26:40.721723664 +0000
++++ src/bootstrap/Cargo.toml
+@@ -9,6 +9,9 @@ tracing = ["dep:tracing", "dep:tracing-chrome", "dep:t
+ build-metrics = ["dep:sysinfo", "build_helper/metrics"]
+ tracing = ["dep:tracing", "dep:tracing-chrome", "dep:tracing-subscriber", "dep:chrono"]
+ 
++[lints.rust]
++linker_messages = "allow"
++
+ [lib]
+ path = "src/lib.rs"
+ doctest = false
