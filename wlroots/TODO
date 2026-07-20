@@ -1,4 +1,0 @@
-Fail:
-- with base's libdrm: Dependency libdrm found: NO. Found 2.4.124 but need: '>=2.4.129'
-- with pkgsrc's libdrm: PKG_SKIP_REASON: "Package set is using native X11 component"
-
