@@ -20,10 +20,6 @@ LICENSE=	mit OR apache-2.0
 # version of it. Use either stable or beta, not both.
 CONFLICTS+=	rust-bin-[0-9]*
 
-# One crate dependency hasn't been declared and needs to be fetched at compile time.
-# Check if the situation has changed when the next iteration is released.
-#ALLOW_NETWORK_ACCESS=   yes
-
 # LLVM uses -std=c++17
 USE_CXX_FEATURES+=	c++17
 USE_GCC_RUNTIME=	yes
