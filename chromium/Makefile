@@ -72,7 +72,7 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
 TOOL_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
-TOOL_DEPENDS+=			esbuild-${EB_VER}:../../www/esbuild
+TOOL_DEPENDS+=			esbuild>=${EB_VER}:../../www/esbuild
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
