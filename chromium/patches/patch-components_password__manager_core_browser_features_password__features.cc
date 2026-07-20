@@ -15,15 +15,6 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -115,7 +115,7 @@ BASE_FEATURE(kFetchChangePasswordUrlForP
- BASE_FEATURE(kFillOnAccountSelect,
-              "fill-on-account-select",
- // TODO(504600482): Disable the feature again upon fixing the bug.
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
 @@ -181,7 +181,7 @@ BASE_FEATURE(kPasswordStorePropagatesAct
  
  BASE_FEATURE(kPasswordCheckupPrototype, base::FEATURE_DISABLED_BY_DEFAULT);

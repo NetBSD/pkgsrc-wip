@@ -1,34 +1,62 @@
-www/chromium: update to 149.0.7827.200
+www/chromium: update to 150.0.7871.128
 
-* 149.0.7827.200
-This update includes 3 security fixes. Please see the Chrome Security Pagefor more information.
+* 150.0.7871.128
+This update includes 7 security fixes. Please see the Chrome Security Page for more information.
 
-[N/A][513138301] High CVE-2026-13281: Integer overflow in Mojo. Reported by Google on 2026-05-14
-[N/A][517522620] High CVE-2026-13282: Use after free in Payments. Reported by Google on 2026-05-28
-[N/A][522561151] High CVE-2026-13283: Use after free in AdFilter. Reported by Google on 2026-06-11
+[N/A][516987782] Critical CVE-2026-15899: Use after free in CameraCapture. Reported by Google on 2026-05-27
+[N/A][523750584] Critical CVE-2026-15900: Use after free in GPU. Reported by Google on 2026-06-14
+[N/A][533446300] Critical CVE-2026-15901: Use after free in Network. Reported by Google on 2026-07-10
+[N/A][522436154] High CVE-2026-15902: Use after free in Cast. Reported by Google on 2026-06-10
+[TBD][531503216] High CVE-2026-15903: Out of bounds read and write in V8. Reported by OpenAI Codex Security (amyb) on 2026-07-06
+[N/A][532925350] High CVE-2026-15904: Use after free in Ozone. Reported by Google on 2026-07-09
+[N/A][532970574] High CVE-2026-15905: Use after free in Aura. Reported by Google on 2026-07-09
 
-* 149.0.7827.196
+* 150.0.7871.124
+This update includes 15 security fixes. Please see the Chrome Security Page for more information.
 
-This update includes 18 security fixes. Below, we highlight fixes
-that were contributed by external researchers.
-Please see the Chrome Security Page for more information.
+[N/A][517100492] Critical CVE-2026-15764: Use after free in Ozone. Reported by Google on 2026-05-27
+[N/A][518007484] Critical CVE-2026-15765: Use after free in Ozone. Reported by Google on 2026-05-29
+[N/A][514010477] High CVE-2026-15766: Uninitialized Use in Skia. Reported by Google on 2026-05-17
+[N/A][514748734] High CVE-2026-15767: Heap buffer overflow in libyuv. Reported by Google on 2026-05-19
+[N/A][517931625] High CVE-2026-15768: Insufficient policy enforcement in HTML-in-Canvas. Reported by Google on 2026-05-29
+[N/A][519731111] High CVE-2026-15769: Insufficient validation of untrusted input in Linux Toolkit Theming. Reported by Google on 2026-06-03
+[N/A][524792614] High CVE-2026-15770: Uninitialized Use in V8. Reported by Google on 2026-06-17
+[N/A][525177160] High CVE-2026-15771: Insufficient validation of untrusted input in Media. Reported by Google on 2026-06-18
+[N/A][525317502] High CVE-2026-15772: Use after free in GPU. Reported by Google on 2026-06-18
+[TBD][527676561] High CVE-2026-15773: Use after free in Core. Reported by xinchaotian of Microsoft on 2026-06-25
+[N/A][530646115] High CVE-2026-15774: Use after free in Skia. Reported by Google on 2026-07-03
+[TBD][531319201] High CVE-2026-15775: Insufficient policy enforcement in V8. Reported by wang1r923096443@gmail.com on 2026-07-05
+[TBD][532595489] High CVE-2026-15776: Type Confusion in V8. Reported by Salvatore Gulizia (nickname: Serotav) on 2026-07-08
+[N/A][532929679] High CVE-2026-15777: Use after free in UI. Reported by Google on 2026-07-09
+[N/A][513795122] Medium CVE-2026-15778: Insufficient validation of untrusted input in Navigation. Reported by Google on 2026-05-16
 
-[TBD][520656244] Critical CVE-2026-13028: Use after free in WebGL. Reported by anonymous on 2026-06-07
-[N/A][523591974] Critical CVE-2026-13032: Use after free in WebGL. Reported by Google on 2026-06-13
-[N/A][523677844] Critical CVE-2026-13033: Out of bounds read in Blink>InterestGroups. Reported by Google on 2026-06-13
-[N/A][523740781] Critical CVE-2026-13038: Use after free in Autofill. Reported by Google on 2026-06-14
-[N/A][511776603] High CVE-2026-13021: Inappropriate implementation in DeviceBoundSessionCredentials. Reported by Google on 2026-05-10
-[N/A][516734537] High CVE-2026-13022: Inappropriate implementation in Autofill. Reported by Google on 2026-05-26
-[N/A][517080836] High CVE-2026-13023: Uninitialized Use in GPU. Reported by Google on 2026-05-27
-[N/A][517148260] High CVE-2026-13024: Insufficient validation of untrusted input in Navigation. Reported by Google on 2026-05-27
-[N/A][518043569] High CVE-2026-13025: Insufficient validation of untrusted input in DevTools. Reported by Google on 2026-05-30
-[N/A][519728279] High CVE-2026-13026: Use after free in Digital Credentials. Reported by Google on 2026-06-03
-[N/A][520543781] High CVE-2026-13027: Use after free in FileSystem. Reported by Google on 2026-06-05
-[N/A][521495992] High CVE-2026-13029: Use after free in Web Authentication. Reported by Google on 2026-06-08
-[N/A][522840723] High CVE-2026-13030: Uninitialized Use in GPU. Reported by Google on 2026-06-11
-[N/A][523308824] High CVE-2026-13031: Use after free in Blink. Reported by Google on 2026-06-12
-[N/A][523699355] High CVE-2026-13034: Inappropriate implementation in Passwords. Reported by Google on 2026-06-13
-[N/A][523704570] High CVE-2026-13035: Use after free in Bluetooth. Reported by Google on 2026-06-13
-[N/A][523711130] High CVE-2026-13036: Use after free in Blink. Reported by Google on 2026-06-13
-[N/A][523721871] High CVE-2026-13037: Use after free in WebView. Reported by Google on 2026-06-14
+* 150.0.7871.114
+This update includes 27 security fixes. Please see the Chrome Security Page for more information.
 
+[N/A][518006275] Critical CVE-2026-15112: Use after free in Ozone. Reported by Google on 2026-05-29
+[N/A][524045160] Critical CVE-2026-15129: Use after free in Views. Reported by Google on 2026-06-15
+[$500][527385397] High CVE-2026-15132: Uninitialized Use in V8. Reported by Pierre Langlois from Arm on 2026-06-24
+[$500][527406824] High CVE-2026-15133: Use after free in InterestGroups. Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-06-24
+[N/A][515443146] High CVE-2026-15108: Integer overflow in Extensions API. Reported by Google on 2026-05-21
+[N/A][516899138] High CVE-2026-15109: Uninitialized Use in ANGLE. Reported by Google on 2026-05-26
+[N/A][516948486] High CVE-2026-15110: Use after free in Extensions. Reported by Google on 2026-05-27
+[N/A][517508651] High CVE-2026-15111: Use after free in Views. Reported by Google on 2026-05-28
+[N/A][520540744] High CVE-2026-15113: Use after free in Autofill. Reported by Google on 2026-06-05
+[N/A][520565945] High CVE-2026-15114: Out of bounds read and write in Codecs. Reported by Google on 2026-06-06
+[N/A][520576676] High CVE-2026-15115: Insufficient validation of untrusted input in WebAppInstalls. Reported by Google on 2026-06-06
+[N/A][522092013] High CVE-2026-15116: Use after free in Actor. Reported by Google on 2026-06-10
+[N/A][522568496] High CVE-2026-15117: Use after free in Payments. Reported by Google on 2026-06-11
+[N/A][523238265] High CVE-2026-15118: Use after free in Input. Reported by Google on 2026-06-12
+[N/A][523505418] High CVE-2026-15119: Inappropriate implementation in GetUserMedia. Reported by Google on 2026-06-13
+[N/A][523609602] High CVE-2026-15120: Use after free in Core. Reported by Google on 2026-06-13
+[N/A][523712556] High CVE-2026-15121: Use after free in WebRTC. Reported by Google on 2026-06-14
+[N/A][523717219] High CVE-2026-15122: Insufficient validation of untrusted input in Codecs. Reported by Google on 2026-06-14
+[N/A][523729553] High CVE-2026-15123: Insufficient data validation in DOM. Reported by Google on 2026-06-14
+[N/A][523735038] High CVE-2026-15124: Insufficient policy enforcement in Passwords. Reported by Google on 2026-06-14
+[N/A][523737685] High CVE-2026-15125: Inappropriate implementation in Forms. Reported by Google on 2026-06-14
+[N/A][523748081] High CVE-2026-15126: Use after free in Forms. Reported by Google on 2026-06-14
+[N/A][523752265] High CVE-2026-15127: Inappropriate implementation in WebGL. Reported by Google on 2026-06-14
+[N/A][523756329] High CVE-2026-15128: Inappropriate implementation in Forms. Reported by Google on 2026-06-14
+[N/A][526541544] High CVE-2026-15130: Insufficient policy enforcement in Navigation. Reported by Google on 2026-06-22
+[$2000][503553615] Medium CVE-2026-15107: Use after free in IndexedDB. Reported by zh1x1an1221 of Ant Group Tianqiong Security Lab on 2026-04-17
+[N/A][526542464] Medium CVE-2026-15131: Insufficient data validation in Navigation. Reported by Google on 2026-06-22
