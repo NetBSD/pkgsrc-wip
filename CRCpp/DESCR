@@ -1,0 +1,16 @@
+Tired of writing CRC code over and over again? Don't want to include a dozen
+boost header files just for a little bit of functionality? CRC++ is a portable
+and extremely lightweight alternative that is incredibly simple, fast and clean.
+
+CRC++ supports bit-by-bit and byte-by-byte calculation of full and multipart
+CRCs. The algorithms used are highly optimized and can even be configured to
+be branchless (as always, be sure to profile your code to choose the most
+efficient option). CRC++ is a great option for embedded C++ projects with a
+need for efficiency.
+
+CRC++ consists of a single header file which can be included in any
+existing C++ application. No libraries, no boost, no mess, no fuss.
+
+Any CRC width is supported - even CRCs larger than 64 bits, provided there
+is an integer type large enough to contain it. Trying to compute a 57-bit CRC?
+Got you covered.

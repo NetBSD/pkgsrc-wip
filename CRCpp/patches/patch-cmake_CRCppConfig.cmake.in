@@ -1,0 +1,11 @@
+$NetBSD$
+
+Fix installation dirs
+
+--- cmake/CRCppConfig.cmake.in.orig	2026-07-19 18:00:18.421438179 +0000
++++ cmake/CRCppConfig.cmake.in
+@@ -1,3 +1,3 @@
+ @PACKAGE_INIT@
+ 
+-set_and_check(CRCpp_INCLUDE_DIR "@PACKAGE_CRCpp_INCLUDE_INSTALL_DIR@")
++set_and_check(CRCpp_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")

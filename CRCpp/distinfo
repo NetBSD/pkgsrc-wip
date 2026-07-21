@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (CRCpp/release-1.2.2.0.tar.gz) = 4008bc47b8d17102a387aa0a2296a6d7fc8a9a86a83f68000f09f9e9cd512d02
+SHA512 (CRCpp/release-1.2.2.0.tar.gz) = 0e1338eb1f0f2a05d119ffae6071be06c24c39f20dcc846ea2c6248367ce600797af23b1f31dcd0f9e389efadc769bcc7129d8b741c30782571500c731c75451
+Size (CRCpp/release-1.2.2.0.tar.gz) = 53191 bytes
+SHA1 (patch-CMakeLists.txt) = 67de643d1a4c91b471f544f3c47eff1b4a4cc668
+SHA1 (patch-cmake_CRCppConfig.cmake.in) = ef413711142998caf8a9bedd003c3b7dd8570151

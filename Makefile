@@ -14,6 +14,7 @@ SUBDIR+=	8cc-git
 SUBDIR+=	ARC
 SUBDIR+=	Aseprite
 SUBDIR+=	Bear
+SUBDIR+=	CRCpp
 SUBDIR+=	Chinput
 SUBDIR+=	CodeWhale
 SUBDIR+=	Coin

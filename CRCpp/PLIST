@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/CRC.h
+lib/cmake/crcpp/CRCppConfig.cmake
+lib/cmake/crcpp/CRCppConfigVersion.cmake
+lib/pkgconfig/CRCpp.pc
