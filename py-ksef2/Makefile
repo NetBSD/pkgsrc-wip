@@ -1,11 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	ksef2-0.17.1
+DISTNAME=	ksef2-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=artpods56/}
-GITHUB_PROJECT=	ksef2
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/ksef2/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://github.com/artpods56/ksef2/
@@ -14,7 +12,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-# How to mark python > 3.12?
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12.5:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=44.0.0:../../security/py-cryptography

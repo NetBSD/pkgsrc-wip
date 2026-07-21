@@ -102,6 +102,9 @@ ${PYSITELIB}/ksef2/clients/peppol.pyo
 ${PYSITELIB}/ksef2/clients/permissions.py
 ${PYSITELIB}/ksef2/clients/permissions.pyc
 ${PYSITELIB}/ksef2/clients/permissions.pyo
+${PYSITELIB}/ksef2/clients/profiles.py
+${PYSITELIB}/ksef2/clients/profiles.pyc
+${PYSITELIB}/ksef2/clients/profiles.pyo
 ${PYSITELIB}/ksef2/clients/session_management.py
 ${PYSITELIB}/ksef2/clients/session_management.pyc
 ${PYSITELIB}/ksef2/clients/session_management.pyo
@@ -691,6 +694,9 @@ ${PYSITELIB}/ksef2/infra/schema/fa3/styles.pyo
 ${PYSITELIB}/ksef2/logging.py
 ${PYSITELIB}/ksef2/logging.pyc
 ${PYSITELIB}/ksef2/logging.pyo
+${PYSITELIB}/ksef2/profiles.py
+${PYSITELIB}/ksef2/profiles.pyc
+${PYSITELIB}/ksef2/profiles.pyo
 ${PYSITELIB}/ksef2/py.typed
 ${PYSITELIB}/ksef2/services/__init__.py
 ${PYSITELIB}/ksef2/services/__init__.pyc
