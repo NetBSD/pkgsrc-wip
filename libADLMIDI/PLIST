@@ -1,0 +1,16 @@
+@comment $NetBSD$
+include/adlmidi.h
+lib/cmake/libADLMIDI/libADLMIDI-shared-targets-noconfig.cmake
+lib/cmake/libADLMIDI/libADLMIDI-shared-targets.cmake
+lib/cmake/libADLMIDI/libADLMIDI-static-targets-noconfig.cmake
+lib/cmake/libADLMIDI/libADLMIDI-static-targets.cmake
+lib/cmake/libADLMIDI/libADLMIDIConfig.cmake
+lib/libADLMIDI.a
+lib/libADLMIDI.so
+lib/libADLMIDI.so.1
+lib/libADLMIDI.so.${PKGVERSION}
+lib/pkgconfig/libADLMIDI.pc
+share/doc/libADLMIDI/AUTHORS
+share/doc/libADLMIDI/LICENSE.GPL-3.txt
+share/doc/libADLMIDI/LICENSE.LGPL-2.1.txt
+share/doc/libADLMIDI/README.md

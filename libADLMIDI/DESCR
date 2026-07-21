@@ -1,0 +1,12 @@
+libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
+
+Library is based on the ADLMIDI, a MIDI player for Linux and Windows with
+OPL3 emulation.
+
+Differences with original tool:
+ - Reverb code has been removed.
+ - Doesn't contains platform specific code. Library can be used with
+   various purposes include making of a custom music decoders for a
+   media players and usage with a games.
+ - Supports custom non-hardcoded WOPL banks and ability to build without
+   of embedded banks

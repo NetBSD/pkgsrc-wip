@@ -2012,6 +2012,7 @@ SUBDIR+=	lesspipe
 SUBDIR+=	lfe
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
+SUBDIR+=	libADLMIDI
 SUBDIR+=	libArcus
 SUBDIR+=	libGenome
 SUBDIR+=	libLLVM35
