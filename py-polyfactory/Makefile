@@ -3,8 +3,7 @@
 DISTNAME=	polyfactory-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=litestar-org/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/polyfactory/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://github.com/litestar-org/polyfactory/
