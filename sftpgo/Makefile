@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		sftpgo-2.7.4
+DISTNAME=		sftpgo-2.7.5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=drakkan/}
 GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}
@@ -66,6 +66,8 @@ post-install:
 		${TAR} -xf - -C ${DESTDIR}${PREFIX}/share/sftpgo
 	${TAR} -cf - -C ${WRKSRC} templates | \
 		${TAR} -xf - -C ${DESTDIR}${PREFIX}/share/sftpgo
+
+	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/share/sftpgo
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
