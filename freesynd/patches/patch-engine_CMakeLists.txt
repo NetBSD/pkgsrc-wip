@@ -1,0 +1,26 @@
+$NetBSD$
+
+utf8cpp is headers only
+
+--- engine/CMakeLists.txt.orig	2025-11-13 20:07:46.000000000 +0000
++++ engine/CMakeLists.txt
+@@ -93,8 +93,8 @@ add_library(Freesynd::Engine ALIAS fs_en
+ # We need this directory, and users of our library will need it too
+ target_include_directories(fs_engine PUBLIC include)
+ 
+-target_link_libraries(fs_engine PRIVATE freesynd_warnings Freesynd::Utils PNG::PNG CLI11::CLI11 utf8cpp)
+-target_link_libraries(fs_engine INTERFACE CLI11::CLI11 utf8cpp)
++target_link_libraries(fs_engine PRIVATE freesynd_warnings Freesynd::Utils PNG::PNG CLI11::CLI11)
++target_link_libraries(fs_engine INTERFACE CLI11::CLI11)
+ 
+ # The USE_SYSTEM_SDL option enables the creation of the fs_engine_sdl
+ # library. If not on, there will be an error as there is not other implementation
+@@ -127,7 +127,7 @@ if (USE_SYSTEM_SDL)
+     target_include_directories(fs_engine_sdl PRIVATE include)
+ 
+     target_link_libraries(fs_engine_sdl PUBLIC SDL2::Main SDL2::Image Freesynd::Utils)
+-    target_link_libraries(fs_engine_sdl PRIVATE freesynd_warnings utf8cpp)
++    target_link_libraries(fs_engine_sdl PRIVATE freesynd_warnings)
+ 
+     target_link_libraries(fs_engine PRIVATE Freesynd::Engine::Sdl)
+ endif()

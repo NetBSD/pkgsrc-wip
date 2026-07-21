@@ -1,0 +1,16 @@
+$NetBSD$
+
+Handle configuration file in pkgsrc way
+
+--- data/CMakeLists.txt.orig	2025-01-22 21:32:28.000000000 +0000
++++ data/CMakeLists.txt
+@@ -47,7 +47,6 @@ elseif(WIN32)
+ else ()
+     install (DIRECTORY . DESTINATION "${CMAKE_INSTALL_FULL_DATADIR}/freesynd"
+             PATTERN "freesynd.ini" EXCLUDE
+-            PATTERN "CMakeLists.txt" EXCLUDE)
+-
+-    install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/freesynd.ini DESTINATION "${FS_ETC_DIR}")
++            PATTERN "CMakeLists.txt" EXCLUDE
++            PATTERN "CMakeLists.txt.orig" EXCLUDE)
+ endif()

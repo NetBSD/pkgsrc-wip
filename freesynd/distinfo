@@ -1,5 +1,13 @@
 $NetBSD$
 
-RMD160 (freesynd-0.7.5.tar.gz) = dfd6c9b0c1368e2e04f12b94716d034b98c673e0
-SHA512 (freesynd-0.7.5.tar.gz) = 70cd28c660c7e000f799746be62dbcdc284a5ab8da8670e5b4f0fca0fdbe265cde1014f08fd6f0ed41fb50188fc1e672c8a4267722715cecaa354f47a8ef746c
-Size (freesynd-0.7.5.tar.gz) = 2622888 bytes
+BLAKE2s (Freesynd-0.9-Source.zip) = 9aa1bde772b3810070bde590a75924733123dca7407842a669b36fca5ddf186c
+SHA512 (Freesynd-0.9-Source.zip) = 0dfd708ff20168df27fd4aec1bbd7c0105b39442ea884c5177714ae1d920f89848c369592edcf90ff4513465a63bce874dbe1979d400301f5257164e56750768
+Size (Freesynd-0.9-Source.zip) = 3973402 bytes
+SHA1 (patch-data_CMakeLists.txt) = cf250872188ec2a3e3b39e215b0a07105f6b4832
+SHA1 (patch-engine_CMakeLists.txt) = 92640bf3b8f450715273800f12852af0d6989838
+SHA1 (patch-engine_include_fs-engine_gfx_font.h) = 9a956d1e02501aacaa12b43e5fedbe0158fc214a
+SHA1 (patch-engine_include_fs-engine_io_keys.h) = f2950e7c0e1de2ee5432cbc02473b2d2fd3f6e73
+SHA1 (patch-engine_src_menus_widget.cpp) = 620bd008d18743a0f489118f7725c50a52675037
+SHA1 (patch-engine_src_system_sdl_system__sdl.cpp) = 58be1ad1d390a62d219a2152861ba6b6c60bf1e1
+SHA1 (patch-kernel_src_model_missionbriefing.cpp) = b69676dd584a5a8712a5b2145d56a31ab2e47920
+SHA1 (patch-utils_CMakeLists.txt) = e068a40c344af43f78a676b554fb38cdc266ba63

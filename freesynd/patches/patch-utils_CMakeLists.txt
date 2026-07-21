@@ -1,0 +1,15 @@
+$NetBSD$
+
+CRCpp is headers only
+
+--- utils/CMakeLists.txt.orig	2026-07-20 04:17:18.532509277 +0000
++++ utils/CMakeLists.txt
+@@ -48,8 +48,6 @@ add_library(Freesynd::Utils ALIAS fs_uti
+ 
+ find_package(CRCpp REQUIRED)
+ 
+-target_link_libraries (fs_utils PRIVATE freesynd_warnings crcpp::crcpp)
+-
+ # We need this directory, and users of our library will need it too (ie PUBLIC)
+ target_include_directories(fs_utils PUBLIC include)
+ 
