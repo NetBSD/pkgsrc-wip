@@ -1,0 +1,27 @@
+# $NetBSD$
+
+DISTNAME=	libdatachannel-0.24.5
+CATEGORIES=	net devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=paullouisageneau/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	ktnb@NetBSD.org
+HOMEPAGE=	https://github.com/paullouisageneau/libdatachannel/
+COMMENT=	C/C++ WebRTC network library
+LICENSE=	mpl-2
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DPREFER_SYSTEM_LIB=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DUSE_NICE=TRUE
+
+.include "../../devel/cmake/build.mk"
+.include "../../comms/srtp/buildlink3.mk"
+.include "../../net/libnice/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
+.include "../../wip/plog/buildlink3.mk"
+.include "../../wip/usrsctp/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

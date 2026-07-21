@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libdatachannel-0.24.5.tar.gz) = 14650d3d39f846ea731219be5f0f527042a51cc7e5e7c18cbeddb90f13f1e739
+SHA512 (libdatachannel-0.24.5.tar.gz) = 694561ba5b3e08ed35e7e167330d97455ee2ef8d298c9c41e12de4d07032bbe1bb2ebec1e35126187c57ef9492e7d1c82ffd0fa3511eabcdfb77efabfd4b7d9a
+Size (libdatachannel-0.24.5.tar.gz) = 52653651 bytes
