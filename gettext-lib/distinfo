@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.46 2026/04/09 08:48:44 jperkin Exp $
-
-BLAKE2s (gettext-1.0.tar.gz) = 9277ec2cb3676b657eb719c952d0b2481dd0991aa3253eac350db9c2d2575cb5
-SHA512 (gettext-1.0.tar.gz) = 664c3b1985cb7d1e7ed443e036a6c7f8c1f47354720d13c2db2c2cf8a85136d0ffc2cc920dce1240d688f706653f647749ce29f69eb0bb659e043b499f9c47eb
-Size (gettext-1.0.tar.gz) = 32694085 bytes
