@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	camel-converter-5.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	camel_converter-5.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=sanders41/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/camel_converter/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://github.com/sanders41/camel-converter/

@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (camel-converter-5.1.0.tar.gz) = 8577daa7385fe1b2fe468f86c9deb41607fe07862ca8d77d365751287555b5b2
-SHA512 (camel-converter-5.1.0.tar.gz) = 943642f6f807b783019e4f1db2ac15ba992d32d281f58affff4f5ba2b625cfb73d3d918058de75d26f767b772fdeb0bd87a44ed5a8c889319074dcc4c3417b6a
-Size (camel-converter-5.1.0.tar.gz) = 71603 bytes
+BLAKE2s (camel_converter-5.1.0.tar.gz) = 0922da86c97081a027890033712cdf93cc912c8b54f01928a655096d34d020a4
+SHA512 (camel_converter-5.1.0.tar.gz) = 3715ec291c5dc0ea2c787df8364fa057231d36475fb6ccab7b2a7e75ebebd355fd9b301a35b373fd9323e90aed4664140c43463cd125ecc39d9afddf2428fbdd
+Size (camel_converter-5.1.0.tar.gz) = 71481 bytes
