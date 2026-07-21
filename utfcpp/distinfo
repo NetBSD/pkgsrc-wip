@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (utfcpp-4.1.1.tar.gz) = da996c44b4e0e00a6a00662131a1657b253909b151d2ec773aca333aedc37ffb
+SHA512 (utfcpp-4.1.1.tar.gz) = 72061902812b3f5b27afb32c513fc337db4149b8a6e51cbfe497109f88145751484093990bb1b20b4eec2b9f621406690030401b2a51c9368eb481f00225cd24
+Size (utfcpp-4.1.1.tar.gz) = 36846 bytes
+SHA1 (patch-CMakeLists.txt) = d09272e9f041fe822b2ce7291f3be091486f7ed2
+SHA1 (patch-utf8cppConfig.cmake.in) = 95907ef74ce111c87c19d44d44dc0b5c8e0896c3

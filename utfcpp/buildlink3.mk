@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	utfcpp
+
+.if !defined(UTFCPP_BUILDLINK3_MK)
+UTFCPP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.utfcpp+=	utfcpp>=4.1.1
+BUILDLINK_PKGSRCDIR.utfcpp?=	../../wip/utfcpp
+
+.endif # UTFCPP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-utfcpp

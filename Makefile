@@ -5960,6 +5960,7 @@ SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	usrsctp
 SUBDIR+=	ussp-push
+SUBDIR+=	utfcpp
 SUBDIR+=	util-linux
 SUBDIR+=	uzbl
 SUBDIR+=	uzbl-git
