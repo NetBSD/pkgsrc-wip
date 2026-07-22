@@ -1,0 +1,13 @@
+gotosocial: Update to 0.22.1
+
+# Summary
+This is a minor upgdate.
+If you're updating to this version from v0.22.0, it's a very easy update with no db migrations.
+
+# Changelog
+Add a codeberg tag tracking variable in the Makefile, like many packages pulled from Github for consistency and easier upstream version changes tracking.
+
+# Verifications
+- pkglint
+- build using pkgsrc-trunk and bob
+- deployed in production
