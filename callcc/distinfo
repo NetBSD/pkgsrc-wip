@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (callcc-0.3.tar.gz) = 04f744818acc47174e318f7fecb19af323fc1d4cdfbd0e4b844a800f4c788399
+SHA512 (callcc-0.3.tar.gz) = 7bf9bf811cd8c8b4a5caa01442b725e97ea1d48fa7351e54784d90643ea1ece8e0bd76c5da5909a61df90a2bc16a769eab2312b8bc771ab374f84621dabccf5a
+Size (callcc-0.3.tar.gz) = 431285 bytes
+SHA1 (patch-Makefile) = 18b8d0080241ac013594b6904f43e6b6da0fc22b
+SHA1 (patch-c_runtime.c) = 5cb007aaecc23f0cafdfd243179d4a9db400f128
+SHA1 (patch-compiler_bc.scm) = 468c4493f111ddfb844ca15ad7b5b37fd47790cd

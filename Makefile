@@ -435,6 +435,7 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calibre
+SUBDIR+=	callcc
 SUBDIR+=	calypso-git
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
