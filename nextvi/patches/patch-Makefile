@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use compiler from pkgsrc
+
 --- Makefile.orig	2026-05-31 18:18:04.818630007 +0000
 +++ Makefile
 @@ -12,8 +12,6 @@ CFLAGS := \
