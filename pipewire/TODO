@@ -14,3 +14,6 @@ wireplumber.wrap
 Investigate if we need to download these or can disable them.
 
 ALSA support is disabled yet.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-5674
