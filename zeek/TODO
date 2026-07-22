@@ -1,5 +1,5 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-CVE-2021-41732
+CVE-2021-41732, CVE-2026-60108, CVE-2026-60109
 
 nros: CVE-2021-41732 seems to be nothing according to the zeek developers:
       see: https://github.com/zeek/zeek/issues/1798
