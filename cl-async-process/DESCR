@@ -1,0 +1,2 @@
+A Common Lisp library for creating and managing asynchronous
+processes with PTY support.

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/async-process.h
+lib/libasyncprocess.so
+lib/libasyncprocess.so.0
+lib/libasyncprocess.so.0.0
