@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cadical-2.1.3
+DISTNAME=	cadical-3.0.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arminbiere/}
 GITHUB_TAG=	rel-${PKGVERSION_NOREV}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/arminbiere/cadical/
 COMMENT=	SAT Solver
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/cadical-rel-${PKGVERSION_NOREV}
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-MAKE_FILE=	makefile
+WRKSRC=			${WRKDIR}/cadical-rel-${PKGVERSION_NOREV}
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
+USE_TOOLS+=		gmake
+MAKE_FILE=		makefile
 
 INSTALLATION_DIRS=	bin include lib
 
