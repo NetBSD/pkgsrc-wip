@@ -3,6 +3,6 @@ $NetBSD$
 BLAKE2s (hawk-v0.9.tar.gz) = f4343e27f91cf99d63c7965e0280657c1f55d7a3c92319daaa08293660f2aa7b
 SHA512 (hawk-v0.9.tar.gz) = 5dae5ea680ceef361c0ba9afd07489d390fc06b9717450765aa9c31caf68540e9f58edfc0ea954426750494086f9ef630a46893e5bf6a68ee7ce7d7eb219cc29
 Size (hawk-v0.9.tar.gz) = 2789298 bytes
-SHA1 (patch-CMakeLists.txt) = ab59222e3ff2b9cffa2aabea122d05c25384f180
+SHA1 (patch-CMakeLists.txt) = a9fc0a58bbf65f75d292579b190279491f8dcad0
 SHA1 (patch-jitdump.c) = acac908df4817cba5acc51801aa2f0e8f4f81d7b
 SHA1 (patch-runtime.c) = fcfe2470936847406db3a4fd3e44ed549e4d3476

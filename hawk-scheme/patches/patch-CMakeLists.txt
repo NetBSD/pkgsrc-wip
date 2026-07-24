@@ -7,7 +7,11 @@ bootstrap phase.
 The bootstrap JIT needs "paxctl +m", so run the command if paxctl
 is found.
 
---- CMakeLists.txt.orig	2026-07-24 19:38:51.163002743 +0000
+Use the clang as the C compiler, not the build time "cc".
+
+Add library search paths when generating executables.
+
+--- CMakeLists.txt.orig	2026-07-06 21:42:40.000000000 +0000
 +++ CMakeLists.txt
 @@ -157,8 +157,17 @@ if(BOOTSTRAP)
    add_library(hawk_image_bootstrap OBJECT hawk_image.c)
@@ -29,7 +33,7 @@ is found.
  endif()
  # fold generator
  set(gen_fold_target gen_fold)
-@@ -250,8 +259,17 @@ if(BOOTSTRAP)
+@@ -250,13 +259,22 @@ if(BOOTSTRAP)
  target_link_libraries(hawk PRIVATE hawk_core)
  target_link_options(hawk PRIVATE ${HAWK_EXE_EXPORT_FLAG})
  if(BOOTSTRAP)
@@ -48,3 +52,9 @@ is found.
  endif()
  
  target_compile_definitions(
+   hawk_core PRIVATE
+-  HAWK_CC="${CMAKE_C_COMPILER}"
++  HAWK_CC="${CMAKE_INSTALL_PREFIX}/libexec/hawk-cc"
+   HAWK_CORE_LIB="-lhawk_core"
+   HAWK_EXE_EXPORT_FLAG="${HAWK_EXE_EXPORT_FLAG}"
+   HAWK_DEFAULT_LIBRARY_PATH="${CMAKE_INSTALL_FULL_DATADIR}/hawk"

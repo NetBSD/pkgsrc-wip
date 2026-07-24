@@ -20,8 +20,17 @@ PKGSRC_COMPILER=	clang
 
 USE_LANGUAGES+=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DBOOTSTRAP=ON
+CMAKE_CONFIGURE_ARGS+=	-DPKGSRCLDFLAGS="-L${PREFIX}/lib -Wl,-rpath -Wl,${PREFIX}/lib"
 
 NOT_PAX_MPROTECT_SAFE+=	bin/hawk
+INSTALLATION_DIRS+=	libexec
+SH_ARG_LIST=		$$@
+
+post-install:
+	${ECHO} "#/bin/sh" > ${WRKSRC}/hawk-cc
+	${ECHO} >> ${WRKSRC}/hawk-cc
+	${ECHO} "exec ${PREFIX}/bin/clang -L${PREFIX}/lib -Wl,-rpath -Wl,${PREFIX}/lib \"${SH_ARG_LIST:Q}\"" >> ${WRKSRC}/hawk-cc
+	${INSTALL_SCRIPT} ${WRKSRC}/hawk-cc ${DESTDIR}${PREFIX}/libexec/hawk-cc
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/capstone/buildlink3.mk"
