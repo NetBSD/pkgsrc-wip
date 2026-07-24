@@ -6,7 +6,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=leanprover/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/leanprover/lean4/
+HOMEPAGE=	https://lean-lang.org/
+#HOMEPAGE=	https://github.com/leanprover/lean4/
 COMMENT=	Programming language for theorem proving
 LICENSE=	apache-2.0
 
