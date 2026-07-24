@@ -3,9 +3,9 @@ $NetBSD$
 Set proper thread id on NetBSD.
 clearenv() does not exist on NetBSD.
 
---- stage0/src/runtime/process.cpp.orig	2025-07-31 11:25:32.645020915 +0000
-+++ stage0/src/runtime/process.cpp
-@@ -340,6 +340,8 @@ extern "C" LEAN_EXPORT obj_res lean_io_g
+--- src/runtime/process.cpp.orig	2026-07-23 16:38:08.850506865 +0000
++++ src/runtime/process.cpp
+@@ -341,6 +341,8 @@ extern "C" LEAN_EXPORT uint64_t lean_io_get_tid() {
      uint64_t tid;
  #ifdef __APPLE__
      lean_always_assert(pthread_threadid_np(NULL, &tid) == 0);
@@ -14,7 +14,7 @@ clearenv() does not exist on NetBSD.
  #elif defined(LEAN_EMSCRIPTEN)
      tid = 0;
  #else
-@@ -430,7 +432,7 @@ static optional<pipe> setup_stdio(stdio 
+@@ -431,7 +433,7 @@ static optional<pipe> setup_stdio(stdio cfg) {
      lean_unreachable();
  }
  
@@ -23,7 +23,7 @@ clearenv() does not exist on NetBSD.
  extern "C" char **environ;
  #endif
  
-@@ -446,7 +448,7 @@ static obj_res spawn(string_ref const & 
+@@ -454,7 +456,7 @@ static obj_res spawn(string_ref const & proc_name, arr
  
      if (pid == 0) {
          if (!inherit_env) {
