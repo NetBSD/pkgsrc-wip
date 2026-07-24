@@ -40,6 +40,7 @@ CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/cadical
+	${RM} ${DESTDIR}${PREFIX}/bin/leantar
 	${MV} ${DESTDIR}${PREFIX}/LICENSE* ${DESTDIR}${PREFIX}/share/lean4
 
 .include "../../devel/cmake/build.mk"
