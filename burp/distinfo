@@ -1,3 +1,5 @@
+$NetBSD$
+
 BLAKE2s (burp-3.2.0.tar.gz) = 1f79d602e34f4d03b2052fbd5853b054ad571afd0b59c7a802f65bbdd9f55766
 SHA512 (burp-3.2.0.tar.gz) = 13affe243f1bb50460ae6bcece580a18718acb01695e2ef804ce519335a733f02c6a89d5c3263963794ff3714a0c693dd8a2f69ae43774088c3b2c63570162df
 Size (burp-3.2.0.tar.gz) = 550673 bytes
@@ -10,4 +12,3 @@ SHA1 (patch-configs_server_summary__script.in) = 4c825ff342421f92f04926664dce6ab
 SHA1 (patch-manpages_bedup.8.in) = 93c12f03cec4a3dff8621472b021fe3ff223de6c
 SHA1 (patch-manpages_burp.8.in) = fd8d3440e16a1a53d66298f58f17d213af8ce13e
 SHA1 (patch-manpages_burp__ca.8.in) = 75590d44c979c6abbe95504d4cb87901cfaf7a68
-

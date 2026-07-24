@@ -1,3 +1,5 @@
+# $NetBSD$
+
 DISTNAME=	burp-3.2.0
 CATEGORIES=	sysutils archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grke/}

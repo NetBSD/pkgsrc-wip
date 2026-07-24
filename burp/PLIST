@@ -1,3 +1,5 @@
+@comment $NetBSD$
+
 share/burp/scripts/backup_tool_script
 share/burp/scripts/notify_script
 share/burp/scripts/ssl_extra_checks_script
