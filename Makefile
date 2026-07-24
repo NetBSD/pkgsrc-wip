@@ -413,6 +413,7 @@ SUBDIR+=	bulk-test-llvm
 SUBDIR+=	bun
 SUBDIR+=	bup-snapshot
 SUBDIR+=	bupstash
+SUBDIR+=	burp
 SUBDIR+=	busybox
 SUBDIR+=	bwa
 SUBDIR+=	byzanz

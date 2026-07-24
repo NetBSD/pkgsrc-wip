@@ -1,0 +1,8 @@
+sysutils/burp: Update burp to 3.2.0
+
+Upgrade burp from 1.4.40 (~2015) to 3.2.0, stable release nowadays.
+
+Too large a CHANGELOG to sum it up here!
+
+Update prepared in wip by Francis GUDIN
+
