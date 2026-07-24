@@ -1541,6 +1541,7 @@ SUBDIR+=	haserl
 SUBDIR+=	hashcat-utils
 SUBDIR+=	haskell-mode
 SUBDIR+=	hawk
+SUBDIR+=	hawk-scheme
 SUBDIR+=	hawknl
 SUBDIR+=	haxe
 SUBDIR+=	haxima

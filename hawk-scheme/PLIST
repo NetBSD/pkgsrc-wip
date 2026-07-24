@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/hawk
+lib/libhawk_core.so
+man/man1/hawk.1
+share/hawk/srfi/1.sld
+share/hawk/srfi/69.sld

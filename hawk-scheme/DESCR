@@ -1,0 +1,3 @@
+Hawk is a tracing JIT compiler for Scheme.  It includes a bytecode
+compiler, runtime, garbage collector, interpreter, trace recorder, and native
+code emitters for x86-64 and aarch64.
