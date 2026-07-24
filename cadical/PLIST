@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/cadical
-include/cadical.hpp
-lib/libcadical.a
