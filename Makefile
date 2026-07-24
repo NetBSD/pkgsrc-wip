@@ -1436,7 +1436,6 @@ SUBDIR+=	gosec
 SUBDIR+=	gosuki
 SUBDIR+=	gotify
 SUBDIR+=	gotop
-SUBDIR+=	gotosocial
 SUBDIR+=	goyq
 SUBDIR+=	gp-toric
 SUBDIR+=	gpak
