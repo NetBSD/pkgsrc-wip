@@ -614,6 +614,7 @@ include/Inventor/misc/SoNotRec.h
 include/Inventor/misc/SoNotification.h
 include/Inventor/misc/SoProto.h
 include/Inventor/misc/SoProtoInstance.h
+include/Inventor/misc/SoRefPtr.h
 include/Inventor/misc/SoScriptEngine.h
 include/Inventor/misc/SoState.h
 include/Inventor/misc/SoTempPath.h
@@ -882,7 +883,7 @@ lib/cmake/${PKGNAME}/coin-export-release.cmake
 lib/cmake/${PKGNAME}/coin-export.cmake
 lib/libCoin.so
 lib/libCoin.so.80
-lib/libCoin.so.80.0.6
+lib/libCoin.so.80.0.10
 lib/pkgconfig/Coin.pc
 share/Coin/conf/coin-default.cfg
 share/Coin/draggerDefaults/centerballDragger.iv

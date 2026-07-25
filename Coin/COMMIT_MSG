@@ -1,3 +1,43 @@
+Coin 4.0.10
+
+This is a bugfix release.
+
+- Fail gracefully on recursive PROTO definitions.
+- Replaced fixed length buffers in parsing functions.
+- Increase robustness against malformed SoPath input.
+- Reject input with invalid IS mappings.
+- Fixed some vulnerabilities reported in GHSA-hcqw-f3m9-mq7p
+
+Coin 4.0.9
+
+This is a bugfix release.
+
+- Skip negative indices in SoIndexedPointSet vertex arrays
+- Fix cc_string inline buffer size calculation in string.h
+- Remove outdated build files.
+- Use clock_gettime when its available instead of deprecated ftime.
+- Create alias target Coin::Coin when building as a sub-directory
+- Only search for CgGL/libCgGL in system default dir
+
+Coin 4.0.8
+
+This is a bugfix release.
+
+- Refactor OpenGL version check to use cc_glglue (work around an Intel driver issue).
+- Export the include directories for in-tree builds.
+- Extract shader GLRender logic into helper.
+- Refactor SoVertexArrayIndexer render() to take SoState*.
+- Removed Boost from Coin.
+- Fix tests with disabled VRML97 support.
+
+Coin 4.0.7
+
+This is a bugfix release.
+
+- Fixed check for platform GL binding.
+- Fixed build issue with Boost 1.90.
+- Ensure cc_glglue_context_can_render_to_texture() always returns a value.
+
 Coin 4.0.6
 
 This is a bugfix release.

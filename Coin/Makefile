@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		Coin-4.0.6
+DISTNAME=		Coin-4.0.10
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=coin3d/}
 GITHUB_PROJECT=		coin
