@@ -6,10 +6,10 @@ Shared upstream via:
 
  <https://github.com/mitchellh/go-ps/pull/59>
 
---- go.sum.orig	2026-04-07 17:29:07.000000000 +0000
+--- go.sum.orig	2026-07-23 15:00:15.000000000 +0000
 +++ go.sum
-@@ -351,6 +351,8 @@ github.com/hashicorp/golang-lru/v2 v2.0.
- github.com/hashicorp/golang-lru/v2 v2.0.5/go.mod h1:QeFd9opnmA6QUJc5vARoKUSoFhyfM2/ZepoAG6RGpeM=
+@@ -384,6 +384,8 @@ github.com/hiddeco/sshsig v0.2.0 h1:gMWl
+ github.com/hiddeco/sshsig v0.2.0/go.mod h1:nJc98aGgiH6Yql2doqH4CTBVHexQA40Q+hMMLHP4EqE=
  github.com/homeport/dyff v1.10.2 h1:XyB+D0KVwjbUFTZYIkvPtsImwkfh+ObH2CEdEHTqdr4=
  github.com/homeport/dyff v1.10.2/go.mod h1:0kIjL/JOGaXigzrLY6kcl5esSStbAa99r6GzEvr7lrs=
 +github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23 h1:bOKbKZULjNQbnK+xXLXXa42TlFYELUNoyUTym+8KDvM=
@@ -17,10 +17,10 @@ Shared upstream via:
  github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
  github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
  github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOlocH6Fxy8MmwDt+yVQYULKfN0RoTN8A=
-@@ -414,8 +416,6 @@ github.com/mattn/go-shellwords v1.0.12/g
+@@ -442,8 +444,6 @@ github.com/mattn/go-runewidth v0.0.16/go
+ github.com/mattn/go-shellwords v1.0.13 h1:DC0OMEpGjm6LfNFU4ckYcvbQKyp2vE8atyFGXNtDcf4=
+ github.com/mattn/go-shellwords v1.0.13/go.mod h1:EZzvwXDESEeg03EKmM+RmDnNOPKG4lLtQsUlTZDWQ8Y=
  github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
- github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
- github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 -github.com/mitchellh/go-ps v1.0.0 h1:i6ampVEEF4wQFF+bkYfwYgY+F/uYJDktmvLPf7qIgjc=
 -github.com/mitchellh/go-ps v1.0.0/go.mod h1:J4lOc8z8yJs6vUwklHw2XEIiT4z4C40KtWVN3nvg8Pg=
  github.com/mitchellh/go-wordwrap v1.0.1 h1:TLuKupo69TCn6TQSyGxwI1EblZZEsQ0vMlAFQflz0v0=
