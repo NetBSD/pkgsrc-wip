@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kubeconform-0.6.7
+DISTNAME=	kubeconform-0.8.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yannh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
