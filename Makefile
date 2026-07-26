@@ -6309,6 +6309,7 @@ SUBDIR+=	zls
 SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
+SUBDIR+=	zoneminder
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
 SUBDIR+=	zuse
