@@ -66,6 +66,12 @@ GCC_REQD+=	14
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
 .include "../../lang/libunwind/buildlink3.mk"
+
+# Ref. src/bootstrap/src/core/build_steps/llvm.rs / check_llvm_version()
+# rust now (1.97.0) requires LLVM >= 21.x
+BUILDLINK_API_DEPENDS.llvm+=    llvm>=21.1.0
+BUILDLINK_ABI_DEPENDS.llvm+=    llvm>=21.1.0
+
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-libunwind=system
