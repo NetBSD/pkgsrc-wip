@@ -1,7 +1,5 @@
 $NetBSD$
 
-BLAKE2s (dpbox/dpbox-6.1.3.tar.gz) = 01d35f67c8407e2d821c943dcd68ca558672baeedee8250c5e8b9c6680dfdb7a
-SHA512 (dpbox/dpbox-6.1.3.tar.gz) = 3f49d8c824d28be64d4bf851a57f3f46b22ff486c1a13edeab2e22b86cbb23619b8bbbbcc0af80644ecb93abdfa7888bd8b78ea86690a4bc08dddef89ac7cf13
-Size (dpbox/dpbox-6.1.3.tar.gz) = 954172 bytes
-SHA1 (patch-bl) = 7952964f1894be68e13a2dc7cdfcfaad78d9c4eb
-SHA1 (patch-by) = 7bbf1056d0e75fcec155df238a13e81d16c59d54
+BLAKE2s (dpbox/dpbox-6.1.4.tar.gz) = a7371b22f6dc834aadfba7c7846a8ec1e98f5a956aad88a1e2eaa993cae5a1c5
+SHA512 (dpbox/dpbox-6.1.4.tar.gz) = 9a560452d29d46f3860ace0cdd49a469c4fea8dbe20fcafe4afb85f18af5c7b0e76eac1a0a816f8c4cac5bf1ae82a97de9f0b74eafd66edd3318b48be9a3dbef
+Size (dpbox/dpbox-6.1.4.tar.gz) = 955181 bytes
