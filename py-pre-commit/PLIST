@@ -186,7 +186,6 @@ ${PYSITELIB}/pre_commit/repository.pyo
 ${PYSITELIB}/pre_commit/resources/__init__.py
 ${PYSITELIB}/pre_commit/resources/__init__.pyc
 ${PYSITELIB}/pre_commit/resources/__init__.pyo
-${PYSITELIB}/pre_commit/resources/empty_template_.npmignore
 ${PYSITELIB}/pre_commit/resources/empty_template_Cargo.toml
 ${PYSITELIB}/pre_commit/resources/empty_template_LICENSE.renv
 ${PYSITELIB}/pre_commit/resources/empty_template_Makefile.PL
@@ -195,7 +194,6 @@ ${PYSITELIB}/pre_commit/resources/empty_template_environment.yml
 ${PYSITELIB}/pre_commit/resources/empty_template_go.mod
 ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
-${PYSITELIB}/pre_commit/resources/empty_template_package.json
 ${PYSITELIB}/pre_commit/resources/empty_template_pre-commit-package-dev-1.rockspec
 ${PYSITELIB}/pre_commit/resources/empty_template_pre_commit_placeholder_package.gemspec
 ${PYSITELIB}/pre_commit/resources/empty_template_pubspec.yaml
