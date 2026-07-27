@@ -1,0 +1,48 @@
+bgpipe: BGP pipeline processor
+
+Open-source tool that processes BGP messages through
+a pipeline of composable stages.
+
+What is bgpipe?
+
+bgpipe sits between routers as a transparent proxy, auditing,
+filtering, and transforming BGP sessions on the fly.
+Think of it as a scriptable BGP firewall and traffic processor.
+
+Use cases:
+* BGP firewall with RPKI validation, prefix limits, and rate limiting
+* Bidirectional BGP to JSON translation including Flowspec - pipe through
+  jq, Python, anything
+* MRT file processing and conversion at scale, incl. RIB snapshots (table dumps)
+* Scriptable pipeline - chain stages or pipe through external programs
+* Live BGP monitoring from RIPE RIS Live or RouteViews with real-time filters
+* Secure transport - add TCP-MD5 to sessions, proxy over encrypted WebSockets
+
+Highlights
+MRT table dumps: read RIB snapshots as BGP updates
+Output tail loss fixed
+
+Added
+* read: MRT TABLE_DUMP and TABLE_DUMP_V2 RIB snapshots, with peer tagging and prefix bundling
+* aspa: --first-hop option
+* Auto-detection of RouteViews and RIPE RIS RIB file names
+Fixed
+* write: dropped an arbitrary tail of the output at shutdown
+* core: buffered output could be lost at pipeline shutdown
+* update: no longer adds path attributes to pure withdrawals (RFC 4271)
+* limit: --permanent keeps withdrawals; corrected the --min-length error message
+* listen: close the listener on error paths
+* speaker: invalid --id reports an error instead of panicking
+* config: empty stage arguments are rejected cleanly instead of panicking
+* HTTP API: no panic when two stages produce colliding slugs
+* RPKI: reconnect immediately on RTR version downgrade; warn when an RTR v1 server is used with ASPA
+* RPKI: idempotent metric registration, fixing a panic under go test -count>1
+* extio: return pooled buffers on send failure
+* pprof: standalone server support and a shutdown fix
+* rv-live: cleanup and documentation corrections
+Docs and testing
+* New MRT reference page covering both dump families, peer tags, bundling, format detection and use cases
+* New HTTP API reference
+* Docker-based integration suite against GoBGP, BIRD, FRR, StayRTR and rtrtr, covering transparent proxying, MRT replay, ASPA over RTR and ROA revocation
+* Numerous stage documentation corrections (speaker, update, rv-live, connect, filters, quickstart)
+
