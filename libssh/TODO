@@ -1,0 +1,22 @@
+Doesn't build on NetBSD-11 and -current:
+
+===> Building for libssh-0.12.1
+[1/3] Building C object src/CMakeFiles/ssh.dir/mlkem_crypto.c.o
+FAILED: [code=1] src/CMakeFiles/ssh.dir/mlkem_crypto.c.o
+/tmp/security/libssh/work/.cwrapper/bin/gcc -DLIBSSH_EXPORTS -I/tmp/security/libssh/work/libssh-0.12.1/cmake-pkgsrc-build/src -I/tmp/security/libssh/work/libssh-0.12.1/src -I/tmp/security/libssh/work/libssh-0.12.1/includ
+e -I/tmp/security/libssh/work/libssh-0.12.1/cmake-pkgsrc-build/include -I/tmp/security/libssh/work/libssh-0.12.1/cmake-pkgsrc-build -O2 -g -fstack-clash-protection -I/usr/include/krb5 -I/usr/include -I/usr/pkg/include -s
+td=gnu99 -fPIC -fvisibility=hidden -Wpedantic -Wall -Wshadow -Wmissing-prototypes -Wcast-align -Werror=address -Wstrict-prototypes -Werror=strict-prototypes -Wwrite-strings -Werror=write-strings -Werror-implicit-function
+-declaration -Wpointer-arith -Werror=pointer-arith -Wdeclaration-after-statement -Werror=declaration-after-statement -Wreturn-type -Werror=return-type -Wuninitialized -Werror=uninitialized -Wimplicit-fallthrough -Werror=
+strict-overflow -Wstrict-overflow=2 -Wno-format-zero-length -Wmissing-field-initializers -Wsign-compare -Wold-style-definition -Werror=old-style-definition -Wimplicit-int -Werror=implicit-int -Wint-conversion -Werror=int
+-conversion -Wformat -Wformat-security -Werror=format-security -fno-common -fstack-protector-strong -fstack-clash-protection -MD -MT src/CMakeFiles/ssh.dir/mlkem_crypto.c.o -MF src/CMakeFiles/ssh.dir/mlkem_crypto.c.o.d -
+o src/CMakeFiles/ssh.dir/mlkem_crypto.c.o -c /tmp/security/libssh/work/libssh-0.12.1/src/mlkem_crypto.c
+/tmp/security/libssh/work/libssh-0.12.1/src/mlkem_crypto.c:31:10: fatal error: openssl/ml_kem.h: No such file or directory
+   31 | #include <openssl/ml_kem.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+*** Error code 1
+
+because of
+
+https://gnats.netbsd.org/60511
