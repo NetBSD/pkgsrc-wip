@@ -32,9 +32,14 @@ SUBST_SED.conf+=	-e 's|SYSCONFDIR "|"${PKG_SYSCONFBASE}|g'
 EGDIR=		${PREFIX}/share/examples/waybar
 CONF_FILES=	${EGDIR}/config.jsonc ${PKG_SYSCONFDIR}/config.jsonc
 CONF_FILES+=	${EGDIR}/style.css ${PKG_SYSCONFDIR}/style.css
+CONF_FILES+=	${EGDIR}/power_menu.xml ${PKG_SYSCONFDIR}/power_menu.xml
 
 PKG_SYSCONFSUBDIR=	xdg/waybar
 BUILD_DEFS+=		PKG_SYSCONFBASE
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/resources/custom_modules/power_menu.xml \
+		${DESTDIR}${EGDIR}
 
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"

@@ -39,4 +39,5 @@ man/man5/waybar-tray.5
 man/man5/waybar-wlr-taskbar.5
 man/man5/waybar.5
 share/examples/waybar/config.jsonc
+share/examples/waybar/power_menu.xml
 share/examples/waybar/style.css

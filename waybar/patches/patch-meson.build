@@ -5,18 +5,6 @@ $NetBSD$
 
 --- meson.build.orig	2026-02-06 20:15:03.000000000 +0000
 +++ meson.build
-@@ -26,9 +26,9 @@ elif compiler.has_link_argument('-lstdc+
-     cpp_link_args += ['-lstdc++fs']
- endif
- 
--git = find_program('git', native: true, required: false)
-+########################git = find_program('git', native: true, required: false)
- 
--if not git.found()
-+if not false
-     add_project_arguments('-DVERSION="@0@"'.format(meson.project_version()), language: 'cpp')
- else
-     git_path = run_command(git, 'rev-parse', '--show-toplevel', check: false).stdout().strip()
 @@ -58,15 +58,19 @@ if compiler.links(code, name : 'nl_langi
      add_project_arguments('-DHAVE_LANGINFO_1STDAY', language: 'cpp')
  endif

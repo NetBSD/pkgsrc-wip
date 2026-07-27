@@ -143,7 +143,7 @@ $NetBSD$
 +    spdlog::info("{} {} {} {}", max_charge,cur_charge,charge_rate,discharge_rate);
 +
 +    if (max_charge <= 0) max_charge = last_max_charge;
-+    if (charge_rate == 0 && discharge_rate == 0) {
++    if (charge_rate == 0 && (discharge_rate == 0 || discharge_rate == -1000)) {
 +        time_remaining = 0.0;
 +        power = 0.0;
 +    } else {
