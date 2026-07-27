@@ -1,0 +1,57 @@
+ham/tfkiss: Update to 1.3.2
+
+Upstream is now a maintained fork at https://github.com/kq6up/tfkiss.
+The original site is gone and there had been no release since 1.2.4
+in 2000.
+
+Upstream changes since 1.2.4:
+
+  - 64-bit correctness.  Fixed pointer truncation in call_to_ip() and
+    next_addr(), an incorrect socklen_t definition, inet_addr()
+    comparisons against -1 rather than INADDR_NONE, incorrect signal
+    handler signatures, an argument order bug in dump_ax25frame(), and
+    a missing return after a full routing table that permitted an
+    out-of-bounds write.  Fixed an MBHEAD/MB struct size mismatch that
+    broke the firmware's buffer allocator on LP64 systems.
+
+  - All K&R function definitions converted to ANSI C prototypes.
+    Deprecated bzero() replaced with memset().  Unbounded string
+    operations replaced with bounded equivalents.
+
+  - Build system replaced with current autoconf and automake, so the
+    package builds with contemporary toolchains including GCC 14.
+    Installation paths now follow FHS conventions: documentation is
+    installed under DOCDIR rather than share/tfkiss/doc.
+
+  - XPID, FlexNet and AXIP are enabled by default, so CONFIGURE_ARGS
+    are no longer required for a full featured build.
+
+  - Example configuration files rewritten to be minimal, with NOCALL
+    as the placeholder callsign.
+
+  - DragonFly BSD support and DESTDIR install support, previously
+    carried as pkgsrc patches, are incorporated upstream.  All five
+    patches are therefore removed from this package.
+
+  - Added LICENSE-NOTES documenting the copyright status of the work.
+    TheFirmware is Copyright NORD><LINK e.V. and distributed under
+    ALAS, which permits non-commercial use, modification and
+    redistribution.  The accompanying notice additionally asks that
+    modified versions be distributed only with the consent of
+    NORD><LINK, which can no longer be obtained: the association
+    appears to be dissolved and the author of the Unix port is
+    deceased.  LICENSE is set to generic-nonlicense with RESTRICTED,
+    following ham/7plus.
+
+Packaging changes:
+
+  - MESSAGE removed.
+  - LICENSE and MAINTAINER set.
+  - MASTER_SITES points at the upstream release tarball, which is a
+    genuine autotools distribution and requires no autotools to build.
+  - PLIST regenerated from a staged installation.
+  - DESCR rewritten.
+
+Built and tested on NetBSD 10/arm64, Debian 13/amd64 and
+Slackware 15/x86_64.  Verified interoperating with ham/tnt and
+ham/dpbox, and with a BPQ32 node over AXIP/UDP.

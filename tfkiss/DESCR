@@ -1,16 +1,20 @@
-TNT, the hostmode terminal program needs a TNC with TheFirmware connected
-on a serial interface. There are some applications, where other
-configurations are needed:
-- The TNC or PR-controller software is not compatible to TheFirmware and
-  its hostmode, but does support KISS mode
-- The interface is not on a HF-frequency, but a TCP/IP-based network
-  (local net or internet)
-- TNT together with DPBox shall be used directly connected to a digipeater
-  using KISS mode (hopefully with CRC) as interface
+tfkiss is a software implementation of TheFirmware, the AX.25 packet
+radio firmware written by NORD><LINK for TNC2 hardware.  It presents
+the TheFirmware hostmode interface to client software while using an
+ordinary KISS device for the radio link, so a plain KISS TNC or a
+software modem such as Direwolf can be used in place of a TNC2 running
+TheFirmware in ROM.
 
-To handle these applications, TFKISS was written. It is in fact a port
-of the original TheFirmware by NORD><LINK, written for TNC2-hardware.
-The low level interfaces were changed and adapted to Linux. On the
-radio side a KISS- and an AXIP-interface take the place of the HDLC/modem
-interface. The host connection is changed to a direct console interface (for
-terminal mode) and a socket interface (for TNT).
+It implements AX.25 layer 2 with DAMA support, and optionally FlexNet
+node frame decoding, PID switching, and AX.25 encapsulation in IP or
+UDP datagrams (AXIP).  Up to 50 channels are supported.
+
+tfkiss is normally paired with the tnt terminal program or the dpbox
+mailbox, either of which connects to it over a local socket.  Because
+the AX.25 layer 2 implementation lives in tfkiss rather than in the
+kernel, these programs can be used on systems that have no kernel
+AX.25 stack.
+
+This is a maintained fork of the port by Berndt Josef Wulf, VK5ABN.
+It adds 64-bit correctness fixes, brings the sources to ANSI C, and
+replaces the original build system with autoconf and automake.

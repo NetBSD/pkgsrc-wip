@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (tfkiss/tfkiss-1.2.5.tar.gz) = d2cf7c1297eae0bd11e76e7a7e261301a51ce9879bf5a7339e1506e335a112d9
-SHA512 (tfkiss/tfkiss-1.2.5.tar.gz) = dba058312661840bded47b279fbedb0c832617fca03193ca4ccb9c89ee2b529e887a7cebff245b5d82b89d16910d614e870b525456df616578b0a2af937dcac5
-Size (tfkiss/tfkiss-1.2.5.tar.gz) = 146219 bytes
+BLAKE2s (tfkiss-1.3.2.tar.gz) = 66b049bc8ba53ce20c430d1ef2c2c73375f8f61f186fd38163868352bdeb777b
+SHA512 (tfkiss-1.3.2.tar.gz) = 83da8a54f20f35b4bab258a3e9405ac84943a4ccaa8e9ef93027074e74511e4a4f020a5a87d338eac7d99051023827c9b50ab9879a142f2a708653cb7d0000a4
+Size (tfkiss-1.3.2.tar.gz) = 236858 bytes
