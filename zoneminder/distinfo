@@ -26,3 +26,4 @@ SHA1 (patch-src_zm__remote__camera__nvsocket.cpp) = 7921c7cf74286ab63f26efb22aa3
 SHA1 (patch-src_zm__rtp__source.cpp) = ba46738d040ad0c83a49e0d5cc368f2752535b6e
 SHA1 (patch-src_zm__utils.cpp) = 43b50688fa0d4f51b8474c8cc31e860b3a43f864
 SHA1 (patch-src_zm_signal_cpp) = 97177023eec823ff5cba124fd5f2b636fd54001e
+SHA1 (patch-web_includes_database.php) = 7a990d96b4e21d7ad60545c0202abb14b060f280

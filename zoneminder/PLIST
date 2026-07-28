@@ -6229,6 +6229,9 @@ share/applications/zoneminder.desktop
 share/doc/zoneminder/README-pkgsrc.md
 ${PLIST.rcd}share/examples/rc.d/zoneminder
 share/examples/zoneminder/apache/httpd-zoneminder.conf
+share/examples/zoneminder/config/conf.d/01-system-paths.conf
+share/examples/zoneminder/config/conf.d/02-multiserver.conf
+share/examples/zoneminder/config/conf.d/README
 share/examples/zoneminder/config/zm.conf
 share/zoneminder/MacVendors.json
 share/zoneminder/db/Object_Types.sql

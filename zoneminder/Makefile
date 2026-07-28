@@ -6,6 +6,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
+PKGREVISION=	1
 DISTNAME=	${NAME_DIST}-${VERSION}
 #WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}
@@ -118,6 +119,10 @@ OWN_DIRS_PERMS+=	${VARBASE}/tmp/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 # In some configs, ZM_LOGDIR is apparently unused.
 CMAKE_CONFIGURE_ARGS+=	-DZM_LOGDIR=${VARBASE}/log/zm
 OWN_DIRS_PERMS+=	${VARBASE}/log/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+
+# Remediate cmake searching for rm in the build environment, finding
+# tools wrappers, and assuming that is the runtime environment.
+CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_RM=/bin/rm
 
 # Choose directory where zoneminder can create shm files (for zmc).
 # \todo Define this per-OS.
@@ -274,7 +279,9 @@ CMAKE_CONFIGURE_ARGS+=	-DZM_WEB_GROUP=${APACHE_GROUP}
 # other random cgi scripts have been installed by other packages.
 # This sets the path to be used, and httpd/nginx config must alias
 # that path to $PREFIX/libexec/zoneminder/cgi-bin/.
-CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=zm/cgi-bin/nph-zms
+# \todo Add a leading / to avoid cmake deciding to make it absolute by
+# prepending workdir.
+CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=/zm/cgi-bin/nph-zms
 
 .if !empty(PKG_OPTIONS:Mapache)
 .include "../../mk/apache.mk"
@@ -336,10 +343,14 @@ pre-configure:
 
 EGDIR=			share/examples/${PKGBASE}
 DOCDIR=			share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/config ${EGDIR}/apache
+INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/config ${EGDIR}/config/conf.d ${EGDIR}/apache
 CONF_FILES+=		${PREFIX}/${EGDIR}/config/zm.conf ${PKG_SYSCONFDIR}/zm.conf
+CONF_FILES+=		${PREFIX}/${EGDIR}/config/conf.d/01-system-paths.conf ${PKG_SYSCONFDIR}/conf.d/01-system-paths.conf
+CONF_FILES+=		${PREFIX}/${EGDIR}/config/conf.d/02-multiserver.conf ${PKG_SYSCONFDIR}/conf.d/02-multiserver.conf
+CONF_FILES+=		${PREFIX}/${EGDIR}/config/conf.d/README ${PKG_SYSCONFDIR}/conf.d/README
 INSTALLATION_DIRS+=	bin share/examples/rc.d share/zoneminder/db
 INSTALLATION_DIRS+=	${DOCDIR}
+
 post-install:
 	# Remediate bundled deps installing things.
 	${RM}		-rf ${DESTDIR}${PREFIX}/include/jwt-cpp
@@ -352,6 +363,7 @@ post-install:
 	# Config files to EGDIR.
 	${INSTALL_DATA} ${WRKSRC}/httpd-zoneminder.conf ${DESTDIR}${PREFIX}/${EGDIR}/apache/httpd-zoneminder.conf
 	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
+	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/conf.d/* ${DESTDIR}${PREFIX}/${EGDIR}/config/conf.d
 	# rc.d to examples
 .if ${INIT_SYSTEM} == "rc.d"
 	${INSTALL_SCRIPT} ${WRKSRC}/${CMAKE_BUILD_DIR}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder
