@@ -1,10 +1,9 @@
 $NetBSD$
 
-BLAKE2s (llama-b10068-ui.tar.gz) = c5fb1cdde0d553a6648001e3daa57474b426c195c80ee118b4e9b0209b8e1410
-SHA512 (llama-b10068-ui.tar.gz) = 0932498f0259e5f46d2f5a14636560c5b2fc036d3b25bcd3e1807d3b7d1e67d962d5c2640a3f05345d6edc0d47baf34afd96520fef5eec5db028171e357d7cd3
-Size (llama-b10068-ui.tar.gz) = 2865832 bytes
-BLAKE2s (llama.cpp-b10068.tar.gz) = f2d99b9916a6dacd408b88ecd2f068a32976d581b4367878de17ff8057c87682
-SHA512 (llama.cpp-b10068.tar.gz) = b23d154942f8e57ba37f6edff94951940665024ff6bd6d10e658d9f1e065cd56266125994269a469af928324a55d4a4b2695b73731c3dff6d9a6276a4620cba4
-Size (llama.cpp-b10068.tar.gz) = 35932327 bytes
-SHA1 (patch-common_common.cpp) = b05147e49fceee8f54b3c40a6db120aa2c8fc9dd
-SHA1 (patch-src_llama-vocab.cpp) = cb99e8705a9c64fabc7bd4c70db0c5f5db919b0b
+BLAKE2s (llama-b10155-ui.tar.gz) = 5e0cb566b9471304a7335dd7e55e04030a62c940bbcfe769ec6074a2d34fb654
+SHA512 (llama-b10155-ui.tar.gz) = 35ae09b6bc7c07b0a360363b86d39331cc1aae26c80b3838da2112ccdbb26a983ad3641bd65ee281da6384dc6b2713878972ec8233ffcc5acaebc978ebc744c8
+Size (llama-b10155-ui.tar.gz) = 3055595 bytes
+BLAKE2s (llama.cpp-b10155.tar.gz) = ae77ea6035cb853f545b9b77f7763ffcd8ac3de8dd0800875a2ba4a6941d77af
+SHA512 (llama.cpp-b10155.tar.gz) = 5b144ab4338d899aff4a3bc6b2f19de068bddb3bdb9c2851f94e3eb20e10247b17fc938aa552d70d28491aba2d7050f05b86bdcac66b65582a966b031ef7979e
+Size (llama.cpp-b10155.tar.gz) = 36422045 bytes
+SHA1 (patch-vendor_sheredom_subprocess.h) = af56949ad770ec8f65b39651f2d6f621cf1b1fa4
