@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README
+
+Date-DayOfWeek
+
+There are several modules in this distribution. 
+Date::Doomsday calculates doomsday for a particular year.
+Date::DayOfWeek uses the doomsday algorithm to calculate the day 
+of the week for any given date.
+
+Date::DayOfWeek::Birthday, Date::DayOfWeek::Sneeze and
+Date::DayOfWeek::Nails are three modules illustrating some of the
+things that have been believed, at some point in history, as
+attributes of the various days of the week.
+
+Doomsday is a cute little idea invented by Dr John Conway that makes it very
+easy to figure out the day of the week for any date.
+
+You can find out more about doomsday and related calculations at
+http://www.interlog.com/~r937/doomsday.html
+
+This module is distributed under the same terms as Perl itself.
+
+...
