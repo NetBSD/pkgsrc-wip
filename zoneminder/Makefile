@@ -237,6 +237,9 @@ CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=MariaDB
 DEPENDS+=			p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 MYSQL_VERSIONS_ACCEPTED=	80
 CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=mysql
+# WARNING: Omit the mysql hunk in the CMakeLists patch, if wanting to
+# use mysql, and feel free to send in a cleaner solution -- omitted
+# for now because there appear to be zero mysql users.
 .endif
 
 .include "../../mk/mysql.buildlink3.mk"
