@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.2 2011/12/21 15:52:17 dholland Exp $
+
+ - use preferred libpcap.
+ - don't use gmake.
+
+--- Build.orig	2006-03-16 07:44:34.000000000 +0000
++++ Build
+@@ -32,11 +32,12 @@ if [ ! -f mk/$SYSTEM ]; then
+   exit 1
+ fi
+ 
+-GMAKE_OK=`which gmake 2>/dev/null`
++GMAKE_OK=/nonexistent
+ 
++test "$LIBPCAP_PREFIX" = "" && LIBPCAP_PREFIX="/usr"
+ USE_BPF="pcap-bpf.h"
+ 
+-if [ ! -f "/usr/include/$USE_BPF" -a ! -f "/usr/local/include/$USE_BPF" ]; then
++if [ ! -f "$LIBPCAP_PREFIX/include/$USE_BPF" ]; then
+   USE_BPF="net/bpf.h"
+ fi
+ 

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:13:34 joerg Exp $
+bin/p0f
+man/man1/p0f.1
+share/doc/p0f/p0f.README
+share/doc/p0f/p0frep
+share/examples/p0f/p0f.fp
+share/examples/p0f/p0fa.fp
+share/examples/p0f/p0fr.fp
