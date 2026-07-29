@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.30 2013/02/06 19:31:04 jperkin Exp $
 #
 
-DISTNAME=	p0f-2.0.8
-PKGREVISION=	1
+DISTNAME=	p0f-3.09b
 CATEGORIES=	security net
-MASTER_SITES=	http://lcamtuf.coredump.cx/p0f/
+MASTER_SITES=	https://lcamtuf.coredump.cx/p0f3/releases/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,11 +11,13 @@ HOMEPAGE=	http://lcamtuf.coredump.cx/p0f.shtml
 COMMENT=	Passive OS fingerprinting tool
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/p0f
+USE_TOOLS+=	bash
 
 PKG_SYSCONFSUBDIR=	p0f
 
 MAKE_ENV+=	LIBPCAP_PREFIX=${BUILDLINK_PREFIX.libpcap}
+
+REPLACE_BASH+=	build.sh
 
 CONF_FILES=	${PREFIX}/share/examples/p0f/p0f.fp ${PKG_SYSCONFDIR}/p0f.fp
 CONF_FILES+=	${PREFIX}/share/examples/p0f/p0fa.fp ${PKG_SYSCONFDIR}/p0fa.fp
@@ -29,9 +30,6 @@ SUBST_SED.paths=	-e "s|/etc/p0f|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/p0f share/examples/p0f
-
-post-patch:
-	${LN} -s NetBSD ${WRKSRC}/mk/DragonFly
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/p0f ${DESTDIR}${PREFIX}/bin
