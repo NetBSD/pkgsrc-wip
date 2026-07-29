@@ -1,0 +1,16 @@
+# tuicr
+
+A code review TUI with vim keybindings. Export to GitHub, GitLab, or clipboard
+
+Pronounced "tweaker".
+
+## What it does
+
+- GitHub-style continuous diff in the terminal.
+- Scroll through every changed file in one stream.
+- PR-style comments at the line, range, file, and review level.
+- Review tracking at file or hunk granularity, persisted across sessions.
+- Three export targets:
+    push a real review to GitHub or GitLab
+    copy structured markdown to your clipboard
+    pipe to stdout.
