@@ -2856,6 +2856,7 @@ SUBDIR+=	owntone
 SUBDIR+=	oww-nox11
 SUBDIR+=	oysttyer
 SUBDIR+=	ozymandns
+SUBDIR+=	p0f
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
 SUBDIR+=	p4
