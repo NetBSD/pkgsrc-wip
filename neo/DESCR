@@ -1,0 +1,14 @@
+Neo is an AI-powered coding agent that turns complex repository
+work into a visible workflow. It keeps the plan, tools, tests,
+reviews, and delivery moving in one terminal.
+
+Features:
+- Visible by default: see the plan, active work, tool activity,
+  tests, and delegated tasks without reading a wall of chat
+- One coordinator, focused workers: delegate bounded work to
+  sub-agents and bring their evidence back into one coherent workflow
+- Multiple model backends: Anthropic, OpenAI, Google Gemini, or
+  OpenRouter
+- Granular permissions: trusted, approval-based, or read-only
+- Single Go binary with built-in tools, local sessions, no runtime
+  or plugin stack
