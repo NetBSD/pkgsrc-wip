@@ -19,26 +19,20 @@ MAKE_ENV+=	LIBPCAP_PREFIX=${BUILDLINK_PREFIX.libpcap}
 
 REPLACE_BASH+=	build.sh
 
-CONF_FILES=	${PREFIX}/share/examples/p0f/p0f.fp ${PKG_SYSCONFDIR}/p0f.fp
-CONF_FILES+=	${PREFIX}/share/examples/p0f/p0fa.fp ${PKG_SYSCONFDIR}/p0fa.fp
-CONF_FILES+=	${PREFIX}/share/examples/p0f/p0fr.fp ${PKG_SYSCONFDIR}/p0fr.fp
+CONF_FILES+=	${PREFIX}/share/examples/p0f/p0f.fp ${PKG_SYSCONFDIR}/p0f.fp
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-build
-SUBST_FILES.paths=	config.h p0f.1
-SUBST_SED.paths=	-e "s|/etc/p0f|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.paths=	Fixing paths.
+SUBST_FILES.paths=	config.h
+SUBST_SED.paths=	-e "/FP_FILE/s|p0f.fp|${PKG_SYSCONFDIR}/p0f.fp|g"
+SUBST_MESSAGE.paths=	Fixing paths
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/p0f share/examples/p0f
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/p0f ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${PREFIX}/share/doc/p0f/p0f.README
-	${INSTALL_DATA} ${WRKSRC}/p0frep ${DESTDIR}${PREFIX}/share/doc/p0f/p0frep
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/p0f/p0f.README
 	${INSTALL_DATA} ${WRKSRC}/p0f.fp ${DESTDIR}${PREFIX}/share/examples/p0f
-	${INSTALL_DATA} ${WRKSRC}/p0fa.fp ${DESTDIR}${PREFIX}/share/examples/p0f
-	${INSTALL_DATA} ${WRKSRC}/p0fr.fp ${DESTDIR}${PREFIX}/share/examples/p0f
-	${INSTALL_MAN} ${WRKSRC}/p0f.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
