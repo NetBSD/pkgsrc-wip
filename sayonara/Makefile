@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	sayonara-1.11.0_stable1
+DISTNAME=	sayonara-1.12.0_stable1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITLAB:=luciocarreras/}
 GITLAB_PROJECT=	sayonara-player
 GITLAB_TAG=	${PKGVERSION_NOREV:S/_/-/}
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://www.sayonara-player.com/
 COMMENT=	Highly customizable, clear and fast audio player
 LICENSE=	gnu-gpl-v3
