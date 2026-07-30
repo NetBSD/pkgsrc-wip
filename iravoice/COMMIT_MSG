@@ -1,0 +1,9 @@
+misc/iravoice: Add iravoice version 0.7.2
+
+Packaged in wip by IraVoice Founder.
+
+The package installs the signed, notarized Apple-silicon app from the
+stable upstream DMG. Binary package redistribution is disabled; the
+unmodified distfile may be mirrored under the upstream PAD terms.
+
+IraVoice is a private, on-device dictation app for macOS 26 or later.

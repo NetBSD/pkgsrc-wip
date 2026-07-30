@@ -1826,6 +1826,7 @@ SUBDIR+=	ipax0208font-ttf
 SUBDIR+=	ipsvd
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
+SUBDIR+=	iravoice
 SUBDIR+=	ircII-current
 SUBDIR+=	irixjoker-ai-utils
 SUBDIR+=	ironpython

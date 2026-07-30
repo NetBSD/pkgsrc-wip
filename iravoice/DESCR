@@ -1,0 +1,4 @@
+IraVoice is a private dictation app for Apple-silicon Macs.
+
+It performs speech recognition on-device and installs as a notarized
+macOS app bundle in the pkgsrc Applications directory.

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+Applications/IraVoice.app/Contents/CodeResources
+Applications/IraVoice.app/Contents/Info.plist
+Applications/IraVoice.app/Contents/MacOS/IraVoice
+Applications/IraVoice.app/Contents/Resources/AppIcon.icns
+Applications/IraVoice.app/Contents/_CodeSignature/CodeResources
