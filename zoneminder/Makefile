@@ -1,30 +1,31 @@
 # $NetBSD: Makefile,v 1.104 2026/07/24 15:48:18 taca Exp $
 
+# This is a twisty maze of variables.  The plan is to edit VERSION
+# (the zoneminder version) on upgrades, and have everything flow from
+# there.
 VERSION=	1.38.3
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 PKGREVISION=	1
 DISTNAME=	${NAME_DIST}-${VERSION}
-#WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${NAME_DIST}/}
 GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	${VERSION}
 
 ## Submodules (from ZoneMinder's .gitmodules file)
 # We use a specific commit on each branch, to avoid distfile versioning woes
 # and to meet pkgsrc expectations that a fixed version is fixed software.
+# Upstream checks in submodules but this is not apparent in git tarballs.
+#   https://github.com/ZoneMinder/zoneminder/issues/5010
 # Check for updates every release.
 GITHUB_SUBMODULES+=	FriendsOfCake crud 14292374ccf1328f2d5db20897bd06f99ba4d938 web/api/app/Plugin/Crud
 GITHUB_SUBMODULES+=	ZoneMinder CakePHP-Enum-Behavior ea90c0cd7f6e24333a90885e563b5d30b793db29 web/api/app/Plugin/CakePHP-Enum-Behavior
 GITHUB_SUBMODULES+=	ZoneMinder RtspServer a071599575f60a6f1f424e1f9b408dad7da734a8 dep/RtspServer
-# was  used to cherry-pick https://github.com/ZoneMinder/RtspServer/pull/12
-#GITHUB_SUBMODULES+=	gdt RtspServer 2719899a3f74ef0a9bb213d34998bcc74cc1f17f dep/RtspServer
 GITHUB_SUBMODULES+=	chmike CxxUrl eaf46c0207df24853a238d4499e7f4426d9d234c dep/CxxUrl
 
 MAINTAINER=	dsainty@NetBSD.org
@@ -33,10 +34,9 @@ HOMEPAGE=	https://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
 
-# ZoneMinder without a web server does not really make sense (and if
-# it did, what is omitted is surely not right).  Require a webserver
-# (until someone wanting to not have one provides rationale and a
-# patch).
+# ZoneMinder without a web server does not really make sense.  Require
+# a webserver (until someone wanting to not have one provides
+# rationale and a patch).
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zoneminder
 PKG_OPTIONS_REQUIRED_GROUPS=	webserver
 PKG_OPTIONS_GROUP.webserver=	apache nginx
@@ -46,6 +46,7 @@ PKG_SUGGESTED_OPTIONS=		apache
 # package supports mysql and MariaDB, which must be handled separately
 # because p5-DBD-mysql is (2026-01) mysql only, with p5-DBD-MariaDB
 # for MariaDB.
+#   https://github.com/ZoneMinder/zoneminder/issues/5008
 PKG_OPTIONS_REQUIRED_GROUPS+=	database
 PKG_OPTIONS_GROUP.database=	mysql mariadb
 PKG_SUGGESTED_OPTIONS+=		mariadb
@@ -112,20 +113,19 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 # NB: Startup script must create /var/run/zm.
 CMAKE_CONFIGURE_ARGS+=	-DZM_SOCKDIR=${VARBASE}/run/zm
 
-# ZM_TMPDIR might or might not be used.
 CMAKE_CONFIGURE_ARGS+=	-DZM_TMPDIR=${VARBASE}/tmp/zm
 OWN_DIRS_PERMS+=	${VARBASE}/tmp/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
-# In some configs, ZM_LOGDIR is apparently unused.
+# Probably, one can configure logging to ZM_LOGDIR.
 CMAKE_CONFIGURE_ARGS+=	-DZM_LOGDIR=${VARBASE}/log/zm
 OWN_DIRS_PERMS+=	${VARBASE}/log/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # Remediate cmake searching for rm in the build environment, finding
-# tools wrappers, and assuming that is the runtime environment.
+# tools wrappers, and assuming that is that way in the runtime environment.
 CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_RM=/bin/rm
 
 # Choose directory where zoneminder can create shm files (for zmc).
-# \todo Define this per-OS.
+# \todo Define this per-OS, perhaps hoisting to mk.
 ZM_SHM=			/var/shm	# NetBSD
 CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_MAP=${ZM_SHM}
 
@@ -221,14 +221,12 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 
 ## DATABASE
 
-# In case of trouble, see files/upstream-PR-3914 for p5-DBD-mysql woes
-# and changes to address them.n
-
-# There is no reason to suspect that any version in pkgsrc is
+# There is no reason to suspect that any MariaDB version in pkgsrc is
 # problematic, but most have not been tested.
 .if !empty(PKG_OPTIONS:Mmariadb)
 # 2026-01: 1.36 works with mariadb 10.6 on NetBSD
 # 2024-01: 1.36 works with mariadb 11.2 on GNU/Linux
+# 2026-07: 1.38 works with mariadb 10.6 on NetBSD
 DEPENDS+=			p5-DBD-MariaDB-[0-9]*:../../databases/p5-DBD-MariaDB
 MYSQL_VERSIONS_ACCEPTED=	mariadb118 mariadb114 mariadb1011 mariadb106 mariadb105
 CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=MariaDB
@@ -246,12 +244,14 @@ CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=mysql
 
 ## PHP
 
+# php-apcu fails with 56, and there's no reason to think about 56.
 # 20250103 1.36.37:
 #   74 has not been tested recently, but there's no reason to try to use it.
 #   81 has not been tested recently; probably it works.
 #   82 and 83 work.  
 #   84 has not been tested, but FreeBSD ports seems to think it works.
-# php-apcu fails with 56, and there's no reason to think about 56.
+# 202060729 1.38.2:
+#   83 works
 PHP_VERSIONS_INCOMPATIBLE=	56
 
 .include "../../lang/php/phpversion.mk"
