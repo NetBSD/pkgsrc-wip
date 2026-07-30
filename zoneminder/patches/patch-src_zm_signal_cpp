@@ -2,9 +2,9 @@ $NetBSD: patch-src_zm_signal_cpp,v 1.4 2024/12/01 13:49:48 gdt Exp $
 
 Don't assume machine-dependent IP register details are available for any
 platform except Linux.  Only Linux is sure to have this style of mcontext_t.
+Instead, add an #else for NetBSD.
 
-Resolves build on systems that have ucontext_t but an mcontext_t that
-doesn't look like Linux.
+\todo File upstream.
 
 --- src/zm_signal.cpp.orig	2026-05-28 12:42:49.000000000 +0000
 +++ src/zm_signal.cpp

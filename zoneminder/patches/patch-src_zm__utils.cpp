@@ -1,6 +1,6 @@
 $NetBSD: patch-src_zm__utils.cpp,v 1.4 2024/12/01 13:49:48 gdt Exp $
 
-Fix time types (sizes).
+Fix time types.
 
 Hack around arm detection woes.
 

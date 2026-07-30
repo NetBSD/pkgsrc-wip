@@ -1,5 +1,7 @@
 $NetBSD$
 
+\todo Disable, reproduce error, and file upstream.
+
 --- src/zm_comms.h.orig	2026-07-26 00:41:38.146240669 +0000
 +++ src/zm_comms.h
 @@ -26,6 +26,7 @@

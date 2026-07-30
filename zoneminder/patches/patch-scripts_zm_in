@@ -5,6 +5,8 @@ $NetBSD: patch-scripts_zm_in,v 1.6 2024/12/01 13:49:48 gdt Exp $
 The LOCKFILE feature appears unused, and requires a /var/lock/subsys directory
 we don't have.
 
+\todo Address with upstream.
+
 --- scripts/zm.in.orig	2016-02-03 18:40:30.000000000 +0000
 +++ scripts/zm.in
 @@ -7,12 +7,12 @@

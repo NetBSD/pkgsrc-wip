@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add missing include on NetBSD.
+
+\todo File upstream.
+
 --- src/zm_remote_camera_nvsocket.cpp.orig	2026-07-26 00:42:57.983592814 +0000
 +++ src/zm_remote_camera_nvsocket.cpp
 @@ -32,6 +32,9 @@
