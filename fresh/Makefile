@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fresh-0.4.5
+DISTNAME=	fresh-0.4.6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sinelaw/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -21,8 +21,8 @@ CARGO_INSTALL_ARGS=	install --path crates/fresh-editor --root ${DESTDIR}${PREFIX
 # used. But _POSIX_C_SOURCE=199506L hides gettimeofday() on NetBSD, and
 # clock_gettime() works fine (and avoids the issue entirely).
 # Upstream pr submitted.
-post-extract: fix-lzma-sys-netbsd
-fix-lzma-sys-netbsd:
+
+post-extract:
 	sed -i 's/#if defined(__sun)/#if defined(__sun) || defined(__NetBSD__)/' ${CARGO_VENDOR_DIR}/lzma-sys-0.1.20/config.h
 
 .include "cargo-depends.mk"
