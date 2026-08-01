@@ -2607,6 +2607,7 @@ SUBDIR+=	nedit
 SUBDIR+=	nedit-ng
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
+SUBDIR+=	neo
 SUBDIR+=	neomutt-git
 SUBDIR+=	neovim-git
 SUBDIR+=	neovim-qt
