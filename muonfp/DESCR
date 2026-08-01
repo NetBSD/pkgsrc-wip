@@ -1,0 +1,6 @@
+MuonFP is an open-source passive TCP fingerprint sensor.
+It observes TCP SYN and SYN-ACK packets and records a compact signature
+derived from the TCP window size, option order, MSS, and window scale.
+
+MuonFP is useful for network-security research, reconnaissance
+detection, and feeding fingerprint-aware tools such as fpfw.
