@@ -22,6 +22,12 @@ CARGO_INSTALL_ARGS=	install \
 			--path crates/tui \
 			--root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 
+# Use lld linker instead of GNU ld — much less memory during final link.
+# Max codegen units + thin LTO spread LLVM work across smaller parallel invocations.
+RUSTFLAGS+=		-C link-arg=-fuse-ld=lld
+MAKE_ENV+=		CARGO_PROFILE_RELEASE_CODEGEN_UNITS=16
+MAKE_ENV+=		CARGO_PROFILE_RELEASE_LTO=thin
+
 # rquickjs-sys lacks pre-generated bindings for NetBSD targets.
 # The Linux bindings are ABI-identical for QuickJS on the same CPU arch.
 post-extract:
