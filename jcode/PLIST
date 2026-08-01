@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/jcode
+bin/jcode-harness
+bin/test_api

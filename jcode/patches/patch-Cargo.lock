@@ -1,0 +1,23 @@
+$NetBSD$
+
+Remove git source entries for vendored agentgrep and mermaid-rs-renderer
+dependencies so that Cargo treats them as local path dependencies.
+
+--- Cargo.lock.orig
++++ Cargo.lock
+@@ -47,7 +47,6 @@
+ [[package]]
+ name = "agentgrep"
+ version = "0.1.6"
+-source = "git+https://github.com/1jehuang/agentgrep.git?tag=v0.1.6#b01b804008ab0662fa14e6b60b10bff61716e6f1"
+ dependencies = [
+  "clap",
+  "globset",
+@@ -4916,7 +4915,6 @@
+ [[package]]
+ name = "mermaid-rs-renderer"
+ version = "0.3.1"
+-source = "git+https://github.com/1jehuang/mermaid-rs-renderer.git?tag=v0.3.1#2f993bd79a55235eb59a34d807852276ba25bea7"
+ dependencies = [
+  "anyhow",
+  "clap",

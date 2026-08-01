@@ -1,0 +1,6 @@
+Introduce jcode v.0.64.2
+
+Yet another LLM harness - the most efficient, the most intelligent... 
+
+Works without any patches on NetBSD, but with certain limitations,
+now addressed by the patchset. 

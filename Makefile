@@ -1876,6 +1876,7 @@ SUBDIR+=	java-xmlrpc
 SUBDIR+=	jazz2-resurrection
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
+SUBDIR+=	jcode
 SUBDIR+=	jd
 SUBDIR+=	jdim-current
 SUBDIR+=	jedit
