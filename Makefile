@@ -2535,6 +2535,7 @@ SUBDIR+=	mummer4
 SUBDIR+=	munge
 SUBDIR+=	munin-common
 SUBDIR+=	munin-node
+SUBDIR+=	muonfp
 SUBDIR+=	mupen64plus
 SUBDIR+=	mupen64plus-extraplugins
 SUBDIR+=	muscle
