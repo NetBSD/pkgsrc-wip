@@ -7,7 +7,7 @@ GITHUB_PROJECT=	burp
 GITHUB_TAG=	3.2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://burp.grke.net/
+HOMEPAGE=	https://burp.grke.net/
 COMMENT=	Networked backup and restore program
 LICENSE=	gnu-agpl-v3
 
