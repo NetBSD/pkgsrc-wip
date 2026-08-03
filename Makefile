@@ -2204,7 +2204,6 @@ SUBDIR+=	libsml
 SUBDIR+=	libsocialweb
 SUBDIR+=	libspnav
 SUBDIR+=	libspt
-SUBDIR+=	libssh
 SUBDIR+=	libstacktrace
 SUBDIR+=	libstrophe
 SUBDIR+=	libsysinfo
