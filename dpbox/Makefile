@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	dpbox-6.1.4
+DISTNAME=	dpbox-6.1.5
 CATEGORIES=	ham
 MASTER_SITES=   -https://github.com/kq6up/dpbox/archive/refs/tags/v${PKGVERSION_NOREV}.tar.gz
 DIST_SUBDIR=	dpbox
