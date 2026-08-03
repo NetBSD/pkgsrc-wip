@@ -115,7 +115,6 @@ PATCH_SITES+= https://raw.githubusercontent.com/earlephilhower/esp-quick-toolcha
 
 PATCHFILES+= gcc-001-jump-tables-in-text-section-earlephilhower.patch
 PATCH_SITES+= https://github.com/earlephilhower/esp-quick-toolchain/raw/master/patches/
-PATCH_DIST_STRIP= -p1
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		https://github.com/espressif/gcc

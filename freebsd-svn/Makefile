@@ -15,6 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/freebsd-svn/distinfo
 
 PATCHFILES+=		extra-patch-fbsd-template
 PATCH_SITES+=		https://svnweb.freebsd.org/ports/head/devel/subversion19/files/
+PATCH_DIST_STRIP=	-p0
 
 USE_TOOLS+=		msgfmt
 

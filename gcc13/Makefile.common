@@ -62,7 +62,6 @@ BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
 PATCHFILES=		gcc-13.3.0.diff
 PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
-PATCH_DIST_STRIP=	-p1
 .endif
 
 ## For graphite support.

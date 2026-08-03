@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.6 2012/10/03 08:53:47 asau Exp $
-#
 
 DISTNAME=		makedev_2.3.1.orig
 PKGNAME=		linux-makedev-${VERSION:S/-/./}
@@ -9,7 +8,6 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/makedev/}
 
 PATCH_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/makedev/}
 PATCHFILES=		makedev_${VERSION}.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		reed@reedmedia.net
 COMMENT=		Script to make and update Linux /dev device nodes

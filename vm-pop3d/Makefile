@@ -7,7 +7,6 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/mail/pop/}
 
 PATCH_SITES=		http://www.reedmedia.net/software/virtualmail-pop3d/
 PATCHFILES=		vm-pop3d-1.1.7e.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.reedmedia.net/software/virtualmail-pop3d/
