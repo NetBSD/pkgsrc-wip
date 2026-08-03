@@ -4028,6 +4028,8 @@ share/emacs/${PKGVERSION}/lisp/term/internal.el.gz
 share/emacs/${PKGVERSION}/lisp/term/internal.elc
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el.gz
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.elc
+share/emacs/${PKGVERSION}/lisp/term/kmscon.el.gz
+share/emacs/${PKGVERSION}/lisp/term/kmscon.elc
 share/emacs/${PKGVERSION}/lisp/term/konsole.el.gz
 share/emacs/${PKGVERSION}/lisp/term/konsole.elc
 share/emacs/${PKGVERSION}/lisp/term/linux.el.gz
