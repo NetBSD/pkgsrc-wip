@@ -7,7 +7,6 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:S,^,-,:=kq6up/tfkiss/releases/download/1.3.2/
 MAINTAINER=	christopher.maness@gmail.com
 HOMEPAGE=	https://github.com/kq6up/tfkiss
 COMMENT=	Software implementation of TheFirmware for use with TNT
-
 # TheFirmware is Copyright NORD><LINK e.V. and is distributed under
 # ALAS, the general licence for amateur radio software, which permits
 # non-commercial use, modification and redistribution.  The accompanying
