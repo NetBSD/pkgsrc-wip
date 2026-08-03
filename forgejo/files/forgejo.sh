@@ -18,9 +18,9 @@ command="@PREFIX@/sbin/forgejo"
 command_args="--config @PKG_SYSCONFDIR@/conf/app.ini web > /dev/null &"
 
 forgejo_env="FORGEJO_WORK_DIR=@FORGEJO_SHARE_DIR@"
-forgejo_env="${FORGEJO_env} FORGEJO_CUSTOM=@PKG_SYSCONFDIR@"
-forgejo_env="${FORGEJO_env} HOME=@FORGEJO_USER_HOME@"
-forgejo_env="${FORGEJO_env} USER=@FORGEJO_USER@"
+forgejo_env="${forgejo_env} FORGEJO_CUSTOM=@PKG_SYSCONFDIR@"
+forgejo_env="${forgejo_env} HOME=@FORGEJO_USER_HOME@"
+forgejo_env="${forgejo_env} USER=@FORGEJO_USER@"
 
 forgejo_user="@FORGEJO_USER@"
 forgejo_group="@FORGEJO_GROUP@"

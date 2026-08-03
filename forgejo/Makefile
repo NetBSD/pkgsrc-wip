@@ -10,6 +10,8 @@ HOMEPAGE=	https://forgejo.org/
 COMMENT=	Git hosting software
 LICENSE=	mit
 
+GO_VERSION_REQD=	126
+
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	bash-[0-9]*:../../shells/bash
 
@@ -31,11 +33,24 @@ FORGEJO_GROUP?=	git
 PKG_GROUPS_VARS+=	FORGEJO_GROUP
 PKG_USERS_VARS+=	FORGEJO_USER
 
+PKG_SYSCONFSUBDIR=	forgejo
+
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	share/forgejo/options
 INSTALLATION_DIRS+=	share/forgejo/templates
 INSTALLATION_DIRS+=	share/forgejo/public
 INSTALLATION_DIRS+=	share/examples/forgejo
+
+PKG_GROUPS=	${FORGEJO_GROUP}
+PKG_USERS=	${FORGEJO_USER}:${FORGEJO_GROUP}
+
+PKG_SHELL.${FORGEJO_USER}=	${SH}
+PKG_HOME.${FORGEJO_USER}=	${VARBASE}/db/forgejo
+
+FILES_SUBST+=	FORGEJO_USER=${FORGEJO_USER}
+FILES_SUBST+=	FORGEJO_GROUP=${FORGEJO_GROUP}
+FILES_SUBST+=	FORGEJO_USER_HOME=${VARBASE}/db/forgejo
+FILES_SUBST+=	FORGEJO_SHARE_DIR=${PREFIX}/share/forgejo
 
 RCD_SCRIPTS+=	forgejo
 

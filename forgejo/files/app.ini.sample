@@ -3,7 +3,7 @@
 #
 # For information on the available settings, consult the online
 # documentation, or see the accompanying file app.ini.defaults, which
-# contains the settings incorporated into the gitea binary.
+# contains the settings incorporated into the forgejo binary.
 #
 # This sample configuration runs Gitea with a local database.  Before
 # running this configuration, make sure to change the SECRET_KEY and the
@@ -17,26 +17,27 @@
 # localhost.
 #
 # If you'd rather use the web-based installer, remove this conf/app.ini file
-# and make @PKG_SYSCONFDIR@/conf writeable to the @GITEA_USER@ user.
+# and make @PKG_SYSCONFDIR@/conf writeable to the @FORGEJO_USER@ user.
 
 APP_NAME = Gitea: Git with a cup of tea
-RUN_USER = @GITEA_USER@
+RUN_USER = @FORGEJO_USER@
 RUN_MODE = prod
+WORK_PATH= @FORGEJO_SHARE_DIR@
 
 [database]
 DB_TYPE  = sqlite3
 HOST     = 127.0.0.1:3306
-NAME     = gitea
+NAME     = forgejo
 PASSWD   = 
-PATH     = @VARBASE@/db/gitea/gitea.db
+PATH     = @VARBASE@/db/forgejo/forgejo.db
 SSL_MODE = disable
 USER     = root
 
 [indexer]
-ISSUE_INDEXER_PATH = @VARBASE@/db/gitea/indexers/issues.bleve
+ISSUE_INDEXER_PATH = @VARBASE@/db/forgejo/indexers/issues.bleve
 
 [log]
-ROOT_PATH = @VARBASE@/log/gitea
+ROOT_PATH = @VARBASE@/log/forgejo
 MODE      = file
 LEVEL     = Info
 
@@ -44,18 +45,18 @@ LEVEL     = Info
 ENABLED = false
 
 [picture]
-AVATAR_UPLOAD_PATH      = @VARBASE@/db/gitea/data/avatars
+AVATAR_UPLOAD_PATH      = @VARBASE@/db/forgejo/data/avatars
 DISABLE_GRAVATAR        = false
 ENABLE_FEDERATED_AVATAR = false
 
 [repository]
-ROOT = @VARBASE@/db/gitea/gitea-repositories
+ROOT = @VARBASE@/db/forgejo/forgejo-repositories
 # Gitea's default is 'bash', so if you have bash installed, you can comment
 # this out.
 SCRIPT_TYPE = sh
 
 [repository.upload]
-TEMP_PATH = @VARBASE@/db/gitea/data/tmp/uploads
+TEMP_PATH = @VARBASE@/db/forgejo/data/tmp/uploads
 
 [security]
 INSTALL_LOCK = true
@@ -64,7 +65,7 @@ SECRET_KEY   = ChangeMeBeforeRunning
 
 [session]
 PROVIDER = file
-PROVIDER_CONFIG = @VARBASE@/db/gitea/data/sessions
+PROVIDER_CONFIG = @VARBASE@/db/forgejo/data/sessions
 
 [server]
 DOMAIN       = localhost
@@ -75,7 +76,7 @@ DISABLE_SSH  = false
 SSH_DOMAIN   = %(DOMAIN)s
 SSH_PORT     = 22
 OFFLINE_MODE = false
-APP_DATA_PATH = @VARBASE@/db/gitea/data
+APP_DATA_PATH = @VARBASE@/db/forgejo/data
 
 [service]
 REGISTER_EMAIL_CONFIRM = false
