@@ -1,0 +1,20 @@
+This repository contains the code of the Pharo Virtual Machine. This
+implementation started as a fork of OpenSmalltalk-VM. The current
+project would not have been possible without all their previous work.
+
+The current implementation has the following core features:
+
+- an indirect threaded bytecode compiler using GNU extensions
+- a generational scavenger garbage collector: a semi-space + nursery
+  for the young generation, and a mark-compact collector for the old
+  generation
+- a space for permanent objects that do not need to be scanned by the
+  GC
+- a baseline JIT compiler that
+  - translates primitive operations using IR templates
+  - translates bytecode methods using a simple abstract interpretation
+    approach to reduce memory pressure (fewer loads/stores)
+- FFI through the well-known libFFI, and support for non-blocking FFI
+  using worker threads
+
+For more details about the whole Pharo VM project, refer to our wiki.

@@ -3235,6 +3235,7 @@ SUBDIR+=	phantomjs2
 SUBDIR+=	pharo
 SUBDIR+=	pharo-vm
 SUBDIR+=	pharo-vm10
+SUBDIR+=	pharo-vm12
 SUBDIR+=	pharo10
 SUBDIR+=	pharo11
 SUBDIR+=	pharo12

@@ -1,0 +1,52 @@
+$NetBSD$
+
+- define NETBSD
+- backtrace(3) requires libexecinfo
+- use uuidgen(2)
+
+--- CMakeLists.txt.orig	2026-07-15 12:37:44.000000000 +0000
++++ CMakeLists.txt
+@@ -246,6 +246,9 @@ elseif(UNIX)
+     elseif(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+         set(OPENBSD 1)
+         set(VM_TARGET_OS "openbsd")
++    elseif(${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++        set(NETBSD 1)
++        set(VM_TARGET_OS "netbsd")
+     else()
+         set(VM_TARGET_OS "${CMAKE_SYSTEM_NAME}")
+     endif()
+@@ -385,6 +388,7 @@ check_struct_has_member("struct tm" tm_gmtoff time.h H
+ check_function_exists(bzero HAVE_BZERO)
+ check_function_exists(getcontext HAVE_GETCONTEXT)
+ check_struct_has_member("struct tm" tm_gmtoff time.h HAVE_TM_GMTOFF)
++check_library_exists(execinfo backtrace "" HAVE_EXECINFO)
+ 
+ #Required by the UUID Plugin
+ 
+@@ -479,6 +483,10 @@ endif()
+ 	target_compile_definitions(${VM_LIBRARY_NAME} PRIVATE FEATURE_JIT_SIMD=1)
+ endif()
+ 
++if(${HAVE_EXECINFO})
++	target_link_libraries(${VM_LIBRARY_NAME} execinfo)
++endif()
++
+ #
+ # LibFFI
+ #
+@@ -523,6 +531,14 @@ if(OSX)
+     MACOSX_BUNDLE YES
+     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/resources/mac/Info.plist.in"
+   )
++endif()
++
++if(NETBSD)
++  include(FindPkgConfig)
++  pkg_check_modules(EPOLL REQUIRED epoll-shim)
++  message(STATUS "epoll-shim:" ${EPOLL_VERSION})
++  target_include_directories(${VM_LIBRARY_NAME} PUBLIC ${EPOLL_INCLUDEDIR}/libepoll-shim)
++  target_link_libraries(${VM_LIBRARY_NAME} ${EPOLL_LINK_LIBRARIES})
+ endif()
+ 
+ target_link_libraries(${VM_EXECUTABLE_NAME} ${VM_LIBRARY_NAME})
