@@ -1347,6 +1347,7 @@ SUBDIR+=	gmp-ecm
 SUBDIR+=	gmpc-lyricsplugin
 SUBDIR+=	gmrender-resurrect-git
 SUBDIR+=	gmrun
+SUBDIR+=	gmsh
 SUBDIR+=	gn-git
 SUBDIR+=	gnocchi
 SUBDIR+=	gnokii
