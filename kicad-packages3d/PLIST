@@ -4615,6 +4615,7 @@ share/kicad/3dmodels/Inductor_SMD.3dshapes/L_APV_APH1770.step
 share/kicad/3dmodels/Inductor_SMD.3dshapes/L_APV_APH2213.step
 share/kicad/3dmodels/Inductor_SMD.3dshapes/L_AVX_LMLP07A7.step
 share/kicad/3dmodels/Inductor_SMD.3dshapes/L_Abracon_ASPI-0425.step
+share/kicad/3dmodels/Inductor_SMD.3dshapes/L_Abracon_ASPI-0628.step
 share/kicad/3dmodels/Inductor_SMD.3dshapes/L_Abracon_ASPIAIG-F4020.step
 share/kicad/3dmodels/Inductor_SMD.3dshapes/L_Bourns-SRN4018.step
 share/kicad/3dmodels/Inductor_SMD.3dshapes/L_Bourns_SDR1806.step
@@ -5859,6 +5860,7 @@ share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RGZ0048A_VQFN-48-1EP_7x7mm_P
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RHB0032E_VQFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RHF0024A_VQFN-24-1EP_4x5mm_P0.5mm_EP2.65x3.65mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RHH0036C_VQFN-36-1EP_6x6mm_P0.5mm_EP4.4x4.4mm.step
+share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RNQ0040A_WQFN-40-1EP_6x4mm_P0.4mm_EP4.7x2.7mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RRW0024A_WQFN-24-1EP_3x3mm_P0.4mm_EP1.9x1.9mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RSA_VQFN-16-1EP_4x4mm_P0.65mm_EP2.7x2.7mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_RTW_WQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.step
@@ -5869,6 +5871,7 @@ share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_S-PVQFN-N14.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_S-PWQFN-N20.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_UQFN-8_1.5x1.5mm_P0.5mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_VQFN-RGR-20-1EP_3.5x3.5mm_Pitch0.5mm.step
+share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_WQFN-40-1EP_3x6mm_P0.4mm_EP1.7x4.5mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Texas_WQFN-MR-100.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/UDFN-10_1.35x2.6mm_P0.5mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/UDFN-4-1EP_1x1mm_P0.65mm_EP0.48x0.48mm.step
@@ -5896,6 +5899,7 @@ share/kicad/3dmodels/Package_DFN_QFN.3dshapes/Vishay_PowerPAK_MLP55_27L_R.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/W-PDFN-8-1EP_6x5mm_P1.27mm_EP3x3mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/WDFN-8-1EP_4x3mm_P0.65mm_EP2.4x1.8mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/WDFN-8-1EP_6x5mm_P1.27mm_EP3.4x4mm.step
+share/kicad/3dmodels/Package_DFN_QFN.3dshapes/WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/WQFN-20-1EP_2.5x4.5mm_P0.5mm_EP1x2.9mm.step
 share/kicad/3dmodels/Package_DFN_QFN.3dshapes/WQFN-20-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.step
@@ -6223,6 +6227,7 @@ share/kicad/3dmodels/Package_SO.3dshapes/HTSOP-8-1EP_3.9x4.9mm_P1.27mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm.step
+share/kicad/3dmodels/Package_SO.3dshapes/HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.78x3.37mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/HTSSOP-20-1EP_4.4x6.5mm_P0.65mm_EP3.4x6.5mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/HTSSOP-20-1EP_4.4x6.5mm_P0.65mm_EP3.4x6.5mm_Mask2.75x3.43mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/HTSSOP-24-1EP_4.4x7.8mm_P0.65mm_EP3.4x7.8mm_Mask2.4x4.68mm.step
@@ -6416,6 +6421,7 @@ share/kicad/3dmodels/Package_SO.3dshapes/TSSOP-8_3x3mm_P0.65mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/TSSOP-8_4.4x3mm_P0.65mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.step
 share/kicad/3dmodels/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias.step
+share/kicad/3dmodels/Package_SO.3dshapes/Texas_HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.94x3.34mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/Texas_HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask3.155x3.255mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/Texas_PWP0020A.step
 share/kicad/3dmodels/Package_SO.3dshapes/Toshiba_SOIC-4-6_4.4x3.6mm_P1.27mm.step
@@ -6426,6 +6432,7 @@ share/kicad/3dmodels/Package_SO.3dshapes/VSSOP-8_2.3x2mm_P0.5mm.step
 share/kicad/3dmodels/Package_SO.3dshapes/VSSOP-8_3x3mm_P0.65mm.step
 share/kicad/3dmodels/Package_SON.3dshapes/Diodes_PowerDI3333-8.step
 share/kicad/3dmodels/Package_SON.3dshapes/Microchip_USON-10-1EP_3x3mm_P0.5mm_EP1.8x2.5mm.step
+share/kicad/3dmodels/Package_SON.3dshapes/NXP_LSON-16-1EP_3.5x4.5mm_P0.5mm_EP2x3.8mm.step
 share/kicad/3dmodels/Package_SON.3dshapes/NXP_XSON-16.step
 share/kicad/3dmodels/Package_SON.3dshapes/Nexperia_HUSON-12_USON-12-1EP_1.35x2.5mm_P0.4mm_EP0.4x2mm.step
 share/kicad/3dmodels/Package_SON.3dshapes/Nexperia_HUSON-16_USON-16-1EP_1.35x3.3mm_P0.4mm_EP0.4x2.8mm.step

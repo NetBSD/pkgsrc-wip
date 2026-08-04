@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.29 2024/11/20 01:29:49 mef Exp $
 
-BLAKE2s (kicad-10.0.3.tar.bz2) = ec978b8cdfbd412857af5269204fdfdfa331c8214c49dcecbdc2f6f9f6780a14
-SHA512 (kicad-10.0.3.tar.bz2) = 784220e13637c32157daeeecb89f8db56861bc39f459d9add7e6e49e9cacd4503d486076fca35157cc58e7eb0ad0d365b6419bf7fe0fdfc55f2acb8a6f812925
-Size (kicad-10.0.3.tar.bz2) = 225465490 bytes
+BLAKE2s (kicad-10.0.5.tar.bz2) = e82880767f8bdf1d0af2a9498f0e8e7886dd445c789d5528b9e31881ad5849c9
+SHA512 (kicad-10.0.5.tar.bz2) = 58897802ba53585f09e7b7991028bcc8b8240a0917d9306f12a63242ce0fb8932cc229e99298b2addcc85486bdd48ac9bc09cde3162b90798538ae0dfe76bc87
+Size (kicad-10.0.5.tar.bz2) = 232792797 bytes
 SHA1 (patch-3d-viewer_3d__rendering_opengl_3d__spheres__gizmo.cpp) = c78959f9f10de3f9884ab64bf26f4c4f5f813cde
 SHA1 (patch-3d-viewer_3d__viewer_eda__3d__viewer__frame.cpp) = ec756e9952b2e3614384b86782e28c5bc8c42c1b
 SHA1 (patch-3d-viewer_3d__viewer_eda__3d__viewer__frame.h) = 41dfce6f955d6af543ae3536f3105727db86c7bf
@@ -26,10 +26,10 @@ SHA1 (patch-include_kiway.h) = 7208f474e895ea07ba5e5f56bab46d4d529b9e57
 SHA1 (patch-include_pcb__base__frame.h) = 4e73d0dc21ed88598a37c912e2793568b77565c5
 SHA1 (patch-pagelayout__editor_CMakeLists.txt) = d6ee568713ce666f2ece34974a922698d9479c8e
 SHA1 (patch-pcb__calculator_CMakeLists.txt) = 4b496498c6bef100f2eca99209e3efa521a3c653
-SHA1 (patch-pcbnew_CMakeLists.txt) = d250941aa5ef197d6cdc6e48dd4dab60d973f767
+SHA1 (patch-pcbnew_CMakeLists.txt) = 532c5d41873f2189d4bb133994409b42e74ea983
 SHA1 (patch-pcbnew_pcb__base__frame.cpp) = 3937e71f803790cc438d5ee058ca777dda796c0d
 SHA1 (patch-plugins_3d_idf_CMakeLists.txt) = 9061c5c5eac3311625ba93e541d557007c83eddc
 SHA1 (patch-plugins_3d_vrml_CMakeLists.txt) = ea6942a953432c5c0124c57e9afb01f8a5c5325d
 SHA1 (patch-qa_qa__utils_error__handlers.cpp) = 0b9af4170c940507d4e008183093233ed3783cab
 SHA1 (patch-thirdparty_libcontext_libcontext.h) = cde252b7ee114f88527d953aa0c3ebcdd905c4a9
-SHA1 (patch-thirdparty_thread-pool_bs__thread__pool.hpp) = 4499b6f22f8fd13275cb97e30b1258cc71d8cdc7
+SHA1 (patch-thirdparty_thread-pool_bs__thread__pool.hpp) = 48593c9946240c5881d96c626fc5448f9498ac20

@@ -1,4 +1,20 @@
-cad/kicad: Update to 10.0.3
+cad/kicad: Update to 10.0.5
+
+KiCad 10.0.5 (2026-07-22)
+
+The 10.0.5 stable version contains critical bug fixes and other minor
+improvements since the previous release.
+A list of all of the fixed issues since the 10.0.5 release can be
+found on the KiCad 10.0.5 milestone page.
+
+
+KiCad 10.0.4 (2026-06-21)
+
+The 10.0.4 stable version contains critical bug fixes and other minor
+improvements since the previous release.
+A list of all of the fixed issues since the 10.0.4 release can be
+found on the KiCad 10.0.4 milestone page.
+
 
 KiCad 10.0.3 (2026-05-15)
 
