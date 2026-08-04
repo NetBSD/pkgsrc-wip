@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.101 2025/04/24 14:13:20 wiz Exp $
 
-DISTNAME=	klayout-0.30.4
+DISTNAME=	klayout-0.30.10
 CATEGORIES=	cad
 MASTER_SITES=	https://www.klayout.org/downloads/source/
 
