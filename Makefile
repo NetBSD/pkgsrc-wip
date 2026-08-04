@@ -5080,6 +5080,7 @@ SUBDIR+=	py-xlutils
 SUBDIR+=	py-xpra
 SUBDIR+=	py-xsdata
 SUBDIR+=	py-xsdata-pydantic
+SUBDIR+=	py-xy
 SUBDIR+=	py-xyzservices
 SUBDIR+=	py-yamale
 SUBDIR+=	py-yams

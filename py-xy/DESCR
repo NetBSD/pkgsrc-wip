@@ -1,0 +1,11 @@
+XY is an extremely fast, interactive, customizable Python charting
+library for the web, notebooks, and static exports.
+
+Charts are composed declaratively or through matplotlib conventions.
+You can fully customize them with Python, CSS, or Tailwind.
+
+With small charts, every point is sent to the browser. For large
+charts, the Rust core computes only what the screen needs to display,
+based on its resolution. Pan, zoom, hover, and selection can show
+full details by running the same process for the new range, and a
+selection returns the original rows.
