@@ -25,9 +25,11 @@ SUBST_FILES.dirs=	configs/server/burp.conf.in \
 			configs/certs/CA/CA.cnf.in \
 			configs/certs/CA/burp_ca.in \
 			manpages/*.8.in
-SUBST_SED.dirs=		-e 's,@LIBEXECDIR@,${PREFIX}/libexec/burp,' \
-			-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},' \
-			-e 's,@SBINDIR@,${PREFIX}/sbin,'
+SUBST_SED.dirs=		-e 's,@LIBEXECDIR@,${PREFIX}/libexec/burp,'
+SUBST_SED.dirs+=	-e 's,@SBINDIR@,${PREFIX}/sbin,'
+SUBST_VARS.dirs=	PKG_SYSCONFDIR
+
+BUILD_DEFS+=	VARBASE
 
 REPLACE_SH+=	configs/certs/CA/burp_ca.in \
 		configs/server/notify_script \
