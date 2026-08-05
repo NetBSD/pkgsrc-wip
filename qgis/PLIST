@@ -611,6 +611,7 @@ include/qgis/qgsfloatingwidget.h
 include/qgis/qgsfocuskeeper.h
 include/qgis/qgsfocuswatcher.h
 include/qgis/qgsfontbutton.h
+include/qgis/qgsfontcombobox.h
 include/qgis/qgsfontmanager.h
 include/qgis/qgsfonttextureatlasgenerator.h
 include/qgis/qgsfontutils.h
@@ -4194,7 +4195,7 @@ share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.0.5.svg
 share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.0.7.svg
 share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.1.0.svg
 share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.1.5.svg
-share/qgis/resources/cpt-city-qgis-min/dca/alarm.p${PKGVERSION}.svg
+share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.2.0.svg
 share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.3.0.svg
 share/qgis/resources/cpt-city-qgis-min/dca/alarm.p4.4.0.svg
 share/qgis/resources/cpt-city-qgis-min/dca/alarm.p5.0.1.svg
