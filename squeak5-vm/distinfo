@@ -12,6 +12,7 @@ SHA1 (patch-platforms_unix_config_make.ext.in) = d9fcf9124568ffac544d9bb38888364
 SHA1 (patch-platforms_unix_config_squeak.sh.in) = 29b074f629fd773a6d14acdd28d5f0054f2ee59d
 SHA1 (patch-platforms_unix_plugins_JoystickTabletPlugin_sqUnixJoystickTablet.c) = ceef9fe35b14024543816246bb69d91962f42108
 SHA1 (patch-platforms_unix_plugins_SqueakSSL_openssl__overlay.h) = f66f067c8876a3c0a22d8728a65c3e8811411b31
+SHA1 (patch-platforms_unix_plugins_UUIDPlugin_sqUnixUUID.c) = ceeffabb8d8ad18e98e4850ca4a7680983a5a88b
 SHA1 (patch-platforms_unix_vm-display-X11_acinclude.m4) = 6fe2caffdcafa00185102d79dbb1dd50c3c814ee
 SHA1 (patch-platforms_unix_vm_include__ucontext.h) = ef722fe06ac5e565e9303a7467cbee1b23f9d0bd
 SHA1 (patch-platforms_unix_vm_sqUnixITimerHeartbeat.c) = 96b6f1094b07c9456f9b6cc56b2bc7237e6c24f0

@@ -66,7 +66,6 @@ do-install:
 	done
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s spur64 squeak
 
-.include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
