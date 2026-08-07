@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.7 2015/07/14 15:45:29 fhajny Exp $
 
-BLAKE2s (Imager-1.033.tar.gz) = 0d8271f5cc8606e13ec50e0d63d22f7fb0e36c1ef2e25630a9bb8006cad51a1d
-SHA512 (Imager-1.033.tar.gz) = a82fb6c4aadf241b5852e24ea41837401b70bb008d6e717a379a20a564df60b9d09f487ea3f51b583d94a37ffe2de0961751ce3685b8b83fe4086c9b7d3ab21e
-Size (Imager-1.033.tar.gz) = 1352892 bytes
+BLAKE2s (Imager-1.034.tar.gz) = 45e051b44a1ecc0d918324bf52251a22bc1a1490fbaf9a4b50bc89fa118774d4
+SHA512 (Imager-1.034.tar.gz) = aad2065255724ed98db09cd23b0127d7346db835523d9804196bdfd8ef10ca5e21cda0a2e7d4d3ef32fdae86ead3f7be091aa9e332dbd0cdffb13f6a053ffac4
+Size (Imager-1.034.tar.gz) = 1366821 bytes
