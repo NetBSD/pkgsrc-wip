@@ -1,0 +1,17 @@
+McFly - fly through your shell history
+
+McFly replaces your default `ctrl-r` shell history search with an
+intelligent search engine that takes into account your working directory
+and the context of recently executed commands. McFly's suggestions
+are prioritized in real time with a small neural network.
+
+TL;DR: an upgraded `ctrl-r` where history results make sense for what
+you're working on right now.
+
+Features:
+
+  - Rebinds `ctrl-r` to bring up a full-screen reverse history search
+  prioritized using a small neural network.
+
+  - Augments your shell history to track command exit status, timestamp, and
+  execution directory in a SQLite database.
