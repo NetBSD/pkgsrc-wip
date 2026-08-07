@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/scoped_res_state.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- net/dns/public/scoped_res_state.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ net/dns/public/scoped_res_state.cc
 @@ -29,7 +29,7 @@ ScopedResState::~ScopedResState() {
  #if !BUILDFLAG(IS_OPENBSD) && !BUILDFLAG(IS_FUCHSIA)

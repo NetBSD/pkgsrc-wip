@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/views/widget/widget.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/views/widget/widget.cc
 @@ -67,7 +67,7 @@
  #include "ui/views/window/dialog_delegate.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -2640,7 +2640,7 @@ const ui::NativeTheme* Widget::GetNative
+@@ -2650,7 +2650,7 @@ const ui::NativeTheme* Widget::GetNative
      return parent_->GetNativeTheme();
    }
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/toolbar_view.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/views/toolbar/toolbar_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/toolbar_view.cc
-@@ -397,7 +397,7 @@ void ToolbarView::Init() {
+@@ -403,7 +403,7 @@ void ToolbarView::Init() {
    }
  
    std::unique_ptr<MediaToolbarButtonView> media_button;

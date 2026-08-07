@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/updater/updater.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/updater/updater.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/updater/updater.cc
 @@ -53,7 +53,7 @@ std::optional<mojom::AppState> GetLastKn
    return GetLastKnownUpdaterRegistrationStorage();

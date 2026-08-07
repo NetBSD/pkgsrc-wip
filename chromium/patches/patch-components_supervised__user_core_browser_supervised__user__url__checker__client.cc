@@ -4,8 +4,8 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc.orig	2026-07-06 22:58:46.000000000 +0000
-+++ components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc
+--- components/supervised_user/core/browser/supervised_user_url_checker_client.cc.orig	2026-08-05 20:17:42.000000000 +0000
++++ components/supervised_user/core/browser/supervised_user_url_checker_client.cc
 @@ -65,7 +65,7 @@ void OnResponse(
  
  FetcherConfig GetFetcherConfig(

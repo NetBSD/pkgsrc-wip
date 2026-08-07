@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc
-@@ -19,7 +19,7 @@
- #include "ui/menus/simple_menu_model.h"
+@@ -17,7 +17,7 @@
+ #include "ui/base/mojom/window_show_state.mojom.h"
  #include "ui/views/widget/widget.h"
  
 -#if BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/shell_integration_linux.h"
  #endif
  
-@@ -49,7 +49,7 @@ void ChromeNativeAppWindowViewsAura::OnB
+@@ -47,7 +47,7 @@ void ChromeNativeAppWindowViewsAura::OnB
      const AppWindow::CreateParams& create_params,
      views::Widget::InitParams* init_params,
      views::Widget* widget) {

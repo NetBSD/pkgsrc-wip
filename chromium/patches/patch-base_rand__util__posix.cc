@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- base/rand_util_posix.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ base/rand_util_posix.cc
 @@ -24,7 +24,7 @@
  #include "build/build_config.h"
@@ -14,7 +14,7 @@ $NetBSD$
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
  #include "third_party/lss/linux_syscall_support.h"
  #elif BUILDFLAG(IS_MAC)
- // TODO(crbug.com/40641285): Waiting for this header to appear in the iOS SDK.
+ #include <sys/random.h>
 @@ -36,6 +36,7 @@ namespace base {
  
  namespace {
@@ -42,7 +42,7 @@ $NetBSD$
    // The BoringSSL experiment takes priority over everything else.
    if (!avoid_allocation && internal::UseBoringSSLForRandBytes()) {
      // BoringSSL's RAND_bytes always returns 1. Any error aborts the program.
-@@ -144,6 +147,9 @@ void RandBytesInternal(span<uint8_t> out
+@@ -146,6 +149,9 @@ void RandBytesInternal(span<uint8_t> out
    const int urandom_fd = GetUrandomFD();
    const bool success = ReadFromFD(urandom_fd, as_writable_chars(output));
    CHECK(success);
@@ -52,7 +52,7 @@ $NetBSD$
  }
  
  }  // namespace
-@@ -163,9 +169,11 @@ void RandBytes(span<uint8_t> output) {
+@@ -165,9 +171,11 @@ void RandBytes(span<uint8_t> output) {
    RandBytesInternal(output, /*avoid_allocation=*/false);
  }
  

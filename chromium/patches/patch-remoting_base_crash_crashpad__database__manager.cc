@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/crash/crashpad_database_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/base/crash/crashpad_database_manager.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/base/crash/crashpad_database_manager.cc
 @@ -24,7 +24,7 @@
  #if BUILDFLAG(IS_WIN)
@@ -33,7 +33,7 @@ $NetBSD$
  
  inline base::FilePath GetDaemonProcessCrashpadDatabasePath() {
    return GetVarLibDir().Append("crashpad.daemon");
-@@ -131,7 +131,7 @@ base::FilePath GetCrashpadDatabasePath()
+@@ -138,7 +138,7 @@ base::FilePath GetCrashpadDatabasePath()
      base::FilePath path;
      base::PathService::Get(base::BasePathKey::DIR_ASSETS, &path);
      return path.Append(kChromotingCrashpadDatabasePath);
@@ -42,7 +42,7 @@ $NetBSD$
      if (getuid() == 0) {
        return GetDaemonProcessCrashpadDatabasePath();
      }
-@@ -186,7 +186,7 @@ CrashpadDatabaseManager::CrashpadDatabas
+@@ -196,7 +196,7 @@ CrashpadDatabaseManager::CrashpadDatabas
  CrashpadDatabaseManager::~CrashpadDatabaseManager() = default;
  
  bool CrashpadDatabaseManager::InitializeCrashpadDatabase() {

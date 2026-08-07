@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h
-@@ -48,7 +48,7 @@ class WebUIAvatarToolbarButton : public 
+@@ -57,7 +57,7 @@ class WebUIAvatarToolbarButton : public 
        bool should_announce) override;
    bool HasExplicitButtonState() const override;
    void MaybeShowProfileSwitchIPH() override;

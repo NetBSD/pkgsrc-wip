@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/desktop_environment_options.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/base/desktop_environment_options.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/base/desktop_environment_options.cc
-@@ -109,7 +109,7 @@ bool DesktopEnvironmentOptions::capture_
+@@ -117,7 +117,7 @@ bool DesktopEnvironmentOptions::capture_
    // TODO(joedow): Determine whether we can migrate additional platforms to
    // using the DesktopCaptureWrapper instead of the DesktopCaptureProxy. Then
    // clean up DesktopCapturerProxy::Core::CreateCapturer().

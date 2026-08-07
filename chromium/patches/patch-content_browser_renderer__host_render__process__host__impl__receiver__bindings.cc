@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -56,7 +56,7 @@
  #include "content/browser/renderer_host/p2p/socket_dispatcher_host.h"
@@ -24,7 +24,7 @@ $NetBSD$
  #include "components/services/font_data/font_data_service_impl.h"
  #endif
  
-@@ -345,7 +345,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -350,7 +350,7 @@ void RenderProcessHostImpl::IOThreadHost
      }
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (features::IsFontDataServiceEnabled()) {
      if (auto font_data_receiver =
              receiver.As<font_data_service::mojom::FontDataService>()) {
-@@ -356,7 +356,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -361,7 +361,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD$
    if (auto font_receiver = receiver.As<font_service::mojom::FontService>()) {
      ConnectToFontService(std::move(font_receiver));
      return;
-@@ -384,7 +384,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -389,7 +389,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  

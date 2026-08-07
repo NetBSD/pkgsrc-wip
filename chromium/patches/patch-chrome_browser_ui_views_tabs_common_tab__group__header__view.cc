@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/vertical/vertical_tab_group_header_view.cc.orig	2026-07-06 22:58:46.000000000 +0000
-+++ chrome/browser/ui/views/tabs/vertical/vertical_tab_group_header_view.cc
-@@ -329,7 +329,7 @@ void VerticalTabGroupHeaderView::OnMouse
+--- chrome/browser/ui/views/tabs/common/tab_group_header_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
++++ chrome/browser/ui/views/tabs/common/tab_group_header_view.cc
+@@ -329,7 +329,7 @@ void TabGroupHeaderView::OnMouseEntered(
  }
  
- void VerticalTabGroupHeaderView::OnMouseExited(const ui::MouseEvent& event) {
+ void TabGroupHeaderView::OnMouseExited(const ui::MouseEvent& event) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Bypasses the synchronous IsMouseHovered() check which can be stale on Linux

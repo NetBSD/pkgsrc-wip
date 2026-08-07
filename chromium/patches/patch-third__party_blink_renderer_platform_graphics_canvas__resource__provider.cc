@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/canvas_resource_provider.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/canvas_resource_provider.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/canvas_resource_provider.cc
-@@ -1285,7 +1285,7 @@ Canvas2DResourceProviderSharedImage::Cre
+@@ -1713,7 +1713,7 @@ Canvas2DResourceProviderSharedImage::Cre
            gpu::SHARED_IMAGE_USAGE_CONCURRENT_READ_WRITE);
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
    // WebGpu preferred canvas on linux is RGBA and interop (vk on gl) is
    // dependent on canvas copies being RGBA (not BGRA).
    should_force_bgra8_to_rgba = true;
-@@ -1439,7 +1439,7 @@ CanvasNon2DResourceProviderSharedImage::
+@@ -1871,7 +1871,7 @@ CanvasNon2DResourceProviderSharedImage::
            gpu::SHARED_IMAGE_USAGE_CONCURRENT_READ_WRITE);
  #endif
  

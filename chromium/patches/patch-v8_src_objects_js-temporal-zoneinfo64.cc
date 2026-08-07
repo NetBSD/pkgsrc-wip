@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/objects/js-temporal-zoneinfo64.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- v8/src/objects/js-temporal-zoneinfo64.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ v8/src/objects/js-temporal-zoneinfo64.cc
 @@ -11,7 +11,7 @@
  #include "temporal_rs/TimeZone.hpp"

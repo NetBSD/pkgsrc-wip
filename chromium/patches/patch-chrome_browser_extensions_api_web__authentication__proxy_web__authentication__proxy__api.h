@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h
 @@ -15,7 +15,7 @@
  #include "extensions/browser/extension_function_histogram_value.h"

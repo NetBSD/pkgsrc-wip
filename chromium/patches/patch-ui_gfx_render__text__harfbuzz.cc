@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_harfbuzz.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/gfx/render_text_harfbuzz.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/gfx/render_text_harfbuzz.cc
-@@ -184,7 +184,7 @@ const char* GetPlatformColorEmojiFontNam
+@@ -203,7 +203,7 @@ const char* GetPlatformColorEmojiFontNam
    return "Segoe UI Emoji";
  #elif BUILDFLAG(IS_APPLE)
    return "Apple Color Emoji";

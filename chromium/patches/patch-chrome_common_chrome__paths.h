@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/common/chrome_paths.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/common/chrome_paths.h
 @@ -55,7 +55,7 @@ enum {
                       // to set policies for chrome. This directory
@@ -24,7 +24,7 @@ $NetBSD$
    DIR_STANDALONE_EXTERNAL_EXTENSIONS,  // Directory for 'per-extension'
                                         // definition manifest files that
                                         // describe extensions which are to be
-@@ -104,7 +104,7 @@ enum {
+@@ -102,7 +102,7 @@ enum {
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

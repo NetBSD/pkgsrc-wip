@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-loader/src/loader/vk_loader_platform.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/vulkan-loader/src/loader/vk_loader_platform.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/vulkan-loader/src/loader/vk_loader_platform.h
 @@ -357,7 +357,15 @@ static inline char *loader_platform_exec
  

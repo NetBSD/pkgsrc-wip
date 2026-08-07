@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database_async_helper.cc
-@@ -139,7 +139,7 @@ StoredCredentialsResultOrError LoginData
+@@ -140,7 +140,7 @@ StoredCredentialsResultOrError LoginData
      std::vector<StoredCredential> matched_credentials;
      if (!login_db_ ||
          !login_db_->GetLogins(form, include_psl, &matched_credentials)) {

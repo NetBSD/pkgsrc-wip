@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -74,7 +74,11 @@ const size_t kMaxAttachedHandles = 64;
  const size_t kMaxAttachedHandles = 253;
@@ -27,7 +27,7 @@ $NetBSD$
  
  namespace {
  
-@@ -1317,7 +1321,7 @@ bool Channel::OnControlMessage(Message::
+@@ -1316,7 +1320,7 @@ bool Channel::OnControlMessage(Message::
  }
  
  // Currently only CrOs, Linux, and Android support upgrades.

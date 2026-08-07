@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/i18n/icu_util.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- base/i18n/icu_util.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ base/i18n/icu_util.cc
 @@ -54,7 +54,7 @@
  #include "third_party/icu/source/common/unicode/unistr.h"
@@ -15,7 +15,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS))
  #include "third_party/icu/source/i18n/unicode/timezone.h"
  #endif
-@@ -327,7 +327,7 @@ void InitializeIcuTimeZone() {
+@@ -326,7 +326,7 @@ void InitializeIcuTimeZone() {
        FuchsiaIntlProfileWatcher::GetPrimaryTimeZoneIdForIcuInitialization();
    icu::TimeZone::adoptDefault(
        icu::TimeZone::createTimeZone(icu::UnicodeString::fromUTF8(zone_id)));

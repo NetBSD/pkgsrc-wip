@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/variations/fieldtrial_to_struct.py.orig	2026-07-06 22:58:46.000000000 +0000
+--- tools/variations/fieldtrial_to_struct.py.orig	2026-08-05 20:17:42.000000000 +0000
 +++ tools/variations/fieldtrial_to_struct.py
 @@ -31,6 +31,9 @@ _platforms = [
      'linux',

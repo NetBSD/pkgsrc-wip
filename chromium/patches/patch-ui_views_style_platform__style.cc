@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/style/platform_style.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/views/style/platform_style.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/views/style/platform_style.cc
 @@ -23,7 +23,7 @@
  #include "ui/views/controls/focusable_border.h"

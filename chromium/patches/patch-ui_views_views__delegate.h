@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/views_delegate.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/views/views_delegate.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/views/views_delegate.h
 @@ -139,7 +139,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.

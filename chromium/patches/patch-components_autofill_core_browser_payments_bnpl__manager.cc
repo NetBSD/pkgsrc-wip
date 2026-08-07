@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/bnpl_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/autofill/core/browser/payments/bnpl_manager.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/autofill/core/browser/payments/bnpl_manager.cc
-@@ -1062,7 +1062,7 @@ void BnplManager::MaybeUpdateDesktopSugg
+@@ -1083,7 +1083,7 @@ void BnplManager::MaybeUpdateDesktopSugg
        .OnBnplSuggestionShown();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

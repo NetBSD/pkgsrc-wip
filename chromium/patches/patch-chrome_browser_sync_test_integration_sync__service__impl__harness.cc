@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/test/integration/sync_service_impl_harness.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/sync/test/integration/sync_service_impl_harness.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/sync/test/integration/sync_service_impl_harness.cc
 @@ -489,7 +489,7 @@ bool SyncServiceImplHarness::EnableHisto
    // Tabs and history are bundled together in the same toggle.

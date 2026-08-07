@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/feed/core/v2/proto_util.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/feed/core/v2/proto_util.cc
-@@ -92,8 +92,8 @@ feedwire::Version GetPlatformVersionMess
+@@ -91,8 +91,8 @@ feedwire::Version GetPlatformVersionMess
  
    int32_t major, minor, revision;
    base::SysInfo::OperatingSystemVersionNumbers(&major, &minor, &revision);
@@ -17,7 +17,7 @@ $NetBSD$
    result.set_revision(revision);
  #if BUILDFLAG(IS_ANDROID)
    result.set_api_version(base::android::android_info::sdk_int());
-@@ -108,8 +108,8 @@ feedwire::Version GetAppVersionMessage(c
+@@ -107,8 +107,8 @@ feedwire::Version GetAppVersionMessage(c
    // Chrome's version is in the format: MAJOR,MINOR,BUILD,PATCH.
    const std::vector<uint32_t>& numbers = chrome_info.version.components();
    if (numbers.size() > 3) {

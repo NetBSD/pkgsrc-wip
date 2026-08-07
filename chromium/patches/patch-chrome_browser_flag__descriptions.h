@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/flag_descriptions.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -8514,6 +8514,20 @@ inline constexpr char kEnableDlpFileSyst
-     "Enable DLP upload scan support for FileSystem API-backed cloud storage on "
-     "ChromeOS.";
+@@ -8546,6 +8546,20 @@ inline constexpr char kAntivirusTelemetr
+     "Enables antivirus product info to be included in Safe Browsing download "
+     "pings.";
  
 +#if BUILDFLAG(IS_BSD)
 +inline constexpr char kAudioBackendName[] =

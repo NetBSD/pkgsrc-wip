@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- base/threading/platform_thread.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ base/threading/platform_thread.h
 @@ -67,6 +67,8 @@ class BASE_EXPORT PlatformThreadId {
    using UnderlyingType = zx_koid_t;

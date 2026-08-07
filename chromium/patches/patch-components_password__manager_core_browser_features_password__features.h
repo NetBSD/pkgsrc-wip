@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.h
-@@ -198,7 +198,7 @@ BASE_DECLARE_FEATURE(kPreventAPCOnFedera
- // This flag is only for the prototype version.
- BASE_DECLARE_FEATURE(kPasswordCheckupPrototype);
+@@ -194,7 +194,7 @@ BASE_DECLARE_FEATURE(kPreventAPCOnFedera
+ // Prevents password manager from showing save/update UI on federated login.
+ BASE_DECLARE_FEATURE(kPreventPasswordManagerOnFederatedLogin);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

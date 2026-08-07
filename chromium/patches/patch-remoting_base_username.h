@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/username.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/base/username.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/base/username.h
 @@ -16,7 +16,7 @@ namespace remoting {
  // error or if not implemented.
@@ -14,4 +14,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Returns the username that the network process is run as.
  base::cstring_view GetNetworkProcessUsername();
- #endif  // BUILDFLAG(IS_LINUX)
+ 

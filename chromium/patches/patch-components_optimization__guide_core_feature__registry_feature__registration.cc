@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/optimization_guide/core/feature_registry/feature_registration.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/optimization_guide/core/feature_registry/feature_registration.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/optimization_guide/core/feature_registry/feature_registration.cc
-@@ -78,7 +78,7 @@ BASE_FEATURE(kProductSpecificationsMqlsL
+@@ -76,7 +76,7 @@ BASE_FEATURE(kProductSpecificationsMqlsL
  
  BASE_FEATURE(kFormsClassificationsMqlsLogging,
               BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) ||

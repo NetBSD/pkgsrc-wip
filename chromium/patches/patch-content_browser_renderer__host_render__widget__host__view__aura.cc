@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
-@@ -132,7 +132,7 @@
+@@ -133,7 +133,7 @@
  #include "ui/gfx/win/gdi_util.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/accessibility/platform/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -578,7 +578,7 @@ gfx::NativeViewAccessible RenderWidgetHo
+@@ -579,7 +579,7 @@ gfx::NativeViewAccessible RenderWidgetHo
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
@@ -24,7 +24,7 @@ $NetBSD$
    ui::BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -2048,7 +2048,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -2044,7 +2044,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -3113,7 +3113,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -3123,7 +3123,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -42,7 +42,7 @@ $NetBSD$
    return NeedsInputGrab();
  #else
    return false;
-@@ -3330,7 +3330,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -3351,7 +3351,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

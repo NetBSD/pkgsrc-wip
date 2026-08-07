@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/browser_features.cc
 @@ -62,7 +62,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
  BASE_FEATURE(kClearUserDataUponProfileDestruction,
@@ -24,7 +24,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -171,7 +171,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -157,7 +157,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
  BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
               base::FEATURE_ENABLED_BY_DEFAULT);
  

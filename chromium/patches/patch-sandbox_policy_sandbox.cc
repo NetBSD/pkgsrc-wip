@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- sandbox/policy/sandbox.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ sandbox/policy/sandbox.cc
-@@ -20,6 +20,10 @@
+@@ -22,6 +22,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -17,7 +17,7 @@ $NetBSD$
  #if BUILDFLAG(IS_MAC)
  #include "sandbox/mac/seatbelt.h"
  #endif  // BUILDFLAG(IS_MAC)
-@@ -36,7 +40,7 @@
+@@ -38,7 +42,7 @@
  namespace sandbox {
  namespace policy {
  

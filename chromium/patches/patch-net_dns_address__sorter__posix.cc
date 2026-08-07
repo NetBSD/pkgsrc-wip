@@ -4,13 +4,13 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/address_sorter_posix.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- net/dns/address_sorter_posix.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ net/dns/address_sorter_posix.cc
-@@ -29,6 +29,7 @@
+@@ -27,6 +27,7 @@
  #include "net/dns/netinet_in_var_ios.h"
  #else
  #include <netinet/in_var.h>
 +#include <netinet6/in6_var.h>
  #endif  // BUILDFLAG(IS_IOS)
  #endif
- #include <vector>
+ 

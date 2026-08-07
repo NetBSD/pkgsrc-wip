@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/it2me/it2me_native_messaging_host_main.cc
-@@ -29,7 +29,7 @@
+@@ -30,7 +30,7 @@
  #include "remoting/host/resources.h"
  #include "remoting/host/usage_stats_consent.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #if defined(REMOTING_USE_X11)
  #include <gtk/gtk.h>
  #include "base/linux_util.h"
-@@ -43,7 +43,7 @@
+@@ -44,7 +44,7 @@
  #include "remoting/host/mac/permission_utils.h"
  #endif  // BUILDFLAG(IS_APPLE)
  
@@ -24,16 +24,16 @@ $NetBSD$
  #include "remoting/base/crash/crash_reporting_crashpad.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -79,7 +79,7 @@ bool CurrentProcessHasUiAccess() {
- // Creates a It2MeNativeMessagingHost instance, attaches it to stdin/stdout and
- // runs the task executor until It2MeNativeMessagingHost signals shutdown.
- int It2MeNativeMessagingHostMain(int argc, char** argv) {
+@@ -83,7 +83,7 @@ int It2MeNativeMessagingHostMain(int arg
+   base::ScopedMemoryConsumerRegistry<remoting::MemoryConsumerRegistry>
+       memory_consumer_registry;
+ 
 -#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(REMOTING_USE_X11)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && defined(REMOTING_USE_X11)
    // Initialize Xlib for multi-threaded use, allowing non-Chromium code to
    // use X11 safely (such as the WebRTC capturer, GTK ...)
    x11::InitXlib();
-@@ -104,7 +104,7 @@ int It2MeNativeMessagingHostMain(int arg
+@@ -108,7 +108,7 @@ int It2MeNativeMessagingHostMain(int arg
    // needs to be initialized first, so that the preference for crash-reporting
    // can be looked up in the config file.
    if (IsUsageStatsAllowed()) {
@@ -42,7 +42,7 @@ $NetBSD$
      InitializeCrashpadReporting();
  #elif BUILDFLAG(IS_WIN)
      InitializeBreakpadReporting();
-@@ -129,7 +129,7 @@ int It2MeNativeMessagingHostMain(int arg
+@@ -133,7 +133,7 @@ int It2MeNativeMessagingHostMain(int arg
  
    remoting::LoadResources("");
  
@@ -51,7 +51,7 @@ $NetBSD$
    // Required for any calls into GTK functions, such as the Disconnect and
    // Continue windows. Calling with nullptr arguments because we don't have
    // any command line arguments for gtk to consume.
-@@ -257,7 +257,7 @@ int It2MeNativeMessagingHostMain(int arg
+@@ -262,7 +262,7 @@ int It2MeNativeMessagingHostMain(int arg
        PolicyWatcher::CreateWithTaskRunner(context->file_task_runner(),
                                            context->management_service());
  
@@ -60,7 +60,7 @@ $NetBSD$
    scoped_refptr<AutoThreadTaskRunner> input_task_runner;
    // Create an X11EventSource on all UI threads, so the global X11 connection
    // (x11::Connection::Get()) can dispatch X events.
-@@ -281,7 +281,7 @@ int It2MeNativeMessagingHostMain(int arg
+@@ -286,7 +286,7 @@ int It2MeNativeMessagingHostMain(int arg
    // Run the loop until channel is alive.
    run_loop.Run();
  
