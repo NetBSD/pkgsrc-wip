@@ -1,2 +1,4 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2013-3722, CVE-2026-25554
+  CVE-2013-3722, CVE-2026-25554, CVE-2026-45084, CVE-2026-45100,
+  CVE-2026-45537, CVE-2026-45538, CVE-2026-45705, CVE-2026-45809,
+  CVE-2026-46334
