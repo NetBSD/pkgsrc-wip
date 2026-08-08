@@ -4,5 +4,3 @@ Do we need ".include "../../mk/dlopen.buildlink3.mk"" ?
 
 Get ../libslirp491 into main pkgsrc, since installing it conflicts with e.g.
 qemu.
-
-Get ../cmocka201 into main pkgsrc.
