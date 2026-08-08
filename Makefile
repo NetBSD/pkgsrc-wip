@@ -2351,7 +2351,6 @@ SUBDIR+=	maloc
 SUBDIR+=	man
 SUBDIR+=	man-db
 SUBDIR+=	manatee
-SUBDIR+=	maolan
 SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
