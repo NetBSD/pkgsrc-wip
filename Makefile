@@ -5905,7 +5905,6 @@ SUBDIR+=	twittering-mode-git
 SUBDIR+=	txt2tags
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
-SUBDIR+=	typst-lsp
 SUBDIR+=	u-boot
 SUBDIR+=	u-boot-full
 SUBDIR+=	u-boot-imx23-olinuxino
