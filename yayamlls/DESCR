@@ -1,0 +1,10 @@
+Yet Another YAML Language Server in Go. Schema-driven diagnostics,
+completion, and hover; pluggable rendering for Flux `HelmRelease`
+and `Kustomization` sources.
+
+Per-document schema resolution, highest priority first:
+
+1. in-file modeline
+2. workspace schemas:
+3. JSON Schema Store catalog
+4. Kubernetes template
