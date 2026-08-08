@@ -6112,7 +6112,6 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wmsupermon
 SUBDIR+=	wmswallow
 SUBDIR+=	wolf4SDL
-SUBDIR+=	wordle
 SUBDIR+=	worker
 SUBDIR+=	workrave
 SUBDIR+=	wp2md-git
