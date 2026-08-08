@@ -1,0 +1,20 @@
+$NetBSD$
+
+BLAKE2s (vde-2/vde-2-2.3.3-6f1a656584397fc46705ff3d6fbbd3edc2f50f0c.tar.gz) = 8010d10dd292a5eb0783fba002987d9bbe84ebfad3cfcf942ce57ad8699e6394
+SHA512 (vde-2/vde-2-2.3.3-6f1a656584397fc46705ff3d6fbbd3edc2f50f0c.tar.gz) = 1e2c346287b324b2f3f7aa1b6ab8c507a04749f08d942ed5f32b2f5c307afa5aa0b906c4510a2428aadc77363d7ed577ba0084abab8010329553a360d23b4c1c
+Size (vde-2/vde-2-2.3.3-6f1a656584397fc46705ff3d6fbbd3edc2f50f0c.tar.gz) = 233086 bytes
+SHA1 (patch-CMakeLists.txt) = 6775f723bef42849f1776a0ce4c28f75528789ab
+SHA1 (patch-Macros.cmake) = d4dc2810a9aaa812a8e35808e324d12a26fa1dfb
+SHA1 (patch-src_dpipe.c) = 37851d01bfbf969741580b4e26cc4a6e85b8bc41
+SHA1 (patch-src_lib_libvdehist.c) = da357fc2b545687698c2d7391e0be2e4b8421854
+SHA1 (patch-src_vde__pcapplug.c) = fea8b578c4cab2ab5e76d462115c8b65d6388a7c
+SHA1 (patch-src_vde__plug.c) = 5492b40c44f0f9263a2f42e5bfef839eec647ab7
+SHA1 (patch-src_vde__plug2tap.c) = e76fb6e3c29991d818737d37a1c39e86ef565748
+SHA1 (patch-src_vde__router_vde__headers.h) = 64150e6fc380ab0d14ccfc780c09488482115f1e
+SHA1 (patch-src_vde__router_vder__icmp.c) = dbd96ad7246da06571ca581043ce10ec2966ee86
+SHA1 (patch-src_vde__router_vder__packet.h) = afae3133ddd1bd0cf96caf34794064df3043af9f
+SHA1 (patch-src_vde__switch_datasock.c) = bca7745b0ccdf3b02b44d029deb8fe47810c5f5a
+SHA1 (patch-src_vde__switch_port.c) = 4035ce4a81a839db9b2ab2fee867b121e1a890d6
+SHA1 (patch-src_vde__switch_tuntap.c) = 1aeb676ed0ea9fd6d2e9f5aef4851d90c99c595f
+SHA1 (patch-src_vde__vxlan_vxlan.c) = cf0c712d9e488db60a0d0f429de0947a2d0657c7
+SHA1 (patch-src_wirefilter.c) = 4d0aa14c524d8578abfb6c4c3cb9286aeb2a4e08

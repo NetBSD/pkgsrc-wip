@@ -5995,6 +5995,7 @@ SUBDIR+=	vcg
 SUBDIR+=	vcglib
 SUBDIR+=	vche
 SUBDIR+=	vcsh
+SUBDIR+=	vde2
 SUBDIR+=	vector
 SUBDIR+=	vee
 SUBDIR+=	velero

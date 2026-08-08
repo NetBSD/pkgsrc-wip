@@ -1,0 +1,16 @@
+TODO: Adjust the following lines from README
+
+VDEv2: Virtual Distributed Ethernet.
+
+Components of the VDE architecture:
+- VDE switches: virtual counterpart of ethernet switches.
+- VDE cables: virtual counterpart of a crossed-cable used to connect two
+  switches.
+
+- VDE 2 includes:
+- switch management both from console and from a "unix socket terminal"
+- VLAN 801.1q *almost* compatible
+- FSTP (fast spanning tree) already incomplete and currently not tested for
+  802.1d/w/s compatibility. under development. (vde_switch must be compiled
+  with the FSTP flag on)
+...
