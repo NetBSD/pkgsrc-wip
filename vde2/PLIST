@@ -2,6 +2,8 @@
 bin/dpipe
 bin/unixcmd
 bin/vde_autolink
+@comment next depends on wolfssl
+bin/vde_cryptcab
 bin/vde_over_ns
 bin/vde_pcapplug
 bin/vde_plug
