@@ -37,6 +37,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_UNIT_TESTS=ON
 .include "../../net/libpcap/buildlink3.mk"
 #.include "../../net/libslirp/buildlink3.mk"
 .include "../../wip/libslirp491/buildlink3.mk"
+.include "../../wip/vde2/buildlink3.mk"
 #.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
