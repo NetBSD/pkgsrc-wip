@@ -304,7 +304,6 @@ SUBDIR+=	bagel
 SUBDIR+=	ballerburg
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
-SUBDIR+=	bandwhich
 SUBDIR+=	bareos-webui
 SUBDIR+=	baresip
 SUBDIR+=	barony
