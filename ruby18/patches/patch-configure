@@ -1,0 +1,95 @@
+$NetBSD$
+
+--- configure.orig	2013-06-27 11:57:43.000000000 +0000
++++ configure
+@@ -6223,6 +6223,9 @@ bsdi*)          LIBS="-lm $LIBS"
+ 		$as_echo "#define BROKEN_SETREGID 1" >>confdefs.h
+ 
+                 ac_cv_sizeof_rlim_t=8;;
++interix3*)	LIBS="-lm $LIBS"
++		ac_cv_func_getpgrp_void=yes
++		;;
+ freebsd*)	LIBS="-lm $LIBS"
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether -lxpg4 has to be linked" >&5
+ $as_echo_n "checking whether -lxpg4 has to be linked... " >&6; }
+@@ -9103,6 +9106,7 @@ else
+ /* end confdefs.h.  */
+ 
+ #include <time.h>
++#include <stdlib.h>
+ 
+ void
+ check(tm, y, m, d, h, s)
+@@ -9910,6 +9914,8 @@ else
+ /* end confdefs.h.  */
+ 
+ #include <stdio.h>
++#include <string.h>
++#include <unistd.h>
+ #ifndef SEEK_SET
+ #define SEEK_SET 0
+ #endif
+@@ -10296,6 +10302,8 @@ else
+ /* Test for whether ELF binaries are produced */
+ #include <fcntl.h>
+ #include <stdlib.h>
++#include <unistd.h>
++int
+ main() {
+ 	char buffer[4];
+ 	int i=open("conftest",O_RDONLY);
+@@ -10418,6 +10426,13 @@ fi
+ 			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
+ 			fi
+ 			rb_cv_dlopen=yes ;;
++	interix3*)	: ${LDSHARED='${CC} -shared'}
++			LDFLAGS="$LDFLAGS -Wl,-E"
++			# use special random-slot linkage in 0x[56]XXXXXXX
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
++			LIBPATHFLAG=' -L%1$-s'
++			RPATHFLAG=' -Wl,-R%1$-s'
++			rb_cv_dlopen=yes ;;
+ 	interix*) 	: ${LDSHARED="$CC -shared"}
+ 			XLDFLAGS="$XLDFLAGS -Wl,-E"
+ 			LIBPATHFLAG=" -L%1\$-s"
+@@ -10430,7 +10445,7 @@ fi
+ 			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
+ 			fi
+ 			rb_cv_dlopen=yes ;;
+-	openbsd*) 	: ${LDSHARED="\$(CC) -shared ${CCDLFLAGS}"}
++	openbsd*|mirbsd*) 	: ${LDSHARED="\$(CC) -shared ${CCDLFLAGS}"}
+ 			if test "$rb_cv_binary_elf" = yes; then
+ 			    LDFLAGS="$LDFLAGS -Wl,-E"
+ 			fi
+@@ -10910,7 +10925,7 @@ if test "$enable_shared" = 'yes'; then
+ 	   LIBRUBY_ALIASES=""
+ 	fi
+  	;;
+-    openbsd*)
++    openbsd*|mirbsd*)
+ 	SOLIBS='$(LIBS)'
+ 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
+ 	;;
+@@ -10946,6 +10961,14 @@ if test "$enable_shared" = 'yes'; then
+ 	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+ 	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
+ 	;;
++    interix3*)
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
++ 	;;
+     interix*)
+ 	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
+ 	;;
+@@ -10955,6 +10978,7 @@ if test "$enable_rpath" = yes; then
+ fi
+ if test "$enable_rpath" = yes; then
+     LIBRUBYARG_SHARED="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBYARG_SHARED"
++    LIBRUBY_DLDFLAGS="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBY_DLDFLAGS"
+ fi
+ 
+ LDFLAGS="-L. $LDFLAGS"

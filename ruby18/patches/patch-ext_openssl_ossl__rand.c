@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- ext/openssl/ossl_rand.c.orig	2008-05-29 18:15:50.000000000 +0000
++++ ext/openssl/ossl_rand.c
+@@ -99,7 +99,7 @@ ossl_rand_bytes(VALUE self, VALUE len)
+     int n = NUM2INT(len);
+ 
+     str = rb_str_new(0, n);
+-    if (!RAND_bytes(RSTRING_PTR(str), n)) {
++    if (!RAND_bytes((unsigned char *)RSTRING_PTR(str), n)) {
+ 	ossl_raise(eRandomError, NULL);
+     }
+ 
+@@ -118,7 +118,7 @@ ossl_rand_pseudo_bytes(VALUE self, VALUE len)
+     int n = NUM2INT(len);
+ 
+     str = rb_str_new(0, n);
+-    if (!RAND_pseudo_bytes(RSTRING_PTR(str), n)) {
++    if (!RAND_pseudo_bytes((unsigned char *)RSTRING_PTR(str), n)) {
+ 	ossl_raise(eRandomError, NULL);
+     }
+ 

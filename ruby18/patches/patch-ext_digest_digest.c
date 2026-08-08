@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ext/digest/digest.c.orig	2009-12-14 03:19:26.000000000 +0000
++++ ext/digest/digest.c
+@@ -275,7 +275,7 @@ rb_digest_instance_inspect(VALUE self)
+ {
+     VALUE str;
+     size_t digest_len = 32;	/* about this size at least */
+-    char *cname;
++    const char *cname;
+ 
+     cname = rb_obj_classname(self);
+ 
