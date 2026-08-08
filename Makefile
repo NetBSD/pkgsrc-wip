@@ -749,7 +749,6 @@ SUBDIR+=	dict-freedict-eng-ara
 SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	dict-server-current
 SUBDIR+=	diff-pdf
-SUBDIR+=	diffsitter-git
 SUBDIR+=	digestif
 SUBDIR+=	digikam
 SUBDIR+=	digitemp
