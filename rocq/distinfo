@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.40 2025/02/24 03:41:02 dholland Exp $
+
+BLAKE2s (rocq-9.2.0.tar.gz) = a7e570c6c075e1e89c4bfd43613631a1735bee14a2c389d5975c5ad47b37c32d
+SHA512 (rocq-9.2.0.tar.gz) = bbd768533159920ee0e67c83889f8e50e696631e4fa3869c8fb3b61779e86b0bfe7431dc5062b3c53190d103eab49e519587b73d20d473370d8f1d6853f9d9cd
+Size (rocq-9.2.0.tar.gz) = 6559931 bytes
+SHA1 (patch-tools_coqdoc_dune) = b2a1fdc3fd0bebc18754de5a0d7778e73a47c25d
