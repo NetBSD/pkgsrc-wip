@@ -5353,6 +5353,7 @@ SUBDIR+=	ruby-vegas
 SUBDIR+=	ruby-versionomy
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
+SUBDIR+=	ruby18
 SUBDIR+=	runas
 SUBDIR+=	runcpm
 SUBDIR+=	rust-beta
