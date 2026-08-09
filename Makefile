@@ -2194,7 +2194,6 @@ SUBDIR+=	libscscp
 SUBDIR+=	libsdfparse
 SUBDIR+=	libsearpc
 SUBDIR+=	libseccomp
-SUBDIR+=	libshumate
 SUBDIR+=	libslab
 SUBDIR+=	libslirp491
 SUBDIR+=	libsml
