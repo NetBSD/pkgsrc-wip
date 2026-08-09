@@ -1012,7 +1012,6 @@ SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firefox102
 SUBDIR+=	firehose
-SUBDIR+=	fish
 SUBDIR+=	fl_logbook
 SUBDIR+=	flag
 SUBDIR+=	flam3-svn
