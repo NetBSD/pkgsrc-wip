@@ -1,0 +1,11 @@
+@comment $NetBSD$
+${PYSITELIB}/anydoc/__init__.py
+${PYSITELIB}/anydoc/__init__.pyc
+${PYSITELIB}/anydoc/__init__.pyo
+${PYSITELIB}/anydoc/_anydoc.abi3.so
+${PYSITELIB}/anydoc/_anydoc.pyi
+${PYSITELIB}/anydoc/py.typed
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE

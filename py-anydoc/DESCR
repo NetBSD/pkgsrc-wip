@@ -1,0 +1,4 @@
+anydoc is a fast Rust library that converts documents (Word,
+PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF) into
+clean GitHub-Flavored Markdown. This package contains its Python
+bindings.
