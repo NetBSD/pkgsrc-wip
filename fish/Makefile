@@ -12,6 +12,9 @@ HOMEPAGE=	https://fishshell.com/
 COMMENT=	User friendly command line shell for UNIX-like operating systems
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 RUST_PCRE2_REV=		0.2.9-utf32
 FLUENT_RS_REV=		cf712bced280b217b6307edabc2089b3e57204ab
@@ -21,16 +24,14 @@ DISTFILES+=		rust-pcre2-${RUST_PCRE2_REV}.tar.gz
 DISTFILES+=		fluent-rs-${FLUENT_RS_REV}.tar.gz
 DISTFILES+=		fluent-ftl-tools-${FLUENT_FTL_TOOLS_REV}.tar.gz
 
-SITES.rust-pcre2-${RUST_PCRE2_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=fish-shell/}rust-pcre2/archive/refs/tags/${RUST_PCRE2_REV}.tar.gz
-SITES.fluent-rs-${FLUENT_RS_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=danielrainer/}fluent-rs/archive/refs/${FLUENT_RS_REV}.tar.gz
+SITES.rust-pcre2-${RUST_PCRE2_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=fish-shell/}rust-pcre2/archive/refs/tags/${RUST_PCRE2_REV}.tar.gz
+SITES.fluent-rs-${FLUENT_RS_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=danielrainer/}fluent-rs/archive/refs/${FLUENT_RS_REV}.tar.gz
 SITES.fluent-ftl-tools-${FLUENT_FTL_TOOLS_REV}.tar.gz+=	-https://codeberg.org/danielrainer/fluent-ftl-tools/archive/${FLUENT_FTL_TOOLS_REV}.tar.gz
 
 .include "cargo-depends.mk"
 
 USE_TOOLS+=		msgfmt patch pkg-config pax
 USE_PKGLOCALEDIR=	yes
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
@@ -71,10 +72,9 @@ PLIST.notmac=	yes
 .endif
 
 TEST_TARGET=		fish_run_tests
-TEST_DEPENDS+=		${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 TEST_ENV+=		LC_ALL=C.UTF-8		# requires a UTF-8 locale
-# test status as of 4.7.1
-# 230 / 237 passed (11 skipped)
+# test status as of 4.8.1
+# 230 / 238 passed (12 skipped)
 
 post-install:
 	cd ${WRKSRC}/share/themes && ${PAX} -wr * \

@@ -11,9 +11,9 @@ Do not attempt to fetch sources at build time.
 -fluent = { git = "https://github.com/danielrainer/fluent-rs", rev = "cf712bced280b217b6307edabc2089b3e57204ab" }
 -fluent-ftl-tools = { git = "https://codeberg.org/danielrainer/fluent-ftl-tools", rev = "5917664c8f2e4928ef1e480ff5c13bbe1e226066" }
 -fluent-syntax = { git = "https://github.com/danielrainer/fluent-rs", rev = "cf712bced280b217b6307edabc2089b3e57204ab" }
-+fluent = { path = "../fluent-rs-cf712bced280b217b6307edabc2089b3e57204ab" }
++fluent = { path = "../fluent-rs-cf712bced280b217b6307edabc2089b3e57204ab/fluent" }
 +fluent-ftl-tools = { path = "../fluent-ftl-tools" }
-+fluent-syntax = { path = "../fluent-rs-cf712bced280b217b6307edabc2089b3e57204ab" }
++fluent-syntax = { path = "../fluent-rs-cf712bced280b217b6307edabc2089b3e57204ab/fluent-syntax" }
  ignore = "0.4.25"
  itertools = "0.14.0"
  libc = "0.2.177"
@@ -26,10 +26,3 @@ Do not attempt to fetch sources at build time.
    "utf32",
  ] }
  phf = { version = "0.13", default-features = false }
-@@ -259,4 +259,4 @@ print_stderr = "deny"
- # and is configured in clippy.toml with `allow-print-in-tests`
- 
- [lints]
--workspace = true
-\ No newline at end of file
-+workspace = true

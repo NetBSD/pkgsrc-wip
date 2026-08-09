@@ -531,5 +531,6 @@ Size (zerovec-0.11.6.crate) = 128583 bytes
 BLAKE2s (zmij-1.0.21.crate) = a2d1e7214230c8f4e8c946d28215765c131da3aac89f1001daf534335307648e
 SHA512 (zmij-1.0.21.crate) = a488f11ec8721ddfe42e61d028a128818551de8fccd69d7824504e4ae2efccdc38f716fa5a10ef4de07a8a087e75e819c4a1e0790817e8539b5db697bde14585
 Size (zmij-1.0.21.crate) = 26665 bytes
-SHA1 (patch-Cargo.toml) = 044e29d160ad517caac53bc00e299e0c23282820
+SHA1 (patch-.._fluent-ftl-tools_Cargo.toml) = 7e8cba64683cfa5311bf9bae9722258976a566e1
+SHA1 (patch-Cargo.toml) = 88e27566caad4e87d64c4a8c974d2b099fdeda25
 SHA1 (patch-cmake_Install.cmake) = dfc4f2eb4c6e4dd115c7d97680e0f964d6308296
