@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (expect-5.45.5.tar.gz) = 9780e20c0ce87ca5cc4e91390e35315400b6abe1d7361e99c403d258a30d572f
+SHA512 (expect-5.45.5.tar.gz) = 13f40796ab2f3a62b9683fe56a5b0052df16d1f139468f71cb8d866755a388ae007011a9b32fed6718ddcd843902b9f7afac21545ff0a1aae52c0095dfba0a42
+Size (expect-5.45.5.tar.gz) = 626036 bytes

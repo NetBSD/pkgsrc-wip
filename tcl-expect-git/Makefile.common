@@ -1,0 +1,43 @@
+# $NetBSD: Makefile.common,v 1.15 2022/06/19 14:43:28 gdt Exp $
+
+# used by lang/tcl-expect/Makefile
+# \todo Explain why there is only one user, or fold into Makefile.
+
+# expect appears unmaintained upstream:
+#   https://sourceforge.net/p/expect/bugs/107/
+DISTNAME=	expect-${EXPECT_FNAME}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ryoon/}
+HOMEPAGE=	https://core.tcl-lang.org/expect/index
+GITHUB_PROJECT=	tcl-expect
+GITHUB_TAG=	5.45.5
+
+EXPECT_FNAME=	5.45.5
+EXPECT_VERSION=	5.45.5
+EXPECT_SONUM=	5455
+
+GNU_CONFIGURE=		yes
+TEST_TARGET=		test
+
+PRINT_PLIST_AWK+=	/libexpect${EXPECT_SONUM}/ \
+			{ sub(/libexpect${EXPECT_SONUM}/, "libexpect$${SONUM}"); }
+#PRINT_PLIST_AWK+=	/expect${EXPECT_FNAME}/ \
+#			{ sub(/expect${EXPECT_VERSION}/, "expect$${BASEVER}"); }
+
+PLIST_SUBST+=		SONUM=${EXPECT_SONUM}
+PLIST_SUBST+=		BASEVER=${EXPECT_VERSION}
+
+.include "../../mk/bsd.prefs.mk"
+
+# NetBSD 5.99 strip complains it doesn't recognized the format of
+# the utility scripts and didn't install any of them as a result.
+# Just in case there are other platforms like this, don't install
+# stripped binaries on any platform.
+INSTALL_UNSTRIPPED=	yes
+
+# on IRIX 5.3 inttypes.h and sys/types.h are known to conflict
+.if ${OPSYS} == "IRIX" && ${OS_VERSION} == "5.3"
+CONFIGURE_ENV+=		ac_cv_header_inttypes_h="no"
+.endif
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/tcl-expect-git/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/tcl-expect-git/patches
