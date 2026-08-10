@@ -1,15 +1,19 @@
-$NetBSD: patch-configure,v 1.3 2020/05/23 21:20:39 adam Exp $
+$NetBSD: patch-configure,v 1.4 2024/11/01 14:10:47 triaxx Exp $
 
-On Darwin, do not use @rpath.
+Add check for sys/midiio.h.
 
---- configure.orig	2022-01-07 21:03:02.000000000 +0000
+--- configure.orig	2024-01-16 20:55:47.000000000 +0000
 +++ configure
-@@ -10383,7 +10383,7 @@ fi
-     UNIXLDFLAGS="-dynamiclib -install_name @loader_path/\$(UNIXLIB)"
-     LIBWINE_SHAREDLIB="libwine.$libwine_version.dylib"
+@@ -8207,6 +8207,12 @@ then :
+   printf "%s\n" "#define HAVE_SYS_LINK_H 1" >>confdefs.h
  
--    LIBWINE_LDFLAGS="-dynamiclib -install_name @rpath/libwine.$libwine_soversion.dylib -Wl,-rpath,@loader_path/ -compatibility_version $libwine_soversion -current_version $libwine_version"
-+    LIBWINE_LDFLAGS="-dynamiclib -install_name ${libdir}/libwine.$libwine_soversion.dylib -compatibility_version $libwine_soversion -current_version $libwine_version"
- 
-     WINELOADER_DEPENDS="wine_info.plist"
- 
+ fi
++ac_fn_c_check_header_compile "$LINENO" "sys/midiio.h" "ac_cv_header_sys_midiio_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_midiio_h" = xyes
++then :
++  printf "%s\n" "#define HAVE_SYS_MIDIIO_H 1" >>confdefs.h
++
++fi
+ ac_fn_c_check_header_compile "$LINENO" "sys/modem.h" "ac_cv_header_sys_modem_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_modem_h" = xyes
+ then :

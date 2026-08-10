@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.21 2021/06/01 05:05:54 adam Exp $
+# $NetBSD: options.mk,v 1.22 2024/11/01 14:10:47 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wine
-PKG_SUPPORTED_OPTIONS=		alsa cups dbus gphoto2 pulseaudio sane vulkan x11
+PKG_SUPPORTED_OPTIONS=		alsa cups dbus pulseaudio sane x11
 PKG_SUGGESTED_OPTIONS=		cups dbus sane x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 
@@ -27,14 +27,6 @@ CONFIGURE_ARGS+=	--without-cups
 CONFIGURE_ARGS+=	--without-dbus
 .endif
 
-PLIST_VARS+=	gphoto2
-.if !empty(PKG_OPTIONS:Mgphoto2)
-PLIST.gphoto2=		yes
-.  include "../../devel/libgphoto2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-gphoto
-.endif
-
 PLIST_VARS+=	pulse
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 PLIST.pulse=		yes
@@ -45,16 +37,10 @@ CONFIGURE_ARGS+=	--without-pulse
 
 PLIST_VARS+=	sane
 .if !empty(PKG_OPTIONS:Msane)
-PLIST.sane=		yes	
+PLIST.sane=		yes
 .  include "../../graphics/sane-backends/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-sane
-.endif
-
-.if !empty(PKG_OPTIONS:Mvulkan)
-.  include "../../graphics/vulkan-headers/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-vulkan
 .endif
 
 PLIST_VARS+=	x11
