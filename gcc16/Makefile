@@ -86,4 +86,3 @@ GENERATE_PLIST+= \
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

@@ -89,7 +89,11 @@ MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
 MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
 MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
-.if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly"
+.if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly" \
+    || ${OPSYS} == "NetBSD"
+# GCC 16.1.0's stage2/stage3 bootstrap comparison currently fails on
+# NetBSD/x86_64, so disable it. Revisit on updates.
+# https://gcc.gnu.org/pipermail/gcc-help/2026-August/145120.html
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
