@@ -4,9 +4,9 @@ Ensure libgcc from this GCC is found before others.  Note that there must
 not be a whitespace between $(LINKER_RPATH_FLAG) and the path.  Otherwise
 the flag may be misinterpreted by the linker (e.g. Apple ld).
 
---- gcc/Makefile.in.orig	2017-04-18 18:10:27.000000000 +0000
+--- gcc/Makefile.in.orig	2026-04-30 08:33:20.000000000 +0000
 +++ gcc/Makefile.in
-@@ -2112,6 +2112,7 @@ prefix.o: $(BASEVER)
+@@ -2658,6 +2658,7 @@ DRIVER_DEFINES = \
  # Language-independent files.
  
  DRIVER_DEFINES = \

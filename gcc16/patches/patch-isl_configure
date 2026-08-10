@@ -4,7 +4,7 @@ Fix unportable test(1) operator.
 
 --- isl/configure.orig	2021-04-26 09:13:19.000000000 +0000
 +++ isl/configure
-@@ -20657,7 +20657,7 @@ else
+@@ -20657,7 +20657,7 @@ fi
    HAVE_CXX11_FALSE=
  fi
  
@@ -13,7 +13,7 @@ Fix unportable test(1) operator.
    SMALL_INT_OPT_TRUE=
    SMALL_INT_OPT_FALSE='#'
  else
-@@ -20665,7 +20665,7 @@ else
+@@ -20665,7 +20665,7 @@ fi
    SMALL_INT_OPT_FALSE=
  fi
  

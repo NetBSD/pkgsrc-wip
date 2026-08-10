@@ -1,6 +1,6 @@
 $NetBSD: patch-gcc_config_arm_netbsd-elf.h,v 1.1 2025/07/14 17:44:53 wiz Exp $
 
---- gcc/config/arm/netbsd-elf.h.orig	2023-04-26 07:09:39.000000000 +0000
+--- gcc/config/arm/netbsd-elf.h.orig	2026-04-30 08:33:20.000000000 +0000
 +++ gcc/config/arm/netbsd-elf.h
 @@ -27,9 +27,20 @@
  
@@ -43,17 +43,17 @@ $NetBSD: patch-gcc_config_arm_netbsd-elf.h,v 1.1 2025/07/14 17:44:53 wiz Exp $
  #undef SUBTARGET_ASM_FLOAT_SPEC
 -#define SUBTARGET_ASM_FLOAT_SPEC	\
 -  "%{mfloat-abi=hard:{!mfpu=*:-mfpu=vfp}}"
--
++#define SUBTARGET_ASM_FLOAT_SPEC		\
++  "%{mhard-float:%{!mfpu=*:-mfpu=vfp}}		\
++   %{mfloat-abi=hard:%{!mfpu=*:-mfpu=vfp}}"
+ 
 -#undef SUBTARGET_EXTRA_SPECS
 -#define SUBTARGET_EXTRA_SPECS				\
 -  { "subtarget_extra_asm_spec",	SUBTARGET_EXTRA_ASM_SPEC }, \
 -  { "subtarget_asm_float_spec", SUBTARGET_ASM_FLOAT_SPEC }, \
 -  { "netbsd_link_spec",		NETBSD_LINK_SPEC_ELF },	\
 -  { "netbsd_entry_point",	NETBSD_ENTRY_POINT },
-+#define SUBTARGET_ASM_FLOAT_SPEC		\
-+  "%{mhard-float:%{!mfpu=*:-mfpu=vfp}}		\
-+   %{mfloat-abi=hard:%{!mfpu=*:-mfpu=vfp}}"
- 
+-
  #define NETBSD_ENTRY_POINT "__start"
  
  #undef LINK_SPEC
@@ -65,16 +65,16 @@ $NetBSD: patch-gcc_config_arm_netbsd-elf.h,v 1.1 2025/07/14 17:44:53 wiz Exp $
     %(netbsd_link_spec)"
  
  /* Make GCC agree with <machine/ansi.h>.  */
-@@ -85,6 +99,12 @@
+@@ -84,6 +98,12 @@
+ 
  #undef PTRDIFF_TYPE
  #define PTRDIFF_TYPE "long int"
- 
++
 +#undef INTPTR_TYPE
 +#define INTPTR_TYPE PTRDIFF_TYPE
 +
 +#undef UINTPTR_TYPE
 +#define UINTPTR_TYPE SIZE_TYPE
-+
+ 
  /* NetBSD does its profiling differently to the Acorn compiler. We
     don't need a word following the mcount call; and to skip it
-    requires either an assembly stub or use of fomit-frame-pointer when
