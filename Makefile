@@ -5683,6 +5683,7 @@ SUBDIR+=	tcc
 SUBDIR+=	tcc-git
 SUBDIR+=	tcl-curl
 SUBDIR+=	tcl-expect
+SUBDIR+=	tcl-expect-git
 SUBDIR+=	tcl-fossil
 SUBDIR+=	tcl-itcl3
 SUBDIR+=	tcl-iwidgets
