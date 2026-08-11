@@ -1,0 +1,11 @@
+sysutils/atuin: import atuin-18.19.0
+
+Atuin replaces your existing shell history with a SQLite database and
+records extra context (exit code, cwd, duration, host, session) for each
+command.  It offers a full-screen fuzzy history search (bound to ctrl-r
+and the up arrow) and optional end-to-end encrypted sync between machines
+through a self-hosted or hosted Atuin server.
+
+This package provides both the atuin client and the atuin-server daemon,
+with an rc.d script (atuin-serverd) and a dedicated _atuin user for the
+server.

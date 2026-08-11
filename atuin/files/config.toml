@@ -1,0 +1,103 @@
+# $NetBSD$
+#
+# Example configuration for the atuin client.
+# Copy to ~/.config/atuin/config.toml and edit as needed.
+# Atuin reads ATUIN_CONFIG_DIR from the environment; when unset it
+# defaults to $XDG_CONFIG_HOME/atuin (~/.config/atuin).
+
+## Sync server address.  Point this at your atuin-server instance.
+sync_address = "http://localhost:8888"
+
+## Enable or disable automatic periodic sync (default: true).
+# auto_sync = true
+
+## How often to sync.  Use "0" to sync after every command.
+sync_frequency = "5m"
+
+## Enable or disable automatic update checks (default: true).
+## Set to false on NetBSD to avoid noise; pkgsrc manages updates.
+# update_check = false
+
+## Controls whether to strip trailing whitespace from commands
+## before saving them to history.
+# strip_trailing_whitespace = true
+
+## Store commands that failed (non-zero exit status).
+# store_failed = true
+
+## Search mode: prefix, fulltext, fuzzy, daemon-fuzzy.
+# search_mode = "fuzzy"
+
+## Filter mode: global, host, session, directory, workspace.
+# filter_mode = "global"
+
+## Date format: "us" or "uk".
+# dialect = "us"
+
+## Maximum number of lines the interactive TUI takes up.
+## 0 = always go full screen.
+# inline_height = 40
+
+## Show a preview of the selected command.
+# show_preview = true
+
+## Maximum height of the preview panel.
+# max_preview_height = 4
+
+## History display format.
+## Available placeholders: {time}, {command}, {duration}, {exit}, {host}, {user}, {cwd}
+# history_format = "{time}\t{command}\t{duration}"
+
+## Prevent commands matching these regexes from being saved to history.
+# history_filter = [
+#   "^secret-cmd",
+# ]
+
+## Prevent commands run in these directories from being saved to history.
+# cwd_filter = [
+#   "^/very/secret/area",
+# ]
+
+## Enable workspace detection (filter commands to current git tree).
+# workspaces = false
+
+## Network timeouts (seconds).
+# network_connect_timeout = 5
+# network_timeout = 30
+
+## Extra HTTP headers for the sync server (e.g. for reverse-proxy auth).
+# [extra_headers]
+# CF-Access-Client-Id = "..."
+# CF-Access-Client-Secret = "..."
+
+## Display style: auto, full, compact.
+# style = "compact"
+
+## Show tabs in the interactive search UI.
+# show_tabs = true
+
+## Show the help footer bar in the interactive search UI.
+# show_help = true
+
+## [keys]
+## scroll_exits = true
+## prefix = "a"
+
+## [daemon]
+## Use a background daemon to sync (offloads sync from shell startup).
+## Requires the daemon feature enabled.
+# enabled = false
+# autostart = false
+# sync_frequency = 300
+# socket_path = "~/.local/share/atuin/atuin.sock"
+
+## [ui]
+## Columns displayed in interactive search, left to right.
+## Available types: duration, time, datetime, directory, host, user, exit, command.
+# columns = ["duration", "time", "command"]
+
+## [stats]
+## Subcommands to consider separately in stats (e.g. "git" becomes "git push").
+# common_subcommands = ["cargo", "git", "kubectl", "docker", "nix"]
+# common_prefix = ["sudo"]
+# ignored_commands = ["cd", "ls", "vi"]

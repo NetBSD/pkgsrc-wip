@@ -1,0 +1,15 @@
+Atuin replaces your existing shell history with a SQLite database, and
+records additional context for your commands.  It also provides optional,
+fully encrypted synchronisation of your history between machines via an
+Atuin server.
+
+As well as its search UI, it can:
+
+- Rebind ctrl-r and the up arrow to a full-screen history search
+- Store rich metadata per command: exit code, working directory,
+  hostname, session, and duration
+- Search and filter history by directory, session, host, or exit status
+- Sync encrypted history across machines through a self-hosted or the
+  hosted Atuin server
+
+This package installs both the atuin client and the atuin-server daemon.

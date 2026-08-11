@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/atuin
+bin/atuin-server
+share/examples/atuin/config.toml
+share/examples/atuin/server.toml
+share/examples/rc.d/atuin-serverd

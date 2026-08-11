@@ -1,0 +1,50 @@
+# $NetBSD$
+#
+# Example configuration for atuin-server.
+# Copy this file to ${PKG_SYSCONFDIR}/server.toml and edit as needed.
+#
+# NOTE: atuin-server finds this file only when ATUIN_CONFIG_DIR points at
+# the directory containing it.  The bundled rc.d script sets that; for a
+# manual run, export ATUIN_CONFIG_DIR to this directory first, e.g.:
+#     ATUIN_CONFIG_DIR=/usr/pkg/etc/atuin atuin-server start
+
+## Host address to bind to.
+## Can also be passed via CLI: atuin-server start --host 0.0.0.0
+# host = "127.0.0.1"
+
+## Port to listen on.
+## Can also be passed via CLI: atuin-server start --port 8888
+# port = 8888
+
+## Base path for the API.  Leave empty to serve at the root.
+# path = ""
+
+## Whether to allow anyone to register an account.
+## Set to true to create your first user, then set back to false.
+open_registration = false
+
+## Database URI.  The URI scheme determines the database backend:
+##   sqlite:///path/to/file.db  → SQLite (single-file, no external daemon)
+##   postgres://user:pass@host/db → PostgreSQL
+db_uri = "sqlite:///var/db/atuin_server/atuin-server.db"
+
+## Optional: URI for a read-only database replica.
+## If set, read queries use this URI.
+# read_db_uri = "sqlite:///var/db/atuin_server/atuin-server-ro.db"
+
+## Maximum size in bytes for a single record entry (default: 1 GiB).
+# max_record_size = 1073741824
+
+## Username for a webhook that fires when a new user registers.
+# register_webhook_username = ""
+
+## Optional URL to call on user registration.
+# register_webhook_url = ""
+
+## Advertise a fake version to suppress client-update notifications.
+# fake_version = "18.19.0"
+
+# [metrics]
+# enable = false
+# host = "127.0.0.1"
+# port = 9001
