@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	CodeWhale-0.9.3
+DISTNAME=	CodeWhale-0.9.5
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hmbown/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -31,9 +31,9 @@ MAKE_ENV+=		CARGO_PROFILE_RELEASE_LTO=thin
 # rquickjs-sys lacks pre-generated bindings for NetBSD targets.
 # The Linux bindings are ABI-identical for QuickJS on the same CPU arch.
 post-extract:
-	${RUN} for f in ${WRKDIR}/vendor/rquickjs-sys-0.12.1/src/bindings/*-linux-gnu.rs; do \
+	${RUN} for f in ${WRKDIR}/vendor/rquickjs-sys-0.12.2/src/bindings/*-linux-gnu.rs; do \
 		target=`${BASENAME} "$$f" | ${SED} 's/-linux-gnu/-netbsd/'`; \
-		dest="${WRKDIR}/vendor/rquickjs-sys-0.12.1/src/bindings/$$target"; \
+		dest="${WRKDIR}/vendor/rquickjs-sys-0.12.2/src/bindings/$$target"; \
 		if [ ! -f "$$dest" ]; then \
 			${CP} "$$f" "$$dest"; \
 		fi; \
