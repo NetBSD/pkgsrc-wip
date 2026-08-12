@@ -1,0 +1,71 @@
+$NetBSD$
+
+Drop user/group existence checks; pkgsrc handles their creation.
+
+--- configure.in.orig	2026-06-02 15:06:25.000000000 +0000
++++ configure.in
+@@ -189,30 +189,12 @@ if test "$host_os" = haiku; then
+   echo "Skipping user and group validity stuff.";
+ 
+ else
+-
+-  $ID privoxy >/dev/null 2>/dev/null
+-  if test $? -ne 0 ; then
+-   AC_MSG_WARN(There is no user 'privoxy' on this system)
+-  fi
+   AC_MSG_CHECKING([for user])
+   AC_ARG_WITH(user,
+         [  --with-user=privoxy          Set user under which privoxy will run],
+         [
+-                if test "x$withval" != "xyes"; then
+-                  if test $ID = no ; then
+-                    AC_MSG_ERROR(There is no 'id' program on this system)
+-                  else
+-                    AC_MSG_RESULT($with_user)
+-                    $ID $with_user 2>/dev/null >/dev/null
+-                    if test $? -eq 0 ; then
+-                      USER=$with_user;
+-                    else
+-                      AC_MSG_ERROR(There is no user '$with_user' on this system)
+-                    fi
+-                  fi
+-                  else
+-                   AC_MSG_ERROR(We need a user if you give me this parameter)
+-                fi
++                AC_MSG_RESULT($with_user)
++                USER=$with_user;
+         ],
+         [
+           if test $ID = no ; then
+@@ -229,29 +211,8 @@ else
+   AC_ARG_WITH(group,
+         [  --with-group=privoxy         Set group for privoxy],
+         [
+-                if test "x$withval" != "xyes"; then
+-                  if test $BGROUPS = no ; then
+-                    AC_MSG_ERROR(There is no 'groups' program on this system)
+-                  else
+-                    AC_MSG_RESULT($with_group)
+-                    $BGROUPS $USER >/dev/null
+-                    if test $? -eq 0 ; then
+-                      for i in `$BGROUPS $USER | sed 's/.*: //' 2>/dev/null`; do
+-                        if test "x$i" = "x$with_group" ; then
+-                          GROUP=$with_group
+-                          break
+-                        fi
+-                      done
+-                      if test "x$GROUP" != "x$with_group" ; then
+-                        AC_MSG_ERROR(The given value '$withval' does not match group entry)
+-                      fi
+-                    else
+-                      AC_MSG_ERROR(There is no group entry for user '$USER')
+-                    fi
+-                  fi
+-                else
+-                   AC_MSG_ERROR(We need a group if you give me this parameter)
+-                fi
++                AC_MSG_RESULT($with_group)
++                GROUP=$with_group
+         ],
+         [
+           if test $BGROUPS = no ; then

@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (privoxy-4.2.0-stable-src.tar.gz) = 80f41f73a6b47eef30bfe5c7fe3332e37c0bcfe212e13b190477e04b90731e9d
+SHA512 (privoxy-4.2.0-stable-src.tar.gz) = e727a16ead5759e3e976d42558ad0c0af137a7f74d8ccc83ed53a34320654362489a77d3bd54c9b4d5b84c5b4ecf8e375d2c1d0e3108eb26acce3014dfbefdb0
+Size (privoxy-4.2.0-stable-src.tar.gz) = 1791064 bytes
+SHA1 (patch-GNUmakefile.in) = 5e4b2a2048706a6d02e61d2da32cfa3274d0f4c3
+SHA1 (patch-config) = a111b0d25be9166d64632e8c3b4b5ef61a6f0cb1
+SHA1 (patch-configure.in) = 8e245310c3d13467b7e2958c63ff89424ea1161d
+SHA1 (patch-man_privoxy.8) = 3ec0da5655f9ae94b648b9d04511f4e18079fa89
+SHA1 (patch-man_uagen.1) = da9026d395b659bc0634520c0d0bf9365314a8ed
