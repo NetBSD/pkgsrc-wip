@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	v5.0.0-rc5
+DISTNAME=	v5.0.0-rc8
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DNSControl/}
 GITHUB_PROJECT=	dnscontrol
-GITHUB_TAG=	refs/tags/v5.0.0-rc5
+GITHUB_TAG=	refs/tags/v5.0.0-rc8
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	drixter@e-utp.net
@@ -13,7 +13,7 @@ HOMEPAGE=	https://dnscontrol.org/
 COMMENT=	Opinionated platform for managing DNS configuration
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/dnscontrol-5.0.0-rc5
+WRKSRC=		${WRKDIR}/dnscontrol-5.0.0-rc8
 USE_LANGUAGES=	c
 
 INSTALLATION_DIRS+=	bin
