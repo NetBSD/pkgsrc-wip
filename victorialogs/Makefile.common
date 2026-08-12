@@ -3,10 +3,11 @@
 # used by wip/victorialogs/Makefile
 # used by wip/victorialogs-vlogscli/Makefile
 
-VICTORIALOGS_VERS=	1.48.0
+VICTORIALOGS_VERS=	1.52.0
 DISTNAME=		VictoriaLogs-${VICTORIALOGS_VERS}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=VictoriaMetrics/}
+GITHUB_PROJECT=		VictoriaLogs
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
