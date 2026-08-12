@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.10
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.11
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -88,8 +88,8 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-grpcio-[0-9]*:../../net/py-grpcio
 
-# generic and stream require PyAV which depends on ffmpeg >= 7.
-DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
+# generic and stream require PyAV which depends on ffmpeg >= 8.
+DEPENDS+=	ffmpeg8-[0-9]*:../../multimedia/ffmpeg8
 
 # onvif integration requires onvif_zeep_async which depends on lxml
 # which depends on libxml2 and libxslt.
@@ -104,10 +104,10 @@ DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 ## ha-av
 #
-# ffmpeg7 installs to /usr/pkg/lib/ffmpeg7, and HA expects to just find ffmpeg
-#   export PKG_CONFIG_PATH=/usr/pkg/lib/ffmpeg7/pkgconfig
+# ffmpeg8 installs to /usr/pkg/lib/ffmpeg8, and HA expects to just find ffmpeg
+#   export PKG_CONFIG_PATH=/usr/pkg/lib/ffmpeg8/pkgconfig
 #
-# ffmpeg's pkgconfig files have "-Wl,-rpath,/usr/pkg/lib/ffmpeg7/lib",
+# ffmpeg's pkgconfig files have "-Wl,-rpath,/usr/pkg/lib/ffmpeg8/lib",
 # but PyAV's setup.py is buggy and looks at flags to see if they are
 # known and doesn't support -Wl,-rpath.  Changing to -R makes it work.
 # This is a bug in PyAV.  \todo File a fix.
