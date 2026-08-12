@@ -20,10 +20,10 @@ PRIVOXY_EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 PRIVOXY_DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 PRIVOXY_LOGDIR=		${VARBASE}/log/privoxy
 
-USE_TOOLS+=		gmake mktemp autoconf autoheader perl
+USE_TOOLS+=		gmake mktemp autoconf autoheader perl:run
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	config man/privoxy.8 man/uagen.1
+SUBST_FILES.paths=	config man/privoxy.8 man/uagen.1 tools/uagen.pl
 SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR PRIVOXY_LOGDIR PRIVOXY_DOCDIR
 SUBST_STAGE.paths=	pre-configure
 
@@ -49,7 +49,6 @@ PKG_GROUPS_VARS+=		PRIVOXY_GROUP
 PKG_GROUPS=			${PRIVOXY_GROUP}
 PKG_USERS=			${PRIVOXY_USER}:${PRIVOXY_GROUP}
 PKG_GECOS.${PRIVOXY_USER}=	Privoxy user
-PKG_HOME.${PRIVOXY_USER}=	${PRIVOXY_HOME}
 
 OWN_DIRS_PERMS+=	${PRIVOXY_HOME} ${PRIVOXY_USER} ${PRIVOXY_GROUP} 0770
 
@@ -59,9 +58,35 @@ RCD_SCRIPTS+=		privoxy
 .endif
 
 USER_GROUP=		${PRIVOXY_USER} ${PRIVOXY_GROUP}
-.for i in \
-	config trust default.action user.action user.filter default.filter match-all.action
-CONF_FILES_PERMS+=	${PRIVOXY_EGDIR}/${i} ${PKG_SYSCONFDIR}/${i} ${USER_GROUP} 0640
+
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/templates ${USER_GROUP} 0755
+
+PRIVOXY_CONF_FILES=	config default.action default.filter \
+			match-all.action trust user.action user.filter
+
+PRIVOXY_TEMPLATE_FILES=	blocked cgi-error-404 cgi-error-bad-param \
+			cgi-error-disabled cgi-error-file \
+			cgi-error-file-read-only cgi-error-modified \
+			cgi-error-parse cgi-style.css client-tags \
+			connect-failed connection-timeout default \
+			edit-actions-add-url-form edit-actions-for-url \
+			edit-actions-for-url-filter \
+			edit-actions-for-url-string-action mod-title \
+			edit-actions-list edit-actions-list-button \
+			edit-actions-list-section edit-actions-list-url \
+			edit-actions-remove-url-form edit-actions-url-form \
+			forwarding-failed mod-local-help \
+			mod-support-and-service mod-unstable-warning \
+			no-server-data no-such-domain show-request show-status \
+			show-status-file show-url-info toggle toggle-mini \
+			untrusted url-info-osd.xml wpad.dat
+
+.for f in ${PRIVOXY_CONF_FILES}
+CONF_FILES+=		${PRIVOXY_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+
+.for f in ${PRIVOXY_TEMPLATE_FILES}
+CONF_FILES+=		${PRIVOXY_EGDIR}/templates/${f} ${PKG_SYSCONFDIR}/templates/${f}
 .endfor
 
 OWN_DIRS_PERMS+=	${PRIVOXY_LOGDIR} ${USER_GROUP} 0755

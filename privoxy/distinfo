@@ -8,3 +8,4 @@ SHA1 (patch-config) = a111b0d25be9166d64632e8c3b4b5ef61a6f0cb1
 SHA1 (patch-configure.in) = 8e245310c3d13467b7e2958c63ff89424ea1161d
 SHA1 (patch-man_privoxy.8) = 3ec0da5655f9ae94b648b9d04511f4e18079fa89
 SHA1 (patch-man_uagen.1) = da9026d395b659bc0634520c0d0bf9365314a8ed
+SHA1 (patch-tools_uagen.pl) = 0f2c1ba3ff40baba1ea2afac1279b776ae3ff505
