@@ -360,7 +360,6 @@ SUBDIR+=	bluez-hciemu
 SUBDIR+=	bluez-libs
 SUBDIR+=	bluez-utils
 SUBDIR+=	bmap
-SUBDIR+=	bmaptool
 SUBDIR+=	bmp-docklet
 SUBDIR+=	boa
 SUBDIR+=	bogomips
