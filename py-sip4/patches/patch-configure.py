@@ -1,10 +1,38 @@
 $NetBSD$
 
 Add PYVERSSUFFIX.
+Support python >3.12.
 
---- configure.py.orig	2018-10-01 13:22:40.000000000 +0000
+--- configure.py.orig	2021-02-26 15:28:41.621025600 +0000
 +++ configure.py
-@@ -250,7 +250,7 @@ def set_platform_directories():
+@@ -20,7 +20,7 @@ import optparse
+ import os
+ import glob
+ import optparse
+-from distutils import sysconfig
++import sysconfig
+ 
+ try:
+     from importlib import invalidate_caches
+@@ -220,9 +220,9 @@ def set_platform_directories():
+     global plat_py_conf_inc_dir, plat_bin_dir, plat_py_lib_dir, plat_sip_dir
+ 
+     # We trust distutils for some stuff.
+-    plat_py_site_dir = sysconfig.get_python_lib(plat_specific=1)
+-    plat_py_inc_dir = sysconfig.get_python_inc()
+-    plat_py_venv_inc_dir = sysconfig.get_python_inc(prefix=sys.prefix)
++    plat_py_site_dir = sysconfig.get_path('platlib')
++    plat_py_inc_dir = sysconfig.get_path('include')
++    plat_py_venv_inc_dir = sysconfig.get_path('include', vars={'base': sys.prefix, 'platbase': sys.prefix})
+     plat_py_conf_inc_dir = os.path.dirname(sysconfig.get_config_h_filename())
+ 
+     if sys.platform == "win32":
+@@ -249,11 +249,11 @@ def set_platform_directories():
+         plat_bin_dir = bin_dir
+         plat_sip_dir = sys.prefix + "\\sip"
+     else:
+-        lib_dir = sysconfig.get_python_lib(plat_specific=1, standard_lib=1)
++        lib_dir = sysconfig.get_path('platstdlib')
  
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
@@ -13,7 +41,7 @@ Add PYVERSSUFFIX.
  
  
  def create_config(module, template, macros):
-@@ -268,7 +268,7 @@ def create_config(module, template, macr
+@@ -271,7 +271,7 @@ def create_config(module, template, macros):
          "sip_version":      sip_version,
          "sip_version_str":  sip_version_str,
          "platform":         build_platform,
