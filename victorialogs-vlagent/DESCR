@@ -1,0 +1,5 @@
+VictoriaLogs is open source user-friendly database for logs from
+VictoriaMetrics.
+
+This package contains vlagent, an agent for collecting logs from
+various sources and storing them in VictoriaLogs.
