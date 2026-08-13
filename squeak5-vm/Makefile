@@ -2,11 +2,11 @@
 
 DISTNAME=	opensmalltak-vm
 PKGNAME=	squeak5-vm-${GITHUB_TAG}
-PKGVERSION=	5.0-${GITHUB_TAG}
+PKGVERSION=	7.0-${GITHUB_TAG}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSmalltalk/}
 GITHUB_PROJECT=	opensmalltalk-vm
-GITHUB_TAG=	202312181441
+GITHUB_TAG=	202606270913
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opensmalltalk.org/
@@ -34,9 +34,9 @@ SUBST_MESSAGE.sccs=	Set version infomation to the VM.
 SUBST_FILES.sccs=	platforms/Cross/vm/sqSCCSVersion.h
 SUBST_FILES.sccs+=	platforms/Cross/plugins/sqPluginsSCCSVersion.h
 SUBST_SED.sccs=		-e "s,\$$Rev,\$$Rev: ${GITHUB_TAG} ,g"
-SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Mon 18 Dec 2023 15:41:18 +0100 ,g"
+SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Sat 27 Jun 2026 11:13:44 +0200 ,g"
 SUBST_SED.sccs+=	-e "s,\$$URL,\$$URL: `${ID} -un`@`${HOSTNAME_CMD}`:${WRKSRC} ,g"
-SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: cc2dd9090 ,g"
+SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: be1b7ad34 ,g"
 
 INSTALLATION_DIRS+=	bin
 

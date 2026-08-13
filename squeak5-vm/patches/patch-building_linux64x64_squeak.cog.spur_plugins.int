@@ -1,0 +1,14 @@
+$NetBSD$
+
+removed CameraPlugin
+
+--- building/linux64x64/squeak.cog.spur/plugins.int.orig	2026-08-12 09:56:31.545138295 +0000
++++ building/linux64x64/squeak.cog.spur/plugins.int
+@@ -6,7 +6,6 @@ BMPReadWriterPlugin \
+ B2DPlugin \
+ BitBltPlugin \
+ BMPReadWriterPlugin \
+-CameraPlugin \
+ CroquetPlugin \
+ HostWindowPlugin \
+ ZipPlugin \

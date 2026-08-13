@@ -1,15 +1,15 @@
 $NetBSD$
 
---- src/spur64.cog/cogitX64SysV.c.orig	2022-06-02 14:10:44.000000000 +0000
+--- src/spur64.cog/cogitX64SysV.c.orig	2026-06-27 09:13:44.000000000 +0000
 +++ src/spur64.cog/cogitX64SysV.c
-@@ -22979,9 +22979,7 @@ dispatchConcretize(AbstractInstruction *
- 			((self_in_dispatchConcretize->operands))[2] = 0;
- 			return savedSize1;
- 		}
--		if ((reg20 == RAX)
--		 || ((reg20 == RBP)
--		 || (reg20 == RSP))) {
-+		if (reg20 == RAX) {
- 			offset38 = 0;
+@@ -24484,9 +24484,7 @@ l2:
+ 		   an interrupt is delivered immediately after that point.  See mail threads beginning with
+ 		   http://lists.squeakfoundation.org/pipermail/vm-dev/2019-September/031428.html
+ 		   http://lists.squeakfoundation.org/pipermail/vm-dev/2019-October/031499.html */
+-		if ((reg == RAX)
+-		 || ((reg == RBP)
+-		 || (reg == RSP))) {
++		if (reg == RAX) {
+ 			offset1 = 0;
  		}
  		else {

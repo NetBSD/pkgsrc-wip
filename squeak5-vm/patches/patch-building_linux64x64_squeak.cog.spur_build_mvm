@@ -1,16 +1,15 @@
 $NetBSD$
 
---- building/linux64x64/squeak.cog.spur/build/mvm.orig	2023-12-18 14:41:18.000000000 +0000
+--- building/linux64x64/squeak.cog.spur/build/mvm.orig	2026-06-27 09:13:44.000000000 +0000
 +++ building/linux64x64/squeak.cog.spur/build/mvm
-@@ -16,6 +16,11 @@ case $(uname -s) in
-            ;;
+@@ -36,6 +36,10 @@ esac
+ n|no|N|NO)	echo "ok but this isn't safe!!";;
+ *)			test -f Makefile && make reallyclean
  esac
- 
 +CFLAGS="${CFLAGS} -Wno-error=implicit-function-declaration"
 +CFLAGS="${CFLAGS} -Wno-error=incompatible-pointer-types"
 +CFLAGS="${CFLAGS} -Wno-error=int-conversion"
-+#CFLAGS="${CFLAGS} -Wno-error=return-mismatch"
-+
- # Prefer clang over gcc, but use gcc if clang isn't available...
- CC=gcc
- if [ -x /usr/bin/clang ]; then CC=clang; fi
++CFLAGS="${CFLAGS} -Wno-error=return-mismatch"
+ ../../../../scripts/copylinuxpluginspecfiles
+ test -f config.h || ../../../../platforms/unix/config/configure --without-npsqueak \
+ 		--with-vmversion=5.0 \

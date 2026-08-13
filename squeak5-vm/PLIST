@@ -4,9 +4,12 @@ bin/squeak
 lib/squeak/${PKGVERSION}-64bit/B3DAcceleratorPlugin.so
 lib/squeak/${PKGVERSION}-64bit/DESPlugin.so
 lib/squeak/${PKGVERSION}-64bit/FileAttributesPlugin.so
+lib/squeak/${PKGVERSION}-64bit/HelloExternalWorldPlugin.so
+lib/squeak/${PKGVERSION}-64bit/HelloWorldPlugin.so
 lib/squeak/${PKGVERSION}-64bit/ImmX11Plugin.so
 lib/squeak/${PKGVERSION}-64bit/LocalePlugin.so
 lib/squeak/${PKGVERSION}-64bit/MD5Plugin.so
+lib/squeak/${PKGVERSION}-64bit/PseudoTTYPlugin.so
 lib/squeak/${PKGVERSION}-64bit/SHA2Plugin.so
 lib/squeak/${PKGVERSION}-64bit/Squeak3D.so
 lib/squeak/${PKGVERSION}-64bit/SqueakFFIPrims.so
@@ -20,4 +23,5 @@ lib/squeak/${PKGVERSION}-64bit/squeak
 lib/squeak/${PKGVERSION}-64bit/vm-display-X11.so
 lib/squeak/${PKGVERSION}-64bit/vm-display-null.so
 lib/squeak/${PKGVERSION}-64bit/vm-sound-OSS.so
+lib/squeak/${PKGVERSION}-64bit/vm-sound-Sun.so
 lib/squeak/${PKGVERSION}-64bit/vm-sound-null.so
