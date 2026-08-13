@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.52 2026/04/10 17:31:46 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			151.0.7922.108
+VERSION=			151.0.7922.137
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -12,7 +12,7 @@ DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
-NB_VERSION=			v151.0
+NB_VERSION=			f41ce73793f6a1a109318d977b5fccc27e0f59ea
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
