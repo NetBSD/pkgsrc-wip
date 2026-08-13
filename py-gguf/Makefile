@@ -19,6 +19,8 @@ REPLACE_PYTHON+=	gguf/scripts/*.py
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
