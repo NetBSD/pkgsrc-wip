@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/pn
+bin/pnpm
+bin/pnpx
+bin/pnx
