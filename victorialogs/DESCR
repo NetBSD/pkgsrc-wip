@@ -3,4 +3,4 @@ schema-free database for logs that is easy to use and scales both
 vertically and horizontally, from very small setups to large-scale
 deployments handling terabytes per day.
 
-This package contains victoria-logs.
+This package contains victoria-logs, the server.
