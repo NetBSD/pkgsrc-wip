@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 pre-install:
 	find ${WRKSRC} -type f -name "*.orig" | xargs ${RM}
 
-PYTHON_VERSIONS_ACCEPTED=	311
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
 
 PY_PATCHPLIST=YES
 

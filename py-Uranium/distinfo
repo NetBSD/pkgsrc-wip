@@ -4,3 +4,4 @@ BLAKE2s (Uranium/4.13.0.tar.gz) = eee4afd35928e3d794a53fa107352eacf2fd3684659502
 SHA512 (Uranium/4.13.0.tar.gz) = bba41754670b42eb92826fe1c2380b76afb62d16158c07f960315dbd77c55932d29dff594d71aff8eafc2f58d1aac4a14b0f6fc36a0a352872077b97c0d7f555
 Size (Uranium/4.13.0.tar.gz) = 1072294 bytes
 SHA1 (patch-UM_Platform.py) = 6bffaa910c2692e2668bd89100daa9484e07ca41
+SHA1 (patch-UM_PluginRegistry.py) = 87d44221d4092d6988627e3456c0920d1d66f8d3
