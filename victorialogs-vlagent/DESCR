@@ -1,5 +1,7 @@
-VictoriaLogs is open source user-friendly database for logs from
-VictoriaMetrics.
+VictoriaLogs is a high-performance, lightweight, zero-config,
+schema-free database for logs that is easy to use and scales both
+vertically and horizontally, from very small setups to large-scale
+deployments handling terabytes per day.
 
 This package contains vlagent, an agent for collecting logs from
 various sources and storing them in VictoriaLogs.
