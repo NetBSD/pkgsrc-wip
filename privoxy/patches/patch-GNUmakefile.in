@@ -70,15 +70,15 @@ Drop user/group existence checks; pkgsrc handles their creation.
  			$(RM) $(DESTDIR)$(CONF_DEST)/$$i ;\
  			$(ECHO) Installing fresh $$i;\
 -			$(INSTALL) $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
-+			$(INSTALL) -m 660 $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
++			$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
  		elif [ -s "$(DESTDIR)$(CONF_DEST)/$$i" ]; then \
  			$(ECHO) Installing $$i as $$i.new ;\
 -			$(INSTALL) $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST)/$$i.new || exit 1;\
-+			$(INSTALL) -m 660 $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST)/$$i.new || exit 1;\
++			$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST)/$$i.new || exit 1;\
  			NEW=1;\
  		else \
 -			$(INSTALL) $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
-+			$(INSTALL) -m 660 $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
++			$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
  		fi ;\
  	done ;\
  	if [ -n "$$NEW" ]; then \
