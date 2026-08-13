@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.10:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
