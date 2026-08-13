@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 314 # py-torch
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 314 # py-torch
 
 PY_RENAME_BINARIES+=	llama-convert-hf-to-gguf
 PY_RENAME_BINARIES+=	llama-convert-llama-ggml-to-gguf

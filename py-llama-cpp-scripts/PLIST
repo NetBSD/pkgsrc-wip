@@ -123,6 +123,9 @@ ${PYSITELIB}/conversion/kimi_linear.pyo
 ${PYSITELIB}/conversion/kimivl.py
 ${PYSITELIB}/conversion/kimivl.pyc
 ${PYSITELIB}/conversion/kimivl.pyo
+${PYSITELIB}/conversion/laguna.py
+${PYSITELIB}/conversion/laguna.pyc
+${PYSITELIB}/conversion/laguna.pyo
 ${PYSITELIB}/conversion/lfm2.py
 ${PYSITELIB}/conversion/lfm2.pyc
 ${PYSITELIB}/conversion/lfm2.pyo
@@ -168,6 +171,9 @@ ${PYSITELIB}/conversion/mistral3.pyo
 ${PYSITELIB}/conversion/mpt.py
 ${PYSITELIB}/conversion/mpt.pyc
 ${PYSITELIB}/conversion/mpt.pyo
+${PYSITELIB}/conversion/nanbeige.py
+${PYSITELIB}/conversion/nanbeige.pyc
+${PYSITELIB}/conversion/nanbeige.pyo
 ${PYSITELIB}/conversion/nemotron.py
 ${PYSITELIB}/conversion/nemotron.pyc
 ${PYSITELIB}/conversion/nemotron.pyo
@@ -198,6 +204,9 @@ ${PYSITELIB}/conversion/plm.pyo
 ${PYSITELIB}/conversion/qwen.py
 ${PYSITELIB}/conversion/qwen.pyc
 ${PYSITELIB}/conversion/qwen.pyo
+${PYSITELIB}/conversion/qwen3tts.py
+${PYSITELIB}/conversion/qwen3tts.pyc
+${PYSITELIB}/conversion/qwen3tts.pyo
 ${PYSITELIB}/conversion/qwen3vl.py
 ${PYSITELIB}/conversion/qwen3vl.pyc
 ${PYSITELIB}/conversion/qwen3vl.pyo
