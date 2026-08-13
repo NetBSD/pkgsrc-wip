@@ -34,7 +34,7 @@ SUBST_MESSAGE.fix-version=	Fixing Cura version.
 SUBST_FILES.fix-version=	CMakeLists.txt
 SUBST_SED.fix-version=		-e "s,\(CURA_VERSION\) \"master\",\1 \"${GITHUB_TAG}\",g"
 
-PYTHON_VERSIONS_ACCEPTED=	311
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-zeroconf
 
 PY_PATCHPLIST=	YES
 
