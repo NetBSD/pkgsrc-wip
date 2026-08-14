@@ -12,7 +12,7 @@ DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
-NB_VERSION=			f41ce73793f6a1a109318d977b5fccc27e0f59ea
+NB_VERSION=			v151.1
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
