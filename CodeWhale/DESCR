@@ -1,10 +1,9 @@
 # CodeWhale
 
-Local-first agent harness for DeepSeek V4 and open models: operating identity,
-nested authority, and a local evidence loop.
+An open source coding agent for your terminal — bring your own model.
 
-Most coding agents start by adding power: more tools, more context, more
-autonomy. CodeWhale starts by assigning responsibility.
+Codewhale started as a native experience for DeepSeek. It has since grown into a community-driven project: one coding harness that fits a growing international community and supports as many models and providers as possible — open models first, hosted or local, none privileged over the rest.
 
-Before an agent edits a repo, it should have an address: this terminal, this
-user, this branch, this session. That is the ego layer. Not swagger; continuity.
+Give it a provider, a model, and a task. It reads your code, edits files, runs commands, and checks its own work, then stops when the job is done or it needs you. Switch models mid-task with /model. Work interactively in the TUI, or run codewhale exec in scripts and CI. It's written in Rust, licensed MIT, and runs on your machine.
+
+The part that isn't like other harnesses: you pick the model for each role, and they don't have to match. A fleet pins a provider, a model, and a reasoning tier per role — so a cheap fast model can direct an expensive reasoning one, or a GLM builder can work the same job as a Kimi reviewer. Write your own roles, your own constitution, and the harness is yours rather than ours.
