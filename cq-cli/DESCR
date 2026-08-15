@@ -1,0 +1,9 @@
+An open standard for shared agent learning -- structured knowledge that
+prevents AI agents from repeating each other's mistakes.
+
+The term **cq** is derived from two sources: *colloquy*, a structured
+exchange of ideas where understanding emerges through dialogue rather than
+one-way output, and **CQ**, a radio call sign ("any station, respond"),
+capturing the same model: open invitation, response, and collective signal
+built through interaction. Both capture the same idea: agents broadcasting
+what they've learned and listening for what others already know.

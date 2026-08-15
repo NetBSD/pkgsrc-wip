@@ -623,6 +623,7 @@ SUBDIR+=	cpm
 SUBDIR+=	cppsimpleuri
 SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
+SUBDIR+=	cq-cli
 SUBDIR+=	cqlsh
 SUBDIR+=	crchack-git
 SUBDIR+=	creal
