@@ -2190,3 +2190,4 @@ Size (zmij-1.0.21.crate) = 26665 bytes
 BLAKE2s (zopfli-0.8.3.crate) = c2105011678b54b1fb8ecea296684f7fb4446e4f5d1c866b09d2e996f67610bc
 SHA512 (zopfli-0.8.3.crate) = 564453096c9352d732c76b3eec69c3f454cbdf64f99926f676e845fc5312fa6833bcaa3a451ed87b7c7038bb5ec2bcb1467e21b29250a7524b78421ac987cd33
 Size (zopfli-0.8.3.crate) = 51589 bytes
+SHA1 (patch-crates_fresh-editor_src_app_file__explorer.rs) = bba71f441ed16a95d6a86d0532d1d546fadb6493
