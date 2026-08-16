@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	whichllm-0.5.15
+DISTNAME=	whichllm-0.5.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Andyyyy64/}
