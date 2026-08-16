@@ -1,0 +1,74 @@
+[263/476] Compiling C object numpy/_core/_multiarray_umath.so.p/src_multiarray_arrayobject.c.o                                                                                                               14:36 [20/1975]
+FAILED: [code=1] numpy/_core/_multiarray_umath.so.p/src_multiarray_arrayobject.c.o
+gcc -Inumpy/_core/_multiarray_umath.so.p -Inumpy/_core -I../numpy/_core -Inumpy/_core/include -I../numpy/_core/include -I../numpy/_core/src/common -I../numpy/_core/src/multiarray -I../numpy/_core/src/npymath -I../numpy/_
+core/src/umath -I../numpy/_core/src/highway -I/usr/pkg/include/netlib -I/usr/pkg/include/python3.14 -I/usr/include -I/usr/pkg/include -I/tmp/math/py-numpy/work/numpy-2.5.2/.mesonpy-aaxq4q6v/meson_cpu -fvisibility=hidden
+-fdiagnostics-color=always -DNDEBUG -Wall -Winvalid-pch -std=c11 -O3 -fno-strict-aliasing -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -mpopcnt -msahf -mcx16 -DHWY_WANT_SSE4 -DHWY_DISABLE_PCLMUL_AES -DNPY_HAVE_X86_V2 -D
+NPY_HAVE_SSE -DNPY_HAVE_SSE2 -DNPY_HAVE_SSE3 -DNPY_HAVE_SSSE3 -DNPY_HAVE_SSE41 -DNPY_HAVE_SSE42 -DNPY_HAVE_POPCNT -DNPY_HAVE_LAHF -DNPY_HAVE_CX16 -O2 -g -fstack-clash-protection -fPIC -DHAVE_CBLAS -DNPY_INTERNAL_BUILD -D
+HAVE_NPY_CONFIG_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE=1 -D_LARGEFILE64_SOURCE=1 -MD -MQ numpy/_core/_multiarray_umath.so.p/src_multiarray_arrayobject.c.o -MF numpy/_core/_multiarray_umath.so.p/src_multiarray_array
+object.c.o.d -o numpy/_core/_multiarray_umath.so.p/src_multiarray_arrayobject.c.o -c ../numpy/_core/src/multiarray/arrayobject.c
+../numpy/_core/src/multiarray/arrayobject.c:1300:15: error: expected declaration specifiers or '...' before 'sizeof'
+ 1300 | static_assert(sizeof(PyObject) % 16 == 0,
+      |               ^~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1301:5: error: expected declaration specifiers or '...' before string constant
+ 1301 |     "Expected sizeof(PyObject) to be multiple of 16 on 64bit builds.");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/math/py-numpy/work/.buildlink/include/python3.14/structmember.h:21,
+                 from ../numpy/_core/src/multiarray/arrayobject.c:28:
+../numpy/_core/src/multiarray/common.h:241:28: error: expected declaration specifiers or '...' before '__builtin_offsetof'
+  241 | # define NPY_ALIGNOF(type) offsetof(struct {char c; type v;}, v)
+      |                            ^~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1304:15: note: in expansion of macro 'NPY_ALIGNOF'
+ 1304 | static_assert(NPY_ALIGNOF(PyArray_Descr_fields) <= 8,
+      |               ^~~~~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1305:15: error: expected declaration specifiers or '...' before string constant
+ 1305 |               "PyArray_Descr must not require more than 8-byte alignment");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../numpy/_core/src/multiarray/common.h:241:28: error: expected declaration specifiers or '...' before '__builtin_offsetof'
+  241 | # define NPY_ALIGNOF(type) offsetof(struct {char c; type v;}, v)
+      |                            ^~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1306:15: note: in expansion of macro 'NPY_ALIGNOF'
+ 1306 | static_assert(NPY_ALIGNOF(_PyArray_LegacyDescr_fields) <= 8,
+      |               ^~~~~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1307:15: error: expected declaration specifiers or '...' before string constant
+ 1307 |               "_PyArray_LegacyDescr must not require more than 8-byte alignment");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../numpy/_core/src/multiarray/common.h:241:28: error: expected declaration specifiers or '...' before '__builtin_offsetof'
+  241 | # define NPY_ALIGNOF(type) offsetof(struct {char c; type v;}, v)
+      |                            ^~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1308:15: note: in expansion of macro 'NPY_ALIGNOF'
+ 1308 | static_assert(NPY_ALIGNOF(PyArrayObject_fields) <= 8,
+      |               ^~~~~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1309:15: error: expected declaration specifiers or '...' before string constant
+ 1309 |               "PyArrayObject must not require more than 8-byte alignment");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../numpy/_core/src/multiarray/common.h:241:28: error: expected declaration specifiers or '...' before '__builtin_offsetof'
+  241 | # define NPY_ALIGNOF(type) offsetof(struct {char c; type v;}, v)
+      |                            ^~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1310:15: note: in expansion of macro 'NPY_ALIGNOF'
+ 1310 | static_assert(NPY_ALIGNOF(PyArrayMultiIterObject_fields) <= 8,
+      |               ^~~~~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1311:15: error: expected declaration specifiers or '...' before string constant
+ 1311 |               "PyArrayMultiIterObject must not require more than 8-byte alignment");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../numpy/_core/src/multiarray/common.h:241:28: error: expected declaration specifiers or '...' before '__builtin_offsetof'
+  241 | # define NPY_ALIGNOF(type) offsetof(struct {char c; type v;}, v)
+      |                            ^~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1312:15: note: in expansion of macro 'NPY_ALIGNOF'
+ 1312 | static_assert(NPY_ALIGNOF(PyArrayIterObject_fields) <= 8,
+      |               ^~~~~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1313:15: error: expected declaration specifiers or '...' before string constant
+ 1313 |               "PyArrayIterObject must not require more than 8-byte alignment");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../numpy/_core/src/multiarray/common.h:241:28: error: expected declaration specifiers or '...' before '__builtin_offsetof'
+  241 | # define NPY_ALIGNOF(type) offsetof(struct {char c; type v;}, v)
+      |                            ^~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1314:15: note: in expansion of macro 'NPY_ALIGNOF'
+ 1314 | static_assert(NPY_ALIGNOF(PyArrayNeighborhoodIterObject_fields) <= 8,
+      |               ^~~~~~~~~~~
+../numpy/_core/src/multiarray/arrayobject.c:1315:15: error: expected declaration specifiers or '...' before string constant
+ 1315 |               "PyArrayNeighborhoodIterObject must not require more than 8-byte alignment");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[278/476] Compiling C++ object numpy/_core/libx86_simd_argsort.dispatch.h_X86_V3.a.p/src_npysort_x86_simd_argsort.dispatch.cpp.o
+ninja: build stopped: subcommand failed.
+
+https://github.com/numpy/numpy/issues/32308
