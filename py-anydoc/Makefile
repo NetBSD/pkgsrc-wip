@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	firecrawl_anydoc-0.1.7
+DISTNAME=	firecrawl_anydoc-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/firecrawl_//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=firecrawl/}
