@@ -1,10 +1,10 @@
 # $NetBSD$
 
-PKGNAME=	pnpm-12.0.0rc2
-DISTNAME=	pnpm-11.21.0
+PKGNAME=	${DISTNAME:C/-rc\./rc/}
+DISTNAME=	pnpm-12.0.0-rc.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pnpm/}
-GITHUB_TAG=	refs/tags/v${DISTNAME:C/^.*-//}
+GITHUB_TAG=	refs/tags/v${DISTNAME:C/^[^-]*-//}
 
 MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://pnpm.io/
@@ -20,7 +20,6 @@ INSTALLATION_DIRS=	bin
 REPLACE_SH+=		pn pnx pnpx
 
 CARGO_ARGS=		build --release --bin pnpm ${DEFAULT_CARGO_ARGS}
-CARGO_INSTALL_ARGS=	install --path pnpm/crates/cli --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/pnpm ${DESTDIR}${PREFIX}/bin
