@@ -89,6 +89,8 @@ post-install: fix-man-extension
 fix-man-extension:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && for i in *.3o; do mv $$i $${i%%o}; done
 
+PRINT_PLIST_AWK+=	{gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");}
+
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
