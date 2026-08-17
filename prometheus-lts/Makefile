@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.75 2022/11/02 19:39:52 bsiegert Exp $
 
-DISTNAME=		prometheus-3.5.1
+DISTNAME=		prometheus-3.13.2
 PKGNAME=		${DISTNAME:S/prometheus/prometheus-lts/}
 # XXX: We need to mix tag and release, not supported via mk/fetch/github.mk.
-MASTER_SITES=		-https://github.com/prometheus/prometheus/archive/refs/tags/v3.5.1.tar.gz
+MASTER_SITES=		-https://github.com/prometheus/prometheus/archive/refs/tags/v3.13.2.tar.gz
 CATEGORIES=		databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,8 +13,8 @@ LICENSE=	apache-2.0
 
 .include "go-modules.mk"
 
-PROMETHEUS_WEB_UI=		prometheus-web-ui-3.5.1.tar.gz
-SITES.${PROMETHEUS_WEB_UI}=	https://github.com/prometheus/prometheus/releases/download/v3.5.1/
+PROMETHEUS_WEB_UI=		prometheus-web-ui-3.13.2.tar.gz
+SITES.${PROMETHEUS_WEB_UI}=	https://github.com/prometheus/prometheus/releases/download/v3.13.2/
 DISTFILES=			${DEFAULT_DISTFILES} ${PROMETHEUS_WEB_UI}
 EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${PROMETHEUS_WEB_UI}
 
