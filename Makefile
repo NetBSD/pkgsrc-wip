@@ -2396,7 +2396,6 @@ SUBDIR+=	memgrep
 SUBDIR+=	mendexk
 SUBDIR+=	menumaker
 SUBDIR+=	mepo
-SUBDIR+=	mergiraf
 SUBDIR+=	mes-nyacc
 SUBDIR+=	mesa
 SUBDIR+=	mescc-tools
