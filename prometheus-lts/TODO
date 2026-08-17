@@ -1,4 +1,4 @@
-- Build fails with:
+- With prometheus-lts-3.13.2, build fails with:
 
 ===> Building for prometheus-lts-3.13.2
 cmd/prometheus/main.go:41:2: github.com/prometheus/common@v0.69.0 requires
