@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2024/07/03 06:59:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.143 2026/08/15 12:53:39 bsiegert Exp $
 
-DISTNAME=	grafana-12.3.1
+DISTNAME=	grafana-13.1.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,6 @@ COMMENT=	Metrics dashboard and graph editor
 LICENSE=	gnu-agpl-v3 AND apache-2.0 AND mit
 
 ARGMAX_REQ=	524288
-DIST_SUBDIR=	${PKGBASE}
 DISTFILES=	${DEFAULT_DISTFILES}
 
 # We don't have suitable infrastructure in pkgsrc for generating frontend
@@ -20,9 +19,7 @@ FE_DISTNAME=			${DISTNAME}.linux-amd64.tar.gz
 DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://dl.grafana.com/oss/release/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
-EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${FE_DISTNAME}
-
-TOOL_DEPENDS+=			go-wire-[0-9]*:../../devel/go-wire
+EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${FE_DISTNAME} ${GO_MODULE_EXTRACT}
 
 CHECK_PORTABILITY_SKIP=		docs/* packaging/* devenv/*
 CHECK_PORTABILITY_SKIP+=	packages/grafana-toolkit/docker/*
@@ -43,12 +40,6 @@ SUBST_SED.fix-cfg+=	-e 's,^;\(logs = \).*,\1${LOGDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(plugins = \).*,\1${PLUGINDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(static_root_path = \).*,\1${PUBLICDIR},g'
 SUBST_VARS.fix-cfg=	DATADIR PKG_SYSCONFDIR PREFIX
-
-SUBST_CLASSES+=		build
-SUBST_STAGE.build=	pre-build
-SUBST_MESSAGE.build=	Fixing go path in build.go
-SUBST_FILES.build=	pkg/build/cmd.go
-SUBST_VARS.build=	GO
 
 BUILD_DEFS+=		GRAFANA_USER GRAFANA_GROUP VARBASE
 FILES_SUBST+=		GRAFANA_USER=${GRAFANA_USER:Q}
@@ -77,18 +68,21 @@ INSTALLATION_DIRS+=	share/grafana/public
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
+GO_MODULE_EXTRACT+=	github.com_coreos_go-systemd_v22_@v_v22.7.0.zip
+
 post-extract:
 	${FIND} ${WRKDIR}/linux -type f -a -exec ${CHMOD} -x "{}" \;
+	cd ${FILESDIR} && ${PAX} -rw replaced_mods ${WRKSRC}/
+	mv ${WRKDIR}/github.com/coreos/go-systemd/v22@* ${WRKDIR}/github.com/coreos/go-systemd/v22
 
-# These comands come from Makefile, build-go target.
+# These commands come from Makefile, build-go target.
 do-build:
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PREFIX}/bin/wire gen -tags oss ./pkg/server ./pkg/cmd/grafana-cli/runner
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} run build.go build
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} run ./pkg/build/wire/cmd/wire/main.go gen -tags "oss" -gen_tags "(!enterprise && !pro)" ./pkg/server
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} generate ./pkg/services/preference
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} build -buildvcs=false -trimpath -ldflags "-X main.version=${PKGVERSION_NOREV} -X main.commit=${PKGVERSION} -X main.buildBranch=pkgsrc -X main.buildstamp=0" ./pkg/cmd/grafana
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-cli ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-server ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/grafana ${DESTDIR}${PREFIX}/bin/
 	cd ${WRKDIR}/linux/grafana-${PKGVERSION_NOREV}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
