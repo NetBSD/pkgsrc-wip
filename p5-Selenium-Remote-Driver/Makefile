@@ -18,7 +18,7 @@ DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
-DEPENDS+=	p5-p5-File-Which-[0-9]*:../../devel/p5-File-Which
+DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	lsof-[0-9]*:../../sysutils/lsof
 
