@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (CodeWhale-0.9.7.tar.gz) = 9fbc01822ad1e902112270ef320396a3dc2509c1fdd75bf4bafb57ade39929b3
-SHA512 (CodeWhale-0.9.7.tar.gz) = 57a862c8cd356e53d97b2d4ca1a812e943f9eb32e465d302b5a5a1270ed3f3defcccdf7baad842c2b8e10edc174cb7621a06c980e575834029749f635a21bca6
-Size (CodeWhale-0.9.7.tar.gz) = 10712278 bytes
+BLAKE2s (CodeWhale-0.9.8.tar.gz) = 8229caf85018b128a86275dcf218682a8b55f1b2a6bfd8dbfae5f14058e9318b
+SHA512 (CodeWhale-0.9.8.tar.gz) = 32f599dce921e25512b5983716b2b75b2444bc35bf8a009bb7b8f3ebb5aa97bb9d323ef057c2b5eed16562a59cf7b01e636fd939266de36a478c90909f6ece91
+Size (CodeWhale-0.9.8.tar.gz) = 13502570 bytes
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
 Size (adler2-2.0.1.crate) = 13366 bytes
