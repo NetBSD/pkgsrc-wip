@@ -18,5 +18,3 @@ Stop.
 cmd/prometheus/main.go:41:2: github.com/prometheus/common@v0.69.0 requires
         golang.org/x/text@v0.37.0: verifying go.mod: golang.org/x/text@v0.37.0/go.mod: Get "https://sum.golang.org/lookup/golang.org/x/text@v0.37.0": proxyconnect tcp: dial tcp: lookup downloads-forbidden-except-during-fetch on 127.0.0.1:53: no such host
 [...]
-
-- Test it for real and double-check that the Web UI also works
