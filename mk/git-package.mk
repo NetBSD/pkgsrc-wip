@@ -24,7 +24,7 @@
 #	below.
 #
 #	Examples:
-#		https://github.com/NetBSD/pkgsrc
+#		https://github.com/NetBSD/pkgsrc.git
 #		git://git@github.com:NetBSD/pkgsrc.git
 #		git@github.com:NetBSD/pkgsrc.git
 #
