@@ -37,7 +37,7 @@ $NetBSD$
  replace (
  	// Use our fork of dolthub/go-mysql-server which adds TableHintedTable for FOR (...) hints
  	// and makes non-cgo the default for developer builds.
-@@ -738,3 +735,9 @@ exclude k8s.io/client-go v12.0.0+incompatible
+@@ -738,3 +735,11 @@ replace (
  // This was retracted, but seems to be known by the Go module proxy, and is
  // otherwise pulled in as a transitive dependency.
  exclude k8s.io/client-go v12.0.0+incompatible
@@ -47,3 +47,5 @@ $NetBSD$
 +replace modernc.org/sqlite/lib => ./replaced_mods/modernc.org/sqlite/lib
 +
 +replace github.com/coreos/go-systemd/v22 => ../github.com/coreos/go-systemd/v22
++
++replace k8s.io/apiserver => ../k8s.io/apiserver

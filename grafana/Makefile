@@ -69,11 +69,13 @@ CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
 GO_MODULE_EXTRACT+=	github.com_coreos_go-systemd_v22_@v_v22.7.0.zip
+GO_MODULE_EXTRACT+=	k8s.io_apiserver_@v_v0.36.0.zip
 
 post-extract:
 	${FIND} ${WRKDIR}/linux -type f -a -exec ${CHMOD} -x "{}" \;
 	cd ${FILESDIR} && ${PAX} -rw replaced_mods ${WRKSRC}/
 	mv ${WRKDIR}/github.com/coreos/go-systemd/v22@* ${WRKDIR}/github.com/coreos/go-systemd/v22
+	mv ${WRKDIR}/k8s.io/apiserver@* ${WRKDIR}/k8s.io/apiserver
 
 # These commands come from Makefile, build-go target.
 do-build:
