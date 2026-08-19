@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use system libyuv headers instead of bundled third_party copy.
+
 --- src/modules/desktop_capture/desktop_frame_rotation.cc.orig	2021-03-01 21:03:58.539561377 +0000
 +++ src/modules/desktop_capture/desktop_frame_rotation.cc
 @@ -11,7 +11,7 @@

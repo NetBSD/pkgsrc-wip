@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use system libvpx headers instead of bundled third_party copy.
+
 --- src/modules/video_coding/codecs/interface/libvpx_interface.h.orig	2021-03-01 14:35:01.569551745 +0000
 +++ src/modules/video_coding/codecs/interface/libvpx_interface.h
 @@ -15,10 +15,10 @@

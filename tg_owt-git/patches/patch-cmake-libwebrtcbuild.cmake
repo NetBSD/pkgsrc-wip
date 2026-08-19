@@ -1,24 +1,18 @@
 $NetBSD$
 
---- cmake/libwebrtcbuild.cmake.orig	2021-02-03 11:42:41.000000000 +0000
+Define WEBRTC_NETBSD for NetBSD builds (same as FreeBSD/OpenBSD).
+
+--- cmake/libwebrtcbuild.cmake.orig
 +++ cmake/libwebrtcbuild.cmake
-@@ -4,7 +4,6 @@ add_library(tg_owt::libwebrtcbuild ALIAS
- target_link_libraries(libwebrtcbuild
- INTERFACE
-     tg_owt::libabsl
--    tg_owt::libyuv
- )
+@@ -106,6 +106,11 @@
+         INTERFACE
+             WEBRTC_OPENBSD
+         )
++    elseif (CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++        target_compile_definitions(libwebrtcbuild
++        INTERFACE
++            WEBRTC_NETBSD
++        )
+     endif()
+ endif()
  
- target_compile_definitions(libwebrtcbuild
-@@ -34,6 +33,11 @@ elseif (APPLE)
-         WEBRTC_POSIX
-         WEBRTC_MAC
-     )
-+elseif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|DragonFly")
-+    target_compile_definitions(libwebrtcbuild
-+    INTERFACE
-+        WEBRTC_POSIX
-+    )
- else()
-     target_compile_definitions(libwebrtcbuild
-     INTERFACE

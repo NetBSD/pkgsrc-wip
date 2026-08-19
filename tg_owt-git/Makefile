@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	tg_owt
-GITHUB_TAG=	a19877363082da634a3c851a4698376504d2eaee
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-git
+PKGNAME=	${GITHUB_PROJECT}-git-0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=desktop-app/}
+GITHUB_PROJECT=	tg_owt
+GITHUB_TAG=	89df288dd6ba5b2ec95b3c5eaf1e7e0c3a870fc4
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,20 +14,24 @@ COMMENT=	WebRTC build for Telegram
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/tg_owt-${GITHUB_TAG}
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-CMAKE_CONFIGURE_ARGS+= -DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fPIC"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fPIC"
+CMAKE_CONFIGURE_ARGS+=	-DTG_OWT_USE_PIPEWIRE=OFF
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../comms/srtp/buildlink3.mk"
+.include "../../devel/abseil/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../multimedia/openh264/buildlink3.mk"
+.include "../../misc/rhash/buildlink3.mk"
 .include "../../wip/libvpx-git/buildlink3.mk"
 .include "../../wip/libyuv-git/buildlink3.mk"
 .include "../../wip/usrsctp/buildlink3.mk"
