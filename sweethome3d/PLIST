@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/sweethome3d
+lib/sweethome3d/SweetHome3D.jar
+share/doc/sweethome3d/COPYING.TXT
+share/doc/sweethome3d/LICENSE.TXT
+share/icons/hicolor/32x32/apps/sweethome3d.png
+share/icons/hicolor/48x48/apps/sweethome3d.png
