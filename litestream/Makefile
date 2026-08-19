@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	litestream-0.3.13
+DISTNAME=	litestream-0.5.16
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benbjohnson/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
