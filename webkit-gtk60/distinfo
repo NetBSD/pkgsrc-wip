@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (webkitgtk-2.52.5.tar.xz) = 33870c066b1536343e11957b251646e8aaa434525def4ea72c93f2646c556f0e
-SHA512 (webkitgtk-2.52.5.tar.xz) = cffe456a6e915663a85dd0da57f2413084dd4ea57f0fbf0dedc6980890f7543486432ee5ae46dc81df64bde386aef8176e0a58bcd1aea4a343a569dff26f5660
-Size (webkitgtk-2.52.5.tar.xz) = 69366488 bytes
+BLAKE2s (webkitgtk-2.52.6.tar.xz) = 4b9bf9eda8179ed1f6f825683ee6f5cbea641c0bdfbdc7b56bc3a2e151eb7367
+SHA512 (webkitgtk-2.52.6.tar.xz) = a3d627122e5a34dc3a10ba9f2294d1b7440e5569521e272c04a963cf8e7b0fada9eedcf773511d35602182dd681c7262e9bbde97ea41016111a29e4fd96dea72
+Size (webkitgtk-2.52.6.tar.xz) = 65746000 bytes
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 20d09e1c226cfff707659ffa35a2c2c3f1cdb617
 SHA1 (patch-Source_JavaScriptCore_parser_VariableEnvironment.h) = 817d8d635c5bcf1ee6d1fbd79ff789cd73d6420f
 SHA1 (patch-Source_JavaScriptCore_runtime_DefinePropertyAttributes.h) = 35e5e1080b6c24ffbe00e099b3293c626c7a207b
