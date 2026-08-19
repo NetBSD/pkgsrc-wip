@@ -1,0 +1,18 @@
+$NetBSD$
+
+Remove in-source build guard from cmark-gfm — pkgsrc builds in-source
+by default (WRKSRC == build dir), so CMAKE_SOURCE_DIR == CMAKE_BINARY_DIR.
+
+--- Telegram/ThirdParty/cmark-gfm/CMakeLists.txt.orig	2026-07-27 20:19:00.000000000 +0000
++++ Telegram/ThirdParty/cmark-gfm/CMakeLists.txt
+@@ -11,10 +11,6 @@
+ include("FindAsan.cmake")
+ include("CheckFileOffsetBits.cmake")
+ 
+-if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
+-    message(FATAL_ERROR "Do not build in-source.\nPlease remove CMakeCache.txt and the CMakeFiles/ directory.\nThen: mkdir build ; cd build ; cmake .. ; make")
+-endif()
+-
+ option(CMARK_TESTS "Build cmark-gfm tests and enable testing" ON)
+ option(CMARK_STATIC "Build static libcmark-gfm library" ON)
+ option(CMARK_SHARED "Build shared libcmark-gfm library" ON)
