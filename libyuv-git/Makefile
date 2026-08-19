@@ -1,21 +1,21 @@
 # $NetBSD$
 
-COMMIT=     a8c181050c202854ae32433164e6bd5d1e7c4368
-PKGNAME=    libyuv-git
 DISTNAME=	${COMMIT}
+PKGNAME=	libyuv-git-0
 CATEGORIES=	devel
 MASTER_SITES=	https://chromium.googlesource.com/libyuv/libyuv/+archive/
+COMMIT=		1a746db4cee1df36a9de56dd1d13446507106032
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://chromium.googlesource.com/libyuv/libyuv/
-COMMENT=	project that includes YUV scaling and conversion functionality
+COMMENT=	Project that includes YUV scaling and conversion functionality
 LICENSE=	modified-bsd AND mpl-2.0
 
-WRKSRC=		${WRKDIR}/
-USE_CMAKE=  yes
-USE_LANGUAGES= c c++
+WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	c c++
+FETCH_USING=	curl
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
