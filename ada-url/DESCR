@@ -1,0 +1,3 @@
+Ada is a fast and spec-compliant URL parser written in C++.
+It parses, validates, normalizes, and resolves URLs efficiently,
+following the WHATWG URL specification.

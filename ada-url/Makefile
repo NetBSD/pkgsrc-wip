@@ -1,0 +1,24 @@
+# $NetBSD$
+
+DISTNAME=	ada-3.4.4
+PKGNAME=	ada-url-3.4.4
+WRKSRC=		${WRKDIR}/ada-3.4.4
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ada-url/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ada-url/ada
+COMMENT=	Fast spec-compliant URL parser
+LICENSE=	mit
+
+USE_LANGUAGES=	c c++
+GCC_REQD+=	14
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DADA_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DADA_BENCHMARKS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DADA_TOOLS=OFF
+
+.include "../../devel/cmake/build.mk"
+.include "../../mk/bsd.pkg.mk"
