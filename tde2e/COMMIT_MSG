@@ -1,0 +1,4 @@
+wip/tde2e: Add tde2e version 1.8.51
+
+Telegram End-to-End encryption library, built from tdlib with
+TD_E2E_ONLY=ON. Used by telegram-desktop for secret chats.
