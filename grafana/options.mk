@@ -14,8 +14,7 @@ PKG_SUGGESTED_OPTIONS=	sqlite3
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Msqlite3)
-.else
+.if empty(PKG_OPTIONS:Msqlite3)
 pre-configure: disable-sqlite3
 .PHONY: disable-sqlite3
 disable-sqlite3:
