@@ -1,2 +1,6 @@
+This has a huge list of vendored crates, see Cargo.toml, which needs to
+be downloaded by pkgsrc and put in the right place, since the source tarball
+doesn't include them.
+
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2026-24910
