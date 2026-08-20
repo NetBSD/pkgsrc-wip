@@ -80,9 +80,10 @@ post-extract:
 
 # These commands come from Makefile, build-go target.
 do-build:
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} run ./pkg/build/wire/cmd/wire/main.go gen -tags "oss" -gen_tags "(!enterprise && !pro)" ./pkg/server
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} generate ./pkg/services/preference
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} build -buildvcs=false -trimpath -ldflags "-X main.version=${PKGVERSION_NOREV} -X main.commit=${PKGVERSION} -X main.buildBranch=pkgsrc -X main.buildstamp=0" ./pkg/cmd/grafana
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} telemetry off
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} run ./pkg/build/wire/cmd/wire/main.go gen -tags "oss" -gen_tags "(!enterprise && !pro)" ./pkg/server
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} generate ./pkg/services/preference
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} build -buildvcs=false -trimpath -ldflags "-X main.version=${PKGVERSION_NOREV} -X main.commit=${PKGVERSION} -X main.buildBranch=pkgsrc -X main.buildstamp=0" ./pkg/cmd/grafana
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/grafana ${DESTDIR}${PREFIX}/bin/
