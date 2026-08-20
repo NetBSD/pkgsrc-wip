@@ -1,5 +1,7 @@
 $NetBSD$
 
+module replacements for pkgsrc patches
+
 --- go.mod.orig	2026-08-07 00:43:24.000000000 +0000
 +++ go.mod
 @@ -579,7 +579,6 @@ require (
@@ -28,23 +30,25 @@ $NetBSD$
  	modernc.org/sqlite v1.52.0 // indirect
  	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.34.0 // indirect
  	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
-@@ -722,6 +717,8 @@ require (
+@@ -722,6 +717,14 @@ require (
  	software.sslmate.com/src/go-pkcs12 v0.7.2 // indirect
  )
  
-+require modernc.org/sqlite/lib v0.0.0-00010101000000-000000000000 // indirect
++require (
++	github.com/ncruces/go-strftime v1.0.0 // indirect
++	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
++	modernc.org/libc v1.72.3 // indirect
++	modernc.org/mathutil v1.7.1 // indirect
++	modernc.org/memory v1.11.0 // indirect
++)
 +
  replace (
  	// Use our fork of dolthub/go-mysql-server which adds TableHintedTable for FOR (...) hints
  	// and makes non-cgo the default for developer builds.
-@@ -738,3 +735,11 @@ replace (
+@@ -738,3 +741,7 @@ replace (
  // This was retracted, but seems to be known by the Go module proxy, and is
  // otherwise pulled in as a transitive dependency.
  exclude k8s.io/client-go v12.0.0+incompatible
-+
-+replace modernc.org/sqlite => ./replaced_mods/modernc.org/sqlite
-+
-+replace modernc.org/sqlite/lib => ./replaced_mods/modernc.org/sqlite/lib
 +
 +replace github.com/coreos/go-systemd/v22 => ../github.com/coreos/go-systemd/v22
 +

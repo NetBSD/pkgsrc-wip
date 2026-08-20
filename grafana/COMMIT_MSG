@@ -1,10 +1,10 @@
 grafana: update to 13.1.3
 
 pkgsrc change:
-This update drops support for sqlite as storage backend because grafana
-has switched to an sqlite driver that is very difficult to support
-in pkgsrc for all platforms because it needs generated MD code that
-is for the most part absent from the upstream distribution for !Linux.
+This update disables support for sqlite as storage backend on most
+platforms because grafana has switched to an sqlite driver that is
+very difficult to support in a generic manner in pkgsrc.
+(It needs transpiled code shipped by the upstream for every platform.)
 
 Other major breaking changes since 11.x:
 

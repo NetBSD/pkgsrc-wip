@@ -1,5 +1,7 @@
 $NetBSD$
 
+unix.SO_REUSEPORT unavailable on SunOS.
+
 --- ../k8s.io/apiserver/pkg/server/options/serving_noportreuse.go.orig	2026-08-19 21:36:50.861707135 +0000
 +++ ../k8s.io/apiserver/pkg/server/options/serving_noportreuse.go
 @@ -0,0 +1,41 @@

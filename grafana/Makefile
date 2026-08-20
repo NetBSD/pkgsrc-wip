@@ -50,6 +50,7 @@ FILES_SUBST+=		DATADIR=${DATADIR:Q}
 
 .include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 GRAFANA_USER?=		grafana
 GRAFANA_GROUP?=		grafana
