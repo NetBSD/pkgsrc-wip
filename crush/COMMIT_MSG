@@ -1,39 +1,19 @@
-crush: Update to 0.88.1
+crush: Update to 0.90.0
 
 Changelog
-
 New!
-* bdad0f1: feat(mcp): don't hold callback port open permanently (#3481) (@taciturnaxolotl)
-
+47df446: Revert "feat(ui): show user@host:cwd in the header by default (#3583)" (#3584) (@joestump)
+7dc88e2: feat(ui): show user@host:cwd in the header by default (#3583) (@joestump-agent)
 Fixed
-* cfad814: fix(dialog): add clear alias to summarize (#3464) (@joestump)
-* 1134a5d: fix(dialog): raise permission-guard quiet period to survive natural typing pauses (#3393) (@albatrossflyon-coder)
-* 768ffad: fix(hyper): keep working cache when provider cache can't be written (@meowgorithm)
-*	9efc08c: fix(hyper): render error messages from back-end (#3513) (@andreynering)
-*	42f3ce0: fix(lsp): handle window/workDoneProgress/create to prevent server crash (#3445) (@piakdev)
-*	604a7e3: fix(providers): swap the provider cache instead of rewriting it (@meowgorithm)
-* 85d83ce: fix(server): keep concurrent sessions from killing each other (@meowgorithm)
-*	ebd1857: fix(server): mcp auth in client-server mode (@meowgorithm)
-*	71fa577: fix(server): release test DB before Windows temp-dir cleanup (@meowgorithm)
-*	390ee36: fix(server): replace stale servers that predate shutdown_if_idle (@meowgorithm)
-*	7cdef9e: fix(server): typing lag over TCP in client/server mode (@meowgorithm)
-*	cf4f4df: fix(server): widen permission cross-client test timeout to stop CI flake (@meowgorithm)
-*	69080c9: fix(workspace): retire integration-test clients so the DB closes (@meowgorithm)
-*	8fd69b4: fix(workspace): wait for recovery notice before asserting resync (@meowgorithm)
-*	bb3d449: fix: reduce default and suggested mcp timeout (#3509) (@andreynering)
-
-Docs
-*	5f11f8e: docs(agents): mark crushrc as primary config format over crush.json (@meowgorithm)
-*	d99076e: docs: add missing OAuth flags to mcp add in crush-config skill (@pshickeydev)
-
+d73a6e4: Revert "fix(bash): decide auto-approval from the parsed command, not its prefix" (@joestump)
+1fdb081: fix(bash): decide auto-approval from the parsed command, not its prefix (@joestump-agent)
+059ba81: fix(bash): keep read-only git filter and remote forms auto-approved (@joestump-agent)
+07e0544: fix(bash): satisfy staticcheck QF1001 in isAssignment (@joestump-agent)
+ed15da4: fix(ui): use dialog background for bash syntax highlighting in permissions (#3575) (@andreynering)
 Other stuff
-*	97ac154: chore(mcp,ui): make 'needs auth' color tang, consolidate theme naming (@meowgorithm)
-*	13a5d7f: chore: auto-update files (@charmcli)
-*	659ea90: chore: auto-update files (@charmcli)
-*	68d2523: chore: auto-update files (@charmcli)
-*	b64531e: chore: auto-update files (@charmcli)
-*	e687449: chore: gufumpt (@andreynering)
-*	9882a88: hyper: hide hypercredits if the server sends USD as the monetary unit (@meowgorithm)
-*	fb0f6c5: refactor(server): tidy mcp client-server auth wiring (@taciturnaxolotl)
-*	b109e35: refactor(ui): route all agent-model rebuilds through one helper (@taciturnaxolotl)
+b7b9093: chore: auto-update files (@charmcli)
+4dc477d: chore: auto-update files (@charmcli)
+b8453c4: chore: gofumpt (@andreynering)
+0f14334: chore: normalize line endings to lf via .gitattributes (#3555) (@Lin-BoYuan)
+945c518: sec(bash): close four auto-approval gaps in the safe-command matcher (@joestump)
 
