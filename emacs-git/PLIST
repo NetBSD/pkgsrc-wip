@@ -2150,6 +2150,8 @@ share/emacs/${PKGVERSION}/lisp/eshell/esh-util.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-util.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-var.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-var.elc
+share/emacs/${PKGVERSION}/lisp/eshell/esh-worker.el.gz
+share/emacs/${PKGVERSION}/lisp/eshell/esh-worker.elc
 share/emacs/${PKGVERSION}/lisp/eshell/eshell.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/eshell.elc
 share/emacs/${PKGVERSION}/lisp/expand.el.gz
