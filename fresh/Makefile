@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fresh-0.4.9
+DISTNAME=	fresh-0.4.10
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sinelaw/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
