@@ -11,7 +11,6 @@ SHA1 (patch-hw_xfree86_os-support_bsd_alpha__video.c) = 22836d0c5988a8ad51171085
 SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 521cf3bf2bb0529b4546d5343f67388bc59bd68b
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__VTsw.c) = 90343f694c27a6fdd5070e1167687943bd056a99
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__init.c) = b58ce2005251c1b3f723ee87c759f75bcb27e230
-SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = 5ff6e01bc96d9b1325182466c037a5dc86f04afa
 SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 25a47f3249856f4c31b292ed82e0fba6fc10a86e
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 683ef7d0d4d97fd630347e1afbe4b685fb250aae
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
