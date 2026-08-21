@@ -12,7 +12,7 @@ $NetBSD$
  #endif
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   bool eula_required = false;
+   bool eula_required = true;
  #endif
  };
 @@ -145,7 +145,7 @@ ProcessInitialPreferencesResult ProcessI

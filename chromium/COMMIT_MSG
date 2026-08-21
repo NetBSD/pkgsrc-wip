@@ -1,10 +1,31 @@
-chromium: update to 151.0.7922.137
+chromium: update to 151.0.7922.173
 
-* 151.0.7922.137
-This update includes 5 security fixes. Please see the Chrome Security Page for more information.
+* 151.0.7922.173
+This update includes 7 security fixes. Please see the Chrome Security Page for more information.
 
-[$500][535000102] High CVE-2026-19556: Use after free in V8. Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-07-15
-[N/A][534867485] High CVE-2026-19557: Use after free in TabStrip. Reported by Google on 2026-07-14
-[N/A][536676756] High CVE-2026-19558: Use after free in Extensions. Reported by @bean5oup on 2026-07-20
-[N/A][540100588] High CVE-2026-19559: Use after free in HTML. Reported by Google on 2026-07-28
-[N/A][540482895] High CVE-2026-19560: Use after free in Blink. Reported by WinD39 - Huynh Dinh Vu on 2026-07-30
+[N/A][522819252] Critical CVE-2026-76017: Use after free in Chromoting. Reported by Google on 2026-06-11
+[N/A][513757918] High CVE-2026-76018: Privilege elevation in Import. Reported by Google on 2026-05-16
+[TBD][539032888] High CVE-2026-76019: Incorrect authorization in Workers. Reported by Anonymous on 2026-07-26
+[TBD][541837151] High CVE-2026-76020: Race condition in V8. Reported by Salvatore Gulizia (nickname: Serotav) on 2026-08-03
+[N/A][541854084] High CVE-2026-76021: Use after free in DOM. Reported by Google BigSleep@Grape on 2026-08-02
+[TBD][543798025] High CVE-2026-76022: Buffer overflow in Network. Reported by 0xAlessandro on 2026-08-07
+[TBD][545124048] High CVE-2026-76023: Improper resource control in Linux Toolkit Theming. Reported by Keita Sode and Daisuke Hatakeyama of SYZD Research on 2026-08-11
+
+* 151.0.7922.169
+This update includes 15 security fixes. Please see the Chrome Security Page for more information.
+
+[N/A][534923522] Critical CVE-2026-76034: Buffer overflow in WebGL. Reported by Google on 2026-07-15
+[N/A][540087398] Critical CVE-2026-76036: Buffer overflow in Dawn. Reported by Google on 2026-07-28
+[N/A][516715010] High CVE-2026-76033: Inappropriate implementation in CORS. Reported by Google on 2026-05-26
+[N/A][517612295] High CVE-2026-76037: Link following in CredentialProvider. Reported by Google on 2026-05-28
+[N/A][522732244] High CVE-2026-76044: Race condition in USB. Reported by Google on 2026-06-11
+[N/A][525167753] High CVE-2026-76039: Incorrect reference resolution in Core. Reported by Google on 2026-06-18
+[N/A][534862220] High CVE-2026-76040: Use after free in Browser. Reported by Google on 2026-07-14
+[N/A][536439844] High CVE-2026-76035: Inappropriate implementation in Media. Reported by Google on 2026-07-19
+[N/A][536460270] High CVE-2026-76042: Use of uninitialized resource in GPU. Reported by Google on 2026-07-19
+[N/A][536581050] High CVE-2026-76046: Buffer overflow in ANGLE. Reported by Google on 2026-07-19
+[TBD][539350801] High CVE-2026-76043: Incorrect calculation in V8. Reported by Raghav Maheshwari on 2026-07-27
+[N/A][540027341] High CVE-2026-76041: Information leak in Skia. Reported by Google on 2026-07-28
+[TBD][541251902] High CVE-2026-76047: Type confusion in V8. Reported by ywatanabee on 2026-07-31
+[TBD][541926503] High CVE-2026-76038: Type confusion in V8. Reported by un3xploitable && GF on 2026-08-03
+[TBD][543082390] High CVE-2026-76045: Use after free in WebGL. Reported by OpenAI Codex Security (amyb) on 2026-08-05
