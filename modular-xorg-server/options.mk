@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri dtrace
-PKG_SUGGESTED_OPTIONS=	#dri
+PKG_SUGGESTED_OPTIONS=	dri
 
 .include "../../mk/bsd.options.mk"
 
