@@ -25,10 +25,11 @@ include/xorg/dixfont.h
 include/xorg/dixfontstr.h
 include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
-include/xorg/dri.h
-include/xorg/dri2.h
+${PLIST.dri}include/xorg/dri.h
+${PLIST.dri}include/xorg/dri2.h
+@comment bug in upstream, should be ${PLIST.dri}
 include/xorg/dri3.h
-include/xorg/dristruct.h
+${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h
 include/xorg/exa.h
@@ -46,7 +47,7 @@ include/xorg/gc.h
 include/xorg/gcstruct.h
 include/xorg/geext.h
 include/xorg/geint.h
-include/xorg/glamor.h
+${PLIST.dri}include/xorg/glamor.h
 include/xorg/globals.h
 include/xorg/glxvndabi.h
 include/xorg/glyphstr.h
@@ -94,7 +95,7 @@ include/xorg/regionstr.h
 include/xorg/resource.h
 include/xorg/rgb.h
 include/xorg/rrtransform.h
-include/xorg/sarea.h
+${PLIST.dri}include/xorg/sarea.h
 include/xorg/screenint.h
 include/xorg/scrnintstr.h
 include/xorg/selection.h
@@ -107,7 +108,7 @@ include/xorg/validate.h
 include/xorg/vbe.h
 include/xorg/vbeModes.h
 include/xorg/vgaHW.h
-include/xorg/vndserver.h
+${PLIST.dri}include/xorg/vndserver.h
 include/xorg/wfbrename.h
 include/xorg/window.h
 include/xorg/windowstr.h
@@ -153,12 +154,12 @@ include/xorg/xserver-properties.h
 include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/pkgconfig/xorg-server.pc
-lib/xorg/modules/drivers/modesetting_drv.so
-lib/xorg/modules/extensions/libglx.so
+${PLIST.dri}lib/xorg/modules/drivers/modesetting_drv.so
+${PLIST.dri}lib/xorg/modules/extensions/libglx.so
 lib/xorg/modules/input/inputtest_drv.so
 lib/xorg/modules/libexa.so
 lib/xorg/modules/libfbdevhw.so
-lib/xorg/modules/libglamoregl.so
+${PLIST.dri}lib/xorg/modules/libglamoregl.so
 lib/xorg/modules/libint10.so
 lib/xorg/modules/libshadow.so
 lib/xorg/modules/libshadowfb.so
@@ -173,7 +174,7 @@ man/man1/gtf.1
 man/man4/exa.4
 man/man4/fbdevhw.4
 man/man4/inputtestdrv.4
-man/man4/modesetting.4
+${PLIST.dri}man/man4/modesetting.4
 man/man5/xorg.conf.5
 man/man5/xorg.conf.d.5
 share/X11/xorg.conf.d/10-quirks.conf

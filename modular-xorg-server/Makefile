@@ -12,9 +12,8 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 .include "Makefile.common"
 
-CONFIGURE_ARGS+=	--enable-xorg
-CONFIGURE_ARGS+=	--disable-xephyr
-CONFIGURE_ARGS+=	--disable-kdrive
+MESON_ARGS+=		-Dxorg=true
+MESON_ARGS+=		-Dxephyr=false
 
 .include "options.mk"
 

@@ -29,8 +29,8 @@ OWN_DIRS+=		${VARBASE}/log
 OWN_DIRS+=		${XKB_OUTPUT_DIR}
 XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 
-#CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-#CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
+MESON_ARGS+=		-Dlocalstatedir=${VARBASE:Q}
+MESON_ARGS+=		-Dxkb_output_dir=${XKB_OUTPUT_DIR:Q}
 
 .if ${USE_TOOLS:Mauto*}
 TOOL_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
@@ -43,15 +43,10 @@ DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=		-D_OPENBSD_SOURCE	# for reallocarray(3)
-#CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
 # TLS is not supported by NetBSD<6
-.  if ${OPSYS_VERSION} < 060000
-#CONFIGURE_ENV+=	ac_cv_tls=no
-#CONFIGURE_ARGS+=	--disable-glx-tls
-.  endif
 .endif
 
-#CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
+MESON_ARGS+=		-Dfontrootdir=${PREFIX}/share/fonts/X11
 
 LEGACY_FONT_PATHS=
 DEFAULT_FONT_PATHS=
@@ -61,25 +56,13 @@ LEGACY_FONT_PATHS+=	${PREFIX}/lib/X11/fonts/${f}
 .endfor
 FONT_PATHS=		${DEFAULT_FONT_PATHS} ${LEGACY_FONT_PATHS}
 
-#CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATHS:ts,:Q}
+MESON_ARGS+=		-Ddefault_font_path=${FONT_PATHS:ts,:Q}
+MESON_ARGS+=		-Dhal=false
+MESON_ARGS+=		-Dxwin=false
 
-#CONFIGURE_ARGS+=	--disable-config-hal
-#CONFIGURE_ARGS+=	--disable-xwin
-#CONFIGURE_ARGS+=	--disable-xephyr
-#CONFIGURE_ARGS+=	--disable-kdrive
-##CONFIGURE_ARGS+=	--disable-kdrive-vesa
-#CONFIGURE_ARGS+=	--enable-xtrans-send-fds
-
-#CONFIGURE_ARGS+=	--with-int10=x86emu
-
-#CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
-#CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
-
-PLIST_VARS+=		sunos
 PLIST_SUBST+=		SUNOS_ARCH=${SUNOS_ARCH}
 
 .if ${OPSYS} == "SunOS"
-PLIST.sunos=		yes
 .  if ${MACHINE_ARCH} == "i386"
 SUNOS_ARCH=		ia32
 .  elif ${MACHINE_ARCH} == "x86_64"
@@ -89,31 +72,13 @@ SUNOS_ARCH=		sparcv8plus
 .  endif
 .endif
 
-PLIST_VARS+=		sparc
-.if ${MACHINE_ARCH:Msparc*}
-PLIST.sparc=		yes
-.endif
-
-# Workaround for PR#41556.
-# Avoid to use bsd_kqueue_apm, force to use bsd_apm instead.
-#CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
-
-# Avoid picking up epoll on illumos
-#CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create1=no
-
-# Only available in newer releases
-#CONFIGURE_ENV.SunOS+=	ac_cv_func_mkostemp=no
-
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
-TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-#CONFIGURE_ENV+=	ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
-
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-#CONFIGURE_ARGS+=	--with-sha1=libc
+MESON_ARGS+=		-Dsha1=libc
 .else
 .include "../../security/nettle/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-sha1=libnettle
+MESON_ARGS+=		-Dsha1=libnettle
 .endif
 
 .include "../../devel/meson/build.mk"

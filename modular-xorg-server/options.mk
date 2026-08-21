@@ -1,12 +1,20 @@
 # $NetBSD: options.mk,v 1.24 2023/03/30 08:25:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace
-PKG_SUGGESTED_OPTIONS=	inet6 dri dtrace
+PKG_SUPPORTED_OPTIONS=	dri dtrace
+PKG_SUGGESTED_OPTIONS=	#dri
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dri dtrace
+PLIST_VARS+=		dri # dtrace
+
+PRINT_PLIST_AWK+=	{ if (/include\/xorg\/dri/) $$0 = "$${PLIST.dri}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/include\/xorg\/glamor/) $$0 = "$${PLIST.dri}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/include\/xorg\/sarea/) $$0 = "$${PLIST.dri}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/include\/xorg\/vndserver/) $$0 = "$${PLIST.dri}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/libglamor/) $$0 = "$${PLIST.dri}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/libglx/) $$0 = "$${PLIST.dri}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/modesetting/) $$0 = "$${PLIST.dri}" $$0 }
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
@@ -15,44 +23,30 @@ BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxshmfence/buildlink3.mk"
 PLIST.dri=		yes
-#CONFIGURE_ARGS+=	--enable-dri
-#CONFIGURE_ARGS+=	--enable-dri2
-#CONFIGURE_ARGS+=	--enable-dri3
-#CONFIGURE_ARGS+=	--enable-glx
+MESON_ARGS+=		-Ddri1=true
+MESON_ARGS+=		-Ddri2=true
+MESON_ARGS+=		-Ddri3=true
+MESON_ARGS+=		-Dglx=true
 .  if ${MESALIB_SUPPORTS_EGL:tl} == "yes"
-#CONFIGURE_ARGS+=	--enable-glamor
+MESON_ARGS+=		-Dglamor=true
 .  endif
-#CONFIGURE_ARGS+=	--enable-present
 .else
 ###
 ### XXX Perhaps we should allow for a built-in glx without dri enabled?
 ###
-#CONFIGURE_ARGS+=	--disable-dri
-#CONFIGURE_ARGS+=	--disable-dri2
-#CONFIGURE_ARGS+=	--disable-dri3
-#CONFIGURE_ARGS+=	--disable-glx
-#CONFIGURE_ARGS+=	--disable-glamor
-#CONFIGURE_ARGS+=	--disable-present
-pre-build: disable-modesetting
-.PHONY: disable-modesetting
-disable-modesetting:
-	(${ECHO} "all:"; ${ECHO} "install:") > ${WRKSRC}/hw/xfree86/drivers/modesetting/Makefile
+MESON_ARGS+=		-Ddri1=false
+MESON_ARGS+=		-Ddri2=false
+MESON_ARGS+=		-Ddri3=false
+MESON_ARGS+=		-Dglx=false
+MESON_ARGS+=		-Dglamor=false
 .endif
 
-.if !empty(PKG_OPTIONS:Minet6)
-#CONFIGURE_ARGS+=	--enable-ipv6
-.else
-#CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mdebug)
-#CONFIGURE_ARGS+=	--enable-debug
-CFLAGS+=		-ggdb
-.endif
-
+# FAILED: [code=1] dix/liblibxserver_dix.a.p/Xserver.o
+# /usr/sbin/dtrace -G -s ../include/Xserver.d -o dix/liblibxserver_dix.a.p/Xserver.o
+# dtrace: failed to compile script ../include/Xserver.d: "/usr/lib/dtrace/psinfo.d", line 46: syntax error near "u_int"
 .if !empty(PKG_OPTIONS:Mdtrace)
-PLIST.dtrace=		yes
-#CONFIGURE_ARGS+=	--with-dtrace
+#PLIST.dtrace=		yes
+MESON_ARGS+=		-Ddtrace=true
 .else
-#CONFIGURE_ARGS+=	--without-dtrace
+MESON_ARGS+=		-Ddtrace=false
 .endif

@@ -7,7 +7,7 @@ MODULAR_XORG_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=21.1.4nb1
 BUILDLINK_ABI_DEPENDS.modular-xorg-server?=	modular-xorg-server>=21.1.9nb1
-BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server
+BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../wip/modular-xorg-server
 BUILDLINK_INCDIRS.modular-xorg-server+=		include/xorg
 
 .include "../../mk/bsd.fast.prefs.mk"
