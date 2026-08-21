@@ -1450,7 +1450,6 @@ SUBDIR+=	gr-funcube
 SUBDIR+=	gr-gsm
 SUBDIR+=	grabtitle-git
 SUBDIR+=	gradle
-SUBDIR+=	grafana
 SUBDIR+=	gramscii
 SUBDIR+=	grandr
 SUBDIR+=	granite
