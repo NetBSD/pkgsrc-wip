@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqlite3
 PKG_SUPPORTED_OPTIONS=	sqlite3
-# The sqlite3 option will only work where moderc.org/sqlite ships
+# The sqlite3 option will only work where modernc.org/sqlite ships
 # transpiled amalgamation blobs:
 # https://pkg.go.dev/modernc.org/sqlite#hdr-Supported_platforms_and_architectures
 # Please compile-test before adding platforms.
