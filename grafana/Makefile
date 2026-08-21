@@ -84,7 +84,7 @@ do-build:
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} telemetry off
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} run ./pkg/build/wire/cmd/wire/main.go gen -tags "oss" -gen_tags "(!enterprise && !pro)" ./pkg/server
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} generate ./pkg/services/preference
-	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} build -p=1 -buildvcs=false -trimpath -ldflags "-w -s -X main.version=${PKGVERSION_NOREV} -X main.commit=${PKGVERSION} -X main.buildBranch=pkgsrc -X main.buildstamp=0" ./pkg/cmd/grafana
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} build -v -p=1 -buildvcs=false -trimpath -ldflags "-w -s -X main.version=${PKGVERSION_NOREV} -X main.commit=${PKGVERSION} -X main.buildBranch=pkgsrc -X main.buildstamp=0" ./pkg/cmd/grafana
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/grafana ${DESTDIR}${PREFIX}/bin/
