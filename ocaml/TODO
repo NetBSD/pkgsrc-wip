@@ -1,7 +1,10 @@
-- improve COMMIT_MESSAGE
+- review vs pkgsrc/lang/ocaml
   + review dropped patches
+  + full diff and validate
 
-- run tests and file issues upstream
+- improve COMMIT_MESSAGE
+
+- Run tests and file issues upstream
   + 20251020 NetBSD 10 amd64
     List of failed tests:
       tests/lib-bigarray-2/bigarrfml.ml
@@ -17,18 +20,10 @@
   + unison
   + (call for tests on unison-users)
 
-- fix native compiler build
-  (it's not clear what this means, but test native code generation with unison)
+- Check on native compiler functionality (disabled)
+  + does it build
+  + does the resulting ocaml build programs that work
 
-- PLIST has opsys-specific entries, find a solution for that
-
-- self tests hang after
-Running tests from 'tests/lib-systhreads' ...
- ... testing 'boundscheck.ml' => passed
- ... testing 'eintr.ml' => passed
- ... testing 'multicore_lifecycle.ml' => passed
- ... testing 'test_c_thread_register.ml' => skipped
- ... testing 'testfork.ml' => skipped
- ... testing 'testfork2.ml' => skipped
- ... testing 'testpreempt.ml' => passed
- ... testing 'testyield.ml'
+- Check over PLIST and how it does or doesn't vary across arch and
+  opsys.  There was a prior note about "opsys-specific entries", not
+  understood.
