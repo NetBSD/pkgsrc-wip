@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/08/11 12:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/21 12:55:48 wiz Exp $
 
-DISTNAME=	lean4-4.33.0
+DISTNAME=	lean4-4.33.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leanprover/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -47,7 +47,7 @@ SUBST_CLASSES+=		cc
 SUBST_FILES.cc+=	src/Leanc.lean
 SUBST_FILES.cc+=	src/lake/Lake/Build/Common.lean
 SUBST_SED.cc+=		-e "s,@LEANC_CC@,${CC},"
-SUBST_SED.cc+=		-e "s!@LINKER_FLAGS@!\"${COMPILER_RPATH_FLAG}${PREFIX}/lib\", \"${COMPILER_RPATH_FLAG}${PREFIX}/lib/lean\"!"
+SUBST_SED.cc+=          -e "s!@LINKER_FLAGS@!\"${COMPILER_RPATH_FLAG}${PREFIX}/lib\", \"${COMPILER_RPATH_FLAG}${PREFIX}/lib/lean\", \"-lgcc_s\"!"
 SUBST_STAGE.cc=		pre-configure
 SUBST_MESSAGE.cc=	Setting compiler path.
 

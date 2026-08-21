@@ -7522,6 +7522,12 @@ lib/lean/Lean/Elab/Tactic/Grind/Have.ir.sig
 lib/lean/Lean/Elab/Tactic/Grind/Have.olean
 lib/lean/Lean/Elab/Tactic/Grind/Have.olean.private
 lib/lean/Lean/Elab/Tactic/Grind/Have.olean.server
+lib/lean/Lean/Elab/Tactic/Grind/LetToHave.ilean
+lib/lean/Lean/Elab/Tactic/Grind/LetToHave.ir
+lib/lean/Lean/Elab/Tactic/Grind/LetToHave.ir.sig
+lib/lean/Lean/Elab/Tactic/Grind/LetToHave.olean
+lib/lean/Lean/Elab/Tactic/Grind/LetToHave.olean.private
+lib/lean/Lean/Elab/Tactic/Grind/LetToHave.olean.server
 lib/lean/Lean/Elab/Tactic/Grind/LiftLet.ilean
 lib/lean/Lean/Elab/Tactic/Grind/LiftLet.ir
 lib/lean/Lean/Elab/Tactic/Grind/LiftLet.ir.sig
@@ -7822,6 +7828,12 @@ lib/lean/Lean/Elab/Tactic/VCGen.ir.sig
 lib/lean/Lean/Elab/Tactic/VCGen.olean
 lib/lean/Lean/Elab/Tactic/VCGen.olean.private
 lib/lean/Lean/Elab/Tactic/VCGen.olean.server
+lib/lean/Lean/Elab/Tactic/VCGen/BinderName.ilean
+lib/lean/Lean/Elab/Tactic/VCGen/BinderName.ir
+lib/lean/Lean/Elab/Tactic/VCGen/BinderName.ir.sig
+lib/lean/Lean/Elab/Tactic/VCGen/BinderName.olean
+lib/lean/Lean/Elab/Tactic/VCGen/BinderName.olean.private
+lib/lean/Lean/Elab/Tactic/VCGen/BinderName.olean.server
 lib/lean/Lean/Elab/Tactic/VCGen/Context.ilean
 lib/lean/Lean/Elab/Tactic/VCGen/Context.ir
 lib/lean/Lean/Elab/Tactic/VCGen/Context.ir.sig
@@ -7834,12 +7846,6 @@ lib/lean/Lean/Elab/Tactic/VCGen/Driver.ir.sig
 lib/lean/Lean/Elab/Tactic/VCGen/Driver.olean
 lib/lean/Lean/Elab/Tactic/VCGen/Driver.olean.private
 lib/lean/Lean/Elab/Tactic/VCGen/Driver.olean.server
-lib/lean/Lean/Elab/Tactic/VCGen/EPost.ilean
-lib/lean/Lean/Elab/Tactic/VCGen/EPost.ir
-lib/lean/Lean/Elab/Tactic/VCGen/EPost.ir.sig
-lib/lean/Lean/Elab/Tactic/VCGen/EPost.olean
-lib/lean/Lean/Elab/Tactic/VCGen/EPost.olean.private
-lib/lean/Lean/Elab/Tactic/VCGen/EPost.olean.server
 lib/lean/Lean/Elab/Tactic/VCGen/Entails.ilean
 lib/lean/Lean/Elab/Tactic/VCGen/Entails.ir
 lib/lean/Lean/Elab/Tactic/VCGen/Entails.ir.sig
@@ -9208,6 +9214,12 @@ lib/lean/Lean/Meta/Sym/IsClass.ir.sig
 lib/lean/Lean/Meta/Sym/IsClass.olean
 lib/lean/Lean/Meta/Sym/IsClass.olean.private
 lib/lean/Lean/Meta/Sym/IsClass.olean.server
+lib/lean/Lean/Meta/Sym/LetToHave.ilean
+lib/lean/Lean/Meta/Sym/LetToHave.ir
+lib/lean/Lean/Meta/Sym/LetToHave.ir.sig
+lib/lean/Lean/Meta/Sym/LetToHave.olean
+lib/lean/Lean/Meta/Sym/LetToHave.olean.private
+lib/lean/Lean/Meta/Sym/LetToHave.olean.server
 lib/lean/Lean/Meta/Sym/LiftLet.ilean
 lib/lean/Lean/Meta/Sym/LiftLet.ir
 lib/lean/Lean/Meta/Sym/LiftLet.ir.sig
@@ -15074,12 +15086,12 @@ lib/lean/Std/WP/Conjunctive.ir.sig
 lib/lean/Std/WP/Conjunctive.olean
 lib/lean/Std/WP/Conjunctive.olean.private
 lib/lean/Std/WP/Conjunctive.olean.server
-lib/lean/Std/WP/ExceptPost.ilean
-lib/lean/Std/WP/ExceptPost.ir
-lib/lean/Std/WP/ExceptPost.ir.sig
-lib/lean/Std/WP/ExceptPost.olean
-lib/lean/Std/WP/ExceptPost.olean.private
-lib/lean/Std/WP/ExceptPost.olean.server
+lib/lean/Std/WP/EStack.ilean
+lib/lean/Std/WP/EStack.ir
+lib/lean/Std/WP/EStack.ir.sig
+lib/lean/Std/WP/EStack.olean
+lib/lean/Std/WP/EStack.olean.private
+lib/lean/Std/WP/EStack.olean.server
 lib/lean/Std/WP/Frame.ilean
 lib/lean/Std/WP/Frame.ir
 lib/lean/Std/WP/Frame.ir.sig
@@ -15104,12 +15116,6 @@ lib/lean/Std/WP/Monad.ir.sig
 lib/lean/Std/WP/Monad.olean
 lib/lean/Std/WP/Monad.olean.private
 lib/lean/Std/WP/Monad.olean.server
-lib/lean/Std/WP/Monad/Adequacy.ilean
-lib/lean/Std/WP/Monad/Adequacy.ir
-lib/lean/Std/WP/Monad/Adequacy.ir.sig
-lib/lean/Std/WP/Monad/Adequacy.olean
-lib/lean/Std/WP/Monad/Adequacy.olean.private
-lib/lean/Std/WP/Monad/Adequacy.olean.server
 lib/lean/Std/WP/Monad/Basic.ilean
 lib/lean/Std/WP/Monad/Basic.ir
 lib/lean/Std/WP/Monad/Basic.ir.sig
@@ -15140,6 +15146,12 @@ lib/lean/Std/WP/Monad/Lemmas.ir.sig
 lib/lean/Std/WP/Monad/Lemmas.olean
 lib/lean/Std/WP/Monad/Lemmas.olean.private
 lib/lean/Std/WP/Monad/Lemmas.olean.server
+lib/lean/Std/WP/Monad/Sound.ilean
+lib/lean/Std/WP/Monad/Sound.ir
+lib/lean/Std/WP/Monad/Sound.ir.sig
+lib/lean/Std/WP/Monad/Sound.olean
+lib/lean/Std/WP/Monad/Sound.olean.private
+lib/lean/Std/WP/Monad/Sound.olean.server
 lib/lean/Std/WP/Triple.ilean
 lib/lean/Std/WP/Triple.ir
 lib/lean/Std/WP/Triple.ir.sig
@@ -15152,6 +15164,12 @@ lib/lean/Std/WP/Triple/Basic.ir.sig
 lib/lean/Std/WP/Triple/Basic.olean
 lib/lean/Std/WP/Triple/Basic.olean.private
 lib/lean/Std/WP/Triple/Basic.olean.server
+lib/lean/Std/WP/Triple/Conjunctive.ilean
+lib/lean/Std/WP/Triple/Conjunctive.ir
+lib/lean/Std/WP/Triple/Conjunctive.ir.sig
+lib/lean/Std/WP/Triple/Conjunctive.olean
+lib/lean/Std/WP/Triple/Conjunctive.olean.private
+lib/lean/Std/WP/Triple/Conjunctive.olean.server
 lib/lean/Std/WP/Triple/Monad.ilean
 lib/lean/Std/WP/Triple/Monad.ir
 lib/lean/Std/WP/Triple/Monad.ir.sig
@@ -16273,6 +16291,7 @@ src/lean/Lean/Elab/Tactic/Grind/DSimprocDSL.lean
 src/lean/Lean/Elab/Tactic/Grind/DSimprocDSLBuiltin.lean
 src/lean/Lean/Elab/Tactic/Grind/Filter.lean
 src/lean/Lean/Elab/Tactic/Grind/Have.lean
+src/lean/Lean/Elab/Tactic/Grind/LetToHave.lean
 src/lean/Lean/Elab/Tactic/Grind/LiftLet.lean
 src/lean/Lean/Elab/Tactic/Grind/Lint.lean
 src/lean/Lean/Elab/Tactic/Grind/LintExceptions.lean
@@ -16323,9 +16342,9 @@ src/lean/Lean/Elab/Tactic/TreeTacAttr.lean
 src/lean/Lean/Elab/Tactic/Try.lean
 src/lean/Lean/Elab/Tactic/Unfold.lean
 src/lean/Lean/Elab/Tactic/VCGen.lean
+src/lean/Lean/Elab/Tactic/VCGen/BinderName.lean
 src/lean/Lean/Elab/Tactic/VCGen/Context.lean
 src/lean/Lean/Elab/Tactic/VCGen/Driver.lean
-src/lean/Lean/Elab/Tactic/VCGen/EPost.lean
 src/lean/Lean/Elab/Tactic/VCGen/Entails.lean
 src/lean/Lean/Elab/Tactic/VCGen/FrameProc.lean
 src/lean/Lean/Elab/Tactic/VCGen/FrameProcAttr.lean
@@ -16554,6 +16573,7 @@ src/lean/Lean/Meta/Sym/InstantiateMVarsS.lean
 src/lean/Lean/Meta/Sym/InstantiateS.lean
 src/lean/Lean/Meta/Sym/Intro.lean
 src/lean/Lean/Meta/Sym/IsClass.lean
+src/lean/Lean/Meta/Sym/LetToHave.lean
 src/lean/Lean/Meta/Sym/LiftLet.lean
 src/lean/Lean/Meta/Sym/LitValues.lean
 src/lean/Lean/Meta/Sym/LooseBVarsS.lean
@@ -17534,19 +17554,20 @@ src/lean/Std/WP.lean
 src/lean/Std/WP/Assertion.lean
 src/lean/Std/WP/Basic.lean
 src/lean/Std/WP/Conjunctive.lean
-src/lean/Std/WP/ExceptPost.lean
+src/lean/Std/WP/EStack.lean
 src/lean/Std/WP/Frame.lean
 src/lean/Std/WP/Gadget/Assert.lean
 src/lean/Std/WP/Gadget/ForIn.lean
 src/lean/Std/WP/Monad.lean
-src/lean/Std/WP/Monad/Adequacy.lean
 src/lean/Std/WP/Monad/Basic.lean
 src/lean/Std/WP/Monad/Conjunctive.lean
 src/lean/Std/WP/Monad/Frame.lean
 src/lean/Std/WP/Monad/Instances.lean
 src/lean/Std/WP/Monad/Lemmas.lean
+src/lean/Std/WP/Monad/Sound.lean
 src/lean/Std/WP/Triple.lean
 src/lean/Std/WP/Triple/Basic.lean
+src/lean/Std/WP/Triple/Conjunctive.lean
 src/lean/Std/WP/Triple/Monad.lean
 src/lean/Std/WP/Triple/SpecLemmas.lean
 src/lean/cmake/Modules/README.md
@@ -17712,3 +17733,12 @@ src/lean/lake/Lake/Util/Version.lean
 src/lean/lake/Lake/Version.lean
 src/lean/lake/LakeMain.lean
 src/lean/lake/README.md
+@pkgdir src/lean/util
+@pkgdir src/lean/shell
+@pkgdir src/lean/runtime/uv
+@pkgdir src/lean/library/constructions
+@pkgdir src/lean/lake/schemas
+@pkgdir src/lean/kernel
+@pkgdir src/lean/initialize
+@pkgdir src/lean/include/lean
+@pkgdir src/lean/bin
