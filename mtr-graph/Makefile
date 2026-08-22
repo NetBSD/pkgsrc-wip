@@ -2,26 +2,21 @@
 
 CATEGORIES=	net
 PKGBASE=	mtr085
-PKGVERSION=	283
+PKGVERSION=	307
 PKGREVISION=	1
-PKGNAME=	${PKGBASE}-${PKGVERSION}
-DISTNAME=	${PKGBASE}-${GITHUB_HASH}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=${GITHUB_USER}/}/${PKGBASE}/tarball/${GITHUB_HASH}/
-WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITHUB_HASH}
+DISTNAME=	${PKGBASE}-${PKGVERSION}
 
-GITHUB_HASH=	c97d1f2
-GITHUB_USER=	yvs2014
+MASTER_SITES=	${MASTER_SITE_GITHUB:=yvs2014/}
+GITHUB_TAG=	e99d753823df2dd6fba3ca4d1c4636b78ee3e559
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.bitwizard.nl/mtr/
-COMMENT=	MTR v0.85 fork with whois info, IDN, unicode
+COMMENT=	Experimenting with MTR tool: mtr085 with whois info, IDN, NLS
 LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c
 
 CONFLICTS=	mtr-[0-9]*
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		meson pkg-config
+USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 
 MESON_ARGS+=	-DCAP=false
@@ -29,7 +24,7 @@ MESON_ARGS+=	-DSBIN=true
 
 .include "options.mk"
 
-SPECIAL_PERMS=	sbin/mtr ${SETUID_ROOT_PERMS}
+#SPECIAL_PERMS= sbin/mtr ${SETUID_ROOT_PERMS}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${DESTDIR}${PREFIX}/share/doc/mtr

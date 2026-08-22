@@ -22,35 +22,34 @@ PLIST_VARS+=	nls
 
 .include "../../mk/bsd.options.mk"
 
-.if empty(PKG_OPTIONS:Minet6)
+.if !${PKG_OPTIONS:Minet6}
 MESON_ARGS+=	-DIPV6=false
 .endif
 
-.if empty(PKG_OPTIONS:Mdns)
+.if !${PKG_OPTIONS:Mdns}
 MESON_ARGS+=	-DDNS=false
 .endif
 
-.if empty(PKG_OPTIONS:Mmpls)
+.if !${PKG_OPTIONS:Mmpls}
 MESON_ARGS+=	-DMPLS=false
 .endif
 
-.if empty(PKG_OPTIONS:Mipinfo)
+.if !${PKG_OPTIONS:Mipinfo}
 MESON_ARGS+=	-DIPINFO=false
 .endif
 
-.if !empty(PKG_OPTIONS:Midn)
+.if ${PKG_OPTIONS:Midn}
 .include "../../devel/libidn2/buildlink3.mk"
 .endif
 
-.if empty(PKG_OPTIONS:Municode)
+.if !${PKG_OPTIONS:Municode}
 MESON_ARGS+=	-DUNICODE=false
 .endif
 
-.if empty(PKG_OPTIONS:Mnls)
-MESON_ARGS+=	-DNLS=false
-.else
+.if ${PKG_OPTIONS:Mnls}
 USE_TOOLS+=		gettext msgfmt
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
+.else
+MESON_ARGS+=		-DNLS=false
 .endif
-
