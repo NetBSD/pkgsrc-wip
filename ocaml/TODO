@@ -1,29 +1,45 @@
-- review vs pkgsrc/lang/ocaml
-  + review dropped patches
-  + full diff and validate
+- Create meta-pkgs/bulk-test-ocaml and build it.
 
-- improve COMMIT_MESSAGE
-
-- Run tests and file issues upstream
-  + 20251020 NetBSD 10 amd64
-    List of failed tests:
-      tests/lib-bigarray-2/bigarrfml.ml
-      tests/lib-systhreads/testyield.ml
-
-- create meta-pkgs/bulk-test-ocaml and build it
-
-- examine unresolved upstream 5.x issues and decide to address or not
+- Examine unresolved upstream 5.x issues and decide to address or not.
   + https://github.com/ocaml/ocaml/issues/11913 [stale]
   + https://github.com/ocaml/ocaml/pull/13320
 
-- test programs using unison
-  + unison
-  + (call for tests on unison-users)
+- Fix build with native compiler functionality (disabled).
+  + See native.mk; enabling native results in a link failure related
+    to pthread.
+  + Check that the resulting ocaml package works with packages that
+    use ocaml.
 
-- Check on native compiler functionality (disabled)
-  + does it build
-  + does the resulting ocaml build programs that work
+- Run tests and file issues upstream.
+  + 20251020 NetBSD 10 amd64
+      List of failed tests:
+	tests/lib-bigarray-2/bigarrfml.ml
+	tests/lib-systhreads/testyield.ml
+  + 20260821 NetBSD 10 amd64 ocaml 5.5.0 non-native
+      List of failed tests:
+	  tests/lib-bigarray-2/bigarrfml.ml
+	  tests/lib-systhreads/testyield.ml
+
+      Summary:
+	1411 tests passed
+	 143 tests skipped
+	   2 tests failed
+	   0 tests not started (parent test skipped or failed)
+	   0 unexpected errors
+	1556 tests considered
+  
+
+- Test ocaml-using programs.
+  + unison
+  + ?
+
+- Review vs pkgsrc/lang/ocaml.
+  + review dropped patches
+  + full diff and validate
 
 - Check over PLIST and how it does or doesn't vary across arch and
   opsys.  There was a prior note about "opsys-specific entries", not
   understood.
+
+- Improve COMMIT_MESSAGE.
+
