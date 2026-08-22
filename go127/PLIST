@@ -6450,6 +6450,7 @@ go127/src/encoding/json/v2/bench_test.go
 go127/src/encoding/json/v2/doc.go
 go127/src/encoding/json/v2/errors.go
 go127/src/encoding/json/v2/errors_test.go
+go127/src/encoding/json/v2/example_marshaljson_test.go
 go127/src/encoding/json/v2/example_orderedobject_test.go
 go127/src/encoding/json/v2/example_test.go
 go127/src/encoding/json/v2/fields.go
@@ -7528,6 +7529,7 @@ go127/src/internal/cpu/cpu_windows_test.go
 go127/src/internal/cpu/cpu_x86.go
 go127/src/internal/cpu/cpu_x86.s
 go127/src/internal/cpu/cpu_x86_darwin.go
+go127/src/internal/cpu/cpu_x86_netbsd.go
 go127/src/internal/cpu/cpu_x86_other.go
 go127/src/internal/cpu/cpu_x86_test.go
 go127/src/internal/cpu/datacache_unsupported.go

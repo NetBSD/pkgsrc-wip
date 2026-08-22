@@ -4,7 +4,7 @@
 GO_BOOTSTRAP_REQD=	124
 .include "../../lang/go/bootstrap.mk"
 
-GO127_VERSION=	1.27rc3
+GO127_VERSION=	1.27.0
 
 GOVERSSUFFIX=	127
 
