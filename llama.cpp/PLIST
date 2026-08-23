@@ -53,7 +53,7 @@ lib/libllama-bench-impl.so
 lib/libllama-cli-impl.so
 lib/libllama-common.so
 lib/libllama-common.so.0
-lib/libllama-common.so.0.1.2
+lib/libllama-common.so.0.2.0
 lib/libllama-completion-impl.so
 lib/libllama-fit-params-impl.so
 lib/libllama-perplexity-impl.so
@@ -61,8 +61,8 @@ lib/libllama-quantize-impl.so
 lib/libllama-server-impl.so
 lib/libllama.so
 lib/libllama.so.0
-lib/libllama.so.0.1.2
+lib/libllama.so.0.2.0
 lib/libmtmd.so
 lib/libmtmd.so.0
-lib/libmtmd.so.0.1.2
+lib/libmtmd.so.0.2.0
 lib/pkgconfig/llama.pc

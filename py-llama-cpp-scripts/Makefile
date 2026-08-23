@@ -2,9 +2,8 @@
 
 .include "../../wip/llama.cpp/Makefile.common"
 
-PKGNAME=	${PYPKGPREFIX}-llama-cpp-scripts-${GITHUB_TAG:S/b/${LLAMA_VER}./}
+PKGNAME=	${PYPKGPREFIX}-llama-cpp-scripts-${LLAMA_VERSION}
 CATEGORIES=	devel
-LLAMA_VER=	0.0.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ggerganov/llama.cpp/
