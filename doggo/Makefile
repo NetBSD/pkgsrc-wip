@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	doggo-1.1.7
+DISTNAME=	doggo-1.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mr-karan/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
