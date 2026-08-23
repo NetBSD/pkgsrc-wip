@@ -1,7 +1,7 @@
 # $NetBSD$
 
-GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.1.mod
-GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.1.zip
+GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.2.0.mod
+GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.2.0.zip
 GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.9.mod
 GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.9.zip
 GO_MODULE_FILES+=	charm.land/catwalk/@v/v0.52.1.mod
@@ -254,8 +254,8 @@ GO_MODULE_FILES+=	github.com/mailru/easyjson/@v/v0.7.7.mod
 GO_MODULE_FILES+=	github.com/mailru/easyjson/@v/v0.7.7.zip
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.24.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.24.zip
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.24.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.24.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.27.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.27.zip
 GO_MODULE_FILES+=	github.com/mfridman/interpolate/@v/v0.0.2.mod
 GO_MODULE_FILES+=	github.com/mfridman/interpolate/@v/v0.0.2.zip
 GO_MODULE_FILES+=	github.com/microcosm-cc/bluemonday/@v/v1.0.27.mod

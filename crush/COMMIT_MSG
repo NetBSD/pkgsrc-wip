@@ -1,19 +1,13 @@
-crush: Update to 0.90.0
+crush: Update to 0.91.0
 
 Changelog
 New!
-47df446: Revert "feat(ui): show user@host:cwd in the header by default (#3583)" (#3584) (@joestump)
-7dc88e2: feat(ui): show user@host:cwd in the header by default (#3583) (@joestump-agent)
+08552fb: feat: textarea selection (#3507) (@andrinoff)
 Fixed
-d73a6e4: Revert "fix(bash): decide auto-approval from the parsed command, not its prefix" (@joestump)
-1fdb081: fix(bash): decide auto-approval from the parsed command, not its prefix (@joestump-agent)
-059ba81: fix(bash): keep read-only git filter and remote forms auto-approved (@joestump-agent)
-07e0544: fix(bash): satisfy staticcheck QF1001 in isAssignment (@joestump-agent)
-ed15da4: fix(ui): use dialog background for bash syntax highlighting in permissions (#3575) (@andreynering)
+8661a1c: fix(windows): scrolling up on modifier keys alone (#3598) (@andrinoff)
 Other stuff
-b7b9093: chore: auto-update files (@charmcli)
-4dc477d: chore: auto-update files (@charmcli)
-b8453c4: chore: gofumpt (@andreynering)
-0f14334: chore: normalize line endings to lf via .gitattributes (#3555) (@Lin-BoYuan)
-945c518: sec(bash): close four auto-approval gaps in the safe-command matcher (@joestump)
+37f36e9: chore: auto-update files (@charmcli)
+7d78d74: chore: standardize go toolchain on v1.26.6 (#3592) (@aleksclark)
+90bc466: session picker: add mouse support (@Amolith)
+
 
