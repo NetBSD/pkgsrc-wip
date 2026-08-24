@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Alexays/}
 GITHUB_PROJECT=	Waybar
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://github.com/Alexays/Waybar/
 COMMENT=	Wayland bar for Wlroots based compositors
 LICENSE=	mit
@@ -40,6 +40,12 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/custom_modules/power_menu.xml \
 		${DESTDIR}${EGDIR}
+
+# Linux uses udev for battery plugin
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "Linux"
+.include "../../sysutils/libudev/buildlink3.mk"
+.endif
 
 .include "../../devel/meson/build.mk"
 .include "../../textproc/scdoc/tool.mk"
