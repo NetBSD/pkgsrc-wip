@@ -1,82 +1,69 @@
 # $NetBSD: Makefile,v 1.75 2022/11/02 19:39:52 bsiegert Exp $
 
-DISTNAME=		prometheus-3.5.5
-PKGNAME=		${DISTNAME:S/prometheus/prometheus-lts/}
-# XXX: We need to mix tag and release, not supported via mk/fetch/github.mk.
-MASTER_SITES=		-https://github.com/prometheus/prometheus/archive/refs/tags/v3.5.5.tar.gz
+DISTNAME=		prometheus-3.13.2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=prometheus/}
+# It should go in databases/prometheus, so the PKGNAME is correct as-is.
+# We do not need the mainline version since databases/prometheus is already
+# quite outdated.
+#PKGNAME=		${DISTNAME:S/prometheus/prometheus-lts/}
 CATEGORIES=		databases
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
 
-.include "go-modules.mk"
+FE_DISTNAME=			prometheus-web-ui-3.13.2.tar.gz
+SITES.${FE_DISTNAME}=		https://github.com/prometheus/prometheus/releases/download/v${PKGVERSION_NOREV}/
+EXTRACT_DIR.${FE_DISTNAME}=	${WRKSRC}/web/ui
+DISTFILES=			${DEFAULT_DISTFILES} ${FE_DISTNAME}
+EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${FE_DISTNAME}
 
-PROMETHEUS_WEB_UI=		prometheus-web-ui-3.5.5.tar.gz
-SITES.${PROMETHEUS_WEB_UI}=	https://github.com/prometheus/prometheus/releases/download/v3.5.5/
-DISTFILES=			${DEFAULT_DISTFILES} ${PROMETHEUS_WEB_UI}
-EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${PROMETHEUS_WEB_UI}
+USE_TOOLS+=		bash gzip
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/prometheus/prometheus
+MAKE_ENV+=		GOWORK=off
+MAKE_ENV+=		PREBUILT_ASSETS_STATIC_DIR=web/ui/static
 
-GO_BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d"
-GO_XFLAG_PREFIX=	-X github.com/prometheus/common/version
+EXAMPLE_DIR=		share/examples/prometheus
+DATADIR=		${VARBASE}/lib/prometheus
+LOGDIR=			${VARBASE}/lib/prometheus
 
-GO_LDFLAGS=	-s
-GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Branch=release-${PKGVERSION_NOREV:R}
-GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.BuildDate=${GO_BUILD_DATE_cmd:sh}
-GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.BuildUser=pkgsrc
-GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Revision=${GITHUB_TAG}
-GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Version=${PKGVERSION_NOREV}
+BUILD_DEFS+=		VARBASE PROMETHEUS_USER PROMETHEUS_GROUP
+FILES_SUBST+=		PROMETHEUS_USER=${PROMETHEUS_USER:Q}
+FILES_SUBST+=		PROMETHEUS_GROUP=${PROMETHEUS_GROUP:Q}
+FILES_SUBST+=		DATADIR=${DATADIR:Q}
+FILES_SUBST+=		LOGDIR=${LOGDIR:Q}
 
-PKG_SYSCONFSUBDIR=	prometheus
+OWN_DIRS_PERMS+=	${DATADIR} ${PROMETHEUS_USER} ${PROMETHEUS_GROUP} 0700
+OWN_DIRS_PERMS+=	${LOGDIR} ${PROMETHEUS_USER} ${PROMETHEUS_GROUP} 0700
+PKG_USERS_VARS+=	PROMETHEUS_USER
+PKG_GROUPS_VARS+=	PROMETHEUS_GROUP
+PKG_GROUPS=		${PROMETHEUS_GROUP}
+PKG_USERS=		${PROMETHEUS_USER}:${PROMETHEUS_GROUP}
+RCD_SCRIPTS=		prometheus
 
-USE_TOOLS+=	pax
-BUILD_DEFS+=	VARBASE PKG_SYSCONFDIR
+INSTALLATION_DIRS+=	${EXAMPLE_DIR}
+CONF_FILES+=		${EXAMPLE_DIR}/prometheus.yml ${PKG_SYSCONFDIR}/prometheus.yml
 
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths+=	cmd/prometheus/main.go
-SUBST_STAGE.paths=	post-configure
-SUBST_VARS.paths=	PKG_SYSCONFDIR VARBASE
+GOFLAGS+=	-ldflags " \
+		-X github.com/prometheus/common/version.Version=${PKGVERSION_NOREV} \
+		-X github.com/prometheus/common/version.Revision=${PKGVERSION} \
+		-X github.com/prometheus/common/version.Branch=pkgsrc \
+		-X github.com/prometheus/common/version.BuildUser=pkgsrc@localhost \
+		-X github.com/prometheus/common/version.BuildDate=${:!date +%Y%m%d-%H:%M:%S!}" \
+		-tags netgo,builtinassets
 
-SUBST_CLASSES+=		webui
-SUBST_FILES.webui=	web/ui/ui.go
-SUBST_STAGE.webui=	post-configure
-SUBST_VARS.webui=	WEBUI_DIR
+GO_BUILD_PATTERN+=	./cmd/prometheus
+GO_BUILD_PATTERN+=	./cmd/promtool
 
-EXAMPLE_DIR=	share/examples/prometheus
-EXAMPLE_FILES=	prometheus.yml
-WEBUI_DIR=	${PREFIX}/share/prometheus
-
-INSTALLATION_DIRS+=	${EXAMPLE_DIR} ${WEBUI_DIR}
-
-.for f in ${EXAMPLE_FILES}
-CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
-.endfor
-
-post-extract:
-	${CHMOD} -x ${WRKDIR}/static/react-app/favicon.ico ${WRKDIR}/static/react-app/manifest.json
-	${MKDIR} ${WRKSRC}/web/ui/static
-.for d in mantine-ui react-app
-	${CP} -R ${WRKDIR}/static/${d} ${WRKSRC}/web/ui/static
-.endfor
-
-do-build:
-.for f in prometheus promtool
-	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -v -ldflags ${GO_LDFLAGS:Q} ./cmd/${f}/...
-.endfor
+pre-build:
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./scripts/compress_assets.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
-		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
-	cd ${WRKSRC}/web/ui && ${PAX} -rw static ${DESTDIR}${WEBUI_DIR}
-	${CHMOD} -R g-w ${DESTDIR}${WEBUI_DIR}/static
-.for f in ${EXAMPLE_FILES}
-	${CHMOD} ${NONBINMODE} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}/${f}
-.endfor
+		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}/.
 
+.include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
