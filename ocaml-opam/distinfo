@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (opam-full-2.5.2.tar.gz) = 467aa5dd04fd97c2a9c71bbd173b868a08ef43b7a865b8339cb3e9600ca14f1f
+SHA512 (opam-full-2.5.2.tar.gz) = 08ac70beddbcec75289b01f3037037e4f47d04c89119ff7203d1db655f5051688e94a5144b63a4a4bf5a361781ee687a0b3730fed6c25923fd35ff4f0c677e71
+Size (opam-full-2.5.2.tar.gz) = 14474162 bytes
