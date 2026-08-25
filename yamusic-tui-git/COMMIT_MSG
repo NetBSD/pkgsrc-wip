@@ -1,0 +1,7 @@
+Add yamusic-tui-git: terminal user interface for the YAMusic music server
+
+Builds github.com/DECE2183/yamusic-tui from a pinned commit; upstream
+has no releases, hence the -git suffix.  Browses, searches and plays
+Yandex Music tracks with lyrics display, caching and playlist
+management.  On NetBSD audio playback is routed from ALSA to OSS via
+alsa-plugins-oss (see share/doc/yamusic-tui/README).

@@ -1,0 +1,10 @@
+$NetBSD$
+
+Audio playback on NetBSD goes through the ALSA OSS plugin provided
+by alsa-plugins-oss, which routes output to /dev/dsp. To enable it,
+copy the example configuration shipped by that package:
+
+	cp /usr/pkg/share/examples/alsa-plugins-oss/asoundrc ~/.asoundrc
+
+(or merge its contents into an existing ~/.asoundrc). The kernel
+must provide a legacy OSS device (/dev/dsp or /dev/audio).

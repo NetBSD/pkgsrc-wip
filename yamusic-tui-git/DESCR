@@ -1,0 +1,7 @@
+yamusic-tui is a terminal user interface for the YAMusic music
+server.  It provides browsing and searching of the library,
+playback with progress and volume control, lyrics display, and
+playlist management, all from within a terminal.
+
+A running YAMusic server instance is required; the address can be
+configured in the yamusic-tui config file after first launch.
