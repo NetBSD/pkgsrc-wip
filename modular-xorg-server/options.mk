@@ -1,10 +1,20 @@
 # $NetBSD: options.mk,v 1.24 2023/03/30 08:25:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	dri dtrace
+PKG_SUPPORTED_OPTIONS=	dri
 PKG_SUGGESTED_OPTIONS=	dri
 
 .include "../../mk/bsd.options.mk"
+
+# not supported on NetBSD
+# FAILED: [code=1] dix/liblibxserver_dix.a.p/Xserver.o
+# /usr/sbin/dtrace -G -s ../include/Xserver.d -o dix/liblibxserver_dix.a.p/Xserver.o
+# dtrace: failed to compile script ../include/Xserver.d: "/usr/lib/dtrace/psinfo.d", line 46: syntax error near "u_int"
+# and if that is fixed,
+# dtrace: failed to compile script ../include/Xserver.d: line 26: invalid control directive: #ifdef
+.if ${OPSYS} != "NetBSD"
+PKG_SUPPORTED_OPTIONS+=	dtrace
+.endif
 
 PLIST_VARS+=		dri # dtrace
 
@@ -41,9 +51,6 @@ MESON_ARGS+=		-Dglx=false
 MESON_ARGS+=		-Dglamor=false
 .endif
 
-# FAILED: [code=1] dix/liblibxserver_dix.a.p/Xserver.o
-# /usr/sbin/dtrace -G -s ../include/Xserver.d -o dix/liblibxserver_dix.a.p/Xserver.o
-# dtrace: failed to compile script ../include/Xserver.d: "/usr/lib/dtrace/psinfo.d", line 46: syntax error near "u_int"
 .if !empty(PKG_OPTIONS:Mdtrace)
 #PLIST.dtrace=		yes
 MESON_ARGS+=		-Ddtrace=true
