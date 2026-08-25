@@ -23,7 +23,7 @@ PKG_SUGGESTED_OPTIONS=	dbus gmp gnutls gtk3 libwebp tree-sitter xml x11
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !${MACHINE_PLATFORM:MDarwin-*} && !${MACHINE_PLATFORM:MSunOS-*}
+.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	libgccjit
 .endif
 
@@ -45,8 +45,10 @@ CONFIGURE_ARGS+=	--without-dbus
 .if !empty(PKG_OPTIONS:Mlibgccjit)
 CONFIGURE_ARGS+=	--with-native-compilation
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc15-libjit}/gcc15/lib
+PRINT_PLIST_AWK+=	/lib\/emacs\/${PKGVERSION_NOREV}\/native-lisp/ { next; }
+PRINT_PLIST_AWK+=	/share\/emacs\/${PKGVERSION_NOREV}\/lisp\/native-lisp/ { next; }
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
-        ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
+        ${FIND} share/emacs/${PKGVERSION_NOREV}/lisp/native-lisp lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
 .  include "../../lang/gcc15-libjit/buildlink3.mk"
 .endif
 
@@ -192,7 +194,9 @@ CONFIGURE_ARGS+=	--disable-ns-self-contained
 INSTALLATION_DIRS+=	${APPLICATIONS_DIR}
 USE_TOOLS+=		pax
 
-post-install:
+.PHONY: install-emacs-app
+post-install: install-emacs-app
+install-emacs-app:
 	cd ${WRKSRC}/nextstep && \
 		pax -rw -pp -pm Emacs.app ${DESTDIR}${PREFIX}/${APPLICATIONS_DIR}
 
