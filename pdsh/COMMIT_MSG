@@ -1,0 +1,47 @@
+pdsh: Update to 2.36
+
+What's Changed
+common/hostlist: fix out of bounds array access by @chu11 in #158
+common/hostlist: update to latest from lsd-tools by @grondo in #159
+ci(mergify): upgrade configuration to current format by @mergify[bot] in #162
+Fix build on C23 compiler (gcc >= 15) by @e4t in #166
+update actions versions and fix code coverage build by @grondo in #167
+Fix some compiler warnings when compiling pdsh by @adrianreber in #168
+fix closeall() performance with large _SC_OPEN_MAX by @arsdragonfly in #171
+modules/genders: fix typo by @chu11 in #164
+NEWS: add release notes for pdsh-2.36 by @grondo in #174
+
+2.35
+
+What's Changed
+slurm: add -C to restrict hostlist to nodes with specified features by @dylex in #126
+Remove README.QsNet from the RPM SPEC file's doc list by @jrstjohn in #129
+github: add github workflow config for CI by @grondo in #134
+dshbak: fix handling of empty input lines by @grondo in #133
+mergify: fix missing conditions in mergify config by @grondo in #135
+build: Use LDADD instead of LDFLAGS for libcommon.la. by @orbea in #130
+Release a lock that is no longer used by @ycaibb in #138
+ci: fix mergify config and prevent spurious test failures by @grondo in #145
+sshcmd: fix sshcmd_signal on macos by @grondo in #146
+fail fast on connect error or non-zero return code by @jerrymannil in #144
+fix compile of slurm plugin against Slurm >= 23.x by @grondo in #153
+slurm: Call slurm_init() once before any call to Slurm API by @e4t in #148
+Add CodeQL workflow for GitHub code scanning by @lgtm-com in #147
+log conflicting module options with -d (and other cleanup) by @grondo in #154
+NEWS: add release notes for pdsh-2.35 by @grondo in #155
+
+
+2.34
+What's Changed
+Fix for output corruption with no newlines (#114)
+pipecmd: fix result check error handling (Dylan Simon)
+slurm: workaround slurm export of internal List interfaces
+readline: add application name as argv[0] (#112)
+Fix errors from lgtm.com scan
+
+2.33
+What's Changed
+Fix segfault and build issues on Mac OSX (#95)
+Always pass RTLD_GLOBAL to dlopen(3) of modules. Fixes missing symbol
+errors from modules using libraries that also use dlopen() (e.g. nodeupdown, slurm)
+
