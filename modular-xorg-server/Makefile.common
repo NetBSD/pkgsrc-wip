@@ -14,6 +14,7 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES+=		c
 USE_CC_FEATURES+=	c11
 
+CHECK_PORTABILITY_SKIP+=	test/scripts/*
 CHECK_PORTABILITY_SKIP+=	hw/xquartz/bundle/*
 
 # Needed to load certain modules.
@@ -79,6 +80,10 @@ MESON_ARGS+=		-Dsha1=libc
 .else
 .include "../../security/nettle/buildlink3.mk"
 MESON_ARGS+=		-Dsha1=libnettle
+.endif
+
+.if ${OPSYS} == "Linux"
+.include "../../sysutils/libudev/buildlink3.mk"
 .endif
 
 .include "../../devel/meson/build.mk"
