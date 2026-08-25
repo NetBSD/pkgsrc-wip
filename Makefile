@@ -4198,7 +4198,6 @@ SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-lzma
 SUBDIR+=	py-lzstring
 SUBDIR+=	py-m2r2
-SUBDIR+=	py-macs2
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
 SUBDIR+=	py-mailcap-fix
