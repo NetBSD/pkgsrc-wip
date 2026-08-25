@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- include/meson.build.orig	2026-08-20 01:02:10.000000000 +0000
++++ include/meson.build
+@@ -443,7 +443,7 @@ if with_dtrace
+ if with_dtrace
+     dtrace_header = generator(dtrace,
+         output: '@BASENAME@-dtrace.h',
+-        arguments: ['-h', '-s', '@INPUT@', '-o', '@OUTPUT@']
++        arguments: ['-C', '-h', '-s', '@INPUT@', '-o', '@OUTPUT@']
+     )
+ 
+     dtrace_hdr += dtrace_header.process(dtrace_tmpl)

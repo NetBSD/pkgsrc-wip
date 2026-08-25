@@ -6,12 +6,11 @@ PKG_SUGGESTED_OPTIONS=	dri
 
 .include "../../mk/bsd.options.mk"
 
-# not supported on NetBSD
+# does not build on NetBSD
+# [1/633] Generating 'dix/liblibxserver_dix.a.p/Xserver.o'
 # FAILED: [code=1] dix/liblibxserver_dix.a.p/Xserver.o
-# /usr/sbin/dtrace -G -s ../include/Xserver.d -o dix/liblibxserver_dix.a.p/Xserver.o
-# dtrace: failed to compile script ../include/Xserver.d: "/usr/lib/dtrace/psinfo.d", line 46: syntax error near "u_int"
-# and if that is fixed,
-# dtrace: failed to compile script ../include/Xserver.d: line 26: invalid control directive: #ifdef
+# /usr/sbin/dtrace -C -G -s ../include/Xserver.d -o dix/liblibxserver_dix.a.p/Xserver.o
+# dtrace: failed to link script ../include/Xserver.d: No probe sites found for declared provider
 .if ${OPSYS} != "NetBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
 .endif

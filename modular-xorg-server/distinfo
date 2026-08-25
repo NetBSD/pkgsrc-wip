@@ -3,6 +3,7 @@ $NetBSD: distinfo,v 1.136 2026/07/08 07:37:42 wiz Exp $
 BLAKE2s (xorg-server-26.0.99.901.tar.xz) = 0cf9aa60f5929b7b77f1760f070f4c96e757e0e66b9d9d77454f04d4f0b64670
 SHA512 (xorg-server-26.0.99.901.tar.xz) = 67267e8af43cd8be0ee0bac984837114598a69817bda0219e703f0395c8624a81203a98f36240bfc74ce8524335ee0954104e99ece6b9ab3c1104adbf57c2c43
 Size (xorg-server-26.0.99.901.tar.xz) = 2974564 bytes
+SHA1 (patch-dix_meson.build) = 5822ac7e45319b3d9b440a28b9f0d6deeeccfb6b
 SHA1 (patch-hw_kdrive_ephyr_hostx.c) = b681ee28bc7af06774f10bc882d355d42ac965d3
 SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 3d95b2db4f1a6f76289a8dff1be019deb43919db
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
@@ -15,4 +16,6 @@ SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 25a47f3249856f4c31b292ed82e0fba6
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 683ef7d0d4d97fd630347e1afbe4b685fb250aae
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
+SHA1 (patch-include_Xserver.d) = 29be269d24581faa9b4ebb1bc481f3684d256717
+SHA1 (patch-include_meson.build) = 562a63fbe65124865aad08eb4b719b93e6f503a7
 SHA1 (patch-os_backtrace.c) = a2c5ab679a8855cd013fac924ab66166d5153fa7

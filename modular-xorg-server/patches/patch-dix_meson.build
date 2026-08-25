@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- dix/meson.build.orig	2026-08-25 13:36:40.903884046 +0000
++++ dix/meson.build
+@@ -38,7 +38,7 @@ if with_dtrace
+ if with_dtrace
+     dtrace_object = generator(dtrace,
+         output: '@BASENAME@.o',
+-        arguments: ['-G', '-s', '@INPUT@', '-o', '@OUTPUT@']
++        arguments: ['-C', '-G', '-s', '@INPUT@', '-o', '@OUTPUT@']
+     )
+ 
+     dtrace_src += dtrace_object.process(dtrace_tmpl)
