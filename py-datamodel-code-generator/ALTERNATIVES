@@ -1,0 +1,1 @@
+bin/datamodel-codegen @PREFIX@/bin/datamodel-codegen@PYVERSSUFFIX@

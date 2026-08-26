@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (datamodel_code_generator-0.75.1.tar.gz) = 0dc13f0dbd91195e1d17d76e2b12275964bc6123bfddff78e607f092d0442dff
+SHA512 (datamodel_code_generator-0.75.1.tar.gz) = e86e0b3bc4e447e53ec8b7ac431cf0df14614a71372ba7263cf2b9de5fae7dcba98c03661655defa4142448f485c06e7d3d50ffacf0fbee7f4e34a4d7a99f7bd
+Size (datamodel_code_generator-0.75.1.tar.gz) = 2116531 bytes

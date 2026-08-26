@@ -1,0 +1,3 @@
+Generate Pydantic v2 models, dataclasses, TypedDict, and msgspec.Struct
+from OpenAPI, JSON Schema, GraphQL, Avro, Protobuf, and raw
+JSON/YAML/CSV.
