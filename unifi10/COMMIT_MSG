@@ -1,358 +1,141 @@
-Update unifi to 9.5.21
+Update unifi to 10.6.101
 
-This includes a pkgsrc update to enable the use of openjdk21 as well as
-openjdk17. Note that an existing installation must be running at least
-8.6.9 (the current version in pkgsrc) in order to upgrade
+Upstream NEWS, less bug fixes and minor improvements.
 
 
 
-UniFi Network Application 9.5.21
+* UniFi Network Application 10.6.101
 
-Added Channel AI
-
-Uses neighboring AP signals to optimize channel distribution.
-Designed for controlled, very high-density deployments where external
-interference is limited.
-
- - Provides a visual channel map for quick insights.
- - Automated optimization ensures balanced channel usage.
- - Requires AP firmware 8.2.14/6.7.31 or newer.
-
-Added WiFi Multicast Filtering and VLAN Bridging
-
-Enhances WiFi performance by allowing selective filtering of
-multicast services to reduce unnecessary airtime usage. Also
-introduces VLAN Bridging, enabling multicast proxying between VLANs
-for WiFi clients. VLAN Bridging is available only when the Gateway
-mDNS Proxy is disabled.
-
- - Requires UAP firmware 8.2.14 or newer.
-
-Improved Port Manager
-
- - Port AI anomaly reporting – Gain deeper insights into port health
-   with anomaly detection and scoring. In addition to live insights,
-   Port AI now generates a 24-hour Anomaly Score across key categories:
-   - Cables & Power.
-   - Network Loops & Storm Control.
-   - Broadcasts & Discovery.
-   - Traffic Path Health.
- - Enhanced Port Details – The side panel now provides richer
-   visibility and context for each port, including:
-   - Port status at a glance.
-   - Activity logs for anomaly events and admin changes.
-   - MAC table displaying currently connected devices.
- - We recommend using UniFi Switch firmware 7.2.123 or newer.
-
-Added Default Security Posture Setting (Allow All / Block All)
-
-Introduces a global default security posture with options to Allow
-All or Block All. Selecting Block All will isolate all newly created
-VLANs, Ethernet Port Profiles, and devices by default, while existing
-configurations remain unchanged.
-Improvements
-
- - Added adoption instructions in the Dashboard for UniFi OS Servers.
- - Added support for Auto IPv6 WAN Prefix Delegation Size.
- - Added a banner to Apple TV devices to update their firmware when
-   experiencing connectivity issues.
- - Improved validation for Object-Oriented Networking.
- - Improved the RADIUS Local User management user experience.
- - Improved the NeXT AI Flows filtering user experience.
- - Moved Profiles to Settings Overview.
-
-Bugfixes
-
- - Fixed an issue where the Objects page could freeze in rare cases.
- - Fixed an issue where the Port Forward overlap validation was
-   incorrectly triggered.
- - Fixed an issue where DS-Lite Auto & MAP-E didn't work with Static
-   and Single Network IPv6.
- - Fixed an issue where deleting a client group or network used in
-   Objects could introduce dead ends.
- - Fixed an issue where Site-to-Site VPN configurations weren't
-   updated when the WAN DHCP IP changed.
- - Fixed an issue where Dashboard WiFi Upload/Download data was
-   shown incorrectly when using a single Radio.
- - Fixed an issue where Firewall rules for NAT IPv6 were incorrectly
-   generated in rare cases.
- - Fixed an issue where SLA profile changes are not provisioned.
- - Fixed an issue where Source NAT didn't use the interface's IPv6
-   address in Policies/NAT.
- - Fixed an issue where some VLAN Settings were not removed when
-   setting up MC-LAG.
-
-Additional information
-
- - Create a backup before upgrading your UniFi Network Application if any issues are encountered.
- - See the UniFi Network Server Help Center article for more information on self-hosting a server.
- - UniFi Network Application 7.5 and newer requires MongoDB 3.6 and Java 17.
-   - Version 7.5 to 8.0 supports up to MongoDB 4.4.
-   - Version 8.1 and newer supports up to MongoDB 7.0.
-   - Version 9.0 and newer supports up to MongoDB 8.0 and Java 17/21.
- - UniFi Network Application updates may cause your adopted devices to be re-provisioned.
- - Existing UniFi Network Applications must be on one of the following versions to upgrade directly to this version:
-  - 9.5.21 and earlier 9.5.x versions.
-  - 9.4.19 and earlier 9.4.x versions.
-  - 9.3.45 and earlier 9.3.x versions.
-  - 9.2.87 and earlier 9.2.x versions.
-  - 9.1.120 and earlier 9.1.x versions.
-  - 9.0.114 and earlier 9.0.x versions.
-  - 8.6.9 and earlier 8.6.x versions.
+    Removed the Network Override option for WAN-adopted U5G devices.
 
 
+* UniFi Network Application 10.5.66
+
+    Improved Auto STP Edge detection.
+    Improved Network Application stability.
+    Improved Control Plane protection detection stability.
+    Restored maximum download and upload speed indicators on the Dashboard.
 
 
-UniFi Network Application 9.4.19
+* UniFi Network Application 10.4.57
 
-Object Oriented Networking
+WAN Insights and WiFi Airtime Visibility
 
-A new and powerful way to streamline the creation of multiple
-dynamic policies.
+Expanded Dashboard visibility with new WiFi Airtime, Multicast, and WAN health insights, along with improved ISP and 5G monitoring through enhanced connectivity details, SLA visibility, and utilization metrics.
 
- - Apply complete policy sets (Security, Routing, and QoS) from a
-   single screen.
- - Match on specific clients, client groups, or networks.
- - Configures multiple Firewall Rules, ACLs, Policy-Based Routes,
-   and QoS Rules at once.
- - Requires Full UniFi stack and Zone Based Firewall to be active.
+    Added WiFi Airtime and Multicast activity graphs to the Dashboard.
+    Improved the WAN and ISP side panel with SLA, latency, packet loss, and utilization insights.
+    Expanded 5G and cellular connection visibility and diagnostics.
+    Requires U5G firmware 7.4.1 or newer.
+ 
 
-Master Policy Table
+Routing User Experience/FIB table
 
-The single source of truth containing all policies.
-
- - Create and manage Firewall, ACL, DNS, NAT, QoS, Routing, and
-   Port Forwarding policies from a single screen.
- - Apply intelligent filters and customize columns to focus on
-   specific policies.
- - Set up OSPF and BGP Dynamic Routing.
+Introduced a centralized Routing view for managing and troubleshooting Static, OSPF, BGP, Connected, and Policy-Based routes, along with a unified FIB table that provides visibility into route destinations, next hops, interfaces, metrics, and routing sources across the gateway.
 
 Improvements
 
-IPv6
+    Added a Tags column to the Devices page.
+    Added an Installation Date column to the Devices page.
+    Added a warning about data usage before running a Speed Test on 5G WAN.
+    Added an IPv6 Detection banner to the Dashboard.
+    Requires UniFi OS 5.1.8 or newer.
+    Added a Power Sources column to the device list.
+    Added Pro AV and Tagged VLAN columns to Port Manager.
+    Added warnings when VLAN tagging conflicts are detected.
+    Added Time Machine to Infrastructure Topology.
+    Added an option to configure Safe Shutdown Trigger Point and Auto-Recovery power cycle delay.
+    Requires UPS 1.4.30 or newer.
+    Added a suggestion in Infrastructure Topology to set devices as Edge to improve STP convergence.
+    Added a notice when saving Content Filtering exceptions that client-side DNS may cache entries for up to 1 hour.
+    Added support for using UXG-Fiber as an SD-WAN hub.
+    Added the ability to change the VPN gateway netmask when existing clients are present.
+    Added the ability to configure Static and Policy-Based Routes from the Routing section.
+    Added an STP column and filters to the Ports page.
+    Improved feedback in Port Manager and WiFi Broadcast settings when VLAN tagging conflicts are detected.
+    Improved validation for WireGuard IPv6 MTU and MSS settings.
+    Improved SSL certificate generation used in Deep Inspection.
+    Improved Remote Activity Logging by allowing configuration for Gateway, Switch, and Access Point logging.
+    Improved the VPN settings user experience.
+    Improved WiFi Broadcast settings.
+    Renamed Roaming Assistant to Handoff Suggestions (802.11v) and expanded support to 6 GHz.
+    Added new IoT optimization settings, including DTIM Interval Lock and Channel Lock options.
+    Replaced legacy IoT Mode with the new Force WiFi 4 compatibility option.
+    Improved IP display for meshed devices.
+    Improved the VPN connection user experience in the Clients section.
+    Improved Clients page performance when handling large amounts of offline clients.
+    Improved Site Magic connectivity.
+    Improved the Infrastructure Topology Time Machine user experience.
+    Improved the Reset Stats option in Port Manager.
+    It now also clears Last Seen devices.
+    Improved the Zone-Based Firewall policy reordering user experience.
+    Improved the Port Manager settings user experience.
+    Improved application resiliency.
+    Improved WiFi settings validation for Handoff Suggestions (6 GHz).
+    Disabled DNS Assistance when Captive Portal is enabled.
+    Moved Email Services to Control Plane Settings.
+    If a custom email service is used, it must be reconfigured in Control Plane after the update.
 
- - Added support for IPv6 NAT66 rules to the Policy Table.
- - Added support for MAP-E IPv4 over IPv6 internet connection type
-   in Japan.
-   - Supported access services are JPIX v6 Plus and NTT OCN Virtual
-     Connect.
-   - Requires UniFi OS 4.4 or newer.
- - Added DHCPv6 client options to WAN settings for increased
-   compatibility with select ISPs.
-   - Requires UniFi OS 4.4 or newer.
- - Added DHCPv6 CoS to WAN settings.
- - Improved IPv6 validation.
-   - Improved IPv6 subnet validation to block use of reserved
-     ranges, including 2001:db8::/32, multicast, link-local, and
-     IPv6-mapped IPv4 addresses.
-   - Improved IPv6 Static Route validation.
-   - Blocked IPv4-mapped IPv6 addresses from all input fields.
-   - Disallowed documentation-only CIDRs such as 2001:db8::/32.
-   - Restricted Multicast IPv6 addresses to Firewall rules only.
+* UniFi Network Application 10.3.58
 
-Dashboard
+    Improved the resiliency for applying Orchestrations.
 
- - Added the Most Common Devices widget for visibility of top device
-   types.
- - Added WiFi graph filtering by WiFi Broadcasts.
- - Improved WAN monitoring and traffic flow graphs for greater
-   detail.
- - Improved performance on sites with active CyberSecure subscriptions.
+* UniFi Network Application 10.2.105
 
-Routing & Policy
+UniFi Network Application 10.2.105 adds Port Manager Time Machine, improves the Topology, adds Device Supervisor, and includes additional improvements and bugfixes.
 
- - Added Source and Destination Networks for Destination NAT.
- - Added Destination IP List option for Destination NAT.
- - Moved Dynamic Routing (BGP, OSPF) to Policy Table > Dynamic
-   Routing for unified management.
- - Changed VLAN Groups on EFG and UXG-Enterprise to Native and
-   Tagged VLAN Management settings.
-   - Requires UniFi OS 4.3 or newer.
+Port Manager Time Machine
 
-Content Filtering
+  Review the latest 24hr port activity to verify historical device connectivity and analyze anomalies for faster troubleshooting.
 
- - Added a user-facing Block Page to indicate why a website's access
-   is denied.
-   - UniFi intercepts HTTPS traffic to display this page, which
-     may trigger browser security warnings if the gateway's certificate
-     is not installed and trusted on the client.
-   - Enable UniFi Identity Certificate Distribution or manually
-     download the certificate from the Protection page.
-   - When UniFi Identity is deployed, the gateway certificate is
-     automatically distributed via the Identity Endpoint Agent,
-     allowing supported client devices to bypass browser warnings
-     and display the block page securely and seamlessly.
-   - Requires UniFi OS 4.4 or newer.
+Infrastructure Topology & Digital Twin
 
-Others
+  Introduces a topology view focused on core infrastructure, providing clear visibility into key inter-switch and device bridge links. Includes a rack-level and customizable Digital Twin for physical-to-logical mapping and improved operational awareness.
 
- - Added filtering by installed date, uptime, and model on the
-   Devices page.
- - Added option to toggle All Clients On/Off on the Topology page.
- - Added Signal filtering to the Clients page.
- - Added Counters to the System Logs Filter.
- - Added the last connected uplink for non-network UniFi Devices
-   and Clients.
- - Allow Public IPs for switch IP ACLs.
- - Improved filtering and navigation experience across Port Manager,
-   Device page, and System Logs & Insights for smoother and more
-   consistent usability.
- - Improved DHCP Manager user experience with direct access from
-   the Clients page and better filtering options.
- - Moved MC-LAG to the Network settings.
- - Updated Auto Querrier IP range from the 0.0.0.X to the 10.0.0.X
- subnet.
+Device Supervisor
 
-Bugfixes
-
- - Fixed an issue where Policy Based Routes didn't work when created
-   from Object Manager while using UniFi OS 4.4 or newer.
- - Fixed an issue where WiFi clients using 3rd Party Access Points
-   weren't shown in the client page in rare cases.
- - Fixed an issue where the WiFi Channel Plan was only being applied
-   to the 5GHz band in some cases.
- - Fixed an issue where creating VLANs failed in rare cases.
- - Fixed an issue where an incorrect subnet could be generated in
-   Auto mode for VPN servers in rare cases.
- - Fixed an issue where the All Traffic Flows option was not working
-   for the UXG-Max.
- - Fixed an issue where creating IPv6 Static Routes could fail in
-   rare cases.
- - Fixed issue where Zone-Based Firewall did not correctly match
-   traffic from IPv6 clients.
- - Fixed an issue where the VLAN 4040 IP was incorrectly assigned
-   to L3 switches in rare cases, potentially causing routing conflicts.
- - Fixed an issue where multicast traffic was incorrectly reported
-   as 100% in AirView when no clients were connected to the radio.
- - Fixed an issue where the Isolate Spokes option within Site Magic
-   SD-WAN was not working in rare cases.
- - Fixed an issue where invalid Blackhole Static Routes could cause
-   Gateway configuration issues.
- - Fixed an issue where the Traffic Flows could incorrectly list
-   the Allow action instead of Block.
- - Fixed an issue where creating a Third-party Gateway network on
-   the UDR7 resulted in a gateway configuration error.
- - Fixed an issue where Speed Limits could be configured on the
-   UX7 when connected via a Wireless Uplink.
- - Fixed an issue where Switch ACL was unavailable when a UniFi
-   Gateway was not adopted.
- - Fixed an issue where IP conflicts could occur when cloning
-   configurations from another device with a Fixed IP configured.
- - Fixed an issue where WAN failover system logs would be shown
-   after Console setup.
- - Fixed an issue where VLAN tagging did not work correctly when
-   all ports are set to allow all on InWall APs.
- - Fixed an issue where AP/WiFi client selection was missing in
-   AirView.
- - Fixed an issue where Content Filtering settings were being
-   removed when removing networks in rare cases.
- - Fixed an issue where the Jumbo Frames setting was missing for
-   the EFG and UXG-Enterprise.
- - Fixed an issue where flows from the built-in Firewall Policies
-   were incorrectly shown as Blocked.
-
-
-
-
-UniFi Network Application 9.3.45
-
-UniFi Network Application 9.3.45 includes the improvements and
-bugfixes listed below.
+  Monitors UniFi device heartbeats and automatically power-cycles unresponsive devices via PoE switches or UniFi PDUs to restore connectivity with minimal downtime.
 
 Improvements
 
- - Added a confirmation prompt when pausing or removing Content
-   Filters.
- - Improved Alarm Manager webhook formatting.
-
-Bugfixes
-
- - Fixed an issue where configuring Shadow Mode could fail due to
-   incorrectly applied WAN MAC Overrides.
- - Fixed the inability to subscribe to CyberSecure on UniFi OS
-   Servers.
- - Fixed an issue where pausing or resuming Content Filtering
-   deleted other rules.
- - Fixed an issue where Static Routes with VPN interfaces weren't
-   paused correctly.
-
-
-
-
-
-UniFi Network Application 9.2.87
-
-UniFi Network Application 9.2.87 adds WAN SLA, Roaming Assistant,
-and includes the improvements and bugfixes listed below.
-
-WAN SLA
-
-Provides customizable monitoring of Internet connection health to
-ensure reliable failover and maintain network stability.
-
-DHCP Manager
-
- - Manage DHCP leases, Fixed IPs, and local DNS.
- - Import/export settings with ease.
- - Simplify network configuration in one place.
-
-Improvements
-
- - Added 5GHz Roaming Assistant option in the WiFi Settings.
- - Requires Access Point 8.0.36 or newer.
- - Added Remote Logging Option to the Predefined Firewall Policies.
- - Added hardware acceleration setting for the UCG models and UDR7.
- - Added Policy Filtering in Traffic Flows.
- - Added the ability to change interface priority for OSPF.
- - Added the ability to select Objects in the Port Forward Settings.
- - Allowed selecting non-consecutive ports for Link Aggregation.
- - Improved the Dashboard user experience.
- - Improved the Link Aggregation user experience.
- - Improved the AirView user experience and integrated it with
-   Client Analyzer.
- - Improved the ISP side panel user experience.
- - Improved configuration applying resiliency.
- - Improved the Port Manager user experience.
- - Improved the Client Filtering user experience.
- - Improved the Settings and WiFi Channel Diagram user experience.
- - Improved the Speed Test user experience.
- - Improved the side panel behaviour by keeping the same tab open
-   while navigating between different items on the page.
- - Improved the topology user experience.
- - Improved Statistics Data Retention handling.
- - Moved Insights Viewer to Settings Overview.
- - Moved Inform Host & Device SSH settings to the Devices Page.
- - Updated Traffic Identification signatures.
-
-Bugfixes
-
- - Fixed an issue where autobackups weren't deleted as configured
-   in the retention settings.
- - Fixed System Log formatting in rare cases.
- - Fixed the inability to enable AFC in Canada.
- - Fixed an issue where layer-3 blackhole routes were ineffective.
- - Fixed an issue where Apply to All APs didn't work in rare cases.
- - Fixed an issue where 80MHz was shown in the Conservative WiFi
-   preset for 5GHz.
- - Fixed an issue where incorrect TX retries were shown for Cloud
-   Gateways with built-in WiFi.
- - Fixed an issue where Static Routes could be lost after a L3
-   switch reboots in rare cases.
- - Fixed an issue where WAN2 didn't work on setups with a USG.
-
-
-
-
-UniFi Network Application 9.1.120
-
-UniFi Network Application 9.1.120 adds Traffic Flows, enhances QoS,
-expands Multi-WAN, and includes improvements and bugfixes.
-
-
-UniFi Network Application 9.0.108
-
-UniFi Network Application 9.0.108 adds Zone-Based Firewall,
-CyberSecure, Network Application API, and includes improvements
-and bugfixes.
-
-
+    Added the ability to easily revert device firmware to previous versions.
+    Added IPv6 support for WireGuard VPN.
+    Requires UniFi OS 5.1 or newer.
+    Added the ability to disable the buzzer sound on UPS devices.
+    Requires UPS firmware version 1.4.24 or newer.
+    Added an API endpoint to retrieve MC-LAG domain information.
+    Added ASN information to WAN-related System logs.
+    Added the ability to reposition lower Pages in the navigation panel.
+    Added keyboard arrow navigation across panels on the Device and Client pages.
+    Added a TX Retries column and a “Locked to AP” indicator on the Clients page, along with a filter for Clients locked to APs.
+    Added OWE support in WiFi settings for open networks.
+    Added a warning when using Fast Roaming with MLO in WiFi Broadcast settings.
+    Added support for all Admins to establish Teleport connections from the WiFiman app.
+    Added EAPOL exception for OWE guest networks in ebtables.
+    Added a safeguard to prevent mesh-connected U6-Extender and BeaconHD devices from disabling mesh connectivity.
+    Added Shadow Console in Digital Twin Rack View.
+    Improved Remote Logging to use the built-in SSD for remote logs when available.
+    Improved dashboard loading speed.
+    Improved PoE source detection for devices within Device Supervisor.
+    Improved the IGMP Snooping experience.
+    Use the management IP address for the querier when no querier address is configured.
+    Do not provision the querier address when IGMP Proxy is enabled.
+    Improved MSS IPv6 validation in VPN Server settings.
+    Improved the IGMP Querier selection user experience.
+    Improved the IGMP Snooping configuration user experience.
+    Improved the VPN Server, VPN Client, and overall VPN settings user experience.
+    Improved Flows processing performance.
+    Improved uptime sorting on the Device page.
+    Added BPDU Guard, which automatically disables ports if STP control frames are received to prevent loops.
+    Disabled ports require manual re-enablement.
+    BPDU Guard should not be enabled on ports connected to switches, APs, or gateways.
+    Requires UniFi Switch firmware 7.4 or newer.
+    Added STP Edge, which enables immediate forwarding on client-facing ports to speed up connectivity.
+    Requires UniFi Switch firmware 7.4 or newer.
+    Added the ability to configure Storm Control as a percentage.
+    Requires UniFi Switch firmware 7.4 or newer.
+    Improved the WiFi Doctor user experience.
+    Improved Dashboard details for device, application, and UniFi OS updates, including revert options.
+    Revert options require UniFi OS 5.1 or newer.
+    Improved grouping options by application on the Device page for large sites.
+    Improved overall application stability and resiliency.
