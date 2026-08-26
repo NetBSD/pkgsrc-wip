@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/cask/cask/
 COMMENT=	Project management tool for Emacs
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	emacs28-[0-9]*:../../editors/emacs28
+DEPENDS+=	emacs30-[0-9]*:../../editors/emacs30
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run gmake

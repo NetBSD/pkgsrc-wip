@@ -86,18 +86,6 @@ SUBST_SED.l2e=		-e s/last-command-char/last-command-event/g
 pre-configure:
 	cd ${WRKSRC} && aclocal && automake --add-missing && autoconf
 
-# To avoid byte-compile error 'Invalid syntax ?', convert EUC-JP to UTF-8
-# Just one file is to be converted now,
-.if (${EMACS_TYPE} == emacs25) || \
-    (${EMACS_TYPE} == emacs26)
-post-patch:
-	(cd ${WRKSRC}/lisp; \
-	for i in tc-bushu.el;  \
-	do ${MV} $$i $$i.bak; \
-	iconv -f euc-jp -t utf-8 < $$i.bak >$$i ; \
-	done )
-.endif
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README    		${DESTDIR}${PREFIX}/share/tc/README.euc
 	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf	${DESTDIR}${PREFIX}/share/tc

@@ -37,8 +37,9 @@ WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 
 EMACS_BUILDLINK=		# empty
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
-				emacs28 emacs28nox \
 				emacs29 emacs29nox \
+				emacs30 emacs30nox \
+				emacs31 emacs31nox \
 				xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
