@@ -3944,6 +3944,7 @@ SUBDIR+=	py-gdxcc
 SUBDIR+=	py-gem
 SUBDIR+=	py-genesis
 SUBDIR+=	py-gensim
+SUBDIR+=	py-genson
 SUBDIR+=	py-geocoder
 SUBDIR+=	py-geographiclib
 SUBDIR+=	py-geom
