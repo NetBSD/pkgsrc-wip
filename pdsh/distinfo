@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:10:37 nia Exp $
-
-BLAKE2s (pdsh-2.36.tar.gz) = 69f0825b510f4ea472900ab025b07fe3a95ff65ae6d2ccd8723d463ddcce14e5
-SHA512 (pdsh-2.36.tar.gz) = c67830a2f130ef49bc4980df3036ff12aabd9c68f81696e85dce3ff1cc288b24c371d0041dce8b4272e4dd208cbe8161359b85412b23c6ef07ac7f6ee54dd410
-Size (pdsh-2.36.tar.gz) = 604274 bytes
