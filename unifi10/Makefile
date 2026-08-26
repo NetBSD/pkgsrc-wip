@@ -8,6 +8,13 @@ DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 # unifi-10.1.89 is (as of 2026-04-23) the last version to run in pre java25
+# Because pkgsrc is at 10.1.89, this (wip) package is focused on a
+# future upgrade.  Starting it fails with a complaint:
+# Error: LinkageError occurred while loading main class com.ubnt.ace.Launcher
+#   java.lang.UnsupportedClassVersionError: com/ubnt/ace/Launcher has
+#   been compiled by a more recent version of the Java Runtime (class
+#   file version 69.0), this version of the Java Runtime only
+#   recognizes class file versions up to 65.0
 
 # Updates must be tested to not only build but actually function under
 # at least NetBSD 10/amd64 with actual UBNT hardware.
@@ -49,7 +56,7 @@ INSTALLATION_DIRS=	unifi share/doc/unifi
 # Emulated JDK doesn't work due to epoll issues.  Also, would require
 # matching emulated native libraries, and we only compile actual
 # native libaries.
-PKG_JVMS_ACCEPTED=	openjdk21 openjdk17
+PKG_JVMS_ACCEPTED=	openjdk21
 PKGSRC_MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
