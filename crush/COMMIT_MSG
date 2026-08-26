@@ -1,15 +1,7 @@
-crush: Update to 0.91.1
+crush: Update to 0.91.2
 
 Changelog
 Fixed
-cce8871: fix(mcp): repair stdio startup diagnostics (#3634) (@joestump)
-a0fe47b: fix: return to the start of the line (#3635) (@andrinoff)
-8f63ee5: fix: wrapped messages counted as newlines (#3627) (@andrinoff)
-Docs
-0b4dc19: Revert "docs: add MindsHub custom provider example" (#3639) (@andrinoff)
-f5c0b06: docs: add MindsHub custom provider example (#3618) (@torrmal)
-06345cc: docs: add documentation on how to override catwalk URL (#3585) (@andrinoff)
-Other stuff
-b0115a1: chore: bump bubbles (#3636) (@andrinoff)
-c824c88: chore: bump golangci version to 2.13.1 (#3628) (@andrinoff)
-c483551: chore: merge main after v0.91.0 (@Amolith)
+82557e2: fix(mcp): fix sessionless mcp servers (e.g. github mcp) (#3651) (@andreynering)
+460a877: fix: preserve first line indentation in tool call previews (#3652) (@andreynering)
+75962c4: fix: weird indentation on code blocks (#3642) (@andrinoff)
