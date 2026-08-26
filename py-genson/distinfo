@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (genson-1.4.0.tar.gz) = b38a7636f2f9c5a146b478b52d7bf464fb008bb9f013872b6b6eea13c3e24d5f
+SHA512 (genson-1.4.0.tar.gz) = 1f608abbbb6dfb21bef233775b87298dcfe938afb20007701290a3495cd9eab301c52f01d181d5a62cca1ea4045c528e1e2dfd8baf4cc0fae7a9dcd5c18f4e16
+Size (genson-1.4.0.tar.gz) = 47908 bytes
