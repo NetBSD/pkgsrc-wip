@@ -3737,6 +3737,7 @@ SUBDIR+=	py-dask
 SUBDIR+=	py-data-google-auth
 SUBDIR+=	py-dataclasses-json
 SUBDIR+=	py-datamarix
+SUBDIR+=	py-datamodel-code-generator
 SUBDIR+=	py-datarray
 SUBDIR+=	py-datasci
 SUBDIR+=	py-datashader
