@@ -1,4 +1,4 @@
-terraform-provider-vultr: Update to version 2.29.1 and convert to terraform/provider.mk
+terraform-provider-vultr: Update to version 2.30.1 and convert to terraform/provider.mk
 
 Packaged in wip by iquiw, thanks!
 
