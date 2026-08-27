@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	leavers-0.2.0
+DISTNAME=	leaves-0.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=patonw/}
-GITHUB_PROJECT=	leaves
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
