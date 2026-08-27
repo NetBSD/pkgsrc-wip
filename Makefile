@@ -2811,7 +2811,6 @@ SUBDIR+=	opensips
 SUBDIR+=	openssl110
 SUBDIR+=	opensubdiv
 SUBDIR+=	opensurge
-SUBDIR+=	opentofu110
 SUBDIR+=	opentofu111
 SUBDIR+=	opentomb
 SUBDIR+=	opentracker-cvs
