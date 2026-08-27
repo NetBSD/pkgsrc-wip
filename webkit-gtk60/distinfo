@@ -16,6 +16,7 @@ SHA1 (patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h) = 6a854b
 SHA1 (patch-Source_ThirdParty_skia_src_ports_SkMemory__malloc.cpp) = e277d988eeaacb7ec8b7f051342b77c5e8ac06a7
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 35afdd5143f4a2df8a5554a0b0b35141a8784c6c
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = 905b2b4bf4b8c90cf91eb8ecf1d414013cc3bcbb
+SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = c6c0a38f3a8c4357e9cfd9a412fd89ea69436535
 SHA1 (patch-Source_WebCore_loader_cache_CachedResource.h) = 5d82e4797336f3dc0af9f313ac80f3a72be9a22a
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = 40a1c832e0df382e39cecb6c57527731e7c63c52
 SHA1 (patch-Source_WebCore_platform_graphics_gbm_MemoryMappedGPUBuffer.cpp) = 3e95b73709a3a39cd130dcaf4bf440e9c0195fa5
