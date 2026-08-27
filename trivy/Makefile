@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	trivy-0.73.0
+DISTNAME=	trivy-0.74.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aquasecurity/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
