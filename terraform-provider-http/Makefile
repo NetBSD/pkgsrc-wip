@@ -25,5 +25,5 @@ TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
 TERRAFORM_PROVIDER_TYPE=	http
 
 .include "../../lang/go/go-package.mk"
-.include "../../wip/terraform/provider.mk"
+.include "../../net/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"

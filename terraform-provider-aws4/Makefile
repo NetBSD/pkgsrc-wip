@@ -21,5 +21,5 @@ TERRAFORM_PROVIDER_TYPE=	aws
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
-.include "../../wip/terraform/provider.mk"
+.include "../../net/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -19,5 +19,5 @@ TERRAFORM_PROVIDER_TYPE=	time
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
-.include "../../wip/terraform/provider.mk"
+.include "../../net/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
