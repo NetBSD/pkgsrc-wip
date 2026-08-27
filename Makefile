@@ -5747,7 +5747,6 @@ SUBDIR+=	terraform-provider-random3
 SUBDIR+=	terraform-provider-scaleway
 SUBDIR+=	terraform-provider-time
 SUBDIR+=	terraform-provider-tls
-SUBDIR+=	terraform015
 SUBDIR+=	terraform11
 SUBDIR+=	terraform13
 SUBDIR+=	terraform15
