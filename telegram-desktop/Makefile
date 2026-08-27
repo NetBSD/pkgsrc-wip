@@ -3,7 +3,7 @@
 GITHUB_PROJECT=		tdesktop
 GITHUB_RELEASE=		v${TD_VERSION}
 DIST_SUBDIR=		tdesktop
-TD_VERSION=		7.0.9
+TD_VERSION=		7.1.3
 DISTNAME=		tdesktop-${TD_VERSION}-full
 PKGNAME=		telegram-desktop-${TD_VERSION}
 CATEGORIES=		chat
