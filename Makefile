@@ -5727,7 +5727,6 @@ SUBDIR+=	termit
 SUBDIR+=	termshark
 SUBDIR+=	terraform-docs
 SUBDIR+=	terraform-ls
-SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws-modules-http
 SUBDIR+=	terraform-provider-aws4
 SUBDIR+=	terraform-provider-aws5
