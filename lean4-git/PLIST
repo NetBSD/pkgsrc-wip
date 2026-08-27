@@ -7012,6 +7012,12 @@ lib/lean/Lean/Elab/RecAppSyntax.ir.sig
 lib/lean/Lean/Elab/RecAppSyntax.olean
 lib/lean/Lean/Elab/RecAppSyntax.olean.private
 lib/lean/Lean/Elab/RecAppSyntax.olean.server
+lib/lean/Lean/Elab/Recall.ilean
+lib/lean/Lean/Elab/Recall.ir
+lib/lean/Lean/Elab/Recall.ir.sig
+lib/lean/Lean/Elab/Recall.olean
+lib/lean/Lean/Elab/Recall.olean.private
+lib/lean/Lean/Elab/Recall.olean.server
 lib/lean/Lean/Elab/RecommendedSpelling.ilean
 lib/lean/Lean/Elab/RecommendedSpelling.ir
 lib/lean/Lean/Elab/RecommendedSpelling.ir.sig
@@ -16206,6 +16212,7 @@ src/lean/Lean/Elab/Quotation.lean
 src/lean/Lean/Elab/Quotation/Precheck.lean
 src/lean/Lean/Elab/Quotation/Util.lean
 src/lean/Lean/Elab/RecAppSyntax.lean
+src/lean/Lean/Elab/Recall.lean
 src/lean/Lean/Elab/RecommendedSpelling.lean
 src/lean/Lean/Elab/SetOption.lean
 src/lean/Lean/Elab/StructInst.lean
