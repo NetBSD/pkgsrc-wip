@@ -5741,7 +5741,6 @@ SUBDIR+=	terraform-provider-hcloud
 SUBDIR+=	terraform-provider-http
 SUBDIR+=	terraform-provider-kafka
 SUBDIR+=	terraform-provider-kubectl
-SUBDIR+=	terraform-provider-kubernetes1
 SUBDIR+=	terraform-provider-kubernetes2
 SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-null
