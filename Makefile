@@ -5747,7 +5747,6 @@ SUBDIR+=	terraform-provider-random3
 SUBDIR+=	terraform-provider-scaleway
 SUBDIR+=	terraform-provider-time
 SUBDIR+=	terraform-provider-tls
-SUBDIR+=	terraform15
 SUBDIR+=	terrascan
 SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
