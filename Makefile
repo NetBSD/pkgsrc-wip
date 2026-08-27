@@ -349,6 +349,7 @@ SUBDIR+=	blackbox_exporter
 SUBDIR+=	blad
 SUBDIR+=	blast2go
 SUBDIR+=	bleachbit
+SUBDIR+=	blender
 SUBDIR+=	blink
 SUBDIR+=	blink-git
 SUBDIR+=	blis
