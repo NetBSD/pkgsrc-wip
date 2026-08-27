@@ -5741,7 +5741,6 @@ SUBDIR+=	terraform-provider-http
 SUBDIR+=	terraform-provider-kafka
 SUBDIR+=	terraform-provider-kubectl
 SUBDIR+=	terraform-provider-kubernetes2
-SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-oci
 SUBDIR+=	terraform-provider-postgresql
 SUBDIR+=	terraform-provider-random3
