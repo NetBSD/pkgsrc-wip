@@ -5745,7 +5745,6 @@ SUBDIR+=	terraform-provider-oci
 SUBDIR+=	terraform-provider-postgresql
 SUBDIR+=	terraform-provider-random3
 SUBDIR+=	terraform-provider-scaleway
-SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform-provider-time
 SUBDIR+=	terraform-provider-tls
 SUBDIR+=	terraform-provider-vultr
