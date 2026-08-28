@@ -1,0 +1,1 @@
+Blocky is a DNS proxy and ad-blocker for the local network written in Go.
