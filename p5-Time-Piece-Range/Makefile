@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Time/}
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	https://metacpan.org/release/Time-Piece-Range
 COMMENT=	Time::Piece::Range - deal with a range of Time::Piece objects
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Date-Range>=1.2:../../time/p5-Date-Range
 
