@@ -47,7 +47,7 @@ SUBST_CLASSES+=		cc
 SUBST_FILES.cc+=	src/Leanc.lean
 SUBST_FILES.cc+=	src/lake/Lake/Build/Common.lean
 SUBST_SED.cc+=		-e "s,@LEANC_CC@,${CC},"
-SUBST_SED.cc+=          -e "s!@LINKER_FLAGS@!\"${COMPILER_RPATH_FLAG}${PREFIX}/lib\", \"${COMPILER_RPATH_FLAG}${PREFIX}/lib/lean\", \"-lgcc_s\"!"
+SUBST_SED.cc+=		-e "s!@LINKER_FLAGS@!\"${COMPILER_RPATH_FLAG}${PREFIX}/lib\", \"${COMPILER_RPATH_FLAG}${PREFIX}/lib/lean\"!"
 SUBST_STAGE.cc=		pre-configure
 SUBST_MESSAGE.cc=	Setting compiler path.
 
