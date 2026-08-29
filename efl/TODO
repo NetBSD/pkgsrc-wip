@@ -12,3 +12,5 @@ Build on:
 #### Plan
 - Fix segfault when build with efl main loop: https://phab.enlightenment.org/T8812
 - Add another OS support
+
+- There are ctype(3) abuses, fix them!
