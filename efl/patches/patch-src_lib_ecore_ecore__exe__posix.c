@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Add NetBSD support
+Merged upstream: https://git.enlightenment.org/enlightenment/efl/pulls/130
 
 --- src/lib/ecore/ecore_exe_posix.c.orig	2020-09-22 17:54:50.000000000 +0000
 +++ src/lib/ecore/ecore_exe_posix.c

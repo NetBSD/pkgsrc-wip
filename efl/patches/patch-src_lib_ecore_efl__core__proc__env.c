@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Add NetBSD support
+Merged upstream: https://git.enlightenment.org/enlightenment/efl/pulls/130
 
 --- src/lib/ecore/efl_core_proc_env.c.orig	2023-12-23 15:56:36.000000000 +0000
 +++ src/lib/ecore/efl_core_proc_env.c

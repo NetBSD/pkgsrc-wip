@@ -1,6 +1,7 @@
 $NetBSD$
 
 * NetBSD support
+Merged upstream: https://git.enlightenment.org/enlightenment/efl/pulls/130
 
 --- src/lib/ecore/Ecore.h.orig	2020-05-11 11:32:41.000000000 +0000
 +++ src/lib/ecore/Ecore.h

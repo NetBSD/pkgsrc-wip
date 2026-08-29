@@ -3,10 +3,10 @@ $NetBSD$
 BLAKE2s (efl-1.28.1.tar.xz) = 78ad5a0d4d9733651c028601855775a493413824c903b9b0b19bfbfe634017f2
 SHA512 (efl-1.28.1.tar.xz) = 06f68701a3e652999a11ed10ef92c5dbaf7d93ceb82bfd9bddc120f8b87ac5730d3d282f63db8b915df6dcce525b493bccddb9c99cfdfe171997c88904d7aa92
 Size (efl-1.28.1.tar.xz) = 168561296 bytes
-SHA1 (patch-src_lib_ecore_Ecore.h) = 89e11da7e514bc37beb889466edc6164f47e8f0c
-SHA1 (patch-src_lib_ecore_Efl__Core.h) = 5f6720fbb737a54bc73dc07208280972af6d8dfb
-SHA1 (patch-src_lib_ecore_ecore__exe__posix.c) = 22d8ebb9df3e8b0f59f07bbd238a1cf5b6e02e28
-SHA1 (patch-src_lib_ecore_efl__core__proc__env.c) = 8d77fc851bef5a79b76fb80aaf71ac6350592db6
-SHA1 (patch-src_lib_ecore_efl__exe.c) = caacd04dd2a9338371c6f4fe778dea7f024c1847
+SHA1 (patch-src_lib_ecore_Ecore.h) = e41dc965923f175c3e407b473463bba08f3a8e25
+SHA1 (patch-src_lib_ecore_Efl__Core.h) = 1624463967c94593da98e3f77f49a78f09e7e5bf
+SHA1 (patch-src_lib_ecore_ecore__exe__posix.c) = b18b11339d343a4c6ce834c0b37cb5cacda00b8d
+SHA1 (patch-src_lib_ecore_efl__core__proc__env.c) = 01861acfebabe1c72376b03ac5ae16dc86761633
+SHA1 (patch-src_lib_ecore_efl__exe.c) = 8f4febc1dfae43d0009fe51ffeeada43bae462ed
 SHA1 (patch-src_lib_eina_eina__file__posix.c) = 8b9eca7a436a8a431908cf98185dba57340c38f0
-SHA1 (patch-src_lib_elementary_Efl__Ui.h) = d319c6242ca420ad788a82dfa80b5c5f03ea29ca
+SHA1 (patch-src_lib_elementary_Efl__Ui.h) = d4918df249bb58b0fa2898dccf3a171f9d089420
