@@ -12,6 +12,7 @@ SHA1 (patch-Source_ThirdParty_ANGLE_src_common_SimpleMutex.h) = 6cd83b9ec476ed39
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_platform.h) = 2fda057edc3dde3356f0663ec5aa52cb61fb1229
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_system__utils__linux.cpp) = ec16428e501a85281a288dc38c1da12485a1b746
 SHA1 (patch-Source_ThirdParty_ANGLE_src_libANGLE_renderer_gl_egl_DisplayEGL.cpp) = 2cad21ee98bfbf89248a229a05e299e3dcec28b3
+SHA1 (patch-Source_ThirdParty_skia_CMakeLists.txt) = 365bf558205b283495fa7992a010861afbdcdc71
 SHA1 (patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h) = 6a854b85a470ad32aea3bb5f49d4622ba9df1bb6
 SHA1 (patch-Source_ThirdParty_skia_src_ports_SkMemory__malloc.cpp) = e277d988eeaacb7ec8b7f051342b77c5e8ac06a7
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 35afdd5143f4a2df8a5554a0b0b35141a8784c6c
