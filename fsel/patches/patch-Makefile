@@ -1,0 +1,15 @@
+$NetBSD$
+
+Do not override pkgsrc CFLAGS/LDFLAGS.
+
+--- Makefile.orig	2026-08-29 20:00:11.296483850 +0000
++++ Makefile
+@@ -1,6 +1,6 @@ CC = gcc
+ CC = gcc
+-CFLAGS = -Wall -Wextra -std=c11
+-LDFLAGS =
++CFLAGS += -Wall -Wextra -std=c11
++LDFLAGS +=
+ LIBS = -lcrypto
+ PREFIX ?= /usr/local
+ 

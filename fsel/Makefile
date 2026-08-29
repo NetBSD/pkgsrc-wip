@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	fsel-0.2.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uwfmt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +12,8 @@ COMMENT=	Easily share selected files between shell commands
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
+
+USE_CC_FEATURES=	c11
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
