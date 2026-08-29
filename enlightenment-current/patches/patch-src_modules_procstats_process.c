@@ -1,13 +1,15 @@
 $NetBSD$
 
---- src/modules/procstats/process.c.orig	2023-12-23 16:08:09.000000000 +0000
+Merged upstream: https://git.enlightenment.org/enlightenment/enlightenment/pulls/139
+
+--- src/modules/procstats/process.c.orig	2025-03-17 17:18:54.000000000 +0000
 +++ src/modules/procstats/process.c
 @@ -1,12 +1,14 @@
 -#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
 +#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__NetBSD__)
  # include <sys/types.h>
  # include <sys/sysctl.h>
-+#if ! defined(__NetBSD__)
++#if !defined(__NetBSD__)
  # include <sys/user.h>
 +#endif
  # include <sys/proc.h>
@@ -28,7 +30,7 @@ $NetBSD$
        case SRUN:
          statename = "run";
          break;
-@@ -101,17 +103,33 @@ _process_state_name(char state)
+@@ -101,12 +103,20 @@ _process_state_name(char state)
        case SSLEEP:
          statename = "sleep";
          break;
@@ -46,20 +48,24 @@ $NetBSD$
          break;
  
 -#if !defined(__OpenBSD__)
-+#if !defined(__OpenBSD__) 
-+#if defined(__NetBSD__)
-+      case PWAIT:
-+#else
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
        case SWAIT:
-+#endif
          statename = "wait";
          break;
- 
-+#if defined(__NetBSD__)
-+      case PLOCK:
-+#else
-       case SLOCK:
-+#endif
+@@ -115,6 +125,16 @@ _process_state_name(char state)
          statename = "lock";
          break;
  
++#if defined(__NetBSD__)
++      case PWAIT:
++        statename = "wait";
++        break;
++
++      case PLOCK:
++        statename = "lock";
++        break;
++#endif
++
+ #endif
+       case SZOMB:
+         statename = "zomb";
