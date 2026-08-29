@@ -627,6 +627,7 @@ SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
 SUBDIR+=	cq-cli
 SUBDIR+=	cqlsh
+SUBDIR+=	crates-io-cli
 SUBDIR+=	crchack-git
 SUBDIR+=	creal
 SUBDIR+=	cream
