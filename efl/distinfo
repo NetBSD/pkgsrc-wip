@@ -8,5 +8,6 @@ SHA1 (patch-src_lib_ecore_Efl__Core.h) = 1624463967c94593da98e3f77f49a78f09e7e5b
 SHA1 (patch-src_lib_ecore_ecore__exe__posix.c) = b18b11339d343a4c6ce834c0b37cb5cacda00b8d
 SHA1 (patch-src_lib_ecore_efl__core__proc__env.c) = 01861acfebabe1c72376b03ac5ae16dc86761633
 SHA1 (patch-src_lib_ecore_efl__exe.c) = 8f4febc1dfae43d0009fe51ffeeada43bae462ed
+SHA1 (patch-src_lib_eet_eet__image.c) = 633a0fa5e012ea19c67359882084b8c373bb495b
 SHA1 (patch-src_lib_eina_eina__file__posix.c) = 8b9eca7a436a8a431908cf98185dba57340c38f0
 SHA1 (patch-src_lib_elementary_Efl__Ui.h) = d4918df249bb58b0fa2898dccf3a171f9d089420
