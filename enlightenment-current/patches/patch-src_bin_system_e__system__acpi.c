@@ -1,5 +1,7 @@
 $NetBSD$
 
+Merged upstream: https://git.enlightenment.org/enlightenment/enlightenment/pulls/139
+
 --- src/bin/system/e_system_acpi.c.orig	2025-02-08 14:04:44.419871685 +0000
 +++ src/bin/system/e_system_acpi.c
 @@ -3,6 +3,8 @@

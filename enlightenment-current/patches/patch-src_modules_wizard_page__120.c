@@ -1,7 +1,9 @@
 $NetBSD$
 
-* Add NetBSD support
-* Fix build without eeze on linux
+* Add NetBSD support. Merged upstream in:
+https://git.enlightenment.org/enlightenment/enlightenment/pulls/139
+* Fix build without eeze on linux (not upstream but not relevant for NetBSD).
+Can keep patch without NetBSD part in newer release.
 
 --- src/modules/wizard/page_120.c.orig	2023-12-23 16:08:09.000000000 +0000
 +++ src/modules/wizard/page_120.c
