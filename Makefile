@@ -5749,7 +5749,6 @@ SUBDIR+=	terrascan
 SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
 SUBDIR+=	testssl
-SUBDIR+=	tether
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-babel-japanese-doc
 SUBDIR+=	tex-breqn-doc
