@@ -1814,6 +1814,7 @@ SUBDIR+=	io-thread
 SUBDIR+=	io-user
 SUBDIR+=	io-vm
 SUBDIR+=	io-zlib
+SUBDIR+=	iocaine
 SUBDIR+=	ion3
 SUBDIR+=	ioquake3-snapshot
 SUBDIR+=	iosevka-aile-ttf
