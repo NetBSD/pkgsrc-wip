@@ -1,5 +1,4 @@
 @comment $NetBSD$
-bin/WebKitWebDriver
 include/webkitgtk-6.0/jsc/JSCClass.h
 include/webkitgtk-6.0/jsc/JSCContext.h
 include/webkitgtk-6.0/jsc/JSCDefines.h
