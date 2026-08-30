@@ -6005,6 +6005,7 @@ SUBDIR+=	vidriolib
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
 SUBDIR+=	vim-classic
+SUBDIR+=	vim-classic-gtk2
 SUBDIR+=	vim-classic-lang
 SUBDIR+=	vim-classic-share
 SUBDIR+=	vim-nox11
