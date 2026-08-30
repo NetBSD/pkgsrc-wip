@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.56 2026/01/06 13:38:45 gutteridge Exp $
+
+BLAKE2s (icewm-4.0.0.tar.gz) = fc8943ddc1a2fcdb9257eb4c2bbd36ce2cbfd15aebdf119b64f1fce615e63e8a
+SHA512 (icewm-4.0.0.tar.gz) = 0983a99046b67e1145c3409de717227ada3183be8314f0f986ee18a4510d335ef9953174ae30fc69f9636e578d4339c78a5a5f8407f5235287912ec86259e59b
+Size (icewm-4.0.0.tar.gz) = 2667878 bytes
+SHA1 (patch-lib_Makefile.am) = ddc8c6df02c34d66868a15e4dfaeb9a71a9debfb
+SHA1 (patch-src_ylocale.cc) = f5c5bada634b48dd958e37eb32115ee1efefe52d

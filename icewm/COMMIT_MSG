@@ -1,0 +1,60 @@
+wm/icewm: update to 4.1.0
+
+Update prepared in wip by Dimitris Gounaridis
+
+Packaging changes:
+
+
+Upstream changes:
+
+Release icewm-4.1.0 released 2026-08-06
+---------------------------------------
+
+git shortlog --no-merges -e -n -w80,6,8 3.9.0...HEAD
+
+Bert Gijsbers <gijsbers@science.uva.nl> (86):
+
+      Prepare 4.0.0 release
+      4.0.0
+      Clarify comment for ShowAbout and closes #829.
+      Free the picture before its pixmap to prevent an error message.
+      Use strtoul when parsing _NET_STARTUP_ID for issue #37.
+      now is 2026
+      Add new winoption ignoreUserTime for issue #833.
+      Add icesh "mousemove" command for issue ice-wm/icewm#191.
+      Properly handle unterminated strings in configuration files.
+      Support QuickSwitchPreview when _XROOTPMAP_ID is undefined.
+      Revert "Support QuickSwitchPreview when _XROOTPMAP_ID is undefined."
+      Change default for Alpha to false.
+
+dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> (4):
+      Bump actions/checkout from 5 to 6
+      Bump actions/checkout from 5 to 6 (#819)
+      Bump actions/checkout from 6 to 7
+      Bump actions/checkout from 6 to 7 (#840)
+
+Peter Andreasen <noesgaard@gmail.com> (3):
+      Translated using Weblate (Danish)
+      Translated using Weblate (Danish)
+      Translated using Weblate (Danish)
+Cyber Neko <CyberNeko.AI@gmail.com> (2):
+      Translated using Weblate (Chinese (China) (zh_CN))
+      Translated using Weblate (Chinese (Taiwan) (zh_TW))
+Eugene Krater <lachend@gmail.com> (2):
+      Translated using Weblate (Ukrainian)
+      Translated using Weblate (Ukrainian)
+Temuri Doghonadze <temuri.doghonadze@gmail.com> (2):
+      Translated using Weblate (Georgian)
+      Translated using Weblate (Georgian)
+
+Andrei Stepanov <adem4ik@gmail.com> (1):
+      Translated using Weblate (Russian)
+
+Efstathios Iosifidis <eiosifidis@yandex.com> (1):
+      Translated using Weblate (Greek)
+
+Petteri Aimonen <jpa@git.mail.kapsi.fi> (1):
+      Handle string parsing error in _XA_NET_STARTUP_ID
+
+yakup <mtopac2027@gmail.com> (1):
+      Translated using Weblate (Turkish)
