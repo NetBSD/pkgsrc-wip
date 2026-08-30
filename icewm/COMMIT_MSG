@@ -4,6 +4,13 @@ Update prepared in wip by Dimitris Gounaridis
 
 Packaging changes:
 
+* Update icewm to version 4.1.0
+* Add --enable-menus-fdo configure option
+to also build icewm-menu-fdo binary.
+This allows generating an XDG compliant menu
+if $XDG_DATA_DIRS is set to "/usr/pkg/share".
+* Add glib2 as build dependency (required for icewm-menu-fdo)
+* Update PLIST with `make print-PLIST`
 
 Upstream changes:
 

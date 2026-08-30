@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.29 2025/07/02 18:28:03 gutteridge Exp $
+@comment $NetBSD$
 bin/icehelp
 bin/icesh
 bin/icewm
+bin/icewm-menu-fdo
 bin/icewm-menu-xrandr
 bin/icewm-session
 bin/icewm-set-gnomewm
@@ -9,6 +10,7 @@ bin/icewmbg
 bin/icewmhint
 man/man1/icehelp.1
 man/man1/icesh.1
+man/man1/icewm-menu-fdo.1
 man/man1/icewm-menu-xrandr.1
 man/man1/icewm-session.1
 man/man1/icewm-set-gnomewm.1
@@ -32,6 +34,7 @@ share/doc/icewm/icesh.1.html
 share/doc/icewm/icewm-env.5.html
 share/doc/icewm/icewm-focus_mode.5.html
 share/doc/icewm/icewm-keys.5.html
+share/doc/icewm/icewm-menu-fdo.1.html
 share/doc/icewm/icewm-menu-xrandr.1.html
 share/doc/icewm/icewm-menu.5.html
 share/doc/icewm/icewm-preferences.5.html

@@ -17,6 +17,7 @@ CONFIGURE_ENV+=		MARKDOWN=markdown
 
 CONFIGURE_ARGS+=	--enable-corefonts
 CONFIGURE_ARGS+=	--enable-i18n
+CONFIGURE_ARGS+=	--enable-menus-fdo
 
 TOOL_DEPENDS+=	discount-[0-9]*:../../textproc/discount
 
@@ -36,6 +37,7 @@ post-extract:
 .include "options.mk"
 
 .include "../../converters/fribidi/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
