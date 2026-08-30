@@ -1,0 +1,5 @@
+devel/forgejo-runner: import forgejo-runner-13.0.0 as devel/forgejo-runner
+
+Daemon that connects to a Forgejo instance and runs jobs for continuous
+integration. The installation and usage instructions are part of the
+Forgejo documentation.

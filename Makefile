@@ -1050,6 +1050,7 @@ SUBDIR+=	fonttosfnt
 SUBDIR+=	forge
 SUBDIR+=	forgejo
 SUBDIR+=	forgejo-cli
+SUBDIR+=	forgejo-runner
 SUBDIR+=	fossil1
 SUBDIR+=	fox
 SUBDIR+=	foxtrotgps
