@@ -1757,6 +1757,7 @@ SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
 SUBDIR+=	icestorm-git
 SUBDIR+=	icestorm_update
+SUBDIR+=	icewm
 SUBDIR+=	icmpchat
 SUBDIR+=	ics2txt
 SUBDIR+=	id3
