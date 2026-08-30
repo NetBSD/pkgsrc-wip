@@ -15,8 +15,40 @@ GO_VERSION_REQD=	126
 
 WRKSRC=		${WRKDIR}/${DIST_SUBDIR}
 
+BUILD_DEFS+=	VARBASE GITEA_RUNNER_USER GITEA_RUNNER_GROUP
+
+EGDIR=		${PREFIX}/share/examples/gitea-runner
+
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${GITEA_RUNNER_USER} ${GITEA_RUNNER_GROUP} 0755
+
+GITEA_RUNNER_USER?=	runner
+GITEA_RUNNER_GROUP?=	runner
+
+PKG_GROUPS_VARS+=	GITEA_RUNNER_GROUP
+PKG_USERS_VARS+=	GITEA_RUNNER_USER
+
+PKG_SYSCONFSUBDIR=	gitea-runner
+
+INSTALLATION_DIRS+=	share/examples/gitea-runner
+
+PKG_SHELL.${GITEA_RUNNER_USER}=	${SH}
+PKG_HOME.${GITEA_RUNNER_USER}=	${VARBASE}/db/gitea-runner
+
+SUBST_CLASSES+=		fix-var
+SUBST_STAGE.fix-var=	pre-configure
+SUBST_MESSAGE.fix-var=	Replace some vars
+SUBST_FILES.fix-var=	${WRKDIR}/config.yaml
+SUBST_VARS.fix-var=	VARBASE
+
+CONF_FILES_PERMS+=	${EGDIR}/config.yaml ${PKG_SYSCONFDIR}/config.yaml \
+			${GITEA_RUNNER_USER} ${GITEA_RUNNER_GROUP} 0600
+
+pre-patch:
+	${CP} ${FILESDIR}/config.yaml ${WRKDIR}/
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} runner gitea-runner
+	${INSTALL_DATA} ${WRKDIR}/config.yaml ${DESTDIR}${EGDIR}
 
 .include "go-modules.mk"
 
