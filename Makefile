@@ -1312,7 +1312,6 @@ SUBDIR+=	git-spindle
 SUBDIR+=	git-toolbelt
 SUBDIR+=	git-who
 SUBDIR+=	git-xargs
-SUBDIR+=	gitea-runner
 SUBDIR+=	gitea-tea
 SUBDIR+=	gitg
 SUBDIR+=	gitlab
