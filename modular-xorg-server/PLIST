@@ -27,8 +27,7 @@ include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
 ${PLIST.dri}include/xorg/dri.h
 ${PLIST.dri}include/xorg/dri2.h
-@comment bug in upstream, should be ${PLIST.dri}
-include/xorg/dri3.h
+${PLIST.dri}include/xorg/dri3.h
 ${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h

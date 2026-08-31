@@ -1,0 +1,18 @@
+$NetBSD$
+
+https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/2300
+
+--- dri3/meson.build.orig	2026-08-31 07:03:41.310514967 +0000
++++ dri3/meson.build
+@@ -15,8 +15,7 @@ if build_dri3
+         include_directories: inc,
+         dependencies: [ common_dep, libdrm_dep ],
+         )
+-endif
+-
+-if build_xorg
+-    install_data(hdrs_dri3, install_dir: xorgsdkdir)
++    if build_xorg
++        install_data(hdrs_dri3, install_dir: xorgsdkdir)
++    endif
+ endif
