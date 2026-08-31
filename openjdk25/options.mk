@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.4 2025/08/11 18:06:32 pho Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk21
+PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk25
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
 PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
 PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp jdk-bundled-zlib

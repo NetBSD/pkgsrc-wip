@@ -1,21 +1,21 @@
 # $NetBSD: Makefile,v 1.31 2026/08/14 12:52:05 ryoon Exp $
 
-DISTNAME=	jdk21u-${GITHUB_TAG:C/\+/-/}
-PKGNAME=	openjdk21-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
+DISTNAME=	jdk25u-${GITHUB_TAG:C/\+/-/}
+PKGNAME=	openjdk25-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
-GITHUB_PROJECT=	jdk21u
-GITHUB_TAG=	jdk-21.0.12+8-1
+GITHUB_PROJECT=	jdk25u
+GITHUB_TAG=	jdk-25.0.4+7-1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
-COMMENT=	Open-source implementation of the Java Platform, 21 LTS
+COMMENT=	Open-source implementation of the Java Platform, 25 LTS
 LICENSE=	gnu-gpl-v2
 
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-JAVA_NAME=	openjdk21
+JAVA_NAME=	openjdk25
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar jarsigner java javac javadoc javap jcmd jconsole jdb \
 		jdeprscan jdeps jfr jimage jinfo jlink jmap jmod jps \
