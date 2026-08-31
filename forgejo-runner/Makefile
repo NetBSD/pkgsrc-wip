@@ -11,9 +11,12 @@ HOMEPAGE=	https://forgejo.com/forgejo/runner/
 COMMENT=	Runner for forgejo
 LICENSE=	mit
 
-GO_VERSION_REQD=125
+GO_VERSION_REQD=	125
 
 WRKSRC=		${WRKDIR}/${DIST_SUBDIR}
+
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 BUILD_DEFS+=	VARBASE FORGEJO_RUNNER_USER FORGEJO_RUNNER_GROUP
 
@@ -46,6 +49,7 @@ CONF_FILES_PERMS+=	${EGDIR}/config.yaml ${PKG_SYSCONFDIR}/config.yaml \
 
 FILES_SUBST+=		FORGEJO_RUNNER_USER=${FORGEJO_RUNNER_USER}
 FILES_SUBST+=		FORGEJO_RUNNER_GROUP=${FORGEJO_RUNNER_GROUP}
+FILES_SUBST+=		FORGEJO_RUNNER_USER_HOME=${VARBASE}/db/forgejo-runner
 
 RCD_SCRIPTS+=		forgejo-runner
 
