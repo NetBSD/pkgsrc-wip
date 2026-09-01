@@ -1,7 +1,23 @@
-crush: Update to 0.91.2
+crush: Update to 0.92.0
 
 Changelog
+New!
+3f57543: Revert "feat(ui): use framed-square glyph for image attachment icon (#3339)" (@meowgorithm)
+48f4e8a: feat(ui): use framed-square glyph for image attachment icon (#3339) (@joestump-agent)
 Fixed
-82557e2: fix(mcp): fix sessionless mcp servers (e.g. github mcp) (#3651) (@andreynering)
-460a877: fix: preserve first line indentation in tool call previews (#3652) (@andreynering)
-75962c4: fix: weird indentation on code blocks (#3642) (@andrinoff)
+ee455a9: fix(config): resolve provider base URL before custom validation (#3350) (@joestump-agent)
+1e5be92: fix(mcp): bound MCP init wits so a wedged server can't blank the app (#199) (#3467) (@joestump-agent)
+1ea2714: fix(mcp): scope error teardown to the erroring session; serialize refreshers (#3468) (@joestump-agent)
+46469e2: fix(selection): pin the selected item to the top (#3670) (@andrinoff)
+404a93c: fix(shellconfig): stop model add swapping the two cache prices (#3679) (@devYRPauli)
+7b38a40: fix(ui): preserve single line breaks in submitted user messages (#3655) (@joestump-agent)
+7944b8e: fix: update fantasy with several inference fixes (#3667) (@andreynering)
+Docs
+599a4ab: docs: fix typo regarding JSON format deprecation (#3604) (@wangjiawen2013)
+Other stuff
+07d662d: chore: auto-update files (@charmcli)
+6d14dd9: chore: auto-update files (@charmcli)
+a83480e: refactor: centralize TUI option defaults and extract exit banner rendering (@taciturnaxolotl)
+773c356: resume: compact resume banner option (@taciturnaxolotl)
+
+
