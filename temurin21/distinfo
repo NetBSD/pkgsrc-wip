@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2024/07/29 06:28:18 adam Exp $
+
+BLAKE2s (OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz) = d9befb0379ba914f3eadec39f069a1b4a00d1b2af47f131f60bd370a9716f13f
+SHA512 (OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz) = e685aac4ccf79d0681bd3946a74c090c19945cc1b2ff6d92c390c3e535dc391d12c74247e222adfed942ac0dbd0acff014fa4079bb1073f10211915b570a005b
+Size (OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz) = 207473347 bytes
