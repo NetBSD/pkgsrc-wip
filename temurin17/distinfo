@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2024/07/29 06:28:18 adam Exp $
+
+BLAKE2s (OpenJDK17U-jdk_x64_linux_hotspot_17.0.20.1_1.tar.gz) = 209af7758ffe7d597e02c70ad28273b7bd0daa77f6f640d0f6931d7d4ce3aaeb
+SHA512 (OpenJDK17U-jdk_x64_linux_hotspot_17.0.20.1_1.tar.gz) = 394c23d7431932eb4bba39f88c6be12b1c40b8cd88b554334f0cd6a2a8dacbf045257920bde16646932086bc6ce8fee14be629c7af5ee2fb87b1d29bd5782145
+Size (OpenJDK17U-jdk_x64_linux_hotspot_17.0.20.1_1.tar.gz) = 193252603 bytes
