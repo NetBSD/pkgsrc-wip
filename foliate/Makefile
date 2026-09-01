@@ -14,7 +14,7 @@ CONFLICTS=	foliate-[0-9]*
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
-RUN_DEPENDS+=	gjs>=1.82.0:../../wip/gjs
+RUN_DEPENDS+=	gjs>=1.82.0:../../lang/gjs
 
 GITHUB_SUBMODULES=	johnfactotum foliate-js 052123beafed921a9a2a45ef6330c235289a634e src/foliate-js
 
@@ -31,7 +31,7 @@ BUILDLINK_API_DEPENDS.libadwaita+=	libadwaita>=1.8
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.webkit-gtk60+=	webkit-gtk60>=2.40.1
-.include "../../wip/webkit-gtk60/buildlink3.mk"
-.include "../../wip/gjs/buildlink3.mk"
+.include "../../www/webkit-gtk60/buildlink3.mk"
+.include "../../lang/gjs/buildlink3.mk"
 .include "../../x11/gtk4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
