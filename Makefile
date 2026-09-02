@@ -5544,6 +5544,7 @@ SUBDIR+=	spidermonkey24
 SUBDIR+=	spidermonkey31
 SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
+SUBDIR+=	spirv-llvm-translator
 SUBDIR+=	splix
 SUBDIR+=	spot
 SUBDIR+=	spread4

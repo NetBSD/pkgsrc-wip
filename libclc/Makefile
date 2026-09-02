@@ -1,20 +1,16 @@
-# $NetBSD: $
+# $NetBSD$
 
-.include "../../lang/llvm/version.mk"
-# undo version.mk assumptions:
-EXTRACT_ELEMENTS=	# default
-WRKSRC=		${WRKDIR}/${DISTNAME}
+.include "../../wip/llvm/version.mk"
 
-DISTNAME=	libclc-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
-CATEGORIES=	devel
+PKGNAME=	libclc-${LLVM_VERSION}
+CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libclc.llvm.org/
 COMMENT=	OpenCL library
 LICENSE=	apache-2.0
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 
@@ -27,11 +23,11 @@ PYTHON_FOR_BUILD_ONLY=	yes
 PKGCONFIG_OVERRIDE+=	libclc.pc.in
 
 .include "../../devel/cmake/build.mk"
-.include "../../parallel/spirv-tools/buildlink3.mk"
-.include "../../parallel/spirv-llvm-translator/buildlink3.mk"
-.include "../../lang/llvm/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
-.include "../../lang/libunwind/buildlink3.mk"
+.include "../../wip/clang/buildlink3.mk"
+.include "../../wip/libunwind/buildlink3.mk"
+.include "../../wip/llvm/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../parallel/spirv-tools/buildlink3.mk"
+.include "../../wip/spirv-llvm-translator/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

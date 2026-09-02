@@ -6,6 +6,7 @@
 # used by lang/clang-tools-extra
 # used by lang/compiler-rt
 # used by lang/flang
+# used by lang/libclc
 # used by lang/libcxx
 # used by lang/libcxxabi
 # used by lang/libunwind
