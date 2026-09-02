@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/build_config.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/perfetto/include/perfetto/base/build_config.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/perfetto/include/perfetto/base/build_config.h
 @@ -150,8 +150,8 @@
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0

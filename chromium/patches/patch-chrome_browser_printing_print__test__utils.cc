@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/printing/print_test_utils.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/printing/print_test_utils.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/printing/print_test_utils.cc
 @@ -138,7 +138,7 @@ std::unique_ptr<PrintSettings> MakeUserM
      data.Set(kMacSystemPrintDialogDataPrintSettings,

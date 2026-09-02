@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h
 @@ -35,7 +35,7 @@
  #if defined(__ELF__) && !defined(__OpenBSD__) && !defined(__QNX__) &&    \

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc
 @@ -19,6 +19,10 @@
  #include <pthread.h>

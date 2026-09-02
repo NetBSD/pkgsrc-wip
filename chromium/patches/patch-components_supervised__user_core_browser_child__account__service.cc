@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/child_account_service.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/supervised_user/core/browser/child_account_service.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/supervised_user/core/browser/child_account_service.cc
-@@ -174,7 +174,7 @@ void ChildAccountService::OnPrimaryAccou
+@@ -163,7 +163,7 @@ void ChildAccountService::OnPrimaryAccou
  void ChildAccountService::UpdateForceGoogleSafeSearch() {
  // On platforms without web sign-out (where the primary account is always
  // authenticated), there's no need to force SafeSearch.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/font_utils.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- skia/ext/font_utils.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ skia/ext/font_utils.cc
 @@ -25,7 +25,7 @@
  #include "third_party/skia/include/ports/SkFontMgr_mac_ct.h"

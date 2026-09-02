@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/glic_settings_util_desktop.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/glic/glic_settings_util_desktop.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/glic/glic_settings_util_desktop.cc
-@@ -108,7 +108,7 @@ std::string_view GetPlatformHelpSuffix()
+@@ -113,7 +113,7 @@ std::string_view GetPlatformHelpSuffix()
    return "_mac";
  #elif BUILDFLAG(IS_CHROMEOS)
    return "_chromeos";

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -102,7 +102,7 @@ std::optional<FeatureConfig> CreateNewUs
  std::optional<FeatureConfig> GetClientSideFeatureConfig(
@@ -15,7 +15,7 @@ $NetBSD$
    if (kIPHPasswordsManagementBubbleAfterSaveFeature.name == feature->name) {
      FeatureConfig config;
      config.valid = true;
-@@ -2357,7 +2357,7 @@ std::optional<FeatureConfig> GetClientSi
+@@ -2397,7 +2397,7 @@ std::optional<FeatureConfig> GetClientSi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

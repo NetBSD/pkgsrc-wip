@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/webstore_private/webstore_private_api.cc.orig	2026-08-05 20:17:42.000000000 +0000
-+++ chrome/browser/extensions/api/webstore_private/webstore_private_api.cc
-@@ -1180,7 +1180,7 @@ void WebstorePrivateBeginInstallWithMani
+--- extensions/browser/api/webstore_private/webstore_private_api.cc.orig	2026-08-31 22:47:51.000000000 +0000
++++ extensions/browser/api/webstore_private/webstore_private_api.cc
+@@ -1149,7 +1149,7 @@ void WebstorePrivateBeginInstallWithMani
  #if BUILDFLAG(IS_CHROMEOS)
        RequestExtensionApproval(contents);
        return;

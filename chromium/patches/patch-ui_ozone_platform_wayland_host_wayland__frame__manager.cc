@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_frame_manager.cc
 @@ -5,7 +5,9 @@
  #include "ui/ozone/platform/wayland/host/wayland_frame_manager.h"

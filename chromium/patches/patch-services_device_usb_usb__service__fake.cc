@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service_fake.cc.orig	2026-08-07 09:53:45.818104353 +0000
+--- services/device/usb/usb_service_fake.cc.orig	2026-09-02 07:37:51.566001061 +0000
 +++ services/device/usb/usb_service_fake.cc
 @@ -0,0 +1,49 @@
 +// Copyright 2014 The Chromium Authors

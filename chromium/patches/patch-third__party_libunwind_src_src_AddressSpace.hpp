@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/AddressSpace.hpp.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/libunwind/src/src/AddressSpace.hpp.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/libunwind/src/src/AddressSpace.hpp
 @@ -16,6 +16,7 @@
  #include <stdio.h>

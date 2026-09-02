@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/test_file_util_linux.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/test/test_file_util_linux.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/test/test_file_util_linux.cc
 @@ -57,9 +57,11 @@ bool EvictFileFromSystemCache(const File
    if (fdatasync(fd.get()) != 0) {

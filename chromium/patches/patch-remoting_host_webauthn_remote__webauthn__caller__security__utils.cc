@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -13,11 +13,11 @@
  #include "base/process/process_handle.h"
@@ -29,7 +29,7 @@ $NetBSD$
  
  constexpr auto kAllowedCallerPrograms =
      base::MakeFixedFlatSet<base::FilePath::StringViewType>({
-@@ -105,7 +105,7 @@ bool IsLaunchedByTrustedProcess() {
+@@ -72,7 +72,7 @@ bool IsLaunchedByTrustedProcess() {
  #if !defined(NDEBUG)
    // Just return true on debug builds for the convenience of development.
    return true;

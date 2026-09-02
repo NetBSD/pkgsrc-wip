@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/task_manager_observer.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/task_manager/task_manager_observer.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/task_manager/task_manager_observer.h
 @@ -45,7 +45,7 @@ enum RefreshType {
    // or backgrounded.

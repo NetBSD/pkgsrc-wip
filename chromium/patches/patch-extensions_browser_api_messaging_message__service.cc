@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/messaging/message_service.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- extensions/browser/api/messaging/message_service.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ extensions/browser/api/messaging/message_service.cc
-@@ -89,7 +89,7 @@ const char kReceivingEndIncompatibleMess
+@@ -91,7 +91,7 @@ const char kReceivingEndIncompatibleMess
      "Could not establish connection. Receiving end uses different message "
      "serialization format.";
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  const char kMissingPermissionError[] =
      "Access to native messaging requires nativeMessaging permission.";
  const char kProhibitedByPoliciesError[] =
-@@ -714,7 +714,7 @@ void MessageService::OpenChannelToNative
+@@ -716,7 +716,7 @@ void MessageService::OpenChannelToNative
      return;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

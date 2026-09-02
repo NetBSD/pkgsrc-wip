@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run_internal.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/first_run/first_run_internal.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/first_run/first_run_internal.h
 @@ -72,13 +72,13 @@ FirstRunState DetermineFirstRunState(boo
                                       bool force_first_run,

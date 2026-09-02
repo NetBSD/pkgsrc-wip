@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/address_types.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/crashpad/crashpad/util/misc/address_types.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/crashpad/crashpad/util/misc/address_types.h
 @@ -25,7 +25,7 @@
  #include <mach/mach_types.h>

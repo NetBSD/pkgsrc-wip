@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.h
-@@ -81,7 +81,7 @@ class CollaborationControllerDelegateDes
+@@ -80,7 +80,7 @@ class CollaborationControllerDelegateDes
        std::optional<data_sharing::mojom::GroupActionProgress> progress);
  
    void ShowErrorDialog(const ErrorInfo& error);

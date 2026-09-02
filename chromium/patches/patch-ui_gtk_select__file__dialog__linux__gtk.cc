@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/select_file_dialog_linux_gtk.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/gtk/select_file_dialog_linux_gtk.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/gtk/select_file_dialog_linux_gtk.cc
 @@ -57,7 +57,8 @@ namespace {
  // GTK_RESPONSE_ACCEPT as the default button, which should be avoided to prevent

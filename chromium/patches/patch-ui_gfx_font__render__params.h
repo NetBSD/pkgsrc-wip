@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_render_params.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/gfx/font_render_params.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/gfx/font_render_params.h
 @@ -115,12 +115,12 @@ COMPONENT_EXPORT(GFX)
  FontRenderParams GetFontRenderParams(const FontRenderParamsQuery& query,

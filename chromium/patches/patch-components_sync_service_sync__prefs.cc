@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_prefs.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/sync/service/sync_prefs.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/sync/service/sync_prefs.cc
-@@ -884,7 +884,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
+@@ -882,7 +882,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
            update_selected_types_dict->EnsureDict(
                signin::GaiaIdHash::FromGaiaId(gaia_id).ToBase64());
  

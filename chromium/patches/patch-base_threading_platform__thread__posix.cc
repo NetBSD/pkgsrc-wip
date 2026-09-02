@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_posix.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -6,6 +6,13 @@
  
@@ -31,7 +31,7 @@ $NetBSD$
 @@ -93,6 +101,7 @@ void* ThreadFunc(void* params) {
      // where they were created. This explicitly sets the priority of all new
      // threads.
-     PlatformThread::SetCurrentThreadType(thread_params->thread_type);
+     PlatformThread::SetDefaultThreadType(thread_params->thread_type);
 +#endif
    }
  

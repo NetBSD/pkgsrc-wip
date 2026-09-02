@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
 @@ -350,7 +350,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    contents_view->SetPreferredSize(contents_view->GetSize());

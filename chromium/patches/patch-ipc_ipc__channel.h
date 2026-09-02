@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- ipc/ipc_channel.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ipc/ipc_channel.h
 @@ -168,7 +168,7 @@ class COMPONENT_EXPORT(IPC) Channel fina
    // Generates a channel ID that's non-predictable and unique.

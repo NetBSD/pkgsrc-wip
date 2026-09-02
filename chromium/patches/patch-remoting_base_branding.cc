@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/branding.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/base/branding.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/base/branding.cc
 @@ -10,7 +10,7 @@
  #include "base/path_service.h"

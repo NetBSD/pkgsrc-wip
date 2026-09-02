@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/audio_bus.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- media/base/audio_bus.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ media/base/audio_bus.h
 @@ -110,6 +110,23 @@ class MEDIA_EXPORT AudioBus {
    // Returns the currently used bitstream data.

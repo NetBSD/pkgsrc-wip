@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_epoll.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/message_loop/message_pump_epoll.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/message_loop/message_pump_epoll.cc
 @@ -45,7 +45,7 @@ std::atomic_bool g_use_batched_version =
  std::atomic_bool g_use_poll = false;

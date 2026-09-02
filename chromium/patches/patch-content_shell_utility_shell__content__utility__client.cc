@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/utility/shell_content_utility_client.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- content/shell/utility/shell_content_utility_client.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ content/shell/utility/shell_content_utility_client.cc
-@@ -41,7 +41,7 @@
+@@ -43,7 +43,7 @@
  #include "sandbox/policy/sandbox.h"
  #include "services/test/echo/echo_service.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/test/sandbox_status_service.h"
  #endif
  
-@@ -201,7 +201,7 @@ void ShellContentUtilityClient::ExposeIn
+@@ -212,7 +212,7 @@ void ShellContentUtilityClient::ExposeIn
    binders->Add<mojom::PowerMonitorTest>(
        &PowerMonitorTestImpl::MakeSelfOwnedReceiver,
        base::SingleThreadTaskRunner::GetCurrentDefault());

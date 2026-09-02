@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/accelerator_table.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/accelerator_table.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/accelerator_table.cc
 @@ -77,11 +77,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},
@@ -38,7 +38,7 @@ $NetBSD$
      {ui::VKEY_BROWSER_BACK, ui::EF_NONE, IDC_BACK},
      {ui::VKEY_BROWSER_FORWARD, ui::EF_NONE, IDC_FORWARD},
      {ui::VKEY_BROWSER_HOME, ui::EF_NONE, IDC_HOME},
-@@ -318,7 +318,7 @@ std::vector<AcceleratorMapping> GetAccel
+@@ -321,7 +321,7 @@ std::vector<AcceleratorMapping> GetAccel
                           std::begin(kDevToolsAcceleratorMap),
                           std::end(kDevToolsAcceleratorMap));
  

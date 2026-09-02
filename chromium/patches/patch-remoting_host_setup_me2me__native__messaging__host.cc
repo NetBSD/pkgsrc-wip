@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/me2me_native_messaging_host.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/host/setup/me2me_native_messaging_host.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/host/setup/me2me_native_messaging_host.cc
 @@ -331,7 +331,7 @@ void Me2MeNativeMessagingHost::ProcessSt
                                                    base::DictValue response) {

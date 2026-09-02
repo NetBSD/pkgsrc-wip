@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_drag_context.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/base/x/x11_drag_context.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/base/x/x11_drag_context.cc
 @@ -15,7 +15,7 @@
  #include "ui/gfx/x/connection.h"
@@ -24,7 +24,7 @@ $NetBSD$
        // If the source provided a portal key, retrieve the files now.
        if (target == x11::GetAtom(kMimeTypePortalFileTransfer) ||
            target == x11::GetAtom(kMimeTypePortalFiles)) {
-@@ -193,7 +193,7 @@ void XDragContext::RequestNextTargetOrCo
+@@ -196,7 +196,7 @@ void XDragContext::RequestNextTargetOrCo
    }
  }
  

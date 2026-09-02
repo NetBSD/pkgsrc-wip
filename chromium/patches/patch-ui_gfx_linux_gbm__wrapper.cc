@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/linux/gbm_wrapper.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/gfx/linux/gbm_wrapper.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/gfx/linux/gbm_wrapper.cc
-@@ -341,7 +341,7 @@ class Device final : public ui::GbmDevic
+@@ -346,7 +346,7 @@ class Device final : public ui::GbmDevic
      // of 1x1 BOs which are destroyed before creating the final BO creation used
      // to instantiate the returned GbmBuffer.
      gfx::Size size_for_verification =

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
-@@ -1780,7 +1780,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreateP
+@@ -1747,7 +1747,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreateP
        backend_types = {wgpu::BackendType::D3D12};
  #elif BUILDFLAG(IS_APPLE)
        backend_types = {wgpu::BackendType::Metal};
@@ -15,7 +15,7 @@ $NetBSD$
        if (shared_context_state_->GrContextIsVulkan() ||
            webgpu_on_vk_gl_interop_ ||
            shared_context_state_->IsGraphiteDawnVulkan()) {
-@@ -2106,7 +2106,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
+@@ -2076,7 +2076,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
    }
  
  #if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -120,7 +120,7 @@ const char* const kBadFlags[] = {
+@@ -121,7 +121,7 @@ const char* const kBadFlags[] = {
      extensions::switches::kAllowlistedExtensionID,
  #endif
  

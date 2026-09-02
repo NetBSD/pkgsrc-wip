@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/resource/resource_bundle.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/base/resource/resource_bundle.cc
-@@ -999,7 +999,7 @@ void ResourceBundle::ReloadFonts() {
+@@ -1000,7 +1000,7 @@ void ResourceBundle::ReloadFonts() {
  }
  
  ResourceScaleFactor ResourceBundle::GetMaxResourceScaleFactor() const {

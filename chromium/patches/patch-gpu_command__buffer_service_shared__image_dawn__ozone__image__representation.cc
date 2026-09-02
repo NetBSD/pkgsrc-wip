@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc
-@@ -194,6 +194,7 @@ void DawnOzoneImageRepresentation::EndAc
+@@ -199,6 +199,7 @@ void DawnOzoneImageRepresentation::EndAc
    if (!texture_) {
      return;
    }
@@ -14,7 +14,7 @@ $NetBSD$
    wgpu::SharedTextureMemoryEndAccessState end_access_desc = {};
    wgpu::SharedTextureMemoryVkImageLayoutEndState end_layout{};
    end_access_desc.nextInChain = &end_layout;
-@@ -243,6 +244,12 @@ void DawnOzoneImageRepresentation::EndAc
+@@ -249,6 +250,12 @@ void DawnOzoneImageRepresentation::EndAc
  
    texture_.Destroy();
    texture_ = nullptr;

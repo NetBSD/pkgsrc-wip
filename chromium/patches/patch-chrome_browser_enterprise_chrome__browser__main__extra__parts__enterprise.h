@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.h
 @@ -29,7 +29,7 @@ class ChromeBrowserMainExtraPartsEnterpr
    ~ChromeBrowserMainExtraPartsEnterprise() override;

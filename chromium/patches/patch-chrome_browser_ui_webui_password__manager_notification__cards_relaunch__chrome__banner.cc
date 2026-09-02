@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc.orig	2026-08-05 20:17:42.000000000 +0000
-+++ chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc
-@@ -36,7 +36,7 @@ std::u16string RelaunchChromePromo::GetT
+--- chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc.orig	2026-08-31 22:47:51.000000000 +0000
++++ chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc
+@@ -37,7 +37,7 @@ std::u16string RelaunchChromeBanner::Get
    return l10n_util::GetStringUTF16(
  #if BUILDFLAG(IS_MAC)
        IDS_PASSWORD_MANAGER_UI_RELAUNCH_CHROME_PROMO_CARD_TITLE
@@ -15,7 +15,7 @@ $NetBSD$
        IDS_PASSWORD_MANAGER_UI_RELAUNCH_CHROME_PROMO_CARD_TITLE_LINUX
  #endif
    );
-@@ -46,7 +46,7 @@ std::u16string RelaunchChromePromo::GetD
+@@ -47,7 +47,7 @@ std::u16string RelaunchChromeBanner::Get
    return l10n_util::GetStringUTF16(
  #if BUILDFLAG(IS_MAC)
        IDS_PASSWORD_MANAGER_UI_RELAUNCH_CHROME_PROMO_CARD_DESCRIPTION

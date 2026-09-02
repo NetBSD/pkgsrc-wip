@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.cc
 @@ -49,7 +49,7 @@
  #include "testing/gtest/include/gtest/gtest.h"

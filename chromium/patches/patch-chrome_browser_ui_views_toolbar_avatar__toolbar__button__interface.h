@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/avatar_toolbar_button_interface.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/views/toolbar/avatar_toolbar_button_interface.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/avatar_toolbar_button_interface.h
 @@ -87,7 +87,7 @@ class AvatarToolbarButtonInterface {
    // Attempts showing the In-Product-Help for profile Switching.

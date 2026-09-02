@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/support_tool/support_tool_util.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/support_tool/support_tool_util.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/support_tool/support_tool_util.cc
-@@ -54,7 +54,7 @@
+@@ -53,7 +53,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_WITH_HW_DETAILS)
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/support_tool/updater_data_collector.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
-@@ -300,7 +300,7 @@ std::unique_ptr<SupportToolHandler> GetS
+@@ -299,7 +299,7 @@ std::unique_ptr<SupportToolHandler> GetS
  #endif  // BUILDFLAG(IS_CHROMEOS_WITH_HW_DETAILS)
          break;
  #endif  // BUILDFLAG(IS_CHROMEOS)
@@ -24,7 +24,7 @@ $NetBSD$
        case support_tool::CHROME_UPDATER:
          handler->AddDataCollector(std::make_unique<UpdaterDataCollector>());
          break;
-@@ -345,7 +345,7 @@ GetAllAvailableDataCollectorsOnDevice() 
+@@ -344,7 +344,7 @@ GetAllAvailableDataCollectorsOnDevice() 
    }
  #endif  // BUILDFLAG(IS_CHROMEOS_WITH_HW_DETAILS)
  #endif  // BUILDFLAG(IS_CHROMEOS)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/common/chrome_paths.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/common/chrome_paths.h
 @@ -55,7 +55,7 @@ enum {
                       // to set policies for chrome. This directory

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/new_tab_footer/footer_controller.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/views/new_tab_footer/footer_controller.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/views/new_tab_footer/footer_controller.cc
-@@ -45,7 +45,7 @@ NewTabFooterController::NewTabFooterCont
+@@ -46,7 +46,7 @@ NewTabFooterController::NewTabFooterCont
        base::BindRepeating(&NewTabFooterController::UpdateFooterVisibilities,
                            weak_factory_.GetWeakPtr(),
                            /*log_on_load_metric=*/false));

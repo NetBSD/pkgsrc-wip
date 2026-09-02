@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/user_permission_service_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/device_signals/core/browser/user_permission_service_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/device_signals/core/browser/user_permission_service_impl.cc
 @@ -87,7 +87,7 @@ bool UserPermissionServiceImpl::ShouldCo
           consent_required_by_dependent_policy;

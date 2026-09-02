@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
 @@ -84,7 +84,7 @@
  #endif
@@ -42,7 +42,7 @@ $NetBSD$
    shell_integration::DefaultWebClientState default_state =
        shell_integration::GetDefaultBrowser();
    base::UmaHistogramEnumeration("DefaultBrowser.State", default_state,
-@@ -1194,11 +1194,11 @@ void ChromeBrowserMainExtraPartsMetrics:
+@@ -1190,11 +1190,11 @@ void ChromeBrowserMainExtraPartsMetrics:
        std::make_unique<web_app::SamplingMetricsProvider>();
  #endif  // !BUILDFLAG(IS_ANDROID)
  

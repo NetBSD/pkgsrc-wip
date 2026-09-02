@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/extensions/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/extensions/BUILD.gn
-@@ -1526,6 +1526,10 @@ source_set("extensions") {
+@@ -1528,6 +1528,10 @@ source_set("extensions") {
        ]
      }
  

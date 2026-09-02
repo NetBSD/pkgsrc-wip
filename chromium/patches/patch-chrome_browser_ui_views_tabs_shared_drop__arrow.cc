@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/shared/drop_arrow.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/views/tabs/shared/drop_arrow.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/views/tabs/shared/drop_arrow.cc
-@@ -81,7 +81,7 @@ DropArrow::~DropArrow() {
+@@ -82,7 +82,7 @@ DropArrow::~DropArrow() {
  
  // static
  void DropArrow::MaybeAdjustDisplayBounds(gfx::Rect& display_bounds) {

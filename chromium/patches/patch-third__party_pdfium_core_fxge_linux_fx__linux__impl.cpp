@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
-@@ -19,7 +19,7 @@
+@@ -18,7 +18,7 @@
  #include "core/fxge/fx_font.h"
  #include "core/fxge/systemfontinfo_iface.h"
  
@@ -15,17 +15,17 @@ $NetBSD$
  #error "Included on the wrong platform"
  #endif
  
-@@ -182,10 +182,9 @@ class CLinuxPlatform : public CFX_GEModu
-   std::unique_ptr<SystemFontInfoIface> CreateDefaultSystemFontInfo() override {
-     auto pInfo = std::make_unique<CFX_LinuxFontInfo>();
-     if (!pInfo->ParseFontCfg(CFX_GEModule::Get()->GetUserFontPaths())) {
+@@ -170,10 +170,9 @@ class CLinuxPlatform : public CFX_GEModu
+         pInfo->AddPath(path);
+       }
+     } else {
 -      pInfo->AddPath("/usr/share/fonts");
 -      pInfo->AddPath("/usr/share/X11/fonts/Type1");
 -      pInfo->AddPath("/usr/share/X11/fonts/TTF");
 -      pInfo->AddPath("/usr/local/share/fonts");
-+      pInfo->AddPath("@X11BASE@/lib/X11/fonts/Type1");
-+      pInfo->AddPath("@X11BASE@/lib/X11/fonts/TTF");
-+      pInfo->AddPath("@PREFIX@/share/fonts");
++        pInfo->AddPath("@X11BASE@/lib/X11/fonts/Type1");
++        pInfo->AddPath("@X11BASE@/lib/X11/fonts/TTF");
++        pInfo->AddPath("@PREFIX@/share/fonts");
      }
      return pInfo;
    }

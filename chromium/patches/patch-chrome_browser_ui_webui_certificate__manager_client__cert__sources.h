@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.h
 @@ -19,7 +19,7 @@ CreatePlatformClientCertSource(
          remote_client,

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ media/gpu/vaapi/vaapi_video_decoder.cc
-@@ -800,7 +800,7 @@ void VaapiVideoDecoder::ApplyResolutionC
+@@ -802,7 +802,7 @@ void VaapiVideoDecoder::ApplyResolutionC
    const gfx::Size decoder_natural_size =
        aspect_ratio_.GetNaturalSize(decoder_visible_rect);
  

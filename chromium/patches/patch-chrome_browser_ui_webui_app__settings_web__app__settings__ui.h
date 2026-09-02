@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/app_settings/web_app_settings_ui.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/webui/app_settings/web_app_settings_ui.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/webui/app_settings/web_app_settings_ui.h
 @@ -14,13 +14,13 @@
  #include "ui/webui/mojo_web_ui_controller.h"

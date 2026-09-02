@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/switches.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/host/base/switches.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/host/base/switches.cc
 @@ -25,13 +25,13 @@ const char kProcessTypeEvaluateCapabilit
  const char kProcessTypeFileChooser[] = "file_chooser";

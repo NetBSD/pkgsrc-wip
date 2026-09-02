@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- content/common/features.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ content/common/features.cc
-@@ -209,7 +209,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
+@@ -222,7 +222,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -320,12 +320,12 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+@@ -302,12 +302,12 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
                          FontDataServiceTypefaceType::kDwrite,
                          &font_data_service_typeface);
  #endif  // BUILDFLAG(IS_WIN)
@@ -30,7 +30,7 @@ $NetBSD$
  BASE_FEATURE(kFontDataServiceLinux, base::FEATURE_ENABLED_BY_DEFAULT);
  BASE_FEATURE_ENUM_PARAM(FontDataServiceTypefaceType,
                          kFontDataServiceTypefaceType,
-@@ -348,11 +348,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+@@ -330,11 +330,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
  BASE_FEATURE(kFontDataServiceForCSSLocalFonts,
               base::FEATURE_DISABLED_BY_DEFAULT);
  

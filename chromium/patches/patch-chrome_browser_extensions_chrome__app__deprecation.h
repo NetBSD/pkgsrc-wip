@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/chrome_app_deprecation.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/extensions/chrome_app_deprecation.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/extensions/chrome_app_deprecation.h
 @@ -24,7 +24,7 @@ namespace testing {
  extern bool g_enable_chrome_apps_for_testing;

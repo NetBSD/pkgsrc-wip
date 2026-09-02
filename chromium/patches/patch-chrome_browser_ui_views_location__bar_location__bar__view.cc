@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/location_bar/location_bar_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/views/location_bar/location_bar_view.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/views/location_bar/location_bar_view.cc
-@@ -1921,7 +1921,7 @@ void LocationBarView::OnPopupStateChange
+@@ -1817,7 +1817,7 @@ void LocationBarView::OnPopupStateChange
      }
    }
  

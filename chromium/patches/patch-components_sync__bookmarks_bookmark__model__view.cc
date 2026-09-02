@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_bookmarks/bookmark_model_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/sync_bookmarks/bookmark_model_view.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/sync_bookmarks/bookmark_model_view.cc
 @@ -9,7 +9,7 @@
  #include "components/bookmarks/browser/bookmark_model.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/new_tab_page/modules/file_suggestion/drive_service.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/new_tab_page/modules/file_suggestion/drive_service.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/new_tab_page/modules/file_suggestion/drive_service.cc
 @@ -38,7 +38,7 @@
  #include "services/network/public/cpp/resource_request.h"

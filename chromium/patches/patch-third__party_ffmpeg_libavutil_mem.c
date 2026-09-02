@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/mem.c.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/ffmpeg/libavutil/mem.c.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/ffmpeg/libavutil/mem.c
 @@ -33,9 +33,6 @@
  #include <stdlib.h>

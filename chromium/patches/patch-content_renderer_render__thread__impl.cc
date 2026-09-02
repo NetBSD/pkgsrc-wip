@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/render_thread_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ content/renderer/render_thread_impl.cc
 @@ -206,6 +206,8 @@
  
