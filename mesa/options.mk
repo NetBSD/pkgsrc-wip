@@ -54,9 +54,6 @@ PLIST_VARS+=	r600 radeonsi
 # Windowing systems
 PLIST_VARS+=	glx
 
-# Misc. features
-PLIST_VARS+=	vdpau
-
 #
 # ELF TLS support
 #
@@ -71,11 +68,11 @@ PLIST_VARS+=	iris
 .if !empty(PKG_OPTIONS:Mllvm)
 MESON_ARGS+=		-Dllvm=enabled
 .  include "../../devel/libelf/buildlink3.mk"
-.  include "../../lang/llvm/buildlink3.mk"
-.  include "../../wip/libclc/buildlink3.mk"
-.  include "../../parallel/spirv-tools/buildlink3.mk"
-.  include "../../lang/libunwind/buildlink3.mk"
 .  include "../../lang/clang/buildlink3.mk"
+.  include "../../lang/libclc/buildlink3.mk"
+.  include "../../lang/libunwind/buildlink3.mk"
+.  include "../../lang/llvm/buildlink3.mk"
+.  include "../../parallel/spirv-tools/buildlink3.mk"
 
 GALLIUM_DRIVERS+=		llvmpipe
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
@@ -119,14 +116,6 @@ MESA_PLATFORMS+=	x11
 PLIST.glx=		yes
 .  if ${MESALIB_SUPPORTS_DRI} == "yes"
 MESON_ARGS+=		-Dglx=dri
-#.    include "../../multimedia/libvdpau/available.mk"
-#.    if ${VDPAU_AVAILABLE} == "yes"
-#MESON_ARGS+=		-Dgallium-vdpau=enabled
-#PLIST.vdpau=		yes
-#.      include "../../multimedia/libvdpau/buildlink3.mk"
-#.    else
-MESON_ARGS+=		-Dgallium-vdpau=disabled
-#.    endif
 .  endif
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXdamage/buildlink3.mk"

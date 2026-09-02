@@ -1,12 +1,12 @@
 $NetBSD: distinfo,v 1.166 2023/07/18 19:33:31 ryoon Exp $
 
-BLAKE2s (mesa-25.2.7.tar.xz) = 64701bc18f7a56835a99decae90e2dcf27fbd6b505c0184b92f6b728321345bc
-SHA512 (mesa-25.2.7.tar.xz) = 87dd815e0d11d6ec0eb969ee93d3f376103bb899d90599e0b7902394e41c58139384df79f89633e132ca969348d3320f55308a74651d409b454d51f1bcda27bc
-Size (mesa-25.2.7.tar.xz) = 43783492 bytes
+BLAKE2s (mesa-25.3.6.tar.xz) = 5c6ac9a27f693eb4baf9a2fbb0e7c205cf560ee3ad333b55978ee1f3157792d5
+SHA512 (mesa-25.3.6.tar.xz) = 73620003e1e67c6b5ad076afb19e0b250214cfb6ed830166fb70058173ec3b19a2a8f5b5a78d8cce7a70745f5e4fa439913d15d8b38ca0002455b238f5865d38
+Size (mesa-25.3.6.tar.xz) = 43485532 bytes
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = c982acaf2246858a06a52f548b6103800c0d7c45
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = c6958cf29da9154c673f8c64790ac2bb46ed74bd
 SHA1 (patch-src_gallium_drivers_r600_sfn_sfn__valuefactory.cpp) = 14a0bc9f0cb7d0f4bc7ba8de49cf162af4e27ddf
 SHA1 (patch-src_glx_glxclient.h) = 4812c1b17bfff6cb43192790aa5cfee5c6c3149d
 SHA1 (patch-src_glx_glxcurrent.c) = be95c084b834275ca65a38f446487c68889e1ab5
 SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
-SHA1 (patch-src_util_os__file.c) = 6761051028c97f763075fd7526373e9fa131be08
+SHA1 (patch-src_util_os__file.c) = c80d88255a8f800d1e36fc199f3869ecdb61d203

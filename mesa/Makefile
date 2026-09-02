@@ -1,6 +1,6 @@
-# $NetBSD: $
+# $NetBSD$
 
-DISTNAME=	mesa-25.2.7
+DISTNAME=	mesa-25.3.6
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
@@ -155,7 +155,6 @@ CONF_FILES+=	${EGDIR}/00-mesa-defaults.conf ${PKG_SYSCONFDIR}/drirc
 INSTALLATION_DIRS+=	${EGDIR}
 
 PYTHON_FOR_BUILD_ONLY=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/glesv1_cm.pc

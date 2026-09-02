@@ -1,22 +1,13 @@
 $NetBSD$
 
---- src/util/os_file.c.orig	2025-01-22 18:12:23.000000000 +0000
+Support NetBSD.
+
+--- src/util/os_file.c.orig	2026-02-19 18:55:18.000000000 +0000
 +++ src/util/os_file.c
-@@ -224,6 +224,10 @@ typedef void *kvaddr_t;
+@@ -320,6 +320,19 @@ error:
+    close(efd);
  
- #endif /* DETECT_OS_DRAGONFLY || DETECT_OS_FREEBSD */
- 
-+#if DETECT_OS_NETBSD
-+#include <sys/stat.h>
-+#endif
-+
- int
- os_same_file_description(int fd1, int fd2)
- {
-@@ -263,6 +267,19 @@ os_same_file_description(int fd1, int fd
-       return -1;
- 
-    return (fd1_kfile < fd2_kfile) | ((fd1_kfile > fd2_kfile) << 1);
+    return r;
 +#elif DETECT_OS_NETBSD
 +   struct stat st1, st2;
 +
