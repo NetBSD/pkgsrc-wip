@@ -12,4 +12,5 @@
 - Test.
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2026-39863, CVE-2026-39864
+  CVE-2026-39863, CVE-2026-39864, CVE-2026-52022, CVE-2026-52023,
+  CVE-2026-82608
