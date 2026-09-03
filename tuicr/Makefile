@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tuicr-0.23.1
+DISTNAME=	tuicr-0.25.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agavra/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
