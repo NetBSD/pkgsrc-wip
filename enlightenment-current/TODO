@@ -12,3 +12,15 @@ Build on:
 ### Notes: 2024-05-19 (matthewda)
 - disable glib mainloop on NetBSD - cpu usage decreases.
 - opengl seems to be working on NetBSD
+
+### Notes: 2026-09-03 (moihack)
+- OpenGL acceleration works but in Intel N3540 (Baytrail) HD graphics
+can cause graphic glitches when the mixer applet is left in the panel. 
+Temporary remedy is to remove the mixer applet permanently from the panel,
+if you find glitches and/or enlightenment desktop stays at a black screen 
+when composition is HW accelerated.
+Probably only cauase by the troublesome Baytrail graphcis though and may
+never happen with other GPUs.
+
+- Wayland is entirely untested
+
