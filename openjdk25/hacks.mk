@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2025/12/24 16:11:56 ryoon Exp $
+# $NetBSD: $
 
 .if !defined(OPENJDK25_HACKS_MK)
 OPENJDK25_HACKS_MK=	# empty

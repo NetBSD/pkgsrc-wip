@@ -9,7 +9,7 @@ GITHUB_TAG=	jdk-25.0.4+7-1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
-COMMENT=	Open-source implementation of the Java Platform, 25 LTS
+COMMENT=	Open-source implementation of the Java Platform, 25
 LICENSE=	gnu-gpl-v2
 
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -120,7 +120,8 @@ CWRAPPERS_APPEND.cxx+=	-mstackrealign
 CONFIGURE_ARGS+=	--with-toolchain-type=gcc
 .endif
 
-.include "bootstrap.mk"
+#.include "bootstrap.mk"
+ALT_BOOTDIR=/path/to/binary-jdk/jdk-25.0.4.1+1
 .include "options.mk"
 
 SUBST_CLASSES+=		libpath
@@ -136,7 +137,7 @@ SUBST_CLASSES+=			fontpaths
 SUBST_STAGE.fontpaths=		pre-configure
 SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		src/java.desktop/bsd/data/fontconfig/fontconfig.properties
-SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
+#SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
 SUBST_VARS.fontpaths=		PREFIX BUILDLINK_PREFIX.fontconfig
 
 

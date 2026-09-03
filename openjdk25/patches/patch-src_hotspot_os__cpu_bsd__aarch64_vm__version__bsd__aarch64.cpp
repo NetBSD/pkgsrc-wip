@@ -2,10 +2,10 @@ $NetBSD: patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp,v 
 
 Add runtime CPU detection support for NetBSD.
 
---- src/hotspot/os_cpu/bsd_aarch64/vm_version_bsd_aarch64.cpp.orig	2026-08-16 10:56:39.893223726 +0000
+--- src/hotspot/os_cpu/bsd_aarch64/vm_version_bsd_aarch64.cpp.orig	2026-07-24 17:22:09.000000000 +0000
 +++ src/hotspot/os_cpu/bsd_aarch64/vm_version_bsd_aarch64.cpp
 @@ -27,6 +27,13 @@
- #include "precompiled.hpp"
+ #include "runtime/java.hpp"
  #include "runtime/os.hpp"
  #include "vm_version_aarch64.hpp"
 +#if defined(__NetBSD__)
@@ -18,7 +18,7 @@ Add runtime CPU detection support for NetBSD.
  
  void VM_Version::get_compatible_board(char *buf, int buflen) {
    assert(buf != nullptr, "invalid argument");
-@@ -541,6 +548,98 @@ void VM_Version::get_os_cpu_info() {
+@@ -545,6 +552,98 @@ void VM_Version::get_os_cpu_info() {
    }
  #endif // __FreeBSD__
  #endif // __FreeBSD__ || __OpenBSD__

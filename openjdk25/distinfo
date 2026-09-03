@@ -1,28 +1,17 @@
 $NetBSD: distinfo,v 1.17 2026/08/16 11:54:29 tnn Exp $
 
-BLAKE2s (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 017a9d787a34faa997d72ac69bcafd9c8ab72354e3a1b751d1cb5d376b364f72
-SHA512 (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 7ec4208363f44a378674a2b87687ab7facb60bf73118ebd4bec35f7912f073365b36efc4c4b3c034bc448139cb81106e18d6d3b1db45f4ab086ce1ed72bc21bf
-Size (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 113417260 bytes
-BLAKE2s (bootstrap-jdk-1.21.0.1.12-netbsd-9-i386-20231207.tar.xz) = 6df557871e6795552305b28d778bcf8724b06e981ec72b35d2e5406cf1f25591
-SHA512 (bootstrap-jdk-1.21.0.1.12-netbsd-9-i386-20231207.tar.xz) = 15d1e8c3b9e440eb446857c42528d5d409baa6b173742930ec5dfe55ba1501e49af789ea75c8cc78eba6b977d7be2b2b4854d9657d75095c55d3941370ff7b94
-Size (bootstrap-jdk-1.21.0.1.12-netbsd-9-i386-20231207.tar.xz) = 111820092 bytes
-BLAKE2s (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 0ee9c4b9d6e62a67af62d62121769121d475e9c3a8d7c25a32cd70f62d01b873
-SHA512 (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 7b8b17b9a077ea45d92ad9c855df6f831d0f1233166cf9e1af0e16ed0a747575be0a361c398b981d59aee2c09f1ea3e1dcceef68c9876a6efce3c6a94b7c7e50
-Size (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 112607360 bytes
 BLAKE2s (jdk25u-jdk-25.0.4-7-1.tar.gz) = db81e919589070cbef63d5f4df43a690cb5119a72f75b12eb1a289621b4e2b97
 SHA512 (jdk25u-jdk-25.0.4-7-1.tar.gz) = ac564673ce14b192f3136d3d92e6125d412f1f449b3fcbe1f47dd0af7a6ccf6ec4a8f4c5074dcab17faf09fc2df54e0430c1e28ea7b8e171169ad97f2213b3fe
 Size (jdk25u-jdk-25.0.4-7-1.tar.gz) = 119810522 bytes
-SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
-SHA1 (patch-make_autoconf_flags-cflags.m4) = 2777471821988895f5ae1be33b1c92b7386b068a
+SHA1 (patch-make_autoconf_buildjdk-spec.gmk.template) = 6edee4455dff6f967b6a209c18824b780b5fae8b
+SHA1 (patch-make_autoconf_flags-cflags.m4) = 7b77e6688805e4c290b5a5948c054463225ccd2d
 SHA1 (patch-make_autoconf_hotspot.m4) = b3d70d7def7b4b0c4ae2632be75bfbe97f931879
 SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 5f5b638a08abf2f2066a122a825cfa3db9e95139
 SHA1 (patch-make_autoconf_lib-freetype.m4) = bd791b99e4fd87f24432831fba1e814dd199445f
 SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
-SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
-SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = 3e0597bf836b23ae1a808834a0c1a9874ae47915
+SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = 989bd899a7a65ad0e498dc9a4b377cd3f511d4d8
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 5561ed502aa925cd3d0514c7ec298e0491d14ffc
-SHA1 (patch-src_hotspot_share_runtime_threadWXSetters.inline.hpp) = f704bb060803e500415b5d300e26857cf7288ca5
 SHA1 (patch-src_java.desktop_bsd_data_fontconfig_fontconfig.properties) = 32eda43f536dc3a9afb4f1f5f7acae8cb020d546
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = 4a65df0bf84af967f230636f1da1ec75fbb3f691
 SHA1 (patch-src_java.desktop_unix_native_libpipewire_include_spa_utils_string.h) = f677c9b907b285d6b84de65396f50e2a5e52caba

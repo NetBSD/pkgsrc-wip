@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2025/08/21 02:50:14 pho Exp $
+# $NetBSD: $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
 PKG_FAIL_REASON+=		"Only supports NetBSD >= 9"

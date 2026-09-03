@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- make/autoconf/buildjdk-spec.gmk.template.orig	2026-07-24 17:22:09.000000000 +0000
++++ make/autoconf/buildjdk-spec.gmk.template
+@@ -95,8 +95,9 @@ ENABLE_DEBUG_SYMBOLS := false
+ # Save speed and disk space by not enabling debug symbols for the buildjdk
+ ENABLE_DEBUG_SYMBOLS := false
+ 
+-JVM_VARIANTS := server
+-JVM_VARIANT_MAIN := server
++JVM_VARIANTS :=  @JVM_VARIANTS@
++JVM_VARIANT_MAIN := @JVM_VARIANT_MAIN@
++JVM_FEATURES_zero := g1gc serialgc zero
+ JVM_FEATURES_server := cds compiler1 compiler2 g1gc serialgc
+ 
+ # Some users still set EXTRA_*FLAGS on the make command line. Must

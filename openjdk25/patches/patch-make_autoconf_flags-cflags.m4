@@ -2,7 +2,7 @@ $NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.2 2024/10/01 14:49:40 ryoon Exp
 
 We prefer to use explicit run paths.
 
---- make/autoconf/flags-cflags.m4.orig	2024-07-27 15:26:53.000000000 +0000
+--- make/autoconf/flags-cflags.m4.orig	2026-07-24 17:22:09.000000000 +0000
 +++ make/autoconf/flags-cflags.m4
 @@ -40,8 +40,8 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      # --disable-new-dtags forces use of RPATH instead of RUNPATH for rpaths.
@@ -13,9 +13,9 @@ We prefer to use explicit run paths.
 +    SET_EXECUTABLE_ORIGIN='@COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib @COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib/server'
 +    SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
      SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
-     SET_SHARED_LIBRARY_MAPFILE='-Wl,-version-script=[$]1'
  
-@@ -65,20 +65,13 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
+   elif test "x$TOOLCHAIN_TYPE" = xclang; then
+@@ -62,19 +62,12 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'
@@ -25,7 +25,6 @@ We prefer to use explicit run paths.
          SET_EXECUTABLE_ORIGIN="$SET_EXECUTABLE_ORIGIN -Wl,--disable-new-dtags"
        fi
        SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
-       SET_SHARED_LIBRARY_MAPFILE='-Wl,-version-script=[$]1'
 -
 -      # arm specific settings
 -      if test "x$OPENJDK_TARGET_CPU" = "xarm"; then
@@ -37,4 +36,4 @@ We prefer to use explicit run paths.
 +      SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
      fi
  
-   elif test "x$TOOLCHAIN_TYPE" = xxlc; then
+   elif test "x$TOOLCHAIN_TYPE" = xmicrosoft; then

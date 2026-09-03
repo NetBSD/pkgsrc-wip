@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/08/11 18:06:32 pho Exp $
+# $NetBSD: $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk25
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
