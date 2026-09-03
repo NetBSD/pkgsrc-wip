@@ -14,3 +14,11 @@ Build on:
 - Add another OS support
 
 - There are ctype(3) abuses, fix them!
+
+- efreetd (src/lib/efreet) - Crashing on enlightenment desktop start, because
+of exhausting all files descriptors. Related to similar issue from FreeBSD:
+https://forums.freebsd.org/threads/enlightenment-application-menu-icons-missing-due-to-efreetd-crashing.80743/ 
+Temporary remedies:
+i) do not install huge icon themes (like Breeze)
+ii) you can increase kern.maxfiles and/or ulimit to file descriptors
+won't get exhausted.
