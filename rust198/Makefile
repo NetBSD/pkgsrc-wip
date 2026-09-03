@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.360 2026/05/14 16:41:22 ryoon Exp $
 
-DISTNAME=	rustc-1.98.0-src
+DISTNAME=	rustc-1.98.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.rust-lang.org/
