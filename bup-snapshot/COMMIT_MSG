@@ -1,3 +1,291 @@
 sysutils/bup: Update to 0.34
 
-[steal from notes/0.34-from-0.33.md after it is written]
+Untrimmed upstream NEWS:
+
+Notable changes in 0.34 since 0.33.10
+=====================================
+
+May require attention
+---------------------
+
+* The minimum Python version has been raised from 3.7 to 3.8, and the
+  sqlite3 module is now required (to support `--rewrite/--repair`).
+
+* The new `bup get --repair` acts like a `--rewrite` (see below) while
+  also attempting to detect and fix known issues during the transfer,
+  for example, replacing paths with missing contents with synthesized
+  "repair files". See `bup-get`(1) for additional information.  This
+  can be used to repair repositories affected by the problem described
+  in the [0.33.5 release notes](note/0.33.5-from-0.33.4.md).
+
+* Versions of `bup` at or after 0.25 and before 0.30.1 might (rarely)
+  drop metadata entries for non-directories. That makes the metadata
+  for all of the other non-directory paths in the same directory
+  unusable (ambiguous). `bup` now detects this and treats it as an
+  error, given the potential risks with respect to incorrect
+  ownership, permissions, etc. The new `bup validate-refs` command can
+  detect the problem and `bup get --repair` can repair affected saves.
+
+* `bup init -r` (`--remote`) now only initializes the remote
+  repository, not the local and remote repositories, so `bup init -r
+  host:remote` and `bup -d local init -r host:remote` will only
+  initialze the `remote` repository, not `~/.bup` and `./local`
+  respectively.
+
+* Following POSIX `ls`, `bup ls -l` no longer dereferences symlinks,
+  for example for `bup ls -l save/latest` (`bup ls -l save/latest/`
+  still does).
+
+* `bup` now prefers the XDG cache location (typically
+  `~/.cache/bup/remote/`) for the client index cache, but existing
+  `$BUP_DIR/index-cache` directories (defaulting to
+  `~/.bup/index-cache`) will take precedence.  See `bup-config`(5) for
+  additional information.
+
+* `bup` will now correctly disambiguate save names on a given branch
+  that have the same timestamp (committer time), even when the saves
+  are not adjacent. `bup` disambiguates duplicates by adding a unique
+  trailing integer, e.g. `archive/2025-03-29-124014-1`,
+  `archive/2025-03-29-124014-2`, and previously, it wouldn't notice
+  the duplication unless one save was the parent of the other. That's
+  typically the case unless the system clock has been changed, or
+  commands like `bup get --pick` have been used.
+
+* `bup-prune-older`(1) now clarifies that the current implementation
+  expects every save in a branch to have a date that's newer than its
+  parent.
+
+* The build system (e.g. `./configure`) no longer tries to find a
+  suitable make, and we no longer try to redirect a non-GNU make to
+  GNU make.  Whatever make you invoke must be GNU make >= 4.2.  On
+  many systems that will be `make` or `gmake`.
+
+* `bup fsck --repair` promises to exit with a status of 1 whenever
+  repairs are needed and successful, and no other errors occur.
+
+* `bup fsck --quick` now checks the packfile indexes too.  Previously
+  it only checked the packfiles.
+
+* `bup fsck --generate` and `--repair` now exit immediately with an
+  error when a suitable par2 isn't available.  Previously `--generate`
+  would just print "skipped".
+
+* `bup fsck` now only accepts `*.pack` arguments, and it no longer
+  generates recovery information for the `*.idx` files so that all of
+  the recovery blocks will protect the packfile.  This is safer given
+  that the `.idx` files can be (and now are) trivially regenerated
+  from the packfiles during `--repair` when needed.
+
+* `bup gc` now removes all pack file related files
+  (e.g. `pack-HASH.*`) when removing a packfile.  Previously it did
+  not, leaving behind, for example `bup-fsck` generated recovery
+  files.  In addition, `bup fsck` will report lingering files when
+  asked to scan the entire repository,
+
+* `bup ls` and `bup xstat` now print device values (e.g. stat st_rdev)
+  as their dev\_t integers, not as a "major,minor" pair, since the
+  behavior of `major()/minor()` is not defined by posix, and the sign
+  and size of dev\_t and the major/minor result varies across
+  platforms.
+
+* Some prior exit statuses of 1 have been changed to a different
+  non-zero value.  `bup` is migrating away from exiting with status 1
+  for anything other than "false".  This is used by commands like
+  `verify-ref-links` that need to report a true or false result like
+  `grep` does.
+
+* `bup -?` and `bup --help` now exit with zero status (previously
+  non-zero), and `bup -h` is also supported, mirroring the support for
+  `-h` in subcommands.
+
+* `bup` now only considers the repository's `config` settings.
+  Previously configuration values would be determined by the default
+  `git-config`(1) worktree/local/global/system hierarchy, meaning, for
+  example, that the host's (local or remote) `~/.gitconfig` or
+  `/etc/gitconfig` would also be consulted.  The only existing
+  affected value is `pack.packSizeLimit`.
+
+* `bup` now only considers a `pack.packSizeLimit` set in the
+  destination repository.
+
+* Support for Linux file attrs (`lsattr`(1)/`chattr`(1)) has been
+  restored on big-endian systems where the size of a long is greater
+  than the size of an int.  The underlying kernel issue has been fixed
+  [here](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=31070f6ccec09f3bd4f1e28cd1e592fa4f3ba0b6):
+
+      31070f6ccec09f3bd4f1e28cd1e592fa4f3ba0b6
+      fuse: Fix parameter for FS_IOC_{GET,SET}FLAGS
+
+  and backported to at least 5.7.10, 5.4.53, and 4.9.231.  If you
+  still have an affected kernel, please upgrade or you may encounter
+  incorrect values.
+
+* `bup prune-older --pretend` now puts just one space, not two,
+  between the plus or minus and the save name in its output, matching
+  what `bup-prune-older(1)` specifies.
+
+General
+-------
+
+* Repositories should now have a unique `bup.repo.id` set in the
+  config. `bup init` automatically adds one both during initial
+  creation, or when run again on an existing repository. See
+  `bup-config`(5) for more information.
+
+* The `--remote` (`-r`) argument interpretation has changed.  The
+  value is treated as a URL if it begins with a syntactically valid
+  URL scheme prefix that contains an "authority" (meaning that it
+  begins with `SCHEME://` as `ssh://...`  does) and anything else is
+  interpreted as a `[user@]host:[path]` where the `host` is no longer
+  optional).  `file:` URLs are no longer allowed; the semantics were
+  potentially surprising (e.g. `file://p` would ssh to host `p`).  Use
+  `ssh:` URLs instead.  The URL support, though long standing, was
+  previously undocumented.  See REMOTE OPTIONS in `bup`(1) for further
+  information.
+
+* The REMOTE directory name in the client index cache (typically
+  `~/.bup/index-cache/REMOTE`) is now the `bup.repo.id` when the
+  remote repository provides, one and existing directories will be
+  renamed when appropriate and possible.
+
+* `bup init DIRECTORY` is now supported, and places the repository in
+  the given `DIRECTORY` which takes precedence over `-d` and
+  `BUP_DIR`.
+
+* `bup init` now configures `init.defaultBranch` to avoid newer git
+  versions describing ways to change the default branch.
+
+* The deduplication granularity can now be changed by a new
+  `bup.split.files` configuration option which defaults to `legacy:13`
+  (the current behavior), but should probably be set to a higher value
+  like `legacy:15` or `legacy:16` in new repositories (say via
+  `git-config --file REPO/config bup.split.files legacy:16`).  The
+  default for new repositories will eventually be raised. See
+  `bup-config`(5) for additional information.
+
+* `bup` will split directories when `bup.split.trees` is `true`. This
+  can notably decrease the size of new data added to the repository
+  when large directories change (e.g. large active Maildirs). See
+  `bup-config`(5) for additional information.
+
+* `bup get` picks and appends can `--rewrite` the data being
+  transferred to respect the destination repository's configuration,
+  e.g. its `bup.split.files` and `bup.split.trees` settings. See
+  `bup-get`(1) for additional information.
+
+* `bup get` has added a `-S, --source-url URL` option which can
+   specify a local or remote source repository (as compared to
+   `-s/--source` which only allows a path).  This should usually be
+   preferred to `bup on HOST get` since it requires less trust in the
+   remote, and avoids the need for a remote index-cache.  See
+   `bup-get(1)` for additional information.
+
+* `bup` now verifies the hash of the incoming remote data when
+  requesting a specific hash (rather than an arbitrary "ref").
+  Combined with `--source-url`, this further decreases the trust
+  required in a remote.
+
+* `bup on` is substantially stricter.  Now it only allows a subset of
+  bup's subcommands, but all of those that were documented in
+  `bup-on`(1) still work.  Previously all comands we allowed, even
+  those that wouldn't work correctly.  The remaining commands, except
+  `get`, require less trust in the remote because the local server now
+  rejects write operations for commands that shouldn't be writing,
+  (e.g. `bup on HOST restore`), and it also disallows updates to any
+  ref other than the `--name` for save and split.  Please let us know
+  if these changes cause difficulties.
+
+* The default pack compression level can now be configured via either
+  `pack.compression` or `core.compression`.  See `bup-config`(5) for
+  additional information.
+
+* `bup web` has been improved.  It should better preserve page
+  settings while navigating, and has added settings to toggle the
+  display of various types of information, including path sizes,
+  hashes, and metadata.  Symlinks targets are now shown, and the
+  layout, in general, has been changed (including trivial support for
+  dark mode).
+
+* `bup` no longer tries to "filter" output when running
+  interactively. Previously it would try to prevent or at least
+  mitigate any intermingling of output (lines) from itself and
+  children (e.g. par2, git, etc.), for example with respect to
+  progress-style output relying on '\r' (carriage returns). The
+  previous attempts have been complex and fragile and it's not clear
+  they've been worth the cost. Our hope is to handle any issues that
+  still arise in some simpler way.
+
+* The server "mode" can now be set by a new
+  `bup.server.deduplicate-writes` configuration option. See
+  `bup-config(5)` for additional information.
+
+* A local repository should no longer be required to run `bup index
+  -f` or a remote `save`.
+
+* `bup gc` should now avoid reading data that it doesn't actually
+  need. Previously it would retrieve (and discard) a lot of unneeded
+  blobs during a collection.
+
+* When verbose (via `-v...`), `bup gc` and `bup validate-ref-links` no
+  longer print paths while scanning the repository because earlier git
+  (and then our use of git) didn't allow otherwise.
+
+* The commit message format has changed to place the command in a
+  POSIX quoted `Bup-Argv` trailer (`git-interpret-trailers`(1)) and
+  the version in a `Bup-Version` trailer, but note that the format is
+  not settled, i.e. may continue to change. The command quoting avoids
+  quoting arguments when possible, single quotes when there's no
+  single quote or newline, and falls back to `$'...'` quoting
+  otherwise.
+
+* Many of the paths printed in error and status messages are now POSIX
+  quoted instead of Python "backslashreplace"d, but note that the
+  format is not settled, i.e. may continue to change.
+
+* We assume that Cygwin has long fixed the issue where it might return
+  a negative uid or gid, and the workaround has been removed, but bup
+  should still halt if one is encountered.  This has allowed us to
+  improve performance when handling a lot of stat results (e.g. index
+  traversals), but please let us know if the assumption is incorrect,
+  and we can reintroduce a more narrowly tailored fix.
+
+Bugs
+----
+
+* A bug has been fixed that could cause any internal subcommand
+  (e.g. not `import-rsnapshot`) to hang when running interactively
+  (i.e. with a controlling terminal).
+
+* `bup init -r host:` (without a path) now initializes the default
+  remote repository (remote `BUP_DIR` or `~/.bup`).  Previously it
+  would crash.  This matches the behavior of `-r` for other commands
+  like `bup save -r`.
+
+* When run on an existing repository, `bup init` will no longer change
+  existing `core.logAllRefUpdates` settings.
+
+* `bup rm some/SAVE` should now succeed even if the root metadata (the
+  `some/SAVE/.bupm` file) is missing. Previously it failed with
+  "EOFError('encountered EOF while reading vuint')".
+
+* Remote operations (i.e. those involving `--remote` or `bup on`) that
+  don't need the index-cache no longer populate it.  Previously all of
+  them did.
+
+Build system
+------------
+
+* `./configure` now depends on a bash with support for associative
+  arrays.  Accordingly, `prep-for-macos-build` has been adjusted to
+  install bash via `brew`.
+
+Thanks to (at least)
+====================
+
+Aaron M. Ucko, Alain Cochard, Anton Khirnov, Austin Blatt, Austin
+Schuh, Christian Wolf, Daniel Distler, Ed Maste, Greg Troxel, Jochen
+Sprickerhof, Johannes Berg, Julian Smith, Lucas Nussbaum, Mark Hewitt,
+Michael Tokarev, Michal Karol, Moritz Lell, Nathaniel Hourt, Nix, Phil
+Sutter, Rob Browning, Rob Leslie, Robert Edmonds, Stefan Monnier,
+Thomas Haller, Tomáš Hnyk, and Zachary Dremann
+

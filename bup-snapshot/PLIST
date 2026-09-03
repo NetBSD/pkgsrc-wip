@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/01/03 00:38:38 gdt Exp $
+@comment $NetBSD$
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -90,6 +90,7 @@ man/man1/bup-bloom.1
 man/man1/bup-cat-file.1
 man/man1/bup-daemon.1
 man/man1/bup-damage.1
+man/man1/bup-demux.1
 man/man1/bup-drecurse.1
 man/man1/bup-features.1
 man/man1/bup-fsck.1
@@ -122,6 +123,7 @@ man/man1/bup-tag.1
 man/man1/bup-tick.1
 man/man1/bup-validate-object-links.1
 man/man1/bup-validate-ref-links.1
+man/man1/bup-validate-refs.1
 man/man1/bup-web.1
 man/man1/bup.1
 share/doc/bup/DESIGN.md
