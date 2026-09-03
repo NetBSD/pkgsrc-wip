@@ -5675,6 +5675,7 @@ SUBDIR+=	tabixpp
 SUBDIR+=	tabulate
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tagtool
+SUBDIR+=	tailcat
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tangled

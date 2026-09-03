@@ -1,0 +1,15 @@
+Tailcat is a remix of Tailscale open source pieces to act like netcat, but
+over Tailscale's data plane, without Tailscale's control plane. Tailscale's
+data plane (magicsock, internally) gives you point-to-point
+WireGuard-encrypted tunnels between two machines with DERP as the
+NAT-hole-punching communication side channel and the ultimate
+relay-of-last-resort if NAT traversal fails. Instead of using the Tailscale
+control plane, all tailcat connection metadata is exchanged out of band,
+however you want.
+
+The tailcat CLI (in cmd/tailcat) is built on the tailcat Go library
+(importable as github.com/tailscale/tailcat).
+
+You don't need a Tailscale account, root/admin access on the machine (it
+doesn't alter your machine's routing tables, DNS, etc.). It's just a
+userspace library and CLI tool.

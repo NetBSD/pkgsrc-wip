@@ -1,0 +1,9 @@
+wip/tailcat: Add tailcat-0.5.0
+
+Tailcat is netcat over Tailscale's data plane. It uses WireGuard tunnels with 
+DERP for NAT traversal. No need for Tailscale's control plane: no account, no root,
+no changes to the machine's routing or DNS.
+
+NetBSD needs the bundled wireguard-go module patched in the module cache,
+since its ipc package matches no NetBSD file and its tun package has no
+tun_netbsd.go; see the comment in the Makefile.
