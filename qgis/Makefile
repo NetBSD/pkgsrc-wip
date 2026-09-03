@@ -2,7 +2,7 @@
 
 # This package tracks the current qgis stable branch.
 MINOR=		2
-MICRO=		1
+MICRO=		2
 DISTNAME=	qgis-4.${MINOR}.${MICRO}
 CATEGORIES=	geography
 #MASTER_SITES=	https://qgis.org/downloads/
