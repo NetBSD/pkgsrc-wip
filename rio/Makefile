@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rio-0.4.5
+DISTNAME=	rio-0.5.27
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raphamorim/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -31,6 +31,10 @@ DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
 # Force pkg-config to see only buildlink'd .pc files so fontconfig-sys picks
 # up pkgsrc's libfontconfig.so.1 instead of X11R7's .so.2.
 PKGSRC_MAKE_ENV+=	PKG_CONFIG_LIBDIR=${BUILDLINK_DIR}/lib/pkgconfig
+# /etc/mk.conf declares the X11R7 fontconfig as builtin; without this,
+# buildlink links fontconfig.pc into .x11-buildlink/ and the restricted
+# PKG_CONFIG_LIBDIR above can no longer find it.
+USE_BUILTIN.fontconfig=	no
 
 # Embed rpath for pkgsrc libs so the binary finds them without LD_LIBRARY_PATH.
 RUSTFLAGS+=	-C link-arg=-Wl,-rpath,${PREFIX}/lib
@@ -62,31 +66,31 @@ pre-configure:
 	${SED} -i \
 	    -e 's|target_os = "freebsd"), feature = "vulkan")|target_os = "freebsd", target_os = "netbsd"), feature = "vulkan")|' \
 	    -e 's|Emscripten), feature = "gles")|Emscripten, target_os = "netbsd"), feature = "gles")|' \
-	    ${WRKDIR}/vendor/wgpu-28.0.0/build.rs
+	    ${WRKDIR}/vendor/wgpu-30.0.1/build.rs
 	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
-	    ${WRKDIR}/vendor/wgpu-28.0.0/.cargo-checksum.json
+	    ${WRKDIR}/vendor/wgpu-30.0.1/.cargo-checksum.json
 	# wgpu-core/build.rs: add NetBSD to windows_linux_android alias
 	${SED} -i \
 	    -e 's|target_os = "freebsd") }|target_os = "freebsd", target_os = "netbsd") }|' \
-	    ${WRKDIR}/vendor/wgpu-core-28.0.1/build.rs
+	    ${WRKDIR}/vendor/wgpu-core-30.0.1/build.rs
 	# wgpu-core/Cargo.toml: add NetBSD to target dep + activate wgpu-hal features directly
 	${SED} -i \
 	    -e "s|'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\"))'\.dependencies\.wgpu-core-deps|'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\", target_os = \"netbsd\"))'.dependencies.wgpu-core-deps|" \
 	    -e 's|vulkan = \["wgpu-core-deps-windows-linux-android/vulkan"\]|vulkan = ["wgpu-core-deps-windows-linux-android/vulkan", "wgpu-hal/vulkan"]|' \
-	    ${WRKDIR}/vendor/wgpu-core-28.0.1/Cargo.toml
+	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml
 	${AWK} '/"wgpu-core-deps-emscripten\/gles",$$/ { print; print "    \"wgpu-hal/gles\","; next } { print }' \
-	    ${WRKDIR}/vendor/wgpu-core-28.0.1/Cargo.toml > \
-	    ${WRKDIR}/vendor/wgpu-core-28.0.1/Cargo.toml.new
-	${MV} ${WRKDIR}/vendor/wgpu-core-28.0.1/Cargo.toml.new \
-	    ${WRKDIR}/vendor/wgpu-core-28.0.1/Cargo.toml
+	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml > \
+	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml.new
+	${MV} ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml.new \
+	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml
 	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
-	    ${WRKDIR}/vendor/wgpu-core-28.0.1/.cargo-checksum.json
+	    ${WRKDIR}/vendor/wgpu-core-30.0.1/.cargo-checksum.json
 	# wgpu-core-deps-windows-linux-android/Cargo.toml: unconditional wgpu-hal dependency
 	${SED} -i \
 	    -e "s|\[target\.'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\"))'\.dependencies\.wgpu-hal\]|[dependencies.wgpu-hal]|" \
-	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-28.0.0/Cargo.toml
+	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-30.0.1/Cargo.toml
 	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
-	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-28.0.0/.cargo-checksum.json
+	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-30.0.1/.cargo-checksum.json
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rio \
