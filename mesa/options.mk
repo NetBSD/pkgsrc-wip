@@ -129,7 +129,6 @@ MESON_ARGS+=		-Dglx=dri
 .  include "../../x11/xorgproto/buildlink3.mk"
 .else
 MESON_ARGS+=		-Dglx=disabled
-MESON_ARGS+=		-Dgallium-vdpau=disabled
 .endif
 
 #

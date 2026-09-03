@@ -5,6 +5,7 @@ SHA512 (mesa-25.3.6.tar.xz) = 73620003e1e67c6b5ad076afb19e0b250214cfb6ed830166fb
 Size (mesa-25.3.6.tar.xz) = 43485532 bytes
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = c982acaf2246858a06a52f548b6103800c0d7c45
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = c6958cf29da9154c673f8c64790ac2bb46ed74bd
+SHA1 (patch-src_gallium_auxiliary_vl_vl__csc.c) = 4a67a1ca8ffc10171ccd60123d4222970e5b7a6e
 SHA1 (patch-src_gallium_drivers_r600_sfn_sfn__valuefactory.cpp) = 14a0bc9f0cb7d0f4bc7ba8de49cf162af4e27ddf
 SHA1 (patch-src_glx_glxclient.h) = 4812c1b17bfff6cb43192790aa5cfee5c6c3149d
 SHA1 (patch-src_glx_glxcurrent.c) = be95c084b834275ca65a38f446487c68889e1ab5
