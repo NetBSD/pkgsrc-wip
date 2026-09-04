@@ -5951,7 +5951,6 @@ SUBDIR+=	unmo3
 SUBDIR+=	unnethack
 SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
-SUBDIR+=	unrest
 SUBDIR+=	up
 SUBDIR+=	uperf
 SUBDIR+=	uprof
