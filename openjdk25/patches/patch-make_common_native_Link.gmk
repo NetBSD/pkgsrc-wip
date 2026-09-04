@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix mismerged NetBSD patch (missing hard TAB).
+
+--- make/common/native/Link.gmk.orig	2026-09-04 22:33:36.044154183 +0000
++++ make/common/native/Link.gmk
+@@ -195,7 +195,7 @@ define CreateDynamicLibraryOrExecutable
+           endif
+         endif
+         ifeq ($(OPENJDK_TARGET_OS_ENV), bsd.netbsd)
+-          /usr/sbin/paxctl +m $$@
++	  $$(call ExecuteWithLog, /usr/sbin/paxctl +m $$@)
+         endif
+         ifneq ($(MACOSX_CODESIGN_MODE), disabled)
+           # Remove signature explicitly first to avoid warnings if the linker
