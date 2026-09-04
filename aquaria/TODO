@@ -5,3 +5,14 @@
 
 - Need to build a MESSAGE which describes what you need to do/buy in order
   to actually play the game.
+
+- Error during 'stage-install:
+
+	===> Installing for aquaria-1.1.3nb1
+	=> Generating pre-install file lists
+	make[2]: don't know how to make install/strip. Stop
+
+	make[2]: stopped making "install/strip" in /usr/pkgsrc/wip/aquaria/work/Aquaria-7377ea0a09a7691451e8c00e9a027ccfabeb2a06/cmake-pkgsrc-build
+	*** Error code 2
+
+	Stop.

@@ -13,11 +13,13 @@ COMMENT=	Aquaria Open Source Edition
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	gtar
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+.include "../../devel/cmake/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
