@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	0.25.2
+DISTNAME=	0.26.0
 PKGNAME=	harec-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/harec/archive/
