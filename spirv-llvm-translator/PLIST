@@ -4,5 +4,5 @@ include/LLVMSPIRVLib/LLVMSPIRVExtensions.inc
 include/LLVMSPIRVLib/LLVMSPIRVLib.h
 include/LLVMSPIRVLib/LLVMSPIRVOpts.h
 lib/libLLVMSPIRVLib.so
-lib/libLLVMSPIRVLib.so.21.1
+lib/libLLVMSPIRVLib.so.22.1
 lib/pkgconfig/LLVMSPIRVLib.pc
