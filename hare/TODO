@@ -1,0 +1,8 @@
+Errors found from 'make test' on NetBSD/amd64:
+
+    Failures:
+    os::exec::env: os/exec/env+test.ha:26:15: assertion failed
+    os::shm_get_path: os/+netbsd/shm.ha:132:15: assertion failed
+    os::shm_open: os/+netbsd/shm.ha:116:35: error occurred
+    unix::tty::pty: unix/tty/pty_test+test.ha:11:29: error occurred
+    wordexp::wordexp: wordexp/+test.ha:35:43: error occurred

@@ -1,8 +1,5 @@
 $NetBSD$
 
-BLAKE2s (hare/0.25.2.tar.gz) = e5cb01f4abd5239da6754f2d814f81d86c721a4670b89fc7fe59096c94b81913
-SHA512 (hare/0.25.2.tar.gz) = a72bda105c3bb40c0d43382f10030883d84d2b3511197890a4641eacfc84cbcf8f5aa15391d31e5b04b2e3154f5db0d7d855d08d213f9cd089ad536cbabdcec5
-Size (hare/0.25.2.tar.gz) = 940391 bytes
-BLAKE2s (hare/leap-seconds.list) = 2753d8aae905e76ae9ace1d37b2b4ce95cafc299ff45b01977ee1ddb112c6561
-SHA512 (hare/leap-seconds.list) = ab751e4ecc3ffa119d071896c614bb3c129e3f8109bf7bf5cadf42d268325c27d7af1778335e0df7565866a34ef1d7beda446ad142d7d64a26a5cc5c39559830
-Size (hare/leap-seconds.list) = 5069 bytes
+BLAKE2s (hare/0.26.0.1.tar.gz) = c62d7c67acb302afb098510192bfd892573e64263edee782d9c12cbef49fd863
+SHA512 (hare/0.26.0.1.tar.gz) = 61959ce95814f81e04d62eb783aa4dfd807b96c3bd1ee0ee31667d042c630be1406fb0b944f1b35776f5ce529eb55227fac1d37c30218020edb40c6b66ea6771
+Size (hare/0.26.0.1.tar.gz) = 976995 bytes
