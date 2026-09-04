@@ -1,0 +1,4 @@
+pmonitor executes commands and returns with the exit status of the
+command after completion.  The creation and termination of
+sub-processes is monitored.  If a sub-process of the command hasn't
+terminated, a message is logged.
