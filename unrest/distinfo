@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (unrest-1.tar.gz) = 9c1241ceb9d53feddda0814f3812cc2648608bcf2f7f940976b3aa7496699119
-SHA512 (unrest-1.tar.gz) = 3c526fbbbfdfd77e26c165840f01707c5f9398f35adeeca4162582aed6a3316d3ad1f92904ba4fe60be215de8c198f8081905b9d5a29f6113f1fc0fe83890414
-Size (unrest-1.tar.gz) = 6602663 bytes
+BLAKE2s (unrest-1.1.0.tar.gz) = 47cd04d8363c1aeab4ee9455c989dd50b4388af2b2238c680f75bb0f5cff85e1
+SHA512 (unrest-1.1.0.tar.gz) = 082f3cb2cffc5690b940f37c0108fe6351bef6e6a942a0f68158aed1f46f4f7fd7f0a66188e9c3190491f22894088f1dd7e3832e0d313159a9ce2db48da3e0b4
+Size (unrest-1.1.0.tar.gz) = 315409 bytes

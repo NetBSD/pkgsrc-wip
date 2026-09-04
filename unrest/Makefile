@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	unrest-1
+DISTNAME=	unrest-1.1.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
-GITHUB_TAG=	dressupgeekout-${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pyrodactyl.com/unrest/
