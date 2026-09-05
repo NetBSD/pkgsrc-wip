@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pmonitor ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/pmonitor ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/pmonitor.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
