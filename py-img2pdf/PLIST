@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/img2pdf
+bin/img2pdf-gui
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/img2pdf.py
+${PYSITELIB}/img2pdf.pyc
+${PYSITELIB}/img2pdf.pyo
