@@ -10,8 +10,6 @@ HOMEPAGE=	https://pypi.org/project/img2pdf/
 COMMENT=	Lossless conversion of raster images to PDF
 LICENSE=	gnu-lgpl-v3
 
-USE_TOOLS+=	pkg-config
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-pikepdf-[0-9]*:../../print/py-pikepdf
