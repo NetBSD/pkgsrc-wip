@@ -1,6 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	cockatrice-server-2.10.2
+PKGNAME=	cockatrice-server-3.0.2
+GITHUB_PROJECT=	cockatrice
 
 .include "../../wip/cockatrice/common.mk"
 
