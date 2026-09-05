@@ -1,0 +1,15 @@
+$NetBSD$
+
+Compatibility with newer versions of Boost.
+
+--- CMakeLists.txt.orig	2026-09-04 21:10:43.165668172 -0700
++++ CMakeLists.txt	2026-09-04 21:10:49.357379840 -0700
+@@ -257,7 +257,7 @@
+ include_directories(${ZLIB_INCLUDE_DIRS})
+ list(APPEND PHAETHON_LIBRARIES ${ZLIB_LIBRARIES})
+ 
+-find_package(Boost COMPONENTS system filesystem date_time locale chrono REQUIRED)
++find_package(Boost COMPONENTS filesystem date_time locale chrono REQUIRED)
+ 
+ include_directories(${Boost_INCLUDE_DIRS})
+ link_directories(${Boost_LIBRARY_DIRS})
