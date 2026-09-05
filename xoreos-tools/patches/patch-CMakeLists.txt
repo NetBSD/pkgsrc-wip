@@ -1,0 +1,15 @@
+$NetBSD$
+
+Compatibility with newer versions of Boost.
+
+--- CMakeLists.txt.orig	2026-09-04 21:06:34.916163750 -0700
++++ CMakeLists.txt	2026-09-04 21:06:44.586740550 -0700
+@@ -252,7 +252,7 @@
+ include_directories(${ZLIB_INCLUDE_DIRS})
+ list(APPEND XOREOSTOOLS_LIBRARIES ${ZLIB_LIBRARIES})
+ 
+-find_package(Boost COMPONENTS system filesystem locale REQUIRED)
++find_package(Boost COMPONENTS filesystem locale REQUIRED)
+ 
+ include_directories(${Boost_INCLUDE_DIRS})
+ link_directories(${Boost_LIBRARY_DIRS})

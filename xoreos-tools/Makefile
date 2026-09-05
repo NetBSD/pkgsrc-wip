@@ -14,6 +14,8 @@ EXTRACT_USING=	gtar
 USE_LANGUAGES=	c c++
 CXXFLAGS+=	-fpermissive
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
 .include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

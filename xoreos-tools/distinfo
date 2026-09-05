@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (xoreos-tools-0.0.6.tar.gz) = 5a987aa3e50a25567903ea4c563e3528b255f0316410664ad5025b11c5812333
 SHA512 (xoreos-tools-0.0.6.tar.gz) = cd3f1db7577ee0bd9b2ca63012f7bb33322e1d1249202afd4ac644780d4193ce97e05053b2f8b90085e42703b6fe1aaa50578d57c9eb4527e848cef22606b682
 Size (xoreos-tools-0.0.6.tar.gz) = 6360895 bytes
+SHA1 (patch-CMakeLists.txt) = 5ea53a652ee4a0a4f8f805082cb5d4fba57838b1
