@@ -1,5 +1,7 @@
 $NetBSD: patch-src_java.desktop_unix_native_common_awt_fontpath.c,v 1.1 2023/11/22 14:06:50 ryoon Exp $
 
+Use pkgsrc fonts.
+
 --- src/java.desktop/unix/native/common/awt/fontpath.c.orig	2023-10-23 13:40:41.097871989 +0000
 +++ src/java.desktop/unix/native/common/awt/fontpath.c
 @@ -52,8 +52,8 @@

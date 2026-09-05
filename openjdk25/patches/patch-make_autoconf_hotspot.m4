@@ -1,5 +1,7 @@
 $NetBSD: patch-make_autoconf_hotspot.m4,v 1.1 2023/11/22 14:06:50 ryoon Exp $
 
+Fix buildjdk targeting for 32-bit ARM.
+
 --- make/autoconf/hotspot.m4.orig	2023-10-23 01:33:53.000000000 +0000
 +++ make/autoconf/hotspot.m4
 @@ -112,6 +112,8 @@ AC_DEFUN_ONCE([HOTSPOT_SETUP_MISC],

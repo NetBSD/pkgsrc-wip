@@ -1,5 +1,7 @@
 $NetBSD: patch-src_jdk.attach_bsd_native_libattach_VirtualMachineImpl.c,v 1.1 2025/11/15 12:17:12 ryoon Exp $
 
+Fix casting issue?
+
 --- src/jdk.attach/bsd/native/libattach/VirtualMachineImpl.c.orig	2025-11-01 06:31:36.000000000 +0000
 +++ src/jdk.attach/bsd/native/libattach/VirtualMachineImpl.c
 @@ -31,7 +31,9 @@

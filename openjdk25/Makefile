@@ -9,7 +9,7 @@ GITHUB_TAG=	jdk-25.0.4+7-1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
-COMMENT=	Open-source implementation of the Java Platform, 25
+COMMENT=	Open-source implementation of the Java Platform, 25 LTS
 LICENSE=	gnu-gpl-v2
 
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -27,8 +27,9 @@ TOOL_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootce
 # For alloca()
 BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
 BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
-BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
 BUILDLINK_TRANSFORM+=		opt:-std=c++11:-std=gnu++11
+BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
+BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
 # For NetBSD
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
@@ -120,8 +121,7 @@ CWRAPPERS_APPEND.cxx+=	-mstackrealign
 CONFIGURE_ARGS+=	--with-toolchain-type=gcc
 .endif
 
-#.include "bootstrap.mk"
-ALT_BOOTDIR=/path/to/binary-jdk/jdk-25.0.4.1+1
+.include "bootstrap.mk"
 .include "options.mk"
 
 SUBST_CLASSES+=		libpath
@@ -137,7 +137,7 @@ SUBST_CLASSES+=			fontpaths
 SUBST_STAGE.fontpaths=		pre-configure
 SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		src/java.desktop/bsd/data/fontconfig/fontconfig.properties
-#SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
+SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
 SUBST_VARS.fontpaths=		PREFIX BUILDLINK_PREFIX.fontconfig
 
 

@@ -1,5 +1,10 @@
 $NetBSD$
 
+Use the same variant for the buildjdk as the target jdk.
+This is needed for native builds on platforms where hotspot is broken or not
+supported. In that case the buildjdk can't be hardcoded to "server" but must
+use "zero". This is fine for pkgsrc since we only ever build one variant.
+
 --- make/autoconf/buildjdk-spec.gmk.template.orig	2026-07-24 17:22:09.000000000 +0000
 +++ make/autoconf/buildjdk-spec.gmk.template
 @@ -95,8 +95,9 @@ ENABLE_DEBUG_SYMBOLS := false
