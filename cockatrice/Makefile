@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	cockatrice-2.10.2
+PKGNAME=	cockatrice-3.0.2
 
 .include "../../wip/cockatrice/common.mk"
 
