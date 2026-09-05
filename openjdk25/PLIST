@@ -16,6 +16,7 @@ bin/openjdk25-jinfo
 bin/openjdk25-jlink
 bin/openjdk25-jmap
 bin/openjdk25-jmod
+bin/openjdk25-jnativescan
 bin/openjdk25-jps
 bin/openjdk25-jrunscript
 bin/openjdk25-jshell

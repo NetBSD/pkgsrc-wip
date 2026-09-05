@@ -18,8 +18,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 JAVA_NAME=	openjdk25
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar jarsigner java javac javadoc javap jcmd jconsole jdb \
-		jdeprscan jdeps jfr jimage jinfo jlink jmap jmod jps \
-		jrunscript jshell jstack jstat jstatd jwebserver keytool \
+		jdeprscan jdeps jfr jimage jinfo jlink jmap jmod jnativescan \
+		jps jrunscript jshell jstack jstat jstatd jwebserver keytool \
 		rmiregistry serialver
 
 TOOL_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
@@ -30,8 +30,6 @@ BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
 BUILDLINK_TRANSFORM+=		opt:-std=c++11:-std=gnu++11
 BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
 BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
-# For NetBSD
-#BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,16 +55,12 @@ UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 
-# Try to use less POSIX semaphores (large MAKE_JOBS can consume them all)
-BOOT_JVMARGS=	-XX:+UnlockDiagnosticVMOptions
-
 # ${WRKSRC}/doc/building.mk explicitly states that its Makefiles are unsafe
 # to use -j.  Disable it and configure ourselves via configure arguments.
 MAKE_JOBS_METHOD=	manual
 
 CONFIGURE_ARGS+=	--openjdk-target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
-CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=${BOOT_JVMARGS:Q}
 CONFIGURE_ARGS+=	--with-giflib=bundled
 CONFIGURE_ARGS+=	--with-lcms=bundled
 CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.libcups}/include
