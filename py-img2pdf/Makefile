@@ -18,6 +18,10 @@ DEPENDS+=	${PYPKGPREFIX}-pikepdf-[0-9]*:../../print/py-pikepdf
 
 REPLACE_PYTHON+=	src/img2pdf.py
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/img2pdf ${DESTDIR}${PREFIX}/bin/img2pdf${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/img2pdf-gui ${DESTDIR}${PREFIX}/bin/img2pdf-gui${PYVERSSUFFIX}
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

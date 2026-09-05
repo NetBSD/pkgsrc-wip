@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/img2pdf
-bin/img2pdf-gui
+bin/img2pdf${PYVERSSUFFIX}
+bin/img2pdf-gui${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
