@@ -12,10 +12,8 @@ LICENSE=	gnu-lgpl-v3
 
 USE_TOOLS+=	pkg-config
 
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	/usr/bin/env
-REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	src/img2pdf.py
+REPLACE_PYTHON+=	src/img2pdf.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
