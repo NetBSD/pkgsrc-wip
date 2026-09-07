@@ -113,6 +113,7 @@ CWRAPPERS_APPEND.cxx+=	-mstackrealign
 .else
 # GCC
 CONFIGURE_ARGS+=	--with-toolchain-type=gcc
+CWRAPPERS_APPEND.cxx+=	-Wno-attributes
 .endif
 
 .include "bootstrap.mk"
