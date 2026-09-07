@@ -39,6 +39,7 @@ Suggested package updates
 	o firebird-3.0
 	o flc-1.12
 	o flowblade-2.14
+	o forge-0.10.0
 	o freecad-1.1
 	o gambas2-3.7.1
 	o gcc42-4.2.4
@@ -88,6 +89,7 @@ Suggested package updates
 	o libressl-2.3.1
 	o lightdm-1.32
 	o lives-2.8.2
+	o llama.cpp-0.4.0
 	o lucene-4.5.0
 	o man-1.6f
 	o mcwm-20130209.2
@@ -160,6 +162,7 @@ Suggested package updates
 	o xf86-input-libinput-1.5.0
 	o xf86-input-synaptics-1.10.0
 	o xxdiff-4.0
+	o yayamlls-0.3.0
 	o yi-0.17.1
 	o zapping-0.10cvs6
 	o zed-1.0
