@@ -106,12 +106,15 @@ ${PLIST.glx}lib/pkgconfig/gl.pc
 lib/pkgconfig/glesv1_cm.pc
 lib/pkgconfig/glesv2.pc
 ${PLIST.glx}lib/pkgconfig/glx.pc
+${PLIST.vulkan}share/drirc.d/00-anv-defaults.conf
 share/drirc.d/00-iris-defaults.conf
-share/drirc.d/00-panfrost-defaults.conf
+${PLIST.arm}share/drirc.d/00-panfrost-defaults.conf
+${PLIST.vulkan}share/drirc.d/00-lavapipe-defaults.conf
 share/drirc.d/00-r300-defaults.conf
 share/drirc.d/00-r600-defaults.conf
 share/drirc.d/00-radeonsi-defaults.conf
 ${PLIST.vulkan}share/drirc.d/00-radv-defaults.conf
+${PLIST.svga}share/drirc.d/00-vmwgfx-defaults.conf
 share/examples/mesa/00-mesa-defaults.conf
 ${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/broadcom_icd.${MACHINE_ARCH}.json
 ${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/freedreno_icd.${MACHINE_ARCH}.json
