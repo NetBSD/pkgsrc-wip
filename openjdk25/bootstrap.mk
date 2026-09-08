@@ -32,6 +32,14 @@ DISTFILES+=			${BOOT.nb9-i386}
 EXTRACT_ONLY+=			${BOOT.nb9-i386}
 .endif
 
+ONLY_FOR_PLATFORM+=		NetBSD-*-earmv[67]hf
+BOOT.nb9-earmv6hf=		bootstrap-jdk-1.25.0.4.7-netbsd-9-earmv6hf-20260908.tar.xz
+SITES.${BOOT.nb9-earmv6hf}=	https://objects.dc-fbg1.glesys.net/tnn-temp-distfiles/	# TODO move to nbftp
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || make(distinfo)
+DISTFILES+=			${BOOT.nb9-earmv6hf}
+EXTRACT_ONLY+=			${BOOT.nb9-earmv6hf}
+.endif
+
 ONLY_FOR_PLATFORM+=		Linux-*-x86_64
 BOOT.linux-amd64=		OpenJDK25U-jdk_x64_linux_hotspot_25.0.4.1_1.tar.gz
 SITES.${BOOT.linux-amd64}=	https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/
