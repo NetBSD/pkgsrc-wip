@@ -1,37 +1,19 @@
-chromium: update to 152.0.7977.75
+chromium: update to 152.0.7977.82
 
-* 152.0.7977.75
-This update includes 26 security fixes. Please see the Chrome Security Page for more information.
+* 152.0.7977.82
+This update includes 12 security fixes. Please see the Chrome Security Page for more information.
 
-[N/A][522307103] Critical CVE-2026-84353: Use after free in Shared Tab Groups. Reported by Google on 2026-06-10
-[N/A][546260492] Critical CVE-2026-84352: Use after free in WebGL. Reported by Google on 2026-08-14
-[N/A][498839176] High CVE-2026-84354: Incorrect authorization in FileSystem. Reported by Google on 2026-04-02
-[N/A][514078656] High CVE-2026-84359: Information leak in Skia. Reported by Google on 2026-05-17
-[N/A][523208474] High CVE-2026-84357: Improper input validation in Omnibox. Reported by Google on 2026-06-12
-[N/A][533534913] High CVE-2026-84324: Use after free in Proxy. Reported by Google on 2026-07-10
-[N/A][537105664] High CVE-2026-84349: Use after free in Browser. Reported by Google on 2026-07-21
-[TBD][547936520] High CVE-2026-84326: Uninitialized resource in V8. Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-08-17
-[N/A][549311485] High CVE-2026-84333: Use after free in Dawn. Reported by Google on 2026-08-19
-[TBD][551593376] High CVE-2026-84351: Buffer overflow in GPU. Reported by Cassio Lima on 2026-08-24
-[N/A][553117928] High CVE-2026-84325: Improper input validation in DataTransfer. Reported by Google on 2026-08-26
-[N/A][498710886] Medium CVE-2026-84328: Missing authorization in FileSystem. Reported by Google on 2026-04-01
-[N/A][501679156] Medium CVE-2026-84347: Use after free in WebRTC. Reported by Google on 2026-04-11
-[N/A][502411391] Medium CVE-2026-84323: Missing authorization in FileSystem. Reported by Google on 2026-04-14
-[N/A][511774376] Medium CVE-2026-84355: Incorrect authorization in Navigation. Reported by Google on 2026-05-10
-[N/A][514006886] Medium CVE-2026-84358: Improper privilege management in Downloads. Reported by Google on 2026-05-17
-[N/A][514489238] Medium CVE-2026-84332: Incorrect authorization in SiteSettings. Reported by Google on 2026-05-19
-[N/A][517091927] Medium CVE-2026-84330: UI misrepresentation in FullScreen. Reported by Google on 2026-05-27
-[N/A][517798926] Medium CVE-2026-84334: Incorrect authorization in Chromoting. Reported by Google on 2026-05-29
-[N/A][518100026] Medium CVE-2026-84348: Information leak in MediaCapture. Reported by Google on 2026-05-30
-[N/A][522302504] Medium CVE-2026-84335: Incorrect authorization in TabStrip. Reported by Google on 2026-06-10
-[N/A][498725213] Low CVE-2026-84327: Incorrect authorization in Autofill. Reported by Google on 2026-04-01
-[N/A][498850269] Low CVE-2026-84329: Confused deputy in CredentialProvider. Reported by Google on 2026-04-02
-[TBD][503787232] Low CVE-2026-84356: UI misrepresentation in FullScreen. Reported by Francesco Topol (k4tedu) on 2026-04-18
-[N/A][513713427] Low CVE-2026-84350: Use after free in TabStrip. Reported by Google on 2026-05-16
-[N/A][521753402] Low CVE-2026-84331: Incorrect authorization in Actor. Reported by Google on 2026-06-09
+[$1,000][542403045] High CVE-2026-85046: Type confusion in V8. Reported by Salvatore Gulizia (nickname: Serotav) on 2026-08-04
+[N/A][502304489] High CVE-2026-85052: Out of bounds read in CrashReporting. Reported by Google on 2026-04-13
+[N/A][533502257] High CVE-2026-85043: Incomplete cleanup in Network. Reported by Google on 2026-07-10
+[TBD][540357382] High CVE-2026-85048: Use after free in Compositing. Reported by Ngoc Hieu on 2026-07-29
+[TBD][547819997] High CVE-2026-85045: Race condition in V8. Reported by Brendan Dolan-Gavitt, XBOW on 2026-08-17
+[N/A][549350408] High CVE-2026-85050: Out of bounds write in WebGL. Reported by Google on 2026-08-20
+[TBD][552689418] High CVE-2026-85053: Improper resource exposure in CacheStorage. Reported by Salvatore Gulizia (Serotav) on 2026-08-26
+[N/A][553119925] High CVE-2026-85042: Use after free in DevTools. Reported by Google on 2026-08-26
+[N/A][553345874] High CVE-2026-85049: Use after free in Skia. Reported by Google on 2026-08-27
+[N/A][553449113] High CVE-2026-85051: Type confusion in Compositing. Reported by Google on 2026-08-27
+[N/A][513790581] Medium CVE-2026-85047: Improper input validation in Transactions Platform. Reported by Google on 2026-05-16
+[N/A][517482830] Medium CVE-2026-85044: Use of released resource in Mobile. Reported by Google on 2026-05-28
 
-* 152.0.7977.64
-This update includes 327 security fixes. Please see the Chrome Security Page for more information.
-
-See: https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_0256176589.html
-
+Google is aware that an exploit for CVE-2026-85046 exists in the wild.
