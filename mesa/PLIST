@@ -24,7 +24,6 @@ include/GLES3/gl3ext.h
 include/GLES3/gl3platform.h
 include/KHR/khrplatform.h
 ${PLIST.kms}include/gbm.h
-@comment XXX should it be PLIST.kms?
 include/gbm_backend_abi.h
 ${PLIST.arm}lib/dri/apple_dri.so
 ${PLIST.arm}lib/dri/armada-drm_dri.so
@@ -73,20 +72,18 @@ ${PLIST.arm}lib/dri/st7735r_dri.so
 ${PLIST.arm}lib/dri/sti_dri.so
 ${PLIST.arm}lib/dri/stm_dri.so
 ${PLIST.arm}lib/dri/sun4i-drm_dri.so
-@comment not on apple ?
 lib/dri/swrast_dri.so
 ${PLIST.arm}lib/dri/udl_dri.so
 ${PLIST.arm}lib/dri/vkms_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
 ${PLIST.arm}lib/dri/zynqmp-dpsub_dri.so
-@comment not on apple?
 lib/gbm/dri_gbm.so
 ${PLIST.kms}lib/libEGL.so
 ${PLIST.kms}lib/libEGL.so.1
 ${PLIST.kms}lib/libEGL.so.1.0.0
 ${PLIST.glx}lib/libGL.so
-${PLIST.glx}lib/libGL.so.1
 ${PLIST.glx}lib/libGL.so.${GLVER}
+${PLIST.glx}lib/libGL.so.1
 lib/libGLESv1_CM.so
 lib/libGLESv1_CM.so.1
 lib/libGLESv1_CM.so.1.1.0
@@ -97,9 +94,6 @@ lib/libgallium-${PKGVERSION}.so
 ${PLIST.kms}lib/libgbm.so
 ${PLIST.kms}lib/libgbm.so.1
 ${PLIST.kms}lib/libgbm.so.1.0.0
-@comment lib/libglapi.so
-@comment lib/libglapi.so.0
-@comment lib/libglapi.so.0.0.0
 ${PLIST.vulkan}${PLIST.arm}lib/libvulkan_broadcom.so
 ${PLIST.vulkan}${PLIST.arm}lib/libvulkan_freedreno.so
 ${PLIST.vulkan_intel}lib/libvulkan_intel.so
@@ -112,6 +106,11 @@ ${PLIST.glx}lib/pkgconfig/gl.pc
 lib/pkgconfig/glesv1_cm.pc
 lib/pkgconfig/glesv2.pc
 ${PLIST.glx}lib/pkgconfig/glx.pc
+share/drirc.d/00-iris-defaults.conf
+share/drirc.d/00-panfrost-defaults.conf
+share/drirc.d/00-r300-defaults.conf
+share/drirc.d/00-r600-defaults.conf
+share/drirc.d/00-radeonsi-defaults.conf
 ${PLIST.vulkan}share/drirc.d/00-radv-defaults.conf
 share/examples/mesa/00-mesa-defaults.conf
 ${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/broadcom_icd.${MACHINE_ARCH}.json

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mesa-25.3.6
+DISTNAME=	mesa-26.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
@@ -11,12 +11,10 @@ HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
 
-USE_TOOLS+=	bison flex pkg-config xgettext
-USE_LANGUAGES=	c c++
-
-FORCE_CXX_STD+=	c++17
-
 USE_FEATURES+=	strnlen
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	bison flex pkg-config xgettext
+FORCE_CXX_STD+=	gnu++17 # mixed designated initializers
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__
