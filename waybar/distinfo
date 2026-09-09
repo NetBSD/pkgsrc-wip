@@ -10,6 +10,7 @@ SHA1 (patch-src_factory.cpp) = de849a029ac8b51381bbe4b94ea59ab9c94c44ef
 SHA1 (patch-src_modules_battery.cpp) = 4ee104fb0ed46112c09d8559687d910e08ee93b0
 SHA1 (patch-src_modules_cpu__frequency_bsd.cpp) = 9ad194942940b2b38b0f01d6a96408cd23969269
 SHA1 (patch-src_modules_custom.cpp) = 644740e4862444b7ed33523affe5d97e5fcbdd32
+SHA1 (patch-src_modules_memory_bsd.cpp) = 4880f83108e304eb1e5c0301911fbda01f80639d
 SHA1 (patch-src_modules_simpleclock.cpp) = 7ffa485e5cc9033e090d46133654243cbd1b3f8d
 SHA1 (patch-src_modules_user.cpp) = 7b9d5578a64d2b1fefbecd650549c5e9f8ea19ad
 SHA1 (patch-src_util_icon__loader.cpp) = 29b8f755333ab617263b6f80e20c993025300e9a
