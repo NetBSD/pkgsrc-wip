@@ -1,0 +1,12 @@
+$NetBSD$
+
+BLAKE2s (UZDoom/5.0.1.tar.gz) = 91df07884807d88397dd5b89ecbddd5cacf50d64f2ce6d38eaa28e7ff7fa96f3
+SHA512 (UZDoom/5.0.1.tar.gz) = fb851464f0ab532d638e7d447b747fd5356934555cb610aac00db176c76557ce41bf62dab9509cb51ae02d32e521426a4b75532b04b565f3f3acdc6c78bf6aca
+Size (UZDoom/5.0.1.tar.gz) = 53210982 bytes
+SHA1 (patch-libraries_ZWidget_src_window_sdl2_sdl2__display__window.cpp) = 739b865e5749cb1f9ccdbbc5441481d9422b15ad
+SHA1 (patch-libraries_abseil_absl_debugging_internal_elf__mem__image.cc) = 158fdd05d62764caca339c57222e718541715959
+SHA1 (patch-src_common_engine_m__joy.cpp) = 3c519825b3a2a246b3ca365b16970b736be7a77e
+SHA1 (patch-src_gameconfigfile.cpp) = f9439c87f3e3e134b075fa232e5e9bd87549eb79
+SHA1 (patch-src_playsim_p__effect.cpp) = f7ce637daff7a7545de8efe7411b924c3f47ba29
+SHA1 (patch-src_playsim_p__mobj.cpp) = 502e9c956b4e195243b7051d8ac47bf8a1162886
+SHA1 (patch-src_versioninfo.h) = 4dcd75dff9d2c2ab3245a78578511a39b3d96c49

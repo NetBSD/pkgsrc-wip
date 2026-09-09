@@ -5968,6 +5968,7 @@ SUBDIR+=	utfcpp
 SUBDIR+=	util-linux
 SUBDIR+=	uzbl
 SUBDIR+=	uzbl-git
+SUBDIR+=	uzdoom
 SUBDIR+=	v8
 SUBDIR+=	v8-316
 SUBDIR+=	vacuum
