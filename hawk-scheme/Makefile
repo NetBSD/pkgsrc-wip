@@ -1,16 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	hawk-v0.9
+DISTNAME=	hawk-v0.11
 PKGNAME=	${DISTNAME:S,-v,-scheme-,}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djwatson/}
 GITHUB_PROJECT=	hawk
-GITHUB_RELEASE=	v0.9
+GITHUB_RELEASE=	v0.11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://djwatson.github.io/hawk/
 COMMENT=	Scheme jit that makes code fly!
-# not use about this, some third party files are "do as you please"
+# not sure about this, some third party files are "do as you please"
 # and some third party files have no explicit copyright
 LICENSE=	mit AND modified-bsd
 

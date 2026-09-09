@@ -3,5 +3,6 @@ bin/hawk
 lib/libhawk_core.so
 libexec/hawk-cc
 man/man1/hawk.1
+share/doc/hawk/copyright
 share/hawk/srfi/1.sld
 share/hawk/srfi/69.sld
