@@ -3,5 +3,5 @@ $NetBSD: distinfo,v 1.2 2026/05/27 17:14:19 kikadf Exp $
 BLAKE2s (libopeninput-1.31.3-10995219206280da0f1a3ba124abe4c8ef89e021.tar.gz) = 1bb9295eb9bf288dd512d09e94d318241a820f5fb8d1d39f094df2c3794e0ece
 SHA512 (libopeninput-1.31.3-10995219206280da0f1a3ba124abe4c8ef89e021.tar.gz) = 4957ef42cfc6868546225d0b690acf51bc2a2fb799161a603fd3560c3d2b13af298161f4682f11e909aeaf443106b65cc4625a0afbc2b3fbd7fa27f61d34ef47
 Size (libopeninput-1.31.3-10995219206280da0f1a3ba124abe4c8ef89e021.tar.gz) = 1203451 bytes
-SHA1 (patch-src_wscons.c) = 1c4d0301a5361ecaff32d5bb0b7a2264ee15deff
-SHA1 (patch-src_wscons.h) = 20c749ef79352094e1b646fdbe9566f95d7e0a41
+SHA1 (patch-src_wscons.c) = f4cee7cd0145ecd8e90cc85a7aac80d5a9fc0b48
+SHA1 (patch-src_wscons.h) = d4ce816f3e1b33e4f6dc4dc9d15f41400bccf2a4
