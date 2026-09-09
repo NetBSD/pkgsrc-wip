@@ -1,23 +1,26 @@
-crush: Update to 0.92.0
+crush: Update to 0.93.1
 
 Changelog
-New!
-3f57543: Revert "feat(ui): use framed-square glyph for image attachment icon (#3339)" (@meowgorithm)
-48f4e8a: feat(ui): use framed-square glyph for image attachment icon (#3339) (@joestump-agent)
-Fixed
-ee455a9: fix(config): resolve provider base URL before custom validation (#3350) (@joestump-agent)
-1e5be92: fix(mcp): bound MCP init wits so a wedged server can't blank the app (#199) (#3467) (@joestump-agent)
-1ea2714: fix(mcp): scope error teardown to the erroring session; serialize refreshers (#3468) (@joestump-agent)
-46469e2: fix(selection): pin the selected item to the top (#3670) (@andrinoff)
-404a93c: fix(shellconfig): stop model add swapping the two cache prices (#3679) (@devYRPauli)
-7b38a40: fix(ui): preserve single line breaks in submitted user messages (#3655) (@joestump-agent)
-7944b8e: fix: update fantasy with several inference fixes (#3667) (@andreynering)
-Docs
-599a4ab: docs: fix typo regarding JSON format deprecation (#3604) (@wangjiawen2013)
-Other stuff
-07d662d: chore: auto-update files (@charmcli)
-6d14dd9: chore: auto-update files (@charmcli)
-a83480e: refactor: centralize TUI option defaults and extract exit banner rendering (@taciturnaxolotl)
-773c356: resume: compact resume banner option (@taciturnaxolotl)
+fix(clipboard): only report copy success if it happens by @taciturnaxolotl in #3682
+fix: stop long reasoning traces from running away with the heap by @taciturnaxolotl in #3683
+fix(config): honor providers.json when auto-update is disabled by @kvnloo in #3693
+fix: inline code copying by @andrinoff in #3678
+fix: flickering screen when inline code was present by @andrinoff in #3708
+fix(copilot): route grok models through responses api by @DaVinci42 in #3705
+fix(discover): keep a user-set supports_attachments in the LM Studio enricher by @devYRPauli in #3703
+fix: assign models from opencode zen by @andrinoff in #3718
+fix(list): keep AtBottom honest when the top item is taller than the viewport by @taciturnaxolotl in #3720
+fix: make timeout configurable by @andrinoff in #3677
+feat(hyper): show the routed model that served each turn by @andreynering in #3713
+fix(copilot): route GPT-6 Astra through Responses API by @DaVinci42 in #3724
+docs(db): fix timestamp unit comments in initial migration by @LarsArtmann in #3576
+fix(config): resolve the provider cache through the global data dir by @devYRPauli in #3738
+feat(tui): add option to disable mouse support by @timotheosh in #3542
+fix: keep top_k for known custom providers by @jackgene in #3736
+chore: add CC-BY-4.0 to allowed licenses by @andrinoff in #3755
+fix: do not upload images if vision is not supported by @andrinoff in #3754
+fix: bump mcp sdk by @andrinoff in #3716
+fix(alibaba): do not send enable_thinking when we have an effort by @andreynering in #3758
+chore(deps): migrate mvdan.cc/sh/moreinterp to mvdan.cc/sh/x by @andreynering in #3761
 
 
