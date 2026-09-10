@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	jcode-0.81.4
+DISTNAME=	jcode-0.84.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=1jehuang/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

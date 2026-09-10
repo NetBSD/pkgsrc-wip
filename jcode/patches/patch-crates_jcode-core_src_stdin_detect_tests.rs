@@ -9,8 +9,17 @@ tests run only on NetBSD and check the behaviour against live processes: a
 real pipe reader must be detected, and a sleeping process must not be, since
 a false positive would prompt the user on every long-running command.
 
+The module-level std::process import is also gated to Linux: only the
+Linux-only tests use it, so it warns as unused on every other platform.
+
 --- crates/jcode-core/src/stdin_detect_tests.rs.orig
 +++ crates/jcode-core/src/stdin_detect_tests.rs
+@@ -1,4 +1,5 @@
+ use super::*;
++#[cfg(target_os = "linux")]
+ use std::process::{Command, Stdio};
+ 
+ #[test]
 @@ -319,3 +319,127 @@ fn direct_children_of_childless_process_does_not_scan_proc() {
          "sleep should have no children, got {children:?}"
      );
