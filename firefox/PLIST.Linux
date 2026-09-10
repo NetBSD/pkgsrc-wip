@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.5 2026/08/24 12:51:47 ryoon Exp $
+lib/${MOZILLA}/libmozsandbox.so
