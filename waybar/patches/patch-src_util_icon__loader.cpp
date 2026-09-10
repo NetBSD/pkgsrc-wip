@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Fix ctype usage
+https://github.com/Alexays/Waybar/pull/5321
 
 --- src/util/icon_loader.cpp.orig	2026-07-27 13:52:11.975754660 +0000
 +++ src/util/icon_loader.cpp

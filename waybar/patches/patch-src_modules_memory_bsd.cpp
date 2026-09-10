@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Fix get_free_memory on NetBSD, avoid underflow
+https://github.com/Alexays/Waybar/pull/5319
 
 --- src/modules/memory/bsd.cpp.orig	2026-09-09 17:46:47.416277348 +0000
 +++ src/modules/memory/bsd.cpp

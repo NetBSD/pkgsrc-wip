@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Add NetBSD support
+https://github.com/Alexays/Waybar/pull/5318
 
 --- src/modules/cpu_frequency/bsd.cpp.orig	2026-05-25 08:52:26.638052357 +0000
 +++ src/modules/cpu_frequency/bsd.cpp

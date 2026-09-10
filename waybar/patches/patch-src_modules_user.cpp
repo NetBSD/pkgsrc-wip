@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Portable uptime usage, fallback to CLOCK_MONOTONIC
+https://github.com/Alexays/Waybar/pull/5320
 
 --- src/modules/user.cpp.orig	2025-12-18 09:12:40.964198952 +0000
 +++ src/modules/user.cpp
