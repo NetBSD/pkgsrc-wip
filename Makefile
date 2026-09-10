@@ -1969,6 +1969,7 @@ SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
 SUBDIR+=	koha
+SUBDIR+=	kquickimageeditor
 SUBDIR+=	krename
 SUBDIR+=	kronometer
 SUBDIR+=	kstest
