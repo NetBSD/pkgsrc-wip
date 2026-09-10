@@ -1011,6 +1011,7 @@ SUBDIR+=	findugendev
 SUBDIR+=	firebird
 SUBDIR+=	firebird50
 SUBDIR+=	fireflysung-ttf
+SUBDIR+=	firefox
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firefox102
 SUBDIR+=	firehose
