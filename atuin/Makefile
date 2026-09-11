@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	atuin-18.19.0
+DISTNAME=	atuin-18.22.0
 CATEGORIES=	sysutils shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atuinsh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
