@@ -1,0 +1,4 @@
+A C library designed to help with analyzing dump
+files produced by Zebra/Quagga or MRT. Documentation
+is available at:
+https://github.com/RIPE-NCC/bgpdump/wiki

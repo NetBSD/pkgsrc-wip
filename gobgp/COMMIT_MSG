@@ -1,0 +1,79 @@
+GoBGP is an open source Border Gateway Protocol (BGP) 
+implementation designed from scratch for modern environment 
+and implemented in a modern programming language, 
+the Go Programming Language.
+
+Changelog
+01c5c4c GoBGP 4.9.0
+9d50d8e server: drop stale notifications queued while a peer session was down
+efa0900 packet/bgp: check the per-type message length in parseBody
+d7c721d packet/bgp: reject a body that does not match the declared length
+5e34ff5 test: move the KEEPALIVE length test next to the other header tests
+e37c5a2 packet/bgp: reject KEEPALIVE messages that are not 19 octets
+b2c73cf test: drop run_all_tests.sh and document how to run scenario tests
+8056d41 docs: document the listen address of the gRPC API
+4bbeb79 security: define what we treat as a vulnerability
+e6c6f10 table: find the policy assignments in DeletePolicy itself
+4171aa9 server: drop the policy assignment of a deleted peer
+a111094 server: store the per peer policy only for a route server client
+c0214f7 table: report a statement that the policy does not have
+36cca5d table: check the import direction when deleting a policy
+698cc61 table: fix preserve flag in DeletePolicy
+d4eb7d3 config: remove the collector configuration
+8006da4 config: log reload failures at Error again
+3436d72 config: log the export policy assignment failure at Error
+5f4a6b5 config: do not abort startup when zebra is not reachable
+94518c5 fix(cmd/gobgpd): delay sdnotify readiness
+6e08373 feat(config): return initial apply errors
+11a4096 server: fill in the Data field of the too long message error
+8f72434 packet/bgp: fill in the Data field of message header errors
+c927e31 server: type fsmStateReason's notification as *bgp.BGPNotification
+88ac6da server: pass the sent NOTIFICATION to fsmStateReason in handleOpen
+c4e13d1 server: fix wrong message wired into fsmStateReason on bad-peer-AS/invalid-msg
+36e6efd config: test peer group deletion against config updates
+e585c39 config: fix deleting peer group and neighbor together
+eb2a727 packet/bgp: include the type in an unknown route distinguisher string
+f9152c2 packet/bgp: keep the value of an unknown route distinguisher
+33539ee apiutil: round-trip the SR-MPLS Binding SID label through the API
+8b19441 tcp-ao: expose HMAC-SHA256 profiles
+9341943 netutils: support HMAC-SHA256 for TCP-AO
+cb123e9 spell-check: keep dictionary.txt sorted
+d7ae493 spell-check: fix the "mututally" typo
+3b05300 config: load TCP-AO keychains from config
+c32c92f config/oc: add TCP-AO keychain model
+dae5a6c config/oc: reject out-of-range integers in the config file
+1b84a40 packet/bgp: add a test for concurrent Serialize
+e7f8d7e packet/bgp: do not cache the message length in the BGP header
+b010677 packet/bgp: do not store the serialized length in OPEN
+caccf7b packet/bgp: do not store the serialized value in the capability
+3b6ff68 packet/bgp: make capability Len independent of Serialize
+a40450d server: hold fsm.lock when reading fsm.recvOpen
+8c84624 cmd/gobgp: document the I-PMSI route target as required
+aac7dea cmd/gobgp: validate I-PMSI route target before use
+42abd24 packet/bgp: serialize the full SID in the SRv6 Binding SID sub-TLV
+c0d5851 packet/bgp: set the bottom-of-stack bit in the VPLS Label Base
+708c180 packet/bgp: compare the decoded NLRI in the VPLS round-trip test
+45c9244 packet/bgp: cover the VPLS BGP-AD NLRI at the MP_REACH level
+62f3d94 packet/bgp: re-serialize the VPLS NLRI in the fuzz target
+96105cb packet/bgp: drop the stale RFC 6074 comment in the VPLS NLRI decoder
+7b1d80a reject VPLS NLRI with a length other than 17
+02bcba0 ci: make the YANG check fail when pyang fails
+f626c40 tools/pyang_plugins: declare the route-family typedef
+84868f8 tools/pyang_plugins: drop the ineffective ip-prefix deviation
+9c22b63 ci: add job for yang files diff
+97ff24e config: fix incorrect yang generation
+69faffb server: compare TCP-AO keychain messages with proto.Equal
+f306bba server: run the TCP-AO validation cases inside their subtests
+e68a92f server: spell the TCP-AO keychain store field as one word
+2328707 api, server: drop the keychain from the TCP-AO add response
+407deba server: treat the TCP-AO keychain list name as a filter
+0e9a005 server: reject out-of-range TCP-AO key IDs on keychain update
+aba1929 server: implement TCP-AO keychain management
+a7251b9 api: add TCP-AO keychain configuration API
+8e65579 zebra: drop dead pos increments in zapi tests
+55eb7a8 api, cli: surface the flowspec redirect-to-IP action
+58940aa packet/bgp: add flowspec redirect-to-IP extended communities
+ad3e7c2 packet/bgp: bound MUP Type 2 endpoint address length to address family
+5bf33cf zebra: reject a nexthop label count above the maximum
+b7d523b fix(server): avoid mutating Adj-RIB-In when listing accepted paths and refactor
+b6a519b server: reject an unknown peer group in the dynamic neighbor API

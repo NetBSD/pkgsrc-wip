@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/bgpdump
+include/bgpdump_attr.h
+include/bgpdump_formats.h
+include/bgpdump_lib.h
+include/bgpdump_mstream.h
+lib/libbgpdump.a
+lib/libbgpdump.so

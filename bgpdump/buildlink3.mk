@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	bgpdump
+
+.if !defined(BGPDUMP_BUILDLINK3_MK)
+BGPDUMP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.bgpdump+=	bgpdump>=1.6.2
+BUILDLINK_PKGSRCDIR.bgpdump?=	../../net/bgpdump
+.endif	# BGPDUMP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-bgpdump

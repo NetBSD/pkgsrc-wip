@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/gobgp
+bin/gobgp-config
+bin/gobgpd
