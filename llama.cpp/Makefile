@@ -26,6 +26,7 @@ post-extract:
 	${LN} -s ${WRKDIR}/llama-b${LLAMA_BUILD_NUMBER} ${WRKSRC}/tools/ui/dist
 
 .include "../../www/curl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ggml+=	ggml>=0.23.0
 .include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
