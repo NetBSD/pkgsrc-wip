@@ -5179,7 +5179,6 @@ SUBDIR+=	rar4
 SUBDIR+=	raster3d
 SUBDIR+=	ratpoints
 SUBDIR+=	ratproxy
-SUBDIR+=	raven
 SUBDIR+=	raw
 SUBDIR+=	rawdog
 SUBDIR+=	rawgl
