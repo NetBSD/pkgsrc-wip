@@ -1,26 +1,36 @@
-crush: Update to 0.93.1
+crush: Update to 0.94.1
 
 Changelog
-fix(clipboard): only report copy success if it happens by @taciturnaxolotl in #3682
-fix: stop long reasoning traces from running away with the heap by @taciturnaxolotl in #3683
-fix(config): honor providers.json when auto-update is disabled by @kvnloo in #3693
-fix: inline code copying by @andrinoff in #3678
-fix: flickering screen when inline code was present by @andrinoff in #3708
-fix(copilot): route grok models through responses api by @DaVinci42 in #3705
-fix(discover): keep a user-set supports_attachments in the LM Studio enricher by @devYRPauli in #3703
-fix: assign models from opencode zen by @andrinoff in #3718
-fix(list): keep AtBottom honest when the top item is taller than the viewport by @taciturnaxolotl in #3720
-fix: make timeout configurable by @andrinoff in #3677
-feat(hyper): show the routed model that served each turn by @andreynering in #3713
-fix(copilot): route GPT-6 Astra through Responses API by @DaVinci42 in #3724
-docs(db): fix timestamp unit comments in initial migration by @LarsArtmann in #3576
-fix(config): resolve the provider cache through the global data dir by @devYRPauli in #3738
-feat(tui): add option to disable mouse support by @timotheosh in #3542
-fix: keep top_k for known custom providers by @jackgene in #3736
-chore: add CC-BY-4.0 to allowed licenses by @andrinoff in #3755
-fix: do not upload images if vision is not supported by @andrinoff in #3754
-fix: bump mcp sdk by @andrinoff in #3716
-fix(alibaba): do not send enable_thinking when we have an effort by @andreynering in #3758
-chore(deps): migrate mvdan.cc/sh/moreinterp to mvdan.cc/sh/x by @andreynering in #3761
-
+New!
+efba40b: feat: OpenAI oAuth (@andrinoff)
+Fixed
+4a74b9e: fix(sessions): keep list position after deletion (#3769) (@ifsin)
+33be610: fix: @meowgorithm review (@andrinoff)
+63829ed: fix: always emit tool results right after calls (#3743) (@andrinoff)
+cdc7200: fix: always show full bash command in tui, output stays collapsible (@andreynering)
+d25b5ee: fix: colorize CLI mode and use localhost URL (@andrinoff)
+45a45c5: fix: do not remove from API catalogue (@andrinoff)
+80ebee4: fix: dropped reasoning effort (#3748) (@andrinoff)
+074e41e: fix: keep scroll position when expanding or collapsing chat items (@andreynering)
+094ac5d: fix: match ex. anthropic UI on choice (@andrinoff)
+04eed5d: fix: refine first page (@andrinoff)
+652f74f: fix: remove re-routing logic (@andrinoff)
+3a84d5e: fix: remove the Sign In with ChatGPT in catalogue (@andrinoff)
+616c17b: fix: remove the separate sections (@andrinoff)
+833bef6: fix: show content in full when collapsing would hide only one line (@andreynering)
+Other stuff
+bb33cee: chore(event-bus): make event fan-in helpers generic methods (#3768) (@meowgorithm)
+4c0ecf6: chore: auto-update files (@charmcli)
+77d9272: chore: auto-update files (@charmcli)
+8829832: chore: bump fantasy (@andrinoff)
+e5687e2: chore: lint (@andrinoff)
+8db8331: noninteractive: add --reasoning-effort flag with model validation (@meowgorithm)
+18447d5: oauth-cli: adjust inline logout TUIs (@meowgorithm)
+bc3931c: oauth-cli: overhaul and unify oauth TUIs (@meowgorithm)
+7a63cb1: oauth-ui: small nudges (@meowgorithm)
+e2f077c: oauth-ui: use ChatGPT instead of OpenAI in the auth dialog copy (@meowgorithm)
+c21c7c4: refactor: replace swaggo annotations with a Go-native endpoint registry (@meowgorithm)
+8ce2bdf: ui-perf: drive all spinners from one shared animation clock (@meowgorithm)
+0ffab3f: ui-perf: memoize rendered frames for scroll-only updates (@meowgorithm)
+35b5f87: ui-perf: stop coalesced wheel scrolls from rewinding to the selection (@meowgorithm)
 
