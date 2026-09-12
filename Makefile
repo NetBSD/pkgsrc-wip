@@ -2010,7 +2010,6 @@ SUBDIR+=	ldc017
 SUBDIR+=	ldc120
 SUBDIR+=	lde
 SUBDIR+=	lean4-git
-SUBDIR+=	leaves
 SUBDIR+=	lebiniou
 SUBDIR+=	lebiniou-data
 SUBDIR+=	leo
