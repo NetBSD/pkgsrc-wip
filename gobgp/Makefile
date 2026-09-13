@@ -3,7 +3,6 @@
 DISTNAME=	gobgp-4.9.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=osrg/}
-GITHUB_PROJECT=	gobgp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
 
-# config is to common filename, rename to gobgp-config
+# 'config' is a too common filename, rename it to 'gobgp-config'
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/config \
 		${DESTDIR}${PREFIX}/bin/gobgp-config
