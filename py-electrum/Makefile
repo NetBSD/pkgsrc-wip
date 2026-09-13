@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	4.8.1
+VERSION=	4.8.2
 DISTNAME=	Electrum-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	finance python

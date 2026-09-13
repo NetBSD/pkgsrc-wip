@@ -78,6 +78,9 @@ ${PYSITELIB}/electrum/constants.pyo
 ${PYSITELIB}/electrum/contacts.py
 ${PYSITELIB}/electrum/contacts.pyc
 ${PYSITELIB}/electrum/contacts.pyo
+${PYSITELIB}/electrum/crandom.py
+${PYSITELIB}/electrum/crandom.pyc
+${PYSITELIB}/electrum/crandom.pyo
 ${PYSITELIB}/electrum/crypto.py
 ${PYSITELIB}/electrum/crypto.pyc
 ${PYSITELIB}/electrum/crypto.pyo
