@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	whisper.cpp-1.9.2
+DISTNAME=	whisper.cpp-1.9.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ggml-org/}
 GITHUB_PROJECT=	whisper.cpp
