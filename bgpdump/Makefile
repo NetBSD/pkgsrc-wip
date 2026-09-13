@@ -4,7 +4,6 @@ DISTNAME=	libbgpdump-1.6.2
 PKGNAME=	${DISTNAME:S/libbgpdump/bgpdump/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RIPE-NCC/}
-GITHUB_PROJECT=	bgpdump
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
