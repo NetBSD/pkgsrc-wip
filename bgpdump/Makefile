@@ -6,15 +6,18 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RIPE-NCC/}
 GITHUB_PROJECT=	bgpdump
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/RIPE-NCC/bgpdump
 COMMENT=	BGP dump utility and library
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
+USE_TOOLS+=	automake autoconf autoreconf
 GNU_CONFIGURE=	yes
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/bsd.pkg.mk"
