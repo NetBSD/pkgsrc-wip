@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/rtrdump
+bin/rtrmon
+bin/stayrtr
