@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
-@@ -6697,7 +6697,7 @@ void WebGLRenderingContextBase::TexImage
+@@ -6696,7 +6696,7 @@ void WebGLRenderingContextBase::TexImage
    // unmultiply has been requested or we need to never premultiply for Image
    // creation from a VideoFrame.
  

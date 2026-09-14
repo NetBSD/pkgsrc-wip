@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_actions.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/browser_actions.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/browser_actions.cc
-@@ -243,7 +243,7 @@
+@@ -237,7 +237,7 @@
  #include "chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/common/pref_names.h"
  #include "components/prefs/pref_service.h"
  #endif
-@@ -2610,7 +2610,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2541,7 +2541,7 @@ void BrowserActions::InitializeToolbarAn
            .Build());
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD$
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -2742,7 +2742,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2673,7 +2673,7 @@ void BrowserActions::InitializeToolbarAn
            .SetActionId(kActionExit)
            .Build());
  
@@ -33,7 +33,7 @@ $NetBSD$
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -3782,7 +3782,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -3585,7 +3585,7 @@ void BrowserActions::InitializeToolbarAn
                [](BrowserWindowInterface* bwi, actions::ActionItem* item,
                   actions::ActionInvocationContext context) {
                  base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -42,7 +42,7 @@ $NetBSD$
                  chrome::CreateDesktopShortcutForActiveWebContents(
                      bwi->GetBrowserForMigrationOnly());
  #else
-@@ -4653,7 +4653,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -4381,7 +4381,7 @@ void BrowserActions::InitializeToolbarAn
  #endif
  
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \

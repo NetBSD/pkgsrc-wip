@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/system/sys_info.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ base/system/sys_info.cc
-@@ -241,7 +241,7 @@ std::string SysInfo::SocManufacturer() {
+@@ -247,7 +247,7 @@ std::string SysInfo::SocManufacturer() {
  #endif
  
  void SysInfo::GetHardwareInfo(base::OnceCallback<void(HardwareInfo)> callback) {

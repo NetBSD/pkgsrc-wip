@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/rand_util_posix.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ base/rand_util_posix.cc
 @@ -24,7 +24,7 @@
  #include "build/build_config.h"

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/common/features.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ content/common/features.h
-@@ -86,7 +86,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEar
+@@ -87,7 +87,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEar
  #endif
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEditContextSelectionSync);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kKillOnUnexpectedOriginHeader);
@@ -15,7 +15,7 @@ $NetBSD$
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnforceGamepadPermissionsPolicy);
-@@ -116,8 +116,8 @@ enum class FontDataServiceTypefaceType {
+@@ -115,8 +115,8 @@ enum class FontDataServiceTypefaceType {
  CONTENT_EXPORT BASE_DECLARE_FEATURE_PARAM(FontDataServiceTypefaceType,
                                            kFontDataServiceTypefaceType);
  #endif  // BUILDFLAG(IS_WIN)
@@ -27,7 +27,7 @@ $NetBSD$
  #else
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceChromeOS);
 @@ -132,7 +132,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
- 
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataManagerPrewarming);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceForCSSLocalFonts);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

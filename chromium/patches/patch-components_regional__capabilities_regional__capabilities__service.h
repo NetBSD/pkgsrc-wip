@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_service.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.h
-@@ -123,7 +123,7 @@ class RegionalCapabilitiesService : publ
+@@ -125,7 +125,7 @@ class RegionalCapabilitiesService : publ
    static bool IsInAnySearchEngineChoiceScreenRegion(
        const country_codes::CountryId& tested_country_id);
  

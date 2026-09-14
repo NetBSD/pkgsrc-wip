@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -64,7 +64,7 @@ BASE_DECLARE_FEATURE(kUseKeychainKeyProv
  #endif  // BUILDFLAG(IS_MAC)
@@ -15,7 +15,7 @@ $NetBSD$
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillAddressSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillCardSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillPasswordSurvey);
-@@ -156,7 +156,7 @@ extern const base::FeatureParam<std::str
+@@ -160,7 +160,7 @@ extern const base::FeatureParam<std::str
  COMPONENT_EXPORT(CHROME_FEATURES)
  bool RemoteActorCredentialSharingEnabled();
  
@@ -24,7 +24,7 @@ $NetBSD$
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  #endif
  
-@@ -973,7 +973,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -983,7 +983,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kIsolatedWebAppBundleCache);
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD$
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorModerateLevel;
-@@ -981,7 +981,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -991,7 +991,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

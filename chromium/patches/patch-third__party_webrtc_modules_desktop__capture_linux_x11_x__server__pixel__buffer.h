@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.h
 @@ -17,6 +17,10 @@
  #include <X11/Xlib.h>

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tab_helpers.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/tab_helpers.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/tab_helpers.cc
 @@ -218,7 +218,7 @@
  #endif
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/blocked_content/framebust_block_tab_helper.h"
  #include "chrome/browser/ui/hats/hats_helper.h"
  #include "chrome/browser/ui/performance_controls/performance_controls_hats_service_factory.h"
-@@ -780,12 +780,12 @@ void TabHelpers::AttachTabHelpers(WebCon
+@@ -790,12 +790,12 @@ void TabHelpers::AttachTabHelpers(WebCon
    webapps::PreRedirectionURLObserver::CreateForWebContents(web_contents);
  #endif
  

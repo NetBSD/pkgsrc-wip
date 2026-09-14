@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ mojo/core/channel.cc
-@@ -74,7 +74,11 @@ const size_t kMaxAttachedHandles = 64;
- const size_t kMaxAttachedHandles = 253;
- #endif  // BUILDFLAG(IS_FUCHSIA)
+@@ -69,7 +69,11 @@ const size_t kMaxUnusedReadBufferCapacit
+ // Limit on the number of handles that may be received per Mojo message.
+ const size_t kMaxAttachedHandles = 256;
  
 +#if defined(__i386__) && defined(OS_FREEBSD)
 +const size_t kChannelMessageAlignment = 4;
@@ -18,7 +18,7 @@ $NetBSD$
  Channel::AlignedBuffer MakeAlignedBuffer(size_t size) {
    // Generic allocators (such as malloc) return a pointer that is suitably
    // aligned for storing any type of object with a fundamental alignment
-@@ -268,7 +272,7 @@ bool ShouldRecordSubsampledHistograms() 
+@@ -263,7 +267,7 @@ bool ShouldRecordSubsampledHistograms() 
  }  // namespace
  
  #if BUILDFLAG(IS_ANDROID) || \
@@ -27,7 +27,7 @@ $NetBSD$
  
  namespace {
  
-@@ -1316,7 +1320,7 @@ bool Channel::OnControlMessage(Message::
+@@ -1311,7 +1315,7 @@ bool Channel::OnControlMessage(Message::
  }
  
  // Currently only CrOs, Linux, and Android support upgrades.

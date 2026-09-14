@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/safe_browsing_service.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/safe_browsing/safe_browsing_service.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/safe_browsing/safe_browsing_service.cc
 @@ -81,7 +81,7 @@
  #include "services/preferences/public/mojom/tracked_preference_validation_delegate.mojom.h"

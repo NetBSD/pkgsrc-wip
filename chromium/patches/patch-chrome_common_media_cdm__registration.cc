@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/cdm_registration.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/common/media/cdm_registration.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/common/media/cdm_registration.cc
 @@ -33,7 +33,7 @@
  #if BUILDFLAG(ENABLE_WIDEVINE)
@@ -51,7 +51,7 @@ $NetBSD$
    // The Widevine CDM on Linux/ChromeOS needs to be registered (and loaded)
    // before the zygote is locked down. The CDM can be found from the version
    // bundled with Chrome (if BUNDLE_WIDEVINE_CDM = true) and/or the version
-@@ -437,7 +437,7 @@ void RegisterCdmInfo(std::vector<content
+@@ -434,7 +434,7 @@ void RegisterCdmInfo(std::vector<content
  }
  
  #if BUILDFLAG(ENABLE_WIDEVINE) && \

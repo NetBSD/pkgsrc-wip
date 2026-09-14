@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.80 2026/09/05 19:10:04 bsiegert Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			152.0.7977.82
+VERSION=			153.0.8010.36
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -207,6 +207,7 @@ GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
 GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
+GN_ARGS+=	use_typescript_go=false
 GN_ARGS+=	use_udev=true
 GN_ARGS+=	use_vaapi=false
 GN_ARGS+=	v8_enable_cet_ibt=true
@@ -425,6 +426,8 @@ BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
+.include "../../wip/typescript/buildlink3.mk"
+#.include "../../lang/typescript/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"

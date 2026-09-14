@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/mojo_caller_security_checker.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- remoting/host/mojo_caller_security_checker.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ remoting/host/mojo_caller_security_checker.cc
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
  namespace remoting {
  namespace {
  
@@ -15,7 +15,7 @@ $NetBSD$
  constexpr auto kAllowedCallerProgramNames =
      base::MakeFixedFlatSet<base::FilePath::StringViewType>({
          "remote-open-url",
-@@ -136,7 +136,7 @@ bool IsTrustedMojoEndpoint(
+@@ -137,7 +137,7 @@ bool IsTrustedMojoEndpoint(
      const named_mojo_ipc_server::ConnectionInfo& caller) {
  #if BUILDFLAG(IS_MAC)
    return IsProcessTrusted(caller.audit_token, kAllowedIdentifiers);
@@ -24,7 +24,7 @@ $NetBSD$
  
    static base::NoDestructor<base::FilePath> current_process_image_path(
        GetProcessImagePath(base::GetCurrentProcId()));
-@@ -173,7 +173,7 @@ bool IsTrustedMojoEndpoint(
+@@ -174,7 +174,7 @@ bool IsTrustedMojoEndpoint(
    base::FilePath::StringType program_name =
        caller_process_image_path.BaseName().value();
    if (!kAllowedCallerProgramNames.contains(program_name)) {

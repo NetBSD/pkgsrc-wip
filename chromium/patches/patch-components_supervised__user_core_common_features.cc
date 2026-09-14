@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -30,7 +30,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
  #endif

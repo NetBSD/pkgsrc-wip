@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate_linux.cc
-@@ -27,7 +27,7 @@ bool IsDesktopEnvironmentUnity() {
+@@ -44,7 +44,7 @@ bool WindowManagerDrawsTitleBarOverMaxim
    return desktop_env == base::nix::DESKTOP_ENVIRONMENT_UNITY;
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  int GetWindowIconResourceId() {
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    switch (chrome::GetChannel()) {
-@@ -85,7 +85,7 @@ views::NativeWidget* ChromeViewsDelegate
+@@ -102,7 +102,7 @@ views::NativeWidget* ChromeViewsDelegate
                                delegate);
  }
  

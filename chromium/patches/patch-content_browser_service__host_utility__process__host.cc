@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_process_host.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/service_host/utility_process_host.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ content/browser/service_host/utility_process_host.cc
-@@ -65,7 +65,7 @@
+@@ -66,7 +66,7 @@
  #include "content/browser/v8_snapshot_files.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
  #include "base/pickle.h"
-@@ -100,7 +100,7 @@ namespace content {
+@@ -99,7 +99,7 @@ namespace content {
  
  namespace {
  

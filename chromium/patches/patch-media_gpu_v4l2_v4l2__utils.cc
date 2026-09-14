@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/v4l2/v4l2_utils.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- media/gpu/v4l2/v4l2_utils.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ media/gpu/v4l2/v4l2_utils.cc
 @@ -15,7 +15,7 @@
  

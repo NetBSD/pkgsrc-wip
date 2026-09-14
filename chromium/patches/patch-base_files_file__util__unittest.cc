@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_unittest.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/files/file_util_unittest.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ base/files/file_util_unittest.cc
-@@ -4543,7 +4543,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
+@@ -4620,7 +4620,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,7 @@ $NetBSD$
  TEST_F(FileUtilTest, ReadFileToStringWithProcFileSystem) {
    FilePath file_path("/proc/cpuinfo");
    std::string data = "temp";
-@@ -5126,6 +5126,19 @@ TEST_F(FileUtilTest, CreateDirectoryOnly
+@@ -5203,6 +5203,19 @@ TEST_F(FileUtilTest, CreateDirectoryOnly
  
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -35,7 +35,7 @@ $NetBSD$
  #if BUILDFLAG(IS_WIN) && BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
      defined(ARCH_CPU_32_BITS)
  // TODO(crbug.com/327582285): Re-enable these tests. They may be failing due to
-@@ -5292,7 +5305,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
+@@ -5369,7 +5382,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
                  NULL);
  #else
      size_t bytes_written =

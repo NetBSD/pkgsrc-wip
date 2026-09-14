@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/renderer/shell_content_renderer_client.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/shell/renderer/shell_content_renderer_client.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ content/shell/renderer/shell_content_renderer_client.cc
-@@ -56,7 +56,7 @@
+@@ -57,7 +57,7 @@
  #include "media/base/media_switches.h"
  #endif
  

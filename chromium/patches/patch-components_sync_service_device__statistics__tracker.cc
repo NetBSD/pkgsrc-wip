@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/device_statistics_tracker.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/sync/service/device_statistics_tracker.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/sync/service/device_statistics_tracker.cc
 @@ -139,7 +139,7 @@ std::optional<DeviceStatisticsTracker::P
    return DeviceStatisticsTracker::Platform::kWindows;

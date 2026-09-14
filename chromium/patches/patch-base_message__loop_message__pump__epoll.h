@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_epoll.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/message_loop/message_pump_epoll.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ base/message_loop/message_pump_epoll.h
 @@ -49,7 +49,11 @@ namespace base {
  // Caveat: Since both we and the kernel need to walk the list of all fds at

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- ui/views/widget/widget.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ ui/views/widget/widget.h
-@@ -490,7 +490,7 @@ class VIEWS_EXPORT Widget : public inter
+@@ -491,7 +491,7 @@ class VIEWS_EXPORT Widget : public inter
      bool dont_show_in_taskbar = false;
  #endif  // BUILDFLAG(IS_WIN)
  

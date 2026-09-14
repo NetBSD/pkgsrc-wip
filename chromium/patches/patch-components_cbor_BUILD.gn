@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/cbor/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/cbor/BUILD.gn.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/cbor/BUILD.gn
 @@ -12,7 +12,7 @@ buildflag_header("buildflags") {
    # TODO(crbug.com/535682335): Remove `USE_CBOR_RUST` buildflag entirely,
@@ -15,7 +15,7 @@ $NetBSD$
  }
  
  component("cbor") {
-@@ -37,12 +37,12 @@ component("cbor") {
+@@ -35,12 +35,12 @@ component("cbor") {
      "//base",
    ]
  

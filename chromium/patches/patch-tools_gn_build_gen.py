@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/build/gen.py.orig	2026-08-31 22:47:51.000000000 +0000
+--- tools/gn/build/gen.py.orig	2026-09-07 10:14:27.000000000 +0000
 +++ tools/gn/build/gen.py
 @@ -90,6 +90,12 @@ class Platform(object):
    def is_solaris(self):
@@ -19,7 +19,7 @@ $NetBSD$
    def is_posix(self):
      return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity']
  
-@@ -318,7 +324,7 @@ def WriteGenericNinja(path, static_libra
+@@ -324,7 +330,7 @@ def WriteGenericNinja(path, static_libra
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
        'aix': 'build_aix.ninja.template',
@@ -28,13 +28,3 @@ $NetBSD$
        'haiku': 'build_haiku.ninja.template',
        'solaris': 'build_linux.ninja.template',
        'netbsd': 'build_linux.ninja.template',
-@@ -583,6 +589,9 @@ def WriteGNNinja(path, platform, host, o
-     if platform.is_posix() and not platform.is_haiku():
-       ldflags.append('-pthread')
- 
-+    if platform.is_openbsd():
-+      libs.append('-lkvm')
-+
-     if platform.is_mingw() or platform.is_msys():
-       cflags.extend(['-DUNICODE',
-                      '-DNOMINMAX',

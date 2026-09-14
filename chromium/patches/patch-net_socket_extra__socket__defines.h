@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/extra_socket_defines.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- net/socket/extra_socket_defines.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ net/socket/extra_socket_defines.h
 @@ -7,7 +7,7 @@
  

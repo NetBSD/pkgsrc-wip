@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/src/utils/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/dawn/src/utils/BUILD.gn.orig	2026-09-07 10:14:27.000000000 +0000
 +++ third_party/dawn/src/utils/BUILD.gn
-@@ -210,16 +210,6 @@ config("dawn_warnings") {
-       "-Wno-non-virtual-dtor",
+@@ -208,13 +208,6 @@ config("dawn_warnings") {
+       "-Wno-float-equal",
        "-Wno-undefined-func-template",
        "-Wno-unused-parameter",
 -
@@ -16,10 +16,7 @@ $NetBSD$
 -      # -Wlifetime-safety-lifetimebound-violation) are not yet mapped to
 -      # toggleable warning flags, so we suppress the entire group and disable
 -      # the analysis pass.
--      "-Wno-lifetime-safety",
 -      "-Wno-lifetime-safety-all",
--      "-Xclang=-fno-lifetime-safety-inference",
--      "-Xclang=-fno-experimental-lifetime-safety-tu-analysis",
      ]
  
      # P3. Checks that could be nice but probably don't help with hardening.

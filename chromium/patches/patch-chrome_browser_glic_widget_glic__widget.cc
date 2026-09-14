@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/widget/glic_widget.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/glic/widget/glic_widget.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/glic/widget/glic_widget.cc
 @@ -53,7 +53,7 @@
  #include "ui/views/win/hwnd_util.h"
@@ -32,8 +32,8 @@ $NetBSD$
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      int resize_border = OpaqueBrowserFrameViewLayout::kFrameBorderThickness;
  #endif
-     const bool can_resize = GetWidget()->widget_delegate()->CanResize();
-@@ -358,7 +358,7 @@ std::unique_ptr<views::WidgetDelegate> G
+     const bool can_resize = GetWidget()->widget_delegate() &&
+@@ -359,7 +359,7 @@ std::unique_ptr<views::WidgetDelegate> G
          return std::make_unique<GlicClientView>(widget, contents_view);
        }));
  
@@ -42,7 +42,7 @@ $NetBSD$
    delegate->SetFrameViewFactory(base::BindRepeating(
        [](views::Widget* widget) -> std::unique_ptr<views::FrameView> {
          return std::make_unique<GlicFrameView>(widget);
-@@ -438,7 +438,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
+@@ -439,7 +439,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
  #if BUILDFLAG(IS_MAC)
    params.animation_enabled = true;
  #endif  // BUILDFLAG(IS_MAC)

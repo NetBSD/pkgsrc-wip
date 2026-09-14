@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.h
 @@ -32,7 +32,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDummyFeature);
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  FEATURE_CONSTANTS_DECLARE_FEATURE(kEsbDownloadRowPromoFeature);
  #endif
-@@ -424,7 +424,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHiO
+@@ -429,7 +429,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHiO
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAutofillAtMemoryFeature);
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature);
  FEATURE_CONSTANTS_DECLARE_FEATURE(
-@@ -458,13 +458,13 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHLa
+@@ -463,13 +463,13 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHLa
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

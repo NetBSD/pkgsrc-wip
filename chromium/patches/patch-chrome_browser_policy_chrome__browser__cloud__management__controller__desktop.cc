@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc
-@@ -59,7 +59,7 @@
+@@ -61,7 +61,7 @@
  #include "chrome/browser/policy/browser_dm_token_storage_mac.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/policy/browser_dm_token_storage_linux.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -68,7 +68,7 @@
+@@ -70,7 +70,7 @@
  #include "chrome/install_static/install_util.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/client_certificates/browser_context_delegate.h"
  #include "chrome/browser/enterprise/client_certificates/cert_utils.h"
  #include "chrome/browser/enterprise/connectors/device_trust/key_management/browser/device_trust_key_manager_impl.h"
-@@ -116,7 +116,7 @@ void ChromeBrowserCloudManagementControl
+@@ -118,7 +118,7 @@ void ChromeBrowserCloudManagementControl
  
  #if BUILDFLAG(IS_MAC)
    storage_delegate = std::make_unique<BrowserDMTokenStorageMac>();
@@ -33,7 +33,7 @@ $NetBSD$
    storage_delegate = std::make_unique<BrowserDMTokenStorageLinux>();
  #elif BUILDFLAG(IS_WIN)
    storage_delegate = std::make_unique<BrowserDMTokenStorageWin>();
-@@ -300,7 +300,7 @@ ChromeBrowserCloudManagementControllerDe
+@@ -303,7 +303,7 @@ ChromeBrowserCloudManagementControllerDe
  
  std::unique_ptr<enterprise_connectors::DeviceTrustKeyManager>
  ChromeBrowserCloudManagementControllerDesktop::CreateDeviceTrustKeyManager() {
@@ -42,7 +42,7 @@ $NetBSD$
    auto* browser_dm_token_storage = BrowserDMTokenStorage::Get();
    auto* device_management_service = GetDeviceManagementService();
    auto shared_url_loader_factory = GetSharedURLLoaderFactory();
-@@ -322,7 +322,7 @@ ChromeBrowserCloudManagementControllerDe
+@@ -325,7 +325,7 @@ ChromeBrowserCloudManagementControllerDe
  std::unique_ptr<client_certificates::CertificateProvisioningService>
  ChromeBrowserCloudManagementControllerDesktop::
      CreateCertificateProvisioningService() {

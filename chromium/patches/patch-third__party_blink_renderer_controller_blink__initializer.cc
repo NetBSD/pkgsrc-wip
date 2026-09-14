@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -87,12 +87,12 @@
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"

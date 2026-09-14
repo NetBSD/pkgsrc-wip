@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/session_policies_from_dict.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- remoting/host/session_policies_from_dict.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ remoting/host/session_policies_from_dict.cc
-@@ -77,7 +77,7 @@ std::optional<SessionPolicies> SessionPo
+@@ -74,7 +74,7 @@ std::optional<SessionPolicies> SessionPo
    session_policies.curtain_required =
        dict.FindBool(policy::key::kRemoteAccessHostRequireCurtain);
  #endif

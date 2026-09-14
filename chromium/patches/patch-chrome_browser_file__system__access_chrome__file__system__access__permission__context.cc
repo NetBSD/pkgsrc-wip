@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
-@@ -457,7 +457,7 @@ GenerateBlockPaths(bool should_normalize
+@@ -458,7 +458,7 @@ GenerateBlockPaths(bool should_normalize
            FILE_PATH_LITERAL("Library/Mobile Documents/com~apple~CloudDocs"),
            BlockType::kDontBlockChildren),
  #endif

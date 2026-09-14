@@ -4,23 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- remoting/host/ipc_desktop_environment.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.h
-@@ -135,7 +135,7 @@ class IpcDesktopEnvironmentFactory : pub
-                               ErrorCode error_code,
-                               const std::string& error_details,
-                               const SourceLocation& error_location) override;
+@@ -184,7 +184,7 @@ class IpcDesktopEnvironmentFactory : pub
+                                         ErrorCode error_code,
+                                         const std::string& error_details,
+                                         const SourceLocation& error_location);
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   void OnSessionServicesClientConnected(
+   void OnSessionServicesClientConnectedForTesting(
        int terminal_id,
-       mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
-@@ -177,7 +177,7 @@ class IpcDesktopEnvironmentFactory : pub
-   // the same email address reconnects, the desktop session will be reused and
-   // the desktop process will be requested to send a new desktop pipe.
-   // TODO: yuweih - see if it makes sense to enable it on Windows.
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   bool persist_desktop_sessions_ = true;
- #else
-   bool persist_desktop_sessions_ = false;
+       mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver);

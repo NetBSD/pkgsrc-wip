@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/list_family_members_service.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/supervised_user/core/browser/list_family_members_service.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/supervised_user/core/browser/list_family_members_service.h
 @@ -31,7 +31,7 @@ namespace supervised_user {
  // If true, this fetcher is active for all users with CanFetchFamilyMemberInfo

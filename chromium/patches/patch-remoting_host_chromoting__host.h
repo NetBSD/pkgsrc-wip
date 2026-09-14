@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- remoting/host/chromoting_host.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ remoting/host/chromoting_host.h
 @@ -37,7 +37,7 @@
  #include "remoting/protocol/session_manager.h"
@@ -42,7 +42,7 @@ $NetBSD$
    void BindChromotingHostServices(
        mojo::PendingReceiver<mojom::ChromotingHostServices> receiver);
  #endif
-@@ -165,7 +165,7 @@ class ChromotingHost :
+@@ -168,7 +168,7 @@ class ChromotingHost :
    std::optional<ErrorCode> OnSessionPoliciesReceived(
        const SessionPolicies& policies) override;
  
@@ -51,7 +51,7 @@ $NetBSD$
    // mojom::ChromotingHostServices implementation.
    void BindSessionServices(
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
-@@ -223,7 +223,7 @@ class ChromotingHost :
+@@ -226,7 +226,7 @@ class ChromotingHost :
    // List of host extensions.
    std::vector<std::unique_ptr<HostExtension>> extensions_;
  
@@ -60,7 +60,7 @@ $NetBSD$
    // IPC server that runs the CRD host service API. Non-null if the server name
    // is set and the host is started.
    // Currently only Linux runs the ChromotingHostServices server on the host
-@@ -231,7 +231,7 @@ class ChromotingHost :
+@@ -234,7 +234,7 @@ class ChromotingHost :
    std::unique_ptr<ChromotingHostServicesServer> ipc_server_;
  #endif
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- net/socket/udp_socket_posix.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ net/socket/udp_socket_posix.h
 @@ -451,7 +451,7 @@ class NET_EXPORT UDPSocketPosix {
        size_t maximum_packet_size);

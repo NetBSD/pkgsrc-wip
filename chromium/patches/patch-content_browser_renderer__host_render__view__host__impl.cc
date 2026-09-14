@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
-@@ -265,7 +265,7 @@ void RenderViewHostImpl::GetPlatformSpec
+@@ -266,7 +266,7 @@ void RenderViewHostImpl::GetPlatformSpec
    GetFontInfo(gfx::win::SystemFont::kStatus, &prefs->status_font_family_name,
                &prefs->status_font_height);
  

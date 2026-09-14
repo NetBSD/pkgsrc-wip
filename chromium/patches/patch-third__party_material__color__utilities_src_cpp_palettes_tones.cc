@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/material_color_utilities/src/cpp/palettes/tones.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/material_color_utilities/src/cpp/palettes/tones.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ third_party/material_color_utilities/src/cpp/palettes/tones.cc
 @@ -14,6 +14,8 @@
   * limitations under the License.

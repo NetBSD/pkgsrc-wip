@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_openbsd.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/process/process_metrics_openbsd.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ base/process/process_metrics_openbsd.cc
-@@ -6,73 +6,85 @@
+@@ -6,73 +6,83 @@
  
  #include <stddef.h>
  #include <stdint.h>
@@ -14,8 +14,6 @@ $NetBSD$
  #include <sys/param.h>
  #include <sys/sysctl.h>
 +#include <sys/vmmeter.h>
-+
-+#include <kvm.h>
  
  #include "base/memory/ptr_util.h"
  #include "base/types/expected.h"
@@ -128,7 +126,7 @@ $NetBSD$
    struct vmtotal vmtotal;
    unsigned long mem_total, mem_free, mem_inactive;
    size_t len = sizeof(vmtotal);
-@@ -85,9 +97,60 @@ size_t GetSystemCommitCharge() {
+@@ -85,9 +95,60 @@ size_t GetSystemCommitCharge() {
    mem_free = vmtotal.t_free;
    mem_inactive = vmtotal.t_vm - vmtotal.t_avm;
  

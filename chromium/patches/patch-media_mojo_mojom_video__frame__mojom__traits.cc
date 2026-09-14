@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
 @@ -24,7 +24,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"
@@ -42,7 +42,7 @@ $NetBSD$
        // TODO(crbug.com/513289253): Avoid CloneGpuMemoryBufferHandle() only for
        // validation.
        const auto video_pixel_format =
-@@ -477,7 +477,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -480,7 +480,7 @@ bool StructTraits<media::mojom::VideoFra
      frame = media::VideoFrame::WrapTrackingToken(
          format, *metadata.tracking_token, coded_size, visible_rect,
          natural_size, timestamp);

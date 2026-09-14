@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/autofill/core/browser/payments/amount_extraction_manager.cc
 @@ -319,7 +319,7 @@ void AmountExtractionManager::OnCheckout
        .Run(parsed_extracted_amount,

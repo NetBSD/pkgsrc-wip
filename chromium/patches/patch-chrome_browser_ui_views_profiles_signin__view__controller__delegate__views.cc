@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
-@@ -62,14 +62,14 @@
+@@ -60,14 +60,14 @@
  #include "chrome/browser/ui/webui/signin/signout_confirmation/signout_confirmation_ui.h"
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -23,7 +23,7 @@ $NetBSD$
  const int kManagedUserNoticeConfirmationDialogWidth = 780;
  const int kManagedUserNoticeConfirmationDialogHeight = 560;
  #endif
-@@ -137,7 +137,7 @@ SigninViewControllerDelegateViews::Creat
+@@ -138,7 +138,7 @@ SigninViewControllerDelegateViews::Creat
        kSyncConfirmationDialogWidth, InitializeSigninWebDialogUI(true));
  }
  
@@ -31,8 +31,8 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  std::unique_ptr<views::WebView>
  SigninViewControllerDelegateViews::CreateHistorySyncOptInWebView(
-     Browser* browser,
-@@ -245,7 +245,7 @@ SigninViewControllerDelegateViews::Creat
+     BrowserWindowInterface* browser,
+@@ -247,7 +247,7 @@ SigninViewControllerDelegateViews::Creat
  }
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -68,7 +68,7 @@ $NetBSD$
  // static
  SigninViewControllerDelegate*
  SigninViewControllerDelegate::CreateSyncHistoryOptInDelegate(
-@@ -655,7 +655,7 @@ SigninViewControllerDelegate::CreateSign
+@@ -656,7 +656,7 @@ SigninViewControllerDelegate::CreateSign
  }
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  

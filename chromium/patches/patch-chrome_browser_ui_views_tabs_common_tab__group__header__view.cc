@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/common/tab_group_header_view.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/views/tabs/common/tab_group_header_view.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/views/tabs/common/tab_group_header_view.cc
-@@ -385,7 +385,7 @@ void TabGroupHeaderView::OnMouseEntered(
+@@ -391,7 +391,7 @@ void TabGroupHeaderView::OnMouseEntered(
  }
  
  void TabGroupHeaderView::OnMouseExited(const ui::MouseEvent& event) {

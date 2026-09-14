@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
 @@ -327,7 +327,7 @@ PA_DEFINE_OPERATORS_FOR_FLAGS(PoolHandle
  // 8GB for each of the glued pools).
@@ -15,7 +15,7 @@ $NetBSD$
  constexpr size_t kPoolMaxSize = 8 * kGiB;
  #else
  constexpr size_t kPoolMaxSize = 16 * kGiB;
-@@ -411,7 +411,7 @@ PA_ALWAYS_INLINE constexpr size_t MaxDir
+@@ -400,7 +400,7 @@ constexpr size_t kMinDirectMappedDownsiz
  // TODO(casey.smalley@arm.com): under 64k pages we can end up in a situation
  // where a normal slot span will be large enough to contain multiple items,
  // but the address will go over the final partition page after being aligned.

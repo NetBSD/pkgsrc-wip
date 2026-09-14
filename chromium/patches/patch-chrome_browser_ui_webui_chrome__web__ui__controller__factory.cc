@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -117,17 +117,17 @@
+@@ -116,17 +116,17 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -27,7 +27,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -268,7 +268,7 @@ void ChromeWebUIControllerFactory::GetFa
+@@ -267,7 +267,7 @@ void ChromeWebUIControllerFactory::GetFa
      const std::vector<int>& desired_sizes_in_pixel,
      favicon_base::FaviconResultsCallback callback) const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -36,7 +36,7 @@ $NetBSD$
    if (page_url.SchemeIs(webapps::kIsolatedAppScheme)) {
      ReadIsolatedWebAppFaviconsFromDisk(profile, page_url, std::move(callback));
      return;
-@@ -427,7 +427,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -439,7 +439,7 @@ ChromeWebUIControllerFactory::GetFavicon
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
    }
  
@@ -45,7 +45,7 @@ $NetBSD$
    if (page_url.host() == chrome::kChromeUIWhatsNewHost) {
      return WhatsNewUI::GetFaviconResourceBytes(scale_factor);
    }
-@@ -457,7 +457,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -459,7 +459,7 @@ ChromeWebUIControllerFactory::GetFavicon
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

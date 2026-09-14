@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/public/browser_window_features.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/browser_window/public/browser_window_features.h.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/browser_window/public/browser_window_features.h
-@@ -102,7 +102,7 @@ class ZoomBubbleManager;
+@@ -127,7 +127,7 @@ class ZoomBubbleManager;
  class WindowsTaskbarIconUpdater;
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  class ProfileCustomizationBubbleSyncController;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -201,7 +201,7 @@ namespace send_tab_to_self {
+@@ -230,7 +230,7 @@ namespace send_tab_to_self {
  class SendTabToSelfToolbarBubbleController;
  }  // namespace send_tab_to_self
  
@@ -24,7 +24,7 @@ $NetBSD$
  namespace session_restore_infobar {
  class SessionRestoreInfobarController;
  }  // namespace session_restore_infobar
-@@ -421,7 +421,7 @@ class BrowserWindowFeatures {
+@@ -450,7 +450,7 @@ class BrowserWindowFeatures {
      return pinned_toolbar_actions_;
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    ProfileCustomizationBubbleSyncController*
    profile_customization_bubble_sync_controller() {
      return profile_customization_bubble_sync_controller_.get();
-@@ -724,7 +724,7 @@ class BrowserWindowFeatures {
+@@ -766,7 +766,7 @@ class BrowserWindowFeatures {
        pin_infobar_controller_;
  #endif
  

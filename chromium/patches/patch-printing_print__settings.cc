@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- printing/print_settings.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ printing/print_settings.cc
 @@ -319,7 +319,7 @@ PrintSettings& PrintSettings::operator=(
  #endif

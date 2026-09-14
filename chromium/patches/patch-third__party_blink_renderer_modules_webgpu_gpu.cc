@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu.cc
-@@ -417,7 +417,7 @@ V8GPUTextureFormat GPU::getPreferredCanv
+@@ -401,7 +401,7 @@ V8GPUTextureFormat GPU::getPreferredCanv
  }
  
  wgpu::TextureFormat GPU::GetPreferredCanvasFormat() {

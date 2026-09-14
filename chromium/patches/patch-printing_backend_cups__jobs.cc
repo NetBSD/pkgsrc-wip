@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_jobs.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- printing/backend/cups_jobs.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ printing/backend/cups_jobs.cc
 @@ -26,7 +26,7 @@
  #include "printing/backend/cups_ipp_helper.h"

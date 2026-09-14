@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/performance_manager/decorators/process_metrics_decorator.cc
 @@ -53,7 +53,7 @@ class ProcessMetricsDecorator::NodeMetri
      auto* process_node = ProcessNodeImpl::FromNode(context.GetProcessNode());

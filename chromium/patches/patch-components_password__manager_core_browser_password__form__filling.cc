@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_form_filling.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/password_manager/core/browser/password_form_filling.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/password_manager/core/browser/password_form_filling.cc
-@@ -178,7 +178,7 @@ LikelyFormFilling SendFillInformationToR
+@@ -179,7 +179,7 @@ LikelyFormFilling SendFillInformationToR
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

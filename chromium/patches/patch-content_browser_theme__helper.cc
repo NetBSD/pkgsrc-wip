@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/theme_helper.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/theme_helper.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ content/browser/theme_helper.cc
 @@ -27,7 +27,7 @@ mojom::UpdateSystemColorInfoParamsPtr Ma
      ui::NativeTheme* native_theme) {

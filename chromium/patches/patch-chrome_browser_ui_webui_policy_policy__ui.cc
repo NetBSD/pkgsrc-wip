@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/policy/policy_ui.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/webui/policy/policy_ui.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/ui/webui/policy/policy_ui.cc
-@@ -150,7 +150,7 @@ void CreateAndAddPolicyUIHtmlSource(Prof
+@@ -188,7 +188,7 @@ void CreateAndAddPolicyUIHtmlSource(Prof
        {"statusFlexOrgNoPolicy", IDS_POLICY_STATUS_FLEX_ORG_NO_POLICY},
        {"statusDevice", IDS_POLICY_STATUS_DEVICE},
        {"statusMachine", IDS_POLICY_STATUS_MACHINE},

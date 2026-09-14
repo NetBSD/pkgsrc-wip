@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -248,7 +248,7 @@ const base::Feature* const kAllFeatures[
+@@ -251,7 +251,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -338,7 +338,7 @@ const base::Feature* const kAllFeatures[
+@@ -341,7 +341,7 @@ const base::Feature* const kAllFeatures[
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
      // keep-sorted start case=no
      &kIPHAutofillAccountNameEmailSuggestionFeature,
      &kIPHAutofillAiOptInFeature,
-@@ -371,7 +371,7 @@ const base::Feature* const kAllFeatures[
+@@ -374,7 +374,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
      // keep-sorted start case=no
      &kIPHDesktopPWAsLinkCapturingLaunch,
      &kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -383,7 +383,7 @@ const base::Feature* const kAllFeatures[
+@@ -386,7 +386,7 @@ const base::Feature* const kAllFeatures[
      &kIPHExtensionsPinnedByDefaultFeature,
  #endif  // BUILDFLAG(ENABLE_EXTENSIONS_CORE)
  

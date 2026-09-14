@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc
 @@ -199,6 +199,7 @@ void DawnOzoneImageRepresentation::EndAc
    if (!texture_) {

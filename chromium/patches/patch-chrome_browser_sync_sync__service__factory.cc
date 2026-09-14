@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2026-09-07 10:14:27.000000000 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
-@@ -141,7 +141,7 @@ namespace {
+@@ -140,7 +140,7 @@ namespace {
  tab_groups::TabGroupSyncService* GetTabGroupSyncService(Profile* profile) {
    CHECK(profile);
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD$
    tab_groups::TabGroupSyncService* service =
        tab_groups::TabGroupSyncServiceFactory::GetForProfile(profile);
    CHECK(service);
-@@ -434,7 +434,7 @@ std::unique_ptr<KeyedService> BuildSyncS
+@@ -433,7 +433,7 @@ std::unique_ptr<KeyedService> BuildSyncS
    bool local_sync_backend_enabled = false;
    // Only check the local sync backend pref on the supported platforms of
    // Windows, Mac and Linux.
