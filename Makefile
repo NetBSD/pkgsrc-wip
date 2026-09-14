@@ -2779,6 +2779,7 @@ SUBDIR+=	open21xx
 SUBDIR+=	openafs-git
 SUBDIR+=	openapi-mock
 SUBDIR+=	openaxiom-svn
+SUBDIR+=	openbao
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openbox-themes-extra

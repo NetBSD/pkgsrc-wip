@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (openbao-dist-v2.6.2.tar.xz) = ec1e1ba4320c82407972e4fcb14393f8768df7bda6068142dd5da73427d024ac
+SHA512 (openbao-dist-v2.6.2.tar.xz) = 36960703e970443529d7687c57887123b2d3f9e55f4a22ed7d761cc6d6d08c00e029a01b0b61099824fc4cbfa592141b2a4255d10d8dcf4b756e60017fd73b0b
+Size (openbao-dist-v2.6.2.tar.xz) = 39943844 bytes
