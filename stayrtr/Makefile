@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/bgp/stayrtr/
-COMMENT=	Open-Source implementation of RPKI-to-Router protocol
+COMMENT=	RPKI-To-Router server implementation in Go
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
