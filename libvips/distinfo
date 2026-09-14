@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.2 2025/10/31 22:44:40 hauke Exp $
 
-BLAKE2s (vips-8.18.5.tar.xz) = 5cfc83385713555dca45a48a4adb10cbaf672f5dc00c604e7ce5ffd41d29c58c
-SHA512 (vips-8.18.5.tar.xz) = 0351887a74f530a8c1f46093e305cff245bd90473f3016e83de550d102f3631da3d2351d055f9ade8b440e636c4aa20b42ed0bc9eec952a440ef668d2ecdd45d
-Size (vips-8.18.5.tar.xz) = 25388332 bytes
+BLAKE2s (vips-8.18.6.tar.xz) = b45b49f4445b58b7e16cac0d24f620f0b5bf246d8e790ea8e8d43f5547fc8061
+SHA512 (vips-8.18.6.tar.xz) = 0a0127aa941eb8d3ce72d80c43287e402059532ba4f241962fd22ccdb2d525997f5bba6bb4bc89eb28710403cbcff2b6d24df904aaa61639ea5b14742fee91e4
+Size (vips-8.18.6.tar.xz) = 25431000 bytes
