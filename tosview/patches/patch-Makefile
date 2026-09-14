@@ -1,0 +1,33 @@
+$NetBSD$
+
+Make variables configurable
+
+--- Makefile.orig	2026-09-14 08:12:09.484898456 +0000
++++ Makefile
+@@ -1,16 +1,16 @@
+ # tosview - Developed by lex0de (lex0de@tuta.com)
+ # tosview/Makefile
+ 
+-CC = cc
+-CFLAGS = -O
+-CPPFLAGS =
+-LDFLAGS =
+-LDLIBS = -lcurses
+-OSLIBS = `uname -s | sed -n 's/^SunOS$$/-lkstat/p'`
+-PREFIX = /usr/local
+-MANDIR = ${PREFIX}/share/man/man1
+-DESTDIR =
+-PLATFORM = auto
++CC ?= cc
++CFLAGS ?= -O
++CPPFLAGS ?=
++LDFLAGS ?=
++LDLIBS ?= -lcurses
++OSLIBS ?= `uname -s | sed -n 's/^SunOS$$/-lkstat/p'`
++PREFIX ?= /usr/local
++MANDIR ?= ${PREFIX}/share/man/man1
++DESTDIR ?=
++PLATFORM ?= auto
+ 
+ OBJS = src/main.o src/meter.o src/cpu.o src/rate.o src/ui.o src/compat.o
+ COLLECTORS = platform/auto.c platform/none.c platform/openbsd.c platform/freebsd.c \

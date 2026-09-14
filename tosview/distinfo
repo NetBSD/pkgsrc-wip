@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (tosview-0.1.0.tar.gz) = 57072478f8a3bcfe5ece3d17824e71164e5a14df1fce510f906a6c5ef36295e2
+SHA512 (tosview-0.1.0.tar.gz) = 4874353bab3387c90539a0f5c2842f9ade4bfe9535dca29d603fa145e430b99a0e0171794ac17efbf4703f154d2e2da0b4070483a007a19868ffcd06c470d587
+Size (tosview-0.1.0.tar.gz) = 163461 bytes
+SHA1 (patch-Makefile) = 0388ae2a0452440a583cf41b61b4aaddc73d963b

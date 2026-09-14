@@ -1,0 +1,6 @@
+tosview is a terminal system resource monitor written in C,
+inspired by SGI IRIX gr_osview and xosview.
+Its main visual model is resource composition: several
+native resource states share one horizontal stacked bar.
+It is not a top clone and will not include a process list
+or process sorting.
