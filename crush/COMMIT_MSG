@@ -1,36 +1,8 @@
-crush: Update to 0.94.1
+crush: Update to 0.94.2
 
 Changelog
-New!
-efba40b: feat: OpenAI oAuth (@andrinoff)
 Fixed
-4a74b9e: fix(sessions): keep list position after deletion (#3769) (@ifsin)
-33be610: fix: @meowgorithm review (@andrinoff)
-63829ed: fix: always emit tool results right after calls (#3743) (@andrinoff)
-cdc7200: fix: always show full bash command in tui, output stays collapsible (@andreynering)
-d25b5ee: fix: colorize CLI mode and use localhost URL (@andrinoff)
-45a45c5: fix: do not remove from API catalogue (@andrinoff)
-80ebee4: fix: dropped reasoning effort (#3748) (@andrinoff)
-074e41e: fix: keep scroll position when expanding or collapsing chat items (@andreynering)
-094ac5d: fix: match ex. anthropic UI on choice (@andrinoff)
-04eed5d: fix: refine first page (@andrinoff)
-652f74f: fix: remove re-routing logic (@andrinoff)
-3a84d5e: fix: remove the Sign In with ChatGPT in catalogue (@andrinoff)
-616c17b: fix: remove the separate sections (@andrinoff)
-833bef6: fix: show content in full when collapsing would hide only one line (@andreynering)
+6f67099: fix(home): require path boundary when shortening or expanding ~ (#3552) (@teddytennant)
 Other stuff
-bb33cee: chore(event-bus): make event fan-in helpers generic methods (#3768) (@meowgorithm)
-4c0ecf6: chore: auto-update files (@charmcli)
-77d9272: chore: auto-update files (@charmcli)
-8829832: chore: bump fantasy (@andrinoff)
-e5687e2: chore: lint (@andrinoff)
-8db8331: noninteractive: add --reasoning-effort flag with model validation (@meowgorithm)
-18447d5: oauth-cli: adjust inline logout TUIs (@meowgorithm)
-bc3931c: oauth-cli: overhaul and unify oauth TUIs (@meowgorithm)
-7a63cb1: oauth-ui: small nudges (@meowgorithm)
-e2f077c: oauth-ui: use ChatGPT instead of OpenAI in the auth dialog copy (@meowgorithm)
-c21c7c4: refactor: replace swaggo annotations with a Go-native endpoint registry (@meowgorithm)
-8ce2bdf: ui-perf: drive all spinners from one shared animation clock (@meowgorithm)
-0ffab3f: ui-perf: memoize rendered frames for scroll-only updates (@meowgorithm)
-35b5f87: ui-perf: stop coalesced wheel scrolls from rewinding to the selection (@meowgorithm)
+066f444: openaicompat: bump fantasy to fix regression around reasoning-only turns (@meowgorithm)
 
