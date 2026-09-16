@@ -49,6 +49,15 @@ EXTRACT_ONLY+=			${BOOT.linux-amd64}
 ALT_BOOTDIR=			${WRKDIR}/jdk-25.0.4.1+1
 .endif
 
+ONLY_FOR_PLATFORM+=		Darwin-*-aarch64
+BOOT.darwin-aarch64+=		OpenJDK25U-jdk_aarch64_mac_hotspot_25.0.4.1_1.tar.gz
+SITES.${BOOT.darwin-aarch64}=	https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo)
+DISTFILES+=			${BOOT.darwin-aarch64}
+EXTRACT_ONLY+=			${BOOT.darwin-aarch64}
+ALT_BOOTDIR=			${WRKDIR}/jdk-25.0.4.1+1/Contents/Home
+.endif
+
 CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
 
 ALT_BOOTDIR?=		${WRKDIR}/bootstrap

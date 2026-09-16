@@ -64,9 +64,13 @@ CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
 CONFIGURE_ARGS+=	--with-giflib=bundled
 CONFIGURE_ARGS+=	--with-lcms=bundled
 CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.libcups}/include
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-freetype=bundled
+.else
 CONFIGURE_ARGS+=	--with-freetype=system
 CONFIGURE_ARGS+=	--with-freetype-lib=${BUILDLINK_PREFIX.freetype2}/lib
 CONFIGURE_ARGS+=	--with-freetype-include=${BUILDLINK_PREFIX.freetype2}/include
+.endif
 CONFIGURE_ARGS+=	--with-jobs=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--with-num-cores=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--disable-precompiled-headers
@@ -88,7 +92,7 @@ MAKE_ENV+=	CLASSPATH=
 ALL_ENV+=	SED="sed -g"
 .endif
 
-BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/}
+BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/:S/Darwin/macosx/}
 BUILD_ARCH=			${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
 BUILDDIR=			${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib
@@ -200,8 +204,10 @@ do-install:
 CONFIGURE_ARGS+=	--with-alsa=${BUILDLINK_PREFIX.alsa-lib}
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.endif
 # Headers from CUPS are required to build the native implementation of
 # sun.print.* which is used by java.awt.print.
 BUILDLINK_DEPMETHOD.libcups?=	build

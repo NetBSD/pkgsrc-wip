@@ -4,7 +4,7 @@ We prefer to use explicit run paths.
 
 --- make/autoconf/flags-cflags.m4.orig	2026-07-24 17:22:09.000000000 +0000
 +++ make/autoconf/flags-cflags.m4
-@@ -40,8 +40,8 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
+@@ -40,17 +40,17 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      # --disable-new-dtags forces use of RPATH instead of RUNPATH for rpaths.
      # This protects internal library dependencies within the JDK from being
      # overridden using LD_LIBRARY_PATH. See JDK-8326891 for more information.
@@ -15,6 +15,18 @@ We prefer to use explicit run paths.
      SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
  
    elif test "x$TOOLCHAIN_TYPE" = xclang; then
+     if test "x$OPENJDK_TARGET_OS" = xmacosx; then
+       # Linking is different on MacOSX
+       SHARED_LIBRARY_FLAGS="-dynamiclib -compatibility_version 1.0.0 -current_version 1.0.0"
+-      SET_EXECUTABLE_ORIGIN='-Wl,-rpath,@loader_path$(or [$]1,/.)'
+-      SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
+-      SET_SHARED_LIBRARY_NAME='-Wl,-install_name,@rpath/[$]1'
++      SET_EXECUTABLE_ORIGIN=''
++      SET_SHARED_LIBRARY_ORIGIN=''
++      SET_SHARED_LIBRARY_NAME='-Wl,-install_name,@PREFIX@/java/@JAVA_NAME@/lib/$(patsubst libjvm.%,${JVM_VARIANT_MAIN}/libjvm.%,[$]1)'
+ 
+     elif test "x$OPENJDK_TARGET_OS" = xaix; then
+       # Linking is different on aix
 @@ -62,19 +62,12 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      else
        # Default works for linux, might work on other platforms as well.
