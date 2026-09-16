@@ -2487,6 +2487,7 @@ SUBDIR+=	motion
 SUBDIR+=	motti
 SUBDIR+=	mount-zip
 SUBDIR+=	mount-zip-git
+SUBDIR+=	moviebox-tui
 SUBDIR+=	mox
 SUBDIR+=	mozart
 SUBDIR+=	mozjpeg
