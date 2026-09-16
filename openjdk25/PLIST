@@ -513,8 +513,8 @@ java/openjdk25/lib/libattach${DBGEXT}
 java/openjdk25/lib/libattach.so
 java/openjdk25/lib/libawt${DBGEXT}
 java/openjdk25/lib/libawt.so
-java/openjdk25/lib/libawt_headless${DBGEXT}
-java/openjdk25/lib/libawt_headless.so
+${PLIST.awt-headless}java/openjdk25/lib/libawt_headless${DBGEXT}
+${PLIST.awt-headless}java/openjdk25/lib/libawt_headless.so
 ${PLIST.x11}java/openjdk25/lib/libawt_xawt${DBGEXT}
 ${PLIST.x11}java/openjdk25/lib/libawt_xawt.so
 java/openjdk25/lib/libdt_socket${DBGEXT}
@@ -569,8 +569,8 @@ java/openjdk25/lib/libprefs${DBGEXT}
 java/openjdk25/lib/libprefs.so
 java/openjdk25/lib/librmi${DBGEXT}
 java/openjdk25/lib/librmi.so
-${PLIST.x11}java/openjdk25/lib/libsplashscreen${DBGEXT}
-${PLIST.x11}java/openjdk25/lib/libsplashscreen.so
+${PLIST.splashscreen}java/openjdk25/lib/libsplashscreen${DBGEXT}
+${PLIST.splashscreen}java/openjdk25/lib/libsplashscreen.so
 java/openjdk25/lib/libsyslookup${DBGEXT}
 java/openjdk25/lib/libsyslookup.so
 java/openjdk25/lib/libverify${DBGEXT}

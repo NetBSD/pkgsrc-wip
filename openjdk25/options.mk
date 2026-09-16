@@ -35,8 +35,9 @@ CONFIGURE_ARGS+=	--disable-unlimited-crypto
 ###
 ### X11 or headless build
 ###
-PLIST_VARS+=	x11
+PLIST_VARS+=	splashscreen x11
 .if !empty(PKG_OPTIONS:Mx11)
+PLIST.splashscreen=	yes
 PLIST.x11=	yes
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
@@ -53,6 +54,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .elif ${OPSYS} == "Darwin"
+PLIST.splashscreen=	yes
 # The Metal compiler is no longer part of Xcode itself.
 # You need to manually run `sudo xcodebuild -downloadComponent MetalToolchain`
 CONFIGURE_ARGS+=	METAL="xcrun metal"

@@ -163,6 +163,11 @@ PLIST_VARS+=		bsd-fontconfig
 PLIST.bsd-fontconfig=	yes
 .endif
 
+PLIST_VARS+=		awt-headless
+.if ${OPSYS} != "Darwin"
+PLIST.awt-headless=	yes
+.endif
+
 post-extract:
 # These libs are bundled w/ the netbsd-9 bootstrap to facilitate building with
 # MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.

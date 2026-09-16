@@ -30,6 +30,4 @@ java/openjdk25/lib/libsaproc${DBGEXT}
 java/openjdk25/lib/libsaproc.dylib
 java/openjdk25/lib/libsleef${DBGEXT}
 java/openjdk25/lib/libsleef.dylib
-java/openjdk25/lib/libsplashscreen${DBGEXT}
-java/openjdk25/lib/libsplashscreen.dylib
 java/openjdk25/lib/shaders.metallib
