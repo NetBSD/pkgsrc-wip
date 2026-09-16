@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-unlimited-crypto
 PLIST_VARS+=	splashscreen x11
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.splashscreen=	yes
-PLIST.x11=	yes
+PLIST.x11=		yes
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 CONFIGURE_ARGS+=	--disable-headless-only
