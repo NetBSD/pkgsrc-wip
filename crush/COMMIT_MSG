@@ -1,8 +1,16 @@
-crush: Update to 0.94.2
+crush: Update to 0.95.0
 
 Changelog
+New!
+1648f10: feat: add plan mode (#2822) (@vadiminshakov)
 Fixed
-6f67099: fix(home): require path boundary when shortening or expanding ~ (#3552) (@teddytennant)
+051fb37: fifix(ui): color the to-do task name while the tool is still running (@taciturnaxolotl)
+2019da1: fix(tui): unfreeze spinner clock when the boot busy probe lands (#3839) (@andreynering)
+fd58b5e: fix(ui): read the session transcript off the event loop (@taciturnaxolotl)
 Other stuff
-066f444: openaicompat: bump fantasy to fix regression around reasoning-only turns (@meowgorithm)
+d55e017: perf(agent): read only the post-summary tail of a compacted session (@taciturnaxolotl)
+978d49d: perf(db): cap prompt history at the 200 most recent messages (@taciturnaxolotl)
+296b5c3: perf(db): index messages by role so user-message reads stop scanning (@taciturnaxolotl)
+595f625: perf(message): decode message parts in one structural pass (@taciturnaxolotl)
+9207cb2: perf(ui): skip the global prompt-history scan when a session is loading (@taciturnaxolotl)
 
