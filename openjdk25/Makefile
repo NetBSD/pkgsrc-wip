@@ -96,11 +96,12 @@ BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/li
 BUILD_ARCH=			${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
 BUILDDIR=			${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib/server
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib/${BUILD_VARIANT}
 WRKSRC=				${WRKDIR}/${DISTNAME}
 
 .include "../../mk/compiler.mk"
 
+PLIST_VARS+=		gcc
 .if !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--with-toolchain-type=clang
 _WRAP_EXTRA_ARGS.CC+=	-Wno-format-nonliteral -Wno-sign-compare -Wno-char-subscripts
@@ -116,6 +117,7 @@ CWRAPPERS_APPEND.cxx+=	-mstackrealign
 .  endif
 .else
 # GCC
+PLIST.gcc=		yes
 CONFIGURE_ARGS+=	--with-toolchain-type=gcc
 CWRAPPERS_APPEND.cxx+=	-Wno-attributes
 .endif
@@ -157,7 +159,7 @@ TOOLS_PLATFORM.unzip=
 .endif
 
 PLIST_VARS+=		bsd-fontconfig
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
 PLIST.bsd-fontconfig=	yes
 .endif
 

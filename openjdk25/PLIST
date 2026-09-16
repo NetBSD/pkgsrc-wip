@@ -259,7 +259,7 @@ java/openjdk25/legal/java.base/LICENSE
 java/openjdk25/legal/java.base/aes.md
 java/openjdk25/legal/java.base/c-libutl.md
 java/openjdk25/legal/java.base/cldr.md
-java/openjdk25/legal/java.base/gcc.md
+${PLIST.gcc}java/openjdk25/legal/java.base/gcc.md
 java/openjdk25/legal/java.base/icu.md
 java/openjdk25/legal/java.base/public_suffix.md
 java/openjdk25/legal/java.base/siphash.md
