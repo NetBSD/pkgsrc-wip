@@ -1,0 +1,5 @@
+devel/mage: Add mage version 1.17.2
+
+Mage is a make-like build tool using Go. It allows you to write
+regular Go functions and use them as Makefile-like runnable targets
+similar to what Rake does with Ruby.

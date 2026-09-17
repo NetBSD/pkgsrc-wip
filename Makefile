@@ -2344,6 +2344,7 @@ SUBDIR+=	macos-libptytty
 SUBDIR+=	macro11
 SUBDIR+=	madonctl
 SUBDIR+=	magit-git
+SUBDIR+=	mage
 SUBDIR+=	mago
 SUBDIR+=	mailfilter
 SUBDIR+=	mailsend-go

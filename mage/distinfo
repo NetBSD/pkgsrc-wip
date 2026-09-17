@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mage-1.17.2.tar.gz) = 4d57930a68d1093745551c6d0755f078a832ef3a62e9c717ec07a78cc759a580
+SHA512 (mage-1.17.2.tar.gz) = d13125e33c64be4d9858ce5f62bc15e4d6678d5a5c7e90c2d74bddef703da25bb2102f1cbc71bd715af36034f3867e2fdad8ca9ebaa9b8c5960b3e6b5b62bd4d
+Size (mage-1.17.2.tar.gz) = 8831461 bytes
