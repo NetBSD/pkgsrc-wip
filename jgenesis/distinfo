@@ -1716,3 +1716,6 @@ Size (zune-inflate-0.2.54.crate) = 37973 bytes
 BLAKE2s (zune-jpeg-0.5.15.crate) = a84f7dadac3e88940bbacdbca0735a6db3062999448469d4434c5b6fbfe352a5
 SHA512 (zune-jpeg-0.5.15.crate) = 99f072129bc11873b25886d73392012a08636575c85ed9237fb8ad247a66ff188b2bd67aa303931f94501735c24ceac24d414186e7ef5010a639f08fbdc855af
 Size (zune-jpeg-0.5.15.crate) = 88879 bytes
+SHA1 (patch-.._vendor_wgpu-29.0.4_build.rs) = b7d5e3cb6f3fa5a58a0bafa5f373af135e085e5e
+SHA1 (patch-.._vendor_wgpu-core-29.0.4_Cargo.toml) = 127e0ea068711c224060e428b5278836ec58c222
+SHA1 (patch-.._vendor_wgpu-core-29.0.4_build.rs) = 223256a92d7a0eeae742a210677f54bcf20183b9
