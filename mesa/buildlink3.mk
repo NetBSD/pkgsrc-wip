@@ -20,6 +20,11 @@ pkgbase:= mesa
 
 .include "../../mk/pkg-build-options.mk"
 
+.if ${PKG_BUILD_OPTIONS.mesa:Mwayland}
+.  include "../../devel/wayland/buildlink3.mk"
+.  include "../../devel/wayland-protocols/buildlink3.mk"
+.endif
+
 .if ${PKG_BUILD_OPTIONS.mesa:Mx11}
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXdamage/buildlink3.mk"
