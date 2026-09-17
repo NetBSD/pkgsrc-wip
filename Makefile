@@ -1892,6 +1892,7 @@ SUBDIR+=	jellyfish2
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jetbrains-mono-ttf
 SUBDIR+=	jfsw-git
+SUBDIR+=	jgenesis
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
 SUBDIR+=	jhbuild

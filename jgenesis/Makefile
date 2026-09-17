@@ -1,0 +1,44 @@
+# $NetBSD: Makefile,v 1.22 2026/09/02 19:01:56 wiz Exp $
+
+DISTNAME=	jgenesis-0.14.1
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jsgroth/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/jsgroth/jgenesis/
+COMMENT=	Sega Genesis - Sega CD - SNES - Master System - Game Gear emulator
+LICENSE=	mit
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+DEPENDS+=	zenity-[0-9]*:../../x11/zenity
+
+.include "cargo-depends.mk"
+
+#RUST_REQ=	1.99.0-beta.5
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.99.0-beta.5 on amd64
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
+
+INSTALLATION_DIRS+=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jgenesis \
+		${DESTDIR}${PREFIX}/bin
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
+DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
+.endif
+
+.include "../../lang/rust/cargo.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../devel/SDL3/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
