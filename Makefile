@@ -2722,6 +2722,7 @@ SUBDIR+=	nscde
 SUBDIR+=	nsp
 SUBDIR+=	nspr-hg
 SUBDIR+=	nss-pam-ldapd
+SUBDIR+=	ntfy
 SUBDIR+=	ntimed-git
 SUBDIR+=	nuget-git
 SUBDIR+=	nullpop
