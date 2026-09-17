@@ -261,6 +261,7 @@ SUBDIR+=	astguiclient-vicidial
 SUBDIR+=	asymptote
 SUBDIR+=	atac-seq
 SUBDIR+=	atanks
+SUBDIR+=	atkinson-hyperlegible
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
 SUBDIR+=	atuin

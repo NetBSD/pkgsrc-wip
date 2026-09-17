@@ -1,0 +1,9 @@
+@comment $NetBSD$
+share/fonts/X11/OTF/AtkinsonHyperlegible-Bold.otf
+share/fonts/X11/OTF/AtkinsonHyperlegible-BoldItalic.otf
+share/fonts/X11/OTF/AtkinsonHyperlegible-Italic.otf
+share/fonts/X11/OTF/AtkinsonHyperlegible-Regular.otf
+share/fonts/X11/TTF/AtkinsonHyperlegible-Bold.ttf
+share/fonts/X11/TTF/AtkinsonHyperlegible-BoldItalic.ttf
+share/fonts/X11/TTF/AtkinsonHyperlegible-Italic.ttf
+share/fonts/X11/TTF/AtkinsonHyperlegible-Regular.ttf
