@@ -1,2 +1,3 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2024-45388, CVE-2025-54123, CVE-2025-54376
+  CVE-2024-45388, CVE-2025-54123, CVE-2025-54376, CVE-2026-50013,
+  CVE-2026-50018
