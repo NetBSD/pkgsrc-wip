@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_impl.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- headless/lib/browser/headless_browser_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ headless/lib/browser/headless_browser_impl.cc
 @@ -37,7 +37,7 @@
  #include "components/os_crypt/async/browser/keychain_key_provider.h"

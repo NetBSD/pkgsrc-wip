@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc
 @@ -79,7 +79,7 @@
  #include "chrome/browser/ui/cocoa/keystone_infobar_delegate.h"

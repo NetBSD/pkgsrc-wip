@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -106,7 +106,7 @@
  #endif  // !defined(BUILDING_CHROME_RENDERER)

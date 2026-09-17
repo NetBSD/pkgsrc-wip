@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/wayland/src/src/wayland-os.c.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/wayland/src/src/wayland-os.c.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/wayland/src/src/wayland-os.c
 @@ -106,6 +106,24 @@ wl_os_socket_peercred(int sockfd, uid_t 
  #endif

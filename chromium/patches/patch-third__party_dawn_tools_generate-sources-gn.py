@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/tools/generate-sources-gn.py.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/dawn/tools/generate-sources-gn.py.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/dawn/tools/generate-sources-gn.py
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env vpython3

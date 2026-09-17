@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/renderer/chrome_content_renderer_client.cc
 @@ -187,7 +187,7 @@
  #include "v8/include/v8-isolate.h"

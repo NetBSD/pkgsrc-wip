@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -196,7 +196,7 @@
  #include "ui/base/ui_base_features.h"
@@ -33,7 +33,7 @@ $NetBSD$
  void UpdateUseOverlayScrollbar(bool use_overlay_scrollbar) {
    ui::NativeTheme::GetInstanceForWeb()->set_use_overlay_scrollbar(
        use_overlay_scrollbar);
-@@ -3676,7 +3676,7 @@ void WebViewImpl::UpdateFontRenderingFro
+@@ -3677,7 +3677,7 @@ void WebViewImpl::UpdateFontRenderingFro
        gfx::FontRenderParams::SUBPIXEL_RENDERING_NONE);
    WebFontRenderStyle::SetSubpixelPositioning(
        renderer_preferences_.use_subpixel_positioning);
@@ -42,7 +42,7 @@ $NetBSD$
    if (!renderer_preferences_.system_font_family_name.empty()) {
      WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUtf8(
          renderer_preferences_.system_font_family_name));
-@@ -3820,7 +3820,7 @@ void WebViewImpl::UpdateRendererPreferen
+@@ -3821,7 +3821,7 @@ void WebViewImpl::UpdateRendererPreferen
        renderer_preferences_.selection_clipboard_buffer_available);
  #endif  // BUILDFLAG(IS_OZONE)
  
@@ -51,7 +51,7 @@ $NetBSD$
    GetSettings()->SetMiddleClickPasteAllowed(
        renderer_preferences_.middle_click_paste_allowed);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -3828,7 +3828,7 @@ void WebViewImpl::UpdateRendererPreferen
+@@ -3829,7 +3829,7 @@ void WebViewImpl::UpdateRendererPreferen
    SetExplicitlyAllowedPorts(
        renderer_preferences_.explicitly_allowed_network_ports);
  

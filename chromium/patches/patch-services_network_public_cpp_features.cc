@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/cpp/features.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- services/network/public/cpp/features.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ services/network/public/cpp/features.cc
 @@ -96,7 +96,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
  // Enable usage of hardcoded DoH upgrade mapping for use in automatic mode.

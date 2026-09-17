@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/synchronization/lock_impl.h.orig	2026-09-07 10:14:27.000000000 +0000
+--- base/synchronization/lock_impl.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ base/synchronization/lock_impl.h
 @@ -125,6 +125,10 @@ void LockImpl::Unlock() {
  }

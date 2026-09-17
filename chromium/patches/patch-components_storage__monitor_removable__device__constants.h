@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/storage_monitor/removable_device_constants.h.orig	2026-09-07 10:14:27.000000000 +0000
+--- components/storage_monitor/removable_device_constants.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/storage_monitor/removable_device_constants.h
 @@ -15,7 +15,7 @@ namespace storage_monitor {
  extern COMPONENT_EXPORT(STORAGE_MONITOR) const char kFSUniqueIdPrefix[];

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/launcher/test_launcher.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -66,6 +66,7 @@
  #include "third_party/abseil-cpp/absl/container/flat_hash_set.h"

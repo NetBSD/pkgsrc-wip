@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/upgrade_detector/version_history_client.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/browser/upgrade_detector/version_history_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/upgrade_detector/version_history_client.cc
 @@ -177,7 +177,7 @@ GURL GetVersionReleasesUrl(base::Version
  #define CURRENT_PLATFORM "win"

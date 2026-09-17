@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/public/cpp/utilities.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- services/screen_ai/public/cpp/utilities.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ services/screen_ai/public/cpp/utilities.cc
 @@ -26,7 +26,7 @@ namespace {
  // The maximum image dimension which is processed without downsampling by OCR.

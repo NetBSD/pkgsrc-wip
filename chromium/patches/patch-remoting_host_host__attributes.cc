@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_attributes.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- remoting/host/host_attributes.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ remoting/host/host_attributes.cc
 @@ -18,7 +18,7 @@
  #include "remoting/host/win/evaluate_d3d.h"

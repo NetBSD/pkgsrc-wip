@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -80,6 +80,14 @@
  #include "base/mac/mac_util.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ipcz/src/reference_drivers/random.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/ipcz/src/reference_drivers/random.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/ipcz/src/reference_drivers/random.cc
 @@ -53,7 +53,7 @@ decltype(&ProcessPrng) GetProcessPrng() 
  }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/BUILD.gn.orig	2026-09-07 10:14:27.000000000 +0000
+--- build/config/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
 +++ build/config/BUILD.gn
 @@ -207,6 +207,10 @@ config("default_libs") {
      # Targets should choose to explicitly link frameworks they require. Since

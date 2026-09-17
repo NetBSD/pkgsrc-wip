@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/unrar/src/crypt.cpp.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/unrar/src/crypt.cpp.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/unrar/src/crypt.cpp
 @@ -126,6 +126,8 @@ void GetRnd(byte *RndBuf,size_t BufSize)
      Success=CryptGenRandom(hProvider, (DWORD)BufSize, RndBuf) != FALSE;

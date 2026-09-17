@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
 @@ -41,6 +41,11 @@ double GetLocalTZA() {
    }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/site_settings_handler.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/browser/ui/webui/settings/site_settings_handler.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/webui/settings/site_settings_handler.cc
 @@ -126,7 +126,7 @@
  #include "url/url_constants.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/password_credential_ui_controller.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/browser/webauthn/password_credential_ui_controller.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/webauthn/password_credential_ui_controller.cc
 @@ -26,7 +26,7 @@ using content::WebContents;
  namespace {

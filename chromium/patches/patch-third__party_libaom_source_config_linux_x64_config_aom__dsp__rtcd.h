@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/config/linux/x64/config/aom_dsp_rtcd.h.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/libaom/source/config/linux/x64/config/aom_dsp_rtcd.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/libaom/source/config/linux/x64/config/aom_dsp_rtcd.h
 @@ -59,8 +59,6 @@ void aom_blend_a64_vmask_c(uint8_t *dst,
  void aom_blend_a64_vmask_sse4_1(uint8_t *dst, uint32_t dst_stride, const uint8_t *src0, uint32_t src0_stride, const uint8_t *src1, uint32_t src1_stride, const uint8_t *mask, int w, int h);

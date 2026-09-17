@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
 @@ -152,7 +152,7 @@ void CheckUserAgentStringOrdering(bool m
    ASSERT_EQ("CrOS", pieces[0]);

@@ -1,4 +1,4 @@
-chromium: update to 153.0.8010.36
+chromium: update to 153.0.8010.47
 
 * 153.0.8010.36
 This update includes 230 security fixes. Please see the Chrome Security Page for more information.
@@ -9,3 +9,48 @@ Google is aware that an exploit for CVE-2026-87491 exists in the wild:
 [$2,500][543557673] Medium CVE-2026-87491: Out of bounds write in V8.
 Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-08-06
 
+* 153.0.8010.47
+This update includes 42 security fixes. Please see the Chrome Security Page for more information.
+
+[N/A][556870863] Critical CVE-2026-91726: Out of bounds read in WebGL. Reported by Google on 2026-09-03
+[TBD][557320614] Critical CVE-2026-91721: Use after free in Internals. Reported by xinyang on 2026-09-04
+[TBD][558456602] Critical CVE-2026-91749: Use after free in Workers. Reported by WinD39 - Huynh Dinh Vu on 2026-09-08
+[$1,500][552283275] High CVE-2026-91724: Use after free in Input. Reported by Hafiizh on 2026-08-25
+[$1,000][556715288] High CVE-2026-91728: Integer overflow in V8. Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-09-03
+[N/A][516780835] High CVE-2026-91734: Incorrect authorization in Core. Reported by Google on 2026-05-26
+[N/A][516893912] High CVE-2026-91727: Incorrect reference resolution in Extensions. Reported by Google on 2026-05-26
+[N/A][516947138] High CVE-2026-91743: Race condition in Core. Reported by Google on 2026-05-27
+[N/A][520019273] High CVE-2026-91744: Race condition in PlatformIntegration. Reported by Google on 2026-06-04
+[N/A][521486621] High CVE-2026-91712: Race condition in Extensions. Reported by Google on 2026-06-08
+[N/A][521559611] High CVE-2026-91748: Race condition in Extensions. Reported by Google on 2026-06-09
+[N/A][523470135] High CVE-2026-91720: Uninitialized resource in ANGLE. Reported by Google on 2026-06-13
+[N/A][523554372] High CVE-2026-91731: Type confusion in Compositing. Reported by Google on 2026-06-13
+[N/A][540016074] High CVE-2026-91747: Use after free in Skia. Reported by Google on 2026-07-28
+[N/A][540021213] High CVE-2026-91733: Improper state validation in Skia. Reported by Google on 2026-07-28
+[TBD][546413288] High CVE-2026-91741: Type confusion in CacheStorage. Reported by Salvatore Gulizia (nickname: Serotav) on 2026-08-14
+[TBD][547815507] High CVE-2026-91709: Type confusion in ServiceWorker. Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-08-17
+[TBD][549225472] High CVE-2026-91717: Missing authorization in Android. Reported by jodyritonga on 2026-08-20
+[N/A][552416113] High CVE-2026-91735: Incorrect authorization in WebUI. Reported by Google on 2026-08-25
+[N/A][553115724] High CVE-2026-91708: Race condition in Network. Reported by Google on 2026-08-26
+[N/A][553121008] High CVE-2026-91736: Use after free in DOM. Reported by Google on 2026-08-26
+[N/A][553122373] High CVE-2026-91740: Uninitialized resource in Skia. Reported by Google on 2026-08-26
+[N/A][553132148] High CVE-2026-91710: Use after free in WebAppInstalls. Reported by Google on 2026-08-26
+[N/A][553133215] High CVE-2026-91718: Use after free in Core. Reported by Google on 2026-08-26
+[N/A][554558368] High CVE-2026-91716: Use after free in Auth. Reported by Google on 2026-08-29
+[N/A][556260782] High CVE-2026-91746: Integer overflow in Compositing. Reported by Google on 2026-09-02
+[TBD][557206809] High CVE-2026-91729: Use after free in DigitalCredentials. Reported by sean geofrey on 2026-09-04
+[TBD][558036280] High CVE-2026-91737: Use after free in PDF. Reported by SeungMyung Lee (@sm1ee), Siung kim (@ksw9722) on 2026-09-06
+[TBD][558342353] High CVE-2026-91711: Out of bounds write in ServiceWorker. Reported by Cristian Di Nicola (@crih.exe) on 2026-09-07
+[TBD][558367547] High CVE-2026-91715: Type confusion in ServiceWorker. Reported by Cristian Di Nicola (@crih.exe) on 2026-09-07
+[N/A][558734727] High CVE-2026-91745: Use after free in V8. Reported by Google on 2026-09-08
+[TBD][474131239] Medium CVE-2026-91723: Race condition in WebAppInstalls. Reported by Luan Herrera (@lbherrera_) on 2026-01-07
+[TBD][511062248] Medium CVE-2026-91732: Missing authorization in AppManifest. Reported by pakhunov.anton.n on 2026-05-08
+[N/A][513858387] Medium CVE-2026-91742: Confused deputy in PriceTracking. Reported by Google on 2026-05-16
+[N/A][517710554] Medium CVE-2026-91714: Observable discrepancy in Fonts. Reported by Google on 2026-05-29
+[N/A][518032534] Medium CVE-2026-91725: Observable discrepancy in CSS. Reported by Google on 2026-05-29
+[N/A][521951328] Medium CVE-2026-91739: Missing authorization in Transactions Platform. Reported by Google on 2026-06-09
+[N/A][523715133] Medium CVE-2026-91713: Missing authorization in Browser. Reported by Google on 2026-06-14
+[N/A][536450979] Medium CVE-2026-91738: Improper input validation in ANGLE. Reported by Google on 2026-07-19
+[TBD][543640868] Medium CVE-2026-91730: Incomplete cleanup in GetUserMedia. Reported by Keita Sode and Daisuke Hatakeyama (SYZD Research) on 2026-08-07
+[TBD][554953456] Medium CVE-2026-91722: Use after free in Input. Reported by TIENPA on 2026-08-31
+[TBD][542115030] Low CVE-2026-91719: Code injection in XML. Reported by Zabith Mohammed (@nmzabith) on 2026-08-03

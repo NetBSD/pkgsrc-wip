@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/internal/mappable_buffer_native_pixmap.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- gpu/command_buffer/client/internal/mappable_buffer_native_pixmap.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ gpu/command_buffer/client/internal/mappable_buffer_native_pixmap.cc
 @@ -64,7 +64,7 @@ MappableBufferNativePixmap::CreateFromHa
      viz::SharedImageFormat format,

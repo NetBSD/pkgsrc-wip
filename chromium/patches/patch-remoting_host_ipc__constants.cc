@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- remoting/host/ipc_constants.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -13,7 +13,7 @@
  #include "mojo/public/cpp/platform/named_platform_channel.h"

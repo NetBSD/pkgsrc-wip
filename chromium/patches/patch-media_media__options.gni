@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/media_options.gni.orig	2026-09-07 10:14:27.000000000 +0000
+--- media/media_options.gni.orig	2026-09-14 22:17:16.000000000 +0000
 +++ media/media_options.gni
 @@ -214,12 +214,18 @@ declare_args() {
    # Enables runtime selection of ALSA library for audio.

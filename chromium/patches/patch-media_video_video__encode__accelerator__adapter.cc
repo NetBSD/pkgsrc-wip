@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -220,7 +220,7 @@ class VideoEncodeAcceleratorAdapter::Map
      DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);

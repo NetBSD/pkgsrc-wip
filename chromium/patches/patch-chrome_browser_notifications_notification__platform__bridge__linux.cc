@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/notifications/notification_platform_bridge_linux.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/browser/notifications/notification_platform_bridge_linux.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/notifications/notification_platform_bridge_linux.cc
 @@ -368,6 +368,8 @@ NotificationResources WriteNotificationR
    result.has_logo = WriteImageFile(logo, dir_path.Append("logo.png"));

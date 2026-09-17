@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
 @@ -13,7 +13,7 @@
  

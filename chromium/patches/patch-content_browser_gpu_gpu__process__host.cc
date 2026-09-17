@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_process_host.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ content/browser/gpu/gpu_process_host.cc
 @@ -291,6 +291,7 @@ static const char* const kSwitchNames[] 
      switches::kDisableSkiaGraphite,

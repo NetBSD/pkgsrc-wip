@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/ozone_image_backing.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- gpu/command_buffer/service/shared_image/ozone_image_backing.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/ozone_image_backing.cc
 @@ -500,7 +500,7 @@ std::unique_ptr<VulkanImageRepresentatio
      native_pixmap_handle.planes[1].offset = image_size.GetArea();

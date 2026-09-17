@@ -1,3 +1,6 @@
 1) Random hangs.
    Killing the network process restarts it, but the next hang still occurs.
    GDB: all threads are waiting; no wakeup ever comes.
+
+2) tests.mk
+   Broken. It never worked completely. Fix or remove?

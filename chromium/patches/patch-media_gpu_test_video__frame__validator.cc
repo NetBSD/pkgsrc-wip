@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/video_frame_validator.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- media/gpu/test/video_frame_validator.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ media/gpu/test/video_frame_validator.cc
 @@ -29,7 +29,7 @@
  #include "media/media_buildflags.h"

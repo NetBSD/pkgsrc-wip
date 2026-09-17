@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/pref_proxy_config_tracker_impl.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- components/proxy_config/pref_proxy_config_tracker_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/proxy_config/pref_proxy_config_tracker_impl.cc
 @@ -587,7 +587,7 @@ void PrefProxyConfigTrackerImpl::Registe
    registry->RegisterDictionaryPref(proxy_config::prefs::kProxy,

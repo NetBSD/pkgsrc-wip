@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc
 @@ -28,6 +28,7 @@ int main() {
    // fontconfig cache.

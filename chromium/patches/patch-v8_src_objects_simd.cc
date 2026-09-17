@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/objects/simd.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- v8/src/objects/simd.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ v8/src/objects/simd.cc
 @@ -350,7 +350,7 @@ uintptr_t fast_search_avx(T* array, uint
  

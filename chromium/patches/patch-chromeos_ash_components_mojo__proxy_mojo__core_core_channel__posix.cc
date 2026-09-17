@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromeos/ash/components/mojo_proxy/mojo_core/core/channel_posix.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chromeos/ash/components/mojo_proxy/mojo_core/core/channel_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chromeos/ash/components/mojo_proxy/mojo_core/core/channel_posix.cc
 @@ -28,7 +28,7 @@
  #include "build/build_config.h"

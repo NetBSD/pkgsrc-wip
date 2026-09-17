@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region_posix.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- base/memory/platform_shared_memory_region_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ base/memory/platform_shared_memory_region_posix.cc
 @@ -171,7 +171,7 @@ bool PlatformSharedMemoryRegion::Convert
  // static

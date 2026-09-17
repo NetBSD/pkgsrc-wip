@@ -1,14 +1,15 @@
 # $NetBSD: Makefile,v 1.80 2026/09/05 19:10:04 bsiegert Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			153.0.8010.36
+VERSION=			153.0.8010.47
 CATEGORIES=			www
-MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
+#MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
+MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
 EXTRACT_SUFX_C=			.tar.xz
 
 #PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
 #SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
-DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
+DISTFILES+=			${DISTNAME}-linux${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD

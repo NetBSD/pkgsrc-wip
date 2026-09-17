@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -102,7 +102,7 @@ std::optional<FeatureConfig> CreateNewUs
  std::optional<FeatureConfig> GetClientSideFeatureConfig(

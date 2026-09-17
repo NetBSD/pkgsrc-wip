@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.cc
 @@ -70,7 +70,7 @@ scoped_refptr<StaticBitmapImage> ImageBi
      return source;

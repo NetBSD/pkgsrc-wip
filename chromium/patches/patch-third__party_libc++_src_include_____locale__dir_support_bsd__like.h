@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/libc++/src/include/__locale_dir/support/bsd_like.h
 @@ -62,22 +62,22 @@ inline _LIBCPP_HIDE_FROM_ABI char* __set
    return ::setlocale(__category, __locale);

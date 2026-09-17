@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/wayland/src/src/scanner.c.orig	2026-09-07 10:14:27.000000000 +0000
+--- third_party/wayland/src/src/scanner.c.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/wayland/src/src/scanner.c
 @@ -293,7 +293,7 @@ uppercase_dup(const char *src)
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/ipc/ipc_security_linux.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- chrome/updater/ipc/ipc_security_linux.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/updater/ipc/ipc_security_linux.cc
 @@ -16,7 +16,11 @@ namespace updater {
  

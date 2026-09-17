@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/passwd_utils.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- remoting/base/passwd_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ remoting/base/passwd_utils.cc
 @@ -49,7 +49,7 @@ base::expected<PasswdUserInfo, Loggable>
    user_info.gid = result->pw_gid;

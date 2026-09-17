@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/live_caption/caption_util.cc.orig	2026-09-07 10:14:27.000000000 +0000
+--- components/live_caption/caption_util.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/live_caption/caption_util.cc
 @@ -139,7 +139,7 @@ bool IsHeadlessCaptionFeatureSupported()
  std::string GetCaptionSettingsUrl() {
