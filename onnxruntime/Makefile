@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	onnxruntime-1.25.1
+DISTNAME=	onnxruntime-1.30.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
