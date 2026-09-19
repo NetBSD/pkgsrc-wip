@@ -1,0 +1,14 @@
+$NetBSD$
+
+BLAKE2s (v0.3.1.tar.gz) = a0fadd4d3752f6e084538d15faa7079519b0ea93454cf04d4c24b5311549e11a
+SHA512 (v0.3.1.tar.gz) = 0e4f74a8877d7da5d3221cd13f68e9953f45df6cccf1b9e9bd47f5f970ee20cefaec5f8023c264306e2a13c96ae76a9a631c34f2e84a8c26062622d7c1623f39
+Size (v0.3.1.tar.gz) = 499847 bytes
+SHA1 (patch-src_core_logging.cpp) = b1f36897868bd21ec5d6ac5ff17fd35cab7aba69
+SHA1 (patch-src_core_paths.cpp) = 6ea9d6806f180b86da17af5de96062265b4fbc65
+SHA1 (patch-src_core_toolsupport.cpp) = e2241e2f7e63f9366d601a687d8ac5ab9716de7e
+SHA1 (patch-src_network_nm_utils.cpp) = 9d5c697c022d1860f8243d97d5a1ccfa63ca1c3f
+SHA1 (patch-src_services_pam_conversation.cpp) = 6de99a9213a7e11346c325515f7bc1b33af54ddb
+SHA1 (patch-src_services_pam_qml.hpp) = 423765d856c500a267f00e34b2a64041e17b5867
+SHA1 (patch-src_services_pam_subprocess.cpp) = fcebaa29ade09bf5a816fa9334e55cb137805ac2
+SHA1 (patch-src_wayland_buffer_dmabuf.cpp) = bc724deec09d256e16f8bae653a4cf8a560eec70
+SHA1 (patch-src_wayland_buffer_dmabuf.hpp) = 01e41b787025c34c6735d735604b47b219c8a78f

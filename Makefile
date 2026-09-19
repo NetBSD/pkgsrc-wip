@@ -5168,6 +5168,7 @@ SUBDIR+=	quantlib
 SUBDIR+=	quarkcoin
 SUBDIR+=	quex
 SUBDIR+=	quickfix
+SUBDIR+=	quickshell
 SUBDIR+=	quickie
 SUBDIR+=	quiterss
 SUBDIR+=	qutebrowser

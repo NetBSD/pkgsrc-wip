@@ -1,0 +1,11 @@
+ERROR: patches/patch-src_core_logging.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_core_paths.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_core_toolsupport.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_network_nm_utils.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_services_pam_conversation.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_services_pam_qml.hpp:3: Each patch must be documented.
+ERROR: patches/patch-src_services_pam_subprocess.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_wayland_buffer_dmabuf.cpp:3: Each patch must be documented.
+ERROR: patches/patch-src_wayland_buffer_dmabuf.hpp:3: Each patch must be documented.
+9 errors found.
+(Run "pkglint -e" to show explanations.)
