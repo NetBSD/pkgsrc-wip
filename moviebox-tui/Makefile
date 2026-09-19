@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	MovieBox-Tui-0.1.20
+DISTNAME=	MovieBox-Tui-0.1.21
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mesamirh/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/MovieBox-Tui-0.1.20
+WRKSRC=		${WRKDIR}/MovieBox-Tui-0.1.21
 RUST_REQ=	1.90.0
 
 .include "cargo-depends.mk"
