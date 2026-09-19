@@ -9,6 +9,7 @@ VERSIONSEP=	-
 VERSIONRC=	beta12
 DISTNAME=	cku${VERSIONDIST}${VERSIONSEP}${VERSIONRC}
 PKGNAME=	kermit-${VERSION}${VERSIONRC}
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	https://www.kermitproject.org/ftp/kermit/test/tar/
 
@@ -25,6 +26,8 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}
 BUILD_DEFS+=	KFLAGS LIBS
 MAKE_ENV+=	prefix=${PREFIX} KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
+# kermit expects linker flags in LNKFLAGS, oddly.
+MAKE_ENV+=	LNKFLAGS=${LDFLAGS:Q}
 MAKE_FILE=	makefile
 
 # \todo Enhance for non-standard mandir.
