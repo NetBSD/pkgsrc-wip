@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/weave
+bin/weave-driver
+bin/weave-github
+bin/weave-mcp

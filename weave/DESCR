@@ -1,0 +1,5 @@
+Entity-level semantic merge for Git.
+
+Resolves merge conflicts that Git can't by parsing code into
+functions, classes, and keys with tree-sitter, then merging those
+entities instead of lines.
