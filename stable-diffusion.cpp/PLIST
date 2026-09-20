@@ -6,3 +6,5 @@ lib/cmake/stable-diffusion/stable-diffusion-config.cmake
 lib/cmake/stable-diffusion/stable-diffusion-version.cmake
 lib/libstable-diffusion.a
 lib/pkgconfig/stable-diffusion.pc
+share/licenses/stable-diffusion/oniguruma/COPYING
+share/licenses/stable-diffusion/utf8proc/LICENSE.md

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	master-812-ea7f0c8
+DISTNAME=	master-889-c678dfe
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/master-//:C/-[0-9a-z]*$//}
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leejet/}
@@ -22,7 +22,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSD_USE_SYSTEM_WEBM=ON
 
 # upstream always uses the latest commit; for pkgsrc use git head
 # commits as of packaging date, update them when updating this package
-GITHUB_SUBMODULES+=	leejet ggml eced84c86f8b012c752c016f7fe789adea168e1e ggml
+GITHUB_SUBMODULES+=	leejet ggml f583f393cd5dfdc129360bbf75cb3d49ccc837a8 ggml
 GITHUB_SUBMODULES+=	leejet sdcpp-webui c4bce3d6b3f236614cca21014f076083b7270ba8 examples/server/frontend
 
 PKGCONFIG_OVERRIDE+=	cmake/stable-diffusion.pc.in
