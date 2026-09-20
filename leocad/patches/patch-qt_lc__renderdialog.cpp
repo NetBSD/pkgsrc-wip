@@ -2,9 +2,9 @@ $NetBSD$
 
 Treat all Unices like Linux.
 
---- qt/lc_renderdialog.cpp.orig	2025-09-01 20:49:34.000000000 +0000
+--- qt/lc_renderdialog.cpp.orig	2026-09-19 23:44:29.000000000 +0000
 +++ qt/lc_renderdialog.cpp
-@@ -292,7 +292,7 @@ void lcRenderDialog::RenderPOVRay()
+@@ -293,7 +293,7 @@ void lcRenderDialog::RenderPOVRay()
  	POVRayPath = QDir::cleanPath(QCoreApplication::applicationDirPath() + QLatin1String("/povconsole32-sse2.exe"));
  #endif
  
@@ -13,18 +13,18 @@ Treat all Unices like Linux.
  	POVRayPath = lcGetProfileString(LC_PROFILE_POVRAY_PATH);
  	Arguments.append("+FN");
  	Arguments.append("-D");
-@@ -332,7 +332,7 @@ void lcRenderDialog::RenderPOVRay()
+@@ -333,7 +333,7 @@ void lcRenderDialog::RenderPOVRay()
  	}
  
  	lcRenderProcess* Process = new lcRenderProcess(this);
 -#ifdef Q_OS_LINUX
-+#ifdef Q_OS_UNUX
- 	connect(Process, SIGNAL(readyReadStandardError()), this, SLOT(ReadStdErr()));
++#ifdef Q_OS_UNIX
+ 	connect(Process, &QProcess::readyReadStandardError, this, [this]() { bool Error; ReadStdErr(Error); });
  #endif
  	QStringList POVEnv = QProcess::systemEnvironment();
-@@ -662,7 +662,7 @@ void lcRenderDialog::Update()
+@@ -749,7 +749,7 @@ void lcRenderDialog::Update()
  
- 	if (mProcess->state() == QProcess::NotRunning)
+ 	if (ProcessFinished)
  	{
 -#ifdef Q_OS_LINUX
 +#ifdef Q_OS_UNIX

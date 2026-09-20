@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (leocad-25.09.tar.gz) = 4400ca0d836d983edc2ceb0d74d8c549369e7cf6fc92c9ba0490ed53c76c7903
-SHA512 (leocad-25.09.tar.gz) = d7e3f6f844178a5d2a89e89ca7eb4b01d18040273291cb49535d60854d094455e69900cd6965f0184de9d6fbb18a6dad5d823ea2c42cfce0b9b4cafb58df4f0f
-Size (leocad-25.09.tar.gz) = 2414579 bytes
-SHA1 (patch-leocad.pro) = e7ca7839bb696dfaedbff9beff95c678d9f60956
-SHA1 (patch-qt_lc__renderdialog.cpp) = 544b08041e1d6ae49aeecc66929f74dc62b6da03
+BLAKE2s (leocad-26.09.tar.gz) = 942278add9dcdcf92bb6b9cf1dc16bf132569b8ffe52fc132a040383325b7e58
+SHA512 (leocad-26.09.tar.gz) = 2b4c73b9793d7a51e8f7b6da9735db0185bec16e484c7990efeffab7de77454821ec126bf009bf77bce4d152386d38996c78551ecd0eb8db526a3ea0997e39a4
+Size (leocad-26.09.tar.gz) = 2467386 bytes
+SHA1 (patch-leocad.pro) = ae135266a3882b1b812b55c800554e7089bb41da
+SHA1 (patch-qt_lc__renderdialog.cpp) = f49c875d2fd58a636e6af30bd7e63e3e7ae040bf
 SHA1 (patch-qt_qtmain.cpp) = 378b6c6cdc86963192c87dd54ba9aa0fe9424853
