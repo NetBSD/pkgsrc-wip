@@ -1,0 +1,6 @@
+sysutils/gdu: Add gdu version 5.37.0.
+
+Gdu is a disk usage analyzer similar to ncdu but parallelized.
+
+This package installs the binary as 'gdu-go' to avoid potentially
+conflicting with 'gdu' from systuils/coreutils.
