@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Add NetBSD support
+
 --- src/services/pam/conversation.cpp.orig	2026-09-19 13:08:02.129046549 +0000
 +++ src/services/pam/conversation.cpp
 @@ -8,7 +8,7 @@

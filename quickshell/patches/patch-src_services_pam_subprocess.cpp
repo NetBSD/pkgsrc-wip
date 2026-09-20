@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Add NetBSD support
+
 --- src/services/pam/subprocess.cpp.orig	2026-09-19 13:09:00.734135837 +0000
 +++ src/services/pam/subprocess.cpp
 @@ -7,7 +7,7 @@

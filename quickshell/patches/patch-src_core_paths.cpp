@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Portable initializing of struct flock
+
 --- src/core/paths.cpp.orig	2026-09-19 11:55:45.119463273 +0000
 +++ src/core/paths.cpp
 @@ -361,13 +361,12 @@ void QsPaths::createLock() {

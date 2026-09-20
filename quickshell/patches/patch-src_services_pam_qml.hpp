@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Add NetBSD support
+
 --- src/services/pam/qml.hpp.orig	2026-09-19 13:06:46.919473226 +0000
 +++ src/services/pam/qml.hpp
 @@ -6,7 +6,7 @@

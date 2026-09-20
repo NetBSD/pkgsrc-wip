@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Include sysmacros.h only on linux
+
 --- src/wayland/buffer/dmabuf.cpp.orig	2026-08-21 02:28:55.000000000 +0000
 +++ src/wayland/buffer/dmabuf.cpp
 @@ -37,7 +37,9 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Portable initializing of struct flock
+
 --- src/core/toolsupport.cpp.orig	2026-09-19 12:08:24.218435891 +0000
 +++ src/core/toolsupport.cpp
 @@ -54,13 +54,12 @@ bool QmlToolingSupport::lockTooling() {

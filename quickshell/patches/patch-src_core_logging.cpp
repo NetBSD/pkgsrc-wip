@@ -1,5 +1,8 @@
 $NetBSD$
 
+* Add NetBSD support
+* Portable initializing of struct flock
+
 --- src/core/logging.cpp.orig	2026-09-19 12:01:40.484371465 +0000
 +++ src/core/logging.cpp
 @@ -32,7 +32,7 @@
