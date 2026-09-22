@@ -1,6 +1,5 @@
 $NetBSD$
 
-BLAKE2s (GDSreader-0.4.5.tar.gz) = 245119a920f2a8edfc2651ab564dc19e5c21fdfb934e8febe8809aa6766cdd51
-SHA512 (GDSreader-0.4.5.tar.gz) = 4ee0110ba2f55ea71559dfad0fec850617c105784332a7d00fb504be1f0b9e4659dabd46861c0020f6728ceb05b7ce56c9a3b95fba85ccb07a8bea79ba49cf13
-Size (GDSreader-0.4.5.tar.gz) = 82870 bytes
-SHA1 (patch-Makefile) = ecb023e3b58685f4cea6b07d8d1716f7cb3ef255
+BLAKE2s (GDSreader-0.4.7.tar.gz) = 99f83cffb0318b4ac91c8dfd8cc829e0c50cdb6aac89c9a4b5e5baa83f52746b
+SHA512 (GDSreader-0.4.7.tar.gz) = d69febee3069cb1c626b908aad9b1c9b183319619cef52995dbacaf30583d2371e38cd9dff031591db1bd97d266b0b6a1e64c59fe53e59d31836e0a985f1776d
+Size (GDSreader-0.4.7.tar.gz) = 83606 bytes

@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	GDSreader-0.4.5
+DISTNAME=	GDSreader-0.4.7
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
 
@@ -15,7 +14,6 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	bin ${EXAMPLESDIR}
-CFLAGS+=		-Wl,-z,relro
 
 do-install:
 	for i in gdsreader maptolayer; do \
