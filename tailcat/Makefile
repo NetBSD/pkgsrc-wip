@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tailcat-0.5.0
+DISTNAME=	tailcat-0.7.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tailscale/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,13 +30,13 @@ USE_LANGUAGES=	c
 # The copied tun driver only resolves tun.CreateTUN -- it still issues the
 # OpenBSD ioctl -- which is harmless because tailcat runs netstack in
 # userspace and never opens a tun(4); net/wireguard-go has the real NetBSD
-# driver.  Bump WIREGUARD_GO when go.mod moves the pin.
-WIREGUARD_GO=	github.com/tailscale/wireguard-go@v0.0.0-20260821191448-23d18d66172c
-
+# driver.  The module version is read from go.mod so it tracks the pin.
 pre-build:
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${GO} list -e -deps ${GO_BUILD_PATTERN} >/dev/null
-	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/${WIREGUARD_GO} && ${CHMOD} -R +w . && \
+	${RUN} wg=`${AWK} '$$1 == "github.com/tailscale/wireguard-go" { print $$1 "@" $$2 }' \
+			${WRKSRC}/go.mod`; \
+		cd ${WRKDIR}/.gopath/pkg/mod/$$wg && ${CHMOD} -R +w . && \
 		${SED} -i -e 's,^//go:build \(.*openbsd\)$$,//go:build \1 || netbsd,' \
 			ipc/uapi_bsd.go ipc/uapi_unix.go && \
 		${CP} tun/tun_openbsd.go tun/tun_netbsd.go
