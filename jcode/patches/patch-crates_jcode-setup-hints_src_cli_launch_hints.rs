@@ -3,9 +3,12 @@ $NetBSD$
 Send launch-reminder notifications on the BSDs, as above for notify-send,
 and expose the manual setup guidance used by the setup-hotkey fallback.
 
+reap_notification_child is widened to cfg(unix) to match; otherwise the
+notify-send arm calls a function that does not exist on the BSDs.
+
 --- crates/jcode-setup-hints/src/cli_launch_hints.rs.orig
 +++ crates/jcode-setup-hints/src/cli_launch_hints.rs
-@@ -53,6 +53,25 @@ impl CliSource {
+@@ -53,6 +53,25 @@
      }
  }
  
@@ -31,8 +34,17 @@ and expose the manual setup guidance used by the setup-hotkey fallback.
  pub(super) fn install_available() -> Result<Vec<String>> {
      let mut installed = Vec::new();
  
-@@ -334,7 +353,9 @@ fn send_desktop_notification(title: &str, body: &str) {
-             .spawn();
+@@ -316,7 +335,7 @@
+ }
+ 
+ // Keep setup hints independent of app-core/base while waiting off the caller's path.
+-#[cfg(any(target_os = "macos", target_os = "linux"))]
++#[cfg(unix)]
+ fn reap_notification_child(mut child: std::process::Child) {
+     let _ = std::thread::Builder::new()
+         .name("jcode-notification-child".to_string())
+@@ -347,7 +366,9 @@
+         }
      }
  
 -    #[cfg(target_os = "linux")]
@@ -40,9 +52,9 @@ and expose the manual setup guidance used by the setup-hotkey fallback.
 +    // BSDs alike; gate on "unix minus macOS" so BSD desktops get notices too.
 +    #[cfg(all(unix, not(target_os = "macos")))]
      {
-         let _ = std::process::Command::new("notify-send")
+         if let Ok(child) = std::process::Command::new("notify-send")
              .arg("--app-name=jcode")
-@@ -372,7 +393,7 @@ fn send_desktop_notification(title: &str, body: &str) {
+@@ -388,7 +409,7 @@
              .spawn();
      }
  

@@ -7,9 +7,9 @@ one, so gate it on "unix except macOS" rather than on Linux.
 
 --- crates/jcode-app-core/src/notifications.rs.orig
 +++ crates/jcode-app-core/src/notifications.rs
-@@ -329,7 +329,10 @@ pub fn send_desktop_notification_rich(
-             .stderr(std::process::Stdio::null())
-             .spawn();
+@@ -709,7 +709,10 @@
+             reap_notification_child(child);
+         }
      }
 -    #[cfg(target_os = "linux")]
 +    // notify-send (libnotify) is the freedesktop standard notifier and is
@@ -18,10 +18,10 @@ one, so gate it on "unix except macOS" rather than on Linux.
 +    #[cfg(all(unix, not(target_os = "macos")))]
      {
          let _ = (subtitle, sound);
-         let _ = std::process::Command::new("notify-send")
-@@ -341,7 +344,7 @@ pub fn send_desktop_notification_rich(
-             .stderr(std::process::Stdio::null())
-             .spawn();
+         if let Ok(child) = std::process::Command::new("notify-send")
+@@ -724,7 +727,7 @@
+             reap_notification_child(child);
+         }
      }
 -    #[cfg(not(any(target_os = "macos", target_os = "linux")))]
 +    #[cfg(not(unix))]

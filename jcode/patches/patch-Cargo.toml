@@ -1,0 +1,17 @@
+$NetBSD$
+
+test_api is a developer scratch binary with no manual page, no help
+output and no documented purpose.  Upstream already hides its other
+dev binaries behind the dev-bins feature; put this one there too so
+cargo neither builds nor installs it.
+
+--- Cargo.toml.orig
++++ Cargo.toml
+@@ -103,6 +103,7 @@
+ [[bin]]
+ name = "test_api"
+ path = "src/bin/test_api.rs"
++required-features = ["dev-bins"]
+ 
+ [[bin]]
+ name = "jcode-harness"
