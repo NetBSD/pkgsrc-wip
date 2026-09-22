@@ -10,6 +10,10 @@ HOMEPAGE=	https://github.com/jsgroth/jgenesis/
 COMMENT=	Sega Genesis - Sega CD - SNES - Master System - Game Gear emulator
 LICENSE=	mit
 
+# jgenesis >= 0.12.0 only supports Vulkan, OpenGL support was rmoved from the code base.
+# Only works on platforms that have Vulkan loader.
+ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-*
+
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 
