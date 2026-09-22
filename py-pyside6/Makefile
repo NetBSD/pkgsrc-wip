@@ -62,6 +62,7 @@ SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/qt6-qthttpserver/buildlink3.mk"
 .include "../../www/qt6-qtwebchannel/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/qt6-qtserialport/buildlink3.mk"
