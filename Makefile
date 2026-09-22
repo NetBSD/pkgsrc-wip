@@ -950,6 +950,7 @@ SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
 SUBDIR+=	falcons-eye2
+SUBDIR+=	falkon
 SUBDIR+=	fallout1-ce
 SUBDIR+=	fallout2-ce
 SUBDIR+=	famsa
