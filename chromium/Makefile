@@ -427,8 +427,7 @@ BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
-.include "../../wip/typescript/buildlink3.mk"
-#.include "../../lang/typescript/buildlink3.mk"
+.include "../../lang/typescript/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
