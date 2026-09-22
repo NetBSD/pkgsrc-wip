@@ -12,6 +12,10 @@ BUILDLINK_ABI_DEPENDS.py-pyside6+=	${PYPKGPREFIX}-pyside6>=6.0.0
 BUILDLINK_FILES.py-pyside6+=		${PYSITELIB}/PySide6/*
 BUILDLINK_FILES.py-pyside6+=		${PYSITELIB}/shiboken6/*
 BUILDLINK_FILES.py-pyside6+=		share/PySide6/glue/*
+# Need for falkon
+BUILDLINK_FILES.py-pyside6+=		share/PySide6/doc/*
+BUILDLINK_FILES.py-pyside6+=		share/PySide6/typesystems/*
+BUILDLINK_FILES.py-pyside6+=		bin/shiboken6
 BUILDLINK_PKGSRCDIR.py-pyside6?=	../../wip/py-pyside6
 
 .endif # PY_PYSIDE6_BUILDLINK3_MK
