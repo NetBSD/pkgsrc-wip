@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (doggo-1.3.0.tar.gz) = db9b764ae8198ff96229071693d1f3fa54644863001fee2f43d9634e763a4856
-SHA512 (doggo-1.3.0.tar.gz) = f89849d6dee8a0115140ca61f5ea73ef29369c7c5c84490bc3fb610f6261e905471ef90fc3b7c16aee3e136451082b1680e038a249820cd3721c07d1dd2cd1ff
-Size (doggo-1.3.0.tar.gz) = 2509840 bytes
+BLAKE2s (doggo-1.4.0.tar.gz) = eebe21b1c85f696adf695da1251008ffe6d3e64b54b3409d3f35d19fbbb149bd
+SHA512 (doggo-1.4.0.tar.gz) = 7d32a279c6e07f47f635047679f63f9130322429b791418501762a2d63414cd863f4d95d8bb492b6f0a7b090b4155cf84050c58df2631641db49e9807d53c25b
+Size (doggo-1.4.0.tar.gz) = 2551351 bytes
 BLAKE2s (github.com__adguard_team_golibs_@v_v0.35.13.mod) = f24ceca9b7ab8973ae259915dac0a23fdc7fa8eda56dd7f02694e6071e1beb5d
 SHA512 (github.com__adguard_team_golibs_@v_v0.35.13.mod) = f90a1a08b901a1ae990a1e23b31fa537289638a04d7f7f44fcead4302ff6208167cd23192eb83ee7c147a14873bd7daa38fa45c8dbe215f3011e303b10a0d210
 Size (github.com__adguard_team_golibs_@v_v0.35.13.mod) = 5300 bytes
@@ -75,12 +75,12 @@ Size (github.com_goccy_go-json_@v_v0.10.6.mod) = 41 bytes
 BLAKE2s (github.com_goccy_go-json_@v_v0.10.6.zip) = 55bf4b3bbb4096383a45d620429d922e1874c973a6775bf2bc7e88d13b183244
 SHA512 (github.com_goccy_go-json_@v_v0.10.6.zip) = d6db38ba92ea12574b56fb31bb72a866345d99850bc5c6109a28e3ab420ed457c764ad7f3209caf9b3c5093cd136a8e321cf20972606f65216d75643c6315e4a
 Size (github.com_goccy_go-json_@v_v0.10.6.zip) = 309059 bytes
-BLAKE2s (github.com_jsdelivr_globalping-go_@v_v0.1.0.mod) = 555269c9380c30d680add630e64a60c08f8043eb3c784c6fe26dedad68c628bf
-SHA512 (github.com_jsdelivr_globalping-go_@v_v0.1.0.mod) = 9454b9230d2d9d63b092496e336d1fc32f158f452432793c0be13605b99d5f5a4926ea23c46a568e1bd17beab0c8f7997153cac7a0c73768ef2c602139d239a3
-Size (github.com_jsdelivr_globalping-go_@v_v0.1.0.mod) = 447 bytes
-BLAKE2s (github.com_jsdelivr_globalping-go_@v_v0.1.0.zip) = 2e63f75b3b9ef17b2fc70a17ecff42514945660afcf3771751b4fac8ff36e548
-SHA512 (github.com_jsdelivr_globalping-go_@v_v0.1.0.zip) = dbc5cc4cb40d39a0d65a09b1e48d1474b1ea32129b981fca5e827266ea48c5073cc82b8f318208284298f823fb57e5f1b82ef511328fb695d74dce3184192a62
-Size (github.com_jsdelivr_globalping-go_@v_v0.1.0.zip) = 19307 bytes
+BLAKE2s (github.com_jsdelivr_globalping-go_@v_v0.3.0.mod) = a58b37062d6f12f0b70f07172d4efb2fe026b35889388587ed0019685c7f27d8
+SHA512 (github.com_jsdelivr_globalping-go_@v_v0.3.0.mod) = d9695686761b537eb52ac02b3e1deed86a1cf43beaef2541af4e57ab8db4a554f44e8fb1e216238bb00968268b7a899c7d1c45936bf5cac3d8f9c8d0e81f4b70
+Size (github.com_jsdelivr_globalping-go_@v_v0.3.0.mod) = 467 bytes
+BLAKE2s (github.com_jsdelivr_globalping-go_@v_v0.3.0.zip) = 53d684587f1b68d63340d71a3c20656d88966abb0188aeca1001fe4e9cf63f59
+SHA512 (github.com_jsdelivr_globalping-go_@v_v0.3.0.zip) = 563076ba1ed9ff51c43ca6d6d4ff9028a394b4a176ed132aec370b0b51c423c3dc05f392d84c08872382340eb79e70fa31bd03462246fd8cafc2766273f6cc06
+Size (github.com_jsdelivr_globalping-go_@v_v0.3.0.zip) = 38864 bytes
 BLAKE2s (github.com_knadh_koanf_maps_@v_v0.1.2.mod) = 1e06c8024cdb1c8f6ad5138ab7f14aa933b4023f21b3e4609ff3fba428f2498d
 SHA512 (github.com_knadh_koanf_maps_@v_v0.1.2.mod) = 986d5c0552c2de0c11301216a7fedebaea62da8116a1a5f7a5ab90920ecb9b641ec9f45d0e2953e80b710b43b16b57701e50ffb1b21087076a4869355a207a1d
 Size (github.com_knadh_koanf_maps_@v_v0.1.2.mod) = 156 bytes
