@@ -1,0 +1,17 @@
+$NetBSD$
+
+- Take the usual pkgsrc LDFLAGS into account.
+
+--- build/Makefile.common.orig	2026-01-29 22:59:30.000000000 +0000
++++ build/Makefile.common
+@@ -102,8 +102,8 @@ CONFIG_CFLAGS		+= -mmacosx-version-min=$
+ CONFIG_CFLAGS_LINK	+= -mmacosx-version-min=$(MACMINVER)
+ endif
+ 
+-CFLAGS			= $(CONFIG_CFLAGS) $(CFLAGS_OPT) $(CFLAGS_TARGET) -I. -I$(TOPDIR) -include build/configure/config-$(ARCH).h
+-LDFLAGS			= $(CONFIG_CFLAGS_LINK) $(LDFLAGS_TARGET) $(DLSYM_LIBS)
++CFLAGS			= $(PKGSRC_CFLAGS) $(CONFIG_CFLAGS) $(CFLAGS_OPT) $(CFLAGS_TARGET) -I. -I$(TOPDIR) -include build/configure/config-$(ARCH).h
++LDFLAGS			= $(PKGSRC_LDFLAGS) $(CONFIG_CFLAGS_LINK) $(LDFLAGS_TARGET) $(DLSYM_LIBS)
+ 
+ ifeq ($(IS_TTY), yes)
+ PROGRESS_MARKER_START = "`cat $(TOPDIR)/build/compilation-mark-start-seq.ansi`"
