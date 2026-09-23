@@ -4,6 +4,7 @@ DISTNAME=	fcitx5-cskk-1.2.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcitx/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+PKGREVISION=	1
 
 MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://github.com/fcitx/fcitx5-cskk
