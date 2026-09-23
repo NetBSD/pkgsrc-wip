@@ -1,0 +1,23 @@
+$NetBSD$
+
+Point TERMINFO_DIRS at the terminfo entry this package installs, and silence
+the harmless Mesa DRI2 authentication warning on software EGL.  @PREFIX@ is
+substituted by SUBST_CLASSES=terminfo-dirs.
+
+--- misc/rio.desktop.orig
++++ misc/rio.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Type=Application
+ TryExec=rio
+-Exec=rio
++Exec=env EGL_LOG_LEVEL=fatal TERMINFO_DIRS=@PREFIX@/share/terminfo rio
+ Icon=rio
+ Terminal=false
+ Categories=System;TerminalEmulator;
+@@ -14,4 +14,4 @@
+ 
+ [Desktop Action New]
+ Name=New Terminal
+-Exec=rio
++Exec=env EGL_LOG_LEVEL=fatal TERMINFO_DIRS=@PREFIX@/share/terminfo rio

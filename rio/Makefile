@@ -15,8 +15,8 @@ RUST_REQ=	1.92.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-# Build only the terminal binary; x11 only (Wayland not packaged for NetBSD).
-# X11/xkbcommon/xcb are loaded at runtime via dlopen (x11-dl, x11rb, xkbcommon-dl).
+# x11 only; Wayland is not packaged for NetBSD.  X11/xcb/xkbcommon are
+# dlopened at runtime, so nothing links against them.
 CARGO_ARGS=			build --release -p rioterm ${DEFAULT_CARGO_ARGS}
 CARGO_NO_DEFAULT_FEATURES=	yes
 CARGO_FEATURES=			x11
@@ -24,28 +24,29 @@ CARGO_FEATURES=			x11
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
-DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
+DEPENDS+=	ncurses-[0-9]*:../../devel/ncurses
 
 .include "options.mk"
 
-# Force pkg-config to see only buildlink'd .pc files so fontconfig-sys picks
-# up pkgsrc's libfontconfig.so.1 instead of X11R7's .so.2.
+# Restrict pkg-config to buildlink .pc files so fontconfig-sys finds pkgsrc's
+# libfontconfig.so.1, not X11R7's .so.2.
 PKGSRC_MAKE_ENV+=	PKG_CONFIG_LIBDIR=${BUILDLINK_DIR}/lib/pkgconfig
-# /etc/mk.conf declares the X11R7 fontconfig as builtin; without this,
-# buildlink links fontconfig.pc into .x11-buildlink/ and the restricted
-# PKG_CONFIG_LIBDIR above can no longer find it.
+# mk.conf may declare X11R7 fontconfig builtin, putting fontconfig.pc in
+# .x11-buildlink/ where the restricted PKG_CONFIG_LIBDIR cannot see it.
 USE_BUILTIN.fontconfig=	no
 
-# Embed rpath for pkgsrc libs so the binary finds them without LD_LIBRARY_PATH.
-RUSTFLAGS+=	-C link-arg=-Wl,-rpath,${PREFIX}/lib
-RUSTFLAGS+=	-C link-arg=-Wl,-rpath,/usr/X11R7/lib
+# Embed rpath so the binary runs without LD_LIBRARY_PATH.
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${X11BASE}/lib
+# Without this the wrapper rewrites the ${X11BASE} rpath into the buildlink
+# dir and drops it, leaving the dlopens unresolvable at runtime.
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${X11BASE}/lib
 
 ICON_THEMES=	yes
 
-# Substitute PREFIX into the .desktop Exec line so TERMINFO_DIRS points to
-# the installed terminfo directory at runtime.
+# Expand @PREFIX@ in the .desktop Exec line so TERMINFO_DIRS resolves.
 SUBST_CLASSES+=			terminfo-dirs
-SUBST_STAGE.terminfo-dirs=	post-patch
+SUBST_STAGE.terminfo-dirs=	pre-configure
 SUBST_FILES.terminfo-dirs=	misc/rio.desktop
 SUBST_VARS.terminfo-dirs=	PREFIX
 
@@ -55,12 +56,9 @@ INSTALLATION_DIRS+=	bin \
 			share/terminfo \
 			share/doc/rio
 
-
-# Patch vendor crates to enable wgpu GLES backend on NetBSD.
-#
-# wgpu and wgpu-core have explicit platform allowlists (Windows/Linux/Android/FreeBSD/Apple)
-# for their Vulkan and GLES backends.  Each patched file is followed by a checksum
-# reset ("files":{}) so Cargo skips per-file verification of the modified entries.
+# Enable the wgpu GLES backend on NetBSD: wgpu and wgpu-core gate Vulkan and
+# GLES behind platform allowlists that omit it.  Each edited file gets its
+# .cargo-checksum.json "files" emptied so Cargo skips per-file verification.
 pre-configure:
 	# wgpu/build.rs: add NetBSD to vulkan and gles cfg platform conditions
 	${SED} -i \
@@ -99,19 +97,18 @@ do-install:
 		${DESTDIR}${PREFIX}/share/applications/rio.desktop
 	${INSTALL_DATA} ${WRKSRC}/misc/logo.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/rio.svg
-	# Install terminfo so programs inside rio recognise TERM=xterm-rio.
+	# terminfo for TERM=xterm-rio.
 	${LOCALBASE}/bin/tic -x -o ${DESTDIR}${PREFIX}/share/terminfo \
 		${WRKSRC}/misc/rio.terminfo
 	${INSTALL_DATA} ${FILESDIR}/README.NetBSD \
 		${DESTDIR}${PREFIX}/share/doc/rio/README.NetBSD
-.if !empty(PKG_OPTIONS:Mman)
-	# Build and install man pages from scdoc source in extra/man/.
+.if !empty(PKG_OPTIONS:Mmanual)
 	${SCDOC} < ${WRKSRC}/extra/man/rio.1.scd > \
-		${DESTDIR}${PREFIX}/man/man1/rio.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rio.1
 	${SCDOC} < ${WRKSRC}/extra/man/rio.5.scd > \
-		${DESTDIR}${PREFIX}/man/man5/rio.5
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/rio.5
 	${SCDOC} < ${WRKSRC}/extra/man/rio-bindings.5.scd > \
-		${DESTDIR}${PREFIX}/man/man5/rio-bindings.5
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/rio-bindings.5
 .endif
 
 .include "cargo-depends.mk"

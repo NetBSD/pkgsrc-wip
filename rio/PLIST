@@ -1,11 +1,10 @@
 @comment $NetBSD$
 bin/rio
-man/man1/rio.1
-man/man5/rio-bindings.5
-man/man5/rio.5
+${PLIST.man}man/man1/rio.1
+${PLIST.man}man/man5/rio-bindings.5
+${PLIST.man}man/man5/rio.5
 share/applications/rio.desktop
 share/doc/rio/README.NetBSD
 share/icons/hicolor/scalable/apps/rio.svg
-share/terminfo/r/rio
 share/terminfo/r/rio+base
 share/terminfo/x/xterm-rio

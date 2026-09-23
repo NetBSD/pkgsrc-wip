@@ -1,0 +1,18 @@
+$NetBSD$
+
+devel/ncurses owns share/terminfo/r/rio (its own alacritty-derived entry), so
+compiling this one conflicts at pkg_add time.  Harmless to drop: rio prefers
+xterm-rio and falls back to rio only for layouts predating rio 0.2.27.
+
+--- misc/rio.terminfo.orig
++++ misc/rio.terminfo
+@@ -15,9 +15,6 @@
+     setrgbf=\E[38\:2\:%p1%d\:%p2%d\:%p3%dm,
+     use=rio+base,
+ 
+-rio,
+-    use=xterm-rio,
+-
+ rio+base,
+     OTbs, am, bce, km, mir, msgr, xenl, AX, XT,
+     colors#8, cols#80, it#8, lines#24, pairs#64,
