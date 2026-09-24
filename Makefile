@@ -6104,7 +6104,6 @@ SUBDIR+=	wise3
 SUBDIR+=	witchblast
 SUBDIR+=	with-editor
 SUBDIR+=	wjelement
-SUBDIR+=	wl-git
 SUBDIR+=	wl-snapshot
 SUBDIR+=	wla-dx
 SUBDIR+=	wla-dx-git
