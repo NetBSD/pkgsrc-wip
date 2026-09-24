@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.8 2012/09/28 22:07:35 asau Exp $
-#
 
 DISTNAME=	evernote-mode-0_41
-PKGNAME=	${DISTNAME:S/_/./}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/_/./}
 CATEGORIES=	editors net
-MASTER_SITES=	http://emacs-evernote-mode.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/emacs-evernote-mode/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
@@ -23,6 +22,8 @@ INSTALLATION_DIRS=	${DOCSDIR} \
 WRKSRC=			${WRKDIR}/${DISTNAME}/ruby
 RUBY_VERSION_SUPPORTED=	21 # xxx untested
 USE_RUBY_SETUP=		YES
+
+BROKEN=		"Does not support Ruby 3.3+"
 
 DOCUMENTS=	readme_en.txt \
 		readme_en.html \
