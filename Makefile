@@ -1542,7 +1542,6 @@ SUBDIR+=	haplohseq
 SUBDIR+=	hare
 SUBDIR+=	harec
 SUBDIR+=	harmony
-SUBDIR+=	harper
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	hashcat-utils
