@@ -6,3 +6,4 @@ Size (btop-1.4.7-6e39144aaf5a6bc01b9f795010b0914431067183.tar.gz) = 1280353 byte
 SHA1 (patch-Makefile) = 8220b2a9b2ff0bbef5b94efa3310144ccf75d07b
 SHA1 (patch-src_btop.cpp) = bd854848d69b3725e23f9af3736c9ae0a8787776
 SHA1 (patch-src_netbsd_btop__collect.cpp) = e097c005ac69be8ba34a9c13f2471036e8f06c93
+SHA1 (patch-src_netbsd_btop__collect.cpp-only-physical) = 4271ed99dffc153ad1f94515fdc5e55a2f2401cc
