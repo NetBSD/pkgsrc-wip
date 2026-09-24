@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.11
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.12
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -65,9 +65,9 @@ RUST_RUNTIME=	yes		# record a dependency
 ## LIBRARIES needed to build modules that HA needs
 
 # The standard approach for recorder is to use pgsql.  HA uses this,
-# like all databases, via SQLAlchemy, but it does not install
-# psycopg2, which of course expects pgsql libs.
+# like all databases, via SQLAlchemy.
 .include "../../mk/pgsql.buildlink3.mk"
+DEPENDS+=	postgresql18-server-[0-9]*:../../databases/postgresql18-server
 
 # Various modules (e.g. mobile_app) need numpy.  numpy needs blas
 # (even though HA probably does not use numpy blas-ish methods), and
