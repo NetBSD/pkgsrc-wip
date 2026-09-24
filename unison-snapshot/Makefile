@@ -1,11 +1,13 @@
 # $NetBSD: Makefile,v 1.179 2026/05/01 00:40:59 gdt Exp $
 
-# This remains in wip because it will very soon advance along upstream master.
-DISTNAME=	unison-2.54.0
+# Upstream versions are x.y.z only; the release after 2.54.0 will
+# either be 2.54.1 or 2.55.0.
+# Use a fake sub-micro for n commits after the tag.
+DISTNAME=	unison-2.54.0.32
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	8772d26a2eb77cfd0cb6da81807e81f24f51044c
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
