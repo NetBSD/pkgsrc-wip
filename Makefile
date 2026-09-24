@@ -272,7 +272,6 @@ SUBDIR+=	audio-mml
 SUBDIR+=	audit-system
 SUBDIR+=	ausweisapp2
 SUBDIR+=	auto-admin
-SUBDIR+=	auto-complete-mode
 SUBDIR+=	auto-dev
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
