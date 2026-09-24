@@ -5687,7 +5687,6 @@ SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tagtool
 SUBDIR+=	tailcat
 SUBDIR+=	talksoup
-SUBDIR+=	tamago-anthy
 SUBDIR+=	tangled
 SUBDIR+=	tardy
 SUBDIR+=	taskchampion-sync-server
