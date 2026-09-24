@@ -2417,7 +2417,6 @@ SUBDIR+=	mfoc
 SUBDIR+=	mfoc-hardnested
 SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
-SUBDIR+=	mic-paren
 SUBDIR+=	michabo
 SUBDIR+=	microbiomeutil
 SUBDIR+=	microblog-purple
