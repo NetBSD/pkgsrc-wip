@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
 GITHUB_TAG=	612e18f5bd598fe987b30d041b39e5d7b3e0794f
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/aristocratos/btop
 COMMENT=	Colorful TTY resource monitor
 LICENSE=	apache-2.0
