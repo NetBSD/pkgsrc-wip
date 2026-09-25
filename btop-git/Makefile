@@ -3,7 +3,7 @@
 DISTNAME=	btop-1.4.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
-GITHUB_TAG=	612e18f5bd598fe987b30d041b39e5d7b3e0794f
+GITHUB_TAG=	7b1f128
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/aristocratos/btop
