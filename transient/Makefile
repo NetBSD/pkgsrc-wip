@@ -2,9 +2,11 @@
 
 VERSION=	0.8.1
 DISTNAME=	transient-${VERSION}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magit/}
 GITHUB_TAG=	v${VERSION}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magit/
@@ -18,12 +20,13 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo
 #MAKE_JOBS_SAFE=	no
 
+EMACS_VERSIONS_INCOMPATIBLE=    emacs20 emacs29 emacs29nox xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 #INFO_FILES=		yes
 #UILD_TARGET=		all
 TEST_TARGET=		check
 INSTALL_TARGET=		#
-INSTALLATION_DIRS=	${PREFIX}/share/emacs/site-lisp/transient
+INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/transient
 AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		lisp

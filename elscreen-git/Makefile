@@ -14,9 +14,11 @@ CONFLICTS+=	elscreen-[0-9]*
 
 USE_LANGUAGES=	# none
 
+EMACS_VERSIONS_ACCEPTED=	# empty
+
 do-build:
 	cd ${WRKSRC} && \
-	${EMACS_BIN} -batch -f batch-byte-compile *.el
+	${EMACS_BIN} -L . -batch -f batch-byte-compile *.el
 
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/elscreen
 INSTALLATION_DIRS+=	share/doc/elscreen

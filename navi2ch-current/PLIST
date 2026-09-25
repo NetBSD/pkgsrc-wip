@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2011/08/14 08:20:06 phonohawk Exp $
-info/navi2ch.info
+${EMACS_INFOPREFIX}/navi2ch.info
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-articles.el

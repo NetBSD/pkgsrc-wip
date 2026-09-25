@@ -2,9 +2,11 @@
 
 VERSION=	4.1.3
 DISTNAME=	magit-${VERSION}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magit/}
 GITHUB_TAG=	v${VERSION}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magit/
@@ -15,15 +17,13 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 
-#MAKE_ENV+=	MANUAL_HTML_ARGS=
-#MAKE_ENV+=	-DPREFIX=${PREFIX}
-#MAKE_ENV+=	-DDASH_DIR=${PREFIX}/share/emacs/site-lisp/dash
-#MAKE_ENV+=	-DINSTALL_INFO=install-info
-
-SUBST_CLASSES+=		lisp
-SUBST_FILES.lisp=	default.mk
-SUBST_STAGE.lisp=	pre-build
-SUBST_SED.lisp=		-e s.@@PREFIX@@.${PREFIX}.
+MAKE_FLAGS+=	MANUAL_HTML_ARGS=
+MAKE_FLAGS+=	INSTALL_INFO=install-info
+MAKE_FLAGS+=	COMPAT_DIR=${EMACS_LISPPREFIX}/compat
+MAKE_FLAGS+=	DASH_DIR=${EMACS_LISPPREFIX}/dash
+MAKE_FLAGS+=	TRANSIENT_DIR=${EMACS_LISPPREFIX}/transient
+MAKE_FLAGS+=	WITH_EDITOR_DIR=${EMACS_LISPPREFIX}/with-editor
+MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX}/magit
 
 SUBST_CLASSES+=		batch
 SUBST_FILES.batch=	default.mk lisp/Makefile test/Makefile
@@ -35,6 +35,8 @@ NO_CONFIGURE=	yes
 USE_LANGUAGES=	#
 USE_TOOLS+=	gmake makeinfo
 MAKE_JOBS_SAFE=	no
+
+EMACS_VERSIONS_ACCEPTED=	emacs30
 
 .include "../../editors/emacs/modules.mk"
 

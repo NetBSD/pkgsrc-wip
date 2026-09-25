@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2013/09/12 18:01:46 thomasklausner Exp $
 
 DISTNAME=		org-caldav-0.0
+PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=		time net
 MASTER_SITES=		https://github.com/dengste/org-caldav
 LICENSE=		gnu-gpl-v3
@@ -15,16 +16,18 @@ GIT_REPO.org-caldav=	https://github.com/dengste/org-caldav.git
 WRKSRC=			${WRKDIR}/org-caldav
 EGG_NAME=		${DISTNAME}.dev
 INSTALLATION_DIRS=	share/doc/org-caldav
-INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/${PKGBASE}
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/org-caldav
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 do-build:
 	cd ${WRKSRC} && \
 		${EMACS_BIN} -L . -Q -batch -f batch-byte-compile *.el
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.el   ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/*.elc  ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/org-caldav
+	${INSTALL_DATA} ${WRKSRC}/*.el   ${DESTDIR}${EMACS_LISPPREFIX}/org-caldav
+	${INSTALL_DATA} ${WRKSRC}/*.elc  ${DESTDIR}${EMACS_LISPPREFIX}/org-caldav
+	${INSTALL_DATA} ${WRKSRC}/Readme.org ${DESTDIR}${PREFIX}/share/doc/org-caldav
 
 .include "../../editors/emacs/modules.mk"
 .include "../../wip/mk/git-package.mk"

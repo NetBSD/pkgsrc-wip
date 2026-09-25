@@ -3,7 +3,6 @@
 DISTNAME=		tc-2.99.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 MASTER_SITES=   	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
-PKG_REVISION=		1
 
 CATEGORIES=		inputmethod
 
@@ -14,7 +13,7 @@ COMMENT=		2-stroke non associative direct input for Kanji
 LICENSE=		gnu-gpl-v2
 
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
-			${EMACS_LISPPREFIX}/${DISTNAME} \
+			${EMACS_LISPPREFIX}/tc \
 			share/examples/tc
 
 EMACS_MODULES=		base
@@ -32,8 +31,10 @@ INFO_FILES=		YES
 
 MAKE_JOBS_SAFE=		no
 
-CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}/${DISTNAME}
-CONFIGURE_ARGS.emacs+=	--datadir=${PREFIX}/share
+CONFIGURE_ARGS=		--with-lispdir=${EMACS_LISPPREFIX}/tc
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 emacs30 emacs30nox emacs31 emacs31nox xemacs215 xemacs215nox
 
 #.include "options.mk"
 PLIST_SUBST+=		DISTNAME=${DISTNAME}

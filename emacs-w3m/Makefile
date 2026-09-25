@@ -36,11 +36,10 @@ WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 #SUBST_SED.fix-icondir+=	-e 's|images/w3m|w3m|g'
 
 EMACS_BUILDLINK=		# empty
-EMACS_VERSIONS_ACCEPTED=	emacs20 \
-				emacs29 emacs29nox \
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox \
 				emacs30 emacs30nox \
 				emacs31 emacs31nox \
-				xemacs215 xemacs215nox xemacs214 xemacs214nox
+				xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
 
@@ -54,7 +53,7 @@ PLIST.gui=	yes
 # Work around an xemacs rendering bug for optimized GIFs, see
 # <https://github.com/doitian/emacs-w3m>, 2b
 .if (${EMACS_FLAVOR} == "xemacs")
-DEPENDS+=	gifsicle:../../graphics/gifsicle
+DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
 .endif
 
 DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja

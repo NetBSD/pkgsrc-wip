@@ -1,4 +1,5 @@
 $NetBSD: distinfo,v 1.2 2009/07/30 06:07:12 phonohawk Exp $
 
-RMD160 (rst.el) = 2b0c55b16a73e353d60c66d34860c87980dc035a
-Size (rst.el) = 117357 bytes
+BLAKE2s (rst.el) = 48cb612311a3a3c04363fe8e492ff793d299ded236ee301792b5a8bde48c4fe8
+SHA512 (rst.el) = d00e7e49d87ab5ae522de74e46896ed11e84e793f0ab367825d9355f08cc7043f4ff178b394a140fd3378a429e4206f4a249d56993242db1f51d940dd6a72ccc
+Size (rst.el) = 167363 bytes

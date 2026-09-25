@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/10/03 14:32:32 asau Exp $
-#
 
 DISTNAME=	mpc.el-p29
-PKGNAME=	mpc-el-29
+PKGNAME=	${EMACS_PKGNAME_PREFIX}mpc-el-29
 CATEGORIES=	audio
 MASTER_SITES=	http://www.iro.umontreal.ca/~monnier/elisp/
 
@@ -13,6 +12,8 @@ COMMENT=	Emacs front end to the Music Player Daemon
 USE_TOOLS+=	gmake
 
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 emacs29 emacs30 emacs31 emacs29nox emacs30nox emacs31nox
 
 do-build:
 	cd ${WRKSRC} && \

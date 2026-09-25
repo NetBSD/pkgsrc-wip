@@ -1,5 +1,5 @@
 # $NetBSD: Makefile,v 1.4 2012/09/29 17:05:53 asau Exp $
-#
+
 DISTNAME=		haskell-mode-2.7.0
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=		devel
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.haskell.org/haskell-mode/
 COMMENT=		Haskell mode for Emacs
 
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 emacs31 emacs31nox xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
 

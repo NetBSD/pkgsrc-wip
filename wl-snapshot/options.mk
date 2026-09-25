@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS=	w3m
 PLIST_VARS+=		w3m
 
 .if !empty(PKG_OPTIONS:Mw3m)
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox
 .include "../../www/emacs-w3m-snapshot/buildlink3.mk"
 PLIST.w3m=	yes
 .endif

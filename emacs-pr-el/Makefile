@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/09/28 22:07:32 asau Exp $
 
 DISTNAME=		emacs-pr-el-0.0.1
+PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME:S/emacs-//}
 CATEGORIES=		misc
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,6 +14,8 @@ COMMENT=		Modified version of GNATS send-pr.el
 NO_CHECKSUM=		yes
 
 WRKSRC=			${WRKDIR}
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs29 emacs29nox xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 .include "../../mk/bsd.prefs.mk"
 

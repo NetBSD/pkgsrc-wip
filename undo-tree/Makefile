@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 17:41:40 asau Exp $
-#
 
 DISTNAME=	undo-tree
-PKGNAME=	${DISTNAME}-0.3
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-0.3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.dr-qubit.org/${DISTNAME}/
 EXTRACT_SUFX=	.el
@@ -15,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX}
+
+EMACS_VERSIONS_ACCEPTED=	# empty
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile ${DISTNAME}.el

@@ -7,6 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
 GITHUB_TAG=	8264b478c4f6367ff4cea0c2f13abfda152a13d0
 
+BROKEN=		"github commit does not exist in repository"
 
 # This fix will be unnecessary for the next release.
 #PATCH_SITES=		${MASTER_SITE_LOCAL} #PATCHFILES=		semi-1.14.6-pgg-gpg.patch
@@ -31,6 +32,8 @@ INFO_FILES=	yes
 
 EMACS_MODULES=		base
 EMACS_BUILDLINK=	# defined
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 # apel
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package

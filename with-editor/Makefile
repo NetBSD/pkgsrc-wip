@@ -2,9 +2,11 @@
 
 VERSION=	3.4.3
 DISTNAME=	with-editor-${VERSION}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magit/}
 GITHUB_TAG=	v${VERSION}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/with-editor/
@@ -27,13 +29,15 @@ SUBST_FILES.lisp=       default.mk
 SUBST_STAGE.lisp=       pre-build
 SUBST_SED.lisp=         -e s.@@PREFIX@@.${PREFIX}.
 
+EMACS_VERSIONS_INCOMPATIBLE=    emacs20 emacs29 emacs29nox xemacs214 xemacs215 xemacs214nox xemacs215nox # emacs-compat
+
 .include "../../editors/emacs/modules.mk"
 
 #INFO_FILES=		yes
 #UILD_TARGET=		all
 TEST_TARGET=		check
 INSTALL_TARGET=		#
-INSTALLATION_DIRS=	${PREFIX}/share/emacs/site-lisp/with-editor
+INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/with-editor
 AUTO_MKDIRS=		yes
 
 do-install:

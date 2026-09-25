@@ -2,9 +2,10 @@
 
 DISTNAME=		tc-2.99.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=		1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=makoto-fujiwara/}
 CATEGORIES=		inputmethod
-PKGREVISION=		1
+GITHUB_PROJECT=		tc
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://openlab.ring.gr.jp/tcode/index.html
@@ -13,7 +14,7 @@ COMMENT=		2-stroke non associative direct input for Kanji
 LICENSE=		gnu-gpl-v2
 
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
-			${EMACS_LISPPREFIX}/${DISTNAME} \
+			${EMACS_LISPPREFIX}/tc \
 			share/examples/tc
 
 EMACS_MODULES=		base
@@ -29,6 +30,8 @@ MAKEFLAGS+=		EMACS=${EMACS_BIN}
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
 INFO_FILES=		YES
 
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox xemacs214 xemacs214nox
+
 # fatal: unable to access 'http://github.com/kanchoku/tc.git/': SSL certificate problem: unable to get local issuer certificate
 # Add "-c http.sslVerify=false" to git command or,
 #PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
@@ -38,8 +41,8 @@ INFO_FILES=		YES
 #  For the target in etc/Makefile ->  bushu.expand bushu.index2: bushu.rev $(BATCH_SORT)
 MAKE_JOBS_SAFE=		no
 
-CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}/${DISTNAME}
-CONFIGURE_ARGS.emacs+=	--datadir=${PREFIX}/share
+CONFIGURE_ARGS=		--with-lispdir=${EMACS_LISPPREFIX}/tc
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 
 #.include "options.mk"
 PLIST_SUBST+=		DISTNAME=${DISTNAME}

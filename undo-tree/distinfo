@@ -1,4 +1,5 @@
 $NetBSD: distinfo,v 1.2 2011/02/18 04:55:05 phonohawk Exp $
 
-RMD160 (undo-tree.el) = b7b25d93905487a4675ee5a21495bb91b499d888
-Size (undo-tree.el) = 121448 bytes
+BLAKE2s (undo-tree.el) = 91de0690cafc259d57e13871519ff71c1eba3a99b7cf4ad74a0517a626f538d3
+SHA512 (undo-tree.el) = 5f0564c4dedc2b522373d15b3261511f6e96fcbae15447858b49c1e9e3a45b69d22a610629680fe270c18cfd88a18fbe5f361a3f2d0b86baa50155083c8b8d63
+Size (undo-tree.el) = 186487 bytes

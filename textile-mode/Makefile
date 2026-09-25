@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2014/03/19 07:34:07 phonohawk Exp $
-#
 
 DISTNAME=	textile-mode
-PKGNAME=	${DISTNAME}-2006.03.30
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-2006.03.30
 CATEGORIES=	editors
 MASTER_SITES=	http://dev.nozav.org/scripts/
 EXTRACT_SUFX=	.el

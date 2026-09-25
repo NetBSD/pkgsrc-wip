@@ -1,12 +1,11 @@
 # $NetBSD$
-#
 
 DISTNAME=		v${PKGVER}
 PKGVER=			2.20
 PKGNAME=		${EMACS_PKGNAME_PREFIX}slime-${PKGVER}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=slime}/slime/archive/
-DIST_SUBDIR=		${PKGBASE}
+DIST_SUBDIR=		slime
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		https://common-lisp.net/project/slime/
@@ -19,15 +18,14 @@ USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 INFO_FILES=		yes
 
-EMACS_VERSIONS_ACCEPTED= \
-			emacs25 emacs25nox
-
 INSTALLATION_DIRS+=	${EMACS_INFOPREFIX}
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime/lib
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime/swank
 
 SLIME_LISPDIR=		${EMACS_LISPPREFIX}/slime
+
+EMACS_VERSIONS_ACCEPTED=	# empty
 
 do-build:
 	cd ${WRKSRC}/doc && ${GMAKE} slime.info

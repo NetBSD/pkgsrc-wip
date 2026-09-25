@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.8 2012/10/07 17:17:20 asau Exp $
 
 DISTNAME=	t-gnus-6.17.2.00
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	mail
 FETCH_CMD=	${FILESDIR}/fetch.sh
 
@@ -8,8 +9,9 @@ MAINTAINER=	carton@Ivy.NET
 HOMEPAGE=	https://gnus.org/
 COMMENT=	Gnus is a flexible message reader running under GNU Emacs
 
-DEPENDS+=	semi>=1.14.6:../../devel/semi
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.6:../../devel/semi
 
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 # semi
 
 WRKSRC=		${WRKDIR}/gnus
 

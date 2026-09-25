@@ -37,6 +37,8 @@ INSTALLATION_DIRS=	${DOCDIR}/en ${DOCDIR}/ja \
 
 EMACS_BUILDLINK=	# empty
 
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
+
 .include "options.mk"
 
 .include "../../devel/apel/buildlink3.mk"

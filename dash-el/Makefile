@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	dash.el-2.19.1
-PKGNAME=	${DISTNAME:C/\.el/-el/}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:C/\.el/-el/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magnars/}
 GITHUB_PROJECT=	dash.el
@@ -13,6 +13,8 @@ COMMENT=	Modern list api for Emacs. No 'cl required
 LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/dash
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20
 
 do-build:
 	${EMACS_BIN} --no-init-file --no-site-file -batch \

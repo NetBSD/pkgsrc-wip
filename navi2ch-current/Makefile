@@ -16,6 +16,8 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://navi2ch.git.sourceforge.net/gitroot/navi2ch/navi2ch
 GIT_MODULE.master=	navi2ch
 
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 INFO_FILES=	yes
