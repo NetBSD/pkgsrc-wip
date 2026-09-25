@@ -325,7 +325,6 @@ SUBDIR+=	beignet
 SUBDIR+=	belle-sip
 SUBDIR+=	bertini
 SUBDIR+=	bfgminer
-SUBDIR+=	bgpdump
 SUBDIR+=	biblesync
 SUBDIR+=	bicon
 SUBDIR+=	bifrost
