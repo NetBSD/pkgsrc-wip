@@ -2,7 +2,7 @@ $NetBSD$
 
 Add NetBSD support.
 
---- src/canvas/dialogs/process_kill_dialog.rs.orig	2026-06-22 06:25:54.000000000 +0000
+--- src/canvas/dialogs/process_kill_dialog.rs.orig	2026-09-22 06:56:15.000000000 +0200
 +++ src/canvas/dialogs/process_kill_dialog.rs
 @@ -2,7 +2,7 @@
  
@@ -13,7 +13,7 @@ Add NetBSD support.
  use ratatui::widgets::ListState;
  use ratatui::{
      Frame,
-@@ -11,7 +11,7 @@ use ratatui::{
+@@ -11,7 +11,7 @@
      widgets::{Paragraph, Wrap},
  };
  
@@ -22,7 +22,7 @@ Add NetBSD support.
  use crate::canvas::components::scroll_bar::{
      ScrollBarArgs, dialog_scroll_bar_area, draw_scroll_bar,
  };
-@@ -165,6 +165,44 @@ cfg_select! {
+@@ -165,6 +165,44 @@
              "33: LIBRT",
          ];
      }
@@ -67,7 +67,7 @@ Add NetBSD support.
      _ => {}
  }
  
-@@ -176,7 +214,7 @@ cfg_select! {
+@@ -176,7 +214,7 @@
  /// Note that signals are not available for Windows.
  #[derive(Debug)]
  pub(crate) enum ButtonState {
@@ -76,7 +76,7 @@ Add NetBSD support.
      Signals {
          state: ListState,
          last_button_draw_area: Rect,
-@@ -240,7 +278,7 @@ impl ProcessKillDialog {
+@@ -240,7 +278,7 @@
              let pids = state.pids;
  
              match button_state {
@@ -85,7 +85,7 @@ Add NetBSD support.
                  ButtonState::Signals { state, .. } => {
                      use crate::utils::process_killer;
  
-@@ -280,7 +318,7 @@ impl ProcessKillDialog {
+@@ -278,7 +316,7 @@
                                      }
                                  }
                              }
@@ -94,7 +94,7 @@ Add NetBSD support.
                                  use crate::utils::process_killer;
  
                                  for pid in pids {
-@@ -306,7 +344,7 @@ impl ProcessKillDialog {
+@@ -315,7 +353,7 @@
      }
  
      pub fn on_char(&mut self, c: char) {
@@ -103,7 +103,7 @@ Add NetBSD support.
          const MAX_KEY_TIMEOUT: std::time::Duration = std::time::Duration::from_secs(1);
  
          match c {
-@@ -315,7 +353,7 @@ impl ProcessKillDialog {
+@@ -324,7 +362,7 @@
              'k' => self.on_up_key(),
              'l' => self.on_right_key(),
              '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' => {
@@ -112,7 +112,7 @@ Add NetBSD support.
                  if let Some(value) = c.to_digit(10)
                      && let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
                          button_state: ButtonState::Signals { state, .. },
-@@ -364,7 +402,7 @@ impl ProcessKillDialog {
+@@ -374,7 +412,7 @@
                  }
              }
              'g' => {
@@ -121,7 +121,7 @@ Add NetBSD support.
                  {
                      if let Some(('g', last_press)) = self.last_char {
                          if last_press.elapsed() <= MAX_KEY_TIMEOUT {
-@@ -380,7 +418,7 @@ impl ProcessKillDialog {
+@@ -390,7 +428,7 @@
                  }
              }
              'G' => {
@@ -130,7 +130,7 @@ Add NetBSD support.
                  self.go_to_last();
              }
              _ => {}
-@@ -394,7 +432,7 @@ impl ProcessKillDialog {
+@@ -404,7 +442,7 @@
      pub fn on_click(&mut self, x: u16, y: u16) -> bool {
          if let ProcessKillDialogState::Selecting(state) = &mut self.state {
              match &mut state.button_state {
@@ -139,7 +139,7 @@ Add NetBSD support.
                  ButtonState::Signals {
                      state,
                      last_button_draw_area,
-@@ -460,7 +498,7 @@ impl ProcessKillDialog {
+@@ -470,7 +508,7 @@
          }
      }
  
@@ -148,7 +148,7 @@ Add NetBSD support.
      fn scroll_up_by(state: &mut ListState, amount: usize) {
          if let Some(selected) = state.selected() {
              if let Some(new_position) = selected.checked_sub(amount) {
-@@ -471,7 +509,7 @@ impl ProcessKillDialog {
+@@ -481,7 +519,7 @@
          }
      }
  
@@ -157,7 +157,7 @@ Add NetBSD support.
      fn scroll_down_by(state: &mut ListState, amount: usize) {
          if let Some(selected) = state.selected() {
              let new_position = selected + amount;
-@@ -487,7 +525,7 @@ impl ProcessKillDialog {
+@@ -497,7 +535,7 @@
      pub fn on_up_key(&mut self) {
          self.last_char = None;
  
@@ -166,7 +166,7 @@ Add NetBSD support.
          if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
              button_state: ButtonState::Signals { state, .. },
              ..
-@@ -501,7 +539,7 @@ impl ProcessKillDialog {
+@@ -511,7 +549,7 @@
      pub fn on_down_key(&mut self) {
          self.last_char = None;
  
@@ -175,7 +175,7 @@ Add NetBSD support.
          if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
              button_state: ButtonState::Signals { state, .. },
              ..
-@@ -515,7 +553,7 @@ impl ProcessKillDialog {
+@@ -525,7 +563,7 @@
      pub fn on_page_up(&mut self) {
          self.last_char = None;
  
@@ -184,7 +184,7 @@ Add NetBSD support.
          if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
              button_state:
                  ButtonState::Signals {
-@@ -534,7 +572,7 @@ impl ProcessKillDialog {
+@@ -544,7 +582,7 @@
      pub fn on_page_down(&mut self) {
          self.last_char = None;
  
@@ -193,7 +193,7 @@ Add NetBSD support.
          if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
              button_state:
                  ButtonState::Signals {
-@@ -552,7 +590,7 @@ impl ProcessKillDialog {
+@@ -562,7 +600,7 @@
      pub fn go_to_first(&mut self) {
          self.last_char = None;
  
@@ -202,7 +202,7 @@ Add NetBSD support.
          if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
              button_state: ButtonState::Signals { state, .. },
              ..
-@@ -565,7 +603,7 @@ impl ProcessKillDialog {
+@@ -575,7 +613,7 @@
      pub fn go_to_last(&mut self) {
          self.last_char = None;
  
@@ -211,25 +211,25 @@ Add NetBSD support.
          if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
              button_state: ButtonState::Signals { state, .. },
              ..
-@@ -587,7 +625,7 @@ impl ProcessKillDialog {
+@@ -597,7 +635,7 @@
              }
          } else {
              cfg_select! {
 -                any(target_os = "linux", target_os = "macos", target_os = "freebsd") => {
 +                any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd") => {
-                     ButtonState::Signals { state: ListState::default().with_selected(Some(DEFAULT_KILL_SIGNAL)), last_button_draw_area: Rect::default() }
-                 }
-                 _ => {
-@@ -616,7 +654,7 @@ impl ProcessKillDialog {
-         // FIXME: Not sure if we need this. We can probably handle this better in the
-         // draw function later.
+                     ButtonState::Signals {
+                         state: ListState::default().with_selected(Some(DEFAULT_KILL_SIGNAL)),
+                         last_button_draw_area: Rect::default(),
+@@ -631,7 +669,7 @@
+         // FIXME: Not sure if we need this. We can probably handle this better
+         // in the draw function later.
  
 -        #[cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd"))]
 +        #[cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd"))]
          {
              if let ProcessKillDialogState::Selecting(ProcessKillSelectingInner {
                  button_state: ButtonState::Signals { state, .. },
-@@ -675,7 +713,7 @@ impl ProcessKillDialog {
+@@ -690,7 +728,7 @@
              .wrap(Wrap { trim: true });
  
          let title = match button_state {
@@ -238,7 +238,7 @@ Add NetBSD support.
              ButtonState::Signals { .. } => {
                  Line::styled(" Select Signal ", styles.widget_title_style)
              }
-@@ -691,7 +729,7 @@ impl ProcessKillDialog {
+@@ -706,7 +744,7 @@
          let num_lines = text.line_count(block.inner(draw_area).width) as u16;
  
          match button_state {
@@ -247,3 +247,30 @@ Add NetBSD support.
              ButtonState::Signals {
                  state,
                  last_button_draw_area,
+@@ -917,7 +955,7 @@
+ /// Return the signal number to send given the index on a list.
+ ///
+ /// On Linux, we need to skip 32 and 33, so we add 2 to the index if it's >= 32.
+-#[cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd"))]
++#[cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd"))]
+ fn get_signal_from_index(index: usize) -> usize {
+     if cfg!(target_os = "linux") && index >= 32 {
+         index + 2
+@@ -928,7 +966,7 @@
+ 
+ #[cfg(test)]
+ mod tests {
+-    #[cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd"))]
++    #[cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd"))]
+     use super::*;
+ 
+     #[test]
+@@ -942,7 +980,7 @@
+     }
+ 
+     #[test]
+-    #[cfg(any(target_os = "macos", target_os = "freebsd"))]
++    #[cfg(any(target_os = "macos", target_os = "freebsd", target_os = "netbsd"))]
+     fn test_getting_signal_from_index_not_on_linux() {
+         assert_eq!(get_signal_from_index(0), 0);
+         assert_eq!(get_signal_from_index(31), 31);

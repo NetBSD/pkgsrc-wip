@@ -2,9 +2,9 @@ $NetBSD$
 
 Add NetBSD support.
 
---- src/collection/disks.rs.orig	2026-06-22 06:25:54.000000000 +0000
+--- src/collection/disks.rs.orig	2026-09-22 06:56:15.000000000 +0200
 +++ src/collection/disks.rs
-@@ -25,6 +25,10 @@ cfg_select! {
+@@ -26,6 +26,10 @@
          mod unix;
          pub(crate) use self::unix::*;
      }
@@ -15,7 +15,7 @@ Add NetBSD support.
      _ => {
          mod other;
          pub(crate) use self::other::*;
-@@ -87,7 +91,7 @@ cfg_select! {
+@@ -88,7 +92,7 @@
              Ok(io_hash)
          }
      }

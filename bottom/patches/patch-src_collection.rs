@@ -2,9 +2,9 @@ $NetBSD$
 
 Add NetBSD support.
 
---- src/collection.rs.orig	2026-07-04 06:55:31.000000000 +0000
+--- src/collection.rs.orig	2026-09-22 06:56:15.000000000 +0200
 +++ src/collection.rs
-@@ -136,13 +136,20 @@ impl Default for SysinfoSource {
+@@ -137,13 +137,20 @@
      fn default() -> Self {
          use sysinfo::*;
  
@@ -26,7 +26,7 @@ Add NetBSD support.
              #[cfg(target_os = "windows")]
              users: Users::new(),
          }
-@@ -357,7 +364,7 @@ impl DataCollector {
+@@ -371,7 +378,7 @@
                  }
              }
  

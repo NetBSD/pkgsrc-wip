@@ -2,7 +2,7 @@ $NetBSD$
 
 Add NetBSD support.
 
---- src/collection/disks/netbsd.rs.orig	2026-07-04 15:51:19.498613258 +0000
+--- src/collection/disks/netbsd.rs.orig	2026-09-25 08:29:26.255866556 +0200
 +++ src/collection/disks/netbsd.rs
 @@ -0,0 +1,57 @@
 +//! Disk stats for NetBSD using sysinfo.
