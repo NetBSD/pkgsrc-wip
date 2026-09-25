@@ -1,8 +1,5 @@
 @comment $NetBSD$
 info/slime.info
-${EMACS_LISPPREFIX}/slime/lib/cl-lib.el
-${EMACS_LISPPREFIX}/slime/lib/ert-x.el
-${EMACS_LISPPREFIX}/slime/lib/ert.el
 ${EMACS_LISPPREFIX}/slime/lib/hyperspec.el
 ${EMACS_LISPPREFIX}/slime/lib/macrostep.el
 ${EMACS_LISPPREFIX}/slime/metering.lisp
@@ -29,6 +26,7 @@ ${EMACS_LISPPREFIX}/slime/swank/ecl.lisp
 ${EMACS_LISPPREFIX}/slime/swank/gray.lisp
 ${EMACS_LISPPREFIX}/slime/swank/lispworks.lisp
 ${EMACS_LISPPREFIX}/slime/swank/match.lisp
+${EMACS_LISPPREFIX}/slime/swank/mezzano.lisp
 ${EMACS_LISPPREFIX}/slime/swank/mkcl.lisp
 ${EMACS_LISPPREFIX}/slime/swank/rpc.lisp
 ${EMACS_LISPPREFIX}/slime/swank/sbcl.lisp
