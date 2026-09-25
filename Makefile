@@ -1425,7 +1425,6 @@ SUBDIR+=	go-uilive
 SUBDIR+=	go-upspin
 SUBDIR+=	go127
 SUBDIR+=	goattracker
-SUBDIR+=	gobgp
 SUBDIR+=	godura
 SUBDIR+=	goldendict
 SUBDIR+=	golly
