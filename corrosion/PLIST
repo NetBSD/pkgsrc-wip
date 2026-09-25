@@ -1,6 +1,0 @@
-@comment $NetBSD$
-lib/cmake/Corrosion/CorrosionConfig.cmake
-lib/cmake/Corrosion/CorrosionConfigVersion.cmake
-share/cmake/Corrosion.cmake
-share/cmake/CorrosionGenerator.cmake
-share/cmake/FindRust.cmake
