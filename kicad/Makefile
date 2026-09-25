@@ -39,7 +39,6 @@ CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=OFF
 #SUBST_FILES.undef=	cmake-pkgsrc-build/api/cpp/api/common/types/base_types.pb.h
 #SUBST_SED.undef=	-e "/^#include <string>$/a #undef major"
 #SUBST_SED.undef+=	-e "/^#include <string>$/a #undef minor"
-USE_CXX_FEATURES=	c++17
 
 PY_PATCHPLIST=		yes
 
