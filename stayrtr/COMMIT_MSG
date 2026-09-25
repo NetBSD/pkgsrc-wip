@@ -1,7 +1,0 @@
-StayRTR is an open-source implementation of RPKI-to-Router
-protocol (RFC 6810, RFC 8210) in Go.
-
-What's Changed
-Move server metrics to its own package by @randomthingsandstuff in #159
-Port PR#133 to new metrics structure by @randomthingsandstuff in #160
-go fmt ci/cd check because this is annoying by @randomthingsandstuff in #161
