@@ -1,15 +1,18 @@
 # $NetBSD$
 
-DISTNAME=	jira-cli-1.5.1.20240205
+DISTNAME=	jira-cli-1.7.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ankitpokhrel/}
 CATEGORIES=	www
 DIST_SUBDIR=    ${PKGBASE}
-GITHUB_TAG=	170c129cbabc7102dfa25f3eb34e990258abc12c
+GITHUB_PROJECT=	jira-cli
+GITHUB_TAG=	e74646e604c38f0855a71137e1e626b3a0ab8913
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/ankitpokhrel/jira-cli
 COMMENT=	Feature-rich Interactive Jira Command Line
 LICENSE=	mit
+
+GIT_REPO=	https://github.com/ankitpokhrel/jira-cli
 
 CONFLICTS=	jira-cli-[0-9]*
 
@@ -35,4 +38,5 @@ post-install:
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
