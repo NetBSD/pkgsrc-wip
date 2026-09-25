@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	frp-0.61.1
+DISTNAME=	frp-0.71.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fatedier/}
 CATEGORIES=	net
-DIST_SUBDIR=    ${PKGBASE}
+DIST_SUBDIR=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	fox@NetBSD.org
@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 
 GO_SRCPATH=		github.com/fatedier/frp
 GO_BUILD_PATTERN=	${GO_SRCPATH}/cmd/frps ${GO_SRCPATH}/cmd/frpc
+# The web dashboard assets (web/frp[sc]/dist) are not in the source tarball; noweb selects the embed stubs.
+GOFLAGS+=		-tags=noweb
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 RCD_SCRIPTS+=		frps
 
