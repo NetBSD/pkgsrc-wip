@@ -11,6 +11,8 @@ COMMENT=	Python package that drastically simplifies the fetching of files
 
 REPLACE_PYTHON+=	scripts/urlgrabber-ext-down
 
+DEPENDS+=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
