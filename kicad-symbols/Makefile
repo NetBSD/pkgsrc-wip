@@ -11,8 +11,8 @@ HOMEPAGE=	https://www.kicad.org/
 COMMENT=	Schematic symbol libraries for the schematic CAD software
 LICENSE=	cc-by-sa-v4.0
 
-USE_LANGUAGES=	# none
-PYTHON_FOR_BUILD_ONLY=		tool
+USE_LANGUAGES=		# none
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
