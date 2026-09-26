@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.32 2026/07/08 18:32:31 bsiegert Exp $
 
-DISTNAME=	croc-11.5.2
+DISTNAME=	croc-11.5.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=schollz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c
 
-GO_VERSION_REQD=	127
+GOFLAGS+=	-ldflags=-linkmode=external\ -bindnow\ -extldflags=-Wl,-zrelro,-pie
 
 .include "../../mk/bsd.prefs.mk"
 
