@@ -3385,7 +3385,6 @@ SUBDIR+=	probe
 SUBDIR+=	procps
 SUBDIR+=	prodigal
 SUBDIR+=	progreiserfs
-SUBDIR+=	prometheus-lts
 SUBDIR+=	promtail
 SUBDIR+=	proplib
 SUBDIR+=	proselint

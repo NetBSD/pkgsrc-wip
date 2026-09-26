@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/prometheus
-bin/promtool
-share/examples/prometheus/prometheus.yml
