@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.108 2025/01/10 22:49:54 wiz Exp $
 
-V=		10.0.5
+V=		10.0.6
 DISTNAME=	kicad-${V}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
@@ -32,13 +32,6 @@ CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=ON
 .else
 CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=OFF
 .endif
-
-#SUBST_CLASSES+=		undef
-#SUBST_STAGE.undef=	post-configure
-#SUBST_MESSAGE.undef=    TODO: Conflict 'major' and 'minor' defined somewhere.
-#SUBST_FILES.undef=	cmake-pkgsrc-build/api/cpp/api/common/types/base_types.pb.h
-#SUBST_SED.undef=	-e "/^#include <string>$/a #undef major"
-#SUBST_SED.undef+=	-e "/^#include <string>$/a #undef minor"
 
 PY_PATCHPLIST=		yes
 

@@ -1,14 +1,16 @@
 $NetBSD: distinfo,v 1.29 2024/11/20 01:29:49 mef Exp $
 
-BLAKE2s (kicad-10.0.5.tar.bz2) = e82880767f8bdf1d0af2a9498f0e8e7886dd445c789d5528b9e31881ad5849c9
-SHA512 (kicad-10.0.5.tar.bz2) = 58897802ba53585f09e7b7991028bcc8b8240a0917d9306f12a63242ce0fb8932cc229e99298b2addcc85486bdd48ac9bc09cde3162b90798538ae0dfe76bc87
-Size (kicad-10.0.5.tar.bz2) = 232792797 bytes
+BLAKE2s (kicad-10.0.6.tar.bz2) = 3724d0ea4490077a06219cc5b603cf05fe3aeab5a11b9d0f03080f06301095ea
+SHA512 (kicad-10.0.6.tar.bz2) = 5fd23c26c36d39ce7b58ba224bbce843b708e945806e3c303707a4216b644a8993a6d956078b5f4edb029bcb70e5489411daee23ae471386109cf631ce1d8201
+Size (kicad-10.0.6.tar.bz2) = 232821863 bytes
 SHA1 (patch-3d-viewer_3d__rendering_opengl_3d__spheres__gizmo.cpp) = c78959f9f10de3f9884ab64bf26f4c4f5f813cde
 SHA1 (patch-3d-viewer_3d__viewer_eda__3d__viewer__frame.cpp) = ec756e9952b2e3614384b86782e28c5bc8c42c1b
 SHA1 (patch-3d-viewer_3d__viewer_eda__3d__viewer__frame.h) = 41dfce6f955d6af543ae3536f3105727db86c7bf
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
 SHA1 (patch-3d-viewer_dialogs_panel__preview__3d__model.cpp) = 9c856e16ed4fd89ac9a1c9c9273101ec1792fae6
 SHA1 (patch-3d-viewer_dialogs_panel__preview__3d__model.h) = 47fd811b1c89a066b08ed3899dcd6e6d40bf8a1c
+SHA1 (patch-CMakeLists.txt) = 5a3869f50675de2b19ea20dfabe56b8ed40fbee6
+SHA1 (patch-api_CMakeLists.txt) = 23b2b74ab15dd64da83bda39293c32da1bb67f5e
 SHA1 (patch-api_proto_common_types_base__types.proto) = 63de1236017bc8d92dbb5ed5affc026f1585e8f9
 SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
 SHA1 (patch-common_api_api__handler__common.cpp) = 9c907cc0e155a759ac41e71317b601f678777e09
