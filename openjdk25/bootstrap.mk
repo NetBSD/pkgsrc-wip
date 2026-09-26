@@ -10,7 +10,7 @@ PKG_FAIL_REASON+=		"Only supports NetBSD >= 9.4"
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-x86_64
 BOOT.nb9-amd64=			bootstrap-jdk-1.25.0.4.7-netbsd-9-amd64-20260908.tar.xz
-SITES.${BOOT.nb9-amd64}=	https://objects.dc-fbg1.glesys.net/tnn-temp-distfiles/	# TODO move to nbftp
+SITES.${BOOT.nb9-amd64}=	${MASTER_SITE_LOCAL:=openjdk25/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-amd64}
 EXTRACT_ONLY+=			${BOOT.nb9-amd64}
@@ -18,7 +18,7 @@ EXTRACT_ONLY+=			${BOOT.nb9-amd64}
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
 BOOT.nb9-aarch64=		bootstrap-jdk-1.25.0.4.7-netbsd-9-aarch64-20260907.tar.xz
-SITES.${BOOT.nb9-aarch64}=	https://objects.dc-fbg1.glesys.net/tnn-temp-distfiles/	# TODO move to nbftp
+SITES.${BOOT.nb9-aarch64}=	${MASTER_SITE_LOCAL:=openjdk25/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-aarch64}
 EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
@@ -26,7 +26,7 @@ EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-i386
 BOOT.nb9-i386=			bootstrap-jdk-1.25.0.4.7-netbsd-9-i386-20260907.tar.xz
-SITES.${BOOT.nb9-i386}=		https://objects.dc-fbg1.glesys.net/tnn-temp-distfiles/	# TODO move to nbftp
+SITES.${BOOT.nb9-i386}=		${MASTER_SITE_LOCAL:=openjdk25/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-i386}
 EXTRACT_ONLY+=			${BOOT.nb9-i386}
@@ -34,7 +34,7 @@ EXTRACT_ONLY+=			${BOOT.nb9-i386}
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-earmv[67]hf
 BOOT.nb9-earmv6hf=		bootstrap-jdk-1.25.0.4.7-netbsd-9-earmv6hf-20260908.tar.xz
-SITES.${BOOT.nb9-earmv6hf}=	https://objects.dc-fbg1.glesys.net/tnn-temp-distfiles/	# TODO move to nbftp
+SITES.${BOOT.nb9-earmv6hf}=	${MASTER_SITE_LOCAL:=openjdk25/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-earmv6hf}
 EXTRACT_ONLY+=			${BOOT.nb9-earmv6hf}
