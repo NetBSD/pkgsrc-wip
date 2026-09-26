@@ -1,0 +1,18 @@
+croc: Update to version 11.5.4
+
+What's Changed
+build(deps): bump golang.org/x/text from 0.41.0 to 0.42.0 by @dependabot[bot] in #1339
+build(deps): bump tailscale.com from 1.102.3 to 1.102.4 by @dependabot[bot] in #1335
+build(deps): bump golang.org/x/term from 0.45.0 to 0.46.0 by @dependabot[bot] in #1337
+build(deps): bump golang.org/x/crypto from 0.56.0 to 0.57.0 by @dependabot[bot] in #1336
+build(deps): bump golang.org/x/net from 0.58.0 to 0.59.0 by @dependabot[bot] in #1338
+fix(web): refresh help tour for Store and SSH by @schollz in #1340
+fix(store): honor --socks5/--connect for stored transfers by @Dking08 in #1345
+build(deps): bump github.com/fxamacker/cbor/v2 from 2.9.3 to 2.9.4 by @dependabot[bot] in #1346
+Use int64 for chunk indices by @hannesbraun in #1341
+fix(cli): correct typos in internal/cli comments by @haimingZZ in #1348
+fix: prevent unintended stdout deletions by @schollz in #1350
+fix: don't extract or delete a zip the receiver declined to overwrite by @4RH1T3CT0R7 in #1349
+fix: apply go fix to stdout cleanup tests by @schollz in #1351
+chore: upgrade dependencies by @schollz in #1352
+
