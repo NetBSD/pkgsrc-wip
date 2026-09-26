@@ -1,11 +1,11 @@
 @comment $NetBSD$
-etc/tfkiss/tfkiss.cfg
-etc/tfkiss/tfkiss.ini
 sbin/tfkiss
 share/doc/tfkiss/alas.eng
 share/doc/tfkiss/alas.txt
 share/doc/tfkiss/copyrght.txt
 share/doc/tfkiss/rfc1226
 share/doc/tfkiss/tfkiss.doc
+share/examples/tfkiss/tfkiss.cfg
+share/examples/tfkiss/tfkiss.ini
 @pkgdir var/run
 @pkgdir var/log
