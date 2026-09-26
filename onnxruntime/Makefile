@@ -29,6 +29,8 @@ CMAKE_ARGS+=	-Donnxruntime_BUILD_UNIT_TESTS=off
 
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/c++gsl/buildlink3.mk"
+.include "../../devel/chrono-date/buildlink3.mk"
 .include "../../devel/flatbuffers/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
