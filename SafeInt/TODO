@@ -1,0 +1,9 @@
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/cstdint:38,
+                 from /tmp/wip/SafeInt/work/SafeInt-3.0.28a/Test/../SafeInt.hpp:209,
+                 from /tmp/wip/SafeInt/work/SafeInt-3.0.28a/Test/CompileTest.cpp:13:
+/usr/include/g++/initializer_list: In function 'void MoveRegression()':
+/usr/include/g++/initializer_list:41:15: error: expected '=' before '__attribute__'
+   41 | namespace std _GLIBCXX_VISIBILITY(default)
+      |               ^~~~~~~~~~~~~~~~~~~
+/usr/include/g++/initializer_list:41:15: error: expected identifier before '__attribute__'

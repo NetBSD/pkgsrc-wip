@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (SafeInt/3.0.28a.tar.gz) = 8090b05757e90c46671ed1b7eb42cad3fbc277d86c39c42b799c5b5ee393939a
+SHA512 (SafeInt/3.0.28a.tar.gz) = 04f3d4202b7069f2970811311c422b48225466887768a1f1fcdc9417e2b6a1ebd64f83ee86abe25e667e7945b011b5ef7ce2bbc83ce8e518fc4bf609fa52d77c
+Size (SafeInt/3.0.28a.tar.gz) = 589772 bytes

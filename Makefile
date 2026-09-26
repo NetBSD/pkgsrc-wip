@@ -106,6 +106,7 @@ SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
 SUBDIR+=	SDL2_testgamecontroller
 SUBDIR+=	SNAP
+SUBDIR+=	SafeInt
 SUBDIR+=	SecLists
 SUBDIR+=	StepTalk
 SUBDIR+=	TT2020-ttf-git
