@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	alertmanager-0.34.0
+DISTNAME=	alertmanager-0.34.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	sysutils
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
-FE_DISTNAME=			alertmanager-web-ui-0.34.0.tar.gz
+FE_DISTNAME=			alertmanager-web-ui-0.34.1.tar.gz
 DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://github.com/prometheus/alertmanager/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKSRC}/ui/app
