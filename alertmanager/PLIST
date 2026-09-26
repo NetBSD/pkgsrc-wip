@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/alertmanager
-bin/amtool
-share/examples/alertmanager/simple.yml
