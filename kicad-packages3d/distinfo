@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.15 2024/11/20 01:22:44 mef Exp $
 
-BLAKE2s (kicad-packages3D-10.0.5.tar.bz2) = 0732047cfd630ba4a2ca9dab82edd87cc90ccc5fc1bbb0f03fdef845b52b4388
-SHA512 (kicad-packages3D-10.0.5.tar.bz2) = c3559cd757b0f9f27d64c999acfd9aa5331cacdd6ec13e0d85b8e513dac22fb3b91457b990c83eb747f5391c5874939994863a2449a55aab7131bb21dda0af04
-Size (kicad-packages3D-10.0.5.tar.bz2) = 521680663 bytes
+BLAKE2s (kicad-packages3D-10.0.6.tar.bz2) = 71681091e05266eee3c29faf247481c53a6e7c3328e847222da6198fe234e29f
+SHA512 (kicad-packages3D-10.0.6.tar.bz2) = 6e6e2f941ec90351653667c0facca557e5df299b1c7c78525fe4612a1e47fcc4b0858be10624f3d1370506e3601444612ccd39754f40bc3c38b8e497d46f58b5
+Size (kicad-packages3D-10.0.6.tar.bz2) = 521680598 bytes
