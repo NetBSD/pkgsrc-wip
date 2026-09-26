@@ -1,5 +1,7 @@
 $NetBSD$
 
+Let pkgsrc provide git crate.
+
 --- Cargo.toml.orig	2026-06-28 12:49:35.108741174 +0000
 +++ Cargo.toml
 @@ -50,4 +50,4 @@ rand = "0.10"
