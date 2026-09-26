@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -32,7 +32,7 @@ bool IsOnDeviceStorageEnabled() {
  }

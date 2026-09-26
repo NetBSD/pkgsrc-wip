@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc
 @@ -141,7 +141,7 @@
  #include "ui/webui/resources/cr_components/theme_color_picker/theme_color_picker.mojom.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service_fido.cc.orig	2026-09-17 13:33:09.282961761 +0000
+--- services/device/hid/hid_service_fido.cc.orig	2026-09-26 10:45:15.719241164 +0000
 +++ services/device/hid/hid_service_fido.cc
 @@ -0,0 +1,396 @@
 +// Copyright 2014 The Chromium Authors

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/gn/args.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- tools/gn/src/gn/args.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ tools/gn/src/gn/args.cc
 @@ -387,7 +387,7 @@ void Args::SetSystemVarsLocked(Scope* de
      arch = kX86;

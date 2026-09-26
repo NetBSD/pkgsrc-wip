@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/skcolorspace_trfn.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- skia/ext/skcolorspace_trfn.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ skia/ext/skcolorspace_trfn.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

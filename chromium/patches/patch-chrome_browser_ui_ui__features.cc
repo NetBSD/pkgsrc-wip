@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
 @@ -102,7 +102,7 @@ bool IsWebuiRefresh2026Enabled() {
           base::FeatureList::IsEnabled(kWebuiRefresh2026);

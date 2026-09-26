@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_browser_utils.cc
 @@ -38,7 +38,7 @@
  #include "chrome/browser/ash/profiles/profile_helper.h"

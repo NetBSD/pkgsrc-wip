@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/style/platform_style.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/views/style/platform_style.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ ui/views/style/platform_style.h
 @@ -84,7 +84,7 @@ class VIEWS_EXPORT PlatformStyle {
    // Default setting at bubble creation time for whether arrow will be adjusted

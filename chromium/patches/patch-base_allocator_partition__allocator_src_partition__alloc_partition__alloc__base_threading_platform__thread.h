@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread.h
 @@ -38,6 +38,8 @@ typedef DWORD PlatformThreadId;
  typedef zx_handle_t PlatformThreadId;

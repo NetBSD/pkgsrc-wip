@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h
 @@ -130,7 +130,7 @@ struct BLINK_COMMON_EXPORT
      return data.enable_encrypted_media;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_constants.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/base/clipboard/clipboard_constants.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ ui/base/clipboard/clipboard_constants.h
 @@ -44,7 +44,7 @@ inline constexpr char kMimeTypeWindowDra
  

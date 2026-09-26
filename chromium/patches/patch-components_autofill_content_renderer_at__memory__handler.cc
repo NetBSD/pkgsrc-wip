@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/content/renderer/at_memory_handler.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/autofill/content/renderer/at_memory_handler.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ components/autofill/content/renderer/at_memory_handler.cc
 @@ -65,7 +65,7 @@ bool IsPrintable(const WebKeyboardEvent&
    if (base::IsAsciiControl(event.text[0]) || event.text[1] != 0) {

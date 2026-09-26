@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/child_account_service.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/supervised_user/core/browser/child_account_service.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ components/supervised_user/core/browser/child_account_service.cc
 @@ -179,7 +179,7 @@ void ChildAccountService::OnPrimaryAccou
  void ChildAccountService::UpdateForceGoogleSafeSearch() {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/chrome_password_protection_service.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/safe_browsing/chrome_password_protection_service.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/safe_browsing/chrome_password_protection_service.cc
 @@ -1404,7 +1404,7 @@ std::string ChromePasswordProtectionServ
      ReusedPasswordAccountType password_type) const {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- content/public/common/content_features.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ content/public/common/content_features.cc
 @@ -155,7 +155,7 @@ BASE_FEATURE(kAttachUnownedInnerWebConte
  

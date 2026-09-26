@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_io_data.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/profiles/profile_io_data.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/profiles/profile_io_data.cc
 @@ -17,7 +17,7 @@
  #include "url/gurl.h"

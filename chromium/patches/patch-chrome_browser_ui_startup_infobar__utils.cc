@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/infobar_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/startup/infobar_utils.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/ui/startup/infobar_utils.cc
 @@ -50,7 +50,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"

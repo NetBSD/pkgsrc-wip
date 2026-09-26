@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/chrome_autofill_client.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/autofill/chrome_autofill_client.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/ui/autofill/chrome_autofill_client.h
 @@ -130,7 +130,7 @@ class ChromeAutofillClient : public Cont
    ~ChromeAutofillClient() override;

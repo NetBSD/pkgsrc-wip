@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/ui/browser_window/internal/browser_window_features.cc
 @@ -218,7 +218,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"

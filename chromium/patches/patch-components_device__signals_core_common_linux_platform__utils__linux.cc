@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ components/device_signals/core/common/linux/platform_utils_linux.cc
 @@ -4,11 +4,22 @@
  

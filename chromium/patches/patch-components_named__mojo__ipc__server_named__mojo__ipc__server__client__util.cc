@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc
 @@ -23,7 +23,7 @@ namespace named_mojo_ipc_server {
  // static

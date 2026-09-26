@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/event_fd.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/perfetto/src/base/event_fd.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ third_party/perfetto/src/base/event_fd.cc
 @@ -25,7 +25,8 @@
  #include <synchapi.h>

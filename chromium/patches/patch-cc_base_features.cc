@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- cc/base/features.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ cc/base/features.cc
 @@ -46,7 +46,7 @@ const base::FeatureParam<int> kDeferImpl
  // Note that kUseDMSAAForTiles only controls vulkan launch on android. We will

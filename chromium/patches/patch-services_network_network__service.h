@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- services/network/network_service.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ services/network/network_service.h
 @@ -242,7 +242,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    void SetFirstPartySets(net::GlobalFirstPartySets sets) override;

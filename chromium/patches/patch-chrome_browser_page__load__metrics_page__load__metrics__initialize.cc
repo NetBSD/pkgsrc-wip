@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/page_load_metrics/page_load_metrics_initialize.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/page_load_metrics/page_load_metrics_initialize.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/page_load_metrics/page_load_metrics_initialize.cc
 @@ -81,7 +81,7 @@
  #include "url/gurl.h"

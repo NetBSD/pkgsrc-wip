@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h
 @@ -55,7 +55,7 @@ class WebUIAvatarToolbarButton : public 
        bool should_announce) override;

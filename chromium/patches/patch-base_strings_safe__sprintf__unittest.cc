@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/strings/safe_sprintf_unittest.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ base/strings/safe_sprintf_unittest.cc
 @@ -744,6 +744,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif

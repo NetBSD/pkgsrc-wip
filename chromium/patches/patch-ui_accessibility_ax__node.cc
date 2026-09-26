@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/accessibility/ax_node.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ ui/accessibility/ax_node.cc
 @@ -1622,7 +1622,7 @@ AXNode::GetExtraMacNodes() const {
    return &table_info->extra_mac_nodes;

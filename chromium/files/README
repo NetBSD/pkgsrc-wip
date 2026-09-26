@@ -15,14 +15,11 @@ Some notes on chromium:
     --disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming
     --js-flags=--noexpose-wasm
 
-3) Random tab hang
-  Under investigation. No known working workaround.
-
-4) HID support
+3) HID support
   To enable monitoring attached and detached FIDO devices on NetBSD,
   you should enable the ndevd service (a devpubd drop-in replacement)
   in /etc/rc.conf.
 
-5) Widevine support
+4) Widevine support
   Install the multimedia/openwv package and follow the instructions
   in its README.chromium file. 

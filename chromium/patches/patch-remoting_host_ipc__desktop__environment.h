@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/host/ipc_desktop_environment.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.h
 @@ -184,7 +184,7 @@ class IpcDesktopEnvironmentFactory : pub
                                          ErrorCode error_code,

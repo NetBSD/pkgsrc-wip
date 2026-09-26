@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h
 @@ -40,7 +40,7 @@ void UnregisterFileHandlersWithOs(const 
                                    const base::FilePath& profile_path,

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc
 @@ -14,6 +14,7 @@
  #include <sstream>

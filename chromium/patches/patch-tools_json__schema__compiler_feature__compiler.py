@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/json_schema_compiler/feature_compiler.py.orig	2026-09-14 22:17:16.000000000 +0000
+--- tools/json_schema_compiler/feature_compiler.py.orig	2026-09-17 03:47:47.000000000 +0000
 +++ tools/json_schema_compiler/feature_compiler.py
 @@ -239,6 +239,9 @@ FEATURE_GRAMMAR = {
          'linux': 'Feature::LINUX_PLATFORM',

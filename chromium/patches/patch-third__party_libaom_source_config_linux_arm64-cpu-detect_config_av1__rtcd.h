@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h.orig	2026-09-17 03:47:47.000000000 +0000
 +++ third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h
 @@ -194,8 +194,10 @@ RTCD_EXTERN void (*av1_dist_wtd_convolve
  

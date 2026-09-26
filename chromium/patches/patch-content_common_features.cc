@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- content/common/features.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ content/common/features.cc
 @@ -223,7 +223,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);

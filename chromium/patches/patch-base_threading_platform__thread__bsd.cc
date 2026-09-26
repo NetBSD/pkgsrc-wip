@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_bsd.cc.orig	2026-09-17 13:33:09.084807779 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2026-09-26 10:45:14.375460590 +0000
 +++ base/threading/platform_thread_bsd.cc
 @@ -0,0 +1,40 @@
 +// Copyright 2023 The Chromium Authors

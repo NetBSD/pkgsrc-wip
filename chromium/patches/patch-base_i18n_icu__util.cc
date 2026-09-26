@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/i18n/icu_util.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- base/i18n/icu_util.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ base/i18n/icu_util.cc
 @@ -57,7 +57,7 @@
  #include "third_party/icu/source/common/unicode/unistr.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/gn_run_binary.py.orig	2026-09-14 22:17:16.000000000 +0000
+--- build/gn_run_binary.py.orig	2026-09-17 03:47:47.000000000 +0000
 +++ build/gn_run_binary.py
 @@ -22,7 +22,7 @@ if not os.path.isabs(path):
  # The rest of the arguments are passed directly to the executable.

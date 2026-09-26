@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/optimization_guide/core/optimization_guide_util.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/optimization_guide/core/optimization_guide_util.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ components/optimization_guide/core/optimization_guide_util.cc
 @@ -37,7 +37,7 @@ optimization_guide::proto::Platform GetP
    return optimization_guide::proto::PLATFORM_CHROMEOS;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/test_file_util_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- base/test/test_file_util_posix.cc.orig	2026-09-17 03:47:47.000000000 +0000
 +++ base/test/test_file_util_posix.cc
 @@ -66,7 +66,7 @@ void SyncPageCacheToDisk() {
  }
