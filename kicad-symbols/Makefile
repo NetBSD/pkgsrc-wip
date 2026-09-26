@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.16 2024/11/23 10:11:58 mef Exp $
 
-DISTNAME=	kicad-symbols-10.0.5
+DISTNAME=	kicad-symbols-10.0.6
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}
 GITLAB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,6 +12,8 @@ COMMENT=	Schematic symbol libraries for the schematic CAD software
 LICENSE=	cc-by-sa-v4.0
 
 USE_LANGUAGES=	# none
+PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

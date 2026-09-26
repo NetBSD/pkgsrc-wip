@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.15 2024/11/23 10:11:58 mef Exp $
 
-BLAKE2s (kicad-symbols-10.0.5.tar.bz2) = 4a6a715d139073dafa7fd8fd76afa3226b5836a8aa51382fdc5982dbfb7b12c4
-SHA512 (kicad-symbols-10.0.5.tar.bz2) = 42c1d0e4c7e6cbd1e9f120de67251af64ed7778eec40f64150b1cc4b2240e3599953916d2b59b66739b1795cb424e877313ce33f229bb7154a701bcb8e5740c6
-Size (kicad-symbols-10.0.5.tar.bz2) = 4260159 bytes
+BLAKE2s (kicad-symbols-10.0.6.tar.bz2) = 520f8c5eb91b9aa1e5f6bf82007f97395d414fd3498978cf2a1e4e7b09ae274a
+SHA512 (kicad-symbols-10.0.6.tar.bz2) = 18780c17f0218edf1d743f7a945a3726d365713b150d60571f5a7ca8e3dfa9fd2c010aa05557330de56eab86143d9e3464b606eba4672a067ae2e7b42774a675
+Size (kicad-symbols-10.0.6.tar.bz2) = 4253898 bytes
