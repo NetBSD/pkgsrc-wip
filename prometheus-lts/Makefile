@@ -1,11 +1,9 @@
 # $NetBSD: Makefile,v 1.75 2022/11/02 19:39:52 bsiegert Exp $
 
-DISTNAME=		prometheus-3.13.2
+# Note that this package intends to track the Prometheus LTS version.
+# See: https://prometheus.io/docs/introduction/release-cycle/
+DISTNAME=		prometheus-3.13.3
 MASTER_SITES=		${MASTER_SITE_GITHUB:=prometheus/}
-# It should go in databases/prometheus, so the PKGNAME is correct as-is.
-# We do not need the mainline version since databases/prometheus is already
-# quite outdated.
-#PKGNAME=		${DISTNAME:S/prometheus/prometheus-lts/}
 CATEGORIES=		databases
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
@@ -14,7 +12,7 @@ HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
 
-FE_DISTNAME=			prometheus-web-ui-3.13.2.tar.gz
+FE_DISTNAME=			prometheus-web-ui-3.13.3.tar.gz
 SITES.${FE_DISTNAME}=		https://github.com/prometheus/prometheus/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKSRC}/web/ui
 DISTFILES=			${DEFAULT_DISTFILES} ${FE_DISTNAME}
