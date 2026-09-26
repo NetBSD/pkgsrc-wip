@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tfkiss-1.3.2
+DISTNAME=	tfkiss-1.3.3
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kq6up/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -27,7 +27,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 EGDIR=		${PREFIX}/share/examples/tfkiss
-MAKE_FLAGS+=	tfkissconfdir=${EGDIR}
 CONF_FILES+=	${EGDIR}/tfkiss.cfg ${PKG_SYSCONFDIR}/tfkiss/tfkiss.cfg
 CONF_FILES+=	${EGDIR}/tfkiss.ini ${PKG_SYSCONFDIR}/tfkiss/tfkiss.ini
 
