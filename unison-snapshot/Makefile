@@ -15,6 +15,8 @@ HOMEPAGE=	https://github.com/bcpierce00/unison
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+
 USE_TOOLS+=	bash pkg-config
 # \todo Explain
 MAKE_FLAGS+=	CFLAGS=""
