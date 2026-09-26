@@ -1,132 +1,49 @@
-cad/kicad: Update to 10.0.5
+cad/kicad: Update to 10.0.6
 
-KiCad 10.0.5 (2026-07-22)
+important changes since 8.0.6:
+see https://www.kicad.org/blog/2025/02/Version-9.0.0-Released/
+and https://www.kicad.org/blog/2026/03/Version-10.0.0-Released/
+for details, with screen captures and video
 
-The 10.0.5 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 10.0.5 release can be
-found on the KiCad 10.0.5 milestone page.
+Global:
+  Jobsets (predefined output jobs)
+  Embedded files
+  Bezier curve tool in all editors
+  Multi-channel design support
+  Component classes
+  Table editing in schematic, symbol, and footprint editors
+  Custom ERC/DRC errors, warnings, and exclusion comments
+  Mouse scroll wheel actions
+  Customizable toolbars
+  Undo/redo support in dialogs
+  Lasso selection
+  New importers
 
+Schematic and Symbol Editors
+  Selection filtering
+  Sheet pin/hierarchical label synchronization tool
+  Net class rule areas
+  Design blocks
+  Net class color highlighting
+  Variants
+  Hop-over display
+  Jumper support
+  Grouping support
+  Pin table CSV support
 
-KiCad 10.0.4 (2026-06-21)
-
-The 10.0.4 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 10.0.4 release can be
-found on the KiCad 10.0.4 milestone page.
-
-
-KiCad 10.0.3 (2026-05-15)
-
-The 10.0.3 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 10.0.3 release can be
-found on the KiCad 10.0.3 milestone page.
-
-
-KiCad 10.0.2 (2026-05-09)
-
-The 10.0.2 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 10.0.2 release can be
-found on the KiCad 10.0.2 milestone page.
-
-
-KiCad 10.0.1 (2026-04-15)
-
-The 10.0.1 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 10.0.1 release can be
-found on the KiCad 10.0.1 milestone page.
-
-
-KiCad 10.0.0 (2026-03-20)
-
-Most, if not all, of the new features as well as usability
-improvements in KiCad 10 are described in a running thread on the
-KiCad user forum. Wayne Stambaugh also presented them in his FOSDEM
-2026 talk which is available to watch on the FOSDEM website. This post
-highlights some of the most exciting changes, but make sure to check
-out the forum post for a full list. There were also hundreds of bug
-fixes, performance improvements, and other smaller changes since KiCad
-9. A full list of issues addressed in KiCad 10 can be found on the
-milestone page on GitLab.
-
-
-KiCad 9.0.8 (2026-03-16)
-
-The 9.0.8 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.8 release can be found
-on the KiCad 9.0.8 milestone page.
-
-
-KiCad 9.0.7 (2026-01-01)
-
-The 9.0.7 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.7 release can be found
-on the KiCad 9.0.7 milestone page.
-
-
-KiCad 9.0.6 (2025-10-30)
-
-The 9.0.6 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.6 release can be found
-on the KiCad 9.0.6 milestone page.
-
-
-KiCad 9.0.5 (2025-10-02)
-
-The 9.0.5 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.5 release can be found
-on the KiCad 9.0.5 milestone page.
-
-
-KiCad 9.0.4 (2025-08-18)
-
-The 9.0.4 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.4 release can be found
-on the KiCad 9.0.4 milestone page.
-
-
-KiCad 9.0.3 (2025-07-07)
-
-The 9.0.3 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.3 release can be found
-on the KiCad 9.0.3 milestone page.
-
-
-KiCad 9.0.2 (2025-05-07)
-
-The 9.0.2 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.2 release can be found
-on the KiCad 9.0.2 milestone page.
-
-
-KiCad 9.0.1 (2025-03-30)
-
-The 9.0.1 stable version contains critical bug fixes and other minor
-improvements since the previous release.
-A list of all of the fixed issues since the 9.0.1 release can be found
-on the KiCad 9.0.1 milestone page.
-
-
-KiCad 9.0.0 (2025-02-20)
-
-Most, if not all, of the new features as well as usability
-improvements in KiCad 9 are described in a running thread on the KiCad
-user forum. This thread is being kept reasonably up to date so users
-running nightly builds know about new features to take for a test spin
-and provide bug reports and feedback. Wayne Stambaugh also presented
-them in his FOSDEM 2025 talk which is available to watch on the FOSDEM
-website. This post highlights some of the major changes, but is not a
-complete list. There were also hundreds of bug fixes, performance
-improvements, and other smaller changes since KiCad 8. A full list of
-issues addressed in KiCad 9 can be found on the milestone page on
-GitLab.
+PCB and Footprint Editors
+  IPC API
+  Zone manager
+  Improved via tenting control
+  Layer pair presets
+  Shape modification tool
+  Pad stacks
+  Interactive positioning tool
+  Multiple track drag
+  Creepage design rule check
+  3D model export improvements
+  Time-domain tuning
+  PCB Design Blocks
+  inner-layer objects in footprints
+  Pin and gate swap
+  Graphical DRC Rule editor

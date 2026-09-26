@@ -1,3 +1,5 @@
-cad/kicad-packages3d: Update to 10.0.5
+cad/kicad-packages3d: Update to 10.0.6
 
-No changelog available.
+changes since 8.0.6:
+518 new 3D models
+switch to .step format, dramatically reducing the install size of the 3D models
