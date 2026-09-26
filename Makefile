@@ -2793,7 +2793,6 @@ SUBDIR+=	openerp-server
 SUBDIR+=	openfmod
 SUBDIR+=	openfortivpn
 SUBDIR+=	opengrok
-SUBDIR+=	openjdk25
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openjfx21
 SUBDIR+=	openjfx23
