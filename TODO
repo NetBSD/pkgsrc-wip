@@ -48,6 +48,7 @@ Suggested package updates
 	o gerbera-1.5.0
 	o gforge-4.5.11
 	o giggle-0.6.1
+	o git-bug-0.11.0
 	o gitg-41.0
 	o gitlab-13.10
 	o gitless-0.8.8
@@ -99,6 +100,7 @@ Suggested package updates
 	o mupen64-0.5
 	o mythtv-0.28.0
 	o nautilus-open-terminal-0.19
+	o neatvnc-1.0.2
 	o nscde-2.3
 	o offpunk-3.0
 	o ogmrip-1.0.0
@@ -154,6 +156,7 @@ Suggested package updates
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
 	o virtualbox-7.2
+	o wayvnc-0.10.2
 	o weston-15.0
 	o wkhtmltopdf-0.12.4
 	o xaralx-bin-0.7.1692
@@ -162,6 +165,7 @@ Suggested package updates
 	o xf86-input-synaptics-1.10.0
 	o xorriso-1.5.8
 	o xxdiff-4.0
+	o yayamlls-0.3.1
 	o yi-0.17.1
 	o zapping-0.10cvs6
 	o zed-1.0
