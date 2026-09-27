@@ -3,7 +3,6 @@
 DISTNAME=	ocaml-5.5.0
 CATEGORIES=	lang
 MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-${PKGVERSION_NOREV:R}/
-
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://ocaml.org/
@@ -93,6 +92,6 @@ PRINT_PLIST_AWK+=	{gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");}
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
