@@ -3,3 +3,7 @@ Gets through configure, but then fails with
 ninja: error: '/scratch/wip/netdata/work/netdata-2.8.3/src/aclk/aclk-schemas/proto/aclk/v1/lib.proto', needed by 'src/aclk/aclk-schemas/proto/aclk/v1/lib.pb.cc', missing and no known rule to make it
 
 /scratch/wip/netdata/work/netdata-2.8.3/src/aclk/aclk-schemas/ is an empty directory.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-83597, CVE-2026-83599, CVE-2026-83600, CVE-2026-83601,
+  CVE-2026-83603
