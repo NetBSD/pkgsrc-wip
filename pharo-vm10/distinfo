@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PharoVM-v10.3.9+0.33e04bb-Linux-x86_64-c-src.zip) = fdfec6bab808edb87c4251b367cbaf4e19381de9a339c86d2a5429b2cab0009f
-SHA512 (PharoVM-v10.3.9+0.33e04bb-Linux-x86_64-c-src.zip) = 00a21561d1c449e960529dfa68f2b31b4cd22ab20e2037112ffb45b3a9a1b643b3468bd4214f715dd9aee5ba422af9259a0f72d4fb248a57ac71a43308bd49af
-Size (PharoVM-v10.3.9+0.33e04bb-Linux-x86_64-c-src.zip) = 4360794 bytes
+BLAKE2s (PharoVM-v10.3.11+0.a585304-Linux-x86_64-c-src.zip) = 245c9b8e9475f927e49b5fe3bddb98e965627490db9a0202e2236eecd99f34d4
+SHA512 (PharoVM-v10.3.11+0.a585304-Linux-x86_64-c-src.zip) = 99a535af30aa60c60d232aa842cdfe486368c7a8c0313e08d1861106073f5ce465de785d510f82d7eca045a11c11b879a030f777e0006ab9cfbfddaf4505f72b
+Size (PharoVM-v10.3.11+0.a585304-Linux-x86_64-c-src.zip) = 4361720 bytes
 SHA1 (patch-CMakeLists.txt) = a0fbc2c247f2f771579c7b2543c23b4063277d7d
 SHA1 (patch-cmake_importCairo.cmake) = 0e90fbbcdebb4b0aa994be74737fa7d6462e253c
 SHA1 (patch-cmake_versionExtraction.cmake) = 9bbbe323f054843727ce8009919ea6ebe82eb763
