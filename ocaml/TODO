@@ -4,32 +4,19 @@
   + https://github.com/ocaml/ocaml/issues/11913 [stale]
   + https://github.com/ocaml/ocaml/pull/13320
 
-- Fix build with native compiler functionality (disabled).
-  + See native.mk; enabling native results in a link failure related
-    to pthread.
-  + Check that the resulting ocaml package works with packages that
-    use ocaml.
-
 - Run tests and file issues upstream.
   + 20251020 NetBSD 10 amd64
-      List of failed tests:
-	tests/lib-bigarray-2/bigarrfml.ml
-	tests/lib-systhreads/testyield.ml
+      tests/lib-bigarray-2/bigarrfml.ml
+      tests/lib-systhreads/testyield.ml
   + 20260821 NetBSD 10 amd64 ocaml 5.5.0 non-native
-      List of failed tests:
-	  tests/lib-bigarray-2/bigarrfml.ml
-	  tests/lib-systhreads/testyield.ml
+      tests/lib-bigarray-2/bigarrfml.ml
+      tests/lib-systhreads/testyield.ml
+  + 20260927 NetBSD 10 amd64 ocaml 5.5.0 native
+      tests/lib-bigarray-2/bigarrfml.ml
+      tests/lib-systhreads/testyield.ml
+      tests/output-complete-obj/test.ml
 
-      Summary:
-	1411 tests passed
-	 143 tests skipped
-	   2 tests failed
-	   0 tests not started (parent test skipped or failed)
-	   0 unexpected errors
-	1556 tests considered
-  
-
-- Test ocaml-using programs.
+- Test ocaml-using programs with and without native builds.
   + unison
   + ?
 
@@ -42,4 +29,3 @@
   understood.
 
 - Improve COMMIT_MESSAGE.
-
