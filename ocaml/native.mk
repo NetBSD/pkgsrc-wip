@@ -30,7 +30,8 @@ _DEF_VARS.ocaml=	\
 # works when building outside of pkgsrc, breaks
 # when building inside
 # https://github.com/ocaml/ocaml/issues/14207#issuecomment-3228396849
-OCAML_USE_OPT_COMPILER?=	no
+# OCAML_USE_OPT_COMPILER?=       no
+# -> probably fixed. see patch-asmcomp_asmlink.ml
 
 OCAML_USE_OPT_COMPILER?=	yes
 .else

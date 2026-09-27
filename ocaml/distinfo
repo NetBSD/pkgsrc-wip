@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (ocaml-5.5.0.tar.gz) = 8eb93b5952e90b1ae8cbb9034d3810aa13aa3c04c2c23fc79db05d5794566962
 SHA512 (ocaml-5.5.0.tar.gz) = 2692bc8fe34af4530b7cca8d98efe07c297e8bf46449b31d30b2cd5292c0b91afe8e88ded290f000025e047bd5bbee6b9119bd8aa38142a3d40d5e5af4475d53
 Size (ocaml-5.5.0.tar.gz) = 6609018 bytes
+SHA1 (patch-asmcomp_asmlink.ml) = 94c582292472f1266e1f417bd182af652be2b846

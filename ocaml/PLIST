@@ -242,6 +242,7 @@ lib/ocaml/compiler-libs/ast_mapper.mli
 lib/ocaml/compiler-libs/asttypes.cmi
 lib/ocaml/compiler-libs/asttypes.cmt
 lib/ocaml/compiler-libs/asttypes.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/asttypes.cmx
 lib/ocaml/compiler-libs/asttypes.mli
 lib/ocaml/compiler-libs/attr_helper.cmi
 lib/ocaml/compiler-libs/attr_helper.cmt
@@ -317,6 +318,7 @@ lib/ocaml/compiler-libs/bytepackager.mli
 lib/ocaml/compiler-libs/byterntm.cmi
 lib/ocaml/compiler-libs/byterntm.cmt
 lib/ocaml/compiler-libs/byterntm.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/byterntm.cmx
 lib/ocaml/compiler-libs/byterntm.mli
 lib/ocaml/compiler-libs/bytesections.cmi
 lib/ocaml/compiler-libs/bytesections.cmt
@@ -513,6 +515,7 @@ lib/ocaml/compiler-libs/ctype.mli
 lib/ocaml/compiler-libs/data_types.cmi
 lib/ocaml/compiler-libs/data_types.cmt
 lib/ocaml/compiler-libs/data_types.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/data_types.cmx
 lib/ocaml/compiler-libs/data_types.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/dataflow.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/dataflow.cmt
@@ -610,6 +613,7 @@ lib/ocaml/compiler-libs/errortrace.mli
 lib/ocaml/compiler-libs/errortrace_report.cmi
 lib/ocaml/compiler-libs/errortrace_report.cmt
 lib/ocaml/compiler-libs/errortrace_report.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/errortrace_report.cmx
 lib/ocaml/compiler-libs/errortrace_report.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/export_id.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/export_id.cmt
@@ -673,6 +677,7 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/flambda_utils.mli
 lib/ocaml/compiler-libs/format_doc.cmi
 lib/ocaml/compiler-libs/format_doc.cmt
 lib/ocaml/compiler-libs/format_doc.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/format_doc.cmx
 lib/ocaml/compiler-libs/format_doc.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/freshening.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/freshening.cmt
@@ -687,6 +692,7 @@ lib/ocaml/compiler-libs/genprintval.mli
 lib/ocaml/compiler-libs/gprinttyp.cmi
 lib/ocaml/compiler-libs/gprinttyp.cmt
 lib/ocaml/compiler-libs/gprinttyp.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/gprinttyp.cmx
 lib/ocaml/compiler-libs/gprinttyp.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/id_types.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/id_types.cmt
@@ -859,6 +865,7 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linkage_name.mli
 lib/ocaml/compiler-libs/linkdeps.cmi
 lib/ocaml/compiler-libs/linkdeps.cmt
 lib/ocaml/compiler-libs/linkdeps.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linkdeps.cmx
 lib/ocaml/compiler-libs/linkdeps.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linscan.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linscan.cmt
@@ -997,6 +1004,7 @@ lib/ocaml/compiler-libs/optmaindriver.mli
 lib/ocaml/compiler-libs/out_type.cmi
 lib/ocaml/compiler-libs/out_type.cmt
 lib/ocaml/compiler-libs/out_type.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/out_type.cmx
 lib/ocaml/compiler-libs/out_type.mli
 lib/ocaml/compiler-libs/outcometree.cmi
 lib/ocaml/compiler-libs/outcometree.cmti
@@ -1142,6 +1150,7 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/projection.mli
 lib/ocaml/compiler-libs/rawprinttyp.cmi
 lib/ocaml/compiler-libs/rawprinttyp.cmt
 lib/ocaml/compiler-libs/rawprinttyp.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/rawprinttyp.cmx
 lib/ocaml/compiler-libs/rawprinttyp.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ref_to_variables.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ref_to_variables.cmt
@@ -1246,6 +1255,7 @@ lib/ocaml/compiler-libs/signature_group.mli
 lib/ocaml/compiler-libs/signature_matching.cmi
 lib/ocaml/compiler-libs/signature_matching.cmt
 lib/ocaml/compiler-libs/signature_matching.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/signature_matching.cmx
 lib/ocaml/compiler-libs/signature_matching.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/simple_value_approx.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/simple_value_approx.cmt
@@ -1288,6 +1298,7 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/split.mli
 lib/ocaml/compiler-libs/stable_matching.cmi
 lib/ocaml/compiler-libs/stable_matching.cmt
 lib/ocaml/compiler-libs/stable_matching.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/stable_matching.cmx
 lib/ocaml/compiler-libs/stable_matching.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/stackframe.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/stackframe.cmt
@@ -1628,7 +1639,7 @@ ${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink.cmx
 ${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink.cmxa
 lib/ocaml/dynlink/dynlink.mli
 ${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink_common.cmx
-${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink_compilerlibs.cmx
+${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink_config.cmx
 ${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink_platform_intf.cmx
 ${PLIST.ocaml-opt}lib/ocaml/dynlink/dynlink_types.cmx
 lib/ocaml/effect.ml
@@ -1665,6 +1676,7 @@ lib/ocaml/lazy.mli
 lib/ocaml/ld.conf
 lib/ocaml/lexing.ml
 lib/ocaml/lexing.mli
+${PLIST.ocaml-opt}lib/ocaml/libasmrun-${MACHINE_GNU_PLATFORM}-a100.so
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_pic.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_shared.so
@@ -2018,6 +2030,7 @@ ${PLIST.ocaml-opt}lib/ocaml/stdlib__Hashtbl.cmx
 lib/ocaml/stdlib__Iarray.cmi
 lib/ocaml/stdlib__Iarray.cmt
 lib/ocaml/stdlib__Iarray.cmti
+${PLIST.ocaml-opt}lib/ocaml/stdlib__Iarray.cmx
 lib/ocaml/stdlib__In_channel.cmi
 lib/ocaml/stdlib__In_channel.cmt
 lib/ocaml/stdlib__In_channel.cmti
@@ -2089,6 +2102,7 @@ ${PLIST.ocaml-opt}lib/ocaml/stdlib__Out_channel.cmx
 lib/ocaml/stdlib__Pair.cmi
 lib/ocaml/stdlib__Pair.cmt
 lib/ocaml/stdlib__Pair.cmti
+${PLIST.ocaml-opt}lib/ocaml/stdlib__Pair.cmx
 lib/ocaml/stdlib__Parsing.cmi
 lib/ocaml/stdlib__Parsing.cmt
 lib/ocaml/stdlib__Parsing.cmti
@@ -2096,6 +2110,7 @@ ${PLIST.ocaml-opt}lib/ocaml/stdlib__Parsing.cmx
 lib/ocaml/stdlib__Pqueue.cmi
 lib/ocaml/stdlib__Pqueue.cmt
 lib/ocaml/stdlib__Pqueue.cmti
+${PLIST.ocaml-opt}lib/ocaml/stdlib__Pqueue.cmx
 lib/ocaml/stdlib__Printexc.cmi
 lib/ocaml/stdlib__Printexc.cmt
 lib/ocaml/stdlib__Printexc.cmti
@@ -2115,6 +2130,7 @@ ${PLIST.ocaml-opt}lib/ocaml/stdlib__Random.cmx
 lib/ocaml/stdlib__Repr.cmi
 lib/ocaml/stdlib__Repr.cmt
 lib/ocaml/stdlib__Repr.cmti
+${PLIST.ocaml-opt}lib/ocaml/stdlib__Repr.cmx
 lib/ocaml/stdlib__Result.cmi
 lib/ocaml/stdlib__Result.cmt
 lib/ocaml/stdlib__Result.cmti
@@ -2185,12 +2201,9 @@ lib/ocaml/string.mli
 lib/ocaml/stringLabels.ml
 lib/ocaml/stringLabels.mli
 lib/ocaml/stublibs/dllcamlruntime_eventsbyt-${MACHINE_GNU_PLATFORM}-a100.so
-${PLIST.ocaml-opt}lib/ocaml/stublibs/dllcamlruntime_eventsnat.so
 lib/ocaml/stublibs/dllcamlstrbyt-${MACHINE_GNU_PLATFORM}-a100.so
-${PLIST.ocaml-opt}lib/ocaml/stublibs/dllcamlstrnat.so
 lib/ocaml/stublibs/dllthreads-${MACHINE_GNU_PLATFORM}-a100.so
 lib/ocaml/stublibs/dllunixbyt-${MACHINE_GNU_PLATFORM}-a100.so
-${PLIST.ocaml-opt}lib/ocaml/stublibs/dllunixnat.so
 lib/ocaml/sys.ml
 lib/ocaml/sys.ml.in
 lib/ocaml/sys.mli

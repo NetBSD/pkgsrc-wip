@@ -35,7 +35,7 @@ OCAML_MK=	# defined
 MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
-.include "../../lang/ocaml/native.mk"
+.include "../../wip/ocaml/native.mk"
 
 
 _PKG_VARS.ocaml=	\
@@ -249,6 +249,6 @@ do-build:
 .endif # ${OCAML_USE_DUNE} == "yes"
 
 # Add dependency on ocaml.
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../wip/ocaml/buildlink3.mk"
 
 .endif # OCAML_MK
