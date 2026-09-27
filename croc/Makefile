@@ -12,7 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c
 
-GOFLAGS+=	-ldflags=-linkmode=external\ -bindnow\ -extldflags=-Wl,-zrelro,-pie
+CHECK_PIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 

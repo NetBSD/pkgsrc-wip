@@ -1,0 +1,3 @@
+It's needed for now
+CHECK_PIE_SUPPORTED=    no
+CHECK_RELRO_SUPPORTED=  no
