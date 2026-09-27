@@ -496,3 +496,6 @@ Some errors have detailed explanations: E0412, E0425.
 For more information about this error, try `rustc --explain E0425`.
 error: could not compile `heim-disk` (lib) due to 18 previous errors
 error: could not compile `heim-sensors` (lib) due to 2 previous errors
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-77619, CVE-2026-77620, CVE-2026-77621
