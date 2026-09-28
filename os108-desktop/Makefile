@@ -38,7 +38,7 @@ DEPENDS+=	mutter-[0-9]*:../../wm/mutter
 DEPENDS+=	nautilus-[0-9]*:../../sysutils/nautilus
 DEPENDS+=	orca-[0-9]*:../../misc/orca
 DEPENDS+=	vlc-[0-9]*:../../multimedia/vlc
-DEPENDS+=	yelp-[0-9]*:../../misc/yelp3
+DEPENDS+=	yelp-[0-9]*:../../misc/yelp
 
 # Some missing applications that might make sense later:
 
