@@ -26,14 +26,13 @@ man/man1/git-bug-bug-status.1
 man/man1/git-bug-bug-title-edit.1
 man/man1/git-bug-bug-title.1
 man/man1/git-bug-bug.1
-man/man1/git-bug-commands.1
 man/man1/git-bug-label.1
 man/man1/git-bug-pull.1
 man/man1/git-bug-push.1
 man/man1/git-bug-termui.1
 man/man1/git-bug-user-adopt.1
 man/man1/git-bug-user-new.1
-man/man1/git-bug-user-user.1
+man/man1/git-bug-user-show.1
 man/man1/git-bug-user.1
 man/man1/git-bug-version.1
 man/man1/git-bug-webui.1

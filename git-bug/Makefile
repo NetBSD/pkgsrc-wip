@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2022/09/17 11:03:56 leot Exp $
 
-DISTNAME=	git-bug-0.10.1
+DISTNAME=	git-bug-0.11.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=git-bug/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
