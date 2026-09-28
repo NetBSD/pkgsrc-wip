@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (chawan/v0.4.4.tar.gz) = 8118e86a95e61d2632e502a2dc975856aeadd28adb8f0df2c2c9556a4f026240
+SHA512 (chawan/v0.4.4.tar.gz) = b107e0b12e05f64bf7c2ccbde75bb6bb5f1568b54528033ac6e1a4dd6b9a21dec9d2d084ced5c86605c0a76789122216600f5de9383d2a6e675bb2668df949a0
+Size (chawan/v0.4.4.tar.gz) = 3698813 bytes
