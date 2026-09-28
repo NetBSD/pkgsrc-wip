@@ -1,0 +1,7 @@
+Linux compatibility package based on the openSUSE Linux distribution.
+Please visit http://www.opensuse.org/ for more information about openSUSE
+Linux.
+
+GDB, the GNU Project debugger, allows you to see what is going on
+`inside' another program while it executes -- or what another
+program was doing at the moment it crashed.

@@ -5619,6 +5619,7 @@ SUBDIR+=	suse131_gcc
 SUBDIR+=	suse131_gconf2
 SUBDIR+=	suse131_libbz2
 SUBDIR+=	suse15_gcc
+SUBDIR+=	suse15_gdb
 SUBDIR+=	suse15_glibc-locale-base
 SUBDIR+=	sushi
 SUBDIR+=	suwidgets
