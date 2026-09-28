@@ -1,0 +1,16 @@
+$NetBSD$
+
+Change path for binaries from bin/JUCE-${JUCE_VERSION} to just bin to unify the
+binary location.
+
+--- extras/Build/juceaide/CMakeLists.txt.orig	2026-09-28 18:16:53.240603336 +0000
++++ extras/Build/juceaide/CMakeLists.txt
+@@ -169,7 +169,7 @@ else()
+ 
+     add_executable(juce::juceaide ALIAS juceaide)
+ 
+-    set(JUCE_TOOL_INSTALL_DIR "bin/JUCE-${JUCE_VERSION}" CACHE STRING
++    set(JUCE_TOOL_INSTALL_DIR "bin" CACHE STRING
+         "The location, relative to the install prefix, where juceaide will be installed")
+ 
+     install(PROGRAMS "${imported_location}" DESTINATION "${JUCE_TOOL_INSTALL_DIR}")

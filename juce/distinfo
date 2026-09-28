@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (juce-9.0.3.tar.gz) = 23165d39985b60de9894cb359eef053dcb854c2fd5a48d7b40bd06642a5e89d2
+SHA512 (juce-9.0.3.tar.gz) = f72b81315829b7703e0fa82812a0f13ae9eae94840949d825647da0fddccb867dc2c2e79a5c0b3b10f5f0da12f9cdf2ba735562f8b99a6f01a9b63339d963494
+Size (juce-9.0.3.tar.gz) = 24930641 bytes
+SHA1 (patch-CMakeLists.txt) = 6830e792833d906e6902edf6f98181826f1b7c1d
+SHA1 (patch-extras_Build_juceaide_CMakeLists.txt) = 7f74b0bfef8c7e23bdaf9bba307957b4b09702c7

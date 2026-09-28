@@ -1,0 +1,8 @@
+JUCE is an open source framework that is aimed towards audio applications like
+digital audio workstations and audio plugins. While it is possible to create
+generic applications with this framework, its main use-case lies in
+audio-related programs.
+
+This framework provides multiple modules that have various commonly used audio
+functions already implemented and ready to use, as well as modules that can be
+used to build an user interface.

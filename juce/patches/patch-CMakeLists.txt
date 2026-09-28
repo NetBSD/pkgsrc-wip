@@ -1,0 +1,16 @@
+$NetBSD$
+
+Change path for binaries from bin/JUCE-${JUCE_VERSION} to just bin to unify the
+binary location.
+
+--- CMakeLists.txt.orig	2026-09-28 08:01:33.000000000 +0000
++++ CMakeLists.txt
+@@ -195,7 +195,7 @@ if(("${CMAKE_SOURCE_DIR}" STREQUAL "${JU
+     _juce_add_lv2_manifest_helper_target()
+ 
+     if(TARGET juce_lv2_helper)
+-        install(TARGETS juce_lv2_helper EXPORT LV2_HELPER DESTINATION "bin/JUCE-${JUCE_VERSION}")
++        install(TARGETS juce_lv2_helper EXPORT LV2_HELPER DESTINATION "bin")
+         install(EXPORT LV2_HELPER NAMESPACE juce:: DESTINATION "${JUCE_INSTALL_DESTINATION}")
+     endif()
+ endif()
