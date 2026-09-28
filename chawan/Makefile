@@ -7,7 +7,7 @@ MASTER_SITES=	https://git.sr.ht/~bptato/chawan/archive/
 DIST_SUBDIR=	chawan
 
 MAINTAINER=	ivan@ivanpollak.com
-HOMEPAGE=	https://git.sr.ht/~bptato/chawan/archive/
+HOMEPAGE=	https://chawan.net/
 COMMENT=	TUI web browser with CSS, inline image and JavaScript support
 LICENSE=	unlicense
 
