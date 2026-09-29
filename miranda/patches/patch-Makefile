@@ -1,0 +1,60 @@
+$NetBSD$
+
+--- Makefile.orig	2026-08-31 17:20:47.000000000 +0000
++++ Makefile
+@@ -1,11 +1,12 @@
+ #install paths
+ #for linux, MacOS X, Cygwin:
+-BIN=/usr/local/bin
+-LIB=/usr/local/lib
+-MAN=/usr/local/share/man/man1
++BIN=@PREFIX@/bin
++LIB=@PREFIX@/lib
++MAN=@PREFIX@/@PKGMANDIR@/man1
+ #for Solaris:
+ #MAN=/usr/local/man/man1
+-CFLAGS = #-O #-DCYGWIN #-DUWIN #-DIBMRISC #-Dsparc7 #-Dsparc8
++CFLAGS += #-O #-DCYGWIN #-DUWIN #-DIBMRISC #-Dsparc7 #-Dsparc8
++LDFLAGS +=
+ #be wary of using anything higher than -O as the garbage collector may fall over
+ #if using gcc rather than clang try without -O first
+ EX = #.exe        #needed for CYGWIN, UWIN
+@@ -29,7 +30,7 @@ all: FORCE
+ # -Dsparc8 needed for Solaris 2.8 or later
+ mira$(EX): big.o cmbnms.o data.o lex.o reduce.o signals.o steer.o trans.o types.o \
+       utf8.o y.tab.o version.o $(LINENOISEOBJ) Makefile
+-	$(CC) $(CFLAGS) -o mira$(EX) version.o cmbnms.o y.tab.o data.o lex.o \
++	$(CC) $(CFLAGS) $(LDFLAGS) -o mira$(EX) version.o cmbnms.o y.tab.o data.o lex.o \
+ 	    big.o reduce.o signals.o steer.o trans.o types.o utf8.o \
+             $(LINENOISE) -lm
+ 
+@@ -71,12 +72,12 @@ combs.h: cmbnms.c gencdecs
+ cmbnms.c: gencdecs
+ 	./gencdecs
+ miralib/menudriver$(EX): menudriver.c signals.c Makefile
+-	$(CC) $(CFLAGS) menudriver.c signals.c -o miralib/menudriver$(EX)
++	$(CC) $(CFLAGS) $(LDFLAGS) menudriver.c signals.c -o miralib/menudriver$(EX)
+ 	chmod 755 miralib/menudriver$(EX)
+ #alternative: use shell script
+ #	ln -s miralib/menudriver.sh miralib/menudriver
+ tellcc:
+-	@echo $(CC) $(CFLAGS)
++	@echo $(CC) $(CFLAGS) $(LDFLAGS)
+ clean: cleanup
+ cleanup:
+ #to be done on moving to a new host
+@@ -86,11 +87,11 @@ cleanup:
+ install:
+ 	make -s all
+ 	strip mira$(EX)
+-	cp mira$(EX) $(BIN)/
+-	cp mira.1 $(MAN)/
++	cp mira$(EX) $(DESTDIR)$(BIN)/
++	cp mira.1 $(DESTDIR)$(MAN)/
+ 	rm -rf $(LIB)/miralib
+ 	strip miralib/menudriver$(EX)
+-	cp -rp miralib $(LIB)/
++	cp -rp miralib $(DESTDIR)$(LIB)/
+ SOURCES = .xversion big.c big.h gencdecs data.h data.c lex.h lex.c reduce.c rules.y \
+           signals.c signals.h  steer.c trans.c types.c utf8.h utf8.c version.c fdate.c
+ sources: $(SOURCES); @echo $(SOURCES)

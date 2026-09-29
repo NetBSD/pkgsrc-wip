@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (miranda-2.068.tar.gz) = 48aa009849a76e250b5e222ddf209b6bc6b1b2c2b88265acfc197aa5cef7cd79
+SHA512 (miranda-2.068.tar.gz) = 21e8991602930f1587f374483f3a5f7a8f2f08ca530aa066e19e18041695674470ede6389ecfc385b1a47992a1c96895a6eeafe7b43be5eba783a7d8d1ce29ee
+Size (miranda-2.068.tar.gz) = 715769 bytes
+SHA1 (patch-Makefile) = ad3eac400fa1ad5768a9918238318ba3a6ce6b86
+SHA1 (patch-big.c) = 4e2c782646df5b37c4f982d37ee742f83805294c
+SHA1 (patch-just.c) = 4032a0562b8d3a10cf39e1799b97c83d636b947a
+SHA1 (patch-lex.c) = df5594ee2be72362a8f70d6c4654cb47516b37c1
+SHA1 (patch-steer.c) = f7d71c7bdac74ce539cb38ae2dc057d4d1f8f334
