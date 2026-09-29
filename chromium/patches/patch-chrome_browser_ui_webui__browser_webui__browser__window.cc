@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui_browser/webui_browser_window.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/webui_browser/webui_browser_window.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/webui_browser/webui_browser_window.cc
-@@ -74,7 +74,7 @@ const char* const kWebUIBrowserWindowKey
+@@ -76,7 +76,7 @@ const char* const kWebUIBrowserWindowKey
  
  // Copied from chrome/browser/ui/views/frame/browser_widget.cc.
  bool IsUsingLinuxSystemTheme(Profile* profile) {

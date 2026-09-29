@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/features.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- net/base/features.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ net/base/features.cc
 @@ -41,7 +41,7 @@ BASE_FEATURE(kDeriveConnectionTypeFromCa
  
@@ -15,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -493,7 +493,7 @@ BASE_FEATURE(kReportingApiEnableEnterpri
+@@ -511,7 +511,7 @@ BASE_FEATURE(kReportingApiEnableEnterpri
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  BASE_FEATURE(kSimdutfBase64Support,

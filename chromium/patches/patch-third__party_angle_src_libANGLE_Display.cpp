@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2026-09-17 03:47:47.000000000 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
-@@ -65,7 +65,7 @@
+@@ -69,7 +69,7 @@
  #        include "libANGLE/renderer/gl/wgl/DisplayWGL.h"
  #    elif ANGLE_ENABLE_CGL
  #        include "libANGLE/renderer/gl/cgl/DisplayCGL.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #        include "libANGLE/renderer/gl/egl/DisplayEGL.h"
  #        if defined(ANGLE_USE_X11)
  #            include "libANGLE/renderer/gl/glx/DisplayGLX_api.h"
-@@ -509,7 +509,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -555,7 +555,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
              impl = new rx::DisplayCGL(state);
              break;
  
@@ -24,7 +24,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM) || defined(ANGLE_USE_WAYLAND)
              if (platformType == 0)
              {
-@@ -567,7 +567,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -613,7 +613,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
  #if defined(ANGLE_ENABLE_OPENGL)
  #    if defined(ANGLE_PLATFORM_WINDOWS)
              impl = new rx::DisplayWGL(state);
@@ -33,7 +33,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM) || defined(ANGLE_USE_WAYLAND)
              if (platformType == 0)
              {
-@@ -630,7 +630,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -676,7 +676,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
                  impl = rx::CreateVulkanWin32Display(state);
              }
              break;
@@ -42,7 +42,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2224,7 +2224,7 @@ static ClientExtensions GenerateClientEx
+@@ -2279,7 +2279,7 @@ static ClientExtensions GenerateClientEx
      extensions.platformWaylandEXT = true;
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD$
      extensions.platformSurfacelessMESA = true;
  #endif
  
-@@ -2271,7 +2271,7 @@ static ClientExtensions GenerateClientEx
+@@ -2326,7 +2326,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

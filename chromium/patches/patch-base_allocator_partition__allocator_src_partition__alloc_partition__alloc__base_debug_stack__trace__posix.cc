@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc
-@@ -14,11 +14,11 @@
+@@ -15,11 +15,11 @@
  #include "partition_alloc/partition_alloc_base/posix/eintr_wrapper.h"
  #include "partition_alloc/partition_alloc_base/strings/safe_sprintf.h"
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include <dlfcn.h>
  #endif
  
-@@ -26,7 +26,7 @@ namespace partition_alloc::internal::bas
+@@ -27,7 +27,7 @@ namespace partition_alloc::internal::bas
  
  namespace {
  
@@ -29,7 +29,7 @@ $NetBSD$
  
  // On Android the 'open' function has two versions:
  // int open(const char *pathname, int flags);
-@@ -374,7 +374,7 @@ void PrintStackTraceInternal(const void*
+@@ -375,7 +375,7 @@ void PrintStackTraceInternal(const void*
  }
  #endif  // !PA_BUILDFLAG(IS_APPLE)
  

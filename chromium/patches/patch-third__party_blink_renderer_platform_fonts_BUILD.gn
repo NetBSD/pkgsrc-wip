@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/BUILD.gn.orig	2026-09-17 03:47:47.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/BUILD.gn
 @@ -1,19 +0,0 @@
 -# Copyright 2026 The Chromium Authors
@@ -22,7 +22,7 @@ $NetBSD$
 -  }
 -  deps = [
 -    "//third_party/rust/font_types/v0_12:lib",
--    "//third_party/rust/read_fonts/v0_41:lib",
--    "//third_party/rust/skrifa/v0_44:lib",
+-    "//third_party/rust/read_fonts/v0_43:lib",
+-    "//third_party/rust/skrifa/v0_46:lib",
 -  ]
 -}

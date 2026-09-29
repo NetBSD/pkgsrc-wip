@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -29,7 +29,7 @@ BASE_DECLARE_FEATURE(kCompositorLoadingT
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kDseIntegrity);
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  BASE_DECLARE_FEATURE(kLegacySearchIntegrityCheck);
-@@ -85,7 +85,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
+@@ -87,7 +87,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
  BASE_DECLARE_FEATURE_PARAM(int, kSeparateDefaultAndPinPromptMessageVersion);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  

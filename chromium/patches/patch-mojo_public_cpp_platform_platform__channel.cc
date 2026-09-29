@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/platform_channel.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- mojo/public/cpp/platform/platform_channel.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ mojo/public/cpp/platform/platform_channel.cc
-@@ -144,6 +144,38 @@ void CreateChannel(PlatformHandle* local
+@@ -148,6 +148,38 @@ void CreateChannel(PlatformHandle* local
    *remote_endpoint = PlatformHandle(std::move(receive));
  }
  #elif BUILDFLAG(IS_POSIX)
@@ -45,7 +45,7 @@ $NetBSD$
  void CreateChannel(PlatformHandle* local_endpoint,
                     PlatformHandle* remote_endpoint) {
    int fds[2];
-@@ -153,6 +185,11 @@ void CreateChannel(PlatformHandle* local
+@@ -157,6 +189,11 @@ void CreateChannel(PlatformHandle* local
    PCHECK(fcntl(fds[0], F_SETFL, O_NONBLOCK) == 0);
    PCHECK(fcntl(fds[1], F_SETFL, O_NONBLOCK) == 0);
  

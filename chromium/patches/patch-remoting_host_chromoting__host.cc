@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- remoting/host/chromoting_host.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/chromoting_host.cc
 @@ -143,7 +143,7 @@ void ChromotingHost::Start(const std::st
    }
@@ -24,7 +24,7 @@ $NetBSD$
  void ChromotingHost::BindChromotingHostServices(
      mojo::PendingReceiver<mojom::ChromotingHostServices> receiver) {
    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-@@ -301,7 +301,7 @@ std::optional<ErrorCode> ChromotingHost:
+@@ -297,7 +297,7 @@ std::optional<ErrorCode> ChromotingHost:
    return per_session_policies_validator_.Run(policies);
  }
  

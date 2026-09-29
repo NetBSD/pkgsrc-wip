@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.h
-@@ -246,7 +246,7 @@ class GPU_GLES2_EXPORT SharedContextStat
+@@ -254,7 +254,7 @@ class GPU_GLES2_EXPORT SharedContextStat
      return &memory_type_tracker_;
    }
  #if BUILDFLAG(ENABLE_VULKAN) && \
@@ -15,7 +15,7 @@ $NetBSD$
    ExternalSemaphorePool* external_semaphore_pool() {
      return external_semaphore_pool_.get();
    }
-@@ -414,7 +414,7 @@ class GPU_GLES2_EXPORT SharedContextStat
+@@ -426,7 +426,7 @@ class GPU_GLES2_EXPORT SharedContextStat
    bool disable_check_reset_status_throttling_for_test_ = false;
  
  #if BUILDFLAG(ENABLE_VULKAN) && \

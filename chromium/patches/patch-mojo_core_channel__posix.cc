@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel_posix.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- mojo/core/channel_posix.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ mojo/core/channel_posix.cc
-@@ -428,10 +428,11 @@ bool ChannelPosix::WriteNoLock(MessageVi
+@@ -444,10 +444,11 @@ bool ChannelPosix::WriteNoLock(MessageVi
      if (result < 0) {
        if (errno != EAGAIN &&
            errno != EWOULDBLOCK
@@ -20,7 +20,7 @@ $NetBSD$
            //
            // EMSGSIZE presents a problem since the system APIs can only call
            // us when there's room in the socket buffer and not when there is
-@@ -627,6 +628,13 @@ void Channel::OfferChannelUpgrade() {
+@@ -643,6 +644,13 @@ void Channel::OfferChannelUpgrade() {
    }
    static_cast<ChannelLinux*>(this)->OfferSharedMemUpgrade();
  }

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- content/public/common/content_switches.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ content/public/common/content_switches.h
-@@ -108,6 +108,7 @@ CONTENT_EXPORT extern const char kEnable
+@@ -109,6 +109,7 @@ CONTENT_EXPORT extern const char kEnable
  CONTENT_EXPORT extern const char kEnableIsolatedWebAppsInRenderer[];
  CONTENT_EXPORT extern const char kEnableLCDText[];
  CONTENT_EXPORT extern const char kEnableLogging[];
@@ -14,7 +14,7 @@ $NetBSD$
  CONTENT_EXPORT extern const char kEnableNetworkInformationDownlinkMax[];
  CONTENT_EXPORT extern const char kEnableCanvas2DLayers[];
  CONTENT_EXPORT extern const char kEnablePluginPlaceholderTesting[];
-@@ -257,7 +258,7 @@ CONTENT_EXPORT extern const char kJavale
+@@ -258,7 +259,7 @@ CONTENT_EXPORT extern const char kJavale
  CONTENT_EXPORT extern const char kPreventResizingContentsForTesting[];
  #endif
  

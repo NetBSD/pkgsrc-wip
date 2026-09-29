@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/remote_debugging_server.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/devtools/remote_debugging_server.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/devtools/remote_debugging_server.cc
 @@ -47,7 +47,7 @@ namespace {
  
@@ -24,7 +24,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    constexpr bool default_user_data_dir_check_enabled = true;
  #else
-@@ -292,7 +292,7 @@ void RemoteDebuggingServer::EnableTether
+@@ -287,7 +287,7 @@ void RemoteDebuggingServer::EnableTether
    g_tethering_enabled = true;
  }
  

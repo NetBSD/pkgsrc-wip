@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/views/tabs/tab.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/views/tabs/tab.cc
-@@ -1476,7 +1476,7 @@ void Tab::MaybeUpdateHoverStatus(const u
+@@ -1477,7 +1477,7 @@ void Tab::MaybeUpdateHoverStatus(const u
      return;
    }
  

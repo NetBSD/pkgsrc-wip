@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_url_checker_client.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_url_checker_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_url_checker_client.cc
-@@ -65,7 +65,7 @@ void OnResponse(
+@@ -66,7 +66,7 @@ void OnResponse(
  
  FetcherConfig GetFetcherConfig(
      bool is_subject_to_family_link_parental_controls) {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/gpu/webgpu_shared_image_wrapper_cache.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/gpu/webgpu_shared_image_wrapper_cache.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/gpu/webgpu_shared_image_wrapper_cache.cc
-@@ -397,7 +397,7 @@ WebGpuSharedImageWrapperCache::LeaseWebG
+@@ -398,7 +398,7 @@ WebGpuSharedImageWrapperCache::LeaseWebG
        return nullptr;
      }
  

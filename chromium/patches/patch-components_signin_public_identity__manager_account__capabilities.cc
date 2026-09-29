@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/identity_manager/account_capabilities.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- components/signin/public/identity_manager/account_capabilities.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/signin/public/identity_manager/account_capabilities.cc
-@@ -192,7 +192,7 @@ signin::Tribool AccountCapabilities::can
+@@ -197,7 +197,7 @@ signin::Tribool AccountCapabilities::can
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

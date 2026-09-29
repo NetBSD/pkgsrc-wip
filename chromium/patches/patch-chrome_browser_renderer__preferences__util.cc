@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
-@@ -38,12 +38,12 @@
+@@ -40,12 +40,12 @@
  #include "ui/base/ui_base_features.h"
  #include "ui/native_theme/native_theme.h"
  
@@ -21,7 +21,7 @@ $NetBSD$
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #include "ui/linux/linux_ui.h"
-@@ -112,7 +112,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -114,7 +114,7 @@ void UpdateFromSystemSettings(blink::Ren
                                Profile* profile) {
    const PrefService* pref_service = profile->GetPrefs();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -30,7 +30,7 @@ $NetBSD$
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
    prefs->focus_ring_color = BUILDFLAG(IS_MAC) ? SkColorSetRGB(0x00, 0x5F, 0xCC)
-@@ -126,7 +126,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -128,7 +128,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->inactive_selection_fg_color = SK_ColorBLACK;
  #endif
  
@@ -39,7 +39,7 @@ $NetBSD$
    if (auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile)) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
        linux_ui_theme->GetFocusRingColor(&prefs->focus_ring_color);
-@@ -143,7 +143,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -145,7 +145,7 @@ void UpdateFromSystemSettings(blink::Ren
  #endif  // BUILDFLAG(IS_LINUX)
  #endif  // BUILDFLAG(USE_AURA)
  
@@ -48,7 +48,7 @@ $NetBSD$
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      prefs->middle_click_paste_allowed = linux_ui->PrimaryPasteEnabled();
    }
-@@ -245,7 +245,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -256,7 +256,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->view_source_line_wrap_enabled =
        pref_service->GetBoolean(prefs::kViewSourceLineWrappingEnabled);
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-09-17 03:47:47.000000000 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-09-22 00:09:16.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -69,7 +69,17 @@ $NetBSD$
          if target_arch == 'x64':
              if target_os == 'android':
                  configure_flags['Common'].extend([
-@@ -929,7 +931,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -824,9 +826,6 @@ def ConfigureAndBuild(target_arch, targe
+ 
+                 configure_flags['Common'].extend([
+                     '--target-os=linux',
+-                    '--sysroot=' +
+-                    os.path.join(CHROMIUM_ROOT_DIR,
+-                                 'build/linux/debian_bullseye_arm64-sysroot'),
+                 ])
+             configure_flags['Common'].extend([
+                 '--arch=aarch64',
+@@ -929,7 +928,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.

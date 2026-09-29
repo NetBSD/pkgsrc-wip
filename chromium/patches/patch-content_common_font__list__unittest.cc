@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/font_list_unittest.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- content/common/font_list_unittest.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ content/common/font_list_unittest.cc
-@@ -48,7 +48,7 @@ TEST(FontList, GetFontList) {
+@@ -50,7 +50,7 @@ TEST(FontList, GetFontList) {
          EXPECT_TRUE(HasFontWithName(fonts, "MS Gothic", "MS Gothic"));
          EXPECT_TRUE(HasFontWithName(fonts, "Segoe UI", "Segoe UI"));
          EXPECT_TRUE(HasFontWithName(fonts, "Verdana", "Verdana"));

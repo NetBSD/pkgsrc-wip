@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_clipboard_ozone.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- ui/ozone/platform/x11/x11_clipboard_ozone.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/ozone/platform/x11/x11_clipboard_ozone.h
 @@ -14,7 +14,7 @@
  #include "ui/base/x/selection_utils.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/memory/weak_ptr.h"
  #endif
  
-@@ -56,7 +56,7 @@ class X11ClipboardOzone : public Platfor
+@@ -58,7 +58,7 @@ class X11ClipboardOzone : public Platfor
   private:
    void OnSelectionChanged(ClipboardBuffer buffer);
  
@@ -24,7 +24,7 @@ $NetBSD$
    void OnPortalKeyRead(PlatformClipboard::RequestDataClosure callback,
                         SelectionData selection_data);
    void OnPathsExtracted(PlatformClipboard::RequestDataClosure callback,
-@@ -73,7 +73,7 @@ class X11ClipboardOzone : public Platfor
+@@ -75,7 +75,7 @@ class X11ClipboardOzone : public Platfor
  
    ClipboardDataChangedCallback clipboard_changed_callback_;
  

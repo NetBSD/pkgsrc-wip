@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_screen_ozone.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- ui/ozone/platform/x11/x11_screen_ozone.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/ozone/platform/x11/x11_screen_ozone.h
 @@ -16,7 +16,7 @@
  #include "ui/gfx/x/event.h"
@@ -24,7 +24,7 @@ $NetBSD$
      ,
                         public DeviceScaleFactorObserver
  #endif
-@@ -97,7 +97,7 @@ class X11ScreenOzone : public PlatformSc
+@@ -106,7 +106,7 @@ class X11ScreenOzone : public PlatformSc
    // ui::XDisplayManager::Delegate:
    void OnXDisplayListUpdated() override;
  
@@ -33,7 +33,7 @@ $NetBSD$
    // DeviceScaleFactorObserver:
    void OnDeviceScaleFactorChanged() override;
  #endif
-@@ -109,7 +109,7 @@ class X11ScreenOzone : public PlatformSc
+@@ -118,7 +118,7 @@ class X11ScreenOzone : public PlatformSc
    // Indicates that |this| is initialized.
    bool initialized_ = false;
  

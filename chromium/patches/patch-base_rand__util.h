@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- base/rand_util.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ base/rand_util.h
 @@ -219,7 +219,7 @@ decltype(auto) RandomChoice(Range&& r) {
    return r[base::RandGenerator(r.size())];
  }
  
--#if BUILDFLAG(IS_POSIX)
-+#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE)
++#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD)
  BASE_EXPORT int GetUrandomFD();
  #endif
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/themes/theme_service.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/themes/theme_service.cc
-@@ -78,7 +78,7 @@
+@@ -88,7 +88,7 @@
  #include "extensions/browser/extension_registry_observer.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/time/time.h"
  #include "ui/linux/linux_ui.h"
  #include "ui/linux/linux_ui_factory.h"
-@@ -289,7 +289,7 @@ std::unique_ptr<ui::ThemeProvider> Theme
+@@ -299,7 +299,7 @@ std::unique_ptr<ui::ThemeProvider> Theme
  // static
  void ThemeService::RegisterProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {
@@ -24,7 +24,7 @@ $NetBSD$
    registry->RegisterIntegerPref(prefs::kSystemTheme,
                                  static_cast<int>(ui::GetDefaultSystemTheme()));
  #endif
-@@ -423,7 +423,7 @@ CustomThemeSupplier* ThemeService::GetTh
+@@ -433,7 +433,7 @@ CustomThemeSupplier* ThemeService::GetTh
  }
  
  bool ThemeService::ShouldUseCustomFrame() const {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -29,6 +29,8 @@
  
@@ -15,7 +15,7 @@ $NetBSD$
  #else
  #include <malloc.h>
  #endif
-@@ -227,7 +229,7 @@ void ReportAppleAllocStats(size_t* total
+@@ -261,7 +263,7 @@ void ReportAppleAllocStats(size_t* total
  
  #if (PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && BUILDFLAG(IS_ANDROID)) || \
      (!PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && !BUILDFLAG(IS_WIN) &&    \
@@ -24,8 +24,8 @@ $NetBSD$
  void ReportMallinfoStats(ProcessMemoryDump* pmd,
                           size_t* total_virtual_size,
                           size_t* resident_size,
-@@ -441,6 +443,9 @@ bool MallocDumpProvider::OnMemoryDump(co
-                      &allocated_objects_count);
+@@ -510,6 +512,9 @@ bool MallocDumpProvider::OnMemoryDump(co
+                      nullptr);
  #elif BUILDFLAG(IS_FUCHSIA)
  // TODO(fuchsia): Port, see https://crbug.com/706592.
 +#elif BUILDFLAG(IS_BSD)

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/prefs/pref_watcher.cc
-@@ -38,7 +38,7 @@
+@@ -39,7 +39,7 @@
  #include "components/browser_ui/accessibility/android/font_size_prefs_android.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #include "ui/linux/primary_paste_pref_observer.h"
  #endif
-@@ -93,7 +93,7 @@ const char* const kWebPrefsToObserve[] =
+@@ -94,7 +94,7 @@ const char* const kWebPrefsToObserve[] =
  
  }  // namespace
  
@@ -24,7 +24,7 @@ $NetBSD$
  // A helper class to handle notifying about changes in the
  // Primary Paste/Middle Click Paste preference on Linux.
  class PrimaryPastePrefHelper : public ui::PrimaryPastePrefObserver {
-@@ -124,7 +124,7 @@ class PrimaryPastePrefHelper : public ui
+@@ -125,7 +125,7 @@ class PrimaryPastePrefHelper : public ui
  PrefWatcher::PrefWatcher(Profile* profile) : profile_(profile) {
    native_theme_observation_.Observe(ui::NativeTheme::GetInstanceForWeb());
  

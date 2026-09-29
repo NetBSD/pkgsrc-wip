@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
 @@ -70,7 +70,7 @@
  #include "content/public/common/content_switches.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/nix/xdg_util.h"
  #include "ui/display/screen.h"
  #endif
-@@ -93,7 +93,7 @@
+@@ -94,7 +94,7 @@
  #include "chrome/browser/ui/browser_window/public/profile_browser_collection.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  #include "chrome/browser/search_integrity/search_integrity.h"
  #include "chrome/browser/search_integrity/search_integrity_factory.h"
  #include "chrome/browser/ui/webui/whats_new/whats_new_fetcher.h"
-@@ -166,7 +166,7 @@ Browser* GetExistingBrowserForOpenBehavi
+@@ -165,7 +165,7 @@ BrowserWindowInterface* GetExistingBrows
        BrowserCollection::Order::kActivation);
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD$
    const bool match_original_profiles =
        process_startup == chrome::startup::IsProcessStartup::kYes;
    display::Screen* const screen = display::Screen::Get();
-@@ -254,7 +254,7 @@ void StartupBrowserCreatorImpl::Launch(
+@@ -251,7 +251,7 @@ void StartupBrowserCreatorImpl::Launch(
    DCHECK(profile);
    profile_ = profile;
  
@@ -42,7 +42,7 @@ $NetBSD$
    // Check for DSE integrity if flag is enabled.
    if (base::FeatureList::IsEnabled(features::kDseIntegrity)) {
      if (auto* search_integrity_service =
-@@ -308,7 +308,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -305,7 +305,7 @@ BrowserWindowInterface* StartupBrowserCr
      profile_ = browser->GetProfile();
    }
  
@@ -51,7 +51,7 @@ $NetBSD$
    std::string startup_id =
        command_line_->GetSwitchValueASCII(base::nix::kXdgActivationTokenSwitch);
    if (startup_id.empty()) {
-@@ -337,7 +337,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -339,7 +339,7 @@ BrowserWindowInterface* StartupBrowserCr
      BrowserWindowCreateParams params(profile_, false);
      params.creation_source =
          BrowserWindowCreateParams::CreationSource::kStartupCreator;
@@ -60,7 +60,7 @@ $NetBSD$
      params.startup_id = startup_id;
  #endif
      if (command_line_->HasSwitch(switches::kWindowName)) {
-@@ -374,7 +374,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -376,7 +376,7 @@ BrowserWindowInterface* StartupBrowserCr
        continue;
      }
  
@@ -69,7 +69,7 @@ $NetBSD$
      // Start the What's New fetch but don't add the tab at this point. The tab
      // will open as the foreground tab only if the remote content can be
      // retrieved successfully. This prevents needing to automatically close the
-@@ -465,7 +465,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -467,7 +467,7 @@ BrowserWindowInterface* StartupBrowserCr
      }
    }
  

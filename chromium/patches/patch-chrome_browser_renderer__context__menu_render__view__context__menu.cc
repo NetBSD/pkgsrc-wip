@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_context_menu/render_view_context_menu.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/renderer_context_menu/render_view_context_menu.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/renderer_context_menu/render_view_context_menu.cc
-@@ -286,7 +286,7 @@
+@@ -289,7 +289,7 @@
  #include "url/origin.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -6030,7 +6030,7 @@ void RenderViewContextMenu::AppendRevise
+@@ -6081,7 +6081,7 @@ void RenderViewContextMenu::AppendRevise
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

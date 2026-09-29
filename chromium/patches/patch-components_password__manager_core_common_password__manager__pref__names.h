@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
 @@ -63,7 +63,7 @@ inline constexpr char kCredentialProvide
  #endif
@@ -24,7 +24,7 @@ $NetBSD$
  // Integer indicating how many times user saw biometric authentication before
  // filling promo.
  inline constexpr char kBiometricAuthBeforeFillingPromoShownCounter[] =
-@@ -257,7 +257,7 @@ inline constexpr char kPasswordManagerPr
+@@ -262,7 +262,7 @@ inline constexpr char kPasswordChangeWit
  inline constexpr char kPasswordSharingEnabled[] =
      "password_manager.password_sharing_enabled";
  
@@ -33,7 +33,7 @@ $NetBSD$
  // Integer pref indicating how many times relaunch Chrome bubble was dismissed.
  inline constexpr char kRelaunchChromeBubbleDismissedCounter[] =
      "password_manager.relaunch_chrome_bubble_dismissed_counter";
-@@ -290,7 +290,7 @@ inline constexpr char kLastNegativePassw
+@@ -295,7 +295,7 @@ inline constexpr char kLastNegativePassw
      "password_manager.last_negative_password_change_timestamp";
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \

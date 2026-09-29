@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -98,13 +98,13 @@
  #endif  // !BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_DESKTOP_ANDROID)
@@ -22,7 +22,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/skills/skills.mojom.h"
  #include "chrome/browser/ui/webui/skills/skills_ui.h"
  #endif
-@@ -374,7 +374,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -375,7 +375,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -31,7 +31,7 @@ $NetBSD$
    RegisterWebUIControllerInterfaceBinder<discards::mojom::DetailsProvider,
                                           DiscardsUI>(map);
  
-@@ -386,7 +386,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -387,7 +387,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

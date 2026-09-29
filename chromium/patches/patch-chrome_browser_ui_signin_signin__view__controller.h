@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/signin/signin_view_controller.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.h
-@@ -177,7 +177,7 @@ class SigninViewController {
+@@ -174,7 +174,7 @@ class SigninViewController {
    void ShowModalSyncConfirmationDialog(bool is_signin_intercept,
                                         bool is_sync_promo);
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-loader/src/loader/vk_loader_platform.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- third_party/vulkan-loader/src/loader/vk_loader_platform.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/vulkan-loader/src/loader/vk_loader_platform.h
 @@ -29,6 +29,7 @@
  #if defined(__FreeBSD__) || defined(__OpenBSD__)
@@ -14,7 +14,7 @@ $NetBSD$
  #endif
  
  #include <assert.h>
-@@ -360,7 +361,23 @@ static inline char *loader_platform_exec
+@@ -361,7 +362,23 @@ static inline char *loader_platform_exec
  
      return buffer;
  }

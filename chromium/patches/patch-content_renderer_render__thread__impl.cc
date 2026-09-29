@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/render_thread_impl.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ content/renderer/render_thread_impl.cc
-@@ -205,6 +205,8 @@
+@@ -206,6 +206,8 @@
  
  #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -15,7 +15,7 @@ $NetBSD$
  #else
  #include <malloc.h>
  #endif
-@@ -978,7 +980,7 @@ media::GpuVideoAcceleratorFactories* Ren
+@@ -979,7 +981,7 @@ media::GpuVideoAcceleratorFactories* Ren
            viz::command_buffer_metrics::ContextType::MEDIA);
  
    const bool enable_video_decode_accelerator =
@@ -24,7 +24,7 @@ $NetBSD$
        base::FeatureList::IsEnabled(media::kAcceleratedVideoDecodeLinux) &&
  #endif  // BUILDFLAG(IS_LINUX)
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoDecode) &&
-@@ -987,7 +989,7 @@ media::GpuVideoAcceleratorFactories* Ren
+@@ -988,7 +990,7 @@ media::GpuVideoAcceleratorFactories* Ren
         gpu::kGpuFeatureStatusEnabled);
  
    const bool enable_video_encode_accelerator =

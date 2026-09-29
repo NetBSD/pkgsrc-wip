@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
-@@ -268,7 +268,7 @@
+@@ -271,7 +271,7 @@
  #include "chrome/browser/safe_browsing/safe_browsing_service.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/gapis/gapis_service_factory.h"
  #include "components/gapis/gapis_service.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-@@ -277,6 +277,10 @@
+@@ -280,6 +280,10 @@
  #include "chrome/browser/themes/theme_service_factory.h"
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -26,7 +26,7 @@ $NetBSD$
  using bookmarks::BookmarkModel;
  using content::BrowserThread;
  using content::DownloadManagerDelegate;
-@@ -640,7 +644,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -643,7 +647,7 @@ void ProfileImpl::LoadPrefsForNormalStar
    policy_provider = GetUserCloudPolicyManagerAsh();
  #else  // !BUILDFLAG(IS_CHROMEOS)
    {
@@ -35,7 +35,7 @@ $NetBSD$
      if (GetTestingCloudPolicyManagerFactory()) {
        auto result = GetTestingCloudPolicyManagerFactory().Run(this);
        if (std::holds_alternative<
-@@ -659,7 +663,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -662,7 +666,7 @@ void ProfileImpl::LoadPrefsForNormalStar
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
      if (!cloud_policy_manager) {
@@ -44,7 +44,7 @@ $NetBSD$
        ProfileAttributesEntry* entry = nullptr;
        if (g_browser_process->profile_manager()) {
          entry = g_browser_process->profile_manager()
-@@ -852,7 +856,7 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -855,7 +859,7 @@ void ProfileImpl::DoFinalInit(CreateMode
    }
  #endif
  
@@ -53,7 +53,7 @@ $NetBSD$
    // Bootstrap and initialize the Gapis service.
    if (gapis::GapisService* gapis_service =
            GapisServiceFactory::GetForProfile(this)) {
-@@ -948,7 +952,17 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -951,7 +955,17 @@ void ProfileImpl::DoFinalInit(CreateMode
  }
  
  base::FilePath ProfileImpl::last_selected_directory() {

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/optimization_guide/core/optimization_guide_util.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- components/optimization_guide/core/optimization_guide_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/optimization_guide/core/optimization_guide_util.cc
-@@ -37,7 +37,7 @@ optimization_guide::proto::Platform GetP
+@@ -38,7 +38,7 @@ optimization_guide::proto::Platform GetP
    return optimization_guide::proto::PLATFORM_CHROMEOS;
  #elif BUILDFLAG(IS_ANDROID)
    return optimization_guide::proto::PLATFORM_ANDROID;
@@ -15,7 +15,7 @@ $NetBSD$
    return optimization_guide::proto::PLATFORM_LINUX;
  #else
    return optimization_guide::proto::PLATFORM_UNDEFINED;
-@@ -195,7 +195,7 @@ optimization_guide::proto::ChromePlatfor
+@@ -196,7 +196,7 @@ optimization_guide::proto::ChromePlatfor
    return optimization_guide::proto::CHROME_PLATFORM_CHROMEOS;
  #elif BUILDFLAG(IS_ANDROID)
    return optimization_guide::proto::CHROME_PLATFORM_ANDROID;

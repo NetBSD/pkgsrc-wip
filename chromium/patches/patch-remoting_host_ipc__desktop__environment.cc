@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- remoting/host/ipc_desktop_environment.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.cc
 @@ -180,7 +180,7 @@ class IpcDesktopEnvironmentFactory::Core
                                ErrorCode error_code,
@@ -24,16 +24,7 @@ $NetBSD$
    void OnSessionServicesClientConnected(
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
        override;
-@@ -226,7 +226,7 @@ class IpcDesktopEnvironmentFactory::Core
-   // the same email address reconnects, the desktop session will be reused and
-   // the desktop process will be requested to send a new desktop pipe.
-   // TODO: yuweih - see if it makes sense to enable it on Windows.
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   bool persist_desktop_sessions_ = true;
- #else
-   bool persist_desktop_sessions_ = false;
-@@ -410,7 +410,7 @@ void IpcDesktopEnvironmentFactory::Core:
+@@ -351,7 +351,7 @@ void IpcDesktopEnvironmentFactory::Core:
                           error_details, error_location);
  }
  
@@ -42,7 +33,7 @@ $NetBSD$
  void IpcDesktopEnvironmentFactory::Core::OnSessionServicesClientConnected(
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
    OnSessionServicesClientConnected(GetEventsReceivers().current_context(),
-@@ -463,7 +463,7 @@ void IpcDesktopEnvironmentFactory::Core:
+@@ -397,7 +397,7 @@ void IpcDesktopEnvironmentFactory::Core:
    }
  }
  
@@ -51,7 +42,7 @@ $NetBSD$
  void IpcDesktopEnvironmentFactory::Core::OnSessionServicesClientConnected(
      int terminal_id,
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
-@@ -588,7 +588,7 @@ void IpcDesktopEnvironmentFactory::OnTer
+@@ -511,7 +511,7 @@ void IpcDesktopEnvironmentFactory::OnTer
                                  error_location);
  }
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
-@@ -220,7 +220,7 @@ class VideoEncodeAcceleratorAdapter::Map
+@@ -266,7 +266,7 @@ class VideoEncodeAcceleratorAdapter::Map
      DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
      DCHECK(gfx::Rect(coded_size_).Contains(gfx::Rect(visible_size)));
  
@@ -15,7 +15,7 @@ $NetBSD$
      const auto buffer_usage =
          gfx::BufferUsage::VEA_READ_CAMERA_AND_CPU_READ_WRITE;
  #else
-@@ -546,7 +546,7 @@ void VideoEncodeAcceleratorAdapter::Init
+@@ -597,7 +597,7 @@ void VideoEncodeAcceleratorAdapter::Init
  #endif  // BUILDFLAG(USE_PROPRIETARY_CODECS)
  
    auto storage_type = VideoEncodeAccelerator::Config::StorageType::kShmem;

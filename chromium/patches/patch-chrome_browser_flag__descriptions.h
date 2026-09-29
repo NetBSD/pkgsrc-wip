@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/flag_descriptions.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -8847,6 +8847,20 @@ inline constexpr char kAntivirusTelemetr
+@@ -9012,6 +9012,20 @@ inline constexpr char kAntivirusTelemetr
      "Enables antivirus product info to be included in Safe Browsing download "
      "pings.";
  

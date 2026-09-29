@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/it2me/it2me_native_messaging_host_main.cc
 @@ -30,7 +30,7 @@
  #include "remoting/host/resources.h"
@@ -25,7 +25,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX)
  
 @@ -83,7 +83,7 @@ int It2MeNativeMessagingHostMain(int arg
-   base::ScopedMemoryConsumerRegistry<remoting::MemoryConsumerRegistry>
+   base::ScopedMemoryConsumerRegistry<base::DummyMemoryConsumerRegistry>
        memory_consumer_registry;
  
 -#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(REMOTING_USE_X11)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_clipboard_ozone.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- ui/ozone/platform/x11/x11_clipboard_ozone.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/ozone/platform/x11/x11_clipboard_ozone.cc
 @@ -14,7 +14,7 @@
  #include "ui/base/clipboard/clipboard_constants.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/strings/string_view_util.h"
  #include "ui/base/clipboard/clipboard_util_linux.h"
  #include "ui/gfx/x/atom_cache.h"
-@@ -47,7 +47,7 @@ void X11ClipboardOzone::RequestClipboard
+@@ -54,7 +54,7 @@ void X11ClipboardOzone::RequestClipboard
      PlatformClipboard::RequestDataClosure callback) {
    DCHECK(!callback.is_null());
  
@@ -24,7 +24,7 @@ $NetBSD$
    if (mime_type == kMimeTypeUriList) {
      auto uri_list_atoms = helper_->GetAtomsForFormat(
          ClipboardFormatType::CustomPlatformType(kMimeTypeUriList));
-@@ -78,7 +78,7 @@ void X11ClipboardOzone::RequestClipboard
+@@ -85,7 +85,7 @@ void X11ClipboardOzone::RequestClipboard
                           std::move(callback)));
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  void X11ClipboardOzone::OnPortalKeyRead(
      PlatformClipboard::RequestDataClosure callback,
      SelectionData selection_data) {
-@@ -134,7 +134,7 @@ void X11ClipboardOzone::OnSelectionChang
+@@ -145,7 +145,7 @@ void X11ClipboardOzone::OnSelectionChang
      clipboard_changed_callback_.Run(buffer);
  }
  

@@ -4,23 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc
-@@ -36,7 +36,7 @@
+@@ -39,7 +39,7 @@
  #include "chrome/browser/enterprise/reporting/reporting_delegate_factory_desktop.h"
  #endif
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/enterprise/reporting/browser_launch/browser_launch_event_controller_factory_desktop.h"
- #include "chrome/browser/enterprise/reporting/saas_usage/saas_usage_reporting_delegate_factory_desktop.h"
- #include "components/enterprise/browser/reporting/reporting_features.h"
-@@ -119,7 +119,7 @@ void CloudProfileReportingService::Creat
- #endif
-   report_scheduler_ = std::make_unique<ReportScheduler>(std::move(params));
+ #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
+ 
+@@ -126,7 +126,7 @@ void CloudProfileReportingService::Creat
+         "profile", saas_usage_reporting_delegate_factory.get());
+   }
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (base::FeatureList::IsEnabled(kSaasUsageReporting)) {
-     auto saas_usage_reporting_delegate_factory =
-         SaasUsageReportingDelegateFactoryDesktop::CreateForProfile(profile_);
+   if (base::FeatureList::IsEnabled(kBrowserLaunchMetadataReporting)) {
+     browser_launch_controller_ =
+         BrowserLaunchEventControllerFactoryDesktop::CreateForProfile(profile_);

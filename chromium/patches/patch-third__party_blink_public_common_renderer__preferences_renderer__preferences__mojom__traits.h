@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-09-17 03:47:47.000000000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h
-@@ -130,7 +130,7 @@ struct BLINK_COMMON_EXPORT
-     return data.enable_encrypted_media;
+@@ -131,7 +131,7 @@ struct BLINK_COMMON_EXPORT
    }
  
--#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    static const bool& use_overlay_scrollbar(
        const ::blink::RendererPreferences& data) {
      return data.use_overlay_scrollbar;
-@@ -182,7 +182,7 @@ struct BLINK_COMMON_EXPORT
+@@ -183,7 +183,7 @@ struct BLINK_COMMON_EXPORT
      return data.send_subresource_notification;
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    static const std::string& system_font_family_name(
        const ::blink::RendererPreferences& data) {
      return data.system_font_family_name;
-@@ -196,7 +196,7 @@ struct BLINK_COMMON_EXPORT
+@@ -197,7 +197,7 @@ struct BLINK_COMMON_EXPORT
    }
  #endif
  

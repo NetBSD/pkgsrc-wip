@@ -4,37 +4,35 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- base/rand_util_posix.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ base/rand_util_posix.cc
-@@ -24,7 +24,7 @@
- #include "build/build_config.h"
- #include "third_party/boringssl/src/include/openssl/rand.h"
+@@ -31,7 +31,7 @@
+ #include "base/system/sys_info.h"
+ #endif  // BUILDFLAG(IS_MAC)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
  #include "third_party/lss/linux_syscall_support.h"
- #elif BUILDFLAG(IS_MAC)
- #include <sys/random.h>
-@@ -36,6 +36,7 @@ namespace base {
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
- namespace {
+@@ -41,6 +41,7 @@ namespace {
+ 
+ #if !BUILDFLAG(IS_APPLE)
  
 +#if !BUILDFLAG(IS_BSD)
  #if BUILDFLAG(IS_AIX)
  // AIX has no 64-bit support for O_CLOEXEC.
  static constexpr int kOpenFlags = O_RDONLY;
-@@ -60,8 +61,9 @@ class URandomFd {
-  private:
-   const int fd_;
- };
-+#endif
+@@ -68,7 +69,7 @@ class URandomFd {
+ 
+ #endif  // !BUILDFLAG(IS_APPLE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)) && !BUILDFLAG(IS_BSD)
  
  bool KernelSupportsGetRandom() {
    return base::SysInfo::KernelVersionNumber::Current() >=
-@@ -114,6 +116,7 @@ bool UseBoringSSLForRandBytes() {
+@@ -121,6 +122,7 @@ bool UseBoringSSLForRandBytes() {
  namespace {
  
  void RandBytesInternal(span<uint8_t> output, bool avoid_allocation) {
@@ -42,25 +40,24 @@ $NetBSD$
    // The BoringSSL experiment takes priority over everything else.
    if (!avoid_allocation && internal::UseBoringSSLForRandBytes()) {
      // BoringSSL's RAND_bytes always returns 1. Any error aborts the program.
-@@ -146,6 +149,9 @@ void RandBytesInternal(span<uint8_t> out
-   const int urandom_fd = GetUrandomFD();
+@@ -151,8 +153,10 @@ void RandBytesInternal(span<uint8_t> out
    const bool success = ReadFromFD(urandom_fd, as_writable_chars(output));
    CHECK(success);
-+#else
+ #endif  // BUILDFLAG(IS_MAC)
++#endif
 +  arc4random_buf(output.data(), output.size());
 +#endif
  }
- 
+-
  }  // namespace
-@@ -165,9 +171,11 @@ void RandBytes(span<uint8_t> output) {
+ 
+ namespace internal {
+@@ -170,7 +174,7 @@ void RandBytes(span<uint8_t> output) {
    RandBytesInternal(output, /*avoid_allocation=*/false);
  }
  
-+#if !BUILDFLAG(IS_BSD)
+-#if !BUILDFLAG(IS_APPLE)
++#if !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD)
  int GetUrandomFD() {
    static NoDestructor<URandomFd> urandom_fd;
    return urandom_fd->fd();
- }
-+#endif
- 
- }  // namespace base

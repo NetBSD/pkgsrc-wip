@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -69,7 +69,11 @@ const size_t kMaxUnusedReadBufferCapacit
  // Limit on the number of handles that may be received per Mojo message.
@@ -27,7 +27,7 @@ $NetBSD$
  
  namespace {
  
-@@ -1311,7 +1315,7 @@ bool Channel::OnControlMessage(Message::
+@@ -1305,7 +1309,7 @@ bool Channel::OnControlMessage(Message::
  }
  
  // Currently only CrOs, Linux, and Android support upgrades.

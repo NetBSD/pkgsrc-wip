@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_frame_manager.cc
 @@ -5,7 +5,9 @@
  #include "ui/ozone/platform/wayland/host/wayland_frame_manager.h"
@@ -16,7 +16,7 @@ $NetBSD$
  
  #include <cstdint>
  #include <variant>
-@@ -468,8 +470,10 @@ std::optional<bool> WaylandFrameManager:
+@@ -490,8 +492,10 @@ std::optional<bool> WaylandFrameManager:
    surface->UpdateBufferDamageRegion(
        gfx::ToEnclosingRectIgnoringError(surface_damage));
  
@@ -27,7 +27,7 @@ $NetBSD$
  
    bool needs_commit = false;
  
-@@ -501,6 +505,9 @@ std::optional<bool> WaylandFrameManager:
+@@ -523,6 +527,9 @@ std::optional<bool> WaylandFrameManager:
        case WaylandBufferHandle::SyncMethod::kNone:
          break;
        case WaylandBufferHandle::SyncMethod::kSyncobj:
@@ -37,7 +37,7 @@ $NetBSD$
          surface->RequestExplicitRelease(
              base::BindOnce(&WaylandFrameManager::OnExplicitBufferRelease,
                             weak_factory_.GetWeakPtr(), surface));
-@@ -508,6 +515,9 @@ std::optional<bool> WaylandFrameManager:
+@@ -530,6 +537,9 @@ std::optional<bool> WaylandFrameManager:
        case WaylandBufferHandle::SyncMethod::kDMAFence:
          [[fallthrough]];
        case WaylandBufferHandle::SyncMethod::kImplicit:
@@ -47,7 +47,7 @@ $NetBSD$
          buffer_handle->set_buffer_released_callback(
              base::BindOnce(&WaylandFrameManager::OnWlBufferRelease,
                             weak_factory_.GetWeakPtr(), surface),
-@@ -766,8 +776,10 @@ void WaylandFrameManager::OnExplicitBuff
+@@ -788,8 +798,10 @@ void WaylandFrameManager::OnExplicitBuff
  
        if (fence.is_valid()) {
          if (frame->merged_release_fence_fd.is_valid()) {
@@ -58,7 +58,7 @@ $NetBSD$
          } else {
            frame->merged_release_fence_fd = std::move(fence);
          }
-@@ -805,8 +817,10 @@ void WaylandFrameManager::OnWlBufferRele
+@@ -827,8 +839,10 @@ void WaylandFrameManager::OnWlBufferRele
  
          if (fence.is_valid()) {
            if (frame->merged_release_fence_fd.is_valid()) {

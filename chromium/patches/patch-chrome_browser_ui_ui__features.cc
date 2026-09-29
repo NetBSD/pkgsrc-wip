@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -102,7 +102,7 @@ bool IsWebuiRefresh2026Enabled() {
+@@ -104,7 +104,7 @@ bool IsWebuiRefresh2026Enabled() {
           base::FeatureList::IsEnabled(kWebuiRefresh2026);
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kDseIntegrity, base::FEATURE_ENABLED_BY_DEFAULT);
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
-@@ -337,7 +337,7 @@ BASE_FEATURE(kTabsFromOtherDevicesSidePa
+@@ -357,7 +357,7 @@ BASE_FEATURE(kTabsFromOtherDevicesSidePa
  BASE_FEATURE(kNonMilestoneUpdateToast, base::FEATURE_ENABLED_BY_DEFAULT);
  
  

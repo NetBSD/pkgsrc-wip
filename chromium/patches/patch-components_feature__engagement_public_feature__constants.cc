@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -32,7 +32,7 @@ bool IsOnDeviceStorageEnabled() {
  }
@@ -15,7 +15,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -976,7 +976,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
+@@ -1003,7 +1003,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
  BASE_FEATURE(kIPHAutofillAtMemoryFeature,
               "IPH_AutofillAtMemory",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1042,7 +1042,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
+@@ -1072,7 +1072,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
  // This can be enabled by default, as the DesktopPWAsLinkCapturing
  // flag is needed for the IPH linked to this feature to work, and
  // use-cases to show the IPH are guarded by that flag.
-@@ -1059,7 +1059,7 @@ BASE_FEATURE(kIPHDesktopPWAsLinkCapturin
+@@ -1089,7 +1089,7 @@ BASE_FEATURE(kIPHDesktopPWAsLinkCapturin
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
  

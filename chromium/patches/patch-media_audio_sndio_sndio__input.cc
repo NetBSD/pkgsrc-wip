@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/sndio_input.cc.orig	2026-09-26 10:45:15.669090197 +0000
+--- media/audio/sndio/sndio_input.cc.orig	2026-09-26 18:26:00.502825096 +0000
 +++ media/audio/sndio/sndio_input.cc
-@@ -0,0 +1,202 @@
+@@ -0,0 +1,203 @@
 +// Copyright 2013 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -200,8 +200,9 @@ $NetBSD$
 +      params.sample_rate());
 +
 +    // push into bus
-+    audio_bus->FromInterleaved<SignedInt16SampleTypeTraits>(reinterpret_cast<int16_t*>(buffer), nframes);
-+
++    audio_bus->FromInterleaved<SignedInt16SampleTypeTraits>(
++        base::span<const int16_t>(reinterpret_cast<int16_t*>(buffer),
++                                   static_cast<size_t>(nframes * params.channels())));
 +
 +    // invoke callback
 +    callback->OnData(audio_bus.get(), base::TimeTicks::Now() - delay, 1., {});

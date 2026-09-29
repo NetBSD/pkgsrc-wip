@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -39,7 +39,7 @@
  #include "ui/gfx/x/connection.h"
@@ -36,7 +36,7 @@ $NetBSD$
      // The toolkit theme has the highest priority.
      LinuxUi::instance() ? LinuxUi::instance()->GetCursorThemeName()
                          : std::string(),
-@@ -428,7 +432,7 @@ uint32_t XCursorLoader::GetPreferredCurs
+@@ -430,7 +434,7 @@ uint32_t XCursorLoader::GetPreferredCurs
      return size;
    }
  

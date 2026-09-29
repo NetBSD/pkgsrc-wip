@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/first_run_flow_controller.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/browser/ui/views/profiles/first_run_flow_controller.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/views/profiles/first_run_flow_controller.cc
-@@ -85,7 +85,7 @@
+@@ -86,7 +86,7 @@
  #include "chrome/installer/util/shell_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/check_deref.h"
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/global_features.h"
-@@ -1179,7 +1179,7 @@ bool FirstRunFlowController::AreEffectsE
+@@ -1230,7 +1230,7 @@ bool FirstRunFlowController::AreEffectsE
  }
  
  void FirstRunFlowController::MaybeTriggerHatsSurvey() {

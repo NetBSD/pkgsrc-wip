@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/renderer/chrome_content_renderer_client.cc
-@@ -187,7 +187,7 @@
+@@ -188,7 +188,7 @@
  #include "v8/include/v8-isolate.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -437,7 +437,7 @@ void ChromeContentRendererClient::Render
+@@ -456,7 +456,7 @@ void ChromeContentRendererClient::Render
    WebSecurityPolicy::RegisterURLSchemeAsExtension(
        WebString::FromAscii(extensions::kExtensionScheme));
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD$
    WebSecurityPolicy::RegisterURLSchemeAsIsolatedApp(
        WebString::FromAscii(webapps::kIsolatedAppScheme));
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-@@ -502,7 +502,7 @@ void ChromeContentRendererClient::Render
+@@ -521,7 +521,7 @@ void ChromeContentRendererClient::Render
        WebString::FromAscii(chrome::kChromeSearchScheme));
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
    // IWAs can be enabled by either the feature flag or by enterprise
    // policy. In either case the kEnableIsolatedWebAppsInRenderer flag is passed
    // to the renderer process.
-@@ -557,7 +557,7 @@ void ChromeContentRendererClient::Render
+@@ -576,7 +576,7 @@ void ChromeContentRendererClient::Render
    WebSecurityPolicy::RegisterURLSchemeAsDisplayIsolated(dom_distiller_scheme);
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

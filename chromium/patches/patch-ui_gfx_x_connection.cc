@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/connection.cc.orig	2026-09-17 03:47:47.000000000 +0000
+--- ui/gfx/x/connection.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/gfx/x/connection.cc
-@@ -410,7 +410,7 @@ bool Connection::HasNextEvent() {
+@@ -389,7 +389,7 @@ bool Connection::HasNextEvent() {
      }
      events_.pop_front();
    }

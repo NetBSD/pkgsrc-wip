@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2026-09-17 03:47:47.000000000 +0000
-+++ chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc
-@@ -54,7 +54,7 @@ void AnalysisServiceSettings::ParseVerif
+--- components/enterprise/connectors/core/analysis_service_settings_base.cc.orig	2026-09-22 00:09:16.000000000 +0000
++++ components/enterprise/connectors/core/analysis_service_settings_base.cc
+@@ -283,7 +283,7 @@ void AnalysisServiceSettingsBase::ParseV
    const char* verification_key = kKeyWindowsVerification;
  #elif BUILDFLAG(IS_MAC)
    const char* verification_key = kKeyMacVerification;
