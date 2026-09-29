@@ -11,7 +11,7 @@ $NetBSD$
    not(all(target_os = "linux", target_env = "ohos")),
    not(all(target_os = "freebsd", target_arch = "aarch64")),
 +  not(all(target_os = "openbsd", target_arch = "aarch64")),
-+  not(all(target_os = "netbsd", target_arch = "evbarm")),
++  not(all(target_os = "netbsd", target_arch = "aarch64")),
    not(debug_assertions)
  ))]
  #[global_allocator]
