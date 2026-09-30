@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2026/05/07 13:17:16 wiz Exp $
+$NetBSD: distinfo,v 1.52 2026/07/03 20:58:49 he Exp $
 
 BLAKE2s (rust-bin-1.98.1/rust-1.98.1-aarch64-apple-darwin.tar.gz) = f9305741cccb8a0078a7d9d1eef36bf255a8cfb1a01a89f91fbb0f71c8615aa0
 SHA512 (rust-bin-1.98.1/rust-1.98.1-aarch64-apple-darwin.tar.gz) = 9bb59c9b47cbef360fdc43067f21386240b5f8261c32d9c1fc4408e49f11a7afbd3461698f129acc050eab4a0cc1d186bd3cab1e8b5dd109f0e8f45ea1297a07

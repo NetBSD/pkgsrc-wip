@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2026/05/07 13:17:16 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/07/03 20:58:49 he Exp $
 
 DISTNAME=	rust-1.98.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
