@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ggml-org/whisper.cpp
 COMMENT=	OpenAI's Whisper LLM inference in C/C++
 LICENSE=	mit
 
-USE_TOOLS+=		git pkg-config
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
@@ -28,7 +28,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWHISPER_USE_SYSTEM_GGML=ON
 
 .include "../../devel/cmake/build.mk"
 #.include "../../devel/SDL2/buildlink3.mk"
-.include "../../multimedia/ffmpeg8/buildlink3.mk"
+.include "../../multimedia/ffmpeg9/buildlink3.mk"
 .include "../../math/ggml/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
