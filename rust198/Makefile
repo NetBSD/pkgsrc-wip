@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.360 2026/05/14 16:41:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.366 2026/09/29 06:06:18 wiz Exp $
 
 DISTNAME=	rustc-1.98.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}

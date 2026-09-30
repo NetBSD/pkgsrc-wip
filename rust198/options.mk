@@ -69,8 +69,7 @@ GCC_REQD+=	14
 
 # Ref. src/bootstrap/src/core/build_steps/llvm.rs / check_llvm_version()
 # rust now (1.98.0) requires LLVM >= 21.x
-BUILDLINK_API_DEPENDS.llvm+=    llvm>=21.1.0
-BUILDLINK_ABI_DEPENDS.llvm+=    llvm>=21.1.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=21.1.0
 
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
