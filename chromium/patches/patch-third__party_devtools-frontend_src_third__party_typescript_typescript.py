@@ -6,13 +6,13 @@ $NetBSD$
 
 --- third_party/devtools-frontend/src/third_party/typescript/typescript.py.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/devtools-frontend/src/third_party/typescript/typescript.py
-@@ -10,6 +10,9 @@ import os
+@@ -18,6 +18,9 @@ def GetBinaryPath():
+     relative = {
+         'Darwin': (darwin_path, 'src', 'lib', 'tsc'),
+         'Linux': ('linux-amd64', 'src', 'lib', 'tsc'),
++        'OpenBSD': ('linux-amd64', 'src', 'lib', 'tsc'),
++        'FreeBSD': ('linux-amd64', 'src', 'lib', 'tsc'),
++        'NetBSD': ('linux-amd64', 'src', 'lib', 'tsc'),
+         'Windows': ('windows-amd64', 'src', 'lib', 'tsc.exe'),
+     }[platform.system()]
  
- 
- def GetBinaryPath():
-+    if platform.system() in ['OpenBSD', 'FreeBSD', 'NetBSD']:
-+        return "tsc"
-+
-     if platform.machine() == 'arm64':
-         darwin_path = 'mac-arm64'
-     else:
