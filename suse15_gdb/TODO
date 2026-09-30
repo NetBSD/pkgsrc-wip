@@ -1,0 +1,2 @@
+Missing ptrace support in NetBSD Linux emulation for x86_64:
+https://gnats.netbsd.org/60826
