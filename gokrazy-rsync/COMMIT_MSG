@@ -1,0 +1,6 @@
+net/gokrazy-rsync: Add gokrazy-rsync version 0.3.8
+
+gokrazy-rsync is an Rsync program and reusable library implemented in
+the Go programming language, originally as part of the gokrazy Go
+appliance platform project. gokrazy-rsync is (wire-)compatible with the
+original "tridge" Rsync.

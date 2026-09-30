@@ -1,0 +1,24 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.mod
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.zip
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/@v/v0.0.0-20191104093116-d3cd4ed1dbcf.mod
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/@v/v0.0.0-20191104093116-d3cd4ed1dbcf.zip
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.mod
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.zip
+GO_MODULE_FILES+=	github.com/google/renameio/v2/@v/v2.0.2.mod
+GO_MODULE_FILES+=	github.com/google/renameio/v2/@v/v2.0.2.zip
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.mod
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.zip
+GO_MODULE_FILES+=	github.com/landlock-lsm/go-landlock/@v/v0.0.0-20250303204525-1544bccde3a3.mod
+GO_MODULE_FILES+=	github.com/landlock-lsm/go-landlock/@v/v0.0.0-20250303204525-1544bccde3a3.zip
+GO_MODULE_FILES+=	github.com/mmcloughlin/md4/@v/v0.1.2.mod
+GO_MODULE_FILES+=	github.com/mmcloughlin/md4/@v/v0.1.2.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.46.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.46.0.zip
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.19.0.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.19.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.39.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.39.0.zip
+GO_MODULE_FILES+=	kernel.org/pub/linux/libs/security/libcap/psx/@v/v1.2.70.mod
+GO_MODULE_FILES+=	kernel.org/pub/linux/libs/security/libcap/psx/@v/v1.2.70.zip
