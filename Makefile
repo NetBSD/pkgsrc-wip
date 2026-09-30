@@ -1408,6 +1408,7 @@ SUBDIR+=	go-jira
 SUBDIR+=	go-jsonnet
 SUBDIR+=	go-jsonparser
 SUBDIR+=	go-junit-report
+SUBDIR+=	gokrazy-rsync
 SUBDIR+=	go-ksuid
 SUBDIR+=	go-makezero
 SUBDIR+=	go-mewn
