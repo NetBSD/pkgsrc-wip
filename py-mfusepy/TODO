@@ -1,3 +1,5 @@
   - prepare COMMIT_MSG
-  - resolve ioctl test failure
-  - test more
+  - some patches are from upstream pending PRs; address them upstream.
+  - add missing test dependencies
+  - run tests
+
