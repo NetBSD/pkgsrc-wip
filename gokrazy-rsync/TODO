@@ -1,0 +1,3 @@
+Build problem on NetBSD 11.99.8/x86_64:
+
+internal/receiver/generator.go:220:13: undefined: symlink
