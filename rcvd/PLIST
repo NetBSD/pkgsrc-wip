@@ -1,8 +1,6 @@
 @comment $NetBSD$
 bin/rcvd
 man/man1/rcvd.1
-share/doc/rcvd/examples/flagship-dualmode.toml
-share/doc/rcvd/examples/mode1-forwarder-3providers.toml
-share/doc/rcvd/examples/mode2-doh-service.toml
-share/examples/rc.d/rcvd
-share/examples/rcvd/rcvd.toml
+share/examples/rcvd/flagship-dualmode.toml
+share/examples/rcvd/mode1-forwarder-3providers.toml
+share/examples/rcvd/mode2-doh-service.toml

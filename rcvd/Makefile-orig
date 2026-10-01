@@ -17,26 +17,23 @@ GO_VERSION_REQD=	127
 .include "go-modules.mk"
 
 # rcvd runs unprivileged and needs a dedicated user/group.
-
-BUILD_DEFS+=	VARBASE RCVD_USER RCVD_GROUP
-
-RCVD_USER?=	rcvd
-RCVD_GROUP?=	rcvd
-
-PKG_GROUPS+=			${RCVD_GROUP}
-PKG_USERS+=			${RVCD_USER}:${RCVD_GROUP}
-PKG_GECOS.${KRESD_USER}=	rcvd DNS daemon
-PKG_GROUPS_VARS+=		RCVD_GROUP
-PKG_USERS_VARS=			RCVD_USER
+PKG_GROUPS=	rcvd
+PKG_USERS=	rcvd:rcvd
+PKG_GECOS.rcvd=	rcvd DNS daemon
+PKG_HOME.rcvd=	/nonexistent
+PKG_SHELL.rcvd=	${NOLOGIN}
 
 RCD_SCRIPTS=	rcvd
 
+BUILD_DEFS+=	VARBASE
+
 # Config and log directories, owned by the rcvd user.
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/rcvd ${RCVD_USER} ${RCVD_GROUP} 0755
-OWN_DIRS_PERMS+=	${VARBASE}/log/rcvd ${RCVD_USER} ${RCVD_GROUP} 0755
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/rcvd rcvd rcvd 0755
+OWN_DIRS_PERMS+=	${VARBASE}/log/rcvd rcvd rcvd 0755
 
 # The example forwarder profile becomes the default config on first install.
-CONF_FILES=	${PREFIX}/share/examples/rcvd/mode1-forwarder-3providers.toml ${PKG_SYSCONFDIR}/rcvd/rcvd.toml
+EGDIR=		${PREFIX}/share/examples/rcvd
+CONF_FILES=	${EGDIR}/rcvd.toml ${PKG_SYSCONFDIR}/rcvd/rcvd.toml
 
 # Stamp version, date, and source into the binary (parity with the release
 # recipe). buildDate is derived from SOURCE_DATE_EPOCH so the build stays
@@ -58,13 +55,17 @@ GO_BUILD_PATTERN=	./cmd/rcvd
 # rcvd is a pure-Go static binary (no cgo), matching the upstream release recipe.
 MAKE_ENV+=	CGO_ENABLED=0
 
-INSTALLATION_DIRS+=	share/examples/rcvd ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${EGDIR} share/doc/rcvd/examples ${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/etc/mode1-forwarder-3providers.toml ${DESTDIR}${PREFIX}/share/examples/rcvd/
-	${INSTALL_DATA} ${WRKSRC}/etc/flagship-dualmode.toml ${DESTDIR}${PREFIX}/share/examples/rcvd/
-	${INSTALL_DATA} ${WRKSRC}/etc/mode2-doh-service.toml ${DESTDIR}${PREFIX}/share/examples/rcvd/
-	${INSTALL_MAN} ${WRKSRC}/man/rcvd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rcvd.1
+	${INSTALL_DATA} ${WRKSRC}/etc/mode1-forwarder-3providers.toml \
+	${DESTDIR}${EGDIR}/rcvd.toml
+.for f in flagship-dualmode mode1-forwarder-3providers mode2-doh-service
+	${INSTALL_DATA} ${WRKSRC}/etc/${f}.toml \
+	${DESTDIR}${PREFIX}/share/doc/rcvd/examples/${f}.toml
+.endfor
+	${INSTALL_MAN} ${WRKSRC}/man/rcvd.1 \
+	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rcvd.1
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
