@@ -69,3 +69,5 @@ Size (kernel.org_pub_linux_libs_security_libcap_psx_@v_v1.2.70.mod) = 62 bytes
 BLAKE2s (kernel.org_pub_linux_libs_security_libcap_psx_@v_v1.2.70.zip) = 9075858c03e166370efc1592b92089d3ed2d4d26a73a2cdca48f0e031077c480
 SHA512 (kernel.org_pub_linux_libs_security_libcap_psx_@v_v1.2.70.zip) = 46bc4529ffc0c6f976317fb20aacaee144013d644e84d286ff557499dca5c78aa49059fb369f3f22961ec111561a869cd9c10dbd1f7351c5e1de793a748b49fa
 Size (kernel.org_pub_linux_libs_security_libcap_psx_@v_v1.2.70.zip) = 23445 bytes
+SHA1 (patch-internal_receiver_generatorsymlink.go) = f13f4d13004285964cbaee3ec33bb74bb8967294
+SHA1 (patch-internal_rsynctest_rsynctest__unix.go) = b2aaa529e2fd8983e00e7ae9b45b5854b3d2de20
