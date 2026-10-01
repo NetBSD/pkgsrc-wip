@@ -5902,7 +5902,6 @@ SUBDIR+=	twintk
 SUBDIR+=	twitmail
 SUBDIR+=	twittering-mode-git
 SUBDIR+=	txt2tags
-SUBDIR+=	typescript
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
 SUBDIR+=	u-boot
