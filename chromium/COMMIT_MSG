@@ -1,7 +1,41 @@
-chromium: update to 154.0.8037.57
+chromium: update to 154.0.8037.97
 
-* 154.0.8037.57
-This update includes 108 security fixes. Please see the Chrome Security Page for more information.
+* 154.0.8037.92
+This update includes 32 security fixes. Please see the Chrome Security Page for more information.
 
-See: https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0856730748.html
+[TBD][551673541] Critical CVE-2026-102331: Buffer overflow in ANGLE. Reported by @mfx on 2026-08-24
+[N/A][517312707] High CVE-2026-102317: Improper privilege management in Mojo. Reported by Google on 2026-05-28
+[TBD][551668264] High CVE-2026-102312: UI misrepresentation in Omnibox. Reported by jodyritonga on 2026-08-24
+[N/A][556789073] High CVE-2026-102313: Uninitialized resource in ANGLE. Reported by Google on 2026-09-03
+[TBD][556908674] High CVE-2026-102299: Type confusion in V8. Reported by Andrew Boni on 2026-09-04
+[N/A][556926296] High CVE-2026-102306: Use after free in Bluetooth. Reported by Google on 2026-09-04
+[N/A][556959073] High CVE-2026-102307: Uninitialized resource in Dawn. Reported by Google on 2026-09-04
+[TBD][559266114] High CVE-2026-102323: Type confusion in V8. Reported by OpenAI Codex Security (amyb) on 2026-09-10
+[N/A][559727039] High CVE-2026-102303: Uninitialized resource in GPU. Reported by Google on 2026-09-10
+[N/A][559737160] High CVE-2026-102311: Uninitialized resource in GPU. Reported by Google on 2026-09-10
+[TBD][560062638] High CVE-2026-102300: Uninitialized resource in WebGPU. Reported by Arni Hardarson (Neonix Security) on 2026-09-11
+[TBD][560233248] High CVE-2026-102326: Type confusion in V8. Reported by OpenAI Codex Security (amyb) on 2026-09-11
+[TBD][560238698] High CVE-2026-102316: Use after free in Views. Reported by Xinyang Ge on 2026-09-11
+[TBD][560251736] High CVE-2026-102304: Use after free in Passwords. Reported by Xinyang Ge on 2026-09-11
+[TBD][560536732] High CVE-2026-102328: Type confusion in V8. Reported by OpenAI Codex Security (amyb) on 2026-09-12
+[TBD][560867085] High CVE-2026-102309: Use after free in FullScreen. Reported by sean geofrey on 2026-09-13
+[N/A][561994362] High CVE-2026-102325: Uninitialized resource in Skia. Reported by Google on 2026-09-15
+[N/A][561997480] High CVE-2026-102308: Use after free in Views. Reported by Google on 2026-09-15
+[N/A][562004351] High CVE-2026-102301: Out of bounds write in GPU. Reported by Google on 2026-09-15
+[N/A][562042411] High CVE-2026-102319: Uninitialized resource in GPU. Reported by Google on 2026-09-15
+[TBD][562174487] High CVE-2026-102324: Use after free in PictureInPicture. Reported by Blockian Creator of Kritt and Open-Kritt on 2026-09-15
+[N/A][562279351] High CVE-2026-102318: Out of bounds read in WebGL. Reported by Google on 2026-09-16
+[TBD][563297615] High CVE-2026-102329: Cross-site scripting in WebUI. Reported by chipsec on 2026-09-18
+[N/A][563351482] High CVE-2026-102315: Uninitialized resource in Media. Reported by Google on 2026-09-18
+[N/A][563716534] High CVE-2026-102302: Buffer overflow in V8. Reported by Google on 2026-09-19
+[TBD][565328105] High CVE-2026-102321: Type confusion in V8. Reported by Taisic Yun (@taisic_) of Theori, with Xint on 2026-09-23
+[TBD][554038924] Medium CVE-2026-102320: Missing authorization in CORS. Reported by Anonymous on 2026-08-28
+[$1,000][477726837] Low CVE-2026-102310: Missing authorization in Payments. Reported by Autodidact on 2026-01-22
+[N/A][496212975] Low CVE-2026-102327: Incorrect authorization in WebView. Reported by Google on 2026-03-25
+[N/A][498793976] Low CVE-2026-102330: Incorrect authorization in SiteIsolation. Reported by Google on 2026-04-02
+[N/A][514059780] Low CVE-2026-102314: UI misrepresentation in TabStrip. Reported by Google on 2026-05-17
+[N/A][533021953] Low CVE-2026-102305: UI misrepresentation in SignIn. Reported by Google on 2026-07-09
 
+* 154.0.8037.97
+
+See: https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop.html
