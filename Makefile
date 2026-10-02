@@ -3260,7 +3260,6 @@ SUBDIR+=	php-zmq
 SUBDIR+=	pico-web-database
 SUBDIR+=	picolisp
 SUBDIR+=	picolisp64
-SUBDIR+=	picom
 SUBDIR+=	picosat
 SUBDIR+=	picprog
 SUBDIR+=	pidgin-evolution
