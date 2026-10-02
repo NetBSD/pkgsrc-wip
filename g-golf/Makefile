@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	g-golf-0.8.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=g-golf/}
 
@@ -10,6 +11,9 @@ COMMENT=	Guile Object Library for GNOME
 LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=	yes
+# Upstream doesn't document that gmake is required.
+# Reported by email 20261002.
+USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config makeinfo
 
 CONFIGURE_ARGS+=	--with-guile-site=yes

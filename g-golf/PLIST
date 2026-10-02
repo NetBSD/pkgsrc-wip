@@ -190,4 +190,6 @@ guile/3.0/share/guile/site/g-golf/support/utils.scm
 info/g-golf.info
 lib/libg-golf.la
 lib/pkgconfig/g-golf-1.0.pc
-@pkgdir share/doc/g-golf
+share/doc/g-golf/css/manual.css
+share/doc/g-golf/images/hello-world-1.png
+share/doc/g-golf/images/hello-world-2.png
