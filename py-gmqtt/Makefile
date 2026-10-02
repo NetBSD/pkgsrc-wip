@@ -13,6 +13,8 @@ LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+
 TEST_DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.3.0:../../devel/py-atomicwrites
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=19.1.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-codecov>=2.0.15:../../wip/py-codecov
