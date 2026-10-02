@@ -2137,6 +2137,7 @@ SHA1 (patch-third__party_openscreen_src_cast_common_channel_message__util.cc) = 
 SHA1 (patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc) = 0e390de36d7e1ff32b7a86d4e4af645ff5402d2d
 SHA1 (patch-third__party_openscreen_src_util_BUILD.gn) = 35351e53f8279a5d9e4ff21297102e3618c28373
 SHA1 (patch-third__party_openxr_BUILD.gn) = 6ab83c2e52f9b48623c409a3ba2fb03f984d14d2
+SHA1 (patch-third__party_ots_src_src_name.cc) = 475fab889b258d7b049044cd9becb8b7b861aa8d
 SHA1 (patch-third__party_pdfium_BUILD.gn) = c68934a606625e4f535f32cacbeede0dd98a329d
 SHA1 (patch-third__party_pdfium_core_fxge_cfx__fontmapper.cpp) = 934b7a6bb42aabd5b64dbf397794e873899889fc
 SHA1 (patch-third__party_pdfium_core_fxge_linux_fx__linux__impl.cpp) = 39071c24a1d416ce92c59969d3ad2faf58c66401
