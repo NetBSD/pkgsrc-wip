@@ -1,0 +1,4 @@
+devel/guile-fibers: Add version 1.4.3
+
+Fibers is a facility that provides Go-like concurrency for Guile
+Scheme, in the tradition of Concurrent ML.

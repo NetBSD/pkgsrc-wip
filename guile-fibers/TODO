@@ -1,4 +1,3 @@
-Wait for upstream to not depend on (non-POSIX) epoll:
-  https://github.com/wingo/fibers/issues/64
-
-Test
+  - verify that upstream really is refusing to provide release tarballs
+  - run expensive tests
+  - test on other than amd64
