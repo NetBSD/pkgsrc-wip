@@ -17,7 +17,7 @@ LICENSE=	gnu-lgpl-v3
 # Upstream seems to think it's better not to provide a "make dist" artifact.
 USE_TOOLS+=	pkg-config autoconf automake makeinfo
 GNU_CONFIGURE=	yes
-TOOL_DEPENDS+=	libtool-base>=1.5.10:../../devel/libtool-base
+USE_LIBTOOL=	yes
 
 # Unpacks to "fibers" with no version.
 WRKSRC=		${WRKDIR}/fibers
