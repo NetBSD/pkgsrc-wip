@@ -13,7 +13,7 @@ LICENSE=	mit
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config patch
 
 # Install both binary crates via separate cargo install invocations
 # (cargo install does not accept multiple --path flags).
