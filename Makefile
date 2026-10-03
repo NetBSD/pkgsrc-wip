@@ -1265,6 +1265,7 @@ SUBDIR+=	gdu
 SUBDIR+=	geant
 SUBDIR+=	gecode
 SUBDIR+=	geekcode
+SUBDIR+=	geeqie-git
 SUBDIR+=	gef
 SUBDIR+=	gemma
 SUBDIR+=	generand
