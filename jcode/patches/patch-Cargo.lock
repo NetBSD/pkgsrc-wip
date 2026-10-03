@@ -5,15 +5,15 @@ dependencies so that Cargo treats them as local path dependencies.
 
 --- Cargo.lock.orig
 +++ Cargo.lock
-@@ -47,7 +47,6 @@
+@@ -31,7 +31,6 @@
  [[package]]
  name = "agentgrep"
- version = "0.1.6"
--source = "git+https://github.com/1jehuang/agentgrep.git?tag=v0.1.6#b01b804008ab0662fa14e6b60b10bff61716e6f1"
+ version = "0.1.7"
+-source = "git+https://github.com/1jehuang/agentgrep.git?tag=v0.1.7#525fc54117962f5f75f93cbffb53b8becf7b3add"
  dependencies = [
   "clap",
   "globset",
-@@ -4916,7 +4915,6 @@
+@@ -4899,7 +4898,6 @@
  [[package]]
  name = "mermaid-rs-renderer"
  version = "0.3.1"

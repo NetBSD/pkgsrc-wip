@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	jcode-0.86.0
+DISTNAME=	jcode-0.90.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=1jehuang/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -40,8 +40,8 @@ MAKE_ENV+=	JCODE_BUILD_GIT_DIRTY=0
 MAKE_ENV+=	JCODE_BUILD_GIT_DATE=
 MAKE_ENV+=	JCODE_BUILD_CHANGELOG_RAW=
 
-DISTFILES=					${DEFAULT_DISTFILES} agentgrep-v0.1.6.tar.gz mermaid-rs-renderer-v0.3.1.tar.gz
-SITES.agentgrep-v0.1.6.tar.gz=			-${MASTER_SITE_GITHUB:=1jehuang/}agentgrep/archive/v0.1.6.tar.gz
+DISTFILES=					${DEFAULT_DISTFILES} agentgrep-v0.1.7.tar.gz mermaid-rs-renderer-v0.3.1.tar.gz
+SITES.agentgrep-v0.1.7.tar.gz=			-${MASTER_SITE_GITHUB:=1jehuang/}agentgrep/archive/v0.1.7.tar.gz
 SITES.mermaid-rs-renderer-v0.3.1.tar.gz=	-${MASTER_SITE_GITHUB:=1jehuang/}mermaid-rs-renderer/archive/v0.3.1.tar.gz
 
 .include "cargo-depends.mk"
@@ -49,11 +49,11 @@ SITES.mermaid-rs-renderer-v0.3.1.tar.gz=	-${MASTER_SITE_GITHUB:=1jehuang/}mermai
 .include "../../lang/rust/cargo.mk"
 
 post-extract:
-	${MKDIR} ${WRKDIR}/vendor/agentgrep-0.1.6
+	${MKDIR} ${WRKDIR}/vendor/agentgrep-0.1.7
 	cd ${WRKDIR} && \
-		${TAR} -xzf ${_DISTDIR}/agentgrep-v0.1.6.tar.gz \
-		--strip-components=1 -C ${WRKDIR}/vendor/agentgrep-0.1.6
-	${RUN} cd ${WRKDIR}/vendor/agentgrep-0.1.6 && \
+		${TAR} -xzf ${_DISTDIR}/agentgrep-v0.1.7.tar.gz \
+		--strip-components=1 -C ${WRKDIR}/vendor/agentgrep-0.1.7
+	${RUN} cd ${WRKDIR}/vendor/agentgrep-0.1.7 && \
 		printf '{"package":null,"files":{}}' > .cargo-checksum.json
 	${MKDIR} ${WRKDIR}/vendor/mermaid-rs-renderer-0.3.1
 	cd ${WRKDIR} && \
