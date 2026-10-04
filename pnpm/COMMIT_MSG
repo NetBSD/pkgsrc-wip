@@ -1,5 +1,7 @@
-devel/pnpm: import pnpm version 12.0.0-rc.2
+devel/pnpm: import pnpm version 12.9.1
 
 Packaged in wip by iquiw
 
 This is not ready for pkgsrc yet.
+At least, it can be built on NetBSD/amd64.
+Some functions might not work.
