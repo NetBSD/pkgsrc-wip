@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	yayamlls-0.3.1
+DISTNAME=	yayamlls-0.3.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=home-operations/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
