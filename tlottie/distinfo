@@ -1,0 +1,26 @@
+$NetBSD$
+
+BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
+SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
+Size (cfg-if-1.0.4.crate) = 9360 bytes
+BLAKE2s (dlmalloc-0.2.14.crate) = 564f383adcc0f37cc0b0e20cfd3c348df0f6b916636bf93d15737bb9ee520ae1
+SHA512 (dlmalloc-0.2.14.crate) = 48014190fd00ce900138baac576002fef1976acb2d5c58016c27280e709d29a359bff4bf13a309cb2509034e30ae437b86c1c7b16c3e5b8d63acbf00f28a4f66
+Size (dlmalloc-0.2.14.crate) = 33285 bytes
+BLAKE2s (foldhash-0.1.5.crate) = d2e18d6a9ac10fd481f5d9c3d1d534545c67b1d4318170083b7747eb374caa3b
+SHA512 (foldhash-0.1.5.crate) = 3a634fdec410d87ffced8aa1bf8dacd9316a04c51424563d60b4dd611617041f09085edfd0ec96e6bb0e0db74a0e950b0616d1fb94a31667af35af1637604c22
+Size (foldhash-0.1.5.crate) = 21901 bytes
+BLAKE2s (hashbrown-0.15.5.crate) = 1a36841024cdb79a3bbe26ba54428af05d838f73640c5ca7aa5db7c8ecd0e82e
+SHA512 (hashbrown-0.15.5.crate) = 654682535882733b56dad632851fed93a17ad0b2d3e13e3390d7802450781501e275b0e0b39fa32a6eae092132858ed79b305238cd5771c08987c5d26af6d692
+Size (hashbrown-0.15.5.crate) = 140908 bytes
+BLAKE2s (libc-0.2.189.crate) = 1783ee1cd2f111dc2c064e01ae615942f295563538c0bc6a93e59ae6a35da5a2
+SHA512 (libc-0.2.189.crate) = 0cf621171ed4e6bbfeb71fb582ebf037d62ab481bc406ca2fb766bd4a8416f220a189325a0d3cb3e3cb39d80e09312516ca6335fad71b329c5fccddabedf4110
+Size (libc-0.2.189.crate) = 851502 bytes
+BLAKE2s (tlottie-1.0.6.tar.gz) = e315bc25204e4a1c7b01cbf7af29e19f3131c8b5767274a995686b680b875636
+SHA512 (tlottie-1.0.6.tar.gz) = 101116a4739bd4526985ff844ee159236b0d93d3abfa54ee75ac70477bbeefa111ad152cef51fbf3fb57d41ac4602cb61a5ac0277810040fe8a59286acf163f9
+Size (tlottie-1.0.6.tar.gz) = 1270541 bytes
+BLAKE2s (windows-link-0.2.1.crate) = b399f8b2d800cac2bef8e258bd19baf94c010ce1b58723ccfda65f4451b8f1a2
+SHA512 (windows-link-0.2.1.crate) = afb0c87beb8914fd9a3e52db6f2f64a840470b9751b66c83892c24cb1c46cda63fb16b1aeafcaa5a1fc7c5ba01da46be63e5227cc108dede8b0bd27785498a6b
+Size (windows-link-0.2.1.crate) = 6133 bytes
+BLAKE2s (windows-sys-0.61.2.crate) = 88f1c3307e8ff43ad37316780e5d3e475be394aade0aacac6857e305c6120f6e
+SHA512 (windows-sys-0.61.2.crate) = e6c8f61f0724dafca7821ee9b9c07237ccfee69be269be2fa7318eb48b151285ecf63e860aa1fe303639222fe11268e3773f37c2dd79f923029af58c645edb3f
+Size (windows-sys-0.61.2.crate) = 2517186 bytes

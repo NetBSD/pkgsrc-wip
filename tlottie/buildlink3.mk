@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	tlottie
+
+.if !defined(TLOTTIE_BUILDLINK3_MK)
+TLOTTIE_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.tlottie+=	tlottie>=1.0.6
+BUILDLINK_PKGSRCDIR.tlottie?=	../../wip/tlottie
+.endif	# TLOTTIE_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-tlottie
