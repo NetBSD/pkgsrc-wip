@@ -8,7 +8,7 @@ DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 # Updates must be tested to not only build but actually function under
-# at least NetBSD 10/amd64 with actual UBNT hardware.
+# at least NetBSD 11/amd64 with actual UBNT hardware.
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	abs@NetBSD.org
 HOMEPAGE=	https://www.ubnt.com/download/unifi/
