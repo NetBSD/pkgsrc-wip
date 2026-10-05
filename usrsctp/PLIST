@@ -1,4 +1,0 @@
-@comment $NetBSD$
-include/usrsctp.h
-lib/libusrsctp.a
-lib/pkgconfig/usrsctp.pc
