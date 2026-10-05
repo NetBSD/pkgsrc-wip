@@ -1,0 +1,24 @@
+Doesn't build:
+
+install
+└─ install ncdu
+   └─ compile exe ncdu ReleaseSafe native-native
+      └─ translate-c 81 errors
+error: translation failure
+/usr/include/time.h:277:1: error: unknown type name 'pragma'
+__END_DECLS
+^
+/usr/include/sys/cdefs.h:432:22: note: expanded from here
+#define __END_DECLS  __END_PUBLIC_DECLS
+                     ^
+/usr/include/sys/cdefs.h:413:45: note: expanded from here
+#  define __END_PUBLIC_DECLS __END_EXTERN_C _Pragma("GCC visibility pop")
+                                            ^
+<scratch space>:12:2: note: expanded from here
+#pragma GCC visibility pop
+ ^
+
+Reported upstream at
+https://github.com/rcalixte/ncdu/issues/3
+
+Once that is resolved: Clean up patches/ to avoid hardcoding PREFIX.

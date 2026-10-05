@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2026/03/31 18:01:01 wiz Exp $
+
+BLAKE2s (ncdu-2.11.tar.gz) = 9815a9e535907c71927c928e626f13242f18976f4ae9ab042a512f32660a1ab1
+SHA512 (ncdu-2.11.tar.gz) = 48a6d2a8a88b4e11cdbd681c3bc8ca7d04e17b6b3094db76c2c18f081a572dbb26a0be9be8660f12a1bdfac699518388dd97a00b546871bc34b406a0ebb75d6a
+Size (ncdu-2.11.tar.gz) = 75269 bytes
+SHA1 (patch-build.zig) = 41edc272a920273787f72b85663815a365963075

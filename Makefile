@@ -2590,6 +2590,7 @@ SUBDIR+=	ncbi-bin
 SUBDIR+=	ncbi-blast+
 SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
+SUBDIR+=	ncdu2
 SUBDIR+=	ncnn
 SUBDIR+=	ncp
 SUBDIR+=	ncrack
