@@ -16,20 +16,31 @@ GO_VERSION_REQD=	127
 
 .include "go-modules.mk"
 
-# rcvd runs unprivileged and needs a dedicated user/group.
-PKG_GROUPS=		rcvd
-PKG_USERS=		rcvd:rcvd
-PKG_GECOS.rcvd=		rcvd DNS daemon
-PKG_HOME.rcvd=		/nonexistent
-PKG_SHELL.rcvd=		${NOLOGIN}
+# rcvd runs unprivileged and needs a dedicated user/group. The account is
+# overridable (RCVD_USER/RCVD_GROUP) so a site admin can rebuild with a
+# different service user; it defaults to rcvd:rcvd. The account is hardened:
+# no login shell, no home directory. bsd.prefs.mk is pulled in first so the
+# ?= defaults can be overridden from the environment or mk.conf.
+.include "../../mk/bsd.prefs.mk"
+
+RCVD_USER?=		rcvd
+RCVD_GROUP?=		rcvd
+
+PKG_GROUPS+=		${RCVD_GROUP}
+PKG_USERS+=		${RCVD_USER}:${RCVD_GROUP}
+PKG_GECOS.${RCVD_USER}=	rcvd DNS daemon
+PKG_HOME.${RCVD_USER}=	/nonexistent
+PKG_SHELL.${RCVD_USER}=	${NOLOGIN}
+PKG_GROUPS_VARS+=	RCVD_GROUP
+PKG_USERS_VARS+=	RCVD_USER
 
 RCD_SCRIPTS=		rcvd
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE RCVD_USER RCVD_GROUP
 
 # Config and log directories, owned by the rcvd user.
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/rcvd rcvd rcvd 0755
-OWN_DIRS_PERMS+=	${VARBASE}/log/rcvd rcvd rcvd 0755
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/rcvd ${RCVD_USER} ${RCVD_GROUP} 0755
+OWN_DIRS_PERMS+=	${VARBASE}/log/rcvd ${RCVD_USER} ${RCVD_GROUP} 0755
 
 # The example forwarder profile becomes the default config on first install.
 EGDIR=			${PREFIX}/share/examples/rcvd
