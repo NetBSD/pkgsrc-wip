@@ -4311,7 +4311,6 @@ SUBDIR+=	py-munch
 SUBDIR+=	py-murmurhash
 SUBDIR+=	py-mvpoly
 SUBDIR+=	py-myfitter
-SUBDIR+=	py-mypy
 SUBDIR+=	py-mys
 SUBDIR+=	py-mysam-tagmanager
 SUBDIR+=	py-mysqldb-docs
