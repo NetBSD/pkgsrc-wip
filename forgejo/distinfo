@@ -2830,4 +2830,4 @@ BLAKE2s (xorm.io_builder_@v_v0.3.13.zip) = a551e022c94cce5cbb46957b5561d8f57a943
 SHA512 (xorm.io_builder_@v_v0.3.13.zip) = 8aa3622cddb8965b508fc078aa020b92c1ea31d691fb99fc1ec097d6bc86a0bceb8bdd67c92d11091b4de1505b239fa7441c0b44d69546f6ba54809f79cb424c
 Size (xorm.io_builder_@v_v0.3.13.zip) = 48588 bytes
 SHA1 (patch-Makefile) = 88053725cd4c99652ed6f0dc51e399376a17866b
-SHA1 (patch-vendor_github.com_sourcegraph_zoekt_index_indexfile.go) = c7336d0817f0fa6359e3704a81f9e523e70c8130
+SHA1 (patch-vendor_github.com_sourcegraph_zoekt_index_indexfile.go) = 216c52bd20d4ff5b8c88cb2c106ea446940c55fa
