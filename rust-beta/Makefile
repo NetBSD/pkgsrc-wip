@@ -6,7 +6,7 @@
 # Regenerating checksums may be needed to build the current rust-beta.
 
 DISTNAME=	rustc-beta-src
-PKGNAME=	rust-1.100.0beta.2
+PKGNAME=	rust-1.100.0beta.4
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 EXTRACT_SUFX=	.tar.xz
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--set dist.vendor=false
 CGC=			compiler/rustc_codegen_cranelift
 REPLACE_BASH+=		${CGC}/.github/scripts/free-disk-space.sh
 REPLACE_BASH+=		library/portable-simd/subtree-sync.sh
+REPLACE_BASH+=		library/compiler-builtins/ci/install-test-deps.sh
 CB=			library/compiler-builtins
 REPLACE_BASH+=		${CB}/ci/bench-icount.sh
 REPLACE_BASH+=		${CB}/ci/install-bench-deps.sh
@@ -134,7 +135,6 @@ CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/core/src/unicode/printable.py
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/vendor/libc-0.2.189/etc/libc-util.py
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/compiler-builtins/ci/install-test-deps.sh
 CHECK_PORTABILITY_SKIP+=	tests/run-make/dump-ice-to-disk/check.sh
 CHECK_PORTABILITY_SKIP+=	vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 
