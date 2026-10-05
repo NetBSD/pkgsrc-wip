@@ -3,7 +3,7 @@
 GITHUB_PROJECT=		tdesktop
 GITHUB_RELEASE=		v${TD_VERSION}
 DIST_SUBDIR=		tdesktop
-TD_VERSION=		7.1.3
+TD_VERSION=		7.2.10
 DISTNAME=		tdesktop-${TD_VERSION}-full
 PKGNAME=		telegram-desktop-${TD_VERSION}
 CATEGORIES=		chat
@@ -43,6 +43,7 @@ CMAKE_CONFIGURE_ARGS+=	-DLINUX=ON
 .include "../../audio/rnnoise/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/range-v3/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../graphics/libavif/buildlink3.mk"
@@ -56,7 +57,7 @@ CMAKE_CONFIGURE_ARGS+=	-DLINUX=ON
 .include "../../devel/qt6-qtwayland/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../wip/ada-url/buildlink3.mk"
-.include "../../wip/rlottie/buildlink3.mk"
+.include "../../wip/tlottie/buildlink3.mk"
 .include "../../wip/tde2e/buildlink3.mk"
 .include "../../wip/tg_owt-git/buildlink3.mk"
 .include "../../wip/libyuv-git/buildlink3.mk"

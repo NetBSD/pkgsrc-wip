@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (tdesktop/tdesktop-7.1.3-full.tar.gz) = fa55a03ec45a061ce88f3cb53d1abbc1daa829f138ee14ad24aee1129158c576
-SHA512 (tdesktop/tdesktop-7.1.3-full.tar.gz) = 685053c96ac3eafb03cefe3b50e3429d6aa0046b6a12cd15b3d9ed5ce572fa283cc380aa05990d815e32ca67055e3a0d1e824de9ed82c1917ed9b2c18edfb2b4
-Size (tdesktop/tdesktop-7.1.3-full.tar.gz) = 81493031 bytes
+BLAKE2s (tdesktop/tdesktop-7.2.10-full.tar.gz) = 0e8f68d671cff9e5d468e93c34d710724389a87a465235ef00169f78d989fb29
+SHA512 (tdesktop/tdesktop-7.2.10-full.tar.gz) = cbb6f569e00ccee4361b43b556fb10dd92d8d63bf0cd6b9c4429f09e49fe42854229675a13afc001fd6778ad4d67a549c3d7898ba22550a4040868b0ed890e1d
+Size (tdesktop/tdesktop-7.2.10-full.tar.gz) = 74515421 bytes
 SHA1 (patch-Telegram_SourceFiles_boxes_star__gift__preview__box.cpp) = 754e2b8a938094821aff3c9bc8fed506cdf37ccc
 SHA1 (patch-Telegram_SourceFiles_platform_linux_notifications__manager__linux.cpp) = 4684ab209324e3aaf38f9e8ee137ef005cde4e4e
 SHA1 (patch-Telegram_ThirdParty_cmark-gfm_CMakeLists.txt) = e3661bc5f44d60e31b70d37c6bb9438225ecfdf7
