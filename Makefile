@@ -5886,6 +5886,7 @@ SUBDIR+=	tuareg-mode
 SUBDIR+=	tuba
 SUBDIR+=	tudu
 SUBDIR+=	tuicr
+SUBDIR+=	tuios
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server

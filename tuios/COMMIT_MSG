@@ -1,0 +1,14 @@
+tuios: add new package tuios version 0.8.5
+
+TUIOS (Terminal UI Operating System) is a terminal multiplexer and
+window manager written in Go. It provides a vim-like modal interface
+with multiple terminal panes, workspaces, BSP tiling, kitty graphics
+protocol support, and a command palette, all inside your terminal.
+
+A daemon keeps sessions alive, lets you reach sessions on other
+machines, and lets coding agents in your panes report their state and
+message each other.
+
+NetBSD support: patch-internal_app_capabilities_bsd.go adds netbsd to
+the BSD capabilities build tag (upstream lists only freebsd and
+openbsd); without it NetBSD fails to build with undefined symbols.

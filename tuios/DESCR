@@ -1,0 +1,9 @@
+TUIOS (Terminal UI Operating System) is a terminal multiplexer and
+window manager written in Go. It provides a vim-like modal interface
+with multiple terminal panes, workspaces, BSP tiling, kitty graphics
+protocol support, and a command palette, all inside your existing
+terminal.
+
+A daemon keeps sessions alive, lets you reach sessions on other
+machines, and lets coding agents running in your panes report their
+state and message each other.
