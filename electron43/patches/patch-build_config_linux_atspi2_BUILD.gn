@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- build/config/linux/atspi2/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ build/config/linux/atspi2/BUILD.gn
+@@ -6,7 +6,6 @@ import("//build/config/linux/pkg_config.
+ import("//build/config/ui.gni")
+ 
+ # These packages should _only_ be expected when building for a target.
+-assert(current_toolchain == default_toolchain)
+ 
+ if (use_atk) {
+   pkg_config("atspi2") {

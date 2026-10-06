@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- AUTHORS.orig	2025-02-24 19:59:26.000000000 +0000
++++ AUTHORS
+@@ -336,6 +336,7 @@ David Futcher <david.mike.futcher@gmail.
+ David Jin <davidjin@amazon.com>
+ David Lechner <david@pybricks.com>
+ David Leen <davileen@amazon.com>
++David Lönnhager <dv.lnh.d@gmail.com>
+ David Manouchehri <david@davidmanouchehri.com>
+ David McAllister <mcdavid@amazon.com>
+ David Michael Barr <david.barr@samsung.com>

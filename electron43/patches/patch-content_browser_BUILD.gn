@@ -1,0 +1,59 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/browser/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ content/browser/BUILD.gn
+@@ -325,6 +325,7 @@ source_set("browser") {
+     "//ui/strings:ax_strings",
+     "//ui/touch_selection",
+     "//v8:v8_version",
++    "//electron/build/config:generate_mas_config",
+   ]
+ 
+   public_deps = [
+@@ -2454,6 +2455,14 @@ source_set("browser") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources += [
++      "file_system_access/file_path_watcher/file_path_watcher_bsd.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_kqueue.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_kqueue.h",
++    ]
++  }
++
+   if (is_linux || is_chromeos) {
+     sources += [
+       "child_process_launcher_helper_linux.cc",
+@@ -2499,6 +2508,15 @@ source_set("browser") {
+     deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "file_system_access/file_path_watcher/file_path_watcher_inotify.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_inotify.h",
++      "sandbox_ipc_linux.cc",
++      "sandbox_ipc_linux.h",
++    ]
++  }
++
+   if (is_chromeos) {
+     sources += [
+       "handwriting/handwriting_recognition_service_impl_cros.cc",
+@@ -3022,8 +3040,9 @@ source_set("browser") {
+       "//ppapi/shared_impl",
+     ]
+ 
+-    assert(enable_printing)
+-    deps += [ "//printing" ]
++    if (enable_printing) {
++      deps += [ "//printing" ]
++    }
+ 
+     if (is_chromeos) {
+       sources += [

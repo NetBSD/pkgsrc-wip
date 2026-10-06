@@ -1,0 +1,21 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/display/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/display/BUILD.gn
+@@ -125,6 +125,12 @@ component("display") {
+     "//ui/gfx/geometry",
+   ]
+ 
++  if (is_mac) {
++    deps += [
++      "//electron/build/config:generate_mas_config"
++    ]
++  }
++
+   if (is_ios) {
+     deps += [ "//build:ios_buildflags" ]
+   }

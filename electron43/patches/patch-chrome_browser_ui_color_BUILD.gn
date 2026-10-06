@@ -1,0 +1,18 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- chrome/browser/ui/color/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ chrome/browser/ui/color/BUILD.gn
+@@ -85,9 +85,6 @@ source_set("mixers") {
+     ]
+   }
+ 
+-  if (is_chromeos || is_linux || is_mac || is_win) {
+-    deps += [ "//chrome/browser/themes" ]
+-  }
+ }
+ 
+ if (!is_ios && !is_android) {

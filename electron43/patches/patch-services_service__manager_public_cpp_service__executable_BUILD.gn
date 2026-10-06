@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ services/service_manager/public/cpp/service_executable/BUILD.gn
+@@ -22,7 +22,7 @@ source_set("support") {
+     "//services/service_manager/public/mojom",
+   ]
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     deps += [
+       "//sandbox/linux:sandbox",
+       "//sandbox/linux:sandbox_services",

@@ -1,0 +1,29 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- buildtools/third_party/libc++/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ buildtools/third_party/libc++/BUILD.gn
+@@ -45,7 +45,11 @@ config("winver") {
+ if (libcxx_is_shared) {
+   _libcxx_target_type = "shared_library"
+ } else {
+-  _libcxx_target_type = "source_set"
++  if (is_win) {
++    _libcxx_target_type = "source_set"
++  } else {
++    _libcxx_target_type = "static_library"
++  }
+ }
+ target(_libcxx_target_type, "libc++") {
+   # Most things that need to depend on libc++ should do so via the implicit
+@@ -53,6 +57,7 @@ target(_libcxx_target_type, "libc++") {
+   # need to explicitly depend on libc++.
+   visibility = [
+     "//build/config:common_deps",
++    "//electron:libcxx_objects_zip",
+     "//third_party/catapult/devil:devil",
+   ]
+   if (is_linux) {

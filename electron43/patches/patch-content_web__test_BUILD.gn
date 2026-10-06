@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/web_test/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ content/web_test/BUILD.gn
+@@ -228,6 +228,7 @@ static_library("web_test_browser") {
+     "//ui/gl",
+     "//ui/shell_dialogs:shell_dialogs",
+     "//url",
++    "//electron/build/config:generate_mas_config"
+   ]
+ 
+   # TODO(crbug.com/40139469): Blink test plugin must be migrated from PPAPI.

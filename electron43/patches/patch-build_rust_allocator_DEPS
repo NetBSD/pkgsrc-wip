@@ -1,0 +1,18 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- build/rust/allocator/DEPS.orig	2025-07-08 14:12:31.098876851 +0000
++++ build/rust/allocator/DEPS
+@@ -0,0 +1,9 @@
++include_rules = [
++  "-base",
++]
++
++specific_include_rules = {
++  "allocator_impls.cc" : [
++    "+partition_alloc"
++  ]
++}

@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/accelerated_widget_mac/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/accelerated_widget_mac/BUILD.gn
+@@ -67,6 +67,7 @@ component("accelerated_widget_mac") {
+     "//ui/gfx",
+     "//ui/gfx/geometry",
+     "//ui/gl",
++    "//electron/build/config:generate_mas_config",
+   ]
+ }
+ 

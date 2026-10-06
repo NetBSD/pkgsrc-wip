@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/ozone/platform/x11/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/ozone/platform/x11/BUILD.gn
+@@ -6,7 +6,7 @@ import("//build/config/chromeos/ui_mode.
+ import("//gpu/vulkan/features.gni")
+ import("//ui/base/ui_features.gni")
+ 
+-visibility = [ "//ui/ozone/*" ]
++visibility = [ "//ui/ozone/*", "//electron:*" ]
+ 
+ assert(is_linux || is_chromeos)
+ 

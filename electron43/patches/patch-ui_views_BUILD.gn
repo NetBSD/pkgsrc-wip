@@ -1,0 +1,26 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/views/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/views/BUILD.gn
+@@ -713,6 +713,8 @@ component("views") {
+       "IOSurface.framework",
+       "QuartzCore.framework",
+     ]
++
++    deps += ["//electron/build/config:generate_mas_config"]
+   }
+ 
+   if (is_win) {
+@@ -1130,6 +1132,8 @@ source_set("test_support") {
+     "//ui/base/mojom:ui_base_types",
+   ]
+ 
++  deps += ["//electron/build/config:generate_mas_config"]
++
+   if (is_win) {
+     sources += [
+       "test/desktop_window_tree_host_win_test_api.cc",

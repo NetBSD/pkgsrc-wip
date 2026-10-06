@@ -1,0 +1,45 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/network/public/mojom/network_context.mojom.orig	2025-02-24 19:59:26.000000000 +0000
++++ services/network/public/mojom/network_context.mojom
+@@ -304,6 +304,16 @@ struct SocketBrokerRemotes {
+   pending_remote<SocketBroker> server;
+ };
+ 
++interface CertVerifierClient {
++  Verify(
++    int32 default_error,
++    CertVerifyResult default_result,
++    X509Certificate certificate,
++    string hostname,
++    int32 flags,
++    string? ocsp_response
++  ) => (int32 error_code, CertVerifyResult result);
++};
+ 
+ // Parameters for constructing a network context.
+ struct NetworkContextParams {
+@@ -917,6 +927,9 @@ interface NetworkContext {
+   // Sets a client for this network context.
+   SetClient(pending_remote<NetworkContextClient> client);
+ 
++  // Sets a certificate verifier client for this network context.
++  SetCertVerifierClient(pending_remote<CertVerifierClient>? client);
++
+   // Creates a new URLLoaderFactory with the given |params|.
+   CreateURLLoaderFactory(pending_receiver<URLLoaderFactory> url_loader_factory,
+                          URLLoaderFactoryParams params);
+@@ -1215,6 +1228,9 @@ interface NetworkContext {
+   SetNetworkConditions(mojo_base.mojom.UnguessableToken throttling_profile_id,
+                        NetworkConditions? conditions);
+ 
++  // Updates the user agent to be used for requests.
++  SetUserAgent(string new_user_agent);
++
+   // Updates the Accept-Language header to be used for requests.
+   SetAcceptLanguage(string new_accept_language);
+ 

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/public/common/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ content/public/common/BUILD.gn
+@@ -377,6 +377,8 @@ mojom("interfaces") {
+     "//content/common/*",
+     "//extensions/common:mojom",
+     "//extensions/common:mojom_blink",
++    "//electron/shell/common:plugin",
++    "//electron/shell/common:web_contents_utility",
+   ]
+ 
+   sources = [

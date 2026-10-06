@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- components/remote_cocoa/app_shim/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ components/remote_cocoa/app_shim/BUILD.gn
+@@ -75,6 +75,7 @@ component("app_shim") {
+     "//components/crash/core/common",
+     "//components/remote_cocoa/common:mojo",
+     "//components/system_media_controls",
++    "//electron/build/config:generate_mas_config",
+     "//mojo/public/cpp/bindings",
+     "//net",
+     "//ui/accelerated_widget_mac",

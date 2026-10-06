@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/electron_node/deps/brotli/unofficial.gni.orig	2025-04-18 18:41:29.000000000 +0000
++++ third_party/electron_node/deps/brotli/unofficial.gni
+@@ -25,7 +25,7 @@ template("brotli_gn_build") {
+     } else if (target_os == "freebsd") {
+       defines = [ "OS_FREEBSD" ]
+     }
+-    if (!is_win) {
++    if (is_linux) {
+       libs = [ "m" ]
+     }
+     if (is_clang || !is_win) {

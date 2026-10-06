@@ -1,0 +1,31 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- chrome/browser/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ chrome/browser/BUILD.gn
+@@ -4524,7 +4524,7 @@ static_library("browser") {
+       ]
+     }
+ 
+-    if (!is_win) {
++    if (!is_win && !is_electron_build) {
+       # On Windows, the hashes are embedded in //chrome:chrome_initial rather
+       # than here in :chrome_dll.
+       deps += [ "//chrome:packed_resources_integrity_header" ]
+@@ -6958,6 +6958,13 @@ static_library("browser") {
+     }
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "metrics/bluetooth_metrics_provider.cc",
++      "metrics/bluetooth_metrics_provider.h",
++    ]
++  }
++
+   if (is_linux && use_dbus) {
+     sources += [
+       "dbus_memory_pressure_evaluator_linux.cc",

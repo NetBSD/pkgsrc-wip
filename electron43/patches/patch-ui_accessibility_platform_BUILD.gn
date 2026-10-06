@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- ui/accessibility/platform/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ ui/accessibility/platform/BUILD.gn
+@@ -283,6 +283,7 @@ component("platform") {
+         "AppKit.framework",
+         "Foundation.framework",
+       ]
++      deps += ["//electron/build/config:generate_mas_config"]
+     }
+ 
+     if (is_ios) {

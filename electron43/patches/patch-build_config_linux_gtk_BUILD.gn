@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- build/config/linux/gtk/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ build/config/linux/gtk/BUILD.gn
+@@ -27,6 +27,7 @@ pkg_config("gtk_internal_config") {
+ 
+ group("gtk") {
+   visibility = [
++    "//electron:*",
+     # These are allow-listed for WebRTC builds.  Nothing in else should depend
+     # on GTK.
+     "//examples:peerconnection_client",

@@ -1,0 +1,49 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- content/test/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ content/test/BUILD.gn
+@@ -643,6 +643,7 @@ static_library("test_support") {
+     "//url",
+     "//url/mojom:url_mojom_gurl",
+     "//v8",
++    "//electron/build/config:generate_mas_config"
+   ]
+ 
+   data_deps = [
+@@ -1112,6 +1113,7 @@ static_library("browsertest_support") {
+   }
+ 
+   configs += [ "//v8:external_startup_data" ]
++  deps += ["//electron/build/config:generate_mas_config"]
+ }
+ 
+ mojom("content_test_mojo_bindings") {
+@@ -1772,7 +1774,7 @@ test("content_browsertests") {
+     "../test/url_loader_interceptor_browsertest.cc",
+   ]
+ 
+-  if (is_linux) {
++  if ((is_linux) && !is_bsd) {
+     sources += [ "../browser/network/address_map_linux_browsertest.cc" ]
+   }
+ 
+@@ -1953,6 +1955,7 @@ test("content_browsertests") {
+     "//ui/shell_dialogs",
+     "//ui/snapshot",
+     "//ui/webui:test_support",
++    "//electron/build/config:generate_mas_config"
+   ]
+ 
+   if (!(is_chromeos_ash && target_cpu == "arm64" && current_cpu == "arm")) {
+@@ -3236,6 +3239,7 @@ test("content_unittests") {
+     "//ui/latency:test_support",
+     "//ui/shell_dialogs:shell_dialogs",
+     "//ui/webui:test_support",
++    "//electron/build/config:generate_mas_config"
+   ]
+ 
+   if (enable_nocompile_tests) {

@@ -1,0 +1,35 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/.gitignore.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/.gitignore
+@@ -45,7 +45,9 @@
+ /devserver
+ /directxsdk
+ /edk2
++/electron_nodeXXX
+ /elfutils/src
++/engflow-reclient-configsXXX/
+ /espresso/lib/
+ /eyesfree/src
+ /fast_float/src
+@@ -92,6 +94,7 @@
+ /mocha
+ /mockito/src
+ /nacl_sdk_binaries/
++/nanXXX
+ /ninja
+ /node/*.tar.gz
+ /node/linux/
+@@ -136,7 +139,7 @@
+ /spirv-cross/src
+ /spirv-headers/src
+ /spirv-tools/src
+-/src
++/squirrel.macXXX
+ /subresource-filter-ruleset/data/*
+ /swift-format
+ /swift-toolchain

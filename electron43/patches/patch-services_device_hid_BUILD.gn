@@ -1,0 +1,50 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- services/device/hid/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ services/device/hid/BUILD.gn
+@@ -36,7 +36,40 @@ source_set("hid") {
+     "//services/device/public/mojom",
+   ]
+ 
+-  if ((is_linux || is_chromeos) && use_udev) {
++  if (is_openbsd) {
++    sources += [
++      "hid_connection_fido.cc",
++      "hid_connection_fido.h",
++      "hid_service_fido.cc",
++      "hid_service_fido.h",
++    ]
++    libs = ["fido2", "cbor", "usbhid", "crypto", "util"]
++  }
++
++  if (is_freebsd) {
++    sources += [
++      "hid_connection_freebsd.cc",
++      "hid_connection_freebsd.h",
++      "hid_service_freebsd.cc",
++      "hid_service_freebsd.h",
++    ]
++  }
++
++  if (is_netbsd) {
++    sources += [
++      "hid_service_netbsd.cc",
++      "hid_service_netbsd.h",
++    ]
++  }
++
++  if (is_netbsd) {
++    sources += [
++      "hid_service_fuchsia.cc",
++      "hid_service_fuchsia.h",
++    ]
++  }
++
++  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
+     sources += [
+       "hid_connection_linux.cc",
+       "hid_connection_linux.h",

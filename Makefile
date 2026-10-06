@@ -861,6 +861,7 @@ SUBDIR+=	eksctl
 SUBDIR+=	electricsheep
 SUBDIR+=	electricsheep-git
 SUBDIR+=	electron34
+SUBDIR+=	electron43
 SUBDIR+=	elegent
 SUBDIR+=	elementary-calculator
 SUBDIR+=	elementary-code

@@ -1,0 +1,22 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/crashpad/crashpad/client/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ third_party/crashpad/crashpad/client/BUILD.gn
+@@ -137,6 +137,13 @@ static_library("common") {
+   if (crashpad_is_win) {
+     sources += [ "crash_report_database_win.cc" ]
+   }
++
++  if (crashpad_is_posix) {
++    sources += [
++      "crashpad_client_posix.cc",
++    ]
++  }
++
+   if (crashpad_is_linux || crashpad_is_android || crashpad_is_fuchsia) {
+     sources += [
+       "crash_report_database_generic.cc",

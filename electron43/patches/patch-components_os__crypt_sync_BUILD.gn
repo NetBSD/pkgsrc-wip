@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- components/os_crypt/sync/BUILD.gn.orig	2025-02-24 19:59:26.000000000 +0000
++++ components/os_crypt/sync/BUILD.gn
+@@ -48,6 +48,7 @@ component("os_crypt") {
+       "os_crypt_mac.mm",
+     ]
+     deps += [ "//crypto:mock_apple_keychain" ]
++    deps += ["//electron/build/config:generate_mas_config"]
+   }
+ 
+   if (is_win) {
