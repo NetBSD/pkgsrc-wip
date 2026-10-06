@@ -1,8 +1,5 @@
 $NetBSD$
 
-BLAKE2s (mfusepy-3.1.1.tar.gz) = a72506eb624ee8750863452c0c8c493f9ce40ddb0c27f2a196270d6f7953eece
-SHA512 (mfusepy-3.1.1.tar.gz) = 3d2b2d7531998bccd2b218e31983efd0b1d0854c9f4af3a88922fb89a55cd5c4e6972fa50031cae29f553b599686ad9dd1cb84134989fb876a9fa3b34f64547f
-Size (mfusepy-3.1.1.tar.gz) = 34549 bytes
-SHA1 (patch-mfusepy.py) = 4069b5c6efd150a116d182a7251dd2aa79675bc3
-SHA1 (patch-tests_test__examples.py) = 3ce125d03050c7d152d6f764de9eb071e9381c69
-SHA1 (patch-tests_test__struct__layout.py) = b982f1593550c9cff006f01a88313a77c94c404e
+BLAKE2s (mfusepy-3.1.1.32-b3b03ef8aebb8c1629d7982285731bd887826c8e.tar.gz) = a5a5873e809a5cc5cdd1981f7556c8a8b7c388b90437c2a174e07fdb252344ff
+SHA512 (mfusepy-3.1.1.32-b3b03ef8aebb8c1629d7982285731bd887826c8e.tar.gz) = b6f6e0ab842035ec0c3e50ef0525417b7b536c8db710b1de03b68d54e4ea9606ef59d4ed9f3a1d9c29237617ebfce1b3c0f4bd4b866b9e528cd5274bf0c4f46f
+Size (mfusepy-3.1.1.32-b3b03ef8aebb8c1629d7982285731bd887826c8e.tar.gz) = 159414 bytes

@@ -1,10 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	mfusepy-3.1.1
+DISTNAME=	mfusepy-3.1.1.32
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	filesystems python
-MASTER_SITES=	${MASTER_SITE_PYPI:=m/mfusepy/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mxmlnkn/}
+GITHUB_PROJECT=	mfusepy
+GITHUB_TAG=	b3b03ef8aebb8c1629d7982285731bd887826c8e
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/mfusepy/
@@ -14,6 +16,14 @@ LICENSE=	isc
 USE_LANGUAGES=	# none
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_FILES.version=	pyproject.toml
+SUBST_SED.version=	-e 's/3.1.1/${PKGVERSION_NOREV}/'
+
+# TEST DEPENDS
+USE_LANGUAGES+=	c
 
 # Upstream has many test dependencies, not expressed in pyproject.toml.
 # At least:
