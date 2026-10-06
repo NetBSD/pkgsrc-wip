@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.166 2023/07/18 19:33:31 ryoon Exp $
 
-BLAKE2s (mesa-26.2.3.tar.xz) = 515685bc73b6189d3fc4108845fdf4e280bdae9a3169c6d24592ad1fd732b760
-SHA512 (mesa-26.2.3.tar.xz) = ec621735ae4679762ea27b979a5314c7aecfdd4165afea19c8c55f933d79b40f01fa041a95874fc4347e732ac565786d9b616a9aa8856a422204d9ecc9a12ec4
-Size (mesa-26.2.3.tar.xz) = 68561540 bytes
+BLAKE2s (mesa-26.2.4.tar.xz) = d4ee07855d4eb0e76f2c743ca65bc8d0c879b3b5fb9ea3fe5e4f54005958642b
+SHA512 (mesa-26.2.4.tar.xz) = 42e793561661a567e72c7324d071ab9f82d3a9f1e000827ed989b8d5fcc2cd16e50c02808d43465b3135c25a3cad77649ba0bf9e35d95b848f8fc8d8b9ce327c
+Size (mesa-26.2.4.tar.xz) = 68613948 bytes
 SHA1 (patch-meson.build) = 56aae7cb6f284a787d4ca4ef0ae0d512508a19a8
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = c982acaf2246858a06a52f548b6103800c0d7c45
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = c6958cf29da9154c673f8c64790ac2bb46ed74bd
