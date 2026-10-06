@@ -2312,7 +2312,6 @@ SUBDIR+=	ltrace
 SUBDIR+=	ltsmin
 SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-htmlparser
-SUBDIR+=	lua-language-server
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-luacheck
