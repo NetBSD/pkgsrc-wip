@@ -15,6 +15,10 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 # Pure-Go backend only; the optional ghostty backend needs cgo + libghostty-vt.
 GO_BUILD_PATTERN=	./cmd/tuios
 
+# Report the real release version instead of "dev", and stop Go from
+# stamping the pkgsrc-wip git revision into the binary as the VCS commit.
+GOFLAGS=	-buildvcs=false -ldflags "-X main.version=${PKGVERSION_NOREV} -X main.builtBy=pkgsrc"
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
