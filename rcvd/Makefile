@@ -11,16 +11,9 @@ HOMEPAGE=	https://rcvd.net/
 COMMENT=	Privacy-first encrypted DNS engine (DoQ/DoT/DoH, no cleartext)
 LICENSE=	mit
 
-# rcvd's go.mod requires Go 1.27.
 GO_VERSION_REQD=	127
 
 .include "go-modules.mk"
-
-# rcvd runs unprivileged and needs a dedicated user/group. The account is
-# overridable (RCVD_USER/RCVD_GROUP) so a site admin can rebuild with a
-# different service user; it defaults to rcvd:rcvd. The account is hardened:
-# no login shell, no home directory. bsd.prefs.mk is pulled in first so the
-# ?= defaults can be overridden from the environment or mk.conf.
 .include "../../mk/bsd.prefs.mk"
 
 RCVD_USER?=		rcvd
@@ -38,7 +31,6 @@ RCD_SCRIPTS=		rcvd
 
 BUILD_DEFS+=		VARBASE RCVD_USER RCVD_GROUP
 
-# Config and log directories, owned by the rcvd user.
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/rcvd ${RCVD_USER} ${RCVD_GROUP} 0755
 OWN_DIRS_PERMS+=	${VARBASE}/log/rcvd ${RCVD_USER} ${RCVD_GROUP} 0755
 
