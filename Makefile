@@ -5182,7 +5182,6 @@ SUBDIR+=	rawgl-git
 SUBDIR+=	raze
 SUBDIR+=	rbenv
 SUBDIR+=	rc.d.Interix
-SUBDIR+=	rcvd
 SUBDIR+=	rdsn-git
 SUBDIR+=	rdup
 SUBDIR+=	re2-git
