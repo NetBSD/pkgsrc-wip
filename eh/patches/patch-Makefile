@@ -1,0 +1,17 @@
+$NetBSD$
+
+Remove hardcoded MANDIR to avoid execution of find
+
+--- Makefile.orig	2026-10-07 20:19:15.562479714 +0000
++++ Makefile
+@@ -105,8 +105,8 @@ NCURSESW!= if find / -maxdepth 4 -name '
+ 
+ LIBS	!= echo '${LIBS} '; if ${NCURSESW}; then echo '-lncursesw'; elif ${NCURSES}; then echo '-lncurses'; else echo '-lcurses'; fi
+ 
+-MANDIR	!= dirname "$$(find /usr/local -maxdepth 3 -type d -name man1)"
+-MANDIR  != if test "${MANDIR}" = '.'; then echo /usr/local/share/man; else echo ${MANDIR}; fi
++#MANDIR	!= dirname "$$(find /usr/local -maxdepth 3 -type d -name man1)"
++#MANDIR  != if test "${MANDIR}" = '.'; then echo /usr/local/share/man; else echo ${MANDIR}; fi
+ 
+ #######################################################################
+ # Inference Rules
