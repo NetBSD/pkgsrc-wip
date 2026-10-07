@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		miranda-2.068
+DISTNAME=		miranda-2.069
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_CODEBERG:=DATurner/}
 CODEBERG_RELEASE=	${DISTNAME}
@@ -30,6 +30,5 @@ REPLACE_FILES.mira+=	miralib/ex/box
 REPLACE_FILES.mira+=	miralib/ex/box.m
 REPLACE_FILES.mira+=	miralib/ex/mrev
 
-.include "../../devel/linenoise/buildlink3.mk"
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
