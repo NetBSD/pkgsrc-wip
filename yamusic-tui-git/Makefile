@@ -1,8 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	yamusic-tui
-GITHUB_TAG=	09956111a118d81a2f30f3d0142e879001aa5971
-DISTNAME=	yamusic-tui
+GITHUB_TAG=	v0.8.0
+DISTNAME=	yamusic-tui-0.8.0
 PKGNAME=	yamusic-tui-git
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DECE2183/}
@@ -19,8 +19,8 @@ PKGSRC_MKPIE=		no
 GOFLAGS+=		-tags nomedia
 DEPENDS+=		alsa-plugins-oss>=1.2.7.1:../../audio/alsa-plugins-oss
 
-DOCDIR=	${PREFIX}/share/doc/${DISTNAME}
-INSTALLATION_DIRS+=	share/doc/${DISTNAME}
+DOCDIR=	${PREFIX}/share/doc/${GITHUB_PROJECT}
+INSTALLATION_DIRS+=	share/doc/${GITHUB_PROJECT}
 
 post-install:
 	${INSTALL_DATA}	${FILESDIR}/README.pkgsrc ${DESTDIR}${DOCDIR}/README
