@@ -1,10 +1,12 @@
 $NetBSD$
 
-Avoid non-standard `==' test(1) operator.
+Remediate bashism.
 
---- configure.ac.orig	2014-12-20 06:11:16.000000000 +0000
+Reported to freetalk-dev@gnu.org 20261007.
+
+--- configure.ac.orig	2022-06-09 20:08:35.000000000 +0000
 +++ configure.ac
-@@ -59,7 +59,7 @@ AC_CHECK_LIB([readline -lcurses],[readli
+@@ -49,7 +49,7 @@ AC_CHECK_LIB([readline -lcurses],[readli
  AC_CHECK_LIB([readline -ltermcap],[readline],[RLLIBS="-lreadline -ltermcap"])
  AC_CHECK_LIB([readline -lncurses],[readline],[RLLIBS="-lreadline -lncurses"])
  
@@ -13,13 +15,13 @@ Avoid non-standard `==' test(1) operator.
     AC_MSG_ERROR([ERROR! readline not found..])
  fi
  AC_SUBST(RLLIBS)
-@@ -72,15 +72,15 @@ if test "x$PKGCONFIG" = "xno"; then
- fi
- 
+@@ -64,15 +64,15 @@ fi
  PKG_CHECK_MODULES([GUILE], [guile-2.0], [HAVE_GUILE_2="yes"], [HAVE_GUILE_2="no"])
--if test "x$HAVE_GUILE_2" == "xno"; then
-+if test "x$HAVE_GUILE_2" = "xno"; then
-    AC_MSG_ERROR([ERROR! guile-2.0 not found...])
+ PKG_CHECK_MODULES([GUILE], [guile-2.2], [HAVE_GUILE_2_2="yes"], [HAVE_GUILE_2_2="no"])
+ PKG_CHECK_MODULES([GUILE], [guile-3.0], [HAVE_GUILE_3="yes"], [HAVE_GUILE_3="no"])
+-if test "x$HAVE_GUILE_2" == "xno" && test "x$HAVE_GUILE_2_2" == "xno" && test "x$HAVE_GUILE_3" == "xno"; then
++if test "x$HAVE_GUILE_2" = "xno" && test "x$HAVE_GUILE_2_2" = "xno" && test "x$HAVE_GUILE_3" = "xno"; then
+    AC_MSG_ERROR([ERROR! guile-2.0, or guile-2.2, or guile-3.0 not found...])
  fi
  PKG_CHECK_MODULES([GLIB], [glib-2.0], [HAVE_GLIB_2="yes"], [HAVE_GLIB_2="no"])
 -if test "x$HAVE_GLIB_2" == "xno"; then
