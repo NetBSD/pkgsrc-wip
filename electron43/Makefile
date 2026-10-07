@@ -30,15 +30,15 @@ MANTLE_VERSION=			2a8e2123a3931038179ee06105c9e6ec336b12ea
 ENGFLOW_VERSION=		955335c30a752e9ef7bff375baab5e0819b6c00d
 LLVM_MV=			21
 
-GITHUB_SUBMODULES=		kikadf chromium-audioio v${AUDIOIO_VERSION} media/audio/audioio
-GITHUB_SUBMODULES+=		nodejs node v${NODE_VERSION} third_party/electron_node
-GITHUB_SUBMODULES+=		nodejs nan ${NAN_VERSION} third_party/nan
-GITHUB_SUBMODULES+=		Squirrel Squirrel.Mac ${SQUIRREL_VERSION} third_party/squirrel.mac
-GITHUB_SUBMODULES+=		ReactiveCocoa ReactiveObjC ${REACTIVEOBJC_VERSION} third_party/squirrel.mac/vendor/ReactiveObjC
-GITHUB_SUBMODULES+=		Mantle Mantle ${MANTLE_VERSION} third_party/squirrel.mac/vendor/Mantle
-GITHUB_SUBMODULES+=		EngFlow reclient-configs ${ENGFLOW_VERSION} third_party/engflow-reclient-configs
-GITHUB_SUBMODULES+=		evanw esbuild v${ESBUILD_VERSION} esbuild
-GITHUB_SUBMODULES+=		rollup rollup v{ROLLUP_VERSION} rollup
+GITHUB_SUBMODULES=		kikadf chromium-audioio v${AUDIOIO_VERSION} pkgsrc/audioio
+GITHUB_SUBMODULES+=		nodejs node v${NODE_VERSION} pkgsrc/electron_node
+GITHUB_SUBMODULES+=		nodejs nan ${NAN_VERSION} pkgsrc/nan
+GITHUB_SUBMODULES+=		Squirrel Squirrel.Mac ${SQUIRREL_VERSION} pkgsrc/squirrel.mac
+GITHUB_SUBMODULES+=		ReactiveCocoa ReactiveObjC ${REACTIVEOBJC_VERSION} pkgsrc/squirrel.mac/vendor/ReactiveObjC
+GITHUB_SUBMODULES+=		Mantle Mantle ${MANTLE_VERSION} pkgsrc/squirrel.mac/vendor/Mantle
+GITHUB_SUBMODULES+=		EngFlow reclient-configs ${ENGFLOW_VERSION} pkgsrc/engflow-reclient-configs
+GITHUB_SUBMODULES+=		evanw esbuild v${ESBUILD_VERSION} pkgsrc/esbuild
+GITHUB_SUBMODULES+=		rollup rollup v${ROLLUP_VERSION} pkgsrc/rollup
 CARGO_WRKSRC=			${WRKSRC}/rollup/rust
 .include "cargo-depends.mk"
 
@@ -230,7 +230,7 @@ MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true
 GN_ARGS+=	rust_sysroot_absolute="${PREFIX}"
 
-FFMPEG_PARTS= config.h config_components.h libavcodec libavformat libavutil
+FFMPEG_PARTS=		config.h config_components.h libavcodec libavformat libavutil
 .if ${MACHINE_ARCH} == "aarch64"
 FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
@@ -268,13 +268,13 @@ post-extract:
 	# Make source tree
 	${MV} ${WRKSRC} ${WRKDIR}/temp
 	${MV} ${WRKDIR}/chromium-${CHROMIUM_VERSION} ${WRKSRC}
-	${MV} ${WRKDIR}/temp/media/audio/audioio ${WRKSRC}/media/audio/audioio
-	${MV} ${WRKDIR}/temp/third_party/electron_node ${WRKSRC}/third_party/electron_node
-	${MV} ${WRKDIR}/temp/third_party/nan ${WRKSRC}/third_party/nan
-	${MV} ${WRKDIR}/temp/third_party/squirrel.mac ${WRKSRC}/third_party/squirrel.mac
-	${MV} ${WRKDIR}/temp/third_party/engflow-reclient-configs ${WRKSRC}/third_party/engflow-reclient-configs
+	${MV} ${WRKDIR}/temp/pkgsrc/audioio ${WRKSRC}/media/audio/audioio
+	${MV} ${WRKDIR}/temp/pkgsrc/electron_node ${WRKSRC}/third_party/electron_node
+	${MV} ${WRKDIR}/temp/pkgsrc/nan ${WRKSRC}/third_party/nan
+	${MV} ${WRKDIR}/temp/pkgsrc/squirrel.mac ${WRKSRC}/third_party/squirrel.mac
+	${MV} ${WRKDIR}/temp/pkgsrc/rollup ${WRKSRC}/rollup
+	${MV} ${WRKDIR}/temp/pkgsrc/esbuild ${WRKSRC}/esbuild
 	${MV} ${WRKDIR}/temp ${WRKSRC}/electron
-	#${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 	# Install node modules for electron
 	${ECHO} "yarn-offline-mirror \"${WRKDIR}/${ELECTRON}-node_modules-${ELECTRON_VER}\"" \
