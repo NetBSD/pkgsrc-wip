@@ -23,12 +23,11 @@ SUBST_FILES.version=	pyproject.toml
 SUBST_SED.version=	-e 's/3.1.1/${PKGVERSION_NOREV}/'
 
 # TEST DEPENDS
-USE_LANGUAGES+=	c
+USE_LANGUAGES+=		c
+# Not in pyproject.toml but hidden in tests/:
+TEST_DEPENDS+=		${PYPKGPREFIX}-test-order-[0-9]*:../../devel/py-test-order
 
-# Upstream has many test dependencies, not expressed in pyproject.toml.
-# At least:
-#   loopback
-#   memory
+# "Releases" lack bits needed for tests.
 # https://github.com/mxmlnkn/mfusepy/issues/61
 
 .include "../../lang/python/wheel.mk"
