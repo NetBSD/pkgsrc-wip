@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	photocraft-0.3.0
+DISTNAME=	photocraft-0.5.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=storytold/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
