@@ -1,0 +1,6 @@
+PhotoCraft is an open-source, clean-room image editor in the style of
+Adobe Photoshop, written in Rust.  It supports layers, masks,
+adjustment layers, layer styles, type, vector shapes, brushes and
+reading and writing real PSD/PSB files, in a native GPU-accelerated
+(wgpu/egui) application.  A command-line tool, photocraft-cli, is also
+included for batch processing.
