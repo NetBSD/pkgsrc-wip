@@ -1,0 +1,8 @@
+LightCraft is an open-source, clean-room photo library and raw
+developer in the style of Adobe Lightroom, written in Rust.  It
+offers non-destructive editing through a scene-referred, wide-gamut
+32-bit float pipeline, colour grading, brush/gradient/range masks,
+presets and profiles, and a library with albums, folders, ratings and
+flags.  Raw decoders for DNG, CR2, ARW, NEF, RAF (incl. X-Trans), RW2,
+PEF and ORF are included.  Every action is a command that can also be
+driven from lightcraft-cli or an MCP server.

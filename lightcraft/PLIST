@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/lightcraft
+bin/lightcraft-cli
+share/applications/ai.storyteller.lightcraft.desktop
+share/doc/lightcraft/LICENSE-APACHE
+share/doc/lightcraft/LICENSE-MIT
+share/doc/lightcraft/NOTICE
+share/doc/lightcraft/README.md
+share/icons/hicolor/128x128/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/16x16/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/24x24/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/256x256/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/32x32/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/48x48/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/512x512/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/64x64/apps/ai.storyteller.lightcraft.png
+share/icons/hicolor/scalable/apps/ai.storyteller.lightcraft.svg
+share/metainfo/ai.storyteller.lightcraft.metainfo.xml
+share/mime/packages/ai.storyteller.lightcraft.xml
