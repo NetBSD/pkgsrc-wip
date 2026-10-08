@@ -1,5 +1,26 @@
-crush: Update to 0.97.1
+crush: Update to 0.98.0
 
 Changelog
+New!
+19e7dd4: feat: OSC 7501 (#4041) (@andrinoff)
+30145cb: feat: grok OAuth (#3833) (@andrinoff)
 Fixed
-f2d66d2: fix: remove the powerline symbol (@andrinoff)
+8b1d542: fix(mcp): keep sessions alive when a server doesn't support ping (#4033) (@taciturnaxolotl)
+ca6ae26: fix(ui): keep multi-line tool output aligned under sub-agent branches (#4019) (@taciturnaxolotl)
+5e3fe4b: fix(ui): render multiline question answers as one line (#4020) (@taciturnaxolotl)
+76cc5c5: fix(ui): stop the attachment row from claiming files that are visible (@taciturnaxolotl)
+011a941: fix: Toggle MCPs bug with global and local (#4042) (@andrinoff)
+5f295a6: fix: change anim colors on previewTheme too (#4015) (@andrinoff)
+65865e0: fix: exclude signing from test (#4035) (@andrinoff)
+b4dd6e6: fix: openEditor swallowing an empty buffer (#4007) (@andrinoff)
+140e8cb: fix: stop intermittent CI test failures across all three platforms (#4034) (@taciturnaxolotl)
+Other stuff
+bdcf796: chore: auto-update files (@charmcli)
+73d1a50: chore: jailbreak crush out of the meta repo (#4008) (@andrinoff)
+2fbaa90: perf(prompt): read the current git branch without spawning a shell (@taciturnaxolotl)
+08984f5: refactor(ui): poll the git branch off the render path (@taciturnaxolotl)
+ee76ff2: server: add deadline to MCP fetch so hung server won't freeze UI (@meowgorithm)
+5b7377b: server: add support for git branches (@meowgorithm)
+263a020: server: back off MCP starting-state retries (@meowgorithm)
+3297f43: server: fix behavior where MCP status would not update in the UI (@meowgorithm)
+
