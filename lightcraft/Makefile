@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lightcraft-0.2.1
+DISTNAME=	lightcraft-0.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=storytold/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
