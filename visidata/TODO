@@ -1,3 +1,6 @@
 - Needs testing for real
    - probably mouse handling should be disabled for NetBSD curses(3) and/or make
      it really optional
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-41958, CVE-2026-42532
