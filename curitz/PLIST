@@ -18,12 +18,12 @@ ${PYSITELIB}/curitz/cli.pyo
 ${PYSITELIB}/curitz/culistbox.py
 ${PYSITELIB}/curitz/culistbox.pyc
 ${PYSITELIB}/curitz/culistbox.pyo
+${PYSITELIB}/curitz/reverse_dns.py
+${PYSITELIB}/curitz/reverse_dns.pyc
+${PYSITELIB}/curitz/reverse_dns.pyo
 ${PYSITELIB}/curitz/textpad.py
 ${PYSITELIB}/curitz/textpad.pyc
 ${PYSITELIB}/curitz/textpad.pyo
-${PYSITELIB}/curitz/timed_cache.py
-${PYSITELIB}/curitz/timed_cache.pyc
-${PYSITELIB}/curitz/timed_cache.pyo
 ${PYSITELIB}/curitz/version.py
 ${PYSITELIB}/curitz/version.pyc
 ${PYSITELIB}/curitz/version.pyo
