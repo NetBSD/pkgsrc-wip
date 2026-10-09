@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/ui/views/menu_bar.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/ui/views/menu_bar.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/ui/views/menu_bar.cc
 @@ -14,7 +14,7 @@
  #include "ui/views/background.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "ui/gtk/gtk_util.h"  // nogncheck
  #endif
  
-@@ -214,7 +214,7 @@ void MenuBar::ViewHierarchyChanged(
+@@ -215,7 +215,7 @@ void MenuBar::ViewHierarchyChanged(
  
  void MenuBar::RefreshColorCache(const ui::NativeTheme* theme) {
    if (theme) {
@@ -24,7 +24,7 @@ $NetBSD$
      background_color_ = gtk::GetBgColor("GtkMenuBar#menubar");
      enabled_color_ =
          gtk::GetFgColor("GtkMenuBar#menubar GtkMenuItem#menuitem GtkLabel");
-@@ -239,7 +239,7 @@ void MenuBar::RebuildChildren() {
+@@ -241,7 +241,7 @@ void MenuBar::RebuildChildren() {
  }
  
  void MenuBar::UpdateViewColors() {
@@ -33,7 +33,7 @@ $NetBSD$
    // set menubar background color
    SetBackground(views::CreateSolidBackground(background_color_));
  #endif
-@@ -247,7 +247,7 @@ void MenuBar::UpdateViewColors() {
+@@ -249,7 +249,7 @@ void MenuBar::UpdateViewColors() {
    // set child colors
    if (menu_model_ == nullptr)
      return;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/electron_node/deps/uv/src/unix/pipe.c.orig	2025-04-18 18:41:29.000000000 +0000
+--- third_party/electron_node/deps/uv/src/unix/pipe.c.orig	2026-09-07 09:57:40.000000000 +0000
 +++ third_party/electron_node/deps/uv/src/unix/pipe.c
-@@ -186,9 +186,13 @@ int uv_pipe_open(uv_pipe_t* handle, uv_f
+@@ -208,9 +208,13 @@ int uv_pipe_open(uv_pipe_t* handle, uv_f
    if (mode == -1)
      return UV__ERR(errno); /* according to docs, must be EBADF */
  

@@ -4,36 +4,86 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/electron_browser_main_parts.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts.cc
-@@ -76,7 +76,7 @@
+@@ -81,7 +81,7 @@
  #include "ui/wm/core/wm_state.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include <dlfcn.h>
+ 
  #include "base/environment.h"
- #include "chrome/browser/ui/views/dark_mode_manager_linux.h"
- #include "device/bluetooth/bluetooth_adapter_factory.h"
-@@ -129,7 +129,7 @@ namespace electron {
+@@ -142,7 +142,7 @@ namespace electron {
  
  namespace {
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- class LinuxUiGetterImpl : public ui::LinuxUiGetter {
-  public:
-   LinuxUiGetterImpl() = default;
-@@ -209,7 +209,7 @@ int ElectronBrowserMainParts::PreEarlyIn
- #if BUILDFLAG(IS_POSIX)
-   HandleSIGCHLD();
- #endif
+ // The display server connection or the session bus is gone: exit like
+ // Chrome's SessionEnding(), with an off-thread watchdog that crashes us if
+ // exiting hangs on the dead connection.
+@@ -214,13 +214,17 @@ ElectronBrowserMainParts::ElectronBrowse
+   self_ = this;
+ }
+ 
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   DetectOzonePlatform();
-   ui::OzonePlatform::PreEarlyInitialization();
+ namespace {
+ 
+ // Resolved via dlsym: a direct reference would bind to Chromium's bundled
+ // FontConfig rather than the system copy GTK and Pango use.
+ void* SystemFontConfigSymbol(const char* name) {
++#if BUILDFLAG(IS_BSD)
++  void* lib = dlopen("libfontconfig.so", RTLD_NOW);
++#else
+   void* lib = dlopen("libfontconfig.so.1", RTLD_NOW);
++#endif
+   return lib ? dlsym(lib, name) : nullptr;
+ }
+ 
+@@ -251,10 +255,10 @@ std::vector<std::optional<std::string>> 
+ }
+ 
+ }  // namespace
+-#endif  // BUILDFLAG(IS_LINUX)
++#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ 
+ ElectronBrowserMainParts::~ElectronBrowserMainParts() {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   JoinSystemFontConfigInit();
  #endif
-@@ -300,7 +300,7 @@ int ElectronBrowserMainParts::PreCreateT
+ }
+@@ -321,7 +325,7 @@ void ElectronBrowserMainParts::PostEarly
+ 
+   node_bindings_->Initialize(isolate, context);
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Runs during Node.js environment creation and is joined before any app
+   // code can run, so nothing else touches FontConfig or the environment.
+   const auto fontconfig_env = SnapshotFontConfigEnv();
+@@ -357,7 +361,7 @@ void ElectronBrowserMainParts::PostEarly
+   // Wrap the uv loop with global env.
+   node_bindings_->set_uv_env(node_env_.get());
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   JoinSystemFontConfigInit();
+ #endif
+ 
+@@ -367,7 +371,7 @@ void ElectronBrowserMainParts::PostEarly
+   // Wait for app
+   node_bindings_->JoinAppCode();
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Reload if the app's main script changed the FontConfig environment.
+   if (fontconfig_env != SnapshotFontConfigEnv()) {
+     if (auto fc_reinit = reinterpret_cast<int (*)()>(
+@@ -432,7 +436,7 @@ int ElectronBrowserMainParts::PreCreateT
    // happen before the ResourceBundle is loaded
    if (locale.empty())
      l10n_util::OverrideLocaleWithCocoaLocale();
@@ -42,7 +92,7 @@ $NetBSD$
    // l10n_util::GetApplicationLocaleInternal uses g_get_language_names(),
    // which keys off of getenv("LC_ALL").
    // We must set this env first to make ui::ResourceBundle accept the custom
-@@ -331,7 +331,7 @@ int ElectronBrowserMainParts::PreCreateT
+@@ -461,7 +465,7 @@ int ElectronBrowserMainParts::PreCreateT
    ElectronBrowserClient::SetApplicationLocale(app_locale);
    fake_browser_process_->SetApplicationLocale(app_locale);
  
@@ -51,16 +101,33 @@ $NetBSD$
    // Reset to the original LC_ALL since we should not be changing it.
    if (!locale.empty()) {
      if (lc_all)
-@@ -388,7 +388,7 @@ void ElectronBrowserMainParts::PostDestr
+@@ -517,7 +521,7 @@ void ElectronBrowserMainParts::PostDestr
  }
  
  void ElectronBrowserMainParts::ToolkitInitialized() {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   auto* linux_ui = ui::GetDefaultLinuxUi();
-   CHECK(linux_ui);
-   linux_ui_getter_ = std::make_unique<LinuxUiGetterImpl>();
-@@ -494,7 +494,7 @@ void ElectronBrowserMainParts::WillRunMa
+   // GTK3's gtk_init() probes the display for OpenGL and loads the GL driver
+   // into this process; nothing here uses GdkGLContext. GDK_GL is read once at
+   // init and only by GTK3 (GTK4 renders with GL itself and ignores it).
+@@ -567,14 +571,14 @@ void ElectronBrowserMainParts::ToolkitIn
+ #endif
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ void ElectronBrowserMainParts::JoinSystemFontConfigInit() {
+   if (system_fontconfig_thread_.is_null())
+     return;
+   base::PlatformThread::Join(system_fontconfig_thread_);
+   system_fontconfig_thread_ = base::PlatformThreadHandle();
+ }
+-#endif  // BUILDFLAG(IS_LINUX)
++#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ 
+ int ElectronBrowserMainParts::PreMainMessageLoopRun() {
+   // Run user's main script before most things get initialized, so we can have
+@@ -647,19 +651,23 @@ void ElectronBrowserMainParts::WillRunMa
  }
  
  void ElectronBrowserMainParts::PostCreateMainMessageLoop() {
@@ -68,18 +135,25 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    std::string app_name = electron::Browser::Get()->GetName();
  #endif
- #if BUILDFLAG(IS_LINUX)
-@@ -506,7 +506,9 @@ void ElectronBrowserMainParts::PostCreat
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   ui::OzonePlatform::GetInstance()->PostCreateMainMessageLoop(
+       base::BindOnce(&ExitOnSessionLoss),
+       content::GetUIThreadTaskRunner({content::BrowserTaskType::kUserInput}));
+   dbus_thread_linux::SetDisconnectedCallback(
+       base::BindRepeating(&ExitOnSessionLoss));
  
++#if BUILDFLAG(IS_LINUX)
    if (!bluez::BluezDBusManager::IsInitialized())
      bluez::DBusBluezManagerWrapperLinux::Initialize();
++#endif
 +#endif
  
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Set up crypt config. This needs to be done before anything starts the
    // network service, as the raw encryption key needs to be shared with the
    // network service for encrypted cookie storage.
-@@ -601,7 +603,7 @@ void ElectronBrowserMainParts::PostMainM
+@@ -756,7 +764,7 @@ void ElectronBrowserMainParts::PostMainM
    fake_browser_process_->PostMainMessageLoopRun();
    content::DevToolsAgentHost::StopRemoteDebuggingPipeHandler();
  

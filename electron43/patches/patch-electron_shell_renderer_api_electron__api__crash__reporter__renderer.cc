@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/renderer/api/electron_api_crash_reporter_renderer.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/renderer/api/electron_api_crash_reporter_renderer.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/renderer/api/electron_api_crash_reporter_renderer.cc
 @@ -6,7 +6,7 @@
  #include "shell/common/gin_helper/dictionary.h"
@@ -31,10 +31,10 @@ $NetBSD$
  void SetCrashKeyStub(const std::string& key, const std::string& value) {}
  void ClearCrashKeyStub(const std::string& key) {}
  #endif
-@@ -30,7 +30,7 @@ void Initialize(v8::Local<v8::Object> ex
-                 v8::Local<v8::Context> context,
+@@ -31,7 +31,7 @@ void Initialize(v8::Local<v8::Object> ex
                  void* priv) {
-   gin_helper::Dictionary dict(context->GetIsolate(), exports);
+   v8::Isolate* const isolate = v8::Isolate::GetCurrent();
+   gin_helper::Dictionary dict{isolate, exports};
 -#if IS_MAS_BUILD()
 +#if IS_MAS_BUILD() || BUILDFLAG(IS_BSD)
    dict.SetMethod("addExtraParameter", &SetCrashKeyStub);

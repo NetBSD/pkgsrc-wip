@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_web_contents.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/api/electron_api_web_contents.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/api/electron_api_web_contents.cc
-@@ -157,11 +157,11 @@
+@@ -188,11 +188,11 @@
  #include "ui/base/cocoa/defaults_utils.h"
  #endif
  
@@ -17,10 +17,10 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #include "ui/aura/client/focus_client.h"
  #include "ui/aura/window.h"
  #include "ui/gfx/font_render_params.h"
- #endif
-@@ -193,7 +193,7 @@
+@@ -223,7 +223,7 @@
  #include "content/public/browser/plugin_service.h"
  #endif
  
@@ -29,16 +29,16 @@ $NetBSD$
  #include "chrome/browser/hang_monitor/hang_crash_dump.h"  // nogncheck
  #endif
  
-@@ -567,7 +567,7 @@ std::optional<base::TimeDelta> GetCursor
+@@ -658,7 +658,7 @@ std::optional<base::TimeDelta> GetCursor
        ui::TextInsertionCaretBlinkPeriodFromDefaults());
    if (system_value)
      return *system_value;
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (auto* linux_ui = ui::LinuxUi::instance())
-     return linux_ui->GetCursorBlinkInterval();
+   if (auto* native_theme = ui::NativeTheme::GetInstanceForNativeUi())
+     return native_theme->caret_blink_interval();
  #elif BUILDFLAG(IS_WIN)
-@@ -928,7 +928,7 @@ void WebContents::InitWithSessionAndOpti
+@@ -1060,7 +1060,7 @@ void WebContents::InitWithSessionAndOpti
    accept_languages.pop_back();
    prefs->accept_languages = accept_languages;
  
@@ -47,7 +47,7 @@ $NetBSD$
    // Update font settings.
    static const gfx::FontRenderParams params(
        gfx::GetFontRenderParams(gfx::FontRenderParamsQuery(), nullptr));
-@@ -2787,13 +2787,13 @@ void WebContents::ForcefullyCrashRendere
+@@ -3311,13 +3311,13 @@ void WebContents::ForcefullyCrashRendere
  
    content::RenderProcessHost* rph = rwh->GetProcess();
    if (rph) {
@@ -63,7 +63,7 @@ $NetBSD$
      CrashDumpHungChildProcess(rph->GetProcess().Handle());
  #endif
      rph->Shutdown(content::RESULT_CODE_HUNG);
-@@ -3476,7 +3476,7 @@ void WebContents::CopyImageAt(int x, int
+@@ -3958,7 +3958,7 @@ void WebContents::CopyImageAt(int x, int
  void WebContents::Focus() {
    // Focusing on WebContents does not automatically focus the window on macOS
    // and Linux, do it manually to match the behavior on Windows.
@@ -72,7 +72,7 @@ $NetBSD$
    if (owner_window())
      owner_window()->Focus(true);
  #endif
-@@ -4353,7 +4353,7 @@ ui::ImageModel WebContents::GetDevToolsW
+@@ -4918,7 +4918,7 @@ ui::ImageModel WebContents::GetDevToolsW
  }
  #endif
  

@@ -4,34 +4,27 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/app/electron_main_delegate.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/app/electron_main_delegate.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/app/electron_main_delegate.cc
-@@ -59,13 +59,13 @@
+@@ -67,7 +67,7 @@
  #include "chrome/child/v8_crashpad_support_win.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "base/nix/xdg_util.h"
+ #include "ui/linux/display_server_utils.h"
  #include "v8/include/v8-wasm-trap-handler-posix.h"
- #include "v8/include/v8.h"
- #endif
+@@ -78,7 +78,7 @@
+ #include "ui/ozone/public/ozone_platform.h"
+ #endif  // BUILDFLAG(IS_OZONE)
  
 -#if !IS_MAS_BUILD()
 +#if !IS_MAS_BUILD() && !BUILDFLAG(IS_BSD)
  #include "components/crash/core/app/crash_switches.h"  // nogncheck
  #include "components/crash/core/app/crashpad.h"        // nogncheck
  #include "components/crash/core/common/crash_key.h"
-@@ -156,7 +156,7 @@ bool ElectronPathProvider(int key, base:
-       create_dir = true;
-       break;
-     }
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     case DIR_APP_DATA: {
-       auto env = base::Environment::Create();
-       cur = base::nix::GetXDGDirectory(
-@@ -282,7 +282,7 @@ std::optional<int> ElectronMainDelegate:
+@@ -218,7 +218,7 @@ std::optional<int> ElectronMainDelegate:
      base::win::PinUser32();
  #endif
  
@@ -40,7 +33,7 @@ $NetBSD$
    // Check for --no-sandbox parameter when running as root.
    if (getuid() == 0 && IsSandboxEnabled(command_line))
      LOG(FATAL) << "Running as root without --"
-@@ -332,7 +332,7 @@ void ElectronMainDelegate::PreSandboxSta
+@@ -268,7 +268,7 @@ void ElectronMainDelegate::PreSandboxSta
        /* is_preinit = */ IsBrowserProcess() || IsZygoteProcess());
  #endif
  
@@ -49,7 +42,7 @@ $NetBSD$
    crash_reporter::InitializeCrashKeys();
  #endif
  
-@@ -367,7 +367,7 @@ void ElectronMainDelegate::PreSandboxSta
+@@ -303,7 +303,7 @@ void ElectronMainDelegate::PreSandboxSta
    }
  #endif
  
@@ -58,7 +51,16 @@ $NetBSD$
    crash_keys::SetCrashKeysFromCommandLine(*command_line);
    crash_keys::SetPlatformCrashKey();
  #endif
-@@ -402,7 +402,7 @@ std::optional<int> ElectronMainDelegate:
+@@ -322,7 +322,7 @@ void ElectronMainDelegate::PreSandboxSta
+ #if BUILDFLAG(IS_OZONE)
+     // Initialize Ozone platform and add required feature flags as per
+     // platform's properties.
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     ui::SetOzonePlatformForLinuxIfNeeded(*command_line);
+ #endif
+     ui::OzonePlatform::PreSandboxStartup();
+@@ -355,7 +355,7 @@ std::optional<int> ElectronMainDelegate:
  #if BUILDFLAG(IS_MAC)
    RegisterAtomCrApp();
  #endif

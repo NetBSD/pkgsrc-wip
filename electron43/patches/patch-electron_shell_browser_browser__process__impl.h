@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/browser_process_impl.h.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/browser_process_impl.h.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/browser_process_impl.h
-@@ -21,7 +21,7 @@
- #include "services/network/public/cpp/shared_url_loader_factory.h"
+@@ -22,7 +22,7 @@
  #include "shell/browser/net/system_network_context_manager.h"
+ #include "ui/base/unowned_user_data/unowned_user_data_host.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "components/os_crypt/sync/key_storage_util_linux.h"
  #endif
  
-@@ -60,7 +60,7 @@ class BrowserProcessImpl : public Browse
+@@ -65,7 +65,7 @@ class BrowserProcessImpl : public Browse
    const std::string& GetSystemLocale() const;
    electron::ResolveProxyHelper* GetResolveProxyHelper();
  
@@ -24,7 +24,7 @@ $NetBSD$
    void SetLinuxStorageBackend(os_crypt::SelectedLinuxBackend selected_backend);
    [[nodiscard]] const std::string& linux_storage_backend() const {
      return selected_linux_storage_backend_;
-@@ -150,7 +150,7 @@ class BrowserProcessImpl : public Browse
+@@ -161,7 +161,7 @@ class BrowserProcessImpl : public Browse
    std::unique_ptr<PrefService> local_state_;
    std::string locale_;
    std::string system_locale_;

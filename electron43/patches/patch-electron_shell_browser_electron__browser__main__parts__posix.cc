@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts_posix.cc
-@@ -210,6 +210,9 @@ void ElectronBrowserMainParts::InstallSh
+@@ -191,6 +191,9 @@ void ElectronBrowserMainParts::InstallSh
    g_pipe_pid = getpid();
    g_shutdown_pipe_read_fd = pipefd[0];
    g_shutdown_pipe_write_fd = pipefd[1];
@@ -16,7 +16,7 @@ $NetBSD$
  #if !defined(ADDRESS_SANITIZER)
    const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 2;
  #else
-@@ -217,6 +220,7 @@ void ElectronBrowserMainParts::InstallSh
+@@ -198,6 +201,7 @@ void ElectronBrowserMainParts::InstallSh
    // stack size to avoid hitting the guard page.
    const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 4;
  #endif

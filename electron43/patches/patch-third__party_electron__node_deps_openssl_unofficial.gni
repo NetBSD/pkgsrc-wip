@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, and
+  FreeBSD's electron patches
+
+--- third_party/electron_node/deps/openssl/unofficial.gni.orig	2026-09-07 09:57:40.000000000 +0000
++++ third_party/electron_node/deps/openssl/unofficial.gni
+@@ -71,7 +71,7 @@ template("openssl_gn_build") {
+     }
+     if (is_win) {
+       libs = [ "crypt32.lib" ]
+-    } else if (is_linux) {
++    } else if (is_linux && !is_bsd) {
+       libs = [ "atomic" ]
+     }
+ 

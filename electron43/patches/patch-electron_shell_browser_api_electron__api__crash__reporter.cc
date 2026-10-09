@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/api/electron_api_crash_reporter.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/api/electron_api_crash_reporter.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/api/electron_api_crash_reporter.cc
-@@ -30,7 +30,7 @@
+@@ -31,7 +31,7 @@
  #include "shell/common/process_util.h"
  #include "shell/common/thread_restrictions.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/crash/core/app/crashpad.h"  // nogncheck
  #include "components/crash/core/browser/crash_upload_list_crashpad.h"  // nogncheck
  #include "components/crash/core/common/crash_key.h"
-@@ -64,7 +64,7 @@ bool g_crash_reporter_initialized = fals
+@@ -65,7 +65,7 @@ bool g_crash_reporter_initialized = fals
  
  namespace electron::api::crash_reporter {
  
@@ -24,7 +24,7 @@ $NetBSD$
  namespace {
  
  void NoOp() {}
-@@ -135,7 +135,7 @@ void Start(const std::string& submit_url
+@@ -136,7 +136,7 @@ void Start(const std::string& submit_url
             const std::map<std::string, std::string>& extra,
             bool is_node_process) {
    TRACE_EVENT0("electron", "crash_reporter::Start");
@@ -33,7 +33,7 @@ $NetBSD$
    if (g_crash_reporter_initialized)
      return;
    g_crash_reporter_initialized = true;
-@@ -181,7 +181,7 @@ void Start(const std::string& submit_url
+@@ -182,7 +182,7 @@ void Start(const std::string& submit_url
  
  namespace {
  
@@ -42,7 +42,7 @@ $NetBSD$
  void GetUploadedReports(
      v8::Isolate* isolate,
      base::OnceCallback<void(v8::Local<v8::Value>)> callback) {
-@@ -236,13 +236,13 @@ v8::Local<v8::Value> GetUploadedReports(
+@@ -237,13 +237,13 @@ v8::Local<v8::Value> GetUploadedReports(
  #endif
  
  void SetUploadToServer(bool upload) {
@@ -58,7 +58,7 @@ $NetBSD$
    return false;
  #else
    return ElectronCrashReporterClient::Get()->GetCollectStatsConsent();
-@@ -251,7 +251,7 @@ bool GetUploadToServer() {
+@@ -252,7 +252,7 @@ bool GetUploadToServer() {
  
  v8::Local<v8::Value> GetParameters(v8::Isolate* isolate) {
    std::map<std::string, std::string> keys;
@@ -67,9 +67,9 @@ $NetBSD$
    electron::crash_keys::GetCrashKeys(&keys);
  #endif
    return gin::ConvertToV8(isolate, keys);
-@@ -263,7 +263,7 @@ void Initialize(v8::Local<v8::Object> ex
-                 void* priv) {
-   gin_helper::Dictionary dict(context->GetIsolate(), exports);
+@@ -265,7 +265,7 @@ void Initialize(v8::Local<v8::Object> ex
+   v8::Isolate* const isolate = electron::JavascriptEnvironment::GetIsolate();
+   gin_helper::Dictionary dict(isolate, exports);
    dict.SetMethod("start", &electron::api::crash_reporter::Start);
 -#if IS_MAS_BUILD()
 +#if IS_MAS_BUILD() || BUILDFLAG(IS_BSD)

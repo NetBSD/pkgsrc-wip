@@ -4,65 +4,21 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- ui/gtk/gtk_compat.cc.orig	2025-02-24 19:59:26.000000000 +0000
+--- ui/gtk/gtk_compat.cc.orig	2026-08-17 18:32:36.000000000 +0000
 +++ ui/gtk/gtk_compat.cc
-@@ -62,27 +62,38 @@ auto DlCast(void* symbol) {
- }
- 
- void* GetLibGio() {
-+#if BUILDFLAG(IS_BSD)
-+  static void* libgio = DlOpen("libgio-2.0.so");
-+#else
-   static void* libgio = DlOpen("libgio-2.0.so.0");
-+#endif
+@@ -82,15 +82,6 @@ void* GetLibGio() {
    return libgio;
  }
  
 -void* GetLibGdkPixbuf() {
+-#if BUILDFLAG(IS_BSD)
+-  static void* libgdk_pixbuf = DlOpen("libgdk_pixbuf-2.0.so");
+-#else
 -  static void* libgdk_pixbuf = DlOpen("libgdk_pixbuf-2.0.so.0");
+-#endif
 -  return libgdk_pixbuf;
 -}
 -
  void* GetLibGdk3() {
-+#if BUILDFLAG(IS_BSD)
-+  static void* libgdk3 = DlOpen("libgdk-3.so");
-+#else
-   static void* libgdk3 = DlOpen("libgdk-3.so.0");
-+#endif
-   return libgdk3;
- }
- 
- void* GetLibGtk3(bool check = true) {
-+#if BUILDFLAG(IS_BSD)
-+  static void* libgtk3 = DlOpen("libgtk-3.so", check);
-+#else
-   static void* libgtk3 = DlOpen("libgtk-3.so.0", check);
-+#endif
-   return libgtk3;
- }
- 
- void* GetLibGtk4(bool check = true) {
-+#if BUILDFLAG(IS_BSD)
-+  static void* libgtk4 = DlOpen("libgtk-4.so", check);
-+#else
-   static void* libgtk4 = DlOpen("libgtk-4.so.1", check);
-+#endif
-   return libgtk4;
- }
- 
-@@ -134,6 +145,15 @@ gfx::Insets InsetsFromGtkBorder(const Gt
- 
- }  // namespace
- 
-+void* GetLibGdkPixbuf() {
-+#if BUILDFLAG(IS_BSD)
-+  static void* libgdk_pixbuf = DlOpen("libgdk_pixbuf-2.0.so");
-+#else
-+  static void* libgdk_pixbuf = DlOpen("libgdk_pixbuf-2.0.so.0");
-+#endif
-+  return libgdk_pixbuf;
-+}
-+
- bool LoadGtk() {
-   static bool loaded = LoadGtkImpl();
-   return loaded;
+ #if BUILDFLAG(IS_BSD)
+   static void* libgdk3 = DlOpen("libgdk-3.so");

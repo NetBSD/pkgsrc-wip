@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/app/electron_crash_reporter_client.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/app/electron_crash_reporter_client.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/app/electron_crash_reporter_client.cc
 @@ -91,7 +91,7 @@ ElectronCrashReporterClient::ElectronCra
  
@@ -15,7 +15,7 @@ $NetBSD$
  void ElectronCrashReporterClient::SetCrashReporterClientIdFromGUID(
      const std::string& client_guid) {
    crash_keys::SetMetricsClientIdFromGUID(client_guid);
-@@ -192,7 +192,7 @@ void ElectronCrashReporterClient::GetPro
+@@ -172,7 +172,7 @@ void ElectronCrashReporterClient::GetPro
    (*annotations)["ver"] = ELECTRON_VERSION_STRING;
  }
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/BUILD.gn.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/BUILD.gn.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/BUILD.gn
-@@ -529,7 +529,7 @@ source_set("electron_lib") {
+@@ -629,7 +629,7 @@ source_set("electron_lib") {
      defines += [ "GDK_DISABLE_DEPRECATION_WARNINGS" ]
    }
  
@@ -15,7 +15,7 @@ $NetBSD$
      deps += [
        "//components/crash/core/app",
        "//components/crash/core/browser",
-@@ -622,6 +622,12 @@ source_set("electron_lib") {
+@@ -743,6 +743,12 @@ source_set("electron_lib") {
        cflags_objcc = [ "-fobjc-weak" ]
      }
    }
@@ -28,7 +28,16 @@ $NetBSD$
    if (is_linux) {
      libs = [ "xshmfence" ]
      deps += [
-@@ -1190,7 +1196,7 @@ if (is_mac) {
+@@ -1555,7 +1561,7 @@ if (is_mac) {
+     } else if (is_linux) {
+       sources = [
+         "shell/app/electron_main_linux.cc",
+-        "shell/app/environ_linux.cc",
++        # "shell/app/environ_linux.cc",
+         "shell/app/uv_stdio_fix.cc",
+         "shell/app/uv_stdio_fix.h",
+       ]
+@@ -1567,7 +1573,7 @@ if (is_mac) {
        ":electron_lib",
        ":electron_win32_resources",
        ":packed_resources",
@@ -36,9 +45,9 @@ $NetBSD$
 +      # "//components/crash/core/app",
        "//content:sandbox_helper_win",
        "//electron/buildflags",
-       "//ui/strings",
-@@ -1216,7 +1222,7 @@ if (is_mac) {
-       public_deps = [ "//tools/v8_context_snapshot:v8_context_snapshot" ]
+       "//third_party/electron_node:libnode",
+@@ -1594,7 +1600,7 @@ if (is_mac) {
+       public_deps = [ "//tools/v8_context_snapshot" ]
      }
  
 -    if (is_linux) {
@@ -46,7 +55,7 @@ $NetBSD$
        data_deps += [ "//components/crash/core/app:chrome_crashpad_handler" ]
      }
  
-@@ -1283,7 +1289,7 @@ if (is_mac) {
+@@ -1661,7 +1667,7 @@ if (is_mac) {
          configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
        }
  
@@ -55,12 +64,14 @@ $NetBSD$
          deps += [ "//sandbox/linux:chrome_sandbox" ]
        }
      }
-@@ -1391,7 +1397,7 @@ dist_zip("electron_dist_zip") {
-     ":electron_version_file",
-     ":licenses",
-   ]
--  if (is_linux) {
-+  if (is_linux && !is_bsd) {
-     data_deps += [ "//sandbox/linux:chrome_sandbox" ]
+@@ -1782,7 +1788,9 @@ dist_zip("electron_dist_zip") {
+       ]
+     }
+ 
+-    data_deps += [ "//sandbox/linux:chrome_sandbox" ]
++    if (!is_bsd) {
++      data_deps += [ "//sandbox/linux:chrome_sandbox" ]
++    }
    }
    deps = data_deps
+   outputs = [ "$root_build_dir/dist.zip" ]

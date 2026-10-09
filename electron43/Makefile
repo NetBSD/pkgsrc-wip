@@ -8,10 +8,9 @@ GITHUB_TAG=			v${PKGVERSION_NOREV}
 EXTRACT_SUFX_C=			.tar.xz
 
 CHROMIUM_DISTFILE=		chromium-${CHROMIUM_VERSION}-pkgsrc${EXTRACT_SUFX_C}
+MASTER_SITES+=			${MASTER_SITE_GITHUB:=kikadf/}chromium-tarballs/releases/download/${CHROMIUM_VERSION}/
 NODE_MODULES=			${ELECTRON}-node_modules-${ELECTRON_VER}.tar.gz
-SITES.${CHROMIUM_DISTFILE}=	https://github.com/kikadf/chromium-tarballs/releases/download/${CHROMIUM_VERSION}/
-#NOTE: SITES.${NODE_MODULES} doesn't work
-MASTER_SITES+=			${MASTER_SITE_SOURCEFORGE:=kikadf/NetBSD/}
+MASTER_SITES+=			https://distfiles.borderland.hu/
 DISTFILES+=			${CHROMIUM_DISTFILE}
 DISTFILES+=			${NODE_MODULES}
 DISTFILES+=			${DEFAULT_DISTFILES}
@@ -30,7 +29,7 @@ MANTLE_VERSION=			2a8e2123a3931038179ee06105c9e6ec336b12ea
 ENGFLOW_VERSION=		955335c30a752e9ef7bff375baab5e0819b6c00d
 LLVM_MV=			21
 
-GITHUB_SUBMODULES=		kikadf chromium-audioio v${AUDIOIO_VERSION} pkgsrc/audioio
+GITHUB_SUBMODULES=		kikadf chromium-nb v${AUDIOIO_VERSION} pkgsrc/chromium-nb
 GITHUB_SUBMODULES+=		nodejs node v${NODE_VERSION} pkgsrc/electron_node
 GITHUB_SUBMODULES+=		nodejs nan ${NAN_VERSION} pkgsrc/nan
 GITHUB_SUBMODULES+=		Squirrel Squirrel.Mac ${SQUIRREL_VERSION} pkgsrc/squirrel.mac
@@ -85,6 +84,7 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	third_party/electron_node/deps/v8/tools/profiling/run-llprof.sh
 
 TOOL_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=			git-base-[0-9]*:../../devel/git-base
 TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
 TOOL_DEPENDS+=			esbuild>=${ESBUILD_VERSION}:../../www/esbuild
 TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
@@ -121,6 +121,8 @@ SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	base/base_paths_posix.cc
 SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
+SUBST_FILES.path+=	build/config/rust.gni
+SUBST_FILES.path+=	build/linux/strip_binary.gni
 SUBST_FILES.path+=	build/gn_run_binary.py
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	build/rust/rust_bindgen_generator.gni
@@ -130,6 +132,7 @@ SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	third_party/dawn/tools/generate-sources-gn.py
 SUBST_FILES.path+=	third_party/blink/renderer/build/scripts/run_with_pythonpath.py
 SUBST_FILES.path+=	third_party/dawn/tools/generate-sources-gn.py
 SUBST_FILES.path+=	third_party/electron_node/tools/generate_gn_filenames_json.py
@@ -268,21 +271,28 @@ post-extract:
 	# Make source tree
 	${MV} ${WRKSRC} ${WRKDIR}/temp
 	${MV} ${WRKDIR}/chromium-${CHROMIUM_VERSION} ${WRKSRC}
-	${MV} ${WRKDIR}/temp/pkgsrc/audioio ${WRKSRC}/media/audio/audioio
+	${MV} ${WRKDIR}/temp/pkgsrc/chromium-nb ${WRKSRC}
 	${MV} ${WRKDIR}/temp/pkgsrc/electron_node ${WRKSRC}/third_party/electron_node
 	${MV} ${WRKDIR}/temp/pkgsrc/nan ${WRKSRC}/third_party/nan
 	${MV} ${WRKDIR}/temp/pkgsrc/squirrel.mac ${WRKSRC}/third_party/squirrel.mac
+	${MV} ${WRKDIR}/temp/pkgsrc/engflow-reclient-configs ${WRKSRC}/third_party/engflow-reclient-configs
 	${MV} ${WRKDIR}/temp/pkgsrc/rollup ${WRKSRC}/rollup
 	${MV} ${WRKDIR}/temp/pkgsrc/esbuild ${WRKSRC}/esbuild
 	${MV} ${WRKDIR}/temp ${WRKSRC}/electron
 
 	# Install node modules for electron
-	${ECHO} "yarn-offline-mirror \"${WRKDIR}/${ELECTRON}-node_modules-${ELECTRON_VER}\"" \
-		>> ${WRKSRC}/electron/.yarnrc
 	${SED} -i.bak '/.*prepare.*husky.*/d' ${WRKSRC}/electron/package.json
-	cd ${WRKSRC}/electron && \
-		${SETENV} HOME=${WRKDIR}/.home XDG_CACHE_HOME=${HOME}/.cache \
-		yarn install --frozen-lockfile --offline
+	cd ${WRKSRC}/electron && ${SETENV} \
+		HOME=${WRKDIR}/.home XDG_CACHE_HOME=${WRKDIR}/.cache \
+		YARN_GLOBAL_FOLDER=${WRKDIR}/.home/.yarn-global \
+		YARN_CACHE_FOLDER=${WRKDIR}/${ELECTRON}-node_modules-${ELECTRON_VER} \
+		YARN_ENABLE_GLOBAL_CACHE=false YARN_ENABLE_NETWORK=0 \
+		YARN_ENABLE_TELEMETRY=0 YARN_ENABLE_PROGRESS_BARS=0 \
+		yarn install --immutable --immutable-cache --mode=skip-build
+
+	# Apply electron patches
+	cd ${WRKSRC} && \
+		${SH} ${FILESDIR}/apply-electron-patches.sh
 
 pre-configure:
 	# Prepare internal ffmpeg

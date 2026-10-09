@@ -4,9 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/common/api/electron_bindings.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/common/api/electron_bindings.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/common/api/electron_bindings.cc
-@@ -254,7 +254,7 @@ void ElectronBindings::DidReceiveMemoryD
+@@ -185,7 +185,7 @@ v8::Local<v8::Value> ElectronBindings::G
+ #endif
+   dict.Set("free", free.InKiB());
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   dict.Set("available", mem_info.available.InKiB());
+ #endif
+ 
+@@ -261,7 +261,7 @@ void ElectronBindings::DidReceiveMemoryD
      if (target_pid == dump.pid()) {
        auto dict = gin_helper::Dictionary::CreateEmpty(isolate);
        const auto& osdump = dump.os_dump();

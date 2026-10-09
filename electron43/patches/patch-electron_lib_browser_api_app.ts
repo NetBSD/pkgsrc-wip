@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/lib/browser/api/app.ts.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/lib/browser/api/app.ts.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/lib/browser/api/app.ts
-@@ -67,7 +67,7 @@ if (process.platform === 'darwin') {
+@@ -71,7 +71,7 @@ if (process.platform === 'darwin') {
    app.dock!.getMenu = () => dockMenu;
  }
  

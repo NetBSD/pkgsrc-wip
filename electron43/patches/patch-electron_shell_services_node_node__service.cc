@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/services/node/node_service.cc.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/services/node/node_service.cc.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/services/node/node_service.cc
-@@ -22,7 +22,7 @@
- #include "shell/common/node_includes.h"
+@@ -26,7 +26,7 @@
+ #include "shell/common/v8_util.h"
  #include "shell/services/node/parent_port.h"
  
 -#if !IS_MAS_BUILD()
@@ -15,8 +15,8 @@ $NetBSD$
  #include "shell/common/crash_keys.h"
  #endif
  
-@@ -39,7 +39,7 @@ void V8FatalErrorCallback(const char* lo
-     g_client_remote->OnV8FatalError(location, outstream.str());
+@@ -47,7 +47,7 @@ void V8FatalErrorCallback(const char* lo
+     GetRemote()->OnV8FatalError(location, outstream.str());
    }
  
 -#if !IS_MAS_BUILD()

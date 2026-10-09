@@ -4,19 +4,46 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- third_party/electron_node/deps/uv/unofficial.gni.orig	2025-04-18 18:41:29.000000000 +0000
+--- third_party/electron_node/deps/uv/unofficial.gni.orig	2026-09-07 09:57:40.000000000 +0000
 +++ third_party/electron_node/deps/uv/unofficial.gni
-@@ -87,11 +87,11 @@ template("uv_gn_build") {
+@@ -27,7 +27,7 @@ template("uv_gn_build") {
+         "_FILE_OFFSET_BITS=64",
        ]
      }
-     if (is_posix) {
--      libs = [ "m" ]
-       ldflags = [ "-pthread" ]
+-    if (is_linux) {
++    if (is_linux && !is_bsd) {
+       defines += [
+         "_POSIX_C_SOURCE=200112",
+         "_GNU_SOURCE",
+@@ -105,12 +105,30 @@ template("uv_gn_build") {
+       sources += gypi_values.uv_sources_posix +
+                  [ "src/unix/proctitle.c" ]
      }
-     if (is_linux) {
--      libs += [
-+      libs = [
-+        "m",
-         "dl",
-         "rt",
-       ]
+-    if (is_linux) {
++    if (is_linux && !is_bsd) {
+       sources += gypi_values.uv_sources_linux
+     }
+     if (is_apple) {
+       sources += gypi_values.uv_sources_apple +
+                  gypi_values.uv_sources_bsd_common
+     }
++    if (is_freebsd) {
++      sources += gypi_values.uv_sources_bsd_common + [
++        "src/unix/freebsd.c",
++        "src/unix/random-getrandom.c",
++        "src/unix/posix-hrtime.c",
++        "src/unix/bsd-proctitle.c",
++      ]
++      sources -= [ "src/unix/proctitle.c" ]
++    }
++    if (is_netbsd) {
++      sources += gypi_values.uv_sources_bsd_common + [
++        "src/unix/netbsd.c",
++        "src/unix/random-getrandom.c",
++        "src/unix/posix-hrtime.c",
++        "src/unix/bsd-proctitle.c",
++      ]
++      sources -= [ "src/unix/proctitle.c" ]
++    }
+   }
+ }

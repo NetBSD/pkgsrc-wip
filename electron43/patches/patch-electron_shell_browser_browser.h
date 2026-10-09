@@ -4,18 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- electron/shell/browser/browser.h.orig	2025-05-09 16:52:15.000000000 +0000
+--- electron/shell/browser/browser.h.orig	2026-10-06 22:48:58.000000000 +0000
 +++ electron/shell/browser/browser.h
-@@ -144,7 +144,7 @@ class Browser : private WindowListObserv
- 
-   std::u16string GetApplicationNameForProtocol(const GURL& url);
- 
--#if !BUILDFLAG(IS_LINUX)
-+#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
-   // get the name, icon and path for an application
-   v8::Local<v8::Promise> GetApplicationInfoForProtocol(v8::Isolate* isolate,
-                                                        const GURL& url);
-@@ -272,10 +272,10 @@ class Browser : private WindowListObserv
+@@ -295,10 +295,10 @@ class Browser : private WindowListObserv
    PCWSTR GetAppUserModelID();
  #endif  // BUILDFLAG(IS_WIN)
  
