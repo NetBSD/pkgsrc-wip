@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	zinolib-0.10.1
+DISTNAME=	zinolib-1.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uninett/}
@@ -23,8 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 
 # Workaround for using github tarball:
 MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${PKGVERSION}
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
