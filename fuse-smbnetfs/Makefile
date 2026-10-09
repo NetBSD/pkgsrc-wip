@@ -28,7 +28,16 @@ SUBST_SED.paths=	-e 's,/etc,${PKG_SYSCONFDIR},g'
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/smbnetfs
 
+SUBST_CLASSES+=		readme
+SUBST_STAGE.readme=	pre-configure
+SUBST_MESSAGE.readme=	Filling in paths in README.pkgsrc.
+SUBST_FILES.readme=	README.pkgsrc
+SUBST_VARS.readme=	PREFIX PKG_SYSCONFDIR
+
 .include "../../mk/bsd.prefs.mk"
+
+post-extract:
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}/README.pkgsrc
 
 # XXX: hack should probably be moved to fuse.buildlink3.mk
 pre-configure:
@@ -42,6 +51,8 @@ post-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${MV} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV:S/fuse-//g}/smbnetfs.conf \
 	    ${DESTDIR}${PREFIX}/share/examples/smbnetfs/smbnetfs.conf
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc \
+	    ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV:S/fuse-//g}/README.pkgsrc
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/samba4/buildlink3.mk"

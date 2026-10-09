@@ -1,2 +1,14 @@
-Needs testing with an actual samba share, and better documentation
-in MESSAGE since upstream's documentation is pretty bad.
+Tested 2026-10-09 on NetBSD-current 11.99.9/amd64 with samba-4.24.7:
+- An authenticated SMB2/3 share on a QNAP NAS: list, read, create and
+  write all work.
+- A guest share on a local smbd: list, read, create and mkdir work.
+  Writing data fails with EACCES, and smbclient(1) is denied the same
+  way, so this is the server's guest permissions, not smbnetfs.
+
+Open:
+- umount(8) of a live mount hangs in "puffsrpl" waiting for the daemon,
+  and concurrent mount(8) calls then block in "fstchg".  Killing the
+  daemon with SIGKILL releases the mount.  Find out whether refuse/puffs
+  or smbnetfs fails to handle the unmount request.
+- df(1) reports 0 blocks unless -o free_space_size=N is given.
+- Not yet tested on netbsd-10 or on other architectures.

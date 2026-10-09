@@ -1,0 +1,54 @@
+Using smbnetfs from pkgsrc
+==========================
+
+There is no kernel SMB client on NetBSD (mount_smbfs(8) was removed in
+2020).  smbnetfs mounts SMB shares through FUSE, using NetBSD's native
+refuse(3)/puffs(4) layer.
+
+Configuration
+-------------
+
+smbnetfs reads its configuration from ~/.smb:
+
+  $ mkdir ~/.smb
+  $ cp @PKG_SYSCONFDIR@/samba/smb.conf ~/.smb/smb.conf
+  $ cp @PREFIX@/share/examples/smbnetfs/smbnetfs.conf ~/.smb/smbnetfs.conf
+
+Current Samba disables SMB1, so the network cannot be browsed.  Declare
+each server in ~/.smb/smbnetfs.conf:
+
+  host fileserver.example.org visible=true
+
+Put the credentials in ~/.smb/smbnetfs.auth, which smbnetfs.conf
+includes.  Use one line per share, or omit "/share" to use the same
+login for every share on that host:
+
+  auth "fileserver.example.org/share" "user" "password"
+
+smbnetfs ignores host and auth lines unless the config files are
+private:
+
+  $ chmod 600 ~/.smb/smbnetfs.conf ~/.smb/smbnetfs.auth
+
+Mounting
+--------
+
+To mount as an ordinary user, enable user mounts:
+
+  # sysctl -w security.models.extensions.usermount=1
+
+The shares appear as <mountpoint>/<host>/<share>:
+
+  $ smbnetfs /mountpoint
+  $ ls /mountpoint/fileserver.example.org/share
+
+To debug, add "-o log_file=/tmp/smbnetfs.log,smbnetfs_debug=2".
+df(1) shows 0 blocks unless "-o free_space_size=N" is given.
+
+Unmounting
+----------
+
+A plain umount(8) can hang waiting for the smbnetfs daemon, and other
+mount(8) calls then block as well.  Stop the daemon first:
+
+  $ pkill -9 -f 'smbnetfs /mountpoint'; umount /mountpoint
