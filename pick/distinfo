@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:21 nia Exp $
-
-BLAKE2s (pick-4.0.0.tar.gz) = 0bb5b4edc9e03e82db972d66ca8513d2222999dae35871cb13b343865cf0f0af
-SHA512 (pick-4.0.0.tar.gz) = 690f8ee174f69ec5897831b71f22bc82dbdaf71329e2b540cfb06e49963231196efe6192d1f564c1c7029c7335736d42f02483850ccbb2bd5bcd1dc52b034f56
-Size (pick-4.0.0.tar.gz) = 29786 bytes
-SHA1 (patch-pick.c) = cdce675828e0187cc9567aeec93893c9dbd14087
