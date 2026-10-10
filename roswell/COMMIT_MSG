@@ -1,4 +1,4 @@
-roswell: added version 23.10.14.114
+roswell: Add version 26.02.116
 
 Roswell is a Lisp implementation installer/manager, launcher, and
 much more! It started out as a command-line tool with the aim to make

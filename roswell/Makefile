@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	roswell-23.10.14.114
+DISTNAME=	roswell-26.02.116
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=roswell/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
-MAINTAINER=	nebbionegiuseppe@gmail.com
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/roswell/roswell/
 COMMENT=	Common Lisp environemnt setup utility
 LICENSE=	mit
