@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (cq-cli-v0.17.0.tar.gz) = 72fcf791590ba989aca9d755c52cd3e9337338cde9e4583198ffbac29e83975a
-SHA512 (cq-cli-v0.17.0.tar.gz) = c933b1bd4a9a60699dd43e493ee7aa481d14820f01577efd56bd78b360cf1ea371f36142d21c7e789d5c82b1f689032780119cdc7345fedfecd221be0036aaea
-Size (cq-cli-v0.17.0.tar.gz) = 790240 bytes
+BLAKE2s (cq-cli-v0.18.0.tar.gz) = 7e5ff6776b02be509fe5c1b18b336bdbdde84fa9a7414ff740d4aba3d0c29e32
+SHA512 (cq-cli-v0.18.0.tar.gz) = b94e437c3613129a756d16898e7dec9cf1628eed372816b518f26b9a2d3ee048cf2af54c8ef27c02c3f77a3d41d0d1e0c435473696de34f49c87ee886bce8192
+Size (cq-cli-v0.18.0.tar.gz) = 793713 bytes
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
 Size (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = 43 bytes
