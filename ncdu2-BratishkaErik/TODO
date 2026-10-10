@@ -1,0 +1,44 @@
+Doesn't build:
+
+cd /tmp/wip/ncdu2/work/ncdu-2.12.0 && /usr/bin/env USETOOLS=no ZIG_GLOBAL_CACHE_DIR=/tmp/wip/ncdu2/work/zig-global-cache ZIG_LOCAL_CACHE_DIR=/tmp/wip/ncdu2/work/zig-local-cache CC=gcc CFLAGS=-O2\ -g\ -fstack-clash-protection\ -I/usr/pkg/include\ -I/usr/pkg/include/ncurses CPPFLAGS=-I/usr/pkg/include\ -I/usr/pkg/include/ncurses CXX=c++ CXXFLAGS=-O2\ -g\ -fstack-clash-protection\ -I/usr/pkg/include\ -I/usr/pkg/include/ncurses\ -g COMPILER_RPATH_FLAG=-Wl,-R F77=gfortran FC=gfortran FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-L/usr/pkg/lib\ -Wl,-R/usr/pkg/lib LINKER_RPATH_FLAG=-R PATH=/tmp/wip/ncdu2/work/.cwrapper/bin:/tmp/wip/ncdu2/work/.buildlink/bin:/tmp/wip/ncdu2/work/.gcc/bin:/tmp/wip/ncdu2/work/.tools/bin:/usr/pkg/bin:/usr/bin:/bin:/usr/pkg/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/bin:/root/.cargo/bin:/sbin:/usr/sbin:/usr/local/bin:/root/.cargo/bin:/sbin:/usr/sbin:/usr/local/bin:/home/builder/.cargo/bin:/usr/pkg/bin:/usr/pkg/bin PREFIX=/usr/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/usr/pkg/etc CXXCPP=cpp HOME=/tmp/wip/ncdu2/work/.home CWRAPPERS_CONFIG_DIR=/tmp/wip/ncdu2/work/.cwrapper/config CPP=cpp LOCALBASE=/usr/pkg X11BASE=/usr/pkg PKGMANDIR=man PKGINFODIR=info PKGGNUDIR=gnu/ MAKECONF=/dev/null OBJECT_FMT=ELF USETOOLS=no BSD_INSTALL_PROGRAM=/usr/bin/install\ -c\ \ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_SCRIPT=/usr/bin/install\ -c\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_LIB=/usr/bin/install\ -c\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_DATA=/usr/bin/install\ -c\ -o\ builder\ -g\ builder\ -m\ 644 BSD_INSTALL_MAN=/usr/bin/install\ -c\ -o\ builder\ -g\ builder\ -m\ 644 BSD_INSTALL=/usr/bin/install BSD_INSTALL_PROGRAM_DIR=/usr/bin/install\ -d\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_SCRIPT_DIR=/usr/bin/install\ -d\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_LIB_DIR=/usr/bin/install\ -d\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_DATA_DIR=/usr/bin/install\ -d\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_MAN_DIR=/usr/bin/install\ -d\ -o\ builder\ -g\ builder\ -m\ 755 BSD_INSTALL_GAME=/usr/bin/install\ -c\ \ -o\ builder\ -g\ builder\ -m\ 2555 BSD_INSTALL_GAME_DATA=/usr/bin/install\ -c\ -o\ builder\ -g\ builder\ -m\ 664 BSD_INSTALL_GAME_DIR=/usr/bin/install\ -d\ -o\ builder\ -g\ builder\ -m\ 775 INSTALL_INFO= MAKEINFO=/tmp/wip/ncdu2/work/.tools/bin/makeinfo FLEX= BISON= ITSTOOL=/tmp/wip/ncdu2/work/.tools/bin/itstool GDBUS_CODEGEN=/tmp/wip/ncdu2/work/.tools/bin/gdbus-codegen PKG_CONFIG=/tmp/wip/ncdu2/work/.tools/bin/pkg-config PKG_CONFIG_LIBDIR=/tmp/wip/ncdu2/work/.buildlink/lib/pkgconfig:/tmp/wip/ncdu2/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/tmp/wip/ncdu2/work/.pkg-config.log PKG_CONFIG_PATH= CWRAPPERS_CONFIG_DIR=/tmp/wip/ncdu2/work/.cwrapper/config zig build --release=safe -Dcpu=baseline  -Dpie=true --prefix /tmp/wip/ncdu2/work/.destdir/usr/pkg
+zig-pkg/translate_c-2.0.0-Q_BUWltOBwA0229IE8wwSxxGzOxyRso3hvcb1nN8oJX_/build/Translator.zig:134:13: error: invalid builtin function: '@backingInt'
+            @backingInt(lsl.options.use_pkg_config),
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zig-pkg/translate_c-2.0.0-Q_BUWltOBwA0229IE8wwSxxGzOxyRso3hvcb1nN8oJX_/test/cases.zig:109:54: error: invalid builtin function: '@fromBackingInt'
+                        options.strict_flex_arrays = @fromBackingInt(@intCast(rest[0] - '0'));
+                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build.zig:63:16: error: no field or member function named 'addIncludePath' in 'Build.Dependency'
+    translate_c.addIncludePath(include_path);
+    ~~~~~~~~~~~^~~~~~~~~~~~~~~
+/usr/pkg/lib/zig/std/Build.zig:1940:24: note: struct declared here
+pub const Dependency = struct {
+                       ^~~~~~
+build.zig:63:16: note: method invocation only supports up to one level of implicit pointer dereferencing
+build.zig:63:16: note: use '.*' to dereference pointer
+referenced by:
+    runBuild__anon_32126: /usr/pkg/lib/zig/std/Build.zig:2264:33
+    main: /usr/pkg/lib/zig/compiler/build_runner.zig:463:29
+    4 reference(s) hidden; use '-freference-trace=6' to see all references
+build.zig:184:34: error: no field or member function named 'addOutputDirectoryArg2' in 'Build.Step.Run'
+    const prefix_dir = run_config.addOutputDirectoryArg2("inst", .{ .prefix = "--prefix=", .make_absolute = true });
+                       ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/usr/pkg/lib/zig/std/Build/Step/Run.zig:1:1: note: struct declared here
+const Run = @This();
+^~~~~
+build.zig:184:34: note: method invocation only supports up to one level of implicit pointer dereferencing
+build.zig:184:34: note: use '.*' to dereference pointer
+zig-pkg/aro-0.0.0-JSD1QtuBNwCASyBtNF3pqTl_W3oAJQGEVyFAtrBSE_Pa/build.zig:82:111: error: no field named 'debug' in enum 'builtin.OptimizeMode'
+    const link_libc = b.option(bool, "link-libc", "Force self-hosted compiler to link libc") orelse (mode != .debug);
+                                                                                                             ~^~~~~
+/usr/pkg/lib/zig/std/builtin.zig:112:26: note: enum declared here
+pub const OptimizeMode = enum {
+                         ^~~~
+zig-pkg/translate_c-2.0.0-Q_BUWltOBwA0229IE8wwSxxGzOxyRso3hvcb1nN8oJX_/build.zig:78:16: error: no field or member function named 'addPassthruArgs' in 'Build.Step.Run'
+        run_cmd.addPassthruArgs();
+        ~~~~~~~^~~~~~~~~~~~~~~~
+/usr/pkg/lib/zig/std/Build/Step/Run.zig:1:1: note: struct declared here
+const Run = @This();
+^~~~~
+zig-pkg/translate_c-2.0.0-Q_BUWltOBwA0229IE8wwSxxGzOxyRso3hvcb1nN8oJX_/build.zig:78:16: note: method invocation only supports up to one level of implicit pointer dereferencing
+zig-pkg/translate_c-2.0.0-Q_BUWltOBwA0229IE8wwSxxGzOxyRso3hvcb1nN8oJX_/build.zig:78:16: note: use '.*' to dereference pointer
+*** Error code 2
