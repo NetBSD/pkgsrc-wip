@@ -6314,7 +6314,6 @@ SUBDIR+=	zino
 SUBDIR+=	zip-devel
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
-SUBDIR+=	zk
 SUBDIR+=	zls
 SUBDIR+=	zlua
 SUBDIR+=	zmap
