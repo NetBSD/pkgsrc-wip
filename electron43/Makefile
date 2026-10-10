@@ -127,23 +127,17 @@ SUBST_FILES.path+=	build/gn_run_binary.py
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	build/rust/rust_bindgen_generator.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
-SUBST_FILES.path+=	chrome/browser/file_system_access/chrome_file_system_access_permission_context.h
 SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
-SUBST_FILES.path+=	third_party/dawn/tools/generate-sources-gn.py
 SUBST_FILES.path+=	third_party/blink/renderer/build/scripts/run_with_pythonpath.py
-SUBST_FILES.path+=	third_party/dawn/tools/generate-sources-gn.py
-SUBST_FILES.path+=	third_party/electron_node/tools/generate_gn_filenames_json.py
-SUBST_FILES.path+=	third_party/engflow-reclient-configs/python/python_remote_wrapper.template
-SUBST_FILES.path+=	third_party/squirrel.mac/build/xcrun.py
+SUBST_FILES.path+=	electron/spec/api-app.spec.ts
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	third_party/test_fonts/fontconfig/BUILD.gn
 SUBST_FILES.path+=	third_party/vulkan-loader/src/BUILD.gn
 SUBST_FILES.path+=	third_party/wayland/BUILD.gn
 SUBST_FILES.path+=	tools/protoc_wrapper/protoc_wrapper.py
-SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	v8/tools/run.py
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
@@ -164,7 +158,6 @@ GN_SYSTEM_LIBS=		dav1d
 GN_SYSTEM_LIBS+=	fontconfig
 #GN_SYSTEM_LIBS+=	icu
 GN_SYSTEM_LIBS+=	libaom
-GN_SYSTEM_LIBS+=	libevent # TODO: removed?
 GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
 GN_SYSTEM_LIBS+=	libpng
 GN_SYSTEM_LIBS+=	libvpx
@@ -178,7 +171,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
 GN_ARGS+=	enable_backup_ref_ptr_support=false
 GN_ARGS+=	enable_hangout_services_extension=true
-GN_ARGS+=	enable_nacl=false
 GN_ARGS+=	enable_remoting=false
 GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
@@ -215,6 +207,8 @@ CFLAGS+=	-fno-stack-protector
 CFLAGS+=	-isystem${PREFIX}/lib/clang/${LLVM_MV}/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
 CFLAGS+=	-Wno-unknown-warning-option
+CFLAGS+=	-std=c++20
+CFLAGS+=	-I${PREFIX}/include/node
 
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
@@ -271,7 +265,8 @@ post-extract:
 	# Make source tree
 	${MV} ${WRKSRC} ${WRKDIR}/temp
 	${MV} ${WRKDIR}/chromium-${CHROMIUM_VERSION} ${WRKSRC}
-	${MV} ${WRKDIR}/temp/pkgsrc/chromium-nb ${WRKSRC}
+	cd ${WRKDIR}/temp/pkgsrc/chromium-nb && \
+		${FIND} . -type f -print | pax -rw -pmp ${WRKSRC}
 	${MV} ${WRKDIR}/temp/pkgsrc/electron_node ${WRKSRC}/third_party/electron_node
 	${MV} ${WRKDIR}/temp/pkgsrc/nan ${WRKSRC}/third_party/nan
 	${MV} ${WRKDIR}/temp/pkgsrc/squirrel.mac ${WRKSRC}/third_party/squirrel.mac
@@ -295,6 +290,16 @@ post-extract:
 		${SH} ${FILESDIR}/apply-electron-patches.sh
 
 pre-configure:
+	# Prepare node modules for electron
+	cd ${WRKSRC}/electron && ${SETENV} ${MAKE_ENV} \
+		HOME=${WRKDIR}/.home XDG_CACHE_HOME=${WRKDIR}/.cache \
+		YARN_GLOBAL_FOLDER=${WRKDIR}/.home/.yarn-global \
+		YARN_CACHE_FOLDER=${WRKDIR}/${ELECTRON}-node_modules-${ELECTRON_VER} \
+		YARN_ENABLE_GLOBAL_CACHE=false YARN_ENABLE_NETWORK=0 \
+		YARN_ENABLE_TELEMETRY=0 YARN_ENABLE_PROGRESS_BARS=0 \
+		npm_config_nodedir=${PREFIX} SENTRYCLI_SKIP_DOWNLOAD=1 \
+		yarn rebuild
+
 	# Prepare internal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHONBIN} scripts/build_ffmpeg.py \

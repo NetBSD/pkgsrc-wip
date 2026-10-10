@@ -6,7 +6,7 @@
 
 ELECTRON_VER=		43.7.9
 ELECTRON_MAJOR=		${ELECTRON_VER:tu:C/\\.[[:digit:]\.]*//}
-NODE_VERSION_DEFAULT=	24
+NODE_VERSIONS_ACCEPTED=	24
 ELECTRON=		electron${ELECTRON_MAJOR}
 
 # Package-settable variable
@@ -26,7 +26,8 @@ PKG_FAIL_REASON+=	"Should be \"bundled\" or \"dependency\"."
 PKG_FAIL_REASON+=	"USE_ELECTRON is defined for ${PKGPATH} package."
 .endif
 
-TOOL_DEPENDS+=		nodejs-${NODE_VERSION_DEFAULT}.*:../../lang/nodejs${NODE_VERSION_DEFAULT}
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+
 .if ${USE_ELECTRON} == "dependency"
 DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .elif ${USE_ELECTRON} == "bundled"
@@ -64,7 +65,6 @@ PLIST.swiftshader=	yes
 .include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libatomic/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libevent/buildlink3.mk" # TODO: removed?
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -77,6 +77,8 @@ PLIST.swiftshader=	yes
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/compiler-rt/buildlink3.mk"
+BUILDLINK_DEPMETHOD.nodejs=	build
+.include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/rust.mk"
