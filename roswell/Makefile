@@ -3,7 +3,7 @@
 DISTNAME=	roswell-26.02.116
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=roswell/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/roswell/roswell/
