@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (whisper.cpp-1.9.4.tar.gz) = 8ad58fabc50921ae3a0c5bfc40d065b6949d20793c8ba521b1f4386c8672a6de
-SHA512 (whisper.cpp-1.9.4.tar.gz) = 4e839ce3b00eb5f7c42fb6af53318953cecbb44f2949aa3d030a0b768d45217a9790aa6aa432ef31fa250329b21314b16491f38e78a0d9fa3e729451337dbe3b
-Size (whisper.cpp-1.9.4.tar.gz) = 9353438 bytes
+BLAKE2s (whisper.cpp-1.9.5.tar.gz) = 994d4fb781a64cbd13a1d30e4b95f7097a5306246f670bb498b6bb002b8d33b8
+SHA512 (whisper.cpp-1.9.5.tar.gz) = 2948873d9fb86c676d45b9fce6ba2c6a056062583c481113b737cba9d16835954d9407743a987a8065b89e55baff01862385d1831bfbd091540e9058305c888a
+Size (whisper.cpp-1.9.5.tar.gz) = 9626464 bytes
