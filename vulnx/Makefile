@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
-HOMEPAGE=	https://github.com/projectdiscovery/dnsx
+HOMEPAGE=	https://github.com/projectdiscovery/vulnx
 COMMENT=	Modern CLI for exploring vulnerability data
 LICENSE=	mit
 
