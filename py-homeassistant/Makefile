@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.12
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.13
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -50,10 +50,22 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 
-# GCC
-# On NetBSD 10, require gcc 10 to match.
-# \todo For NetBSD 11, require gcc12.
-GFORTRAN_VERSION=	10
+# Generally, choose a gcc/fortran to match the base compiler, except
+# that any system with base gcc < 10 is not supported anyway.  While
+# we don't specifically depend on gcc proper in this package, venv
+# builds will expect the C/C++ part of the compiler also.
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+.  if !empty(OS_VERSION:M10\.*)
+GFORTRAN_VERSION?=	10
+.  elif !empty(OS_VERSION:M11.[0-8]*)
+GFORTRAN_VERSION?=	12
+.  elif !empty(OS_VERSION:M11.99.*)
+GFORTRAN_VERSION?=	14
+.  endif
+.endif
+# On a system without a known base compiler, pick
+GFORTRAN_VERSION?=	10
 
 # FORTRAN
 USE_LANGUAGES+=	fortran77
@@ -64,8 +76,9 @@ RUST_RUNTIME=	yes		# record a dependency
 
 ## LIBRARIES needed to build modules that HA needs
 
-# The standard approach for recorder is to use pgsql.  HA uses this,
-# like all databases, via SQLAlchemy.
+# The standard approach for recorder is to use pgsql.  We choose 18
+# and do not try to follow a chosen pgsql. (HA uses this, like all
+# databases, via SQLAlchemy, and then pyscopg2).
 .include "../../mk/pgsql.buildlink3.mk"
 DEPENDS+=	postgresql18-server-[0-9]*:../../databases/postgresql18-server
 
@@ -88,7 +101,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-grpcio-[0-9]*:../../net/py-grpcio
 
-# generic and stream require PyAV which depends on ffmpeg >= 8.
+# generic camera and stream require PyAV which depends on ffmpeg >= 8.
 DEPENDS+=	ffmpeg8-[0-9]*:../../multimedia/ffmpeg8
 
 # onvif integration requires onvif_zeep_async which depends on lxml
@@ -96,10 +109,10 @@ DEPENDS+=	ffmpeg8-[0-9]*:../../multimedia/ffmpeg8
 DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-.include "../../mk/bsd.prefs.mk"
-
 ## NEEDED WORKAROUNDS
 # This section describes workarounds to enable the venv to build.
+# They aren't really part of this package, but are included as helpful
+# to anyone wanting to use this package.
 # \todo Hoist these somehow to a script or fix upstream.
 
 ## ha-av
