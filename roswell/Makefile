@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=roswell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	drixter@e-utp.net
+MAINTAINER=	nebbionegiuseppe@gmail.com
 HOMEPAGE=	https://github.com/roswell/roswell/
 COMMENT=	Common Lisp environemnt setup utility
 LICENSE=	mit
