@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/muon
+man/man1/muon.1

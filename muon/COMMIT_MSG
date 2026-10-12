@@ -1,0 +1,13 @@
+muon: Update to 0.7.0
+
+- Switch homepage to <https://muon.build/>
+
+Changelog
+=========
+- more cross file support
+- add a way to disable docs
+- set more muon meson defaults to improve drop in behavior
+- fully implement meson.add_devenv
+- improvements to rpath fixer
+- improve haiku support
+- bump meson support to 1.11

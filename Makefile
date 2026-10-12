@@ -2538,6 +2538,7 @@ SUBDIR+=	mummer4
 SUBDIR+=	munge
 SUBDIR+=	munin-common
 SUBDIR+=	munin-node
+SUBDIR+=	muon
 SUBDIR+=	muonfp
 SUBDIR+=	mupen64plus
 SUBDIR+=	mupen64plus-extraplugins
