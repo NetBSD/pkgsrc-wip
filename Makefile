@@ -3117,6 +3117,7 @@ SUBDIR+=	palp
 SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
+SUBDIR+=	pamtester
 SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pangoterm
