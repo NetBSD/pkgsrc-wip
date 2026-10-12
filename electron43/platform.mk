@@ -26,8 +26,6 @@ PKG_FAIL_REASON+=	"Should be \"bundled\" or \"dependency\"."
 PKG_FAIL_REASON+=	"USE_ELECTRON is defined for ${PKGPATH} package."
 .endif
 
-TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
-
 .if ${USE_ELECTRON} == "dependency"
 DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .elif ${USE_ELECTRON} == "bundled"
