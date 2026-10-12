@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -317,7 +317,7 @@ CreateNavigationAction(GURL target) {
+@@ -320,7 +320,7 @@ CreateNavigationAction(GURL target) {
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  void NavigateToSettingsPage(ContextPtr ctx,
                              user_education::FeaturePromoHandle promo_handle) {
    BrowserWindowInterface* const browser = GetBrowser(ctx);
-@@ -1577,7 +1577,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1565,7 +1565,7 @@ void MaybeRegisterChromeFeaturePromos(
                  "Triggered when a shared tab becomes the active tab.")));
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    // kIPHSupervisedUserProfileSigninFeature:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -1920,7 +1920,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1894,7 +1894,7 @@ void MaybeRegisterChromeFeaturePromos(
                "Omnibox Everywhere.")));
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -33,7 +33,7 @@ $NetBSD$
    // kIPHDesktopPWAsLinkCapturingLaunch:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -2768,7 +2768,7 @@ void MaybeRegisterChromeNewBadges(user_e
+@@ -2742,7 +2742,7 @@ void MaybeRegisterChromeNewBadges(user_e
        user_education::Metadata(153, "amyasinghal@google.com",
                                 "Shown on the Dictation context menu item.")));
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/startup_metric_utils/browser/startup_metric_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/startup_metric_utils/browser/startup_metric_utils.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/startup_metric_utils/browser/startup_metric_utils.cc
 @@ -36,11 +36,11 @@
  #elif BUILDFLAG(IS_MAC)
@@ -29,7 +29,7 @@ $NetBSD$
  std::optional<uint32_t>
  BrowserStartupMetricRecorder::GetHardFaultCountForCurrentProcess() {
    struct rusage usage;
-@@ -579,7 +579,7 @@ void BrowserStartupMetricRecorder::Recor
+@@ -603,7 +603,7 @@ void BrowserStartupMetricRecorder::Recor
    }
    is_first_call = false;
    RecordBrowserWindowFirstPaintTicks(ticks);
@@ -38,7 +38,7 @@ $NetBSD$
    // Mirror Startup.BrowserMessageLoopStartHardFault{Count,Bytes} at the first
    // paint checkpoint (using a higher 1M cap for Count to avoid saturation).
    // We record this unconditionally (even if ShouldLogStartupHistogram() is
-@@ -617,7 +617,7 @@ void BrowserStartupMetricRecorder::Recor
+@@ -641,7 +641,7 @@ void BrowserStartupMetricRecorder::Recor
  }
  
  void BrowserStartupMetricRecorder::RecordHardFaultHistogram() {

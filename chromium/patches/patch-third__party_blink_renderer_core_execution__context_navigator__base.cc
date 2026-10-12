@@ -4,14 +4,23 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/execution_context/navigator_base.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/blink/renderer/core/execution_context/navigator_base.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/blink/renderer/core/execution_context/navigator_base.cc
-@@ -32,7 +32,7 @@ String GetReducedNavigatorPlatform() {
+@@ -27,7 +27,7 @@ namespace blink {
+ 
+ namespace {
+ 
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ constexpr char kLinuxX86_64[] = "Linux x86_64";
+ #endif
+ 
+@@ -47,7 +47,7 @@ String GetReducedNavigatorPlatform() {
    return "Win32";
  #elif BUILDFLAG(IS_FUCHSIA)
    return "";
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   return "Linux x86_64";
+   return kLinuxX86_64;
  #elif BUILDFLAG(IS_IOS)
    return "iPhone";

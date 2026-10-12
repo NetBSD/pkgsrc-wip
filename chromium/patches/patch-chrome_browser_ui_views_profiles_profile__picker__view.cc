@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_picker_view.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_picker_view.cc
-@@ -90,7 +90,7 @@
+@@ -93,7 +93,7 @@
  #include "chrome/browser/renderer_host/chrome_render_widget_host_view_mac_history_swiping_control.h"
  #endif
  

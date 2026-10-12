@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_session.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- remoting/host/desktop_session.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ remoting/host/desktop_session.cc
 @@ -23,7 +23,7 @@ void DesktopSession::SetReceiver(
    if (receiver.is_valid()) {

@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/crashpad/crashpad/util/posix/close_multiple.cc
-@@ -73,7 +73,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
- // This is an advantage over looping over all possible file descriptors, because
+@@ -75,7 +75,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
  // no attempt needs to be made to close file descriptors that are not open.
- bool CloseMultipleNowOrOnExecUsingFDDir(int min_fd, int preserve_fd) {
+ bool CloseMultipleNowOrOnExecUsingFDDir(int min_fd,
+                                         const std::set<int>& preserve_fds) {
 -#if BUILDFLAG(IS_APPLE)
 +#if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)
    static constexpr char kFDDir[] = "/dev/fd";

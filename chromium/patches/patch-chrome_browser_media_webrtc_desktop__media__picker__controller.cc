@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/media/webrtc/desktop_media_picker_controller.cc
-@@ -101,7 +101,7 @@ bool DesktopMediaPickerController::IsSys
-             base::FeatureList::IsEnabled(
-                 media::kMacCatapLoopbackAudioForScreenShare));
+@@ -112,7 +112,7 @@ bool DesktopMediaPickerController::IsSys
+   } else {
+     return media::IsMacCatapSystemLoopbackCaptureSupported();
    }
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

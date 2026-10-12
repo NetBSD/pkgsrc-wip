@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- remoting/host/ipc_desktop_environment.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.cc
-@@ -180,7 +180,7 @@ class IpcDesktopEnvironmentFactory::Core
+@@ -181,7 +181,7 @@ class IpcDesktopEnvironmentFactory::Core
                                ErrorCode error_code,
                                const std::string& error_details,
                                const SourceLocation& error_location);
@@ -15,7 +15,7 @@ $NetBSD$
    void OnSessionServicesClientConnected(
        int terminal_id,
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver);
-@@ -192,7 +192,7 @@ class IpcDesktopEnvironmentFactory::Core
+@@ -193,7 +193,7 @@ class IpcDesktopEnvironmentFactory::Core
    void OnTerminalDisconnected(ErrorCode error_code,
                                const std::string& error_details,
                                const SourceLocation& error_location) override;
@@ -24,7 +24,7 @@ $NetBSD$
    void OnSessionServicesClientConnected(
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
        override;
-@@ -351,7 +351,7 @@ void IpcDesktopEnvironmentFactory::Core:
+@@ -352,7 +352,7 @@ void IpcDesktopEnvironmentFactory::Core:
                           error_details, error_location);
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  void IpcDesktopEnvironmentFactory::Core::OnSessionServicesClientConnected(
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
    OnSessionServicesClientConnected(GetEventsReceivers().current_context(),
-@@ -397,7 +397,7 @@ void IpcDesktopEnvironmentFactory::Core:
+@@ -398,7 +398,7 @@ void IpcDesktopEnvironmentFactory::Core:
    }
  }
  
@@ -42,7 +42,7 @@ $NetBSD$
  void IpcDesktopEnvironmentFactory::Core::OnSessionServicesClientConnected(
      int terminal_id,
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
-@@ -511,7 +511,7 @@ void IpcDesktopEnvironmentFactory::OnTer
+@@ -512,7 +512,7 @@ void IpcDesktopEnvironmentFactory::OnTer
                                  error_location);
  }
  

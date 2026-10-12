@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.80 2026/09/05 19:10:04 bsiegert Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			154.0.8037.97
+VERSION=			155.0.8059.39
 CATEGORIES=			www
 #MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
@@ -15,11 +15,6 @@ DISTFILES+=			${DISTNAME}-linux${EXTRACT_SUFX_C}
 # Sources to build on NetBSD
 NB_VERSION=			v154.0
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
-
-# rollup
-GITHUB_SUBMODULES+=		rollup rollup v4.60.4 rollup
-CARGO_WRKSRC=			${WRKSRC}/rollup/rust
-.include "cargo-depends.mk"
 
 # esbuild
 EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
@@ -134,7 +129,8 @@ SUBST_FILES.path+=	third_party/test_fonts/fontconfig/BUILD.gn
 SUBST_FILES.path+=	third_party/vulkan-loader/src/BUILD.gn
 SUBST_FILES.path+=	third_party/wayland/BUILD.gn
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
-SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
+SUBST_FILES.path+=	v8/BUILD.gn
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN LLVM_MV
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
@@ -215,6 +211,8 @@ GN_ARGS+=	use_typescript_go=false
 GN_ARGS+=	use_udev=true
 GN_ARGS+=	use_vaapi=false
 GN_ARGS+=	v8_enable_cet_ibt=true
+GN_ARGS+=	v8_metagen_libclang_so=\"${PREFIX}/lib/libclang.so\"
+GN_ARGS+=	v8_metagen_libclang_bindings_dir=\"${PREFIX}/${PYSITELIB}\"
 
 # flags
 CFLAGS+=	-fno-stack-protector
@@ -331,9 +329,6 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/esbuild \
 		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild
 
-	# Prepare rollup
-	${MKDIR} ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup/rollup-${LOWER_OPSYS}
-
 do-configure:
 	${RUN} cd ${WRKSRC}/esbuild && \
 		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
@@ -349,15 +344,12 @@ do-configure:
 	cd ${WRKSRC}/tools/gn && \
 		${SETENV} ${MAKE_ENV} ${PYTHONBIN} bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
 
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/linux64/gn
 	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
 		gen --args="${GN_ARGS}" --script-executable="${PYTHONBIN}" ${GN_VERBOSE} out/${BUILDTYPE}
 
-do-build: do-cargo-build
-	cd ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup && \
-	${CP} ${WRKSRC}/rollup/rust/target/release/libbindings_napi.so \
-		rollup-${LOWER_OPSYS}/rollup.${LOWER_OPSYS}.node && \
-		${ECHO} '{ "main": "./rollup.${LOWER_OPSYS}.node" }' > rollup-${LOWER_OPSYS}/package.json
+do-build:
 	${RUN} cd ${WRKSRC}/typescript/tsc && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${GO} telemetry off >/dev/null 2>&1 || ${TRUE}
 	${RUN} cd ${WRKSRC}/typescript/tsc && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \

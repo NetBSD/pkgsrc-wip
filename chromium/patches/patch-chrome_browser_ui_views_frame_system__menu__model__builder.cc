@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -139,7 +139,7 @@ void SystemMenuModelBuilder::BuildSystem
    }
@@ -15,7 +15,7 @@ $NetBSD$
    AddItemWithIconMaybe(model, IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU,
                         views::kChromeMinimizeIcon);
    AddItemWithIconMaybe(model, IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU,
-@@ -265,7 +265,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -268,7 +268,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddItemWithStringId(IDC_TASK_MANAGER_CONTEXT_MENU,
                                 task_manager_string_id);
    }
@@ -24,7 +24,7 @@ $NetBSD$
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    bool supports_server_side_decorations = true;
  #if BUILDFLAG(IS_OZONE) && !BUILDFLAG(IS_CHROMEOS)
-@@ -358,7 +358,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -361,7 +361,7 @@ void SystemMenuModelBuilder::BuildSystem
  #endif
      model->AddItemWithStringId(IDC_TASK_MANAGER, task_manager_string_id);
    }

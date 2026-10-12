@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/platform_utils.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/device_signals/core/common/platform_utils.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/device_signals/core/common/platform_utils.h
 @@ -59,7 +59,7 @@ SettingValue GetSecureBootEnabled();
  std::optional<std::string> GetWindowsMachineDomain();

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
 @@ -40,7 +40,7 @@ inline constexpr int kUnsupportedVMRefre
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |
@@ -14,7 +14,7 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
      REFRESH_TYPE_FD_COUNT |
  #endif
-     REFRESH_TYPE_HARD_FAULTS;
+     REFRESH_TYPE_HARD_FAULTS | REFRESH_TYPE_CPPGC_MEMORY;
 @@ -139,7 +139,7 @@ class TaskGroup {
    int64_t hard_faults_per_second() const { return hard_faults_per_second_; }
  #endif  // BUILDFLAG(IS_WIN)

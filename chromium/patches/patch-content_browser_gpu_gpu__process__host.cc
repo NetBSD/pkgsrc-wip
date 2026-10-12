@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_process_host.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/browser/gpu/gpu_process_host.cc
-@@ -297,6 +297,7 @@ static const char* const kSwitchNames[] 
+@@ -296,6 +296,7 @@ static const char* const kSwitchNames[] 
      switches::kDisableSkiaGraphite,
      switches::kDisableSkiaGraphitePrecompilation,
      switches::kDisableLowEndDeviceMode,
@@ -14,7 +14,7 @@ $NetBSD$
      switches::kProfilingAtStart,
      switches::kProfilingFile,
      switches::kProfilingFlush,
-@@ -321,7 +322,7 @@ static const char* const kSwitchNames[] 
+@@ -320,7 +321,7 @@ static const char* const kSwitchNames[] 
      switches::kEnableNativeGpuMemoryBuffers,
      switches::kRenderNodeOverride,
  #endif

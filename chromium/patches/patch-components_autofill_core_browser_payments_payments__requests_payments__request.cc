@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/payments_requests/payments_request.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/autofill/core/browser/payments/payments_requests/payments_request.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/autofill/core/browser/payments/payments_requests/payments_request.cc
 @@ -254,7 +254,7 @@ PaymentsRequest::ClientType PaymentsRequ
    return ClientType::kWindows;

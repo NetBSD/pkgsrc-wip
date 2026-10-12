@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/task/thread_pool/environment_config_unittest.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- base/task/thread_pool/environment_config_unittest.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ base/task/thread_pool/environment_config_unittest.cc
 @@ -14,7 +14,7 @@ TEST(ThreadPoolEnvironmentConfig, CanUse
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE)

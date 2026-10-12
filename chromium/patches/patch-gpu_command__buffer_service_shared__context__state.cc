@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.cc
 @@ -68,7 +68,7 @@
  #include "gpu/vulkan/vulkan_implementation.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "gpu/command_buffer/service/external_semaphore_pool.h"
  #endif
  
-@@ -305,7 +305,7 @@ SharedContextState::SharedContextState(
+@@ -308,7 +308,7 @@ SharedContextState::SharedContextState(
    ) {
      if (vk_context_provider_) {
  #if BUILDFLAG(ENABLE_VULKAN) && \
@@ -24,7 +24,7 @@ $NetBSD$
        external_semaphore_pool_ = std::make_unique<ExternalSemaphorePool>(this);
  #endif
      }
-@@ -346,7 +346,7 @@ SharedContextState::~SharedContextState(
+@@ -349,7 +349,7 @@ SharedContextState::~SharedContextState(
    }
  
  #if BUILDFLAG(ENABLE_VULKAN) && \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- base/files/file_path_watcher.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ base/files/file_path_watcher.h
-@@ -104,7 +104,7 @@ class BASE_EXPORT FilePathWatcher {
+@@ -106,7 +106,7 @@ class BASE_EXPORT FilePathWatcher {
      Type type = Type::kNonRecursive;
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

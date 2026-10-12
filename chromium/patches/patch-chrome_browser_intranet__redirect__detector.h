@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/intranet_redirect_detector.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/intranet_redirect_detector.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/intranet_redirect_detector.h
 @@ -26,7 +26,7 @@ class SimpleURLLoader;
  class PrefRegistrySimple;
  
  #if !(BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
--      BUILDFLAG(IS_CHROMEOS))
-+      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD))
- #error "IntranetRedirectDetector should only be built on Desktop platforms."
- #endif
- 
+-      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID))
++      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD))
+ #error \
+     "IntranetRedirectDetector should only be built on Desktop platforms " \
+     "and Android."

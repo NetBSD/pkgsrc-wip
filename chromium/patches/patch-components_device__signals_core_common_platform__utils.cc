@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/platform_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/device_signals/core/common/platform_utils.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/device_signals/core/common/platform_utils.cc
-@@ -78,7 +78,7 @@ std::vector<std::string> GetMacAddresses
+@@ -79,7 +79,7 @@ std::vector<std::string> GetMacAddresses
      mac_addresses = test_addresses.value();
    } else {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

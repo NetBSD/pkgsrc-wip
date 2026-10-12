@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc
 @@ -29,7 +29,7 @@
  #include "components/enterprise/connectors/core/reporting_constants.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include <optional>
  
  #include "base/strings/string_util.h"
-@@ -262,7 +262,7 @@ api::enterprise_reporting_private::Conte
+@@ -317,7 +317,7 @@ api::enterprise_reporting_private::Conte
  }
  
  bool AllowClientCertificateReportingForUsers() {
@@ -24,7 +24,7 @@ $NetBSD$
    return base::FeatureList::IsEnabled(
        enterprise_signals::features::kAllowClientCertificateReportingForUsers);
  #else
-@@ -275,7 +275,7 @@ bool IsProfilePrefManaged(Profile* profi
+@@ -330,7 +330,7 @@ bool IsProfilePrefManaged(Profile* profi
    return pref && pref->IsManaged();
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  
  device_signals::SignalsAggregationRequest CreateAggregationRequest(
      device_signals::SignalName signal_name) {
-@@ -337,7 +337,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
+@@ -392,7 +392,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
  
  // getPersistentSecret
  
@@ -42,7 +42,7 @@ $NetBSD$
  
  EnterpriseReportingPrivateGetPersistentSecretFunction::
      EnterpriseReportingPrivateGetPersistentSecretFunction() = default;
-@@ -654,7 +654,7 @@ void EnterpriseReportingPrivateGetCertif
+@@ -709,7 +709,7 @@ void EnterpriseReportingPrivateGetCertif
    Respond(WithArguments(ret.ToValue()));
  }
  

@@ -4,18 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.cc
-@@ -19,7 +19,7 @@
- #include "extensions/common/constants.h"
- #include "extensions/common/extension.h"
+@@ -21,7 +21,7 @@
+ #include "ui/base/page_transition_types.h"
+ #include "ui/base/window_open_disposition.h"
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/extensions/chrome_app_deprecation.h"
  #include "chrome/browser/extensions/extension_util.h"
  #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
-@@ -90,7 +90,7 @@ bool OpenExtensionApplicationWindow(Prof
+@@ -92,7 +92,7 @@ bool OpenExtensionApplicationWindow(Prof
    if (launch_container == LaunchContainer::kLaunchContainerTab)
      return false;
  
@@ -24,7 +24,7 @@ $NetBSD$
    if (OpenDeprecatedApplicationPrompt(profile, app_id)) {
      return false;
    }
-@@ -122,7 +122,7 @@ content::WebContents* OpenExtensionAppli
+@@ -124,7 +124,7 @@ content::WebContents* OpenExtensionAppli
    if (launch_container != apps::LaunchContainer::kLaunchContainerTab)
      return nullptr;
  
@@ -33,7 +33,7 @@ $NetBSD$
    if (OpenDeprecatedApplicationPrompt(profile, app_id)) {
      return nullptr;
    }
-@@ -138,7 +138,7 @@ content::WebContents* OpenExtensionAppli
+@@ -140,7 +140,7 @@ content::WebContents* OpenExtensionAppli
    return app_tab;
  }
  
@@ -42,7 +42,7 @@ $NetBSD$
  bool OpenDeprecatedApplicationPrompt(Profile* profile,
                                       const std::string& app_id) {
    if (!extensions::IsExtensionUnsupportedDeprecatedApp(profile, app_id))
-@@ -175,7 +175,7 @@ bool OpenExtensionApplicationWithReenabl
+@@ -177,7 +177,7 @@ bool OpenExtensionApplicationWithReenabl
    if (!GetPlatformApp(profile, app_id))
      return false;
  
@@ -51,7 +51,7 @@ $NetBSD$
    if (OpenDeprecatedApplicationPrompt(profile, app_id)) {
      return false;
    }
-@@ -197,7 +197,7 @@ content::WebContents* OpenExtensionAppSh
+@@ -199,7 +199,7 @@ content::WebContents* OpenExtensionAppSh
                                           ->enabled_extensions()
                                           .GetAppByURL(url);
    if (app) {
@@ -60,7 +60,7 @@ $NetBSD$
      if (OpenDeprecatedApplicationPrompt(profile, app->id())) {
        return nullptr;
      }
-@@ -220,7 +220,7 @@ void RecordExtensionAppLaunchOnTabRestor
+@@ -222,7 +222,7 @@ void RecordExtensionAppLaunchOnTabRestor
    if (!extension)
      return;
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/webui/resources/tools/minify_js.py.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/webui/resources/tools/minify_js.py.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/webui/resources/tools/minify_js.py
 @@ -36,6 +36,7 @@ def main(argv):
    # launching NodeJS once for every input file.

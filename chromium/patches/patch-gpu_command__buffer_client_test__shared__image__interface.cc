@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ gpu/command_buffer/client/test_shared_image_interface.cc
 @@ -28,7 +28,7 @@
  #include "ui/gfx/gpu_fence.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include <linux/memfd.h>
  #include <sys/mman.h>
  #include <unistd.h>
-@@ -434,7 +434,7 @@ TestSharedImageInterface::CreateSharedIm
+@@ -431,7 +431,7 @@ TestSharedImageInterface::CreateSharedIm
    return image;
  }
  

@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/signin/internal/identity_manager/account_capabilities_list.h
-@@ -76,7 +76,7 @@ ACCOUNT_CAPABILITY(
-     "accountcapabilities/gi2tklldmfya")
+@@ -84,7 +84,7 @@ ACCOUNT_CAPABILITY(kCanSignInToChromeCap
+ #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_IOS)

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -270,7 +270,7 @@ void OnLocalStatePrefsLoaded();
+@@ -271,7 +271,7 @@ void OnLocalStatePrefsLoaded();
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/browser_features.h"
  #include "components/os_crypt/async/browser/freedesktop_secret_key_provider.h"
  #include "components/os_crypt/async/browser/secret_portal_key_provider.h"
-@@ -291,7 +291,7 @@ void OnLocalStatePrefsLoaded();
+@@ -292,7 +292,7 @@ void OnLocalStatePrefsLoaded();
  #include "components/os_crypt/async/common/encryptor.h"
  #endif
  

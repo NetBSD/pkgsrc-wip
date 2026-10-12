@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc
 @@ -140,7 +140,7 @@ SearchEngineChoiceUI::SearchEngineChoice
        search_engine_choice_service->IsDsePropagationAllowedForGuest());

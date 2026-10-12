@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/fontconfig/include/meson-config.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/fontconfig/include/meson-config.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/fontconfig/include/meson-config.h
 @@ -17,7 +17,7 @@
  
@@ -30,7 +30,7 @@ $NetBSD$
  #define HAVE_READLINK 1
  
  #define HAVE_STDATOMIC_PRIMITIVES 1
-@@ -132,7 +135,7 @@
+@@ -130,7 +133,7 @@
  
  #define HAVE_SYS_PARAM_H 1
  
@@ -39,7 +39,7 @@ $NetBSD$
  
  #define HAVE_SYS_STATVFS_H 1
  
-@@ -140,7 +143,7 @@
+@@ -138,7 +141,7 @@
  
  #define HAVE_SYS_TYPES_H 1
  

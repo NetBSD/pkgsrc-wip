@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
 @@ -253,7 +253,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_IOS)
@@ -23,8 +23,8 @@ $NetBSD$
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
      // keep-sorted start case=no
      &kIPHAutofillAccountNameEmailSuggestionFeature,
-     &kIPHAutofillAiOptInFeature,
-@@ -384,7 +384,7 @@ const base::Feature* const kAllFeatures[
+     &kIPHAutofillAiValuablesFeature,
+@@ -383,7 +383,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
      // keep-sorted start case=no
      &kIPHDesktopPWAsLinkCapturingLaunch,
      &kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -396,7 +396,7 @@ const base::Feature* const kAllFeatures[
+@@ -395,7 +395,7 @@ const base::Feature* const kAllFeatures[
      &kIPHExtensionsPinnedByDefaultFeature,
  #endif  // BUILDFLAG(ENABLE_EXTENSIONS_CORE)
  

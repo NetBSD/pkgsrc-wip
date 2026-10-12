@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
-@@ -44,7 +44,7 @@
+@@ -43,7 +43,7 @@
  #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"
  #include "third_party/perfetto/protos/perfetto/trace/track_event/thread_descriptor.pbzero.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/profiler/thread_delegate_posix.h"
  #define INITIALIZE_THREAD_DELEGATE_POSIX 1
  #else  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE)
-@@ -270,7 +270,7 @@ struct FrameDetails {
+@@ -267,7 +267,7 @@ struct FrameDetails {
      ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
      (BUILDFLAG(IS_CHROMEOS) &&                                              \
       (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \
@@ -24,7 +24,7 @@ $NetBSD$
  // Returns whether stack sampling is supported on the current platform.
  bool IsStackSamplingSupported() {
    return base::StackSamplingProfiler::IsSupportedForCurrentPlatform();
-@@ -400,7 +400,7 @@ void TracingSamplerProfiler::TracingProf
+@@ -500,7 +500,7 @@ void TracingSamplerProfiler::TracingProf
      thread_descriptor->set_reference_timestamp_us(
          last_timestamp_.since_origin().InMicroseconds());
  
@@ -33,7 +33,7 @@ $NetBSD$
      if (base::GetCurrentProcId() != perfetto::Platform::GetCurrentProcessId()) {
        auto* chrome_thread = track_descriptor->set_chrome_thread();
        chrome_thread->set_is_sandboxed_tid(true);
-@@ -671,7 +671,7 @@ bool TracingSamplerProfiler::IsStackUnwi
+@@ -763,7 +763,7 @@ bool TracingSamplerProfiler::IsStackUnwi
      ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
      (BUILDFLAG(IS_CHROMEOS) &&                                              \
       (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \

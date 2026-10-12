@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -258,7 +258,7 @@ bool SiteGURLIsValid(const GURL& url) {
+@@ -259,7 +259,7 @@ bool SiteGURLIsValid(const GURL& url) {
    return !site_origin.opaque() && (url.SchemeIsHTTPOrHTTPS() ||
                                     url.SchemeIs(extensions::kExtensionScheme)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
                                     || url.SchemeIs(webapps::kIsolatedAppScheme)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -403,7 +403,7 @@ void ShowChromeTips(BrowserWindowInterfa
+@@ -404,7 +404,7 @@ void ShowChromeTips(BrowserWindowInterfa
    ShowSingletonTab(browser, GURL(kChromeTipsURL));
  }
  

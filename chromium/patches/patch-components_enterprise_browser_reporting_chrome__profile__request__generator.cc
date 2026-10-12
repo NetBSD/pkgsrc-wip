@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/browser/reporting/chrome_profile_request_generator.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/enterprise/browser/reporting/chrome_profile_request_generator.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/enterprise/browser/reporting/chrome_profile_request_generator.cc
-@@ -210,7 +210,7 @@ void ChromeProfileRequestGenerator::OnBa
+@@ -213,7 +213,7 @@ void ChromeProfileRequestGenerator::OnBa
    signals_request.signal_names.emplace(device_signals::SignalName::kHotfixes);
  #endif  // BUILDFLAG(IS_WIN)
  

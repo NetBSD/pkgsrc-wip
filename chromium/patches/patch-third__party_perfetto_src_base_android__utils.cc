@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/android_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/perfetto/src/base/android_utils.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/perfetto/src/base/android_utils.cc
-@@ -36,8 +36,11 @@
+@@ -38,8 +38,11 @@
  #include <unistd.h>
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include <sys/sysinfo.h>
  #endif
  
-@@ -103,8 +106,11 @@ SystemInfo GetSystemInfo() {
+@@ -105,8 +108,11 @@ SystemInfo GetSystemInfo() {
    info.page_size = static_cast<uint32_t>(sysconf(_SC_PAGESIZE));
    info.num_cpus = static_cast<uint32_t>(sysconf(_SC_NPROCESSORS_CONF));
  

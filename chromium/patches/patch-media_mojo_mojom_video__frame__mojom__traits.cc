@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
 @@ -24,7 +24,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"
@@ -33,7 +33,7 @@ $NetBSD$
  // static
  bool StructTraits<
      media::mojom::ColorPlaneLayoutDataView,
-@@ -438,7 +438,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -451,7 +451,7 @@ bool StructTraits<media::mojom::VideoFra
  
      bool is_mappable = shared_image_data.is_mappable();
      if (is_mappable) {
@@ -42,7 +42,7 @@ $NetBSD$
        // TODO(crbug.com/513289253): Avoid CloneGpuMemoryBufferHandle() only for
        // validation.
        const auto video_pixel_format =
-@@ -482,7 +482,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -495,7 +495,7 @@ bool StructTraits<media::mojom::VideoFra
      frame = media::VideoFrame::WrapTrackingToken(
          format, *metadata.tracking_token, coded_size, visible_rect,
          natural_size, timestamp);

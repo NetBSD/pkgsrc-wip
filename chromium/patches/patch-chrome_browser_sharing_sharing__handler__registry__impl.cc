@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
 @@ -27,7 +27,7 @@
  #endif  // BUILDFLAG(IS_ANDROID)
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/sharing/shared_clipboard/remote_copy_message_handler.h"
  #endif
  
-@@ -62,7 +62,7 @@ SharingHandlerRegistryImpl::SharingHandl
+@@ -96,7 +96,7 @@ SharingHandlerRegistryImpl::SharingHandl
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

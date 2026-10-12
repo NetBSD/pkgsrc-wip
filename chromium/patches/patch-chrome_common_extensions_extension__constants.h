@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/extension_constants.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/common/extensions/extension_constants.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/common/extensions/extension_constants.h
-@@ -202,7 +202,7 @@ inline constexpr char kReadingModeGDocsH
+@@ -209,7 +209,7 @@ inline constexpr base::FilePath::CharTyp
  inline constexpr base::FilePath::CharType
      kReadingModeGDocsHelperManifestFilename[] =
          FILE_PATH_LITERAL("reading_mode_gdocs_helper_manifest.json");
@@ -15,7 +15,7 @@ $NetBSD$
  // The extension id of the google tts engine extension to use on-device natural
  // Google voices.
  inline constexpr char kTTSEngineExtensionId[] =
-@@ -253,7 +253,7 @@ inline constexpr auto kBuiltInFirstParty
+@@ -260,7 +260,7 @@ inline constexpr auto kBuiltInFirstParty
          kGoogleSpeechSynthesisExtensionId,
  #endif  // BUILDFLAG(IS_CHROMEOS)
          kReadingModeGDocsHelperExtensionId,

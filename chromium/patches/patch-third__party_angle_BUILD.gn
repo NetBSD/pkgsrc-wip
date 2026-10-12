@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/angle/BUILD.gn.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/angle/BUILD.gn
 @@ -386,7 +386,6 @@ config("extra_warnings") {
        "-Wtautological-type-limit-compare",
@@ -23,7 +23,7 @@ $NetBSD$
        libs = [ "dl" ]
      }
  
-@@ -748,6 +747,9 @@ angle_static_library("angle_gpu_info_uti
+@@ -750,6 +749,9 @@ angle_static_library("angle_gpu_info_uti
          "Xi",
          "Xext",
        ]
