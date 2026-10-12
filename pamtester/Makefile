@@ -12,5 +12,7 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 .include "../../mk/bsd.pkg.mk"
 .include "../../mk/pam.buildlink3.mk"
