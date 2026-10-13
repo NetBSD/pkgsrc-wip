@@ -1,3 +1,6 @@
+Upstream appears to have vanished.  Deletion candidate.
+
+
 * push configure.in patch to beast author (already sent)
 	pkgsrc/wip/beast/patches/patch-ag
 * once patch-ag is accepted, remove autoconf build-time dependency
