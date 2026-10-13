@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2026-08-17 18:32:36.000000000 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2026-10-13 15:23:13.100904163 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -73,7 +73,25 @@ bool ChildProcessLauncherHelper::BeforeL
        options->fds_to_remap.emplace_back(sandbox_fd, GetSandboxFD());

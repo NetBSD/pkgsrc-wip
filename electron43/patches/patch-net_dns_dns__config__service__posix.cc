@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   FreeBSD's electron patches
 
---- net/dns/dns_config_service_posix.cc.orig	2026-08-17 18:32:36.000000000 +0000
+--- net/dns/dns_config_service_posix.cc.orig	2026-10-13 15:23:12.816437074 +0000
 +++ net/dns/dns_config_service_posix.cc
-@@ -145,6 +145,7 @@ class DnsConfigServicePosix::Watcher : p
+@@ -146,6 +146,7 @@ class DnsConfigServicePosix::Watcher : p
  #endif
  
      bool success = true;

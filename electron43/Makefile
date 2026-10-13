@@ -133,6 +133,7 @@ SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	third_party/blink/renderer/build/scripts/run_with_pythonpath.py
 SUBST_FILES.path+=	electron/spec/api-app.spec.ts
+SUBST_FILES.path+=	third_party/electron_node/tools/generate_config_gypi.py
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	third_party/test_fonts/fontconfig/BUILD.gn
 SUBST_FILES.path+=	third_party/vulkan-loader/src/BUILD.gn
@@ -145,6 +146,7 @@ SUBST_VARS.path+=	WRKSRC SH
 
 .include "options.mk"
 
+BUILDTYPE=	Release
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
 TARGET=		electron electron:node_headers
@@ -176,6 +178,9 @@ GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	is_clang=true
+GN_ARGS+=	is_component_build=false
+GN_ARGS+=	is_debug=false
+GN_ARGS+=	is_official_build=true
 GN_ARGS+=	moc_qt6_path="${PREFIX}/qt6/libexec"
 GN_ARGS+=	optimize_webui=true
 GN_ARGS+=	override_electron_version="${ELECTRON_VER}"
@@ -198,16 +203,17 @@ GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
 GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
+#GN_ARGS+=	use_typescript_go=false
 GN_ARGS+=	use_udev=true
 GN_ARGS+=	use_vaapi=false
 GN_ARGS+=	v8_enable_cet_ibt=true
+GN_ARGS+=	v8_builtins_profiling_log_file=""
 
 # flags
 CFLAGS+=	-fno-stack-protector
 CFLAGS+=	-isystem${PREFIX}/lib/clang/${LLVM_MV}/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
 CFLAGS+=	-Wno-unknown-warning-option
-CFLAGS+=	-std=c++20
 CFLAGS+=	-I${PREFIX}/include/node
 
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
