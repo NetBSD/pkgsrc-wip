@@ -183,6 +183,11 @@ CONFIGURE_ARGS+=	--set llvm.targets="Mips"
 .if !empty(TARGET:Mmipsel-unknown-netbsd)
 CONFIGURE_ARGS+=	--set llvm.targets="Mips;X86"
 .endif
+# NetBSD/powerpc can no longer build all targets, ref.
+# https://github.com/llvm/llvm-project/issues/230790
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc}
+CONFIGURE_ARGS+=        --set llvm.targets="PowerPC;X86"
+.endif
 
 RUSTLIB_COMPILER=	lib/rustlib/rustc-src/rust/compiler
 RUSTC_CG_CRANELIFT=	${RUSTLIB_COMPILER}/rustc_codegen_cranelift
