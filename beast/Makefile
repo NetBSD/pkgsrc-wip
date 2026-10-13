@@ -1,12 +1,13 @@
 # $NetBSD: Makefile,v 1.18 2012/11/17 11:03:23 kristerw Exp $
 
+# 0.15.0 in 2019
 DISTNAME=	beast-0.5.4
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	http://beast.gtk.org/beast-ftp/v0.5/
+MASTER_SITES=	https://beast.testbit.org/pub/beast-0.15.0.tar.xz
 
 MAINTAINER=	collver1@comcast.net
-HOMEPAGE=	http://beast.gtk.org/
+HOMEPAGE=	https://www.beast.testbit.eu/
 COMMENT=	Bedevilled Audio System
 LICENSE=	gnu-lgpl-v3
 

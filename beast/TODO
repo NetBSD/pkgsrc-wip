@@ -1,5 +1,5 @@
-Upstream appears to have vanished.  Deletion candidate.
-
+* adapt to new release/upstream
+* deal with libgnomecanvas leaving pkgsrc
 
 * push configure.in patch to beast author (already sent)
 	pkgsrc/wip/beast/patches/patch-ag
