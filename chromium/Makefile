@@ -25,7 +25,8 @@ GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
 GITHUB_SUBMODULES+=		microsoft TypeScript v7.0.2 typescript
 
 # LLVM_MAJOR_VERSION
-LLVM_MV=			21
+LLVM_VERSION=			${MAKE} -C ../../lang/llvm -V LLVM_VERSION
+LLVM_MV=			${LLVM_VERSION:sh:C/\..*//}
 
 # Used nodejs version
 NODE_VERSIONS_ACCEPTED=		24
@@ -414,7 +415,6 @@ do-install:
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -440,6 +440,8 @@ BUILDLINK_DEPMETHOD.nodejs=	build
 #.include "../../lang/typescript/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
+UDEV_REQUIRED=		yes
+.include "../../mk/udev.buildlink3.mk"
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
