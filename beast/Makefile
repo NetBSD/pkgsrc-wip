@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.18 2012/11/17 11:03:23 kristerw Exp $
 
 # 0.15.0 in 2019
+# See also https://github.com/tim-janik/beast
 DISTNAME=	beast-0.5.4
 PKGREVISION=	4
 CATEGORIES=	audio
