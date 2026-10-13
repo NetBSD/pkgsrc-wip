@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	https://beast.testbit.org/pub/beast-0.15.0.tar.xz
 
-MAINTAINER=	collver1@comcast.net
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	https://www.beast.testbit.eu/
 COMMENT=	Bedevilled Audio System
 LICENSE=	gnu-lgpl-v3
@@ -25,6 +25,8 @@ pre-configure:
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
+# This package does not build because of libgnomecanvas so it is not
+# a reason to keep guile 1.8.
 .include "../../lang/guile18/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
