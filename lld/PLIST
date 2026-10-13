@@ -6,6 +6,7 @@ bin/lld-link
 bin/wasm-ld
 include/lld/Common/Args.h
 include/lld/Common/Arrays.h
+include/lld/Common/BPSectionOrdererBase.h
 include/lld/Common/BPSectionOrdererBase.inc
 include/lld/Common/CommonLinkerContext.h
 include/lld/Common/DWARF.h

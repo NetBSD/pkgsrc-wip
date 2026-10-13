@@ -5,9 +5,10 @@ BUILDLINK_TREE+=	mlir
 .if !defined(MLIR_BUILDLINK3_MK)
 MLIR_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mlir+=	mlir>=22.1.0
+BUILDLINK_API_DEPENDS.mlir+=	mlir>=23.1.0
 BUILDLINK_PKGSRCDIR.mlir?=	../../wip/mlir
 
+BUILDLINK_FILES.mlir+=		bin/mlir-irdl-to-cpp
 BUILDLINK_FILES.mlir+=		bin/mlir-tblgen
 
 .include "../../lang/llvm/buildlink3.mk"

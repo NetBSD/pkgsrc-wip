@@ -24,6 +24,7 @@
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility.
 
 .include "version.mk"
+EXTRACT_ELEMENTS+=	${DISTNAME}/libc
 
 PKGNAME=	llvm-${LLVM_VERSION}
 CATEGORIES=	lang devel
@@ -145,8 +146,8 @@ post-extract:
 	${CP} ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"

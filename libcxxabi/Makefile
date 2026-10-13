@@ -17,7 +17,7 @@ LICENSE=	apache-2.0
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		14 # must be in sync with libcxx
+GCC_REQD+=		15 # must be in sync with libcxx
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # "LIBCXXABI_USE_LLVM_UNWINDER is set to ON, but libunwind is not specified in LLVM_ENABLE_RUNTIMES."

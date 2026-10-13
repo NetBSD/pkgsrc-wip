@@ -15,7 +15,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	22.1.8
+LLVM_VERSION=	23.1.3
 
 DISTNAME=	llvm-project-${LLVM_VERSION}.src
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
@@ -31,3 +31,12 @@ EXTRACT_ELEMENTS=	${DISTNAME}/${PKGBASE:S/wasi-//}
 EXTRACT_ELEMENTS+=	${DISTNAME}/cmake
 EXTRACT_ELEMENTS+=	${DISTNAME}/runtimes
 EXTRACT_ELEMENTS+=	${DISTNAME}/third-party
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M9.*}
+# Gcc 8 (induced elsewhere) blows up on per-process VM space.
+# Ref. https://mail-index.netbsd.org/pkgsrc-users/2025/06/21/msg041678.html
+# Also, the llvm produced by gcc 8 or 10 crashes when building wasi-libc.
+GCC_REQD+=	14
+.endif

@@ -1,20 +1,10 @@
 $NetBSD: patch-cmake_modules_AddLLVM.cmake,v 1.9 2022/11/14 18:44:05 adam Exp $
 
-On Darwin, create symbolic links to shared libraries.
 On Darwin, use correct install-name for shared libraries.
 
---- cmake/modules/AddLLVM.cmake.orig	2026-03-23 18:46:22.000000000 +0000
+--- cmake/modules/AddLLVM.cmake.orig	2026-10-06 07:38:51.000000000 +0000
 +++ cmake/modules/AddLLVM.cmake
-@@ -723,7 +723,7 @@ function(llvm_add_library name)
-   endif()
- 
-   if(ARG_SHARED)
--    if(NOT APPLE AND ARG_SONAME)
-+    if(ARG_SONAME)
-       get_target_property(output_name ${name} OUTPUT_NAME)
-       if(${output_name} STREQUAL "output_name-NOTFOUND")
-         set(output_name ${name})
-@@ -2554,7 +2554,7 @@ function(llvm_setup_rpath name)
+@@ -2694,7 +2694,7 @@ function(llvm_setup_rpath name)
    endif()
  
    if (APPLE)

@@ -2,6 +2,8 @@
 
 .include "../../wip/llvm/version.mk"
 
+EXTRACT_ELEMENTS+=	${DISTNAME}/llvm
+
 PKGNAME=	openmp-${LLVM_VERSION}
 CATEGORIES=	parallel
 
@@ -10,12 +12,16 @@ HOMEPAGE=	https://openmp.llvm.org/
 COMMENT=	Support for the OpenMP language
 LICENSE=	apache-2.0
 
+# https://openmp.llvm.org/Building.html
+WRKSRC=		${WRKDIR}/${DISTNAME}/runtimes
+
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c gnu++17
 USE_TOOLS+=		perl pkg-config
 GCC_REQD+=		7	# Not supported by ancient GCCs
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_RUNTIMES=openmp
 CMAKE_CONFIGURE_ARGS+=	-DOPENMP_ENABLE_LIBOMPTARGET=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOPENMP_ENABLE_OMPT_TOOLS=OFF
 

@@ -2,13 +2,13 @@ $NetBSD$
 
 Fix build for Darwin.
 
---- CMakeLists.txt.orig	2023-06-04 18:50:42.000000000 +0000
+--- CMakeLists.txt.orig	2026-10-06 07:38:51.000000000 +0000
 +++ CMakeLists.txt
-@@ -471,13 +471,6 @@ if(MSVC)
+@@ -548,13 +548,6 @@ if(MSVC)
      string(REGEX REPLACE "(^| )/Z[i7I]($| )" " /Z7 "
             "${var_to_update}" "${${var_to_update}}")
    endforeach()
--elseif(APPLE)
+-elseif("${COMPILER_RT_DEFAULT_TARGET_TRIPLE}" MATCHES "apple")
 -  # On Apple platforms use full debug info (i.e. not `-gline-tables-only`)
 -  # for all build types so that the runtime can be debugged.
 -  if(NOT COMPILER_RT_HAS_G_FLAG)

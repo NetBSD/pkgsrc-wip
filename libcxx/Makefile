@@ -16,13 +16,18 @@ LICENSE=	apache-2.0
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		14 # must be in sync with libcxxabi
+# for __decay
+GCC_REQD+=		15 # must be in sync with libcxxabi
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKSRC}/../libcxxabi/include
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_INCLUDE_BENCHMARKS=OFF
+# wants to use uselocale()
+CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ENABLE_LOCALIZATION=OFF
+# libcxx/src/filesystem/operations.cpp:370:10: error: 'copy_file_impl_fstream' was not declared in this scope; did you mean 'copy_file_impl'?
+CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ENABLE_FILESYSTEM=OFF
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1

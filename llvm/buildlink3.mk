@@ -5,20 +5,20 @@ BUILDLINK_TREE+=	llvm
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=21.1.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=23.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../wip/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 
 BUILDLINK_FILES.llvm+=		bin/FileCheck
 BUILDLINK_FILES.llvm+=		bin/UnicodeNameMappingGenerator
-BUILDLINK_FILES.llvm+=		bin/bugpoint
 BUILDLINK_FILES.llvm+=		bin/clang-offload-packager
 BUILDLINK_FILES.llvm+=		bin/count
 BUILDLINK_FILES.llvm+=		bin/dsymutil
 BUILDLINK_FILES.llvm+=		bin/llc
 BUILDLINK_FILES.llvm+=		bin/lli
 BUILDLINK_FILES.llvm+=		bin/lli-child-target
+BUILDLINK_FILES.llvm+=		bin/llubi
 BUILDLINK_FILES.llvm+=		bin/llvm-PerfectShuffle
 BUILDLINK_FILES.llvm+=		bin/llvm-addr2line
 BUILDLINK_FILES.llvm+=		bin/llvm-ar
@@ -47,6 +47,8 @@ BUILDLINK_FILES.llvm+=		bin/llvm-dwarfutil
 BUILDLINK_FILES.llvm+=		bin/llvm-dwp
 BUILDLINK_FILES.llvm+=		bin/llvm-exegesis
 BUILDLINK_FILES.llvm+=		bin/llvm-extract
+BUILDLINK_FILES.llvm+=		bin/llvm-extract-bundle-entry
+BUILDLINK_FILES.llvm+=		bin/llvm-gpu-loader
 BUILDLINK_FILES.llvm+=		bin/llvm-gsymutil
 BUILDLINK_FILES.llvm+=		bin/llvm-ifs
 BUILDLINK_FILES.llvm+=		bin/llvm-install-name-tool

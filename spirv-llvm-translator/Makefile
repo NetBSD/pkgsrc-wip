@@ -2,7 +2,7 @@
 
 # Note that parallel/spirv-headers must be kept in sync with what this
 # package expects.
-DISTNAME=	SPIRV-LLVM-Translator-22.1.6
+DISTNAME=	SPIRV-LLVM-Translator-23.1.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
