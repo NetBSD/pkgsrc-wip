@@ -2248,7 +2248,6 @@ SUBDIR+=	light-desktop
 SUBDIR+=	lightcraft
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
-SUBDIR+=	lilypond-git
 SUBDIR+=	lilyterm
 SUBDIR+=	linbox
 SUBDIR+=	lingoteach-lesson
