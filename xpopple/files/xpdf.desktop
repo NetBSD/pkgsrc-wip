@@ -1,0 +1,15 @@
+[Desktop Entry]
+# Conformant to desktop-entry-spec-1.5
+Version=1.5
+Type=Application
+Name=xpdf
+GenericName=PDF viewer
+Comment=Based on Motif and Poppler
+Exec=xpdf
+Terminal=false
+DBusActivatable=false
+Keywords=PDF;
+# Conformant to menu-spec-1.1
+Categories=Office;Viewer;
+# Conformant to icon-theme-spec-0.11
+Icon=xpdf

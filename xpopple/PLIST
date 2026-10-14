@@ -2,4 +2,6 @@
 bin/xpdf
 man/man1/xpdf.1
 man/man5/xpdfrc.5
+share/applications/xpdf.desktop
 share/examples/xpdf/xpdfrc
+share/icons/hicolor/48x48/apps/xpdf.xpm

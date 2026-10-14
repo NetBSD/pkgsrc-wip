@@ -3,7 +3,7 @@
 DISTNAME=	xpopple-3.04.0
 CATEGORIES=	print
 GIT_REPO=	http://offog.org/git/xpopple.git
-GIT_REVISION=	f110e3e00731011dfb6487e33c23f93ed77397c4
+GIT_REVISION=	983483136e61e41dda4fd370dd85166152e45714
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://offog.org/code/xpopple/
@@ -31,7 +31,8 @@ DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 PKG_SYSCONFSUBDIR=	xpdf
 EGDIR=			${PREFIX}/share/examples/xpdf
 CONF_FILES=		${EGDIR}/xpdfrc ${PKG_SYSCONFDIR}/xpdfrc
-INSTALLATION_DIRS=	${EGDIR}
+INSTALLATION_DIRS=	${EGDIR} ${PREFIX}/share/applications \
+				${PREFIX}/share/icons/hicolor/48x48/apps
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -46,12 +47,18 @@ pre-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample-xpdfrc \
 		${DESTDIR}${EGDIR}/xpdfrc
+	${INSTALL_DATA} ${FILESDIR}/xpdf.desktop \
+		${DESTDIR}${PREFIX}/share/applications/xpdf.desktop
+	${INSTALL_DATA} ${WRKSRC}/xpdf/xpdfIcon.xpm \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/xpdf.xpm
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-BUILDLINK_API_DEPENDS.poppler+=	poppler>=24.03.0
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=25.08.0
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 
