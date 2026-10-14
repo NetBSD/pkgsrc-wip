@@ -1,6 +1,12 @@
-Introduce jcode v.0.90.0
+Update jcode to 0.97.0
 
-Yet another LLM harness - the most efficient, the most intelligent... 
+Upstream release.  The NetBSD stdin-detection patchset carried since 0.90.0
+still applies, with one change: the `#[cfg(target_os = "linux")]` gate on the
+std::process import in crates/jcode-core/src/stdin_detect_tests.rs has landed
+upstream, so patch-crates_jcode-core_src_stdin_detect_tests.rs loses that hunk
+and now only appends the NetBSD status-line parser tests.
 
-Works without any patches on NetBSD, but with certain limitations,
-now addressed by the patchset. 
+rquickjs-sys 0.14.0 is new in this release and ships no NetBSD bindings, which
+breaks the build.  post-extract aliases the equivalent -linux-gnu bindings to
+the NetBSD triples; see the comment in the Makefile for why that is correct and
+preferable to enabling the crate's bindgen feature.

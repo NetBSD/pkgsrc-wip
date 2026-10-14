@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	jcode-0.90.0
+DISTNAME=	jcode-0.97.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=1jehuang/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -61,5 +61,23 @@ post-extract:
 		--strip-components=1 -C ${WRKDIR}/vendor/mermaid-rs-renderer-0.3.1
 	${RUN} cd ${WRKDIR}/vendor/mermaid-rs-renderer-0.3.1 && \
 		printf '{"package":null,"files":{}}' > .cargo-checksum.json
+# rquickjs-sys 0.14.0 ships pre-generated bindings per target triple and has no
+# NetBSD ones.  Without the `bindgen` feature its build.rs does not fall back to
+# generating them: it prints a cargo:warning and writes a stub that defines only
+# bindings_env!(), so every FFI item is missing and the crate fails to compile.
+# Enabling `bindgen` instead would pull clang/libclang into the build just to
+# re-derive what amounts to the same declarations.  QuickJS's FFI surface is
+# plain C scalars, pointers and structs with no Linux-specific types, so the
+# glibc bindings are correct on NetBSD; alias them to the matching NetBSD triples
+# rather than carry a patch per architecture.  Remove this once rquickjs ships
+# NetBSD bindings upstream.
+	${RUN} for f in ${WRKDIR}/vendor/rquickjs-sys-0.14.0/src/bindings/*-linux-gnu.rs; do \
+		target=`${BASENAME} "$$f" | ${SED} 's/-linux-gnu/-netbsd/'`; \
+		dest="${WRKDIR}/vendor/rquickjs-sys-0.14.0/src/bindings/$$target"; \
+		if [ ! -f "$$dest" ]; then \
+			${CP} "$$f" "$$dest"; \
+		fi; \
+		done
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
