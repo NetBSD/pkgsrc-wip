@@ -1,0 +1,2 @@
+A high level, "more Pythonic" interface to the PKCS#11 (Cryptoki) standard to
+support HSM and Smartcard devices in Python.
