@@ -2573,7 +2573,7 @@ lib/libLLVMDemangle.a
 lib/libLLVMDiff.a
 ${PLIST.DirectX}lib/libLLVMDirectXCodeGen.a
 ${PLIST.DirectX}lib/libLLVMDirectXDesc.a
-lib/libLLVMDirectXIRPasses.a
+${PLIST.DirectX}lib/libLLVMDirectXIRPasses.a
 ${PLIST.DirectX}lib/libLLVMDirectXInfo.a
 lib/libLLVMDlltoolDriver.a
 lib/libLLVMExecutionEngine.a
