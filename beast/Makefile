@@ -5,7 +5,7 @@
 DISTNAME=	beast-0.5.4
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	https://beast.testbit.org/pub/beast-0.15.0.tar.xz
+MASTER_SITES=	https://beast.testbit.org/pub/
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	https://www.beast.testbit.eu/
