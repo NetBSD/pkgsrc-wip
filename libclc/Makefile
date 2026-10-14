@@ -52,7 +52,7 @@ do-configure:
 		-B ${CMAKE_BUILD_DIR}/$$t \
 		-G ${_CMAKE_BUILD_SYSTEM:Q} \
 		${CMAKE_CONFIGURE_ARGS} \
-		-DLLVM_DEFAULT_TARGET_TRIPLE=$$t || exit 1; \
+		-DLLVM_DEFAULT_TARGET_TRIPLE=$$t; \
 	done
 
 .include "../../devel/cmake/build.mk"
