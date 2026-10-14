@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Codewhale-0.10.0
+DISTNAME=	Codewhale-0.10.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hmbown/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -15,11 +15,12 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config patch
 
-# Install both binary crates via separate cargo install invocations
-# (cargo install does not accept multiple --path flags).
-# crates/app-server has autobins=false -- library-only, no binary.
+# crates/cli owns the sole `codewhale` binary. As of 0.10.1 crates/tui is
+# library-only (autobins=false, empty main.rs), so there is no codewhale-tui
+# binary to install. The cargo.mk default `install --path .` cannot be used:
+# the top-level Cargo.toml is a virtual manifest.
 CARGO_INSTALL_ARGS=	install \
-			--path crates/tui \
+			--path crates/cli \
 			--root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 
 # Use lld linker instead of GNU ld — much less memory during final link.
@@ -31,18 +32,15 @@ MAKE_ENV+=		CARGO_PROFILE_RELEASE_LTO=thin
 # rquickjs-sys lacks pre-generated bindings for NetBSD targets.
 # The Linux bindings are ABI-identical for QuickJS on the same CPU arch.
 post-extract:
-	${RUN} for f in ${WRKDIR}/vendor/rquickjs-sys-0.12.2/src/bindings/*-linux-gnu.rs; do \
+	${RUN} for f in ${WRKDIR}/vendor/rquickjs-sys-0.14.0/src/bindings/*-linux-gnu.rs; do \
 		target=`${BASENAME} "$$f" | ${SED} 's/-linux-gnu/-netbsd/'`; \
-		dest="${WRKDIR}/vendor/rquickjs-sys-0.12.2/src/bindings/$$target"; \
+		dest="${WRKDIR}/vendor/rquickjs-sys-0.14.0/src/bindings/$$target"; \
 		if [ ! -f "$$dest" ]; then \
 			${CP} "$$f" "$$dest"; \
 		fi; \
 		done
 
 post-install:
-	cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${CARGO} install \
-		--path crates/cli \
-		--root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 	${RM} -f ${DESTDIR}${PREFIX}/.crates.toml
 	${RM} -f ${DESTDIR}${PREFIX}/.crates2.json
 
