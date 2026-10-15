@@ -1,29 +1,25 @@
 # $NetBSD: $
 
-VERSION=	6.10.1
-PKGREVISION=	1
-DISTNAME=	pyside-setup-everywhere-src-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-pyside6-${VERSION}
+.include "../../meta-pkgs/qt6/Makefile.common"
+
+DISTNAME=	pyside-setup-everywhere-src-${QTVERSION}
+PKGNAME=	${PYPKGPREFIX}-pyside6-${QTVERSION}
+CATEGORIES=	x11
 MASTER_SITES=	https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-${VERSION}-src/
 
-EXTRACT_SUFX=	.tar.xz
-CATEGORIES=	x11
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.qt.io/Qt_for_Python
 COMMENT=	Qt6 bindings for Python
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=			pkg-config bash
-USE_LANGUAGES+=			c c++
-CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
+USE_TOOLS+=		pkg-config bash
+USE_LANGUAGES+=		c c++
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
 
 REPLACE_PYTHON+=	sources/pyside-tools/pyside_tool.py
 REPLACE_PYTHON+=	sources/pyside-tools/qtpy2cpp_lib/tests/baseline/basic_test.py
-REPLACE_PYTHON+=	sources/shiboken6/shiboken_tool.py
+REPLACE_PYTHON+=	sources/shiboken6_generator/shiboken_tool.py
 
 SUBST_CLASSES+=		bash
 SUBST_MESSAGE.bash=	Replace bash path in cmake generated wrapper
@@ -33,7 +29,7 @@ SUBST_SED.bash=		-e "s|\#!/bin/bash|\#!${BASH}|g"
 
 SUBST_CLASSES+=		unbl3
 SUBST_STAGE.unbl3=	post-build
-SUBST_FILES.unbl3=	${CMAKE_BUILD_DIR}/sources/shiboken6/generator/CMakeFiles/Export/*/*.cmake
+SUBST_FILES.unbl3=	${CMAKE_BUILD_DIR}/sources/shiboken6_generator/generator/CMakeFiles/Export/*/*.cmake
 SUBST_SED.unbl3=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
 SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 
