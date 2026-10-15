@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (InsightToolkit-5.4.7.tar.gz) = ea74ac0ac538cc7e0faa08bedb7e20d29308fbdd090a870ccb2791c8d66121dd
+SHA512 (InsightToolkit-5.4.7.tar.gz) = 5642b736fb209687d69e7064d96c9193589a8a862831627a66f7d169f3d7d9284637578c60785b4df967f0671b963b4ae465edf38d95b77b6bff01d16178d70a
+Size (InsightToolkit-5.4.7.tar.gz) = 22413678 bytes
+SHA1 (patch-Modules_Core_Common_include_itkMemoryUsageObserver.h) = 9dabb4508f62681817ed90ce4b9ae17119609146
