@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 USE_LANGUAGES=	c c++
 
+MAKE_ENV+=	V8_FROM_SOURCE=1
+
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
