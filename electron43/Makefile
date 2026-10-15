@@ -100,8 +100,8 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "platform.mk"
 .include "../../mk/compiler.mk"
 
-# Workaround for brotli and other commands.
-#BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=		opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 # Let to chromium use the -Wl,-z,relro flag
 BUILDLINK_TRANSFORM+=		rm:-Wl,-zrelro
