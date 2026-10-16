@@ -23,11 +23,5 @@ USE_LANGUAGES=	# none
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
-.endif
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

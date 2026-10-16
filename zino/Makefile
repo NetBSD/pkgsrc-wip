@@ -10,8 +10,6 @@ HOMEPAGE=	https://github.com/Uninett/zino
 COMMENT=	Interface-centric (+eBGP++) multi-user SNMP-based network monitor
 LICENSE=	apache-2.0
 
-.include "../../lang/python/pyversion.mk"
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.1:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-apscheduler>=3.11:../../wip/py-apscheduler
@@ -19,15 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.11:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-snmp>=6.2.6<7:../../wip/py-snmp
 DEPENDS+=	${PYPKGPREFIX}-aiodns>=3.6.1:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-netsnmp-cffi>=0.2.1:../../wip/py-netsnmp-cffi
-.if ${PYTHON_VERSION} >= 312
-DEPENDS+=	${PYPKGPREFIX}-pyasyncore-[0-9]*:../../devel/py-pyasyncore
-.endif
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
-
-# Needs python >= 39
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
+DEPENDS+=	${PYPKGPREFIX}-pyasyncore>=0:../../devel/py-pyasyncore
 
 # Workaround for using github tarball:
 MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${PKGVERSION}

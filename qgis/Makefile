@@ -30,19 +30,19 @@ USE_TOOLS+=		bison flex perl pkg-config
 # minizip/zip.h shadows zip.h (from libzip)
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include/minizip
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
-TOOL_DEPENDS+=		${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sip6>=0:../../x11/py-sip6
+TOOL_DEPENDS+=		${PYPKGPREFIX}-qt-builder>=0:../../x11/py-qt-builder
 
 # \todo Grasp/fix.  Perhaps qca2-qt6 does not need an ossl plugin because it is built in?
-#DEPENDS+=		qca2-qt6-ossl-[0-9]*:../../security/qca2-qt6-ossl
-DEPENDS+=		${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
-DEPENDS+=		${PYPKGPREFIX}-qt6-qscintilla-[0-9]*:../../x11/py-qt6-qscintilla
+#DEPENDS+=		qca2-qt6-ossl>=0:../../security/qca2-qt6-ossl
+DEPENDS+=		${PYPKGPREFIX}-qt6>=0:../../x11/py-qt6
+DEPENDS+=		${PYPKGPREFIX}-qt6-qscintilla>=0:../../x11/py-qt6-qscintilla
 
 # This is needed to find qca2.
 CMAKE_PREFIX_PATH+=	${QTDIR}
 
 # This could be used if we want to build pdf doc, which is currently false
-#TOOL_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
+#TOOL_DEPENDS+=	txt2tags>=0:../../wip/txt2tags
 
 # Disable building of QGIS.app.  \todo Consider building it.
 # \todo Adapt to upstream rototill of mac bundle in 4.0. This is
@@ -108,18 +108,15 @@ CMAKE_CONFIGURE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
 # \todo Consider (optional?) dependency on GRASS.
 # \todo Consider (optional?) dependency on SAGA.
 
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
-DEPENDS+=	${PYPKGPREFIX}-gdal-[0-9]*:../../geography/py-gdal
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-psycopg2>=0:../../databases/py-psycopg2
+DEPENDS+=	${PYPKGPREFIX}-gdal>=0:../../geography/py-gdal
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=0:../../textproc/py-markupsafe
 # for quickosm
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 # for metasearch
-DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
-
-.include "../../lang/python/pyversion.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+DEPENDS+=	${PYPKGPREFIX}-owslib>=0:../../geography/py-owslib
 
 .include "../../mk/pgsql.buildlink3.mk"
 

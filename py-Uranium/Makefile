@@ -16,14 +16,14 @@ LICENSE=	gnu-lgpl-v3
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-shapely-[0-9]*:../../wip/py-shapely
-DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-shapely>=0:../../wip/py-shapely
+DEPENDS+=	${PYPKGPREFIX}-qt5>=0:../../x11/py-qt5
 
 pre-install:
 	find ${WRKSRC} -type f -name "*.orig" | xargs ${RM}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-numpy
 
 PY_PATCHPLIST=YES
 

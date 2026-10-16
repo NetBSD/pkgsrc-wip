@@ -59,7 +59,7 @@ PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:R}
 REPLACE_PYTHON+=	scripts/modules/bl_i18n_utils/merge_po.py
 REPLACE_PYTHON+=	scripts/modules/blend_render_info.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 314
+PYTHON_VERSIONS_INCOMPATIBLE=	311 314
 
 .include "options.mk"
 .include "../../archivers/minizip-ng/buildlink3.mk"

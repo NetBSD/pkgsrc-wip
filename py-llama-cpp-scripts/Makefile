@@ -16,13 +16,13 @@ DEPENDS+=	${PYPKGPREFIX}-sentencepiece>=0.1.98:../../textproc/py-sentencepiece
 DEPENDS+=	${PYPKGPREFIX}-transformers>=0.1.98:../../wip/py-transformers
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.0:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-torch>=2.6.0:../../math/py-torch
-DEPENDS+=	${PYPKGPREFIX}-gguf-[0-9]*:../../wip/py-gguf
-TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-gguf>=0:../../wip/py-gguf
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 # also needs wget and appium modules, currently unpackaged
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 314 # py-torch
+PYTHON_VERSIONS_INCOMPATIBLE=	311 314 # py-torch
 
 PY_RENAME_BINARIES+=	llama-convert-hf-to-gguf
 PY_RENAME_BINARIES+=	llama-convert-llama-ggml-to-gguf

@@ -10,31 +10,31 @@ HOMEPAGE=	https://github.com/huggingface/transformers
 COMMENT=	State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 #TOOL_DEPENDS+=	# TODO: GitPython<3.1.19>=0
 #TOOL_DEPENDS+=	# TODO: GitPython<3.1.19>=0
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-gitpython>=0:../../devel/py-gitpython
 #TOOL_DEPENDS+=	# TODO: Pillow>=10.0.1,<=15.0
 #TOOL_DEPENDS+=	# TODO: Pillow>=10.0.1,<=15.0
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
 #TOOL_DEPENDS+=	# TODO: accelerate>=0.26.0
 #TOOL_DEPENDS+=	# TODO: accelerate>=0.26.0
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-accelerate-[0-9]*:../../wip/py-accelerate
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-accelerate>=0:../../wip/py-accelerate
 #TOOL_DEPENDS+=	# TODO: av>=0
 #TOOL_DEPENDS+=
 #TOOL_DEPENDS+=	# TODO: beautifulsoup4>=0
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-beautiulsoup4-[0-9]*:../../www/py-beautifulsoup4
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-beautiulsoup4>=0:../../www/py-beautifulsoup4
 #TOOL_DEPENDS+=	# TODO: codecarbon>=2.8.1
 #TOOL_DEPENDS+=
 #TOOL_DEPENDS+=	# TODO: cookiecutter==1.7.3>=0
 #TOOL_DEPENDS+=	# TODO: cookiecutter==1.7.3>=0
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-cookiecutter-[0-9]*:../../devel/py-cookiecutter
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-cookiecutter>=0:../../devel/py-cookiecutter
 #TOOL_DEPENDS+=	# TODO: datasets>=2.15.0
 #TOOL_DEPENDS+=	# TODO: datasets>=2.15.0
 #TOOL_DEPENDS+=	# TODO: datasets>=2.15.0
 #TOOL_DEPENDS+=
 #TOOL_DEPENDS+=	# TODO: dill<0.3.5>=0
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-dill-[0-9]*:../../textproc/py-dill
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-dill>=0:../../textproc/py-dill
 #TOOL_DEPENDS+=	# TODO: evaluate>=0.2.0
 #TOOL_DEPENDS+=
 #TOOL_DEPENDS+=	# TODO: faiss-cpu>=0
@@ -105,20 +105,20 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 #TOOL_DEPENDS+=	# TODO: unidic_lite>=1.0.7
 #TOOL_DEPENDS+=	# TODO: urllib3<2.0.0>=0
 
-#DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
+#DEPENDS+=	${PYPKGPREFIX}-filelock>=0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-huggingface-hub>1.5.0:../../wip/py-huggingface-hub
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
-#DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-regex>=0:../../textproc/py-regex
+#DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-safetensors>=0.4.3:../../wip/py-safetensors
 DEPENDS+=	${PYPKGPREFIX}-tokenizers>=0.22:../../wip/py-tokenizers
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.27:../../misc/py-tqdm
 
 USE_LANGUAGES=	c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-numpy
 
 SCRIPTS=	transformers
 

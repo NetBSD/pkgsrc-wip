@@ -11,7 +11,7 @@ HOMEPAGE=		https://github.com/fzakaria/sqlelf/
 COMMENT=		Explore ELF objects through the power of SQL
 LICENSE=		mit
 
-PYTHON_VERSIONS_ACCEPTED= 311 310
+PYTHON_VERSIONS_ACCEPTED= 311
 USE_LANGUAGES=		c c++
 
 # TOOL_DEPENDS:

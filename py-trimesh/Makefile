@@ -2,7 +2,7 @@
 
 DISTNAME=	trimesh-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trimesh/}
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.10:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-numpy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

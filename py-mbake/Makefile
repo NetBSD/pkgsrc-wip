@@ -29,12 +29,6 @@ CHECK_PORTABILITY_SKIP+=	tests/fixtures/shell_operators/*
 # as of 1.4.5
 # 2 failed, 209 passed
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.0:../../textproc/py-tomli
-.endif
-
 USE_LANGUAGES=	# none
 
 post-install:

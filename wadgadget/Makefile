@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	bin
 
 MAKE_FILE=		GNUmakefile
 
-PYTHON_VERSIONS_ACCEPTED=	313 312 311 310
+PYTHON_VERSIONS_ACCEPTED=	313 312 311
 .include "../../lang/python/tool.mk"
 
 .include "../../audio/libsndfile/buildlink3.mk"
