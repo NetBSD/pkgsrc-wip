@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	asciinema-3.0.0
+DISTNAME=	asciinema-3.2.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciinema/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
