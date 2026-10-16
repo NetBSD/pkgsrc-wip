@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=asciinema/}
 GITHUB_PROJECT=	agg
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/asciinema/agg
 COMMENT=	Asciinema gif generator
 LICENSE=	gnu-gpl-v3

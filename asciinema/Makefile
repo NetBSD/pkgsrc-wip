@@ -5,7 +5,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciinema/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/asciinema/asciinema/
 COMMENT=	Terminal session recorder, streamer and player
 LICENSE=	gnu-gpl-v3
