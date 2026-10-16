@@ -11,7 +11,7 @@ COMMENT=	Statistical and novel interactive HTML plots for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
-TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-git-versioning>=0:../../wip/py-setuptools-git-versioning
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-git-versioning>=0:../../devel/py-setuptools-git-versioning
 DEPENDS+=	${PYPKGPREFIX}-packaging>=16.8:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=7.1.0:../../graphics/py-Pillow

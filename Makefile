@@ -4758,7 +4758,6 @@ SUBDIR+=	py-sep
 SUBDIR+=	py-serial-asyncio
 SUBDIR+=	py-serialize
 SUBDIR+=	py-setupdocs
-SUBDIR+=	py-setuptools-git-versioning
 SUBDIR+=	py-setuptools_git
 SUBDIR+=	py-sfepy
 SUBDIR+=	py-sfg
