@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	agg-1.5.0
+DISTNAME=	agg-1.9.0
 PKGNAME=	${DISTNAME:S/^/asciinema-/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciinema/}
