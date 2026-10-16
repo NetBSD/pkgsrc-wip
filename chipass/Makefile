@@ -7,7 +7,6 @@ PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_CODEBERG:=ChiPass/}
 CODEBERG_TAG=	v${VERSION}
-
 DIST_SUBDIR=	chipass-${PKGVERSION_NOREV}
 
 MAINTAINER=	gourd753+netbsd@xenos5.net
@@ -15,11 +14,9 @@ HOMEPAGE=	https://codeberg.org/ChiPass/ChiPass
 COMMENT=	Password generator and manager
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v3 AND mit AND cc0-1.0-universal
 
-SUPERSEDES+=	keepassx-[0-9]*
-SUPERSEDES+=	keepassx0-[0-9]*
-SUPERSEDES+=	keepassxc-[0-9]*
+TOOL_DEPENDS+=	qt6-qttranslations>=0:../../x11/qt6-qttranslations
 
-USE_TOOLS+=		cmake pkg-config
+USE_TOOLS+=		pkg-config
 
 # botan3
 GCC_REQD+=	11
@@ -29,11 +26,6 @@ WRKSRC=		${WRKDIR}/chipass
 USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DCHIPASS_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCHIPASS_ENABLE_MANUAL=OFF
-
-DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
-BUILD_DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
-DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
-BUILD_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -65,7 +57,6 @@ qmake-bin-add:
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/appstream/buildlink3.mk"
-#.include "../../x11/qt6-qttranslations/buildlink3.mk"
 # does not support editline
 .include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
