@@ -1,39 +1,29 @@
 # $NetBSD$
 
 DISTNAME=	fooyin-0.13.1
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fooyin/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-PKGREVISION=    2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	gourd753+pkgsrc@xenos5.net
 HOMEPAGE=	https://github.com/fooyin/fooyin/
 COMMENT=	Customisable music player
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		cmake pkg-config msgfmt
-ICON_THEMES=		yes
-
-WRKSRC=	${WRKDIR}/${DISTNAME}
+USE_TOOLS+=		pkg-config msgfmt
 
 USE_LANGUAGES=	c c++
+
+CXXFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/fooyin
+CXXFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/fooyin/plugins
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 # doesn't build on NetBSD, and it's not useful anyway.
-CMAKE_CONFIGURE_ARGS+=	"-DBUILD_ALSA=OFF"
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALSA=OFF
 .endif
-
-BUILD_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
-
-# get it to load its component libraries from the prefix
-CMAKE_CONFIGURE_ARGS+=	"-DCMAKE_INSTALL_PREFIX=${PREFIX}"
-
-post-build:
-	# fix the rpath, the cmake forcibly overrides any attempts to do it
-	patchelf --add-rpath "${PREFIX}/lib/fooyin" "./work/${DISTNAME}/cmake-pkgsrc-build/run/bin/fooyin"
-	patchelf --add-rpath "${PREFIX}/lib/fooyin/plugins" "./work/${DISTNAME}/cmake-pkgsrc-build/run/bin/fooyin"
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -54,7 +44,6 @@ post-build:
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../misc/libcdio-paranoia/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../devel/qcoro/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
