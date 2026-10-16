@@ -5576,6 +5576,7 @@ SUBDIR+=	sselp
 SUBDIR+=	ssh_ping
 SUBDIR+=	ssid
 SUBDIR+=	ssiv-git
+SUBDIR+=	sslx
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
 SUBDIR+=	stable-diffusion.cpp
