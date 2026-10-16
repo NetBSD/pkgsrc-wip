@@ -4,6 +4,7 @@ DISTNAME=	fooyin-0.13.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fooyin/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+PKGREVISION=    2
 
 MAINTAINER=	gourd753+pkgsrc@xenos5.net
 HOMEPAGE=	https://github.com/fooyin/fooyin/
@@ -60,6 +61,7 @@ post-build:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../misc/kdsingleapplication/buildlink3.mk"
+.include "../../audio/game-music-emu/buildlink3.mk"
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

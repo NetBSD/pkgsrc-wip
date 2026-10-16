@@ -8,6 +8,7 @@ lib/fooyin/plugins/fyplugin_discord.so
 lib/fooyin/plugins/fyplugin_equaliser.so
 lib/fooyin/plugins/fyplugin_fileops.so
 lib/fooyin/plugins/fyplugin_globalhotkeys.so
+lib/fooyin/plugins/fyplugin_gmeinput.so
 lib/fooyin/plugins/fyplugin_libarchive.so
 lib/fooyin/plugins/fyplugin_lyrics.so
 lib/fooyin/plugins/fyplugin_mpris.so
