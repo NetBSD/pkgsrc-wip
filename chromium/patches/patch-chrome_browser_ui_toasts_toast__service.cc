@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toasts/toast_service.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/toasts/toast_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/toasts/toast_service.cc
 @@ -152,7 +152,7 @@ void ToastService::RegisterToasts(
                                    IDS_CLEAR_BROWSING_DATA_TOAST_BODY)

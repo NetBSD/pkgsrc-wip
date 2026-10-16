@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -164,7 +164,7 @@ BASE_FEATURE(kEnableDiscountInfoApi, bas
  const char kDiscountOnShoppyPageParam[] = "discount-on-shoppy-page";

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
 @@ -15174,7 +15174,7 @@ struct fts5_api {
  ** But _XOPEN_SOURCE define causes problems for Mac OS X, so omit

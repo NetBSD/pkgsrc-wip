@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- services/device/public/cpp/device_features.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ services/device/public/cpp/device_features.h
 @@ -68,11 +68,11 @@ DEVICE_FEATURES_EXPORT bool IsOsLevelGeo
  DEVICE_FEATURES_EXPORT device::mojom::LocationProviderManagerMode

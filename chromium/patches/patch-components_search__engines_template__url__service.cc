@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/search_engines/template_url_service.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/search_engines/template_url_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/search_engines/template_url_service.cc
 @@ -3864,7 +3864,7 @@ bool TemplateURLService::MatchesDefaultS
  std::unique_ptr<EnterpriseSearchManager>

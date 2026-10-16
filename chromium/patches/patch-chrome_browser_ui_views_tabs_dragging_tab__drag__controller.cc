@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
 @@ -103,7 +103,7 @@
  #include "ui/wm/core/window_modality_controller.h"  // nogncheck

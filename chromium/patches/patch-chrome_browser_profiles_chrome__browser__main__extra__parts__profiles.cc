@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
 @@ -328,7 +328,7 @@
  #include "ui/webui/buildflags.h"

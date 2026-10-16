@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/intro/intro_ui.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/webui/intro/intro_ui.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/webui/intro/intro_ui.cc
 @@ -54,7 +54,7 @@ int GetBackupCardDescriptionId(bool is_f
               : IDS_UNO_FRE_BACKUP_CARD_DESCRIPTION_WITH_PASSWORDS;

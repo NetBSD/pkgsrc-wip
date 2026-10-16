@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_posix.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- base/files/file_util_posix.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ base/files/file_util_posix.cc
 @@ -986,6 +986,7 @@ bool CreateNewTempDirectory(FilePath::St
  bool CreateDirectoryAndGetError(const FilePath& full_path, File::Error* error) {

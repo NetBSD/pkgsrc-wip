@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/child_thread_type_switcher_linux.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/child_thread_type_switcher_linux.cc
 @@ -9,6 +9,7 @@
  #include "base/containers/flat_map.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
 @@ -221,7 +221,7 @@ base::DictValue CreateProfileState(const
        IDS_PROFILE_PICKER_PROFILE_CARD_LABEL, local_profile_name);

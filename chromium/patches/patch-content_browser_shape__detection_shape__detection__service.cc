@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/shape_detection/shape_detection_service.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/shape_detection/shape_detection_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/shape_detection/shape_detection_service.cc
 @@ -15,7 +15,7 @@
  #endif

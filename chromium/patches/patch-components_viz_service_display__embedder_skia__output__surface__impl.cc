@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/viz/service/display_embedder/skia_output_surface_impl.cc
 @@ -1524,7 +1524,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
                                          VK_IMAGE_TILING_OPTIMAL, vk_format,

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/cursor/cursor_factory.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/base/cursor/cursor_factory.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/base/cursor/cursor_factory.h
 @@ -94,7 +94,7 @@ class COMPONENT_EXPORT(UI_BASE_CURSOR) C
    base::ObserverList<CursorFactoryObserver>::Unchecked observers_;

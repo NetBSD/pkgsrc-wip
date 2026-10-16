@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browsing_data/chrome_browsing_data_remover_delegate.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/browsing_data/chrome_browsing_data_remover_delegate.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/browsing_data/chrome_browsing_data_remover_delegate.cc
 @@ -726,6 +726,7 @@ void ChromeBrowsingDataRemoverDelegate::
    if (remove_mask & constants::DATA_TYPE_PRIVATE_VERIFICATION_TOKENS) {

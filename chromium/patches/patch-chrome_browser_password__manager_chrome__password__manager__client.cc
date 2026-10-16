@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
 @@ -738,7 +738,7 @@ void ChromePasswordManagerClient::Contin
  bool ChromePasswordManagerClient::IsReauthBeforeFillingRequired(

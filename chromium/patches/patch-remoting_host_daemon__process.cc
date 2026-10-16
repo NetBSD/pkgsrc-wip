@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/daemon_process.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- remoting/host/daemon_process.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ remoting/host/daemon_process.cc
 @@ -299,7 +299,7 @@ void DaemonProcess::GetDesktopSession(
    // Windows, user sessions and applications are persisted natively by the OS,

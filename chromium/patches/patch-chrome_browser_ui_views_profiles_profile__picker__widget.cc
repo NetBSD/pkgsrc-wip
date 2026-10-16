@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_widget.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_picker_widget.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_picker_widget.cc
 @@ -11,7 +11,7 @@
  #include "chrome/browser/ui/views/profiles/profile_picker_view.h"

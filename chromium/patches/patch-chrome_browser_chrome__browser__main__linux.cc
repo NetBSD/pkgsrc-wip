@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
 @@ -22,7 +22,7 @@
  #include "device/bluetooth/dbus/bluez_dbus_manager.h"

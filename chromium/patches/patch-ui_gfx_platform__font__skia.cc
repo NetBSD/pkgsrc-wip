@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/platform_font_skia.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/gfx/platform_font_skia.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/gfx/platform_font_skia.cc
 @@ -29,7 +29,7 @@
  #include "ui/gfx/system_fonts_win.h"

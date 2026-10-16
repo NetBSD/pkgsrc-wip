@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/iamf_tools/src/iamf/cli/codec/opus_decoder.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/iamf_tools/src/iamf/cli/codec/opus_decoder.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/iamf_tools/src/iamf/cli/codec/opus_decoder.h
 @@ -23,7 +23,7 @@
  #include "iamf/cli/codec/decoder_base.h"

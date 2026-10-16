@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -54,7 +54,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"

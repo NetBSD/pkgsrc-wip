@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/component_updater/wasm_tts_engine_component_installer.cc
 @@ -24,7 +24,7 @@
  #include "content/public/browser/browser_thread.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/base/scoped_channel_override_posix.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/test/base/scoped_channel_override_posix.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/test/base/scoped_channel_override_posix.cc
 @@ -22,7 +22,7 @@ version_info::Channel GetBaseChannel(Sco
        return version_info::Channel::BETA;

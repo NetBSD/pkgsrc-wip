@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/opentype/format_check.rs.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/opentype/format_check.rs.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/opentype/format_check.rs
 @@ -23,7 +23,7 @@ pub struct FontFormatInfo {
      format_flags: Option<FontFormatFlags>,

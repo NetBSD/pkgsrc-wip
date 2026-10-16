@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.h
 @@ -204,7 +204,7 @@ BASE_DECLARE_FEATURE(kPreventPasswordMan
  // vault passphrase type.

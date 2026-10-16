@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/commands/set_user_display_mode_command.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/web_applications/commands/set_user_display_mode_command.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/web_applications/commands/set_user_display_mode_command.cc
 @@ -60,7 +60,7 @@ void SetUserDisplayModeCommand::StartWit
      // OsIntegrationTestOverride can use the xdg install command to detect

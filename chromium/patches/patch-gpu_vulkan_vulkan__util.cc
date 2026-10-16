@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_util.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- gpu/vulkan/vulkan_util.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ gpu/vulkan/vulkan_util.cc
 @@ -278,7 +278,7 @@ bool CheckVulkanCompatibilities(
      }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/signin/public/base/signin_switches.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/signin/public/base/signin_switches.cc
 @@ -39,7 +39,7 @@ const char kForceFreFeatureShowcaseSteps
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)

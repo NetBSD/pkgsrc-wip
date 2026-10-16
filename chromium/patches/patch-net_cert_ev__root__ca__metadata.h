@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/cert/ev_root_ca_metadata.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- net/cert/ev_root_ca_metadata.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ net/cert/ev_root_ca_metadata.h
 @@ -17,7 +17,7 @@
  #include "net/cert/x509_certificate.h"

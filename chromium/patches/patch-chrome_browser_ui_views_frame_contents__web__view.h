@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/contents_web_view.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/views/frame/contents_web_view.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/views/frame/contents_web_view.h
 @@ -68,7 +68,7 @@ class ContentsWebView : public views::We
    // This allows the browser to force focus synchronization in split view even

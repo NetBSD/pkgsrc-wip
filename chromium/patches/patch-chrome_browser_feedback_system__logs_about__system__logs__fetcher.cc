@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc
 @@ -38,7 +38,7 @@
  #include "chrome/browser/ash/system_logs/ui_hierarchy_log_source.h"

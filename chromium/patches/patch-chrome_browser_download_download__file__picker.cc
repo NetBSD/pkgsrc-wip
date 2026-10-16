@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_file_picker.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/download/download_file_picker.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/download/download_file_picker.cc
 @@ -19,7 +19,7 @@
  #include "content/public/browser/web_contents.h"

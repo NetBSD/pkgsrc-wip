@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/features.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/blink/common/features.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/blink/common/features.cc
 @@ -1773,7 +1773,7 @@ BASE_FEATURE(kPrefetchFontLookupTables,
  // currently out of scope.

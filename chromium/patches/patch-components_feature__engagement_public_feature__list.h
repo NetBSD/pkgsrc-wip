@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
 @@ -412,7 +412,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPinMostVis
  #endif  // BUILDFLAG(IS_IOS)

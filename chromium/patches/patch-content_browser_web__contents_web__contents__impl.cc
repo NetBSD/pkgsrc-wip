@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/web_contents/web_contents_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/web_contents/web_contents_impl.cc
 @@ -1389,7 +1389,7 @@ WebContentsImpl::WebContentsImpl(Browser
    renderer_preferences_.caret_blink_interval =

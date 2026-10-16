@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- base/posix/unix_domain_socket.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ base/posix/unix_domain_socket.cc
 @@ -16,6 +16,7 @@
  #include "base/files/scoped_file.h"

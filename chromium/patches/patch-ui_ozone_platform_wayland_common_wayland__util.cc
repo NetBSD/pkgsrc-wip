@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/ozone/platform/wayland/common/wayland_util.cc
 @@ -417,6 +417,7 @@ void RecordConnectionMetrics(wl_display*
          {"weston", WaylandCompositor::kWeston},

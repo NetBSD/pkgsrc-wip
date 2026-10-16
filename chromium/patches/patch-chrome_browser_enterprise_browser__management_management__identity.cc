@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/management_identity.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/enterprise/browser_management/management_identity.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/enterprise/browser_management/management_identity.cc
 @@ -86,7 +86,7 @@ std::optional<std::string> GetDeviceMana
        g_browser_process->platform_part()->browser_policy_connector_ash();

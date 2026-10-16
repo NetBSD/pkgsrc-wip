@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
 @@ -327,7 +327,7 @@ PA_DEFINE_OPERATORS_FOR_FLAGS(PoolHandle
  // 8GB for each of the glued pools).

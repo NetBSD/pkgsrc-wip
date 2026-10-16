@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/network_service_instance_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/network_service_instance_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/network_service_instance_impl.cc
 @@ -98,7 +98,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/typescript/ts_library.py.orig	2026-10-06 00:06:58.000000000 +0000
+--- tools/typescript/ts_library.py.orig	2026-10-14 21:09:54.000000000 +0000
 +++ tools/typescript/ts_library.py
 @@ -366,8 +366,8 @@ def main(argv):
    list_valid, error_msg = validateDefinitionDeps(

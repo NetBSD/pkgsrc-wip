@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/accessibility/accessibility_features.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/accessibility/accessibility_features.h
 @@ -382,7 +382,7 @@ AX_BASE_EXPORT bool IsScreenAIOCREnabled
  AX_BASE_EXPORT BASE_DECLARE_FEATURE(kScreenAITestMode);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_autofill_manager.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/password_manager/core/browser/password_autofill_manager.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/password_manager/core/browser/password_autofill_manager.cc
 @@ -409,7 +409,7 @@ void PasswordAutofillManager::DidAcceptS
                           weak_ptr_factory_.GetWeakPtr(), payload);
@@ -24,7 +24,7 @@ $NetBSD$
          cross_domain_confirmation_controller_ =
              password_client_->ShowCrossDomainConfirmationPopup(
                  last_popup_open_args_.element_bounds,
-@@ -729,7 +729,7 @@ void PasswordAutofillManager::DidNavigat
+@@ -737,7 +737,7 @@ void PasswordAutofillManager::DidNavigat
    manual_fallback_metrics_recorder_ =
        std::make_unique<PasswordManualFallbackMetricsRecorder>();
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \

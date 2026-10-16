@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/metagen/metagen.py.orig	2026-10-06 00:06:58.000000000 +0000
+--- v8/tools/metagen/metagen.py.orig	2026-10-14 21:09:54.000000000 +0000
 +++ v8/tools/metagen/metagen.py
 @@ -315,12 +315,6 @@ def main() -> int:
      builtin_headers_dir = os.path.abspath(args.clang_builtin_headers_dir)

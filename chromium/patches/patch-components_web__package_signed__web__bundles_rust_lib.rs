@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/web_package/signed_web_bundles/rust/lib.rs.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/web_package/signed_web_bundles/rust/lib.rs.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/web_package/signed_web_bundles/rust/lib.rs
 @@ -1,25 +0,0 @@
 -// Copyright 2026 The Chromium Authors

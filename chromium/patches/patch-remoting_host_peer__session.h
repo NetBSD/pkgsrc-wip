@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/peer_session.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- remoting/host/peer_session.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ remoting/host/peer_session.h
 @@ -19,7 +19,7 @@
  #include "remoting/proto/control.pb.h"

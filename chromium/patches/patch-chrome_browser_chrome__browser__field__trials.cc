@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_field_trials.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/chrome_browser_field_trials.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/chrome_browser_field_trials.cc
 @@ -60,7 +60,7 @@
  #include "chromeos/ash/services/multidevice_setup/public/cpp/first_run_field_trial.h"

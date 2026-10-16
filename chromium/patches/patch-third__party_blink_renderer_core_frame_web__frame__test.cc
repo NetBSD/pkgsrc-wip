@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/blink/renderer/core/frame/web_frame_test.cc
 @@ -6722,7 +6722,7 @@ TEST_F(WebFrameTest, DISABLED_PositionFo
  }

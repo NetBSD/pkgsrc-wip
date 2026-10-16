@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/printing/print_dialog_gtk.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/gtk/printing/print_dialog_gtk.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/gtk/printing/print_dialog_gtk.cc
 @@ -493,7 +493,7 @@ void PrintDialogGtk::ShowDialog(
    GtkPrintCapabilities cap = static_cast<GtkPrintCapabilities>(

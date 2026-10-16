@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/data_controls/core/browser/rule.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/enterprise/data_controls/core/browser/rule.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/enterprise/data_controls/core/browser/rule.cc
 @@ -611,7 +611,7 @@ bool Rule::AddUnsupportedAttributeErrors
                },

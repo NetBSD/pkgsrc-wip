@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/protected_memory.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- base/memory/protected_memory.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ base/memory/protected_memory.h
 @@ -115,12 +115,12 @@ __declspec(selectany) char __stop_protec
  

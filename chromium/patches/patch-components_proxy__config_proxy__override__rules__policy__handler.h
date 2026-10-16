@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/proxy_override_rules_policy_handler.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/proxy_config/proxy_override_rules_policy_handler.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/proxy_config/proxy_override_rules_policy_handler.h
 @@ -53,7 +53,7 @@ class PROXY_CONFIG_EXPORT ProxyOverrideR
                  policy::PolicyErrorPath error_path,

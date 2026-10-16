@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/actions/chrome_action_id.h
-@@ -459,7 +459,7 @@
+@@ -460,7 +460,7 @@
    E(kActionVisitDesktopOfLruUser3, IDC_VISIT_DESKTOP_OF_LRU_USER_3) \
    E(kActionVisitDesktopOfLruUser4, IDC_VISIT_DESKTOP_OF_LRU_USER_4) \
    E(kActionVisitDesktopOfLruUser5, IDC_VISIT_DESKTOP_OF_LRU_USER_5)

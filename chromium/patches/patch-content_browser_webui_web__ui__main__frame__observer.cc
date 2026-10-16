@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/webui/web_ui_main_frame_observer.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/webui/web_ui_main_frame_observer.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.cc
 @@ -39,7 +39,7 @@ namespace {
  bool IsWebUIJavaScriptErrorReportingSupported() {
