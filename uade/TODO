@@ -1,1 +1,4 @@
 Test audacious option.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-111164
