@@ -6067,6 +6067,7 @@ SUBDIR+=	watchman
 SUBDIR+=	waybar
 SUBDIR+=	wayvnc
 SUBDIR+=	wcstools
+SUBDIR+=	weatherman
 SUBDIR+=	weave
 SUBDIR+=	web-mode
 SUBDIR+=	webbrowser
