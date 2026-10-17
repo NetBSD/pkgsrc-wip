@@ -42,6 +42,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/weatherman-tui \
 		${DESTDIR}${PREFIX}/bin
 
+DEPENDS+=	noto-emoji-ttf-[0-9]*:../../fonts/noto-emoji-ttf
+
 .include "../../lang/rust/cargo.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
