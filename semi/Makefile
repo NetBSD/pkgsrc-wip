@@ -7,8 +7,6 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
 GITHUB_TAG=	8264b478c4f6367ff4cea0c2f13abfda152a13d0
 
-BROKEN=		"github commit does not exist in repository"
-
 # This fix will be unnecessary for the next release.
 #PATCH_SITES=		${MASTER_SITE_LOCAL} #PATCHFILES=		semi-1.14.6-pgg-gpg.patch
 #PATCH_DIST_STRIP=	-p0
@@ -17,6 +15,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://git.chise.org/elisp/semi/
 COMMENT=	Emacs lisp library to provide MIME feature
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+WRKSRC=		${WRKDIR}/semi-${GITHUB_TAG}
 
 TOOL_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
