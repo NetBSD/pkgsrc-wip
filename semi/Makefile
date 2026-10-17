@@ -5,6 +5,7 @@ PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
+GITHUB_PROJECT=	semi
 GITHUB_TAG=	8264b478c4f6367ff4cea0c2f13abfda152a13d0
 
 # This fix will be unnecessary for the next release.
