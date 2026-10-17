@@ -1,25 +1,3 @@
-hdf5 cmake file is broken:
-
--- Configuring done (17.7s)
-CMake Error at /usr/pkg/cmake/hdf5-targets.cmake:59 (set_target_properties):
-  The link interface of target "hdf5-static" contains:
-
-    ZLIB::ZLIB
-
-  but the target was not found.  Possible reasons include:
-
-    * There is a typo in the target name.
-    * A find_package call is missing for an IMPORTED target.
-    * An ALIAS target is missing.
-
-Call Stack (most recent call first):
-  /usr/pkg/cmake/hdf5-config.cmake:175 (include)
-  Modules/ThirdParty/HDF5/itk-module-init.cmake:9 (find_package)
-  CMake/ITKModuleEnablement.cmake:374 (include)
-  CMakeLists.txt:584 (include)
-
-(manually worked around locally, needs fixing)
-
 Remove zlib.pc
 
 Check if more dependencies reduce build time; from FreeBSD port:
