@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	${DISTNAME:C/-rc\./rc/}
-DISTNAME=	pnpm-12.12.0
+DISTNAME=	pnpm-12.14.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pnpm/}
 GITHUB_TAG=	refs/tags/v${DISTNAME:C/^[^-]*-//}
