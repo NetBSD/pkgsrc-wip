@@ -29,7 +29,7 @@ SUBST_FILES.lisp=       default.mk
 SUBST_STAGE.lisp=       pre-build
 SUBST_SED.lisp=         -e s.@@PREFIX@@.${PREFIX}.
 
-EMACS_VERSIONS_INCOMPATIBLE=    emacs20 emacs29 emacs29nox xemacs214 xemacs215 xemacs214nox xemacs215nox # emacs-compat
+EMACS_VERSIONS_INCOMPATIBLE=    emacs20 emacs29nox xemacs214 xemacs215 xemacs214nox xemacs215nox # emacs-compat
 
 .include "../../editors/emacs/modules.mk"
 
