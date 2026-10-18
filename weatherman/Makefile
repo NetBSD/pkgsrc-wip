@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	weatherman-0.5.5
+DISTNAME=	weatherman-0.5.6
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sorinirimies/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
