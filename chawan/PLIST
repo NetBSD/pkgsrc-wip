@@ -2,6 +2,7 @@
 bin/cha
 bin/mancha
 libexec/chawan/ansi2html
+libexec/chawan/btoa
 libexec/chawan/cgi-bin/canvas
 libexec/chawan/cgi-bin/chabookmark
 libexec/chawan/cgi-bin/file
@@ -10,6 +11,7 @@ libexec/chawan/cgi-bin/ftp
 libexec/chawan/cgi-bin/gemini
 libexec/chawan/cgi-bin/gopher
 libexec/chawan/cgi-bin/http
+libexec/chawan/cgi-bin/https
 libexec/chawan/cgi-bin/jebp
 libexec/chawan/cgi-bin/man
 libexec/chawan/cgi-bin/nanosvg
@@ -23,7 +25,6 @@ libexec/chawan/dirlist2html
 libexec/chawan/gmi2html
 libexec/chawan/gopher2html
 libexec/chawan/img2html
-libexec/chawan/init.jsb
 libexec/chawan/md2html
 libexec/chawan/nc
 libexec/chawan/tohtml
