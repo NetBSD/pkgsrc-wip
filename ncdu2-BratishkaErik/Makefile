@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 COMMENT=	Disk usage visualization tool
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://github.com/rcalixte/ncdu
+HOMEPAGE=	https://github.com/BratishkaErik/ncdu
 #HOMEPAGE=	https://dev.yorhel.nl/ncdu
 LICENSE=	mit
 
