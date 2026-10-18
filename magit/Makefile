@@ -36,7 +36,7 @@ USE_LANGUAGES=	#
 USE_TOOLS+=	gmake makeinfo
 MAKE_JOBS_SAFE=	no
 
-EMACS_VERSIONS_ACCEPTED=	emacs30
+EMACS_VERSIONS_ACCEPTED=	emacs30 emacs29
 
 .include "../../editors/emacs/modules.mk"
 
