@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mailsend-go-1.0.12
+DISTNAME=	mailsend-go-1.0.13
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=muquit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
