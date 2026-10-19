@@ -1119,6 +1119,7 @@ SUBDIR+=	g-golf
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
+SUBDIR+=	galene
 SUBDIR+=	galib
 SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambas3
