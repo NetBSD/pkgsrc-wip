@@ -1046,7 +1046,6 @@ SUBDIR+=	fogleman-craft
 SUBDIR+=	folly
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
-SUBDIR+=	fooyin
 SUBDIR+=	forge
 SUBDIR+=	forgejo
 SUBDIR+=	forgejo-cli
