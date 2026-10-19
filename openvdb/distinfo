@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (openvdb-12.1.1.tar.gz) = af5179e3da32d8975c61b2a05eef20944e6d8b5e84c23250235e986e4daf275a
 SHA512 (openvdb-12.1.1.tar.gz) = 3ca5f7656aa0bf753ae2bd4f8c40f2e0eec48a22a187fbd519e6a42c2f2b3c9a4b2f32d4a2daa692894af712e13172dfb4ca2e9af99b4d63196bf6b74c87ffb5
 Size (openvdb-12.1.1.tar.gz) = 4876713 bytes
-SHA1 (patch-openvdb_openvdb_thread_Threading.h) = 84ab6653b3261975691c51b9f5830d25c1a4dc67
+SHA1 (patch-openvdb_openvdb_thread_Threading.h) = 7afe13392d9d50ba715fd4c2ff026fac1bd09043

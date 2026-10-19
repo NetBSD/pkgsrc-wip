@@ -1,7 +1,7 @@
 $NetBSD$
 Fix missing include for TBB_INTERFACE_VERSION macro.
 
-TODO: upstream patch.
+https://github.com/AcademySoftwareFoundation/openvdb/commit/1ca9bb066e7aea5e52b243df0d848531b4900508
 
 --- openvdb/openvdb/thread/Threading.h.orig	2026-10-19 06:14:34.363842337 +0000
 +++ openvdb/openvdb/thread/Threading.h
