@@ -1,4 +1,0 @@
-The way I've edited in a fix for it not finding qt6-qttranslations is kinda ugly.
-
-Fix upstream or find a better solution in the Makefile.
-
