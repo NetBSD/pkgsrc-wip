@@ -489,7 +489,6 @@ SUBDIR+=	cherokee
 SUBDIR+=	chezmoi
 SUBDIR+=	chezscheme-racket
 SUBDIR+=	chip-seq
-SUBDIR+=	chipass
 SUBDIR+=	chirpstack
 SUBDIR+=	chkugenids
 SUBDIR+=	chntpw
