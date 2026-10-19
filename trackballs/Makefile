@@ -5,7 +5,7 @@ PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trackballs/}
 
-MAINTAINER=	jfranz@bsdprojects.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trackballs.sourceforge.net/
 COMMENT=	SDL-based Marble Madness clone
 LICENSE=	gnu-gpl-v2
