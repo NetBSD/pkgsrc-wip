@@ -1,3 +1,0 @@
-- Install static files and possibly work out of the box if user does
-  not pass `-static' option (that could be eventually done in an rc.d
-  script too without patching)

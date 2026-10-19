@@ -171,3 +171,4 @@ Size (golang.org_x_time_@v_v0.14.0.mod) = 36 bytes
 BLAKE2s (golang.org_x_time_@v_v0.14.0.zip) = 7ca183e6c7074459f26742a0a638e368549a59adea537756f158fe0fab44452c
 SHA512 (golang.org_x_time_@v_v0.14.0.zip) = 6728d1cceb599793003146f944f4610e3ef160aafedc377d076f07f34256d81b4f88956de9369aded2a4737051187217e9520b08ae786e2ce957e3b3efc87f8a
 Size (golang.org_x_time_@v_v0.14.0.zip) = 15014 bytes
+SHA1 (patch-galene.go) = 4b745110c6fd51a17fa038fe51235462092f6ddb
