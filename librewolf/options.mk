@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.77 2025/10/27 14:24:32 ryoon Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
+PKG_OPTIONS_VAR=	PKG_OPTIONS.librewolf
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
@@ -29,7 +29,7 @@ AUDIO_BACKENDS+=	alsa
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 CONFIGURE_ARGS+=	--enable-jemalloc
-#CONFIGURE_ARGS+=	--enable-replace-malloc
+CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
 #.include "../../devel/jemalloc/buildlink3.mk"

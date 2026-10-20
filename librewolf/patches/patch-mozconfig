@@ -1,13 +1,19 @@
 $NetBSD$
 
---- mozconfig.orig	2026-04-21 20:18:16.000000000 +0000
+Avoid linking errors due to C and C++ linkage. Something seems
+to be broken in the librewolf build (or C++ linkage is always
+on for the development team's compilers).
+
+--- mozconfig.orig	2026-10-11 19:21:15.398384407 +0000
 +++ mozconfig
-@@ -14,7 +14,7 @@ ac_add_options --enable-rust-simd
- ac_add_options --enable-rust-simd
+@@ -14,8 +14,8 @@ ac_add_options --enable-proxy-bypass-protection
+ ac_add_options --enable-proxy-bypass-protection
  # allow replacing malloc manually, will not affect regular systems
  # not compatible with ac_add_options --disable-jemalloc, which only works when preloading custom malloc
 -ac_add_options --enable-replace-malloc
+-ac_add_options --enable-jemalloc
 +# ac_add_options --enable-replace-malloc
- ac_add_options --enable-jemalloc
++# ac_add_options --enable-jemalloc
  
  ac_add_options --with-app-name=librewolf
+ ac_add_options --with-branding=browser/branding/librewolf

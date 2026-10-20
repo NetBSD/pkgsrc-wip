@@ -1,12 +1,14 @@
-$NetBSD$
+$NetBSD: patch-ipc_glue_ForkServer.cpp,v 1.2 2026/05/30 17:06:09 ryoon Exp $
 
---- ipc/glue/ForkServer.cpp.orig	2026-05-08 19:59:09.495174425 +0000
+* Fix build for signal(3).
+
+--- ipc/glue/ForkServer.cpp.orig	2026-04-20 09:24:23.315338652 +0000
 +++ ipc/glue/ForkServer.cpp
-@@ -22,6 +22,7 @@
+@@ -19,6 +19,7 @@
+ #include "nsTraceRefcnt.h"
+ 
+ #include <fcntl.h>
++#include <signal.h>
  #include <string.h>
  #include <sys/wait.h>
  #include <unistd.h>
-+#include <signal.h>
- 
- #if defined(XP_LINUX) && defined(MOZ_SANDBOX)
- #  include "mozilla/SandboxLaunch.h"

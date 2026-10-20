@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.304 2025/11/14 20:47:01 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.326 2026/09/23 08:39:50 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -21,14 +21,16 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES+=	c++20
 
 # XXX: As of 145.0
 GCC_REQD+=		10
 
-TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.29.4:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
-TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
+BUILDLINK_DEPMETHOD.nodejs=	build
+.include "../../lang/nodejs/nodeversion.mk"
 USE_TOOLS+=		diff
 .else
 CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
@@ -40,19 +42,19 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 CFLAGS+=		-msse2
 .endif
 
-#CKSUM_CRATES+=	third_party/rust/quinn-udp
-#
-#CKSUMS+=	b8e595499055115d15bfb95259c0c585934adf55f61e365bcc9fc47ab8fa9cdd
-#CKSUMS+=	7be04be65b1606fd2560d572ba5a6238a645075555085d5e9cef15d10b0b8024
-#
-#SUBST_CLASSES+=		cksum
-#SUBST_STAGE.cksum=	pre-configure
-#.for crate in ${CKSUM_CRATES}
-#SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-#.endfor
-#.for from to in ${CKSUMS}
-#SUBST_SED.cksum+=	-e 's,${from},${to},g'
-#.endfor
+CKSUM_CRATES+=		third_party/rust/mtu
+
+CKSUMS+=		9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
+CKSUMS+=		986f84f01a44521224c7a7c1b1883cc6a4f89cbcb24b36844bfffea5f285747e
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
 
 # This is to work around build failures where an upstream configuration script
 # is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
@@ -94,6 +96,7 @@ CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/libwebrtc/tools_webrtc/iwyu/apply-iwyu
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
 
 CONFIGURE_ARGS+=	--enable-release
 # Disable Rust SIMD option to fix build with lang/rust-1.33.0
@@ -147,7 +150,7 @@ CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 SUBST_CLASSES+=				fix-libpci-soname
 SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
-SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
+SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/gfxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
@@ -160,15 +163,6 @@ SUBST_STAGE.sqlite3-opt=	pre-configure
 SUBST_MESSAGE.sqlite3-opt=	Fixing segfault in libmozsqlite3.so
 SUBST_FILES.sqlite3-opt+=	${MOZILLA_DIR}third_party/sqlite3/src/moz.build
 SUBST_VARS.sqlite3-opt+=	SQLITE3OPTFLAG
-
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "aarch64"
-SUBST_CLASSES+=                 sve2
-SUBST_STAGE.sve2=               pre-configure
-SUBST_FILES.sve2=               media/libyuv/libyuv/source/convert.cc
-SUBST_FILES.sve2+=              media/libyuv/libyuv/source/scale_argb.cc
-SUBST_FILES.sve2+=              media/libyuv/libyuv/source/convert_argb.cc
-SUBST_SED.sve2=                 -e 's/_SVE2/_NEON/g'
-.endif
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or earlier.
 RUST_MAKE_JOBS=		# empty by default
@@ -216,7 +210,6 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 PLIST_VARS+=	v4l2_decode ffvpx
 
-PLIST_VARS+=		v4l2_decode
 .if ${MACHINE_ARCH} == "aarch64" || \
     ${MACHINE_ARCH:M*arm*} || \
     ${MACHINE_ARCH} == riscv64
@@ -234,6 +227,13 @@ PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
 # support is only available when the toolkit is cairo-cocoa.
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
 CONFIGURE_ARGS.NetBSD+=	--disable-sandbox
+
+PRINT_PLIST_AWK+=	/\/${MOZILLA}\// { gsub(/\/${MOZILLA}\//, "/$${MOZILLA}/") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.png$$/ { gsub(/\/${MOZILLA}.png$$/, "/$${MOZILLA}.png") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.desktop$$/ { gsub(/\/${MOZILLA}.desktop$$/, "/$${MOZILLA}.desktop") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}$$/ { gsub(/\/${MOZILLA}$$/, "/$${MOZILLA}") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}-bin$$/ { gsub(/\/${MOZILLA}-bin$$/, "/$${MOZILLA}-bin") }
+PLIST_SUBST+=		MOZILLA=${MOZILLA}
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -257,10 +257,10 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 # See build/moz.configure/nspr.configure
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
-BUILDLINK_API_DEPENDS.icu+=	icu>=76.1
+BUILDLINK_API_DEPENDS.icu+=	icu>=78.1
 .include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.117
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.126.1
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -271,14 +271,11 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.82.0
+RUST_REQ=	1.90.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
-# TODO: check again, pkgsrc has hunspell 1.7
-# was: textproc/hunspell 1.3 is too old
-#.include "../../textproc/hunspell/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg9/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40

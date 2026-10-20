@@ -1,22 +1,22 @@
 # $NetBSD: Makefile,v 1.650 2025/11/14 17:17:18 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		151.0
-MOZ_BRANCH_MINOR=	.1
-MOZ_BRANCH_HYPHEN=	  2
+MOZ_BRANCH=		158.0
+#MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH_HYPHEN=	1
 
 DISTNAME=	librewolf-${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}.source
 PKGNAME=	${DISTNAME:S/.source//:S/-${MOZ_BRANCH_HYPHEN}$//}
 CATEGORIES=	www
-MASTER_SITES=	https://codeberg.org/api/packages/librewolf/generic/librewolf-source/${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}/
+MASTER_SITES=	https://librewolf.dev/api/packages/librewolf/generic/librewolf-source/${FIREFOX_VER}-${MOZ_BRANCH_HYPHEN}/
 EXTRACT_SUFX=	.tar.gz
 
-NODEJSKIT=		nodejs-output-149.0.tgz
+NODEJSKIT=		nodejs-output-156.0.1.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mozilla.org/en-US/firefox/
+HOMEPAGE=	https://librewolf.dev
 COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:tu:C/\\.[[:digit:]\.]*//})
 LICENSE=	mpl-1.1
 
@@ -45,6 +45,9 @@ LICENSE=	mpl-1.1
 #
 # -----------------------------------------------------------------------
 
+# see comment in www/firefox/Makefile
+# make maintainer-files does not work at the moment
+FIREFOX_MAINTAINER=yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 
 MOZILLA_DIR=	# empty
@@ -100,19 +103,14 @@ CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
-CHECK_PORTABILITY_SKIP+=	third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
 
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/omni.ja
 
 MOZILLA=	${PKGBASE}
 
-.if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
-MOZILLA_NAME=		Firefox
-MOZILLA_BRANDING=	official
-.else
-MOZILLA_NAME=		Browser
+# Librewolf takes care of this anyway
+MOZILLA_NAME=		Librewolf
 MOZILLA_BRANDING=	unofficial
-.endif
 
 pre-configure:
 # As of 106.0, .in template files are not patched.
