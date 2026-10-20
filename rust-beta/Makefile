@@ -6,7 +6,7 @@
 # Regenerating checksums may be needed to build the current rust-beta.
 
 DISTNAME=	rustc-beta-src
-PKGNAME=	rust-1.100.0beta.5
+PKGNAME=	rust-1.100.0beta.7
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 EXTRACT_SUFX=	.tar.xz
@@ -113,7 +113,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 # does not need any special post-processing.
 DISTFILES:=		${DEFAULT_DISTFILES}
 
-RUST_STAGE0_VER=	1.99.0
+RUST_STAGE0_VER=	1.99.1
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
