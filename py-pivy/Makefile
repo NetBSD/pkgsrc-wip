@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	0.6.10
+VERSION=	0.6.11
 DISTNAME=	pivy-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coin3d/}
@@ -13,8 +13,9 @@ HOMEPAGE=	https://github.com/coin3d/pivy
 COMMENT=	Python bindings for Coin
 LICENSE=	isc
 
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES+=	c c++
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES=	c++20
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # kludge until fixed upstream
 
@@ -22,11 +23,9 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/swig4/buildlink3.mk"
-
-.include "../../wip/Coin/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../wip/Coin/buildlink3.mk"
 .include "../../wip/soqt/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
