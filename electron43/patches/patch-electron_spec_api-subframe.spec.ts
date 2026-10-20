@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-subframe.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-subframe.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-subframe.spec.ts
 @@ -254,7 +254,7 @@ describe('subframe with non-standard sch
  });

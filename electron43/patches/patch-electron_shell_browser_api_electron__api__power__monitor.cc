@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_power_monitor.cc.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/browser/api/electron_api_power_monitor.cc.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/browser/api/electron_api_power_monitor.cc
 @@ -137,6 +137,11 @@ void PowerMonitor::OnSpeedLimitChange(in
        gin::DataObjectBuilder(isolate).Set("limit", speed_limit).Build());

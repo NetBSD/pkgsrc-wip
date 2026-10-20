@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/BUILD.gn.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/BUILD.gn.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/BUILD.gn
 @@ -629,7 +629,7 @@ source_set("electron_lib") {
      defines += [ "GDK_DISABLE_DEPRECATION_WARNINGS" ]
@@ -15,7 +15,7 @@ $NetBSD$
      deps += [
        "//components/crash/core/app",
        "//components/crash/core/browser",
-@@ -743,6 +743,12 @@ source_set("electron_lib") {
+@@ -736,6 +736,12 @@ source_set("electron_lib") {
        cflags_objcc = [ "-fobjc-weak" ]
      }
    }
@@ -28,7 +28,7 @@ $NetBSD$
    if (is_linux) {
      libs = [ "xshmfence" ]
      deps += [
-@@ -1555,7 +1561,7 @@ if (is_mac) {
+@@ -1548,7 +1554,7 @@ if (is_mac) {
      } else if (is_linux) {
        sources = [
          "shell/app/electron_main_linux.cc",
@@ -37,7 +37,7 @@ $NetBSD$
          "shell/app/uv_stdio_fix.cc",
          "shell/app/uv_stdio_fix.h",
        ]
-@@ -1567,7 +1573,7 @@ if (is_mac) {
+@@ -1560,7 +1566,7 @@ if (is_mac) {
        ":electron_lib",
        ":electron_win32_resources",
        ":packed_resources",
@@ -46,7 +46,7 @@ $NetBSD$
        "//content:sandbox_helper_win",
        "//electron/buildflags",
        "//third_party/electron_node:libnode",
-@@ -1594,7 +1600,7 @@ if (is_mac) {
+@@ -1587,7 +1593,7 @@ if (is_mac) {
        public_deps = [ "//tools/v8_context_snapshot" ]
      }
  
@@ -55,7 +55,7 @@ $NetBSD$
        data_deps += [ "//components/crash/core/app:chrome_crashpad_handler" ]
      }
  
-@@ -1661,7 +1667,7 @@ if (is_mac) {
+@@ -1654,7 +1660,7 @@ if (is_mac) {
          configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
        }
  
@@ -64,7 +64,7 @@ $NetBSD$
          deps += [ "//sandbox/linux:chrome_sandbox" ]
        }
      }
-@@ -1782,7 +1788,9 @@ dist_zip("electron_dist_zip") {
+@@ -1775,7 +1781,9 @@ dist_zip("electron_dist_zip") {
        ]
      }
  

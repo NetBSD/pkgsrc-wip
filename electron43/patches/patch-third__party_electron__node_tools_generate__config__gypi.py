@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/tools/generate_config_gypi.py.orig	2026-09-07 09:57:40.000000000 +0000
+--- third_party/electron_node/tools/generate_config_gypi.py.orig	2026-10-13 14:09:48.000000000 +0000
 +++ third_party/electron_node/tools/generate_config_gypi.py
 @@ -19,7 +19,7 @@ import getnapibuildversion
  

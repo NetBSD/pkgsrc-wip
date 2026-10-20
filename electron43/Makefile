@@ -21,12 +21,12 @@ AUDIOIO_VERSION=		150.0
 ROLLUP_VERSION=			4.60.4
 EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 ESBUILD_VERSION=		${EB_DISTNAME:sh:C/^.*-//}
-NODE_VERSION=			24.21.0
+NODE_VERSION=			24.22.0
 NAN_VERSION=			675cefebca42410733da8a454c8d9391fcebfbc2
 SQUIRREL_VERSION=		0e5d146ba13101a1302d59ea6e6e0b3cace4ae38
 REACTIVEOBJC_VERSION=		74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76
 MANTLE_VERSION=			2a8e2123a3931038179ee06105c9e6ec336b12ea
-ENGFLOW_VERSION=		955335c30a752e9ef7bff375baab5e0819b6c00d
+#ENGFLOW_VERSION=		955335c30a752e9ef7bff375baab5e0819b6c00d
 LLVM_MV=			21
 
 GITHUB_SUBMODULES=		kikadf chromium-nb v${AUDIOIO_VERSION} pkgsrc/chromium-nb
@@ -35,7 +35,7 @@ GITHUB_SUBMODULES+=		nodejs nan ${NAN_VERSION} pkgsrc/nan
 GITHUB_SUBMODULES+=		Squirrel Squirrel.Mac ${SQUIRREL_VERSION} pkgsrc/squirrel.mac
 GITHUB_SUBMODULES+=		ReactiveCocoa ReactiveObjC ${REACTIVEOBJC_VERSION} pkgsrc/squirrel.mac/vendor/ReactiveObjC
 GITHUB_SUBMODULES+=		Mantle Mantle ${MANTLE_VERSION} pkgsrc/squirrel.mac/vendor/Mantle
-GITHUB_SUBMODULES+=		EngFlow reclient-configs ${ENGFLOW_VERSION} pkgsrc/engflow-reclient-configs
+#GITHUB_SUBMODULES+=		EngFlow reclient-configs ${ENGFLOW_VERSION} pkgsrc/engflow-reclient-configs
 GITHUB_SUBMODULES+=		evanw esbuild v${ESBUILD_VERSION} pkgsrc/esbuild
 GITHUB_SUBMODULES+=		rollup rollup v${ROLLUP_VERSION} pkgsrc/rollup
 CARGO_WRKSRC=			${WRKSRC}/rollup/rust
@@ -276,7 +276,7 @@ post-extract:
 	${MV} ${WRKDIR}/temp/pkgsrc/electron_node ${WRKSRC}/third_party/electron_node
 	${MV} ${WRKDIR}/temp/pkgsrc/nan ${WRKSRC}/third_party/nan
 	${MV} ${WRKDIR}/temp/pkgsrc/squirrel.mac ${WRKSRC}/third_party/squirrel.mac
-	${MV} ${WRKDIR}/temp/pkgsrc/engflow-reclient-configs ${WRKSRC}/third_party/engflow-reclient-configs
+#	${MV} ${WRKDIR}/temp/pkgsrc/engflow-reclient-configs ${WRKSRC}/third_party/engflow-reclient-configs
 	${MV} ${WRKDIR}/temp/pkgsrc/rollup ${WRKSRC}/rollup
 	${MV} ${WRKDIR}/temp/pkgsrc/esbuild ${WRKSRC}/esbuild
 	${MV} ${WRKDIR}/temp ${WRKSRC}/electron

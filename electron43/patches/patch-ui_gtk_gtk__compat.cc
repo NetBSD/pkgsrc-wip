@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- ui/gtk/gtk_compat.cc.orig	2026-10-13 15:23:13.076754965 +0000
+--- ui/gtk/gtk_compat.cc.orig	2026-10-20 08:24:51.707205642 +0000
 +++ ui/gtk/gtk_compat.cc
 @@ -82,15 +82,6 @@ void* GetLibGio() {
    return libgio;

@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/ui/inspectable_web_contents_view_delegate.h.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/browser/ui/inspectable_web_contents_view_delegate.h.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/browser/ui/inspectable_web_contents_view_delegate.h
 @@ -24,7 +24,7 @@ class InspectableWebContentsViewDelegate
    // Returns the icon of devtools window.

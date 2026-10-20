@@ -1,13 +1,13 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-net-log.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-net-log.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-net-log.spec.ts
-@@ -129,7 +129,7 @@ describe('netLog module', () => {
-     ).to.be.true('uuid present in dump');
+@@ -137,7 +137,7 @@ describe('netLog module', () => {
+     ).toBe(true);
    });
  
 -  ifit(process.platform !== 'linux')(
@@ -15,7 +15,7 @@ $NetBSD$
      'should begin and end logging automatically when --log-net-log is passed',
      async () => {
        const appProcess = ChildProcess.spawn(process.execPath, [appPath], {
-@@ -144,7 +144,7 @@ describe('netLog module', () => {
+@@ -152,7 +152,7 @@ describe('netLog module', () => {
      }
    );
  
@@ -24,7 +24,7 @@ $NetBSD$
      'should begin and end logging automatically when --log-net-log is passed, and behave correctly when .startLogging() and .stopLogging() is called',
      async () => {
        const appProcess = ChildProcess.spawn(process.execPath, [appPath], {
-@@ -162,7 +162,7 @@ describe('netLog module', () => {
+@@ -170,7 +170,7 @@ describe('netLog module', () => {
      }
    );
  

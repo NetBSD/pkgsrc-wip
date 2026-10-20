@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts_posix.cc
 @@ -191,6 +191,9 @@ void ElectronBrowserMainParts::InstallSh
    g_pipe_pid = getpid();

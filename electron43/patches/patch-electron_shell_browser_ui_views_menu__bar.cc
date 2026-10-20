@@ -1,30 +1,30 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/ui/views/menu_bar.cc.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/browser/ui/views/menu_bar.cc.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/browser/ui/views/menu_bar.cc
-@@ -14,7 +14,7 @@
+@@ -16,7 +16,7 @@
  #include "ui/views/background.h"
  #include "ui/views/layout/box_layout.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "shell/browser/ui/gtk_util.h"
  #include "ui/gtk/gtk_util.h"  // nogncheck
  #endif
- 
-@@ -215,7 +215,7 @@ void MenuBar::ViewHierarchyChanged(
+@@ -218,7 +218,7 @@ void MenuBar::ViewHierarchyChanged(
  
  void MenuBar::RefreshColorCache(const ui::NativeTheme* theme) {
    if (theme) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     background_color_ = gtk::GetBgColor("GtkMenuBar#menubar");
-     enabled_color_ =
-         gtk::GetFgColor("GtkMenuBar#menubar GtkMenuItem#menuitem GtkLabel");
-@@ -241,7 +241,7 @@ void MenuBar::RebuildChildren() {
+     if (gtk_util::IsGtkAvailable()) {
+       background_color_ = gtk::GetBgColor("GtkMenuBar#menubar");
+       enabled_color_ =
+@@ -254,7 +254,7 @@ void MenuBar::RebuildChildren() {
  }
  
  void MenuBar::UpdateViewColors() {
@@ -33,7 +33,7 @@ $NetBSD$
    // set menubar background color
    SetBackground(views::CreateSolidBackground(background_color_));
  #endif
-@@ -249,7 +249,7 @@ void MenuBar::UpdateViewColors() {
+@@ -262,7 +262,7 @@ void MenuBar::UpdateViewColors() {
    // set child colors
    if (menu_model_ == nullptr)
      return;

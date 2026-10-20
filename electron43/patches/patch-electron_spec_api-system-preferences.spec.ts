@@ -1,12 +1,12 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-system-preferences.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-system-preferences.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-system-preferences.spec.ts
-@@ -5,8 +5,8 @@ import { expect } from 'chai';
+@@ -5,8 +5,8 @@ import { describe, expect, it } from 'vi
  import { ifdescribe, ifit } from './lib/spec-helpers.ts';
  
  describe('systemPreferences module', () => {

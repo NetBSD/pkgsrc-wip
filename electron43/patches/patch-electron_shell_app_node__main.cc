@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/app/node_main.cc.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/app/node_main.cc.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/app/node_main.cc
 @@ -54,7 +54,7 @@
  #include "shell/common/mac/codesign_util.h"
@@ -32,7 +32,7 @@ $NetBSD$
    electron::crash_keys::GetCrashKeys(&keys);
  #endif
    return gin::ConvertToV8(isolate, keys);
-@@ -329,7 +329,7 @@ int NodeMain() {
+@@ -323,7 +323,7 @@ int NodeMain() {
        // Setup process.crashReporter in child node processes
        auto reporter = gin_helper::Dictionary::CreateEmpty(isolate);
        reporter.SetMethod("getParameters", &GetParameters);

@@ -1,12 +1,12 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/script/spec-runner.js.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/script/spec-runner.js.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/script/spec-runner.js
-@@ -586,7 +586,7 @@ function toVitestInvocation(exe, specDir
+@@ -584,7 +584,7 @@ function toVitestInvocation(exe, specDir
    };
    let command = process.execPath;
    let commandArgs = vitestArgs;
@@ -15,7 +15,7 @@ $NetBSD$
      // The mock D-Bus services are started once around the whole run; every
      // Electron worker inherits the bus addresses from the CLI's environment.
      commandArgs = [path.resolve(__dirname, 'dbus_mock.py'), command, ...commandArgs];
-@@ -689,7 +689,7 @@ async function installSpecModules(dir) {
+@@ -687,7 +687,7 @@ async function installSpecModules(dir) {
      process.exit(1);
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
      const { status: rebuildStatus } = childProcess.spawnSync('npm', ['rebuild', 'abstract-socket'], {
        env,
        cwd: dir,
-@@ -767,7 +767,7 @@ async function installSpecModules(dir) {
+@@ -765,7 +765,7 @@ async function installSpecModules(dir) {
  // the same GCC that rejects the headers, so nothing on that host can build
  // the fixtures.
  function getNativeAddonToolchainEnv() {

@@ -1,8 +1,8 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
 --- rollup/rust/bindings_napi/Cargo.toml.orig	2026-05-14 17:17:51.000000000 +0000
 +++ rollup/rust/bindings_napi/Cargo.toml

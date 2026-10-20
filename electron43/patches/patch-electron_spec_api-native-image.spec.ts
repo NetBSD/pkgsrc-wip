@@ -1,12 +1,12 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-native-image.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-native-image.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-native-image.spec.ts
-@@ -570,7 +570,7 @@ describe('nativeImage module', () => {
+@@ -569,7 +569,7 @@ describe('nativeImage module', () => {
      });
    });
  

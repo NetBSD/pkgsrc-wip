@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- ui/gfx/font_util.cc.orig	2026-10-13 15:23:13.892834818 +0000
+--- ui/gfx/font_util.cc.orig	2026-10-20 08:24:52.584887527 +0000
 +++ ui/gfx/font_util.cc
 @@ -26,8 +26,11 @@ void InitializeFonts() {
    // the long delay the user would have seen on first rendering.

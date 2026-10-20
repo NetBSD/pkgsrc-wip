@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/deps/uv/src/unix/pipe.c.orig	2026-09-07 09:57:40.000000000 +0000
+--- third_party/electron_node/deps/uv/src/unix/pipe.c.orig	2026-10-13 14:09:48.000000000 +0000
 +++ third_party/electron_node/deps/uv/src/unix/pipe.c
 @@ -208,9 +208,13 @@ int uv_pipe_open(uv_pipe_t* handle, uv_f
    if (mode == -1)

@@ -1,49 +1,60 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/deps/uv/unofficial.gni.orig	2026-09-07 09:57:40.000000000 +0000
+--- third_party/electron_node/deps/uv/unofficial.gni.orig	2026-10-13 14:09:48.000000000 +0000
 +++ third_party/electron_node/deps/uv/unofficial.gni
-@@ -27,7 +27,7 @@ template("uv_gn_build") {
-         "_FILE_OFFSET_BITS=64",
-       ]
+@@ -39,7 +39,7 @@ template("uv_gn_build") {
+           "_FILE_OFFSET_BITS=64",
+         ]
+       }
+-      if (is_linux) {
++      if (is_linux && !is_bsd) {
+         defines += [
+           "_POSIX_C_SOURCE=200112",
+           "_GNU_SOURCE",
+@@ -108,6 +108,9 @@ template("uv_gn_build") {
+           "rt",
+         ]
+       }
++      if (is_netbsd) {
++        libs += [ "kvm" ]
++      }
+ 
+       sources = gypi_values.uv_sources_common
+       if (is_win) {
+@@ -117,13 +120,31 @@ template("uv_gn_build") {
+         sources += gypi_values.uv_sources_posix +
+                    [ "src/unix/proctitle.c" ]
+       }
+-      if (is_linux) {
++      if (is_linux && !is_bsd) {
+         sources += gypi_values.uv_sources_linux
+       }
+       if (is_apple) {
+         sources += gypi_values.uv_sources_apple +
+                    gypi_values.uv_sources_bsd_common
+       }
++      if (is_freebsd) {
++        sources += gypi_values.uv_sources_bsd_common + [
++                  "src/unix/freebsd.c",
++                  "src/unix/random-getrandom.c",
++                  "src/unix/posix-hrtime.c",
++                  "src/unix/bsd-proctitle.c",
++        ]
++        sources -= [ "src/unix/proctitle.c" ]
++      }
++      if (is_netbsd) {
++        sources += gypi_values.uv_sources_bsd_common + [
++                  "src/unix/netbsd.c",
++                  "src/unix/random-getrandom.c",
++                  "src/unix/posix-hrtime.c",
++                  "src/unix/bsd-proctitle.c",
++        ]
++        sources -= [ "src/unix/proctitle.c" ]
++      }
      }
--    if (is_linux) {
-+    if (is_linux && !is_bsd) {
-       defines += [
-         "_POSIX_C_SOURCE=200112",
-         "_GNU_SOURCE",
-@@ -105,12 +105,30 @@ template("uv_gn_build") {
-       sources += gypi_values.uv_sources_posix +
-                  [ "src/unix/proctitle.c" ]
-     }
--    if (is_linux) {
-+    if (is_linux && !is_bsd) {
-       sources += gypi_values.uv_sources_linux
-     }
-     if (is_apple) {
-       sources += gypi_values.uv_sources_apple +
-                  gypi_values.uv_sources_bsd_common
-     }
-+    if (is_freebsd) {
-+      sources += gypi_values.uv_sources_bsd_common + [
-+        "src/unix/freebsd.c",
-+        "src/unix/random-getrandom.c",
-+        "src/unix/posix-hrtime.c",
-+        "src/unix/bsd-proctitle.c",
-+      ]
-+      sources -= [ "src/unix/proctitle.c" ]
-+    }
-+    if (is_netbsd) {
-+      sources += gypi_values.uv_sources_bsd_common + [
-+        "src/unix/netbsd.c",
-+        "src/unix/random-getrandom.c",
-+        "src/unix/posix-hrtime.c",
-+        "src/unix/bsd-proctitle.c",
-+      ]
-+      sources -= [ "src/unix/proctitle.c" ]
-+    }
    }
  }

@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/common/node_bindings.cc.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/common/node_bindings.cc.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/common/node_bindings.cc
 @@ -57,7 +57,7 @@
  #include "third_party/electron_node/src/node_snapshot_builder.h"

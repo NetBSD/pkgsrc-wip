@@ -1,12 +1,12 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-app.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-app.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-app.spec.ts
-@@ -127,7 +127,7 @@ describe('app module', () => {
+@@ -131,7 +131,7 @@ describe('app module', () => {
      });
    });
  
@@ -15,21 +15,21 @@ $NetBSD$
      it('sets the desktop name to the CHROME_DESKTOP environment variable', () => {
        const original = process.env.CHROME_DESKTOP;
        defer(() => {
-@@ -156,11 +156,11 @@ describe('app module', () => {
+@@ -160,11 +160,11 @@ describe('app module', () => {
    });
  
    describe('app.getPreferredSystemLanguages()', () => {
 -    ifit(process.platform !== 'linux')('should not be empty', () => {
 +    ifit(process.platform !== 'linux' && process.platform !== 'freebsd' && process.platform !== 'netbsd')('should not be empty', () => {
-       expect(app.getPreferredSystemLanguages().length).to.not.equal(0);
+       expect(app.getPreferredSystemLanguages().length).not.toBe(0);
      });
  
 -    ifit(process.platform === 'linux')('should be empty or contain C entry', () => {
 +    ifit(process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd')('should be empty or contain C entry', () => {
        const languages = app.getPreferredSystemLanguages();
        if (languages.length) {
-         expect(languages).to.not.include('C');
-@@ -202,7 +202,7 @@ describe('app module', () => {
+         expect(languages).not.toContain('C');
+@@ -206,7 +206,7 @@ describe('app module', () => {
      });
    });
  
@@ -38,16 +38,25 @@ $NetBSD$
      'when a D-Bus bus goes away',
      () => {
        it('exits cleanly instead of crashing', async () => {
-@@ -293,7 +293,7 @@ describe('app module', () => {
+@@ -300,7 +300,7 @@ describe('app module', () => {
+     // A missing display makes toolkit initialisation fail before the main loop
+     // runs; that early return must still tear the JS environment down cleanly.
+     // Skipped under ASan for the same reason as the test above.
+-    ifit(process.platform === 'linux' && !process.env.IS_ASAN)(
++    ifit((process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd') && !process.env.IS_ASAN)(
+       'exits with code 1 when no display is available',
+       async () => {
+         const appPath = path.join(fixturesPath, 'api', 'no-display');
+@@ -321,7 +321,7 @@ describe('app module', () => {
        }
-     });
+     );
  
--    ifit(['darwin', 'linux'].includes(process.platform))('exits gracefully', async function () {
-+    ifit(['darwin', 'linux', 'freebsd', 'netbsd'].includes(process.platform))('exits gracefully', async function () {
+-    ifit(['darwin', 'linux'].includes(process.platform))('exits gracefully', async () => {
++    ifit(['darwin', 'linux', 'freebsd', 'netbsd'].includes(process.platform))('exits gracefully', async () => {
        const electronPath = process.execPath;
        const appPath = path.join(fixturesPath, 'api', 'singleton');
        appProcess = cp.spawn(electronPath, [appPath]);
-@@ -491,7 +491,7 @@ describe('app module', () => {
+@@ -554,7 +554,7 @@ describe('app module', () => {
    });
  
    // GitHub Actions macOS-13 runners used for x64 seem to have a problem with this test.
@@ -56,7 +65,7 @@ $NetBSD$
      const tempFiles = [
        path.join(fixturesPath, 'foo.txt'),
        path.join(fixturesPath, 'bar.txt'),
-@@ -620,7 +620,7 @@ describe('app module', () => {
+@@ -691,7 +691,7 @@ describe('app module', () => {
    //   let w = null
  
    //   before(function () {
@@ -65,7 +74,7 @@ $NetBSD$
    //       this.skip()
    //     }
    //   })
-@@ -733,7 +733,7 @@ describe('app module', () => {
+@@ -804,7 +804,7 @@ describe('app module', () => {
  
    describe('app.badgeCount', () => {
      const platformIsNotSupported =
@@ -74,16 +83,16 @@ $NetBSD$
  
      const expectedBadgeCount = 42;
  
-@@ -780,7 +780,7 @@ describe('app module', () => {
+@@ -851,7 +851,7 @@ describe('app module', () => {
    });
  
    ifdescribe(
 -    process.platform !== 'linux' && !process.mas && (process.platform !== 'darwin' || process.arch === 'arm64')
 +    process.platform !== 'linux' && process.platform !== 'freebsd' && process.platform !== 'netbsd' && !process.mas && (process.platform !== 'darwin' || process.arch === 'arm64')
-   )('app.get/setLoginItemSettings API', function () {
+   )('app.get/setLoginItemSettings API', () => {
      const isMac = process.platform === 'darwin';
      const isWin = process.platform === 'win32';
-@@ -1207,7 +1207,7 @@ describe('app module', () => {
+@@ -1278,7 +1278,7 @@ describe('app module', () => {
      });
    });
  
@@ -92,7 +101,7 @@ $NetBSD$
      // These tests toggle a process-wide AXMode. Turn it back off so the rest of
      // the suite doesn't run with renderer accessibility enabled.
      afterEach(() => {
-@@ -1483,7 +1483,7 @@ describe('app module', () => {
+@@ -1561,7 +1561,7 @@ describe('app module', () => {
      });
    });
  
@@ -100,18 +109,18 @@ $NetBSD$
 +  ifdescribe(process.platform !== 'linux' && process.platform !== 'freebsd' && process.platform !== 'netbsd')('select-client-certificate event', () => {
      let w: BrowserWindow;
  
-     before(function () {
-@@ -1626,7 +1626,7 @@ describe('app module', () => {
+     beforeAll(() => {
+@@ -1707,7 +1707,7 @@ describe('app module', () => {
  
    describe('getApplicationNameForProtocol()', () => {
      // TODO: Linux CI doesn't have registered http & https handlers
 -    ifit(!(process.env.CI && process.platform === 'linux') && !isWayland)(
 +    ifit(!(process.env.CI && (process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd')) && !isWayland)(
        'returns application names for common protocols',
-       function () {
+       () => {
          // We can't expect particular app names here, but these protocols should
-@@ -1643,7 +1643,7 @@ describe('app module', () => {
-       expect(app.getApplicationNameForProtocol('bogus-protocol://')).to.equal('');
+@@ -1724,7 +1724,7 @@ describe('app module', () => {
+       expect(app.getApplicationNameForProtocol('bogus-protocol://')).toBe('');
      });
  
 -    ifdescribe(process.platform === 'linux')('on Linux with mocked XDG dirs', () => {
@@ -119,35 +128,35 @@ $NetBSD$
        const desktopFileId = 'mock-browser.desktop';
        const mockDisplayName = 'Mock Browser';
        const mockScheme = 'mockproto';
-@@ -1693,7 +1693,7 @@ describe('app module', () => {
+@@ -1774,7 +1774,7 @@ describe('app module', () => {
      let xdgBinDir: string;
  
-     before(() => {
+     beforeAll(() => {
 -      if (process.platform !== 'linux') {
 +      if (process.platform !== 'linux' && process.platform !== 'freebsd' && process.platform !== 'netbsd') {
          return;
        }
  
-@@ -1710,7 +1710,7 @@ describe('app module', () => {
+@@ -1791,7 +1791,7 @@ describe('app module', () => {
      });
  
-     after(() => {
+     afterAll(() => {
 -      if (process.platform === 'linux') {
 +      if (process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd') {
          fs.rmSync(xdgDir, { recursive: true, force: true });
        }
      });
-@@ -1722,7 +1722,7 @@ describe('app module', () => {
+@@ -1803,7 +1803,7 @@ describe('app module', () => {
      });
  
-     it('returns resolved promise with appPath, displayName and icon', async function () {
+     it('returns resolved promise with appPath, displayName and icon', async () => {
 -      if (process.platform === 'linux') {
 +      if (process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd') {
          const appInfo = await spawnProtocolInfoWithXdgMock(`${mockScheme}://`, xdgDataHome, xdgConfigHome);
-         expect(appInfo.name).to.equal(mockDisplayName);
-         expect(appInfo.path).to.equal('/usr/bin/true');
-@@ -1736,7 +1736,7 @@ describe('app module', () => {
-       expect(appInfo.icon).not.to.be.undefined();
+         expect(appInfo.name).toBe(mockDisplayName);
+         expect(appInfo.path).toBe('/usr/bin/true');
+@@ -1817,7 +1817,7 @@ describe('app module', () => {
+       expect(appInfo.icon).not.toBeUndefined();
      });
  
 -    ifit(process.platform === 'linux')('resolves an executable name via PATH', async () => {
@@ -155,7 +164,7 @@ $NetBSD$
        const pathLookupExecutable = 'mock-browser';
        const pathLookupExecutablePath = path.join(xdgBinDir, pathLookupExecutable);
        const pathLookupDisplayName = 'Mock Browser PATH';
-@@ -1770,7 +1770,7 @@ describe('app module', () => {
+@@ -1851,7 +1851,7 @@ describe('app module', () => {
      });
    });
  
@@ -164,7 +173,7 @@ $NetBSD$
      const protocol = 'electron-test-linux';
      const desktopFileId = 'electron-test.desktop';
      const protocolMimeType = `x-scheme-handler/${protocol}`;
-@@ -1887,7 +1887,7 @@ describe('app module', () => {
+@@ -1968,7 +1968,7 @@ describe('app module', () => {
    });
  
    // FIXME Get these specs running on Linux CI
@@ -173,16 +182,16 @@ $NetBSD$
      const iconPath = path.join(import.meta.dirname, 'fixtures/assets/icon.ico');
      const sizes = {
        small: 16,
-@@ -1969,7 +1969,7 @@ describe('app module', () => {
-           expect(entry.memory).to.have.property('privateBytes').that.is.greaterThan(0);
+@@ -2057,7 +2057,7 @@ describe('app module', () => {
+           expect(entry.memory.privateBytes).toBeGreaterThan(0);
          }
  
 -        if (process.platform !== 'linux') {
 +        if (process.platform !== 'linux' && process.platform !== 'freebsd' && process.platform !== 'netbsd') {
-           expect(entry.sandboxed).to.be.a('boolean');
+           expect(entry.sandboxed).toBeTypeOf('boolean');
          }
  
-@@ -1986,7 +1986,7 @@ describe('app module', () => {
+@@ -2074,7 +2074,7 @@ describe('app module', () => {
      });
    });
  
@@ -191,7 +200,7 @@ $NetBSD$
      const fixture = path.join(fixturesPath, 'apps', 'gdk-backend');
      const run = async (env: NodeJS.ProcessEnv) => {
        const child = cp.spawn(process.execPath, [fixture], { env, stdio: ['ignore', 'pipe', 'ignore'] });
-@@ -2063,7 +2063,7 @@ describe('app module', () => {
+@@ -2156,7 +2156,7 @@ describe('app module', () => {
  
      it('succeeds with complete GPUInfo', async () => {
        const completeInfo = await getGPUInfo('complete');
@@ -200,7 +209,7 @@ $NetBSD$
          // For linux and macOS complete info is same as basic info
          await verifyBasicGPUInfo(completeInfo);
          const basicInfo = await getGPUInfo('basic');
-@@ -2087,7 +2087,7 @@ describe('app module', () => {
+@@ -2179,7 +2179,7 @@ describe('app module', () => {
      });
    });
  

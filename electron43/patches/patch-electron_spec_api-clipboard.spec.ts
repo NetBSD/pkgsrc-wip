@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-clipboard.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-clipboard.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-clipboard.spec.ts
 @@ -54,7 +54,7 @@ ifdescribe(process.platform !== 'win32' 
      });
@@ -26,10 +26,10 @@ $NetBSD$
        expect(() => {
 @@ -114,7 +114,7 @@ ifdescribe(process.platform !== 'win32' 
        const readImage = clipboard.readImage();
-       expect(readImage.toDataURL()).to.equal(i.toDataURL());
+       expect(readImage.toDataURL()).toBe(i.toDataURL());
  
 -      if (process.platform !== 'linux') {
 +      if (process.platform !== 'linux' && process.platform !== 'freebsd' && process.platform !== 'netbsd') {
          if (process.platform !== 'win32') {
-           expect(clipboard.readBookmark()).to.deep.equal(bookmark);
+           expect(clipboard.readBookmark()).toEqual(bookmark);
          } else {

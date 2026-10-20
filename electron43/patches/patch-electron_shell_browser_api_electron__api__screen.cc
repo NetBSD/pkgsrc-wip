@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_screen.cc.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/shell/browser/api/electron_api_screen.cc.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/shell/browser/api/electron_api_screen.cc
 @@ -29,7 +29,7 @@
  #include "ui/display/win/screen_win.h"

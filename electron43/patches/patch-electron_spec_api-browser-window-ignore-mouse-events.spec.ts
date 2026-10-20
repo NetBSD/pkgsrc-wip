@@ -1,10 +1,10 @@
 $NetBSD$
 
 * Part of patchset to build electron on NetBSD
-* Based on OpenBSD's chromium patches, and
-  FreeBSD's electron patches
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-browser-window-ignore-mouse-events.spec.ts.orig	2026-10-06 22:48:58.000000000 +0000
+--- electron/spec/api-browser-window-ignore-mouse-events.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
 +++ electron/spec/api-browser-window-ignore-mouse-events.spec.ts
 @@ -41,11 +41,11 @@ type PageEvent = { type: string; x?: num
  // Nothing can inject input into a Wayland compositor from a client, so only
