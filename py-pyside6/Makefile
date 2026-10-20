@@ -5,7 +5,7 @@
 DISTNAME=	pyside-setup-everywhere-src-${QTVERSION}
 PKGNAME=	${PYPKGPREFIX}-pyside6-${QTVERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-${VERSION}-src/
+MASTER_SITES=	https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-${QTVERSION}-src/
 
 HOMEPAGE=	https://wiki.qt.io/Qt_for_Python
 COMMENT=	Qt6 bindings for Python
