@@ -1,0 +1,49 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- third_party/electron_node/unofficial.gni.orig	2026-10-20 14:58:50.057009862 +0000
++++ third_party/electron_node/unofficial.gni
+@@ -379,6 +379,30 @@ template("node_gn_build") {
+     # so the browser js2c code-cache tool (v8_snapshot_toolchain) is keyed to
+     # the exact snapshot the framework ships (two runs need not be identical).
+     if (current_toolchain == default_toolchain) {
++      if (target_os == "netbsd") {
++        action("run_paxctl_node_mksnapshot") {
++          deps = [ ":node_mksnapshot($v8_snapshot_toolchain)" ]
++
++          script = "$node_v8_path/tools/run-paxctl.py"
++          stamp = "$target_gen_dir/paxctl_node_mksnapshot_stamp"
++          outputs = [ stamp ]
++
++          sources = []
++          data = []
++
++          node_mksnapshot_dir =
++              get_label_info(":node_mksnapshot($v8_snapshot_toolchain)",
++                             "root_out_dir")
++          args = [
++            rebase_path(stamp, root_build_dir),
++            "/usr/sbin/paxctl",
++            "+m",
++            "./" + rebase_path(node_mksnapshot_dir + "/node_mksnapshot",
++                               root_build_dir),
++          ]
++        }
++      }
++
+       action("run_node_mksnapshot") {
+         deps = [
+           ":node_mksnapshot($v8_snapshot_toolchain)",
+@@ -386,6 +410,9 @@ template("node_gn_build") {
+           # The V8 startup snapshot node_mksnapshot extends.
+           "$node_v8_path:run_mksnapshot_default",
+         ]
++        if (target_os == "netbsd") {
++          deps += [ ":run_paxctl_node_mksnapshot" ]
++        }
+         script = "$node_v8_path/tools/run.py"
+         sources = []
+         data = []

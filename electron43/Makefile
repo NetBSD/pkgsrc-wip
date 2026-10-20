@@ -260,6 +260,11 @@ GN_BOOTSTRAP_FLAGS+=	--skip-generate-buildfiles
 # This is pkgsrc use only.
 #GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\"
 
+PLIST_SUBST+=		ELECTRONBASE=${PKGBASE}
+PLIST_SUBST+=		ELECTRON_MAJOR=${ELECTRON_MAJOR}
+PRINT_PLIST_AWK+=	{ gsub(/^lib\/${PKGBASE}\//, "lib/$${ELECTRONBASE}/"); }
+PRINT_PLIST_AWK+=	{ gsub(/^bin\/electron${ELECTRON_MAJOR}/, "bin/electron$${ELECTRON_MAJOR}"); }
+
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/electron
 
 PKG_CC=			clang
@@ -380,7 +385,9 @@ ELECTRON_LIBS+=		vk_swiftshader_icd.json
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILDDIR}/electron ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+.for i in electron mksnapshot v8_context_snapshot_generator
+	${INSTALL_PROGRAM} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+.endfor
 	${LN} -s ${PREFIX}/lib/${PKGBASE}/electron ${DESTDIR}${PREFIX}/bin/${PKGBASE}
 	#${INSTALL_PROGRAM} ${BUILDDIR}/chromedriver.unstripped  ${DESTDIR}${PREFIX}/lib/${PKGBASE}/chromedriver
 .for i in ${ELECTRON_LIBS}
@@ -388,7 +395,7 @@ do-install:
 .endfor
 	${INSTALL_LIB} ${BUILDDIR}/libvulkan.so.1 ${DESTDIR}${PREFIX}/lib/${PKGBASE}/libvulkan.so
 	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/lib/${PKGBASE}
-.for i in locales resources gen/electron/buildflags gen/v8/embedded.S
+.for i in locales resources gen/electron/buildflags gen/v8/embedded.S gen/electron/tsc
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		${FIND} ${i} -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endfor
@@ -400,5 +407,6 @@ do-install:
 
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

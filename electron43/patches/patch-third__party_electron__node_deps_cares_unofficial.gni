@@ -6,7 +6,12 @@ $NetBSD$
 
 --- third_party/electron_node/deps/cares/unofficial.gni.orig	2026-10-13 14:09:48.000000000 +0000
 +++ third_party/electron_node/deps/cares/unofficial.gni
-@@ -60,6 +60,10 @@ template("cares_gn_build") {
+@@ -56,10 +56,14 @@ template("cares_gn_build") {
+       ]
+       if (is_win) {
+         include_dirs += [ "config/win32" ]
+-      } else if (is_linux) {
++      } else if (is_linux && !is_bsd) {
          include_dirs += [ "config/linux" ]
        } else if (is_mac) {
          include_dirs += [ "config/darwin" ]
@@ -17,7 +22,14 @@ $NetBSD$
        }
  
        if (is_win) {
-@@ -76,6 +80,12 @@ template("cares_gn_build") {
+@@ -70,12 +74,18 @@ template("cares_gn_build") {
+       }
+ 
+       sources = gypi_values.cares_sources_common
+-      if (is_linux) {
++      if (is_linux && !is_bsd) {
+         sources += [ "config/linux/ares_config.h" ]
+       }
        if (is_mac) {
          sources += gypi_values.cares_sources_mac
        }

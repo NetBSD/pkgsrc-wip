@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/src/node_platform.h.orig	2026-10-20 08:24:53.480736383 +0000
+--- third_party/electron_node/src/node_platform.h.orig	2026-10-20 14:58:50.043025091 +0000
 +++ third_party/electron_node/src/node_platform.h
 @@ -266,6 +266,7 @@ class NodePlatform : public MultiIsolate
   private:

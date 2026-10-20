@@ -28,7 +28,86 @@ $NetBSD$
    if (is_linux) {
      libs = [ "xshmfence" ]
      deps += [
-@@ -1548,7 +1554,7 @@ if (is_mac) {
+@@ -989,6 +995,29 @@ if (electron_generate_js2c_code_cache) {
+     ]
+   }
+ 
++  if (target_os == "netbsd") {
++    action("run_paxctl_electron_natives_codecache") {
++      deps = [ ":electron_natives_codecache($v8_snapshot_toolchain)" ]
++
++      script = "//v8/tools/run-paxctl.py"
++      stamp = "$target_gen_dir/paxctl_electron_natives_codecache_stamp"
++      outputs = [ stamp ]
++
++      sources = []
++      data = []
++
++      _pax_dir = get_label_info(":electron_natives_codecache($v8_snapshot_toolchain)",
++                                "root_out_dir")
++      args = [
++        rebase_path(stamp, root_build_dir),
++        "/usr/sbin/paxctl",
++        "+m",
++        "./" + rebase_path(_pax_dir + "/electron_natives_codecache",
++                           root_build_dir),
++      ]
++    }
++  }
++
+   foreach(_f, _js2c_cc_flavors) {
+     action("run_electron_natives_codecache_" + _f.name) {
+       deps = [
+@@ -996,6 +1025,9 @@ if (electron_generate_js2c_code_cache) {
+         "//tools/v8_context_snapshot",
+         "//v8:run_mksnapshot_default",
+       ]
++      if (target_os == "netbsd") {
++        deps += [ ":run_paxctl_electron_natives_codecache" ]
++      }
+       script = "//v8/tools/run.py"
+       _gen_dir =
+           get_label_info(":electron_natives_codecache($v8_snapshot_toolchain)",
+@@ -1022,11 +1054,38 @@ if (electron_generate_js2c_code_cache) {
+   # Browser flavor, built against the embedded Node startup snapshot so its
+   # code-cache read-only checksum matches the runtime browser isolate.
+   if (node_use_node_snapshot) {
++    if (target_os == "netbsd") {
++      action("run_paxctl_electron_snapshot") {
++         deps = [ ":electron_natives_codecache_snapshot($v8_snapshot_toolchain)" ]
++
++         script = "//v8/tools/run-paxctl.py"
++         stamp = "$target_gen_dir/paxctl_node_electronstamp"
++         outputs = [ stamp ]
++
++         sources = []
++         data = []
++
++         node_mksnapshot_dir =
++             get_label_info(":electron_natives_codecache_snapshot($v8_snapshot_toolchain)",
++                            "root_out_dir")
++         args = [
++           rebase_path(stamp, root_build_dir),
++           "/usr/sbin/paxctl",
++           "+m",
++           "./" + rebase_path(node_mksnapshot_dir + "/electron_natives_codecache_snapshot",
++                              root_build_dir),
++        ]
++      }
++    }
++
+     action("run_electron_natives_codecache_browser") {
+       deps = [
+         ":electron_natives_codecache_snapshot($v8_snapshot_toolchain)",
+         "//v8:run_mksnapshot_default",
+       ]
++      if (target_os == "netbsd") {
++        deps += [ ":run_paxctl_electron_snapshot" ]
++      }
+       script = "//v8/tools/run.py"
+       _gen_dir = get_label_info(
+               ":electron_natives_codecache_snapshot($v8_snapshot_toolchain)",
+@@ -1548,7 +1607,7 @@ if (is_mac) {
      } else if (is_linux) {
        sources = [
          "shell/app/electron_main_linux.cc",
@@ -37,7 +116,7 @@ $NetBSD$
          "shell/app/uv_stdio_fix.cc",
          "shell/app/uv_stdio_fix.h",
        ]
-@@ -1560,7 +1566,7 @@ if (is_mac) {
+@@ -1560,7 +1619,7 @@ if (is_mac) {
        ":electron_lib",
        ":electron_win32_resources",
        ":packed_resources",
@@ -46,7 +125,7 @@ $NetBSD$
        "//content:sandbox_helper_win",
        "//electron/buildflags",
        "//third_party/electron_node:libnode",
-@@ -1587,7 +1593,7 @@ if (is_mac) {
+@@ -1587,7 +1646,7 @@ if (is_mac) {
        public_deps = [ "//tools/v8_context_snapshot" ]
      }
  
@@ -55,7 +134,7 @@ $NetBSD$
        data_deps += [ "//components/crash/core/app:chrome_crashpad_handler" ]
      }
  
-@@ -1654,7 +1660,7 @@ if (is_mac) {
+@@ -1654,7 +1713,7 @@ if (is_mac) {
          configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
        }
  
@@ -64,7 +143,7 @@ $NetBSD$
          deps += [ "//sandbox/linux:chrome_sandbox" ]
        }
      }
-@@ -1775,7 +1781,9 @@ dist_zip("electron_dist_zip") {
+@@ -1775,7 +1834,9 @@ dist_zip("electron_dist_zip") {
        ]
      }
  

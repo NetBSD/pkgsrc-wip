@@ -78,7 +78,6 @@ PLIST.swiftshader=	yes
 BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
