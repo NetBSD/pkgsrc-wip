@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.64 2026/10/21 19:22:45 ktnb Exp $
+
+BLAKE2s (opentmux-0.1.tar.gz) = b88a89da63fc550d3a68d0e6cd0108ade9e3aec3026d124b8511d3ff8c64ec29
+SHA512 (opentmux-0.1.tar.gz) = 5d024cdfd35dfc77a93fce6f05b01547463af1a4977977f96b7cdfb1976a200244afa965479a9fe0e5e28368b0dc7db8f940b27706ed97e421ec16d7094ae1c3
+Size (opentmux-0.1.tar.gz) = 1363878 bytes
+SHA1 (patch-client.c) = 5fe1e0c82665b805573dab59c7f3faa5fc2c8abe
+SHA1 (patch-compat_imsg-buffer.c) = a4946b98414a0fbd8d3799f2622c5e736bb90833
+SHA1 (patch-compat_queue.h) = a65435dedb40f653f3c2650a6d2189743f5a6dcd
+SHA1 (patch-proc.c) = 500f9f7d33fdd7a554e77ec0a04358aac0eb0521
+SHA1 (patch-tmux.c) = 9d7901d4f8e2be49d542f294d0eda92e3a9c9a07
