@@ -2817,6 +2817,7 @@ SUBDIR+=	opensips
 SUBDIR+=	openssl110
 SUBDIR+=	opensubdiv
 SUBDIR+=	opensurge
+SUBDIR+=	opentmux
 SUBDIR+=	opentomb
 SUBDIR+=	opentracker-cvs
 SUBDIR+=	openttd
