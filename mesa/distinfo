@@ -13,4 +13,7 @@ SHA1 (patch-src_glx_glxcurrent.c) = be95c084b834275ca65a38f446487c68889e1ab5
 SHA1 (patch-src_intel_compiler_gen_gen__private.h) = a45ad64b465ba0bc55b55bdecc35e75eae797af4
 SHA1 (patch-src_panfrost_perf_pan__perf.h) = 93294e8b121f9b01a3d1abf8d257a5f917c530cb
 SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
+SHA1 (patch-src_util_futex.c) = 4ad0d60e008fe8b5a4bb600e32e8f155d6c95b37
+SHA1 (patch-src_util_futex.h) = a4a2827406102d855bb8afadecb7ce5a42fd5ecd
 SHA1 (patch-src_util_os__file.c) = c80d88255a8f800d1e36fc199f3869ecdb61d203
+SHA1 (patch-src_vulkan_wsi_wsi__common__wayland.c) = 1b8017f21855e01183a2343af64cf7fc8ca13ebe
