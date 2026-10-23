@@ -17,7 +17,7 @@ COMMENT=		The Open Source build of Visual Studio Code (vscode) editor
 LICENSE=		mit
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		zip gmake pkg-config pax bash
+USE_TOOLS+=		zip gmake pkg-config pax bash tar
 
 USE_CXX_FEATURES+=	c++17
 USE_ELECTRON=		bundled
@@ -25,6 +25,7 @@ USE_ELECTRON=		bundled
 DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
 
 .include "../../wip/electron43/platform.mk"
+.include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -86,21 +87,44 @@ ELECTRON_ZIP=		electron-v${ELECTRON_VER}-linux-${ELECTRON_ARCH}.zip
 RUN_ZIP_HASH=		sha256 -q ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH}/${ELECTRON_ZIP}
 RUN_NODEJS_VER=		node --version
 NODEJS_VER=		${RUN_NODEJS_VER:sh}
+COPILOT_DIR=		${WRKSRC}/extensions/copilot/node_modules/@github/copilot-${LOWER_OPSYS}-${ELECTRON_ARCH}
+COPILOT_SDK_DIR=	${WRKSRC}/node_modules/@github/copilot-sdk-linux-${ELECTRON_ARCH}
+.if ${OPSYS} == "Linux"
+OS_PROXY_RESOLV_DIR=	${WRKSRC}/node_modules/@vscode/os-proxy-resolver-${LOWER_OPSYS}-${ELECTRON_ARCH}-gnu
+.else
+OS_PROXY_RESOLV_DIR=	${WRKSRC}/node_modules/@vscode/os-proxy-resolver-${LOWER_OPSYS}-${ELECTRON_ARCH}
+.endif
 
 NOT_PAX_MPROTECT_SAFE+=	lib/vscode/code-oss
 
 post-extract:
 	# Install script
 	${CP} ${FILESDIR}/code.sh.in ${WRKSRC}/code-oss.sh
+
 	# Set electron version
 	${SED} -i'' "s|^target=.*|target=\"${ELECTRON_VER}\"|" ${WRKSRC}/.npmrc
 	${SED} -i'' "s|^target=.*|target=\"${NODEJS_VER}\"|" ${WRKSRC}/remote/.npmrc
+
 	# Copy node modules to source tree
 	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV} && \
 		${FIND} . -type f -print | pax -rw -pmp ${WRKSRC}
+
 	# Create moduleignore file
 	${CP} ${WRKSRC}/build/.moduleignore.linux \
 		${WRKSRC}/build/.moduleignore.${LOWER_OPSYS}
+
+	# Extract copilot: doesn't work on BSDs, but need for build
+	${MKDIR} ${COPILOT_DIR} && cd ${WRKSRC} && \
+		${TAR} -xzf copilot-linux-${ELECTRON_ARCH}-*.tgz \
+		--strip-components 1 -C ${COPILOT_DIR}
+	${MKDIR} ${COPILOT_SDK_DIR} && cd ${WRKSRC} && \
+		${TAR} -xzf copilot-sdk-linux-${ELECTRON_ARCH}-*.tgz \
+		--strip-components 1 -C ${COPILOT_SDK_DIR}
+
+	# Extract os-proxy-resolver
+	${MKDIR} ${OS_PROXY_RESOLV_DIR} && cd ${WRKSRC} && \
+		${TAR} -xzf os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu-*.tgz \
+		--strip-components 1 -C ${OS_PROXY_RESOLV_DIR}
 
 do-configure:
 	# vscode wants a zipped electron

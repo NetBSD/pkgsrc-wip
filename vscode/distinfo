@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.82 2024/12/21 15:30:31 schwarz Exp $
 
-BLAKE2s (vscode-1.100.2.tar.gz) = be05e9071838d4f465c0aae811341ae8d3af6a6dd2c7aba73b82bf611572aed7
-SHA512 (vscode-1.100.2.tar.gz) = 4f29f29e2184d6369da4e89d67e2de51327a13b091be6dda90edd5c0ca56dae6c0b6c294137070248179077ddb7a71a5fd59480f9f3c161d8d58c69fc4111f02
-Size (vscode-1.100.2.tar.gz) = 22647395 bytes
-BLAKE2s (vscode-node_modules-1.100.2.tar.gz) = effb4efa7b6ec861d731befcc9aa47f44355f96301dee808b79696223993b00f
-SHA512 (vscode-node_modules-1.100.2.tar.gz) = a157049466f380d7696d5dff886d769c1b823086e719f0345b2df2c3cd57d5823f04518eec3cf7bc0c560cb993709f0742752f6fd8671e0bde0ba9d1dcb60236
-Size (vscode-node_modules-1.100.2.tar.gz) = 400488024 bytes
+BLAKE2s (vscode-1.142.0.tar.gz) = f90a31a21f0443216d0de85fda2e40c8863b0763dc9dc11b71beb47a2875d752
+SHA512 (vscode-1.142.0.tar.gz) = d86c75ef16eeb7d6292774d9fdab7d579ff8fc1332b2629f8a34a82e7dbfdb2cf4ebdfa1724f78ec7ad1b1905a09d64f3c62a219614ef5c4dc401191a3576e36
+Size (vscode-1.142.0.tar.gz) = 61345998 bytes
+BLAKE2s (vscode-node_modules-1.142.0.tar.gz) = 816acec4af91bf46d5c0d2b22306203386d51f634a238dcdc66fc2dd892354d7
+SHA512 (vscode-node_modules-1.142.0.tar.gz) = c1608133f99cfa1b5ded05757cdc807adb9fbc96ecd272962805f7d27eff102aa3d686e119db4c66d48693a723a0b33eaa73ae6af616bec87397ed9018c22b00
+Size (vscode-node_modules-1.142.0.tar.gz) = 1357774004 bytes
 SHA1 (patch-build_lib_layersChecker.ts) = f7e07c4bf5d4f58ea37383aef61af71e2357f22a
 SHA1 (patch-build_lib_propertyInitOrderChecker.ts) = 8559891b75b3c8d84bcabd90cd1e15d15a9e681b
 SHA1 (patch-build_lib_snapshotLoader.ts) = 7203f8fec3bd86684e85b70f00825aa69661156b
