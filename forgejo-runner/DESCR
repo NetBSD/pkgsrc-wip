@@ -1,3 +1,0 @@
-Daemon that connects to a Forgejo instance and runs jobs for continuous
-integration. The installation and usage instructions are part of the Forgejo
-documentation.
