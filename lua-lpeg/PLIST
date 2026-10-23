@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.5 2025/05/02 11:18:43 jperkin Exp $
+${LUA_CDIR}/lpeg.${SHLIB_EXT}
+${LUA_DOCDIR}/lpeg.html
+${LUA_DOCDIR}/re.html
+${LUA_DOCDIR}/lpeg-128.gif
+${LUA_DOCDIR}/HISTORY
+${LUA_LDIR}/re.lua
