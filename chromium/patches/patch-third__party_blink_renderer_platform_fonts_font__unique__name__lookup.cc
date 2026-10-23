@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc
 @@ -9,7 +9,7 @@
  #if BUILDFLAG(IS_ANDROID)
@@ -15,7 +15,7 @@ $NetBSD$
  #include "third_party/blink/renderer/platform/fonts/linux/font_unique_name_lookup_linux.h"
  #elif BUILDFLAG(IS_WIN)
  #include "third_party/blink/renderer/platform/fonts/win/font_unique_name_lookup_win.h"
-@@ -24,7 +24,7 @@ std::unique_ptr<FontUniqueNameLookup>
+@@ -26,7 +26,7 @@ std::unique_ptr<FontUniqueNameLookup>
  FontUniqueNameLookup::GetPlatformUniqueNameLookup() {
  #if BUILDFLAG(IS_ANDROID)
    return std::make_unique<FontUniqueNameLookupAndroid>();

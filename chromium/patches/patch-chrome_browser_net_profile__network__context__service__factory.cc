@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/profile_network_context_service_factory.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/net/profile_network_context_service_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/net/profile_network_context_service_factory.cc
-@@ -31,7 +31,7 @@
+@@ -29,7 +29,7 @@
  #include "chrome/browser/net/server_certificate_database_service_factory.h"  // nogncheck
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #endif
  
-@@ -83,7 +83,7 @@ ProfileNetworkContextServiceFactory::Pro
+@@ -81,7 +81,7 @@ ProfileNetworkContextServiceFactory::Pro
  #if BUILDFLAG(CHROME_ROOT_STORE_CERT_MANAGEMENT_UI)
    DependsOn(net::ServerCertificateDatabaseServiceFactory::GetInstance());
  #endif

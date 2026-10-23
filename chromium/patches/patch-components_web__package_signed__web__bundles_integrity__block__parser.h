@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/web_package/signed_web_bundles/integrity_block_parser.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/web_package/signed_web_bundles/integrity_block_parser.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/web_package/signed_web_bundles/integrity_block_parser.h
 @@ -5,13 +5,8 @@
  #ifndef COMPONENTS_WEB_PACKAGE_SIGNED_WEB_BUNDLES_INTEGRITY_BLOCK_PARSER_H_

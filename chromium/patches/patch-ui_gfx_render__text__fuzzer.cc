@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_fuzzer.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/gfx/render_text_fuzzer.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/gfx/render_text_fuzzer.cc
 @@ -22,7 +22,7 @@
  #include "base/test/test_support_android.h"

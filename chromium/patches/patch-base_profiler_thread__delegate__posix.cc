@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/thread_delegate_posix.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/profiler/thread_delegate_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/profiler/thread_delegate_posix.cc
 @@ -16,7 +16,7 @@
  #include "base/process/process_handle.h"
@@ -17,7 +17,7 @@ $NetBSD$
  
 @@ -25,7 +25,7 @@ namespace base {
  std::unique_ptr<ThreadDelegatePosix> ThreadDelegatePosix::Create(
-     SamplingProfilerThreadToken thread_token) {
+     const SamplingProfilerThreadToken& thread_token) {
    std::optional<uintptr_t> base_address;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

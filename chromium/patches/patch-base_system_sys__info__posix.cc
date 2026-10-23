@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_posix.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/system/sys_info_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/system/sys_info_posix.cc
 @@ -59,7 +59,11 @@ base::ByteSize AmountOfVirtualMemory() {
    if (result != 0) {

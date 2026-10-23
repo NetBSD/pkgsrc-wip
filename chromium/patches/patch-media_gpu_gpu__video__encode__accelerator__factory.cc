@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ media/gpu/gpu_video_encode_accelerator_factory.cc
 @@ -71,7 +71,7 @@ std::unique_ptr<VideoEncodeAccelerator> 
  

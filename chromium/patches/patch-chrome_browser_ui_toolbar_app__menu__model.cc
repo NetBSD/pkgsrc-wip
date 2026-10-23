@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toolbar/app_menu_model.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/toolbar/app_menu_model.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/toolbar/app_menu_model.cc
-@@ -265,7 +265,7 @@ std::u16string GetUpgradeDialogTitleText
+@@ -1226,7 +1226,7 @@ std::u16string AppMenuModel::GetUpgradeD
      return l10n_util::GetStringUTF16(IDS_UPGRADE_BUBBLE_MENU_ITEM);
    }
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -15,7 +15,7 @@ $NetBSD$
    return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE_ALT);
  #else
    return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE);
-@@ -2352,7 +2352,7 @@ void AppMenuModel::Build() {
+@@ -2420,7 +2420,7 @@ void AppMenuModel::Build() {
  
      SetAccessibleNameAt(GetIndexOfCommandId(IDC_SHOW_MANAGEMENT_PAGE).value(),
                          GetManagedUiMenuItemTooltip(browser_->GetProfile()));

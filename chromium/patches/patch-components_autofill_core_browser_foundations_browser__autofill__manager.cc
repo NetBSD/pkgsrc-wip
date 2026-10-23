@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/foundations/browser_autofill_manager.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/autofill/core/browser/foundations/browser_autofill_manager.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/autofill/core/browser/foundations/browser_autofill_manager.cc
-@@ -786,7 +786,7 @@ BrowserAutofillManager::GetAmountExtract
+@@ -862,7 +862,7 @@ BrowserAutofillManager::GetAmountExtract
  
  payments::BnplManager* BrowserAutofillManager::GetPaymentsBnplManager() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

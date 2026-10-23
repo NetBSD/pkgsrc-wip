@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/vr/openxr/openxr_swapchain_info.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- device/vr/openxr/openxr_swapchain_info.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ device/vr/openxr/openxr_swapchain_info.h
 @@ -19,7 +19,7 @@
  #include "ui/gl/scoped_egl_image.h"

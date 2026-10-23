@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/app/chrome_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/app/chrome_main.cc
 @@ -36,11 +36,11 @@
  #include "chrome/common/mac/detect_inappropriate_exit.h"

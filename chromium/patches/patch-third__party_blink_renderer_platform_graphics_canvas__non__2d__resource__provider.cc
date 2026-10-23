@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/canvas_non_2d_resource_provider.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/canvas_non_2d_resource_provider.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/canvas_non_2d_resource_provider.cc
-@@ -96,7 +96,7 @@ CanvasNon2DResourceProvider::Create(
+@@ -95,7 +95,7 @@ CanvasNon2DResourceProvider::Create(
            gpu::SHARED_IMAGE_USAGE_CONCURRENT_READ_WRITE);
  #endif
  

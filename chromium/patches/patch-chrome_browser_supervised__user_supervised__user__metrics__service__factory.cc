@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc
-@@ -17,7 +17,7 @@
+@@ -16,7 +16,7 @@
  #include "components/supervised_user/core/browser/supervised_user_metrics_service.h"
  #include "content/public/browser/browser_context.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/supervised_user/linux_mac_windows/supervised_user_extensions_metrics_delegate_impl.h"
  #endif
  
-@@ -70,7 +70,7 @@ SupervisedUserMetricsServiceFactory::Bui
+@@ -69,7 +69,7 @@ SupervisedUserMetricsServiceFactory::Bui
    std::unique_ptr<supervised_user::SupervisedUserMetricsService ::
                        SupervisedUserMetricsServiceExtensionDelegate>
        extensions_metrics_delegate = nullptr;

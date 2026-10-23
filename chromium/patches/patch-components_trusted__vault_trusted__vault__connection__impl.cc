@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/trusted_vault/trusted_vault_connection_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/trusted_vault/trusted_vault_connection_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/trusted_vault/trusted_vault_connection_impl.cc
 @@ -105,7 +105,7 @@ GetLocalPhysicalDeviceType() {
    // currently used or even built on all platforms.

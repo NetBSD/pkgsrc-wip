@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service_aura_linux.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/themes/theme_service_aura_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/themes/theme_service_aura_linux.cc
 @@ -23,7 +23,7 @@ namespace {
  ui::SystemTheme ValidateSystemTheme(ui::SystemTheme system_theme) {

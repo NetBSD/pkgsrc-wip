@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_ui_types.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/gfx/native_ui_types.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/gfx/native_ui_types.h
 @@ -106,7 +106,7 @@ class ViewAndroid;
  }  // namespace ui

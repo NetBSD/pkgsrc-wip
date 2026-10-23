@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_service_client.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/metrics/metrics_service_client.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/metrics/metrics_service_client.cc
 @@ -39,7 +39,7 @@ struct LogTrimmingDefaults {
  };

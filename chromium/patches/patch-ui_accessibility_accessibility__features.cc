@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/accessibility/accessibility_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/accessibility/accessibility_features.cc
-@@ -476,7 +476,7 @@ bool IsScreenAITestModeEnabled() {
+@@ -452,7 +452,7 @@ bool IsScreenAITestModeEnabled() {
    return base::FeatureList::IsEnabled(::features::kScreenAITestMode);
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kScreenAIPartitionAllocAdvancedChecksEnabled,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
-@@ -517,7 +517,7 @@ bool IsMacAccessibilityTextOperationEnab
+@@ -493,7 +493,7 @@ bool IsMacAccessibilityTextOperationEnab
  }
  #endif  // BUILDFLAG(IS_MAC)
  

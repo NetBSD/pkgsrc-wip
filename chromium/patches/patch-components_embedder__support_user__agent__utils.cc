@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -283,7 +283,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -24,7 +24,7 @@ $NetBSD$
    return "X11; Linux x86_64";
  #elif BUILDFLAG(IS_IOS)
    if (ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET) {
-@@ -619,7 +619,7 @@ std::string GetPlatformVersion() {
+@@ -618,7 +618,7 @@ std::string GetPlatformVersion() {
  
  #if BUILDFLAG(IS_WIN)
    return GetWindowsPlatformVersion();
@@ -33,7 +33,7 @@ $NetBSD$
    return std::string();
  #else
  
-@@ -656,6 +656,9 @@ std::string GetPlatformForUAMetadata() {
+@@ -655,6 +655,9 @@ std::string GetPlatformForUAMetadata() {
  #else
    return "Chromium OS";
  #endif
@@ -43,7 +43,7 @@ $NetBSD$
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -827,6 +830,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -826,6 +829,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

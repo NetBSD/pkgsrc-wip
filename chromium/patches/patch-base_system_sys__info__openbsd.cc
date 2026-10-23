@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_openbsd.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -13,6 +13,7 @@
  #include "base/notreached.h"

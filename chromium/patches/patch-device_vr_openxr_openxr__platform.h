@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/vr/openxr/openxr_platform.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- device/vr/openxr/openxr_platform.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ device/vr/openxr/openxr_platform.h
 @@ -21,7 +21,7 @@
  #elif BUILDFLAG(IS_ANDROID)

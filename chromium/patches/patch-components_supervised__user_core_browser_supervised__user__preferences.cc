@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_preferences.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_preferences.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_preferences.cc
 @@ -149,7 +149,7 @@ void RegisterProfilePrefs(PrefRegistrySi
    registry->RegisterBooleanPref(prefs::kChildAccountStatusKnown, false);

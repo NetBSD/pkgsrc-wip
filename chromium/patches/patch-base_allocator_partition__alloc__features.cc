@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_alloc_features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/allocator/partition_alloc_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/allocator/partition_alloc_features.cc
 @@ -132,7 +132,7 @@ constinit const FeatureParam<std::string
      kPartitionAllocSchedulerLoopQuarantineConfig{

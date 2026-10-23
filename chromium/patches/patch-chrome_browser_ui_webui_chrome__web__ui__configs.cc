@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_configs.cc
 @@ -176,7 +176,7 @@
  #include "chrome/browser/ui/webui/default_browser/visual_guided_setter_ui.h"

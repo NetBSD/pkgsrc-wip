@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/public/features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/glic/public/features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/glic/public/features.cc
-@@ -95,7 +95,7 @@ BASE_FEATURE(kGlicCreateTabAdjacent, bas
+@@ -98,7 +98,7 @@ BASE_FEATURE(kGlicCreateTabAdjacent, bas
  
  // When off, disables both live mode and the glic floating panel.
  BASE_FEATURE(kGlicLiveMode,

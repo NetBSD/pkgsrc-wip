@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
 @@ -54,7 +54,7 @@
  #include "net/ssl/client_cert_store_mac.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #include "chrome/browser/policy/chrome_browser_policy_connector.h"
-@@ -129,7 +129,7 @@ class ClientCertStoreLoader {
+@@ -128,7 +128,7 @@ class ClientCertStoreLoader {
        active_requests_;
  };
  
@@ -24,7 +24,7 @@ $NetBSD$
  class ClientCertStoreFactoryNSS : public ClientCertStoreFactory {
   public:
    std::unique_ptr<net::ClientCertStore> CreateClientCertStore() override {
-@@ -154,7 +154,7 @@ class ClientCertStoreFactoryMac : public
+@@ -153,7 +153,7 @@ class ClientCertStoreFactoryMac : public
  };
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD$
  std::unique_ptr<ClientCertStoreLoader> CreatePlatformClientCertLoader(
      Profile* profile) {
  #if BUILDFLAG(IS_WIN)
-@@ -169,7 +169,7 @@ std::unique_ptr<ClientCertStoreLoader> C
+@@ -168,7 +168,7 @@ std::unique_ptr<ClientCertStoreLoader> C
  }
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD$
  class ClientCertStoreFactoryProvisioned : public ClientCertStoreFactory {
   public:
    explicit ClientCertStoreFactoryProvisioned(
-@@ -325,7 +325,7 @@ class ClientCertSource : public Certific
+@@ -324,7 +324,7 @@ class ClientCertSource : public Certific
    std::optional<net::CertificateList> certs_;
  };
  
@@ -51,7 +51,7 @@ $NetBSD$
  // ChromeOS currently can use either Kcer or NSS for listing client certs, and
  // Linux uses NSS only. This interface provides an abstraction to hide that
  // from WritableClientCertSource. Currently this class only handles reading
-@@ -1047,7 +1047,7 @@ CreatePlatformClientCertSource(
+@@ -1033,7 +1033,7 @@ CreatePlatformClientCertSource(
      mojo::Remote<certificate_manager::mojom::CertificateManagerPage>*
          remote_client,
      Profile* profile) {
@@ -60,7 +60,7 @@ $NetBSD$
    return std::make_unique<WritableClientCertSource>(remote_client, profile);
  #else
    return std::make_unique<ClientCertSource>(
-@@ -1055,7 +1055,7 @@ CreatePlatformClientCertSource(
+@@ -1041,7 +1041,7 @@ CreatePlatformClientCertSource(
  #endif
  }
  
@@ -69,7 +69,7 @@ $NetBSD$
  std::unique_ptr<CertificateManagerPageHandler::CertSource>
  CreateProvisionedClientCertSource(Profile* profile) {
    return std::make_unique<ClientCertSource>(
-@@ -1105,7 +1105,7 @@ bool ClientCertManagementAccessControls:
+@@ -1091,7 +1091,7 @@ bool ClientCertManagementAccessControls:
  
    return client_cert_policy_ == ClientCertificateManagementPermission::kAll;
  }

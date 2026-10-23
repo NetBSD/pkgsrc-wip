@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc
-@@ -158,7 +158,7 @@ bool IsFormatSupported(viz::SharedImageF
+@@ -153,7 +153,7 @@ bool IsFormatSupported(viz::SharedImageF
  
  SharedImageUsageSet SupportedUsage() {
    SharedImageUsageSet supported_usage =

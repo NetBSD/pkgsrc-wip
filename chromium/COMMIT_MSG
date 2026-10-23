@@ -1,57 +1,6 @@
-chromium: update to 155.0.8059.79
+chromium: update to 156.0.8078.47
 
-* 155.0.8059.84
-This update includes 10 security fixes. Please see the Chrome Security Page for more information.
+* 156.0.8078.47
+This update includes 353 security fixes. Please see the Chrome Security Page for more information.
 
-[N/A][568719351] Critical CVE-2026-110922: Use after free in Prerender. Reported by Xinyang Ge on 2026-10-02
-[N/A][567638392] High CVE-2026-110913: Memory corruption in DOM. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-29
-[N/A][568831769] High CVE-2026-110919: Use after free in V8. Reported by Xinyang Ge on 2026-10-02
-[N/A][568937999] High CVE-2026-110918: Memory corruption in Core. Reported by Google on 2026-10-03
-[TBD][569038297] High CVE-2026-110917: Memory corruption in SVG. Reported by C0rk1 on 2026-10-03
-[N/A][569286602] High CVE-2026-110921: Use after free in V8. Reported by Xinyang Ge on 2026-10-05
-[N/A][569659194] High CVE-2026-110920: Memory corruption in V8. Reported by Xinyang Ge on 2026-10-05
-[N/A][501886301] Medium CVE-2026-110916: Improper input validation in Desktop. Reported by Google on 2026-04-12
-[N/A][556272421] Medium CVE-2026-110915: Use after free in Compositing. Reported by Google on 2026-09-02
-[N/A][563194341] Medium CVE-2026-110914: Memory corruption in Workers. Reported by Google on 2026-09-18
-
-
-* 155.0.8059.79
-This update includes 37 security fixes. Please see the Chrome Security Page for more information.
-
-[TBD][567736859] Critical CVE-2026-110152: Buffer overflow in ANGLE. Reported by Zhenpeng (Leo) Lin at depthfirst on 2026-09-30
-[N/A][568437149] Critical CVE-2026-110149: Use after free in Browser. Reported by Google on 2026-10-01
-[N/A][568719364] Critical CVE-2026-110136: Use after free in PDF. Reported by Xinyang Ge on 2026-10-02
-[N/A][568826881] Critical CVE-2026-110161: Use after free in Network. Reported by Google on 2026-10-02
-[N/A][568827293] Critical CVE-2026-110165: Use after free in Core. Reported by Google on 2026-10-02
-[N/A][570050934] Critical CVE-2026-110148: Use after free in SVG. Reported by Xinyang Ge on 2026-10-05
-[N/A][570638834] Critical CVE-2026-110151: Use after free in Media. Reported by Xinyang Ge on 2026-10-06
-[$1,000][540499008] High CVE-2026-110162: Use after free in Desktop. Reported by Findingz on 2026-07-29
-[N/A][496308073] High CVE-2026-110170: Use after free in Bindings. Reported by Google on 2026-03-25
-[N/A][552510359] High CVE-2026-110160: Missing authorization in ReadingMode. Reported by Google on 2026-08-25
-[N/A][554531101] High CVE-2026-110143: Use of uninitialized variable in ThirdParty lmza_sdk. Reported by Google on 2026-08-29
-[TBD][561039723] High CVE-2026-110146: Information leak in Passwords. Reported by Hoyong Jin on 2026-09-14
-[TBD][561334760] High CVE-2026-110150: Privilege elevation in Installer. Reported by M. Fauzan Wijaya (Gh05t666nero) on 2026-09-14
-[N/A][561892119] High CVE-2026-110156: Incorrect reference resolution in Extensions. Reported by Google on 2026-09-15
-[N/A][561997899] High CVE-2026-110137: Use after free in WebRTC. Reported by Google on 2026-09-15
-[N/A][562038980] High CVE-2026-110140: Type confusion in V8. Reported by Google on 2026-09-15
-[N/A][562242421] High CVE-2026-110158: Use after free in Passwords. Reported by Xinyang Ge on 2026-09-16
-[N/A][562243925] High CVE-2026-110145: Use after free in Passwords. Reported by Xinyang Ge on 2026-09-16
-[TBD][564573066] High CVE-2026-110159: Incorrect authorization in Updater. Reported by Aria Akhavan - Haikhavan Security on 2026-09-21
-[TBD][565252396] High CVE-2026-110144: Incorrect authorization in Mojo. Reported by Souma Ohsawa on 2026-09-23
-[N/A][565742182] High CVE-2026-110153: Use after free in Media. Reported by xinyang on 2026-09-24
-[TBD][566496747] High CVE-2026-110166: Buffer overflow in Animation. Reported by Syn4pse (@ret2happy) on 2026-09-26
-[N/A][567088929] High CVE-2026-110169: Use after free in V8. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-28
-[N/A][568010382] High CVE-2026-110168: Use after free in V8. Reported by Google on 2026-10-01
-[TBD][568037533] High CVE-2026-110139: Use after free in Media. Reported by weihengqiuu on 2026-09-30
-[N/A][568719352] High CVE-2026-110172: Use after free in Media. Reported by Xinyang Ge on 2026-10-02
-[N/A][568730794] High CVE-2026-110164: Use after free in DOM. Reported by Xinyang Ge on 2026-10-02
-[N/A][568831102] High CVE-2026-110163: Use after free in DOM. Reported by Xinyang Ge on 2026-10-02
-[N/A][568895734] High CVE-2026-110141: Observable discrepancy in Media. Reported by Google on 2026-10-02
-[N/A][568899705] High CVE-2026-110138: Use after free in ShapeDetection. Reported by Google on 2026-10-02
-[N/A][570047270] High CVE-2026-110157: Use after free in SVG. Reported by Xinyang Ge on 2026-10-05
-[N/A][570050928] High CVE-2026-110147: Use after free in PDF. Reported by Xinyang Ge on 2026-10-05
-[N/A][570167920] High CVE-2026-110154: Use after free in Canvas. Reported by Xinyang Ge on 2026-10-05
-[N/A][570167922] High CVE-2026-110155: Buffer overflow in PDFium. Reported by Xinyang Ge on 2026-10-05
-[N/A][570461696] High CVE-2026-110167: Use after free in Media. Reported by Xinyang Ge on 2026-10-06
-[N/A][570675082] High CVE-2026-110171: Use after free in Media. Reported by Xinyang Ge on 2026-10-06
-[TBD][553525515] Medium CVE-2026-110142: Use after free in FileSystem. Reported by Andrew Boni on 2026-08-27
+See: https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html

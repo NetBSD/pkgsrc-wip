@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc
-@@ -140,7 +140,7 @@ SearchEngineChoiceUI::SearchEngineChoice
+@@ -135,7 +135,7 @@ SearchEngineChoiceUI::SearchEngineChoice
        search_engine_choice_service->IsDsePropagationAllowedForGuest());
  
    const bool is_first_run_desktop_refresh_enabled =

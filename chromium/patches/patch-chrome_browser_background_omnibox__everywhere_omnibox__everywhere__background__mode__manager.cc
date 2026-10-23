@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/omnibox_everywhere/omnibox_everywhere_background_mode_manager.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/background/omnibox_everywhere/omnibox_everywhere_background_mode_manager.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/background/omnibox_everywhere/omnibox_everywhere_background_mode_manager.cc
 @@ -252,7 +252,7 @@ void OmniboxEverywhereBackgroundModeMana
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/flags/flags.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- v8/src/flags/flags.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ v8/src/flags/flags.cc
 @@ -19,6 +19,10 @@
  #include <unordered_map>

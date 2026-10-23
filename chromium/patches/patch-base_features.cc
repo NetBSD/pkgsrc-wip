@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/features.cc
 @@ -18,7 +18,7 @@
  #include "build/build_config.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "base/message_loop/message_pump_epoll.h"
  #endif
  
-@@ -243,7 +243,7 @@ void Init() {
+@@ -247,7 +247,7 @@ void Init() {
    FilePath::InitializeFeatures();
    MessagePumpWakeupCounter::InitializeFeatures();
  

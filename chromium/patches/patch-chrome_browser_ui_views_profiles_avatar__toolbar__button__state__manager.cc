@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/avatar_toolbar_button_state_manager.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/profiles/avatar_toolbar_button_state_manager.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/profiles/avatar_toolbar_button_state_manager.cc
-@@ -2675,7 +2675,7 @@ void AvatarToolbarButtonStateManager::Ma
+@@ -2617,7 +2617,7 @@ void AvatarToolbarButtonStateManager::Ma
    }
  }
  

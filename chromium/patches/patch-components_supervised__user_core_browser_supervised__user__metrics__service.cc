@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_metrics_service.cc
-@@ -119,7 +119,7 @@ SupervisedUserMetricsService::Supervised
+@@ -116,7 +116,7 @@ SupervisedUserMetricsService::Supervised
    DCHECK(pref_service_);
    url_filtering_service_observation_.Observe(&url_filtering_service);
  

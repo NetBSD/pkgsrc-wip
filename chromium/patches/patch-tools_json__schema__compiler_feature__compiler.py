@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/json_schema_compiler/feature_compiler.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- tools/json_schema_compiler/feature_compiler.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ tools/json_schema_compiler/feature_compiler.py
-@@ -250,6 +250,9 @@ FEATURE_GRAMMAR = {
+@@ -251,6 +251,9 @@ FEATURE_GRAMMAR = {
          'linux': 'Feature::LINUX_PLATFORM',
          'mac': 'Feature::MACOSX_PLATFORM',
          'win': 'Feature::WIN_PLATFORM',

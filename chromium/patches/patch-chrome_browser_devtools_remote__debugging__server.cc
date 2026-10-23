@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/remote_debugging_server.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/devtools/remote_debugging_server.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/devtools/remote_debugging_server.cc
 @@ -47,7 +47,7 @@ namespace {
  

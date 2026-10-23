@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/autofill/core/browser/payments/amount_extraction_manager.cc
-@@ -318,7 +318,7 @@ void AmountExtractionManager::OnCheckout
+@@ -319,7 +319,7 @@ void AmountExtractionManager::OnCheckout
        .Run(parsed_extracted_amount,
             /*timeout_reached=*/false);
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
@@ -15,7 +15,7 @@ $NetBSD$
      if (base::FeatureList::IsEnabled(
              features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The result of amount extraction on domain "
-@@ -388,7 +388,7 @@ void AmountExtractionManager::OnTimeoutR
+@@ -389,7 +389,7 @@ void AmountExtractionManager::OnTimeoutR
    }
  
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
@@ -24,7 +24,7 @@ $NetBSD$
      if (base::FeatureList::IsEnabled(
              features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The amount extraction on domain "
-@@ -413,7 +413,7 @@ void AmountExtractionManager::OnTimeoutR
+@@ -414,7 +414,7 @@ void AmountExtractionManager::OnTimeoutR
    std::move(callback).Run(std::move(result));
  
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
@@ -33,7 +33,7 @@ $NetBSD$
      if (base::FeatureList::IsEnabled(
              features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The amount extraction on domain "
-@@ -433,7 +433,7 @@ AmountExtractionManager::CheckEligibilit
+@@ -434,7 +434,7 @@ AmountExtractionManager::CheckEligibilit
  
    // Check eligibility of BNPL feature.
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||

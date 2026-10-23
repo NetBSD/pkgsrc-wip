@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_commands.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/browser_commands.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/browser_commands.cc
-@@ -1414,7 +1414,7 @@ void NewTabToRight(BrowserWindowInterfac
+@@ -1422,7 +1422,7 @@ void NewTabToRight(BrowserWindowInterfac
  }
  
  void NewTabFromClipboardURL(BrowserWindowInterface* browser) {
@@ -15,7 +15,7 @@ $NetBSD$
    if (ui::Clipboard::IsSupportedClipboardBuffer(
            ui::ClipboardBuffer::kSelection)) {
      ui::Clipboard* clipboard = ui::Clipboard::GetForCurrentThread();
-@@ -2774,7 +2774,7 @@ void OpenUpdateChromeDialog(BrowserWindo
+@@ -2797,7 +2797,7 @@ void OpenUpdateChromeDialog(BrowserWindo
      ShowOutdatedUpgradeBubble(browser, browser,
                                /*auto_update_enabled=*/false);
    } else {

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/text_input_client.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/base/ime/text_input_client.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/base/ime/text_input_client.h
 @@ -342,7 +342,7 @@ class COMPONENT_EXPORT(UI_BASE_IME) Text
    virtual bool SupportsAutoFill() const;

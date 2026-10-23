@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/wayland/include/config.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/wayland/include/config.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/wayland/include/config.h
 @@ -9,13 +9,26 @@
  

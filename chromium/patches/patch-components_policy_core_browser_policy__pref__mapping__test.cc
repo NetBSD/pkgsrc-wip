@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/browser/policy_pref_mapping_test.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/policy/core/browser/policy_pref_mapping_test.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/policy/core/browser/policy_pref_mapping_test.cc
 @@ -458,7 +458,7 @@ class PolicyTestCase {
      const std::string os("chromeos");

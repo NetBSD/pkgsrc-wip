@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/sync_confirmation_ui.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/signin/sync_confirmation_ui.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/signin/sync_confirmation_ui.cc
 @@ -180,7 +180,7 @@ SyncConfirmationUI::SyncConfirmationUI(c
                      IDS_SYNC_LOADING_CONFIRMATION_TITLE);

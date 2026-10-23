@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.cc
-@@ -247,7 +247,7 @@ HorizontalTabStripRegionViewOld::Horizon
+@@ -245,7 +245,7 @@ HorizontalTabStripRegionViewOld::Horizon
      new_tab_button_->GetViewAccessibility().SetName(
          l10n_util::GetStringUTF16(IDS_ACCNAME_NEWTAB));
  

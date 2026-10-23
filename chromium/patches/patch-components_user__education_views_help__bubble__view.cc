@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -272,7 +272,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the
@@ -15,7 +15,7 @@ $NetBSD$
  class HelpBubbleView::PrimaryWidgetObserver : public views::WidgetObserver {
   public:
    explicit PrimaryWidgetObserver(HelpBubbleView& help_bubble)
-@@ -751,7 +751,7 @@ void HelpBubbleView::InitializeAndShow(b
+@@ -755,7 +755,7 @@ void HelpBubbleView::InitializeAndShow(b
      event_relay_->Init(this);
    }
  
@@ -24,7 +24,7 @@ $NetBSD$
    primary_widget_observer_ = std::make_unique<PrimaryWidgetObserver>(*this);
  #endif
  
-@@ -867,7 +867,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
+@@ -853,7 +853,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,
                                                views::Widget* widget) const {
    BubbleDialogDelegateView::OnBeforeBubbleWidgetInit(params, widget);

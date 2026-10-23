@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/me2me_desktop_environment.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/me2me_desktop_environment.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/me2me_desktop_environment.cc
 @@ -125,7 +125,7 @@ std::string Me2MeDesktopEnvironment::Get
      capabilities += protocol::kMicrophoneRemotingCapability;

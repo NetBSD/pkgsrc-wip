@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ services/webnn/public/cpp/webnn_sandbox_init.cc
 @@ -12,7 +12,7 @@
  #include "services/webnn/public/cpp/webnn_buildflags.h"

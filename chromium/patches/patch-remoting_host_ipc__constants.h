@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/ipc_constants.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/ipc_constants.h
-@@ -31,7 +31,7 @@ bool GetInstalledBinaryPath(const base::
+@@ -38,7 +38,7 @@ bool GetInstalledBinaryPath(const base::
  const mojo::NamedPlatformChannel::ServerName&
  GetChromotingHostServicesServerName();
  
@@ -15,7 +15,7 @@ $NetBSD$
  // Returns the server name for the legacy single-process Linux host.
  const mojo::NamedPlatformChannel::ServerName&
  GetLegacyChromotingHostServicesServerName();
-@@ -45,7 +45,7 @@ extern const char kAgentProcessBrokerMes
+@@ -52,7 +52,7 @@ extern const char kAgentProcessBrokerMes
  const mojo::NamedPlatformChannel::ServerName& GetAgentProcessBrokerServerName();
  #endif
  

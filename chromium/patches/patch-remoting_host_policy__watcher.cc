@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/policy_watcher.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/policy_watcher.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/policy_watcher.cc
 @@ -182,7 +182,7 @@ base::DictValue PolicyWatcher::GetDefaul
    result.Set(key::kRemoteAccessHostAllowEnterpriseFileTransfer, false);

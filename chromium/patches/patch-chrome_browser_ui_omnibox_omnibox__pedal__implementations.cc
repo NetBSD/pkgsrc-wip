@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc
-@@ -2009,7 +2009,7 @@ const gfx::VectorIcon& GetSharingHubVect
+@@ -2024,7 +2024,7 @@ const gfx::VectorIcon& GetSharingHubVect
    return features::IsRoundedIconsEnabled()
               ? omnibox::kShareWindowsIcon
               : omnibox::kShareWinChromeRefreshOldIcon;

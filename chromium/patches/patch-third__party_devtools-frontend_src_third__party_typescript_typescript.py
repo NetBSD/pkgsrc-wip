@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/devtools-frontend/src/third_party/typescript/typescript.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/devtools-frontend/src/third_party/typescript/typescript.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/devtools-frontend/src/third_party/typescript/typescript.py
 @@ -18,6 +18,9 @@ def GetBinaryPath():
      relative = {

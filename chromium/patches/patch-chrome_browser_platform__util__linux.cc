@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/platform_util_linux.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/platform_util_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/platform_util_linux.cc
 @@ -69,7 +69,9 @@ void OnLaunchOptionsCreated(const std::s
    argv.push_back(command);

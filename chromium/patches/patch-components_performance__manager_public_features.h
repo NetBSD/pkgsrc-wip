@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/public/features.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/performance_manager/public/features.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/performance_manager/public/features.h
 @@ -19,7 +19,7 @@ namespace performance_manager::features 
  

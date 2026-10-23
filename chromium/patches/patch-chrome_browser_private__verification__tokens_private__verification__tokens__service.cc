@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/private_verification_tokens/private_verification_tokens_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/private_verification_tokens/private_verification_tokens_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/private_verification_tokens/private_verification_tokens_service.cc
 @@ -2,6 +2,7 @@
  // Use of this source code is governed by a BSD-style license that can be
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/private_verification_tokens/private_verification_tokens_service.h"
  
  #include <map>
-@@ -587,3 +588,4 @@ void PrivateVerificationTokensService::O
+@@ -695,3 +696,4 @@ void PrivateVerificationTokensService::O
      std::move(operation).Run();
    }
  }

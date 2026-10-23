@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -21,7 +21,16 @@
  #endif

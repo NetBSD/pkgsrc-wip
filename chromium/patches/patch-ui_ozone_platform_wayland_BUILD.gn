@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/BUILD.gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/ozone/platform/wayland/BUILD.gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/ozone/platform/wayland/BUILD.gn
 @@ -250,7 +250,6 @@ source_set("wayland") {
      "//mojo/public/cpp/system",

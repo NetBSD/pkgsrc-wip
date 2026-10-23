@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -40,12 +40,12 @@
  #include "ui/base/ui_base_features.h"
@@ -48,7 +48,7 @@ $NetBSD$
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      prefs->middle_click_paste_allowed = linux_ui->PrimaryPasteEnabled();
    }
-@@ -256,7 +256,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -252,7 +252,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->view_source_line_wrap_enabled =
        pref_service->GetBoolean(prefs::kViewSourceLineWrappingEnabled);
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.cc
-@@ -223,7 +223,7 @@ void WebUIAvatarToolbarButton::MaybeShow
+@@ -268,7 +268,7 @@ void WebUIAvatarToolbarButton::MaybeShow
    }
  }
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_power_save_blocker.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/host_power_save_blocker.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/host_power_save_blocker.cc
 @@ -29,7 +29,7 @@ HostPowerSaveBlocker::~HostPowerSaveBloc
  

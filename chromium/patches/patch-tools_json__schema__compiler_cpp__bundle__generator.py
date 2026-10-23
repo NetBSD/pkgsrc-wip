@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ tools/json_schema_compiler/cpp_bundle_generator.py
 @@ -153,7 +153,7 @@ class CppBundleGenerator(object):
        elif platform == Platforms.DESKTOP_ANDROID:

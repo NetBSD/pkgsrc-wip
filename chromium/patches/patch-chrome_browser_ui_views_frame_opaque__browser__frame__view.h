@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.h
-@@ -103,7 +103,7 @@ class OpaqueBrowserFrameView : public Br
+@@ -104,7 +104,7 @@ class OpaqueBrowserFrameView : public Br
    FrameButtonStyle GetFrameButtonStyle() const override;
    void UpdateWindowControlsOverlay(const gfx::Rect& bounding_rect) override;
    bool ShouldDrawRestoredFrameShadow() const override;
@@ -15,7 +15,7 @@ $NetBSD$
    bool IsTiled() const override;
  #endif
    int WebAppButtonHeight() const override;
-@@ -226,7 +226,7 @@ class OpaqueBrowserFrameView : public Br
+@@ -227,7 +227,7 @@ class OpaqueBrowserFrameView : public Br
    // Background painter for the window frame.
    std::unique_ptr<views::FrameBackground> frame_background_;
  

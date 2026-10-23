@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.cc
 @@ -21,7 +21,7 @@
  #include "ui/base/page_transition_types.h"

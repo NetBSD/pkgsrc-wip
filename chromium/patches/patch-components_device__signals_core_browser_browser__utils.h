@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/browser_utils.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/device_signals/core/browser/browser_utils.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/device_signals/core/browser/browser_utils.h
 @@ -39,7 +39,7 @@ std::string GetHostName();
  #endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)

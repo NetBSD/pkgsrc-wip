@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/ipc_constants.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -13,7 +13,7 @@
  #include "mojo/public/cpp/platform/named_platform_channel.h"
@@ -33,7 +33,7 @@ $NetBSD$
    return GetVarLibDir().Append(name).value();
  #else
    return mojo::NamedPlatformChannel::ServerNameFromUTF8(name);
-@@ -105,7 +105,7 @@ GetChromotingHostServicesServerName() {
+@@ -112,7 +112,7 @@ GetChromotingHostServicesServerName() {
    return *server_name;
  }
  
@@ -42,7 +42,7 @@ $NetBSD$
  const mojo::NamedPlatformChannel::ServerName&
  GetLegacyChromotingHostServicesServerName() {
    static const base::NoDestructor<mojo::NamedPlatformChannel::ServerName>
-@@ -137,7 +137,7 @@ GetAgentProcessBrokerServerName() {
+@@ -144,7 +144,7 @@ GetAgentProcessBrokerServerName() {
  
  #endif
  

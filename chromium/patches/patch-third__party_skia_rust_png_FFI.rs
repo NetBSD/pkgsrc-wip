@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/rust/png/FFI.rs.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/skia/rust/png/FFI.rs.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/skia/rust/png/FFI.rs
 @@ -244,6 +244,7 @@ mod ffi {
          type StreamWriter;
@@ -14,7 +14,7 @@ $NetBSD$
      }
  }
  
-@@ -1185,3 +1186,11 @@ fn new_writer(
+@@ -1199,3 +1200,11 @@ fn new_writer(
  fn finish_encoding(stream_writer: Box<StreamWriter>) -> ffi::EncodingResult {
      stream_writer.0.finish().as_ref().err().into()
  }

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_session_proxy.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/desktop_session_proxy.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/desktop_session_proxy.cc
 @@ -168,7 +168,7 @@ DesktopSessionProxy::CreateRemoteWebAuth
        base::BindRepeating(&DesktopSessionProxy::SignalWebAuthnExtension, this));

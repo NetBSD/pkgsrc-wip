@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/platform_channel.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- mojo/public/cpp/platform/platform_channel.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ mojo/public/cpp/platform/platform_channel.cc
 @@ -148,6 +148,32 @@ void CreateChannel(PlatformHandle* local
    *remote_endpoint = PlatformHandle(std::move(receive));

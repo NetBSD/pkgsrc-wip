@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2026-10-16 14:51:22.552226711 +0000
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2026-10-23 08:24:22.730311689 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
 @@ -0,0 +1,41 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.

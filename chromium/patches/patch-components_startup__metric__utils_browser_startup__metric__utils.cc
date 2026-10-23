@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/startup_metric_utils/browser/startup_metric_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/startup_metric_utils/browser/startup_metric_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/startup_metric_utils/browser/startup_metric_utils.cc
 @@ -36,11 +36,11 @@
  #elif BUILDFLAG(IS_MAC)
