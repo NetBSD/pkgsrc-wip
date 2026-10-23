@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		vis-0.8
+DISTNAME=		vis-0.9
 PKGNAME=		${DISTNAME:S/vis/vis-editor/}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
@@ -15,7 +15,7 @@ LICENSE=		isc
 DEPENDS+=		${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 
 HAS_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${PREFIX}/share
@@ -64,9 +64,10 @@ post-install:
 .if ${OPSYS} == "NetBSD"
 .include "../../mk/curses.buildlink3.mk"
 .else
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .endif
 
 .include "../../lang/lua/buildlink3.mk"
+.include "../../devel/lua-lpeg/buildlink3.mk"
 .include "../../devel/libtermkey/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
