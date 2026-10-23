@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mesa-26.2.4
+DISTNAME=	mesa-26.2.5
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
