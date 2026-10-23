@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.57 2026/09/02 13:13:20 kikadf Exp $
 
-BLAKE2s (chromium-156.0.8078.47-linux.tar.xz) = bc7b137d114b33f2b12d2efdadc3ce183bcf37d48fd6ac6702b0f4206a16a5fe
-SHA512 (chromium-156.0.8078.47-linux.tar.xz) = b9fa7f8c5a2e56ce8538ba4f0e2a3e140f756a586292ba5728ca4f8ed66d58aeb18c18a79f61ea12d7c9810a9e13f2be45d04f706c816444a4b8a27bbc492bf6
-Size (chromium-156.0.8078.47-linux.tar.xz) = 2009217380 bytes
+BLAKE2s (chromium-156.0.8078.47-lite.tar.xz) = e5e49356aa7ec641c4e90b62a3aeee1838323a4d92d65ce2d5dd0793c5ba0ead
+SHA512 (chromium-156.0.8078.47-lite.tar.xz) = 798ec60ea2761cec31f88e8f6e34b47ae6d34c1132f6213e6655414622e8584e8e4254e3347dcecb5419408c00bd3e6fbcc4628df5c988e6baea484c6ff2a8d4
+Size (chromium-156.0.8078.47-lite.tar.xz) = 2009127748 bytes
 BLAKE2s (evanw-esbuild-v0.28.2.tar.gz) = 0a4c994d6121c5b7d2615c7ad1759a8e76822c61a1c632349e6cb03feb3b0b36
 SHA512 (evanw-esbuild-v0.28.2.tar.gz) = c4cb2ef32e147ebc5099ab501ebcb5fb4e3f16a143a0fd1f9b74efb90e0c24309ab61b236b6e6cf86a235187368bed660ae19403bbda9a84328157fe45ffc5b8
 Size (evanw-esbuild-v0.28.2.tar.gz) = 2008796 bytes
@@ -102,9 +102,6 @@ Size (kikadf-chromium-nb-v154.0.tar.gz) = 22550 bytes
 BLAKE2s (microsoft-TypeScript-v7.0.2.tar.gz) = 89c2726e94ec217f823fc7e31eba8c8012d73a0675e9394eee60dd0f47dec645
 SHA512 (microsoft-TypeScript-v7.0.2.tar.gz) = ab381b5d7bf16463f75a19b9b517d8ed94699f14fd49746e72df3f23381df6a1debb057b1d9c939a3d393952ad684dc9200cb964195ba6d62efb6a1536bc835a
 Size (microsoft-TypeScript-v7.0.2.tar.gz) = 49788068 bytes
-BLAKE2s (test_fonts-a28b222b79851716f8358d2800157d9ffe117b3545031ae51f69b7e1e1b9a969.tar.gz) = f30f2aa69ad44a33da6600da7fa17882f04fd0d331f4c6ae27087904893061f9
-SHA512 (test_fonts-a28b222b79851716f8358d2800157d9ffe117b3545031ae51f69b7e1e1b9a969.tar.gz) = ca4f98300f2037a40e02f6c2ffa04427fdf08cdce8de34cc944a5ccb69d4279090d2b8476d5e77bd610db6542696eb3ed4d135c3462fc0375cbf9277bf2fa670
-Size (test_fonts-a28b222b79851716f8358d2800157d9ffe117b3545031ae51f69b7e1e1b9a969.tar.gz) = 33233004 bytes
 SHA1 (patch-.gn) = 924dde73017229126f4f6688253d8dae622895b2
 SHA1 (patch-BUILD.gn) = 2a09a58fd8818ff9814e141d1ddb5f0b00e51c10
 SHA1 (patch-agents_skills_multi-agent-engineering-workflow_tests_testdata_mock__app.cc) = b68dc38f3352b2e458169676d481a378eef41def
