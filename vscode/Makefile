@@ -1,18 +1,17 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.100.2
+DISTNAME=		vscode-1.142.0
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
+SOURCE_COMMIT_HASH=	d956e8a6ac5d904486557eea07e1d6bd62a4d36f
 
 NODE_MODULES=		vscode-node_modules-${PKGVERSION_NOREV}.tar.gz
-#NOTE: SITES.${NODE_MODULES} doesn't work
-#SITES.${NODE_MODULES}=	https://downloads.sourceforge.net/sourceforge/kikadf/NetBSD/
-MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=kikadf/NetBSD/}
+MASTER_SITES+=		https://distfiles.borderland.hu/
 DISTFILES+=		${NODE_MODULES}
 DISTFILES+=		${DEFAULT_DISTFILES}
 
-MAINTAINER=		kikadf.01@gmail.com
+MAINTAINER=		kikadf@NetBSD.org
 HOMEPAGE=		https://code.visualstudio.com/
 COMMENT=		The Open Source build of Visual Studio Code (vscode) editor
 LICENSE=		mit
@@ -25,7 +24,7 @@ USE_ELECTRON=		bundled
 
 DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
 
-.include "../../wip/electron34/platform.mk"
+.include "../../wip/electron43/platform.mk"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
