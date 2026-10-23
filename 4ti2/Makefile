@@ -11,6 +11,10 @@ HOMEPAGE=	https://4ti2.github.io/
 COMMENT=	Solve algebraic, geometric, combinatorial problems on linear spaces
 LICENSE=	gnu-gpl-v2
 
+CONFIGURE_ARGS+=	--disable-groebner
+CONFIGURE_ARGS+=	--disable-zsolve
+CONFIGURE_ARGS+=	--disable-fiber
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
