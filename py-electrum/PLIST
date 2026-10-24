@@ -248,7 +248,6 @@ ${PYSITELIB}/electrum/gui/messages.pyo
 ${PYSITELIB}/electrum/gui/qml/__init__.py
 ${PYSITELIB}/electrum/gui/qml/__init__.pyc
 ${PYSITELIB}/electrum/gui/qml/__init__.pyo
-${PYSITELIB}/electrum/gui/qml/android_res/layout/scanner_layout.xml
 ${PYSITELIB}/electrum/gui/qml/auth.py
 ${PYSITELIB}/electrum/gui/qml/auth.pyc
 ${PYSITELIB}/electrum/gui/qml/auth.pyo
@@ -377,7 +376,6 @@ ${PYSITELIB}/electrum/gui/qml/components/wizard/Wizard.qml
 ${PYSITELIB}/electrum/gui/qml/components/wizard/WizardComponent.qml
 ${PYSITELIB}/electrum/gui/qml/java_classes/org/electrum/biometry/BiometricActivity.java
 ${PYSITELIB}/electrum/gui/qml/java_classes/org/electrum/biometry/BiometricHelper.java
-${PYSITELIB}/electrum/gui/qml/java_classes/org/electrum/qr/SimpleScannerActivity.java
 ${PYSITELIB}/electrum/gui/qml/qeaddressdetails.py
 ${PYSITELIB}/electrum/gui/qml/qeaddressdetails.pyc
 ${PYSITELIB}/electrum/gui/qml/qeaddressdetails.pyo
@@ -435,9 +433,6 @@ ${PYSITELIB}/electrum/gui/qml/qepiresolver.pyo
 ${PYSITELIB}/electrum/gui/qml/qeqr.py
 ${PYSITELIB}/electrum/gui/qml/qeqr.pyc
 ${PYSITELIB}/electrum/gui/qml/qeqr.pyo
-${PYSITELIB}/electrum/gui/qml/qeqrscanner.py
-${PYSITELIB}/electrum/gui/qml/qeqrscanner.pyc
-${PYSITELIB}/electrum/gui/qml/qeqrscanner.pyo
 ${PYSITELIB}/electrum/gui/qml/qerequestdetails.py
 ${PYSITELIB}/electrum/gui/qml/qerequestdetails.pyc
 ${PYSITELIB}/electrum/gui/qml/qerequestdetails.pyo
@@ -1228,12 +1223,9 @@ ${PYSITELIB}/electrum/qrreader/__init__.pyo
 ${PYSITELIB}/electrum/qrreader/abstract_base.py
 ${PYSITELIB}/electrum/qrreader/abstract_base.pyc
 ${PYSITELIB}/electrum/qrreader/abstract_base.pyo
-${PYSITELIB}/electrum/qrreader/zbar.py
-${PYSITELIB}/electrum/qrreader/zbar.pyc
-${PYSITELIB}/electrum/qrreader/zbar.pyo
-${PYSITELIB}/electrum/qrscanner.py
-${PYSITELIB}/electrum/qrscanner.pyc
-${PYSITELIB}/electrum/qrscanner.pyo
+${PYSITELIB}/electrum/qrreader/zxing.py
+${PYSITELIB}/electrum/qrreader/zxing.pyc
+${PYSITELIB}/electrum/qrreader/zxing.pyo
 ${PYSITELIB}/electrum/ripemd.py
 ${PYSITELIB}/electrum/ripemd.pyc
 ${PYSITELIB}/electrum/ripemd.pyo
@@ -1346,6 +1338,9 @@ ${PYSITELIB}/electrum/wordlist/spanish.txt
 ${PYSITELIB}/electrum/x509.py
 ${PYSITELIB}/electrum/x509.pyc
 ${PYSITELIB}/electrum/x509.pyo
+${PYSITELIB}/electrum/zip_importer.py
+${PYSITELIB}/electrum/zip_importer.pyc
+${PYSITELIB}/electrum/zip_importer.pyo
 share/applications/electrum.desktop
 share/icons/hicolor/128x128/apps/electrum.png
 share/pixmaps/electrum.png
