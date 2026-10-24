@@ -6070,6 +6070,7 @@ SUBDIR+=	weave
 SUBDIR+=	web-mode
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
+SUBDIR+=	webdump
 SUBDIR+=	webdump-git
 SUBDIR+=	webhookd
 SUBDIR+=	wendzelnntpd
