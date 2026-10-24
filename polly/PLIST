@@ -59,6 +59,9 @@ include/polly/isl/ast.h
 include/polly/isl/ast_build.h
 include/polly/isl/ast_type.h
 include/polly/isl/constraint.h
+include/polly/isl/cpp-checked-conversion.h
+include/polly/isl/cpp-checked.h
+include/polly/isl/cpp.h
 include/polly/isl/ctx.h
 include/polly/isl/fixed_box.h
 include/polly/isl/flow.h
@@ -102,6 +105,7 @@ include/polly/isl/space_type.h
 include/polly/isl/stdint.h
 include/polly/isl/stream.h
 include/polly/isl/stride_info.h
+include/polly/isl/typed_cpp.h
 include/polly/isl/union_map.h
 include/polly/isl/union_map_type.h
 include/polly/isl/union_set.h

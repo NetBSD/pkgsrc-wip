@@ -1343,8 +1343,7 @@ lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangConfigVersion.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
-lib/libclang-cpp.${SHLIB_EXT}
-${PLIST.notdylib}lib/libclang-cpp.so.23.1
+lib/libclang-cpp.so.23.1
 lib/libclang.${SHLIB_EXT}
 ${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.${PKGVERSION}
 ${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.23.1
