@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fresh-0.5.3
+DISTNAME=	fresh-0.5.4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sinelaw/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -24,6 +24,8 @@ CARGO_INSTALL_ARGS=	install --path crates/fresh-editor --root ${DESTDIR}${PREFIX
 
 post-extract:
 	sed -i 's/#if defined(__sun)/#if defined(__sun) || defined(__NetBSD__)/' ${CARGO_VENDOR_DIR}/lzma-sys-0.1.20/config.h
+	# zip-9.0.3 assumes mode_t is u16 on all BSDs; it is u32 on NetBSD.
+	sed -i 's/mode.mode() as u16/mode.mode() as _/' ${CARGO_VENDOR_DIR}/zip-9.0.3/src/read/extract.rs
 
 .include "cargo-depends.mk"
 
