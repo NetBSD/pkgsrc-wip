@@ -1,8 +1,8 @@
 $NetBSD$
 
-* Add support to NetBSD and FreeBSD
+* TODO: imported from FreeBSD ports, pkgsrc's vscode hasn't test make target
 
---- test/smoke/src/areas/task/task.test.ts.orig	2025-05-14 21:40:56.000000000 +0000
+--- test/smoke/src/areas/task/task.test.ts.orig	2026-10-14 09:52:01.000000000 +0000
 +++ test/smoke/src/areas/task/task.test.ts
 @@ -19,6 +19,6 @@ export function setup(logger: Logger) {
  		// Refs https://github.com/microsoft/vscode/issues/225250

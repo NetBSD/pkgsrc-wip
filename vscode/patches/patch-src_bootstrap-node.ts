@@ -2,9 +2,9 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- src/bootstrap-node.ts.orig	2025-02-10 13:07:56.000000000 +0000
+--- src/bootstrap-node.ts.orig	2026-10-14 09:52:01.000000000 +0000
 +++ src/bootstrap-node.ts
-@@ -152,7 +152,7 @@ export function configurePortable(produc
+@@ -227,7 +227,7 @@ export function configurePortable(produc
  			return process.env['VSCODE_PORTABLE'];
  		}
  

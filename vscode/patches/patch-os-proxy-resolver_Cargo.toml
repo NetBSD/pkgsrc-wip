@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Add support to NetBSD and FreeBSD
+
+--- os-proxy-resolver/Cargo.toml.orig	2026-10-24 14:57:08.411400029 +0000
++++ os-proxy-resolver/Cargo.toml
+@@ -117,7 +117,7 @@ windows-sys = { version = "0.60", featur
+ # non-Windows dependency above.
+ rquickjs-sys = { version = "0.12.1", optional = true }
+ 
+-[target.'cfg(target_os = "linux")'.dependencies]
++[target.'cfg(any(target_os = "linux", target_os = "freebsd", target_os = "netbsd"))'.dependencies]
+ libc = "0.2"
+ 
+ [dev-dependencies]

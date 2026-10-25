@@ -2,7 +2,7 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- extensions/emmet/src/test/testUtils.ts.orig	2025-02-10 13:07:56.000000000 +0000
+--- extensions/emmet/src/test/testUtils.ts.orig	2026-10-24 16:07:43.430774206 +0000
 +++ extensions/emmet/src/test/testUtils.ts
 @@ -31,7 +31,7 @@ export function createRandomFile(content
  }

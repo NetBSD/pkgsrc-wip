@@ -11,6 +11,13 @@ MASTER_SITES+=		https://distfiles.borderland.hu/
 DISTFILES+=		${NODE_MODULES}
 DISTFILES+=		${DEFAULT_DISTFILES}
 
+# os-proxy-resolver
+GITHUB_SUBMODULES+=	microsoft os-proxy-resolver v0.4.0 os-proxy-resolver
+CARGO_WRKSRC=		${WRKSRC}/os-proxy-resolver/npm/native
+.include "cargo-depends.mk"
+
+COPILOT_CLI_VERSION=	1.0.73
+
 MAINTAINER=		kikadf@NetBSD.org
 HOMEPAGE=		https://code.visualstudio.com/
 COMMENT=		The Open Source build of Visual Studio Code (vscode) editor
@@ -19,20 +26,32 @@ LICENSE=		mit
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		zip gmake pkg-config pax bash tar
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++20
 USE_ELECTRON=		bundled
 
-DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
+TOOL_DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
+TOOL_DEPENDS+=		wabt-[0-9]*:../../wip/wabt
 
 .include "../../wip/electron43/platform.mk"
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-configure
-SUBST_MESSAGE.path=	Fixing pathes
-SUBST_FILES.path+=	src/vs/platform/native/electron-main/nativeHostMainService.ts
-SUBST_FILES.path+=	code-oss.sh
-SUBST_VARS.path+=	PREFIX
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_MESSAGE.vars=	Fixing variables
+SUBST_FILES.vars+=	node_modules/@vscode/os-proxy-resolver-pkgsrc-x64/package.json
+SUBST_FILES.vars+=	src/vs/platform/native/electron-main/nativeHostMainService.ts
+SUBST_FILES.vars+=	code-oss.sh
+SUBST_VARS.vars+=	PREFIX OPSYS LOWER_OPSYS ELECTRON_ARCH
+
+SUBST_CLASSES+=		npm
+SUBST_STAGE.npm=	pre-configure
+SUBST_MESSAGE.npm=	Prepare npm wrapper script
+SUBST_FILES.npm+=	npm-wrapper.sh
+SUBST_SED.npm+=		-e 's,%%COPILOT_CLI_VERSION%%,${COPILOT_CLI_VERSION},g'
+SUBST_SED.npm+=		-e 's,%%WRKSRC%%,${WRKSRC},g'
+SUBST_SED.npm+=		-e 's,%%ELECTRON_ARCH%%,${ELECTRON_ARCH},g'
+SUBST_SED.npm+=		-e 's,%%NPM_REAL%%,${PREFIX}/bin/npm,g'
 
 SUBST_CLASSES+=		res
 SUBST_STAGE.res=	pre-configure
@@ -56,28 +75,26 @@ REPLACE_BASH+=		src/vs/base/node/cpuUsage.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/show-size-changes.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/run-workflow.sh
 
-REPLACE_NODEJS=		extensions/node_modules/typescript/bin/tsc
+REPLACE_BNODEJS=	extensions/node_modules/typescript/bin/tsc
 REPLACE_NODEJS+=	extensions/node_modules/typescript/bin/tsserver
-REPLACE_NODEJS+=	node_modules/@parcel/watcher/node_modules/detect-libc/bin/detect-libc.js
 REPLACE_NODEJS+=	node_modules/@vscode/vscode-languagedetection/cli/index.js
 REPLACE_NODEJS+=	node_modules/chrome-remote-interface/bin/client.js
 REPLACE_NODEJS+=	node_modules/is-docker/cli.js
 REPLACE_NODEJS+=	node_modules/mkdirp/bin/cmd.js
 REPLACE_NODEJS+=	node_modules/opentype.js/bin/ot
-REPLACE_NODEJS+=	node_modules/opentype.js/bin/server.js
-REPLACE_NODEJS+=	node_modules/opentype.js/bin/test-render
 REPLACE_NODEJS+=	node_modules/rc/cli.js
-REPLACE_NODEJS+=	node_modules/uuid/dist/bin/uuid
 REPLACE_NODEJS+=	node_modules/semver/bin/semver.js
 
-
 MAKE_ENV+=		ELECTRON_SKIP_BINARY_DOWNLOAD=1
+MAKE_ENV+=		BUILD_SOURCEVERSION=${SOURCE_COMMIT_HASH}
+MAKE_ENV+=		VSCODE_QUALITY=stable
+MAKE_ENV+=		NODE_OPTIONS="--max-old-space-size=8192"
 MAKE_ENV+=		PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 MAKE_ENV+=		PYTHONDONTWRITEBYTECODE=1
 MAKE_ENV+=		JOBS=${_MAKE_JOBS_N}
 
 CFLAGS+=		-I${PREFIX}/include/node
-CXXFLAGS+=		-std=c++17
+CXXFLAGS+=		-std=c++20
 
 ELECTRON_URL=		https://github.com/electron/electron/releases/download/v${ELECTRON_VER}
 RUN_URL_HASH=		sha256 -s ${ELECTRON_URL} | cut -d' ' -f4
@@ -86,32 +103,37 @@ ELECTRON_ARCH=		${MACHINE_ARCH:S/aarch64/arm64/:S/x86_64/x64/}
 ELECTRON_ZIP=		electron-v${ELECTRON_VER}-linux-${ELECTRON_ARCH}.zip
 RUN_ZIP_HASH=		sha256 -q ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH}/${ELECTRON_ZIP}
 RUN_NODEJS_VER=		node --version
-NODEJS_VER=		${RUN_NODEJS_VER:sh}
+NODEJS_VER=		${RUN_NODEJS_VER:sh:C/v//}
 COPILOT_DIR=		${WRKSRC}/extensions/copilot/node_modules/@github/copilot-${LOWER_OPSYS}-${ELECTRON_ARCH}
 COPILOT_SDK_DIR=	${WRKSRC}/node_modules/@github/copilot-sdk-linux-${ELECTRON_ARCH}
-.if ${OPSYS} == "Linux"
-OS_PROXY_RESOLV_DIR=	${WRKSRC}/node_modules/@vscode/os-proxy-resolver-${LOWER_OPSYS}-${ELECTRON_ARCH}-gnu
-.else
-OS_PROXY_RESOLV_DIR=	${WRKSRC}/node_modules/@vscode/os-proxy-resolver-${LOWER_OPSYS}-${ELECTRON_ARCH}
-.endif
+OS_PROXY_RESOLV_DIR_L=	node_modules/@vscode/os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu
+OS_PROXY_RESOLV_DIR=	node_modules/@vscode/os-proxy-resolver-pkgsrc-${ELECTRON_ARCH}
+RIPGREP_PATHES=		node_modules/@vscode/ripgrep/bin
+RIPGREP_PATHES+=	node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
+RIPGREP_PATHES+=	build/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
+RIPGREP_PATHES+=	remote/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
+RIPGREP_PATHES+=	${OS_PROXY_RESOLV_DIR}/ripgrep/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 
 NOT_PAX_MPROTECT_SAFE+=	lib/vscode/code-oss
 
 post-extract:
-	# Install script
+	# Install scripts
 	${CP} ${FILESDIR}/code.sh.in ${WRKSRC}/code-oss.sh
-
-	# Set electron version
-	${SED} -i'' "s|^target=.*|target=\"${ELECTRON_VER}\"|" ${WRKSRC}/.npmrc
-	${SED} -i'' "s|^target=.*|target=\"${NODEJS_VER}\"|" ${WRKSRC}/remote/.npmrc
+	${CP} ${FILESDIR}/npm-wrapper.sh.in ${WRKSRC}/npm-wrapper.sh
+	${CHMOD} +x ${WRKSRC}/npm-wrapper.sh
 
 	# Copy node modules to source tree
 	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV} && \
-		${FIND} . -type f -print | pax -rw -pmp ${WRKSRC}
+		${FIND} . \(-type f -o -type l \) -print | pax -rw -pmp ${WRKSRC}
 
 	# Create moduleignore file
 	${CP} ${WRKSRC}/build/.moduleignore.linux \
 		${WRKSRC}/build/.moduleignore.${LOWER_OPSYS}
+
+	# Copy electron.d.ts
+	${MKDIR} ${WRKSRC}/.build/typings && \
+		${CP} ${PREFIX}/lib/${ELECTRON}/gen/electron/tsc/typings/electron.d.ts \
+		${WRKSRC}/.build/typings
 
 	# Extract copilot: doesn't work on BSDs, but need for build
 	${MKDIR} ${COPILOT_DIR} && cd ${WRKSRC} && \
@@ -122,9 +144,12 @@ post-extract:
 		--strip-components 1 -C ${COPILOT_SDK_DIR}
 
 	# Extract os-proxy-resolver
-	${MKDIR} ${OS_PROXY_RESOLV_DIR} && cd ${WRKSRC} && \
+	cd ${WRKSRC} && ${MKDIR} ${OS_PROXY_RESOLV_DIR} && \
 		${TAR} -xzf os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu-*.tgz \
 		--strip-components 1 -C ${OS_PROXY_RESOLV_DIR}
+	cd ${WRKSRC} && ${MKDIR} ${OS_PROXY_RESOLV_DIR_L} && \
+		${TAR} -xzf os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu-*.tgz \
+		--strip-components 1 -C ${OS_PROXY_RESOLV_DIR_L}
 
 do-configure:
 	# vscode wants a zipped electron
@@ -133,50 +158,63 @@ do-configure:
 		zip -q -r ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH}/${ELECTRON_ZIP} .
 	cd ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH} && \
 		${ECHO} "${RUN_ZIP_HASH:sh} *${ELECTRON_ZIP}" > ${WRKSRC}/build/checksums/electron.txt
-	# Build node modules
-	for subdir in `${FIND} ${WRKSRC} -type f -name binding.gyp -exec ${DIRNAME} {} ';'`; do \
-		if [ "`${ECHO} $${subdir} | ${GREP} /build/node_modules/`" ]; then \
-			cd $${subdir} && \
-			${SETENV} ${MAKE_ENV} \
-				npm_config_runtime=node \
-				npm_config_target=${NODEJS_VER} \
-				npm_config_nodedir=${PREFIX} \
-				${NODE_GYP} --userconfig=${WRKSRC}/build/.npmrc rebuild -j ${_MAKE_JOBS_N} || exit 1; \
-		elif [ "`${ECHO} $${subdir} | ${GREP} /remote/node_modules/`" ]; then \
-			cd $${subdir} && \
-			${SETENV} ${MAKE_ENV} \
-				npm_config_runtime=node \
-				npm_config_target=${NODEJS_VER} \
-				npm_config_nodedir=${PREFIX} \
-				${NODE_GYP} --userconfig=${WRKSRC}/remote/.npmrc rebuild -j ${_MAKE_JOBS_N} || exit 1; \
-		else \
-			cd $${subdir} && \
-			${SETENV} ${MAKE_ENV} \
-				npm_config_runtime=electron \
-				npm_config_target=${ELECTRON_VER} \
-				npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers \
-				${NODE_GYP} --userconfig=${WRKSRC}/.npmrc rebuild -j ${_MAKE_JOBS_N} || exit 1; \
-		fi; \
-	done
-	# Copy rg binary to @vscode/ripgrep/bin
-	${MKDIR} ${WRKSRC}/node_modules/@vscode/ripgrep/bin
-	${CP} ${PREFIX}/bin/rg ${WRKSRC}/node_modules/@vscode/ripgrep/bin
-	${MKDIR} ${WRKSRC}/build/node_modules/@vscode/ripgrep/bin
-	${CP} ${PREFIX}/bin/rg ${WRKSRC}/build/node_modules/@vscode/ripgrep/bin
-	${MKDIR} ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
-	${CP} ${PREFIX}/bin/rg ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		npx ${WRKSRC}/node_modules/typescript/bin/tsc -p build/tsconfig.build.json
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		npm_config_runtime=electron \
-		npm_config_target=${ELECTRON_VER} \
-		npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers \
+	# Set electron version
+	${SED} -i'' "s|^target=.*|target=\"${ELECTRON_VER}\"|" ${WRKSRC}/.npmrc
+	${SED} -i'' "s|^target=.*|target=\"${NODEJS_VER}\"|" ${WRKSRC}/remote/.npmrc
+
+	# Own npm wrapper for working npm pack without network
+	${CP} ${WRKSRC}/npm-wrapper.sh ${TOOLS_DIR}/bin/npm
+
+	# Copy rg binary to vscode pathes
+.for rgpath in ${RIPGREP_PATHES}
+	cd ${WRKSRC} && ${MKDIR} ${rgpath} && ${CP} ${PREFIX}/bin/rg ${rgpath}
+.endfor
+
+do-build: do-cargo-build
+	# Prepare native node module for os-proxy-resolver
+	${CP} ${WRKSRC}/os-proxy-resolver/npm/native/target/release/libos_proxy_resolver_node.so \
+		${WRKSRC}/${OS_PROXY_RESOLV_DIR}/os_proxy_resolver.node
+
+	# Build node modules
+	for subdir in `${FIND} ${WRKSRC} -type f -path '*/node_modules/*' -name binding.gyp -exec ${DIRNAME} {} ';'`; do \
+		if [ "`${ECHO} $${subdir} | ${GREP} /build/node_modules/`" ]; then \
+			npm_env="npm_config_runtime=node \
+				npm_config_target=${NODEJS_VER} \
+				npm_config_nodedir=${PREFIX}" \
+			_npmrc="${WRKSRC}/build/.npmrc"; \
+		elif [ "`${ECHO} $${subdir} | ${GREP} /remote/node_modules/`" ]; then \
+			npm_env="npm_config_runtime=node \
+				npm_config_target=${NODEJS_VER} \
+				npm_config_nodedir=${PREFIX}" \
+			_npmrc="${WRKSRC}/remote/.npmrc"; \
+		else \
+			npm_env="npm_config_runtime=electron \
+				npm_config_target=${ELECTRON_VER} \
+				npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers" \
+			_npmrc="${WRKSRC}/.npmrc"; \
+		fi; \
+		cd $${subdir} && \
+		if [ -f buildcheck.js ]; then \
+			${SETENV} ${MAKE_ENV} $${npm_env} \
+				node buildcheck.js > buildcheck.gypi || exit 1; \
+		fi && \
+		${SETENV} ${MAKE_ENV} $${npm_env} \
+			${NODE_GYP} --userconfig=$${_npmrc} rebuild -j ${_MAKE_JOBS_N} || exit 1; \
+	done
+
+	# Build vscode
+	cd ${WRKSRC} && \
+		npm_env="npm_config_runtime=electron \
+			npm_config_target=${ELECTRON_VER} \
+			npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers" && \
+	${SETENV} ${MAKE_ENV} $${npm_env} \
+		npm --userconfig=${WRKSRC}/.npmrc run compile && \
+	${SETENV} ${MAKE_ENV} $${npm_env} \
 		npm --userconfig=${WRKSRC}/.npmrc run gulp vscode-linux-${ELECTRON_ARCH}-min
-	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
-		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
-	${FIND} ${BUILDDIR} -type f -name '*.orig' -delete
+#	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
+#		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
+#	${FIND} ${BUILDDIR} -type f -name '*.orig' -delete
 
 BUILDDIR=		${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}
 INSTALLATION_DIRS+=	lib/vscode
@@ -214,6 +252,7 @@ do-install:
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/nodejs/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 KRB5_DEFAULT=	mit-krb5

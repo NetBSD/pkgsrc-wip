@@ -2,7 +2,7 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- extensions/vscode-api-tests/src/utils.ts.orig	2025-02-10 13:07:56.000000000 +0000
+--- extensions/vscode-api-tests/src/utils.ts.orig	2026-10-24 16:12:03.935728953 +0000
 +++ extensions/vscode-api-tests/src/utils.ts
 @@ -38,7 +38,7 @@ export async function deleteFile(file: v
  }

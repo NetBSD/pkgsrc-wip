@@ -1,0 +1,47 @@
+$NetBSD$
+
+* Add node-ovsx-sign for Open VSX, the open-source alternative to Microsoft’s Visual Studio Code Marketplace
+
+--- src/vs/platform/extensionManagement/node/extensionSignatureVerificationService.ts.orig	2026-10-14 09:52:01.000000000 +0000
++++ src/vs/platform/extensionManagement/node/extensionSignatureVerificationService.ts
+@@ -35,7 +35,7 @@ export interface IExtensionSignatureVeri
+ }
+ 
+ declare namespace vsceSign {
+-	export function verify(vsixFilePath: string, signatureArchiveFilePath: string, verbose: boolean): Promise<ExtensionSignatureVerificationResult>;
++	export function verify(vsixFilePath: string, signatureArchiveFilePath: string, verbose: boolean): Promise<boolean>;
+ }
+ 
+ /**
+@@ -67,7 +67,7 @@ export class ExtensionSignatureVerificat
+ 	}
+ 
+ 	private async resolveVsceSign(): Promise<typeof vsceSign> {
+-		const mod = '@vscode/vsce-sign';
++		const mod = 'node-ovsx-sign';
+ 		return import(mod);
+ 	}
+ 
+@@ -87,7 +87,21 @@ export class ExtensionSignatureVerificat
+ 
+ 		try {
+ 			this.logService.trace(`Verifying extension signature for ${extensionId}...`);
+-			result = await module.verify(vsixFilePath, signatureArchiveFilePath, this.logService.getLevel() === LogLevel.Trace);
++			let isSignatureValid =
++				await module.verify(vsixFilePath, signatureArchiveFilePath, this.logService.getLevel() === LogLevel.Trace);
++			if (isSignatureValid) {
++				result = {
++					code: ExtensionSignatureVerificationCode.Success,
++					didExecute: true,
++					output: "The extension signature is valid."
++				};
++			} else {
++				result = {
++					code: ExtensionSignatureVerificationCode.SignatureIsNotValid,
++					didExecute: true,
++					output: "The extension signature is invalid."
++				};
++			}
+ 		} catch (e) {
+ 			result = {
+ 				code: ExtensionSignatureVerificationCode.UnknownError,

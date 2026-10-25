@@ -1,0 +1,22 @@
+$NetBSD$
+
+* Use own os-proxy-resolver
+
+--- node_modules/@vscode/os-proxy-resolver-pkgsrc-x64/package.json.orig	2026-10-24 14:39:10.626666392 +0000
++++ node_modules/@vscode/os-proxy-resolver-pkgsrc-x64/package.json
+@@ -1,12 +1,11 @@
+ {
+-  "name": "@vscode/os-proxy-resolver-linux-x64-gnu",
++  "name": "@vscode/os-proxy-resolver-pkgsrc-@ELECTRON_ARCH@",
+   "version": "0.4.0",
+-  "description": "Native binding for @vscode/os-proxy-resolver on Linux x64",
++  "description": "Native binding for @vscode/os-proxy-resolver on @OPSYS@ @ELECTRON_ARCH@",
+   "main": "os_proxy_resolver.node",
+   "files": ["os_proxy_resolver.node", "LICENSE.txt", "ThirdPartyNotices.txt"],
+-  "os": ["linux"],
++  "os": ["@LOWER_OPSYS@"],
+   "cpu": ["x64"],
+-  "libc": ["glibc"],
+   "publishConfig": { "access": "public" },
+   "license": "MIT",
+   "repository": "github:microsoft/os-proxy-resolver"

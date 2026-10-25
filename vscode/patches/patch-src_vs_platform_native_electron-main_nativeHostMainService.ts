@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Use own starting wrapper
+* Use own start wrapper
 
---- src/vs/platform/native/electron-main/nativeHostMainService.ts.orig	2025-02-10 13:07:56.000000000 +0000
+--- src/vs/platform/native/electron-main/nativeHostMainService.ts.orig	2026-10-14 09:52:01.000000000 +0000
 +++ src/vs/platform/native/electron-main/nativeHostMainService.ts
-@@ -644,30 +644,7 @@ export class NativeHostMainService exten
+@@ -888,31 +888,7 @@ export class NativeHostMainService exten
+ 
  	@memoize
  	private get cliPath(): string {
- 
+-
 -		// Windows
 -		if (isWindows) {
 -			if (this.environmentMainService.isBuilt) {

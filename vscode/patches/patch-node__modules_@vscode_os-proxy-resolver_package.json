@@ -1,0 +1,18 @@
+$NetBSD$
+
+* Use own os-proxy-resolver
+
+--- node_modules/@vscode/os-proxy-resolver/package.json.orig	2026-10-25 11:26:48.068228000 +0000
++++ node_modules/@vscode/os-proxy-resolver/package.json
+@@ -39,6 +39,8 @@
+     "@vscode/os-proxy-resolver-linux-x64-gnu": "0.4.0",
+     "@vscode/os-proxy-resolver-linux-x64-musl": "0.4.0",
+     "@vscode/os-proxy-resolver-win32-arm64-msvc": "0.4.0",
+-    "@vscode/os-proxy-resolver-win32-x64-msvc": "0.4.0"
++    "@vscode/os-proxy-resolver-win32-x64-msvc": "0.4.0",
++    "@vscode/os-proxy-resolver-pkgsrc-arm64": "0.4.0",
++    "@vscode/os-proxy-resolver-pkgsrc-x64": "0.4.0"
+   }
+-}
+\ No newline at end of file
++}
