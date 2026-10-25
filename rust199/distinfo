@@ -134,6 +134,7 @@ SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = 3b83978e65b1227
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = cb011fc19957883c01725797f7c85ed1b20f96f1
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 75019dcb3dbca6cda33ba329dbe483101dcf48e7
 SHA1 (patch-src_llvm-project_llvm_lib_TargetParser_TargetDataLayout.cpp) = 0e256d06d29e236a9918a951e8d4f4221d47236e
+SHA1 (patch-src_llvm_project_llvm_include_llvm_Support_Allocator.h) = c49cb61313a73ee65aa836cd41a4303ebf56f060
 SHA1 (patch-src_tools_cargo_src_workspace_profiles.rs) = c86513da589f2dd861279fd119cf5588487f2ca1
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 333ec513b9b94750b2424a7c1b21c809e6ea25b8
 SHA1 (patch-src_tools_rust-installer_install-template.sh) = b31e2d8f9fa23beb5559c56de4b576f9b5e37d97
