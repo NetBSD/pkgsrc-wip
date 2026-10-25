@@ -1,13 +1,4 @@
-Clean up the patches / redo them.
-
-This package has known vulnerabilities, please investigate and fix if possible:
- CVE-2021-45844, CVE-2021-45845, CVE-2026-34398, CVE-2026-34399,
- CVE-2026-34789
+Clean up the patches / upstream them.
 
 Some mods are installed under "${PREFIX}/Mod/", some under "${PREFIX}/share/Mod/".
 Should these be moved? E.g. "${PREFIX}/freecad/Mod/"?
-
-With Coin 4.0.6, fails without setting env vars:
-COIN_EGL=1 COIN_GL_NO_CURRENT_CONTEXT_CHECK=1 FreeCAD
-See https://github.com/FreeCAD/FreeCAD/issues/22695#issuecomment-4523986222 for
-a possible patch to Coin.
