@@ -16,6 +16,8 @@ USE_LANGUAGES+=		c c++
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
+PLIST_SUBST+=	PYSTABLEABI=abi${PYTHON_VERSION:C/^(.).*$/\1/W}
+PLIST_SUBST+=	QTMAJORMINOR=${QTVERSION:R}
 
 REPLACE_PYTHON+=	sources/pyside-tools/pyside_tool.py
 REPLACE_PYTHON+=	sources/pyside-tools/qtpy2cpp_lib/tests/baseline/basic_test.py
