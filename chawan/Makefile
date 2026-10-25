@@ -18,6 +18,10 @@ WRKSRC=		${WRKDIR}/chawan-${DISTNAME}
 USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
+.if ${CC} != "clang"
+CFLAGS+=		-Wno-incompatible-pointer-types
+.endif
+
 .include "../../lang/nim/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../archivers/brotli/buildlink3.mk"
