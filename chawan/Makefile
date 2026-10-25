@@ -18,7 +18,10 @@ WRKSRC=		${WRKDIR}/chawan-${DISTNAME}
 USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
-.if ${CC} != "clang"
+# gcc is stricter than clang and thus the incompatible-pointer-types error
+# should be ignored.
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=		-Wno-incompatible-pointer-types
 .endif
 
