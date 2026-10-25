@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in.in,v 1.3 2021/03/28 10:36:33 hauke Exp $
+$NetBSD$
 
 Sprinkle DESTDIR dust.
 
@@ -11,7 +11,7 @@ Prefix {c,e}tags to avoid conflicts.
 
 Make TAR settable, to work around shortcomings in base tar(1)
 
---- Makefile.in.in.orig	2026-03-16 13:45:47.000000000 +0000
+--- Makefile.in.in.orig	2026-10-25 14:52:16.000000000 +0000
 +++ Makefile.in.in
 @@ -67,7 +67,7 @@ LC_ALL = C
  RM = rm -f
@@ -22,7 +22,7 @@ Make TAR settable, to work around shortcomings in base tar(1)
  
  ## ==================== Things `configure' Might Edit ====================
  
-@@ -419,11 +419,11 @@ install-arch-dep: mkdir
+@@ -419,17 +419,17 @@ install-arch-dep: mkdir
  	   fi; \
  	   ${INSTALL_DATA} lib-src/config.values $(DESTDIR)${docdir}/config.values; \
  	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC-`src/${PROGNAME} -sd`; \
@@ -36,17 +36,23 @@ Make TAR settable, to work around shortcomings in base tar(1)
  #endif
  #ifdef WIN32_NATIVE
  	${INSTALL_PROGRAM} src/${PROGNAME} $(DESTDIR)${bindir}/${PROGNAME}
-@@ -443,7 +443,8 @@ install-arch-dep: mkdir
+ 	-chmod 0755 $(DESTDIR)${bindir}/${PROGNAME}
+ #else
+-	${INSTALL_PROGRAM} ${buildlispdir}/ellcc.elc $(DESDTIR)${bindir}/ellcc
++	${INSTALL_PROGRAM} ${buildlispdir}/ellcc.elc $(DESTDIR)${bindir}/ellcc
+ 	-chmod 0755 $(DESTDIR)${bindir}/ellcc
+ # ifdef CYGWIN
+ 	${INSTALL_PROGRAM} src/${PROGNAME} $(DESTDIR)${bindir}/${PROGNAME}-${version}.exe
+@@ -444,6 +444,8 @@ install-arch-dep: mkdir
  # endif /* CYGWIN */
  #endif /* WIN32_NATIVE */
  #ifdef HAVE_SHLIB
--	$(INSTALL_DATA) modules/auto-autoloads.* $(DESTDIR)$(moduledir)
-+	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.el $(DESTDIR)$(moduledir)
-+	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) modules/auto-autoloads.el $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
+ 	$(INSTALL_DATA) modules/auto-autoloads.* $(DESTDIR)$(moduledir)
  #endif
  
- install-arch-indep: mkdir info
-@@ -478,15 +479,20 @@ install-arch-indep: mkdir info
+@@ -479,15 +481,20 @@ install-arch-indep: mkdir info
  	    ${INSTALL_DATA} ${srcdir}/info/dir $(DESTDIR)${infodir}/dir ; \
  	  fi ; \
  	  for file in *.info* ; do \
@@ -63,10 +69,19 @@ Make TAR settable, to work around shortcomings in base tar(1)
 -	    chmod 0644 $(DESTDIR)${mandir}/$${page}${manext} ; \
 +            if [ $${page} = etags ] || [ $${page} = ctags ] ; \
 +            then \
-+              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/xemacs-$${page}${manext} ; \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/man1/xemacs-$${page}${manext} ; \
 +            else \
-+              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/man1/$${page}${manext} ; \
 +            fi \
  	  done
  	@echo "If you would like to save approximately 4M of disk space, do"
  	@echo "make gzip-el"
+@@ -506,7 +513,7 @@ gzip-el:
+ mkdir: FRC.mkdir
+ 	for dir in \
+ 	    ${COPYDESTS} ${docdir} ${infodir} ${archlibdir} \
+-	    ${mandir} ${bindir} ${datadir} ${libdir} \
++	    ${mandir}/man1 ${bindir} ${datadir} ${libdir} \
+ #ifdef HAVE_SHLIB
+ 	    ${moduledir} ${sitemoduledir} \
+ #endif

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	xemacs
-EMACSVERSION=	21.5-b36
+EMACSVERSION=	21.5-b37
 EMACS_DISTNAME=	xemacs-${EMACSVERSION}
 CATEGORIES=	editors
 MASTER_SITES=	# Use hg repository
@@ -63,7 +63,7 @@ CHECK_WRKREF_SKIP+=	bin/xemacs*
 CHECK_WRKREF_SKIP+=	lib/xemacs-*/xemacs*.dmp
 
 # configure just recording the tool paths used for the build
-CHECK_WRKREF_SKIP+=	lib/xemacs-21.5-b36/x86_64--netbsd/config.values
+CHECK_WRKREF_SKIP+=	lib/xemacs-${EMACSVERSION}/x86_64--netbsd/config.values
 
 # The portable dumper creates a dump file with a build ID in its name
 PRINT_PLIST_AWK+=	{ gsub(/-[a-z0-9]+\.dmp$$/, "-$${XEMACS_DUMPID}.dmp"); }

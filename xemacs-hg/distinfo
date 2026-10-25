@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (patch-Makefile.in.in) = 9d90a61ae710a6d2a0e3746b60cc1cede4c8e642
+SHA1 (patch-Makefile.in.in) = 5edfcfd48843ee2d42ba8a7b940077f9f70c5f13
 SHA1 (patch-lib-src_Makefile.in.in) = 2ee85127cd953c858106143dea6d9f1367b1f36e
 SHA1 (patch-lwlib_Makefile.in.in) = 8d243f1c85122429187b8250c18221dee8423ed0
 SHA1 (patch-modules_common_Makefile.common) = 3fe92f9df07d67f4b58d62bd341bc3d831ea289a
