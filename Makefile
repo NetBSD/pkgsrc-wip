@@ -149,6 +149,7 @@ SUBDIR+=	aegisub
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
 SUBDIR+=	afl-cov
+SUBDIR+=	agentcc-gateway
 SUBDIR+=	agile
 SUBDIR+=	ags
 SUBDIR+=	ahir

@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/agentcc
+share/examples/agentcc/agentcc-failover.conf
+share/examples/agentcc/agentcc.conf
+share/examples/agentcc/config.example.yaml
+share/examples/agentcc/config.license_auth.example.yaml
+share/examples/rc.d/agentcc

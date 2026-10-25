@@ -1,0 +1,23 @@
+wip/agentcc-gateway: Import agentcc-gateway-1.54.0
+
+Agent Command Center (agentcc-gateway) is a high-performance,
+OpenAI-compatible LLM gateway written in Go. It sits between an
+application and LLM providers and gives one OpenAI-compatible API
+for every configured provider (OpenAI, Anthropic, Gemini, Bedrock,
+Cohere, Azure, and local endpoints such as vLLM, Ollama and
+LocalAI).  It provides routing and failover strategies, caching,
+budgets and rate limits, guardrail scanners, and Prometheus and
+OpenTelemetry metrics.
+
+Only the gateway is built, from the agentcc-gateway/ subdirectory
+of the upstream future-agi monorepo.
+
+The package installs an rc.d script and a minimal agentcc.conf,
+which starts the gateway with no providers.  It also installs an
+example two-host round-robin/failover config, plus upstream's
+config.example.yaml and config.license_auth.example.yaml taken
+from the distfile.
+
+Local patches fix biased round-robin and weighted routing when
+failover is enabled.  Without them the router was consulted twice
+per request.

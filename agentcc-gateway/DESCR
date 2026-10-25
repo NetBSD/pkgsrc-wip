@@ -1,0 +1,20 @@
+Agent Command Center (agentcc-gateway) is a high-performance, OpenAI-compatible
+LLM gateway written in Go. It sits between your application and LLM providers,
+providing a single OpenAI-compatible API for every provider you configure.
+
+Features:
+  - One OpenAI-compatible API for OpenAI, Anthropic, Gemini, Bedrock, Cohere,
+    Azure, and local self-hosted endpoints
+    (vLLM, Ollama, LMStudio, TGI, LocalAI)
+  - 15 routing strategies: retries, circuit breakers, failover, hedged/race,
+    latency-aware, cost-optimized, model fallback, shadow/mirror, and more
+  - Cost control: exact + semantic caching, per-key budgets, quotas, virtual
+    keys, rate limits, credits ledger
+  - 18 built-in guardrail scanners (PII, injection, jailbreak, secrets,
+    hallucination, MCP security, content moderation, and more) plus adapters for
+    15 third-party guardrail vendors
+  - Observability: Prometheus + OpenTelemetry, per-request metrics
+  - Modern protocols: MCP, A2A, Assistants, vector stores, batch, files,
+    realtime WebSocket, responses API
+
+Single binary, single YAML config, no proprietary control plane required.
