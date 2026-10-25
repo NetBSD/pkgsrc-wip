@@ -4,3 +4,5 @@ BLAKE2s (wabt-1.0.41.tar.gz) = cf78cff9c06c3c654c8ed06bb439ccf6548f3ed89d0967487
 SHA512 (wabt-1.0.41.tar.gz) = afa21608c20e42b009ef4685b04a42bdaf087ffec7e5e6bc2d91a8ffd801cb54f5c67a06ad2ec4398dd190543146c79d41a444b0aa21112685d81fd192d8ffd5
 Size (wabt-1.0.41.tar.gz) = 1966102 bytes
 SHA1 (patch-CMakeLists.txt) = e65ad4657be060a20273e88014dc3279cfe1e230
+SHA1 (patch-src_prebuilt_wasm2c__source__includes.cc) = a771407522d453637b8081cf5a6fa17ba63f09e3
+SHA1 (patch-src_template_wasm2c.includes.c) = 548f368f24d7409f95e5880e3edc1e51268ea8e3
