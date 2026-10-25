@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/attr.py
+${PYSITELIB}/attr.pyc
+${PYSITELIB}/attr.pyo
+${PYSITELIB}/dry_attr.py
+${PYSITELIB}/dry_attr.pyc
+${PYSITELIB}/dry_attr.pyo

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (attr-0.3.2.tar.gz) = 66e7af829187928c99a924944e35e53fedcada9e9b103f8ac3fded2d8c535645
+SHA512 (attr-0.3.2.tar.gz) = 3491b4558cc87c31325876f110bf378e35a3055bf1a01f5249f0bb1e47465ca2323d5df19c007700d6634ccb80222e2eea9ce02abd8de6d2d45002fed3b668cb
+Size (attr-0.3.2.tar.gz) = 2649 bytes
