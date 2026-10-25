@@ -5887,7 +5887,6 @@ SUBDIR+=	tuareg-mode
 SUBDIR+=	tuba
 SUBDIR+=	tudu
 SUBDIR+=	tuicr
-SUBDIR+=	tuifeed
 SUBDIR+=	tuios
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci
