@@ -466,7 +466,6 @@ include/clang-tidy/utils/TransformerClangTidyCheck.h
 include/clang-tidy/utils/TypeTraits.h
 include/clang-tidy/utils/UseRangesCheck.h
 include/clang-tidy/utils/UsingInserter.h
-lib/libClangdXPCLib.so.23.1
 lib/libclangApplyReplacements.a
 lib/libclangChangeNamespace.a
 lib/libclangDaemon.a
