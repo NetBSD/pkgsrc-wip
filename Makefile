@@ -6051,6 +6051,7 @@ SUBDIR+=	vpr
 SUBDIR+=	vscode
 SUBDIR+=	vsearch
 SUBDIR+=	w3c-httpd
+SUBDIR+=	wabt
 SUBDIR+=	wackamole
 SUBDIR+=	wadgadget
 SUBDIR+=	wadptr

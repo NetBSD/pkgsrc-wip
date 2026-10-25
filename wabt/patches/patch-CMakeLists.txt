@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.4 2023/05/22 14:10:42 fcambus Exp $
+
+Do not disable extensions, needs gnu++17 for alloca(3).
+
+--- CMakeLists.txt.orig	2023-05-12 21:56:46.000000000 +0000
++++ CMakeLists.txt
+@@ -167,7 +167,7 @@ else ()
+     -Wall -Wextra -Wno-unused-parameter -Wpointer-arith -Wuninitialized -Wimplicit-fallthrough
+   )
+ 
+-  set(CMAKE_CXX_EXTENSIONS OFF)
++  set(CMAKE_CXX_EXTENSIONS ON)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wold-style-cast")
+ 
+   if (NOT WITH_EXCEPTIONS)
