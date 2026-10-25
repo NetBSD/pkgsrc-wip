@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	v0.5.0
+DISTNAME=	v0.5.1
 PKGNAME=	chawan-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://git.sr.ht/~bptato/chawan/archive/

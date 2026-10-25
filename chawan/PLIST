@@ -2,7 +2,6 @@
 bin/cha
 bin/mancha
 libexec/chawan/ansi2html
-libexec/chawan/btoa
 libexec/chawan/cgi-bin/canvas
 libexec/chawan/cgi-bin/chabookmark
 libexec/chawan/cgi-bin/file
