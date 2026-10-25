@@ -75,7 +75,7 @@ REPLACE_BASH+=		src/vs/base/node/cpuUsage.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/show-size-changes.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/run-workflow.sh
 
-REPLACE_BNODEJS=	extensions/node_modules/typescript/bin/tsc
+REPLACE_NODEJS=		extensions/node_modules/typescript/bin/tsc
 REPLACE_NODEJS+=	extensions/node_modules/typescript/bin/tsserver
 REPLACE_NODEJS+=	node_modules/@vscode/vscode-languagedetection/cli/index.js
 REPLACE_NODEJS+=	node_modules/chrome-remote-interface/bin/client.js
