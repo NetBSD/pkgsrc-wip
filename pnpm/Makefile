@@ -1,7 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${DISTNAME:C/-rc\./rc/}
-DISTNAME=	pnpm-12.14.0
+DISTNAME=	pnpm-12.15.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pnpm/}
 GITHUB_TAG=	refs/tags/v${DISTNAME:C/^[^-]*-//}
@@ -24,10 +23,13 @@ INSTALLATION_DIRS=	bin
 CARGO_ARGS=		build --release --bin pnpm ${DEFAULT_CARGO_ARGS}
 
 # Depends on unpublished crates. Can't use cargo.mk to fetch them.
+DASHMAP_REV=		4401b5c0b2626266dd5d5a9202677bca8b53e57a
 NODE_SEMVER_REV=	3d74d6b7f4de1de2006cf2f7663aac09de65b1f6
 DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		dashmap-${DASHMAP_REV}.tar.gz
 DISTFILES+=		node-semver-${NODE_SEMVER_REV}.tar.gz
 
+SITES.dashmap-${DASHMAP_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=pnpm/}dashmap/archive/${DASHMAP_REV}.tar.gz
 SITES.node-semver-${NODE_SEMVER_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=pnpm/}node-semver-rs/archive/${NODE_SEMVER_REV}.tar.gz
 
 # Required to generate cas-loader.mjs.inc.
@@ -50,8 +52,9 @@ EXTRACT_DIR.tapable-${TAPABLE_VER}.tgz+=			${WRKDIR}/tapable
 post-extract:
 	@${STEP_MSG} "Relocating cargo crates in the pnpm way ;)"
 	${RUN}${MKDIR} ${WRKSRC}/.pnpm/crates/git
+	${RUN}${MV} ${WRKDIR}/dashmap-${DASHMAP_REV} ${WRKSRC}/.pnpm/crates/git/dashmap
 	${RUN}${MV} ${WRKDIR}/node-semver-rs-${NODE_SEMVER_REV} ${WRKSRC}/.pnpm/crates/git/node-semver
-	${RUN}${SED} "s/@NODE_SEMVER_REV@/${NODE_SEMVER_REV}/" ${FILESDIR}/config.toml > ${WRKSRC}/.pnpm/crates/config.toml
+	${RUN}${SED} "s/@DASHMAP_REV@/${DASHMAP_REV}/; s/@NODE_SEMVER_REV@/${NODE_SEMVER_REV}/" ${FILESDIR}/config.toml > ${WRKSRC}/.pnpm/crates/config.toml
 
 #	NOTE: cargo-checksum.json was generated as follows.
 #		${FIND} . -type f ! -name .cargo-checksum.json -print0 | xargs -0 ${DIGEST} sha256 | ${AWK} \
@@ -59,7 +62,8 @@ post-extract:
 #		 /^SHA256 / { if (first==0) { printf "," } else { first=0 }\
 #		              len=length($$2); printf "\"%s\":\"%s\"", substr($$2, 4, len-4), $$4 } \
 #		 END { printf "},\"package\":null}" }' > .cargo-checksum.json
-	${RUN}${CP} ${FILESDIR}/cargo-checksum.json ${WRKSRC}/.pnpm/crates/git/node-semver/.cargo-checksum.json
+	${RUN}${CP} ${FILESDIR}/dashmap-checksum.json ${WRKSRC}/.pnpm/crates/git/dashmap/.cargo-checksum.json
+	${RUN}${CP} ${FILESDIR}/node-semver-cargo-checksum.json ${WRKSRC}/.pnpm/crates/git/node-semver/.cargo-checksum.json
 
 	@${STEP_MSG} "Relocating npm packages for esbuild"
 	${RUN}${MKDIR} ${WRKSRC}/pnpm/esm-loader/node_modules
