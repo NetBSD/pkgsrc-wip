@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.39 2024/04/22 07:03:35 adam Exp $
 bin/amdgpu-arch
 bin/analyze-build
 bin/clang
@@ -1102,16 +1102,16 @@ lib/clang/23/include/andes_vector.h
 lib/clang/23/include/arm64_neon.h
 lib/clang/23/include/arm64intr.h
 lib/clang/23/include/arm_acle.h
-lib/clang/23/include/arm_bf16.h
-lib/clang/23/include/arm_cde.h
+${PLIST.ARM}lib/clang/23/include/arm_bf16.h
+${PLIST.ARM}lib/clang/23/include/arm_cde.h
 lib/clang/23/include/arm_cmse.h
-lib/clang/23/include/arm_fp16.h
-lib/clang/23/include/arm_mve.h
-lib/clang/23/include/arm_neon.h
+${PLIST.ARM}lib/clang/23/include/arm_fp16.h
+${PLIST.ARM}lib/clang/23/include/arm_mve.h
+${PLIST.ARM}lib/clang/23/include/arm_neon.h
 lib/clang/23/include/arm_neon_sve_bridge.h
-lib/clang/23/include/arm_sme.h
-lib/clang/23/include/arm_sve.h
-lib/clang/23/include/arm_vector_types.h
+${PLIST.ARM}lib/clang/23/include/arm_sme.h
+${PLIST.ARM}lib/clang/23/include/arm_sve.h
+${PLIST.ARM}lib/clang/23/include/arm_vector_types.h
 lib/clang/23/include/armintr.h
 lib/clang/23/include/avx10_2_512bf16intrin.h
 lib/clang/23/include/avx10_2_512convertintrin.h
@@ -1277,7 +1277,7 @@ lib/clang/23/include/riscv_mips.h
 lib/clang/23/include/riscv_nds.h
 lib/clang/23/include/riscv_ntlh.h
 lib/clang/23/include/riscv_packed_simd.h
-lib/clang/23/include/riscv_vector.h
+${PLIST.RISCV}lib/clang/23/include/riscv_vector.h
 lib/clang/23/include/rtmintrin.h
 lib/clang/23/include/s390intrin.h
 lib/clang/23/include/serializeintrin.h
@@ -1345,9 +1345,9 @@ lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang-cpp.so
 lib/libclang-cpp.so.23.1
-lib/libclang.so
-lib/libclang.so.23.1
-lib/libclang.so.${PKGVERSION}
+lib/libclang.${SHLIB_EXT}
+${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.${PKGVERSION}
+${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.23.1
 lib/libclangAPINotes.a
 lib/libclangAST.a
 lib/libclangASTMatchers.a
@@ -1431,4 +1431,3 @@ share/scan-view/Reporter.py
 share/scan-view/ScanView.py
 share/scan-view/bugcatcher.ico
 share/scan-view/startfile.py
-@pkgdir include/clang/Basic/Target/MSP430
