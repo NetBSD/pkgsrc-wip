@@ -6033,7 +6033,6 @@ SUBDIR+=	virtualjaguar-git
 SUBDIR+=	virtualxt
 SUBDIR+=	virus
 SUBDIR+=	vis
-SUBDIR+=	vis-editor
 SUBDIR+=	visidata
 SUBDIR+=	vista-fonts
 SUBDIR+=	vkeybd
