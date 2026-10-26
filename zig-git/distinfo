@@ -1,4 +1,4 @@
 $NetBSD$
 
-SHA1 (patch-CMakeLists.txt) = 6a8ad3063a7ecbbc3e604fb6d544c163b175c923
-SHA1 (patch-src_link_Elf.zig) = c734cf787a09c9477183b43b12cf8692b8a07935
+SHA1 (patch-CMakeLists.txt) = bb3561135250f31f0023700bb13625eaafabae88
+SHA1 (patch-build.zig) = 98d6c64e74024312e8e27191103c6c90ad10d840

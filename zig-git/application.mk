@@ -1,8 +1,11 @@
-# $NetBSD: application.mk,v 1.5 2023/02/28 20:56:27 nikita Exp $
+# $NetBSD: application.mk,v 1.11 2024/10/13 07:13:06 nia Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
 #
+
+RELRO_SUPPORTED=	no
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 # https://github.com/ziglang/zig/issues/3382
@@ -20,26 +23,52 @@
 # ReleaseSmall (-Drelease-small=true)
 # Medium runtime performance, Safety checks disabled, Slow compilation speed
 # Small binary size
-ZIGBUILDMODE?=		-Drelease-safe=true
+ZIGBUILDMODE?=		--release=safe
 ZIGCPUMODE?=		-Dcpu=baseline
 ZIGBUILDARGS?=
 ZIGTESTARGS?=
+ZIGPIE?=		yes
+ZIGSTRIP?=		yes
 
 TOOL_DEPENDS+=		zig-git-[0-9]*:../../wip/zig-git
 USE_LANGUAGES=		c
 
-#MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKSRC}/tmp
-# \todo: There is currently an issue building zig packages as RELRO.
-#RELRO_SUPPORTED=	no
+MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-global-cache
+MAKE_ENV+=		ZIG_LOCAL_CACHE_DIR=${WRKDIR}/zig-local-cache
 
-# figure out how to do this for all zig packages:
-#ZIGBUILDARGS+=		-Dpie=true
-#.if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
-#ZIGBUILDARGS+=		-Dstrip=true
-#.endif
+.if ${ZIGPIE:Uyes:M[yY][eE][sS]}
+ZIGBUILDARGS+=		-Dpie=true
+.endif
+
+.if ${ZIGSTRIP:Uyes:M[yY][eE][sS]}
+.  if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
+ZIGBUILDARGS+=		-Dstrip=true
+.  endif
+.endif
+
+# TODO: save to distfiles. zig fetch is distributed not centralized to github.com
+# DISTFILES?=			${DEFAULT_DISTFILES}
+# .for pkg in ${ZIG_PACKAGE_DEPENDS}
+# DIST_SUBDIR=			${PKGNAME}
+# DISTFILES+=			${pkg}
+# SITES.${pkg}+=			-${pkg}
+# .endfor
+
+.PHONY: print-zig-depends
+print-zig-depends:
+	${RUN}${AWK} 'BEGIN {print "# $$Net" "BSD$$"; print;} \
+                /url = / { split($$0, a, "\""); url=a[2]; print "ZIG_PACKAGE_DEPENDS+=\t" url; }' \
+		${WRKSRC}/build.zig.zon
+
+post-extract: zig-vendor-packages
+.PHONY: zig-vendor-packages
+zig-vendor-packages:
+.for pkg in ${ZIG_PACKAGE_DEPENDS}
+	${RUN} ${PREFIX}/bin/zig fetch --global-cache-dir ${WRKDIR}/zig-global-cache ${pkg}
+.endfor
+
 
 do-build:
-	mkdir ${WRKSRC}/tmp
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build ${ZIGBUILDMODE} ${ZIGCPUMODE} ${ZIGBUILDARGS} --prefix ${DESTDIR}${PREFIX}
 
 do-install:

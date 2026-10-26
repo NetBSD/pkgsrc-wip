@@ -1,4 +1,4 @@
-tuios: add new package tuios version 0.8.5
+tuios: add new package tuios version 0.12.0
 
 TUIOS (Terminal UI Operating System) is a terminal multiplexer and
 window manager written in Go. It provides a vim-like modal interface

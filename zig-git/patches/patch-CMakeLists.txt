@@ -1,47 +1,45 @@
-From dacd959704b8ffae32fa19c5ec428b06cbbbba4f Mon Sep 17 00:00:00 2001
-From: Michael Dusan <michael.dusan@gmail.com>
-Date: Sat, 29 Apr 2023 13:14:51 -0400
-Subject: [PATCH] cmake: add ZIG_PIE toggle for -Dpie
+$NetBSD: patch-CMakeLists.txt,v 1.8 2026/10/11 06:41:44 adam Exp $
 
-- add pkg-maintainer-friendly option to enable PIE when building zig
-- fix `ZIG_PIE_ARG` syntax
+Do not append a buildlinked directory to ZIG_CMAKE_PREFIX_PATH to avoid WRKREF
+in bin/zig.
 
---- CMakeLists.txt
+Skip stage3 during build to:
+* speed up building
+* avoid work directory reference in zig's RUNPATH.
+
+--- CMakeLists.txt.orig	2026-10-01 22:02:33.000000000 +0000
 +++ CMakeLists.txt
-@@ -130,6 +130,8 @@ if(ZIG_AR_WORKAROUND)
-   string(REPLACE "<CMAKE_AR>" "<CMAKE_AR> ar" CMAKE_CXX_ARCHIVE_CREATE ${CMAKE_CXX_ARCHIVE_CREATE})
+@@ -18,13 +18,7 @@ endif()
+ # cache variable. Furthermore, the environment variable follows the system path
+ # separator, such as ':' on POSIX and ';' on Windows, but the cache variable
+ # follows CMake's array behavior, i.e. always ';' for a separator.
+-list(APPEND ZIG_CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH}")
+-if(WIN32)
+-  list(APPEND ZIG_CMAKE_PREFIX_PATH $ENV{CMAKE_PREFIX_PATH})
+-else()
+-  string(REGEX REPLACE ":" ";" ZIG_CMAKE_PREFIX_PATH_STRING "$ENV{CMAKE_PREFIX_PATH}")
+-  list(APPEND ZIG_CMAKE_PREFIX_PATH "${ZIG_CMAKE_PREFIX_PATH_STRING}")
+-endif()
++set(ZIG_CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH}")
+ 
+ list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+ 
+@@ -790,18 +784,9 @@ if(NOT "${ZIG_TARGET_DYNAMIC_LINKER}" ST
  endif()
  
-+set(ZIG_PIE off CACHE BOOL "produce a position independent zig executable")
-+
- find_package(llvm 16)
- find_package(clang 16)
- find_package(lld 16)
-@@ -686,7 +688,12 @@ if(ZIG_STATIC)
- endif()
  
- add_library(zigcpp STATIC ${ZIG_CPP_SOURCES})
--set_target_properties(zigcpp PROPERTIES COMPILE_FLAGS ${EXE_CXX_FLAGS})
-+if(ZIG_PIE)
-+    set(ZIGCPP_CXX_FLAGS "${EXE_CXX_FLAGS} -fPIC")
-+else()
-+    set(ZIGCPP_CXX_FLAGS "${EXE_CXX_FLAGS}")
-+endif()
-+set_target_properties(zigcpp PROPERTIES COMPILE_FLAGS ${ZIGCPP_CXX_FLAGS})
+-add_custom_target(stage3 ALL
+-  DEPENDS "${PROJECT_BINARY_DIR}/stage3/bin/zig"
+-)
  
- target_link_libraries(zigcpp LINK_PUBLIC
-     ${CLANG_LIBRARIES}
-@@ -838,10 +845,10 @@ else()
-   set(ZIG_STATIC_ARG "")
- endif()
+ set(ZIG2_WORKING_DIR "${PROJECT_SOURCE_DIR}")
  
--if(CMAKE_POSITION_INDEPENDENT_CODE)
--  set(ZIG_PIE_ARG="-Dpie")
-+if(CMAKE_POSITION_INDEPENDENT_CODE OR ZIG_PIE)
-+  set(ZIG_PIE_ARG "-Dpie")
- else()
--  set(ZIG_PIE_ARG="")
-+  set(ZIG_PIE_ARG "")
- endif()
+-add_custom_command(
+-  OUTPUT "${PROJECT_BINARY_DIR}/stage3/bin/zig"
+-  COMMAND zig2 build ${ZIG_BUILD_ARGS} --prefix "${PROJECT_BINARY_DIR}/stage3"
+-  COMMENT "Building stage3"
+-  WORKING_DIRECTORY "${ZIG2_WORKING_DIR}"
+-)
  
- set(ZIG_BUILD_ARGS
+ set(ZIG_EXECUTABLE "$<TARGET_FILE:zig2>")
+ 
