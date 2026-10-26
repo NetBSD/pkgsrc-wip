@@ -44,6 +44,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/upx-doc.html ${DESTDIR}${PREFIX}/share/doc/upx
 
 
-.include "../../devel/ucl/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
