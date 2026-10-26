@@ -11,8 +11,6 @@ HOMEPAGE=	https://chawan.net/
 COMMENT=	TUI web browser with CSS, inline image and JavaScript support
 LICENSE=	unlicense
 
-TOOL_DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
-
 WRKSRC=		${WRKDIR}/chawan-${DISTNAME}
 
 USE_TOOLS+=	gmake pkg-config
