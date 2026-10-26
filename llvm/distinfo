@@ -7,5 +7,6 @@ SHA1 (patch-CMakeLists.txt) = e7ed5046d2f6f2f6338bc842e83666ed109bd2b0
 SHA1 (patch-cmake_config-ix.cmake) = f3167fbdd0ca3fea9f9e5516760b072af62d121a
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 036eec53f8a2c5921235341db1bf2f504dca8fea
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
+SHA1 (patch-llvm_include_llvm_Support_Allocator.h) = 27432fc3a4d08698438ab42ae52378f0451ff766
 SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 92558f2d7d87b7a26f7f3a2b3b3dc539ae13e672
 SHA1 (patch-utils_llvm-lit_CMakeLists.txt) = e6f223e68b8ef03175282af1afbfcd7e0b30c6ca
