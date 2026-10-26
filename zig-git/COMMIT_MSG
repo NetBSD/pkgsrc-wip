@@ -9,10 +9,10 @@ Changes since zig-git-0.11.0:
 * Follow lang/zig: devel/cmake/build.mk, ZIG_SHARED_LLVM, no RELRO/PIE,
   per-WRKDIR zig caches, skip stage3 at build time, langref.html into
   share/doc/zig. Patches and application.mk taken from lang/zig.
-* Build zig2.c with -fno-tree-sra under GCC (GCC bug 119085): upstream
-  applies it only up to GCC 14.3, but NetBSD's gcc 14.4.0 still
-  miscompiles zig2, which then fails building compiler_rt.
+* Build zig2.c with -fno-tree-sra under GCC: NetBSD gcc 14.4.0 miscompiles
+  zig2, which then fails building compiler_rt. 14.4.0 already has the
+  PR119085 fix, so upstream does not add the flag for this version.
 * Drop obsolete patches (PIE toggle and NetBSD PT_LOAD fix are upstream),
   the debug option and buildlink3.mk.
 * Remove do-test: `zig build` no longer takes --global-cache-dir, and
-  test-behavior exceeds FFS per-directory subdirectory limits.
+  test-behavior's cache may exceed FFS per-directory subdirectory limits.

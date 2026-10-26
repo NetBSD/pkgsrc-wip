@@ -41,8 +41,9 @@ BUILDLINK_TRANSFORM+=		rm:-Werror
 UNLIMIT_RESOURCES=	stacksize
 
 .include "../../mk/compiler.mk"
-# GCC bug 119085 (SRA) miscompiles zig2.c; upstream adds -fno-tree-sra only
-# up to GCC 14.3, but NetBSD gcc 14.4.0 still needs it.
+# gcc 14.4.0 miscompiles zig2.c (spurious comptime float errors while
+# building compiler_rt) unless -fno-tree-sra is used. It already has the
+# PR119085 fix, so upstream does not add the flag for it.
 .if ${CC_VERSION:Mgcc-*}
 CFLAGS+=	-fno-tree-sra
 .endif
