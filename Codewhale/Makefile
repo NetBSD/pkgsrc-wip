@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Codewhale-0.10.1
+DISTNAME=	Codewhale-0.10.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hmbown/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
