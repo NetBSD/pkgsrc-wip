@@ -8,7 +8,7 @@ GIT_REVISION=	b7f2c6d8fefdd2747e39e930bbe2c9450ec8f07c
 
 DISTNAME=	zig-git-0.18.0pre${ZIG_DEV}
 CATEGORIES=	lang
-GIT_REPO=	https://github.com/ziglang/zig.git
+GIT_REPO=	https://codeberg.org/ziglang/zig.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ziglang.org/
