@@ -75,8 +75,25 @@ REPLACE_BASH+=		src/vs/base/node/cpuUsage.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/show-size-changes.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/run-workflow.sh
 
-REPLACE_NODEJS=		extensions/node_modules/typescript/bin/tsc
+REPLACE_NODEJS=		extensions/copilot/node_modules/@anthropic-ai/sdk/bin/cli
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/app.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/index.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/napi-oop-runtime/node_modules/napi-oop-runtime/dist/codegen-cli.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/npm-loader.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/webview/node_modules/@webviewjs/webview/cli/index.mjs
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot/npm-loader.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/@grpc/proto-loader/build/bin/proto-loader-gen-types.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/acorn/bin/acorn
+REPLACE_NODEJS+=	extensions/copilot/node_modules/async-listener/node_modules/semver/bin/semver
+REPLACE_NODEJS+=	extensions/copilot/node_modules/cls-hooked/node_modules/semver/bin/semver
+REPLACE_NODEJS+=	extensions/copilot/node_modules/loose-envify/cli.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/markdown-it/bin/markdown-it.mjs
+REPLACE_NODEJS+=	extensions/copilot/node_modules/semver/bin/semver.js
+REPLACE_NODEJS+=	extensions/copilot/node_modules/which/bin/node-which
+REPLACE_NODEJS+=	extensions/node_modules/typescript/bin/tsc
 REPLACE_NODEJS+=	extensions/node_modules/typescript/bin/tsserver
+REPLACE_NODEJS+=	node_modules/@devcontainers/cli/devcontainer.js
+REPLACE_NODEJS+=	node_modules/@vscode/sandbox-runtime/dist/cli.js
 REPLACE_NODEJS+=	node_modules/@vscode/vscode-languagedetection/cli/index.js
 REPLACE_NODEJS+=	node_modules/chrome-remote-interface/bin/client.js
 REPLACE_NODEJS+=	node_modules/is-docker/cli.js
@@ -124,7 +141,7 @@ post-extract:
 
 	# Copy node modules to source tree
 	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV} && \
-		${FIND} . \(-type f -o -type l \) -print | pax -rw -pmp ${WRKSRC}
+		${FIND} . \( -type f -o -type l \) -print | pax -rw -pmp ${WRKSRC}
 
 	# Create moduleignore file
 	${CP} ${WRKSRC}/build/.moduleignore.linux \
@@ -212,9 +229,8 @@ do-build: do-cargo-build
 		npm --userconfig=${WRKSRC}/.npmrc run compile && \
 	${SETENV} ${MAKE_ENV} $${npm_env} \
 		npm --userconfig=${WRKSRC}/.npmrc run gulp vscode-linux-${ELECTRON_ARCH}-min
-#	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
-#		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
-#	${FIND} ${BUILDDIR} -type f -name '*.orig' -delete
+	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
+		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
 
 BUILDDIR=		${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}
 INSTALLATION_DIRS+=	lib/vscode
@@ -229,13 +245,15 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/code-oss.sh ${DESTDIR}${PREFIX}/bin/code-oss
 	cd ${BUILDDIR} && \
 		${FIND} . -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/lib/vscode
-	${LN} -sf ${PREFIX}/bin/rg \
-		${DESTDIR}${PREFIX}/lib/vscode/resources/app/node_modules/@vscode/ripgrep/bin/rg
 	${FIND} ${DESTDIR}${PREFIX}/lib/vscode/resources/app/extensions/ms-vscode* -type f -perm -g=w -exec chmod g-w {} +
+
+	# Cleaning
+	${FIND} ${DESTDIR}${PREFIX}/lib/vscode -type f \( -name '*.orig' -o -name '*.map' \) -delete
 	${RM} -r ${DESTDIR}${PREFIX}/lib/vscode/bin
 	${RM} -r ${DESTDIR}${PREFIX}/lib/vscode/gen
 	${RM} -r ${DESTDIR}${PREFIX}/lib/vscode/node_headers
 	${RM} -r ${DESTDIR}${PREFIX}/lib/vscode/resources/completions
+
 	${INSTALL_DATA} ${WRKSRC}/resources/linux/code.appdata.xml \
 		${DESTDIR}${PREFIX}/share/appdata/code-oss.appdata.xml
 	${INSTALL_DATA} ${WRKSRC}/resources/linux/code.desktop \

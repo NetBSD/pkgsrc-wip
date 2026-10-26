@@ -1,8 +1,411 @@
-Build on NetBSD latest stable branch pkgsrc -trunk, and pkgsrc latest quarterly.
-Tested on NetBSD latest stable branch with latest pkgsrc quarterly.
-
-NOTE:
-1) Pasting doesn't work:
-Known issue with electron32, comming release based on electron34 will fix
-- workaround: Removing editor.action.clipboardPasteAction keyboard shortcut
-  see: https://wiki.archlinux.org/title/Visual_Studio_Code#Pasting_doesn't_work
+work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/build/azure-pipelines/oss/merge-notices.ts:371:					const platformToken = /(darwin|win32|linux|linuxmusl|alpine|freebsd|android|arm64|x64|ia32|armhf|ppc64|s390x|musl)/i;
+work/vscode-1.142.0/build/azure-pipelines/oss/platform-binary.test.ts:86:	'@esbuild/freebsd-x64',
+work/vscode-1.142.0/build/azure-pipelines/oss/scan-licenses.ts:559:export const ARCH_SUFFIX_RE = /[/-](?:darwin|linux|linuxmusl|win32|android|freebsd|openbsd|netbsd|sunos|aix)-(?:x64|arm64|arm|ia32|ppc64|ppc64le|s390x|riscv64|loong64|mips64el|universal)(?:-(?:gnu|musl|msvc|glibc|gnueabihf|eabihf|androideabi))?$/;
+work/vscode-1.142.0/build/azure-pipelines/oss/scan-licenses.ts:568: * skip arch packages for platforms we don't target (android, freebsd, etc.).
+work/vscode-1.142.0/build/azure-pipelines/oss/section6.test.ts:70:check('os:["freebsd"] on linux -> FALSE (we do not ship freebsd)',
+work/vscode-1.142.0/build/azure-pipelines/oss/section6.test.ts:71:	isOsGatedShippedElsewhere(['freebsd'], 'linux') === false);
+work/vscode-1.142.0/build/lib/test/extensionTarget.test.ts:73:		assert.throws(() => getPlatformSpecificAssetName('my-ext', 'freebsd-x64'), /Invalid target platform/);
+work/vscode-1.142.0/build/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/build/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/build/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/build/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/build/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/build/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/build/node_modules/parse-json/node_modules/type-fest/source/package-json.d.ts:522:		| 'freebsd'
+work/vscode-1.142.0/build/node_modules/parse-json/node_modules/type-fest/source/package-json.d.ts:529:		| '!freebsd'
+work/vscode-1.142.0/build/node_modules/read-pkg/node_modules/type-fest/source/package-json.d.ts:522:		| 'freebsd'
+work/vscode-1.142.0/build/node_modules/read-pkg/node_modules/type-fest/source/package-json.d.ts:529:		| '!freebsd'
+work/vscode-1.142.0/build/node_modules/type-fest/source/package-json.d.ts:493:		| 'freebsd'
+work/vscode-1.142.0/build/node_modules/type-fest/source/package-json.d.ts:500:		| '!freebsd'
+work/vscode-1.142.0/build/rspack/node_modules/@types/node/fs.d.ts:1054:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/build/rspack/node_modules/@types/node/fs.d.ts:1072:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/build/rspack/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/build/rspack/node_modules/@types/node/process.d.ts:1667:                 * * `'freebsd'`
+work/vscode-1.142.0/build/rspack/node_modules/@types/node/process.d.ts:283:                | "freebsd"
+work/vscode-1.142.0/build/rspack/node_modules/@types/node/process.d.ts:290:                | "netbsd";
+work/vscode-1.142.0/extensions/configuration-editing/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/configuration-editing/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/configuration-editing/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/configuration-editing/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/configuration-editing/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/configuration-editing/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@anthropic-ai/sdk/src/internal/detect-platform.ts:186:  if (platform === 'freebsd') return 'FreeBSD';
+work/vscode-1.142.0/extensions/copilot/node_modules/@hediet/node-reload/node_modules/@types/node/globals.d.ts:821:        | 'freebsd'
+work/vscode-1.142.0/extensions/copilot/node_modules/@hediet/node-reload/node_modules/@types/node/globals.d.ts:827:        | 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4929:  * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4931:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4941:  * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4943:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4929:  * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4931:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4941:  * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4943:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4929:  * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4931:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4941:  * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4943:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/core/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4929:  * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4931:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4941:  * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:4943:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4929:  * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4931:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4941:  * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:4943:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4929:  * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4931:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4941:  * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:4943:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/sdk-trace-base/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:11149: * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:11155:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:11173: * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/experimental_attributes.d.ts:11179:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esm/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:11149: * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:11155:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:11173: * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/experimental_attributes.d.ts:11179:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/esnext/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:11149: * Enum value "freebsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:11155:export declare const OS_TYPE_VALUE_FREEBSD: "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:11173: * Enum value "netbsd" for attribute {@link ATTR_OS_TYPE}.
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/experimental_attributes.d.ts:11179:export declare const OS_TYPE_VALUE_NETBSD: "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1282:export declare const OSTYPEVALUES_FREEBSD = "freebsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1288:export declare const OSTYPEVALUES_NETBSD = "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1339:    FREEBSD: 'freebsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.d.ts:1341:    NETBSD: 'netbsd';
+work/vscode-1.142.0/extensions/copilot/node_modules/@types/node/fs.d.ts:833:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/copilot/node_modules/@types/node/fs.d.ts:851:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/copilot/node_modules/@types/node/os.d.ts:438:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/copilot/node_modules/@types/node/process.d.ts:1531:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/copilot/node_modules/@types/node/process.d.ts:262:                | "freebsd"
+work/vscode-1.142.0/extensions/copilot/node_modules/@types/node/process.d.ts:269:                | "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/electron/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/copilot/node_modules/electron/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/copilot/node_modules/electron/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/copilot/node_modules/electron/node_modules/@types/node/process.d.ts:1546:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/copilot/node_modules/electron/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/copilot/node_modules/electron/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/copilot/node_modules/openai/src/helpers/audio.ts:17:  freebsd: 'alsa',
+work/vscode-1.142.0/extensions/copilot/node_modules/openai/src/helpers/audio.ts:20:  netbsd: 'alsa',
+work/vscode-1.142.0/extensions/copilot/node_modules/openai/src/internal/detect-platform.ts:186:  if (platform === 'freebsd') return 'FreeBSD';
+work/vscode-1.142.0/extensions/copilot/node_modules/parse-json/node_modules/type-fest/source/package-json.d.ts:522:		| 'freebsd'
+work/vscode-1.142.0/extensions/copilot/node_modules/parse-json/node_modules/type-fest/source/package-json.d.ts:529:		| '!freebsd'
+work/vscode-1.142.0/extensions/copilot/node_modules/secretlint/node_modules/type-fest/source/package-json.d.ts:522:		| 'freebsd'
+work/vscode-1.142.0/extensions/copilot/node_modules/secretlint/node_modules/type-fest/source/package-json.d.ts:529:		| '!freebsd'
+work/vscode-1.142.0/extensions/css-language-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/css-language-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/css-language-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/css-language-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/css-language-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/css-language-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/css-language-features/server/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/css-language-features/server/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/css-language-features/server/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/css-language-features/server/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/css-language-features/server/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/css-language-features/server/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/debug-auto-launch/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/debug-auto-launch/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/debug-auto-launch/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/debug-auto-launch/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/debug-auto-launch/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/debug-auto-launch/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/debug-server-ready/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/debug-server-ready/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/debug-server-ready/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/debug-server-ready/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/debug-server-ready/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/debug-server-ready/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/emmet/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/emmet/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/emmet/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/emmet/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/emmet/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/emmet/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/extension-editing/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/extension-editing/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/extension-editing/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/extension-editing/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/extension-editing/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/extension-editing/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/extension-editing/node_modules/parse5/node_modules/@types/node/index.d.ts:358:                  | 'freebsd'
+work/vscode-1.142.0/extensions/git-base/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/git-base/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/git-base/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/git-base/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/git-base/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/git-base/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/git/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/git/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/git/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/git/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/git/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/git/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/github-authentication/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/github-authentication/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/github-authentication/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/github-authentication/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/github-authentication/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/github-authentication/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/github/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/github/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/github/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/github/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/github/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/github/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/grunt/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/grunt/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/grunt/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/grunt/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/grunt/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/grunt/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/gulp/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/gulp/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/gulp/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/gulp/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/gulp/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/gulp/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/html-language-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/html-language-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/html-language-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/html-language-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/html-language-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/html-language-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/html-language-features/server/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/html-language-features/server/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/html-language-features/server/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/html-language-features/server/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/html-language-features/server/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/html-language-features/server/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/ipynb/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/ipynb/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/ipynb/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/ipynb/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/ipynb/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/ipynb/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/jake/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/jake/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/jake/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/jake/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/jake/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/jake/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/json-language-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/json-language-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/json-language-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/json-language-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/json-language-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/json-language-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/json-language-features/server/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/json-language-features/server/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/json-language-features/server/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/json-language-features/server/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/json-language-features/server/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/json-language-features/server/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/markdown-language-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/markdown-language-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/markdown-language-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/markdown-language-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/markdown-language-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/markdown-language-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/media-preview/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/media-preview/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/media-preview/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/media-preview/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/media-preview/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/media-preview/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/merge-conflict/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/merge-conflict/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/merge-conflict/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/merge-conflict/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/merge-conflict/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/merge-conflict/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/mermaid-markdown-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/mermaid-markdown-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/mermaid-markdown-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/mermaid-markdown-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/mermaid-markdown-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/mermaid-markdown-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/microsoft-authentication/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/microsoft-authentication/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/microsoft-authentication/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/microsoft-authentication/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/microsoft-authentication/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/microsoft-authentication/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/notebook-renderers/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/notebook-renderers/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/notebook-renderers/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/notebook-renderers/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/notebook-renderers/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/notebook-renderers/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/npm/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/npm/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/npm/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/npm/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/npm/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/npm/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/php-language-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/php-language-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/php-language-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/php-language-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/php-language-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/php-language-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/references-view/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/references-view/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/references-view/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/references-view/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/references-view/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/references-view/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/search-result/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/search-result/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/search-result/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/search-result/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/search-result/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/search-result/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/simple-browser/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/simple-browser/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/simple-browser/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/simple-browser/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/simple-browser/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/simple-browser/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/terminal-suggest/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/terminal-suggest/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/terminal-suggest/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/terminal-suggest/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/terminal-suggest/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/terminal-suggest/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/terminal-suggest/src/completions/upstream/go.ts:91:Supported only on linux/amd64, freebsd/amd64, darwin/amd64, windows/amd64,
+work/vscode-1.142.0/extensions/tunnel-forwarding/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/tunnel-forwarding/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/tunnel-forwarding/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/tunnel-forwarding/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/tunnel-forwarding/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/tunnel-forwarding/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/typescript-language-features/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/typescript-language-features/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/typescript-language-features/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/typescript-language-features/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/typescript-language-features/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/typescript-language-features/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/vscode-api-tests/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-api-tests/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-api-tests/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/vscode-api-tests/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/vscode-api-tests/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/vscode-api-tests/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/vscode-colorize-perf-tests/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-colorize-perf-tests/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-colorize-perf-tests/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/vscode-colorize-perf-tests/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/vscode-colorize-perf-tests/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/vscode-colorize-perf-tests/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/vscode-colorize-tests/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-colorize-tests/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-colorize-tests/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/vscode-colorize-tests/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/vscode-colorize-tests/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/vscode-colorize-tests/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/extensions/vscode-test-resolver/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-test-resolver/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/extensions/vscode-test-resolver/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/extensions/vscode-test-resolver/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/extensions/vscode-test-resolver/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/extensions/vscode-test-resolver/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/node_modules/@anthropic-ai/sdk/src/internal/detect-platform.ts:186:  if (platform === 'freebsd') return 'FreeBSD';
+work/vscode-1.142.0/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/node_modules/@types/ssh2/node_modules/@types/node/fs.d.ts:861:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/node_modules/@types/ssh2/node_modules/@types/node/fs.d.ts:879:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/node_modules/@types/ssh2/node_modules/@types/node/os.d.ts:422:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/node_modules/@types/ssh2/node_modules/@types/node/process.d.ts:1184:                 * * `'freebsd'`
+work/vscode-1.142.0/node_modules/@types/ssh2/node_modules/@types/node/process.d.ts:55:                | "freebsd"
+work/vscode-1.142.0/node_modules/@types/ssh2/node_modules/@types/node/process.d.ts:62:                | "netbsd";
+work/vscode-1.142.0/node_modules/editorconfig/node_modules/@types/node/globals.d.ts:649:        | 'freebsd'
+work/vscode-1.142.0/node_modules/type-fest/source/package-json.d.ts:543:			| 'freebsd'
+work/vscode-1.142.0/node_modules/type-fest/source/package-json.d.ts:550:			| '!freebsd'
+work/vscode-1.142.0/src/vs/code/electron-main/app.ts:1230:			case 'freebsd':
+work/vscode-1.142.0/src/vs/code/electron-main/app.ts:1231:			case 'netbsd':
+work/vscode-1.142.0/src/vs/platform/agentHost/test/common/agentHostResources.test.ts:51:		const platforms = ['windows', 'linux', 'macos', 'win32', 'darwin', 'freebsd', 'Windows', '', null, 1];
+work/vscode-1.142.0/src/vs/platform/agentHost/test/node/agentHostResources.test.ts:28:		assert.deepStrictEqual(['win32', 'linux', 'darwin', 'freebsd'].map(platform => collectAgentHostResources({ ...source, platform }).platform),
+work/vscode-1.142.0/src/vs/platform/agentHost/test/node/agentSdkDownloader.test.ts:184:		assert.strictEqual(resolveSdkTarget(fakePkg(true), { platform: 'freebsd' as NodeJS.Platform, arch: 'x64', libc: undefined }), undefined);
+work/vscode-1.142.0/src/vs/platform/agentHost/test/node/codex/codexPackagePaths.test.ts:49:			assert.strictEqual(codexPackageSuffix('freebsd' as NodeJS.Platform, 'x64'), undefined);
+work/vscode-1.142.0/src/vs/platform/environment/node/userDataPath.ts:100:		case 'netbsd':
+work/vscode-1.142.0/src/vs/platform/environment/node/userDataPath.ts:99:		case 'freebsd':
+work/vscode-1.142.0/src/vs/workbench/api/browser/mainThreadTask.ts:730:			case 'freebsd':
+work/vscode-1.142.0/src/vs/workbench/api/browser/mainThreadTask.ts:731:			case 'netbsd':
+work/vscode-1.142.0/src/vs/workbench/services/actions/common/menusExtensionPoint.ts:1282:			case 'freebsd':
+work/vscode-1.142.0/src/vs/workbench/services/actions/common/menusExtensionPoint.ts:1283:			case 'netbsd':
+work/vscode-1.142.0/test/automation/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/automation/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/automation/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/test/automation/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/test/automation/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/test/automation/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/test/automation/src/electron.ts:158:		case 'freebsd':
+work/vscode-1.142.0/test/automation/src/electron.ts:159:		case 'netbsd':
+work/vscode-1.142.0/test/automation/src/electron.ts:185:		case 'freebsd':
+work/vscode-1.142.0/test/automation/src/electron.ts:186:		case 'netbsd': {
+work/vscode-1.142.0/test/integration/browser/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/integration/browser/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/integration/browser/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/test/integration/browser/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/test/integration/browser/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/test/integration/browser/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/test/mcp/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/mcp/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/mcp/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/test/mcp/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/test/mcp/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/test/mcp/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/test/monaco/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/monaco/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/monaco/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/test/monaco/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/test/monaco/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/test/monaco/node_modules/@types/node/process.d.ts:272:                | "netbsd";
+work/vscode-1.142.0/test/smoke/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/smoke/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
+work/vscode-1.142.0/test/smoke/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+work/vscode-1.142.0/test/smoke/node_modules/@types/node/process.d.ts:1545:                 * * `'freebsd'`
+work/vscode-1.142.0/test/smoke/node_modules/@types/node/process.d.ts:265:                | "freebsd"
+work/vscode-1.142.0/test/smoke/node_modules/@types/node/process.d.ts:272:                | "netbsd";

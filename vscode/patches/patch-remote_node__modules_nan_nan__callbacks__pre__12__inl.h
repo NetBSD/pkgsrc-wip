@@ -1,6 +1,6 @@
 $NetBSD$
 
-* Fiy snapshot usage
+* Fix snapshot usage
 
 --- remote/node_modules/nan/nan_callbacks_pre_12_inl.h.orig	2026-10-24 14:37:41.009523000 +0000
 +++ remote/node_modules/nan/nan_callbacks_pre_12_inl.h

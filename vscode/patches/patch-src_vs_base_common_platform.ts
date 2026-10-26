@@ -9,7 +9,7 @@ $NetBSD$
  	_isWindows = (nodeProcess.platform === 'win32');
  	_isMacintosh = (nodeProcess.platform === 'darwin');
 -	_isLinux = (nodeProcess.platform === 'linux');
-+	_isLinux = (nodeProcess.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd');
++	_isLinux = (nodeProcess.platform === 'linux' || nodeProcess.platform === 'freebsd' || nodeProcess.platform === 'netbsd');
  	_isLinuxSnap = _isLinux && !!nodeProcess.env['SNAP'] && !!nodeProcess.env['SNAP_REVISION'];
  	_isElectron = isElectronProcess;
  	_isCI = !!nodeProcess.env['CI'] || !!nodeProcess.env['BUILD_ARTIFACTSTAGINGDIRECTORY'] || !!nodeProcess.env['GITHUB_WORKSPACE'];

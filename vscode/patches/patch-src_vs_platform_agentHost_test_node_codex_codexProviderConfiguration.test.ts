@@ -1,6 +1,6 @@
 $NetBSD$
 
-* TODO: imported from FreeBSD ports, pkgsrc's vscode hasn't test make target
+* Define variable type
 
 --- src/vs/platform/agentHost/test/node/codex/codexProviderConfiguration.test.ts.orig	2026-10-14 09:52:01.000000000 +0000
 +++ src/vs/platform/agentHost/test/node/codex/codexProviderConfiguration.test.ts

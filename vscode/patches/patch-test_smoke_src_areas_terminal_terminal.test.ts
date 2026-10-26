@@ -1,6 +1,6 @@
 $NetBSD$
 
-* TODO: imported from FreeBSD ports, pkgsrc's vscode hasn't test make target
+* Add NetBSD and FreeBSD support
 
 --- test/smoke/src/areas/terminal/terminal.test.ts.orig	2026-10-14 09:52:01.000000000 +0000
 +++ test/smoke/src/areas/terminal/terminal.test.ts
