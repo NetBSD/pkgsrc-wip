@@ -19,7 +19,7 @@ COMMENT=		Ultimate packer for executables
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl pod2man pod2html pod2text
+USE_TOOLS+=		cmake gmake perl pod2man pod2html pod2text
 
 NO_CONFIGURE=		yes
 
