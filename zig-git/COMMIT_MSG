@@ -1,0 +1,18 @@
+zig-git: update to 0.18.0-dev.624+b7f2c6d8f
+
+Development snapshot of Zig master, built against LLVM 23 from wip/llvm
+(lang/zig 0.17.0 follows lang/llvm 22; Zig master requires LLVM 23.x).
+
+Changes since zig-git-0.11.0:
+* Track upstream on Codeberg; the GitHub repository is a stale mirror.
+* Pin GIT_REVISION and pass -DZIG_VERSION, since the checkout has no tags.
+* Follow lang/zig: devel/cmake/build.mk, ZIG_SHARED_LLVM, no RELRO/PIE,
+  per-WRKDIR zig caches, skip stage3 at build time, langref.html into
+  share/doc/zig. Patches and application.mk taken from lang/zig.
+* Build zig2.c with -fno-tree-sra under GCC (GCC bug 119085): upstream
+  applies it only up to GCC 14.3, but NetBSD's gcc 14.4.0 still
+  miscompiles zig2, which then fails building compiler_rt.
+* Drop obsolete patches (PIE toggle and NetBSD PT_LOAD fix are upstream),
+  the debug option and buildlink3.mk.
+* Remove do-test: `zig build` no longer takes --global-cache-dir, and
+  test-behavior exceeds FFS per-directory subdirectory limits.

@@ -40,20 +40,17 @@ BUILDLINK_TRANSFORM+=		rm:-Werror
 
 UNLIMIT_RESOURCES=	stacksize
 
+.include "../../mk/compiler.mk"
+# GCC bug 119085 (SRA) miscompiles zig2.c; upstream adds -fno-tree-sra only
+# up to GCC 14.3, but NetBSD gcc 14.4.0 still needs it.
+.if ${CC_VERSION:Mgcc-*}
+CFLAGS+=	-fno-tree-sra
+.endif
+
 RELRO_SUPPORTED=	no
 MKPIE_SUPPORTED=	no
 
 CONFLICTS+=	zig-[0-9]*
-
-# after install, because the zig binary ends up in paths like
-# ./zig-0.10.1/zig-cache/o/e6445b80597d6bc8fe865e7254800ac9/zig
-# unless we want to run find for the executable here?
-do-test:
-	mkdir ${WRKDIR}/cache
-	cd ${WRKSRC} && \
-		${DESTDIR}${PREFIX}/bin/zig build test-behavior \
-		--cache-dir ${WRKDIR}/cache --global-cache-dir ${WRKDIR}/cache \
-		--zig-lib-dir ${WRKSRC}/lib
 
 .include "../../devel/cmake/build.mk"
 .include "../../wip/lld/buildlink3.mk"
