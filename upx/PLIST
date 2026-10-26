@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/upx
-man/man1/upx.1
-share/doc/upx/upx-doc.html
-share/doc/upx/upx-doc.txt
