@@ -188,6 +188,12 @@ CONFIGURE_ARGS+=	--set llvm.targets="Mips;X86"
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc}
 CONFIGURE_ARGS+=        --set llvm.targets="PowerPC;X86"
 .endif
+# NetBSD/i386 can no longer build the RISCV target, ref.
+# https://github.com/llvm/llvm-project/issues/230790
+# so omit it, but keep the rest, at least for now:
+.if  ${MACHINE_PLATFORM:MNetBSD-*-i386}
+CONFIGURE_ARGS+=	--set llvm.targets="AArch64;AMDGPU;ARM;BPF;Hexagon;LoongArch;MSP430;Mips;NVPTX;PowerPC;Sparc;SystemZ;WebAssembly;X86"
+.endif
 
 RUSTLIB_COMPILER=	lib/rustlib/rustc-src/rust/compiler
 RUSTC_CG_CRANELIFT=	${RUSTLIB_COMPILER}/rustc_codegen_cranelift
