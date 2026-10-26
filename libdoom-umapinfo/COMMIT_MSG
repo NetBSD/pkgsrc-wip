@@ -1,3 +1,36 @@
-games/libdoom-umapinfo: Import 1.1.0
+libdoom-umapinfo: Update to 2.0.0
 
-A standalone parser for Doom UMAPINFO data.
+2.0.0  2026-10-24  Release
+--------------------------
+
+Fixed:
+- Correctly map first octet of quoted string to '?' (if it is not a
+  printable US-ASCII character) for terminal output of command line
+  utility
+
+Changed:
+- Breaking: New major version (not ABI compatible with major version 1)
+- Breaking: Change path of header file
+- Breaking: Change API namespace prefix
+- Breaking: Rename command line utility to "doom-umapinfo2-cli"
+- Accept data conforming to UMAPINFO Rev 2.3
+  Update syntax definition (file "SYNTAX")
+- Replace license CC0 1.0 Universal (SPDX ID "CC0-1.0")
+  with BSD Zero Clause License (SPDX ID "0BSD")
+- Testsuite requires POSIX.1-2001
+- Color output for rule "test" to run testsuite with POSIX make
+
+Added:
+- Guide for update from major version 1 (file "MIGRATION")
+- Dual license option for code
+  - BSD 2-Clause "Simplified" License
+  - GNU General Public License v2.0 or later
+  (SPDX license-expression "BSD-2-Clause OR GPL-2.0-or-later")
+- Keywords "jumping", "crouching" and "freeaim"
+- Ternary identifiers "disallow", "allow" and "require"
+- Support for port-exclusive keywords and identifiers
+- Rule "check" to run testsuite with POSIX make
+  For compatibility with GNU autotools
+- Rule "test-mono" to run testsuite with POSIX make
+  and monochrome output (color is the default)
+- More unit tests
