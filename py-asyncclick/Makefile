@@ -10,9 +10,7 @@ HOMEPAGE=	https://github.com/python-trio/asyncclick/
 COMMENT=	Composable command line interface toolkit, async fork
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=0:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 

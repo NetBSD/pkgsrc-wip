@@ -12,7 +12,7 @@ COMMENT=	Configuration tool for fetchmail
 LICENSE=	gnu-gpl-v1 AND gnu-gpl-v2 AND modified-bsd AND public-domain AND gnu-lgpl-v2.1
 
 DEPENDS+=	${DISTNAME}{,nb*}:../../mail/fetchmail
-DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-Tk>=0:../../x11/py-Tk
 
 NO_BUILD=	YES
 
@@ -32,7 +32,6 @@ INSTALL_TARGET=		install-pythonPYTHON
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 REPLACE_PYTHON=	fetchmailconf.py
-PYTHON_VERSIONS_ACCEPTED=	310
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf.py ${DESTDIR}${PREFIX}/bin/fetchmailconf

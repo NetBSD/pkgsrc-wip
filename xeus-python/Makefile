@@ -11,8 +11,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 
-
-PYTHON_VERSIONS_ACCEPTED=	312 311 310 # Package says < 3.13
+PYTHON_VERSIONS_ACCEPTED=	312 311 # Package says < 3.13
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pybind11>=3.0.0:../../devel/py-pybind11
 
@@ -28,10 +27,8 @@ CONFIGURE_ENV+=		VERBOSE=1
 LDFLAGS+=	-lexecinfo
 .endif
 
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} xpython xpython-${PYVERSSUFFIX}
-
 
 SUBST_CLASSES+=			pyversion
 SUBST_MESSAGE.pyversion=	Replace xpython with xpython-${PYVERSSUFFIX}
