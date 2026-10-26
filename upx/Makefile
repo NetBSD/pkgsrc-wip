@@ -4,15 +4,14 @@ DISTNAME=		upx-5.2.1
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_GITHUB:=upx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
-EXTRACT_SUFX=		.tar.gz
 
-GITHUB_SUBMODULES+=     upx upx-vendor-bzip2 v${PKGVERSION_NOREV}-upx-vendor vendor/bzip2
-GITHUB_SUBMODULES+=     upx upx-vendor-doctest v${PKGVERSION_NOREV}-upx-vendor vendor/doctest
-GITHUB_SUBMODULES+=     upx upx-vendor-lzma-sdk v${PKGVERSION_NOREV}-upx-vendor vendor/lzma-sdk
-GITHUB_SUBMODULES+=     upx upx-vendor-ucl v${PKGVERSION_NOREV}-upx-vendor vendor/ucl
-GITHUB_SUBMODULES+=     upx upx-vendor-valgrind v${PKGVERSION_NOREV}-upx-vendor vendor/valgrind
-GITHUB_SUBMODULES+=     upx upx-vendor-zlib v${PKGVERSION_NOREV}-upx-vendor vendor/zlib
-GITHUB_SUBMODULES+=     upx upx-vendor-zstd v${PKGVERSION_NOREV}-upx-vendor vendor/zstd
+GITHUB_SUBMODULES+=	upx upx-vendor-bzip2 v${PKGVERSION_NOREV}-upx-vendor vendor/bzip2
+GITHUB_SUBMODULES+=	upx upx-vendor-doctest v${PKGVERSION_NOREV}-upx-vendor vendor/doctest
+GITHUB_SUBMODULES+=	upx upx-vendor-lzma-sdk v${PKGVERSION_NOREV}-upx-vendor vendor/lzma-sdk
+GITHUB_SUBMODULES+=	upx upx-vendor-ucl v${PKGVERSION_NOREV}-upx-vendor vendor/ucl
+GITHUB_SUBMODULES+=	upx upx-vendor-valgrind v${PKGVERSION_NOREV}-upx-vendor vendor/valgrind
+GITHUB_SUBMODULES+=	upx upx-vendor-zlib v${PKGVERSION_NOREV}-upx-vendor vendor/zlib
+GITHUB_SUBMODULES+=	upx upx-vendor-zstd v${PKGVERSION_NOREV}-upx-vendor vendor/zstd
 
 MAINTAINER=		drixter@e-utp.net
 HOMEPAGE=		https://upx.github.io/
@@ -35,8 +34,6 @@ BUILDLINK_TRANSFORM+=		rm:-Werror
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,upx.map
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 share/doc/upx
-
 do-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} release
 
@@ -50,4 +47,3 @@ do-install:
 .include "../../devel/ucl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
