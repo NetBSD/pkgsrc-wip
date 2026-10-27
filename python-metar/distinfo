@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (python-metar-2.0.2.tar.gz) = b3989da8cb0ce216546d18ad3f6731d1de486dd285685200730121badefe595b
+SHA512 (python-metar-2.0.2.tar.gz) = ca644e72b0674902619d254fbb2c7c95c3c04bbb67750d9620bf709bac51c5ee6a47df279b722e1a88536a55dfa309f68e798115e48144ac204d1aee796e0f8d
+Size (python-metar-2.0.2.tar.gz) = 2572624 bytes

@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/metar-0.0.0.dist-info/METADATA
+${PYSITELIB}/metar-0.0.0.dist-info/RECORD
+${PYSITELIB}/metar-0.0.0.dist-info/WHEEL
+${PYSITELIB}/metar-0.0.0.dist-info/licenses/LICENSE
+${PYSITELIB}/metar-0.0.0.dist-info/top_level.txt
+${PYSITELIB}/metar/Datatypes.py
+${PYSITELIB}/metar/Datatypes.pyc
+${PYSITELIB}/metar/Datatypes.pyi
+${PYSITELIB}/metar/Datatypes.pyo
+${PYSITELIB}/metar/Metar.py
+${PYSITELIB}/metar/Metar.pyc
+${PYSITELIB}/metar/Metar.pyi
+${PYSITELIB}/metar/Metar.pyo
+${PYSITELIB}/metar/Station.py
+${PYSITELIB}/metar/Station.pyc
+${PYSITELIB}/metar/Station.pyi
+${PYSITELIB}/metar/Station.pyo
+${PYSITELIB}/metar/__init__.py
+${PYSITELIB}/metar/__init__.pyc
+${PYSITELIB}/metar/__init__.pyo
+${PYSITELIB}/metar/nsd_cccc.txt
+${PYSITELIB}/metar/py.typed
