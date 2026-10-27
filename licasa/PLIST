@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/licasa
+lib/licasa/plugins/imageformats/liblicasa_qoi_plugin.so
+share/applications/licasa.desktop
+share/icons/hicolor/512x512/apps/licasa.png
+share/licenses/licasa/LICENSE
+share/pixmaps/licasa.png

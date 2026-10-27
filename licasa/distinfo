@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (licasa-0.8.1.tar.gz) = b57cb714367d00492ea944c8bfa27370f125b7f9fee4f349c08d5bbf2f177eba
+SHA512 (licasa-0.8.1.tar.gz) = 3f70ce9d298aa4e1c670f54a02db6a32dab369d7b58926f9ef974445aa846c2e1d03b98f742354fd8cd61d0a9d69931b3c093ebd5dc027a875449d7032bc418c
+Size (licasa-0.8.1.tar.gz) = 24721415 bytes
