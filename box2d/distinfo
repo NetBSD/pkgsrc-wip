@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.5 2026/09/22 07:55:31 ryoon Exp $
+
+BLAKE2s (box2d-3.2.0.tar.gz) = 46e75e7b9f8ee398f38ad63e49c4a3b81bbc1b5679a29594aa0059d0bc34a345
+SHA512 (box2d-3.2.0.tar.gz) = 874bde300e7e33e950152f1d86cb4e2989cd7e30b2d89ac29d9596d9251b514972285eaba19b2d2941870f6d0e446265bf22e4d2a6df287f2c9807e0a82c8ed1
+Size (box2d-3.2.0.tar.gz) = 1471322 bytes

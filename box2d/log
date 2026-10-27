@@ -1,0 +1,44 @@
+API changes
+
+    Joint definitions share a common b2JointDef base and use local frames instead of anchors, axes and reference angles.
+    Mouse joint removed, the motor joint now has spring and velocity targets.
+    Motion locks replace fixed rotation.
+    Chain shapes are segment based.
+    Contact ids (b2ContactId) in contact events, with b2Contact_GetData.
+    Pre-solve callback redesigned, plus a separate continuous pre-solve callback.
+    Native task system. Box2D runs its own threads when no task callbacks are hooked up.
+
+New features
+
+    Large worlds with optional double precision (BOX2D_DOUBLE_PRECISION).
+    Recording and replay, plus world snapshots (experimental).
+    Contact recycling for better stability and performance.
+    Dynamic character mover with new mover and pogo joints (experimental).
+    Joint events for breakable joints (force and torque thresholds).
+    Tunable continuous collision per body (safety factor).
+    Restitution iterations and propagation.
+    Wind and drag on shapes.
+    Distance joint spring force limits.
+    Loose chain segments.
+    Continuous sensor events. Fast shapes are swept against static sensors, and bullets against all non-bullet sensors.
+    Runtime AVX2 dispatch with SSE2 fallback.
+
+Improvements
+
+    Many optimizations.
+    Faster broad-phase and ray casts. Much less single threaded work.
+    Faster island merging and splitting.
+    Kinematic bodies are cheaper. Graph coloring treats them like static bodies.
+    More stable prismatic joint under stress.
+    More accurate rotational inertia for shapes far from the body origin.
+    Invalid input is now rejected and logged in release builds.
+    Various SIMD optimizations.
+
+Infrastructure
+
+    pkg-config support.
+    Swift and Zig builds in CI.
+    MinGW, clang-cl and Windows ARM64 builds.
+    JSON descriptions of the public API in api/ for binding generators, one per precision.
+    CMake presets.
+    Revised samples UI and many new samples.

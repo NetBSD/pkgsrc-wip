@@ -379,6 +379,7 @@ SUBDIR+=	boron
 SUBDIR+=	botan3-git
 SUBDIR+=	bottom
 SUBDIR+=	bowtie2
+SUBDIR+=	box2d
 SUBDIR+=	bpcscripts
 SUBDIR+=	brain-mesh-builder
 SUBDIR+=	breakpad
