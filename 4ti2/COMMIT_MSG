@@ -1,5 +1,0 @@
-4ti2: Add version 1.6.15
-
-What's Changed
-Do not discard const qualifiers by @jamesjer in #58
-Fix some compiler warnings by @cxzhong in #60
