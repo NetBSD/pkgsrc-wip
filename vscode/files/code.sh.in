@@ -14,5 +14,7 @@ export LD_LIBRARY_PATH
 [ -f ~/.config/vscode-flags.conf ] || echo 'VSCODE_FLAGS=""' > ~/.config/vscode-flags.conf
 . ~/.config/vscode-flags.conf
 
+export SSL_CERT_DIR=/etc/openssl/certs
+
 ELECTRON_RUN_AS_NODE=1 exec @PREFIX@/lib/vscode/code-oss \
 @PREFIX@/lib/vscode/resources/app/out/cli.js ${VSCODE_FLAGS} "$@"
