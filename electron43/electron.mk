@@ -4,31 +4,14 @@
 #	Absolute path for node-gyp.
 #
 
-ELECTRON_VER=		43.8.0
+ELECTRON_VER=		43.8.3
 ELECTRON_MAJOR=		${ELECTRON_VER:tu:C/\\.[[:digit:]\.]*//}
 NODE_VERSIONS_ACCEPTED=	24
 ELECTRON=		electron${ELECTRON_MAJOR}
 
-# Package-settable variable
-# Values:
-# - "bundled" if the package bundles electron libraries
-# - "dependency" if the package uses electron as dependency
-USE_ELECTRON?=		electronpkg
+UDEV_REQUIRED=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-PACKAGE_NAME=		${PKGPATH:C/.*\///}
-
-.if !empty(USE_ELECTRON:Melectronpkg) && empty(PACKAGE_NAME:M${ELECTRON})
-PKG_FAIL_REASON+=	"USE_ELECTRON is not defined for ${PKGPATH}."
-PKG_FAIL_REASON+=	"Should be \"bundled\" or \"dependency\"."
-.elif !empty(PACKAGE_NAME:M${ELECTRON}) && empty(USE_ELECTRON:Melectronpkg)
-PKG_FAIL_REASON+=	"USE_ELECTRON is defined for ${PKGPATH} package."
-.endif
-
-.if ${USE_ELECTRON} == "dependency"
-DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
-.elif ${USE_ELECTRON} == "bundled"
+.if ${DISTNAME} != ${ELECTRON}-${ELECTRON_VER}
 TOOL_DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .endif
 
@@ -46,14 +29,10 @@ FILES_SUBST+=		ELECTRON=${ELECTRON}
 FILES_SUBST+=		ELECTRONBIN=${ELECTRONBIN}
 PLIST_SUBST+=		ELECTRON_MAJOR=${ELECTRON_MAJOR}
 
-.if ${USE_ELECTRON} == "bundled" || ${USE_ELECTRON} == "electronpkg"
-
-UDEV_REQUIRED=		yes
-
 PLIST_VARS+=		swiftshader
-.  if ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "x86_64"
 PLIST.swiftshader=	yes
-.  endif
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
@@ -119,4 +98,3 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
-.endif

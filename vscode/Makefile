@@ -32,7 +32,7 @@ USE_ELECTRON=		bundled
 TOOL_DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
 TOOL_DEPENDS+=		wabt-[0-9]*:../../wip/wabt
 
-.include "../../wip/electron43/platform.mk"
+.include "../../wip/electron43/electron.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 

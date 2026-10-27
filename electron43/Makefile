@@ -97,7 +97,7 @@ TOOL_DEPENDS+=			yarn-[0-9]*:../../devel/yarn
 
 DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 
-.include "platform.mk"
+.include "electron.mk"
 .include "../../mk/compiler.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
