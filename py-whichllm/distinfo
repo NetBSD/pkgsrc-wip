@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (whichllm-0.5.20.tar.gz) = dc399c471017f79934d317f86c87da5bc69034d17c9332d6bdc1ed68ecb31f94
-SHA512 (whichllm-0.5.20.tar.gz) = d20143dfd20283c4341e5b841e36ccd282dfda9a28f5dc6bb5b95411857dfa0d5f546205378206fcf0e325697b783681a685fb0d2f8c8b4055d7e45131ad6d30
-Size (whichllm-0.5.20.tar.gz) = 1129025 bytes
+BLAKE2s (whichllm-0.5.21.tar.gz) = 82ca7b6c07b8674d99a269b9cfff3dc95468895480f97c296d777b0e4aa6c718
+SHA512 (whichllm-0.5.21.tar.gz) = d33d9b233c3fefb70019becb5e403b5c6e5a3571daac097d1f621f1d7d18a06bbb12ca7be5fd45a21058efc7b9c2116c2fd67ae8785f94bb186d69206fcf95f2
+Size (whichllm-0.5.21.tar.gz) = 1129499 bytes

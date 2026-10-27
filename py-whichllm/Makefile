@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	whichllm-0.5.20
+DISTNAME=	whichllm-0.5.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Andyyyy64/}
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-typer>=0.9:../../devel/py-typer
 #    "nvidia-ml-py>=12.0",
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-
-# TODO: Extract dependencies from pyproject.toml
 
 USE_LANGUAGES=	# none
 
