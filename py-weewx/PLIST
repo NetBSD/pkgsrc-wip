@@ -52,6 +52,12 @@ ${PYSITELIB}/weectllib/report_actions.pyo
 ${PYSITELIB}/weectllib/report_cmd.py
 ${PYSITELIB}/weectllib/report_cmd.pyc
 ${PYSITELIB}/weectllib/report_cmd.pyo
+${PYSITELIB}/weectllib/rest_actions.py
+${PYSITELIB}/weectllib/rest_actions.pyc
+${PYSITELIB}/weectllib/rest_actions.pyo
+${PYSITELIB}/weectllib/rest_cmd.py
+${PYSITELIB}/weectllib/rest_cmd.pyc
+${PYSITELIB}/weectllib/rest_cmd.pyo
 ${PYSITELIB}/weectllib/station_actions.py
 ${PYSITELIB}/weectllib/station_actions.pyc
 ${PYSITELIB}/weectllib/station_actions.pyo
@@ -366,6 +372,7 @@ ${PYSITELIB}/weewx_data/skins/Seasons/font/license.txt
 ${PYSITELIB}/weewx_data/skins/Seasons/hilo.inc
 ${PYSITELIB}/weewx_data/skins/Seasons/identifier.inc
 ${PYSITELIB}/weewx_data/skins/Seasons/index.html.tmpl
+${PYSITELIB}/weewx_data/skins/Seasons/lang/ca.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/cz.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/de.conf
 ${PYSITELIB}/weewx_data/skins/Seasons/lang/en.conf
