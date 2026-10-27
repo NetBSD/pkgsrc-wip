@@ -4809,6 +4809,7 @@ SUBDIR+=	py-spglib
 SUBDIR+=	py-sphereTS
 SUBDIR+=	py-spherical
 SUBDIR+=	py-spherical-functions
+SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-bootstrap-theme
 SUBDIR+=	py-sphinx-theme-builder
 SUBDIR+=	py-sphinxcontrib-apidoc

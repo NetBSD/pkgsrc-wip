@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.75 2026/10/20 05:58:05 adam Exp $
+
+BLAKE2s (sphinx-9.2.0.tar.gz) = 9677b7fd41533ab5256210fc93fb907453cc74ef0644ce479cd1f0eeb913881d
+SHA512 (sphinx-9.2.0.tar.gz) = 657ccd6985d44636175ecace0d70e0da183280a4cdd162b82a2db1568f10484b5f425de50f071260c444660df4a8cea8fddbe19d65e1681a91abbdfad7b3d5ee
+Size (sphinx-9.2.0.tar.gz) = 8782438 bytes
