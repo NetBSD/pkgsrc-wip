@@ -2239,6 +2239,7 @@ SUBDIR+=	libzeep
 SUBDIR+=	libzippp
 SUBDIR+=	libzn-poly
 SUBDIR+=	libzrtp
+SUBDIR+=	licasa
 SUBDIR+=	lidia
 SUBDIR+=	lie
 SUBDIR+=	lief
