@@ -6,7 +6,6 @@ SUBDIR+=	0ad
 SUBDIR+=	0ad-data
 SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
-SUBDIR+=	4ti2
 SUBDIR+=	7-zip-zstd
 SUBDIR+=	7z-bin
 SUBDIR+=	8bc
