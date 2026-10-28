@@ -1,0 +1,7 @@
+jgmenu is a simple, independent and contemporary-looking X11 menu, designed
+for scripting, modding and tweaking.
+
+It is hackable and has a simple code base. It does not depend on any toolkits
+such as GTK and Qt, but uses cairo and pango to render the menu.
+
+It can optionally use some appearance settings from XSettings, tint2 and GTK.

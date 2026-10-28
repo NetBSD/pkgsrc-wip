@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (jgmenu-4.7.0.tar.gz) = 69c9331204debac0be78963240b28d1d5a5cb19b74bf9c63db40711dc3a3ee24
+SHA512 (jgmenu-4.7.0.tar.gz) = b856921672dd2e559e4db9f7d3401b257de4435401017231c386cc1bb7ee48062564b5afd2ef15888908cd48a2f152611d3247597d88bbef7977b7d92ee137bb
+Size (jgmenu-4.7.0.tar.gz) = 387270 bytes
+SHA1 (patch-docs_manual_Makefile) = ba1cdf6d3ed0c79c65000736200413f955a84dd2
+SHA1 (patch-src_jgmenu__run) = 57683f85ab717351549c6659ed3bb6a4a9703659

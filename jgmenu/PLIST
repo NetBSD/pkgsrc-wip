@@ -1,0 +1,25 @@
+@comment $NetBSD$
+bin/jgmenu
+bin/jgmenu_run
+libexec/jgmenu/jgmenu-apps
+libexec/jgmenu/jgmenu-config
+libexec/jgmenu/jgmenu-greeneye
+libexec/jgmenu/jgmenu-hide-app.sh
+libexec/jgmenu/jgmenu-i18n
+libexec/jgmenu/jgmenu-init.sh
+libexec/jgmenu/jgmenu-ob
+libexec/jgmenu/jgmenu-obtheme
+libexec/jgmenu/jgmenu-socket
+libexec/jgmenu/jgmenu-themes.sh
+libexec/jgmenu/jgmenu-unity-hack.py
+man/man1/jgmenu-apps.1
+man/man1/jgmenu-i18n.1
+man/man1/jgmenu-lx.1
+man/man1/jgmenu-ob.1
+man/man1/jgmenu-pmenu.1
+man/man1/jgmenu.1
+man/man1/jgmenu_run.1
+man/man7/jgmenututorial.7
+man/man7/jgmenuunicode.7
+share/applications/jgmenu.desktop
+share/icons/hicolor/scalable/apps/jgmenu.svg

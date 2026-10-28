@@ -1,0 +1,13 @@
+x11/jgmenu:  Add jgmenu version 4.7.0
+
+Jgmenu is simple, independent and contemporary-looking X11 menu, designed
+for scripting, modding and tweaking. It has UTF-8 search support.
+
+It can display the following types of menu (or any combination of):
+
+    bespoke menu using a jgmenu flavoured CSV format
+    application menu (XDG compatible) with localisation support
+    pipe menus
+    openbox XML menu including openbox pipe-menus
+
+It optionally can use appearance settings fro XSettings, tint2 and GTK.

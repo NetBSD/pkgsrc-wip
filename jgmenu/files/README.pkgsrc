@@ -1,0 +1,8 @@
+To enable jgmenu to access XDG configuration files, the following should be
+set in either ~/.xinitrc, ~/.xsession or the environment of your window
+manager,
+eg ~/.config/openbox/environment:
+
+export XDG_CONFIG_DIRS=/usr/pkg/etc/xdg
+export XDG_DATA_DIRS=/usr/pkg/share
+

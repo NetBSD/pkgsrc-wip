@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use BSD pkill for lockfile
+
+--- src/jgmenu_run.orig	2026-09-20 22:36:09.431153959 +0000
++++ src/jgmenu_run
+@@ -58,7 +58,7 @@ then
+ 	if test -e ${JGMENU_LOCKFILE}
+ 	then
+ 		send_tint2_env_vars_to_jgmenu
+-		if killall -SIGUSR1 jgmenu >/dev/null 2>&1
++		if pkill -SIGUSR1 jgmenu >/dev/null 2>&1
+ 		then
+ 			exit 0
+ 		else

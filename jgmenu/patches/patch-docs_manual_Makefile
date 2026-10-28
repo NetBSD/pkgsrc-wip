@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use pkgsrc /man location
+
+--- docs/manual/Makefile.orig	2026-09-21 15:52:06.171399856 +0000
++++ docs/manual/Makefile
+@@ -4,7 +4,7 @@ man7pages  = jgmenututorial.7 jgmenuunic
+ manpages   = $(man1pages) $(man7pages)
+ 
+ prefix ?= /usr/local
+-mandir ?= $(prefix)/share/man
++mandir ?= $(prefix)/man
+ man1dir = $(mandir)/man1
+ man7dir = $(mandir)/man7
+ 
