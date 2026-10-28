@@ -4,7 +4,7 @@
 # package only builds the gateway (agentcc-gateway). Keep the version in one
 # place (VERSION below); DISTNAME and PKGNAME are derived from it so updating
 # is a one-line change and `make fetch` keeps working.
-VERSION=	1.54.0
+VERSION=	1.56.1
 DISTNAME=	future-agi-${VERSION}
 PKGNAME=	agentcc-gateway-${VERSION}
 CATEGORIES=	net

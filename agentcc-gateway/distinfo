@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (future-agi-1.54.0.tar.gz) = 606673d66ad84f2c3c70bfdb95787e92fcaf035d3115df96aa8c71f78dbc9332
-SHA512 (future-agi-1.54.0.tar.gz) = 727ce3f1d36671dc2e986de214d3e9b282885e84313f253a1daaf37b0cebd17847243245693eeb582099e64117a3c0401e333f275ebdf63e6de8357849085557
-Size (future-agi-1.54.0.tar.gz) = 81361091 bytes
+BLAKE2s (future-agi-1.56.1.tar.gz) = 56599a2c6dc8237e74479f9eaaab4b330e6afee4042d24c4e1ede4f7ac580f8d
+SHA512 (future-agi-1.56.1.tar.gz) = 89393d827fc78b5b7ab6c6ca718a78c3f3a1ab62fdde9a6ef72f1ceee8023b5e1fe444e7509376652c4110c258fefc55990401492ee97b0f067fdc580ec7448a
+Size (future-agi-1.56.1.tar.gz) = 81735954 bytes
 BLAKE2s (github.com_cespare_xxhash_v2_@v_v2.3.0.mod) = 03371e0ad30714eb81f3613e1d710ab1771554035bcf8b4cd97e7bc4f2d5eadb
 SHA512 (github.com_cespare_xxhash_v2_@v_v2.3.0.mod) = c1b9f572957bc4ed1ad0c61d22b7b5d6a4c863df2aaeb4cf914e304af21d949c9cfc53dc8eb67aacdf3dd56f339ee6f4a1f5fa464121d9db79b7b3febfb3251b
 Size (github.com_cespare_xxhash_v2_@v_v2.3.0.mod) = 45 bytes
