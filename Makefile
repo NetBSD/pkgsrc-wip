@@ -1758,6 +1758,7 @@ SUBDIR+=	icestorm_update
 SUBDIR+=	icewm
 SUBDIR+=	icmpchat
 SUBDIR+=	ics2txt
+SUBDIR+=	icu
 SUBDIR+=	id3
 SUBDIR+=	ideviceinstaller
 SUBDIR+=	ifstat

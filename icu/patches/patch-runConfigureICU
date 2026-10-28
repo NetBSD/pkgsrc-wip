@@ -1,0 +1,15 @@
+$NetBSD: patch-runConfigureICU,v 1.3 2025/03/30 21:10:47 wiz Exp $
+
+Add support for DragonFlyBSD.
+
+--- runConfigureICU.orig	2018-10-01 22:39:56.000000000 +0000
++++ runConfigureICU
+@@ -328,7 +328,7 @@ case $platform in
+         DEBUG_CXXFLAGS='-FS -Zi -MDd'
+         DEBUG_LDFLAGS='-DEBUG'
+         ;;
+-    *BSD)
++    *BSD | DragonFly)
+         THE_OS="BSD"
+         THE_COMP="the GNU C++"
+         DEBUG_CFLAGS='-g -O0'

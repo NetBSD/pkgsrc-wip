@@ -1,0 +1,16 @@
+ICU 79 updates to Unicode 18 (blog), including new characters and
+scripts, emoji, collation & IDNA changes, and corresponding APIs
+and implementations.
+
+It also updates to CLDR 49 (blog) locale data with many additions
+and corrections.
+
+Line break backwards-iteration performance has been significantly
+improved, fixing a long-standing regression.
+
+C++ and Java implementations of the CLDR MessageFormat 2.0
+specification have been updated to CLDR 49. Some of the API remains
+in technology preview.
+
+ICU 79 and CLDR 49 are major releases, including a new version of
+Unicode and major locale data improvements.
