@@ -1885,6 +1885,7 @@ SUBDIR+=	jemboss-standalone
 SUBDIR+=	jetbrains-mono-ttf
 SUBDIR+=	jfsw-git
 SUBDIR+=	jgloss
+SUBDIR+=	jgmenu
 SUBDIR+=	jgraphx
 SUBDIR+=	jhbuild
 SUBDIR+=	jibri
