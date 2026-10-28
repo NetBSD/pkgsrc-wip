@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2026/08/23 20:21:02 ci4ic4 Exp $
 
-DISTNAME=	zellij-0.45.0
+DISTNAME=	zellij-0.45.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zellij-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
