@@ -2,3 +2,5 @@
   - address \todo issues with upstream (or really, just fix them upstream)
   - resolve 'make test' not running tests
  
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-117609
