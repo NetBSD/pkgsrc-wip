@@ -1,2 +1,2 @@
 @comment $NetBSD$
-bin/${PKGVERSION}
+bin/irust
