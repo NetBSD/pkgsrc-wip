@@ -1,8 +1,8 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.llama.cpp
-PKG_OPTIONS_OPTIONAL_GROUPS=	target
-PKG_OPTIONS_GROUP.target+=	cuda ggml vulkan
+PKG_OPTIONS_OPTIONAL_GROUPS=	backend
+PKG_OPTIONS_GROUP.backend+=	cuda ggml vulkan
 PKG_SUGGESTED_OPTIONS+=		ggml
 
 .include "../../mk/bsd.options.mk"
