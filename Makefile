@@ -551,7 +551,6 @@ SUBDIR+=	clixon-pyapi
 SUBDIR+=	clock-signal
 SUBDIR+=	clockspeed
 SUBDIR+=	cloud-nuke
-SUBDIR+=	cloudflare-speed-cli
 SUBDIR+=	cloudflared
 SUBDIR+=	clustershell
 SUBDIR+=	cm-unicode-ttf
