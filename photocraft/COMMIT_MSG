@@ -1,1 +1,6 @@
-wip/photocraft: Add photocraft-0.3.0
+wip/photocraft: Update to 0.17.0
+
+Fetch the git dependencies (craft-libs and storytold's egui, winit and
+winprint.rs forks) with GITHUB_SUBMODULES and turn them into path
+dependencies; keep their crates.io namesakes out of cargo-depends.mk.
+Move the NetBSD physical-memory patch to its new location in budget.rs.

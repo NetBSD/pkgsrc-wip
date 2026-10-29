@@ -1,0 +1,70 @@
+$NetBSD$
+
+Replace the git dependencies with the repositories extracted under
+${WRKDIR}/git by GITHUB_SUBMODULES, so the build works offline.
+
+--- Cargo.toml.orig
++++ Cargo.toml
+@@ -10,7 +10,7 @@
+ rust-version = "1.95"
+ 
+ [workspace.dependencies]
+-craft-ui = { git = "https://github.com/storytold/craft-libs", rev = "92d392cff132eaf53e13afff77f38b5c11b73aa0", features = ["serde"] }
++craft-ui = { path = "../git/craft-libs/crates/ui", features = ["serde"] }
+ # internal
+ photocraft-geom = { path = "crates/geom" }
+ photocraft-color = { path = "crates/color" }
+@@ -39,10 +39,10 @@
+ photocraft-ipp = { path = "crates/ipp" }
+ 
+ # external
+-craft-print = { git = "https://github.com/storytold/craft-libs", rev = "92d392cff132eaf53e13afff77f38b5c11b73aa0" }
+-craft-docpath = { version = "0.1.0", git = "https://github.com/storytold/craft-libs", rev = "92d392cff132eaf53e13afff77f38b5c11b73aa0" }
+-craft-jpeg = { git = "https://github.com/storytold/craft-libs", rev = "92d392cff132eaf53e13afff77f38b5c11b73aa0" }
+-craft-update = { git = "https://github.com/storytold/craft-libs", version = "=0.1.0", rev = "92d392cff132eaf53e13afff77f38b5c11b73aa0", features = ["egui"] }
++craft-print = { path = "../git/craft-libs/crates/print" }
++craft-docpath = { version = "0.1.0", path = "../git/craft-libs/crates/docpath" }
++craft-jpeg = { path = "../git/craft-libs/crates/jpeg" }
++craft-update = { path = "../git/craft-libs/crates/update", version = "=0.1.0", features = ["egui"] }
+ thiserror = "2"
+ serde = { version = "1", features = ["derive", "rc"] }
+ serde_json = "1"
+@@ -184,18 +184,23 @@
+ 
+ # Keep the complete egui family and native event bridge on reviewed fork commits.
+ [patch.crates-io]
+-ecolor = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-emath = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-epaint = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-epaint_default_fonts = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui-winit = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui-wgpu = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui_glow = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui_extras = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui_kittest = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui_system_font_provider = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-eframe = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui_demo_lib = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-egui_inspection = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+-winit = { git = "https://github.com/storytold/winit.git", rev = "a517b3846ee8457d84ee4975110bfda6797c44dc" }
++ecolor = { path = "../git/egui/crates/ecolor" }
++emath = { path = "../git/egui/crates/emath" }
++epaint = { path = "../git/egui/crates/epaint" }
++epaint_default_fonts = { path = "../git/egui/crates/epaint_default_fonts" }
++egui = { path = "../git/egui/crates/egui" }
++egui-winit = { path = "../git/egui/crates/egui-winit" }
++egui-wgpu = { path = "../git/egui/crates/egui-wgpu" }
++egui_glow = { path = "../git/egui/crates/egui_glow" }
++egui_extras = { path = "../git/egui/crates/egui_extras" }
++egui_kittest = { path = "../git/egui/crates/egui_kittest" }
++egui_system_font_provider = { path = "../git/egui/crates/egui_system_font_provider" }
++eframe = { path = "../git/egui/crates/eframe" }
++egui_demo_lib = { path = "../git/egui/crates/egui_demo_lib" }
++egui_inspection = { path = "../git/egui/crates/egui_inspection" }
++winit = { path = "../git/winit" }
++
++# Transitive git deps of craft-print.
++[patch."https://github.com/storytold/winprint.rs"]
++craft-winprint-gdi = { path = "../git/winprint-417ac3c/crates/gdi" }
++winprint = { path = "../git/winprint-5f80b9b" }
