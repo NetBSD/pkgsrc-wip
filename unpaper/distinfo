@@ -1,7 +1,6 @@
 $NetBSD$
 
-RMD160 (unpaper-6.1.tar.xz) = 3337c18090c13e388eade98b1010b44893901c82
-SHA512 (unpaper-6.1.tar.xz) = afef705985d3c265672c9e42130acc34befc080c361f3169e299b5110c662d0b9845a9d0ca4fc3aad468f49967ded36fb60ffed296373569dd7337c3cb81e79c
-Size (unpaper-6.1.tar.xz) = 2655724 bytes
-SHA1 (patch-file.c) = 6560d8173e776600b0db9c976f1fa565d2d5ccec
-SHA1 (patch-unpaper.c) = 90f1b85de7c8aa22d4daed1be2a57dffde19cc5b
+BLAKE2s (unpaper-7.0.0.tar.xz) = 43744fffacaa08d2507c760c725e1918f1469110cf04984e2444cdfb50837179
+SHA512 (unpaper-7.0.0.tar.xz) = 58da969e773bf16ffee98b96f903ac5347f66d9a93c63bdb9131f5d45f4d7973c09f364ac2f27f8cb61f75de0421c6b01aa248fa9619fbdbde30fcebc76aa484
+Size (unpaper-7.0.0.tar.xz) = 4430572 bytes
+SHA1 (patch-unpaper.c) = e8b25f519ebe4da132edf35f3d203a00f4ce9e8e
