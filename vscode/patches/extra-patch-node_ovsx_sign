@@ -12,3 +12,13 @@ $NetBSD$
      "node-pty": "^1.2.0-beta.15",
      "open": "^10.1.2",
      "playwright-core": "1.61.0-alpha-2026-06-04",
+--- remote/package.json.orig	2026-10-14 09:52:01.000000000 +0000
++++ remote/package.json
+@@ -44,6 +44,7 @@
+     "minimist": "^1.2.8",
+     "node-addon-api": "^6.0.0",
+     "node-pty": "^1.2.0-beta.15",
++    "node-ovsx-sign": "^1.2.0",
+     "ssh2": "^1.16.0",
+     "tar": "^7.5.20",
+     "tas-client": "0.4.6",

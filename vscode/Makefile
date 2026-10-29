@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.142.0
+DISTNAME=		vscode-1.143.1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -24,11 +24,11 @@ COMMENT=		The Open Source build of Visual Studio Code (vscode) editor
 LICENSE=		mit
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		zip gmake pkg-config pax bash tar
+USE_TOOLS+=		zip gmake pkg-config pax bash tar patch
 
 USE_CXX_FEATURES+=	c++20
-USE_ELECTRON=		bundled
 
+TOOL_DEPENDS+=		jq-[0-9]*:../../devel/jq
 TOOL_DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
 TOOL_DEPENDS+=		wabt-[0-9]*:../../wip/wabt
 
@@ -130,6 +130,8 @@ RIPGREP_PATHES+=	node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELE
 RIPGREP_PATHES+=	build/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 RIPGREP_PATHES+=	remote/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 RIPGREP_PATHES+=	${OS_PROXY_RESOLV_DIR}/ripgrep/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
+NPM_FLAGS=		--offline --ignore-scripts --no-audit --no-fund --no-update-notifier
+NPM_FLAGS+=		--cache ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}
 
 NOT_PAX_MPROTECT_SAFE+=	lib/vscode/code-oss
 
@@ -141,7 +143,16 @@ post-extract:
 
 	# Copy node modules to source tree
 	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV} && \
-		${FIND} . \( -type f -o -type l \) -print | pax -rw -pmp ${WRKSRC}
+		${FIND} . -type f -name "*.tgz" -print | pax -rw -pmp ${WRKSRC}
+
+	# Install node modules from the cache tarball
+	cd ${WRKSRC} && ${PATCH} < ${PATCHDIR}/extra-patch-node_ovsx_sign
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install ${NPM_FLAGS}
+	for d in `node --input-type=module -e \
+	    "console.log(JSON.stringify((await import('${WRKSRC}/build/npm/dirs.ts')).dirs))" \
+	    | jq -r '.[]'`; do \
+		(cd ${WRKSRC}/$${d} && ${SETENV} ${MAKE_ENV} npm install ${NPM_FLAGS}) || exit 1; \
+	done
 
 	# Create moduleignore file
 	${CP} ${WRKSRC}/build/.moduleignore.linux \

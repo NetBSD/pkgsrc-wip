@@ -1,3 +1,95 @@
+1) mit-krb5:
+KRB5_DEFAULT=   mit-krb5    <<< why is needed?
+KRB5_ACCEPTED=  mit-krb5
+.include "../../mk/krb5.buildlink3.mk"
+
+ * If KRB5_DEFAULT is not set, the build failed:
+gyp info using node-gyp@12.4.0
+gyp info using node@24.21.0 | netbsd | x64
+gyp info find Python using Python version 3.13.16 found at "/usr/pkg/bin/python3.13"
+gyp info spawn /usr/pkg/bin/python3.13
+gyp info spawn args [
+gyp info spawn args '/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/usr/pkgsrc/wip/vscode/work/vscode-1.143.1/remote/node_modules/kerberos/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/usr/pkg/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/usr/pkg',
+gyp info spawn args '-Dnode_gyp_dir=/usr/pkg/lib/node_modules/npm/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/usr/pkg/$(Configuration)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/usr/pkgsrc/wip/vscode/work/vscode-1.143.1/remote/node_modules/kerberos',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+Package krb5 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `krb5.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'krb5' not found
+Package krb5 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `krb5.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'krb5' not found
+gyp info spawn gmake
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build', '--jobs', 16 ]
+gmake: Entering directory '/usr/pkgsrc/wip/vscode/work/vscode-1.143.1/remote/node_modules/kerberos/build'
+  CXX(target) Release/obj.target/kerberos/src/kerberos.o
+  CXX(target) Release/obj.target/kerberos/src/unix/base64.o
+  CXX(target) Release/obj.target/kerberos/src/unix/kerberos_gss.o
+  CXX(target) Release/obj.target/kerberos/src/unix/kerberos_unix.o
+In file included from ../src/unix/kerberos_gss.cc:17:
+../src/unix/kerberos_gss.h:22:14: fatal error: gssapi/gssapi_generic.h: No such file or directory
+   22 |     #include <gssapi/gssapi_generic.h>
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake: *** [kerberos.target.mk:111: Release/obj.target/kerberos/src/unix/kerberos_gss.o] Error 1
+gmake: *** Waiting for unfinished jobs....
+In file included from ../src/kerberos_common.h:5,
+                 from ../src/kerberos.h:13,
+                 from ../src/kerberos.cc:1:
+../src/unix/kerberos_gss.h:22:14: fatal error: gssapi/gssapi_generic.h: No such file or directory
+   22 |     #include <gssapi/gssapi_generic.h>
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake: *** [kerberos.target.mk:111: Release/obj.target/kerberos/src/kerberos.o] Error 1
+In file included from ../src/unix/../kerberos_common.h:5,
+                 from ../src/unix/../kerberos.h:13,
+                 from ../src/unix/kerberos_unix.cc:3:
+../src/unix/../unix/kerberos_gss.h:22:14: fatal error: gssapi/gssapi_generic.h: No such file or directory
+   22 |     #include <gssapi/gssapi_generic.h>
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake: *** [kerberos.target.mk:111: Release/obj.target/kerberos/src/unix/kerberos_unix.o] Error 1
+gmake: Leaving directory '/usr/pkgsrc/wip/vscode/work/vscode-1.143.1/remote/node_modules/kerberos/build'
+gyp ERR! build error 
+gyp ERR! stack Error: `gmake` failed with exit code: 2
+gyp ERR! stack at ChildProcess.<anonymous> (/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:219:23)
+gyp ERR! System NetBSD 11.0_STABLE
+gyp ERR! command "/usr/pkg/bin/node" "/usr/pkg/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "--userconfig=/usr/pkgsrc/wip/vscode/work/vscode-1.143.1/remote/.npmrc" "rebuild" "-j" "16"
+gyp ERR! cwd /usr/pkgsrc/wip/vscode/work/vscode-1.143.1/remote/node_modules/kerberos
+gyp ERR! node -v v24.21.0
+gyp ERR! node-gyp -v v12.4.0
+gyp ERR! not ok 
+*** Error code 1
+
+Stop.
+make[1]: stopped making "replace" in /usr/pkgsrc/wip/vscode
+*** Error code 1
+
+
+
+
+2) Check these:
 work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/fs.d.ts:1070:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
 work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/fs.d.ts:1088:     * See the POSIX [`lchmod(2)`](https://www.freebsd.org/cgi/man.cgi?query=lchmod&sektion=2) documentation for more detail.
 work/vscode-1.142.0/.vscode/extensions/vscode-selfhost-test-provider/node_modules/@types/node/os.d.ts:449:     * Possible values are `'aix'`, `'darwin'`, `'freebsd'`, `'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
