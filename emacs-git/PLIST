@@ -3872,6 +3872,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/ps-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ps-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/python.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/python.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/refactor.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/refactor.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ruby-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ruby-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ruby-ts-mode.el.gz
