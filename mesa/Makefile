@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mesa-26.2.5
+DISTNAME=	mesa-26.2.6
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
@@ -34,13 +34,13 @@ PLIST_SUBST+=	GLVER="1.2.0"
 PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
 
 # classic DRI drivers
-PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
+PLIST_VARS+=	i830 i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
-PLIST_VARS+=		r300 svga nouveau
+PLIST_VARS+=	r300 svga nouveau
 
 # other features
-PLIST_VARS+=		arm kms vaapi
+PLIST_VARS+=	arm kms vaapi
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
