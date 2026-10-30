@@ -1,0 +1,8 @@
+IPv6 Neighbor Discovery Protocol (NDP) Proxy
+
+Modern IPv6 networks can face challenges when placing a router between an ISP
+gateway and internal clients.
+
+Some ISPs and cloud providers do not offer IPv6 prefix delegation (DHCPv6-PD).
+Without delegated prefixes, you cannot assign unique subnets to downstream
+interfaces, making traditional routing impossible.
