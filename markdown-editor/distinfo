@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (Markdown-editor-2.10.0.tar.gz) = dcb8692ffe23fdfbbc8cbf30f3f8ad1b8629cb42f439bdfea40a6a96ea97f50b
+SHA512 (Markdown-editor-2.10.0.tar.gz) = 4766259fba6952c0c532529f06d1bc2f67325fd40c44580a97345ec0512a55a051ebcbffe0354adb027d6050e5655aa4cdf6c7cecc2f4fcbdc4fe4188b9fd022
+Size (Markdown-editor-2.10.0.tar.gz) = 1597117 bytes
+SHA1 (patch-tests_tst_roundtripfuzz.cpp) = 13ae180d9c2e79e5176767cfb7cfffe064b7ce55

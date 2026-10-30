@@ -1,0 +1,4 @@
+Markdown-editor is a lightweight, native WYSIWYG Markdown editor written in
+C++ with Qt6 (no Electron).  It supports TeX formulas, Mermaid/PlantUML
+diagrams, document tabs, spell checking, export to PDF, HTML, LaTeX, ODT,
+DOCX and EPUB, and provides its user interface in nine languages.
