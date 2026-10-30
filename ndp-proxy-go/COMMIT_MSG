@@ -1,0 +1,23 @@
+ndp-proxy-go: Add version 1.1.1
+
+1.1.1:
+A correctness release that introduces the P flag to proxied RAs 
+and decouples the Prefix/Router learning lifecycle when static 
+prefixes and routers are given.
+
+1.1.0:
+
+A feature release that adds a prefix responder mode primarily for NPTv6 use.
+
+What's Changed
+Add prefix responder with DAD-based host claims by @Monviech in #11
+
+1.0.5:
+
+A small feature release focusing on generalizing some of the FreeBSD specific 
+code paths so the proxy can also compile and run on other platforms. 
+First experimental target is linux.
+
+What's Changed
+Add experimental Linux compatibility by @Monviech in #10
+

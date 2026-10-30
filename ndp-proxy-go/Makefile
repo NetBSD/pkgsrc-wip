@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/Monviech/ndp-proxy-go/
 COMMENT=	IPv6 Neighbor Discovery Protocol (NDP) Proxy
 LICENSE=	2-clause-bsd
 
-
 USE_LANGUAGES=	c
 
 .include "go-modules.mk"
