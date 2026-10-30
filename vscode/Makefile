@@ -284,7 +284,5 @@ do-install:
 .include "../../lang/rust/cargo.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-KRB5_DEFAULT=	mit-krb5
-KRB5_ACCEPTED=	mit-krb5
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
