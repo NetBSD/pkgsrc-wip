@@ -7,8 +7,8 @@ COMMENT=	Vim editor (vi clone) with X11 GTK2 GUI
 .include		"../../wip/vim-classic-share/Makefile.common"
 
 
-DEPENDS+=		vim-classic-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
-CONFLICTS+=		vim-[0-9]* vim-gtk3-[0-9]* vim-gtk4-[0-9]* vim-motif-[0-9]*
+DEPENDS+=		vim-classic-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../wip/vim-classic-share
+CONFLICTS+=		vim-[0-9]* vim-gtk[234]-[0-9]* vim-motif-[0-9]*
 
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 CONFIGURE_ARGS+=	--enable-gui=gtk2
