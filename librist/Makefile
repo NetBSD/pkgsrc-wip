@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://code.videolan.org/rist/librist/-/archive/v0.2.18/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	https://code.videolan.org/rist/librist/-/archive/v0.2.18/
+HOMEPAGE=	https://code.videolan.org/rist/librist/
 COMMENT=	Implementation of the RIST protocol
 LICENSE=	2-clause-bsd
 
