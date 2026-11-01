@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pimsync-v0.6.0
+DISTNAME=	pimsync-v0.7.0
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	time net
 # doesn't allow direct downloads
@@ -13,6 +13,8 @@ COMMENT=	Synchronise calendars and contacts between different storages
 LICENSE=	eupl-v1.2
 
 RUST_REQ+=	1.88.0
+
+USE_TOOLS+=	pkg-config
 
 # yes, including PKGREVISION
 MAKE_ENV+=	PIMSYNC_VERSION=${PKGVERSION}
@@ -30,4 +32,5 @@ post-install:
 
 .include "cargo-depends.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
