@@ -38,6 +38,9 @@ ${PYSITELIB}/whichllm/cli_validation.pyo
 ${PYSITELIB}/whichllm/commands/__init__.py
 ${PYSITELIB}/whichllm/commands/__init__.pyc
 ${PYSITELIB}/whichllm/commands/__init__.pyo
+${PYSITELIB}/whichllm/commands/autopick.py
+${PYSITELIB}/whichllm/commands/autopick.pyc
+${PYSITELIB}/whichllm/commands/autopick.pyo
 ${PYSITELIB}/whichllm/commands/hardware.py
 ${PYSITELIB}/whichllm/commands/hardware.pyc
 ${PYSITELIB}/whichllm/commands/hardware.pyo
