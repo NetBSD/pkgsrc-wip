@@ -107,6 +107,9 @@ ${PYSITELIB}/mbake/utils/line_utils.pyo
 ${PYSITELIB}/mbake/utils/pattern_utils.py
 ${PYSITELIB}/mbake/utils/pattern_utils.pyc
 ${PYSITELIB}/mbake/utils/pattern_utils.pyo
+${PYSITELIB}/mbake/utils/rule_context.py
+${PYSITELIB}/mbake/utils/rule_context.pyc
+${PYSITELIB}/mbake/utils/rule_context.pyo
 ${PYSITELIB}/mbake/utils/version_utils.py
 ${PYSITELIB}/mbake/utils/version_utils.pyc
 ${PYSITELIB}/mbake/utils/version_utils.pyo

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mbake-1.4.6
+DISTNAME=	mbake-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mbake/}
@@ -26,8 +26,8 @@ SUBST_MESSAGE.make=	Fix to use GNU make.
 
 CHECK_PORTABILITY_SKIP+=	tests/fixtures/shell_operators/*
 
-# as of 1.4.5
-# 2 failed, 209 passed
+# as of 1.5.0
+# 4 failed, 5604 passed, 905 skipped
 
 USE_LANGUAGES=	# none
 
