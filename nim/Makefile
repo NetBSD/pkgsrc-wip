@@ -64,11 +64,12 @@ post-extract:
 	${MKDIR} ${WRKSRC}/dist/atlas/dist
 	${MV} ${WRKSRC}/sat-${SAT_TAG} ${WRKSRC}/dist/atlas/dist/sat
 
-# nim doesn't honor the environment variable LDFLAGS. In order to
-# support PKGSRC_USE_RELRO, we need to translate the flags to compiler
-# options.
+# Nim doesn't automatically passes LDFLAGS/CFLAGS variables to the compiler
+# but rather uses its own --passL/--passC flags. The two lines below translate
+# the flags so the nim compiler actually uses them.
 NIM_FLAGS=	${LDFLAGS:S/^/--passL:/}
-NIM_FLAGS=	${CFLAGS:S/^/--passC:/}
+NIM_FLAGS+=	${CFLAGS:S/^/--passC:/}
+
 do-build:
 	# build nim csource
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} sh ./build.sh
@@ -76,15 +77,31 @@ do-build:
 		"${SH}" "${SETENV}" "${PREFIX}" "${PREFIX}" \
 		> ${WRKSRC}/nim-wrapper.sh
 	# build koch
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim c --skipUserCfg --skipParentCfg --parallelBuild:${_MAKE_JOBS_N} koch
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim c \
+		--skipUserCfg \
+		--skipParentCfg \
+		--parallelBuild:${_MAKE_JOBS_N} \
+		koch
+
 	# build nim
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot --parallelBuild:${_MAKE_JOBS_N} -d:release ${NIM_FLAGS}
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot \
+		--parallelBuild:${_MAKE_JOBS_N} \
+		-d:release ${NIM_FLAGS}
+
 	# build tools
 	# TODO: build the 'external' tools, in separate packages
 	# cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch --stable toolsNoExternal --parallelBuild:${_MAKE_JOBS_N} ${NIM_FLAGS}
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch --stable tools --parallelBuild:${_MAKE_JOBS_N} ${NIM_FLAGS}
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
+		--stable tools \
+		--parallelBuild:${_MAKE_JOBS_N} \
+		${NIM_FLAGS}
+
 	# build niminst
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim compile -d:release --parallelBuild:${_MAKE_JOBS_N} ${NIM_FLAGS} tools/niminst/niminst.nim
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim compile \
+		-d:release \
+		--parallelBuild:${_MAKE_JOBS_N} \
+		${NIM_FLAGS} \
+		tools/niminst/niminst.nim
 
 do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
@@ -99,6 +116,7 @@ do-install:
 
 	# This is imported from share/nimble/pkgs/nim-*/compiler/nimblecmd.nim.
 	cd ${WRKSRC}/dist/checksums/ && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/nimble/pkgs/nim-${PKGVERSION_NOREV}/dist/checksums/
+
 .for d in nimsuggest nimpretty
 	cd ${WRKSRC}/${d} && ${PAX} -r -w . ${DESTDIR}${PREFIX}/lib/nim/${d}/
 	${LN} -sf ${DESTDIR}${PREFIX}/lib/nim/${d} ${DESTDIR}${PREFIX}/share/nim/${d}
@@ -106,6 +124,7 @@ do-install:
 
 do-test:
 	cd ${WRKSRC} && ./bin/nim compile koch.nim
-	cd ${WRKSRC} && LD_LIBRARY_PATH=${PREFIX}/lib ./koch test all --parallelBuild:${_MAKE_JOBS_N}
+	cd ${WRKSRC} && LD_LIBRARY_PATH=${PREFIX}/lib ./koch test all \
+		--parallelBuild:${_MAKE_JOBS_N}
 
 .include "../../mk/bsd.pkg.mk"
