@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS+=		ggml
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	vulkan
+PLIST_VARS+=		vulkan
 .if !empty(PKG_OPTIONS:Mcuda)
 CMAKE_CONFIGURE_ARGS+=	-DGGML_CUDA=ON
 CMAKE_CONFIGURE_ARGS+=	-DGGML_NATIVE=ON
@@ -17,7 +17,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc
 .elif !empty(PKG_OPTIONS:Mggml)
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_USE_SYSTEM_GGML=YES
 
-BUILDLINK_API_DEPENDS.ggml+=	ggml>=0.27.0
+BUILDLINK_API_DEPENDS.ggml+=	ggml>=0.28.0
 .include "../../math/ggml/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mvulkan)
 PLIST.vulkan=		yes
