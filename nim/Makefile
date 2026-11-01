@@ -33,23 +33,6 @@ SITES.${SAT_DISTFILE}=		-${MASTER_SITE_GITHUB:=nim-lang/sat/archive/}${SAT_TAG}$
 EXTRACT_DIR.${ATLAS_DISTFILE}=		${WRKSRC}
 EXTRACT_DIR.${SAT_DISTFILE}=			${WRKSRC}
 
-#
-# Support NetBSD/aarch64:
-#     https://github.com/nim-lang/Nim/pull/23616
-#
-# Please remove this block once the upstream merges it. Also remove
-# nim-2.0.4+netbsd-aarch64.tar.xz from our LOCAL_PORTS; it is a tarball of
-# updated csources that support this platform.
-#
-.include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make(makesum) || make(mdi)
-NBAARCH64_DISTFILE=			nim-2.0.4+netbsd-aarch64.tar.xz
-DISTFILES+=				${NBAARCH64_DISTFILE}
-SITES.${NBAARCH64_DISTFILE}=		${MASTER_SITE_LOCAL}
-EXTRACT_DIR.${NBAARCH64_DISTFILE}=	${WRKSRC}/
-.endif
-#
-
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
 USE_TOOLS+=	bash pax
