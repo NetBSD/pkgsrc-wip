@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (nodeenv-1.11.0.tar.gz) = d2292deff13b4f0e46ccd8e295c1bafa9c443bebee3a0acd0adb0a10fd651290
-SHA512 (nodeenv-1.11.0.tar.gz) = 51e9b77328760559fdc0e00e50a5670e44219d90ee560127cf13655312ab830fece6349f4c10928c0797ee5ef488cc4d3cfa3c4fef00992eac762b878bb7deea
-Size (nodeenv-1.11.0.tar.gz) = 75638 bytes
+BLAKE2s (nodeenv-1.12.0.tar.gz) = ba93580bd56601da20dee215d438b3d9aae8fcfc09c6a61a8e66e6fa9db3f6a6
+SHA512 (nodeenv-1.12.0.tar.gz) = 965fe7110e1241ce10f0a3eb63c57177caf0504758e0bfa538cca5c0d4d06954db43154f866aa73710161004de476af019e38ac9355dc16b7c094c70495d21d2
+Size (nodeenv-1.12.0.tar.gz) = 100698 bytes
