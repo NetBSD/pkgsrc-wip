@@ -107,7 +107,6 @@ do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
 	cd ${WRKSRC}/bin && ${PAX} -r -w . ${DESTDIR}${PREFIX}/nim/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/nim-wrapper.sh ${DESTDIR}${PREFIX}/bin/nim
-	# ${RM} ${DESTDIR}${PREFIX}/nim/bin/nim-gdb.orig
 	${INSTALL} ${WRKSRC}/tools/niminst/niminst ${DESTDIR}${PREFIX}/nim/bin/
 .for x in nim-gdb nim_dbg nimgrep niminst nimpretty nimsuggest testament
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf ${DESTDIR}${PREFIX}/nim/bin/${x} ${x}
