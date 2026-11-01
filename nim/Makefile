@@ -12,26 +12,26 @@ LICENSE=	mit
 
 # Taken from:
 # https://github.com/nim-lang/Nim/blob/14991af742d0833503741fd9a0918133d1bcf8a4/koch.nim
-# ATLAS_TAG=			aa6fb162006f3015aa84c4305e15cb4d230f5ad6
-# SAT_TAG=				9d52513b3c68bfb929dbd687d4fb2836cfee6936
+ATLAS_TAG=			aa6fb162006f3015aa84c4305e15cb4d230f5ad6
+SAT_TAG=				9d52513b3c68bfb929dbd687d4fb2836cfee6936
 
-# GH_SFX=		.tar.gz
+GH_SFX=		.tar.gz
 
-# ATLAS_DISTNAME=		atlas-${ATLAS_TAG}
-# SAT_DISTNAME=			sat-${SAT_TAG}
+ATLAS_DISTNAME=		atlas-${ATLAS_TAG}
+SAT_DISTNAME=			sat-${SAT_TAG}
 
-# ATLAS_DISTFILE=		${ATLAS_DISTNAME}${GH_SFX}
-# SAT_DISTFILE=			${SAT_DISTNAME}${GH_SFX}
+ATLAS_DISTFILE=		${ATLAS_DISTNAME}${GH_SFX}
+SAT_DISTFILE=			${SAT_DISTNAME}${GH_SFX}
 
-# DISTFILES=		${DEFAULT_DISTFILES}
-# DISTFILES+=		${ATLAS_DISTFILE}
-# DISTFILES+=		${SAT_DISTFILE}
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		${ATLAS_DISTFILE}
+DISTFILES+=		${SAT_DISTFILE}
 
-# SITES.${ATLAS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nim-lang/atlas/archive/}${ATLAS_TAG}${GH_SFX}
-# SITES.${SAT_DISTFILE}=		-${MASTER_SITE_GITHUB:=nim-lang/sat/archive/}${SAT_TAG}${GH_SFX}
+SITES.${ATLAS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nim-lang/atlas/archive/}${ATLAS_TAG}${GH_SFX}
+SITES.${SAT_DISTFILE}=		-${MASTER_SITE_GITHUB:=nim-lang/sat/archive/}${SAT_TAG}${GH_SFX}
 
-# EXTRACT_DIR.${ATLAS_DISTFILE}=		${WRKSRC}
-# EXTRACT_DIR.${SAT_DISTFILE}=			${WRKSRC}
+EXTRACT_DIR.${ATLAS_DISTFILE}=		${WRKSRC}
+EXTRACT_DIR.${SAT_DISTFILE}=			${WRKSRC}
 
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
@@ -39,6 +39,7 @@ USE_TOOLS+=	bash gmake
 REPLACE_BASH+=	bin/nim-gdb
 
 USE_LANGUAGES= c
+# ALLOW_NETWORK_ACCESS= yes
 
 # INSTALLATION_DIRS=	bin
 # INSTALLATION_DIRS+=	lib/nim/tools/debug
@@ -59,31 +60,32 @@ USE_LANGUAGES= c
 # NIM_FLAGS=	${LDFLAGS:S/^/--passL:/}
 # NIM_FLAGS+=	${CFLAGS:S/^/--passC:/}
 
-# post-extract:
+post-extract:
 	# TODO: csources for cross-building?
 	# ${MV} ${WRKSRC}/csources_v2-${C2VERSION_TAG} ${WRKSRC}/csources_v2
-	# ${MKDIR} ${WRKSRC}/dist
+	${MKDIR} ${WRKSRC}/dist
 	# ${MV} nimble-$_nimbleversion $build_wrksrc/dist/nimble
 	#mv checksums-$_checksumsversion $build_wrksrc/dist/checksums
 	#mkdir -p $build_wrksrc/dist/nimble/dist
 	#cp -r $build_wrksrc/dist/checksums $build_wrksrc/dist/nimble/dist/checksums
-	# ${MV} ${WRKSRC}/atlas-${ATLAS_TAG} ${WRKSRC}/dist/atlas
+	${MV} ${WRKSRC}/atlas-${ATLAS_TAG} ${WRKSRC}/dist/atlas
 
-	# ${MKDIR} ${WRKSRC}/dist/atlas/dist
-	# ${MV} ${WRKSRC}/sat-${SAT_TAG} ${WRKSRC}/dist/atlas/dist/sat
+	${MKDIR} ${WRKSRC}/dist/atlas/dist
+	${MV} ${WRKSRC}/sat-${SAT_TAG} ${WRKSRC}/dist/atlas/dist/sat
 
 do-build:
-	cd ${WRKSRC} && ${GMAKE} -j${_MAKE_JOBS_N}
+	cd ${WRKSRC} && ${GMAKE}
 
 	# build koch
-	cd ${WRKSRC} && ./bin/nim c \
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim c \
 		-d:release \
+		--parallelBuild:${_MAKE_JOBS_N} \
 		koch
 
-	cd ${WRKSRC} && ./koch \
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
 		boot \
-		-d:release \
-		--parallelBuild:${_MAKE_JOBS_N}
+		--parallelBuild:${_MAKE_JOBS_N} \
+		-d:release
 
 	# Build docs
 	# cd ${WRKSRC} && ./koch \
@@ -91,15 +93,17 @@ do-build:
 		# --parallelBuild:${_MAKE_JOBS_N}
 
 	# Build tools
-	cd ${WRKSRC} && ./koch \
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
 		tools \
 		--parallelBuild:${_MAKE_JOBS_N}
 
 
 do-install:
-	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./install.sh \
+		${DESTDIR}${PREFIX}
 
-.for fn in nimble nimsuggest nimgrep
+	${MKDIR} ${DESTDIR}${PREFIX}/bin
+.for fn in nim nimble nimsuggest nimgrep
 	${LN} -sf ${DESTDIR}${PREFIX}/nim/bin/${fn} ${DESTDIR}${PREFIX}/bin/${fn}
 .endfor
 
