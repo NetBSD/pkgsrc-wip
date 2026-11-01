@@ -108,10 +108,10 @@ do-install:
 	cd ${WRKSRC}/bin && ${PAX} -r -w . ${DESTDIR}${PREFIX}/nim/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/nim-wrapper.sh ${DESTDIR}${PREFIX}/bin/nim
 	${INSTALL} ${WRKSRC}/tools/niminst/niminst ${DESTDIR}${PREFIX}/nim/bin/
-.for x in nim-gdb nim_dbg nimgrep niminst nimpretty nimsuggest testament
-	cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf ${DESTDIR}${PREFIX}/nim/bin/${x} ${x}
+
+.for x in nimble nimgrep niminst nimpretty nimsuggest testament
+	${LN} -sf ${DESTDIR}${PREFIX}/nim/bin/${x} ${DESTDIR}${PREFIX}/bin/${x}
 .endfor
-	cd ${WRKSRC}/tools/debug/ && ${PAX} -r -w . ${DESTDIR}${PREFIX}/lib/nim/tools/debug/
 
 	# This is imported from share/nimble/pkgs/nim-*/compiler/nimblecmd.nim.
 	cd ${WRKSRC}/dist/checksums/ && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/nimble/pkgs/nim-${PKGVERSION_NOREV}/dist/checksums/

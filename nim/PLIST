@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/nim
-bin/nim-gdb
-bin/nim_dbg
+bin/nimble
 bin/nimgrep
 bin/niminst
 bin/nimpretty
@@ -122,9 +121,6 @@ lib/nim/nimsuggest/tests/tv3_outline2.nim
 lib/nim/nimsuggest/tests/tv3_typeDefinition.nim
 lib/nim/nimsuggest/tests/twithin_macro.nim
 lib/nim/nimsuggest/tests/twithin_macro_prefix.nim
-lib/nim/tools/debug/customdebugtype.nim
-lib/nim/tools/debug/nim-gdb.py
-lib/nim/tools/debug/nimlldb.py
 nim/bin/.nifler.nimony-commit
 nim/bin/.nifmake.nimony-commit
 nim/bin/atlas
@@ -700,4 +696,5 @@ share/nimble/pkgs/${PKGNAME}/dist/checksums/tests/crypto/tsha1.nim
 share/nimble/pkgs/${PKGNAME}/dist/checksums/tests/crypto/tsha2.nim
 share/nimble/pkgs/${PKGNAME}/dist/checksums/tests/crypto/tsha3.nim
 @pkgdir nim/data
+@pkgdir lib/nim/tools/debug
 @pkgdir include
