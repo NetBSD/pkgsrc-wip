@@ -1,0 +1,15 @@
+===> Building for grafana-13.3.0
+wire: github.com/grafana/grafana/pkg/server: wrote /tmp/wip/grafana/work/grafana-13.3.0/pkg/server/wire_gen.go
+Successfully generated themes_generated.go
+k8s.io/apiserver/pkg/registry/rest
+# k8s.io/apiserver/pkg/registry/rest
+../k8s.io/apiserver/pkg/registry/rest/validate.go:138:31: cannot use o.options (variable of type []string) as map[string]bool value in argument to scheme.Validate
+../k8s.io/apiserver/pkg/registry/rest/validate.go:144:37: cannot use o.options (variable of type []string) as map[string]bool value in argument to scheme.ValidateUpdate
+github.com/grafana/grafana/pkg/registry/apis/preferences/utils
+# github.com/grafana/grafana/pkg/registry/apis/preferences/utils
+pkg/registry/apis/preferences/utils/authorizer.go:122:114: undefined: authorizer.ConditionsAwareDecision
+pkg/registry/apis/preferences/utils/authorizer.go:123:20: undefined: authorizer.ConditionsAwareDecisionFromParts
+pkg/registry/apis/preferences/utils/authorizer.go:127:80: undefined: authorizer.ConditionsAwareDecision
+pkg/registry/apis/preferences/utils/authorizer.go:127:118: undefined: authorizer.ConditionsData
+pkg/registry/apis/preferences/utils/authorizer.go:128:49: undefined: authorizer.ErrorConditionEvaluationNotSupported
+*** Error code 1
