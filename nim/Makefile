@@ -57,8 +57,8 @@ USE_LANGUAGES= c
 # Nim doesn't automatically passes LDFLAGS/CFLAGS variables to the compiler
 # but rather uses its own --passL/--passC flags. The two lines below translate
 # the flags so the nim compiler actually uses them.
-# NIM_FLAGS=	${LDFLAGS:S/^/--passL:/}
-# NIM_FLAGS+=	${CFLAGS:S/^/--passC:/}
+NIM_FLAGS=	${LDFLAGS:S/^/--passL:/}
+NIM_FLAGS+=	${CFLAGS:S/^/--passC:/}
 
 post-extract:
 	# TODO: csources for cross-building?
@@ -84,8 +84,9 @@ do-build:
 
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
 		boot \
+		-d:release \
 		--parallelBuild:${_MAKE_JOBS_N} \
-		-d:release
+		${NIM_FLAGS}
 
 	# Build docs
 	# cd ${WRKSRC} && ./koch \
@@ -95,7 +96,9 @@ do-build:
 	# Build tools
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
 		tools \
-		--parallelBuild:${_MAKE_JOBS_N}
+		-d:release \
+		--parallelBuild:${_MAKE_JOBS_N} \
+		${NIM_FLAGS}
 
 
 do-install:
