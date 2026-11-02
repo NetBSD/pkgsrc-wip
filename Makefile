@@ -5959,7 +5959,6 @@ SUBDIR+=	universalcodegrep
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unnethack
-SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	up
 SUBDIR+=	uperf
