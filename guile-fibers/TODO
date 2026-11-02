@@ -1,3 +1,2 @@
-  - verify that upstream really is refusing to provide release tarballs
   - run expensive tests
   - test on other than amd64

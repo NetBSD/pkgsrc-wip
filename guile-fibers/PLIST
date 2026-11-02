@@ -10,6 +10,7 @@ guile/3.0/lib/guile/3.0/site-ccache/fibers/deque.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/events-impl.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/interrupts.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/io-wakeup.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/ivars.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/nameset.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/operations.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/posix-clocks.go
@@ -31,6 +32,7 @@ guile/3.0/share/guile/site/3.0/fibers/deque.scm
 guile/3.0/share/guile/site/3.0/fibers/events-impl.scm
 guile/3.0/share/guile/site/3.0/fibers/interrupts.scm
 guile/3.0/share/guile/site/3.0/fibers/io-wakeup.scm
+guile/3.0/share/guile/site/3.0/fibers/ivars.scm
 guile/3.0/share/guile/site/3.0/fibers/nameset.scm
 guile/3.0/share/guile/site/3.0/fibers/operations.scm
 guile/3.0/share/guile/site/3.0/fibers/posix-clocks.scm

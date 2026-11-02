@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (fibers-1.4.3.tar.gz) = 79f5fba5bb5864cfd5e97ff5b5f031c3d16637b8f8970b7a5955a53d68a4f6c8
-SHA512 (fibers-1.4.3.tar.gz) = f2039851ace722bde71adb79fa388e92acd27a6fd0e12422d498afffd27eb6b6031aa36a5c7ff97f75478fdc31459bdaa876a75dd0af635157ed18ae2166e5e0
-Size (fibers-1.4.3.tar.gz) = 124765 bytes
+BLAKE2s (fibers-2.0.0.tar.gz) = 010fdceb0519dac898ce224e65c0288d0651d66d91ce18643902c575fd8fcf22
+SHA512 (fibers-2.0.0.tar.gz) = 959a73f8c4e55488e5ca7cf362ab0423c7d350887bf54ce462f2a1c74dddf8317b8be867a7467c94048513041e1889b82f4aa7b8d308440bb9acfb95a4457989
+Size (fibers-2.0.0.tar.gz) = 128005 bytes
