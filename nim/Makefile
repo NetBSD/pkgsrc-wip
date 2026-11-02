@@ -79,11 +79,8 @@ NIM_FLAGS+=	${CFLAGS:S/^/--passC:/}
 post-extract:
 	# TODO: csources for cross-building?
 	# ${MV} ${WRKSRC}/csources_v2-${C2VERSION_TAG} ${WRKSRC}/csources_v2
+
 	${MKDIR} ${WRKSRC}/dist
-	# ${MV} nimble-$_nimbleversion $build_wrksrc/dist/nimble
-	#mv checksums-$_checksumsversion $build_wrksrc/dist/checksums
-	#mkdir -p $build_wrksrc/dist/nimble/dist
-	#cp -r $build_wrksrc/dist/checksums $build_wrksrc/dist/nimble/dist/checksums
 	${MV} ${WRKSRC}/atlas-${ATLAS_TAG} ${WRKSRC}/dist/atlas
 
 	${MKDIR} ${WRKSRC}/dist/atlas/dist
