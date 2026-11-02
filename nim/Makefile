@@ -77,6 +77,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/dist/atlas/dist
 	${MV} ${WRKSRC}/sat-${SAT_TAG} ${WRKSRC}/dist/atlas/dist/sat
 
+
 do-build:
 	cd ${WRKSRC} && ${GMAKE}
 
@@ -91,11 +92,6 @@ do-build:
 		-d:release \
 		--parallelBuild:${_MAKE_JOBS_N} \
 		${NIM_FLAGS}
-
-	# Build docs
-	# cd ${WRKSRC} && ./koch \
-		# docs \
-		# --parallelBuild:${_MAKE_JOBS_N}
 
 	# Build tools
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
@@ -114,4 +110,5 @@ do-install:
 	${LN} -sf ${DESTDIR}${PREFIX}/nim/bin/${fn} ${DESTDIR}${PREFIX}/bin/${fn}
 .endfor
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
