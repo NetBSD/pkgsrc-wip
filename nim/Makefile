@@ -1,8 +1,31 @@
 # $NetBSD: Makefile,v 1.37 2024/05/16 09:59:20 pho Exp $
 
+# Nim is quite a weird language to package, meaning that the official packaging
+# guideline recommends using a tarball that is created via a CI and also
+# because the bootstrap script uses git to clone some submodules. It however
+# seems that both of those weridinesses can be bypassed, for once because
+# just downloading the nim from the homepage is the same version as the one
+# that the CI created (checksums matched) and the git clone only happens if
+# the submodules are not already present. Because of this, we pull not only
+# the nim tarball but also the ones for:
+#
+# - Atlas (Package cloner, that manages project dependencies in an isolated
+#		deps/ directory)
+# - sat (SAT solver written in nim)
+#
+# When taking a look at `koch.nim` in the source tree of nim, we can see, that
+# these packages are not pinned to a version but rather a commit hash. We do
+# the same with the `*_TAG` variables. Afterwards we add the needed
+# `*_DISTFILE`'s to the distfiles and extract them into the root. Furthermore
+# we then move the extracted folders to the correct location in `post-extract`.
+#
+# Helpful sources:
+# - https://nim-lang.github.io/Nim/packaging.html
+# - `koch.nim` in the source tree
+
 DISTNAME=	nim-2.4.0
 CATEGORIES=	lang
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=nim-lang/nightlies/releases/download/2026-10-28-version-2-4-14991af742d0833503741fd9a0918133d1bcf8a4/}
+MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +33,6 @@ HOMEPAGE=	https://nim-lang.org/
 COMMENT=	The Nim programming language
 LICENSE=	mit
 
-# Taken from:
-# https://github.com/nim-lang/Nim/blob/14991af742d0833503741fd9a0918133d1bcf8a4/koch.nim
 ATLAS_TAG=			aa6fb162006f3015aa84c4305e15cb4d230f5ad6
 SAT_TAG=				9d52513b3c68bfb929dbd687d4fb2836cfee6936
 
