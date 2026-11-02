@@ -70,11 +70,6 @@ USE_LANGUAGES= c
 # INSTALLATION_DIRS+=	lib/nim/nimsuggest
 # INSTALLATION_DIRS+=	lib/nim/nimpretty
 
-# SUBST_CLASSES+=		paths
-# SUBST_STAGE.paths=	pre-configure
-# SUBST_FILES.paths=	config/nim.cfg
-# SUBST_SED.paths=	-e 's,/usr/pkg,${PREFIX},g'
-
 # Nim doesn't automatically passes LDFLAGS/CFLAGS variables to the compiler
 # but rather uses its own --passL/--passC flags. The two lines below translate
 # the flags so the nim compiler actually uses them.
