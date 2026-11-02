@@ -4082,7 +4082,6 @@ SUBDIR+=	py-ift-nifty
 SUBDIR+=	py-igraph
 SUBDIR+=	py-iisignature
 SUBDIR+=	py-imexam
-SUBDIR+=	py-img2pdf
 SUBDIR+=	py-import-linter
 SUBDIR+=	py-imread
 SUBDIR+=	py-imreg-dft
