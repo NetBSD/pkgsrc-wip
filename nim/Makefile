@@ -101,6 +101,16 @@ do-build:
 		${NIM_FLAGS}
 
 
+# The test suite will fail, however it may work in the future. For now, this
+# is commented out.
+# do-test:
+# 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch \
+# 		tests \
+# 		--pedantic \
+# 		--targets="c js" \
+# 		all
+
+
 do-install:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./install.sh \
 		${DESTDIR}${PREFIX}
