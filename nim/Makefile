@@ -60,7 +60,6 @@ USE_TOOLS+=	bash gmake
 REPLACE_BASH+=	bin/nim-gdb
 
 USE_LANGUAGES= c
-# ALLOW_NETWORK_ACCESS= yes
 
 # Nim doesn't automatically passes LDFLAGS/CFLAGS variables to the compiler
 # but rather uses its own --passL/--passC flags. The two lines below translate
