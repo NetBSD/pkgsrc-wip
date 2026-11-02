@@ -62,14 +62,6 @@ REPLACE_BASH+=	bin/nim-gdb
 USE_LANGUAGES= c
 # ALLOW_NETWORK_ACCESS= yes
 
-# INSTALLATION_DIRS=	bin
-# INSTALLATION_DIRS+=	lib/nim/tools/debug
-# INSTALLATION_DIRS+=	share/nimble/pkgs/nim-${PKGVERSION_NOREV}/dist/checksums
-# INSTALLATION_DIRS+=	share/nim
-# INSTALLATION_DIRS+=	include
-# INSTALLATION_DIRS+=	lib/nim/nimsuggest
-# INSTALLATION_DIRS+=	lib/nim/nimpretty
-
 # Nim doesn't automatically passes LDFLAGS/CFLAGS variables to the compiler
 # but rather uses its own --passL/--passC flags. The two lines below translate
 # the flags so the nim compiler actually uses them.
