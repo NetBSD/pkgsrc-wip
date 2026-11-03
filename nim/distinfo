@@ -9,3 +9,5 @@ Size (nim-2.4.0.tar.xz) = 16957544 bytes
 BLAKE2s (sat-9d52513b3c68bfb929dbd687d4fb2836cfee6936.tar.gz) = e61713da1b17aea1a345df71dc22cd8ec2058623546668a7b9af6db501d1a224
 SHA512 (sat-9d52513b3c68bfb929dbd687d4fb2836cfee6936.tar.gz) = 6dff5f65bb7aaa7c59b7c832e760b35ba6f9aebbc53ef6e4d87ef3dde6308458cd6c27988c309f60f8eca9019e135fb34981704310cb55b5dd5c84de1641b20d
 Size (sat-9d52513b3c68bfb929dbd687d4fb2836cfee6936.tar.gz) = 10247 bytes
+SHA1 (patch-dist_nimble_src_nimblepkg_downloadnim.nim) = 499197b81265ecf16d4c6baeca54673aead052c6
+SHA1 (patch-dist_nimble_vendor_chronos_chronos_sendfile.nim) = da30276501e0521056267c28f35e14949f5a2f96
