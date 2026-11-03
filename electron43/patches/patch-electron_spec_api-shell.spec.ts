@@ -24,7 +24,7 @@ $NetBSD$
 +        process.env.DE = 'generic';
 +        process.env.DISPLAY = '';
 +        requestReceived = Promise.resolve();
-+      } else if (process.platform === netbsd') {
++      } else if (process.platform === 'netbsd') {
 +        process.env.BROWSER = '/usr/bin/true';
 +        process.env.DE = 'generic';
 +        process.env.DISPLAY = '';
