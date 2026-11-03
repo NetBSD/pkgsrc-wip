@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/unofficial.gni.orig	2026-10-20 14:58:50.057009862 +0000
+--- third_party/electron_node/unofficial.gni.orig	2026-11-03 08:29:09.514479080 +0000
 +++ third_party/electron_node/unofficial.gni
 @@ -379,6 +379,30 @@ template("node_gn_build") {
      # so the browser js2c code-cache tool (v8_snapshot_toolchain) is keyed to

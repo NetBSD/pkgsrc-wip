@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/browser.h.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/browser.h.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/browser.h
 @@ -295,10 +295,10 @@ class Browser : private WindowListObserv
    PCWSTR GetAppUserModelID();

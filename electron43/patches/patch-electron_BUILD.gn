@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/BUILD.gn.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/BUILD.gn.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/BUILD.gn
 @@ -629,7 +629,7 @@ source_set("electron_lib") {
      defines += [ "GDK_DISABLE_DEPRECATION_WARNINGS" ]

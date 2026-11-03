@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/ui/inspectable_web_contents.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/ui/inspectable_web_contents.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/ui/inspectable_web_contents.cc
 @@ -619,7 +619,7 @@ void InspectableWebContents::LoadComplet
            dock_state_ = "right";

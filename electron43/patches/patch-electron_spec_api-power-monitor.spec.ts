@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-power-monitor.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/spec/api-power-monitor.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/spec/api-power-monitor.spec.ts
 @@ -21,7 +21,7 @@ const require = createRequire(import.met
  describe('powerMonitor', { tags: ['serial'] }, () => {

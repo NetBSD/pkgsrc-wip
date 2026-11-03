@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-net-log.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/spec/api-net-log.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/spec/api-net-log.spec.ts
 @@ -137,7 +137,7 @@ describe('netLog module', () => {
      ).toBe(true);

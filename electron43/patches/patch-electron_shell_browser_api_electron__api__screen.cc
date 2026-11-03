@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_screen.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/api/electron_api_screen.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/api/electron_api_screen.cc
 @@ -29,7 +29,7 @@
  #include "ui/display/win/screen_win.h"

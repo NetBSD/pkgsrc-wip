@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/lib/browser/api/dialog.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/lib/browser/api/dialog.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/lib/browser/api/dialog.ts
 @@ -49,7 +49,7 @@ const normalizeAccessKey = (text: string
    // existing single underscores with a second underscore, replace double

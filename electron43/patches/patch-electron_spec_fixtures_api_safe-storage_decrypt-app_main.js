@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/fixtures/api/safe-storage/decrypt-app/main.js.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/spec/fixtures/api/safe-storage/decrypt-app/main.js.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/spec/fixtures/api/safe-storage/decrypt-app/main.js
 @@ -7,7 +7,7 @@ const pathToEncryptedString = path.resol
  const readFile = fs.readFile;

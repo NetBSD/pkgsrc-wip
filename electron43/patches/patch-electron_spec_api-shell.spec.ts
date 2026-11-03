@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-shell.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/spec/api-shell.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/spec/api-shell.spec.ts
-@@ -37,7 +37,7 @@ describe('shell module', () => {
+@@ -47,7 +47,7 @@ describe('shell module', () => {
  
      afterEach(async () => {
        // reset env vars to prevent side effects
@@ -15,7 +15,7 @@ $NetBSD$
          process.env.DE = envVars.de;
          process.env.BROWSER = envVars.browser;
          process.env.DISPLAY = envVars.display;
-@@ -57,6 +57,16 @@ describe('shell module', () => {
+@@ -67,6 +67,16 @@ describe('shell module', () => {
          process.env.DE = 'generic';
          process.env.DISPLAY = '';
          requestReceived = Promise.resolve();

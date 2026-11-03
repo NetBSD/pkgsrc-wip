@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/lib/renderer/api/clipboard.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/lib/renderer/api/clipboard.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/lib/renderer/api/clipboard.ts
 @@ -27,7 +27,7 @@ const makeRemoteMethod = function (metho
    };

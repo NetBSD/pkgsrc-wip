@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/common/electron_paths.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/common/electron_paths.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/common/electron_paths.cc
 @@ -12,7 +12,7 @@
  #include "shell/common/platform_util.h"

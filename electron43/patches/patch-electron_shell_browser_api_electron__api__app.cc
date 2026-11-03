@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_app.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/api/electron_api_app.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/api/electron_api_app.cc
 @@ -110,7 +110,7 @@
  #include "ui/base/resource/resource_bundle.h"
@@ -33,7 +33,7 @@ $NetBSD$
    // Set the application name for audio streams shown in external
    // applications. Only affects pulseaudio currently.
    media::AudioManager::SetGlobalAppName(Browser::Get()->GetName());
-@@ -972,7 +972,7 @@ void App::SetPath(gin_helper::ErrorThrow
+@@ -961,7 +961,7 @@ void App::SetPath(gin_helper::ErrorThrow
  }
  
  void App::SetDesktopName(const std::string& desktop_name) {
@@ -42,7 +42,7 @@ $NetBSD$
    auto env = base::Environment::Create();
    env->SetVar("CHROME_DESKTOP", desktop_name);
  #endif
-@@ -1074,7 +1074,7 @@ bool App::RequestSingleInstanceLock(gin:
+@@ -1063,7 +1063,7 @@ bool App::RequestSingleInstanceLock(gin:
        base::BindRepeating(NotificationCallbackWrapper, cb));
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD$
    // Read the xdg-activation token and set it in the command line for the
    // duration of the notification in order to ensure this is propagated to an
    // already running electron app instance if it exists.
-@@ -1470,7 +1470,7 @@ std::vector<gin_helper::Dictionary> App:
+@@ -1459,7 +1459,7 @@ std::vector<gin_helper::Dictionary> App:
        pid_dict.Set("name", process_metric.second->name);
      }
  
@@ -60,7 +60,7 @@ $NetBSD$
      auto memory_info = process_metric.second->GetMemoryInfo();
  
      auto memory_dict = gin_helper::Dictionary::CreateEmpty(isolate);
-@@ -1974,7 +1974,7 @@ gin::ObjectTemplateBuilder App::GetObjec
+@@ -1963,7 +1963,7 @@ gin::ObjectTemplateBuilder App::GetObjec
        .SetMethod("getJumpListSettings", &App::GetJumpListSettings)
        .SetMethod("setJumpList", &App::SetJumpList)
  #endif

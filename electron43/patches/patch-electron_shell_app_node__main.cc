@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/app/node_main.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/app/node_main.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/app/node_main.cc
 @@ -54,7 +54,7 @@
  #include "shell/common/mac/codesign_util.h"

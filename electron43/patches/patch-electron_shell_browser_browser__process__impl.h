@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/browser_process_impl.h.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/browser_process_impl.h.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/browser_process_impl.h
 @@ -22,7 +22,7 @@
  #include "shell/browser/net/system_network_context_manager.h"

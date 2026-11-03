@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/feature_list.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/feature_list.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/feature_list.cc
 @@ -30,7 +30,7 @@
  #include "pdf/pdf_features.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-crash-reporter.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/spec/api-crash-reporter.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/spec/api-crash-reporter.spec.ts
 @@ -14,7 +14,7 @@ import { setTimeout } from 'node:timers/
  import { ifdescribe, ifit, defer, startRemoteControlApp, repeatedly, listen } from './lib/spec-helpers.ts';

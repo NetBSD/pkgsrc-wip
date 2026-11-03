@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/osr/osr_video_consumer.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/osr/osr_video_consumer.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/osr/osr_video_consumer.cc
 @@ -49,7 +49,7 @@ bool IsPlatformSharedTextureHandle(const
    return handle.type == gfx::DXGI_SHARED_HANDLE;

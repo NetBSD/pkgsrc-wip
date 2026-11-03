@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/native_window_views.cc.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/shell/browser/native_window_views.cc.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/shell/browser/native_window_views.cc
 @@ -58,7 +58,7 @@
  #include "ui/views/window/non_client_view.h"

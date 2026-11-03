@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-desktop-capturer.spec.ts.orig	2026-10-16 03:32:58.000000000 +0000
+--- electron/spec/api-desktop-capturer.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
 +++ electron/spec/api-desktop-capturer.spec.ts
 @@ -9,7 +9,7 @@ import { ifdescribe, ifit } from './lib/
  import { closeAllWindows } from './lib/window-helpers.ts';
