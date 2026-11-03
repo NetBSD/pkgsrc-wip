@@ -51,10 +51,7 @@ REPLACE_SH=	tests/test.sh scripts/pkg_digger.in scripts/pkg_digger_backend.in \
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	scripts/get_processed_pkgs.in scripts/pkg_*.in \
-	scripts/XB2bin_summary.in scripts/direct_deps.in \
-	scripts/summary2multi_variants.in scripts/enrich_summary.in \
-	scripts/makefiles2deps.in
+REPLACE_FILES.runawk=	*/*.in
 
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
 MAKE_ENV+=	EGDIR=${EGDIR}
