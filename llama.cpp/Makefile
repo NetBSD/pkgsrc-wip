@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ggerganov/llama.cpp/
 COMMENT=	LLM inference in C/C++
 LICENSE=	mit
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
@@ -20,12 +20,13 @@ PKGCONFIG_OVERRIDE+=	cmake/llama.pc.in
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_NUMBER=${LLAMA_BUILD_NUMBER}
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_COMMIT=${LLAMA_BUILD_COMMIT}
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_TESTS=NO
-
-.include "options.mk"
+CMAKE_CONFIGURE_ARGS+=	-DLLAMA_USE_SYSTEM_GGML=YES
 
 post-extract:
 	${LN} -s ${WRKDIR}/llama-b${LLAMA_BUILD_NUMBER} ${WRKSRC}/tools/ui/dist
 
 .include "../../www/curl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ggml+=	ggml>=0.28.0
+.include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
