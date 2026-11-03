@@ -5436,6 +5436,7 @@ SUBDIR+=	semgrep
 SUBDIR+=	semgrep-core
 SUBDIR+=	semi
 SUBDIR+=	send-pr
+SUBDIR+=	sendme
 SUBDIR+=	sendmailX
 SUBDIR+=	sent
 SUBDIR+=	seqtk

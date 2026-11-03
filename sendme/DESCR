@@ -1,0 +1,6 @@
+Sendme is a command line tool to send files and directories between two
+machines, using blake3 verified streaming.
+
+It is built on iroh, which handles NAT traversal and hole punching whenever
+possible, and falls back to a relay if a direct connection cannot be
+established.

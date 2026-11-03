@@ -1,0 +1,5 @@
+sendme: Add version 0.37.1
+
+Command line tool to send files and directories between two machines,
+using blake3-verified streaming. Built on iroh, which handles NAT
+traversal and hole punching with relay fallback.
