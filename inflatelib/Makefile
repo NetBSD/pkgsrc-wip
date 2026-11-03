@@ -14,6 +14,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
+CMAKE_CONFIGURE_ARGS+=	-DINFLATELIB_TEST=OFF
+
 .include "../../devel/cmake/build.mk"
-.include "../../devel/catch2/buildlink3.mk"
+#.include "../../devel/catch2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
