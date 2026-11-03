@@ -1,0 +1,26 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/shell/browser/native_window.cc.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/shell/browser/native_window.cc
+@@ -42,7 +42,7 @@
+ 
+ #if BUILDFLAG(IS_WIN)
+ #include "shell/browser/ui/views/frameless_view.h"
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "shell/browser/ui/views/electron_frame_view_linux.h"
+ #endif
+ 
+@@ -235,7 +235,7 @@ void NativeWindow::InitFromOptions(const
+   } else if (bool center; options.Get(options::kCenter, &center) && center) {
+     Center();
+   }
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (bool val; options.Get(options::kClosable, &val))
+     SetClosable(val);
+ #endif

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/shell/browser/api/electron_api_desktop_capturer.cc.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/shell/browser/api/electron_api_desktop_capturer.cc
+@@ -55,7 +55,7 @@
+ #endif
+ 
+ namespace {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Private function in ui/base/x/x11_display_util.cc
+ base::flat_map<x11::RandR::Output, int> GetMonitors(
+     std::pair<uint32_t, uint32_t> version,

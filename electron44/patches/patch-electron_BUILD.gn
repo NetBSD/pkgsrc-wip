@@ -1,0 +1,155 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/BUILD.gn.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/BUILD.gn
+@@ -635,7 +635,7 @@ source_set("electron_lib") {
+     defines += [ "GDK_DISABLE_DEPRECATION_WARNINGS" ]
+   }
+ 
+-  if (!is_mas_build) {
++  if (!is_mas_build && !is_bsd) {
+     deps += [
+       "//components/crash/core/app",
+       "//components/crash/core/browser",
+@@ -745,6 +745,12 @@ source_set("electron_lib") {
+       cflags_objcc = [ "-fobjc-weak" ]
+     }
+   }
++  if (is_bsd) {
++    sources -= [
++      "shell/common/crash_keys.cc",
++      "shell/common/crash_keys.h",
++    ]
++  }
+   if (is_linux) {
+     libs = [ "xshmfence" ]
+     deps += [
+@@ -1016,6 +1022,29 @@ if (electron_generate_js2c_code_cache) {
+     ]
+   }
+ 
++  if (target_os == "netbsd") {
++    action("run_paxctl_electron_natives_codecache") {
++      deps = [ ":electron_natives_codecache($v8_snapshot_toolchain)" ]
++
++      script = "//v8/tools/run-paxctl.py"
++      stamp = "$target_gen_dir/paxctl_electron_natives_codecache_stamp"
++      outputs = [ stamp ]
++
++      sources = []
++      data = []
++
++      _pax_dir = get_label_info(":electron_natives_codecache($v8_snapshot_toolchain)",
++                                "root_out_dir")
++      args = [
++        rebase_path(stamp, root_build_dir),
++        "/usr/sbin/paxctl",
++        "+m",
++        "./" + rebase_path(_pax_dir + "/electron_natives_codecache",
++                           root_build_dir),
++      ]
++    }
++  }
++
+   foreach(_f, _js2c_cc_flavors) {
+     action("run_electron_natives_codecache_" + _f.name) {
+       deps = [
+@@ -1023,6 +1052,9 @@ if (electron_generate_js2c_code_cache) {
+         "//tools/v8_context_snapshot",
+         "//v8:run_mksnapshot_default",
+       ]
++      if (target_os == "netbsd") {
++        deps += [ ":run_paxctl_electron_natives_codecache" ]
++      }
+       script = "//v8/tools/run.py"
+       _gen_dir =
+           get_label_info(":electron_natives_codecache($v8_snapshot_toolchain)",
+@@ -1049,11 +1081,38 @@ if (electron_generate_js2c_code_cache) {
+   # Browser flavor, built against the embedded Node startup snapshot so its
+   # code-cache read-only checksum matches the runtime browser isolate.
+   if (node_use_node_snapshot) {
++    if (target_os == "netbsd") {
++      action("run_paxctl_electron_snapshot") {
++         deps = [ ":electron_natives_codecache_snapshot($v8_snapshot_toolchain)" ]
++
++         script = "//v8/tools/run-paxctl.py"
++         stamp = "$target_gen_dir/paxctl_node_electronstamp"
++         outputs = [ stamp ]
++
++         sources = []
++         data = []
++
++         node_mksnapshot_dir =
++             get_label_info(":electron_natives_codecache_snapshot($v8_snapshot_toolchain)",
++                            "root_out_dir")
++         args = [
++           rebase_path(stamp, root_build_dir),
++           "/usr/sbin/paxctl",
++           "+m",
++           "./" + rebase_path(node_mksnapshot_dir + "/electron_natives_codecache_snapshot",
++                              root_build_dir),
++        ]
++      }
++    }
++
+     action("run_electron_natives_codecache_browser") {
+       deps = [
+         ":electron_natives_codecache_snapshot($v8_snapshot_toolchain)",
+         "//v8:run_mksnapshot_default",
+       ]
++      if (target_os == "netbsd") {
++        deps += [ ":run_paxctl_electron_snapshot" ]
++      }
+       script = "//v8/tools/run.py"
+       _gen_dir = get_label_info(
+               ":electron_natives_codecache_snapshot($v8_snapshot_toolchain)",
+@@ -1638,7 +1697,6 @@ if (is_mac) {
+     ":electron_app_manifest",
+     ":electron_lib",
+     ":electron_win32_resources",
+-    "//components/crash/core/app",
+     "//content:sandbox_helper_win",
+     "//electron/buildflags",
+     "//third_party/electron_node:libnode",
+@@ -1675,7 +1733,7 @@ if (is_mac) {
+     } else if (is_linux) {
+       sources = [
+         "shell/app/electron_main_linux.cc",
+-        "shell/app/environ_linux.cc",
++        # "shell/app/environ_linux.cc",
+         "shell/app/uv_stdio_fix.cc",
+         "shell/app/uv_stdio_fix.h",
+       ]
+@@ -1703,7 +1761,7 @@ if (is_mac) {
+       public_deps = [ "//tools/v8_context_snapshot" ]
+     }
+ 
+-    if (is_linux) {
++    if (is_linux && !is_bsd) {
+       data_deps += [ "//components/crash/core/app:chrome_crashpad_handler" ]
+     }
+ 
+@@ -1770,7 +1828,7 @@ if (is_mac) {
+         configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+       }
+ 
+-      if (is_linux) {
++      if (is_linux && !is_bsd) {
+         deps += [ "//sandbox/linux:chrome_sandbox" ]
+       }
+     }
+@@ -1874,7 +1932,9 @@ dist_zip("electron_dist_zip") {
+       ]
+     }
+ 
+-    data_deps += [ "//sandbox/linux:chrome_sandbox" ]
++    if (!is_bsd) {
++      data_deps += [ "//sandbox/linux:chrome_sandbox" ]
++    }
+   }
+   deps = data_deps
+   if (electron_use_resource_allowlist) {

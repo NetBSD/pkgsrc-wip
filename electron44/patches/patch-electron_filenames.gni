@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/filenames.gni.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/filenames.gni
+@@ -270,8 +270,8 @@ filenames = {
+     "shell/app/command_line_args.h",
+     "shell/app/electron_content_client.cc",
+     "shell/app/electron_content_client.h",
+-    "shell/app/electron_crash_reporter_client.cc",
+-    "shell/app/electron_crash_reporter_client.h",
++    # "shell/app/electron_crash_reporter_client.cc",
++    # "shell/app/electron_crash_reporter_client.h",
+     "shell/app/electron_main_delegate.cc",
+     "shell/app/electron_main_delegate.h",
+     "shell/app/node_main.cc",

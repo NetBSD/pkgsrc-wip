@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/spec/desktop-name.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/spec/desktop-name.spec.ts
+@@ -10,7 +10,7 @@ const { defaultDesktopName }: typeof imp
+   '../lib/browser/desktop-name.ts'
+ );
+ 
+-ifdescribe(process.platform === 'linux')('defaultDesktopName', () => {
++ifdescribe(process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd')('defaultDesktopName', () => {
+   it("derives an appropriate .desktop name from the app's human readable name", () => {
+     const fallback = `${path.basename(process.execPath)}.desktop`;
+     const cases: Array<[string | undefined, string]> = [

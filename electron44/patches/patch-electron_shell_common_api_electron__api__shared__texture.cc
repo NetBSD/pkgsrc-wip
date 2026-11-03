@@ -1,0 +1,44 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/shell/common/api/electron_api_shared_texture.cc.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/shell/common/api/electron_api_shared_texture.cc
+@@ -31,7 +31,7 @@
+ #include "third_party/blink/renderer/platform/graphics/gpu/shared_gpu_context.h"  // nogncheck
+ #include "ui/compositor/compositor.h"
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "base/posix/eintr_wrapper.h"
+ #include "base/strings/string_number_conversions.h"
+ #endif
+@@ -607,7 +607,7 @@ struct ImportSharedTextureInfo {
+   // On macOS, it is an IOSurfaceRef, this must be a valid IOSurface at the
+   // current process.
+   uintptr_t io_surface = 0;
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // On Linux, to be implemented.
+   std::vector<ImportSharedTextureInfoPlane> planes;
+   uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
+@@ -677,7 +677,7 @@ struct Converter<ImportSharedTextureInfo
+     GetNativeHandle("ntHandle", &out->nt_handle);
+ #elif BUILDFLAG(IS_APPLE)
+     GetNativeHandle("ioSurface", &out->io_surface);
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     v8::Local<v8::Object> native_pixmap;
+     if (shared_texture.Get("nativePixmap", &native_pixmap)) {
+       gin::Dictionary v8_native_pixmap(isolate, native_pixmap);
+@@ -757,7 +757,7 @@ v8::Local<v8::Value> ImportSharedTexture
+   auto io_surface_scoped = base::apple::ScopedCFTypeRef<IOSurfaceRef>(
+       io_surface, base::scoped_policy::RETAIN);
+   gmb_handle = gfx::GpuMemoryBufferHandle(std::move(io_surface_scoped));
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   gfx::NativePixmapHandle pixmap;
+   pixmap.modifier = shared_texture.modifier;
+   pixmap.supports_zero_copy_webgpu_import =

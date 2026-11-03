@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/spec/node.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/spec/node.spec.ts
+@@ -240,7 +240,7 @@ describe('node feature', () => {
+     });
+ 
+     describe('child_process.exec', () => {
+-      ifit(process.platform === 'linux')('allows executing a setuid binary from non-sandboxed renderer', async () => {
++      ifit(process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd')('allows executing a setuid binary from non-sandboxed renderer', async () => {
+         // Chrome uses prctl(2) to set the NO_NEW_PRIVILEGES flag on Linux (see
+         // https://github.com/torvalds/linux/blob/40fde647cc/Documentation/userspace-api/no_new_privs.rst).
+         // We disable this for unsandboxed processes, which the renderer tests

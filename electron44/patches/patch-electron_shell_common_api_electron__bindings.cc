@@ -1,0 +1,26 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/shell/common/api/electron_bindings.cc.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/shell/common/api/electron_bindings.cc
+@@ -185,7 +185,7 @@ v8::Local<v8::Value> ElectronBindings::G
+ #endif
+   dict.Set("free", free.InKiB());
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   dict.Set("available", mem_info.available.InKiB());
+ #endif
+ 
+@@ -257,7 +257,7 @@ void ElectronBindings::DidReceiveMemoryD
+     if (target_pid == dump.pid()) {
+       auto dict = gin_helper::Dictionary::CreateEmpty(isolate);
+       const auto& osdump = dump.os_dump();
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+       dict.Set("residentSet", osdump.resident_set_kb);
+ #endif
+       dict.Set("private", osdump.private_footprint_kb);

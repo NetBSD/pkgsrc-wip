@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/build/args/all.gn.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/build/args/all.gn
+@@ -37,8 +37,8 @@ v8_enable_snapshot_native_code_counters 
+ v8_enable_javascript_promise_hooks = true
+ 
+ enable_cdm_host_verification = false
+-ffmpeg_branding = "Chrome"
+-proprietary_codecs = true
++# ffmpeg_branding = "Chrome"
++# proprietary_codecs = true
+ 
+ enable_printing = true
+ 

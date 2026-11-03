@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- third_party/electron_node/deps/histogram/unofficial.gni.orig	2026-10-20 17:54:51.000000000 +0000
++++ third_party/electron_node/deps/histogram/unofficial.gni
+@@ -37,7 +37,7 @@ template("histogram_gn_build") {
+           "-Wno-unused-function",
+         ]
+       }
+-      if (is_linux) {
++      if (is_linux && !is_bsd) {
+         libs = [ "atomic" ]
+       }
+     }

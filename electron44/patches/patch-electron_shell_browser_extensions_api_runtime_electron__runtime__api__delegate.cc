@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Part of patchset to build electron on NetBSD
+* Based on OpenBSD's chromium patches, 
+  FreeBSD's electron patches, and pkgsrc's nodejs patches
+
+--- electron/shell/browser/extensions/api/runtime/electron_runtime_api_delegate.cc.orig	2026-10-30 06:33:33.000000000 +0000
++++ electron/shell/browser/extensions/api/runtime/electron_runtime_api_delegate.cc
+@@ -56,6 +56,10 @@ bool ElectronRuntimeAPIDelegate::GetPlat
+     info->os = extensions::api::runtime::PlatformOs::kLinux;
+   } else if (os == "openbsd") {
+     info->os = extensions::api::runtime::PlatformOs::kOpenbsd;
++  } else if (os == "freebsd") {
++    info->os = extensions::api::runtime::PlatformOs::kFreebsd;
++  } else if (os == "netbsd") {
++    info->os = extensions::api::runtime::PlatformOs::kNetbsd;
+   } else {
+     NOTREACHED();
+   }
