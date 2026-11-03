@@ -1775,6 +1775,7 @@ SUBDIR+=	imgui
 SUBDIR+=	imonc
 SUBDIR+=	incron
 SUBDIR+=	inetdxtra
+SUBDIR+=	inflatelib
 SUBDIR+=	influx-cli
 SUBDIR+=	influxdb
 SUBDIR+=	infraarcana

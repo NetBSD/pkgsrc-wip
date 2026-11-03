@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (inflatelib-0.3.0.tar.gz) = cfb916da8815cd367ed03d3cd418be5b5d705f38e3bca72a99609f83a1c79923
+SHA512 (inflatelib-0.3.0.tar.gz) = d097e0d19715cd3933e9936aa3fd661490d6471f4368fa27bc5e2abc4bed92fe09254a5bfa6d41274c555bf05e6d5dea89ad9f26704097b628b06f122188c0b3
+Size (inflatelib-0.3.0.tar.gz) = 1351303 bytes

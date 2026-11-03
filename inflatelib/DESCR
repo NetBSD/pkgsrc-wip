@@ -1,0 +1,3 @@
+InflateLib is a Deflate/Deflate64 decompression library written in
+C based off dotnet's System.IO.Compression implementation.  The
+API is modeled after that of zlib.
