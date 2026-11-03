@@ -3388,6 +3388,7 @@ SUBDIR+=	primesieve
 SUBDIR+=	prjtrellis
 SUBDIR+=	probcons
 SUBDIR+=	probe
+SUBDIR+=	proc-cli
 SUBDIR+=	procps
 SUBDIR+=	prodigal
 SUBDIR+=	progreiserfs

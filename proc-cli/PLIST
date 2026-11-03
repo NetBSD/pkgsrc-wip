@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/proc
+man/man1/proc.1
+share/bash-completion/completions/proc
+share/fish/vendor_completions.d/proc.fish
+share/zsh/site-functions/_proc
