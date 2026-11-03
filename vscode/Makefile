@@ -1,10 +1,10 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.143.1
+DISTNAME=		vscode-1.144.0
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
-SOURCE_COMMIT_HASH=	d956e8a6ac5d904486557eea07e1d6bd62a4d36f
+SOURCE_COMMIT_HASH=	2c33b50b16c472efe58357d1d2a8a5414bc23fbf
 
 NODE_MODULES=		vscode-node_modules-${PKGVERSION_NOREV}.tar.gz
 MASTER_SITES+=		https://distfiles.borderland.hu/
