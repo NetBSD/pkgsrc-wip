@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (VictoriaMetrics-1.137.0.tar.gz) = 8ca0f6d9e613052f2ccb159b592771ba6f1fcc078a0a84877978531a588cb094
-SHA512 (VictoriaMetrics-1.137.0.tar.gz) = 6eee350b34208d3387ca599af4bc1101f10739f833f75d1dd9831eb7e38e6cb3e078bd541f2404fe72273c562377100d7abc197e97555ae4d64851ea8ed47f16
-Size (VictoriaMetrics-1.137.0.tar.gz) = 46352482 bytes
+BLAKE2s (VictoriaMetrics-1.155.0.tar.gz) = fbb13c8c45a570442b7c25d460eacf805dabcdf3c0803b51e7a2f0c42ce03506
+SHA512 (VictoriaMetrics-1.155.0.tar.gz) = 670715b65a6851e8becb07d523b3541a8655b1c5fb91addfa96c256cca985c5088850fa5339c540c2025d4cdb89e41f02faee128c4af96555112f2dce0482530
+Size (VictoriaMetrics-1.155.0.tar.gz) = 57165921 bytes
 BLAKE2s (cel.dev_expr_@v_v0.25.1.mod) = c36f332c45cf24a4dd4d1a4c6ff42cd78732769e87b139ce56cd3f7c66ff685e
 SHA512 (cel.dev_expr_@v_v0.25.1.mod) = 67aecc4be51ad90133564333b4619f3195b522bcc4cec478fe37fcb7eef22a7efbfdbae97bfccd9ef1c45828116977a56a53451a037fd1ada3faa906278f4842
 Size (cel.dev_expr_@v_v0.25.1.mod) = 96 bytes

@@ -2,7 +2,7 @@
 #
 # used by wip/victoriametrics/Makefile
 
-VICTORIAMETRICS_VERS=	1.137.0
+VICTORIAMETRICS_VERS=	1.155.0
 DISTNAME=		VictoriaMetrics-${VICTORIAMETRICS_VERS}
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_GITHUB:=VictoriaMetrics/}
