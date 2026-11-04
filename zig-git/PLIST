@@ -55,6 +55,12 @@ lib/zig/compiler/Maker/Step/WriteFile.zig
 lib/zig/compiler/Maker/Watch.zig
 lib/zig/compiler/Maker/Watch/FsEvents.zig
 lib/zig/compiler/Maker/WebServer.zig
+lib/zig/compiler/Objdump.zig
+lib/zig/compiler/Objdump/archive.zig
+lib/zig/compiler/Objdump/coff.zig
+lib/zig/compiler/Objdump/elf.zig
+lib/zig/compiler/Objdump/macho.zig
+lib/zig/compiler/Objdump/wasm.zig
 lib/zig/compiler/aro/aro.zig
 lib/zig/compiler/aro/aro/Attribute.zig
 lib/zig/compiler/aro/aro/Attribute/Diagnostic.zig
@@ -150,7 +156,6 @@ lib/zig/compiler/aro/include/varargs.h
 lib/zig/compiler/aro/main.zig
 lib/zig/compiler/configurer.zig
 lib/zig/compiler/objcopy.zig
-lib/zig/compiler/objdump.zig
 lib/zig/compiler/reduce.zig
 lib/zig/compiler/reduce/Walk.zig
 lib/zig/compiler/resinator/ani.zig
@@ -18477,13 +18482,17 @@ lib/zig/std/Target/kvx.zig
 lib/zig/std/Target/lanai.zig
 lib/zig/std/Target/loongarch.zig
 lib/zig/std/Target/m68k.zig
+lib/zig/std/Target/m88k.zig
+lib/zig/std/Target/microblaze.zig
 lib/zig/std/Target/mips.zig
 lib/zig/std/Target/msp430.zig
 lib/zig/std/Target/nvptx.zig
+lib/zig/std/Target/or1k.zig
 lib/zig/std/Target/powerpc.zig
 lib/zig/std/Target/propeller.zig
 lib/zig/std/Target/riscv.zig
 lib/zig/std/Target/s390x.zig
+lib/zig/std/Target/sh.zig
 lib/zig/std/Target/sparc.zig
 lib/zig/std/Target/spirv.zig
 lib/zig/std/Target/ve.zig
@@ -18491,6 +18500,7 @@ lib/zig/std/Target/wasm.zig
 lib/zig/std/Target/x86.zig
 lib/zig/std/Target/xcore.zig
 lib/zig/std/Target/xtensa.zig
+lib/zig/std/Target/z80.zig
 lib/zig/std/Thread.zig
 lib/zig/std/Uri.zig
 lib/zig/std/array_hash_map.zig

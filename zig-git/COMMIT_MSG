@@ -1,4 +1,4 @@
-zig-git: update to 0.18.0-dev.624+b7f2c6d8f
+zig-git: update to v.0.18.0pre922nb20261104
 
 Development snapshot of Zig master, built against LLVM 23 from wip/llvm
 (lang/zig 0.17.0 follows lang/llvm 22; Zig master requires LLVM 23.x).

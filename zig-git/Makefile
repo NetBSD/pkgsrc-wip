@@ -3,8 +3,8 @@
 # Upstream master; needs LLVM 23 (wip/llvm) while lang/zig follows lang/llvm.
 # When bumping GIT_REVISION, update ZIG_DEV to match `git describe --tags`
 # (0.17.0-<ZIG_DEV>-g<hash>) of that commit.
-ZIG_DEV=	624
-GIT_REVISION=	b7f2c6d8fefdd2747e39e930bbe2c9450ec8f07c
+ZIG_DEV=	922
+GIT_REVISION=	1f8d9079b428694029bbf92f5ee11e21a7efc784
 
 DISTNAME=	zig-git-0.18.0pre${ZIG_DEV}
 CATEGORIES=	lang
