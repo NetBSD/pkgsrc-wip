@@ -5478,6 +5478,7 @@ SUBDIR+=	silvertree
 SUBDIR+=	simdutf
 SUBDIR+=	simgrid
 SUBDIR+=	simpa
+SUBDIR+=	simple-http-server
 SUBDIR+=	simple-mtpfs
 SUBDIR+=	simple-scan
 SUBDIR+=	simplec

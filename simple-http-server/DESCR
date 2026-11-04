@@ -1,0 +1,9 @@
+Simple HTTP Server
+
+Simple static file server with directory listing, upload, basic auth,
+range requests, compression, CORS, SPA fallback, and optional PKCS#12
+HTTPS support.
+
+The current implementation is based on `axum`/`tokio`. TLS support is
+behind the `tls` feature and is disabled by default so the default binary
+stays smaller.
