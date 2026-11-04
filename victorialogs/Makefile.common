@@ -4,7 +4,7 @@
 # used by wip/victorialogs-vlagent/Makefile
 # used by wip/victorialogs-vlogscli/Makefile
 
-VICTORIALOGS_VERS=	1.52.0
+VICTORIALOGS_VERS=	1.53.0
 DISTNAME=		VictoriaLogs-${VICTORIALOGS_VERS}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=VictoriaMetrics/}

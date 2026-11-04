@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (VictoriaLogs-1.52.0.tar.gz) = f005972d8323f980461171f1487c21b50a7bd145091bade3ff08c1c4a2f05a2f
-SHA512 (VictoriaLogs-1.52.0.tar.gz) = 11f34ee12cd803fa01be99ea754d0ef7c9cb2aa0694c7194878b7580237cefca74b797cc11a59b5b925f6af501d85be6fa9273a4e7db4d0cda6cf3baf20bbe79
-Size (VictoriaLogs-1.52.0.tar.gz) = 19698272 bytes
+BLAKE2s (VictoriaLogs-1.53.0.tar.gz) = 0ac7a9a04fdf5cdb441f6fd57911da89a808eb44a8579b4f9391e51507cd1666
+SHA512 (VictoriaLogs-1.53.0.tar.gz) = 5828c136d7dfb79e20d6dc46eb7cd9c4a64af91011f5c60326ddb4869ac322f4cb2206ddd7c9d2e32881b61d4e7e5159370451f31f0800b102f02b733a2eedad
+Size (VictoriaLogs-1.53.0.tar.gz) = 20743402 bytes
 BLAKE2s (github.com__victoria_metrics__victoria_metrics_@v_v1.146.1-0.20260630165203-c82127b6d4d1.mod) = e75ad2dc969b7e5f21e8a592493614428d52b78580d77d8579c9b37f37d6b597
 SHA512 (github.com__victoria_metrics__victoria_metrics_@v_v1.146.1-0.20260630165203-c82127b6d4d1.mod) = 09a79f83cc86210135dc8f0cfd4517ce512e4557fddbb5309c4aa3cf8c65156d9073c1a1a0b8075c2431ca4286df218ec4f09547b3a4efd7fdbf08057d5c2eb6
 Size (github.com__victoria_metrics__victoria_metrics_@v_v1.146.1-0.20260630165203-c82127b6d4d1.mod) = 9614 bytes
