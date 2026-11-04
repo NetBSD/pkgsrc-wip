@@ -145,6 +145,16 @@ SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 SUBST_VARS.path+=	WRKSRC SH
 
+# go (third_party/dawn)
+.include "../../lang/go/version.mk"
+TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
+MAKE_ENV+=		GOCACHE=${WRKDIR}/.cache/go-build
+SUBST_CLASSES+=		go
+SUBST_STAGE.go=		pre-configure
+SUBST_MESSAGE.go=	Set path of go executable
+SUBST_FILES.go+=	third_party/dawn/tools/generate-sources-gn.py
+SUBST_SED.go+=		-e 's,@GOBIN@,${GO},g'
+
 .include "options.mk"
 
 BUILDTYPE=	Release
