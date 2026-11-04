@@ -1,1 +1,3 @@
-wip/lightcraft: Add lightcraft-0.2.1
+wip/lightcraft: Update to lightcraft-0.18.0
+
+Git deps now coming in through GITHUB_SUBMODULES and the rust requirement went up to 1.95.

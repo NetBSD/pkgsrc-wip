@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lightcraft-0.4.0
+DISTNAME=	lightcraft-0.18.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=storytold/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -11,7 +11,14 @@ COMMENT=	Photo library and raw developer in the style of Lightroom, in Rust
 LICENSE=	mit OR apache-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-RUST_REQ=	1.90.0
+
+# git+https dependencies from Cargo.lock.  Each repository is extracted
+# under ${WRKDIR}/git and patches/patch-Cargo.toml turns the git deps
+# into path deps; their crates.io namesakes stay out of cargo-depends.mk.
+GITHUB_SUBMODULES+=	storytold craft-libs c5a1cbfb5f9049f9270955caffb5bee5997aebf7 ../git/craft-libs
+GITHUB_SUBMODULES+=	storytold egui 6d518fc799681571963842f95b55a6b68431b15a ../git/egui
+GITHUB_SUBMODULES+=	storytold winit a517b3846ee8457d84ee4975110bfda6797c44dc ../git/winit
+RUST_REQ=	1.95.0
 
 # Only the desktop app and the CLI; the default members also pull in xtask.
 CARGO_ARGS=	build --release ${DEFAULT_CARGO_ARGS} \
@@ -32,7 +39,7 @@ SUBST_CLASSES+=		metainfo
 SUBST_STAGE.metainfo=	pre-configure
 SUBST_FILES.metainfo=	packaging/linux/${APP_ID}.metainfo.xml.in
 SUBST_SED.metainfo=	-e 's,@VERSION@,${PKGVERSION_NOREV},g'
-SUBST_SED.metainfo+=	-e 's,@DATE@,2026-10-06,g'
+SUBST_SED.metainfo+=	-e 's,@DATE@,2026-11-02,g'
 
 INSTALLATION_DIRS+=	bin \
 			share/applications \
