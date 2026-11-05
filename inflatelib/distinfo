@@ -3,3 +3,8 @@ $NetBSD$
 BLAKE2s (inflatelib-0.3.0.tar.gz) = cfb916da8815cd367ed03d3cd418be5b5d705f38e3bca72a99609f83a1c79923
 SHA512 (inflatelib-0.3.0.tar.gz) = d097e0d19715cd3933e9936aa3fd661490d6471f4368fa27bc5e2abc4bed92fe09254a5bfa6d41274c555bf05e6d5dea89ad9f26704097b628b06f122188c0b3
 Size (inflatelib-0.3.0.tar.gz) = 1351303 bytes
+SHA1 (patch-test_cpp_BitstreamTests.cpp) = 7fa5dd5f26a93148cdf971dfed8adca19acd3fd0
+SHA1 (patch-test_cpp_CMakeLists.txt) = 7e8fcca0971ee238ae961c2e501e2d05974abdbc
+SHA1 (patch-test_cpp_HuffmanTreeTests.cpp) = 3fb622c2ee459279882b0680989287b3d9386be3
+SHA1 (patch-test_cpp_InflateTests.cpp) = b2c15d19f45d5f9f149b88ad1dfa69861c34e300
+SHA1 (patch-test_cpp_WindowTests.cpp) = e2b9647615316d5739af0d294a7c15844e6dc626

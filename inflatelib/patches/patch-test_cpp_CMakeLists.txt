@@ -1,0 +1,15 @@
+$NetBSD$
+
+https://github.com/microsoft/inflatelib/pull/36
+
+--- test/cpp/CMakeLists.txt.orig	2026-08-21 23:40:16.000000000 +0000
++++ test/cpp/CMakeLists.txt
+@@ -1,7 +1,7 @@ add_executable(cpptests)
+ 
+ add_executable(cpptests)
+ 
+-find_package(Catch2 CONFIG REQUIRED)
++find_package(Catch2 3.0 CONFIG REQUIRED)
+ target_link_libraries(cpptests
+     PRIVATE
+         inflatelib::inflatelib
