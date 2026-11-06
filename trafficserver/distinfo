@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.6 2022/08/05 13:02:02 adam Exp $
+
+BLAKE2s (trafficserver-10.2.1.tar.gz) = e3c65c35c895ede7ab624ebdfeee995c316045684755f5f7b332285d00f5c72f
+SHA512 (trafficserver-10.2.1.tar.gz) = 154c939f53730a33d9103f0d5c30c9fc51063f734e4d811cbb4b196f1b02049a5a7be69e52f6697afa7f4fe8e218c6fd5c9c51be55dedd1772d291dfff8d370d
+Size (trafficserver-10.2.1.tar.gz) = 22139170 bytes
+SHA1 (patch-CMakeLists.txt) = 36685f8bce789b38290e6167ecea4d017eb3d493
+SHA1 (patch-DbgCtl.h) = dba56cab1c1248598d93f1398707f13c2ad28eeb
+SHA1 (patch-LogConfig.cc) = a25a469ed99440bc91abdfc75aba1ddcbdd6871a
+SHA1 (patch-Server.cc) = d5daec1c26f387898938d12631ce63746ea5fea4
+SHA1 (patch-ink_inet.cc) = 0f4c32c240f78737f0fc34ba76cd863f5cb6a239
+SHA1 (patch-swoc_file.h) = b31ae61a2715aed221eb336256d5dafdb9b39466
+SHA1 (patch-tsmemcache.cc) = 9f67648660fc74fbfdbaaf1d8be2b9b0be383557
