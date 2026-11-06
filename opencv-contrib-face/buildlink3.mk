@@ -7,9 +7,9 @@ OPENCV_CONTRIB_FACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencv-contrib-face+=	opencv-contrib-face>=3.0.0
 BUILDLINK_ABI_DEPENDS.opencv-contrib-face?=	opencv-contrib-face>=4.13.0nb4
-BUILDLINK_PKGSRCDIR.opencv-contrib-face?=	../../graphics/opencv-contrib-face
+BUILDLINK_PKGSRCDIR.opencv-contrib-face?=	../../wip/opencv-contrib-face
 
-.include "../../graphics/opencv/buildlink3.mk"
+.include "../../wip/opencv/buildlink3.mk"
 .endif	# OPENCV_CONTRIB_FACE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-opencv-contrib-face
