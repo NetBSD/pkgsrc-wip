@@ -14,8 +14,6 @@ CONFLICTS=	tmux-[0-9]*
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--enable-sixel
-
 USE_TOOLS+=	pkg-config
 USE_FEATURES+=	strnlen
 
@@ -46,6 +44,8 @@ CPPFLAGS+=	-D__DARWIN_VERS_1050=0
 CONFIGURE_ARGS+=	--enable-utf8proc
 .include "../../converters/utf8proc/buildlink3.mk"
 .endif
+
+.include "options.mk"
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
