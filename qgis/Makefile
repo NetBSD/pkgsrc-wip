@@ -13,6 +13,7 @@ DIST_SUBDIR=	qgis-snapshot
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.qgis.org/
+#STATuSPAGE=	https://github.com/orgs/qgis/projects/18/views/1
 COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
