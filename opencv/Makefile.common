@@ -3,7 +3,7 @@
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 
-OPENCV_VERSION=	5.0.0
+OPENCV_VERSION=	5.1.0
 
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
