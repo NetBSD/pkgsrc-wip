@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.10.0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2022.12.07:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-html2text>=2024.2.25:../../textproc/py-html2text
+DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.1.0:../../textproc/py-markdown-it-py
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.0.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.0:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-rich>=14.2.0:../../comms/py-rich
