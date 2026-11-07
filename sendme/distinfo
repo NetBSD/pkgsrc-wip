@@ -1377,3 +1377,4 @@ Size (zerovec-derive-0.11.6.crate) = 23102 bytes
 BLAKE2s (zmij-1.0.23.crate) = 09f6f3e1ddf6abff21579db43caec1b708ad2de496f17489b16849f016b7ae5e
 SHA512 (zmij-1.0.23.crate) = 12f8d9726b232b6be68cefbe294505debb7a98715c11b95d89682a596fe1a02d9d7b2a6cdba97f2e8d47fa947ffbce9506a18568f2cab749ca3d03121e5fb66d
 Size (zmij-1.0.23.crate) = 28612 bytes
+SHA1 (patch-.._vendor_libc-0.2.190_src_unix_bsd_netbsdlike_netbsd_aarch64.rs) = 1b7a6f8ade78b8156b11ea3fdb67deac959da44d
