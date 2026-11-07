@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/shell_integration.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/shell_integration.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/shell_integration.h
 @@ -188,7 +188,7 @@ std::u16string GetAppShortcutsSubdirName
  #endif

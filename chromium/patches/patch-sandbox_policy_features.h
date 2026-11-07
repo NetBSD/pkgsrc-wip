@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- sandbox/policy/features.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ sandbox/policy/features.h
 @@ -45,7 +45,7 @@ SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATU
  SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATURE(kSpectreVariant2Mitigation);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_sampling_profiler_test_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/profiler/stack_sampling_profiler_test_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/profiler/stack_sampling_profiler_test_util.cc
 @@ -46,7 +46,7 @@
  // Fortunately, it provides _alloca, which functions identically.

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/extensions/api/messaging/launch_context_posix.cc
-@@ -84,7 +84,7 @@ std::optional<LaunchContext::ProcessStat
+@@ -85,7 +85,7 @@ std::optional<LaunchContext::ProcessStat
  
    options.current_directory = command_line.GetProgram().DirName();
  

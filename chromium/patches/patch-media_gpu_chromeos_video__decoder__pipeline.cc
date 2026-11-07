@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -720,7 +720,7 @@ void VideoDecoderPipeline::InitializeTas
        NOTREACHED();
@@ -24,7 +24,7 @@ $NetBSD$
    // Linux: behavior depends on which backend the decoder represents, signaled
    // by whether it supplied a custom allocator.
    if (allocator.has_value()) {
-@@ -1373,7 +1373,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1374,7 +1374,7 @@ VideoDecoderPipeline::PickDecoderOutputF
               << " VideoFrames";
      auxiliary_frame_pool_->set_parent_task_runner(decoder_task_runner_);
  

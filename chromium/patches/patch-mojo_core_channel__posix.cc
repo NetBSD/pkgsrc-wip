@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- mojo/core/channel_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ mojo/core/channel_posix.cc
 @@ -444,10 +444,11 @@ bool ChannelPosix::WriteNoLock(MessageVi
      if (result < 0) {

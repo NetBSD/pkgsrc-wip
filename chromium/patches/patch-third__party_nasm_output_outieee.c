@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/nasm/output/outieee.c.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/nasm/output/outieee.c.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/nasm/output/outieee.c
 @@ -1245,8 +1245,10 @@ static int32_t ieee_putlr(struct ieeeFix
  static void ieee_unqualified_name(char *dest, char *source)

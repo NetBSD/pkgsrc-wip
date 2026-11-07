@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/prefs/pref_watcher.cc
 @@ -40,7 +40,7 @@
  #include "components/browser_ui/accessibility/android/font_size_prefs_android.h"

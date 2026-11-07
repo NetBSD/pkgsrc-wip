@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/variations/service/variations_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/variations/service/variations_service.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/variations/service/variations_service.cc
-@@ -149,7 +149,7 @@ std::string GetPlatformString() {
+@@ -152,7 +152,7 @@ std::string GetPlatformString() {
    return "android";
  #elif BUILDFLAG(IS_FUCHSIA)
    return "fuchsia";

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/shape_detection/shape_detection_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- services/shape_detection/shape_detection_service.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ services/shape_detection/shape_detection_service.cc
 @@ -22,7 +22,7 @@
  #elif BUILDFLAG(IS_ANDROID)

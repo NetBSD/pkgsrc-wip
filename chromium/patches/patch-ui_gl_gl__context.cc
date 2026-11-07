@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_context.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/gl/gl_context.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/gl/gl_context.cc
-@@ -153,7 +153,7 @@ bool GLContext::MakeCurrent(GLSurface* s
+@@ -140,7 +140,7 @@ bool GLContext::MakeCurrent(GLSurface* s
      recorded_max_gles_version_if_feasible = true;
    }
  #elif (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD$
    static bool recorded_emulated_gles_version = false;
    if (!recorded_emulated_gles_version) {
      base::UmaHistogramBoolean("GPU.ANGLECanEmulateGLES3",
-@@ -431,7 +431,7 @@ bool GLContext::MakeVirtuallyCurrent(
+@@ -418,7 +418,7 @@ bool GLContext::MakeVirtuallyCurrent(
    DCHECK(virtual_context->IsCurrent(surface));
  
    if (switched_real_contexts || virtual_context != current_virtual_context_) {

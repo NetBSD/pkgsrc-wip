@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory_coordinator/memory_coordinator_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/memory_coordinator/memory_coordinator_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/memory_coordinator/memory_coordinator_features.cc
 @@ -9,7 +9,7 @@
  namespace base {

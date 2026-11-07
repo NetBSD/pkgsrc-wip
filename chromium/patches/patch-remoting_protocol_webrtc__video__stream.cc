@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/protocol/webrtc_video_stream.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/protocol/webrtc_video_stream.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/protocol/webrtc_video_stream.cc
-@@ -237,7 +237,7 @@ WebrtcVideoStream::WebrtcVideoStream(con
+@@ -218,7 +218,7 @@ WebrtcVideoStream::WebrtcVideoStream(con
      : session_options_(session_options) {
  // TODO: yuweih - Check if the other platforms can also be updated to run on a
  // dedicated thread.

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_item_model.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -730,7 +730,7 @@ bool DownloadItemModel::IsCommandChecked
        return download_->GetOpenWhenComplete() || IsExtensionDownload();

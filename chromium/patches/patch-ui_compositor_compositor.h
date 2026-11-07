@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/compositor/compositor.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/compositor/compositor.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/compositor/compositor.h
 @@ -453,7 +453,7 @@ class COMPOSITOR_EXPORT Compositor
    // base::PowerSuspendObserver:

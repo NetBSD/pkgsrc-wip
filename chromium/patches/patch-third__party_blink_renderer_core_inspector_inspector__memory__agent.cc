@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/blink/renderer/core/inspector/inspector_memory_agent.cc
 @@ -210,7 +210,7 @@ InspectorMemoryAgent::GetSamplingProfile
  

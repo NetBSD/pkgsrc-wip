@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_content_client.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/common/chrome_content_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/common/chrome_content_client.cc
 @@ -61,12 +61,12 @@
  #include "url/url_constants.h"
@@ -30,7 +30,7 @@ $NetBSD$
      webapps::kIsolatedAppScheme,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -216,7 +216,7 @@ void ChromeContentClient::AddAdditionalS
+@@ -217,7 +217,7 @@ void ChromeContentClient::AddAdditionalS
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -39,7 +39,7 @@ $NetBSD$
    schemes->isolated_app_schemes.push_back(webapps::kIsolatedAppScheme);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -265,7 +265,7 @@ void ChromeContentClient::AddAdditionalS
+@@ -266,7 +266,7 @@ void ChromeContentClient::AddAdditionalS
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

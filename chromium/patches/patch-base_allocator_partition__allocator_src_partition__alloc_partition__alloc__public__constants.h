@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_public_constants.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_public_constants.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_public_constants.h
-@@ -162,7 +162,7 @@ enum pool_handle : unsigned {
+@@ -163,7 +163,7 @@ enum pool_handle : unsigned {
  #if PA_BUILDFLAG(HAS_64_BIT_POINTERS)
  #if PA_BUILDFLAG(IS_ANDROID) || PA_BUILDFLAG(IS_IOS) ||             \
      PA_BUILDFLAG(IS_CHROMEOS) && PA_BUILDFLAG(PA_ARCH_CPU_ARM64) || \

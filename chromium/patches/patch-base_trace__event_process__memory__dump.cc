@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/process_memory_dump.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/trace_event/process_memory_dump.cc
 @@ -43,7 +43,7 @@
  #include <Psapi.h>

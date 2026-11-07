@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/wallet/core/browser/network/wallet_request.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/wallet/core/browser/network/wallet_request.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/wallet/core/browser/network/wallet_request.cc
 @@ -19,7 +19,7 @@ ClientInfo::ChromeClientInfo::Platform G
    return ClientInfo::ChromeClientInfo::PLATFORM_MACOS;

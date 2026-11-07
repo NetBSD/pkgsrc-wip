@@ -1,26 +1,218 @@
-chromium: update to 156.0.8078.79
+chromium: update to 157.0.8103.38
 
-* 156.0.8078.79
-This update includes 22 security fixes. Please see the Chrome Security Page for more information.
+* 157.0.8103.38
+This update includes 213 security fixes. Please see the Chrome Security Page for more information.
 
-[TBD][576215540] Critical CVE-2026-76024: Memory corruption in MediaStream. Reported by Xinyang Ge on 2026-10-21
-[N/A][559780982] High CVE-2026-76025: Use after free in FileSystem. Reported by Google on 2026-09-10
-[N/A][567673200] High CVE-2026-76026: Memory corruption in Autofill. Reported by Google on 2026-09-29
-[N/A][568894475] High CVE-2026-76027: Memory corruption in CacheStorage. Reported by Google on 2026-10-02
-[N/A][569012015] High CVE-2026-76028: Use after free in FileSystem. Reported by Google on 2026-10-03
-[TBD][572055997] High CVE-2026-76029: Memory corruption in Network. Reported by Cristian Di Nicola (crih.exe) (https://crihexe.com) on 2026-10-09
-[TBD][572269631] High CVE-2026-76030: Memory corruption in FileSystem. Reported by huntersnot4 on 2026-10-11
-[TBD][572556403] High CVE-2026-76031: Use after free in Input. Reported by Arni Hardarson (Neonix Security) on 2026-10-12
-[N/A][573264074] High CVE-2026-119260: Use after free in Frames. Reported by Google on 2026-10-13
-[N/A][574213633] High CVE-2026-119261: Improper input validation in Skia. Reported by Google on 2026-10-16
-[TBD][574660146] High CVE-2026-119262: Improper input validation in V8. Reported by Hyeonjun Ahn (@_deayzl) on 2026-10-17
-[N/A][575143870] High CVE-2026-119263: Memory corruption in GarbageCollection. Reported by Xinyang Ge on 2026-10-18
-[TBD][575150692] High CVE-2026-119264: Memory corruption in Dawn. Reported by leegn4a on 2026-10-19
-[N/A][575201795] High CVE-2026-119265: Memory corruption in Quota. Reported by Google on 2026-10-19
-[N/A][575202553] High CVE-2026-119266: Use after free in Quota. Reported by Google on 2026-10-19
-[TBD][576203565] High CVE-2026-119267: Memory corruption in DOM. Reported by Xinyang Ge on 2026-10-21
-[N/A][576984708] High CVE-2026-119268: Integer overflow in Editing. Reported by Xinyang Ge on 2026-10-23
-[N/A][577072000] High CVE-2026-119269: Use after free in Blink. Reported by Google on 2026-10-23
-[N/A][577333729] High CVE-2026-119270: Improper input validation in CacheStorage. Reported by Google on 2026-10-24
-[N/A][577403270] High CVE-2026-119271: Use after free in Skia. Reported by Google on 2026-10-24
-[N/A][569012543] Medium CVE-2026-119272: Out of bounds read in FileSystem. Reported by Google on 2026-10-03
+[$10,000][567735302] Critical CVE-2026-121156: Buffer overflow in Dawn. Reported by Zhenpeng (Leo) Lin at depthfirst on 2026-09-30
+[$1,000][562777838] Critical CVE-2026-121229: Memory corruption in ANGLE. Reported by @mfx on 2026-09-17
+[N/A][558870371] Critical CVE-2026-121246: Use after free in WebGL. Reported by Google on 2026-09-08
+[N/A][567216197] Critical CVE-2026-121035: Use after free in Prerender. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-28
+[N/A][569161611] Critical CVE-2026-121247: Buffer overflow in Dawn. Reported by Google on 2026-10-03
+[N/A][571065824] Critical CVE-2026-121203: Use after free in Geometry. Reported by Xinyang Ge on 2026-10-07
+[N/A][571284308] Critical CVE-2026-121126: Use after free in Core. Reported by Wenbin Liu on 2026-10-08
+[$10,000][485855931] High CVE-2026-121107: Incorrect authorization in BackgroundFetch. Reported by Johan Carlsson on 2026-02-19
+[$2,000][566398391] High CVE-2026-121197: Out of bounds read in ANGLE. Reported by Arni Hardarson (Neonix Security) on 2026-09-26
+[N/A][40063728] High CVE-2026-121112: Out of bounds read in Permissions. Reported by koocola(@alo_cook) and Guang Gong of 360 Vulnerability Research Institute on 2023-03-22
+[N/A][496008447] High CVE-2026-121174: Missing authorization in BackgroundFetch. Reported by Google on 2026-03-25
+[N/A][516958782] High CVE-2026-121098: Improper state validation in GPU. Reported by Google on 2026-05-27
+[N/A][536617330] High CVE-2026-121074: Memory corruption in GPU. Reported by Google on 2026-07-19
+[N/A][550489336] High CVE-2026-121173: Uninitialized resource in WebGL. Reported by Google on 2026-08-21
+[TBD][552757015] High CVE-2026-121233: Type confusion in CacheStorage. Reported by Salvatore Gulizia (Serotav) on 2026-08-26
+[TBD][557605839] High CVE-2026-121140: Out of bounds read in Internals. Reported by Popax21 on 2026-09-06
+[N/A][558111285] High CVE-2026-121095: Uninitialized resource in WebGL. Reported by Google on 2026-09-07
+[N/A][561994040] High CVE-2026-121071: Incorrect authorization in FileSystem. Reported by Google on 2026-09-15
+[N/A][563359278] High CVE-2026-121207: Uninitialized resource in Dawn. Reported by Google on 2026-09-18
+[N/A][565681453] High CVE-2026-121185: Use after free in PictureInPicture. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-24
+[N/A][566111382] High CVE-2026-121166: Type confusion in PDFium. Reported by OpenAI Codex Security (amyb) on 2026-09-25
+[N/A][566251701] High CVE-2026-121047: Buffer overflow in Media. Reported by OpenAI Codex Security (amyb) on 2026-09-25
+[N/A][566313798] High CVE-2026-121124: Improper adherence to coding standards in XML. Reported by Google on 2026-09-25
+[N/A][566377255] High CVE-2026-121118: Use after free in SVG. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-26
+[N/A][566506819] High CVE-2026-121188: Use after free in PerformanceAPIs. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-26
+[N/A][567106301] High CVE-2026-121113: Buffer overflow in PDFium. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-28
+[N/A][567222737] High CVE-2026-121082: Type confusion in V8. Reported by OpenAI Codex Security (amyb) on 2026-09-28
+[TBD][567321055] High CVE-2026-121083: Use after free in Compositing. Reported by Hafiizh on 2026-09-29
+[N/A][567936263] High CVE-2026-121179: Use after free in PDFium. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-30
+[N/A][567936265] High CVE-2026-121180: Buffer overflow in Media. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-30
+[N/A][567936269] High CVE-2026-121181: Use after free in Editing. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-30
+[N/A][568794851] High CVE-2026-121228: Type confusion in V8. Reported by Xinyang Ge on 2026-10-02
+[N/A][568818122] High CVE-2026-121080: Use after free in Codecs. Reported by Xinyang Ge on 2026-10-02
+[N/A][568832157] High CVE-2026-121044: Use after free in Layout. Reported by Xinyang Ge on 2026-10-02
+[N/A][568901837] High CVE-2026-121051: UI misrepresentation in iOSWeb. Reported by Google on 2026-10-02
+[N/A][568903801] High CVE-2026-121038: Information leak in Compositing. Reported by Google on 2026-10-02
+[N/A][568936993] High CVE-2026-121090: Improper privilege management in Navigation. Reported by Google on 2026-10-03
+[TBD][569129173] High CVE-2026-121052: Use after free in GPU. Reported by Team Allied (nag0x, h4nk3r1n, h4vrut4, HunSec, Hyeongeun Ji ) on 2026-10-04
+[TBD][569415790] High CVE-2026-121037: Out of bounds write in ANGLE. Reported by Akshay Sharma - anonymous_blackzero on 2026-10-04
+[N/A][569674218] High CVE-2026-121086: Buffer overflow in Skia. Reported by Xinyang Ge on 2026-10-05
+[N/A][570026889] High CVE-2026-121131: Use after free in Mobile. Reported by Google on 2026-10-05
+[N/A][570028521] High CVE-2026-121087: Improper input validation in Mobile. Reported by Google on 2026-10-05
+[N/A][570029317] High CVE-2026-121178: Use after free in Aura. Reported by Google on 2026-10-05
+[N/A][570796613] High CVE-2026-121100: Use after free in DOM. Reported by Xinyang Ge on 2026-10-07
+[N/A][571059182] High CVE-2026-121148: Use after free in ANGLE. Reported by xinyang on 2026-10-07
+[TBD][571648522] High CVE-2026-121089: Use after free in WebGPU. Reported by apalov on 2026-10-09
+[TBD][572991399] High CVE-2026-121250: Use after free in Extensions. Reported by Daisuke Hatakeyama and Keita Sode (SYZD Research) on 2026-10-13
+[N/A][573263908] High CVE-2026-121032: Out of bounds read in Skia. Reported by Google on 2026-10-13
+[TBD][573387527] High CVE-2026-121114: Use after free in TabStrip. Reported by malichamdan on 2026-10-14
+[N/A][573836121] High CVE-2026-121127: Use after free in WebAudio. Reported by kylebot on 2026-10-15
+[TBD][574021176] High CVE-2026-121210: Type confusion in V8. Reported by zenneth (randomguy6407) on 2026-10-15
+[N/A][574038247] High CVE-2026-121057: Type confusion in V8. Reported by OpenAI Codex Security (kylebot) on 2026-10-15
+[N/A][574193110] High CVE-2026-121201: Use after free in Animation. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-10-16
+[N/A][574214629] High CVE-2026-121084: Out of bounds read in Skia. Reported by Google on 2026-10-16
+[N/A][574339635] High CVE-2026-121094: Type confusion in V8. Reported by Vlad Stolyarov (Anthropic), assisted by Claude on 2026-10-16
+[TBD][574351803] High CVE-2026-121079: Race condition in V8. Reported by Hyeonjun Ahn (@_deayzl) on 2026-10-16
+[N/A][574376940] High CVE-2026-121143: Uninitialized resource in GPU. Reported by Google on 2026-10-16
+[N/A][574409275] High CVE-2026-121097: Use after free in Printing. Reported by Google on 2026-10-16
+[N/A][574412369] High CVE-2026-121214: Use after free in Passwords. Reported by Google on 2026-10-16
+[N/A][574604188] High CVE-2026-121133: Incorrect reference resolution in Images. Reported by Google on 2026-10-16
+[TBD][574752676] High CVE-2026-121249: Buffer overflow in ANGLE. Reported by Atte Kettunen on 2026-10-17
+[N/A][574762568] High CVE-2026-121213: Uninitialized resource in Images. Reported by Xinyang Ge on 2026-10-17
+[N/A][574791491] High CVE-2026-121241: Use after free in Navigation. Reported by Google on 2026-10-17
+[N/A][574922421] High CVE-2026-121224: Security issue in Desktop. Reported by Google on 2026-10-17
+[N/A][575318807] High CVE-2026-121117: Use after free in Paint. Reported by Google on 2026-10-19
+[N/A][576097084] High CVE-2026-121123: Use after free in Canvas. Reported by Vlad Stolyarov (Anthropic), assisted by Claude on 2026-10-21
+[N/A][576169244] High CVE-2026-121182: Use after free in DOM. Reported by Xinyang Ge on 2026-10-21
+[N/A][576723181] High CVE-2026-121061: Use after free in Modularization. Reported by Vlad Stolyarov (Anthropic), assisted by Claude on 2026-10-22
+[N/A][576937680] High CVE-2026-121227: Uninitialized resource in Skia. Reported by Google on 2026-10-23
+[N/A][577318603] High CVE-2026-121226: Type confusion in V8. Reported by Google on 2026-10-24
+[N/A][577327383] High CVE-2026-121068: Type confusion in V8. Reported by OpenAI Codex Security (amyb) on 2026-10-25
+[N/A][577352626] High CVE-2026-121137: Type confusion in DevTools. Reported by Google on 2026-10-24
+[N/A][577352772] High CVE-2026-121160: Out of bounds read in Skia. Reported by Google on 2026-10-24
+[N/A][577378379] High CVE-2026-121036: Use after free in CSS. Reported by Google on 2026-10-24
+[N/A][577400245] High CVE-2026-121104: Incorrect authorization in FileSystem. Reported by Google on 2026-10-24
+[N/A][577400880] High CVE-2026-121034: Use after free in Views. Reported by Google on 2026-10-24
+[N/A][577402416] High CVE-2026-121208: Out of bounds read in Media. Reported by Google on 2026-10-24
+[N/A][577403757] High CVE-2026-121129: Use after free in WebRTC. Reported by Google on 2026-10-24
+[TBD][577719868] High CVE-2026-121211: Use after free in PowerBookmarks. Reported by octo on 2026-10-25
+[N/A][578083257] High CVE-2026-121078: Type confusion in V8. Reported by Google on 2026-10-26
+[TBD][578500839] High CVE-2026-121060: Incorrect authorization in FileSystem. Reported by tmemabo1 on 2026-10-27
+[N/A][578670966] High CVE-2026-121076: Use after free in WebXR. Reported by Google on 2026-10-28
+[N/A][578688670] High CVE-2026-121221: Type confusion in V8. Reported by Google on 2026-10-28
+[N/A][578691880] High CVE-2026-121119: Use after free in Controls. Reported by Google on 2026-10-28
+[$2,000][479258455] Medium CVE-2026-121244: UI misrepresentation in FileAPI. Reported by Luan Herrera (@lbherrera_) on 2026-01-27
+[$2,000][566857543] Medium CVE-2026-121242: Improper input validation in WebPackaging. Reported by Cassio Lima(JaxT) on 2026-09-28
+[$2,000][571058818] Medium CVE-2026-121105: Information leak in Network. Reported by a45hif on 2026-10-07
+[$1,000][503201581] Medium CVE-2026-121237: Improper state validation in FileSystem. Reported by Dwij Mehta on 2026-04-16
+[TBD][40059500] Medium CVE-2026-121102: Missing authorization in BackgroundFetch. Reported by Maurice Dauer on 2022-04-27
+[TBD][492163889] Medium CVE-2026-121120: Improper input validation in Prerender. Reported by Tianyi Hu on 2026-03-12
+[N/A][495903812] Medium CVE-2026-121161: Information leak in BackgroundFetch. Reported by Google on 2026-03-24
+[N/A][496187630] Medium CVE-2026-121062: Incorrect authorization in API. Reported by Google on 2026-03-25
+[N/A][497950736] Medium CVE-2026-121031: Missing authorization in PDF. Reported by Google on 2026-03-30
+[N/A][499181801] Medium CVE-2026-121063: Incorrect authorization in CacheStorage. Reported by Google on 2026-04-03
+[N/A][500171457] Medium CVE-2026-121108: Confused deputy in BackgroundFetch. Reported by Google on 2026-04-07
+[N/A][502023614] Medium CVE-2026-121199: Missing authorization in Chromoting. Reported by Google on 2026-04-13
+[N/A][502385220] Medium CVE-2026-121099: Information leak in PrivateTokens. Reported by Google on 2026-04-14
+[N/A][505177525] Medium CVE-2026-121196: Privilege elevation in Mobile. Reported by Google on 2026-04-22
+[N/A][507351304] Medium CVE-2026-121066: Incorrect authorization in Extensions. Reported by Google on 2026-04-28
+[N/A][511768565] Medium CVE-2026-121256: Use of released resource in GPU. Reported by Google on 2026-05-10
+[N/A][513426189] Medium CVE-2026-121115: Improper input validation in Shopping. Reported by Google on 2026-05-15
+[N/A][513767200] Medium CVE-2026-121234: Privilege elevation in Contacts. Reported by Google on 2026-05-16
+[N/A][514077956] Medium CVE-2026-121177: UI misrepresentation in PageInfo. Reported by Google on 2026-05-17
+[N/A][514542988] Medium CVE-2026-121193: Incorrect authorization in Extensions. Reported by Google on 2026-05-19
+[N/A][517435285] Medium CVE-2026-121248: Incorrect authorization in API. Reported by Google on 2026-05-28
+[N/A][517448378] Medium CVE-2026-121106: Information leak in Omnibox. Reported by Google on 2026-05-28
+[N/A][528485835] Medium CVE-2026-121200: Incorrect reference resolution in DevTools. Reported by Google on 2026-06-27
+[N/A][533454968] Medium CVE-2026-121039: Incorrect authorization in Proxy Auth. Reported by Google on 2026-07-10
+[N/A][536163128] Medium CVE-2026-121122: UI misrepresentation in Prompts. Reported by Google on 2026-07-18
+[N/A][536516239] Medium CVE-2026-121219: Integer overflow in GPU. Reported by Google on 2026-07-19
+[N/A][540020706] Medium CVE-2026-121255: Incorrect authorization in Autofill AI. Reported by Google on 2026-07-28
+[N/A][548943621] Medium CVE-2026-121231: Incorrect authorization in DevTools. Reported by Google on 2026-08-19
+[TBD][550245671] Medium CVE-2026-121183: Incorrect authorization in Extensions. Reported by a45hif on 2026-08-21
+[N/A][553130328] Medium CVE-2026-121072: Uninitialized resource in Skia. Reported by Google on 2026-08-26
+[N/A][553138801] Medium CVE-2026-121103: Incorrect authorization in Extensions. Reported by Google on 2026-08-26
+[N/A][553145250] Medium CVE-2026-121136: Missing authorization in DevTools. Reported by Google on 2026-08-26
+[N/A][553148542] Medium CVE-2026-121040: Incorrect authorization in Core. Reported by Google on 2026-08-26
+[N/A][553152519] Medium CVE-2026-121030: Incorrect authorization in DevTools. Reported by Google on 2026-08-26
+[N/A][553154932] Medium CVE-2026-121075: Missing authorization in DevTools. Reported by Google on 2026-08-26
+[N/A][553158297] Medium CVE-2026-121220: Incorrect authorization in Core. Reported by Google on 2026-08-26
+[TBD][553309390] Medium CVE-2026-121170: Improper resource control in WebCodecs. Reported by @bean5oup on 2026-08-27
+[TBD][553652456] Medium CVE-2026-121059: Information leak in Core. Reported by OGINOME Tomohito on 2026-08-27
+[N/A][556221528] Medium CVE-2026-121163: Improper input validation in Browser. Reported by Google on 2026-09-02
+[TBD][562158081] Medium CVE-2026-121088: Missing authorization in PerformanceAPIs. Reported by OGINOME Tomohito on 2026-09-15
+[N/A][562221093] Medium CVE-2026-121033: Uninitialized resource in GPU. Reported by Google on 2026-09-16
+[N/A][562225118] Medium CVE-2026-121254: Information leak in Select. Reported by Google on 2026-09-16
+[N/A][562233597] Medium CVE-2026-121065: Incorrect authorization in DevTools. Reported by Google on 2026-09-16
+[N/A][562238690] Medium CVE-2026-121171: Confused deputy in DevTools. Reported by Google on 2026-09-16
+[N/A][562656015] Medium CVE-2026-121116: Missing authorization in WebView. Reported by Google on 2026-09-17
+[N/A][563355450] Medium CVE-2026-121239: Information leak in Core. Reported by Google on 2026-09-18
+[N/A][563359033] Medium CVE-2026-121187: Observable discrepancy in Paint. Reported by Google on 2026-09-18
+[TBD][564190098] Medium CVE-2026-121132: Information leak in V8. Reported by wang1r && lhfff on 2026-09-21
+[N/A][565092623] Medium CVE-2026-121067: UI misrepresentation in PermissionElement. Reported by Google on 2026-09-23
+[N/A][565490229] Medium CVE-2026-121096: Incomplete cleanup in V8. Reported by Google on 2026-09-24
+[N/A][565681451] Medium CVE-2026-121184: Out of bounds read in Media. Reported by xinyang on 2026-09-24
+[N/A][565902952] Medium CVE-2026-121215: UI misrepresentation in Bluetooth. Reported by Google on 2026-09-24
+[TBD][566660676] Medium CVE-2026-121212: Incorrect authorization in Core. Reported by Arni Hardarson (Neonix Security) on 2026-09-27
+[TBD][566683019] Medium CVE-2026-121194: Missing authorization in SiteIsolation. Reported by JonathanBouman on 2026-09-27
+[TBD][566935544] Medium CVE-2026-121202: Use after free in Autofill. Reported by Siyang Wu (LeoWSY-hashblue) on 2026-09-28
+[N/A][567169222] Medium CVE-2026-121048: Race condition in V8. Reported by OpenAI Codex Security (amyb) on 2026-09-28
+[N/A][567611695] Medium CVE-2026-121070: Use after free in WTF. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-29
+[N/A][567672825] Medium CVE-2026-121257: Use after free in TabStrip. Reported by Google on 2026-09-29
+[N/A][568010379] Medium CVE-2026-121218: Type confusion in V8. Reported by Google on 2026-10-01
+[N/A][568972388] Medium CVE-2026-121164: Incorrect authorization in Views. Reported by Google on 2026-10-03
+[N/A][568972975] Medium CVE-2026-121223: Observable discrepancy in Media. Reported by Google on 2026-10-03
+[N/A][568978733] Medium CVE-2026-121186: UI misrepresentation in Passwords. Reported by Google on 2026-10-03
+[N/A][568986882] Medium CVE-2026-121176: Uninitialized resource in Media. Reported by Google on 2026-10-03
+[N/A][568988525] Medium CVE-2026-121128: Use after free in Scheduling. Reported by Google on 2026-10-03
+[N/A][568999538] Medium CVE-2026-121216: UI misrepresentation in UI. Reported by Google on 2026-10-03
+[N/A][569005114] Medium CVE-2026-121158: Information leak in Paint. Reported by Google on 2026-10-03
+[N/A][569006789] Medium CVE-2026-121110: UI misrepresentation in Shopping. Reported by Google on 2026-10-03
+[N/A][569012366] Medium CVE-2026-121042: Incorrect authorization in Permissions. Reported by Google on 2026-10-03
+[N/A][569659190] Medium CVE-2026-121238: Use after free in Source. Reported by Xinyang Ge on 2026-10-05
+[N/A][570026368] Medium CVE-2026-121077: Use after free in Mobile. Reported by Google on 2026-10-05
+[N/A][570029913] Medium CVE-2026-121245: Race condition in Autofill. Reported by Google on 2026-10-05
+[N/A][570104009] Medium CVE-2026-121049: Out of bounds read in V8. Reported by Google on 2026-10-05
+[TBD][571195939] Medium CVE-2026-121091: Incorrect authorization in Permissions. Reported by Edmilson Júnior (sierghart) on 2026-10-07
+[TBD][571960472] Medium CVE-2026-121167: Incorrect authorization in Permissions. Reported by Keita Sode (SYZD Research) on 2026-10-09
+[N/A][578671521] Medium CVE-2026-121135: Security issue in Platform. Reported by Google on 2026-10-28
+[$1,000][40052279] Low CVE-2026-121209: UI misrepresentation in Input. Reported by Khalil Zhani on 2020-05-11
+[N/A][498000798] Low CVE-2026-121134: Information loss in BackgroundFetch. Reported by Google on 2026-03-31
+[N/A][500600456] Low CVE-2026-121217: Use after free in Streaming. Reported by Google on 2026-04-08
+[N/A][504234693] Low CVE-2026-121109: Inadequate encryption strength in SSL. Reported by Google on 2026-04-19
+[N/A][513451861] Low CVE-2026-121243: Information leak in Frames. Reported by Google on 2026-05-15
+[N/A][514074839] Low CVE-2026-121053: UI misrepresentation in Transactions Platform. Reported by Google on 2026-05-17
+[N/A][514078071] Low CVE-2026-121190: UI misrepresentation in Extensions. Reported by Google on 2026-05-17
+[N/A][517434186] Low CVE-2026-121125: Information leak in ServiceWorker. Reported by Google on 2026-05-28
+[N/A][520554677] Low CVE-2026-121046: Incorrect authorization in WebAppInstalls. Reported by Google on 2026-06-05
+[N/A][523708065] Low CVE-2026-121222: Incorrect authorization in Forms. Reported by Google on 2026-06-13
+[N/A][533070896] Low CVE-2026-121157: Incorrect authorization in Chromoting. Reported by Google on 2026-07-09
+[N/A][540040995] Low CVE-2026-121235: Information leak in Paint. Reported by Google on 2026-07-28
+[TBD][550356947] Low CVE-2026-121252: Incorrect authorization in Core. Reported by Zabith Mohammed (@nmzabith) on 2026-08-21
+[N/A][553161888] Low CVE-2026-121168: Improper resource exposure in DevTools. Reported by Google on 2026-08-26
+[N/A][553171097] Low CVE-2026-121043: UI misrepresentation in Payments. Reported by Google on 2026-08-27
+[N/A][553249498] Low CVE-2026-121111: Incorrect authorization in HID. Reported by Google on 2026-08-27
+[N/A][553249728] Low CVE-2026-121138: Observable discrepancy in CORS. Reported by Google on 2026-08-27
+[N/A][553251045] Low CVE-2026-121055: Incomplete cleanup in DevTools. Reported by Google on 2026-08-27
+[N/A][553259600] Low CVE-2026-121101: Missing authorization in DevTools. Reported by Google on 2026-08-27
+[N/A][553260839] Low CVE-2026-121236: Improper input validation in Network. Reported by Google on 2026-08-27
+[N/A][553262220] Low CVE-2026-121165: UI misrepresentation in Mobile. Reported by Google on 2026-08-27
+[N/A][553265115] Low CVE-2026-121253: Missing authorization in DevTools. Reported by Google on 2026-08-27
+[N/A][553270515] Low CVE-2026-121172: Incorrect authorization in Isolated. Reported by Google on 2026-08-27
+[N/A][553289241] Low CVE-2026-121206: UI misrepresentation in Isolated. Reported by Google on 2026-08-27
+[TBD][555547989] Low CVE-2026-121189: Use after free in Browser. Reported by TIENPA on 2026-09-01
+[N/A][556215096] Low CVE-2026-121121: UI misrepresentation in PageInfo. Reported by Google on 2026-09-02
+[N/A][556233596] Low CVE-2026-121130: Observable discrepancy in Forms. Reported by Google on 2026-09-02
+[TBD][561672123] Low CVE-2026-121251: Missing authorization in V8. Reported by wang1r&&lhfff on 2026-09-15
+[N/A][562108905] Low CVE-2026-121085: Incorrect authorization in WebUI. Reported by Google on 2026-09-16
+[N/A][562957377] Low CVE-2026-121159: Incorrect authorization in History. Reported by Google on 2026-09-17
+[N/A][562957821] Low CVE-2026-121204: Incomplete cleanup in DevTools. Reported by Google on 2026-09-17
+[N/A][562957845] Low CVE-2026-121205: Incorrect authorization in CORS. Reported by Google on 2026-09-17
+[N/A][562964684] Low CVE-2026-121050: Race condition in Mobile. Reported by Google on 2026-09-17
+[N/A][562975181] Low CVE-2026-121081: UI misrepresentation in Passwords. Reported by Google on 2026-09-17
+[N/A][563181376] Low CVE-2026-121240: Improper input validation in Variations. Reported by Google on 2026-09-18
+[N/A][563340726] Low CVE-2026-121198: Confused deputy in WebUI. Reported by Google on 2026-09-18
+[N/A][563349192] Low CVE-2026-121225: Incorrect authorization in Permissions. Reported by Google on 2026-09-18
+[N/A][563362904] Low CVE-2026-121162: UI misrepresentation in Notifications. Reported by Google on 2026-09-18
+[TBD][563689651] Low CVE-2026-121045: UI misrepresentation in Browser. Reported by ilman.dani11 on 2026-09-19
+[TBD][563877891] Low CVE-2026-121029: Incorrect authorization in ORB. Reported by uky on 2026-09-20
+[TBD][565252325] Low CVE-2026-121054: Improper state validation in XML. Reported by Arni Hardarson (Neonix Security) on 2026-09-23
+[TBD][565505280] Low CVE-2026-121175: Improper resource exposure in ORB. Reported by Souma Ohsawa on 2026-09-24
+[N/A][565674533] Low CVE-2026-121092: Uncontrolled recursion in SVG. Reported by OpenAI Codex Security (amyb) on 2026-09-24
+[N/A][565797214] Low CVE-2026-121073: Use after free in Network. Reported by Xinyang Ge (Anthropic), assisted by Claude on 2026-09-24
+[TBD][566683383] Low CVE-2026-121230: Race condition in ANGLE. Reported by Hafiizh on 2026-09-27
+[TBD][567429681] Low CVE-2026-121093: Out of bounds read in Animation. Reported by C0rk1 on 2026-09-29
+[TBD][567726222] Low CVE-2026-121041: Missing authorization in Input. Reported by Siyang Wu (LeoWSY-hashblue) on 2026-09-30
+[TBD][567846676] Low CVE-2026-121232: Incorrect authorization in Core. Reported by Anton Helin on 2026-09-30
+[TBD][567956457] Low CVE-2026-121142: Incorrect authorization in Network. Reported by Yalguun Tumenkhuu ( fg0x0 ) on 2026-09-30
+[TBD][568371493] Low CVE-2026-121069: Use after free in Track. Reported by Hijun Kim on 2026-10-01
+[TBD][569965757] Low CVE-2026-121169: Missing authorization in DevTools. Reported by Siyang Wu (LeoWSY-hashblue) on 2026-10-05
+[N/A][570558711] Low CVE-2026-121064: Improper input validation in Performance. Reported by Google on 2026-10-06
+[N/A][571784617] Low CVE-2026-121195: Incorrect authorization in TrustedTypes. Reported by Google on 2026-10-09
+[N/A][578083806] Low CVE-2026-121141: Improper input validation in Editing. Reported by Google on 2026-10-26

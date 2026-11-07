@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -39,7 +39,7 @@
  #include "ui/gfx/x/connection.h"
@@ -27,7 +27,7 @@ $NetBSD$
    if (!lib)
      return "";
  
-@@ -234,7 +238,7 @@ scoped_refptr<base::RefCountedMemory> Re
+@@ -236,7 +240,7 @@ scoped_refptr<base::RefCountedMemory> Re
      const std::string& rm_xcursor_theme) {
    constexpr const char kDefaultTheme[] = "default";
    std::string themes[] = {

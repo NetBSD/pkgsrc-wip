@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/features/native_theme_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/native_theme/features/native_theme_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/native_theme/features/native_theme_features.cc
-@@ -67,7 +67,7 @@ bool IsFluentOverlayScrollbarEnabled() {
+@@ -62,7 +62,7 @@ bool IsFluentOverlayScrollbarEnabled() {
  
  bool IsFluentScrollbarEnabled() {
  // Fluent scrollbars are only used for some OSes due to UI design guidelines.

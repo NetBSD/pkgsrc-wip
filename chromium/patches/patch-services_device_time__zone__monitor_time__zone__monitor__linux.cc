@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ services/device/time_zone_monitor/time_zone_monitor_linux.cc
 @@ -132,9 +132,12 @@ class TimeZoneMonitorLinuxImpl
      // false positives are harmless, assuming the false positive rate is

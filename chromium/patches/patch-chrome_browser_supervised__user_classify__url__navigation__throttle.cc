@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/supervised_user/classify_url_navigation_throttle.cc
 @@ -44,7 +44,7 @@ namespace supervised_user {
  namespace {

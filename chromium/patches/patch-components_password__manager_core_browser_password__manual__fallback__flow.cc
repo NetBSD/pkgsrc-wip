@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.cc
 @@ -51,7 +51,7 @@ std::u16string GetUsernameFromLabel(cons
  }

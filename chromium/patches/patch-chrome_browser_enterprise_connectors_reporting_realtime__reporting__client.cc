@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -53,7 +53,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -24,7 +24,7 @@ $NetBSD$
  using Event = ::chrome::cros::reporting::proto::Event;
  #endif
  
-@@ -144,7 +144,7 @@ RealtimeReportingClient::GetReportingSet
+@@ -153,7 +153,7 @@ RealtimeReportingClient::GetReportingSet
  }
  
  
@@ -33,21 +33,12 @@ $NetBSD$
  
  
  void AddCrowdstrikeSignalsToEvent(
-@@ -248,7 +248,7 @@ std::string RealtimeReportingClient::Get
-   username_ =
-       identity_manager_ ? GetProfileEmail(identity_manager_) : std::string();
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (username_.empty()) {
-     username_ = Profile::FromBrowserContext(context_)->GetPrefs()->GetString(
-         enterprise_signin::prefs::kProfileUserEmail);
-@@ -305,7 +305,7 @@ std::string RealtimeReportingClient::Get
+@@ -312,7 +312,7 @@ std::string RealtimeReportingClient::Get
    return client_id;
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(notyet)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  void RealtimeReportingClient::MaybeCollectDeviceSignalsAndReportEvent(
      Event event,
      policy::CloudPolicyClient* client,

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc
 @@ -9,6 +9,8 @@
  #include "base/task/thread_pool.h"
@@ -18,7 +18,7 @@ $NetBSD$
 @@ -20,6 +22,7 @@ static base::LazyInstance<scoped_refptr<
  
  void RemovableStorageProvider::GetAllDevices(DeviceListReadyCallback callback) {
-   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
+   CHECK_CURRENTLY_ON(content::BrowserThread::UI, base::NotFatalUntil::M161);
 +#if !BUILDFLAG(IS_BSD)
    if (g_test_device_list.Get().get() != nullptr) {
      base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libdrm/src/xf86drmMode.c.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/libdrm/src/xf86drmMode.c.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/libdrm/src/xf86drmMode.c
 @@ -976,7 +976,7 @@ drm_public int drmCheckModesettingSuppor
  	}

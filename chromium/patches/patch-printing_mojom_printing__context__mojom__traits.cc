@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits.cc
 @@ -19,7 +19,7 @@
  #include "base/numerics/safe_conversions.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/config_file_watcher.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/config_file_watcher.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/config_file_watcher.cc
 @@ -27,7 +27,7 @@ const char kHostConfigSwitchName[] = "ho
  const base::FilePath::CharType kDefaultHostConfigFile[] =

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_session_proxy.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/desktop_session_proxy.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/desktop_session_proxy.h
 @@ -108,7 +108,7 @@ class DesktopSessionProxy
    std::unique_ptr<UrlForwarderConfigurator> CreateUrlForwarderConfigurator();

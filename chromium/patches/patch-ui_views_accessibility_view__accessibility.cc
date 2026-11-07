@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/accessibility/view_accessibility.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/views/accessibility/view_accessibility.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/views/accessibility/view_accessibility.cc
 @@ -37,7 +37,7 @@
  #include "ui/views/accessibility/view_ax_platform_node_delegate_win.h"

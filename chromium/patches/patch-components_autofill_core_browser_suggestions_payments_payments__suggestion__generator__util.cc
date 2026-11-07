@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/suggestions/payments/payments_suggestion_generator_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/autofill/core/browser/suggestions/payments/payments_suggestion_generator_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/autofill/core/browser/suggestions/payments/payments_suggestion_generator_util.cc
-@@ -1351,7 +1351,7 @@ Suggestion CreateCreditCardSuggestion(
+@@ -1350,7 +1350,7 @@ Suggestion CreateCreditCardSuggestion(
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -462,7 +462,7 @@ bool WebAppUiManagerImpl::IsAppMigration
+@@ -463,7 +463,7 @@ bool WebAppUiManagerImpl::IsAppMigration
      return false;
    }
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -15,7 +15,7 @@ $NetBSD$
    BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(window);
    return browser_view &&
           browser_view->GetProperty(kIsPwaUpdateDialogShowingKey) &&
-@@ -1156,7 +1156,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
+@@ -1200,7 +1200,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

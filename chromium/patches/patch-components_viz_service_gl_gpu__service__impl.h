@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/gl/gpu_service_impl.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/viz/service/gl/gpu_service_impl.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/viz/service/gl/gpu_service_impl.h
-@@ -457,7 +457,7 @@ class VIZ_SERVICE_EXPORT GpuServiceImpl
+@@ -456,7 +456,7 @@ class VIZ_SERVICE_EXPORT GpuServiceImpl
  
    void OnBeginFrameOnIO(const BeginFrameArgs& args);
  

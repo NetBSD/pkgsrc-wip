@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/tracker.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/feature_engagement/public/tracker.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/feature_engagement/public/tracker.h
-@@ -260,7 +260,7 @@ class Tracker : public KeyedService, pub
+@@ -249,7 +249,7 @@ class Tracker : public KeyedService, pub
      Dismissed(feature);
    }
  

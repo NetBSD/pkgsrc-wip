@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/dispatcher/tls.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/allocator/dispatcher/tls.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/allocator/dispatcher/tls.h
-@@ -82,7 +82,7 @@ struct BASE_EXPORT MMapAllocator {
+@@ -83,7 +83,7 @@ struct BASE_EXPORT MMapAllocator {
    constexpr static size_t AllocationChunkSize = 16384;
  #elif BUILDFLAG(IS_ANDROID) && defined(ARCH_CPU_64_BITS)
    constexpr static size_t AllocationChunkSize = 16384;

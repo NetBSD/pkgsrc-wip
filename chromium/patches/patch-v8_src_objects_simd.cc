@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/objects/simd.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- v8/src/objects/simd.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ v8/src/objects/simd.cc
 @@ -353,7 +353,7 @@ uintptr_t fast_search_avx(T* array, uint
  // mangling SVE types with the Microsoft C++ ABI since version 21.

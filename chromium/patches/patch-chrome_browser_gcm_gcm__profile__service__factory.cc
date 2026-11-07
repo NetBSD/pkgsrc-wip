@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/gcm/gcm_profile_service_factory.cc
 @@ -109,7 +109,7 @@ GCMProfileServiceFactory::ScopedTestingF
  // static
@@ -21,6 +21,6 @@ $NetBSD$
    Profile* profile = Profile::FromBrowserContext(context);
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   DCHECK(!profile->IsIncognitoProfile());
+   CHECK(!profile->IsIncognitoProfile(), base::NotFatalUntil::M161);
  #else
-   DCHECK(!profile->IsOffTheRecord());
+   CHECK(!profile->IsOffTheRecord(), base::NotFatalUntil::M161);

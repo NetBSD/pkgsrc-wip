@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/accessibility/ax_node.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/accessibility/ax_node.cc
-@@ -1621,7 +1621,7 @@ AXNode::GetExtraMacNodes() const {
+@@ -1582,7 +1582,7 @@ AXNode::GetExtraMacNodes() const {
    return &table_info->extra_mac_nodes;
  }
  
@@ -15,7 +15,7 @@ $NetBSD$
  AXNode* AXNode::GetExtraAnnouncementNode(
      ax::mojom::AriaNotificationPriority priority_property) const {
    if (!tree_->extra_announcement_nodes()) {
-@@ -1649,7 +1649,7 @@ bool AXNode::IsGenerated() const {
+@@ -1610,7 +1610,7 @@ bool AXNode::IsGenerated() const {
        GetRole() == ax::mojom::Role::kColumn ||
        GetRole() == ax::mojom::Role::kTableHeaderContainer;
    DCHECK_EQ(is_generated_node, is_extra_mac_node_role);

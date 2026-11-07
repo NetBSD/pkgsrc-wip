@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.80 2026/09/05 19:10:04 bsiegert Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			156.0.8078.79
+VERSION=			157.0.8103.38
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 #MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
@@ -23,6 +23,15 @@ GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
 
 # typescript
 GITHUB_SUBMODULES+=		microsoft TypeScript v7.0.2 typescript
+
+# crubit
+# From ${WRKSRC}/tools/rust/update_rust.py
+CRUBIT_REVISION=		20dc640430bd60ff2f7f8dbf69c311c5f807adde
+GITHUB_SUBMODULES+=		google crubit ${CRUBIT_REVISION} crubit
+CARGO_WRKSRC=			${WRKSRC}/crubit
+.include "cargo-depends.mk"
+.include "../../lang/rust/cargo.mk"
+CARGO_ARGS+=			-p cc_bindings_from_rs
 
 # LLVM_MAJOR_VERSION
 LLVM_VERSION=			${MAKE} -C ../../lang/llvm -V LLVM_VERSION
@@ -122,7 +131,7 @@ SUBST_FILES.path+=	base/base_paths_posix.cc
 SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
 SUBST_FILES.path+=	build/config/rust.gni
 SUBST_FILES.path+=	build/linux/strip_binary.gni
-SUBST_FILES.path+=	build/rust/rust_bindgen.gni
+#SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	build/rust/rust_bindgen_generator.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	chromium.sh
@@ -244,9 +253,12 @@ EXTRA_CXXFLAGS+=	-D_NETBSD_SOURCE
 .endif
 
 # rust
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.llvm}/lib
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true
 GN_ARGS+=	rust_sysroot_absolute=\"${PREFIX}\"
+GN_ARGS+=	rust_crubit_root=\"//third_party/rust-toolchain\"
+GN_ARGS+=	enable_rust_api_from_cpp=true
 
 # go (third_party/dawn)
 SUBST_CLASSES+=		go
@@ -335,7 +347,19 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/esbuild \
 		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild
 
-do-configure:
+do-configure: do-cargo-build
+	# crubit & rust toolchain
+	${MKDIR} ${WRKSRC}/third_party/rust-toolchain/bin
+	${MKDIR} ${WRKSRC}/third_party/rust-toolchain/lib/third_party
+	${LN} -sf ${PREFIX}/bin/rustc ${WRKSRC}/third_party/rust-toolchain/bin/rustc
+	${LN} -sf ${PREFIX}/bin/rustfmt ${WRKSRC}/third_party/rust-toolchain/bin/rustfmt
+	${LN} -sf ${PREFIX}/lib/librustc_driver*.so ${WRKSRC}/third_party/rust-toolchain/lib/
+	${LN} -sf ${WRKSRC}/crubit/target/release/cc_bindings_from_rs \
+		${WRKSRC}/third_party/rust-toolchain/bin/cc_bindings_from_rs
+	${LN} -sf ${WRKSRC}/crubit \
+		${WRKSRC}/third_party/rust-toolchain/lib/third_party/crubit
+
+	# esbuild
 	${RUN} cd ${WRKSRC}/esbuild && \
 		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
 		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild --neutral
@@ -409,7 +433,7 @@ do-install:
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		${FIND} ${i} -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
-.for f in snapshot_blob.bin v8_context_snapshot.bin
+.for f in snapshot_blob.bin
 	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .endfor
 
@@ -431,7 +455,6 @@ do-install:
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/rust/cargo.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/compiler-rt/buildlink3.mk"

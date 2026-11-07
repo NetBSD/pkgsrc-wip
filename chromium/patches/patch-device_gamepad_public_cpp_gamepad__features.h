@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/public/cpp/gamepad_features.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- device/gamepad/public/cpp/gamepad_features.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ device/gamepad/public/cpp/gamepad_features.h
 @@ -26,7 +26,7 @@ GAMEPAD_FEATURES_EXPORT BASE_DECLARE_FEA
  GAMEPAD_FEATURES_EXPORT BASE_DECLARE_FEATURE(kIgnorePS5GamepadsInWgi);
