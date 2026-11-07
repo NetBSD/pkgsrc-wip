@@ -2686,7 +2686,6 @@ SUBDIR+=	ngtop
 SUBDIR+=	nheko
 SUBDIR+=	nicotine+
 SUBDIR+=	nih-current
-SUBDIR+=	nim
 SUBDIR+=	ninja-ide
 SUBDIR+=	nitrogen
 SUBDIR+=	nix
