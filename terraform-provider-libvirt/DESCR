@@ -1,0 +1,6 @@
+Terraform provider for libvirt
+
+This provider allows managing libvirt resources (virtual machines,
+storage pools, networks) using Terraform. It communicates with
+libvirt using its API to define, configure, and manage virtualization
+resources.
