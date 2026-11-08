@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (neatvnc-1.0.3.tar.gz) = 24d5eb7ecb7306131d29cde9a91bb6e505b2ba89a649fb19c60b1defcaf0c059
-SHA512 (neatvnc-1.0.3.tar.gz) = 9dadf8162f317b3e5879d11dc2b48ba2a61d6d0885340626f7d70adca681eab5b1ed625261ad390b17ba5a47cf1ea5959e2e4dad6de71533d7c78600c34359d2
-Size (neatvnc-1.0.3.tar.gz) = 859400 bytes
+BLAKE2s (neatvnc-1.0.4.tar.gz) = d20685f1b75916d3a5ad586e61d2cd3dfa0377f15393197ca435efe51c99b39d
+SHA512 (neatvnc-1.0.4.tar.gz) = 644bbff46b29686418b88008d31707577d954c19d16eda28c7a634f75015f3e768966deb8110e77f684cc9fdaf0a7dddc2de4ea9172ed2d95e4c86a42f6379c5
+Size (neatvnc-1.0.4.tar.gz) = 859840 bytes
