@@ -1908,7 +1908,6 @@ SUBDIR+=	joomla
 SUBDIR+=	jpgtn
 SUBDIR+=	jpicedt
 SUBDIR+=	jruby
-SUBDIR+=	js-Gallery
 SUBDIR+=	jsl
 SUBDIR+=	json2tsv-git
 SUBDIR+=	jsoncpp-git
