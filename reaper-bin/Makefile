@@ -17,13 +17,19 @@ LICENSE=		reaper-license
 ONLY_FOR_PLATFORM=	Linux-*-x86_64
 # ONLY_FOR_PLATFORM=	Darwin-*-aarch64
 
+# Needed for the --integrate-user-desktop flag, which will create the .desktop
+# file.
+TOOL_DEPENDS+=		xdg-utils:../../misc/xdg-utils
+
 WRKSRC=			${WRKDIR}/reaper_linux_${MACHINE_ARCH}
 NO_BUILD=		yes
 
 do-install:
 	cd ${WRKSRC} \
-	&& ./install-reaper.sh \
-		--install "${DESTDIR}${PREFIX}/lib"
+	&& XDG_DATA_HOME=${DESTDIR}${PREFIX}/share \
+		./install-reaper.sh \
+		--install "${DESTDIR}${PREFIX}/lib" \
+		--integrate-user-desktop
 
 	rm -v "${DESTDIR}${PREFIX}/lib/REAPER/uninstall-reaper.sh"
 
