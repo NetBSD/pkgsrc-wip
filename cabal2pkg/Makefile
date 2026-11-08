@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cabal2pkg-0.1.1
+DISTNAME=	cabal2pkg-0.1.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
@@ -33,16 +33,17 @@ post-install:
 	${INSTALL_MAN} "${WRKSRC}/doc/cabal2pkg.8" "${DESTDIR}${PREFIX}/${PKGMANDIR}/man8"
 
 .include "../../textproc/hs-Diff/buildlink3.mk"
+.include "../../wip/hs-isnull/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
+.include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-conduit-extra/buildlink3.mk"
 .include "../../textproc/hs-diff3/buildlink3.mk"
 .include "../../devel/hs-either/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
-.include "../../devel/hs-ghc-paths/buildlink3.mk"
-.include "../../textproc/hs-haddock-library/buildlink3.mk"
+.include "../../devel/hs-filtrable/buildlink3.mk"
 .include "../../www/hs-http-conduit/buildlink3.mk"
 .include "../../www/hs-http-media/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"
