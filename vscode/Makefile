@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.144.0
+DISTNAME=		vscode-1.145.1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
