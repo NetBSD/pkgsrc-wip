@@ -4,7 +4,7 @@
 #	Absolute path for node-gyp.
 #
 
-ELECTRON_VER=		43.8.6
+ELECTRON_VER=		43.8.7
 ELECTRON_MAJOR=		${ELECTRON_VER:tu:C/\\.[[:digit:]\.]*//}
 NODE_VERSIONS_ACCEPTED=	24
 ELECTRON=		electron${ELECTRON_MAJOR}
