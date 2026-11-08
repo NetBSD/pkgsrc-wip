@@ -1,0 +1,19 @@
+@comment $NetBSD$
+lib/IsNull-${PKGVERSION}/${HS_VERSION}/package-description
+lib/IsNull-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/IsNull.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/IsNull.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/IsNull.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/Data-IsNull.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/IsNull.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/IsNull-${PKGVERSION}/html/synopsis.png

@@ -1,0 +1,5 @@
+wip/hs-isnull: import IsNull-0.4.0.0
+
+A typeclass to determine if a given foldable type (or other) is empty ~ null ~
+invalid. The definition is intentionally vague, to cover types from Either to
+Text and Sets.
