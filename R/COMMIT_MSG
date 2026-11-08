@@ -1,64 +1,141 @@
-(math/R) Updated 4.6.0 to 4.6.1, build with clang still fails
+(math/R) Updated 4.6.1 to 4.6.2
 
-Changes in R 4.6.1:
-
-  New Features:
-
-         * The LaTeX class 'jss' bundled in
-           'share/texmf/tex/latex/jss.cls' has been updated to work
-           with 'hyperref' version 7.01q (2026/04/24).
-
-         * Plain-text (and legacy HTML) conversion for a simple Rd
-           \eqn{} now handles \geq, \leq, \neq and \ne in addition to
-           \ge and \le (PR#19070).
+Changes in R 4.6.2:
 
   Bug Fixes:
 
-         * 'abbreviate(<non-ASCII>)' now works better, using
-           'iswlower()' and '*upper()' to treat "wide" characters,
-           thanks to Kevin's PR#19058.
+    * In plain-text help (Rd2txt), paragraphs are again recognized even
+      when started with a non-indented Rd comment, fixing a regression
+      in R 4.4.0.
 
-         * 'cut(1:11, {})' now signals an error for the invalid
-           'breaks', fixing PR#19057, thanks to Kevin Ushey.
+    * rhyper(N, m, n, k) now switches to the "large" scenario when m +
+      n is larger than .Machine$integer.max, preventing integer
+      overflow, thanks to Jonathan Blood's report on R-devel.
 
-         * 'all(<symbol>)' signals an error now, as some similar
-           coercions; previously, the coercion of the symbol resulted
-           in 'NULL' internally, raised a warning, and could access
-           illegal memory; thanks to Kevin Ushey's PR#19054.
+    * Fix long standing (Fortran compiler optimization related) bug in
+      nlminb with constraints, thanks to Kasper Kristensen's PR#19086
+      report and patch.
 
-         * 'stl()' now checks its 3 x 3 tuning parameters on the R
-           level; 'stl(*, s.window = 0)' now "works" instead dumping
-           core, 'stl(*, s.window = 1)' "works" correctly, too.  Also,
-           the 'summary()' method mentions the robustness 'weights'
-           only if any robustness iterations happened.
+    * Fix for PR#19100: seq.int was not handling non-vector along.width
+      arguments properly. Thanks to Mitchell O'Hara-Wild.
 
-           Further, 'stl()' is now based on C code, translated from
-           previous Fortran, triggered by a flang 22 compiler
-           optimization bug ('-O2').
+    * Wrappers now duplicate even a wrapped object that might be shared
+      before returning a read-only pointer. This prevents cached
+      read-only pointers from becoming invalid. Reported by Ivan
+      Krylov.
 
-         * The border case 'zapsmall(x, digits=Inf)' where 'x' contains
-           an 'Inf' entry no longer returns all 'NaN' but rather 'x'.
-           The improved help page now has more non-default examples.
+    * dummy.coef() becomes more robust to non-syntactic variable names,
+      fixing PR#18468.  Thanks to Bill Dunlap and 'R Dev Day'
+      participants Vincent Arel-Bundock, Cynthia Huang, Tina Rozsos and
+      Marina Marinelli.
 
-         * 'wilcox.test(x, exact=FALSE, correct = k)''s p-value
-           computation got a missing 'dnorm(z)' factor, and so did the
-           2-sample case, in addition to more fixes.
+    * Now PROTECT() in SubassignTypeFix, fixing PR#19110 thanks to
+      Kevin Ushey.
 
-         * The data part of 'getGenerics()' listed package names for
-           generic functions defined in more than one package.  Now it
-           lists generic function names, as intended.  Thanks to
-           Michael Chirico for report and patch proposal (PR#19080).
+    * writeChar() in a multibyte locale counts characters and bytes
+      consistently and no longer overflows, thanks to Kevin Ushey's
+      report and patch in PR#19112.
 
-         * Overly long 'dyn.load()' error messages (C level
-           'dlerror()'), should no longer corrupt its state, thanks to
-           Ivan Krylov's PR#19029 report and patch.
+    * dim(a) <- vec now checks for too large prod(vec), thanks to Kevin
+      Ushey's report and patch in PR#19109.
 
-         * 'as.matrix(<POSIXlt>)' again produces a _numeric_ matrix,
-           and the 'c()' and subassignment methods for 'POSIXlt'
-           objects work correctly more often, e.g., without a '"tzone"'
-           attribute, back porting a few of the PR#18989 fixes from
-           R-devel, both thanks to Suharto Anggono.
+    * Tweaks (including to the parsers) for the C23 behaviour
+      (preserving const) of strchr, strrchr and strstr.  (By Brian
+      Ripley and Duncan Murdoch.)
 
-         * In 'methods', 'as()' now correctly coerces S4 objects to S4
-           superclasses extending old-style classes, instead of
-           returning only the S3 part.
+    * make check-devel now works without recommended packages.
+
+    * <matrix>[[i, j]] with negative i occasionally gives no error but
+      accesses previous content; thanks to Kevin Ushey's report and
+      very simple fix in PR#19116.
+
+    * Quartz device now correctly draws long paths (work-around for
+      Quartz built-in stroker breaking long paths). Thanks to R Dev Day
+      @ useR! 2026 contributors, notably Tomek Gieorgijewski, report in
+      PR#18680.
+
+    * strptime(ch, "...%OS<n>...") now disregards contiguous digits in
+      "<n>", for symmetry with strftime(), fulfilling Frederick Eaton's
+      wish in PR#17209, thanks to a patch by Suharto Anggono.
+
+    * strptime() now also returns NA for out of range "%OS" and a
+      correct error message in some wrong multibyte cases, fixing
+      PR#19117 comment #1 and PR#19122 by Michael Chirico;
+      additionally, some overflow to Inf times no longer result in NA.
+
+    * strptime("0", "%w") in a "C" locale now works in valid cases,
+      returning NA for invalid week numbers ("%U" or "%W"), fixing
+      PR#19124 thanks to Michael Chirico's report and notably Suharto
+      Anggono's analysis, also correctly fixing PR#15195.
+
+    * ksmooth(x,y, x.points=NULL) now returns an empty (x,y) pair
+      instead of crashing R, fixing PR#19153.
+
+      Additionally, also by Adam Berkeš, x <- rep(999,0); ksmooth(x, x,
+      x.points = 1) no longer writes out of bounds, fixing PR#19171.
+      Ditto for ksmooth(x, x, n.points = 0), PR#19219.
+
+    * besselI(1, 1e11) and besselK(..) now signal a warning and return
+      NaN instead of typically segfaulting, fixing PR#19175 thanks to
+      Ben Bolker.
+
+      Further, besselK(1, -1e11) and similar warn about too large |nu|,
+      returning NaN rather than segfaulting, fixing PR#19196 thanks to
+      Adam Berkeš.
+
+    * text.default(.., col = numeric(0)) and similar no longer segfault
+      in "instrumented" versions of R, fixing PR#19178 thanks to Jiang
+      Yuancheng's fusion-fuzz and Ivan Krylov.
+
+    * R CMD rtags (on Unix-alikes) no longer fails from a bad escape if
+      sh is bash or busybox.
+
+    * capabilities("X11") no longer incorrectly returns TRUE on a
+      Unix-alike where X11 is not actually available when built by a C
+      compiler without C23 enum base types, thanks to Trevor Davis'
+      report and patch in PR#19180.
+
+    * predict(smooth.spline(..), deriv = -99) and similar invalid deriv
+      values now signal errors instead of segfaulting, thanks to Adam
+      Berkeš' report and proposal in PR#19190.
+
+    * format(x, width = 2^31 -1) for an non-ascii character x such as x
+      = "\u00e9" now signals an error as the required width is too
+      large, rather than segfaulting, thanks to Adam Berkeš' report in
+      PR#19188.
+
+    * influence.measures() inadvertently wasn't updated along with
+      dffits(), dfbetas(), covratio(). PR#19167 by Amal Tawfik.
+
+    * If wilcox.test(..., exact=TRUE)'s p-value is close to the 0 or 1
+      boundaries, the calculation no longer suffers severely from
+      cancellation, thanks to Tasuku Kobayashi's reports and Ahmed
+      Sattar Jabbar's suggestion in PR#19144.
+
+    * Long stringed error messages are now protected from premature
+      garbage collection, fixing PR#19210, reported and analyzed by
+      Yuancheng Jiang.
+
+    * strsplit(str, perl=TRUE, bytes=TRUE) no longer accesses invalid
+      memory in case str is an invalid UTF-8 string, fixing PR#19212,
+      thanks to Kevin Ushey.
+
+    * isoreg(numeric(0)) no longer returns unallocated component yc,
+      fixing PR#19224 thanks to Kevin Ushey.
+
+    * KalmanLike(1:5, list(1,2)) and similar no longer segfault, fixing
+      PR#19217 thanks to Kevin Ushey and Adam Berkeš.
+
+  Bug Fixes (Windows):
+
+    * path.expand("~") and similar now should work correctly on Windows
+      when the user name is not in ASCII and neither %HOME% nor %USER%
+      environment variables are set, fixing PR#18949 thanks to the
+      report and patch from Ivan Krylov and Mauricio Vargas's R Dev Day
+      work.
+
+    * file.copy(*, date=TRUE) no longer opens files for exclusive
+      access when copying the file time.  Consequently, the time _is_
+      copied now and concurrent attempts to open the source file should
+      work reliably, thanks to Kevin Ushey's report and patch in
+      PR#19187.
