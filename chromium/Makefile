@@ -25,13 +25,10 @@ GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
 GITHUB_SUBMODULES+=		microsoft TypeScript v7.0.2 typescript
 
 # crubit
-# From ${WRKSRC}/tools/rust/update_rust.py
+# From ${WRKSRC}/tools/rust/update_rust.py:
 CRUBIT_REVISION=		20dc640430bd60ff2f7f8dbf69c311c5f807adde
 GITHUB_SUBMODULES+=		google crubit ${CRUBIT_REVISION} crubit
 CARGO_WRKSRC=			${WRKSRC}/crubit
-.include "cargo-depends.mk"
-.include "../../lang/rust/cargo.mk"
-CARGO_ARGS+=			-p cc_bindings_from_rs
 
 # LLVM_MAJOR_VERSION
 LLVM_VERSION=			${MAKE} -C ../../lang/llvm -V LLVM_VERSION
@@ -254,6 +251,7 @@ EXTRA_CXXFLAGS+=	-D_NETBSD_SOURCE
 
 # rust
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.llvm}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true
 GN_ARGS+=	rust_sysroot_absolute=\"${PREFIX}\"
@@ -353,7 +351,6 @@ do-configure: do-cargo-build
 	${MKDIR} ${WRKSRC}/third_party/rust-toolchain/lib/third_party
 	${LN} -sf ${PREFIX}/bin/rustc ${WRKSRC}/third_party/rust-toolchain/bin/rustc
 	${LN} -sf ${PREFIX}/bin/rustfmt ${WRKSRC}/third_party/rust-toolchain/bin/rustfmt
-	${LN} -sf ${PREFIX}/lib/librustc_driver*.so ${WRKSRC}/third_party/rust-toolchain/lib/
 	${LN} -sf ${WRKSRC}/crubit/target/release/cc_bindings_from_rs \
 		${WRKSRC}/third_party/rust-toolchain/bin/cc_bindings_from_rs
 	${LN} -sf ${WRKSRC}/crubit \
@@ -463,12 +460,15 @@ BUILDLINK_DEPMETHOD.clang=	build
 BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
+.include "cargo-depends.mk"
+.include "../../lang/rust/cargo.mk"
+CARGO_ARGS+=			-p cc_bindings_from_rs
 .include "../../lang/rust/rust.mk"
 # Chromium uses own patched typescript
 #.include "../../lang/typescript/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
-UDEV_REQUIRED=		yes
+UDEV_REQUIRED=			yes
 .include "../../mk/udev.buildlink3.mk"
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"

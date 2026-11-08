@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/sndio_input.h.orig	2026-11-07 16:33:22.901951726 +0000
+--- media/audio/sndio/sndio_input.h.orig	2026-11-08 10:04:49.796329279 +0000
 +++ media/audio/sndio/sndio_input.h
 @@ -0,0 +1,91 @@
 +// Copyright 2013 The Chromium Authors. All rights reserved.

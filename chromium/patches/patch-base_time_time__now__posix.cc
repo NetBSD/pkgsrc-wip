@@ -18,3 +18,15 @@ $NetBSD$
  }
  }  // namespace subtle
  
+@@ -147,7 +151,11 @@ namespace subtle {
+ // ChromeOS, and Android). Apple platforms use an alternate implementation in
+ // time_apple.mm.
+ time_internal::RealTicks RealTicksNowIgnoringOverride() {
++#if BUILDFLAG(IS_NETBSD)
++  return time_internal::RealTicks() + Microseconds(ClockNow(CLOCK_MONOTONIC));
++#else
+   return time_internal::RealTicks() + Microseconds(ClockNow(CLOCK_BOOTTIME));
++#endif
+ }
+ }  // namespace subtle
+ 
