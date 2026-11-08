@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2026/10/27 06:25:21 wiz Exp $
 
 MAJOR=			7
-MINOR=			84
+MINOR=			85
 DISTNAME=		reaper${MAJOR}${MINOR}_linux_${MACHINE_ARCH}
 PKGNAME=		reaper-${MAJOR}.${MINOR}
 CATEGORIES=		audio
