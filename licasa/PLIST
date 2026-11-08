@@ -1,7 +1,9 @@
 @comment $NetBSD$
 bin/licasa
 lib/licasa/plugins/imageformats/liblicasa_qoi_plugin.so
+libexec/licasa/lifecycle_update.py
 share/applications/licasa.desktop
 share/icons/hicolor/512x512/apps/licasa.png
+share/licasa/images/licasa-4096x4096.png
 share/licenses/licasa/LICENSE
 share/pixmaps/licasa.png
