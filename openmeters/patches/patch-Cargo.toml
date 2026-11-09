@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Cargo.toml.orig	2026-11-09 17:49:53.747310552 +0000
++++ Cargo.toml
+@@ -56,7 +56,7 @@ iced_runtime = "0.14.0"
+ [patch.crates-io]
+ # I will be maintaining my own fork for the foreseeable future as
+ # upstream has not had a commit in ~3 years.
+-khronos-egl = { git = "https://github.com/httpsworldview/khronos-egl" }
++khronos-egl = { path = "../khronos-egl-c8687d85ed8475dd1e37974d38f0051aaa1e84cf" }
+ 
+ [profile.dev]
+ opt-level = 1
