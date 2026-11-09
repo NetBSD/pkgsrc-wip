@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (stirmake-v0.4.4.tar.gz) = d95505b0a62b2712d5325dfa830fe0a9b112797b2dde9296a59b0030f631d4cb
+SHA512 (stirmake-v0.4.4.tar.gz) = bf0918f70f1b2872c443de58f05af0cc58ee0421c58a0ca03a862faf60761321dee1379ed7b83c195705072b14c2c5afd611a31406415495794de10d721cdb26
+Size (stirmake-v0.4.4.tar.gz) = 1448525 bytes

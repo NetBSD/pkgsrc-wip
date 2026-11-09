@@ -1,0 +1,35 @@
+devel/stirmake: Add stirmake version 0.4.4
+
+Packaged in wip by Juha-Matti Tilli
+
+This package provides stirmake version 0.4.4
+
+Stirmake is a fast build tool intended to make recursive build systems
+with possible git submodules easy to create. It is programmable in the
+custom programming language Amyplan. The intention is that with
+stirmake, one never has to do the equivalent of "make clean" to fix a
+broken build.
+
+Stirmake can be built without dependencies, with Lua, or with LuaJIT.
+Using Lua has no benefit over the embedded language Amyplan (unless one
+is familiar with Lua already, or unless one uses a Stirfile developed on
+a machine with LuaJIT that needs to be later used on a platform without
+LuaJIT support), but using LuaJIT has a speed benefit.
+
+Peculiarities of the provided package:
+
+1. Stirmake can be built with a prior installed version of stirmake,
+with GNU make or with a bootstrap shell script. It cannot be built with
+BSD make. Since GNU make would be a heavyweight build dependency, here
+the bootstrap script is used. Unfortunately, the bootstrap script is
+single-threaded. Fortunately, stirmake still builds in an acceptable
+time.
+
+2. The CC, CFLAGS and LDFLAGS variables need to be passed in the
+environment.
+
+3. If STIR_WITH_LUA is set to 1, both STIR_LUAINCS and STIR_LUALIBS need
+to be set, or else the build system of stirmake uses pkg-config to
+deduce their values. However, pkgsrc buildlink already sets the include
+paths in CFLAGS. So, place a dummy "-I." to STIR_LUAINCS to suppress the
+pkg-config.

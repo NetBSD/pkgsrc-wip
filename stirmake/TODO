@@ -1,0 +1,7 @@
+- Test build on non-NetBSD platforms. At least manual compilation from
+  source works with NetBSD, FreeBSD, OpenBSD and DragonflyBSD, and
+  cross-compilation to MacOS works with zig cc and the resulting amd64
+  Mac binary runs on MacOS emulator "darling". The code should be
+  POSIX compliant, but what POSIX doesn't specify is linker arguments
+  so on some POSIX systems, it might require linking to some other
+  libraries than libc and libm.

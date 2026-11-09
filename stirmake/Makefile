@@ -1,0 +1,34 @@
+# $NetBSD$
+
+DISTNAME=	stirmake-v0.4.4
+PKGNAME=	${DISTNAME:S,-v,-,}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Aalto5G/}
+GITHUB_PROJECT=	stirmake
+GITHUB_RELEASE=	v0.4.4
+
+MAINTAINER=	juha-matti.tilli@iki.fi
+HOMEPAGE=	https://github.com/Aalto5G/stirmake/
+COMMENT=	Fast build tool with better support for recursion than make
+LICENSE=	mit
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+do-build:
+	cd ${WRKSRC}/stirc && CC=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} STIR_WITH_LUA=${STIR_WITH_LUA:Q} STIR_LUAINCS=${STIR_LUAINCS:Q} STIR_LUALIBS=${STIR_LUALIBS:Q} ./bootstrapnomake.sh
+
+do-test:
+	cd ${WRKSRC}/stirc/autotest && ${SETENV} ${TEST_ENV} ./suite.sh
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/stirc/stirmake ${DESTDIR}${PREFIX}/bin/stirmake
+	${INSTALL_MAN} ${WRKSRC}/stirc/stirmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/stirmake.1
+	${LN} -sf stirmake ${DESTDIR}${PREFIX}/bin/smka
+	${LN} -sf stirmake ${DESTDIR}${PREFIX}/bin/smkt
+	${LN} -sf stirmake ${DESTDIR}${PREFIX}/bin/smkp
+	${LN} -sf stirmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/smka.1
+	${LN} -sf stirmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/smkt.1
+	${LN} -sf stirmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/smkp.1
+
+.include "options.mk"
+.include "../../mk/bsd.pkg.mk"
