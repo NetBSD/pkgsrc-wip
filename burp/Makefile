@@ -23,10 +23,12 @@ SUBST_FILES.dirs=	configs/server/burp.conf.in \
 			configs/server/summary_script.in \
 			configs/client/burp.conf.in \
 			configs/certs/CA/CA.cnf.in \
-			configs/certs/CA/burp_ca.in
+			configs/certs/CA/burp_ca.in \
+			manpages/*.8.in
 SUBST_SED.dirs=		-e 's,@scriptdir@,${PREFIX}/libexec/burp,'
 SUBST_SED.dirs+=	-e 's,@sbindir@,${PREFIX}/sbin,'
 SUBST_SED.dirs+=	-e 's,@sysconfdir@,${PKG_SYSCONFDIR}/libexec/burp,'
+SUBST_VARS.dirs=	PKG_SYSCONFDIR
 
 BUILD_DEFS+=	VARBASE
 
