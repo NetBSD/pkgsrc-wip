@@ -1,1 +1,2 @@
-Finished. Waits for import of qt6-qtwebengine.
+Adapt for OpenCV 5.
+Still doesn't compile with 5.1.0.
