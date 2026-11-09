@@ -1,6 +1,6 @@
 $NetBSD$
 
-- Incorrect config string used here.  Need to fix upstream.
+- Incorrect param name used here.  This is an upstream bug.
 
 diff --git src/proxy/logging/LogConfig.cc src/proxy/logging/LogConfig.cc
 index f2c07d8a23..287977d04e 100644
