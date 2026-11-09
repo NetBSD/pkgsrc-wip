@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.64 2025/02/07 21:58:54 wiz Exp $
+$NetBSD: distinfo,v 1.71 2026/06/18 08:48:10 wiz Exp $
 
-BLAKE2s (digiKam-8.7.0.tar.xz) = 660aef183ea7077784cdb9b69904d721403e5ff81960e7e964c915b2075b3d7c
-SHA512 (digiKam-8.7.0.tar.xz) = a055b582197aeb4ac1f0f037300f5fb136949047c317865c89d30b39e5114cf2cca087acc7f0196e39b43c3be5ea4623261a6e7b6a52b843d266b4cbf261addd
-Size (digiKam-8.7.0.tar.xz) = 55060536 bytes
+BLAKE2s (digiKam-9.1.0.tar.xz) = 7c0946c0eb3874a3561f1d24b73cefa55d025b928488e4a2fb62e114e9038557
+SHA512 (digiKam-9.1.0.tar.xz) = ab083cbde1f3e243a8766b8fe5ea256d32877ff7f2e048349fb063e1ca90b0395eee16028466516a9ab74f10582a413bfc9d64392a4b25b33e45b70ca34f5cd6
+Size (digiKam-9.1.0.tar.xz) = 73714208 bytes
+SHA1 (patch-core_app_utils_digikam__opencv.h.cmake.in) = 792bc24e0832ce95094cf5f1319c47fc2121cf14
+SHA1 (patch-core_libs_dimg_filters_nr_nrestimate.cpp) = 44ed751ec5189e67495e6834236b45e202eb6409
+SHA1 (patch-core_libs_dnnmodelmanager_dnnmodelbase.cpp) = 508a292ab6e7b9ff06eb9e3861478d0bb5dcdedb
+SHA1 (patch-core_libs_facesengine_recognition_faceclassifier.cpp) = 472231a8d34351310e99f7a7e1c7d817b55c4132
+SHA1 (patch-core_libs_qtopencvimg_qtopencvimg.cpp) = b4b78be86f55cd596fa69360890cd94bbc733393

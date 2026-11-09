@@ -1,0 +1,27 @@
+$NetBSD$
+
+OpenCV 5 support.
+https://invent.kde.org/graphics/digikam/-/commit/abcadfdc91601fe410c67f4abba87117e81aad3e
+
+--- core/app/utils/digikam_opencv.h.cmake.in.orig	2026-06-07 15:07:03.000000000 +0000
++++ core/app/utils/digikam_opencv.h.cmake.in
+@@ -55,8 +55,6 @@
+ #include <opencv2/core.hpp>
+ #include <opencv2/core/utility.hpp>
+ #include <opencv2/core/persistence.hpp>
+-#include <opencv2/core/core_c.h>
+-#include <opencv2/core/types_c.h>
+ #include <opencv2/core/ocl.hpp>
+ 
+ // Image codecs module headers
+@@ -70,7 +68,9 @@
+ // Image processing module headers
+ 
+ #include <opencv2/imgproc.hpp>
+-#include <opencv2/imgproc/types_c.h>
++#if !OPENCV_TEST_VERSION(5,0,0)
++#include <opencv2/geometry/2d.hpp>
++#endif
+ 
+ // Shape detection/recognition module headers
+ 

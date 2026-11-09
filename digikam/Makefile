@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.245 2025/02/12 06:45:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.289 2026/11/08 15:43:57 wiz Exp $
 
-DISTNAME=	digiKam-8.7.0
-PKGNAME=	${DISTNAME:tl:S/m-/m-qt6-/}
+DISTNAME=	digiKam-9.1.0
+PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/${PKGVERSION_NOREV}/}
 
@@ -14,8 +15,6 @@ DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
 
 WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
-CONFLICTS+=		digikam-[0-9]*
-
 .include "../../meta-pkgs/kde/applications.mk"
 
 REPLACE_PERL=	core/data/scripts/digitaglinktree/digitaglinktree
@@ -25,6 +24,10 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_KFILEMETADATASUPPORT=ON
 
 USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
+
+# not a shell script, '==' is correct
+# see https://techbase.kde.org/Development/Tutorials/Solid/Device_Actions
+CHECK_PORTABILITY_SKIP+=	core/data/hotplug/digikam-opencamera.desktop.cmake.in
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
@@ -42,7 +45,8 @@ USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
 .include "../../graphics/opencv-contrib-face/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+#.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
@@ -67,7 +71,7 @@ USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
 .include "../../devel/kf6-threadweaver/buildlink3.mk"
 .include "../../devel/kf6-knotifyconfig/buildlink3.mk"
 .include "../../devel/kf6-knotifications/buildlink3.mk"
+.include "../../graphics/libksane/buildlink3.mk"
 .include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"
-# TODO: pkgsrc has no package providing KSaneWidgets6Config.cmake
 .include "../../time/kf6-kcalendarcore/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
