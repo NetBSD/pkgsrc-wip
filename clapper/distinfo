@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (clapper-0.10.0.tar.gz) = 4a27eed2880271124f54d2ef54eefeb9a9f016e8d068ee5c58559aa412866062
+SHA512 (clapper-0.10.0.tar.gz) = b9f36ffecaedceb8779c6328896226a02fa730123d05c7d6f4738e647d0513cabc5ef52dd299a832405ab7e787cd14cc1b7edac3883375b47577017ba3f75e76
+Size (clapper-0.10.0.tar.gz) = 444586 bytes

@@ -1,0 +1,38 @@
+FULLY BROKEN
+
+Needs issues with html2gtk crate resolved:
+
+
+Newsflash itself has a dependency on a crate html2gtk defined in its cargo file as:
+---
+[dependencies.html2gtk]
+features = ["ratex", "video-thumbnails"]
+git = "https://gitlab.com/news-flash/html2gtk.git"
+--
+This crate without any speciifed version breaks both url2pkg with
+--
+fetch: Unable to fetch expected file html2gtk-0.1.0.crate
+*** Error code 1
+
+Stop.
+make: stopped making "distinfo" in /usr/pkgsrc/wip/test
+Traceback (most recent call last):
+  File "/usr/pkg/bin/url2pkg", line 1379, in <module>
+    main(sys.argv, Globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/bin/url2pkg", line 1368, in main
+    g.bmake('distinfo')
+    ~~~~~~~^^^^^^^^^^^^
+  File "/usr/pkg/bin/url2pkg", line 118, in bmake
+    subprocess.check_call([self.make, *args], cwd=self.pkgdir, env=env)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.14/subprocess.py", line 420, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/usr/bin/make', 'distinfo']' returned non-zero exit status 1.
+--
+and the structure of cargo-depends.mk doesn't have an obvious solution I can see for this.
+
+lang/rust/cargo.mk seems to list this as a TODO thing?
+---
+# TODO: some Cargo.lock files include git+https sources which need to be fetched from the URL (not necessarily resolving to a crate.io url)
+DISTFILES?=                     ${DEFAULT_DISTFILES}

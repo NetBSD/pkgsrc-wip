@@ -1,0 +1,6 @@
+Broken: the libraries built by the package I need for another package (newsflash)
+build but the actual player fails with:
+(clapper:2462): GLib-GIO-ERROR **: 18:37:09.320: Settings schema 'com.github.rafostar.Clapper' is not installed
+fish: Job 1, 'clapper' terminated by signal SIGABRT (Abort)
+
+When run.
