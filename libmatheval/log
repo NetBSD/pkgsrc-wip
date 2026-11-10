@@ -1,0 +1,20 @@
+Version 1.1.12
+
+* Updated build system to work with current GNU autotools.  Guile is
+  needed for test suite only, which now works with Guile 2.0 and later.
+* Fixed buffer overflows in the Fortran interface and in handling of
+  very long strings (reported by Hongduo Zhao).
+* Fixed memory leaks on parsing error, and in Flex generated scanner.
+* Characters not part of the notation are now reported as error,
+  instead of being echoed to standard output.
+* Fixed wrong simplification of 0^x.
+* Fixed wrong derivatives of asinh() and acoth() functions.
+* Inverse hyperbolic functions are calculated by C library, fixing
+  inaccurate results for very small or very large arguments.
+* Added min(), max() and select() functions.  Note that min, max and
+  select therefore can not be used as variable names any more.
+* Library exports its interface only, so that its internal symbols
+  (including these of Lex and Yacc generated code) do not clash with
+  symbols of program any more.
+* Fixed compiler warnings and undefined behavior.
+* Fixed errors in the manual, and added short example at its beginning.
