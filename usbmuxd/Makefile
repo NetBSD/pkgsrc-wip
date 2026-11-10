@@ -27,7 +27,7 @@ FILES_SUBST+=	USBMUXD_GROUP=${USBMUXD_GROUP:Q}
 post-patch:
 	cd ${WRKSRC} && autoconf
 
-.include "../../wip/libimobiledevice/buildlink3.mk"
+.include "../../comms/libimobiledevice/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libplist/buildlink3.mk"

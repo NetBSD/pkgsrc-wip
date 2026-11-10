@@ -15,6 +15,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 .include "../../archivers/libzip/buildlink3.mk"
-.include "../../wip/libimobiledevice/buildlink3.mk"
+.include "../../comms/libimobiledevice/buildlink3.mk"
 .include "../../textproc/libplist/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

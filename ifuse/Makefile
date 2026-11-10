@@ -17,7 +17,7 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
 .include "../../textproc/libplist/buildlink3.mk"
-.include "../../wip/libimobiledevice/buildlink3.mk"
-.include "../../wip/libusbmuxd/buildlink3.mk"
+.include "../../comms/libimobiledevice/buildlink3.mk"
+.include "../../comms/libusbmuxd/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
