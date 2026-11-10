@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.47 2026/06/03 09:06:11 adam Exp $
+# $NetBSD: cargo.mk,v 1.51 2026/11/10 14:40:37 riastradh Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -37,7 +37,7 @@ CHECK_SSP_SUPPORTED=	no
 
 .include "../../lang/rust/rust.mk"
 
-USE_TOOLS+=		bsdtar digest
+USE_TOOLS+=		bsdtar digest:bootstrap
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor
 CARGO_WRKSRC?=		${WRKSRC}
 
@@ -52,7 +52,7 @@ SUBST_STAGE.gitcrate=		pre-configure
 .  for user name hash in ${CARGO_GITHUB_CRATES}
 DISTFILES+=			${name}-${hash}.tar.gz
 SITES.${name}-${hash}.tar.gz+=	-${MASTER_SITE_GITHUB:=${user}/}${name}/archive/${hash}.tar.gz
-SUBST_SED.gitcrate+=		-E -e 's!git.*github.com/${user}/${name}.*${hash}(.)!path = \1../${name}-${hash}\1!'
+SUBST_SED.gitcrate+=		-E -e 's!git =.*github.com/${user}/${name}.*${hash}(.)!path = \1../${name}-${hash}\1!'
 .  endfor
 .endif
 
@@ -77,9 +77,11 @@ cargo-vendor-crates:
 	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${WRKDIR}/.cargo/config.toml
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for crate in ${CARGO_CRATE_DEPENDS}
-	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
-	  `${DIGEST} sha256 < ${_DISTDIR}/${crate}.crate` \
-	  > ${CARGO_VENDOR_DIR}/${crate}/.cargo-checksum.json
+	${RUN}digest=`${DIGEST} sha256 < ${_DISTDIR}/${crate}.crate` && \
+	  ${PRINTF} '{"package":"%s","files":{}}' "$$digest" \
+	    > ${CARGO_VENDOR_DIR}/${crate}/.cargo-checksum.json.tmp && \
+	  ${MV} ${CARGO_VENDOR_DIR}/${crate}/.cargo-checksum.json.tmp \
+	    ${CARGO_VENDOR_DIR}/${crate}/.cargo-checksum.json
 .endfor
 
 # Legacy name
@@ -109,6 +111,15 @@ CARGO_INSTALL_ARGS?=	install --path . --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO
 
 MAKE_ENV+=		RUSTFLAGS=${RUSTFLAGS:Q}
 ALL_ENV+=		CARGO_HOME=${WRKDIR}
+
+# Not everything uses ${CARGO_ARGS} to pass -j${_MAKE_JOBS_N} to cargo,
+# e.g. Python setuptools-rust assembles its own cargo(1) invocation,
+# but generally Cargo will respect CARGO_BUILD_JOBS the same way as -j
+# or the build.jobs setting in Cargo.toml.
+#
+# https://web.archive.org/web/20261031232318/https://doc.rust-lang.org/cargo/reference/config.html#buildjobs
+#
+ALL_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 .if !target(do-build)
 do-build: do-cargo-build
