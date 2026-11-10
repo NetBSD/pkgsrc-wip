@@ -1,0 +1,6 @@
+GN is currently used as the build system for Chromium, Fuchsia,
+and related projects. GN can generate Ninja build files for C, C++,
+Rust, Objective C, and Swift source on most popular platforms.
+Other languages can be compiled using the general action rules
+which are executed by Python or another scripting language
+(Google does this to compile Java and Go).
