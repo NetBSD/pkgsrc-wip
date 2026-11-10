@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:47 nia Exp $
-
-BLAKE2s (libmatheval-1.1.12.tar.gz) = 6be73b2596525f90a449b426d6c5b008c3caf171084aa80974831a10a56cf97a
-SHA512 (libmatheval-1.1.12.tar.gz) = b3fd1fe30ba55d704da15bf95a642ec737f90445e6bcfab5580a5dbb17b76ea11ad0f654465c51e6c7b5fe54f4934a4d8631fa650c7250d3275ebea5aed7e40a
-Size (libmatheval-1.1.12.tar.gz) = 628415 bytes
-SHA1 (patch-aa) = f6e97ab357245e89e5f4173e5a08dc7716c32d35

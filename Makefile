@@ -2131,7 +2131,6 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
 SUBDIR+=	libm4ri
 SUBDIR+=	libmapper
-SUBDIR+=	libmatheval
 SUBDIR+=	libminizinc
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmixed
