@@ -47,8 +47,8 @@ PLIST_VARS+=		desktop lp32 lp64 oss
 .if ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		mingw-w64-[0-9]*:../../cross/mingw-w64
 CONFIGURE_ARGS+=	--enable-archs=i386,x86_64
-MINGW32_32=		i686-w64-mingw32
-MINGW32_64=		x86_64-w64-mingw32
+MINGW32_32=		i686-w64-mingw32-ucrt
+MINGW32_64=		x86_64-w64-mingw32-ucrt
 MINGW32_32_PATH=	${CROSSBASE}/${MINGW32_32}/bin
 MINGW32_64_PATH=	${CROSSBASE}/${MINGW32_64}/bin
 
