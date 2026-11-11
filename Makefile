@@ -272,7 +272,6 @@ SUBDIR+=	audit-system
 SUBDIR+=	ausweisapp2
 SUBDIR+=	auto-admin
 SUBDIR+=	auto-dev
-SUBDIR+=	automake
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
 SUBDIR+=	autossh
