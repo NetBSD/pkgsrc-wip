@@ -31,9 +31,9 @@ CMAKE_CONFIGURE_ARGS+=	-DTG_OWT_USE_PIPEWIRE=OFF
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../multimedia/openh264/buildlink3.mk"
+.include "../../net/usrsctp/buildlink3.mk"
 .include "../../misc/rhash/buildlink3.mk"
 .include "../../wip/libvpx-git/buildlink3.mk"
 .include "../../wip/libyuv-git/buildlink3.mk"
-.include "../../wip/usrsctp/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
