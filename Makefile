@@ -3896,7 +3896,6 @@ SUBDIR+=	py-face
 SUBDIR+=	py-factory-boy
 SUBDIR+=	py-fancyimpute
 SUBDIR+=	py-fanova
-SUBDIR+=	py-fastapi
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-fastavro
 SUBDIR+=	py-fastcluster
