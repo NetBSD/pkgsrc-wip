@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (lwjgl2-2.9.5.tar.gz) = d7dcbb6389779db1bf7acc192013a3c1e0a4e74bff506783522cbd7052055654
+SHA512 (lwjgl2-2.9.5.tar.gz) = 6375139e0ac646c4e2e538deccd47dff58a52da3699a08a9847130fa165c632a1aec876fe83d429e3f64813be5dba315526e71c711af7f44dcf433af3a4d8df2
+Size (lwjgl2-2.9.5.tar.gz) = 15548870 bytes
+SHA1 (patch-build.xml) = 61ab4988930d5046be0bbc479faa3550197181ae
+SHA1 (patch-platform__build_bsd__ant_build.xml) = 7001d49996675a6e425da3036b00202319675aca
+SHA1 (patch-src_java_org_lwjgl_LWJGLUtil.java) = 76fea9c523df0d86e57105b9ca228c22a874bffa
+SHA1 (patch-src_java_org_lwjgl_util_applet_AppletLoader.java) = 213a9b68c8bf319004bf36702556d462fdcf0c9a
+SHA1 (patch-src_native_linux_opengl_extgl__glx.c) = bab5a5caa0a665a7d013dda663c5e338669ac6c8

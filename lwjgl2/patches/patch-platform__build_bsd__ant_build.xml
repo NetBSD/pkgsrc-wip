@@ -1,0 +1,79 @@
+$NetBSD$
+
+Create NetBSD platform, and change /usr/X11R6->/usr/X11R7.
+
+--- platform_build/bsd_ant/build.xml.orig	2023-01-13 08:18:50.000000000 +0000
++++ platform_build/bsd_ant/build.xml
+@@ -4,8 +4,8 @@
+ 	<property name="native" location="../../src/native"/>
+ 	<property name="libname32" value="liblwjgl.so"/>
+ 	<property name="libname64" value="liblwjgl64.so"/>
+-	<property name="libs32" value="-L/usr/X11R6/lib -L/usr/local/lib -lm -lX11 -lXext -lXcursor -lXrandr -pthread -L${java.home}/lib/i386 -ljawt" />
+-	<property name="libs64" value="-L/usr/X11R6/lib -L/usr/local/lib -lm -lX11 -lXext -lXcursor -lXrandr -lXxf86vm -pthread -L${java.home}/lib/amd64 -ljawt" />
++	<property name="libs32" value="-L/usr/X11R7/lib -L/usr/local/lib -Wl,-R/usr/X11R7/lib -lm -lX11 -lXext -lXcursor -lXrandr -pthread -L${java.home}/lib/i386 -ljawt" />
++	<property name="libs64" value="-L/usr/X11R7/lib -L/usr/local/lib -Wl,-R/usr/X11R7/lib -lm -lX11 -lXext -lXcursor -lXrandr -lXxf86vm -pthread -L${java.home}/lib/amd64 -ljawt" />
+     <property name="cflags32" value="-O2 -Wall -c -fPIC -std=c99 -Wunused"/>
+ 
+ 	<target name="clean">
+@@ -51,6 +51,13 @@
+ 
+     	<condition property="build.32bit.only">
+             <and>
++                <os name="NetBSD"/>
++                <equals arg1="${hwplatform}" arg2="i386"/>
++            </and>
++        </condition>
++
++    	<condition property="build.32bit.only">
++            <and>
+                 <os name="OpenBSD"/>
+                 <equals arg1="${hwplatform}" arg2="i386"/>
+             </and>
+@@ -66,6 +73,13 @@
+ 
+     	<condition property="build.64bit.only">
+             <and>
++                <os name="NetBSD"/>
++                <equals arg1="${hwplatform}" arg2="amd64"/>
++            </and>
++        </condition>
++
++    	<condition property="build.64bit.only">
++            <and>
+                 <os name="OpenBSD"/>
+                 <equals arg1="${hwplatform}" arg2="amd64"/>
+             </and>
+@@ -81,12 +95,15 @@
+ 			<arg line="${cflags32} ${cflags_pthread}"/>
+ 			<arg value="-I${java.home}/include"/>
+ 			<arg value="-I${java.home}/include/freebsd"/>
++			<arg value="-I${java.home}/include/netbsd"/>
+ 			<arg value="-I${java.home}/include/openbsd"/>
+ 			<arg value="-I${java.home}/../include"/>
+ 			<arg value="-I${java.home}/../include/freebsd"/>
++			<arg value="-I${java.home}/../include/netbsd"/>
+ 			<arg value="-I${java.home}/../include/openbsd"/>
+ 			<arg value="-I/usr/local/include"/>
+-			<arg value="-I/usr/X11R6/include"/>
++			<arg value="-I/usr/X11R7/include"/>
++			<arg value="-I${native}"/>
+ 			<arg value="-I${native}/common"/>
+ 		    <arg value="-I${native}/common/opengl"/>
+ 			<arg value="-I${native}/linux"/>
+@@ -116,12 +133,15 @@
+ 			<arg line="${cflags64} ${cflags_pthread}"/>
+ 			<arg value="-I${java.home}/include"/>
+ 			<arg value="-I${java.home}/include/freebsd"/>
++			<arg value="-I${java.home}/include/netbsd"/>
+ 			<arg value="-I${java.home}/include/openbsd"/>
+ 			<arg value="-I${java.home}/../include"/>
+ 			<arg value="-I${java.home}/../include/freebsd"/>
++			<arg value="-I${java.home}/../include/netbsd"/>
+ 			<arg value="-I${java.home}/../include/openbsd"/>
+             <arg value="-I/usr/local/include"/>
+-			<arg value="-I/usr/X11R6/include"/>
++			<arg value="-I/usr/X11R7/include"/>
++            		<arg value="-I${native}"/>
+             <arg value="-I${native}/common"/>
+ 		    <arg value="-I${native}/common/opengl"/>
+ 			<arg value="-I${native}/linux"/>

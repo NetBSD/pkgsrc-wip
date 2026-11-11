@@ -1,0 +1,10 @@
+@comment $NetBSD$
+lib/liblwjgl64.so
+share/lwjgl2/lwjgl.jar
+share/lwjgl2/lwjgl_util.jar
+share/lwjgl2/lwjgl_util_applet.jar
+share/lwjgl2/lwjgl_test.jar
+share/lwjgl2/lzma.jar
+share/lwjgl2/jinput.jar
+share/lwjgl2/AppleJavaExtensions.jar
+share/lwjgl2/asm-debug-all.jar

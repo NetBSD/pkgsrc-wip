@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD$
+
+/lib           contains the native (.so) libraries of LWJGL 2.
+/share/lwjgl2  contains modified versions of the Java libraries.
+
+The modified JARs are responsible for loading the natives and recognizing
+NetBSD correctly, and must be linked against by dependent Java programs,
+replacing generic upstream releases of the LWJGL 2 JARs.
+
+This package hosts the jMonkeyEngine "maintained" fork of LWJGL 2, which is
+binary-compatible with programs expecting 2.9.3 or 2.9.4-nightly.
+===========================================================================

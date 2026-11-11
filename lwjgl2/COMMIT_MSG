@@ -1,0 +1,10 @@
+games/lwjgl2: create with jMonkeyEngine/lwjgl2 2.9.5
+
+LWJGL 2 (The Lightweight Java Game Library) provides high-performance
+OpenGL, OpenCL and OpenAL libraries for Java.  Add a copy with patches
+against the jMonkeyEngine "maintained" repository, a binary-compatible
+release of LWJGL 2 that also lacks NetBSD support.  The patches may be
+upstreamed in the future.
+
+Packaged in wip by Mahied Maruf <mahied.maruf@siriushq.org>
+Packaged in wip by Enzo van der Tuin <enzo.van.der.tuin@siriushq.org>

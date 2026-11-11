@@ -1,0 +1,79 @@
+$NetBSD$
+
+Create NetBSD platform and use shared BSD Ant rules.
+
+--- build.xml.orig	2026-11-11 02:34:05.480883390 +0000
++++ build.xml
+@@ -33,6 +33,7 @@
+ 		<mkdir dir="${lwjgl.temp}/native/windows"   taskname="initialiazing temp/windows folder" />
+ 		<mkdir dir="${lwjgl.temp}/native/linux"     taskname="initialiazing temp/linux folder" />
+ 		<mkdir dir="${lwjgl.temp}/native/freebsd"   taskname="initialiazing temp/freebsd folder" />
++		<mkdir dir="${lwjgl.temp}/native/netbsd"    taskname="initialiazing temp/netbsd folder" />
+ 		<mkdir dir="${lwjgl.temp}/native/openbsd"   taskname="initialiazing temp/openbsd folder" />
+ 		<mkdir dir="${lwjgl.temp}/native/macosx"    taskname="initialiazing temp/macosx folder" />
+ 		<mkdir dir="${lwjgl.temp}/native/solaris"   taskname="initialiazing temp/solaris folder" />
+@@ -255,6 +256,11 @@
+ 				<patternset refid="lwjgl-openbsd.fileset" />
+ 			</fileset>
+ 		</copy>
++		<copy todir="${lwjgl.temp}/native/netbsd" failonerror="false">
++			<fileset dir="${lwjgl.lib}/netbsd">
++				<patternset refid="lwjgl-netbsd.fileset" />
++			</fileset>
++		</copy>
+ 		<copy todir="${lwjgl.temp}/native/macosx">
+ 			<fileset dir="${lwjgl.lib}/macosx">
+ 				<patternset refid="lwjgl-macosx.fileset" />
+@@ -431,6 +437,8 @@
+ 			lwjgl.native.linux.version = ${lwjgl.native.linux.version}
+ 			lwjgl.java.freebsd.version = ${lwjgl.java.linux.version}
+ 			lwjgl.native.freebsd.version = ${lwjgl.native.linux.version}
++			lwjgl.java.netbsd.version = ${lwjgl.java.linux.version}
++			lwjgl.native.netbsd.version = ${lwjgl.native.linux.version}
+ 			lwjgl.java.openbsd.version = ${lwjgl.java.linux.version}
+ 			lwjgl.native.openbsd.version = ${lwjgl.native.linux.version}
+ 			lwjgl.java.macosx.version = ${lwjgl.java.macosx.version}
+@@ -499,6 +507,11 @@
+ 		</condition>
+ 		<antcall target="-compile_native_freebsd" />
+ 
++		<condition property="lwjgl.platform.netbsd">
++			<os name="NetBSD" />
++		</condition>
++		<antcall target="-compile_native_netbsd" />
++
+ 		<condition property="lwjgl.platform.openbsd">
+ 			<os name="OpenBSD" />
+ 		</condition>
+@@ -541,6 +554,14 @@
+ 		</copy>
+ 	</target>
+ 
++	<!-- Compiles LWJGL on NetBSD platforms -->
++	<target name="-compile_native_netbsd" if="lwjgl.platform.netbsd">
++		<ant antfile="platform_build/bsd_ant/build.xml" inheritAll="false"/>
++		<copy todir="${lwjgl.lib}/netbsd">
++			<fileset dir="${lwjgl.bin}/lwjgl" includes="liblwjgl*.so"/>
++		</copy>
++	</target>
++
+ 	<!-- Compiles LWJGL on OpenBSD platforms -->
+ 	<target name="-compile_native_openbsd" if="lwjgl.platform.openbsd">
+ 		<ant antfile="platform_build/bsd_ant/build.xml" inheritAll="false"/>
+@@ -681,16 +702,4 @@
+ 			<bottom><![CDATA[<i>Copyright &#169; 2002-2009 lwjgl.org. All Rights Reserved.</i>]]></bottom>
+ 		</javadoc>
+ 	</target>
+-
+-	<!-- get and copy nightly binaries into libs folder -->
+-	<target name="copy-nightly-binaries" depends="-initialize" description="Copies latest successful nightly binaries into appropriate libs folder">
+-		<delete file="${lwjgl.temp}/lwjgl-${lwjgl.version}.zip" failonerror="false"/>
+-		<get src="http://ci.newdawnsoftware.com/job/LWJGL-git-dist/lastBuild/artifact/dist/lwjgl-${lwjgl.version}.zip" dest="${lwjgl.temp}" verbose="true"/>
+-		<unzip src="${lwjgl.temp}/lwjgl-${lwjgl.version}.zip" dest="${lwjgl.lib}" overwrite="true">
+-		 	<patternset>
+-				<include name="**/native/**/*lwjgl*"/>
+-			</patternset>
+-			<globmapper from="lwjgl-${lwjgl.version}/native/*" to="*"/>
+-		</unzip>
+-	</target>
+ </project>
