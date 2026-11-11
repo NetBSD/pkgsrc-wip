@@ -24,6 +24,7 @@ include/ada/unicode-inl.h
 include/ada/unicode.h
 include/ada/url-inl.h
 include/ada/url.h
+include/ada/url_ip-inl.h
 include/ada/url_aggregator-inl.h
 include/ada/url_aggregator.h
 include/ada/url_base-inl.h
@@ -44,6 +45,6 @@ lib/cmake/ada/ada-config.cmake
 lib/cmake/ada/ada_targets-release.cmake
 lib/cmake/ada/ada_targets.cmake
 lib/libada.so
-lib/libada.so.3
+lib/libada.so.4
 lib/libada.so.${PKGVERSION}
 lib/pkgconfig/ada.pc
