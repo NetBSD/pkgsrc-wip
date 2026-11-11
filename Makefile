@@ -2326,6 +2326,7 @@ SUBDIR+=	lumina-desktop
 SUBDIR+=	lvm2
 SUBDIR+=	lwc
 SUBDIR+=	lwtools
+SUBDIR+=	lwjgl2
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-clip
