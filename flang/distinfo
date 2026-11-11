@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-BLAKE2s (llvm-project-23.1.4.src.tar.xz) = 9fd3c4efc2f039d49b78c7c17a164c3530bb026dad9479fa1555d23d6ab52f77
-SHA512 (llvm-project-23.1.4.src.tar.xz) = 1443531768d7040677302e4468b95b345511f10881a072e703814e9e10316d6ce12f56e8d1fbab5c350550380ae8d242acebb68c833fa385ea7777f05d8bde23
-Size (llvm-project-23.1.4.src.tar.xz) = 179272572 bytes
+BLAKE2s (llvm-project-23.1.5.src.tar.xz) = 938bcfd2e3a64ef0765363d0f7e792d8d543d5282cca2fcd37fa2386bdd31822
+SHA512 (llvm-project-23.1.5.src.tar.xz) = fae39af451683ad864299f497167616e63d3a1bb5719f0d5123119e7398972cb602aef8cc271b8433910064afa88e1e7b8eede3fdd1ff58664c3189cf4ab5880
+Size (llvm-project-23.1.5.src.tar.xz) = 179220264 bytes
