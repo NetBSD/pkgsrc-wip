@@ -9,7 +9,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/netsnmpy/__init__.py
 ${PYSITELIB}/netsnmpy/__init__.pyc
 ${PYSITELIB}/netsnmpy/__init__.pyo
-${PYSITELIB}/netsnmpy/_netsnmp.abi3.so
+${PYSITELIB}/netsnmpy/_netsnmp.so
 ${PYSITELIB}/netsnmpy/annotations.py
 ${PYSITELIB}/netsnmpy/annotations.pyc
 ${PYSITELIB}/netsnmpy/annotations.pyo
