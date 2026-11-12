@@ -20,7 +20,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
 +set_from(struct dma_queue *queue, const char *osender)
  {
  	const char *addr;
- 	char *sender;
+ 	const char *from_user = NULL;
 @@ -153,7 +154,7 @@ read_aliases(void)
  }
  
@@ -66,12 +66,13 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	struct qitem *it;
  	int locked = 0;	/* XXX */
-@@ -421,7 +422,7 @@ main(int argc, char **argv)
+@@ -421,8 +422,8 @@ main(int argc, char **argv)
  {
  	struct sigaction act;
  	char *sender = NULL;
+ 	char *own_name = NULL;
 -	struct queue queue;
 +	struct dma_queue queue;
  	int i, ch;
- 	int nodot = 0, showq = 0, queue_only = 0;
+ 	int nodot = 0, showq = 0, queue_only = 0, newaliases = 0;
  	int recp_from_header = 0;

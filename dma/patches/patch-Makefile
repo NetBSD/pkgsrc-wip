@@ -1,17 +1,12 @@
 $NetBSD$
 
-For setuid files its recommended to not set any write permissions
+Stage executables without privileged ownership or modes.
+The package declares their final permissions using SPECIAL_PERMS.
 
---- Makefile.orig	2016-02-23 20:01:56.895785904 +0000
+--- Makefile.orig
 +++ Makefile
-@@ -50,8 +50,8 @@ clean:
- install: all
- 	${INSTALL} -d ${DESTDIR}${SBIN}
- 	${INSTALL} -d ${DESTDIR}${MAN}/man8 ${DESTDIR}${LIBEXEC}
+@@ -55,2 +55,2 @@
 -	${INSTALL} -m 2755 -o root -g mail dma ${DESTDIR}${SBIN}
 -	${INSTALL} -m 4754 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
-+	${INSTALL} -m 2555 -o root -g mail dma ${DESTDIR}${SBIN}
-+	${INSTALL} -m 4554 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
- 	${INSTALL} -m 0644 dma.8 ${DESTDIR}${MAN}/man8/
- 
- sendmail-link:
++	${INSTALL} -m 0555 dma ${DESTDIR}${SBIN}
++	${INSTALL} -m 0555 dma-mbox-create ${DESTDIR}${LIBEXEC}
