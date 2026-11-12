@@ -1,21 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	stirmake-v0.4.4
+DISTNAME=	stirmake-v0.4.5
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Aalto5G/}
 GITHUB_PROJECT=	stirmake
-GITHUB_RELEASE=	v0.4.4
+GITHUB_RELEASE=	v0.4.5
 
 MAINTAINER=	juha-matti.tilli@iki.fi
 HOMEPAGE=	https://github.com/Aalto5G/stirmake/
 COMMENT=	Fast build tool with better support for recursion than make
 LICENSE=	mit
 
+LIBS.SunOS+=	-lsocket -lnsl
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC}/stirc && CC=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} STIR_WITH_LUA=${STIR_WITH_LUA:Q} STIR_LUAINCS=${STIR_LUAINCS:Q} STIR_LUALIBS=${STIR_LUALIBS:Q} ./bootstrapnomake.sh
+	cd ${WRKSRC}/stirc && FLEX=false BYACC=false CC=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} STIR_WITH_LUA=${STIR_WITH_LUA:Q} STIR_LUAINCS=${STIR_LUAINCS:Q} STIR_LUALIBS=${STIR_LUALIBS:Q} STIR_LIBS=${LIBS:Q} ./bootstrapnomake.sh
 
 do-test:
 	cd ${WRKSRC}/stirc/autotest && ${SETENV} ${TEST_ENV} ./suite.sh

@@ -1,8 +1,8 @@
-devel/stirmake: Add stirmake version 0.4.4
+devel/stirmake: Add stirmake version 0.4.5
 
 Packaged in wip by Juha-Matti Tilli
 
-This package provides stirmake version 0.4.4
+This package provides stirmake version 0.4.5
 
 Stirmake is a fast build tool intended to make recursive build systems
 with possible git submodules easy to create. It is programmable in the
@@ -33,3 +33,9 @@ to be set, or else the build system of stirmake uses pkg-config to
 deduce their values. However, pkgsrc buildlink already sets the include
 paths in CFLAGS. So, place a dummy "-I." to STIR_LUAINCS to suppress the
 pkg-config.
+
+4. Stirmake uses flex and byacc. However, official releases have
+pre-generated parsers in the package, so the use of flex and byacc in
+build has been disabled with "false". This consistently uses the
+pre-generated parsers, even if flex and byacc may be installed, thus
+creating a deterministic build.
