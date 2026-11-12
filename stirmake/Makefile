@@ -20,7 +20,7 @@ do-build:
 	cd ${WRKSRC}/stirc && FLEX=false BYACC=false CC=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} STIR_WITH_LUA=${STIR_WITH_LUA:Q} STIR_LUAINCS=${STIR_LUAINCS:Q} STIR_LUALIBS=${STIR_LUALIBS:Q} STIR_LIBS=${LIBS:Q} ./bootstrapnomake.sh
 
 do-test:
-	cd ${WRKSRC}/stirc/autotest && ${SETENV} ${TEST_ENV} ./suite.sh
+	cd ${WRKSRC}/stirc/autotest && ${SETENV} ${TEST_ENV} FLEX=false BYACC=false ./suite.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stirc/stirmake ${DESTDIR}${PREFIX}/bin/stirmake

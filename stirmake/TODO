@@ -5,3 +5,5 @@
   POSIX compliant, but what POSIX doesn't specify is linker arguments
   so on some POSIX systems, it might require linking to some other
   libraries than libc and libm.
+- Testing done now: NetBSD 11, FreeBSD 15, OpenBSD 8.0, OmniOS r151054
+- Testing requested: MacOS, MINIX3
