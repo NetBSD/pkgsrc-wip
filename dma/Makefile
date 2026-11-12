@@ -49,7 +49,7 @@ CONF_FILES=	${EGDIR}/dma.conf ${PKG_SYSCONFDIR}/dma.conf
 CONF_FILES+=	${EGDIR}/auth.conf ${PKG_SYSCONFDIR}/auth.conf
 
 OWN_DIRS=	${VARBASE}/spool/dma
-OWN_DIRS_PERMS=	${VARBASE}/spool/dma ${DMA_ROOT_USER} ${DMA_GROUP} 750
+OWN_DIRS_PERMS=	${VARBASE}/spool/dma ${DMA_ROOT_USER} ${DMA_GROUP} 0770
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dma.conf ${DESTDIR}${EGDIR}/dma.conf
