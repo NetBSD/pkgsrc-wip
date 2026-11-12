@@ -253,6 +253,7 @@ ${PYSITELIB}/electrum/gui/qml/auth.pyc
 ${PYSITELIB}/electrum/gui/qml/auth.pyo
 ${PYSITELIB}/electrum/gui/qml/components/About.qml
 ${PYSITELIB}/electrum/gui/qml/components/AddressDetails.qml
+${PYSITELIB}/electrum/gui/qml/components/AddressHistory.qml
 ${PYSITELIB}/electrum/gui/qml/components/Addresses.qml
 ${PYSITELIB}/electrum/gui/qml/components/BIP39RecoveryDialog.qml
 ${PYSITELIB}/electrum/gui/qml/components/BalanceDetails.qml
