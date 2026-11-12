@@ -3146,8 +3146,6 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-adb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-adb.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-androidsu.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-androidsu.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-archive.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-archive.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.el.gz
