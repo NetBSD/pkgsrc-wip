@@ -2,54 +2,77 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mtr085
 
-PKG_SUPPORTED_OPTIONS+=		dns
-PKG_SUPPORTED_OPTIONS+=		idn
-PKG_SUPPORTED_OPTIONS+=		nls
+PKG_SUPPORTED_OPTIONS+=		tui
+PKG_SUPPORTED_OPTIONS+=		color
+PKG_SUPPORTED_OPTIONS+=		mouse
+#PKG_SUPPORTED_OPTIONS+=	menu # not ready yet
 PKG_SUPPORTED_OPTIONS+=		unicode
+PKG_SUPPORTED_OPTIONS+=		nls
+PKG_SUPPORTED_OPTIONS+=		dns
 PKG_SUPPORTED_OPTIONS+=		ipinfo
 PKG_SUPPORTED_OPTIONS+=		inet6
 PKG_SUPPORTED_OPTIONS+=		mpls
 
-PKG_SUGGESTED_OPTIONS+=	dns
-PKG_SUGGESTED_OPTIONS+=	idn
-PKG_SUGGESTED_OPTIONS+=	unicode
-PKG_SUGGESTED_OPTIONS+=	ipinfo
-PKG_SUGGESTED_OPTIONS+=	inet6
-PKG_SUGGESTED_OPTIONS+=	mpls
+PKG_SUGGESTED_OPTIONS+=		tui
+PKG_SUGGESTED_OPTIONS+=		color
+#PKG_SUGGESTED_OPTIONS+=	mouse
+#PKG_SUGGESTED_OPTIONS+=	menu  # not ready yet
+PKG_SUGGESTED_OPTIONS+=		unicode
+PKG_SUGGESTED_OPTIONS+=		dns
+PKG_SUGGESTED_OPTIONS+=		ipinfo
+PKG_SUGGESTED_OPTIONS+=		inet6
+PKG_SUGGESTED_OPTIONS+=		mpls
 
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 PLIST_VARS+=	nls
 
 .include "../../mk/bsd.options.mk"
 
-.if !${PKG_OPTIONS:Minet6}
-MESON_ARGS+=	-DIPV6=false
+.if empty(PKG_OPTIONS:Mtui)
+MESON_ARGS+=	-DTUI=false
 .endif
 
-.if !${PKG_OPTIONS:Mdns}
-MESON_ARGS+=	-DDNS=false
+.if empty(PKG_OPTIONS:Mcolor)
+MESON_ARGS+=	-DCOLOR=false
 .endif
 
-.if !${PKG_OPTIONS:Mmpls}
-MESON_ARGS+=	-DMPLS=false
+.if empty(PKG_OPTIONS:Mmouse)
+MESON_ARGS+=	-DMOUSE=false
 .endif
 
-.if !${PKG_OPTIONS:Mipinfo}
-MESON_ARGS+=	-DIPINFO=false
-.endif
+## not ready yet
+#.if empty(PKG_OPTIONS:Mmenu)
+MESON_ARGS+=	-DMENU=false
+#.endif
 
-.if ${PKG_OPTIONS:Midn}
-.include "../../devel/libidn2/buildlink3.mk"
-.endif
-
-.if !${PKG_OPTIONS:Municode}
+.if empty(PKG_OPTIONS:Municode)
 MESON_ARGS+=	-DUNICODE=false
 .endif
 
-.if ${PKG_OPTIONS:Mnls}
+.if !empty(PKG_OPTIONS:Municode) && !empty(PKG_OPTIONS:Mdns)
+.include "../../devel/libidn2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mnls)
 USE_TOOLS+=		gettext msgfmt
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 .else
 MESON_ARGS+=		-DNLS=false
+.endif
+
+.if empty(PKG_OPTIONS:Mdns)
+MESON_ARGS+=	-DDNS=false
+.endif
+
+.if empty(PKG_OPTIONS:Mipinfo)
+MESON_ARGS+=	-DIPINFO=false
+.endif
+
+.if empty(PKG_OPTIONS:Minet6)
+MESON_ARGS+=	-DIPV6=false
+.endif
+
+.if empty(PKG_OPTIONS:Mmpls)
+MESON_ARGS+=	-DMPLS=false
 .endif
