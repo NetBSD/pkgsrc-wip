@@ -28,6 +28,9 @@ ${PYSITELIB}/zino/api/notify.pyo
 ${PYSITELIB}/zino/api/server.py
 ${PYSITELIB}/zino/api/server.pyc
 ${PYSITELIB}/zino/api/server.pyo
+${PYSITELIB}/zino/api/sockets.py
+${PYSITELIB}/zino/api/sockets.pyc
+${PYSITELIB}/zino/api/sockets.pyo
 ${PYSITELIB}/zino/compat.py
 ${PYSITELIB}/zino/compat.pyc
 ${PYSITELIB}/zino/compat.pyo

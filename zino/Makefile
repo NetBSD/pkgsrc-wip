@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	zino-2.5.2
+DISTNAME=	zino-2.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uninett/}
 GITHUB_PROJECT=	zino
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-snmp>=6.2.6<7:../../wip/py-snmp
 DEPENDS+=	${PYPKGPREFIX}-aiodns>=3.6.1:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-netsnmp-cffi>=0.2.1:../../wip/py-netsnmp-cffi
 DEPENDS+=	${PYPKGPREFIX}-pyasyncore>=0:../../devel/py-pyasyncore
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
+# unpackaged: retry, probably more
 
 # Workaround for using github tarball:
 MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${PKGVERSION}
