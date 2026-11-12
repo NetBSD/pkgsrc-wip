@@ -3778,6 +3778,7 @@ SUBDIR+=	py-dependency
 SUBDIR+=	py-dependency_management
 SUBDIR+=	py-dependenpy
 SUBDIR+=	py-depinfo
+SUBDIR+=	py-deptry
 SUBDIR+=	py-descartes
 SUBDIR+=	py-desktop-notify
 SUBDIR+=	py-dexml

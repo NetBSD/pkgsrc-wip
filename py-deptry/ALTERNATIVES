@@ -1,0 +1,1 @@
+bin/deptry @PREFIX@/bin/deptry-@PYVERSSUFFIX@
