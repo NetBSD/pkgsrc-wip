@@ -1,14 +1,14 @@
 $NetBSD$
 
-BLAKE2s (rust-1.99.1-x86_64-unknown-netbsd.tar.xz) = 3e6508e5b9091be826107d6bfe8b9d94fdd67c63be488ce61cf0f87d4ae8883c
-SHA512 (rust-1.99.1-x86_64-unknown-netbsd.tar.xz) = e07720da458561a04dc96ef04e2e94679d297f24b7adc31174ff32e338e133acaa496df5f3fe24756c61604adc423eb1bfc066345bffbad05aa4feed5422826f
-Size (rust-1.99.1-x86_64-unknown-netbsd.tar.xz) = 245904584 bytes
-BLAKE2s (rust-std-1.99.1-x86_64-unknown-netbsd.tar.xz) = 447766ff7bab7e05e8941f9370dbc4566fd3cc4ee7b82f48845d72a97782bec3
-SHA512 (rust-std-1.99.1-x86_64-unknown-netbsd.tar.xz) = 8b761cc8ffcff33c5e7a83f18dc7fc92e5216fb4da2b334892b385f45dffdc7a2db46d05362117760666e75cebefb29a1d584bb0efdd2a4ad99b61387abe8500
-Size (rust-std-1.99.1-x86_64-unknown-netbsd.tar.xz) = 29527452 bytes
-BLAKE2s (rustc-beta-src.tar.xz) = 72b0181c7dffe48986a31573d27ff60c36d5db94c93db7c28e435dcbc7c1a1d4
-SHA512 (rustc-beta-src.tar.xz) = 6ade0b6908e541426a10dc9944dbc8ab7488b8cd60535083defceaa1c98a9cf5876e34896cb3b2e6cd5d2161c88bdcfa711fd06a4e340aafb0f92327b158a112
-Size (rustc-beta-src.tar.xz) = 263301092 bytes
+BLAKE2s (rust-1.100.0-x86_64-unknown-netbsd.tar.xz) = 54a418edb0d5475850f19e1b62cd5b6fed32ddb36979a17a239a29bbe354ec75
+SHA512 (rust-1.100.0-x86_64-unknown-netbsd.tar.xz) = 8af3632ea022a2bf3978f39f86a17eb6a6a7b913e3b00bc558b8572ea50053a5126b0ef51ae6685e01b9899809a404fccdd0edd7e93f8be9e007d4d5c887e97a
+Size (rust-1.100.0-x86_64-unknown-netbsd.tar.xz) = 247687184 bytes
+BLAKE2s (rust-std-1.100.0-x86_64-unknown-netbsd.tar.xz) = 7ba9892cf0d501c31c38e36b8cba25a204ecd9ad8acf7c04f0c8ab72a52fbd05
+SHA512 (rust-std-1.100.0-x86_64-unknown-netbsd.tar.xz) = fb8d3d80db5c9a906203026b0403200ca5c7ad22b29bb75305a81cf1e4a53d80da401c0e73f762c0745a97ee65c7f8af01c0a3425d4e3ad1edb0d1cf3c714c89
+Size (rust-std-1.100.0-x86_64-unknown-netbsd.tar.xz) = 29305808 bytes
+BLAKE2s (rustc-beta-src.tar.xz) = e9429f96a98483dfddee877b71e4615a6c71add2032138a978f87e52c5887184
+SHA512 (rustc-beta-src.tar.xz) = 6b4f475198f1e03972d3a5d19f901ab4e787d04c614ba8bc53b5e4d60422884b34162da3e9cca17c6e75894d02c203950457bc83c7fd30661bc635c8659de15a
+Size (rustc-beta-src.tar.xz) = 275339624 bytes
 SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 9d5ef634c5a454e474ea5fee76da9bb768f5b3d9
 SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 8b18e1dbde59f3e8f20e93c7669618b2c7a13294
 SHA1 (patch-src_bootstrap_Cargo.toml) = 308602e469542dfd800c1ea10c1cdb393539a5a9
