@@ -6297,6 +6297,7 @@ SUBDIR+=	yersinia
 SUBDIR+=	yet-another-cloudwatch-exporter
 SUBDIR+=	yi
 SUBDIR+=	yoda
+SUBDIR+=	yoshimi
 SUBDIR+=	yosys-dev
 SUBDIR+=	you-get
 SUBDIR+=	yp-tools

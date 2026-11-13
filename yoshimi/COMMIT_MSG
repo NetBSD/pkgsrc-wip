@@ -1,0 +1,9 @@
+audio/yoshimi: Add yoshimi version 2.3.6.5
+
+Packaged in wip by adr.
+
+Version 2.3.6
+* New feature: Kit Mode now has a crossfade Volume option as well as Velocity.
+* New feature: Yoshimi now recognises old and new versions of MXML and FLTK.
+* New feature: Yoshimi car run on the wayland windowng system without issues.
+* Various code refinements.

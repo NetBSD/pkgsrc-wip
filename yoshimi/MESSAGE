@@ -1,0 +1,5 @@
+If there are audible clicks or glitches try to increase "Internal
+Buffer Size" option.
+
+Yohimi will hang after exiting when connected to a jack server.
+Just kill it and make your day.
