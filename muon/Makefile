@@ -1,19 +1,19 @@
 # $NetBSD$
 
-DISTNAME=		muon-v0.7.0
+DISTNAME=		muon-v0.7.1
 PKGNAME=		${DISTNAME:S/v//}
 CATEGORIES=		devel
-MASTER_SITES=		https://muon.build/releases/${DISTNAME:S/muon-//}/
+MASTER_SITES=		https://dl.muon.build/${DISTNAME:S/muon-//}/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		${DEFAULT_DISTFILES} man.tar.gz
-SITES.man.tar.gz=	https://muon.build/releases/${DISTNAME:S/muon-//}/docs/
+SITES.man.tar.gz=	https://dl.muon.build/${DISTNAME:S/muon-//}/docs/
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		https://muon.build/
 COMMENT=		Implementation of meson build system in C99 with minimal dependencies
 LICENSE=		gnu-gpl-v3
 
-USE_TOOLS=		pkg-config
+USE_TOOLS=		pkg-config:run
 USE_CC_FEATURES=	c99
 
 # Use external samurai

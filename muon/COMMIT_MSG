@@ -1,6 +1,7 @@
-muon: Update to 0.7.0
+muon: Update to 0.7.1
 
 - Switch homepage to <https://muon.build/>
+- Add pkg-config as runtime dependency
 
 Changelog
 =========
