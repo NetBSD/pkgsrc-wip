@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- meson.build.orig	2026-07-27 14:56:24.000000000 +0000
++++ meson.build
+@@ -15,7 +15,7 @@ render_tmpl = './tools/render-template'
+ lib_exec_dir = get_option('prefix') / get_option('libexecdir') / 'cloud-init'
+ render_tmpl = './tools/render-template'
+ 
+-is_readthedocs = run_command('bash', '-c', 'echo ${READTHEDOCS}', check: true).stdout().strip()
++is_readthedocs = run_command('sh', '-c', 'echo ${READTHEDOCS}', check: true).stdout().strip()
+ 
+ pymod = import('python')
+ python = pymod.find_installation('python3')
