@@ -884,7 +884,6 @@ SUBDIR+=	email-oauth2-proxy
 SUBDIR+=	emerald
 SUBDIR+=	emerald-themes
 SUBDIR+=	emirror
-SUBDIR+=	emmylua-ls
 SUBDIR+=	emokit
 SUBDIR+=	emovix
 SUBDIR+=	emscripten

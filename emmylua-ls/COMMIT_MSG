@@ -1,6 +1,0 @@
-emmylua-ls: Import emmylua-ls 0.25.1 as devel/emmylua-ls.
-
-emmylua-ls is a Lua language server with fast, incremental analysis
-that supports Lua 5.1 to 5.5 including LuaJIT. Supports both EmmyLua
-and LuaCATS annotations. Includes a static analyzer(emmylua_check) and
-a documentation generator(emmylua_doc_cli).

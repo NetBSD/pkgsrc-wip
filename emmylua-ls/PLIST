@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/emmylua_check
-bin/emmylua_doc_cli
-bin/emmylua_ls
