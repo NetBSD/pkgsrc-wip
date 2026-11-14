@@ -4,8 +4,7 @@ DISTNAME=	stirmake-v0.4.5
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Aalto5G/}
-GITHUB_PROJECT=	stirmake
-GITHUB_RELEASE=	v0.4.5
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	juha-matti.tilli@iki.fi
 HOMEPAGE=	https://github.com/Aalto5G/stirmake/
