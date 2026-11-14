@@ -1,2 +1,0 @@
-bin/jsondiff @PREFIX@/bin/jsondiff-@PYVERSSUFFIX@
-bin/jsonpatch @PREFIX@/bin/jsonpatch-@PYVERSSUFFIX@
