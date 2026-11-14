@@ -226,8 +226,10 @@ fix-darwin-install-name:
 		    ${DESTDIR}${PREFIX}/libexec/${libexec};		\
 	done
 .  endfor
-.  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 	\
-		llvm-profdata llvm-readobj llvm-size llvm-strip
+.  for bin in llc lldb lldb-mi llvm-ar llvm-as llvm-cov llvm-dis	\
+		llvm-link llvm-nm llvm-objcopy llvm-objdump		\
+		llvm-profdata llvm-readobj llvm-size llvm-strip opt	\
+		rust-lld rust-objcopy
 	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
