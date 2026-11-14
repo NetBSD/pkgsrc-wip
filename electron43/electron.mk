@@ -23,7 +23,8 @@ ONLY_FOR_PLATFORM+=	FreeBSD-*-${c_arch}
 .endfor
 
 ELECTRONBIN=		${PREFIX}/lib/${ELECTRON}/electron
-NODE_GYP=		${PREFIX}/lib/node_modules/npm/bin/node-gyp-bin/node-gyp
+NODE_GYP_PATH=		${PREFIX}/lib/node_modules/npm/bin/node-gyp-bin
+NODE_GYP=		${NODE_GYP_PATH}/node-gyp
 
 FILES_SUBST+=		ELECTRON=${ELECTRON}
 FILES_SUBST+=		ELECTRONBIN=${ELECTRONBIN}
