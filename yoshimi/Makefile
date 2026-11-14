@@ -1,19 +1,15 @@
 # $NetBSD$
 
-DISTNAME=	2.3.6.5
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	yoshimi-2.3.6.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yoshimi/}
-GITHUB_PROJECT=	yoshimi
-GITHUB_TAG=	2.3.6.5
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Yoshimi/yoshimi/
 COMMENT=	Software audio synthesizer
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/yoshimi-2.3.6.5
 CONFIGURE_DIR=	src
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++ c
