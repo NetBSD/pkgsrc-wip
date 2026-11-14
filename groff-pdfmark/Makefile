@@ -54,14 +54,14 @@ SUBST_FILES.groffbin=	${BUILD_TARGET}
 # first non-comment line in "pdfroff"
 
 SUBST_FILTER_CMD.groffbin= \
-  ${AWK} '!inserted && /^[^\#]/ \
-    {\
-      print "\# Use the groff installed in ${PREFIX} when GROFF_BIN_PATH is not set.";\
-      print "\# Users may still override with GROFF_BIN_DIR or GROFF_BIN_PATH.";\
-      print "\n  : $${GROFF_BIN_PATH:=${PREFIX}/bin}\n";\
-      inserted=1;\
-    }\
-    { print }'
+	${AWK} '!inserted && /^[^\#]/ \
+	{ \
+	print "\# Use the groff installed in ${PREFIX} when GROFF_BIN_PATH is not set."; \
+	print "\# Users may still override with GROFF_BIN_DIR or GROFF_BIN_PATH."; \
+	print "\n  : $${GROFF_BIN_PATH:=${PREFIX}/bin}\n"; \
+	inserted=1; \
+	} \
+	{ print }'
 
 # Build only the POSIX pdfroff script
 do-build:

@@ -28,8 +28,8 @@ share/groff/site-tmac/pdfmark.tmac
 share/groff/site-tmac/pdfroff.tmac
 share/groff/site-tmac/redirect.tmac
 share/groff/site-tmac/sanitize.tmac
-share/groff/site-tmac/spdf.tmac
 share/groff/site-tmac/spdf-toc.tmac
+share/groff/site-tmac/spdf.tmac
 share/groff/site-tmac/strcase.tmac
 share/groff/site-tmac/toc-base.tmac
 share/groff/site-tmac/toc-class.tmac
