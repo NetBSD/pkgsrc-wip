@@ -5597,7 +5597,6 @@ SUBDIR+=	stalwart
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	starfighter
-SUBDIR+=	stirmake
 SUBDIR+=	stksolver
 SUBDIR+=	stmd-git
 SUBDIR+=	stmpclean
