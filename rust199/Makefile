@@ -71,7 +71,7 @@ REPLACE_PYTHON+=	${CB}/etc/update-api-list.py
 # somewhat "unknown" result then becomes problematical or at best
 # overly complicated.
 RL=			lib/rustlib/src/rust
-CHECK_INTERPRETER_SKIP+=${RL}/library/vendor/libc-0.2.189/etc/libc-util.py
+CHECK_INTERPRETER_SKIP+= ${RL}/library/vendor/libc-0.2.189/etc/libc-util.py
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
@@ -186,7 +186,7 @@ CONFIGURE_ARGS+=	--set llvm.targets="Mips;X86"
 # NetBSD/powerpc can no longer build all targets, ref.
 # https://github.com/llvm/llvm-project/issues/230790
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc}
-CONFIGURE_ARGS+=        --set llvm.targets="PowerPC;X86"
+CONFIGURE_ARGS+=	--set llvm.targets="PowerPC;X86"
 .endif
 # NetBSD/i386 can no longer build the RISCV target, ref.
 # https://github.com/llvm/llvm-project/issues/230790
