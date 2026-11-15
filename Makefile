@@ -2330,7 +2330,6 @@ SUBDIR+=	lwtools
 SUBDIR+=	lwjgl2
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
-SUBDIR+=	lxqt-clip
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
 SUBDIR+=	mac-icon-standard

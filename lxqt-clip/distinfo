@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (lxqt-clip-2.4.0-c6c50e97f62daca1fd9f4a975d85e68c166ab27f.tar.gz) = 274b8563f9e46871298b12154ee81813ea6916ec2b0e109a11855e593202224f
-SHA512 (lxqt-clip-2.4.0-c6c50e97f62daca1fd9f4a975d85e68c166ab27f.tar.gz) = 9cb1526ac8ae7deb670101982ed035dcdead5810bb0c0f0dacd506d56da8a42354efd91cd0956d6da63b34902455fde0e3c800ef002f4f06e9c0efd119310828
-Size (lxqt-clip-2.4.0-c6c50e97f62daca1fd9f4a975d85e68c166ab27f.tar.gz) = 100783 bytes
-SHA1 (patch-lxqt-autostart_CMakeLists.txt) = 2e96128b2378da19742f04c5a834ed05d597a6b6
