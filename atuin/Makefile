@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	atuin-18.24.6
+DISTNAME=	atuin-18.24.8
 CATEGORIES=	sysutils shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atuinsh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,8 +13,10 @@ LICENSE=	mit
 WRKSRC=	${WRKDIR}/${DISTNAME}
 MAKE_ENV+= CARGO_PROFILE_RELEASE_CODEGEN_UNITS=16
 MAKE_ENV+= CARGO_PROFILE_RELEASE_LTO=thin
+# luau0-src 0.22 uses std::numeric_limits without <limits>; libstdc++ 14 does not pull it in transitively
+MAKE_ENV+=      LUAU_CXXFLAGS="-include limits"
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 BUILD_DEFS+=		VARBASE

@@ -1,4 +1,4 @@
-sysutils/atuin: import atuin-18.19.0
+sysutils/atuin: import atuin-18.24.8
 
 Atuin replaces your existing shell history with a SQLite database and
 records extra context (exit code, cwd, duration, host, session) for each
@@ -9,3 +9,19 @@ through a self-hosted or hosted Atuin server.
 This package provides both the atuin client and the atuin-server daemon,
 with an rc.d script (atuin-serverd) and a dedicated _atuin user for the
 server.
+
+Atuin captures everything you do in your terminal, from all your agentic
+AI work, to all your terminal history, enabling you to:
+
+   Let your agents see things you've worked on today, yesterday,
+   a month or a year ago.
+
+   Gain context on any work you've ever done in the terminal.
+   If it happened in a terminal, Atuin lets you see it!
+
+   Optionally, securely, sync your shell history and AI sessions across all
+   your machines.
+
+Atuin is secure by design, even when syncing: everything it syncs is
+end-to-end encrypted, and nobody (including you, if you forget the key)
+can decrypt it.
