@@ -1,0 +1,111 @@
+   Compiling zip v9.0.5
+error[E0433]: cannot find `os` in the crate root
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:117:20
+    |
+117 |     pub use crate::os::posix::*;
+    |                    ^^ unresolved import
+    |
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:34:5
+    |
+ 33 | #[cfg(platform_override)]
+    |       ----------------- the item is gated here
+ 34 | mod os {
+    |     ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:49:5
+    |
+ 47 | #[cfg(target_os = "android")]
+    |       --------------------- the item is gated behind the `android` feature
+ 48 | #[path = "android/os.rs"]
+ 49 | mod os;
+    |     ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:54:5
+    |
+ 52 | #[cfg(target_os = "freebsd")]
+    |       --------------------- the item is gated behind the `freebsd` feature
+ 53 | #[path = "freebsd/os.rs"]
+ 54 | mod os;
+    |     ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:59:5
+    |
+ 57 | #[cfg(target_os = "macos")]
+    |       ------------------- the item is gated behind the `macos` feature
+ 58 | #[path = "macos/os.rs"]
+ 59 | mod os;
+    |     ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:64:9
+    |
+ 62 | #[cfg(target_os = "linux")]
+    |       ------------------- the item is gated behind the `linux` feature
+ 63 | #[path = "linux/os.rs"]
+ 64 | pub mod os;
+    |         ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:69:5
+    |
+ 67 | #[cfg(target_os = "nto")]
+    |       ----------------- the item is gated behind the `nto` feature
+ 68 | #[path = "qnx/os.rs"]
+ 69 | mod os;
+    |     ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:74:5
+    |
+ 72 | #[cfg(target_os = "windows")]
+    |       --------------------- the item is gated behind the `windows` feature
+ 73 | #[path = "windows/os.rs"]
+ 74 | mod os;
+    |     ^^
+note: found an item that was configured out
+   --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/lib.rs:79:5
+    |
+ 77 | #[cfg(target_os = "none")]
+    |       ------------------ the item is gated behind the `none` feature
+ 78 | #[path = "stub/os.rs"]
+ 79 | mod os;
+    |     ^^
+help: a similar path exists
+    |
+117 |     pub use crate::std::os::posix::*;
+    |                    +++++
+
+error[E0432]: unresolved import `crate::posix::CPU_SETSIZE`
+  --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/common/cpu_set_t.rs:16:20
+   |
+16 | use crate::posix::{CPU_SETSIZE, MemZeroedStruct};
+   |                    ^^^^^^^^^^^ no `CPU_SETSIZE` in `posix`
+
+error[E0432]: unresolved imports `crate::posix::closedir`, `crate::posix::free`, `crate::posix::malloc`, `crate::posix::opendir`, `crate::posix::readdir_r`
+  --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/common/scandir.rs:16:20
+   |
+16 | use crate::posix::{closedir, free, malloc, opendir, readdir_r};
+   |                    ^^^^^^^^  ^^^^  ^^^^^^  ^^^^^^^  ^^^^^^^^^ no `readdir_r` in `posix`
+   |                    |         |     |       |
+   |                    |         |     |       no `opendir` in `posix`
+   |                    |         |     no `malloc` in `posix`
+   |                    |         no `free` in `posix`
+   |                    no `closedir` in `posix`
+   |
+help: a similar name exists in the module
+   |
+16 - use crate::posix::{closedir, free, malloc, opendir, readdir_r};
+16 + use crate::posix::{closedir, free, alloc, opendir, readdir_r};
+   |
+
+error[E0432]: unresolved imports `crate::posix::dirent_size`, `crate::posix::types`
+  --> /tmp/textproc/tabiew/work/vendor/iceoryx2-pal-posix-0.10.0/src/common/scandir.rs:17:20
+   |
+17 | use crate::posix::{dirent_size, types::*};
+   |                    ^^^^^^^^^^^  ^^^^^ could not find `types` in `posix`
+   |                    |
+   |                    no `dirent_size` in `posix`
+
+Some errors have detailed explanations: E0432, E0433.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `iceoryx2-pal-posix` (lib) due to 4 previous errors
+warning: build failed, waiting for other jobs to finish...
+
