@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-vendor_crossbeam-utils-0.8.20_no__atomic.rs,v 1.1 2026/11/14 22:02:08 wiz Exp $
 
 Add NetBSD/mipsel to non-atomic targets.
 

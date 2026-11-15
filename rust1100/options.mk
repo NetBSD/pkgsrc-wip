@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.55 2026/06/30 15:13:10 adam Exp $
+# $NetBSD: options.mk,v 1.57 2026/11/14 22:02:07 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs rust-system-libgit2
@@ -69,8 +69,7 @@ GCC_REQD+=	14
 
 # Ref. src/bootstrap/src/core/build_steps/llvm.rs / check_llvm_version()
 # rust now (1.98.0) requires LLVM >= 21.x
-BUILDLINK_API_DEPENDS.llvm+=    llvm>=21.1.0
-BUILDLINK_ABI_DEPENDS.llvm+=    llvm>=21.1.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=21.1.0
 
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared

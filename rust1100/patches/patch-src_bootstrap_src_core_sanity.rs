@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_bootstrap_src_core_sanity.rs,v 1.5 2026/11/14 22:02:08 wiz Exp $
 
 Add m68k-unknown-netbsd to "missing stage0" list.
 

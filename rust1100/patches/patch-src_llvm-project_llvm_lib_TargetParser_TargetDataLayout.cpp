@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_llvm-project_llvm_lib_TargetParser_TargetDataLayout.cpp,v 1.2 2026/11/14 22:02:08 wiz Exp $
 
 Fix alignment on NetBSD/m68k.
 This is also submitted upstream at
