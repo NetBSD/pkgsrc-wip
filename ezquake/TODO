@@ -1,0 +1,4 @@
+ezquake-3.6.9: package is complete, tested on NetBSD/amd64.
+
+- Not yet tested on other platforms/architectures.
+- Quake game data (pak0.pak) must be provided by the user.
