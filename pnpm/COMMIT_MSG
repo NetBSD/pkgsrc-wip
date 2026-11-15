@@ -1,7 +1,18 @@
-devel/pnpm: import pnpm version 12.15.0
+devel/pnpm: import pnpm version 12.18.0
 
-Packaged in wip by iquiw
+Packaged in wip by iquiw and adam.
 
-This is not ready for pkgsrc yet.
-At least, it can be built on NetBSD/amd64.
-Some functions might not work.
+Fast, disk space efficient package manager:
+
+* Fast. Up to 2x faster than the alternatives (see benchmark).
+* Efficient. Files inside node_modules are linked from a single
+  content-addressable storage.
+* Great for monorepos.
+* Strict. A package can access only dependencies that are specified in its
+  package.json.
+* Deterministic. Has a lockfile called pnpm-lock.yaml.
+* Works as a Node.js version manager. See pnpm runtime.
+* Works everywhere. Supports Windows, Linux, and macOS.
+* Battle-tested. Used in production by teams of all sizes since 2016.
+* Experimental Rust port. Includes pacquet, an experimental port of the CLI
+  written in Rust.

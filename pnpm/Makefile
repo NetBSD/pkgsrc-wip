@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pnpm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iquiw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pnpm.io/
 COMMENT=	Fast, disk space efficient package manager
 LICENSE=	mit
