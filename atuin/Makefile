@@ -10,11 +10,11 @@ HOMEPAGE=	https://atuin.sh/
 COMMENT=	Magical shell history (client and server)
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR}/${DISTNAME}
-MAKE_ENV+= CARGO_PROFILE_RELEASE_CODEGEN_UNITS=16
-MAKE_ENV+= CARGO_PROFILE_RELEASE_LTO=thin
+WRKSRC=		${WRKDIR}/${DISTNAME}
+MAKE_ENV+=	CARGO_PROFILE_RELEASE_CODEGEN_UNITS=16
+MAKE_ENV+=	CARGO_PROFILE_RELEASE_LTO=thin
 # luau0-src 0.22 uses std::numeric_limits without <limits>; libstdc++ 14 does not pull it in transitively
-MAKE_ENV+=      LUAU_CXXFLAGS="-include limits"
+MAKE_ENV+=	LUAU_CXXFLAGS="-include limits"
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
