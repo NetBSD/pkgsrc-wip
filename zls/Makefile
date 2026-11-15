@@ -7,7 +7,7 @@ GITHUB_PROJECT=	zls
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 COMMENT=	Language Server for zig
-MAINTAINER=	pkgsrc@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/zigtools/zls/
 LICENSE=	mit
 
