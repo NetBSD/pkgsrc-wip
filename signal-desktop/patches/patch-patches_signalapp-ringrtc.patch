@@ -1,0 +1,19 @@
+$NetBSD$
+
+* Imported from FreeBSD
+
+--- patches/signalapp-ringrtc.patch.orig	2025-03-16 15:22:38 UTC
++++ patches/signalapp-ringrtc.patch
+@@ -0,0 +1,12 @@
++diff --git a/scripts/fetch-prebuild.js b/scripts/fetch-prebuild.js
++index d547efcc4a57ba88e8055bbcf19ade1b276bc564..6079ff8e85356e2fc749c42a25e1329ad77a5d40 100644
++--- a/scripts/fetch-prebuild.js
+++++ b/scripts/fetch-prebuild.js
++@@ -42,6 +42,7 @@ const tmpFile = path.join(__dirname, 'unverified-prebuild.tmp');
++ const finalFile = path.join(__dirname, 'prebuild.tar.gz');
++ 
++ async function main() {
+++  return;
++   if (!HASH) {
++     console.log('(no checksum provided; assuming local build)');
++     process.exit(0);

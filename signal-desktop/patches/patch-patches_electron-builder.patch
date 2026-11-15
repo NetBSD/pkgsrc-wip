@@ -1,0 +1,20 @@
+$NetBSD$
+
+* Add Free- and NetBSD support
+
+--- patches/electron-builder.patch.orig	2025-03-16 10:58:43 UTC
++++ patches/electron-builder.patch
+@@ -0,0 +1,13 @@
++diff --git a/out/cli/install-app-deps.js b/out/cli/install-app-deps.js
++index d547efcc4a57ba88e8055bbcf19ade1b276bc564..6079ff8e85356e2fc749c42a25e1329ad77a5d40 100644
++--- a/out/cli/install-app-deps.js
+++++ b/out/cli/install-app-deps.js
++@@ -23,7 +23,7 @@ function configureInstallAppDepsCommand(yargs) {
++         "camel-case-expansion": false,
++     })
++         .option("platform", {
++-        choices: ["linux", "darwin", "win32"],
+++        choices: ["freebsd", "netbsd", "linux", "darwin", "win32"],
++         default: process.platform,
++         description: "The target platform",
++     })
