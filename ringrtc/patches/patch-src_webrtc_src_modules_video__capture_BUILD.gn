@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Disable video capture on BSDs
+
+--- src/webrtc/src/modules/video_capture/BUILD.gn.orig	2026-11-12 15:27:33.236908053 +0000
++++ src/webrtc/src/modules/video_capture/BUILD.gn
+@@ -80,7 +80,7 @@ if (!build_with_chromium || is_linux || 
+       "video_capture_options.h",
+     ]
+ 
+-    if (is_linux || is_chromeos) {
++    if ((is_linux || is_chromeos) && !is_bsd) {
+       sources += [
+         "linux/device_info_linux.cc",
+         "linux/device_info_v4l2.cc",

@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Fix build with newer gn
+
+--- src/webrtc/src/experiments/BUILD.gn.orig	2026-11-12 15:21:19.918696842 +0000
++++ src/webrtc/src/experiments/BUILD.gn
+@@ -22,8 +22,6 @@ action("registered_field_trials_header")
+ rtc_library("registered_field_trials") {
+   visibility = [ "*" ]
+   sources = get_target_outputs(":registered_field_trials_header")
+-  deps = [
+-    ":registered_field_trials_header",
+-    "//third_party/abseil-cpp/absl/strings:string_view",
+-  ]
++  public_deps = [ ":registered_field_trials_header" ]
++  deps = [ "//third_party/abseil-cpp/absl/strings:string_view" ]
+ }

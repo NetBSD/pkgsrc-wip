@@ -1,0 +1,21 @@
+$NetBSD$
+
+* Use local cargo packages
+
+--- src/rust/Cargo.toml.orig	2026-09-30 22:46:18.000000000 +0000
++++ src/rust/Cargo.toml
+@@ -70,7 +70,7 @@ sketches-ddsketch = { version = "0.4.0" 
+ # libsignal-client.
+ bincode = { version = "1.3.3" }
+ uuid = { version = "1.19.0", optional = true }
+-zkgroup = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.1" }
++zkgroup = { path = "@WRKDIR@/libsignal-@LIBSIGNAL_VER@/rust/zkgroup" }
+ 
+ # Optional, needed by the "electron" feature
+ neon = { version = "1.1.1", optional = true, default-features = false, features = ["napi-6"] }
+@@ -142,4 +142,4 @@ jni = { version = "0.22.4", default-feat
+ uuid = { version = "1.19.0" }
+ env_logger = { version = "0.11.8" }
+ rand = { version = "0.10.2", features = ["sys_rng", "chacha"] }
+-libsignal-core = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.1" }
++libsignal-core = { path = "@WRKDIR@/libsignal-@LIBSIGNAL_VER@/rust/core" }

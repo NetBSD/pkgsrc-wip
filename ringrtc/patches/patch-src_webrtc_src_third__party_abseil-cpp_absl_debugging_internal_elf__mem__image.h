@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2026-11-10 15:47:32.120000000 +0000
++++ src/webrtc/src/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h
+@@ -35,7 +35,7 @@
+ #if defined(__ELF__) && !defined(__OpenBSD__) && !defined(__QNX__) &&    \
+     !defined(__asmjs__) && !defined(__wasm__) && !defined(__HAIKU__) &&  \
+     !defined(__sun) && !defined(__VXWORKS__) && !defined(__hexagon__) && \
+-    !defined(__XTENSA__)
++    !defined(__XTENSA__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #define ABSL_HAVE_ELF_MEM_IMAGE 1
+ #endif
+ 

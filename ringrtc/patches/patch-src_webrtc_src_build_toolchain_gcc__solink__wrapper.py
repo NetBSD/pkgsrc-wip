@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/build/toolchain/gcc_solink_wrapper.py.orig	2026-11-10 15:46:15.550000000 +0000
++++ src/webrtc/src/build/toolchain/gcc_solink_wrapper.py
+@@ -39,7 +39,7 @@ def CollectDynSym(args):
+   """Replaces: nm --format=posix -g -D -p $sofile | cut -f1-2 -d' '"""
+   toc = ''
+   nm = subprocess.Popen(wrapper_utils.CommandToRun(
+-      [args.nm, '--format=posix', '-g', '-D', '-p', args.output]),
++      [args.nm, '-g', '-D', '-p', args.output]),
+                         stdout=subprocess.PIPE,
+                         bufsize=-1,
+                         universal_newlines=True)

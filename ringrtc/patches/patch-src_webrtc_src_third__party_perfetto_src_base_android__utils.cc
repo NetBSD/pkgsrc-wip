@@ -1,0 +1,34 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/third_party/perfetto/src/base/android_utils.cc.orig	2026-05-28 14:04:21.000000000 +0000
++++ src/webrtc/src/third_party/perfetto/src/base/android_utils.cc
+@@ -36,8 +36,11 @@
+ #include <unistd.h>
+ #endif
+ 
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
+-    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
++    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_OPENBSD) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_NETBSD)
+ #include <sys/sysinfo.h>
+ #endif
+ 
+@@ -103,8 +106,11 @@ SystemInfo GetSystemInfo() {
+   info.page_size = static_cast<uint32_t>(sysconf(_SC_PAGESIZE));
+   info.num_cpus = static_cast<uint32_t>(sysconf(_SC_NPROCESSORS_CONF));
+ 
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
+-    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
++    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_OPENBSD) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_NETBSD)
+   // Use the Linux-specific sysinfo() system call on Linux and Android.
+   // https://man7.org/linux/man-pages/man2/sysinfo.2.html
+   struct sysinfo sys_info;

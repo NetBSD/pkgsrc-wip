@@ -1,0 +1,76 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/build/toolchain/gcc_toolchain.gni.orig	2026-11-10 15:46:15.551000000 +0000
++++ src/webrtc/src/build/toolchain/gcc_toolchain.gni
+@@ -46,6 +46,13 @@ if (enable_resource_allowlist_generation
+       "enable_resource_allowlist_generation=true does not work for target_os=$target_os")
+ }
+ 
++declare_args() {
++  extra_cflags = ""
++  extra_cppflags = ""
++  extra_cxxflags = ""
++  extra_ldflags = ""
++}
++
+ # This template defines a toolchain for something that works like gcc
+ # (including clang).
+ #
+@@ -409,8 +416,13 @@ template("single_gcc_toolchain") {
+         command = "cmd /s /c \"\"$python_path\" $tool_wrapper_path delete-file {{output}} && $command\""
+       } else {
+         command = "rm -f {{output}} && $command"
+-        inputs =
+-            [ get_path_info(rebase_path(ar, ".", root_out_dir), "abspath") ]
++
++        # Add ar to inputs if it's not from $PATH. Some toolchains leave
++        # |ar| empty during toolchain setup, so guard get_path_info() here.
++        if (ar != "" && get_path_info(ar, "file") != ar) {
++          inputs =
++              [ get_path_info(rebase_path(ar, ".", root_out_dir), "abspath") ]
++        }
+       }
+ 
+       # Almost all targets build with //build/config/compiler:thin_archive which
+@@ -658,6 +670,11 @@ template("single_gcc_toolchain") {
+       # to link if not properly ordered or grouped.
+       link_command += "$start_group_flag @\"$rspfile\" $end_group_flag {{solibs}} {{libs}} $start_group_flag {{rlibs}} $end_group_flag"
+ 
++      # Redefine link_command on NetBSD: all ld flag in one group
++      if (is_netbsd) {
++        link_command = "$ld $start_group_flag {{ldflags}}${extra_ldflags} -o \"$main_outfile\" @\"$rspfile\" {{solibs}} {{libs}} {{rlibs}} $end_group_flag"
++      }
++
+       # Generate a map file to be used for binary size analysis.
+       # Map file adds ~10% to the link time on a z620.
+       # With target_os="android", libchrome.so.map.gz is ~20MB.
+@@ -1000,22 +1017,12 @@ template("gcc_toolchain") {
+ # actually just be doing a native compile.
+ template("clang_toolchain") {
+   gcc_toolchain(target_name) {
+-    _path = "$clang_base_path/bin"
+-    _is_path_absolute = get_path_info(_path, "abspath") == _path
+-
+-    # Preserve absolute paths for tools like distcc.
+-    if (_is_path_absolute && filter_include([ _path ], [ "//*" ]) == []) {
+-      prefix = _path
+-    } else {
+-      prefix = rebase_path(_path, root_build_dir)
+-    }
+-
+-    cc = "${prefix}/clang"
+-    cxx = "${prefix}/clang++"
++    cc = "cc"
++    cxx = "c++"
+     ld = cxx
+-    readelf = "${prefix}/llvm-readelf"
+-    ar = "${prefix}/llvm-ar"
+-    nm = "${prefix}/llvm-nm"
++    readelf = "readelf"
++    ar = "ar"
++    nm = "nm"
+ 
+     forward_variables_from(invoker, "*", [ "toolchain_args" ])
+ 

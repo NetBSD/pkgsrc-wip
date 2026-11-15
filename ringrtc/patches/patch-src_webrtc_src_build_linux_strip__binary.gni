@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/build/linux/strip_binary.gni.orig	2026-11-10 15:46:15.416000000 +0000
++++ src/webrtc/src/build/linux/strip_binary.gni
+@@ -21,8 +21,8 @@ template("strip_binary") {
+                            "testonly",
+                          ])
+   action("${target_name}") {
+-    llvm_strip_binary = "${clang_base_path}/bin/llvm-strip"
+-    llvm_objcopy_binary = "${clang_base_path}/bin/llvm-objcopy"
++    llvm_strip_binary = "@PREFIX@/bin/llvm-strip"
++    llvm_objcopy_binary = "@PREFIX@/bin/llvm-objcopy"
+     script = "//build/linux/strip_binary.py"
+ 
+     if (defined(invoker.stripped_binary_output)) {

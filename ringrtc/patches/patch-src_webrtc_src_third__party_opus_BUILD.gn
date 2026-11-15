@@ -1,0 +1,20 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/third_party/opus/BUILD.gn.orig	2026-11-10 15:50:33.000000000 +0000
++++ src/webrtc/src/third_party/opus/BUILD.gn
+@@ -20,10 +20,11 @@ config("opus_private_config") {
+     "OPUS_EXPORT=",
+     "ENABLE_HARDENING",
+ 
++    "VAR_ARRAYS",
+     # Prefer alloca() over variable length arrays which are often inefficient;
+     # the opus code will automatically handle this correctly per-platform.
+-    "USE_ALLOCA",
+-    "HAVE_ALLOCA_H",
++    #"USE_ALLOCA",
++    #"HAVE_ALLOCA_H",
+   ]
+ 
+   include_dirs = [

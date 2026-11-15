@@ -1,0 +1,62 @@
+$NetBSD$
+
+* Use local cargo packages
+
+--- Cargo.lock.orig	2026-11-11 13:56:53.356889163 +0000
++++ Cargo.lock
+@@ -2225,7 +2225,6 @@ dependencies = [
+ [[package]]
+ name = "libsignal-account-keys"
+ version = "0.1.0"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "argon2",
+  "derive_more",
+@@ -2251,7 +2250,6 @@ dependencies = [
+ [[package]]
+ name = "libsignal-core"
+ version = "0.1.0"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "curve25519-dalek",
+  "derive_more",
+@@ -2270,7 +2268,6 @@ dependencies = [
+ [[package]]
+ name = "libsignal-debug"
+ version = "0.99.1"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "cfg-if",
+ ]
+@@ -2677,7 +2674,6 @@ dependencies = [
+ [[package]]
+ name = "poksho"
+ version = "0.7.0"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "curve25519-dalek",
+  "hmac",
+@@ -3629,7 +3625,6 @@ checksum = "f8fadd59c855ef2080decdef8ff1
+ [[package]]
+ name = "signal-crypto"
+ version = "0.1.0"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "aes 0.9.2",
+  "cbc",
+@@ -5053,7 +5048,6 @@ dependencies = [
+ [[package]]
+ name = "zkcredential"
+ version = "0.1.0"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "cfg-if",
+  "curve25519-dalek",
+@@ -5071,7 +5065,6 @@ dependencies = [
+ [[package]]
+ name = "zkgroup"
+ version = "0.9.0"
+-source = "git+https://github.com/signalapp/libsignal?tag=v0.99.1#97801d22dcf9f5bf714f7b8fa3212cdc973ae1c8"
+ dependencies = [
+  "aes 0.9.2",
+  "aes-gcm-siv",

@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/testing/test.gni.orig	2026-11-10 15:47:29.000000000 +0000
++++ src/webrtc/src/testing/test.gni
+@@ -19,7 +19,7 @@ declare_args() {
+   # "location_tags.json", and so we don't want to try and upload the tags
+   # for their tests.
+   # And, some build configs may simply turn off generation altogether.
+-  tests_have_location_tags = generate_location_tags
++  tests_have_location_tags = false
+ 
+   # Build individual_fuzztest_wrapper if use_fuzztest_wrapper is set.
+   # Some projects doesn't have //base and cannot build

@@ -1,0 +1,15 @@
+$NetBSD$
+
+* Import from chromium
+
+--- src/webrtc/src/build/config/linux/BUILD.gn.orig	2026-11-10 15:46:15.343000000 +0000
++++ src/webrtc/src/build/config/linux/BUILD.gn
+@@ -41,7 +41,7 @@ config("runtime_library") {
+   }
+ 
+   if ((!is_chromeos || default_toolchain != "//build/toolchain/cros:target") &&
+-      (!use_custom_libcxx || current_cpu == "mipsel")) {
++      (!use_custom_libcxx || current_cpu == "mipsel") && !is_bsd) {
+     libs = [ "atomic" ]
+   }
+ }
