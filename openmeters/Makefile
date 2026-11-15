@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	openmeters-1.17.1
+DISTNAME=	openmeters-1.18.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=httpsworldview/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
