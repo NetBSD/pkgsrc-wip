@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	openbao-dist-v2.6.2
+DISTNAME=	openbao-dist-v2.7.2
 PKGNAME=	${DISTNAME:S,-dist-v,-,}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbao/openbao/releases/download/v${PKGVERSION_NOREV}}
