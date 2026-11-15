@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-xsdata-pydantic>=24.5:../../wip/py-xsdata-pydantic
 DEPENDS+=	${PYPKGPREFIX}-weasyprint>=63.0:../../print/py-weasyprint
 DEPENDS+=	${PYPKGPREFIX}-tenacity>=9.0:../../devel/py-tenacity
 DEPENDS+=	${PYPKGPREFIX}-polyfactory>=3.3.0:../../wip/py-polyfactory
-DEPENDS+=	${PYPKGPREFIX}-beartype>=0.22.9:../../wip/py-beartype
+DEPENDS+=	${PYPKGPREFIX}-beartype>=0.22.9:../../devel/py-beartype
 DEPENDS+=	${PYPKGPREFIX}-camel-converter>=5.1.0:../../wip/py-camel-converter
 DEPENDS+=	${PYPKGPREFIX}-xsdata>=26.1:../../wip/py-xsdata
 
