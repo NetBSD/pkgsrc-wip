@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rio-0.5.29
+DISTNAME=	rio-0.5.32
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raphamorim/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -64,31 +64,31 @@ pre-configure:
 	${SED} -i \
 	    -e 's|target_os = "freebsd"), feature = "vulkan")|target_os = "freebsd", target_os = "netbsd"), feature = "vulkan")|' \
 	    -e 's|Emscripten), feature = "gles")|Emscripten, target_os = "netbsd"), feature = "gles")|' \
-	    ${WRKDIR}/vendor/wgpu-30.0.1/build.rs
+	    ${WRKDIR}/vendor/wgpu-30.0.2/build.rs
 	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
-	    ${WRKDIR}/vendor/wgpu-30.0.1/.cargo-checksum.json
+	    ${WRKDIR}/vendor/wgpu-30.0.2/.cargo-checksum.json
 	# wgpu-core/build.rs: add NetBSD to windows_linux_android alias
 	${SED} -i \
 	    -e 's|target_os = "freebsd") }|target_os = "freebsd", target_os = "netbsd") }|' \
-	    ${WRKDIR}/vendor/wgpu-core-30.0.1/build.rs
+	    ${WRKDIR}/vendor/wgpu-core-30.0.2/build.rs
 	# wgpu-core/Cargo.toml: add NetBSD to target dep + activate wgpu-hal features directly
 	${SED} -i \
 	    -e "s|'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\"))'\.dependencies\.wgpu-core-deps|'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\", target_os = \"netbsd\"))'.dependencies.wgpu-core-deps|" \
 	    -e 's|vulkan = \["wgpu-core-deps-windows-linux-android/vulkan"\]|vulkan = ["wgpu-core-deps-windows-linux-android/vulkan", "wgpu-hal/vulkan"]|' \
-	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml
+	    ${WRKDIR}/vendor/wgpu-core-30.0.2/Cargo.toml
 	${AWK} '/"wgpu-core-deps-emscripten\/gles",$$/ { print; print "    \"wgpu-hal/gles\","; next } { print }' \
-	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml > \
-	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml.new
-	${MV} ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml.new \
-	    ${WRKDIR}/vendor/wgpu-core-30.0.1/Cargo.toml
+	    ${WRKDIR}/vendor/wgpu-core-30.0.2/Cargo.toml > \
+	    ${WRKDIR}/vendor/wgpu-core-30.0.2/Cargo.toml.new
+	${MV} ${WRKDIR}/vendor/wgpu-core-30.0.2/Cargo.toml.new \
+	    ${WRKDIR}/vendor/wgpu-core-30.0.2/Cargo.toml
 	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
-	    ${WRKDIR}/vendor/wgpu-core-30.0.1/.cargo-checksum.json
+	    ${WRKDIR}/vendor/wgpu-core-30.0.2/.cargo-checksum.json
 	# wgpu-core-deps-windows-linux-android/Cargo.toml: unconditional wgpu-hal dependency
 	${SED} -i \
 	    -e "s|\[target\.'cfg(any(windows, target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\"))'\.dependencies\.wgpu-hal\]|[dependencies.wgpu-hal]|" \
-	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-30.0.1/Cargo.toml
+	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-30.0.2/Cargo.toml
 	${SED} -i 's/"files":{[^}]*}/"files":{}/' \
-	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-30.0.1/.cargo-checksum.json
+	    ${WRKDIR}/vendor/wgpu-core-deps-windows-linux-android-30.0.2/.cargo-checksum.json
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rio \
