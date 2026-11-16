@@ -30,7 +30,7 @@ USE_TOOLS+=		gmake
 TOOL_DEPENDS+=		ringrtc>=${RINGRTC_VER}:../../wip/ringrtc
 TOOL_DEPENDS+=		libsignal-node>=${LIBSIGNAL_NODE_VER}:../../wip/libsignal-node
 TOOL_DEPENDS+=		node-sqlcipher>=${SQLCIPHER_VER}:../../wip/node-sqlcipher
-TOOL_DEPENDS+=		pnpm-[0-9]*:../../wip/pnpm
+TOOL_DEPENDS+=		pnpm>=0:../../devel/pnpm
 
 .include "../../wip/electron${ELECTRON_MAJOR_VER}/electron.mk"
 
