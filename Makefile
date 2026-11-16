@@ -933,7 +933,6 @@ SUBDIR+=	expiretable
 SUBDIR+=	exult-snapshot
 SUBDIR+=	ez-pine-gpg
 SUBDIR+=	ezbounce
-SUBDIR+=	ezquake
 SUBDIR+=	f1spirit
 SUBDIR+=	f2bgl
 SUBDIR+=	f3
