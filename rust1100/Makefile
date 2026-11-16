@@ -464,11 +464,6 @@ SUBST_VARS.prefix=	PREFIX
 # updating and verification.
 #
 
-CKSUM_CRATES+=	vendor/crossbeam-utils-0.8.20
-CKSUM_CRATES+=	vendor/crossbeam-utils-0.8.21
-CKSUMS+=	fc1baa4489d9842988bacaaa545a7d7d0e2f8b93cfa0b7d1ae31f21256e4cb0a
-CKSUMS+=	8bbab76be05d066794a096725ec70fd563142e28966da34ef93f09b5bedda3ca
-
 CKSUM_CRATES+=	vendor/openssl-src-300.5.0+3.5.0
 CKSUMS+=	16c0b9fa70475cfb50ac21ad4ce049b494c45b3270fed386013785a28abb8d0a
 CKSUMS+=	e2817c457afa7efc0f2ca62ce9dab5254eb5ddd9a5fd9e75bba2789be92c7b14
