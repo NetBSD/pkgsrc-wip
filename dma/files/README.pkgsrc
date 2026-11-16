@@ -1,0 +1,23 @@
+Getting started
+===============
+
+Assuming you're using mailwrapper(8) or mail/mailwrapper from pkgsrc :
+
+- Edit the mailer.conf your system uses.  See @PREFIX@/share/examples/dma/mailer.conf
+- You may also want to set up a crontab entry to retry messages from the queue in case of network drops etc
+
+E.g.
+
+*/5 * * * * @PREFIX@/libexec/dma -q
+
+
+===========================================================================
+N.B.
+
+The dma executable has moved from @PREFIX@/sbin/dma to
+@PREFIX@/libexec/dma.
+
+When upgrading, update any existing mailwrapper configuration
+(mailer.conf), scripts, crontabs or other references that use the old path.
+Mail submission through the old path will fail until these are updated.
+===========================================================================

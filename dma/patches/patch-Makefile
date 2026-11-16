@@ -1,6 +1,7 @@
 $NetBSD$
 
 Stage executables without privileged ownership or modes.
+Install dma into libexec alongside dma-mbox-create (rather than sbin).
 The package declares their final permissions using SPECIAL_PERMS.
 
 --- Makefile.orig
@@ -8,5 +9,5 @@ The package declares their final permissions using SPECIAL_PERMS.
 @@ -55,2 +55,2 @@
 -	${INSTALL} -m 2755 -o root -g mail dma ${DESTDIR}${SBIN}
 -	${INSTALL} -m 4754 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
-+	${INSTALL} -m 0555 dma ${DESTDIR}${SBIN}
++	${INSTALL} -m 0555 dma ${DESTDIR}${LIBEXEC}
 +	${INSTALL} -m 0555 dma-mbox-create ${DESTDIR}${LIBEXEC}

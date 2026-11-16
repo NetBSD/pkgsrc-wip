@@ -1,6 +1,8 @@
 @comment $NetBSD$
+libexec/dma
 libexec/dma-mbox-create
 man/man8/dma.8
-sbin/dma
+share/doc/dma/README.pkgsrc
 share/examples/dma/auth.conf
 share/examples/dma/dma.conf
+share/examples/dma/mailer.conf
