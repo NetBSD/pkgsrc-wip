@@ -1,0 +1,12 @@
+mail/dma: Add dma version 0.14
+
+dma is a small Mail Transport Agent for local mail submission and
+outbound delivery. It supports local delivery, SMTP authentication,
+TLS and certificate verification, without listening for incoming SMTP
+connections.
+
+Packaged in wip; updated to 0.14 by Philip Dodd.
+
+Packaging supports unprivileged staging, with privileged executable
+permissions applied during installation. The spool directory permits
+submission through the setgid dma executable.
