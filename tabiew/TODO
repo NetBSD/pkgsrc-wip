@@ -109,3 +109,6 @@ For more information about an error, try `rustc --explain E0432`.
 error: could not compile `iceoryx2-pal-posix` (lib) due to 4 previous errors
 warning: build failed, waiting for other jobs to finish...
 
+
+https://github.com/shshemi/tabiew/issues/135
+https://github.com/eclipse-iceoryx/iceoryx2/issues/2206
