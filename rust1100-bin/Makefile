@@ -165,14 +165,14 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-#.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	mipsel-unknown-netbsd
-#DN:=		${DISTNAME}${NBSUF}
-#EXTRACT_SUFX=	.tar.xz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	${NETBSD_REPO}
-#.endif
+.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	mipsel-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-riscv64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	riscv64gc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
