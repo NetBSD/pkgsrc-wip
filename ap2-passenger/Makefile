@@ -19,7 +19,7 @@ BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE_EXTENDED=1
 INSTALLATION_DIRS+=	lib/httpd
 
 do-build:
-	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} apache2
+	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} apache2
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/buildout/apache2/mod_passenger.so \

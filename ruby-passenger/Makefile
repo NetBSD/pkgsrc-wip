@@ -14,11 +14,11 @@ INSTALL_ENV+=		NATIVE_PACKAGING_METHOD=pkgsrc
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 do-build:
-	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} \
+	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} \
 		agent nginx nginx:as_dynamic_module native_support
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RAKE} fakeroot
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} fakeroot
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-config.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-memory-stats.8 \
