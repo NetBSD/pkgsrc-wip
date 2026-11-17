@@ -1716,5 +1716,6 @@ Size (zerovec-derive-0.11.3.crate) = 22115 bytes
 BLAKE2s (zmij-1.0.21.crate) = a2d1e7214230c8f4e8c946d28215765c131da3aac89f1001daf534335307648e
 SHA512 (zmij-1.0.21.crate) = a488f11ec8721ddfe42e61d028a128818551de8fccd69d7824504e4ae2efccdc38f716fa5a10ef4de07a8a087e75e819c4a1e0790817e8539b5db697bde14585
 Size (zmij-1.0.21.crate) = 26665 bytes
+SHA1 (patch-.._boring__signal_boring__sys_build_main.rs) = b390e2d57ac49e50d11a38470c369415db1e23a0
 SHA1 (patch-.._vendor_linkme-impl-0.3.36_src_declaration.rs) = 6a54171c1584706dc74a95cdbe91946756e9c531
-SHA1 (patch-Cargo.toml) = 57c8afe307c7e217ed6218d43474e82ebb4766e8
+SHA1 (patch-Cargo.toml) = a56eb3ee76be104a726c57206c84494d22b566f6

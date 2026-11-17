@@ -11,9 +11,9 @@ $NetBSD$
 -boring-signal = { git = "https://github.com/signalapp/boring", tag = "signal-v5.2.0", package = "boring", default-features = false }
 -spqr = { git = "https://github.com/signalapp/SparsePostQuantumRatchet.git", tag = "v1.6.0" }
 -tokio-boring-signal = { git = "https://github.com/signalapp/boring", tag = "signal-v5.2.0", package = "tokio-boring" }
-+boring-signal = { path = "../boring-signal-v@BORING_SIGNAL_VER@/boring", package = "boring", default-features = false }
++boring-signal = { path = "../boring-signal/boring", package = "boring", default-features = false }
 +spqr = { path = "../SparsePostQuantumRatchet-@SPQR_VER@" }
-+tokio-boring-signal = { path = "../boring-signal-v@BORING_SIGNAL_VER@/tokio-boring", package = "tokio-boring" }
++tokio-boring-signal = { path = "../boring-signal/tokio-boring", package = "tokio-boring" }
  
  aes = "0.9.1"
  aes-gcm-siv = "0.12.0"
@@ -23,8 +23,8 @@ $NetBSD$
  
 -boring = { git = 'https://github.com/signalapp/boring', tag = "signal-v5.2.0" }
 -boring-sys = { git = 'https://github.com/signalapp/boring', tag = "signal-v5.2.0" }
-+boring = { path = "../boring-signal-v@BORING_SIGNAL_VER@/boring" }
-+boring-sys = { path = "../boring-signal-v@BORING_SIGNAL_VER@/boring-sys" }
++boring = { path = "../boring-signal/boring" }
++boring-sys = { path = "../boring-signal/boring-sys" }
  
  [profile.dev.package.argon2]
  opt-level = 2 # libsignal-account-keys unit tests are too slow with an unoptimized argon2

@@ -22,20 +22,23 @@ HOMEPAGE=		https://github.com/signalapp/node-sqlcipher/
 COMMENT=		APIs used by the official Signal clients and servers
 LICENSE=		gnu-agpl-v3
 
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		clang-[0-9]*:../../lang/clang
 USE_LANGUAGES=		c c++
 
 SUBST_CLASSES+=		gh
 SUBST_STAGE.gh=		pre-configure
 SUBST_MESSAGE.gh=	Set github crates local pathes
 SUBST_FILES.gh+=	Cargo.toml
-SUBST_VARS.gh+=		BORING_SIGNAL_VER SPQR_VER
+SUBST_VARS.gh+=		SPQR_VER
 
 INSTALLATION_DIRS+=	lib
 
 post-extract:
-	${RMDIR} ${WRKDIR}/boring-signal-v${BORING_SIGNAL_VER}/boring-sys/deps/boringssl
+	${MV} ${WRKDIR}/boring-signal-v${BORING_SIGNAL_VER} ${WRKDIR}/boring-signal
+	${RMDIR} ${WRKDIR}/boring-signal/boring-sys/deps/boringssl
 	${MV} ${WRKDIR}/boringssl-${BORING_HASH} \
-		${WRKDIR}/boring-signal-v${BORING_SIGNAL_VER}/boring-sys/deps/boringssl
+		${WRKDIR}/boring-signal/boring-sys/deps/boringssl
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/target/release/libsignal_node.so \
@@ -44,8 +47,8 @@ do-install:
 
 .include "cargo-depends.mk"
 
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 CARGO_ARGS+=	-p libsignal-node
 CARGO_ARGS+=	--features log/release_max_level_info
-
 .include "../../mk/bsd.pkg.mk"
