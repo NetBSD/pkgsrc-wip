@@ -1,1 +1,4 @@
-A simple HTTP status code/name/description library for Python.
+status is a very simple python library which provides human
+understandable HTTP status codes and improves readability of your
+code. You don't have to use those ugly HTTP status numbers, but
+use easily understandable status names.

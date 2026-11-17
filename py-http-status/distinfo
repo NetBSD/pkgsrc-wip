@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (http_status-1.0.0.tar.gz) = 541b3747641bb6a4927c982847c39667b956ecf141f014fc9ff3fb07c8f274bb
-SHA512 (http_status-1.0.0.tar.gz) = 1e83f47f511cc60cf6f27098c2cbe4547d8869e2c76bdb90599f0945795178773e77a83dd385a8fa29c88b9d04b4b55d8ba6111c739fa91f1d2f6a8460c64889
-Size (http_status-1.0.0.tar.gz) = 13312 bytes
+BLAKE2s (python-status-1.0.1.tar.gz) = 50af061860f804ddf0c10e5f5ec10669c0027ee731cee3d9ef887026071f7454
+SHA512 (python-status-1.0.1.tar.gz) = 9bd23b46caaf5cec1bafd38310c6e0b326e29b5f3f3889ab81037c45cae7b43534056d917eaa7f30e190b794b908707dfc7aad871bb264f821a6b622f83a80e8
+Size (python-status-1.0.1.tar.gz) = 3811 bytes
