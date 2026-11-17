@@ -16,6 +16,7 @@ HOMEPAGE=		https://github.com/signalapp/node-sqlcipher/
 COMMENT=		Node.js addon wrapping sqlcipher and FTS5 segmenting APIs
 LICENSE=		gnu-agpl-v3
 
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 CARGO_WRKSRC=		${WRKSRC}/deps/extension
 
@@ -72,5 +73,6 @@ do-install:
 
 BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
