@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/zinoargus
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/zinoargus/__init__.py
+${PYSITELIB}/zinoargus/__init__.pyc
+${PYSITELIB}/zinoargus/__init__.pyo
+${PYSITELIB}/zinoargus/config/__init__.py
+${PYSITELIB}/zinoargus/config/__init__.pyc
+${PYSITELIB}/zinoargus/config/__init__.pyo
+${PYSITELIB}/zinoargus/config/models.py
+${PYSITELIB}/zinoargus/config/models.pyc
+${PYSITELIB}/zinoargus/config/models.pyo
+${PYSITELIB}/zinoargus/failover.py
+${PYSITELIB}/zinoargus/failover.pyc
+${PYSITELIB}/zinoargus/failover.pyo
+${PYSITELIB}/zinoargus/version.py
+${PYSITELIB}/zinoargus/version.pyc
+${PYSITELIB}/zinoargus/version.pyo
+${PYSITELIB}/zinoargus/zping.py
+${PYSITELIB}/zinoargus/zping.pyc
+${PYSITELIB}/zinoargus/zping.pyo
