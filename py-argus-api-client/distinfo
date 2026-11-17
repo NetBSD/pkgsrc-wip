@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (argus-api-client-0.8.0.tar.gz) = b38f8cb8dfa9ad644123c1bd6e7320459a545b481e91815c615d5ed68ce737ba
+SHA512 (argus-api-client-0.8.0.tar.gz) = 870dfedc53c6114e519a2093c183eaafda48e8b54264aec2665a36fb9fa5a50349f8b6dc8e4a62284f2aa5ab9e71860922f5b1f7f3e0cfc6d3d2ca0967c370f8
+Size (argus-api-client-0.8.0.tar.gz) = 25538 bytes
