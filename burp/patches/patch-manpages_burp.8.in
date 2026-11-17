@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use PKG_SYSCONFIGDIR
+
 --- manpages/burp.8.in.orig	2026-07-21 13:09:21.747319462 +0000
 +++ manpages/burp.8.in
 @@ -17,7 +17,7 @@ BackUp and Restore Program.

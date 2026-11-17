@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use PKG_SYSCONFIGDIR
+
 --- manpages/bedup.8.in.orig	2026-07-21 13:07:33.745245559 +0000
 +++ manpages/bedup.8.in
 @@ -14,7 +14,7 @@ A file deduplication program with additi

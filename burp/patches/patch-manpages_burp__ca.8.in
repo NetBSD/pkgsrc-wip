@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use PKG_SYSCONFIGDIR
+
 --- manpages/burp_ca.8.in.orig	2026-07-21 13:10:59.718331464 +0000
 +++ manpages/burp_ca.8.in
 @@ -38,10 +38,10 @@ revoke certificate with serial number

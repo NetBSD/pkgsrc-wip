@@ -1,5 +1,8 @@
 $NetBSD$
 
+Removes the useless and unsupported '-v' option to mv(1)
+PR opened at https://github.com/grke/burp/pull/953
+
 --- Makefile.am.orig	2026-07-20 14:50:45.132486980 +0000
 +++ Makefile.am
 @@ -388,7 +388,7 @@ clean-local-check:
