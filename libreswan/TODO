@@ -4,3 +4,6 @@
 
   Libreswan builds on Fedora, Debian, Alpine (they each have their own
   packaing quirks), FreeBSD, NetBSD, OpenBSD.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2026-110339, CVE-2026-115846
