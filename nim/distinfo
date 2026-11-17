@@ -36,5 +36,4 @@ Size (status-im-nim-http-utils-f142cb2e8bd812dd002a6493b6082827bb248592.tar.gz) 
 BLAKE2s (status-im-nim-stew-83eb1157963b7f49351dbdd858355fa990bbe23c.tar.gz) = d6a444a3aa95970aa53cf5ebabf48ebd19130a7b60cc53b821779192f0781086
 SHA512 (status-im-nim-stew-83eb1157963b7f49351dbdd858355fa990bbe23c.tar.gz) = b2453e69ce22ddaa145c648fd4f3298cc2535a2f45a55f8917a74e30368aa6a20126fe12abd18b44cc2da8955ad1ddc279b456365b7ab9530ebe4975ac2353ca
 Size (status-im-nim-stew-83eb1157963b7f49351dbdd858355fa990bbe23c.tar.gz) = 122652 bytes
-SHA1 (patch-dist_nimble_src_nimblepkg_downloadnim.nim) = 499197b81265ecf16d4c6baeca54673aead052c6
 SHA1 (patch-dist_nimble_vendor_chronos_chronos_sendfile.nim) = da30276501e0521056267c28f35e14949f5a2f96
