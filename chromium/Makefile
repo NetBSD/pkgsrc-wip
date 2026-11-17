@@ -26,7 +26,7 @@ GITHUB_SUBMODULES+=		microsoft TypeScript v7.0.2 typescript
 
 # crubit
 # From ${WRKSRC}/tools/rust/update_rust.py:
-CRUBIT_REVISION=		20dc640430bd60ff2f7f8dbf69c311c5f807adde
+CRUBIT_REVISION=		dcf92a1baf2c8a6561ed0361502cfec20e2f65f5
 GITHUB_SUBMODULES+=		google crubit ${CRUBIT_REVISION} crubit
 CARGO_WRKSRC=			${WRKSRC}/crubit
 
