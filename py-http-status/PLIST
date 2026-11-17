@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/http_status/__init__.py
+${PYSITELIB}/http_status/__init__.pyc
+${PYSITELIB}/http_status/__init__.pyo
+${PYSITELIB}/http_status/six.py
+${PYSITELIB}/http_status/six.pyc
+${PYSITELIB}/http_status/six.pyo
+${PYSITELIB}/http_status/test_http_status.py
+${PYSITELIB}/http_status/test_http_status.pyc
+${PYSITELIB}/http_status/test_http_status.pyo
