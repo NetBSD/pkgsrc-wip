@@ -8,6 +8,10 @@ COMMENT=	C language family frontend for LLVM
 
 USE_TOOLS+=	perl:run
 
+# Install clang python bindings
+CMAKE_CONFIGURE_ARGS+=	-DCLANG_PYTHON_BINDINGS_VERSIONS=${PYVERSSUFFIX}
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+
 # Certain header files are generated, and can only be generated
 # if llvm has support for the target.
 PLIST_VARS+=	RISCV
