@@ -1,0 +1,153 @@
+Update to 2.12.6 (the last version with the monitoring module still included).
+
+Import icinga-php-library (0.14.2) and icinga-php-thirdparty (0.12.1).
+
+Icinga Web 2 Changelog:
+
+2.9.0
+Custom variable protection and blacklists can be circumvented GHSA-2xv9-886q-p7xx
+Possible path traversal by use of the doc module GHSA-cmgc-h4cx-3v43
+Authorization enhancements #4306
+Audit View #4336
+Highlight modules with permissions set inside a role #4241
+Support PHP 8 #4289
+Raise minimum required PHP version to 7.3 #4397
+Implement a "remember me" feature #2495
+Add datetime picker widget #4354
+Expire Option for Comments #3447
+Custom defaults for downtime end, comment and duration #4364
+
+2.9.1
+Nested custom variables are flattened #4439
+Disable login orb animation and all orbs for themes #4468
+SVG chart library doesn't process input as UTF-8 #4462
+RememberMe not working with only PostgreSQL #4441
+RememberMe compatibility with php version 5.6+ #4472
+RememberMe fails after running the wizard for grants #4434
+Datetimepicker not usable by keyboard #4442
+Close the datepicker automatically #4461
+Paragraphs in Acknowledge/Downtime not possible #4443
+
+2.9.2
+Upstream lists the same changes as for 2.9.1
+
+2.9.3
+Stay Logged In - Unknown cipher algorithm #4493
+Missing fileinfo php extension on SLES/OpenSUSE 15+ #4503
+If appropriate, set the API parameter all_services for schedule-downtime #4501
+
+2.9.4
+Config/Preferences not accessible without config.ini #4504
+"My Account" broken after Upgrade from 2.8.2 to 2.9.3 #4512
+Proposal for new Feature make comments collapsible #4515
+new line character is being removed in the plugin output #4522
+announcements request clears focus #4543
+js: Fix regression for loading dependent modules for sub-containers #4533
+
+2.9.5
+Some detail views of Icinga Director and other modules are broken with Web 2.9.4 #4598
+Error on skipping LDAP Discovery #4603
+
+2.9.6
+Path traversal in static library file requests for unauthenticated users GHSA-5p3f-rh28-8frw
+SSH resources allow arbitrary code execution for authenticated users GHSA-v9mv-h52f-7g63
+Unwanted disclosure of hosts and related data, linked to decommissioned services GHSA-qcmg-vr56-x9wf
+
+2.10.0
+Theme support
+CustomVarNames should not be converted to lowercase #4639
+Display the Director Caption of a Custom Variable #3479
+Enhance PDF export #4685
+Image not found when creating PDF view of objects #4674
+
+2.10.1
+Clicking anywhere on a list item in the dashboard now opens the primary link again, instead of nothing #4710
+The Check Now and Remove Acknowledgement quick actions in an object's detail header are now working again #4711
+Clicking on the big number in the tactical overview if there are UNKNOWN services, shows UNKNOWN services now #4714
+The contrast of text in the sidebar, while in light mode, has been increased #4720
+A theme without mode support, which is set globally, now also prevents users from configuring the mode #4723
+
+2.10.2
+There seems to be no 2.10.2 release
+
+2.10.3
+This release mainly ensures compatibility with icinga-php-library v0.9.0 and Icinga DB Web 1.0.0. Two fixes regarding the theme mode support are also included (#4744 and #4835)
+
+2.11.0
+Support for PHP 8.1 #4609
+Redesign User Menu #4651
+&showFullscreen suppresses announcements #4596
+Navigation item filter * not working #4772
+Objects with a * in the name are not found #4682
+Theme mode switch disabled on theme with mode support #4744
+User preferences in INI files not supported anymore #4765
+mysql: use of utf8 vs utfmb4 #4680
+Remove Vagrant file and its assets #4762
+
+2.11.1
+History views didn't work correctly or showed invalid time and dates. (#4853)
+
+2.11.2
+Performance improvements and general fixes
+
+2.11.3
+Open Redirects for logged in users #4945
+SSH Resource Configuration form XSS Bug #4947
+Dashlets allow the user to run Javascript code #4959
+Role member suggestion endpoint is reachable for unauthorized users #4961
+Browser print dialog result broken #4957
+Shared navigation items are not accessible #4953
+While using dropdown filter menu it gets closed automatically due to autorefresh #4942
+
+2.11.4
+Add/Edit dashlet not possible #4970
+Custom library path + custom library, without slash in its name, results in exception #4971
+Reflected XSS vulnerability in User Backends config page #4979
+The location of schema files has changed.
+
+2.12.1
+Support for PHP 8.3 #5136
+Login Redirect Loop #5133
+UI database migration not fully compatible with PostgreSQL #5129
+Missing styles when logging out and in while CSP is enabled #5126
+
+2.12.2
+Sort by name of roles does not work properly #4789
+Settings menu flyout closes too fast / easy #5196
+CSP header is missing the script-src policy #5180
+Broken event overview due to IntlDateFormatter #5172
+Downtimes, which were started and canceled, are missing in the history #5176
+Usage of IcingaWeb2 api command returns 404, but is successful #5183
+Allow fontawesome icons as menu items #5205
+Error while opening a navigation root item #5177
+Dashlets twice in dashboard & not deletable #5203
+PluginOutputRenderer gets called twice #5271
+Graphs disappear after form controls are used #4996
+Make subgroups of custom variables fully collapsible #5256
+
+2.12.3
+XSS in embedded content CVE-2025-27405
+DOM-based XSS CVE-2025-27404
+Open redirect on login page CVE-2025-30164
+Reflected XSS CVE-2025-27609
+Login against Postgres DB is case-sensitive #5223
+Role list has no functioning quick search #5300
+After clicking on Check now, the page does not refresh itself #5293
+Service States display wrong since update to 2.12.2 #5290
+
+2.12.4
+Database login broken after upgrade #5343
+
+2.12.5
+PHP 8.4 Support
+External URLs set up as dashlets are not embedded the same as navigation items #5346
+Users who are not allowed to change the theme, cannot change the theme mode either #5385
+Improved compatibility with several SSO authentication providers #5000, #5227
+Filtering for older-than events with relative time does not work #5263
+Empty values are NULL in CSV exports #5350
+New environment variable ICINGAWEB_ENVIRONMENT
+
+2.12.6
+Search box shows many magnifying glasses for some community themes #5395
+Authentication hooks are not called with external backends #5415
+Improve Minimal layout #5386
