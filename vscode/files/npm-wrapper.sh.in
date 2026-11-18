@@ -17,9 +17,9 @@ if [ "$1" = "pack" ]; then
     done
 
     case "${spec}" in
-    @github/copilot-linux-%%ELECTRON_ARCH%%@%%COPILOT_CLI_VERSION%%)
-        tgz="%%WRKSRC%%/copilot-linux-%%ELECTRON_ARCH%%-%%COPILOT_CLI_VERSION%%.tgz"
-        ;;
+#    @github/copilot-linux-%%ELECTRON_ARCH%%@%%COPILOT_CLI_VERSION%%)
+#        tgz="%%WRKSRC%%/copilot-linux-%%ELECTRON_ARCH%%-%%COPILOT_CLI_VERSION%%.tgz"
+#        ;;
     *)
         echo "npm-wrapper: Error: no local tarball found for ${spec}." >&2
         exit 1

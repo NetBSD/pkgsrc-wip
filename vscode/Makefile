@@ -1,22 +1,15 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.145.1
+DISTNAME=		vscode-1.146.0
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
-SOURCE_COMMIT_HASH=	2c33b50b16c472efe58357d1d2a8a5414bc23fbf
+SOURCE_COMMIT_HASH=	69047191fc427f2f92828279aae1d90d8eeda7ab
 
 NODE_MODULES=		vscode-node_modules-${PKGVERSION_NOREV}.tar.gz
 MASTER_SITES+=		https://distfiles.borderland.hu/
 DISTFILES+=		${NODE_MODULES}
 DISTFILES+=		${DEFAULT_DISTFILES}
-
-# os-proxy-resolver
-GITHUB_SUBMODULES+=	microsoft os-proxy-resolver v0.4.0 os-proxy-resolver
-CARGO_WRKSRC=		${WRKSRC}/os-proxy-resolver/npm/native
-.include "cargo-depends.mk"
-
-COPILOT_CLI_VERSION=	1.0.73
 
 MAINTAINER=		kikadf@NetBSD.org
 HOMEPAGE=		https://code.visualstudio.com/
@@ -24,7 +17,7 @@ COMMENT=		The Open Source build of Visual Studio Code (vscode) editor
 LICENSE=		mit
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		zip gmake pkg-config pax bash tar patch
+USE_TOOLS+=		zip gmake pkg-config pax bash
 
 USE_CXX_FEATURES+=	c++20
 
@@ -39,18 +32,14 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
 SUBST_MESSAGE.vars=	Fixing variables
-SUBST_FILES.vars+=	node_modules/@vscode/os-proxy-resolver-pkgsrc-x64/package.json
 SUBST_FILES.vars+=	src/vs/platform/native/electron-main/nativeHostMainService.ts
 SUBST_FILES.vars+=	code-oss.sh
-SUBST_VARS.vars+=	PREFIX OPSYS LOWER_OPSYS ELECTRON_ARCH
+SUBST_VARS.vars+=	PREFIX #OPSYS LOWER_OPSYS ELECTRON_ARCH
 
 SUBST_CLASSES+=		npm
 SUBST_STAGE.npm=	pre-configure
 SUBST_MESSAGE.npm=	Prepare npm wrapper script
 SUBST_FILES.npm+=	npm-wrapper.sh
-SUBST_SED.npm+=		-e 's,%%COPILOT_CLI_VERSION%%,${COPILOT_CLI_VERSION},g'
-SUBST_SED.npm+=		-e 's,%%WRKSRC%%,${WRKSRC},g'
-SUBST_SED.npm+=		-e 's,%%ELECTRON_ARCH%%,${ELECTRON_ARCH},g'
 SUBST_SED.npm+=		-e 's,%%NPM_REAL%%,${PREFIX}/bin/npm,g'
 
 SUBST_CLASSES+=		res
@@ -76,11 +65,6 @@ REPLACE_BASH+=		node_modules/jschardet/scripts/show-size-changes.sh
 REPLACE_BASH+=		node_modules/jschardet/scripts/run-workflow.sh
 
 REPLACE_NODEJS=		extensions/copilot/node_modules/@anthropic-ai/sdk/bin/cli
-REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/app.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/index.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/napi-oop-runtime/node_modules/napi-oop-runtime/dist/codegen-cli.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/npm-loader.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot-netbsd-x64/webview/node_modules/@webviewjs/webview/cli/index.mjs
 REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot/npm-loader.js
 REPLACE_NODEJS+=	extensions/copilot/node_modules/@grpc/proto-loader/build/bin/proto-loader-gen-types.js
 REPLACE_NODEJS+=	extensions/copilot/node_modules/acorn/bin/acorn
@@ -121,19 +105,51 @@ ELECTRON_ZIP=		electron-v${ELECTRON_VER}-linux-${ELECTRON_ARCH}.zip
 RUN_ZIP_HASH=		sha256 -q ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH}/${ELECTRON_ZIP}
 RUN_NODEJS_VER=		node --version
 NODEJS_VER=		${RUN_NODEJS_VER:sh:C/v//}
-COPILOT_DIR=		${WRKSRC}/extensions/copilot/node_modules/@github/copilot-${LOWER_OPSYS}-${ELECTRON_ARCH}
-COPILOT_SDK_DIR=	${WRKSRC}/node_modules/@github/copilot-sdk-linux-${ELECTRON_ARCH}
-OS_PROXY_RESOLV_DIR_L=	node_modules/@vscode/os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu
-OS_PROXY_RESOLV_DIR=	node_modules/@vscode/os-proxy-resolver-pkgsrc-${ELECTRON_ARCH}
 RIPGREP_PATHES=		node_modules/@vscode/ripgrep/bin
 RIPGREP_PATHES+=	node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 RIPGREP_PATHES+=	build/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 RIPGREP_PATHES+=	remote/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
-RIPGREP_PATHES+=	${OS_PROXY_RESOLV_DIR}/ripgrep/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
-NPM_FLAGS=		--offline --ignore-scripts --no-audit --no-fund --no-update-notifier
-NPM_FLAGS+=		--cache ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}
+PNPM_ROOTS=		. build remote extensions extensions/copilot
+PNPM_ENV=		pnpm_config_store_dir=${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}/store
+PNPM_ENV+=		pnpm_config_minimum_release_age=0
 
 NOT_PAX_MPROTECT_SAFE+=	lib/vscode/code-oss
+
+.if defined(VSCODE_MAINTAINER)
+# For create pnpm store tarball
+USE_TOOLS+=		bsdtar
+
+MPNPM_FLAGS=		--pm-on-fail=ignore --ignore-scripts
+MPNPM_FLAGS+=		--store-dir=${WRKDIR}/vscode-tmp/vscode-node_modules-${PKGVERSION_NOREV}/store
+MPNPM_OVERLAY=		package.json pnpm-lock.yaml
+MPNPM_OVERLAY+=		remote/package.json remote/pnpm-lock.yaml
+
+.PHONY: cache-tarball
+cache-tarball:
+	${MKDIR} ${WRKDIR}/vscode-tmp/vscode-node_modules-${PKGVERSION_NOREV}/store \
+		${WRKDIR}/vscode-tmp/vscode-node_modules-${PKGVERSION_NOREV}/overlay/remote
+	${TOOLS_PATH.bsdtar} -zxf ${DISTDIR}/${DISTNAME}.tar.gz \
+		--strip-components=1 -C ${WRKDIR}/vscode-tmp
+	# node-ovsx-sign
+	cd ${WRKDIR}/vscode-tmp && pnpm ${MPNPM_FLAGS} add \
+		--save-prod --lockfile-only --workspace-root node-ovsx-sign
+	cd ${WRKDIR}/vscode-tmp/remote && pnpm ${MPNPM_FLAGS} add \
+		--save-prod --lockfile-only node-ovsx-sign
+.  for f in ${MPNPM_OVERLAY}
+	${CP} ${WRKDIR}/vscode-tmp/${f} \
+		${WRKDIR}/vscode-tmp/vscode-node_modules-${PKGVERSION_NOREV}/overlay/${f}
+.  endfor
+.  for r in ${PNPM_ROOTS}
+	cd ${WRKDIR}/vscode-tmp/${r} && \
+		printf 'supportedArchitectures:\n  os: [current]\n  cpu: [current]\n' \
+		>> pnpm-workspace.yaml && \
+		pnpm ${MPNPM_FLAGS} fetch
+.  endfor
+
+	cd ${WRKDIR}/vscode-tmp && \
+		${TOOLS_PATH.bsdtar} -czf ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}.tar.gz \
+			vscode-node_modules-${PKGVERSION_NOREV}
+.endif
 
 post-extract:
 	# Install scripts
@@ -141,43 +157,33 @@ post-extract:
 	${CP} ${FILESDIR}/npm-wrapper.sh.in ${WRKSRC}/npm-wrapper.sh
 	${CHMOD} +x ${WRKSRC}/npm-wrapper.sh
 
-	# Copy node modules to source tree
-	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV} && \
-		${FIND} . -type f -name "*.tgz" -print | pax -rw -pmp ${WRKSRC}
-
-	# Install node modules from the cache tarball
-	cd ${WRKSRC} && ${PATCH} < ${PATCHDIR}/extra-patch-node_ovsx_sign
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm install ${NPM_FLAGS}
-	for d in `node --input-type=module -e \
-	    "console.log(JSON.stringify((await import('${WRKSRC}/build/npm/dirs.ts')).dirs))" \
-	    | jq -r '.[]'`; do \
-		(cd ${WRKSRC}/$${d} && ${SETENV} ${MAKE_ENV} npm install ${NPM_FLAGS}) || exit 1; \
-	done
-
 	# Create moduleignore file
 	${CP} ${WRKSRC}/build/.moduleignore.linux \
 		${WRKSRC}/build/.moduleignore.${LOWER_OPSYS}
+
+	# Install node modules from the cache tarball
+	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}/overlay && \
+		pax -rw -pmp . ${WRKSRC}
+.for r in ${PNPM_ROOTS}
+	cd ${WRKSRC}/${r} && ${SETENV} ${MAKE_ENV} ${PNPM_ENV} \
+		pnpm install --offline --frozen-lockfile --ignore-scripts
+.endfor
 
 	# Copy electron.d.ts
 	${MKDIR} ${WRKSRC}/.build/typings && \
 		${CP} ${PREFIX}/lib/${ELECTRON}/gen/electron/tsc/typings/electron.d.ts \
 		${WRKSRC}/.build/typings
 
-	# Extract copilot: doesn't work on BSDs, but need for build
-	${MKDIR} ${COPILOT_DIR} && cd ${WRKSRC} && \
-		${TAR} -xzf copilot-linux-${ELECTRON_ARCH}-*.tgz \
-		--strip-components 1 -C ${COPILOT_DIR}
-	${MKDIR} ${COPILOT_SDK_DIR} && cd ${WRKSRC} && \
-		${TAR} -xzf copilot-sdk-linux-${ELECTRON_ARCH}-*.tgz \
-		--strip-components 1 -C ${COPILOT_SDK_DIR}
-
-	# Extract os-proxy-resolver
-	cd ${WRKSRC} && ${MKDIR} ${OS_PROXY_RESOLV_DIR} && \
-		${TAR} -xzf os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu-*.tgz \
-		--strip-components 1 -C ${OS_PROXY_RESOLV_DIR}
-	cd ${WRKSRC} && ${MKDIR} ${OS_PROXY_RESOLV_DIR_L} && \
-		${TAR} -xzf os-proxy-resolver-linux-${ELECTRON_ARCH}-gnu-*.tgz \
-		--strip-components 1 -C ${OS_PROXY_RESOLV_DIR_L}
+post-patch:
+	# Set electron and nodejs versions
+	cd ${WRKSRC} && \
+		jq '.nativeBuild.target="${ELECTRON_VER}"' package.json > package.json.jq && \
+		${MV} package.json.jq package.json
+	cd ${WRKSRC}/remote && \
+		jq '.nativeBuild.target="${NODEJS_VER}"' package.json > package.json.jq && \
+		${MV} package.json.jq package.json
+	cd ${WRKSRC}/extensions/copilot && ${SETENV} ${MAKE_ENV} ${PNPM_ENV} \
+		pnpm run postinstall
 
 do-configure:
 	# vscode wants a zipped electron
@@ -187,10 +193,6 @@ do-configure:
 	cd ${WRKDIR}/.home/.cache/electron/${ELECTRON_URL_HASH} && \
 		${ECHO} "${RUN_ZIP_HASH:sh} *${ELECTRON_ZIP}" > ${WRKSRC}/build/checksums/electron.txt
 
-	# Set electron version
-	${SED} -i'' "s|^target=.*|target=\"${ELECTRON_VER}\"|" ${WRKSRC}/.npmrc
-	${SED} -i'' "s|^target=.*|target=\"${NODEJS_VER}\"|" ${WRKSRC}/remote/.npmrc
-
 	# Own npm wrapper for working npm pack without network
 	${CP} ${WRKSRC}/npm-wrapper.sh ${TOOLS_DIR}/bin/npm
 
@@ -199,11 +201,7 @@ do-configure:
 	cd ${WRKSRC} && ${MKDIR} ${rgpath} && ${CP} ${PREFIX}/bin/rg ${rgpath}
 .endfor
 
-do-build: do-cargo-build
-	# Prepare native node module for os-proxy-resolver
-	${CP} ${WRKSRC}/os-proxy-resolver/npm/native/target/release/libos_proxy_resolver_node.so \
-		${WRKSRC}/${OS_PROXY_RESOLV_DIR}/os_proxy_resolver.node
-
+do-build:
 	# Build node modules
 	for subdir in `${FIND} ${WRKSRC} -type f -path '*/node_modules/*' -name binding.gyp -exec ${DIRNAME} {} ';'`; do \
 		if [ "`${ECHO} $${subdir} | ${GREP} /build/node_modules/`" ]; then \
@@ -233,13 +231,13 @@ do-build: do-cargo-build
 
 	# Build vscode
 	cd ${WRKSRC} && \
-		npm_env="npm_config_runtime=electron \
-			npm_config_target=${ELECTRON_VER} \
-			npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers" && \
-	${SETENV} ${MAKE_ENV} $${npm_env} \
-		npm --userconfig=${WRKSRC}/.npmrc run compile && \
-	${SETENV} ${MAKE_ENV} $${npm_env} \
-		npm --userconfig=${WRKSRC}/.npmrc run gulp vscode-linux-${ELECTRON_ARCH}-min
+		pnpmenv="pnpm_config_runtime=electron \
+			pnpm_config_target=${ELECTRON_VER} \
+			pnpm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers" && \
+	${SETENV} ${MAKE_ENV} $${pnpmenv} \
+		pnpm run compile && \
+	${SETENV} ${MAKE_ENV} $${pnpmenv} \
+		pnpm run gulp vscode-linux-${ELECTRON_ARCH}-min
 	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
 		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
 
@@ -281,7 +279,6 @@ do-install:
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/nodejs/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/rust/cargo.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/krb5.buildlink3.mk"

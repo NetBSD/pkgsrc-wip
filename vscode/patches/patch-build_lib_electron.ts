@@ -2,15 +2,15 @@ $NetBSD$
 
 * Use own electron
 
---- build/lib/electron.ts.orig	2026-10-24 15:59:30.984483184 +0000
+--- build/lib/electron.ts.orig	2026-11-10 19:27:51.000000000 +0000
 +++ build/lib/electron.ts
-@@ -240,10 +240,11 @@ export const config = {
+@@ -254,10 +254,11 @@ export const config = {
  	winIcon: 'resources/win32/code.ico',
  	token: process.env['GITHUB_TOKEN'],
  	repo: electronAssetResolver,
 -	validateChecksum: true,
 +	validateChecksum: false,
- 	checksumFile: path.join(root, 'build', 'checksums', 'electron.txt'),
+ 	checksumFile: electronChecksumFile,
  	createVersionedResources: useVersionedUpdate,
  	productVersionString: versionedResourcesFolder,
 +	unsafelyDisableChecksums: true,
