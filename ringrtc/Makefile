@@ -79,6 +79,7 @@ USE_TOOLS+=		pkg-config
 
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=		gn-[0-9]*:../../wip/gn
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -176,6 +177,7 @@ do-install:
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 CARGO_ARGS+=	--package ringrtc
 CARGO_ARGS+=	--features electron
