@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	g-golf-0.8.7
+PKGNAME=	guile-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=g-golf/}
