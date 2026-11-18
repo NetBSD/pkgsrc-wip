@@ -4,14 +4,14 @@
 #	Absolute path for node-gyp.
 #
 
-ELECTRON_VER=		43.8.7
+ELECTRON_VER=		43.8.10
 ELECTRON_MAJOR=		${ELECTRON_VER:tu:C/\\.[[:digit:]\.]*//}
 NODE_VERSIONS_ACCEPTED=	24
 ELECTRON=		electron${ELECTRON_MAJOR}
 
 UDEV_REQUIRED=		yes
 
-.if ${DISTNAME} != ${ELECTRON}-${ELECTRON_VER}
+.if "${DISTNAME}" != "${ELECTRON}-${ELECTRON_VER}"
 TOOL_DEPENDS+=		${ELECTRON}>=${ELECTRON_VER}:../../wip/${ELECTRON}
 .endif
 
