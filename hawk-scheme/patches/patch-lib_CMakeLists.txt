@@ -1,0 +1,14 @@
+$NetBSD$
+
+Hawk tries to bootstrap itself (if it is installed). So don't
+search for hawk - the build recipe should be independent of
+the installed packages.
+
+--- lib/CMakeLists.txt.orig	2026-11-18 20:28:14.575528372 +0000
++++ lib/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-find_program(HAWK_BOOTSTRAP_EXECUTABLE NAMES hawk)
++# find_program(HAWK_BOOTSTRAP_EXECUTABLE NAMES hawk)
+ if(HAWK_BOOTSTRAP_EXECUTABLE)
+   set(SCHEME_BOOTSTRAP_COMMAND ${HAWK_BOOTSTRAP_EXECUTABLE})
+   set(

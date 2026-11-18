@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	hawk-v0.11
+DISTNAME=	hawk-v0.13
 PKGNAME=	${DISTNAME:S,-v,-scheme-,}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djwatson/}
 GITHUB_PROJECT=	hawk
-GITHUB_RELEASE=	v0.11
+GITHUB_RELEASE=	v0.13
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://djwatson.github.io/hawk/
