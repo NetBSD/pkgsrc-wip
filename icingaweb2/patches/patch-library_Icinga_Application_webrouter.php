@@ -1,13 +1,13 @@
-$NetBSD: patch-library_Icinga_Application_webrouter.php,v 1.1 2021/01/19 08:12:06 wiz Exp $
+$NetBSD: $
 
 Replace convoluted path computation by something much simpler that 
 actually works reliably.
 
---- library/Icinga/Application/webrouter.php.orig	2018-11-21 09:19:00.000000000 +0100
-+++ library/Icinga/Application/webrouter.php	2019-03-21 17:00:08.000000000 +0100
-@@ -9,12 +9,6 @@
+--- library/Icinga/Application/webrouter.php.orig	2025-11-18 18:00:39.000000000 +0100
++++ library/Icinga/Application/webrouter.php	2026-11-16 17:21:15.305836998 +0100
+@@ -10,12 +10,6 @@
  
- error_reporting(E_ALL | E_STRICT);
+ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
  
 -if (isset($_SERVER['REQUEST_URI'])) {
 -    $ruri = $_SERVER['REQUEST_URI'];
@@ -17,8 +17,8 @@ actually works reliably.
 -
  // Workaround, PHPs internal Webserver seems to mess up SCRIPT_FILENAME
  // as it prefixes it's absolute path with DOCUMENT_ROOT
- if (preg_match('/^PHP .* Development Server/', $_SERVER['SERVER_SOFTWARE'])) {
-@@ -28,18 +22,12 @@
+ if (preg_match('/^PHP.*Development Server/', $_SERVER['SERVER_SOFTWARE'])) {
+@@ -29,18 +23,12 @@
  $baseDir = $_SERVER['DOCUMENT_ROOT'];
  $baseDir = dirname($_SERVER['SCRIPT_FILENAME']);
  

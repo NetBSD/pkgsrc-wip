@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/01/19 08:12:05 wiz Exp $
+# $NetBSD: options.mk,v $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.icingaweb2
 PKG_OPTIONS_NONEMPTY_SETS=	ido
