@@ -1089,7 +1089,6 @@ SUBDIR+=	frogatto
 SUBDIR+=	frp
 SUBDIR+=	frr10
 SUBDIR+=	fs2open
-SUBDIR+=	fs2open-git
 SUBDIR+=	fsbl-sophgo-cv180x
 SUBDIR+=	fsel
 SUBDIR+=	fsharp
