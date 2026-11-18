@@ -1,0 +1,2 @@
+Include one header file and insert calls to `debug_break()` in the
+code where you wish to break into the debugger.

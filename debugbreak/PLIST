@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/debugbreak.h
+share/debugbreak/debugbreak-gdb.py
+share/doc/debugbreak/HOW-TO-USE-DEBUGBREAK-GDB-PY.md
+share/doc/debugbreak/README.md
