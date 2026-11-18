@@ -70,8 +70,11 @@ INSTALLATION_DIRS+=	share/grafana/public
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
+# These are replaced in go.mod (patched), so not listed in go-modules.mk.
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/v22/@v/v22.7.0.zip
+GO_MODULE_FILES+=	k8s.io/apiserver/@v/v0.37.1.zip
 GO_MODULE_EXTRACT+=	github.com_coreos_go-systemd_v22_@v_v22.7.0.zip
-GO_MODULE_EXTRACT+=	k8s.io_apiserver_@v_v0.36.2.zip
+GO_MODULE_EXTRACT+=	k8s.io_apiserver_@v_v0.37.1.zip
 
 post-extract:
 	${FIND} ${WRKDIR}/linux -type f -a -exec ${CHMOD} -x "{}" \;
