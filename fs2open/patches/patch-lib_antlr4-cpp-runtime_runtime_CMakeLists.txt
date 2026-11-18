@@ -1,0 +1,26 @@
+$NetBSD$
+
+Don't install files that are not part of the engine
+(antlr is a separate package).
+
+--- lib/antlr4-cpp-runtime/runtime/CMakeLists.txt.orig	2026-11-02 23:24:02.663911238 +0000
++++ lib/antlr4-cpp-runtime/runtime/CMakeLists.txt
+@@ -128,10 +128,10 @@ endif()
+           RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+ endif()
+ 
+-if (TARGET antlr4_static)
+-  install(TARGETS antlr4_static
+-          EXPORT antlr4-targets
+-          ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-          LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-          RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+-endif()
+\ No newline at end of file
++#if (TARGET antlr4_static)
++#  install(TARGETS antlr4_static
++#          EXPORT antlr4-targets
++#          ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
++#          LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
++#          RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
++#endif()

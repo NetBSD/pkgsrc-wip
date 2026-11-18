@@ -1,0 +1,15 @@
+$NetBSD$
+
+Support BSD as well.
+
+--- lib/opengl/gl/CMakeLists.txt.orig	2026-11-02 21:47:41.361283002 +0000
++++ lib/opengl/gl/CMakeLists.txt
+@@ -48,7 +48,7 @@ if (WIN32)	
+ 		suppress_warnings(glad)
+ 		target_link_libraries(glad_wgl PUBLIC glad)
+ 	endif()
+-elseif(CMAKE_SYSTEM_NAME MATCHES "Linux")
++elseif(CMAKE_SYSTEM_NAME MATCHES "Linux" OR CMAKE_SYSTEM_NAME MATCHES "BSD")
+ 	add_library(glad_glx STATIC
+ 			"glad_glx/include/glad/glad_glx.h"
+ 			"glad_glx/include/KHR/khrplatform.h"

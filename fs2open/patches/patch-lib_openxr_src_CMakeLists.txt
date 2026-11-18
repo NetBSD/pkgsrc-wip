@@ -1,0 +1,19 @@
+$NetBSD$
+
+Support BSD as well.
+
+--- lib/openxr/src/CMakeLists.txt.orig	2026-11-02 21:36:03.901177171 +0000
++++ lib/openxr/src/CMakeLists.txt
+@@ -137,6 +137,12 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+     add_definitions(-DNOMINMAX)
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+     add_definitions(-DXR_OS_LINUX)
++elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++    add_definitions(-DXR_OS_LINUX)
++elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++    add_definitions(-DXR_OS_LINUX)
++elseif(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++    add_definitions(-DXR_OS_LINUX)
+ elseif(ANDROID)
+     add_definitions(-DXR_OS_ANDROID)
+ elseif(APPLE)

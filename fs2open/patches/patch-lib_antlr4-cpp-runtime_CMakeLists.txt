@@ -3,18 +3,31 @@ $NetBSD$
 Why is a license installed to the binary destination? Other licenses
 are not installed, so just take it out.
 
---- lib/antlr4-cpp-runtime/CMakeLists.txt.orig	2021-01-27 17:07:03.000000000 +0000
+--- lib/antlr4-cpp-runtime/CMakeLists.txt.orig	2026-09-15 10:00:09.000000000 +0000
 +++ lib/antlr4-cpp-runtime/CMakeLists.txt
-@@ -191,9 +191,9 @@ configure_package_config_file(
+@@ -181,16 +181,16 @@ endif(ANTLR4_INSTALL)
+ 
  endif(ANTLR4_INSTALL)
  
- # Slight changes from the standard distribution to fit better with how we handle things
+-if(EXISTS LICENSE.txt)
 -install(FILES LICENSE.txt
--        DESTINATION "${BINARY_DESTINATION}"
--        RENAME "Antlr4_LICENSE.txt")
+-        DESTINATION "share/doc/libantlr4")
+-elseif(EXISTS ../../LICENSE.txt)
+-install(FILES ../../LICENSE.txt
+-    DESTINATION "share/doc/libantlr4")
+-endif()
++#if(EXISTS LICENSE.txt)
 +#install(FILES LICENSE.txt
-+#        DESTINATION "${BINARY_DESTINATION}"
-+#        RENAME "Antlr4_LICENSE.txt")
++#        DESTINATION "share/doc/libantlr4")
++#elseif(EXISTS ../../LICENSE.txt)
++#install(FILES ../../LICENSE.txt
++#    DESTINATION "share/doc/libantlr4")
++#endif()
  
- #if(EXISTS LICENSE.txt)
- #install(FILES LICENSE.txt
+-install(FILES README.md VERSION
+-    DESTINATION "share/doc/libantlr4")
++#install(FILES README.md VERSION
++#    DESTINATION "share/doc/libantlr4")
+ 
+ set(CPACK_PACKAGE_CONTACT "antlr-discussion@googlegroups.com")
+ set(CPACK_PACKAGE_VERSION ${ANTLR_VERSION})
