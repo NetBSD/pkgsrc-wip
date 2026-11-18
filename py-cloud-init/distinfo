@@ -3,6 +3,15 @@ $NetBSD$
 BLAKE2s (cloud-init-26.2.tar.gz) = fbbce7a8478e22ccd1976158b14cbf539a5c1df5c3eb397ef97025981862527d
 SHA512 (cloud-init-26.2.tar.gz) = 9cf225ae89d47772fe33a0e784f22a45cfc299e72b1f2b1a1b933f1b99f64fcd3700382bb1991c440788a14b748fc613dbee63312c206d138ba1faf8cebbb22b
 Size (cloud-init-26.2.tar.gz) = 1951605 bytes
-SHA1 (patch-cloudinit_settings.py) = 960f04590bd5932ff5a52e2cf40fb576568f1c4e
+SHA1 (patch-cloudinit_settings.py) = f716bb595904843d4910f8d55056ecc25691794e
+SHA1 (patch-cloudinit_temp__utils.py) = 4219b6ba7855598a52f3d86f8006784d44c6513a
+SHA1 (patch-cloudinit_util.py) = f129feea315466b5b34cfdb7dcd0a2843aa87f42
 SHA1 (patch-meson.build) = 6ff93a93c58d00c1353c07d5f3a724a1723569b6
 SHA1 (patch-meson__options.txt) = b360c071948deeb76802e426d6b290438f2dfd32
+SHA1 (patch-tests_conftest.py) = 083efdf07a967f9068639e5d3044d7ef2263ef10
+SHA1 (patch-tests_unittests_cmd_devel_test__logs.py) = 7c64386814af9da2fc12af215b2d9d798b4af792
+SHA1 (patch-tests_unittests_cmd_test__main.py) = 7b5dc9e1103e183e9ca859361746eb3e95ff1944
+SHA1 (patch-tests_unittests_runs_test__merge__run.py) = 3ebbbbfe34740c11ba4fd97f3cedd37ec9f29d9b
+SHA1 (patch-tests_unittests_runs_test__simple__run.py) = 6085f9ec94d3a38aeba97dd03eae8dc45a5400f0
+SHA1 (patch-tests_unittests_test__all__stages.py) = c939812760802f24a78810e17a53a690af30c75b
+SHA1 (patch-tests_unittests_test__temp__utils.py) = ba7fd970394245a7828528c8b90965991b31c59d
