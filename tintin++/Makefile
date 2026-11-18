@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=      tintin-2.02.31
+DISTNAME=	tintin-2.02.61
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scandum/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,6 +13,6 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/tt/src
 GNU_CONFIGURE=	yes
 
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
