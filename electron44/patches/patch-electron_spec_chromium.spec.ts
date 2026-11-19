@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/chromium.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/chromium.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/chromium.spec.ts
-@@ -612,15 +612,15 @@ describe('command line switches', () => 
+@@ -614,15 +614,15 @@ describe('command line switches', () => 
        testLocale('asdfkl', `${currentLocale}|${currentSystemLocale}|${currentPreferredLanguages}`));
  
      const lcAll = String(process.env.LC_ALL);
@@ -26,7 +26,7 @@ $NetBSD$
        testLocale('', lcAll, true)
      );
    });
-@@ -4425,12 +4425,12 @@ describe('font fallback', () => {
+@@ -4523,12 +4523,12 @@ describe('font fallback', () => {
        expect(fonts[0].familyName).toBe('Arial');
      } else if (process.platform === 'darwin') {
        expect(fonts[0].familyName).toBe('Helvetica');
@@ -41,7 +41,7 @@ $NetBSD$
      const html = `
      <html lang="ja-JP">
        <head>
-@@ -5148,7 +5148,7 @@ describe('paste execCommand', { tags: ['
+@@ -5246,7 +5246,7 @@ describe('paste execCommand', { tags: ['
    });
  });
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_crash_reporter.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/api/electron_api_crash_reporter.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/api/electron_api_crash_reporter.cc
 @@ -31,7 +31,7 @@
  #include "shell/common/process_util.h"

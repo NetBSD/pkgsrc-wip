@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/native_window_views.h.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/native_window_views.h.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/native_window_views.h
 @@ -33,7 +33,7 @@ namespace gin {
  class Arguments;
@@ -33,7 +33,7 @@ $NetBSD$
    void SetIcon(const gfx::ImageSkia& icon);
  #endif
  
-@@ -208,7 +208,7 @@ class NativeWindowViews : public NativeW
+@@ -212,7 +212,7 @@ class NativeWindowViews : public NativeW
      return overlay_symbol_color_;
    }
  
@@ -42,7 +42,7 @@ $NetBSD$
    views::FrameViewLinux* GetFrameViewLinux() const;
    [[nodiscard]] bool ignore_mouse_events() const {
      return ignore_mouse_events_;
-@@ -306,7 +306,7 @@ class NativeWindowViews : public NativeW
+@@ -298,7 +298,7 @@ class NativeWindowViews : public NativeW
    // events from resizing the window.
    extensions::SizeConstraints old_size_constraints_;
  
@@ -51,7 +51,7 @@ $NetBSD$
    std::unique_ptr<GlobalMenuBarX11> global_menu_bar_;
  
    // Set while the window is disabled; running it re-enables event dispatch.
-@@ -325,7 +325,7 @@ class NativeWindowViews : public NativeW
+@@ -317,7 +317,7 @@ class NativeWindowViews : public NativeW
    // This value is determined when the window is created.
    bool rounded_corner_ = true;
  

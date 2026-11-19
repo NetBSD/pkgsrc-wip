@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/src/node_platform.cc.orig	2026-11-03 19:08:32.733807077 +0000
+--- third_party/electron_node/src/node_platform.cc.orig	2026-11-19 09:50:14.825665663 +0000
 +++ third_party/electron_node/src/node_platform.cc
 @@ -548,6 +548,12 @@ void NodePlatform::AddIsolateFinishedCal
  void NodePlatform::Shutdown() {

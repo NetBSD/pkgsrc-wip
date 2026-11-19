@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/tools/v8_gypfiles/v8.gyp.orig	2026-11-03 19:08:32.723835018 +0000
+--- third_party/electron_node/tools/v8_gypfiles/v8.gyp.orig	2026-11-19 09:50:14.813710856 +0000
 +++ third_party/electron_node/tools/v8_gypfiles/v8.gyp
 @@ -1365,6 +1365,12 @@
          }],

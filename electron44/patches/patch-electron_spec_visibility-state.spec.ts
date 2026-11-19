@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/visibility-state.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/visibility-state.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/visibility-state.spec.ts
 @@ -19,7 +19,7 @@ import { closeAllWindows } from './lib/w
  

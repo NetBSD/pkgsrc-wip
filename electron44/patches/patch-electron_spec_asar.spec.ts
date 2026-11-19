@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/asar.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/asar.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/asar.spec.ts
 @@ -749,7 +749,7 @@ describe('asar package', () => {
          expect(code).toBe(0);

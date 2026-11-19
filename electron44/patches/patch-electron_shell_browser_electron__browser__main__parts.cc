@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/electron_browser_main_parts.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts.cc
-@@ -78,7 +78,7 @@
+@@ -79,7 +79,7 @@
  #include "ui/wm/core/wm_state.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include <dlfcn.h>
  
  #include "base/environment.h"
-@@ -139,7 +139,7 @@ namespace electron {
+@@ -140,7 +140,7 @@ namespace electron {
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD$
  // The display server connection or the session bus is gone: exit like
  // Chrome's SessionEnding(), with an off-thread watchdog that crashes us if
  // exiting hangs on the dead connection.
-@@ -211,13 +211,17 @@ ElectronBrowserMainParts::ElectronBrowse
+@@ -212,13 +212,17 @@ ElectronBrowserMainParts::ElectronBrowse
    self_ = this;
  }
  
@@ -43,7 +43,7 @@ $NetBSD$
    return lib ? dlsym(lib, name) : nullptr;
  }
  
-@@ -248,10 +252,10 @@ std::vector<std::optional<std::string>> 
+@@ -249,10 +253,10 @@ std::vector<std::optional<std::string>> 
  }
  
  }  // namespace
@@ -56,7 +56,7 @@ $NetBSD$
    JoinSystemFontConfigInit();
  #endif
  }
-@@ -318,7 +322,7 @@ void ElectronBrowserMainParts::PostEarly
+@@ -324,7 +328,7 @@ void ElectronBrowserMainParts::PostEarly
  
    node_bindings_->Initialize(isolate, context);
  
@@ -65,7 +65,7 @@ $NetBSD$
    // Runs during Node.js environment creation and is joined before any app
    // code can run, so nothing else touches FontConfig or the environment.
    const auto fontconfig_env = SnapshotFontConfigEnv();
-@@ -354,7 +358,7 @@ void ElectronBrowserMainParts::PostEarly
+@@ -360,7 +364,7 @@ void ElectronBrowserMainParts::PostEarly
    // Wrap the uv loop with global env.
    node_bindings_->set_uv_env(node_env_.get());
  
@@ -74,7 +74,7 @@ $NetBSD$
    JoinSystemFontConfigInit();
  #endif
  
-@@ -364,7 +368,7 @@ void ElectronBrowserMainParts::PostEarly
+@@ -370,7 +374,7 @@ void ElectronBrowserMainParts::PostEarly
    // Wait for app
    node_bindings_->JoinAppCode();
  
@@ -83,7 +83,7 @@ $NetBSD$
    // Reload if the app's main script changed the FontConfig environment.
    if (fontconfig_env != SnapshotFontConfigEnv()) {
      if (auto fc_reinit = reinterpret_cast<int (*)()>(
-@@ -429,7 +433,7 @@ int ElectronBrowserMainParts::PreCreateT
+@@ -435,7 +439,7 @@ int ElectronBrowserMainParts::PreCreateT
    // happen before the ResourceBundle is loaded
    if (locale.empty())
      l10n_util::OverrideLocaleWithCocoaLocale();
@@ -92,7 +92,7 @@ $NetBSD$
    // l10n_util::GetApplicationLocaleInternal uses g_get_language_names(),
    // which keys off of getenv("LC_ALL").
    // We must set this env first to make ui::ResourceBundle accept the custom
-@@ -458,7 +462,7 @@ int ElectronBrowserMainParts::PreCreateT
+@@ -464,7 +468,7 @@ int ElectronBrowserMainParts::PreCreateT
    ElectronBrowserClient::SetApplicationLocale(app_locale);
    fake_browser_process_->SetApplicationLocale(app_locale);
  
@@ -101,7 +101,7 @@ $NetBSD$
    // Reset to the original LC_ALL since we should not be changing it.
    if (!locale.empty()) {
      if (lc_all)
-@@ -514,7 +518,7 @@ void ElectronBrowserMainParts::PostDestr
+@@ -520,7 +524,7 @@ void ElectronBrowserMainParts::PostDestr
  }
  
  void ElectronBrowserMainParts::ToolkitInitialized() {
@@ -110,7 +110,7 @@ $NetBSD$
    // GTK3's gtk_init() probes the display for OpenGL and loads the GL driver
    // into this process; nothing here uses GdkGLContext. GDK_GL is read once at
    // init and only by GTK3 (GTK4 renders with GL itself and ignores it).
-@@ -564,14 +568,14 @@ void ElectronBrowserMainParts::ToolkitIn
+@@ -570,14 +574,14 @@ void ElectronBrowserMainParts::ToolkitIn
  #endif
  }
  
@@ -127,7 +127,7 @@ $NetBSD$
  
  int ElectronBrowserMainParts::PreMainMessageLoopRun() {
    // Run user's main script before most things get initialized, so we can have
-@@ -644,19 +648,23 @@ void ElectronBrowserMainParts::WillRunMa
+@@ -650,19 +654,23 @@ void ElectronBrowserMainParts::WillRunMa
  }
  
  void ElectronBrowserMainParts::PostCreateMainMessageLoop() {
@@ -153,7 +153,7 @@ $NetBSD$
    // Set up crypt config. This needs to be done before anything starts the
    // network service, as the raw encryption key needs to be shared with the
    // network service for encrypted cookie storage.
-@@ -736,7 +744,7 @@ void ElectronBrowserMainParts::PostMainM
+@@ -742,7 +750,7 @@ void ElectronBrowserMainParts::PostMainM
    fake_browser_process_->PostMainMessageLoopRun();
    content::DevToolsAgentHost::StopRemoteDebuggingPipeHandler();
  

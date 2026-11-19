@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/src/inspector_agent.cc.orig	2026-11-03 19:08:32.733686944 +0000
+--- third_party/electron_node/src/inspector_agent.cc.orig	2026-11-19 09:50:14.825500338 +0000
 +++ third_party/electron_node/src/inspector_agent.cc
 @@ -104,7 +104,7 @@ static int StartWatchdogThread() {
    CHECK_EQ(0, uv_sem_init(&start_io_thread_semaphore, 0));

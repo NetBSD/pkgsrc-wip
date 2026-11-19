@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-browser-window.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-browser-window.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-browser-window.spec.ts
 @@ -119,7 +119,7 @@ describe('BrowserWindow module', () => {
        }).not.toThrow();
@@ -168,7 +168,7 @@ $NetBSD$
      // Not implemented on Linux.
      afterEach(closeAllWindows);
  
-@@ -8496,7 +8496,7 @@ describe('BrowserWindow module', () => {
+@@ -8520,7 +8520,7 @@ describe('BrowserWindow module', () => {
    describe('"transparent" option', { tags: ['serial'] }, () => {
      afterEach(closeAllWindows);
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/browser_process_impl.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/browser_process_impl.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/browser_process_impl.cc
 @@ -51,7 +51,7 @@
  #include "chrome/browser/printing/print_job_manager.h"

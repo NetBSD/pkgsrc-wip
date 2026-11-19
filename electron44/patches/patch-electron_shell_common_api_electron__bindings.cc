@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/common/api/electron_bindings.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/common/api/electron_bindings.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/common/api/electron_bindings.cc
 @@ -185,7 +185,7 @@ v8::Local<v8::Value> ElectronBindings::G
  #endif

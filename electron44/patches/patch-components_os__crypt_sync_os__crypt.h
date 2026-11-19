@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2026-11-03 19:08:31.157287721 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2026-11-19 09:50:10.699275466 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -25,9 +25,9 @@ class KeychainV2;
  }

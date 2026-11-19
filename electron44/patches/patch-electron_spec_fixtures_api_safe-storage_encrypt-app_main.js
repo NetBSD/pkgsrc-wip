@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/fixtures/api/safe-storage/encrypt-app/main.js.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/fixtures/api/safe-storage/encrypt-app/main.js.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/fixtures/api/safe-storage/encrypt-app/main.js
 @@ -7,7 +7,7 @@ const pathToEncryptedString = path.resol
  const writeFile = fs.writeFile;

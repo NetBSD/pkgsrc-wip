@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-process.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-process.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-process.spec.ts
 @@ -44,7 +44,7 @@ describe('process module', () => {
        it('resolves promise successfully with valid data', async () => {

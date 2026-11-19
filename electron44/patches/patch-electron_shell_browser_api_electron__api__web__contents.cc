@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_web_contents.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/api/electron_api_web_contents.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/api/electron_api_web_contents.cc
 @@ -195,11 +195,11 @@
  #include "ui/base/cocoa/defaults_utils.h"
@@ -47,7 +47,7 @@ $NetBSD$
    // Update font settings.
    static const gfx::FontRenderParams params(
        gfx::GetFontRenderParams(gfx::FontRenderParamsQuery(), nullptr));
-@@ -3451,13 +3451,13 @@ void WebContents::ForcefullyCrashRendere
+@@ -3462,13 +3462,13 @@ void WebContents::ForcefullyCrashRendere
  
    content::RenderProcessHost* rph = rwh->GetProcess();
    if (rph) {
@@ -63,7 +63,7 @@ $NetBSD$
      CrashDumpHungChildProcess(rph->GetProcess().Handle());
  #endif
      rph->Shutdown(content::RESULT_CODE_HUNG);
-@@ -4098,7 +4098,7 @@ void WebContents::CopyImageAt(int x, int
+@@ -4109,7 +4109,7 @@ void WebContents::CopyImageAt(int x, int
  void WebContents::Focus() {
    // Focusing on WebContents does not automatically focus the window on macOS
    // and Linux, do it manually to match the behavior on Windows.
@@ -72,7 +72,7 @@ $NetBSD$
    if (owner_window())
      owner_window()->Focus(true);
  #endif
-@@ -5108,7 +5108,7 @@ ui::ImageModel WebContents::GetDevToolsW
+@@ -5124,7 +5124,7 @@ ui::ImageModel WebContents::GetDevToolsW
  }
  #endif
  

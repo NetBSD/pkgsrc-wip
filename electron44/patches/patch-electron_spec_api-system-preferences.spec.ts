@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-system-preferences.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-system-preferences.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-system-preferences.spec.ts
 @@ -5,8 +5,8 @@ import { describe, expect, it } from 'vi
  import { ifdescribe, ifit } from './lib/spec-helpers.ts';

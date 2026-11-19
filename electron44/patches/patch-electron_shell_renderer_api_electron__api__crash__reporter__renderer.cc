@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/renderer/api/electron_api_crash_reporter_renderer.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/renderer/api/electron_api_crash_reporter_renderer.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/renderer/api/electron_api_crash_reporter_renderer.cc
 @@ -6,7 +6,7 @@
  #include "shell/common/gin_helper/dictionary.h"

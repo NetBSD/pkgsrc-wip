@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-dialog.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-dialog.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-dialog.spec.ts
 @@ -1046,7 +1046,7 @@ describe('dialog module', () => {
    // FileChooser that script/dbus_mock.py hosts on the fake session bus. The

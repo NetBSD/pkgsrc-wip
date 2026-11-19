@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/electron_browser_main_parts_posix.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/electron_browser_main_parts_posix.cc
 @@ -191,6 +191,9 @@ void ElectronBrowserMainParts::InstallSh
    g_pipe_pid = getpid();

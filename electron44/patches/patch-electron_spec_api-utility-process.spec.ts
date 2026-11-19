@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-utility-process.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-utility-process.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-utility-process.spec.ts
-@@ -669,7 +669,7 @@ describe('utilityProcess module', () => 
+@@ -683,7 +683,7 @@ describe('utilityProcess module', { retr
        expect(output).toContain(result);
      });
  
@@ -15,7 +15,7 @@ $NetBSD$
        const message = 'Message from utility process';
        const child = utilityProcess.fork(path.join(fixturesPath, 'expose-main-process-module.js'));
        await once(child, 'spawn');
-@@ -706,7 +706,7 @@ describe('utilityProcess module', () => 
+@@ -720,7 +720,7 @@ describe('utilityProcess module', { retr
        await closeWindow(w);
      });
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-web-contents.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-web-contents.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-web-contents.spec.ts
-@@ -1647,7 +1647,7 @@ describe('webContents module', () => {
+@@ -1647,7 +1647,7 @@ describe('webContents module', { retry: 
      // back to OpenFolder() which does a blocking DirectoryExists() on the UI
      // thread (pre-existing behavior). Workspace-gating is covered by the test
      // above.
@@ -15,7 +15,7 @@ $NetBSD$
        'reveals paths under a registered workspace folder without executing them',
        // Opens a real Finder/Explorer window, which takes focus and stays open.
        { tags: ['serial'] },
-@@ -1673,7 +1673,7 @@ describe('webContents module', () => {
+@@ -1673,7 +1673,7 @@ describe('webContents module', { retry: 
    // xdg-desktop-portal FileChooser that script/dbus_mock.py hosts on the fake
    // session bus.
    ifdescribe(
@@ -24,7 +24,7 @@ $NetBSD$
        process.arch !== 'ia32' &&
        !process.arch.startsWith('arm') &&
        !!process.env.DBUS_SESSION_BUS_ADDRESS
-@@ -5411,7 +5411,7 @@ describe('webContents module', () => {
+@@ -5428,7 +5428,7 @@ describe('webContents module', { retry: 
      });
  
      // TODO(codebytere): OOPIF printing is disabled on Linux at the moment due to crashes.

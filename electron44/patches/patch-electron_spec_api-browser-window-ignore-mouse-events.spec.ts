@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-browser-window-ignore-mouse-events.spec.ts.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/spec/api-browser-window-ignore-mouse-events.spec.ts.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/spec/api-browser-window-ignore-mouse-events.spec.ts
 @@ -45,11 +45,11 @@ type Page = { webContents: Electron.WebC
  // Nothing can inject input into a Wayland compositor from a client, so only

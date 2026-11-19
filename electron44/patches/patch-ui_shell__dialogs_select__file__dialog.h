@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- ui/shell_dialogs/select_file_dialog.h.orig	2026-11-03 19:08:31.541269131 +0000
+--- ui/shell_dialogs/select_file_dialog.h.orig	2026-11-19 09:50:11.095479115 +0000
 +++ ui/shell_dialogs/select_file_dialog.h
 @@ -224,7 +224,7 @@ class SHELL_DIALOGS_EXPORT SelectFileDia
                    const GURL* caller = nullptr);

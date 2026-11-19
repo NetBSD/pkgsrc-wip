@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/osr/osr_host_display_client.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/browser/osr/osr_host_display_client.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/browser/osr/osr_host_display_client.cc
 @@ -102,7 +102,7 @@ void OffScreenHostDisplayClient::CreateL
    layered_window_updater_->SetActive(active_);

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-11-03 19:08:32.104043454 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-11-19 09:50:13.747207025 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
-@@ -335,216 +335,10 @@ bool MaybeIsLocalUNCPath(const base::Fil
+@@ -360,215 +360,49 @@ bool MaybeIsLocalUNCPath(const base::Fil
  }
  #endif
  
@@ -212,18 +212,53 @@ $NetBSD$
 -        continue;
 -      }
 -    }
--
--    block_path_rules->block_path_rules_.emplace_back(
--        should_normalize_file_path ? NormalizeFilePath(path) : path,
--        blocked_path.block_type);
--  }
--
--  return block_path_rules;
--}
 +// This patch moves the deleted content from this file over to
 +// chrome/browser/file_system_access/chrome_file_system_access_permission_context.h.
 +// NOTE IF THERE IS A CONFLICT ABOVE, you will need to copy the changes in the
 +// removed block over to chrome_file_system_access_permission_context.h.
++
++// Returns true if `child_components` is the same as or a descendant of
++// `parent_components`, ignoring case differences.
++bool IsPathOrDescendantIgnoreCase(
++    const std::vector<base::FilePath::StringType>& parent_components,
++    const std::vector<base::FilePath::StringType>& child_components) {
++  if (parent_components.empty() ||
++      parent_components.size() > child_components.size()) {
++    return false;
++  }
+ 
+-    block_path_rules->block_path_rules_.emplace_back(
+-        should_normalize_file_path ? NormalizeFilePath(path) : path,
+-        blocked_path.block_type);
++  return std::equal(parent_components.begin(), parent_components.end(),
++                    child_components.begin(),
++                    base::FilePath::CompareEqualIgnoreCase);
++}
++
++// Returns true if `child_path` is the same as or a descendant of
++// `parent_path`, ignoring case differences. Unlike
++// `base::FilePath::IsParent()`, this handles case-variant paths returned by
++// native pickers on case-insensitive filesystems.
++bool IsPathOrDescendantIgnoreCase(
++    const base::FilePath& parent_path,
++    const std::vector<base::FilePath::StringType>& parent_components,
++    const base::FilePath& child_path) {
++  // Fast path: Exact match or case-sensitive parent match.
++  if (child_path == parent_path || parent_path.IsParent(child_path)) {
++    return true;
+   }
++  return IsPathOrDescendantIgnoreCase(parent_components,
++                                      child_path.GetComponents());
++}
+ 
+-  return block_path_rules;
++// Returns true if `parent_components` is a strict parent of
++// `child_components`, ignoring case differences.
++bool IsParentIgnoreCase(
++    const std::vector<base::FilePath::StringType>& parent_components,
++    const std::vector<base::FilePath::StringType>& child_components) {
++  return parent_components.size() < child_components.size() &&
++         IsPathOrDescendantIgnoreCase(parent_components, child_components);
+ }
  
  // Checks if `path` should be blocked by the `rules`.
- // The BlockType of the nearest ancestor of a path to check is what

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/common/api/electron_api_native_image.cc.orig	2026-10-30 06:33:33.000000000 +0000
+--- electron/shell/common/api/electron_api_native_image.cc.orig	2026-11-18 22:25:18.000000000 +0000
 +++ electron/shell/common/api/electron_api_native_image.cc
 @@ -676,7 +676,7 @@ void Initialize(v8::Local<v8::Object> ex
    native_image.SetMethod("createFromNamedImage",
