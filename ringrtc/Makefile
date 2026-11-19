@@ -177,6 +177,7 @@ do-install:
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 CARGO_ARGS+=	--package ringrtc
