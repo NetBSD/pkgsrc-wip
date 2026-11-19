@@ -32,7 +32,10 @@ SPECIAL_PERMS+=	${PREFIX}/libexec/dma-mbox-create \
 PKG_GROUPS=	${DMA_GROUP}
 PKG_USERS=	${DMA_ROOT_USER}:${DMA_GROUP}
 
+# DMA provides its own getprogname() on glibc.
+.if ${OPSYS} != "Linux"
 CFLAGS+=	-DHAVE_GETPROGNAME
+.endif
 CFLAGS+=	-DHAVE_STRLCPY
 CFLAGS+=	-DDMA_GROUP=\"${DMA_GROUP}\"
 CFLAGS+=	-DDMA_ROOT_USER=\"${DMA_ROOT_USER}\"
