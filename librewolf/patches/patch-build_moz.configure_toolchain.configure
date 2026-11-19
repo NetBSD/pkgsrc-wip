@@ -1,0 +1,16 @@
+$NetBSD$
+
+Enable -fvisibility=hidden -fvisibility-inlines-hidden
+for NetBSD.
+
+--- build/moz.configure/toolchain.configure.orig	2026-11-19 05:10:56.416171765 +0000
++++ build/moz.configure/toolchain.configure
+@@ -2378,7 +2378,7 @@ def visibility_flags(target, env):
+ @depends(target, build_environment)
+ def visibility_flags(target, env):
+     if target.os != "WINNT":
+-        if target.kernel in ("Darwin", "FreeBSD", "OpenBSD"):
++        if target.kernel in ("Darwin", "FreeBSD", "NetBSD", "OpenBSD"):
+             return ("-fvisibility=hidden", "-fvisibility-inlines-hidden")
+         return (
+             "-I%s/system_wrappers" % os.path.join(env.dist),

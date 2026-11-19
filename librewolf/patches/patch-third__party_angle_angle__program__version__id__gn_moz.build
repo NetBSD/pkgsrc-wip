@@ -2,9 +2,9 @@ $NetBSD: patch-third__party_angle_angle__program__version__id__gn_moz.build,v 1.
 
 * Add FreeBSD and NetBSD file with SHA256 hash.
 
---- third_party/angle/angle_program_version_id_gn/moz.build.orig	2026-08-14 14:09:56.486273570 +0000
+--- third_party/angle/angle_program_version_id_gn/moz.build.orig	2026-11-18 05:48:28.000000000 +0000
 +++ third_party/angle/angle_program_version_id_gn/moz.build
-@@ -69,6 +69,24 @@ if CONFIG["OS_TARGET"] == "OpenBSD":
+@@ -60,6 +60,24 @@ if CONFIG["OS_TARGET"] == "OpenBSD":
          script="/python/mozbuild/mozbuild/action/write_path_list.py",
      )
  
@@ -13,7 +13,7 @@ $NetBSD: patch-third__party_angle_angle__program__version__id__gn_moz.build,v 1.
 +    GeneratedFile(
 +        "/third_party/angle/gen/ANGLEShaderProgramVersion.h.rsp",
 +        entry_point="write_paths",
-+        inputs=['ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in'],
++        inputs=['ANGLEShaderProgramVersion.h-8e80c91a6eb55351.rsp.in'],
 +        script="/python/mozbuild/mozbuild/action/write_path_list.py",
 +    )
 +
@@ -22,7 +22,7 @@ $NetBSD: patch-third__party_angle_angle__program__version__id__gn_moz.build,v 1.
 +    GeneratedFile(
 +        "/third_party/angle/gen/ANGLEShaderProgramVersion.h.rsp",
 +        entry_point="write_paths",
-+        inputs=['ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in'],
++        inputs=['ANGLEShaderProgramVersion.h-8e80c91a6eb55351.rsp.in'],
 +        script="/python/mozbuild/mozbuild/action/write_path_list.py",
 +    )
 +

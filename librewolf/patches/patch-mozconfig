@@ -4,9 +4,9 @@ Avoid linking errors due to C and C++ linkage. Something seems
 to be broken in the librewolf build (or C++ linkage is always
 on for the development team's compilers).
 
---- mozconfig.orig	2026-10-11 19:21:15.398384407 +0000
+--- mozconfig.orig	2026-11-18 05:48:39.000000000 +0000
 +++ mozconfig
-@@ -14,8 +14,8 @@ ac_add_options --enable-proxy-bypass-protection
+@@ -15,8 +15,8 @@ ac_add_options --enable-proxy-bypass-protection
  ac_add_options --enable-proxy-bypass-protection
  # allow replacing malloc manually, will not affect regular systems
  # not compatible with ac_add_options --disable-jemalloc, which only works when preloading custom malloc
@@ -16,4 +16,4 @@ on for the development team's compilers).
 +# ac_add_options --enable-jemalloc
  
  ac_add_options --with-app-name=librewolf
- ac_add_options --with-branding=browser/branding/librewolf
+ ac_add_options --with-distribution-id='net.librewolf'

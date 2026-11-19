@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- js/moz.configure.orig	2026-04-15 21:48:04.000000000 +0000
++++ js/moz.configure
+@@ -1430,8 +1430,11 @@ set_config("MOZ_OPTIMIZE_FLAGS", moz_js_optimize_flags
+ @depends(
+     target_is_android | target_is_windows | target_is_darwin,
+     js_standalone & ~depends(when="--enable-jemalloc")(True),
++    target,
+ )
+-def moz_glue_in_program(is_excluded_target, is_js_without_jemalloc):
++def moz_glue_in_program(is_excluded_target, is_js_without_jemalloc, target):
++    if target.os == "NetBSD":
++      return False
+     return not is_excluded_target and not is_js_without_jemalloc
+ 
+ 
