@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tuios-0.13.1
+DISTNAME=	tuios-0.13.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Gaurav-Gosain/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
