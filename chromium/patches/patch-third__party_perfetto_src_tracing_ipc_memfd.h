@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/ipc/memfd.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/perfetto/src/tracing/ipc/memfd.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/perfetto/src/tracing/ipc/memfd.h
 @@ -24,7 +24,8 @@
  // The build has the memfd code. HasMemfdSupport() also checks the kernel.

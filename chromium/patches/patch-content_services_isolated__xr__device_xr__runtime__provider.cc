@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/services/isolated_xr_device/xr_runtime_provider.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/services/isolated_xr_device/xr_runtime_provider.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/services/isolated_xr_device/xr_runtime_provider.cc
 @@ -21,7 +21,7 @@
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
 @@ -24,8 +24,10 @@
  #include "build/build_config.h"

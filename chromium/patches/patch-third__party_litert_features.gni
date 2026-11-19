@@ -4,12 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/litert/features.gni.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/litert/features.gni.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/litert/features.gni
-@@ -4,5 +4,5 @@
+@@ -4,7 +4,7 @@
  
  declare_args() {
    # This enables building LiteRT with XNNPACK.
 -  build_litert_with_xnnpack = current_cpu != "arm" && !is_fuchsia
 +  build_litert_with_xnnpack = current_cpu != "arm" && !is_fuchsia && !is_bsd
  }
+ 
+ declare_args() {

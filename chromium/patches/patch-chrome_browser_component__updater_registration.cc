@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
-@@ -92,7 +92,7 @@
+@@ -93,7 +93,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/component_updater/installer_policies/amount_extraction_heuristic_regexes_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-@@ -101,7 +101,7 @@
+@@ -102,7 +102,7 @@
  #include "ui/aura/env.h"
  #endif
  

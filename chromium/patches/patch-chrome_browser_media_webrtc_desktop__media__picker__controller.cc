@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/media/webrtc/desktop_media_picker_controller.cc
-@@ -113,7 +113,7 @@ bool DesktopMediaPickerController::IsSys
+@@ -115,7 +115,7 @@ bool DesktopMediaPickerController::IsSys
    } else {
      return media::IsMacCatapSystemLoopbackCaptureSupported();
    }

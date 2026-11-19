@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -720,7 +720,7 @@ void VideoDecoderPipeline::InitializeTas
        NOTREACHED();

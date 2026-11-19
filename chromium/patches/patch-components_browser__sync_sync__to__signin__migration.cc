@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/browser_sync/sync_to_signin_migration.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/browser_sync/sync_to_signin_migration.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/browser_sync/sync_to_signin_migration.cc
 @@ -106,7 +106,7 @@ enum class SyncSetupIncompleteMigrationD
  // LINT.ThenChange(/tools/metrics/histograms/metadata/sync/enums.xml:SyncSetupIncompleteMigrationDecision)

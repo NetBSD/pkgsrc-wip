@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.cc
 @@ -34,7 +34,7 @@ const int kBackgroundRefreshTypesMask =
  #if BUILDFLAG(IS_WIN)
@@ -31,5 +31,5 @@ $NetBSD$
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  void TaskGroup::OnOpenFdCountRefreshDone(int open_fd_count) {
-   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
+   CHECK_CURRENTLY_ON(content::BrowserThread::UI, base::NotFatalUntil::M162);
  

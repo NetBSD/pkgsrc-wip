@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -388,7 +388,7 @@ CreateNavigationAction(GURL target) {
+@@ -402,7 +402,7 @@ CreateNavigationAction(GURL target) {
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  void NavigateToSettingsPage(ContextPtr ctx,
                              user_education::FeaturePromoHandle promo_handle) {
    BrowserWindowInterface* const browser = GetBrowser(ctx);
-@@ -1666,7 +1666,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1683,7 +1683,7 @@ void MaybeRegisterChromeFeaturePromos(
                  "Triggered when a shared tab becomes the active tab.")));
    }
  
@@ -24,8 +24,8 @@ $NetBSD$
    // kIPHSupervisedUserProfileSigninFeature:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -1995,7 +1995,7 @@ void MaybeRegisterChromeFeaturePromos(
-               "Omnibox Everywhere.")));
+@@ -2053,7 +2053,7 @@ void MaybeRegisterChromeFeaturePromos(
+               Metadata::FeatureSet{&omnibox::kWebUIOmniboxAskGAboutThisPage})));
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
 -    BUILDFLAG(IS_CHROMEOS)
@@ -33,9 +33,9 @@ $NetBSD$
    // kIPHDesktopPWAsLinkCapturingLaunch:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -2910,7 +2910,7 @@ void MaybeRegisterChromeNewBadges(user_e
-           157, "nguyenbryan@google.com",
-           "Shown on Ask Google about this page in context and app menus.")));
+@@ -3039,7 +3039,7 @@ void MaybeRegisterChromeNewBadges(user_e
+                                "Shown on the Focus on group item in the "
+                                "tab context menu.")));
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

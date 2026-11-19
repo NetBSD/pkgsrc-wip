@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
 @@ -177,7 +177,7 @@ constexpr size_t kMinDirectMappedDownsiz
  // TODO(casey.smalley@arm.com): under 64k pages we can end up in a situation

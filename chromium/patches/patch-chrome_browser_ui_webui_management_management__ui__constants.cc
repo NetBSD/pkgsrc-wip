@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_constants.cc
-@@ -96,13 +96,13 @@ const char kProfileReportingExtension[] 
+@@ -96,7 +96,7 @@ const char kProfileReportingExtension[] 
  const char kProfileReportingPolicy[] = "profileReportingPolicy";
  const char kProfileReportingLearnMore[] = "profileReportingLearnMore";
  
@@ -15,10 +15,3 @@ $NetBSD$
  const char kManagementScreenCaptureEvent[] = "managementScreenCaptureEvent";
  const char kManagementScreenCaptureData[] = "managementScreenCaptureData";
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
- 
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE))
-+    (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE)) || BUILDFLAG(IS_BSD)
- const char kManagementDeviceSignalsDisclosure[] =
-     "managementDeviceSignalsDisclosure";
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||

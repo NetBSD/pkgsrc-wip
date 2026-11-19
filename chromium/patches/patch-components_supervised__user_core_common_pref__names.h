@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/pref_names.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/supervised_user/core/common/pref_names.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/supervised_user/core/common/pref_names.h
-@@ -126,7 +126,7 @@ inline constexpr char kDefaultSupervised
+@@ -118,7 +118,7 @@ inline constexpr char kDefaultSupervised
      "profile.managed.default_filtering_behavior";
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE)

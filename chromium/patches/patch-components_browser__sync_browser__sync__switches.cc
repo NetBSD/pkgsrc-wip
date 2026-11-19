@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/browser_sync/browser_sync_switches.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/browser_sync/browser_sync_switches.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/browser_sync/browser_sync_switches.cc
 @@ -40,7 +40,7 @@ BASE_FEATURE(kMigrateOutOfSyncSetupIncom
               base::FEATURE_ENABLED_BY_DEFAULT);

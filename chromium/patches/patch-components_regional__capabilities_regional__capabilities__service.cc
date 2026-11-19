@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_service.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.cc
 @@ -460,7 +460,7 @@ bool RegionalCapabilitiesService::IsInAn
        .choice_screen_eligibility_config.has_value();

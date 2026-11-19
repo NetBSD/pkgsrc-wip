@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/tracing/trace_time.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/tracing/trace_time.h
 @@ -12,7 +12,7 @@ namespace base {
  namespace tracing {

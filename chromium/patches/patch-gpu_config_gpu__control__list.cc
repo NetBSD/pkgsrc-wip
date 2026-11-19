@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_control_list.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- gpu/config/gpu_control_list.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ gpu/config/gpu_control_list.cc
 @@ -822,7 +822,7 @@ GpuControlList::OsType GpuControlList::G
    return kOsAndroid;

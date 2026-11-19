@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.cc
 @@ -228,7 +228,7 @@ std::unique_ptr<ShortcutInfo> BuildShort
  
@@ -14,8 +14,8 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    const std::vector<WebAppShortcutsMenuItemInfo>& shortcuts_menu_item_infos =
        CreateShortcutsMenuItemInfos(state.shortcut_menus());
-   DCHECK_LE(shortcuts_menu_item_infos.size(), kMaxApplicationDockMenuItems);
-@@ -404,7 +404,7 @@ base::span<const int> GetDesiredIconSize
+   CHECK_LE(shortcuts_menu_item_infos.size(), kMaxApplicationDockMenuItems,
+@@ -405,7 +405,7 @@ base::span<const int> GetDesiredIconSize
  #if BUILDFLAG(IS_MAC)
    static constexpr int kDesiredIconSizesForShortcut[] = {16, 32, 128, 256, 512};
    return kDesiredIconSizesForShortcut;

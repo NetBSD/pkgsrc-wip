@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/test/integration/sync_service_impl_harness.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/sync/test/integration/sync_service_impl_harness.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/sync/test/integration/sync_service_impl_harness.cc
-@@ -489,7 +489,7 @@ bool SyncServiceImplHarness::EnableHisto
+@@ -482,7 +482,7 @@ bool SyncServiceImplHarness::EnableHisto
    // Tabs and history are bundled together in the same toggle.
    service()->GetUserSettings()->SetSelectedType(
        syncer::UserSelectableType::kTabs, true);

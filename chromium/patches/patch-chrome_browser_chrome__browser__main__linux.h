@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_linux.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.h
 @@ -40,7 +40,7 @@ class ChromeBrowserMainPartsLinux : publ
    void PreCreateMainMessageLoop() override;

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/tools/bindings/mojom.gni.orig	2026-11-02 23:22:33.000000000 +0000
+--- mojo/public/tools/bindings/mojom.gni.orig	2026-11-11 21:01:38.000000000 +0000
 +++ mojo/public/tools/bindings/mojom.gni
-@@ -766,6 +766,21 @@ template("mojom") {
+@@ -780,6 +780,21 @@ template("mojom") {
        enabled_features += [ "is_apple" ]
      }
  

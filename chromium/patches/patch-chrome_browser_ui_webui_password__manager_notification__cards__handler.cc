@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/notification_cards_handler.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/notification_cards_handler.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/notification_cards_handler.cc
 @@ -44,7 +44,7 @@
  #include "components/signin/public/identity_manager/account_info.h"

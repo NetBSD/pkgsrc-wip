@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/device_identity/device_oauth2_token_service_factory.cc
 @@ -27,7 +27,7 @@ std::unique_ptr<DeviceOAuth2TokenStore> 
  #if BUILDFLAG(IS_CHROMEOS)

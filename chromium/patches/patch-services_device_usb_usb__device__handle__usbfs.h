@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.h
 @@ -20,7 +20,7 @@
  #include "base/threading/sequence_bound.h"
@@ -15,16 +15,16 @@ $NetBSD$
  #include "base/containers/flat_set.h"
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
  
-@@ -217,7 +217,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -238,7 +238,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    bool ClearHalt(uint8_t endpoint_address);
-   void DiscardUrb(Transfer* transfer);
+   virtual void DiscardUrb(Transfer* transfer);
  
 -#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Detach the interface from a kernel driver before ClaimInterface
    virtual bool DetachInterface(int interface_number,
                                 const CombinedInterfaceInfo& interfaceInfo);
-@@ -230,7 +230,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -251,7 +251,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    // Called when |fd_| is writable without blocking.
    void OnFileCanWriteWithoutBlocking();
  
@@ -33,7 +33,7 @@ $NetBSD$
    // Called from |DetachInterface|.
    std::string GetKernelDriver(int interface_number) const;
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-@@ -242,7 +242,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -263,7 +263,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    std::unique_ptr<base::FileDescriptorWatcher::Controller> watch_controller_;
    SEQUENCE_CHECKER(sequence_checker_);
  

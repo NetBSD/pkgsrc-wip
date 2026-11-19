@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/shared_memory_user_stream_args.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/crash/core/app/shared_memory_user_stream_args.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/crash/core/app/shared_memory_user_stream_args.h
 @@ -15,7 +15,7 @@
  #include "build/build_config.h"

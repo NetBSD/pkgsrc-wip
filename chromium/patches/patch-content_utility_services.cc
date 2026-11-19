@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/services.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/utility/services.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/utility/services.cc
 @@ -72,14 +72,14 @@
  extern sandbox::TargetServices* g_utility_target_services;

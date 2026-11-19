@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
-@@ -37,7 +37,7 @@ bool ScreenAIInstallState::IsDeviceCompa
+@@ -42,7 +42,7 @@ bool ScreenAIInstallState::IsDeviceCompa
    // Check if the CPU has the required instruction set to run the Screen AI
    // library.
    static const bool device_compatible = base::CPU().has_sse42();

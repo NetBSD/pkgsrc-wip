@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/functional/unretained_traits.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/functional/unretained_traits.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/functional/unretained_traits.h
 @@ -92,7 +92,7 @@ struct SupportsUnretainedImpl {
  // official builds, and then in non-test code as well.

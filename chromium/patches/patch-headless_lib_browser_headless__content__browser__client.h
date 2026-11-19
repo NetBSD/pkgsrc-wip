@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_content_browser_client.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- headless/lib/browser/headless_content_browser_client.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ headless/lib/browser/headless_content_browser_client.h
-@@ -48,7 +48,7 @@ class HeadlessContentBrowserClient : pub
+@@ -49,7 +49,7 @@ class HeadlessContentBrowserClient : pub
    CreateDevToolsManagerDelegate() override;
    content::GeneratedCodeCacheSettings GetGeneratedCodeCacheSettings(
        content::BrowserContext* context) override;

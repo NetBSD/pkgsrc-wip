@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/stub_password_manager_client.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/password_manager/core/browser/stub_password_manager_client.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/password_manager/core/browser/stub_password_manager_client.h
 @@ -94,7 +94,7 @@ class StubPasswordManagerClient : public
    MockPasswordFeatureManager* GetPasswordFeatureManager();

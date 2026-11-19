@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
-@@ -570,7 +570,7 @@ class ChromeContentBrowserClient : publi
+@@ -583,7 +583,7 @@ class ChromeContentBrowserClient : publi
        const GURL& site_url) override;
    std::unique_ptr<content::TracingDelegate> CreateTracingDelegate() override;
    bool IsSystemWideTracingEnabled() override;

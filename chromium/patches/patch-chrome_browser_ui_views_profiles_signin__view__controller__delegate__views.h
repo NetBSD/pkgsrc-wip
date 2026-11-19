@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h
 @@ -59,7 +59,7 @@ class SigninViewControllerDelegateViews
        SyncConfirmationStyle style,
@@ -24,7 +24,7 @@ $NetBSD$
    static std::unique_ptr<views::WebView>
    CreateManagedUserNoticeConfirmationWebView(
        BrowserWindowInterface& browser,
-@@ -157,7 +157,7 @@ class SigninViewControllerDelegateViews
+@@ -155,7 +155,7 @@ class SigninViewControllerDelegateViews
        std::optional<int> dialog_width,
        InitializeSigninWebDialogUI initialize_signin_web_dialog_ui);
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/contents_web_view.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/views/frame/contents_web_view.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/views/frame/contents_web_view.cc
-@@ -28,7 +28,7 @@
+@@ -29,7 +29,7 @@
  #include "ui/wm/core/window_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/actor/actor_util.h"  // nogncheck
  #endif
  
-@@ -174,7 +174,7 @@ void ContentsWebView::SetWebContents(con
+@@ -181,7 +181,7 @@ void ContentsWebView::SetWebContents(con
        .Then(&web_modal::WebContentsModalDialogManager::UpdateDialogHost);
  }
  

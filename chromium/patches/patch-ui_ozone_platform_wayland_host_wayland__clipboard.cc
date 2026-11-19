@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_clipboard.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_clipboard.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_clipboard.cc
 @@ -35,7 +35,7 @@
  #include "ui/ozone/platform/wayland/host/zwp_primary_selection_device_manager.h"

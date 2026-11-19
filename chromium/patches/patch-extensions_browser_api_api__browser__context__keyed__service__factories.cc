@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ extensions/browser/api/api_browser_context_keyed_service_factories.cc
 @@ -139,7 +139,7 @@ void EnsureApiBrowserContextKeyedService
    MediaPerceptionAPIManager::GetFactoryInstance();

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/services/isolated_xr_device/xr_sandbox_hook_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/services/isolated_xr_device/xr_sandbox_hook_linux.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/services/isolated_xr_device/xr_sandbox_hook_linux.cc
 @@ -450,6 +450,7 @@ bool XrPreSandboxHook(sandbox::policy::S
        manifest ? GetRuntimeLibraryPath(manifest_path, manifest->library_path)

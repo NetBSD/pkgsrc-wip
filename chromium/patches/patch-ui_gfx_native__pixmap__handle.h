@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/gfx/native_pixmap_handle.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"
@@ -33,7 +33,7 @@ $NetBSD$
    // File descriptor for the underlying memory object (usually dmabuf).
    base::ScopedFD fd;
  #elif BUILDFLAG(IS_FUCHSIA)
-@@ -78,7 +78,7 @@ struct COMPONENT_EXPORT(GFX) NativePixma
+@@ -79,7 +79,7 @@ struct COMPONENT_EXPORT(GFX) NativePixma
  
    std::vector<NativePixmapPlane> planes;
  

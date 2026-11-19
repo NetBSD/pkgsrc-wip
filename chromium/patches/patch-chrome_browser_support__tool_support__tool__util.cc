@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/support_tool/support_tool_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/support_tool/support_tool_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/support_tool/support_tool_util.cc
 @@ -52,7 +52,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_WITH_HW_DETAILS)

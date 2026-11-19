@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/url_request_context_builder_mojo.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/network/url_request_context_builder_mojo.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/network/url_request_context_builder_mojo.cc
 @@ -19,7 +19,7 @@
  #elif BUILDFLAG(IS_MAC)
@@ -24,9 +24,9 @@ $NetBSD$
  void URLRequestContextBuilderMojo::SetMojoSystemProxyResolver(
      mojo::PendingRemote<proxy_resolver::mojom::SystemProxyResolver>
          mojo_system_proxy_resolver) {
-@@ -102,7 +102,7 @@ URLRequestContextBuilderMojo::CreateProx
-       return proxy_resolution_service;
-     }
+@@ -106,7 +106,7 @@ URLRequestContextBuilderMojo::CreateProx
+   if (auto system_service = CreateSystemProxyResolutionService(net_log)) {
+     return system_service;
    }
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

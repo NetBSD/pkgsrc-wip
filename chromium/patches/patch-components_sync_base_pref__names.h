@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/base/pref_names.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/sync/base/pref_names.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/sync/base/pref_names.h
-@@ -146,7 +146,7 @@ inline constexpr char kMigrateExtensions
+@@ -141,7 +141,7 @@ inline constexpr char kMigrateExtensions
  inline constexpr char kMigrateThemeFromLocalToAccount[] =
      "sync.migrate_theme_from_local_to_account";
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/common/features.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/common/features.cc
 @@ -241,7 +241,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -44,7 +44,7 @@ $NetBSD$
    return base::FeatureList::IsEnabled(features::kFontDataServiceLinux);
  #elif BUILDFLAG(IS_CHROMEOS)
    return base::FeatureList::IsEnabled(features::kFontDataServiceChromeOS);
-@@ -860,7 +860,7 @@ BASE_FEATURE(kStrictHighRankProcessLRU, 
+@@ -876,7 +876,7 @@ BASE_FEATURE(kStrictHighRankProcessLRU, 
  // is handled at a different level and not through the interpretation of scroll
  // events.
  BASE_FEATURE(kTouchpadOverscrollHistoryNavigation,

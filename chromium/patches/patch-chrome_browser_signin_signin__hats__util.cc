@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_hats_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/signin/signin_hats_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/signin/signin_hats_util.cc
-@@ -45,7 +45,7 @@
+@@ -46,7 +46,7 @@
  
  namespace {
  
@@ -15,7 +15,7 @@ $NetBSD$
  constexpr char kChannel[] = "Channel";
  constexpr char kChromeVersion[] = "Chrome Version";
  constexpr char kNumberOfChromeProfiles[] = "Number of Chrome Profiles";
-@@ -239,7 +239,7 @@ void LaunchHatsSurveyForProfileInternal(
+@@ -240,7 +240,7 @@ void LaunchHatsSurveyForProfileInternal(
      Profile* profile,
      bool defer_if_no_browser,
      base::OnceCallback<SurveyStringData()> data_factory) {
@@ -24,7 +24,7 @@ $NetBSD$
    if (!profile || profile->IsOffTheRecord() ||
        !IsSurveyEnabledForHatsTrigger(trigger)) {
      return;
-@@ -285,7 +285,7 @@ void LaunchHatsSurveyForProfile(const st
+@@ -286,7 +286,7 @@ void LaunchHatsSurveyForProfile(const st
                                      access_point_for_data_type_promo) {
    LaunchHatsSurveyForProfileInternal(
        trigger, profile, defer_if_no_browser,

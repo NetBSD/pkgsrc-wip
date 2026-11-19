@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/external_image_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/blink/renderer/modules/webgpu/external_image_utils.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/blink/renderer/modules/webgpu/external_image_utils.cc
-@@ -423,7 +423,7 @@ bool CopyStaticImageBitmapToWGPUTexture(
+@@ -424,7 +424,7 @@ bool CopyStaticImageBitmapToWGPUTexture(
  // on linux platform.
  // TODO(crbug.com/1424119): using a webgpu mailbox texture on the OpenGLES
  // backend is failing for unknown reasons.

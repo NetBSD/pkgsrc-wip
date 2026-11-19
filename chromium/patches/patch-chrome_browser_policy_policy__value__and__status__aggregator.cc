@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/policy/policy_value_and_status_aggregator.cc
 @@ -62,7 +62,7 @@
  #include "chrome/browser/policy/value_provider/web_app_managed_configuration_value_provider.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/common/features.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/common/features.h
 @@ -93,7 +93,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEar
  #endif

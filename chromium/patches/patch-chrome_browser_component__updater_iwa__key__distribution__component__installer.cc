@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/component_updater/iwa_key_distribution_component_installer.cc
 @@ -32,7 +32,7 @@ bool IsComponentSupported() {
    // Key Distribution component is necessary for full IWAs support as it

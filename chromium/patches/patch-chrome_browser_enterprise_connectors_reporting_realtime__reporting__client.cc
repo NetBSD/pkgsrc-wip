@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -53,7 +53,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -33,7 +33,7 @@ $NetBSD$
  
  
  void AddCrowdstrikeSignalsToEvent(
-@@ -312,7 +312,7 @@ std::string RealtimeReportingClient::Get
+@@ -311,7 +311,7 @@ std::string RealtimeReportingClient::Get
    return client_id;
  }
  

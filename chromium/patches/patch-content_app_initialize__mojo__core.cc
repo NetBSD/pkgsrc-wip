@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/initialize_mojo_core.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/app/initialize_mojo_core.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/app/initialize_mojo_core.cc
-@@ -49,7 +49,7 @@ void InitializeMojoCore() {
+@@ -48,7 +48,7 @@ void InitializeMojoCore() {
      config.force_direct_shared_memory_allocation = true;
  #endif
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/hats/trust_safety_sentiment_service_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/hats/trust_safety_sentiment_service_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/hats/trust_safety_sentiment_service_factory.cc
 @@ -58,7 +58,7 @@ TrustSafetySentimentServiceFactory::Buil
    // TrustSafetySentimentSurvey is conducted only for Windows, MacOS and Linux

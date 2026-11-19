@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_context.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/gl/gl_context.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/gl/gl_context.cc
 @@ -140,7 +140,7 @@ bool GLContext::MakeCurrent(GLSurface* s
      recorded_max_gles_version_if_feasible = true;

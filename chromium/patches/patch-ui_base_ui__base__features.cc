@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/base/ui_base_features.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/base/ui_base_features.cc
 @@ -147,7 +147,7 @@ BASE_FEATURE(kWaylandExternalBeginFrameS
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -37,12 +37,12 @@ $NetBSD$
  // milestones.
  BASE_FEATURE(kEyeDropper,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -530,7 +530,7 @@ BASE_FEATURE(kChromeDarkNeutrals26, base
+@@ -509,7 +509,7 @@ BASE_FEATURE(kChromeDarkNeutrals26, base
  
  BASE_FEATURE(kDarkModeSurfaceTokens, base::FEATURE_DISABLED_BY_DEFAULT);
  

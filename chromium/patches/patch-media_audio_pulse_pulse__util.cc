@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/pulse/pulse_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- media/audio/pulse/pulse_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ media/audio/pulse/pulse_util.cc
-@@ -45,8 +45,12 @@ constexpr char kBrowserDisplayName[] = "
+@@ -43,8 +43,12 @@ constexpr char kBrowserDisplayName[] = "
  
  #if defined(DLOPEN_PULSEAUDIO)
- static const base::FilePath::CharType kPulseLib[] =
+ constexpr base::FilePath::CharType kPulseLib[] =
 +#if BUILDFLAG(IS_BSD)
 +    FILE_PATH_LITERAL("libpulse.so");
 +#else

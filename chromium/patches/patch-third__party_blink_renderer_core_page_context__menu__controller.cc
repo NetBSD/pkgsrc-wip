@@ -4,12 +4,12 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/blink/renderer/core/page/context_menu_controller.cc
-@@ -721,7 +721,7 @@ bool ContextMenuController::ShowContextM
-     if (potential_image_node != nullptr &&
-         IsA<HTMLCanvasElement>(potential_image_node)) {
+@@ -723,7 +723,7 @@ bool ContextMenuController::ShowContextM
        data.media_type = mojom::blink::ContextMenuDataMediaType::kCanvas;
+       const auto* canvas = To<HTMLCanvasElement>(potential_image_node);
+       data.has_image_contents = canvas->OriginClean();
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
        // TODO(crbug.com/40902474): Support reading from the WebGPU front buffer

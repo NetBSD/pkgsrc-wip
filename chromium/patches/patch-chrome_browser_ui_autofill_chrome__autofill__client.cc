@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/chrome_autofill_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/autofill/chrome_autofill_client.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/autofill/chrome_autofill_client.cc
-@@ -340,7 +340,7 @@ void ChromeAutofillClient::AtMemoryCopyP
+@@ -343,7 +343,7 @@ void ChromeAutofillClient::AtMemoryCopyP
                                             ->GetPrimaryMainFrame()
                                             ->GetPageUkmSourceId())) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
      client_->ShowAutofillAtMemoryPromo();
  #endif
    }
-@@ -392,7 +392,7 @@ void ChromeAutofillClient::AtMemoryCopyP
+@@ -395,7 +395,7 @@ void ChromeAutofillClient::AtMemoryCopyP
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/protocol/webrtc_transport.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/protocol/webrtc_transport.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/protocol/webrtc_transport.cc
-@@ -1204,7 +1204,7 @@ void WebrtcTransport::SendOffer() {
+@@ -1211,7 +1211,7 @@ void WebrtcTransport::SendOffer() {
    // `recvonly` if microphone remoting is not enabled. Only Linux hosts support
    // audio injection (microphone remoting).
    // TODO: crbug.com/513327818 - Hook this up with AudioInjector::IsSupported().

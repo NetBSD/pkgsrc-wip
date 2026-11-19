@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/metagen/metagen.py.orig	2026-11-02 23:22:33.000000000 +0000
+--- v8/tools/metagen/metagen.py.orig	2026-11-11 21:01:38.000000000 +0000
 +++ v8/tools/metagen/metagen.py
 @@ -300,12 +300,6 @@ def main() -> int:
    # LLVM revision and so always matches the parsing library.

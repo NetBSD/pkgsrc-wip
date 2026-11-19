@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/supervised_user/classify_url_navigation_throttle.cc
-@@ -44,7 +44,7 @@ namespace supervised_user {
+@@ -45,7 +45,7 @@ namespace supervised_user {
  namespace {
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -15,7 +15,7 @@ $NetBSD$
  bool ShouldShowReAuthInterstitial(
      content::NavigationHandle& navigation_handle) {
  #if BUILDFLAG(IS_ANDROID)
-@@ -224,7 +224,7 @@ void ClassifyUrlNavigationThrottle::OnIn
+@@ -245,7 +245,7 @@ void ClassifyUrlNavigationThrottle::OnIn
      case InterstitialResultCallbackActions::kCancelWithInterstitial: {
        CHECK(navigation_handle());
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

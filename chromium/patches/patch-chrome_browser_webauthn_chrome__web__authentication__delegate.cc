@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/chrome_web_authentication_delegate.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/webauthn/chrome_web_authentication_delegate.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/webauthn/chrome_web_authentication_delegate.cc
 @@ -70,7 +70,7 @@
  #include "url/url_constants.h"

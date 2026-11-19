@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-loader/src/loader/loader_environment.c.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/vulkan-loader/src/loader/loader_environment.c.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/vulkan-loader/src/loader/loader_environment.c
-@@ -50,7 +50,7 @@ char *loader_getenv(const char *name, co
+@@ -49,7 +49,7 @@ char *loader_getenv(const char *name, co
  }
  
  char *loader_secure_getenv(const char *name, const struct loader_instance *inst) {

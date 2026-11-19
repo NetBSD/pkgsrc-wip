@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/chrome_signin_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/signin/chrome_signin_client.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/signin/chrome_signin_client.cc
 @@ -168,7 +168,7 @@ signin_metrics::ProfileSignout kAlwaysAl
  std::string HatsSurveyTriggerForAccessPoint(

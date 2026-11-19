@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc
 @@ -44,7 +44,7 @@ std::u16string RelaunchChromeBanner::Get
    return l10n_util::GetStringUTF16(

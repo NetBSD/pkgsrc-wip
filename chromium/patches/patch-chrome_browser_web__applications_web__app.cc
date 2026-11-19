@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/web_app.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/web_applications/web_app.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/web_applications/web_app.cc
 @@ -75,7 +75,7 @@
  #include "url/origin.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -726,7 +726,7 @@ void WebApp::SetCurrentOsIntegrationStat
+@@ -728,7 +728,7 @@ void WebApp::SetCurrentOsIntegrationStat
  void WebApp::SetIsolationData(IsolationData isolation_data) {
    CHECK(manifest_id_.is_valid()
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

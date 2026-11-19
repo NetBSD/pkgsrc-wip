@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_navigation_observer.cc
 @@ -59,7 +59,7 @@
  #include "components/supervised_user/core/browser/android/android_parental_controls.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/tools/generate_policy_source.py.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/policy/tools/generate_policy_source.py.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/policy/tools/generate_policy_source.py
 @@ -36,9 +36,9 @@ PLATFORM_STRINGS = {
    'ios': ['ios'],

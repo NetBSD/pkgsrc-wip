@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_extensions_manager.h
 @@ -147,7 +147,7 @@ class SupervisedUserExtensionsManager : 
    // launched.

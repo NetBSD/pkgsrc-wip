@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/vr/openxr/openxr_render_loop.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- device/vr/openxr/openxr_render_loop.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ device/vr/openxr/openxr_render_loop.h
 @@ -38,7 +38,7 @@
  #include "third_party/openxr/src/include/openxr/openxr.h"
@@ -24,7 +24,7 @@ $NetBSD$
  class XRThread : public base::Thread {
   public:
    explicit XRThread(const char* name) : base::Thread(name) {}
-@@ -282,7 +282,7 @@ class OpenXrRenderLoop : public XRThread
+@@ -284,7 +284,7 @@ class OpenXrRenderLoop : public XRThread
    void OnWebXrTokenSignaled(int16_t frame_index,
                              std::vector<LayerId> updated_layers,
                              std::unique_ptr<gfx::GpuFence> gpu_fence);
