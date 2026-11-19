@@ -1,0 +1,14 @@
+$NetBSD: patch-mf,v 1.6 2021/04/09 06:40:59 wiz Exp $
+
+Make sure nss libraries have a run path defined.
+
+--- nss/coreconf/config.mk.orig	2016-02-26 20:51:11.000000000 +0000
++++ nss/coreconf/config.mk
+@@ -187,6 +187,7 @@ endif
+ DEFINES += -DUSE_UTIL_DIRECTLY
+ USE_UTIL_DIRECTLY = 1
+ 
++EXTRA_SHARED_LIBS +=    -Wl,-R${PREFIX}/lib/${MOZILLA_PKG_NAME}
+ # Build with NO_NSPR_10_SUPPORT to avoid using obsolete NSPR features
+ DEFINES += -DNO_NSPR_10_SUPPORT
+ 

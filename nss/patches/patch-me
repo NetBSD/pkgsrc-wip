@@ -1,0 +1,18 @@
+$NetBSD: patch-me,v 1.11 2026/03/25 22:48:10 wiz Exp $
+
+clang for SunOS(?)
+
+--- nss/lib/freebl/Makefile.orig	2026-02-19 09:30:44.000000000 +0000
++++ nss/lib/freebl/Makefile
+@@ -508,7 +508,11 @@ else
+     ifdef NS_USE_GCC
+ 	LD = gcc
+ 	AS = gcc
++        ifdef CC_IS_CLANG
++	ASFLAGS = -no-integrated-as
++        else
+ 	ASFLAGS = -x assembler-with-cpp
++        endif
+     endif
+     ifeq ($(USE_64),1)
+ 	# Solaris for AMD64

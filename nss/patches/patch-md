@@ -1,0 +1,26 @@
+$NetBSD: patch-md,v 1.4 2026/02/25 21:34:52 wiz Exp $
+
+???. from www/firefox/patch-ax.
+
+--- nss/coreconf/SunOS5.mk.orig	2026-02-19 09:30:44.000000000 +0000
++++ nss/coreconf/SunOS5.mk
+@@ -104,7 +104,7 @@ endif
+ ifeq ($(USE_64), 1)
+ 	DSO_LDOPTS += -m64
+ endif
+-	DSO_LDOPTS += -shared -h $(notdir $@)
++	DSO_LDOPTS += -shared -Wl,-h,$(notdir $@)
+ else
+ ifeq ($(USE_64), 1)
+ 	ifeq ($(OS_TEST),i86pc)
+@@ -116,6 +116,10 @@ DSO_LDOPTS += -z combreloc -z defs -z ignore
+ 	DSO_LDOPTS += -G -h $(notdir $@)
+ endif
+ DSO_LDOPTS += -z combreloc -z defs -z ignore
++
++ifdef LIBRUNPATH
++DSO_LDOPTS += -R$(LIBRUNPATH)
++endif
+ 
+ # -KPIC generates position independent code for use in shared libraries.
+ # (Similarly for -fPIC in case of gcc.)
