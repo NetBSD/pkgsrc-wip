@@ -16,7 +16,7 @@ PKG_SYSCONFSUBDIR=	dma
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
-USE_TOOLS+=	flex yacc
+USE_TOOLS+=	flex byacc
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 USE_LANGUAGES=	c
@@ -25,12 +25,19 @@ USE_LANGUAGES=	c
 
 DMA_GROUP?=	dma
 DMA_ROOT_USER?=	dma
-SPECIAL_PERMS+=	${PREFIX}/libexec/dma \
-		${REAL_ROOT_USER} ${DMA_GROUP} 2555
-SPECIAL_PERMS+=	${PREFIX}/libexec/dma-mbox-create \
-		${REAL_ROOT_USER} ${DMA_GROUP} 4554
-PKG_GROUPS=	${DMA_GROUP}
-PKG_USERS=	${DMA_ROOT_USER}:${DMA_GROUP}
+DMA_SPOOLDIR=	${VARBASE}/spool/dma
+
+.if ${UNPRIVILEGED:tl} == "yes"
+OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${UNPRIVILEGED_USER} ${UNPRIVILEGED_GROUP} 0700
+.else
+OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${DMA_ROOT_USER} ${DMA_GROUP} 0770
+SPECIAL_PERMS+=		${PREFIX}/libexec/dma \
+			${REAL_ROOT_USER} ${DMA_GROUP} 2555
+SPECIAL_PERMS+=		${PREFIX}/libexec/dma-mbox-create \
+			${REAL_ROOT_USER} ${DMA_GROUP} 4554
+PKG_GROUPS=		${DMA_GROUP}
+PKG_USERS=		${DMA_ROOT_USER}:${DMA_GROUP}
+.endif
 
 # DMA provides its own getprogname() on glibc.
 .if ${OPSYS} != "Linux"
@@ -51,8 +58,11 @@ INSTALLATION_DIRS=	${EGDIR} ${DOCDIR}
 CONF_FILES=	${EGDIR}/dma.conf ${PKG_SYSCONFDIR}/dma.conf
 CONF_FILES+=	${EGDIR}/auth.conf ${PKG_SYSCONFDIR}/auth.conf
 
-OWN_DIRS=	${VARBASE}/spool/dma
-OWN_DIRS_PERMS=	${VARBASE}/spool/dma ${DMA_ROOT_USER} ${DMA_GROUP} 0770
+SUBST_CLASSES+=		spool
+SUBST_STAGE.spool=	pre-configure
+SUBST_FILES.spool=	dma.c dma.conf
+SUBST_SED.spool=	-e 's,/var/spool/dma,${DMA_SPOOLDIR},g'
+SUBST_NOOP_OK.spool=	yes
 
 SUBST_CLASSES+=		mailer
 SUBST_STAGE.mailer=	pre-configure
