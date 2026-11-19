@@ -536,6 +536,7 @@ SHA1 (patch-build_linux_strip__binary.py) = ebe97bab805cda1e765392d4169913149c49
 SHA1 (patch-build_linux_unbundle_icu.gn) = d59a5d72bacfdfe89e52e56f09b1e193594d0dc3
 SHA1 (patch-build_linux_unbundle_libpng.gn) = 12acbe92defeaf9c836e7d088eae8c1399073126
 SHA1 (patch-build_linux_unbundle_libusb.gn) = a897fbc9194233baa39a0b358b8fb31e5e7c411f
+SHA1 (patch-build_linux_unbundle_libvpx.gn) = 34cb0036aec85365f6b0772b7766358750a2ec06
 SHA1 (patch-build_modules_unified_modulemap__config.py) = 77ad654a547cf79fb68654cd3626cc2bab07dd25
 SHA1 (patch-build_rust_allocator_lib.rs) = 8beffb49f364e70c1ae1626544b26de333c4753f
 SHA1 (patch-build_rust_rust__bindgen__generator.gni) = 7aa2967b4db182b0df614572aaae90510703f7a2
