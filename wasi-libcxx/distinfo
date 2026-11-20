@@ -4,5 +4,6 @@ BLAKE2s (llvm-project-23.1.6.src.tar.xz) = 4b9089db7bf37f6480006f23d700c7fb93c53
 SHA512 (llvm-project-23.1.6.src.tar.xz) = 03beadbaf13ec29911d3934395cfa19a7d77d6c50532e70375f5c1d43369a9b17c10f00325c08d874776df6679a3bee77ce50110408748a3f661372f1fdfbce6
 Size (llvm-project-23.1.6.src.tar.xz) = 179172364 bytes
 SHA1 (patch-libcxx_include_CMakeLists.txt) = 6f6a65619f7d283a40e3511a309199d0c28e02d8
+SHA1 (patch-libcxx_include____locale__dir_locale__base__api.h) = 05c48c6ee130b63c6fb21707ec290c44fe163a3e
 SHA1 (patch-libcxx_src_CMakeLists.txt) = ed0737b69cf6c0564625df20ab6e39df3b780fe6
 SHA1 (patch-libcxxabi_src_CMakeLists.txt) = deaa2a57f409ac215eb6b9d219086cc3f72b0d7d
