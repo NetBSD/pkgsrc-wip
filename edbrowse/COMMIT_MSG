@@ -1,0 +1,15 @@
+www/edbrowse: Update edbrowse to version 3.8.15
+
+Update prepared in wip by adr
+
+Migrate to quickjs-ng.
+
+3.8.15
+
+The lsr and lsc commands.
+
+Migrate from quickjs to quickjs-ng.
+The latter is preferred by most distributions, but we support both.
+Use flags at build time to switch between the two. See README.
+
+Rerender quickly after browse then throttle back to the rr_interval.

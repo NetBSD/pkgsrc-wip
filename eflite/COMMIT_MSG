@@ -1,0 +1,13 @@
+audio/eflite: Update eflite to version 0.0.0.91
+
+Update prepared in wip by adr
+
+Commits on Apr 15, 2025
+    Keep the audio device open
+Commits on Feb 17, 2025
+    Fix build with gcc 15
+Commits on Jul 22, 2024
+    0xa0 is a hard space
+Commits on Jul 13, 2024
+    Fix the dictionary of high ASCII characters
+    Run autoupdate

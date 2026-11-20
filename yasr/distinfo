@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2024/03/11 07:52:38 wiz Exp $
+
+BLAKE2s (yasr-0.0.0.156-4b1799010f0453d822e1d246ef06f5ca204c6bdc.tar.gz) = 8295f71eb9af1adf5911e5cad999fe8df1367d9f24bb26a5b84cac827a61c135
+SHA512 (yasr-0.0.0.156-4b1799010f0453d822e1d246ef06f5ca204c6bdc.tar.gz) = a6aeac2e684c68ac4adedd2d10dd034877c1028f7b391476e34f72ea82d92b0411e30e49971e74502ea69880b7205e8177a3e7b720387fc2420b2092b52ba1fc
+Size (yasr-0.0.0.156-4b1799010f0453d822e1d246ef06f5ca204c6bdc.tar.gz) = 100866 bytes
+SHA1 (patch-meson.build) = a6df4edfa35fbfb863e42a3e6a7c33e5edcc2d2c
+SHA1 (patch-yasr_main.c) = db9c480d97a3ca20ada091696f8a1fa0030115b2
+SHA1 (patch-yasr_tts.c) = c96764b76e176c7fda5aa166831d647a70b6c382
+SHA1 (patch-yasr_yasr.h) = c36abd284d8d7e80766131b4332cfe527fab455b

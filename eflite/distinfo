@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2024/02/25 22:00:09 wiz Exp $
+
+BLAKE2s (eflite-0.0.0.91-9cd004236fdc3cfcd0a7a8c8acb322e84595514c.tar.gz) = 705eeb0e774ff1762fe023464a53d171632beddd17baf04cf5e8d9968ed62aa0
+SHA512 (eflite-0.0.0.91-9cd004236fdc3cfcd0a7a8c8acb322e84595514c.tar.gz) = d705e627e884542642eabc0f360df053ec57b28e4c276dcbee26f5e17ac24ad44ae6f50935d30e12aaa234f3ce0831ff1abf2c076592e5a2eeea593a6947a2de
+Size (eflite-0.0.0.91-9cd004236fdc3cfcd0a7a8c8acb322e84595514c.tar.gz) = 32109 bytes
+SHA1 (patch-Makefile.in) = f77c612548471c3465860afc9568426ee5faaca8
+SHA1 (patch-fs.c) = 21dc050709e9038b74159a4d614dac4b462eaf06
+SHA1 (patch-soccon.c) = 33074b1d582738919e7df5a735e204f2aefdfb90
+SHA1 (patch-sockopen.c) = 750cb4431307c182692a0a59e105c5be8e32e539

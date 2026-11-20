@@ -1,0 +1,26 @@
+audio/yasr: Update yasr to version 0.0.0.156
+
+Update prepared in wip by adr
+
+Update patches
+Change license
+
+Commits on Aug 5, 2026
+    First pass at porting to MacOS
+Commits on Aug 2, 2026
+    Re-license under the GNU Lesser General Public License v2.1
+Commits on Jul 11, 2026
+    meson: Link with libintl when needed
+    meson: Check for util.h
+    meson: Add Homebrew include directory on MacOS
+Commits on May 24, 2026
+    Parse OSC sequences
+Commits on May 6, 2026
+    win_csi: Ignore intermediate characters
+Commits on Sep 5, 2025
+    Update yasr.conf to account for "special" being deleted
+    Add a "silent window" key binding
+    Allow restricting speech to a particular region of the screen
+Commits on Feb 18, 2025
+    Fix build with speech-dispatcher disabled
+    Fix a prototype
