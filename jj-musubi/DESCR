@@ -1,0 +1,14 @@
+jj-musubi keeps your jujutsu (jj) repositories in sync across
+machines, including work in progress. This lets you work on your
+laptop, then pick up on another machine where you left off, without
+needing to stop and commit. Syncing runs in the background.
+
+One machine runs a hub, which stores shared history and coordinates
+updates. A daemon on each machine that you do work on talks to the
+hub over ssh to sync its local repos. A collection of synced copies
+of a repo is a hive. One hub can serve many hives.
+
+Engineers at Meta have similar workflows via Sapling's Commit Cloud,
+and engineers at Google from an internal jj server. jj-musubi brings
+these workflows to your own machines. It's similar to extending
+jj's concept of a workspace to multiple machines.
