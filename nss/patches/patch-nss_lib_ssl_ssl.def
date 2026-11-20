@@ -1,0 +1,16 @@
+$NetBSD$
+
+Export symbol used by firefox 162.
+
+--- nss/lib/ssl/ssl.def.orig	2026-11-18 20:46:23.000000000 +0000
++++ nss/lib/ssl/ssl.def
+@@ -253,3 +253,9 @@ SSL_ClientCertCallbackComplete;
+ ;+    local:
+ ;+*;
+ ;+};
++;+NSS_3.134 {    # NSS 3.134 release
++;+    global:
++_ZN7mozilla4pkix24VerifyMLDSASignedDataNSSENS0_5InputENS0_17MLDSAParameterSetES1_S1_Pv;
++;+    local:
++;+*;
++;+};

@@ -1,4 +1,4 @@
-$NetBSD: patch-nss_coreconf_command.mk,v 1.5 2026/11/19 02:49:18 wiz Exp $
+$NetBSD: patch-nss_coreconf_command.mk,v 1.4 2019/12/28 23:04:04 ryoon Exp $
 
 * Pass CFLAGS from pkgsrc
 
