@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.672 2026/09/02 19:04:57 wiz Exp $
+# $NetBSD: Makefile,v 1.681 2026/11/11 11:56:14 wiz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		155.0
+MOZ_BRANCH=		159.0
 MOZ_BRANCH_MINOR=	.1
 CANDIDATE_BUILD=	# for release, make this empty
+PATCHFILES+=		2e89a83f6b9b92c3b3b617b9782e51a4e84e7c3d.diff
+PATCH_SITES+=		https://github.com/mozilla-firefox/firefox/commit/
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 
@@ -16,10 +18,11 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 .endif
 
 PKGNAME=	${DISTNAME:S/.source/${RCVER:S/build/rc/}/:S/esr//}
+PKGREVISION=	1
 CATEGORIES=	www
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-155.0.1.tgz
+NODEJSKIT=		nodejs-output-156.0.1.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -53,6 +56,9 @@ LICENSE=	mpl-1.1
 #
 # -----------------------------------------------------------------------
 
+### As if 157.0, `make maintainer-files` does not work.
+### ryoon will disable build without nodejs for a while.
+FIREFOX_MAINTAINER=yes
 WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:C/b.*//}
 
 MOZILLA_DIR=	# empty

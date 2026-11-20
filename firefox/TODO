@@ -1,0 +1,22 @@
+With wip/nss (3.134):
+
+In file included from Unified_cpp_protocol_http4.cpp:101:
+../../../../firefox-159.0.1/netwerk/protocol/http/WebTransportCertificateVerifier.cpp: In function 'mozilla::pkix::Result mozilla::net::AuthCertificateWithServerCertificateHashes(nsTArray<unsigned char>&, const nsTArray<RefPtr<nsIWebTransportHash> >&)':
+../../../../firefox-159.0.1/netwerk/protocol/http/WebTransportCertificateVerifier.cpp:231:45: error: cannot declare variable 'trustDomain' to be of abstract type 'mozilla::psm::ServerCertHashesTrustDomain'
+  231 |   mozilla::psm::ServerCertHashesTrustDomain trustDomain;
+      |                                             ^~~~~~~~~~~
+../../../../firefox-159.0.1/netwerk/protocol/http/WebTransportCertificateVerifier.cpp:14:7: note:   because the following virtual functions are pure within 'mozilla::psm::ServerCertHashesTrustDomain':
+   14 | class ServerCertHashesTrustDomain : public mozilla::pkix::TrustDomain {
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/www/firefox/work/.buildlink/include/nss/mozpkix/pkixder.h:43,
+                 from /tmp/www/firefox/work/build/dist/include/CertVerifier.h:18,
+                 from /tmp/www/firefox/work/build/dist/include/CommonSocketControl.h:9,
+                 from ../../../../firefox-159.0.1/netwerk/protocol/http/QuicSocketControl.h:9,
+                 from ../../../../firefox-159.0.1/netwerk/protocol/http/QuicSocketControl.cpp:6,
+                 from Unified_cpp_protocol_http4.cpp:47:
+/tmp/www/firefox/work/.buildlink/include/nss/mozpkix/pkixtypes.h:358:18: note:     'virtual mozilla::pkix::Result mozilla::pkix::TrustDomain::CheckMLDSAParameterSetIsAcceptable(mozilla::pkix::EndEntityOrCA, mozilla::pkix::MLDSAParameterSet)'
+  358 |   virtual Result CheckMLDSAParameterSetIsAcceptable(
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/www/firefox/work/.buildlink/include/nss/mozpkix/pkixtypes.h:368:18: note:     'virtual mozilla::pkix::Result mozilla::pkix::TrustDomain::VerifyMLDSASignedData(mozilla::pkix::Input, mozilla::pkix::MLDSAParameterSet, mozilla::pkix::Input, mozilla::pkix::Input)'
+  368 |   virtual Result VerifyMLDSASignedData(Input data,
+      |                  ^~~~~~~~~~~~~~~~~~~~~

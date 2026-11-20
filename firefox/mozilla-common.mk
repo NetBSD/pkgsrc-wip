@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.324 2026/09/05 03:51:59 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.327 2026/11/03 16:46:29 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -44,8 +44,8 @@ CFLAGS+=		-msse2
 
 CKSUM_CRATES+=		third_party/rust/mtu
 
-CKSUMS+=		9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
-CKSUMS+=		986f84f01a44521224c7a7c1b1883cc6a4f89cbcb24b36844bfffea5f285747e
+CKSUMS+=		ffc9689baca349ecae41251c6e98a1947e9bad232b167caa1ba586dfef5fa457
+CKSUMS+=		7e4c1ad17090e25376316d116b0b10fd938272dae0bd50befca61895a585a895
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
@@ -163,15 +163,6 @@ SUBST_STAGE.sqlite3-opt=	pre-configure
 SUBST_MESSAGE.sqlite3-opt=	Fixing segfault in libmozsqlite3.so
 SUBST_FILES.sqlite3-opt+=	${MOZILLA_DIR}third_party/sqlite3/src/moz.build
 SUBST_VARS.sqlite3-opt+=	SQLITE3OPTFLAG
-
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "aarch64"
-SUBST_CLASSES+=			sve2
-SUBST_STAGE.sve2=		pre-configure
-SUBST_FILES.sve2=		media/libyuv/libyuv/source/convert.cc
-SUBST_FILES.sve2+=		media/libyuv/libyuv/source/scale_argb.cc
-SUBST_FILES.sve2+=		media/libyuv/libyuv/source/convert_argb.cc
-SUBST_SED.sve2=			-e 's/_SVE2/_NEON/g'
-.endif
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or earlier.
 RUST_MAKE_JOBS=		# empty by default
