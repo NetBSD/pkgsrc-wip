@@ -2,9 +2,11 @@ $NetBSD$
 
 Rename queue to dma_queue because the struct is already defined in SunOS.
 
+Use NS_MAXDNAME for macOS compatibility.
+
 --- dma.h.orig	2016-02-07 12:41:49.000000000 +0000
 +++ dma.h
-@@ -118,7 +118,7 @@ struct qitem {
+@@ -120,7 +120,7 @@
  };
  LIST_HEAD(queueh, qitem);
  
@@ -13,7 +15,16 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  	struct queueh queue;
  	char *id;
  	FILE *mailf;
-@@ -205,16 +205,16 @@ int base64_decode(const char *, void *);
+@@ -156,7 +156,7 @@
+ 
+ 
+ struct mx_hostentry {
+-	char		host[MAXDNAME];
++	char		host[NS_MAXDNAME];
+ 	char		addr[INET6_ADDRSTRLEN];
+ 	int		pref;
+ 	struct addrinfo	ai;
+@@ -218,16 +218,16 @@
  /* dma.c */
  #define EXPAND_ADDR	1
  #define EXPAND_WILDCARD	2
@@ -36,7 +47,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  int flushqueue_since(unsigned int);
  int flushqueue_signal(void);
  
-@@ -223,7 +223,7 @@ int deliver_local(struct qitem *);
+@@ -236,7 +236,7 @@
  
  /* mail.c */
  void bounce(struct qitem *, const char *);

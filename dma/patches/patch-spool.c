@@ -1,6 +1,8 @@
 $NetBSD$
 
-Rename queue to dma_queue because the struct is already defined in SunOS. 
+Rename queue to dma_queue because the struct is already defined in SunOS.
+
+Use st_mtime for the flush interval on macOS.
 
 --- spool.c.orig	2019-08-20 09:52:52.000000000 +0000
 +++ spool.c
@@ -13,7 +15,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	char fn[PATH_MAX+1];
  	struct stat st;
-@@ -154,10 +154,10 @@ writequeuef(struct qitem *it)
+@@ -154,10 +154,10 @@
  }
  
  static struct qitem *
@@ -26,7 +28,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  	FILE *queuef = NULL;
  	char *s;
  	char *queueid = NULL, *sender = NULL, *addr = NULL;
-@@ -232,7 +232,7 @@ out:
+@@ -232,7 +232,7 @@
  }
  
  int
@@ -35,7 +37,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	struct stat st;
  	struct qitem *it;
-@@ -279,7 +279,7 @@ delfiles:
+@@ -279,7 +279,7 @@
  }
  
  int
@@ -44,7 +46,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	struct stat sb;
  	struct qitem *it;
-@@ -385,7 +385,7 @@ fail:
+@@ -385,7 +385,7 @@
  }
  
  void
@@ -53,3 +55,12 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	struct qitem *it;
  
+@@ -419,7 +419,7 @@
+ 		return (0);
+ 
+ 	/* Did the flush file get touched within the last period seconds? */
+-	if (st.st_mtim.tv_sec + period >= now.tv_sec)
++	if (st.st_mtime + period >= now.tv_sec)
+ 		return (1);
+ 	else
+ 		return (0);
