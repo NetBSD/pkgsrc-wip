@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/src/node_http2.h.orig	2026-11-19 09:50:14.737932461 +0000
+--- third_party/electron_node/src/node_http2.h.orig	2026-11-20 11:41:22.889579345 +0000
 +++ third_party/electron_node/src/node_http2.h
 @@ -146,6 +146,96 @@ struct Http2RcBufferPointerTraits {
  using Http2Headers = NgHeaders<Http2HeadersTraits>;

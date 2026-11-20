@@ -26,6 +26,15 @@ $NetBSD$
        testLocale('', lcAll, true)
      );
    });
+@@ -2175,7 +2175,7 @@ describe('chromium features', () => {
+   // fake session bus. A pick succeeds with the URIs queued through
+   // QueueResponse; with nothing queued the mock cancels it.
+   ifdescribe(
+-    process.platform === 'linux' &&
++    (process.platform === 'linux' || process.platform === 'freebsd' || process.platform === 'netbsd') &&
+       process.arch !== 'ia32' &&
+       !process.arch.startsWith('arm') &&
+       !!process.env.DBUS_SESSION_BUS_ADDRESS
 @@ -4523,12 +4523,12 @@ describe('font fallback', () => {
        expect(fonts[0].familyName).toBe('Arial');
      } else if (process.platform === 'darwin') {

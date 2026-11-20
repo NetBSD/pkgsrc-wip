@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-11-19 09:50:13.747207025 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-11-20 11:41:22.071934147 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
 @@ -360,215 +360,49 @@ bool MaybeIsLocalUNCPath(const base::Fil
  }

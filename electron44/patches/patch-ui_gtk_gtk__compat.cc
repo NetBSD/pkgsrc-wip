@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- ui/gtk/gtk_compat.cc.orig	2026-11-19 09:50:11.007338643 +0000
+--- ui/gtk/gtk_compat.cc.orig	2026-11-20 11:41:20.323382820 +0000
 +++ ui/gtk/gtk_compat.cc
 @@ -82,15 +82,6 @@ void* GetLibGio() {
    return libgio;

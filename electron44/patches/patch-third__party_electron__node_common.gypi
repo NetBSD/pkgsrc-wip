@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- third_party/electron_node/common.gypi.orig	2026-11-19 09:50:14.813480235 +0000
+--- third_party/electron_node/common.gypi.orig	2026-11-20 11:41:22.959516217 +0000
 +++ third_party/electron_node/common.gypi
 @@ -605,11 +605,11 @@
            'NOMINMAX',
