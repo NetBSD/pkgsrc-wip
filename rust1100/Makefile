@@ -58,6 +58,7 @@ REPLACE_BASH+=		library/portable-simd/subtree-sync.sh
 CB=			library/compiler-builtins
 REPLACE_BASH+=		${CB}/ci/bench-icount.sh
 REPLACE_BASH+=		${CB}/ci/install-bench-deps.sh
+REPLACE_BASH+=		${CB}/ci/install-test-deps.sh
 REPLACE_BASH+=		${CB}/ci/miri.sh
 REPLACE_BASH+=		${CB}/ci/run-docker.sh
 REPLACE_BASH+=		${CB}/ci/run-extensive.sh
