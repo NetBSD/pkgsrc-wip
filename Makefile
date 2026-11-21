@@ -5288,6 +5288,7 @@ SUBDIR+=	rtaudio
 SUBDIR+=	rtcmix
 SUBDIR+=	rte
 SUBDIR+=	rthread
+SUBDIR+=	rtk
 SUBDIR+=	rtl_433
 SUBDIR+=	rtmidi
 SUBDIR+=	rtpbreak
