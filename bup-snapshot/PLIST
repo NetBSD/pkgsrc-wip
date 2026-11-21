@@ -50,6 +50,7 @@ lib/bup/bup/commit.py
 lib/bup/bup/compat.py
 lib/bup/bup/config.py
 lib/bup/bup/drecurse.py
+lib/bup/bup/features.py
 lib/bup/bup/gc.py
 lib/bup/bup/git.py
 lib/bup/bup/hashsplit.py
