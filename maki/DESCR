@@ -1,0 +1,7 @@
+An AI coding agent optimized for minimal use of context tokens,
+while providing a great user experience.
+
+I got frustrated with existing coding agents and hitting hourly/weekly
+token limits, so I built maki. It's a single Rust binary with a
+TUI, a bunch of tricks to keep junk out of the context window, and
+a Neovim style Lua plugin system.
