@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.38 2025/11/13 23:18:47 leot Exp $
+
+BLAKE2s (elinks-0.20.0.tar.xz) = dd22e871a15d3287aecefdbc2145034a204e1770052821e42b994ee4dc00167f
+SHA512 (elinks-0.20.0.tar.xz) = a1ad2e94c73f20f7bbed6b47634d7c3b2343bd2e7a13a0563f701711724cae08a4906cc3adc24000742287a1653468ab3edd82db7708d3e5a336889a326dda44
+Size (elinks-0.20.0.tar.xz) = 2220344 bytes
+SHA1 (patch-src_js_quickjs_heartbeat.c) = 14572dea0536af6da33a202f8195f5f1857e5955
+SHA1 (patch-src_js_quickjs_heartbeat.h) = 2542f51c60eee7dd96c00b34c1bab78e1fdae6ed
+SHA1 (patch-src_util_memory.c) = 4d0c89ff99ca3a46c496b1a4e196c3f71d10335e
