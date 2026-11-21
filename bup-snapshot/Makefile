@@ -17,9 +17,10 @@ GITHUB_TAG=	0.34.1
 EXTRACT_SUFX=		.tar.gz
 DOC_TAG=		8379be01a941a3c4ff1efe73342e99d9f570fb68
 DOC_UNPACK=		bup-${DOC_TAG}
-DOC_DISTFILE=		bup-man-${DOC_TAG}${EXTRACT_SUFX}
+DOC_DISTFILE=		bup-doc-${DOC_TAG}${EXTRACT_SUFX}
 SITES.${DOC_DISTFILE}=	-${MASTER_SITE_GITHUB:=bup/bup/archive/}${DOC_TAG}${EXTRACT_SUFX}
 DISTFILES=		${DEFAULT_DISTFILES} ${DOC_DISTFILE}
+DIST_DOC=		${WRKDIR}/${DOC_UNPACK}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bup/bup
@@ -43,8 +44,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 TEST_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
-DIST_DOC=		${WRKDIR}/${DOC_UNPACK}
-
 ALL_ENV+=	BUP_PYTHON_CONFIG=${PREFIX}/bin/python${PYVERSSUFFIX}-config
 
 MAKE_FILE=	GNUmakefile
@@ -52,7 +51,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-# Even if converters/pandoc is installed, pretend as if it isn't
+# Even if converters/pandoc is installed, pretend as if it isn't.
 MAKE_FLAGS+=	PANDOC=
 
 # find work/ -type f |xargs egrep 'env.*bash'|awk -F: '{print $1}' | sed -e s,work/bup-5f9cf697b3daa3d4d6899f9366ebc1fd64161a32/,,
@@ -140,10 +139,11 @@ REPLACE_BASH+=		test/ext/test-xdev
 
 DOCDIR=			share/doc/${PKGBASE}
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${DOCDIR}
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${DOCDIR} ${DOCDIR}/html
 
 post-install:
 	${INSTALL_DATA} ${DIST_DOC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${DIST_DOC}/html/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/html
 	${INSTALL_DATA} ${WRKSRC}/DESIGN.md ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
