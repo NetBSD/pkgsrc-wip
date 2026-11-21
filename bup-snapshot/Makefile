@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.75 2026/01/29 00:35:05 gdt Exp $
+# $NetBSD: Makefile,v 1.77 2026/11/21 12:30:29 gdt Exp $
 
-DISTNAME=	bup-0.34.1
+VERSION=	0.34.1
+DISTNAME=	bup-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
-GITHUB_TAG=	0.34.1
+GITHUB_TAG=	${VERSION}
 # bup has two problems that make packaging difficult.  One is that
 # building man pages requires non-portable tools (pandoc).  The other
 # is that it is hosted on github, which makes hosting tarballs
@@ -39,10 +40,6 @@ CONFIG_SHELL=	bash
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
-TEST_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
 ALL_ENV+=	BUP_PYTHON_CONFIG=${PREFIX}/bin/python${PYVERSSUFFIX}-config
 
@@ -152,6 +149,12 @@ post-install:
 # Note that tests 1) will fail on a fs mounted noatime, 2) need a lot
 # of space, perhaps 1 GB, and 3) can fail with test data at the DST
 # boundary because of what I believe is a bug in NetBSD libc.
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+TEST_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
+
 TEST_TARGET=	test
 # \todo Pass MAKE_JOBS into "gmake test" via -j.
 TEST_ENV+=	TZ=UTC
