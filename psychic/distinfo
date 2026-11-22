@@ -639,3 +639,4 @@ Size (zerocopy-derive-0.8.27.crate) = 89827 bytes
 BLAKE2s (zlib-rs-0.6.7.crate) = 8287d886c8b9adf80d97b224572e870a5938d4ec454b38736b0885e7fac4b2b9
 SHA512 (zlib-rs-0.6.7.crate) = 888011fc16d3dcf245b4d05ef841ca7cf06b69cc58d2cc2f6c17f668ffcd7424dccdbe1912697ba67602ffa5434d2d08deee0d624123461956e20020c703546d
 Size (zlib-rs-0.6.7.crate) = 215740 bytes
+SHA1 (patch-.._vendor_lightgbm3-sys-1.0.11_build.rs) = 74abcb79108c3718e415dee5094b9be0877d33c0
