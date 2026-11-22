@@ -22,7 +22,9 @@ LIBS.Darwin+=	-lresolv
 LIBS.Linux+=	-lresolv
 LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=		c
+# Not documented, but uses // comments.
+USE_CC_FEATURES=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
