@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (hoot-0.10.0.tar.gz) = 9b751b602c7c381d90e4935c4650ec073da30438a126a254a3518f13d6afbcd6
+SHA512 (hoot-0.10.0.tar.gz) = da5f20051363d6e65c3a01872c0e61370908b9585513fe9daa72ffea3c5958eb8dac58c55b1beec896d3b8c0291c2e291213ba6ff4e7ef0ad531c4367eda057f
+Size (hoot-0.10.0.tar.gz) = 537865 bytes

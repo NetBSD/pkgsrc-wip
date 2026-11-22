@@ -1,0 +1,6 @@
+Hoot is an ahead-of-time, whole-program compiler for Guile Scheme
+to WebAssembly. In addition to the compiler, Hoot contains a full
+WebAssembly toolchain with an assembler, a disassembler, a linker,
+an interpreter, etc.  Hoot produces binaries that conform to the
+Wasm 3.0 specification which features tail calls and heap-allocated
+reference types with garbage collection.
