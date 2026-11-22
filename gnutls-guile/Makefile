@@ -1,11 +1,9 @@
 # $NetBSD$
 
-PKGNAME=		gnutls-${DISTNAME}
-DISTNAME=		guile-3.7.11
+DISTNAME=		guile-gnutls-5.0.3
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_GITLAB:=gnutls/}
-GITLAB_PROJECT=		guile
-GITLAB_RELEASE=		v${PKGVERSION_NOREV}
+MASTER_SITES=		${MASTER_SITE_CODEBERG:=guile-gnutls/}
+CODEBERG_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://gitlab.com/gnutls/gnutls-guile/
@@ -14,10 +12,10 @@ LICENSE=		gnu-lgpl-v2.1 AND gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 GUILE_NEED_BOOTSTRAP=	yes
-USE_TOOLS+=		pkg-config makeinfo
+USE_TOOLS+=		pkg-config makeinfo gmake
 INFO_FILES=		yes
-RELEASE_COMMIT=		1fbc46c7fda2bde6de583a5de241657d872aa006
-WRKSRC=			${WRKDIR}/guile-v${PKGVERSION_NOREV}-${RELEASE_COMMIT}
+
+WRKSRC=			${WRKDIR}/${PKGBASE}
 
 .include "../../lang/guile30/module.mk"
 .include "../../security/gnutls/buildlink3.mk"

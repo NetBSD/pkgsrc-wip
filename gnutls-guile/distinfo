@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (guile-3.7.11.tar.gz) = e29bf6a6811d4fdbbfffb8b7adb77c483449bae9fb74552688148730c7be74cc
-SHA512 (guile-3.7.11.tar.gz) = 8b12651422d07d379381ec571cab264eb9d511fd580f6716f68e65ed0893f8e9928b18ecba242c632948ba4e5ea35b584a3bc9845d7c3408345415d8ae2befda
-Size (guile-3.7.11.tar.gz) = 110028 bytes
+BLAKE2s (guile-gnutls-5.0.3.tar.gz) = 02def21169d0687884235363c49926c817a403273f7cecf1d8f13aa2f020e588
+SHA512 (guile-gnutls-5.0.3.tar.gz) = 55ba56052cd0fd0a3ecd694436e22958c82287ab1b487b146ae140c280d4cd5c579881d19584f1512f15cd946f0cf8dde578db9b97e46a5a2a1d50da305bd7dc
+Size (guile-gnutls-5.0.3.tar.gz) = 226307 bytes

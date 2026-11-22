@@ -1,0 +1,7 @@
+@comment $NetBSD$
+guile/3.0/info/gnutls-guile.info
+guile/3.0/lib/guile/3.0/extensions/guile-gnutls-v-2.la
+guile/3.0/lib/guile/3.0/site-ccache/gnutls.go
+guile/3.0/lib/guile/3.0/site-ccache/gnutls/extra.go
+guile/3.0/share/guile/site/3.0/gnutls.scm
+guile/3.0/share/guile/site/3.0/gnutls/extra.scm
