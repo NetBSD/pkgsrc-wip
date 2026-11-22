@@ -1,6 +1,7 @@
 $NetBSD$
 
 Avoid unportable cp(1) flag.
+https://forge.soutade.fr/soutade/libgourou/issues/35
 
 --- Makefile.orig	2026-11-08 19:27:52.000000000 +0000
 +++ Makefile
