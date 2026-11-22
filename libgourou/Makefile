@@ -30,8 +30,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/libgourou
 
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../print/uPDFParser/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
-.include "../../wip/uPDFParser/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
