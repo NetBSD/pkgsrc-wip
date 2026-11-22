@@ -4,10 +4,22 @@ Stage executables without privileged ownership or modes.
 Install dma into libexec alongside dma-mbox-create (rather than sbin).
 The package declares their final permissions using SPECIAL_PERMS.
 
+
 --- Makefile.orig
 +++ Makefile
-@@ -55,2 +55,2 @@
+@@ -17,3 +17,3 @@
+ CFLAGS?=	-O -pipe
+-LDADD?=		-lssl -lcrypto -lresolv
++LDADD?=		-lssl -lcrypto
+
+@@ -52,4 +52,4 @@
+ 	${INSTALL} -d ${DESTDIR}${MAN}/man8 ${DESTDIR}${LIBEXEC}
 -	${INSTALL} -m 2755 -o root -g mail dma ${DESTDIR}${SBIN}
 -	${INSTALL} -m 4754 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
 +	${INSTALL} -m 0555 dma ${DESTDIR}${LIBEXEC}
 +	${INSTALL} -m 0555 dma-mbox-create ${DESTDIR}${LIBEXEC}
+ 	${INSTALL} -m 0644 dma.8 ${DESTDIR}${MAN}/man8/
+@@ -98,3 +98,3 @@
+ dma: ${OBJS}
+-	${CC} ${LDFLAGS} -o $@ ${OBJS} ${LDADD}
++	${CC} ${LDFLAGS} -o $@ ${OBJS} ${LDADD} ${LIBS}

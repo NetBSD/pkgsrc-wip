@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (dma-0.14.tar.gz) = 12d3e184851f64fe856cf79a01789b7d18fa05eeb0b03955b3f3e49be1b990eb
 SHA512 (dma-0.14.tar.gz) = c3ef94bb6f8fca64af673be392b9ae7f151bcfefb2996683dee101f15d777912f8ff5ecc9442c9c70e6d530db53baa4d71ff379018fb62632c85a8a61cc4b407
 Size (dma-0.14.tar.gz) = 37572 bytes
-SHA1 (patch-Makefile) = e8db07f69c7f80c4faf39c26747aaf2211895a00
+SHA1 (patch-Makefile) = d9d1f5f16a70e26010bf5d97cd16d397d09c14a4
 SHA1 (patch-dma.c) = be9e8fe53d808c6249802827de08de85efce15e1
 SHA1 (patch-dma.h) = 1bb7e0b081d7bc4eaeefff86fb09cdafd310de10
 SHA1 (patch-dns.c) = bb5b404558e7136e3d61971be5e774ac9e47814a

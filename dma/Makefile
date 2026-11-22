@@ -17,7 +17,10 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
 USE_TOOLS+=	flex byacc
-LDFLAGS.SunOS+=	-lsocket -lnsl
+
+LIBS.Darwin+=	-lresolv
+LIBS.Linux+=	-lresolv
+LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
 USE_LANGUAGES=	c
 
@@ -48,6 +51,7 @@ CFLAGS+=	-DDMA_GROUP=\"${DMA_GROUP}\"
 CFLAGS+=	-DDMA_ROOT_USER=\"${DMA_ROOT_USER}\"
 
 MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 MAKE_FLAGS=	"LIBEXEC=${PREFIX}/libexec"
 MAKE_FLAGS+=	"MAN=${PREFIX}/${PKGMANDIR}"
