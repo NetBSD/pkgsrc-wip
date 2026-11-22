@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/uPDFObject.h
+include/uPDFParser.h
+include/uPDFParser_common.h
+include/uPDFTypes.h
+lib/libupdfparser.so

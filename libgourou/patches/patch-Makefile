@@ -1,0 +1,15 @@
+$NetBSD$
+
+Avoid unportable cp(1) flag.
+
+--- Makefile.orig	2026-11-08 19:27:52.000000000 +0000
++++ Makefile
+@@ -107,7 +107,7 @@ install: $(TARGET_LIBRARIES)
+ install: $(TARGET_LIBRARIES)
+ 	install -d $(DESTDIR)$(PREFIX)$(LIBDIR)
+ # Use cp to preserver symlinks
+-	cp --no-dereference $(TARGET_LIBRARIES) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	cp -R $(TARGET_LIBRARIES) $(DESTDIR)$(PREFIX)$(LIBDIR)
+ 	$(MAKE) -C utils ROOT=$(PWD) CXX=$(CXX) AR=$(AR) DEBUG=$(DEBUG) STATIC_UTILS=$(STATIC_UTILS) DESTDIR=$(DESTDIR) PREFIX=$(PREFIX) install
+ 
+ uninstall:
