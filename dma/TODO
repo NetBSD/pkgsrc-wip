@@ -11,9 +11,6 @@ glibc" and "is Linux" aren't really the same thing.  If it's a proxy
 that's good enough for now, that's ok, but say it.  Or if I'm confused
 add a comment that would straighten out someone with my confusion.
 
-Putting auth.conf in PKGSYSCONFDIR seems to be asking for a collision.
-Probably dma config files belong with a PKGSYSCONFSUBDIR of dma.
-
 It seems odd to be using SPECIAL_PERMS so much when I would expect
 dma's own makefiles to install with the right user/group/perms.
 (pkgsrc install doesn't set these, but instead adds them to METALOG
