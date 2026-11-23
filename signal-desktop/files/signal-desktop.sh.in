@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Always use our versions of ffmpeg libs.
+# This also makes RPMs find the compatibly-named library symlinks.
+if [ -n "$LD_LIBRARY_PATH" ]; then
+	LD_LIBRARY_PATH="@PREFIX@/lib/signal-desktop:$LD_LIBRARY_PATH"
+else
+	LD_LIBRARY_PATH="@PREFIX@/lib/signal-desktop"
+fi
+export LD_LIBRARY_PATH
+
+# For keyring usage
+[ -z ${DBUS_SESSION_BUS_ADDRESS} ] && export DBUS_SESSION_BUS_ADDRESS="autolaunch:"
+
+exec @PREFIX@/lib/signal-desktop/signal-desktop "$@"

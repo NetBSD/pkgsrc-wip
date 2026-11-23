@@ -30,9 +30,16 @@ USE_TOOLS+=		gmake
 TOOL_DEPENDS+=		ringrtc>=${RINGRTC_VER}:../../wip/ringrtc
 TOOL_DEPENDS+=		libsignal-node>=${LIBSIGNAL_NODE_VER}:../../wip/libsignal-node
 TOOL_DEPENDS+=		node-sqlcipher>=${SQLCIPHER_VER}:../../wip/node-sqlcipher
-TOOL_DEPENDS+=		pnpm>=0:../../devel/pnpm
+TOOL_DEPENDS+=		app-builder-[0-9]*:../../wip/app-builder
+TOOL_DEPENDS+=		pnpm-[0-9]*:../../devel/pnpm
 
 .include "../../wip/electron${ELECTRON_MAJOR_VER}/electron.mk"
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_MESSAGE.vars=	Fixing variables
+SUBST_FILES.vars+=	signal-desktop.sh
+SUBST_VARS.vars+=	PREFIX
 
 SIGNAL_ARCH=		${MACHINE_ARCH:S/aarch64/arm64/:S/x86_64/x64/}
 BUILD_EPOCH=		date +'%s'
@@ -43,6 +50,7 @@ MAKE_ENV+=		NODE_OPTIONS="--max-old-space-size=8192"
 MAKE_ENV+=		PYTHONDONTWRITEBYTECODE=1
 MAKE_ENV+=		JOBS=${_MAKE_JOBS_N}
 MAKE_ENV+=		SOURCE_DATE_EPOCH=${BUILD_EPOCH:sh}
+MAKE_ENV+=		USE_SYSTEM_APP_BUILDER=true
 
 PNPM_ENV=		npm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR_VER}/node_headers
 PNPM_ENV+=		pnpm_config_runtime_on_fail=ignore
@@ -84,6 +92,7 @@ cache-tarball:
 .endif
 
 post-extract:
+	${CP} ${FILESDIR}/signal-desktop.sh.in ${WRKSRC}/signal-desktop.sh
 	cd ${WRKSRC} && \
 		printf 'supportedArchitectures:\n  os: [current]\n  cpu: [current, wasm32]\n' \
 		>> pnpm-workspace.yaml && \
@@ -118,18 +127,37 @@ do-build: do-cargo-build
 	cd ${WRKSRC}/sticker-creator && \
 		${SETENV} ${MAKE_ENV} ${PNPM_ENV} pnpm run build
 	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${PNPM_ENV} pnpm run build
+		${SETENV} ${MAKE_ENV} ${PNPM_ENV} pnpm run generate
 
-BUILDDIR=		${WRKDIR}/Signal-Desktop-${ELECTRON_ARCH}
+BUILDDIR=		${WRKSRC}/dist/linux-unpacked
 INSTALLATION_DIRS+=	lib/signal-desktop
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
-INSTALLATION_DIRS+=	share/bash-completion/completions
-INSTALLATION_DIRS+=	share/zsh/site-functions
 
 do-install:
+	cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} ${PNPM_ENV} SIGNAL_ENV=production pnpm electron-builder \
+		--linux --dir --publish never --config.npmRebuild=false \
+		--config.electronVersion=${ELECTRON_MAJOR_VER} \
+		--config.electronDist=${PREFIX}/lib/electron${ELECTRON_MAJOR_VER}
+
+	${INSTALL_SCRIPT} ${WRKSRC}/signal-desktop.sh ${DESTDIR}${PREFIX}/bin/signal-desktop
+	cd ${BUILDDIR} && \
+		${FIND} . -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/lib/signal-desktop
+	cd ${WRKSRC}/build/policy-templates  && \
+		${FIND} . -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/share/polkit-1/actions
+	${INSTALL_DATA} ${WRKSRC}/images/signal-logo-desktop-linux.png \
+		${DESTDIR}${PREFIX}/share/pixmaps/signal-desktop.png
+	${INSTALL_DATA} ${FILESDIR}/signal-desktop.desktop \
+		${DESTDIR}${PREFIX}/share/applications
+
+	# Cleaning
+.for f in mksnapshot v8_context_snapshot_generator version resources/*.policy
+	${RM} ${DESTDIR}${PREFIX}/lib/signal-desktop/${f}
+.endfor
+	${RM} -r ${DESTDIR}${PREFIX}/lib/signal-desktop/gen
+	${RM} -r ${DESTDIR}${PREFIX}/lib/signal-desktop/node_headers
 
 
 .include "../../lang/nodejs/nodeversion.mk"
