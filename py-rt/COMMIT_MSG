@@ -1,4 +1,297 @@
 py-rt: Update to 4.0.0
 
 Changes:
-TODO: document the changes
+For full changelog please see:
+<https://github.com/python-rt/python-rt/releases> some code examples
+where redacted to avoid a too long commit message.
+
+## [v4.0.0], 2026-11-05
+### Migration guide
+This release contains breaking changes. Most code only needs the
+adaptations below; the entries in the following sections describe all
+changes in detail.
+
+Python 3.11 or newer is required.
+
+#### Exceptions
+- `rt.exceptions.ConnectionError` was renamed to
+  `rt.exceptions.RtConnectionError`. Code catching the builtin `ConnectionError`
+  keeps working, as `RtConnectionError` is a subclass of it:
+- REST2 raises `rt.exceptions.UnexpectedResponseError` instead of
+  `json.JSONDecodeError` for responses which are not valid JSON.
+- REST2 raises `rt.exceptions.NotAllowedError` instead of
+  `UnexpectedResponseError` if RT answers with HTTP status 403, i.e. if the user
+  does not have the rights for a request, and instead of `BadRequestError` if RT
+  answers with HTTP status 400 and "Permission Denied" (`tickets.reply()` and
+  `tickets.comment()` without the right to add messages).
+- REST2 raises `rt.exceptions.InvalidUseError` instead of `ValueError` for
+  invalid arguments. `InvalidUseError` is a subclass of `ValueError`, so `except
+  ValueError` keeps working.
+
+#### REST1
+- Pass all constructor arguments by keyword, as well as `cc`, `bcc`,
+  `content_type` and `files` of `reply()`/`comment()`
+- *httpx2* replaces *requests*: use the httpx2 authentication classes, and
+  `Rt.session` is an `httpx2.Client`
+- Credentials in `.netrc` files are no longer used automatically, redirects are
+  not followed, requests time out after 20 seconds (`http_timeout=None` disables
+  the timeout) and files to attach must be bytes or binary file objects.
+
+#### REST2
+- The methods of the REST2 clients are grouped by the kind of object in
+  attributes of the client: `tracker.tickets`, `tracker.users`,
+  `tracker.groups`, `tracker.queues`, `tracker.assets`, `tracker.catalogs`,
+  `tracker.articles`, `tracker.classes`, `tracker.custom_fields`,
+  `tracker.custom_roles` and `tracker.rights`. The names lose the name of the
+  object, and there are no aliases of the old names. `get_system_info()`,
+  `close()`/`aclose()` and the context manager stay on the client.
+- The sync `tickets.history()`, `tickets.get_attachments()`,
+  `tickets.get_attachments_ids()` and `queues.all()` return iterators instead of
+  lists; wrap them in `list()` if a list is needed:
+- The async `tickets.new_correspondence()` and `tickets.last_updated()` are
+  iterated without `await`:
+- `tickets.search()` quotes and escapes all values, so remove any manual
+  escaping of quotes in values (`raw_query` is still passed to RT as is).
+  Unknown operator suffixes (e.g. `Subject__likee`) raise `InvalidUseError`, and
+  a field name containing `__` needs an explicit operator, e.g.
+  `CF_my__field__exact='value'`.
+- `tickets.reply()` and `tickets.comment()` raise `InvalidUseError` for a
+  `content_type` other than `text/plain` or `text/html`.
+- `http_auth` and `token` can not be combined anymore.
+- Pass all optional arguments by keyword, e.g. `queue` of
+  `tickets.search()`/`tickets.last_updated()`, `delete` of
+  `tickets.edit_link()`, `privileged` of `users.exists()` and all arguments of
+  `assets.search()`. Only `content` of `tickets.reply()`/`tickets.comment()` can
+  still be passed by position:
+- The parameter `query_format` of `tickets.search()`, `tickets.get()`,
+  `assets.get()`, `tickets.get_attachments()` and `assets.search()` was renamed
+  to `fields`. A remaining `query_format=` in `tickets.search()` is sent to RT
+  as search condition, which RT rejects with `BadRequestError: Unknown field:
+  query_format`.
+- All methods changing something return an `ActionResult`. Of the methods of
+  version 3.8, these returned a `bool` before: `tickets.edit()`,
+  `assets.edit()`, `tickets.reply()`, `tickets.comment()`, `tickets.take()`,
+  `tickets.untake()`, `tickets.steal()`, `tickets.merge()` and
+  `tickets.edit_link()`; `users.edit()` and `queues.edit()` returned the list of
+  status messages of RT, which is `result.messages` now (a tuple). RT answers
+  with HTTP status 200 and status messages also if it refused all or a part of a
+  request (verified with RT 5.0 and 6.0: accepted fields are changed, refused
+  ones are reported only as message). The `ActionResult` is **true whenever RT
+  executed the request**, so `if tracker.tickets.comment(...)` keeps working,
+  but code checking the result with `is True`, or the list of
+  `users.edit()`/`queues.edit()` for being empty (nothing changed), must be
+  changed: `result.complete`, `result.refused`, `result.unrecognized` and
+  `result.messages` give the details, and `result.raise_for_refused()` raises
+  `NotFoundError`, `NotAllowedError` or `InvalidUseError` for refused parts. The
+  messages are classified with a catalog of the messages of RT
+  (`rt/_messages.py`); a message which is not in the catalog (newer RT, other
+  language) is listed in `result.unrecognized`. It does not raise for the
+  `edit()` methods, `tickets.reply()` and `tickets.comment()`; `tickets.take()`,
+  `tickets.untake()`, `tickets.steal()`, `tickets.merge()` and
+  `tickets.edit_link()` raise `UnexpectedResponseError` for it, as the message
+  is the only information about their result. Refused parts of `tickets.edit()`
+  are not raised anymore (before, only a nonexistent user or queue was).
+- `rt.common.REGEX_PATTERNS` was removed (not used anymore; the messages of RT
+  are recognized by the library itself).
+- `tickets.new_correspondence()` only returns tickets last updated by other
+  users than the one of the connection, as documented (before, it returned all
+  tickets).
+- The type aliases `TYPE_VALID_TICKET_LINK_NAMES` and `TYPE_CONTENT_TYPE` were
+  renamed to `TicketLinkName` and `ContentType`.
+- `Attachment` is immutable; create a modified copy with
+  `dataclasses.replace(attachment, file_name='new.txt')`.
+- The `base_url` attribute was removed; use
+  `tracker.url.removesuffix('REST/2.0/')` if needed.
+- The parameter `query_filter` of `tickets.get_attachments()` and
+  `tickets.get_attachments_ids()` was renamed to `search_params`, as in all
+  other searches. The search conditions no longer replace the condition matching
+  only files: pass `files_only=False` to get all parts of the messages (e.g.
+  their text), which `query_filter=[]` returned before.
+- `tickets.search()` raises `InvalidUseError` if `raw_query` is combined with
+  conditions (keyword arguments or `conditions`), which were silently ignored
+  before; add them to the query instead. `queue` and `order` can still be
+  combined with it.
+- `users.exists()` requires `privileged`: before, it defaulted to `True`, so it
+  returned `False` for existing unprivileged users (e.g. requestors), which was
+  easily overlooked:
+- `users.create()` and `users.edit()` accept the fields of users of RT 5.0 and
+  6.0: use `NickName` instead of `Nickname` and `FreeformContactInfo` instead of
+  `ContactInfo`, which RT ignored. `EmailEncoding`, `WebEncoding`,
+  `ExternalContactInfoId`, `ContactInfoSystem`, `ExternalAuthId` and
+  `AuthSystem` were removed, as they are no fields of RT 5.0 or newer and RT
+  ignored them; `Timezone` and `SMIMECertificate` were added.
+- `tickets.history()` and `assets.history()` return the fields `Field`,
+  `OldValue`, `NewValue`, `Data` and `TimeTaken` of each transaction instead of
+  `Description`, which RT always returned empty.
+- `tickets.get_links()` also returns links to URLs (`type` `external`, e.g.
+  created with `tickets.edit_link(1, 'RefersTo', url)`), which were missing
+  before; filter by `link['type'] == 'ticket'` for the links between tickets
+  only.
+
+## [v3.8.2], 2026-11-04
+- Fix the REST2 search() with custom fields (CF_<name>=...), which created a
+  malformed query with an unmatched single quote (128).
+
+## [v3.8.0], 2026-07-20
+- Switch from the seemingly unmaintained httpx library to the actively
+maintained fork, httpx2.
+
+## [v3.7.1], 2026-07-02
+- Add a query_format parameter to sync/async get_attachments methods (120).
+
+## [v3.7.0], 2026-06-29
+- Remove support for now EoL Python 3.9.
+- Modernise typing due to raised minimum Python version.
+
+## [v3.6.1], 2026-06-29
+- Fix API doc on search() to correctly document the queue parameter in
+case you want to query all queues (121)
+
+## [v3.6.0], 2026-02-06
+- Parameters search_params and catalog_id used in asset search are now optional
+- If catalog_id is set to None, search all catalogs
+
+## [v3.5.0], 2026-02-04
+- Added option to define all query parameters for get/search asset and ticket
+  endpoints
+- Fixed typing of methods that returned a partially unknown dictionary
+
+## [v3.4.0], 2025-11-21
+- Added functionality for some of the asset endpoints (get, create, edit,
+  search, get history)
+- Added functionality for the get catalog endpoint
+
+## [v3.3.9], 2025-10-01
+- In debug mode, where content may be dumped, said content may not decode
+  correctly if it is not utf-8. Ignore errors as we don't care about that in
+  debug mode anyways (fixes 113)
+
+## [v3.3.8], 2025-09-25
+- Allow for specifying a custom RT JSON filter when querying for attachments for
+  a ticket (110). This solved the issue with not returning attachment IDs in
+  case an attachment file name is empty as the default query explicitely
+  excludes those.
+
+## [v3.3.7], 2025-09-24
+- Fix optional return types (111)
+
+## [v3.3.6], 2025-04-24
+- Catch *TransportError* from httpx and re-raise as *ConnectionError* so that
+  httpx transport error exceptions do not leak (fixes 109).
+
+## [v3.3.5], 2025-04-18
+- There was still a comparison issue, fix bad date comparison (fixes 107)
+
+## [v3.3.4], 2025-03-03
+- Fix bad date comparison (fixes 107)
+
+## [v3.3.3], 2024-12-02
+- Starting with version 0.28.0 of httpx, *verify* should be either a bool or an
+  *SSL Context*.
+
+## [v3.3.2], 2024-12-02
+- Replace the removed httpx parameter of *proxies* by *proxy* (fixes 102)
+- Pin dependencies to supported relative upstream versions.
+- Remove the now obsolete *setup.py*.
+
+## [v3.3.1], 2024-11-14
+- Fix str(bytes) warning (*BytesWarning: str() on a bytes instance*) (1074)
+- Set included files for ruff
+- Switch to hatchling
+- Set ignores for tests files
+- Ignore uv.lock
+
+## [v3.3.0], 2024-10-04
+- Remove support for now EoL Python 3.8.
+
+## [v3.2.0], 2024-09-06
+- Added option for custom list of fields to be populated for search
+  "query_format" param to avoid unnecessary round trips to get fields like Told,
+  Starts, Resolved, etc by returning the required fields during search. (see #97
+  @nerdfirefighter)
+
+## [v3.1.4], 2024-02-16
+- Add a workaround for a breaking change introduced in RT5.0.5 which returns
+  undefined pages variable for non-superusers (see 93, 94).
+
+## [v3.1.3], 2023-10-10
+- Fix an issue where no e-mail was sent on ticket creation due to suggesting to
+  use **Requestors** instead of **Requestor** (92).
+
+## [v3.1.2], 2023-09-25
+- Revert breaking change for python3.8 (collections.abc.AsyncIterator is not
+  subscriptable).
+
+## [v3.1.1], 2023-09-25
+- In AsyncRt, instead of returning sequences, return AsyncIterators.
+
+## [v3.1.0], 2023-09-25
+- Replace *requests* with *httpx* for the REST2 part.
+- Add a new *AsyncRt* class which implements the RT REST2 API in asnyc.
+- Adapt tests to include thew new async parts of this library.
+
+## [v3.0.7], 2023-07-27
+- Fix sorting when using search() method (90)
+
+## [v3.0.6], 2023-06-21
+- Fixed bug in rest1 (86)
+
+## [v3.0.5], 2023-02-02
+- Added support for specifying custom fields on user creation/edit (82).
+
+## [v3.0.4], 2022-11-08
+- Workaround for parsing issues with tickets with only 1 attachment (80), due to
+  probably an upstream bug.
+
+## [v3.0.3], 2022-06-16
+- Move package metadata and configuration from setup.cfg to pyproject.toml.
+
+## [v3.0.2], 2022-06-12
+- Fix edit_user() response handling in case a user_id name (str) was passed instead of a number.
+
+## [v3.0.1], 2022-05-26
+- Make sure to include _hyperlinks in history items
+- On edit ticket, raise exception if user/queue does not exist
+- Add helper method for deleting tickets
+- Add tests
+
+## [v3.0.0], 2022-05-17
+The following is a major release of the `rt` library. There is support for the
+REST API version 1 as well as version 2. Please note that this release contains
+breaking changes and requires adaptations to existing code, even if you are
+sticking to version 1 of the API. These changes were necessary in order to
+properly support both API versions.
+
+- RT REST2 support was added and is mostly on par with the REST1 support
+  (differences are a result of the REST2 API implementation differences in RT).
+  REST2 is a modern API based on JSON exchanges and thus the complex parsing of
+  responses and request construction are no longer needed.
+- Existing exception classes were renamed to adhere to the naming convention
+  (https://peps.python.org/pep-0008/#exception-names).
+  - In case you do catch specific `rt` exceptions, a simple search/replace will
+    do, see the changelog page in the documentation for details.
+- Importing the `rt` class changed in order to better accommodate the new
+  `rest2` implementation.
+  - Where one use to be able to import `rt` using: `from rt import Rt`
+    you now have to use the following syntax:
+    `from rt.rest1 import Rt`
+- Importing the `rt` module does no longer import all exceptions but only the
+  core `RtError` exception. If you require other exceptions, please import them
+  from `rt.exceptions`.
+- Use pytest instead of nose.
+
+## [v2.2.2], 2022-04-08
+- Fix bug in the get_ticket would omit certain fields in case they were empty
+  instead of returning an empty list as was the previous behavior (70).
+- Add tests for verifying correct return result for AdminCc, Cc and Requestor
+  fields.
+
+## [v2.2.1], 2021-11-26
+- Fix bug in get_attachment_content which was a workaround for a bug in RT <=4.2
+  (trailing new-lines) but which was fixed in RT >=4.2. This made tests fail and
+  return falsely stripped attachment content.
+
+## [v2.2.0], 2021-11-15
+- Search has a parameter fields that can be used to return only particular
+  fields for tickets. In some cases I noticed it will improve the speed of the
+  query completion if you only need specific fields.
