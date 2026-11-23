@@ -1,5 +1,7 @@
 $NetBSD$
 
+Support NetBSD.
+
 --- src/util-affinity.c.orig	2025-09-16 02:07:13.000000000 +0000
 +++ src/util-affinity.c
 @@ -35,6 +35,37 @@

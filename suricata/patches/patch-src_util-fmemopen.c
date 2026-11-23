@@ -1,5 +1,7 @@
 $NetBSD$
 
+Support NetBSD.
+
 --- src/util-fmemopen.c.orig	2025-09-16 02:07:13.000000000 +0000
 +++ src/util-fmemopen.c
 @@ -33,6 +33,10 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Support NetBSD.
+
 --- src/unix-manager.c.orig	2025-09-16 02:07:13.000000000 +0000
 +++ src/unix-manager.c
 @@ -186,7 +186,7 @@ static int UnixNew(UnixCommand * this)

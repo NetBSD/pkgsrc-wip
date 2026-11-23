@@ -1,5 +1,7 @@
 $NetBSD$
 
+Support NetBSD.
+
 --- src/util-byte.h.orig	2025-09-16 21:20:00.500853436 +0000
 +++ src/util-byte.h
 @@ -30,7 +30,7 @@

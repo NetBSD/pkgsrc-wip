@@ -1,15 +1,15 @@
 $NetBSD$
 
-BLAKE2s (suricata-8.0.2.tar.gz) = 65271dd6e1f955266b47634db1acc508a68d8db151c23a16c12366879f0fdf42
-SHA512 (suricata-8.0.2.tar.gz) = 842c6aac70099500a0c82a6ca9e01cb9cd14652060e2c492b7df234f053116595dc9ead12c184982deed0afe2990f3fd1b7ef939475fdaff63e0727bba1dd313
-Size (suricata-8.0.2.tar.gz) = 44124259 bytes
-SHA1 (patch-configure) = 379edddcef392fecd2d1f3cb2a66b2223a0fca33
-SHA1 (patch-src_threads.h) = bd3764e1ac575d2b2c7b6b88ea2dbd93c3c5a4cb
-SHA1 (patch-src_tm-threads.c) = e3b905eac1de82b2af71cacce6c7395a61c156b1
-SHA1 (patch-src_unix-manager.c) = d5e64cff26de3865c0939383aa72011dd1cbf8d2
-SHA1 (patch-src_util-affinity.c) = d8856001e407eda237350f31473868bf3903bca1
-SHA1 (patch-src_util-affinity.h) = b691db63af11a8c05e6be2afb20879a67e76e8a8
-SHA1 (patch-src_util-byte.h) = 2f4dd27b60eccc55a684d513765346bdbd120552
-SHA1 (patch-src_util-fmemopen.c) = 49e52146820ff96dc6f257b1a348bf1805eed25b
-SHA1 (patch-src_util-fmemopen.h) = fa6ac320e7b31af2d7126f14fabb29327ac10e28
-SHA1 (patch-src_util-ioctl.c) = 40692c8a73c8de544740258eb347f068f563c8e3
+BLAKE2s (suricata-8.0.8.tar.gz) = 3aec8231c8ec7376f69996ccd7877c8f9a5eb1c2b54905353276de4a6c4f8598
+SHA512 (suricata-8.0.8.tar.gz) = 62600e03bdd529e0ddbad394580831833e549feae2cf9dbf42df4d3970fa29fecaf84736ed67de058f4cd00ca2766b295668f632b0c43ce92d65e292229a12aa
+Size (suricata-8.0.8.tar.gz) = 44606480 bytes
+SHA1 (patch-configure) = ddda8f67fc44cea4aa694a7c8ee9152583ca67cb
+SHA1 (patch-src_threads.h) = 67a3e2f40dc89bc647c62ff1247fbb123ab8448a
+SHA1 (patch-src_tm-threads.c) = 919c92774e401d6231c6364462d5de0bd0574b11
+SHA1 (patch-src_unix-manager.c) = 49a5fca25cde9536fe96db4d561a35f29679d940
+SHA1 (patch-src_util-affinity.c) = 02c6574721812db76fc07d8be850024f61018333
+SHA1 (patch-src_util-affinity.h) = 22e4a4bd6c0a17dc720e62f4d2197b14dfe8fff4
+SHA1 (patch-src_util-byte.h) = 68405cbd9c388d79e008db6271ce7ba6fa1f9308
+SHA1 (patch-src_util-fmemopen.c) = d41a60755b7ef58f34f0d875dafa1b61bdea80fb
+SHA1 (patch-src_util-fmemopen.h) = d9d98f914913c81fffcba706e8f4503f36dbfa44
+SHA1 (patch-src_util-ioctl.c) = 921b8d7fcb5b1563bbedd00bd8ba60ea736ce4bc

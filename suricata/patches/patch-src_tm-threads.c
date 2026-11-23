@@ -1,5 +1,7 @@
 $NetBSD$
 
+Support NetBSD.
+
 --- src/tm-threads.c.orig	2025-09-16 02:07:13.000000000 +0000
 +++ src/tm-threads.c
 @@ -65,14 +65,16 @@ thread_local uint64_t rwr_lock_wait_tick
@@ -26,7 +28,7 @@ $NetBSD$
      int r = cpuset_setaffinity(CPU_LEVEL_WHICH, CPU_WHICH_TID,
                                 SCGetThreadIdLong(), sizeof(cpu_set_t),cs);
 +#elif defined __NetBSD__
-+    int r = pthread_setaffinity_np(SCGetThreadIdLong(), cpuset_size(*cs), *cs);
++    int r = pthread_setaffinity_np((pthread_t)SCGetThreadIdLong(), cpuset_size(*cs), *cs);
  #elif OS_DARWIN
      int r = thread_policy_set(mach_thread_self(), THREAD_AFFINITY_POLICY,
                                (void*)cs, THREAD_AFFINITY_POLICY_COUNT);
