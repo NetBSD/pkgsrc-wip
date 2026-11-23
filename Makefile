@@ -210,6 +210,7 @@ SUBDIR+=	ape
 SUBDIR+=	apel-git
 SUBDIR+=	apinger
 SUBDIR+=	apk-tools
+SUBDIR+=	app-builder
 SUBDIR+=	apple-codesign
 SUBDIR+=	apstget
 SUBDIR+=	apvlv
