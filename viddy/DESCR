@@ -1,0 +1,19 @@
+Modern `watch` command.
+
+Features:
+ - Basic features of original watch command.
+    . Execute command periodically, and display the result.
+    . color output.
+    . diff highlight.
+ - Time machine mode.
+    . Rewind like video.
+    . Go to the past, and back to the future.
+ - Look back history.
+    . Save and load history.
+ - See output in pager.
+ - Vim like keymaps.
+ - Search text.
+ - Suspend and restart execution.
+ - Support shell alias
+ - Customize keymappings.
+ - Customize color.

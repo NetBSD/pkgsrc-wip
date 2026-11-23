@@ -6034,6 +6034,7 @@ SUBDIR+=	victorialogs
 SUBDIR+=	victorialogs-vlagent
 SUBDIR+=	victorialogs-vlogscli
 SUBDIR+=	victoriametrics
+SUBDIR+=	viddy
 SUBDIR+=	video-trimmer
 SUBDIR+=	video2x
 SUBDIR+=	vidrioclock
