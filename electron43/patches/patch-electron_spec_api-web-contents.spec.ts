@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-web-contents.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
+--- electron/spec/api-web-contents.spec.ts.orig	2026-11-18 22:22:58.000000000 +0000
 +++ electron/spec/api-web-contents.spec.ts
 @@ -1636,7 +1636,7 @@ describe('webContents module', () => {
      // back to OpenFolder() which does a blocking DirectoryExists() on the UI

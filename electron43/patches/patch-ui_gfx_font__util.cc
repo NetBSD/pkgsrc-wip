@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- ui/gfx/font_util.cc.orig	2026-11-03 08:29:07.920901316 +0000
+--- ui/gfx/font_util.cc.orig	2026-11-23 18:17:09.470676519 +0000
 +++ ui/gfx/font_util.cc
 @@ -26,8 +26,11 @@ void InitializeFonts() {
    // the long delay the user would have seen on first rendering.

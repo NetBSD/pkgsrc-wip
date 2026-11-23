@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/spec/api-shell.spec.ts.orig	2026-10-30 20:58:40.000000000 +0000
+--- electron/spec/api-shell.spec.ts.orig	2026-11-18 22:22:58.000000000 +0000
 +++ electron/spec/api-shell.spec.ts
 @@ -47,7 +47,7 @@ describe('shell module', () => {
  
@@ -24,7 +24,7 @@ $NetBSD$
 +        process.env.DE = 'generic';
 +        process.env.DISPLAY = '';
 +        requestReceived = Promise.resolve();
-+      } else if (process.platform === 'netbsd') {
++      } else if (process.platform === netbsd') {
 +        process.env.BROWSER = '/usr/bin/true';
 +        process.env.DE = 'generic';
 +        process.env.DISPLAY = '';

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- electron/shell/browser/api/electron_api_web_contents.cc.orig	2026-10-30 20:58:40.000000000 +0000
+--- electron/shell/browser/api/electron_api_web_contents.cc.orig	2026-11-18 22:22:58.000000000 +0000
 +++ electron/shell/browser/api/electron_api_web_contents.cc
 @@ -188,11 +188,11 @@
  #include "ui/base/cocoa/defaults_utils.h"

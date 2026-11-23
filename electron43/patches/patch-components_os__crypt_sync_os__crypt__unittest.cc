@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, 
   FreeBSD's electron patches, and pkgsrc's nodejs patches
 
---- components/os_crypt/sync/os_crypt_unittest.cc.orig	2026-11-03 08:29:05.539617109 +0000
+--- components/os_crypt/sync/os_crypt_unittest.cc.orig	2026-11-23 18:17:06.962766916 +0000
 +++ components/os_crypt/sync/os_crypt_unittest.cc
 @@ -19,7 +19,7 @@
  #include "components/os_crypt/sync/os_crypt_mocker.h"
