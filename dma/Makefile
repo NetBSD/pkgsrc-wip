@@ -36,15 +36,23 @@ DMA_SPOOLDIR=	${VARBASE}/spool/dma
 OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${UNPRIVILEGED_USER} ${UNPRIVILEGED_GROUP} 0700
 .else
 OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${DMA_ROOT_USER} ${DMA_GROUP} 0770
+# Upstream makefile sets sgid/suid but we patched that out.
+# dma is sgid for queue access
 SPECIAL_PERMS+=		${PREFIX}/libexec/dma \
 			${REAL_ROOT_USER} ${DMA_GROUP} 2555
+# dma-mbox-create is a suid-root helper for dma, only.   Upstream's makefile
+# grants other read permission for unclear reasons; mirror that as not harmful.
 SPECIAL_PERMS+=		${PREFIX}/libexec/dma-mbox-create \
 			${REAL_ROOT_USER} ${DMA_GROUP} 4554
 PKG_GROUPS=		${DMA_GROUP}
 PKG_USERS=		${DMA_ROOT_USER}:${DMA_GROUP}
 .endif
 
-# DMA provides its own getprogname() on glibc.
+# dma has awkward getprogname detection; essentially one must define
+# HAVE_ on any system without glibc (and getprogname must be present),
+# and one should not define it on glibc systems.  We use OPSYS Linux
+# as a probably-good-enough proxy for glibc.
+# TODO: File an upstream issue to improve getprogname choice.
 .if ${OPSYS} != "Linux"
 CFLAGS+=	-DHAVE_GETPROGNAME
 .endif
