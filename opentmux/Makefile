@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.71 2026/10/21 19:22:45 ktnb Exp $
 
-DISTNAME=		opentmux-0.1
+DISTNAME=		opentmux-0.2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_CODEBERG:=opentmux/}
 CODEBERG_RELEASE=	v${PKGVERSION_NOREV}
