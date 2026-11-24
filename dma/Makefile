@@ -65,9 +65,9 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 
 MAKE_FLAGS=	"LIBEXEC=${PREFIX}/libexec"
 MAKE_FLAGS+=	"MAN=${PREFIX}/${PKGMANDIR}"
-# Upstream documents that BSD make works, but uses a gmakism to fetch
-# version; set it to avoid that.
-# TOOD: file upstream bug.
+# Work around upstream bug requiring gmake when BSD make is documented
+# to work; delete when updating to a release with
+# https://github.com/corecode/dma/pull/170.
 MAKE_FLAGS+=	version=${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS=	${EGDIR} ${DOCDIR}
