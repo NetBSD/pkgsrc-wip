@@ -52,7 +52,7 @@ PKG_USERS=		${DMA_ROOT_USER}:${DMA_GROUP}
 # HAVE_ on any system without glibc (and getprogname must be present),
 # and one should not define it on glibc systems.  We use OPSYS Linux
 # as a probably-good-enough proxy for glibc.
-# TODO: File an upstream issue to improve getprogname choice.
+# Raised upstream as : https://github.com/corecode/dma/issues/173
 .if ${OPSYS} != "Linux"
 CFLAGS+=	-DHAVE_GETPROGNAME
 .endif
