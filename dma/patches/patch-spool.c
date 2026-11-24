@@ -2,7 +2,7 @@ $NetBSD$
 
 Rename queue to dma_queue because the struct is already defined in SunOS.
 
-Use st_mtime for the flush interval on macOS.
+Use st_mtime for the flush interval on macOS : see https://github.com/corecode/dma/issues/172
 
 --- spool.c.orig	2019-08-20 09:52:52.000000000 +0000
 +++ spool.c

@@ -2,7 +2,7 @@ $NetBSD$
 
 Rename queue to dma_queue because the struct is already defined in SunOS.
 
-Use st_mtime for the queue timeout on macOS.
+Use st_mtime for the queue timeout on macOS : https://github.com/corecode/dma/issues/172
 
 --- dma.c.orig	2016-02-07 12:41:49.000000000 +0000
 +++ dma.c

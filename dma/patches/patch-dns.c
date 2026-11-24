@@ -2,7 +2,7 @@ $NetBSD$
 
 Include sysmacros.h for roundup is required on SunOS.
 
-Use NS_MAXDNAME for macOS compatibility.
+Use NS_MAXDNAME for macOS compatibility : see https://github.com/corecode/dma/issues/172
 
 --- dns.c.orig	2016-02-07 12:41:49.000000000 +0000
 +++ dns.c
