@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- remote/node_modules/kerberos/binding.gyp.orig	2026-10-29 12:50:40.319082355 +0000
-+++ remote/node_modules/kerberos/binding.gyp
+--- remote/node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/binding.gyp.orig	2026-11-24 11:16:11.962938155 +0000
++++ remote/node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/binding.gyp
 @@ -54,14 +54,14 @@
              ]
            }

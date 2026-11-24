@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add NetBSD support
 
---- node_modules/native-keymap/binding.gyp.orig	2026-10-26 11:50:46.000000000 +0000
-+++ node_modules/native-keymap/binding.gyp
+--- node_modules/.pnpm/native-keymap@3.3.9/node_modules/native-keymap/binding.gyp.orig	2026-11-24 11:15:53.257605229 +0000
++++ node_modules/.pnpm/native-keymap@3.3.9/node_modules/native-keymap/binding.gyp
 @@ -60,6 +60,20 @@
              ]
            }

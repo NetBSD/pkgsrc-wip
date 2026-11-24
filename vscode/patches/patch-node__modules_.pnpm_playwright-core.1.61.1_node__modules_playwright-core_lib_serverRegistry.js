@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- node_modules/playwright/node_modules/playwright-core/lib/serverRegistry.js.orig	2026-10-24 14:36:35.000000000 +0000
-+++ node_modules/playwright/node_modules/playwright-core/lib/serverRegistry.js
+--- node_modules/.pnpm/playwright-core@1.61.1/node_modules/playwright-core/lib/serverRegistry.js.orig	2026-11-24 08:42:06.400320714 +0000
++++ node_modules/.pnpm/playwright-core@1.61.1/node_modules/playwright-core/lib/serverRegistry.js
 @@ -7277,7 +7277,7 @@ async function canConnectTo(descriptor) 
    });
  }

@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=		vscode-1.146.0
+DISTNAME=		vscode-1.147.0
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -22,6 +22,7 @@ USE_TOOLS+=		zip gmake pkg-config pax bash
 USE_CXX_FEATURES+=	c++20
 
 TOOL_DEPENDS+=		jq-[0-9]*:../../devel/jq
+TOOL_DEPENDS+=		typescript-[0-9]*:../../lang/typescript
 TOOL_DEPENDS+=		ripgrep-[0-9]*:../../textproc/ripgrep
 TOOL_DEPENDS+=		wabt-[0-9]*:../../wip/wabt
 
@@ -32,9 +33,10 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
 SUBST_MESSAGE.vars=	Fixing variables
+SUBST_FILES.vars+=	node_modules/.pnpm/typescript@7.1.0-dev.20261105.1/node_modules/typescript/lib/getExePath.js
 SUBST_FILES.vars+=	src/vs/platform/native/electron-main/nativeHostMainService.ts
 SUBST_FILES.vars+=	code-oss.sh
-SUBST_VARS.vars+=	PREFIX #OPSYS LOWER_OPSYS ELECTRON_ARCH
+SUBST_VARS.vars+=	PREFIX
 
 SUBST_CLASSES+=		npm
 SUBST_STAGE.npm=	pre-configure
@@ -66,25 +68,13 @@ REPLACE_BASH+=		node_modules/jschardet/scripts/run-workflow.sh
 
 REPLACE_NODEJS=		extensions/copilot/node_modules/@anthropic-ai/sdk/bin/cli
 REPLACE_NODEJS+=	extensions/copilot/node_modules/@github/copilot/npm-loader.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/@grpc/proto-loader/build/bin/proto-loader-gen-types.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/acorn/bin/acorn
-REPLACE_NODEJS+=	extensions/copilot/node_modules/async-listener/node_modules/semver/bin/semver
-REPLACE_NODEJS+=	extensions/copilot/node_modules/cls-hooked/node_modules/semver/bin/semver
-REPLACE_NODEJS+=	extensions/copilot/node_modules/loose-envify/cli.js
 REPLACE_NODEJS+=	extensions/copilot/node_modules/markdown-it/bin/markdown-it.mjs
-REPLACE_NODEJS+=	extensions/copilot/node_modules/semver/bin/semver.js
-REPLACE_NODEJS+=	extensions/copilot/node_modules/which/bin/node-which
 REPLACE_NODEJS+=	extensions/node_modules/typescript/bin/tsc
 REPLACE_NODEJS+=	extensions/node_modules/typescript/bin/tsserver
 REPLACE_NODEJS+=	node_modules/@devcontainers/cli/devcontainer.js
 REPLACE_NODEJS+=	node_modules/@vscode/sandbox-runtime/dist/cli.js
 REPLACE_NODEJS+=	node_modules/@vscode/vscode-languagedetection/cli/index.js
 REPLACE_NODEJS+=	node_modules/chrome-remote-interface/bin/client.js
-REPLACE_NODEJS+=	node_modules/is-docker/cli.js
-REPLACE_NODEJS+=	node_modules/mkdirp/bin/cmd.js
-REPLACE_NODEJS+=	node_modules/opentype.js/bin/ot
-REPLACE_NODEJS+=	node_modules/rc/cli.js
-REPLACE_NODEJS+=	node_modules/semver/bin/semver.js
 
 MAKE_ENV+=		ELECTRON_SKIP_BINARY_DOWNLOAD=1
 MAKE_ENV+=		BUILD_SOURCEVERSION=${SOURCE_COMMIT_HASH}
@@ -109,13 +99,17 @@ RIPGREP_PATHES=		node_modules/@vscode/ripgrep/bin
 RIPGREP_PATHES+=	node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 RIPGREP_PATHES+=	build/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
 RIPGREP_PATHES+=	remote/node_modules/@vscode/ripgrep-universal/bin/${LOWER_OPSYS}-${ELECTRON_ARCH}
-PNPM_ROOTS=		. build remote extensions extensions/copilot
+PNPM_ROOTS=		. build remote
 PNPM_ENV=		pnpm_config_store_dir=${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}/store
-PNPM_ENV+=		pnpm_config_minimum_release_age=0
+PNPM_ENV+=		pnpm_config_minimum_release_age=0 pnpm_config_pm_on_fail=ignore
 
 NOT_PAX_MPROTECT_SAFE+=	lib/vscode/code-oss
 
 .if defined(VSCODE_MAINTAINER)
+.  if make(cache-tarball)
+DISTFILES=		${DEFAULT_DISTFILES}
+.  endif
+
 # For create pnpm store tarball
 USE_TOOLS+=		bsdtar
 
@@ -125,7 +119,7 @@ MPNPM_OVERLAY=		package.json pnpm-lock.yaml
 MPNPM_OVERLAY+=		remote/package.json remote/pnpm-lock.yaml
 
 .PHONY: cache-tarball
-cache-tarball:
+cache-tarball: makesum
 	${MKDIR} ${WRKDIR}/vscode-tmp/vscode-node_modules-${PKGVERSION_NOREV}/store \
 		${WRKDIR}/vscode-tmp/vscode-node_modules-${PKGVERSION_NOREV}/overlay/remote
 	${TOOLS_PATH.bsdtar} -zxf ${DISTDIR}/${DISTNAME}.tar.gz \
@@ -164,7 +158,7 @@ post-extract:
 	# Install node modules from the cache tarball
 	cd ${WRKDIR}/vscode-node_modules-${PKGVERSION_NOREV}/overlay && \
 		pax -rw -pmp . ${WRKSRC}
-.for r in ${PNPM_ROOTS}
+.for r in ${PNPM_ROOTS} extensions extensions/copilot
 	cd ${WRKSRC}/${r} && ${SETENV} ${MAKE_ENV} ${PNPM_ENV} \
 		pnpm install --offline --frozen-lockfile --ignore-scripts
 .endfor
@@ -234,9 +228,9 @@ do-build:
 		pnpmenv="pnpm_config_runtime=electron \
 			pnpm_config_target=${ELECTRON_VER} \
 			pnpm_config_nodedir=${PREFIX}/lib/electron${ELECTRON_MAJOR}/node_headers" && \
-	${SETENV} ${MAKE_ENV} $${pnpmenv} \
+	${SETENV} ${MAKE_ENV} $${pnpmenv} ${PNPM_ENV} \
 		pnpm run compile && \
-	${SETENV} ${MAKE_ENV} $${pnpmenv} \
+	${SETENV} ${MAKE_ENV} $${pnpmenv} ${PNPM_ENV} \
 		pnpm run gulp vscode-linux-${ELECTRON_ARCH}-min
 	${SED} -i'' "s|^#![[:space:]]*${REPLACE.sys-bash.old}|${REPLACE.sys-bash.new}|" \
 		${BUILDDIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh

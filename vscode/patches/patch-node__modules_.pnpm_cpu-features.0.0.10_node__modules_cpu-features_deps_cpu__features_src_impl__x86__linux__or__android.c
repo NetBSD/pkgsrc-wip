@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add NetBSD support
 
---- node_modules/cpu-features/deps/cpu_features/src/impl_x86_linux_or_android.c.orig	2026-10-26 16:05:49.000000000 +0000
-+++ node_modules/cpu-features/deps/cpu_features/src/impl_x86_linux_or_android.c
+--- node_modules/.pnpm/cpu-features@0.0.10/node_modules/cpu-features/deps/cpu_features/src/impl_x86_linux_or_android.c.orig	2026-11-24 11:16:04.732825744 +0000
++++ node_modules/.pnpm/cpu-features@0.0.10/node_modules/cpu-features/deps/cpu_features/src/impl_x86_linux_or_android.c
 @@ -15,7 +15,7 @@
  #include "cpu_features_macros.h"
  

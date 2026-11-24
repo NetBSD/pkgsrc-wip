@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- remote/node_modules/node-pty/src/unix/pty.cc.orig	2026-10-24 14:37:42.000000000 +0000
-+++ remote/node_modules/node-pty/src/unix/pty.cc
+--- remote/node_modules/.pnpm/node-pty@1.2.0-beta.18/node_modules/node-pty/src/unix/pty.cc.orig	2026-11-24 11:16:11.501726577 +0000
++++ remote/node_modules/.pnpm/node-pty@1.2.0-beta.18/node_modules/node-pty/src/unix/pty.cc
 @@ -44,7 +44,7 @@
  #elif defined(__FreeBSD__)
  #include <libutil.h>

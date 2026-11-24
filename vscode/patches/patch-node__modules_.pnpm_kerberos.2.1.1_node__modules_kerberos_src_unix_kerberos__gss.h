@@ -2,8 +2,8 @@ $NetBSD$
 
 * Use heimdal on NetBSD, heimdal has krb5_get_err_text()
 
---- remote/node_modules/kerberos/src/unix/kerberos_gss.h.orig	2026-10-30 17:20:19.388982698 +0000
-+++ remote/node_modules/kerberos/src/unix/kerberos_gss.h
+--- node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/src/unix/kerberos_gss.h.orig	2026-11-24 11:15:55.903549922 +0000
++++ node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/src/unix/kerberos_gss.h
 @@ -19,15 +19,33 @@
  
  extern "C" {

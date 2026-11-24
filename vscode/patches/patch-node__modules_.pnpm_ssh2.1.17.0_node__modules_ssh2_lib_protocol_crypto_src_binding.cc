@@ -4,8 +4,8 @@ $NetBSD$
 crypto: use more direct Isolate retrieval
 GetIsolate() is removed in recent versions of V8
 
---- node_modules/ssh2/lib/protocol/crypto/src/binding.cc.orig	2026-10-24 14:36:32.224653000 +0000
-+++ node_modules/ssh2/lib/protocol/crypto/src/binding.cc
+--- node_modules/.pnpm/ssh2@1.17.0/node_modules/ssh2/lib/protocol/crypto/src/binding.cc.orig	2026-11-24 11:15:56.097260330 +0000
++++ node_modules/.pnpm/ssh2@1.17.0/node_modules/ssh2/lib/protocol/crypto/src/binding.cc
 @@ -86,7 +86,7 @@ class ChaChaPolyCipher : public ObjectWr
  
      Local<Function> func = Nan::GetFunction(tpl).ToLocalChecked();

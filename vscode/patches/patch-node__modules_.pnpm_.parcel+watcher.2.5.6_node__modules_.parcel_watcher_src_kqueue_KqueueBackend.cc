@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add NetBSD support, no fdclosedir()
 
---- node_modules/@parcel/watcher/src/kqueue/KqueueBackend.cc.orig	2026-10-26 17:06:42.000000000 +0000
-+++ node_modules/@parcel/watcher/src/kqueue/KqueueBackend.cc
+--- node_modules/.pnpm/@parcel+watcher@2.5.6/node_modules/@parcel/watcher/src/kqueue/KqueueBackend.cc.orig	2026-11-24 11:16:03.552808503 +0000
++++ node_modules/.pnpm/@parcel+watcher@2.5.6/node_modules/@parcel/watcher/src/kqueue/KqueueBackend.cc
 @@ -189,9 +189,9 @@ std::vector<KqueueSubscription *> Kqueue
  }
  

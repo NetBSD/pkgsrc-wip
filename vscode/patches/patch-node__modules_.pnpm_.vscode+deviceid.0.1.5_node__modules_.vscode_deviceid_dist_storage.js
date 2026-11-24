@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add NetBSD support
 
---- node_modules/@vscode/deviceid/dist/storage.js.orig	2026-10-26 17:06:28.000000000 +0000
-+++ node_modules/@vscode/deviceid/dist/storage.js
+--- node_modules/.pnpm/@vscode+deviceid@0.1.5/node_modules/@vscode/deviceid/dist/storage.js.orig	2026-11-24 11:16:04.360400880 +0000
++++ node_modules/.pnpm/@vscode+deviceid@0.1.5/node_modules/@vscode/deviceid/dist/storage.js
 @@ -42,7 +42,7 @@ function getDirectory() {
      if (process.platform === "darwin") {
          folder = path.join(process.env.HOME, "Library", "Application Support");

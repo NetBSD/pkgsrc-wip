@@ -3,8 +3,8 @@ $NetBSD$
 * Add support to NetBSD and FreeBSD
 * Use heimdal on NetBSD, heimdal has krb5_get_err_text()
 
---- remote/node_modules/kerberos/src/unix/kerberos_gss.cc.orig	2026-10-30 17:20:26.529451357 +0000
-+++ remote/node_modules/kerberos/src/unix/kerberos_gss.cc
+--- node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/src/unix/kerberos_gss.cc.orig	2026-11-24 11:15:55.903148989 +0000
++++ node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/src/unix/kerberos_gss.cc
 @@ -65,10 +65,17 @@ struct DLOpenHandle {
    DLOpenHandle& operator=(DLOpenHandle&) = delete;
  };

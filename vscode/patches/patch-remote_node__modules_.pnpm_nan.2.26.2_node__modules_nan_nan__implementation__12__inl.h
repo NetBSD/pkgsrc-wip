@@ -2,8 +2,8 @@ $NetBSD$
 
 * Fix snapshot usage
 
---- remote/node_modules/nan/nan_implementation_12_inl.h.orig	2026-10-24 14:37:41.010004000 +0000
-+++ remote/node_modules/nan/nan_implementation_12_inl.h
+--- remote/node_modules/.pnpm/nan@2.26.2/node_modules/nan/nan_implementation_12_inl.h.orig	2026-11-24 08:42:03.262832195 +0000
++++ remote/node_modules/.pnpm/nan@2.26.2/node_modules/nan/nan_implementation_12_inl.h
 @@ -14,6 +14,22 @@
  
  namespace imp {

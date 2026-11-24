@@ -2,8 +2,8 @@ $NetBSD$
 
 * Fix snapshot usage
 
---- node_modules/nan/nan_callbacks_12_inl.h.orig	2026-10-25 09:12:54.053903100 +0000
-+++ node_modules/nan/nan_callbacks_12_inl.h
+--- node_modules/.pnpm/nan@2.26.2/node_modules/nan/nan_callbacks_12_inl.h.orig	2026-11-24 08:42:03.262922235 +0000
++++ node_modules/.pnpm/nan@2.26.2/node_modules/nan/nan_callbacks_12_inl.h
 @@ -178,14 +178,27 @@ class PropertyCallbackInfo {
    NAN_DISALLOW_ASSIGN_COPY_MOVE(PropertyCallbackInfo)
  };

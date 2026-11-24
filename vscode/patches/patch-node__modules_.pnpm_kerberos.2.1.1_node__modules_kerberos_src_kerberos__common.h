@@ -2,8 +2,8 @@ $NetBSD$
 
 * Add support to NetBSD and FreeBSD
 
---- remote/node_modules/kerberos/src/kerberos_common.h.orig	2026-10-24 14:37:41.000000000 +0000
-+++ remote/node_modules/kerberos/src/kerberos_common.h
+--- node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/src/kerberos_common.h.orig	2026-11-24 11:15:55.906402142 +0000
++++ node_modules/.pnpm/kerberos@2.1.1/node_modules/kerberos/src/kerberos_common.h
 @@ -1,7 +1,7 @@
  #ifndef KERBEROS_COMMON_H
  #define KERBEROS_COMMON_H
