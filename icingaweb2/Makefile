@@ -36,8 +36,8 @@ do-configure:
 PKG_USERS_VARS+=		APACHE_USER
 
 PKG_SYSCONFSUBDIR=		icingaweb2
-EGDIR=				${PREFIX}/share/examples/icingaweb2
-SHAREDIR=			${PREFIX}/share/icingaweb2
+EGDIR=				${PREFIX}/${PHP_EGDIR}/icingaweb2
+SHAREDIR=			${PREFIX}/${PHP_SHAREDIR}/icingaweb2
 INCDIR=				${PREFIX}/${PHP_LIBDIR}
 INSTALLATION_DIRS+=		${PREFIX}/bin ${EGDIR} ${SHAREDIR}
 STORAGEDIR=			${VARBASE}/db/icingaweb2
