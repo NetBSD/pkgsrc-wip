@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (guile-websocket-0.3.0.tar.gz) = b8a66841affc146f97fe4c12a356a6d8913f925625b61fbb847ef4461f69fde7
+SHA512 (guile-websocket-0.3.0.tar.gz) = 14fcbdf71f4364ee9ff45b419f5440cfb43ce97e1e982278bad3e204242fb405ed0668ae250e7925c736042c0aa30f67c4894b4e25a5095f93e8ab5da451665a
+Size (guile-websocket-0.3.0.tar.gz) = 122220 bytes

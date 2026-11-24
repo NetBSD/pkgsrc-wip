@@ -11,6 +11,6 @@ PKG_SUGGESTED_OPTIONS=	server
 ###
 .if !empty(PKG_OPTIONS:Mserver)
 DEPENDS+=	guile-fibers>=2.0.0:../../wip/guile-fibers
-DEPENDS+=	guile-websocket>=0.3.0:../../wip/guile-websockets
+DEPENDS+=	guile-websocket>=0.3.0:../../wip/guile-websocket
 PLIST.server=	yes
 .endif

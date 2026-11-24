@@ -1,0 +1,13 @@
+@comment $NetBSD$
+guile/3.0/lib/guile/3.0/site-ccache/web/socket.go
+guile/3.0/lib/guile/3.0/site-ccache/web/socket/client.go
+guile/3.0/lib/guile/3.0/site-ccache/web/socket/frame.go
+guile/3.0/lib/guile/3.0/site-ccache/web/socket/server.go
+guile/3.0/lib/guile/3.0/site-ccache/web/socket/sha-1.go
+guile/3.0/lib/guile/3.0/site-ccache/web/socket/utils.go
+share/guile/site/3.0/web/socket.scm
+share/guile/site/3.0/web/socket/client.scm
+share/guile/site/3.0/web/socket/frame.scm
+share/guile/site/3.0/web/socket/server.scm
+share/guile/site/3.0/web/socket/sha-1.scm
+share/guile/site/3.0/web/socket/utils.scm
