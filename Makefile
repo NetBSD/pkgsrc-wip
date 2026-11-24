@@ -996,6 +996,7 @@ SUBDIR+=	fetchmail
 SUBDIR+=	fetchmailconf
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
+SUBDIR+=	ffmpeg9-svtav1
 SUBDIR+=	ffmpeg-git
 SUBDIR+=	ffms2
 SUBDIR+=	fftjet
