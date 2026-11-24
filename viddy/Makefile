@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	viddy-1.3.1
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sachaos/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
