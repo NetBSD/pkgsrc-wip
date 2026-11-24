@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nvchecker-2.20
+DISTNAME=	nvchecker-2.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python devel net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lilydjwg/}
@@ -25,8 +25,8 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 2.20
-# 8 failed, 95 passed, 45 skipped, 23 warnings
+# as of 2.22
+# 3 failed, 111 passed, 68 skipped, 23 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

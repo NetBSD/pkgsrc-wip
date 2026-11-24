@@ -113,6 +113,12 @@ ${PYSITELIB}/nvchecker_source/gems.pyo
 ${PYSITELIB}/nvchecker_source/git.py
 ${PYSITELIB}/nvchecker_source/git.pyc
 ${PYSITELIB}/nvchecker_source/git.pyo
+${PYSITELIB}/nvchecker_source/git_dulwich.py
+${PYSITELIB}/nvchecker_source/git_dulwich.pyc
+${PYSITELIB}/nvchecker_source/git_dulwich.pyo
+${PYSITELIB}/nvchecker_source/git_pygit2.py
+${PYSITELIB}/nvchecker_source/git_pygit2.pyc
+${PYSITELIB}/nvchecker_source/git_pygit2.pyo
 ${PYSITELIB}/nvchecker_source/gitea.py
 ${PYSITELIB}/nvchecker_source/gitea.pyc
 ${PYSITELIB}/nvchecker_source/gitea.pyo
