@@ -20,6 +20,12 @@ GNU_CONFIGURE=	yes
 TEXINFO_REQD+=	6.0
 INFO_FILES=	yes
 
+PLIST_VARS+=	server
+
+.include "options.mk"
+
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/guile/3.0
+
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap.sh
 
